@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-02T05:14:44+00:00**
+Generated: **2026-11-02T11:53:38+00:00**
 
-- Active Bangladesh playlist identities: **90**
+- Active Bangladesh playlist identities: **82**
 - Identities with a retained source mapping: **3**
 - Identities with usable current/future schedules: **2**
-- Identities without a source mapping: **87**
+- Identities without a source mapping: **79**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 
@@ -21,8 +21,8 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | https://www.rtvbd.tv/schedule.php | 0 | 0 | 0 | Could not fetch the official RTV schedule over verified HTTPS (rtvbd.tv: URLError; www.rtvbd.tv: URLError) |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 72 | - |
-| OK | M3U4U XMLTV (private Actions secret) | 229 | 166 | 7398 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 65 | - |
+| OK | M3U4U XMLTV (private Actions secret) | 229 | 164 | 5942 | - |
 
 ## Unmapped Bangladesh identities
 
@@ -38,18 +38,13 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Bangla Vision | BanglaVision.bd | NO_GUIDE_HIT |
 | Bengali Beats | BengaliBeats.bd | NO_GUIDE_HIT |
 | Bijoy TV | BijoyTV.bd | NO_GUIDE_HIT |
-| BOISHAKHAI TV HD | custom.bdix.boishakhai | NO_GUIDE_HIT |
 | Boishakhi TV | BoishakhiTV.bd | NO_GUIDE_HIT |
 | BTV Chattogram | BTVChattogram.bd | NO_GUIDE_HIT |
-| BTV CTG | custom.bdix.btvctg | NO_GUIDE_HIT |
 | BTV News | BTVNews.bd | NO_GUIDE_HIT |
-| BTV News | custom.btv.news | NO_GUIDE_HIT |
 | Channel 1 | Channel1.bd | NO_GUIDE_HIT |
-| Channel 1 | custom.channel.1 | NO_GUIDE_HIT |
 | Channel 16 | Channel16.bd | NO_GUIDE_HIT |
 | Channel 24 | Channel24.bd | NO_GUIDE_HIT |
 | Channel 52 | Channel52.bd | NO_GUIDE_HIT |
-| Channel 9 | Channel9.bd | NO_GUIDE_HIT |
 | Channel I | ChannelI.bd | NO_GUIDE_HIT |
 | Channel S | ChannelS.uk | NO_GUIDE_HIT |
 | Channel S UK | ChannelS.uk@679aa9 | NO_GUIDE_HIT |
@@ -69,15 +64,14 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | G Series Drama | GSeriesDrama.bd | NO_GUIDE_HIT |
 | G TV | GaziTV.bd | NO_GUIDE_HIT |
 | GAZI TV | GaziTV.bd@SD | NO_GUIDE_HIT |
-| GAZI TV HD | custom.bdix.gazi | NO_GUIDE_HIT |
 | Global TV | GlobalTV.bd | NO_GUIDE_HIT |
-| Green TV | GreenTV.bd | NO_GUIDE_HIT |
 | Independent TV | IndependentTV.bd | NO_GUIDE_HIT |
 | Jago News 24 | JagoNews24.bd | NO_GUIDE_HIT |
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
 | Jonmobhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
 | Maasranga TV | MaasrangaTV.bd | NO_GUIDE_HIT |
+| Maasranga TV | MaasrangaTV.bd@SD | NO_GUIDE_HIT |
 | Madani Channel Bangla | MadaniChannelBangla.bd@SD | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd@HD | NO_GUIDE_HIT |
@@ -106,15 +100,13 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Rajdhani TV | custom.rajdhani | NO_GUIDE_HIT |
 | Rupashi Bangla TV | RupashiBanglaTV.bd@SD | NO_GUIDE_HIT |
 | SA TV | SATV.bd | NO_GUIDE_HIT |
-| SATV HD | custom.bdix.satv | NO_GUIDE_HIT |
 | Somoy TV | SomoyNewsTV.bd | NO_GUIDE_HIT |
 | SRK | SRK.bd | NO_GUIDE_HIT |
 | Star News | StarNews.bd | NO_GUIDE_HIT |
-| Star News | custom.star.news | NO_GUIDE_HIT |
-| T Sports | TSports.bd | NO_GUIDE_HIT |
 | TBN24 | TBN24.us | NO_GUIDE_HIT |
 | Thikana | ThikanaTV.us | NO_GUIDE_HIT |
 | Time Television | TimeTelevision.us | NO_GUIDE_HIT |
+| Vokta TV | VoktaTV.bd@SD | NO_GUIDE_HIT |
 
 ## Matching and source notes
 
