@@ -23,7 +23,6 @@ on:
       - tests/test_epg_refresh_needed.py
       - scripts/validate_report_freshness.py
       - IPTV-Playlist.m3u
-      - BDIX-Playlist.m3u
       - International-Playlist.m3u
       - scripts/audit_playlist.py
       - scripts/playlist_order_policy.py
