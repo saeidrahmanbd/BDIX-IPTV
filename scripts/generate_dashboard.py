@@ -41,6 +41,35 @@ def playlist_counts(path):
          for x in rows if (x.get("tvg-id") or x.get("channel-id") or "").strip()
          and x.get("group-title","").strip().casefold() not in REVIEW_GROUPS}
     return len(rows),len(ids)
+
+EPG_PLAYLISTS = (
+    ("IPTV-Playlist.m3u", ROOT/"IPTV-Playlist.m3u"),
+    ("BDIX-Playlist.m3u", ROOT/"BDIX-Playlist.m3u"),
+    ("International-Playlist.m3u", ROOT/"International-Playlist.m3u"),
+)
+def epg_report_fingerprints_match(text, playlist_paths=None):
+    """Check exact playlist fingerprints instead of brittle parsed row-count equality."""
+    for name, path in (playlist_paths or EPG_PLAYLISTS):
+        match = re.search(
+            rf"(?m)^-\s*{re.escape(name)} SHA-256:\s*\*\*([a-f0-9]{{64}})\*\*\s*$",
+            text,
+        )
+        if not path.is_file() or not match:
+            return False
+        if match.group(1).lower() != hashlib.sha256(path.read_bytes()).hexdigest():
+            return False
+    return True
+
+def epg_audit_headers_ok(text):
+    """Require each maintained playlist row to advertise the shared guide correctly."""
+    for name, _ in EPG_PLAYLISTS:
+        match = re.search(
+            rf"(?m)^\|\s*{re.escape(name)}\s*\|.*\|\s*(OK|MISMATCH)\s*\|\s*$",
+            text,
+        )
+        if not match or match.group(1) != "OK":
+            return False
+    return True
 def main():
     e=parse(); a=read(AUDIT); g=read(EPG); egd=read(EPG_DETAIL); h=read(HEALTH); gate=read(GATE)
     source_sha=hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()
@@ -58,15 +87,11 @@ def main():
                          and guide_root.find("programme") is not None)
         except (OSError, ET.ParseError):
             epg_current=False
-    for playlist_name, playlist_path in (
-        ("IPTV-Playlist.m3u", ROOT/"IPTV-Playlist.m3u"),
-        ("BDIX-Playlist.m3u", ROOT/"BDIX-Playlist.m3u"),
-        ("International-Playlist.m3u", ROOT/"International-Playlist.m3u"),
-    ):
-        row=re.search(r'^\|\s*'+re.escape(playlist_name)+r'\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|',egd,re.M)
-        current_rows,current_ids=playlist_counts(playlist_path)
-        if not row or (int(row.group(1)),int(row.group(2)))!=(current_rows,current_ids):
-            epg_current=False
+    if epg_current:
+        # The EPG workflow validates report timestamps and all three playlist
+        # fingerprints. Recheck the published audit's exact hashes here; parsed
+        # row-count differences must not falsely mark an unchanged guide pending.
+        epg_current = epg_report_fingerprints_match(egd) and epg_audit_headers_ok(egd)
     gm=re.search(r'Status:\\s*\\*\\*(PASS|BLOCK)\\*\\*',gate)
     gate_status=(gm.group(1) if gm else "UNKNOWN") if gate_current else "STALE / UNKNOWN"
     groups=Counter(x.get("group-title","") for x in e)
