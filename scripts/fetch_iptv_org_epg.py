@@ -22,7 +22,6 @@ OUTPUT = Path("/tmp/iptv-org-guide.xml")
 TARGET_CHANNELS = Path("/tmp/iptv-org-target.channels.xml")
 PLAYLISTS = (
     Path("IPTV-Playlist.m3u"),
-    Path("BDIX-Playlist.m3u"),
     Path("International-Playlist.m3u"),
 )
 MAPPING = Path("reports/epg-channel-mapping.csv")
