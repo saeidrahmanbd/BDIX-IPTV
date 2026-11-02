@@ -12,7 +12,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PLAYLISTS = (
     "IPTV-Playlist.m3u",
-    "BDIX-Playlist.m3u",
     "International-Playlist.m3u",
 )
 STATE = ROOT / "reports/changelog-state.json"
