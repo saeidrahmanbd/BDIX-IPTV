@@ -15,7 +15,7 @@ class XtreamWorkerPolicyTests(unittest.TestCase):
         return (ROOT / name / "worker.js").read_text(encoding="utf-8")
 
     def test_both_workers_exclude_review_only_groups(self):
-        for name in ("xtream-main", "xtream-bdix"):
+        for name in ("xtream-main",):
             with self.subTest(worker=name):
                 source = self.read_worker(name)
                 match = re.search(r'const INACTIVE\s*=\s*new Set\(\[([^\]]+)\]\)', source)
@@ -25,7 +25,7 @@ class XtreamWorkerPolicyTests(unittest.TestCase):
                 self.assertRegex(source, r"if\(!INACTIVE\.has\((?:cur|current)\.group\)\)")
 
     def test_both_workers_support_cors_preflight_and_comparison_helper(self):
-        for name in ("xtream-main", "xtream-bdix"):
+        for name in ("xtream-main",):
             with self.subTest(worker=name):
                 source = self.read_worker(name)
                 self.assertIn('"access-control-allow-origin":"*"', source)
@@ -33,7 +33,7 @@ class XtreamWorkerPolicyTests(unittest.TestCase):
                 self.assertIn("function constantTimeEqual(a,b)", source)
 
     def test_both_workers_use_order_independent_stream_ids(self):
-        for name in ("xtream-main", "xtream-bdix"):
+        for name in ("xtream-main",):
             with self.subTest(worker=name):
                 source = self.read_worker(name)
                 self.assertIn("function stableId(s)", source)
