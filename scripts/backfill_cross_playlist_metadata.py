@@ -14,11 +14,10 @@ from pathlib import Path
 
 PLAYLISTS = (
     Path("IPTV-Playlist.m3u"),
-    Path("BDIX-Playlist.m3u"),
     Path("International-Playlist.m3u"),
 )
-TARGETS = (Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u"))
-REPORT = Path("reports/cross-playlist-metadata-backfill.md")
+TARGETS = (Path("International-Playlist.m3u"),)
+REPORT = Path("reports/playlist-metadata-backfill.md")
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 COUNTRY_RE = re.compile(r"^[A-Z]{2}$")
 LANGUAGE_LIST_RE = re.compile(r"^[a-z]{3}(?:;[a-z]{3})*$")
