@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import generate_dashboard as dashboard
-from generate_dashboard import (parse, playlist_counts, url_inventory_sha, epg_report_fingerprints_match, epg_audit_headers_ok, prepublish_status, metric)
+from generate_dashboard import (parse, playlist_counts, url_inventory_sha, epg_report_fingerprints_match, epg_audit_headers_ok, prepublish_status, metric, read, timestamp)
 from stream_health import stream_url_inventory_sha256
 
 
@@ -47,9 +47,20 @@ class DashboardFreshnessTests(unittest.TestCase):
         self.assertEqual(prepublish_status("Generated: **2026-11-02T00:00:00Z**\nStatus: **PASS**\n"), "PASS")
         self.assertEqual(prepublish_status("Status: **BLOCK**"), "BLOCK")
         self.assertEqual(prepublish_status("Status: PASS"), "UNKNOWN")
-    def test_dashboard_main_uses_current_pre_publish_status_parser(self):
+    def test_dashboard_report_reader_handles_existing_and_missing_files(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "report.md"
+            path.write_text("Generated: **2026-11-02T00:00:00Z**\\nStatus: **PASS**\\n", encoding="utf-8")
+            self.assertIn("Status: **PASS**", read(path))
+            self.assertIn("2026-11-02T00:00:00Z", timestamp(path))
+            missing = Path(directory) / "missing.md"
+            self.assertEqual(read(missing), "")
+            self.assertEqual(timestamp(missing), "not available")
+
+    def test_dashboard_main_uses_report_reader_and_current_gate_parser(self):
         import inspect
         source = inspect.getsource(dashboard.main)
+        self.assertIn("a=read(AUDIT)", source)
         self.assertIn("gate_status=prepublish_status(gate)", source)
         self.assertNotIn("gm.group", source)
     def test_logo_exception_metric_accepts_current_audit_label(self):

@@ -9,6 +9,14 @@ PLAYLIST=ROOT/"IPTV-Playlist.m3u"; AUDIT=ROOT/"reports/iptv-playlist-audit.md"; 
 OUT_MD=ROOT/"reports/Update Report.md"; OUT_SVG=ROOT/"assets/dashboard.svg"; OUT_MAINT=ROOT/"reports/maintenance-report.md"; HISTORY=ROOT/"reports/maintenance-history.json"
 EPG_GUIDE=ROOT/"epg/epg.xml"; EPG_FRESHNESS=ROOT/"reports/epg-publish-freshness.md"
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
+
+def read(path):
+    """Read a text report safely; missing reports are treated as unavailable."""
+    try:
+        return Path(path).read_text(encoding="utf-8-sig", errors="replace")
+    except OSError:
+        return ""
+
 def metric(text,label):
     aliases = {"Logo exceptions": "Logo exceptions requiring repair"}
     labels = (label, aliases[label]) if label in aliases else (label,)
