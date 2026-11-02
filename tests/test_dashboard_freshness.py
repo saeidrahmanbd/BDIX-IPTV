@@ -1,3 +1,4 @@
+import hashlib
 import sys
 import tempfile
 import unittest
