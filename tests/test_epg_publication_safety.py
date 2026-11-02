@@ -75,7 +75,7 @@ class EPGPublicationSafetyTests(unittest.TestCase):
     def test_epg_reports_have_a_valid_current_publication_state(self):
         reports = (
             "reports/epg-coverage.md",
-            "reports/epg-three-playlist-audit.md",
+            "reports/epg-playlist-audit.md",
             "reports/epg-unmapped-audit.md",
             "reports/epg-publish-freshness.md",
             "reports/epg-timing-audit.md",
