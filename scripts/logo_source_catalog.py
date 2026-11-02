@@ -1001,7 +1001,7 @@ def get_local_logo(channel):
     return destination.name
 
 def build_audit():
-    playlist_names = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "NVisionBD-Playlist.m3u"]
+    playlist_names = ["IPTV-Playlist.m3u", "International-Playlist.m3u"]
     rows = []
     for playlist_name in playlist_names:
         path = Path(playlist_name)
@@ -1023,7 +1023,7 @@ def build_audit():
         rows.append((playlist_name, entry_count, len(generic_files), sorted(labels)))
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     lines = [
-        "# Generic Channel Logo Audit — Three Playlists", "",
+        "# Generic Channel Logo Audit — Two Playlists", "",
         f"Audit date: {timestamp}  ",
         "Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  ",
         "Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.", "",
