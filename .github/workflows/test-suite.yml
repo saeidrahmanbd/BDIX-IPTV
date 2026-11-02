@@ -8,7 +8,7 @@ on:
     paths:
       - "scripts/**"
       - "tests/**"
-      - "xtream-main/**"
+      - "xtream-main/**"\n      - "analytics/**"
       - "docs/requirements.txt"
       - ".github/workflows/test-suite.yml"
   workflow_dispatch:
