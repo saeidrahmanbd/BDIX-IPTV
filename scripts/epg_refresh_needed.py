@@ -9,8 +9,8 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
-COVERAGE_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md", "reports/epg-unmapped-audit.md")
+PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
+COVERAGE_REPORTS = ("reports/epg-coverage.md", "reports/epg-playlist-audit.md", "reports/epg-unmapped-audit.md")
 FRESHNESS_REPORT = "reports/epg-publish-freshness.md"
 GUIDE = "epg/epg.xml"
 TIMESTAMP_RE = re.compile(r"(?im)^_?(?:Generated|Last generated|Checked):\s*\*\*([^*]+)\*\*")
@@ -123,7 +123,7 @@ def main():
     args = parser.parse_args()
     fresh, reasons = assess_freshness(max_age_hours=args.max_age_hours)
     if fresh:
-        print("EPG is fresh: guide, coverage reports, timestamps and all three playlist fingerprints match.")
+        print("EPG is fresh: guide, coverage reports, timestamps and both playlist fingerprints match.")
         return 0
     print("EPG refresh required:")
     for reason in reasons:
