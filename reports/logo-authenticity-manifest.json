@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-01T13:17:36.116730+00:00",
+  "generated_at_utc": "2026-11-02T03:27:21.016976+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -12,7 +12,7 @@
     "International-Playlist.m3u": 2514
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "1f4142a28a97b4c13ad28a295ea7d931db654c6726fa6608b3f4e8e327217811",
+    "IPTV-Playlist.m3u": "0c31f4d953ef07e39cd11c10526f6dab9ffe77d5ee69b5030d2c4ae744f6811e",
     "BDIX-Playlist.m3u": "6e98537a07d9bb5f5ee818f86defff1357302adeaca270e0786a7185bcd33b2d",
     "International-Playlist.m3u": "1fe061be22b2f0ba30e3af4533d431a3a11eb482f36d0b01d39474f87b116106"
   },
@@ -10001,18 +10001,6 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 1668,
-      "channel_name": "HSTV",
-      "tvg_id": "HSTV.in@SD",
-      "channel_id": "HSTV.in@SD",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "line": 1670,
       "channel_name": "Shiksha TV",
       "tvg_id": "ShikshaTV.in@SD",
       "channel_id": "ShikshaTV.in@SD",
@@ -10024,7 +10012,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1672,
+      "line": 1670,
       "channel_name": "Sony Sports Ten 1",
       "tvg_id": "SonySportsTen1.in@SD",
       "channel_id": "SonySportsTen1.in@SD",
@@ -10036,7 +10024,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1674,
+      "line": 1672,
       "channel_name": "Sony Sports Ten 2",
       "tvg_id": "SonySportsTen2.in@SD",
       "channel_id": "SonySportsTen2.in@SD",
@@ -10048,7 +10036,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1676,
+      "line": 1674,
       "channel_name": "Sony Sports Ten 3 Hindi",
       "tvg_id": "SonySportsTen3Hindi.in@SD",
       "channel_id": "SonySportsTen3Hindi.in@SD",
@@ -10060,7 +10048,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1678,
+      "line": 1676,
       "channel_name": "Sony Sports Ten 4 Kannada",
       "tvg_id": "SonySportsTen4.in@Kannada",
       "channel_id": "SonySportsTen4.in@Kannada",
@@ -10072,7 +10060,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1680,
+      "line": 1678,
       "channel_name": "Sony Sports Ten 5",
       "tvg_id": "SonySportsTen5.in@SD",
       "channel_id": "SonySportsTen5.in@SD",
@@ -10084,7 +10072,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1682,
+      "line": 1680,
       "channel_name": "Star Gold 2",
       "tvg_id": "StarGold2.in@HD",
       "channel_id": "StarGold2.in@HD",
@@ -10096,7 +10084,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1684,
+      "line": 1682,
       "channel_name": "Star Kiran",
       "tvg_id": "StarKiran.in@SD",
       "channel_id": "StarKiran.in@SD",
@@ -10108,7 +10096,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1686,
+      "line": 1684,
       "channel_name": "Star Sports 3",
       "tvg_id": "StarSports3.in@SD",
       "channel_id": "StarSports3.in@SD",
@@ -10120,7 +10108,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1688,
+      "line": 1686,
       "channel_name": "Superhitz",
       "tvg_id": "Superhitz.in@SD",
       "channel_id": "Superhitz.in@SD",
@@ -10132,7 +10120,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1690,
+      "line": 1688,
       "channel_name": "Ten Cricket",
       "tvg_id": "TenCricket.in@SD",
       "channel_id": "TenCricket.in@SD",
@@ -10144,7 +10132,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1692,
+      "line": 1690,
       "channel_name": "Travelxp",
       "tvg_id": "Travelxp.in@HD",
       "channel_id": "Travelxp.in@HD",
@@ -10156,11 +10144,23 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 1694,
+      "line": 1692,
       "channel_name": "Unite8 Sports 2",
       "tvg_id": "Unite8Sports2.in@SD",
       "channel_id": "Unite8Sports2.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unite8-sports-2.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 1694,
+      "channel_name": "Vision Beats",
+      "tvg_id": "VisionBeats.in@SD",
+      "channel_id": "VisionBeats.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vision-beats.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",

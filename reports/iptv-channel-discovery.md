@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-02T03:15:07.408161+00:00**
+Generated: **2026-11-02T03:26:40.646383+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
@@ -56,7 +56,7 @@ Generated: **2026-11-02T03:15:07.408161+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-11-02T03:15:24+00:00
+- Run timestamp: 2026-11-02T03:26:54+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 43
 - Verified live media responses: 5
@@ -109,16 +109,13 @@ Generated: **2026-11-02T03:15:07.408161+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-11-02T03:15:24+00:00
-- Validation status: FAIL
+- Run timestamp: 2026-11-02T03:26:54+00:00
+- Validation status: PASS
 - M3U entries parsed: 1186
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
-- New Channels/New Backup/Backup ordering: failed
+- New Channels/New Backup/Backup ordering: passed
 - Discovery entries missing a logo (left blank rather than using a placeholder): 1
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
-
-### Blockers
-- Category registry must end New Channels/New Backup/Backup and present playlist groups must follow that registry order
