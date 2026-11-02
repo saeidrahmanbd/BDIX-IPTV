@@ -10,6 +10,17 @@ const dashboard = `<!doctype html><html lang="en"><head><meta charset="utf-8"><m
 fetch('/api/stats?days=14').then(r=>{if(!r.ok)throw Error('API '+r.status);return r.json()}).then(d=>{document.getElementById('hits').textContent=d.totals.requests.toLocaleString();document.getElementById('unique').textContent=d.totals.unique_clients.toLocaleString();document.getElementById('main').textContent=(d.totals.by_playlist.main||0).toLocaleString();document.getElementById('intl').textContent=(d.totals.by_playlist.international||0).toLocaleString();document.getElementById('rows').innerHTML=d.daily.map(x=>'<tr><td>'+x.day+'</td><td>'+x.playlist+'</td><td>'+Number(x.requests).toLocaleString()+'</td><td>'+Number(x.unique_clients).toLocaleString()+'</td></tr>').join('')||'<tr><td colspan="4">No traffic recorded yet.</td></tr>';document.getElementById('countries').innerHTML=d.countries.map(x=>'<tr><td>'+x.country+'</td><td>'+Number(x.requests).toLocaleString()+'</td><td>'+Number(x.unique_clients).toLocaleString()+'</td></tr>').join('')||'<tr><td colspan="3">No country data yet.</td></tr>'}).catch(e=>{document.getElementById('rows').innerHTML='<tr><td colspan="4">Analytics unavailable: '+e.message+'</td></tr>'});
 </script></body></html>`;
 
+async function getOrCreateSalt(db) {
+  const existing = await db.prepare("SELECT value FROM settings WHERE key = 'client_hash_salt'").first();
+  if (existing?.value) return existing.value;
+  const bytes = crypto.getRandomValues(new Uint8Array(32));
+  const candidate = [...bytes].map(b => b.toString(16).padStart(2, "0")).join("");
+  await db.prepare("INSERT OR IGNORE INTO settings (key, value) VALUES ('client_hash_salt', ?)").bind(candidate).run();
+  const saved = await db.prepare("SELECT value FROM settings WHERE key = 'client_hash_salt'").first();
+  if (!saved?.value) throw new Error("Could not initialize analytics hash salt");
+  return saved.value;
+}
+
 async function clientHash(request, salt) {
   const ip = request.headers.get("CF-Connecting-IP") || "unknown";
   const ua = request.headers.get("User-Agent") || "unknown";
@@ -24,7 +35,7 @@ function json(data, status=200) {
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     if (request.method !== "GET" && request.method !== "HEAD") return new Response("Method not allowed", {status:405});
     if (url.pathname === "/" || url.pathname === "/dashboard") {
@@ -55,11 +66,21 @@ export default {
     const ua = request.headers.get("User-Agent") || "";
     // Exclude obvious crawlers from the primary usage figures; keep real player clients.
     const bot = /bot|crawler|spider|slurp|preview|monitor|uptime|github-actions/i.test(ua);
-    if (!bot && ip && env.ANALYTICS_SALT) {
-      const day = new Date().toISOString().slice(0,10);
-      const hash = await clientHash(request, env.ANALYTICS_SALT);
-      await env.ANALYTICS_DB.prepare("INSERT INTO hits (ts, day, playlist, client_hash, country) VALUES (?, ?, ?, ?, ?)")
-        .bind(new Date().toISOString(), day, playlist, hash, request.cf?.country || "XX").run();
+    if (request.method === "GET" && !bot && ip && env.ANALYTICS_DB) {
+      const record = async () => {
+        const salt = await getOrCreateSalt(env.ANALYTICS_DB);
+        const day = new Date().toISOString().slice(0, 10);
+        const hash = await clientHash(request, salt);
+        await env.ANALYTICS_DB.prepare("INSERT INTO hits (ts, day, playlist, client_hash, country) VALUES (?, ?, ?, ?, ?)")
+          .bind(new Date().toISOString(), day, playlist, hash, request.cf?.country || "XX").run();
+      };
+      // Analytics must never make a playlist unavailable. Log failures in the Worker,
+      // while the original upstream playlist response continues normally.
+      if (ctx?.waitUntil) {
+        ctx.waitUntil(record().catch(error => console.error("Analytics write failed:", error)));
+      } else {
+        try { await record(); } catch (error) { console.error("Analytics write failed:", error); }
+      }
     }
     const headers = new Headers(upstream.headers);
     headers.set("content-type","application/vnd.apple.mpegurl; charset=utf-8");
