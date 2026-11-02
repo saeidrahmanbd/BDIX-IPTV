@@ -30,7 +30,7 @@ class ReportFreshnessTests(unittest.TestCase):
         )
         self.hashes = {
             name: hashlib.sha256((self.root / name).read_bytes()).hexdigest()
-            for name in ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
+            for name in ("IPTV-Playlist.m3u", "International-Playlist.m3u")
         }
         report_dir = self.root / "reports"
         report_dir.mkdir()
@@ -41,14 +41,14 @@ class ReportFreshnessTests(unittest.TestCase):
         reports = {
             "iptv-playlist-audit.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "pre-publish-gate.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
-            "epg-coverage.md": epg, "epg-three-playlist-audit.md": epg, "epg-unmapped-audit.md": epg,
+            "epg-coverage.md": epg, "epg-playlist-audit.md": epg, "epg-unmapped-audit.md": epg,
             "iptv-metadata-backfill.md": f"Generated: **{self.timestamp}**\nPlaylist SHA-256: **{one}**\n",
             "iptv-fragile-streams.md": f"Generated: **{self.timestamp}**\nIPTV-Playlist.m3u SHA-256: **{one}**\n",
             "stream-risk-review.md": f"Generated: **{self.timestamp}**\nIPTV-Playlist.m3u SHA-256: **{one}**\n",
             "epg-publish-freshness.md": f"Checked: **{self.timestamp}**\nStatus: **PASS**\n",
             "logo-provenance-review.md": epg,
             "logo-asset-quality-audit.md": epg,
-            "cross-playlist-metadata-backfill.md": epg,
+            "playlist-metadata-backfill.md": epg,
             "metadata-normalization.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "Update Report.md": f"_Last generated: **{self.timestamp}**_\n\nSource playlist SHA-256: **{one}**\n",
             "maintenance-report.md": f"_Generated: **{self.timestamp}**_\n\nSource playlist SHA-256: **{one}**\n",
@@ -65,7 +65,7 @@ class ReportFreshnessTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
-    def test_current_reports_match_all_three_core_playlists(self):
+    def test_current_reports_match_both_core_playlists(self):
         self.assertEqual(check_reports(self.root, now=self.now), [])
 
     def test_generated_mode_also_requires_current_stream_health(self):
