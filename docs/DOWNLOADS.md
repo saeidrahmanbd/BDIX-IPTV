@@ -4,9 +4,7 @@
 
 **[▶️ Download Main IPTV Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
 
-M3U playlist compatible with XCIPTV and other compatible players.
-
-### Other playlist files
+M3U playlists compatible with XCIPTV and other compatible players.
 
 - **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — worldwide playlist; movie/music country groups with dedicated thematic groups
 
