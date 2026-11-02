@@ -47,7 +47,7 @@ class CrossPlaylistMetadataTests(unittest.TestCase):
 
     def test_name_propagation_index_requires_unique_id(self):
         a = Path("IPTV-Playlist.m3u")
-        b = Path("BDIX-Playlist.m3u")
+        b = Path("International-Playlist.m3u")
         first = (
             '#EXTINF:-1 tvg-id="BBCNews.uk" tvg-name="BBC News" tvg-country="GB" tvg-language="eng" group-title="International",BBC News\n'
             'https://example.test/a.m3u8\n'
