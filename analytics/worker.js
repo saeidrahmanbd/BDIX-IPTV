@@ -24,8 +24,8 @@ async function getOrCreateSalt(db) {
 async function clientHash(request, salt) {
   const ip = request.headers.get("CF-Connecting-IP") || "unknown";
   const ua = request.headers.get("User-Agent") || "unknown";
-  const day = new Date().toISOString().slice(0, 10);
-  const data = new TextEncoder().encode(salt + "|" + day + "|" + ip + "|" + ua);
+  // Stable only within this private service; the raw IP and user-agent are never stored.
+  const data = new TextEncoder().encode(salt + "|" + ip + "|" + ua);
   const digest = await crypto.subtle.digest("SHA-256", data);
   return [...new Uint8Array(digest)].map(b => b.toString(16).padStart(2, "0")).join("");
 }
@@ -46,7 +46,7 @@ export default {
       const days = Math.min(90, Math.max(1, Number(url.searchParams.get("days") || 14)));
       const since = new Date(Date.now() - days * 86400000).toISOString();
       const [totals, daily] = await Promise.all([
-        env.ANALYTICS_DB.prepare("SELECT COUNT(*) requests, COUNT(DISTINCT client_hash || ':' || day) unique_clients FROM hits WHERE ts >= ?").bind(since).first(),
+        env.ANALYTICS_DB.prepare("SELECT COUNT(*) requests, COUNT(DISTINCT client_hash) unique_clients FROM hits WHERE ts >= ?").bind(since).first(),
         env.ANALYTICS_DB.prepare("SELECT day, playlist, COUNT(*) requests, COUNT(DISTINCT client_hash) unique_clients FROM hits WHERE ts >= ? GROUP BY day, playlist ORDER BY day DESC, playlist").bind(since).all()
       ]);
       const [byPlaylist, byCountry] = await Promise.all([
