@@ -5753,5 +5753,10 @@
     "status": "third_party_verified",
     "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Max4_logo.png/960px-Max4_logo.png",
     "notes": "IPTV-org exact ID: MAX4.hu IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Max4_logo.png/960px-Max4_logo.png"
+  },
+  "IPTV-Playlist.m3u|NTV.in|NTV Malayalam|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-ntv-malayalam.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
   }
 }
