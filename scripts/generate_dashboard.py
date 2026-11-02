@@ -5,7 +5,7 @@ from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-PLAYLIST=ROOT/"IPTV-Playlist.m3u"; AUDIT=ROOT/"reports/iptv-playlist-audit.md"; EPG=ROOT/"reports/epg-coverage.md"; EPG_DETAIL=ROOT/"reports/epg-three-playlist-audit.md"; HEALTH=ROOT/"reports/stream-health.md"; GATE=ROOT/"reports/pre-publish-gate.md"
+PLAYLIST=ROOT/"IPTV-Playlist.m3u"; AUDIT=ROOT/"reports/iptv-playlist-audit.md"; EPG=ROOT/"reports/epg-coverage.md"; EPG_DETAIL=ROOT/"reports/epg-playlist-audit.md"; HEALTH=ROOT/"reports/stream-health.md"; GATE=ROOT/"reports/pre-publish-gate.md"
 OUT_MD=ROOT/"reports/Update Report.md"; OUT_SVG=ROOT/"assets/dashboard.svg"; OUT_MAINT=ROOT/"reports/maintenance-report.md"; HISTORY=ROOT/"reports/maintenance-history.json"
 EPG_GUIDE=ROOT/"epg/epg.xml"; EPG_FRESHNESS=ROOT/"reports/epg-publish-freshness.md"
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
@@ -44,7 +44,6 @@ def playlist_counts(path):
 
 EPG_PLAYLISTS = (
     ("IPTV-Playlist.m3u", ROOT/"IPTV-Playlist.m3u"),
-    ("BDIX-Playlist.m3u", ROOT/"BDIX-Playlist.m3u"),
     ("International-Playlist.m3u", ROOT/"International-Playlist.m3u"),
 )
 def epg_report_fingerprints_match(text, playlist_paths=None):
@@ -88,7 +87,7 @@ def main():
         except (OSError, ET.ParseError):
             epg_current=False
     if epg_current:
-        # The EPG workflow validates report timestamps and all three playlist
+        # The EPG workflow validates report timestamps and both playlist
         # fingerprints. Recheck the published audit's exact hashes here; parsed
         # row-count differences must not falsely mark an unchanged guide pending.
         epg_current = epg_report_fingerprints_match(egd) and epg_audit_headers_ok(egd)
@@ -200,14 +199,14 @@ Source playlist SHA-256: **{source_sha}**
 - Mapped: **{epg_map_value}**
 - Current/future programme coverage: **{epg_live_value}**
 - No mapping: **{missing if epg_current else "PENDING — guide not current"}**
-- EPG metric scope: **{epg_scope + (" (verified against all three current playlist inventories)" if epg_current else " (awaiting a valid, fresh published guide)") }**
+- EPG metric scope: **{epg_scope + (" (verified against both current playlist inventories)" if epg_current else " (awaiting a valid, fresh published guide)") }**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
 
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **{timestamp(AUDIT)}** | **{audit_freshness}** |
-| EPG coverage / three-playlist inventory | **{timestamp(EPG_DETAIL)}** | **{epg_freshness}** |
+| EPG coverage / two-playlist inventory | **{timestamp(EPG_DETAIL)}** | **{epg_freshness}** |
 | Stream health | **{timestamp(HEALTH)}** | **{health_freshness}** |
 | Pre-publish gate | **{timestamp(GATE)}** | **{gate_freshness}** |
 
@@ -251,6 +250,6 @@ Source playlist SHA-256: **{source_sha}**
 - Backup streams are never deleted because of health failures.
 - New Channels and New Backup remain active discovery/review queues.
 - Backup counts do not imply independent CDN/origin redundancy.
-- Report freshness is checked against current source hashes or the current three-playlist inventory; mismatched metrics are labelled stale instead of shown as current.
+- Report freshness is checked against current source hashes or the current two-playlist inventory; mismatched metrics are labelled stale instead of shown as current.
 """,encoding="utf-8")
 if __name__=="__main__": main()
