@@ -6,9 +6,7 @@ on:
     paths:
       - ".github/workflows/check-xtream.yml"
       - "xtream-main/**"
-      - "xtream-bdix/**"
       - "IPTV-Playlist.m3u"
-      - "BDIX-Playlist.m3u"
       - "epg/epg.xml"
   schedule:
     - cron: "7 1 * * *" # 07:07 Asia/Dhaka (UTC+6); avoid top-of-hour queueing
@@ -22,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Check both Xtream gateways
+      - name: Check main IPTV Xtream gateway
         env:
           XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
           XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
@@ -39,7 +37,6 @@ jobs:
           HEADERS = {"User-Agent": "BDIX-IPTV-Daily-Xtream-Check/2.0"}
           GATEWAYS = {
               "Main IPTV": "bdix-iptv-main.saeidrahman.workers.dev",
-              "BDIX": "bdix-iptv-bdix.saeidrahman.workers.dev",
           }
 
           class NoRedirect(urllib.request.HTTPRedirectHandler):
