@@ -51,7 +51,7 @@ export default {
       ]);
       const [byPlaylist, byCountry] = await Promise.all([
         env.ANALYTICS_DB.prepare("SELECT playlist, COUNT(*) requests FROM hits WHERE ts >= ? GROUP BY playlist").bind(since).all(),
-        env.ANALYTICS_DB.prepare("SELECT country, COUNT(*) requests, COUNT(DISTINCT client_hash || ':' || day) unique_clients FROM hits WHERE ts >= ? GROUP BY country ORDER BY requests DESC LIMIT 20").bind(since).all()
+        env.ANALYTICS_DB.prepare("SELECT country, COUNT(*) requests, COUNT(DISTINCT client_hash) unique_clients FROM hits WHERE ts >= ? GROUP BY country ORDER BY requests DESC LIMIT 20").bind(since).all()
       ]);
       const map = Object.fromEntries((byPlaylist.results || []).map(x => [x.playlist, x.requests]));
       return json({period_days:days, totals:{requests:totals?.requests||0,unique_clients:totals?.unique_clients||0,by_playlist:map},countries:byCountry.results||[],daily:daily.results||[]});
@@ -65,7 +65,7 @@ export default {
     const ip = request.headers.get("CF-Connecting-IP");
     const ua = request.headers.get("User-Agent") || "";
     // Exclude obvious crawlers from the primary usage figures; keep real player clients.
-    const bot = /bot|crawler|spider|slurp|preview|monitor|uptime|github-actions/i.test(ua);
+    const bot = /bot|crawler|spider|slurp|preview|monitor|uptime|github-actions|deployment-check/i.test(ua);
     if (request.method === "GET" && !bot && ip && env.ANALYTICS_DB) {
       const record = async () => {
         const salt = await getOrCreateSalt(env.ANALYTICS_DB);
