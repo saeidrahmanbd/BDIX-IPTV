@@ -10,7 +10,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PLAYLISTS = (
     ("IPTV-Playlist.m3u", "Main IPTV"),
-    ("BDIX-Playlist.m3u", "BDIX"),
     ("International-Playlist.m3u", "International"),
 )
 GUIDE = ROOT / "epg" / "epg.xml"
@@ -186,7 +185,7 @@ def main():
         "", f"XMLTV channels: **{len(guide_channels)}**; eligible in-window programme rows: **{eligible_window}**; current/future rows: **{eligible_live}**.",
         "", "## Source Playlist Fingerprints", "", *source_fingerprints, "",
     ]
-    (reports / "epg-three-playlist-audit.md").write_text("\n".join(audit), encoding="utf-8")
+    (reports / "epg-playlist-audit.md").write_text("\n".join(audit), encoding="utf-8")
 
     unmapped = [
         "# EPG Unmapped / Missing Programme Audit", "", f"Generated: **{now.isoformat(timespec='seconds')}**", "",
