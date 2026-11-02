@@ -127,6 +127,14 @@ A privacy-conscious analytics gateway is available for playlist requests. Once d
 
 > Analytics only counts playlist fetches routed through the Worker. Direct `raw.githubusercontent.com` links bypass tracking, and playlist requests do not prove that channels were watched. The gateway does not store raw IP addresses.
 
+**Deployment target URLs** (usable after the deployment workflow passes):
+- [Analytics dashboard](https://bdix-iptv-analytics.saeidrahman.workers.dev/)
+- [Main tracked playlist](https://bdix-iptv-analytics.saeidrahman.workers.dev/main.m3u)
+- [International tracked playlist](https://bdix-iptv-analytics.saeidrahman.workers.dev/international.m3u)
+- [Deployment workflow status](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/workflows/deploy-analytics.yml)
+
+Keep the existing Raw GitHub playlist URLs as direct fallbacks. Do not switch player configurations until the deployment has passed its endpoint verification.
+
 ---
 
 <a id="reports-and-status"></a>
