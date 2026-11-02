@@ -1,0 +1,11 @@
+name = "bdix-iptv-analytics"
+main = "worker.js"
+compatibility_date = "2026-11-03"
+
+[triggers]
+crons = ["17 3 * * *"]
+
+[[d1_databases]]
+binding = "ANALYTICS_DB"
+database_name = "bdix-iptv-analytics"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
