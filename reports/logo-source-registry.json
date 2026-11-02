@@ -624,16 +624,6 @@
     "source_url": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6901dfd41a05195b77301d7b/b306e57e4_Logo-TV-C.png",
     "notes": "IPTV-org exact ID: CumbiaMix.ar IPTV-org public logo dataset Source page: https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6901dfd41a05195b77301d7b/b306e57e4_Logo-TV-C.png"
   },
-  "BDIX-Playlist.m3u|custom.btv.news|BTV News|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-news-33c61f1708.jpg": {
-    "status": "third_party_verified",
-    "source_url": "https://media.prothomalo.com/prothomalo-bangla/2024-12-31/l11hxpwd/btv.JPG?w=1200&h=675&auto=format%2Ccompress&fit=max",
-    "notes": "Exact original tvg-logo URL from playlist history Historical source URL; reuse rights not specified Source page: https://github.com/saeidrahmanbd/BDIX-IPTV/blob/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u"
-  },
-  "BDIX-Playlist.m3u|Star Gold Romance.in|STAR GOLD ROMANCE|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-romance-290ba4ec4e.png": {
-    "status": "third_party_verified",
-    "source_url": "https://dtil.tmsimg.com/assets/s158298_ld_h15_aa.png?lock=720x540",
-    "notes": "IPTV-org exact unique channel name: StarGoldRomance.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s158298_ld_h15_aa.png?lock=720x540"
-  },
   "International-Playlist.m3u|MatribhumiTV.bd@HD|Matribhumi TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/matribhumi-tv-2bb36a4f0f.jpg": {
     "status": "third_party_verified",
     "source_url": "https://www.jagobd.com/wp-content/uploads/2024/10/matribhumi.jpg",
@@ -5597,7 +5587,7 @@
   "International-Playlist.m3u|ChannelS.uk|Channel S|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|DesheBideshe.ca|Deshe Bideshe|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deshe-bideshe.png": {
     "status": "needs_review",
@@ -5617,12 +5607,12 @@
   "International-Playlist.m3u|SomoyNewsTV.bd|Somoy TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/somoy-tv.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|Colors.Bangla.in|Colors Bangla|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|ZeeAction.in|Zee Action|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-action.png": {
     "status": "needs_review",
@@ -5637,7 +5627,7 @@
   "International-Playlist.m3u|custom.bdix.discoverybangla|Discovery Bangla|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-bangla.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|DisneyChannel.in@HD|DISNEY CHANNEL [IN]|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-india.png": {
     "status": "needs_review",
@@ -5647,47 +5637,47 @@
   "International-Playlist.m3u|AnandaTV.bd|Ananda TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|AsianTV.bd|Asian TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|BanglaTV.bd|Bangla TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-tv-9e5f3366c8.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|BijoyTV.bd|Bijoy TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bijoy-tv.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|EkhonTV.bd|Ekhon TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekhon-tv.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|GlobalTV.bd|Global TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/global-tv-1080p-5ffc043912.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|MovieBangla.bd|Movie Bangla|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movie-bangla.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|NexusTV.bd|Nexus TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nexus-tv.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|PeaceTVBangla.ae|Peace TV Bangla|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-bangla.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|Pogo.in@SD|Pogo|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pogo.png": {
     "status": "needs_review",
@@ -5697,12 +5687,12 @@
   "International-Playlist.m3u|custom.bdix.satv|SATV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sa-tv.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|SonyMax.in@SD|Sony Max|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png": {
     "status": "needs_review",
     "source_url": "",
-    "notes": "Reused the repository-local logo for this exact tvg-id and channel name from BDIX-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+    "notes": "Reused a repository-local logo asset; original source attribution is not registered here, so provenance remains marked for review."
   },
   "International-Playlist.m3u|TenCricket.in@SD|Ten Cricket|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-cricket.png": {
     "status": "needs_review",
