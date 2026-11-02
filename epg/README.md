@@ -8,7 +8,7 @@ This directory contains the repository's public XMLTV programme guide and the su
 
 `https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`
 
-The maintained IPTV playlists and Xtream workers use this URL as their common EPG endpoint.
+Both maintained playlists and the main Xtream worker use this URL as their common EPG endpoint.
 
 ## EPG Pipeline
 
@@ -51,7 +51,7 @@ Current coverage should always be taken from the latest generated reports rather
 - [`epg.xml`](epg.xml) — published XMLTV guide.
 - [`epg-channel-mapping.csv`](../reports/epg-channel-mapping.csv) — current channel-to-EPG mapping data.
 - [`epg-coverage.md`](../reports/epg-coverage.md) — current coverage and publication metrics.
-- [`epg-three-playlist-audit.md`](../reports/epg-three-playlist-audit.md) — published-guide audit across all three playlists.
+- [`epg-playlist-audit.md`](../reports/epg-playlist-audit.md) — published-guide audit across both maintained playlists.
 - [`epg-source-audit.md`](../reports/epg-source-audit.md) — per-source availability, usable schedule counts, and failure details.
 - [`bangladesh-epg-source-audit.md`](../reports/bangladesh-epg-source-audit.md) — Bangladesh-specific source health, exact mappings, and unmapped channel identities.
 - [`epg-publish-freshness.md`](../reports/epg-publish-freshness.md) — guide freshness and publication validation.
