@@ -28,7 +28,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
                 self.assertIsNotNone(match, f"{relative}: missing top-level concurrency group")
                 self.assertEqual(match.group(1), expected, f"{relative}: writer queue mismatch")
 
-    def test_iptv_playlist_registry_excludes_review_queues(self):
+    def test_iptv_playlist_registry_includes_review_queues(self):
         normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
         audit = (ROOT / "scripts" / "audit_playlist.py").read_text(encoding="utf-8")
         registry_line = next(
@@ -37,19 +37,17 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         )
         import json
         registry = json.loads(registry_line.split("=", 1)[1])
-        self.assertNotIn("New Channels", registry)
-        self.assertNotIn("New Backup", registry)
         self.assertEqual(
             registry,
             [
                 "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
                 "Indian Entertainment", "Pakistani", "International",
                 "Documentary & Wildlife", "Kids", "Religious", "Sports",
-                "Not Playing", "Backup",
+                "Not Playing", "New Channels", "New Backup", "Backup",
             ],
         )
         self.assertIn(
-            'REGISTRY_ORDER = [x for x in CATEGORY_ORDER if x not in {"New Channels", "New Backup"}]',
+            "REGISTRY_ORDER = CATEGORY_ORDER",
             audit,
         )
 
