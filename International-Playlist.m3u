@@ -966,7 +966,7 @@ https://eu1.servers10.com:8081/8126/index.m3u8
 http://46.151.196.223:14326/
 #EXTINF:-1 tvg-id="custom.tiktok-radio-brasil-br-music" channel-id="custom.tiktok-radio-brasil-br-music" tvg-language="por" tvg-country="BR" tvg-content="Music" group-title="Brazil" tvg-name="TikTok Radio Brasil",TikTok Radio Brasil
 https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99992529
-#EXTINF:-1 tvg-id="AMCEurope.uk@Bulgary" channel-id="AMCEurope.uk@Bulgary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/amc-europe-bulgary-576p.png" tvg-country="GB" group-title="Bulgaria" tvg-name="AMC Europe Bulgary",AMC Europe Bulgary
+#EXTINF:-1 tvg-id="AMCEurope.uk@Bulgary" channel-id="AMCEurope.uk@Bulgary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/amc-europe-bulgary-576p.png" tvg-country="BG" tvg-content="Movies" group-title="Bulgaria" tvg-name="AMC Europe Bulgary",AMC Europe Bulgary
 http://212.70.131.37:8000/play/a05k
 #EXTINF:-1 tvg-id="BOXTV.bg@SD" channel-id="BOXTV.bg@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/box-tv.png" tvg-country="BG" tvg-content="Music" group-title="Bulgaria" tvg-name="BOX TV",BOX TV
 http://213.91.179.28:8000/play/a0an
@@ -1678,7 +1678,7 @@ https://video03.logicahost.com.br/rfptv/rfptv/playlist.m3u8
 https://atomic.streamnet.ro/academia.m3u8
 #EXTINF:-1 tvg-id="AtomicTV.ro@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atomic-tv-360p.png" tvg-country="RO" tvg-content="Music" group-title="Romania" tvg-name="Atomic TV",Atomic TV
 https://atomic.streamnet.ro/atomictv.m3u8
-#EXTINF:-1 tvg-id="BollywoodClassic.ro@Romania" channel-id="BollywoodClassic.ro@Romania" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bollywood-classic-romania-576p.png" tvg-country="RO" group-title="Romania" tvg-name="Bollywood Classic Romania",Bollywood Classic Romania
+#EXTINF:-1 tvg-id="BollywoodClassic.ro@Romania" channel-id="BollywoodClassic.ro@Romania" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bollywood-classic-romania-576p.png" tvg-country="RO" tvg-content="Movies" group-title="Romania" tvg-name="Bollywood Classic Romania",Bollywood Classic Romania
 https://hls02ns.antenaplay.ro/hls/bollywood-sd/index.m3u8
 #EXTINF:-1 tvg-id="BoomTV.ro@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/boom-tv-1080p-fdb4a495cb.png" tvg-country="RO" tvg-content="Music" group-title="Romania" tvg-name="Boom TV",Boom TV
 https://tvboom.ro/live-tv/live.m3u8
@@ -1748,7 +1748,7 @@ http://176.118.197.101/Bollywood_HD/index.m3u8
 https://xykt-fix.github.io/cinerama_edge01/hls/BOLLYWOOD_RU/Movie009.m3u8
 #EXTINF:-1 tvg-id="BRIDGE.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bridge-33debed2b6.png" tvg-country="RU" tvg-content="Music" group-title="Russia" tvg-name="BRIDGE",BRIDGE
 http://stream.mcquack.net/318/index.m3u8
-#EXTINF:-1 tvg-id="BRIDGEDeluxe.ru@SD" channel-id="BRIDGEDeluxe.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bridge-deluxe-1080p.png" tvg-country="RU" group-title="Russia" tvg-name="BRIDGE Deluxe",BRIDGE Deluxe
+#EXTINF:-1 tvg-id="BRIDGEDeluxe.ru@SD" channel-id="BRIDGEDeluxe.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bridge-deluxe-1080p.png" tvg-country="RU" tvg-content="Music" group-title="Russia" tvg-name="BRIDGE Deluxe",BRIDGE Deluxe
 http://stream.mcquack.net/92/index.m3u8
 #EXTINF:-1 tvg-id="BRIDGERock.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bridge-rock-1abe531ff3.png" tvg-country="RU" tvg-content="Music" group-title="Russia" tvg-name="BRIDGE Rock",BRIDGE Rock
 http://178.134.1.158:8081/BRIDGEROCK/index.m3u8
@@ -2072,7 +2072,7 @@ https://2-fss-1.streamhoster.com/pl_122/206858-4412960-1/playlist.m3u8
 https://amg01076-lightningintern-actionhollywood-samsungnz-82rry.amagi.tv/playlist/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
 #EXTINF:-1 tvg-id="Afrobeats.us" tvg-language="eng" channel-id="Afrobeats.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/afrobeats.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Afrobeats",Afrobeats
 https://stream.ecable.tv/afrobeats/index.m3u8
-#EXTINF:-1 tvg-id="AMC.us" channel-id="AMC.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amc-1080p-95485d9836.png" tvg-country="US" group-title="United States" tvg-name="AMC",AMC
+#EXTINF:-1 tvg-id="AMC.us" channel-id="AMC.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amc-1080p-95485d9836.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="AMC",AMC
 https://5def33c73f084e11a19ca77697d6b413.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Plex_AMCPresents/playlist.m3u8
 #EXTINF:-1 tvg-id="AMC.us@EastHD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amc-united-states-720p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="AMC (United States)",AMC (United States)
 http://23.239.31.26:8989/amc/index.m3u8
@@ -2092,7 +2092,7 @@ https://amogonetworx-artflix-1-nl.samsung.wurl.tv/playlist.m3u8
 https://hls.avang.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AVIRewind.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/avi-rewind-1080p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="AVI Rewind",AVI Rewind
 http://45.70.201.81:8000/play/a010/index.m3u8
-#EXTINF:-1 tvg-id="AXNBlack.us@Bulgary" channel-id="AXNBlack.us@Bulgary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-black-united-states-576p.png" tvg-country="US" group-title="United States" tvg-name="AXN Black (United States)",AXN Black (United States)
+#EXTINF:-1 tvg-id="AXNBlack.us@Bulgary" channel-id="AXNBlack.us@Bulgary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-black-united-states-576p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="AXN Black (United States)",AXN Black (United States)
 http://85.14.32.26:8800/udp/239.100.10.17:5000
 #EXTINF:-1 tvg-id="AXNCrime.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axn-crime-c719b192f7.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="AXN Crime",AXN Crime
 http://88.212.7.14/live/viasat_film/index.m3u8
@@ -2100,9 +2100,7 @@ http://88.212.7.14/live/viasat_film/index.m3u8
 http://138.121.15.230:9002/AXN/index.m3u8
 #EXTINF:-1 tvg-id="AXNLatinAmerica.us@Andes" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axn-latin-america-andes-67d0a7bf5d.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="AXN Latin America Andes",AXN Latin America Andes
 http://181.78.8.199:8000/play/a0cu/index.m3u8
-#EXTINF:-1 tvg-id="AXNLatinAmerica.us@South" channel-id="AXNLatinAmerica.us@South" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-latin-america-south.png" tvg-country="US" group-title="United States" tvg-name="AXN Latin America South",AXN Latin America South
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8
-#EXTINF:-1 tvg-id="AXS.us" channel-id="AXS.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axs.png" tvg-country="US" group-title="United States" tvg-name="AXS",AXS
+#EXTINF:-1 tvg-id="AXS.us" channel-id="AXS.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axs.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="AXS",AXS
 https://tvsen6.aynaott.com/axs/index.m3u8
 #EXTINF:-1 tvg-id="AXSTV.us" tvg-language="eng" channel-id="AXSTV.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axs.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="AXS TV",AXS TV
 http://23.239.31.26:8989/axstv/index.m3u8
@@ -2126,7 +2124,7 @@ https://jmp2.uk/plu-5f12111c9e6c2c00078ef3bb.m3u8
 http://138.121.15.230:9002/CINECANAL/index.m3u8
 #EXTINF:-1 tvg-id="custom.cinecanal-panregional-us-movie" channel-id="custom.cinecanal-panregional-us-movie" tvg-language="spa" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cinecanal Panregional",Cinecanal Panregional
 https://barinaslive1.boldmss.com/CINECANAL/CINECANAL.isml/CINECANAL.m3u8
-#EXTINF:-1 tvg-id="Cinecanal.us@South" channel-id="Cinecanal.us@South" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cinecanal-south.png" tvg-country="US" group-title="United States" tvg-name="Cinecanal South",Cinecanal South
+#EXTINF:-1 tvg-id="Cinecanal.us@South" channel-id="Cinecanal.us@South" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cinecanal-south.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cinecanal South",Cinecanal South
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/17.m3u8
 #EXTINF:-1 tvg-id="Cinemax.us@West" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinemax-united-states-west-720p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cinemax (United States) West",Cinemax (United States) West
 http://23.237.104.106:8080/USA_CINEMAX_WEST/index.m3u8
@@ -2134,7 +2132,7 @@ http://23.237.104.106:8080/USA_CINEMAX_WEST/index.m3u8
 http://23.237.104.106:8080/USA_5STARMAX/index.m3u8
 #EXTINF:-1 tvg-id="CinemaxHits.us@East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinemax-hits-d7aa5bbda6.svg" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cinemax Hits",Cinemax Hits
 http://23.237.104.106:8080/USA_MOREMAX/index.m3u8
-#EXTINF:-1 tvg-id="CinemaxLatinAmerica.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinemax-latin-america-720p.png" tvg-country="US" group-title="United States" tvg-name="Cinemax Latin America",Cinemax Latin America
+#EXTINF:-1 tvg-id="CinemaxLatinAmerica.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinemax-latin-america-720p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cinemax Latin America",Cinemax Latin America
 https://streaming.onnethn.com/CINEMAX/playlist.m3u8
 #EXTINF:-1 tvg-id="CinevaultWesterns.us@SD" channel-id="CinevaultWesterns.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cinevault-westerns-540p-geo-blocked.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cinevault Westerns",Cinevault Westerns
 https://gsn-cinevault-westerns-2-us.roku.wurl.tv/playlist.m3u8
@@ -2468,7 +2466,7 @@ https://sistemastr.tropicalmoonmedia.com/live/56BE17DB16EB76C9F2DDB8346F4DFA4E/3
 https://streaming.grupomediosdelnorte.com:19360/tvexitos/tvexitos.m3u8
 #EXTINF:-1 tvg-id="CinemaxAsia.sg@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinemax-asia-hd-1080p.png" tvg-country="SG" tvg-content="Movies" group-title="Singapore" tvg-name="Cinemax Asia",Cinemax Asia
 http://125.227.210.55:1001/VideoInput/play.ts
-#EXTINF:-1 tvg-id="HBOAsia.sg@SD" channel-id="HBOAsia.sg@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/hbo-asia-sd.png" tvg-country="SG" group-title="Singapore" tvg-name="HBO Asia SD [ ]",HBO Asia SD [ ]
+#EXTINF:-1 tvg-id="HBOAsia.sg@SD" channel-id="HBOAsia.sg@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/hbo-asia-sd.png" tvg-country="SG" tvg-content="Movies" group-title="Singapore" tvg-name="HBO Asia SD [ ]",HBO Asia SD [ ]
 http://202.150.165.66:8088/play/100-HBO/index.m3u8
 #EXTINF:-1 tvg-id="HBOHitsAsia.sg@HD" channel-id="HBOHitsAsia.sg@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/hbo-hits-asia-hd-1080p.png" tvg-country="SG" tvg-content="Movies" group-title="Singapore" tvg-name="HBO Hits Asia",HBO Hits Asia
 http://202.150.165.66:8088/play/102-HBOHits/index.m3u8
