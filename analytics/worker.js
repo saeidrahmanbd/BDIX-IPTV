@@ -38,9 +38,12 @@ export default {
         env.ANALYTICS_DB.prepare("SELECT COUNT(*) requests, COUNT(DISTINCT client_hash || ':' || day) unique_clients FROM hits WHERE ts >= ?").bind(since).first(),
         env.ANALYTICS_DB.prepare("SELECT day, playlist, COUNT(*) requests, COUNT(DISTINCT client_hash) unique_clients FROM hits WHERE ts >= ? GROUP BY day, playlist ORDER BY day DESC, playlist").bind(since).all()
       ]);
-      const byPlaylist = await env.ANALYTICS_DB.prepare("SELECT playlist, COUNT(*) requests FROM hits WHERE ts >= ? GROUP BY playlist").bind(since).all();
+      const [byPlaylist, byCountry] = await Promise.all([
+        env.ANALYTICS_DB.prepare("SELECT playlist, COUNT(*) requests FROM hits WHERE ts >= ? GROUP BY playlist").bind(since).all(),
+        env.ANALYTICS_DB.prepare("SELECT country, COUNT(*) requests, COUNT(DISTINCT client_hash || ':' || day) unique_clients FROM hits WHERE ts >= ? GROUP BY country ORDER BY requests DESC LIMIT 20").bind(since).all()
+      ]);
       const map = Object.fromEntries((byPlaylist.results || []).map(x => [x.playlist, x.requests]));
-      return json({period_days:days, totals:{requests:totals?.requests||0,unique_clients:totals?.unique_clients||0,by_playlist:map},daily:daily.results||[]});
+      return json({period_days:days, totals:{requests:totals?.requests||0,unique_clients:totals?.unique_clients||0,by_playlist:map},countries:byCountry.results||[],daily:daily.results||[]});
     }
     const filename = ALLOWED[url.pathname];
     if (!filename) return new Response("Not found", {status:404});
