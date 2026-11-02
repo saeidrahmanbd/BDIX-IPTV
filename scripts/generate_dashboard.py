@@ -20,6 +20,11 @@ def report_source_sha(text):
 def report_url_inventory_sha(text):
     m=re.search(r'Stream URL inventory SHA-256:\s*\*\*([a-f0-9]{64})\*\*',text,re.I)
     return m.group(1).lower() if m else ""
+def prepublish_status(text):
+    """Parse the current safety-gate status without treating valid PASS as UNKNOWN."""
+    match=re.search(r"(?im)^Status:\s*\*\*(PASS|BLOCK)\*\*\s*$",text)
+    return match.group(1) if match else "UNKNOWN"
+
 def url_inventory_sha(text):
     urls=sorted(line.strip() for line in text.splitlines() if line.strip().startswith(("http://","https://")))
     return hashlib.sha256("\n".join(urls).encode("utf-8")).hexdigest()
@@ -91,7 +96,7 @@ def main():
         # fingerprints. Recheck the published audit's exact hashes here; parsed
         # row-count differences must not falsely mark an unchanged guide pending.
         epg_current = epg_report_fingerprints_match(egd) and epg_audit_headers_ok(egd)
-    gm=re.search(r'Status:\\s*\\*\\*(PASS|BLOCK)\\*\\*',gate)
+    gate_status=prepublish_status(gate) if gate_current else "STALE / UNKNOWN"
     gate_status=(gm.group(1) if gm else "UNKNOWN") if gate_current else "STALE / UNKNOWN"
     groups=Counter(x.get("group-title","") for x in e)
     active_groups={"Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports"}
