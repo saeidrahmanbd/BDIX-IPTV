@@ -1004,7 +1004,7 @@ https://d7i20u8nlyf1b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a
 https://d2n3779oy6efpi.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-5rxuagztow0k3/playlist.m3u8
 #EXTINF:-1 tvg-id="VTU.in@SD" tvg-name="VTU" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vtu.png" tvg-chno="494" channel-id="VTU.in@SD" tvg-country="IN" tvg-language="und" group-title="International",VTU
 https://lbgo.bozztv.com/ssh101/ssh101/afghantheatretv/playlist.m3u8
-#EXTINF:-1 tvg-chno="577" channel-id="custom.weatherspy" tvg-id="custom.weatherspy" tvg-name="Weather SPY" group-title="International",Weather SPY
+#EXTINF:-1 tvg-chno="577" channel-id="custom.weatherspy" tvg-id="custom.weatherspy" tvg-name="Weather SPY" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/weatherspy-india.png" tvg-country="IN" tvg-language="eng" group-title="International",Weather SPY
 https://jukin-weatherspy-2-in.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="XITE.nl" tvg-name="XITE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xite.png" tvg-chno="495" channel-id="XITE.nl" tvg-country="NL" tvg-language="eng" group-title="International",XITE
 https://xite-rakuten.amagi.tv/playlist.m3u8
