@@ -4,12 +4,12 @@ The root [README.md](../README.md) is the canonical project overview, playlist c
 
 ## Playlist and discovery policy
 
-- Three maintained playlists: [IPTV](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u), [BDIX](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u), and [International](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u).
+- Two maintained playlists: [IPTV](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u), [BDIX](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u), and [International](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u).
 - International country groups are for movie/music channels. Documentary & Wildlife, Kids, Sports, Religious, Adult, and the explicit Fashion TV exception remain in dedicated groups.
 - Discovery queues are restricted to verified Bangladesh/India candidates. Bangladeshi news is allowed; Indian News and non-Islamic religious channels are prohibited; Indian Kids/Sports and Islamic religious channels are allowed.
 - **Permanent denylist:** E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
 - Country groups for discovery candidates are created only when there are at least five legitimate primary channel identities for that country; smaller sets remain in the review queue.
-- `New Channels`, `New Backup`, `Backup` and `Not Playing` have separate purposes. The Xtream workers exclude `Test`, `Not Playing`, and the new discovery queues from service output.
+- `New Channels`, `New Backup`, `Backup` and `Not Playing` have separate purposes. The main Xtream worker excludes `Test`, `Not Playing`, and the new discovery queues from service output.
 
 ## Metadata and logos
 
