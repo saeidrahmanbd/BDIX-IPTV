@@ -281,6 +281,14 @@ def primary_target(base,code,country_groups):
   return "Indian Movies" if genre=="Movies" else "Indian Music"
  if code in country_groups and country_group(code):return country_group(code)
  return "International"
+def existing_international_target(a,name,country_groups):
+ # Revalidate legacy catch-all rows instead of preserving stale radio/VOD/etc.
+ policy_a=dict(a); policy_a["group-title"]="International"
+ base,reason,code=policy(policy_a,name,allow_legacy_group=True)
+ genre=infer_genre(policy_a,name)
+ if base is None or not genre:
+  return None,reason or "entry is not confidently classifiable as Movies/Music",genre
+ return primary_target(base,code,country_groups),None,genre
 def main():
  if not PLAYLIST.exists():raise SystemExit("International-Playlist.m3u not found; refusing to create it.")
  req=urllib.request.Request(SOURCE_URL,headers={"User-Agent":"BDIX-IPTV-International-Discovery/1.0"})
@@ -364,6 +372,11 @@ def main():
     filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
     continue
    group=primary_target(base,policy_code,country_groups)
+  elif old_key=="international" and not is_new:
+   group,reason,genre=existing_international_target(a,name,country_groups)
+   if group is None:
+    filtered_existing.append((name,old,reason))
+    continue
   elif is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
    base,reason,policy_code=policy(policy_a,name)

@@ -160,6 +160,30 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(discovery.primary_target("International Movies", "IN", set()), "Indian Movies")
         self.assertEqual(discovery.primary_target("International Music", "IN", set()), "Indian Music")
 
+    def test_existing_international_rows_are_revalidated_and_promoted_at_five(self):
+        music = {
+            "group-title": "International",
+            "tvg-content": "Music",
+            "tvg-country": "MK",
+            "tvg-id": "MacedonianMusic.mk",
+        }
+        target, reason, genre = discovery.existing_international_target(
+            music, "Macedonian Music TV", set()
+        )
+        self.assertEqual((target, reason, genre), ("International", None, "Music"))
+
+        target, reason, genre = discovery.existing_international_target(
+            music, "Macedonian Music TV", {"MK"}
+        )
+        self.assertEqual((target, reason, genre), ("North Macedonia", None, "Music"))
+
+        radio = dict(music, **{"tvg-country": "AT", "tvg-id": "Kronehit.at"})
+        target, reason, _ = discovery.existing_international_target(
+            radio, "Kronehit", set()
+        )
+        self.assertIsNone(target)
+        self.assertIn("test/VOD/non-TV name", reason)
+
     def test_qualified_country_promotes_queued_candidates_at_five_identity_threshold(self):
         blocks = [
             [
