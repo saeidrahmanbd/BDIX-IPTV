@@ -1,14 +1,14 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-01T14:14:24+00:00**
+Generated: **2026-11-02T02:00:22+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1186 | 705 | 462 | 418 | 462 | 401 | 243 | OK |
-| BDIX-Playlist.m3u | 131 | 131 | 78 | 74 | 78 | 74 | 53 | OK |
-| International-Playlist.m3u | 2514 | 2065 | 761 | 619 | 755 | 581 | 1304 | OK |
+| IPTV-Playlist.m3u | 1186 | 705 | 462 | 412 | 462 | 394 | 243 | OK |
+| BDIX-Playlist.m3u | 131 | 131 | 78 | 73 | 78 | 72 | 53 | OK |
+| International-Playlist.m3u | 2514 | 2065 | 761 | 613 | 755 | 574 | 1304 | OK |
 
 ## Group coverage
 
@@ -27,7 +27,7 @@ This report measures the three maintained M3U playlists included in the automate
 | Colombia | 9 | 1 | 1 | 8 |
 | Costa Rica | 8 | 0 | 0 | 8 |
 | Czech Republic | 26 | 9 | 3 | 17 |
-| Documentary & Wildlife | 207 | 138 | 106 | 69 |
+| Documentary & Wildlife | 207 | 138 | 105 | 69 |
 | Dominican Republic | 11 | 1 | 0 | 10 |
 | Estonia | 6 | 1 | 0 | 5 |
 | Finland | 2 | 0 | 0 | 2 |
@@ -37,9 +37,9 @@ This report measures the three maintained M3U playlists included in the automate
 | Hungary | 15 | 8 | 6 | 7 |
 | Indian Bangla | 48 | 39 | 35 | 9 |
 | Indian Entertainment | 226 | 188 | 178 | 38 |
-| Indian Movies | 79 | 58 | 55 | 21 |
-| Indian Music | 72 | 60 | 57 | 12 |
-| International | 163 | 58 | 45 | 105 |
+| Indian Movies | 79 | 58 | 51 | 21 |
+| Indian Music | 72 | 60 | 56 | 12 |
+| International | 163 | 58 | 43 | 105 |
 | Iran | 9 | 3 | 2 | 6 |
 | Italy | 17 | 6 | 6 | 11 |
 | Kids | 213 | 95 | 77 | 118 |
@@ -62,10 +62,10 @@ This report measures the three maintained M3U playlists included in the automate
 | Serbia | 1 | 1 | 0 | 0 |
 | Singapore | 3 | 0 | 0 | 3 |
 | Spain | 15 | 3 | 1 | 12 |
-| Sports | 269 | 117 | 98 | 152 |
+| Sports | 269 | 117 | 96 | 152 |
 | Turkey | 13 | 0 | 0 | 13 |
 | Ukraine | 18 | 2 | 0 | 16 |
-| United Arab Emirates | 2 | 1 | 1 | 1 |
+| United Arab Emirates | 2 | 1 | 0 | 1 |
 | United Kingdom | 9 | 1 | 0 | 8 |
 | United States | 101 | 35 | 24 | 66 |
 | Uzbekistan | 3 | 0 | 0 | 3 |

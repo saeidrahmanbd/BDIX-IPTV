@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-11-01 14:14 UTC**_
+_Last generated: **2026-11-02 02:00 UTC**_
 
 Source playlist SHA-256: **a93c0292bc951c204dd26fa4bb2abd20d28208856b476e340272d5a6578c0dc3**
 
@@ -13,8 +13,8 @@ Source playlist SHA-256: **a93c0292bc951c204dd26fa4bb2abd20d28208856b476e340272d
 | India | **333** |
 | Backup Stream Entries | **340** |
 | IPTV Local Logos | **STALE** |
-| IPTV EPG Programme Coverage | **PENDING** |
-| IPTV EPG Mapping | **PENDING** |
+| IPTV EPG Programme Coverage | **56%** |
+| IPTV EPG Mapping | **65.5%** |
 | Stream Health Tested | **STALE** |
 | Stream Health Failures | **STALE** |
 | Persistent Failures | **STALE** |
@@ -52,18 +52,18 @@ Source playlist SHA-256: **a93c0292bc951c204dd26fa4bb2abd20d28208856b476e340272d
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
 ## EPG
-- EPG IDs audited: **PENDING — guide not current**
-- Mapped: **PENDING — no current validated guide**
-- Current/future programme coverage: **PENDING — no current validated guide**
-- No mapping: **PENDING — guide not current**
-- EPG metric scope: **IPTV-Playlist.m3u published-guide row (awaiting a valid, fresh published guide)**
+- EPG IDs audited: **705**
+- Mapped: **462 (65.5%)**
+- Current/future programme coverage: **394/705 (55.9%)**
+- No mapping: **243**
+- EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against all three current playlist inventories)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
 
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-01T01:11:34.614764+00:00** | **STALE** |
-| EPG coverage / three-playlist inventory | **2026-11-01T14:14:24+00:00** | **PENDING — guide missing or freshness not PASS** |
+| EPG coverage / three-playlist inventory | **2026-11-02T02:00:22+00:00** | **CURRENT** |
 | Stream health | **2026-11-01T01:12:25+00:00** | **STALE** |
 | Pre-publish gate | **2026-11-01T01:11:35+00:00** | **STALE** |
 
