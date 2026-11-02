@@ -10,8 +10,12 @@ OUT_MD=ROOT/"reports/Update Report.md"; OUT_SVG=ROOT/"assets/dashboard.svg"; OUT
 EPG_GUIDE=ROOT/"epg/epg.xml"; EPG_FRESHNESS=ROOT/"reports/epg-publish-freshness.md"
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 def metric(text,label):
-    m=re.search(r'- '+re.escape(label)+r': \*\*(\d+)\*\*',text); return int(m.group(1)) if m else 0
-def read(p): return p.read_text(encoding="utf-8") if p.exists() else ""
+    aliases = {"Logo exceptions": "Logo exceptions requiring repair"}
+    labels = (label, aliases[label]) if label in aliases else (label,)
+    for candidate in labels:
+        m=re.search(r'- '+re.escape(candidate)+r': \*\*(\d+)\*\*',text)
+        if m: return int(m.group(1))
+    return 0
 def timestamp(p):
     m=re.search(r'(?:Generated|Last generated):\s*\*\*([^*]+)\*\*',read(p),re.I); return m.group(1) if m else "not available"
 def report_source_sha(text):
