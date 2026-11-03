@@ -8,7 +8,8 @@ on:
     paths:
       - "scripts/**"
       - "tests/**"
-      - "xtream-main/**"\n      - "analytics/**"
+      - "xtream-main/**"
+      - "analytics/**"
       - "docs/requirements.txt"
       - ".github/workflows/test-suite.yml"
   workflow_dispatch:
@@ -38,5 +39,7 @@ jobs:
       - name: Syntax-check Cloudflare Worker modules
         run: |
           node --input-type=module --check < xtream-main/worker.js
-      - name: Syntax-check analytics Worker module\n        run: node --input-type=module --check < analytics/worker.js\n      - name: Run the complete test suite
+      - name: Syntax-check analytics Worker module
+        run: node --input-type=module --check < analytics/worker.js
+      - name: Run the complete test suite
         run: python -m unittest discover -s tests -v

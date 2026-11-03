@@ -162,6 +162,22 @@ SOURCES = [
     "https://iptv-epg.org/files/epg-se.xml.gz",
     "https://iptv-epg.org/files/epg-tr.xml.gz",
     "https://iptv-epg.org/files/epg-gb.xml.gz",
+    # Additional country feeds from iptv-epg.org for active International groups.
+    "https://iptv-epg.org/files/epg-at.xml.gz",
+    "https://iptv-epg.org/files/epg-au.xml.gz",
+    "https://iptv-epg.org/files/epg-cr.xml.gz",
+    "https://iptv-epg.org/files/epg-pa.xml.gz",
+    "https://iptv-epg.org/files/epg-py.xml.gz",
+    "https://iptv-epg.org/files/epg-sg.xml.gz",
+    # Targeted FreeEPG country guides for regions represented in International-Playlist.m3u.
+    "https://free-epg.de/api/epg/at.xml.gz",
+    "https://free-epg.de/api/epg/cn.xml.gz",
+    "https://free-epg.de/api/epg/cr.xml.gz",
+    "https://free-epg.de/api/epg/ec.xml.gz",
+    "https://free-epg.de/api/epg/ee.xml.gz",
+    "https://free-epg.de/api/epg/pa.xml.gz",
+    "https://free-epg.de/api/epg/sa.xml.gz",
+    "https://free-epg.de/api/epg/ua.xml.gz",
     # Samsung TV Plus schedules for India and the US; useful for matching FAST channels.
     "https://i.mjh.nz/SamsungTVPlus/in.xml",
     "https://i.mjh.nz/SamsungTVPlus/us.xml",
@@ -560,9 +576,9 @@ def source_region_compatible(target_country, source_id):
 
 def main():
     channels=parse_playlist(); previous=load_previous(); source_data=[]; source_status=[]
-    # Use the existing mapping snapshot to avoid parsing feeds that cannot
-    # currently contribute a matched source ID. New channel/source discovery is
-    # still handled by the targeted supplemental and iptv-org augmentation steps.
+    # Retain feeds already represented in mappings and add country-specific
+    # discovery feeds for active regions in both maintained playlists. Targeted
+    # provider and iptv-org augmentation then adds exact source identities.
     source_urls = sources_with_mapped_channels(configured_sources())
     source_data, source_status = fetch_all_sources(source_urls)
     rows=[]

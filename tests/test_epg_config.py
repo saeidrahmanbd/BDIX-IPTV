@@ -47,6 +47,20 @@ class EpgConfigTests(unittest.TestCase):
             "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
             "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
             "https://iptv-epg.org/files/epg-in.xml.gz",
+            "https://iptv-epg.org/files/epg-at.xml.gz",
+            "https://iptv-epg.org/files/epg-au.xml.gz",
+            "https://iptv-epg.org/files/epg-cr.xml.gz",
+            "https://iptv-epg.org/files/epg-pa.xml.gz",
+            "https://iptv-epg.org/files/epg-py.xml.gz",
+            "https://iptv-epg.org/files/epg-sg.xml.gz",
+            "https://free-epg.de/api/epg/at.xml.gz",
+            "https://free-epg.de/api/epg/cn.xml.gz",
+            "https://free-epg.de/api/epg/cr.xml.gz",
+            "https://free-epg.de/api/epg/ec.xml.gz",
+            "https://free-epg.de/api/epg/ee.xml.gz",
+            "https://free-epg.de/api/epg/pa.xml.gz",
+            "https://free-epg.de/api/epg/sa.xml.gz",
+            "https://free-epg.de/api/epg/ua.xml.gz",
             "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
             "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
             "https://m3u-edit.com/epg-source.php?file=IN1.xml.gz",
@@ -194,6 +208,72 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn(
             'data = source_payloads[src]\n            for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):',
             GEN,
+        )
+
+    def test_country_specific_feeds_are_scanned_for_active_playlist_regions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            main_playlist = root / "IPTV-Playlist.m3u"
+            international_playlist = root / "International-Playlist.m3u"
+            mapping = root / "mapping.csv"
+            main_playlist.write_text(
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-id="ColorsBangla.in" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Colors Bangla",Colors Bangla\n'
+                'https://example.test/india.m3u8\n',
+                encoding="utf-8",
+            )
+            international_playlist.write_text(
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-id="TVN.pa" tvg-country="PA" group-title="Panama" tvg-name="TVN",TVN\n'
+                'https://example.test/panama.m3u8\n'
+                '#EXTINF:-1 tvg-id="Channel.sg" group-title="Singapore" tvg-name="Channel",Channel\n'
+                'https://example.test/singapore.m3u8\n',
+                encoding="utf-8",
+            )
+            mapping.write_text(
+                "group,channel,tvg_id,epg_id,source,status,note\n",
+                encoding="utf-8",
+            )
+            configured = [
+                "https://iptv-epg.org/files/epg-in.xml.gz",
+                "https://free-epg.de/api/epg/pa.xml.gz",
+                "https://iptv-epg.org/files/epg-sg.xml.gz",
+                "https://free-epg.de/api/epg/us.xml.gz",
+                "https://example.test/unmapped.xml",
+            ]
+            with (
+                patch.object(generate_epg, "PLAYLISTS", [main_playlist, international_playlist]),
+                patch.object(generate_epg, "MAPPING", mapping),
+            ):
+                countries = generate_epg.active_playlist_country_codes()
+                selected = generate_epg.sources_with_mapped_channels(configured)
+
+        self.assertEqual(countries, {"IN", "PA", "SG"})
+        self.assertEqual(
+            selected,
+            [
+                "https://iptv-epg.org/files/epg-in.xml.gz",
+                "https://free-epg.de/api/epg/pa.xml.gz",
+                "https://iptv-epg.org/files/epg-sg.xml.gz",
+            ],
+        )
+
+    def test_source_country_codes_recognize_public_feed_families(self):
+        self.assertEqual(
+            generate_epg.source_country_codes("https://iptv-epg.org/files/epg-at.xml.gz"),
+            {"AT"},
+        )
+        self.assertEqual(
+            generate_epg.source_country_codes("https://free-epg.de/api/epg/cn.xml.gz"),
+            {"CN"},
+        )
+        self.assertEqual(
+            generate_epg.source_country_codes("https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz"),
+            {"GB"},
+        )
+        self.assertEqual(
+            generate_epg.source_country_codes("https://m3u-edit.com/epg-source.php?file=IN4.xml.gz"),
+            {"IN"},
         )
 
     def test_generator_skips_feeds_without_current_mapped_source_ids(self):
