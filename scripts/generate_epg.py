@@ -8,7 +8,7 @@ import io
 import os
 import re
 import urllib.request
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from difflib import SequenceMatcher
@@ -68,6 +68,22 @@ SOURCES = [
     "https://iptv-epg.org/files/epg-se.xml.gz",
     "https://iptv-epg.org/files/epg-tr.xml.gz",
     "https://iptv-epg.org/files/epg-gb.xml.gz",
+    # Additional country feeds from iptv-epg.org for active International groups.
+    "https://iptv-epg.org/files/epg-at.xml.gz",
+    "https://iptv-epg.org/files/epg-au.xml.gz",
+    "https://iptv-epg.org/files/epg-cr.xml.gz",
+    "https://iptv-epg.org/files/epg-pa.xml.gz",
+    "https://iptv-epg.org/files/epg-py.xml.gz",
+    "https://iptv-epg.org/files/epg-sg.xml.gz",
+    # Targeted FreeEPG country guides for regions represented in International-Playlist.m3u.
+    "https://free-epg.de/api/epg/at.xml.gz",
+    "https://free-epg.de/api/epg/cn.xml.gz",
+    "https://free-epg.de/api/epg/cr.xml.gz",
+    "https://free-epg.de/api/epg/ec.xml.gz",
+    "https://free-epg.de/api/epg/ee.xml.gz",
+    "https://free-epg.de/api/epg/pa.xml.gz",
+    "https://free-epg.de/api/epg/sa.xml.gz",
+    "https://free-epg.de/api/epg/ua.xml.gz",
     # Samsung TV Plus schedules for India and the US; useful for matching FAST channels.
     "https://i.mjh.nz/SamsungTVPlus/in.xml",
     "https://i.mjh.nz/SamsungTVPlus/us.xml",
@@ -142,8 +158,93 @@ def configured_sources():
     return sources
 
 
+COUNTRY_GROUP_CODES = {
+    "argentina": "AR", "aruba": "AW", "austria": "AT", "brazil": "BR",
+    "bulgaria": "BG", "canada": "CA", "chile": "CL", "china": "CN",
+    "colombia": "CO", "costa rica": "CR", "czech republic": "CZ",
+    "dominican republic": "DO", "ecuador": "EC", "estonia": "EE",
+    "france": "FR", "germany": "DE", "greece": "GR", "hungary": "HU",
+    "iran": "IR", "italy": "IT", "lebanon": "LB", "mexico": "MX",
+    "netherlands": "NL", "panama": "PA", "paraguay": "PY", "peru": "PE",
+    "poland": "PL", "portugal": "PT", "romania": "RO", "russia": "RU",
+    "saudi arabia": "SA", "serbia": "RS", "singapore": "SG", "spain": "ES",
+    "turkey": "TR", "ukraine": "UA", "united kingdom": "GB",
+    "united states": "US", "uzbekistan": "UZ", "vietnam": "VN",
+    "indian bangla": "IN", "indian movies": "IN", "indian music": "IN",
+    "indian entertainment": "IN", "pakistani": "PK",
+}
+COUNTRY_CODE_ALIASES = {"UK": "GB"}
+
+
+def normalize_country_code(value):
+    code = str(value or "").strip().upper()
+    if len(code) != 2 or not code.isalpha():
+        return ""
+    return COUNTRY_CODE_ALIASES.get(code, code)
+
+
+def active_playlist_country_codes():
+    """Return country codes represented by active entries in the two maintained playlists."""
+    countries = set()
+    for playlist_path in PLAYLISTS:
+        if not playlist_path.is_file():
+            continue
+        current = None
+        for line in playlist_path.read_text(encoding="utf-8-sig").splitlines():
+            if line.startswith("#EXTINF:"):
+                current = dict(re.findall(r'([\\w-]+)="([^"]*)"', line))
+            elif current and line.strip().startswith(("http://", "https://")):
+                group = current.get("group-title", "").strip()
+                tvg_id = current.get("tvg-id", "").strip()
+                if tvg_id and group not in INACTIVE_GROUPS:
+                    code = normalize_country_code(current.get("tvg-country", ""))
+                    if not code:
+                        code = COUNTRY_GROUP_CODES.get(group.casefold(), "")
+                    if code:
+                        countries.add(code)
+                current = None
+    return countries
+
+
+def source_country_codes(source):
+    """Infer a source region only from a country-specific feed path or known provider family."""
+    parsed = urlparse(str(source or ""))
+    host = (parsed.hostname or "").casefold()
+    path = parsed.path.casefold()
+    code = ""
+    match = None
+    if host.endswith("iptv-epg.org"):
+        match = re.search(r"/epg-([a-z]{2})\\.xml(?:\\.gz)?$", path)
+    elif host.endswith("free-epg.de"):
+        match = re.search(r"/api/epg/([a-z]{2})\\.xml\\.gz$", path)
+    elif host.endswith("epgshare01.online"):
+        match = re.search(r"epg_ripper_([a-z]{2})\\d+\\.xml\\.gz$", path)
+    elif host.endswith("epg.lat"):
+        match = re.search(r"/([a-z]{2})\\.xml\\.gz$", path)
+    elif host.endswith("mjh.nz"):
+        match = re.search(r"/([a-z]{2})\\.xml$", path)
+    elif host.endswith("m3u-edit.com"):
+        filename = parse_qs(parsed.query).get("file", [""])[0].casefold()
+        if filename.startswith("in") or "india" in filename:
+            code = "IN"
+    elif host.endswith("open-epg.com"):
+        filename = Path(path).name
+        if filename.startswith("india."):
+            code = "IN"
+        elif filename.startswith("unitedkingdom."):
+            code = "GB"
+    elif host == "raw.githubusercontent.com" and "/jasonramg/iptv-epg/main/epg/" in path:
+        code = "IN"
+    elif host == "avkb.short.gy":
+        code = "IN"
+    if match:
+        code = match.group(1).upper()
+    normalized = normalize_country_code(code)
+    return {normalized} if normalized else set()
+
+
 def sources_with_mapped_channels(source_urls):
-    """Skip feeds with no current mapped source IDs, retaining local/official adapters."""
+    """Keep mapped feeds plus country-specific discovery feeds for active playlist regions."""
     source_urls = list(source_urls)
     if not MAPPING.is_file():
         print("EPG source pruning skipped: mapping CSV is missing.")
@@ -159,17 +260,26 @@ def sources_with_mapped_channels(source_urls):
         print(f"EPG source pruning skipped: cannot read mapping CSV ({exc}).")
         return source_urls
     private_url = os.environ.get(PRIVATE_SOURCE_ENV, "").strip()
+    active_countries = active_playlist_country_codes()
+    discovery_sources = {
+        source for source in source_urls
+        if source_country_codes(source) & active_countries
+    }
     selected = [
         source for source in source_urls
         if source in mapped_sources
         or source in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE)
         or source.startswith("file://")
         or (private_url and source == private_url)
+        or source in discovery_sources
     ]
     if not selected:
-        print("EPG source pruning skipped: no mapped source URLs found.")
+        print("EPG source pruning skipped: no mapped or region-relevant source URLs found.")
         return source_urls
-    print(f"EPG source pruning: using {len(selected)} of {len(source_urls)} configured feeds with current mapping hits (plus local/official adapters).")
+    print(
+        f"EPG source pruning: using {len(selected)} of {len(source_urls)} feeds; "
+        f"{len(discovery_sources)} are country-discovery feeds for {len(active_countries)} active regions."
+    )
     return selected
 
 
@@ -231,7 +341,7 @@ def fetch_xmltv_sources_concurrently(source_urls, max_workers=SOURCE_FETCH_WORKE
 
 
 def playlist_channels():
-    """Include primary channel IDs from the three core maintained playlists, keeping main-list names first."""
+    """Include primary channel IDs from the two maintained playlists, keeping main-list names first."""
     out = {}
     for playlist_path in PLAYLISTS:
         if not playlist_path.exists():
