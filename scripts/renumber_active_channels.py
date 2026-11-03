@@ -112,7 +112,7 @@ def normalize_playlist_text(text: str) -> tuple[str, int]:
         record[0] = remove_channel_number(record[0])
 
     ordered = primary + review
-    if url_inventory(ordered) != original_urls:
+    if sorted(url_inventory(ordered)) != sorted(original_urls):
         raise ValueError("Stream URL inventory changed during primary ordering/numbering.")
     result = newline.join(preamble + [line for record in ordered for line in record])
     if had_final_newline:
