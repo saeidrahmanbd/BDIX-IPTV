@@ -647,7 +647,7 @@ https://mumt05.tangotv.in/87NeALx2NEPAL1/index.m3u8
 https://stream.ottlive.co.in/nkrtv/index.m3u8
 #EXTINF:-1 tvg-id="NTCTV.in@SD" tvg-name="NTC TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntc-tv.png" tvg-chno="321" channel-id="NTCTV.in@SD" tvg-country="IN" tvg-language="und" group-title="Indian Entertainment",NTC TV
 https://galaxyott.live/hls/ntv.m3u8
-#EXTINF:-1 tvg-chno="322" channel-id="NTV.in" tvg-id="NTV.in" tvg-name="NTV Malayalam" tvg-language="mal" tvg-country="IN" group-title="Indian Entertainment",NTV Malayalam
+#EXTINF:-1 tvg-chno="322" channel-id="NTV.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv-malayalam.svg" tvg-id="NTV.in" tvg-name="NTV Malayalam" tvg-language="mal" tvg-country="IN" group-title="Indian Entertainment",NTV Malayalam
 https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8
 #EXTINF:-1 tvg-id="OdishaTV.in@SD" tvg-name="Odisha TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/odisha-tv.png" tvg-chno="323" channel-id="OdishaTV.in@SD" tvg-country="IN" tvg-language="ori" group-title="Indian Entertainment",Odisha TV
 https://livetv.tarangplus.in/otv-origin/live/playlist.m3u8
@@ -1163,7 +1163,7 @@ https://d6lk10bkdgfae.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a
 https://cc-t8lqe1o99pszu.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-t8lqe1o99pszu/playlist.m3u8
 #EXTINF:-1 tvg-language="hin" tvg-chno="579" channel-id="GreenGoldTV.in@India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-gold-tv.png" tvg-id="GreenGoldTV.in@India" tvg-name="Green Gold TV" tvg-country="IN" group-title="Kids",Green Gold TV
 https://cc-szrmqvu8zkg16.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-szrmqvu8zkg16/greengold/stream/grngld/playlist.m3u8
-#EXTINF:-1 tvg-language="eng" tvg-country="IN" tvg-chno="580" channel-id="custom.hooraykids" tvg-id="custom.hooraykids" tvg-name="Hooray Kids" group-title="Kids",Hooray Kids
+#EXTINF:-1 tvg-language="eng" tvg-country="IN" tvg-chno="580" channel-id="custom.hooraykids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hooray-kids.svg" tvg-id="custom.hooraykids" tvg-name="Hooray Kids" group-title="Kids",Hooray Kids
 https://d3go3d9yw1x2sb.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-obhh0sw25szth/5cc02970-213a-4eea-af2f-6a0dc11ca3a3/0.m3u8
 #EXTINF:-1 tvg-id="Hungama.in@SD" tvg-name="Hungama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hungama.png" tvg-chno="581" channel-id="Hungama.in@SD" tvg-country="IN" tvg-language="eng" group-title="Kids",Hungama
 http://103.135.253.32:8080/HUNGAMA/index.m3u8
@@ -1211,7 +1211,7 @@ https://d1eg24xrsfr6kv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 https://d3i6upqaqzosi1.cloudfront.net/tg/jr_us/tg_jr_us.m3u8
 #EXTINF:-1 tvg-id="ToonamiAftermathEast.us" tvg-name="Toonami Aftermath East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/toonami-aftermath-east.png" tvg-chno="603" channel-id="ToonamiAftermathEast.us" tvg-country="US" tvg-language="eng" group-title="Kids",Toonami Aftermath East
 http://api.toonamiaftermath.com:3000/est/playlist.m3u8
-#EXTINF:-1 tvg-language="ara" tvg-country="ZZ" tvg-chno="604" channel-id="custom.tvcarabickids" tvg-id="custom.tvcarabickids" tvg-name="TVC Arabic Kids" group-title="Kids",TVC Arabic Kids
+#EXTINF:-1 tvg-language="ara" tvg-country="ZZ" tvg-chno="604" channel-id="custom.tvcarabickids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvc-arabic-kids.svg" tvg-id="custom.tvcarabickids" tvg-name="TVC Arabic Kids" group-title="Kids",TVC Arabic Kids
 https://tvsen6.aynaott.com/TVCArabicKids/index.m3u8
 #EXTINF:-1 tvg-id="WOWKidz.in@Hindi" tvg-name="WOW Kidz Hindi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png" tvg-chno="605" channel-id="WOWKidz.in@Hindi" tvg-country="IN" tvg-language="hin" group-title="Kids",WOW Kidz Hindi
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
@@ -1245,7 +1245,7 @@ https://newyork.zeuscdn724.com/H9/index.m3u8
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/iqrabanglatvoffice.stream/live-orgin/iqrabanglatvoffice.stream/chunks.m3u8
 #EXTINF:-1 tvg-id="IqraaTV" tvg-name="Iqraa TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/iqraa-tv.png" tvg-chno="620" channel-id="IqraaTV" tvg-country="SA" tvg-language="ara" group-title="Religious",Iqraa TV
 https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv1/playlist.m3u8
-#EXTINF:-1 tvg-language="ben" tvg-country="GB" tvg-chno="621" channel-id="custom.islamchannelbangla" tvg-id="custom.islamchannelbangla" tvg-name="Islam Channel Bangla" group-title="Religious",Islam Channel Bangla
+#EXTINF:-1 tvg-language="ben" tvg-country="GB" tvg-chno="621" channel-id="custom.islamchannelbangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/islam-channel-bangla.svg" tvg-id="custom.islamchannelbangla" tvg-name="Islam Channel Bangla" group-title="Religious",Islam Channel Bangla
 https://live-islamtv-bangla.simplestreamcdn.com/out/v1/islamchannel/islamtv-bangla/hls-ts/index.m3u8
 #EXTINF:-1 tvg-chno="622" channel-id="IslamTV.sa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/islam-tv.png" tvg-id="IslamTV.sa" tvg-name="Islam TV" tvg-language="ara" tvg-country="SA" group-title="Religious",Islam TV
 https://tvsen1.aynaott.com/bB3A5dyq/index.m3u8
@@ -1305,13 +1305,13 @@ http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8
 https://amg01074-fueltv-fueltvau-samsungau-g09kq.amagi.tv/playlist/amg01074-fueltv-fueltvau-samsungau/playlist.m3u8
 #EXTINF:-1 tvg-id="GoalTV.in" tvg-name="Goal TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goal-tv-237cfbed.png" tvg-chno="650" channel-id="GoalTV.in" tvg-country="IN" tvg-language="eng" group-title="Sports",Goal TV
 https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8
-#EXTINF:-1 tvg-language="eng" tvg-country="GB" tvg-chno="651" channel-id="custom.horseandcountry" tvg-id="custom.horseandcountry" tvg-name="Horse & Country" group-title="Sports",Horse & Country
+#EXTINF:-1 tvg-language="eng" tvg-country="GB" tvg-chno="651" channel-id="custom.horseandcountry" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/horse-and-country.svg" tvg-id="custom.horseandcountry" tvg-name="Horse & Country" group-title="Sports",Horse & Country
 https://hncfree-samsungau.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-language="ita" tvg-chno="652" channel-id="custom.intertv" tvg-id="custom.intertv" tvg-name="Inter TV (Italy)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/inter-tv-italy-014d12b302.png" tvg-country="IT" group-title="Sports",Inter TV (Italy)
 https://d3k8wzt41aflvx.cloudfront.net/INTERTV/Live.m3u8
 #EXTINF:-1 tvg-language="und" tvg-chno="653" channel-id="Kabaddi24x7.in@SD" tvg-id="Kabaddi24x7.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kabaddi-24x7.png" tvg-country="IN" group-title="Sports" tvg-name="Kabaddi 24x7",Kabaddi 24x7
 https://samitaorigin.tangotv.in/KABADDI24X7/SAMITAORIGIN/index.m3u8
-#EXTINF:-1 tvg-language="eng" tvg-country="US" tvg-chno="654" channel-id="custom.mtrspt" tvg-id="custom.mtrspt" tvg-name="MTRSPT1" group-title="Sports",MTRSPT1
+#EXTINF:-1 tvg-language="eng" tvg-country="US" tvg-chno="654" channel-id="custom.mtrspt" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtrspt1.svg" tvg-id="custom.mtrspt" tvg-name="MTRSPT1" group-title="Sports",MTRSPT1
 https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8
 #EXTINF:-1 tvg-id="NHLNetwork.us" tvg-name="NHL Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nhl-network.png" tvg-chno="655" channel-id="NHLNetwork.us" tvg-country="US" tvg-language="eng" group-title="Sports",NHL Network
 https://nhl-firetv.amagi.tv/playlist.m3u8
@@ -1351,7 +1351,7 @@ https://linear-253.frequency.stream/mt/roku/253/hls/master/playlist.m3u8
 https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
 #EXTINF:-1 tvg-language="ita" tvg-chno="673" channel-id="custom.trsport" tvg-id="custom.trsport" tvg-name="TR Sport" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tr-sport.png" tvg-country="IT",TR Sport
 https://livetr.teleromagna.it/mia/live/playlist.m3u8
-#EXTINF:-1 tvg-language="eng" tvg-country="FR" tvg-chno="674" channel-id="custom.tracesport" tvg-id="custom.tracesport" tvg-name="Trace Sport" group-title="Sports",Trace Sport
+#EXTINF:-1 tvg-language="eng" tvg-country="FR" tvg-chno="674" channel-id="custom.tracesport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-sport.svg" tvg-id="custom.tracesport" tvg-name="Trace Sport" group-title="Sports",Trace Sport
 https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-language="eng" tvg-chno="675" channel-id="custom.tsntheocho" tvg-id="custom.tsntheocho" tvg-name="TSN The Ocho" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tsn-the-ocho.png" tvg-country="CA",TSN The Ocho
 https://d3pnbvng3bx2nj.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rds8g35qfqrnv/TSN_The_Ocho.m3u8
