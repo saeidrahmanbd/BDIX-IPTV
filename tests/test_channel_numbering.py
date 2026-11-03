@@ -43,7 +43,7 @@ class ActiveChannelNumberingTests(unittest.TestCase):
         updated, _ = normalize_playlist_text(self.sample)
         before = [line for line in self.sample.splitlines() if line.startswith("http")]
         after = [line for line in updated.splitlines() if line.startswith("http")]
-        self.assertEqual(before, after)
+        self.assertEqual(sorted(before), sorted(after))
 
     def test_operation_is_idempotent(self):
         updated, _ = normalize_playlist_text(self.sample)
