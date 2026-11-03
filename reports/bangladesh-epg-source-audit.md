@@ -1,6 +1,6 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-02T11:53:38+00:00**
+Generated: **2026-11-03T02:20:40+00:00**
 
 - Active Bangladesh playlist identities: **82**
 - Identities with a retained source mapping: **3**
@@ -21,8 +21,8 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | https://www.rtvbd.tv/schedule.php | 0 | 0 | 0 | Could not fetch the official RTV schedule over verified HTTPS (rtvbd.tv: URLError; www.rtvbd.tv: URLError) |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 65 | - |
-| OK | M3U4U XMLTV (private Actions secret) | 229 | 164 | 5942 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 71 | - |
+| OK | M3U4U XMLTV (private Actions secret) | 229 | 82 | 2919 | - |
 
 ## Unmapped Bangladesh identities
 
