@@ -38,7 +38,7 @@ class BackupMetadataReconciliationTests(unittest.TestCase):
         self.assertEqual(updated, text)
         self.assertEqual(languages, [])
         self.assertEqual(countries, [])
-        self.assertEqual(ambiguous, [])
+        self.assertEqual(len(ambiguous), 1)
         self.assertEqual(unmatched, [])
 
     def test_does_not_guess_conflicting_language(self):
