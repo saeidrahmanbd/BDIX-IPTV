@@ -20,7 +20,7 @@ The repository includes [Deploy IPTV Analytics](../.github/workflows/deploy-anal
 3. Populates the database binding in the deployment workspace (the placeholder in the committed TOML is intentional).
 4. Deploys the Worker and verifies its dashboard, API and both playlist routes.
 
-The workflow uses the existing GitHub Actions secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, also used by the Xtream deployment. The Cloudflare API token must include **D1:Edit** and **Workers Scripts:Edit** permissions for the account. It must also be allowed to use the account's Workers.dev subdomain.
+The workflow uses the existing GitHub Actions secrets `CLOUDFLARE_ANALYTICS_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, also used by the Xtream deployment. The account-owned Cloudflare API token must include **D1:Edit** and **Workers product Admin** permissions for the initial creation of the Worker. This matches Cloudflare's current Wrangler authorization guidance. After the Worker is created, the Workers role may be reduced to **Editor** for subsequent deployments if no additional Worker creation is needed. Keep the existing `CLOUDFLARE_API_TOKEN` secret unchanged; it may be used by the separate Xtream deployment. It must also be allowed to use the account's Workers.dev subdomain.
 
 The client-hash salt is generated once by the Worker and stored in D1; no extra secret needs to be entered or committed. The first request initializes it. Analytics failures are deliberately non-fatal: the playlist still serves if a database write fails.
 
