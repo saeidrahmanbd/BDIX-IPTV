@@ -227,7 +227,13 @@ class EpgConfigTests(unittest.TestCase):
                 '#EXTINF:-1 tvg-id="TVN.pa" tvg-country="PA" group-title="Panama" tvg-name="TVN",TVN\n'
                 'https://example.test/panama.m3u8\n'
                 '#EXTINF:-1 tvg-id="Channel.sg" group-title="Singapore" tvg-name="Channel",Channel\n'
-                'https://example.test/singapore.m3u8\n',
+                'https://example.test/singapore.m3u8\n'
+                '#EXTINF:-1 tvg-id="CCTV6.cn@HD" group-title="International" tvg-name="CCTV-6",CCTV-6\n'
+                'https://example.test/cctv6.m3u8\n'
+                '#EXTINF:-1 tvg-id="KidsChannel.uk@HD" group-title="Kids" tvg-name="Kids Channel",Kids Channel\n'
+                'https://example.test/kids.m3u8\n'
+                '#EXTINF:-1 tvg-id="NotACountry.hd" group-title="International" tvg-name="Invalid",Invalid\n'
+                'https://example.test/invalid.m3u8\n',
                 encoding="utf-8",
             )
             mapping.write_text(
@@ -240,6 +246,8 @@ class EpgConfigTests(unittest.TestCase):
                 "https://iptv-epg.org/files/epg-sg.xml.gz",
                 "https://free-epg.de/api/epg/us.xml.gz",
                 "https://example.test/unmapped.xml",
+                "https://free-epg.de/api/epg/cn.xml.gz",
+                "https://iptv-epg.org/files/epg-gb.xml.gz",
             ]
             with (
                 patch.object(generate_epg, "PLAYLISTS", [main_playlist, international_playlist]),
@@ -248,13 +256,15 @@ class EpgConfigTests(unittest.TestCase):
                 countries = generate_epg.active_playlist_country_codes()
                 selected = generate_epg.sources_with_mapped_channels(configured)
 
-        self.assertEqual(countries, {"IN", "PA", "SG"})
+        self.assertEqual(countries, {"IN", "PA", "SG", "CN", "GB"})
         self.assertEqual(
             selected,
             [
                 "https://iptv-epg.org/files/epg-in.xml.gz",
                 "https://free-epg.de/api/epg/pa.xml.gz",
                 "https://iptv-epg.org/files/epg-sg.xml.gz",
+                "https://free-epg.de/api/epg/cn.xml.gz",
+                "https://iptv-epg.org/files/epg-gb.xml.gz",
             ],
         )
 
