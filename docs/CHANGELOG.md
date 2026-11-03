@@ -5,74 +5,62 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-02 — `IPTV-Playlist.m3u`
+### 2026-11-03 — `IPTV-Playlist.m3u`
 
-- New channel identities: **38**
-- Channel identities removed: **79**
-- Stream URLs added / removed: **47 / 142**
+- New channel identities: **24**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **24 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **5**
+- Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Vision Beats
-- Asianet Middle East
-- MH One
-- AccuWeather
-- Comet
-- Dong Nai TV 2
-- V2 Beat
-- Court TV
-- Hooray Kids
-- TVC Arabic Kids
-
-Removed channel identities (up to 10):
-- Channel 9
-- Green TV
-- Bangla Cinema
-- Jalsha Movies HD
-- Kolkata TV
-- Star Bangla
-- South Movies
+- Sonic
+- Sony BBC Earth
+- Sony Sports Ten 1
+- Sony Sports Ten 2
+- Sony Sports Ten 3 Hindi
+- Sony Sports Ten 4 Kannada
+- Sony Sports Ten 5
+- Spondon
 - Star Gold
 - Star Gold 2
-- Superhitz
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-02 — `International-Playlist.m3u`
+### 2026-11-03 — `International-Playlist.m3u`
 
-- New channel identities: **156**
-- Channel identities removed: **631**
-- Stream URLs added / removed: **157 / 780**
+- New channel identities: **96**
+- Channel identities removed: **24**
+- Stream URLs added / removed: **111 / 27**
 - Backup URL updates: **0**
-- Logo reference changes: **14**
+- Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Oscar Movies Bhojpuri
-- Sun Gemini
-- GTC Punjabi UK
-- GTC Punjabi US
-- aur LIFE
-- Falak TV
-- HUM Masala
-- HUM Sitaray
-- Tag TV
-- Beats Radio
+- &TV International (1080p)
+- B4U Bhojpuri (1080p)
+- Colors Bangla Cinema (576p)
+- ETV Cinema (396p)
+- ETV Cinema HD (1080p)
+- Filmax (576p)
+- Filmazia (576p)
+- Ghost TV (712p) [Not 24/7]
+- Afghan Nobel Movies (720p)
+- CCTV-6 [Geo-blocked]
 
 Removed channel identities (up to 10):
-- Channel 9
-- Channel 16
-- Channel 24
-- Green TV
-- Independent TV
-- Amar Bangla
-- Bangla Cinema
-- Colors Bangla Cinema
-- Kolkata TV
-- Sony Aath
+- Zo'r TV
+- Ishtar TV
+- Lingkar TV
+- MBC FM
+- DG:Radio
+- Hope Channel PROYECTO JA
+- MNM
+- Radio Clasica TV
+- El Radio 9090 FM
+- Madras FM TV
 
 ## [5.0.0] — Playlist Studio
 
