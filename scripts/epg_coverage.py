@@ -12,7 +12,10 @@ from official_epg_sources import (
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from generate_epg import ALWAYS_DROP_GENERIC_TITLES, is_slot_placeholder, normalized_title, sources_with_mapped_channels
+from generate_epg import (
+    ALWAYS_DROP_GENERIC_TITLES, COUNTRY_GROUP_CODES, is_slot_placeholder,
+    normalized_title, playlist_id_country_code, sources_with_mapped_channels,
+)
 
 
 def is_filler_title(text):
@@ -336,7 +339,18 @@ def parse_playlist():
         lines = playlist_path.read_text(encoding="utf-8-sig").splitlines(); cur = None
         for line in lines:
             if line.startswith("#EXTINF:"):
-                a = attrs(line); cur = {"tvg_id": a.get("tvg-id", "").strip(), "name": a.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip(), "group": a.get("group-title", "").strip(), "country": a.get("tvg-country", "").strip().upper()}
+                a = attrs(line)
+                tvg_id = a.get("tvg-id", "").strip()
+                group = a.get("group-title", "").strip()
+                country = a.get("tvg-country", "").strip().upper()
+                if not country:
+                    country = COUNTRY_GROUP_CODES.get(group.casefold(), "") or playlist_id_country_code(tvg_id)
+                cur = {
+                    "tvg_id": tvg_id,
+                    "name": a.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip(),
+                    "group": group,
+                    "country": country,
+                }
             elif cur and line.strip().startswith(("http://", "https://")):
                 if cur["tvg_id"] and cur["group"] not in INACTIVE_GROUPS:
                     cid, name = cur["tvg_id"], cur["name"]
@@ -546,24 +560,7 @@ def retained_mapping(is_bangladesh, old_epg, candidates):
 
 def source_id_country(source_id):
     """Infer a country only from a recognized terminal ISO-style XMLTV ID suffix."""
-    value = re.sub(r"\s*\([^)]*\)\s*$", "", str(source_id or "").strip())
-    value = re.sub(r"@(?:sd|hd|uhd|fhd)$", "", value, flags=re.I)
-    match = re.search(r"\.([a-z]{2})$", value, flags=re.I)
-    if not match:
-        return ""
-    code = match.group(1).lower()
-    if code not in {
-        "ae", "ar", "at", "au", "bd", "be", "bg", "br", "ca", "ch", "cl",
-        "cn", "co", "cr", "cz", "de", "dk", "do", "ee", "es", "fi", "fr",
-        "gb", "gr", "hu", "id", "ie", "il", "in", "iq", "ir", "is", "it",
-        "jp", "kr", "kw", "lb", "lk", "lt", "lu", "lv", "ma", "mx", "my",
-        "ng", "nl", "no", "np", "nz", "om", "pa", "pe", "ph", "pk", "pl",
-        "pt", "qa", "ro", "rs", "ru", "sa", "se", "sg", "th", "tr", "tw",
-        "ua", "uk", "us", "uy", "uz", "vn", "za",
-    }:
-        return ""
-    return "GB" if code == "uk" else code.upper()
-
+    return playlist_id_country_code(source_id)
 
 def source_region_compatible(target_country, source_id):
     """Reject name-only matches when both playlist and XMLTV ID identify different countries."""
