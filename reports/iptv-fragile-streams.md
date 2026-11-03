@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-02T11:01:35+00:00**
-IPTV-Playlist.m3u SHA-256: **0effbae25904525535b8b1cccb3c1c4a955b5785b5476d006857db7be5f26a1f**
+Generated: **2026-11-03T09:06:43+00:00**
+IPTV-Playlist.m3u SHA-256: **31cc18da8c3736dbd854affb71d2b1de66eed37dc02a1417286f4068adf1ae5e**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
@@ -12,6 +12,7 @@ These streams are not automatically removed. URL credentials, user information a
 | BTV National | Bangladesh | dynamic/proxy endpoint | `https://btv.hridoytv-channel.workers.dev/btv.m3u8` |
 | BTV News | Bangladesh | dynamic/proxy endpoint | `https://btv.hridoytv-channel.workers.dev/news.m3u8` |
 | Channel 1 | Bangladesh | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8` |
+| Channel 16 | Bangladesh | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8` |
 | Desh TV | Bangladesh | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/desh_tv_abr/index.m3u8` |
 | Deshi TV | Bangladesh | credential-bearing route pattern (values redacted) | `https://deshitv.deshitv24.net/live/myStream/playlist.m3u8` |
 | Ekhon TV | Bangladesh | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8` |
@@ -20,7 +21,6 @@ These streams are not automatically removed. URL credentials, user information a
 | News 21 | Bangladesh | credential-bearing route pattern (values redacted) | `http://103.190.133.68:1935/news21live/live/playlist.m3u8` |
 | Nexus TV | Bangladesh | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/nexus_tv_abr/index.m3u8` |
 | TBN24 | Bangladesh | credential-bearing route pattern (values redacted) | `http://cdn01.palki.tv/live/TBN24-M/index.m3u8` |
-| Channel 16 | Bangladesh | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8` |
 | Orange Bangla TV | Indian Bangla | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1499/master.m3u8` |
 | Sananda | Indian Bangla | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8` |
 | Sony Aath | Indian Bangla | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/sony_aath_abr/index.m3u8` |
@@ -31,7 +31,6 @@ These streams are not automatically removed. URL credentials, user information a
 | ETV Cinema | Indian Movies | sensitive query parameter (value redacted) | `https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=REDACTED` |
 | Maha Movie | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/10007/master.m3u8` |
 | MBC Bollywood | Indian Movies | credential-bearing route pattern (values redacted) | `https://shd-gcp-live.edgenextcdn.net/live/REDACTED/REDACTED/index.m3u8` |
-| NTV Malayalam | Indian Movies | credential-bearing route pattern (values redacted) | `https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8` |
 | Oscar Movies Bhojpuri | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/233/master.m3u8` |
 | Raj Digital Plus | Indian Movies | credential-bearing route pattern (values redacted) | `https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8` |
 | Sony Max | Indian Movies | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/max_hd_abr/index.m3u8` |
@@ -71,6 +70,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Manoranjan Grand | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1011/master.m3u8` |
 | Manoranjan Prime | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1474/master.m3u8` |
 | Manoranjan TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1013/master.m3u8` |
+| NTV Malayalam | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8` |
 | Odisha TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://livetv.tarangplus.in/otv-origin/live/playlist.m3u8` |
 | Peppers TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1383/master.m3u8` |
 | Polimer TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1241/master.m3u8` |

@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-02T11:01:07+00:00**
-Source playlist SHA-256: **0effbae25904525535b8b1cccb3c1c4a955b5785b5476d006857db7be5f26a1f**
+Generated: **2026-11-03T09:06:15+00:00**
+Source playlist SHA-256: **31cc18da8c3736dbd854affb71d2b1de66eed37dc02a1417286f4068adf1ae5e**
 
 Status: **BLOCK**
 
@@ -16,6 +16,7 @@ Status: **BLOCK**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **0**
+- Primary channel-number sequence issues: **0**
 - Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
 - Raw resolution/geoblock name tags: **0**

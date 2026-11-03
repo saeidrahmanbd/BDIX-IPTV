@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-02T11:01:06.709451+00:00**
-Source playlist SHA-256: **0effbae25904525535b8b1cccb3c1c4a955b5785b5476d006857db7be5f26a1f**
+Generated: **2026-11-03T09:06:15.456594+00:00**
+Source playlist SHA-256: **31cc18da8c3736dbd854affb71d2b1de66eed37dc02a1417286f4068adf1ae5e**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -25,6 +25,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **0**
+- Primary channel-number sequence issues: **0**
 - Primary entries missing channel numbers: **0**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
@@ -824,6 +825,10 @@ None.
 ## Primary Channel-Number Collisions
 
 None.
+
+## Primary Channel-Number Sequence
+
+Contiguous numbering verified: 1–680.
 
 ## Malformed EXTINF Entries
 

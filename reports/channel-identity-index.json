@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T11:01:35+00:00",
+  "generated": "2026-11-03T09:06:43+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -2060,7 +2060,7 @@
     },
     "custom.mtrspt": {
       "names": [
-        "MTRSPT"
+        "MTRSPT1"
       ],
       "ids": [
         "custom.mtrspt"
@@ -6304,7 +6304,7 @@
       "groups": [
         "Backup",
         "Bangladesh",
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 7,
       "primary": 2,
