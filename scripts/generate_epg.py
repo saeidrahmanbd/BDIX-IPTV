@@ -174,6 +174,17 @@ COUNTRY_GROUP_CODES = {
     "indian entertainment": "IN", "pakistani": "PK",
 }
 COUNTRY_CODE_ALIASES = {"UK": "GB"}
+# Recognized XMLTV country suffixes. Restrict suffix inference to real/used
+# country codes so display variants such as ".HD" are never treated as regions.
+PLAYLIST_ID_COUNTRY_CODES = {
+    "ae", "ar", "at", "au", "bd", "be", "bg", "br", "ca", "ch", "cl",
+    "cn", "co", "cr", "cz", "de", "dk", "do", "ee", "es", "fi", "fr",
+    "gb", "gr", "hu", "id", "ie", "il", "in", "iq", "ir", "is", "it",
+    "jp", "kr", "kw", "lb", "lk", "lt", "lu", "lv", "ma", "mx", "my",
+    "ng", "nl", "no", "np", "nz", "om", "pa", "pe", "ph", "pk", "pl",
+    "pt", "qa", "ro", "rs", "ru", "sa", "se", "sg", "th", "tr", "tw",
+    "ua", "uk", "us", "uy", "uz", "vn", "za",
+}
 
 
 def normalize_country_code(value):
@@ -181,6 +192,15 @@ def normalize_country_code(value):
     if len(code) != 2 or not code.isalpha():
         return ""
     return COUNTRY_CODE_ALIASES.get(code, code)
+
+
+def playlist_id_country_code(tvg_id):
+    """Infer a country from a recognized terminal tvg-id suffix, including @HD/@SD variants."""
+    value = re.sub(r"\s*\([^)]*\)\s*$", "", str(tvg_id or "").strip())
+    match = re.search(r"\.([a-z]{2})(?:@[^@]*)?$", value, flags=re.I)
+    if not match or match.group(1).lower() not in PLAYLIST_ID_COUNTRY_CODES:
+        return ""
+    return normalize_country_code(match.group(1))
 
 
 def active_playlist_country_codes():
@@ -200,6 +220,11 @@ def active_playlist_country_codes():
                     code = normalize_country_code(current.get("tvg-country", ""))
                     if not code:
                         code = COUNTRY_GROUP_CODES.get(group.casefold(), "")
+                    # Many International/Kids/Documentary entries omit
+                    # tvg-country; their authoritative tvg-id suffix still
+                    # identifies the region (for example CCTV6.cn@HD).
+                    if not code:
+                        code = playlist_id_country_code(tvg_id)
                     if code:
                         countries.add(code)
                 current = None
