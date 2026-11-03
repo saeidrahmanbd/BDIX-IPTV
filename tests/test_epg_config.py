@@ -268,6 +268,33 @@ class EpgConfigTests(unittest.TestCase):
             ],
         )
 
+    def test_playlist_country_inference_blocks_cross_region_name_matches(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            playlist = Path(tmp) / "IPTV-Playlist.m3u"
+            playlist.write_text(
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-id="CCTV6.cn@HD" group-title="International" tvg-name="CCTV-6",CCTV-6\n'
+                'https://example.test/cctv6.m3u8\n'
+                '#EXTINF:-1 tvg-id="ChannelS.uk@679aa9" group-title="Kids" tvg-name="Channel S",Channel S\n'
+                'https://example.test/channels.m3u8\n'
+                '#EXTINF:-1 tvg-id="Generic.sg" group-title="International" tvg-name="Singapore TV",Singapore TV\n'
+                'https://example.test/singapore.m3u8\n'
+                '#EXTINF:-1 tvg-id="NoSuffix" group-title="Singapore" tvg-name="Fallback",Fallback\n'
+                'https://example.test/fallback.m3u8\n',
+                encoding="utf-8",
+            )
+            with patch.object(epg_coverage, "PLAYLISTS", [playlist]):
+                channels = epg_coverage.parse_playlist()
+
+        countries = {channel["tvg_id"]: channel["country"] for channel in channels}
+        self.assertEqual(countries["CCTV6.cn@HD"], "CN")
+        self.assertEqual(countries["ChannelS.uk@679aa9"], "GB")
+        self.assertEqual(countries["Generic.sg"], "SG")
+        self.assertEqual(countries["NoSuffix"], "SG")
+        self.assertEqual(epg_coverage.source_id_country("ChannelS.uk@679aa9"), "GB")
+        self.assertTrue(epg_coverage.source_region_compatible("GB", "ChannelS.uk@679aa9"))
+        self.assertFalse(epg_coverage.source_region_compatible("GB", "ChannelS.in@HD"))
+
     def test_source_country_codes_recognize_public_feed_families(self):
         self.assertEqual(
             generate_epg.source_country_codes("https://iptv-epg.org/files/epg-at.xml.gz"),
