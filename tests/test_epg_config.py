@@ -217,21 +217,21 @@ class EpgConfigTests(unittest.TestCase):
             international_playlist = root / "International-Playlist.m3u"
             mapping = root / "mapping.csv"
             main_playlist.write_text(
-                '#EXTM3U\\n'
-                '#EXTINF:-1 tvg-id="ColorsBangla.in" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Colors Bangla",Colors Bangla\\n'
-                'https://example.test/india.m3u8\\n',
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-id="ColorsBangla.in" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Colors Bangla",Colors Bangla\n'
+                'https://example.test/india.m3u8\n',
                 encoding="utf-8",
             )
             international_playlist.write_text(
-                '#EXTM3U\\n'
-                '#EXTINF:-1 tvg-id="TVN.pa" tvg-country="PA" group-title="Panama" tvg-name="TVN",TVN\\n'
-                'https://example.test/panama.m3u8\\n'
-                '#EXTINF:-1 tvg-id="Channel.sg" group-title="Singapore" tvg-name="Channel",Channel\\n'
-                'https://example.test/singapore.m3u8\\n',
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-id="TVN.pa" tvg-country="PA" group-title="Panama" tvg-name="TVN",TVN\n'
+                'https://example.test/panama.m3u8\n'
+                '#EXTINF:-1 tvg-id="Channel.sg" group-title="Singapore" tvg-name="Channel",Channel\n'
+                'https://example.test/singapore.m3u8\n',
                 encoding="utf-8",
             )
             mapping.write_text(
-                "group,channel,tvg_id,epg_id,source,status,note\\n",
+                "group,channel,tvg_id,epg_id,source,status,note\n",
                 encoding="utf-8",
             )
             configured = [
