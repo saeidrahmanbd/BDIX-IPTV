@@ -32,10 +32,10 @@ jobs:
           python3 - <<'PY'
           import json, os, re, sys, urllib.error, urllib.request
 
-          token = os.environ.get("CLOUDFLARE_API_TOKEN", "")
+          token = os.environ.get("CLOUDFLARE_ANALYTICS_API_TOKEN", "")
           account = os.environ.get("CLOUDFLARE_ACCOUNT_ID", "")
           if not token or not account:
-              raise SystemExit("Missing GitHub Actions secrets: CLOUDFLARE_API_TOKEN and/or CLOUDFLARE_ACCOUNT_ID")
+              raise SystemExit("Missing GitHub Actions secrets: CLOUDFLARE_ANALYTICS_API_TOKEN and/or CLOUDFLARE_ACCOUNT_ID")
 
           base = f"https://api.cloudflare.com/client/v4/accounts/{account}/d1/database"
           headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
