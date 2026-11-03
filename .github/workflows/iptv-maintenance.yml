@@ -14,6 +14,8 @@ on:
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/normalize_metadata.py
       - scripts/sort_playlists.py
+      - scripts/renumber_active_channels.py
+      - tests/test_channel_numbering.py
       - scripts/final_playlist_hardening.py
       - scripts/country_verification.py
       - tests/test_country_verification.py
@@ -93,6 +95,7 @@ jobs:
             scripts/playlist_order_policy.py \
             scripts/pre_publish_gate.py \
             scripts/sort_playlists.py \
+            scripts/renumber_active_channels.py \
             scripts/final_playlist_hardening.py \
             scripts/country_verification.py \
             scripts/generate_logo_authenticity_manifest.py \
@@ -186,6 +189,7 @@ jobs:
             python scripts/iptv_metadata_backfill.py
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix
+            python scripts/renumber_active_channels.py IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
             python scripts/verify_international_protected.py verify
           }
@@ -217,6 +221,7 @@ jobs:
             fi
             # Data-level metadata assertions run against the final playlist bytes.
             python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
+          python -m unittest discover -s tests -p 'test_channel_numbering.py'
 
             # Reports: each is written exactly once, from the final playlist bytes.
             python scripts/stream_health.py
