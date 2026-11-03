@@ -11,6 +11,13 @@ on:
   schedule:
     - cron: "7 1 * * *" # 07:07 Asia/Dhaka (UTC+6); avoid top-of-hour queueing
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "IPTV New Channel Discovery"
+      - "IPTV Playlist Update"
+      - "Refresh IPTV EPG"
+    types: [completed]
+    branches: [main]
 
 permissions:
   contents: read
