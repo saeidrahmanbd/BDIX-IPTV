@@ -192,7 +192,7 @@ def active_playlist_country_codes():
         current = None
         for line in playlist_path.read_text(encoding="utf-8-sig").splitlines():
             if line.startswith("#EXTINF:"):
-                current = dict(re.findall(r'([\\w-]+)="([^"]*)"', line))
+                current = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
             elif current and line.strip().startswith(("http://", "https://")):
                 group = current.get("group-title", "").strip()
                 tvg_id = current.get("tvg-id", "").strip()
@@ -214,15 +214,15 @@ def source_country_codes(source):
     code = ""
     match = None
     if host.endswith("iptv-epg.org"):
-        match = re.search(r"/epg-([a-z]{2})\\.xml(?:\\.gz)?$", path)
+        match = re.search(r"/epg-([a-z]{2})\.xml(?:\.gz)?$", path)
     elif host.endswith("free-epg.de"):
-        match = re.search(r"/api/epg/([a-z]{2})\\.xml\\.gz$", path)
+        match = re.search(r"/api/epg/([a-z]{2})\.xml\.gz$", path)
     elif host.endswith("epgshare01.online"):
-        match = re.search(r"epg_ripper_([a-z]{2})\\d+\\.xml\\.gz$", path)
+        match = re.search(r"epg_ripper_([a-z]{2})\d+\.xml\.gz$", path)
     elif host.endswith("epg.lat"):
-        match = re.search(r"/([a-z]{2})\\.xml\\.gz$", path)
+        match = re.search(r"/([a-z]{2})\.xml\.gz$", path)
     elif host.endswith("mjh.nz"):
-        match = re.search(r"/([a-z]{2})\\.xml$", path)
+        match = re.search(r"/([a-z]{2})\.xml$", path)
     elif host.endswith("m3u-edit.com"):
         filename = parse_qs(parsed.query).get("file", [""])[0].casefold()
         if filename.startswith("in") or "india" in filename:
