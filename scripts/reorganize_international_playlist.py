@@ -11,7 +11,7 @@ PLAYLIST = Path("International-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]
+TAIL = ["Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backup"]
 BACKUP_GROUPS = {"backup", "backups", "new backup", "new backups"}
 # Review queues the maintenance pipeline must never delete from: policy may re-classify or
 # tag these entries but their streams are preserved unless a removal is explicitly authorized.
@@ -29,7 +29,7 @@ SPORTS_RE = re.compile(r"\b(sports?|football|soccer|basketball|tennis|cricket|go
 ADULT_RE = re.compile(r"\b(adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel|blue\s*hustler|satisfaction|sexy|babes|private\s*tv|desire\s*tv|passion\s*tv|hot\s*adult)\b", re.I)
 FASHION_RE = re.compile(r"\bfashion\s*tv\b", re.I)
 GENERAL_OUT_OF_SCOPE_RE = re.compile(r"\b(servus\s*tv|star\s*channel|warner\s*(?:channel|tv)|persiana\s*(?:family|iranian|korea|plus)|nile\s*drama|mbc\s*\+?\s*drama|groovy\s*tv|mci\s*television|general\s*entertainment|variety\s*channel)\b", re.I)
-# Review queues (New Channels / New Backup) follow the discovery policy exactly, the same rule
+# Review queues (New Channels / New Backups) follow the discovery policy exactly, the same rule
 # validate_international_playlist.py enforces there. Legacy country groups keep the narrower rule
 # above on purpose: the validator preserves legacy country-group entries, so widening it would
 # delete entries nobody asked to remove.
@@ -170,66 +170,35 @@ def infer_kind(name, group, a):
     return None
 
 def classify(a, name, group, country):
-    key = channel_key(name)
+    """Apply the canonical discovery policy and preserve manual-review queue placement."""
     group = str(group or "").strip()
     group_key = group.casefold()
-    joined = f"{name} {a.get('tvg-id', '')} {a.get('channel-id', '')}"
+    policy_attrs = dict(a)
+    if country in discovery.ISO_CODES:
+        policy_attrs["tvg-country"] = country
+    base, reason, resolved_country = discovery.policy(
+        policy_attrs,
+        name,
+        allow_legacy_group=(group_key == "international"),
+    )
+    if base is None:
+        return None, None, reason or "channel is outside the playlist policy"
 
-    # Foreign-country queues/groups must contain actual TV/movie/music services,
-    # not radio, podcast, VOD, test, or placeholder entries merely tagged Music.
-    if country not in {"BD", "IN"} and discovery.BAD_NAME_RE.search(name):
-        return None, None, "test/VOD/non-TV name"
+    kind = infer_kind(name, group, policy_attrs)
+    if group_key in QUEUE_GROUPS:
+        # These are manual-review bins. Never route a candidate into its curated
+        # country/genre group during maintenance or reorganization.
+        queue = "New Backups" if group_key in {"new backup", "new backups"} else "New Channels"
+        return queue, kind, None
 
-    if not name or re.fullmatch(r"(?:\d+|n/?a|unknown|test|demo|sample|placeholder|new channel|unnamed|no name|not available)", name, re.I):
-        return None, None, "non-real/test channel"
-    if key in MANUAL_NEWS or NEWS_RE.search(joined) or re.search(r"\b(?:news|headlines|current affairs|newsroom)\b", group, re.I):
-        if country == "BD":
-            return "Bangladesh", None, None
-        return None, None, "non-Bangladesh news"
-    if key in NON_ISLAMIC_RELIGIOUS_EXACT:
-        return None, None, "non-Islamic religious"
-    if NON_ISLAM_RE.search(joined):
-        return None, None, "non-Islamic religious"
-    if FASHION_RE.search(joined) or group_key == "fashion tv":
-        if FASHION_RE.search(joined):
-            return "Fashion TV", None, None
-        return None, None, "invalid Fashion TV exception group"
-    if ISLAM_RE.search(joined) or (group == "Religious" and not NON_ISLAM_RE.search(joined)):
-        return "Religious", None, None
-    if ADULT_RE.search(joined) or group == "Adult":
-        return "Adult", None, None
-    if KIDS_RE.search(joined) or group == "Kids":
-        return "Kids", None, None
-    if SPORTS_RE.search(joined) or group == "Sports":
-        return "Sports", None, None
-    if DOC_RE.search(joined) or group == "Documentary & Wildlife":
-        return "Documentary & Wildlife", None, None
-    out_of_scope_re = discovery.GENERAL_OUT_OF_SCOPE_RE if group_key in QUEUE_GROUPS else GENERAL_OUT_OF_SCOPE_RE
-    if country not in {"BD", "IN"} and group not in {"Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult"} and out_of_scope_re.search(joined):
-        return None, None, "general entertainment, not a dedicated Movie/Music channel"
-    if key in MANUAL_GROUP:
-        return MANUAL_GROUP[key], None, None
     if group_key in BACKUP_GROUPS:
-        return ("New Backup" if group_key in {"new backup", "new backups"} else "Backup"), infer_kind(name, group, a), None
-    if country == "BD" or group == "Bangladesh":
-        return "Bangladesh", None, None
-    if country == "IN" or group in INDIAN_GROUPS:
-        if group == "Indian Bangla" or re.search(r"\b(?:bengali|bangla)\b", f"{a.get('tvg-language','')} {name}", re.I):
-            return "Indian Bangla", None, None
-        if group == "Indian Movies" or MOVIE_RE.search(joined):
-            return "Indian Movies", None, None
-        if group == "Indian Music" or MUSIC_RE.search(joined):
-            return "Indian Music", None, None
-        return "Indian Entertainment", None, None
-    if country == "PK" or group == "Pakistani":
-        kind = infer_kind(name, group, a)
-        if kind:
-            return "Pakistani", kind, None
-        return None, None, "foreign channel not clearly movie/music"
-    kind = infer_kind(name, group, a)
-    if kind:
-        return "__FOREIGN__", kind, None
-    return None, None, "foreign channel not clearly movie/music"
+        return "Backup", kind, None
+
+    # Regional groups are assigned by discovery.policy for Bangladesh and India.
+    # For other countries only Movie/Music passed the policy and threshold routing.
+    if resolved_country in {"BD", "IN", "PK"}:
+        return base, kind, None
+    return "__FOREIGN__", kind, None
 
 def set_extinf(block, name, group, country, content_kind, keep_logo, is_queue=False):
     left, _ = split_info(block[0])
@@ -342,16 +311,16 @@ def main():
             return
         target = group
         ident = (row["country"], row["key"])
-        if not as_backup and group != "New Backup":
+        if not as_backup and group != "New Backups":
             if ident in seen_channels:
-                target = "Backup"
-                removed["duplicate channel stream moved to Backup"] += 1
+                target = "New Backups" if group == "New Channels" else "Backup"
+                removed["duplicate channel stream moved to review/Backup"] += 1
             else:
                 seen_channels.add(ident)
         seen_urls.add(url_key)
         content_kind = row.get("content_kind") or row.get("kind")
         ext = set_extinf(row["block"], row["name"], target, row["country"], content_kind,
-                         row["keep_logo"], is_queue=target in {"New Channels", "New Backup"})
+                         row["keep_logo"], is_queue=target in {"New Channels", "New Backups"})
         extras = list(row["extras"])
         for option, value in row["options"].items():
             directive = f"#EXTVLCOPT:{option}={value}"
@@ -363,12 +332,13 @@ def main():
     for row in primary:
         emit(row, row["group"])
     for row in backup_rows:
+        if row["group"] == "New Backups":
+            emit(row, "New Backups", as_backup=True)
+            continue
         match = identity_primary.get((row["country"], row["key"]))
         if match:
             row["content_kind"] = match.get("content_kind") or match.get("kind")
             emit(row, "Backup", as_backup=True)
-        elif row["group"] == "New Backup" and row.get("kind"):
-            emit(row, "New Backup", as_backup=True)
         elif row["country"] in {"BD", "IN"} or row["group"] in {"Religious", "Adult", "Kids", "Sports", "Documentary & Wildlife"} or row.get("kind"):
             emit(row, "Backup", as_backup=True)
         elif row.get("was_protected"):
