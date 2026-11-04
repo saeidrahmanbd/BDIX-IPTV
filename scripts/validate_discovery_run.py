@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import discover_international_channels as discovery
+import discover_bd_in_new_queues as bd_discovery
 
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 LOGOS = Path("logos")
@@ -154,7 +155,7 @@ def consolidate_international_country_groups(playlist_path):
         group_key = (a.get("group-title") or "").strip().casefold()
         if group_key in labels:
             code = labels[group_key]
-        elif group_key in {"international", "new channels"}:
+        elif group_key == "international":
             code = discovery.country_code(a)
         else:
             continue
@@ -178,12 +179,10 @@ def consolidate_international_country_groups(playlist_path):
             code = labels[old_key]
             if code not in qualified:
                 target = "International"
-        elif old_key in {"international", "new channels"}:
+        elif old_key == "international":
             code = discovery.country_code(a)
             if code in qualified:
                 target = discovery.country_group(code)
-            elif old_key == "new channels" and code in dynamic_codes:
-                target = "International"
         if target and target != old:
             block[0] = discovery.set_attr(block[0], "group-title", target)
             changes.append((discovery.name_of(block), old, target))
@@ -267,7 +266,7 @@ def probe_mode(playlist, report, baseline, mode):
         counts[f"stream status: {status}"] += 1
         group_key = e["group"].casefold()
         is_backup = group_key in {"new backup", "new backups"}
-        if status == "dead" or (is_backup and status != "verified"):
+        if status == "dead":
             remove_starts.add(e["start"])
             why = reason if status == "dead" else f"backup stream not verified ({reason})"
             details.append(f"- Removed {e['name']} from {e['group']} — {why}.")
@@ -305,7 +304,8 @@ def probe_mode(playlist, report, baseline, mode):
         f"- New entries and discovery queues probed: {len(probe_targets)}",
         f"- Verified live media responses: {counts['verified streams']}",
         f"- Primary entries retained but not conclusively verified: {counts['primary streams retained as unverified']}",
-        f"- Dead/invalid entries and unverified backups removed: {counts['removed invalid/dead or unverified backup entries']}",
+        f"- Definitively dead/invalid candidates removed: {counts['removed invalid/dead or unverified backup entries']}",
+        f"- Inconclusive primary/backup candidates retained for manual review: {counts['primary streams retained as unverified']}",
         f"- Duplicate discovery entries removed: {counts['duplicate discovery entries removed']}",
         f"- Country-group rows consolidated after stream probing: {counts['country-group rows consolidated after stream probing']}",
         f"- Logo references localized to authentic repository assets: {counts['logos localized to repository assets']}",
@@ -342,7 +342,7 @@ def final_mode(playlist, report, baseline, mode):
         errors.append(f"{len(malformed)} malformed EXTINF/URL pairs")
     if duplicate_count:
         errors.append(f"{duplicate_count} duplicate stream URLs remain")
-    required = ["New Channels", "New Backup", "Backup"]
+    required = ["New Channels", "New Backups", "Backup"]
     registry_line = next((line for line in lines if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")), "")
     try:
         category_registry = json.loads(registry_line.split(":", 1)[1]) if registry_line else []
@@ -358,7 +358,7 @@ def final_mode(playlist, report, baseline, mode):
     )
     if not ordering_ok:
         errors.append(
-            "Category registry must end New Channels/New Backup/Backup and "
+            "Category registry must end New Channels/New Backups/Backup and "
             "present playlist groups must follow that registry order"
         )
     missing_logo = 0
@@ -382,18 +382,19 @@ def final_mode(playlist, report, baseline, mode):
                     country = m.group(1).upper()
                     break
         if mode == "iptv" and country == "IN":
-            text_value = " ".join((e["name"], e["group"], attrs.get("tvg-id", ""), attrs.get("channel-id", "")))
-            if NEWS_RE.search(text_value):
-                policy_issues.append(f"Indian news: {e['name']}")
-            if RELIGIOUS_RE.search(text_value) and not ISLAMIC_RE.search(text_value):
-                policy_issues.append(f"non-Islamic religious: {e['name']}")
-        elif mode == "international" and not FASHION_RE.search(e["name"]):
-            text_value = " ".join((e["name"], e["group"], attrs.get("tvg-content", "")))
-            content = attrs.get("tvg-content", "").strip().casefold()
-            if INTL_BAD_RE.search(text_value):
-                policy_issues.append(f"out-of-scope content: {e['name']}")
-            if content and content not in {"movie", "movies", "film", "films", "music", "musics"}:
-                policy_issues.append(f"non-Movie/Music tvg-content: {e['name']}")
+            reason = bd_discovery.prohibited_channel(attrs, e["name"], "IN")
+            if reason:
+                policy_issues.append(f"Indian prohibited category: {e['name']} ({reason})")
+        elif mode == "international":
+            target, reason, policy_country = discovery.policy(
+                attrs, e["name"], allow_legacy_group=(e["group"].casefold() == "international")
+            )
+            if target is None:
+                policy_issues.append(f"country/content policy: {e['name']} ({reason or 'not eligible'})")
+            elif policy_country not in {"BD", "IN"}:
+                content = attrs.get("tvg-content", "").strip().casefold()
+                if content not in {"movie", "movies", "film", "films", "music", "musics"}:
+                    policy_issues.append(f"non-Bangladesh/India entry lacks Movie/Music tag: {e['name']}")
     if mode == "international":
         _, threshold_blocks = discovery.parse(text)
         policy_issues.extend(discovery.country_group_threshold_issues(threshold_blocks))
@@ -406,7 +407,7 @@ def final_mode(playlist, report, baseline, mode):
         f"- M3U entries parsed: {len(entries)}",
         f"- Malformed EXTINF/URL pairs: {len(malformed)}",
         f"- Duplicate stream URLs: {duplicate_count}",
-        f"- New Channels/New Backup/Backup ordering: {'passed' if ordering_ok else 'failed'}",
+        f"- New Channels/New Backups/Backup ordering: {'passed' if ordering_ok else 'failed'}",
         f"- Discovery entries missing a logo (left blank rather than using a placeholder): {missing_logo}",
         f"- Non-local discovery logo references: {external_logo}",
         f"- Geography/content policy issues: {len(policy_issues)}",
