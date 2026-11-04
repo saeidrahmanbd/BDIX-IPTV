@@ -66,6 +66,6 @@ jobs:
           cat "$RUNNER_TEMP/indexnow-response.txt"
           echo
           case "$status" in
-            200|202) echo "IndexNow accepted the URL notification (HTTP $status)." ;;
+            200) echo "IndexNow accepted the URL notification (HTTP 200)." ;;\n            202) echo "IndexNow received the URL notification; key validation is pending (HTTP 202). Check Bing Webmaster Tools for processing status." ;;
             *) echo "IndexNow returned HTTP $status." >&2; exit 1 ;;
           esac
