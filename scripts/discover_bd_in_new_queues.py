@@ -6,7 +6,7 @@ Rules:
 - Bangladesh channels of all genres remain eligible. Indian News, Religious (including Islamic), Educational and Kids channels are prohibited; Indian Sports channels remain eligible.
 - Existing stream URLs and normalized channel identities are never duplicated.
 - First unseen stream for a new identity -> New Channels.
-- Additional unseen streams for an existing/newly discovered identity -> New Backup.
+- Additional unseen streams for an existing/newly discovered identity -> New Backups.
 - New queues are review-only and are consumed by Xtream only when explicitly enabled;
   the repository's Xtream workers currently exclude both groups.
 """
@@ -221,7 +221,7 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
                 start = i
         blocks.append(lines[start:])
     kept, removed = [], []
-    queue_groups = {"New Channels", "New Backups", "New Backups"}
+    queue_groups = {"New Channels", "New Backup", "New Backups"}
     for block in blocks:
         extinf_line = next((line for line in block if line.startswith("#EXTINF:")), "")
         if not extinf_line:
