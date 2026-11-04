@@ -96,16 +96,19 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertTrue(guard._is_permanently_removed(info), name)
             self.assertTrue(restore.is_permanently_removed(info), name)
 
-    def test_new_prohibited_channel_names_are_enforced_by_hardening(self):
+    def test_new_prohibited_indian_channel_names_are_enforced_by_hardening(self):
         prohibited_names = {
             "Aaj Tak", "GNT", "Good News Today", "Network 10",
             "Angel TV", "Calvary TV", "Hosanna TV", "Hosanna TV Hindi",
             "Prarthana TV", "Santvani Channel", "Sharnam TV",
         }
-        self.assertEqual(
-            {hardening.normalize_name(name) for name in prohibited_names},
-            hardening.PROHIBITED_RELIGIOUS_CHANNELS,
-        )
+        for name in prohibited_names:
+            with self.subTest(name=name):
+                self.assertIsNotNone(
+                    hardening.prohibited_channel(
+                        {"group-title": "General", "tvg-country": "IN"}, name, "IN"
+                    )
+                )
 
     def _run_guard(self, removed_names):
         with tempfile.TemporaryDirectory() as tmp:
@@ -148,7 +151,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
         allowed = channel("Aaj Tak", "Indian Entertainment", allowed_url).splitlines()[0]
         protected = channel("Channel One", "Bangladesh", protected_url).splitlines()[0]
         old_entries = [(allowed, allowed_url), (protected, protected_url)]
-        primary_exceptions = {"Backup", "Not Playing", "New Channels", "New Backup"}
+        primary_exceptions = {"Backup", "Not Playing", "New Channels", "New Backups"}
 
         # Removing a channel explicitly covered by the current policy allowlist
         # must not be mistaken for an unauthorized stream deletion by the audit.
@@ -233,7 +236,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                 for line in content.splitlines()
                 if line.startswith("#EXTINF:")
                 and 'group-title="' in line
-                and not any(f'group-title="{group}"' in line for group in {"Backup", "New Channels", "New Backup", "Not Playing"})
+                and not any(f'group-title="{group}"' in line for group in {"Backup", "New Channels", "New Backups", "Not Playing"})
                 and re.search(r'tvg-chno="(\d+)"', line)
             ]
             self.assertEqual(primary_numbers, [1, 2, 3])
@@ -252,7 +255,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                 "https://example.invalid/backup.m3u8",
                 '#EXTINF:-1 tvg-name="Pending" group-title="Not Playing",Pending',
                 "https://example.invalid/pending.m3u8",
-                '#EXTINF:-1 tvg-name="Fresh Backup" group-title="New Backup",Fresh Backup',
+                '#EXTINF:-1 tvg-name="Fresh Backup" group-title="New Backups",Fresh Backup',
                 "https://example.invalid/new-backup.m3u8",
                 '#EXTINF:-1 tvg-name="Fresh Channel" group-title="New Channels",Fresh Channel',
                 "https://example.invalid/new-channel.m3u8",
@@ -266,7 +269,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     group = re.search(r'group-title="([^"]+)"', line).group(1)
                     if not groups or groups[-1] != group:
                         groups.append(group)
-            self.assertEqual(groups[-3:], ["New Channels", "New Backup", "Backup"])
+            self.assertEqual(groups[-3:], ["New Channels", "New Backups", "Backup"])
             self.assertLess(groups.index("Not Playing"), groups.index("New Channels"))
 
     def test_restore_places_not_playing_before_discovery_queues_and_backup_last(self):
@@ -277,7 +280,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             baseline = root / "baseline.json"
             primary = channel("Primary", "Bangladesh", "https://example.invalid/primary.m3u8").splitlines()
             new_channel = channel("Fresh Channel", "New Channels", "https://example.invalid/new-channel.m3u8").splitlines()
-            new_backup = channel("Fresh Backup", "New Backup", "https://example.invalid/new-backup.m3u8").splitlines()
+            new_backup = channel("Fresh Backup", "New Backups", "https://example.invalid/new-backup.m3u8").splitlines()
             backup = channel("Curated Backup", "Backup", "https://example.invalid/backup.m3u8").splitlines()
             not_playing = channel("Pending", "Not Playing", "https://example.invalid/pending.m3u8").splitlines()
             playlist.write_text(
@@ -302,8 +305,8 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     group = re.search(r'group-title="([^"]+)"', line).group(1)
                     if not groups or groups[-1] != group:
                         groups.append(group)
-            self.assertEqual(groups, ["Bangladesh", "Not Playing", "New Channels", "New Backup", "Backup"])
-            self.assertEqual(groups[-3:], ["New Channels", "New Backup", "Backup"])
+            self.assertEqual(groups, ["Bangladesh", "Not Playing", "New Channels", "New Backups", "Backup"])
+            self.assertEqual(groups[-3:], ["New Channels", "New Backups", "Backup"])
 
     def test_restore_repairs_missing_local_logo_in_protected_queue_only(self):
         with tempfile.TemporaryDirectory() as tmp:
