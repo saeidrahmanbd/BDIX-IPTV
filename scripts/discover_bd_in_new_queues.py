@@ -219,7 +219,7 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
                 start = i
         blocks.append(lines[start:])
     kept, removed = [], []
-    queue_groups = {"New Channels", "New Backups", "New Backups"}
+    queue_groups = {"New Channels", "New Backup", "New Backups"}
     for block in blocks:
         extinf_line = next((line for line in block if line.startswith("#EXTINF:")), "")
         if not extinf_line:
