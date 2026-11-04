@@ -306,12 +306,13 @@ def primary_target(base,code,country_groups):
  if code in country_groups and country_group(code):return country_group(code)
  return "International"
 def existing_international_target(a,name,country_groups):
- # Revalidate legacy catch-all rows instead of preserving stale radio/VOD/etc.
+ # Revalidate legacy catch-all rows. BD/IN may be any genre; all other
+ # countries must still be unambiguously Movies/Music.
  policy_a=dict(a); policy_a["group-title"]="International"
  base,reason,code=policy(policy_a,name,allow_legacy_group=True)
  genre=infer_genre(policy_a,name)
- if base is None or not genre:
-  return None,reason or "entry is not confidently classifiable as Movies/Music",genre
+ if base is None or (code not in {"BD","IN"} and not genre):
+  return None,reason or "entry is not confidently classifiable under country policy",genre
  return primary_target(base,code,country_groups),None,genre
 def main():
  if not PLAYLIST.exists():raise SystemExit("International-Playlist.m3u not found; refusing to create it.")
@@ -399,8 +400,10 @@ def main():
   elif old_key=="international" and not is_new:
    group,reason,genre=existing_international_target(a,name,country_groups)
    if group is None:
-    filtered_existing.append((name,old,reason))
-    continue
+    # Keep non-compliant legacy streams out of active foreign groups without
+    # silently destroying them; place them in the non-primary Backup group.
+    group="Backup"
+    migrated.append((name,old,"Backup"))
   elif is_new:
    policy_a=dict(a); policy_a["group-title"]="New Backups" if old_key in {"new backup","new backups"} else "New Channels"
    base,reason,policy_code=policy(policy_a,name)
