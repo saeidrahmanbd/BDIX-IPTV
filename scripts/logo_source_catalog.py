@@ -497,10 +497,10 @@ DIRECT_LOGO_HINTS = {
         "license_url": "",
     },
     "Vyas Channel": {
-        "url": "https://www.cec.nic.in/cec/sites/default/cecprofile/aboutcec.jpg",
-        "format": "JPEG",
-        "page": "https://cec.nic.in/cec/vyas",
-        "source": "Official CEC institutional logo; CEC operates the Vyas Higher Education Channel. Used as the operator mark because a dedicated Vyas logo asset could not be validated.",
+        "url": "https://www.presentations.gov.in/download/cec-svg/?refresh=69a0b882ea0a41772140674&wpdmdl=649",
+        "format": "SVG",
+        "page": "https://www.presentations.gov.in/logos/consortium-for-educational-communication-cec/",
+        "source": "Government of India Presentation Gov catalogue: official CEC SVG brandmark. Used as the operator mark because a dedicated Vyas logo asset could not be validated.",
         "license": "Official CEC institutional mark; CEC retains rights. Operator mark, not a dedicated Vyas channel logo.",
         "license_url": "",
     },    "Awaz TV": {
