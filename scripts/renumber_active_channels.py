@@ -15,10 +15,10 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Not Playing", "New Channels", "New Backup", "Backup",
+    "Not Playing", "New Channels", "New Backups", "Backup",
 ]
 CATEGORY_RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
-REVIEW_GROUPS = {"Backup", "Not Playing", "New Channels", "New Backup"}
+REVIEW_GROUPS = {"Backup", "Not Playing", "New Channels", "New Backups", "New Backup"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
 
