@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-04T07:00:34+00:00**
-IPTV-Playlist.m3u SHA-256: **f5525b8591cc8d59e6d66f26bb068d63e51cf4ae91b6e0f369dc8bf54c0a9ef7**
+Generated: **2026-11-04T09:18:13+00:00**
+IPTV-Playlist.m3u SHA-256: **f5795953ab6e9474334bc1dc17149eaf70528a4602c0084f59ecbe44665f78ef**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **239**
+- Flagged streams: **242**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -137,6 +137,9 @@ These streams are not automatically removed. URL credentials, user information a
 | NTV Malayalam | Not Playing | credential-bearing route pattern (values redacted) | `https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8` |
 | Ruposhi Bangla | Not Playing | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1039/master.m3u8` |
 | Vokta TV | Not Playing | credential-bearing route pattern (values redacted) | `https://vokta.raytahost.com/live/voktatv/index.m3u8` |
+| Aaj Tak HD | New Backup | credential-bearing route pattern (values redacted) | `https://aajtaklive-amd.akamaized.net/hls/live/REDACTED/REDACTED/aajtaklive/live_720p/chunks.m3u8` |
+| DD Kisan | New Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/9/master.m3u8` |
+| TAPMAD | New Backup | credential-bearing route pattern (values redacted) | `https://seriealeague.akamaized.net/hls/live/REDACTED/REDACTED/master.m3u8` |
 | &TV | Backup | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8` |
 | &TV | Backup | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8` |
 | 7S Music | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1257/master.m3u8` |

@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-04T07:00:04+00:00**
+Generated: **2026-11-04T09:17:43+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **f5525b8591cc8d59e6d66f26bb068d63e51cf4ae91b6e0f369dc8bf54c0a9ef7**
-- International-Playlist.m3u SHA-256: **aeb8d4a01127431800f3d41cd7e5934b47898a40cbdbecf0961070f51a3b6a59**
+- IPTV-Playlist.m3u SHA-256: **f5795953ab6e9474334bc1dc17149eaf70528a4602c0084f59ecbe44665f78ef**
+- International-Playlist.m3u SHA-256: **c6332f45624ee9413861a630d95dc2bb07d0c3ce022c75e70a3f57eb106c3f5f**
 
 ## Summary
 
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 512000 bytes: **6**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **682**
-- Playlist references whose asset stem differs from the normalized channel name: **1269**
-- Unreferenced files immediately inside logos/: **1344** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1275**
+- Unreferenced files immediately inside logos/: **1334** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -1139,6 +1139,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Not Playing |
 | IPTV-Playlist.m3u | Star Gold | repaired-star-gold-de06c8e974.png | Not Playing |
 | IPTV-Playlist.m3u | Vokta TV | vokta-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Aaj Tak HD | aaj-tak-hd.png | New Channels |
+| IPTV-Playlist.m3u | XITE Summer | xite-celebrates-0178ee79a4.png | New Channels |
+| IPTV-Playlist.m3u | Aaj Tak HD | aaj-tak-hd.png | New Backup |
+| IPTV-Playlist.m3u | Green TV | repaired-green-tv-d4fdf1175a.png | New Backup |
+| IPTV-Playlist.m3u | Matribhumi TV | matri-bhumi-tv.png | New Backup |
+| IPTV-Playlist.m3u | TV9 Bangla | tv-9-bangla.png | New Backup |
 | IPTV-Playlist.m3u | Taaza TV | taaza-tv.png | Backup |
 | IPTV-Playlist.m3u | &TV | tv.png | Backup |
 | IPTV-Playlist.m3u | &TV | tv.png | Backup |

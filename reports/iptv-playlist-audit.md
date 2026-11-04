@@ -1,15 +1,15 @@
 # IPTV Playlist Audit
-Generated: **2026-11-04T07:00:05.004740+00:00**
-Source playlist SHA-256: **f5525b8591cc8d59e6d66f26bb068d63e51cf4ae91b6e0f369dc8bf54c0a9ef7**
+Generated: **2026-11-04T09:17:44.427625+00:00**
+Source playlist SHA-256: **f5795953ab6e9474334bc1dc17149eaf70528a4602c0084f59ecbe44665f78ef**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1079**
+- Playlist entries: **1113**
 - Unique channel IDs: **734**
-- IDs with multiple streams: **198**
+- IDs with multiple streams: **208**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -21,7 +21,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Logo exceptions requiring repair: **1**
 - Missing logos in discovery queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1079**
+- Logo references checked: **1113**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
@@ -49,7 +49,32 @@ Missing country/language values are informational, not a reason to delete, recla
 
 ## Review Queue Country Verification
 
-New Channels/New Backup contain only entries verified as BD/IN.
+- 24 Hour Free Movies: country not verified as BD/IN (declared country US is not BD/IN)
+- Aaj Tak HD: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- Argus News: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- Charge!: country not verified as BD/IN (declared country US is not BD/IN)
+- CNBC TV18 Prime: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- DD Kisan: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- DD News: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- Jatra Ekamra: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- Mix Hollywood: country not verified as BD/IN (declared country US is not BD/IN)
+- MovieSphere AU: country not verified as BD/IN (declared country AU is not BD/IN)
+- MovieSphere UK: country not verified as BD/IN (declared country GB is not BD/IN)
+- T Sports HD: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- TAPMAD: country not verified as BD/IN (declared country PK is not BD/IN)
+- XITE Just Chill: country not verified as BD/IN (declared country US is not BD/IN)
+- XITE Summer: country not verified as BD/IN (declared country US is not BD/IN)
+- Aaj Tak HD: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- Argus News: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- CNN: country not verified as BD/IN (declared country US is not BD/IN)
+- DD Kisan: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- Hooray Kids: country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
+- KidDo MATIX: country not verified as BD/IN (declared country US is not BD/IN)
+- RT Documentary: country not verified as BD/IN (declared country RU is not BD/IN)
+- TAPMAD: country not verified as BD/IN (declared country PK is not BD/IN)
+- Trace Urban: country not verified as BD/IN (declared country FR is not BD/IN)
+- WildEarth: country not verified as BD/IN (declared country ZA is not BD/IN)
+- XITE Just Chill: country not verified as BD/IN (declared country US is not BD/IN)
 
 ## Category Registry
 
@@ -225,6 +250,9 @@ No same-ID label variants found across groups.
 ### choppertown.us (2 streams)
 - Choppertown — Documentary & Wildlife — https://7d8dc76d676946ec8d372d4ed7b22333.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-11-CHOPPERTOWN-SPORTSTRIBAL/mt/sportstribaltv/11/hls/master/playlist.m3u8
 - Choppertown — Backup — https://linear-11.frequency.stream/dist/glewedtv/11/hls/master/playlist.m3u8
+### cnn.us (2 streams)
+- CNN — International — https://tvsen6.aynaott.com/cnn/index.m3u8
+- CNN — New Backup — https://amg01448-samsungin-cnnnow-samsungin-4npqg.amagi.tv/playlist/amg01448-samsungin-cnnnow-samsungin/playlist.m3u8
 ### colors.bangla.in (4 streams)
 - Colors Bangla — Indian Bangla — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8
 - Colors Bangla — Not Playing — http://103.172.29.30:9991/stream/channelid/1759751142
@@ -245,6 +273,9 @@ No same-ID label variants found across groups.
 ### cricketgold.au@sd (2 streams)
 - Cricket Gold — Sports — https://d1nj4u39ja4cn0.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/FLS-MuxIP-CricketGold/418.m3u8
 - Cricket Gold — Backup — https://tvsen6.aynaott.com/M2W2UR49dmeKbZnmdRzN/index.m3u8
+### custom.hooraykids (2 streams)
+- Hooray Kids — Kids — https://d3go3d9yw1x2sb.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-obhh0sw25szth/5cc02970-213a-4eea-af2f-6a0dc11ca3a3/0.m3u8
+- Hooray Kids — New Backup — https://d3go3d9yw1x2sb.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-obhh0sw25szth/playlist.m3u8?ads.ads_cdn=cf&ads.afsdk_params=%7BAFSDK_VALUE%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.cdn=cf&ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.service_id=IN4600009F9&ads.ssai_vendor=SSSLIVE&pb_type=pb-obhh0sw25szth_cloudfront
 ### dangal2.in@sd (3 streams)
 - Dangal 2 — Indian Entertainment — https://live-dangal2.akamaized.net/liveabr/playlist.m3u8
 - Dangal 2 — Backup — https://mumt03.tangotv.in/Dsly5z3HDANGAL2/index.m3u8
@@ -412,6 +443,9 @@ No same-ID label variants found across groups.
 ### greengoldtv.in@india (2 streams)
 - Green Gold TV — Kids — https://cc-szrmqvu8zkg16.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-szrmqvu8zkg16/greengold/stream/grngld/playlist.m3u8
 - Green Gold TV — Backup — https://vglivessai.akamaized.net/eu/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/675a37e5-f517-434e-adae-d25ae1706340/playlist.m3u8
+### greentv.bd@sd (2 streams)
+- Green TV — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
+- Green TV — New Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/playlist.m3u8
 ### gseriesdrama.bd (2 streams)
 - G Series Drama — Bangladesh — https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8
 - G Series Drama — Backup — https://vods2.aynaott.com/gseriesDrama/index.m3u8
@@ -465,6 +499,9 @@ No same-ID label variants found across groups.
 - Khushboo Bangla — Indian Bangla — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 - Khushboo Bangla — Backup — https://cdn.pishow.tv/ott/live/1473/master.m3u8
 - Khushboo Bangla — Backup — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/tracks-v1a1/mono.m3u8
+### kiddomatix.us (2 streams)
+- KidDo MATIX — Kids — https://cc-le0kohm4qt3mk.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-le0kohm4qt3mk/OTM/OTM_KiddoMatix-SCTE_SAMSUNG/playlist.m3u8
+- KidDo MATIX — New Backup — https://d2b72bugawe8zk.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-e9s03ateecsl4/playlist.m3u8?ads.ads_cdn=cf&ads.afsdk_params=%7BAFSDK_VALUE%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.cdn=cf&ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.service_id=IN4600008T4&ads.ssai_vendor=SSSLIVE&pb_type=pb-e9s03ateecsl4_cloudfront
 ### kronehit.at (2 streams)
 - Kronehit — International — https://bitcdn-kronehit.bitmovin.com/v2/hls/playlist.m3u8
 - Kronehit — Backup — http://bitcdn-kronehit.bitmovin.com/v2/hls/chunklist_b3128000.m3u8
@@ -495,6 +532,9 @@ No same-ID label variants found across groups.
 ### marutamtv.in (2 streams)
 - MNTV (Tamil) — Indian Entertainment — https://mntv.livebox.co.in/mntvhls/live.m3u8
 - MNTV (Tamil) — Backup — https://www.khuwemultimedia.com/hls/mntv/mntv.m3u8
+### matribhumitv.bd (2 streams)
+- Matribhumi TV — Bangladesh — http://live.playmax.live/matribhumi/index.m3u8
+- Matribhumi TV — New Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/matribhumitv.stream/playlist.m3u8
 ### mazhavilmanorama.in@sd (4 streams)
 - Mazhavil Manorama — Indian Entertainment — https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 - Mazhavil Manorama — Backup — https://mmtv-vglivessai.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/f8a0827f-030f-4a0d-b7e5-338996c09a5b/index.m3u8
@@ -597,6 +637,9 @@ No same-ID label variants found across groups.
 - Action Hollywood Movies — International — https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
 - Action Hollywood Movies — Backup — https://amg01076-lightningintern-actionhollywood-samsungau-rs69y.amagi.tv/playlist/amg01076-lightningintern-actionhollywood-samsungau/playlist.m3u8
 - Action Hollywood Movies — Backup — https://amg01076-lightningintern-actionhollywood-samsungnz-82rry.amagi.tv/playlist/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
+### pocketfilms.in (2 streams)
+- Pocket Films — Indian Movies — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/e02a0ce5-6c42-4cca-bb53-e5cfecff74a9/0.m3u8
+- Pocket Films — New Backup — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/6408f97591ee7861ab0d4839eefdbbee/0.m3u8
 ### pogo.in@sd (2 streams)
 - Pogo — Kids — https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
 - Pogo — Backup — https://drk6xq0vhn.gpcdn.net/live/pogo_sd_abr/index.m3u8
@@ -650,8 +693,9 @@ No same-ID label variants found across groups.
 - R Plus Gold — Backup — https://cdn.pishow.tv/ott/live/1231/master.m3u8
 - R Plus Gold — Backup — https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8
 - R Plus Gold — Backup — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/cf883da3-f9f5-4c70-b0ef-b3ac2e2ad1e3/5552ef1c-ee8a-4743-8321-08b260d3b1f3/0.m3u8
-### rtdocumentary.ru (2 streams)
+### rtdocumentary.ru (3 streams)
 - RT Documentary — Documentary & Wildlife — http://rt-esp.rttv.com/live/rtesp/playlist_800Kb.m3u8
+- RT Documentary — New Backup — https://rt-rtd.rttv.com/dvr/rtdoc/playlist_4500Kb.m3u8
 - RT Documentary — Backup — https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8
 ### rtv.bd (7 streams)
 - RTV — Bangladesh — https://tvsen5.aynaott.com/RtvHD/index.m3u8
@@ -726,6 +770,9 @@ No same-ID label variants found across groups.
 ### star.jalsha.in (2 streams)
 - Star Jalsha — Indian Bangla — https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
 - Star Jalsha — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
+### starsports2.in (2 streams)
+- Star Sports 2 — Sports — https://tvsen7.aynaott.com/ssport2hd/index.m3u8
+- Star Sports 2 — New Backup — https://tvsen7.aynaott.com/ssport2hd/tracks-v1a1/mono.ts.m3u8
 ### studioyuva.in (2 streams)
 - Studio Yuva — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8
 - Studio Yuva — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
@@ -741,9 +788,15 @@ No same-ID label variants found across groups.
 ### tlc.in@hd (2 streams)
 - TLC (India) — Documentary & Wildlife — https://drk6xq0vhn.gpcdn.net/live/tlc_hd_abr/index.m3u8
 - TLC (India) — Backup — https://drk6xq0vhn.gpcdn.net/live/tlc_sd_abr/index.m3u8
+### traceurban.fr (2 streams)
+- Trace Urban — International — https://channels.trace.plus/Traceprod/URBAN_AFRIC_FR_hd/index.m3u8
+- Trace Urban — New Backup — https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
 ### travelxpenglish.us (2 streams)
 - Travelxp English — Documentary & Wildlife — https://travelxp-travelxp-1-eu.rakuten.wurl.tv/playlist.m3u8
 - Travelxp English — Backup — https://27c980761ff9437d929e64647afe183a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RakutenTV-eu_TravelXP/playlist.m3u8
+### tv9bangla.in (2 streams)
+- TV9 Bangla — Indian Bangla — https://amg01448-samsungin-tv9bangla-samsungin-9lgnh.amagi.tv/playlist/amg01448-samsungin-tv9bangla-samsungin/playlist.m3u8
+- TV9 Bangla — New Backup — https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9banaen8yq/liveabr/playlist.m3u8
 ### ubangla.in (2 streams)
 - U Bangla — Indian Bangla — https://stream.ottlive.co.in/ubangla/index.m3u8
 - U Bangla — Backup — https://stream.ottlive.co.in/ubangla/tracks-v1a1/mono.m3u8
@@ -759,6 +812,9 @@ No same-ID label variants found across groups.
 ### vendhartv.in@sd (2 streams)
 - Vendhar TV — Indian Entertainment — https://mumt04.tangotv.in/m18aqlK4VENDHARTV/index.m3u8
 - Vendhar TV — Backup — https://cdn.pishow.tv/ott/live/1271/master.m3u8
+### wildearth.za (2 streams)
+- WildEarth — Documentary & Wildlife — https://wildearth-plex.amagi.tv/masterR1080p.m3u8
+- WildEarth — New Backup — https://wildearth-ono.amagi.tv/playlist/amg01290-wildearth-oando/playlist.m3u8
 ### xitehits.nl (2 streams)
 - XITE Hits — International — https://d726x48n2pd5h.cloudfront.net/XITE_Hits.m3u8
 - XITE Hits — Backup — https://amg01243-xitenetworksint-hitsuk-samsunguk-mvovq.amagi.tv/ts-eu-w1-n2/playlist/amg01243-xitenetworksint-hitsuk-samsunguk/playlist.m3u8
@@ -857,7 +913,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1078**
+- Healthy/local references: **1112**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
