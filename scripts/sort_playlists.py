@@ -9,15 +9,15 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Not Playing", "New Channels", "New Backup", "Backup",
+    "Not Playing", "New Channels", "New Backups", "Backup",
 ]
 RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
-NON_NUMBERED = {"Backup", "Not Playing", "New Channels", "New Backup"}
+NON_NUMBERED = {"Backup", "Not Playing", "New Channels", "New Backups", "New Backup"}
 INTERNATIONAL_FIXED = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani",
 ]
-INTERNATIONAL_TAIL = ["International", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]
+INTERNATIONAL_TAIL = ["International", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backup"]
 INTERNATIONAL_LEGACY = {"not playing", "international", "backup", "backups", "new backup", "new backups"}
 ATTRIBUTE_ORDER = (
     "tvg-id", "tvg-name", "tvg-logo", "tvg-chno",
