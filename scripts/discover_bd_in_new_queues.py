@@ -32,9 +32,9 @@ BAD_WORDS = {
 # India-only exclusions. Sports remains eligible; Bangladesh keeps its existing topical policy.
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs)\b", re.IGNORECASE),
-    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|bible|jesus|krishna|shiva|ganesh|guru|gurudwara|jain|jainism|buddhist|buddhism|buddha|zoroastrian|parsi|jewish|judaism|torah|synagogue|catholic|orthodox|protestant|adventist|anglican|mormon|bahai|islam|islamic|muslim|quran|koran|allah|muhammad|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|shariah|madani|peace\\s*tv|huda|noor)\\b", re.IGNORECASE),
-    "educational": re.compile(r"\b(?:education(?:al)?|learning|school|university|college|academy|edutainment|exam(?:s)?|coaching|knowledge|instructional|tutorials?|gyan\\s*darshan|swayam\\s*prabha|e[-\\s]?vidya|vyas\\s*channel)\b", re.IGNORECASE),
-    "kids": re.compile(r"\b(?:kids?|children|cartoon|junior|toons?|baby\\s*shark|pogo|disney\\s*(?:jr|junior|xd)|nick(?:elodeon)?(?:\\s*jr|\\s*junior)?|pbs\\s*kids|doraemon|boomerang|spacetoon)\\b", re.IGNORECASE),
+    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|bible|jesus|krishna|shiva|ganesh|guru|gurudwara|jain|jainism|buddhist|buddhism|buddha|zoroastrian|parsi|jewish|judaism|torah|synagogue|catholic|orthodox|protestant|adventist|anglican|mormon|bahai|islam|islamic|muslim|quran|koran|allah|muhammad|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|shariah|madani|peace\s*tv|huda|noor)\b", re.IGNORECASE),
+    "educational": re.compile(r"\b(?:education(?:al)?|learning|school|university|college|academy|edutainment|exam(?:s)?|coaching|knowledge|instructional|tutorials?|gyan\s*darshan|swayam\s*prabha|e[-\s]?vidya|vyas\s*channel)\b", re.IGNORECASE),
+    "kids": re.compile(r"\b(?:kids?|children|cartoon|junior|toons?|baby\s*shark|pogo|disney\s*(?:jr|junior|xd)|nick(?:elodeon)?(?:\s*jr|\s*junior)?|pbs\s*kids|doraemon|boomerang|spacetoon)\b", re.IGNORECASE),
 }
 
 def canonical_channel_name(value: str) -> str:
@@ -166,7 +166,7 @@ def prohibited_channel(a: dict[str, str], name: str, country: str | None = None)
     if FORBIDDEN_BRANDS.search(values):
         return "known Indian News or Religious brand/category is prohibited"
     for word in FORBIDDEN_WORDS:
-        if re.search(r"(?<![\\w])" + re.escape(word) + r"(?![\\w])", values, re.UNICODE):
+        if re.search(r"(?<![\w])" + re.escape(word) + r"(?![\w])", values, re.UNICODE):
             return f"Indian {word} channel is prohibited"
     return None
 
