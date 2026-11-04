@@ -9,11 +9,11 @@ import json, re, sys, unicodedata
 from country_verification import reference_from_playlists, verify_country
 
 PLAYLIST_ORDERS={
-    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Not Playing','New Channels','New Backup','Backup'],
+    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Not Playing','New Channels','New Backups','Backup'],
 }
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-NON_NUMBERED={'Backup','Not Playing','New Channels','New Backup'}
-REVIEW_GROUPS={'New Channels','New Backup'}
+NON_NUMBERED={'Backup','Not Playing','New Channels','New Backups'}
+REVIEW_GROUPS={'New Channels','New Backups'}
 PROHIBITED_RELIGIOUS_CHANNELS={
     'angel tv',
     'calvary tv',
@@ -85,7 +85,7 @@ def process(path):
   if k: seen.add(k)
  if duplicate_urls:
   raise SystemExit(f'{path}: {len(duplicate_urls)} duplicate stream URL occurrences; refusing to delete any entry.')
- # New Channels/New Backup may hold only candidates verified as BD/IN; normalize tvg-country, never delete.
+ # New Channels/New Backups may hold only candidates verified as BD/IN; normalize tvg-country, never delete.
  reference=reference_from_playlists([path]); country_errors=[]
  for r in rec:
   a=attrs(r[0])
