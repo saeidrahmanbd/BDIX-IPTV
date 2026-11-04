@@ -1,5 +1,7 @@
 # IPTV Channel Discovery
 
+> **Superseded snapshot:** This report was generated at 2026-11-04 03:00 UTC, before the policy revision later on 4 November 2026. Its candidate list and rejection breakdown are historical and are not a current approval list. The current policy allows all Bangladesh genres; excludes Indian News, all Religious (including Islamic), Educational and Kids while allowing Indian Sports; and limits other countries in the International playlist to Movies/Music. New candidates remain in New Channels and New Backups for manual review. A fresh report will replace this snapshot after the next successful discovery run.
+
 Generated: **2026-11-04T03:00:44.797497+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
