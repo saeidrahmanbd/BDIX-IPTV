@@ -6,8 +6,8 @@ Thanks for helping improve the project.
 
 - Preserve the `#PLAYLIST-STUDIO-CATEGORIES` registry and canonical category order.
 - Do not remove an existing primary stream silently.
-- Do not remove Backup or review-queue entries solely because an automated health check failed.
-- Keep `New Channels` and `New Backup` as active BD/IN discovery-review queues.
+- Do not remove Backup or review-queue entries solely because an automated health check is inconclusive; remove only definitively dead/invalid streams or explicitly prohibited candidates.
+- Keep `New Channels` and `New Backups` as manual-review queues. IPTV candidates must be BD/IN and follow the India exclusions; International BD/IN candidates follow the same rules, while all other countries must be Movie/Music only. Never auto-promote either review queue.
 - Use local repository logos only in published playlists.
 - Avoid duplicate stream URLs.
 - Keep channel identity, country, language, group, and display-name metadata consistent.
