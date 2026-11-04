@@ -422,6 +422,8 @@ def main():
             target, reason, code = discovery.policy(a, name)
             if target is None:
                 raise SystemExit(f"Review queue entry violates regional policy: {name} ({reason or 'not eligible'})")
+            if not a.get("tvg-logo", "").strip():
+                raise SystemExit(f"Review queue entry lacks a local logo: {name}")
             if code not in {"BD", "IN"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
                 raise SystemExit(f"Foreign review queue entry lacks Movie/Music classification: {name}")
         final_urls.append(url.casefold())
