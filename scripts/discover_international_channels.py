@@ -361,7 +361,11 @@ def main():
    if target!="New Channels" and per_group[target]>=MAX_NEW_PER_GROUP:continue
    canonical=a; cname=name; ccode=code
   logo=local_logo(a,cname)
-  if is_backup and canonical.get("tvg-logo","").startswith(RAW_BASE) and not logo:logo=canonical["tvg-logo"]
+  if is_backup and not logo:
+   logo=local_logo(canonical,cname)
+  if not logo:
+   rejected["no authentic local repository logo"]+=1
+   continue
   additions.append([make_extinf(canonical,cname,target,ccode,logo,base),url])
   if is_backup:backup_rows.append((cname,ccode,url))
   else:
