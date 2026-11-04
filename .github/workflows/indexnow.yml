@@ -1,0 +1,71 @@
+name: Notify Search Engines (IndexNow)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/index.html"
+      - "docs/playlists.html"
+      - "docs/bangla-iptv.html"
+      - "docs/sitemap.xml"
+      - "docs/4e1c93ab76d25f0881a4b7c3e9d6205f.txt"
+      - ".github/workflows/indexnow.yml"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: indexnow-main
+  cancel-in-progress: true
+
+jobs:
+  submit-updated-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      INDEXNOW_KEY: "4e1c93ab76d25f0881a4b7c3e9d6205f"
+      KEY_LOCATION: "https://saeidrahmanbd.github.io/BDIX-IPTV/4e1c93ab76d25f0881a4b7c3e9d6205f.txt"
+    steps:
+      - name: Wait for the public key file to be published
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in {1..12}; do
+            if curl --fail --silent --show-error "$KEY_LOCATION" | grep -Fxq "$INDEXNOW_KEY"; then
+              echo "IndexNow key file is publicly reachable."
+              exit 0
+            fi
+            echo "Waiting for GitHub Pages deployment (attempt $attempt/12)..."
+            sleep 5
+          done
+          echo "The IndexNow key file was not found at $KEY_LOCATION" >&2
+          exit 1
+
+      - name: Submit the public landing pages to IndexNow
+        shell: bash
+        run: |
+          set -euo pipefail
+          payload="$(jq -n \
+            --arg host "saeidrahmanbd.github.io" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "$KEY_LOCATION" \
+            --argjson urlList '[
+              "https://saeidrahmanbd.github.io/BDIX-IPTV/",
+              "https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html",
+              "https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html"
+            ]' \
+            '{host:$host,key:$key,keyLocation:$keyLocation,urlList:$urlList}')"
+
+          status="$(curl --silent --show-error \
+            --output "$RUNNER_TEMP/indexnow-response.txt" \
+            --write-out "%{http_code}" \
+            --request POST "https://api.indexnow.org/indexnow" \
+            --header "Content-Type: application/json; charset=utf-8" \
+            --data "$payload")"
+
+          cat "$RUNNER_TEMP/indexnow-response.txt"
+          echo
+          case "$status" in
+            200|202) echo "IndexNow accepted the URL notification (HTTP $status)." ;;
+            *) echo "IndexNow returned HTTP $status." >&2; exit 1 ;;
+          esac
