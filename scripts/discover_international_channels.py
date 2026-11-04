@@ -387,6 +387,7 @@ def main():
     filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
     continue
    group="New Backups"
+   group="New Backups"
   elif old_key=="new channels" and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
    base,reason,policy_code=policy(policy_a,name)
