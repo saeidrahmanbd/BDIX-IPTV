@@ -1,9 +1,12 @@
 import sys
+import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import fetch_iptv_org_epg as fetcher
 from fetch_iptv_org_epg import active_playlist_ids, target_channel_ids, build_target_channels_xml, grab_command
 
 
@@ -144,6 +147,70 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
             target_channel_ids([playlist], mapping, explicit),
             {"Missing.in", "legacy.source.id", "Missing.in@SD"},
         )
+
+
+    def test_selected_upstream_sites_include_jio_distro_and_plex(self):
+        self.assertTrue({"jiotv.com", "distro.tv", "plex.tv"}.issubset(set(fetcher.SITES)))
+
+    def test_jio_catalogue_blank_xmltv_id_maps_only_to_unique_exact_target_name(self):
+        catalogue = '''<channels>
+  <channel site="jiotv.com" site_id="154" lang="en" xmltv_id="">Sony SAB HD</channel>
+</channels>'''
+        generated = build_target_channels_xml(
+            [catalogue],
+            {"SonySAB.in@HD"},
+            target_name_to_ids={"sonysab": {"SonySAB.in@HD"}},
+        )
+        root = ET.fromstring(generated)
+        self.assertEqual(len(root.findall("channel")), 1)
+        self.assertEqual(root.find("channel").attrib["xmltv_id"], "SonySAB.in@HD")
+        self.assertEqual(root.find("channel").attrib["site_id"], "154")
+
+    def test_jio_blank_id_mapping_rejects_ambiguous_playlist_names(self):
+        catalogue = '''<channels>
+  <channel site="jiotv.com" site_id="154" lang="en" xmltv_id="">Sony SAB HD</channel>
+</channels>'''
+        generated = build_target_channels_xml(
+            [catalogue],
+            {"SonySAB.in@HD", "SonySAB.in@SD"},
+            target_name_to_ids={"sonysab": {"SonySAB.in@HD", "SonySAB.in@SD"}},
+        )
+        self.assertEqual(ET.fromstring(generated).findall("channel"), [])
+
+    def test_jio_name_index_only_uses_active_indian_targets_from_both_playlists(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            iptv = Path(tmp) / "IPTV-Playlist.m3u"
+            international = Path(tmp) / "International-Playlist.m3u"
+            iptv.write_text(
+                '#EXTM3U\\n'
+                '#EXTINF:-1 tvg-id="SonySAB.in@HD" tvg-name="Sony SAB" group-title="Indian Entertainment",Sony SAB\\n'
+                'https://example.test/sony.m3u8\\n',
+                encoding="utf-8",
+            )
+            international.write_text(
+                '#EXTM3U\\n'
+                '#EXTINF:-1 tvg-id="SonySAB.uk@HD" tvg-name="Sony SAB" group-title="United Kingdom",Sony SAB\\n'
+                'https://example.test/sony-uk.m3u8\\n',
+                encoding="utf-8",
+            )
+            with patch.object(fetcher, "PLAYLISTS", (iptv, international)):
+                index = fetcher.read_active_target_name_to_ids(
+                    {"SonySAB.in@HD", "SonySAB.uk@HD"}
+                )
+        self.assertEqual(index, {"sonysab": {"SonySAB.in@HD"}})
+
+    def test_selected_catalogue_texts_loads_all_plex_region_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            work = Path(tmp)
+            directory = work / "sites" / "plex.tv"
+            directory.mkdir(parents=True)
+            (directory / "plex.tv_uk.channels.xml").write_text("<channels><channel>UK</channel></channels>", encoding="utf-8")
+            (directory / "plex.tv_us.channels.xml").write_text("<channels><channel>US</channel></channels>", encoding="utf-8")
+            with patch.object(fetcher, "WORK", work), patch.object(fetcher, "SITES", ("plex.tv",)):
+                texts = fetcher.selected_catalogue_texts()
+        self.assertEqual(len(texts), 2)
+        self.assertTrue(any(">UK<" in value for value in texts))
+        self.assertTrue(any(">US<" in value for value in texts))
 
 
 if __name__ == "__main__":
