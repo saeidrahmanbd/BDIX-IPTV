@@ -115,6 +115,46 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
             [("GB#1", "SanskarTV.in@SD"), ("GB#3", "MasalaTV.pk@SD")],
         )
 
+    def test_curated_sky_site_ids_allow_short_diaspora_labels_only_for_locked_channels(self):
+        catalogue = '''<channels>
+  <channel site="sky.com" site_id="GB#6753" lang="en" xmltv_id="ATNBanglaUK.uk@SD">ATN</channel>
+  <channel site="sky.com" site_id="GB#9999" lang="en" xmltv_id="ATNBanglaUK.uk@SD">ATN</channel>
+  <channel site="sky.com" site_id="GB#4540" lang="en" xmltv_id="NTVEurope.bd@SD">NTV</channel>
+</channels>'''
+        explicit = {
+            "ATNBanglaUK.uk": ["6753", "ATNBanglaUK.uk@SD"],
+            "NTVEurope.bd": ["4540", "NTVEurope.bd@SD"],
+        }
+        generated = build_target_channels_xml(
+            [catalogue],
+            {"ATNBanglaUK.uk@SD", "NTVEurope.bd@SD"},
+            {
+                "ATNBanglaUK.uk": {"atnbanglauk"},
+                "NTVEurope.bd": {"ntveurope"},
+            },
+            explicit_mappings=explicit,
+        )
+        pairs = [(c.attrib["site_id"], c.attrib["xmltv_id"]) for c in ET.fromstring(generated).findall("channel")]
+        self.assertEqual(
+            pairs,
+            [("GB#6753", "ATNBanglaUK.uk@SD"), ("GB#4540", "NTVEurope.bd@SD")],
+        )
+
+    def test_tv24_blank_id_uses_only_curated_site_id_and_exact_name(self):
+        catalogue = '''<channels>
+  <channel site="tv24.co.uk" site_id="iqra-bangla" lang="en" xmltv_id="">IQRA BANGLA</channel>
+  <channel site="tv24.co.uk" site_id="ntv" lang="en" xmltv_id="">NTV</channel>
+</channels>'''
+        generated = build_target_channels_xml(
+            [catalogue],
+            {"IqraBangla.uk"},
+            {"IqraBangla.uk": {"iqrabangla"}},
+        )
+        rows = ET.fromstring(generated).findall("channel")
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].attrib["site_id"], "iqra-bangla")
+        self.assertEqual(rows[0].attrib["xmltv_id"], "IqraBangla.uk")
+
     def test_strict_epg_locks_replace_the_playlist_id(self):
         playlist = (
             '#EXTINF:-1 tvg-id="ColorsCineplex.in@SD" tvg-name="Colors Cineplex" group-title="Indian Movies",Colors Cineplex\n'
