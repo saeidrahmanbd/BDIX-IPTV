@@ -67,13 +67,39 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNone(self.classify("Cinema World", group, "US", "CinemaWorld.us")[0])
                 self.assertIsNone(self.classify("World Music", group, "US", "WorldMusic.us")[0])
 
-    def test_news_is_rejected_for_every_country(self):
-        for country in ("BD", "IN", "PK", "US", None):
+    def test_bangladesh_news_is_allowed_but_indian_and_foreign_news_are_rejected(self):
+        self.assertEqual(self.classify("Channel 24", "News", "BD", "Channel24.bd")[0], "Bangladesh")
+        self.assertEqual(self.classify("Somoy TV", "Entertainment", "BD", "SomoyTV.bd")[0], "Bangladesh")
+        for country, tvg_id in (("IN", "WorldNews.in"), ("PK", "WorldNews.pk"), ("US", "WorldNews.us"), (None, "WorldNews.us")):
             with self.subTest(country=country):
-                self.assertIsNone(self.classify("World News", "News", country, "WorldNews.us")[0])
-        self.assertIsNone(self.classify("Channel 24", "General", "BD", "Channel24.bd")[0])
-        self.assertIsNone(self.classify("Somoy TV", "Entertainment", "BD", "SomoyTV.bd")[0])
+                self.assertIsNone(self.classify("World News", "News", country, tvg_id)[0])
         self.assertIsNone(self.classify("CNBC World", "Business", "SG", "CNBCWorld.sg")[0])
+
+    def test_indian_policy_matches_iptv_playlist_exclusions_and_keeps_sports(self):
+        excluded = [
+            ("Aaj Tak", "News", "AajTak.in"),
+            ("Madani TV", "Religious", "MadaniTV.in"),
+            ("Peace TV", "Religious", "PeaceTV.in"),
+            ("Education TV", "Education", "EducationTV.in"),
+            ("DD Gyan Darshan", "General", "GyanDarshan.in"),
+            ("Cartoon Network", "Kids", "CartoonNetwork.in"),
+            ("Pogo", "Kids", "Pogo.in"),
+        ]
+        for name, group, tvg_id in excluded:
+            with self.subTest(name=name):
+                self.assertIsNone(self.classify(name, group, "IN", tvg_id)[0])
+        self.assertEqual(self.classify("DD Sports", "Sports", "IN", "DDSports.in")[0], "Indian Entertainment")
+
+    def test_bangladesh_religious_educational_kids_and_sports_are_not_genre_filtered(self):
+        examples = [
+            ("Madani TV", "Religious", "MadaniTV.bd"),
+            ("Education TV", "Education", "EducationTV.bd"),
+            ("Kids Bangla", "Kids", "KidsBangla.bd"),
+            ("Sports Bangla", "Sports", "SportsBangla.bd"),
+        ]
+        for name, group, tvg_id in examples:
+            with self.subTest(name=name):
+                self.assertEqual(self.classify(name, group, "BD", tvg_id)[0], "Bangladesh")
 
     def test_kids_sports_documentary_and_wildlife_channels_are_rejected(self):
         examples = [
@@ -88,18 +114,18 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, group, "US", name.replace(" ", "") + ".us")[0])
 
-    def test_all_religious_channels_including_islamic_are_rejected(self):
+    def test_all_religious_channels_are_rejected_in_india_and_other_countries(self):
         examples = [
             ("Gospel TV", "Religious", "US", "GospelTV.us"),
             ("Sunnah TV", "Religious", "SA", "SunnahTV.sa"),
             ("MTA International", "General", "GB", "MTAInternational.uk"),
-            ("3ABN Kids", "Kids", "US", "3ABNKids.us@SD"),
             ("Hindu Bhakti Music", "Music", "IN", "BhaktiMusic.in"),
-            ("Madani TV", "General", "BD", "MadaniTV.bd"),
+            ("Madani TV", "General", "IN", "MadaniTV.in"),
         ]
         for name, group, country, tvg_id in examples:
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, group, country, tvg_id)[0])
+        self.assertEqual(self.classify("Madani TV", "Religious", "BD", "MadaniTV.bd")[0], "Bangladesh")
 
     def test_radio_and_series_or_general_entertainment_channels_are_rejected(self):
         examples = [
@@ -219,11 +245,11 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         url_c = "https://example.org/new-music.m3u8"
         blocks = [
             ['#EXTINF:-1 tvg-name="Epic Music Digital" group-title="Indian Music",Epic Music Digital', url_a],
-            ['#EXTINF:-1 tvg-name="Epic Music" group-title="New Backup",Epic Music', url_a],
+            ['#EXTINF:-1 tvg-name="Epic Music" group-title="New Backups",Epic Music', url_a],
             ['#EXTINF:-1 tvg-name="Oli TV" group-title="Indian Entertainment",Oli TV', url_b],
             ['#EXTINF:-1 tvg-name="Oli TV" group-title="New Channels",Oli TV', url_b],
             ['#EXTINF:-1 tvg-name="New Music" group-title="New Channels",New Music', url_c],
-            ['#EXTINF:-1 tvg-name="Duplicate New Music" group-title="New Backup",Duplicate New Music', url_c],
+            ['#EXTINF:-1 tvg-name="Duplicate New Music" group-title="New Backups",Duplicate New Music', url_c],
         ]
         kept, removed = discovery.remove_duplicate_queue_urls(blocks)
         self.assertEqual(len(removed), 3)
