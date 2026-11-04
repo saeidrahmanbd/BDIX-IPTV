@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Discover only movie and music channels for International-Playlist.m3u.
+"""Discover eligible channels into New Channels/New Backups for manual review.
 
-The content filter applies to every country. News, sports, kids, documentaries,
-religious programming, general entertainment, and all other categories are
-rejected. Existing Bangladeshi/Indian regional groups and explicit special-category groups are preserved. Non-Movie/Music rows in dynamic country groups are moved to the allowed Kids/Sports/Documentary & Wildlife/Religious/Adult groups when identifiable, otherwise removed; countries with fewer than five eligible channels remain in International.
-Playback is never tested by this script.
+Bangladesh is unrestricted by genre. India follows IPTV-Playlist exclusions
+(News, all Religious, Educational and Kids); Indian Sports remain eligible.
+Every other country is Movie/Music only. New candidates are never promoted
+automatically. Foreign country groups require five unique primary channels.
+Playback is checked by the downstream validation step.
 """
 from __future__ import annotations
 import hashlib,re,unicodedata,urllib.parse,urllib.request
@@ -387,7 +388,6 @@ def main():
     filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
     continue
    group="New Backups"
-   group="New Backups"
   elif old_key=="new channels" and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
    base,reason,policy_code=policy(policy_a,name)
@@ -411,8 +411,8 @@ def main():
    group="New Backups" if old_key in {"new backup","new backups"} else "New Channels"
   else:
    # Preserve unrelated existing entries. Remove only the two exact false
-   # positives that this discovery pipeline recently promoted into country
-   # groups; do not broadly reclassify established country groups.
+   # positives from earlier discovery runs; do not broadly reclassify
+   # established curated country groups.
    known_reason=known_non_tv_discovery_reason(name,old)
    if known_reason:
     filtered_existing.append((name,old,known_reason))
