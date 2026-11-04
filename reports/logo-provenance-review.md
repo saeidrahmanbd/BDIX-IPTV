@@ -1,6 +1,6 @@
 # Logo Provenance Review
 
-Generated: **2026-11-04T04:00:36+00:00**
+Generated: **2026-11-04T06:18:43+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
@@ -8,25 +8,25 @@ Unattributed logos are **not provenance-passed**; they remain pending review. Th
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **f5525b8591cc8d59e6d66f26bb068d63e51cf4ae91b6e0f369dc8bf54c0a9ef7**
-- International-Playlist.m3u SHA-256: **8323569d467e288ca7fa7cda014698d9182009da45345456ffb252bf4aa54b6c**
+- International-Playlist.m3u SHA-256: **aeb8d4a01127431800f3d41cd7e5934b47898a40cbdbecf0961070f51a3b6a59**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 0 | 15 | 0 | 1064 |
-| International-Playlist.m3u | 0 | 819 | 0 | 1989 |
+| International-Playlist.m3u | 0 | 839 | 0 | 2007 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3053**
+- Logos needing attribution review: **3071**
 - Unofficial fallback logos: **0**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3053 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3071 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
