@@ -500,7 +500,7 @@ DIRECT_LOGO_HINTS = {
         "url": "https://www.yupptv.com/seo_img/UGC_GEC_big.jpg",
         "format": "JPEG",
         "page": "https://publiciptv.com/countries/in/m3u",
-        "source": "Public IPTV directory's exact Vyas Channel listing",
+        "source": "Public IPTV exact Vyas NIC channel listing; exact stream identity corroborated by the Vyas NIC educational broadcast URL",
         "license": "Broadcaster logo served by directory; original rights remain with broadcaster",
         "license_url": "",
     },
