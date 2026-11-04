@@ -1,31 +1,46 @@
-# Operational Wiki
+# BDIX-IPTV Operational Wiki
 
-The root [README.md](../README.md) is the canonical project overview, playlist catalogue, quick-start guide, and current status page. This Wiki retains operational policies and links rather than duplicating that overview.
+The root [README](../README.md) is the project overview. This page records the current **Bangladeshi IPTV, Bangla IPTV and International M3U playlist policies** so that documentation and automation use the same rules.
 
-## Playlist and discovery policy
+## Maintained playlists
 
-- Two maintained playlists: [IPTV](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) and [International](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u).
-- International country groups are for movie/music channels. Documentary & Wildlife, Kids, Sports, Religious, Adult, and the explicit Fashion TV exception remain in dedicated groups.
-- Discovery queues are restricted to verified Bangladesh/India candidates. Bangladeshi news is allowed; Indian News and non-Islamic religious channels are prohibited; Indian Kids/Sports and Islamic religious channels are allowed.
-- **Permanent denylist:** E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
-- **Country-group threshold:** A country outside Bangladesh, India and Pakistan receives a dedicated group only when it has at least **five unique primary channel names** across eligible Movies/Music entries. Countries with 1–4 unique channels stay in `International`; when the fifth unique channel is added, all eligible channels from that country are promoted automatically. Alternate stream URLs, duplicate names and `Backup`/review-queue rows do not count toward the threshold. The dedicated thematic groups remain separate and are never counted.
-- `New Channels`, `New Backup`, `Backup` and `Not Playing` have separate purposes. The main Xtream worker excludes `Test`, `Not Playing`, and the new discovery queues from service output.
+- [IPTV-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) — Bangladesh and India channel collection.
+- [International-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) — Bangladesh and India under the same rules, plus eligible international movie and music channels.
+
+## Current channel eligibility
+
+| Origin | IPTV-Playlist.m3u | International-Playlist.m3u |
+|---|---|---|
+| Bangladesh | All genres are eligible. | All genres are eligible. |
+| India | News, all religious channels (including Islamic), educational and kids channels are prohibited. Sports are allowed. | Same Indian exclusions; sports are allowed. |
+| Other countries | Not included. | Only dedicated movie and music channels are eligible. |
+
+The International discovery workflow must not stage non-Bangladesh/India news, sports, religious, kids, educational, documentary, radio, VOD or general-entertainment channels as eligible movie/music candidates. A country-specific group for other countries requires at least five unique, manually curated primary channel identities.
+
+## Discovery and manual review
+
+- First-stream candidates for genuinely new channels are placed in **New Channels**.
+- Alternate streams are placed in **New Backups**.
+- Both groups are **manual-review queues**. Automation must not approve, promote or move candidates from these queues into curated groups.
+- Queue entries do not count toward the five-channel country-group threshold.
+- Keep uncertain stream checks available for manual review; remove only duplicates, clearly invalid/non-TV sources, explicitly prohibited candidates, unsafe proxy/tokenized links or definitively dead endpoints under the workflow's validation rules.
+- Existing **Backup** and **Not Playing** records have separate preservation rules. Do not delete them solely because a probe is inconclusive.
 
 ## Metadata and logos
 
-Keep `tvg-id`, `tvg-name`, `tvg-logo`, group, channel number and displayed name consistent. Do not fabricate channel IDs or attach an image just because its filename resembles a name. Use a repository-local logo only when the asset is a reasonable match; if identity cannot be verified, leave it for review.
+Keep channel IDs, names, logo paths, country, language, group, channel number and displayed name consistent. Do not invent channel IDs or assign a logo merely because a filename looks similar. Published playlists use repository-local logo files under /logos/; use an asset only when it is a reasonable identity match.
 
-The all-playlist EPG mapping registry is `reports/epg-channel-mapping.csv`. Adult-group rows are excluded from the public mapping report so that it does not publish named-performer inventory.
+The all-playlist EPG mapping registry is reports/epg-channel-mapping.csv. Adult-group rows are excluded from the public mapping report to avoid publishing named-performer inventory.
 
 ## EPG publication
 
-The public XMLTV refresh pipeline is enabled. The guide is published to `epg/epg.xml` after the scheduled workflow passes source-fetch, freshness and quality checks. Both maintained playlist headers advertise the public raw XMLTV URL. The main Xtream worker serves that guide through its authenticated `xmltv.php` endpoint. The EPG pipeline can combine useful public or otherwise accessible sources, including third-party feeds, for discovery, mapping and schedule acquisition. Private credentials and personalized feed URLs are kept out of the repository.
+The public XMLTV refresh pipeline is enabled. A guide is published to epg/epg.xml after source-fetch, freshness and quality checks pass. The maintained playlist headers advertise the public raw XMLTV URL. The main Xtream worker serves the guide through its authenticated xmltv.php endpoint. Source-review metadata is advisory; source-specific restrictions and private credentials remain protected.
 
-See [EPG status and maintenance](../epg/README.md) and the [coverage report](../reports/epg-coverage.md).
+See [EPG status and maintenance](../epg/README.md) and the [EPG coverage report](../reports/epg-coverage.md).
 
 ## Operations and reports
 
-Reports are snapshots, not live status pages. Check the generated timestamp and source fingerprint before relying on them.
+Reports are generated snapshots, not live status pages. Check the generation timestamp and source fingerprint before relying on them.
 
 - [IPTV playlist audit](../reports/iptv-playlist-audit.md)
 - [Stream health](../reports/stream-health.md)
@@ -35,14 +50,15 @@ Reports are snapshots, not live status pages. Check the generated timestamp and 
 - [Stream risk review](../reports/stream-risk-review.md)
 - [Project dashboard](../assets/dashboard.svg)
 
-For a missing programme guide, check whether EPG publication is enabled first, then verify the channel's ID and an available matching schedule source. A correctly formatted ID is not proof that any schedule source exists.
+For an EPG gap, verify both the channel identity and whether a usable matching schedule source exists. A correctly formatted channel ID does not prove that programme data is available.
 
 ## Related documentation
 
-- [Downloads](DOWNLOADS.md)
+- [Bangladeshi IPTV playlist guide](PLAYLISTS.md)
+- [Download Center](DOWNLOADS.md)
 - [Playlist Studio guide](PLAYLIST-STUDIO.md)
 - [Xtream Gateway](../xtream/README.md)
 - [Contributing](CONTRIBUTING.md)
 - [Security policy](SECURITY.md)
 
-Report broken streams, wrong metadata or missing/incorrect logos via [GitHub Issues](https://github.com/saeidrahmanbd/BDIX-IPTV/issues). Do not include credentials, private tokens or private provider URLs in public issues.
+Report broken streams, incorrect metadata or missing logos via [GitHub Issues](https://github.com/saeidrahmanbd/BDIX-IPTV/issues). Never include credentials, private tokens or private provider URLs in public issues.
