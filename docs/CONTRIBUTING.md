@@ -7,8 +7,9 @@ Thanks for helping improve the project.
 - Preserve the `#PLAYLIST-STUDIO-CATEGORIES` registry and canonical category order.
 - Do not remove an existing primary stream silently.
 - Do not remove Backup or review-queue entries solely because an automated health check failed.
-- Keep `New Channels` and `New Backup` as active BD/IN discovery-review queues.
+- Keep New Channels and New Backups as manual-review queues. Never auto-approve or promote entries from either queue.
 - Use local repository logos only in published playlists.
+- Follow the regional discovery policy: Bangladesh allows all genres; India excludes News, all Religious (including Islamic), Educational and Kids; other countries in the International playlist allow Movies/Music only.
 - Avoid duplicate stream URLs.
 - Keep channel identity, country, language, group, and display-name metadata consistent.
 - Treat signed, tokenized, session-specific, and rendition-only URLs as review items rather than proof of independent redundancy.
