@@ -19,15 +19,20 @@
   <meta property="og:description" content="Bangladeshi and Bangla IPTV M3U playlists, international movie/music channels and an XMLTV EPG guide.">
   <meta property="og:url" content="https://saeidrahmanbd.github.io/BDIX-IPTV/">
   <meta property="og:image" content="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/iptv-project-showcase.svg">
+  <meta property="og:image:alt" content="BDIX-IPTV M3U playlists for Bangladesh, India and international movie and music channels">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="bn_BD">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bangladeshi IPTV &amp; Bangla IPTV M3U Playlists">
   <meta name="twitter:description" content="M3U playlists for Bangladeshi, Indian and international movie/music channels.">
   <meta name="twitter:image" content="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/iptv-project-showcase.svg">
+  <meta name="twitter:image:alt" content="BDIX-IPTV M3U playlists for Bangladesh, India and international movie and music channels">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebSite",
     "name":"BDIX-IPTV",
+    "@id":"https://saeidrahmanbd.github.io/BDIX-IPTV/#website",
     "url":"https://saeidrahmanbd.github.io/BDIX-IPTV/",
     "description":"Bangladeshi IPTV and Bangla IPTV M3U playlists for Bangladesh and India, with an international movie and music collection and XMLTV EPG guide.",
     "inLanguage":["en","bn"],
@@ -37,16 +42,19 @@
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"Dataset",
-    "name":"BDIX-IPTV M3U Playlist Collection",
-    "description":"Public M3U playlist files for Bangladesh and India, plus international movie and music channels. Includes channel metadata, repository-local logo references and an XMLTV EPG endpoint.",
-    "url":"https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html",
-    "creator":{"@type":"Person","name":"Saeid Rahman","url":"https://github.com/saeidrahmanbd"},
-    "distribution":[
-      {"@type":"DataDownload","name":"Bangladesh and India IPTV M3U playlist","encodingFormat":"application/vnd.apple.mpegurl","contentUrl":"https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u"},
-      {"@type":"DataDownload","name":"International IPTV M3U playlist","encodingFormat":"application/vnd.apple.mpegurl","contentUrl":"https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u"},
-      {"@type":"DataDownload","name":"XMLTV EPG guide","encodingFormat":"application/xml","contentUrl":"https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"}
-    ]
+    "@type":"WebPage",
+    "@id":"https://saeidrahmanbd.github.io/BDIX-IPTV/#webpage",
+    "url":"https://saeidrahmanbd.github.io/BDIX-IPTV/",
+    "name":"Bangladeshi IPTV & Bangla IPTV M3U Playlists",
+    "description":"Bangladeshi and Bangla IPTV M3U playlists for Bangladesh and India, plus international movie and music channels and an XMLTV EPG guide.",
+    "inLanguage":"en",
+    "isPartOf":{"@id":"https://saeidrahmanbd.github.io/BDIX-IPTV/#website"},
+    "about":[
+      {"@type":"Thing","name":"Bangladeshi IPTV"},
+      {"@type":"Thing","name":"Bangla IPTV M3U playlists"},
+      {"@type":"Thing","name":"XMLTV EPG"}
+    ],
+    "dateModified":"2026-11-04"
   }
   </script>
 </head>
@@ -56,7 +64,7 @@
   <nav class="nav" aria-label="Main navigation">
     <a class="brand" href="./">📺 BDIX-IPTV</a>
     <div class="navlinks">
-      <a href="playlists.html">Playlists</a>
+      <a href="playlists.html">Playlist guide</a>
       <a href="bangla-iptv.html" lang="bn">বাংলা</a>
       <a href="https://github.com/saeidrahmanbd/BDIX-IPTV">GitHub repository</a>
     </div>
@@ -128,6 +136,13 @@
     <p class="small">Guide coverage depends on whether a matching schedule source is available for a channel and whether the latest refresh passes its validation checks.</p>
   </section>
 
+  <section aria-labelledby="maintenance">
+    <h2 id="maintenance">How the playlists are maintained</h2>
+    <p>The project separates published channel groups from discovery candidates. New primary channels are placed in <code>New Channels</code>, while alternate stream candidates are held in <code>New Backups</code> for manual review. Automated checks help validate playlist structure, metadata and stream responses, but an automated discovery result is not a guarantee that a stream will remain available.</p>
+    <p>The International playlist follows a published country policy: Bangladesh channels of all genres are eligible; Indian News, Religious, Educational and Kids channels are excluded while Indian Sports are allowed; other countries are limited to dedicated movie and music channels.</p>
+    <p>Read the <a href="playlists.html">full Bangladeshi IPTV M3U guide</a>, the <a href="bangla-iptv.html" lang="bn">বাংলা IPTV guide</a>, or review the <a href="https://github.com/saeidrahmanbd/BDIX-IPTV">source repository and maintenance documentation</a>.</p>
+  </section>
+
   <section aria-labelledby="about">
     <h2 id="about">What does BDIX-IPTV provide?</h2>
     <p>BDIX-IPTV organizes public M3U playlist references, channel names and IDs, category metadata, local logo assets, XMLTV EPG mappings, stream-health reports and backup reviews. The repository is maintained on GitHub and its playlist files are served from the repository's raw-content URLs.</p>
@@ -142,6 +157,6 @@
     <details><summary>What is the EPG link?</summary><p>The XMLTV programme guide is published at <a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml">epg/epg.xml</a> after a successful refresh and validation.</p></details>
   </section>
 </main>
-<footer><div class="footer-inner"><span>© BDIX-IPTV · Maintained by <a href="https://github.com/saeidrahmanbd">Saeid Rahman</a></span><span><a href="https://github.com/saeidrahmanbd/BDIX-IPTV">Source repository</a> · <a href="playlists.html">Playlist guide</a> · <a href="bangla-iptv.html" lang="bn">বাংলা পৃষ্ঠা</a></span></div></footer>
+<footer><div class="footer-inner"><span>© BDIX-IPTV · Maintained by <a href="https://github.com/saeidrahmanbd">Saeid Rahman</a></span><span><a href="https://github.com/saeidrahmanbd/BDIX-IPTV">Source repository</a> · <a href="playlists.html">Playlist guide</a> · <a href="bangla-iptv.html" lang="bn">বাংলা পৃষ্ঠা</a> · <a href="PLAYLISTS.md">Documentation</a></span></div></footer>
 </body>
 </html>
