@@ -380,8 +380,18 @@ def main():
             raise SystemExit(f"Name was not normalized: {name}")
         if a.get("tvg-logo") and local_logo_path(a["tvg-logo"]) is None:
             raise SystemExit(f"Invalid or external logo reference: {name}")
-        if group.casefold() in {"new channels", "new backup"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music"}:
-            raise SystemExit(f"Review queue entry lacks validated movie/music classification: {name}")
+        if group.casefold() in {"new channels", "new backup", "new backups"}:
+            candidate_country = (a.get("tvg-country") or discovery.country_code(a) or "").upper()
+            if candidate_country in {"BD", "IN"}:
+                reason = discovery.bd_policy.prohibited_channel(a, name, candidate_country)
+                if reason:
+                    raise SystemExit(f"Review queue entry violates {candidate_country} policy: {name} ({reason})")
+            else:
+                if (a.get("tvg-content") or "").strip().casefold() not in {"movies", "movie", "music"}:
+                    raise SystemExit(f"Non-BD/IN review candidate lacks Movie/Music classification: {name}")
+                target, reason, _ = discovery.policy(a, name)
+                if target is None:
+                    raise SystemExit(f"Review queue entry violates International policy: {name} ({reason})")
         final_urls.append(url.casefold())
         group_counts[group] += 1
     if len(final_urls) != len(set(final_urls)):
@@ -397,7 +407,7 @@ def main():
         f"- Malformed HTTP options moved into VLC directives: {malformed_options}",
         f"- Invalid/external logo references removed: {invalid_logos}",
         f"- Exact duplicate URLs omitted: {removed['exact duplicate URL']}",
-        f"- Additional same-channel streams moved to Backup: {removed['duplicate channel stream moved to Backup']}",
+        f"- Additional same-channel streams moved to New Backups/Backup: {removed['duplicate channel stream moved to review/Backup']}",
         "- News outside Bangladesh and non-Islamic religious channels are excluded.",
         "- Foreign movie/music services are placed under country names after at least five unique primary channels; smaller/unknown countries remain in New Channels with tvg-content tags.",
         "- Retained stream URLs are preserved; playback/availability was not tested.", "",
@@ -412,7 +422,7 @@ def main():
     print(json.dumps({"before": len(blocks), "after": len(final_blocks), "removed": dict(removed),
                       "normalized_names": names_normalized, "malformed_http_options_moved": malformed_options,
                       "duplicate_urls": removed["exact duplicate URL"],
-                      "duplicate_channels_moved_to_backup": removed["duplicate channel stream moved to Backup"],
+                      "duplicate_channels_moved_to_backup": removed["duplicate channel stream moved to review/Backup"],
                       "groups": dict(group_counts)}, ensure_ascii=False))
 
 if __name__ == "__main__":
