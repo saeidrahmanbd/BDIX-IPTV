@@ -269,6 +269,8 @@ class EpgConfigTests(unittest.TestCase):
                 'https://example.test/cctv6.m3u8\n'
                 '#EXTINF:-1 tvg-id="KidsChannel.uk@HD" group-title="Kids" tvg-name="Kids Channel",Kids Channel\n'
                 'https://example.test/kids.m3u8\n'
+                '#EXTINF:-1 tvg-id="CanalBrasil.br" tvg-country="BR" group-title="International" tvg-name="Canal Brasil",Canal Brasil\n'
+                'https://example.test/brazil.m3u8\n'
                 '#EXTINF:-1 tvg-id="NotACountry.hd" group-title="International" tvg-name="Invalid",Invalid\n'
                 'https://example.test/invalid.m3u8\n',
                 encoding="utf-8",
