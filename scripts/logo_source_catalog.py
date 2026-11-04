@@ -497,7 +497,7 @@ DIRECT_LOGO_HINTS = {
         "license_url": "",
     },
     "Vyas Channel": {
-        "url": "https://cec.nic.in/cec/sites/default/cecprofile/aboutcec.jpg",
+        "url": "https://www.cec.nic.in/cec/sites/default/cecprofile/aboutcec.jpg",
         "format": "JPEG",
         "page": "https://cec.nic.in/cec/vyas",
         "source": "Official CEC institutional logo; CEC operates the Vyas Higher Education Channel. Used as the operator mark because a dedicated Vyas logo asset could not be validated.",
