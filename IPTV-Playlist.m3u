@@ -647,7 +647,7 @@ https://mumt05.tangotv.in/87NeALx2NEPAL1/index.m3u8
 https://stream.ottlive.co.in/nkrtv/index.m3u8
 #EXTINF:-1 tvg-id="NTCTV.in@SD" tvg-name="NTC TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntc-tv.png" tvg-chno="321" channel-id="NTCTV.in@SD" tvg-country="IN" tvg-language="und" group-title="Indian Entertainment",NTC TV
 https://galaxyott.live/hls/ntv.m3u8
-#EXTINF:-1 tvg-chno="322" channel-id="NTV.in" tvg-id="NTV.in" tvg-name="NTV Malayalam" tvg-language="mal" tvg-country="IN" group-title="Indian Entertainment",NTV Malayalam
+#EXTINF:-1 tvg-chno="322" channel-id="NTV.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv-malayalam.svg" tvg-id="NTV.in" tvg-name="NTV Malayalam" tvg-language="mal" tvg-country="IN" group-title="Indian Entertainment",NTV Malayalam
 https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8
 #EXTINF:-1 tvg-id="OdishaTV.in@SD" tvg-name="Odisha TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/odisha-tv.png" tvg-chno="323" channel-id="OdishaTV.in@SD" tvg-country="IN" tvg-language="ori" group-title="Indian Entertainment",Odisha TV
 https://livetv.tarangplus.in/otv-origin/live/playlist.m3u8
