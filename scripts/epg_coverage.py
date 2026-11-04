@@ -40,7 +40,7 @@ SOURCE_FETCH_WORKERS = 8
 EPG_ALIASES = {
     "DDHimachalPradesh.in@SD": ["ts1217", "1217", "LIVETV_LIVETVCHANNEL_DD_SHIMLA"],
     "MTVIndia.in@SD": ["jtv248", "248"], "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
-    "KappaTV.in@ALT1": ["jtv786", "786", "377"], "IqraBangla.uk": ["3914", "IqraBangla.uk"], "DeenTV.uk": ["1235", "DeenTV.uk"],
+    "KappaTV.in@ALT1": ["jtv786", "786", "377"], "IqraBangla.uk": ["3914", "IqraBangla.uk", "IqraBangla.uk@SD"], "DeenTV.uk": ["1235", "DeenTV.uk", "DeenTV.uk@SD"],
     "ATNBanglaUK.uk": ["6753"],
     "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"], "custom.bdix.aakashaath": ["AakaashAath.in@SD"],
@@ -127,7 +127,10 @@ EPG_LOCKS = {
     # ATN Bangla UK sits in the Bangladesh display group, so it must use
     # explicit IDs only. The M3U4U ID is an exact match for this UK service.
     # This does not relax matching for ATNBangla.bd or other domestic channels.
-    "ATNBanglaUK.uk": ["6753", "ATNBanglaUK.uk"],
+    "ATNBanglaUK.uk": ["6753", "ATNBanglaUK.uk", "ATNBanglaUK.uk@SD"],
+    # NTV Europe is a UK diaspora service; Sky’s exact GB#4540 identity is locked
+    # to this playlist ID despite the historical .bd origin suffix.
+    "NTVEurope.bd": ["4540", "NTVEurope.bd", "NTVEurope.bd@SD"],
     # Official broadcaster schedules use exact domestic playlist identities.
     "RTV.bd": ["RTV.bd"],
     "BTVNational.bd": ["BTVNational.bd"],
