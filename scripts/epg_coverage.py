@@ -108,6 +108,13 @@ EPG_ALIASES = {
     "AmarBanglaDigital.in": ["jtv1962"],
     "EpicBhojpuriDigital.in": ["157803", "jtv3384"],
     "Picture.in": ["And.Pictures.HD.in", "142638", "jtv185"],
+    # Exact, region-compatible candidates from the 2026-11-04 strict unmapped audit.
+    # Cinemax and History resolve to Czech XMLTV identities with current schedules
+    # in the Czech regional feed; WeatherSpy resolves to the India Samsung TV Plus
+    # identity. These are explicit aliases, not broad name-matching rules.
+    "Cinemax.cz@Czechia": ["Cinemax.cz"],
+    "History.cz@SD": ["History.Channel.cz"],
+    "WeatherSpy.in@SD": ["INBA5100028R4"],
 }
 
 EPG_LOCKS = {
