@@ -218,13 +218,24 @@ def classify(a, name, group, country):
             return "Indian Music", None, None
         return "Indian Entertainment", None, None
 
-    # All countries other than Bangladesh and India are limited to Movies/Music.
-    kind = infer_kind(name, group, a)
+    # Every country other than Bangladesh and India is strictly Movies/Music.
+    # Run the canonical policy even for legacy rows so a News/general-entertainment
+    # label cannot pass because of a misleading tvg-content tag.
+    policy_attrs = dict(a)
+    policy_attrs["group-title"] = "International"
+    if country in discovery.ISO_CODES:
+        policy_attrs["tvg-country"] = country
+    target, reason, verified_country = discovery.policy(
+        policy_attrs, name, allow_legacy_group=True
+    )
+    if target is None:
+        return "Backup", None, None
+    genre = discovery.infer_genre(policy_attrs, name)
+    kind = "movie" if genre == "Movies" else "music" if genre == "Music" else infer_kind(name, group, a)
+    if verified_country == "PK" or country == "PK" or group == "Pakistani":
+        return "Pakistani", kind, None
     if kind:
-        if country == "PK" or group == "Pakistani":
-            return "Pakistani", kind, None
         return "__FOREIGN__", kind, None
-    # Preserve out-of-policy legacy entries outside the active channel groups.
     return "Backup", None, None
 
 def set_extinf(block, name, group, country, content_kind, keep_logo, is_queue=False):
