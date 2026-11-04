@@ -21,6 +21,9 @@
 </p>
 
 <p align="center">
+  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/"><b>🌐 Project Website</b></a> &nbsp;·&nbsp;
+  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html"><b>Bangladeshi IPTV Guide</b></a> &nbsp;·&nbsp;
+  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html" lang="bn"><b>বাংলা IPTV</b></a> &nbsp;·&nbsp;
   <a href="#playlists"><b>📺 Playlists</b></a> &nbsp;·&nbsp;
   <a href="docs/PLAYLISTS.md"><b>📖 Playlist Guide</b></a> &nbsp;·&nbsp;
   <a href="#quick-start"><b>🚀 Quick Start</b></a> &nbsp;·&nbsp;
