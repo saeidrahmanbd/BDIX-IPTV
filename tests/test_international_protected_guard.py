@@ -106,16 +106,18 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
     def test_review_queues_remain_manual_and_follow_regional_policy(self):
         header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
         rows = (
-            entry("Bangladesh News", "New Channels", "http://bd.example/news.m3u8", 'tvg-country="BD" ')
-            + entry("Indian Sports", "New Channels", "http://in.example/sports.m3u8", 'tvg-country="IN" ')
-            + entry("Indian Education TV", "New Channels", "http://in.example/education.m3u8", 'tvg-country="IN" ')
-            + entry("Indian Cartoon Kids", "New Channels", "http://in.example/kids.m3u8", 'tvg-country="IN" ')
-            + entry("Foreign Movie", "New Channels", "http://us.example/movie.m3u8", 'tvg-country="US" tvg-content="Movies" ')
-            + entry("Bangladesh Religious Alternate", "New Backups", "http://bd.example/religious-alt.m3u8", 'tvg-country="BD" ')
+            entry("Bangladesh News", "New Channels", "http://bd.example/news.m3u8", 'tvg-logo="logos/queue.png" tvg-country="BD" ')
+            + entry("Indian Sports", "New Channels", "http://in.example/sports.m3u8", 'tvg-logo="logos/queue.png" tvg-country="IN" ')
+            + entry("Indian Education TV", "New Channels", "http://in.example/education.m3u8", 'tvg-logo="logos/queue.png" tvg-country="IN" ')
+            + entry("Indian Cartoon Kids", "New Channels", "http://in.example/kids.m3u8", 'tvg-logo="logos/queue.png" tvg-country="IN" ')
+            + entry("Foreign Movie", "New Channels", "http://us.example/movie.m3u8", 'tvg-logo="logos/queue.png" tvg-country="US" tvg-content="Movies" ')
+            + entry("Bangladesh Religious Alternate", "New Backups", "http://bd.example/religious-alt.m3u8", 'tvg-logo="logos/queue.png" tvg-country="BD" ')
         )
         with tempfile.TemporaryDirectory() as tmp:
             Path(tmp, "International-Playlist.m3u").write_text(header + rows, encoding="utf-8")
             Path(tmp, "reports").mkdir()
+            Path(tmp, "logos").mkdir()
+            Path(tmp, "logos", "queue.png").write_bytes(b"logo")
             r = subprocess.run(
                 [sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
                 cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)),
