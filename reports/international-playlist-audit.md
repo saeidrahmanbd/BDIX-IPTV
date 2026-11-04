@@ -1,5 +1,8 @@
 # International Playlist Organization Audit
 
+> **Historical audit snapshot:** The policy summary and category counts below predate the current discovery policy. Current rules are documented in the [operational wiki](../docs/WIKI.md): Bangladesh allows all genres; India excludes News, all Religious (including Islamic), Educational and Kids while allowing Sports; every other country in the International playlist is limited to Movies/Music. New Channels and New Backups remain manual-review queues and are not automatically promoted. The next successful maintenance run will regenerate this audit using the updated policy wording.
+
+
 - Entries before: 3344
 - Entries after: 3306
 - Channel names normalized: 21
