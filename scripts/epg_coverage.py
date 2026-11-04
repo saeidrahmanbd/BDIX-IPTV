@@ -122,7 +122,7 @@ EPG_LOCKS = {
     "ColorsCineplex.in@SD": ["543298"],
     # Retain existing provider IDs and accept the exact XMLTV IDs verified in
     # the 2026-11-01 M3U4U export. These are UK diaspora services.
-    "IqraBangla.uk": ["3914", "IqraBangla.uk"],
+    "IqraBangla.uk": ["3914", "IqraBangla.uk", "IqraBangla.uk@SD"],
     "Star.Jalsha.in": ["StarJalsha.in@SD"],
     # ATN Bangla UK sits in the Bangladesh display group, so it must use
     # explicit IDs only. The M3U4U ID is an exact match for this UK service.
