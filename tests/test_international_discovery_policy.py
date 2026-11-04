@@ -67,13 +67,15 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNone(self.classify("Cinema World", group, "US", "CinemaWorld.us")[0])
                 self.assertIsNone(self.classify("World Music", group, "US", "WorldMusic.us")[0])
 
-    def test_news_is_rejected_for_every_country(self):
-        for country in ("BD", "IN", "PK", "US", None):
-            with self.subTest(country=country):
-                self.assertIsNone(self.classify("World News", "News", country, "WorldNews.us")[0])
-        self.assertIsNone(self.classify("Channel 24", "General", "BD", "Channel24.bd")[0])
-        self.assertIsNone(self.classify("Somoy TV", "Entertainment", "BD", "SomoyTV.bd")[0])
+    def test_news_policy_is_country_specific(self):
+        # Bangladesh keeps its IPTV rules (Bangladeshi news is allowed).
+        self.assertEqual(self.classify("Channel 24", "News", "BD", "Channel24.bd")[0], "Bangladesh")
+        # India excludes news, while every other country remains Movie/Music only.
+        self.assertIsNone(self.classify("Aaj Tak", "News", "IN", "AajTak.in")[0])
+        self.assertIsNone(self.classify("World News", "News", "US", "WorldNews.us")[0])
         self.assertIsNone(self.classify("CNBC World", "Business", "SG", "CNBCWorld.sg")[0])
+        self.assertEqual(self.classify("Somoy TV", "Entertainment", "BD", "SomoyTV.bd")[0], "Bangladesh")
+
 
     def test_kids_sports_documentary_and_wildlife_channels_are_rejected(self):
         examples = [
@@ -88,18 +90,22 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, group, "US", name.replace(" ", "") + ".us")[0])
 
-    def test_all_religious_channels_including_islamic_are_rejected(self):
+    def test_religious_policy_is_country_specific(self):
+        # All Indian religious channels, including Islamic, are prohibited.
         examples = [
-            ("Gospel TV", "Religious", "US", "GospelTV.us"),
-            ("Sunnah TV", "Religious", "SA", "SunnahTV.sa"),
-            ("MTA International", "General", "GB", "MTAInternational.uk"),
-            ("3ABN Kids", "Kids", "US", "3ABNKids.us@SD"),
+            ("Gospel TV", "Religious", "IN", "GospelTV.in"),
+            ("Sunnah TV", "Religious", "IN", "SunnahTV.in"),
+            ("Madani TV", "Religious", "IN", "MadaniTV.in"),
             ("Hindu Bhakti Music", "Music", "IN", "BhaktiMusic.in"),
-            ("Madani TV", "General", "BD", "MadaniTV.bd"),
         ]
         for name, group, country, tvg_id in examples:
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, group, country, tvg_id)[0])
+        # Bangladesh follows the existing IPTV policy without India's exclusions.
+        self.assertEqual(self.classify("Madani TV", "Religious", "BD", "MadaniTV.bd")[0], "Bangladesh")
+        # Other countries are strictly Movies/Music-only, including no religious channels.
+        self.assertIsNone(self.classify("Sunnah TV", "Religious", "SA", "SunnahTV.sa")[0])
+
 
     def test_radio_and_series_or_general_entertainment_channels_are_rejected(self):
         examples = [
@@ -145,11 +151,16 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertIsNone(self.classify("Hope Channel PROYECTO JA", "Music", "US", "HopeChannel.us")[0])
         self.assertIsNone(self.classify("Canal Cine Dios", "Movies", "CO", "CanalCineDios.co")[0])
 
-    def test_unknown_and_generic_channels_are_rejected(self):
-        for country in ("BD", "IN", "PK", "US", None):
+    def test_unknown_and_generic_country_policy(self):
+        # BD/IN follow their own IPTV category policy; unknown/other countries need
+        # an explicit, verifiable Movie/Music classification.
+        self.assertEqual(self.classify("Entertainment World", "General", "BD", "EntertainmentWorld.bd")[0], "Bangladesh")
+        self.assertEqual(self.classify("Entertainment World", "Entertainment", "IN", "EntertainmentWorld.in")[0], "Indian Entertainment")
+        for country in ("PK", "US", None):
             with self.subTest(country=country):
-                self.assertIsNone(self.classify("Entertainment World", "General", country, "EntertainmentWorld")[0])
-                self.assertIsNone(self.classify("World Channel", "", country, "WorldChannel")[0])
+                self.assertIsNone(self.classify("Entertainment World", "General", country, "EntertainmentWorld.us")[0])
+                self.assertIsNone(self.classify("World Channel", "", country, "WorldChannel.us")[0])
+
 
     def test_five_channel_country_threshold_is_retained(self):
         self.assertEqual(discovery.COUNTRY_THRESHOLD, 5)
@@ -191,27 +202,29 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertIsNone(target)
         self.assertIn("test/VOD/non-TV name", reason)
 
-    def test_qualified_country_promotes_queued_candidates_at_five_identity_threshold(self):
+    def test_country_threshold_never_promotes_manual_review_queue_candidates(self):
         blocks = [
             [
-                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="International",Channel {i}',
+                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" tvg-content="Movies" group-title="New Channels",Channel {i}',
                 f"https://example.org/channel{i}.m3u8",
             ]
             for i in range(5)
         ]
         migrations = discovery.promote_qualified_country_candidates(blocks, {"MK"})
-        self.assertEqual(len(migrations), 5)
-        self.assertTrue(all('group-title="North Macedonia"' in block[0] for block in blocks))
+        self.assertEqual(migrations, [])
+        self.assertTrue(all('group-title="New Channels"' in block[0] for block in blocks))
 
-        below_threshold = [
+        curated = [
             [
-                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="International",Channel {i}',
-                f"https://example.org/below{i}.m3u8",
+                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" tvg-content="Movies" group-title="International",Channel {i}',
+                f"https://example.org/curated{i}.m3u8",
             ]
-            for i in range(4)
+            for i in range(5)
         ]
-        self.assertEqual(discovery.promote_qualified_country_candidates(below_threshold, set()), [])
-        self.assertTrue(all('group-title="International"' in block[0] for block in below_threshold))
+        migrations = discovery.promote_qualified_country_candidates(curated, {"MK"})
+        self.assertEqual(len(migrations), 5)
+        self.assertTrue(all('group-title="North Macedonia"' in block[0] for block in curated))
+
 
     def test_duplicate_queue_urls_are_removed_but_primary_entries_are_preserved(self):
         url_a = "https://example.org/epic-music.m3u8"
@@ -219,11 +232,11 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         url_c = "https://example.org/new-music.m3u8"
         blocks = [
             ['#EXTINF:-1 tvg-name="Epic Music Digital" group-title="Indian Music",Epic Music Digital', url_a],
-            ['#EXTINF:-1 tvg-name="Epic Music" group-title="New Backup",Epic Music', url_a],
+            ['#EXTINF:-1 tvg-name="Epic Music" group-title="New Backups",Epic Music', url_a],
             ['#EXTINF:-1 tvg-name="Oli TV" group-title="Indian Entertainment",Oli TV', url_b],
             ['#EXTINF:-1 tvg-name="Oli TV" group-title="New Channels",Oli TV', url_b],
             ['#EXTINF:-1 tvg-name="New Music" group-title="New Channels",New Music', url_c],
-            ['#EXTINF:-1 tvg-name="Duplicate New Music" group-title="New Backup",Duplicate New Music', url_c],
+            ['#EXTINF:-1 tvg-name="Duplicate New Music" group-title="New Backups",Duplicate New Music', url_c],
         ]
         kept, removed = discovery.remove_duplicate_queue_urls(blocks)
         self.assertEqual(len(removed), 3)
