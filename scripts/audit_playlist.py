@@ -18,11 +18,11 @@ REPORT = Path("reports/iptv-playlist-audit.md")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
-PRIMARY_EXCEPTIONS = {"Backup", "Not Playing", "New Channels", "New Backup"}
+PRIMARY_EXCEPTIONS = {"Backup", "Not Playing", "New Channels", "New Backups"}
 from playlist_order_policy import should_check_alphabetical_order
 from country_verification import queue_errors as review_queue_country_errors, reference_from_playlists
 from restore_protected_review import count_unapproved_removed_url_occurrences, protected_primary_url_changes
-CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Not Playing", "New Channels", "New Backup", "Backup"]
+CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Not Playing", "New Channels", "New Backups", "Backup"]
 REGISTRY_ORDER = CATEGORY_ORDER
 
 def attrs(line):
@@ -326,7 +326,7 @@ cross_queue_name_id_collisions = {
     if len({cid for cid, _, _ in rows if cid}) > 1
 }
 
-REVIEW_GROUPS = {"New Channels", "New Backup"}
+REVIEW_GROUPS = {"New Channels", "New Backups", "New Backup"}
 name_collisions = {k: [x for x in v if attrs(x[0]).get("group-title", "").strip() not in REVIEW_GROUPS] for k, v in by_name.items()}
 name_collisions = {k:v for k,v in name_collisions.items() if len({identity_root(identity(x[0])) for x in v}) > 1}
 
@@ -371,7 +371,7 @@ for info, url in entries:
     item = (display_name(info), identity(info), issue, logo)
     if issue == "external":
         logo_warnings.append(item)
-    elif issue == "missing" and group in {"New Channels", "New Backup"}:
+    elif issue == "missing" and group in {"New Channels", "New Backups"}:
         # Candidate queues may lack a verified source logo; report for follow-up,
         # but never substitute a placeholder or external logo to force a pass.
         review_logo_exceptions.append(item)
