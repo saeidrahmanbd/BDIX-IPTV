@@ -13,11 +13,12 @@ from datetime import datetime,timezone
 from pathlib import Path
 from logo_asset_naming import is_blocked_logo_basename
 from country_verification import ISO_CODES as ALL_ISO_CODES
+import discover_bd_in_new_queues as bd_policy
 PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-channel-discovery.md"); LOGOS=Path("logos")
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
 FIXED_GROUPS=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani"]
-TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","New Channels","New Backup","Backup"]
+TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","New Channels","New Backups","Backup"]
 STAGING_GROUPS=set(); LEGACY_GROUPS={"new channels","new backup","new backups","not playing","international","backup","international movies","international music","test"}
 COUNTRY_NAMES={"BD":"Bangladesh","IN":"India","PK":"Pakistan","NP":"Nepal","TH":"Thailand","JP":"Japan","KR":"South Korea","ID":"Indonesia","MY":"Malaysia","PH":"Philippines","VN":"Vietnam","CN":"China","TW":"Taiwan","HK":"Hong Kong","SG":"Singapore","AU":"Australia","NZ":"New Zealand","GB":"United Kingdom","US":"United States","CA":"Canada","MX":"Mexico","BR":"Brazil","AR":"Argentina","CL":"Chile","CO":"Colombia","PE":"Peru","ES":"Spain","PT":"Portugal","FR":"France","DE":"Germany","IT":"Italy","NL":"Netherlands","BE":"Belgium","CH":"Switzerland","AT":"Austria","SE":"Sweden","NO":"Norway","DK":"Denmark","FI":"Finland","IS":"Iceland","IE":"Ireland","PL":"Poland","CZ":"Czech Republic","SK":"Slovakia","HU":"Hungary","RO":"Romania","BG":"Bulgaria","GR":"Greece","TR":"Turkey","RU":"Russia","UA":"Ukraine","IL":"Israel","AE":"United Arab Emirates","SA":"Saudi Arabia","QA":"Qatar","KW":"Kuwait","OM":"Oman","BH":"Bahrain","JO":"Jordan","LB":"Lebanon","EG":"Egypt","MA":"Morocco","DZ":"Algeria","TN":"Tunisia","ZA":"South Africa","NG":"Nigeria","KE":"Kenya","GH":"Ghana","TZ":"Tanzania","UG":"Uganda","ZW":"Zimbabwe","ET":"Ethiopia","LK":"Sri Lanka","MM":"Myanmar","KH":"Cambodia","LA":"Laos","MN":"Mongolia","KZ":"Kazakhstan","UZ":"Uzbekistan","AZ":"Azerbaijan","GE":"Georgia","AM":"Armenia","AL":"Albania","RS":"Serbia","HR":"Croatia","SI":"Slovenia","BA":"Bosnia and Herzegovina","ME":"Montenegro","MK":"North Macedonia","LT":"Lithuania","LV":"Latvia","EE":"Estonia","IR":"Iran","IQ":"Iraq","SY":"Syria","PS":"Palestine","FJ":"Fiji","WS":"Samoa","PG":"Papua New Guinea","BT":"Bhutan","MV":"Maldives","AW":"Aruba","BQ":"Bonaire","BO":"Bolivia","CD":"Congo - Kinshasa","CR":"Costa Rica","CV":"Cabo Verde","CW":"Curaçao","GU":"Guam","GP":"Guadeloupe","GT":"Guatemala","HT":"Haiti","HN":"Honduras","MQ":"Martinique","NA":"Namibia","PA":"Panama","PY":"Paraguay","PR":"Puerto Rico","SX":"Sint Maarten","VE":"Venezuela","CI":"Ivory Coast","TT":"Trinidad and Tobago","UY":"Uruguay","SN":"Senegal","RW":"Rwanda","AO":"Angola","BY":"Belarus","CM":"Cameroon","NI":"Nicaragua","AF":"Afghanistan","LV":"Latvia"}
 ISO_CODES={code.upper() for code in ALL_ISO_CODES}; ALIASES={"UK":"GB","EL":"GR"}; ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -106,14 +107,31 @@ def policy(a,name,allow_legacy_group=False):
  group_text=(a.get("group-title") or "").strip().casefold()
  group_key=re.sub(r"[^a-z0-9]+","",group_text)
  group_parts=[re.sub(r"[^a-z0-9]+","",part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
- text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')}"
- if FASHION_RE.search(text) and group_key=="fashiontv": return "Fashion TV",None,code
+ text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
  if BAD_NAME_RE.search(name): return None,"test/VOD/non-TV name",code
  name_key=norm(name)
  if not name or name_key in {"","na","unknown","test","demo","sample","placeholder","newchannel","unnamed","noname","notavailable","channel","tv"}:
   return None,"non-real/test channel",code
 
- # Prohibited channel identities/content always take precedence over genre matches.
+ # Bangladesh and India follow the same country-specific eligibility policy as IPTV-Playlist.
+ if code in {"BD","IN"}:
+  prohibited=bd_policy.prohibited_channel(a,name,code)
+  if prohibited:return None,prohibited,code
+  special=special_group(a,name)
+  if code=="BD":
+   return (special or "Bangladesh"),None,code
+  genre=infer_genre(a,name)
+  if genre=="Movies":return "Indian Movies",None,code
+  if genre=="Music":return "Indian Music",None,code
+  if special=="Sports":return "Sports",None,code
+  bengali_text=" ".join((a.get("tvg-language",""),group_text,text))
+  if re.search(r"\b(?:bengali|bangla)\b",bengali_text,re.I):
+   return "Indian Bangla",None,code
+  return "Indian Entertainment",None,code
+
+ # Other countries are strictly Movie/Music only. Unknown country metadata is held.
+ if code not in ISO_CODES:
+  return None,"country identity is not verified",code
  if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
   return None,"news channel is prohibited",code
  if RELIGIOUS_RE.search(text) or ISLAMIC_RE.search(text) or any(x in group_parts for x in {"religious","religion","faith","devotional"}):
@@ -124,12 +142,11 @@ def policy(a,name,allow_legacy_group=False):
   return None,"sports channel is prohibited",code
  if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
   return None,"documentary/wildlife channel is prohibited",code
+ if re.search(r"\b(?:education(?:al)?|learning|school|university|college|academy|edutainment|tutorials?)\b",text,re.I) or any(x in group_parts for x in {"education","educational","learning"}):
+  return None,"educational channel is prohibited",code
  if GENERAL_OUT_OF_SCOPE_RE.search(text): return None,"general entertainment is not a dedicated Movie/Music channel",code
  if SERIES_OUT_OF_SCOPE_RE.search(text): return None,"TV series channel is not a dedicated Movie/Music channel",code
 
- # When the source has a category, it must be explicitly a Movie or Music
- # category. General/Entertainment/unknown category labels are never overridden
- # by a name match. Queue labels are neutral and use the channel identity instead.
  source_category=bool(group_text) and group_key not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_key=="international")
  if source_category and any(
      part not in MOVIE_CATEGORY_PARTS and part not in MUSIC_CATEGORY_PARTS
@@ -144,15 +161,7 @@ def policy(a,name,allow_legacy_group=False):
   return None,"ambiguous Movie/Music classification",code
  if not movie_match and not music_match:
   return None,"channel is not clearly Movies or Music",code
-
- # Keep country-oriented group names for the three established core regions,
- # but only after the content has passed the Movie/Music gate.
- if code=="BD":
-  return "Bangladesh",None,code
- if code=="PK":
-  return "Pakistani",None,code
- if code=="IN":
-  return ("Indian Movies" if movie_match else "Indian Music"),None,code
+ if code=="PK":return "Pakistani",None,code
  return ("International Movies" if movie_match else "International Music"),None,code
 
 def safe_url(url):
@@ -257,14 +266,15 @@ def category_registry(groups):
  return FIXED_GROUPS+countries+(["International"] if has_international else [])+TAIL_GROUPS
 def counts_toward_country_group(group,code):
  group=(group or "").strip().casefold()
- return group in {"new channels","international"} or group==country_group(code).casefold()
+ # Review queues are manual-only and never count toward the five-channel threshold.
+ return group=="international" or group==country_group(code).casefold()
 def promote_qualified_country_candidates(blocks,country_groups):
  """Move queued primary candidates into a country group once five identities qualify."""
  migrated=[]
  for block in blocks:
   a=attrs(block[0]); old=(a.get("group-title") or "").strip()
   code=country_code(a)
-  if old.casefold() in {"new channels","international"} and code in country_groups and code not in {"BD","IN","PK"}:
+  if old.casefold()=="international" and code in country_groups and code not in {"BD","IN","PK"}:
    target=country_group(code)
    block[0]=set_attr(block[0],"group-title",target)
    migrated.append((name_of(block),old,target))
@@ -305,12 +315,8 @@ def country_group_threshold_issues(blocks):
 def primary_target(base,code,country_groups):
  # BD, IN and PK retain their established regional groups. Other countries
  # only receive a dedicated group after the five-channel threshold is met.
- if code=="BD":return "Bangladesh"
+ if code in {"BD","IN"}:return base
  if code=="PK":return "Pakistani"
- if code=="IN":
-  genre=infer_genre({},base)
-  if not genre:genre="Movies" if "movie" in str(base).casefold() else "Music"
-  return "Indian Movies" if genre=="Movies" else "Indian Music"
  if code in country_groups and country_group(code):return country_group(code)
  return "International"
 def existing_international_target(a,name,country_groups):
@@ -318,7 +324,11 @@ def existing_international_target(a,name,country_groups):
  policy_a=dict(a); policy_a["group-title"]="International"
  base,reason,code=policy(policy_a,name,allow_legacy_group=True)
  genre=infer_genre(policy_a,name)
- if base is None or not genre:
+ if base is None:
+  return None,reason or "entry does not meet the playlist's country/content policy",genre
+ if code in {"BD","IN"}:
+  return base,None,genre
+ if not genre:
   return None,reason or "entry is not confidently classifiable as Movies/Music",genre
  return primary_target(base,code,country_groups),None,genre
 def main():
@@ -358,14 +368,13 @@ def main():
   is_backup=key in planned
   if is_backup:
    if len(backup_rows)>=MAX_NEW_BACKUPS:continue
-   target="New Backup"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
+   target="New Backups"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
   else:
    if len(new_rows)>=MAX_NEW_CHANNELS:continue
-   target=primary_target(base,code,country_groups)
+   target="New Channels"
    if code in ISO_CODES and code not in {"BD","IN","PK"}:
     if per_country[code]>=MAX_NEW_PER_GROUP:continue
     per_country[code]+=1
-   if target!="New Channels" and per_group[target]>=MAX_NEW_PER_GROUP:continue
    canonical=a; cname=name; ccode=code
   logo=local_logo(a,cname)
   if is_backup and canonical.get("tvg-logo","").startswith(RAW_BASE) and not logo:logo=canonical["tvg-logo"]
@@ -374,8 +383,6 @@ def main():
   else:
    new_rows.append((cname,target,ccode,url))
    per_group[target]+=1
-   ident=primary_identity(a,cname)
-   if ccode in ISO_CODES and counts_toward_country_group(target,ccode) and ident:added_primary_ids[ccode].add(ident)
    planned.setdefault(key,[]).append(attrs(additions[-1][0]))
  # Qualification is based only on actual general primary entries in the playlist
  # plus the entries selected for this run, never every eligible source-feed candidate.
@@ -392,18 +399,18 @@ def main():
    policy_a=dict(a); policy_a["group-title"]="New Channels"
    base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
-   if base is None or not genre:
-    filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
+   if base is None:
+    filtered_existing.append((name,old,reason or "candidate failed the country/content policy"))
     continue
-   group="New Backup"
+   group="New Backups"
   elif old_key=="new channels" and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
    base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
-   if base is None or not genre:
-    filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
+   if base is None:
+    filtered_existing.append((name,old,reason or "candidate failed the country/content policy"))
     continue
-   group=primary_target(base,policy_code,country_groups)
+   group="New Channels"
   elif old_key=="international" and not is_new:
    group,reason,genre=existing_international_target(a,name,country_groups)
    if group is None:
@@ -413,10 +420,10 @@ def main():
    policy_a=dict(a); policy_a["group-title"]="New Channels"
    base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
-   if base is None or not genre:
-    filtered_existing.append((name,old,reason or "new candidate did not pass Movie/Music policy"))
+   if base is None:
+    filtered_existing.append((name,old,reason or "new candidate did not pass the country/content policy"))
     continue
-   group="New Backup" if old_key in {"new backup","new backups"} else primary_target(base,policy_code,country_groups)
+   group="New Backups" if old_key in {"new backup","new backups"} else "New Channels"
   else:
    # Preserve unrelated existing entries. Remove only the two exact false
    # positives that this discovery pipeline recently promoted into country
