@@ -13,6 +13,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
+      - "Deploy Xtream Gateways"
       - "IPTV New Channel Discovery"
       - "IPTV Playlist Update"
       - "Refresh IPTV EPG"
@@ -34,7 +35,8 @@ jobs:
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import json, os, time, urllib.error, urllib.parse, urllib.request
+          import json, os, re, time, urllib.error, urllib.parse, urllib.request
+          from collections import Counter
 
           USER = os.environ["XTREAM_USERNAME"]
           PASS = os.environ["XTREAM_PASSWORD"]
@@ -155,6 +157,49 @@ jobs:
                   return False, f"direct source HTTP={source_status} empty_body={not bool(first_byte)}"
               return True, f"route=302 source=HTTP {source_status} final_host={final_host}"
 
+          def source_playlist_snapshot():
+              url = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u"
+              req = urllib.request.Request(url, headers=HEADERS)
+              with open_retry(req) as response:
+                  raw = response.read().decode("utf-8", "replace")
+
+              inactive = {"Test", "Not Playing", "New Backup", "New Channels"}
+              attr_re = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+              records = []
+              current = None
+              for raw_line in raw.splitlines():
+                  line = raw_line.strip()
+                  if line.startswith("#EXTINF:"):
+                      if current is not None:
+                          raise SystemExit("IPTV-Playlist.m3u contains an entry without a stream URL")
+                      attrs = dict(attr_re.findall(line))
+                      comma = line.find(",")
+                      name = (attrs.get("tvg-name") or (line[comma + 1:] if comma >= 0 else "")).strip()
+                      group = (attrs.get("group-title") or "Uncategorized").strip()
+                      tvg_id = (attrs.get("tvg-id") or "").strip()
+                      current = {"name": name, "group": group, "tvg_id": tvg_id}
+                  elif current and line.lower().startswith(("http://", "https://")):
+                      if current["group"] not in inactive:
+                          if not current["name"]:
+                              raise SystemExit("IPTV-Playlist.m3u contains an active entry without a channel name")
+                          records.append({**current, "url": line})
+                      current = None
+
+              if current is not None:
+                  raise SystemExit("IPTV-Playlist.m3u ends with an entry without a stream URL")
+              if not records:
+                  raise SystemExit("IPTV-Playlist.m3u contains no active HTTP(S) streams")
+              return records
+
+          def stable_stream_id(tvg_id, url):
+              value = 2166136261
+              encoded = f"{tvg_id}|{url}".encode("utf-16-le")
+              for index in range(0, len(encoded), 2):
+                  code_unit = encoded[index] | (encoded[index + 1] << 8)
+                  value ^= code_unit
+                  value = (value * 16777619) & 0xffffffff
+              return (value % 899999999) + 100000000
+
           def check(name, host):
               status, data = api(host, CREDS)
               user = data.get("user_info", {})
@@ -174,6 +219,34 @@ jobs:
               if status != 200 or not isinstance(streams, list) or not streams:
                   raise SystemExit(f"{name}: no live streams")
               print(f"{name} streams: HTTP=200 count={len(streams)}")
+
+              source_streams = source_playlist_snapshot()
+              expected_by_id = {
+                  str(stable_stream_id(stream["tvg_id"], stream["url"])): stream
+                  for stream in source_streams
+              }
+              if len(expected_by_id) != len(source_streams):
+                  raise SystemExit(f"{name}: source playlist contains colliding Worker stream IDs")
+              api_by_id = {str(stream.get("stream_id")): stream for stream in streams}
+              if set(api_by_id) != set(expected_by_id):
+                  raise SystemExit(
+                      f"{name}: Worker stream IDs differ from IPTV-Playlist.m3u "
+                      f"(source={len(expected_by_id)}, API={len(api_by_id)})"
+                  )
+
+              category_names = {str(category.get("category_id")): category.get("category_name") for category in categories}
+              source_counts = Counter(stream["group"] for stream in source_streams)
+              api_counts = Counter(category_names.get(str(stream.get("category_id")), "<unknown>") for stream in streams)
+              if source_counts != api_counts:
+                  raise SystemExit(f"{name}: category membership/counts differ from IPTV-Playlist.m3u")
+              for stream_id, expected in expected_by_id.items():
+                  actual = api_by_id[stream_id]
+                  if actual.get("direct_source") != expected["url"] or actual.get("name") != expected["name"]:
+                      raise SystemExit(f"{name}: source URL or channel name mismatch for stream_id={stream_id}")
+              print(
+                  f"{name} source parity: entries={len(source_streams)} "
+                  f"categories={len(source_counts)} IDs, names, groups and source URLs matched"
+              )
 
               category_ids = {str(category.get("category_id")) for category in categories}
               stream_ids = [str(stream.get("stream_id")) for stream in streams]
