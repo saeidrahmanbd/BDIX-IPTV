@@ -74,6 +74,10 @@ def process(path):
   else:
    filtered.append(r)
  rec=filtered
+ # Canonicalize the legacy singular review-group label without changing its streams.
+ for r in rec:
+  if attrs(r[0]).get('group-title','').strip()=='New Backup':
+   r[0]=set_attr(r[0],'group-title','New Backups')
  if removed:
   print(f'REMOVED PROHIBITED RELIGIOUS CHANNELS: {len(removed)}')
   for name in removed: print(f'  - {name}')
@@ -85,7 +89,7 @@ def process(path):
   if k: seen.add(k)
  if duplicate_urls:
   raise SystemExit(f'{path}: {len(duplicate_urls)} duplicate stream URL occurrences; refusing to delete any entry.')
- # New Channels/New Backup may hold only candidates verified as BD/IN; normalize tvg-country, never delete.
+ # IPTV New Channels/New Backups may hold only Bangladesh/India candidates; normalize tvg-country, never delete.
  reference=reference_from_playlists([path]); country_errors=[]
  for r in rec:
   a=attrs(r[0])
