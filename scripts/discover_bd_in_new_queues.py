@@ -3,7 +3,7 @@
 
 Rules:
 - Only the Bangladesh and India country feeds are considered.
-- Bangladeshi news channels are allowed. Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.
+- Bangladesh channels of all genres remain eligible. Indian News, Religious (including Islamic), Educational and Kids channels are prohibited; Indian Sports channels remain eligible.
 - Existing stream URLs and normalized channel identities are never duplicated.
 - First unseen stream for a new identity -> New Channels.
 - Additional unseen streams for an existing/newly discovered identity -> New Backup.
@@ -29,10 +29,12 @@ BAD_WORDS = {
     "vod", "catchup", "catch-up", "test", "demo", "proxy", "proxied",
     "cors", "webcam", "radio", "podcast", "event", "ppv", "timeshift",
 }
-# India News and non-Islamic Religious channels are prohibited; Indian Kids/Sports and Bangladesh news remain eligible.
+# India-only exclusions. Sports is intentionally absent and remains eligible.
 FORBIDDEN_CATEGORY_PATTERNS = {
-    "news": re.compile(r"\bnews\b", re.IGNORECASE),
-    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer)\b", re.IGNORECASE),
+    "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom)\b", re.IGNORECASE),
+    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\\s*tv)\\b", re.IGNORECASE),
+    "educational": re.compile(r"\\b(?:educational?|education|learning|school|university|college|academy|e-?vidya|vidya|gyan\\s*darshan|knowledge\\s*channel)\\b", re.IGNORECASE),
+    "kids": re.compile(r"\\b(?:kids?|children|cartoon|baby\\s*shark|disney\\s*(?:jr|junior|channel|xd)|nick(?:elodeon)?|pogo|pbs\\s*kids|toongoggles?|toonami|teletubbies|doraemon|discovery\\s*kids|boomerang|spacetoon|kartoon|lego\\s*channel)\\b", re.IGNORECASE),
 }
 
 def canonical_channel_name(value: str) -> str:
@@ -147,31 +149,26 @@ def channel_country(a: dict[str, str], fallback: str | None = None) -> str | Non
 
 
 def prohibited_channel(a: dict[str, str], name: str, country: str | None = None) -> str | None:
-    """Apply the current India-only exclusions while allowing Islamic and kids channels."""
+    """Apply India-only exclusions: News, all Religious, Educational and Kids; Sports is allowed."""
     for candidate in (name, a.get("tvg-name", "")):
         if canonical_channel_name(candidate) in PERMANENTLY_BANNED_CHANNEL_NAMES:
             return "permanently banned channel"
 
     resolved_country = channel_country(a, country)
-    # Bangladesh has no news/sports/kids/religious topical exclusion.
+    # Bangladesh is intentionally unrestricted by genre. The exclusions below
+    # are specific to Indian channels and apply to all religious content.
     if resolved_country != "IN":
         return None
 
     group = a.get("group-title", "").strip()
     values = " ".join((name, a.get("tvg-name", ""), group, a.get("tvg-id", ""), a.get("channel-id", "")))
-    islamic_channel = bool(ISLAMIC_ALLOWED_MARKERS.search(values))
-
     for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
         if pattern.search(group) or pattern.search(values):
-            if category == "religious" and islamic_channel:
-                continue
-            if category == "religious":
-                return "Indian non-Islamic religious channel is prohibited"
             return f"Indian {category} channel is prohibited"
     if FORBIDDEN_BRANDS.search(values):
-        return "known Indian News or non-Islamic religious brand/category is prohibited"
+        return "known Indian prohibited brand/category is prohibited"
     for word in FORBIDDEN_WORDS:
-        if re.search(r"(?<![\w])" + re.escape(word) + r"(?![\w])", values, re.UNICODE):
+        if re.search(r"(?<![\\w])" + re.escape(word) + r"(?![\\w])", values, re.UNICODE):
             return f"Indian {word} channel is prohibited"
     return None
 
@@ -224,7 +221,7 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
                 start = i
         blocks.append(lines[start:])
     kept, removed = [], []
-    queue_groups = {"New Channels", "New Backup", "New Backups"}
+    queue_groups = {"New Channels", "New Backups", "New Backups"}
     for block in blocks:
         extinf_line = next((line for line in block if line.startswith("#EXTINF:")), "")
         if not extinf_line:
@@ -329,7 +326,7 @@ def main() -> int:
         if info:
             additions.extend([info, url])
     for country, a, name, url in new_backups:
-        info = extinf(a, name, "New Backup", country)
+        info = extinf(a, name, "New Backups", country)
         if info:
             additions.extend([info, url])
 
@@ -345,7 +342,7 @@ def main() -> int:
         "# IPTV Channel Discovery", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
-        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**",
+        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational and Kids channels are prohibited; Indian Sports channels are eligible.**",
         "- Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
         f"- Existing prohibited review-queue rows removed: **{len(purged)}**",
