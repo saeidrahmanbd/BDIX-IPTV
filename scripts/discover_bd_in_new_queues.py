@@ -219,7 +219,7 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
                 start = i
         blocks.append(lines[start:])
     kept, removed = [], []
-    queue_groups = {"New Channels", "New Backups", "New Backupss"}
+    queue_groups = {"New Channels", "New Backups", "New Backups"}
     for block in blocks:
         extinf_line = next((line for line in block if line.startswith("#EXTINF:")), "")
         if not extinf_line:
@@ -324,7 +324,7 @@ def main() -> int:
         if info:
             additions.extend([info, url])
     for country, a, name, url in new_backups:
-        info = extinf(a, name, "New Backupss", country)
+        info = extinf(a, name, "New Backups", country)
         if info:
             additions.extend([info, url])
 
@@ -353,7 +353,7 @@ def main() -> int:
         "## New Channels", "",
     ]
     report.extend(f"- {name} ({country}) — {url}" for country, _, name, url in new_channels)
-    report += ["", "## New Backupss", ""]
+    report += ["", "## New Backups", ""]
     report.extend(f"- {name} ({country}) — {url}" for country, _, name, url in new_backups)
     if purged:
         report += ["", "## Existing prohibited review-queue rows removed", ""]
