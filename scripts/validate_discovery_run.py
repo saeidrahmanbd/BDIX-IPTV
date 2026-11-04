@@ -392,7 +392,7 @@ def final_mode(playlist, report, baseline, mode):
                 if reason:
                     policy_issues.append(f"{country} policy: {e['name']} — {reason}")
         elif mode == "international":
-            if country not in bd_policy.COUNTRY_CODE.values():
+            if country not in {"BD", "IN"}:
                 if country not in discovery.ISO_CODES:
                     policy_issues.append(f"International candidate country is not verified: {e['name']}")
                 else:
