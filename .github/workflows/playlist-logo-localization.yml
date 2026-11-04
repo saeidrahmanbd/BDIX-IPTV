@@ -151,6 +151,8 @@ jobs:
                   "nonrepository_logo_refs": external, "nvision_refs": nvision,
                   "invalid_or_blocked_refs": broken,
               }
+              if name == "IPTV-Playlist.m3u" and missing:
+                  raise SystemExit("Main playlist still has channels without local logos: " + json.dumps(summaries[name]))
               if external or nvision or broken:
                   raise SystemExit("Logo validation failed: " + name + " " + json.dumps(summaries[name]))
           print(json.dumps(summaries, indent=2))
