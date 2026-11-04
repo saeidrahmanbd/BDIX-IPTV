@@ -62,9 +62,9 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
         self.assertIn("http://orphan.example/hum.m3u8", out)
         self.assertNotIn("http://rtsh.example/1.m3u8", out)
 
-    def test_discovery_policy_scope_is_review_queues_only(self):
+    def test_foreign_country_groups_accept_movie_music_only(self):
         header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
-        legacy = "".join(entry(f"USA Network {i}", "United States", f"http://us.example/{i}.m3u8", 'tvg-country="US" tvg-content="Movies" ') for i in range(6))
+        legacy = "".join(entry(f"Cinema World {i}", "United States", f"http://us.example/{i}.m3u8", 'tvg-country="US" tvg-content="Movies" ') for i in range(6))
         with tempfile.TemporaryDirectory() as tmp:
             Path(tmp, "International-Playlist.m3u").write_text(header + legacy, encoding="utf-8")
             Path(tmp, "reports").mkdir()
@@ -74,6 +74,34 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
             out = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
         for i in range(6):
             self.assertIn(f"http://us.example/{i}.m3u8", out)
+
+    def test_candidates_remain_in_manual_review_queues_and_follow_regional_rules(self):
+        header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
+        rows = "".join([
+            entry("World Cinema", "New Channels", "http://world.example/movie.m3u8", 'tvg-country="US" tvg-content="Movies" '),
+            entry("World Cinema Alternate", "New Backups", "http://world.example/backup.m3u8", 'tvg-country="US" tvg-content="Movies" '),
+            entry("Channel 24", "New Channels", "http://bd.example/news.m3u8", 'tvg-country="BD" '),
+            entry("DD Sports", "New Channels", "http://in.example/sports.m3u8", 'tvg-country="IN" '),
+            entry("Aaj Tak", "New Channels", "http://in.example/news.m3u8", 'tvg-country="IN" '),
+            entry("Madani TV", "New Channels", "http://in.example/religious.m3u8", 'tvg-country="IN" '),
+            entry("Gyan Darshan", "New Channels", "http://in.example/education.m3u8", 'tvg-country="IN" '),
+            entry("Disney Junior", "New Channels", "http://in.example/kids.m3u8", 'tvg-country="IN" '),
+            entry("World News", "New Channels", "http://us.example/news.m3u8", 'tvg-country="US" tvg-content="Movies" '),
+        ])
+        with tempfile.TemporaryDirectory() as tmp:
+            Path(tmp, "International-Playlist.m3u").write_text(header + rows, encoding="utf-8")
+            Path(tmp, "reports").mkdir()
+            r = subprocess.run([sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
+                               cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)),
+                               capture_output=True, text=True)
+            self.assertEqual(r.returncode, 0, r.stderr)
+            out = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+        self.assertIn('group-title="New Channels",World Cinema', out)
+        self.assertIn('group-title="New Backups",World Cinema Alternate', out)
+        self.assertIn('group-title="New Channels",Channel 24', out)
+        self.assertIn('group-title="New Channels",DD Sports', out)
+        for prohibited in ("Aaj Tak", "Madani TV", "Gyan Darshan", "Disney Junior", "World News"):
+            self.assertNotIn(prohibited, out)
 
     def test_country_group_requires_five_unique_primary_names_and_ignores_backup(self):
         header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
