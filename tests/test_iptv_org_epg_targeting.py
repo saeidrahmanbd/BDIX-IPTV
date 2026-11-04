@@ -182,15 +182,15 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
             iptv = Path(tmp) / "IPTV-Playlist.m3u"
             international = Path(tmp) / "International-Playlist.m3u"
             iptv.write_text(
-                '#EXTM3U\\n'
-                '#EXTINF:-1 tvg-id="SonySAB.in@HD" tvg-name="Sony SAB" group-title="Indian Entertainment",Sony SAB\\n'
-                'https://example.test/sony.m3u8\\n',
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-id="SonySAB.in@HD" tvg-name="Sony SAB" group-title="Indian Entertainment",Sony SAB\n'
+                'https://example.test/sony.m3u8\n',
                 encoding="utf-8",
             )
             international.write_text(
-                '#EXTM3U\\n'
-                '#EXTINF:-1 tvg-id="SonySAB.uk@HD" tvg-name="Sony SAB" group-title="United Kingdom",Sony SAB\\n'
-                'https://example.test/sony-uk.m3u8\\n',
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-id="SonySAB.uk@HD" tvg-name="Sony SAB" group-title="United Kingdom",Sony SAB\n'
+                'https://example.test/sony-uk.m3u8\n',
                 encoding="utf-8",
             )
             with patch.object(fetcher, "PLAYLISTS", (iptv, international)):
