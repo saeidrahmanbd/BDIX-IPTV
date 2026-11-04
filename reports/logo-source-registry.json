@@ -5788,5 +5788,100 @@
     "status": "third_party_verified",
     "source_url": "https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/refs/heads/master/HTVC%20Phim%20HD.png",
     "notes": "IPTV-org exact ID: HTVCMovies.vn IPTV-org public logo dataset Source page: https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/refs/heads/master/HTVC%20Phim%20HD.png"
+  },
+  "International-Playlist.m3u|custom.retroclub-ar-music|Retroclub|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/retroclub-7d6ba4c51a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.ibb.co/5ZpmjN4/retroclub.png",
+    "notes": "IPTV-org exact unique channel name: Retroclub.ar IPTV-org public logo dataset Source page: https://i.ibb.co/5ZpmjN4/retroclub.png"
+  },
+  "International-Playlist.m3u|custom.hitradio-o3-at-music|Hitradio O3|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hitradio-o3-da4ab778c8.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Hitradio_%C3%963.svg/960px-Hitradio_%C3%963.svg.png",
+    "notes": "IPTV-org exact unique channel name: HitradioO3.at IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Hitradio_%C3%963.svg/960px-Hitradio_%C3%963.svg.png"
+  },
+  "International-Playlist.m3u|custom.melodie-tv-at-music|Melodie TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/melodie-tv-81420156d3.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/UzsmVhI.png",
+    "notes": "IPTV-org exact unique channel name: MelodieTV.at IPTV-org public logo dataset Source page: https://i.imgur.com/UzsmVhI.png"
+  },
+  "International-Playlist.m3u|CINDIETV.br@HD|CINDIE TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cindie-tv-73d1d00274.png": {
+    "status": "third_party_verified",
+    "source_url": "https://a.jsrdn.com/hls/23208/cindie-tv/logo_20250225_222520_68.png",
+    "notes": "IPTV-org exact ID: CINDIETV.br IPTV-org public logo dataset Source page: https://a.jsrdn.com/hls/23208/cindie-tv/logo_20250225_222520_68.png"
+  },
+  "International-Playlist.m3u|custom.stingray-euro-hits-ca-music|Stingray Euro Hits|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-euro-hits-54022f2ac6.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/FyhO9U5.png",
+    "notes": "IPTV-org exact unique channel name: StingrayEuroHits.ca IPTV-org public logo dataset Source page: https://i.imgur.com/FyhO9U5.png"
+  },
+  "International-Playlist.m3u|custom.stingray-urban-beat-ca-music|Stingray Urban Beat|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-urban-beat-9bd52aa87f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/Os3kRRP.png",
+    "notes": "IPTV-org exact unique channel name: StingrayUrbanBeat.ca IPTV-org public logo dataset Source page: https://i.imgur.com/Os3kRRP.png"
+  },
+  "International-Playlist.m3u|custom.conexion-positiva-television-cr-music|Conexión Positiva Televisión|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/conexion-positiva-television-31b6b3a46b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.ibb.co/HSSyRDs/conexion-positiva.png",
+    "notes": "IPTV-org exact unique channel name: ConexionPositivaTelevision.cr IPTV-org public logo dataset Source page: https://i.ibb.co/HSSyRDs/conexion-positiva.png"
+  },
+  "International-Playlist.m3u|custom.oldies-hits-cr-music|Oldies Hits|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/oldies-hits-4a1ce5698a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/R4X1mkM.png",
+    "notes": "IPTV-org exact unique channel name: OldiesHits.cr IPTV-org public logo dataset Source page: https://i.imgur.com/R4X1mkM.png"
+  },
+  "International-Playlist.m3u|custom.trace-gospel-fr-music|Trace Gospel|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-gospel-16d9639934.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/X0UmU3K.png",
+    "notes": "IPTV-org exact unique channel name: TraceGospel.fr IPTV-org public logo dataset Source page: https://i.imgur.com/X0UmU3K.png"
+  },
+  "International-Playlist.m3u|custom.radio-capital-tivu-it-music|Radio Capital TiVu|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-capital-tivu-e9dedc605c.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/it/3/38/Radio_Capital_logo_%282020%29.svg",
+    "notes": "IPTV-org exact unique channel name: RadioCapitalTiVu.it IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/it/3/38/Radio_Capital_logo_%282020%29.svg"
+  },
+  "International-Playlist.m3u|custom.radio-italia-trend-tv-it-music|Radio Italia Trend TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-italia-trend-tv-64f6e2c511.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/HNrKqGM.png",
+    "notes": "IPTV-org exact unique channel name: RadioItaliaTrendTV.it IPTV-org public logo dataset Source page: https://i.imgur.com/HNrKqGM.png"
+  },
+  "International-Playlist.m3u|custom.famatv-pt-music|Famatv|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/famatv-9f148af63b.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://i.ibb.co/tMmRp18/Fama-TV-cor-whitebg-hotizontal.jpg",
+    "notes": "IPTV-org exact unique channel name: Famatv.pt IPTV-org public logo dataset Source page: https://i.ibb.co/tMmRp18/Fama-TV-cor-whitebg-hotizontal.jpg"
+  },
+  "International-Playlist.m3u|custom.smart-radio-ro-music|Smart Radio|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/smart-radio-6c4415267f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.smartradio.ro/wp-content/themes/smart-radio/img/Logo_SmartRadio.png",
+    "notes": "IPTV-org exact unique channel name: SmartRadio.ro IPTV-org public logo dataset Source page: https://www.smartradio.ro/wp-content/themes/smart-radio/img/Logo_SmartRadio.png"
+  },
+  "International-Playlist.m3u|custom.viju-tv1000-russkoe-ru-movie|viju TV1000 russkoe|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viju-tv1000-russkoe-6a97e6b520.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/Meak2y4.png",
+    "notes": "IPTV-org exact unique channel name: vijuTV1000russkoe.ru IPTV-org public logo dataset Source page: https://i.imgur.com/Meak2y4.png"
+  },
+  "International-Playlist.m3u|custom.harmony-gospel-music-tv-us-music|Harmony Gospel Music TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/harmony-gospel-music-tv-d6f16022d1.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/iDiGBE3.png",
+    "notes": "IPTV-org exact unique channel name: HarmonyGospelMusicTV.us IPTV-org public logo dataset Source page: https://i.imgur.com/iDiGBE3.png"
+  },
+  "International-Playlist.m3u|custom.hmi-promz-news-us-music|HMI PROMZ NEWS|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hmi-promz-news-b316894511.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/gwPaw3v.png",
+    "notes": "IPTV-org exact unique channel name: HMIPROMZNEWS.us IPTV-org public logo dataset Source page: https://i.imgur.com/gwPaw3v.png"
+  },
+  "International-Playlist.m3u|custom.xite-celebrates-us-music|XITE Celebrates|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xite-celebrates-0178ee79a4.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/coSrUwV.png",
+    "notes": "IPTV-org exact unique channel name: XITECelebrates.us IPTV-org public logo dataset Source page: https://i.imgur.com/coSrUwV.png"
+  },
+  "International-Playlist.m3u|custom.ceacom-tv-bo-music|CEACOM TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ceacom-tv-0e4b08d706.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/hutdRfk.png",
+    "notes": "IPTV-org exact unique channel name: CEACOMTV.bo IPTV-org public logo dataset Source page: https://i.imgur.com/hutdRfk.png"
+  },
+  "International-Playlist.m3u|custom.the-retro-channel-pr-music|The Retro Channel|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-retro-channel-1a8ccc02f4.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/t3i1HtE.jpg",
+    "notes": "IPTV-org exact unique channel name: TheRetroChannel.pr IPTV-org public logo dataset Source page: https://i.imgur.com/t3i1HtE.jpg"
   }
 }
