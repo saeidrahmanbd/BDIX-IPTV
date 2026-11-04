@@ -30,7 +30,7 @@ OUTPUT = Path("epg/epg.xml")
 
 # Bound the worst-case wait for a batch of remote XMLTV feeds.
 SOURCE_FETCH_TIMEOUT_SECONDS = 90
-SOURCE_FETCH_WORKERS = 8
+SOURCE_FETCH_WORKERS = 16
 
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
@@ -411,6 +411,12 @@ def fetch_xmltv_sources_concurrently(source_urls, max_workers=SOURCE_FETCH_WORKE
                 payloads[url] = future.result()
             except Exception as exc:
                 errors[url] = exc
+            completed = len(payloads) + len(errors)
+            print(
+                f"EPG feed progress: {completed}/{len(urls)} complete; "
+                f"{len(payloads)} succeeded, {len(errors)} failed.",
+                flush=True,
+            )
     return payloads, errors
 
 
