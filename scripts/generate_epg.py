@@ -17,6 +17,7 @@ from official_epg_sources import (
     HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes,
     RTV_SOURCE, RTV_CHANNEL_ID, fetch_rtv_programmes,
     BTV_SOURCE, BTV_CHANNEL_ID, fetch_btv_programmes,
+    MAASRANGA_SOURCE, MAASRANGA_CHANNEL_ID, fetch_maasranga_programmes,
 )
 
 PLAYLISTS = [
@@ -133,6 +134,7 @@ SOURCES = [
     "https://hum.tv/schedule/",
     "https://www.rtvbd.tv/schedule.php",
     "https://migrate.btvlive.gov.bd/channel/BTV",
+    "https://maasranga.tv/full-width/program-time-schedule/",
 ]
 
 PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"
@@ -338,7 +340,7 @@ def sources_with_mapped_channels(source_urls):
     selected = [
         source for source in source_urls
         if source in mapped_sources
-        or source in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE)
+        or source in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE, MAASRANGA_SOURCE)
         or source.startswith("file://")
         or (private_url and source == private_url)
         or source in discovery_sources
@@ -356,6 +358,8 @@ def sources_with_mapped_channels(source_urls):
 def source_label(src):
     if src == os.environ.get(PRIVATE_SOURCE_ENV, "").strip():
         return PRIVATE_SOURCE_LABEL
+    if src == MAASRANGA_SOURCE:
+        return "Maasranga official weekly schedule"
     return src
 
 CHANNEL_TIME_OFFSETS = {
@@ -393,7 +397,7 @@ def fetch(url):
 
 def fetch_xmltv_sources_concurrently(source_urls, max_workers=SOURCE_FETCH_WORKERS):
     """Fetch ordinary XMLTV feeds concurrently, preserving per-URL results and errors."""
-    urls = [url for url in source_urls if url not in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE)]
+    urls = [url for url in source_urls if url not in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE, MAASRANGA_SOURCE)]
     if not urls:
         return {}, {}
     workers = max(1, min(int(max_workers), len(urls)))
@@ -840,19 +844,21 @@ def main():
     candidates = {}
     source_stats = {}
     source_urls = sources_with_mapped_channels(configured_sources())
-    fetchable_count = sum(src not in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE) and not src.startswith("file://") for src in source_urls)
+    fetchable_count = sum(src not in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE, MAASRANGA_SOURCE) and not src.startswith("file://") for src in source_urls)
     print(f"EPG source fetch: {fetchable_count} XMLTV feeds, max_workers={SOURCE_FETCH_WORKERS}, timeout={SOURCE_FETCH_TIMEOUT_SECONDS}s")
     source_payloads, source_errors = fetch_xmltv_sources_concurrently(source_urls)
     print(f"EPG source fetch complete: {len(source_payloads)} succeeded, {len(source_errors)} failed")
     for source_index, src in enumerate(source_urls):
         try:
-            if src in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE):
+            if src in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE, MAASRANGA_SOURCE):
                 if src == HUM_TV_SOURCE:
                     schedule_id, schedule_fetch, schedule_label = (HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes, "HUM TV")
                 elif src == RTV_SOURCE:
                     schedule_id, schedule_fetch, schedule_label = (RTV_CHANNEL_ID, fetch_rtv_programmes, "RTV")
-                else:
+                elif src == BTV_SOURCE:
                     schedule_id, schedule_fetch, schedule_label = (BTV_CHANNEL_ID, fetch_btv_programmes, "BTV National")
+                else:
+                    schedule_id, schedule_fetch, schedule_label = (MAASRANGA_CHANNEL_ID, fetch_maasranga_programmes, "Maasranga TV")
                 schedule_targets = [target for target in reverse.get(schedule_id, []) if target in mapped_targets]
                 if not schedule_targets:
                     source_stats[src] = f"SKIPPED: no active exact {schedule_label} mapping"
