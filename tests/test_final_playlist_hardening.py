@@ -37,7 +37,7 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
     def test_bangladesh_all_genres_are_retained_and_prohibited_indian_categories_are_demoted(self):
         rows = [
             "#EXTM3U",
-            '#EXTINF:-1 tvg-id="MadaniTV.bd" tvg-name="Madani TV" tvg-country="BD" group-title="Bangladesh",Madani TV',
+            '#EXTINF:-1 tvg-id="MadaniTV.bd" tvg-name="Madani TV" tvg-country="BD" tvg-chno="1" group-title="Bangladesh",Madani TV',
             "https://example.invalid/bd-madani.m3u8",
             '#EXTINF:-1 tvg-id="AajTak.in" tvg-name="Aaj Tak" tvg-country="IN" group-title="Indian Entertainment",Aaj Tak',
             "https://example.invalid/in-news.m3u8",
