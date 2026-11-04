@@ -136,7 +136,7 @@ The guide is maintained through an automated process that updates channel mappin
 
 ## 🖥️ Playlist Studio for Windows
 
-[**Playlist Studio 5.0.0**](https://github.com/saeidrahmanbd/Playlist-Studio) is a separate Windows application for managing, editing, testing and playing IPTV playlists.
+[**Playlist Studio 5.0**](https://github.com/saeidrahmanbd/Playlist-Studio) is a separate Windows application for managing, editing, testing and playing IPTV playlists.
 
 <p align="center">
   <a href="https://github.com/saeidrahmanbd/Playlist-Studio">
@@ -179,8 +179,6 @@ For collaboration, feedback, IPTV playlist issues or project-related inquiries, 
   <a href="https://github.com/saeidrahmanbd"><img src="https://img.shields.io/badge/GitHub-saeidrahmanbd-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub: saeidrahmanbd"></a>
   <a href="https://www.facebook.com/saeid.rahman.sr"><img src="https://img.shields.io/badge/Facebook-Saeid%20Rahman-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook: Saeid Rahman"></a>
 </p>
-
-<p align="center">📧 <a href="mailto:saeidrahman.mkt@gmail.com">saeidrahman.mkt@gmail.com</a></p>
 
 ---
 
