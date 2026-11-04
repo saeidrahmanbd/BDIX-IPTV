@@ -465,7 +465,7 @@ class EpgConfigTests(unittest.TestCase):
         al = literal(COV, "EPG_ALIASES")
         self.assertEqual(al["Hungama.in@SD"], ["143150"])
         self.assertEqual(al["ZBMusic.in@HD"], ["jtv3319"])
-        self.assertEqual(al["DeenTV.uk"], ["1235", "DeenTV.uk"])
+        self.assertEqual(al["DeenTV.uk"], ["1235", "DeenTV.uk", "DeenTV.uk@SD"])
         self.assertEqual(al["Cinemax.cz@Czechia"], ["Cinemax.cz"])
         self.assertEqual(al["History.cz@SD"], ["History.Channel.cz"])
         self.assertEqual(al["WeatherSpy.in@SD"], ["INBA5100028R4"])
@@ -473,8 +473,9 @@ class EpgConfigTests(unittest.TestCase):
 
     def test_m3u4u_exact_ids_are_enabled_without_weakening_bangladesh_matching(self):
         locks = literal(COV, "EPG_LOCKS")
-        self.assertEqual(locks["ATNBanglaUK.uk"], ["6753", "ATNBanglaUK.uk"])
-        self.assertEqual(locks["IqraBangla.uk"], ["3914", "IqraBangla.uk"])
+        self.assertEqual(locks["ATNBanglaUK.uk"], ["6753", "ATNBanglaUK.uk", "ATNBanglaUK.uk@SD"])
+        self.assertEqual(locks["IqraBangla.uk"], ["3914", "IqraBangla.uk", "IqraBangla.uk@SD"])
+        self.assertEqual(locks["NTVEurope.bd"], ["4540", "NTVEurope.bd", "NTVEurope.bd@SD"])
         self.assertNotIn("News24.in@SD", locks.get("News24.bd", []))
 
     def test_name_matches_cannot_cross_explicit_country_boundaries(self):
