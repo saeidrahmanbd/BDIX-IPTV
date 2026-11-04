@@ -30,7 +30,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-REVIEW_QUEUES = frozenset({"New Channels", "New Backup"})
+REVIEW_QUEUES = frozenset({"New Channels", "New Backups", "New Backup"})
 ALLOWED = frozenset({"BD", "IN"})
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
