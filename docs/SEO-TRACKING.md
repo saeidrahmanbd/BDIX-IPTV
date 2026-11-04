@@ -94,3 +94,21 @@ Share that export for a data-based review. It can show which real searches are g
 Search Console reports Google Search performance; it does not measure every search engine, private browsing query, playlist playback or channel viewing. Some queries are anonymized or omitted for privacy. A click to a playlist M3U file is not proof that a channel played successfully.
 
 SEO changes can improve clarity and crawlability, but no title, keyword, schema type or sitemap can guarantee a particular ranking or a Google AI Overview citation.
+
+## 7. Add Bing Webmaster Tools
+
+Google indexing does not automatically confirm Bing indexing. Register the same project URL in [Bing Webmaster Tools](https://www.bing.com/webmasters/about).
+
+The simplest route is to import the verified Google Search Console property:
+
+1. Sign in to Bing Webmaster Tools with a Microsoft account.
+2. Choose **Import from Google Search Console**.
+3. Authorize the Google account that owns the verified `https://saeidrahmanbd.github.io/BDIX-IPTV/` property.
+4. Select that URL-prefix property and complete the import.
+5. Open the imported site in Bing Webmaster Tools and inspect the homepage, playlist guide and Bengali page.
+6. Review **Search Performance**, **URL Inspection** and **Sitemaps** after Bing has collected data.
+
+Bing documents the Search Console import option and automatic verification for successfully imported sites. It also supports XML and plain-text sitemap formats. See [Add and verify a site](https://www2.bing.com/webmasters/help/add-and-verify-site-12184f8b) and [Bing Sitemaps](https://www2.bing.com/webmasters/help/sitemaps-3b5cf6ed).
+
+Do not assume a Google sitemap error will be resolved by Bing. Check Bing's own processing status and discovered URL count.
+
