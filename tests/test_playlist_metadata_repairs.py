@@ -47,17 +47,16 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         self.assertIsNone(target)
         self.assertEqual(reason, "test/VOD/non-TV name")
 
-    def test_international_backup_groups_use_the_singular_playlist_contract(self):
+    def test_international_backup_groups_use_plural_manual_review_contract(self):
         rows = playlist_rows(ROOT / "International-Playlist.m3u")
         legacy = [row for row in rows if row["attrs"].get("group-title", "").casefold() in {"backups", "new backups"}]
         self.assertEqual(legacy, [])
 
         organizer = (ROOT / "scripts/reorganize_international_playlist.py").read_text(encoding="utf-8")
-        self.assertIn('TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]', organizer)
-        self.assertIn('else "Backup")', organizer)
-        self.assertNotIn('target = "Backups"', organizer)
-        self.assertNotIn('emit(row, "Backups"', organizer)
-        self.assertNotIn('emit(row, "New Backups"', organizer)
+        self.assertIn('TAIL = ["Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backup"]', organizer)
+        self.assertIn('queue = "New Backups"', organizer)
+        self.assertIn('emit(row, "New Backups", as_backup=True)', organizer)
+        self.assertIn('target = "New Backups" if group == "New Channels" else "Backup"', organizer)
 
     def test_international_playlist_names_are_present_and_empty_logos_removed(self):
         rows = playlist_rows(ROOT / "International-Playlist.m3u")
