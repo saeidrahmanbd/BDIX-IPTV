@@ -248,16 +248,20 @@ jobs:
                       expected_num = float(expected["chno"]) if expected["chno"] else 0
                   except ValueError:
                       expected_num = 0
-                  if (
-                      actual.get("direct_source") != expected["url"]
-                      or actual.get("name") != expected["name"]
-                      or actual.get("tvg_name") != expected["name"]
-                      or actual.get("stream_icon") != expected["logo"]
-                      or actual.get("tvg_id") != expected["tvg_id"]
-                      or actual.get("epg_channel_id") != expected["tvg_id"]
-                      or actual.get("num") != expected_num
-                      or category_names.get(str(actual.get("category_id"))) != expected["group"]
-                  ):
+                  parity_fields = {
+                      "direct_source": (actual.get("direct_source"), expected["url"]),
+                      "name": (actual.get("name"), expected["name"]),
+                      "tvg_name": (actual.get("tvg_name"), expected["name"]),
+                      "stream_icon": (actual.get("stream_icon"), expected["logo"]),
+                      "tvg_id": (actual.get("tvg_id"), expected["tvg_id"]),
+                      "epg_channel_id": (actual.get("epg_channel_id"), expected["tvg_id"]),
+                      "num": (actual.get("num"), expected_num),
+                      "group": (category_names.get(str(actual.get("category_id"))), expected["group"]),
+                  }
+                  mismatches = [field for field, (actual_value, expected_value) in parity_fields.items()
+                                if actual_value != expected_value]
+                  if mismatches:
+                      print(f"{name}: stream_id={stream_id} parity fields differ: {', '.join(mismatches)}")
                       raise SystemExit(f"{name}: stream metadata/source mismatch for stream_id={stream_id}")
               print(
                   f"{name} source parity: entries={len(source_streams)} "
