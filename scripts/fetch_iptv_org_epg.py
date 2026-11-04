@@ -16,6 +16,8 @@ import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from generate_epg import COUNTRY_GROUP_CODES, normalize_country_code, playlist_id_country_code
+
 REPO = "https://github.com/iptv-org/epg.git"
 WORK = Path("/tmp/iptv-org-epg")
 OUTPUT = Path("/tmp/iptv-org-guide.xml")
@@ -25,9 +27,20 @@ PLAYLISTS = (
     Path("International-Playlist.m3u"),
 )
 MAPPING = Path("reports/epg-channel-mapping.csv")
-SITES = ("dishtv.in", "tataplay.com", "airtelxstream.in", "zee5.com", "sky.com")
-# Keep the source set targeted: these sources have stable XMLTV identities. sky.com
-# supplements exact UK/diaspora IDs; its rows receive an additional name-consistency check.
+SITES = (
+    "dishtv.in",
+    "tataplay.com",
+    "airtelxstream.in",
+    "zee5.com",
+    "sky.com",
+    "jiotv.com",
+    "distro.tv",
+    "plex.tv",
+)
+# Keep acquisition targeted to active playlist IDs and approved aliases. JioTV
+# publishes blank XMLTV IDs, so its rows are admitted only by a unique exact
+# normalized name match to an active Indian playlist identity. DistroTV and
+# Plex use their upstream XMLTV IDs; Plex has separate regional catalogues.
 INACTIVE_GROUPS = {
     "backup", "backups", "not playing", "not playing...", "not playing…",
     "not playing (review)", "test", "new", "new channels", "new backup", "new backups",
@@ -191,10 +204,11 @@ def target_channel_ids(playlist_texts, mapping_text="", explicit_mappings=None, 
     return result
 
 
-def build_target_channels_xml(catalogue_texts, target_ids, target_names_by_id=None):
-    """Merge exact target IDs; additionally require exact normalized names for sky.com rows."""
+def build_target_channels_xml(catalogue_texts, target_ids, target_names_by_id=None, target_name_to_ids=None):
+    """Build a bounded channel list using exact IDs and one safe JioTV name bridge."""
     root = ET.Element("channels")
     target_names_by_id = target_names_by_id or {}
+    target_name_to_ids = target_name_to_ids or {}
     seen = set()
     for text in catalogue_texts:
         try:
@@ -203,18 +217,31 @@ def build_target_channels_xml(catalogue_texts, target_ids, target_names_by_id=No
             print(f"Warning: skipping malformed iptv-org channel catalogue: {exc}")
             continue
         for channel in catalogue.findall("channel"):
+            site = (channel.attrib.get("site") or "").strip()
             xmltv_id = (channel.attrib.get("xmltv_id") or "").strip()
+
+            # JioTV's upstream catalogue currently leaves xmltv_id blank. Bridge
+            # only unique exact normalized names to active Indian playlist IDs.
+            if not xmltv_id and site == "jiotv.com":
+                source_name = normalize_channel_name(channel.text or "")
+                candidates = target_name_to_ids.get(source_name, set())
+                if len(candidates) != 1:
+                    continue
+                xmltv_id = next(iter(candidates))
+
             if not xmltv_id or xmltv_id not in target_ids:
                 continue
+
             # Require the extra source's label to identify the same channel; exact
             # XMLTV IDs alone are not enough when a provider catalogue is mislabeled.
-            if channel.attrib.get("site", "") == "sky.com":
+            if site == "sky.com":
                 source_name = normalize_channel_name(channel.text or "")
                 expected_names = target_names_by_id.get(xmltv_id, set())
                 if not expected_names or source_name not in expected_names:
                     continue
+
             key = (
-                channel.attrib.get("site", ""),
+                site,
                 channel.attrib.get("site_id", ""),
                 channel.attrib.get("lang", ""),
                 xmltv_id,
@@ -222,7 +249,10 @@ def build_target_channels_xml(catalogue_texts, target_ids, target_names_by_id=No
             if key in seen:
                 continue
             seen.add(key)
-            root.append(ET.fromstring(ET.tostring(channel, encoding="utf-8")))
+            selected = ET.fromstring(ET.tostring(channel, encoding="utf-8"))
+            if not (selected.attrib.get("xmltv_id") or "").strip():
+                selected.attrib["xmltv_id"] = xmltv_id
+            root.append(selected)
     return ET.tostring(root, encoding="unicode", xml_declaration=False)
 
 
@@ -262,14 +292,48 @@ def read_active_target_names():
     return active_playlist_name_index(playlist_texts, mapping_text, load_explicit_epg_mappings())
 
 
+def read_active_target_name_to_ids(target_ids):
+    """Index unique active Indian playlist labels for the blank-ID JioTV catalogue."""
+    index = {}
+    for path in PLAYLISTS:
+        if not path.is_file():
+            continue
+        current = None
+        for line in path.read_text(encoding="utf-8-sig").splitlines():
+            if line.startswith("#EXTINF:"):
+                current = dict(ATTR_RE.findall(line))
+                current["_label"] = (
+                    current.get("tvg-name", "").strip()
+                    or line.rsplit(",", 1)[-1].strip()
+                )
+            elif current is not None and line.strip().startswith(("http://", "https://")):
+                tvg_id = current.get("tvg-id", "").strip()
+                group = current.get("group-title", "").strip()
+                if tvg_id in target_ids and group.casefold() not in INACTIVE_GROUPS:
+                    country = (
+                        normalize_country_code(current.get("tvg-country", ""))
+                        or COUNTRY_GROUP_CODES.get(group.casefold(), "")
+                        or playlist_id_country_code(tvg_id)
+                    )
+                    if country == "IN":
+                        key = normalize_channel_name(current.get("_label", ""))
+                        if key:
+                            index.setdefault(key, set()).add(tvg_id)
+                current = None
+    return index
+
+
 def selected_catalogue_texts():
+    """Load all selected site catalogues, including Plex's regional channel lists."""
     texts = []
     for site in SITES:
-        path = WORK / "sites" / site / f"{site}.channels.xml"
-        if not path.is_file():
-            print(f"Warning: upstream channel catalogue unavailable: {path}")
+        directory = WORK / "sites" / site
+        paths = sorted(directory.glob(f"{site}*.channels.xml")) if directory.is_dir() else []
+        if not paths:
+            print(f"Warning: upstream channel catalogue unavailable for {site}: {directory}")
             continue
-        texts.append(path.read_text(encoding="utf-8"))
+        for path in paths:
+            texts.append(path.read_text(encoding="utf-8"))
     return texts
 
 
@@ -294,6 +358,7 @@ def grab_command():
 def main():
     targets = read_active_targets()
     target_names_by_id = read_active_target_names()
+    target_name_to_ids = read_active_target_name_to_ids(targets)
     if not targets:
         write_empty_guide("no active tvg-ids found across the published playlists")
         return
@@ -310,7 +375,12 @@ def main():
         run("npm", "ci", "--no-audit", "--no-fund", cwd=WORK, timeout=240)
 
         catalogue_texts = selected_catalogue_texts()
-        target_xml = build_target_channels_xml(catalogue_texts, targets, target_names_by_id)
+        target_xml = build_target_channels_xml(
+            catalogue_texts,
+            targets,
+            target_names_by_id,
+            target_name_to_ids,
+        )
         TARGET_CHANNELS.write_text(target_xml + "\n", encoding="utf-8")
         selected_count = len(ET.fromstring(target_xml).findall("channel"))
         print(
