@@ -51,6 +51,19 @@ SITES = (
     # Additional public XMLTV catalogue with broad regional coverage.
     "epg.iptvx.one",
 )
+# Exact site IDs verified against the upstream iptv-org sky.com and tv24.co.uk
+# catalogues. These bridges are limited to named playlist identities and exact
+# site IDs; they are not general fuzzy-name matching rules.
+IPTV_ORG_SITE_ID_ALIASES = {
+    "ATNBanglaUK.uk": {"sky.com": ["GB#6753", "6753"]},
+    "NTVEurope.bd": {"sky.com": ["GB#4540", "4540"]},
+    "IqraBangla.uk": {
+        "sky.com": ["GB#3914", "3914"],
+        "tv24.co.uk": ["iqra-bangla"],
+    },
+    "DeenTV.uk": {"sky.com": ["GB#1235", "1235"]},
+}
+
 # Keep acquisition targeted to active playlist IDs and approved aliases. JioTV
 # publishes blank XMLTV IDs, so its rows are admitted only by a unique exact
 # normalized name match to an active Indian playlist identity. All other sites
@@ -219,11 +232,12 @@ def target_channel_ids(playlist_texts, mapping_text="", explicit_mappings=None, 
     return result
 
 
-def build_target_channels_xml(catalogue_texts, target_ids, target_names_by_id=None, target_name_to_ids=None):
+def build_target_channels_xml(catalogue_texts, target_ids, target_names_by_id=None, target_name_to_ids=None, explicit_mappings=None):
     """Build a bounded channel list using exact IDs and one safe JioTV name bridge."""
     root = ET.Element("channels")
     target_names_by_id = target_names_by_id or {}
     target_name_to_ids = target_name_to_ids or {}
+    explicit_mappings = explicit_mappings or {}
     seen = set()
     for text in catalogue_texts:
         try:
@@ -235,6 +249,8 @@ def build_target_channels_xml(catalogue_texts, target_ids, target_names_by_id=No
             site = (channel.attrib.get("site") or "").strip()
             xmltv_id = (channel.attrib.get("xmltv_id") or "").strip()
 
+            site_id = (channel.attrib.get("site_id") or "").strip()
+
             # JioTV's upstream catalogue currently leaves xmltv_id blank. Bridge
             # only unique exact normalized names to active Indian playlist IDs.
             if not xmltv_id and site == "jiotv.com":
@@ -244,15 +260,37 @@ def build_target_channels_xml(catalogue_texts, target_ids, target_names_by_id=No
                     continue
                 xmltv_id = next(iter(candidates))
 
+            # tv24.co.uk also leaves XMLTV IDs blank. Accept only a curated site ID
+            # paired with a unique active target and an exact normalized channel name.
+            if not xmltv_id and site == "tv24.co.uk":
+                source_name = normalize_channel_name(channel.text or "")
+                candidates = [
+                    target_id
+                    for target_id, site_aliases in IPTV_ORG_SITE_ID_ALIASES.items()
+                    if site_id in site_aliases.get(site, [])
+                ]
+                if len(candidates) != 1:
+                    continue
+                target_id = candidates[0]
+                if source_name not in target_names_by_id.get(target_id, set()):
+                    continue
+                xmltv_id = target_id
+
             if not xmltv_id or xmltv_id not in target_ids:
                 continue
 
-            # Require the extra source's label to identify the same channel; exact
-            # XMLTV IDs alone are not enough when a provider catalogue is mislabeled.
+            # Require the source label to identify the same channel. A short Sky
+            # label such as "ATN" or "NTV" is accepted only when both its XMLTV ID
+            # and site ID are paired in the repository's explicit identity lock.
             if site == "sky.com":
                 source_name = normalize_channel_name(channel.text or "")
-                expected_names = target_names_by_id.get(xmltv_id, set())
-                if not expected_names or source_name not in expected_names:
+                target_id = next(
+                    (key for key, aliases in explicit_mappings.items() if xmltv_id in aliases),
+                    xmltv_id,
+                )
+                expected_names = target_names_by_id.get(target_id, set())
+                site_alias_match = site_id in IPTV_ORG_SITE_ID_ALIASES.get(target_id, {}).get(site, [])
+                if source_name not in expected_names and not site_alias_match:
                     continue
 
             key = (
@@ -369,6 +407,7 @@ def grab_command():
 
 
 def main():
+    explicit_mappings = load_explicit_epg_mappings()
     targets = read_active_targets()
     target_names_by_id = read_active_target_names()
     target_name_to_ids = read_active_target_name_to_ids(targets)
@@ -393,6 +432,7 @@ def main():
             targets,
             target_names_by_id,
             target_name_to_ids,
+            explicit_mappings,
         )
         TARGET_CHANNELS.write_text(target_xml + "\n", encoding="utf-8")
         selected_count = len(ET.fromstring(target_xml).findall("channel"))
