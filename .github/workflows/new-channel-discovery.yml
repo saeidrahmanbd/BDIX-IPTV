@@ -18,7 +18,7 @@ on:
       - 'tests/test_channel_discovery_policy.py'
       - 'tests/test_discovery_run_validation.py'
   schedule:
-    - cron: '0 2 * * *' # 08:00 Asia/Dhaka (UTC+6)
+    - cron: '0 1 * * *' # 07:00 Asia/Dhaka (UTC+6)
   workflow_dispatch:
 
 permissions:
