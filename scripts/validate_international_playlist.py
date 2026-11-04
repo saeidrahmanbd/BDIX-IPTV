@@ -6,13 +6,14 @@ from urllib.parse import unquote, urlsplit
 import json
 import re
 import discover_international_channels as discovery
+import discover_bd_in_new_queues as bd_policy
 
 PLAYLIST = Path("International-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]
+TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backup"]
 FORBIDDEN = {"international movies", "international music", "backups", "new backups", "not playing", "test"}
 ATTRIBUTION = [
     "#=================================",
@@ -99,13 +100,18 @@ def main():
             # checked against the pre-run snapshot by validate_discovery_run.py; do not
             # block discovery because of an unrelated legacy item such as a radio feed.
             pass
-        if group_key in {"international", "new channels", "new backup"}:
-            content = (a.get("tvg-content") or "").strip().casefold()
-            if content not in {"movies", "music"}:
-                raise SystemExit(f"International entry is not tagged Movies/Music: {name!r} in {group!r}.")
-            target, reason, _ = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
-            if target is None:
-                raise SystemExit(f"Prohibited non-movie/music channel in {group}: {name!r} ({reason or 'not Movies/Music'}).")
+        if group_key in {"international", "new channels", "new backup", "new backups"}:
+            if code in {"BD", "IN"}:
+                reason = bd_policy.prohibited_channel(a, name, code)
+                if reason:
+                    raise SystemExit(f"Prohibited Bangladesh/India candidate in {group}: {name!r} ({reason}).")
+            else:
+                content = (a.get("tvg-content") or "").strip().casefold()
+                if content not in {"movies", "music"}:
+                    raise SystemExit(f"Non-BD/IN International entry is not tagged Movies/Music: {name!r} in {group!r}.")
+                target, reason, _ = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
+                if target is None:
+                    raise SystemExit(f"Prohibited non-BD/IN Movie/Music candidate in {group}: {name!r} ({reason or 'not Movies/Music'}).")
         if group and group not in group_set:
             group_set.add(group)
             groups_seen.append(group)
