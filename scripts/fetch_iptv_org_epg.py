@@ -28,19 +28,34 @@ PLAYLISTS = (
 )
 MAPPING = Path("reports/epg-channel-mapping.csv")
 SITES = (
+    # India: retain the provider catalogues already used by the repository.
     "dishtv.in",
     "tataplay.com",
     "airtelxstream.in",
     "zee5.com",
-    "sky.com",
     "jiotv.com",
+    # Global/FAST and North American schedules.
+    "sky.com",
     "distro.tv",
     "plex.tv",
+    "pluto.tv",
+    "xumo.tv",
+    "tvpassport.com",
+    "tvguide.com",
+    # Regional catalogues matching active Czech, Polish, Russian and UK groups.
+    "m.tv.sms.cz",
+    "mujtvprogram.cz",
+    "programtv.onet.pl",
+    "tv.mail.ru",
+    "tv24.co.uk",
+    # Additional public XMLTV catalogue with broad regional coverage.
+    "epg.iptvx.one",
 )
 # Keep acquisition targeted to active playlist IDs and approved aliases. JioTV
 # publishes blank XMLTV IDs, so its rows are admitted only by a unique exact
-# normalized name match to an active Indian playlist identity. DistroTV and
-# Plex use their upstream XMLTV IDs; Plex has separate regional catalogues.
+# normalized name match to an active Indian playlist identity. All other sites
+# require an exact upstream XMLTV ID or repository-approved alias; no full
+# upstream catalogue is copied into the published guide.
 INACTIVE_GROUPS = {
     "backup", "backups", "not playing", "not playing...", "not playing…",
     "not playing (review)", "test", "new", "new channels", "new backup", "new backups",
