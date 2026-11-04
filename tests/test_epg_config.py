@@ -296,6 +296,41 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(epg_coverage.source_id_country("ChannelS.uk@679aa9"), "GB")
         self.assertTrue(epg_coverage.source_region_compatible("GB", "ChannelS.uk@679aa9"))
         self.assertFalse(epg_coverage.source_region_compatible("GB", "ChannelS.in@HD"))
+        self.assertEqual(generate_epg.playlist_id_country_code("XITEHits.nl@UK"), "GB")
+        self.assertEqual(generate_epg.playlist_id_country_code("NatureTime.ca@AU"), "AU")
+        self.assertEqual(generate_epg.playlist_id_country_code("WorldPokerTour.us@Poland"), "PL")
+        self.assertEqual(generate_epg.playlist_id_country_code("Cinemax.cz@Czechia"), "CZ")
+        self.assertEqual(generate_epg.playlist_id_country_code("CCTV6.cn@HD"), "CN")
+        self.assertEqual(generate_epg.playlist_id_country_code("MyTimeMovieNetwork.mx@SD"), "MX")
+
+    def test_source_feed_country_blocks_cross_region_exact_name_candidates(self):
+        self.assertFalse(
+            epg_coverage.source_region_compatible(
+                "GB", "generic-channel-id", "https://iptv-epg.org/files/epg-us.xml.gz"
+            )
+        )
+        self.assertTrue(
+            epg_coverage.source_region_compatible(
+                "GB", "generic-channel-id", "https://iptv-epg.org/files/epg-gb.xml.gz"
+            )
+        )
+        self.assertFalse(
+            epg_coverage.source_region_compatible(
+                "AU", "NatureTime", "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz"
+            )
+        )
+        self.assertTrue(
+            epg_coverage.source_region_compatible(
+                "AU", "NatureTime", "https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz"
+            )
+        )
+        # Mixed-region/private feeds have no inferred country and remain eligible
+        # for exact-name matching; their URL is never emitted by the audit.
+        self.assertTrue(
+            epg_coverage.source_region_compatible(
+                "GB", "generic-channel-id", "M3U4U XMLTV (private Actions secret)"
+            )
+        )
 
     def test_source_country_codes_recognize_public_feed_families(self):
         self.assertEqual(

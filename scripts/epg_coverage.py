@@ -14,7 +14,8 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from generate_epg import (
     ALWAYS_DROP_GENERIC_TITLES, COUNTRY_GROUP_CODES, is_slot_placeholder,
-    normalized_title, playlist_id_country_code, sources_with_mapped_channels,
+    normalized_title, normalize_country_code, playlist_id_country_code,
+    source_country_codes, sources_with_mapped_channels,
 )
 
 
@@ -562,13 +563,16 @@ def source_id_country(source_id):
     """Infer a country only from a recognized terminal ISO-style XMLTV ID suffix."""
     return playlist_id_country_code(source_id)
 
-def source_region_compatible(target_country, source_id):
-    """Reject name-only matches when both playlist and XMLTV ID identify different countries."""
-    target = str(target_country or "").strip().upper()
-    if target == "UK":
-        target = "GB"
+def source_region_compatible(target_country, source_id, source_url=""):
+    """Reject name-only matches that conflict with the playlist, XMLTV ID, or feed region."""
+    target = normalize_country_code(target_country)
     source = source_id_country(source_id)
-    return not target or not source or target == source
+    if target and source and target != source:
+        return False
+    feed_countries = source_country_codes(source_url)
+    if target and feed_countries and target not in feed_countries:
+        return False
+    return True
 
 
 def main():
@@ -602,7 +606,7 @@ def main():
                     for name_key in name_keys:
                         name_hits.update(
                             source_id for source_id in names.get(name_key,set())
-                            if source_region_compatible(ch.get("country", ""), source_id)
+                            if source_region_compatible(ch.get("country", ""), source_id, src)
                         )
                     src_hits=sorted(name_hits)
             matched_schedule_ids = [cid for cid in src_hits if counts.get(cid, 0) > 0]
@@ -671,7 +675,7 @@ def main():
                 if not (is_exact or is_region_variant):
                     continue
                 for source_id in source_ids_for_name:
-                    if source_id not in source_future or not source_region_compatible(target_country, source_id):
+                    if source_id not in source_future or not source_region_compatible(target_country, source_id, src):
                         continue
                     item = candidates_by_id.setdefault(source_id, {
                         "source_id": source_id,
