@@ -177,7 +177,9 @@ jobs:
                       name = (attrs.get("tvg-name") or (line[comma + 1:] if comma >= 0 else "")).strip()
                       group = (attrs.get("group-title") or "Uncategorized").strip()
                       tvg_id = (attrs.get("tvg-id") or "").strip()
-                      current = {"name": name, "group": group, "tvg_id": tvg_id}
+                      logo = (attrs.get("tvg-logo") or "").strip()
+                      chno = (attrs.get("tvg-chno") or "").strip()
+                      current = {"name": name, "group": group, "tvg_id": tvg_id, "logo": logo, "chno": chno}
                   elif current and line.lower().startswith(("http://", "https://")):
                       if current["group"] not in inactive:
                           if not current["name"]:
@@ -242,8 +244,21 @@ jobs:
                   raise SystemExit(f"{name}: category membership/counts differ from IPTV-Playlist.m3u")
               for stream_id, expected in expected_by_id.items():
                   actual = api_by_id[stream_id]
-                  if actual.get("direct_source") != expected["url"] or actual.get("name") != expected["name"]:
-                      raise SystemExit(f"{name}: source URL or channel name mismatch for stream_id={stream_id}")
+                  try:
+                      expected_num = float(expected["chno"]) if expected["chno"] else 0
+                  except ValueError:
+                      expected_num = 0
+                  if (
+                      actual.get("direct_source") != expected["url"]
+                      or actual.get("name") != expected["name"]
+                      or actual.get("tvg_name") != expected["name"]
+                      or actual.get("stream_icon") != expected["logo"]
+                      or actual.get("tvg_id") != expected["tvg_id"]
+                      or actual.get("epg_channel_id") != expected["tvg_id"]
+                      or actual.get("num") != expected_num
+                      or category_names.get(str(actual.get("category_id"))) != expected["group"]
+                  ):
+                      raise SystemExit(f"{name}: stream metadata/source mismatch for stream_id={stream_id}")
               print(
                   f"{name} source parity: entries={len(source_streams)} "
                   f"categories={len(source_counts)} IDs, names, groups and source URLs matched"
