@@ -12,6 +12,8 @@ RTV_SOURCE = "https://www.rtvbd.tv/schedule.php"
 RTV_CHANNEL_ID = "RTV.bd"
 BTV_SOURCE = "https://migrate.btvlive.gov.bd/channel/BTV"
 BTV_CHANNEL_ID = "BTVNational.bd"
+MAASRANGA_SOURCE = "https://maasranga.tv/full-width/program-time-schedule/"
+MAASRANGA_CHANNEL_ID = "MaasrangaTV.bd"
 PAKISTAN_TZ = ZoneInfo("Asia/Karachi")
 BANGLADESH_TZ = ZoneInfo("Asia/Dhaka")
 WEEKDAYS = {
@@ -503,3 +505,209 @@ def fetch_btv_programmes(now=None):
             "the page markup or schedule may have changed."
         )
     return sorted(unique.values(), key=lambda x: (x["start_dt"], x["title"].casefold()))
+
+
+# Maasranga TV publishes a weekly, broadcaster-maintained grid with explicit
+# start/end times. The adapter preserves Bengali titles and expands only the
+# published weekday/time slots; it does not invent durations.
+MAASRANGA_WEEKDAYS = {
+    "রবিবার": 6, "সোমবার": 0, "মঙ্গলবার": 1, "বুধবার": 2,
+    "বৃহস্পতিবার": 3, "শুক্রবার": 4, "শনিবার": 5,
+    "sunday": 6, "monday": 0, "tuesday": 1, "wednesday": 2,
+    "thursday": 3, "friday": 4, "saturday": 5,
+}
+MAASRANGA_TIME_RANGE_RE = re.compile(
+    r"^\\s*(\\d{1,2})[:.](\\d{2})\\s*(am|pm)?\\s*[–—-]\\s*"
+    r"(\\d{1,2})[:.](\\d{2})\\s*(am|pm)?\\s*$",
+    re.I,
+)
+MAASRANGA_EMPTY_TITLES = {"", "-", "—", "–", "n/a", "none"}
+
+
+class _MaasrangaScheduleParser(HTMLParser):
+    """Read the official weekly schedule table as rows of explicit cells."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.rows = []
+        self.in_row = False
+        self.in_cell = False
+        self.cells = []
+        self.cell_parts = []
+
+    def handle_starttag(self, tag, attrs):
+        tag = tag.lower()
+        if tag == "tr":
+            self.in_row = True
+            self.in_cell = False
+            self.cells = []
+        elif tag in {"td", "th"} and self.in_row:
+            self.in_cell = True
+            self.cell_parts = []
+        elif tag == "br" and self.in_cell:
+            self.cell_parts.append(" ")
+
+    def handle_endtag(self, tag):
+        tag = tag.lower()
+        if tag in {"td", "th"} and self.in_row and self.in_cell:
+            self.cells.append(_clean(" ".join(self.cell_parts)))
+            self.in_cell = False
+            self.cell_parts = []
+        elif tag == "tr" and self.in_row:
+            if self.cells:
+                self.rows.append(self.cells)
+            self.in_row = False
+            self.in_cell = False
+            self.cells = []
+            self.cell_parts = []
+
+    def handle_data(self, data):
+        if self.in_row and self.in_cell and data:
+            self.cell_parts.append(data)
+
+
+def _maasranga_time_range(value):
+    """Return explicit local start/end minutes; infer only omitted meridiem."""
+    match = MAASRANGA_TIME_RANGE_RE.match(_clean(value))
+    if not match:
+        return None
+    sh, sm, start_ampm, eh, em, end_ampm = match.groups()
+    if not start_ampm:
+        return None
+    sh, sm, eh, em = int(sh), int(sm), int(eh), int(em)
+    if not (1 <= sh <= 12 and 1 <= eh <= 12 and 0 <= sm <= 59 and 0 <= em <= 59):
+        return None
+
+    def minutes(hour, minute, meridiem):
+        hour = hour % 12
+        if meridiem.casefold() == "pm":
+            hour += 12
+        return hour * 60 + minute
+
+    start = minutes(sh, sm, start_ampm)
+    if end_ampm:
+        end = minutes(eh, em, end_ampm)
+        if end <= start:
+            end += 24 * 60
+    else:
+        same = minutes(eh, em, start_ampm)
+        if same > start:
+            end = same
+        else:
+            other_meridiem = "pm" if start_ampm.casefold() == "am" else "am"
+            other = minutes(eh, em, other_meridiem)
+            end = other if other > start else other + 24 * 60
+
+    duration = end - start
+    if duration <= 0 or duration > 6 * 60:
+        return None
+    return start, end
+
+
+def fetch_maasranga_programmes(now=None):
+    """Fetch Maasranga's official weekly grid and expand explicit slots for 8 days."""
+    now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    now_utc = now.astimezone(timezone.utc)
+    request = urllib.request.Request(
+        MAASRANGA_SOURCE,
+        headers={
+            "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+            "Accept": "text/html,application/xhtml+xml,*/*",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        html = response.read().decode("utf-8-sig", errors="replace")
+
+    parser = _MaasrangaScheduleParser()
+    parser.feed(html)
+    parser.close()
+
+    header_index = None
+    day_columns = {}
+    for index, row in enumerate(parser.rows):
+        normalized = [_clean(cell).casefold() for cell in row]
+        found = {
+            MAASRANGA_WEEKDAYS[cell]: col
+            for col, cell in enumerate(normalized)
+            if cell in MAASRANGA_WEEKDAYS
+        }
+        if len(found) == 7 and len(row) >= 8:
+            header_index = index
+            day_columns = found
+            break
+    if header_index is None:
+        raise RuntimeError("Maasranga official schedule has no complete seven-day table")
+
+    weekly_events = []
+    for row in parser.rows[header_index + 1:]:
+        if len(row) < 8:
+            continue
+        time_range = _maasranga_time_range(row[0])
+        if not time_range:
+            continue
+        start_minutes, end_minutes = time_range
+        for weekday, column in day_columns.items():
+            if column >= len(row):
+                continue
+            title = _clean(row[column])
+            if title.casefold() in MAASRANGA_EMPTY_TITLES:
+                continue
+            weekly_events.append({
+                "weekday": weekday,
+                "start_minutes": start_minutes,
+                "end_minutes": end_minutes,
+                "title": title,
+            })
+
+    unique_weekly = {
+        (event["weekday"], event["start_minutes"], event["end_minutes"], event["title"].casefold()): event
+        for event in weekly_events
+    }
+    weekly_events = list(unique_weekly.values())
+    if len(weekly_events) < 20 or len({event["weekday"] for event in weekly_events}) < 5:
+        raise RuntimeError(
+            "Maasranga weekly schedule returned too few explicit weekday slots; "
+            "the official table may have changed."
+        )
+
+    local_today = now_utc.astimezone(BANGLADESH_TZ).date()
+    lower = now_utc - timedelta(hours=6)
+    upper = now_utc + timedelta(days=7)
+    programmes = []
+    for offset in range(8):
+        day = local_today + timedelta(days=offset)
+        for event in weekly_events:
+            if event["weekday"] != day.weekday():
+                continue
+            start_day_offset, start_minute_of_day = divmod(event["start_minutes"], 24 * 60)
+            end_day_offset, end_minute_of_day = divmod(event["end_minutes"], 24 * 60)
+            start_day = day + timedelta(days=start_day_offset)
+            stop_day = day + timedelta(days=end_day_offset)
+            start_local = datetime.combine(
+                start_day, time(start_minute_of_day // 60, start_minute_of_day % 60),
+                tzinfo=BANGLADESH_TZ,
+            )
+            stop_local = datetime.combine(
+                stop_day, time(end_minute_of_day // 60, end_minute_of_day % 60),
+                tzinfo=BANGLADESH_TZ,
+            )
+            start = start_local.astimezone(timezone.utc)
+            stop = stop_local.astimezone(timezone.utc)
+            if stop <= start or stop < lower or start > upper:
+                continue
+            programmes.append({
+                "channel_id": MAASRANGA_CHANNEL_ID,
+                "title": event["title"],
+                "start_dt": start,
+                "stop_dt": stop,
+            })
+
+    unique = {}
+    for programme in programmes:
+        key = (programme["start_dt"], programme["stop_dt"], programme["title"].casefold())
+        unique[key] = programme
+    if not unique:
+        raise RuntimeError("Maasranga official schedule produced no current/future programme slots")
+    return sorted(unique.values(), key=lambda item: (item["start_dt"], item["title"].casefold()))
