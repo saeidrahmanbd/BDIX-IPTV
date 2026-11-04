@@ -103,5 +103,33 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
         self.assertIn('"International"', output)
 
 
+    def test_review_queues_remain_manual_and_follow_regional_policy(self):
+        header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
+        rows = (
+            entry("Bangladesh News", "New Channels", "http://bd.example/news.m3u8", 'tvg-country="BD" ')
+            + entry("Indian Sports", "New Channels", "http://in.example/sports.m3u8", 'tvg-country="IN" ')
+            + entry("Indian Education TV", "New Channels", "http://in.example/education.m3u8", 'tvg-country="IN" ')
+            + entry("Indian Cartoon Kids", "New Channels", "http://in.example/kids.m3u8", 'tvg-country="IN" ')
+            + entry("Foreign Movie", "New Channels", "http://us.example/movie.m3u8", 'tvg-country="US" tvg-content="Movies" ')
+            + entry("Bangladesh Religious Alternate", "New Backups", "http://bd.example/religious-alt.m3u8", 'tvg-country="BD" ')
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            Path(tmp, "International-Playlist.m3u").write_text(header + rows, encoding="utf-8")
+            Path(tmp, "reports").mkdir()
+            r = subprocess.run(
+                [sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
+                cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)),
+                capture_output=True, text=True,
+            )
+            self.assertEqual(r.returncode, 0, r.stderr)
+            out = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+        self.assertIn('group-title="New Channels",Bangladesh News', out)
+        self.assertIn('group-title="New Channels",Indian Sports', out)
+        self.assertIn('group-title="New Channels",Foreign Movie', out)
+        self.assertIn('group-title="New Backups",Bangladesh Religious Alternate', out)
+        self.assertNotIn("Indian Education TV", out)
+        self.assertNotIn("Indian Cartoon Kids", out)
+        self.assertIn('"New Backups"', out)
+
 if __name__ == "__main__":
     unittest.main()
