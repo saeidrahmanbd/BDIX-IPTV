@@ -235,6 +235,22 @@ def playlist_id_country_code(tvg_id):
     return normalize_country_code(match.group(1))
 
 
+def playlist_entry_country_code(tvg_id, tvg_country="", group=""):
+    """Resolve explicit country, territory qualifier, country group, then base tvg-id suffix."""
+    explicit = normalize_country_code(tvg_country)
+    if explicit:
+        return explicit
+    value = str(tvg_id or "").strip()
+    if "@" in value:
+        qualifier = playlist_id_qualifier_country_code(value.rsplit("@", 1)[1])
+        if qualifier:
+            return qualifier
+    group_code = COUNTRY_GROUP_CODES.get(str(group or "").strip().casefold(), "")
+    if group_code:
+        return normalize_country_code(group_code)
+    return playlist_id_country_code(value)
+
+
 def active_playlist_country_codes():
     """Return country codes represented by active entries in the two maintained playlists."""
     countries = set()
@@ -249,14 +265,11 @@ def active_playlist_country_codes():
                 group = current.get("group-title", "").strip()
                 tvg_id = current.get("tvg-id", "").strip()
                 if tvg_id and group not in INACTIVE_GROUPS:
-                    code = normalize_country_code(current.get("tvg-country", ""))
-                    if not code:
-                        code = COUNTRY_GROUP_CODES.get(group.casefold(), "")
-                    # Many International/Kids/Documentary entries omit
-                    # tvg-country; their authoritative tvg-id suffix still
-                    # identifies the region (for example CCTV6.cn@HD).
-                    if not code:
-                        code = playlist_id_country_code(tvg_id)
+                    # An explicit @territory qualifier overrides the base channel
+                    # origin and a broad country group (for example XITEHits.nl@UK).
+                    code = playlist_entry_country_code(
+                        tvg_id, current.get("tvg-country", ""), group
+                    )
                     if code:
                         countries.add(code)
                 current = None

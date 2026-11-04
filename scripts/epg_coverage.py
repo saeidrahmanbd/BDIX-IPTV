@@ -14,7 +14,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from generate_epg import (
     ALWAYS_DROP_GENERIC_TITLES, COUNTRY_GROUP_CODES, is_slot_placeholder,
-    normalized_title, normalize_country_code, playlist_id_country_code,
+    normalized_title, normalize_country_code, playlist_entry_country_code, playlist_id_country_code,
     source_country_codes, sources_with_mapped_channels,
 )
 
@@ -343,9 +343,9 @@ def parse_playlist():
                 a = attrs(line)
                 tvg_id = a.get("tvg-id", "").strip()
                 group = a.get("group-title", "").strip()
-                country = a.get("tvg-country", "").strip().upper()
-                if not country:
-                    country = COUNTRY_GROUP_CODES.get(group.casefold(), "") or playlist_id_country_code(tvg_id)
+                country = playlist_entry_country_code(
+                    tvg_id, a.get("tvg-country", ""), group
+                )
                 cur = {
                     "tvg_id": tvg_id,
                     "name": a.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip(),

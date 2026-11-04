@@ -7,7 +7,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from fetch_iptv_org_epg import INACTIVE_GROUPS, load_explicit_epg_mappings, load_locked_epg_mappings
-from generate_epg import COUNTRY_GROUP_CODES, normalize_country_code, playlist_id_country_code
+from generate_epg import playlist_entry_country_code, playlist_id_country_code
 
 PLAYLISTS = (
     Path("IPTV-Playlist.m3u"),
@@ -52,12 +52,9 @@ def playlist_channels():
                 tvg_id = attrs.get("tvg-id", "").strip()
                 name = attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip()
                 group = attrs.get("group-title", "").strip()
-                country = (
-                    normalize_country_code(attrs.get("tvg-country", ""))
-                    or COUNTRY_GROUP_CODES.get(group.casefold(), "")
-                    or ("BD" if group.casefold() == "bangladesh" else "")
-                    or playlist_id_country_code(tvg_id)
-                )
+                country = playlist_entry_country_code(tvg_id, attrs.get("tvg-country", ""), group)
+                if not country and group.casefold() == "bangladesh":
+                    country = "BD"
                 current = (tvg_id, name, group, country)
             elif current and line.strip().startswith(("http://", "https://")):
                 if current[0] and current[2].casefold() not in INACTIVE_GROUPS and current not in seen:

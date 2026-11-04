@@ -16,7 +16,7 @@ import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from generate_epg import COUNTRY_GROUP_CODES, normalize_country_code, playlist_id_country_code
+from generate_epg import COUNTRY_GROUP_CODES, normalize_country_code, playlist_entry_country_code, playlist_id_country_code
 
 REPO = "https://github.com/iptv-org/epg.git"
 WORK = Path("/tmp/iptv-org-epg")
@@ -310,10 +310,8 @@ def read_active_target_name_to_ids(target_ids):
                 tvg_id = current.get("tvg-id", "").strip()
                 group = current.get("group-title", "").strip()
                 if tvg_id in target_ids and group.casefold() not in INACTIVE_GROUPS:
-                    country = (
-                        normalize_country_code(current.get("tvg-country", ""))
-                        or COUNTRY_GROUP_CODES.get(group.casefold(), "")
-                        or playlist_id_country_code(tvg_id)
+                    country = playlist_entry_country_code(
+                        tvg_id, current.get("tvg-country", ""), group
                     )
                     if country == "IN":
                         key = normalize_channel_name(current.get("_label", ""))

@@ -250,6 +250,7 @@ class EpgConfigTests(unittest.TestCase):
                 "https://example.test/unmapped.xml",
                 "https://free-epg.de/api/epg/cn.xml.gz",
                 "https://iptv-epg.org/files/epg-gb.xml.gz",
+                "https://iptv-epg.org/files/epg-br.xml.gz",
             ]
             with (
                 patch.object(generate_epg, "PLAYLISTS", [main_playlist, international_playlist]),
@@ -258,7 +259,7 @@ class EpgConfigTests(unittest.TestCase):
                 countries = generate_epg.active_playlist_country_codes()
                 selected = generate_epg.sources_with_mapped_channels(configured)
 
-        self.assertEqual(countries, {"IN", "PA", "SG", "CN", "GB"})
+        self.assertEqual(countries, {"IN", "PA", "SG", "CN", "GB", "BR"})
         self.assertEqual(
             selected,
             [
@@ -267,6 +268,7 @@ class EpgConfigTests(unittest.TestCase):
                 "https://iptv-epg.org/files/epg-sg.xml.gz",
                 "https://free-epg.de/api/epg/cn.xml.gz",
                 "https://iptv-epg.org/files/epg-gb.xml.gz",
+                "https://iptv-epg.org/files/epg-br.xml.gz",
             ],
         )
 
@@ -282,7 +284,13 @@ class EpgConfigTests(unittest.TestCase):
                 '#EXTINF:-1 tvg-id="Generic.sg" group-title="International" tvg-name="Singapore TV",Singapore TV\n'
                 'https://example.test/singapore.m3u8\n'
                 '#EXTINF:-1 tvg-id="NoSuffix" group-title="Singapore" tvg-name="Fallback",Fallback\n'
-                'https://example.test/fallback.m3u8\n',
+                'https://example.test/fallback.m3u8\n'
+                '#EXTINF:-1 tvg-id="XITEHits.nl@UK" group-title="International" tvg-name="XITE Hits UK",XITE Hits UK\n'
+                'https://example.test/xite-uk.m3u8\n'
+                '#EXTINF:-1 tvg-id="AdrenalinaPuraTV.us@Brazil" group-title="United States" tvg-name="Adrenalina Pura TV",Adrenalina Pura TV\n'
+                'https://example.test/adrenalina-br.m3u8\n'
+                '#EXTINF:-1 tvg-id="BBCDrama.uk@US" tvg-country="GB" group-title="United States" tvg-name="BBC Drama",BBC Drama\n'
+                'https://example.test/bbc-drama.m3u8\n',
                 encoding="utf-8",
             )
             with patch.object(epg_coverage, "PLAYLISTS", [playlist]):
@@ -293,6 +301,9 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(countries["ChannelS.uk@679aa9"], "GB")
         self.assertEqual(countries["Generic.sg"], "SG")
         self.assertEqual(countries["NoSuffix"], "SG")
+        self.assertEqual(countries["XITEHits.nl@UK"], "GB")
+        self.assertEqual(countries["AdrenalinaPuraTV.us@Brazil"], "BR")
+        self.assertEqual(countries["BBCDrama.uk@US"], "GB")
         self.assertEqual(epg_coverage.source_id_country("ChannelS.uk@679aa9"), "GB")
         self.assertTrue(epg_coverage.source_region_compatible("GB", "ChannelS.uk@679aa9"))
         self.assertFalse(epg_coverage.source_region_compatible("GB", "ChannelS.in@HD"))
@@ -526,6 +537,21 @@ class EpgMappingAugmentationTests(unittest.TestCase):
         self.assertEqual(set(by_id), {"ColorsBangla.in@HD", "CCTV6.cn@HD"})
         self.assertEqual(by_id["ColorsBangla.in@HD"][3], "IN")
         self.assertEqual(by_id["CCTV6.cn@HD"][3], "CN")
+
+    def test_indian_provider_discovery_respects_explicit_territory_qualifier(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            iptv = Path(tmp) / "IPTV-Playlist.m3u"
+            international = Path(tmp) / "International-Playlist.m3u"
+            iptv.write_text("#EXTM3U\\n", encoding="utf-8")
+            international.write_text(
+                "#EXTM3U\\n"
+                + self._entry("Channel.in@UK", "Channel UK", "Indian Entertainment")
+                + self._entry("Channel.in@India", "Channel India", "International"),
+                encoding="utf-8",
+            )
+            with patch.object(additional_augment, "PLAYLISTS", (iptv, international)):
+                channels = additional_augment.playlist_channels()
+        self.assertEqual([channel["tvg_id"] for channel in channels], ["Channel.in@India"])
 
     def test_indian_provider_discovery_includes_indian_ids_in_international_playlist(self):
         with tempfile.TemporaryDirectory() as tmp:

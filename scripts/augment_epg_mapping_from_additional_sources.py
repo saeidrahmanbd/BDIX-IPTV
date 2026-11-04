@@ -16,6 +16,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from epg_coverage import EPG_LOCKS
+from generate_epg import playlist_entry_country_code
 
 PLAYLISTS = (
     Path("IPTV-Playlist.m3u"),
@@ -87,12 +88,18 @@ def playlist_channels():
                     "tvg_id": attrs.get("tvg-id", "").strip(),
                     "name": attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip(),
                     "group": attrs.get("group-title", "").strip(),
-                    "country": attrs.get("tvg-country", "").strip().upper(),
+                    "country": playlist_entry_country_code(
+                        attrs.get("tvg-id", "").strip(),
+                        attrs.get("tvg-country", ""),
+                        attrs.get("group-title", "").strip(),
+                    ),
                 }
             elif current and line.strip().startswith(("http://", "https://")):
                 if current["tvg_id"] and current["group"] not in EXCLUDED_GROUPS:
-                    is_indian_identity = bool(re.search(r"\.in(?:@|$)", current["tvg_id"], re.I))
-                    if current["country"] == "IN" or current["group"] in INDIAN_GROUPS or is_indian_identity:
+                    # Respect explicit territory variants; do not attach Indian
+                    # provider schedules to a UK/US/etc. regional channel merely
+                    # because its base broadcaster ID ends in .in.
+                    if current["country"] == "IN":
                         key = (current["tvg_id"], current["name"])
                         if key not in seen:
                             channels.append(current)
