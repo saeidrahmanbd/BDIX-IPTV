@@ -31,10 +31,10 @@ BAD_WORDS = {
 }
 # India-only exclusions. Sports is intentionally absent and remains eligible.
 FORBIDDEN_CATEGORY_PATTERNS = {
-    "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom)\b", re.IGNORECASE),
-    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
+    "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
+    "religious": re.compile(r"\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
     "educational": re.compile(r"\b(?:education(?:al)?|learning|school|university|college|academy|e-?vidya|vidya|gyan\s*darshan|knowledge\s*channel)\b", re.IGNORECASE),
-    "kids": re.compile(r"\b(?:kids?|children|cartoon|baby\s*shark|disney\s*(?:jr|junior|channel|xd)|nick(?:elodeon)?|pogo|pbs\s*kids|toongoggles?|toonami|teletubbies|doraemon|discovery\s*kids|boomerang|spacetoon|kartoon|lego\s*channel)\b", re.IGNORECASE),
+    "kids": re.compile(r"\b(?:kids?|children|green\s*gold|cartoon|baby\s*shark|disney\s*(?:jr|junior|channel|xd)|nick(?:elodeon)?|pogo|pbs\s*kids|toongoggles?|toonami|teletubbies|doraemon|discovery\s*kids|boomerang|spacetoon|kartoon|lego\s*channel)\b", re.IGNORECASE),
 }
 
 def canonical_channel_name(value: str) -> str:
