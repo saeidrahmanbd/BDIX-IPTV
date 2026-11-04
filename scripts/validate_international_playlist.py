@@ -147,7 +147,7 @@ def main():
         raise SystemExit("Country-group threshold policy failed: " + " | ".join(threshold_issues))
 
     if registry[-3:] != ["New Channels", "New Backups", "Backup"]:
-        raise SystemExit("The final categories must be New Channels, New Backup, Backup.")
+        raise SystemExit("The final categories must be New Channels, New Backups, Backup.")
     dynamic = sorted(group for group in group_set if group not in FIXED and group not in TAIL and group.casefold() != "international")
     international_bucket = ["International"] if any(group.casefold() == "international" for group in group_set) else []
     expected_registry = FIXED + dynamic + international_bucket + TAIL
