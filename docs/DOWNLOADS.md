@@ -4,9 +4,11 @@
 
 **[▶️ Download Main IPTV Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
 
-M3U playlists compatible with XCIPTV and other compatible players.
+The main **Bangladeshi IPTV / Bangla IPTV M3U playlist** contains Bangladesh and India channels. It works with M3U-compatible players such as VLC, Kodi, TiviMate, XCIPTV and IPTV Smarters.
 
-- **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — worldwide playlist; movie/music country groups with dedicated thematic groups
+- **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — Bangladesh and India follow the same regional rules; all other countries are limited to dedicated movie and music channels.
+
+See the [Bangladeshi IPTV playlist guide](PLAYLISTS.md) for eligibility rules, direct URLs and setup instructions. New channel and alternate-stream candidates remain in New Channels and New Backups for manual review.
 
 > **EPG status:** The XMLTV refresh pipeline is enabled. The maintained playlists advertise the repository guide URL, and programme data is published only after the generated guide passes freshness and quality validation. The EPG pipeline combines configured public or otherwise accessible schedule feeds while keeping private credentials and personalized URLs out of the public repository. EPG.PW remains excluded from public-guide ingestion because its Terms of Service prohibit copying/retransmission and limit use to personal use. Other EPG sources and the EPG refresh workflow remain enabled. Source-review metadata is advisory rather than a build gate. See the [EPG status report](../reports/epg-coverage.md).
 
