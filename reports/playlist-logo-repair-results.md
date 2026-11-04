@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-04 04:14 UTC**  
+Run time: **2026-11-04 04:18 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -16,7 +16,7 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| IPTV-Playlist.m3u | 785 | Vyas Channel | (missing) | (none) | Official CEC institutional logo; CEC operates the Vyas Higher Education Channel. Used as the operator mark because a dedicated Vyas logo asset could not be validated. |  | Download/validation failed: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)> |
+| IPTV-Playlist.m3u | 785 | Vyas Channel | (missing) | (none) | Government of India Presentation Gov catalogue: official CEC SVG brandmark. Used as the operator mark because a dedicated Vyas logo asset could not be validated. |  | Download/validation failed: <urlopen error timed out> |
 | IPTV-Playlist.m3u | 785 | Vyas Channel | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 61 | Drama 24 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 993 | Rádio Temas de Novelas | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
