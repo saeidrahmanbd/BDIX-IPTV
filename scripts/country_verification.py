@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Country verification shared by discovery, hardening, the audit and the gates.
 
-New Channels / New Backup may only hold channels whose country is verified as
+New Channels / New Backups may only hold channels whose country is verified as
 Bangladesh (BD) or India (IN).  ``tvg-id`` is strong evidence but is never the
 only classifier:
 
@@ -30,7 +30,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-REVIEW_QUEUES = frozenset({"New Channels", "New Backup"})
+REVIEW_QUEUES = frozenset({"New Channels", "New Backups"})
 ALLOWED = frozenset({"BD", "IN"})
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -226,7 +226,7 @@ def main(argv: list[str]) -> int:
         failed = failed or bool(errors)
     if failed:
         return 1
-    print("New Channels/New Backup contain only entries verified as BD/IN with normalized tvg-country.")
+    print("New Channels/New Backups contain only entries verified as BD/IN with normalized tvg-country.")
     return 0
 
 
