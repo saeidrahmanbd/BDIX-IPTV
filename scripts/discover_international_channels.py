@@ -147,7 +147,9 @@ def policy(a,name,allow_legacy_group=False):
  if GENERAL_OUT_OF_SCOPE_RE.search(text): return None,"general entertainment is not a dedicated Movie/Music channel",code
  if SERIES_OUT_OF_SCOPE_RE.search(text): return None,"TV series channel is not a dedicated Movie/Music channel",code
 
- source_category=bool(group_text) and group_key not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_key=="international")
+ country_label = re.sub(r"[^a-z0-9]+", "", norm(country_group(code)))
+ source_is_country_group = bool(country_label) and group_key == country_label
+ source_category=bool(group_text) and group_key not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_key=="international") and not source_is_country_group
  if source_category and any(
      part not in MOVIE_CATEGORY_PARTS and part not in MUSIC_CATEGORY_PARTS
      for part in group_parts
