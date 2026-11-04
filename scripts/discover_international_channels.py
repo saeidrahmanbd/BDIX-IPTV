@@ -384,8 +384,7 @@ def main():
    new_rows.append((cname,target,ccode,url))
    per_group[target]+=1
    planned.setdefault(key,[]).append(attrs(additions[-1][0]))
- # Qualification is based only on actual general primary entries in the playlist
- # plus the entries selected for this run, never every eligible source-feed candidate.
+ # Qualification is based only on curated primary entries, never manual-review queue candidates.
  country_groups=qualified_country_groups(country_primary_ids,added_primary_ids)
  all_blocks=existing+additions; migrated=[]; normalized=[]; filtered_existing=[]
  addition_urls={url_of(b) for b in additions}
@@ -393,7 +392,7 @@ def main():
  for b in all_blocks:
   a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); group=old
   old_key=old.casefold(); genre=""; is_new=url_of(b) in addition_urls
-  if not is_new and FASHION_RE.search(name) and old_key not in {"backup","backups","new backup","new backups"}:
+  if not is_new and FASHION_RE.search(name) and old_key not in {"backup","backups","new backup","new backups","new channels"}:
    group="Fashion TV"
   elif old_key in {"new backup","new backups"} and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
