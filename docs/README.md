@@ -2,6 +2,7 @@
 
 ## Project Overview
 
+- **[Bangladeshi IPTV Playlist Guide](PLAYLISTS.md)** — Bangladesh and India M3U playlists, international eligibility and player setup
 - **[Project Overview](PROJECT-README.md)** — repository overview, playlists, maintenance and policies
 - **[Playlist Studio 5.0](PLAYLIST-STUDIO.md)** — features, download, usage and build instructions
 - **[Playlist Studio v5.0.0 Release Integrity](PLAYLIST-STUDIO-INTEGRITY.md)** — published SHA-256 asset digests
