@@ -518,14 +518,14 @@ class EpgMappingAugmentationTests(unittest.TestCase):
             "note": "Retained mapping",
         }]
         channels = [("CCTV6.cn@HD", "CCTV6", "China", "CN")]
-        names = {"cctv6": {"CCTV6.cn@HD"}}
+        names = {"cctv6": {"CCTV6Provider.cn@HD"}}
         rows, explicit_added, exact_added = iptv_org_augment.apply_iptv_org_matches(
-            channels, rows, names, {"CCTV6.cn@HD"}
+            channels, rows, names, {"CCTV6Provider.cn@HD"}
         )
         self.assertEqual(explicit_added, 0)
         self.assertEqual(exact_added, 1)
         self.assertIn("old.provider.id", rows[0]["epg_id"])
-        self.assertIn("CCTV6.cn@HD", rows[0]["epg_id"])
+        self.assertIn("CCTV6Provider.cn@HD", rows[0]["epg_id"])
         self.assertEqual(rows[0]["status"], "MAPPED")
 
     def test_iptv_org_exact_name_match_rejects_cross_country_source(self):
