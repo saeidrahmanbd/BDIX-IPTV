@@ -1,5 +1,7 @@
 # 📚 BDIX-IPTV Documentation
 
+**Published website:** [English homepage](https://saeidrahmanbd.github.io/BDIX-IPTV/) · [Bangladeshi IPTV M3U guide](https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html) · [বাংলা IPTV](https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html)
+
 ## Project Overview
 
 - **[Bangladeshi IPTV Playlist Guide](PLAYLISTS.md)** — Bangladesh and India M3U playlists, international eligibility and player setup
