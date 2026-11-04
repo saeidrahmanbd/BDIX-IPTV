@@ -10,7 +10,7 @@ from country_verification import reference_from_playlists,verify_country
 from logo_asset_naming import is_blocked_logo_basename
 from restore_protected_review import authorized_backup_migration_target, is_authorized_removal
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
-EXCLUDE={"Backup","Not Playing","New Channels","New Backup"}; REVIEW_QUEUES={"New Channels","New Backup"}
+EXCLUDE={"Backup","Not Playing","New Channels","New Backups"}; REVIEW_QUEUES={"New Channels","New Backups","New Backup"}
 RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"; ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 RAW_NAME_TAG=re.compile(r"\s*(?:\[[^]]*(?:geo-blocked|geo blocked)[^]]*\]|\((?:\d{3,4}p|\d{3,4}i|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}p|\d{3,4}i))\s*$",re.I)
 def attrs(s): return dict(ATTR.findall(s))
@@ -56,7 +56,7 @@ def logo_audit(entries):
     for _,a,_ in entries:
         name=a.get("tvg-name","").strip(); logo=a.get("tvg-logo","").strip(); group=a.get("group-title","").strip()
         if not logo:
-            (review_missing if group in {"New Channels","New Backup"} else missing).append(name)
+            (review_missing if group in {"New Channels","New Backups"} else missing).append(name)
             continue
         if not logo.startswith(RAW_BASE): external.append(name)
         filename=Path(logo.split("?",1)[0]).name.casefold()
@@ -81,7 +81,7 @@ def main():
     quarantined=[]; removed=[]; approved_removed=[]
     for info,a,u in old_primary:
         groups=cur_all_groups.get(u.lower(),set())
-        if groups & {"Backup","New Channels","New Backup"}: quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup","New Channels","New Backup"}))))
+        if groups & {"Backup","New Channels","New Backups"}: quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup","New Channels","New Backups"}))))
         elif not groups: (approved_removed if (approved_removal(u) or is_authorized_removal(info,u)) else removed).append((a.get("tvg-name",""),u))
     old_review=review_state(old); cur_review=review_state(current); current_by_url={u.lower():(a,u) for _,a,u in current}
     review_reclassified=[]; review_promoted=[]; authorized_promoted=[]; review_removed=[]
@@ -108,7 +108,7 @@ def main():
     metadata_by_id=defaultdict(list)
     for _,a,u in current:
         group=a.get("group-title","").strip(); cid=(a.get("tvg-id") or a.get("channel-id") or "").strip().casefold(); name=a.get("tvg-name","").strip()
-        if cid and group not in {"New Channels","New Backup","Not Playing"}: metadata_by_id[cid].append((name,group,u))
+        if cid and group not in {"New Channels","New Backups","Not Playing"}: metadata_by_id[cid].append((name,group,u))
     metadata_conflicts={cid:items for cid,items in metadata_by_id.items() if len({x[0].casefold() for x in items})>1}
     raw_name_issues=[(a.get("tvg-name",""),a.get("group-title","")) for _,a,_ in current if RAW_NAME_TAG.search(a.get("tvg-name","").strip())]
     logo_missing,logo_missing_review,logo_external,logo_bad=logo_audit(current); logo_missing_files=[]; logo_missing_file_details=[]
