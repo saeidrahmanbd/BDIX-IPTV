@@ -7,8 +7,12 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from fetch_iptv_org_epg import INACTIVE_GROUPS, load_explicit_epg_mappings, load_locked_epg_mappings
+from generate_epg import COUNTRY_GROUP_CODES, normalize_country_code, playlist_id_country_code
 
-PLAYLIST = Path("IPTV-Playlist.m3u")
+PLAYLISTS = (
+    Path("IPTV-Playlist.m3u"),
+    Path("International-Playlist.m3u"),
+)
 MAPPING = Path("reports/epg-channel-mapping.csv")
 GUIDE = Path("/tmp/iptv-org-guide.xml")
 
@@ -35,20 +39,31 @@ def parse_xmltv_time(value):
 
 
 def playlist_channels():
+    """Read active identities from both maintained playlists, preserving alternate labels."""
     channels = []
-    current = None
-    for line in PLAYLIST.read_text(encoding="utf-8-sig").splitlines():
-        if line.startswith("#EXTINF:"):
-            attrs = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
-            current = (
-                attrs.get("tvg-id", "").strip(),
-                attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip(),
-                attrs.get("group-title", "").strip(),
-            )
-        elif current and line.strip().startswith(("http://", "https://")):
-            if current[0] and current[2].casefold() not in INACTIVE_GROUPS:
-                channels.append(current)
-            current = None
+    seen = set()
+    for playlist in PLAYLISTS:
+        if not playlist.is_file():
+            continue
+        current = None
+        for line in playlist.read_text(encoding="utf-8-sig").splitlines():
+            if line.startswith("#EXTINF:"):
+                attrs = dict(re.findall(r'([\\w-]+)="([^"]*)"', line))
+                tvg_id = attrs.get("tvg-id", "").strip()
+                name = attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip()
+                group = attrs.get("group-title", "").strip()
+                country = (
+                    normalize_country_code(attrs.get("tvg-country", ""))
+                    or COUNTRY_GROUP_CODES.get(group.casefold(), "")
+                    or ("BD" if group.casefold() == "bangladesh" else "")
+                    or playlist_id_country_code(tvg_id)
+                )
+                current = (tvg_id, name, group, country)
+            elif current and line.strip().startswith(("http://", "https://")):
+                if current[0] and current[2].casefold() not in INACTIVE_GROUPS and current not in seen:
+                    channels.append(current)
+                    seen.add(current)
+                current = None
     return channels
 
 
@@ -109,39 +124,15 @@ def main():
     locked_mappings = load_locked_epg_mappings()
     with MAPPING.open(encoding="utf-8-sig", newline="") as fh:
         rows = list(csv.DictReader(fh))
-    by_id = {row.get("tvg_id", "").strip(): row for row in rows if row.get("tvg_id", "").strip()}
-    explicit_added = 0
-    exact_name_added = 0
 
-    for tvg_id, name, group in channels:
-        row = by_id.get(tvg_id)
-        if row is None:
-            continue
-
-        # Exact playlist IDs or curated aliases/locks take priority over name matching.
-        approved_ids = (
-            locked_mappings[tvg_id]
-            if tvg_id in locked_mappings
-            else [tvg_id, *explicit_mappings.get(tvg_id, [])]
-        )
-        usable_ids = [source_id for source_id in dict.fromkeys(approved_ids) if source_id in scheduled_ids]
-        if usable_ids:
-            if append_verified_ids(row, usable_ids):
-                explicit_added += len(usable_ids)
-            continue
-
-        # Never infer a domestic Bangladesh guide from a similarly named foreign service.
-        if group.casefold() == "bangladesh" or (row.get("epg_id") or "").strip():
-            continue
-        key = norm(name)
-        if not key:
-            continue
-        hits = sorted({source_id for source_id in names.get(key, set()) if source_id in scheduled_ids})
-        if len(hits) != 1:
-            continue
-        if append_verified_ids(row, hits):
-            exact_name_added += 1
-            row["note"] = "Unique exact normalized display-name match with current/future schedules from iptv-org/epg."
+    rows, explicit_added, exact_name_added = apply_iptv_org_matches(
+        channels,
+        rows,
+        names,
+        scheduled_ids,
+        explicit_mappings=explicit_mappings,
+        locked_mappings=locked_mappings,
+    )
 
     fieldnames = ["group", "channel", "tvg_id", "epg_id", "source", "status", "note"]
     with MAPPING.open("w", encoding="utf-8", newline="") as fh:
@@ -149,6 +140,74 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
     print(f"iptv-org verified IDs added: {explicit_added}; unique exact-name mappings added: {exact_name_added}")
+
+
+def region_compatible(target_country, source_id):
+    """Reject an exact-name candidate when both identities declare different regions."""
+    target = normalize_country_code(target_country)
+    source = playlist_id_country_code(source_id)
+    return not (target and source and target != source)
+
+
+def apply_iptv_org_matches(channels, rows, names, scheduled_ids, explicit_mappings=None, locked_mappings=None):
+    """Append exact, scheduled iptv-org IDs, including alternatives for stale existing mappings."""
+    explicit_mappings = explicit_mappings or {}
+    locked_mappings = locked_mappings or {}
+    by_id = {
+        row.get("tvg_id", "").strip(): row
+        for row in rows
+        if row.get("tvg_id", "").strip()
+    }
+    explicit_added = 0
+    exact_name_added = 0
+
+    for tvg_id, name, group, country in channels:
+        row = by_id.get(tvg_id)
+        if row is None:
+            continue
+
+        approved_ids = (
+            locked_mappings[tvg_id]
+            if tvg_id in locked_mappings
+            else [tvg_id, *explicit_mappings.get(tvg_id, [])]
+        )
+        usable_ids = [
+            source_id for source_id in dict.fromkeys(approved_ids)
+            if source_id in scheduled_ids
+        ]
+        if usable_ids:
+            if append_verified_ids(row, usable_ids):
+                explicit_added += len(usable_ids)
+            continue
+
+        # A strict lock remains authoritative; never bypass it with a name match.
+        # Domestic Bangladesh services also require exact IDs or explicit aliases.
+        if (
+            tvg_id in locked_mappings
+            or group.casefold() == "bangladesh"
+            or normalize_country_code(country) == "BD"
+            or playlist_id_country_code(tvg_id) == "BD"
+        ):
+            continue
+
+        key = norm(name)
+        if not key:
+            continue
+        hits = sorted({
+            source_id
+            for source_id in names.get(key, set())
+            if source_id in scheduled_ids and region_compatible(country, source_id)
+        })
+        if len(hits) != 1:
+            continue
+        if append_verified_ids(row, hits):
+            exact_name_added += 1
+            row["note"] = (
+                "Unique exact normalized display-name match with current/future "
+                "schedules from iptv-org/epg; region-compatible."
+            )
+
+    return rows, explicit_added, exact_name_added
 
 
 if __name__ == "__main__":
