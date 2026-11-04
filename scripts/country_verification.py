@@ -226,7 +226,7 @@ def main(argv: list[str]) -> int:
         failed = failed or bool(errors)
     if failed:
         return 1
-    print("New Channels/New Backup contain only entries verified as BD/IN with normalized tvg-country.")
+    print("New Channels/New Backups contain only entries verified as BD/IN with normalized tvg-country.")
     return 0
 
 
