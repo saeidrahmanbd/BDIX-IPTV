@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sort active IPTV groups and assign contiguous channel numbers without rewriting stream URLs.
 
-Backup, Not Playing, New Channels and New Backup remain unnumbered. Their internal
+Backup, Not Playing, New Channels and New Backups remain unnumbered. Their internal
 order is preserved; only their category blocks are placed in canonical queue order.
 """
 from __future__ import annotations
