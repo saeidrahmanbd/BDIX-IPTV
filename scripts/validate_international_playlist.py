@@ -122,6 +122,8 @@ def main():
         logo = a.get("tvg-logo", "").strip()
         if not logo:
             missing_logos += 1
+            if group_key in {"new channels", "new backup", "new backups"}:
+                raise SystemExit(f"Manual-review candidate lacks a local logo: {name!r} in {group!r}.")
             continue
         if logo.startswith(RAW_BASE):
             rel = unquote(urlsplit(logo).path.split("/main/logos/", 1)[-1]).lstrip("/")
