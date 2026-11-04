@@ -1010,6 +1010,8 @@ http://213.91.179.28:8000/play/a05i
 http://212.70.131.37:8000/play/a08b
 #EXTINF:-1 tvg-id="CineStar1Bulgaria.bg@SD" channel-id="CineStar1Bulgaria.bg@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cinestar-1-bulgaria.png" tvg-country="BG" tvg-content="Movies" group-title="Bulgaria" tvg-name="CineStar 1 Bulgaria",CineStar 1 Bulgaria
 http://213.91.179.28:8000/play/a05h
+#EXTINF:-1 tvg-id="CineStarActionBulgaria.bg@SD" tvg-name="CineStar Action Bulgaria" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cinestar-action-bulgaria.png" tvg-country="BG" channel-id="CineStarActionBulgaria.bg@SD" group-title="Bulgaria" tvg-content="Movies",CineStar Action Bulgaria
+http://213.91.179.28:8000/play/a06b
 #EXTINF:-1 tvg-id="CityTV.bg@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/city-tv-bulgaria-55b1af3877.png" tvg-country="BG" tvg-content="Music" group-title="Bulgaria" tvg-name="City TV (Bulgaria)",City TV (Bulgaria)
 https://tv.city.bg/play/tshls/citytv/index.m3u8
 #EXTINF:-1 tvg-id="Diema.bg@SD" channel-id="Diema.bg@SD" tvg-country="BG" tvg-content="Movies" group-title="Bulgaria" tvg-name="Diema",Diema
@@ -1362,6 +1364,8 @@ https://vdo2.pro-fhi.net:3207/stream/play.m3u8
 https://cinehls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaFolk.fr@HD" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Persiana Folk",Persiana Folk
 https://sonhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaLatino.fr@SD" tvg-name="Persiana Latino" tvg-country="FR" channel-id="PersianaLatino.fr@SD" group-title="France" tvg-content="Movies",Persiana Latino
+https://latinohls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaNostalgia.fr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/persiana-nostalgia-66d519d28e.png" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Persiana Nostalgia",Persiana Nostalgia
 https://noshls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="custom.persiana-setmix-fr-music" channel-id="custom.persiana-setmix-fr-music" tvg-language="fas" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Persiana SetMix",Persiana SetMix
@@ -1484,6 +1488,20 @@ https://ma.anixa.tv/clips/stream/mtv/playlist.php
 https://oneadriaapp.b-cdn.net/1080p/index.m3u8
 #EXTINF:-1 tvg-id="OneMusicTelevision.de@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/one-music-television-fed2160d53.png" tvg-country="DE" tvg-content="Music" group-title="Germany" tvg-name="One Music Television",One Music Television
 https://oneapp.b-cdn.net/1080p/index.m3u8
+#EXTINF:-1 tvg-id="PlutoTV90sClassics.de@FR" tvg-name="Pluto TV 90's Classics" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-90-s-classics.png" tvg-country="DE" channel-id="PlutoTV90sClassics.de@FR" group-title="Germany" tvg-content="Movies",Pluto TV 90's Classics
+https://jmp2.uk/plu-66b4990746762a00084c2f78.m3u8
+#EXTINF:-1 tvg-id="PlutoTVAlbertoSordi.de@IT" tvg-name="Pluto TV Alberto Sordi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-alberto-sordi.png" tvg-country="DE" channel-id="PlutoTVAlbertoSordi.de@IT" group-title="Germany" tvg-content="Movies",Pluto TV Alberto Sordi
+https://jmp2.uk/plu-661f8f01801af800083d9d81.m3u8
+#EXTINF:-1 tvg-id="PlutoTVBudTerence.de@DACH" tvg-name="Pluto TV Bud & Terence (Germany)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-bud-terence-germany.png" tvg-country="DE" channel-id="PlutoTVBudTerence.de@DACH" group-title="Germany" tvg-content="Movies",Pluto TV Bud & Terence (Germany)
+https://jmp2.uk/plu-64be7398e4391c0008cdedfe.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCatastrofes.de@ES" tvg-name="Pluto TV Catastrofes" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-catastrofes.png" tvg-country="DE" channel-id="PlutoTVCatastrofes.de@ES" group-title="Germany" tvg-content="Movies",Pluto TV Catastrofes
+https://jmp2.uk/plu-645a309c5a0cd5000873f609.m3u8
+#EXTINF:-1 tvg-id="PlutoTVChristmastuttolanno.de@IT" tvg-name="Pluto TV Christmas tutto l'anno" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-christmas-tutto-l-anno.png" tvg-country="DE" channel-id="PlutoTVChristmastuttolanno.de@IT" group-title="Germany" tvg-content="Movies",Pluto TV Christmas tutto l'anno
+https://jmp2.uk/plu-612e05b885183d0007958101.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineComedia.de@ES" tvg-name="Pluto TV Cine Comedia (Germany)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-comedia-germany.png" tvg-country="DE" channel-id="PlutoTVCineComedia.de@ES" group-title="Germany" tvg-content="Movies",Pluto TV Cine Comedia (Germany)
+https://jmp2.uk/plu-5f1ac8099c49f600076579b2.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCinedeautor.de@ES" tvg-name="Pluto TV Cine de autor" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-de-autor.png" tvg-country="DE" channel-id="PlutoTVCinedeautor.de@ES" group-title="Germany" tvg-content="Movies",Pluto TV Cine de autor
+https://jmp2.uk/plu-60cc807324d60a0007708dc8.m3u8
 #EXTINF:-1 tvg-name="Rakuten TV Action Movies Germany" tvg-country="DE" tvg-language="deu" tvg-content="Movies" group-title="Germany" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/18-028b925b47.png",Rakuten TV Action Movies Germany
 https://284824cf70404fdfb6ddf9349009c710.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6066/master.m3u8
 #EXTINF:-1 tvg-id="custom.rakuten-tv-comedy-movies-germany-de-movie" channel-id="custom.rakuten-tv-comedy-movies-germany-de-movie" tvg-language="deu" tvg-country="DE" tvg-content="Movies" group-title="Germany" tvg-name="Rakuten TV Comedy Movies Germany" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rakuten-tv-comedy-movies-germany-1080p.png",Rakuten TV Comedy Movies Germany
@@ -2074,6 +2092,8 @@ http://stream.mcquack.net/217/index.m3u8
 http://stream.mcquack.net/362/index.m3u8
 #EXTINF:-1 tvg-id="NasheNovoeKino.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nashe-novoe-kino-1486528d18.png" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="Nashe Novoe Kino",Nashe Novoe Kino
 https://stream8.cinerama.uz/1051/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="Ostrosyuzhetnoye.ru@HD" tvg-name="Ostrosyuzhetnoye HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/ostrosyuzhetnoye-hd-1080p.png" tvg-country="RU" channel-id="Ostrosyuzhetnoye.ru@HD" group-title="Russia" tvg-content="Movies",Ostrosyuzhetnoye HD (1080p)
+http://stream.mcquack.net/214/index.m3u8
 #EXTINF:-1 tvg-id="custom.rodnoe-kino-ru-movie" channel-id="custom.rodnoe-kino-ru-movie" tvg-language="rus" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="Rodnoe Kino" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rodnoe-kino-576p.png",Rodnoe Kino
 https://stream8.cinerama.uz/1052/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="RUTV.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ru-tv-1e1acce47e.svg" tvg-country="RU" tvg-content="Music" group-title="Russia" tvg-name="RU.TV",RU.TV
@@ -2206,6 +2226,20 @@ https://jmp2.uk/plu-63047bd6b0726b000795341d.m3u8
 https://jmp2.uk/plu-6728d33f030a2c0008edf4be.m3u8
 #EXTINF:-1 tvg-id="NonStopKungFu.se@DK" tvg-name="NonStop Kung Fu DK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nonstop-kung-fu-dk.png" tvg-country="SE" channel-id="NonStopKungFu.se@DK" group-title="Sweden" tvg-content="Movies",NonStop Kung Fu DK
 https://jmp2.uk/plu-6728d2be529ac9000830dc15.m3u8
+#EXTINF:-1 tvg-id="NonStopKungFu.se@NO" tvg-name="NonStop Kung Fu NO" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nonstop-kung-fu-no.png" tvg-country="SE" channel-id="NonStopKungFu.se@NO" group-title="Sweden" tvg-content="Movies",NonStop Kung Fu NO
+https://jmp2.uk/plu-6728d30cdaad7f000881d979.m3u8
+#EXTINF:-1 tvg-id="PlutoTVAction.se@SE" tvg-name="Pluto TV Action (Sweden)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-action-sweden.png" tvg-country="SE" channel-id="PlutoTVAction.se@SE" group-title="Sweden" tvg-content="Movies",Pluto TV Action (Sweden)
+https://jmp2.uk/plu-61c0b0688a80a4000703fbcb.m3u8
+#EXTINF:-1 tvg-id="PlutoTVAction.se@DK" tvg-name="Pluto TV Action (Sweden) DK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-action-sweden-dk.png" tvg-country="SE" channel-id="PlutoTVAction.se@DK" group-title="Sweden" tvg-content="Movies",Pluto TV Action (Sweden) DK
+https://jmp2.uk/plu-61c095861782bd000780e0ba.m3u8
+#EXTINF:-1 tvg-id="PlutoTVAction.se@NO" tvg-name="Pluto TV Action (Sweden) NO" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-action-sweden-no.png" tvg-country="SE" channel-id="PlutoTVAction.se@NO" group-title="Sweden" tvg-content="Movies",Pluto TV Action (Sweden) NO
+https://jmp2.uk/plu-61c1e270489a9c000874d209.m3u8
+#EXTINF:-1 tvg-id="PlutoTVBudTerence.se@SE" tvg-name="Pluto TV Bud & Terence (Sweden)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-bud-terence-sweden.png" tvg-country="SE" channel-id="PlutoTVBudTerence.se@SE" group-title="Sweden" tvg-content="Movies",Pluto TV Bud & Terence (Sweden)
+https://jmp2.uk/plu-65b917720d9ab4000833f323.m3u8
+#EXTINF:-1 tvg-id="PlutoTVBudTerence.se@DK" tvg-name="Pluto TV Bud & Terence (Sweden) DK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-bud-terence-sweden-dk.png" tvg-country="SE" channel-id="PlutoTVBudTerence.se@DK" group-title="Sweden" tvg-content="Movies",Pluto TV Bud & Terence (Sweden) DK
+https://jmp2.uk/plu-65b915b1dc10a40008d53797.m3u8
+#EXTINF:-1 tvg-id="PlutoTVBudTerence.se@NO" tvg-name="Pluto TV Bud & Terence (Sweden) NO" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-bud-terence-sweden-no.png" tvg-country="SE" channel-id="PlutoTVBudTerence.se@NO" group-title="Sweden" tvg-content="Movies",Pluto TV Bud & Terence (Sweden) NO
+https://jmp2.uk/plu-65b916ec3af63d00084c5841.m3u8
 #EXTINF:-1 tvg-id="DreamTurk.tr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dream-turk-720p.png" tvg-country="TR" tvg-content="Music" group-title="Turkey" tvg-name="Dream Turk",Dream Turk
 https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
 #EXTINF:-1 tvg-id="GEMPixel.tr@SD" tvg-name="GEM Pixel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gem-pixel.png" tvg-country="TR" channel-id="GEMPixel.tr@SD" group-title="Turkey" tvg-content="Movies",GEM Pixel
@@ -2608,8 +2642,46 @@ https://lightning-now70s-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-lightning
 https://lightning-now80s-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-lightning-now80s-rakuten/CDN/playlist.m3u8
 #EXTINF:-1 tvg-id="OuterSphere.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/outersphere.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="OuterSphere",OuterSphere
 https://d3o593mz1glx8d.cloudfront.net/OuterSphere_US.m3u8
+#EXTINF:-1 tvg-id="ParamountMovieChannel.us@SD" tvg-name="Paramount Movie Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/paramount-movie-channel.png" tvg-country="US" channel-id="ParamountMovieChannel.us@SD" group-title="United States" tvg-content="Movies",Paramount Movie Channel
+https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8
 #EXTINF:-1 tvg-id="ParamountNetwork.us@East" channel-id="ParamountNetwork.us@East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/paramount-network-1080p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Paramount Network",Paramount Network
 http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8
+#EXTINF:-1 tvg-id="ParamountPlusPicks.us@SD" tvg-name="Paramount+ Picks" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/paramount-picks.jpg" tvg-country="US" channel-id="ParamountPlusPicks.us@SD" group-title="United States" tvg-content="Movies",Paramount+ Picks
+https://jmp2.uk/plu-5ff8c708653d080007361b14.m3u8
+#EXTINF:-1 tvg-id="PlutoClassicMovieWesterns.us@CA" tvg-name="Pluto Classic Movie Westerns" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-classic-movie-westerns.png" tvg-country="US" channel-id="PlutoClassicMovieWesterns.us@CA" group-title="United States" tvg-content="Movies",Pluto Classic Movie Westerns
+https://jmp2.uk/plu-66dad50215d2c60008d7afbd.m3u8
+#EXTINF:-1 tvg-id="PlutoTVALaMexicana.us@LatAm" tvg-name="Pluto TV A La Mexicana" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-a-la-mexicana.png" tvg-country="US" channel-id="PlutoTVALaMexicana.us@LatAm" group-title="United States" tvg-content="Movies",Pluto TV A La Mexicana
+https://jmp2.uk/plu-5dfcde52d28b09000a42d7a2.m3u8
+#EXTINF:-1 tvg-id="PlutoTVAction.us@US" tvg-name="Pluto TV Action (United States)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-action-united-states.png" tvg-country="US" channel-id="PlutoTVAction.us@US" group-title="United States" tvg-content="Movies",Pluto TV Action (United States)
+https://jmp2.uk/plu-561d7d484dc7c8770484914a.m3u8
+#EXTINF:-1 tvg-id="PlutoTVActionMovies.us@CA" tvg-name="Pluto TV Action Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-action-movies.png" tvg-country="US" channel-id="PlutoTVActionMovies.us@CA" group-title="United States" tvg-content="Movies",Pluto TV Action Movies
+https://jmp2.uk/plu-62ea3c2e4823db00072788ed.m3u8
+#EXTINF:-1 tvg-id="PlutoTVBangBang.us@BR" tvg-name="Pluto TV Bang Bang" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-bang-bang.png" tvg-country="US" channel-id="PlutoTVBangBang.us@BR" group-title="United States" tvg-content="Movies",Pluto TV Bang Bang
+https://jmp2.uk/plu-663b9dc7cb3ea10008f1a0ce.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineAccion.us@LatAm" tvg-name="Pluto TV Cine Accion" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-accion.png" tvg-country="US" channel-id="PlutoTVCineAccion.us@LatAm" group-title="United States" tvg-content="Movies",Pluto TV Cine Accion
+https://jmp2.uk/plu-5dcb62e63d4d8f0009f36881.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineClasico.us@LatAm" tvg-name="Pluto TV Cine Clasico" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-clasico.png" tvg-country="US" channel-id="PlutoTVCineClasico.us@LatAm" group-title="United States" tvg-content="Movies",Pluto TV Cine Clasico
+https://jmp2.uk/plu-609059dc63be6e0007b4eca6.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineClassicos.us@BR" tvg-name="Pluto TV Cine Classicos" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-classicos.png" tvg-country="US" channel-id="PlutoTVCineClassicos.us@BR" group-title="United States" tvg-content="Movies",Pluto TV Cine Classicos
+https://jmp2.uk/plu-5fa1612a669ba0000702017b.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineComedia.us@US" tvg-name="Pluto TV Cine Comedia (United States)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-comedia-united-states.png" tvg-country="US" channel-id="PlutoTVCineComedia.us@US" group-title="United States" tvg-content="Movies",Pluto TV Cine Comedia (United States)
+https://jmp2.uk/plu-5f513564e4622a0007c578c0.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineComedia.us@BR" tvg-name="Pluto TV Cine Comedia (United States) BR" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-comedia-united-states-br.png" tvg-country="US" channel-id="PlutoTVCineComedia.us@BR" group-title="United States" tvg-content="Movies",Pluto TV Cine Comedia (United States) BR
+https://jmp2.uk/plu-5f12101f0b12f00007844c7c.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineComedia.us@LatAm" tvg-name="Pluto TV Cine Comedia (United States) LatAm" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-comedia-united-states-latam.png" tvg-country="US" channel-id="PlutoTVCineComedia.us@LatAm" group-title="United States" tvg-content="Movies",Pluto TV Cine Comedia (United States) LatAm
+https://jmp2.uk/plu-5dcdde78f080d900098550e4.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineComediaRomantica.us@BR" tvg-name="Pluto TV Cine Comedia Romantica" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-comedia-romantica.png" tvg-country="US" channel-id="PlutoTVCineComediaRomantica.us@BR" group-title="United States" tvg-content="Movies",Pluto TV Cine Comedia Romantica
+https://jmp2.uk/plu-62545ed3dab4380007582f7c.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineCrime.us@BR" tvg-name="Pluto TV Cine Crime" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-crime.png" tvg-country="US" channel-id="PlutoTVCineCrime.us@BR" group-title="United States" tvg-content="Movies",Pluto TV Cine Crime
+https://jmp2.uk/plu-6479ff764f5ba5000878dfe2.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineCrimen.us@LatAm" tvg-name="Pluto TV Cine Crimen" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-crimen.png" tvg-country="US" channel-id="PlutoTVCineCrimen.us@LatAm" group-title="United States" tvg-content="Movies",Pluto TV Cine Crimen
+https://jmp2.uk/plu-624af40c004f8000079b784d.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineDrama.us@BR" tvg-name="Pluto TV Cine Drama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-drama.png" tvg-country="US" channel-id="PlutoTVCineDrama.us@BR" group-title="United States" tvg-content="Movies",Pluto TV Cine Drama
+https://jmp2.uk/plu-5f1210d14ae1f80007bafb1d.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineDrama.us@LatAm" tvg-name="Pluto TV Cine Drama LatAm" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-drama-latam.png" tvg-country="US" channel-id="PlutoTVCineDrama.us@LatAm" group-title="United States" tvg-content="Movies",Pluto TV Cine Drama LatAm
+https://jmp2.uk/plu-5dcddfcb229eff00091b6bdf.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineEstelar.us@LatAm" tvg-name="Pluto TV Cine Estelar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-estelar.png" tvg-country="US" channel-id="PlutoTVCineEstelar.us@LatAm" group-title="United States" tvg-content="Movies",Pluto TV Cine Estelar
+https://jmp2.uk/plu-5dcde437229eff00091b6c30.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCineRomance.us@BR" channel-id="PlutoTVCineRomance.us@BR" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-romance.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Pluto TV Cine Romance",Pluto TV Cine Romance
 https://jmp2.uk/plu-5f171f988ab9780007fa95ea.m3u8
 #EXTINF:-1 tvg-id="RJTV.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rjtv-ffd47b2211.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="RJTV",RJTV
@@ -2860,6 +2932,10 @@ https://hls.navahang.live/hls/stream.m3u8
 https://nogoumtv.nrpstream.com/hls/stream.m3u8
 #EXTINF:-1 tvg-id="NorocTV.md@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/noroc-tv-c5ab96fe0c.png" tvg-content="Music" tvg-country="MD" group-title="International" tvg-name="Noroc TV",Noroc TV
 https://media.noroc.tv/noroc/bitrate_1080p.m3u8
+#EXTINF:-1 tvg-id="OSNMoviesAction.ae@SD" tvg-name="OSN Movies Action (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/osn-movies-action-1080p.png" tvg-country="AE" channel-id="OSNMoviesAction.ae@SD" group-title="International" tvg-content="Movies",OSN Movies Action (1080p)
+http://116.90.120.151:8000/play/a0ax/index.m3u8
+#EXTINF:-1 tvg-id="PantallaClasicaEC.ec@SD" tvg-name="Pantalla Clasica EC (512p) [Not 24/7]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pantalla-clasica-ec-512p-not-24-7.jpg" tvg-country="EC" channel-id="PantallaClasicaEC.ec@SD" group-title="International" tvg-content="Movies",Pantalla Clasica EC (512p) [Not 24/7]
+https://live21.bozztv.com/akamaissh101/ssh101/pantallaclasics/playlist.m3u8
 #EXTINF:-1 tvg-id="PlayTV.cm@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/play-tv-cameroon-e5f96f7b9f.png" tvg-country="CM" tvg-content="Music" group-title="International" tvg-name="Play TV (Cameroon)",Play TV (Cameroon)
 http://connectiktv.ddns.net:5000/playtv/@playtv/playlist.m3u8
 #EXTINF:-1 tvg-id="PMC.ae@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pmc-1dac7c86df.png" tvg-country="AE" tvg-content="Music" group-title="International" tvg-name="PMC",PMC
