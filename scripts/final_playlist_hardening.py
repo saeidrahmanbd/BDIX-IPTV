@@ -9,11 +9,11 @@ import json, re, sys, unicodedata
 from country_verification import reference_from_playlists, verify_country
 
 PLAYLIST_ORDERS={
-    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Not Playing','New Channels','New Backup','Backup'],
+    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Not Playing','New Channels','New Backups','Backup'],
 }
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-NON_NUMBERED={'Backup','Not Playing','New Channels','New Backup'}
-REVIEW_GROUPS={'New Channels','New Backup'}
+NON_NUMBERED={'Backup','Not Playing','New Channels','New Backups','New Backup'}
+REVIEW_GROUPS={'New Channels','New Backups','New Backup'}
 PROHIBITED_RELIGIOUS_CHANNELS={
     'angel tv',
     'calvary tv',
