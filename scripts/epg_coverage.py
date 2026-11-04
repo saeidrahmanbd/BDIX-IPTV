@@ -8,6 +8,7 @@ from official_epg_sources import (
     HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes,
     RTV_SOURCE, RTV_CHANNEL_ID, fetch_rtv_programmes,
     BTV_SOURCE, BTV_CHANNEL_ID, fetch_btv_programmes,
+    MAASRANGA_SOURCE, MAASRANGA_CHANNEL_ID, fetch_maasranga_programmes,
 )
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -130,6 +131,7 @@ EPG_LOCKS = {
     # Official broadcaster schedules use exact domestic playlist identities.
     "RTV.bd": ["RTV.bd"],
     "BTVNational.bd": ["BTVNational.bd"],
+    "MaasrangaTV.bd": ["MaasrangaTV.bd"],
 }
 
 REPORT = Path("reports/epg-coverage.md")
@@ -238,6 +240,7 @@ SOURCES = [
     "https://hum.tv/schedule/",
     "https://www.rtvbd.tv/schedule.php",
     "https://migrate.btvlive.gov.bd/channel/BTV",
+    "https://maasranga.tv/full-width/program-time-schedule/",
 ]
 
 
@@ -279,6 +282,8 @@ def source_label(src):
         return PRIVATE_SOURCE_LABEL
     if src == IPTV_ORG_LOCAL_SOURCE:
         return IPTV_ORG_SOURCE_LABEL
+    if src == MAASRANGA_SOURCE:
+        return "Maasranga official weekly schedule"
     return src
 
 
@@ -424,6 +429,21 @@ def fetch_source(url):
             cid = program["channel_id"]
             counts[cid] += 1
             names[norm_name("BTV National")].add(cid)
+            if program["stop_dt"] >= now:
+                future.add(cid)
+        return ids, future, counts, names
+
+    if url == MAASRANGA_SOURCE:
+        programmes = fetch_maasranga_programmes()
+        ids = {MAASRANGA_CHANNEL_ID} if programmes else set()
+        future = set()
+        counts = defaultdict(int)
+        names = defaultdict(set)
+        now = datetime.now(timezone.utc)
+        for program in programmes:
+            cid = program["channel_id"]
+            counts[cid] += 1
+            names[norm_name("Maasranga TV")].add(cid)
             if program["stop_dt"] >= now:
                 future.add(cid)
         return ids, future, counts, names
