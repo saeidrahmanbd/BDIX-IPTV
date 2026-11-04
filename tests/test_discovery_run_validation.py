@@ -100,12 +100,14 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             playlist = root / "International-Playlist.m3u"
             baseline = root / "baseline.m3u"
             report = root / "report.md"
+            (root / "logos").mkdir()
+            (root / "logos" / "world-music.svg").write_text("<svg/>", encoding="utf-8")
             content = (
                 '#EXTM3U\n'
                 '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","New Channels","New Backups","Backup"]\n'
                 '#EXTINF:-1 tvg-name="Bangladesh One" group-title="Bangladesh",Bangladesh One\n'
                 'https://example.org/bangladesh.m3u8\n'
-                '#EXTINF:-1 tvg-name="World Music" tvg-content="Music" group-title="New Channels",World Music\n'
+                '#EXTINF:-1 tvg-name="World Music" tvg-logo="logos/world-music.svg" tvg-content="Music" group-title="New Channels",World Music\n'
                 'https://example.org/world-music.m3u8\n'
                 '#EXTINF:-1 tvg-name="Backup One" group-title="Backup",Backup One\n'
                 'https://example.org/backup.m3u8\n'
@@ -115,9 +117,12 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             report.write_text("# Report\n", encoding="utf-8")
             previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
             os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            old_cwd = Path.cwd()
+            os.chdir(root)
             try:
                 final_mode(str(playlist), str(report), str(baseline), "international")
             finally:
+                os.chdir(old_cwd)
                 if previous is None:
                     os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
                 else:
