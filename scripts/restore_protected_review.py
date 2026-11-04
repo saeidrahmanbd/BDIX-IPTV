@@ -57,7 +57,7 @@ ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports", "Not Playing",
-    "New Channels", "New Backup", "Backup",
+    "New Channels", "New Backups", "Backup",
 ]
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
@@ -567,7 +567,7 @@ def restore() -> None:
 
     # Keep the manually reviewed Not Playing group before the two discovery
     # queues, and keep Backup as the final group in the playlist.
-    queue_groups = {"New Channels", "New Backup"}
+    queue_groups = {"New Channels", "New Backups", "New Backup"}
     active_primary = [
         record for record in active_records if group_of(record[0]) not in queue_groups
     ]
