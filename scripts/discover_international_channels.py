@@ -302,6 +302,8 @@ def primary_target(base,code,country_groups):
  if code=="PK":return "Pakistani"
  if code=="IN":
   if base in {"Indian Bangla","Indian Movies","Indian Music","Indian Entertainment"}:return base
+  if base=="International Movies":return "Indian Movies"
+  if base=="International Music":return "Indian Music"
   return "Indian Entertainment"
  if code in country_groups and country_group(code):return country_group(code)
  return "International"
