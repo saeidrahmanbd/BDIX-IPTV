@@ -190,10 +190,22 @@ The repository's original code and documentation are licensed under the [MIT Lic
 
 ---
 
+<hr>
+
 <p align="center">
-  ⭐ <strong>If you find this project useful, please star the repository.</strong>
+  <strong>⭐ If you find this project useful, please consider starring it on GitHub!</strong>
   <br><br>
-  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV"><strong>github.com/saeidrahmanbd/BDIX-IPTV</strong></a>
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV">
+    <img src="https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?style=for-the-badge&logo=github&color=f5c542"
+         alt="Star BDIX-IPTV on GitHub">
+  </a>
+  <br>
+  <sub>Click the badge to visit the repository, then click GitHub's Star button.</sub>
   <br><br>
-  <sub>Developed and maintained with ❤️ by <a href="https://github.com/saeidrahmanbd"><strong>Saeid Rahman</strong></a></sub>
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV">
+    <strong>github.com/saeidrahmanbd/BDIX-IPTV</strong>
+  </a>
+  <br><br>
+  Developed and maintained with ❤️ by
+  <a href="https://github.com/saeidrahmanbd"><strong>Saeid Rahman</strong></a>
 </p>
