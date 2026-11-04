@@ -517,8 +517,8 @@ MAASRANGA_WEEKDAYS = {
     "thursday": 3, "friday": 4, "saturday": 5,
 }
 MAASRANGA_TIME_RANGE_RE = re.compile(
-    r"^\\s*(\\d{1,2})[:.](\\d{2})\\s*(am|pm)?\\s*[–—-]\\s*"
-    r"(\\d{1,2})[:.](\\d{2})\\s*(am|pm)?\\s*$",
+    r"^\s*(\d{1,2})[:.](\d{2})\s*(am|pm)?\s*[–—-]\s*"
+    r"(\d{1,2})[:.](\d{2})\s*(am|pm)?\s*$",
     re.I,
 )
 MAASRANGA_EMPTY_TITLES = {"", "-", "—", "–", "n/a", "none"}
