@@ -7,7 +7,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from fetch_iptv_org_epg import INACTIVE_GROUPS, load_explicit_epg_mappings, load_locked_epg_mappings
-from generate_epg import playlist_entry_country_code, playlist_id_country_code
+from generate_epg import normalize_country_code, playlist_entry_country_code, playlist_id_country_code
 
 PLAYLISTS = (
     Path("IPTV-Playlist.m3u"),
