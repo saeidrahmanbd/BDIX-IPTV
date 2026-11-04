@@ -12,8 +12,8 @@ LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]
-FORBIDDEN = {"international movies", "international music", "backups", "new backups", "not playing", "test"}
+TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backup"]
+FORBIDDEN = {"international movies", "international music", "backups", "not playing", "test"}
 ATTRIBUTION = [
     "#=================================",
     "# Developed by: SAEID RAHMAN",
@@ -99,13 +99,14 @@ def main():
             # checked against the pre-run snapshot by validate_discovery_run.py; do not
             # block discovery because of an unrelated legacy item such as a radio feed.
             pass
-        if group_key in {"international", "new channels", "new backup"}:
-            content = (a.get("tvg-content") or "").strip().casefold()
-            if content not in {"movies", "music"}:
-                raise SystemExit(f"International entry is not tagged Movies/Music: {name!r} in {group!r}.")
-            target, reason, _ = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
+        if group_key in {"international", "new channels", "new backup", "new backups"}:
+            target, reason, code = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
             if target is None:
-                raise SystemExit(f"Prohibited non-movie/music channel in {group}: {name!r} ({reason or 'not Movies/Music'}).")
+                raise SystemExit(f"Channel violates country/content policy in {group}: {name!r} ({reason or 'not eligible'}).")
+            if code not in {"BD", "IN"}:
+                content = (a.get("tvg-content") or "").strip().casefold()
+                if content not in {"movies", "movie", "music", "musics"}:
+                    raise SystemExit(f"Non-Bangladesh/India review entry is not tagged Movies/Music: {name!r} in {group!r}.")
         if group and group not in group_set:
             group_set.add(group)
             groups_seen.append(group)
@@ -145,7 +146,7 @@ def main():
     if threshold_issues:
         raise SystemExit("Country-group threshold policy failed: " + " | ".join(threshold_issues))
 
-    if registry[-3:] != ["New Channels", "New Backup", "Backup"]:
+    if registry[-3:] != ["New Channels", "New Backups", "Backup"]:
         raise SystemExit("The final categories must be New Channels, New Backup, Backup.")
     dynamic = sorted(group for group in group_set if group not in FIXED and group not in TAIL and group.casefold() != "international")
     international_bucket = ["International"] if any(group.casefold() == "international" for group in group_set) else []
