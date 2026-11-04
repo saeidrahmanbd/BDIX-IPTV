@@ -7,6 +7,7 @@ changed or removed; exact duplicate URLs block the run for manual review.
 from pathlib import Path
 import json, re, sys, unicodedata
 from country_verification import reference_from_playlists, verify_country
+from discover_bd_in_new_queues import prohibited_channel
 
 PLAYLIST_ORDERS={
     'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Not Playing','New Channels','New Backups','Backup'],
@@ -14,20 +15,6 @@ PLAYLIST_ORDERS={
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 NON_NUMBERED={'Backup','Not Playing','New Channels','New Backups'}
 REVIEW_GROUPS={'New Channels','New Backups'}
-PROHIBITED_RELIGIOUS_CHANNELS={
-    'angel tv',
-    'calvary tv',
-    'hosanna tv',
-    'hosanna tv hindi',
-    'prarthana tv',
-    'santvani channel',
-    'sharnam tv',
-    'aaj tak',
-    'gnt',
-    'good news today',
-    'network 10',
-}
-
 def attrs(s): return dict(ATTR.findall(s))
 def key(s):
  s=unicodedata.normalize('NFKD',str(s or '')).casefold().strip()
@@ -66,17 +53,28 @@ def process(path):
  else:
   header_index=next((i+1 for i,line in enumerate(pre) if line.startswith('#EXTM3U')),len(pre))
   pre.insert(header_index,registry_line)
- filtered=[]; removed=[]
+ reference=reference_from_playlists([path])
+ filtered=[]; removed=[]; demoted=[]
  for r in rec:
   a=attrs(r[0]); name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
-  if normalize_name(name) in PROHIBITED_RELIGIOUS_CHANNELS:
-   removed.append(name)
-  else:
-   filtered.append(r)
+  group=a.get('group-title','').strip()
+  verified=verify_country(a,name,reference)
+  if verified.ok and verified.country=='IN':
+   reason=prohibited_channel(a,name,'IN')
+   if reason and group in REVIEW_GROUPS:
+    removed.append((name,reason))
+    continue
+   if reason and group.casefold() not in {'backup','not playing'}:
+    r[0]=set_attr(r[0],'group-title','Backup')
+    demoted.append((name,reason))
+  filtered.append(r)
  rec=filtered
  if removed:
-  print(f'REMOVED PROHIBITED RELIGIOUS CHANNELS: {len(removed)}')
-  for name in removed: print(f'  - {name}')
+  print(f'REMOVED PROHIBITED INDIAN REVIEW-QUEUE ROWS: {len(removed)}')
+  for name,reason in removed: print(f'  - {name}: {reason}')
+ if demoted:
+  print(f'DEMOTED PROHIBITED INDIAN PRIMARY CHANNELS TO BACKUP: {len(demoted)}')
+  for name,reason in demoted: print(f'  - {name}: {reason}')
  seen=set(); duplicate_urls=[]
  for r in rec:
   u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
@@ -86,7 +84,7 @@ def process(path):
  if duplicate_urls:
   raise SystemExit(f'{path}: {len(duplicate_urls)} duplicate stream URL occurrences; refusing to delete any entry.')
  # New Channels/New Backups may hold only candidates verified as BD/IN; normalize tvg-country, never delete.
- reference=reference_from_playlists([path]); country_errors=[]
+ country_errors=[]
  for r in rec:
   a=attrs(r[0])
   if a.get('group-title','').strip() in REVIEW_GROUPS:
