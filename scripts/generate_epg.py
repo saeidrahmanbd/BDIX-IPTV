@@ -871,7 +871,7 @@ def main():
                     start_dt = programme["start_dt"]
                     stop_dt = programme["stop_dt"]
                     attrs = {"channel": schedule_id, "start": start_dt.strftime("%Y%m%d%H%M%S %z"), "stop": stop_dt.strftime("%Y%m%d%H%M%S %z")}
-                    title_elem = ET.Element("title")
+                    title_elem = ET.Element("title", {"lang": "bn"} if src == MAASRANGA_SOURCE else {})
                     title_elem.text = title
                     for target in schedule_targets:
                         channel_attrs = dict(attrs)
