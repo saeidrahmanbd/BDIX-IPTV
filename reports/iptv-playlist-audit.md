@@ -1,29 +1,29 @@
 # IPTV Playlist Audit
-Generated: **2026-11-03T09:36:46.031762+00:00**
-Source playlist SHA-256: **9066c575b7ec57f8cecc46f47ef89584a8b2398c1023122866e72e480bd571ee**
+Generated: **2026-11-04T03:59:51.094526+00:00**
+Source playlist SHA-256: **f5525b8591cc8d59e6d66f26bb068d63e51cf4ae91b6e0f369dc8bf54c0a9ef7**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1090**
-- Unique channel IDs: **741**
+- Playlist entries: **1079**
+- Unique channel IDs: **734**
 - IDs with multiple streams: **198**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-queue same-ID name variants (review): **0**
-- Cross-queue normalized-name/different-ID groups (review): **4**
+- Cross-queue normalized-name/different-ID groups (review): **1**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **7**
-- Missing logos in discovery queues (review only): **2**
+- Logo exceptions requiring repair: **1**
+- Missing logos in discovery queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1090**
+- Logo references checked: **1079**
 - Duplicate primary identities: **0**
-- Potential near-duplicate primary name groups (review only): **0**
+- Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
 - Primary channel-number sequence issues: **0**
 - Primary entries missing channel numbers: **0**
@@ -61,10 +61,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 
 No same-ID label variants found across groups.
 
-- Same normalized name: ATN Bangla [atnbangla.bd] (Backup); ATN Bangla [atnbangla.bd] (Bangladesh); ATN Bangla [atnbangla.bd@sd] (New Backup)
-- Same normalized name: Gyandarshan [gyandarshan.in@hd] (New Backup); Gyandarshan [gyandarshan.in@sd] (New Channels)
-- Same normalized name: History TV18 [historytv18.in@hd] (New Backup); History TV18 [historytv18.in@sd] (Backup); History TV18 [historytv18.in@sd] (Documentary & Wildlife)
-- Same normalized name: Maasranga TV [maasrangatv.bd] (Backup); Maasranga TV [maasrangatv.bd] (Bangladesh); Maasranga TV [maasrangatv.bd@sd] (New Backup)
+- Same normalized name: History TV18 [historytv18.in@hd] (Not Playing); History TV18 [historytv18.in@sd] (Backup); History TV18 [historytv18.in@sd] (Documentary & Wildlife)
 
 ## Duplicate IDs
 
@@ -80,17 +77,16 @@ No same-ID label variants found across groups.
 - 9X Jalwa — Backup — https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
 ### 9xjhakaas.in@sd (2 streams)
 - 9X Jhakaas — Indian Music — https://wiselp.wiseplayout.com/9X_Jhakaas/master.m3u8
-- 9X Jhakaas — New Backup — https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8
+- 9X Jhakaas — Not Playing — https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8
 ### 9xm.in@sd (3 streams)
 - 9XM — Indian Music — https://cc-706183qeo55ez.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-706183qeo55ez/DIYC/PMSL/9X/9XMusic_IN/9XMusic_IN.m3u8
 - 9XM — Backup — https://wiselp.wiseplayout.com/9XM/HD1080/HD1080.m3u8
 - 9XM — Backup — https://wiselp.wiseplayout.com/9XM/master.m3u8
 ### 9xtashan.in@sd (2 streams)
 - 9X Tashan — Indian Music — https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8
-- 9X Tashan — New Backup — https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
-### aakaashaath.in@sd (4 streams)
+- 9X Tashan — Not Playing — https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
+### aakaashaath.in@sd (3 streams)
 - Aakaash Aath — Indian Bangla — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8
-- Aakaash Aath — New Backup — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
 - Aakaash Aath — Backup — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/tracks-v1a1/mono.m3u8
 - Aakaash Aath — Backup — https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/index.m3u8
 ### aamarbangla.in (2 streams)
@@ -103,8 +99,8 @@ No same-ID label variants found across groups.
 - Amar Bangla Digital — Indian Bangla — http://115.187.41.216:8080/hls/amardigital/index.m3u8
 - Amar Bangla Digital — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/amardigital.stream/playlist.m3u8
 ### amc.us (2 streams)
-- AMC — International — http://23.239.31.26:8989/amc/index.m3u8
-- AMC — Backup — https://5def33c73f084e11a19ca77697d6b413.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Plex_AMCPresents/playlist.m3u8
+- AMC — International — https://5def33c73f084e11a19ca77697d6b413.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Plex_AMCPresents/playlist.m3u8
+- AMC — Not Playing — http://23.239.31.26:8989/amc/index.m3u8
 ### amritatv.in@sd (2 streams)
 - Amrita TV — Indian Entertainment — https://ddash74r36xqp.cloudfront.net/master.m3u8
 - Amrita TV — Backup — https://ddash74r36xqp.cloudfront.net/master_2000.m3u8
@@ -187,11 +183,10 @@ No same-ID label variants found across groups.
 - Bhojpuri Cinema — Backup — https://cdn.pishow.tv/ott/live/1033/master.m3u8
 - Bhojpuri Cinema — Backup — https://iptvlive.ahmed-bd-org.workers.dev/bhojpuri-cinema-1/index.m3u8
 - Bhojpuri Cinema — Backup — https://live-bhojpuri.akamaized.net/liveabr/pub-iobhojpuqbu6yj/live_720p/chunks.m3u8
-### bijoytv.bd (4 streams)
+### bijoytv.bd (3 streams)
 - Bijoy TV — Bangladesh — https://tvsen6.aynaott.com/N8Xbo5vdwVU6sF43RsW0/index.m3u8
 - Bijoy TV — Backup — https://drk6xq0vhn.gpcdn.net/live/bijoy_tv_abr/index.m3u8
 - Bijoy TV — Backup — https://stream.ottplus.live/live/bijoy_tv_abr/index.m3u8
-- Bijoy TV — Backup — https://stream.ottplus.live/live/bijoy_tv_abr/live/bijoy_tv_720/chunks.m3u8
 ### boishakhitv.bd (3 streams)
 - Boishakhi TV — Bangladesh — https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8
 - Boishakhi TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-1/index.m3u8
@@ -204,10 +199,9 @@ No same-ID label variants found across groups.
 - Channel 1 — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/playlist.m3u8
 - Channel 1 — Backup — https://drk6xq0vhn.gpcdn.net/live/channel_1_hd_abr/index.m3u8
 - Channel 1 — Backup — https://stream.ottplus.live/live/channel_1_hd_abr/live/channel_1_hd_720/chunks.m3u8
-### channel24.bd (5 streams)
+### channel24.bd (4 streams)
 - Channel 24 — Bangladesh — https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8
 - Channel 24 — Backup — https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/index.m3u8
-- Channel 24 — Backup — https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/live/channel_24_720/chunks.m3u8
 - Channel 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-24-hd-1/index.m3u8
 - Channel 24 — Backup — https://stream.ottplus.live/live/channel_24_abr/index.m3u8
 ### channel52.bd (2 streams)
@@ -233,7 +227,7 @@ No same-ID label variants found across groups.
 - Choppertown — Backup — https://linear-11.frequency.stream/dist/glewedtv/11/hls/master/playlist.m3u8
 ### colors.bangla.in (4 streams)
 - Colors Bangla — Indian Bangla — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8
-- Colors Bangla — Backup — http://103.172.29.30:9991/stream/channelid/1759751142
+- Colors Bangla — Not Playing — http://103.172.29.30:9991/stream/channelid/1759751142
 - Colors Bangla — Backup — https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
 - Colors Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8
 ### colors.in (2 streams)
@@ -244,7 +238,7 @@ No same-ID label variants found across groups.
 - Colors Cineplex [UK] — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8
 ### colorsrishteyamericas.in (2 streams)
 - Colors Rishtey — Indian Entertainment — https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8
-- Colors Rishtey — Backup — http://103.172.29.30:9991/stream/channelid/1367268710
+- Colors Rishtey — Not Playing — http://103.172.29.30:9991/stream/channelid/1367268710
 ### colorstamil.in@sd (2 streams)
 - Colors Tamil — Indian Entertainment — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorstamilhd11.smil/playlist.m3u8
 - Colors Tamil — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorstamilhd11.smil/chunklist_b2628000.m3u8
@@ -276,7 +270,7 @@ No same-ID label variants found across groups.
 - DD Bharati — Backup — https://cdn.pishow.tv/ott/live/10/master.m3u8
 ### ddchandana.in@sd (2 streams)
 - DD Chandana — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/0c980455d2fb4b69bcc6235745ee6039/index.m3u8
-- DD Chandana — Backup — https://cdn.pishow.tv/ott/live/28/master.m3u8
+- DD Chandana — Not Playing — https://cdn.pishow.tv/ott/live/28/master.m3u8
 ### ddindia.in@sd (2 streams)
 - DD India — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/ceda14583477426aa162a65392d8ea07/index.m3u8
 - DD India — Backup — https://mumbai-edge.smartplaytv.in/DDIndia/index.m3u8
@@ -285,7 +279,7 @@ No same-ID label variants found across groups.
 - DD Jharkhand — Backup — https://cdn.pishow.tv/ott/live/1617/master.m3u8
 ### ddkashir.in@sd (2 streams)
 - DD Kashir — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/8a59a828e80c49d0958925950cec0204/index.m3u8
-- DD Kashir — Backup — https://cdn.pishow.tv/ott/live/16/master.m3u8
+- DD Kashir — Not Playing — https://cdn.pishow.tv/ott/live/16/master.m3u8
 ### ddmadhyapradesh.in@sd (3 streams)
 - DD Madhya Pradesh — Indian Entertainment — https://mumbai-edge.smartplaytv.in/ddmadhyapradesh/index.m3u8
 - DD Madhya Pradesh — Backup — https://cdn.pishow.tv/ott/live/31/master.m3u8
@@ -661,15 +655,15 @@ No same-ID label variants found across groups.
 - RT Documentary — Backup — https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8
 ### rtv.bd (7 streams)
 - RTV — Bangladesh — https://tvsen5.aynaott.com/RtvHD/index.m3u8
+- RTV — Not Playing — http://tvsen5.aynascope.net/RtvHD/index.m3u8
 - RTV — Backup — http://116.204.149.16/rtvhd/index.m3u8
 - RTV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8
-- RTV — Backup — http://tvsen5.aynascope.net/RtvHD/index.m3u8
 - RTV — Backup — https://j6nfugukcl.gpcdn.net/tile_6/master.m3u8
 - RTV — Backup — https://tvsen5.aynaott.com/ba47dHpDk3Se/index.m3u8
 - RTV — Backup — https://tvsen6.aynaott.com/rtv/tracks-v1a1/mono.ts.m3u8
 ### rupasibangla.in@sd (4 streams)
 - Ruposhi Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8
-- Ruposhi Bangla — Backup — https://cdn.pishow.tv/ott/live/1039/master.m3u8
+- Ruposhi Bangla — Not Playing — https://cdn.pishow.tv/ott/live/1039/master.m3u8
 - Ruposhi Bangla — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:rupashibangla.smil/playlist.m3u8
 - Ruposhi Bangla — Backup — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/tracks-v1a1/mono.m3u8
 ### sanandatv.in (4 streams)
@@ -704,12 +698,11 @@ No same-ID label variants found across groups.
 ### shubhcinematv.in (2 streams)
 - Shubh Cinema TV — Indian Movies — https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index.m3u8
 - Shubh Cinema TV — Backup — https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index_8.m3u8
-### somoynewstv.bd (5 streams)
+### somoynewstv.bd (4 streams)
 - Somoy TV — Bangladesh — https://tvsen6.aynaott.com/4XcqdovJzbbC9WdJA9gk/index.m3u8
+- Somoy TV — Not Playing — https://tvsen5.aynascope.net/somoytv/mono.m3u8
 - Somoy TV — Backup — https://drk6xq0vhn.gpcdn.net/live/somoy_tv_abr/index.m3u8
-- Somoy TV — Backup — https://drk6xq0vhn.gpcdn.net/live/somoy_tv_abr/live/somoy_tv_720/chunks.m3u8
 - Somoy TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8
-- Somoy TV — Backup — https://tvsen5.aynascope.net/somoytv/mono.m3u8
 ### sony.aath.in (2 streams)
 - Sony Aath — Indian Bangla — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
 - Sony Aath — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
@@ -820,7 +813,9 @@ None.
 
 ## Potential Near-Duplicate Primary Names (Review Only)
 
-None.
+- Discovery [discovery.us] (Documentary & Wildlife); Discovery Channel (India) [discoverychannel.in@sd] (Documentary & Wildlife)
+
+These are review suggestions only. The audit does not merge identities, change channel order, or remove streams.
 
 ## Primary Channel-Number Collisions
 
@@ -828,7 +823,7 @@ None.
 
 ## Primary Channel-Number Sequence
 
-Contiguous numbering verified: 1–680.
+Contiguous numbering verified: 1–683.
 
 ## Malformed EXTINF Entries
 
@@ -862,16 +857,15 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1081**
+- Healthy/local references: **1078**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
 
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
-- **HSTV** [hstv.in@sd]
-- **Vyas Channel** [vyaschannel.in@sd]
-- missing: **9**
+None.
+- missing: **1**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**

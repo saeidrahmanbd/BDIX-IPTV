@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-03T09:37:31+00:00**
+Generated: **2026-11-04T04:00:36+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **9066c575b7ec57f8cecc46f47ef89584a8b2398c1023122866e72e480bd571ee**
-- International-Playlist.m3u SHA-256: **cc183f0ce5b4dc843eaf2a231b62e4c11f0fd4d48341ceb89a189d2374e5c021**
+- IPTV-Playlist.m3u SHA-256: **f5525b8591cc8d59e6d66f26bb068d63e51cf4ae91b6e0f369dc8bf54c0a9ef7**
+- International-Playlist.m3u SHA-256: **8323569d467e288ca7fa7cda014698d9182009da45345456ffb252bf4aa54b6c**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 15 | 0 | 1075 |
-| International-Playlist.m3u | 0 | 819 | 0 | 1948 |
+| IPTV-Playlist.m3u | 0 | 15 | 0 | 1064 |
+| International-Playlist.m3u | 0 | 819 | 0 | 1989 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3023**
+- Logos needing attribution review: **3053**
 - Unofficial fallback logos: **0**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3023 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3053 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
@@ -55,7 +55,6 @@ Showing up to 40 of 3023 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Aaryaa TV | AaryaaTV.in | aaryaa-tv.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | ACCDN | custom.accdn | accdn.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | AccuWeather | custom.accuweather | accuweather.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
@@ -70,6 +69,7 @@ Showing up to 40 of 3023 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | Al Istiqama | AlistiqamaTV.om | al-istiqama.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Al Jazeera | AlJazeera.qa | al-jazeera.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Al Qamar | AlQamarTV.ae | al-qamar.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | Al Quran Al Kareem TV | AlQuranAlKareemTV.sa | al-quran-al-kareem-tv.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 
 ## Shared logo assets across distinct channel identities
 
@@ -77,16 +77,10 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 
 | Local asset | Channel identity | tvg-id |
 |---|---|---|
-| atn-bangla.png | ATN Bangla | ATNBangla.bd |
-| atn-bangla.png | ATN Bangla | ATNBangla.bd@SD |
 | goldmines.png | Goldmines | Goldmines.in@SD |
 | goldmines.png | Goldmines 2 | Goldmines2.in@SD |
-| gyandarshan.png | Gyandarshan | Gyandarshan.in@HD |
-| gyandarshan.png | Gyandarshan | Gyandarshan.in@SD |
 | history-tv18.png | History TV18 | HistoryTV18.in@HD |
 | history-tv18.png | History TV18 | HistoryTV18.in@SD |
-| maasranga-tv.png | Maasranga TV | MaasrangaTV.bd |
-| maasranga-tv.png | Maasranga TV | MaasrangaTV.bd@SD |
 | madani-tv.png | Madani Channel Bangla | MadaniChannelBangla.bd@SD |
 | madani-tv.png | Madani TV | MadaniTV.sa |
 
