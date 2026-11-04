@@ -13,11 +13,12 @@ from datetime import datetime,timezone
 from pathlib import Path
 from logo_asset_naming import is_blocked_logo_basename
 from country_verification import ISO_CODES as ALL_ISO_CODES
+import discover_bd_in_new_queues as bd_discovery
 PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-channel-discovery.md"); LOGOS=Path("logos")
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
 FIXED_GROUPS=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani"]
-TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","New Channels","New Backup","Backup"]
+TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","New Channels","New Backups","Backup"]
 STAGING_GROUPS=set(); LEGACY_GROUPS={"new channels","new backup","new backups","not playing","international","backup","international movies","international music","test"}
 COUNTRY_NAMES={"BD":"Bangladesh","IN":"India","PK":"Pakistan","NP":"Nepal","TH":"Thailand","JP":"Japan","KR":"South Korea","ID":"Indonesia","MY":"Malaysia","PH":"Philippines","VN":"Vietnam","CN":"China","TW":"Taiwan","HK":"Hong Kong","SG":"Singapore","AU":"Australia","NZ":"New Zealand","GB":"United Kingdom","US":"United States","CA":"Canada","MX":"Mexico","BR":"Brazil","AR":"Argentina","CL":"Chile","CO":"Colombia","PE":"Peru","ES":"Spain","PT":"Portugal","FR":"France","DE":"Germany","IT":"Italy","NL":"Netherlands","BE":"Belgium","CH":"Switzerland","AT":"Austria","SE":"Sweden","NO":"Norway","DK":"Denmark","FI":"Finland","IS":"Iceland","IE":"Ireland","PL":"Poland","CZ":"Czech Republic","SK":"Slovakia","HU":"Hungary","RO":"Romania","BG":"Bulgaria","GR":"Greece","TR":"Turkey","RU":"Russia","UA":"Ukraine","IL":"Israel","AE":"United Arab Emirates","SA":"Saudi Arabia","QA":"Qatar","KW":"Kuwait","OM":"Oman","BH":"Bahrain","JO":"Jordan","LB":"Lebanon","EG":"Egypt","MA":"Morocco","DZ":"Algeria","TN":"Tunisia","ZA":"South Africa","NG":"Nigeria","KE":"Kenya","GH":"Ghana","TZ":"Tanzania","UG":"Uganda","ZW":"Zimbabwe","ET":"Ethiopia","LK":"Sri Lanka","MM":"Myanmar","KH":"Cambodia","LA":"Laos","MN":"Mongolia","KZ":"Kazakhstan","UZ":"Uzbekistan","AZ":"Azerbaijan","GE":"Georgia","AM":"Armenia","AL":"Albania","RS":"Serbia","HR":"Croatia","SI":"Slovenia","BA":"Bosnia and Herzegovina","ME":"Montenegro","MK":"North Macedonia","LT":"Lithuania","LV":"Latvia","EE":"Estonia","IR":"Iran","IQ":"Iraq","SY":"Syria","PS":"Palestine","FJ":"Fiji","WS":"Samoa","PG":"Papua New Guinea","BT":"Bhutan","MV":"Maldives","AW":"Aruba","BQ":"Bonaire","BO":"Bolivia","CD":"Congo - Kinshasa","CR":"Costa Rica","CV":"Cabo Verde","CW":"Curaçao","GU":"Guam","GP":"Guadeloupe","GT":"Guatemala","HT":"Haiti","HN":"Honduras","MQ":"Martinique","NA":"Namibia","PA":"Panama","PY":"Paraguay","PR":"Puerto Rico","SX":"Sint Maarten","VE":"Venezuela","CI":"Ivory Coast","TT":"Trinidad and Tobago","UY":"Uruguay","SN":"Senegal","RW":"Rwanda","AO":"Angola","BY":"Belarus","CM":"Cameroon","NI":"Nicaragua","AF":"Afghanistan","LV":"Latvia"}
 ISO_CODES={code.upper() for code in ALL_ISO_CODES}; ALIASES={"UK":"GB","EL":"GR"}; ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -104,56 +105,54 @@ def country_group(code): return COUNTRY_NAMES.get(code,code if code in ISO_CODES
 def policy(a,name,allow_legacy_group=False):
  code=country_code(a)
  group_text=(a.get("group-title") or "").strip().casefold()
- group_key=re.sub(r"[^a-z0-9]+","",group_text)
  group_parts=[re.sub(r"[^a-z0-9]+","",part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
- text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')}"
- if FASHION_RE.search(text) and group_key=="fashiontv": return "Fashion TV",None,code
+ text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
  if BAD_NAME_RE.search(name): return None,"test/VOD/non-TV name",code
  name_key=norm(name)
  if not name or name_key in {"","na","unknown","test","demo","sample","placeholder","newchannel","unnamed","noname","notavailable","channel","tv"}:
   return None,"non-real/test channel",code
 
- # Prohibited channel identities/content always take precedence over genre matches.
- if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
-  return None,"news channel is prohibited",code
- if RELIGIOUS_RE.search(text) or ISLAMIC_RE.search(text) or any(x in group_parts for x in {"religious","religion","faith","devotional"}):
-  return None,"religious channel is prohibited",code
- if KIDS_NAME_RE.search(text) or any(x in group_parts for x in {"kid","kids","children","childrens","child"}):
-  return None,"kids channel is prohibited",code
- if SPORTS_NAME_RE.search(text) or any(x in group_parts for x in {"sport","sports"}):
-  return None,"sports channel is prohibited",code
- if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
-  return None,"documentary/wildlife channel is prohibited",code
- if GENERAL_OUT_OF_SCOPE_RE.search(text): return None,"general entertainment is not a dedicated Movie/Music channel",code
- if SERIES_OUT_OF_SCOPE_RE.search(text): return None,"TV series channel is not a dedicated Movie/Music channel",code
-
- # When the source has a category, it must be explicitly a Movie or Music
- # category. General/Entertainment/unknown category labels are never overridden
- # by a name match. Queue labels are neutral and use the channel identity instead.
- source_category=bool(group_text) and group_key not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_key=="international")
- if source_category and any(
-     part not in MOVIE_CATEGORY_PARTS and part not in MUSIC_CATEGORY_PARTS
-     for part in group_parts
- ):
-  return None,"source category is not Movies or Music",code
-
- content_hint=norm(str(a.get("tvg-content","")))
- movie_match=any(part in MOVIE_CATEGORY_PARTS for part in group_parts) or bool(MOVIE_NAME_RE.search(text)) or content_hint in {"movie","movies","film","films"}
- music_match=any(part in MUSIC_CATEGORY_PARTS for part in group_parts) or bool(MUSIC_NAME_RE.search(text)) or content_hint in {"music","musics"}
- if movie_match and music_match:
-  return None,"ambiguous Movie/Music classification",code
- if not movie_match and not music_match:
-  return None,"channel is not clearly Movies or Music",code
-
- # Keep country-oriented group names for the three established core regions,
- # but only after the content has passed the Movie/Music gate.
- if code=="BD":
-  return "Bangladesh",None,code
- if code=="PK":
-  return "Pakistani",None,code
+ # Bangladesh and India use the same rules as IPTV-Playlist, not the foreign
+ # Movie/Music-only filter. Bangladesh is unrestricted by genre.
+ if code=="BD": return "Bangladesh",None,code
  if code=="IN":
-  return ("Indian Movies" if movie_match else "Indian Music"),None,code
- return ("International Movies" if movie_match else "International Music"),None,code
+  reason=bd_discovery.prohibited_channel(a,name,"IN")
+  if reason: return None,reason,code
+  language=(a.get("tvg-language") or "").casefold()
+  if re.search(r"\b(?:ben|bengali|bangla)\b",language+" "+text,re.I):
+   return "Indian Bangla",None,code
+  content_hint=norm(str(a.get("tvg-content","")))
+  movie=any(part in MOVIE_CATEGORY_PARTS for part in group_parts) or bool(MOVIE_NAME_RE.search(text)) or content_hint in {"movie","movies","film","films"}
+  music=any(part in MUSIC_CATEGORY_PARTS for part in group_parts) or bool(MUSIC_NAME_RE.search(text)) or content_hint in {"music","musics"}
+  if movie and not music: return "Indian Movies",None,code
+  if music and not movie: return "Indian Music",None,code
+  return "Indian Entertainment",None,code
+
+ # All other countries, including Pakistan, are Movies/Music only.
+ if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
+  return None,"news is outside the Movie/Music-only policy",code
+ if RELIGIOUS_RE.search(text) or ISLAMIC_RE.search(text) or any(x in group_parts for x in {"religious","religion","faith","devotional"}):
+  return None,"religious is outside the Movie/Music-only policy",code
+ if KIDS_NAME_RE.search(text) or any(x in group_parts for x in {"kid","kids","children","childrens","child"}):
+  return None,"kids is outside the Movie/Music-only policy",code
+ if SPORTS_NAME_RE.search(text) or any(x in group_parts for x in {"sport","sports"}):
+  return None,"sports is outside the Movie/Music-only policy",code
+ if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
+  return None,"documentary/wildlife is outside the Movie/Music-only policy",code
+ if FASHION_RE.search(text): return None,"fashion is outside the Movie/Music-only policy",code
+ if GENERAL_OUT_OF_SCOPE_RE.search(text): return None,"general entertainment is not a dedicated Movie/Music channel",code
+ if SERIES_OUT_OF_SCOPE_RE.search(text): return None,"TV series is not a dedicated Movie/Music channel",code
+
+ source_category=bool(group_text) and group_text not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_text=="international")
+ if source_category and any(part not in MOVIE_CATEGORY_PARTS and part not in MUSIC_CATEGORY_PARTS for part in group_parts):
+  return None,"source category is not Movies or Music",code
+ content_hint=norm(str(a.get("tvg-content","")))
+ movie=any(part in MOVIE_CATEGORY_PARTS for part in group_parts) or bool(MOVIE_NAME_RE.search(text)) or content_hint in {"movie","movies","film","films"}
+ music=any(part in MUSIC_CATEGORY_PARTS for part in group_parts) or bool(MUSIC_NAME_RE.search(text)) or content_hint in {"music","musics"}
+ if movie and music: return None,"ambiguous Movie/Music classification",code
+ if not movie and not music: return None,"channel is not clearly Movies or Music",code
+ if code=="PK": return "Pakistani",None,code
+ return ("International Movies" if movie else "International Music"),None,code
 
 def safe_url(url):
  try:
@@ -257,18 +256,12 @@ def category_registry(groups):
  return FIXED_GROUPS+countries+(["International"] if has_international else [])+TAIL_GROUPS
 def counts_toward_country_group(group,code):
  group=(group or "").strip().casefold()
- return group in {"new channels","international"} or group==country_group(code).casefold()
+ # New Channels/New Backups are manual-review queues and never count.
+ return group=="international" or group==country_group(code).casefold()
 def promote_qualified_country_candidates(blocks,country_groups):
- """Move queued primary candidates into a country group once five identities qualify."""
- migrated=[]
- for block in blocks:
-  a=attrs(block[0]); old=(a.get("group-title") or "").strip()
-  code=country_code(a)
-  if old.casefold() in {"new channels","international"} and code in country_groups and code not in {"BD","IN","PK"}:
-   target=country_group(code)
-   block[0]=set_attr(block[0],"group-title",target)
-   migrated.append((name_of(block),old,target))
- return migrated
+ """Never promote manually staged New Channels candidates."""
+ return []
+
 def qualified_country_groups(existing_ids, added_ids=None):
  added_ids=added_ids or {}
  groups=set()
@@ -303,14 +296,12 @@ def country_group_threshold_issues(blocks):
  return issues
 
 def primary_target(base,code,country_groups):
- # BD, IN and PK retain their established regional groups. Other countries
- # only receive a dedicated group after the five-channel threshold is met.
+ # Used only when reclassifying legacy curated International rows.
  if code=="BD":return "Bangladesh"
  if code=="PK":return "Pakistani"
  if code=="IN":
-  genre=infer_genre({},base)
-  if not genre:genre="Movies" if "movie" in str(base).casefold() else "Music"
-  return "Indian Movies" if genre=="Movies" else "Indian Music"
+  if base in {"Indian Bangla","Indian Movies","Indian Music","Indian Entertainment"}:return base
+  return "Indian Entertainment"
  if code in country_groups and country_group(code):return country_group(code)
  return "International"
 def existing_international_target(a,name,country_groups):
@@ -358,10 +349,10 @@ def main():
   is_backup=key in planned
   if is_backup:
    if len(backup_rows)>=MAX_NEW_BACKUPS:continue
-   target="New Backup"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
+   target="New Backups"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
   else:
    if len(new_rows)>=MAX_NEW_CHANNELS:continue
-   target=primary_target(base,code,country_groups)
+   target="New Channels"
    if code in ISO_CODES and code not in {"BD","IN","PK"}:
     if per_country[code]>=MAX_NEW_PER_GROUP:continue
     per_country[code]+=1
@@ -389,34 +380,34 @@ def main():
   if not is_new and FASHION_RE.search(name) and old_key not in {"backup","backups","new backup","new backups"}:
    group="Fashion TV"
   elif old_key in {"new backup","new backups"} and not is_new:
-   policy_a=dict(a); policy_a["group-title"]="New Channels"
+   policy_a=dict(a); policy_a["group-title"]="New Backups"
    base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
-   if base is None or not genre:
+   if base is None or (policy_code not in {"BD","IN"} and not genre):
     filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
     continue
-   group="New Backup"
+   group="New Backups"
   elif old_key=="new channels" and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
    base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
-   if base is None or not genre:
-    filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
+   if base is None or (policy_code not in {"BD","IN"} and not genre):
+    filtered_existing.append((name,old,reason or "entry is not confidently classifiable under country policy"))
     continue
-   group=primary_target(base,policy_code,country_groups)
+   group="New Channels"
   elif old_key=="international" and not is_new:
    group,reason,genre=existing_international_target(a,name,country_groups)
    if group is None:
     filtered_existing.append((name,old,reason))
     continue
   elif is_new:
-   policy_a=dict(a); policy_a["group-title"]="New Channels"
+   policy_a=dict(a); policy_a["group-title"]="New Backups" if old_key in {"new backup","new backups"} else "New Channels"
    base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
-   if base is None or not genre:
-    filtered_existing.append((name,old,reason or "new candidate did not pass Movie/Music policy"))
+   if base is None or (policy_code not in {"BD","IN"} and not genre):
+    filtered_existing.append((name,old,reason or "new candidate did not pass country/content policy"))
     continue
-   group="New Backup" if old_key in {"new backup","new backups"} else primary_target(base,policy_code,country_groups)
+   group="New Backups" if old_key in {"new backup","new backups"} else "New Channels"
   else:
    # Preserve unrelated existing entries. Remove only the two exact false
    # positives that this discovery pipeline recently promoted into country
@@ -485,7 +476,7 @@ def main():
  new_rows=[(n,final_group_by_identity.get((norm(n),c or ""),final_group_by_name.get(norm(n),g)),c,u) for n,g,c,u in new_rows]
  REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
   f"- Existing logo references localized/repaired: {logo_refs_repaired}",
-  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.","- New alternate streams are staged in New Backup; curated alternates remain in Backup.","- Only discovery queues are filtered; unrelated entries are preserved, with the five-channel threshold applied to dynamic country groups.","- The workflow probes newly discovered and queued stream URLs after candidate selection; inconclusive primary streams are retained for review and unverified backups are removed.",f"- New primary channels: {len(new_rows)}",f"- New backup review entries: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
+  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Bangladesh channels of all genres are eligible. Indian News, all Religious, Educational and Kids channels are excluded; Indian Sports remain eligible. Every other country is limited to dedicated Movie/Music channels.","- Every new primary candidate remains in New Channels and every alternate stream remains in New Backups for manual review; no automatic promotion occurs.","- Only discovery queues are filtered; unrelated entries are preserved, with the five-channel threshold applied to dynamic country groups.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
  report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Existing discovery-queue entries removed",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  print(f"International discovery complete: new={len(new_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} qualifying_country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())
