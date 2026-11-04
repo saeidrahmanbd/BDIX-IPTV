@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Add conservative EPG mappings from configured additional country feeds.
+"""Add conservative Indian EPG mappings from both maintained playlists.
 
-Only active Indian playlist entries are considered, and a mapping is added or
-extended only when a normalized channel name has exactly one channel ID in a
-source. Existing IDs are preserved and new provider IDs/source URLs are appended.
-Strict identity locks are never modified. This keeps discovery conservative while
-allowing additional feeds to improve already-mapped channels.
+Only active Indian identities are considered, including Indian channels placed
+in the International playlist. A mapping is added or extended only when a
+normalized channel name has exactly one channel ID in a source. Existing IDs
+are preserved and new provider IDs/source URLs are appended. Strict identity
+locks are never modified.
 """
 import csv
 import gzip
@@ -17,7 +17,10 @@ from pathlib import Path
 
 from epg_coverage import EPG_LOCKS
 
-PLAYLIST = Path("IPTV-Playlist.m3u")
+PLAYLISTS = (
+    Path("IPTV-Playlist.m3u"),
+    Path("International-Playlist.m3u"),
+)
 MAPPING = Path("reports/epg-channel-mapping.csv")
 
 # New sources supplied for this repair. US feeds are intentionally omitted here;
@@ -72,22 +75,29 @@ def fetch(url):
 
 def playlist_channels():
     channels = []
-    current = None
-    for line in PLAYLIST.read_text(encoding="utf-8-sig").splitlines():
-        if line.startswith("#EXTINF:"):
-            attrs = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
-            current = {
-                "tvg_id": attrs.get("tvg-id", "").strip(),
-                "name": attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip(),
-                "group": attrs.get("group-title", "").strip(),
-                "country": attrs.get("tvg-country", "").strip().upper(),
-            }
-        elif current and line.strip().startswith(("http://", "https://")):
-            if current["tvg_id"] and current["group"] not in EXCLUDED_GROUPS:
-                is_indian_identity = bool(re.search(r"\.in(?:@|$)", current["tvg_id"], re.I))
-                if current["country"] == "IN" or current["group"] in INDIAN_GROUPS or is_indian_identity:
-                    channels.append(current)
-            current = None
+    seen = set()
+    for playlist in PLAYLISTS:
+        if not playlist.is_file():
+            continue
+        current = None
+        for line in playlist.read_text(encoding="utf-8-sig").splitlines():
+            if line.startswith("#EXTINF:"):
+                attrs = dict(re.findall(r'([\\w-]+)="([^"]*)"', line))
+                current = {
+                    "tvg_id": attrs.get("tvg-id", "").strip(),
+                    "name": attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip(),
+                    "group": attrs.get("group-title", "").strip(),
+                    "country": attrs.get("tvg-country", "").strip().upper(),
+                }
+            elif current and line.strip().startswith(("http://", "https://")):
+                if current["tvg_id"] and current["group"] not in EXCLUDED_GROUPS:
+                    is_indian_identity = bool(re.search(r"\\.in(?:@|$)", current["tvg_id"], re.I))
+                    if current["country"] == "IN" or current["group"] in INDIAN_GROUPS or is_indian_identity:
+                        key = (current["tvg_id"], current["name"])
+                        if key not in seen:
+                            channels.append(current)
+                            seen.add(key)
+                current = None
     return channels
 
 
@@ -183,7 +193,7 @@ def apply_exact_source_matches(rows, channels, source_hits, locked_targets=None)
 
 
 def main():
-    if not PLAYLIST.exists() or not MAPPING.exists():
+    if not any(playlist.exists() for playlist in PLAYLISTS) or not MAPPING.exists():
         print("Additional EPG mapping skipped: playlist or mapping file is missing.")
         return
 
