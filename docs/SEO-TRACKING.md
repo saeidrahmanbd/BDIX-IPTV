@@ -1,114 +1,129 @@
-# BDIX-IPTV Search Visibility & SEO Tracking
+# BDIX-IPTV SEO Audit & Search Visibility
 
-This guide explains how to measure the site's search performance after the three landing pages have been published and indexed.
+This document records the repository's search-engine setup, the public pages intended for indexing, and the off-site actions that help people discover the project. It is an operational checklist, not a claim that the site currently ranks for particular keywords.
 
-## Search Console property
+## Public pages
 
-Use the URL-prefix property:
+The canonical English and Bengali landing pages are:
 
-`https://saeidrahmanbd.github.io/BDIX-IPTV/`
+- [English homepage](https://saeidrahmanbd.github.io/BDIX-IPTV/)
+- [Bangladesh IPTV M3U playlist guide](https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html)
+- [বাংলা IPTV পৃষ্ঠা](https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html)
 
-Open [Google Search Console](https://search.google.com/search-console) and select this property.
+The public sitemap files are:
 
-## 1. Monitor the Search results report
+- [XML sitemap](https://saeidrahmanbd.github.io/BDIX-IPTV/sitemap.xml)
+- [Text sitemap](https://saeidrahmanbd.github.io/BDIX-IPTV/sitemap.txt)
 
-Open **Performance → Search results**.
+Only the three canonical HTML landing pages are listed. Playlist files, generated reports, internal documentation, logos and workflow files are not standalone search landing pages and are not included in the sitemap.
 
-For the first review, select **Last 28 days**. Once enough history has accumulated, compare the latest 28 days with the previous 28 days. Search Console reporting can take time to populate for newly indexed pages, so an initially empty report is not evidence of a technical failure.
+## Implemented on the website and in the repository
 
-Enable these four metrics:
+- Distinct page titles and meta descriptions for the English homepage, English playlist guide and Bengali landing page.
+- Self-referencing canonical URLs and matching Open Graph URLs.
+- Reciprocal English/Bengali language alternates on the English homepage and Bengali page.
+- Open Graph and Twitter sharing metadata with descriptive image alternatives.
+- WebSite, WebPage, CollectionPage and BreadcrumbList structured data where appropriate.
+- Descriptive internal links between the homepage, playlist guide and Bengali page.
+- XML and plain-text sitemaps containing only the canonical public landing pages.
+- An IndexNow key file and GitHub Actions notification workflow for participating search engines when public landing pages change.
+- A GitHub Actions SEO validation workflow that checks titles, descriptions, canonical URLs, indexability, H1 headings, image alt text, local links and sitemap consistency.
 
-- **Total clicks** — visits from Google Search.
-- **Total impressions** — appearances in Google Search results.
-- **Average CTR** — clicks divided by impressions.
-- **Average position** — the average position of the topmost result from this property.
+The project homepage uses a GitHub Pages project URL under the saeidrahmanbd.github.io host and the BDIX-IPTV path. A robots.txt file must be served from the origin's root (https://saeidrahmanbd.github.io/robots.txt), not merely from the repository subdirectory. The repository does not control that origin-root file, so this project does not add a misleading docs/robots.txt. The sitemap can be submitted directly in Search Console and Bing Webmaster Tools.
 
-Review the **Queries** and **Pages** tabs separately. Use **Countries** to check Bangladesh and India, and **Devices** to compare mobile and desktop.
+## Google Search Console
 
-## 2. Query groups to monitor
+A Google site-verification meta tag is already present in the English homepage. Confirm that the matching URL-prefix property is verified in the Google account that owns the site:
 
-These are topic groups to observe in actual Search Console data, not claims that the site currently ranks for them. Use the queries Google reports; do not add a phrase to a page simply because it appears in this list.
+https://saeidrahmanbd.github.io/BDIX-IPTV/
 
-| Topic group | Example searches |
+Then:
+
+1. Open [Google Search Console](https://search.google.com/search-console).
+2. Select the exact URL-prefix property above.
+3. Open **Sitemaps** and submit sitemap.xml (the URL is https://saeidrahmanbd.github.io/BDIX-IPTV/sitemap.xml).
+4. Use **URL Inspection** for the homepage, playlist guide and Bengali page. Check the indexed canonical URL, last crawl and any page indexing issue.
+5. Use **Performance → Search results** to compare clicks, impressions, CTR and average position over 28-day periods.
+6. Review **Queries**, **Pages**, **Countries** and **Devices** separately. Prioritize Bangladesh and India, and compare desktop with mobile.
+7. Request indexing after meaningful page changes only. Repeatedly submitting an unchanged URL does not make Google crawl it faster.
+
+Google treats sitemap submission as a discovery hint, not a guarantee of crawling or indexing. Search Console is the authoritative place to inspect Google's actual status for this property.
+
+## Bing and other IndexNow participants
+
+The repository includes an IndexNow workflow. When one of the public landing pages or the XML sitemap changes on main, GitHub Actions checks that the public verification-key file is reachable and submits the three canonical page URLs to IndexNow.
+
+- [Bing Webmaster Tools](https://www.bing.com/webmasters/about)
+- [Bing URL Inspection](https://www.bing.com/webmasters/help/URL-Inspection-55a30305)
+- [Bing Sitemaps](https://www2.bing.com/webmasters/help/sitemaps-3b5cf6ed)
+- [IndexNow protocol and FAQ](https://www.indexnow.org/faq)
+
+If you already have a verified Google Search Console property, Bing can import that site and its sitemap after you authorize the connection. Otherwise, add and verify the GitHub Pages URL-prefix property in Bing manually, then submit sitemap.xml.
+
+IndexNow notifies participating search engines about URL additions, updates and removals. It is not a Google indexing mechanism; Google does not currently participate in IndexNow. Continue using Google's sitemap and Search Console tools for Google.
+
+## GitHub repository discoverability
+
+The repository's GitHub description, topics, homepage field and README are also discovery surfaces. The current repository already has a homepage URL and relevant topics such as bangladesh-iptv, bangla-iptv, bdix-iptv, iptv-m3u, iptv-m3u8, iptv-playlist and epg.
+
+Suggested repository description for GitHub's **About** panel:
+
+> Bangladesh and India IPTV M3U/M3U8 playlists, Bangla TV channels, international movie and music collections, XMLTV EPG and channel logos.
+
+Suggested topic additions or replacements, keeping GitHub's topic limit in mind:
+
+- international-iptv
+- xmltv
+- bangla-tv
+- bangladesh-iptv
+- iptv-m3u
+- iptv-m3u8
+
+The available GitHub connector can update repository files but does not expose the repository About/topics editor. The description and topic suggestions above therefore still need to be applied in **GitHub → BDIX-IPTV → About → Edit repository details**.
+
+## Off-site discovery and backlinks
+
+External links from relevant pages help people discover the project and help search engines find its public pages. Focus on genuine relevance rather than bulk link submissions.
+
+Recommended actions:
+
+1. Keep the repository's website field pointed to the English homepage (already configured).
+2. Keep the English homepage, Bengali landing page and playlist guide linked from the root README (already present).
+3. Add the project website link to relevant personal or project profile descriptions that you control, including your Facebook profile if appropriate.
+4. When sharing the project in IPTV or Bangla-tech communities, provide a useful explanation and link to the playlist guide rather than posting repeated promotional links.
+5. Invite genuine references from relevant blogs, app guides or community resource pages when the project is useful to their readers. Avoid paid link schemes, automated comment links and unrelated directory submissions.
+6. Keep the public project description consistent across GitHub and social profiles: Bangladesh and India M3U/M3U8 playlists, Bangla TV, international movie/music channels and XMLTV EPG.
+
+External social posts, directory submissions and other account-level changes are not performed by repository workflows. Publish them only from accounts you control and follow each community's posting rules.
+
+## Search topics to measure
+
+These are query themes to observe in actual search reports; they are not claims that the site currently ranks for them.
+
+| Search theme | Example searches |
 |---|---|
-| Bangladeshi IPTV | `Bangladeshi IPTV`, `Bangladesh IPTV`, `BDIX IPTV` |
-| Bangla IPTV | `Bangla IPTV`, `Bangla TV`, `Bangla IPTV M3U` |
-| Playlist format | `Bangladesh IPTV M3U`, `M3U playlist Bangladesh` |
-| International list | `International IPTV M3U`, `movie music IPTV playlist` |
-| Bengali-language queries | `বাংলাদেশি আইপিটিভি`, `বাংলা আইপিটিভি`, `বাংলা টিভি প্লেলিস্ট` |
+| Bangladesh IPTV | Bangladesh IPTV, Bangladeshi IPTV, BDIX IPTV |
+| Bangla TV | Bangla TV channels, Bangla IPTV, বাংলা টিভি চ্যানেল |
+| M3U playlists | Bangladesh IPTV M3U, Bangla IPTV M3U playlist, M3U playlist Bangladesh |
+| India collection | India IPTV M3U, Indian Bangla TV playlist |
+| International collection | International IPTV M3U, international movie and music channels |
+| Bengali-language discovery | বাংলাদেশি IPTV, বাংলা IPTV M3U, বাংলা টিভি প্লেলিস্ট |
 
-## 3. Review the three landing pages
+Use Search Console data to decide which topics merit clearer explanations. Do not repeat search phrases unnaturally or add content that does not help a visitor.
 
-Use the **Pages** tab to inspect each URL independently:
+## Review schedule
 
-- `https://saeidrahmanbd.github.io/BDIX-IPTV/`
-- `https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html`
-- `https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html`
-
-Look for:
-- Pages receiving impressions but few clicks. Review the title and description for clarity and relevance.
-- Queries that are relevant but lead to the wrong page. Improve internal links and page explanations.
-- Pages with no impressions after a meaningful observation period. Recheck indexing, content usefulness, canonical URL and internal links.
-- Queries that are unrelated to the actual project. Do not add irrelevant content to chase them.
-
-Do not treat average position as a guaranteed ranking for every searcher. Results vary by query, location, device and time.
-
-## 4. Indexing and sitemap checks
-
-Open **Indexing → Pages** to review indexed and excluded URLs. Use URL Inspection for a specific page when a status needs investigation.
-
-The current sitemap files are:
-- `/sitemap.xml`
-- `/sitemap.txt`
-
-A sitemap submission error should be investigated separately from the index status of an individual page. Search Console can index a page discovered through links or other sources even when no referring sitemap is reported.
-
-Avoid repeatedly requesting indexing for unchanged URLs. A request does not guarantee or force indexing.
-
-## 5. Practical review cadence
-
-| When | Review |
+| Frequency | Review |
 |---|---|
-| After the first 2–4 weeks of meaningful search data | First baseline: queries, pages, impressions, clicks and CTR |
-| Monthly | Compare the latest 28 days with the previous 28 days |
-| After a major page update | Inspect the changed URL and request recrawl only when useful |
-| Quarterly | Review whether page content still matches the playlist rules and user needs |
-
-## 6. What to export for an SEO review
-
-In Search Console, export the Search results report with:
-- Date
-- Query
-- Page
-- Country
-- Device
-- Clicks
-- Impressions
-- CTR
-- Position
-
-Share that export for a data-based review. It can show which real searches are generating visibility and which landing pages need improvement.
+| Monthly | Compare Search Console clicks, impressions, CTR and queries for the last 28 days against the previous 28 days. |
+| Monthly | Check Bing Webmaster Tools indexing and sitemap status. |
+| After meaningful page changes | Check the URL in Search Console and confirm the IndexNow workflow completed successfully. |
+| Quarterly | Review titles, descriptions, language alternates, public links, page usefulness and the repository About details. |
 
 ## Measurement limits
 
-Search Console reports Google Search performance; it does not measure every search engine, private browsing query, playlist playback or channel viewing. Some queries are anonymized or omitted for privacy. A click to a playlist M3U file is not proof that a channel played successfully.
-
-SEO changes can improve clarity and crawlability, but no title, keyword, schema type or sitemap can guarantee a particular ranking or a Google AI Overview citation.
-
-## 7. Add Bing Webmaster Tools
-
-Google indexing does not automatically confirm Bing indexing. Register the same project URL in [Bing Webmaster Tools](https://www.bing.com/webmasters/about).
-
-The simplest route is to import the verified Google Search Console property:
-
-1. Sign in to Bing Webmaster Tools with a Microsoft account.
-2. Choose **Import from Google Search Console**.
-3. Authorize the Google account that owns the verified `https://saeidrahmanbd.github.io/BDIX-IPTV/` property.
-4. Select that URL-prefix property and complete the import.
-5. Open the imported site in Bing Webmaster Tools and inspect the homepage, playlist guide and Bengali page.
-6. Review **Search Performance**, **URL Inspection** and **Sitemaps** after Bing has collected data.
-
-Bing documents the Search Console import option and automatic verification for successfully imported sites. It also supports XML and plain-text sitemap formats. See [Add and verify a site](https://www2.bing.com/webmasters/help/add-and-verify-site-12184f8b) and [Bing Sitemaps](https://www2.bing.com/webmasters/help/sitemaps-3b5cf6ed).
-
-Do not assume a Google sitemap error will be resolved by Bing. Check Bing's own processing status and discovered URL count.
-
+- Search engines decide whether and when to crawl, index and rank pages. Sitemap submissions and IndexNow notifications do not guarantee inclusion.
+- Search Console measures Google Search performance, not all search engines or actual IPTV viewing.
+- A click on an M3U URL does not prove that a stream played.
+- Public search-result spot checks are not a substitute for Search Console or Bing Webmaster Tools indexing reports.
+- No README, keyword, structured-data block or backlink guarantees a ranking position or AI Overview citation.
