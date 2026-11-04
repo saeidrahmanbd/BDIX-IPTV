@@ -428,6 +428,9 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(al["Hungama.in@SD"], ["143150"])
         self.assertEqual(al["ZBMusic.in@HD"], ["jtv3319"])
         self.assertEqual(al["DeenTV.uk"], ["1235", "DeenTV.uk"])
+        self.assertEqual(al["Cinemax.cz@Czechia"], ["Cinemax.cz"])
+        self.assertEqual(al["History.cz@SD"], ["History.Channel.cz"])
+        self.assertEqual(al["WeatherSpy.in@SD"], ["INBA5100028R4"])
         self.assertNotIn("ZBBhakti.in@HD", al)
 
     def test_m3u4u_exact_ids_are_enabled_without_weakening_bangladesh_matching(self):
