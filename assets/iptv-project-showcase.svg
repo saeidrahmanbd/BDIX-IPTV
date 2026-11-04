@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
-<title id="title">My IPTV Playlist Project on GitHub</title>
-<desc id="desc">A visual overview of the two maintained repository playlist files: IPTV and International. Automated EPG and quality workflows cover both playlists.</desc>
+<title id="title">BDIX IPTV Playlist for Bangladesh and India</title>
+<desc id="desc">BDIX-IPTV project showcase: Bangladeshi IPTV and Bangla M3U playlists for Bangladesh and India, an international movie and music playlist, XMLTV EPG and automated quality checks.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07152f"/><stop offset=".53" stop-color="#101c3d"/><stop offset="1" stop-color="#07111f"/></linearGradient>
   <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#50e3ff"/><stop offset="1" stop-color="#247bff"/></linearGradient>
@@ -18,12 +18,12 @@
 <g transform="translate(82 60)">
   <rect width="312" height="42" rx="21" fill="#15284b" stroke="#38537e"/>
   <circle cx="23" cy="21" r="6" fill="#54e7b2"/>
-  <text x="42" y="27" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="2.2" fill="#c6d7f4">PERSONAL GITHUB PROJECT</text>
+  <text x="42" y="27" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="2.2" fill="#c6d7f4">BANGLADESH • INDIA • INTERNATIONAL</text>
 </g>
 <g transform="translate(82 150)">
-  <text x="0" y="0" font-family="Arial,Helvetica,sans-serif" font-size="66" font-weight="800" fill="#ffffff">My IPTV Playlist</text>
-  <text x="0" y="76" font-family="Arial,Helvetica,sans-serif" font-size="66" font-weight="800" fill="url(#cyan)">Project</text>
-  <text x="2" y="126" font-family="Arial,Helvetica,sans-serif" font-size="23" fill="#b8c8e6">Organizing channels. Improving metadata. Maintaining a better guide.</text>
+  <text x="0" y="0" font-family="Arial,Helvetica,sans-serif" font-size="66" font-weight="800" fill="#ffffff">BDIX IPTV Playlist</text>
+  <text x="0" y="76" font-family="Arial,Helvetica,sans-serif" font-size="66" font-weight="800" fill="url(#cyan)">Bangladesh &amp; India</text>
+  <text x="2" y="126" font-family="Arial,Helvetica,sans-serif" font-size="23" fill="#b8c8e6">Bangladeshi IPTV and Bangla M3U playlists · International movies and music · XMLTV EPG.</text>
 </g>
 
 <g transform="translate(82 385)" filter="url(#shadow)">
