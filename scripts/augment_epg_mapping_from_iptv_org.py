@@ -48,7 +48,7 @@ def playlist_channels():
         current = None
         for line in playlist.read_text(encoding="utf-8-sig").splitlines():
             if line.startswith("#EXTINF:"):
-                attrs = dict(re.findall(r'([\\w-]+)="([^"]*)"', line))
+                attrs = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
                 tvg_id = attrs.get("tvg-id", "").strip()
                 name = attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip()
                 group = attrs.get("group-title", "").strip()
