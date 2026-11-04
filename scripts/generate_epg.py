@@ -359,7 +359,7 @@ def source_label(src):
     if src == os.environ.get(PRIVATE_SOURCE_ENV, "").strip():
         return PRIVATE_SOURCE_LABEL
     if src == MAASRANGA_SOURCE:
-        return "Maasranga official weekly schedule"
+        return "Maasranga official weekly grid (undated)"
     return src
 
 CHANNEL_TIME_OFFSETS = {
