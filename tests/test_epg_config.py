@@ -198,6 +198,41 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(programmes[0]["channel_id"], "BTVNational.bd")
         self.assertEqual(programmes[0]["title"], "পরীক্ষামূলক অনুষ্ঠান 0")
 
+
+    def test_maasranga_official_weekly_schedule_parses_bengali_titles_and_midnight(self):
+        days = ["রবিবার", "সোমবার", "মঙ্গলবার", "বুধবার", "বৃহস্পতিবার", "শুক্রবার", "শনিবার"]
+        rows = [
+            ("07:00am – 09:00", "রাঙা সকাল"),
+            ("09:00am – 12:00pm", "বাংলা চলচ্চিত্র"),
+            ("12:00pm – 12:10pm", "মাছরাঙা সংবাদ"),
+            ("04:30pm – 05:00", "নিনজা হাতোরি"),
+            ("11:30pm – 12.00", "বিজনেস রিপোর্ট"),
+        ]
+        table = ["<table><tr><th>সময়</th>" + "".join(f"<th>{day}</th>" for day in days) + "</tr>"]
+        for time_range, title in rows:
+            table.append(
+                "<tr><td>" + time_range + "</td>"
+                + "".join(f"<td>{title}</td>" for _ in days)
+                + "</tr>"
+            )
+        table.append("</table>")
+        html = "".join(table)
+        with patch.object(
+            official_epg_sources.urllib.request,
+            "urlopen",
+            return_value=io.BytesIO(html.encode("utf-8")),
+        ):
+            programmes = official_epg_sources.fetch_maasranga_programmes(
+                datetime(2026, 11, 4, 0, 0, tzinfo=timezone.utc)
+            )
+        self.assertGreaterEqual(len(programmes), 30)
+        self.assertTrue(all(p["channel_id"] == "MaasrangaTV.bd" for p in programmes))
+        morning = next(p for p in programmes if p["title"] == "রাঙা সকাল")
+        self.assertEqual(morning["start_dt"], datetime(2026, 11, 4, 1, 0, tzinfo=timezone.utc))
+        midnight = next(p for p in programmes if p["title"] == "বিজনেস রিপোর্ট")
+        self.assertEqual(midnight["start_dt"], datetime(2026, 11, 4, 17, 30, tzinfo=timezone.utc))
+        self.assertEqual(midnight["stop_dt"], datetime(2026, 11, 4, 18, 0, tzinfo=timezone.utc))
+
     def test_source_audit_is_staged_by_refresh_workflow(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("reports/epg-source-audit.md", workflow)
@@ -414,6 +449,9 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn(official_epg_sources.BTV_SOURCE, coverage_sources)
         self.assertIn(official_epg_sources.BTV_SOURCE, generator_sources)
         self.assertEqual(literal(COV, "EPG_LOCKS")["BTVNational.bd"], ["BTVNational.bd"])
+        self.assertIn(official_epg_sources.MAASRANGA_SOURCE, coverage_sources)
+        self.assertIn(official_epg_sources.MAASRANGA_SOURCE, generator_sources)
+        self.assertEqual(literal(COV, "EPG_LOCKS")["MaasrangaTV.bd"], ["MaasrangaTV.bd"])
 
     def test_epg_source_list_has_no_hardcoded_provider_ban(self):
         coverage_sources = literal(COV, "SOURCES")
