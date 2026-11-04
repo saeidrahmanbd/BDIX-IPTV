@@ -60,7 +60,7 @@ The repository includes an IndexNow workflow. When one of the public landing pag
 
 If you already have a verified Google Search Console property, Bing can import that site and its sitemap after you authorize the connection. Otherwise, add and verify the GitHub Pages URL-prefix property in Bing manually, then submit sitemap.xml.
 
-The latest repository workflow run received HTTP 202 from IndexNow. Under the protocol, HTTP 202 means the URL notification was received while key validation is pending; it is not proof that a search engine crawled or indexed the pages. Confirm processing in Bing Webmaster Tools under the IndexNow report. HTTP 200 is the protocol's successful-submission response. IndexNow notifies participating search engines about URL additions, updates and removals. It is not a Google indexing mechanism; Google does not currently participate in IndexNow. Continue using Google's sitemap and Search Console tools for Google.
+An initial repository workflow run received HTTP 202 from IndexNow, which means the URL notification was received while key validation was pending. After correcting the workflow status handling, the latest run returned HTTP 200, the protocol's successful-submission response. Neither response proves that a search engine crawled or indexed the pages; confirm processing in Bing Webmaster Tools under the IndexNow report. IndexNow notifies participating search engines about URL additions, updates and removals. It is not a Google indexing mechanism; Google does not currently participate in IndexNow. Continue using Google's sitemap and Search Console tools for Google.
 
 ## GitHub repository discoverability
 
