@@ -13,7 +13,7 @@ LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backup"]
+TAIL = ["Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backup"]
 FORBIDDEN = {"international movies", "international music", "backups", "new backups", "not playing", "test"}
 ATTRIBUTION = [
     "#=================================",
@@ -92,10 +92,7 @@ def main():
         code = country_group_labels.get(group_key)
         if code is None:
             code = discovery.country_code(a)
-        if group_key == "fashion tv":
-            if not discovery.FASHION_RE.search(name):
-                raise SystemExit(f"Invalid Fashion TV exception entry: {name!r}.")
-        elif group_key in country_group_labels or group_key == "pakistani":
+        if group_key in country_group_labels or group_key == "pakistani":
             # Preserve legacy country-group entries. New additions to these groups are
             # checked against the pre-run snapshot by validate_discovery_run.py; do not
             # block discovery because of an unrelated legacy item such as a radio feed.
@@ -151,8 +148,8 @@ def main():
     if threshold_issues:
         raise SystemExit("Country-group threshold policy failed: " + " | ".join(threshold_issues))
 
-    if registry[-3:] != ["New Channels", "New Backup", "Backup"]:
-        raise SystemExit("The final categories must be New Channels, New Backup, Backup.")
+    if registry[-3:] != ["New Channels", "New Backups", "Backup"]:
+        raise SystemExit("The final categories must be New Channels, New Backups, Backup.")
     dynamic = sorted(group for group in group_set if group not in FIXED and group not in TAIL and group.casefold() != "international")
     international_bucket = ["International"] if any(group.casefold() == "international" for group in group_set) else []
     expected_registry = FIXED + dynamic + international_bucket + TAIL
