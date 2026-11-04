@@ -286,7 +286,7 @@ def source_label(src):
     if src == IPTV_ORG_LOCAL_SOURCE:
         return IPTV_ORG_SOURCE_LABEL
     if src == MAASRANGA_SOURCE:
-        return "Maasranga official weekly schedule"
+        return "Maasranga official weekly grid (undated)"
     return src
 
 
