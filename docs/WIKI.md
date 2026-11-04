@@ -5,11 +5,12 @@ The root [README.md](../README.md) is the canonical project overview, playlist c
 ## Playlist and discovery policy
 
 - Two maintained playlists: [IPTV](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) and [International](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u).
-- International country groups are for movie/music channels. Documentary & Wildlife, Kids, Sports, Religious, Adult, and the explicit Fashion TV exception remain in dedicated groups.
-- Discovery queues are restricted to verified Bangladesh/India candidates. Bangladeshi news is allowed; Indian News and non-Islamic religious channels are prohibited; Indian Kids/Sports and Islamic religious channels are allowed.
+- `IPTV-Playlist.m3u` accepts only Bangladesh and India channels. Bangladesh follows its existing policy. Indian News, all Religious channels (including Islamic), Educational and Kids channels are prohibited; Indian Sports channels remain allowed.
+- `International-Playlist.m3u` applies the same Bangladesh/India policy. Every other country, including Pakistan, is limited to dedicated Movie and Music channels; news, religious, educational, kids, sports, documentary/wildlife and general-entertainment channels are out of scope.
+- `New Channels` and `New Backups` are manual-review queues in both playlists. First streams for newly discovered channels go in `New Channels`; alternate streams go in `New Backups`. Neither queue is promoted automatically, and queue entries do not count toward the five-channel country-group threshold.
 - **Permanent denylist:** E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
-- **Country-group threshold:** A country outside Bangladesh, India and Pakistan receives a dedicated group only when it has at least **five unique primary channel names** across eligible Movies/Music entries. Countries with 1–4 unique channels stay in `International`; when the fifth unique channel is added, all eligible channels from that country are promoted automatically. Alternate stream URLs, duplicate names and `Backup`/review-queue rows do not count toward the threshold. The dedicated thematic groups remain separate and are never counted.
-- `New Channels`, `New Backup`, `Backup` and `Not Playing` have separate purposes. The main Xtream worker excludes `Test`, `Not Playing`, and the new discovery queues from service output.
+- **Country-group threshold:** A country outside Bangladesh, India and Pakistan receives a dedicated group only when it has at least **five unique curated primary channel names** across eligible Movies/Music entries. Countries with 1–4 curated unique channels stay in `International`; when the fifth unique channel is present, eligible curated channels from that country are grouped together. Alternate stream URLs, duplicate names and `Backup`/review-queue rows do not count toward the threshold. The dedicated thematic groups remain separate and are never counted.
+- `New Channels`, `New Backups`, `Backup` and `Not Playing` have separate purposes. The main Xtream worker excludes `Test`, `Not Playing`, and the new discovery queues from service output.
 
 ## Metadata and logos
 
