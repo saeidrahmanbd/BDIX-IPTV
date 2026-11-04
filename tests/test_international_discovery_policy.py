@@ -171,11 +171,23 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertIsNone(self.classify("Hope Channel PROYECTO JA", "Music", "US", "HopeChannel.us")[0])
         self.assertIsNone(self.classify("Canal Cine Dios", "Movies", "CO", "CanalCineDios.co")[0])
 
-    def test_unknown_and_generic_channels_are_rejected(self):
-        for country in ("BD", "IN", "PK", "US", None):
+    def test_generic_genre_policy_has_bangladesh_and_india_exceptions(self):
+        for name, group, tvg_id in (
+            ("Entertainment World", "General", "EntertainmentWorld.bd"),
+            ("World Channel", "", "WorldChannel.bd"),
+        ):
+            with self.subTest(country="BD", name=name):
+                self.assertEqual(self.classify(name, group, "BD", tvg_id)[0], "Bangladesh")
+        for name, group, tvg_id in (
+            ("Entertainment World", "General", "EntertainmentWorld.in"),
+            ("World Channel", "", "WorldChannel.in"),
+        ):
+            with self.subTest(country="IN", name=name):
+                self.assertEqual(self.classify(name, group, "IN", tvg_id)[0], "Indian Entertainment")
+        for country, tvg_id in (("PK", "EntertainmentWorld.pk"), ("US", "EntertainmentWorld.us"), (None, "EntertainmentWorld.us")):
             with self.subTest(country=country):
-                self.assertIsNone(self.classify("Entertainment World", "General", country, "EntertainmentWorld")[0])
-                self.assertIsNone(self.classify("World Channel", "", country, "WorldChannel")[0])
+                self.assertIsNone(self.classify("Entertainment World", "General", country, tvg_id)[0])
+                self.assertIsNone(self.classify("World Channel", "", country, tvg_id)[0])
 
     def test_five_channel_country_threshold_is_retained(self):
         self.assertEqual(discovery.COUNTRY_THRESHOLD, 5)
@@ -217,27 +229,19 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertIsNone(target)
         self.assertIn("test/VOD/non-TV name", reason)
 
-    def test_qualified_country_promotes_queued_candidates_at_five_identity_threshold(self):
+    def test_qualified_country_never_promotes_manual_review_candidates(self):
         blocks = [
             [
-                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="International",Channel {i}',
+                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="New Channels",Channel {i}',
                 f"https://example.org/channel{i}.m3u8",
             ]
             for i in range(5)
         ]
+        before = [block[0] for block in blocks]
         migrations = discovery.promote_qualified_country_candidates(blocks, {"MK"})
-        self.assertEqual(len(migrations), 5)
-        self.assertTrue(all('group-title="North Macedonia"' in block[0] for block in blocks))
-
-        below_threshold = [
-            [
-                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="International",Channel {i}',
-                f"https://example.org/below{i}.m3u8",
-            ]
-            for i in range(4)
-        ]
-        self.assertEqual(discovery.promote_qualified_country_candidates(below_threshold, set()), [])
-        self.assertTrue(all('group-title="International"' in block[0] for block in below_threshold))
+        self.assertEqual(migrations, [])
+        self.assertEqual([block[0] for block in blocks], before)
+        self.assertTrue(all('group-title="New Channels"' in block[0] for block in blocks))
 
     def test_duplicate_queue_urls_are_removed_but_primary_entries_are_preserved(self):
         url_a = "https://example.org/epic-music.m3u8"
