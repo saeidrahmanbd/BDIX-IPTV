@@ -157,12 +157,12 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, group, country, tvg_id)[0])
 
-    def test_hope_channel_is_rejected_by_playlist_reorganizer(self):
+    def test_non_movie_music_foreign_religious_channel_is_demoted_from_primary_group(self):
         source = '#EXTINF:-1 tvg-id="custom.hope-channel-proyecto-ja-cr-music" tvg-content="Music" group-title="Costa Rica" tvg-name="Hope Channel PROYECTO JA",Hope Channel PROYECTO JA'
         attrs = reorg.attrs(source)
         self.assertEqual(
             reorg.classify(attrs, "Hope Channel PROYECTO JA", "Costa Rica", "CR"),
-            (None, None, "non-Islamic religious"),
+            ("Backup", None, None),
         )
     def test_radio_brands_and_religious_movie_music_false_positives_are_rejected(self):
         for name in ("Hitradio O3", "Bel RTL", "Couleur 3", "Joe FM", "Fame95 FM"):
