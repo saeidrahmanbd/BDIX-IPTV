@@ -8,6 +8,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import generate_epg
 import epg_coverage
 import official_epg_sources
+import augment_epg_mapping_from_additional_sources as additional_augment
+import augment_epg_mapping_from_iptv_org as iptv_org_augment
 
 COV = (ROOT / "scripts" / "epg_coverage.py").read_text(encoding="utf-8")
 GEN = (ROOT / "scripts" / "generate_epg.py").read_text(encoding="utf-8")
@@ -465,6 +467,94 @@ class VerifiedAliasTests(unittest.TestCase):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
         for tid in ("AmarBanglaDigital.in", "EpicBhojpuriDigital.in", "Picture.in"):
             self.assertIn(f'tvg-id="{tid}"', pl)
+
+
+
+class EpgMappingAugmentationTests(unittest.TestCase):
+    def _entry(self, tvg_id, name, group, country=""):
+        country_attr = f' tvg-country="{country}"' if country else ""
+        return (
+            f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{name}"'
+            f' group-title="{group}"{country_attr},{name}\n'
+            "https://example.test/live.m3u8\n"
+        )
+
+    def test_iptv_org_mapping_reads_both_maintained_playlists_and_infers_regions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            iptv = Path(tmp) / "IPTV-Playlist.m3u"
+            international = Path(tmp) / "International-Playlist.m3u"
+            iptv.write_text("#EXTM3U\n" + self._entry("ColorsBangla.in@HD", "Colors Bangla", "Indian Bangla", "IN"), encoding="utf-8")
+            international.write_text("#EXTM3U\n" + self._entry("CCTV6.cn@HD", "CCTV6", "China"), encoding="utf-8")
+            with patch.object(iptv_org_augment, "PLAYLISTS", (iptv, international)):
+                channels = iptv_org_augment.playlist_channels()
+        by_id = {channel[0]: channel for channel in channels}
+        self.assertEqual(set(by_id), {"ColorsBangla.in@HD", "CCTV6.cn@HD"})
+        self.assertEqual(by_id["ColorsBangla.in@HD"][3], "IN")
+        self.assertEqual(by_id["CCTV6.cn@HD"][3], "CN")
+
+    def test_indian_provider_discovery_includes_indian_ids_in_international_playlist(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            iptv = Path(tmp) / "IPTV-Playlist.m3u"
+            international = Path(tmp) / "International-Playlist.m3u"
+            iptv.write_text("#EXTM3U\n", encoding="utf-8")
+            international.write_text(
+                "#EXTM3U\n"
+                + self._entry("ColorsBangla.in@HD", "Colors Bangla", "International")
+                + self._entry("CCTV6.cn@HD", "CCTV6", "China"),
+                encoding="utf-8",
+            )
+            with patch.object(additional_augment, "PLAYLISTS", (iptv, international)):
+                channels = additional_augment.playlist_channels()
+        self.assertEqual([channel["tvg_id"] for channel in channels], ["ColorsBangla.in@HD"])
+
+    def test_iptv_org_can_append_a_current_schedule_to_a_stale_existing_mapping(self):
+        rows = [{
+            "group": "China",
+            "channel": "CCTV6",
+            "tvg_id": "CCTV6.cn@HD",
+            "epg_id": "old.provider.id",
+            "source": "https://old.example/guide.xml",
+            "status": "MAPPED_NOT_CURRENTLY_FOUND",
+            "note": "Retained mapping",
+        }]
+        channels = [("CCTV6.cn@HD", "CCTV6", "China", "CN")]
+        names = {"cctv6": {"CCTV6.cn@HD"}}
+        rows, explicit_added, exact_added = iptv_org_augment.apply_iptv_org_matches(
+            channels, rows, names, {"CCTV6.cn@HD"}
+        )
+        self.assertEqual(explicit_added, 0)
+        self.assertEqual(exact_added, 1)
+        self.assertIn("old.provider.id", rows[0]["epg_id"])
+        self.assertIn("CCTV6.cn@HD", rows[0]["epg_id"])
+        self.assertEqual(rows[0]["status"], "MAPPED")
+
+    def test_iptv_org_exact_name_match_rejects_cross_country_source(self):
+        rows = [{
+            "group": "China", "channel": "CCTV6", "tvg_id": "CCTV6.cn@HD",
+            "epg_id": "", "source": "", "status": "NO_GUIDE_HIT", "note": "",
+        }]
+        rows, _, exact_added = iptv_org_augment.apply_iptv_org_matches(
+            [("CCTV6.cn@HD", "CCTV6", "China", "CN")],
+            rows,
+            {"cctv6": {"CCTV6.in@HD"}},
+            {"CCTV6.in@HD"},
+        )
+        self.assertEqual(exact_added, 0)
+        self.assertEqual(rows[0]["epg_id"], "")
+
+    def test_iptv_org_never_fuzzy_maps_domestic_bangladesh_identity(self):
+        rows = [{
+            "group": "Bangladesh", "channel": "NTV", "tvg_id": "NTV.bd",
+            "epg_id": "", "source": "", "status": "NO_GUIDE_HIT", "note": "",
+        }]
+        rows, _, exact_added = iptv_org_augment.apply_iptv_org_matches(
+            [("NTV.bd", "NTV", "Bangladesh", "BD")],
+            rows,
+            {"ntv": {"NTV.in@HD"}},
+            {"NTV.in@HD"},
+        )
+        self.assertEqual(exact_added, 0)
+        self.assertEqual(rows[0]["epg_id"], "")
 
 
 if __name__ == "__main__":
