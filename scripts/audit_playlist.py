@@ -18,7 +18,7 @@ REPORT = Path("reports/iptv-playlist-audit.md")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
-PRIMARY_EXCEPTIONS = {"Backup", "Not Playing", "New Channels", "New Backups"}
+PRIMARY_EXCEPTIONS = {"Backup", "Not Playing", "New Channels", "New Backups", "New Backup"}
 from playlist_order_policy import should_check_alphabetical_order
 from country_verification import queue_errors as review_queue_country_errors, reference_from_playlists
 from restore_protected_review import count_unapproved_removed_url_occurrences, protected_primary_url_changes
@@ -468,7 +468,7 @@ lines += ["", "## Review Queue Country Verification", ""]
 if review_queue_country_issues:
     lines.extend("- " + issue for issue in review_queue_country_issues)
 else:
-    lines.append("New Channels/New Backup contain only entries verified as BD/IN.")
+    lines.append("New Channels/New Backups contain policy-compliant candidates according to the relevant playlist.")
 lines += ["", "## Category Registry", ""]
 if category_registry_issues:
     lines.extend("- " + issue for issue in category_registry_issues)
@@ -536,7 +536,7 @@ else: lines.append("Category block order: OK.")
 if alphabetical_order_issues:
     for group, prev, cur in alphabetical_order_issues: lines.append(f"- **{group}** — **{cur}** appears after **{prev}**")
 else: lines.append("Primary-category alphabetical/channel-number order: OK.")
-lines.append("Backup/Not Playing/New Channels/New Backup internal order is preserved for manual review and is intentionally not auto-enforced.")
+lines.append("Backup/Not Playing/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.")
 lines += ["", "## Suspicious URLs", ""]
 if suspicious_urls:
     for name, reason, url in suspicious_urls: lines.append(f"- **{name}** — {reason} — {redact_url(url)}")
