@@ -1,8 +1,8 @@
-<h1 align="center">📺 BDIX-IPTV</h1>
+<h1 align="center">📺 BDIX IPTV Playlist — Bangladesh &amp; India</h1>
 
 <p align="center">
-  <b>Bangladesh &amp; India IPTV Hub — Worldwide Channel Collections</b><br>
-  Curated M3U playlists · organized categories · local logo assets · EPG mapping tools · automated quality checks
+  <b>Bangladeshi IPTV &amp; Bangla IPTV M3U playlists — plus international movie and music channels</b><br>
+  Bangladesh and India channel collections · XMLTV EPG · local logo assets · automated playlist checks
 </p>
 
 <p align="center">
@@ -22,6 +22,7 @@
 
 <p align="center">
   <a href="#playlists"><b>📺 Playlists</b></a> &nbsp;·&nbsp;
+  <a href="docs/PLAYLISTS.md"><b>📖 Playlist Guide</b></a> &nbsp;·&nbsp;
   <a href="#quick-start"><b>🚀 Quick Start</b></a> &nbsp;·&nbsp;
   <a href="#epg"><b>🗓️ EPG</b></a> &nbsp;·&nbsp;
   <a href="#repository-showcase"><b>🖼️ Showcase</b></a> &nbsp;·&nbsp;
@@ -36,7 +37,7 @@
 <a id="overview"></a>
 ## ✨ Overview
 
-BDIX-IPTV maintains two M3U playlists for Bangladesh, India and international channels. Every list uses organized categories, consistent metadata, repository-local logos, duplicate URL checks and reviewed backup references. The XMLTV refresh workflow is enabled and the public guide is published at the repository EPG endpoint.
+BDIX-IPTV is a public **Bangladeshi IPTV and Bangla IPTV M3U playlist** project for Bangladesh and India, with a separate International playlist for eligible movie and music channels from other countries. The two maintained M3U/M3U8 collections use organized categories, channel metadata, repository-local logo references, duplicate-URL checks, manual-review queues and a configured XMLTV EPG refresh pipeline. The repository publishes playlist references; it does not host TV channels or video streams.
 
 <table align="center">
   <tr>
@@ -54,8 +55,8 @@ BDIX-IPTV maintains two M3U playlists for Bangladesh, India and international ch
 
 | | Playlist | Description | Open |
 |:---:|---|---|:---:|
-| 🇧🇩🇮🇳 | **IPTV-Playlist.m3u** | Main curated Bangladesh and India collection | [![Open](https://img.shields.io/badge/Open%20M3U-1f6feb?style=flat-square)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) |
-| 🌍 | **International-Playlist.m3u** | International movie and music country groups, with separate thematic categories | [![Open](https://img.shields.io/badge/Open%20M3U-8957e5?style=flat-square)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) |
+| 🇧🇩🇮🇳 | **IPTV-Playlist.m3u** | Main Bangladesh and India IPTV collection, including Bangla TV channels | [![Open](https://img.shields.io/badge/Open%20M3U-1f6feb?style=flat-square)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) |
+| 🌍 | **International-Playlist.m3u** | Bangladesh and India under the same regional rules; other countries are limited to movie and music channels | [![Open](https://img.shields.io/badge/Open%20M3U-8957e5?style=flat-square)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) |
 
 ---
 
@@ -90,6 +91,18 @@ https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Pla
     <img src="https://img.shields.io/badge/▶%20OPEN%20MAIN%20PLAYLIST-1f6feb?style=for-the-badge" alt="Open main M3U playlist">
   </a>
 </p>
+
+---
+
+<a id="channel-eligibility"></a>
+## 🧭 Channel Eligibility
+
+| Playlist | Bangladesh | India | Other countries |
+|---|---|---|---|
+| **IPTV-Playlist.m3u** | All genres are eligible. | News, all religious channels (including Islamic), educational and kids channels are excluded. Sports are allowed. | Not included. |
+| **International-Playlist.m3u** | Same Bangladesh rules. | Same Indian rules. | Only dedicated movie and music channels are eligible. |
+
+New channel candidates and alternate streams stay in **New Channels** and **New Backups** for manual review. The discovery workflows do not automatically approve or promote those candidates into curated groups. The five-unique-channel threshold for a foreign country group applies only after candidates have been manually reviewed.
 
 ---
 
