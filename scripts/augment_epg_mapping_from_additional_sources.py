@@ -82,7 +82,7 @@ def playlist_channels():
         current = None
         for line in playlist.read_text(encoding="utf-8-sig").splitlines():
             if line.startswith("#EXTINF:"):
-                attrs = dict(re.findall(r'([\\w-]+)="([^"]*)"', line))
+                attrs = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
                 current = {
                     "tvg_id": attrs.get("tvg-id", "").strip(),
                     "name": attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip(),
@@ -91,7 +91,7 @@ def playlist_channels():
                 }
             elif current and line.strip().startswith(("http://", "https://")):
                 if current["tvg_id"] and current["group"] not in EXCLUDED_GROUPS:
-                    is_indian_identity = bool(re.search(r"\\.in(?:@|$)", current["tvg_id"], re.I))
+                    is_indian_identity = bool(re.search(r"\.in(?:@|$)", current["tvg_id"], re.I))
                     if current["country"] == "IN" or current["group"] in INDIAN_GROUPS or is_indian_identity:
                         key = (current["tvg_id"], current["name"])
                         if key not in seen:
