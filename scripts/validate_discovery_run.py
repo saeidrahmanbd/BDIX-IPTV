@@ -368,6 +368,7 @@ def final_mode(playlist, report, baseline, mode):
         logo = e["logo"]
         if not logo:
             missing_logo += 1
+            errors.append(f"missing local logo for discovery candidate {e['name']}")
         else:
             path = local_logo_path(logo)
             if path is None or not path.is_file():
