@@ -149,8 +149,12 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
         )
 
 
-    def test_selected_upstream_sites_include_jio_distro_and_plex(self):
-        self.assertTrue({"jiotv.com", "distro.tv", "plex.tv"}.issubset(set(fetcher.SITES)))
+    def test_selected_upstream_sites_cover_regional_and_fast_catalogues(self):
+        self.assertTrue({
+            "jiotv.com", "distro.tv", "plex.tv", "pluto.tv", "xumo.tv",
+            "tvpassport.com", "tvguide.com", "m.tv.sms.cz", "mujtvprogram.cz",
+            "programtv.onet.pl", "tv.mail.ru", "tv24.co.uk", "epg.iptvx.one",
+        }.issubset(set(fetcher.SITES)))
 
     def test_jio_catalogue_blank_xmltv_id_maps_only_to_unique_exact_target_name(self):
         catalogue = '''<channels>
