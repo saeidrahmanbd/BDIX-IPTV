@@ -193,9 +193,10 @@ jobs:
 
           def stable_stream_id(tvg_id, url):
               value = 2166136261
-              encoded = f"{tvg_id}|{url}".encode("utf-16-le")
-              for index in range(0, len(encoded), 2):
-                  code_unit = encoded[index] | (encoded[index + 1] << 8)
+              for character in f"{tvg_id}|{url}":
+                  code_unit = ord(character)
+                  if code_unit > 0xffff:
+                      code_unit = 0xd800 + ((code_unit - 0x10000) >> 10)
                   value ^= code_unit
                   value = (value * 16777619) & 0xffffffff
               return (value % 899999999) + 100000000
