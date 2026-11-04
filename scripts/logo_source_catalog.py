@@ -497,14 +497,13 @@ DIRECT_LOGO_HINTS = {
         "license_url": "",
     },
     "Vyas Channel": {
-        "url": "https://www.yupptv.com/seo_img/UGC_GEC_big.jpg",
+        "url": "https://cec.nic.in/cec/sites/default/cecprofile/aboutcec.jpg",
         "format": "JPEG",
-        "page": "https://publiciptv.com/countries/in/m3u",
-        "source": "Public IPTV exact Vyas NIC channel listing; exact stream identity corroborated by the Vyas NIC educational broadcast URL",
-        "license": "Broadcaster logo served by directory; original rights remain with broadcaster",
+        "page": "https://cec.nic.in/cec/vyas",
+        "source": "Official CEC institutional logo; CEC operates the Vyas Higher Education Channel. Used as the operator mark because a dedicated Vyas logo asset could not be validated.",
+        "license": "Official CEC institutional mark; CEC retains rights. Operator mark, not a dedicated Vyas channel logo.",
         "license_url": "",
-    },
-    "Awaz TV": {
+    },    "Awaz TV": {
         "url": "https://i.imgur.com/FiUzzqb.png",
         "format": "PNG",
         "page": "https://gist.github.com/imran3/d7c2652e8955f45278f85bc3290b5130",
