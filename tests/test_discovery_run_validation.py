@@ -102,7 +102,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             report = root / "report.md"
             content = (
                 '#EXTM3U\n'
-                '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","New Channels","New Backup","Backup"]\n'
+                '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","New Channels","New Backups","Backup"]\n'
                 '#EXTINF:-1 tvg-name="Bangladesh One" group-title="Bangladesh",Bangladesh One\n'
                 'https://example.org/bangladesh.m3u8\n'
                 '#EXTINF:-1 tvg-name="World Music" tvg-content="Music" group-title="New Channels",World Music\n'
@@ -123,7 +123,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 else:
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
             self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
-            self.assertIn("- New Channels/New Backup/Backup ordering: passed", report.read_text(encoding="utf-8"))
+            self.assertIn("- New Channels/New Backups/Backup ordering: passed", report.read_text(encoding="utf-8"))
 
     def test_empty_logo_attribute_is_removed_when_no_authentic_asset_exists(self):
         extinf = '#EXTINF:-1 tvg-name="Definitely Missing Channel" tvg-logo="",Definitely Missing Channel'
