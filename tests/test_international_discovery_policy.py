@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import sys
+import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -275,6 +277,24 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         )
         self.assertIsNone(discovery.known_non_tv_discovery_reason("YleX (720p)", "New Channels"))
         self.assertIsNone(discovery.known_non_tv_discovery_reason("YleX (720p)", "Backup"))
+
+    def test_review_candidate_without_authentic_logo_is_rejected_from_queue(self):
+        block = [
+            '#EXTINF:-1 tvg-id="Colors.us" tvg-country="US" group-title="New Backups" tvg-content="Movies",Colors',
+            "https://example.org/colors.m3u8",
+        ]
+        rejected = []
+        with tempfile.TemporaryDirectory() as tmp, patch.object(discovery, "LOGOS", Path(tmp) / "logos"):
+            kept, repaired, removed = discovery.localize_discovery_queue_logos(
+                [block], {block[1]}, rejected
+            )
+        self.assertEqual(kept, [])
+        self.assertEqual(repaired, 0)
+        self.assertEqual(removed, 1)
+        self.assertEqual(
+            rejected,
+            [("Colors", "New Backups", "no authentic local repository logo after localization")],
+        )
 
     def test_tokenized_urls_are_rejected_without_playback_testing(self):
         self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?token=abc"))
