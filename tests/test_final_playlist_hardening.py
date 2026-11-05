@@ -56,6 +56,27 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
         self.assertIn('group-title="Backup",Cartoon Network', result)
         self.assertIn('group-title="Sports",DD Sports', result)
 
+    def test_missing_bangladesh_channel_numbers_are_filled_without_renumbering_existing(self):
+        rows = [
+            "#EXTM3U",
+            '#EXTINF:-1 tvg-id="Existing.bd" tvg-name="Existing Channel" tvg-country="BD" tvg-chno="7" group-title="Bangladesh",Existing Channel',
+            "https://example.invalid/existing.m3u8",
+            '#EXTINF:-1 tvg-id="Unnumbered.bd" tvg-name="Unnumbered Channel" tvg-country="BD" group-title="Bangladesh",Unnumbered Channel',
+            "https://example.invalid/unnumbered.m3u8",
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "IPTV-Playlist.m3u"
+            path.write_text("\\n".join(rows) + "\\n", encoding="utf-8")
+            hardening.process(path)
+            result = path.read_text(encoding="utf-8")
+        numbered = [
+            int(hardening.attrs(line)["tvg-chno"])
+            for line in result.splitlines()
+            if line.startswith("#EXTINF:") and hardening.attrs(line).get("group-title") == "Bangladesh"
+        ]
+        self.assertEqual(numbered, [1, 7])
+        self.assertIn('tvg-chno="7"', result)
+
     def test_channel_s_uk_with_wrong_identity_still_fails(self):
         rows = [
             "#EXTM3U",
