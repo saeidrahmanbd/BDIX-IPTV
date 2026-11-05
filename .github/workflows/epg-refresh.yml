@@ -209,6 +209,51 @@ jobs:
 
           for attempt in 1 2 3; do
             git fetch origin main
+            CURRENT_MAIN_SHA="$(git rev-parse origin/main)"
+            if [[ "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
+              CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\\.m3u|International-Playlist\\.m3u|\\.github/workflows/epg-refresh\\.yml|reports/epg-channel-mapping\\.csv|scripts/.*\\.py|tests/.*\\.py|docs/requirements\\.txt)
+              git rebase --abort || true
+              echo '::error::EPG outputs conflicted with newer main content; no force-push attempted.'
+              exit 1
+            fi
+            # A playlist/mapping commit may have landed while the guide was building.
+            # Revalidate fingerprints after rebasing so stale reports are never published.
+            if ! python scripts/validate_report_freshness.py --mode epg; then
+              echo '::error::EPG inputs changed during generation; the newest queued refresh must publish instead.'
+              exit 1
+            fi
+            # Generate dashboard snapshots from the rebased reports and playlists,
+            # then amend them into this commit. This keeps dashboard files out of
+            # the rebase conflict window with concurrent maintenance workflows.
+            python scripts/generate_dashboard.py
+            python scripts/validate_report_freshness.py --mode epg
+            git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
+            if ! git diff --cached --quiet; then
+              git commit --amend --no-edit
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "::warning::EPG push attempt ${attempt} failed; retrying after refreshing main."
+            sleep 3
+          done
+          echo '::error::Could not publish EPG after 3 attempts.'
+          exit 1
+      - name: Upload EPG freshness diagnostic
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: epg-freshness-${{ github.run_number }}
+          path: reports/epg-publish-freshness.md
+          if-no-files-found: warn
+          retention-days: 7
+ || true)"
+              if [[ -n "$CHANGED_INPUTS" ]]; then
+                echo '::error::EPG input code/config changed while this candidate was being built; refusing to publish stale output. The newest queued refresh must rebuild it.'
+                printf '%s\\n' "$CHANGED_INPUTS"
+                exit 1
+              fi
+            fi
             if ! git rebase origin/main; then
               git rebase --abort || true
               echo '::error::EPG outputs conflicted with newer main content; no force-push attempted.'

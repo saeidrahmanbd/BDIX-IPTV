@@ -87,6 +87,12 @@ class EPGPublicationSafetyTests(unittest.TestCase):
             refresh.rfind("git rebase origin/main"),
         )
 
+    def test_refresh_rejects_candidates_when_epg_inputs_change_during_build(self):
+        refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn('CURRENT_MAIN_SHA="$(git rev-parse origin/main)"', refresh)
+        self.assertIn('git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}"', refresh)
+        self.assertIn("EPG input code/config changed while this candidate was being built", refresh)
+
     def test_epg_reports_have_a_valid_current_publication_state(self):
         reports = (
             "reports/epg-coverage.md",
