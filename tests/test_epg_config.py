@@ -388,6 +388,22 @@ class EpgConfigTests(unittest.TestCase):
             )
         )
 
+    def test_mytime_movie_network_east_uses_exact_us_samsung_identity(self):
+        self.assertEqual(
+            epg_coverage.EPG_ALIASES["MyTimeMovieNetworkEast.us"],
+            ["USBC3900018K6"],
+        )
+        self.assertTrue(
+            epg_coverage.source_region_compatible(
+                "US", "USBC3900018K6", "https://i.mjh.nz/SamsungTVPlus/us.xml"
+            )
+        )
+        self.assertFalse(
+            epg_coverage.source_region_compatible(
+                "US", "USBC3900018K6", "https://i.mjh.nz/SamsungTVPlus/in.xml"
+            )
+        )
+
     def test_source_country_codes_recognize_public_feed_families(self):
         self.assertEqual(
             generate_epg.source_country_codes("https://iptv-epg.org/files/epg-at.xml.gz"),

@@ -119,6 +119,8 @@ EPG_ALIASES = {
     # Trace Urban is the French-origin international music channel; iptv-org
     # identifies its canonical XMLTV ID as TraceUrban.fr (broadcast area includes EU/Africa).
     "TraceUrban.fr@InternationalHD": ["Trace.Urban.fr", "TraceUrban.fr"],
+    # Exact, region-compatible Samsung TV Plus US identity from the strict unmapped audit.
+    "MyTimeMovieNetworkEast.us": ["USBC3900018K6"],
 }
 
 EPG_LOCKS = {
