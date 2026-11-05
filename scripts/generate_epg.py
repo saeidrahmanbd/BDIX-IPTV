@@ -98,7 +98,6 @@ SOURCES = [
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/slingtv.xml",
-    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/sundirectgo.xml",
     "https://avkb.short.gy/epg.xml.gz",
     "https://avkb.short.gy/jioepg.xml.gz",
     "https://avkb.short.gy/tsepg.xml.gz",
