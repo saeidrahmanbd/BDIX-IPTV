@@ -97,6 +97,7 @@ SOURCES = [
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/slingtv.xml",
     "https://avkb.short.gy/epg.xml.gz",
     "https://avkb.short.gy/jioepg.xml.gz",
     "https://avkb.short.gy/tsepg.xml.gz",
@@ -306,7 +307,8 @@ def source_country_codes(source):
         elif filename.startswith("unitedkingdom."):
             code = "GB"
     elif host == "raw.githubusercontent.com" and "/jasonramg/iptv-epg/main/epg/" in path:
-        code = "IN"
+        # Sling TV is a US service; the other provider exports in this repository are India-oriented.
+        code = "US" if Path(path).name == "slingtv.xml" else "IN"
     elif host == "avkb.short.gy":
         code = "IN"
     if match:
