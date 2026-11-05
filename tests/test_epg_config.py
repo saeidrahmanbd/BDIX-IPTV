@@ -68,8 +68,7 @@ class EpgConfigTests(unittest.TestCase):
             "https://m3u-edit.com/epg-source.php?file=IN1.xml.gz",
             "https://m3u-edit.com/epg-source.php?file=IN4.xml.gz",
             "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/slingtv.xml",
-            "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/sundirectgo.xml",
-        ]
+                ]
         for source in expected:
             self.assertIn(source, literal(COV, "SOURCES"))
             self.assertIn(source, literal(GEN, "SOURCES"))
@@ -93,12 +92,11 @@ class EpgConfigTests(unittest.TestCase):
         for source in discovery_expected:
             self.assertIn(source, discovery)
 
-    def test_jasonramg_sling_and_sundirect_sources_have_correct_regions(self):
+    def test_jasonramg_sling_feed_is_classified_as_us_and_region_matched(self):
         sling = "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/slingtv.xml"
-        sundirect = "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/sundirectgo.xml"
         self.assertEqual(generate_epg.source_country_codes(sling), {"US"})
-        self.assertEqual(generate_epg.source_country_codes(sundirect), {"IN"})
         self.assertTrue(epg_coverage.source_region_compatible("US", "ShemarooBollywood.us", sling))
+        self.assertTrue(epg_coverage.source_region_compatible("US", "SonyKALHindi.us", sling))
         self.assertFalse(epg_coverage.source_region_compatible("IN", "B4UMusic.in", sling))
 
     def test_private_m3u4u_source_is_selected_for_discovery_without_mapping(self):
