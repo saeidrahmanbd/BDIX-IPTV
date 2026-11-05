@@ -1,6 +1,6 @@
 # Cross-Playlist Metadata Backfill
 
-Generated: **2026-11-04T09:17:21+00:00**
+Generated: **2026-11-05T01:44:54+00:00**
 
 ## Source playlist fingerprints
 
@@ -15,7 +15,7 @@ The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, st
 | Playlist | Entries changed | Country fields filled | Language fields filled | Active entries still missing either field | Stream URL inventory | SHA-256 |
 |---|---:|---:|---:|---:|---|---|
 | IPTV-Playlist.m3u | 0 | 0 | 0 | 0 | unchanged (1ad7dec94e0d...) | f5795953ab6e9474334bc1dc17149eaf70528a4602c0084f59ecbe44665f78ef |
-| International-Playlist.m3u | 4 | 0 | 4 | 1719 | unchanged (b3c3aa61eb59...) | c6332f45624ee9413861a630d95dc2bb07d0c3ce022c75e70a3f57eb106c3f5f |
+| International-Playlist.m3u | 0 | 0 | 0 | 1719 | unchanged (b3c3aa61eb59...) | c6332f45624ee9413861a630d95dc2bb07d0c3ce022c75e70a3f57eb106c3f5f |
 
 ## Policy
 
