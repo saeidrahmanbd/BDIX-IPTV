@@ -473,6 +473,11 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(al["WeatherSpy.in@SD"], ["INBA5100028R4"])
         self.assertNotIn("ZBBhakti.in@HD", al)
 
+    def test_nick_bangla_uses_verified_exact_jiotv_channel_identity(self):
+        locks = literal(COV, "EPG_LOCKS")
+        self.assertEqual(locks["NickBangla.bd"], ["jtv1341"])
+        self.assertIn('NickBangla.bd', (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig"))
+
     def test_m3u4u_exact_ids_are_enabled_without_weakening_bangladesh_matching(self):
         locks = literal(COV, "EPG_LOCKS")
         self.assertEqual(locks["ATNBanglaUK.uk"], ["6753", "ATNBanglaUK.uk", "ATNBanglaUK.uk@SD"])
