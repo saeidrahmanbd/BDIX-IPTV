@@ -182,10 +182,10 @@ jobs:
             fi
           done
           python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md
-          python scripts/generate_dashboard.py
           python scripts/validate_report_freshness.py --mode epg
 
-          git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
+          # Defer dashboard snapshots until after the EPG commit is rebased onto the latest main.
+          # This avoids conflicts with concurrent playlist-maintenance dashboard updates.
           git add -f epg/epg.xml reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
           git add -u -- reports
 
@@ -219,6 +219,15 @@ jobs:
             if ! python scripts/validate_report_freshness.py --mode epg; then
               echo '::error::EPG inputs changed during generation; the newest queued refresh must publish instead.'
               exit 1
+            fi
+            # Generate dashboard snapshots from the rebased reports and playlists,
+            # then amend them into this commit. This keeps dashboard files out of
+            # the rebase conflict window with concurrent maintenance workflows.
+            python scripts/generate_dashboard.py
+            python scripts/validate_report_freshness.py --mode epg
+            git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
+            if ! git diff --cached --quiet; then
+              git commit --amend --no-edit
             fi
             if git push origin HEAD:main; then
               exit 0
