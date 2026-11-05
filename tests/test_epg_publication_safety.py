@@ -72,6 +72,21 @@ class EPGPublicationSafetyTests(unittest.TestCase):
             refresh.rfind("git rebase origin/main"),
         )
 
+    def test_publication_gate_compares_coverage_against_the_actual_workflow_baseline(self):
+        gate = (ROOT / "scripts" / "epg_publish_gate_v2.py").read_text(encoding="utf-8")
+        refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn('OLD = Path("/tmp/iptv-epg-previous.xml")', gate)
+        self.assertIn('cp epg/epg.xml /tmp/iptv-epg-previous.xml', refresh)
+        self.assertIn("MIN_CHANNEL_RETENTION = 0.95", gate)
+        self.assertIn("old[\"window_channels\"]", gate)
+
+    def test_epg_dashboard_is_generated_after_rebase_to_avoid_concurrent_snapshot_conflicts(self):
+        refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertGreater(
+            refresh.rfind("python scripts/generate_dashboard.py"),
+            refresh.rfind("git rebase origin/main"),
+        )
+
     def test_epg_reports_have_a_valid_current_publication_state(self):
         reports = (
             "reports/epg-coverage.md",
