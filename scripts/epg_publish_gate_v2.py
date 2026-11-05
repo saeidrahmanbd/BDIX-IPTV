@@ -12,8 +12,9 @@ from datetime import datetime, timezone, timedelta
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-OLD = Path("/tmp/bdix-epg-previous.xml")
+OLD = Path("/tmp/iptv-epg-previous.xml")
 NEW = Path("epg/epg.xml")
+MIN_CHANNEL_RETENTION = 0.95  # Require at least 95% of prior current-window channel coverage.
 GENERIC = {"movie", "movies", "program", "programme", "entertainment", "live", "live tv", "tba", "to be announced", "unknown", "schedule", "telecast", "show", "music", "test", "testing", "coming soon", "no data", "no information", "no info", "n/a", "none", "no title", "no program", "no programs", "no programme", "no programmes", "no schedule", "no schedule available", "not available", "program not available", "programme not available"}
 # Blank time slots labelled like "Program @ 5:00 AM" carry no programme information.
 SLOT_PLACEHOLDER_RE = re.compile(r"^(program|programme|show|slot)\s*@\s*\d")
@@ -117,9 +118,10 @@ if new["generic_ratio"] > 0.01:
 
 if OLD.exists():
     old = quality(OLD)
-    if old["window_channels"] and new["window_channels"] < max(1, int(old["window_channels"] * 0.80)):
+    if old["window_channels"] and new["window_channels"] < max(1, int(old["window_channels"] * MIN_CHANNEL_RETENTION)):
         raise SystemExit(
-            "EPG gate BLOCK: usable current-window channel coverage regressed below 80%: "
+            "EPG gate BLOCK: usable current-window channel coverage regressed below "
+            f"{MIN_CHANNEL_RETENTION:.0%}: "
             f"{old['window_channels']} -> {new['window_channels']}"
         )
     clean_volume_pass = (
@@ -128,7 +130,7 @@ if OLD.exists():
     )
     quality_override = (
         (not old["window_programmes"] or new["window_programmes"] >= int(old["window_programmes"] * 0.20))
-        and new["window_channels"] >= max(1, int(old["window_channels"] * 0.85))
+        and new["window_channels"] >= max(1, int(old["window_channels"] * MIN_CHANNEL_RETENTION))
     )
     if not clean_volume_pass and not quality_override:
         raise SystemExit(
