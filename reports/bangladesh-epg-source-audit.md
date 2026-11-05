@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-04T01:49:16+00:00**
+Generated: **2026-11-05T08:30:54+00:00**
 
 - Active Bangladesh playlist identities: **82**
-- Identities with a retained source mapping: **3**
+- Identities with a retained source mapping: **6**
 - Identities with usable current/future schedules: **2**
-- Identities without a source mapping: **79**
+- Identities without a source mapping: **76**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 
@@ -14,15 +14,15 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Source label | Matched Bangladesh IDs | IDs with usable current/future schedules | Source health | Error / note |
 |---|---:|---:|---|---|
 | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | OK | - |
-| M3U4U XMLTV (private Actions secret) | 1 | 1 | OK | - |
+| https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | 1 | 1 | OK | - |
 
 ## Bangladesh-relevant source health
 
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | https://www.rtvbd.tv/schedule.php | 0 | 0 | 0 | Could not fetch the official RTV schedule over verified HTTPS (rtvbd.tv: URLError; www.rtvbd.tv: URLError) |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 67 | - |
-| OK | M3U4U XMLTV (private Actions secret) | 229 | 12 | 353 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 71 | - |
+| NO_CURRENT_FUTURE | M3U4U XMLTV (private Actions secret) | 229 | 0 | 1 | - |
 
 ## Unmapped Bangladesh identities
 
@@ -65,14 +65,13 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | G TV | GaziTV.bd | NO_GUIDE_HIT |
 | GAZI TV | GaziTV.bd@SD | NO_GUIDE_HIT |
 | Global TV | GlobalTV.bd | NO_GUIDE_HIT |
+| Green TV | GreenTV.bd@SD | NO_GUIDE_HIT |
 | Independent TV | IndependentTV.bd | NO_GUIDE_HIT |
 | Jago News 24 | JagoNews24.bd | NO_GUIDE_HIT |
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
-| Jonmobhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
-| Maasranga TV | MaasrangaTV.bd | NO_GUIDE_HIT |
-| Maasranga TV | MaasrangaTV.bd@SD | NO_GUIDE_HIT |
-| Madani Channel Bangla | MadaniChannelBangla.bd@SD | NO_GUIDE_HIT |
+| Jhankar TV | JhankarTV.ca | NO_GUIDE_HIT |
+| JonmoBhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd@HD | NO_GUIDE_HIT |
 | ME TV | METV.bd | NO_GUIDE_HIT |
@@ -89,12 +88,10 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | News 24 | News24.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd@SD | NO_GUIDE_HIT |
-| Nick Bangla | NickBangla.bd | NO_GUIDE_HIT |
 | NRB | custom.bdix.nrb-hd | NO_GUIDE_HIT |
 | NRB TV | NRBTV.ca | NO_GUIDE_HIT |
 | NTV | NTV-IN | NO_GUIDE_HIT |
 | NTV | NTV.bd | NO_GUIDE_HIT |
-| NTV Europe | NTVEurope.bd | NO_GUIDE_HIT |
 | Probashi TV | ProbashiTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | RajdhaniTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | custom.rajdhani | NO_GUIDE_HIT |
@@ -106,7 +103,7 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | TBN24 | TBN24.us | NO_GUIDE_HIT |
 | Thikana | ThikanaTV.us | NO_GUIDE_HIT |
 | Time Television | TimeTelevision.us | NO_GUIDE_HIT |
-| Vokta TV | VoktaTV.bd@SD | NO_GUIDE_HIT |
+| Vokta TV (720p) | VoktaTV.bd@SD | NO_GUIDE_HIT |
 
 ## Matching and source notes
 
