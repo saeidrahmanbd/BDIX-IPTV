@@ -478,6 +478,21 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(locks["NickBangla.bd"], ["jtv1341"])
         self.assertIn('NickBangla.bd', (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig"))
 
+    def test_trace_urban_international_uses_verified_french_xmltv_identities(self):
+        aliases = literal(COV, "EPG_ALIASES")
+        self.assertEqual(
+            aliases["TraceUrban.fr@InternationalHD"],
+            ["Trace.Urban.fr", "TraceUrban.fr"],
+        )
+        playlist = (ROOT / "International-Playlist.m3u").read_text(encoding="utf-8-sig")
+        self.assertIn('tvg-id="TraceUrban.fr@InternationalHD"', playlist)
+        self.assertTrue(
+            epg_coverage.source_region_compatible(
+                "FR", "Trace.Urban.fr",
+                "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz",
+            )
+        )
+
     def test_m3u4u_exact_ids_are_enabled_without_weakening_bangladesh_matching(self):
         locks = literal(COV, "EPG_LOCKS")
         self.assertEqual(locks["ATNBanglaUK.uk"], ["6753", "ATNBanglaUK.uk", "ATNBanglaUK.uk@SD"])
