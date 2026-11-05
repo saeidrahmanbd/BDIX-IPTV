@@ -135,6 +135,9 @@ EPG_LOCKS = {
     "RTV.bd": ["RTV.bd"],
     "BTVNational.bd": ["BTVNational.bd"],
     "MaasrangaTV.bd": ["MaasrangaTV.bd"],
+    # JioTV lists the exact Nick Bangla service as channel 1341. This explicit
+    # identity lock applies only to NickBangla.bd; other domestic .bd IDs remain exact-only.
+    "NickBangla.bd": ["jtv1341"],
 }
 
 REPORT = Path("reports/epg-coverage.md")
