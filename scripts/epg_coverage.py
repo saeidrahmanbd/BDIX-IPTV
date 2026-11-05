@@ -116,6 +116,9 @@ EPG_ALIASES = {
     "Cinemax.cz@Czechia": ["Cinemax.cz"],
     "History.cz@SD": ["History.Channel.cz"],
     "WeatherSpy.in@SD": ["INBA5100028R4"],
+    # Trace Urban is the French-origin international music channel; iptv-org
+    # identifies its canonical XMLTV ID as TraceUrban.fr (broadcast area includes EU/Africa).
+    "TraceUrban.fr@InternationalHD": ["Trace.Urban.fr", "TraceUrban.fr"],
 }
 
 EPG_LOCKS = {
