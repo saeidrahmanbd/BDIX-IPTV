@@ -105,6 +105,19 @@ def process(path):
    number=int(raw) if raw.isdigit() else 10**12
    return (rank.get(g,len(rank)),number,key(n),u.casefold())
   return (rank.get(g,len(rank)),key(n),u.casefold())
+ # Fill missing Bangladesh channel numbers deterministically without changing
+ # any existing number. This prevents one unnumbered legacy row from blocking
+ # discovery; the final sort restores numeric order.
+ bd_rows=[r for r in rec if attrs(r[0]).get('group-title','').strip()=='Bangladesh']
+ used_numbers={int(attrs(r[0])['tvg-chno']) for r in bd_rows if attrs(r[0]).get('tvg-chno','').strip().isdigit()}
+ next_number=1
+ for r in bd_rows:
+  a=attrs(r[0])
+  if not a.get('tvg-chno','').strip().isdigit():
+   while next_number in used_numbers: next_number+=1
+   r[0]=set_attr(r[0],'tvg-chno',next_number)
+   used_numbers.add(next_number)
+   next_number+=1
  rec.sort(key=rkey)
  errors=[]; transitions=[]; last=None
  for r in rec:

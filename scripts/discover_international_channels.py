@@ -208,6 +208,28 @@ def set_logo_attr(line,logo):
  m=re.match(r"^(#EXTINF:-?\d+)(.*)$",line)
  if not m:return line
  return m.group(1)+f' tvg-logo="{logo}"'+m.group(2)
+def localize_discovery_queue_logos(blocks, discovery_urls, rejected_rows):
+ """Localize candidate logos and exclude review rows without authentic local assets."""
+ kept=[]; repaired=0; removed=0
+ for block in blocks:
+  if url_of(block) not in discovery_urls:
+   kept.append(block)
+   continue
+  a=attrs(block[0]); name=name_of(block); group=(a.get("group-title") or "").strip()
+  old_logo=(a.get("tvg-logo") or "").strip()
+  new_logo=localize_existing_logo(a,name) if old_logo else local_logo(a,name)
+  if not new_logo and group.casefold() in {"new channels","new backup","new backups"}:
+   # A review candidate without a genuine local asset is rejected from staging;
+   # never leave a blank-logo row for the final validator and never fabricate art.
+   rejected_rows.append((name,group,"no authentic local repository logo after localization"))
+   removed+=1
+   continue
+  if new_logo!=old_logo:
+   block[0]=set_logo_attr(block[0],new_logo)
+   if new_logo: repaired+=1
+   elif old_logo: removed+=1
+  kept.append(block)
+ return kept,repaired,removed
 def make_extinf(a,name,group,code,logo,content_kind=""):
  clean=" ".join(name.replace('"',"").split()); ident=(a.get("tvg-id") or a.get("channel-id") or "custom.intl."+slug(clean).replace("-",".")).strip(); fields=[f'tvg-id="{ident}"',f'tvg-name="{clean}"']
  if logo.startswith(RAW_BASE):fields.append(f'tvg-logo="{logo}"')
@@ -470,15 +492,9 @@ def main():
  discovery_urls=addition_urls | {url_of(b) for b in normalized if attrs(b[0]).get("group-title","").strip().casefold() in queue_groups}
  logo_refs_repaired=0; logo_refs_removed=0
 
- for b in normalized:
-  if url_of(b) not in discovery_urls:continue
-  a=attrs(b[0]); name=name_of(b); old_logo=(a.get("tvg-logo") or "").strip()
-  if not old_logo:continue
-  new_logo=localize_existing_logo(a,name)
-  if new_logo!=old_logo:
-   b[0]=set_logo_attr(b[0],new_logo)
-   if new_logo:logo_refs_repaired+=1
-   else:logo_refs_removed+=1
+ normalized,logo_repaired,logo_removed=localize_discovery_queue_logos(normalized,discovery_urls,filtered_existing)
+ logo_refs_repaired+=logo_repaired
+ logo_refs_removed+=logo_removed
  present_groups={attrs(b[0]).get("group-title","").strip() for b in normalized}; dynamic=category_registry(present_groups); rank={g.casefold():i for i,g in enumerate(dynamic)}
  normalized.sort(key=lambda b:(rank.get(attrs(b[0]).get("group-title","").strip().casefold(),len(rank)),natural_key(name_of(b)),url_of(b).casefold()))
  header="#PLAYLIST-STUDIO-CATEGORIES:"+str(dynamic).replace("'",'"'); out=[x for x in prefix if not x.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]; idx=next((i+1 for i,x in enumerate(out) if x.startswith("#EXTM3U")),0); out.insert(idx,header)
