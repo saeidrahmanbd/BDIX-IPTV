@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/">
-    <img src="assets/iptv-project-showcase.svg" alt="BDIX-IPTV M3U playlists for Bangladesh, India and international movie and music channels, with XMLTV EPG" width="100%">
+    <img src="assets/BDIX-IPTV-banner.png" alt="BDIX-IPTV M3U playlists for Bangladesh, India and international movie and music channels, with XMLTV EPG" width="100%">
   </a>
 </p>
 
