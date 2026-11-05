@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-05T01:45:14+00:00**
+Generated: **2026-11-05T09:32:59+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **f5795953ab6e9474334bc1dc17149eaf70528a4602c0084f59ecbe44665f78ef**
-- International-Playlist.m3u SHA-256: **c6332f45624ee9413861a630d95dc2bb07d0c3ce022c75e70a3f57eb106c3f5f**
+- International-Playlist.m3u SHA-256: **6d2eff069479f56cae583e9f3abda2e8e9bd1721794e53ba34ae55220a8fc4d7**
 
 ## Summary
 
@@ -16,9 +16,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **6**
 - Raster/SVG assets with short side under 64 px: **152**
-- Exact-byte duplicate asset clusters: **682**
-- Playlist references whose asset stem differs from the normalized channel name: **1275**
-- Unreferenced files immediately inside logos/: **1334** (not deleted; other tooling or playlists may use them)
+- Exact-byte duplicate asset clusters: **684**
+- Playlist references whose asset stem differs from the normalized channel name: **1354**
+- Unreferenced files immediately inside logos/: **1324** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -90,7 +90,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | filmax.png | 124×45 | yes |
 | filmazia.png | 128×23 | yes |
 | filmuadrama-1080p.png | 512×49 | yes |
-| gazi-tv-1080p.png | 128×53 | no |
+| gazi-tv-1080p.png | 128×53 | yes |
 | gazi-tv.png | 128×53 | yes |
 | gravitas-movies-1080p-0311d486e7.png | 107×50 | yes |
 | happy-radio-tv-d499a0706f.png | 101×63 | yes |
@@ -449,6 +449,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/etv-beats-1080p-aa1d38c3fd.png, logos/international/etv-beats-1080p.png
 - logos/etv-cinema-360p-14e6148301.png, logos/etv-cinema.png
 - logos/etv-life-743b66d370.png, logos/nvisionbd-verified-etv-life-743b66d370.png
+- logos/etv-plus.png, logos/international/etv-plus-396p.png
 - logos/euro-indie-music-chart-tv-360p.png, logos/international/euro-indie-music-chart-tv-360p.png, logos/nvisionbd-official-euro-indie-music-chart-tv.png
 - logos/europa-plus-tv-belarus-aff73dda11.png, logos/international/europa-plus-tv-1080p.png
 - logos/eurosport-4k-czechia-1a359dc9dd.png, logos/unused/eurosport-4k-czechia-1a359dc9dd.png
@@ -487,7 +488,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/grand-cinema.png, logos/unused/grand-cinema.png
 - logos/great-movies-1080p-9cc0399e3e.png, logos/international/great-movies.png
 - logos/great-romance-1080p-7315cca1df.png, logos/international/great-romance.png
-- logos/green-tv-fa848f9d71.jpg, logos/nvisionbd-verified-green-tv-fa848f9d71.jpg
+- logos/green-tv-fa848f9d71.jpg, logos/international/green-tv-1080p.jpg, logos/nvisionbd-verified-green-tv-fa848f9d71.jpg
 - logos/groove.png, logos/unused/groove.png
 - logos/gtc-punjabi-1080p.png, logos/gtc-punjabi-uk.png, logos/gtc-punjabi-us.png, logos/gtc-punjabi.png
 - logos/hallmark-movies-more.png, logos/unused/hallmark-movies-more-1080p-9526bb5c86.png
@@ -591,6 +592,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/pluto-tv-cars-ca.png, logos/international/pluto-tv-cars.png
 - logos/international/pluto-tv-cine-comedia-united-states-br.png, logos/international/pluto-tv-cine-comedia-united-states-latam.png, logos/international/pluto-tv-cine-comedia-united-states.png
 - logos/international/pluto-tv-cine-drama-latam.png, logos/international/pluto-tv-cine-drama.png, logos/unused/pluto-tv-cine-drama-21c0c9e9dc.png
+- logos/international/pluto-tv-cine-familia-latam.png, logos/international/pluto-tv-cine-familia.png
 - logos/international/pluto-tv-cine-romance-latam.png, logos/international/pluto-tv-cine-romance.png
 - logos/international/pluto-tv-comedy-movies.png, logos/unused/pluto-tv-comedy-movies-989176a87d.png
 - logos/international/pluto-tv-crime-drama-ca.png, logos/international/pluto-tv-crime-drama.png, logos/unused/pluto-tv-crime-drama-48c6faa6dc.png
@@ -681,6 +683,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/watch-it-scream-720p.png, logos/unused/watch-it-scream-720p-b8531f612b.png, logos/watch-it-scream-720p-b8531f612b.png
 - logos/international/xtrema-cartoons.png, logos/xtrema-cartoons.png
 - logos/international/yo-mtv-1080p.png, logos/international/yo-mtv-ca-1080p.png, logos/unused/yo-mtv-1080p-481061433b.png
+- logos/international/zee-tv.svg, logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg, logos/zee-tv-2fb6673cf7.svg
 - logos/international-dusk.png, logos/international-gotmylf.png, logos/international-penthousegold.png, logos/international-vippov.png, logos/international-visitx.png
 - logos/investigation-discovery-hungary-bc71641620.png, logos/investigation-discovery-latin-america-south-bc71641620.png, logos/investigation-discovery-united-states-bc71641620.png
 - logos/ion-tv-uk.png, logos/unused/ion-tv-uk.png
@@ -776,7 +779,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/nvisionbd-verified-vision-india-66f24a5c85.jpg, logos/vision-india-66f24a5c85.jpg
 - logos/nvisionbd-verified-waterbear-45ac070716.png, logos/waterbear-45ac070716.png
 - logos/nvisionbd-verified-win-tv-a92ce20718.png, logos/win-tv-a92ce20718.png
-- logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg, logos/zee-tv-2fb6673cf7.svg
 - logos/nvisionbd-verified-zoom-india-nepal-27531244ca.png, logos/zoom-india-27531244ca.png
 - logos/oman-sports-tv.png, logos/unused/oman-sports-tv.png
 - logos/p2m-tv.png, logos/unused/p2m-tv.png
@@ -2039,12 +2041,91 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Mycamtv Skinny Girls | mtv.png | Adult |
 | International-Playlist.m3u | Mycamtv White Girls | mtv.png | Adult |
 | International-Playlist.m3u | VERIFIED AMATEURS: MIKANIKA69 | 9.png | Adult |
-| International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | New Backup |
-| International-Playlist.m3u | Dom kino Premium (1080p) | dom-kino-premium-hd.png | New Backup |
-| International-Playlist.m3u | FILMBOX+ Love & Crime Bulgaria (720p) | filmbox-love-crime-bulgaria-720p.png | New Backup |
-| International-Playlist.m3u | FILMBOX+ One Bulgaria (576p) | filmbox-one-bulgaria-576p.png | New Backup |
-| International-Playlist.m3u | Now 80s | now-80-s.png | New Backup |
-| International-Playlist.m3u | Trace Brazuca | trace-brazuca-hd.png | New Backup |
+| International-Playlist.m3u | AMN TV (576p) | amn-tv.png | New Channels |
+| International-Playlist.m3u | Animal Planet (India) (720p) | animal-planet-india-720p.png | New Channels |
+| International-Playlist.m3u | Captain (576p) | captain.png | New Channels |
+| International-Playlist.m3u | Cine Jomjomat (1080p) | cine-jomjomat.png | New Channels |
+| International-Playlist.m3u | Colors Infinity HD (1080p) | colors-infinity.png | New Channels |
+| International-Playlist.m3u | DD Bihar (720p) | dd-bihar.png | New Channels |
+| International-Playlist.m3u | Discovery Channel (India) (720p) | discovery-channel-india.png | New Channels |
+| International-Playlist.m3u | Discovery Turbo (India) (720p) | discovery-turbo-india.png | New Channels |
+| International-Playlist.m3u | DocuBay TV (1080p) | docubay-tv.png | New Channels |
+| International-Playlist.m3u | Epic Bharat Digital (1080p) | epic-bharat-digital.png | New Channels |
+| International-Playlist.m3u | Epic Parivar (576p) | epic-parivar-576p.png | New Channels |
+| International-Playlist.m3u | Epic TV Digital (1080p) | epic-tv-digital-1080p.png | New Channels |
+| International-Playlist.m3u | ETV Plus (396p) | etv-plus-396p.png | New Channels |
+| International-Playlist.m3u | ETV Plus HD (1080p) | etv-plus.png | New Channels |
+| International-Playlist.m3u | Green TV (1080p) | green-tv-1080p.jpg | New Channels |
+| International-Playlist.m3u | History TV18 HD (1080p) [Geo-blocked] | history-tv18-hd-1080p-geo-blocked.png | New Channels |
+| International-Playlist.m3u | Investigation Discovery (India) (720p) | investigation-discovery-india-720p.png | New Channels |
+| International-Playlist.m3u | Makkal TV (576i) | makkal-tv-576i.png | New Channels |
+| International-Playlist.m3u | Mango Mobile TV (1080p) | mango-mobile-tv-1080p.png | New Channels |
+| International-Playlist.m3u | MBC TV (576p) | mbc-tv.png | New Channels |
+| International-Playlist.m3u | NDTV Good Times (1080p) | ndtv-good-times.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cine Familia | pluto-tv-cine-familia.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cine Familia LatAm | pluto-tv-cine-familia-latam.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cine Inspiracao | pluto-tv-cine-inspiracao.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cine Inspirador | pluto-tv-cine-inspirador.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cine Romance LatAm | pluto-tv-cine-romance-latam.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cine Romantico | pluto-tv-cine-romantico.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cine Sucessos | pluto-tv-cine-sucessos.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cine Suspenso | pluto-tv-cine-suspenso.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cinema Italiano | pluto-tv-cinema-italiano.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cinema Orientale | pluto-tv-cinema-orientale.png | New Channels |
+| International-Playlist.m3u | Pluto TV Comedias Romanticas | pluto-tv-comedias-romanticas.png | New Channels |
+| International-Playlist.m3u | Pluto TV Comedies Cultes | pluto-tv-comedies-cultes.png | New Channels |
+| International-Playlist.m3u | Pluto TV Comedy Movies | pluto-tv-comedy-movies.png | New Channels |
+| International-Playlist.m3u | Pluto TV Crime Drama | pluto-tv-crime-drama.png | New Channels |
+| International-Playlist.m3u | Pluto TV Crime Drama CA | pluto-tv-crime-drama-ca.png | New Channels |
+| International-Playlist.m3u | Pluto TV Crime Movies | pluto-tv-crime-movies.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cult Films (Germany) | pluto-tv-cult-films-germany.png | New Channels |
+| International-Playlist.m3u | Pluto TV Cult Films (United States) | pluto-tv-cult-films-united-states.png | New Channels |
+| International-Playlist.m3u | Pluto TV Danske klassikere | pluto-tv-danske-klassikere.png | New Channels |
+| International-Playlist.m3u | Pluto TV Drama | pluto-tv-drama.png | New Channels |
+| International-Playlist.m3u | Pluto TV Drama Movies | pluto-tv-drama-movies.png | New Channels |
+| International-Playlist.m3u | Pluto TV Estrellas de Accion | pluto-tv-estrellas-de-accion.png | New Channels |
+| International-Playlist.m3u | Pluto TV Family Movie Club | pluto-tv-family-movie-club.png | New Channels |
+| International-Playlist.m3u | Pluto TV Fantasy & Horror | pluto-tv-fantasy-horror.png | New Channels |
+| International-Playlist.m3u | Pluto TV Ficcao Cientifica | pluto-tv-ficcao-cientifica.png | New Channels |
+| International-Playlist.m3u | Pluto TV Film (Germany) | pluto-tv-film-germany.png | New Channels |
+| International-Playlist.m3u | Pluto TV Film (Sweden) | pluto-tv-film-sweden.png | New Channels |
+| International-Playlist.m3u | Pluto TV Film (Sweden) DK | pluto-tv-film-sweden-dk.png | New Channels |
+| International-Playlist.m3u | Pluto TV Film (Sweden) NO | pluto-tv-film-sweden-no.png | New Channels |
+| International-Playlist.m3u | Pluto TV Film Azione | pluto-tv-film-azione.png | New Channels |
+| International-Playlist.m3u | Shiksha TV (720p) | shiksha-tv.png | New Channels |
+| International-Playlist.m3u | Sony Aath (576p) | sony-aath.png | New Channels |
+| International-Playlist.m3u | Sony BBC Earth HD (1080p) | sony-bbc-earth.png | New Channels |
+| International-Playlist.m3u | Sony Pal (576p) | sony-pal.png | New Channels |
+| International-Playlist.m3u | Spondon (1080p) | spondon.png | New Channels |
+| International-Playlist.m3u | Star Kiran (576p) | star-kiran-576p.png | New Channels |
+| International-Playlist.m3u | StarPlus (India) HD (1080p) | starplus-india.png | New Channels |
+| International-Playlist.m3u | TLC (India) (720p) | tlc-india.png | New Channels |
+| International-Playlist.m3u | Vision (India) (576p) | vision-india.png | New Channels |
+| International-Playlist.m3u | Vokta TV (720p) | vokta-tv.png | New Channels |
+| International-Playlist.m3u | Zee Cine Classic (1080p) | zee-cine-classic.png | New Channels |
+| International-Playlist.m3u | Zee Comedy Nation (1080p) | zee-comedy-nation.png | New Channels |
+| International-Playlist.m3u | Zee Dil Se (1080p) | zee-dil-se.png | New Channels |
+| International-Playlist.m3u | Zee Horror Nights (1080p) | zee-horror-nights-1080p.png | New Channels |
+| International-Playlist.m3u | AMusic Channel | amusic-channel-720p.png | New Backups |
+| International-Playlist.m3u | Ananda TV | ananda-tv.png | New Backups |
+| International-Playlist.m3u | Animal Planet (India) (720p) | animal-planet-india-720p.png | New Backups |
+| International-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | New Backups |
+| International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | New Backups |
+| International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | New Backups |
+| International-Playlist.m3u | Discovery Channel (India) (720p) | discovery-channel-india.png | New Backups |
+| International-Playlist.m3u | Dom kino Premium (1080p) | dom-kino-premium-hd.png | New Backups |
+| International-Playlist.m3u | Ekhon TV | ekhon-tv.png | New Backups |
+| International-Playlist.m3u | FILMBOX+ Love & Crime Bulgaria (720p) | filmbox-love-crime-bulgaria-720p.png | New Backups |
+| International-Playlist.m3u | FILMBOX+ One Bulgaria (576p) | filmbox-one-bulgaria-576p.png | New Backups |
+| International-Playlist.m3u | GAZI TV | gazi-tv-1080p.png | New Backups |
+| International-Playlist.m3u | Kino TV | kino-tv-hd.png | New Backups |
+| International-Playlist.m3u | Molahits TV | molahits-tv-720p.png | New Backups |
+| International-Playlist.m3u | Movies Now | movies-now-hd-1080p.png | New Backups |
+| International-Playlist.m3u | Now 80s | now-80-s.png | New Backups |
+| International-Playlist.m3u | Suriyan TV | suriyan-tv.png | New Backups |
+| International-Playlist.m3u | TLC (India) (720p) | tlc-india.png | New Backups |
+| International-Playlist.m3u | Trace Brazuca | trace-brazuca-hd.png | New Backups |
+| International-Playlist.m3u | Zee TV | zee-tv.svg | New Backups |
 | International-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | International-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | International-Playlist.m3u | &TV | tv.png | Backup |
