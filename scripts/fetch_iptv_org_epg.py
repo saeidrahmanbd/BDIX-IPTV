@@ -45,7 +45,8 @@ SITES = (
     # Regional catalogues matching active Czech, Polish, Russian and UK groups.
     "m.tv.sms.cz",
     "mujtvprogram.cz",
-    "programtv.onet.pl",
+    # Removed after repeated HTTP 429 rate limits; Polish XMLTV remains available
+    # from the dedicated EPGShare PL1 and iptv-epg.org PL feeds.
     "tv.mail.ru",
     "tv24.co.uk",
     # Additional public XMLTV catalogue with broad regional coverage.
@@ -402,7 +403,8 @@ def grab_command():
         f"--output={OUTPUT}",
         f"--timeout={SCRAPE_REQUEST_TIMEOUT_MS}",
         f"--maxConnections={SCRAPE_MAX_CONNECTIONS}",
-        "--days=3",
+        "--delay=100",
+        "--days=2",
     ]
 
 
