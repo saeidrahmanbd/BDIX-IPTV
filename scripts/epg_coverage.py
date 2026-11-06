@@ -126,6 +126,9 @@ EPG_ALIASES = {
     "Vision.in@SD": ["Channel.Vision.in", "jtv1762"],
     "DePeliculaUS.us@SD": ["De.Pelicula.us2"],
     "BBCEarth.uk@US": ["USBD1700001RW"],
+    # The playlist entry is explicitly Nick Jr East (US); this exact EPGShare
+    # US2 identity has current/future schedule rows and avoids West/UK variants.
+    "custom.nick-jr-east": ["Nick.Jr.HD.us2"],
 }
 
 EPG_LOCKS = {
