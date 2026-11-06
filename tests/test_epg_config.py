@@ -744,7 +744,7 @@ class VerifiedAliasTests(unittest.TestCase):
     def test_verified_international_ids_exist_in_playlist(self):
         pl = (ROOT / "International-Playlist.m3u").read_text(encoding="utf-8-sig")
         for tid in (
-            "DeluxeRap.de", "DeejayTV.it", "R101TV.it", "RadioItaliaTV.it",
+            "custom.nick-jr-east", "DeluxeRap.de", "DeejayTV.it", "R101TV.it", "RadioItaliaTV.it",
             "RDSSocialTV.it", "RTL1025TV.it", "RusskiyBestseller.ru@SD",
             "RusskiyDetektiv.ru@SD", "RakutenTVFamilyMovies.es",
             "4everMusic.ua", "EUMusic.ua", "30AMusic.us",
@@ -753,7 +753,7 @@ class VerifiedAliasTests(unittest.TestCase):
 
     def test_new_alias_ids_exist_in_playlist(self):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
-        for tid in ("AmarBanglaDigital.in", "EpicBhojpuriDigital.in", "Picture.in", "custom.nick-jr-east"):
+        for tid in ("AmarBanglaDigital.in", "EpicBhojpuriDigital.in", "Picture.in"):
             self.assertIn(f'tvg-id="{tid}"', pl)
 
 
