@@ -136,7 +136,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
     "https://hum.tv/schedule/",
-    "https://rtvonline.com/index.php/schedule.php",
+    "https://rtvonline.com/home/",
     "https://migrate.btvlive.gov.bd/channel/BTV",
     "https://maasranga.tv/full-width/program-time-schedule/",
 ]
