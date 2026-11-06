@@ -39,6 +39,37 @@ def normalized_stream_url(url):
     )
 
 
+def foreign_movie_music_error(a, name, country_code):
+    """Return a policy error unless a foreign primary row is explicitly Movies/Music."""
+    code = str(country_code or "").strip().upper()
+    if code in {"BD", "IN"}:
+        return ""
+    policy_attrs = dict(a)
+    # Country-group labels are authoritative for the country. Reuse the same
+    # canonical discovery policy used by International candidates and legacy rows.
+    policy_attrs["group-title"] = "International"
+    policy_attrs["tvg-country"] = code
+    target, reason, verified_code = discovery.policy(
+        policy_attrs, name, allow_legacy_group=True
+    )
+    if target is None:
+        return reason or "not eligible under the foreign Movies/Music-only policy"
+    if verified_code != code:
+        return f"country identity mismatch (expected {code}, verified {verified_code})"
+    genre = discovery.infer_genre(policy_attrs, name)
+    if genre not in {"Movies", "Music"}:
+        return "not a dedicated Movies/Music channel"
+    expected_target = "Pakistani" if code == "PK" else (
+        "International Movies" if genre == "Movies" else "International Music"
+    )
+    if target != expected_target:
+        return f"expected policy group {expected_target}, got {target}"
+    declared = (a.get("tvg-content") or "").strip().casefold()
+    if declared != genre.casefold():
+        return f"tvg-content must explicitly be {genre}"
+    return ""
+
+
 def main():
     if not PLAYLIST.is_file():
         raise SystemExit("International playlist is missing.")
@@ -95,10 +126,14 @@ def main():
             if not discovery.FASHION_RE.search(name):
                 raise SystemExit(f"Invalid Fashion TV exception entry: {name!r}.")
         elif group_key in country_group_labels or group_key == "pakistani":
-            # Preserve legacy country-group entries. New additions to these groups are
-            # checked against the pre-run snapshot by validate_discovery_run.py; do not
-            # block discovery because of an unrelated legacy item such as a radio feed.
-            pass
+            # Dedicated country labels do not exempt legacy rows from the strict
+            # foreign Movies/Music-only policy.
+            code = country_group_labels.get(group_key, "PK")
+            reason = foreign_movie_music_error(a, name, code)
+            if reason:
+                raise SystemExit(
+                    f"Foreign country group violates Movies/Music policy: {name!r} in {group!r} ({reason})."
+                )
         if group_key in {"international", "new channels", "new backup", "new backups"}:
             target, reason, code = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
             if target is None:

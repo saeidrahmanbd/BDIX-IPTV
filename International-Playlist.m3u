@@ -1846,7 +1846,7 @@ http://92.114.85.87:8008/play/a009/index.m3u8
 http://88.212.15.50/live/test_filmbox_family_hun_atk_1200/playlist.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusEmotion.pl@Poland" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmbox-plus-emotion-f7ccc464ab.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Emotion",FILMBOX+ Emotion
 http://92.114.85.87:8008/play/a008/index.m3u8
-#EXTINF:-1 tvg-id="custom.filmbox-emotion-adria-pl-movie" channel-id="custom.filmbox-emotion-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Emotion Adria",FILMBOX+ Emotion Adria
+#EXTINF:-1 tvg-id="custom.filmbox-emotion-adria-pl-movie" channel-id="custom.filmbox-emotion-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Emotion Adria" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-emotion-adria.png",FILMBOX+ Emotion Adria
 https://webtvstream.bhtelecom.ba/filmbox_extra.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusEmotion.pl@Romania" tvg-name="FILMBOX+ Emotion Romania" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-emotion-romania.png" tvg-country="PL" channel-id="FILMBOXPlusEmotion.pl@Romania" group-title="Poland" tvg-content="Movies",FILMBOX+ Emotion Romania
 https://onyx1.mofta1.cfd/fboye/usergendlg8sl1ks0tv7sr8n.m3u8
@@ -1856,9 +1856,9 @@ https://dash3.antik.sk/live/test_filmbox_arthouse_atk_1200/playlist.m3u8
 http://92.114.85.87:8018/play/a009/index.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusHits.pl@Poland" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmbox-plus-hits-9c634ae1fd.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Hits",FILMBOX+ Hits
 http://92.114.85.87:8008/play/a00a/index.m3u8
-#EXTINF:-1 tvg-id="custom.filmbox-hits-adria-pl-movie" channel-id="custom.filmbox-hits-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Hits Adria",FILMBOX+ Hits Adria
+#EXTINF:-1 tvg-id="custom.filmbox-hits-adria-pl-movie" channel-id="custom.filmbox-hits-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Hits Adria" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-hits-adria.png",FILMBOX+ Hits Adria
 https://webtvstream.bhtelecom.ba/filmbox_premium.m3u8
-#EXTINF:-1 tvg-id="custom.filmbox-love-crime-adria-pl-movie" channel-id="custom.filmbox-love-crime-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Love & Crime Adria",FILMBOX+ Love & Crime Adria
+#EXTINF:-1 tvg-id="custom.filmbox-love-crime-adria-pl-movie" channel-id="custom.filmbox-love-crime-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Love & Crime Adria" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-love-crime-adria.png",FILMBOX+ Love & Crime Adria
 https://webtvstream.bhtelecom.ba/filmbox_stars.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusLoveCrime.pl@Bulgaria" tvg-name="FILMBOX+ Love & Crime Bulgaria (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-love-crime-bulgaria-720p.png" tvg-country="PL" channel-id="FILMBOXPlusLoveCrime.pl@Bulgaria" group-title="Poland" tvg-content="Movies",FILMBOX+ Love & Crime Bulgaria (720p)
 http://hls127.freeott.top:8080/BG_FilmBox_Stars_HD/video.m3u8
@@ -3604,7 +3604,7 @@ http://92.114.85.87:8013/play/a005/index.m3u8
 http://198.58.104.90:8989/nickelodeon/index.m3u8
 #EXTINF:-1 tvg-id="NickelodeonCIS.kz@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nickelodeon-cis-9bff2e9298.png" tvg-country="KZ" group-title="Kids" tvg-name="Nickelodeon CIS",Nickelodeon CIS
 https://stream8.cinerama.uz/1500/playlist.m3u8
-#EXTINF:-1 tvg-id="NickOnline.br@HD" tvg-country="BR" group-title="Kids" tvg-name="NickOnline",NickOnline
+#EXTINF:-1 tvg-id="NickOnline.br@HD" tvg-country="BR" group-title="Kids" tvg-name="NickOnline" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nickonline-hd-720p.png",NickOnline
 https://x1colegal.com/hls/stream.m3u8
 #EXTINF:-1 tvg-id="Nicktoons.cz@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nicktoons-czech-republic-8af9304b51.png" tvg-country="CZ" group-title="Kids" tvg-name="Nicktoons (Czech Republic)",Nicktoons (Czech Republic)
 http://88.212.15.50/live/test_nicktoons/playlist.m3u8

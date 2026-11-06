@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import discover_international_channels as discovery
 import reorganize_international_playlist as reorg
+import validate_international_playlist as intl_validator
 
 
 class InternationalDiscoveryPolicyTests(unittest.TestCase):
@@ -318,6 +319,45 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertLess(registry.index("Albania"), registry.index("Belarus"))
         self.assertLess(registry.index("Belarus"), registry.index("International"))
         self.assertLess(registry.index("International"), registry.index("Sports"))
+
+
+    def test_foreign_primary_country_groups_require_explicit_movie_music_content(self):
+        valid_movie = {
+            "group-title": "United States", "tvg-country": "US",
+            "tvg-id": "CinemaWorld.us", "tvg-content": "Movies",
+        }
+        valid_music = {
+            "group-title": "Pakistani", "tvg-country": "PK",
+            "tvg-id": "8XM.pk", "tvg-content": "Music",
+        }
+        self.assertEqual(
+            intl_validator.foreign_movie_music_error(valid_movie, "Cinema World", "US"), ""
+        )
+        self.assertEqual(
+            intl_validator.foreign_movie_music_error(valid_music, "8XM", "PK"), ""
+        )
+
+    def test_foreign_primary_country_groups_reject_missing_or_conflicting_movie_music_tags(self):
+        missing = {
+            "group-title": "Pakistani", "tvg-country": "PK", "tvg-id": "HumTV.pk",
+        }
+        conflicting = {
+            "group-title": "United States", "tvg-country": "US",
+            "tvg-id": "CinemaWorld.us", "tvg-content": "Music",
+        }
+        non_movie_music = {
+            "group-title": "United Kingdom", "tvg-country": "GB",
+            "tvg-id": "WorldNews.uk", "tvg-content": "Movies",
+        }
+        self.assertNotEqual(
+            intl_validator.foreign_movie_music_error(missing, "Hum TV", "PK"), ""
+        )
+        self.assertNotEqual(
+            intl_validator.foreign_movie_music_error(conflicting, "Cinema World", "US"), ""
+        )
+        self.assertNotEqual(
+            intl_validator.foreign_movie_music_error(non_movie_music, "World News", "GB"), ""
+        )
 
 
 if __name__ == "__main__":
