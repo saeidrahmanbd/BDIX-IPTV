@@ -1,13 +1,13 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-06T02:28:36+00:00**
+Generated: **2026-11-06T03:17:39+00:00**
 
 This report measures the two maintained M3U playlists included in the automated EPG pipeline. This report covers only the two maintained playlists.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1065 | 676 | 428 | 396 | 428 | 383 | 248 | OK |
-| International-Playlist.m3u | 2960 | 2508 | 1030 | 979 | 1019 | 924 | 1478 | OK |
+| IPTV-Playlist.m3u | 1065 | 676 | 429 | 397 | 429 | 384 | 247 | OK |
+| International-Playlist.m3u | 2960 | 2508 | 1031 | 980 | 1020 | 925 | 1477 | OK |
 
 ## Group coverage
 
@@ -38,7 +38,7 @@ This report measures the two maintained M3U playlists included in the automated 
 | Indian Entertainment | 223 | 184 | 174 | 39 |
 | Indian Movies | 86 | 64 | 62 | 22 |
 | Indian Music | 74 | 60 | 57 | 14 |
-| International | 200 | 60 | 53 | 140 |
+| International | 200 | 61 | 54 | 139 |
 | Iran | 18 | 3 | 3 | 15 |
 | Italy | 32 | 13 | 13 | 19 |
 | Kids | 208 | 110 | 105 | 98 |
@@ -59,7 +59,7 @@ This report measures the two maintained M3U playlists included in the automated 
 | Serbia | 6 | 1 | 1 | 5 |
 | Singapore | 6 | 1 | 1 | 5 |
 | Spain | 17 | 4 | 4 | 13 |
-| Sports | 254 | 122 | 117 | 132 |
+| Sports | 254 | 123 | 118 | 131 |
 | Sweden | 12 | 6 | 6 | 6 |
 | Turkey | 15 | 0 | 0 | 15 |
 | Ukraine | 28 | 9 | 9 | 19 |
