@@ -52,6 +52,12 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         reorg.register_primary_id(seen, second)
         self.assertIs(seen["gazitv.bd"], first)
 
+    def test_discovery_workflow_reorganizes_before_final_validation(self):
+        workflow = Path(".github/workflows/international-channel-discovery.yml").read_text(encoding="utf-8")
+        reorganize = workflow.index("python scripts/reorganize_international_playlist.py")
+        validate = workflow.index("python scripts/validate_international_playlist.py")
+        self.assertLess(reorganize, validate)
+
     def test_movies_and_music_are_allowed_for_international_countries(self):
         self.assertEqual(self.classify("Cinema World", "Movies", "NP", "CinemaWorld.np"),
                          ("International Movies", None, "NP"))
