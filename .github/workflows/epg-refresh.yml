@@ -39,7 +39,8 @@ concurrency:
   group: iptv-epg-writer-v6
   # New playlist/EPG inputs supersede an in-progress build; the publication guard
   # keeps the known-good guide safe while the newest run rebuilds from current inputs.
-  cancel-in-progress: true
+  cancel-in-progress: false
+  queue: max
 
 jobs:
   refresh:
@@ -55,18 +56,25 @@ jobs:
           fetch-depth: 0
       - name: Skip superseded queued EPG refresh
         shell: bash
+        env:
+          TRIGGERING_WORKFLOW_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
           set -euo pipefail
           git fetch origin main
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
-          if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
-            CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)$' || true)"
-            if [[ -n "$CHANGED_INPUTS" ]]; then
-              echo "::notice::Skipping superseded EPG refresh because newer commits changed EPG inputs or code."
-              printf '%s\n' "$CHANGED_INPUTS"
-              exit 0
+          SOURCE_SHA="${TRIGGERING_WORKFLOW_SHA:-$GITHUB_SHA}"
+          if [[ "$SOURCE_SHA" != "$CURRENT_MAIN_SHA" ]]; then
+            if git cat-file -e "${SOURCE_SHA}^{commit}" 2>/dev/null; then
+              CHANGED_INPUTS="$(git diff --name-only "$SOURCE_SHA..$CURRENT_MAIN_SHA" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)$' || true)"
+              if [[ -n "$CHANGED_INPUTS" ]]; then
+                echo "::notice::Skipping superseded EPG refresh; newer main commits changed relevant inputs after the triggering run."
+                printf '%s\\n' "$CHANGED_INPUTS"
+                exit 0
+              fi
+              echo "::notice::Only generated outputs changed after the triggering event; continuing to the freshness check."
+            else
+              echo "::warning::Triggering commit is unavailable locally; continuing to avoid suppressing a required EPG refresh."
             fi
-            echo "::notice::Continuing despite newer generated-output commits; this run still needs to apply the latest EPG code."
           fi
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
@@ -98,6 +106,14 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           mkdir -p reports epg
+
+          # workflow_run can be emitted by several writer workflows for the same main
+          # state. Once one chained refresh publishes current fingerprints, later
+          # completions should not rebuild the same XMLTV guide again.
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_run" ]] && python scripts/epg_refresh_needed.py --max-age-hours 8; then
+            echo '::notice::Skipping duplicate chained EPG refresh; the guide and both playlist fingerprints are already fresh.'
+            exit 0
+          fi
 
           # Only a scheduled run may skip a fresh guide. Pushes to playlist,
           # mapping, generator, validation, or workflow inputs must exercise the
