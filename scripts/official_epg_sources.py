@@ -242,15 +242,15 @@ RTV_BN_MONTHS = {
     "নভে": 11, "ডিসেম্বর": 12,
 }
 RTV_BN_DATE_RE = re.compile(
-    r"(?P<day>\\d{1,2})\\s+(?P<month>"
+    r"(?P<day>\d{1,2})\s+(?P<month>"
     + "|".join(re.escape(x) for x in sorted(RTV_BN_MONTHS, key=len, reverse=True))
-    + r")\\s+(?P<year>\\d{4})"
+    + r")\s+(?P<year>\d{4})"
 )
 RTV_BN_TIME_RE = re.compile(
-    r"(?P<period>ভোর|সকাল|দুপুর|বিকেল|সন্ধ্যা|রাত)\\s*"
-    r"(?P<hour>\\d{1,2})\\s*টা"
-    r"(?:\\s*(?P<minute>\\d{1,2})\\s*মিনিট)?"
-    r"(?:\\s*(?:তে|এ|য়))?"
+    r"(?P<period>ভোর|সকাল|দুপুর|বিকেল|সন্ধ্যা|রাত)\s*"
+    r"(?P<hour>\d{1,2})\s*টা"
+    r"(?:\s*(?P<minute>\d{1,2})\s*মিনিট)?"
+    r"(?:\s*(?:তে|এ|য়))?"
 )
 
 
@@ -299,8 +299,8 @@ def _parse_rtv_daily_programmes(text, now_utc):
                     hour = 12 if hour == 12 else hour + 12
 
             title = _clean(line[match.end():])
-            title = re.sub(r"^[\\s\\-–—:]+", "", title)
-            title = re.split(r"\\s*(?:->|→)\\s*", title, maxsplit=1)[0].strip()
+            title = re.sub(r"^[\s\-–—:]+", "", title)
+            title = re.split(r"\s*(?:->|→)\s*", title, maxsplit=1)[0].strip()
             if title and title.casefold() not in RTV_GENERIC:
                 events.append({
                     "day_offset": day_offset,
@@ -314,7 +314,7 @@ def _parse_rtv_daily_programmes(text, now_utc):
             continue
 
         if pending:
-            title = re.split(r"\\s*(?:->|→)\\s*", line, maxsplit=1)[0].strip()
+            title = re.split(r"\s*(?:->|→)\s*", line, maxsplit=1)[0].strip()
             day_offset, hour, minute = pending
             pending = None
             if title and title.casefold() not in RTV_GENERIC:
@@ -402,8 +402,8 @@ def _parse_rtv_weekly_programmes(html, now_utc):
                 pending = None
                 continue
             title = _clean(line[match.end():])
-            title = re.sub(r"^[\\s\\-–—:]+", "", title)
-            title = re.split(r"\\s*(?:->|→)\\s*", title, maxsplit=1)[0].strip()
+            title = re.sub(r"^[\s\-–—:]+", "", title)
+            title = re.split(r"\s*(?:->|→)\s*", title, maxsplit=1)[0].strip()
             if title:
                 pending = None
                 if title.casefold() not in RTV_GENERIC:
@@ -414,7 +414,7 @@ def _parse_rtv_weekly_programmes(html, now_utc):
                 pending = (current_day, hour, minute)
             continue
         if pending:
-            title = re.split(r"\\s*(?:->|→)\\s*", line, maxsplit=1)[0].strip()
+            title = re.split(r"\s*(?:->|→)\s*", line, maxsplit=1)[0].strip()
             day, hour, minute = pending
             pending = None
             if title and title.casefold() not in RTV_GENERIC and not TIME_RE.search(title):
