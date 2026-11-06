@@ -23,6 +23,35 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             attrs["tvg-language"] = language
         return discovery.policy(attrs, name)
 
+    def test_known_channel_aliases_share_one_identity_key(self):
+        pairs = [
+            ("Rupasi Bangla", "Ruposhi Bangla"),
+            ("Mastiii", "Music Mastii"),
+            ("Discovery Channel", "Discovery Channel East"),
+            ("Disney Channel India", "DISNEY CHANNEL [IN]"),
+        ]
+        for left, right in pairs:
+            with self.subTest(left=left, right=right):
+                self.assertEqual(reorg.channel_key(left), reorg.channel_key(right))
+
+    def test_primary_id_reuse_for_different_channels_is_rejected(self):
+        seen = {}
+        reorg.register_primary_id(seen, {
+            "a": {"tvg-id": "travel.us"}, "key": "travelchanneleast", "name": "Travel Channel East"
+        })
+        with self.assertRaisesRegex(SystemExit, "Assign distinct exact IDs"):
+            reorg.register_primary_id(seen, {
+                "a": {"tvg-id": "travel.us"}, "key": "4ktravel", "name": "4K Travel"
+            })
+
+    def test_same_primary_id_for_same_channel_is_not_a_conflicting_identity(self):
+        seen = {}
+        first = {"a": {"tvg-id": "gazitv.bd"}, "key": "gtv", "name": "G TV"}
+        second = {"a": {"tvg-id": "gazitv.bd"}, "key": "gtv", "name": "G TV"}
+        reorg.register_primary_id(seen, first)
+        reorg.register_primary_id(seen, second)
+        self.assertIs(seen["gazitv.bd"], first)
+
     def test_movies_and_music_are_allowed_for_international_countries(self):
         self.assertEqual(self.classify("Cinema World", "Movies", "NP", "CinemaWorld.np"),
                          ("International Movies", None, "NP"))
