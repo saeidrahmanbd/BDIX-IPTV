@@ -148,10 +148,10 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             report = root / "proposed-removals.md"
             url = "https://example.invalid/reliable-review.m3u8"
             original = (
-                '#EXTM3U\\n'
+                '#EXTM3U\n'
                 '#EXTINF:-1 tvg-name="Reliable Backup" tvg-chno="501" '
-                'group-title="Backup" tvg-country="BD",Reliable Backup\\n'
-                + url + "\\n"
+                'group-title="Backup" tvg-country="BD",Reliable Backup\n'
+                + url + "\n"
             )
             playlist.write_text(original, encoding="utf-8")
             with (
