@@ -65,9 +65,12 @@ def logo_audit(entries):
     return missing,review_missing,external,bad
 def review_state(entries):
     out={}
-    for _,a,u in entries:
+    for info,a,u in entries:
         group=a.get("group-title","").strip()
-        if group in EXCLUDE: out[u.lower()]={"group":group,"name":a.get("tvg-name","").strip(),"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower()}
+        # Permanent-removal allowlist entries are intentionally removed by policy;
+        # do not misreport them as accidental deletions from protected review queues.
+        if group in EXCLUDE and not is_authorized_removal(info,u):
+            out[u.lower()]={"group":group,"name":a.get("tvg-name","").strip(),"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower()}
     return out
 def main():
     current=parse(P.read_text(encoding="utf-8-sig"))
