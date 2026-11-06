@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-06T13:12:27+00:00**
-IPTV-Playlist.m3u SHA-256: **a65adeae4aa920ad86e8a064f0dd20df5045382598268d2a201c99d0f238ef31**
+Generated: **2026-11-06T13:30:57+00:00**
+IPTV-Playlist.m3u SHA-256: **e1dc8920d2906ee16fcf71ce8cf0bf16900c231cf306ea6874bae398dbd6e29a**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
@@ -77,7 +77,6 @@ These streams are not automatically removed. URL credentials, user information a
 | Taaza TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://live.we2live.in/taazatv/live/playlist.m3u8` |
 | Tarang TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8` |
 | Tehzeeb TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/239/master.m3u8` |
-| Vyas Channel | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://playhls.media.nic.in/hls/live/vyas/vyas.m3u8` |
 | Zee Kannada | Indian Entertainment | sensitive query parameter (value redacted) | `https://yuppnimresmum.akamaized.net/28072023/smil:zeekannadahd.smil/playlist.m3u8?hdnts=REDACTED` |
 | Hum TV | Pakistani | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8` |
 | Dong Nai TV 2 | International | credential-bearing route pattern (values redacted) | `https://vtvgolive-ott3.vtvdigital.vn/live/dongnai2tv/chunklist_2.m3u8` |
@@ -132,6 +131,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Sony Pix | Not Playing | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/REDACTED/REDACTED/sony_pix_hd_720/chunks.m3u8` |
 | Sony SAB | Not Playing | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/sub_hd_abr/index.m3u8` |
 | Sony Yay | Not Playing | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/sony_yay_abr/index.m3u8` |
+| Vyas Channel | Not Playing | credential-bearing route pattern (values redacted) | `https://playhls.media.nic.in/hls/live/vyas/vyas.m3u8` |
 | Zee Action | Not Playing | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/zee_action_abr/index.m3u8` |
 | Zee Action | Not Playing | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/REDACTED/REDACTED/zee_action_720/chunks.m3u8` |
 | Zee Bangla | Not Playing | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_bangla_720/index.m3u8` |

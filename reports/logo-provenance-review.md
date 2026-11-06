@@ -1,13 +1,13 @@
 # Logo Provenance Review
 
-Generated: **2026-11-06T13:12:28+00:00**
+Generated: **2026-11-06T13:30:58+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **a65adeae4aa920ad86e8a064f0dd20df5045382598268d2a201c99d0f238ef31**
+- IPTV-Playlist.m3u SHA-256: **e1dc8920d2906ee16fcf71ce8cf0bf16900c231cf306ea6874bae398dbd6e29a**
 - International-Playlist.m3u SHA-256: **7762b2644675b92a5ab0d59ae1983e213855f70f78ebf265ae7bd62e9430e84a**
 
 ## Provenance status by playlist
@@ -77,48 +77,16 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 
 | Local asset | Channel identity | tvg-id |
 |---|---|---|
-| atn-bangla.png | ATN Bangla | ATNBangla.bd |
-| atn-bangla.png | ATN Bangla | ATNBangla.bd@SD |
-| boishakhi-tv.png | Boishakhi TV | BoishakhiTV.bd |
-| boishakhi-tv.png | Boishakhi TV | BoishakhiTV.bd@SD |
-| colors-bangla.png | Colors Bangla | Colors.Bangla.in |
-| colors-bangla.png | Colors Bangla | ColorsBangla.in@HD |
 | colors-cineplex-uk.png | Colors Cineplex | ColorsCineplex.in@HD |
 | colors-cineplex-uk.png | Colors Cineplex [UK] | ColorsCineplex.uk |
-| dbc-news.png | DBC News | DBCNews.bd |
-| dbc-news.png | DBC News | DBCNews.bd@SD |
-| ekhon-tv.png | Ekhon TV | EkhonTV.bd |
-| ekhon-tv.png | Ekhon TV | EkhonTV.bd@SD |
-| etv-cinema-360p-14e6148301.png | ETV Cinema | ETVCinema.in |
-| etv-cinema-360p-14e6148301.png | ETV Cinema | ETVCinema.in@HD |
 | goldmines.png | Goldmines | Goldmines.in@SD |
 | goldmines.png | Goldmines 2 | Goldmines2.in@SD |
-| insync.png | Insync | Insync.in |
-| insync.png | Insync | Insync.in@SD |
-| kappa-tv.png | Kappa TV (Music) | KappaTV.in@ALT1 |
-| kappa-tv.png | Kappa TV | KappaTV.in@SD |
-| maasranga-tv.png | Maasranga TV | MaasrangaTV.bd |
-| maasranga-tv.png | Maasranga TV | MaasrangaTV.bd@SD |
 | madani-tv.png | Madani Channel Bangla | MadaniChannelBangla.bd@SD |
 | madani-tv.png | Madani TV | MadaniTV.sa |
-| punjabi-hits.png | Punjabi Hits | PunjabiHits.in |
-| punjabi-hits.png | Punjabi Hits | PunjabiHits.in@SD |
-| punjabi-shorts.png | Punjabi Shorts | PunjabiShorts.in |
-| punjabi-shorts.png | Punjabi Shorts | PunjabiShorts.in@SD |
 | sonic.png | Sonic | Sonic.in@SD |
 | sonic.png | Sonic The Hedgehog | custom.sonicthehedgehog |
-| star-jalsha.png | Star Jalsha | Star.Jalsha.in |
-| star-jalsha.png | Star Jalsha | StarJalsha.in@SD |
-| tabbar-hits.png | Tabbar Hits | TabbarHits.in |
-| tabbar-hits.png | Tabbar Hits | TabbarHits.in@SD |
-| thanthi-one.png | Thanthi One | ThanthiOne.in |
-| thanthi-one.png | Thanthi One | ThanthiOne.in@SD |
-| tlc-india.png | TLC (India) | TLC.in@HD |
-| tlc-india.png | TLC (India) | TLC.in@SD |
 | travelxp.png | Travelxp | Travelxp.in@4KHDR |
 | travelxp.png | Travelxp | Travelxp.in@HD |
-| zee-bangla.png | Zee Bangla | ZeeBangla.in@HD |
-| zee-bangla.png | Zee Bangla | ZeeBangla.in@SD |
 
 ## Review policy
 
