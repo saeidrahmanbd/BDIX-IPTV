@@ -52,7 +52,7 @@ def canonical_channel_name(value: str) -> str:
 PERMANENTLY_BANNED_CHANNEL_NAMES = {
     canonical_channel_name(name) for name in (
         "E-Vidya 10", "E-Vidya 11", "E-Vidya 12", "E-Vidya 4", "E-Vidya 5",
-        "E-Vidya 6", "E-Vidya 7", "E-Vidya 8", "E-Vidya 9", "Friends TV",
+        "E-Vidya 6", "E-Vidya 7", "E-Vidya 8", "E-Vidya 9", "Friends TV", "HSTV",
     )
 }
 # A programme title is not a standalone linear TV channel. Keep this exact
