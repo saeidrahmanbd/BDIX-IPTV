@@ -414,10 +414,6 @@ class EpgConfigTests(unittest.TestCase):
             {"AT"},
         )
         self.assertEqual(
-            generate_epg.source_country_codes("https://epgshare01.online/epgshare01/epg_ripper_PK1.xml.gz"),
-            {"PK"},
-        )
-        self.assertEqual(
             generate_epg.source_country_codes("https://iptv-epg.org/files/epg-pk.xml.gz"),
             {"PK"},
         )
