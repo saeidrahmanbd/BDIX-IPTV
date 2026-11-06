@@ -894,9 +894,9 @@ http://124.109.47.101/hls/stream1.m3u8
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/discoverpakistan.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="FalakTV.pk@SD" tvg-name="Falak TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/falak-tv.png" channel-id="FalakTV.pk@SD" tvg-country="PK" tvg-language="urd" group-title="Backup",Falak TV
 https://falak.rst.ae/index.m3u8
-#EXTINF:-1 tvg-id="Filmax.pk@SD" tvg-name="Filmax (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmax.png" tvg-country="PK" channel-id="Filmax.pk@SD" group-title="Backup" tvg-content="Movies",Filmax (576p)
+#EXTINF:-1 tvg-id="Filmax.pk@SD" tvg-name="Filmax (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmax.png" tvg-country="PK" channel-id="Filmax.pk@SD" group-title="Pakistani" tvg-content="Movies",Filmax (576p)
 https://s3.ideationtec.live/Filmax/Filmax.m3u8
-#EXTINF:-1 tvg-id="Filmazia.pk@SD" tvg-name="Filmazia (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmazia.png" tvg-country="PK" channel-id="Filmazia.pk@SD" group-title="Backup" tvg-content="Movies",Filmazia (576p)
+#EXTINF:-1 tvg-id="Filmazia.pk@SD" tvg-name="Filmazia (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmazia.png" tvg-country="PK" channel-id="Filmazia.pk@SD" group-title="Pakistani" tvg-content="Movies",Filmazia (576p)
 http://103.250.28.74:8000/play/a02k/index.m3u8
 #EXTINF:-1 tvg-id="HUMMasala.pk" tvg-name="HUM Masala" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png" channel-id="HUMMasala.pk" tvg-country="PK" tvg-language="urd" group-title="Backup",HUM Masala
 https://j6nfugukcl.gpcdn.net/tile_1/master.m3u8
