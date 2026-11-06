@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06T13:30:57+00:00",
+  "generated": "2026-11-06T14:21:25+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -574,6 +574,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "aryantvnational": {
+      "names": [
+        "Aryan TV National"
+      ],
+      "ids": [
+        "aryantvnational.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,

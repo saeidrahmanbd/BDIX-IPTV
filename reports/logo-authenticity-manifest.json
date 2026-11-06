@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-06T13:33:47.052104+00:00",
+  "generated_at_utc": "2026-11-06T14:21:26.327751+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,8 +11,8 @@
     "International-Playlist.m3u": 3098
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "9984e08ae9e3a60145c9376882c244a81d0f8526b9794a3978714b5dab6d9ed9",
-    "International-Playlist.m3u": "7762b2644675b92a5ab0d59ae1983e213855f70f78ebf265ae7bd62e9430e84a"
+    "IPTV-Playlist.m3u": "d8ac07ce135cde8d024e6a4945c377175132e290d02e275bcd0e376fdddc692e",
+    "International-Playlist.m3u": "dee093406f0633db8c1bbb14cf1dcba17e7db13c1f75278bb0bf5a13d647c092"
   },
   "status_counts": {
     "needs_review": 3365,
@@ -1620,7 +1620,7 @@
       "channel_name": "NTV Malayalam",
       "tvg_id": "NTV.in",
       "channel_id": "NTV.in",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv-malayalam.svg",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -24528,7 +24528,7 @@
       "channel_name": "FILMBOX+ Emotion Adria",
       "tvg_id": "custom.filmbox-emotion-adria-pl-movie",
       "channel_id": "custom.filmbox-emotion-adria-pl-movie",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-emotion-adria.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -24588,7 +24588,7 @@
       "channel_name": "FILMBOX+ Hits Adria",
       "tvg_id": "custom.filmbox-hits-adria-pl-movie",
       "channel_id": "custom.filmbox-hits-adria-pl-movie",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-hits-adria.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -24600,7 +24600,7 @@
       "channel_name": "FILMBOX+ Love & Crime Adria",
       "tvg_id": "custom.filmbox-love-crime-adria-pl-movie",
       "channel_id": "custom.filmbox-love-crime-adria-pl-movie",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-love-crime-adria.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -35076,7 +35076,7 @@
       "channel_name": "NickOnline",
       "tvg_id": "NickOnline.br@HD",
       "channel_id": "",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nickonline-hd-720p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",

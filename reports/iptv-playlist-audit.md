@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-06T13:30:25.529472+00:00**
-Source playlist SHA-256: **e1dc8920d2906ee16fcf71ce8cf0bf16900c231cf306ea6874bae398dbd6e29a**
+Generated: **2026-11-06T14:20:45.871940+00:00**
+Source playlist SHA-256: **d8ac07ce135cde8d024e6a4945c377175132e290d02e275bcd0e376fdddc692e**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1120**
-- Unique channel IDs: **745**
+- Playlist entries: **1121**
+- Unique channel IDs: **746**
 - IDs with multiple streams: **208**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -18,10 +18,10 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **2**
+- Logo exceptions requiring repair: **1**
 - Missing logos in discovery queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1120**
+- Logo references checked: **1121**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
@@ -908,7 +908,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1118**
+- Healthy/local references: **1120**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
@@ -916,7 +916,7 @@ None.
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 None.
-- missing: **2**
+- missing: **1**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**

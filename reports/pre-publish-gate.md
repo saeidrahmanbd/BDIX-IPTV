@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-06T13:30:25+00:00**
-Source playlist SHA-256: **e1dc8920d2906ee16fcf71ce8cf0bf16900c231cf306ea6874bae398dbd6e29a**
+Generated: **2026-11-06T14:20:46+00:00**
+Source playlist SHA-256: **d8ac07ce135cde8d024e6a4945c377175132e290d02e275bcd0e376fdddc692e**
 
 Status: **BLOCK**
 
-- Current entries: **1120**
+- Current entries: **1121**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -20,7 +20,7 @@ Status: **BLOCK**
 - Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
 - Raw resolution/geoblock name tags: **0**
-- Missing logos in active groups: **2**
+- Missing logos in active groups: **1**
 - Missing logos deferred in New Channels/New Backups pending trusted local assets: **0**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
@@ -33,7 +33,7 @@ Status: **BLOCK**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Not Playing remain review queues. Existing review entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-- missing logos: 2
+- missing logos: 1
 
 ## Discovery-queue logo gaps
 

@@ -1,31 +1,31 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-06T13:33:46+00:00**
+Generated: **2026-11-06T14:20:45+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **9984e08ae9e3a60145c9376882c244a81d0f8526b9794a3978714b5dab6d9ed9**
-- International-Playlist.m3u SHA-256: **7762b2644675b92a5ab0d59ae1983e213855f70f78ebf265ae7bd62e9430e84a**
+- IPTV-Playlist.m3u SHA-256: **d8ac07ce135cde8d024e6a4945c377175132e290d02e275bcd0e376fdddc692e**
+- International-Playlist.m3u SHA-256: **dee093406f0633db8c1bbb14cf1dcba17e7db13c1f75278bb0bf5a13d647c092**
 
 ## Summary
 
-- Safe repairs applied this run: **1**
+- Safe repairs applied this run: **0 (read-only mode)**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **694**
-- Playlist references whose asset stem differs from the normalized channel name: **1443**
-- Unreferenced files immediately inside logos/: **1325** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1444**
+- Unreferenced files immediately inside logos/: **1324** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| famatv-9f148af63b.jpg | JPEG | JPEG | 221×87 | 221×87 | re-encoded/compressed |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 
@@ -1944,6 +1944,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | MiMi TV | mimi-tv-0383987396.png | Kids |
 | International-Playlist.m3u | Nick Jr East | nick-jr.png | Kids |
 | International-Playlist.m3u | Nickelodeon | nick.png | Kids |
+| International-Playlist.m3u | NickOnline | nickonline-hd-720p.png | Kids |
 | International-Playlist.m3u | Ninja Kidz TV | ninja-kidz-tv-de42a39fa0.png | Kids |
 | International-Playlist.m3u | Peques TV | peques-tv-9c5f8f9d84.png | Kids |
 | International-Playlist.m3u | Pixel TV | pixel-tv.png | Kids |
