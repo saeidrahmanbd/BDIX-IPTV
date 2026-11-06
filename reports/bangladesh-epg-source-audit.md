@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-05T08:30:54+00:00**
+Generated: **2026-11-06T02:28:36+00:00**
 
-- Active Bangladesh playlist identities: **82**
+- Active Bangladesh playlist identities: **83**
 - Identities with a retained source mapping: **6**
-- Identities with usable current/future schedules: **2**
-- Identities without a source mapping: **76**
+- Identities with usable current/future schedules: **4**
+- Identities without a source mapping: **77**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 
@@ -15,14 +15,15 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 |---|---:|---:|---|---|
 | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | OK | - |
 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | 1 | 1 | OK | - |
+| iptv-org/epg (targeted build-time guide) | 2 | 2 | OK | - |
 
 ## Bangladesh-relevant source health
 
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
-| FAILED | https://www.rtvbd.tv/schedule.php | 0 | 0 | 0 | Could not fetch the official RTV schedule over verified HTTPS (rtvbd.tv: URLError; www.rtvbd.tv: URLError) |
+| FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; rtvbd.tv: URLError; www.rtvbd.tv: URLError) |
 | OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 71 | - |
-| NO_CURRENT_FUTURE | M3U4U XMLTV (private Actions secret) | 229 | 0 | 1 | - |
+| NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
 
@@ -71,7 +72,7 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
 | Jhankar TV | JhankarTV.ca | NO_GUIDE_HIT |
-| JonmoBhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
+| Jonmobhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd@HD | NO_GUIDE_HIT |
 | ME TV | METV.bd | NO_GUIDE_HIT |
@@ -100,6 +101,7 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Somoy TV | SomoyNewsTV.bd | NO_GUIDE_HIT |
 | SRK | SRK.bd | NO_GUIDE_HIT |
 | Star News | StarNews.bd | NO_GUIDE_HIT |
+| T Sports HD | TSports.bd | NO_GUIDE_HIT |
 | TBN24 | TBN24.us | NO_GUIDE_HIT |
 | Thikana | ThikanaTV.us | NO_GUIDE_HIT |
 | Time Television | TimeTelevision.us | NO_GUIDE_HIT |
