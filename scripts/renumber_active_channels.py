@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sort active IPTV groups and assign contiguous channel numbers without rewriting stream URLs.
 
-Backup, Not Playing, New Channels and New Backup remain unnumbered. Their internal
+Backup, Not Playing, New Channels and New Backups remain unnumbered. Their internal
 order is preserved; only their category blocks are placed in canonical queue order.
 """
 from __future__ import annotations
@@ -15,10 +15,10 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Not Playing", "New Channels", "New Backup", "Backup",
+    "Not Playing", "New Channels", "New Backups", "Backup",
 ]
 CATEGORY_RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
-REVIEW_GROUPS = {"Backup", "Not Playing", "New Channels", "New Backup"}
+REVIEW_GROUPS = {"Backup", "Not Playing", "New Channels", "New Backups"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
 

@@ -10,7 +10,7 @@ from country_verification import reference_from_playlists,verify_country
 from logo_asset_naming import is_blocked_logo_basename
 from restore_protected_review import authorized_backup_migration_target, is_authorized_removal
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
-EXCLUDE={"Backup","Not Playing","New Channels","New Backup"}; REVIEW_QUEUES={"New Channels","New Backup"}
+EXCLUDE={"Backup","Not Playing","New Channels","New Backups"}; REVIEW_QUEUES={"New Channels","New Backups"}
 RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"; ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 RAW_NAME_TAG=re.compile(r"\s*(?:\[[^]]*(?:geo-blocked|geo blocked)[^]]*\]|\((?:\d{3,4}p|\d{3,4}i|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}p|\d{3,4}i))\s*$",re.I)
 def attrs(s): return dict(ATTR.findall(s))
@@ -56,7 +56,7 @@ def logo_audit(entries):
     for _,a,_ in entries:
         name=a.get("tvg-name","").strip(); logo=a.get("tvg-logo","").strip(); group=a.get("group-title","").strip()
         if not logo:
-            (review_missing if group in {"New Channels","New Backup"} else missing).append(name)
+            (review_missing if group in {"New Channels","New Backups"} else missing).append(name)
             continue
         if not logo.startswith(RAW_BASE): external.append(name)
         filename=Path(logo.split("?",1)[0]).name.casefold()
@@ -81,7 +81,7 @@ def main():
     quarantined=[]; removed=[]; approved_removed=[]
     for info,a,u in old_primary:
         groups=cur_all_groups.get(u.lower(),set())
-        if groups & {"Backup","New Channels","New Backup"}: quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup","New Channels","New Backup"}))))
+        if groups & {"Backup","New Channels","New Backups"}: quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup","New Channels","New Backups"}))))
         elif not groups: (approved_removed if (approved_removal(u) or is_authorized_removal(info,u)) else removed).append((a.get("tvg-name",""),u))
     old_review=review_state(old); cur_review=review_state(current); current_by_url={u.lower():(a,u) for _,a,u in current}
     review_reclassified=[]; review_promoted=[]; authorized_promoted=[]; review_removed=[]
@@ -108,7 +108,7 @@ def main():
     metadata_by_id=defaultdict(list)
     for _,a,u in current:
         group=a.get("group-title","").strip(); cid=(a.get("tvg-id") or a.get("channel-id") or "").strip().casefold(); name=a.get("tvg-name","").strip()
-        if cid and group not in {"New Channels","New Backup","Not Playing"}: metadata_by_id[cid].append((name,group,u))
+        if cid and group not in {"New Channels","New Backups","Not Playing"}: metadata_by_id[cid].append((name,group,u))
     metadata_conflicts={cid:items for cid,items in metadata_by_id.items() if len({x[0].casefold() for x in items})>1}
     raw_name_issues=[(a.get("tvg-name",""),a.get("group-title","")) for _,a,_ in current if RAW_NAME_TAG.search(a.get("tvg-name","").strip())]
     logo_missing,logo_missing_review,logo_external,logo_bad=logo_audit(current); logo_missing_files=[]; logo_missing_file_details=[]
@@ -155,7 +155,7 @@ def main():
     status="PASS" if not issues else "BLOCK"
     old_by_url={u.lower():(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in old}; cur_by_url_all={u.lower():(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in current}
     added=[u for u in cur_by_url_all if u not in old_by_url]; removed_all=[u for u in old_by_url if u not in cur_by_url_all]; modified=[u for u in cur_by_url_all if u in old_by_url and cur_by_url_all[u]!=old_by_url[u]]
-    lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Primary streams intentionally removed as known bad: **{len(approved_removed)}**",f"- Primary streams quarantined: **{len(quarantined)}**",f"- Review entries reclassified: **{len(review_reclassified)}**",f"- Review entries promoted: **{len(review_promoted)}**",f"- Authorized review promotions: **{len(authorized_promoted)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",f"- Primary entries missing channel numbers: **{len(missing)}**",f"- Primary channel-number sequence issues: **{len(chno_sequence_issues)}**",f"- Numbered review entries: **{len(review_numbered)}**",f"- Same-ID metadata name conflicts: **{len(metadata_conflicts)}**",f"- Raw resolution/geoblock name tags: **{len(raw_name_issues)}**",f"- Missing logos in active groups: **{len(logo_missing)}**",f"- Missing logos deferred in New Channels/New Backup pending trusted local assets: **{len(logo_missing_review)}**",f"- External logo URLs: **{len(logo_external)}**",f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",f"- Missing referenced local logo files: **{len(logo_missing_files)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Protected-queue policy","New Channels and New Backup are active BD/IN-only review queues used by discovery and validation. Backup and Not Playing remain review queues. Existing review entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.","","## Blocking Reasons"]
+    lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Primary streams intentionally removed as known bad: **{len(approved_removed)}**",f"- Primary streams quarantined: **{len(quarantined)}**",f"- Review entries reclassified: **{len(review_reclassified)}**",f"- Review entries promoted: **{len(review_promoted)}**",f"- Authorized review promotions: **{len(authorized_promoted)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",f"- Primary entries missing channel numbers: **{len(missing)}**",f"- Primary channel-number sequence issues: **{len(chno_sequence_issues)}**",f"- Numbered review entries: **{len(review_numbered)}**",f"- Same-ID metadata name conflicts: **{len(metadata_conflicts)}**",f"- Raw resolution/geoblock name tags: **{len(raw_name_issues)}**",f"- Missing logos in active groups: **{len(logo_missing)}**",f"- Missing logos deferred in New Channels/New Backups pending trusted local assets: **{len(logo_missing_review)}**",f"- External logo URLs: **{len(logo_external)}**",f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",f"- Missing referenced local logo files: **{len(logo_missing_files)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Protected-queue policy","New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Not Playing remain review queues. Existing review entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.","","## Blocking Reasons"]
     lines.extend("- "+x for x in issues) if issues else lines.append("No blocking conditions detected.")
     lines += ["","## Discovery-queue logo gaps","","These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.",""]
     lines.extend(f"- **{name}**" for name in logo_missing_review) if logo_missing_review else lines.append("None.")
@@ -165,7 +165,7 @@ def main():
     else: lines.append("None.")
     lines += ["","## Raw name tags",""]
     lines.extend(f"- **{n}** — {g}" for n,g in raw_name_issues) if raw_name_issues else lines.append("None.")
-    lines += ["","## Queue validation",""]; lines.extend("- "+x for x in queue_errors) if queue_errors else lines.append("New Channels/New Backup contain only validated BD/IN entries.")
+    lines += ["","## Queue validation",""]; lines.extend("- "+x for x in queue_errors) if queue_errors else lines.append("New Channels/New Backups contain only validated BD/IN entries.")
     lines += ["","## Missing local logo files","","| Channel | Group | Referenced filename |","|---|---|---|"]
     if logo_missing_file_details:
         clean=lambda value:str(value).replace("|","\\|").replace("\\n"," ")

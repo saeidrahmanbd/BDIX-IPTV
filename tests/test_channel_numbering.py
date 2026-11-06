@@ -20,6 +20,8 @@ class ActiveChannelNumberingTests(unittest.TestCase):
             'https://stream.example/queue-b.m3u8\n'
             '#EXTINF:-1 tvg-id="n" tvg-name="New B" tvg-chno="701" group-title="New Channels",New B\n'
             'https://stream.example/new-b.m3u8\n'
+            '#EXTINF:-1 tvg-id="nb" tvg-name="New Backup B" tvg-chno="702" group-title="New Backups",New Backup B\n'
+            'https://stream.example/new-backup-b.m3u8\n'
             '#EXTINF:-1 tvg-id="m" tvg-name="Movie" group-title="Indian Movies",Movie\n'
             'https://stream.example/movie.m3u8\n'
         )
@@ -35,9 +37,11 @@ class ActiveChannelNumberingTests(unittest.TestCase):
 
     def test_review_queues_are_unnumbered_and_keep_internal_order(self):
         updated, _ = normalize_playlist_text(self.sample)
-        self.assertLess(updated.index(",New B"), updated.index(",Queue B"))
+        self.assertLess(updated.index(",New B"), updated.index(",New Backup B"))
+        self.assertLess(updated.index(",New Backup B"), updated.index(",Queue B"))
         self.assertNotIn('tvg-chno="700"', updated)
         self.assertNotIn('tvg-chno="701"', updated)
+        self.assertNotIn('tvg-chno="702"', updated)
 
     def test_stream_url_inventory_is_unchanged(self):
         updated, _ = normalize_playlist_text(self.sample)

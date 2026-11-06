@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, RAW_BASE
+from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, RAW_BASE, EXCLUDE, REVIEW_QUEUES
 
 
 class PrePublishLogoPathTests(unittest.TestCase):
@@ -15,6 +15,11 @@ class PrePublishLogoPathTests(unittest.TestCase):
 
     def tearDown(self):
         self.temp.cleanup()
+
+    def test_plural_new_backups_is_a_protected_review_queue_not_a_primary_group(self):
+        self.assertIn("New Backups", EXCLUDE)
+        self.assertIn("New Backups", REVIEW_QUEUES)
+        self.assertNotIn("New Backup", REVIEW_QUEUES)
 
     def test_nested_logo_asset_preserves_subdirectory_and_query_is_ignored(self):
         path = self.root / "international" / "music" / "channel.png"
