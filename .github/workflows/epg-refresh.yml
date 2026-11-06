@@ -37,13 +37,18 @@ permissions:
 
 concurrency:
   group: iptv-epg-writer-v6
-  # New playlist/EPG inputs supersede an in-progress build; the publication guard
-  # keeps the known-good guide safe while the newest run rebuilds from current inputs.
-  cancel-in-progress: true
+  # Serialize EPG publication instead of cancelling a valid refresh when multiple
+  # playlist writers finish close together. Keep pending refreshes so the newest
+  # committed playlist/mapping state is eventually audited and published.
+  cancel-in-progress: false
+  queue: max
 
 jobs:
   refresh:
-    if: ${{ (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' || (github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.name == 'International Channel Discovery')) && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
+    # Refresh against the latest committed playlists even when a playlist-maintenance
+    # workflow is blocked: failed maintenance publishes no new playlist bytes, but
+    # must not suppress EPG freshness/coverage work for the last known-good inputs.
+    if: ${{ github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG')) }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
