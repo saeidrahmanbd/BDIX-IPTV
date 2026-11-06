@@ -135,6 +135,9 @@ EPG_ALIASES = {
     "R101TV.it": ["R101tv.it", "R101TV.it@SD"],
     "RadioItaliaTV.it": ["Radio.Italia.TV.HD.it", "RadioItaliaTV.it@HD", "RadioItaliaTV.it@SD"],
     "RTL1025TV.it": ["RTL.102.5.HD.it", "RTL1025TV.it@HD"],
+    # Some regional XMLTV feeds publish these Russian channels without the SD suffix.
+    "RusskiyBestseller.ru@SD": ["RusskiyBestseller.ru"],
+    "RusskiyDetektiv.ru@SD": ["RusskiyDetektiv.ru"],
 }
 
 EPG_LOCKS = {
