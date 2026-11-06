@@ -22,7 +22,7 @@ on:
       - 'tests/test_epg_publication_safety.py'
       - 'docs/requirements.txt'
   # GITHUB_TOKEN playlist commits do not reliably start a second workflow via push.
-  # Refresh EPG after successful workflows that write one of the maintained playlists.
+  # Refresh EPG after completed playlist writers, including blocked runs; use the last committed playlists.
   workflow_run:
     workflows: ["IPTV Playlist Update", "IPTV New Channel Discovery", "International Channel Discovery", "Playlist Logo Repair and Localization"]
     types: [completed]
@@ -37,11 +37,9 @@ permissions:
 
 concurrency:
   group: iptv-epg-writer-v6
-  # Serialize EPG publication instead of cancelling a valid refresh when multiple
-  # playlist writers finish close together. Keep pending refreshes so the newest
-  # committed playlist/mapping state is eventually audited and published.
+  # Serialize EPG publication without cancelling an active refresh. GitHub's
+  # default single pending slot coalesces bursts; the preflight skips stale inputs.
   cancel-in-progress: false
-  queue: max
 
 jobs:
   refresh:
