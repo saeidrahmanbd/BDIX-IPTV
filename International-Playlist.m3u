@@ -4938,7 +4938,7 @@ http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73823
 https://live.onecloudlive.in/amn/amntv/index.m3u8
 #EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet (India) (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/animal-planet-india-720p.png" tvg-country="IN" channel-id="AnimalPlanet.in@SD" group-title="New Channels",Animal Planet (India) (720p)
 https://drk6xq0vhn.gpcdn.net/live/animal_planet_sd_abr/index.m3u8
-#EXTINF:-1 tvg-id="AnmolTV.in@SD" tvg-name="Anmol TV (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/anmol-tv-720p.png" tvg-country="IN" channel-id="AnmolTV.in@SD" group-title="New Channels",Anmol TV (720p)
+#EXTINF:-1 tvg-id="AnmolTV.in@SD" tvg-name="Anmol TV (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/anmol-tv-720p.png" tvg-country="IN" channel-id="AnmolTV.in@SD" tvg-language="und" group-title="New Channels",Anmol TV (720p)
 https://drk6xq0vhn.gpcdn.net/live/zee_anmol_abr/index.m3u8
 #EXTINF:-1 tvg-id="Captain.in@SD" tvg-name="Captain (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/captain.png" tvg-country="IN" channel-id="Captain.in@SD" group-title="New Channels",Captain (576p)
 https://mumbai-edge.smartplaytv.in/captain/index.m3u8
