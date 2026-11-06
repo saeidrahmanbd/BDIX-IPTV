@@ -29,6 +29,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             ("Mastiii", "Music Mastii"),
             ("Discovery Channel", "Discovery Channel East"),
             ("Disney Channel India", "DISNEY CHANNEL [IN]"),
+            ("Animal Planet", "Animal Planet (India)"),
         ]
         for left, right in pairs:
             with self.subTest(left=left, right=right):
