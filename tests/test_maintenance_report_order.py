@@ -27,6 +27,24 @@ class MaintenanceReportOrderTests(unittest.TestCase):
                 self.assertIsNotNone(match, f"{relative}: missing top-level concurrency group")
                 self.assertEqual(match.group(1), expected, f"{relative}: writer queue mismatch")
 
+    def test_epg_refresh_does_not_cancel_active_builds_and_skips_duplicate_runs(self):
+        refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn("group: iptv-epg-writer-v6", refresh)
+        self.assertIn("cancel-in-progress: false", refresh)
+        self.assertIn("queue: max", refresh)
+        self.assertIn("TRIGGERING_WORKFLOW_SHA: ${{ github.event.workflow_run.head_sha }}", refresh)
+        self.assertIn("python scripts/epg_refresh_needed.py --max-age-hours 8", refresh)
+        self.assertIn('GITHUB_EVENT_NAME}" == "workflow_run"', refresh)
+
+    def test_xtream_health_check_runs_after_final_epg_or_gateway_deploy_only(self):
+        check = (ROOT / ".github" / "workflows" / "check-xtream.yml").read_text(encoding="utf-8")
+        triggers = check.split("  permissions:", 1)[0]
+        self.assertIn('"Deploy Xtream Gateways"', triggers)
+        self.assertIn('"Refresh IPTV EPG"', triggers)
+        self.assertNotIn('"IPTV New Channel Discovery"', triggers)
+        self.assertNotIn('"IPTV Playlist Update"', triggers)
+        self.assertIn("github.event.workflow_run.conclusion == 'success'", check)
+
     def test_iptv_playlist_registry_includes_review_queues(self):
         normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
         audit = (ROOT / "scripts" / "audit_playlist.py").read_text(encoding="utf-8")
