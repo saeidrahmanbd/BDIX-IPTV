@@ -36,17 +36,17 @@ SITES = (
     "jiotv.com",
     # Global/FAST and North American schedules.
     "sky.com",
+    "guidatv.sky.it",
+    "superguidatv.it",
     "distro.tv",
     "plex.tv",
     "pluto.tv",
     "xumo.tv",
     "tvpassport.com",
     "tvguide.com",
-    # Regional catalogues matching active Czech, Polish, Russian and UK groups.
+    # Regional catalogues matching active Czech, Russian and UK groups.
     "m.tv.sms.cz",
     "mujtvprogram.cz",
-    # Removed after repeated HTTP 429 rate limits; Polish XMLTV remains available
-    # from the dedicated EPGShare PL1 and iptv-epg.org PL feeds.
     "tv.mail.ru",
     "tv24.co.uk",
     # Additional public XMLTV catalogue with broad regional coverage.
