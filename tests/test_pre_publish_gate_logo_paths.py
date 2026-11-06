@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, RAW_BASE, EXCLUDE, REVIEW_QUEUES
+from pre_publish_gate import (\n    referenced_logo_file, referenced_logo_relative_path, RAW_BASE, EXCLUDE, REVIEW_QUEUES,\n    PROTECTED_LOGO_REVIEW_GROUPS, logo_audit,\n)
 
 
 class PrePublishLogoPathTests(unittest.TestCase):
@@ -20,6 +20,33 @@ class PrePublishLogoPathTests(unittest.TestCase):
         self.assertIn("New Backups", EXCLUDE)
         self.assertIn("New Backups", REVIEW_QUEUES)
         self.assertNotIn("New Backup", REVIEW_QUEUES)
+
+    def test_missing_logos_in_protected_review_queues_are_deferred(self):
+        for group in ("Backup", "Not Playing", "New Channels", "New Backups"):
+            with self.subTest(group=group):
+                entry = (
+                    '#EXTINF:-1 tvg-name="Vyas Channel" group-title="' + group + '",Vyas Channel',
+                    {"tvg-name": "Vyas Channel", "tvg-logo": "", "group-title": group},
+                    "https://example.invalid/vyas.m3u8",
+                )
+                missing, deferred, external, bad = logo_audit([entry])
+                self.assertEqual(missing, [])
+                self.assertEqual(deferred, ["Vyas Channel"])
+                self.assertEqual(external, [])
+                self.assertEqual(bad, [])
+                self.assertIn(group, PROTECTED_LOGO_REVIEW_GROUPS)
+
+    def test_missing_logo_in_active_primary_group_still_blocks(self):
+        entry = (
+            '#EXTINF:-1 tvg-name="Example TV" group-title="Bangladesh",Example TV',
+            {"tvg-name": "Example TV", "tvg-logo": "", "group-title": "Bangladesh"},
+            "https://example.invalid/example.m3u8",
+        )
+        missing, deferred, external, bad = logo_audit([entry])
+        self.assertEqual(missing, ["Example TV"])
+        self.assertEqual(deferred, [])
+        self.assertEqual(external, [])
+        self.assertEqual(bad, [])
 
     def test_nested_logo_asset_preserves_subdirectory_and_query_is_ignored(self):
         path = self.root / "international" / "music" / "channel.png"
