@@ -13,6 +13,7 @@ from official_epg_sources import (
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from epg_source_cache import fetch_source_bytes
 from generate_epg import (
     ALWAYS_DROP_GENERIC_TITLES, COUNTRY_GROUP_CODES, is_slot_placeholder,
     normalized_title, normalize_country_code, playlist_entry_country_code, playlist_id_country_code,
@@ -121,6 +122,10 @@ EPG_ALIASES = {
     "TraceUrban.fr@InternationalHD": ["Trace.Urban.fr", "TraceUrban.fr"],
     # Exact, region-compatible Samsung TV Plus US identity from the strict unmapped audit.
     "MyTimeMovieNetworkEast.us": ["USBC3900018K6"],
+    # Exact, region-compatible matches from the latest strict unmapped audit.
+    "Vision.in@SD": ["Channel.Vision.in", "jtv1762"],
+    "DePeliculaUS.us@SD": ["De.Pelicula.us2"],
+    "BBCEarth.uk@US": ["USBD1700001RW"],
 }
 
 EPG_LOCKS = {
@@ -153,6 +158,9 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_PK1.xml.gz",
+    "https://iptv-epg.org/files/epg-pk.xml.gz",
+    "https://www.free-epg.de/api/epg/pk.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml.gz",
     # Additional regional sources also used by the mapping-discovery pass.
     "https://epg.lat/files/in.xml.gz",
@@ -490,9 +498,11 @@ def fetch_source(url):
                 future.add(cid)
         return ids, future, counts, names
 
-    req = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-EPG-Maintenance/4.0", "Accept": "application/xml,text/xml,application/gzip,*/*"})
-    with urllib.request.urlopen(req, timeout=SOURCE_FETCH_TIMEOUT_SECONDS) as r:
-        data = r.read()
+    data = fetch_source_bytes(
+        url,
+        headers={"User-Agent": "BDIX-IPTV-EPG-Maintenance/4.0", "Accept": "application/xml,text/xml,application/gzip,*/*"},
+        timeout=SOURCE_FETCH_TIMEOUT_SECONDS,
+    )
     if url.endswith(".gz") or data[:2] == b"\x1f\x8b":
         data = gzip.decompress(data)
     ids = set()
