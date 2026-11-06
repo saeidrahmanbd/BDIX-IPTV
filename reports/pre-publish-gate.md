@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-05T09:33:00+00:00**
-Source playlist SHA-256: **f5795953ab6e9474334bc1dc17149eaf70528a4602c0084f59ecbe44665f78ef**
+Generated: **2026-11-06T01:38:18+00:00**
+Source playlist SHA-256: **c1e170f5553fb67bfd7966dc803db253fd14b6e20a94375f13cf7f6b50710bc0**
 
 Status: **BLOCK**
 
-- Current entries: **1113**
+- Current entries: **1065**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -15,9 +15,9 @@ Status: **BLOCK**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues: **0**
-- Numbered review entries: **0**
+- Primary entries missing channel numbers: **39**
+- Primary channel-number sequence issues: **574**
+- Numbered review entries: **16**
 - Same-ID metadata name conflicts: **0**
 - Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **1**
@@ -33,9 +33,11 @@ Status: **BLOCK**
 New Channels and New Backup are active BD/IN-only review queues used by discovery and validation. Backup and Not Playing remain review queues. Existing review entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
+- primary entries missing tvg-chno: 39
+- primary channel-number sequence gaps/order errors: 574
+- review entries still numbered: 16
 - missing logos: 1
 - incorrect/placeholder/generic logos: 1
-- New queue validation failures: 26
 
 ## Discovery-queue logo gaps
 
@@ -53,32 +55,7 @@ None.
 
 ## Queue validation
 
-- 24 Hour Free Movies has invalid queue country US
-- Aaj Tak HD country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- Argus News country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- Charge! has invalid queue country US
-- CNBC TV18 Prime country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- DD Kisan country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- DD News country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- Jatra Ekamra country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- Mix Hollywood has invalid queue country US
-- MovieSphere AU has invalid queue country AU
-- MovieSphere UK has invalid queue country GB
-- T Sports HD country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- TAPMAD has invalid queue country PK
-- XITE Just Chill has invalid queue country US
-- XITE Summer has invalid queue country US
-- Aaj Tak HD country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- Argus News country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- CNN has invalid queue country US
-- DD Kisan country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- Hooray Kids country not verified as BD/IN (id missing/malformed and no unambiguous repository mapping)
-- KidDo MATIX has invalid queue country US
-- RT Documentary has invalid queue country RU
-- TAPMAD has invalid queue country PK
-- Trace Urban has invalid queue country FR
-- WildEarth has invalid queue country ZA
-- XITE Just Chill has invalid queue country US
+New Channels/New Backup contain only validated BD/IN entries.
 
 ## Missing local logo files
 
@@ -90,4 +67,4 @@ None.
 
 | Channel | Group | Blocked filename |
 |---|---|---|
-| Star Plus | New Channels | star-plus.png |
+| Star Plus | Indian Entertainment | star-plus.png |
