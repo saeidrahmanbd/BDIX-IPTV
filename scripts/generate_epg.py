@@ -13,6 +13,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from difflib import SequenceMatcher
 from pathlib import Path
+from epg_source_cache import fetch_source_bytes
 from official_epg_sources import (
     HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes,
     RTV_SOURCE, RTV_CHANNEL_ID, fetch_rtv_programmes,
@@ -36,6 +37,9 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_PK1.xml.gz",
+    "https://iptv-epg.org/files/epg-pk.xml.gz",
+    "https://www.free-epg.de/api/epg/pk.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml.gz",
     # Additional regional sources also used by the mapping-discovery pass.
     "https://epg.lat/files/in.xml.gz",
@@ -389,9 +393,11 @@ SINGLE_SHOW_CHANNEL_IDS = {"Mythbusters.us", "AxMen.us", "StrawberryShortcake.us
 
 
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-EPG/1.0", "Accept": "application/gzip,application/xml,*/*"})
-    with urllib.request.urlopen(req, timeout=SOURCE_FETCH_TIMEOUT_SECONDS) as r:
-        data = r.read()
+    data = fetch_source_bytes(
+        url,
+        headers={"User-Agent": "BDIX-IPTV-EPG/1.0", "Accept": "application/gzip,application/xml,*/*"},
+        timeout=SOURCE_FETCH_TIMEOUT_SECONDS,
+    )
     if data[:2] == b"\x1f\x8b" or url.endswith(".gz"):
         data = gzip.decompress(data)
     return data
