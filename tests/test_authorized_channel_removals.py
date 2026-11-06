@@ -139,6 +139,42 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                 with redirect_stderr(io.StringIO()):
                     return guard.verify_no_unauthorized_removals()
 
+    def test_channel_number_cleanup_passes_guard_without_weakening_url_protection(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.json"
+            protected = root / "protected.m3u"
+            report = root / "proposed-removals.md"
+            url = "https://example.invalid/reliable-review.m3u8"
+            original = (
+                '#EXTM3U\\n'
+                '#EXTINF:-1 tvg-name="Reliable Backup" tvg-chno="501" '
+                'group-title="Backup" tvg-country="BD",Reliable Backup\\n'
+                + url + "\\n"
+            )
+            playlist.write_text(original, encoding="utf-8")
+            with (
+                patch.object(guard, "PLAYLIST", playlist),
+                patch.object(guard, "BASELINE", baseline),
+                patch.object(guard, "PROTECTED_SNAPSHOT", protected),
+                patch.object(guard, "REMOVAL_REPORT", report),
+            ):
+                guard.snapshot_playlist()
+                guard.snapshot_protected()
+                playlist.write_text(
+                    original.replace('tvg-chno="501" ', ""),
+                    encoding="utf-8",
+                )
+                with redirect_stderr(io.StringIO()):
+                    self.assertEqual(guard.verify_no_unauthorized_removals(), 0)
+                changed_url = playlist.read_text(encoding="utf-8").replace(
+                    url, "https://example.invalid/changed-review.m3u8"
+                )
+                playlist.write_text(changed_url, encoding="utf-8")
+                with redirect_stderr(io.StringIO()):
+                    self.assertEqual(guard.verify_no_unauthorized_removals(), 1)
+
     def test_explicitly_authorized_deletion_passes_guard(self):
         self.assertEqual(self._run_guard(["AccuWeather"]), 0)
 
