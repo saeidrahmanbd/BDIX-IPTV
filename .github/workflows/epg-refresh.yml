@@ -36,7 +36,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: iptv-epg-writer-v5
+  group: iptv-epg-writer-v6
   # New playlist/EPG inputs supersede an in-progress build; the publication guard
   # keeps the known-good guide safe while the newest run rebuilds from current inputs.
   cancel-in-progress: true
