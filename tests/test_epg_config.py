@@ -700,6 +700,9 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("cancel-in-progress: false", workflow)
         self.assertIn("queue: max", workflow)
         self.assertIn("Skip superseded queued EPG refresh", workflow)
+        self.assertIn("EVENT_SHA=\"${GITHUB_SHA}\"", workflow)
+        self.assertIn(".workflow_run.head_sha", workflow)
+        self.assertIn("Skipping superseded EPG refresh", workflow)
         self.assertIn("refusing to publish stale output", workflow)
         self.assertIn("last known-good public guide", workflow)
 
