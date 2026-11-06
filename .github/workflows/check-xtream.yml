@@ -12,10 +12,9 @@ on:
     - cron: "0 0 * * *" # 06:00 Asia/Dhaka (UTC+6); allow a 60-minute buffer before the 07:00 report
   workflow_dispatch:
   workflow_run:
+    # Check the finished public state after EPG, not once for every upstream writer.
     workflows:
       - "Deploy Xtream Gateways"
-      - "IPTV New Channel Discovery"
-      - "IPTV Playlist Update"
       - "Refresh IPTV EPG"
     types: [completed]
     branches: [main]
@@ -25,6 +24,7 @@ permissions:
 
 jobs:
   check:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
