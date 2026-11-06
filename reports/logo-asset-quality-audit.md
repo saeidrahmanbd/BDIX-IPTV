@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-06T14:20:45+00:00**
+Generated: **2026-11-06T16:19:33+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **d8ac07ce135cde8d024e6a4945c377175132e290d02e275bcd0e376fdddc692e**
-- International-Playlist.m3u SHA-256: **dee093406f0633db8c1bbb14cf1dcba17e7db13c1f75278bb0bf5a13d647c092**
+- International-Playlist.m3u SHA-256: **b078f1fd249dddda658c225e25359a2770bfd1a866888f57f0c1e3ff37ae2bb4**
 
 ## Summary
 
@@ -1474,14 +1474,14 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Indian Entertainment |
 | International-Playlist.m3u | Zodiak TV | zodiak-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Zoom | zoom-tv.png | Indian Entertainment |
-| International-Playlist.m3u | aur LIFE | aurlife.png | Pakistani |
-| International-Playlist.m3u | Falak TV | falak-tv.png | Pakistani |
+| International-Playlist.m3u | aur LIFE | aurlife.png | Backup |
+| International-Playlist.m3u | Falak TV | falak-tv.png | Backup |
 | International-Playlist.m3u | Filmax (576p) | filmax.png | Pakistani |
 | International-Playlist.m3u | Filmazia (576p) | filmazia.png | Pakistani |
-| International-Playlist.m3u | Hum TV | hum-tv.png | Pakistani |
-| International-Playlist.m3u | Hum TV | hum-tv.png | Pakistani |
+| International-Playlist.m3u | Hum TV | hum-tv.png | Backup |
+| International-Playlist.m3u | Hum TV | hum-tv.png | Backup |
 | International-Playlist.m3u | Jalwa TV | jalwa-tv.png | Pakistani |
-| International-Playlist.m3u | Tag TV | tag-tv.png | Pakistani |
+| International-Playlist.m3u | Tag TV | tag-tv.png | Backup |
 | International-Playlist.m3u | Allegro | allegro-hd-1080p.png | Argentina |
 | International-Playlist.m3u | Chamame TV | chamame-tv.png | Argentina |
 | International-Playlist.m3u | Cosmos Tv | cosmos-tv-7521381461.webp | Argentina |
