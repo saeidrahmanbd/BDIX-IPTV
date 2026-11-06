@@ -84,7 +84,19 @@ def channel_key(name):
     key = normalize_key(clean_name(name))
     if key in {"rajdhani", "rajdhanitv", "rajdhanitvsd"}:
         return "rajdhanitv"
-    return key
+    # These spellings/region labels are known alternate names for the same
+    # channel identity. Normalize them before duplicate streams are routed to Backup.
+    aliases = {
+        "rupasibangla": "ruposhibangla",
+        "ruposhibangla": "ruposhibangla",
+        "mastiii": "mastiii",
+        "musicmastii": "mastiii",
+        "discoverychannel": "discoverychannel",
+        "discoverychanneleast": "discoverychannel",
+        "disneychannelindia": "disneychannelin",
+        "disneychannelin": "disneychannelin",
+    }
+    return aliases.get(key, key)
 
 def country_from_group(group):
     key = normalize_key(group)
@@ -257,6 +269,21 @@ def set_extinf(block, name, group, country, content_kind, keep_logo, is_queue=Fa
     fields.append(f'tvg-name="{name}"')
     return " ".join(field for field in fields if field).replace("  ", " ").strip() + "," + name
 
+def register_primary_id(seen_primary_ids, row):
+    """Reject one tvg-id being assigned to two different primary channels."""
+    a = row.get("a") or {}
+    channel_id = (a.get("tvg-id") or a.get("channel-id") or "").strip().casefold()
+    if not channel_id:
+        return
+    previous = seen_primary_ids.get(channel_id)
+    if previous and previous.get("key") != row.get("key"):
+        raise SystemExit(
+            f"Conflicting primary channel ID {channel_id!r}: "
+            f"{previous.get('name', '<unknown>')} vs {row.get('name', '<unknown>')}. "
+            "Assign distinct exact IDs before publication."
+        )
+    seen_primary_ids.setdefault(channel_id, row)
+
 def natural_key(value):
     value = unicodedata.normalize("NFKD", str(value or "")).casefold()
     return tuple((1, int(item)) if item.isdigit() else (0, item) for item in re.split(r"(\d+)", value))
@@ -341,6 +368,7 @@ def main():
     for row in primary:
         identity_primary.setdefault((row["country"], row["key"]), row)
     output, seen_urls, seen_channels = [], set(), set()
+    seen_primary_ids = {}
 
     def emit(row, group, as_backup=False):
         url_key = row["url"].casefold()
@@ -354,6 +382,9 @@ def main():
                 target = "New Backups" if group == "New Channels" else "Backup"
                 removed["duplicate channel stream moved to Backup"] += 1
             else:
+                # Name-based deduplication handles alternate spellings. This second
+                # guard catches a tvg-id reused for a genuinely different channel.
+                register_primary_id(seen_primary_ids, row)
                 seen_channels.add(ident)
         seen_urls.add(url_key)
         content_kind = row.get("content_kind") or row.get("kind")
