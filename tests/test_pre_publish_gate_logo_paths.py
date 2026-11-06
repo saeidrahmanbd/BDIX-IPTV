@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, RAW_BASE, EXCLUDE, REVIEW_QUEUES
+from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, RAW_BASE, EXCLUDE, REVIEW_QUEUES
 
 
 class PrePublishLogoPathTests(unittest.TestCase):
@@ -20,6 +20,24 @@ class PrePublishLogoPathTests(unittest.TestCase):
         self.assertIn("New Backups", EXCLUDE)
         self.assertIn("New Backups", REVIEW_QUEUES)
         self.assertNotIn("New Backup", REVIEW_QUEUES)
+
+    def test_missing_logo_in_not_playing_is_advisory_but_active_group_is_blocking(self):
+        not_playing = [(
+            '#EXTINF:-1 tvg-name="Vyas Channel" group-title="Not Playing",Vyas Channel',
+            {"tvg-name": "Vyas Channel", "group-title": "Not Playing"},
+            "https://example.invalid/vyas.m3u8",
+        )]
+        missing, review_missing, external, bad = logo_audit(not_playing)
+        self.assertEqual(missing, [])
+        self.assertEqual(review_missing, ["Vyas Channel"])
+        active = [(
+            '#EXTINF:-1 tvg-name="Active Channel" group-title="Indian Movies",Active Channel',
+            {"tvg-name": "Active Channel", "group-title": "Indian Movies"},
+            "https://example.invalid/active.m3u8",
+        )]
+        missing, review_missing, external, bad = logo_audit(active)
+        self.assertEqual(missing, ["Active Channel"])
+        self.assertEqual(review_missing, [])
 
     def test_authorized_permanent_removal_is_not_reported_as_review_queue_deletion(self):
         info = '#EXTINF:-1 tvg-name="Aaj Tak" group-title="Not Playing",Aaj Tak'
