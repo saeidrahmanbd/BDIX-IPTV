@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-06T13:00:13+00:00**
-Source playlist SHA-256: **c1e170f5553fb67bfd7966dc803db253fd14b6e20a94375f13cf7f6b50710bc0**
+Generated: **2026-11-06T13:05:22+00:00**
+Source playlist SHA-256: **a65adeae4aa920ad86e8a064f0dd20df5045382598268d2a201c99d0f238ef31**
 
 Status: **BLOCK**
 
-- Current entries: **1065**
+- Current entries: **1120**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -15,15 +15,15 @@ Status: **BLOCK**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing channel numbers: **39**
-- Primary channel-number sequence issues: **574**
-- Numbered review entries: **16**
-- Same-ID metadata name conflicts: **0**
+- Primary entries missing channel numbers: **49**
+- Primary channel-number sequence issues: **638**
+- Numbered review entries: **0**
+- Same-ID metadata name conflicts: **1**
 - Raw resolution/geoblock name tags: **0**
-- Missing logos in active groups: **1**
+- Missing logos in active groups: **2**
 - Missing logos deferred in New Channels/New Backup pending trusted local assets: **0**
 - External logo URLs: **0**
-- Incorrect/placeholder/generic logos: **1**
+- Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
 - Entries removed this run: **0**
@@ -33,11 +33,11 @@ Status: **BLOCK**
 New Channels and New Backup are active BD/IN-only review queues used by discovery and validation. Backup and Not Playing remain review queues. Existing review entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-- primary entries missing tvg-chno: 39
-- primary channel-number sequence gaps/order errors: 574
-- review entries still numbered: 16
-- missing logos: 1
-- incorrect/placeholder/generic logos: 1
+- duplicate primary identities: 23
+- primary entries missing tvg-chno: 49
+- primary channel-number sequence gaps/order errors: 638
+- same-ID metadata name conflicts: 1
+- missing logos: 2
 
 ## Discovery-queue logo gaps
 
@@ -47,7 +47,7 @@ None.
 
 ## Metadata conflicts
 
-None.
+- **epicparivar.in@sd** — Sun Bangla [Indian Bangla]; Epic Parivar [New Backups]
 
 ## Raw name tags
 
@@ -67,4 +67,4 @@ New Channels/New Backup contain only validated BD/IN entries.
 
 | Channel | Group | Blocked filename |
 |---|---|---|
-| Star Plus | Indian Entertainment | star-plus.png |
+| — | — | none |
