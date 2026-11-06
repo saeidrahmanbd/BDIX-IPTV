@@ -35,6 +35,32 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(self.classify("Cinema Bangla", "Movies", "BD", "CinemaBangla.bd")[0], "Bangladesh")
         self.assertEqual(self.classify("World Music", "Music", "PK", "WorldMusic.pk")[0], "Pakistani")
 
+    def test_non_movie_foreign_channel_is_kept_in_backup_review_queue(self):
+        playlist = (ROOT / "International-Playlist.m3u").read_text(encoding="utf-8")
+        blocks = []
+        current = []
+        for line in playlist.replace("\\r", "").splitlines():
+            if line.startswith("#EXTINF:"):
+                if current:
+                    blocks.append(current)
+                current = [line]
+            elif current:
+                current.append(line)
+        if current:
+            blocks.append(current)
+
+        rows = [block for block in blocks if 'tvg-id="aurLIFE.pk"' in block[0]]
+        self.assertEqual(len(rows), 1)
+        self.assertIn('group-title="Backup"', rows[0][0])
+        self.assertNotIn('group-title="Pakistani"', rows[0][0])
+        self.assertTrue(any("124.109.47.101/hls/stream1.m3u8" in line for line in rows[0]))
+        reason = intl_validator.foreign_movie_music_error(
+            {"tvg-id": "aurLIFE.pk", "tvg-country": "PK"},
+            "aur LIFE",
+            "PK",
+        )
+        self.assertTrue(reason, "aur LIFE must not be accepted as an active Pakistani Movies/Music channel")
+
     def test_pakistani_movie_music_entries_keep_content_tag_for_validator(self):
         source = (
             '#EXTINF:-1 tvg-id="8xm.pk@sd" tvg-name="8XM" '
