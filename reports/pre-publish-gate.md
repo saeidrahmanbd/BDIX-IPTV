@@ -1,6 +1,6 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-06T13:08:49+00:00**
+Generated: **2026-11-06T13:11:55+00:00**
 Source playlist SHA-256: **a65adeae4aa920ad86e8a064f0dd20df5045382598268d2a201c99d0f238ef31**
 
 Status: **BLOCK**
@@ -15,13 +15,13 @@ Status: **BLOCK**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing channel numbers: **49**
-- Primary channel-number sequence issues: **638**
+- Primary entries missing channel numbers: **0**
+- Primary channel-number sequence issues: **589**
 - Numbered review entries: **0**
-- Same-ID metadata name conflicts: **1**
+- Same-ID metadata name conflicts: **0**
 - Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **2**
-- Missing logos deferred in New Channels/New Backup pending trusted local assets: **0**
+- Missing logos deferred in New Channels/New Backups pending trusted local assets: **0**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
@@ -30,13 +30,10 @@ Status: **BLOCK**
 - Entries modified this run: **0**
 
 ## Protected-queue policy
-New Channels and New Backup are active BD/IN-only review queues used by discovery and validation. Backup and Not Playing remain review queues. Existing review entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.
+New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Not Playing remain review queues. Existing review entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-- duplicate primary identities: 23
-- primary entries missing tvg-chno: 49
-- primary channel-number sequence gaps/order errors: 638
-- same-ID metadata name conflicts: 1
+- primary channel-number sequence gaps/order errors: 589
 - missing logos: 2
 
 ## Discovery-queue logo gaps
@@ -47,7 +44,7 @@ None.
 
 ## Metadata conflicts
 
-- **epicparivar.in@sd** — Sun Bangla [Indian Bangla]; Epic Parivar [New Backups]
+None.
 
 ## Raw name tags
 
@@ -55,7 +52,7 @@ None.
 
 ## Queue validation
 
-New Channels/New Backup contain only validated BD/IN entries.
+New Channels/New Backups contain only validated BD/IN entries.
 
 ## Missing local logo files
 

@@ -1,5 +1,5 @@
 # IPTV Playlist Audit
-Generated: **2026-11-06T13:08:49.113200+00:00**
+Generated: **2026-11-06T13:11:55.440739+00:00**
 Source playlist SHA-256: **a65adeae4aa920ad86e8a064f0dd20df5045382598268d2a201c99d0f238ef31**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
@@ -11,8 +11,8 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Unique channel IDs: **762**
 - IDs with multiple streams: **200**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **23**
-- Same-name / different-ID collisions: **2**
+- Metadata conflicts: **0**
+- Same-name / different-ID collisions: **0**
 - Cross-queue same-ID name variants (review): **1**
 - Cross-queue normalized-name/different-ID groups (review): **18**
 - Cross-country backup collisions: **0**
@@ -22,16 +22,16 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Missing logos in discovery queues (review only): **0**
 - External logo references (review only): **0**
 - Logo references checked: **1120**
-- Duplicate primary identities: **23**
-- Potential near-duplicate primary name groups (review only): **3**
+- Duplicate primary identities: **0**
+- Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues: **638**
-- Primary entries missing channel numbers: **49**
+- Primary channel-number sequence issues: **589**
+- Primary entries missing channel numbers: **0**
 - Primary entries missing tvg-country: **0**
-- Primary entries missing tvg-language: **49**
+- Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **1**
-- Category registry issues: **2**
+- Category block-order issues: **0**
+- Category registry issues: **0**
 - Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
@@ -42,20 +42,18 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
 - Active primary entries missing tvg-country: **0**
-- Active primary entries missing tvg-language: **49**
+- Active primary entries missing tvg-language: **0**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
-| New Backups | 0 | 49 |
 
 ## Review Queue Country Verification
 
-New Channels/New Backup contain only entries verified as BD/IN.
+New Channels/New Backups contain only entries verified as BD/IN.
 
 ## Category Registry
 
-- registry does not match canonical category order
-- registry contains an unknown category
+Canonical registry matches the permanent IPTV category order.
 
 ## Cross-Queue Identity Variants
 
@@ -845,35 +843,11 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 
 ## Duplicate Primary Identities
 
-- **9xm.in@sd** — 9XM [Indian Music] — https://cc-706183qeo55ez.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-706183qeo55ez/DIYC/PMSL/9X/9XMusic_IN/9XMusic_IN.m3u8; 9XM [New Backups] — https://9xjio.wiseplayout.com/9XM/master.m3u8
-- **aakaashaath.in@sd** — Aakaash Aath [Indian Bangla] — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8; Aakaash Aath [New Backups] — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
-- **b4umovies.in@india** — B4U Movies [Indian Movies] — https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8; B4U Movies [New Backups] — http://66.102.126.10:8000/play/a01n/index.m3u8
-- **b4umusic.in@india** — B4U Music [Indian Music] — https://streams.tangotv.in/B4UMUSIC/ORIGIN/index.m3u8; B4U Music [New Backups] — https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/720p/index.m3u8
-- **ddarunprabha.in@sd** — DD Arun Prabha [Indian Entertainment] — https://d2lk5u59tns74c.cloudfront.net/out/v1/308556d9fd1246adb479ef012a39bbfe/index.m3u8; DD Arun Prabha [New Backups] — https://cdn.pishow.tv/ott/live/32/master.m3u8
-- **epicmusic.in@sd** — Epic Music [Indian Music] — https://mumt04.tangotv.in/m18aqlK4EPICMUSIC/index.m3u8; Epic Music [New Backups] — http://66.102.126.10:8000/play/a01i/index.m3u8
-- **epicparivar.in@sd** — Sun Bangla [Indian Bangla] — http://103.135.253.32:8080/SUN-BANGLA/index.m3u8; Epic Parivar [New Backups] — http://103.151.60.162:2122/play/a01p/index.m3u8?hls
-- **foodfood.in@sd** — Food Food [Indian Entertainment] — https://mumt03.tangotv.in/Dsly5z3HFOODFOOD/index.m3u8; Food Food [New Backups] — https://cdn.pishow.tv/ott/live/267/master.m3u8
-- **gtcpunjabi.in@sd** — GTC Punjabi [Indian Entertainment] — https://gtc-yupp.vgcdn.net/vglive-sk-254807/index.m3u8; GTC Punjabi [New Backups] — https://cdn.ottlive.co.in/gtcpunjabi/index.m3u8
-- **kairaliwe.in@sd** — Kairali We [Indian Movies] — https://streams.tangotv.in/WETV/ORIGIN/index.m3u8; Kairali We [New Backups] — https://mumt01.tangotv.in/O5aw8Zn3WETV/index.m3u8
-- **keralavision.in@sd** — Kerala Vision [Indian Entertainment] — https://mumt03.tangotv.in/Dsly5z3HKERALAVISION/index.m3u8; Kerala Vision [New Backups] — https://cdn.pishow.tv/ott/live/243/master.m3u8
-- **mazhavilmanorama.in@sd** — Mazhavil Manorama [Indian Entertainment] — https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8; Mazhavil Manorama [New Backups] — https://cdn.pishow.tv/ott/live/1479/master.m3u8
-- **moviepunjab.in@sd** — Movie Punjab [Indian Movies] — https://samitaorigin.tangotv.in/MOVIEPUNJAB/SAMITAORIGIN/index.m3u8; Movie Punjab [New Backups] — https://mumt01.tangotv.in/O5aw8Zn3MOVIEPUNJAB/index.m3u8
-- **nepal1.in@sd** — Nepal 1 [Indian Entertainment] — https://mumt05.tangotv.in/87NeALx2NEPAL1/index.m3u8; Nepal 1 [New Backups] — https://cdn.pishow.tv/ott/live/1490/master.m3u8
-- **ptcpunjabi.in@sd** — PTC Punjabi [Indian Entertainment] — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/3e22a9c278db4e3eb779afd42e41b0a6/index.m3u8; PTC Punjabi [New Backups] — https://cdn.pishow.tv/ott/live/1604/master.m3u8
-- **rajtv.in@sd** — Raj TV [Indian Music] — https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RAJTV/master_1.m3u8; Raj TV [New Backups] — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/b8640d6b-d131-4401-9451-944e1e65fe79/0.m3u8
-- **shemaroojosh.in@sd** — Shemaroo Josh [Indian Movies] — https://airtelapp.shemaroo.com/shemarooChumbakTV/smil:shemarooChumbakTVadp.smil/playlist.m3u8; Shemaroo Josh [New Backups] — https://cdn.pishow.tv/ott/live/337/master.m3u8
-- **sonyentertainmenttelevision.in@sd** — Sony Entertainment TV [Indian Entertainment] — http://38.96.178.205/SONYHD/index.m3u8; Sony Entertainment TV [New Backups] — http://103.151.60.162:2122/play/a01o/index.m3u8?hls
-- **sonypal.in@sd** — Sony PAL [Indian Entertainment] — http://live.balajibroadband.com:3500/live/474.m3u8; Sony Pal [New Backups] — http://59.103.38.46:8000/play/a0ac/index.m3u8
-- **themovieclub.in@hd** — The Movie Club [Indian Movies] — https://sis-global.prod.samsungtv.plus/v1/tvpprd/sc-mp2ar4ca425xo.m3u8; The Movie Club [New Backups] — https://mumbai-edge.smartplaytv.in/TheMovieClub/index.m3u8
-- **zeebanglasonar.in@sd** — Zee Bangla Sonar [Indian Movies] — http://103.135.253.32:8080/ZEE-BANGLA-CINEMA/index.m3u8; Zee Bangla Sonar [New Backups] — http://103.185.24.134:3001/ZEE-BANGLA-CINEMA/index.m3u8
-- **zeecinema.in@hd** — Zee Cinema [Indian Movies] — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8; Zee Cinema [New Backups] — http://103.151.60.162:2122/play/a012/index.m3u8?hls
-- **zeetv.in@sd** — Zee TV [Indian Entertainment] — http://41.205.93.154/ZEE-TV/index.m3u8; Zee TV [New Backups] — http://103.151.60.162:2122/play/a01u/index.m3u8?hls
+None.
 
 ## Potential Near-Duplicate Primary Names (Review Only)
 
-- Colors Cineplex [colorscineplex.in@hd] (New Backups); Colors Cineplex [UK] [colorscineplex.uk] (Indian Movies)
 - Discovery [discovery.us] (Documentary & Wildlife); Discovery Channel (India) [discoverychannel.in@sd] (Documentary & Wildlife)
-- Kappa TV [kappatv.in@sd] (New Backups); Kappa TV (Music) [kappatv.in@alt1] (Indian Music)
 
 These are review suggestions only. The audit does not merge identities, change channel order, or remove streams.
 
@@ -940,9 +914,9 @@ None.
 
 ## Ordering
 
-- category block **New Backups** — unknown category
+Category block order: OK.
 Primary-category alphabetical/channel-number order: OK.
-Backup/Not Playing/New Channels/New Backup internal order is preserved for manual review and is intentionally not auto-enforced.
+Backup/Not Playing/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
 ## Suspicious URLs
 
