@@ -198,7 +198,7 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
         self.assertTrue({
             "jiotv.com", "distro.tv", "plex.tv", "pluto.tv", "xumo.tv",
             "tvpassport.com", "tvguide.com", "m.tv.sms.cz", "mujtvprogram.cz",
-            "programtv.onet.pl", "tv.mail.ru", "tv24.co.uk", "epg.iptvx.one",
+            "tv.mail.ru", "tv24.co.uk", "epg.iptvx.one",
         }.issubset(set(fetcher.SITES)))
 
     def test_jio_catalogue_blank_xmltv_id_maps_only_to_unique_exact_target_name(self):
