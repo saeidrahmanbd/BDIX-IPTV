@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-06T07:44:02.078197+00:00**
+Generated: **2026-11-06T12:20:10.117474+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational and Kids channels are prohibited; Indian Sports channels are eligible.**
@@ -107,13 +107,13 @@ Generated: **2026-11-06T07:44:02.078197+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-11-06T07:44:25+00:00
+- Run timestamp: 2026-11-06T12:20:29+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 72
-- Verified live media responses: 26
-- Primary entries retained but not conclusively verified: 36
-- Definitively dead/invalid candidates removed: 10
-- Inconclusive primary/backup candidates retained for manual review: 36
+- Verified live media responses: 29
+- Primary entries retained but not conclusively verified: 32
+- Definitively dead/invalid candidates removed: 11
+- Inconclusive primary/backup candidates retained for manual review: 32
 - Duplicate discovery entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
@@ -130,8 +130,6 @@ Generated: **2026-11-06T07:44:02.078197+00:00**
 - Retained Vokta TV for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Removed Win TV from New Channels — HTTP 404.
 - Retained 9XM for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Aakaash Aath for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained ATN Bangla for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained B4U Movies for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Boishakhi TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Colors Bangla for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
@@ -144,7 +142,6 @@ Generated: **2026-11-06T07:44:02.078197+00:00**
 - Removed ETV Music from New Backups — HTTP 404.
 - Retained Gazi TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Kairali We for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Maasranga TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Movie Punjab for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Movies Now for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Sony Aath for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
@@ -156,7 +153,7 @@ Generated: **2026-11-06T07:44:02.078197+00:00**
 - Retained Star Gold for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Star Jalsha for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Star Sports 2 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Star Sports 2 for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Removed Star Sports 2 from New Backups — HTTP 404.
 - Retained Star Sports Select 1 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Removed T Sports from New Backups — HTTP 404.
 - Retained Thanthi One for review — stream could not be conclusively verified (connection could not be confirmed: TimeoutError).
@@ -169,9 +166,9 @@ Generated: **2026-11-06T07:44:02.078197+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-11-06T07:44:25+00:00
+- Run timestamp: 2026-11-06T12:20:29+00:00
 - Validation status: FAIL
-- M3U entries parsed: 1127
+- M3U entries parsed: 1126
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - New Channels/New Backups/Backup ordering: passed
