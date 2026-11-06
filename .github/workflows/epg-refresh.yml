@@ -64,12 +64,12 @@ jobs:
           set -euo pipefail
           git fetch origin main
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
-          EVENT_SHA="\${GITHUB_SHA}"
-          if [[ "\${GITHUB_EVENT_NAME}" == "workflow_run" ]]; then
-            EVENT_SHA="$(jq -r '.workflow_run.head_sha // empty' "\${GITHUB_EVENT_PATH}")"
+          EVENT_SHA="${GITHUB_SHA}"
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_run" ]]; then
+            EVENT_SHA="$(jq -r '.workflow_run.head_sha // empty' "${GITHUB_EVENT_PATH}")"
           fi
           if [[ -n "$EVENT_SHA" && "$EVENT_SHA" != "$CURRENT_MAIN_SHA" ]]; then
-            CHANGED_INPUTS="$(git diff --name-only "\${EVENT_SHA}..\${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)$' || true)"
+            CHANGED_INPUTS="$(git diff --name-only "${EVENT_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)$' || true)"
             if [[ -n "$CHANGED_INPUTS" ]]; then
               echo "::notice::Skipping superseded EPG refresh because newer commits changed EPG inputs or code."
               printf '%s\n' "$CHANGED_INPUTS"
