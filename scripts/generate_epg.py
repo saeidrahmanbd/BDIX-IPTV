@@ -136,7 +136,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
     "https://hum.tv/schedule/",
-    "https://www.rtvbd.tv/schedule.php",
+    "https://rtvonline.com/index.php/schedule.php",
     "https://migrate.btvlive.gov.bd/channel/BTV",
     "https://maasranga.tv/full-width/program-time-schedule/",
 ]
@@ -363,6 +363,8 @@ def sources_with_mapped_channels(source_urls):
 def source_label(src):
     if src == os.environ.get(PRIVATE_SOURCE_ENV, "").strip():
         return PRIVATE_SOURCE_LABEL
+    if src == RTV_SOURCE:
+        return "RTV official daily schedule (Bangladesh)"
     if src == MAASRANGA_SOURCE:
         return "Maasranga official weekly grid (undated)"
     return src
