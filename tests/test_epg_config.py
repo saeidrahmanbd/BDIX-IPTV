@@ -678,7 +678,7 @@ class EpgConfigTests(unittest.TestCase):
             self.assertIn(f'tvg-id="{tid}"', pl)
         self.assertNotIn('tvg-id="ZBBhakti.in@HD"', pl)
 
-    def test_epg_refresh_follows_successful_playlist_writer_workflows(self):
+    def test_epg_refresh_runs_after_completed_playlist_writer_workflows_even_when_blocked(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("workflow_run:", workflow)
         for name in (
@@ -688,14 +688,17 @@ class EpgConfigTests(unittest.TestCase):
             "Playlist Logo Repair and Localization",
         ):
             self.assertIn(f'"{name}"', workflow)
-        self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
+        self.assertIn("types: [completed]", workflow)
+        self.assertIn("even when a playlist-maintenance", workflow)
+        self.assertNotIn("github.event.workflow_run.conclusion == 'success'", workflow)
         self.assertIn("# 09:00 Asia/Dhaka (UTC+6)", workflow)
 
 
-    def test_epg_refresh_cancels_superseded_builds_and_keeps_known_good_guide_safe(self):
+    def test_epg_refresh_serializes_builds_and_keeps_known_good_guide_safe(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("group: iptv-epg-writer-v6", workflow)
-        self.assertIn("cancel-in-progress: true", workflow)
+        self.assertIn("cancel-in-progress: false", workflow)
+        self.assertIn("queue: max", workflow)
         self.assertIn("Skip superseded queued EPG refresh", workflow)
         self.assertIn("refusing to publish stale output", workflow)
         self.assertIn("last known-good public guide", workflow)
