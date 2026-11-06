@@ -71,6 +71,12 @@ EPG_ALIASES = {
     # Same AU service: exact name match after region suffix, with 64 current
     # programme rows in epg_ripper_AU1 (2026-10-26 strict unmapped audit).
     "custom.moviesphere-au": ["Moviesphere.au"],
+    # Exact AU-region candidate from the 2026-11-06 strict unmapped audit:
+    # MovieSphere AU -> Moviesphere.au (68 usable current/future programme rows).
+    "custom.moviesphereau": ["Moviesphere.au"],
+    # Exact Poland-region candidate from the 2026-11-06 strict unmapped audit:
+    # FightBox Poland -> FightBox.pl (56 usable current/future programme rows).
+    "FightBox.nl@Poland": ["FightBox.pl"],
 
     # Exact display-name matches (after stripping quality tags) in fresh India
     # provider feeds that are already in SOURCES (airtel/jiotv/yupptv). Checked
