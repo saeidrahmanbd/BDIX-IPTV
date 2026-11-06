@@ -690,7 +690,8 @@ class EpgConfigTests(unittest.TestCase):
             self.assertIn(f'"{name}"', workflow)
         self.assertIn("types: [completed]", workflow)
         self.assertIn("even when a playlist-maintenance", workflow)
-        self.assertNotIn("github.event.workflow_run.conclusion == 'success'", workflow)
+        self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
+        self.assertIn("github.event.workflow_run.conclusion == 'failure'", workflow)
         self.assertIn("# 09:00 Asia/Dhaka (UTC+6)", workflow)
 
 
