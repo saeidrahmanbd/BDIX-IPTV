@@ -95,6 +95,8 @@ def channel_key(name):
         "discoverychanneleast": "discoverychannel",
         "disneychannelindia": "disneychannelin",
         "disneychannelin": "disneychannelin",
+        "animalplanet": "animalplanet",
+        "animalplanetindia": "animalplanet",
     }
     return aliases.get(key, key)
 
