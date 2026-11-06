@@ -330,6 +330,7 @@ def _parse_rtv_daily_programmes(text, now_utc):
             title = _clean(line[match.end():])
             title = re.sub(r"^[\s\-–—:]+", "", title)
             title = re.split(r"\s*(?:->|→)\s*", title, maxsplit=1)[0].strip()
+            title = re.sub(r"[।.]+$", "", title).strip()
             if title and title.casefold() not in RTV_GENERIC:
                 events.append({
                     "day_offset": day_offset,
