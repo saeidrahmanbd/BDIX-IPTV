@@ -68,7 +68,7 @@ class EPGPublicationSafetyTests(unittest.TestCase):
         self.assertIn("HAVE_PUBLISHED_FALLBACK=false", refresh)
         self.assertIn("group: iptv-epg-writer-v6", refresh)
         self.assertIn("cancel-in-progress: false", refresh)
-        self.assertIn("queue: max", refresh)
+        self.assertNotIn("queue: max", refresh)
         self.assertGreater(
             refresh.rfind("python scripts/validate_report_freshness.py --mode epg"),
             refresh.rfind("git rebase origin/main"),
