@@ -49,7 +49,6 @@ class EpgConfigTests(unittest.TestCase):
             "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
             "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
             "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
-            "https://iptv-epg.org/files/epg-pk.xml.gz",
             "https://www.free-epg.de/api/epg/pk.xml.gz",
             "https://iptv-epg.org/files/epg-in.xml.gz",
             "https://iptv-epg.org/files/epg-at.xml.gz",
@@ -72,6 +71,8 @@ class EpgConfigTests(unittest.TestCase):
             "https://m3u-edit.com/epg-source.php?file=IN4.xml.gz",
             "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/slingtv.xml",
                 ]
+        self.assertNotIn("https://iptv-epg.org/files/epg-pk.xml.gz", literal(COV, "SOURCES"))
+        self.assertNotIn("https://iptv-epg.org/files/epg-pk.xml.gz", literal(GEN, "SOURCES"))
         for source in expected:
             self.assertIn(source, literal(COV, "SOURCES"))
             self.assertIn(source, literal(GEN, "SOURCES"))
