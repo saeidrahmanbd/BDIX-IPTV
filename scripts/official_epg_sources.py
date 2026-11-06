@@ -4,11 +4,12 @@ import re
 import urllib.request
 from datetime import datetime, time, timedelta, timezone
 from html.parser import HTMLParser
+from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
 
 HUM_TV_SOURCE = "https://hum.tv/schedule/"
 HUM_TV_CHANNEL_ID = "HumTV.pk"
-RTV_SOURCE = "https://rtvonline.com/index.php/schedule.php"
+RTV_SOURCE = "https://rtvonline.com/home/"
 RTV_LEGACY_SOURCES = ("https://rtvbd.tv/schedule.php", "https://www.rtvbd.tv/schedule.php")
 RTV_CHANNEL_ID = "RTV.bd"
 BTV_SOURCE = "https://migrate.btvlive.gov.bd/channel/BTV"
@@ -194,6 +195,34 @@ RTV_BLOCK_TAGS = {
     "header", "li", "main", "p", "section", "td", "th", "tr", "ul",
 }
 RTV_SKIP_TAGS = {"script", "style", "noscript", "svg"}
+
+
+class _RtvArticleLinkParser(HTMLParser):
+    """Find the current daily schedule article linked from RTV's official homepage."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.current_href = None
+        self.current_text = []
+        self.links = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() == "a":
+            self.current_href = dict(attrs).get("href", "")
+            self.current_text = []
+
+    def handle_data(self, data):
+        if self.current_href:
+            self.current_text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag.lower() != "a" or not self.current_href:
+            return
+        label = _clean(" ".join(self.current_text))
+        if "আরটিভিতে আজ যা দেখবেন" in label or "আরটিভিতে আজকের আয়োজন" in label:
+            self.links.append(urljoin(RTV_SOURCE, self.current_href))
+        self.current_href = None
+        self.current_text = []
 
 
 class _RtvScheduleParser(HTMLParser):
@@ -479,7 +508,7 @@ def fetch_rtv_programmes(now=None):
     now_utc = now.astimezone(timezone.utc)
     fetch_errors = []
 
-    # Current RTV site publishes a dated Bengali "আজ যা দেখবেন" schedule.
+    # The official homepage links to a dated Bengali "আরটিভিতে আজ যা দেখবেন" article.
     request = urllib.request.Request(
         RTV_SOURCE,
         headers={
@@ -490,14 +519,37 @@ def fetch_rtv_programmes(now=None):
     )
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
-            html = response.read().decode("utf-8", errors="replace")
-        parser = _RtvScheduleParser()
-        parser.feed(html)
-        parser.close()
-        daily = _parse_rtv_daily_programmes(parser.text(), now_utc)
-        if daily:
-            return daily
-        fetch_errors.append("rtvonline: no current dated programme slots")
+            homepage = response.read().decode("utf-8", errors="replace")
+        link_parser = _RtvArticleLinkParser()
+        link_parser.feed(homepage)
+        link_parser.close()
+        article_urls = sorted(
+            set(link_parser.links),
+            key=lambda url: int(re.search(r"/(\\d+)(?:/|$)", url).group(1))
+            if re.search(r"/(\\d+)(?:/|$)", url) else 0,
+            reverse=True,
+        )
+        if not article_urls:
+            fetch_errors.append("rtvonline: no daily schedule article link on homepage")
+        else:
+            article_request = urllib.request.Request(
+                article_urls[0],
+                headers={
+                    "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+                    "Accept": "text/html,application/xhtml+xml,*/*",
+                    "Accept-Language": "bn-BD,bn;q=0.9,en;q=0.7",
+                    "Referer": RTV_SOURCE,
+                },
+            )
+            with urllib.request.urlopen(article_request, timeout=30) as response:
+                article_html = response.read().decode("utf-8", errors="replace")
+            parser = _RtvScheduleParser()
+            parser.feed(article_html)
+            parser.close()
+            daily = _parse_rtv_daily_programmes(parser.text(), now_utc)
+            if daily:
+                return daily
+            fetch_errors.append("rtvonline: daily article is stale or has no explicit programme slots")
     except Exception as exc:
         fetch_errors.append(f"rtvonline: {type(exc).__name__}")
 
