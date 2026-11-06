@@ -60,6 +60,8 @@ jobs:
         run: python scripts/discover_international_channels.py
       - name: Enforce required playlist attribution
         run: python scripts/enforce_playlist_attribution.py International-Playlist.m3u
+      - name: Reorganize International playlist and enforce unique primary IDs
+        run: python scripts/reorganize_international_playlist.py
       - name: Verify newly discovered streams and local logos
         run: python scripts/validate_discovery_run.py probe International-Playlist.m3u reports/international-channel-discovery.md /tmp/International-Playlist.before.m3u international
       - name: Validate International playlist and discovery queues
