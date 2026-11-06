@@ -287,8 +287,12 @@ jobs:
                       raise SystemExit(f"{name}: category has no streams: {category.get('category_name')}")
                   success = False
                   failures = []
-                  # Try a second channel if the first source is temporarily unavailable.
-                  for candidate in candidates[:2]:
+                  # Probe several entries in each category. A single dead or
+                  # geo-blocked URL must not fail the whole gateway when another
+                  # stream in the same category is playable. Never remove failed
+                  # Backup/New Backups records automatically.
+                  sample_limit = min(10, len(candidates))
+                  for candidate in candidates[:sample_limit]:
                       ok, detail = playback_probe(host, candidate)
                       if ok:
                           success = True
