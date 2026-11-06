@@ -8,7 +8,8 @@ from zoneinfo import ZoneInfo
 
 HUM_TV_SOURCE = "https://hum.tv/schedule/"
 HUM_TV_CHANNEL_ID = "HumTV.pk"
-RTV_SOURCE = "https://www.rtvbd.tv/schedule.php"
+RTV_SOURCE = "https://rtvonline.com/index.php/schedule.php"
+RTV_LEGACY_SOURCES = ("https://rtvbd.tv/schedule.php", "https://www.rtvbd.tv/schedule.php")
 RTV_CHANNEL_ID = "RTV.bd"
 BTV_SOURCE = "https://migrate.btvlive.gov.bd/channel/BTV"
 BTV_CHANNEL_ID = "BTVNational.bd"
@@ -232,45 +233,149 @@ class _RtvScheduleParser(HTMLParser):
         return "".join(self.parts)
 
 
-def fetch_rtv_programmes(now=None):
-    """Fetch RTV's official weekly schedule, deriving only short adjacent slots.
+RTV_BN_DIGITS = str.maketrans("০১২৩৪৫৬৭৮৯", "0123456789")
+RTV_BN_MONTHS = {
+    "জানুয়ারি": 1, "জানুয়ারি": 1, "জানু": 1,
+    "ফেব্রুয়ারি": 2, "ফেব্রুয়ারি": 2, "ফেব্রু": 2,
+    "মার্চ": 3, "এপ্রিল": 4, "মে": 5, "জুন": 6, "জুলাই": 7,
+    "আগস্ট": 8, "সেপ্টেম্বর": 9, "অক্টোবর": 10, "নভেম্বর": 11,
+    "নভে": 11, "ডিসেম্বর": 12,
+}
+RTV_BN_DATE_RE = re.compile(
+    r"(?P<day>\\d{1,2})\\s+(?P<month>"
+    + "|".join(re.escape(x) for x in sorted(RTV_BN_MONTHS, key=len, reverse=True))
+    + r")\\s+(?P<year>\\d{4})"
+)
+RTV_BN_TIME_RE = re.compile(
+    r"(?P<period>ভোর|সকাল|দুপুর|বিকেল|সন্ধ্যা|রাত)\\s*"
+    r"(?P<hour>\\d{1,2})\\s*টা"
+    r"(?:\\s*(?P<minute>\\d{1,2})\\s*মিনিট)?"
+    r"(?:\\s*(?:তে|এ|য়))?"
+)
 
-    The page provides weekday, named programme, and start-time entries but no
-    explicit stop times. Emit a slot only when the next start that day is at
-    most 120 minutes later. Omit wider gaps and each day's final listing rather
-    than inventing end times. Applies only to exact RTV.bd.
-    """
-    now = now or datetime.now(timezone.utc)
-    if now.tzinfo is None:
-        now = now.replace(tzinfo=timezone.utc)
-    now_utc = now.astimezone(timezone.utc)
-    # The www host has intermittently failed certificate-chain validation.
-    # Try the apex HTTPS host first, then the established www endpoint; TLS
-    # verification stays enabled for both attempts.
-    html = None
-    fetch_errors = []
-    for source_url in ("https://rtvbd.tv/schedule.php", RTV_SOURCE):
-        request = urllib.request.Request(
-            source_url,
-            headers={
-                "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
-                "Accept": "text/html,application/xhtml+xml,*/*",
-            },
-        )
-        try:
-            with urllib.request.urlopen(request, timeout=30) as response:
-                html = response.read().decode("utf-8", errors="replace")
-            break
-        except Exception as exc:
-            host = source_url.split("/", 3)[2]
-            fetch_errors.append(f"{host}: {type(exc).__name__}")
-    if html is None:
-        raise RuntimeError(
-            "Could not fetch the official RTV schedule over verified HTTPS ("
-            + "; ".join(fetch_errors)
-            + ")"
-        )
 
+def _parse_rtv_daily_programmes(text, now_utc):
+    """Parse RTV's dated Bengali daily schedule without inventing stale slots."""
+    normalized_text = (text or "").translate(RTV_BN_DIGITS)
+    date_match = RTV_BN_DATE_RE.search(normalized_text)
+    if not date_match:
+        return []
+
+    month = RTV_BN_MONTHS.get(date_match.group("month"))
+    if not month:
+        return []
+    schedule_day = datetime(
+        int(date_match.group("year")), month, int(date_match.group("day"))
+    ).date()
+    local_today = now_utc.astimezone(BANGLADESH_TZ).date()
+    if schedule_day < local_today or schedule_day > local_today + timedelta(days=1):
+        return []
+
+    events = []
+    pending = None
+    for raw_line in normalized_text.splitlines():
+        line = _clean(raw_line)
+        if not line:
+            continue
+        match = RTV_BN_TIME_RE.search(line)
+        if match:
+            period = match.group("period")
+            hour = int(match.group("hour"))
+            minute = int(match.group("minute") or 0)
+            if not 1 <= hour <= 12 or not 0 <= minute <= 59:
+                pending = None
+                continue
+
+            day_offset = 0
+            if period in {"ভোর", "সকাল"}:
+                hour %= 12
+            elif period == "দুপুর":
+                hour = 12 if hour == 12 else hour + 12
+            else:
+                if period == "রাত" and hour == 12:
+                    hour = 0
+                    day_offset = 1
+                else:
+                    hour = 12 if hour == 12 else hour + 12
+
+            title = _clean(line[match.end():])
+            title = re.sub(r"^[\\s\\-–—:]+", "", title)
+            title = re.split(r"\\s*(?:->|→)\\s*", title, maxsplit=1)[0].strip()
+            if title and title.casefold() not in RTV_GENERIC:
+                events.append({
+                    "day_offset": day_offset,
+                    "hour": hour,
+                    "minute": minute,
+                    "title": title,
+                })
+                pending = None
+            else:
+                pending = (day_offset, hour, minute)
+            continue
+
+        if pending:
+            title = re.split(r"\\s*(?:->|→)\\s*", line, maxsplit=1)[0].strip()
+            day_offset, hour, minute = pending
+            pending = None
+            if title and title.casefold() not in RTV_GENERIC:
+                events.append({
+                    "day_offset": day_offset,
+                    "hour": hour,
+                    "minute": minute,
+                    "title": title,
+                })
+
+    unique_events = {}
+    for event in events:
+        key = (
+            event["day_offset"], event["hour"], event["minute"],
+            event["title"].casefold(),
+        )
+        unique_events[key] = event
+    events = sorted(
+        unique_events.values(),
+        key=lambda x: (x["day_offset"], x["hour"], x["minute"], x["title"].casefold()),
+    )
+    if len(events) < 3:
+        return []
+
+    lower = now_utc - timedelta(hours=6)
+    upper = now_utc + timedelta(days=7)
+    programmes = []
+    for current, nxt in zip(events, events[1:]):
+        start_local = datetime.combine(
+            schedule_day + timedelta(days=current["day_offset"]),
+            time(current["hour"], current["minute"]),
+            tzinfo=BANGLADESH_TZ,
+        )
+        stop_local = datetime.combine(
+            schedule_day + timedelta(days=nxt["day_offset"]),
+            time(nxt["hour"], nxt["minute"]),
+            tzinfo=BANGLADESH_TZ,
+        )
+        duration = stop_local - start_local
+        if duration <= timedelta(0) or duration > timedelta(minutes=180):
+            continue
+        start = start_local.astimezone(timezone.utc)
+        stop = stop_local.astimezone(timezone.utc)
+        if stop < lower or start > upper:
+            continue
+        programmes.append({
+            "channel_id": RTV_CHANNEL_ID,
+            "title": current["title"],
+            "start_dt": start,
+            "stop_dt": stop,
+        })
+
+    unique = {}
+    for programme in programmes:
+        key = (programme["start_dt"], programme["stop_dt"], programme["title"].casefold())
+        unique[key] = programme
+    return sorted(unique.values(), key=lambda x: (x["start_dt"], x["title"].casefold()))
+
+
+def _parse_rtv_weekly_programmes(html, now_utc):
+    """Fallback parser for the retired English weekday-based RTV schedule."""
     parser = _RtvScheduleParser()
     parser.feed(html)
     parser.close()
@@ -297,8 +402,8 @@ def fetch_rtv_programmes(now=None):
                 pending = None
                 continue
             title = _clean(line[match.end():])
-            title = re.sub(r"^[\s\-–—:]+", "", title)
-            title = re.split(r"\s*(?:->|→)\s*", title, maxsplit=1)[0].strip()
+            title = re.sub(r"^[\\s\\-–—:]+", "", title)
+            title = re.split(r"\\s*(?:->|→)\\s*", title, maxsplit=1)[0].strip()
             if title:
                 pending = None
                 if title.casefold() not in RTV_GENERIC:
@@ -309,7 +414,7 @@ def fetch_rtv_programmes(now=None):
                 pending = (current_day, hour, minute)
             continue
         if pending:
-            title = re.split(r"\s*(?:->|→)\s*", line, maxsplit=1)[0].strip()
+            title = re.split(r"\\s*(?:->|→)\\s*", line, maxsplit=1)[0].strip()
             day, hour, minute = pending
             pending = None
             if title and title.casefold() not in RTV_GENERIC and not TIME_RE.search(title):
@@ -323,10 +428,7 @@ def fetch_rtv_programmes(now=None):
         unique_events[key] = event
     weekly_events = list(unique_events.values())
     if len(weekly_events) < 14 or len({x["weekday"] for x in weekly_events}) < 5:
-        raise RuntimeError(
-            "RTV schedule parsing returned too few explicit named weekday entries; "
-            "the official page markup may have changed."
-        )
+        return []
 
     lower = now_utc - timedelta(hours=6)
     upper = now_utc + timedelta(days=7)
@@ -367,6 +469,64 @@ def fetch_rtv_programmes(now=None):
         key = (programme["start_dt"], programme["stop_dt"], programme["title"])
         unique[key] = programme
     return sorted(unique.values(), key=lambda x: (x["start_dt"], x["title"]))
+
+
+def fetch_rtv_programmes(now=None):
+    """Fetch RTV's current official daily schedule, with a legacy weekly fallback."""
+    now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    now_utc = now.astimezone(timezone.utc)
+    fetch_errors = []
+
+    # Current RTV site publishes a dated Bengali "আজ যা দেখবেন" schedule.
+    request = urllib.request.Request(
+        RTV_SOURCE,
+        headers={
+            "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+            "Accept": "text/html,application/xhtml+xml,*/*",
+            "Accept-Language": "bn-BD,bn;q=0.9,en;q=0.7",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            html = response.read().decode("utf-8", errors="replace")
+        parser = _RtvScheduleParser()
+        parser.feed(html)
+        parser.close()
+        daily = _parse_rtv_daily_programmes(parser.text(), now_utc)
+        if daily:
+            return daily
+        fetch_errors.append("rtvonline: no current dated programme slots")
+    except Exception as exc:
+        fetch_errors.append(f"rtvonline: {type(exc).__name__}")
+
+    # Retain the older weekly page only as a fallback; TLS verification remains on.
+    for source_url in RTV_LEGACY_SOURCES:
+        request = urllib.request.Request(
+            source_url,
+            headers={
+                "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+                "Accept": "text/html,application/xhtml+xml,*/*",
+            },
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                html = response.read().decode("utf-8", errors="replace")
+            weekly = _parse_rtv_weekly_programmes(html, now_utc)
+            if weekly:
+                return weekly
+            host = source_url.split("/", 3)[2]
+            fetch_errors.append(f"{host}: no valid weekly programme slots")
+        except Exception as exc:
+            host = source_url.split("/", 3)[2]
+            fetch_errors.append(f"{host}: {type(exc).__name__}")
+
+    raise RuntimeError(
+        "Could not obtain a current official RTV schedule over verified HTTPS ("
+        + "; ".join(fetch_errors)
+        + ")"
+    )
 
 
 # BTV publishes its current/upcoming programme guide on its official live site.
