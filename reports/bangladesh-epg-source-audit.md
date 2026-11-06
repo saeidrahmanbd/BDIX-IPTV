@@ -1,6 +1,6 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-06T03:17:39+00:00**
+Generated: **2026-11-06T14:12:26+00:00**
 
 - Active Bangladesh playlist identities: **83**
 - Identities with a retained source mapping: **6**
@@ -22,7 +22,7 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; rtvbd.tv: URLError; www.rtvbd.tv: URLError) |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 71 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 64 | - |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
@@ -64,7 +64,7 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Enter TV | EnterTV.bd | NO_GUIDE_HIT |
 | G Series Drama | GSeriesDrama.bd | NO_GUIDE_HIT |
 | G TV | GaziTV.bd | NO_GUIDE_HIT |
-| GAZI TV | GaziTV.bd@SD | NO_GUIDE_HIT |
+| Gazi TV | GaziTV.bd@SD | NO_GUIDE_HIT |
 | Global TV | GlobalTV.bd | NO_GUIDE_HIT |
 | Green TV | GreenTV.bd@SD | NO_GUIDE_HIT |
 | Independent TV | IndependentTV.bd | NO_GUIDE_HIT |
@@ -101,11 +101,11 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Somoy TV | SomoyNewsTV.bd | NO_GUIDE_HIT |
 | SRK | SRK.bd | NO_GUIDE_HIT |
 | Star News | StarNews.bd | NO_GUIDE_HIT |
-| T Sports HD | TSports.bd | NO_GUIDE_HIT |
+| T Sports | TSports.bd | NO_GUIDE_HIT |
 | TBN24 | TBN24.us | NO_GUIDE_HIT |
 | Thikana | ThikanaTV.us | NO_GUIDE_HIT |
 | Time Television | TimeTelevision.us | NO_GUIDE_HIT |
-| Vokta TV (720p) | VoktaTV.bd@SD | NO_GUIDE_HIT |
+| Vokta TV | VoktaTV.bd@SD | NO_GUIDE_HIT |
 
 ## Matching and source notes
 
