@@ -1,27 +1,27 @@
 # Update Report
 
-_Last generated: **2026-11-06 16:20 UTC**_
+_Last generated: **2026-11-06 16:35 UTC**_
 
-Source playlist SHA-256: **d8ac07ce135cde8d024e6a4945c377175132e290d02e275bcd0e376fdddc692e**
+Source playlist SHA-256: **92a045f671165942d728082edaac08bdaa83c0320afde042d00ed9b6ea1da67a**
 
 | Metric | Current |
 |---|---:|
 | Streams | **1121** |
-| Active Channel Identities | **656** |
-| Active Primary Streams | **656** |
+| Active Channel Identities | **655** |
+| Active Primary Streams | **655** |
 | Bangladesh | **65** |
-| India | **312** |
-| Backup Stream Entries | **321** |
+| India | **311** |
+| Backup Stream Entries | **322** |
 | IPTV Local Logos | **99.9%** |
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
 | Stream Health Tested | **1121** |
-| Stream Health Failures | **142** |
-| Persistent Failures | **121** |
+| Stream Health Failures | **143** |
+| Persistent Failures | **124** |
 | Near-Duplicate URL Families | **3** |
-| Audit Blocking Issues | **1** |
+| Audit Blocking Issues | **13** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-11-06T16:19:34+00:00** |
+| Pre-Publish Gate Generated | **2026-11-06T16:34:18+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
@@ -34,7 +34,7 @@ Source playlist SHA-256: **d8ac07ce135cde8d024e6a4945c377175132e290d02e275bcd0e3
 - Primary entries missing channel numbers: **0**
 - Logo exceptions: **1**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
+- Category block-order issues: **12**
 - Alphabetical ordering issues: **0**
 - Signed/tokenized URLs: **9**
 
@@ -62,14 +62,14 @@ Source playlist SHA-256: **d8ac07ce135cde8d024e6a4945c377175132e290d02e275bcd0e3
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-06T16:19:34.060789+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-06T16:34:18.278452+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-06T14:12:26+00:00** | **PENDING — guide missing or freshness not PASS** |
-| Stream health | **2026-11-06T16:20:19+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-06T16:19:34+00:00** | **CURRENT** |
+| Stream health | **2026-11-06T16:35:04+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-06T16:34:18+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **1121 → 1121**
-- Latest health failures: **146 → 142**
+- Latest health failures: **142 → 143**
 
 Historical records are retained in reports/maintenance-history.json.

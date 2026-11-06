@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06T16:20:19+00:00",
+  "generated": "2026-11-06T16:35:04+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -6527,12 +6527,11 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh",
-        "Indian Movies"
+        "Bangladesh"
       ],
       "streams": 7,
-      "primary": 2,
-      "backup": 5
+      "primary": 1,
+      "backup": 6
     },
     "ntveurope": {
       "names": [

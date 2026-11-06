@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-06T16:19:34.060789+00:00**
-Source playlist SHA-256: **d8ac07ce135cde8d024e6a4945c377175132e290d02e275bcd0e376fdddc692e**
+Generated: **2026-11-06T16:34:18.278452+00:00**
+Source playlist SHA-256: **92a045f671165942d728082edaac08bdaa83c0320afde042d00ed9b6ea1da67a**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -25,12 +25,12 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues: **0**
+- Primary channel-number sequence issues: **523**
 - Primary entries missing channel numbers: **0**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
+- Category block-order issues: **12**
 - Category registry issues: **0**
 - Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
@@ -874,7 +874,56 @@ None.
 
 ## Primary Channel-Number Sequence
 
-Contiguous numbering verified: 1–656.
+- **Oscar Movies Bhojpuri** — expected channel number 133, found 134
+- **Pitaara TV** — expected channel number 134, found 135
+- **Pocket Films** — expected channel number 135, found 136
+- **Public Movies** — expected channel number 136, found 137
+- **Raj Digital Plus** — expected channel number 137, found 138
+- **Roja Movies** — expected channel number 138, found 139
+- **Shemaroo Bollywood** — expected channel number 139, found 140
+- **Shemaroo Josh** — expected channel number 140, found 141
+- **Shemaroo Marathi Bana** — expected channel number 141, found 142
+- **Shubh Cinema TV** — expected channel number 142, found 143
+- **Soneri Cinema** — expected channel number 143, found 144
+- **Sony Movies** — expected channel number 144, found 145
+- **South Station** — expected channel number 145, found 146
+- **Star Maa Movies** — expected channel number 146, found 147
+- **Star Movies** — expected channel number 147, found 148
+- **Star Movies Select** — expected channel number 148, found 149
+- **Studio One +** — expected channel number 149, found 150
+- **Sun Gemini** — expected channel number 150, found 151
+- **The Movie Club** — expected channel number 151, found 152
+- **The Movie Club +2** — expected channel number 152, found 153
+- **Tolly TV** — expected channel number 153, found 154
+- **Vision (India)** — expected channel number 154, found 155
+- **Zee Bangla Sonar** — expected channel number 155, found 156
+- **Zee Cinema** — expected channel number 156, found 157
+- **7S Music** — expected channel number 157, found 158
+- **7X Punjabi** — expected channel number 158, found 159
+- **9X Jalwa** — expected channel number 159, found 160
+- **9X Jhakaas** — expected channel number 160, found 161
+- **9X Tashan** — expected channel number 161, found 162
+- **9XM** — expected channel number 162, found 163
+- **AMN TV** — expected channel number 163, found 164
+- **Andy Haryana** — expected channel number 164, found 165
+- **B4U Music** — expected channel number 165, found 166
+- **Balle Balle** — expected channel number 166, found 167
+- **Deewana** — expected channel number 167, found 168
+- **Dhool TV** — expected channel number 168, found 169
+- **E24** — expected channel number 169, found 170
+- **Ekamra Musiq** — expected channel number 170, found 171
+- **Epic Music** — expected channel number 171, found 172
+- **ETV Beats** — expected channel number 172, found 173
+- **ETV Music** — expected channel number 173, found 174
+- **Gangaur TV** — expected channel number 174, found 175
+- **Hindi Hits** — expected channel number 175, found 176
+- **Insync** — expected channel number 176, found 177
+- **Isai Aruvi** — expected channel number 177, found 178
+- **Kappa TV (Music)** — expected channel number 178, found 179
+- **Mahua Play** — expected channel number 179, found 180
+- **Mastiii** — expected channel number 180, found 181
+- **Music India** — expected channel number 181, found 182
+- **NH BollyRaga** — expected channel number 182, found 183
 
 ## Malformed EXTINF Entries
 
@@ -882,7 +931,18 @@ None.
 
 ## Ordering
 
-Category block order: OK.
+- category block **Indian Movies** — out of canonical block order
+- category block **Indian Music** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
+- category block **Pakistani** — out of canonical block order
+- category block **International** — out of canonical block order
+- category block **Documentary & Wildlife** — out of canonical block order
+- category block **Kids** — out of canonical block order
+- category block **Religious** — out of canonical block order
+- category block **Sports** — out of canonical block order
+- category block **Not Playing** — out of canonical block order
+- category block **New Channels** — out of canonical block order
+- category block **New Backups** — out of canonical block order
 Primary-category alphabetical/channel-number order: OK.
 Backup/Not Playing/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
