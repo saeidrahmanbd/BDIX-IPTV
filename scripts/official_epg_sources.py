@@ -525,8 +525,8 @@ def fetch_rtv_programmes(now=None):
         link_parser.close()
         article_urls = sorted(
             set(link_parser.links),
-            key=lambda url: int(re.search(r"/(\\d+)(?:/|$)", url).group(1))
-            if re.search(r"/(\\d+)(?:/|$)", url) else 0,
+            key=lambda url: int(re.search(r"/(\d+)(?:/|$)", url).group(1))
+            if re.search(r"/(\d+)(?:/|$)", url) else 0,
             reverse=True,
         )
         if not article_urls:
