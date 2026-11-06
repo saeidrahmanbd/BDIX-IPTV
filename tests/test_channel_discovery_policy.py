@@ -51,23 +51,23 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 attrs = {"group-title": group, "tvg-country": "IN"}
                 self.assertIsNotNone(prohibited_channel(attrs, name))
 
-    def test_indian_kids_and_sports_channels_are_rejected(self):
+    def test_indian_kids_are_rejected_for_active_and_discovery_policy(self):
         for name, group in [
             ("Kids TV", "Kids"),
             ("Cartoon Network", "Entertainment"),
             ("Green Gold TV", "Entertainment"),
             ("Pogo", "Entertainment"),
             ("Disney Channel", "Kids"),
-            ("Star Sports", "Sports"),
-            ("DD Sports", "Entertainment"),
         ]:
             with self.subTest(name=name, group=group):
                 self.assertIsNotNone(prohibited_channel(
                     {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}, name
                 ))
 
-    def test_indian_knowledge_and_business_channels_are_rejected(self):
+    def test_indian_sports_knowledge_and_business_are_discovery_only_exclusions(self):
         examples = [
+            ("Star Sports", "Sports"),
+            ("DD Sports", "Entertainment"),
             ("Discovery Channel", "Knowledge"),
             ("National Geographic", "Documentary"),
             ("Animal Planet", "Entertainment"),
@@ -76,13 +76,12 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("Zee Business", "Entertainment"),
         ]
         for name, group in examples:
+            attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
             with self.subTest(name=name, group=group):
-                self.assertIsNotNone(prohibited_channel(
-                    {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"},
-                    name,
-                ))
+                self.assertIsNone(prohibited_channel(attrs, name))
+                self.assertIsNotNone(prohibited_channel(attrs, name, discovery=True))
 
-    def test_bangladesh_sports_knowledge_and_business_channels_remain_allowed(self):
+    def test_bangladesh_discovery_channels_remain_unrestricted_by_genre(self):
         examples = [
             ("T Sports", "Sports"),
             ("Discovery Bangladesh", "Knowledge"),
@@ -93,6 +92,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNone(prohibited_channel(
                     {"group-title": group, "tvg-country": "BD", "tvg-id": "SampleChannel.bd"},
                     name,
+                    discovery=True,
                 ))
 
     def test_indian_educational_channels_are_rejected(self):

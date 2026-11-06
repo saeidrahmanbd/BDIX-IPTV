@@ -33,8 +33,12 @@ BAD_WORDS = {
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
     "religious": re.compile(r"\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
-    "educational/knowledge": re.compile(r"\b(?:education(?:al)?|learning|school|university|college|academy|e-?vidya|vidya|gyan\s*darshan|knowledge|documentary|wildlife|history|science|discovery|animal\s*planet|national\s*geographic|nat\s*geo|infotainment)\b", re.IGNORECASE),
+    "educational": re.compile(r"\b(?:education(?:al)?|learning|school|university|college|academy|e-?vidya|vidya|gyan\s*darshan|knowledge\s*channel)\b", re.IGNORECASE),
     "kids": re.compile(r"\b(?:kids?|children|green\s*gold|cartoon|baby\s*shark|disney\s*(?:jr|junior|channel|xd)|nick(?:elodeon)?|pogo|pbs\s*kids|toongoggles?|toonami|teletubbies|doraemon|discovery\s*kids|boomerang|spacetoon|kartoon|lego\s*channel)\b", re.IGNORECASE),
+}
+# These additional genre exclusions apply only to IPTV New Channels/New Backup intake.
+DISCOVERY_EXTRA_CATEGORY_PATTERNS = {
+    "knowledge": re.compile(r"\b(?:knowledge|documentary|wildlife|history|science|discovery|animal\s*planet|national\s*geographic|nat\s*geo|infotainment)\b", re.IGNORECASE),
     "sports": re.compile(r"\b(?:sports?|cricket|football|soccer|tennis|motorsports?|racing|kabaddi|wrestling|boxing|golf|athletics|espn|star\s*sports|sony\s*sports|sports\s*18|dd\s*sports)\b", re.IGNORECASE),
     "business/finance": re.compile(r"\b(?:business|finance|financial|stock\s*market|market\s*news|econom(?:y|ic)|cnbc|bloomberg|zee\s*business|et\s*now)\b", re.IGNORECASE),
 }
@@ -150,8 +154,14 @@ def channel_country(a: dict[str, str], fallback: str | None = None) -> str | Non
     return None
 
 
-def prohibited_channel(a: dict[str, str], name: str, country: str | None = None) -> str | None:
-    """Apply India-only exclusions: News, Religious, Education/Knowledge, Kids, Sports and Business/Finance."""
+def prohibited_channel(
+    a: dict[str, str],
+    name: str,
+    country: str | None = None,
+    *,
+    discovery: bool = False,
+) -> str | None:
+    """Apply legacy active-channel exclusions, plus optional IPTV discovery-only genres."""
     for candidate in (name, a.get("tvg-name", "")):
         if canonical_channel_name(candidate) in PERMANENTLY_BANNED_CHANNEL_NAMES:
             return "permanently banned channel"
@@ -167,6 +177,10 @@ def prohibited_channel(a: dict[str, str], name: str, country: str | None = None)
     for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
         if pattern.search(group) or pattern.search(values):
             return f"Indian {category} channel is prohibited"
+    if discovery:
+        for category, pattern in DISCOVERY_EXTRA_CATEGORY_PATTERNS.items():
+            if pattern.search(group) or pattern.search(values):
+                return f"Indian {category} channel is prohibited"
     if FORBIDDEN_BRANDS.search(values):
         return "known Indian prohibited brand/category is prohibited"
     for word in FORBIDDEN_WORDS:
@@ -179,7 +193,7 @@ def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=Non
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
     # Bangladesh channels of all genres remain allowed; genre exclusions apply only to India.
-    forbidden = prohibited_channel(a, name, country)
+    forbidden = prohibited_channel(a, name, country, discovery=True)
     if forbidden:
         return None, forbidden
     p = urlparse(url)
@@ -234,7 +248,7 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
         _, display = split_extinf(extinf_line)
         name = (a.get("tvg-name") or display).strip()
         if group in queue_groups:
-            reason = prohibited_channel(a, name)
+            reason = prohibited_channel(a, name, discovery=True)
             declared_country = a.get("tvg-country", "").strip().upper()
             id_countries = {
                 match.group(1).upper()
