@@ -49,7 +49,9 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
 
     def test_international_backup_groups_use_the_plural_review_queue_contract(self):
         rows = playlist_rows(ROOT / "International-Playlist.m3u")
-        legacy = [row for row in rows if row["attrs"].get("group-title", "").casefold() in {"backups", "new backups"}]
+        # "New Backups" is the canonical plural review queue; only the
+        # obsolete standalone "Backups" group is forbidden.
+        legacy = [row for row in rows if row["attrs"].get("group-title", "").casefold() == "backups"]
         self.assertEqual(legacy, [])
 
         organizer = (ROOT / "scripts/reorganize_international_playlist.py").read_text(encoding="utf-8")
