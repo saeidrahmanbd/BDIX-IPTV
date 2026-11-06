@@ -137,6 +137,14 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         self.assertNotIn('tvg-logo=""', updated)
         self.assertTrue(cleared)
 
+    def test_candidate_without_logo_is_held_out_of_discovery_queue(self):
+        extinf = '#EXTINF:-1 tvg-name="No Authentic Asset Candidate",No Authentic Asset Candidate'
+        entry = {"extinf": extinf, "logo": "", "name": "No Authentic Asset Candidate"}
+        updated, localized, unavailable = ensure_local_logo(entry)
+        self.assertEqual(updated, extinf)
+        self.assertFalse(localized)
+        self.assertTrue(unavailable)
+
     def test_parser_detects_malformed_extinf_pair(self):
         _, entries, malformed = parse_playlist('#EXTM3U\n#EXTINF:-1 group-title="New Channels",Example\n')
         self.assertEqual(entries, [])

@@ -134,7 +134,10 @@ def ensure_local_logo(entry):
         return set_logo(entry["extinf"], ""), False, True
     if re.search(r'\btvg-logo=""', entry["extinf"]):
         return set_logo(entry["extinf"], ""), False, True
-    return entry["extinf"], False, False
+    # A candidate without a trusted local logo cannot pass publication. Signal
+    # the caller to hold it out of active discovery queues rather than publishing
+    # a blank or placeholder logo.
+    return entry["extinf"], False, True
 
 def consolidate_international_country_groups(playlist_path):
     """Reconcile dynamic country groups after stream probes remove dead candidates."""
@@ -277,13 +280,18 @@ def probe_mode(playlist, report, baseline, mode):
         else:
             counts["primary streams retained as unverified"] += 1
             details.append(f"- Retained {e['name']} for review — stream could not be conclusively verified ({reason}).")
-        new_extinf, localized, cleared = ensure_local_logo(e)
+        new_extinf, localized, unavailable = ensure_local_logo(e)
+        if unavailable:
+            remove_starts.add(e["start"])
+            counts["candidates removed for missing local logo"] += 1
+            details.append(
+                f"- Held {e['name']} out of {e['group']} — no authentic local logo asset is available."
+            )
+            continue
         if new_extinf != e["extinf"]:
             update_lines[e["start"]] = new_extinf
         if localized:
             counts["logos localized to repository assets"] += 1
-        if cleared:
-            counts["external/missing-asset logo references cleared"] += 1
     remove_indices = set()
     by_start = {e["start"]: e for e in entries}
     for start in remove_starts:
@@ -309,7 +317,7 @@ def probe_mode(playlist, report, baseline, mode):
         f"- Duplicate discovery entries removed: {counts['duplicate discovery entries removed']}",
         f"- Country-group rows consolidated after stream probing: {counts['country-group rows consolidated after stream probing']}",
         f"- Logo references localized to authentic repository assets: {counts['logos localized to repository assets']}",
-        f"- Logo references cleared because no authentic local asset was found: {counts['external/missing-asset logo references cleared']}",
+        f"- Candidates held out because no authentic local logo was available: {counts['candidates removed for missing local logo']}",
         "",
         "### Stream probe details",
         *(details[:100] if details else ["- No stream removals or uncertain responses to report."]),

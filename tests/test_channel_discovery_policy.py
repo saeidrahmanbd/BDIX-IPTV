@@ -51,22 +51,48 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 attrs = {"group-title": group, "tvg-country": "IN"}
                 self.assertIsNotNone(prohibited_channel(attrs, name))
 
-    def test_indian_kids_are_rejected_but_sports_are_allowed(self):
+    def test_indian_kids_and_sports_channels_are_rejected(self):
         for name, group in [
             ("Kids TV", "Kids"),
             ("Cartoon Network", "Entertainment"),
             ("Green Gold TV", "Entertainment"),
             ("Pogo", "Entertainment"),
             ("Disney Channel", "Kids"),
+            ("Star Sports", "Sports"),
+            ("DD Sports", "Entertainment"),
         ]:
             with self.subTest(name=name, group=group):
                 self.assertIsNotNone(prohibited_channel(
                     {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}, name
                 ))
-        for name, group in [("Sports Bangla", "Sports"), ("DD Sports", "Entertainment")]:
+
+    def test_indian_knowledge_and_business_channels_are_rejected(self):
+        examples = [
+            ("Discovery Channel", "Knowledge"),
+            ("National Geographic", "Documentary"),
+            ("Animal Planet", "Entertainment"),
+            ("CNBC TV18", "Business"),
+            ("Bloomberg", "Finance"),
+            ("Zee Business", "Entertainment"),
+        ]
+        for name, group in examples:
+            with self.subTest(name=name, group=group):
+                self.assertIsNotNone(prohibited_channel(
+                    {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"},
+                    name,
+                ))
+
+    def test_bangladesh_sports_knowledge_and_business_channels_remain_allowed(self):
+        examples = [
+            ("T Sports", "Sports"),
+            ("Discovery Bangladesh", "Knowledge"),
+            ("Business Bangladesh", "Business"),
+        ]
+        for name, group in examples:
             with self.subTest(name=name, group=group):
                 self.assertIsNone(prohibited_channel(
-                    {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}, name
+                    {"group-title": group, "tvg-country": "BD", "tvg-id": "SampleChannel.bd"},
+                    name,
                 ))
 
     def test_indian_educational_channels_are_rejected(self):

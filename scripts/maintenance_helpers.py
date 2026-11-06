@@ -236,7 +236,13 @@ def _protected_text(text: str) -> str:
     for block in blocks:
         lines = list(block["lines"])
         if lines:
-            lines[0] = _canonical_extinf(str(lines[0]))
+            info = str(lines[0])
+            # Numbering is intentionally absent from Backup/Not Playing queues.
+            # Permit this metadata-only normalization while protecting every
+            # other EXTINF value and the exact stream URL.
+            if _group(info) in PROTECTED_GROUPS:
+                info = re.sub(r'\s+tvg-chno="[^"]*"', "", info, count=1)
+            lines[0] = _canonical_extinf(info)
         serialized.extend(lines)
     return "\n".join(serialized) + "\n"
 

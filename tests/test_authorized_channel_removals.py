@@ -192,6 +192,22 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
         )
         self.assertEqual(guard._protected_text(first), guard._protected_text(second))
 
+    def test_protected_snapshot_allows_only_channel_number_removal(self):
+        url = "https://example.invalid/reliable.m3u8"
+        numbered = (
+            '#EXTINF:-1 tvg-name="Reliable Backup" tvg-chno="501" '
+            'group-title="Backup" tvg-country="BD",Reliable Backup\n' + url
+        )
+        unnumbered = (
+            '#EXTINF:-1 tvg-name="Reliable Backup" '
+            'group-title="Backup" tvg-country="BD",Reliable Backup\n' + url
+        )
+        self.assertEqual(guard._protected_text(numbered), guard._protected_text(unnumbered))
+        changed_metadata = unnumbered.replace('tvg-country="BD"', 'tvg-country="IN"')
+        self.assertNotEqual(guard._protected_text(numbered), guard._protected_text(changed_metadata))
+        changed_url = unnumbered.replace(url, "https://example.invalid/other.m3u8")
+        self.assertNotEqual(guard._protected_text(numbered), guard._protected_text(changed_url))
+
     def test_exact_sparkle_duplicate_is_authorized_only_as_backup(self):
         info = '#EXTINF:-1 tvg-name="Sparkle Movies" group-title="Backup",Sparkle Movies'
         url = (

@@ -3,7 +3,7 @@
 
 Rules:
 - Only the Bangladesh and India country feeds are considered.
-- Bangladesh channels of all genres remain eligible. Indian News, Religious (including Islamic), Educational and Kids channels are prohibited; Indian Sports channels remain eligible.
+- Bangladesh channels of all genres remain eligible. Indian News, Religious (including Islamic), Educational/Knowledge, Kids, Sports and Business/Finance channels are prohibited.
 - Existing stream URLs and normalized channel identities are never duplicated.
 - First unseen stream for a new identity -> New Channels.
 - Additional unseen streams for an existing/newly discovered identity -> New Backups.
@@ -29,12 +29,14 @@ BAD_WORDS = {
     "vod", "catchup", "catch-up", "test", "demo", "proxy", "proxied",
     "cors", "webcam", "radio", "podcast", "event", "ppv", "timeshift",
 }
-# India-only exclusions. Sports is intentionally absent and remains eligible.
+# India-only exclusions. Bangladesh channels remain unrestricted by genre.
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
     "religious": re.compile(r"\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
-    "educational": re.compile(r"\b(?:education(?:al)?|learning|school|university|college|academy|e-?vidya|vidya|gyan\s*darshan|knowledge\s*channel)\b", re.IGNORECASE),
+    "educational/knowledge": re.compile(r"\b(?:education(?:al)?|learning|school|university|college|academy|e-?vidya|vidya|gyan\s*darshan|knowledge|documentary|wildlife|history|science|discovery|animal\s*planet|national\s*geographic|nat\s*geo|infotainment)\b", re.IGNORECASE),
     "kids": re.compile(r"\b(?:kids?|children|green\s*gold|cartoon|baby\s*shark|disney\s*(?:jr|junior|channel|xd)|nick(?:elodeon)?|pogo|pbs\s*kids|toongoggles?|toonami|teletubbies|doraemon|discovery\s*kids|boomerang|spacetoon|kartoon|lego\s*channel)\b", re.IGNORECASE),
+    "sports": re.compile(r"\b(?:sports?|cricket|football|soccer|tennis|motorsports?|racing|kabaddi|wrestling|boxing|golf|athletics|espn|star\s*sports|sony\s*sports|sports\s*18|dd\s*sports)\b", re.IGNORECASE),
+    "business/finance": re.compile(r"\b(?:business|finance|financial|stock\s*market|market\s*news|econom(?:y|ic)|cnbc|bloomberg|zee\s*business|et\s*now)\b", re.IGNORECASE),
 }
 
 def canonical_channel_name(value: str) -> str:
@@ -149,14 +151,14 @@ def channel_country(a: dict[str, str], fallback: str | None = None) -> str | Non
 
 
 def prohibited_channel(a: dict[str, str], name: str, country: str | None = None) -> str | None:
-    """Apply India-only exclusions: News, all Religious, Educational and Kids; Sports is allowed."""
+    """Apply India-only exclusions: News, Religious, Education/Knowledge, Kids, Sports and Business/Finance."""
     for candidate in (name, a.get("tvg-name", "")):
         if canonical_channel_name(candidate) in PERMANENTLY_BANNED_CHANNEL_NAMES:
             return "permanently banned channel"
 
     resolved_country = channel_country(a, country)
     # Bangladesh is intentionally unrestricted by genre. The exclusions below
-    # are specific to Indian channels and apply to all religious content.
+    # are India-only and cover all religious subtypes plus the requested genres.
     if resolved_country != "IN":
         return None
 
@@ -176,7 +178,7 @@ def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=Non
     """Return (normalized attrs | None, reason). Country must be verified BD/IN."""
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
-    # Bangladesh news is allowed; News/Sports/Kids/Religious exclusions are India-only.
+    # Bangladesh channels of all genres remain allowed; genre exclusions apply only to India.
     forbidden = prohibited_channel(a, name, country)
     if forbidden:
         return None, forbidden
@@ -342,7 +344,7 @@ def main() -> int:
         "# IPTV Channel Discovery", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
-        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational and Kids channels are prohibited; Indian Sports channels are eligible.**",
+        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational/Knowledge, Kids, Sports and Business/Finance channels are prohibited.**",
         "- Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
         f"- Existing prohibited review-queue rows removed: **{len(purged)}**",
