@@ -66,7 +66,8 @@ class EPGPublicationSafetyTests(unittest.TestCase):
         refresh = (ROOT / ".github/workflows/epg-refresh.yml").read_text(encoding="utf-8")
         self.assertNotIn("LAST_GOOD_EPG_COMMIT", refresh)
         self.assertIn("HAVE_PUBLISHED_FALLBACK=false", refresh)
-        self.assertIn("cancel-in-progress: false", refresh)
+        self.assertIn("group: iptv-epg-writer-v6", refresh)
+        self.assertIn("cancel-in-progress: true", refresh)
         self.assertGreater(
             refresh.rfind("python scripts/validate_report_freshness.py --mode epg"),
             refresh.rfind("git rebase origin/main"),
