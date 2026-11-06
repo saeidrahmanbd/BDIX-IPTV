@@ -37,8 +37,9 @@ permissions:
 
 concurrency:
   group: iptv-epg-writer-v5
-  # Finish the active build; GitHub keeps only the newest pending run for this group.
-  cancel-in-progress: false
+  # New playlist/EPG inputs supersede an in-progress build; the publication guard
+  # keeps the known-good guide safe while the newest run rebuilds from current inputs.
+  cancel-in-progress: true
 
 jobs:
   refresh:
