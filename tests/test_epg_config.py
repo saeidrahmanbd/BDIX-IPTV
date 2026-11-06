@@ -699,7 +699,7 @@ class EpgConfigTests(unittest.TestCase):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("group: iptv-epg-writer-v6", workflow)
         self.assertIn("cancel-in-progress: false", workflow)
-        self.assertNotIn("queue: max", workflow)
+        self.assertIn("queue: max", workflow)
         self.assertIn("Skip superseded queued EPG refresh", workflow)
         self.assertIn("refusing to publish stale output", workflow)
         self.assertIn("last known-good public guide", workflow)
