@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-06T09:27:51+00:00**
+Generated: **2026-11-06T12:24:34+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **c1e170f5553fb67bfd7966dc803db253fd14b6e20a94375f13cf7f6b50710bc0**
-- International-Playlist.m3u SHA-256: **adc64269aaf770a83dfaa841673250d2da84d4f136cf735ceac2f02420ef2752**
+- International-Playlist.m3u SHA-256: **7762b2644675b92a5ab0d59ae1983e213855f70f78ebf265ae7bd62e9430e84a**
 
 ## Summary
 
@@ -16,8 +16,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
-- Exact-byte duplicate asset clusters: **685**
-- Playlist references whose asset stem differs from the normalized channel name: **1392**
+- Exact-byte duplicate asset clusters: **694**
+- Playlist references whose asset stem differs from the normalized channel name: **1425**
 - Unreferenced files immediately inside logos/: **1327** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
@@ -44,7 +44,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
-| famatv-9f148af63b.jpg | 221×87 | 562385 | yes |
+| famatv-9f148af63b.jpg | 221×87 | 562355 | yes |
 | famatv-1080p-not-24-7.jpg | 221×87 | 562326 | no |
 | minimax-romania.svg | 0×0 | 992049 | no |
 | README.md | 0×0 | 602694 | no |
@@ -325,6 +325,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/boomerang-a974605153.png, logos/nvisionbd-official-boomerang-uk.png, logos/nvisionbd-official-boomerang.png
 - logos/boreal-cd9844f465.png, logos/international/boreal-720p-not-24-7.png
 - logos/botflix-radioo-90c6a6f9a4.webp, logos/international/botflix-tv-1080p.webp
+- logos/bridge-33debed2b6.png, logos/international/bridge.png
 - logos/bta-tv-720p-4e7cddfa0e.png, logos/international/bta-tv-720p.png, logos/unused/bta-tv-720p-4e7cddfa0e.png
 - logos/btv-news-33c61f1708.jpg, logos/nvisionbd-verified-btv-news-33c61f1708.jpg
 - logos/c-malayalam-tv-1080p-3b1c6293f5.png, logos/unused/c-malayalam-tv-720p-3b1c6293f5.png
@@ -409,6 +410,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/deewana-hd-540p.png, logos/international/deewana-hd-540p.png
 - logos/dhamaal-geo-blocked-6c1fb8f527.png, logos/international/dhamaal-576p-geo-blocked.png, logos/nvisionbd-verified-dhamaal-576p-geo-blocked-6c1fb8f527.png
 - logos/dhoom-music-576p-ba62bd030a.png, logos/unused/dhoom-music-576p-ba62bd030a.png
+- logos/disco-polo-music-2b6aaf92aa.png, logos/international/disco-polo-music.png
 - logos/discover-pakistan.png, logos/discovery-pakistan-b91039be.png, logos/unused/discover-pakistan.png
 - logos/discovery-channel-hungary-bf08bd4c8d.png, logos/discovery-channel-italy-bf08bd4c8d.png, logos/discovery-channel-latin-america-bf08bd4c8d.png, logos/discovery-channel-united-states-bf08bd4c8d.png
 - logos/discovery-kids-latin-america-387f33e092.png, logos/discovery-kids-latin-america-chile-387f33e092.png, logos/discovery-kids-latin-america-colombia-387f33e092.png, logos/discovery-kids-latin-america-mexico-387f33e092.png
@@ -482,7 +484,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/global-punjab-7d78c04b06.png, logos/nvisionbd-verified-global-punjab-7d78c04b06.png
 - logos/global-tv-1080p-5ffc043912.png, logos/unused/global-tv-1080p-5ffc043912.png, logos/verified-global-tv-1080p-5ffc043912-095e7dad7b.png
 - logos/goldmines-movies-576p-4a7688df18.png, logos/goldmines-movies.png
-- logos/goldmines.png, logos/unused/goldmines-576p-99e087b760.png
+- logos/goldmines.png, logos/international/goldmines-2.png, logos/unused/goldmines-576p-99e087b760.png
 - logos/golf-channel-73bed53091.png, logos/nvisionbd-official-golf-channel.png
 - logos/grand-cinema.png, logos/unused/grand-cinema.png
 - logos/great-movies-1080p-9cc0399e3e.png, logos/international/great-movies.png
@@ -557,6 +559,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/melody-fm-720p-not-24-7.png, logos/melody-fm-e501245773.png
 - logos/international/merry-christmas-from-viafree-dk.png, logos/international/merry-christmas-from-viafree-no.png, logos/international/merry-christmas-from-viafree.png
 - logos/international/metropolitana-del-cuzco.png, logos/metropolitana-del-cuzco.png
+- logos/international/mi-musica-romantica.png, logos/mi-musica-romantica-43d86eb9cc.png
 - logos/international/mntv.png, logos/unused/mntv-075accb781.png
 - logos/international/molahits-tv-720p.png, logos/molahits-tv-720p.png
 - logos/international/mooz-dance-hd-1080i-geo-blocked.png, logos/international/mooz-dance.png
@@ -633,6 +636,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/rakuten-tv-action-movies-austria-720p.png, logos/international/rakuten-tv-action-movies-germany-1080p.png, logos/international/rakuten-tv-action-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-austria-720p.png, logos/international/rakuten-tv-comedy-movies-germany-1080p.png, logos/international/rakuten-tv-comedy-movies-italy-1080p.png, logos/international/rakuten-tv-drama-movies-austria-720p.png, logos/international/rakuten-tv-drama-movies-germany-1080p.png, logos/international/rakuten-tv-family-movies-austria-720p.png, logos/international/rakuten-tv-family-movies-germany-1080p.png, logos/international/rakuten-tv-family-movies-italy-1080p.png, logos/international/rakuten-tv-family-movies-switzerland-720p.png, logos/international/rakuten-tv-family-movies-uk-1080p.png, logos/international/rakuten-tv-top-movies-germany-1080p.png, logos/international/rakuten-tv-top-movies-italy-1080p.png, logos/rakuten-tv-action-movies-italy-1080p.png, logos/rakuten-tv-action-movies-uk-1080p-75f2eea4ce.png, logos/rakuten-tv-comedy-movies-germany-1080p.png, logos/rakuten-tv-drama-movies-italy-166043b571.png, logos/rakuten-tv-family-movies-uk-1080p.png
 - logos/international/rawhide-united-states-ca.png, logos/international/rawhide-united-states.png
 - logos/international/rodnoe-kino-576p.png, logos/rodnoe-kino-576p.png
+- logos/international/rumba-tv.png, logos/rumba-tv-3182ea7301.png, logos/unused/rumba-tv-3182ea7301.png
 - logos/international/russkiy-roman-1080p.png, logos/russkiy-roman-1080p.png
 - logos/international/shemaroo-filmi-gaane-1080p.png, logos/nvisionbd-verified-shemaroo-filmi-gaane-0ec7fc7a82.png
 - logos/international/soneri-cinema-360p.png, logos/nvisionbd-verified-soneri-cinema-0ba64f92f1.png, logos/soneri-cinema-360p.png
@@ -653,6 +657,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/stingray-cozy-cafe-1080p.png, logos/stingray-cozy-cafe-1080p.png
 - logos/international/sundance-tv-spain.png, logos/sundance-tv-poland-c763acfc1a.png
 - logos/international/tcm-720p-geo-blocked.png, logos/international/tcm-west-720p-geo-blocked.png
+- logos/international/telecine-action.png, logos/telecine-action-aff752fd7a.png
+- logos/international/telehit.png, logos/telehit-b6df427344.png
 - logos/international/teletoon-hd-1080i.png, logos/teletoon-plus-5964656136.png
 - logos/international/the-cabbin-fm.png, logos/the-cabbin-fm.png
 - logos/international/the-country-network-1080p.png, logos/the-country-network-1080p.png
@@ -675,7 +681,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/viafree-movies-dk.png, logos/international/viafree-movies-no.png, logos/international/viafree-movies.png
 - logos/international/viasat-kino-576p.png, logos/international/viasat-kino-bulgaria-1080p.png, logos/viasat-kino-576p.png
 - logos/international/viasat-kino-action-576p.png, logos/viasat-kino-action-576p.png
+- logos/international/viasat-kino-comedy.png, logos/viasat-kino-comedy-934854e2dd.png
+- logos/international/viasat-kino-world.png, logos/viasat-kino-world-a9fe5a3be0.png
+- logos/international/viasat-serial.svg, logos/viasat-serial-8e4a9c26e8.svg
 - logos/international/viju-tv1000-action-576p.png, logos/nvisionbd-official-viju-tv1000-action.png, logos/viju-tv1000-action-576p.png
+- logos/international/viju-tv1000-russkoe.png, logos/viju-tv1000-russkoe-6a97e6b520.png
 - logos/international/vintage-music-720p.jpg, logos/vintage-music-9548fa87fd.jpg
 - logos/international/vip-tv-720p.png, logos/vip-tv-720p.png
 - logos/international/viva-latino-1080p.png, logos/viva-latino-1080p.png
@@ -798,7 +808,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/retro-music-tv.png, logos/unused/retro-music-tv.png
 - logos/retro-plus-2-25e0f9bc84.png, logos/retro-plus-25e0f9bc84.png
 - logos/rs-bharat-576p.png, logos/rs-bharat.png
-- logos/rumba-tv-3182ea7301.png, logos/unused/rumba-tv-3182ea7301.png
 - logos/rupashi-bangla-tv-720p.png, logos/rupashi-bangla-tv.png
 - logos/rupasi-bangla-576p-e677fd1858.png, logos/unused/rupasi-bangla-576p-e677fd1858.png
 - logos/sangeet-bangla.png, logos/unused/sangeet-bangla-576p-695b56b52a.png
@@ -2114,6 +2123,36 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Kultfilm | pluto-tv-kultfilm.png | New Channels |
 | International-Playlist.m3u | Pluto TV Kultfilme | pluto-tv-kultfilme.png | New Channels |
 | International-Playlist.m3u | Pluto TV Kultfilmer | pluto-tv-kultfilmer.png | New Channels |
+| International-Playlist.m3u | Pluto TV Kultfilmer NO | pluto-tv-kultfilmer-no.png | New Channels |
+| International-Playlist.m3u | Pluto TV Legami Letali | pluto-tv-legami-letali.png | New Channels |
+| International-Playlist.m3u | Pluto TV Movies | pluto-tv-movies.png | New Channels |
+| International-Playlist.m3u | Pluto TV Movies GB | pluto-tv-movies-gb.png | New Channels |
+| International-Playlist.m3u | Pluto TV Netmovies | pluto-tv-netmovies.png | New Channels |
+| International-Playlist.m3u | Pluto TV Notti di Passione | pluto-tv-notti-di-passione.png | New Channels |
+| International-Playlist.m3u | Pluto TV Nuestro Cine | pluto-tv-nuestro-cine.png | New Channels |
+| International-Playlist.m3u | Pluto TV Paranormal (Sweden) | pluto-tv-paranormal-sweden.png | New Channels |
+| International-Playlist.m3u | Pluto TV Paranormal (Sweden) DK | pluto-tv-paranormal-sweden-dk.png | New Channels |
+| International-Playlist.m3u | Pluto TV Psycho | pluto-tv-psycho.png | New Channels |
+| International-Playlist.m3u | Pluto TV Reaction | pluto-tv-reaction.png | New Channels |
+| International-Playlist.m3u | Pluto TV Retro Action Movies | pluto-tv-retro-action-movies.png | New Channels |
+| International-Playlist.m3u | Pluto TV Romance | pluto-tv-romance.png | New Channels |
+| International-Playlist.m3u | Pluto TV Romantik | pluto-tv-romantik.png | New Channels |
+| International-Playlist.m3u | Pluto TV Romantik DK | pluto-tv-romantik-dk.png | New Channels |
+| International-Playlist.m3u | Pluto TV Romantikk | pluto-tv-romantikk.png | New Channels |
+| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) | pluto-tv-sci-fi-sweden.png | New Channels |
+| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) DK | pluto-tv-sci-fi-sweden-dk.png | New Channels |
+| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) NO | pluto-tv-sci-fi-sweden-no.png | New Channels |
+| International-Playlist.m3u | Pluto TV Sci-Fi (United States) | pluto-tv-sci-fi-united-states.png | New Channels |
+| International-Playlist.m3u | Pluto TV Sci-Fi (United States) CA | pluto-tv-sci-fi-united-states-ca.png | New Channels |
+| International-Playlist.m3u | Pluto TV Sci-Fi (United States) LatAm | pluto-tv-sci-fi-united-states-latam.png | New Channels |
+| International-Playlist.m3u | Pluto TV Serie Sci-Fi | pluto-tv-serie-sci-fi.png | New Channels |
+| International-Playlist.m3u | Pluto TV Spotlight | pluto-tv-spotlight.png | New Channels |
+| International-Playlist.m3u | Pluto TV Staff Picks | pluto-tv-staff-picks.png | New Channels |
+| International-Playlist.m3u | Pluto TV Star Trek (Germany) | pluto-tv-star-trek-germany.png | New Channels |
+| International-Playlist.m3u | Pluto TV Star Trek (Sweden) | pluto-tv-star-trek-sweden.png | New Channels |
+| International-Playlist.m3u | Pluto TV Terror | pluto-tv-terror.png | New Channels |
+| International-Playlist.m3u | Pluto TV Terror Trash | pluto-tv-terror-trash.png | New Channels |
+| International-Playlist.m3u | Pluto TV Thrillers | pluto-tv-thrillers.png | New Channels |
 | International-Playlist.m3u | Shiksha TV (720p) | shiksha-tv.png | New Channels |
 | International-Playlist.m3u | Sony Aath (576p) | sony-aath.png | New Channels |
 | International-Playlist.m3u | Sony BBC Earth HD (1080p) | sony-bbc-earth.png | New Channels |
@@ -2145,6 +2184,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | FILMBOX+ One Bulgaria (576p) | filmbox-one-bulgaria-576p.png | New Backups |
 | International-Playlist.m3u | GAZI TV | gazi-tv-1080p.png | New Backups |
 | International-Playlist.m3u | Golden Premier 2 (1080p) | golden-premier-2-1080p.png | New Backups |
+| International-Playlist.m3u | Golden Premier (1080p) | golden-premier-1080p.png | New Backups |
 | International-Playlist.m3u | Jaihind TV | jaihind-tv.png | New Backups |
 | International-Playlist.m3u | Kappa TV | kappa-tv.png | New Backups |
 | International-Playlist.m3u | Kino TV | kino-tv-hd.png | New Backups |
@@ -2154,7 +2194,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Now 80s | now-80-s.png | New Backups |
 | International-Playlist.m3u | Pear TV | pear-tv.png | New Backups |
 | International-Playlist.m3u | Raj TV | raj-tv.png | New Backups |
+| International-Playlist.m3u | Rumba TV | rumba-tv.png | New Backups |
 | International-Playlist.m3u | Safari TV | safari-tv.png | New Backups |
+| International-Playlist.m3u | Shanson TV | shanson-tv.png | New Backups |
 | International-Playlist.m3u | Sony Aath (576p) | sony-aath.png | New Backups |
 | International-Playlist.m3u | Suriyan TV | suriyan-tv.png | New Backups |
 | International-Playlist.m3u | TLC (India) (720p) | tlc-india.png | New Backups |
