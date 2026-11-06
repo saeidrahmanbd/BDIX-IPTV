@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import generate_epg
 import epg_coverage
+import epg_source_cache
 import official_epg_sources
 import augment_epg_mapping_from_additional_sources as additional_augment
 import augment_epg_mapping_from_iptv_org as iptv_org_augment
@@ -48,6 +49,9 @@ class EpgConfigTests(unittest.TestCase):
             "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
             "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
             "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
+            "https://epgshare01.online/epgshare01/epg_ripper_PK1.xml.gz",
+            "https://iptv-epg.org/files/epg-pk.xml.gz",
+            "https://www.free-epg.de/api/epg/pk.xml.gz",
             "https://iptv-epg.org/files/epg-in.xml.gz",
             "https://iptv-epg.org/files/epg-at.xml.gz",
             "https://iptv-epg.org/files/epg-au.xml.gz",
@@ -410,6 +414,18 @@ class EpgConfigTests(unittest.TestCase):
             {"AT"},
         )
         self.assertEqual(
+            generate_epg.source_country_codes("https://epgshare01.online/epgshare01/epg_ripper_PK1.xml.gz"),
+            {"PK"},
+        )
+        self.assertEqual(
+            generate_epg.source_country_codes("https://iptv-epg.org/files/epg-pk.xml.gz"),
+            {"PK"},
+        )
+        self.assertEqual(
+            generate_epg.source_country_codes("https://www.free-epg.de/api/epg/pk.xml.gz"),
+            {"PK"},
+        )
+        self.assertEqual(
             generate_epg.source_country_codes("https://free-epg.de/api/epg/cn.xml.gz"),
             {"CN"},
         )
@@ -487,6 +503,67 @@ class EpgConfigTests(unittest.TestCase):
         self.assertNotIn("EPGPW_SOURCE_IDS", COV + GEN)
         self.assertNotIn("normalize_epgpw_source", COV + GEN)
 
+    def test_strict_unmapped_aliases_use_region_compatible_schedule_sources(self):
+        aliases = epg_coverage.EPG_ALIASES
+        self.assertTrue(
+            epg_coverage.source_region_compatible(
+                "IN", aliases["Vision.in@SD"][0],
+                "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+            )
+        )
+        self.assertTrue(
+            epg_coverage.source_region_compatible(
+                "US", aliases["DePeliculaUS.us@SD"][0],
+                "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+            )
+        )
+        self.assertTrue(
+            epg_coverage.source_region_compatible(
+                "US", aliases["BBCEarth.uk@US"][0],
+                "https://i.mjh.nz/SamsungTVPlus/us.xml",
+            )
+        )
+        iptv = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
+        international = (ROOT / "International-Playlist.m3u").read_text(encoding="utf-8-sig")
+        self.assertIn('tvg-id="Vision.in@SD"', iptv)
+        self.assertIn('tvg-id="DePeliculaUS.us@SD"', international)
+        self.assertIn('tvg-id="BBCEarth.uk@US"', international)
+
+    def test_shared_source_cache_reuses_download_without_exposing_private_url(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            private_url = "https://m3u4u.com/epg/private-feed-token.xml"
+            payload = b"<?xml version='1.0'?><tv/>"
+            with (
+                patch.dict(
+                    os.environ,
+                    {
+                        "EPG_SOURCE_CACHE_DIR": tmp,
+                        "EPG_SOURCE_CACHE_TTL_SECONDS": "3600",
+                    },
+                ),
+                patch.object(
+                    epg_source_cache.urllib.request,
+                    "urlopen",
+                    return_value=io.BytesIO(payload),
+                ) as urlopen,
+            ):
+                first = epg_source_cache.fetch_source_bytes(
+                    private_url,
+                    headers={"User-Agent": "test", "Accept": "application/xml"},
+                    timeout=5,
+                )
+                second = epg_source_cache.fetch_source_bytes(
+                    private_url,
+                    headers={"User-Agent": "test", "Accept": "application/xml"},
+                    timeout=5,
+                )
+            self.assertEqual(first, payload)
+            self.assertEqual(second, payload)
+            self.assertEqual(urlopen.call_count, 1)
+            cache_files = list(Path(tmp).iterdir())
+            self.assertEqual(len(cache_files), 1)
+            self.assertNotIn("private-feed-token", cache_files[0].name)
+
     def test_new_aliases(self):
         al = literal(COV, "EPG_ALIASES")
         self.assertEqual(al["Hungama.in@SD"], ["143150"])
@@ -495,6 +572,9 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(al["Cinemax.cz@Czechia"], ["Cinemax.cz"])
         self.assertEqual(al["History.cz@SD"], ["History.Channel.cz"])
         self.assertEqual(al["WeatherSpy.in@SD"], ["INBA5100028R4"])
+        self.assertEqual(al["Vision.in@SD"], ["Channel.Vision.in", "jtv1762"])
+        self.assertEqual(al["DePeliculaUS.us@SD"], ["De.Pelicula.us2"])
+        self.assertEqual(al["BBCEarth.uk@US"], ["USBD1700001RW"])
         self.assertNotIn("ZBBhakti.in@HD", al)
 
     def test_nick_bangla_uses_verified_exact_jiotv_channel_identity(self):
