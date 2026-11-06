@@ -159,7 +159,7 @@ class EpgConfigTests(unittest.TestCase):
             self.assertIn(private_url, generate_epg.configured_sources())
             self.assertNotEqual(generate_epg.source_label(private_url), private_url)
 
-    def test_rtv_schedule_tries_apex_https_then_www_without_disabling_tls(self):
+    def test_rtv_schedule_tries_current_daily_then_legacy_https_without_disabling_tls(self):
         weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
         html = "".join(
             f"<p>{day}</p>"
@@ -171,7 +171,11 @@ class EpgConfigTests(unittest.TestCase):
         with patch.object(
             official_epg_sources.urllib.request,
             "urlopen",
-            side_effect=[OSError("certificate chain"), io.BytesIO(html.encode("utf-8"))],
+            side_effect=[
+                OSError("current daily page unavailable"),
+                OSError("legacy apex unavailable"),
+                io.BytesIO(html.encode("utf-8")),
+            ],
         ) as urlopen:
             programmes = official_epg_sources.fetch_rtv_programmes(
                 datetime(2026, 10, 29, tzinfo=timezone.utc)
@@ -179,12 +183,49 @@ class EpgConfigTests(unittest.TestCase):
         self.assertTrue(programmes)
         self.assertEqual(
             urlopen.call_args_list[0].args[0].full_url,
-            "https://rtvbd.tv/schedule.php",
+            "https://rtvonline.com/index.php/schedule.php",
         )
         self.assertEqual(
             urlopen.call_args_list[1].args[0].full_url,
+            "https://rtvbd.tv/schedule.php",
+        )
+        self.assertEqual(
+            urlopen.call_args_list[2].args[0].full_url,
             "https://www.rtvbd.tv/schedule.php",
         )
+
+    def test_rtv_daily_schedule_parses_current_bengali_date_and_times(self):
+        html = """
+        <p>শুক্রবার, ৬ নভেম্বর ২০২৬, ২১ কার্তিক ১৪৩৩। একনজরে জেনে নিন আরটিভির আজকের আয়োজন—</p>
+        <p>সকাল ৯টায় টকশো ‘আজ পত্রিকায়’</p>
+        <p>সকাল ৯টা ৪৫ মিনিটে ‘সকালের সংবাদ’</p>
+        <p>সকাল ১০টা ১০ মিনিটে বাংলা ছায়াছবি ‘গরীবের বউ’</p>
+        <p>দুপুর ২টা ১০ মিনিটে বাংলা ছায়াছবি ‘হুমকির মুখে’</p>
+        <p>বিকেল ৫টায় শিশুতোষ অনুষ্ঠান ‘সিসিমপুর’</p>
+        <p>সন্ধ্যা ৭টায় অনুষ্ঠান ‘রাতের খবর’</p>
+        <p>রাত ৮টায় নাটক ‘প্রতিদিন’</p>
+        """
+        with patch.object(
+            official_epg_sources.urllib.request,
+            "urlopen",
+            return_value=io.BytesIO(html.encode("utf-8")),
+        ):
+            programmes = official_epg_sources.fetch_rtv_programmes(
+                datetime(2026, 11, 6, 0, 0, tzinfo=timezone.utc)
+            )
+        self.assertGreaterEqual(len(programmes), 4)
+        self.assertTrue(all(p["channel_id"] == "RTV.bd" for p in programmes))
+        morning = next(p for p in programmes if p["title"] == "টকশো ‘আজ পত্রিকায়’")
+        self.assertEqual(morning["start_dt"], datetime(2026, 11, 6, 3, 0, tzinfo=timezone.utc))
+        self.assertEqual(morning["stop_dt"], datetime(2026, 11, 6, 3, 45, tzinfo=timezone.utc))
+
+    def test_rtv_daily_schedule_rejects_yesterday_instead_of_publishing_stale_slots(self):
+        stale = "বৃহস্পতিবার, ৫ নভেম্বর ২০২৬, ২১ কার্তিক ১৪৩৩। সকাল ৯টায় অনুষ্ঠান।"
+        parsed = official_epg_sources._parse_rtv_daily_programmes(
+            stale,
+            datetime(2026, 11, 6, 0, 0, tzinfo=timezone.utc),
+        )
+        self.assertEqual(parsed, [])
 
     def test_btv_official_schedule_parses_bengali_dates_and_explicit_times(self):
         cards = []
@@ -482,8 +523,11 @@ class EpgConfigTests(unittest.TestCase):
     def test_rtv_official_schedule_source_is_configured(self):
         coverage_sources = literal(COV, "SOURCES")
         generator_sources = literal(GEN, "SOURCES")
-        self.assertIn("https://www.rtvbd.tv/schedule.php", coverage_sources)
-        self.assertIn("https://www.rtvbd.tv/schedule.php", generator_sources)
+        self.assertEqual(official_epg_sources.RTV_SOURCE, "https://rtvonline.com/index.php/schedule.php")
+        self.assertIn(official_epg_sources.RTV_SOURCE, coverage_sources)
+        self.assertIn(official_epg_sources.RTV_SOURCE, generator_sources)
+        self.assertIn("https://rtvbd.tv/schedule.php", official_epg_sources.RTV_LEGACY_SOURCES)
+        self.assertIn("https://www.rtvbd.tv/schedule.php", official_epg_sources.RTV_LEGACY_SOURCES)
         self.assertIn(official_epg_sources.BTV_SOURCE, coverage_sources)
         self.assertIn(official_epg_sources.BTV_SOURCE, generator_sources)
         self.assertEqual(literal(COV, "EPG_LOCKS")["BTVNational.bd"], ["BTVNational.bd"])
