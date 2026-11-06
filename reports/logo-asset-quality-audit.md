@@ -1,31 +1,31 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-06T13:11:54+00:00**
+Generated: **2026-11-06T13:27:01+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **a65adeae4aa920ad86e8a064f0dd20df5045382598268d2a201c99d0f238ef31**
+- IPTV-Playlist.m3u SHA-256: **e1dc8920d2906ee16fcf71ce8cf0bf16900c231cf306ea6874bae398dbd6e29a**
 - International-Playlist.m3u SHA-256: **7762b2644675b92a5ab0d59ae1983e213855f70f78ebf265ae7bd62e9430e84a**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **1**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **694**
-- Playlist references whose asset stem differs from the normalized channel name: **1441**
-- Unreferenced files immediately inside logos/: **1325** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1442**
+- Unreferenced files immediately inside logos/: **1326** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| famatv-9f148af63b.jpg | JPEG | JPEG | 221×87 | 221×87 | re-encoded/compressed |
 
 ## Remaining extension mismatches
 
@@ -44,7 +44,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
-| famatv-9f148af63b.jpg | 221×87 | 562346 | yes |
+| famatv-9f148af63b.jpg | 221×87 | 562328 | yes |
 | famatv-1080p-not-24-7.jpg | 221×87 | 562326 | no |
 | minimax-romania.svg | 0×0 | 992049 | no |
 | README.md | 0×0 | 602694 | no |
@@ -1158,9 +1158,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | New Backups |
 | IPTV-Playlist.m3u | Epic Parivar | sun-bangla.png | New Backups |
 | IPTV-Playlist.m3u | Gazi TV | gazi-tv.png | New Backups |
-| IPTV-Playlist.m3u | Kappa TV | kappa-tv.png | New Backups |
+| IPTV-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | New Backups |
 | IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | New Backups |
 | IPTV-Playlist.m3u | MBC TV | mbc-tv.png | New Backups |
+| IPTV-Playlist.m3u | Movies Now | movies-now-hd.png | New Backups |
 | IPTV-Playlist.m3u | Raj TV | raj-tv.png | New Backups |
 | IPTV-Playlist.m3u | Sony Entertainment TV | sony-entertainment-tv.png | New Backups |
 | IPTV-Playlist.m3u | Star Gold | repaired-star-gold-de06c8e974.png | New Backups |
