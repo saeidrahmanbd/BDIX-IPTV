@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, RAW_BASE, EXCLUDE, REVIEW_QUEUES
+from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, RAW_BASE, EXCLUDE, REVIEW_QUEUES
 
 
 class PrePublishLogoPathTests(unittest.TestCase):
@@ -20,6 +20,17 @@ class PrePublishLogoPathTests(unittest.TestCase):
         self.assertIn("New Backups", EXCLUDE)
         self.assertIn("New Backups", REVIEW_QUEUES)
         self.assertNotIn("New Backup", REVIEW_QUEUES)
+
+    def test_authorized_permanent_removal_is_not_reported_as_review_queue_deletion(self):
+        info = '#EXTINF:-1 tvg-name="Aaj Tak" group-title="Not Playing",Aaj Tak'
+        entries = [(info, {"tvg-name": "Aaj Tak", "group-title": "Not Playing"}, "https://example.invalid/aajtak.m3u8")]
+        self.assertEqual(review_state(entries), {})
+
+    def test_unapproved_review_entry_remains_in_protected_review_state(self):
+        info = '#EXTINF:-1 tvg-name="Sample Channel" group-title="Backup",Sample Channel'
+        entries = [(info, {"tvg-name": "Sample Channel", "group-title": "Backup"}, "https://example.invalid/sample.m3u8")]
+        state = review_state(entries)
+        self.assertIn("https://example.invalid/sample.m3u8", state)
 
     def test_nested_logo_asset_preserves_subdirectory_and_query_is_ignored(self):
         path = self.root / "international" / "music" / "channel.png"
