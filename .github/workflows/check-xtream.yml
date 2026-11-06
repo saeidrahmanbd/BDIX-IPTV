@@ -9,7 +9,7 @@ on:
       - "IPTV-Playlist.m3u"
       - "epg/epg.xml"
   schedule:
-    - cron: "30 0 * * *" # 06:30 Asia/Dhaka (UTC+6); finish before the 07:00 report
+    - cron: "0 0 * * *" # 06:00 Asia/Dhaka (UTC+6); allow a 60-minute buffer before the 07:00 report
   workflow_dispatch:
   workflow_run:
     workflows:
