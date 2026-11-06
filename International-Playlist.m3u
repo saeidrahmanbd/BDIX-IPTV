@@ -1502,7 +1502,7 @@ https://jmp2.uk/plu-612e05b885183d0007958101.m3u8
 https://jmp2.uk/plu-5f1ac8099c49f600076579b2.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCinedeautor.de@ES" tvg-name="Pluto TV Cine de autor" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pluto-tv-cine-de-autor.png" tvg-country="DE" channel-id="PlutoTVCinedeautor.de@ES" group-title="Germany" tvg-content="Movies",Pluto TV Cine de autor
 https://jmp2.uk/plu-60cc807324d60a0007708dc8.m3u8
-#EXTINF:-1 tvg-name="Rakuten TV Action Movies Germany" tvg-country="DE" tvg-language="deu" tvg-content="Movies" group-title="Germany" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/18-028b925b47.png",Rakuten TV Action Movies Germany
+#EXTINF:-1 tvg-id="RakutenTVActionMoviesGermany.es" tvg-name="Rakuten TV Action Movies Germany" tvg-country="DE" tvg-language="deu" tvg-content="Movies" group-title="Germany" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/18-028b925b47.png",Rakuten TV Action Movies Germany
 https://284824cf70404fdfb6ddf9349009c710.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6066/master.m3u8
 #EXTINF:-1 tvg-id="custom.rakuten-tv-comedy-movies-germany-de-movie" channel-id="custom.rakuten-tv-comedy-movies-germany-de-movie" tvg-language="deu" tvg-country="DE" tvg-content="Movies" group-title="Germany" tvg-name="Rakuten TV Comedy Movies Germany" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rakuten-tv-comedy-movies-germany-1080p.png",Rakuten TV Comedy Movies Germany
 https://ecac08c9e2214375b907d6825aaf9a01.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6182/master.m3u8
@@ -2296,9 +2296,9 @@ https://dash2.antik.sk/live/test_film_drama_atktv/playlist.m3u8
 https://tv.mediacp.eu:8081/happyradio/index.m3u8
 #EXTINF:-1 tvg-id="InRatingTV.ua@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/inrating-tv-8cb7b5db72.png" tvg-country="UA" tvg-content="Music" group-title="Ukraine" tvg-name="InRating TV",InRating TV
 http://stream.mcquack.net/147/index.m3u8
-#EXTINF:-1 tvg-name="Kino 1 (Ukraine)" tvg-country="UA" tvg-content="Movies" group-title="Ukraine" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kino-1-ukraine-94c60a20fa.png",Kino 1 (Ukraine)
+#EXTINF:-1 tvg-id="Kino1.ua" tvg-name="Kino 1 (Ukraine)" tvg-country="UA" tvg-content="Movies" group-title="Ukraine" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kino-1-ukraine-94c60a20fa.png",Kino 1 (Ukraine)
 http://stream.mcquack.net/395/index.m3u8
-#EXTINF:-1 tvg-name="Kino 2" tvg-country="UA" tvg-content="Movies" group-title="Ukraine" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/18-028b925b47.png",Kino 2
+#EXTINF:-1 tvg-id="Kino2.ua" tvg-name="Kino 2" tvg-country="UA" tvg-content="Movies" group-title="Ukraine" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/18-028b925b47.png",Kino 2
 http://stream.mcquack.net/465/index.m3u8
 #EXTINF:-1 tvg-id="Kinoliving.ua@SD" channel-id="Kinoliving.ua@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kinoliving-1080p.png" tvg-country="UA" tvg-content="Movies" group-title="Ukraine" tvg-name="Kinoliving",Kinoliving
 http://stream.mcquack.net/445/index.m3u8
@@ -2622,7 +2622,7 @@ https://amg00353-lionsgatestudio-moviesphere-xumo-zh5u0.amagi.tv/playlist.m3u8
 https://jmp2.uk/plu-64a3d96f060e830008af6745.m3u8
 #EXTINF:-1 tvg-id="MovieSphereGold.us@WFXT" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moviesphere-gold-wfxt-fda6a3a097.svg" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="MovieSphere Gold WFXT",MovieSphere Gold WFXT
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-ionmystery-tablo/playlist.m3u8
-#EXTINF:-1 tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/18-028b925b47.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV2",MTV2
+#EXTINF:-1 channel-id="MTV2.us" tvg-id="MTV2.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/18-028b925b47.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV2",MTV2
 http://198.58.104.90:8989/mtv2/index.m3u8
 #EXTINF:-1 tvg-id="MTV.us@East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv-united-states-bafd7b214a.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV (United States)",MTV (United States)
 http://23.237.104.106:8080/USA_MTV/index.m3u8
