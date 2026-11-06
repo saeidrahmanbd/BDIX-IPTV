@@ -18,7 +18,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "E-Vidya 7 (576p) (India)", "E-Vidya 8 (576p) (India)",
             "E-Vidya 9 (576p) (India)", "Friends TV (1080p) (India)",
         ]
-        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_NAMES), 10)
+        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_NAMES), 11)
         for name in names:
             with self.subTest(name=name):
                 self.assertIn(canonical_channel_name(name), PERMANENTLY_BANNED_CHANNEL_NAMES)
