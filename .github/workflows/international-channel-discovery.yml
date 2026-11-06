@@ -10,6 +10,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/international-channel-discovery.yml'
+      - 'International-Playlist.m3u'
       - 'scripts/discover_international_channels.py'
       - 'scripts/validate_international_playlist.py'
       - 'scripts/validate_discovery_run.py'
