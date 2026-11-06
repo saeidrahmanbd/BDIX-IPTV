@@ -158,7 +158,7 @@ https://server.livelegitpro.in/bhichannel/bhichannel/index.m3u8
 http://premiumtvs.space:80/live/1Aoen7elp5/IgMJ60tmAa/98882.ts
 #EXTINF:-1 tvg-id="DDBangla.in@SD" channel-id="DDBangla.in@SD" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bangla.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="DD Bangla",DD Bangla
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7ff57cc9046b4c188b51a0d506f36e7f/index_3.m3u8
-#EXTINF:-1 tvg-id="DhoomMusic.in@SD" channel-id="DhoomMusic.in@SD" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhoom-music-bangla.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="Dhoom Music Bangla",Dhoom Music Bangla
+#EXTINF:-1 tvg-id="custom.bdix.dhoom-music-bangla" channel-id="custom.bdix.dhoom-music-bangla" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhoom-music-bangla.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="Dhoom Music Bangla",Dhoom Music Bangla
 https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 #EXTINF:-1 tvg-id="Enter10Bangla.in" channel-id="Enter10Bangla.in" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="Enter10 Bangla",Enter10 Bangla
 https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
@@ -2986,7 +2986,7 @@ https://5caf24a595d94.streamlock.net:1937/8028/8028/playlist.m3u8
 http://stream.mcquack.net/380/index.m3u8
 #EXTINF:-1 tvg-id="FashionTV.us" channel-id="FashionTV.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashion-tv-aa7f9461cf.png" tvg-country="US" group-title="Fashion TV" tvg-name="Fashion TV",Fashion TV
 https://ftv1.b-cdn.net/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8
-#EXTINF:-1 tvg-id="Travel.us" channel-id="Travel.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4k-travel.png" tvg-country="US" group-title="Documentary & Wildlife" tvg-name="4K Travel",4K Travel
+#EXTINF:-1 tvg-id="custom.bdix.4k-travel-us" channel-id="custom.bdix.4k-travel-us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4k-travel.png" tvg-country="US" group-title="Documentary & Wildlife" tvg-name="4K Travel",4K Travel
 https://streams2.sofast.tv/sofastplayout/33c31ac4-51fa-46ae-afd0-0d1fe5e60a80_0_HLS/master.m3u8
 #EXTINF:-1 tvg-id="AdventureEarth.de@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/adventure-earth.svg" tvg-country="DE" group-title="Documentary & Wildlife" tvg-name="Adventure Earth",Adventure Earth
 https://a57e9c69976649b582a8d7604c00e69a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AdventureEarth/playlist.m3u8
