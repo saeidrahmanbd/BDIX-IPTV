@@ -15,7 +15,8 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
         args = grab_command()
         self.assertNotIn("--lang=en", args)
         self.assertFalse(any(arg.startswith("--lang=") for arg in args))
-        self.assertIn("--days=3", args)
+        self.assertIn("--days=2", args)
+        self.assertIn("--delay=100", args)
         self.assertTrue(any(arg.startswith("--channels=") for arg in args))
 
     def test_only_active_ids_from_three_core_playlists_are_targets(self):
@@ -188,6 +189,10 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
             {"Missing.in", "legacy.source.id", "Missing.in@SD"},
         )
 
+
+    def test_rate_limited_polish_site_is_skipped_while_other_regions_remain(self):
+        self.assertNotIn("programtv.onet.pl", fetcher.SITES)
+        self.assertTrue({"m.tv.sms.cz", "mujtvprogram.cz", "tv.mail.ru", "epg.iptvx.one"}.issubset(set(fetcher.SITES)))
 
     def test_selected_upstream_sites_cover_regional_and_fast_catalogues(self):
         self.assertTrue({
