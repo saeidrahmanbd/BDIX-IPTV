@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-06T13:26:18.199874+00:00**
+Generated: **2026-11-06T13:33:06.047921+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational/Knowledge, Kids, Sports and Business/Finance channels are prohibited.**
@@ -47,12 +47,12 @@ Generated: **2026-11-06T13:26:18.199874+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-11-06T13:26:34+00:00
+- Run timestamp: 2026-11-06T13:33:22+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 64
-- Verified live media responses: 26
+- Verified live media responses: 27
 - Primary entries retained but not conclusively verified: 29
-- Definitively dead/invalid candidates removed: 9
+- Definitively dead/invalid candidates removed: 8
 - Inconclusive primary/backup candidates retained for manual review: 29
 - Duplicate discovery entries removed: 0
 - Country-group rows consolidated after stream probing: 0
@@ -60,7 +60,6 @@ Generated: **2026-11-06T13:26:18.199874+00:00**
 - Candidates held out because no authentic local logo was available: 0
 
 ### Stream probe details
-- Removed Aryan TV National from New Channels — HTTP 404.
 - Removed ATN Music from New Channels — HTTP 404.
 - Removed ETV Life from New Channels — HTTP 404.
 - Removed ETV Telugu from New Channels — HTTP 404.
@@ -101,9 +100,9 @@ Generated: **2026-11-06T13:26:18.199874+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-11-06T13:26:35+00:00
+- Run timestamp: 2026-11-06T13:33:23+00:00
 - Validation status: PASS
-- M3U entries parsed: 1120
+- M3U entries parsed: 1121
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - New Channels/New Backups/Backup ordering: passed
