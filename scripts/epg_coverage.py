@@ -130,13 +130,11 @@ EPG_ALIASES = {
     # US2 identity has current/future schedule rows and avoids West/UK variants.
     "custom.nick-jr-east": ["Nick.Jr.HD.us2"],
     # Exact EPGShare IT1 identities verified in its channel catalogue.
-    "DeejayTV.it": ["Deejay.TV.it"],
-    "R101TV.it": ["R101tv.it"],
-    "RadioItaliaTV.it": ["Radio.Italia.TV.HD.it"],
-    "RTL1025TV.it": ["RTL.102.5.HD.it"],
-    # The Russian feed IDs omit the iptv-org SD variant suffix.
-    "RusskiyBestseller.ru@SD": ["RusskiyBestseller.ru"],
-    "RusskiyDetektiv.ru@SD": ["RusskiyDetektiv.ru"],
+    "DeluxeRap.de": ["DeluxeRap.de@SD"],
+    "DeejayTV.it": ["Deejay.TV.it", "DeejayTV.it@SD"],
+    "R101TV.it": ["R101tv.it", "R101TV.it@SD"],
+    "RadioItaliaTV.it": ["Radio.Italia.TV.HD.it", "RadioItaliaTV.it@HD", "RadioItaliaTV.it@SD"],
+    "RTL1025TV.it": ["RTL.102.5.HD.it", "RTL1025TV.it@HD"],
 }
 
 EPG_LOCKS = {
