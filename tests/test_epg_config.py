@@ -733,10 +733,11 @@ class VerifiedAliasTests(unittest.TestCase):
         self.assertNotIn("AamarBangla.in@SD", al)
         self.assertIn("jtv3384", al["EpicBhojpuriDigital.in"])
         self.assertIn("And.Pictures.HD.in", al["Picture.in"])
+        self.assertEqual(al["custom.nick-jr-east"], ["Nick.Jr.HD.us2"])
 
     def test_new_alias_ids_exist_in_playlist(self):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
-        for tid in ("AmarBanglaDigital.in", "EpicBhojpuriDigital.in", "Picture.in"):
+        for tid in ("AmarBanglaDigital.in", "EpicBhojpuriDigital.in", "Picture.in", "custom.nick-jr-east"):
             self.assertIn(f'tvg-id="{tid}"', pl)
 
 
