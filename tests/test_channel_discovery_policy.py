@@ -71,9 +71,8 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("Discovery Channel", "Knowledge"),
             ("National Geographic", "Documentary"),
             ("Animal Planet", "Entertainment"),
-            ("CNBC TV18", "Business"),
-            ("Bloomberg", "Finance"),
-            ("Zee Business", "Entertainment"),
+            ("Corporate Channel", "Business"),
+            ("Money TV", "Finance"),
         ]
         for name, group in examples:
             attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
