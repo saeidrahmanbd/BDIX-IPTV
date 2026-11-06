@@ -183,7 +183,7 @@ class EpgConfigTests(unittest.TestCase):
         self.assertTrue(programmes)
         self.assertEqual(
             urlopen.call_args_list[0].args[0].full_url,
-            "https://rtvonline.com/index.php/schedule.php",
+            "https://rtvonline.com/home/",
         )
         self.assertEqual(
             urlopen.call_args_list[1].args[0].full_url,
@@ -195,7 +195,11 @@ class EpgConfigTests(unittest.TestCase):
         )
 
     def test_rtv_daily_schedule_parses_current_bengali_date_and_times(self):
-        html = """
+        homepage = """
+        <a href="/entertainment/rtv/413624">আরটিভিতে আজ যা দেখবেন</a>
+        <a href="/entertainment/rtv/413846">আরটিভিতে আজ যা দেখবেন</a>
+        """
+        article = """
         <p>শুক্রবার, ৬ নভেম্বর ২০২৬, ২১ কার্তিক ১৪৩৩। একনজরে জেনে নিন আরটিভির আজকের আয়োজন—</p>
         <p>সকাল ৯টায় টকশো ‘আজ পত্রিকায়’</p>
         <p>সকাল ৯টা ৪৫ মিনিটে ‘সকালের সংবাদ’</p>
@@ -208,11 +212,22 @@ class EpgConfigTests(unittest.TestCase):
         with patch.object(
             official_epg_sources.urllib.request,
             "urlopen",
-            return_value=io.BytesIO(html.encode("utf-8")),
-        ):
+            side_effect=[
+                io.BytesIO(homepage.encode("utf-8")),
+                io.BytesIO(article.encode("utf-8")),
+            ],
+        ) as urlopen:
             programmes = official_epg_sources.fetch_rtv_programmes(
                 datetime(2026, 11, 6, 0, 0, tzinfo=timezone.utc)
             )
+        self.assertEqual(
+            urlopen.call_args_list[0].args[0].full_url,
+            "https://rtvonline.com/home/",
+        )
+        self.assertEqual(
+            urlopen.call_args_list[1].args[0].full_url,
+            "https://rtvonline.com/entertainment/rtv/413846",
+        )
         self.assertGreaterEqual(len(programmes), 4)
         self.assertTrue(all(p["channel_id"] == "RTV.bd" for p in programmes))
         morning = next(p for p in programmes if p["title"] == "টকশো ‘আজ পত্রিকায়’")
@@ -523,7 +538,7 @@ class EpgConfigTests(unittest.TestCase):
     def test_rtv_official_schedule_source_is_configured(self):
         coverage_sources = literal(COV, "SOURCES")
         generator_sources = literal(GEN, "SOURCES")
-        self.assertEqual(official_epg_sources.RTV_SOURCE, "https://rtvonline.com/index.php/schedule.php")
+        self.assertEqual(official_epg_sources.RTV_SOURCE, "https://rtvonline.com/home/")
         self.assertIn(official_epg_sources.RTV_SOURCE, coverage_sources)
         self.assertIn(official_epg_sources.RTV_SOURCE, generator_sources)
         self.assertIn("https://rtvbd.tv/schedule.php", official_epg_sources.RTV_LEGACY_SOURCES)
