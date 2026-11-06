@@ -257,7 +257,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
     "https://hum.tv/schedule/",
-    "https://www.rtvbd.tv/schedule.php",
+    "https://rtvonline.com/index.php/schedule.php",
     "https://migrate.btvlive.gov.bd/channel/BTV",
     "https://maasranga.tv/full-width/program-time-schedule/",
 ]
@@ -301,6 +301,8 @@ def source_label(src):
         return PRIVATE_SOURCE_LABEL
     if src == IPTV_ORG_LOCAL_SOURCE:
         return IPTV_ORG_SOURCE_LABEL
+    if src == RTV_SOURCE:
+        return "RTV official daily schedule (Bangladesh)"
     if src == MAASRANGA_SOURCE:
         return "Maasranga official weekly grid (undated)"
     return src
@@ -1017,7 +1019,7 @@ def main():
         (src, status, ids, future, programmes, error)
         for src, status, ids, future, programmes, error in source_status
         if any(token in str(src).casefold() for token in (
-            "rtvbd.tv", "btvlive.gov.bd", "bangladesh", "/bd.xml", "bgdportal", "m3u4u xmltv"
+            "rtvbd.tv", "rtvonline.com", "btvlive.gov.bd", "bangladesh", "/bd.xml", "bgdportal", "m3u4u xmltv"
         ))
     ]
     bd_lines = [
