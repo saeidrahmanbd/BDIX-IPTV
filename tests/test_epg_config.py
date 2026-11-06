@@ -734,6 +734,22 @@ class VerifiedAliasTests(unittest.TestCase):
         self.assertIn("jtv3384", al["EpicBhojpuriDigital.in"])
         self.assertIn("And.Pictures.HD.in", al["Picture.in"])
         self.assertEqual(al["custom.nick-jr-east"], ["Nick.Jr.HD.us2"])
+        self.assertEqual(al["DeejayTV.it"], ["Deejay.TV.it"])
+        self.assertEqual(al["R101TV.it"], ["R101tv.it"])
+        self.assertEqual(al["RadioItaliaTV.it"], ["Radio.Italia.TV.HD.it"])
+        self.assertEqual(al["RTL1025TV.it"], ["RTL.102.5.HD.it"])
+        self.assertEqual(al["RusskiyBestseller.ru@SD"], ["RusskiyBestseller.ru"])
+        self.assertEqual(al["RusskiyDetektiv.ru@SD"], ["RusskiyDetektiv.ru"])
+
+    def test_verified_international_ids_exist_in_playlist(self):
+        pl = (ROOT / "International-Playlist.m3u").read_text(encoding="utf-8-sig")
+        for tid in (
+            "DeluxeRap.de", "DeejayTV.it", "R101TV.it", "RadioItaliaTV.it",
+            "RDSSocialTV.it", "RTL1025TV.it", "RusskiyBestseller.ru@SD",
+            "RusskiyDetektiv.ru@SD", "RakutenTVFamilyMovies.es",
+            "4everMusic.ua", "EUMusic.ua", "30AMusic.us",
+        ):
+            self.assertIn(f'tvg-id="{tid}"', pl)
 
     def test_new_alias_ids_exist_in_playlist(self):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
