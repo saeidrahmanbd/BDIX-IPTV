@@ -53,31 +53,31 @@ jobs:
           echo "current=true" >> "$GITHUB_OUTPUT"
           git reset --hard origin/main
           git clean -fd
-        if: steps.revision.outputs.current == 'true'
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        if: steps.revision.outputs.current == 'true'
         with:
           python-version: '3.12'
-        if: steps.revision.outputs.current == 'true'
       - name: Compile checker and run policy tests
+        if: steps.revision.outputs.current == 'true'
         run: |
           python -m py_compile scripts/international_stream_health.py scripts/reorganize_international_playlist.py scripts/discover_international_channels.py scripts/validate_international_health_output.py
           python -m unittest discover -s tests -p 'test_international_stream_health.py'
           python -m unittest discover -s tests -p 'test_international_protected_guard.py'
           python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
-        if: steps.revision.outputs.current == 'true'
       - name: Probe all International streams and apply three-day policy
+        if: steps.revision.outputs.current == 'true'
         run: python scripts/international_stream_health.py
-        if: steps.revision.outputs.current == 'true'
       - name: Validate playlist structure, metadata preservation and group ordering
-        run: python scripts/validate_international_health_output.py
         if: steps.revision.outputs.current == 'true'
+        run: python scripts/validate_international_health_output.py
       - name: Validate reports and whitespace
+        if: steps.revision.outputs.current == 'true'
         run: |
           git diff --check
           test -s reports/international-stream-health.md
           test -s reports/international-stream-health-history.json
-        if: steps.revision.outputs.current == 'true'
       - name: Commit health results
+        if: steps.revision.outputs.current == 'true'
         shell: bash
         run: |
           set -euo pipefail
