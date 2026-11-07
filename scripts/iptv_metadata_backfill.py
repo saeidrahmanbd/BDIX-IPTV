@@ -18,6 +18,42 @@ ACTIVE_GROUPS = {
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
 }
+TARGET_GROUPS = ACTIVE_GROUPS | {"Backup"}
+
+# Channel-specific language evidence for feeds not yet represented in
+# iptv-org's feed catalogue. Values are ISO 639-3 codes; "und" is used only
+# where the service is deliberately language-agnostic or its audio is unknown.
+LANGUAGE_OVERRIDES = {
+    "b4umovies.in@india": ("hin",),
+    "b4umusic.in@india": ("hin",),
+    "ddarunprabha.in@sd": ("eng",),
+    "durontotv.bd": ("ben",),
+    "gtcpunjabi.in@sd": ("pan",),
+    "gtcpunjabi.in@uk": ("pan",),
+    "insync.in": ("und",),
+    "jalshamovies.in@hd": ("ben",),
+    "star.jalsha.movies.in": ("ben",),
+    "kairaliwe.in@sd": ("mal",),
+    "kappatv.in@alt1": ("eng", "hin", "mal", "tam"),
+    "keralavision.in@sd": ("mal",),
+    "mazhavilmanorama.in@sd": ("mal",),
+    "mbctv.in@sd": ("ori",),
+    "ptcpunjabi.in@sd": ("pan",),
+    "punjabihits.in": ("pan",),
+    "punjabishorts.in": ("pan",),
+    "rplus.in@sd": ("ben",),
+    "rplusgold.in@sd": ("ben",),
+    "rajtv.in@sd": ("tam",),
+    "shemaroojosh.in@sd": ("hin",),
+    "star.jalsha.in": ("ben",),
+    "starmoviesselect.in@hd": ("eng", "hin", "tam"),
+    "tabbarhits.in": ("pan",),
+    "themovieclub.in@hd": ("und",),
+    "tlc.in@hd": ("ben", "eng", "hin", "mal", "mar", "tam", "tel"),
+    "zeebangla.in@hd": ("ben",),
+    "zeetelugu.in@hd": ("tel",),
+    "zeetv.in@sd": ("hin",),
+}
 GROUP_DEFAULTS = {
     "Bangladesh": ("BD", "ben"),
     "Indian Bangla": ("IN", "ben"),
@@ -86,7 +122,12 @@ def parse_catalogue(channels, feeds=None):
         if not channel_id:
             continue
         country = (row.get("country") or "").strip().upper()
-        languages = tuple(sorted(feed_languages.get(channel_id, set())))
+        channel_languages = {
+            value.strip().lower()
+            for value in (row.get("languages") or [])
+            if isinstance(value, str) and LANGUAGE_RE.fullmatch(value.strip().lower())
+        }
+        languages = tuple(sorted(feed_languages.get(channel_id, set()) | channel_languages))
         catalogue[channel_id] = (country, languages)
     return catalogue
 
@@ -97,7 +138,7 @@ def matching_id(tvg_id, catalogue):
         return tvg_id
     if "@" in tvg_id:
         base, suffix = tvg_id.rsplit("@", 1)
-        if suffix.upper() in QUALITY_SUFFIXES and base in catalogue:
+        if (suffix.upper() in QUALITY_SUFFIXES | {"INDIA", "UK", "HINDI", "TELUGU", "ALT1"}) and base in catalogue:
             return base
     return None
 
@@ -114,7 +155,7 @@ def active_gaps(text):
         elif current is not None and line.strip().startswith(("http://", "https://")):
             meta = attrs(current)
             current = None
-            if meta.get("group-title", "").strip() not in ACTIVE_GROUPS:
+            if meta.get("group-title", "").strip() not in TARGET_GROUPS:
                 continue
             missing = []
             if not meta.get("tvg-country", "").strip():
@@ -145,26 +186,56 @@ def update_playlist(text, catalogue):
         current_index = None
         meta = attrs(original_info)
         group_name = meta.get("group-title", "").strip()
-        if group_name not in ACTIVE_GROUPS:
+        if group_name not in TARGET_GROUPS:
             result.append(line)
             continue
 
-        source_id = matching_id(meta.get("tvg-id", ""), catalogue)
+        tvg_id = meta.get("tvg-id", "").strip()
+        channel_id = meta.get("channel-id", "").strip()
+        source_id = matching_id(tvg_id or channel_id, catalogue)
         country, languages = ("", ())
         if source_id is not None:
-            matched.add(meta.get("tvg-id", ""))
+            matched.add(tvg_id or channel_id)
             matched_ids += 1
             country, languages = catalogue[source_id]
 
-        # If the upstream catalogue has no usable country/language for a current
-        # active entry, use the playlist's controlled category semantics. This is
-        # deliberately limited to entries already missing the field; existing
-        # metadata is never overwritten.
+        # Exact-ID catalogue/feed data has priority. Use a channel-specific
+        # language override only when the catalogue has no usable language.
+        if not languages:
+            languages = LANGUAGE_OVERRIDES.get((tvg_id or channel_id).casefold(), ())
+
+        # An alternate stream may inherit the language of its exact-ID primary.
+        # Do not use category defaults for Backup; if still unknown, label it
+        # explicitly as undetermined rather than inventing a language.
+        if not languages and group_name == "Backup":
+            primary_languages = set()
+            primary_ids = {tvg_id.casefold(), channel_id.casefold()} - {""}
+            for row in lines:
+                if not row.startswith("#EXTINF:"):
+                    continue
+                primary_meta = attrs(row)
+                if primary_meta.get("group-title", "").strip() not in ACTIVE_GROUPS:
+                    continue
+                row_ids = {
+                    primary_meta.get("tvg-id", "").strip().casefold(),
+                    primary_meta.get("channel-id", "").strip().casefold(),
+                } - {""}
+                if primary_ids & row_ids and primary_meta.get("tvg-language", "").strip():
+                    primary_languages.update(
+                        value.strip().lower()
+                        for value in primary_meta["tvg-language"].split(";")
+                        if LANGUAGE_RE.fullmatch(value.strip().lower())
+                    )
+            if primary_languages:
+                languages = tuple(sorted(primary_languages))
+
         default_country, default_language = GROUP_DEFAULTS.get(group_name, ("", ""))
         if not country:
             country = default_country
         if not languages:
             languages = (default_language,) if default_language else ()
+        if not languages:
+            languages = ("und",)
         if source_id is None:
             fallback_entries += 1
 
@@ -209,12 +280,12 @@ def write_report(status, before_hash, after_hash, metrics, remaining, note=""):
         "- tvg-country fields filled: **{}**".format(metrics.get("country_fields_filled", 0)),
         "- tvg-language fields filled: **{}**".format(metrics.get("language_fields_filled", 0)),
         "- Category fallback entries: **{}**".format(metrics.get("fallback_entries", 0)),
-        "- Language source: **iptv-org feed-level languages where available; controlled group defaults otherwise**",
-        "- Active entries with remaining metadata gaps: **{}**".format(len(remaining)),
+        "- Language source: **iptv-org channel/feed metadata, exact-ID primary inheritance, explicit channel overrides, then undetermined**",
+        "- Active and Backup entries with remaining metadata gaps: **{}**".format(len(remaining)),
     ]
     if note:
         lines += ["", note]
-    lines += ["", "## Remaining active metadata gaps", "", "| Group | Channel | tvg-id | Missing fields |", "|---|---|---|---|"]
+    lines += ["", "## Remaining active / Backup metadata gaps", "", "| Group | Channel | tvg-id | Missing fields |", "|---|---|---|---|"]
     for group, name, tvg_id, missing in remaining[:250]:
         clean = lambda value: str(value).replace("|", "\\|").replace("\n", " ")
         lines.append("| {} | {} | {} | {} |".format(clean(group), clean(name), clean(tvg_id), clean(missing)))
@@ -247,8 +318,8 @@ def main():
         after_hash = hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()
         remaining = active_gaps(updated)
         write_report("PASS" if not remaining else "PARTIAL", before_hash, after_hash, metrics, remaining,
-                     "External catalogue unavailable; controlled category defaults were used. Reason: {}".format(str(exc)[:240]))
-        print("Metadata backfill used controlled category defaults: {}".format(exc))
+                     "External catalogue unavailable; per-channel overrides and controlled primary-category defaults were used. Reason: {}".format(str(exc)[:240]))
+        print("Metadata backfill used per-channel overrides and controlled primary-category defaults: {}".format(exc))
         return 0
 
     updated, metrics = update_playlist(original, catalogue)
@@ -257,7 +328,7 @@ def main():
     after_hash = hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()
     remaining = active_gaps(updated)
     write_report("PASS" if not remaining else "PARTIAL", before_hash, after_hash, metrics, remaining)
-    print("IPTV metadata backfill: matched={source_ids_matched}, entries_changed={entries_changed}, "
+    print("IPTV metadata backfill: matched={source_ids_matched}, active+backup entries_changed={entries_changed}, "
           "country_filled={country_fields_filled}, language_filled={language_fields_filled}, "
           "fallback_entries={fallback_entries}, gaps_remaining={gaps}".format(**metrics, gaps=len(remaining)))
     return 0 if not remaining else 1
