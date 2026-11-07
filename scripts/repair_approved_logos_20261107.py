@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Replace three audited IPTV logo defects with sourced channel-brand artwork.
 
-The script is intentionally limited to these three local logo assets. It does
-not change stream URLs, channel IDs, grouping or any other playlist metadata.
+The script is limited to these three local logo assets. It does not change
+stream URLs, channel IDs, grouping or any other playlist metadata.
 """
 from __future__ import annotations
 
@@ -10,21 +10,21 @@ from io import BytesIO
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-from PIL import Image
-import cairosvg
+from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 LOGOS = ROOT / "logos"
 REPORT = ROOT / "reports" / "logo-repair-2026-11-07.md"
 
 SOURCES = {
-    "animal_planet": "https://upload.wikimedia.org/wikipedia/commons/2/20/2018_Animal_Planet_logo.svg",
+    # Full 2018 Animal Planet lockup (blue elephant + black wordmark).
+    "animal_planet": "https://static.cdnlogo.com/logos/a/74/animal-planet.png",
     "b4u_music": "https://upload.wikimedia.org/wikipedia/commons/7/74/B4U_Music_logo.png",
     "sangeet_bangla": "https://adgully.com/img/800/202108/sangeet-bangla-new-logo.jpeg",
 }
 
 def download(url: str, *, referer: str | None = None) -> bytes:
-    headers = {"User-Agent": "BDIX-IPTV-Logo-Maintenance/1.0"}
+    headers = {"User-Agent": "BDIX-IPTV-Logo-Maintenance/1.1"}
     if referer:
         headers["Referer"] = referer
     request = Request(url, headers=headers)
@@ -45,13 +45,22 @@ def main() -> None:
     LOGOS.mkdir(parents=True, exist_ok=True)
     REPORT.parent.mkdir(parents=True, exist_ok=True)
 
-    # Animal Planet's 2018 global identity: retain the complete blue elephant
-    # and lowercase wordmark, not just the cropped symbol in the old asset.
-    animal_svg = download(SOURCES["animal_planet"])
-    if b"<svg" not in animal_svg[:1000].lower():
-        raise RuntimeError("Animal Planet source is not an SVG.")
-    animal_png = cairosvg.svg2png(bytestring=animal_svg, output_width=1200)
-    animal = Image.open(BytesIO(animal_png)).convert("RGBA")
+    # Full Animal Planet wordmark; require dark lettering as well as the blue
+    # symbol so a symbol-only file cannot silently pass this repair again.
+    animal_data = download(SOURCES["animal_planet"])
+    animal = Image.open(BytesIO(animal_data)).convert("RGBA")
+    if min(animal.size) < 300:
+        raise RuntimeError(f"Unexpectedly small Animal Planet logo: {animal.size}")
+    rgb = animal.convert("RGB")
+    dark_pixels = sum(1 for pixel in rgb.getdata() if max(pixel) < 90)
+    if dark_pixels < 1500:
+        raise RuntimeError("Animal Planet source appears to lack the black wordmark.")
+    if max(animal.size) < 900:
+        ratio = 900 / max(animal.size)
+        animal = animal.resize(
+            (round(animal.width * ratio), round(animal.height * ratio)),
+            Image.Resampling.LANCZOS,
+        )
     save_png(animal, LOGOS / "animal-planet.png")
 
     # B4U Music-specific lockup (B4U Media source; Wikimedia file record).
@@ -59,13 +68,12 @@ def main() -> None:
     b4u = Image.open(BytesIO(b4u_data)).convert("RGBA")
     if min(b4u.size) < 160:
         raise RuntimeError(f"Unexpectedly small B4U logo: {b4u.size}")
-    # Keep the complete square composition and improve display resolution.
     if max(b4u.size) < 600:
         b4u = b4u.resize((600, 600), Image.Resampling.LANCZOS)
     save_png(b4u, LOGOS / "b4u-music.png")
 
-    # Sangeet Bangla's post-August-2021 rebrand artwork. The media mirror has
-    # thin page-rule lines at the top/bottom; remove only those outer rows.
+    # Sangeet Bangla's post-August-2021 rebrand artwork. Remove the thin
+    # editorial frame by detecting the near-full-width/height black rule.
     sangeet_data = download(
         SOURCES["sangeet_bangla"],
         referer="https://www.adgully.com/",
@@ -73,11 +81,24 @@ def main() -> None:
     sangeet = Image.open(BytesIO(sangeet_data)).convert("RGB")
     if min(sangeet.size) < 300:
         raise RuntimeError(f"Unexpectedly small Sangeet Bangla logo: {sangeet.size}")
+    gray = ImageOps.grayscale(sangeet)
     w, h = sangeet.size
-    # Remove the thin horizontal editorial rules without cutting the logo or
-    # its Bengali tagline. Keep the white field and full lockup intact.
-    margin = max(4, round(h * 0.012))
-    sangeet = sangeet.crop((0, margin, w, h - margin))
+    row_lines = [
+        y for y in range(h)
+        if sum(gray.getpixel((x, y)) < 70 for x in range(w)) >= int(w * 0.78)
+    ]
+    col_lines = [
+        x for x in range(w)
+        if sum(gray.getpixel((x, y)) < 70 for y in range(h)) >= int(h * 0.78)
+    ]
+    if len(row_lines) < 2 or len(col_lines) < 2:
+        raise RuntimeError("Could not confidently detect Sangeet Bangla editorial frame.")
+    top, bottom = min(row_lines), max(row_lines)
+    left, right = min(col_lines), max(col_lines)
+    pad = 5
+    if bottom - top < h * 0.65 or right - left < w * 0.65:
+        raise RuntimeError("Sangeet Bangla frame detection produced an unsafe crop.")
+    sangeet = sangeet.crop((left + pad, top + pad, right - pad + 1, bottom - pad + 1))
     save_png(sangeet, LOGOS / "sangeet-bangla.png")
 
     rows = [
@@ -87,9 +108,9 @@ def main() -> None:
         "",
         "| Asset | Source | Notes |",
         "|---|---|---|",
-        f"| logos/animal-planet.png | [Wikimedia Commons — 2018 Animal Planet logo.svg]({SOURCES['animal_planet']}) | Global blue-elephant lockup introduced in the 2018 rebrand; converted from SVG to PNG for player compatibility. Commons identifies the artwork as by Animal Planet and classifies the text logo as public domain. |",
+        f"| logos/animal-planet.png | [Full Animal Planet wordmark — CDNLogo](https://cdnlogo.com/logo/animal-planet_38748.html) | Full blue-elephant plus black lowercase wordmark; the source's dark lettering is checked before saving. The identity itself is corroborated by the official brand designer's [Animal Planet project](https://cghnyc.com/work/project/animal-planet). Third-party asset provenance/licensing remains subject to review. |",
         f"| logos/b4u-music.png | [Wikimedia Commons — B4U Music logo.png]({SOURCES['b4u_music']}) | B4U Music-specific artwork; file record attributes source and author to B4U media and records CC BY-SA 4.0. Upscaled with high-quality resampling; no design elements added. |",
-        f"| logos/sangeet-bangla.png | [Adgully rebrand image]({SOURCES['sangeet_bangla']}); corroborated by [SVF's 5 November 2021 rebrand release](https://svf.in/press/sangeet-bangla-the-undisputed-pioneer-television-channel-in-bengali-music-entertainment-gets-rebranded/attachment/sb-logho/) | Replaces the pre-2021 logo with the red/black Hullor Hoyejaak lockup. The SVF attachment currently serves a placeholder; the image is taken from Adgully's preserved rebrand coverage. Reuse permission for this rehosted image is not independently established and remains a provenance review item. |",
+        f"| logos/sangeet-bangla.png | [Adgully rebrand image]({SOURCES['sangeet_bangla']}); corroborated by [SVF's 5 November 2021 rebrand release](https://svf.in/press/sangeet-bangla-the-undisputed-pioneer-television-channel-in-bengali-music-entertainment-gets-rebranded/attachment/sb-logho/) | Post-2021 red/black Hullor Hoyejaak lockup, with editorial frame removed. The SVF attachment currently serves a placeholder; this image is taken from Adgully's preserved rebrand coverage. Reuse permission for this rehosted image is not independently established and remains a provenance review item. |",
         "",
         "The assets are stored locally under logos/; no playlist entry points to an external image URL.",
         "",
