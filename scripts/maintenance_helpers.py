@@ -255,9 +255,31 @@ def _protected_text(text: str, skip_urls: set[str] | None = None) -> str:
     return "\n".join(serialized) + "\n"
 
 
+def _protected_snapshot_text(text: str) -> str:
+    """Serialize protected records with original group names for the restore step."""
+    blocks = _protected_blocks(text)
+    blocks.sort(key=lambda block: (
+        _canonical_channel_name(_name(str(block["info"]))),
+        str(block["url"]).casefold(),
+    ))
+    serialized = []
+    for block in blocks:
+        lines = list(block["lines"])
+        if lines:
+            info = str(lines[0])
+            # Channel numbering is mutable, but the original group is required by
+            # restore_protected_review.py to validate and reconstruct each queue.
+            info = re.sub(r'\s+tvg-chno="[^"]*"', "", info, count=1)
+            lines[0] = _canonical_extinf(info)
+        serialized.extend(lines)
+    return "\n".join(serialized) + ("\n" if serialized else "")
+
+
 def snapshot_protected() -> None:
     text = PLAYLIST.read_text(encoding="utf-8-sig")
-    PROTECTED_SNAPSHOT.write_text(_protected_text(text), encoding="utf-8")
+    # Keep group-title in the saved artifact: restore_protected_review.py needs
+    # the original Backup/Review/Not Playing classification to restore queues.
+    PROTECTED_SNAPSHOT.write_text(_protected_snapshot_text(text), encoding="utf-8")
     print(f"Protected review snapshot: {len(_protected_blocks(text))} complete entries")
 
 
@@ -461,7 +483,7 @@ def verify_no_unauthorized_removals() -> int:
 
     current_protected = _protected_text(current_text, allowed_new_protected)
     expected_protected = (
-        PROTECTED_SNAPSHOT.read_text(encoding="utf-8")
+        _protected_text(PROTECTED_SNAPSHOT.read_text(encoding="utf-8"))
         if PROTECTED_SNAPSHOT.exists()
         else ""
     )
