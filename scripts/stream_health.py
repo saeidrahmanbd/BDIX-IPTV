@@ -13,7 +13,7 @@ PLAYLIST=Path("IPTV-Playlist.m3u")
 REPORT=Path("reports/stream-health.md")
 HISTORY=Path("reports/stream-health-history.json")
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
-REVIEW_GROUPS={"New Channels","New Backup","Not Playing"}
+REVIEW_GROUPS={"Review","New Channels","New Backups","New Backup","Not Playing"}
 GROUP_EXCLUDE=set()
 SENSITIVE_QUERY={"token","access_token","refresh_token","sig","signature","jwt","session","key","api_key","apikey","authorization","auth","client_secret","hdnts","expires","e","username","user","password","passwd","pass"}
 
@@ -91,7 +91,7 @@ def main():
     failure_classes=Counter(("HTTP 401/403 (access/auth)" if r["status"] in {401,403} else "HTTP 404 (not found)" if r["status"]==404 else "HTTP 4xx (other)" if 400<=r["status"]<500 else "HTTP 5xx (server)" if 500<=r["status"]<600 else r["error"] or "Other") for r in results if not r["ok"])
     persistent=[r for r in results if r["consecutive_failures"]>=3]; intermittent=[r for r in results if not r["ok"] and r["consecutive_failures"]<3]
     groups=Counter(r["group"] for r in results)
-    primary_targets=[r for r in results if r["group"] not in {"Backup","New Channels","New Backup","Not Playing"}]
+    primary_targets=[r for r in results if r["group"] not in {"Backup","Review","New Channels","New Backups","New Backup","Not Playing"}]
     families={}
     for r in results: families.setdefault(canonical_url(r["url"]),set()).add(r["url"])
     near_duplicates={k:v for k,v in families.items() if len(v)>1}
