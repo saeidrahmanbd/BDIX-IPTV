@@ -116,19 +116,17 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         sample = (
             "#EXTM3U\n"
             + row("ChannelWIN.in@SD", "Channel WIN", "Backup", "https://stream.example/win.m3u8", language="und", country="IN")
-            + row("MHOneDilSe.in@SD", "MH One Dil Se", "Backup", "https://stream.example/dilse.m3u8", language="hin", country="IN")
             + row("Pogo.in@SD", "Pogo", "Backup", "https://stream.example/pogo.m3u8", language="eng", country="IN")
             + row("UNLISTED.in", "Unlisted Candidate", "Backup", "https://stream.example/unlisted.m3u8", language="und", country="IN")
         )
         updated, stats, errors = repair_playlist_text(sample)
         self.assertEqual(errors, [])
         self.assertNotIn("Channel WIN", updated)
-        self.assertNotIn("MH One Dil Se", updated)
         self.assertIn('tvg-name="Pogo"', updated)
         self.assertIn('group-title="Kids"', updated)
         self.assertIn('tvg-name="Unlisted Candidate"', updated)
         self.assertIn('group-title="Review"', updated)
-        self.assertEqual(stats["non_kids_review_removed"], 2)
+        self.assertEqual(stats["non_kids_review_removed"], 1)
         self.assertEqual(stats["orphan_backups_promoted"], 1)
         self.assertEqual(stats["orphan_backups_quarantined"], 1)
 
@@ -182,6 +180,36 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertNotIn('group-title="Review"', updated)
         self.assertIn("https://stream.example/pogo-primary.m3u8", updated)
         self.assertIn("https://stream.example/pogo-alt.m3u8", updated)
+
+
+    def test_mh_one_dil_se_is_restored_to_indian_music(self):
+        sample = (
+            "#EXTM3U\\n"
+            + row("MHOneDilSe.in@SD", "MH One Dil Se", "Backup", "https://stream.example/dilse-primary.m3u8", language="hin", country="IN")
+            + row("MHOneDilSe.in@SD", "MH One Dil Se", "Backup", "https://stream.example/dilse-alt.m3u8", language="hin", country="IN")
+        )
+        updated, stats, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertIn('tvg-name="MH One Dil Se"', updated)
+        self.assertEqual(updated.count('group-title="Indian Music"'), 1)
+        self.assertEqual(updated.count('group-title="Backup"'), 1)
+        self.assertEqual(stats["orphan_backups_promoted"], 1)
+        self.assertEqual(stats["orphan_backups_quarantined"], 0)
+        self.assertNotIn("MH One Dil Se", stats.get("removed_channels", []))
+
+    def test_mh_one_movies_is_restored_to_indian_movies(self):
+        sample = (
+            "#EXTM3U\\n"
+            + row("MHOneMovies.in@SD", "MH One Movies", "Backup", "https://stream.example/movies-primary.m3u8", language="hin", country="IN")
+            + row("MHOneMovies.in@SD", "MH One Movies", "Backup", "https://stream.example/movies-alt.m3u8", language="hin", country="IN")
+        )
+        updated, stats, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertIn('tvg-name="MH One Movies"', updated)
+        self.assertEqual(updated.count('group-title="Indian Movies"'), 1)
+        self.assertEqual(updated.count('group-title="Backup"'), 1)
+        self.assertEqual(stats["orphan_backups_promoted"], 1)
+        self.assertEqual(stats["orphan_backups_quarantined"], 0)
 
 
 if __name__ == "__main__":
