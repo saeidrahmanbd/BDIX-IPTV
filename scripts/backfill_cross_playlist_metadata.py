@@ -21,7 +21,8 @@ REPORT = Path("reports/playlist-metadata-backfill.md")
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 COUNTRY_RE = re.compile(r"^[A-Z]{2}$")
 LANGUAGE_LIST_RE = re.compile(r"^[a-z]{3}(?:;[a-z]{3})*$")
-REVIEW_GROUPS = {"backup", "not playing", "not playing...", "not playing…", "not playing... (review)"}
+# Adult entries are outside this metadata-repair job and pass through unchanged.
+REVIEW_GROUPS = {"adult", "backup", "not playing", "not playing...", "not playing…", "not playing... (review)"}
 
 
 def attrs(line):
