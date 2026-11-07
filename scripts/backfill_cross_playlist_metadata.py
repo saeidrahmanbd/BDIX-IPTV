@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Conservatively backfill missing country/language metadata across auxiliary playlists.
 
-Only exact tvg-id matches or globally unambiguous exact tvg-name matches are used.
+Only exact tvg-id/channel-id matches or globally unambiguous exact tvg-name matches are used.
 Existing metadata, channel order, group placement, tvg-chno, stream URLs, and review
 queues are never changed. Unknown or ambiguous values remain blank rather than guessed.
 """
@@ -21,7 +21,7 @@ REPORT = Path("reports/playlist-metadata-backfill.md")
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 COUNTRY_RE = re.compile(r"^[A-Z]{2}$")
 LANGUAGE_LIST_RE = re.compile(r"^[a-z]{3}(?:;[a-z]{3})*$")
-REVIEW_GROUPS = {"backup", "not playing", "not playing...", "not playing…", "not playing... (review)"}
+REVIEW_GROUPS = {"backup", "adult", "review", "new channels", "new backups", "not playing", "not playing...", "not playing…", "not playing... (review)"}
 
 
 def attrs(line):
@@ -80,11 +80,15 @@ def build_indexes(text_by_path):
             meta = row["attrs"]
             if row["group"].casefold() in REVIEW_GROUPS:
                 continue
-            channel_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip()
+            channel_ids = {
+                value.strip()
+                for value in (meta.get("tvg-id", ""), meta.get("channel-id", ""))
+                if value.strip()
+            }
             name_key = normalize_name(meta.get("tvg-name") or row["line"].rsplit(",", 1)[-1])
             country = valid_country(meta.get("tvg-country", ""))
             language = valid_languages(meta.get("tvg-language", ""))
-            if channel_id:
+            for channel_id in channel_ids:
                 item = id_values[channel_id]
                 if country:
                     item["country"].add(country)
@@ -92,7 +96,7 @@ def build_indexes(text_by_path):
                     item["language"].add(language)
             if name_key:
                 item = name_values[name_key]
-                if channel_id:
+                for channel_id in channel_ids:
                     item["ids"].add(channel_id)
                 if country:
                     item["country"].add(country)
@@ -142,11 +146,19 @@ def backfill_text(text, by_id, by_name):
         if group in REVIEW_GROUPS:
             continue
 
-        channel_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip()
+        channel_ids = {
+            value.strip()
+            for value in (meta.get("tvg-id", ""), meta.get("channel-id", ""))
+            if value.strip()
+        }
         name_key = normalize_name(meta.get("tvg-name") or info.rsplit(",", 1)[-1])
-        source = by_id.get(channel_id, {}) if channel_id else {}
-        country = valid_country(source.get("country", ""))
-        language = valid_languages(source.get("language", ""))
+        id_sources = [by_id[channel_id] for channel_id in channel_ids if channel_id in by_id]
+        country_values = {valid_country(source.get("country", "")) for source in id_sources}
+        language_values = {valid_languages(source.get("language", "")) for source in id_sources}
+        country_values.discard("")
+        language_values.discard("")
+        country = next(iter(country_values)) if len(country_values) == 1 else ""
+        language = next(iter(language_values)) if len(language_values) == 1 else ""
         if not country or not language:
             name_source = by_name.get(name_key, {}) if name_key else {}
             country = country or valid_country(name_source.get("country", ""))
@@ -243,7 +255,7 @@ def main():
         *[f"- {path.name} SHA-256: **{summary[path.name]['sha256']}**" for path in PLAYLISTS],
         "",
         "Only missing tvg-country and tvg-language values were filled. Source evidence was an exact tvg-id match or an unambiguous exact tvg-name match. Unknown or ambiguous values remain blank.",
-        "The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, stream URLs, or Backup/Not Playing entries.", "",
+        "The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, stream URLs, or Backup/Review/Adult/Not Playing entries.", "",
         "## Playlist results", "",
         "| Playlist | Entries changed | Country fields filled | Language fields filled | Active entries still missing either field | Stream URL inventory | SHA-256 |",
         "|---|---:|---:|---:|---:|---|---|",
