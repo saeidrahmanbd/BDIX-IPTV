@@ -36,10 +36,10 @@ permissions:
   contents: write
 
 concurrency:
-  group: iptv-epg-writer-v6
-  # Serialize EPG publication instead of cancelling a valid refresh when multiple
-  # playlist writers finish close together. Keep pending refreshes so the newest
-  # committed playlist/mapping state is eventually audited and published.
+  group: iptv-playlist-main-writer-v3
+  # EPG and playlist workflows both publish dashboard/report snapshots and the
+  # guide is fingerprinted against both playlists. Use the same repository-wide
+  # writer queue to prevent overlapping report commits while retaining queued runs.
   cancel-in-progress: false
   queue: max
 
