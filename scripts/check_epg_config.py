@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Fail early when EPG source lists or channel aliases drift or contain duplicates."""
 import ast
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 COVERAGE = ROOT / "scripts" / "epg_coverage.py"
 GENERATOR = ROOT / "scripts" / "generate_epg.py"
+PLAYLISTS = (ROOT / "IPTV-Playlist.m3u", ROOT / "International-Playlist.m3u")
 
 
 def assignments(path):
@@ -34,6 +36,17 @@ def duplicate_dict_keys(node, label):
     duplicates = sorted({k for k in keys if keys.count(k) > 1})
     if duplicates:
         raise SystemExit(f"ERROR: duplicate {label} keys: {', '.join(map(str, duplicates))}")
+
+
+
+def maintained_playlist_ids():
+    """Return the exact TVG IDs present in both maintained playlists."""
+    ids = set()
+    for path in PLAYLISTS:
+        if not path.is_file():
+            raise SystemExit(f"ERROR: maintained playlist is missing: {path.name}")
+        ids.update(re.findall(r'tvg-id="([^"]+)"', path.read_text(encoding="utf-8-sig")))
+    return ids
 
 
 def main():
@@ -68,6 +81,16 @@ def main():
                 raise SystemExit(f"ERROR: {name} contains an empty/non-string playlist ID")
             if not isinstance(ids, list) or not ids or any(not isinstance(x, str) or not x.strip() for x in ids):
                 raise SystemExit(f"ERROR: {name}[{key!r}] must contain non-empty string IDs")
+
+    playlist_ids = maintained_playlist_ids()
+    for name in ("EPG_ALIASES", "EPG_LOCKS"):
+        mapping = literal(coverage[name], name)
+        orphaned = sorted(set(mapping) - playlist_ids)
+        if orphaned:
+            raise SystemExit(
+                f"ERROR: {name} contains {len(orphaned)} keys absent from both maintained playlists: "
+                + ", ".join(orphaned)
+            )
 
     print(
         "EPG configuration check passed: "
