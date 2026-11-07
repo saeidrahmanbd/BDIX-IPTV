@@ -93,9 +93,9 @@ class MetadataBackfillTests(unittest.TestCase):
 
     def test_backup_channel_language_override_is_used_when_catalogue_has_no_match(self):
         playlist = (
-            "#EXTM3U\\n"
-            '#EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-country="BD" group-title="Backup",Duronto TV\\n'
-            "https://example.invalid/duronto.m3u8\\n"
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-country="BD" group-title="Backup",Duronto TV\n'
+            "https://example.invalid/duronto.m3u8\n"
         )
         updated, metrics = update_playlist(playlist, {})
         self.assertIn('tvg-language="ben"', updated)
