@@ -85,7 +85,12 @@ def recover_embedded_png_from_svg(svg_bytes: bytes) -> bytes | None:
         tail = raw[offset:]
         # Accept only an exact prefix of the canonical IEND chunk. This avoids
         # silently discarding arbitrary trailing data or a truncated IDAT chunk.
-        if tail and not PNG_IEND.startswith(tail):
+        # Some damaged embedded assets retain the IEND marker and CRC but lose
+        # the first one to three zero bytes of its four-byte zero-length field.
+        # That suffix is unambiguous because IEND's required data length is zero.
+        valid_prefix = PNG_IEND.startswith(tail)
+        valid_missing_length_prefix = any(tail == PNG_IEND[offset:] for offset in (1, 2, 3))
+        if tail and not (valid_prefix or valid_missing_length_prefix):
             return None
         output.extend(PNG_IEND)
     elif offset != len(raw):
