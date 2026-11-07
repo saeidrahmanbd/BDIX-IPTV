@@ -61,6 +61,8 @@ https://deshitv.deshitv24.net/live/myStream/playlist.m3u8
 https://3d46w.doyeltv.com/memfs/aa3aa6f7-ec12-41a2-8183-a891e157bbf8.m3u8
 #EXTINF:-1 tvg-id="GSeriesDrama.bd" channel-id="GSeriesDrama.bd" tvg-name="G Series Drama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-series-drama.png" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",G Series Drama
 https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="EkusheyTV.bd" channel-id="EkusheyTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Ekushey TV",Ekushey TV
+https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 #EXTINF:-1 tvg-id="EkattorTV.bd" channel-id="EkattorTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekattor-tv.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Ekattor TV",Ekattor TV
 https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8
 #EXTINF:-1 tvg-id="EkhonTV.bd" channel-id="EkhonTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekhon-tv.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Ekhon TV",Ekhon TV
@@ -567,8 +569,6 @@ https://live.ekamraott.com/bharat/bharat/index.m3u8
 https://live.ekamraott.com/manoranjan/manoranjan/index.m3u8
 #EXTINF:-1 tvg-id="EpicBharat.in@SD" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-bharat.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Epic Bharat",Epic Bharat
 https://mumt06.tangotv.in/qYyB8fXVEPICTV/index.m3u8
-#EXTINF:-1 tvg-id="EkusheyTV.bd" channel-id="EkusheyTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Ekushey TV",Ekushey TV
-https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 #EXTINF:-1 tvg-id="ETVComedy.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-comedy.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="ETV Comedy",ETV Comedy
 https://cc-wie8j8y69d2uy.akamaized.net/WWBI/Amagi/ETV_Comedy_IN/playlist.m3u8
 #EXTINF:-1 tvg-id="ETVJosh.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-josh.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="ETV Josh",ETV Josh
