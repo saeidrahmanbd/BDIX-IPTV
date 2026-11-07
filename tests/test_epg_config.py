@@ -173,7 +173,7 @@ class EpgConfigTests(unittest.TestCase):
             "urlopen",
             side_effect=[
                 OSError("current daily page unavailable"),
-                OSError("legacy apex unavailable"),
+                OSError("legacy www unavailable"),
                 io.BytesIO(html.encode("utf-8")),
             ],
         ) as urlopen:
@@ -187,11 +187,11 @@ class EpgConfigTests(unittest.TestCase):
         )
         self.assertEqual(
             urlopen.call_args_list[1].args[0].full_url,
-            "https://rtvbd.tv/schedule.php",
+            "https://www.rtvbd.tv/schedule.php",
         )
         self.assertEqual(
             urlopen.call_args_list[2].args[0].full_url,
-            "https://www.rtvbd.tv/schedule.php",
+            "https://rtvbd.tv/schedule.php",
         )
 
     def test_rtv_daily_schedule_parses_current_bengali_date_and_times(self):
