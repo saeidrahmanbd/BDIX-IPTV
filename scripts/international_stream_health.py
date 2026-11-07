@@ -228,7 +228,6 @@ def probe(url, headers):
     return result
 
 
-def load_history():
 def validate_probe_batch(results):
     """Abort a scan that cannot prove any stream is reachable.
 
@@ -251,6 +250,7 @@ def validate_probe_batch(results):
         )
 
 
+def load_history():
     if not HISTORY.is_file():
         return {"schema_version": 1, "entries": {}, "removed": []}
     try:
