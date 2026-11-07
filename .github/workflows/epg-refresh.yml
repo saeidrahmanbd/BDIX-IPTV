@@ -173,6 +173,11 @@ jobs:
             fi
           fi
 
+          # Keep the raw XMLTV endpoint; publish a deterministic gzip companion for supported clients.
+          gzip -n -9 -c epg/epg.xml > epg/epg.xml.gz
+          gzip -t epg/epg.xml.gz
+          gzip -cd epg/epg.xml.gz | cmp -s - epg/epg.xml
+
           python scripts/epg_coverage.py
           for report in \
             reports/epg-coverage.md \
@@ -192,7 +197,7 @@ jobs:
 
           # Defer dashboard snapshots until after the EPG commit is rebased onto the latest main.
           # This avoids conflicts with concurrent playlist-maintenance dashboard updates.
-          git add -f epg/epg.xml reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
+          git add -f epg/epg.xml epg/epg.xml.gz reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
           git add -u -- reports
 
           if ! git diff --quiet; then
