@@ -350,7 +350,8 @@ def final_mode(playlist, report, baseline, mode):
         errors.append(f"{len(malformed)} malformed EXTINF/URL pairs")
     if duplicate_count:
         errors.append(f"{duplicate_count} duplicate stream URLs remain")
-    required = ["Backup", "Review", "New Channels", "New Backups"]
+    required = (["Backup", "Review", "New Channels", "New Backups"]
+                if mode == "iptv" else ["New Channels", "New Backups", "Backup"])
     registry_line = next((line for line in lines if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")), "")
     try:
         category_registry = json.loads(registry_line.split(":", 1)[1]) if registry_line else []
@@ -366,7 +367,7 @@ def final_mode(playlist, report, baseline, mode):
     )
     if not ordering_ok:
         errors.append(
-            "Category registry must end Backup/Review/New Channels/New Backups and "
+            "Category registry must end " + "/".join(required) + " and "
             "present playlist groups must follow that registry order"
         )
     missing_logo = 0
@@ -416,7 +417,7 @@ def final_mode(playlist, report, baseline, mode):
         f"- M3U entries parsed: {len(entries)}",
         f"- Malformed EXTINF/URL pairs: {len(malformed)}",
         f"- Duplicate stream URLs: {duplicate_count}",
-        f"- Backup/Review/New Channels/New Backups ordering: {'passed' if ordering_ok else 'failed'}",
+        f"- {'/'.join(required)} ordering: {'passed' if ordering_ok else 'failed'}",
         f"- Discovery entries missing a logo (left blank rather than using a placeholder): {missing_logo}",
         f"- Non-local discovery logo references: {external_logo}",
         f"- Geography/content policy issues: {len(policy_issues)}",
