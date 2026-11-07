@@ -96,5 +96,60 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertEqual(updated.splitlines().count("https://stream.example/x-primary.m3u8"), 2)
 
 
+    def test_verified_orphan_candidates_promote_to_their_genre(self):
+        sample = (
+            "#EXTM3U\\n"
+            + row("GTCPunjabi.in@UK", "GTC Punjabi UK", "Backup", "https://stream.example/gtc.m3u8", language="pan", country="IN")
+            + row("MHOne.in@SD", "MH One", "Backup", "https://stream.example/mhone.m3u8", language="pan", country="IN")
+            + row("QTV.in", "Q TV", "Backup", "https://stream.example/qtv.m3u8", language="hin", country="IN")
+        )
+        updated, stats, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertIn('tvg-name="GTC Punjabi UK"', updated)
+        self.assertIn('group-title="Indian Entertainment"', updated)
+        self.assertIn('tvg-name="MH One"', updated)
+        self.assertIn('group-title="Indian Music"', updated)
+        self.assertIn('tvg-name="Q TV"', updated)
+        self.assertEqual(stats["orphan_backups_promoted"], 3)
+
+    def test_restricted_or_persistently_failing_orphans_stay_in_review(self):
+        sample = (
+            "#EXTM3U\\n"
+            + row("ChannelWIN.in@SD", "Channel WIN", "Backup", "https://stream.example/win.m3u8", language="und", country="IN")
+            + row("MHOneDilSe.in@SD", "MH One Dil Se", "Backup", "https://stream.example/dilse.m3u8", language="hin", country="IN")
+            + row("Pogo.in@SD", "Pogo", "Backup", "https://stream.example/pogo.m3u8", language="eng", country="IN")
+        )
+        updated, stats, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertEqual(updated.count('group-title="Review"'), 3)
+        self.assertEqual(stats["restricted_backups_reviewed"], 3)
+        self.assertEqual(stats["orphan_backups_promoted"], 0)
+
+    def test_ntv_malayalam_promotion_adds_the_local_logo(self):
+        sample = (
+            "#EXTM3U\\n"
+            + row("NTV.in", "NTV Malayalam", "Backup", "https://stream.example/ntv.m3u8", language="mal", country="IN", logo="")
+        )
+        updated, stats, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertIn('tvg-logo="' + "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv-malayalam.svg" + '"', updated)
+        self.assertIn('group-title="Indian Entertainment"', updated)
+        self.assertEqual(stats["orphan_backups_promoted"], 1)
+
+    def test_jalsha_movies_alias_links_to_the_existing_primary(self):
+        sample = (
+            "#EXTM3U\\n"
+            + row("Star.Jalsha.Movies.in", "Jalsha Movies", "Indian Bangla", "https://stream.example/jalsha-primary.m3u8", language="ben", country="IN")
+            + row("JalshaMovies.in@HD", "Jalsha Movies", "Backup", "https://stream.example/jalsha-backup.m3u8", language="ben", country="IN")
+        )
+        updated, stats, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertEqual(updated.count('group-title="Indian Bangla"'), 1)
+        self.assertIn('tvg-id="Star.Jalsha.Movies.in"', updated)
+        self.assertEqual(stats["name_matched_backups_linked"], 1)
+        self.assertEqual(stats["orphan_backups_quarantined"], 0)
+
+
+
 if __name__ == "__main__":
     unittest.main()
