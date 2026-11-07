@@ -11,6 +11,7 @@ import epg_source_cache
 import official_epg_sources
 import augment_epg_mapping_from_additional_sources as additional_augment
 import augment_epg_mapping_from_iptv_org as iptv_org_augment
+import check_epg_config
 
 COV = (ROOT / "scripts" / "epg_coverage.py").read_text(encoding="utf-8")
 GEN = (ROOT / "scripts" / "generate_epg.py").read_text(encoding="utf-8")
@@ -28,6 +29,17 @@ class EpgConfigTests(unittest.TestCase):
         a, b = literal(COV, "SOURCES"), literal(GEN, "SOURCES")
         self.assertEqual(a, b)
         self.assertEqual(len(a), len(set(a)))
+
+    def test_aliases_and_locks_only_reference_active_playlist_ids(self):
+        values = check_epg_config.assignments(check_epg_config.COVERAGE)
+        active_ids = check_epg_config.active_playlist_ids(ROOT)
+        for name in ("EPG_ALIASES", "EPG_LOCKS"):
+            mapping = check_epg_config.literal(values[name], name)
+            self.assertEqual(
+                check_epg_config.orphaned_mapping_keys(mapping, active_ids),
+                [],
+                f"{name} contains a mapping for a channel no longer maintained",
+            )
 
     def test_epg_pw_is_excluded_from_public_ingestion_without_redistribution_permission(self):
         source = "https://epg.pw/xmltv/epg_IN.xml.gz"
