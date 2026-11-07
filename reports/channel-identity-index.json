@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06T16:37:29+00:00",
+  "generated": "2026-11-07T03:32:14+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -478,6 +478,20 @@
       "primary": 1,
       "backup": 0
     },
+    "andpictures": {
+      "names": [
+        "&pictures"
+      ],
+      "ids": [
+        "andpictures.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "andtv": {
       "names": [
         "&TV"
@@ -574,20 +588,6 @@
       ],
       "groups": [
         "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "aryantvnational": {
-      "names": [
-        "Aryan TV National"
-      ],
-      "ids": [
-        "aryantvnational.in@sd"
-      ],
-      "groups": [
-        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -867,8 +867,8 @@
         "Indian Movies",
         "New Backups"
       ],
-      "streams": 5,
-      "primary": 2,
+      "streams": 6,
+      "primary": 3,
       "backup": 3
     },
     "b4umusic": {
@@ -3640,10 +3640,11 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backups"
       ],
-      "streams": 3,
-      "primary": 1,
+      "streams": 4,
+      "primary": 2,
       "backup": 2
     },
     "dwnews": {
@@ -4879,6 +4880,20 @@
       "primary": 1,
       "backup": 0
     },
+    "jalshamovies": {
+      "names": [
+        "Jalsha Movies"
+      ],
+      "ids": [
+        "jalshamovies.in@hd"
+      ],
+      "groups": [
+        "New Backups"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "jalwatv": {
       "names": [
         "Jalwa TV"
@@ -6053,8 +6068,8 @@
         "Indian Movies",
         "New Backups"
       ],
-      "streams": 2,
-      "primary": 2,
+      "streams": 3,
+      "primary": 3,
       "backup": 0
     },
     "moviesphere": {
@@ -6229,6 +6244,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "nammabangalore": {
+      "names": [
+        "Namma Bangalore"
+      ],
+      "ids": [
+        "nammabangalore.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "nandighoshatv": {
       "names": [
@@ -6885,6 +6914,20 @@
       "streams": 4,
       "primary": 1,
       "backup": 3
+    },
+    "pitaaracomedy": {
+      "names": [
+        "Pitaara Comedy"
+      ],
+      "ids": [
+        "pitaaracomedy.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "pksports": {
       "names": [
@@ -7665,10 +7708,11 @@
         "rplus.in@sd"
       ],
       "groups": [
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "rplusgold": {
@@ -7680,10 +7724,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Backups"
       ],
-      "streams": 4,
-      "primary": 1,
+      "streams": 5,
+      "primary": 2,
       "backup": 3
     },
     "rtv": {
@@ -8517,8 +8562,8 @@
         "Indian Bangla",
         "New Backups"
       ],
-      "streams": 3,
-      "primary": 2,
+      "streams": 4,
+      "primary": 3,
       "backup": 1
     },
     "star.jalsha.movies": {
@@ -8573,6 +8618,20 @@
       ],
       "groups": [
         "Not Playing"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "stargoldselect": {
+      "names": [
+        "Star Gold Select"
+      ],
+      "ids": [
+        "stargoldselect.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -8642,10 +8701,11 @@
         "starmoviesselect.in@hd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Movies",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "starnet": {
@@ -10241,8 +10301,8 @@
         "New Backups",
         "Not Playing"
       ],
-      "streams": 7,
-      "primary": 3,
+      "streams": 8,
+      "primary": 4,
       "backup": 4
     },
     "zeebanglasonar": {
@@ -10414,10 +10474,11 @@
         "zeetelugu.in@hd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "zeetv": {
@@ -10433,8 +10494,8 @@
         "New Backups",
         "Not Playing"
       ],
-      "streams": 5,
-      "primary": 4,
+      "streams": 6,
+      "primary": 5,
       "backup": 1
     },
     "zingabad": {
