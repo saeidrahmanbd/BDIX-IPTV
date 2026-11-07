@@ -229,6 +229,28 @@ def probe(url, headers):
 
 
 def load_history():
+def validate_probe_batch(results):
+    """Abort a scan that cannot prove any stream is reachable.
+
+    A runner-wide routing/DNS/TLS outage must never turn into thousands of
+    false Review labels. This gate runs before the playlist/history is changed.
+    """
+    total = len(results)
+    reachable = sum(item.get("state") == "ok" for item in results)
+    failures = sum(item.get("state") == "fail" for item in results)
+    if total >= 100 and reachable == 0:
+        raise SystemExit(
+            "Safety stop: zero media streams were reachable in this batch; "
+            "the runner/network may be restricted. Playlist and failure history were not changed."
+        )
+    if total >= 100 and failures >= int(total * 0.80) and reachable < int(total * 0.02):
+        raise SystemExit(
+            "Safety stop: the scan shows a repository-wide reachability anomaly "
+            "(at least 80% hard failures and under 2% reachable). "
+            "Playlist and failure history were not changed."
+        )
+
+
     if not HISTORY.is_file():
         return {"schema_version": 1, "entries": {}, "removed": []}
     try:
@@ -436,6 +458,7 @@ def main():
         raise SystemExit("Incomplete probe run; no playlist changes written")
 
     check_date = datetime.now(ZoneInfo("Asia/Dhaka")).date().isoformat()
+    validate_probe_batch(results)
     generated = datetime.now(timezone.utc).isoformat(timespec="seconds")
     updated, history, events = apply_results(text, results, load_history(), check_date)
     PLAYLIST.write_text(updated, encoding="utf-8")

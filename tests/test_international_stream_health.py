@@ -82,6 +82,20 @@ class InternationalStreamHealthTests(unittest.TestCase):
         )
 
     def test_auth_and_rate_limit_http_codes_are_inconclusive(self):
+    def test_batch_safety_stop_prevents_mass_false_review_when_runner_reaches_nothing(self):
+        results = [{"state": "fail", "reason": "Timeout"} for _ in range(3098)]
+        with self.assertRaisesRegex(SystemExit, "zero media streams"):
+            health.validate_probe_batch(results)
+
+    def test_batch_safety_stop_catches_global_reachability_anomaly(self):
+        results = ([{"state": "fail"}] * 3000) + ([{"state": "ok"}] * 10) + ([{"state": "inconclusive"}] * 88)
+        with self.assertRaisesRegex(SystemExit, "repository-wide reachability anomaly"):
+            health.validate_probe_batch(results)
+
+    def test_batch_guard_allows_normal_mix_of_stream_results(self):
+        results = ([{"state": "ok"}] * 2200) + ([{"state": "fail"}] * 700) + ([{"state": "inconclusive"}] * 198)
+        health.validate_probe_batch(results)
+
         for status in (401, 403, 407, 429, 451):
             self.assertEqual(health.http_state(status), "inconclusive")
         self.assertEqual(health.http_state(404), "fail")
