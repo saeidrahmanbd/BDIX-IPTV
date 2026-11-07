@@ -1,0 +1,43 @@
+name: Discovery Schedule Watchdog
+# GitHub's schedule trigger is best-effort, especially at minute 00.
+# Keep 07:00 BDT as the primary trigger; these off-hour retries only dispatch
+# an official discovery workflow when no run of that workflow exists today.
+on:
+  schedule:
+    - cron: '5 1 * * *'   # 07:05 Asia/Dhaka
+    - cron: '15 1 * * *'  # 07:15 Asia/Dhaka
+    - cron: '30 1 * * *'  # 07:30 Asia/Dhaka
+    - cron: '45 1 * * *'  # 07:45 Asia/Dhaka
+    - cron: '0 2 * * *'   # 08:00 Asia/Dhaka
+    - cron: '15 2 * * *'  # 08:15 Asia/Dhaka
+
+permissions:
+  actions: write
+  contents: read
+
+# Serialize watchdog checks so two fallback ticks cannot dispatch the same
+# missing workflow at the same time. The official workflows have their own
+# per-day first-run guard as a second layer of duplicate protection.
+concurrency:
+  group: discovery-schedule-watchdog
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  recover_missing_discovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.12'
+      - name: Dispatch only workflows with no run for today's Bangladesh date
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/discovery_schedule_guard.py watchdog \
+            new-channel-discovery.yml \
+            international-channel-discovery.yml

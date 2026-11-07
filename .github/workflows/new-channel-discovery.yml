@@ -13,6 +13,8 @@ on:
       - 'scripts/discover_bd_in_new_queues.py'
       - 'scripts/run_bd_discovery_with_policy.py'
       - 'scripts/validate_discovery_run.py'
+      - 'scripts/discovery_schedule_guard.py'
+      - 'tests/test_discovery_schedule_guard.py'
       - 'scripts/final_playlist_hardening.py'
       - 'tests/test_final_playlist_hardening.py'
       - 'tests/test_channel_discovery_policy.py'
@@ -22,6 +24,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: write
 
 # Same group as IPTV Playlist Update (maintenance): only one main-branch writer at a time.
@@ -32,7 +35,30 @@ concurrency:
   queue: max
 
 jobs:
+  daily_guard:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    outputs:
+      should_run: ${{ steps.guard.outputs.should_run }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.12'
+      - name: Enforce one discovery run per Bangladesh calendar date
+        id: guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_WORKFLOW_FILE: new-channel-discovery.yml
+        run: python scripts/discovery_schedule_guard.py guard "$GH_WORKFLOW_FILE"
+
   discover:
+    needs: daily_guard
+    if: needs.daily_guard.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
