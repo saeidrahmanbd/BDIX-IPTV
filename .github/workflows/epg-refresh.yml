@@ -65,7 +65,7 @@ jobs:
           git fetch origin main
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
           if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
-            CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)$' || true)"
+            CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/(epg_[A-Za-z0-9_]+|official_epg_sources|generate_epg|run_generate_epg|fetch_iptv_org_epg|augment_epg_mapping_from_additional_sources|augment_epg_mapping_from_iptv_org|update_epg_published_coverage|validate_epg_freshness|validate_report_freshness|check_epg_config|check_epg_source_rights|generate_dashboard)\.py|tests/(test_epg_[A-Za-z0-9_]+|test_iptv_org_epg_targeting|test_language_policy|test_report_freshness|test_dashboard_freshness)\.py|docs/requirements\.txt)$' || true)"
             if [[ -n "$CHANGED_INPUTS" ]]; then
               echo "::notice::Skipping superseded EPG refresh because newer commits changed EPG inputs or code."
               printf '%s\n' "$CHANGED_INPUTS"
@@ -217,7 +217,7 @@ jobs:
             git fetch origin main
             CURRENT_MAIN_SHA="$(git rev-parse origin/main)"
             if [[ "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
-              CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)$' || true)"
+              CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/(epg_[A-Za-z0-9_]+|official_epg_sources|generate_epg|run_generate_epg|fetch_iptv_org_epg|augment_epg_mapping_from_additional_sources|augment_epg_mapping_from_iptv_org|update_epg_published_coverage|validate_epg_freshness|validate_report_freshness|check_epg_config|check_epg_source_rights|generate_dashboard)\.py|tests/(test_epg_[A-Za-z0-9_]+|test_iptv_org_epg_targeting|test_language_policy|test_report_freshness|test_dashboard_freshness)\.py|docs/requirements\.txt)$' || true)"
               if [[ -n "$CHANGED_INPUTS" ]]; then
                 echo '::error::EPG input code/config changed while this candidate was being built; refusing to publish stale output. The newest queued refresh must rebuild it.'
                 printf '%s\n' "$CHANGED_INPUTS"
