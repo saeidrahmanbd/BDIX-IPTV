@@ -9,7 +9,7 @@ import unicodedata
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-PRIMARY_EXCLUDED = {"Backup", "Not Playing"}
+PRIMARY_EXCLUDED = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}
 
 COLLISION_IDS = {
     "action hollywood movies": "plex.tv.action.hollywood.movies.plex",
@@ -120,7 +120,7 @@ def repair():
     # Keep Channel S and Channel S UK as different identities. Channel S UK is
     # now canonicalized as ChannelS.uk@679aa9; never recreate a custom.* ID.
     # Only primary Channel S UK records belong in Bangladesh. Alternate
-    # streams already in Backup/Not Playing stay there and never receive a
+    # streams already in Backup/Review stay there and never receive a
     # primary channel number simply because their display name matches.
     for idx, line in entries(lines):
         if canonical_name(display_name(line)) != "channel s uk":
