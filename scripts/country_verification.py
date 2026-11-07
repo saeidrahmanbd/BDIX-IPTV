@@ -30,7 +30,10 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-REVIEW_QUEUES = frozenset({"New Channels", "New Backups", "New Backup"})  # accept legacy singular rows for validation
+# Only these two queues require BD/IN candidate verification. Review is a general
+# quarantine queue and may legitimately contain channels from any country.
+REVIEW_QUEUES = frozenset({"New Channels", "New Backups", "New Backup"})
+NON_PRIMARY_GROUPS = frozenset({"Backup", "Review", "Not Playing", *REVIEW_QUEUES})
 ALLOWED = frozenset({"BD", "IN"})
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -93,8 +96,8 @@ class Reference:
 
     def add(self, a: dict[str, str], name: str) -> None:
         group = a.get("group-title", "").strip()
-        if group in REVIEW_QUEUES:
-            return  # unverified queue rows are never evidence for other rows
+        if group in NON_PRIMARY_GROUPS:
+            return  # backups and review queues are never identity evidence
         key = norm_name(name or a.get("tvg-name", ""))
         if not key:
             return
