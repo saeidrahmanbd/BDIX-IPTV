@@ -30,31 +30,43 @@ LEGACY_GROUPS = {"Not Playing": "Review"}
 
 # Orphan candidates verified against channel identity, genre and current stream-health evidence.
 # Only BD/IN-eligible, non-restricted candidates are promoted to active groups.
-# Indian news, kids and religious services, ambiguous identities, and persistent failures stay in Review.
+# User-directed overrides: kids are assigned to Kids; specified non-kids are removed.
 MIGRATION_GROUP_BY_ID = {
-    "channelwin.in@sd": "Review",
-    "darshanatv.in@sd": "Review",
-    "greengoldtv.in@india": "Review",
+    "channelwin.in@sd": "REMOVE",
+    "darshanatv.in@sd": "REMOVE",
+    "greengoldtv.in@india": "Kids",
     "gtcpunjabi.in@uk": "Indian Entertainment",
-    "hungama.in@sd": "Review",
-    "thejunglebook.in": "Review",
-    "mbctv.in@sd": "Review",
+    "hungama.in@sd": "Kids",
+    "thejunglebook.in": "Kids",
+    "mbctv.in@sd": "REMOVE",
     "mhone.in@sd": "Indian Music",
-    # Both feeds have failed 34 consecutive checks; retain them outside Xtream.
-    "mhonedilse.in@sd": "Review",
-    "mhonemovies.in": "Review",
+    "mhonedilse.in@sd": "REMOVE",
+    "mhonemovies.in": "REMOVE",
     "mh1music.in@sd": "Indian Music",
-    "mh1prime.in": "Review",
+    "mh1prime.in": "REMOVE",
     "ntv.in": "Indian Entertainment",
-    "pogo.in@sd": "Review",
+    "pogo.in@sd": "Kids",
     "qtv.in": "Indian Entertainment",
-    "totaltvharyana.in@sd": "Review",
-    "tv9bangla.in": "Review",
-    "wowkidz.in@hindi": "Review",
-    "wowkidztamil.in": "Review",
-    "wowkidz.in@telugu": "Review",
-    "zbcartoon.in": "Review",
+    "totaltvharyana.in@sd": "REMOVE",
+    "tv9bangla.in": "REMOVE",
+    "wowkidz.in@hindi": "Kids",
+    "wowkidztamil.in": "Kids",
+    "wowkidz.in@telugu": "Kids",
+    "zbcartoon.in": "Kids",
 }
+# These identities were explicitly removed at the user's direction.
+# Do not let playlist maintenance or discovery reintroduce them.
+REMOVE_CHANNEL_IDS = frozenset({
+    "channelwin.in@sd", "darshanatv.in@sd", "mbctv.in@sd",
+    "mhonedilse.in@sd", "mhonemovies.in", "mh1prime.in",
+    "totaltvharyana.in@sd", "tv9bangla.in",
+})
+KIDS_CHANNEL_IDS = frozenset({
+    "greengoldtv.in@india", "hungama.in@sd", "thejunglebook.in",
+    "pogo.in@sd", "wowkidz.in@hindi", "wowkidztamil.in",
+    "wowkidz.in@telugu", "zbcartoon.in",
+})
+
 
 
 def attrs(info: str) -> dict[str, str]:
@@ -163,6 +175,8 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
     stats: dict[str, object] = {
         "entries": len(records),
         "legacy_review_renamed": 0,
+        "kids_promoted_from_review": 0,
+        "non_kids_review_removed": 0,
         "unknown_groups_quarantined": 0,
         "duplicate_primary_demoted": 0,
         "orphan_backups_quarantined": 0,
@@ -176,6 +190,22 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
     }
     errors: list[str] = []
     seen_urls: set[str] = set()
+
+    # Apply the user's explicit Review decision before duplicate and metadata
+    # validation: eligible kids go to Kids; all listed non-kids are removed.
+    retained_records: list[list[str]] = []
+    for record in records:
+        info = record[0]
+        ids = identity_ids(info)
+        if ids & REMOVE_CHANNEL_IDS:
+            stats["non_kids_review_removed"] += 1
+            continue
+        group = attrs(info).get("group-title", "").strip()
+        if ids & KIDS_CHANNEL_IDS and group in REVIEW_GROUPS:
+            record[0] = set_group(info, "Kids")
+            stats["kids_promoted_from_review"] += 1
+        retained_records.append(record)
+    records = retained_records
 
     for index, record in enumerate(records):
         info = record[0]
@@ -428,6 +458,8 @@ def write_report(stats: dict[str, object], errors: list[str]) -> None:
         f"- Backup rows linked to an existing primary by unique exact name: **{stats.get('name_matched_backups_linked', 0)}**",
         f"- Restricted Indian news/kids/religious rows retained in Review: **{stats.get('restricted_backups_reviewed', 0)}**",
         f"- Legacy Not Playing groups renamed to Review: **{stats.get('legacy_review_renamed', 0)}**",
+        f"- Kids entries moved from Review to Kids: **{stats.get('kids_promoted_from_review', 0)}**",
+        f"- Explicitly removed non-kids Review entries: **{stats.get('non_kids_review_removed', 0)}**",
         f"- Backup metadata records reconciled from exact primary IDs: **{stats.get('backup_metadata_reconciled', 0)}**",
         f"- Missing language values set to und (undetermined): **{len(stats.get('undetermined_languages', []))}**",
         "",
