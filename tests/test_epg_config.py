@@ -673,6 +673,18 @@ class EpgConfigTests(unittest.TestCase):
             if re.search(r"\.bd(@|$)", key):
                 self.assertTrue(all(i.endswith(".bd") or i == key for i in ids), key)
 
+    def test_all_alias_and_lock_keys_exist_in_current_playlists(self):
+        playlist_ids = set()
+        for path in (ROOT / "IPTV-Playlist.m3u", ROOT / "International-Playlist.m3u"):
+            playlist_ids.update(re.findall(r'tvg-id="([^"]+)"', path.read_text(encoding="utf-8-sig")))
+        for name in ("EPG_ALIASES", "EPG_LOCKS"):
+            mapping = literal(COV, name)
+            self.assertEqual(
+                sorted(set(mapping) - playlist_ids),
+                [],
+                f"{name} contains keys absent from both maintained playlists",
+            )
+
     def test_alias_ids_exist_in_playlist(self):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
         for tid in ("Hungama.in@SD", "ZBMusic.in@HD"):
