@@ -11,14 +11,14 @@ import final_playlist_hardening as hardening
 
 
 class FinalPlaylistHardeningTests(unittest.TestCase):
-    def test_canonical_channel_s_uk_archive_in_not_playing_is_preserved(self):
+    def test_canonical_channel_s_uk_archive_is_preserved_in_review(self):
         rows = [
             "#EXTM3U",
             '#EXTINF:-1 tvg-id="ChannelS.uk@679aa9" tvg-name="Channel S UK" tvg-chno="21" channel-id="ChannelS.uk@679aa9" group-title="Bangladesh",Channel S UK',
             "https://example.invalid/channel-s-main.m3u8",
             '#EXTINF:-1 tvg-id="ChannelS.uk@679aa9" tvg-name="Channel S UK" channel-id="ChannelS.uk@679aa9" group-title="Backup",Channel S UK',
             "https://example.invalid/channel-s-backup.m3u8",
-            '#EXTINF:-1 tvg-id="ChannelS.uk@679aa9" tvg-name="Channel S UK" channel-id="ChannelS.uk@679aa9" group-title="Not Playing",Channel S UK',
+            '#EXTINF:-1 tvg-id="ChannelS.uk@679aa9" tvg-name="Channel S UK" channel-id="ChannelS.uk@679aa9" group-title="Review",Channel S UK',
             "https://example.invalid/channel-s-archive.m3u8",
         ]
         with tempfile.TemporaryDirectory() as tmp:
@@ -28,11 +28,12 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
             result = path.read_text(encoding="utf-8")
         self.assertIn('group-title="Bangladesh",Channel S UK', result)
         self.assertIn('group-title="Backup",Channel S UK', result)
-        self.assertIn('group-title="Not Playing",Channel S UK', result)
+        self.assertIn('group-title="Review",Channel S UK', result)
+        self.assertNotIn('group-title="Not Playing"', result)
         registry_line = next(line for line in result.splitlines() if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
         registry = json.loads(registry_line.split(":", 1)[1])
         self.assertEqual(registry, hardening.PLAYLIST_ORDERS["IPTV-Playlist.m3u"])
-        self.assertEqual(registry[-3:], ["New Channels", "New Backups", "Backup"])
+        self.assertEqual(registry[-4:], ["Backup", "Review", "New Channels", "New Backups"])
 
     def test_bangladesh_all_genres_are_retained_and_prohibited_indian_categories_are_demoted(self):
         rows = [
