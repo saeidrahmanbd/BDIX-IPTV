@@ -128,7 +128,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 else:
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
             self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
-            self.assertIn("- New Channels/New Backups/Backup ordering: passed", report.read_text(encoding="utf-8"))
+            self.assertIn("- Review/New Channels/New Backups/Backup ordering: passed", report.read_text(encoding="utf-8"))
 
     def test_empty_logo_attribute_is_removed_when_no_authentic_asset_exists(self):
         extinf = '#EXTINF:-1 tvg-name="Definitely Missing Channel" tvg-logo="",Definitely Missing Channel'
