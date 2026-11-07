@@ -698,7 +698,7 @@ class EpgConfigTests(unittest.TestCase):
 
     def test_epg_refresh_serializes_builds_and_keeps_known_good_guide_safe(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
-        self.assertIn("group: iptv-epg-writer-v6", workflow)
+        self.assertIn("group: iptv-playlist-main-writer-v3", workflow)
         self.assertIn("cancel-in-progress: false", workflow)
         self.assertIn("queue: max", workflow)
         self.assertIn("Skip superseded queued EPG refresh", workflow)
@@ -737,7 +737,7 @@ class VerifiedAliasTests(unittest.TestCase):
         self.assertEqual(al["AmarBanglaDigital.in"], ["jtv1962"])
         self.assertNotIn("AamarBangla.in@SD", al)
         self.assertIn("jtv3384", al["EpicBhojpuriDigital.in"])
-        self.assertIn("And.Pictures.HD.in", al["Picture.in"])
+        self.assertIn("And.Pictures.HD.in", al["AndPictures.in@SD"])
         self.assertEqual(al["custom.nick-jr-east"], ["Nick.Jr.HD.us2"])
         self.assertEqual(al["DeluxeRap.de"], ["DeluxeRap.de@SD"])
         self.assertEqual(al["DeejayTV.it"], ["Deejay.TV.it", "DeejayTV.it@SD"])
@@ -760,7 +760,7 @@ class VerifiedAliasTests(unittest.TestCase):
 
     def test_new_alias_ids_exist_in_playlist(self):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
-        for tid in ("AmarBanglaDigital.in", "EpicBhojpuriDigital.in", "Picture.in"):
+        for tid in ("AmarBanglaDigital.in", "EpicBhojpuriDigital.in", "AndPictures.in@SD"):
             self.assertIn(f'tvg-id="{tid}"', pl)
 
 
