@@ -1,5 +1,5 @@
 # IPTV Playlist Audit
-Generated: **2026-11-07T03:54:11.334388+00:00**
+Generated: **2026-11-07T03:56:43.868237+00:00**
 Source playlist SHA-256: **b95fe4f2b49f5681cd74d8b38165f16c748156de54b083c92d5d53e581752040**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
@@ -19,7 +19,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **1**
-- Missing logos in discovery queues (review only): **0**
+- Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
 - Logo references checked: **1007**
 - Duplicate primary identities: **0**
@@ -842,7 +842,7 @@ Category block order: OK.
 - **Bangladesh** — **41 — Maasranga TV** appears after **65 — Jonmobhumi TV**
 - **Indian Entertainment** — **4 SiDES TV** appears after **&TV**
 - **International** — **4ever Cinema** appears after **30A Music**
-Backup/Not Playing/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
+Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
 ## Suspicious URLs
 
