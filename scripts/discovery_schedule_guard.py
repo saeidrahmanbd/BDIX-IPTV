@@ -57,12 +57,26 @@ def runs_for_date(runs: list[dict[str, Any]], target_date: date) -> list[dict[st
     ]
 
 
+def run_blocks_retry(run: dict[str, Any]) -> bool:
+    """Only an active run or a successful terminal run owns today's execution.
+
+    Failed, cancelled, timed-out and action-required runs must not suppress the
+    watchdog's recovery dispatch or permanently block a later retry.
+    """
+    status = str(run.get("status") or "").casefold()
+    conclusion = str(run.get("conclusion") or "").casefold()
+    if status != "completed":
+        return True
+    return conclusion in {"success", "neutral", "skipped"}
+
+
 def first_run_id(runs: list[dict[str, Any]]) -> int | None:
-    """Return the earliest run ID for the date, with ID as a deterministic tie-break."""
-    if not runs:
+    """Return the earliest active/successful run, ignoring failed terminal attempts."""
+    eligible = [run for run in runs if run_blocks_retry(run)]
+    if not eligible:
         return None
     ordered = sorted(
-        runs,
+        eligible,
         key=lambda run: (parse_github_timestamp(run["created_at"]), int(run["id"])),
     )
     return int(ordered[0]["id"])
@@ -192,17 +206,23 @@ def watchdog(workflow_files: list[str]) -> int:
     for workflow_file in workflow_files:
         runs = client.workflow_runs(workflow_file)
         todays = runs_for_date(runs, target_date)
-        if todays:
-            first_id = first_run_id(todays)
-            newest = max(todays, key=lambda run: parse_github_timestamp(run["created_at"]))
+        blocking = [run for run in todays if run_blocks_retry(run)]
+        if blocking:
+            owner_id = first_run_id(blocking)
+            newest = max(blocking, key=lambda run: parse_github_timestamp(run["created_at"]))
             print(
                 f"No dispatch needed for {workflow_file}: "
-                f"{len(todays)} run(s) exist for {target_date}; "
-                f"earliest={first_id}, latest={newest['id']} "
+                f"{len(blocking)} active/successful run(s) exist for {target_date}; "
+                f"owner={owner_id}, latest={newest['id']} "
                 f"event={newest.get('event')} status={newest.get('status')} "
                 f"conclusion={newest.get('conclusion')}."
             )
             continue
+        if todays:
+            print(
+                f"Retrying {workflow_file}: today's prior attempts all ended unsuccessfully "
+                f"({len(todays)} run(s)); dispatching recovery run."
+            )
         print(
             f"No {workflow_file} run exists for Bangladesh date {target_date}; "
             f"dispatching the repository's official workflow on {DEFAULT_BRANCH}."
