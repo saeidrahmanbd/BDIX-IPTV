@@ -21,11 +21,11 @@ class XtreamWorkerPolicyTests(unittest.TestCase):
                 match = re.search(r'const INACTIVE\s*=\s*new Set\(\[([^\]]+)\]\)', source)
                 self.assertIsNotNone(match, "worker must declare inactive/review-only groups")
                 groups = set(re.findall(r'"([^"]+)"', match.group(1)))
-                self.assertTrue({"Test", "Not Playing", "New Backups", "New Channels"} <= groups)
+                self.assertTrue({"Test", "Review", "Not Playing", "New Backups", "New Channels"} <= groups)
                 self.assertRegex(source, r"if\(!INACTIVE\.has\((?:cur|current)\.group\)\)")
 
         workflow = (ROOT / ".github/workflows/check-xtream.yml").read_text(encoding="utf-8")
-        self.assertIn('inactive = {"Test", "Not Playing", "New Backups", "New Channels"}', workflow)
+        self.assertIn('inactive = {"Test", "Review", "Not Playing", "New Backups", "New Channels"}', workflow)
 
     def test_both_workers_support_cors_preflight_and_comparison_helper(self):
         for name in ("xtream-main",):
