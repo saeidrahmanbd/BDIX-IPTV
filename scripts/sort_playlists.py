@@ -81,6 +81,11 @@ def sort_playlist(path):
         if path.name=="IPTV-Playlist.m3u":
             if group in NON_NUMBERED:record[0]=remove_attr(record[0],"tvg-chno")
             else:record[0]=set_attr(record[0],"tvg-chno",str(next_number)); next_number+=1
+    # The player-facing category registry must use the exact same permanent order.
+    registry = '#PLAYLIST-STUDIO-CATEGORIES:[' + ", ".join('"'+name+'"' for name in CATEGORY_ORDER) + ']'
+    preamble = [line for line in preamble if not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
+    insert_at = next((i + 1 for i, line in enumerate(preamble) if line.startswith("#EXTM3U")), 0)
+    preamble.insert(insert_at, registry)
     path.write_text("\n".join(preamble+[line for record in records for line in record])+"\n",encoding="utf-8")
 def main(argv=None):
     paths=argv if argv is not None else (sys.argv[1:] or ["IPTV-Playlist.m3u","International-Playlist.m3u"])
