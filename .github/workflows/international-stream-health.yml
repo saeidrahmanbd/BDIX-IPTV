@@ -31,45 +31,52 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Skip superseded queued code revisions
+      - name: Check whether this queued health revision is current
+        id: revision
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
-          check_file() {
-            local path="$1"
-            local event_blob main_blob
+          for path in \
+            ".github/workflows/international-stream-health.yml" \
+            "scripts/international_stream_health.py" \
+            "scripts/validate_international_health_output.py" \
+            "tests/test_international_stream_health.py"; do
             event_blob="$(git rev-parse "${GITHUB_SHA}:${path}")"
             main_blob="$(git rev-parse "FETCH_HEAD:${path}")"
             if [[ "$event_blob" != "$main_blob" ]]; then
-              echo "::notice::Skipping superseded queued health run because ${path} changed on main."
+              echo "current=false" >> "$GITHUB_OUTPUT"
+              echo "::notice::Skipping superseded queued health revision; ${path} changed on main."
               exit 0
             fi
-          }
-          check_file ".github/workflows/international-stream-health.yml"
-          check_file "scripts/international_stream_health.py"
-          check_file "scripts/validate_international_health_output.py"
-          check_file "tests/test_international_stream_health.py"
+          done
+          echo "current=true" >> "$GITHUB_OUTPUT"
           git reset --hard origin/main
           git clean -fd
+        if: steps.revision.outputs.current == 'true'
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.12'
+        if: steps.revision.outputs.current == 'true'
       - name: Compile checker and run policy tests
         run: |
           python -m py_compile scripts/international_stream_health.py scripts/reorganize_international_playlist.py scripts/discover_international_channels.py scripts/validate_international_health_output.py
           python -m unittest discover -s tests -p 'test_international_stream_health.py'
           python -m unittest discover -s tests -p 'test_international_protected_guard.py'
           python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
+        if: steps.revision.outputs.current == 'true'
       - name: Probe all International streams and apply three-day policy
         run: python scripts/international_stream_health.py
+        if: steps.revision.outputs.current == 'true'
       - name: Validate playlist structure, metadata preservation and group ordering
         run: python scripts/validate_international_health_output.py
+        if: steps.revision.outputs.current == 'true'
       - name: Validate reports and whitespace
         run: |
           git diff --check
           test -s reports/international-stream-health.md
           test -s reports/international-stream-health-history.json
+        if: steps.revision.outputs.current == 'true'
       - name: Commit health results
         shell: bash
         run: |
@@ -96,7 +103,7 @@ jobs:
           echo "::error::Could not publish International stream-health results."
           exit 1
       - name: Upload health report
-        if: always()
+        if: always() && steps.revision.outputs.current == 'true'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: international-stream-health
