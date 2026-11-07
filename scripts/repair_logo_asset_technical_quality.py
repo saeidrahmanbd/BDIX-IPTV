@@ -39,7 +39,7 @@ def attrs(line):
 def playlist_logo_refs():
     refs = defaultdict(set)
     active = defaultdict(set)
-    review_groups = {"backup", "not playing", "not playing...", "not playing…"}
+    review_groups = {"backup", "review", "not playing", "not playing...", "not playing…", "new channels", "new backups", "new backup"}
     for playlist in PLAYLISTS:
         path = Path(playlist)
         if not path.is_file():
