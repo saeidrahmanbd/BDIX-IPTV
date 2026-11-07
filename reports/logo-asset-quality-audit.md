@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-07T05:10:53+00:00**
+Generated: **2026-11-07T05:13:36+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -16,7 +16,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
-- Exact-byte duplicate asset clusters: **695**
+- Exact-byte duplicate asset clusters: **694**
 - Playlist references whose asset stem differs from the normalized channel name: **1405**
 - Unreferenced files immediately inside logos/: **1359** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
@@ -811,7 +811,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/rs-bharat-576p.png, logos/rs-bharat.png
 - logos/rupashi-bangla-tv-720p.png, logos/rupashi-bangla-tv.png
 - logos/rupasi-bangla-576p-e677fd1858.png, logos/unused/rupasi-bangla-576p-e677fd1858.png
-- logos/sangeet-bangla.png, logos/unused/sangeet-bangla-576p-695b56b52a.png
 - logos/shanson-tv.png, logos/unused/shanson-tv.png
 - logos/shemaroo-josh.png, logos/unused/shemaroo-josh-360p-28e43c141a.png
 - logos/shemaroo-umang-720p.png, logos/shemaroo-umang.png
