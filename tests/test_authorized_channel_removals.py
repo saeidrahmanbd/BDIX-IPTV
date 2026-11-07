@@ -477,7 +477,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertEqual(final.count(migrated_url), 1)
             self.assertEqual(final.count(safe_url), 1)
             self.assertIn('tvg-name="Channel 52" group-title="Bangladesh"', final)
-            self.assertIn('tvg-name="Keep Reviewing" group-title="Not Playing"', final)
+            self.assertIn('tvg-name="Keep Reviewing" group-title="Review"', final)
             self.assertEqual(final.count('tvg-name="Channel 52"'), 1)
 
 
