@@ -56,8 +56,8 @@ PERMANENTLY_REMOVED_NAMES = {
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
-    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Review",
-    "New Channels", "New Backups",
+    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Review",
+    "New Channels", "New Backups", "Backup",
 ]
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
