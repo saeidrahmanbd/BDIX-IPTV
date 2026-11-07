@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-07T04:46:44+00:00**
+Generated: **2026-11-07T04:54:58+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **bca056bd163da5534c5919402db1640ccfae58240476c255e4cf422c46701346**
+- IPTV-Playlist.m3u SHA-256: **6e44e22bfc055b60ad16371a15e76724955d2779304f30257697067d7c545b46**
 - International-Playlist.m3u SHA-256: **b85e17864c09029a1130b5d4bb0c56b20a3020e26ba774e37fff241018c0052f**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **695**
-- Playlist references whose asset stem differs from the normalized channel name: **1414**
+- Playlist references whose asset stem differs from the normalized channel name: **1406**
 - Unreferenced files immediately inside logos/: **1359** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
@@ -1100,12 +1100,14 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Cartoon Network | cartoon-network-hd.png | Kids |
 | IPTV-Playlist.m3u | Doraemon TV | doraemon-tv.png | Kids |
 | IPTV-Playlist.m3u | Duck TV | duck-tv.png | Kids |
+| IPTV-Playlist.m3u | Green Gold TV | green-gold-tv.png | Kids |
 | IPTV-Playlist.m3u | Kartoon Channel! | kartoon-channel.png | Kids |
 | IPTV-Playlist.m3u | Lego Channel | lego-channel-1080p.png | Kids |
 | IPTV-Playlist.m3u | Powerkids Kartoon Channel | powerkids-kartoon-channel.png | Kids |
 | IPTV-Playlist.m3u | Smurf TV | smurf-tv.png | Kids |
 | IPTV-Playlist.m3u | Sonic The Hedgehog | sonic.png | Kids |
 | IPTV-Playlist.m3u | Tom and Jerry | repaired-tom-and-jerry-b0ff227b3a.png | Kids |
+| IPTV-Playlist.m3u | WOW Kidz Hindi | wow-kidz.png | Kids |
 | IPTV-Playlist.m3u | Zoo Moo | zoomoo.png | Kids |
 | IPTV-Playlist.m3u | Al Quran Al Kareem TV | al-quran-al-kareem-tv.png | Religious |
 | IPTV-Playlist.m3u | Al-Zahra TV Turkic | al-zahra-tv-turkic.png | Religious |
@@ -1160,6 +1162,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Backup |
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Backup |
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Backup |
+| IPTV-Playlist.m3u | Channel 16 | channel-16.png | Backup |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Backup |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Backup |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Backup |
@@ -1267,17 +1270,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
-| IPTV-Playlist.m3u | Channel WIN | channel-win.png | Review |
-| IPTV-Playlist.m3u | Darshana TV | darshana-tv.png | Review |
-| IPTV-Playlist.m3u | Darshana TV | darshana-tv.png | Review |
-| IPTV-Playlist.m3u | Green Gold TV | green-gold-tv.png | Review |
-| IPTV-Playlist.m3u | MBC TV | mbc-tv.png | Review |
-| IPTV-Playlist.m3u | MH One Prime | mh1-prime.png | Review |
-| IPTV-Playlist.m3u | MH One Prime | mh1-prime.png | Review |
-| IPTV-Playlist.m3u | Total TV Haryana | total-tv-haryana.png | Review |
-| IPTV-Playlist.m3u | TV9 Bangla | tv-9-bangla.png | Review |
-| IPTV-Playlist.m3u | TV9 Bangla | tv-9-bangla.png | Review |
-| IPTV-Playlist.m3u | WOW Kidz Hindi | wow-kidz.png | Review |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Bangladesh |
 | International-Playlist.m3u | Asian TV | asian-tv.png | Bangladesh |
 | International-Playlist.m3u | Ayna TV | ayna-tv.png | Bangladesh |

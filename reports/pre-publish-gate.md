@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-07T04:46:45+00:00**
-Source playlist SHA-256: **bca056bd163da5534c5919402db1640ccfae58240476c255e4cf422c46701346**
+Generated: **2026-11-07T04:54:59+00:00**
+Source playlist SHA-256: **6e44e22bfc055b60ad16371a15e76724955d2779304f30257697067d7c545b46**
 
 Status: **PASS**
 
-- Current entries: **1010**
+- Current entries: **1002**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
