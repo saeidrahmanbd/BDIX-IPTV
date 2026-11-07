@@ -114,7 +114,7 @@ def main():
         if a.get("tvg-id","").strip() and a.get("channel-id","").strip() and a["tvg-id"].strip().casefold()!=a["channel-id"].strip().casefold():
             id_pair_conflicts.append(a.get("tvg-name",""))
         if not a.get("tvg-language","").strip(): missing_languages.append(a.get("tvg-name",""))
-        if group not in EXCLUDE:
+        if group not in {"Review","Not Playing","New Channels","New Backups"}:
             missing_fields=[key for key in ("tvg-name","tvg-id","channel-id","tvg-country","tvg-logo") if not a.get(key,"").strip()]
             if missing_fields: incomplete_metadata.append((a.get("tvg-name",""),missing_fields))
     missing=[a.get("tvg-name","") for a,_ in cur_primary if not a.get("tvg-chno","").strip()]
