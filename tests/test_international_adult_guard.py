@@ -76,10 +76,8 @@ https://review.example/live.m3u8
                 ]) + "\n",
                 encoding="utf-8",
             )
-            with patch.object(reorg, "PLAYLIST", playlist), patch.object(reorg, "LOGOS", logos), patch("os.chdir", lambda path: None):
-                # reorg writes its report relative to the process directory; redirect its report path.
-                with patch.object(reorg.Path, "mkdir", autospec=True):
-                    reorg.main()
+            with patch.object(reorg, "PLAYLIST", playlist), patch.object(reorg, "LOGOS", logos), patch.chdir(root):
+                reorg.main()
             _, records = reorg.parse_playlist(playlist.read_text(encoding="utf-8"))
             adult_after = [record for record in records if reorg.attrs(reorg.split_info(record[0])[0]).get("group-title") == "Adult"]
             self.assertEqual(adult_after, [adult_block])
