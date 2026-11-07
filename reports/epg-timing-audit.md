@@ -5,6 +5,7 @@ Automatic corrections require repeated cross-source title and duration matches, 
 ## Detected corrections
 
 - **Alankar TV** (AlankarTV.in@SD): source ID Alankar.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
+- **Balle Balle** (BalleBalle.in@SD): source ID BalleBalle.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **CNN** (CNN.us): source ID CNN.ro from https://iptv-epg.org/files/epg-ro.xml.gz shifted by +48 hours after repeated cross-source agreement.
 - **DD Girnar** (DDGirnar.in@SD): source ID DDGirnar.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Goa** (DDGoa.in@SD): source ID DDGOA.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
@@ -37,6 +38,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 
 ## Feed-wide offset patterns
 
-- **https://www.open-epg.com/files/india.xml.gz**: 24 channels were corrected by the same -5.5 hours. This looks like a feed-wide timezone problem; other channels from this feed without cross-source overlap may still be shifted and should be reviewed.
+- **https://www.open-epg.com/files/india.xml.gz**: 25 channels were corrected by the same -5.5 hours. This looks like a feed-wide timezone problem; other channels from this feed without cross-source overlap may still be shifted and should be reviewed.
 
-Detected source-ID corrections: **30**
+Detected source-ID corrections: **31**
