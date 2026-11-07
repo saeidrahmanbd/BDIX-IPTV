@@ -1,16 +1,12 @@
 name: International Stream Health
 # Daily playback validation and three-consecutive-day retirement for the International playlist.
 on:
-  push:
+  # Run only after the scheduled IPTV maintenance completes successfully.
+  # The maintenance workflow owns the daily schedule (02:17 UTC / 08:17 Asia/Dhaka).
+  workflow_run:
+    workflows: ["IPTV Playlist Update"]
+    types: [completed]
     branches: [main]
-    paths:
-      - '.github/workflows/international-stream-health.yml'
-      - '.github/workflows/changelog.yml'
-      - 'scripts/international_stream_health.py'
-      - 'scripts/validate_international_health_output.py'
-      - 'tests/test_international_stream_health.py'
-  schedule:
-    - cron: '30 4 * * *' # 10:30 Asia/Dhaka; discovery remains scheduled separately at 07:00.
   workflow_dispatch:
 
 permissions:
@@ -24,6 +20,11 @@ concurrency:
 
 jobs:
   check:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.event == 'schedule' &&
+       github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
