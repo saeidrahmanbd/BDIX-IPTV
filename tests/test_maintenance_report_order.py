@@ -42,7 +42,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
                 "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
                 "Indian Entertainment", "Pakistani", "International",
                 "Documentary & Wildlife", "Kids", "Religious", "Sports",
-                "Not Playing", "New Channels", "New Backups", "Backup",
+                "Backup", "Review", "New Channels", "New Backups",
             ],
         )
         self.assertIn(
@@ -52,6 +52,9 @@ class MaintenanceReportOrderTests(unittest.TestCase):
 
     def test_review_queue_order_is_not_an_automatic_blocker(self):
         self.assertFalse(should_check_alphabetical_order("Backup"))
+        self.assertFalse(should_check_alphabetical_order("Review"))
+        self.assertFalse(should_check_alphabetical_order("New Channels"))
+        self.assertFalse(should_check_alphabetical_order("New Backups"))
         self.assertFalse(should_check_alphabetical_order("Not Playing"))
         self.assertFalse(should_check_alphabetical_order(" backup "))
         self.assertTrue(should_check_alphabetical_order("Bangladesh"))
@@ -133,6 +136,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         metadata = pos(mutations, "python scripts/iptv_metadata_backfill.py")
         logo_fix = pos(mutations, "python scripts/repair_logo_asset_technical_quality.py --fix")
         backup_languages = pos(mutations, "python scripts/reconcile_backup_metadata_exact_id.py")
+        integrity = pos(mutations, "python scripts/enforce_primary_backup_integrity.py")
         renumber = pos(mutations, "python scripts/renumber_active_channels.py IPTV-Playlist.m3u")
         guard = pos(mutations, "python scripts/maintenance_helpers.py verify-no-unauthorized-removals")
         self.assertLess(normalize, sort)
@@ -148,7 +152,8 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertLess(metadata, cross_final)
         self.assertLess(cross_final, logo_fix)
         self.assertLess(logo_fix, backup_languages)
-        self.assertLess(backup_languages, renumber)
+        self.assertLess(backup_languages, integrity)
+        self.assertLess(integrity, renumber)
         self.assertLess(renumber, guard)
         intl_guard = pos(mutations, "python scripts/verify_international_protected.py verify")
         self.assertLess(guard, intl_guard)
