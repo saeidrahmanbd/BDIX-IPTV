@@ -269,6 +269,20 @@ for line in lines:
             failed += 1
             print(f"Explicit ID logo failed: {title} [{channel_id}]: {exc}")
 
+    if logo and is_local(logo) and Path(urlsplit(logo).path).suffix.lower() == ".svg":
+        # SVG is a supported local logo format. Do not rasterize it just to
+        # satisfy an optional PNG optimization step; preserve the verified
+        # repository asset and avoid fragile Cairo conversion of embedded PNGs.
+        svg_path = LOGOS / Path(urlsplit(logo).path).name
+        if svg_path.is_file():
+            try:
+                svg_text = svg_path.read_text(encoding="utf-8")
+                if "<svg" in svg_text[:2048] and "</svg>" in svg_text[-2048:]:
+                    output.append(line)
+                    continue
+            except (OSError, UnicodeError):
+                pass
+
     if logo and is_local(logo):
         if logo.lower().endswith(".png"):
             filename = logo[len(RAW_BASE):].split("?", 1)[0] if logo.startswith(RAW_BASE) else Path(logo).name
