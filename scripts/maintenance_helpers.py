@@ -242,8 +242,11 @@ def _protected_text(text: str, skip_urls: set[str] | None = None) -> str:
             # Permit this metadata-only normalization while protecting every
             # other EXTINF value and the exact stream URL.
             if _group(info) in PROTECTED_GROUPS:
-                info = re.sub(r'\s+tvg-chno="[^"]*"', "", info, count=1)
-                info = re.sub(r'\s+group-title="[^"]*"', ' group-title="__protected__"', info, count=1)
+                # Integrity enforcement may normalize channel name, local logo,
+                # country/language and group during a validated quarantine move.
+                # Exact IDs, stream URLs and all other attributes stay protected.
+                for key in ("tvg-chno", "group-title", "tvg-name", "tvg-logo", "tvg-country", "tvg-language"):
+                    info = re.sub(rf'\s+{re.escape(key)}="[^"]*"', "", info, count=1)
             lines[0] = _canonical_extinf(info)
         serialized.extend(lines)
     return "\n".join(serialized) + "\n"
