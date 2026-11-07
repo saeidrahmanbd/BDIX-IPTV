@@ -38,6 +38,7 @@ The endpoint streams the published guide and return HTTP 503 if the guide is tem
 
 ## Deployment
 
+The hosted gateway is deployed by [Deploy Xtream Gateway](../.github/workflows/deploy-xtream.yml). Configure the required Cloudflare deployment secrets and variables before running the workflow. The default deployment publishes the main worker only.
 
 For a safe local configuration example, see [`assets/examples/sample-config.md`](../assets/examples/sample-config.md).
 
