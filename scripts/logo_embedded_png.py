@@ -14,7 +14,7 @@ import zlib
 
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 PNG_IEND = b"\x00\x00\x00\x00IEND\xaeB\x60\x82"
-DATA_URI = re.compile(rb'data:image/png;base64,([^"\\s]+)', re.IGNORECASE)
+DATA_URI = re.compile(rb'data:image/png;base64,([^"\s]+)', re.IGNORECASE)
 
 
 def recover_embedded_png_from_svg(svg_bytes: bytes) -> bytes | None:
