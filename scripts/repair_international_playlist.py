@@ -241,12 +241,10 @@ def classify_primary_group(info,current):
   if re.search(music_re,name,re.I):return 'International Music'
   return ''
  kids={'babysharktv','bantulthegreat','cartoonnetwork','discoverykids','discoveryfamily','disneychannel','disneyjr','doraemontv','ducktv','epickidsdigital','kartoonchannel','kiddomatix','legochannel','moonbugkids','mrbeananimated','nickbangla','pogo','pbskids','pop','powerkidskartoonchannel','smurftv','strawberryshortcake','teennick','teletubbies','tinypop','tomandjerry','toonamiaftermatheast','toongoggles','toongogglesjunior','zoomoo','wowkidzhindi','wowkidztoamil','wowkidztoelugu','zbcartoon','tooku'}
- if n in kids or re.search(r'baby shark|cartoon network|discovery kids|disney|doraemon|duck tv|epic kids|kartoon|kiddo matix|lego channel|moonbug|mr bean animated|nick bangla|pogo|pbs kids|powerkids|smurf tv|strawberry shortcake|teen.?nick|teletubbies|tiny pop|tom and jerry|toonami|toongoggles|zoomoo|wow kidz|zb cartoon|tooku',name,re.I):return 'Kids'
  if re.search(r'national geographic|cgtn documentary|smithsonian channel|destination america|american heroes channel|law & crime|motortrend|world fishing network|true crime network|love nature',name,re.I):return 'Documentary & Wildlife'
- if current_key=='international':
+ if current_key=='international' and country not in {'BD','IN'}:
   if re.search(movie_re,name,re.I):return 'International Movies'
   if re.search(music_re,name,re.I):return 'International Music'
-  if re.search(r'sport|esports',name,re.I):return 'Sports'
   return ''
  if current_key=='bangla' or country=='BD':return 'Bangladesh'
  if country=='PK':return 'Pakistani'
