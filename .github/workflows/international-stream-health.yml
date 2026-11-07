@@ -43,7 +43,7 @@ jobs:
         run: |
           set -euo pipefail
           git fetch origin main
-          EVENT_BLOB="$(git rev-parse "\${GITHUB_SHA}:.github/workflows/international-stream-health.yml")"
+          EVENT_BLOB="$(git rev-parse "${GITHUB_SHA}:.github/workflows/international-stream-health.yml")"
           MAIN_BLOB="$(git rev-parse "FETCH_HEAD:.github/workflows/international-stream-health.yml")"
           if [[ "$EVENT_BLOB" != "$MAIN_BLOB" ]]; then
             echo "::notice::Skipping superseded queued stream-health run."
@@ -80,7 +80,7 @@ jobs:
               exit 1
             fi
             if git push origin HEAD:main; then exit 0; fi
-            echo "::warning::Push attempt \${attempt} failed; retrying."
+            echo "::warning::Push attempt ${attempt} failed; retrying."
             sleep 3
           done
           echo "::error::Could not publish International stream-health results."
