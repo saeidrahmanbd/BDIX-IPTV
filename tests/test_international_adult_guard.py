@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+import international_adult_guard as guard
+
+
+class InternationalAdultGuardTests(unittest.TestCase):
+    def test_restore_reinserts_exact_adult_blocks_and_keeps_other_updates(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "International-Playlist.m3u"
+            snapshot = root / "adult.json"
+            original = """#EXTM3U
+#PLAYLIST-STUDIO-CATEGORIES:["Sports", "Adult", "Review", "Backup"]
+#PLAYLIST-STUDIO-NAME:"International Playlist"
+#EXTINF:-1 tvg-id="sports.id" group-title="Sports",Sports Channel
+https://sports.example/live.m3u8
+#EXTINF:-1 tvg-name="VOD Adult Test 1080p" tvg-logo="https://invalid.example/logo.png" group-title="Adult",VOD Adult Test 1080p
+#EXTVLCOPT:http-user-agent=keep-this
+https://adult.example/stream.m3u8
+#EXTINF:-1 tvg-name="Another Adult Service" group-title="Adult",Another Adult Service
+https://adult.example/second.m3u8
+#EXTINF:-1 tvg-id="review.id" group-title="Review",Review Channel
+https://review.example/live.m3u8
+"""
+            playlist.write_text(original, encoding="utf-8")
+            guard.snapshot(playlist, snapshot)
+
+            mutated = original.replace('group-title="Adult"', 'group-title="Backup"', 1)
+            mutated = mutated.replace(
+                '#EXTINF:-1 tvg-name="Another Adult Service" group-title="Adult",Another Adult Service\nhttps://adult.example/second.m3u8\n',
+                "",
+            )
+            mutated = mutated.replace(
+                "https://sports.example/live.m3u8",
+                "https://sports.example/updated.m3u8",
+            )
+            playlist.write_text(mutated, encoding="utf-8")
+            guard.restore(playlist, snapshot)
+
+            _, before_blocks = guard.parse_playlist(original)
+            _, after_blocks = guard.parse_playlist(playlist.read_text(encoding="utf-8"))
+            before_adult = [block for block in before_blocks if guard.group_of(block) == "Adult"]
+            after_adult = [block for block in after_blocks if guard.group_of(block) == "Adult"]
+            self.assertEqual(after_adult, before_adult)
+            final_text = playlist.read_text(encoding="utf-8")
+            self.assertIn("https://sports.example/updated.m3u8", final_text)
+            groups = [guard.group_of(block) for block in after_blocks]
+            self.assertEqual(groups.index("Adult") + 2, groups.index("Review"))
+            self.assertIn('"Adult"', final_text.splitlines()[1])
+
+
+if __name__ == "__main__":
+    unittest.main()
