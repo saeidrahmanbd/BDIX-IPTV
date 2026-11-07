@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/international-stream-health.yml'
+      - '.github/workflows/changelog.yml'
       - 'scripts/international_stream_health.py'
       - 'tests/test_international_stream_health.py'
   schedule:

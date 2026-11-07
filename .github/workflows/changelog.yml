@@ -14,6 +14,7 @@ permissions:
 concurrency:
   group: iptv-playlist-main-writer-v3
   cancel-in-progress: false
+  queue: max
 
 jobs:
   changelog:
