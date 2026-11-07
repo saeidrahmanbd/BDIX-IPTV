@@ -97,6 +97,8 @@ def channel_key(name):
         "disneychannelin": "disneychannelin",
         "animalplanet": "animalplanet",
         "animalplanetindia": "animalplanet",
+        # TLC India is a regional stream/variant of the TLC primary channel.
+        "tlcindia": "tlc",
     }
     return aliases.get(key, key)
 
