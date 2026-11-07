@@ -84,7 +84,7 @@ def main():
     quarantined=[]; removed=[]; approved_removed=[]
     for info,a,u in old_primary:
         groups=cur_all_groups.get(u.lower(),set())
-        if groups & {"Backup","Review","New Channels","New Backups"}: quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup","New Channels","New Backups"}))))
+        if groups & {"Backup","Review","New Channels","New Backups"}: quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup","Review","New Channels","New Backups"}))))
         elif not groups: (approved_removed if (approved_removal(u) or is_authorized_removal(info,u)) else removed).append((a.get("tvg-name",""),u))
     old_review=review_state(old); cur_review=review_state(current); current_by_url={u.lower():(a,u) for _,a,u in current}
     review_reclassified=[]; review_promoted=[]; authorized_promoted=[]; review_removed=[]
