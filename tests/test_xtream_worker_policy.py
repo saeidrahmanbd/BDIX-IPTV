@@ -21,7 +21,7 @@ class XtreamWorkerPolicyTests(unittest.TestCase):
                 match = re.search(r'const INACTIVE\s*=\s*new Set\(\[([^\]]+)\]\)', source)
                 self.assertIsNotNone(match, "worker must declare inactive/review-only groups")
                 groups = set(re.findall(r'"([^"]+)"', match.group(1)))
-                self.assertTrue({"Test", "Not Playing", "New Backup", "New Channels"} <= groups)
+                self.assertTrue({"Test", "Not Playing", "New Backups", "New Channels"} <= groups)
                 self.assertRegex(source, r"if\(!INACTIVE\.has\((?:cur|current)\.group\)\)")
 
     def test_both_workers_support_cors_preflight_and_comparison_helper(self):
