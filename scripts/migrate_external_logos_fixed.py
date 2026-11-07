@@ -3,6 +3,7 @@
 import io, json, re, urllib.request, hashlib
 from pathlib import Path
 from logo_asset_naming import is_blocked_logo_basename, safe_logo_filename
+from logo_embedded_png import recover_embedded_png_from_svg
 from urllib.parse import urlsplit
 from PIL import Image
 try:
@@ -157,8 +158,18 @@ def download_png(url, target):
         Image.open(io.BytesIO(data)).convert("RGBA").save(target, format="PNG", optimize=True)
         return
     except (OSError, ValueError):
-        if cairosvg is None: raise
-        if data.lstrip().startswith(b"<svg") or "svg" in content_type.lower() or url.lower().split("?")[0].endswith(".svg"):
+        is_svg = data.lstrip().startswith(b"<svg") or "svg" in content_type.lower() or url.lower().split("?")[0].endswith(".svg")
+        if is_svg:
+            # Some broadcaster SVGs embed PNG data URIs. Recover only a damaged
+            # IDAT checksum or a truncated terminal IEND marker, then let Pillow
+            # fully decode the pixels before accepting the logo.
+            embedded_png = recover_embedded_png_from_svg(data)
+            if embedded_png:
+                with Image.open(io.BytesIO(embedded_png)) as image:
+                    image.load()
+                    image.convert("RGBA").save(target, format="PNG", optimize=True)
+                return
+            if cairosvg is None: raise
             png = cairosvg.svg2png(bytestring=data, output_width=1000)
             Image.open(io.BytesIO(png)).convert("RGBA").save(target, format="PNG", optimize=True)
             return
