@@ -62,12 +62,12 @@ class CrossPlaylistMetadataTests(unittest.TestCase):
 
     def test_channel_id_is_also_used_as_an_exact_identity(self):
         source = (
-            '#EXTINF:-1 tvg-id="provider-id" channel-id="shared-channel" tvg-name="Example" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Example\\n'
-            'https://example.test/source.m3u8\\n'
+            '#EXTINF:-1 tvg-id="provider-id" channel-id="shared-channel" tvg-name="Example" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Example\n'
+            'https://example.test/source.m3u8\n'
         )
         target = (
-            '#EXTINF:-1 tvg-id="other-id" channel-id="shared-channel" tvg-name="Example" group-title="International",Example\\n'
-            'https://example.test/target.m3u8\\n'
+            '#EXTINF:-1 tvg-id="other-id" channel-id="shared-channel" tvg-name="Example" group-title="International",Example\n'
+            'https://example.test/target.m3u8\n'
         )
         a = Path("IPTV-Playlist.m3u")
         b = Path("International-Playlist.m3u")
@@ -80,8 +80,8 @@ class CrossPlaylistMetadataTests(unittest.TestCase):
 
     def test_adult_entries_are_never_backfilled(self):
         text = (
-            '#EXTINF:-1 tvg-id="BBCNews.uk" tvg-name="BBC News" group-title="Adult",BBC News\\n'
-            'https://example.test/adult.m3u8\\n'
+            '#EXTINF:-1 tvg-id="BBCNews.uk" tvg-name="BBC News" group-title="Adult",BBC News\n'
+            'https://example.test/adult.m3u8\n'
         )
         updated, counts = backfill_text(text, {
             "BBCNews.uk": {"country": "GB", "language": "eng"}
