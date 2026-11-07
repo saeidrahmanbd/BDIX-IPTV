@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-07T04:22:06+00:00**
+Generated: **2026-11-07T04:32:02+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **cd6377419d8ca65d3d25ee56f45c93652662f387ef32bc1175d99e268aa6d935**
+- IPTV-Playlist.m3u SHA-256: **b21a4dad6ee749428f415bb044c876dc88c6e8cada2c5e50c155b3c9397a16ff**
 - International-Playlist.m3u SHA-256: **9f8e42770e48101f22b5d788c9ca4df55778699ca1ea4d33ebff70289038edf0**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 14 | 0 | 993 |
+| IPTV-Playlist.m3u | 0 | 14 | 0 | 996 |
 | International-Playlist.m3u | 0 | 840 | 0 | 2258 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3251**
+- Logos needing attribution review: **3254**
 - Unofficial fallback logos: **0**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3251 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3254 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|

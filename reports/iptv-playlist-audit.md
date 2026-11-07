@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-07T04:21:45.041783+00:00**
-Source playlist SHA-256: **cd6377419d8ca65d3d25ee56f45c93652662f387ef32bc1175d99e268aa6d935**
+Generated: **2026-11-07T04:31:40.392119+00:00**
+Source playlist SHA-256: **b21a4dad6ee749428f415bb044c876dc88c6e8cada2c5e50c155b3c9397a16ff**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1007**
-- Unique channel IDs: **680**
+- Playlist entries: **1010**
+- Unique channel IDs: **681**
 - IDs with multiple streams: **186**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -21,18 +21,18 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Logo exceptions requiring repair: **1**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1007**
+- Logo references checked: **1010**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **1**
-- Primary channel-number collisions: **0**
-- Primary channel-number sequence issues: **579**
+- Primary channel-number collisions: **1**
+- Primary channel-number sequence issues: **597**
 - Primary entries missing channel numbers: **10**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
-- Alphabetical ordering issues: **3**
+- Alphabetical ordering issues: **4**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 - Embedded Xtream-style credential paths (redacted): **0**
@@ -332,18 +332,20 @@ No same-ID label variants found across groups.
 - Ekhon TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8
 - Ekhon TV — Backup — https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8
-### ekusheytv.bd (5 streams)
+### ekusheytv.bd (6 streams)
 - Ekushey TV — Bangladesh — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 - Ekushey TV — Backup — http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 - Ekushey TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ekusheytv-8-org.stream/index.m3u8
 - Ekushey TV — Backup — https://ekusheyserver.com/etvlivesn.m3u8
 - Ekushey TV — Backup — https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8
-### enter10bangla.in (5 streams)
+- Ekushey TV — Backup — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream2.m3u8
+### enter10bangla.in (6 streams)
 - Enter10 Bangla — Indian Bangla — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_360p/chunks.m3u8
 - Enter10 Bangla — Backup — https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
 - Enter10 Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8
 - Enter10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/playlist.m3u8
 - Enter10 Bangla — Backup — https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
+- Enter10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
 ### entertv.bd (3 streams)
 - Enter TV — Bangladesh — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8
 - Enter TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8
@@ -777,60 +779,60 @@ These are review suggestions only. The audit does not merge identities, change c
 
 ## Primary Channel-Number Collisions
 
-None.
+- **65** — JA TV, Jonmobhumi TV
 
 ## Primary Channel-Number Sequence
 
-- **Jonmobhumi TV** — expected channel number 41, found 65
-- **Maasranga TV** — expected channel number 42, found 41
-- **Matribhumi TV** — expected channel number 43, found 42
-- **ME TV** — expected channel number 44, found 43
-- **Mohona TV** — expected channel number 45, found 44
-- **Movie Bangla** — expected channel number 46, found 45
-- **My TV** — expected channel number 47, found 46
-- **Nagorik TV** — expected channel number 48, found 47
-- **News 21** — expected channel number 49, found 48
-- **News 24** — expected channel number 50, found 49
-- **Nexus TV** — expected channel number 51, found 50
-- **NRB TV** — expected channel number 52, found 51
-- **NTV** — expected channel number 53, found 52
-- **NTV Europe** — expected channel number 54, found 53
-- **Probashi TV** — expected channel number 55, found 54
-- **Rajdhani TV** — expected channel number 56, found 55
-- **RTV** — expected channel number 57, found 56
-- **Aakaash Aath** — expected channel number 65, found 66
-- **Amar Bangla** — expected channel number 66, found 67
-- **Amar Bangla Digital** — expected channel number 67, found 68
-- **Bangla Jago TV** — expected channel number 68, found 69
-- **Bangla Plus** — expected channel number 69, found 70
-- **BHI Channel** — expected channel number 70, found 71
-- **Colors Bangla** — expected channel number 71, found 72
-- **DD Bangla** — expected channel number 72, found 73
-- **DD Tripura** — expected channel number 73, found 74
-- **Dhoom Music Bangla** — expected channel number 74, found 75
-- **Enter10 Bangla** — expected channel number 75, found 76
-- **Jalsha Movies** — expected channel number 76, found 77
-- **JTV Bangla** — expected channel number 77, found 78
-- **JTV Classic** — expected channel number 78, found 79
-- **Khushboo Bangla** — expected channel number 79, found 80
-- **KTV Bangla** — expected channel number 80, found 81
-- **Mon Bangla** — expected channel number 81, found 82
-- **Orange Bangla TV** — expected channel number 82, found 83
-- **R Plus** — expected channel number 83, found 84
-- **R Plus Gold** — expected channel number 84, found 85
-- **Rongeen TV** — expected channel number 85, found 86
-- **Ruposhi Bangla** — expected channel number 86, found 87
-- **Sananda** — expected channel number 87, found 88
-- **Sangeet Bangla** — expected channel number 88, found 89
-- **SNB Cinema** — expected channel number 89, found 90
-- **Sonar Bangla** — expected channel number 90, found 91
-- **Sony Aath** — expected channel number 91, found (missing)
-- **&pictures** — expected channel number 101, found (missing)
-- **Asianet Movies** — expected channel number 102, found 101
-- **B4U Bhojpuri Plus** — expected channel number 103, found 102
-- **B4U Kadak** — expected channel number 104, found 103
-- **B4U Movies** — expected channel number 105, found 104
-- **Bhojpuri Cinema** — expected channel number 106, found 105
+- **JA TV** — expected channel number 37, found 65
+- **Jago News 24** — expected channel number 38, found 37
+- **Jalsha Bangla BD** — expected channel number 39, found 38
+- **Jamuna TV** — expected channel number 40, found 39
+- **Jhankar TV** — expected channel number 41, found 40
+- **Jonmobhumi TV** — expected channel number 42, found 65
+- **Maasranga TV** — expected channel number 43, found 41
+- **Matribhumi TV** — expected channel number 44, found 42
+- **ME TV** — expected channel number 45, found 43
+- **Mohona TV** — expected channel number 46, found 44
+- **Movie Bangla** — expected channel number 47, found 45
+- **My TV** — expected channel number 48, found 46
+- **Nagorik TV** — expected channel number 49, found 47
+- **News 21** — expected channel number 50, found 48
+- **News 24** — expected channel number 51, found 49
+- **Nexus TV** — expected channel number 52, found 50
+- **NRB TV** — expected channel number 53, found 51
+- **NTV** — expected channel number 54, found 52
+- **NTV Europe** — expected channel number 55, found 53
+- **Probashi TV** — expected channel number 56, found 54
+- **Rajdhani TV** — expected channel number 57, found 55
+- **RTV** — expected channel number 58, found 56
+- **SA TV** — expected channel number 59, found 58
+- **Somoy TV** — expected channel number 60, found 59
+- **SRK** — expected channel number 61, found 60
+- **Star News** — expected channel number 62, found 61
+- **TBN24** — expected channel number 63, found 62
+- **Thikana** — expected channel number 64, found 63
+- **Time Television** — expected channel number 65, found 64
+- **Sony Aath** — expected channel number 92, found (missing)
+- **Star Jalsha** — expected channel number 93, found 92
+- **Sun Bangla** — expected channel number 94, found 93
+- **Tara TV** — expected channel number 95, found 94
+- **U Bangla** — expected channel number 96, found 95
+- **ZB Cinema** — expected channel number 97, found 96
+- **ZB Music** — expected channel number 98, found 97
+- **Zee 24 Ghanta** — expected channel number 99, found 98
+- **Zee Bangla** — expected channel number 100, found 99
+- **Zodiak TV** — expected channel number 101, found 100
+- **&pictures** — expected channel number 102, found (missing)
+- **Asianet Movies** — expected channel number 103, found 101
+- **B4U Bhojpuri Plus** — expected channel number 104, found 102
+- **B4U Kadak** — expected channel number 105, found 103
+- **B4U Movies** — expected channel number 106, found 104
+- **Bhojpuri Cinema** — expected channel number 107, found 105
+- **Bollygold** — expected channel number 108, found 106
+- **Chhaya Chitram Telugu** — expected channel number 109, found 107
+- **Chithiram** — expected channel number 110, found 108
+- **Colors Cineplex [UK]** — expected channel number 111, found (missing)
+- **Ekamra Cinema** — expected channel number 112, found 111
 
 ## Malformed EXTINF Entries
 
@@ -839,6 +841,7 @@ None.
 ## Ordering
 
 Category block order: OK.
+- **Bangladesh** — **37 — Jago News 24** appears after **65 — JA TV**
 - **Bangladesh** — **41 — Maasranga TV** appears after **65 — Jonmobhumi TV**
 - **Indian Entertainment** — **4 SiDES TV** appears after **&TV**
 - **International** — **4ever Cinema** appears after **30A Music**
@@ -866,7 +869,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1006**
+- Healthy/local references: **1009**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
