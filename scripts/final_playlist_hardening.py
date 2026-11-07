@@ -10,10 +10,10 @@ from country_verification import reference_from_playlists, verify_country
 from discover_bd_in_new_queues import prohibited_channel
 
 PLAYLIST_ORDERS={
-    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Not Playing','New Channels','New Backups','Backup'],
+    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Backup','Review','New Channels','New Backups'],
 }
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-NON_NUMBERED={'Backup','Not Playing','New Channels','New Backups'}
+NON_NUMBERED={'Backup','Review','Not Playing','New Channels','New Backups'}
 REVIEW_GROUPS={'New Channels','New Backups'}
 def attrs(s): return dict(ATTR.findall(s))
 def key(s):
@@ -58,13 +58,15 @@ def process(path):
  for r in rec:
   a=attrs(r[0]); name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
   group=a.get('group-title','').strip()
+  if group == 'Not Playing':
+   r[0]=set_attr(r[0],'group-title','Review'); group='Review'
   verified=verify_country(a,name,reference)
   if verified.ok and verified.country=='IN':
    reason=prohibited_channel(a,name,'IN')
    if reason and group in REVIEW_GROUPS:
     removed.append((name,reason))
     continue
-   if reason and group.casefold() not in {'backup','not playing'}:
+   if reason and group.casefold() not in {'backup','review','not playing'}:
     r[0]=set_attr(r[0],'group-title','Backup')
     demoted.append((name,reason))
   filtered.append(r)
@@ -144,7 +146,7 @@ def process(path):
   a=attrs(r[0]); g=a.get('group-title','').strip()
   cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
   name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip().casefold()
-  if name=='channel s uk' and (g not in {'Bangladesh','Backup','Not Playing'} or cid!='channels.uk@679aa9'): errors.append('Channel S UK must retain its canonical identity in Bangladesh/Backup/Not Playing')
+  if name=='channel s uk' and (g not in {'Bangladesh','Backup','Review','Not Playing'} or cid!='channels.uk@679aa9'): errors.append('Channel S UK must retain its canonical identity in Bangladesh/Backup/Review')
   if cid=='ultimatetv.in@sd' and g not in {'Indian Music','Backup'}: errors.append('Ultimate TV must be Indian Music primary or Backup alternate')
  if errors:
   raise SystemExit(f'{path}: '+ '; '.join(errors))
