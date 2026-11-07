@@ -40,26 +40,12 @@ SOURCE_FETCH_WORKERS = 8
 
 EPG_ALIASES = {
     "DDHimachalPradesh.in@SD": ["ts1217", "1217", "LIVETV_LIVETVCHANNEL_DD_SHIMLA"],
-    "MTVIndia.in@SD": ["jtv248", "248"], "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
     "KappaTV.in@ALT1": ["jtv786", "786", "377"], "IqraBangla.uk": ["3914", "IqraBangla.uk", "IqraBangla.uk@SD"], "DeenTV.uk": ["1235", "DeenTV.uk", "DeenTV.uk@SD"],
     "ATNBanglaUK.uk": ["6753"],
     "TamilanTV.in": ["jtv2958", "2958"],
-    "SonyKALHindi.us": ["US1#Sony.KAL.us"], "custom.bdix.aakashaath": ["AakaashAath.in@SD"],
-    "custom.bdix.abpananda": ["ABPAnanda.in@SD"], "custom.abp.ananda": ["ABPAnanda.in@SD"],
-    "custom.bdix.9bangla": ["TV9Bangla.in@SD"], "custom.ctvn.akd.plus": ["CTVNAKDPlus.in@SD"],
-    "RepublicBangla.in": ["RepublicBangla.in@SD"], "custom.anmol.cinema": ["AnmolCinema.in@SD", "Zee.Anmol.Cinema.Today.Movies.in2"],
-    "custom.anmol.cinema.2": ["AnmolCinema2.in@SD", "Zee.Anmol.Cinema.2.in2"], "custom.the.q.india": ["TheQIndia.us@SD"],
-    "custom.news.18.bangla": ["News18Bangla.in@SD"], "custom.news.18.assam": ["News18AssamNorthEast.in@SD"],
-    "custom.aaj.tak": ["AajTak.in@SD"], "custom.10.tv": ["10TV.in@SD"], "custom.good.news.today": ["GoodNewsToday.in@SD"],
-    "custom.india.today": ["IndiaToday.in@SD"], "SETASHD": ["SonyEntertainmentTelevision.in@HD"],
+    "SonyKALHindi.us": ["US1#Sony.KAL.us"],
     "SouthStation.in": ["SouthStation.in@HD"],
-    "custom.epic": ["EpicTV.in@SD"], "custom.isai.aruvi.tv": ["IsaiAruvi.in@SD"], "custom.the.q": ["TheQIndia.us@SD"],
-
- "ColorsInfinity.in": ["ColorsInfinity.in@HD", "ColorsInfinity.in@SD"],
-    "Enter10Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in", "Enterr10Bangla.in@SD"], "tntsports1.uk": ["TNTSport1.uk", "TNTSports1.uk", "tntsports1.uk"],
-    "tntsports2.uk": ["TNTSport2.uk", "TNTSports2.uk", "tntsports2.uk"], "tntsports3.uk": ["TNTSport3.uk", "TNTSports3.uk", "tntsports3.uk"],
-    "tntsports4.uk": ["TNTSport4.uk", "TNTSports4.uk", "tntsports4.uk"], "skysportsmainevent.uk": ["SkySportsMainEvent.uk", "SkySpMainEvHD.uk", "SkySpMainEv.uk"],
-    "skysportspremiereleague.uk": ["SkySportsPremierLeague.uk", "SkySp.PL.HD.uk", "SkySp.PL.uk"],
+    "Enter10Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in", "Enterr10Bangla.in@SD"],
 
     # Verified identities found in existing source feeds during the strict unmapped audit.
     "TravelxpEnglish.us": ["Travelxp.uk"],
@@ -67,7 +53,6 @@ EPG_ALIASES = {
     "WorldWarTV.us": ["WorldWarTV.uk"],
     "XXTremeJobsHindi.in": ["IN46000011Q"],
     "SonyMax2.in@SD": ["143801", "LIVETV_LIVETVCHANNEL_SONY_MAX_2", "jtv483"],
-    "MovieSphere.us@AU": ["Moviesphere.au"],
     # Same AU service: exact name match after region suffix, with 64 current
     # programme rows in epg_ripper_AU1 (2026-10-26 strict unmapped audit).
     "custom.moviesphere-au": ["Moviesphere.au"],
@@ -84,19 +69,11 @@ EPG_ALIASES = {
     # programme rows in the next 7 days and sample titles matched the channel.
     # All are Indian-service (.in) playlist IDs; none is a Bangladesh identity.
     "NationalGeographic.in@SD": ["LIVETV_LIVETVCHANNEL_NATIONAL_GEOGRAPHIC_CHANNEL"],
-    "NationalGeographic.in@HD": ["LIVETV_LIVETVCHANNEL_NATIONAL_GEOGRAPHIC_CHANNEL_HD"],
     "ColorsSuper.in@SD": ["LIVETV_LIVETVCHANNEL_COLORS_SUPER"],
     "DarshanaTV.in@SD": ["3354"],
     "ETVComedy.in@HD": ["jtv3561"],
-    "EpicBharat.in@Digital": ["jtv3383"],
-    "SuperHungama.in@SD": ["LIVETV_LIVETVCHANNEL_SUPER_HUNGAMA"],
-    "ZeeCineClassic.in@SD": ["ZEEFAST_LIVECHANNEL_5"],
-    "ZeeComedyNation.in@HD": ["ZEEFAST_LIVECHANNEL_4"],
-    "ZeeSouthFlix.in@HD": ["ZEEFAST_LIVECHANNEL_3"],
-    "JalshaMovies.in@HD": ["LIVETV_LIVETVCHANNEL_JALSHA_MOVIES_HD"],
     "NHBollyFlix.in@HD": ["jtv3336"],
     "PunjabiShorts.in@SD": ["jtv3471"],
-    "SonyPix.in@HD": ["LIVETV_LIVETVCHANNEL_SONY_PIX_HD"],
     "StarMovies.in": ["LIVETV_LIVETVCHANNEL_STAR_MOVIES_HD"],
     "ThalaaTV.in@HD": ["6601"],
     "TollyTV.in@HD": ["6613"],
@@ -105,9 +82,6 @@ EPG_ALIASES = {
     # agree across both feeds (Astro Tunes, Sunrise 90's); airtel has more rows.
     "KeralaVision.in@SD": ["149044"],
     "EpicMusic.in@Digital": ["LIVETV_LIVETVCHANNEL_SHOWBOX"],
-    "custom.bdix.cnninternationla": ["157679"],
-    "ToonamiAftermathEast.us": ["ToonamiAftermath.us"],
-    "DocumentaryPlus": ["plex.tv.Documentary+.plex"],
     # Reuses the prior mapped EPG identity for the same channel after ID normalization.
     # Verified against fresh dishtv/jiotv feeds (exact display name, current English rows).
     "Hungama.in@SD": ["143150"],
@@ -148,7 +122,6 @@ EPG_ALIASES = {
     "RTL1025TV.it": ["RTL.102.5.HD.it", "RTL1025TV.it@HD"],
     # Some regional XMLTV feeds publish these Russian channels without the SD suffix.
     "RusskiyBestseller.ru@SD": ["RusskiyBestseller.ru"],
-    "RusskiyDetektiv.ru@SD": ["RusskiyDetektiv.ru"],
 }
 
 EPG_LOCKS = {
