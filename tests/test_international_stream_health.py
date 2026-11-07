@@ -86,10 +86,10 @@ class InternationalStreamHealthTests(unittest.TestCase):
         output, history, events = apply(source, "ok", {}, "2026-11-07", status=200)
         _, output_blocks = health.parse(output)
         output_adult = next(block for block in output_blocks if health.group_of(block[0]) == "Adult")
-        self.assertEqual("\\n".join(output_adult) + "\\n", adult)
+        self.assertEqual("\n".join(output_adult) + "\\n", adult)
         self.assertEqual(len(events), 1)
         self.assertEqual(len(history["entries"]), 1)
-        self.assertNotIn("Adult Feed", "\\n".join(record.get("name", "") for record in history["entries"].values()))
+        self.assertNotIn("Adult Feed", "\n".join(record.get("name", "") for record in history["entries"].values()))
 
     def test_adult_rows_do_not_block_structural_validation_or_duplicate_url_audit(self):
         adult = (
