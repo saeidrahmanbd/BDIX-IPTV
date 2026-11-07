@@ -272,6 +272,9 @@ def validate_metadata_preservation(before_text, after_text, removed_urls):
     def by_url(blocks):
         result = {}
         for block in blocks:
+            # Adult entries are explicitly outside the health monitor.
+            if group_of(block[0]).casefold() == "adult":
+                continue
             stream_urls = urls(block)
             if len(stream_urls) != 1:
                 raise ValueError(f"Expected one stream URL for {name_of(block[0])!r}")
@@ -327,6 +330,8 @@ def validate_rendered_playlist(playlist_text):
             raise ValueError(f"Missing/unregistered category for {name_of(block[0])!r}: {group!r}")
         if not seen_groups or group != seen_groups[-1]:
             seen_groups.append(group)
+        if group.casefold() == "adult":
+            continue
         stream_urls = urls(block)
         if len(stream_urls) != 1:
             raise ValueError(f"Expected one HTTP(S) URL for {name_of(block[0])!r}; found {len(stream_urls)}")
@@ -354,21 +359,30 @@ def render_playlist(preamble, blocks):
     rank = {g: i for i, g in enumerate(registry)}
     def natural(s):
         return tuple(int(x) if x.isdigit() else x.casefold() for x in re.split(r"(\d+)", s or ""))
-    blocks.sort(key=lambda b: (rank.get(group_of(b[0]), len(rank)), natural(name_of(b[0])), (urls(b)[0] if urls(b) else "").casefold()))
+    adult_order = {id(block): index for index, block in enumerate(blocks) if group_of(block[0]).casefold() == "adult"}
+    def sort_key(block):
+        group = group_of(block[0])
+        if group.casefold() == "adult":
+            return (rank.get(group, len(rank)), 0, adult_order[id(block)], "")
+        return (rank.get(group, len(rank)), 1, natural(name_of(block[0])), (urls(block)[0] if urls(block) else "").casefold())
+    blocks.sort(key=sort_key)
     return "\n".join(preamble + [line for b in blocks for line in b]).rstrip() + "\n"
 
 
 def apply_results(text, results, history, check_date):
     pre, blocks = parse(text)
-    if len(results) != len(blocks):
-        raise ValueError("Probe-result count differs from playlist-entry count")
+    monitored_blocks = [block for block in blocks if group_of(block[0]).casefold() != "adult"]
+    adult_blocks = [block for block in blocks if group_of(block[0]).casefold() == "adult"]
+    if len(results) != len(monitored_blocks):
+        raise ValueError("Probe-result count differs from non-Adult playlist-entry count")
     today = date.fromisoformat(check_date)
     yesterday = (today - timedelta(days=1)).isoformat()
     entries = history.setdefault("entries", {})
     removed_log = history.setdefault("removed", [])
-    output, events, removed_urls = [], [], set()
+    # Adult blocks remain byte-for-byte untouched and never enter stream history.
+    output, events, removed_urls = list(adult_blocks), [], set()
 
-    for block, result in zip(blocks, results):
+    for block, result in zip(monitored_blocks, results):
         entry_urls = urls(block)
         if len(entry_urls) != 1:
             raise ValueError(f"Expected exactly one stream URL for {name_of(block[0])!r}")
@@ -520,6 +534,8 @@ def main():
         raise SystemExit("International playlist is empty; refusing to proceed")
     targets = []
     for block in blocks:
+        if group_of(block[0]).casefold() == "adult":
+            continue
         u = urls(block)
         if len(u) != 1:
             raise SystemExit(f"Expected one HTTP URL for {name_of(block[0])!r}; found {len(u)}. No changes made.")
@@ -538,17 +554,18 @@ def main():
         raise SystemExit("Incomplete probe run; no playlist changes written")
 
     check_date = datetime.now(ZoneInfo("Asia/Dhaka")).date().isoformat()
-    validate_probe_batch(results)
+    if results:
+        validate_probe_batch(results)
     generated = datetime.now(timezone.utc).isoformat(timespec="seconds")
     updated, history, events = apply_results(text, results, load_history(), check_date)
     PLAYLIST.write_text(updated, encoding="utf-8")
     HISTORY.parent.mkdir(parents=True, exist_ok=True)
     HISTORY.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     REPORT.parent.mkdir(parents=True, exist_ok=True)
-    REPORT.write_text(build_report(events, history, check_date, generated, len(blocks)), encoding="utf-8")
+    REPORT.write_text(build_report(events, history, check_date, generated, len(targets)), encoding="utf-8")
     print(
         "International stream health: "
-        f"checked={len(blocks)} "
+        f"checked={len(targets)} "
         f"ok={sum(e['state']=='ok' for e in events)} "
         f"failed={sum(e['state']=='fail' for e in events)} "
         f"inconclusive={sum(e['state']=='inconclusive' for e in events)} "
