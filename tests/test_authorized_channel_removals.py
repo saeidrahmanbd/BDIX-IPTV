@@ -294,8 +294,8 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertEqual(primary_numbers, [1, 2, 3])
             backup = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Backup"' in line)
             self.assertNotIn("tvg-chno", backup)
-            not_playing = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Not Playing"' in line)
-            self.assertNotIn("tvg-chno", not_playing)
+            review = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Review"' in line)
+            self.assertNotIn("tvg-chno", review)
 
 
     def test_sorting_keeps_new_groups_immediately_before_backup(self):
@@ -322,7 +322,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     if not groups or groups[-1] != group:
                         groups.append(group)
             self.assertEqual(groups[-3:], ["New Channels", "New Backups", "Backup"])
-            self.assertLess(groups.index("Not Playing"), groups.index("New Channels"))
+            self.assertLess(groups.index("Review"), groups.index("New Channels"))
 
     def test_restore_places_not_playing_before_discovery_queues_and_backup_last(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -357,7 +357,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     group = re.search(r'group-title="([^"]+)"', line).group(1)
                     if not groups or groups[-1] != group:
                         groups.append(group)
-            self.assertEqual(groups, ["Bangladesh", "Not Playing", "New Channels", "New Backups", "Backup"])
+            self.assertEqual(groups, ["Bangladesh", "Review", "New Channels", "New Backups", "Backup"])
             self.assertEqual(groups[-3:], ["New Channels", "New Backups", "Backup"])
 
     def test_restore_repairs_missing_local_logo_in_protected_queue_only(self):
