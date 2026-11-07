@@ -60,6 +60,7 @@ on:
       - tests/test_discovery_run_validation.py
       - tests/test_international_protected_guard.py
       - scripts/reorganize_international_playlist.py
+      - scripts/international_adult_guard.py
       - scripts/validate_international_playlist.py
       - tests/test_playlist_metadata_repairs.py
       - tests/test_migrate_logo_unset.py
@@ -116,6 +117,7 @@ jobs:
             scripts/discover_international_channels.py \
             scripts/repair_international_playlist.py \
             scripts/reorganize_international_playlist.py \
+            scripts/international_adult_guard.py \
             scripts/validate_international_playlist.py \
             scripts/normalize_metadata.py \
             scripts/migrate_external_logos_fixed.py \
@@ -144,6 +146,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_country_verification.py'
           python -m unittest discover -s tests -p 'test_migrate_logo_unset.py'
           python -m unittest discover -s tests -p 'test_international_protected_guard.py'
+          python -m unittest discover -s tests -p 'test_international_adult_guard.py'
       - name: Run maintenance
         shell: bash
         run: |
@@ -200,6 +203,10 @@ jobs:
             python scripts/renumber_active_channels.py IPTV-Playlist.m3u
             # Final canonical group order after every playlist mutator.
             python scripts/sort_playlists.py IPTV-Playlist.m3u
+            # Restore the exact pre-run Adult blocks after every playlist mutator.
+            python scripts/international_adult_guard.py restore
+            python scripts/international_adult_guard.py verify
+            python scripts/validate_international_playlist.py
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
             python scripts/verify_international_protected.py verify
           }
@@ -210,6 +217,7 @@ jobs:
             python scripts/maintenance_helpers.py snapshot-playlist
             python scripts/maintenance_helpers.py snapshot
             python scripts/verify_international_protected.py snapshot
+          python scripts/international_adult_guard.py snapshot
             rm -rf fixed_output
             echo 'Non-destructive maintenance mode: using current repair/validation pipeline.'
             run_mutations
