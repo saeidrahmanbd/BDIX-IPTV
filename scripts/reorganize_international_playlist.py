@@ -308,6 +308,7 @@ def main():
     original = PLAYLIST.read_text(encoding="utf-8-sig")
     preamble, blocks = parse_playlist(original)
     staged, removed, preserved = [], Counter(), Counter()
+    adult_blocks = []  # Adult is explicitly excluded from this maintenance pass.
     names_normalized = malformed_options = invalid_logos = 0
 
     for block in blocks:
@@ -316,6 +317,9 @@ def main():
             continue
         left, display = split_info(block[0])
         a0 = attrs(left)
+        if a0.get("group-title", "").strip().casefold() == "adult":
+            adult_blocks.append(block)
+            continue
         options = {key: a0[key] for key in ("http-user-agent", "http-referrer") if a0.get(key)}
         for option in options:
             left = re.sub(rf'\s+{re.escape(option)}="[^"]*"', "", left)
@@ -434,12 +438,34 @@ def main():
         else:
             removed["orphan backup outside policy"] += 1
 
+    # Adult records are opaque passthrough blocks: no classification, metadata cleanup,
+    # logo changes, sorting, or deduplication is applied to them in this pass.
+    for adult_order, block in enumerate(adult_blocks):
+        left, display = split_info(block[0])
+        attrs0 = attrs(left)
+        name = (attrs0.get("tvg-name") or display).strip()
+        url = url_of(block)
+        if not url:
+            raise SystemExit(f"Adult entry has no stream URL; refusing to alter it: {name}")
+        url_key = url.casefold()
+        if url_key in seen_urls:
+            raise SystemExit(f"Adult stream URL collides with another retained entry; refusing to rewrite: {name}")
+        seen_urls.add(url_key)
+        output.append({
+            "group": "Adult", "name": name, "key": channel_key(name), "url": url,
+            "block": block, "adult_order": adult_order,
+        })
+
     present = {row["group"] for row in output}
     dynamic = sorted(group for group in present if group not in FIXED + TAIL and group.casefold() != "international")
     international_bucket = ["International"] if any(group.casefold() == "international" for group in present) else []
     category_order = FIXED + dynamic + international_bucket + TAIL
     category_rank = {group: index for index, group in enumerate(category_order)}
-    output.sort(key=lambda row: (category_rank.get(row["group"], len(category_rank)), natural_key(row["name"]), row["url"].casefold()))
+    output.sort(key=lambda row: (
+        category_rank.get(row["group"], len(category_rank)),
+        (0, row.get("adult_order", 0)) if row["group"] == "Adult" else (1, natural_key(row["name"])),
+        row["url"].casefold(),
+    ))
 
     header = [line for line in preamble if line and not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
     name_index = next((i for i, line in enumerate(header) if line.startswith("#PLAYLIST-STUDIO-NAME:")), None)
@@ -463,9 +489,9 @@ def main():
                 raise SystemExit(f"Category group is split: {group}")
             groups_seen.append(group)
             last_group = group
-        if re.search(r"\b\d{3,4}\s*[pi]\b|\bgeo[\s-]?blocked\b|\bnot\s*24/7\b", name, re.I):
+        if group.casefold() != "adult" and re.search(r"\b\d{3,4}\s*[pi]\b|\bgeo[\s-]?blocked\b|\bnot\s*24/7\b", name, re.I):
             raise SystemExit(f"Name was not normalized: {name}")
-        if a.get("tvg-logo") and local_logo_path(a["tvg-logo"]) is None:
+        if group.casefold() != "adult" and a.get("tvg-logo") and local_logo_path(a["tvg-logo"]) is None:
             raise SystemExit(f"Invalid or external logo reference: {name}")
         if group.casefold() in {"new channels", "new backup", "new backups"}:
             target, reason, code = discovery.policy(a, name)
