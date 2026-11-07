@@ -804,7 +804,7 @@ def main():
                 continue
             missing = not current
             broken = not is_valid_local_logo_reference(current)
-            is_review_entry = group_name in {"backup", "not playing", "not playing...", "not playing…"}
+            is_review_entry = group_name in {"backup", "review", "not playing", "not playing...", "not playing…", "new channels", "new backups", "new backup"}
             is_generated_fallback = basename.startswith("generated-fallback-")
             if args.fallback_only and (not is_generated_fallback or is_review_entry):
                 output.append(line)
