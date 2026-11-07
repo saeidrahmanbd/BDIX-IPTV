@@ -19,8 +19,8 @@ PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
 FIXED_GROUPS=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani"]
-TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","New Channels","New Backups","Backup"]
-STAGING_GROUPS=set(); LEGACY_GROUPS={"new channels","new backup","new backups","not playing","international","backup","international movies","international music","test"}
+TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","Review","New Channels","New Backups","Backup"]
+STAGING_GROUPS=set(); LEGACY_GROUPS={"new channels","new backup","new backups","not playing","review","international","backup","international movies","international music","test"}
 COUNTRY_NAMES={"BD":"Bangladesh","IN":"India","PK":"Pakistan","NP":"Nepal","TH":"Thailand","JP":"Japan","KR":"South Korea","ID":"Indonesia","MY":"Malaysia","PH":"Philippines","VN":"Vietnam","CN":"China","TW":"Taiwan","HK":"Hong Kong","SG":"Singapore","AU":"Australia","NZ":"New Zealand","GB":"United Kingdom","US":"United States","CA":"Canada","MX":"Mexico","BR":"Brazil","AR":"Argentina","CL":"Chile","CO":"Colombia","PE":"Peru","ES":"Spain","PT":"Portugal","FR":"France","DE":"Germany","IT":"Italy","NL":"Netherlands","BE":"Belgium","CH":"Switzerland","AT":"Austria","SE":"Sweden","NO":"Norway","DK":"Denmark","FI":"Finland","IS":"Iceland","IE":"Ireland","PL":"Poland","CZ":"Czech Republic","SK":"Slovakia","HU":"Hungary","RO":"Romania","BG":"Bulgaria","GR":"Greece","TR":"Turkey","RU":"Russia","UA":"Ukraine","IL":"Israel","AE":"United Arab Emirates","SA":"Saudi Arabia","QA":"Qatar","KW":"Kuwait","OM":"Oman","BH":"Bahrain","JO":"Jordan","LB":"Lebanon","EG":"Egypt","MA":"Morocco","DZ":"Algeria","TN":"Tunisia","ZA":"South Africa","NG":"Nigeria","KE":"Kenya","GH":"Ghana","TZ":"Tanzania","UG":"Uganda","ZW":"Zimbabwe","ET":"Ethiopia","LK":"Sri Lanka","MM":"Myanmar","KH":"Cambodia","LA":"Laos","MN":"Mongolia","KZ":"Kazakhstan","UZ":"Uzbekistan","AZ":"Azerbaijan","GE":"Georgia","AM":"Armenia","AL":"Albania","RS":"Serbia","HR":"Croatia","SI":"Slovenia","BA":"Bosnia and Herzegovina","ME":"Montenegro","MK":"North Macedonia","LT":"Lithuania","LV":"Latvia","EE":"Estonia","IR":"Iran","IQ":"Iraq","SY":"Syria","PS":"Palestine","FJ":"Fiji","WS":"Samoa","PG":"Papua New Guinea","BT":"Bhutan","MV":"Maldives","AW":"Aruba","BQ":"Bonaire","BO":"Bolivia","CD":"Congo - Kinshasa","CR":"Costa Rica","CV":"Cabo Verde","CW":"Curaçao","GU":"Guam","GP":"Guadeloupe","GT":"Guatemala","HT":"Haiti","HN":"Honduras","MQ":"Martinique","NA":"Namibia","PA":"Panama","PY":"Paraguay","PR":"Puerto Rico","SX":"Sint Maarten","VE":"Venezuela","CI":"Ivory Coast","TT":"Trinidad and Tobago","UY":"Uruguay","SN":"Senegal","RW":"Rwanda","AO":"Angola","BY":"Belarus","CM":"Cameroon","NI":"Nicaragua","AF":"Afghanistan","LV":"Latvia"}
 ISO_CODES={code.upper() for code in ALL_ISO_CODES}; ALIASES={"UK":"GB","EL":"GR"}; ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 NEWS_GROUPS={"news"}; SPORTS_GROUPS={"sport","sports"}; DOC_GROUPS={"documentary","documentaries","wildlife","nature"}; KIDS_GROUPS={"kids","kid","children","childrens"}; RELIGIOUS_GROUPS={"religious","religion","faith"}; MOVIE_GROUPS={"movie","movies","cinema","film","films"}; MUSIC_GROUPS={"music","musics"}
@@ -40,7 +40,7 @@ MOVIE_NAME_RE=re.compile(r"\b(?:movies?|cinema|films?|bollywood|aflam|moviespher
 MUSIC_NAME_RE=re.compile(r"\b(?:music|musix|musica|musique|tunes|xite|v2beat|trace\s*(?:urban|latina)|kronehit|cmc\s*tv|eu\s*music|ua\s*music|arabica\s*tv|epic\s*music|totalmusic|vevo|qello\s*concerts|mtv\s*(?:music|hits|80s|90s|live|classic|dance)|vh1\b|now\s*(?:70s|80s|rock)|4music|music\s*box|8xm|9xm|9x\s*(?:jalwa|jhakaas|tashan)|jalwa\s*tv|joo\s*music|joomusic|1mus|teleritmo|power\s*t(?:u|ü)rk|stingray\s*(?:classic|djazz|remember|today|hits)|zoom\s*music|star\s*music)\b",re.I)
 MOVIE_CATEGORY_PARTS={"movie","movies","cinema","film","films","bollywood","aflam","moviesphere","internationalmovies"}
 MUSIC_CATEGORY_PARTS={"music","musics","internationalmusic"}
-INTERNAL_QUEUE_GROUPS={"newchannels","newbackup","newbackups","backup","backups","notplaying","test"}
+INTERNAL_QUEUE_GROUPS={"newchannels","newbackup","newbackups","backup","backups","notplaying","review","test"}
 
 def attrs(line): return dict(ATTR_RE.findall(line))
 def name_of(block): return (attrs(block[0]).get("tvg-name") or block[0].rsplit(",",1)[-1]).strip()
@@ -88,7 +88,7 @@ KNOWN_NON_TV_DISCOVERY_ROWS = {
 }
 def known_non_tv_discovery_reason(name, group):
  group_key=(group or "").strip().casefold()
- if group_key in {"backup","backups","not playing","new channels","new backup","new backups"}:
+ if group_key in {"backup","backups","not playing","review","new channels","new backup","new backups"}:
   return None
  return KNOWN_NON_TV_DISCOVERY_ROWS.get(norm(name))
 
@@ -347,10 +347,10 @@ def main():
  if not source:raise SystemExit("Source feed contains no channel records; playlist unchanged.")
  existing_urls={url_of(b).casefold() for b in existing if url_of(b)}
  existing_primary=defaultdict(list); country_primary_ids=defaultdict(set)
- queue_or_nonprimary={"backup","backups","new backup","new backups","not playing","adult","test"}
+ queue_or_nonprimary={"backup","backups","new backup","new backups","not playing","review","adult","test"}
  for b in existing:
   a=attrs(b[0]); name=name_of(b); key=norm(name); group=a.get("group-title","").strip()
-  if group.casefold() not in {"backup","backups","new backup","new backups","not playing","test"} and key:existing_primary[key].append(a)
+  if group.casefold() not in {"backup","backups","new backup","new backups","not playing","review","test"} and key:existing_primary[key].append(a)
   code=country_code(a)
   if code in ISO_CODES and counts_toward_country_group(group,code) and group.casefold() not in queue_or_nonprimary:
    ident=primary_identity(a,name)
@@ -407,7 +407,11 @@ def main():
  for b in all_blocks:
   a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); group=old
   old_key=old.casefold(); genre=""; is_new=url_of(b) in addition_urls
-  if not is_new and FASHION_RE.search(name) and old_key not in {"backup","backups","new backup","new backups"}:
+  if not is_new and old_key=="review":
+   # Health review rows are owned by the stream checker; discovery must not reclassify them.
+   normalized.append(b)
+   continue
+  elif not is_new and FASHION_RE.search(name) and old_key not in {"backup","backups","new backup","new backups"}:
    group="Fashion TV"
   elif old_key in {"new backup","new backups"} and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Backups"
@@ -507,7 +511,7 @@ def main():
   fa=attrs(b[0]); fg=fa.get("group-title","").strip(); key_name=norm(name_of(b))
   if fg:
    final_group_by_name[key_name]=fg
-  if fg.casefold() not in {"backup","backups","adult","test","new backup","new backups","new channels","not playing"}:
+  if fg.casefold() not in {"backup","backups","adult","test","new backup","new backups","new channels","not playing","review"}:
    final_group_by_identity[(key_name,country_code(fa) or "")]=fg
  new_rows=[(n,final_group_by_identity.get((norm(n),c or ""),final_group_by_name.get(norm(n),g)),c,u) for n,g,c,u in new_rows]
  REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",

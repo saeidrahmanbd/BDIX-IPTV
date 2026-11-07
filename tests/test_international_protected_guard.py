@@ -39,6 +39,10 @@ class ProtectedGuardTests(unittest.TestCase):
         before = entry("A", "Not Playing", "http://a/1.m3u8")
         self.assertEqual(self.run_guard(before, ""), 1)
 
+    def test_review_removal_fails_during_maintenance(self):
+        before = entry("A", "Review", "http://a/1.m3u8")
+        self.assertEqual(self.run_guard(before, ""), 1)
+
     def test_unprotected_removal_and_attribute_changes_pass(self):
         before = entry("A", "Backup", "http://a/1.m3u8") + entry("N", "New Channels", "http://n/1.m3u8")
         after = entry("A", "Backup", "http://a/1.m3u8", extra='tvg-country="IN" ')
@@ -61,6 +65,23 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
         self.assertIn("http://news.example/cnn.m3u8", out)
         self.assertIn("http://orphan.example/hum.m3u8", out)
         self.assertNotIn("http://rtsh.example/1.m3u8", out)
+
+    def test_health_review_entries_remain_in_review_after_reorganization(self):
+        playlist = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n" + entry("World Cinema", "Review", "http://review.example/cinema.m3u8", 'tvg-country="US" tvg-content="Movies" tvg-logo="logos/world-cinema.png" ')
+        with tempfile.TemporaryDirectory() as tmp:
+            Path(tmp, "International-Playlist.m3u").write_text(playlist, encoding="utf-8")
+            Path(tmp, "reports").mkdir()
+            Path(tmp, "logos").mkdir()
+            Path(tmp, "logos", "world-cinema.png").write_bytes(b"logo")
+            result = subprocess.run(
+                [sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
+                cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)), capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            out = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+        self.assertIn('group-title="Review"', out)
+        self.assertIn('tvg-content="Movies"', out)
+        self.assertIn('tvg-logo="logos/world-cinema.png"', out)
 
     def test_discovery_policy_scope_is_review_queues_only(self):
         header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"

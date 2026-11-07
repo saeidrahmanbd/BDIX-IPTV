@@ -9,7 +9,7 @@ REFERENCE_PLAYLISTS=(Path('IPTV-Playlist.m3u'),)
 RAW_BASE='https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/'
 IPTV_LOGOS='https://iptv-org.github.io/api/logos.json'; IPTV_CHANNELS='https://iptv-org.github.io/api/channels.json'
 FIXED_ORDER=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani']
-TAIL_ORDER=['International Movies','International Music','Documentary & Wildlife','Kids','Religious','Sports','Adult','Backups','New Channels','New Backups']; NO_NUMBER={'Backups','New Channels','New Backups'}
+TAIL_ORDER=['International Movies','International Music','Documentary & Wildlife','Kids','Religious','Sports','Adult','Review','Backups','New Channels','New Backups']; NO_NUMBER={'Backups','Review','New Channels','New Backups'}
 ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 BAD={x.casefold() for x in ('generated-fallback-btv-news.png','generated-fallback-channel-1.png','generated-fallback-channel-16.png','generated-fallback-channel-52.png','placeholder-btv-news.png','placeholder-channel-1.png','placeholder-channel-16.png','placeholder-channel-52.png')}
 
@@ -180,7 +180,7 @@ def repair_logo(info,org):
  # Adult and Backup entries may use only existing, exact-identity local artwork.
  # Do not fetch new artwork for these protected queues, but don't skip safe local
  # matches and never leave an external logo reference in the published playlist.
- if group in {'adult','backup','backups','new backup','new backups','not playing'}:
+ if group in {'adult','backup','backups','new backup','new backups','not playing','review'}:
   if p:
    desired=RAW_BASE+str(p.relative_to(LOGOS))
    return set_attr(info,'tvg-logo',desired),old!=desired
@@ -276,6 +276,8 @@ def main():
    info=set_attr(info,'group-title','New Backups');g='New Backups'
   elif gkey in {'not playing','test'}:
    info=set_attr(info,'group-title','Backups');g='Backups'
+  elif gkey == 'review':
+   info=set_attr(info,'group-title','Review');g='Review'
   elif gkey in {'new channels','international movies','international music','international'}:
    target=classify_primary_group(info,g)
    if not target:continue

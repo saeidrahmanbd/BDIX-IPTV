@@ -1,0 +1,95 @@
+name: International Stream Health
+# Daily playback validation and three-consecutive-day retirement for the International playlist.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/international-stream-health.yml'
+      - 'scripts/international_stream_health.py'
+      - 'tests/test_international_stream_health.py'
+  schedule:
+    - cron: '30 4 * * *' # 10:30 Asia/Dhaka; discovery remains scheduled separately at 07:00.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Serialize all playlist writers with the repository's existing discovery/maintenance jobs.
+concurrency:
+  group: iptv-playlist-main-writer-v3
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.12'
+      - name: Compile checker and run policy tests
+        run: |
+          python -m py_compile scripts/international_stream_health.py scripts/reorganize_international_playlist.py scripts/discover_international_channels.py scripts/validate_international_playlist.py
+          python -m unittest discover -s tests -p 'test_international_stream_health.py'
+          python -m unittest discover -s tests -p 'test_international_protected_guard.py'
+          python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
+      - name: Skip superseded queued run definitions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          EVENT_BLOB="$(git rev-parse "\${GITHUB_SHA}:.github/workflows/international-stream-health.yml")"
+          MAIN_BLOB="$(git rev-parse "FETCH_HEAD:.github/workflows/international-stream-health.yml")"
+          if [[ "$EVENT_BLOB" != "$MAIN_BLOB" ]]; then
+            echo "::notice::Skipping superseded queued stream-health run."
+            exit 0
+          fi
+          git reset --hard origin/main
+          git clean -fd
+      - name: Probe all International streams and apply three-day policy
+        run: python scripts/international_stream_health.py
+      - name: Validate playlist grouping, metadata and local logos
+        run: python scripts/validate_international_playlist.py
+      - name: Validate reports and whitespace
+        run: |
+          git diff --check
+          test -s reports/international-stream-health.md
+          test -s reports/international-stream-health-history.json
+      - name: Commit health results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add International-Playlist.m3u reports/international-stream-health.md reports/international-stream-health-history.json
+          if git diff --cached --quiet; then
+            echo "No International stream-health changes to publish."
+            exit 0
+          fi
+          git commit -m 'Check International stream health'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              echo "::error::Rebase failed; health results were not pushed."
+              exit 1
+            fi
+            if git push origin HEAD:main; then exit 0; fi
+            echo "::warning::Push attempt \${attempt} failed; retrying."
+            sleep 3
+          done
+          echo "::error::Could not publish International stream-health results."
+          exit 1
+      - name: Upload health report
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: international-stream-health
+          path: reports/international-stream-health.md
+          if-no-files-found: warn
+          retention-days: 30

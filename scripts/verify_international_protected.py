@@ -15,7 +15,7 @@ from pathlib import Path
 
 PLAYLIST = Path("International-Playlist.m3u")
 BASELINE = Path("/tmp/international-protected-baseline.json")
-PROTECTED = {"backup", "backups", "not playing"}
+PROTECTED = {"backup", "backups", "not playing", "review"}
 AUTHORIZED_REMOVALS: dict[str, str] = {}
 GROUP_RE = re.compile(r'group-title="([^"]*)"')
 
@@ -45,7 +45,7 @@ def main(argv: list[str]) -> int:
     if argv[1] == "snapshot":
         urls = protected_urls(text)
         BASELINE.write_text(json.dumps(urls), encoding="utf-8")
-        print(f"International protected baseline: {len(urls)} Backup/Not Playing stream URLs")
+        print(f"International protected baseline: {len(urls)} Backup/Review/Not Playing stream URLs")
         return 0
     if not BASELINE.exists():
         print("ERROR: International protected baseline is missing", file=sys.stderr)
@@ -54,7 +54,7 @@ def main(argv: list[str]) -> int:
     missing = [u for u in json.loads(BASELINE.read_text(encoding="utf-8"))
                if u not in present and u not in AUTHORIZED_REMOVALS]
     if missing:
-        print(f"ERROR: {len(missing)} protected International Backup/Not Playing stream(s) were removed without authorization:", file=sys.stderr)
+        print(f"ERROR: {len(missing)} protected International Backup/Review/Not Playing stream(s) were removed without authorization:", file=sys.stderr)
         for u in missing[:50]:
             print(f"  {u}", file=sys.stderr)
         return 1

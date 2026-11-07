@@ -12,11 +12,11 @@ PLAYLIST = Path("International-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backup"]
+TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
 BACKUP_GROUPS = {"backup", "backups", "new backup", "new backups"}
 # Review queues the maintenance pipeline must never delete from: policy may re-classify or
 # tag these entries but their streams are preserved unless a removal is explicitly authorized.
-PROTECTED_GROUPS = {"backup", "backups", "not playing"}
+PROTECTED_GROUPS = {"backup", "backups", "not playing", "review"}
 INDIAN_GROUPS = {"Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 NEWS_RE = re.compile(r"\b(news|newsroom|breaking news|headlines?|news\s*24|24\s*news|noticias|notizie|nachrichten|haber|khabar|akhbar|nieuws|actualit[eé]s?|informativo|news\s*tv|tv\s*news|cnbc|cnn|bloomberg|reuters|euronews|france\s*24|al\s*jazeera|msnbc|fox\s*news|sky\s*news|bbc\s*(?:news|world)|abc\s*news|nbc\s*news|dw\s*news|rt\s*news|ndtv|aaj\s*tak|times\s*now|news\s*18|news\s*nation|republic\s*(?:tv|bharat)|india\s*today|tv9|dd\s*news|atn\s*news|dbc\s*news|somoy\s*tv|jamuna\s*tv|channel\s*24|ekattor\s*tv|ekh[oó]n\s*tv|independent\s*tv|wion)\b", re.I)
@@ -191,6 +191,10 @@ def classify(a, name, group, country):
     key = channel_key(name)
     joined = f"{name} {a.get('tvg-id', '')} {a.get('channel-id', '')}"
 
+    # Health-flagged rows remain in Review until the stream checker clears them.
+    if group_key == "review":
+        return "Review", infer_kind(name, group, a), None
+
     if not name or re.fullmatch(r"(?:\d+|n/?a|unknown|test|demo|sample|placeholder|new channel|unnamed|no name|not available)", name, re.I):
         return None, None, "non-real/test channel"
     if discovery.BAD_NAME_RE.search(name):
@@ -262,9 +266,13 @@ def set_extinf(block, name, group, country, content_kind, keep_logo, is_queue=Fa
         fields.append(f'tvg-logo="{original}"')
     if country in discovery.ISO_CODES:
         fields.append(f'tvg-country="{country}"')
+    # Keep the original content type while a failed stream is in Review.
+    original_content = attrs(block[0]).get("tvg-content", "").strip()
+    if group == "Review" and original_content:
+        fields.append(f'tvg-content="{original_content}"')
     # The Pakistani primary group, like country-specific movie/music queues,
     # is restricted to dedicated Movies/Music channels; retain its content tag.
-    if content_kind and (is_queue or group == "Pakistani" or group not in FIXED + TAIL):
+    elif content_kind and (is_queue or group == "Pakistani" or group not in FIXED + TAIL):
         tag = "Movies" if content_kind == "movie" else "Music"
         fields.append(f'tvg-content="{tag}"')
     fields.append(f'group-title="{group}"')
@@ -342,6 +350,7 @@ def main():
             "group": target, "country": country, "kind": kind, "content_kind": kind,
             "url": url, "options": options, "extras": extras, "keep_logo": local_logo is not None,
             "was_backup": group.casefold() in BACKUP_GROUPS or is_protected,
+            "was_review": group.casefold() == "review",
             "was_protected": is_protected,
             "identity": (a.get("tvg-id") or a.get("channel-id") or channel_key(name)).strip().casefold(),
         })
@@ -403,6 +412,9 @@ def main():
     for row in primary:
         emit(row, row["group"])
     for row in backup_rows:
+        if row.get("was_review"):
+            emit(row, "Review", as_backup=True)
+            continue
         if row["group"] in {"New Backup", "New Backups"}:
             emit(row, "New Backups", as_backup=True)
             continue
@@ -480,7 +492,7 @@ def main():
         "- New Channels and New Backups are manual-review queues; candidates are never automatically promoted. Foreign country groups require five unique, manually curated primary channel identities.",
         "- Retained stream URLs are preserved; playback/availability was not tested.", "",
         "## Removal summary", "", *[f"- {reason}: {count}" for reason, count in sorted(removed.items())], "",
-        "## Protected Backup/Not Playing entries preserved (policy would have removed them)", "",
+        "## Protected Backup/Review/Not Playing entries preserved (policy would have removed them)", "",
         *[f"- {reason}: {count}" for reason, count in sorted(preserved.items())], "",
         "## Category counts", "",
         *[f"- {group}: {count}" for group, count in sorted(group_counts.items(), key=lambda item: category_rank[item[0]])], ""
