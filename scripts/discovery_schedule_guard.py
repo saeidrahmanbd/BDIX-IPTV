@@ -50,11 +50,21 @@ def today_in_bangladesh(now: datetime | None = None) -> date:
 
 
 def runs_for_date(runs: list[dict[str, Any]], target_date: date) -> list[dict[str, Any]]:
-    """Include every event/status for the date; pending and failed runs count too."""
-    return [
-        run for run in runs
-        if run.get("created_at") and bangladesh_date(run["created_at"]) == target_date
-    ]
+    """Return successful or still-running attempts for the Bangladesh calendar date.
+
+    Failed, timed-out, cancelled and skipped runs do not consume the day's
+    discovery slot: the watchdog must be able to dispatch a retry.
+    """
+    active_statuses = {"queued", "in_progress", "waiting", "pending", "requested"}
+    eligible = []
+    for run in runs:
+        if not run.get("created_at") or bangladesh_date(run["created_at"]) != target_date:
+            continue
+        status = str(run.get("status") or "").casefold()
+        conclusion = str(run.get("conclusion") or "").casefold()
+        if status in active_statuses or (status == "completed" and conclusion == "success"):
+            eligible.append(run)
+    return eligible
 
 
 def first_run_id(runs: list[dict[str, Any]]) -> int | None:
