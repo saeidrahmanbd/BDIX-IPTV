@@ -33,7 +33,7 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
         registry_line = next(line for line in result.splitlines() if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
         registry = json.loads(registry_line.split(":", 1)[1])
         self.assertEqual(registry, hardening.PLAYLIST_ORDERS["IPTV-Playlist.m3u"])
-        self.assertEqual(registry[-4:], ["Backup", "Review", "New Channels", "New Backups"])
+        self.assertEqual(registry[-4:], ["Review", "New Channels", "New Backups", "Backup"])
 
     def test_bangladesh_all_genres_and_indian_kids_sports_are_retained_but_indian_news_is_demoted(self):
         rows = [
