@@ -114,7 +114,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
 
     def test_removed_non_kids_candidates_are_deleted_and_unknown_backup_stays_reviewed(self):
         sample = (
-            "#EXTM3U\\n"
+            "#EXTM3U\n"
             + row("ChannelWIN.in@SD", "Channel WIN", "Backup", "https://stream.example/win.m3u8", language="und", country="IN")
             + row("MHOneDilSe.in@SD", "MH One Dil Se", "Backup", "https://stream.example/dilse.m3u8", language="hin", country="IN")
             + row("Pogo.in@SD", "Pogo", "Backup", "https://stream.example/pogo.m3u8", language="eng", country="IN")
@@ -160,7 +160,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
 
     def test_only_kids_leave_review_and_other_listed_channels_are_removed(self):
         sample = (
-            "#EXTM3U\\n"
+            "#EXTM3U\n"
             + row("GreenGoldTV.in@India", "Green Gold TV", "Review", "https://stream.example/greengold.m3u8", language="hin", country="IN")
             + row("Pogo.in@SD", "Pogo", "Review", "https://stream.example/pogo-primary.m3u8", language="eng", country="IN")
             + row("Pogo.in@SD", "Pogo", "Review", "https://stream.example/pogo-alt.m3u8", language="eng", country="IN")
