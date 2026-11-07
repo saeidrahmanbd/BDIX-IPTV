@@ -17,9 +17,9 @@ ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Backup", "Not Playing", "New Channels", "New Backups",
+    "Backup", "Review", "New Channels", "New Backups",
 ]
-NO_NUMBER = {"Backup", "Not Playing", "New Channels", "New Backups"}
+NO_NUMBER = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}
 BACKUP = "Backup"
 REQUIRED_RECORDS = [
     [
@@ -130,9 +130,13 @@ def main():
             removed_malformed += 1
             continue
 
+        if group == "Not Playing":
+            info = set_attr(info, "group-title", "Review")
+            group = "Review"
+            changed += 1
         if group not in ORDER:
-            info = set_attr(info, "group-title", "Not Playing")
-            group = "Not Playing"
+            info = set_attr(info, "group-title", "Review")
+            group = "Review"
             changed += 1
 
         if group in NO_NUMBER and attrs(info).get("tvg-chno"):
