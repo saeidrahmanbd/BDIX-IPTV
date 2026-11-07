@@ -6,17 +6,14 @@ on:
     paths:
       - ".github/workflows/check-xtream.yml"
       - "xtream-main/**"
-      - "IPTV-Playlist.m3u"
-      - "epg/epg.xml"
   schedule:
     - cron: "17 0 * * *" # 06:17 Asia/Dhaka (UTC+6); avoid top-of-hour congestion and allow a 43-minute buffer before the 07:00 report
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "Deploy Xtream Gateways"
+      - "Deploy Xtream Gateway"
       - "IPTV New Channel Discovery"
       - "IPTV Playlist Update"
-      - "Refresh IPTV EPG"
     types: [completed]
     branches: [main]
 
@@ -25,6 +22,7 @@ permissions:
 
 jobs:
   check:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
