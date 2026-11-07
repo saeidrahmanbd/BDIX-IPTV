@@ -348,7 +348,7 @@ def parse_stamp(value):
     except ValueError: return None
 
 PLAYLISTS = [Path("IPTV-Playlist.m3u"), Path("International-Playlist.m3u")]
-INACTIVE_GROUPS = {"Backup", "Test", "Not Playing"}
+INACTIVE_GROUPS = {"Backup", "Review", "Test", "Not Playing", "New Channels", "New Backups", "New Backup"}
 
 def playlist_records(path):
     """Return M3U entries with stream URLs and parsed identity fields."""
