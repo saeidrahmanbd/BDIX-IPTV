@@ -53,6 +53,38 @@ class EmbeddedPngRecoveryTests(unittest.TestCase):
             self.assertEqual(actual.size, expected.size)
             self.assertEqual(actual.convert("RGBA").tobytes(), expected.convert("RGBA").tobytes())
 
+
+    def test_repairs_idat_crc_and_missing_iend_length_prefix_without_changing_pixels(self):
+        original = make_png()
+        damaged = bytearray(original)
+        offset = 8
+        while offset + 8 <= len(damaged):
+            length = struct.unpack(">I", damaged[offset:offset + 4])[0]
+            kind = bytes(damaged[offset + 4:offset + 8])
+            if kind == b"IDAT":
+                crc_position = offset + 8 + length
+                damaged[crc_position] ^= 0x01
+                break
+            offset += 12 + length
+
+        iend = damaged.rfind(b"\\x00\\x00\\x00\\x00IEND\\xaeB\\x60\\x82")
+        self.assertGreaterEqual(iend, 0)
+        # The source lost the first three zero bytes of IEND's length field.
+        damaged = damaged[:iend] + damaged[iend + 3:]
+        svg = (
+            b'<svg xmlns="http://www.w3.org/2000/svg"><image href="data:image/png;base64,'
+            + base64.b64encode(damaged)
+            + b'"/></svg>'
+        )
+
+        recovered = recover_embedded_png_from_svg(svg)
+        self.assertIsNotNone(recovered)
+        with Image.open(io.BytesIO(original)) as expected, Image.open(io.BytesIO(recovered)) as actual:
+            expected.load()
+            actual.load()
+            self.assertEqual(actual.size, expected.size)
+            self.assertEqual(actual.convert("RGBA").tobytes(), expected.convert("RGBA").tobytes())
+
     def test_rejects_bad_non_idat_crc(self):
         png = bytearray(make_png())
         png[29] ^= 0x01  # corrupt the IHDR CRC
