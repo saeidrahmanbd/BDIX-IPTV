@@ -12,13 +12,14 @@ import unicodedata
 
 P = Path("IPTV-Playlist.m3u")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+# Permanent IPTV-Playlist.m3u group order. Keep in sync with sort_playlists.py.
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
-    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup",
-    "Not Playing",
+    "Documentary & Wildlife", "Kids", "Religious", "Sports",
+    "Backup", "Not Playing", "New Channels", "New Backups",
 ]
-NO_NUMBER = {"Backup", "Not Playing"}
+NO_NUMBER = {"Backup", "Not Playing", "New Channels", "New Backups"}
 BACKUP = "Backup"
 REQUIRED_RECORDS = [
     [
