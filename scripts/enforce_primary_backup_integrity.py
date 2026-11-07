@@ -28,8 +28,9 @@ GROUP_ORDER = PRIMARY_GROUPS + ["Backup", "Review", "New Channels", "New Backups
 REVIEW_GROUPS = {"Review", "New Channels", "New Backups", "Not Playing"}
 LEGACY_GROUPS = {"Not Playing": "Review"}
 
-# Orphan candidates verified against channel identity and programming format.
-# Indian news, kids and religious services stay out of primary categories.
+# Orphan candidates verified against channel identity, genre and current stream-health evidence.
+# Only BD/IN-eligible, non-restricted candidates are promoted to active groups.
+# Indian news, kids and religious services, ambiguous identities, and persistent failures stay in Review.
 MIGRATION_GROUP_BY_ID = {
     "channelwin.in@sd": "Review",
     "darshanatv.in@sd": "Review",
