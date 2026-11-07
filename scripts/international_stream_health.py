@@ -325,7 +325,7 @@ def validate_rendered_playlist(playlist_text):
         group = group_of(block[0])
         if not group or group not in rank:
             raise ValueError(f"Missing/unregistered category for {name_of(block[0])!r}: {group!r}")
-        if group not in seen_groups:
+        if not seen_groups or group != seen_groups[-1]:
             seen_groups.append(group)
         stream_urls = urls(block)
         if len(stream_urls) != 1:
@@ -464,7 +464,7 @@ def apply_results(text, results, history, check_date):
     history["entries"] = entries
     history["removed"] = removed_log[-1000:]
     updated_text = render_playlist(pre, output)
-    validate_metadata_preservation(playlist_text, updated_text, removed_urls)
+    validate_metadata_preservation(text, updated_text, removed_urls)
     validate_rendered_playlist(updated_text)
     return updated_text, history, events
 
