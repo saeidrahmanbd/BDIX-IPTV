@@ -24,6 +24,9 @@ class XtreamWorkerPolicyTests(unittest.TestCase):
                 self.assertTrue({"Test", "Not Playing", "New Backups", "New Channels"} <= groups)
                 self.assertRegex(source, r"if\(!INACTIVE\.has\((?:cur|current)\.group\)\)")
 
+        workflow = (ROOT / ".github/workflows/check-xtream.yml").read_text(encoding="utf-8")
+        self.assertIn('inactive = {"Test", "Not Playing", "New Backups", "New Channels"}', workflow)
+
     def test_both_workers_support_cors_preflight_and_comparison_helper(self):
         for name in ("xtream-main",):
             with self.subTest(worker=name):
