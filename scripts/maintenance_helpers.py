@@ -227,9 +227,9 @@ def _protected_text(text: str, skip_urls: set[str] | None = None) -> str:
     blocks = [block for block in _protected_blocks(text) if str(block["url"]).casefold() not in skip_urls]
     if not blocks:
         return ""
-    category_rank = {"Backup": 0, "Review": 1, "Not Playing": 1}
+    # Sort by identity and URL only; moving an orphan Backup to Review must
+    # not alter the comparison order of protected records.
     blocks.sort(key=lambda block: (
-        category_rank.get(_group(str(block["info"])), 99),
         _canonical_channel_name(_name(str(block["info"]))),
         str(block["url"]).casefold(),
     ))
