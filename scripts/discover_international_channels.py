@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Discover eligible channels into New Channels/New Backups for manual review.
 
-Bangladesh is unrestricted by genre. India follows IPTV-Playlist exclusions
-(News, all Religious, Educational and Kids); Indian Sports remain eligible.
+Bangladesh is unrestricted by genre. India excludes News, all Religious and
+Educational/Business-Finance channels; Indian Kids and Sports remain eligible.
 Every other country is Movie/Music only. New candidates are never promoted
 automatically. Foreign country groups require five unique primary channels.
 Playback is checked by the downstream validation step.
@@ -119,6 +119,11 @@ def policy(a,name,allow_legacy_group=False):
  if code=="IN":
   reason=bd_discovery.prohibited_channel(a,name,"IN")
   if reason: return None,reason,code
+  # Preserve the explicit Indian Kids and Sports categories.
+  if KIDS_NAME_RE.search(text) or any(part in {"kid","kids","children","childrens","child"} for part in group_parts):
+   return "Kids",None,code
+  if SPORTS_NAME_RE.search(text) or any(part in {"sport","sports"} for part in group_parts):
+   return "Sports",None,code
   language=(a.get("tvg-language") or "").casefold()
   if re.search(r"\b(?:ben|bengali|bangla)\b",language+" "+text,re.I):
    return "Indian Bangla",None,code
@@ -323,7 +328,7 @@ def primary_target(base,code,country_groups):
  if code=="BD":return "Bangladesh"
  if code=="PK":return "Pakistani"
  if code=="IN":
-  if base in {"Indian Bangla","Indian Movies","Indian Music","Indian Entertainment"}:return base
+  if base in {"Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Kids","Sports"}:return base
   if base=="International Movies":return "Indian Movies"
   if base=="International Music":return "Indian Music"
   return "Indian Entertainment"
