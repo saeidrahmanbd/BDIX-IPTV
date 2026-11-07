@@ -90,7 +90,9 @@ def main():
     review_reclassified=[]; review_promoted=[]; authorized_promoted=[]; review_removed=[]
     for url,state in old_review.items():
         cur=cur_review.get(url)
-        if cur and cur["group"]!=state["group"]: review_reclassified.append((state["name"],url,state["group"],cur["group"]))
+        if cur and cur["group"]!=state["group"]:
+            if (state["group"],cur["group"]) not in {("Backup","Review"),("Not Playing","Review")}:
+                review_reclassified.append((state["name"],url,state["group"],cur["group"]))
         elif not cur and url in current_by_url:
             cur_info,cur_url=current_by_url[url]; target=authorized_backup_migration_target(cur_info,cur_url)
             if target and cur_info.get("group-title","").strip()==target: authorized_promoted.append((state["name"],url,state["group"],target))
