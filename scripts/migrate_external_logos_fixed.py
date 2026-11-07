@@ -238,6 +238,10 @@ for line in lines:
         output.append(line); continue
 
     metadata = attrs(line)
+    if metadata.get("group-title", "").strip().casefold() == "adult":
+        # Adult entries are out of scope for this maintenance pass.
+        output.append(line)
+        continue
     logo = metadata.get("tvg-logo", "").strip()
     title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
     base_title = clean_name(title)
