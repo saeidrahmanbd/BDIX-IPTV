@@ -14,6 +14,8 @@ on:
       - 'scripts/discover_international_channels.py'
       - 'scripts/validate_international_playlist.py'
       - 'scripts/validate_discovery_run.py'
+      - 'scripts/discovery_schedule_guard.py'
+      - 'tests/test_discovery_schedule_guard.py'
       - 'scripts/reorganize_international_playlist.py'
       - 'scripts/sort_playlists.py'
       - 'scripts/country_verification.py'
@@ -25,6 +27,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: write
 
 # All playlist writers share one queue to protect main-branch playlist updates.
@@ -35,7 +38,30 @@ concurrency:
   queue: max
 
 jobs:
+  daily_guard:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    outputs:
+      should_run: ${{ steps.guard.outputs.should_run }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.12'
+      - name: Enforce one discovery run per Bangladesh calendar date
+        id: guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_WORKFLOW_FILE: international-channel-discovery.yml
+        run: python scripts/discovery_schedule_guard.py guard "$GH_WORKFLOW_FILE"
+
   discover:
+    needs: daily_guard
+    if: needs.daily_guard.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
