@@ -16,7 +16,7 @@ from pathlib import Path
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-REVIEW_GROUPS = {"Backup", "Not Playing", "New Channels", "New Backup"}
+REVIEW_GROUPS = {"Backup", "Review", "Not Playing", "New Channels", "New Backup", "New Backups"}
 
 
 def attrs(line: str) -> dict[str, str]:
