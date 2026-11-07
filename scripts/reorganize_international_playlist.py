@@ -220,12 +220,14 @@ def classify(a, name, group, country):
     if country == "BD" or group == "Bangladesh":
         return "Bangladesh", None, None
 
-    # India follows IPTV-Playlist: News, all Religious, Educational and Kids are
-    # excluded. Sports are allowed. Ineligible legacy rows are demoted to Backup.
+    # India follows the approved regional policy: News, all Religious and
+    # Educational/Business-Finance are excluded; Kids and Sports remain eligible.
     if country == "IN" or group in INDIAN_GROUPS:
         reason = bd_policy.prohibited_channel(a, name, "IN")
         if reason:
             return "Backup", None, None
+        if KIDS_RE.search(joined) or group == "Kids":
+            return "Kids", None, None
         if SPORTS_RE.search(joined) or group == "Sports":
             return "Sports", None, None
         if group == "Indian Bangla" or re.search(r"\b(?:bengali|bangla)\b", f"{a.get('tvg-language','')} {name}", re.I):
@@ -487,7 +489,7 @@ def main():
         f"- Invalid/external logo references removed: {invalid_logos}",
         f"- Exact duplicate URLs omitted: {removed['exact duplicate URL']}",
         f"- Additional same-channel streams moved to Backup: {removed['duplicate channel stream moved to Backup']}",
-        "- Bangladesh channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Kids are excluded; Indian Sports remain eligible.",
+        "- Bangladesh channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.",
         "- For countries other than Bangladesh and India, only dedicated Movies and Music channels are eligible.",
         "- New Channels and New Backups are manual-review queues; candidates are never automatically promoted. Foreign country groups require five unique, manually curated primary channel identities.",
         "- Retained stream URLs are preserved; playback/availability was not tested.", "",
