@@ -10,7 +10,7 @@ P=Path("IPTV-Playlist.m3u"); R=Path("reports/metadata-normalization.md")
 RAW="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 # All four groups below are review queues. They must not receive primary IDs,
 # numbers or primary-only metadata normalization.
-EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups"}
+EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups","Adult"}
 IDS={
   "Jalsha Movies HD": "Star.Jalsha.Movies.HD.in",
   "Desh TV": "DeshTV.bd",
@@ -304,6 +304,10 @@ for r in missing:
 stats={"numbers":0,"logos":0,"backups":0}
 for r in rows:
  a=r["a"]; g=a.get("group-title","").strip(); m,_ = split_extinf(r["line"]); display=r["name"]
+ if g == "Adult":
+  # Adult entries are explicitly out of scope: preserve every attribute and
+  # their original EXTINF line without metadata, logo, or channel-number edits.
+  continue
  if g not in EXCLUDE:
   name=CASE.get(clean(a.get("tvg-name") or r["name"]),clean(a.get("tvg-name") or r["name"]))
   cid=normalize_id(a.get("tvg-id") or a.get("channel-id") or IDS.get(name) or "custom."+norm(name))
@@ -363,7 +367,14 @@ def record_display(rec):
  return display.strip()
 def record_url(rec):
  return next((line.strip() for line in rec[1:] if line.strip().startswith(("http://","https://"))), "")
-records.sort(key=lambda rec:(CATEGORY_RANK.get(group_of(rec),len(CATEGORY_RANK)),natural_sort_key(record_display(rec)),record_url(rec)))
+original_record_order = {id(rec): index for index, rec in enumerate(records)}
+def record_sort_key(rec):
+ group = group_of(rec)
+ rank = CATEGORY_RANK.get(group, len(CATEGORY_RANK))
+ if group == "Adult":
+  return (rank, 0, original_record_order[id(rec)])
+ return (rank, 1, natural_sort_key(record_display(rec)), record_url(rec))
+records.sort(key=record_sort_key)
 lines=preamble+[line for rec in records for line in rec]
 P.write_text("\n".join(lines)+"\n",encoding="utf-8")
 digest=hashlib.sha256(P.read_bytes()).hexdigest()
