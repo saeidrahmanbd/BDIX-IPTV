@@ -28,6 +28,32 @@ GROUP_ORDER = PRIMARY_GROUPS + ["Backup", "Review", "New Channels", "New Backups
 REVIEW_GROUPS = {"Review", "New Channels", "New Backups", "Not Playing"}
 LEGACY_GROUPS = {"Not Playing": "Review"}
 
+# Orphan candidates verified against channel identity and programming format.
+# Indian news, kids and religious services stay out of primary categories.
+MIGRATION_GROUP_BY_ID = {
+    "channelwin.in@sd": "Review",
+    "darshanatv.in@sd": "Indian Entertainment",
+    "greengoldtv.in@india": "Review",
+    "gtcpunjabi.in@uk": "Indian Entertainment",
+    "hungama.in@sd": "Review",
+    "thejunglebook.in": "Review",
+    "mbctv.in@sd": "Indian Entertainment",
+    "mhone.in@sd": "Indian Entertainment",
+    "mhonedilse.in@sd": "Indian Entertainment",
+    "mhonemovies.in": "Indian Movies",
+    "mh1music.in@sd": "Indian Music",
+    "mh1prime.in": "Indian Entertainment",
+    "ntv.in": "Indian Entertainment",
+    "pogo.in@sd": "Review",
+    "qtv.in": "Indian Entertainment",
+    "totaltvharyana.in@sd": "Review",
+    "tv9bangla.in": "Review",
+    "wowkidz.in@hindi": "Review",
+    "wowkidztamil.in": "Review",
+    "wowkidz.in@telugu": "Review",
+    "zbcartoon.in": "Review",
+}
+
 
 def attrs(info: str) -> dict[str, str]:
     return dict(ATTR.findall(info))
@@ -106,6 +132,13 @@ def identity_ids(info: str) -> set[str]:
     }
 
 
+def normalized_channel_name(value: str) -> str:
+    value = unicodedata.normalize("NFKD", str(value or "")).casefold()
+    value = "".join(char for char in value if not unicodedata.combining(char))
+    value = re.sub(r"\\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\\b", " ", value)
+    return re.sub(r"[^a-z0-9]+", "", value)
+
+
 def natural_key(value: str):
     value = unicodedata.normalize("NFKD", str(value or "")).casefold().strip()
     return tuple(int(part) if part.isdigit() else part for part in re.split(r"(\d+)", value))
@@ -132,6 +165,9 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
         "unknown_groups_quarantined": 0,
         "duplicate_primary_demoted": 0,
         "orphan_backups_quarantined": 0,
+        "orphan_backups_promoted": 0,
+        "restricted_backups_reviewed": 0,
+        "name_matched_backups_linked": 0,
         "metadata_fields_filled": 0,
         "backup_metadata_reconciled": 0,
         "missing_logos_deferred": [],
@@ -207,14 +243,64 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
         for value in ids:
             primary_by_id[value] = index
 
-    # Exact-ID metadata is inherited from the canonical primary. A Backup with
-    # no exact primary match is quarantined instead of being auto-promoted.
+    # Build a unique-name index only for a tightly controlled fallback. It is
+    # used to link a known alternate spelling (Jalsha Movies) to its existing
+    # primary ID; it never promotes a second primary copy.
+    primary_by_name: dict[str, set[int]] = defaultdict(set)
+    for index, record in enumerate(records):
+        info = record[0]
+        if attrs(info).get("group-title", "").strip() in PRIMARY_GROUPS:
+            primary_by_name[normalized_channel_name(display_name(info))].add(index)
+
+    # Reconcile each Backup by exact identity first. Known orphan candidates are
+    # promoted once into an appropriate active genre; additional URLs for the
+    # same identity remain Backup. Indian news/kids/religious candidates stay
+    # Review. Unique exact-name matches only link an alternate stream to one
+    # existing primary; they never create another primary.
     for record in records:
         info = record[0]
         if attrs(info).get("group-title", "").strip() != "Backup":
             continue
         ids = identity_ids(info)
         matches = {primary_by_id[value] for value in ids if value in primary_by_id}
+
+        if not matches:
+            migration_targets = {
+                MIGRATION_GROUP_BY_ID[value]
+                for value in ids if value in MIGRATION_GROUP_BY_ID
+            }
+            if len(migration_targets) == 1:
+                target = next(iter(migration_targets))
+                if target == "Review":
+                    record[0] = set_group(info, "Review")
+                    stats["orphan_backups_quarantined"] += 1
+                    stats["restricted_backups_reviewed"] += 1
+                    continue
+                if target in PRIMARY_GROUPS:
+                    info = set_group(info, target)
+                    info = remove_attr(info, "tvg-chno")
+                    record[0] = info
+                    primary_index = records.index(record)
+                    for value in identity_ids(info):
+                        primary_by_id[value] = primary_index
+                    primary_by_name[normalized_channel_name(display_name(info))].add(primary_index)
+                    stats["orphan_backups_promoted"] += 1
+                    continue
+
+            name_key = normalized_channel_name(display_name(info))
+            name_matches = primary_by_name.get(name_key, set()) if name_key else set()
+            if len(name_matches) == 1:
+                match_index = next(iter(name_matches))
+                primary_info = records[match_index][0]
+                primary_ids = identity_ids(primary_info)
+                if len(primary_ids) == 1:
+                    canonical_id = next(iter(primary_ids))
+                    info = set_attr(info, "tvg-id", canonical_id)
+                    info = set_attr(info, "channel-id", canonical_id)
+                    record[0] = info
+                    matches = {match_index}
+                    stats["name_matched_backups_linked"] += 1
+
         if len(matches) != 1:
             record[0] = set_group(info, "Review")
             stats["orphan_backups_quarantined"] += 1
@@ -335,6 +421,9 @@ def write_report(stats: dict[str, object], errors: list[str]) -> None:
         f"- Review-only entries (Review / New Channels / New Backups): **{stats.get('review_entries', 0)}**",
         f"- Duplicate primary copies moved to Backup: **{stats.get('duplicate_primary_demoted', 0)}**",
         f"- Orphan Backup entries moved to Review: **{stats.get('orphan_backups_quarantined', 0)}**",
+        f"- Verified orphan Backup streams promoted to a primary genre: **{stats.get('orphan_backups_promoted', 0)}**",
+        f"- Backup rows linked to an existing primary by unique exact name: **{stats.get('name_matched_backups_linked', 0)}**",
+        f"- Restricted Indian news/kids/religious rows retained in Review: **{stats.get('restricted_backups_reviewed', 0)}**",
         f"- Legacy Not Playing groups renamed to Review: **{stats.get('legacy_review_renamed', 0)}**",
         f"- Backup metadata records reconciled from exact primary IDs: **{stats.get('backup_metadata_reconciled', 0)}**",
         f"- Missing language values set to und (undetermined): **{len(stats.get('undetermined_languages', []))}**",
