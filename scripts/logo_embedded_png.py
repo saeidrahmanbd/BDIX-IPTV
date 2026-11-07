@@ -43,6 +43,13 @@ def recover_embedded_png_from_svg(svg_bytes: bytes) -> bytes | None:
         data_end = data_start + length
         crc_end = data_end + 4
         if crc_end > len(raw):
+            # A final IEND chunk may itself be truncated after its length/type
+            # or part of its CRC. Accept only a byte-for-byte prefix of IEND.
+            if chunk_type == b"IEND" and length == 0 and PNG_IEND.startswith(raw[offset:]):
+                output.extend(PNG_IEND)
+                saw_iend = True
+                offset = len(raw)
+                break
             return None
 
         chunk_data = raw[data_start:data_end]
