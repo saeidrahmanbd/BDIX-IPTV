@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-07T03:58:29+00:00**
-Source playlist SHA-256: **b95fe4f2b49f5681cd74d8b38165f16c748156de54b083c92d5d53e581752040**
+Generated: **2026-11-07T04:14:15+00:00**
+Source playlist SHA-256: **cd6377419d8ca65d3d25ee56f45c93652662f387ef32bc1175d99e268aa6d935**
 
 Status: **BLOCK**
 
@@ -22,7 +22,7 @@ Status: **BLOCK**
 - Orphan Backup entries: **29**
 - Active rows with incomplete required metadata: **1**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **28**
+- Entries missing tvg-language: **0**
 - Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **1**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
@@ -39,7 +39,6 @@ New Channels and New Backups are active BD/IN-only review queues used by discove
 ## Blocking Reasons
 - orphan Backup entries: 29
 - active entries with incomplete identity/country/logo metadata: 1
-- entries missing tvg-language: 28
 - primary entries missing tvg-chno: 10
 - primary channel-number sequence gaps/order errors: 579
 - missing logos: 1
