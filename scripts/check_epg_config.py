@@ -36,6 +36,35 @@ def duplicate_dict_keys(node, label):
         raise SystemExit(f"ERROR: duplicate {label} keys: {', '.join(map(str, duplicates))}")
 
 
+
+INACTIVE_GROUPS = {"backup", "review", "test", "not playing", "new channels", "new backups", "new backup"}
+ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
+
+
+def active_playlist_ids(root=ROOT):
+    """Return maintained EPG playlist IDs, excluding queues not published to the guide."""
+    active = set()
+    for filename in PLAYLIST_NAMES:
+        path = Path(root) / filename
+        if not path.is_file():
+            raise SystemExit(f"ERROR: required playlist is missing: {filename}")
+        for line in path.read_text(encoding="utf-8-sig", errors="replace").splitlines():
+            if not line.startswith("#EXTINF:"):
+                continue
+            metadata = dict(ATTR_RE.findall(line))
+            group = (metadata.get("group-title") or "").strip().casefold()
+            channel_id = (metadata.get("tvg-id") or "").strip()
+            if channel_id and group not in INACTIVE_GROUPS:
+                active.add(channel_id)
+    return active
+
+
+def orphaned_mapping_keys(mapping, active_ids):
+    """Return mapping keys that do not identify a current EPG-enabled playlist row."""
+    return sorted(set(mapping) - set(active_ids))
+
+
 def main():
     coverage = assignments(COVERAGE)
     generator = assignments(GENERATOR)
@@ -68,6 +97,16 @@ def main():
                 raise SystemExit(f"ERROR: {name} contains an empty/non-string playlist ID")
             if not isinstance(ids, list) or not ids or any(not isinstance(x, str) or not x.strip() for x in ids):
                 raise SystemExit(f"ERROR: {name}[{key!r}] must contain non-empty string IDs")
+
+    active_ids = active_playlist_ids()
+    for name in ("EPG_ALIASES", "EPG_LOCKS"):
+        mapping = literal(coverage[name], name)
+        orphaned = orphaned_mapping_keys(mapping, active_ids)
+        if orphaned:
+            sample = ", ".join(orphaned[:20])
+            raise SystemExit(
+                f"ERROR: {name} contains {len(orphaned)} orphaned playlist ID key(s): {sample}"
+            )
 
     print(
         "EPG configuration check passed: "
