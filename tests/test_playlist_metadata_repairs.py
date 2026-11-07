@@ -86,6 +86,16 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
                 self.assertIn("function constantTimeEqual", source)
                 self.assertIn("function stableId", source)
 
+    def test_adult_entries_are_explicitly_protected_from_maintenance(self):
+        normalizer = (ROOT / "scripts/normalize_metadata.py").read_text(encoding="utf-8")
+        logo_migration = (ROOT / "scripts/migrate_external_logos_fixed.py").read_text(encoding="utf-8")
+        cross_playlist = (ROOT / "scripts/backfill_cross_playlist_metadata.py").read_text(encoding="utf-8")
+        self.assertIn('"Adult"', normalizer.split("EXCLUDE=", 1)[1].split("\\n", 1)[0])
+        self.assertIn('if g == "Adult":', normalizer)
+        self.assertIn('if group == "Adult":', normalizer)
+        self.assertIn('casefold() == "adult"', logo_migration)
+        self.assertIn('"adult"', cross_playlist.split("REVIEW_GROUPS =", 1)[1].split("\\n", 1)[0])
+
 
 if __name__ == "__main__":
     unittest.main()
