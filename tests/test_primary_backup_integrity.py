@@ -112,18 +112,25 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertIn('tvg-name="Q TV"', updated)
         self.assertEqual(stats["orphan_backups_promoted"], 3)
 
-    def test_restricted_or_persistently_failing_orphans_stay_in_review(self):
+    def test_removed_non_kids_candidates_are_deleted_and_unknown_backup_stays_reviewed(self):
         sample = (
-            "#EXTM3U\n"
+            "#EXTM3U\\n"
             + row("ChannelWIN.in@SD", "Channel WIN", "Backup", "https://stream.example/win.m3u8", language="und", country="IN")
             + row("MHOneDilSe.in@SD", "MH One Dil Se", "Backup", "https://stream.example/dilse.m3u8", language="hin", country="IN")
             + row("Pogo.in@SD", "Pogo", "Backup", "https://stream.example/pogo.m3u8", language="eng", country="IN")
+            + row("UNLISTED.in", "Unlisted Candidate", "Backup", "https://stream.example/unlisted.m3u8", language="und", country="IN")
         )
         updated, stats, errors = repair_playlist_text(sample)
         self.assertEqual(errors, [])
-        self.assertEqual(updated.count('group-title="Review"'), 3)
-        self.assertEqual(stats["restricted_backups_reviewed"], 3)
-        self.assertEqual(stats["orphan_backups_promoted"], 0)
+        self.assertNotIn("Channel WIN", updated)
+        self.assertNotIn("MH One Dil Se", updated)
+        self.assertIn('tvg-name="Pogo"', updated)
+        self.assertIn('group-title="Kids"', updated)
+        self.assertIn('tvg-name="Unlisted Candidate"', updated)
+        self.assertIn('group-title="Review"', updated)
+        self.assertEqual(stats["non_kids_review_removed"], 2)
+        self.assertEqual(stats["orphan_backups_promoted"], 1)
+        self.assertEqual(stats["orphan_backups_quarantined"], 1)
 
     def test_ntv_malayalam_promotion_adds_the_local_logo(self):
         sample = (
