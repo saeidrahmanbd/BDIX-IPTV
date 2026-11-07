@@ -569,10 +569,10 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             playlist = root / "IPTV-Playlist.m3u"
             protected = root / "protected.m3u"
             playlist.write_text(
-                "#EXTM3U\\n"
-                + channel("Safe Backup", "Backup", "https://example.invalid/backup.m3u8") + "\\n"
-                + channel("Pending Review", "Not Playing", "https://example.invalid/review.m3u8") + "\\n"
-                + channel("Primary", "Bangladesh", "https://example.invalid/primary.m3u8") + "\\n",
+                "#EXTM3U\n"
+                + channel("Safe Backup", "Backup", "https://example.invalid/backup.m3u8") + "\n"
+                + channel("Pending Review", "Not Playing", "https://example.invalid/review.m3u8") + "\n"
+                + channel("Primary", "Bangladesh", "https://example.invalid/primary.m3u8") + "\n",
                 encoding="utf-8",
             )
             with (
@@ -595,9 +595,9 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             report = root / "proposed-removals.md"
             url = "https://example.invalid/review.m3u8"
             playlist.write_text(
-                "#EXTM3U\\n"
-                + channel("Pending Review", "Not Playing", url) + "\\n"
-                + channel("Primary", "Bangladesh", "https://example.invalid/primary.m3u8") + "\\n",
+                "#EXTM3U\n"
+                + channel("Pending Review", "Not Playing", url) + "\n"
+                + channel("Primary", "Bangladesh", "https://example.invalid/primary.m3u8") + "\n",
                 encoding="utf-8",
             )
             with (
