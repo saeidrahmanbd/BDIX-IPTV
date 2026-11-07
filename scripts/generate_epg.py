@@ -25,7 +25,7 @@ PLAYLISTS = [
     Path("IPTV-Playlist.m3u"),
     Path("International-Playlist.m3u"),
 ]
-INACTIVE_GROUPS = {"Backup", "Test", "Not Playing"}
+INACTIVE_GROUPS = {"Backup", "Review", "Test", "Not Playing", "New Channels", "New Backups", "New Backup"}
 MAPPING = Path("reports/epg-channel-mapping.csv")
 OUTPUT = Path("epg/epg.xml")
 
