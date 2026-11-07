@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T04:32:01+00:00",
+  "generated": "2026-11-07T04:40:31+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -1349,11 +1349,11 @@
         "channelwin.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "chhayachitramtelugu": {
       "names": [
@@ -2561,11 +2561,11 @@
         "darshanatv.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 2,
+      "backup": 0
     },
     "dbcnews": {
       "names": [
@@ -4142,11 +4142,11 @@
         "greengoldtv.in@india"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "greentv": {
       "names": [
@@ -4194,8 +4194,8 @@
         "Indian Entertainment"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 3,
+      "backup": 1
     },
     "hidost": {
       "names": [
@@ -4305,11 +4305,11 @@
         "hungama.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "ifilmenglish": {
       "names": [
@@ -4580,20 +4580,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "jalshamovies": {
-      "names": [
-        "Jalsha Movies"
-      ],
-      "ids": [
-        "jalshamovies.in@hd"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
     },
     "jalwatv": {
       "names": [
@@ -5490,11 +5476,11 @@
         "mbctv.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "medinalive": {
       "names": [
@@ -5562,11 +5548,11 @@
         "mh1music.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Indian Music"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "mh1prime": {
       "names": [
@@ -5576,11 +5562,11 @@
         "mh1prime.in"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 2,
+      "backup": 0
     },
     "mhone": {
       "names": [
@@ -5590,11 +5576,11 @@
         "mhone.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Indian Music"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "mhonedilse": {
       "names": [
@@ -5604,11 +5590,11 @@
         "mhonedilse.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 2,
+      "backup": 0
     },
     "mhonemovies": {
       "names": [
@@ -5618,11 +5604,11 @@
         "mhonemovies.in"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 2,
+      "backup": 0
     },
     "mksix": {
       "names": [
@@ -6152,11 +6138,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Indian Entertainment"
       ],
       "streams": 7,
-      "primary": 1,
-      "backup": 6
+      "primary": 2,
+      "backup": 5
     },
     "ntveurope": {
       "names": [
@@ -6576,11 +6563,11 @@
         "pogo.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 2,
+      "backup": 0
     },
     "polimertv": {
       "names": [
@@ -6891,11 +6878,12 @@
         "qtv.in"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Indian Entertainment"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 1,
+      "backup": 1
     },
     "qurantv": {
       "names": [
@@ -7908,11 +7896,12 @@
         "star.jalsha.movies.in"
       ],
       "groups": [
+        "Backup",
         "Indian Bangla"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "starbharat": {
       "names": [
@@ -8572,11 +8561,11 @@
         "thejunglebook.in"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "themovieclub": {
       "names": [
@@ -8759,11 +8748,11 @@
         "totaltvharyana.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "tracelatina": {
       "names": [
@@ -8871,11 +8860,11 @@
         "tv9bangla.in"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 2,
+      "backup": 0
     },
     "tvbricsenglish": {
       "names": [
@@ -9256,11 +9245,11 @@
         "wowkidz.in@telugu"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 2,
+      "backup": 0
     },
     "wowkidztamil": {
       "names": [
@@ -9270,11 +9259,11 @@
         "wowkidztamil.in"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "xite": {
       "names": [
@@ -9373,11 +9362,11 @@
         "zbcartoon.in"
       ],
       "groups": [
-        "Backup"
+        "Review"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "zbcinema": {
       "names": [

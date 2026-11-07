@@ -1,14 +1,14 @@
 # Logo Provenance Review
 
-Generated: **2026-11-07T04:32:02+00:00**
+Generated: **2026-11-07T04:40:32+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **b21a4dad6ee749428f415bb044c876dc88c6e8cada2c5e50c155b3c9397a16ff**
-- International-Playlist.m3u SHA-256: **9f8e42770e48101f22b5d788c9ca4df55778699ca1ea4d33ebff70289038edf0**
+- IPTV-Playlist.m3u SHA-256: **bca056bd163da5534c5919402db1640ccfae58240476c255e4cf422c46701346**
+- International-Playlist.m3u SHA-256: **b85e17864c09029a1130b5d4bb0c56b20a3020e26ba774e37fff241018c0052f**
 
 ## Provenance status by playlist
 
@@ -79,8 +79,6 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 |---|---|---|
 | goldmines.png | Goldmines | Goldmines.in@SD |
 | goldmines.png | Goldmines 2 | Goldmines2.in@SD |
-| jalsha-movies.png | Jalsha Movies | JalshaMovies.in@HD |
-| jalsha-movies.png | Jalsha Movies | Star.Jalsha.Movies.in |
 
 ## Review policy
 
