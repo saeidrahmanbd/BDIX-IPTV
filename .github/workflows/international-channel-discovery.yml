@@ -17,6 +17,7 @@ on:
       - 'scripts/discovery_schedule_guard.py'
       - 'tests/test_discovery_schedule_guard.py'
       - 'scripts/reorganize_international_playlist.py'
+      - 'scripts/international_adult_guard.py'
       - 'scripts/sort_playlists.py'
       - 'scripts/country_verification.py'
       - 'tests/test_international_protected_guard.py'
@@ -73,21 +74,28 @@ jobs:
         with:
           python-version: '3.12'
       - name: Snapshot playlist before discovery
-        run: cp International-Playlist.m3u /tmp/International-Playlist.before.m3u
+        run: |
+          cp International-Playlist.m3u /tmp/International-Playlist.before.m3u
+          python scripts/international_adult_guard.py snapshot
       - name: Test strict International movie/music policy
         run: python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
       - name: Test discovery stream validator
         run: python -m unittest discover -s tests -p 'test_discovery_run_validation.py'
       - name: Test five-channel threshold and protected groups
-        run: python -m unittest discover -s tests -p 'test_international_protected_guard.py'
+        run: |
+          python -m unittest discover -s tests -p 'test_international_protected_guard.py'
+          python -m unittest discover -s tests -p 'test_international_adult_guard.py'
       - name: Compile discovery and validation scripts
-        run: python -m py_compile scripts/country_verification.py scripts/discover_international_channels.py scripts/reorganize_international_playlist.py scripts/sort_playlists.py scripts/validate_international_playlist.py scripts/validate_discovery_run.py
+        run: python -m py_compile scripts/country_verification.py scripts/discover_international_channels.py scripts/reorganize_international_playlist.py scripts/sort_playlists.py scripts/international_adult_guard.py scripts/validate_international_playlist.py scripts/validate_discovery_run.py
       - name: Discover only Movies/Music channels and eligible backup streams
         run: python scripts/discover_international_channels.py
       - name: Enforce required playlist attribution
         run: python scripts/enforce_playlist_attribution.py International-Playlist.m3u
       - name: Reorganize International playlist and enforce unique primary IDs
-        run: python scripts/reorganize_international_playlist.py
+        run: |
+          python scripts/reorganize_international_playlist.py
+          python scripts/international_adult_guard.py restore
+          python scripts/international_adult_guard.py verify
       - name: Verify newly discovered streams and local logos
         run: python scripts/validate_discovery_run.py probe International-Playlist.m3u reports/international-channel-discovery.md /tmp/International-Playlist.before.m3u international
       - name: Validate International playlist and discovery queues
