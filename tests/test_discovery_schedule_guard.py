@@ -89,6 +89,40 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         self.assertIsNone(guard.first_run_id([]))
         self.assertFalse(guard.should_current_run_execute([], 40, self.today))
 
+    def test_failed_or_cancelled_attempts_do_not_block_a_retry(self):
+        runs = [
+            {
+                "id": 50, "status": "completed", "conclusion": "failure",
+                "created_at": "2026-11-07T00:55:00Z",
+            },
+            {
+                "id": 51, "status": "completed", "conclusion": "cancelled",
+                "created_at": "2026-11-07T01:00:00Z",
+            },
+            {
+                "id": 52, "status": "in_progress", "conclusion": None,
+                "created_at": "2026-11-07T01:10:00Z",
+            },
+        ]
+        self.assertEqual(guard.first_run_id(runs), 52)
+        self.assertTrue(guard.should_current_run_execute(runs, 52, self.today))
+        self.assertFalse(guard.run_blocks_retry(runs[0]))
+        self.assertFalse(guard.run_blocks_retry(runs[1]))
+        self.assertTrue(guard.run_blocks_retry(runs[2]))
+
+    def test_watchdog_can_retry_when_all_daily_attempts_failed(self):
+        runs = [
+            {
+                "id": 60, "status": "completed", "conclusion": "failure",
+                "created_at": "2026-11-07T01:00:00Z",
+            },
+            {
+                "id": 61, "status": "completed", "conclusion": "timed_out",
+                "created_at": "2026-11-07T01:20:00Z",
+            },
+        ]
+        self.assertIsNone(guard.first_run_id(guard.runs_for_date(runs, self.today)))
+
 
 if __name__ == "__main__":
     unittest.main()
