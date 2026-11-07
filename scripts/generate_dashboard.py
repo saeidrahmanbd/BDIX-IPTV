@@ -40,7 +40,7 @@ def prepublish_status(text):
 def url_inventory_sha(text):
     urls=sorted(line.strip() for line in text.splitlines() if line.strip().startswith(("http://","https://")))
     return hashlib.sha256("\n".join(urls).encode("utf-8")).hexdigest()
-REVIEW_GROUPS={"backup","not playing","test"}
+REVIEW_GROUPS={"backup","review","not playing","new channels","new backups","test"}
 def normalized_identity_name(value):
     value = re.sub(r"\s*(?:\[[^]]*(?:geo[- ]?blocked)[^]]*\]|\((?:\d{3,4}[pi]|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}[pi]))\s*$", "", str(value or "").strip(), flags=re.I)
     value = re.sub(r"\s+", " ", value).strip()
@@ -200,13 +200,13 @@ Source playlist SHA-256: **{source_sha}**
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
-- `New Channels` and `New Backup` are active review queues used by discovery and validation; they are not retired categories.
+- `Backup` stores alternate streams; `Review`, `New Channels`, and `New Backups` are review-only queues and are excluded from Xtream.
 - Pre-publish gate status: **{gate_status}**
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## Counting Scope
 - **Active Channel Identities / Active Primary Streams** count only canonical playlist groups.
-- `New Channels`, `New Backup`, and `Not Playing` are review queues and are excluded from the active-primary count.
+- `Backup`, `Review`, `New Channels`, and `New Backups` are excluded from the active-primary count.
 - EPG identity/programme coverage is reported only when the published XMLTV is valid, current, and its freshness report is PASS.
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
@@ -264,7 +264,7 @@ Source playlist SHA-256: **{source_sha}**
 - Duplicate stream URLs are blocking.
 - Primary streams are protected from silent removal.
 - Backup streams are never deleted because of health failures.
-- New Channels and New Backup remain active discovery/review queues.
+- Review, New Channels and New Backups remain hidden review queues.
 - Backup counts do not imply independent CDN/origin redundancy.
 - Report freshness is checked against current source hashes or the current two-playlist inventory; mismatched metrics are labelled stale instead of shown as current.
 """,encoding="utf-8")
