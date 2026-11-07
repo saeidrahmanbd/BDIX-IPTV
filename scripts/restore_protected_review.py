@@ -20,7 +20,7 @@ BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PLAYLIST = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("IPTV-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
-PROTECTED = {"Backup", "Not Playing"}
+PROTECTED = {"Backup", "Review", "Not Playing"}
 PERMANENTLY_REMOVED_NAMES = {
     "accuweather",
     "america's got talent",
@@ -56,8 +56,8 @@ PERMANENTLY_REMOVED_NAMES = {
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
-    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Not Playing",
-    "New Channels", "New Backups", "Backup",
+    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Review",
+    "New Channels", "New Backups",
 ]
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
@@ -490,7 +490,7 @@ def restore() -> None:
 
     active_records: list[list[str]] = []
     unexpected_backup: list[list[str]] = []
-    unexpected_not_playing: list[list[str]] = []
+    unexpected_review: list[list[str]] = []
     migrated_backup: list[list[str]] = []
     restored_from_queue = 0
     reclassification_reverted = 0
@@ -541,8 +541,10 @@ def restore() -> None:
             # A current Backup record not represented in the snapshot stays in
             # the review queue; routine maintenance must not promote it.
             unexpected_backup.append(record)
-        elif current_group == "Not Playing":
-            unexpected_not_playing.append(record)
+        elif current_group in {"Review", "Not Playing"}:
+            if current_group == "Not Playing":
+                record[0] = set_attr(record[0], "group-title", "Review")
+            unexpected_review.append(record)
         else:
             active_records.append(record)
 
@@ -550,7 +552,7 @@ def restore() -> None:
         process_record(record)
 
     snapshot_backup: list[list[str]] = []
-    snapshot_not_playing: list[list[str]] = []
+    snapshot_review: list[list[str]] = []
     for record in snapshot_records:
         if is_authorized_removal(record[0], url_of(record)):
             permanently_removed_count += 1
@@ -562,11 +564,12 @@ def restore() -> None:
         if group == "Backup":
             # Every other Backup entry remains protected and is restored.
             snapshot_backup.append(record)
-        elif group == "Not Playing":
-            snapshot_not_playing.append(record)
+        elif group in {"Review", "Not Playing"}:
+            if group == "Not Playing":
+                record[0] = set_attr(record[0], "group-title", "Review")
+            snapshot_review.append(record)
 
-    # Keep the manually reviewed Not Playing group before the two discovery
-    # queues, and keep Backup as the final group in the playlist.
+    # Permanent order: curated groups, Backup, Review, then discovery queues.
     queue_groups = {"New Channels", "New Backups", "New Backup"}
     active_primary = [
         record for record in active_records if group_of(record[0]) not in queue_groups
@@ -576,12 +579,12 @@ def restore() -> None:
     ]
     final_records = (
         active_primary
-        + snapshot_not_playing
-        + unexpected_not_playing
-        + active_queues
         + migrated_backup
         + snapshot_backup
         + unexpected_backup
+        + snapshot_review
+        + unexpected_review
+        + active_queues
     )
     new_text = serialize(preamble, final_records)
     if new_text != current_text:
@@ -619,13 +622,13 @@ def restore() -> None:
     print(
         "Protected review restore: "
         f"snapshot_backup={len(snapshot_backup)} "
-        f"snapshot_not_playing={len(snapshot_not_playing)} "
+        f"snapshot_review={len(snapshot_review)} "
         f"restored_exact={restored_from_queue} "
         f"primary_reclassifications_reverted={reclassification_reverted} "
         f"backup_migrated={migrated_count} "
         f"migration_groups={dict(sorted(migration_counts.items()))} "
         f"unexpected_backup_retained={len(unexpected_backup)} "
-        f"unexpected_not_playing_retained={len(unexpected_not_playing)} "
+        f"unexpected_review_retained={len(unexpected_review)} "
         f"permanently_removed={permanently_removed_count} "
         f"verified_protected_logo_repairs={repaired_protected_logos}"
     )
