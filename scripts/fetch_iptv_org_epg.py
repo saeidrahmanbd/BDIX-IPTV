@@ -71,7 +71,7 @@ IPTV_ORG_SITE_ID_ALIASES = {
 # require an exact upstream XMLTV ID or repository-approved alias; no full
 # upstream catalogue is copied into the published guide.
 INACTIVE_GROUPS = {
-    "backup", "backups", "not playing", "not playing...", "not playing…",
+    "backup", "backups", "review", "not playing", "not playing...", "not playing…",
     "not playing (review)", "test", "new", "new channels", "new backup", "new backups",
 }
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
