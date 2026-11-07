@@ -28,7 +28,7 @@ PLAYLIST = Path("IPTV-Playlist.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PROTECTED_SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 REMOVAL_REPORT = Path("reports/proposed-removals.md")
-PROTECTED_GROUPS = {"Backup", "Not Playing"}
+PROTECTED_GROUPS = {"Backup", "Review", "Not Playing"}
 PERMANENTLY_REMOVED_NAMES = {
     "AccuWeather",
     "America's Got Talent",
@@ -221,12 +221,13 @@ def _protected_blocks(text: str) -> list[dict[str, object]]:
     ]
 
 
-def _protected_text(text: str) -> str:
-    """Compare protected records independent of harmless ordering/attribute normalization."""
-    blocks = _protected_blocks(text)
+def _protected_text(text: str, skip_urls: set[str] | None = None) -> str:
+    """Compare protected rows while permitting validated Backup↔Review quarantine moves."""
+    skip_urls = {value.casefold() for value in (skip_urls or set())}
+    blocks = [block for block in _protected_blocks(text) if str(block["url"]).casefold() not in skip_urls]
     if not blocks:
         return ""
-    category_rank = {"Backup": 0, "Not Playing": 1}
+    category_rank = {"Backup": 0, "Review": 1, "Not Playing": 1}
     blocks.sort(key=lambda block: (
         category_rank.get(_group(str(block["info"])), 99),
         _canonical_channel_name(_name(str(block["info"]))),
@@ -242,6 +243,7 @@ def _protected_text(text: str) -> str:
             # other EXTINF value and the exact stream URL.
             if _group(info) in PROTECTED_GROUPS:
                 info = re.sub(r'\s+tvg-chno="[^"]*"', "", info, count=1)
+                info = re.sub(r'\s+group-title="[^"]*"', ' group-title="__protected__"', info, count=1)
             lines[0] = _canonical_extinf(info)
         serialized.extend(lines)
     return "\n".join(serialized) + "\n"
@@ -382,7 +384,7 @@ def verify_no_unauthorized_removals() -> int:
         if protected_removed:
             print(
                 f"Change Guard BLOCKED: {len(protected_removed)} "
-                "Backup/Not Playing entries would be removed.",
+                "Backup/Review entries would be removed.",
                 file=sys.stderr,
             )
         else:
@@ -412,7 +414,46 @@ def verify_no_unauthorized_removals() -> int:
         )
         return 1
 
-    current_protected = _protected_text(current_text)
+    # Backup rows may be quarantined to Review when no exact primary identity
+    # exists. A primary duplicate may be demoted to Backup only while an exact
+    # primary ID remains. Review rows themselves may never be promoted to Backup.
+    baseline_by_url = {str(item.get("url", "")).strip().casefold(): item for item in baseline if str(item.get("url", "")).strip()}
+    current_by_url = {str(block["url"]).strip().casefold(): block for block in current if str(block["url"]).strip()}
+    primary_ids = set()
+    for block in current:
+        info = str(block["info"]); group = _group(info)
+        if group not in PROTECTED_GROUPS:
+            a = _attrs(info)
+            primary_ids.update(value.strip().casefold() for value in (a.get("tvg-id", ""), a.get("channel-id", "")) if value.strip())
+    allowed_new_protected = set()
+    group_transition_errors = []
+    for url, block in current_by_url.items():
+        current_group = _group(str(block["info"]))
+        if current_group not in PROTECTED_GROUPS:
+            continue
+        original = baseline_by_url.get(url)
+        if not original:
+            group_transition_errors.append(f"protected entry has no baseline: {_name(str(block['info']))}")
+            continue
+        old_group = str(original.get("group", "")).strip()
+        if old_group not in PROTECTED_GROUPS:
+            if current_group == "Backup":
+                ids = {value.strip().casefold() for value in (_attrs(str(block["info"])).get("tvg-id", ""), _attrs(str(block["info"])).get("channel-id", "")) if value.strip()}
+                if not (ids & primary_ids):
+                    group_transition_errors.append(f"primary-to-Backup move has no matching primary: {_name(str(block['info']))}")
+                    continue
+            allowed_new_protected.add(url)
+        elif old_group in {"Review", "Not Playing"} and current_group == "Backup":
+            group_transition_errors.append(f"Review entry promoted to Backup: {_name(str(block['info']))}")
+        elif old_group == "Backup" and current_group not in {"Backup", "Review"}:
+            group_transition_errors.append(f"Backup entry promoted out of review: {_name(str(block['info']))}")
+        elif old_group == "Review" and current_group != "Review":
+            group_transition_errors.append(f"Review entry reclassified: {_name(str(block['info']))}")
+    if group_transition_errors:
+        print("Change Guard BLOCKED: " + "; ".join(group_transition_errors[:10]), file=sys.stderr)
+        return 1
+
+    current_protected = _protected_text(current_text, allowed_new_protected)
     expected_protected = (
         PROTECTED_SNAPSHOT.read_text(encoding="utf-8")
         if PROTECTED_SNAPSHOT.exists()
@@ -434,7 +475,7 @@ def verify_no_unauthorized_removals() -> int:
 
     print(
         "Change Guard passed: no existing stream URL disappeared; "
-        "Backup/Not Playing content is unchanged."
+        "Backup/Review content is unchanged except for validated quarantine moves."
     )
     return 0
 
