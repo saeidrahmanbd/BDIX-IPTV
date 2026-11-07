@@ -67,7 +67,7 @@ class EmbeddedPngRecoveryTests(unittest.TestCase):
                 break
             offset += 12 + length
 
-        iend = damaged.rfind(b"\\x00\\x00\\x00\\x00IEND\\xaeB\\x60\\x82")
+        iend = damaged.rfind(b"\x00\x00\x00\x00IEND\xaeB\x60\x82")
         self.assertGreaterEqual(iend, 0)
         # The source lost the first three zero bytes of IEND's length field.
         damaged = damaged[:iend] + damaged[iend + 3:]
