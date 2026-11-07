@@ -35,7 +35,7 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
         self.assertEqual(registry, hardening.PLAYLIST_ORDERS["IPTV-Playlist.m3u"])
         self.assertEqual(registry[-4:], ["Backup", "Review", "New Channels", "New Backups"])
 
-    def test_bangladesh_all_genres_are_retained_and_prohibited_indian_categories_are_demoted(self):
+    def test_bangladesh_all_genres_and_indian_kids_sports_are_retained_but_indian_news_is_demoted(self):
         rows = [
             "#EXTM3U",
             '#EXTINF:-1 tvg-id="MadaniTV.bd" tvg-name="Madani TV" tvg-country="BD" tvg-chno="1" group-title="Bangladesh",Madani TV',
@@ -54,7 +54,7 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
             result = path.read_text(encoding="utf-8")
         self.assertIn('group-title="Bangladesh",Madani TV', result)
         self.assertIn('group-title="Backup",Aaj Tak', result)
-        self.assertIn('group-title="Backup",Cartoon Network', result)
+        self.assertIn('group-title="Indian Entertainment",Cartoon Network', result)
         self.assertIn('group-title="Sports",DD Sports', result)
 
     def test_missing_bangladesh_channel_numbers_are_filled_without_renumbering_existing(self):
