@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import re
 """Fail early when EPG source lists or channel aliases drift or contain duplicates."""
 import ast
 from pathlib import Path
