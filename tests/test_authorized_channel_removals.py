@@ -562,5 +562,62 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertIn(safe_backup_url, result)
             self.assertIn(safe_np_url, result)
 
+
+    def test_protected_snapshot_retains_group_titles_for_restore(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            protected = root / "protected.m3u"
+            playlist.write_text(
+                "#EXTM3U\\n"
+                + channel("Safe Backup", "Backup", "https://example.invalid/backup.m3u8") + "\\n"
+                + channel("Pending Review", "Not Playing", "https://example.invalid/review.m3u8") + "\\n"
+                + channel("Primary", "Bangladesh", "https://example.invalid/primary.m3u8") + "\\n",
+                encoding="utf-8",
+            )
+            with (
+                patch.object(guard, "PLAYLIST", playlist),
+                patch.object(guard, "PROTECTED_SNAPSHOT", protected),
+            ):
+                guard.snapshot_protected()
+            snapshot_text = protected.read_text(encoding="utf-8")
+            self.assertIn('group-title="Backup"', snapshot_text)
+            self.assertIn('group-title="Not Playing"', snapshot_text)
+            self.assertNotIn("tvg-chno", snapshot_text)
+            self.assertNotIn("Primary", snapshot_text)
+
+    def test_protected_guard_accepts_review_queue_rename_and_keeps_restore_snapshot(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.json"
+            protected = root / "protected.m3u"
+            report = root / "proposed-removals.md"
+            url = "https://example.invalid/review.m3u8"
+            playlist.write_text(
+                "#EXTM3U\\n"
+                + channel("Pending Review", "Not Playing", url) + "\\n"
+                + channel("Primary", "Bangladesh", "https://example.invalid/primary.m3u8") + "\\n",
+                encoding="utf-8",
+            )
+            with (
+                patch.object(guard, "PLAYLIST", playlist),
+                patch.object(guard, "BASELINE", baseline),
+                patch.object(guard, "PROTECTED_SNAPSHOT", protected),
+                patch.object(guard, "REMOVAL_REPORT", report),
+            ):
+                guard.snapshot_playlist()
+                guard.snapshot_protected()
+                playlist.write_text(
+                    playlist.read_text(encoding="utf-8").replace(
+                        'group-title="Not Playing"', 'group-title="Review"'
+                    ),
+                    encoding="utf-8",
+                )
+                with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+                    result = guard.verify_no_unauthorized_removals()
+            self.assertEqual(result, 0)
+            self.assertIn('group-title="Not Playing"', protected.read_text(encoding="utf-8"))
+
 if __name__ == "__main__":
     unittest.main()
