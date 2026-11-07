@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-06T21:42:01+00:00**
+Generated: **2026-11-07T09:30:51+00:00**
 
-- Active Bangladesh playlist identities: **83**
+- Active Bangladesh playlist identities: **82**
 - Identities with a retained source mapping: **6**
 - Identities with usable current/future schedules: **4**
-- Identities without a source mapping: **77**
+- Identities without a source mapping: **76**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 
@@ -64,10 +64,11 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Enter TV | EnterTV.bd | NO_GUIDE_HIT |
 | G Series Drama | GSeriesDrama.bd | NO_GUIDE_HIT |
 | G TV | GaziTV.bd | NO_GUIDE_HIT |
-| Gazi TV | GaziTV.bd@SD | NO_GUIDE_HIT |
+| GAZI TV | GaziTV.bd@SD | NO_GUIDE_HIT |
 | Global TV | GlobalTV.bd | NO_GUIDE_HIT |
 | Green TV | GreenTV.bd@SD | NO_GUIDE_HIT |
 | Independent TV | IndependentTV.bd | NO_GUIDE_HIT |
+| JA TV | JATV.bd | NO_GUIDE_HIT |
 | Jago News 24 | JagoNews24.bd | NO_GUIDE_HIT |
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
@@ -96,7 +97,6 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Probashi TV | ProbashiTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | RajdhaniTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | custom.rajdhani | NO_GUIDE_HIT |
-| Rupashi Bangla TV | RupashiBanglaTV.bd@SD | NO_GUIDE_HIT |
 | SA TV | SATV.bd | NO_GUIDE_HIT |
 | Somoy TV | SomoyNewsTV.bd | NO_GUIDE_HIT |
 | SRK | SRK.bd | NO_GUIDE_HIT |
@@ -105,7 +105,6 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | TBN24 | TBN24.us | NO_GUIDE_HIT |
 | Thikana | ThikanaTV.us | NO_GUIDE_HIT |
 | Time Television | TimeTelevision.us | NO_GUIDE_HIT |
-| Vokta TV | VoktaTV.bd@SD | NO_GUIDE_HIT |
 
 ## Matching and source notes
 
