@@ -5,11 +5,12 @@ import re
 import sys
 import unicodedata
 
+# Permanent IPTV-Playlist.m3u group order. Keep in sync with playlist_policy_repair.py.
 CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Not Playing", "New Channels", "New Backups", "Backup",
+    "Backup", "Not Playing", "New Channels", "New Backups",
 ]
 RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
 NON_NUMBERED = {"Backup", "Not Playing", "New Channels", "New Backups"}
