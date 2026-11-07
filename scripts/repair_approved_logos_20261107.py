@@ -51,17 +51,26 @@ def main() -> None:
     animal = Image.open(BytesIO(animal_data)).convert("RGBA")
     if min(animal.size) < 300:
         raise RuntimeError(f"Unexpectedly small Animal Planet logo: {animal.size}")
-    rgb = animal.convert("RGB")
-    dark_pixels = sum(1 for pixel in rgb.getdata() if max(pixel) < 90)
-    if dark_pixels < 1500:
-        raise RuntimeError("Animal Planet source appears to lack the black wordmark.")
+    # Require opaque dark lettering in the lower half; the elephant symbol
+    # alone is not an acceptable replacement for this wordmark asset.
+    lower = animal.crop((0, animal.height // 2, animal.width, animal.height))
+    dark_letters = sum(
+        1 for red, green, blue, alpha in lower.getdata()
+        if alpha > 180 and max(red, green, blue) < 100
+    )
+    if dark_letters < 500:
+        raise RuntimeError("Animal Planet source is missing its visible black wordmark.")
     if max(animal.size) < 900:
         ratio = 900 / max(animal.size)
         animal = animal.resize(
             (round(animal.width * ratio), round(animal.height * ratio)),
             Image.Resampling.LANCZOS,
         )
-    save_png(animal, LOGOS / "animal-planet.png")
+    # Use a white canvas so the black wordmark stays visible in players with
+    # dark backgrounds and in clients that render transparent pixels as black.
+    white = Image.new("RGBA", animal.size, (255, 255, 255, 255))
+    white.alpha_composite(animal)
+    save_png(white, LOGOS / "animal-planet.png")
 
     # B4U Music-specific lockup (B4U Media source; Wikimedia file record).
     b4u_data = download(SOURCES["b4u_music"])
