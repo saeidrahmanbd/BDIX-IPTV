@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 HUM_TV_SOURCE = "https://hum.tv/schedule/"
 HUM_TV_CHANNEL_ID = "HumTV.pk"
 RTV_SOURCE = "https://rtvonline.com/home/"
-RTV_LEGACY_SOURCES = ("https://rtvbd.tv/schedule.php", "https://www.rtvbd.tv/schedule.php")
+RTV_LEGACY_SOURCES = ("https://www.rtvbd.tv/schedule.php", "https://rtvbd.tv/schedule.php")
 RTV_CHANNEL_ID = "RTV.bd"
 BTV_SOURCE = "https://migrate.btvlive.gov.bd/channel/BTV"
 BTV_CHANNEL_ID = "BTVNational.bd"
@@ -405,7 +405,7 @@ def _parse_rtv_daily_programmes(text, now_utc):
 
 
 def _parse_rtv_weekly_programmes(html, now_utc):
-    """Fallback parser for the retired English weekday-based RTV schedule."""
+    """Fallback parser for RTV's published English weekday-based schedule."""
     parser = _RtvScheduleParser()
     parser.feed(html)
     parser.close()
@@ -502,7 +502,7 @@ def _parse_rtv_weekly_programmes(html, now_utc):
 
 
 def fetch_rtv_programmes(now=None):
-    """Fetch RTV's current official daily schedule, with a legacy weekly fallback."""
+    """Fetch RTV's current official daily schedule, with its weekly schedule as fallback."""
     now = now or datetime.now(timezone.utc)
     if now.tzinfo is None:
         now = now.replace(tzinfo=timezone.utc)
