@@ -172,9 +172,10 @@ def main():
         if group == BACKUP:
             ids = {x.strip().casefold() for x in (a.get("tvg-id", ""), a.get("channel-id", "")) if x.strip()}
             name_key = norm_name(display_name(info))
-            if not (ids & primary_ids) and name_key not in primary_names:
-                # Orphan detection is advisory only: a backup-only stream may be
-                # a future candidate. Preserve its record and URL for manual review.
+            if not (ids & primary_ids):
+                # A Backup must resolve to a curated primary by exact channel ID.
+                # Preserve orphan URLs, but quarantine them from the Backup group.
+                block[0] = set_attr(info, "group-title", "Review")
                 orphan_backups_preserved += 1
         out.append(block)
     blocks = out
