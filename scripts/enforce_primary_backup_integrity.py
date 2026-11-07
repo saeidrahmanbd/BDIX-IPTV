@@ -135,9 +135,8 @@ def identity_ids(info: str) -> set[str]:
 def normalized_channel_name(value: str) -> str:
     value = unicodedata.normalize("NFKD", str(value or "")).casefold()
     value = "".join(char for char in value if not unicodedata.combining(char))
-    value = re.sub(r"\\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\\b", " ", value)
+    value = re.sub(r"\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", value)
     return re.sub(r"[^a-z0-9]+", "", value)
-
 
 def natural_key(value: str):
     value = unicodedata.normalize("NFKD", str(value or "")).casefold().strip()
