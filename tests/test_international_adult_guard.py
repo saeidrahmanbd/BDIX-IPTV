@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import international_adult_guard as guard
+import reorganize_international_playlist as reorg
 
 
 class InternationalAdultGuardTests(unittest.TestCase):
@@ -53,6 +54,35 @@ https://review.example/live.m3u8
             groups = [guard.group_of(block) for block in after_blocks]
             self.assertEqual(groups.index("Adult") + 2, groups.index("Review"))
             self.assertIn('"Adult"', final_text.splitlines()[1])
+
+    def test_international_reorganizer_passes_adult_rows_through_unchanged(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "International-Playlist.m3u"
+            logos = root / "logos"
+            logos.mkdir()
+            adult_block = [
+                '#EXTINF:-1 tvg-name="VOD Adult Mystery 1080p" tvg-logo="https://invalid.example/logo.png" group-title="Adult",VOD Adult Mystery 1080p',
+                "#EXTVLCOPT:http-user-agent=leave-unchanged",
+                "https://adult.example/live.m3u8",
+            ]
+            playlist.write_text(
+                "\n".join([
+                    "#EXTM3U",
+                    '#PLAYLIST-STUDIO-NAME:"International Playlist"',
+                    '#EXTINF:-1 tvg-id="BTV.bd" tvg-name="BTV" tvg-country="BD" group-title="Bangladesh",BTV',
+                    "https://bd.example/live.m3u8",
+                    *adult_block,
+                ]) + "\n",
+                encoding="utf-8",
+            )
+            with patch.object(reorg, "PLAYLIST", playlist), patch.object(reorg, "LOGOS", logos), patch("os.chdir", lambda path: None):
+                # reorg writes its report relative to the process directory; redirect its report path.
+                with patch.object(reorg.Path, "mkdir", autospec=True):
+                    reorg.main()
+            _, records = reorg.parse_playlist(playlist.read_text(encoding="utf-8"))
+            adult_after = [record for record in records if reorg.attrs(reorg.split_info(record[0])[0]).get("group-title") == "Adult"]
+            self.assertEqual(adult_after, [adult_block])
 
 
 if __name__ == "__main__":
