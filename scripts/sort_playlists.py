@@ -10,10 +10,10 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Backup", "Not Playing", "New Channels", "New Backups",
+    "Backup", "Review", "New Channels", "New Backups",
 ]
 RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
-NON_NUMBERED = {"Backup", "Not Playing", "New Channels", "New Backups"}
+NON_NUMBERED = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}
 INTERNATIONAL_FIXED = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani",
@@ -74,6 +74,10 @@ def sort_playlist(path):
         elif current is None:preamble.append(line)
         else:current.append(line)
     if current is not None:records.append(current)
+    if path.name == "IPTV-Playlist.m3u":
+        for record in records:
+            if attrs(record[0]).get("group-title", "").strip() == "Not Playing":
+                record[0] = set_attr(record[0], "group-title", "Review")
     intl_rank=international_rank(records) if path.name=="International-Playlist.m3u" else None
     records.sort(key=lambda record:record_key(record,path.name,intl_rank)); next_number=1
     for record in records:
@@ -81,11 +85,12 @@ def sort_playlist(path):
         if path.name=="IPTV-Playlist.m3u":
             if group in NON_NUMBERED:record[0]=remove_attr(record[0],"tvg-chno")
             else:record[0]=set_attr(record[0],"tvg-chno",str(next_number)); next_number+=1
-    # The player-facing category registry must use the exact same permanent order.
-    registry = '#PLAYLIST-STUDIO-CATEGORIES:[' + ", ".join('"'+name+'"' for name in CATEGORY_ORDER) + ']'
-    preamble = [line for line in preamble if not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
-    insert_at = next((i + 1 for i, line in enumerate(preamble) if line.startswith("#EXTM3U")), 0)
-    preamble.insert(insert_at, registry)
+    # Only the main Bangladesh/India playlist owns this exact registry.
+    if path.name == "IPTV-Playlist.m3u":
+        registry = '#PLAYLIST-STUDIO-CATEGORIES:[' + ", ".join('"'+name+'"' for name in CATEGORY_ORDER) + ']'
+        preamble = [line for line in preamble if not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
+        insert_at = next((i + 1 for i, line in enumerate(preamble) if line.startswith("#EXTM3U")), 0)
+        preamble.insert(insert_at, registry)
     path.write_text("\n".join(preamble+[line for record in records for line in record])+"\n",encoding="utf-8")
 def main(argv=None):
     paths=argv if argv is not None else (sys.argv[1:] or ["IPTV-Playlist.m3u","International-Playlist.m3u"])
