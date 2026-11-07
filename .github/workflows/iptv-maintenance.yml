@@ -17,6 +17,8 @@ on:
       - scripts/renumber_active_channels.py
       - tests/test_channel_numbering.py
       - scripts/reconcile_backup_metadata_exact_id.py
+      - scripts/enforce_primary_backup_integrity.py
+      - tests/test_primary_backup_integrity.py
       - tests/test_backup_metadata_reconcile.py
       - scripts/final_playlist_hardening.py
       - scripts/country_verification.py
@@ -99,6 +101,7 @@ jobs:
             scripts/sort_playlists.py \
             scripts/renumber_active_channels.py \
             scripts/reconcile_backup_metadata_exact_id.py \
+            scripts/enforce_primary_backup_integrity.py \
             scripts/final_playlist_hardening.py \
             scripts/country_verification.py \
             scripts/generate_logo_authenticity_manifest.py \
@@ -193,6 +196,7 @@ jobs:
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix
             python scripts/reconcile_backup_metadata_exact_id.py
+            python scripts/enforce_primary_backup_integrity.py
             python scripts/renumber_active_channels.py IPTV-Playlist.m3u
             # Final canonical group order after every playlist mutator.
             python scripts/sort_playlists.py IPTV-Playlist.m3u
@@ -229,6 +233,7 @@ jobs:
             python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
           python -m unittest discover -s tests -p 'test_channel_numbering.py'
           python -m unittest discover -s tests -p 'test_backup_metadata_reconcile.py'
+          python -m unittest discover -s tests -p 'test_primary_backup_integrity.py'
 
             # Reports: each is written exactly once, from the final playlist bytes.
             python scripts/stream_health.py
