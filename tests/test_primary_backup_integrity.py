@@ -151,5 +151,31 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
 
 
 
+    def test_only_kids_leave_review_and_other_listed_channels_are_removed(self):
+        sample = (
+            "#EXTM3U\\n"
+            + row("GreenGoldTV.in@India", "Green Gold TV", "Review", "https://stream.example/greengold.m3u8", language="hin", country="IN")
+            + row("Pogo.in@SD", "Pogo", "Review", "https://stream.example/pogo-primary.m3u8", language="eng", country="IN")
+            + row("Pogo.in@SD", "Pogo", "Review", "https://stream.example/pogo-alt.m3u8", language="eng", country="IN")
+            + row("WOWKidz.in@Hindi", "WOW Kidz Hindi", "Review", "https://stream.example/wow-hindi.m3u8", language="hin", country="IN")
+            + row("TV9Bangla.in", "TV9 Bangla", "Review", "https://stream.example/tv9.m3u8", language="ben", country="IN")
+            + row("DarshanaTV.in@SD", "Darshana TV", "Review", "https://stream.example/darshana.m3u8", language="mal", country="IN")
+        )
+        updated, stats, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertEqual(stats["kids_promoted_from_review"], 4)
+        self.assertEqual(stats["non_kids_review_removed"], 2)
+        self.assertIn('tvg-name="Green Gold TV"', updated)
+        self.assertIn('tvg-name="WOW Kidz Hindi"', updated)
+        self.assertNotIn("TV9 Bangla", updated)
+        self.assertNotIn("Darshana TV", updated)
+        self.assertEqual(updated.count('tvg-name="Pogo"'), 2)
+        self.assertIn('group-title="Kids"', updated)
+        self.assertIn('group-title="Backup"', updated)
+        self.assertNotIn('group-title="Review"', updated)
+        self.assertIn("https://stream.example/pogo-primary.m3u8", updated)
+        self.assertIn("https://stream.example/pogo-alt.m3u8", updated)
+
+
 if __name__ == "__main__":
     unittest.main()
