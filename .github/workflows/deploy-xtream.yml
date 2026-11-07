@@ -1,4 +1,4 @@
-name: Deploy Xtream Gateways
+name: Deploy Xtream Gateway
 
 on:
   push:

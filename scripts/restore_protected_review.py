@@ -56,8 +56,8 @@ PERMANENTLY_REMOVED_NAMES = {
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
-    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Review",
-    "New Channels", "New Backups",
+    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Review",
+    "New Channels", "New Backups", "Backup",
 ]
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
@@ -569,7 +569,7 @@ def restore() -> None:
                 record[0] = set_attr(record[0], "group-title", "Review")
             snapshot_review.append(record)
 
-    # Permanent order: curated groups, Backup, Review, then discovery queues.
+    # Canonical order: curated primary groups, Review, discovery queues, Backup last.
     queue_groups = {"New Channels", "New Backups", "New Backup"}
     active_primary = [
         record for record in active_records if group_of(record[0]) not in queue_groups
@@ -579,12 +579,12 @@ def restore() -> None:
     ]
     final_records = (
         active_primary
-        + migrated_backup
-        + snapshot_backup
-        + unexpected_backup
         + snapshot_review
         + unexpected_review
         + active_queues
+        + migrated_backup
+        + snapshot_backup
+        + unexpected_backup
     )
     new_text = serialize(preamble, final_records)
     if new_text != current_text:

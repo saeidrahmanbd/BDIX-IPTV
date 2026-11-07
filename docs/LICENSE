@@ -20,10 +20,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Repository-specific notice:
+Repository scope clarification:
 
-This license applies to original repository code and documentation to the
-extent owned by the copyright holder. Third-party broadcaster names, channel
-logos, trademarks, programme information, stream endpoints, and other
-third-party material remain the property of their respective owners and are
-not relicensed by this notice.
+This MIT license applies only to original code and documentation owned by the
+repository maintainer. It does not grant rights to third-party broadcaster
+names, channel logos, trademarks, programme information, stream endpoints,
+artwork, or other third-party materials. Those materials remain subject to
+their respective owners' rights and applicable terms. A logo stored locally in
+this repository is not thereby verified as official or relicensed under MIT.

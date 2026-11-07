@@ -227,7 +227,7 @@ Source playlist SHA-256: **{source_sha}**
 | Pre-publish gate | **{timestamp(GATE)}** | **{gate_freshness}** |
 
 ## Maintenance History
-- Records retained: **{len(hist)}**
+- Recent records displayed: **{len(hist)}** (latest 30 entries; the stored history is retained separately)
 - Latest entries change: **{prev.get("entries","—")} → {cur.get("entries","—")}**
 - Latest health failures: **{prev.get("health_failures","—")} → {cur.get("health_failures","—")}**
 

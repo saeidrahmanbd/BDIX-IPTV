@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Discover eligible channels into New Channels/New Backups for manual review.
 
-Bangladesh is unrestricted by genre. India follows IPTV-Playlist exclusions
-(News, all Religious, Educational and Kids); Indian Sports remain eligible.
+Bangladesh is unrestricted by genre. India excludes News, all Religious and
+Educational/Business-Finance channels; Indian Kids and Sports remain eligible.
 Every other country is Movie/Music only. New candidates are never promoted
 automatically. Foreign country groups require five unique primary channels.
 Playback is checked by the downstream validation step.
@@ -119,6 +119,11 @@ def policy(a,name,allow_legacy_group=False):
  if code=="IN":
   reason=bd_discovery.prohibited_channel(a,name,"IN")
   if reason: return None,reason,code
+  # Preserve the explicit Indian Kids and Sports categories.
+  if KIDS_NAME_RE.search(text) or any(part in {"kid","kids","children","childrens","child"} for part in group_parts):
+   return "Kids",None,code
+  if SPORTS_NAME_RE.search(text) or any(part in {"sport","sports"} for part in group_parts):
+   return "Sports",None,code
   language=(a.get("tvg-language") or "").casefold()
   if re.search(r"\b(?:ben|bengali|bangla)\b",language+" "+text,re.I):
    return "Indian Bangla",None,code
@@ -323,7 +328,7 @@ def primary_target(base,code,country_groups):
  if code=="BD":return "Bangladesh"
  if code=="PK":return "Pakistani"
  if code=="IN":
-  if base in {"Indian Bangla","Indian Movies","Indian Music","Indian Entertainment"}:return base
+  if base in {"Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Kids","Sports"}:return base
   if base=="International Movies":return "Indian Movies"
   if base=="International Music":return "Indian Music"
   return "Indian Entertainment"
@@ -516,7 +521,7 @@ def main():
  new_rows=[(n,final_group_by_identity.get((norm(n),c or ""),final_group_by_name.get(norm(n),g)),c,u) for n,g,c,u in new_rows]
  REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
   f"- Existing logo references localized/repaired: {logo_refs_repaired}",
-  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Bangladesh channels of all genres are eligible. Indian News, all Religious, Educational and Kids channels are excluded; Indian Sports remain eligible. Every other country is limited to dedicated Movie/Music channels.","- Every new primary candidate remains in New Channels and every alternate stream remains in New Backups for manual review; no automatic promotion occurs.","- Only discovery queues are filtered; unrelated entries are preserved, with the five-channel threshold applied to dynamic country groups.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
+  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Bangladesh channels of all genres are eligible. Indian News, all Religious, Educational and Business/Finance channels are excluded; Indian Kids and Sports remain eligible. Every other country is limited to dedicated Movie/Music channels.","- Every new primary candidate remains in New Channels and every alternate stream remains in New Backups for manual review; no automatic promotion occurs.","- Only discovery queues are filtered; unrelated entries are preserved, with the five-channel threshold applied to dynamic country groups.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
  report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Existing discovery-queue entries removed",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  print(f"International discovery complete: new={len(new_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} qualifying_country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())

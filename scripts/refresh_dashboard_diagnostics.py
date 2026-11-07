@@ -120,11 +120,9 @@ def main() -> None:
         if not (ROOT / playlist).is_file():
             raise SystemExit(f"Required maintained playlist is missing: {playlist}")
 
-    # These metadata-only backfills are part of normal maintenance and regenerate
-    # their fingerprinted reports before the final audit is created.
-    run_script("scripts/iptv_metadata_backfill.py")
-    run_script("scripts/backfill_cross_playlist_metadata.py")
-
+    # Recovery is strictly read-only with respect to both M3U files. Metadata
+    # backfills belong to the normal maintenance path and must never run after
+    # maintenance has failed.
     # Read-only technical logo audit; do not fabricate or assign missing logos.
     run_script("scripts/repair_logo_asset_technical_quality.py")
 

@@ -33,7 +33,7 @@ See the **[Playlist Studio documentation](PLAYLIST-STUDIO.md)** for build instru
 ## 📄 Reports
 
 - [IPTV Playlist Audit](../reports/iptv-playlist-audit.md)
-- [IPTV Channel Discovery](../reports/iptv-channel-discovery.md) — Bangladesh channels of all genres and Indian candidates excluding News, all Religious (including Islamic), Educational and Kids; Indian Sports remain eligible. New candidates and alternate streams are staged in New Channels and New Backups for manual review.
+- [IPTV Channel Discovery](../reports/iptv-channel-discovery.md) — Bangladesh channels of all genres and Indian candidates excluding News, all Religious (including Islamic), Educational and Business/Finance; Indian Kids and Sports remain eligible. New candidates and alternate streams are staged in New Channels and New Backups for manual review.
 - [Stream Health](../reports/stream-health.md)
 - [EPG Coverage](../reports/epg-coverage.md)
 - [Update Report](../reports/Update%20Report.md)

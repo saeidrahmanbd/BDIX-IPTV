@@ -155,7 +155,7 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
         self.assertIn('group-title="New Channels" tvg-name="Foreign Movie",Foreign Movie', out)
         self.assertIn('group-title="New Backups" tvg-name="Bangladesh Religious Alternate",Bangladesh Religious Alternate', out)
         self.assertNotIn("Indian Education TV", out)
-        self.assertNotIn("Indian Cartoon Kids", out)
+        self.assertIn('group-title="New Channels" tvg-name="Indian Cartoon Kids",Indian Cartoon Kids', out)
         self.assertIn('"New Backups"', out)
 
 if __name__ == "__main__":

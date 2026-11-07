@@ -276,7 +276,12 @@ jobs:
             git clean -fd
             python scripts/refresh_dashboard_diagnostics.py
             git reset
-            git add IPTV-Playlist.m3u International-Playlist.m3u reports/ assets/dashboard.svg
+            # Recovery may publish reports/dashboard only; never stage playlist bytes.
+            if ! git diff --exit-code -- IPTV-Playlist.m3u International-Playlist.m3u; then
+              echo "::error::Dashboard recovery modified a playlist; refusing to publish."
+              exit 1
+            fi
+            git add reports/ assets/dashboard.svg
             if git diff --cached --quiet; then
               echo "Dashboard diagnostics already match current committed playlist inputs."
               exit 0

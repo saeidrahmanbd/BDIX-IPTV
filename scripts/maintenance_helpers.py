@@ -245,7 +245,10 @@ def _protected_text(text: str, skip_urls: set[str] | None = None) -> str:
                 # Integrity enforcement may normalize channel name, local logo,
                 # country/language and group during a validated quarantine move.
                 # Exact IDs, stream URLs and all other attributes stay protected.
-                for key in ("tvg-chno", "group-title", "tvg-name", "tvg-logo", "tvg-country", "tvg-language"):
+                # Only channel numbering is mutable in a protected row. Group transitions
+                # are checked separately against the exact baseline identity above; channel
+                # name, ID, logo, country and language remain protected metadata.
+                for key in ("tvg-chno", "group-title"):
                     info = re.sub(rf'\s+{re.escape(key)}="[^"]*"', "", info, count=1)
             lines[0] = _canonical_extinf(info)
         serialized.extend(lines)

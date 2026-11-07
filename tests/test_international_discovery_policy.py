@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import discover_international_channels as discovery
 import reorganize_international_playlist as reorg
 import validate_international_playlist as intl_validator
+import repair_international_playlist as legacy_repair
 
 
 class InternationalDiscoveryPolicyTests(unittest.TestCase):
@@ -121,13 +122,16 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             ("Peace TV", "Religious", "PeaceTV.in"),
             ("Education TV", "Education", "EducationTV.in"),
             ("DD Gyan Darshan", "General", "GyanDarshan.in"),
-            ("Cartoon Network", "Kids", "CartoonNetwork.in"),
-            ("Pogo", "Kids", "Pogo.in"),
         ]
         for name, group, tvg_id in excluded:
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, group, "IN", tvg_id)[0])
-        self.assertEqual(self.classify("DD Sports", "Sports", "IN", "DDSports.in")[0], "Indian Entertainment")
+        for name, group, tvg_id in [
+            ("Cartoon Network", "Kids", "CartoonNetwork.in"),
+            ("Pogo", "Kids", "Pogo.in"),
+        ]:
+            self.assertEqual(self.classify(name, group, "IN", tvg_id)[0], "Kids")
+        self.assertEqual(self.classify("DD Sports", "Sports", "IN", "DDSports.in")[0], "Sports")
 
     def test_bangladesh_religious_educational_kids_and_sports_are_not_genre_filtered(self):
         examples = [
@@ -393,6 +397,44 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         )
         self.assertNotEqual(
             intl_validator.foreign_movie_music_error(non_movie_music, "World News", "GB"), ""
+        )
+
+
+class LegacyInternationalRepairPolicyTests(unittest.TestCase):
+    def test_legacy_repair_keeps_indian_kids_and_sports_but_not_foreign_genres(self):
+        def info(name, country, group="International"):
+            return (
+                f'#EXTINF:-1 tvg-name="{name}" tvg-country="{country}" '
+                f'group-title="{group}",{name}'
+            )
+
+        self.assertEqual(
+            legacy_repair.classify_primary_group(info("Cartoon Network", "IN"), "International"),
+            "Kids",
+        )
+        self.assertEqual(
+            legacy_repair.classify_primary_group(info("DD Sports", "IN"), "International"),
+            "Sports",
+        )
+        self.assertEqual(
+            legacy_repair.classify_primary_group(info("Cartoon Network", "US"), "International"),
+            "",
+        )
+        self.assertEqual(
+            legacy_repair.classify_primary_group(info("World Sport", "US"), "International"),
+            "",
+        )
+        self.assertEqual(
+            legacy_repair.classify_primary_group(info("Cinema World", "US"), "International"),
+            "International Movies",
+        )
+        self.assertEqual(
+            legacy_repair.classify_primary_group(info("World Music", "US"), "International"),
+            "International Music",
+        )
+        self.assertEqual(
+            legacy_repair.classify_primary_group(info("Channel 24", "BD"), "International"),
+            "Bangladesh",
         )
 
 

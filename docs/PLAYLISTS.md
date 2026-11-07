@@ -35,7 +35,7 @@ Bangladesh and India follow the same regional rules as the main playlist. For ev
 | Origin | IPTV-Playlist.m3u | International-Playlist.m3u |
 |---|---|---|
 | Bangladesh | All genres are eligible. | All genres are eligible. |
-| India | News, all religious channels (including Islamic), educational and kids channels are excluded. Sports are allowed. | Same Indian exclusions; sports are allowed. |
+| India | News, all religious channels (including Islamic), educational and business/finance channels are excluded. Kids and sports are allowed. | Same Indian exclusions; kids and sports are allowed. |
 | Other countries | Not included. | Only dedicated movie and music channels are eligible. |
 
 New channel candidates and alternate streams are kept in **New Channels** and **New Backups** for manual review. The discovery workflows do not automatically approve or promote those entries. The five-unique-channel threshold for a foreign country group applies only after candidates have been manually reviewed.

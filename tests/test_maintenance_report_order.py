@@ -19,6 +19,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
             ".github/workflows/international-channel-discovery.yml",
             ".github/workflows/playlist-logo-localization.yml",
             ".github/workflows/changelog.yml",
+            ".github/workflows/epg-refresh.yml",
         )
         for relative in writer_workflows:
             with self.subTest(workflow=relative):
@@ -42,7 +43,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
                 "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
                 "Indian Entertainment", "Pakistani", "International",
                 "Documentary & Wildlife", "Kids", "Religious", "Sports",
-                "Backup", "Review", "New Channels", "New Backups",
+                "Review", "New Channels", "New Backups", "Backup",
             ],
         )
         self.assertIn(
@@ -177,6 +178,15 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertLess(provenance, metadata_report)
         self.assertLess(metadata_report, dashboard)
         self.assertLess(dashboard, freshness)
+
+    def test_blocked_maintenance_dashboard_recovery_never_writes_playlist_bytes(self):
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        recovery = workflow[workflow.index("Publish fresh dashboard diagnostics after blocked maintenance"):]
+        self.assertNotIn("git add IPTV-Playlist.m3u International-Playlist.m3u", recovery)
+        self.assertIn("git diff --exit-code -- IPTV-Playlist.m3u International-Playlist.m3u", recovery)
+        recovery_script = (ROOT / "scripts" / "refresh_dashboard_diagnostics.py").read_text(encoding="utf-8")
+        self.assertNotIn('run_script("scripts/iptv_metadata_backfill.py")', recovery_script)
+        self.assertNotIn('run_script("scripts/backfill_cross_playlist_metadata.py")', recovery_script)
 
 
 if __name__ == "__main__":
