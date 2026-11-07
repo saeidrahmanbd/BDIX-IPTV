@@ -57,9 +57,9 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
 
     def test_only_the_first_run_of_the_bangladesh_day_executes(self):
         runs = [
-            {"id": 20, "created_at": "2026-11-07T01:10:00Z"},
-            {"id": 21, "created_at": "2026-11-07T01:05:00Z"},
-            {"id": 22, "created_at": "2026-11-06T17:59:59Z"},
+            {"id": 20, "status": "completed", "conclusion": "success", "created_at": "2026-11-07T01:10:00Z"},
+            {"id": 21, "status": "completed", "conclusion": "success", "created_at": "2026-11-07T01:05:00Z"},
+            {"id": 22, "status": "completed", "conclusion": "success", "created_at": "2026-11-06T17:59:59Z"},
         ]
         self.assertTrue(guard.should_current_run_execute(runs, 21, self.today))
         self.assertFalse(guard.should_current_run_execute(runs, 20, self.today))
@@ -84,6 +84,53 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         ]
         self.assertTrue(guard.should_current_run_execute(runs, 30, self.today))
         self.assertFalse(guard.should_current_run_execute(runs, 31, self.today))
+
+    def test_failed_and_cancelled_runs_do_not_block_a_retry(self):
+        runs = [
+            {
+                "id": 50,
+                "event": "schedule",
+                "status": "completed",
+                "conclusion": "failure",
+                "created_at": "2026-11-07T01:00:00Z",
+            },
+            {
+                "id": 51,
+                "event": "workflow_dispatch",
+                "status": "completed",
+                "conclusion": "cancelled",
+                "created_at": "2026-11-07T01:10:00Z",
+            },
+            {
+                "id": 52,
+                "event": "workflow_dispatch",
+                "status": "queued",
+                "conclusion": None,
+                "created_at": "2026-11-07T01:20:00Z",
+            },
+        ]
+        todays = guard.runs_for_date(runs, self.today)
+        self.assertEqual([run["id"] for run in todays], [52])
+        self.assertTrue(guard.should_current_run_execute(todays, 52, self.today))
+
+    def test_successful_run_still_prevents_a_duplicate(self):
+        runs = [
+            {
+                "id": 60,
+                "event": "schedule",
+                "status": "completed",
+                "conclusion": "success",
+                "created_at": "2026-11-07T01:00:00Z",
+            },
+            {
+                "id": 61,
+                "event": "workflow_dispatch",
+                "status": "queued",
+                "conclusion": None,
+                "created_at": "2026-11-07T01:20:00Z",
+            },
+        ]
+        self.assertFalse(guard.should_current_run_execute(runs, 61, self.today))
 
     def test_no_run_for_date_fails_closed(self):
         self.assertIsNone(guard.first_run_id([]))
