@@ -8,6 +8,12 @@ This directory contains the repository's public XMLTV programme guide and the su
 
 `https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`
 
+**Compressed XMLTV (for clients that accept gzip-compressed guides):**
+
+`https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml.gz`
+
+The existing uncompressed URL remains the compatibility endpoint used by the maintained playlists and Xtream worker.
+
 Both maintained playlists and the main Xtream worker use this URL as their common EPG endpoint.
 
 ## EPG Pipeline
