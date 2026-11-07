@@ -59,7 +59,7 @@ https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8
 https://deshitv.deshitv24.net/live/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="DoyelTV.ca@SD" channel-id="DoyelTV.ca@SD" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/doyel-tv.png" tvg-country="CA" group-title="Bangladesh" tvg-name="Doyel TV",Doyel TV
 https://3d46w.doyeltv.com/memfs/aa3aa6f7-ec12-41a2-8183-a891e157bbf8.m3u8
-#EXTINF:-1 tvg-id="custom.bdix.drama-24" tvg-country="BD" group-title="Bangladesh" tvg-name="Drama 24",Drama 24
+#EXTINF:-1 tvg-id="GSeriesDrama.bd" channel-id="GSeriesDrama.bd" tvg-name="G Series Drama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-series-drama.png" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",G Series Drama
 https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="EkattorTV.bd" channel-id="EkattorTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekattor-tv.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Ekattor TV",Ekattor TV
 https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8
@@ -313,7 +313,7 @@ https://cdn.pishow.tv/ott/live/276/master.m3u8
 http://ptuf.ridsys.in/riptv/live/GEMINI_TV/index.m3u8
 #EXTINF:-1 tvg-id="ThalaaTV.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thalaa-tv.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Thalaa TV",Thalaa TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2069c593-3c07-4d62-9d44-746be5c3a5d6/manifest.m3u8
-#EXTINF:-1 tvg-id="TheMovieClub.in@HD" channel-id="TheMovieClub.in@HD" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club.png" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club",The Movie Club
+#EXTINF:-1 tvg-id="NHBollyFlix.in" channel-id="NHBollyFlix.in" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-bollyflix.png" tvg-country="IN" group-title="Indian Movies" tvg-name="NH BollyFlix",NH BollyFlix
 https://cc-r5hupcym5oehh.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-r5hupcym5oehh/SBUM/RunnTV/BollyFlix_IN/BollyFlix_IN.m3u8
 #EXTINF:-1 tvg-id="TheMovieClub.in@Plus2" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club-2.png" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club +2",The Movie Club +2
 https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ytipwjqub3kf8/TMC2_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf
@@ -327,7 +327,7 @@ http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/203.ts
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" tvg-language="tam" channel-id="7SMusic.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" tvg-country="IN" group-title="Indian Music" tvg-name="7S Music",7S Music
 https://cdn.pishow.tv/ott/live/1257/master.m3u8
-#EXTINF:-1 tvg-id="7XMusic.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7x-music.png" tvg-country="IN" group-title="Indian Music" tvg-name="7X Music",7X Music
+#EXTINF:-1 tvg-id="7XPunjabi.in" channel-id="7XPunjabi.in" tvg-language="pan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7x-punjabi.png" tvg-country="IN" group-title="Indian Music" tvg-name="7X Punjabi",7X Punjabi
 https://cdn2.in/7xPunjabihls/live.m3u8
 #EXTINF:-1 tvg-id="9XJalwa.in" channel-id="9XJalwa.in" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png" tvg-country="IN" group-title="Indian Music" tvg-name="9X Jalwa",9X Jalwa
 https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
@@ -5143,7 +5143,7 @@ https://fta.ektv.in/live/678/master.m3u8
 http://15.204.196.147:22880/RECEPCION-DPELICULA-LATAM-FHD/video.m3u8
 #EXTINF:-1 tvg-id="DiscoPoloMusic.pl@SD" tvg-name="Disco Polo Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/disco-polo-music.png" tvg-country="PL" channel-id="DiscoPoloMusic.pl@SD" group-title="New Backups" tvg-content="Music",Disco Polo Music
 http://92.114.85.87:8014/play/a007/index.m3u8
-#EXTINF:-1 tvg-id="DiscoveryChannel.in@SD" tvg-name="Discovery Channel (India) (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-channel-india.png" tvg-country="IN" channel-id="DiscoveryChannel.in@SD" tvg-language="ben;eng;hin;kan;mal;mar;tam;tel" group-title="New Backups",Discovery Channel (India) (720p)
+#EXTINF:-1 tvg-id="DiscoveryChannel.in@HD" channel-id="DiscoveryChannel.in@HD" tvg-language="ben;eng;hin;kan;mal;mar;tam;tel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-channel-india.png" tvg-country="IN" group-title="New Backups" tvg-name="Discovery Channel (India) (HD)",Discovery Channel (India) (HD)
 https://drk6xq0vhn.gpcdn.net/live/discovery_hd_abr/index.m3u8
 #EXTINF:-1 tvg-id="custom.dom-kino-ru-movie" tvg-name="Dom kino" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dom-kino-576p.png" tvg-country="RU" tvg-language="rus" channel-id="custom.dom-kino-ru-movie" group-title="New Backups" tvg-content="Movies",Dom kino
 http://88.212.15.50/live/test_dom_kino/playlist.m3u8
