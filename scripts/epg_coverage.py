@@ -115,7 +115,9 @@ EPG_ALIASES = {
     # Verified against current JioTV/Dish TV source IDs for the same channels.
     "AmarBanglaDigital.in": ["jtv1962"],
     "EpicBhojpuriDigital.in": ["157803", "jtv3384"],
-    "Picture.in": ["And.Pictures.HD.in", "142638", "jtv185"],
+    # Current playlist identity for &Pictures; the old Picture.in key no longer
+    # resolves to a maintained playlist channel ID.
+    "AndPictures.in@SD": ["And.Pictures.HD.in", "142638", "jtv185"],
     # Exact, region-compatible candidates from the 2026-11-04 strict unmapped audit.
     # Cinemax and History resolve to Czech XMLTV identities with current schedules
     # in the Czech regional feed; WeatherSpy resolves to the India Samsung TV Plus
