@@ -6,6 +6,7 @@ from urllib.parse import unquote, urlsplit
 import json
 import re
 import discover_international_channels as discovery
+import discover_bd_in_new_queues as bd_policy
 
 PLAYLIST = Path("International-Playlist.m3u")
 LOGOS = Path("logos")
@@ -70,6 +71,46 @@ def foreign_movie_music_error(a, name, country_code):
     return ""
 
 
+
+INACTIVE_GROUPS = {"backup", "review", "new channels", "new backup", "new backups"}
+FIXED_COUNTRY_GROUPS = {
+    "bangladesh": "BD",
+    "indian bangla": "IN",
+    "indian movies": "IN",
+    "indian music": "IN",
+    "indian entertainment": "IN",
+    "pakistani": "PK",
+}
+
+
+def primary_policy_error(a, name, group, code):
+    """Validate country/content policy for non-Adult active primary rows."""
+    key = str(group or "").strip().casefold()
+    code = str(code or "").strip().upper()
+    if key == "bangladesh":
+        return "" if code == "BD" else "Bangladesh group requires BD channel identity"
+    if key in {"indian bangla", "indian movies", "indian music", "indian entertainment"}:
+        if code != "IN":
+            return "Indian primary group requires IN channel identity"
+        reason = bd_policy.prohibited_channel(a, name, "IN")
+        return reason or ""
+    if key == "pakistani":
+        return "" if not (code != "PK") else "Pakistani group requires PK channel identity"
+    if key == "fashion tv":
+        return "" if discovery.FASHION_RE.search(name) else "invalid Fashion TV exception"
+    if code not in discovery.ISO_CODES:
+        return "active primary row has no verifiable country identity"
+    if key in {"kids", "sports"}:
+        if code == "IN":
+            return ""
+        return f"{group} is only permitted as a primary group for Indian channels"
+    if key in {"religious", "documentary & wildlife"}:
+        return f"{group} is not permitted as a primary group outside Bangladesh"
+    if code in {"BD", "IN"}:
+        return f"{code} channel is in the wrong primary group {group!r}"
+    return foreign_movie_music_error(a, name, code)
+
+
 def main():
     if not PLAYLIST.is_file():
         raise SystemExit("International playlist is missing.")
@@ -113,27 +154,23 @@ def main():
         a = attrs(info)
         name = (a.get("tvg-name") or info.rsplit(",", 1)[-1]).strip()
         group = a.get("group-title", "").strip()
+        group_key = group.casefold()
         if group.casefold() in FORBIDDEN:
             raise SystemExit(f"Forbidden legacy/catch-all group remains: {group!r} ({name}).")
-        group_key = group.casefold()
-        # A dedicated country-group label is itself reliable country evidence.
-        # Fall back to it when optional tvg-country/tvg-id metadata is incomplete.
-        # The explicit country-group label is authoritative when optional metadata is incomplete or inconsistent.
-        code = country_group_labels.get(group_key)
+        if group and group not in group_set:
+            group_set.add(group)
+            groups_seen.append(group)
+
+        # Adult is intentionally outside this audit and is left byte-for-byte
+        # untouched by the reorganization, validation and health-monitor jobs.
+        if group_key == "adult":
+            continue
+
+        # Dedicated group labels are authoritative for regional identity.
+        code = FIXED_COUNTRY_GROUPS.get(group_key) or country_group_labels.get(group_key)
         if code is None:
             code = discovery.country_code(a)
-        if group_key == "fashion tv":
-            if not discovery.FASHION_RE.search(name):
-                raise SystemExit(f"Invalid Fashion TV exception entry: {name!r}.")
-        elif group_key in country_group_labels or group_key == "pakistani":
-            # Dedicated country labels do not exempt legacy rows from the strict
-            # foreign Movies/Music-only policy.
-            code = country_group_labels.get(group_key, "PK")
-            reason = foreign_movie_music_error(a, name, code)
-            if reason:
-                raise SystemExit(
-                    f"Foreign country group violates Movies/Music policy: {name!r} in {group!r} ({reason})."
-                )
+
         if group_key in {"international", "new channels", "new backup", "new backups"}:
             target, reason, code = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
             if target is None:
@@ -142,9 +179,14 @@ def main():
                 content = (a.get("tvg-content") or "").strip().casefold()
                 if content not in {"movies", "movie", "music", "musics"}:
                     raise SystemExit(f"Non-Bangladesh/India review entry is not tagged Movies/Music: {name!r} in {group!r}.")
-        if group and group not in group_set:
-            group_set.add(group)
-            groups_seen.append(group)
+
+        if group_key not in INACTIVE_GROUPS:
+            channel_id = (a.get("tvg-id") or a.get("channel-id") or "").strip()
+            if not channel_id:
+                raise SystemExit(f"Active primary entry lacks an exact channel ID: {name!r}.")
+            reason = primary_policy_error(a, name, group, code)
+            if reason:
+                raise SystemExit(f"Active primary violates regional/content policy: {name!r} in {group!r} ({reason}).")
 
         stream_rows = [
             line.strip() for line in block[1:]
@@ -159,6 +201,8 @@ def main():
             missing_logos += 1
             if group_key in {"new channels", "new backup", "new backups"}:
                 raise SystemExit(f"Manual-review candidate lacks a local logo: {name!r} in {group!r}.")
+            if group_key not in INACTIVE_GROUPS:
+                raise SystemExit(f"Active primary entry is missing a verified local logo: {name!r} in {group!r}.")
             continue
         if logo.startswith(RAW_BASE):
             rel = unquote(urlsplit(logo).path.split("/main/logos/", 1)[-1]).lstrip("/")
