@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 HUM_TV_SOURCE = "https://hum.tv/schedule/"
 HUM_TV_CHANNEL_ID = "HumTV.pk"
 RTV_SOURCE = "https://rtvonline.com/home/"
-RTV_LEGACY_SOURCES = ("https://rtvbd.tv/schedule.php", "https://www.rtvbd.tv/schedule.php")
+RTV_LEGACY_SOURCES = ("https://www.rtvbd.tv/schedule.php", "https://rtvbd.tv/schedule.php")
 RTV_CHANNEL_ID = "RTV.bd"
 BTV_SOURCE = "https://migrate.btvlive.gov.bd/channel/BTV"
 BTV_CHANNEL_ID = "BTVNational.bd"
