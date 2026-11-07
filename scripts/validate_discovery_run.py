@@ -351,7 +351,7 @@ def final_mode(playlist, report, baseline, mode):
     if duplicate_count:
         errors.append(f"{duplicate_count} duplicate stream URLs remain")
     required = (["Backup", "Review", "New Channels", "New Backups"]
-                if mode == "iptv" else ["New Channels", "New Backups", "Backup"])
+                if mode == "iptv" else ["Review", "New Channels", "New Backups", "Backup"])
     registry_line = next((line for line in lines if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")), "")
     try:
         category_registry = json.loads(registry_line.split(":", 1)[1]) if registry_line else []

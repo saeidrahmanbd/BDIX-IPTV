@@ -104,7 +104,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             (root / "logos" / "world-music.svg").write_text("<svg/>", encoding="utf-8")
             content = (
                 '#EXTM3U\n'
-                '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","New Channels","New Backups","Backup"]\n'
+                '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Review","New Channels","New Backups","Backup"]\n'
                 '#EXTINF:-1 tvg-name="Bangladesh One" group-title="Bangladesh",Bangladesh One\n'
                 'https://example.org/bangladesh.m3u8\n'
                 '#EXTINF:-1 tvg-name="World Music" tvg-logo="logos/world-music.svg" tvg-content="Music" group-title="New Channels",World Music\n'
