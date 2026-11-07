@@ -31,6 +31,27 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+      - name: Skip superseded queued code revisions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          check_file() {
+            local path="$1"
+            local event_blob main_blob
+            event_blob="$(git rev-parse "${GITHUB_SHA}:${path}")"
+            main_blob="$(git rev-parse "FETCH_HEAD:${path}")"
+            if [[ "$event_blob" != "$main_blob" ]]; then
+              echo "::notice::Skipping superseded queued health run because ${path} changed on main."
+              exit 0
+            fi
+          }
+          check_file ".github/workflows/international-stream-health.yml"
+          check_file "scripts/international_stream_health.py"
+          check_file "scripts/validate_international_health_output.py"
+          check_file "tests/test_international_stream_health.py"
+          git reset --hard origin/main
+          git clean -fd
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.12'
@@ -40,23 +61,10 @@ jobs:
           python -m unittest discover -s tests -p 'test_international_stream_health.py'
           python -m unittest discover -s tests -p 'test_international_protected_guard.py'
           python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
-      - name: Skip superseded queued run definitions
-        shell: bash
-        run: |
-          set -euo pipefail
-          git fetch origin main
-          EVENT_BLOB="$(git rev-parse "${GITHUB_SHA}:.github/workflows/international-stream-health.yml")"
-          MAIN_BLOB="$(git rev-parse "FETCH_HEAD:.github/workflows/international-stream-health.yml")"
-          if [[ "$EVENT_BLOB" != "$MAIN_BLOB" ]]; then
-            echo "::notice::Skipping superseded queued stream-health run."
-            exit 0
-          fi
-          git reset --hard origin/main
-          git clean -fd
       - name: Probe all International streams and apply three-day policy
         run: python scripts/international_stream_health.py
       - name: Validate playlist structure, metadata preservation and group ordering
-        run: python scripts/validate_international_playlist.py
+        run: python scripts/validate_international_health_output.py
       - name: Validate reports and whitespace
         run: |
           git diff --check
