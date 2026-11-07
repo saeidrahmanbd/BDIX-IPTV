@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-07T14:23:33+00:00**
-Source playlist SHA-256: **84c02ef014377e5b6ba95a227f9783389650950895cfd82aece9c12b369a6a98**
+Generated: **2026-11-07T21:51:06+00:00**
+Source playlist SHA-256: **630592a6da287492f2f8b41b94028eeed5610cf41d3aac44054b2cf6c3bc5e29**
 
-Status: **PASS**
+Status: **BLOCK**
 
-- Current entries: **1005**
+- Current entries: **1004**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -16,14 +16,14 @@ Status: **PASS**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues: **0**
+- Primary channel-number sequence issues: **61**
 - Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **0**
-- Raw resolution/geoblock name tags: **0**
+- Raw resolution/geoblock name tags: **1**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -37,7 +37,8 @@ Status: **PASS**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-No blocking conditions detected.
+- primary channel-number sequence gaps/order errors: 61
+- raw resolution/geoblock tags in channel names: 1
 
 ## Review-queue logo gaps
 
@@ -51,7 +52,7 @@ None.
 
 ## Raw name tags
 
-None.
+- **Discovery Channel (India) (HD)** — Documentary & Wildlife
 
 ## Queue validation
 

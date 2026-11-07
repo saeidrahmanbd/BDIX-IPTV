@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T14:23:52+00:00",
+  "generated": "2026-11-07T21:51:26+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -3191,32 +3191,20 @@
       "primary": 1,
       "backup": 1
     },
-    "discovery": {
-      "names": [
-        "Discovery"
-      ],
-      "ids": [
-        "discovery.us"
-      ],
-      "groups": [
-        "Documentary & Wildlife"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "discoverychannel": {
       "names": [
-        "Discovery Channel (India)"
+        "Discovery Channel (India)",
+        "Discovery Channel (India) (HD)"
       ],
       "ids": [
+        "discoverychannel.in@hd",
         "discoverychannel.in@sd"
       ],
       "groups": [
         "Documentary & Wildlife"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "discoverykids": {
@@ -7818,9 +7806,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "star.jalsha.movies": {
       "names": [
@@ -8478,10 +8466,10 @@
         "Thalaa TV"
       ],
       "ids": [
-        "thalaatv.in"
+        "thalaatv.in@hd"
       ],
       "groups": [
-        "Indian Music"
+        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,
