@@ -138,7 +138,7 @@ def matching_id(tvg_id, catalogue):
         return tvg_id
     if "@" in tvg_id:
         base, suffix = tvg_id.rsplit("@", 1)
-        if (suffix.upper() in QUALITY_SUFFIXES | {"INDIA", "UK", "HINDI", "TELUGU", "ALT1"}) and base in catalogue:
+        if suffix.upper() in (QUALITY_SUFFIXES | {"INDIA", "UK", "HINDI", "TELUGU", "ALT1"}) and base in catalogue:
             return base
     return None
 
