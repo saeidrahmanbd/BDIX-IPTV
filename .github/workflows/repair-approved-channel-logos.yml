@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/repair-approved-channel-logos.yml"
+      - "scripts/repair_approved_logos_20261107.py"
 
 permissions:
   contents: write
@@ -24,7 +25,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install image processors
-        run: python -m pip install --disable-pip-version-check Pillow CairoSVG
+        run: python -m pip install --disable-pip-version-check Pillow
 
       - name: Download and normalize the three sourced logos
         run: python scripts/repair_approved_logos_20261107.py
