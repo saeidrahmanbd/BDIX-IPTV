@@ -201,12 +201,43 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, group, country, tvg_id)[0])
 
+    def test_legacy_foreign_genre_groups_are_quarantined_in_review_not_deleted(self):
+        examples = [
+            ("Cartoon World", "Kids", "US", "CartoonWorld.us"),
+            ("World Sport", "Sports", "DE", "WorldSport.de"),
+            ("Gospel Channel", "Religious", "GB", "GospelChannel.uk"),
+            ("Nature World", "Documentary & Wildlife", "US", "NatureWorld.us"),
+        ]
+        for name, group, country, tvg_id in examples:
+            with self.subTest(name=name):
+                self.assertEqual(
+                    reorg.classify({"group-title": group, "tvg-id": tvg_id, "tvg-country": country},
+                                   name, group, country),
+                    ("Review", reorg.infer_kind(name, group, {"group-title": group, "tvg-id": tvg_id, "tvg-country": country}), None),
+                )
+
+    def test_unknown_country_and_missing_logo_or_id_are_not_promoted(self):
+        self.assertEqual(
+            reorg.classify({"group-title": "International", "tvg-content": "Music", "tvg-id": "UnknownFeed"},
+                           "Unknown Music Service", "International", "ZZ")[0],
+            "Review",
+        )
+
+    def test_adult_policy_is_an_untouched_passthrough(self):
+        row = {
+            "group-title": "Adult",
+            "tvg-id": "adult.example",
+            "tvg-logo": "https://outside.example/adult-logo.png",
+            "tvg-country": "US",
+        }
+        self.assertEqual(reorg.classify(row, "Adult Channel", "Adult", "US"), ("Adult", None, None))
+
     def test_non_movie_music_foreign_religious_channel_is_demoted_from_primary_group(self):
         source = '#EXTINF:-1 tvg-id="custom.hope-channel-proyecto-ja-cr-music" tvg-content="Music" group-title="Costa Rica" tvg-name="Hope Channel PROYECTO JA",Hope Channel PROYECTO JA'
         attrs = reorg.attrs(source)
         self.assertEqual(
             reorg.classify(attrs, "Hope Channel PROYECTO JA", "Costa Rica", "CR"),
-            ("Backup", None, None),
+            ("Review", None, None),
         )
     def test_radio_brands_and_religious_movie_music_false_positives_are_rejected(self):
         for name in ("Hitradio O3", "Bel RTL", "Couleur 3", "Joe FM", "Fame95 FM"):
