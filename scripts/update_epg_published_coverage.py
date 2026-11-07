@@ -16,7 +16,7 @@ GUIDE = ROOT / "epg" / "epg.xml"
 FRESHNESS = ROOT / "reports" / "epg-publish-freshness.md"
 MAPPING = ROOT / "reports" / "epg-channel-mapping.csv"
 RAW_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
-INACTIVE_GROUPS = {"Backup", "Test", "Not Playing", "New Channels", "New Backup"}
+INACTIVE_GROUPS = {"Backup", "Test", "Review", "Not Playing", "New Channels", "New Backups", "New Backup"}
 PLACEHOLDERS = {
     "movie", "movies", "program", "programme", "entertainment", "live", "live tv",
     "tba", "to be announced", "unknown", "schedule", "telecast", "show", "music",
