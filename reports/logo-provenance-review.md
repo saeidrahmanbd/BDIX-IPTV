@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-07T04:55:38+00:00**
+Generated: **2026-11-07T05:03:25+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **6e44e22bfc055b60ad16371a15e76724955d2779304f30257697067d7c545b46**
-- International-Playlist.m3u SHA-256: **b85e17864c09029a1130b5d4bb0c56b20a3020e26ba774e37fff241018c0052f**
+- IPTV-Playlist.m3u SHA-256: **84c02ef014377e5b6ba95a227f9783389650950895cfd82aece9c12b369a6a98**
+- International-Playlist.m3u SHA-256: **c9542371251dc1172e23e2ae39d8c42e29a2df18a0ef4391efc4fdefcb49fff1**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 14 | 0 | 988 |
+| IPTV-Playlist.m3u | 0 | 14 | 0 | 991 |
 | International-Playlist.m3u | 0 | 840 | 0 | 2258 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3246**
+- Logos needing attribution review: **3249**
 - Unofficial fallback logos: **0**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3246 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3249 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|

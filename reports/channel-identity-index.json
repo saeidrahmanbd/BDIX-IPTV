@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T04:55:37+00:00",
+  "generated": "2026-11-07T05:03:24+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -3623,20 +3623,6 @@
       "primary": 1,
       "backup": 3
     },
-    "epicparivar": {
-      "names": [
-        "Sun Bangla"
-      ],
-      "ids": [
-        "epicparivar.in@sd"
-      ],
-      "groups": [
-        "Indian Bangla"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "espn": {
       "names": [
         "ESPN"
@@ -5527,6 +5513,36 @@
       "primary": 1,
       "backup": 0
     },
+    "mhonedilse": {
+      "names": [
+        "MH One Dil Se"
+      ],
+      "ids": [
+        "mhonedilse.in@sd"
+      ],
+      "groups": [
+        "Backup",
+        "Indian Music"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
+    },
+    "mhonemovies": {
+      "names": [
+        "MH One Movies"
+      ],
+      "ids": [
+        "mhonemovies.in@sd"
+      ],
+      "groups": [
+        "Backup",
+        "Indian Movies"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
+    },
     "mksix": {
       "names": [
         "MK Six"
@@ -6843,9 +6859,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "rajdigitalplus": {
       "names": [
@@ -8141,6 +8157,20 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sunbangla": {
+      "names": [
+        "Sun Bangla"
+      ],
+      "ids": [
+        "sunbangla.in@sd"
+      ],
+      "groups": [
+        "Indian Bangla"
       ],
       "streams": 1,
       "primary": 1,

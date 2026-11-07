@@ -1,15 +1,15 @@
 # IPTV Playlist Audit
-Generated: **2026-11-07T04:54:59.038833+00:00**
-Source playlist SHA-256: **6e44e22bfc055b60ad16371a15e76724955d2779304f30257697067d7c545b46**
+Generated: **2026-11-07T05:03:01.648795+00:00**
+Source playlist SHA-256: **84c02ef014377e5b6ba95a227f9783389650950895cfd82aece9c12b369a6a98**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1002**
-- Unique channel IDs: **672**
-- IDs with multiple streams: **183**
+- Playlist entries: **1005**
+- Unique channel IDs: **674**
+- IDs with multiple streams: **185**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -21,7 +21,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1002**
+- Logo references checked: **1005**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
@@ -507,6 +507,12 @@ No normalized same-name/different-ID groups found across groups.
 - ME TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-1/index.m3u8
 - ME TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-2/index.m3u8
 - ME TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-3/index.m3u8
+### mhonedilse.in@sd (2 streams)
+- MH One Dil Se — Indian Music — https://mumt01.tangotv.in/O5aw8Zn3MHONEDILSE/index.m3u8
+- MH One Dil Se — Backup — https://streams.tangotv.in/MHONEDILSE/ORIGIN/index.m3u8
+### mhonemovies.in@sd (2 streams)
+- MH One Movies — Indian Movies — https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/index.m3u8
+- MH One Movies — Backup — https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/tracks-v1a1/mono.m3u8
 ### mksix.in (2 streams)
 - MK Six — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVMKSIX/index.m3u8
 - MK Six — Backup — https://cdn.pishow.tv/ott/live/1253/master.m3u8
@@ -604,10 +610,9 @@ No normalized same-name/different-ID groups found across groups.
 ### qurantv.iq (2 streams)
 - Quran TV — Religious — https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
 - Quran TV — Backup — https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8
-### rajdhanitv.bd (3 streams)
+### rajdhanitv.bd (2 streams)
 - Rajdhani TV — Bangladesh — http://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8
 - Rajdhani TV — Backup — https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8
-- Rajdhani TV — Backup — https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8
 ### rajtv.in@sd (2 streams)
 - Raj TV — Indian Music — https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RAJTV/master_1.m3u8
 - Raj TV — Backup — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/b8640d6b-d131-4401-9451-944e1e65fe79/0.m3u8
@@ -778,7 +783,7 @@ None.
 
 ## Primary Channel-Number Sequence
 
-Contiguous numbering verified: 1–672.
+Contiguous numbering verified: 1–674.
 
 ## Malformed EXTINF Entries
 
@@ -811,7 +816,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1002**
+- Healthy/local references: **1005**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues

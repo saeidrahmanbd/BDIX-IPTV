@@ -1,11 +1,11 @@
 # Cross-Playlist Metadata Backfill
 
-Generated: **2026-11-07T04:54:28+00:00**
+Generated: **2026-11-07T05:02:35+00:00**
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **6e44e22bfc055b60ad16371a15e76724955d2779304f30257697067d7c545b46**
-- International-Playlist.m3u SHA-256: **b85e17864c09029a1130b5d4bb0c56b20a3020e26ba774e37fff241018c0052f**
+- IPTV-Playlist.m3u SHA-256: **84c02ef014377e5b6ba95a227f9783389650950895cfd82aece9c12b369a6a98**
+- International-Playlist.m3u SHA-256: **c9542371251dc1172e23e2ae39d8c42e29a2df18a0ef4391efc4fdefcb49fff1**
 
 Only missing tvg-country and tvg-language values were filled. Source evidence was an exact tvg-id match or an unambiguous exact tvg-name match. Unknown or ambiguous values remain blank.
 The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, stream URLs, or Backup/Not Playing entries.
@@ -14,8 +14,8 @@ The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, st
 
 | Playlist | Entries changed | Country fields filled | Language fields filled | Active entries still missing either field | Stream URL inventory | SHA-256 |
 |---|---:|---:|---:|---:|---|---|
-| IPTV-Playlist.m3u | 0 | 0 | 0 | 0 | unchanged (bf84b9961040...) | 6e44e22bfc055b60ad16371a15e76724955d2779304f30257697067d7c545b46 |
-| International-Playlist.m3u | 0 | 0 | 0 | 1870 | unchanged (03b084500b37...) | b85e17864c09029a1130b5d4bb0c56b20a3020e26ba774e37fff241018c0052f |
+| IPTV-Playlist.m3u | 0 | 0 | 0 | 0 | unchanged (7d8aad9a3fe2...) | 84c02ef014377e5b6ba95a227f9783389650950895cfd82aece9c12b369a6a98 |
+| International-Playlist.m3u | 3 | 0 | 3 | 1867 | unchanged (c331553d8966...) | c9542371251dc1172e23e2ae39d8c42e29a2df18a0ef4391efc4fdefcb49fff1 |
 
 ## Policy
 
