@@ -52,11 +52,11 @@ EPG_ALIASES = {
     "custom.news.18.bangla": ["News18Bangla.in@SD"], "custom.news.18.assam": ["News18AssamNorthEast.in@SD"],
     "custom.aaj.tak": ["AajTak.in@SD"], "custom.10.tv": ["10TV.in@SD"], "custom.good.news.today": ["GoodNewsToday.in@SD"],
     "custom.india.today": ["IndiaToday.in@SD"], "SETASHD": ["SonyEntertainmentTelevision.in@HD"],
-    "new.and.pictures.hd": ["Andpictures.in@HD", "And.Pictures.Tv.Channel.Today.in2"], "SouthStation.in": ["SouthStation.in@HD"],
+    "SouthStation.in": ["SouthStation.in@HD"],
     "custom.epic": ["EpicTV.in@SD"], "custom.isai.aruvi.tv": ["IsaiAruvi.in@SD"], "custom.the.q": ["TheQIndia.us@SD"],
-    "Star Gold Romance.in": ["StarGoldRomance.in@SD", "Star.Gold.Romance.Tv.Channel.Today.in2"],
-    "Enterr10 Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in"], "ColorsInfinity.in": ["ColorsInfinity.in@HD", "ColorsInfinity.in@SD"],
-    "Enter10Bangla.in": ["Enterr10Bangla.in@SD"], "tntsports1.uk": ["TNTSport1.uk", "TNTSports1.uk", "tntsports1.uk"],
+
+ "ColorsInfinity.in": ["ColorsInfinity.in@HD", "ColorsInfinity.in@SD"],
+    "Enter10Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in", "Enterr10Bangla.in@SD"], "tntsports1.uk": ["TNTSport1.uk", "TNTSports1.uk", "tntsports1.uk"],
     "tntsports2.uk": ["TNTSport2.uk", "TNTSports2.uk", "tntsports2.uk"], "tntsports3.uk": ["TNTSport3.uk", "TNTSports3.uk", "tntsports3.uk"],
     "tntsports4.uk": ["TNTSport4.uk", "TNTSports4.uk", "tntsports4.uk"], "skysportsmainevent.uk": ["SkySportsMainEvent.uk", "SkySpMainEvHD.uk", "SkySpMainEv.uk"],
     "skysportspremiereleague.uk": ["SkySportsPremierLeague.uk", "SkySp.PL.HD.uk", "SkySp.PL.uk"],
@@ -66,7 +66,7 @@ EPG_ALIASES = {
     "WildFlixHindi.in": ["IN460000585"],
     "WorldWarTV.us": ["WorldWarTV.uk"],
     "XXTremeJobsHindi.in": ["IN46000011Q"],
-    "custom.sony.max.2": ["143801", "LIVETV_LIVETVCHANNEL_SONY_MAX_2", "jtv483"],
+    "SonyMax2.in@SD": ["143801", "LIVETV_LIVETVCHANNEL_SONY_MAX_2", "jtv483"],
     "MovieSphere.us@AU": ["Moviesphere.au"],
     # Same AU service: exact name match after region suffix, with 64 current
     # programme rows in epg_ripper_AU1 (2026-10-26 strict unmapped audit).
@@ -97,7 +97,7 @@ EPG_ALIASES = {
     "NHBollyFlix.in@HD": ["jtv3336"],
     "PunjabiShorts.in@SD": ["jtv3471"],
     "SonyPix.in@HD": ["LIVETV_LIVETVCHANNEL_SONY_PIX_HD"],
-    "StarMovies.in@HD": ["LIVETV_LIVETVCHANNEL_STAR_MOVIES_HD"],
+    "StarMovies.in": ["LIVETV_LIVETVCHANNEL_STAR_MOVIES_HD"],
     "ThalaaTV.in@HD": ["6601"],
     "TollyTV.in@HD": ["6613"],
     "DisneyChannel.in@HD": ["LIVETV_LIVETVCHANNEL_DISNEY_CHANNEL_HD"],
@@ -117,7 +117,10 @@ EPG_ALIASES = {
     "EpicBhojpuriDigital.in": ["157803", "jtv3384"],
     # Current playlist identity for &Pictures; the old Picture.in key no longer
     # resolves to a maintained playlist channel ID.
-    "AndPictures.in@SD": ["And.Pictures.HD.in", "142638", "jtv185"],
+    "AndPictures.in@SD": [
+        "And.Pictures.HD.in", "142638", "jtv185",
+        "Andpictures.in@HD", "And.Pictures.Tv.Channel.Today.in2",
+    ],
     # Exact, region-compatible candidates from the 2026-11-04 strict unmapped audit.
     # Cinemax and History resolve to Czech XMLTV identities with current schedules
     # in the Czech regional feed; WeatherSpy resolves to the India Samsung TV Plus
