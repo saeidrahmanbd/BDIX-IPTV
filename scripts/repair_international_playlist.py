@@ -251,6 +251,8 @@ def classify_primary_group(info,current):
  if current_key=='bangla' or country=='BD':return 'Bangladesh'
  if country=='PK':return 'Pakistani'
  if country=='IN':
+  if n in kids or re.search(r'baby shark|cartoon network|discovery kids|disney|doraemon|duck tv|epic kids|kartoon|kiddo matix|lego channel|moonbug|mr bean animated|nick bangla|pogo|pbs kids|powerkids|smurf tv|strawberry shortcake|teen.?nick|teletubbies|tiny pop|tom and jerry|toonami|toongoggles|zoomoo|wow kidz|zb cartoon|tooku',name,re.I):return 'Kids'
+  if re.search(r'\b(?:sports?|cricket|football|soccer|tennis|racing|motorsport|espn|star sports|sony sports|dd sports)\b',name,re.I):return 'Sports'
   if language=='ben':return 'Indian Bangla'
   if re.search(r'music|musix|9xm|9x jalwa|9x jhakaas|9x tashan|7s music|mtv|vh1|stingray|xite|v2beat|now rock|now 70s|now 80s|trace urban|totalmusic|cmt\b|axs tv',name,re.I):return 'Indian Music'
   if re.search(r'movie|movies|cinema|cineplex|film|pictures|sony max|\bmax 2\b|\bpix\b|the movie club|zee action|pitaara|gravitas',name,re.I):return 'Indian Movies'
