@@ -1,6 +1,6 @@
 # Stream Health Report
 
-Generated: **2026-11-07T05:09:20+00:00**
+Generated: **2026-11-07T05:11:15+00:00**
 Stream URL inventory SHA-256: **2ddd67b44c66c677d8f18c0cdad42192f67d94dee94a15308da6ab860cdeef78**
 
 Probe environment: **GitHub-hosted ubuntu-latest runner**.
@@ -9,10 +9,10 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 ## Summary
 
 - Streams tested: **1005**
-- Reachable: **956**
-- Failed this check: **49**
+- Reachable: **949**
+- Failed this check: **56**
 - Persistent failures (3+ consecutive): **48**
-- Intermittent failures: **1**
+- Intermittent failures: **8**
 - Primary tested: **674**
 - Backup tested: **331**
 - Review-queue entries tested: **0**
@@ -20,112 +20,119 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 
 ## Failure Classification
 
-- HTTP 401/403 (access/auth): **44**
-- HTTP 404 (not found): **3**
-- HTTP 5xx (server): **2**
+- HTTP 401/403 (access/auth): **45**
+- HTTP 404 (not found): **2**
+- HTTP 5xx (server): **9**
 
 ## Persistent Failures
 
-- **9X Jalwa** — Backup — consecutive failures: **42** — HTTP 403
-- **Aakaash Aath** — Backup — consecutive failures: **42** — HTTP 403
-- **DD National** — Backup — consecutive failures: **5** — HTTP 403
-- **Dangal 2** — Backup — consecutive failures: **42** — HTTP 403
-- **Epic Bhojpuri** — Backup — consecutive failures: **42** — HTTP 403
-- **Goldmines 2** — Backup — consecutive failures: **42** — HTTP 403
-- **Goldmines Action** — Backup — consecutive failures: **42** — HTTP 403
-- **Goldmines Bollywood** — Backup — consecutive failures: **42** — HTTP 403
-- **Kairali TV** — Backup — consecutive failures: **42** — HTTP 403
-- **Kairali We** — Backup — consecutive failures: **23** — HTTP 403
-- **Khushboo Bangla** — Backup — consecutive failures: **42** — HTTP 403
-- **MH One Movies** — Backup — consecutive failures: **4** — HTTP 403
-- **Madhimugam TV** — Backup — consecutive failures: **42** — HTTP 403
-- **Mazhavil Manorama** — Backup — consecutive failures: **42** — HTTP 403
-- **Ramdhenu** — Backup — consecutive failures: **42** — HTTP 403
-- **Star Sports 2** — Backup — consecutive failures: **30** — HTTP 403
-- **Ultimate TV** — Backup — consecutive failures: **4** — HTTP 404
-- **Aakaash Aath** — Indian Bangla — consecutive failures: **42** — HTTP 403
-- **Khushboo Bangla** — Indian Bangla — consecutive failures: **42** — HTTP 403
-- **Asianet Middle East** — Indian Entertainment — consecutive failures: **42** — HTTP 403
-- **Food Food** — Indian Entertainment — consecutive failures: **42** — HTTP 403
-- **Kairali Arabia** — Indian Entertainment — consecutive failures: **42** — HTTP 403
-- **Kerala Vision** — Indian Entertainment — consecutive failures: **42** — HTTP 403
-- **Mahaa Max** — Indian Entertainment — consecutive failures: **42** — HTTP 403
-- **Pear TV** — Indian Entertainment — consecutive failures: **42** — HTTP 403
-- **Siri Kannada** — Indian Entertainment — consecutive failures: **42** — HTTP 403
-- **Studio Yuva** — Indian Entertainment — consecutive failures: **42** — HTTP 403
-- **Sun Surya** — Indian Entertainment — consecutive failures: **28** — HTTP 403
-- **Sun TV** — Indian Entertainment — consecutive failures: **28** — HTTP 403
-- **Vanitha TV** — Indian Entertainment — consecutive failures: **42** — HTTP 403
-- **Epic Bhojpuri** — Indian Movies — consecutive failures: **42** — HTTP 403
-- **Goldmines 2** — Indian Movies — consecutive failures: **42** — HTTP 403
-- **Goldmines Action** — Indian Movies — consecutive failures: **42** — HTTP 403
-- **MH One Movies** — Indian Movies — consecutive failures: **4** — HTTP 403
-- **7S Music** — Indian Music — consecutive failures: **42** — HTTP 403
-- **Andy Haryana** — Indian Music — consecutive failures: **42** — HTTP 403
-- **Kappa TV (Music)** — Indian Music — consecutive failures: **42** — HTTP 403
-- **MH One Dil Se** — Indian Music — consecutive failures: **4** — HTTP 403
-- **Raj Musix Kannada** — Indian Music — consecutive failures: **42** — HTTP 403
-- **Ramdhenu** — Indian Music — consecutive failures: **42** — HTTP 403
-- **Sangeet Bhojpuri** — Indian Music — consecutive failures: **42** — HTTP 403
-- **Cook & Bake** — International — consecutive failures: **102** — HTTP 504
-- **Lifetime** — International — consecutive failures: **78** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **11** — HTTP 403
-- **KidDo MATIX** — Kids — consecutive failures: **39** — HTTP 504
-- **Kabaddi 24x7** — Sports — consecutive failures: **5** — HTTP 404
-- **Star Sports 2** — Sports — consecutive failures: **78** — HTTP 403
-- **TAPMAD** — Sports — consecutive failures: **30** — HTTP 403
+- **9X Jalwa** — Backup — consecutive failures: **43** — HTTP 403
+- **Aakaash Aath** — Backup — consecutive failures: **43** — HTTP 403
+- **DD National** — Backup — consecutive failures: **6** — HTTP 403
+- **Dangal 2** — Backup — consecutive failures: **43** — HTTP 403
+- **Epic Bhojpuri** — Backup — consecutive failures: **43** — HTTP 403
+- **Goldmines 2** — Backup — consecutive failures: **43** — HTTP 403
+- **Goldmines Action** — Backup — consecutive failures: **43** — HTTP 403
+- **Goldmines Bollywood** — Backup — consecutive failures: **43** — HTTP 403
+- **Kairali TV** — Backup — consecutive failures: **43** — HTTP 403
+- **Kairali We** — Backup — consecutive failures: **24** — HTTP 403
+- **Khushboo Bangla** — Backup — consecutive failures: **43** — HTTP 403
+- **MH One Movies** — Backup — consecutive failures: **5** — HTTP 403
+- **Madhimugam TV** — Backup — consecutive failures: **43** — HTTP 403
+- **Mazhavil Manorama** — Backup — consecutive failures: **43** — HTTP 403
+- **Ramdhenu** — Backup — consecutive failures: **43** — HTTP 403
+- **Star Sports 2** — Backup — consecutive failures: **31** — HTTP 403
+- **Taaza TV** — Backup — consecutive failures: **3** — HTTP 404
+- **Aakaash Aath** — Indian Bangla — consecutive failures: **43** — HTTP 403
+- **Khushboo Bangla** — Indian Bangla — consecutive failures: **43** — HTTP 403
+- **Asianet Middle East** — Indian Entertainment — consecutive failures: **43** — HTTP 403
+- **Food Food** — Indian Entertainment — consecutive failures: **43** — HTTP 403
+- **Kairali Arabia** — Indian Entertainment — consecutive failures: **43** — HTTP 403
+- **Kerala Vision** — Indian Entertainment — consecutive failures: **43** — HTTP 403
+- **Mahaa Max** — Indian Entertainment — consecutive failures: **43** — HTTP 403
+- **Pear TV** — Indian Entertainment — consecutive failures: **43** — HTTP 403
+- **Siri Kannada** — Indian Entertainment — consecutive failures: **43** — HTTP 403
+- **Studio Yuva** — Indian Entertainment — consecutive failures: **43** — HTTP 403
+- **Sun Surya** — Indian Entertainment — consecutive failures: **29** — HTTP 403
+- **Sun TV** — Indian Entertainment — consecutive failures: **29** — HTTP 403
+- **Vanitha TV** — Indian Entertainment — consecutive failures: **43** — HTTP 403
+- **Epic Bhojpuri** — Indian Movies — consecutive failures: **43** — HTTP 403
+- **Goldmines 2** — Indian Movies — consecutive failures: **43** — HTTP 403
+- **Goldmines Action** — Indian Movies — consecutive failures: **43** — HTTP 403
+- **MH One Movies** — Indian Movies — consecutive failures: **5** — HTTP 403
+- **7S Music** — Indian Music — consecutive failures: **43** — HTTP 403
+- **Andy Haryana** — Indian Music — consecutive failures: **43** — HTTP 403
+- **Kappa TV (Music)** — Indian Music — consecutive failures: **43** — HTTP 403
+- **MH One Dil Se** — Indian Music — consecutive failures: **5** — HTTP 403
+- **Raj Musix Kannada** — Indian Music — consecutive failures: **43** — HTTP 403
+- **Ramdhenu** — Indian Music — consecutive failures: **43** — HTTP 403
+- **Sangeet Bhojpuri** — Indian Music — consecutive failures: **43** — HTTP 403
+- **Cook & Bake** — International — consecutive failures: **103** — HTTP 504
+- **Lifetime** — International — consecutive failures: **79** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **12** — HTTP 403
+- **KidDo MATIX** — Kids — consecutive failures: **40** — HTTP 504
+- **Kabaddi 24x7** — Sports — consecutive failures: **6** — HTTP 404
+- **Star Sports 2** — Sports — consecutive failures: **79** — HTTP 403
+- **TAPMAD** — Sports — consecutive failures: **31** — HTTP 403
 
 ## Failed This Check
 
-- **9X Jalwa** — Backup — streak 42 — HTTP 403
-- **Aakaash Aath** — Backup — streak 42 — HTTP 403
-- **DD National** — Backup — streak 5 — HTTP 403
-- **Dangal 2** — Backup — streak 42 — HTTP 403
-- **Epic Bhojpuri** — Backup — streak 42 — HTTP 403
-- **Goldmines 2** — Backup — streak 42 — HTTP 403
-- **Goldmines Action** — Backup — streak 42 — HTTP 403
-- **Goldmines Bollywood** — Backup — streak 42 — HTTP 403
-- **Kairali TV** — Backup — streak 42 — HTTP 403
-- **Kairali We** — Backup — streak 23 — HTTP 403
-- **Khushboo Bangla** — Backup — streak 42 — HTTP 403
-- **MH One Movies** — Backup — streak 4 — HTTP 403
-- **Madhimugam TV** — Backup — streak 42 — HTTP 403
-- **Mazhavil Manorama** — Backup — streak 42 — HTTP 403
-- **Ramdhenu** — Backup — streak 42 — HTTP 403
-- **Star Sports 2** — Backup — streak 30 — HTTP 403
-- **Taaza TV** — Backup — streak 2 — HTTP 404
-- **Ultimate TV** — Backup — streak 4 — HTTP 404
-- **Aakaash Aath** — Indian Bangla — streak 42 — HTTP 403
-- **Khushboo Bangla** — Indian Bangla — streak 42 — HTTP 403
-- **Asianet Middle East** — Indian Entertainment — streak 42 — HTTP 403
-- **Food Food** — Indian Entertainment — streak 42 — HTTP 403
-- **Kairali Arabia** — Indian Entertainment — streak 42 — HTTP 403
-- **Kerala Vision** — Indian Entertainment — streak 42 — HTTP 403
-- **Mahaa Max** — Indian Entertainment — streak 42 — HTTP 403
-- **Pear TV** — Indian Entertainment — streak 42 — HTTP 403
-- **Siri Kannada** — Indian Entertainment — streak 42 — HTTP 403
-- **Studio Yuva** — Indian Entertainment — streak 42 — HTTP 403
-- **Sun Surya** — Indian Entertainment — streak 28 — HTTP 403
-- **Sun TV** — Indian Entertainment — streak 28 — HTTP 403
-- **Vanitha TV** — Indian Entertainment — streak 42 — HTTP 403
-- **Epic Bhojpuri** — Indian Movies — streak 42 — HTTP 403
-- **Goldmines 2** — Indian Movies — streak 42 — HTTP 403
-- **Goldmines Action** — Indian Movies — streak 42 — HTTP 403
-- **MH One Movies** — Indian Movies — streak 4 — HTTP 403
-- **7S Music** — Indian Music — streak 42 — HTTP 403
-- **Andy Haryana** — Indian Music — streak 42 — HTTP 403
-- **Kappa TV (Music)** — Indian Music — streak 42 — HTTP 403
-- **MH One Dil Se** — Indian Music — streak 4 — HTTP 403
-- **Raj Musix Kannada** — Indian Music — streak 42 — HTTP 403
-- **Ramdhenu** — Indian Music — streak 42 — HTTP 403
-- **Sangeet Bhojpuri** — Indian Music — streak 42 — HTTP 403
-- **Cook & Bake** — International — streak 102 — HTTP 504
-- **Lifetime** — International — streak 78 — HTTP 403
-- **Teleritmo** — International — streak 11 — HTTP 403
-- **KidDo MATIX** — Kids — streak 39 — HTTP 504
-- **Kabaddi 24x7** — Sports — streak 5 — HTTP 404
-- **Star Sports 2** — Sports — streak 78 — HTTP 403
-- **TAPMAD** — Sports — streak 30 — HTTP 403
+- **9X Jalwa** — Backup — streak 43 — HTTP 403
+- **Aakaash Aath** — Backup — streak 43 — HTTP 403
+- **Channel 1** — Backup — streak 1 — HTTP 500
+- **Channel S** — Backup — streak 1 — HTTP 500
+- **DD National** — Backup — streak 6 — HTTP 403
+- **Dangal 2** — Backup — streak 43 — HTTP 403
+- **Epic Bhojpuri** — Backup — streak 43 — HTTP 403
+- **G TV** — Backup — streak 1 — HTTP 500
+- **Global TV** — Backup — streak 1 — HTTP 500
+- **Goldmines 2** — Backup — streak 43 — HTTP 403
+- **Goldmines Action** — Backup — streak 43 — HTTP 403
+- **Goldmines Bollywood** — Backup — streak 43 — HTTP 403
+- **Kairali TV** — Backup — streak 43 — HTTP 403
+- **Kairali We** — Backup — streak 24 — HTTP 403
+- **Khushboo Bangla** — Backup — streak 43 — HTTP 403
+- **MH One Movies** — Backup — streak 5 — HTTP 403
+- **Madhimugam TV** — Backup — streak 43 — HTTP 403
+- **Mazhavil Manorama** — Backup — streak 43 — HTTP 403
+- **Ramdhenu** — Backup — streak 43 — HTTP 403
+- **Shanson TV** — Backup — streak 1 — HTTP 403
+- **Star Sports 2** — Backup — streak 31 — HTTP 403
+- **Taaza TV** — Backup — streak 3 — HTTP 404
+- **Aakaash Aath** — Indian Bangla — streak 43 — HTTP 403
+- **Khushboo Bangla** — Indian Bangla — streak 43 — HTTP 403
+- **Asianet Middle East** — Indian Entertainment — streak 43 — HTTP 403
+- **Food Food** — Indian Entertainment — streak 43 — HTTP 403
+- **Kairali Arabia** — Indian Entertainment — streak 43 — HTTP 403
+- **Kerala Vision** — Indian Entertainment — streak 43 — HTTP 403
+- **Mahaa Max** — Indian Entertainment — streak 43 — HTTP 403
+- **Pear TV** — Indian Entertainment — streak 43 — HTTP 403
+- **Siri Kannada** — Indian Entertainment — streak 43 — HTTP 403
+- **Sooriyan TV** — Indian Entertainment — streak 1 — HTTP 502
+- **Studio Yuva** — Indian Entertainment — streak 43 — HTTP 403
+- **Sun Surya** — Indian Entertainment — streak 29 — HTTP 403
+- **Sun TV** — Indian Entertainment — streak 29 — HTTP 403
+- **Vanitha TV** — Indian Entertainment — streak 43 — HTTP 403
+- **Epic Bhojpuri** — Indian Movies — streak 43 — HTTP 403
+- **Goldmines 2** — Indian Movies — streak 43 — HTTP 403
+- **Goldmines Action** — Indian Movies — streak 43 — HTTP 403
+- **MH One Movies** — Indian Movies — streak 5 — HTTP 403
+- **7S Music** — Indian Music — streak 43 — HTTP 403
+- **Andy Haryana** — Indian Music — streak 43 — HTTP 403
+- **Deewana** — Indian Music — streak 1 — HTTP 502
+- **Kappa TV (Music)** — Indian Music — streak 43 — HTTP 403
+- **MH One Dil Se** — Indian Music — streak 5 — HTTP 403
+- **Raj Musix Kannada** — Indian Music — streak 43 — HTTP 403
+- **Ramdhenu** — Indian Music — streak 43 — HTTP 403
+- **Sangeet Bhojpuri** — Indian Music — streak 43 — HTTP 403
+- **Cook & Bake** — International — streak 103 — HTTP 504
+- **Lifetime** — International — streak 79 — HTTP 403
+- **Teleritmo** — International — streak 12 — HTTP 403
+- **Doraemon TV** — Kids — streak 1 — HTTP 502
+- **KidDo MATIX** — Kids — streak 40 — HTTP 504
+- **Kabaddi 24x7** — Sports — streak 6 — HTTP 404
+- **Star Sports 2** — Sports — streak 79 — HTTP 403
+- **TAPMAD** — Sports — streak 31 — HTTP 403
 
 ## Near-Duplicate URL Families
 
