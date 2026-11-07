@@ -194,6 +194,8 @@ jobs:
             python scripts/repair_logo_asset_technical_quality.py --fix
             python scripts/reconcile_backup_metadata_exact_id.py
             python scripts/renumber_active_channels.py IPTV-Playlist.m3u
+            # Final canonical group order after every playlist mutator.
+            python scripts/sort_playlists.py IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
             python scripts/verify_international_protected.py verify
           }
