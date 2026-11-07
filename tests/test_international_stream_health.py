@@ -17,7 +17,8 @@ def row(name="Test Movie", group="International Movies", url="https://example.te
 
 def apply(text, state, history, day, status=404, reason="HTTP 404"):
     _, blocks = health.parse(text)
-    values = [{"state": state, "status": status, "reason": reason} for _ in blocks]
+    monitored = [block for block in blocks if health.group_of(block[0]).casefold() != "adult"]
+    values = [{"state": state, "status": status, "reason": reason} for _ in monitored]
     return health.apply_results(text, values, history, day)
 
 
@@ -70,6 +71,38 @@ class InternationalStreamHealthTests(unittest.TestCase):
         self.assertIn('group-title="International Movies"', output)
         self.assertEqual(events[0]["action"], "restored")
         self.assertEqual(events[0]["streak"], 0)
+
+    def test_adult_rows_are_not_probed_or_rewritten(self):
+        adult = (
+            '#EXTINF:-1 tvg-name="Adult Feed" group-title="Adult",Adult Feed\n'
+            '# a protected comment\n'
+            'https://adult.example.test/live.m3u8\n'
+        )
+        source = (
+            "#EXTM3U\n"
+            '#PLAYLIST-STUDIO-CATEGORIES:["International Movies","Adult","Review","New Channels","New Backups","Backup"]\n'
+            + adult + row()
+        )
+        output, history, events = apply(source, "ok", {}, "2026-11-07", status=200)
+        _, output_blocks = health.parse(output)
+        output_adult = next(block for block in output_blocks if health.group_of(block[0]) == "Adult")
+        self.assertEqual("\\n".join(output_adult) + "\\n", adult)
+        self.assertEqual(len(events), 1)
+        self.assertEqual(len(history["entries"]), 1)
+        self.assertNotIn("Adult Feed", "\\n".join(record.get("name", "") for record in history["entries"].values()))
+
+    def test_adult_rows_do_not_block_structural_validation_or_duplicate_url_audit(self):
+        adult = (
+            '#EXTINF:-1 tvg-name="Adult Feed" group-title="Adult",Adult Feed\n'
+            'https://adult.example.test/duplicate.m3u8\n'
+        )
+        source = (
+            "#EXTM3U\n"
+            '#PLAYLIST-STUDIO-CATEGORIES:["Adult","International Movies","Review","New Channels","New Backups","Backup"]\n'
+            + adult
+            + row(url="https://adult.example.test/duplicate.m3u8")
+        )
+        self.assertTrue(health.validate_rendered_playlist(source))
 
     def test_token_rotation_does_not_reset_history(self):
         one = row(url="https://example.test/live/user/pass/12.m3u8?token=old")
