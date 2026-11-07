@@ -193,6 +193,10 @@ def classify(a, name, group, country):
     key = channel_key(name)
     joined = f"{name} {a.get('tvg-id', '')} {a.get('channel-id', '')}"
 
+    # Adult entries are explicitly outside this policy pass and remain untouched.
+    if group_key == "adult":
+        return "Adult", None, None
+
     # Health-flagged rows remain in Review until the stream checker clears them.
     if group_key == "review":
         return "Review", infer_kind(name, group, a), None
@@ -226,8 +230,8 @@ def classify(a, name, group, country):
     # Educational/Business-Finance are excluded; Kids and Sports remain eligible.
     if country == "IN" or group in INDIAN_GROUPS:
         reason = bd_policy.prohibited_channel(a, name, "IN")
-        if reason:
-            return "Backup", None, None
+        if reason or group_key == "religious":
+            return "Review", None, None
         if KIDS_RE.search(joined) or group == "Kids":
             return "Kids", None, None
         if SPORTS_RE.search(joined) or group == "Sports":
@@ -240,6 +244,16 @@ def classify(a, name, group, country):
             return "Indian Music", None, None
         return "Indian Entertainment", None, None
 
+    # Unknown country identity must be reviewed rather than silently treated
+    # as an International Movies/Music channel.
+    if country not in discovery.ISO_CODES:
+        return "Review", infer_kind(name, group, a), None
+
+    # Legacy foreign genre groups are not grandfathered: only Bangladesh and
+    # India may keep the Kids/Sports/Religious/Documentary categories.
+    if group_key in {"documentary & wildlife", "kids", "religious", "sports"}:
+        return "Review", infer_kind(name, group, a), None
+
     # Every country other than Bangladesh and India is strictly Movies/Music.
     # Run the canonical policy even for legacy rows so a News/general-entertainment
     # label cannot pass because of a misleading tvg-content tag.
@@ -251,14 +265,14 @@ def classify(a, name, group, country):
         policy_attrs, name, allow_legacy_group=True
     )
     if target is None:
-        return "Backup", None, None
+        return "Review", None, None
     genre = discovery.infer_genre(policy_attrs, name)
     kind = "movie" if genre == "Movies" else "music" if genre == "Music" else infer_kind(name, group, a)
     if verified_country == "PK" or country == "PK" or group == "Pakistani":
         return "Pakistani", kind, None
     if kind:
         return "__FOREIGN__", kind, None
-    return "Backup", None, None
+    return "Review", None, None
 
 def set_extinf(block, name, group, country, content_kind, keep_logo, is_queue=False):
     left, _ = split_info(block[0])
@@ -307,7 +321,7 @@ def main():
         raise SystemExit("International-Playlist.m3u is missing; refusing to create it.")
     original = PLAYLIST.read_text(encoding="utf-8-sig")
     preamble, blocks = parse_playlist(original)
-    staged, removed, preserved = [], Counter(), Counter()
+    staged, adult_rows, removed, preserved = [], [], Counter(), Counter()
     names_normalized = malformed_options = invalid_logos = 0
 
     for block in blocks:
@@ -316,6 +330,14 @@ def main():
             continue
         left, display = split_info(block[0])
         a0 = attrs(left)
+        raw_group = a0.get("group-title", "").strip()
+        if raw_group.casefold() == "adult":
+            adult_name = a0.get("tvg-name") or display
+            adult_rows.append({
+                "block": list(block), "group": "Adult", "name": adult_name,
+                "key": channel_key(adult_name), "url": url_of(block),
+            })
+            continue
         options = {key: a0[key] for key in ("http-user-agent", "http-referrer") if a0.get(key)}
         for option in options:
             left = re.sub(rf'\s+{re.escape(option)}="[^"]*"', "", left)
@@ -346,6 +368,16 @@ def main():
         logo = a.get("tvg-logo", "")
         local_logo = local_logo_path(logo)
         invalid_logos += int(bool(logo) and local_logo is None)
+        channel_id = (a.get("tvg-id") or a.get("channel-id") or "").strip()
+        if target not in {"Review", "Backup", "New Channels", "New Backups"}:
+            if not channel_id:
+                target = "Review"
+                preserved["active entries without an exact channel ID moved to Review"] += 1
+            elif not local_logo:
+                target = "Review"
+                preserved["active entries without a verified local logo moved to Review"] += 1
+        if target == "Review" and group.casefold() != "review":
+            preserved["out-of-policy or unverified primary entries moved to Review"] += 1
         extras = [line for line in block[1:] if line.strip()
                   and not line.strip().startswith(("http://", "https://"))
                   and not re.match(r"#EXTVLCOPT:http-(?:user-agent|referrer)=", line.strip(), re.I)]
@@ -353,8 +385,8 @@ def main():
             "block": block, "a": a, "name": name, "key": channel_key(name),
             "group": target, "country": country, "kind": kind, "content_kind": kind,
             "url": url, "options": options, "extras": extras, "keep_logo": local_logo is not None,
-            "was_backup": group.casefold() in BACKUP_GROUPS or is_protected,
-            "was_review": group.casefold() == "review",
+            "was_backup": group.casefold() in BACKUP_GROUPS or is_protected or target == "Review",
+            "was_review": group.casefold() == "review" or target == "Review",
             "was_protected": is_protected,
             "identity": (a.get("tvg-id") or a.get("channel-id") or channel_key(name)).strip().casefold(),
         })
@@ -434,6 +466,10 @@ def main():
         else:
             removed["orphan backup outside policy"] += 1
 
+    # Adult blocks are appended verbatim: no metadata normalization, logo checks,
+    # deduplication, policy reclassification or URL-history mutation is applied.
+    output.extend(adult_rows)
+
     present = {row["group"] for row in output}
     dynamic = sorted(group for group in present if group not in FIXED + TAIL and group.casefold() != "international")
     international_bucket = ["International"] if any(group.casefold() == "international" for group in present) else []
@@ -456,13 +492,18 @@ def main():
         name = a.get("tvg-name") or split_info(block[0])[1]
         group = a.get("group-title", "").strip()
         url = url_of(block)
-        if not group or not url:
+        if not group:
             raise SystemExit(f"Malformed final entry: {name}")
         if group != last_group:
             if group in groups_seen:
                 raise SystemExit(f"Category group is split: {group}")
             groups_seen.append(group)
             last_group = group
+        if group.casefold() == "adult":
+            group_counts[group] += 1
+            continue
+        if not url:
+            raise SystemExit(f"Malformed final entry without URL: {name}")
         if re.search(r"\b\d{3,4}\s*[pi]\b|\bgeo[\s-]?blocked\b|\bnot\s*24/7\b", name, re.I):
             raise SystemExit(f"Name was not normalized: {name}")
         if a.get("tvg-logo") and local_logo_path(a["tvg-logo"]) is None:
