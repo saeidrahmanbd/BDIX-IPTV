@@ -162,15 +162,6 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         # the baseline must be recorded before the mutation block runs
         self.assertIn("python scripts/verify_international_protected.py snapshot", workflow)
 
-    def test_blocked_maintenance_dashboard_recovery_never_writes_playlist_bytes(self):
-        workflow = WORKFLOW.read_text(encoding="utf-8")
-        recovery = workflow[workflow.index("Publish fresh dashboard diagnostics after blocked maintenance"):]
-        self.assertNotIn("git add IPTV-Playlist.m3u International-Playlist.m3u", recovery)
-        self.assertIn("git diff --exit-code -- IPTV-Playlist.m3u International-Playlist.m3u", recovery)
-        recovery_script = (ROOT / "scripts" / "refresh_dashboard_diagnostics.py").read_text(encoding="utf-8")
-        self.assertNotIn('run_script("scripts/iptv_metadata_backfill.py")', recovery_script)
-        self.assertNotIn('run_script("scripts/backfill_cross_playlist_metadata.py")', recovery_script)
-
         # After the mutation block: audit -> gate -> reports -> freshness.
         audit = pos(after, "python scripts/audit_playlist.py")
         gate = pos(after, "python scripts/pre_publish_gate.py")
@@ -187,6 +178,15 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertLess(provenance, metadata_report)
         self.assertLess(metadata_report, dashboard)
         self.assertLess(dashboard, freshness)
+
+    def test_blocked_maintenance_dashboard_recovery_never_writes_playlist_bytes(self):
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        recovery = workflow[workflow.index("Publish fresh dashboard diagnostics after blocked maintenance"):]
+        self.assertNotIn("git add IPTV-Playlist.m3u International-Playlist.m3u", recovery)
+        self.assertIn("git diff --exit-code -- IPTV-Playlist.m3u International-Playlist.m3u", recovery)
+        recovery_script = (ROOT / "scripts" / "refresh_dashboard_diagnostics.py").read_text(encoding="utf-8")
+        self.assertNotIn('run_script("scripts/iptv_metadata_backfill.py")', recovery_script)
+        self.assertNotIn('run_script("scripts/backfill_cross_playlist_metadata.py")', recovery_script)
 
 
 if __name__ == "__main__":
