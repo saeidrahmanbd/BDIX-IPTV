@@ -46,7 +46,8 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertEqual(updated.count('tvg-id="X.bd"'), 3)
         self.assertEqual(stats["orphan_backups_quarantined"], 1)
         self.assertIn('group-title="Review"', updated)
-        self.assertNotIn('Orphan Channel\n', updated.split('https://stream.example/orphan.m3u8')[0][-200:])
+        orphan_info = updated.split('https://stream.example/orphan.m3u8')[0].split('#EXTINF:')[-1]
+        self.assertIn('group-title="Review"', orphan_info)
 
     def test_orphan_and_legacy_not_playing_are_review_only(self):
         updated, stats, errors = repair_playlist_text(self.sample)
