@@ -95,7 +95,9 @@ def primary_policy_error(a, name, group, code):
         reason = bd_policy.prohibited_channel(a, name, "IN")
         return reason or ""
     if key == "pakistani":
-        return "" if not (code != "PK") else "Pakistani group requires PK channel identity"
+        if code != "PK":
+            return "Pakistani group requires PK channel identity"
+        return foreign_movie_music_error(a, name, code)
     if key == "fashion tv":
         return "" if discovery.FASHION_RE.search(name) else "invalid Fashion TV exception"
     if code not in discovery.ISO_CODES:
@@ -108,7 +110,15 @@ def primary_policy_error(a, name, group, code):
         return f"{group} is not permitted as a primary group outside Bangladesh"
     if code in {"BD", "IN"}:
         return f"{code} channel is in the wrong primary group {group!r}"
-    return foreign_movie_music_error(a, name, code)
+    reason = foreign_movie_music_error(a, name, code)
+    if reason:
+        return reason
+    if code == "PK":
+        return "Pakistani channels must use the Pakistani primary group"
+    expected_group = discovery.country_group(code)
+    if key not in {"international", expected_group.casefold()}:
+        return f"{code} channel must use {expected_group!r} or International"
+    return ""
 
 
 def main():
