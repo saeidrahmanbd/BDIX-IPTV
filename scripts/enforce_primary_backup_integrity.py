@@ -277,6 +277,8 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
                     stats["restricted_backups_reviewed"] += 1
                     continue
                 if target in PRIMARY_GROUPS:
+                    if "ntv.in" in ids and not attrs(info).get("tvg-logo", "").strip():
+                        info = set_attr(info, "tvg-logo", RAW_LOGO_BASE + "ntv-malayalam.svg")
                     info = set_group(info, target)
                     info = remove_attr(info, "tvg-chno")
                     record[0] = info
