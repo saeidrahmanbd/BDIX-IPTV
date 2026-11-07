@@ -6,7 +6,7 @@ import re
 
 P = Path("IPTV-Playlist.m3u")
 ACTIVE = {"Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports"}
-REVIEW_PRIORITY = {"New Channels": 3, "New Backup": 2, "Not Playing": 1}
+REVIEW_PRIORITY = {"New Channels": 4, "New Backups": 3, "New Backup": 3, "Review": 2, "Not Playing": 2}
 REVIEW = set(REVIEW_PRIORITY)
 ATTR = re.compile(r'([\w-]+)="([^"]*)"')
 ID_COUNTRY_RE = re.compile(r"\.([a-z]{2})(?:@|$)", re.I)
