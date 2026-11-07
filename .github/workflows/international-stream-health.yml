@@ -7,6 +7,7 @@ on:
       - '.github/workflows/international-stream-health.yml'
       - '.github/workflows/changelog.yml'
       - 'scripts/international_stream_health.py'
+      - 'scripts/validate_international_health_output.py'
       - 'tests/test_international_stream_health.py'
   schedule:
     - cron: '30 4 * * *' # 10:30 Asia/Dhaka; discovery remains scheduled separately at 07:00.
@@ -35,7 +36,7 @@ jobs:
           python-version: '3.12'
       - name: Compile checker and run policy tests
         run: |
-          python -m py_compile scripts/international_stream_health.py scripts/reorganize_international_playlist.py scripts/discover_international_channels.py scripts/validate_international_playlist.py
+          python -m py_compile scripts/international_stream_health.py scripts/reorganize_international_playlist.py scripts/discover_international_channels.py scripts/validate_international_health_output.py
           python -m unittest discover -s tests -p 'test_international_stream_health.py'
           python -m unittest discover -s tests -p 'test_international_protected_guard.py'
           python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
@@ -54,7 +55,7 @@ jobs:
           git clean -fd
       - name: Probe all International streams and apply three-day policy
         run: python scripts/international_stream_health.py
-      - name: Validate playlist grouping, metadata and local logos
+      - name: Validate playlist structure, metadata preservation and group ordering
         run: python scripts/validate_international_playlist.py
       - name: Validate reports and whitespace
         run: |

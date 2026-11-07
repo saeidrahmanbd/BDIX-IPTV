@@ -264,6 +264,82 @@ def load_history():
     }
 
 
+def validate_metadata_preservation(before_text, after_text, removed_urls):
+    """Ensure health automation changes grouping only, never channel metadata."""
+    _, before_blocks = parse(before_text)
+    _, after_blocks = parse(after_text)
+
+    def by_url(blocks):
+        result = {}
+        for block in blocks:
+            stream_urls = urls(block)
+            if len(stream_urls) != 1:
+                raise ValueError(f"Expected one stream URL for {name_of(block[0])!r}")
+            stream_url = stream_urls[0]
+            if stream_url in result:
+                raise ValueError(f"Duplicate stream URL in playlist: {stream_url}")
+            result[stream_url] = block
+        return result
+
+    before = by_url(before_blocks)
+    after = by_url(after_blocks)
+    if set(after) - set(before):
+        raise ValueError("Health automation unexpectedly added stream rows")
+    actually_removed = set(before) - set(after)
+    if actually_removed != set(removed_urls):
+        raise ValueError("Removed stream rows do not match the three-day retirement decisions")
+
+    for stream_url, new_block in after.items():
+        old_block = before[stream_url]
+        old_attrs = attrs(old_block[0])
+        new_attrs = attrs(new_block[0])
+        old_attrs.pop("group-title", None)
+        new_attrs.pop("group-title", None)
+        if old_attrs != new_attrs:
+            raise ValueError(f"Health automation changed channel metadata/logo for {name_of(old_block[0])!r}")
+        if old_block[1:] != new_block[1:]:
+            raise ValueError(f"Health automation changed stream directives/URL for {name_of(old_block[0])!r}")
+
+
+def validate_rendered_playlist(playlist_text):
+    """Validate safe playlist structure and the canonical Review/discovery tail."""
+    preamble, blocks = parse(playlist_text)
+    registry_lines = [
+        line for line in preamble
+        if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")
+    ]
+    if len(registry_lines) != 1:
+        raise ValueError(f"Expected one category registry; found {len(registry_lines)}")
+    registry = json.loads(registry_lines[0].split(":", 1)[1])
+    if not isinstance(registry, list) or len(registry) != len(set(registry)):
+        raise ValueError("Category registry must contain unique category names")
+    if registry[-3:] != ["New Channels", "New Backups", "Backup"]:
+        raise ValueError("Category registry must end New Channels/New Backups/Backup")
+    if REVIEW not in registry or registry.index(REVIEW) > registry.index("New Channels"):
+        raise ValueError("Review must be present before the New Channels discovery queue")
+
+    seen_urls = set()
+    seen_groups = []
+    rank = {group: index for index, group in enumerate(registry)}
+    for block in blocks:
+        group = group_of(block[0])
+        if not group or group not in rank:
+            raise ValueError(f"Missing/unregistered category for {name_of(block[0])!r}: {group!r}")
+        if group not in seen_groups:
+            seen_groups.append(group)
+        stream_urls = urls(block)
+        if len(stream_urls) != 1:
+            raise ValueError(f"Expected one HTTP(S) URL for {name_of(block[0])!r}; found {len(stream_urls)}")
+        if stream_urls[0] in seen_urls:
+            raise ValueError(f"Duplicate stream URL for {name_of(block[0])!r}")
+        seen_urls.add(stream_urls[0])
+
+    expected_groups = [group for group in registry if group in set(seen_groups)]
+    if seen_groups != expected_groups:
+        raise ValueError("Playlist groups do not follow the registered category order")
+    return True
+
+
 def render_playlist(preamble, blocks):
     idx = next((i for i, line in enumerate(preamble) if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")), None)
     if idx is None:
@@ -290,7 +366,7 @@ def apply_results(text, results, history, check_date):
     yesterday = (today - timedelta(days=1)).isoformat()
     entries = history.setdefault("entries", {})
     removed_log = history.setdefault("removed", [])
-    output, events = [], []
+    output, events, removed_urls = [], [], set()
 
     for block, result in zip(blocks, results):
         entry_urls = urls(block)
@@ -372,6 +448,7 @@ def apply_results(text, results, history, check_date):
             "reason": str(result.get("reason", "")),
         }
         if action == "removed-after-three-failed-days":
+            removed_urls.add(url)
             removed_log.append({
                 "name": name, "tvg_id": rec.get("tvg_id", ""),
                 "original_group": rec.get("original_group", ""),
@@ -386,7 +463,10 @@ def apply_results(text, results, history, check_date):
     history["schema_version"] = 1
     history["entries"] = entries
     history["removed"] = removed_log[-1000:]
-    return render_playlist(pre, output), history, events
+    updated_text = render_playlist(pre, output)
+    validate_metadata_preservation(playlist_text, updated_text, removed_urls)
+    validate_rendered_playlist(updated_text)
+    return updated_text, history, events
 
 
 def build_report(events, history, check_date, generated, total):

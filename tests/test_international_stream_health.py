@@ -101,6 +101,35 @@ class InternationalStreamHealthTests(unittest.TestCase):
         self.assertEqual(health.http_state(404), "fail")
         self.assertEqual(health.http_state(500), "fail")
 
+    def test_health_rewrite_preserves_every_metadata_field_and_logo(self):
+        source = self.playlist(row(extra='tvg-network="Example" '))
+        output, _, _ = apply(source, "fail", {}, "2026-11-07")
+        self.assertTrue(health.validate_rendered_playlist(output))
+        _, old_blocks = health.parse(source)
+        _, new_blocks = health.parse(output)
+        old = health.attrs(old_blocks[0][0])
+        new = health.attrs(new_blocks[0][0])
+        old.pop("group-title")
+        new.pop("group-title")
+        self.assertEqual(old, new)
+
+    def test_metadata_loss_is_rejected(self):
+        source = self.playlist(row())
+        output, _, _ = apply(source, "ok", {}, "2026-11-07", status=200, reason="Media bytes received")
+        damaged = output.replace('tvg-logo="logos/test-movie.png"', 'tvg-logo=""')
+        with self.assertRaisesRegex(ValueError, "metadata/logo"):
+            health.validate_metadata_preservation(source, damaged, set())
+
+    def test_structural_validator_rejects_duplicate_stream_urls(self):
+        source = (
+            "#EXTM3U\n"
+            '#PLAYLIST-STUDIO-CATEGORIES:["International Movies","Review","New Channels","New Backups","Backup"]\n'
+            + row(name="A", url="https://example.test/same.m3u8")
+            + row(name="B", url="https://example.test/same.m3u8")
+        )
+        with self.assertRaisesRegex(ValueError, "Duplicate stream URL"):
+            health.validate_rendered_playlist(source)
+
     def test_review_category_added_and_rows_sorted(self):
         source = (
             "#EXTM3U\n"
