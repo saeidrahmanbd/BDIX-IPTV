@@ -40,8 +40,9 @@ MIGRATION_GROUP_BY_ID = {
     "thejunglebook.in": "Kids",
     "mbctv.in@sd": "REMOVE",
     "mhone.in@sd": "Indian Music",
-    "mhonedilse.in@sd": "REMOVE",
-    "mhonemovies.in": "REMOVE",
+    "mhonedilse.in@sd": "Indian Music",
+    "mhonemovies.in": "Indian Movies",
+    "mhonemovies.in@sd": "Indian Movies",
     "mh1music.in@sd": "Indian Music",
     "mh1prime.in": "REMOVE",
     "ntv.in": "Indian Entertainment",
@@ -58,7 +59,7 @@ MIGRATION_GROUP_BY_ID = {
 # Do not let playlist maintenance or discovery reintroduce them.
 REMOVE_CHANNEL_IDS = frozenset({
     "channelwin.in@sd", "darshanatv.in@sd", "mbctv.in@sd",
-    "mhonedilse.in@sd", "mhonemovies.in", "mh1prime.in",
+    "mh1prime.in",
     "totaltvharyana.in@sd", "tv9bangla.in",
 })
 KIDS_CHANNEL_IDS = frozenset({
