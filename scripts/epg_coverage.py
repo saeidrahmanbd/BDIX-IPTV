@@ -68,7 +68,7 @@ EPG_ALIASES = {
     # 2026-10-26 against the feed repo's current files: each ID had >=20
     # programme rows in the next 7 days and sample titles matched the channel.
     # All are Indian-service (.in) playlist IDs; none is a Bangladesh identity.
-    "NationalGeographic.in@SD": ["LIVETV_LIVETVCHANNEL_NATIONAL_GEOGRAPHIC_CHANNEL"],
+
     "ColorsSuper.in@SD": ["LIVETV_LIVETVCHANNEL_COLORS_SUPER"],
     "DarshanaTV.in@SD": ["3354"],
     "ETVComedy.in@HD": ["jtv3561"],
@@ -121,7 +121,7 @@ EPG_ALIASES = {
     "RadioItaliaTV.it": ["Radio.Italia.TV.HD.it", "RadioItaliaTV.it@HD", "RadioItaliaTV.it@SD"],
     "RTL1025TV.it": ["RTL.102.5.HD.it", "RTL1025TV.it@HD"],
     # Some regional XMLTV feeds publish these Russian channels without the SD suffix.
-    "RusskiyBestseller.ru@SD": ["RusskiyBestseller.ru"],
+
 }
 
 EPG_LOCKS = {
