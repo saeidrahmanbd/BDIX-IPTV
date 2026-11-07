@@ -99,7 +99,18 @@ jobs:
                   entries = body.count(b"#EXTINF:")
                   if entries != expected_streams:
                       raise SystemExit(f"{host}: get.php entries={entries}, API streams={expected_streams}")
-              print(f"{host} get.php: HTTP=200 M3U entries={entries}")
+                  hidden_groups = {"Review", "New Channels", "New Backups", "Not Playing", "Test"}
+                  attr_re = re.compile(rb'([A-Za-z0-9_-]+)="([^"]*)"')
+                  leaked_m3u_groups = set()
+                  for line in body.splitlines():
+                      if line.startswith(b"#EXTINF:"):
+                          attrs = dict(attr_re.findall(line))
+                          group = attrs.get(b"group-title", b"").decode("utf-8", "replace").strip()
+                          if group in hidden_groups:
+                              leaked_m3u_groups.add(group)
+                  if leaked_m3u_groups:
+                      raise SystemExit(f"{host}: get.php exposed hidden groups: {sorted(leaked_m3u_groups)}")
+              print(f"{host} get.php: HTTP=200 M3U entries={entries}; hidden groups absent")
 
               xml_url = f"https://{host}/xmltv.php?{urllib.parse.urlencode(CREDS)}"
               xml_req = urllib.request.Request(xml_url, headers=HEADERS)
@@ -259,7 +270,15 @@ jobs:
               else:
                   raise SystemExit(f"{name}: Worker inventory did not synchronize with IPTV-Playlist.m3u: {last_sync_detail}")
 
-              print(f"{name} categories: HTTP=200 count={len(categories)}")
+              forbidden_categories = {"Review", "New Channels", "New Backups", "Not Playing", "Test"}
+              leaked_categories = sorted(
+                  str(category.get("category_name", ""))
+                  for category in categories
+                  if str(category.get("category_name", "")).strip() in forbidden_categories
+              )
+              if leaked_categories:
+                  raise SystemExit(f"{name}: Xtream categories exposed hidden groups: {leaked_categories}")
+              print(f"{name} categories: HTTP=200 count={len(categories)}; hidden groups absent")
               print(f"{name} streams: HTTP=200 count={len(streams)}")
               for stream_id, expected in expected_by_id.items():
                   actual = api_by_id[stream_id]
