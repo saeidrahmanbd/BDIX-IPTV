@@ -290,6 +290,20 @@ for line in lines:
             continue
         except Exception as exc:
             failed += 1
+            # A valid, repository-local SVG must not be discarded merely because
+            # optional PNG rasterization failed (e.g. Cairo cannot decode an
+            # embedded raster). Keep the original local asset and let the SVG
+            # consumer render it; never replace it with a guessed channel logo.
+            local_path = (LOGOS / filename) if logo.startswith(RAW_BASE) else (LOGOS / Path(urlsplit(logo).path).name)
+            if Path(urlsplit(logo).path).suffix.lower() == ".svg" and local_path.is_file():
+                try:
+                    svg_text = local_path.read_text(encoding="utf-8")
+                    if "<svg" in svg_text[:2048] and "</svg>" in svg_text[-2048:]:
+                        output.append(line)
+                        print(f"Local SVG retained after PNG conversion failure: {title}: {exc}")
+                        continue
+                except (OSError, UnicodeError):
+                    pass
             print(f"Local logo conversion failed: {title}: {exc}")
 
     # 1) Exact playlist ID match — safest.
