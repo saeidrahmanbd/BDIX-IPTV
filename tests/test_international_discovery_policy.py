@@ -121,13 +121,16 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             ("Peace TV", "Religious", "PeaceTV.in"),
             ("Education TV", "Education", "EducationTV.in"),
             ("DD Gyan Darshan", "General", "GyanDarshan.in"),
-            ("Cartoon Network", "Kids", "CartoonNetwork.in"),
-            ("Pogo", "Kids", "Pogo.in"),
         ]
         for name, group, tvg_id in excluded:
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, group, "IN", tvg_id)[0])
-        self.assertEqual(self.classify("DD Sports", "Sports", "IN", "DDSports.in")[0], "Indian Entertainment")
+        for name, group, tvg_id in [
+            ("Cartoon Network", "Kids", "CartoonNetwork.in"),
+            ("Pogo", "Kids", "Pogo.in"),
+        ]:
+            self.assertEqual(self.classify(name, group, "IN", tvg_id)[0], "Kids")
+        self.assertEqual(self.classify("DD Sports", "Sports", "IN", "DDSports.in")[0], "Sports")
 
     def test_bangladesh_religious_educational_kids_and_sports_are_not_genre_filtered(self):
         examples = [
