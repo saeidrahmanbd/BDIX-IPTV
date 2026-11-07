@@ -154,6 +154,12 @@ def main():
             raise SystemExit(f"Expected exactly one URL row for {name!r}; found {len(stream_rows)}.")
         urls.append(normalized_stream_url(stream_rows[0]))
 
+        # Adult is an explicitly preserved legacy group. Its metadata and logo
+        # references are outside this validator's repair policy; keep structural
+        # URL/group checks above, but do not reject or count Adult artwork here.
+        if group_key == "adult":
+            continue
+
         logo = a.get("tvg-logo", "").strip()
         if not logo:
             missing_logos += 1
