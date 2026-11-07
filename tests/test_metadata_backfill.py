@@ -67,7 +67,7 @@ class MetadataBackfillTests(unittest.TestCase):
         self.assertIn('tvg-language="fra"', updated)
         self.assertEqual(metrics["entries_changed"], 0)
 
-    def test_protected_groups_and_unknown_ids_are_unchanged(self):
+    def test_backup_entries_are_backfilled_but_review_queues_remain_untouched(self):
         playlist = (
             "#EXTM3U\n"
             '#EXTINF:-1 tvg-id="Example.in" tvg-name="Backup" group-title="Backup",Backup\n'
@@ -78,17 +78,35 @@ class MetadataBackfillTests(unittest.TestCase):
             "https://example.invalid/review.m3u8\n"
         )
         updated, metrics = update_playlist(playlist, self.catalogue)
-        self.assertIn('tvg-name="Backup" group-title="Backup",Backup', updated)
+        self.assertIn('tvg-name="Backup" tvg-country="IN" tvg-language="hin" group-title="Backup",Backup', updated)
         self.assertIn('tvg-name="Review" group-title="Not Playing",Review', updated)
         self.assertIn('tvg-id="Unknown.custom" tvg-name="Unknown" tvg-country="US" tvg-language="eng" group-title="International"', updated)
         self.assertEqual(
             [x for x in playlist.splitlines() if x.startswith(("http://", "https://"))],
             [x for x in updated.splitlines() if x.startswith(("http://", "https://"))],
         )
-        self.assertEqual(metrics["entries_changed"], 1)
+        self.assertEqual(metrics["entries_changed"], 2)
         self.assertEqual(metrics["fallback_entries"], 1)
-        self.assertEqual(metrics["country_fields_filled"], 1)
+        self.assertEqual(metrics["country_fields_filled"], 2)
+        self.assertEqual(metrics["language_fields_filled"], 2)
+
+
+    def test_backup_channel_language_override_is_used_when_catalogue_has_no_match(self):
+        playlist = (
+            "#EXTM3U\\n"
+            '#EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-country="BD" group-title="Backup",Duronto TV\\n'
+            "https://example.invalid/duronto.m3u8\\n"
+        )
+        updated, metrics = update_playlist(playlist, {})
+        self.assertIn('tvg-language="ben"', updated)
         self.assertEqual(metrics["language_fields_filled"], 1)
+        self.assertEqual(len(active_gaps(updated)), 0)
+
+    def test_catalogue_uses_channel_and_feed_languages_together(self):
+        channels = [{"id": "Multi.in", "country": "IN", "languages": ["tam"]}]
+        feeds = [{"channel": "Multi.in", "languages": ["hin", "eng"]}]
+        catalogue = parse_catalogue(channels, feeds)
+        self.assertEqual(catalogue["Multi.in"], ("IN", ("eng", "hin", "tam")))
 
     def test_all_original_urls_and_entry_count_are_preserved(self):
         playlist = (
