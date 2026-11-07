@@ -16,6 +16,7 @@ on:
       - 'scripts/discovery_schedule_guard.py'
       - 'tests/test_discovery_schedule_guard.py'
       - 'scripts/final_playlist_hardening.py'
+      - 'scripts/sort_playlists.py'
       - 'tests/test_final_playlist_hardening.py'
       - 'tests/test_channel_discovery_policy.py'
       - 'tests/test_discovery_run_validation.py'
@@ -90,6 +91,8 @@ jobs:
           python scripts/normalize_metadata.py
           python scripts/migrate_external_logos_fixed.py
           python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
+          # Keep discovery output in the permanent 15-group order before validation/publication.
+          python scripts/sort_playlists.py IPTV-Playlist.m3u
       - name: Verify newly discovered streams and local logos
         run: python scripts/validate_discovery_run.py probe IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
       - name: Enable review-queue audit policy
