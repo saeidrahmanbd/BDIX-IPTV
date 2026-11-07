@@ -3,11 +3,13 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import international_adult_guard as guard
 import reorganize_international_playlist as reorg
+import validate_international_playlist as intl_validator
 
 
 class InternationalAdultGuardTests(unittest.TestCase):
@@ -69,6 +71,11 @@ https://review.example/live.m3u8
             playlist.write_text(
                 "\n".join([
                     "#EXTM3U",
+                    "#=================================",
+                    "# Developed by: SAEID RAHMAN",
+                    "# Facebook: https://www.facebook.com/saeid.rahman.sr",
+                    "# Email: saeidrahman.mkt@gmail.com",
+                    "#=================================",
                     '#PLAYLIST-STUDIO-NAME:"International Playlist"',
                     '#EXTINF:-1 tvg-id="BTV.bd" tvg-name="BTV" tvg-country="BD" group-title="Bangladesh",BTV',
                     "https://bd.example/live.m3u8",
@@ -81,6 +88,8 @@ https://review.example/live.m3u8
             _, records = reorg.parse_playlist(playlist.read_text(encoding="utf-8"))
             adult_after = [record for record in records if reorg.attrs(reorg.split_info(record[0])[0]).get("group-title") == "Adult"]
             self.assertEqual(adult_after, [adult_block])
+            with patch.object(intl_validator, "PLAYLIST", playlist), patch.object(intl_validator, "LOGOS", logos):
+                intl_validator.main()
 
 
 if __name__ == "__main__":
