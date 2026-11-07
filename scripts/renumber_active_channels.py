@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Sort active IPTV groups and assign contiguous channel numbers without rewriting stream URLs.
 
-Backup, Not Playing, New Channels and New Backups remain unnumbered. Their internal
-order is preserved; only their category blocks are placed in canonical queue order.
+Backup, Review, New Channels and New Backups remain unnumbered. Legacy Not Playing
+rows are normalized to Review; stream URLs are never rewritten.
 """
 from __future__ import annotations
 
@@ -15,10 +15,10 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Not Playing", "New Channels", "New Backups", "Backup",
+    "Backup", "Review", "New Channels", "New Backups",
 ]
 CATEGORY_RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
-REVIEW_GROUPS = {"Backup", "Not Playing", "New Channels", "New Backups"}
+REVIEW_GROUPS = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
 
@@ -86,6 +86,9 @@ def normalize_playlist_text(text: str) -> tuple[str, int]:
     normalized = text.replace("\r\n", "\n").replace("\r", "\n")
     preamble, records = parse_records(normalized)
     original_urls = url_inventory(records)
+    for record in records:
+        if attrs(record[0]).get("group-title", "").strip() == "Not Playing":
+            record[0] = re.sub(r'group-title="Not Playing"', 'group-title="Review"', record[0], count=1)
     primary = []
     review = []
     for record in records:
