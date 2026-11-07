@@ -10,7 +10,7 @@ P=Path("IPTV-Playlist.m3u"); R=Path("reports/metadata-normalization.md")
 RAW="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 # All four groups below are review queues. They must not receive primary IDs,
 # numbers or primary-only metadata normalization.
-EXCLUDE={"Backup","Not Playing","New Channels","New Backups"}
+EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups"}
 IDS={
   "Jalsha Movies HD": "Star.Jalsha.Movies.HD.in",
   "Desh TV": "DeshTV.bd",
@@ -259,7 +259,7 @@ lines=P.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
 # Preserve the Playlist Studio category registry.  It is part of the playlist
 # contract and must survive every maintenance normalization pass, including
 # Canonical categories retained by the playlist.
-CATEGORY_REGISTRY=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Not Playing","New Channels","New Backups","Backup"]
+CATEGORY_REGISTRY=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","Review","New Channels","New Backups"]
 category_line="#PLAYLIST-STUDIO-CATEGORIES:"+json.dumps(CATEGORY_REGISTRY,ensure_ascii=False)
 # Remove only blank lines and other legacy Studio directives; the canonical
 # category registry is restored immediately below.
@@ -274,6 +274,10 @@ if m3u_index is not None:
  lines=[m3u_header,category_line]+lines
 else:
  lines.insert(0,category_line)
+# Normalize the renamed review group before applying metadata rules.
+for i, line in enumerate(lines):
+ if line.startswith("#EXTINF:") and 'group-title="Not Playing"' in line:
+  lines[i]=line.replace('group-title="Not Playing"', 'group-title="Review"', 1)
 rows=[]
 for i,l in enumerate(lines):
  if l.startswith("#EXTINF:"):
@@ -330,7 +334,7 @@ for r in rows:
  lines[r["i"]]=f"{m},{name}"
 
 # Keep the stable playlist section order required by the playlist contract:
-# normal categories first, followed by the New Backups and Backup review queues.
+# curated categories first, followed by Backup, Review and discovery queues.
 preamble=[]
 records=[]
 cur=None
@@ -345,7 +349,7 @@ for line in lines:
 if cur is not None: records.append(cur)
 def group_of(rec):
  return re.search(r'group-title="([^"]+)"', rec[0]).group(1) if re.search(r'group-title="([^"]+)"', rec[0]) else ""
-review_groups={"Not Playing","New Channels","New Backups"}
+review_groups={"Review","Not Playing","New Channels","New Backups"}
 backup_records=[r for r in records if group_of(r)=="Backup"]
 review_records=[r for r in records if group_of(r) in review_groups]
 normal_records=[r for r in records if group_of(r) not in {"Backup"} and group_of(r) not in review_groups]
