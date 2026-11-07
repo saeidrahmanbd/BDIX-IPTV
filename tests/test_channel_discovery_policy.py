@@ -51,7 +51,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 attrs = {"group-title": group, "tvg-country": "IN"}
                 self.assertIsNotNone(prohibited_channel(attrs, name))
 
-    def test_indian_kids_are_rejected_for_active_and_discovery_policy(self):
+    def test_indian_kids_are_allowed_for_active_and_discovery_policy(self):
         for name, group in [
             ("Kids TV", "Kids"),
             ("Cartoon Network", "Entertainment"),
@@ -60,14 +60,18 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("Disney Channel", "Kids"),
         ]:
             with self.subTest(name=name, group=group):
-                self.assertIsNotNone(prohibited_channel(
-                    {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}, name
-                ))
+                attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
+                self.assertIsNone(prohibited_channel(attrs, name))
+                self.assertIsNone(prohibited_channel(attrs, name, discovery=True))
 
-    def test_indian_sports_knowledge_and_business_are_discovery_only_exclusions(self):
+    def test_indian_sports_are_allowed_but_knowledge_and_business_remain_discovery_only_exclusions(self):
+        for name, group in [("Star Sports", "Sports"), ("DD Sports", "Entertainment")]:
+            with self.subTest(name=name, group=group):
+                attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
+                self.assertIsNone(prohibited_channel(attrs, name))
+                self.assertIsNone(prohibited_channel(attrs, name, discovery=True))
+
         examples = [
-            ("Star Sports", "Sports"),
-            ("DD Sports", "Entertainment"),
             ("Discovery Channel", "Knowledge"),
             ("National Geographic", "Documentary"),
             ("Animal Planet", "Entertainment"),
