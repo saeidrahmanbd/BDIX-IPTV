@@ -32,7 +32,7 @@ LEGACY_GROUPS = {"Not Playing": "Review"}
 # Indian news, kids and religious services stay out of primary categories.
 MIGRATION_GROUP_BY_ID = {
     "channelwin.in@sd": "Review",
-    "darshanatv.in@sd": "Indian Entertainment",
+    "darshanatv.in@sd": "Review",
     "greengoldtv.in@india": "Review",
     "gtcpunjabi.in@uk": "Indian Entertainment",
     "hungama.in@sd": "Review",
