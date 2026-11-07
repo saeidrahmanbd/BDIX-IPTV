@@ -1,7 +1,7 @@
 const PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u";
 const EPG_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml";
-const INACTIVE = new Set(["Test", "Not Playing", "New Backup", "New Channels"]);
-const CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "New Channels", "New Backup", "Not Playing"];
+const INACTIVE = new Set(["Test", "Not Playing", "New Backups", "New Channels"]);
+const CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "New Channels", "New Backups", "Not Playing"];
 const CATEGORY_RANK = new Map(CATEGORY_ORDER.map((name, i) => [name, i]));
 const CORS_HEADERS = {
   "access-control-allow-origin":"*","access-control-allow-methods":"GET, HEAD, OPTIONS","access-control-allow-headers":"Content-Type, Authorization","access-control-max-age":"86400"

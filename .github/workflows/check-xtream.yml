@@ -163,7 +163,7 @@ jobs:
               with open_retry(req) as response:
                   raw = response.read().decode("utf-8", "replace")
 
-              inactive = {"Test", "Not Playing", "New Backup", "New Channels"}
+              inactive = {"Test", "Not Playing", "New Backups", "New Channels"}
               attr_re = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
               records = []
               current = None
