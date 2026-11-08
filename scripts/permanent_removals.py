@@ -41,3 +41,10 @@ PERMANENTLY_REMOVED_NAMES = (
     "Santvani Channel",
     "Sharnam TV",
 )
+
+# Exact owner-authorized removal of orphan Backup rows. Both channel ID and URL
+# must match; a different endpoint for the same identity is not covered.
+AUTHORIZED_ORPHAN_BACKUP_REMOVALS = {
+    "bhi.channel.in": "https://server.livelegitpro.in/bhichannel/bhichannel/tracks-v1a1/mono.m3u8",
+    "rplus.in@sd": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e5dcc9dc-3a33-4b19-a361-5a5b3aa022f7/index.m3u8",
+}
