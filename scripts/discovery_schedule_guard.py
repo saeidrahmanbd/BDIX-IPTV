@@ -57,22 +57,37 @@ def runs_for_date(runs: list[dict[str, Any]], target_date: date) -> list[dict[st
     ]
 
 
-def run_blocks_retry(run: dict[str, Any]) -> bool:
-    """Only an active run or a successful terminal run owns today's execution.
+def successful_discovery_job(jobs: list[dict[str, Any]]) -> bool:
+    """True only when the actual discovery writer job completed successfully."""
+    return any(
+        str(job.get("name") or "").casefold() == "discover"
+        and str(job.get("status") or "").casefold() == "completed"
+        and str(job.get("conclusion") or "").casefold() in {"success", "neutral"}
+        for job in jobs
+    )
 
-    Failed, cancelled, timed-out and action-required runs must not suppress the
-    watchdog's recovery dispatch or permanently block a later retry.
+
+def run_blocks_retry(run: dict[str, Any], client=None) -> bool:
+    """Only an active run or a successful *discovery job* owns today's execution.
+
+    A workflow can conclude successfully when its discover job was skipped by
+    the daily guard. Such no-op runs must not suppress the watchdog or later
+    recovery attempts; inspect the job-level conclusion before treating a
+    completed workflow run as the daily owner.
     """
     status = str(run.get("status") or "").casefold()
     conclusion = str(run.get("conclusion") or "").casefold()
     if status != "completed":
         return True
-    return conclusion in {"success", "neutral", "skipped"}
+    if conclusion not in {"success", "neutral"}:
+        return False
+    jobs = client.workflow_run_jobs(int(run["id"])) if client is not None else run.get("jobs", [])
+    return successful_discovery_job(jobs if isinstance(jobs, list) else [])
 
 
-def first_run_id(runs: list[dict[str, Any]]) -> int | None:
-    """Return the earliest active/successful run, ignoring failed terminal attempts."""
-    eligible = [run for run in runs if run_blocks_retry(run)]
+def first_run_id(runs: list[dict[str, Any]], client=None) -> int | None:
+    """Return the earliest active or genuinely successful discovery run."""
+    eligible = [run for run in runs if run_blocks_retry(run, client)]
     if not eligible:
         return None
     ordered = sorted(
@@ -83,13 +98,13 @@ def first_run_id(runs: list[dict[str, Any]]) -> int | None:
 
 
 def should_current_run_execute(
-    runs: list[dict[str, Any]], current_run_id: int | str, target_date: date
+    runs: list[dict[str, Any]], current_run_id: int | str, target_date: date, client=None
 ) -> bool:
-    """Permit only the earliest run for the workflow on a Bangladesh calendar date."""
+    """Permit only the earliest real discovery run for the Bangladesh calendar date."""
     todays = runs_for_date(runs, target_date)
     if not todays:
         return False
-    return first_run_id(todays) == int(current_run_id)
+    return first_run_id(todays, client) == int(current_run_id)
 
 
 class GitHubActions:
@@ -140,6 +155,12 @@ class GitHubActions:
                 break
         return all_runs
 
+    def workflow_run_jobs(self, run_id: int) -> list[dict[str, Any]]:
+        """Return job-level outcomes so guard-only successes are not mistaken for discoveries."""
+        result = self.request("GET", f"actions/runs/{int(run_id)}/jobs?per_page=100")
+        jobs = result.get("jobs", []) if isinstance(result, dict) else []
+        return jobs if isinstance(jobs, list) else []
+
     def dispatch(self, workflow_file: str) -> None:
         if workflow_file not in VALID_WORKFLOWS:
             raise ValueError(f"Unsupported discovery workflow: {workflow_file}")
@@ -184,7 +205,7 @@ def guard(workflow_file: str) -> int:
     by_id[int(current_run_id)] = current_run
     todays = runs_for_date(list(by_id.values()), target_date)
 
-    first_id = first_run_id(todays)
+    first_id = first_run_id(todays, client)
     execute = first_id == int(current_run_id)
     write_output("should_run", "true" if execute else "false")
     if execute:
@@ -211,9 +232,13 @@ def watchdog(workflow_files: list[str]) -> int:
     for workflow_file in workflow_files:
         runs = client.workflow_runs(workflow_file)
         todays = runs_for_date(runs, target_date)
-        blocking = [run for run in todays if run_blocks_retry(run)]
+        blocking = [run for run in todays if run_blocks_retry(run, client)]
         if blocking:
-            owner_id = first_run_id(blocking)
+            owner = min(
+                blocking,
+                key=lambda run: (parse_github_timestamp(run["created_at"]), int(run["id"])),
+            )
+            owner_id = int(owner["id"])
             newest = max(blocking, key=lambda run: parse_github_timestamp(run["created_at"]))
             print(
                 f"No dispatch needed for {workflow_file}: "

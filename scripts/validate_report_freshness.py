@@ -7,6 +7,7 @@ import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
 MAX_REPORT_AGE = timedelta(hours=48)
@@ -29,6 +30,7 @@ CROSS_PLAYLIST_METADATA_REPORT = "reports/playlist-metadata-backfill.md"
 STREAM_HEALTH_REPORT = "reports/stream-health.md"
 # Reports owned by IPTV New Channel Discovery; other maintenance reports have separate owners.
 DISCOVERY_REPORTS = (
+    "reports/iptv-channel-discovery.md",
     "reports/metadata-normalization.md",
     "reports/logo-asset-quality-audit.md",
     "reports/playlist-logo-repair-results.md",
@@ -129,6 +131,14 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
         check_timestamp(relative, text, now, max_age, errors)
+        if mode == "discovery" and relative == "reports/iptv-channel-discovery.md":
+            generated = report_timestamp(text)
+            if generated is not None:
+                bd_tz = ZoneInfo("Asia/Dhaka")
+                if generated.astimezone(bd_tz).date() != now.astimezone(bd_tz).date():
+                    errors.append(
+                        f"{relative}: discovery report was not regenerated for the current Bangladesh date"
+                    )
         if relative in SINGLE_PLAYLIST_REPORTS:
             playlist_name, labels = SINGLE_PLAYLIST_REPORTS[relative]
             actual = read_fingerprint(text, labels)

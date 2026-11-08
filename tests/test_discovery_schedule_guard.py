@@ -142,5 +142,53 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         self.assertIsNone(guard.first_run_id(guard.runs_for_date(runs, self.today)))
 
 
+    def test_completed_success_with_skipped_discover_job_does_not_block_a_retry(self):
+        no_op_run = {
+            "id": 90,
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-07T01:00:00Z",
+            "jobs": [
+                {"name": "daily_guard", "status": "completed", "conclusion": "success"},
+                {"name": "discover", "status": "completed", "conclusion": "skipped"},
+            ],
+        }
+        self.assertFalse(guard.run_blocks_retry(no_op_run))
+        self.assertIsNone(guard.first_run_id([no_op_run]))
+
+    def test_completed_success_with_successful_discover_job_owns_the_day(self):
+        successful_run = {
+            "id": 91,
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-07T01:00:00Z",
+            "jobs": [
+                {"name": "daily_guard", "status": "completed", "conclusion": "success"},
+                {"name": "discover", "status": "completed", "conclusion": "success"},
+            ],
+        }
+        later_no_op = {
+            "id": 92,
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-07T01:10:00Z",
+            "jobs": [
+                {"name": "daily_guard", "status": "completed", "conclusion": "success"},
+                {"name": "discover", "status": "completed", "conclusion": "skipped"},
+            ],
+        }
+        self.assertTrue(guard.run_blocks_retry(successful_run))
+        self.assertEqual(guard.first_run_id([later_no_op, successful_run]), 91)
+
+    def test_completed_success_without_discover_job_does_not_own_the_day(self):
+        guard_only_run = {
+            "id": 93,
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-07T01:00:00Z",
+            "jobs": [{"name": "daily_guard", "status": "completed", "conclusion": "success"}],
+        }
+        self.assertFalse(guard.run_blocks_retry(guard_only_run))
+
 if __name__ == "__main__":
     unittest.main()

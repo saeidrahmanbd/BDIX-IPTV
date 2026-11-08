@@ -44,6 +44,7 @@ class ReportFreshnessTests(unittest.TestCase):
             "logo-provenance-review.md": epg,
             "logo-asset-quality-audit.md": epg,
             "playlist-metadata-backfill.md": epg,
+            "iptv-channel-discovery.md": f"# IPTV Channel Discovery\n\nGenerated: **{self.timestamp}**\n",
             "metadata-normalization.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "Update Report.md": f"_Last generated: **{self.timestamp}**_\n\nSource playlist SHA-256: **{one}**\n",
             "maintenance-report.md": f"_Generated: **{self.timestamp}**_\n\nSource playlist SHA-256: **{one}**\n",
@@ -103,6 +104,18 @@ class ReportFreshnessTests(unittest.TestCase):
         report.write_text(f"Generated: **{self.timestamp}**\nPlaylist SHA-256: **{self.hashes['IPTV-Playlist.m3u']}**\n", encoding="utf-8")
         errors = check_reports(self.root, now=self.now)
         self.assertFalse(any("iptv-metadata-backfill.md" in error and "fingerprint" in error for error in errors))
+
+    def test_discovery_report_must_match_current_bangladesh_date_even_within_48_hours(self):
+        report = self.root / "reports" / "iptv-channel-discovery.md"
+        report.write_text(
+            "# IPTV Channel Discovery\\n\\nGenerated: **2026-10-19T10:00:00+00:00**\\n",
+            encoding="utf-8",
+        )
+        errors = check_reports(self.root, now=self.now, mode="discovery")
+        self.assertTrue(any(
+            "iptv-channel-discovery.md: discovery report was not regenerated for the current Bangladesh date" in item
+            for item in errors
+        ))
 
     def test_discovery_mode_checks_only_discovery_owned_reports(self):
         self.assertEqual(check_reports(self.root, now=self.now, mode="discovery"), [])
