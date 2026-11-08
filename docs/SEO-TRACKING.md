@@ -7,7 +7,7 @@ This document records the repository's search-engine setup, the public pages int
 The canonical English and Bengali landing pages are:
 
 - [English homepage](https://saeidrahmanbd.github.io/BDIX-IPTV/)
-- [Bangladesh IPTV M3U playlist guide](https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html)
+- [Multi-country IPTV M3U playlist guide](https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html)
 - [বাংলা IPTV পৃষ্ঠা](https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html)
 
 The public sitemap files are:
@@ -68,7 +68,7 @@ The repository's GitHub description, topics, homepage field and README are also 
 
 Suggested repository description for GitHub's **About** panel:
 
-> Bangladesh and India IPTV M3U/M3U8 playlists, Bangla TV channels, international movie and music collections, XMLTV EPG and channel logos.
+> Multi-country IPTV M3U/M3U8 playlists covering Bangladesh, India, Pakistan and eligible channels from other countries, Bangla TV, international movie/music collections, XMLTV EPG and channel logos.
 
 Suggested topic additions or replacements, keeping GitHub's topic limit in mind:
 
@@ -92,7 +92,7 @@ Recommended actions:
 3. Add the project website link to relevant personal or project profile descriptions that you control, including your Facebook profile if appropriate.
 4. When sharing the project in IPTV or Bangla-tech communities, provide a useful explanation and link to the playlist guide rather than posting repeated promotional links.
 5. Invite genuine references from relevant blogs, app guides or community resource pages when the project is useful to their readers. Avoid paid link schemes, automated comment links and unrelated directory submissions.
-6. Keep the public project description consistent across GitHub and social profiles: Bangladesh and India M3U/M3U8 playlists, Bangla TV, international movie/music channels and XMLTV EPG.
+6. Keep the public project description consistent across GitHub and social profiles: multi-country IPTV M3U/M3U8 playlists covering Bangladesh, India, Pakistan and eligible channels from other countries, Bangla TV, international movie/music collections and XMLTV EPG.
 
 External social posts, directory submissions and other account-level changes are not performed by repository workflows. Publish them only from accounts you control and follow each community's posting rules.
 
