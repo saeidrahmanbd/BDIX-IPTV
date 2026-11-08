@@ -103,6 +103,16 @@ def country_code(a):
   if code in ISO_CODES:return code
  return "ZZ"
 def country_group(code): return COUNTRY_NAMES.get(code,code if code in ISO_CODES else "")
+# Identity-specific exceptions to the general-entertainment name block. Each entry must match the
+# exact channel ID, country and declared content. A name pattern alone never qualifies.
+IDENTITY_MUSIC_EXCEPTIONS={"custom.vip-tv-aw-music":("AW","music")}
+
+def identity_music_exception(a,code):
+ ident=(a.get("tvg-id") or a.get("channel-id") or "").strip().casefold()
+ expected=IDENTITY_MUSIC_EXCEPTIONS.get(ident)
+ if not expected: return False
+ return code==expected[0] and (a.get("tvg-content") or "").strip().casefold()==expected[1]
+
 def policy(a,name,allow_legacy_group=False):
  code=country_code(a)
  group_text=(a.get("group-title") or "").strip().casefold()
@@ -146,7 +156,8 @@ def policy(a,name,allow_legacy_group=False):
  if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
   return None,"documentary/wildlife is outside the Movie/Music-only policy",code
  if FASHION_RE.search(text): return None,"fashion is outside the Movie/Music-only policy",code
- if GENERAL_OUT_OF_SCOPE_RE.search(text): return None,"general entertainment is not a dedicated Movie/Music channel",code
+ if GENERAL_OUT_OF_SCOPE_RE.search(text) and not identity_music_exception(a,code):
+  return None,"general entertainment is not a dedicated Movie/Music channel",code
  if SERIES_OUT_OF_SCOPE_RE.search(text): return None,"TV series is not a dedicated Movie/Music channel",code
 
  source_category=bool(group_text) and norm(group_text) not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_text=="international")
