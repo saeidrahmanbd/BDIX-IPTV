@@ -60,6 +60,18 @@ def process(path):
   group=a.get('group-title','').strip()
   if group == 'Not Playing':
    r[0]=set_attr(r[0],'group-title','Review'); group='Review'
+  # A foreign country suffix in a discovery queue is not an eligible BD/IN
+  # candidate. Preserve it in the general Review quarantine instead of aborting
+  # the entire daily discovery run or silently relabelling its country.
+  if group in REVIEW_GROUPS:
+   declared_suffixes={
+    match.group(1).upper()
+    for value in (a.get('tvg-id',''),a.get('channel-id',''))
+    if (match:=re.search(r'\\.([a-z]{2})(?:@|$)',value.strip(),re.I))
+   }
+   if declared_suffixes and (len(declared_suffixes)!=1 or not declared_suffixes.issubset({'BD','IN'})):
+    r[0]=set_attr(r[0],'group-title','Review')
+    group='Review'
   verified=verify_country(a,name,reference)
   if verified.ok and verified.country=='IN':
    reason=prohibited_channel(a,name,'IN')
