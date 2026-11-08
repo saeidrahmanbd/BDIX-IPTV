@@ -7,37 +7,25 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-08 — `IPTV-Playlist.m3u`
 
-- New channel identities: **35**
-- Channel identities removed: **166**
-- Stream URLs added / removed: **81 / 237**
-- Backup URL updates: **5**
-- Logo reference changes: **8**
-- Replaced channel identities: **7**
+- New channel identities: **32**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **56 / 0**
+- Backup URL updates: **0**
+- Logo reference changes: **3**
+- Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Channel Europe
-- JA TV
-- &pictures
-- Namma Bangalore
-- Pitaara Comedy
-- Vision (India)
-- Bol Entertainment
-- BS Film
-- 24 Hour Free Movies
-- 30A Music
-
-Removed channel identities (up to 10):
-- Rupashi Bangla TV
-- TBN24
-- Bangla Jago TV
-- BHI Channel
-- JTV Bangla
-- JTV Classic
-- TV9 Bangla
-- & Picture
-- All Time Movies
-- Colors Cineplex Bollywood
+- Cine Jomjomat
+- Colors Bangla Cinema
+- CVR Health
+- Dhamaal
+- Disha TV
+- Disney Channel (India)
+- Epic TV Digital
+- ETV Plus
+- Madani Channel Bangla
+- Mango Mobile TV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-08 — `International-Playlist.m3u`
