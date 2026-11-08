@@ -149,7 +149,7 @@ export default{
       }
       catch(e){
         return json({
-          ok:false,error:String(e)
+          ok:false,error:"Upstream playlist or guide unavailable"
         }
         ,502)
       }
@@ -199,7 +199,7 @@ export default{
       }
       catch(e){
         return json({
-          error:String(e)
+          error:"Upstream playlist or guide unavailable"
         }
         ,502)
       }
@@ -212,7 +212,7 @@ export default{
         return text(lines.join("\n")+"\n",200,"audio/x-mpegurl; charset=utf-8")
       }
       catch(e){
-        return text(String(e),502)
+        return text("Upstream playlist or guide unavailable",502)
       }
     }
     const m=p.match(/^\/live\/([^/]+)\/([^/]+)\/(\d+)\.(?:ts|m3u8)$/i);
@@ -232,7 +232,7 @@ export default{
         )
       }
       catch(e){
-        return text(String(e),502)
+        return text("Upstream playlist or guide unavailable",502)
       }
     }
     return json({

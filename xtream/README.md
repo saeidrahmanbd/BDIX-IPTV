@@ -49,3 +49,21 @@ After deployment, use the worker's documented Xtream base URL with a compatible 
 ## Maintenance
 
 The main Xtream worker is a downstream consumer of the curated playlists. Playlist discovery, metadata normalization, local-logo enforcement, stream-health checks, backup-independence review, and publish gates are maintained by repository workflows. Public EPG generation and serving are enabled and protected by freshness/quality validation.
+
+### Credentials in URLs
+
+Xtream clients send `username` and `password` in query strings (`player_api.php`, `get.php`, `xmltv.php`) and in stream paths (`/live/<username>/<password>/<stream_id>`). Those values can be exposed through:
+
+- browser history and address bars,
+- request logs of Cloudflare, proxies, CDNs and client applications,
+- crash reports and client telemetry,
+- copied playlist files and screenshots.
+
+Mitigations in this repository:
+
+- Compare credentials in constant time and return a generic `401 Unauthorized`.
+- Never echo exception text. Upstream failures return a fixed message, because exception text can include the configured `PLAYLIST_URL`, which may carry a private token.
+- The worker writes no logs and no request details.
+- Stream redirects send `Referrer-Policy: no-referrer`.
+
+Operators should rotate the Xtream password if a URL with credentials was shared or logged. Standard Xtream GET parameters and stream paths are kept unchanged for client compatibility.

@@ -46,3 +46,37 @@ class XtreamWorkerPolicyTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class XtreamWorkerSecurityTests(unittest.TestCase):
+    def setUp(self):
+        self.source = (ROOT / "xtream-main" / "worker.js").read_text(encoding="utf-8")
+
+    def test_upstream_errors_never_echo_exception_text(self):
+        # Exception text can include PLAYLIST_URL, which may carry a private token.
+        self.assertNotIn("String(e)", self.source)
+        self.assertGreaterEqual(self.source.count("Upstream playlist or guide unavailable"), 4)
+
+    def test_worker_does_not_log_requests_or_credentials(self):
+        self.assertNotRegex(self.source, r"console\.(log|error|warn|info)\s*\(")
+
+    def test_credentials_are_compared_in_constant_time(self):
+        self.assertIn("function constantTimeEqual(a,b)", self.source)
+        self.assertIn("auth(u,env)", self.source)
+        self.assertIn("constantTimeEqual(suppliedPass,expectedPass)", self.source)
+
+    def test_unauthorized_responses_are_generic(self):
+        self.assertIn('return text("Unauthorized",401);', self.source)
+
+    def test_stream_redirects_suppress_referrer(self):
+        self.assertIn('"Referrer-Policy":"no-referrer"', self.source)
+
+    def test_client_compatible_paths_are_preserved(self):
+        for path in ("/player_api.php", "/get.php", "/xmltv.php", "/live/"):
+            with self.subTest(path=path):
+                self.assertIn(path, self.source)
+
+
+if __name__ == "__main__":
+    unittest.main()
+
