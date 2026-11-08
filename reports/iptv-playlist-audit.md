@@ -1,5 +1,5 @@
 # IPTV Playlist Audit
-Generated: **2026-11-08T05:16:19.721450+00:00**
+Generated: **2026-11-08T05:20:05.450156+00:00**
 Source playlist SHA-256: **90a62dd358fda44303cd601078218e4d569d8c342a838ebda275b59cd0025a6b**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
