@@ -15,54 +15,14 @@ from collections import Counter
 from pathlib import Path
 from urllib.parse import urlsplit
 
+from permanent_removal_policy import PERMANENTLY_REMOVED_NAMES, canonical_channel_name, is_permanently_removed_name
+
 SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PLAYLIST = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("IPTV-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 PROTECTED = {"Backup", "Review", "Not Playing"}
-PERMANENTLY_REMOVED_NAMES = {
-    # Removed per owner instruction: no local logo and no verified logo source.
-    "Bollywood Masala",
-    "Crime + Investigation",
-    "History Hunters",
-    "True History",
-    "FX 2",
-    "Al-Mahdi TV",
-    "IBN TV",
-    "IBN TV Africa",
-    "Safeer TV",
-    "accuweather",
-    "america's got talent",
-    "american idol",
-    "baraza music tv",
-    "the walking dead universe",
-    "popflix",
-    "60 days in",
-    "deadly women",
-    "highway thru hell",
-    "mini",
-    "mundial",
-    "tvc arabic kids",
-    "grace network",
-    "joshua tv",
-    "king tv",
-    "jeremiah tv",
-    "cbn tv usa",
-    "dios te ve kids",
-    "zb bhakti",
-    "aaj tak",
-    "gnt",
-    "good news today",
-    "network 10",
-    "angel tv",
-    "calvary tv",
-    "hosanna tv",
-    "hosanna tv hindi",
-    "prarthana tv",
-    "santvani channel",
-    "sharnam tv",
-}
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
@@ -96,11 +56,7 @@ def display_name(info: str) -> str:
     return (a.get("tvg-name") or info.rsplit(",", 1)[-1]).strip()
 
 
-def normalize_name(value: str) -> str:
-    value = unicodedata.normalize("NFKD", str(value or "")).casefold()
-    value = "".join(ch for ch in value if not unicodedata.combining(ch))
-    value = re.sub(r"\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", value)
-    return re.sub(r"[^a-z0-9]+", "", value)
+normalize_name = canonical_channel_name
 
 AUTHORIZED_BACKUP_MIGRATIONS = {
     # Channel identity AND exact stream URL are required; a changed endpoint is
@@ -161,10 +117,9 @@ def authorized_backup_migration_target(info: str, url: str) -> str | None:
 
 
 def is_permanently_removed(info: str) -> bool:
-    # Normalize punctuation and quality suffixes so harmless name variants cannot
+    # Single shared policy (permanent_removal_policy.py): name variants cannot
     # reintroduce a channel that is explicitly authorized for permanent removal.
-    name = normalize_name(display_name(info))
-    return name in {normalize_name(candidate) for candidate in PERMANENTLY_REMOVED_NAMES}
+    return is_permanently_removed_name(display_name(info))
 
 
 def canonical_url_base(url: str) -> str:

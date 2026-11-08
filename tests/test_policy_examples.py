@@ -14,6 +14,9 @@ sys.path.insert(0, str(SCRIPTS))
 
 import discover_bd_in_new_queues as bd  # noqa: E402
 import discover_international_channels as intl  # noqa: E402
+import maintenance_helpers as maintenance  # noqa: E402
+import permanent_removal_policy as removal_policy  # noqa: E402
+import restore_protected_review as restore  # noqa: E402
 
 
 def attrs(country, group="", language="eng"):
@@ -81,6 +84,29 @@ class BangladeshAndForeignExamples(unittest.TestCase):
         self.assertEqual(intl.policy(attrs("BD", language="ben"), "NTV Europe")[0], "Bangladesh")
         self.assertIsNotNone(intl.policy(attrs("IN"), "Aaj Tak")[1])
         self.assertIn(intl.policy(attrs("IN"), "Sony Sports")[0], {"Sports", "Indian Entertainment"})
+
+
+class SharedPermanentRemovalPolicy(unittest.TestCase):
+    def test_all_consumers_use_the_same_policy(self):
+        self.assertIs(restore.PERMANENTLY_REMOVED_NAMES, removal_policy.PERMANENTLY_REMOVED_NAMES)
+        self.assertEqual(
+            maintenance._PERMANENTLY_REMOVED_KEYS,
+            removal_policy.PERMANENTLY_REMOVED_KEYS,
+        )
+
+    def test_removed_channels_cannot_be_reintroduced_by_discovery(self):
+        for name in ("TVC Arabic Kids", "TVC Arabic Kids HD", "Bollywood Masala"):
+            with self.subTest(name=name):
+                reason = bd.prohibited_channel(attrs("IN"), name, "IN")
+                self.assertEqual(reason, "owner-authorized permanent removal")
+                self.assertEqual(
+                    bd.prohibited_channel(attrs("BD", language="ben"), name, "BD"),
+                    "owner-authorized permanent removal",
+                )
+
+    def test_tvc_arabic_kids_is_restore_protected(self):
+        info = '#EXTINF:-1 tvg-name="TVC Arabic Kids" group-title="Kids",TVC Arabic Kids'
+        self.assertTrue(restore.is_permanently_removed(info))
 
 
 class VipTvIdentityException(unittest.TestCase):

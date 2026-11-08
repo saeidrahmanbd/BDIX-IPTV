@@ -18,6 +18,7 @@ from pathlib import Path
 from urllib.parse import parse_qsl, urlparse
 
 from country_verification import norm_name, reference_from_playlists, verify_country
+from permanent_removal_policy import is_permanently_removed_name
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/iptv-channel-discovery.md")
@@ -249,6 +250,7 @@ def prohibited_channel(
         if canonical_channel_name(candidate) in PERMANENTLY_BANNED_CHANNEL_NAMES:
             return "permanently banned channel"
 
+    removed = any(is_permanently_removed_name(candidate) for candidate in (name, a.get("tvg-name", "")))
     resolved_country = channel_country(a, country)
     values = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""), a.get("channel-id", "")))
     if resolved_country == "IN" and re.search(r"\bmh\s*1\s*prime\b|\bmh1prime\b", values, re.IGNORECASE):
@@ -256,7 +258,7 @@ def prohibited_channel(
     # Bangladesh is intentionally unrestricted by genre. The exclusions below
     # are India-only and cover all religious subtypes plus the requested genres.
     if resolved_country != "IN":
-        return None
+        return "owner-authorized permanent removal" if removed else None
 
     group = a.get("group-title", "").strip()
     values = " ".join((name, a.get("tvg-name", ""), group, a.get("tvg-id", ""), a.get("channel-id", "")))
@@ -272,7 +274,7 @@ def prohibited_channel(
     for word in FORBIDDEN_WORDS:
         if re.search(r"(?<![\\w])" + re.escape(word) + r"(?![\\w])", values, re.UNICODE):
             return f"Indian {word} channel is prohibited"
-    return None
+    return "owner-authorized permanent removal" if removed else None
 
 def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=None):
     """Return (normalized attrs | None, reason). Country must be verified BD/IN."""

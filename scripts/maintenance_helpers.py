@@ -23,71 +23,20 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from logo_asset_naming import is_blocked_logo_basename
+from permanent_removal_policy import (
+    PERMANENTLY_REMOVED_KEYS,
+    PERMANENTLY_REMOVED_NAMES,
+    canonical_channel_name as _canonical_channel_name,
+)
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PROTECTED_SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 REMOVAL_REPORT = Path("reports/proposed-removals.md")
 PROTECTED_GROUPS = {"Backup", "Review", "Not Playing"}
-PERMANENTLY_REMOVED_NAMES = {
-    # Removed per owner instruction: no local logo and no verified logo source.
-    "Bollywood Masala",
-    "Crime + Investigation",
-    "History Hunters",
-    "True History",
-    "FX 2",
-    "Al-Mahdi TV",
-    "IBN TV",
-    "IBN TV Africa",
-    "Safeer TV",
-    "AccuWeather",
-    "America's Got Talent",
-    "American Idol",
-    "Baraza Music TV",
-    "The Walking Dead Universe",
-    "Popflix",
-    "60 Days In",
-    "Deadly Women",
-    "Highway Thru Hell",
-    "MINI",
-    "Mundial",
-    "TVC Arabic Kids",
-    "Grace Network",
-    "Joshua TV",
-    "King TV",
-    "Jeremiah TV",
-    "CBN TV USA",
-    "Dios Te Ve Kids",
-    "ZB Bhakti",
-    "Aaj Tak",
-    "GNT",
-    "Good News Today",
-    "Network 10",
-    "Angel TV",
-    "Calvary TV",
-    "Hosanna TV",
-    "Hosanna TV Hindi",
-    "Prarthana TV",
-    "Santvani Channel",
-    "Sharnam TV",
-}
 
 
-def _canonical_channel_name(value: str) -> str:
-    """Normalize display names for exact allowlist matching only."""
-    value = unicodedata.normalize("NFKD", str(value or "")).casefold()
-    value = "".join(ch for ch in value if not unicodedata.combining(ch))
-    value = re.sub(
-        r"\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b",
-        " ",
-        value,
-    )
-    return re.sub(r"[^a-z0-9]+", "", value)
-
-
-_PERMANENTLY_REMOVED_KEYS = {
-    _canonical_channel_name(name) for name in PERMANENTLY_REMOVED_NAMES
-}
+_PERMANENTLY_REMOVED_KEYS = PERMANENTLY_REMOVED_KEYS
 AUTHORIZED_DUPLICATE_BACKUPS = {
     (
         _canonical_channel_name("Sparkle Movies"),
