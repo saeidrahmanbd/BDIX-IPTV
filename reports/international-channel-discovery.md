@@ -1,32 +1,51 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-06 12:22 UTC
+- Last scan: 2026-11-08 17:22 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
-- Source records parsed: 12102
-- Existing playlist records: 3033
+- Source records parsed: 12184
+- Existing playlist records: 3030
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 1
-- Exact source URLs already in playlist: 2003
-- Duplicate URLs within source feed: 25
-- New eligible source records after URL/policy filtering: 352
+- Exact source URLs already in playlist: 2056
+- Duplicate URLs within source feed: 19
+- New eligible source records after URL/policy filtering: 316
 - Country threshold: 5 unique primary identities for any retained dynamic country group.
-- Bangladesh channels of all genres are eligible. Indian News, all Religious, Educational and Kids channels are excluded; Indian Sports remain eligible. Every other country is limited to dedicated Movie/Music channels.
+- Bangladesh channels of all genres are eligible. Indian News, all Religious, Educational and Business/Finance channels are excluded; Indian Kids and Sports remain eligible. Every other country is limited to dedicated Movie/Music channels.
 - Every new primary candidate remains in New Channels and every alternate stream remains in New Backups for manual review; no automatic promotion occurs.
 - Only discovery queues are filtered; unrelated entries are preserved, with the five-channel threshold applied to dynamic country groups.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
-- New Backups staged for manual review: 50
-- Category migrations: 0
-- Existing discovery-queue entries removed: 1
+- New Backups staged for manual review: 32
+- Category migrations: 12
+- Existing discovery-queue entries removed: 6
 
 ## New primary channels
 
+- **Cartoon Network (India) (720p)** — New Channels — IN — https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8
+- **Cartoon Network HD+ (1080p)** — New Channels — IN — http://103.135.253.32:8080/CN-NETWORK/index.m3u8
+- **Pogo (720p)** — New Channels — IN — https://drk6xq0vhn.gpcdn.net/live/pogo_sd_abr/index.m3u8
+- **Sony Yay! (576p)** — New Channels — IN — https://livetv.shamon-cable.net:8443/sony_yay/index.m3u8
+- **Pitaara Comedy (1080p)** — New Channels — IN — https://vglivessai.akamaized.net/ptnr-lgtv/title-Pitaara_Comedy_LG/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/5a5410c0-1b79-4adc-9243-0139b249798b/playlist.m3u8
 - **Jaya Plus (576p)** — New Channels — IN — https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8
+- **Captain (576p)** — New Channels — IN — https://fta.ektv.in/live/173/master.m3u8
 - **ETV Telugu HD (1080p)** — New Channels — IN — https://mumbai-edge.smartplaytv.in/ETVHD/index.m3u8
+- **Namma Bangalore (1080p)** — New Channels — IN — https://stream.ottlive.co.in/nammatv/index.m3u8
+- **Star Jalsha (1080p) [Geo-blocked]** — New Channels — IN — http://cdn98.com/play/live.php?extension=ts&mac=00:1A:79:99:54:11&play_token=o1cczsG9wV&stream=225805
+- **Star Utsav (576p)** — New Channels — IN — http://163.61.226.31:9981/stream/channelid/894286890?profile=pass
+- **Zee Bangla HD (1080p)** — Backup — IN — https://livetv.shamon-cable.net:8443/ZEE-Bangla/index.m3u8
+- **Discovery Kids (720p)** — New Channels — IN — https://drk6xq0vhn.gpcdn.net/live/discovery_kids_abr/index.m3u8
+- **Disney Channel (India) HD (1080p)** — Backup — IN — http://66.102.126.10:8000/play/a013/index.m3u8
+- **Nick Jr. (India) (576p)** — New Channels — IN — http://103.185.24.134:3001/NICK-JR/index.m3u8
+- **Nickelodeon (India) (576p)** — New Channels — IN — http://103.185.24.134:3001/NICK/index.m3u8
+- **Sonic (576p)** — New Channels — IN — http://103.185.24.134:3001/SONIC/index.m3u8
+- **The Jungle Book (1080p)** — New Channels — IN — https://cc-4bhi5osabejc9.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4bhi5osabejc9/junglebook.m3u8
 - **ETV Life (1080p)** — New Channels — IN — https://mumbai-edge.smartplaytv.in/ETVLIFE/index.m3u8
 - **FashionTV (India) (576p)** — New Channels — IN — https://fta.ektv.in/live/144/144_0.m3u8
+- **&pictures HD (1080p)** — New Channels — IN — http://103.135.253.32:8080/PICTURE-HD/index.m3u8
 - **AXN Movies (Spain)** — New Channels — ES — https://cdn.stmify.com/zapitv/stream/AXN_MOVIES/axn_white.mpd
 - **Cinevault 80s (720p)** — New Channels — US — https://aegis-cloudfront-1.tubi.video/ea1ab5d1-f554-4f6b-b03f-2611fcd94257/playlist.m3u8
+- **Colors Cineplex Bollywood (576p)** — New Channels — IN — http://163.61.226.31:9981/stream/channelid/1709941389?profile=pass
+- **Colors Cineplex Superhits (576p)** — New Channels — IN — http://163.61.226.31:9981/stream/channelid/2039746374?profile=pass
 - **Film & Arts (1080p)** — New Channels — AR — http://15.204.246.24:8080/FilmArtsHD/index.m3u8
 - **Hollywood Ukraine (576p)** — New Channels — UA — http://dtv.vol.net.ua/Hollywood-HD/index.m3u8
 - **HomePlus** — New Channels — IR — https://homeplushls.wns.live/hls/stream.m3u8
@@ -36,239 +55,209 @@
 - **Magnificent Movies Network** — New Channels — US — https://mmn1-301f.kxcdn.com/hls/MMN-HLS.m3u8
 - **More TV Sci-fi** — New Channels — DE — https://jmp2.uk/plu-645e00d5d3fdde000829463a.m3u8
 - **Mosfilm Gold Collection (576p)** — New Channels — RU — http://31.222.235.15/mosfilm/index.m3u8
+- **Muzhskoy HD (1080p)** — New Channels — RU — https://fonbet.mediacdn.ru/live/muzhskoi/playlist.m3u8
 - **Patriot (720p)** — New Channels — RU — https://stream.smotrim.ru/hls2/static/playlist_4.m3u8
 - **Pluto TV Ferne Galaxien** — New Channels — DE — https://jmp2.uk/plu-68ada46d5190a45dc9c45af1.m3u8
 - **Pluto TV Film Ancora Piu Romantici** — New Channels — DE — https://jmp2.uk/plu-699d87093d5dba980705cca8.m3u8
-- **Pluto TV Kultfilmer NO** — New Channels — SE — https://jmp2.uk/plu-63dbe80f60bc8f0008aa7c78.m3u8
-- **Pluto TV Legami Letali** — New Channels — DE — https://jmp2.uk/plu-64808a8c536e0c0008a276d1.m3u8
-- **Pluto TV Movies** — New Channels — DE — https://jmp2.uk/plu-5c5c3b948002db3c3e0b262e.m3u8
-- **Pluto TV Movies GB** — New Channels — DE — https://jmp2.uk/plu-5ad8d3a31b95267e225e4e09.m3u8
-- **Pluto TV Netmovies** — New Channels — US — https://jmp2.uk/plu-663b9de4f999220008230fa8.m3u8
-- **Pluto TV Notti di Passione** — New Channels — DE — https://jmp2.uk/plu-6911c9704316999535eb21cf.m3u8
 - **Pluto TV Notti di Sangue** — New Channels — DE — https://jmp2.uk/plu-6911c92b4316999535eb1e08.m3u8
 - **Pluto TV Notti di Terrore** — New Channels — DE — https://jmp2.uk/plu-6911c8dd8caba6f046c5c5d5.m3u8
-- **Pluto TV Nuestro Cine** — New Channels — US — https://jmp2.uk/plu-5defde6d6c07b50009cf0757.m3u8
-- **Pluto TV Paranormal (Sweden)** — New Channels — SE — https://jmp2.uk/plu-62b1e4189f5db20007ff03be.m3u8
-- **Pluto TV Paranormal (Sweden) DK** — New Channels — SE — https://jmp2.uk/plu-62b30beb81f89900071fc7b9.m3u8
-- **Pluto TV Psycho** — New Channels — DE — https://jmp2.uk/plu-65ce480a78df2200131c597b.m3u8
-- **Pluto TV Reaction** — New Channels — US — https://jmp2.uk/plu-617b37b361e0fd0008cfd8c5.m3u8
-- **Pluto TV Retro Action Movies** — New Channels — US — https://jmp2.uk/plu-69a9ae4d3bd16a4ed04240d7.m3u8
-- **Pluto TV Romance** — New Channels — US — https://jmp2.uk/plu-5a66795ef91fef2c7031c599.m3u8
-- **Pluto TV Romantik** — New Channels — SE — https://jmp2.uk/plu-63a19da6847a090007f230da.m3u8
-- **Pluto TV Romantik DK** — New Channels — SE — https://jmp2.uk/plu-63a1c954d3897300079fcb12.m3u8
-- **Pluto TV Romantikk** — New Channels — SE — https://jmp2.uk/plu-63a19bb5e6914b000721b5c0.m3u8
-- **Pluto TV Sci-Fi (Sweden)** — New Channels — SE — https://jmp2.uk/plu-61f9597e78607000074f6c2a.m3u8
-- **Pluto TV Sci-Fi (Sweden) DK** — New Channels — SE — https://jmp2.uk/plu-61f9598588f86000078ee7d6.m3u8
-- **Pluto TV Sci-Fi (Sweden) NO** — New Channels — SE — https://jmp2.uk/plu-61f957e051cca800076f2358.m3u8
-- **Pluto TV Sci-Fi (United States)** — New Channels — US — https://jmp2.uk/plu-5b4fc274694c027be6ed3eea.m3u8
-- **Pluto TV Sci-Fi (United States) CA** — New Channels — US — https://jmp2.uk/plu-66166cb1307fa30008f275e7.m3u8
-- **Pluto TV Sci-Fi (United States) LatAm** — New Channels — US — https://jmp2.uk/plu-5f2817d3d7573a00080f9175.m3u8
-- **Pluto TV Serie Sci-Fi** — New Channels — DE — https://jmp2.uk/plu-67ed14aaf7c5d70b9089c3bf.m3u8
-- **Pluto TV Spotlight** — New Channels — US — https://jmp2.uk/plu-5ba3fb9c4b078e0f37ad34e8.m3u8
-- **Pluto TV Staff Picks** — New Channels — US — https://jmp2.uk/plu-5f4d863b98b41000076cd061.m3u8
-- **Pluto TV Star Trek (Germany)** — New Channels — DE — https://jmp2.uk/plu-6152ee71bf99590007893a11.m3u8
-- **Pluto TV Star Trek (Sweden)** — New Channels — SE — https://jmp2.uk/plu-61c1979dfa307000070bbe4d.m3u8
-- **Pluto TV Terror** — New Channels — US — https://jmp2.uk/plu-5c6dc88fcd232425a6e0f06e.m3u8
-- **Pluto TV Terror Trash** — New Channels — US — https://jmp2.uk/plu-66aa67493a4ad2000806d91b.m3u8
-- **Pluto TV Thrillers** — New Channels — US — https://jmp2.uk/plu-5b4e69e08291147bd04a9fd7.m3u8
+- **Pluto TV Toto** — New Channels — DE — https://jmp2.uk/plu-65253f9881f942000833ccd5.m3u8
+- **Pluto TV Trending Now** — New Channels — US — https://jmp2.uk/plu-673247127d5da5000817b4d6.m3u8
+- **Pluto TV Weihnachten im Sommer** — New Channels — DE — https://jmp2.uk/plu-642ad072283aa4000806148c.m3u8
+- **Pluto TV Western** — New Channels — DE — https://jmp2.uk/plu-630dd3b2605f140007e002f5.m3u8
+- **Pluto TV Western ES** — New Channels — DE — https://jmp2.uk/plu-6385e82900ab2e000768a058.m3u8
+- **Pluto TV Western IT** — New Channels — DE — https://jmp2.uk/plu-62e7fb67478a5b0007e6c50c.m3u8
+- **Pluto TV Westerns (Germany)** — New Channels — DE — https://jmp2.uk/plu-5d4bdb635ce813b38639e6a3.m3u8
+- **Pluto TV Westerns (United States)** — New Channels — US — https://jmp2.uk/plu-5b4e94282d4ec87bdcbb87cd.m3u8
+- **Pluto TV Westerns (United States) CA** — New Channels — US — https://jmp2.uk/plu-62bdacc96a3751000811842d.m3u8
+- **Pluto TV Wild West** — New Channels — SE — https://jmp2.uk/plu-68c017bf337652ee75db201f.m3u8
 
 ## Backup alternates
 
 - **DD Punjabi** — IN — https://fta.ektv.in/live/177/master.m3u8
-- **Captain (576p)** — IN — https://fta.ektv.in/live/173/master.m3u8
+- **DD National** — IN — http://163.61.226.31:9981/stream/channelid/1991369999?profile=pass
+- **Discovery Channel (India) (720p)** — IN — http://103.135.253.32:8080/DISCOVERY/index.m3u8
+- **Star Jalsha** — IN — http://103.135.253.32:8080/STAR-JALSHA-HD/index.m3u8
 - **Vanitha TV** — IN — https://mumbai-edge.smartplaytv.in/VanithaTV/index.m3u8
+- **Zee Telugu** — IN — https://listas-m3u8.github.io/iptv/128.19.173.10:8888/ZEETELUGUHD.m3u8
+- **Zee TV** — IN — http://103.135.253.32:8080/ZEE-TV/index.m3u8
+- **Colors Rishtey** — IN — http://163.61.226.31:9981/stream/channelid/297962113?profile=pass
 - **DD Assam** — IN — https://fta.ektv.in/live/672/master.m3u8
 - **DD Manipur** — IN — https://fta.ektv.in/live/671/master.m3u8
 - **DD Nagaland** — IN — https://fta.ektv.in/live/670/master.m3u8
 - **DD Tripura** — IN — https://fta.ektv.in/live/661/master.m3u8
-- **Duronto TV** — BD — https://box.bbaria.net/DurontoTV/index.m3u8
+- **Duronto TV** — BD — https://livetv.shamon-cable.net:8443/Duronto/index.m3u8
+- **B4U Movies** — IN — http://103.135.253.32:8080/B4U-MOVIES/index.m3u8
+- **Colors Bangla Cinema (576p)** — IN — http://103.135.253.32:8080/COLORS-BANGLA-CINEMA/index.m3u8
+- **Colors Cineplex** — IN — http://103.135.253.32:8080/COLOR-CINEPLEX/index.m3u8
 - **FilmUADrama** — UA — http://88.99.215.227/FilmUADrama/index.m3u8
-- **Golden Premier (1080p)** — MX — http://200.57.28.141:8540/play/a0ln
-- **Goldmines 2** — IN — https://fta.ektv.in/live/46/46_0.m3u8
-- **Goldmines** — IN — https://fta.ektv.in/live/53/53_0.m3u8
-- **Goldmines Action** — IN — https://fta.ektv.in/live/584/master.m3u8
-- **Goldmines Bollywood** — IN — https://fta.ektv.in/live/52/52_0.m3u8
-- **Kairali We** — IN — https://mumt01.tangotv.in/O5aw8Zn3WETV/index.m3u8
+- **Jalsha Movies** — IN — http://103.135.253.32:8080/Jalsha_movies-HD/index.m3u8
 - **Lifetime Movies** — US — http://23.237.104.106:8080/USA_LMN/index.m3u8
-- **Manoranjan Movies** — IN — https://fta.ektv.in/live/47/47_0.m3u8
-- **MAX4** — HU — http://141.94.193.53/MAX4_HD/index.m3u8
-- **Movie Punjab** — IN — https://mumt01.tangotv.in/O5aw8Zn3MOVIEPUNJAB/index.m3u8
-- **Public Movies** — IN — https://fta.ektv.in/live/239/master.m3u8
-- **Punjabi Shorts** — IN — https://gtc.ottlive.co.in/punjabshort/index.m3u8
-- **Shemaroo Josh** — IN — https://cdn.pishow.tv/ott/live/337/master.m3u8
-- **Telecine Action** — BR — http://46.151.196.223:14326
-- **The Movie Club** — IN — https://mumbai-edge.smartplaytv.in/TheMovieClub/index.m3u8
+- **Movies Now** — IN — http://103.135.253.32:8080/MN-PLUS/index.m3u8
+- **Sony Max** — IN — http://103.135.253.32:8080/Sony-Max-HD/index.m3u8
+- **Sony Wah** — IN — http://163.61.226.31:9981/stream/channelid/1743466790?profile=pass
+- **Star Movies Select** — IN — https://livetv.shamon-cable.net:8443/Star-movies-select/index.m3u8
+- **TV1000** — BG — http://stream.mcquack.net/100/tracks-v1a1/mono.ts.m3u8?ads=1&filter.tracks=v1a1
 - **Viasat Kino** — UA — http://dtv.vol.net.ua/Viasat_Kino/index.m3u8
 - **Viasat Kino Action** — UA — http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
-- **Viasat Kino Comedy** — UA — http://777905.live.tvstitch.com/playlist.m3u8?master=249&source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDQvdHJhY2tzLXYxYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA1OTk4Mzcmc3Q9UzRPS1VZemNocmREQWhnSTJkTDJ5QQ==
-- **Viasat Kino World** — UA — http://777905.live.tvstitch.com/playlist.m3u8?master=102&source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDgvdHJhY2tzLXYxYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA1OTk5NDcmc3Q9N3ROblpCZy02WTBka1RuekRIZjU0QQ==
-- **Viasat Serial** — UA — http://777905.live.tvstitch.com/playlist.m3u8?master=599&source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDUvdHJhY2tzLXYyYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA2MDExNzAmc3Q9VS12czVHQmhOdF9WQXJ4bHVYVzR2dw==
-- **viju TV1000 action** — RU — http://46.53.200.153:7777/play/a01h/index.m3u8
-- **viju TV1000 russkoe** — RU — http://46.53.200.153:7777/play/a01g/index.m3u8
 - **Zee Action** — IN — https://fta.ektv.in/live/270/master.m3u8
-- **Zee Cinema** — IN — http://103.151.60.162:2122/play/a012/index.m3u8?hls
-- **B4U Music** — IN — https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/720p/index.m3u8
-- **BRIDGE** — RU — http://178.134.1.158:8081/BRIDGE/index.m3u8
-- **Disco Polo Music** — PL — http://92.114.85.87:8014/play/a007/index.m3u8
-- **Epic Music** — IN — http://66.102.126.10:8000/play/a01i/index.m3u8
+- **Corazon TV** — PA — http://181.79.86.130:8000/play/a05d/index.m3u8
 - **ETV Music** — IN — https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
-- **Insync** — IN — https://d1msejlow1t3l4.cloudfront.net/fta/insync/playlist.m3u8
 - **M1 (Ukraine)** — UA — http://dtv.vol.net.ua/M1-HD/index.m3u8
-- **Mi Musica Romantica** — US — http://168.228.44.241:9999/play/a054/index.m3u8
-- **Music India** — IN — https://fta.ektv.in/live/158/master.m3u8
-- **Muzyka Pervogo** — RU — http://88.212.15.50/live/test_muzyka_pervogo/playlist.m3u8
-- **Public Music** — IN — https://fta.ektv.in/live/240/master.m3u8
-- **Punjabi Hits** — IN — https://legitpro.co.in/punjabihits/punjabihits/index.m3u8
-- **Rumba TV** — CO — http://38.134.250.110:8000/play/a01p/index.m3u8
-- **Sangeet Bhojpuri** — IN — https://fta.ektv.in/live/349/master.m3u8
-- **Shanson TV** — RU — http://46.53.200.153:7777/play/Shanson_TV/index.m3u8
-- **Tabbar Hits** — IN — https://livingindiaottlive.akamaized.net/tabbarhits/index.m3u8
-- **TeleHit** — MX — http://186.148.196.100:8000/play/a01s
+- **Discovery Science** — US — https://drk6xq0vhn.gpcdn.net/live/discovery_science_abr/index.m3u8
+- **Rengoni** — IN — https://fta.ektv.in/live/709/master.m3u8
 
 ## Country Migrations
 
+- **VIP TV**: `Aruba` → `International`
+- **Antenne Kaernten**: `Austria` → `International`
+- **Antenne Steiermark**: `Austria` → `International`
+- **E40**: `Paraguay` → `International`
+- **HEi Now**: `Paraguay` → `International`
+- **Next**: `Paraguay` → `International`
+- **Venus Media**: `Paraguay` → `International`
+- **AXN Movies (Portugal)**: `Portugal` → `International`
+- **Kuriakos Music**: `Portugal` → `International`
+- **RFPtv**: `Portugal` → `International`
+- **DM Sat**: `Serbia` → `International`
+- **ZICO TV**: `Serbia` → `International`
 
 ## Existing discovery-queue entries removed
 
+- **Discovery Turbo (India) (720p)** — `New Channels` — permanently banned channel
+- **Makkal TV (576i)** — `New Channels` — permanently banned channel
+- **DD India** — `New Backups` — permanently banned channel
+- **Food Food** — `New Backups` — permanently banned channel
+- **Discovery Science** — `New Backups` — documentary/wildlife is outside the Movie/Music-only policy
 - **Duronto TV** — `New Backups` — no authentic local repository logo after localization
 
 ## Rejections
 
 - Indian educational channel is prohibited: 6
-- Indian kids channel is prohibited: 12
-- Indian news channel is prohibited: 280
-- Indian religious channel is prohibited: 122
+- Indian news channel is prohibited: 283
+- Indian religious channel is prohibited: 126
 - TV series is not a dedicated Movie/Music channel: 36
-- documentary/wildlife is outside the Movie/Music-only policy: 182
+- documentary/wildlife is outside the Movie/Music-only policy: 183
 - fashion is outside the Movie/Music-only policy: 6
-- general entertainment is not a dedicated Movie/Music channel: 66
-- kids is outside the Movie/Music-only policy: 270
-- known Indian prohibited brand/category is prohibited: 21
-- news is outside the Movie/Music-only policy: 782
-- non-real/test channel: 4
-- permanently banned channel: 9
-- religious is outside the Movie/Music-only policy: 649
-- source category is not Movies or Music: 6612
-- sports is outside the Movie/Music-only policy: 249
+- general entertainment is not a dedicated Movie/Music channel: 69
+- kids is outside the Movie/Music-only policy: 280
+- known Indian prohibited brand/category is prohibited: 22
+- news is outside the Movie/Music-only policy: 786
+- non-real/test channel: 3
+- permanently banned channel: 12
+- religious is outside the Movie/Music-only policy: 652
+- source category is not Movies or Music: 6628
+- sports is outside the Movie/Music-only policy: 285
 - test/VOD/non-TV name: 293
 - unsafe or tokenized URL: 123
 
 ## Stream verification
 
-- Run timestamp: 2026-11-06T12:22:34+00:00
+- Run timestamp: 2026-11-08T17:23:01+00:00
 - Mode: international
-- New entries and discovery queues probed: 304
-- Verified live media responses: 212
-- Primary entries retained but not conclusively verified: 58
-- Definitively dead/invalid candidates removed: 34
-- Inconclusive primary/backup candidates retained for manual review: 58
+- New entries and discovery queues probed: 306
+- Verified live media responses: 223
+- Primary entries retained but not conclusively verified: 48
+- Definitively dead/invalid candidates removed: 35
+- Inconclusive primary/backup candidates retained for manual review: 48
 - Duplicate discovery entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
-- Logo references cleared because no authentic local asset was found: 0
+- Candidates held out because no authentic local logo was available: 0
 
 ### Stream probe details
-- Retained AMN TV (576p) for review — stream could not be conclusively verified (HTTP 503; access/availability could not be confirmed).
+- Retained &pictures for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed AXN Movies (Spain) from New Channels — HTTP 404.
-- Retained Captain (576p) for review — stream could not be conclusively verified (connection could not be confirmed: TimeoutError).
-- Removed Cinevault 80s (720p) from New Channels — HTTP 404.
-- Retained Colors Infinity HD (1080p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Epic Parivar (576p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Removed ETV Life (1080p) from New Channels — HTTP 404.
-- Retained ETV Plus HD (1080p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Removed ETV Telugu HD (1080p) from New Channels — HTTP 404.
-- Removed FashionTV (India) (576p) from New Channels — HTTP 404.
-- Removed Film & Arts (1080p) from New Channels — HTTP 404.
-- Removed Hollywood Ukraine (576p) from New Channels — HTTP 404.
+- Removed Captain from New Channels — HTTP 404.
+- Retained Cartoon Network HD+ for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Removed Cinevault 80s from New Channels — HTTP 404.
+- Retained Colors Infinity for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Epic Parivar for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Removed ETV Life from New Channels — HTTP 404.
+- Removed ETV Telugu from New Channels — HTTP 404.
+- Removed FashionTV (India) from New Channels — HTTP 404.
+- Removed Film & Arts from New Channels — HTTP 404.
+- Removed Hollywood Ukraine from New Channels — HTTP 404.
 - Removed HomePlus from New Channels — HTTP 404.
-- Removed ICC plus (1080p) from New Channels — HTTP 404.
-- Removed Jaya Plus (576p) from New Channels — HTTP 404.
-- Removed Komsan TV [Not 24/7] from New Channels — HTTP 404.
-- Removed Lollywood HD TV from New Channels — HTTP 404.
+- Removed ICC plus from New Channels — HTTP 404.
+- Removed Jaya Plus from New Channels — HTTP 404.
+- Retained JTBS Classic for review — stream could not be conclusively verified (HTTP 429; access/availability could not be confirmed).
+- Removed Komsan TV [ ] from New Channels — HTTP 404.
 - Removed Magnificent Movies Network from New Channels — HTTP 404.
-- Retained MBC TV (576p) for review — stream could not be conclusively verified (connection could not be confirmed: TimeoutError).
 - Removed More TV Sci-fi from New Channels — HTTP 404.
-- Removed Mosfilm Gold Collection (576p) from New Channels — HTTP 404.
-- Removed Patriot (720p) from New Channels — HTTP 404.
+- Removed Mosfilm Gold Collection from New Channels — HTTP 404.
+- Retained Nick Jr. (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Nickelodeon (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Removed Patriot from New Channels — HTTP 404.
 - Removed Pluto TV Ferne Galaxien from New Channels — HTTP 404.
 - Removed Pluto TV Film Ancora Piu Romantici from New Channels — HTTP 404.
 - Removed Pluto TV Notti di Sangue from New Channels — HTTP 404.
 - Removed Pluto TV Notti di Terrore from New Channels — HTTP 404.
-- Retained Sony Aath (576p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Sony BBC Earth HD (1080p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Sony Pal (576p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Spondon (1080p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Star Kiran (576p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained StarPlus (India) HD (1080p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Vokta TV (720p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Zee Cine Classic (1080p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Zee Comedy Nation (1080p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Zee Dil Se (1080p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Zee Horror Nights (1080p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Zee Tamil (576p) [Geo-blocked] for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Removed Pluto TV Weihnachten im Sommer from New Channels — HTTP 404.
+- Retained Sonic for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Sony Pal for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Sony Yay! for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Star Kiran for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Vokta TV for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Zee Bangla for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Zee Cine Classic for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Zee Comedy Nation for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Zee Dil Se for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Zee Horror Nights for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained 9XM for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained AMusic Channel for review — stream could not be conclusively verified (connection could not be confirmed: ConnectionResetError).
-- Retained Ananda TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Removed Anmol TV from New Backups — HTTP 404.
 - Retained B4U Movies for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained BIZ Cinema for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained BIZ Music for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Boishakhi TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained BRIDGE Deluxe for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Removed Captain (576p) from New Backups — HTTP 404.
 - Retained Colors Bangla for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Colors Bangla for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Colors Bangla Cinema for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Colors Cineplex for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Colors Cineplex for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained DBC News for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed DD Assam from New Backups — HTTP 404.
 - Removed DD Manipur from New Backups — HTTP 404.
 - Removed DD Nagaland from New Backups — HTTP 404.
 - Removed DD Punjabi from New Backups — HTTP 404.
 - Removed DD Tripura from New Backups — HTTP 404.
-- Retained Ekhon TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Epic Music for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Discovery Channel (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Disney Channel (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed ETV Music from New Backups — HTTP 404.
 - Removed FilmUADrama from New Backups — HTTP 404.
-- Retained GAZI TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Jalsha Movies for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Kairali We for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Kino TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained La Kalle for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed Lifetime Movies from New Backups — HTTP 404.
 - Removed M1 (Ukraine) from New Backups — HTTP 404.
-- Retained Mi Musica Romantica for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Molahits TV for review — stream could not be conclusively verified (connection could not be confirmed: ConnectionResetError).
 - Retained Movie Punjab for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Movies Now for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Movies Now for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Qmusic for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Russkiy roman for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Sony Aath (576p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Sony Aath for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Sony Entertainment Television for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Sony Entertainment Television for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Sony Max for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Sony Max for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Star Jalsha for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Star Jalsha for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Star Jalsha [ ] for review — stream could not be conclusively verified (HTTP 458; not conclusive).
+- Retained Star Movies Select for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Star Sports 2 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Star Sports Select 1 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Suriyan TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Thanthi One for review — stream could not be conclusively verified (connection could not be confirmed: TimeoutError).
 - Retained Travelxp for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Removed Vanitha TV from New Backups — HTTP 404.
-- Retained Vevo Pop for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed Viasat Kino from New Backups — HTTP 404.
 - Removed Viasat Kino Action from New Backups — HTTP 404.
 - Removed Zee Action from New Backups — HTTP 404.
-- Retained Zee Bangla for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Zee Bangla Sonar for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Zee Cinema for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Zee Cinema for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Zee Tamil [ ] for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Zee TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Zee TV for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 
 ## Final validation
 
-- Run timestamp: 2026-11-06T12:22:34+00:00
+- Run timestamp: 2026-11-08T17:23:01+00:00
 - Validation status: PASS
-- M3U entries parsed: 3098
+- M3U entries parsed: 3071
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
-- New Channels/New Backups/Backup ordering: passed
+- Review/New Channels/New Backups/Backup ordering: passed
 - Discovery entries missing a logo (left blank rather than using a placeholder): 0
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
