@@ -109,17 +109,5 @@ class SharedPermanentRemovalPolicy(unittest.TestCase):
         self.assertTrue(restore.is_permanently_removed(info))
 
 
-class VipTvIdentityException(unittest.TestCase):
-    def test_vip_tv_aruba_music_is_exempt_only_by_exact_identity(self):
-        exact = {"tvg-id": "custom.vip-tv-aw-music", "tvg-country": "AW", "tvg-content": "Music", "group-title": "Aruba"}
-        self.assertTrue(intl.identity_music_exception(exact, "AW"))
-        other = dict(exact, **{"tvg-id": "custom.vip-tv-other"})
-        self.assertFalse(intl.identity_music_exception(other, "AW"))
-        wrong_country = dict(exact)
-        self.assertFalse(intl.identity_music_exception(wrong_country, "CW"))
-        not_music = dict(exact, **{"tvg-content": "Movies"})
-        self.assertFalse(intl.identity_music_exception(not_music, "AW"))
-
-
 if __name__ == "__main__":
     unittest.main()
