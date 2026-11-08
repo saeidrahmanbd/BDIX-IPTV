@@ -87,7 +87,7 @@ def genre_group_policy_error(a, name, group):
         # guess a territory or reject an otherwise protected legacy row here.
         return ""
     if code not in {"BD", "IN"}:
-        return foreign_movie_music_error(a, name, code)
+        return f"foreign channels are not permitted in the {group} genre group"
     if code == "IN" and group_key == "religious":
         _target, reason, _verified = discovery.policy(a, name)
         return reason or "Indian religious channels are prohibited"
