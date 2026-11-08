@@ -21,13 +21,17 @@ SLOT_PLACEHOLDER_RE = re.compile(r"^(program|programme|show|slot)\s*@\s*\d")
 
 
 def parse(path):
-    """Read XMLTV incrementally to avoid holding the entire XML tree in memory."""
+    """Read XMLTV incrementally and release completed top-level records."""
     if not path.exists() or path.stat().st_size == 0:
         return set(), [], 0
     channels = set()
     programmes = []
     title_violations = 0
-    for _, elem in ET.iterparse(path, events=("end",)):
+    events = ET.iterparse(path, events=("start", "end"))
+    _, root = next(events)
+    for event, elem in events:
+        if event != "end":
+            continue
         if elem.tag == "channel":
             channel_id = elem.get("id")
             if channel_id:
@@ -42,7 +46,11 @@ def parse(path):
                 title_violations += 1
             if channel and start and stop and title:
                 programmes.append((channel, start, stop, title))
-        elem.clear()
+        else:
+            continue
+        # Do not clear title/category/desc children before the parent programme
+        # is processed. Clear the root only after a whole channel/programme row.
+        root.clear()
     return channels, programmes, title_violations
 
 
@@ -112,43 +120,50 @@ def quality(path):
     }
 
 
-new = quality(NEW)
-if new["channels"] == 0 or new["programmes"] == 0:
-    raise SystemExit("EPG gate BLOCK: generated guide has no usable channels/programmes")
-if new["title_violations"]:
-    raise SystemExit(f"EPG gate BLOCK: {new['title_violations']} programmes have missing/blank titles")
-if new["overlaps"]:
-    raise SystemExit(f"EPG gate BLOCK: generated guide contains {new['overlaps']} overlapping programme intervals")
-if new["generic_ratio"] > 0.01:
-    raise SystemExit(f"EPG gate BLOCK: placeholder-title ratio is {new['generic_ratio']:.3f}, above 0.010")
 
-if OLD.exists():
-    old = quality(OLD)
-    if old["window_channels"] and new["window_channels"] < max(1, int(old["window_channels"] * MIN_CHANNEL_RETENTION)):
-        raise SystemExit(
-            "EPG gate BLOCK: usable current-window channel coverage regressed below "
-            f"{MIN_CHANNEL_RETENTION:.0%}: "
-            f"{old['window_channels']} -> {new['window_channels']}"
-        )
-    clean_volume_pass = (
-        not old["window_programmes"]
-        or new["window_programmes"] >= int(old["window_programmes"] * 0.85)
-    )
-    quality_override = (
-        (not old["window_programmes"] or new["window_programmes"] >= int(old["window_programmes"] * 0.20))
-        and new["window_channels"] >= max(1, int(old["window_channels"] * MIN_CHANNEL_RETENTION))
-    )
-    if not clean_volume_pass and not quality_override:
-        raise SystemExit(
-            "EPG gate BLOCK: current-window programme retention/quality failed: "
-            f"{old['window_programmes']} -> {new['window_programmes']} programmes"
-        )
 
-print(
-    "EPG gate PASS: multilingual guide accepted "
-    f"(channels={new['channels']}, programmes={new['programmes']}, "
-    f"window_channels={new['window_channels']}, window_programmes={new['window_programmes']}, "
-    f"current_channels={new['current_channels']}, current_programmes={new['current_programmes']}, "
-    f"overlaps={new['overlaps']}, generic ratio={new['generic_ratio']:.3f})"
-)
-sys.exit(0)
+def main():
+    new = quality(NEW)
+    if new["channels"] == 0 or new["programmes"] == 0:
+        raise SystemExit("EPG gate BLOCK: generated guide has no usable channels/programmes")
+    if new["title_violations"]:
+        raise SystemExit(f"EPG gate BLOCK: {new['title_violations']} programmes have missing/blank titles")
+    if new["overlaps"]:
+        raise SystemExit(f"EPG gate BLOCK: generated guide contains {new['overlaps']} overlapping programme intervals")
+    if new["generic_ratio"] > 0.01:
+        raise SystemExit(f"EPG gate BLOCK: placeholder-title ratio is {new['generic_ratio']:.3f}, above 0.010")
+
+    if OLD.exists():
+        old = quality(OLD)
+        if old["window_channels"] and new["window_channels"] < max(1, int(old["window_channels"] * MIN_CHANNEL_RETENTION)):
+            raise SystemExit(
+                "EPG gate BLOCK: usable current-window channel coverage regressed below "
+                f"{MIN_CHANNEL_RETENTION:.0%}: "
+                f"{old['window_channels']} -> {new['window_channels']}"
+            )
+        clean_volume_pass = (
+            not old["window_programmes"]
+            or new["window_programmes"] >= int(old["window_programmes"] * 0.85)
+        )
+        quality_override = (
+            (not old["window_programmes"] or new["window_programmes"] >= int(old["window_programmes"] * 0.20))
+            and new["window_channels"] >= max(1, int(old["window_channels"] * MIN_CHANNEL_RETENTION))
+        )
+        if not clean_volume_pass and not quality_override:
+            raise SystemExit(
+                "EPG gate BLOCK: current-window programme retention/quality failed: "
+                f"{old['window_programmes']} -> {new['window_programmes']} programmes"
+            )
+
+    print(
+        "EPG gate PASS: multilingual guide accepted "
+        f"(channels={new['channels']}, programmes={new['programmes']}, "
+        f"window_channels={new['window_channels']}, window_programmes={new['window_programmes']}, "
+        f"current_channels={new['current_channels']}, current_programmes={new['current_programmes']}, "
+        f"overlaps={new['overlaps']}, generic ratio={new['generic_ratio']:.3f})"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

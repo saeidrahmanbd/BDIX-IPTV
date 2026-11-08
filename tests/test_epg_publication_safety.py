@@ -1,8 +1,13 @@
 from pathlib import Path
+import sys
+import tempfile
 import unittest
+from datetime import datetime, timedelta, timezone
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+import epg_publish_gate_v2
 
 
 class EPGPublicationSafetyTests(unittest.TestCase):
@@ -64,8 +69,32 @@ class EPGPublicationSafetyTests(unittest.TestCase):
 
     def test_publication_gate_streams_large_xmltv_files(self):
         gate = (ROOT / "scripts" / "epg_publish_gate_v2.py").read_text(encoding="utf-8")
-        self.assertIn('ET.iterparse(path, events=("end",))', gate)
+        self.assertIn('ET.iterparse(path, events=("start", "end"))', gate)
+        self.assertIn("root.clear()", gate)
         self.assertNotIn("ET.parse(path)", gate)
+
+    def test_streaming_publish_gate_preserves_programme_titles(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            guide = Path(tmp) / "guide.xml"
+            now = datetime.now(timezone.utc).replace(microsecond=0)
+            start = now + timedelta(minutes=5)
+            stop = start + timedelta(minutes=30)
+            stamp = lambda value: value.strftime("%Y%m%d%H%M%S +0000")
+            root = ET.Element("tv")
+            ET.SubElement(root, "channel", {"id": "test.channel"})
+            programme = ET.SubElement(
+                root,
+                "programme",
+                {"channel": "test.channel", "start": stamp(start), "stop": stamp(stop)},
+            )
+            ET.SubElement(programme, "title").text = "Current News Bulletin"
+            ET.ElementTree(root).write(guide, encoding="utf-8", xml_declaration=True)
+
+            metrics = epg_publish_gate_v2.quality(guide)
+            self.assertEqual(metrics["programmes"], 1)
+            self.assertEqual(metrics["title_violations"], 0)
+            self.assertEqual(metrics["window_channels"], 1)
+
 
     def test_refresh_does_not_restore_a_legacy_guide_snapshot(self):
         refresh = (ROOT / ".github/workflows/epg-refresh.yml").read_text(encoding="utf-8")
