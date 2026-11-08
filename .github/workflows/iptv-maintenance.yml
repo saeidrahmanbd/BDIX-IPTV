@@ -70,13 +70,15 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
-concurrency:
-  group: iptv-playlist-main-writer-v3
-  cancel-in-progress: false
-  queue: max
 jobs:
   maintain:
     if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG'))) }}
+    # Shared main-branch writer queue. Set on the writing job, not the workflow,
+    # so runs whose jobs are skipped do not occupy the queue.
+    concurrency:
+      group: iptv-playlist-main-writer-v3
+      cancel-in-progress: false
+      queue: max
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:

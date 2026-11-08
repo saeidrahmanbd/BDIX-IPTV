@@ -9,7 +9,7 @@ Thanks for helping improve the project.
 - Do not remove Backup or review-queue entries solely because an automated health check failed.
 - Keep New Channels and New Backups as manual-review queues. Never auto-approve or promote entries from either queue.
 - Use local repository logos only in published playlists.
-- Follow the regional discovery policy: Bangladesh allows all genres; India and Pakistan exclude News, all Religious (including Islamic), Educational, Business/Finance, Farming, Kids and Sports; other countries in the International playlist allow Movies/Music only.
+- Follow the regional discovery policy: Bangladesh allows all genres; India excludes News, all Religious (including Islamic), Educational, Business/Finance and Farming, and allows Kids and Sports; Pakistan excludes News, all Religious, Educational, Business/Finance, Farming, Kids and Sports; other countries in the International playlist allow Movies/Music only.
 - Avoid duplicate stream URLs.
 - Keep channel identity, country, language, group, and display-name metadata consistent.
 - Treat signed, tokenized, session-specific, and rendition-only URLs as review items rather than proof of independent redundancy.

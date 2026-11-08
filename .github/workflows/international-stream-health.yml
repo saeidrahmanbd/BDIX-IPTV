@@ -14,12 +14,6 @@ on:
 permissions:
   contents: write
 
-# Serialize all playlist writers with the repository's existing discovery/maintenance jobs.
-concurrency:
-  group: iptv-playlist-main-writer-v3
-  cancel-in-progress: false
-  queue: max
-
 jobs:
   check:
     if: >-
@@ -28,6 +22,12 @@ jobs:
       (github.event_name == 'workflow_run' &&
        github.event.workflow_run.event == 'workflow_dispatch' &&
        github.event.workflow_run.conclusion == 'success')
+    # Shared main-branch writer queue. Set on the writing job, not the workflow,
+    # so runs whose jobs are skipped do not occupy the queue.
+    concurrency:
+      group: iptv-playlist-main-writer-v3
+      cancel-in-progress: false
+      queue: max
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
