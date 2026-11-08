@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-07T21:51:26+00:00**
-IPTV-Playlist.m3u SHA-256: **630592a6da287492f2f8b41b94028eeed5610cf41d3aac44054b2cf6c3bc5e29**
+Generated: **2026-11-08T04:23:00+00:00**
+IPTV-Playlist.m3u SHA-256: **e63f25d17d0eee6f63243d8402bf18380bcc58ecf2f2eca7918d8bd79f09e318**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 

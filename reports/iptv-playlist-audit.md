@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-07T21:51:05.678483+00:00**
-Source playlist SHA-256: **630592a6da287492f2f8b41b94028eeed5610cf41d3aac44054b2cf6c3bc5e29**
+Generated: **2026-11-08T04:22:38.809404+00:00**
+Source playlist SHA-256: **e63f25d17d0eee6f63243d8402bf18380bcc58ecf2f2eca7918d8bd79f09e318**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -27,7 +27,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Primary channel-number collisions: **0**
 - Primary channel-number sequence issues: **61**
 - Primary entries missing channel numbers: **0**
-- Primary entries missing tvg-country: **0**
+- Primary entries missing tvg-country: **1**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
@@ -41,11 +41,12 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 ## Primary Metadata Completeness
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
-- Active primary entries missing tvg-country: **0**
+- Active primary entries missing tvg-country: **1**
 - Active primary entries missing tvg-language: **0**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
+| Kids | 1 | 0 |
 
 ## Review Queue Country Verification
 
