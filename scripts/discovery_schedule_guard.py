@@ -161,23 +161,28 @@ def guard(workflow_file: str) -> int:
     repository = os.environ["GITHUB_REPOSITORY"]
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
     current_run_id = os.environ["GITHUB_RUN_ID"]
-    target_date = today_in_bangladesh()
     client = GitHubActions(repository, token)
 
-    # A newly-created Actions run should already be visible to the REST API.
-    # Retry briefly, then fail closed rather than risk a duplicate playlist writer.
-    todays: list[dict[str, Any]] = []
-    for attempt in range(5):
-        todays = runs_for_date(client.workflow_runs(workflow_file), target_date)
-        if any(int(run["id"]) == int(current_run_id) for run in todays):
-            break
-        if attempt < 4:
-            time.sleep(2)
-    if not any(int(run["id"]) == int(current_run_id) for run in todays):
+    # Query the current run directly instead of relying on the eventually
+    # consistent workflow-runs collection. This also anchors the Bangladesh
+    # date to when GitHub created the run, not when a queued job finally starts.
+    current_run = client.request("GET", f"actions/runs/{current_run_id}")
+    if not isinstance(current_run, dict) or not current_run.get("created_at"):
+        raise RuntimeError(f"Could not retrieve creation time for current run {current_run_id}.")
+    expected_path = f".github/workflows/{workflow_file}"
+    if current_run.get("path") and current_run["path"].split("@", 1)[0] != expected_path:
         raise RuntimeError(
-            f"Current run {current_run_id} is not visible in GitHub's run history; "
-            "failing closed to protect against duplicate daily discovery."
+            f"Current run {current_run_id} belongs to {current_run.get('path')}, "
+            f"not {expected_path}."
         )
+    target_date = bangladesh_date(current_run["created_at"])
+
+    # Merge the directly fetched run into the collection so it is always
+    # considered, even if the list endpoint has not indexed it yet.
+    runs = client.workflow_runs(workflow_file)
+    by_id = {int(run["id"]): run for run in runs if run.get("id") is not None}
+    by_id[int(current_run_id)] = current_run
+    todays = runs_for_date(list(by_id.values()), target_date)
 
     first_id = first_run_id(todays)
     execute = first_id == int(current_run_id)
