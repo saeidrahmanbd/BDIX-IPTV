@@ -1,69 +1,70 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-08T02:50:41+00:00**
+Generated: **2026-11-08T14:20:55+00:00**
 
 This report measures the two maintained M3U playlists included in the automated EPG pipeline. This report covers only the two maintained playlists.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1004 | 674 | 428 | 392 | 428 | 380 | 246 | OK |
-| International-Playlist.m3u | 3030 | 2211 | 937 | 883 | 926 | 829 | 1274 | OK |
+| IPTV-Playlist.m3u | 990 | 597 | 363 | 309 | 378 | 305 | 234 | OK |
+| International-Playlist.m3u | 3030 | 2197 | 838 | 633 | 908 | 766 | 1359 | OK |
 
 ## Group coverage
 
 | Group | Active unique IDs | Mapped IDs | Current/future source schedules | No mapping |
 |---|---:|---:|---:|---:|
 | Adult | 351 | 11 | 11 | 340 |
-| Argentina | 14 | 1 | 1 | 13 |
+| Argentina | 12 | 1 | 0 | 11 |
 | Aruba | 1 | 0 | 0 | 1 |
 | Austria | 2 | 0 | 0 | 2 |
-| Bangladesh | 77 | 5 | 3 | 72 |
-| Brazil | 10 | 3 | 3 | 7 |
-| Bulgaria | 20 | 6 | 5 | 14 |
-| Canada | 31 | 25 | 25 | 6 |
-| Chile | 12 | 1 | 1 | 11 |
+| Bangladesh | 70 | 5 | 1 | 65 |
+| Brazil | 9 | 2 | 1 | 7 |
+| Bulgaria | 20 | 6 | 6 | 14 |
+| Canada | 31 | 24 | 13 | 7 |
+| Chile | 11 | 0 | 0 | 11 |
 | China | 9 | 3 | 3 | 6 |
-| Colombia | 11 | 1 | 0 | 10 |
-| Costa Rica | 11 | 0 | 0 | 11 |
-| Czech Republic | 24 | 17 | 17 | 7 |
-| Documentary & Wildlife | 196 | 145 | 136 | 51 |
+| Colombia | 12 | 1 | 0 | 11 |
+| Costa Rica | 12 | 0 | 0 | 12 |
+| Czech Republic | 24 | 17 | 10 | 7 |
+| Documentary & Wildlife | 195 | 135 | 95 | 60 |
 | Dominican Republic | 11 | 1 | 0 | 10 |
-| Ecuador | 3 | 0 | 0 | 3 |
-| Estonia | 6 | 1 | 1 | 5 |
-| France | 43 | 16 | 15 | 27 |
-| Germany | 39 | 29 | 29 | 10 |
-| Greece | 7 | 2 | 2 | 5 |
-| Hungary | 17 | 8 | 8 | 9 |
-| Indian Bangla | 42 | 34 | 31 | 8 |
-| Indian Entertainment | 215 | 178 | 169 | 37 |
-| Indian Movies | 84 | 62 | 54 | 22 |
-| Indian Music | 69 | 57 | 54 | 12 |
-| International | 183 | 60 | 52 | 123 |
-| Iran | 16 | 3 | 3 | 13 |
-| Italy | 24 | 11 | 11 | 13 |
-| Kids | 196 | 103 | 97 | 93 |
-| Lebanon | 6 | 1 | 1 | 5 |
-| Mexico | 15 | 6 | 5 | 9 |
-| Netherlands | 15 | 9 | 9 | 6 |
-| Pakistani | 16 | 2 | 2 | 14 |
+| Ecuador | 4 | 0 | 0 | 4 |
+| Estonia | 6 | 0 | 0 | 6 |
+| Fashion TV | 1 | 1 | 0 | 0 |
+| France | 44 | 17 | 9 | 27 |
+| Germany | 39 | 12 | 10 | 27 |
+| Greece | 8 | 2 | 2 | 6 |
+| Hungary | 17 | 7 | 7 | 10 |
+| Indian Bangla | 44 | 33 | 30 | 11 |
+| Indian Entertainment | 209 | 173 | 160 | 36 |
+| Indian Movies | 84 | 62 | 56 | 22 |
+| Indian Music | 69 | 56 | 53 | 13 |
+| International | 146 | 31 | 18 | 115 |
+| Iran | 16 | 1 | 0 | 15 |
+| Italy | 24 | 11 | 9 | 13 |
+| Kids | 198 | 96 | 70 | 102 |
+| Lebanon | 6 | 1 | 0 | 5 |
+| Mexico | 15 | 6 | 3 | 9 |
+| Netherlands | 16 | 8 | 5 | 8 |
+| Pakistani | 18 | 1 | 1 | 17 |
 | Panama | 5 | 0 | 0 | 5 |
 | Paraguay | 4 | 0 | 0 | 4 |
 | Peru | 7 | 0 | 0 | 7 |
-| Poland | 28 | 18 | 18 | 10 |
+| Poland | 29 | 13 | 12 | 16 |
 | Portugal | 3 | 1 | 1 | 2 |
-| Religious | 35 | 10 | 9 | 25 |
+| Religious | 35 | 7 | 7 | 28 |
 | Romania | 28 | 9 | 9 | 19 |
-| Russia | 62 | 21 | 19 | 41 |
+| Russia | 56 | 14 | 4 | 42 |
 | Saudi Arabia | 8 | 0 | 0 | 8 |
-| Serbia | 2 | 1 | 1 | 1 |
+| Serbia | 2 | 0 | 0 | 2 |
 | Singapore | 6 | 1 | 1 | 5 |
-| Spain | 16 | 4 | 4 | 12 |
-| Sports | 244 | 117 | 112 | 127 |
-| Sweden | 12 | 6 | 6 | 6 |
-| Turkey | 12 | 0 | 0 | 12 |
-| Ukraine | 19 | 6 | 6 | 13 |
-| United Kingdom | 12 | 3 | 3 | 9 |
-| United States | 169 | 85 | 84 | 84 |
+| Spain | 17 | 4 | 2 | 13 |
+| Sports | 239 | 105 | 79 | 134 |
+| Sweden | 12 | 2 | 0 | 10 |
+| Turkey | 14 | 0 | 0 | 14 |
+| Ukraine | 19 | 3 | 0 | 16 |
+| United Kingdom | 13 | 3 | 2 | 10 |
+| United States | 169 | 70 | 44 | 99 |
 | Uzbekistan | 5 | 0 | 0 | 5 |
 | Vietnam | 6 | 0 | 0 | 6 |
 
@@ -77,5 +78,5 @@ This report measures the two maintained M3U playlists included in the automated 
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **6da7347dcf4d355f3469116aea87f011f70e2699cfc38f2c08ff136138f1680e**
-- International-Playlist.m3u SHA-256: **7cc909e5c9d9086ae1f28f720653c7bdd68a1bb1b5e64a61e3280074253069a5**
+- IPTV-Playlist.m3u SHA-256: **ad7ab0110569ca3f9aa02be4d0caf0af3b61d0255bae43ee04fee6bbcac4b3bf**
+- International-Playlist.m3u SHA-256: **be459b74430ed16017a820fe84a7d7fee7d861c0724f5a3698fd5397008da43f**
