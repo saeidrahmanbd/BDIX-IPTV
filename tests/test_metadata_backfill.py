@@ -91,6 +91,25 @@ class MetadataBackfillTests(unittest.TestCase):
         self.assertEqual(metrics["language_fields_filled"], 2)
 
 
+    def test_known_channel_language_overrides_use_corrected_languages(self):
+        playlist = (
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-id="TaazaTV.in@SD" tvg-name="Taaza TV" group-title="Indian Entertainment",Taaza TV\n'
+            "https://example.invalid/taaza.m3u8\n"
+            '#EXTINF:-1 tvg-id="MeiAlaiTV.in" tvg-name="Mei Alai TV" group-title="Indian Entertainment",Mei Alai TV\n'
+            "https://example.invalid/meialai.m3u8\n"
+        )
+        catalogue = parse_catalogue(
+            "id,name,country,languages\n"
+            "TaazaTV.in,Taaza TV,IN,tam\n"
+            "MeiAlaiTV.in,Mei Alai TV,IN,hin\n"
+        )
+        updated, _ = update_playlist(playlist, catalogue)
+        self.assertIn('tvg-language="hin"', updated)
+        self.assertIn('tvg-id="TaazaTV.in@SD"', updated)
+        self.assertIn('tvg-language="tam"', updated)
+        self.assertIn('tvg-id="MeiAlaiTV.in"', updated)
+
     def test_backup_channel_language_override_is_used_when_catalogue_has_no_match(self):
         playlist = (
             "#EXTM3U\n"

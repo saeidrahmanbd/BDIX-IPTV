@@ -49,9 +49,72 @@ def canonical_channel_name(value: str) -> str:
 
 PERMANENTLY_BANNED_CHANNEL_NAMES = {
     canonical_channel_name(name) for name in (
-        "E-Vidya 10", "E-Vidya 11", "E-Vidya 12", "E-Vidya 4", "E-Vidya 5",
-        "E-Vidya 6", "E-Vidya 7", "E-Vidya 8", "E-Vidya 9", "Friends TV", "HSTV",
+        "E-Vidya 10",
+        "E-Vidya 11",
+        "E-Vidya 12",
+        "E-Vidya 4",
+        "E-Vidya 5",
+        "E-Vidya 6",
+        "E-Vidya 7",
+        "E-Vidya 8",
+        "E-Vidya 9",
+        "Friends TV",
+        "HSTV",
+        "4 SiDES TV",
+        "DD India",
+        "Global Punjab",
+        "Jan TV",
+        "Kaumudy TV",
+        "Nandighosha TV",
+        "Odisha TV",
+        "Raftaar Media",
+        "Taaza TV",
+        "Tamilan TV",
+        "Tehzeeb TV",
+        "NKR TV Kannada",
+        "Ayush TV",
+        "VCV",
+        "KCL TV",
+        "Jeevan TV",
+        "Siri Kannada All Time",
+        "Pankh",
+        "Starnet",
+        "Unique TV",
+        "Subin TV",
+        "TV BRICS English",
+        "Mei Alai TV",
+        "Makkal TV",
+        "Madhimugam TV",
     )
+}
+# Stable base channel IDs (region/quality suffixes after "@" are ignored). This
+# exact-ID denylist prevents renamed aliases and alternate feeds from returning.
+PERMANENTLY_BANNED_CHANNEL_IDS = {
+    "4sidestv.in",
+    "ddindia.in",
+    "globalpunjab.in",
+    "jantv.in",
+    "kaumudytv.in",
+    "nandighoshatv.in",
+    "odishatv.in",
+    "raftaarmedia.in",
+    "taazatv.in",
+    "tamilantv.in",
+    "tehzeebtv.in",
+    "nkrtvkannada.in",
+    "ayushtv.in",
+    "vcv.in",
+    "kcltv.in",
+    "jeevantv.in",
+    "sirikannadaalltime.in",
+    "pankh.in",
+    "starnet.in",
+    "uniquetv.in",
+    "subintv.in",
+    "tvbricsenglish.in",
+    "meialaitv.in",
+    "makkaltv.in",
+    "madhimugamtv.in",
 }
 # A programme title is not a standalone linear TV channel. Keep this exact
 # denylist narrow so incomplete optional metadata alone never blocks a channel.
@@ -160,6 +223,13 @@ def prohibited_channel(
     discovery: bool = False,
 ) -> str | None:
     """Apply legacy active-channel exclusions, plus optional IPTV discovery-only genres."""
+    ids = {
+        (value or "").strip().casefold().split("@", 1)[0]
+        for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
+        if (value or "").strip()
+    }
+    if ids & PERMANENTLY_BANNED_CHANNEL_IDS:
+        return "permanently banned channel"
     for candidate in (name, a.get("tvg-name", "")):
         if canonical_channel_name(candidate) in PERMANENTLY_BANNED_CHANNEL_NAMES:
             return "permanently banned channel"

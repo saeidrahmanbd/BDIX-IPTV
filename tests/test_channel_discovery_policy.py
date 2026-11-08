@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from discover_bd_in_new_queues import (
-    PERMANENTLY_BANNED_CHANNEL_NAMES, canonical_channel_name,
+    PERMANENTLY_BANNED_CHANNEL_NAMES, PERMANENTLY_BANNED_CHANNEL_IDS, canonical_channel_name,
     evaluate, prohibited_channel, purge_forbidden_existing_queue_rows,
 )
 
@@ -18,11 +18,47 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "E-Vidya 7 (576p) (India)", "E-Vidya 8 (576p) (India)",
             "E-Vidya 9 (576p) (India)", "Friends TV (1080p) (India)",
         ]
-        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_NAMES), 11)
+        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_NAMES), 36)
+        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_IDS), 25)
         for name in names:
             with self.subTest(name=name):
                 self.assertIn(canonical_channel_name(name), PERMANENTLY_BANNED_CHANNEL_NAMES)
                 self.assertEqual(prohibited_channel({"tvg-name": name}, name), "permanently banned channel")
+
+    def test_permanently_banned_ids_block_renamed_aliases_and_quality_suffixes(self):
+        examples = [
+            ("4SiDESTV.in@HD", "Renamed regional feed"),
+            ("DDIndia.in@SD", "Renamed news feed"),
+            ("GlobalPunjab.in", "Punjabi alternative stream"),
+            ("JanTV.in@SD", "Education HD"),
+            ("KaumudyTV.in@HD", "Alternate Kaumudy"),
+            ("JeevanTV.in@SD", "Generic Malayalam TV"),
+            ("MeiAlaiTV.in", "Tamil entertainment"),
+            ("MadhimugamTV.in", "Regional feed"),
+        ]
+        for channel_id, alias in examples:
+            with self.subTest(channel_id=channel_id):
+                self.assertEqual(
+                    prohibited_channel(
+                        {"tvg-id": channel_id, "channel-id": channel_id,
+                         "tvg-country": "IN", "group-title": "New Channels"},
+                        alias,
+                    ),
+                    "permanently banned channel",
+                )
+
+    def test_permanently_banned_channels_are_purged_from_existing_review_queues(self):
+        text = (
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-id="TaazaTV.in@SD" tvg-name="Taaza TV" tvg-country="IN" group-title="New Channels",Taaza TV\n'
+            "https://example.invalid/taaza.m3u8\n"
+            '#EXTINF:-1 tvg-id="PulariTV.in@SD" tvg-name="Pulari TV" tvg-country="IN" group-title="New Channels",Pulari TV\n'
+            "https://example.invalid/pulari.m3u8\n"
+        )
+        filtered, removed = purge_forbidden_existing_queue_rows(text)
+        self.assertEqual(removed, ["Taaza TV"])
+        self.assertNotIn("Taaza TV", filtered)
+        self.assertIn("Pulari TV", filtered)
 
     def test_indian_news_and_all_religious_channels_are_rejected(self):
         examples = [

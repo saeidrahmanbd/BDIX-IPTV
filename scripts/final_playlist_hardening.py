@@ -54,10 +54,13 @@ def process(path):
   header_index=next((i+1 for i,line in enumerate(pre) if line.startswith('#EXTM3U')),len(pre))
   pre.insert(header_index,registry_line)
  reference=reference_from_playlists([path])
- filtered=[]; removed=[]; demoted=[]
+ filtered=[]; removed=[]; demoted=[]; permanently_removed=[]
  for r in rec:
   a=attrs(r[0]); name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
   group=a.get('group-title','').strip()
+  if prohibited_channel(a,name) == 'permanently banned channel':
+   permanently_removed.append((name,'permanently banned channel'))
+   continue
   if group == 'Not Playing':
    r[0]=set_attr(r[0],'group-title','Review'); group='Review'
   # A foreign country suffix in a discovery queue is not an eligible BD/IN
@@ -83,6 +86,9 @@ def process(path):
     demoted.append((name,reason))
   filtered.append(r)
  rec=filtered
+ if permanently_removed:
+  print(f'REMOVED PERMANENTLY BANNED CHANNEL ROWS: {len(permanently_removed)}')
+  for name,reason in permanently_removed: print(f'  - {name}: {reason}')
  if removed:
   print(f'REMOVED PROHIBITED INDIAN REVIEW-QUEUE ROWS: {len(removed)}')
   for name,reason in removed: print(f'  - {name}: {reason}')

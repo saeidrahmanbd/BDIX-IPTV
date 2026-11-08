@@ -78,6 +78,25 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
         self.assertEqual(numbered, [1, 7])
         self.assertIn('tvg-chno="7"', result)
 
+    def test_permanently_banned_channels_are_removed_from_primary_and_backup(self):
+        rows = [
+            "#EXTM3U",
+            '#EXTINF:-1 tvg-id="TVBRICSEnglish.in@SD" tvg-name="TV BRICS English" tvg-country="IN" group-title="Indian Entertainment",TV BRICS English',
+            "https://example.invalid/tv-brics.m3u8",
+            '#EXTINF:-1 tvg-id="JeevanTV.in@SD" tvg-name="Jeevan TV" tvg-country="IN" group-title="Backup",Jeevan TV',
+            "https://example.invalid/jeevan-backup.m3u8",
+            '#EXTINF:-1 tvg-id="PulariTV.in@SD" tvg-name="Pulari TV" tvg-country="IN" tvg-language="mal" group-title="Indian Entertainment",Pulari TV',
+            "https://example.invalid/pulari.m3u8",
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "IPTV-Playlist.m3u"
+            path.write_text("\n".join(rows) + "\n", encoding="utf-8")
+            hardening.process(path)
+            result = path.read_text(encoding="utf-8")
+        self.assertNotIn("TV BRICS English", result)
+        self.assertNotIn("Jeevan TV", result)
+        self.assertIn('group-title="Indian Entertainment",Pulari TV', result)
+
     def test_channel_s_uk_with_wrong_identity_still_fails(self):
         rows = [
             "#EXTM3U",

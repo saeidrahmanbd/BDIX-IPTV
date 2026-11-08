@@ -33,7 +33,7 @@ LANGUAGE_OVERRIDES = {
     "chhayachitramtelugu.in@sd": ("tel",),
     "chithiram.in@sd": ("tam",),
     "suntv.in@hd": ("tam",),
-    "taazatv.in@sd": ("tam",),
+    "taazatv.in@sd": ("hin",),
     "thendraltv.in@sd": ("tam",),
     "moviepunjab.in@sd": ("pan",),
     "punjabimusichd.in@sd": ("pan",),
@@ -43,6 +43,7 @@ LANGUAGE_OVERRIDES = {
     "nepal1.in@sd": ("nep",),
     "ntctv.in@sd": ("nep",),
     "tehzeebtv.in@sd": ("urd",),
+    "meialaitv.in": ("tam",),
     "mahuaplay.in@sd": ("bho",),
     "tvbricsenglish.in@sd": ("eng",),
     "b4umovies.in@india": ("hin",),
@@ -74,6 +75,12 @@ LANGUAGE_OVERRIDES = {
     "zeebangla.in@hd": ("ben",),
     "zeetelugu.in@hd": ("tel",),
     "zeetv.in@sd": ("hin",),
+}
+# Verified channel-specific language corrections override inconsistent upstream
+# feed metadata for these exact channel identities.
+FORCED_LANGUAGE_OVERRIDES = {
+    "taazatv.in@sd": ("hin",),
+    "meialaitv.in": ("tam",),
 }
 GROUP_DEFAULTS = {
     "Bangladesh": ("BD", "ben"),
@@ -220,10 +227,13 @@ def update_playlist(text, catalogue):
             matched_ids += 1
             country, languages = catalogue[source_id]
 
-        # Exact-ID catalogue/feed data has priority. Use a channel-specific
-        # language override only when the catalogue has no usable language.
-        if not languages:
-            languages = LANGUAGE_OVERRIDES.get((tvg_id or channel_id).casefold(), ())
+        # Verified corrections for these exact feeds override conflicting
+        # catalogue metadata; other channel overrides remain fallbacks.
+        language_key = (tvg_id or channel_id).casefold()
+        if language_key in FORCED_LANGUAGE_OVERRIDES:
+            languages = FORCED_LANGUAGE_OVERRIDES[language_key]
+        elif not languages:
+            languages = LANGUAGE_OVERRIDES.get(language_key, ())
 
         # An alternate stream may inherit the language of its exact-ID primary.
         # Do not use category defaults for Backup; if still unknown, label it
