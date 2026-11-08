@@ -62,6 +62,11 @@ class EPGPublicationSafetyTests(unittest.TestCase):
         self.assertIn('old["window_channels"]', gate)
         self.assertIn('old["window_programmes"]', gate)
 
+    def test_publication_gate_streams_large_xmltv_files(self):
+        gate = (ROOT / "scripts" / "epg_publish_gate_v2.py").read_text(encoding="utf-8")
+        self.assertIn('ET.iterparse(path, events=("end",))', gate)
+        self.assertNotIn("ET.parse(path)", gate)
+
     def test_refresh_does_not_restore_a_legacy_guide_snapshot(self):
         refresh = (ROOT / ".github/workflows/epg-refresh.yml").read_text(encoding="utf-8")
         self.assertNotIn("LAST_GOOD_EPG_COMMIT", refresh)

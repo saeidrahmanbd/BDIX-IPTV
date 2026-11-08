@@ -369,6 +369,15 @@ def source_label(src):
         return "Maasranga official weekly grid (undated)"
     return src
 
+
+def source_status_line(src, status):
+    """Create a source diagnostic line without exposing a private feed URL."""
+    private_url = os.environ.get(PRIVATE_SOURCE_ENV, "").strip()
+    safe_status = str(status or "NO_STATUS")
+    if private_url:
+        safe_status = safe_status.replace(private_url, PRIVATE_SOURCE_LABEL)
+    return f"EPG source status: {source_label(src)}: {safe_status}"
+
 CHANNEL_TIME_OFFSETS = {
     "ColorsCineplex.in@SD": timedelta(hours=2),
 }
@@ -995,14 +1004,18 @@ def main():
                         candidates.setdefault((target, source_index, source_id), []).append(rec)
                 continue
             if src in source_errors:
-                raise RuntimeError(f"bounded source fetch failed: {source_errors[src]}")
+                raise RuntimeError(
+                    f"bounded source fetch failed ({type(source_errors[src]).__name__})"
+                )
             if src not in source_payloads:
                 raise RuntimeError("source fetch returned no payload")
-            source_stats[src] = "OK"
             data = source_payloads[src]
+            scanned_programmes = 0
+            mapped_programmes = 0
             for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
                 if elem.tag != "programme":
                     continue
+                scanned_programmes += 1
                 source_id = elem.attrib.get("channel", "").strip()
                 targets = [
                     target for target in reverse.get(source_id, [])
@@ -1012,6 +1025,7 @@ def main():
                 if not targets:
                     elem.clear()
                     continue
+                mapped_programmes += 1
                 start_dt = stamp(elem.attrib.get("start", ""))
                 stop_dt = stamp(elem.attrib.get("stop", "")) if elem.attrib.get("stop") else None
                 if not start_dt or start_dt > upper or (stop_dt and stop_dt < lower):
@@ -1043,8 +1057,16 @@ def main():
                     }
                     candidates.setdefault((target, source_index, source_id), []).append(rec)
                 elem.clear()
+            source_stats[src] = (
+                f"OK: {scanned_programmes} programme rows scanned; "
+                f"{mapped_programmes} rows matched mapped source IDs"
+            )
         except Exception as exc:
-            source_stats[src] = f"FAILED: {exc}"
+            # Exception messages from HTTP clients can contain request URLs or
+            # query parameters. Record only the exception class in public logs.
+            source_stats[src] = f"FAILED ({type(exc).__name__})"
+    for src in source_urls:
+        print(source_status_line(src, source_stats.get(src, "NO_STATUS")), flush=True)
     by_target = {}
     for (target, source_index, source_id), records in candidates.items():
         by_target.setdefault(target, []).extend(records)

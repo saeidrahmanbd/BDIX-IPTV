@@ -158,6 +158,11 @@ class EpgConfigTests(unittest.TestCase):
         with patch.dict(os.environ, {"M3U4U_XMLTV_URL": private_url}):
             self.assertIn(private_url, generate_epg.configured_sources())
             self.assertNotEqual(generate_epg.source_label(private_url), private_url)
+            status_line = generate_epg.source_status_line(
+                private_url, f"FAILED: {private_url}"
+            )
+            self.assertNotIn(private_url, status_line)
+            self.assertIn(generate_epg.PRIVATE_SOURCE_LABEL, status_line)
 
     def test_rtv_schedule_tries_current_daily_then_legacy_https_without_disabling_tls(self):
         weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
@@ -726,10 +731,11 @@ class EpgConfigTests(unittest.TestCase):
             )
             self.assertIn(expected, lines[index + 1], marker)
 
-    def test_epg_refresh_serializes_builds_and_keeps_known_good_guide_safe(self):
+    def test_epg_refresh_coalesces_obsolete_runs_and_serializes_main_writes(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
-        self.assertIn("group: iptv-playlist-main-writer-v3", workflow)
+        self.assertIn("group: iptv-epg-refresh-${{ github.ref }}", workflow)
         self.assertIn("cancel-in-progress: false", workflow)
+        self.assertIn("group: iptv-playlist-main-writer-v3", workflow)
         self.assertIn("queue: max", workflow)
         self.assertIn("Skip superseded queued EPG refresh", workflow)
         self.assertIn("refusing to publish stale output", workflow)

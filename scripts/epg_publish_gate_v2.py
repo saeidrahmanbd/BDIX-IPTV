@@ -21,22 +21,28 @@ SLOT_PLACEHOLDER_RE = re.compile(r"^(program|programme|show|slot)\s*@\s*\d")
 
 
 def parse(path):
+    """Read XMLTV incrementally to avoid holding the entire XML tree in memory."""
     if not path.exists() or path.stat().st_size == 0:
         return set(), [], 0
-    root = ET.parse(path).getroot()
-    channels = {x.get("id") for x in root.findall("channel") if x.get("id")}
+    channels = set()
     programmes = []
     title_violations = 0
-    for x in root.findall("programme"):
-        channel = x.get("channel")
-        start = x.get("start")
-        stop = x.get("stop")
-        title_elements = x.findall("title")
-        title = (title_elements[0].text or "").strip() if title_elements else ""
-        if not title_elements or not title:
-            title_violations += 1
-        if channel and start and stop and title:
-            programmes.append((channel, start, stop, title))
+    for _, elem in ET.iterparse(path, events=("end",)):
+        if elem.tag == "channel":
+            channel_id = elem.get("id")
+            if channel_id:
+                channels.add(channel_id)
+        elif elem.tag == "programme":
+            channel = elem.get("channel")
+            start = elem.get("start")
+            stop = elem.get("stop")
+            title_elements = elem.findall("title")
+            title = (title_elements[0].text or "").strip() if title_elements else ""
+            if not title_elements or not title:
+                title_violations += 1
+            if channel and start and stop and title:
+                programmes.append((channel, start, stop, title))
+        elem.clear()
     return channels, programmes, title_violations
 
 
