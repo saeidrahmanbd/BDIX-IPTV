@@ -14,6 +14,8 @@ on:
       - 'scripts/run_bd_discovery_with_policy.py'
       - 'scripts/validate_discovery_run.py'
       - 'scripts/discovery_schedule_guard.py'
+      - 'scripts/country_verification.py'
+      - 'tests/test_country_verification.py'
       - 'tests/test_discovery_schedule_guard.py'
       - 'scripts/final_playlist_hardening.py'
       - 'scripts/enforce_primary_backup_integrity.py'
