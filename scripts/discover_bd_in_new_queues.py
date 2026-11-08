@@ -430,7 +430,7 @@ def main() -> int:
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational/Knowledge and Business/Finance channels are prohibited; Indian Kids and Sports channels are allowed.**",
-        "- Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.",
+        "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 25 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
         f"- Existing prohibited review-queue rows removed: **{len(purged)}**",
         f"- New channels: **{len(new_channels)}**",

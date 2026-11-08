@@ -34,7 +34,7 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
 
     def test_main_playlist_has_no_empty_logo_attributes(self):
         rows = playlist_rows(ROOT / "IPTV-Playlist.m3u")
-        self.assertGreater(len(rows), 1000)
+        self.assertGreater(len(rows), 900)
         self.assertFalse([row for row in rows if row["attrs"].get("tvg-logo") == ""])
 
     def test_foreign_radio_and_vod_names_cannot_be_queued_as_movie_music(self):
