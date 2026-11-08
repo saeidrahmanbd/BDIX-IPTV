@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-08T13:34:31+00:00**
-Source playlist SHA-256: **314c5dc9ebb651e864423c1f54c189ba2f39050b1ceaebca5615636237ec6dcf**
+Generated: **2026-11-08T15:14:06+00:00**
+Source playlist SHA-256: **4bb2bf08e6f01e3a0d601db0964c9678f3e376602df92c4a02f8c1ba5ba36aee**
 
-Status: **BLOCK**
+Status: **PASS**
 
-- Current entries: **934**
+- Current entries: **999**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -23,7 +23,7 @@ Status: **BLOCK**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **0**
-- Raw resolution/geoblock name tags: **1**
+- Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -37,7 +37,7 @@ Status: **BLOCK**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-- raw resolution/geoblock tags in channel names: 1
+No blocking conditions detected.
 
 ## Review-queue logo gaps
 
@@ -51,7 +51,7 @@ None.
 
 ## Raw name tags
 
-- **Discovery Channel (India) (HD)** — Documentary & Wildlife
+None.
 
 ## Queue validation
 
