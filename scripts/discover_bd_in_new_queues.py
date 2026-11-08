@@ -165,6 +165,9 @@ def prohibited_channel(
             return "permanently banned channel"
 
     resolved_country = channel_country(a, country)
+    values = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""), a.get("channel-id", "")))
+    if resolved_country == "IN" and re.search(r"\\bmh\\s*1\\s*prime\\b|\\bmh1prime\\b", values, re.IGNORECASE):
+        return "known Indian prohibited MH One Prime channel is prohibited"
     # Bangladesh is intentionally unrestricted by genre. The exclusions below
     # are India-only and cover all religious subtypes plus the requested genres.
     if resolved_country != "IN":
