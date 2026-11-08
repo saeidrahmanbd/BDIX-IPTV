@@ -760,6 +760,55 @@ class BangladeshRetentionTests(unittest.TestCase):
     def test_nothing_retained_when_empty(self):
         self.assertEqual(self.helper()(True, "", ["a"]), "")
 
+    def test_stale_cross_region_ids_are_removed_for_non_bangladesh_channels(self):
+        retain = self.helper()
+        self.assertEqual(
+            retain(
+                False,
+                "DISCOVERY.CHANNEL.in | DiscoveryChannel.us",
+                ["DiscoveryChannel.us"],
+                target_country="US",
+                source_id_country_fn=lambda value: {
+                    "DISCOVERY.CHANNEL.in": "IN",
+                    "DiscoveryChannel.us": "US",
+                }.get(value, ""),
+            ),
+            "DiscoveryChannel.us",
+        )
+
+    def test_same_region_and_regionless_legacy_ids_remain_eligible(self):
+        retain = self.helper()
+        self.assertEqual(
+            retain(
+                False,
+                "DiscoveryChannel.us | 100869",
+                ["DiscoveryChannel.us", "100869"],
+                target_country="US",
+                source_id_country_fn=lambda value: {
+                    "DiscoveryChannel.us": "US",
+                    "100869": "",
+                }.get(value, ""),
+            ),
+            "DiscoveryChannel.us | 100869",
+        )
+
+    def test_curated_global_alias_is_preserved_despite_suffix_mismatch(self):
+        retain = self.helper()
+        self.assertEqual(
+            retain(
+                False,
+                "Travelxp.uk | Travelxp.us",
+                ["Travelxp.uk", "Travelxp.us"],
+                target_country="US",
+                source_id_country_fn=lambda value: {
+                    "Travelxp.uk": "GB",
+                    "Travelxp.us": "US",
+                }.get(value, ""),
+                explicit_override_ids={"Travelxp.uk"},
+            ),
+            "Travelxp.uk | Travelxp.us",
+        )
+
 
 class VerifiedAliasTests(unittest.TestCase):
     def test_new_verified_aliases(self):

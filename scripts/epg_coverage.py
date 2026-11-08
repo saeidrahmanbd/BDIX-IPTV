@@ -613,8 +613,21 @@ def load_previous():
             if r.get("tvg_id"): out[r["tvg_id"]]=r
     return out
 
-def retained_mapping(is_bangladesh, old_epg, candidates):
-    """Retain safe mappings but discard legacy EPG.PW IDs and stale foreign Bangladesh mappings."""
+def retained_mapping(
+    is_bangladesh,
+    old_epg,
+    candidates,
+    target_country="",
+    source_id_country_fn=None,
+    explicit_override_ids=(),
+):
+    """Retain only safe legacy mappings; discard stale cross-region IDs.
+
+    The optional arguments preserve compatibility with existing callers/tests.
+    Region filtering is deliberately based on explicit ID territory evidence;
+    ambiguous numeric/global IDs are retained unless other mapping logic can
+    independently verify or replace them.
+    """
     # EPG.PW terms prohibit copying/retransmission; prevent legacy IDs from
     # reactivating its schedules in the public guide without explicit permission.
     prior_ids = [
@@ -622,6 +635,19 @@ def retained_mapping(is_bangladesh, old_epg, candidates):
         for value in (old_epg or "").split("|")
         if value.strip() and not value.strip().casefold().startswith("epgpw:")
     ]
+    target = str(target_country or "").strip().upper()
+    overrides = set(explicit_override_ids or ())
+    if target and source_id_country_fn:
+        region_safe = []
+        for source_id in prior_ids:
+            if source_id in overrides:
+                region_safe.append(source_id)
+                continue
+            source_country = str(source_id_country_fn(source_id) or "").strip().upper()
+            if source_country and source_country != target:
+                continue
+            region_safe.append(source_id)
+        prior_ids = region_safe
     old_epg = " | ".join(prior_ids)
     if not old_epg:
         return ""
@@ -708,7 +734,14 @@ def main():
                     if cid not in hits: hits.append(cid)
                     total += counts.get(cid,0)
                     if cid in future: best_live.append(cid); live=True
-        old_epg=retained_mapping(is_bangladesh, prev.get("epg_id",""), candidates)
+        old_epg=retained_mapping(
+            is_bangladesh,
+            prev.get("epg_id", ""),
+            candidates,
+            target_country=ch.get("country", ""),
+            source_id_country_fn=playlist_id_country_code,
+            explicit_override_ids=CURATED_REGION_OVERRIDES.get(ch["tvg_id"], set()),
+        )
         # Explicit identity locks are curated mappings even when a source is
         # temporarily unavailable. They do not count as usable schedule coverage.
         if locked_ids and not old_epg:
