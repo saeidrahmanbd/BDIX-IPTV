@@ -14,6 +14,7 @@ from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from epg_source_cache import fetch_source_bytes
+from epg_mapping_policy import mapping_id_region_compatible, CURATED_REGION_OVERRIDES
 from generate_epg import (
     ALWAYS_DROP_GENERIC_TITLES, COUNTRY_GROUP_CODES, is_slot_placeholder,
     normalized_title, normalize_country_code, playlist_entry_country_code, playlist_id_country_code,
@@ -647,6 +648,18 @@ def source_region_compatible(target_country, source_id, source_url=""):
     return True
 
 
+def source_id_mapping_compatible(channel, source_id, source_url):
+    """Apply the same region policy to exact/normalized IDs as to name matches."""
+    target_id = channel.get("tvg_id", "")
+    explicit_override = source_id in CURATED_REGION_OVERRIDES.get(target_id, set())
+    return mapping_id_region_compatible(
+        channel.get("country", ""),
+        playlist_id_country_code(source_id),
+        source_country_codes(source_url),
+        explicit_override=explicit_override,
+    )
+
+
 def main():
     channels=parse_playlist(); previous=load_previous(); source_data=[]; source_status=[]
     # Retain feeds already represented in mappings and add country-specific
@@ -671,8 +684,15 @@ def main():
                 # Safety: exact playlist IDs/explicit aliases only; never use ID normalization or name fuzzy matching.
                 src_hits=[x for x in candidates if x in ids]
             else:
-                src_hits=[x for x in candidates if x in ids]
-                if not src_hits: src_hits=[x for x in ids if norm_id(x) in normalized]
+                src_hits=[
+                    x for x in candidates
+                    if x in ids and source_id_mapping_compatible(ch, x, src)
+                ]
+                if not src_hits:
+                    src_hits=[
+                        x for x in ids
+                        if norm_id(x) in normalized and source_id_mapping_compatible(ch, x, src)
+                    ]
                 if not src_hits:
                     name_hits=set()
                     for name_key in name_keys:

@@ -37,6 +37,8 @@ EPG.PW is evaluated separately from other third-party sources. Its currently pub
 EPG coverage is continuously improved by:
 
 - Expanding channel mappings across all maintained playlists, with priority for Bangladesh and high-use Indian channels.
+- Enforcing region compatibility for exact, normalized, and name-based source IDs; a country-specific feed cannot populate another region simply because its channel name or normalized ID matches.
+- Preserving only explicitly documented cross-territory aliases (currently Travelxp English and World War TV).
 - Using multiple useful XMLTV/EPG sources rather than relying on a single provider.
 - Matching by stable channel IDs and validated channel identities and aliases.
 - Preferring current and future programme schedules.
