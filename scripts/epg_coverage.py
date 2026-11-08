@@ -1055,6 +1055,7 @@ def main():
         f"- Identities without a source mapping: **{len(bangladesh_rows) - len(bangladesh_mapped)}**",
         "",
         "This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.",
+        "Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.",
         "",
         "## Sources matched to Bangladesh playlist identities",
         "",

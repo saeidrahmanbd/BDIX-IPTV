@@ -3,7 +3,8 @@
 Generated: **2026-11-07T01:43:31.403010+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
-- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational/Knowledge, Kids, Sports and Business/Finance channels are prohibited.**
+- **CURRENT POLICY (2026-11-08):** Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible. Indian News, all Religious (including Islamic), Educational/Knowledge, Business/Finance and Farming channels are prohibited; Indian Kids and Sports are allowed.
+- **Historical snapshot:** Candidate totals and rejection counts below were generated on 2026-11-07 under the then-active policy. They are retained as historical diagnostics and are not a fresh count under the current Indian Kids/Sports policy; the next successful discovery run will regenerate them.
 - Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
 - Country-group threshold: **5** legitimate primary identities
 - Existing prohibited review-queue rows removed: **0**
