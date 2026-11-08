@@ -67,7 +67,7 @@ def process(path):
    declared_suffixes={
     match.group(1).upper()
     for value in (a.get('tvg-id',''),a.get('channel-id',''))
-    if (match:=re.search(r'\\.([a-z]{2})(?:@|$)',value.strip(),re.I))
+    if (match:=re.search(r'\.([a-z]{2})(?:@|$)',value.strip(),re.I))
    }
    if declared_suffixes and (len(declared_suffixes)!=1 or not declared_suffixes.issubset({'BD','IN'})):
     r[0]=set_attr(r[0],'group-title','Review')
