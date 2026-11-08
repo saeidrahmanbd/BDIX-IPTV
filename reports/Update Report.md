@@ -1,8 +1,8 @@
 # Update Report
 
-_Last generated: **2026-11-08 08:48 UTC**_
+_Last generated: **2026-11-08 09:40 UTC**_
 
-Source playlist SHA-256: **f1ecd6bd351968ef79708f50c7251d6967d4aaf442066e439f621b0a600240ec**
+Source playlist SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9c629b15ff2d**
 
 | Metric | Current |
 |---|---:|
@@ -16,26 +16,26 @@ Source playlist SHA-256: **f1ecd6bd351968ef79708f50c7251d6967d4aaf442066e439f621
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
 | Stream Health Tested | **952** |
-| Stream Health Failures | **58** |
-| Persistent Failures | **49** |
+| Stream Health Failures | **54** |
+| Persistent Failures | **46** |
 | Near-Duplicate URL Families | **2** |
-| Audit Blocking Issues | **13** |
+| Audit Blocking Issues | **10** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-11-08T08:48:21+00:00** |
+| Pre-Publish Gate Generated | **2026-11-08T09:39:52+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
 - Metadata conflicts (canonical primary scope): **0**
 - Same-name / different-ID collisions (canonical primary scope): **0**
 - Cross-queue metadata identity variants: **0**
-- Cross-queue same-name / different-ID collisions: **1**
+- Cross-queue same-name / different-ID collisions: **0**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Logo exceptions: **10**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **3**
+- Alphabetical ordering issues: **0**
 - Signed/tokenized URLs: **8**
 
 ## Safety & Automation
@@ -62,14 +62,14 @@ Source playlist SHA-256: **f1ecd6bd351968ef79708f50c7251d6967d4aaf442066e439f621
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-08T08:48:21.491675+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-08T09:39:52.250327+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-08T02:50:41+00:00** | **PENDING — guide missing or freshness not PASS** |
-| Stream health | **2026-11-08T08:48:44+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-08T08:48:21+00:00** | **CURRENT** |
+| Stream health | **2026-11-08T09:40:15+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-08T09:39:52+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
-- Latest entries change: **1038 → 952**
-- Latest health failures: **65 → 58**
+- Latest entries change: **952 → 952**
+- Latest health failures: **58 → 54**
 
 Historical records are retained in reports/maintenance-history.json.

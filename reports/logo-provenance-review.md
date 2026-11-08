@@ -1,13 +1,13 @@
 # Logo Provenance Review
 
-Generated: **2026-11-08T08:48:45+00:00**
+Generated: **2026-11-08T09:40:16+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **f1ecd6bd351968ef79708f50c7251d6967d4aaf442066e439f621b0a600240ec**
+- IPTV-Playlist.m3u SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9c629b15ff2d**
 - International-Playlist.m3u SHA-256: **7cc909e5c9d9086ae1f28f720653c7bdd68a1bb1b5e64a61e3280074253069a5**
 
 ## Provenance status by playlist
@@ -77,7 +77,7 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 
 | Local asset | Channel identity | tvg-id |
 |---|---|---|
-| discovery-channel-india.png | Discovery Channel (India) (HD) | DiscoveryChannel.in@HD |
+| discovery-channel-india.png | Discovery Channel (India) HD | DiscoveryChannel.in@HD |
 | discovery-channel-india.png | Discovery Channel (India) | DiscoveryChannel.in@SD |
 | goldmines.png | Goldmines | Goldmines.in@SD |
 | goldmines.png | Goldmines 2 | Goldmines2.in@SD |

@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-08T08:48:21.491675+00:00**
-Source playlist SHA-256: **f1ecd6bd351968ef79708f50c7251d6967d4aaf442066e439f621b0a600240ec**
+Generated: **2026-11-08T09:39:52.250327+00:00**
+Source playlist SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9c629b15ff2d**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -14,7 +14,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-queue same-ID name variants (review): **0**
-- Cross-queue normalized-name/different-ID groups (review): **1**
+- Cross-queue normalized-name/different-ID groups (review): **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
@@ -25,14 +25,14 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues: **553**
+- Primary channel-number sequence issues: **0**
 - Primary entries missing channel numbers: **0**
 - Primary entries missing tvg-country: **1**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
-- Alphabetical ordering issues: **3**
+- Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **8**
 - Embedded Xtream-style credential paths (redacted): **0**
@@ -62,7 +62,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 
 No same-ID label variants found across groups.
 
-- Same normalized name: Discovery Channel (India) (HD) [discoverychannel.in@hd] (Documentary & Wildlife); Discovery Channel (India) [discoverychannel.in@sd] (Documentary & Wildlife)
+No normalized same-name/different-ID groups found across groups.
 
 ## Duplicate IDs
 
@@ -772,7 +772,7 @@ None.
 
 ## Potential Near-Duplicate Primary Names (Review Only)
 
-- Discovery Channel (India) [discoverychannel.in@sd] (Documentary & Wildlife); Discovery Channel (India) (HD) [discoverychannel.in@hd] (Documentary & Wildlife)
+- Discovery Channel (India) [discoverychannel.in@sd] (Documentary & Wildlife); Discovery Channel (India) HD [discoverychannel.in@hd] (Documentary & Wildlife)
 
 These are review suggestions only. The audit does not merge identities, change channel order, or remove streams.
 
@@ -782,56 +782,7 @@ None.
 
 ## Primary Channel-Number Sequence
 
-- **Channel Europe** — expected channel number 18, found 677
-- **Channel I** — expected channel number 19, found 18
-- **Channel S** — expected channel number 20, found 19
-- **Channel S UK** — expected channel number 21, found 20
-- **DBC News** — expected channel number 22, found 21
-- **Deepto TV** — expected channel number 23, found 22
-- **Desh TV** — expected channel number 24, found 23
-- **Deshe Bideshe** — expected channel number 25, found 24
-- **Deshi TV** — expected channel number 26, found 25
-- **Doyel TV** — expected channel number 27, found 26
-- **Duronto TV** — expected channel number 28, found 27
-- **Ekattor TV** — expected channel number 29, found 28
-- **Ekhon TV** — expected channel number 30, found 29
-- **Ekushey TV** — expected channel number 31, found 30
-- **Enter TV** — expected channel number 32, found 31
-- **G Series Drama** — expected channel number 33, found 32
-- **G TV** — expected channel number 34, found 33
-- **Global TV** — expected channel number 35, found 34
-- **Green TV** — expected channel number 36, found 35
-- **Independent TV** — expected channel number 37, found 36
-- **JA TV** — expected channel number 38, found 37
-- **Jago News 24** — expected channel number 39, found 38
-- **Jalsha Bangla BD** — expected channel number 40, found 39
-- **Jamuna TV** — expected channel number 41, found 40
-- **Jhankar TV** — expected channel number 42, found 41
-- **Jonmobhumi TV** — expected channel number 43, found 42
-- **Maasranga TV** — expected channel number 44, found 43
-- **Matribhumi TV** — expected channel number 45, found 44
-- **ME TV** — expected channel number 46, found 45
-- **Mohona TV** — expected channel number 47, found 46
-- **Movie Bangla** — expected channel number 48, found 47
-- **My TV** — expected channel number 49, found 48
-- **Nagorik TV** — expected channel number 50, found 49
-- **News 21** — expected channel number 51, found 50
-- **News 24** — expected channel number 52, found 51
-- **Nexus TV** — expected channel number 53, found 52
-- **NRB TV** — expected channel number 54, found 53
-- **NTV** — expected channel number 55, found 54
-- **NTV Europe** — expected channel number 56, found 55
-- **Probashi TV** — expected channel number 57, found 56
-- **Rajdhani TV** — expected channel number 58, found 57
-- **RTV** — expected channel number 59, found 58
-- **SA TV** — expected channel number 60, found 59
-- **Somoy TV** — expected channel number 61, found 60
-- **SRK** — expected channel number 62, found 61
-- **Star News** — expected channel number 63, found 62
-- **TBN24** — expected channel number 64, found 63
-- **Thikana** — expected channel number 65, found 64
-- **Time Television** — expected channel number 66, found 65
-- **Aakaash Aath** — expected channel number 67, found 66
+Contiguous numbering verified: 1–618.
 
 ## Malformed EXTINF Entries
 
@@ -840,9 +791,7 @@ None.
 ## Ordering
 
 Category block order: OK.
-- **Bangladesh** — **18 — Channel I** appears after **677 — Channel Europe**
-- **International** — **4ever Cinema** appears after **30A Music**
-- **Documentary & Wildlife** — **Discovery Channel (India)** appears after **Discovery Channel (India) (HD)**
+Primary-category alphabetical/channel-number order: OK.
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
 ## Suspicious URLs

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-08T08:48:45.847048+00:00",
+  "generated_at_utc": "2026-11-08T09:40:16.690396+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,7 +11,7 @@
     "International-Playlist.m3u": 3030
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "f1ecd6bd351968ef79708f50c7251d6967d4aaf442066e439f621b0a600240ec",
+    "IPTV-Playlist.m3u": "6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9c629b15ff2d",
     "International-Playlist.m3u": "7cc909e5c9d9086ae1f28f720653c7bdd68a1bb1b5e64a61e3280074253069a5"
   },
   "status_counts": {
@@ -4545,30 +4545,6 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 761,
-      "channel_name": "24 Hour Free Movies",
-      "tvg_id": "custom.24hourfreemovies",
-      "channel_id": "custom.24hourfreemovies",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/24-hour-free-movies-720p-2a4fdea7cd.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "line": 763,
-      "channel_name": "30A Music",
-      "tvg_id": "custom.30amusic",
-      "channel_id": "custom.30amusic",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/30a-music-720p-950f250b00.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "line": 765,
       "channel_name": "4ever Cinema",
       "tvg_id": "custom.4evercinema",
       "channel_id": "custom.4evercinema",
@@ -4580,11 +4556,35 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 767,
+      "line": 763,
       "channel_name": "4ever Music",
       "tvg_id": "custom.4evermusic",
       "channel_id": "custom.4evermusic",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4ever-music-1080p-0f54facdb8.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 765,
+      "channel_name": "24 Hour Free Movies",
+      "tvg_id": "custom.24hourfreemovies",
+      "channel_id": "custom.24hourfreemovies",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/24-hour-free-movies-720p-2a4fdea7cd.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 767,
+      "channel_name": "30A Music",
+      "tvg_id": "custom.30amusic",
+      "channel_id": "custom.30amusic",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/30a-music-720p-950f250b00.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -5445,9 +5445,9 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 911,
-      "channel_name": "Discovery Channel (India) (HD)",
-      "tvg_id": "DiscoveryChannel.in@HD",
-      "channel_id": "DiscoveryChannel.in@HD",
+      "channel_name": "Discovery Channel (India)",
+      "tvg_id": "DiscoveryChannel.in@SD",
+      "channel_id": "DiscoveryChannel.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-channel-india.png",
       "status": "needs_review",
       "registry_match": "none",
@@ -5457,9 +5457,9 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 913,
-      "channel_name": "Discovery Channel (India)",
-      "tvg_id": "DiscoveryChannel.in@SD",
-      "channel_id": "DiscoveryChannel.in@SD",
+      "channel_name": "Discovery Channel (India) HD",
+      "tvg_id": "DiscoveryChannel.in@HD",
+      "channel_id": "DiscoveryChannel.in@HD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-channel-india.png",
       "status": "needs_review",
       "registry_match": "none",

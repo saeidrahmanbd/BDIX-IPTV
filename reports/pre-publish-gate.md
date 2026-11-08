@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-08T08:48:21+00:00**
-Source playlist SHA-256: **f1ecd6bd351968ef79708f50c7251d6967d4aaf442066e439f621b0a600240ec**
+Generated: **2026-11-08T09:39:52+00:00**
+Source playlist SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9c629b15ff2d**
 
 Status: **BLOCK**
 
@@ -16,14 +16,14 @@ Status: **BLOCK**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues: **553**
-- Numbered review entries: **333**
+- Primary channel-number sequence issues: **0**
+- Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **10**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **0**
-- Raw resolution/geoblock name tags: **1**
+- Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **9**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **1**
 - External logo URLs: **0**
@@ -38,9 +38,6 @@ New Channels and New Backups are active BD/IN-only review queues used by discove
 
 ## Blocking Reasons
 - active entries with incomplete identity/country/logo metadata: 10
-- primary channel-number sequence gaps/order errors: 553
-- review entries still numbered: 333
-- raw resolution/geoblock tags in channel names: 1
 - missing logos: 9
 
 ## Review-queue logo gaps
@@ -55,7 +52,7 @@ None.
 
 ## Raw name tags
 
-- **Discovery Channel (India) (HD)** — Documentary & Wildlife
+None.
 
 ## Queue validation
 
