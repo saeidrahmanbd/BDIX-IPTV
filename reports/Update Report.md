@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-11-08 16:55 UTC**_
+_Last generated: **2026-11-08 16:57 UTC**_
 
 Source playlist SHA-256: **dee4c0905162325bb433379bae254831ad1834640807c7670b213f343caec9f3**
 
@@ -12,37 +12,37 @@ Source playlist SHA-256: **dee4c0905162325bb433379bae254831ad1834640807c7670b213
 | Bangladesh | **58** |
 | India | **291** |
 | Backup Stream Entries | **324** |
-| IPTV Local Logos | **STALE** |
+| IPTV Local Logos | **100.0%** |
 | IPTV EPG Programme Coverage | **51%** |
 | IPTV EPG Mapping | **61.3%** |
-| Stream Health Tested | **STALE** |
-| Stream Health Failures | **STALE** |
-| Persistent Failures | **STALE** |
-| Near-Duplicate URL Families | **STALE / UNKNOWN** |
-| Audit Blocking Issues | **STALE / UNKNOWN** |
-| Pre-Publish Gate | **STALE / UNKNOWN** |
-| Pre-Publish Gate Generated | **2026-11-08T13:34:31+00:00** |
+| Stream Health Tested | **999** |
+| Stream Health Failures | **136** |
+| Persistent Failures | **52** |
+| Near-Duplicate URL Families | **2** |
+| Audit Blocking Issues | **18** |
+| Pre-Publish Gate | **BLOCK** |
+| Pre-Publish Gate Generated | **2026-11-08T16:57:00+00:00** |
 
-## Quality Controls (STALE / UNKNOWN — saved audit values shown for reference)
-- Duplicate stream URLs: **STALE / UNKNOWN (last saved: 0)**
-- Metadata conflicts (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
-- Same-name / different-ID collisions (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
+## Quality Controls 
+- Duplicate stream URLs: **0**
+- Metadata conflicts (canonical primary scope): **0**
+- Same-name / different-ID collisions (canonical primary scope): **0**
 - Cross-queue metadata identity variants: **0**
 - Cross-queue same-name / different-ID collisions: **3**
-- Duplicate primary identities: **STALE / UNKNOWN (last saved: 0)**
-- Primary channel-number collisions: **STALE / UNKNOWN (last saved: 0)**
-- Primary entries missing channel numbers: **STALE / UNKNOWN (last saved: 0)**
-- Logo exceptions: **STALE / UNKNOWN (last saved: 0)**
-- Malformed EXTINF entries: **STALE / UNKNOWN (last saved: 0)**
-- Category block-order issues: **STALE / UNKNOWN (last saved: 0)**
-- Alphabetical ordering issues: **STALE / UNKNOWN (last saved: 1)**
-- Signed/tokenized URLs: **STALE / UNKNOWN (last saved: 8)**
+- Duplicate primary identities: **0**
+- Primary channel-number collisions: **0**
+- Primary entries missing channel numbers: **1**
+- Logo exceptions: **0**
+- Malformed EXTINF entries: **0**
+- Category block-order issues: **14**
+- Alphabetical ordering issues: **3**
+- Signed/tokenized URLs: **8**
 
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
 - `Backup` stores alternate streams; `Review`, `New Channels`, and `New Backups` are review-only queues and are excluded from Xtream.
-- Pre-publish gate status: **STALE / UNKNOWN**
+- Pre-publish gate status: **BLOCK**
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## Counting Scope
@@ -62,14 +62,14 @@ Source playlist SHA-256: **dee4c0905162325bb433379bae254831ad1834640807c7670b213
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-08T13:34:30.868025+00:00** | **STALE** |
+| Playlist audit | **2026-11-08T16:57:00.344386+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-08T16:55:30+00:00** | **CURRENT** |
-| Stream health | **2026-11-08T13:34:56+00:00** | **STALE** |
-| Pre-publish gate | **2026-11-08T13:34:31+00:00** | **STALE** |
+| Stream health | **2026-11-08T16:57:32+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-08T16:57:00+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
-- Latest entries change: **942 → 934**
-- Latest health failures: **75 → 60**
+- Latest entries change: **934 → 999**
+- Latest health failures: **60 → 136**
 
 Historical records are retained in reports/maintenance-history.json.

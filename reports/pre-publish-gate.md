@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-08T13:34:31+00:00**
-Source playlist SHA-256: **314c5dc9ebb651e864423c1f54c189ba2f39050b1ceaebca5615636237ec6dcf**
+Generated: **2026-11-08T16:57:00+00:00**
+Source playlist SHA-256: **dee4c0905162325bb433379bae254831ad1834640807c7670b213f343caec9f3**
 
 Status: **BLOCK**
 
-- Current entries: **934**
+- Current entries: **999**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -15,15 +15,15 @@ Status: **BLOCK**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues: **0**
-- Numbered review entries: **0**
+- Primary entries missing channel numbers: **1**
+- Primary channel-number sequence issues: **514**
+- Numbered review entries: **1**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **0**
-- Raw resolution/geoblock name tags: **1**
+- Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -37,7 +37,9 @@ Status: **BLOCK**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-- raw resolution/geoblock tags in channel names: 1
+- primary entries missing tvg-chno: 1
+- primary channel-number sequence gaps/order errors: 514
+- review entries still numbered: 1
 
 ## Review-queue logo gaps
 
@@ -51,7 +53,7 @@ None.
 
 ## Raw name tags
 
-- **Discovery Channel (India) (HD)** — Documentary & Wildlife
+None.
 
 ## Queue validation
 

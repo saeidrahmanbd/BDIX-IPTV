@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-08T13:34:57+00:00**
+Generated: **2026-11-08T16:57:34+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **314c5dc9ebb651e864423c1f54c189ba2f39050b1ceaebca5615636237ec6dcf**
+- IPTV-Playlist.m3u SHA-256: **dee4c0905162325bb433379bae254831ad1834640807c7670b213f343caec9f3**
 - International-Playlist.m3u SHA-256: **be459b74430ed16017a820fe84a7d7fee7d861c0724f5a3698fd5397008da43f**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 10 | 0 | 924 |
+| IPTV-Playlist.m3u | 0 | 10 | 0 | 989 |
 | International-Playlist.m3u | 0 | 836 | 0 | 2194 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3118**
+- Logos needing attribution review: **3183**
 - Unofficial fallback logos: **0**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3118 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3183 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
@@ -46,11 +46,15 @@ Showing up to 40 of 3118 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jhakaas | 9XJhakaas.in@SD | 9x-jhakaas.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | 9X Jhakaas | 9XJhakaas.in@SD | 9x-jhakaas.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | 9X Tashan | 9XTashan.in@SD | 9x-tashan.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Tashan | 9XTashan.in@SD | 9x-tashan.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | A Sports | ASports.pk | a-sports-65a3e1d8fd.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
@@ -66,10 +70,6 @@ Showing up to 40 of 3118 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | Al Jazeera | AlJazeera.qa | al-jazeera.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Al Qamar | AlQamarTV.ae | al-qamar.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Al Quran Al Kareem TV | AlQuranAlKareemTV.sa | al-quran-al-kareem-tv.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | Al Quran Al Kareem TV | AlQuranAlKareemTV.sa | al-quran-al-kareem-tv.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | Al-Zahra TV Turkic | AlZahraTVTurkic.sa | al-zahra-tv-turkic.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | Alankar TV | AlankarTV.in@SD | alankar-tv.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | Alone | Alone.us | alone.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 
 ## Shared logo assets across distinct channel identities
 
@@ -77,10 +77,14 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 
 | Local asset | Channel identity | tvg-id |
 |---|---|---|
-| discovery-channel-india.png | Discovery Channel (India) (HD) | DiscoveryChannel.in@HD |
+| discovery-channel-india.png | Discovery Channel (India) | DiscoveryChannel.in@HD |
 | discovery-channel-india.png | Discovery Channel (India) | DiscoveryChannel.in@SD |
 | goldmines.png | Goldmines | Goldmines.in@SD |
 | goldmines.png | Goldmines 2 | Goldmines2.in@SD |
+| sonic.png | Sonic | Sonic.in@SD |
+| sonic.png | Sonic The Hedgehog | custom.sonicthehedgehog |
+| travelxp.png | Travelxp | Travelxp.in@4KHDR |
+| travelxp.png | Travelxp | Travelxp.in@HD |
 
 ## Review policy
 
