@@ -22,7 +22,9 @@ on:
       - 'tests/test_epg_publication_safety.py'
       - 'docs/requirements.txt'
   # GITHUB_TOKEN playlist commits do not reliably start a second workflow via push.
-  # Refresh EPG after successful workflows that write one of the maintained playlists.
+  # Refresh EPG after any completed run of a workflow that writes a maintained playlist.
+  # A failed or blocked playlist run publishes no new playlist bytes, so the refresh works from
+  # the latest committed inputs. Current-main validation and stale-candidate rejection still apply.
   workflow_run:
     workflows: ["IPTV Playlist Update", "IPTV New Channel Discovery", "International Channel Discovery", "Playlist Logo Repair and Localization"]
     types: [completed]
@@ -40,7 +42,7 @@ jobs:
     # Refresh against the latest committed playlists even when a playlist-maintenance
     # workflow is blocked: failed maintenance publishes no new playlist bytes, but
     # must not suppress EPG freshness/coverage work for the last known-good inputs.
-    if: ${{ (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success') && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
+    if: ${{ github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG')) }}
     # Shared main-branch writer queue. Set on the writing job, not the workflow,
     # so runs whose jobs are skipped do not occupy the queue.
     concurrency:

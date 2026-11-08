@@ -690,10 +690,10 @@ class EpgConfigTests(unittest.TestCase):
         ):
             self.assertIn(f'"{name}"', workflow)
         self.assertIn("types: [completed]", workflow)
-        # Only refresh EPG after a successful upstream writer run, so a failed
-        # or cancelled playlist workflow does not trigger a redundant queued run.
-        self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
-        self.assertNotIn("github.event.workflow_run.conclusion == 'failure'", workflow)
+        # Any completed upstream writer run may trigger EPG freshness work, so a
+        # blocked playlist run does not suppress the daily guide refresh.
+        self.assertNotIn("github.event.workflow_run.conclusion", workflow)
+        self.assertIn("types: [completed]", workflow)
         self.assertIn("# 09:00 Asia/Dhaka (UTC+6)", workflow)
 
 
