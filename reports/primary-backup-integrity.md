@@ -2,7 +2,7 @@
 
 - Primary entries: **597**
 - Backup entries: **324**
-- Review-only entries (Review / New Channels / New Backups): **86**
+- Review-only entries (Review / New Channels / New Backups): **90**
 - Duplicate primary copies moved to Backup: **0**
 - Orphan Backup entries moved to Review: **0**
 - Owner-authorized orphan Backup entries removed: **0**
@@ -12,8 +12,8 @@
 - Legacy Not Playing groups renamed to Review: **0**
 - Kids entries moved from Review to Kids: **0**
 - Explicitly removed non-kids Review entries: **1**
-- Backup metadata records reconciled from exact primary IDs: **1**
-- Missing language values set to und (undetermined): **73**
+- Backup metadata records reconciled from exact primary IDs: **0**
+- Missing language values set to und (undetermined): **21**
 
 Unknown languages are marked und; no language is guessed. Incomplete logos are retained only in Review queues.
 

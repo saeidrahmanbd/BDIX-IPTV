@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-08T13:37:51+00:00**
+Generated: **2026-11-08T14:26:21+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **ad7ab0110569ca3f9aa02be4d0caf0af3b61d0255bae43ee04fee6bbcac4b3bf**
+- IPTV-Playlist.m3u SHA-256: **4bb2bf08e6f01e3a0d601db0964c9678f3e376602df92c4a02f8c1ba5ba36aee**
 - International-Playlist.m3u SHA-256: **be459b74430ed16017a820fe84a7d7fee7d861c0724f5a3698fd5397008da43f**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **694**
-- Playlist references whose asset stem differs from the normalized channel name: **1371**
-- Unreferenced files immediately inside logos/: **1438** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1372**
+- Unreferenced files immediately inside logos/: **1435** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -1122,6 +1122,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | New Backups |
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | New Backups |
 | IPTV-Playlist.m3u | Gazi TV | gazi-tv.png | New Backups |
+| IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | New Backups |
 | IPTV-Playlist.m3u | Movies Now | movies-now-hd.png | New Backups |
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | New Backups |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | New Backups |
