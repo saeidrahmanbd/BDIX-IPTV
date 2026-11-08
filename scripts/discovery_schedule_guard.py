@@ -4,8 +4,9 @@
 The 07:00 Asia/Dhaka schedule remains the primary trigger. GitHub documents that
 schedule events at the top of an hour can be delayed or dropped before a run is
 created. The watchdog only dispatches an official discovery workflow if no run
-for that workflow exists on the current Bangladesh calendar date. The workflow
-guard ensures that a late scheduled event cannot run a second time that day.
+for that workflow exists on the current Bangladesh calendar date. The workflow guard ensures that a late scheduled event cannot run a second time that day.
+An explicit manual dispatch may rerun discovery after a completed daily run, but
+will not overlap another active discovery run.
 """
 from __future__ import annotations
 
@@ -98,12 +99,31 @@ def first_run_id(runs: list[dict[str, Any]], client=None) -> int | None:
 
 
 def should_current_run_execute(
-    runs: list[dict[str, Any]], current_run_id: int | str, target_date: date, client=None
+    runs: list[dict[str, Any]],
+    current_run_id: int | str,
+    target_date: date,
+    client=None,
+    event: str | None = None,
 ) -> bool:
-    """Permit only the earliest real discovery run for the Bangladesh calendar date."""
+    """Apply daily deduplication while allowing intentional manual re-runs.
+
+    Scheduled/push runs are limited to the earliest real discovery run for the
+    Bangladesh calendar date. An explicit workflow_dispatch may run again after
+    any earlier run has completed, but it must not overlap another active run.
+    """
     todays = runs_for_date(runs, target_date)
     if not todays:
         return False
+
+    if str(event or "").casefold() == "workflow_dispatch":
+        current_id = int(current_run_id)
+        active_others = [
+            run for run in todays
+            if int(run.get("id") or -1) != current_id
+            and str(run.get("status") or "").casefold() != "completed"
+        ]
+        return not active_others
+
     return first_run_id(todays, client) == int(current_run_id)
 
 
@@ -205,21 +225,46 @@ def guard(workflow_file: str) -> int:
     by_id[int(current_run_id)] = current_run
     todays = runs_for_date(list(by_id.values()), target_date)
 
-    first_id = first_run_id(todays, client)
-    execute = first_id == int(current_run_id)
+    event = str(current_run.get("event") or "").casefold()
+    execute = should_current_run_execute(
+        todays, current_run_id, target_date, client, event=event
+    )
     write_output("should_run", "true" if execute else "false")
-    if execute:
+    if execute and event == "workflow_dispatch":
+        print(
+            f"Manual discovery dispatch accepted: run {current_run_id} may refresh "
+            f"{workflow_file} for Bangladesh date {target_date}; completed daily runs "
+            f"do not block an explicit manual request."
+        )
+    elif execute:
         print(
             f"Daily discovery owner confirmed: run {current_run_id} is the first "
             f"{workflow_file} run for Bangladesh date {target_date}."
         )
     else:
-        winner = next(run for run in todays if int(run["id"]) == first_id)
-        print(
-            f"Skipping duplicate daily discovery: run {first_id} "
-            f"({winner.get('event')}, {winner.get('status')}) already owns "
-            f"{workflow_file} for Bangladesh date {target_date}."
-        )
+        if event == "workflow_dispatch":
+            blockers = [
+                run for run in todays
+                if int(run.get("id") or -1) != int(current_run_id)
+                and str(run.get("status") or "").casefold() != "completed"
+            ]
+            winner = min(
+                blockers,
+                key=lambda run: (parse_github_timestamp(run["created_at"]), int(run["id"])),
+            )
+            print(
+                f"Skipping manual discovery run {current_run_id}: active run "
+                f"{winner['id']} ({winner.get('event')}, {winner.get('status')}) "
+                f"is already running {workflow_file} for Bangladesh date {target_date}."
+            )
+        else:
+            first_id = first_run_id(todays, client)
+            winner = next(run for run in todays if int(run["id"]) == first_id)
+            print(
+                f"Skipping duplicate daily discovery: run {first_id} "
+                f"({winner.get('event')}, {winner.get('status')}) already owns "
+                f"{workflow_file} for Bangladesh date {target_date}."
+            )
     return 0
 
 
