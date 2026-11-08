@@ -1,48 +1,48 @@
 # Update Report
 
-_Last generated: **2026-11-08 09:40 UTC**_
+_Last generated: **2026-11-08 10:08 UTC**_
 
-Source playlist SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9c629b15ff2d**
+Source playlist SHA-256: **56bfb01abfd601e1a1971134720650745d4d799bb6c0a74683e24f375f1f22f6**
 
 | Metric | Current |
 |---|---:|
-| Streams | **952** |
-| Active Channel Identities | **618** |
-| Active Primary Streams | **618** |
+| Streams | **942** |
+| Active Channel Identities | **608** |
+| Active Primary Streams | **608** |
 | Bangladesh | **66** |
-| India | **295** |
+| India | **294** |
 | Backup Stream Entries | **333** |
-| IPTV Local Logos | **98.9%** |
+| IPTV Local Logos | **STALE** |
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
-| Stream Health Tested | **952** |
-| Stream Health Failures | **54** |
-| Persistent Failures | **46** |
-| Near-Duplicate URL Families | **2** |
-| Audit Blocking Issues | **10** |
-| Pre-Publish Gate | **BLOCK** |
+| Stream Health Tested | **STALE** |
+| Stream Health Failures | **STALE** |
+| Persistent Failures | **STALE** |
+| Near-Duplicate URL Families | **STALE / UNKNOWN** |
+| Audit Blocking Issues | **STALE / UNKNOWN** |
+| Pre-Publish Gate | **STALE / UNKNOWN** |
 | Pre-Publish Gate Generated | **2026-11-08T09:39:52+00:00** |
 
-## Quality Controls 
-- Duplicate stream URLs: **0**
-- Metadata conflicts (canonical primary scope): **0**
-- Same-name / different-ID collisions (canonical primary scope): **0**
+## Quality Controls (STALE / UNKNOWN — saved audit values shown for reference)
+- Duplicate stream URLs: **STALE / UNKNOWN (last saved: 0)**
+- Metadata conflicts (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
+- Same-name / different-ID collisions (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
 - Cross-queue metadata identity variants: **0**
 - Cross-queue same-name / different-ID collisions: **0**
-- Duplicate primary identities: **0**
-- Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
-- Logo exceptions: **10**
-- Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
-- Alphabetical ordering issues: **0**
-- Signed/tokenized URLs: **8**
+- Duplicate primary identities: **STALE / UNKNOWN (last saved: 0)**
+- Primary channel-number collisions: **STALE / UNKNOWN (last saved: 0)**
+- Primary entries missing channel numbers: **STALE / UNKNOWN (last saved: 0)**
+- Logo exceptions: **STALE / UNKNOWN (last saved: 10)**
+- Malformed EXTINF entries: **STALE / UNKNOWN (last saved: 0)**
+- Category block-order issues: **STALE / UNKNOWN (last saved: 0)**
+- Alphabetical ordering issues: **STALE / UNKNOWN (last saved: 0)**
+- Signed/tokenized URLs: **STALE / UNKNOWN (last saved: 8)**
 
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
 - `Backup` stores alternate streams; `Review`, `New Channels`, and `New Backups` are review-only queues and are excluded from Xtream.
-- Pre-publish gate status: **BLOCK**
+- Pre-publish gate status: **STALE / UNKNOWN**
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## Counting Scope
@@ -62,10 +62,10 @@ Source playlist SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-08T09:39:52.250327+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-08T09:39:52.250327+00:00** | **STALE** |
 | EPG coverage / two-playlist inventory | **2026-11-08T02:50:41+00:00** | **PENDING — guide missing or freshness not PASS** |
-| Stream health | **2026-11-08T09:40:15+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-08T09:39:52+00:00** | **CURRENT** |
+| Stream health | **2026-11-08T09:40:15+00:00** | **STALE** |
+| Pre-publish gate | **2026-11-08T09:39:52+00:00** | **STALE** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)

@@ -88,6 +88,36 @@ def check_timestamp(relative: str, text: str, now, max_age, errors):
         errors.append(f"{relative}: stale report (older than {max_age.total_seconds() / 3600:g} hours)")
 
 
+PUBLISHED_COVERAGE_JSON = "reports/epg-published-coverage.json"
+PUBLISHED_COVERAGE_INPUTS = {"primary": "IPTV-Playlist.m3u", "international": "International-Playlist.m3u", "epg": "epg/epg.xml"}
+
+
+def check_published_coverage(root: Path, playlist_hashes: dict, now, max_age):
+    """Validate the offline published-guide coverage report against current inputs."""
+    path = root / PUBLISHED_COVERAGE_JSON
+    if not path.is_file():
+        return [f"{PUBLISHED_COVERAGE_JSON}: missing"]
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return [f"{PUBLISHED_COVERAGE_JSON}: invalid JSON ({exc})"]
+    errors = []
+    recorded = data.get("inputs", {})
+    for key, name in PUBLISHED_COVERAGE_INPUTS.items():
+        expected = sha256(root / name) if (root / name).is_file() else None
+        actual = (recorded.get(key) or {}).get("sha256")
+        if expected is None:
+            errors.append(f"{name}: missing")
+        elif actual != expected:
+            errors.append(f"{PUBLISHED_COVERAGE_JSON}: fingerprint does not match current {name}")
+    generated = parse_timestamp(data.get("generated_at", ""))
+    if generated is None:
+        errors.append(f"{PUBLISHED_COVERAGE_JSON}: missing or invalid generated_at")
+    elif now - generated > max_age:
+        errors.append(f"{PUBLISHED_COVERAGE_JSON}: stale (older than 48 hours)")
+    return errors
+
+
 def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode="all", epg_publication_approved=None):
     """Return freshness errors for all, maintenance, EPG-only, or discovery-owned reports.
 
@@ -168,6 +198,9 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
                     errors.append("reports/logo-authenticity-manifest.json: generated timestamp is in the future")
                 elif now - generated > max_age:
                     errors.append("reports/logo-authenticity-manifest.json: stale manifest (older than 48 hours)")
+
+    if mode in {"all", "epg"}:
+        errors.extend(check_published_coverage(root, hashes, now, max_age))
 
     if mode in {"all", "generated"}:
         health_path = root / STREAM_HEALTH_REPORT
