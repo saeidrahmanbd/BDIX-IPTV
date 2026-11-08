@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T04:23:00+00:00",
+  "generated": "2026-11-08T05:10:32+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -1120,6 +1120,20 @@
       "primary": 1,
       "backup": 2
     },
+    "bolentertainment": {
+      "names": [
+        "Bol Entertainment"
+      ],
+      "ids": [
+        "bolentertainment.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "bollygold": {
       "names": [
         "Bollygold"
@@ -1129,6 +1143,20 @@
       ],
       "groups": [
         "Indian Movies"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "bsfilm": {
+      "names": [
+        "BS Film"
+      ],
+      "ids": [
+        "bsfilm.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -4143,6 +4171,20 @@
       "streams": 4,
       "primary": 3,
       "backup": 1
+    },
+    "hamdardtv": {
+      "names": [
+        "Hamdard TV"
+      ],
+      "ids": [
+        "hamdardtv.ca@sd"
+      ],
+      "groups": [
+        "Review"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "hidost": {
       "names": [

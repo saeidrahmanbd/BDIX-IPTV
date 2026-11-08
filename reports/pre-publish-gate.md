@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-08T04:22:39+00:00**
-Source playlist SHA-256: **e63f25d17d0eee6f63243d8402bf18380bcc58ecf2f2eca7918d8bd79f09e318**
+Generated: **2026-11-08T05:09:54+00:00**
+Source playlist SHA-256: **90a62dd358fda44303cd601078218e4d569d8c342a838ebda275b59cd0025a6b**
 
 Status: **BLOCK**
 
-- Current entries: **1004**
+- Current entries: **1007**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -16,7 +16,7 @@ Status: **BLOCK**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues: **61**
+- Primary channel-number sequence issues: **0**
 - Numbered review entries: **330**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
@@ -25,7 +25,7 @@ Status: **BLOCK**
 - Entries missing tvg-language: **0**
 - Raw resolution/geoblock name tags: **1**
 - Missing logos in active groups: **0**
-- Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
+- Missing logos deferred in review groups (Review/New Channels/New Backups): **1**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
@@ -38,7 +38,6 @@ New Channels and New Backups are active BD/IN-only review queues used by discove
 
 ## Blocking Reasons
 - active entries with incomplete identity/country/logo metadata: 1
-- primary channel-number sequence gaps/order errors: 61
 - review entries still numbered: 330
 - raw resolution/geoblock tags in channel names: 1
 
@@ -46,7 +45,7 @@ New Channels and New Backups are active BD/IN-only review queues used by discove
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
-None.
+- **Hamdard TV**
 
 ## Metadata conflicts
 

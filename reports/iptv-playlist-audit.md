@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-08T04:22:38.809404+00:00**
-Source playlist SHA-256: **e63f25d17d0eee6f63243d8402bf18380bcc58ecf2f2eca7918d8bd79f09e318**
+Generated: **2026-11-08T05:09:54.309868+00:00**
+Source playlist SHA-256: **90a62dd358fda44303cd601078218e4d569d8c342a838ebda275b59cd0025a6b**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1004**
-- Unique channel IDs: **674**
+- Playlist entries: **1007**
+- Unique channel IDs: **677**
 - IDs with multiple streams: **185**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -18,14 +18,14 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **0**
+- Logo exceptions requiring repair: **1**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1004**
+- Logo references checked: **1007**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues: **61**
+- Primary channel-number sequence issues: **0**
 - Primary entries missing channel numbers: **0**
 - Primary entries missing tvg-country: **1**
 - Primary entries missing tvg-language: **0**
@@ -783,56 +783,7 @@ None.
 
 ## Primary Channel-Number Sequence
 
-- **Thalaa TV** — expected channel number 158, found 218
-- **The Movie Club** — expected channel number 159, found 158
-- **The Movie Club +2** — expected channel number 160, found 159
-- **Tolly TV** — expected channel number 161, found 160
-- **Vision (India)** — expected channel number 162, found 161
-- **Zee Bangla Sonar** — expected channel number 163, found 162
-- **Zee Cinema** — expected channel number 164, found 163
-- **7S Music** — expected channel number 165, found 164
-- **7X Punjabi** — expected channel number 166, found 165
-- **9X Jalwa** — expected channel number 167, found 166
-- **9X Jhakaas** — expected channel number 168, found 167
-- **9X Tashan** — expected channel number 169, found 168
-- **9XM** — expected channel number 170, found 169
-- **AMN TV** — expected channel number 171, found 170
-- **Andy Haryana** — expected channel number 172, found 171
-- **B4U Music** — expected channel number 173, found 172
-- **Balle Balle** — expected channel number 174, found 173
-- **Deewana** — expected channel number 175, found 174
-- **Dhool TV** — expected channel number 176, found 175
-- **E24** — expected channel number 177, found 176
-- **Ekamra Musiq** — expected channel number 178, found 177
-- **Epic Music** — expected channel number 179, found 178
-- **ETV Beats** — expected channel number 180, found 179
-- **ETV Music** — expected channel number 181, found 180
-- **Gangaur TV** — expected channel number 182, found 181
-- **Hindi Hits** — expected channel number 183, found 182
-- **Insync** — expected channel number 184, found 183
-- **Isai Aruvi** — expected channel number 185, found 184
-- **Kappa TV (Music)** — expected channel number 186, found 185
-- **Mahua Play** — expected channel number 187, found 186
-- **Mastiii** — expected channel number 188, found 187
-- **MH One** — expected channel number 189, found 188
-- **MH One Dil Se** — expected channel number 190, found 189
-- **MH One Music** — expected channel number 191, found 190
-- **Music India** — expected channel number 192, found 191
-- **NH BollyRaga** — expected channel number 193, found 192
-- **Oli TV** — expected channel number 194, found 193
-- **Only Music** — expected channel number 195, found 194
-- **PTC Chakde** — expected channel number 196, found 195
-- **PTC Music** — expected channel number 197, found 196
-- **Public Music** — expected channel number 198, found 197
-- **Punjabi Hits** — expected channel number 199, found 198
-- **Punjabi Music** — expected channel number 200, found 199
-- **Raj Music Telugu** — expected channel number 201, found 200
-- **Raj Musix Kannada** — expected channel number 202, found 201
-- **Raj Musix Malayalam** — expected channel number 203, found 202
-- **Raj Musix Tamil** — expected channel number 204, found 203
-- **Raj Musix Telugu** — expected channel number 205, found 204
-- **Raj TV** — expected channel number 206, found 205
-- **Ramdhenu** — expected channel number 207, found 206
+Contiguous numbering verified: 1–676.
 
 ## Malformed EXTINF Entries
 
@@ -865,7 +816,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1004**
+- Healthy/local references: **1006**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
@@ -873,7 +824,7 @@ None.
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 None.
-- missing: **0**
+- missing: **1**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
