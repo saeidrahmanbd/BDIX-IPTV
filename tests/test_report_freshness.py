@@ -30,6 +30,17 @@ class ReportFreshnessTests(unittest.TestCase):
         }
         report_dir = self.root / "reports"
         report_dir.mkdir()
+        (self.root / "epg").mkdir()
+        (self.root / "epg" / "epg.xml").write_text("<tv></tv>\n", encoding="utf-8")
+        coverage = {
+            "generated_at": self.timestamp,
+            "inputs": {
+                "primary": {"path": "IPTV-Playlist.m3u", "sha256": self.hashes["IPTV-Playlist.m3u"]},
+                "international": {"path": "International-Playlist.m3u", "sha256": self.hashes["International-Playlist.m3u"]},
+                "epg": {"path": "epg/epg.xml", "sha256": hashlib.sha256((self.root / "epg" / "epg.xml").read_bytes()).hexdigest()},
+            },
+        }
+        (report_dir / "epg-published-coverage.json").write_text(json.dumps(coverage), encoding="utf-8")
         one = self.hashes["IPTV-Playlist.m3u"]
         two = self.hashes["International-Playlist.m3u"]
         epg = f"Generated: **{self.timestamp}**\n- IPTV-Playlist.m3u SHA-256: **{one}**\n- International-Playlist.m3u SHA-256: **{two}**\n"
