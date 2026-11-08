@@ -1,24 +1,24 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-08T13:34:30+00:00**
+Generated: **2026-11-08T13:37:51+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **314c5dc9ebb651e864423c1f54c189ba2f39050b1ceaebca5615636237ec6dcf**
+- IPTV-Playlist.m3u SHA-256: **ad7ab0110569ca3f9aa02be4d0caf0af3b61d0255bae43ee04fee6bbcac4b3bf**
 - International-Playlist.m3u SHA-256: **be459b74430ed16017a820fe84a7d7fee7d861c0724f5a3698fd5397008da43f**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **694**
-- Playlist references whose asset stem differs from the normalized channel name: **1354**
-- Unreferenced files immediately inside logos/: **1449** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1371**
+- Unreferenced files immediately inside logos/: **1438** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -1018,7 +1018,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Vasanth TV | vasanth-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Vissa TV | vissa-tv.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Indian Entertainment |
+| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Indian Entertainment |
 | IPTV-Playlist.m3u | aur LIFE | aurlife.png | Pakistani |
 | IPTV-Playlist.m3u | Falak TV | falak-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Pakistani |
@@ -1048,7 +1048,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Crime & Justice | crime-and-justice.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Crime Scene TV | crime-scene-tv.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Discovery Channel (India) | discovery-channel-india.png | Documentary & Wildlife |
-| IPTV-Playlist.m3u | Discovery Channel (India) (HD) | discovery-channel-india.png | Documentary & Wildlife |
+| IPTV-Playlist.m3u | Discovery Channel (India) | discovery-channel-india.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | DocuBay TV | docubay-tv.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Mystery TV | mystery-tv.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Nat Geo TV | national-geographic.png | Documentary & Wildlife |
@@ -1102,12 +1102,29 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Willow Sports | us-willow-sports-hd.png | Sports |
 | IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Review |
 | IPTV-Playlist.m3u | BTV News | repaired-btv-news-0646349a43.png | Review |
+| IPTV-Playlist.m3u | Cartoon Network | cartoon-network-hd.png | Review |
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Review |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Review |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Review |
 | IPTV-Playlist.m3u | Green TV | repaired-green-tv-d4fdf1175a.png | Review |
 | IPTV-Playlist.m3u | Green TV | repaired-green-tv-d4fdf1175a.png | Review |
 | IPTV-Playlist.m3u | Star Gold Select | repaired-star-gold-select-aa253ac6d3.png | Review |
+| IPTV-Playlist.m3u | Disha TV | disha-tv.png | New Channels |
+| IPTV-Playlist.m3u | Disney Channel (India) | disney-channel-india.png | New Channels |
+| IPTV-Playlist.m3u | Epic TV Digital | epic-tv-digital.png | New Channels |
+| IPTV-Playlist.m3u | Madani Channel Bangla | madani-channel-bangla.png | New Channels |
+| IPTV-Playlist.m3u | Mango Mobile TV | mango-mobile-tv.png | New Channels |
+| IPTV-Playlist.m3u | NAN TV | nan-tv.png | New Channels |
+| IPTV-Playlist.m3u | Rupashi Bangla TV | rupashi-bangla-tv.png | New Channels |
+| IPTV-Playlist.m3u | Shekinah TV | shekinah-tv.png | New Channels |
+| IPTV-Playlist.m3u | Star Gold | repaired-star-gold-de06c8e974.png | New Channels |
+| IPTV-Playlist.m3u | Vokta TV | vokta-tv.png | New Channels |
+| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | New Backups |
+| IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | New Backups |
+| IPTV-Playlist.m3u | Gazi TV | gazi-tv.png | New Backups |
+| IPTV-Playlist.m3u | Movies Now | movies-now-hd.png | New Backups |
+| IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | New Backups |
+| IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | New Backups |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | Al Quran Al Kareem TV | al-quran-al-kareem-tv.png | Backup |
@@ -1235,8 +1252,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Ultimate TV | ultimate-tv.png | Backup |
 | IPTV-Playlist.m3u | Vanitha TV | vanitha-tv.png | Backup |
 | IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
-| IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
-| IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
+| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Backup |
+| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
