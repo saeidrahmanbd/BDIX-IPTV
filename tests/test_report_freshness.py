@@ -108,7 +108,7 @@ class ReportFreshnessTests(unittest.TestCase):
     def test_discovery_report_must_match_current_bangladesh_date_even_within_48_hours(self):
         report = self.root / "reports" / "iptv-channel-discovery.md"
         report.write_text(
-            "# IPTV Channel Discovery\\n\\nGenerated: **2026-10-19T10:00:00+00:00**\\n",
+            "# IPTV Channel Discovery\n\nGenerated: **2026-10-19T10:00:00+00:00**\n",
             encoding="utf-8",
         )
         errors = check_reports(self.root, now=self.now, mode="discovery")
