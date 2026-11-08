@@ -39,7 +39,7 @@
 
 ## About BDIX-IPTV
 
-**BDIX-IPTV** is a public collection of organized, multi-country IPTV playlists in M3U/M3U8 format. The main **IPTV-Playlist.m3u** is a broad collection—not a Bangladesh-and-India-only playlist—with country and genre groups covering Bangladesh, India, Pakistan and eligible channels from other countries. The separate **International-Playlist.m3u** provides a companion international collection.
+**BDIX-IPTV** is a public collection of organized, multi-country IPTV playlists in M3U/M3U8 format. The main **IPTV-Playlist.m3u** is a broad collection— covering Bangladesh, India, Pakistan, and eligible channels from other countries. The separate **International-Playlist.m3u** provides a companion international collection.
 
 The playlists are maintained with organized channel groups, channel information and locally stored logo assets where available. A shared **XMLTV Electronic Programme Guide (EPG)** is also provided for compatible IPTV players. Automated workflows support channel discovery, playlist maintenance, stream checks and EPG updates.
 
