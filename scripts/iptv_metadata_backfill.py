@@ -24,6 +24,27 @@ TARGET_GROUPS = ACTIVE_GROUPS | {"Backup"}
 # iptv-org's feed catalogue. Values are ISO 639-3 codes; "und" is used only
 # where the service is deliberately language-agnostic or its audio is unknown.
 LANGUAGE_OVERRIDES = {
+    # Explicit languages for IPTV-Playlist channels previously marked und (reviewed by name/script).
+    "ktvbangla.in@sd": ("ben",),
+    "sonarbangla.in@sd": ("ben",),
+    "zodiaktv.in@sd": ("ben",),
+    "asianetmovies.in@sd": ("mal",),
+    "kaumudytv.in@sd": ("mal",),
+    "chhayachitramtelugu.in@sd": ("tel",),
+    "chithiram.in@sd": ("tam",),
+    "suntv.in@hd": ("tam",),
+    "taazatv.in@sd": ("tam",),
+    "thendraltv.in@sd": ("tam",),
+    "moviepunjab.in@sd": ("pan",),
+    "punjabimusichd.in@sd": ("pan",),
+    "mahapunjabi.in@sd": ("pan",),
+    "punjabitv.in@sd": ("pan",),
+    "nandighoshatv.in@sd": ("ori",),
+    "nepal1.in@sd": ("nep",),
+    "ntctv.in@sd": ("nep",),
+    "tehzeebtv.in@sd": ("urd",),
+    "mahuaplay.in@sd": ("bho",),
+    "tvbricsenglish.in@sd": ("eng",),
     "b4umovies.in@india": ("hin",),
     "b4umusic.in@india": ("hin",),
     "ddarunprabha.in@sd": ("eng",),
