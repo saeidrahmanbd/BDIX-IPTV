@@ -1,14 +1,14 @@
-# Bangladeshi IPTV Playlist (M3U) — BDIX-IPTV
+# Multi-Country IPTV Playlists (M3U) — BDIX-IPTV
 
-BDIX-IPTV is a public **Bangladeshi IPTV and Bangla IPTV M3U playlist** project. It maintains two M3U collections: a main playlist for Bangladesh and India, and an International playlist for Bangladesh, India and eligible movie/music channels from other countries.
+BDIX-IPTV is a public **multi-country IPTV M3U playlist** project with a strong Bangla TV collection. It maintains two M3U collections: a broad main playlist covering Bangladesh, India, Pakistan and eligible channels from other countries, plus a companion International playlist.
 
 The playlist files can be added to an M3U-compatible player such as VLC, Kodi, TiviMate, XCIPTV or IPTV Smarters. This repository publishes playlist references and metadata; it does not host television channels or video.
 
 ## Download the playlists
 
-### Bangladesh and India — IPTV-Playlist.m3u
+### Multi-Country Main Playlist — IPTV-Playlist.m3u
 
-**[Open the main Bangladesh and India IPTV playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
+**[Open the main multi-country IPTV playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
 
 Direct URL:
 
@@ -16,7 +16,7 @@ Direct URL:
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u
 ~~~
 
-This is the primary Bangladeshi IPTV and Indian TV collection.
+This is the primary, broad collection—not a Bangladesh-and-India-only playlist. It is organized into country and genre groups, including Bangladesh, Indian categories, Pakistani, International, Documentary & Wildlife, Kids, Religious and Sports. Channel eligibility remains governed by the established country- and genre-specific rules.
 
 ### International — International-Playlist.m3u
 
@@ -28,15 +28,16 @@ Direct URL:
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u
 ~~~
 
-Bangladesh and India follow the same regional rules as the main playlist. For every other country, only dedicated movie and music channels are eligible.
+The companion International playlist includes Bangladesh and India under their applicable rules, plus eligible movie and music channels from Pakistan and other countries.
 
 ## Channel eligibility
 
-| Origin | IPTV-Playlist.m3u | International-Playlist.m3u |
+| Origin / collection | IPTV-Playlist.m3u | International-Playlist.m3u |
 |---|---|---|
-| Bangladesh | All genres are eligible. | All genres are eligible. |
-| India | News, all religious channels (including Islamic), educational and business/finance channels are excluded. Kids and sports are allowed. | Same Indian exclusions; kids and sports are allowed. |
-| Other countries | Not included. | Only dedicated movie and music channels are eligible. |
+| Bangladesh | Included; all genres are eligible. | Included; all genres are eligible. |
+| India | Included; News, all religious channels (including Islamic), educational and business/finance channels are excluded. Kids and sports are allowed. | Same Indian exclusions; kids and sports are allowed. |
+| Pakistan | Supported in the Pakistani group, subject to the established country/genre rules. | Eligible dedicated movie and music channels. |
+| Other countries | Eligible channels can appear in International or qualified country groups, subject to the established genre rules. | Only dedicated movie and music channels are eligible. |
 
 New channel candidates and alternate streams are kept in **New Channels** and **New Backups** for manual review. The discovery workflows do not automatically approve or promote those entries. The five-unique-channel threshold for a foreign country group applies only after candidates have been manually reviewed.
 
@@ -54,6 +55,10 @@ The repository's XMLTV EPG endpoint is:
 **[Open the BDIX-IPTV XMLTV guide](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml)**
 
 The guide is refreshed and published after its generation, freshness and quality checks pass. Schedule coverage varies by channel and source availability.
+
+## Discovery scope
+
+The main playlist is multi-country, but individual discovery workflows can have narrower source-feed scopes. For example, the IPTV new-channel discovery workflow may scan selected Bangladesh and India feeds; this does not define or limit the country coverage of the curated main playlist. The International discovery workflow handles eligible movie/music candidates from other countries.
 
 ## About BDIX and stream availability
 
