@@ -5,62 +5,74 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-03 — `IPTV-Playlist.m3u`
+### 2026-11-08 — `IPTV-Playlist.m3u`
 
-- New channel identities: **24**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **24 / 0**
-- Backup URL updates: **0**
-- Logo reference changes: **0**
-- Replaced channel identities: **0**
+- New channel identities: **35**
+- Channel identities removed: **166**
+- Stream URLs added / removed: **81 / 237**
+- Backup URL updates: **5**
+- Logo reference changes: **8**
+- Replaced channel identities: **7**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Sonic
-- Sony BBC Earth
-- Sony Sports Ten 1
-- Sony Sports Ten 2
-- Sony Sports Ten 3 Hindi
-- Sony Sports Ten 4 Kannada
-- Sony Sports Ten 5
-- Spondon
-- Star Gold
-- Star Gold 2
-
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-03 — `International-Playlist.m3u`
-
-- New channel identities: **96**
-- Channel identities removed: **24**
-- Stream URLs added / removed: **111 / 27**
-- Backup URL updates: **0**
-- Logo reference changes: **0**
-- Replaced channel identities: **0**
-- Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- &TV International (1080p)
-- B4U Bhojpuri (1080p)
-- Colors Bangla Cinema (576p)
-- ETV Cinema (396p)
-- ETV Cinema HD (1080p)
-- Filmax (576p)
-- Filmazia (576p)
-- Ghost TV (712p) [Not 24/7]
-- Afghan Nobel Movies (720p)
-- CCTV-6 [Geo-blocked]
+- Channel Europe
+- JA TV
+- &pictures
+- Namma Bangalore
+- Pitaara Comedy
+- Vision (India)
+- Bol Entertainment
+- BS Film
+- 24 Hour Free Movies
+- 30A Music
 
 Removed channel identities (up to 10):
-- Zo'r TV
-- Ishtar TV
-- Lingkar TV
-- MBC FM
-- DG:Radio
-- Hope Channel PROYECTO JA
-- MNM
-- Radio Clasica TV
-- El Radio 9090 FM
-- Madras FM TV
+- Rupashi Bangla TV
+- TBN24
+- Bangla Jago TV
+- BHI Channel
+- JTV Bangla
+- JTV Classic
+- TV9 Bangla
+- & Picture
+- All Time Movies
+- Colors Cineplex Bollywood
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-08 — `International-Playlist.m3u`
+
+- New channel identities: **202**
+- Channel identities removed: **67**
+- Stream URLs added / removed: **331 / 68**
+- Backup URL updates: **0**
+- Logo reference changes: **79**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- India Talkies (360p)
+- CineStar Action Bulgaria
+- Movie Star (720p)
+- Jiangxi Movie Channel
+- Medium (Germany)
+- Pluto TV 90's Classics
+- Pluto TV Alberto Sordi
+- Pluto TV Bud & Terence (Germany)
+- Pluto TV Catastrofes
+- Pluto TV Christmas tutto l'anno
+
+Removed channel identities (up to 10):
+- Beats Radio
+- Mas FM
+- Radio Realpolitik
+- Cool FM 98.9
+- Heart Radio Aruba
+- Power 101.7 FM
+- Wavez FM
+- X 102.7 FM
+- Hitradio O3
+- TikTok Radio Brasil
 
 ## [5.0.0] — Playlist Studio
 
