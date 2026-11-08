@@ -83,7 +83,6 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertLess(updated.index('group-title="Review"'), updated.index('group-title="New Channels"'))
         self.assertLess(updated.index('group-title="New Channels"'), updated.index('group-title="New Backups"'))
         self.assertLess(updated.index('group-title="New Backups"'), updated.index('group-title="Backup"'))
-        self.assertLess(updated.index('group-title="New Channels"'), updated.index('group-title="New Backups"'))
 
     def test_only_two_exact_orphan_backup_endpoints_are_authorized_for_removal(self):
         bhi_url = "https://server.livelegitpro.in/bhichannel/bhichannel/tracks-v1a1/mono.m3u8"
