@@ -1,57 +1,218 @@
-# Strict Unmapped EPG Audit
+# EPG Unmapped / Missing Programme Audit
 
-Generated: **2026-11-08T14:20:52+00:00**
+Generated: **2026-11-08T14:49:04+00:00**
 
-Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
-Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
+## Status: GUIDE PUBLISHED — MAPPING GAPS REPORTED
 
-- Unmapped active channel identities reviewed: **1455**
-- Unmapped identities with exact/region-normalized schedule candidates: **8**
-- Candidate rows: **28**
-- Unmapped identities without an exact schedule-backed candidate: **1447**
+- Active playlist IDs without current/future programme rows: **293**
+- IDs without source mapping: **222**
+- Mapped IDs without current/future programme rows: **71**
+- No schedule is fabricated for missing channels.
 
-## Exact candidates for manual review
-
-| Group | Playlist channel | Playlist tvg-id | Candidate source name | Candidate EPG ID | Match type | Usable programme rows | Source feed(s) | Decision |
-|---|---|---|---|---|---|---:|---|---|
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colorsbengali | Colors.Bengali.HD.in | EXACT_AFTER_REGION_SUFFIX | 74 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colorsbengali | Colors.Bengali.HD.in | EXACT_AFTER_REGION_SUFFIX | 74 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.HD.in | EXACT_AFTER_REGION_SUFFIX | 85 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colors | Colors.HD.in | EXACT_AFTER_REGION_SUFFIX | 85 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.SD.in | EXACT_AFTER_REGION_SUFFIX | 85 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colors | Colors.SD.in | EXACT_AFTER_REGION_SUFFIX | 85 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | LIVETV_LIVETVCHANNEL_COLORS | EXACT_AFTER_REGION_SUFFIX | 67 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colors | LIVETV_LIVETVCHANNEL_COLORS | EXACT_AFTER_REGION_SUFFIX | 67 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | LIVETV_LIVETVCHANNEL_COLORS_HD | EXACT_AFTER_REGION_SUFFIX | 67 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colors | LIVETV_LIVETVCHANNEL_COLORS_HD | EXACT_AFTER_REGION_SUFFIX | 67 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | 202704 | EXACT_AFTER_REGION_SUFFIX | 41 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | 7127 | EXACT_AFTER_REGION_SUFFIX | 14 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | LIVETV_LIVETVCHANNEL_GTCSYMUNDERSCOREPUNJABI | EXACT_AFTER_REGION_SUFFIX | 59 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | SWIFTTV_LIVECHANNEL_309 | EXACT_AFTER_REGION_SUFFIX | 45 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | ts1836 | EXACT_AFTER_REGION_SUFFIX | 24 | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz<br>https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | 202704 | EXACT_AFTER_REGION_SUFFIX | 41 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | 7127 | EXACT_AFTER_REGION_SUFFIX | 14 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | LIVETV_LIVETVCHANNEL_GTCSYMUNDERSCOREPUNJABI | EXACT_AFTER_REGION_SUFFIX | 59 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | SWIFTTV_LIVECHANNEL_309 | EXACT_AFTER_REGION_SUFFIX | 45 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | ts1836 | EXACT_AFTER_REGION_SUFFIX | 24 | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz<br>https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | 143247 | EXACT_AFTER_REGION_SUFFIX | 50 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | KAIRALI.in | EXACT_AFTER_REGION_SUFFIX | 21 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN4.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairaliin | KairaliTV.in | EXACT_AFTER_REGION_SUFFIX | 27 | https://www.open-epg.com/files/india.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | LIVETV_LIVETVCHANNEL_KAIRALI_TV | EXACT_AFTER_REGION_SUFFIX | 43 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | ts25 | EXACT_AFTER_REGION_SUFFIX | 30 | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz<br>https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
-| Religious | Islam TV Urdu | custom.islam-tv-urdu | islamurduuk | IslamChannelUrdu.uk | EXACT_AFTER_REGION_SUFFIX | 93 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
-| Sports | Real Madrid TV English | RealMadridTVEnglish.es@SD | realmadrid | Real.Madrid.TV.es | EXACT_AFTER_REGION_SUFFIX | 12 | https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz | MANUAL_REVIEW_ONLY |
-| United States | MovieSphere CA | MovieSphere.us@CA | moviesphere | USBD17000117B | EXACT_AFTER_REGION_SUFFIX | 4 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
-
-## Bangladesh-specific review
-
-- Bangladesh-group IDs without a mapping: **65**
-The nasimali/epg-auto diaspora guide uses numeric Sky channel IDs with generic display names such as Channel 3914; channel identity is never inferred from list ordering. Explicit sources are used for Iqra Bangla, ATN Bangla UK, NTV Europe, Channel S UK, and Deen TV. These mappings do not imply a general domestic Bangladesh EPG source.
-No dependable public, current XMLTV feed for the domestic Bangladesh channel set was verified. NTV Europe and Channel S UK use dedicated UK diaspora channel feeds; the remaining domestic channels stay unmapped until a trustworthy exact-ID schedule source is verified. No schedule is fabricated from stale static schedules or unrelated foreign channels.
-
+| Group | Channel | Playlist ID | Status |
+|---|---|---|---|
+| Bangladesh | Ananda TV | AnandaTV.bd | NO_MAPPING |
+| Bangladesh | Asian TV | AsianTV.bd | NO_MAPPING |
+| Bangladesh | ATN Bangla | ATNBangla.bd | NO_MAPPING |
+| Bangladesh | ATN News | ATNNews.bd | NO_MAPPING |
+| Bangladesh | Bangla TV | BanglaTV.bd | NO_MAPPING |
+| Bangladesh | Bangla Vision | BanglaVision.bd | NO_MAPPING |
+| Bangladesh | Bengali Beats | BengaliBeats.bd | NO_MAPPING |
+| Bangladesh | Bijoy TV | BijoyTV.bd | NO_MAPPING |
+| Bangladesh | Boishakhi TV | BoishakhiTV.bd | NO_MAPPING |
+| Bangladesh | BTV Chattogram | BTVChattogram.bd | NO_MAPPING |
+| Bangladesh | Channel 1 | Channel1.bd | NO_MAPPING |
+| Bangladesh | Channel 24 | Channel24.bd | NO_MAPPING |
+| Bangladesh | Channel 52 | Channel52.bd | NO_MAPPING |
+| Bangladesh | Channel Europe | ChannelEurope.uk | NO_MAPPING |
+| Bangladesh | Channel I | ChannelI.bd | NO_MAPPING |
+| Bangladesh | Channel S | ChannelS.uk | NO_MAPPING |
+| Bangladesh | Channel S UK | ChannelS.uk@679aa9 | NO_MAPPING |
+| Bangladesh | DBC News | DBCNews.bd | NO_MAPPING |
+| Bangladesh | Deepto TV | DeeptoTV.bd | NO_MAPPING |
+| Bangladesh | Desh TV | DeshTV.bd | NO_MAPPING |
+| Bangladesh | Deshe Bideshe | DesheBideshe.ca | NO_MAPPING |
+| Bangladesh | Deshi TV | DeshiTV.ca@SD | NO_MAPPING |
+| Bangladesh | Doyel TV | DoyelTV.ca@SD | NO_MAPPING |
+| Bangladesh | Duronto TV | DurontoTV.bd | NO_MAPPING |
+| Bangladesh | Ekattor TV | EkattorTV.bd | NO_MAPPING |
+| Bangladesh | Ekhon TV | EkhonTV.bd | NO_MAPPING |
+| Bangladesh | Ekushey TV | EkusheyTV.bd | NO_MAPPING |
+| Bangladesh | Enter TV | EnterTV.bd | NO_MAPPING |
+| Bangladesh | G Series Drama | GSeriesDrama.bd | NO_MAPPING |
+| Bangladesh | G TV | GaziTV.bd | NO_MAPPING |
+| Bangladesh | Global TV | GlobalTV.bd | NO_MAPPING |
+| Bangladesh | Independent TV | IndependentTV.bd | NO_MAPPING |
+| Bangladesh | JA TV | JATV.bd | NO_MAPPING |
+| Bangladesh | Jago News 24 | JagoNews24.bd | NO_MAPPING |
+| Bangladesh | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_MAPPING |
+| Bangladesh | Jamuna TV | JamunaTV.bd | NO_MAPPING |
+| Bangladesh | Jonmobhumi TV | JonmobhumiTV.bd | NO_MAPPING |
+| Bangladesh | Maasranga TV | MaasrangaTV.bd | NO_CURRENT_PROGRAMME |
+| Bangladesh | ME TV | METV.bd | NO_MAPPING |
+| Bangladesh | Mohona TV | MohonaTV.bd | NO_MAPPING |
+| Bangladesh | Movie Bangla | MovieBangla.bd | NO_MAPPING |
+| Bangladesh | My TV | MyTV.bd | NO_MAPPING |
+| Bangladesh | Nagorik TV | NagorikTV.bd | NO_MAPPING |
+| Bangladesh | News 24 | News24.bd | NO_MAPPING |
+| Bangladesh | Nexus TV | NexusTV.bd | NO_MAPPING |
+| Bangladesh | NRB TV | NRBTV.ca | NO_MAPPING |
+| Bangladesh | NTV | NTV.bd | NO_MAPPING |
+| Bangladesh | Probashi TV | ProbashiTV.bd | NO_MAPPING |
+| Bangladesh | Rajdhani TV | RajdhaniTV.bd | NO_MAPPING |
+| Bangladesh | RTV | RTV.bd | NO_CURRENT_PROGRAMME |
+| Bangladesh | SA TV | SATV.bd | NO_MAPPING |
+| Bangladesh | Somoy TV | SomoyNewsTV.bd | NO_MAPPING |
+| Bangladesh | SRK | SRK.bd | NO_MAPPING |
+| Bangladesh | Star News | StarNews.bd | NO_MAPPING |
+| Bangladesh | Thikana | ThikanaTV.us | NO_MAPPING |
+| Bangladesh | Time Television | TimeTelevision.us | NO_MAPPING |
+| Documentary & Wildlife | 4K Travel | Travel.us | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Adventure Earth | AdventureEarth.us | NO_MAPPING |
+| Documentary & Wildlife | Alone | Alone.us | NO_MAPPING |
+| Documentary & Wildlife | Autentic Adventure Earth | AutenticAdventureEarth.us | NO_MAPPING |
+| Documentary & Wildlife | Autentic History | AutenticHistory.de | NO_MAPPING |
+| Documentary & Wildlife | Crime & Justice | CrimeJustice.us | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Crime Scene TV | CrimeSceneTV.us | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Epic Crimes | EpicCrimes.in | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | House of Crime | HouseOfCrime.us | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | InFast | INFAST.nl | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Inside Crime | InsideCrime.us | NO_MAPPING |
+| Documentary & Wildlife | InWonder | InWonder.nl | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Love the Planet | LoveThePlanet.us | NO_MAPPING |
+| Documentary & Wildlife | Mysteries Xplored | USBB5200028MM | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Mystery TV | MysteryTV.us | NO_MAPPING |
+| Documentary & Wildlife | Nat Geo TV | NatGeoTV.us | NO_MAPPING |
+| Documentary & Wildlife | OuterSphere | OuterSphere.us | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | PBS Arts | PBSArts.us | NO_MAPPING |
+| Documentary & Wildlife | Real Wild | RealWild.uk | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Robot Wars by Mech+ | RobotWarsByMech.us | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Survivor | Survivor.us | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Watch Mojo | WatchMojo.us | NO_MAPPING |
+| Documentary & Wildlife | Wheel World | WheelWorld.us | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Wild Flix Hindi | WildFlixHindi.in | NO_CURRENT_PROGRAMME |
+| Documentary & Wildlife | Wild Planet | WildPlanet.us | NO_MAPPING |
+| Documentary & Wildlife | Witness to Justice | WitnessToJustice.us | NO_CURRENT_PROGRAMME |
+| Indian Bangla | Amar Bangla | AamarBangla.in | NO_CURRENT_PROGRAMME |
+| Indian Bangla | Bangla Plus | BanglaPlus.in | NO_MAPPING |
+| Indian Bangla | Jhankar TV | JhankarTV.ca | NO_MAPPING |
+| Indian Bangla | KTV Bangla | KTVBangla.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Bangla | Matribhumi TV | MatribhumiTV.bd | NO_MAPPING |
+| Indian Bangla | News 21 | News21BanglaTV.bd@SD | NO_MAPPING |
+| Indian Bangla | Orange Bangla TV | OrangeBanglaTV.in@SD | NO_MAPPING |
+| Indian Bangla | Sananda | SanandaTV.in | NO_MAPPING |
+| Indian Bangla | SNB Cinema | SNBCinema.in | NO_MAPPING |
+| Indian Bangla | Sonar Bangla | SonarBangla.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Bangla | Tara TV | TaraTV.in | NO_CURRENT_PROGRAMME |
+| Indian Bangla | ZB Cinema | ZBCinema.in | NO_CURRENT_PROGRAMME |
+| Indian Bangla | Zodiak TV | ZodiakTV.in@SD | NO_MAPPING |
+| Indian Entertainment | Aaryaa TV | AaryaaTV.in | NO_CURRENT_PROGRAMME |
+| Indian Entertainment | Asianet Middle East | AsianetMiddleEast.in@SD | NO_MAPPING |
+| Indian Entertainment | Baiscope TV | BaiscopeTV.in | NO_MAPPING |
+| Indian Entertainment | C Malayalam TV | CMalayalamTV.ca@SD | NO_MAPPING |
+| Indian Entertainment | CCV | CCV.in@SD | NO_MAPPING |
+| Indian Entertainment | Colors MENA | ColorsMENA.in | NO_MAPPING |
+| Indian Entertainment | DD Chhattisgarh | DDChhattisgarh.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Entertainment | Ekamra Bharat Odia | EkamraBharatOdia.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Entertainment | Flowers US | Flowers.us | NO_MAPPING |
+| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | NO_MAPPING |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | NO_MAPPING |
+| Indian Entertainment | Kalika TV | KalikaTV.in@SD | NO_MAPPING |
+| Indian Entertainment | Kerala Vision | KeralaVision.in@SD | NO_MAPPING |
+| Indian Entertainment | Maha Punjabi | MahaPunjabi.in@SD | NO_MAPPING |
+| Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Entertainment | MNTV (Tamil) | MarutamTV.in | NO_MAPPING |
+| Indian Entertainment | NTC TV | NTCTV.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Entertainment | One Paschima | OnePaschima.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Entertainment | Pardesi TV | PardesiTV.ca | NO_MAPPING |
+| Indian Entertainment | Pulari TV | PulariTV.in@SD | NO_MAPPING |
+| Indian Entertainment | Punjabi TV | PunjabiTV.in@SD | NO_MAPPING |
+| Indian Entertainment | Q TV | QTV.in | NO_MAPPING |
+| Indian Entertainment | SADA TV | SADATV.in | NO_MAPPING |
+| Indian Entertainment | Shemaroo Umang | ShemarooUmang.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Entertainment | Sooriyan TV | SooriyanTV.ca@SD | NO_MAPPING |
+| Indian Entertainment | Suriya TV | SuriyaTV.in | NO_CURRENT_PROGRAMME |
+| Indian Entertainment | Suriyan TV | SuriyanTV.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Entertainment | Swantham | Swantham.in@SD | NO_MAPPING |
+| Indian Entertainment | Thendral TV | ThendralTV.in@SD | NO_MAPPING |
+| Indian Entertainment | UTV Palakkad | UTVPalakkad.in@SD | NO_MAPPING |
+| Indian Entertainment | Zingabad | Zingabad.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Movies | B4U Bhojpuri Plus | B4UBhojpuri.in@Plus | NO_MAPPING |
+| Indian Movies | Bollygold | Bollygold.in@HD | NO_CURRENT_PROGRAMME |
+| Indian Movies | Chhaya Chitram Telugu | ChhayaChitramTelugu.in@SD | NO_MAPPING |
+| Indian Movies | Ekamra Cinema | EkamraCinema.in | NO_CURRENT_PROGRAMME |
+| Indian Movies | Goldmines 2 | Goldmines2.in@SD | NO_MAPPING |
+| Indian Movies | Goldmines Action | GoldminesAction.in | NO_MAPPING |
+| Indian Movies | Goldmines Movies | GoldminesMovies.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Movies | Hindi Movie Classic 24 | new.hindi.movie.classic.24 | NO_MAPPING |
+| Indian Movies | India Talkies | IndiaTalkies.in@SD | NO_MAPPING |
+| Indian Movies | Indywood TV | IndywoodTV.in@SD | NO_MAPPING |
+| Indian Movies | K Cine | KCine.in | NO_MAPPING |
+| Indian Movies | Maha Movie | MahaMovie.in@SD | NO_MAPPING |
+| Indian Movies | Mango | Mango.in@SD | NO_MAPPING |
+| Indian Movies | MH One Movies | MHOneMovies.in@SD | NO_MAPPING |
+| Indian Movies | Movie Punjab | MoviePunjab.in@SD | NO_MAPPING |
+| Indian Movies | Namma Bangalore | NammaBangalore.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Movies | NH Tamil Gold | NHTamilGold.in | NO_CURRENT_PROGRAMME |
+| Indian Movies | Pravasi Channel | PravasiChannel.in@SD | NO_MAPPING |
+| Indian Movies | Public Movies | PublicMovies.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Movies | Shubh Cinema TV | ShubhCinemaTV.in | NO_MAPPING |
+| Indian Movies | Soneri Cinema | SoneriCinema.in@SD | NO_MAPPING |
+| Indian Movies | Sony Movies | SonyMovies.in | NO_MAPPING |
+| Indian Movies | South Station | SouthStation.in | NO_CURRENT_PROGRAMME |
+| Indian Movies | Thalaa TV | ThalaaTV.in@HD | NO_CURRENT_PROGRAMME |
+| Indian Movies | The Movie Club | TheMovieClub.in@HD | NO_CURRENT_PROGRAMME |
+| Indian Movies | The Movie Club +2 | TheMovieClub.in@Plus2 | NO_CURRENT_PROGRAMME |
+| Indian Movies | Tolly TV | TollyTV.in | NO_CURRENT_PROGRAMME |
+| Indian Music | 7X Punjabi | 7XPunjabi.in | NO_MAPPING |
+| Indian Music | AMN TV | AMNTV.in@SD | NO_MAPPING |
+| Indian Music | Andy Haryana | AndyHaryana.in@SD | NO_MAPPING |
+| Indian Music | Deewana | DeewanaHD.in | NO_MAPPING |
+| Indian Music | Ekamra Musiq | EkamraMusiq.in | NO_CURRENT_PROGRAMME |
+| Indian Music | ETV Beats | ETVBeats.in@HD | NO_CURRENT_PROGRAMME |
+| Indian Music | Hindi Hits | HindiHits.in | NO_MAPPING |
+| Indian Music | Mastiii | Mastiii.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Music | Oli TV | OliTV.in@SD | NO_MAPPING |
+| Indian Music | Only Music | Only.Music.in | NO_CURRENT_PROGRAMME |
+| Indian Music | Punjabi Music | PunjabiMusicHD.in@SD | NO_MAPPING |
+| Indian Music | Rang Rangoli | RangRangoli.in | NO_MAPPING |
+| Indian Music | Steelbird Music | SteelbirdMusic.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Music | Ultimate TV | UltimateTV.in@SD | NO_CURRENT_PROGRAMME |
+| Indian Music | Vision Beats | VisionBeats.in@SD | NO_MAPPING |
+| Indian Music | YRF Music Nepal | YRFMusic.in@Nepal | NO_MAPPING |
+| International | 24 Hour Free Movies | custom.24hourfreemovies | NO_MAPPING |
+| International | 30A Music | custom.30amusic | NO_MAPPING |
+| International | 4ever Cinema | custom.4evercinema | NO_MAPPING |
+| International | 4ever Music | custom.4evermusic | NO_MAPPING |
+| International | Action Hollywood Movies | plex.tv.Action.Hollywood.Movies.plex | NO_MAPPING |
+| International | Afrobeats | Afrobeats.us | NO_MAPPING |
+| International | AMC Thrillers | plex.tv.AMC.Thrillers.plex | NO_CURRENT_PROGRAMME |
+| International | Bang Bang TV | BangBangTV | NO_CURRENT_PROGRAMME |
+| International | Baraza Music TV | custom.barazamusictv | NO_MAPPING |
+| International | CMC TV | custom.cmctv | NO_MAPPING |
+| International | Dance TV | DanceTV.us | NO_MAPPING |
+| International | DW News | DWNews.de | NO_MAPPING |
+| International | EU Music | custom.eumusic | NO_MAPPING |
+| International | FON Music | FONMusic.us | NO_MAPPING |
+| International | iFilm English | iFilmEnglish.ir | NO_MAPPING |
+| International | M20 Music | M20Music.us | NO_MAPPING |
+| International | Mix Hollywood | custom.mixhollywood | NO_MAPPING |
+| International | Movie Dome Family | MovieDomeFamily.us | NO_MAPPING |
+| International | Movies Thriller | MoviesThriller.sa@SD | NO_MAPPING |
+| International | MovieSphere UK | custom.moviesphereuk | NO_MAPPING |
+| International | My Cinema | MyCinema.us | NO_MAPPING |
+| International | MyTime Movie Network East | MyTimeMovieNetworkEast.us | NO_CURRENT_PROGRAMME |
+| International | Ocko Expres | custom.ockoexpres | NO_MAPPING |
+| International | Oxygen Music | OxygenMusic.us | NO_MAPPING |
+| International | POP World TV | POPWorldTV.es | NO_MAPPING |
+| International | Radio Norba TV | RadionorbaTV.it | NO_CURRENT_PROGRAMME |
+| International | Rakuten Movies | RakutenMovies | NO_MAPPING |
+| International | Rakuten TV Action Movies UK | RakutenTVActionMovies.es@UK | NO_MAPPING |
+| International | Rakuten TV Comedy Movies UK | RakutenTVComedyMovies.es@UK | NO_MAPPING |
+| International | Rakuten TV Family Movies UK | RakutenTVFamilyMovies.es@UK | NO_MAPPING |
+| International | Shanson TV | ShansonTV.ru | NO_MAPPING |
+_Only the first 200 of 293 IDs are listed._
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **ad7ab0110569ca3f9aa02be4d0caf0af3b61d0255bae43ee04fee6bbcac4b3bf**
-- International-Playlist.m3u SHA-256: **be459b74430ed16017a820fe84a7d7fee7d861c0724f5a3698fd5397008da43f**
-
+- IPTV-Playlist.m3u SHA-256: **4bb2bf08e6f01e3a0d601db0964c9678f3e376602df92c4a02f8c1ba5ba36aee**

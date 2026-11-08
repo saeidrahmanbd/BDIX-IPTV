@@ -2,15 +2,17 @@
 """Refresh public EPG coverage reports from the XMLTV artefact without refetching feeds."""
 import csv
 import hashlib
+import json
 import re
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# Headline EPG coverage is measured on IPTV-Playlist.m3u only. International-Playlist.m3u
+# is a separate playlist with its own policy and must not affect these figures.
 PLAYLISTS = (
     ("IPTV-Playlist.m3u", "Main IPTV"),
-    ("International-Playlist.m3u", "International"),
 )
 GUIDE = ROOT / "epg" / "epg.xml"
 FRESHNESS = ROOT / "reports" / "epg-publish-freshness.md"
@@ -73,7 +75,7 @@ def main():
 
     now = datetime.now(timezone.utc)
     lower, upper = now - timedelta(hours=6), now + timedelta(days=7)
-    guide_channels, window_ids, live_ids = set(), set(), set()
+    guide_channels, window_ids, live_ids, any_programme_ids = set(), set(), set(), set()
     eligible_window = eligible_live = 0
     for _, elem in ET.iterparse(str(GUIDE), events=("end",)):
         if elem.tag == "channel":
@@ -83,6 +85,8 @@ def main():
             elem.clear()
         elif elem.tag == "programme":
             cid = (elem.get("channel") or "").strip()
+            if cid:
+                any_programme_ids.add(cid)
             start, stop = parse_time(elem.get("start")), parse_time(elem.get("stop"))
             title = elem.find("title")
             valid = bool(cid and start and stop and stop > start and start <= upper and stop >= lower
@@ -203,17 +207,33 @@ def main():
     unmapped += ["", "## Source Playlist Fingerprints", "", *source_fingerprints, ""]
     (reports / "epg-unmapped-audit.md").write_text("\n".join(unmapped), encoding="utf-8")
 
-    timing = [
-        "# EPG Timing Audit", "", f"Generated: **{now.isoformat(timespec='seconds')}**", "",
-        "## Status: PASS — published XMLTV timing measured", "",
-        f"- Valid current/future programme rows: **{eligible_live}**",
-        f"- Valid programme rows in the -6h/+7d window: **{eligible_window}**",
-        f"- Channel IDs with current/future programmes: **{len(live_ids)}**",
-        f"- Channel IDs with in-window programmes: **{len(window_ids)}**",
-        f"- Window bounds: **{lower.isoformat(timespec='minutes')} to {upper.isoformat(timespec='minutes')}**",
-        "- Empty and placeholder titles are excluded from these report counts.", "",
-    ]
-    (reports / "epg-timing-audit.md").write_text("\n".join(timing), encoding="utf-8")
+    # epg-timing-audit.md is owned by the timing-correction pipeline (it lists detected corrections);
+    # this generator must not overwrite it.
+
+    # Machine-readable IPTV-only figures. Usable = valid programme with a title, stop >= now and
+    # start within 7 days. That count depends on the clock; generated_at records when it was taken.
+    iptv_path = ROOT / "IPTV-Playlist.m3u"
+    published_active = active_ids & guide_channels
+    no_programmes = published_active - any_programme_ids
+    schedule_ended = (published_active & any_programme_ids) - live_ids
+    mapped_active = {tid for tid in active_ids if tid in mapped_ids}
+    usable_active = active_ids & live_ids
+    summary = {
+        "generated_at": now.isoformat(timespec="seconds"),
+        "inventory": "IPTV-Playlist.m3u only (International-Playlist.m3u is out of scope)",
+        "inventory_sha256": hashlib.sha256(iptv_path.read_bytes()).hexdigest(),
+        "guide_sha256": hashlib.sha256(GUIDE.read_bytes()).hexdigest(),
+        "active_identities": len(active_ids),
+        "published_xmltv_ids": len(guide_channels),
+        "published_active_identities": len(published_active),
+        "usable_active_identities": len(usable_active),
+        "mapped_active_identities_csv_epg_id": len(mapped_active),
+        "not_published": len(active_ids - guide_channels),
+        "published_no_programmes": len(no_programmes),
+        "published_schedule_ended": len(schedule_ended),
+        "clock_dependent_note": "usable_active_identities changes as programmes end; published counts do not depend on the clock",
+    }
+    (reports / "epg-iptv-coverage.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     print(f"Published-guide reports updated: {len(guide_channels)} channels, {eligible_window} in-window programme rows, {eligible_live} current/future rows.")
 
 

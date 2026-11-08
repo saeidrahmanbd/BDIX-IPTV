@@ -77,11 +77,13 @@ class ReportFreshnessTests(unittest.TestCase):
         errors = check_reports(self.root, now=self.now)
         self.assertTrue(any("fingerprint does not match current IPTV-Playlist.m3u" in item for item in errors))
 
-    def test_international_change_invalidates_shared_epg_and_logo_reports(self):
+    def test_international_change_does_not_invalidate_iptv_epg_coverage_reports(self):
+        # EPG headline coverage is IPTV-only; International changes must not gate those reports.
         with (self.root / "International-Playlist.m3u").open("a", encoding="utf-8") as stream:
             stream.write("# change\n")
         errors = check_reports(self.root, now=self.now, epg_publication_approved=False)
-        self.assertTrue(any("epg-coverage.md: fingerprint does not match current International-Playlist.m3u" in item for item in errors))
+        self.assertFalse(any("epg-coverage.md" in item and "International-Playlist.m3u" in item for item in errors))
+        self.assertFalse(any("epg-playlist-audit.md" in item and "International-Playlist.m3u" in item for item in errors))
         self.assertTrue(any("logo-authenticity-manifest.json: fingerprint does not match current International-Playlist.m3u" in item for item in errors))
 
     def test_stale_epg_report_is_reported(self):

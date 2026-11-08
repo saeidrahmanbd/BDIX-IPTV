@@ -146,7 +146,14 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
                 errors.append(f"{relative}: missing {playlist_name} SHA-256 fingerprint")
             elif actual != hashes[playlist_name]:
                 errors.append(f"{relative}: fingerprint does not match current {playlist_name}")
-        elif relative in SHARED_EPG_REPORTS or relative in SHARED_PLAYLIST_REPORTS or relative in {PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT}:
+        elif relative in SHARED_EPG_REPORTS:
+            # EPG headline reports are measured on IPTV-Playlist.m3u only; International is out of EPG scope.
+            actual = read_fingerprint(text, ("IPTV-Playlist.m3u SHA-256",))
+            if actual is None:
+                errors.append(f"{relative}: missing IPTV-Playlist.m3u SHA-256 fingerprint")
+            elif actual != hashes["IPTV-Playlist.m3u"]:
+                errors.append(f"{relative}: fingerprint does not match current IPTV-Playlist.m3u")
+        elif relative in SHARED_PLAYLIST_REPORTS or relative in {PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT}:
             for playlist_name in PLAYLIST_NAMES:
                 actual = read_fingerprint(text, (f"{playlist_name} SHA-256",))
                 if actual is None:
