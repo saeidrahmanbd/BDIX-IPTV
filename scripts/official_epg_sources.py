@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Adapters for official schedule pages that do not publish XMLTV directly."""
 import re
+import time
 import urllib.request
 from datetime import datetime, time, timedelta, timezone
 from html.parser import HTMLParser
@@ -10,7 +11,8 @@ from zoneinfo import ZoneInfo
 HUM_TV_SOURCE = "https://hum.tv/schedule/"
 HUM_TV_CHANNEL_ID = "HumTV.pk"
 RTV_SOURCE = "https://rtvonline.com/home/"
-RTV_LEGACY_SOURCES = ("https://rtvbd.tv/schedule.php", "https://www.rtvbd.tv/schedule.php")
+# The www host currently serves the public weekly schedule; retain the apex host as fallback.
+RTV_LEGACY_SOURCES = ("https://www.rtvbd.tv/schedule.php", "https://rtvbd.tv/schedule.php")
 RTV_CHANNEL_ID = "RTV.bd"
 BTV_SOURCE = "https://migrate.btvlive.gov.bd/channel/BTV"
 BTV_CHANNEL_ID = "BTVNational.bd"
@@ -554,26 +556,35 @@ def fetch_rtv_programmes(now=None):
     except Exception as exc:
         fetch_errors.append(f"rtvonline: {type(exc).__name__}")
 
-    # Retain the older weekly page only as a fallback; TLS verification remains on.
+    # Retain the broadcaster's public weekly page as a fallback; TLS verification
+    # remains enabled. Retry one transient network failure per host before failing over.
     for source_url in RTV_LEGACY_SOURCES:
-        request = urllib.request.Request(
-            source_url,
-            headers={
-                "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
-                "Accept": "text/html,application/xhtml+xml,*/*",
-            },
+        host = source_url.split("/", 3)[2]
+        last_error = None
+        for attempt in range(2):
+            request = urllib.request.Request(
+                source_url,
+                headers={
+                    "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+                    "Accept": "text/html,application/xhtml+xml,*/*",
+                },
+            )
+            try:
+                with urllib.request.urlopen(request, timeout=30) as response:
+                    html = response.read().decode("utf-8", errors="replace")
+                weekly = _parse_rtv_weekly_programmes(html, now_utc)
+                if weekly:
+                    return weekly
+                last_error = "no valid weekly programme slots"
+                break
+            except Exception as exc:
+                last_error = type(exc).__name__
+                if attempt == 0:
+                    time.sleep(1)
+        fetch_errors.append(
+            f"{host}: {last_error}" +
+            (" after retry" if last_error != "no valid weekly programme slots" else "")
         )
-        try:
-            with urllib.request.urlopen(request, timeout=30) as response:
-                html = response.read().decode("utf-8", errors="replace")
-            weekly = _parse_rtv_weekly_programmes(html, now_utc)
-            if weekly:
-                return weekly
-            host = source_url.split("/", 3)[2]
-            fetch_errors.append(f"{host}: no valid weekly programme slots")
-        except Exception as exc:
-            host = source_url.split("/", 3)[2]
-            fetch_errors.append(f"{host}: {type(exc).__name__}")
 
     raise RuntimeError(
         "Could not obtain a current official RTV schedule over verified HTTPS ("

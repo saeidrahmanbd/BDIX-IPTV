@@ -761,7 +761,20 @@ def clean_schedule(records):
     return chosen
 
 
-def infer_source_offsets(records):
+# Timezone offsets published worldwide fall within a bounded civil-time range.
+# Larger displacements are treated as date/identity anomalies, not auto-corrected.
+MAX_AUTOMATIC_SOURCE_OFFSET_MINUTES = 14 * 60
+
+
+def infer_source_offsets(records, manual_review=None):
+    """Infer conservative feed/ID offsets from independent cross-source evidence.
+
+    A programme signature must occur in at least three different feed inputs;
+    multiple channel IDs inside one feed are not independent corroboration.
+    Corrections are limited to plausible timezone displacements (2 to 14 hours).
+    Larger, strongly recurring shifts are returned through manual_review and
+    deliberately left unchanged.
+    """
     signatures = {}
     for r in records:
         start, stop = r.get("start_dt"), r.get("stop_dt")
@@ -771,10 +784,12 @@ def infer_source_offsets(records):
         duration_bin = round((stop - start).total_seconds() / 300)
         key = (title, duration_bin)
         signatures.setdefault(key, {}).setdefault((r["source_index"], r["source_id"]), []).append(r)
+
     proposals = {}
     for source_map in signatures.values():
         unique = {source_key: rows[0] for source_key, rows in source_map.items() if len(rows) == 1}
-        if len(unique) < 3:
+        # Distinct IDs from one XMLTV feed are not independent source evidence.
+        if len({source_key[0] for source_key in unique}) < 3:
             continue
         ordered = sorted(unique.items(), key=lambda item: item[1]["start_dt"])
         clusters = []
@@ -786,29 +801,40 @@ def infer_source_offsets(records):
                 clusters[-1].append(item)
         if len(clusters) < 2:
             continue
-        consensus = max(clusters, key=len)
-        if len(consensus) < 2:
+        consensus = max(
+            clusters,
+            key=lambda cluster: (len(cluster), len({item[0][0] for item in cluster})),
+        )
+        consensus_feed_indexes = {item[0][0] for item in consensus}
+        if len(consensus_feed_indexes) < 2:
             continue
-        consensus_sources = {item[0] for item in consensus}
         consensus_start = sorted(item[1]["start_dt"] for item in consensus)[len(consensus) // 2]
         for cluster in clusters:
             if cluster is consensus or len(cluster) != 1:
                 continue
             source_key, record = cluster[0]
-            if source_key in consensus_sources:
+            # Never correct an ID using another ID from the same feed as consensus.
+            if source_key[0] in consensus_feed_indexes:
                 continue
             delta = consensus_start - record["start_dt"]
             minutes = round(delta.total_seconds() / 300) * 5
             if abs(minutes) >= 120:
                 proposals.setdefault(source_key, []).append(minutes)
+
     corrections = {}
     for source_key, minutes_list in proposals.items():
         buckets = {}
         for minutes in minutes_list:
             buckets[minutes] = buckets.get(minutes, 0) + 1
         best_minutes, best_count = max(buckets.items(), key=lambda item: item[1])
-        if best_count >= 4 and best_count / len(minutes_list) >= 0.75:
+        if best_count < 4 or best_count / len(minutes_list) < 0.75:
+            continue
+        if abs(best_minutes) <= MAX_AUTOMATIC_SOURCE_OFFSET_MINUTES:
             corrections[source_key] = timedelta(minutes=best_minutes)
+        elif manual_review is not None:
+            manual_review.append(
+                (source_key[0], source_key[1], best_minutes, best_count, len(minutes_list))
+            )
     return corrections
 
 
@@ -965,7 +991,7 @@ def main():
     timing_audit = [
         "# EPG Timing Audit",
         "",
-        "Automatic corrections require repeated cross-source title and duration matches, at least four consistent matches, >=75% agreement, at least three source IDs, and a displacement of two hours or more.",
+        "Automatic corrections require four repeated title/duration matches, >=75% agreement, and corroboration from at least three distinct XMLTV feeds (not merely three IDs in one feed). Only plausible timezone displacements from 2 through 14 hours are applied; larger shifts are reported for manual review and left unchanged.",
         "",
         "## Detected corrections",
         "",
@@ -974,7 +1000,8 @@ def main():
     offset_events = []
     for target in sorted(mapped_targets):
         records = by_target.get(target, [])
-        corrections = infer_source_offsets(records)
+        manual_offset_reviews = []
+        corrections = infer_source_offsets(records, manual_offset_reviews)
         for source_key, delta in corrections.items():
             source_index, source_id = source_key
             matching = [r for r in records if r["source_index"] == source_index and r["source_id"] == source_id]
@@ -986,6 +1013,16 @@ def main():
             correction_count += 1
             offset_events.append((source_label(source_urls[source_index]), target, delta))
             timing_audit.append("- **{}** ({}): source ID {} from {} shifted by {:+g} hours after repeated cross-source agreement.".format(channels[target], target, source_id, source_label(source_urls[source_index]), delta.total_seconds() / 3600))
+        if manual_offset_reviews:
+            timing_audit.extend(["", "### Large source-offset proposals — manual review only", ""])
+            for source_index, source_id, minutes, votes, total_votes in manual_offset_reviews:
+                timing_audit.append(
+                    "- **{}** ({}): source ID {} has a proposed {:+g}-hour displacement "
+                    "from {}/{} independent programme signatures. This exceeds the "
+                    "plausible ±14-hour timezone limit; timestamps were **not changed**.".format(
+                        channels[target], target, source_id, minutes / 60.0, votes, total_votes
+                    )
+                )
         cleaned = clean_schedule(records)
         raw_count += len(records)
         removed_count += len(records) - len(cleaned)

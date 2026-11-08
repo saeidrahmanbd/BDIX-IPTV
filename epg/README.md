@@ -44,6 +44,12 @@ EPG coverage is continuously improved by:
 - Rejecting placeholder, invalid, or clearly mismatched programme data.
 - Avoiding false matches merely to increase the coverage percentage.
 
+## Programme Timing Accuracy
+
+Automatic source-time corrections require repeated matching programme titles and durations across at least three distinct XMLTV feeds, four consistent signatures, and at least 75% agreement. Only offsets within the plausible timezone range of 2 to 14 hours are applied automatically. Larger shifts (for example, 24 or 48 hours) are treated as possible date, channel-identity, or feed defects: they are recorded for manual review and left unchanged. Multiple channel IDs inside one feed do not count as independent corroboration.
+
+The official RTV weekly schedule is checked over HTTPS with the current www.rtvbd.tv host first and the apex host as fallback. A transient fetch failure is retried once per host before the source is marked unavailable.
+
 Current coverage should always be taken from the latest generated reports rather than historical mapping totals.
 
 ## Files and Reports
