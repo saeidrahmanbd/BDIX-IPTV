@@ -86,6 +86,12 @@ class SourceOffsetAccuracyTests(unittest.TestCase):
             [(2, "feed-c-channel", -24 * 60, 4, 4)],
         )
 
+    def test_automatic_timing_policy_uses_distinct_provider_hosts(self):
+        source = (ROOT / "scripts" / "generate_epg.py").read_text(encoding="utf-8")
+        self.assertIn("at least three distinct provider hosts", source)
+        self.assertIn("Separate country files or channel IDs on one host count as one vote", source)
+        self.assertNotIn("at least three distinct XMLTV feeds", source)
+
     def test_14_hour_timezone_boundary_remains_eligible_for_auto_correction(self):
         records = self.records([
             (0, "feed-a-channel", 0),

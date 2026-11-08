@@ -1004,11 +1004,13 @@ def main():
                         candidates.setdefault((target, source_index, source_id), []).append(rec)
                 continue
             if src in source_errors:
-                raise RuntimeError(
-                    f"bounded source fetch failed ({type(source_errors[src]).__name__})"
+                source_stats[src] = (
+                    f"FETCH_FAILED ({type(source_errors[src]).__name__})"
                 )
+                continue
             if src not in source_payloads:
-                raise RuntimeError("source fetch returned no payload")
+                source_stats[src] = "FETCH_FAILED (missing payload)"
+                continue
             data = source_payloads[src]
             scanned_programmes = 0
             mapped_programmes = 0
@@ -1082,7 +1084,7 @@ def main():
     timing_audit = [
         "# EPG Timing Audit",
         "",
-        "Automatic corrections require four repeated title/duration matches, >=75% agreement, and corroboration from at least three distinct XMLTV feeds (not merely three IDs in one feed). Only plausible timezone displacements from 2 through 14 hours are applied; larger shifts are reported for manual review and left unchanged.",
+        "Automatic corrections require four repeated title/duration matches, >=75% agreement, and corroboration from at least three distinct provider hosts. Separate country files or channel IDs on one host count as one vote; a host with conflicting times is excluded for that signature. Only plausible timezone displacements from 2 through 14 hours are applied; larger shifts are reported for manual review and left unchanged.",
         "",
         "## Detected corrections",
         "",
