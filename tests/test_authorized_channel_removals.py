@@ -119,6 +119,14 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     )
                 )
 
+    def test_permanent_removal_allowlist_is_imported_from_one_shared_module(self):
+        self.assertIs(guard.PERMANENTLY_REMOVED_NAMES, restore.PERMANENTLY_REMOVED_NAMES)
+
+    def test_tvc_arabic_kids_is_absent_from_active_playlist(self):
+        playlist = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
+        self.assertNotIn('tvg-id="custom.tvcarabickids"', playlist)
+        self.assertNotIn("TVC Arabic Kids", playlist)
+
     def _run_guard(self, removed_names):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
