@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-08T10:56:14.381524+00:00**
-Source playlist SHA-256: **42d6d2b01b52c16d2c9a8f0d0593b6df532bef90c37667e755cfc1b085f5540c**
+Generated: **2026-11-08T11:33:08.028105+00:00**
+Source playlist SHA-256: **56bfb01abfd601e1a1971134720650745d4d799bb6c0a74683e24f375f1f22f6**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **943**
-- Unique channel IDs: **610**
+- Playlist entries: **942**
+- Unique channel IDs: **609**
 - IDs with multiple streams: **183**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -21,13 +21,13 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Logo exceptions requiring repair: **1**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **943**
+- Logo references checked: **942**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
 - Primary channel-number sequence issues: **0**
 - Primary entries missing channel numbers: **0**
-- Primary entries missing tvg-country: **1**
+- Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
@@ -41,12 +41,11 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 ## Primary Metadata Completeness
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
-- Active primary entries missing tvg-country: **1**
+- Active primary entries missing tvg-country: **0**
 - Active primary entries missing tvg-language: **0**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
-| Kids | 1 | 0 |
 
 ## Review Queue Country Verification
 
@@ -782,7 +781,7 @@ None.
 
 ## Primary Channel-Number Sequence
 
-Contiguous numbering verified: 1–609.
+Contiguous numbering verified: 1–608.
 
 ## Malformed EXTINF Entries
 
@@ -815,7 +814,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **942**
+- Healthy/local references: **941**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues

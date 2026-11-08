@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-08T10:56:14+00:00**
-Source playlist SHA-256: **42d6d2b01b52c16d2c9a8f0d0593b6df532bef90c37667e755cfc1b085f5540c**
+Generated: **2026-11-08T11:33:08+00:00**
+Source playlist SHA-256: **56bfb01abfd601e1a1971134720650745d4d799bb6c0a74683e24f375f1f22f6**
 
-Status: **BLOCK**
+Status: **PASS**
 
-- Current entries: **943**
+- Current entries: **942**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -20,7 +20,7 @@ Status: **BLOCK**
 - Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
-- Active rows with incomplete required metadata: **1**
+- Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **0**
 - Raw resolution/geoblock name tags: **0**
@@ -37,7 +37,7 @@ Status: **BLOCK**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-- active entries with incomplete identity/country/logo metadata: 1
+No blocking conditions detected.
 
 ## Review-queue logo gaps
 

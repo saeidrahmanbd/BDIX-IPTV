@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T10:56:43+00:00",
+  "generated": "2026-11-08T11:33:46+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -2071,20 +2071,6 @@
       ],
       "groups": [
         "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "custom.tvcarabickids": {
-      "names": [
-        "TVC Arabic Kids"
-      ],
-      "ids": [
-        "custom.tvcarabickids"
-      ],
-      "groups": [
-        "Kids"
       ],
       "streams": 1,
       "primary": 1,
