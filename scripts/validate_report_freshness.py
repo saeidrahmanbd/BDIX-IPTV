@@ -90,6 +90,65 @@ def check_timestamp(relative: str, text: str, now, max_age, errors):
         errors.append(f"{relative}: stale report (older than {max_age.total_seconds() / 3600:g} hours)")
 
 
+IPTV_EPG_JSON = "reports/epg-iptv-coverage.json"
+IPTV_EPG_INVENTORY_CSV = "reports/epg-research-inventory.csv"
+IPTV_EPG_INVENTORY_MD = "reports/epg-research-inventory.md"
+
+
+def check_iptv_epg_research(root: Path, now, max_age, hashes, errors):
+    """IPTV-only EPG coverage JSON and research inventory must be fresh and mutually consistent.
+
+    Depends only on IPTV-Playlist.m3u, epg/epg.xml and the generated reports. It never reads
+    International-Playlist.m3u.
+    """
+    import csv
+    import json
+    import re
+
+    json_path, csv_path, md_path = root / IPTV_EPG_JSON, root / IPTV_EPG_INVENTORY_CSV, root / IPTV_EPG_INVENTORY_MD
+    for path in (json_path, csv_path, md_path):
+        if not path.is_file():
+            errors.append(f"{path.relative_to(root).as_posix()}: missing IPTV-only EPG research output")
+    if not all(p.is_file() for p in (json_path, csv_path, md_path)):
+        return
+    try:
+        data = json.loads(json_path.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        errors.append(f"{IPTV_EPG_JSON}: invalid JSON")
+        return
+    try:
+        generated = datetime.fromisoformat(str(data.get("generated_at", "")))
+        if generated.tzinfo is None:
+            generated = generated.replace(tzinfo=timezone.utc)
+    except ValueError:
+        errors.append(f"{IPTV_EPG_JSON}: missing or invalid generated_at")
+    else:
+        if now - generated > max_age:
+            errors.append(f"{IPTV_EPG_JSON}: stale (older than {max_age.total_seconds() / 3600:g} hours)")
+    if data.get("inventory_sha256") != hashes["IPTV-Playlist.m3u"]:
+        errors.append(f"{IPTV_EPG_JSON}: inventory_sha256 does not match current IPTV-Playlist.m3u")
+    guide = root / "epg" / "epg.xml"
+    if not guide.is_file() or data.get("guide_sha256") != sha256(guide):
+        errors.append(f"{IPTV_EPG_JSON}: guide_sha256 does not match current epg/epg.xml")
+    csv_sha = hashlib.sha256(csv_path.read_bytes()).hexdigest()
+    if data.get("research_inventory_csv_sha256") != csv_sha:
+        errors.append(f"{IPTV_EPG_JSON}: research_inventory_csv_sha256 does not match {IPTV_EPG_INVENTORY_CSV}")
+    with csv_path.open(encoding="utf-8", newline="") as handle:
+        csv_rows = list(csv.DictReader(handle))
+    if data.get("research_inventory_records") != len(csv_rows):
+        errors.append(f"{IPTV_EPG_JSON}: research_inventory_records does not match CSV row count")
+    md_text = md_path.read_text(encoding="utf-8", errors="replace")
+    md_fp = re.search(r"IPTV-Playlist\.m3u SHA-256:\s*\*\*([0-9a-f]{64})\*\*", md_text)
+    if not md_fp or md_fp.group(1) != hashes["IPTV-Playlist.m3u"]:
+        errors.append(f"{IPTV_EPG_INVENTORY_MD}: IPTV-Playlist.m3u fingerprint does not match current playlist")
+    md_count = re.search(r"Channels needing research:\s*\*\*(\d+)\*\*", md_text)
+    if not md_count or int(md_count.group(1)) != len(csv_rows):
+        errors.append(f"{IPTV_EPG_INVENTORY_MD}: channel count does not match CSV row count")
+    md_usable = re.search(r"Usable now:\s*\*\*(\d+)\*\*", md_text)
+    if not md_usable or md_usable.group(1) != str(data.get("research_inventory_usable_now")):
+        errors.append(f"{IPTV_EPG_INVENTORY_MD}: usable count does not match {IPTV_EPG_JSON}")
+
+
 def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode="all", epg_publication_approved=None):
     """Return freshness errors for all, maintenance, EPG-only, or discovery-owned reports.
 
@@ -104,6 +163,10 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
     for name in PLAYLIST_NAMES:
         path = root / name
         if not path.is_file():
+            # EPG-only validation depends on IPTV-Playlist.m3u alone; a missing
+            # International playlist must not break it.
+            if mode == "epg" and name != "IPTV-Playlist.m3u":
+                continue
             return [f"{name}: missing"]
         hashes[name] = sha256(path)
 
@@ -196,6 +259,8 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
                 errors.append(f"{STREAM_HEALTH_REPORT}: missing stream URL inventory SHA-256")
             elif actual != expected:
                 errors.append(f"{STREAM_HEALTH_REPORT}: stream URL inventory fingerprint does not match current playlist")
+    if mode in {"all", "epg"}:
+        check_iptv_epg_research(root, now, max_age, hashes, errors)
     return errors
 
 

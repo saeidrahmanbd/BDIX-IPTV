@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T14:49:04+00:00",
+  "generated_at": "2026-11-08T15:13:35+00:00",
   "inventory": "IPTV-Playlist.m3u only (International-Playlist.m3u is out of scope)",
   "inventory_sha256": "4bb2bf08e6f01e3a0d601db0964c9678f3e376602df92c4a02f8c1ba5ba36aee",
   "guide_sha256": "8bb59fd91cf740d42ecbb988fce3fb93f6f829d43c5bf3a6f04c18f08a9f49e9",
@@ -11,5 +11,9 @@
   "not_published": 219,
   "published_no_programmes": 36,
   "published_schedule_ended": 38,
-  "clock_dependent_note": "usable_active_identities changes as programmes end; published counts do not depend on the clock"
+  "clock_dependent_note": "usable_active_identities changes as programmes end; published counts do not depend on the clock",
+  "research_inventory_records": 293,
+  "research_inventory_usable_now": 304,
+  "research_inventory_csv_sha256": "53923d6a06e65e5201234fcb420b4adc93694f7f1dd5e5862a213df18eea1c5e",
+  "research_inventory_generated_at": "2026-11-08T15:13:37+00:00"
 }

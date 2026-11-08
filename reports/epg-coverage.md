@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-11-08T14:49:04+00:00**
+Generated: **2026-11-08T15:13:35+00:00**
 
 ## Status: PUBLISHED — FRESHNESS PASS
 
 - Public XMLTV guide: [https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml)
 - XMLTV channel IDs published: **1072**
-- Eligible programme rows in the common -6h/+7d window: **94090**
-- Eligible current/future programme rows: **87223**
+- Eligible programme rows in the common -6h/+7d window: **93543**
+- Eligible current/future programme rows: **86694**
 - Active playlist IDs with current/future programmes: **304/597 (50.9%)**
-- Active playlist IDs with in-window programmes: **310/597 (51.9%)**
+- Active playlist IDs with in-window programmes: **308/597 (51.6%)**
 - IDs with source mappings in the retained mapping snapshot: **945**
 - Current guide coverage is calculated from the validated XMLTV file, not historical mapping percentages.
 
@@ -17,7 +17,7 @@ Generated: **2026-11-08T14:49:04+00:00**
 
 | Playlist | Entries | Active IDs | IDs in guide | IDs with current/future programmes | IDs with in-window programmes | Mapped IDs | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---|
-| Main IPTV (IPTV-Playlist.m3u) | 999 | 597 | 378 | 304 | 310 | 363 | OK |
+| Main IPTV (IPTV-Playlist.m3u) | 999 | 597 | 378 | 304 | 308 | 363 | OK |
 
 ## Source Usage
 
@@ -232,7 +232,7 @@ Generated: **2026-11-08T14:49:04+00:00**
 | International | Shanson TV | ShansonTV.ru | NO_MAPPING |
 _Only the first 200 of 293 IDs are listed._
 
-- Programme window: **2026-11-08T08:49+00:00 to 2026-11-15T14:49+00:00**
+- Programme window: **2026-11-08T09:13+00:00 to 2026-11-15T15:13+00:00**
 - Freshness validation: **PASS**.
 
 ## Source Playlist Fingerprints

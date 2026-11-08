@@ -1,14 +1,14 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-08T14:49:04+00:00**
+Generated: **2026-11-08T15:13:35+00:00**
 
 ## Status: PUBLISHED — XMLTV freshness validation PASS
 
 | Playlist | Stream entries | Active IDs | IDs in guide | Current/future programme IDs | In-window programme IDs | Mapped IDs | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---|
-| Main IPTV (IPTV-Playlist.m3u) | 999 | 597 | 378 | 304 | 310 | 363 | OK |
+| Main IPTV (IPTV-Playlist.m3u) | 999 | 597 | 378 | 304 | 308 | 363 | OK |
 
-XMLTV channels: **1072**; eligible in-window programme rows: **94090**; current/future rows: **87223**.
+XMLTV channels: **1072**; eligible in-window programme rows: **93543**; current/future rows: **86694**.
 
 ## Source Playlist Fingerprints
 

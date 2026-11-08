@@ -28,14 +28,14 @@ class IptvOnlyCoverageScopeTests(unittest.TestCase):
         with inventory.OUT_CSV.open(encoding="utf-8", newline="") as handle:
             for row in csv.DictReader(handle):
                 recorded = row["epg_id_recorded"].strip()
-                if recorded:
+                if recorded and recorded != "UNKNOWN":
                     self.assertIn(recorded, mapping_ids)
                 self.assertNotEqual(row["missing_requirement"], "")
 
-    def test_every_inventory_category_has_a_requirement(self):
-        self.assertTrue(set(inventory.REQUIREMENT))
-        for requirement in inventory.REQUIREMENT.values():
-            self.assertTrue(requirement.strip())
+    def test_every_inventory_category_has_a_requirement_and_action(self):
+        self.assertTrue(set(inventory.CATEGORIES))
+        for meaning, requirement, action in inventory.CATEGORIES.values():
+            self.assertTrue(meaning.strip() and requirement.strip() and action.strip())
 
 
 if __name__ == "__main__":

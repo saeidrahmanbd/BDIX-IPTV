@@ -6,7 +6,6 @@ on:
     branches: [main]
     paths:
       - 'IPTV-Playlist.m3u'
-      - 'International-Playlist.m3u'
       - '.github/workflows/epg-refresh.yml'
       - 'reports/epg-channel-mapping.csv'
       - 'scripts/*epg*.py'
@@ -73,7 +72,7 @@ jobs:
           git fetch origin main
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
           if [[ "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
-              CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/([^/]*epg[^/]*\.py|official_epg_sources\.py|validate_report_freshness\.py|generate_dashboard\.py)|tests/test_(epg_[^/]*|[^/]*epg[^/]*|iptv_org_epg_targeting|report_freshness|dashboard_freshness)\.py|docs/requirements\.txt)$' || true)"
+              CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/([^/]*epg[^/]*\.py|official_epg_sources\.py|validate_report_freshness\.py|generate_dashboard\.py)|tests/test_(epg_[^/]*|[^/]*epg[^/]*|iptv_org_epg_targeting|report_freshness|dashboard_freshness)\.py|docs/requirements\.txt)$' || true)"
             if [[ -n "$CHANGED_INPUTS" ]]; then
               echo 'skip=true' >> "$GITHUB_OUTPUT"
               echo "::notice::Skipping superseded EPG refresh because newer commits changed EPG inputs or code."
@@ -191,6 +190,10 @@ jobs:
           fi
 
           python scripts/epg_coverage.py
+          # IPTV-only headline coverage and research inventory. They run after the mapping/guide
+          # producer and own the headline reports, so International data never enters them.
+          python scripts/update_epg_published_coverage.py
+          python scripts/epg_research_inventory.py
           for report in \
             reports/epg-coverage.md \
             reports/epg-playlist-audit.md \
@@ -198,7 +201,10 @@ jobs:
             reports/bangladesh-epg-source-audit.md \
             reports/epg-unmapped-audit.md \
             reports/epg-publish-freshness.md \
-            reports/epg-channel-mapping.csv; do
+            reports/epg-channel-mapping.csv \
+            reports/epg-iptv-coverage.json \
+            reports/epg-research-inventory.csv \
+            reports/epg-research-inventory.md; do
             if [[ ! -s "$report" ]]; then
               echo "::error::Required EPG report is missing or empty: $report"
               exit 1
@@ -209,7 +215,7 @@ jobs:
 
           # Defer dashboard snapshots until after the EPG commit is rebased onto the latest main.
           # This avoids conflicts with concurrent playlist-maintenance dashboard updates.
-          git add -f epg/epg.xml reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
+          git add -f epg/epg.xml reports/epg-channel-mapping.csv reports/epg-iptv-coverage.json reports/epg-research-inventory.csv reports/epg-research-inventory.md reports/epg-coverage.md reports/epg-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
           git add -u -- reports
 
           if ! git diff --quiet; then
@@ -234,7 +240,7 @@ jobs:
             git fetch origin main
             CURRENT_MAIN_SHA="$(git rev-parse origin/main)"
             if [[ "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
-              CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/([^/]*epg[^/]*\.py|official_epg_sources\.py|validate_report_freshness\.py|generate_dashboard\.py)|tests/test_(epg_[^/]*|[^/]*epg[^/]*|iptv_org_epg_targeting|report_freshness|dashboard_freshness)\.py|docs/requirements\.txt)$' || true)"
+              CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/([^/]*epg[^/]*\.py|official_epg_sources\.py|validate_report_freshness\.py|generate_dashboard\.py)|tests/test_(epg_[^/]*|[^/]*epg[^/]*|iptv_org_epg_targeting|report_freshness|dashboard_freshness)\.py|docs/requirements\.txt)$' || true)"
               if [[ -n "$CHANGED_INPUTS" ]]; then
                 echo '::error::EPG input code/config changed while this candidate was being built; refusing to publish stale output. The newest queued refresh must rebuild it.'
                 printf '%s\n' "$CHANGED_INPUTS"

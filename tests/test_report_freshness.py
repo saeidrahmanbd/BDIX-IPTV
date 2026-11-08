@@ -57,6 +57,28 @@ class ReportFreshnessTests(unittest.TestCase):
             json.dumps({"generated_at_utc": self.timestamp, "source_sha256_by_playlist": self.hashes}),
             encoding="utf-8",
         )
+        # IPTV-only EPG research outputs, consistent with the fixture's playlist and guide.
+        (self.root / "epg").mkdir()
+        (self.root / "epg" / "epg.xml").write_text('<tv><channel id="sample.bd"/></tv>\n', encoding="utf-8")
+        (report_dir / "epg-research-inventory.csv").write_text("category,tvg_id\nNO_SOURCE_MAPPING_ID,sample.bd\n", encoding="utf-8")
+        csv_sha = hashlib.sha256((report_dir / "epg-research-inventory.csv").read_bytes()).hexdigest()
+        (report_dir / "epg-research-inventory.md").write_text(
+            f"# EPG Research Inventory\n\nGenerated: **{self.timestamp}**\n\n"
+            f"- IPTV-Playlist.m3u SHA-256: **{self.hashes['IPTV-Playlist.m3u']}**\n"
+            "- Usable now: **0**\n- Channels needing research: **1** (check: 1 − 0 = 1)\n",
+            encoding="utf-8",
+        )
+        (report_dir / "epg-iptv-coverage.json").write_text(
+            json.dumps({
+                "generated_at": self.timestamp,
+                "inventory_sha256": self.hashes["IPTV-Playlist.m3u"],
+                "guide_sha256": hashlib.sha256((self.root / "epg" / "epg.xml").read_bytes()).hexdigest(),
+                "research_inventory_records": 1,
+                "research_inventory_usable_now": 0,
+                "research_inventory_csv_sha256": csv_sha,
+            }),
+            encoding="utf-8",
+        )
 
     def tearDown(self):
         self.temp.cleanup()

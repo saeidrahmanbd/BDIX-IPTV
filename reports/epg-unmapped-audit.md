@@ -1,6 +1,6 @@
 # EPG Unmapped / Missing Programme Audit
 
-Generated: **2026-11-08T14:49:04+00:00**
+Generated: **2026-11-08T15:13:35+00:00**
 
 ## Status: GUIDE PUBLISHED — MAPPING GAPS REPORTED
 
