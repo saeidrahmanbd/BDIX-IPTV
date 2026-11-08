@@ -30,6 +30,16 @@ PROTECTED_SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 REMOVAL_REPORT = Path("reports/proposed-removals.md")
 PROTECTED_GROUPS = {"Backup", "Review", "Not Playing"}
 PERMANENTLY_REMOVED_NAMES = {
+    # Removed per owner instruction: no local logo and no verified logo source.
+    "Bollywood Masala",
+    "Crime + Investigation",
+    "History Hunters",
+    "True History",
+    "FX 2",
+    "Al-Mahdi TV",
+    "IBN TV",
+    "IBN TV Africa",
+    "Safeer TV",
     "AccuWeather",
     "America's Got Talent",
     "American Idol",
