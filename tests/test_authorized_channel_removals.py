@@ -20,6 +20,15 @@ import restore_protected_review as removal_policy
 
 
 TARGET_NAMES = {
+    "Bollywood Masala",
+    "Crime + Investigation",
+    "History Hunters",
+    "True History",
+    "FX 2",
+    "Al-Mahdi TV",
+    "IBN TV",
+    "IBN TV Africa",
+    "Safeer TV",
     "AccuWeather",
     "America's Got Talent",
     "American Idol",

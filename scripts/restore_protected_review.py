@@ -22,6 +22,16 @@ LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 PROTECTED = {"Backup", "Review", "Not Playing"}
 PERMANENTLY_REMOVED_NAMES = {
+    # Removed per owner instruction: no local logo and no verified logo source.
+    "Bollywood Masala",
+    "Crime + Investigation",
+    "History Hunters",
+    "True History",
+    "FX 2",
+    "Al-Mahdi TV",
+    "IBN TV",
+    "IBN TV Africa",
+    "Safeer TV",
     "accuweather",
     "america's got talent",
     "american idol",
