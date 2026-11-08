@@ -12,8 +12,8 @@ The root [README](../README.md) is the project overview. This page records the c
 | Origin / collection | IPTV-Playlist.m3u | International-Playlist.m3u |
 |---|---|---|
 | Bangladesh | All genres are eligible. | All genres are eligible. |
-| India | News, all religious channels (including Islamic), educational and business/finance channels are prohibited. Kids and sports are allowed. | Same Indian exclusions; kids and sports are allowed. |
-| Pakistan | Supported in the Pakistani group under the established country/genre rules. | Eligible dedicated movie and music channels. |
+| India | News, all religious channels (including Islamic), educational, business/finance, farming, kids and sports channels are prohibited. | Same Indian exclusions. |
+| Pakistan | Supported in the Pakistani group. News, religious, educational, business/finance, farming, kids and sports channels are prohibited, as for India. | Eligible dedicated movie and music channels. |
 | Other countries | Eligible channels may appear in International or qualified country groups, subject to the established genre rules. | Only dedicated movie and music channels are eligible. |
 
 The main playlist's multi-country scope is distinct from the source scope of any individual discovery workflow. The International discovery workflow is specifically limited to eligible movie/music candidates from Pakistan and other countries; it must not stage non-Bangladesh/India news, sports, religious, kids, educational, documentary, radio, VOD or general-entertainment channels as eligible movie/music candidates. A country-specific group for other countries requires at least five unique, manually curated primary channel identities.
