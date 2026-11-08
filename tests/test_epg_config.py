@@ -692,11 +692,17 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("types: [completed]", workflow)
         # Any completed upstream writer run should trigger a freshness check against
         # the latest committed main inputs, even when the writer itself failed.
+        self.assertIn("github.event.workflow_run.conclusion != 'cancelled'", workflow)
         self.assertNotIn("github.event.workflow_run.conclusion == 'success'", workflow)
         self.assertNotIn("github.event.workflow_run.conclusion == 'failure'", workflow)
         self.assertIn("latest committed main inputs", workflow)
         self.assertIn("# 09:00 Asia/Dhaka (UTC+6)", workflow)
 
+
+    def test_bangladesh_epg_audit_explains_its_country_suffix_scope(self):
+        source = (ROOT / "scripts" / "epg_coverage.py").read_text(encoding="utf-8")
+        self.assertIn("group-title is Bangladesh OR whose tvg-id has a .bd country suffix", source)
+        self.assertIn("The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title", source)
 
     def test_epg_refresh_serializes_builds_and_keeps_known_good_guide_safe(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")

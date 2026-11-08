@@ -194,6 +194,20 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertNotIn('run_script("scripts/iptv_metadata_backfill.py")', recovery_script)
         self.assertNotIn('run_script("scripts/backfill_cross_playlist_metadata.py")', recovery_script)
 
+    def test_xtream_health_check_uses_commit_pinned_playlist_snapshot(self):
+        source = (ROOT / ".github" / "workflows" / "check-xtream.yml").read_text(encoding="utf-8")
+        self.assertIn("SOURCE_COMMIT: ${{ github.sha }}", source)
+        self.assertIn(
+            'url = f"https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/{SOURCE_COMMIT}/IPTV-Playlist.m3u"',
+            source,
+        )
+        self.assertIn('"Cache-Control": "no-cache, no-store"', source)
+        self.assertIn('if not re.fullmatch(r"[0-9a-fA-F]{40}", SOURCE_COMMIT):', source)
+        self.assertNotIn(
+            "raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u",
+            source,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
