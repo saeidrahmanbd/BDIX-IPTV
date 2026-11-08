@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Adapters for official schedule pages that do not publish XMLTV directly."""
 import re
-import time
+from time import sleep
 import urllib.request
 from datetime import datetime, time, timedelta, timezone
 from html.parser import HTMLParser
@@ -580,7 +580,7 @@ def fetch_rtv_programmes(now=None):
             except Exception as exc:
                 last_error = type(exc).__name__
                 if attempt == 0:
-                    time.sleep(1)
+                    sleep(1)
         fetch_errors.append(
             f"{host}: {last_error}" +
             (" after retry" if last_error != "no valid weekly programme slots" else "")
