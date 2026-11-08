@@ -32,6 +32,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             ("Disney Channel India", "DISNEY CHANNEL [IN]"),
             ("Animal Planet", "Animal Planet (India)"),
             ("TLC", "TLC (India) (720p)"),
+            ("Zee Anmol TV", "Anmol TV (720p)"),
         ]
         for left, right in pairs:
             with self.subTest(left=left, right=right):
