@@ -1,0 +1,8161 @@
+{
+  "generated_at": "2026-11-08T10:05:57+00:00",
+  "inputs": {
+    "primary": {
+      "path": "IPTV-Playlist.m3u",
+      "sha256": "56bfb01abfd601e1a1971134720650745d4d799bb6c0a74683e24f375f1f22f6"
+    },
+    "international": {
+      "path": "International-Playlist.m3u",
+      "sha256": "7cc909e5c9d9086ae1f28f720653c7bdd68a1bb1b5e64a61e3280074253069a5"
+    },
+    "epg": {
+      "path": "epg/epg.xml",
+      "sha256": "8bb59fd91cf740d42ecbb988fce3fb93f6f829d43c5bf3a6f04c18f08a9f49e9"
+    }
+  },
+  "summary": {
+    "identities": 2423,
+    "published": 1049,
+    "usable": 885,
+    "missing": 1374,
+    "mapped_without_usable": 164,
+    "primary_identities": 608,
+    "primary_published": 383,
+    "primary_usable": 313,
+    "published_channels_total": 1072,
+    "published_channels_with_future_programmes": 903,
+    "programmes_total": 107642,
+    "backup_only_identities": 62,
+    "published_no_programmes": 92,
+    "published_schedule_ended": 72
+  },
+  "groups": [
+    {
+      "group": "Adult",
+      "identities": 351,
+      "published": 0,
+      "usable": 0,
+      "missing": 351,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Argentina",
+      "identities": 14,
+      "published": 1,
+      "usable": 0,
+      "missing": 13,
+      "mapped_without_usable": 1
+    },
+    {
+      "group": "Aruba",
+      "identities": 1,
+      "published": 0,
+      "usable": 0,
+      "missing": 1,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Austria",
+      "identities": 2,
+      "published": 0,
+      "usable": 0,
+      "missing": 2,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Bangladesh",
+      "identities": 78,
+      "published": 5,
+      "usable": 3,
+      "missing": 73,
+      "mapped_without_usable": 2
+    },
+    {
+      "group": "Brazil",
+      "identities": 10,
+      "published": 3,
+      "usable": 3,
+      "missing": 7,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Bulgaria",
+      "identities": 20,
+      "published": 6,
+      "usable": 5,
+      "missing": 14,
+      "mapped_without_usable": 1
+    },
+    {
+      "group": "Canada",
+      "identities": 31,
+      "published": 25,
+      "usable": 8,
+      "missing": 6,
+      "mapped_without_usable": 17
+    },
+    {
+      "group": "Chile",
+      "identities": 12,
+      "published": 1,
+      "usable": 1,
+      "missing": 11,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "China",
+      "identities": 9,
+      "published": 3,
+      "usable": 3,
+      "missing": 6,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Colombia",
+      "identities": 11,
+      "published": 1,
+      "usable": 0,
+      "missing": 10,
+      "mapped_without_usable": 1
+    },
+    {
+      "group": "Costa Rica",
+      "identities": 11,
+      "published": 0,
+      "usable": 0,
+      "missing": 11,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Czech Republic",
+      "identities": 24,
+      "published": 17,
+      "usable": 17,
+      "missing": 7,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "identities": 194,
+      "published": 144,
+      "usable": 112,
+      "missing": 50,
+      "mapped_without_usable": 32
+    },
+    {
+      "group": "Dominican Republic",
+      "identities": 11,
+      "published": 1,
+      "usable": 0,
+      "missing": 10,
+      "mapped_without_usable": 1
+    },
+    {
+      "group": "Ecuador",
+      "identities": 3,
+      "published": 0,
+      "usable": 0,
+      "missing": 3,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Estonia",
+      "identities": 6,
+      "published": 1,
+      "usable": 1,
+      "missing": 5,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Fashion TV",
+      "identities": 1,
+      "published": 1,
+      "usable": 1,
+      "missing": 0,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "France",
+      "identities": 43,
+      "published": 16,
+      "usable": 14,
+      "missing": 27,
+      "mapped_without_usable": 2
+    },
+    {
+      "group": "Germany",
+      "identities": 39,
+      "published": 29,
+      "usable": 29,
+      "missing": 10,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Greece",
+      "identities": 7,
+      "published": 2,
+      "usable": 2,
+      "missing": 5,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Hungary",
+      "identities": 17,
+      "published": 8,
+      "usable": 8,
+      "missing": 9,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Indian Bangla",
+      "identities": 42,
+      "published": 34,
+      "usable": 27,
+      "missing": 8,
+      "mapped_without_usable": 7
+    },
+    {
+      "group": "Indian Entertainment",
+      "identities": 209,
+      "published": 174,
+      "usable": 159,
+      "missing": 35,
+      "mapped_without_usable": 15
+    },
+    {
+      "group": "Indian Movies",
+      "identities": 84,
+      "published": 62,
+      "usable": 48,
+      "missing": 22,
+      "mapped_without_usable": 14
+    },
+    {
+      "group": "Indian Music",
+      "identities": 70,
+      "published": 57,
+      "usable": 51,
+      "missing": 13,
+      "mapped_without_usable": 6
+    },
+    {
+      "group": "International",
+      "identities": 144,
+      "published": 38,
+      "usable": 28,
+      "missing": 106,
+      "mapped_without_usable": 10
+    },
+    {
+      "group": "Iran",
+      "identities": 16,
+      "published": 3,
+      "usable": 2,
+      "missing": 13,
+      "mapped_without_usable": 1
+    },
+    {
+      "group": "Italy",
+      "identities": 24,
+      "published": 11,
+      "usable": 9,
+      "missing": 13,
+      "mapped_without_usable": 2
+    },
+    {
+      "group": "Kids",
+      "identities": 196,
+      "published": 104,
+      "usable": 83,
+      "missing": 92,
+      "mapped_without_usable": 21
+    },
+    {
+      "group": "Lebanon",
+      "identities": 6,
+      "published": 1,
+      "usable": 1,
+      "missing": 5,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Mexico",
+      "identities": 15,
+      "published": 6,
+      "usable": 5,
+      "missing": 9,
+      "mapped_without_usable": 1
+    },
+    {
+      "group": "Netherlands",
+      "identities": 15,
+      "published": 9,
+      "usable": 9,
+      "missing": 6,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Pakistani",
+      "identities": 18,
+      "published": 2,
+      "usable": 2,
+      "missing": 16,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Panama",
+      "identities": 5,
+      "published": 0,
+      "usable": 0,
+      "missing": 5,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Paraguay",
+      "identities": 4,
+      "published": 0,
+      "usable": 0,
+      "missing": 4,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Peru",
+      "identities": 7,
+      "published": 0,
+      "usable": 0,
+      "missing": 7,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Poland",
+      "identities": 28,
+      "published": 18,
+      "usable": 17,
+      "missing": 10,
+      "mapped_without_usable": 1
+    },
+    {
+      "group": "Portugal",
+      "identities": 3,
+      "published": 1,
+      "usable": 1,
+      "missing": 2,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Religious",
+      "identities": 36,
+      "published": 10,
+      "usable": 8,
+      "missing": 26,
+      "mapped_without_usable": 2
+    },
+    {
+      "group": "Romania",
+      "identities": 28,
+      "published": 9,
+      "usable": 9,
+      "missing": 19,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Russia",
+      "identities": 62,
+      "published": 21,
+      "usable": 19,
+      "missing": 41,
+      "mapped_without_usable": 2
+    },
+    {
+      "group": "Saudi Arabia",
+      "identities": 8,
+      "published": 0,
+      "usable": 0,
+      "missing": 8,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Serbia",
+      "identities": 2,
+      "published": 1,
+      "usable": 1,
+      "missing": 1,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Singapore",
+      "identities": 6,
+      "published": 1,
+      "usable": 1,
+      "missing": 5,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Spain",
+      "identities": 16,
+      "published": 4,
+      "usable": 3,
+      "missing": 12,
+      "mapped_without_usable": 1
+    },
+    {
+      "group": "Sports",
+      "identities": 244,
+      "published": 117,
+      "usable": 103,
+      "missing": 127,
+      "mapped_without_usable": 14
+    },
+    {
+      "group": "Sweden",
+      "identities": 12,
+      "published": 6,
+      "usable": 6,
+      "missing": 6,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Turkey",
+      "identities": 13,
+      "published": 0,
+      "usable": 0,
+      "missing": 13,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Ukraine",
+      "identities": 19,
+      "published": 6,
+      "usable": 5,
+      "missing": 13,
+      "mapped_without_usable": 1
+    },
+    {
+      "group": "United Kingdom",
+      "identities": 12,
+      "published": 3,
+      "usable": 3,
+      "missing": 9,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "United States",
+      "identities": 173,
+      "published": 87,
+      "usable": 78,
+      "missing": 86,
+      "mapped_without_usable": 9
+    },
+    {
+      "group": "Uzbekistan",
+      "identities": 5,
+      "published": 0,
+      "usable": 0,
+      "missing": 5,
+      "mapped_without_usable": 0
+    },
+    {
+      "group": "Vietnam",
+      "identities": 6,
+      "published": 0,
+      "usable": 0,
+      "missing": 6,
+      "mapped_without_usable": 0
+    }
+  ],
+  "missing": [
+    {
+      "group": "Adult",
+      "name": "Abella Danger",
+      "id": "custom.24-7-xxx-abella-danger"
+    },
+    {
+      "group": "Adult",
+      "name": "AJ Applegate",
+      "id": "custom.24-7-xxx-aj-applegate"
+    },
+    {
+      "group": "Adult",
+      "name": "Alba 2",
+      "id": "custom.alba-2"
+    },
+    {
+      "group": "Adult",
+      "name": "Alba 3",
+      "id": "custom.alba-3"
+    },
+    {
+      "group": "Adult",
+      "name": "Alba 4",
+      "id": "custom.alba-4"
+    },
+    {
+      "group": "Adult",
+      "name": "Alexis Texas",
+      "id": "custom.24-7-xxx-alexis-texas"
+    },
+    {
+      "group": "Adult",
+      "name": "Alura Jenson",
+      "id": "custom.24-7-xxx-alura-jenson"
+    },
+    {
+      "group": "Adult",
+      "name": "Amateur",
+      "id": "custom.24-7-xxx-amateur"
+    },
+    {
+      "group": "Adult",
+      "name": "Anal",
+      "id": "custom.xxx-anal"
+    },
+    {
+      "group": "Adult",
+      "name": "Anal Mom",
+      "id": "custom.xxx-anal-mom"
+    },
+    {
+      "group": "Adult",
+      "name": "Anal Teen Angels",
+      "id": "custom.xxx-anal-teen-angels"
+    },
+    {
+      "group": "Adult",
+      "name": "Angel Smalls",
+      "id": "custom.24-7-xxx-angel-smalls"
+    },
+    {
+      "group": "Adult",
+      "name": "Angela White",
+      "id": "custom.24-7-xxx-angela-white"
+    },
+    {
+      "group": "Adult",
+      "name": "AsiaN",
+      "id": "asian.kr"
+    },
+    {
+      "group": "Adult",
+      "name": "Ass Parade",
+      "id": "custom.24-7-xxx-ass-parade"
+    },
+    {
+      "group": "Adult",
+      "name": "Ava Devine",
+      "id": "custom.24-7-xxx-ava-devine"
+    },
+    {
+      "group": "Adult",
+      "name": "Babes TV",
+      "id": "babestv.us"
+    },
+    {
+      "group": "Adult",
+      "name": "Babes TV Russia",
+      "id": "custom.babes-tv-russia"
+    },
+    {
+      "group": "Adult",
+      "name": "Bang U",
+      "id": "bangu.us"
+    },
+    {
+      "group": "Adult",
+      "name": "Bangbus",
+      "id": "custom.24-7-xxx-bangbus"
+    },
+    {
+      "group": "Adult",
+      "name": "BBC Big Ass",
+      "id": "custom.24-7-xxx-bbc-big-ass"
+    },
+    {
+      "group": "Adult",
+      "name": "BBW",
+      "id": "custom.24-7-xxx-bbw"
+    },
+    {
+      "group": "Adult",
+      "name": "BDSM",
+      "id": "custom.24-7-xxx-bdsm"
+    },
+    {
+      "group": "Adult",
+      "name": "Big Ass",
+      "id": "custom.24-7-xxx-big-ass"
+    },
+    {
+      "group": "Adult",
+      "name": "Big Dick",
+      "id": "custom.xxx-big-dick"
+    },
+    {
+      "group": "Adult",
+      "name": "Big Tits",
+      "id": "custom.24-7-xxx-big-tits"
+    },
+    {
+      "group": "Adult",
+      "name": "Blonde",
+      "id": "custom.blonde"
+    },
+    {
+      "group": "Adult",
+      "name": "Blowjob",
+      "id": "custom.xxx-blowjob"
+    },
+    {
+      "group": "Adult",
+      "name": "Brand New Amateurs",
+      "id": "custom.xxx-brand-new-amateurs"
+    },
+    {
+      "group": "Adult",
+      "name": "Brazzers Europe",
+      "id": "custom.xxx-brazzers-europe"
+    },
+    {
+      "group": "Adult",
+      "name": "Brazzers Extra",
+      "id": "custom.xxx-brazzers-extra"
+    },
+    {
+      "group": "Adult",
+      "name": "Brazzers Rated",
+      "id": "custom.24-7-xxx-brazzers-rated"
+    },
+    {
+      "group": "Adult",
+      "name": "Brazzers Rated 2",
+      "id": "custom.24-7-xxx-brazzers-rated-2"
+    },
+    {
+      "group": "Adult",
+      "name": "Brazzzers 1",
+      "id": "custom.24-7-xxx-brazzzers-1"
+    },
+    {
+      "group": "Adult",
+      "name": "Brazzzers 2",
+      "id": "custom.24-7-xxx-brazzzers-2"
+    },
+    {
+      "group": "Adult",
+      "name": "Brazzzers 3",
+      "id": "custom.24-7-xxx-brazzzers-3"
+    },
+    {
+      "group": "Adult",
+      "name": "Bridgette B",
+      "id": "custom.24-7-xxx-bridgette-b"
+    },
+    {
+      "group": "Adult",
+      "name": "Brunette",
+      "id": "custom.brunette"
+    },
+    {
+      "group": "Adult",
+      "name": "Casting Couch",
+      "id": "custom.24-7-xxx-casting-couch"
+    },
+    {
+      "group": "Adult",
+      "name": "Cathy Heaven",
+      "id": "custom.24-7-xxx-cathy-heaven"
+    },
+    {
+      "group": "Adult",
+      "name": "Cherie Deville",
+      "id": "custom.24-7-xxx-cherie-deville"
+    },
+    {
+      "group": "Adult",
+      "name": "Compilation",
+      "id": "custom.xxx-compilation"
+    },
+    {
+      "group": "Adult",
+      "name": "Cuckold",
+      "id": "custom.cuckold"
+    },
+    {
+      "group": "Adult",
+      "name": "Cum Perfection",
+      "id": "custom.xxx-cum-perfection"
+    },
+    {
+      "group": "Adult",
+      "name": "Day With A Pornstar",
+      "id": "custom.xxx-day-with-a-pornstar"
+    },
+    {
+      "group": "Adult",
+      "name": "Dee Williams",
+      "id": "custom.24-7-xxx-dee-williams"
+    },
+    {
+      "group": "Adult",
+      "name": "Dorcel Club",
+      "id": "custom.xxx-dorcel-club"
+    },
+    {
+      "group": "Adult",
+      "name": "Ebony",
+      "id": "custom.24-7-xxx-ebony"
+    },
+    {
+      "group": "Adult",
+      "name": "Elsa Jean",
+      "id": "custom.24-7-xxx-elsa-jean"
+    },
+    {
+      "group": "Adult",
+      "name": "Ero Xxx",
+      "id": "custom.xxx-ero-xxx"
+    },
+    {
+      "group": "Adult",
+      "name": "Erox XXX",
+      "id": "custom.xxx-erox-xxx-hd"
+    },
+    {
+      "group": "Adult",
+      "name": "Euro Girls On Girls",
+      "id": "custom.xxx-euro-girls-on-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Evil Angel",
+      "id": "custom.24-7-xxx-evil-angel"
+    },
+    {
+      "group": "Adult",
+      "name": "Evolved Fights",
+      "id": "custom.xxx-evolved-fights"
+    },
+    {
+      "group": "Adult",
+      "name": "Exxxotica TV",
+      "id": "custom.exxxotica-tv"
+    },
+    {
+      "group": "Adult",
+      "name": "Fake Taxi 1",
+      "id": "custom.24-7-xxx-fake-taxi-1"
+    },
+    {
+      "group": "Adult",
+      "name": "Fake Taxi 3",
+      "id": "custom.24-7-xxx-fake-taxi-3"
+    },
+    {
+      "group": "Adult",
+      "name": "Fap TV 6",
+      "id": "custom.fap-tv-6"
+    },
+    {
+      "group": "Adult",
+      "name": "Fetish",
+      "id": "custom.xxx-fetish"
+    },
+    {
+      "group": "Adult",
+      "name": "Gangbang",
+      "id": "custom.xxx-gangbang"
+    },
+    {
+      "group": "Adult",
+      "name": "Gay 2",
+      "id": "custom.24-7-xxx-gay-2"
+    },
+    {
+      "group": "Adult",
+      "name": "Gay 3",
+      "id": "custom.24-7-xxx-gay-3"
+    },
+    {
+      "group": "Adult",
+      "name": "Gay Latin",
+      "id": "custom.24-7-xxx-gay-latin"
+    },
+    {
+      "group": "Adult",
+      "name": "Gloryhole",
+      "id": "custom.24-7-xxx-gloryhole"
+    },
+    {
+      "group": "Adult",
+      "name": "Group",
+      "id": "custom.24-7-xxx-group"
+    },
+    {
+      "group": "Adult",
+      "name": "Group 2",
+      "id": "custom.24-7-xxx-group-2"
+    },
+    {
+      "group": "Adult",
+      "name": "Hardcore",
+      "id": "custom.24-7-xxx-hardcore"
+    },
+    {
+      "group": "Adult",
+      "name": "Hilary Scott",
+      "id": "custom.24-7-xxx-hilary-scott"
+    },
+    {
+      "group": "Adult",
+      "name": "Holly Hendrix",
+      "id": "custom.24-7-xxx-holly-hendrix"
+    },
+    {
+      "group": "Adult",
+      "name": "Hookup Hotshot",
+      "id": "custom.xxx-hookup-hotshot"
+    },
+    {
+      "group": "Adult",
+      "name": "Hot Guys Fuck",
+      "id": "custom.xxx-hot-guys-fuck"
+    },
+    {
+      "group": "Adult",
+      "name": "Hustler",
+      "id": "custom.xxx-hustler"
+    },
+    {
+      "group": "Adult",
+      "name": "Interracial",
+      "id": "custom.xxx-interracial"
+    },
+    {
+      "group": "Adult",
+      "name": "Jada Stevens",
+      "id": "custom.24-7-xxx-jada-stevens"
+    },
+    {
+      "group": "Adult",
+      "name": "Jasmine Jae",
+      "id": "custom.24-7-xxx-jasmine-jae"
+    },
+    {
+      "group": "Adult",
+      "name": "Karma RX",
+      "id": "custom.24-7-xxx-karma-rx"
+    },
+    {
+      "group": "Adult",
+      "name": "Kelly Divine",
+      "id": "custom.24-7-xxx-kelly-divine"
+    },
+    {
+      "group": "Adult",
+      "name": "Kelsie Monroe",
+      "id": "custom.24-7-xxx-kelsie-monroe"
+    },
+    {
+      "group": "Adult",
+      "name": "Kenzie Reeves",
+      "id": "custom.24-7-xxx-kenzie-reeves"
+    },
+    {
+      "group": "Adult",
+      "name": "Latina",
+      "id": "latina.pe"
+    },
+    {
+      "group": "Adult",
+      "name": "LEO TV",
+      "id": "leotv.cz"
+    },
+    {
+      "group": "Adult",
+      "name": "Lesbian",
+      "id": "custom.xxx-lesbian"
+    },
+    {
+      "group": "Adult",
+      "name": "Lisa Ann",
+      "id": "custom.24-7-xxx-lisa-ann"
+    },
+    {
+      "group": "Adult",
+      "name": "Live Cams",
+      "id": "custom.live-cams"
+    },
+    {
+      "group": "Adult",
+      "name": "London Keyes",
+      "id": "custom.24-7-xxx-london-keyes"
+    },
+    {
+      "group": "Adult",
+      "name": "Luna Star",
+      "id": "custom.24-7-xxx-luna-star"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Anal",
+      "id": "custom.adultm3u-com-anal"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Asian",
+      "id": "custom.adultm3u-com-asian"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Big Ass",
+      "id": "custom.adultm3u-com-big-ass"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Big Dick",
+      "id": "custom.adultm3u-com-big-dick"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Big Tits",
+      "id": "custom.adultm3u-com-big-tits"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Blonde",
+      "id": "custom.adultm3u-com-blonde"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Blowjob",
+      "id": "custom.adultm3u-com-blowjob"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Brunette",
+      "id": "custom.adultm3u-com-brunette"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Compilation",
+      "id": "custom.adultm3u-com-compilation"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Cuckold",
+      "id": "custom.adultm3u-com-cuckold"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Fetish",
+      "id": "custom.adultm3u-com-fetish"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Gangbang",
+      "id": "custom.adultm3u-com-gangbang"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Hardcore",
+      "id": "custom.adultm3u-com-hardcore"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Interracial",
+      "id": "custom.adultm3u-com-interracial"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Latina",
+      "id": "custom.adultm3u-com-latina"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Lesbian",
+      "id": "custom.adultm3u-com-lesbian"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Live Cams",
+      "id": "custom.adultm3u-com-live-cams"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Pornstar",
+      "id": "custom.adultm3u-com-pornstar"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Pov",
+      "id": "custom.adultm3u-com-pov"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Rough",
+      "id": "custom.adultm3u-com-rough"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Russian",
+      "id": "custom.adultm3u-com-russian"
+    },
+    {
+      "group": "Adult",
+      "name": "m3u.Com Threesome",
+      "id": "custom.adultm3u-com-threesome"
+    },
+    {
+      "group": "Adult",
+      "name": "Mature",
+      "id": "custom.24-7-xxx-mature"
+    },
+    {
+      "group": "Adult",
+      "name": "Mctv Big Dick",
+      "id": "custom.xxx-mctv-big-dick"
+    },
+    {
+      "group": "Adult",
+      "name": "Mctv Big Tits",
+      "id": "custom.xxx-mctv-big-tits"
+    },
+    {
+      "group": "Adult",
+      "name": "Mctv Pornstar",
+      "id": "custom.xxx-mctv-pornstar"
+    },
+    {
+      "group": "Adult",
+      "name": "Mctv Rough",
+      "id": "custom.xxx-mctv-rough"
+    },
+    {
+      "group": "Adult",
+      "name": "Metro",
+      "id": "custom.24-7-xxx-metro"
+    },
+    {
+      "group": "Adult",
+      "name": "Mia Khalifa",
+      "id": "custom.24-7-xxx-mia-khalifa"
+    },
+    {
+      "group": "Adult",
+      "name": "Milf",
+      "id": "custom.adultm3u-com-milf"
+    },
+    {
+      "group": "Adult",
+      "name": "Milfs",
+      "id": "custom.24-7-xxx-milfs"
+    },
+    {
+      "group": "Adult",
+      "name": "Milfs Stepmom",
+      "id": "custom.24-7-xxx-milfs-stepmom"
+    },
+    {
+      "group": "Adult",
+      "name": "Mom Lovers",
+      "id": "custom.24-7-xxx-mom-lovers"
+    },
+    {
+      "group": "Adult",
+      "name": "Music Box Sexy",
+      "id": "musicboxsexy.cz@sd"
+    },
+    {
+      "group": "Adult",
+      "name": "My Daughter's Hot Friend",
+      "id": "custom.xxx-my-daughter-s-hot-friend"
+    },
+    {
+      "group": "Adult",
+      "name": "My Dirty Maid",
+      "id": "custom.24-7-xxx-my-dirty-maid"
+    },
+    {
+      "group": "Adult",
+      "name": "My FIrst Sex Teacher",
+      "id": "custom.24-7-xxx-my-first-sex-teacher"
+    },
+    {
+      "group": "Adult",
+      "name": "My Friends Hot Mom",
+      "id": "custom.24-7-xxx-my-friends-hot-mom"
+    },
+    {
+      "group": "Adult",
+      "name": "MyCam TV Anal",
+      "id": "mycamtvanal.cy"
+    },
+    {
+      "group": "Adult",
+      "name": "MyCam TV Blowjob",
+      "id": "mycamtvblowjob.cy"
+    },
+    {
+      "group": "Adult",
+      "name": "MyCam TV MILF",
+      "id": "mycamtvmilf.cy"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Arab Girls",
+      "id": "custom.mycamtv-arab-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Asian Girls",
+      "id": "custom.mycamtv-asian-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Big Ass Girls",
+      "id": "custom.mycamtv-big-ass-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Blonde Girls",
+      "id": "custom.mycamtv-blonde-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Brunette Girls",
+      "id": "custom.mycamtv-brunette-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Ebony Girls",
+      "id": "custom.mycamtv-ebony-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Girls Squirt",
+      "id": "custom.mycamtv-girls-squirt"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Latina Girls",
+      "id": "custom.mycamtv-latina-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Mature",
+      "id": "custom.mycamtv-mature"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Medium Girls",
+      "id": "custom.mycamtv-medium-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv Skinny Girls",
+      "id": "custom.mycamtv-skinny-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Mycamtv White Girls",
+      "id": "custom.mycamtv-white-girls"
+    },
+    {
+      "group": "Adult",
+      "name": "Naughty America",
+      "id": "custom.xxx-naughty-america"
+    },
+    {
+      "group": "Adult",
+      "name": "Nicole Doshi",
+      "id": "custom.24-7-xxx-nicole-doshi"
+    },
+    {
+      "group": "Adult",
+      "name": "Nicolette Shea",
+      "id": "custom.24-7-xxx-nicolette-shea"
+    },
+    {
+      "group": "Adult",
+      "name": "Nina Elle",
+      "id": "custom.24-7-xxx-nina-elle"
+    },
+    {
+      "group": "Adult",
+      "name": "O LA LA",
+      "id": "custom.xxx-o-la-la"
+    },
+    {
+      "group": "Adult",
+      "name": "Only Fans Jade Bunny",
+      "id": "custom.24-7-xxx-only-fans-jade-bunny"
+    },
+    {
+      "group": "Adult",
+      "name": "Penthouse After Midnight",
+      "id": "penthouseaftermidnight.us"
+    },
+    {
+      "group": "Adult",
+      "name": "Penthouse Black",
+      "id": "penthouseblack.us"
+    },
+    {
+      "group": "Adult",
+      "name": "Penthouse Naughty Nights",
+      "id": "penthousenaughtynights.us"
+    },
+    {
+      "group": "Adult",
+      "name": "Penthouse Passion",
+      "id": "penthousepassion.us"
+    },
+    {
+      "group": "Adult",
+      "name": "Penthouse Reality TV",
+      "id": "penthouserealitytv.us"
+    },
+    {
+      "group": "Adult",
+      "name": "Penthouse TV",
+      "id": "custom.penthouse-tv"
+    },
+    {
+      "group": "Adult",
+      "name": "Pink Erotic 1",
+      "id": "custom.pink-erotic-1"
+    },
+    {
+      "group": "Adult",
+      "name": "Pink Erotic 2",
+      "id": "custom.xxx-pink-erotic-2"
+    },
+    {
+      "group": "Adult",
+      "name": "Pink Erotic 3",
+      "id": "custom.xxx-pink-erotic-3"
+    },
+    {
+      "group": "Adult",
+      "name": "Pink Erotic 4",
+      "id": "custom.xxx-pink-erotic-4"
+    },
+    {
+      "group": "Adult",
+      "name": "Pink Erotic 5",
+      "id": "custom.xxx-pink-erotic-5"
+    },
+    {
+      "group": "Adult",
+      "name": "Pink Erotic 6",
+      "id": "custom.xxx-pink-erotic-6"
+    },
+    {
+      "group": "Adult",
+      "name": "Pink Erotic 7",
+      "id": "custom.xxx-pink-erotic-7"
+    },
+    {
+      "group": "Adult",
+      "name": "Pink Erotic 8",
+      "id": "custom.xxx-pink-erotic-8"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX 4K: BAEB",
+      "id": "custom.pornbox-4k-baeb"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX 4K: BBC PIE",
+      "id": "custom.pornbox-4k-bbc-pie"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX 4K: CUM",
+      "id": "custom.pornbox-4k-cum-4k"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX 4K: GIRL CUM",
+      "id": "custom.pornbox-4k-girl-cum"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX 4K: JAYS POV",
+      "id": "custom.pornbox-4k-jays-pov"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX 4K: LUBED PORN",
+      "id": "custom.pornbox-4k-lubed-porn"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX 4K: NANNY SPY",
+      "id": "custom.pornbox-4k-nanny-spy"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX 4K: SPANK MONSTER",
+      "id": "custom.pornbox-4k-spank-monster"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX 4K: SPY FAM",
+      "id": "custom.pornbox-4k-spy-fam"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX 4K: TINY",
+      "id": "custom.pornbox-4k-tiny-4k"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX GAY: BEEFCAKE HUNTER",
+      "id": "custom.pornbox-gay-beefcake-hunter"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX GAY: BOY FUN",
+      "id": "custom.pornbox-gay-boy-fun"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX GAY: MAN",
+      "id": "custom.pornbox-gay-man"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: 1111 CUSTOMS",
+      "id": "custom.pornbox-1111-customs"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: ADULT TIME",
+      "id": "custom.pornbox-adult-time"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: ALEX LEGEND",
+      "id": "custom.pornbox-alex-legend"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: ALL GROUP SEX",
+      "id": "custom.pornbox-all-group-sex"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: AMATEUR EURO",
+      "id": "custom.pornbox-amateur-euro"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: ASIAN FOOTJOB",
+      "id": "custom.pornbox-asian-footjob"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: ATK GIRLFRIENDS",
+      "id": "custom.pornbox-atk-girlfriends"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: AV TAXI",
+      "id": "custom.pornbox-av-taxi"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: BABES",
+      "id": "custom.pornbox-babes"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: BANG BROS NETWORK",
+      "id": "custom.pornbox-bang-bros-network"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: BIG BOOTY CITY",
+      "id": "custom.pornbox-big-booty-city"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: BLACKED",
+      "id": "custom.pornbox-blacked"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: BLOW ME POV",
+      "id": "custom.pornbox-blow-me-pov"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: BOX OF PORN",
+      "id": "custom.pornbox-box-of-porn"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: BRATTY SIS",
+      "id": "custom.pornbox-bratty-sis"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: BRAZZERS",
+      "id": "custom.pornbox-brazzers"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: BUMS BUS",
+      "id": "custom.pornbox-bums-bus"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: CASTING COUCH",
+      "id": "custom.pornbox-casting-couch"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: DAGFS",
+      "id": "custom.pornbox-dagfs"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: DDF BUSTY",
+      "id": "custom.pornbox-ddf-busty"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: DEEPER",
+      "id": "custom.pornbox-deeper"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: DIGITAL PLAYGROUND",
+      "id": "custom.pornbox-digital-playground"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: DOG HOUSE",
+      "id": "custom.pornbox-dog-house"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: DOGFART NETWORK",
+      "id": "custom.pornbox-dogfart-network"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: DORCEL CLUB",
+      "id": "custom.pornbox-dorcel-club"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: DREAMROOM",
+      "id": "custom.pornbox-dreamroom"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: EXOTIC",
+      "id": "custom.pornbox-exotic"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: FAKE HOSTEL",
+      "id": "custom.pornbox-fake-hostel"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: FAKE TAXI",
+      "id": "custom.pornbox-fake-taxi"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: FAMILY STROKES",
+      "id": "custom.pornbox-family-strokes"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: FAMILY SWAP XXX",
+      "id": "custom.pornbox-family-swap-xxx"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: FAPADOO",
+      "id": "custom.pornbox-fapadoo"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: FILTHY KINGS",
+      "id": "custom.pornbox-filthy-kings"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: FIRST ANAL QUEST",
+      "id": "custom.pornbox-first-anal-quest"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: FIRST CLASS POV",
+      "id": "custom.pornbox-first-class-pov"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: FIT 18",
+      "id": "custom.pornbox-fit-18"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: GANGBANG CREAMPIE",
+      "id": "custom.pornbox-gangbang-creampie"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: GOTMYLF",
+      "id": "custom.pornbox-gotmylf"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: HENTAINED",
+      "id": "custom.pornbox-hentained"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: HER LIMIT",
+      "id": "custom.pornbox-her-limit"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: HOLED",
+      "id": "custom.pornbox-holed"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: HORNY DREAM BABEZ",
+      "id": "custom.pornbox-horny-dream-babez"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: HORNY HOSTEL",
+      "id": "custom.pornbox-horny-hostel"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: HOT WIFE XXX",
+      "id": "custom.pornbox-hot-wife-xxx"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: HUSSIE PASS",
+      "id": "custom.pornbox-hussie-pass"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: INTERRACIAL PASS",
+      "id": "custom.pornbox-interracial-pass"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: JOI BABES",
+      "id": "custom.pornbox-joi-babes"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: KINKY FAMILY",
+      "id": "custom.pornbox-kinky-family"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: KINKY INLAWS",
+      "id": "custom.pornbox-kinky-inlaws"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: KINKY SPA",
+      "id": "custom.pornbox-kinky-spa"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: LETHAL TEENS",
+      "id": "custom.pornbox-lethal-teens"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: LETS DOE IT",
+      "id": "custom.pornbox-lets-doe-it"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: LIFE SELECTOR",
+      "id": "custom.pornbox-life-selector"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: LOVE HER FEET",
+      "id": "custom.pornbox-love-her-feet"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: LOVE HOME PORN",
+      "id": "custom.pornbox-love-home-porn"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: LUBED",
+      "id": "custom.pornbox-lubed"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: LW PRODUCTIONS",
+      "id": "custom.pornbox-lw-productions"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MAMACITAZ",
+      "id": "custom.pornbox-mamacitaz"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MANO JOB",
+      "id": "custom.pornbox-mano-job"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MASSAGE ROOMS",
+      "id": "custom.pornbox-massage-rooms"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MAX J",
+      "id": "custom.pornbox-max-j"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MOFOS",
+      "id": "custom.pornbox-mofos"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MOM TEACH SEX",
+      "id": "custom.pornbox-mom-teach-sex"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MOM XXX",
+      "id": "custom.pornbox-mom-xxx"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MY 18 TEENS",
+      "id": "custom.pornbox-my-18-teens"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MY DIRTY HOBBY",
+      "id": "custom.pornbox-my-dirty-hobby"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MY FAMILY PIES",
+      "id": "custom.pornbox-my-family-pies"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MY LIFE IN MIAMI",
+      "id": "custom.pornbox-my-life-in-miami"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MY PERVY FAMILY",
+      "id": "custom.pornbox-my-pervy-family"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: MYLF",
+      "id": "custom.pornbox-mylf"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: NEW SENSATIONS",
+      "id": "custom.pornbox-new-sensations"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: NF BUSTY",
+      "id": "custom.pornbox-nf-busty"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: NUBILE FILMS",
+      "id": "custom.pornbox-nubile-films"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: PASSION",
+      "id": "custom.pornbox-passion"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: PERV CITY",
+      "id": "custom.pornbox-perv-city"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: PERV MOM",
+      "id": "custom.pornbox-perv-mom"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: POOKSI",
+      "id": "custom.pornbox-pooksi"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: PORN WORLD HARDCORE",
+      "id": "custom.pornbox-porn-world-hardcore"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: PORNHOCHIC",
+      "id": "custom.pornbox-pornhochic"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: POV MASTERS",
+      "id": "custom.pornbox-pov-masters"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: PRIVATE",
+      "id": "custom.pornbox-private"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: PRIVATE SOCIETY",
+      "id": "custom.pornbox-private-society"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: PUBA",
+      "id": "custom.pornbox-puba"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: PUBLIC AGENT",
+      "id": "custom.pornbox-public-agent"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: PURE MATURE",
+      "id": "custom.pornbox-pure-mature"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: RAW ATTACK",
+      "id": "custom.pornbox-raw-attack"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: REALITY JUNKIES",
+      "id": "custom.pornbox-reality-junkies"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: REALITY KINGS",
+      "id": "custom.pornbox-reality-kings"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: SHAGGING MOMS",
+      "id": "custom.pornbox-shagging-moms"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: SHE IS NERDY",
+      "id": "custom.pornbox-she-is-nerdy"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: SLIM",
+      "id": "custom.pornbox-slim"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: SOFIE MARIE XXX",
+      "id": "custom.pornbox-sofie-marie-xxx"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: STROKIES",
+      "id": "custom.pornbox-strokies"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: SUGAR BABES TV",
+      "id": "custom.pornbox-sugar-babes-tv"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: SWEET SINNER",
+      "id": "custom.pornbox-sweet-sinner"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: SWEETHEART PORN",
+      "id": "custom.pornbox-sweetheart-porn"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: THE WHITE BOXXX",
+      "id": "custom.pornbox-the-white-boxxx"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: TRUE AMATEURS",
+      "id": "custom.pornbox-true-amateurs"
+    },
+    {
+      "group": "Adult",
+      "name": "PORNBOX: TWISTY",
+      "id": "custom.pornbox-twisty"
+    },
+    {
+      "group": "Adult",
+      "name": "Pornstar",
+      "id": "custom.xxx-pornstar"
+    },
+    {
+      "group": "Adult",
+      "name": "POV",
+      "id": "custom.xxx-pov"
+    },
+    {
+      "group": "Adult",
+      "name": "Princess Cum",
+      "id": "custom.xxx-princess-cum"
+    },
+    {
+      "group": "Adult",
+      "name": "Pure Babes",
+      "id": "purebabes.us"
+    },
+    {
+      "group": "Adult",
+      "name": "Pure Taboo",
+      "id": "custom.24-7-xxx-pure-taboo"
+    },
+    {
+      "group": "Adult",
+      "name": "Rated",
+      "id": "custom.24-7-xxx-rated"
+    },
+    {
+      "group": "Adult",
+      "name": "Rated 3",
+      "id": "custom.24-7-xxx-rated-3"
+    },
+    {
+      "group": "Adult",
+      "name": "Real Wife Stories",
+      "id": "custom.xxx-real-wife-stories"
+    },
+    {
+      "group": "Adult",
+      "name": "Reality Kings",
+      "id": "custom.24-7-xxx-reality-kings"
+    },
+    {
+      "group": "Adult",
+      "name": "Riley Reid",
+      "id": "custom.24-7-xxx-riley-reid"
+    },
+    {
+      "group": "Adult",
+      "name": "Rough",
+      "id": "custom.xxx-rough"
+    },
+    {
+      "group": "Adult",
+      "name": "Russian",
+      "id": "custom.xxx-russian"
+    },
+    {
+      "group": "Adult",
+      "name": "Russian Night",
+      "id": "custom.xxx-russian-night"
+    },
+    {
+      "group": "Adult",
+      "name": "Sexto Sento",
+      "id": "custom.xxx-sexto-sento"
+    },
+    {
+      "group": "Adult",
+      "name": "ShopLyfter",
+      "id": "custom.24-7-xxx-shoplyfter"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: ABELLA DANGER",
+      "id": "custom.stars-exclusive-abella-danger"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: ADRIANA CHECHIK",
+      "id": "custom.stars-exclusive-adriana-chechik"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: ALINA LOPEZ",
+      "id": "custom.stars-exclusive-alina-lopez"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: ANGELA WHITE",
+      "id": "custom.stars-exclusive-angela-white"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: ARIANA MARIE",
+      "id": "custom.stars-exclusive-ariana-marie"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: AUGUST AMES",
+      "id": "custom.stars-exclusive-august-ames"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: AUTUMN FALLS",
+      "id": "custom.stars-exclusive-autumn-falls"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: BLAKE BLOSSOM",
+      "id": "custom.stars-exclusive-blake-blossom"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: BRANDI LOVE",
+      "id": "custom.stars-exclusive-brandi-love"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: DANI DANIELS",
+      "id": "custom.stars-exclusive-dani-daniels"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: ELSA JEAN",
+      "id": "custom.stars-exclusive-elsa-jean"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: EMILY WILLIS",
+      "id": "custom.stars-exclusive-emily-willis"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: EVA LOVIA",
+      "id": "custom.stars-exclusive-eva-lovia"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: GINA VALENTINA",
+      "id": "custom.stars-exclusive-gina-valentina"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: JESSA RHODES",
+      "id": "custom.stars-exclusive-jessa-rhodes"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: LANA RHOADES",
+      "id": "custom.stars-exclusive-lana-rhoades"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: LENA PAUL",
+      "id": "custom.stars-exclusive-lena-paul"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: LISA ANN",
+      "id": "custom.stars-exclusive-lisa-ann"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: MADISON IVY",
+      "id": "custom.stars-exclusive-madison-ivy"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: MIA MALKOVA",
+      "id": "custom.stars-exclusive-mia-malkova"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: NICOLE ANISTON",
+      "id": "custom.stars-exclusive-nicole-aniston"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: RILEY REID",
+      "id": "custom.stars-exclusive-riley-reid"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: UMA JOLIE",
+      "id": "custom.stars-exclusive-uma-jolie"
+    },
+    {
+      "group": "Adult",
+      "name": "STARS EXCLUSIVE: VALENTINA NAPPI",
+      "id": "custom.stars-exclusive-valentina-nappi"
+    },
+    {
+      "group": "Adult",
+      "name": "Stingray Pop Adult",
+      "id": "stingraypopadult.ca@sd"
+    },
+    {
+      "group": "Adult",
+      "name": "Strap on",
+      "id": "custom.24-7-xxx-strap-on"
+    },
+    {
+      "group": "Adult",
+      "name": "Super One",
+      "id": "custom.xxx-super-one"
+    },
+    {
+      "group": "Adult",
+      "name": "Swallowed",
+      "id": "custom.24-7-xxx-swallowed"
+    },
+    {
+      "group": "Adult",
+      "name": "Teen Red TV",
+      "id": "custom.xxx-teen-red-tv"
+    },
+    {
+      "group": "Adult",
+      "name": "Threesome",
+      "id": "custom.xxx-threesome"
+    },
+    {
+      "group": "Adult",
+      "name": "Tiny",
+      "id": "custom.xxx-tiny-4k"
+    },
+    {
+      "group": "Adult",
+      "name": "Trans",
+      "id": "custom.24-7-xxx-trans"
+    },
+    {
+      "group": "Adult",
+      "name": "True Anal",
+      "id": "custom.24-7-xxx-true-anal"
+    },
+    {
+      "group": "Adult",
+      "name": "Uniform",
+      "id": "custom.24-7-xxx-uniform"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: BIGTITTYGOTHEGG",
+      "id": "custom.verified-amateurs-bigtittygothegg"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: CARLACUTE",
+      "id": "custom.verified-amateurs-carlacute"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: CHERRY GRACE",
+      "id": "custom.verified-amateurs-cherry-grace"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: CHESSIE RAE",
+      "id": "custom.verified-amateurs-chessie-rae"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: DIANA DANIELS",
+      "id": "custom.verified-amateurs-diana-daniels"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: ELLA KOJIRO",
+      "id": "custom.verified-amateurs-ella-kojiro"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: KRISS KISS",
+      "id": "custom.verified-amateurs-kriss-kiss"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: LEAH MEOW",
+      "id": "custom.verified-amateurs-leah-meow"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: LUXURYGIRL",
+      "id": "custom.verified-amateurs-luxurygirl"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: MIKANIKA69",
+      "id": "custom.verified-amateurs-mikanika69"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: MINI DIVA",
+      "id": "custom.verified-amateurs-mini-diva"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: MOLLYREDWOLF",
+      "id": "custom.verified-amateurs-mollyredwolf"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: NOFACEGIRL",
+      "id": "custom.verified-amateurs-nofacegirl"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: NOTSOAMATEUR",
+      "id": "custom.verified-amateurs-notsoamateur"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: NYNA FERRAGNI",
+      "id": "custom.verified-amateurs-nyna-ferragni"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: PAMSNUSNU",
+      "id": "custom.verified-amateurs-pamsnusnu"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: PURPLE BITCH",
+      "id": "custom.verified-amateurs-purple-bitch"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: REISLIN",
+      "id": "custom.verified-amateurs-reislin"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: SECRETCRUSH",
+      "id": "custom.verified-amateurs-secretcrush"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: SHAIDEN ROUGE",
+      "id": "custom.verified-amateurs-shaiden-rouge"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: SOLAZOLA",
+      "id": "custom.verified-amateurs-solazola"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: TESSA WINTERS",
+      "id": "custom.verified-amateurs-tessa-winters"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: TINNA ANGEL",
+      "id": "custom.verified-amateurs-tinna-angel"
+    },
+    {
+      "group": "Adult",
+      "name": "VERIFIED AMATEURS: YINYLEON",
+      "id": "custom.verified-amateurs-yinyleon"
+    },
+    {
+      "group": "Adult",
+      "name": "Veronica Avluv",
+      "id": "custom.24-7-xxx-veronica-avluv"
+    },
+    {
+      "group": "Adult",
+      "name": "Violet Myers",
+      "id": "custom.24-7-xxx-violet-myers"
+    },
+    {
+      "group": "Adult",
+      "name": "Vivid Red",
+      "id": "custom.xxx-vivid-red"
+    },
+    {
+      "group": "Adult",
+      "name": "Vivid TV Europe",
+      "id": "vividtveurope.uk"
+    },
+    {
+      "group": "Adult",
+      "name": "Vixen",
+      "id": "custom.vixen"
+    },
+    {
+      "group": "Adult",
+      "name": "Wank It Now",
+      "id": "custom.xxx-wank-it-now"
+    },
+    {
+      "group": "Adult",
+      "name": "Xy Max",
+      "id": "custom.xxx-xy-max"
+    },
+    {
+      "group": "Argentina",
+      "name": "Allegro",
+      "id": "allegrohd.ar@sd"
+    },
+    {
+      "group": "Argentina",
+      "name": "Azahares Radiovisual Multimedia",
+      "id": "azaharesradiovisualmultimedia.ar@sd"
+    },
+    {
+      "group": "Argentina",
+      "name": "Chamame TV",
+      "id": "chamametv.ar@sd"
+    },
+    {
+      "group": "Argentina",
+      "name": "Cumbia Mix",
+      "id": "cumbiamix.ar@hd"
+    },
+    {
+      "group": "Argentina",
+      "name": "HTV Argentina",
+      "id": "htv.us@argentina"
+    },
+    {
+      "group": "Argentina",
+      "name": "La 100",
+      "id": "la100.ar@sd"
+    },
+    {
+      "group": "Argentina",
+      "name": "Quiero Musica en mi Idioma",
+      "id": "quieromusicaenmiidioma.ar@sd"
+    },
+    {
+      "group": "Argentina",
+      "name": "Retroclub",
+      "id": "custom.retroclub-ar-music"
+    },
+    {
+      "group": "Argentina",
+      "name": "Rock & Pop",
+      "id": "rockpop.ar@sd"
+    },
+    {
+      "group": "Argentina",
+      "name": "X Level Media",
+      "id": "xlevelmedia.ar@sd"
+    },
+    {
+      "group": "Argentina",
+      "name": "Xtrema Accion",
+      "id": "xtremaaccion.ar@sd"
+    },
+    {
+      "group": "Argentina",
+      "name": "Xtrema Cine Clasico",
+      "id": "xtremacineclasico.ar@sd"
+    },
+    {
+      "group": "Argentina",
+      "name": "Xtrema Terror",
+      "id": "xtrematerror.ar@sd"
+    },
+    {
+      "group": "Aruba",
+      "name": "VIP TV",
+      "id": "custom.vip-tv-aw-music"
+    },
+    {
+      "group": "Austria",
+      "name": "Antenne Kaernten",
+      "id": "antennekaernten.at@sd"
+    },
+    {
+      "group": "Austria",
+      "name": "Antenne Steiermark",
+      "id": "antennesteiermark.at@sd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Ananda TV",
+      "id": "anandatv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Asian TV",
+      "id": "asiantv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "ATN Bangla",
+      "id": "atnbangla.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "ATN Bangla",
+      "id": "atnbangla.bd@sd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "ATN News",
+      "id": "atnnews.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Ayna TV",
+      "id": "custom.bdix.ayna-tv"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Bangla TV",
+      "id": "banglatv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Bangla Vision",
+      "id": "banglavision.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Bengali Beats",
+      "id": "bengalibeats.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Bijoy TV",
+      "id": "bijoytv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Boishakhi TV",
+      "id": "boishakhitv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "BTV Chattogram",
+      "id": "btvchattogram.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "BTV News",
+      "id": "btvnews.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Channel 1",
+      "id": "channel1.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Channel 16",
+      "id": "channel16.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Channel 24",
+      "id": "channel24.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Channel 52",
+      "id": "channel52.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Channel Europe",
+      "id": "channeleurope.uk"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Channel I",
+      "id": "channeli.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Channel S",
+      "id": "channels.uk"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Channel S UK",
+      "id": "channels.uk@679aa9"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "DBC News",
+      "id": "dbcnews.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Deepto TV",
+      "id": "deeptotv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Desh TV",
+      "id": "deshtv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Deshe Bideshe",
+      "id": "deshebideshe.ca"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Deshi TV",
+      "id": "deshitv.ca@sd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Doyel TV",
+      "id": "doyeltv.ca@sd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Duronto TV",
+      "id": "durontotv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Ekattor TV",
+      "id": "ekattortv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Ekhon TV",
+      "id": "ekhontv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Ekushey TV",
+      "id": "ekusheytv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Enter TV",
+      "id": "entertv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "G Series Drama",
+      "id": "gseriesdrama.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "G TV",
+      "id": "gazitv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "GAZI TV",
+      "id": "gazitv.bd@sd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Global TV",
+      "id": "globaltv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Green TV",
+      "id": "greentv.bd@sd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Independent TV",
+      "id": "independenttv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "JA TV",
+      "id": "jatv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Jago News 24",
+      "id": "jagonews24.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Jalsha Bangla BD",
+      "id": "jalshabanglabd.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Jamuna TV",
+      "id": "jamunatv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Jhankar TV",
+      "id": "jhankartv.ca"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Jonmobhumi TV",
+      "id": "jonmobhumitv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Matribhumi TV",
+      "id": "matribhumitv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Matribhumi TV",
+      "id": "matribhumitv.bd@hd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "ME TV",
+      "id": "metv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Mohona TV",
+      "id": "mohonatv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Movie Bangla",
+      "id": "moviebangla.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Movie Bangla",
+      "id": "moviebangla.bd@sd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "MUSIC BANGLA",
+      "id": "musicbangla"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "My TV",
+      "id": "mytv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Nagorik TV",
+      "id": "nagoriktv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "NAN TV",
+      "id": "nantv.bd@sd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "News 21",
+      "id": "news21banglatv.bd@sd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "NEWS 21 BANGLA",
+      "id": "custom.bdix.news21-bangla"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "News 24",
+      "id": "news24.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Nexus TV",
+      "id": "nexustv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Nexus TV",
+      "id": "nexustv.bd@sd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "NRB",
+      "id": "custom.bdix.nrb-hd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "NRB TV",
+      "id": "nrbtv.ca"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "NTV",
+      "id": "ntv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "NTV",
+      "id": "ntv-in"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Probashi TV",
+      "id": "probashitv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Rajdhani TV",
+      "id": "rajdhanitv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Rajdhani TV",
+      "id": "custom.rajdhani"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "SA TV",
+      "id": "satv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Somoy TV",
+      "id": "somoynewstv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "SRK",
+      "id": "srk.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Star News",
+      "id": "starnews.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "TBN24",
+      "id": "tbn24.us"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Thikana",
+      "id": "thikanatv.us"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Time Television",
+      "id": "timetelevision.us"
+    },
+    {
+      "group": "Brazil",
+      "name": "+MaisUm",
+      "id": "plusmaisum.br@hd"
+    },
+    {
+      "group": "Brazil",
+      "name": "AMC Latin America Brazil",
+      "id": "amclatinamerica.us@brazil"
+    },
+    {
+      "group": "Brazil",
+      "name": "CINDIE TV",
+      "id": "cindietv.br@hd"
+    },
+    {
+      "group": "Brazil",
+      "name": "Classique TV",
+      "id": "classiquetv.br@sd"
+    },
+    {
+      "group": "Brazil",
+      "name": "KpopTV Play",
+      "id": "kpoptvplay.br@sd"
+    },
+    {
+      "group": "Brazil",
+      "name": "Lamore Rock Show WebTV",
+      "id": "lamorerockshowwebtv.br@sd"
+    },
+    {
+      "group": "Brazil",
+      "name": "Rádio Temas de Novelas",
+      "id": "custom.radio-temas-de-novelas-br-music"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "AMC Europe Bulgary",
+      "id": "amceurope.uk@bulgary"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "BOX TV",
+      "id": "boxtv.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "bTV Lady",
+      "id": "btvlady.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "cine.box",
+      "id": "cinebox.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "CineStar 1 Bulgaria",
+      "id": "cinestar1bulgaria.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "CineStar Action Bulgaria",
+      "id": "cinestaractionbulgaria.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "City TV (Bulgaria)",
+      "id": "citytv.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "DSTV (Bulgaria)",
+      "id": "dstv.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "FILMBOX+ Emotion Bulgaria",
+      "id": "filmboxplusemotion.pl@bulgaria"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "Hit Mix Music",
+      "id": "hitmixmusic.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "Movie Star (720p)",
+      "id": "moviestar.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "Tiankov Folk",
+      "id": "tiankovfolk.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "Tiankov Orient Folk",
+      "id": "tiankovorientfolk.bg@sd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "TV1000",
+      "id": "tv1000.bg@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Pamir TV",
+      "id": "pamirtv.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Cityscapes",
+      "id": "custom.stingray-cityscapes-ca-music"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Everything '80s",
+      "id": "stingrayeverything80s.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Holiday Hits",
+      "id": "stingrayholidayhits.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Rock Alternative",
+      "id": "stingrayrockalternative.ca"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Urban Beat",
+      "id": "custom.stingray-urban-beat-ca-music"
+    },
+    {
+      "group": "Chile",
+      "name": "13 Festival",
+      "id": "13festival.cl@sd"
+    },
+    {
+      "group": "Chile",
+      "name": "Genial TV",
+      "id": "genialtv.cl@sd"
+    },
+    {
+      "group": "Chile",
+      "name": "La Clave",
+      "id": "laclave.cl@sd"
+    },
+    {
+      "group": "Chile",
+      "name": "Pauta",
+      "id": "pauta.cl@sd"
+    },
+    {
+      "group": "Chile",
+      "name": "Retromusica Television",
+      "id": "retromusicatelevision.cl@sd"
+    },
+    {
+      "group": "Chile",
+      "name": "Ritoque TV",
+      "id": "ritoquetv.cl@sd"
+    },
+    {
+      "group": "Chile",
+      "name": "Sabor TV",
+      "id": "sabortv.cl@sd"
+    },
+    {
+      "group": "Chile",
+      "name": "Sensacion Costa",
+      "id": "sensacioncosta.cl@sd"
+    },
+    {
+      "group": "Chile",
+      "name": "Solo Bailalo",
+      "id": "solobailalo.cl@sd"
+    },
+    {
+      "group": "Chile",
+      "name": "TCM Latin America Chile",
+      "id": "tcmlatinamerica.us@chile"
+    },
+    {
+      "group": "Chile",
+      "name": "V Classic TV",
+      "id": "vclassictv.cl@sd"
+    },
+    {
+      "group": "China",
+      "name": "CCTV-Storm Music",
+      "id": "cctvstormmusic.cn@hd"
+    },
+    {
+      "group": "China",
+      "name": "CCTV-Storm Theater",
+      "id": "cctvstormtheater.cn@hd"
+    },
+    {
+      "group": "China",
+      "name": "CCTV-The First Theater",
+      "id": "cctvthefirsttheater.cn@hd"
+    },
+    {
+      "group": "China",
+      "name": "CND Film Middle School Channel",
+      "id": "cndfilmmiddleschoolchannel.cn@sd"
+    },
+    {
+      "group": "China",
+      "name": "Harbin Movie Channel",
+      "id": "harbinmoviechannel.cn@sd"
+    },
+    {
+      "group": "China",
+      "name": "Jiangxi Movie Channel",
+      "id": "jiangximoviechannel.cn@sd"
+    },
+    {
+      "group": "Colombia",
+      "name": "Canal Cine Dios",
+      "id": "custom.canal-cine-dios-co-movie"
+    },
+    {
+      "group": "Colombia",
+      "name": "Claro Musica TV",
+      "id": "claromusicatv.co@sd"
+    },
+    {
+      "group": "Colombia",
+      "name": "La Kalle",
+      "id": "custom.la-kalle-co-music"
+    },
+    {
+      "group": "Colombia",
+      "name": "MCI Television",
+      "id": "custom.mci-television-co-movie"
+    },
+    {
+      "group": "Colombia",
+      "name": "Parranda Vallenata",
+      "id": "parrandavallenata.co@sd"
+    },
+    {
+      "group": "Colombia",
+      "name": "Radiola TV",
+      "id": "radiolatv.co@sd"
+    },
+    {
+      "group": "Colombia",
+      "name": "Ranchenato TV",
+      "id": "ranchenatotv.co@sd"
+    },
+    {
+      "group": "Colombia",
+      "name": "Reyali",
+      "id": "reyali.co@sd"
+    },
+    {
+      "group": "Colombia",
+      "name": "Salsa Gorda Television",
+      "id": "salsagordatelevision.co@sd"
+    },
+    {
+      "group": "Colombia",
+      "name": "Supermusica TV",
+      "id": "supermusicatv.co@sd"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "88 Stereo",
+      "id": "88stereo.cr@sd"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "Canal 3 KMK TV",
+      "id": "canal3kmktv.cr@sd"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "Cedros TV",
+      "id": "custom.cedros-tv-cr-music"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "Conexión Positiva Televisión",
+      "id": "custom.conexion-positiva-television-cr-music"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "Gex TV",
+      "id": "gextv.cr@hd"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "IQ Channel",
+      "id": "iqchannel.cr@sd"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "Oldies Hits",
+      "id": "custom.oldies-hits-cr-music"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "SOY Plancha TV",
+      "id": "soyplanchatv.cr@sd"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "Urbano TV",
+      "id": "urbanotv.cr@sd"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "Vintage Music",
+      "id": "vintagemusic.cr@sd"
+    },
+    {
+      "group": "Costa Rica",
+      "name": "VM Latino",
+      "id": "vmlatino.cr@sd"
+    },
+    {
+      "group": "Czech Republic",
+      "name": "AXN Black (United States) Czech Republic",
+      "id": "axnblack.us@czechrepublic"
+    },
+    {
+      "group": "Czech Republic",
+      "name": "AXN CEE Czech Republic",
+      "id": "axncee.es@czechrepublic"
+    },
+    {
+      "group": "Czech Republic",
+      "name": "FILMBOX+ Comedy Czechia",
+      "id": "filmboxpluscomedy.pl@czechia"
+    },
+    {
+      "group": "Czech Republic",
+      "name": "FILMBOX+ Emotion Czechia",
+      "id": "filmboxplusemotion.pl@czechia"
+    },
+    {
+      "group": "Czech Republic",
+      "name": "FILMBOX+ Hits Czechia",
+      "id": "filmboxplushits.pl@czechia"
+    },
+    {
+      "group": "Czech Republic",
+      "name": "FILMBOX+ One Czechia",
+      "id": "filmboxplusone.pl@czechia"
+    },
+    {
+      "group": "Czech Republic",
+      "name": "Ocko Gold",
+      "id": "ockogold.cz@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "4K Travel",
+      "id": "custom.bdix.4k-travel-us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Adventure Earth",
+      "id": "adventureearth.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Alone",
+      "id": "alone.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "AlternaTV",
+      "id": "alternatv.ar@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Animal Planet Latin America",
+      "id": "animalplanetlatinamerica.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Atlas",
+      "id": "atlas.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Autentic Adventure Earth",
+      "id": "autenticadventureearth.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Autentic History",
+      "id": "autentichistory.de"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Autentic History",
+      "id": "autentichistory.de@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "BBC Earth Czechia",
+      "id": "bbcearth.uk@czechia"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "BBC Earth Hungary",
+      "id": "bbcearth.uk@hungary"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Better Life Nature Channel",
+      "id": "betterlifenaturechannel.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "CCTV-Weapon & Technology",
+      "id": "cctvweapontechnology.cn@hd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "ClickTV Chile",
+      "id": "clicktvchile.cl@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "CNA Originals",
+      "id": "cnaoriginals.sg@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Discovery Asia Taiwan",
+      "id": "discoveryasiataiwan.tw@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Discovery Bangla",
+      "id": "custom.bdix.discoverybangla"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Discovery Channel Latin America",
+      "id": "discoverychannellatinamerica.us@panregional"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Discovery Science Latin America",
+      "id": "discoverysciencelatinamerica.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Discovery Theater Latin America",
+      "id": "discoverytheaterlatinamerica.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Discovery Turbo (Italy)",
+      "id": "discoveryturbo.it@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Discovery Turbo Latin America",
+      "id": "discoveryturbolatinamerica.us@panregional"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Discovery Velocity",
+      "id": "discoveryvelocity.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Ecovision",
+      "id": "ecovision.do@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "History 2 Latin America",
+      "id": "history2latinamerica.us@panregional"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "History Asia",
+      "id": "historyasia.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "History Latin America",
+      "id": "historylatinamerica.us@panregional"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Inside Crime",
+      "id": "insidecrime.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Investigation Discovery (Czech Republic)",
+      "id": "investigationdiscovery.cz@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Italiana",
+      "id": "italiana.it@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Love Nature en Espanol",
+      "id": "lovenatureenespanol.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "MWD Documentary",
+      "id": "mwddocumentary.mm@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Mystery TV",
+      "id": "mysterytv.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Nano",
+      "id": "nano.ru@hd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Nat Geo TV",
+      "id": "natgeotv.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "NatureTime AU",
+      "id": "naturetime.ca@au"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "O'zbekiston Tarixi",
+      "id": "ozbekistontarixi.uz@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "PBS Arts",
+      "id": "pbsarts.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Persiana Docs",
+      "id": "persianadocs.fr@hd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Persiana Travel",
+      "id": "persianatravel.fr@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "RT Documentary",
+      "id": "rtdocumentary.ru@english"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "RT Documentary Russian",
+      "id": "rtdocumentary.ru@russian"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Smotrim 100% Fakty",
+      "id": "smotrim100fakty.ru@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Tochka.rf",
+      "id": "tochkarf.ru"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Travel XP Bangla",
+      "id": "custom.bdix.travelxp-bangla"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "TVS Hollywood History",
+      "id": "tvshollywoodhistory.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Viasat Nature (Ukraine)",
+      "id": "viasatnature.ua@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Watch Mojo",
+      "id": "watchmojo.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "WaterBear",
+      "id": "waterbear.ch@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Wild Planet",
+      "id": "wildplanet.us"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "Boreal",
+      "id": "boreal.do@sd"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "Fuego TV",
+      "id": "fuegotv.do@sd"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "Maimon TV Canal 3",
+      "id": "maimontvcanal3.do@sd"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "Makao TV",
+      "id": "makaotv.do@sd"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "Mega Cine TV",
+      "id": "megacinetv.do@hd"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "Montones TV",
+      "id": "montonestv.do@hd"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "Siembra TV (Dominican Republic)",
+      "id": "siembratv.do@sd"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "Tele Dominicana TV",
+      "id": "teledominicanatv.do@sd"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "Topical Moon RD",
+      "id": "topicalmoonrd.do@hd"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "TV Exitos",
+      "id": "tvexitos.do@sd"
+    },
+    {
+      "group": "Ecuador",
+      "name": "Infinita TV",
+      "id": "infinitatv.ec@sd"
+    },
+    {
+      "group": "Ecuador",
+      "name": "Metropoli Medios TV",
+      "id": "metropolimediostv.ec@sd"
+    },
+    {
+      "group": "Ecuador",
+      "name": "Vos y TV",
+      "id": "custom.vos-y-tv-ec-music"
+    },
+    {
+      "group": "Estonia",
+      "name": "Best of Dance TV",
+      "id": "bestofdancetv.ee@sd"
+    },
+    {
+      "group": "Estonia",
+      "name": "DanceTV Algorhythm",
+      "id": "dancetvalgorhythm.ee@sd"
+    },
+    {
+      "group": "Estonia",
+      "name": "DanceTV Deep House District",
+      "id": "dancetvdeephousedistrict.ee@sd"
+    },
+    {
+      "group": "Estonia",
+      "name": "DanceTV House Floor",
+      "id": "dancetvhousefloor.ee@sd"
+    },
+    {
+      "group": "Estonia",
+      "name": "DanceTV Techno Warehouse",
+      "id": "dancetvtechnowarehouse.ee@sd"
+    },
+    {
+      "group": "France",
+      "name": "4 Music",
+      "id": "4music.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "4Kurd",
+      "id": "4kurd.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "DBM TV",
+      "id": "dbmtv.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "P2M TV",
+      "id": "p2mtv.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Persiana Cinema",
+      "id": "persianacinema.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Persiana Folk",
+      "id": "persianafolk.fr@hd"
+    },
+    {
+      "group": "France",
+      "name": "Persiana Nostalgia",
+      "id": "persiananostalgia.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Persiana SetMix",
+      "id": "custom.persiana-setmix-fr-music"
+    },
+    {
+      "group": "France",
+      "name": "Persiana Vibe",
+      "id": "persianavibe.fr@hd"
+    },
+    {
+      "group": "France",
+      "name": "Qwest TV Jazz & Beyond",
+      "id": "qwesttvjazzbeyond.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "ScreamIN",
+      "id": "screamin.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Afrikora",
+      "id": "traceafrikora.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Ayiti",
+      "id": "traceayiti.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Gospel Nigeria and East Africa",
+      "id": "custom.trace-gospel-nigeria-and-east-africa-fr-music"
+    },
+    {
+      "group": "France",
+      "name": "Trace Gospel Southern Africa",
+      "id": "custom.trace-gospel-southern-africa-fr-music"
+    },
+    {
+      "group": "France",
+      "name": "Trace Ivoire",
+      "id": "traceivoire.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Jama",
+      "id": "tracejama.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Kitoko",
+      "id": "tracekitoko.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Mboa",
+      "id": "tracemboa.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Muzika",
+      "id": "tracemuzika.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Mziki",
+      "id": "tracemziki.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Naija",
+      "id": "tracenaija.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Ngoma",
+      "id": "tracengoma.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Urban Africa Franco",
+      "id": "traceurban.fr@africafranco"
+    },
+    {
+      "group": "France",
+      "name": "Trace Urban Caribbean And Indian Ocean",
+      "id": "traceurban.fr@caribbeanandindianocean"
+    },
+    {
+      "group": "France",
+      "name": "Trace Urban Southern Africa",
+      "id": "traceurban.fr@southernafrica"
+    },
+    {
+      "group": "France",
+      "name": "Trace Vanilla Islands",
+      "id": "tracevanillaislands.fr@sd"
+    },
+    {
+      "group": "Germany",
+      "name": "Adria Music Television",
+      "id": "adriamusictelevision.de@sd"
+    },
+    {
+      "group": "Germany",
+      "name": "Bibel TV Musik",
+      "id": "bibeltvmusik.de@sd"
+    },
+    {
+      "group": "Germany",
+      "name": "DASDING 90.8",
+      "id": "dasding908.de@sd"
+    },
+    {
+      "group": "Germany",
+      "name": "Deluxe Dance",
+      "id": "deluxedance.de@sd"
+    },
+    {
+      "group": "Germany",
+      "name": "Medium (Germany)",
+      "id": "medium.de@es"
+    },
+    {
+      "group": "Germany",
+      "name": "One Adria",
+      "id": "oneadria.de@sd"
+    },
+    {
+      "group": "Germany",
+      "name": "Pluto TV Bud & Terence (Germany)",
+      "id": "plutotvbudterence.de@dach"
+    },
+    {
+      "group": "Germany",
+      "name": "Rakuten TV Action Movies Germany",
+      "id": "rakutentvactionmoviesgermany.es"
+    },
+    {
+      "group": "Germany",
+      "name": "Rakuten TV Comedy Movies Germany",
+      "id": "custom.rakuten-tv-comedy-movies-germany-de-movie"
+    },
+    {
+      "group": "Germany",
+      "name": "TV Bozsike Hamburg",
+      "id": "tvbozsikehamburghd.de@hd"
+    },
+    {
+      "group": "Greece",
+      "name": "Baraza TV",
+      "id": "barazatv.gr@sd"
+    },
+    {
+      "group": "Greece",
+      "name": "Baraza TV Deep House",
+      "id": "barazatvdeephouse.gr@sd"
+    },
+    {
+      "group": "Greece",
+      "name": "Baraza TV Relaxing",
+      "id": "barazatvrelaxing.gr@sd"
+    },
+    {
+      "group": "Greece",
+      "name": "NRG 91",
+      "id": "nrg91.gr@sd"
+    },
+    {
+      "group": "Greece",
+      "name": "Play TV (Greece)",
+      "id": "playtv.gr@sd"
+    },
+    {
+      "group": "Hungary",
+      "name": "AMC Europe Hungary",
+      "id": "amceurope.uk@hungary"
+    },
+    {
+      "group": "Hungary",
+      "name": "AXN Black (United States) Hungary",
+      "id": "axnblack.us@hungary"
+    },
+    {
+      "group": "Hungary",
+      "name": "AXN CEE",
+      "id": "axncee.es@hungary"
+    },
+    {
+      "group": "Hungary",
+      "name": "Cinemax 2 Central Europe",
+      "id": "cinemax2centraleurope.hu@sd"
+    },
+    {
+      "group": "Hungary",
+      "name": "Cinemax Central Europe",
+      "id": "cinemaxcentraleurope.hu@sd"
+    },
+    {
+      "group": "Hungary",
+      "name": "Film+ (Hungary)",
+      "id": "filmplus.hu@sd"
+    },
+    {
+      "group": "Hungary",
+      "name": "FILMBOX+ Emotion Hungary",
+      "id": "filmboxplusemotion.pl@hungary"
+    },
+    {
+      "group": "Hungary",
+      "name": "FILMBOX+ Hits Hungary",
+      "id": "filmboxplushits.pl@hungary"
+    },
+    {
+      "group": "Hungary",
+      "name": "Oxygen Music",
+      "id": "oxygenmusic.hu@hd"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "Bangla Plus",
+      "id": "banglaplus.in"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "JTV Bangla",
+      "id": "jtvbangla.in@sd"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "JTV Classic",
+      "id": "jtvclassic.in"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "Orange Bangla TV",
+      "id": "orangebanglatv.in@sd"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "Sananda",
+      "id": "sanandatv.in"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "Sananda TV",
+      "id": "custom.sananda-tv"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "SNB Cinema",
+      "id": "snbcinema.in"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "Zodiak TV",
+      "id": "zodiaktv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Asianet Middle East",
+      "id": "asianetmiddleeast.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Baiscope TV",
+      "id": "baiscopetv.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "BT TV",
+      "id": "bttv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "C Malayalam TV",
+      "id": "cmalayalamtv.ca@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "CCV",
+      "id": "ccv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Colors MENA",
+      "id": "colorsmena.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Colors MENA",
+      "id": "colorsmena.in@hd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Colors Rishtey Americas",
+      "id": "colorsrishteyamericas.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Flowers US",
+      "id": "flowers.us"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "GTC Punjabi US",
+      "id": "gtcpunjabi.in@us"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Kairali Arabia",
+      "id": "kairaliarabia.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Kalika TV",
+      "id": "kalikatv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Kerala Vision",
+      "id": "keralavision.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Maha Punjabi",
+      "id": "mahapunjabi.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Marutam TV",
+      "id": "marutamtv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Mei Alai TV",
+      "id": "meialaitv.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Mh 1 Prime",
+      "id": "mh1prime.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "MH One Prime",
+      "id": "mh1prime.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "MNTV (Tamil)",
+      "id": "marutamtv.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "NKR TV Kannada",
+      "id": "nkrtvkannada.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Pardesi TV",
+      "id": "pardesitv.ca"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Pulari TV",
+      "id": "pularitv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Punjabi TV",
+      "id": "punjabitv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Q TV",
+      "id": "qtv.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "SADA TV",
+      "id": "sadatv.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "SADA TV",
+      "id": "sadatv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Sooriyan TV",
+      "id": "sooriyantv.ca@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Starnet",
+      "id": "starnet.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Swantham",
+      "id": "swantham.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Tamilan TV",
+      "id": "tamilantv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Thendral TV",
+      "id": "thendraltv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "TV BRICS English",
+      "id": "tvbricsenglish.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "UTV Palakkad",
+      "id": "utvpalakkad.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "VCV",
+      "id": "vcv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "VTU",
+      "id": "vtu.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Asian Sony Max 2",
+      "id": "custom.asian-sony-max-2"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "B4U Bhojpuri Plus",
+      "id": "b4ubhojpuri.in@plus"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Chhaya Chitram Telugu",
+      "id": "chhayachitramtelugu.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Epic Bhojpuri Digital",
+      "id": "epicbhojpuri.in@digital"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Goldmines 2",
+      "id": "goldmines2.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Goldmines Action",
+      "id": "goldminesaction.in"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Goldmines Action",
+      "id": "goldminesaction.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Hindi Movie Classic 24",
+      "id": "new.hindi.movie.classic.24"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "India Talkies",
+      "id": "indiatalkies.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Indywood TV",
+      "id": "indywoodtv.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "K Cine",
+      "id": "kcine.in"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "KCM India",
+      "id": "kcm.sg@india"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Maha Movie",
+      "id": "mahamovie.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Mango",
+      "id": "mango.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "MH One Movies",
+      "id": "mhonemovies.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Movie Punjab",
+      "id": "moviepunjab.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Pravasi Channel",
+      "id": "pravasichannel.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Shubh Cinema TV",
+      "id": "shubhcinematv.in"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Soneri Cinema",
+      "id": "sonericinema.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Sony Movies",
+      "id": "sonymovies.in"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "South Movies",
+      "id": "southmovies.in"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Zee Cinema APAC",
+      "id": "zeecinema.in@apac"
+    },
+    {
+      "group": "Indian Music",
+      "name": "7X Punjabi",
+      "id": "7xpunjabi.in"
+    },
+    {
+      "group": "Indian Music",
+      "name": "AMN TV",
+      "id": "amntv.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Andy Haryana",
+      "id": "andyharyana.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Deewana",
+      "id": "deewanahd.in"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Deewana",
+      "id": "deewanahd.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Hindi Hits",
+      "id": "hindihits.in"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Hindi Hits",
+      "id": "hindihits.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Oli TV",
+      "id": "olitv.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Pankh",
+      "id": "pankh.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Punjabi Music",
+      "id": "punjabimusichd.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Rang Rangoli",
+      "id": "rangrangoli.in"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Vision Beats",
+      "id": "visionbeats.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "YRF Music Nepal",
+      "id": "yrfmusic.in@nepal"
+    },
+    {
+      "group": "International",
+      "name": "24 Hour Free Movies",
+      "id": "custom.24hourfreemovies"
+    },
+    {
+      "group": "International",
+      "name": "30A Music",
+      "id": "custom.30amusic"
+    },
+    {
+      "group": "International",
+      "name": "4ever Cinema",
+      "id": "custom.4evercinema"
+    },
+    {
+      "group": "International",
+      "name": "4ever Music",
+      "id": "custom.4evermusic"
+    },
+    {
+      "group": "International",
+      "name": "A2i Music",
+      "id": "a2imusic.sn@sd"
+    },
+    {
+      "group": "International",
+      "name": "Afrobeats",
+      "id": "afrobeats.us"
+    },
+    {
+      "group": "International",
+      "name": "AlbKanale Music TV",
+      "id": "albkanalemusictv.al@hd"
+    },
+    {
+      "group": "International",
+      "name": "Allo Cine",
+      "id": "allocine.cm@sd"
+    },
+    {
+      "group": "International",
+      "name": "AMusic Channel",
+      "id": "custom.amusic-channel-ng-music"
+    },
+    {
+      "group": "International",
+      "name": "Asia Flix TV",
+      "id": "custom.asia-flix-tv-ph-movie"
+    },
+    {
+      "group": "International",
+      "name": "Audiokiss",
+      "id": "audiokiss.bo@sd"
+    },
+    {
+      "group": "International",
+      "name": "Aurora Media Films",
+      "id": "auroramediafilms.gt@sd"
+    },
+    {
+      "group": "International",
+      "name": "Baraza Music TV",
+      "id": "custom.barazamusictv"
+    },
+    {
+      "group": "International",
+      "name": "Bigscreen TV",
+      "id": "custom.bigscreen-tv-ph-movie"
+    },
+    {
+      "group": "International",
+      "name": "BOKTV",
+      "id": "boktv.za@sd"
+    },
+    {
+      "group": "International",
+      "name": "BTA TV",
+      "id": "btatv.ve@sd"
+    },
+    {
+      "group": "International",
+      "name": "Celestial Movies (576i)",
+      "id": "celestialmovies.hk@sd"
+    },
+    {
+      "group": "International",
+      "name": "Cinema (Mongolia) (1080p)",
+      "id": "cinema.mn@sd"
+    },
+    {
+      "group": "International",
+      "name": "CMC TV",
+      "id": "custom.cmctv"
+    },
+    {
+      "group": "International",
+      "name": "Dance TV",
+      "id": "dancetv.us"
+    },
+    {
+      "group": "International",
+      "name": "DW News",
+      "id": "dwnews.de"
+    },
+    {
+      "group": "International",
+      "name": "EU Music",
+      "id": "custom.eumusic"
+    },
+    {
+      "group": "International",
+      "name": "First Music Channel",
+      "id": "firstmusicchannel.by@sd"
+    },
+    {
+      "group": "International",
+      "name": "First Music Channel Russia",
+      "id": "firstmusicchannelrussia.by@sd"
+    },
+    {
+      "group": "International",
+      "name": "Folk Klub TV",
+      "id": "folkklubtv.au@sd"
+    },
+    {
+      "group": "International",
+      "name": "Folk TV",
+      "id": "folktv.mk@sd"
+    },
+    {
+      "group": "International",
+      "name": "Folx Slovenija",
+      "id": "folxslovenija.si@sd"
+    },
+    {
+      "group": "International",
+      "name": "FON Music",
+      "id": "fonmusic.us"
+    },
+    {
+      "group": "International",
+      "name": "Fun Vision",
+      "id": "funvision.be@sd"
+    },
+    {
+      "group": "International",
+      "name": "Fusion TV",
+      "id": "fusiontv.mq@sd"
+    },
+    {
+      "group": "International",
+      "name": "Gugak TV",
+      "id": "gugaktv.kr@sd"
+    },
+    {
+      "group": "International",
+      "name": "HBO Asia Taiwan",
+      "id": "hboasia.sg@taiwan"
+    },
+    {
+      "group": "International",
+      "name": "Identite Tele Caraibes",
+      "id": "identitetelecaraibes.mq@sd"
+    },
+    {
+      "group": "International",
+      "name": "iFilm English",
+      "id": "ifilmenglish.ir"
+    },
+    {
+      "group": "International",
+      "name": "INTV Australia",
+      "id": "intvaustralia.au@sd"
+    },
+    {
+      "group": "International",
+      "name": "Isango TV [ ]",
+      "id": "isangotv.rw@sd"
+    },
+    {
+      "group": "International",
+      "name": "Itage TV",
+      "id": "itagetv.ng@sd"
+    },
+    {
+      "group": "International",
+      "name": "Ivoire Channel",
+      "id": "ivoirechannel.ci@sd"
+    },
+    {
+      "group": "International",
+      "name": "Jordan Songs",
+      "id": "jordansongs.jo@sd"
+    },
+    {
+      "group": "International",
+      "name": "JRTV Jarviradio",
+      "id": "jrtvjarviradio.fi@sd"
+    },
+    {
+      "group": "International",
+      "name": "Kantipur Max [Geo-blocked]",
+      "id": "kantipurmax.np@sd"
+    },
+    {
+      "group": "International",
+      "name": "Kayhan TV",
+      "id": "kayhantv.af@sd"
+    },
+    {
+      "group": "International",
+      "name": "Klara",
+      "id": "klara.be@sd"
+    },
+    {
+      "group": "International",
+      "name": "KN Music TV",
+      "id": "knmusictv.az@sd"
+    },
+    {
+      "group": "International",
+      "name": "Konul Music TV",
+      "id": "custom.konul-music-tv-az-music"
+    },
+    {
+      "group": "International",
+      "name": "La Elegida Television",
+      "id": "laelegidatelevision.uy@sd"
+    },
+    {
+      "group": "International",
+      "name": "La Top 102.9",
+      "id": "latop1029.hn@sd"
+    },
+    {
+      "group": "International",
+      "name": "La Top 107.7",
+      "id": "latop1077.hn@sd"
+    },
+    {
+      "group": "International",
+      "name": "La-X",
+      "id": "lax.pr@sd"
+    },
+    {
+      "group": "International",
+      "name": "Live99FM",
+      "id": "live99fm.bq@sd"
+    },
+    {
+      "group": "International",
+      "name": "Look Thoong TV",
+      "id": "lookthoongtv.la@sd"
+    },
+    {
+      "group": "International",
+      "name": "Love TV",
+      "id": "lovetv.mk@sd"
+    },
+    {
+      "group": "International",
+      "name": "LRT Klasika",
+      "id": "lrtklasika.lt@sd"
+    },
+    {
+      "group": "International",
+      "name": "M20 Music",
+      "id": "m20music.us"
+    },
+    {
+      "group": "International",
+      "name": "Maah TV",
+      "id": "maahtv.my@sd"
+    },
+    {
+      "group": "International",
+      "name": "MegaBox",
+      "id": "megabox.ni@sd"
+    },
+    {
+      "group": "International",
+      "name": "Mei Ah Movie Channel",
+      "id": "meiahmoviechannel.hk@sd"
+    },
+    {
+      "group": "International",
+      "name": "Mix Hollywood",
+      "id": "custom.mixhollywood"
+    },
+    {
+      "group": "International",
+      "name": "Mix Hollywood",
+      "id": "mixhollywood.eg@sd"
+    },
+    {
+      "group": "International",
+      "name": "Movie Dome Family",
+      "id": "moviedomefamily.us"
+    },
+    {
+      "group": "International",
+      "name": "MovieBox (1080p)",
+      "id": "moviebox.mn@sd"
+    },
+    {
+      "group": "International",
+      "name": "Movies Thriller",
+      "id": "moviesthriller.sa@sd"
+    },
+    {
+      "group": "International",
+      "name": "MovieSphere UK",
+      "id": "custom.moviesphereuk"
+    },
+    {
+      "group": "International",
+      "name": "Muzangala TV",
+      "id": "muzangalatv.ao@sd"
+    },
+    {
+      "group": "International",
+      "name": "MWD Movies",
+      "id": "mwdmovies.mm@sd"
+    },
+    {
+      "group": "International",
+      "name": "My Cinema",
+      "id": "mycinema.us"
+    },
+    {
+      "group": "International",
+      "name": "My Cinema Europe",
+      "id": "mycinemaeurope.ch@sd"
+    },
+    {
+      "group": "International",
+      "name": "Navahang TV",
+      "id": "navahangtv.fi@sd"
+    },
+    {
+      "group": "International",
+      "name": "NogoumFMTV",
+      "id": "nogoumfmtv.eg@sd"
+    },
+    {
+      "group": "International",
+      "name": "Noroc TV",
+      "id": "noroctv.md@sd"
+    },
+    {
+      "group": "International",
+      "name": "Ocko Expres",
+      "id": "custom.ockoexpres"
+    },
+    {
+      "group": "International",
+      "name": "Oxygen Music",
+      "id": "oxygenmusic.us"
+    },
+    {
+      "group": "International",
+      "name": "Play TV (Cameroon)",
+      "id": "playtv.cm@sd"
+    },
+    {
+      "group": "International",
+      "name": "PMC Royale",
+      "id": "pmcroyale.ae@sd"
+    },
+    {
+      "group": "International",
+      "name": "POP World TV",
+      "id": "popworldtv.es"
+    },
+    {
+      "group": "International",
+      "name": "Radio Norba TV",
+      "id": "radionorbatv.it"
+    },
+    {
+      "group": "International",
+      "name": "Rakuten Movies",
+      "id": "rakutenmovies"
+    },
+    {
+      "group": "International",
+      "name": "Rakuten TV Action Movies UK",
+      "id": "rakutentvactionmovies.es@uk"
+    },
+    {
+      "group": "International",
+      "name": "Rakuten TV Comedy Movies UK",
+      "id": "rakutentvcomedymovies.es@uk"
+    },
+    {
+      "group": "International",
+      "name": "Rakuten TV Family Movies UK",
+      "id": "rakutentvfamilymovies.es@uk"
+    },
+    {
+      "group": "International",
+      "name": "RHT Guadeloupe",
+      "id": "rhtguadeloupe.gp@sd"
+    },
+    {
+      "group": "International",
+      "name": "RTL Gold (Luxembourg)",
+      "id": "rtlgold.lu@sd"
+    },
+    {
+      "group": "International",
+      "name": "Scorch TV",
+      "id": "scorchtv.tt@sd"
+    },
+    {
+      "group": "International",
+      "name": "ShowVen TV",
+      "id": "showventv.ve@sd"
+    },
+    {
+      "group": "International",
+      "name": "Silk Way Cinema",
+      "id": "silkwaycinema.kz@sd"
+    },
+    {
+      "group": "International",
+      "name": "Sine Plus",
+      "id": "custom.sine-plus-ph-movie"
+    },
+    {
+      "group": "International",
+      "name": "Sky Folk TV",
+      "id": "skyfolktv.mk@sd"
+    },
+    {
+      "group": "International",
+      "name": "Sparkle Movies",
+      "id": "gbaj400042t1"
+    },
+    {
+      "group": "International",
+      "name": "StuBru",
+      "id": "stubru.be@sd"
+    },
+    {
+      "group": "International",
+      "name": "Tezaur TV",
+      "id": "tezaurtv.md@sd"
+    },
+    {
+      "group": "International",
+      "name": "The Retro Channel",
+      "id": "custom.the-retro-channel-pr-music"
+    },
+    {
+      "group": "International",
+      "name": "TMA",
+      "id": "tma.gp@sd"
+    },
+    {
+      "group": "International",
+      "name": "TopEstrada TV",
+      "id": "topestradatv.mk@sd"
+    },
+    {
+      "group": "International",
+      "name": "Totalmusic",
+      "id": "totalmusic.uk"
+    },
+    {
+      "group": "International",
+      "name": "Totalmusic Dance",
+      "id": "custom.totalmusicdance"
+    },
+    {
+      "group": "International",
+      "name": "Trace UK",
+      "id": "custom.traceuk"
+    },
+    {
+      "group": "International",
+      "name": "Turkmen Owazy",
+      "id": "turkmenowazy.tm@sd"
+    },
+    {
+      "group": "International",
+      "name": "TV Cidade",
+      "id": "tvcidade.cv@sd"
+    },
+    {
+      "group": "International",
+      "name": "TVCARiB Cinema",
+      "id": "tvcaribcinema.sx@sd"
+    },
+    {
+      "group": "International",
+      "name": "TVONE Nicaragua",
+      "id": "tvonenicaragua.ni@sd"
+    },
+    {
+      "group": "International",
+      "name": "V2 Beat",
+      "id": "custom.v2beat"
+    },
+    {
+      "group": "International",
+      "name": "VAM TV",
+      "id": "vamtv.cw@sd"
+    },
+    {
+      "group": "International",
+      "name": "Vevo Hip Hop & R&B",
+      "id": "gbbd2300001c0"
+    },
+    {
+      "group": "International",
+      "name": "Vox Kongo TV",
+      "id": "custom.vox-kongo-tv-cd-music"
+    },
+    {
+      "group": "International",
+      "name": "XITE Summer",
+      "id": "custom.xitesummer"
+    },
+    {
+      "group": "International",
+      "name": "Yes Movies Action",
+      "id": "yesmoviesaction.il@sd"
+    },
+    {
+      "group": "Iran",
+      "name": "AFN TV",
+      "id": "afntv.ir@sd"
+    },
+    {
+      "group": "Iran",
+      "name": "Afra Film",
+      "id": "custom.afra-film-ir-movie"
+    },
+    {
+      "group": "Iran",
+      "name": "Cafe Film",
+      "id": "cafefilm.ir@sd"
+    },
+    {
+      "group": "Iran",
+      "name": "iFilm 2",
+      "id": "ifilm2.ir@sd"
+    },
+    {
+      "group": "Iran",
+      "name": "iFilm English",
+      "id": "ifilmenglish.ir@sd"
+    },
+    {
+      "group": "Iran",
+      "name": "iFilm Persian",
+      "id": "ifilmpersian.ir@sd"
+    },
+    {
+      "group": "Iran",
+      "name": "Meta Film TV",
+      "id": "metafilmtv.ir@sd"
+    },
+    {
+      "group": "Iran",
+      "name": "Persiana Family",
+      "id": "custom.persiana-family-ir-movie"
+    },
+    {
+      "group": "Iran",
+      "name": "Persiana Iranian",
+      "id": "custom.persiana-iranian-ir-movie"
+    },
+    {
+      "group": "Iran",
+      "name": "Persiana Korea",
+      "id": "custom.persiana-korea-ir-movie"
+    },
+    {
+      "group": "Iran",
+      "name": "Persiana Plus",
+      "id": "custom.persiana-plus-ir-movie"
+    },
+    {
+      "group": "Iran",
+      "name": "SL 1",
+      "id": "custom.sl-1-ir-movie"
+    },
+    {
+      "group": "Iran",
+      "name": "SL 2",
+      "id": "custom.sl-2-ir-movie"
+    },
+    {
+      "group": "Italy",
+      "name": "70-80 TV",
+      "id": "7080tv.it@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "Company TV",
+      "id": "companytv.it@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "Euro Indie Music Chart TV",
+      "id": "euroindiemusiccharttv.it@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "Kiss Kiss Napoli TV",
+      "id": "kisskissnapolitv.it@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "m2o TV",
+      "id": "m2otv.it@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "Rakuten TV Action Movies Italy",
+      "id": "custom.rakuten-tv-action-movies-italy-it-movie"
+    },
+    {
+      "group": "Italy",
+      "name": "Rakuten TV Drama Movies Italy",
+      "id": "custom.rakuten-tv-drama-movies-italy-it-movie"
+    },
+    {
+      "group": "Italy",
+      "name": "RDS Social TV",
+      "id": "rdssocialtv.it"
+    },
+    {
+      "group": "Italy",
+      "name": "RTL 102.5 Best",
+      "id": "rtl1025best.it@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "RTL 102.5 Bro&Sis",
+      "id": "rtl1025brosis.it@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "RTL 102.5 Disco",
+      "id": "rtl1025disco.it@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "RTL 102.5 Napule",
+      "id": "rtl1025napule.it@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "RTL 102.5 Traffic",
+      "id": "rtl1025traffic.it@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "13 Kids",
+      "id": "13kids.cl@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "ADN TV+",
+      "id": "adntvplus.fr"
+    },
+    {
+      "group": "Kids",
+      "name": "ADO TV",
+      "id": "adotv.bj@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Afarin Baxcha",
+      "id": "afarinbaxcha.iq@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Afarin TV",
+      "id": "afarintv.iq"
+    },
+    {
+      "group": "Kids",
+      "name": "Afarin TV",
+      "id": "afarintv.iq@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Akili Kids!",
+      "id": "akilikids.ke@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Amou Yazid TV",
+      "id": "amouyazidtv.dz@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Aqlvoy",
+      "id": "aqlvoy.uz@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "BabyFirst Spanish",
+      "id": "babyfirst.us@spanish"
+    },
+    {
+      "group": "Kids",
+      "name": "Balapan",
+      "id": "balapan.kz@hd"
+    },
+    {
+      "group": "Kids",
+      "name": "Bantul the Great",
+      "id": "bantulthegreat.us"
+    },
+    {
+      "group": "Kids",
+      "name": "Bolajon",
+      "id": "bolajon.uz@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Box Kids TV",
+      "id": "boxkidstv.br@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Carousel +4",
+      "id": "carousel.ru@plus4"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoon Network (Pakistan)",
+      "id": "cartoonnetwork.pk@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoon Network Arabic",
+      "id": "cartoonnetworkarabic.ae@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoon Network Asia",
+      "id": "cartoonnetworkasia.sg@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoon Network CEE Poland",
+      "id": "cartoonnetworkcee.uk@poland"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoon Network CEE Ukraine",
+      "id": "cartoonnetworkcee.uk@ukraine"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoon Network Latin America Brazil",
+      "id": "cartoonnetworklatinamerica.us@brazil"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoon Network Latin America South Atlantic",
+      "id": "cartoonnetworklatinamerica.us@southatlantic"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoon Network Latin America South Pacific",
+      "id": "cartoonnetworklatinamerica.us@southpacific"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoonito Asia",
+      "id": "cartoonitoasia.sg@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoonito CEE Czechia",
+      "id": "cartoonitocee.uk@czechia"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoonito CEE Poland",
+      "id": "cartoonitocee.uk@poland"
+    },
+    {
+      "group": "Kids",
+      "name": "Cartoonito Latin America",
+      "id": "cartoonitolatinamerica.us@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "CBeebies (Poland)",
+      "id": "cbeebies.pl@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Chikitoonz",
+      "id": "chikitoonz.pe@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Chinola TV",
+      "id": "chinolatv.do@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Clan",
+      "id": "clan.es@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Detskiy",
+      "id": "detskiy.ru@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Discovery Kids Latin America",
+      "id": "discoverykidslatinamerica.us@panregional"
+    },
+    {
+      "group": "Kids",
+      "name": "Discovery Kids Latin America Chile",
+      "id": "discoverykidslatinamerica.us@chile"
+    },
+    {
+      "group": "Kids",
+      "name": "Discovery Kids Latin America Colombia",
+      "id": "discoverykidslatinamerica.us@colombia"
+    },
+    {
+      "group": "Kids",
+      "name": "Disney Channel Latin America Center",
+      "id": "disneychannellatinamerica.ar@center"
+    },
+    {
+      "group": "Kids",
+      "name": "Disney Channel Latin America Mexico",
+      "id": "disneychannellatinamerica.ar@mexico"
+    },
+    {
+      "group": "Kids",
+      "name": "Disney Channel Latin America North",
+      "id": "disneychannellatinamerica.ar@north"
+    },
+    {
+      "group": "Kids",
+      "name": "Disney Channel Latin America Panregional",
+      "id": "disneychannellatinamerica.ar@panregionalhd"
+    },
+    {
+      "group": "Kids",
+      "name": "Disney Jr. Latin America North",
+      "id": "disneyjrlatinamerica.ar@northhd"
+    },
+    {
+      "group": "Kids",
+      "name": "Doraemon TV",
+      "id": "doraemontv.us"
+    },
+    {
+      "group": "Kids",
+      "name": "DumDum",
+      "id": "dumdum.br@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Duronto TV",
+      "id": "durontotv.bd@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "EBS Kids",
+      "id": "ebskids.kr@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "El Chavo TV",
+      "id": "elchavotv.mx@hd"
+    },
+    {
+      "group": "Kids",
+      "name": "Epic Kids Digital",
+      "id": "epickidsdigital.us"
+    },
+    {
+      "group": "Kids",
+      "name": "ETV 2",
+      "id": "etv2.ee@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Extrema Kids TV",
+      "id": "extremakidstv.cr@hd"
+    },
+    {
+      "group": "Kids",
+      "name": "Gopal Bhar TV",
+      "id": "custom.bdix.gopal-bhar-tv"
+    },
+    {
+      "group": "Kids",
+      "name": "Iunior TV",
+      "id": "iuniortv.it@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "JapanimTV",
+      "id": "japanimtv.be@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Kuriakos Kids",
+      "id": "kuriakoskids.pt@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Lego Channel",
+      "id": "legochannel.us@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Maxcine Kids",
+      "id": "maxcinekids.us@hd"
+    },
+    {
+      "group": "Kids",
+      "name": "MBC 3 USA",
+      "id": "mbc3usa.us@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Minika Cocuk",
+      "id": "minikacocuk.tr@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Minimax (Pakistan)",
+      "id": "minimax.pk@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Moonbug Kids",
+      "id": "moonbugkids.uk"
+    },
+    {
+      "group": "Kids",
+      "name": "Motu Patlu",
+      "id": "custom.bdix.motu-patlu"
+    },
+    {
+      "group": "Kids",
+      "name": "Mr Bean Animated FR",
+      "id": "mrbeananimated.uk@fr"
+    },
+    {
+      "group": "Kids",
+      "name": "Nick Jr. Latin America",
+      "id": "nickjrlatinamerica.us@panregional"
+    },
+    {
+      "group": "Kids",
+      "name": "Nickelodeon (Germany)",
+      "id": "nickelodeon.de@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Nickelodeon CIS",
+      "id": "nickelodeoncis.kz@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Nicktoons CIS",
+      "id": "nicktoonscis.ru@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "O! International",
+      "id": "o.ru@international"
+    },
+    {
+      "group": "Kids",
+      "name": "ON Kids",
+      "id": "onkids.vn@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Peques TV",
+      "id": "pequestv.pe@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Plim Plim",
+      "id": "plimplim.ar@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Pooya TV",
+      "id": "pooyatv.ir@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Powerkids Kartoon Channel",
+      "id": "powerkidskartoonchannel.us"
+    },
+    {
+      "group": "Kids",
+      "name": "Reino Infantil",
+      "id": "reinoinfantil.mz@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Retro Cartoon",
+      "id": "retrocartoon.br@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Skwad Play",
+      "id": "skwadplay.us@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Smotrim 100% Detskoe",
+      "id": "smotrim100detskoe.ru@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Smurf TV",
+      "id": "smurftv.us"
+    },
+    {
+      "group": "Kids",
+      "name": "Spacetoon Arabic",
+      "id": "spacetoonarabic.ae@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Super Simple Songs",
+      "id": "supersimplesongs.us@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Tiguerito TV",
+      "id": "tigueritotv.do@hd"
+    },
+    {
+      "group": "Kids",
+      "name": "Tom and Jerry",
+      "id": "tomandjerry.do"
+    },
+    {
+      "group": "Kids",
+      "name": "Tom And Jerry",
+      "id": "tomandjerry.do@hd"
+    },
+    {
+      "group": "Kids",
+      "name": "Tooku",
+      "id": "tooku.ru"
+    },
+    {
+      "group": "Kids",
+      "name": "Toon Goggles Junior",
+      "id": "toongogglesjunior.us"
+    },
+    {
+      "group": "Kids",
+      "name": "Tooncast SouthAmerica",
+      "id": "tooncast.us@southamerica"
+    },
+    {
+      "group": "Kids",
+      "name": "TRT Cocuk",
+      "id": "trtcocuk.tr@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "TRT Diyanet Cocuk",
+      "id": "trtdiyanetcocuk.tr@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "TVOKids",
+      "id": "tvokids.ca@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "TVS Hi Tops",
+      "id": "tvshitops.us@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "WOW Kidz Hindi",
+      "id": "wowkidz.in@hindi"
+    },
+    {
+      "group": "Kids",
+      "name": "WOW Kidz Tamil",
+      "id": "wowkidztamil.in"
+    },
+    {
+      "group": "Kids",
+      "name": "WOW Kidz Telugu",
+      "id": "wowkidz.in@telugu"
+    },
+    {
+      "group": "Kids",
+      "name": "Xtrema Cartoons",
+      "id": "xtremacartoons.ar@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Yu-Gi-Oh! en espanol",
+      "id": "yugiohenespanol.us@sd"
+    },
+    {
+      "group": "Lebanon",
+      "name": "Aghani Aghani TV",
+      "id": "aghaniaghanitv.lb@sd"
+    },
+    {
+      "group": "Lebanon",
+      "name": "Arabica TV",
+      "id": "custom.arabica-tv"
+    },
+    {
+      "group": "Lebanon",
+      "name": "mfm",
+      "id": "mfm.lb@hd"
+    },
+    {
+      "group": "Lebanon",
+      "name": "MTV Lebanon",
+      "id": "mtvlebanon.lb@sd"
+    },
+    {
+      "group": "Lebanon",
+      "name": "OneFM",
+      "id": "onefm.lb@sd"
+    },
+    {
+      "group": "Mexico",
+      "name": "Az Cinema",
+      "id": "azcinema.mx@sd"
+    },
+    {
+      "group": "Mexico",
+      "name": "Claro Cinema",
+      "id": "clarocinema.mx@sd"
+    },
+    {
+      "group": "Mexico",
+      "name": "Conecta TV",
+      "id": "conectatv.mx@sd"
+    },
+    {
+      "group": "Mexico",
+      "name": "De Pelicula Latin America",
+      "id": "depeliculalatinamerica.mx@sd"
+    },
+    {
+      "group": "Mexico",
+      "name": "De Pelicula Plus",
+      "id": "depeliculaplus.mx@sd"
+    },
+    {
+      "group": "Mexico",
+      "name": "Lobo TV",
+      "id": "lobotv.mx@sd"
+    },
+    {
+      "group": "Mexico",
+      "name": "MyTime Movie Network (Mexico)",
+      "id": "mytimemovienetwork.mx@sd"
+    },
+    {
+      "group": "Mexico",
+      "name": "Popcorn Central",
+      "id": "popcorncentral.mx@sd"
+    },
+    {
+      "group": "Mexico",
+      "name": "Vision Television",
+      "id": "visiontelevision.mx@sd"
+    },
+    {
+      "group": "Netherlands",
+      "name": "BEATTV",
+      "id": "beattv.nl@sd"
+    },
+    {
+      "group": "Netherlands",
+      "name": "Canal+ Action Europe Magyar",
+      "id": "canalplusactioneurope.nl@magyar"
+    },
+    {
+      "group": "Netherlands",
+      "name": "FomixTV",
+      "id": "custom.fomixtv-nl-music"
+    },
+    {
+      "group": "Netherlands",
+      "name": "Qmusic",
+      "id": "qmusic.nl@sd"
+    },
+    {
+      "group": "Netherlands",
+      "name": "RadioNL TV",
+      "id": "radionltv.nl@sd"
+    },
+    {
+      "group": "Netherlands",
+      "name": "TMF",
+      "id": "tmf.nl@hdfast"
+    },
+    {
+      "group": "Pakistani",
+      "name": "8XM",
+      "id": "8xm.pk@sd"
+    },
+    {
+      "group": "Pakistani",
+      "name": "8XM",
+      "id": "8xm.pk@hd"
+    },
+    {
+      "group": "Pakistani",
+      "name": "aur LIFE",
+      "id": "aurlife.pk"
+    },
+    {
+      "group": "Pakistani",
+      "name": "Bol Entertainment",
+      "id": "bolentertainment.pk@sd"
+    },
+    {
+      "group": "Pakistani",
+      "name": "BS Film",
+      "id": "bsfilm.pk@sd"
+    },
+    {
+      "group": "Pakistani",
+      "name": "Discover Pakistan",
+      "id": "discoverpakistan.pk@sd"
+    },
+    {
+      "group": "Pakistani",
+      "name": "Falak TV",
+      "id": "falaktv.pk@sd"
+    },
+    {
+      "group": "Pakistani",
+      "name": "Filmax (576p)",
+      "id": "filmax.pk@sd"
+    },
+    {
+      "group": "Pakistani",
+      "name": "HUM Sitaray",
+      "id": "humsitaray.pk"
+    },
+    {
+      "group": "Pakistani",
+      "name": "Jalwa TV",
+      "id": "jalwatv.pk@sd"
+    },
+    {
+      "group": "Pakistani",
+      "name": "Joo Music",
+      "id": "joomusic.pk"
+    },
+    {
+      "group": "Pakistani",
+      "name": "JooMusic",
+      "id": "joomusic.pk@sd"
+    },
+    {
+      "group": "Pakistani",
+      "name": "Paighan TV",
+      "id": "paighantv.pk@sd"
+    },
+    {
+      "group": "Pakistani",
+      "name": "See TV",
+      "id": "seetv.pk"
+    },
+    {
+      "group": "Pakistani",
+      "name": "Tag TV",
+      "id": "tagtv.pk"
+    },
+    {
+      "group": "Pakistani",
+      "name": "Waseb TV",
+      "id": "wasebtv.pk"
+    },
+    {
+      "group": "Panama",
+      "name": "Corazon TV",
+      "id": "corazontv.pa@sd"
+    },
+    {
+      "group": "Panama",
+      "name": "Mas23 TV",
+      "id": "mas23tv.pa@sd"
+    },
+    {
+      "group": "Panama",
+      "name": "Pindin TV",
+      "id": "pindintv.pa@sd"
+    },
+    {
+      "group": "Panama",
+      "name": "Super Q Panama",
+      "id": "superqpanama.pa@sd"
+    },
+    {
+      "group": "Panama",
+      "name": "Tropical Moon Urban TV",
+      "id": "tropicalmoonurbantv.pa@sd"
+    },
+    {
+      "group": "Paraguay",
+      "name": "E40",
+      "id": "e40.py@sd"
+    },
+    {
+      "group": "Paraguay",
+      "name": "HEi Now",
+      "id": "heinow.py@sd"
+    },
+    {
+      "group": "Paraguay",
+      "name": "Next",
+      "id": "nexthd.py@sd"
+    },
+    {
+      "group": "Paraguay",
+      "name": "Venus Media",
+      "id": "venusmedia.py@sd"
+    },
+    {
+      "group": "Peru",
+      "name": "Karibena",
+      "id": "karibena.pe@sd"
+    },
+    {
+      "group": "Peru",
+      "name": "La Fabulosa TV",
+      "id": "lafabulosatv.pe@sd"
+    },
+    {
+      "group": "Peru",
+      "name": "Miel TV",
+      "id": "mieltv.pe@sd"
+    },
+    {
+      "group": "Peru",
+      "name": "RumbaMix TV",
+      "id": "rumbamixtv.pe@sd"
+    },
+    {
+      "group": "Peru",
+      "name": "Top Latino TV",
+      "id": "toplatinotv.pe@sd"
+    },
+    {
+      "group": "Peru",
+      "name": "TV Peruanisima",
+      "id": "tvperuanisima.pe@sd"
+    },
+    {
+      "group": "Peru",
+      "name": "TVUNO",
+      "id": "tvuno.pe@sd"
+    },
+    {
+      "group": "Poland",
+      "name": "AXN Black (United States) Poland",
+      "id": "axnblack.us@poland"
+    },
+    {
+      "group": "Poland",
+      "name": "AXN Poland",
+      "id": "axnpoland.pl@sd"
+    },
+    {
+      "group": "Poland",
+      "name": "FILMBOX+ Comedy Magyar",
+      "id": "filmboxpluscomedy.pl@magyar"
+    },
+    {
+      "group": "Poland",
+      "name": "FILMBOX+ Emotion Adria",
+      "id": "custom.filmbox-emotion-adria-pl-movie"
+    },
+    {
+      "group": "Poland",
+      "name": "FILMBOX+ Festival Poland",
+      "id": "filmboxplusfestival.pl@poland"
+    },
+    {
+      "group": "Poland",
+      "name": "FILMBOX+ Hits Adria",
+      "id": "custom.filmbox-hits-adria-pl-movie"
+    },
+    {
+      "group": "Poland",
+      "name": "FILMBOX+ Love & Crime Adria",
+      "id": "custom.filmbox-love-crime-adria-pl-movie"
+    },
+    {
+      "group": "Poland",
+      "name": "FILMBOX+ Love & Crime Magyar",
+      "id": "filmboxpluslovecrime.pl@magyar"
+    },
+    {
+      "group": "Poland",
+      "name": "FILMBOX+ One Magyar",
+      "id": "filmboxplusone.pl@magyar"
+    },
+    {
+      "group": "Poland",
+      "name": "FILMBOX+ One Ukraine & Baltics (450p) [Geo-blocked]",
+      "id": "filmboxplusone.pl@ukrainebaltics"
+    },
+    {
+      "group": "Portugal",
+      "name": "Kuriakos Music",
+      "id": "kuriakosmusic.pt@sd"
+    },
+    {
+      "group": "Portugal",
+      "name": "RFPtv",
+      "id": "rfptv.pt@sd"
+    },
+    {
+      "group": "Religious",
+      "name": "Al Quran Al Kareem TV",
+      "id": "alquranalkareemtv.sa"
+    },
+    {
+      "group": "Religious",
+      "name": "Al Sunnah TV",
+      "id": "custom.al-sunnah-tv"
+    },
+    {
+      "group": "Religious",
+      "name": "Al-Zahra TV Turkic",
+      "id": "alzahratvturkic.sa"
+    },
+    {
+      "group": "Religious",
+      "name": "ARY Q TV",
+      "id": "aryqtv.pk"
+    },
+    {
+      "group": "Religious",
+      "name": "Azan TV",
+      "id": "custom.azantv"
+    },
+    {
+      "group": "Religious",
+      "name": "Bahrain Quran",
+      "id": "bahrainquran.bh"
+    },
+    {
+      "group": "Religious",
+      "name": "Eman Channel",
+      "id": "emanchannel"
+    },
+    {
+      "group": "Religious",
+      "name": "Islam Channel Bangla",
+      "id": "custom.islamchannelbangla"
+    },
+    {
+      "group": "Religious",
+      "name": "Islam TV",
+      "id": "islamtv.sa"
+    },
+    {
+      "group": "Religious",
+      "name": "Islam TV Urdu",
+      "id": "custom.islam-tv-urdu"
+    },
+    {
+      "group": "Religious",
+      "name": "Islamic TV",
+      "id": "islamictv.sa"
+    },
+    {
+      "group": "Religious",
+      "name": "Islamic TV",
+      "id": "223000"
+    },
+    {
+      "group": "Religious",
+      "name": "Madani TV",
+      "id": "madanitv.sa"
+    },
+    {
+      "group": "Religious",
+      "name": "Madina Live",
+      "id": "custom.bdix.madinalive"
+    },
+    {
+      "group": "Religious",
+      "name": "Makkah Live",
+      "id": "makkahlive.sa"
+    },
+    {
+      "group": "Religious",
+      "name": "Medina Live",
+      "id": "medinalive.bd"
+    },
+    {
+      "group": "Religious",
+      "name": "Peace TV",
+      "id": "custom.peace-tv-tw8cm"
+    },
+    {
+      "group": "Religious",
+      "name": "Peace TV Bangla",
+      "id": "peacetvbangla.ae"
+    },
+    {
+      "group": "Religious",
+      "name": "Peace TV English",
+      "id": "peacetvenglish.ae"
+    },
+    {
+      "group": "Religious",
+      "name": "Peace TV Urdu",
+      "id": "peacetvurdu.pk"
+    },
+    {
+      "group": "Religious",
+      "name": "Q TV",
+      "id": "qtv.in@sd"
+    },
+    {
+      "group": "Religious",
+      "name": "Quran",
+      "id": "custom.quran"
+    },
+    {
+      "group": "Religious",
+      "name": "Quran TV",
+      "id": "qurantv.iq"
+    },
+    {
+      "group": "Religious",
+      "name": "Sunna TV",
+      "id": "sunnatv.ng@sd"
+    },
+    {
+      "group": "Religious",
+      "name": "Sunnah TV",
+      "id": "custom.sunnah-tv"
+    },
+    {
+      "group": "Religious",
+      "name": "Zainabia Channel",
+      "id": "zainabiachannel.sa"
+    },
+    {
+      "group": "Romania",
+      "name": "Atomic Academy TV",
+      "id": "atomicacademytv.ro@sd"
+    },
+    {
+      "group": "Romania",
+      "name": "Atomic TV",
+      "id": "atomictv.ro@sd"
+    },
+    {
+      "group": "Romania",
+      "name": "Bollywood Classic Romania",
+      "id": "bollywoodclassic.ro@romania"
+    },
+    {
+      "group": "Romania",
+      "name": "Boom TV",
+      "id": "boomtv.ro@hd"
+    },
+    {
+      "group": "Romania",
+      "name": "Cinemaraton Plus",
+      "id": "cinemaratonplus.ro@hd"
+    },
+    {
+      "group": "Romania",
+      "name": "CineWow",
+      "id": "cinewow.ro@sd"
+    },
+    {
+      "group": "Romania",
+      "name": "FILMBOX+ Comedy Romania",
+      "id": "filmboxpluscomedy.pl@romania"
+    },
+    {
+      "group": "Romania",
+      "name": "FILMBOX+ Hits Romania",
+      "id": "filmboxplushits.pl@romania"
+    },
+    {
+      "group": "Romania",
+      "name": "FILMBOX+ Love & Crime Romania",
+      "id": "filmboxpluslovecrime.pl@romania"
+    },
+    {
+      "group": "Romania",
+      "name": "FILMBOX+ One Romania",
+      "id": "filmboxplusone.pl@romania"
+    },
+    {
+      "group": "Romania",
+      "name": "Halloween Non Stop",
+      "id": "halloweennonstop.ro@sd"
+    },
+    {
+      "group": "Romania",
+      "name": "Impact TV (Romania)",
+      "id": "impacttv.ro@hd"
+    },
+    {
+      "group": "Romania",
+      "name": "Impact TV 2",
+      "id": "impacttv2.ro@hd"
+    },
+    {
+      "group": "Romania",
+      "name": "Impact TV Dance",
+      "id": "impacttvdance.ro@sd"
+    },
+    {
+      "group": "Romania",
+      "name": "Impact TV Manele",
+      "id": "impacttvmanele.ro@sd"
+    },
+    {
+      "group": "Romania",
+      "name": "Super TV (Romania)",
+      "id": "supertv.ro@sd"
+    },
+    {
+      "group": "Romania",
+      "name": "Tequila Music TV",
+      "id": "tequilamusictv.ro@sd"
+    },
+    {
+      "group": "Romania",
+      "name": "Traditional TV",
+      "id": "traditionaltv.ro@sd"
+    },
+    {
+      "group": "Romania",
+      "name": "TV AS",
+      "id": "tvas.ro@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "1HD Music Television",
+      "id": "1hdmusictelevision.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "Bollywood HD Russia",
+      "id": "bollywoodhd.ro@russia"
+    },
+    {
+      "group": "Russia",
+      "name": "BRIDGE Rock",
+      "id": "bridgerock.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden Classic Music",
+      "id": "cityedenclassicmusic.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden KinoAction [ ]",
+      "id": "cityedenkinoaction.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden KinoArt",
+      "id": "cityedenkinoart.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden KinoAsia [ ]",
+      "id": "cityedenkinoasia.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden KinoDetektiv",
+      "id": "cityedenkinodetektiv.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden KinoDrama",
+      "id": "cityedenkinodrama.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden KinoFantastika",
+      "id": "cityedenkinofantastika.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden KinoKlassika",
+      "id": "cityedenkinoklassika.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden KinoKomediya",
+      "id": "cityedenkinokomediya.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden KinoMistika",
+      "id": "cityedenkinomistika.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "City Eden Play",
+      "id": "cityedenplay.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "DanceHits80",
+      "id": "dancehits80.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "Dom kino",
+      "id": "custom.dom-kino-ru-movie"
+    },
+    {
+      "group": "Russia",
+      "name": "Europa Plus TV Belarus",
+      "id": "europaplustv.ru@belarus"
+    },
+    {
+      "group": "Russia",
+      "name": "Evrokino HD (1080p)",
+      "id": "evrokino.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "Hit HD (1080p)",
+      "id": "hit.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "Horoshee Kino",
+      "id": "horosheekino.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "Illusion+",
+      "id": "illusionplus.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "Kino 1 (Russia)",
+      "id": "kino1.ru@international"
+    },
+    {
+      "group": "Russia",
+      "name": "Kinopokaz",
+      "id": "custom.kinopokaz-ru-movie"
+    },
+    {
+      "group": "Russia",
+      "name": "Kinoseriya",
+      "id": "custom.kinoseriya-ru-movie"
+    },
+    {
+      "group": "Russia",
+      "name": "Live Music Channel",
+      "id": "livemusicchannel.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "MTV Volgograd",
+      "id": "mtvvolgograd.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "Muz Soyuz",
+      "id": "muzsoyuz.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "Muzyka 1",
+      "id": "muzyka1.ru@international"
+    },
+    {
+      "group": "Russia",
+      "name": "Muzyka Kino",
+      "id": "muzykakino.ru@international"
+    },
+    {
+      "group": "Russia",
+      "name": "Nash Kinopokaz",
+      "id": "nashkinopokaz.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "Rodnoe Kino",
+      "id": "custom.rodnoe-kino-ru-movie"
+    },
+    {
+      "group": "Russia",
+      "name": "Russkiy roman",
+      "id": "custom.russkiy-roman-ru-movie"
+    },
+    {
+      "group": "Russia",
+      "name": "Smotrim 100% Klassika",
+      "id": "smotrim100klassika.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "SONGTV Russia",
+      "id": "songtvrussia.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "TV 21",
+      "id": "tv21.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "TV1000 Russian Kino Global",
+      "id": "tv1000russiankinoglobal.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "viju TV1000 action",
+      "id": "custom.viju-tv1000-action-ru-movie"
+    },
+    {
+      "group": "Russia",
+      "name": "viju TV1000 novella",
+      "id": "vijutv1000novella.ru@hd"
+    },
+    {
+      "group": "Russia",
+      "name": "viju TV1000 russkoe",
+      "id": "custom.viju-tv1000-russkoe-ru-movie"
+    },
+    {
+      "group": "Russia",
+      "name": "Кино 1 International",
+      "id": "custom.1-international-ru-movie"
+    },
+    {
+      "group": "Russia",
+      "name": "Музыка 1 International",
+      "id": "custom.1-international-ru-music"
+    },
+    {
+      "group": "Saudi Arabia",
+      "name": "Aflam",
+      "id": "custom.aflam"
+    },
+    {
+      "group": "Saudi Arabia",
+      "name": "Fairuz",
+      "id": "fairuz.sa@hd"
+    },
+    {
+      "group": "Saudi Arabia",
+      "name": "Majid Al Mohandis",
+      "id": "majidalmohandis.sa@sd"
+    },
+    {
+      "group": "Saudi Arabia",
+      "name": "MBC Loud",
+      "id": "mbcloud.sa@sd"
+    },
+    {
+      "group": "Saudi Arabia",
+      "name": "MBC Mood",
+      "id": "mbcmood.sa@hd"
+    },
+    {
+      "group": "Saudi Arabia",
+      "name": "Movies Action",
+      "id": "moviesaction.sa@sd"
+    },
+    {
+      "group": "Saudi Arabia",
+      "name": "Rabeh Saqer",
+      "id": "rabehsaqer.sa@hd"
+    },
+    {
+      "group": "Saudi Arabia",
+      "name": "Tarab",
+      "id": "tarab.sa@sd"
+    },
+    {
+      "group": "Serbia",
+      "name": "DM Sat",
+      "id": "custom.dm-sat-rs-music"
+    },
+    {
+      "group": "Singapore",
+      "name": "Cinemax Asia",
+      "id": "cinemaxasia.sg@hd"
+    },
+    {
+      "group": "Singapore",
+      "name": "Cinemax Asia (720p) [Geo-blocked]",
+      "id": "cinemaxasia.sg@sd"
+    },
+    {
+      "group": "Singapore",
+      "name": "HBO Asia SD (720p) [Geo-blocked]",
+      "id": "hboasia.sg@sd"
+    },
+    {
+      "group": "Singapore",
+      "name": "HBO Hits Asia",
+      "id": "hbohitsasia.sg@hd"
+    },
+    {
+      "group": "Singapore",
+      "name": "HBO Signature Asia",
+      "id": "hbosignatureasia.sg@hd"
+    },
+    {
+      "group": "Spain",
+      "name": "Activa TV",
+      "id": "activatv.es@sd"
+    },
+    {
+      "group": "Spain",
+      "name": "Cadena Elite",
+      "id": "cadenaelite.es@sd"
+    },
+    {
+      "group": "Spain",
+      "name": "Molahits TV",
+      "id": "custom.molahits-tv-es-music"
+    },
+    {
+      "group": "Spain",
+      "name": "Music TV Granada",
+      "id": "musictvgranada.es@sd"
+    },
+    {
+      "group": "Spain",
+      "name": "Onda 15 TV",
+      "id": "onda15tv.es@sd"
+    },
+    {
+      "group": "Spain",
+      "name": "Onda Valencia TV",
+      "id": "ondavalenciatv.es@sd"
+    },
+    {
+      "group": "Spain",
+      "name": "POP World TV",
+      "id": "popworldtv.es@sd"
+    },
+    {
+      "group": "Spain",
+      "name": "Rakuten TV Family Movies",
+      "id": "rakutentvfamilymovies.es"
+    },
+    {
+      "group": "Spain",
+      "name": "RTV Vida",
+      "id": "rtvvida.es@sd"
+    },
+    {
+      "group": "Spain",
+      "name": "SpektraTV",
+      "id": "spektratv.es@sd"
+    },
+    {
+      "group": "Spain",
+      "name": "TVOMIX",
+      "id": "tvomix.es@hd"
+    },
+    {
+      "group": "Spain",
+      "name": "XPTV1",
+      "id": "xptv1.es@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "30A Golf Kingdom",
+      "id": "30agolfkingdom.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "A Sports",
+      "id": "asports.pk"
+    },
+    {
+      "group": "Sports",
+      "name": "ACCDN",
+      "id": "custom.accdn"
+    },
+    {
+      "group": "Sports",
+      "name": "Arena Sport 1 Premium (Serbia)",
+      "id": "arenasport1premium.rs@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Arena Sport 1 Premium (Slovenia)",
+      "id": "arenasport1premium.si@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Arena Sport Premium M1",
+      "id": "arenasportpremiumm1.mk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Arena Sport Premium M2",
+      "id": "arenasportpremiumm2.mk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Arena Sport Premium M3",
+      "id": "arenasportpremiumm3.mk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "AS3 Sport TV",
+      "id": "as3sporttv.ve@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Astrahan.Ru Sport",
+      "id": "astrahanrusport.ru@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "ATG Live",
+      "id": "custom.atglive"
+    },
+    {
+      "group": "Sports",
+      "name": "Bahrain Sports 1",
+      "id": "bahrainsports1.bh@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Bahrain Sports 2",
+      "id": "bahrainsports2.bh@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "beIN Sports XTRA en Espanol",
+      "id": "custom.beinsportsxtraenespanol"
+    },
+    {
+      "group": "Sports",
+      "name": "BEK Sports West",
+      "id": "beksports.us@west"
+    },
+    {
+      "group": "Sports",
+      "name": "Belarus-5",
+      "id": "belarus5.by@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "Canal+ Sport 2 SK",
+      "id": "canalplussport2sk.sk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Canal+ Sport 3 SK",
+      "id": "canalplussport3sk.sk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Canal+ Sport 4 SK",
+      "id": "canalplussport4sk.sk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Canal+ Sport 5 SK",
+      "id": "canalplussport5sk.sk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Canal+ Sport 6 SK",
+      "id": "canalplussport6sk.sk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Canal+ Sport 7 SK",
+      "id": "canalplussport7sk.sk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Canal+ Sport 8 SK",
+      "id": "canalplussport8sk.sk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Canal+ Sport SK",
+      "id": "canalplussportsk.sk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "CazeTV",
+      "id": "cazetv.br@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "CCTV-Billiards",
+      "id": "cctvbilliards.cn@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "CCTV-Golf & Tennis",
+      "id": "cctvgolftennis.cn@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "CCTV-Storm Football",
+      "id": "cctvstormfootball.cn@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "CDN Deportes",
+      "id": "cdndeportes.do@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Claro Sports",
+      "id": "clarosports.mx@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Colimdo TV",
+      "id": "colimdotv.do@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "CRTV (Chile)",
+      "id": "crtv.cl@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "CRTV Sports and Entertainment",
+      "id": "crtvsportsandentertainment.cm@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "DeporTV",
+      "id": "deportv.ar@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "ESPN 2 Latin America",
+      "id": "espn2latinamerica.us@south"
+    },
+    {
+      "group": "Sports",
+      "name": "ESPN 3 Latin America",
+      "id": "espn3latinamerica.us@south"
+    },
+    {
+      "group": "Sports",
+      "name": "ESPN 4 Latin America",
+      "id": "espn4latinamerica.us@south"
+    },
+    {
+      "group": "Sports",
+      "name": "ESPN 5 Latin America",
+      "id": "espn5latinamerica.us@south"
+    },
+    {
+      "group": "Sports",
+      "name": "ESPN 6 Latin America",
+      "id": "espn6latinamerica.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "ESPN 7 Latin America",
+      "id": "espn7latinamerica.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "ESPN Latin America",
+      "id": "espnlatinamerica.us@south"
+    },
+    {
+      "group": "Sports",
+      "name": "ESPN Latin America Colombia",
+      "id": "espnlatinamerica.us@colombia"
+    },
+    {
+      "group": "Sports",
+      "name": "ESPN Latin America Mexico",
+      "id": "espnlatinamerica.us@mexico"
+    },
+    {
+      "group": "Sports",
+      "name": "eSports Max TV",
+      "id": "esportsmaxtv.ve@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Eurosport 1 Hungary",
+      "id": "eurosport1.fr@hungary"
+    },
+    {
+      "group": "Sports",
+      "name": "Eurosport 2 Hungary",
+      "id": "eurosport2.fr@hungary"
+    },
+    {
+      "group": "Sports",
+      "name": "Eurosport 4K Czechia",
+      "id": "eurosport4kczechia.cz@uhd"
+    },
+    {
+      "group": "Sports",
+      "name": "FIFA+ Spain",
+      "id": "fifaplus.uk@spain"
+    },
+    {
+      "group": "Sports",
+      "name": "FIFA+ Women",
+      "id": "fifapluswomen.uk@english"
+    },
+    {
+      "group": "Sports",
+      "name": "Fight Network",
+      "id": "custom.fightnetwork"
+    },
+    {
+      "group": "Sports",
+      "name": "Formula 1 AntenaPlay",
+      "id": "formula1antenaplay.ro@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "FTV (Bolivia)",
+      "id": "ftv.bo@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "FUEL TV AU",
+      "id": "fueltv.pt@au"
+    },
+    {
+      "group": "Sports",
+      "name": "Futbol TV",
+      "id": "futboltv.uz@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "Glory Kickboxing Poland",
+      "id": "glorykickboxing.us@poland"
+    },
+    {
+      "group": "Sports",
+      "name": "Goal TV",
+      "id": "goaltv.in"
+    },
+    {
+      "group": "Sports",
+      "name": "HTSpor TV",
+      "id": "htsportv.tr@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Inter TV (Italy)",
+      "id": "custom.intertv"
+    },
+    {
+      "group": "Sports",
+      "name": "Kabaddi 24x7",
+      "id": "kabaddi24x7.in@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "KTV Sport",
+      "id": "ktvsport.kw@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "KTV Sport Plus",
+      "id": "ktvsportplus.kw@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "L1 Max",
+      "id": "l1max.pe@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "LRT Plius",
+      "id": "lrtplius.lt@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "M Sports",
+      "id": "msports.pk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "MadeinBO TV",
+      "id": "madeinbotv.it@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Maincast Cybersport",
+      "id": "maincastcybersport.ua@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Match! Ultra",
+      "id": "matchultra.ru@4k"
+    },
+    {
+      "group": "Sports",
+      "name": "Meridiano TV",
+      "id": "meridianotv.ve@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "MNB Sport",
+      "id": "mnbsport.mn@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Monterrico TV",
+      "id": "monterricotv.pe@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "MTRSPT1",
+      "id": "custom.mtrspt"
+    },
+    {
+      "group": "Sports",
+      "name": "NHL AntenaPlay",
+      "id": "nhlantenaplay.ro@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Okko Futbol",
+      "id": "okkofutbol.ru@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Oman Sports TV",
+      "id": "omansportstv.om@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Ovacion TV",
+      "id": "ovaciontv.pe@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Persiana Fight",
+      "id": "persianafight.fr@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "PK Sports",
+      "id": "pksports.pk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Prima Sport Czechia",
+      "id": "primasportczechia.cz@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Prime (Syria)",
+      "id": "prime.sy@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "PTV Sports",
+      "id": "ptvsports.pk"
+    },
+    {
+      "group": "Sports",
+      "name": "Rally TV",
+      "id": "custom.rallytv"
+    },
+    {
+      "group": "Sports",
+      "name": "Rally TV",
+      "id": "rallytv.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Real Madrid TV English",
+      "id": "realmadridtvenglish.es@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Realitatea Sportiva",
+      "id": "custom.realitateasportiva"
+    },
+    {
+      "group": "Sports",
+      "name": "Realitatea Sportiva",
+      "id": "realitateasportiva.ro@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Red Bull TV AU",
+      "id": "redbulltv.at@au"
+    },
+    {
+      "group": "Sports",
+      "name": "Red Bull TV BR",
+      "id": "redbulltv.at@br"
+    },
+    {
+      "group": "Sports",
+      "name": "Red Bull TV DE",
+      "id": "redbulltv.at@de"
+    },
+    {
+      "group": "Sports",
+      "name": "Red Bull TV ES",
+      "id": "redbulltv.at@es"
+    },
+    {
+      "group": "Sports",
+      "name": "Red Bull TV UK",
+      "id": "redbulltv.at@uk"
+    },
+    {
+      "group": "Sports",
+      "name": "Red Bull TV US",
+      "id": "redbulltv.at@us"
+    },
+    {
+      "group": "Sports",
+      "name": "Spiler 1",
+      "id": "spiler1.hu@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Spiler 2",
+      "id": "spiler2.hu@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Sport 1 (Ukraine)",
+      "id": "sport1.ua@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Sport 3",
+      "id": "sport3.ua@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Sport TV",
+      "id": "sporttv.by@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Sportivnyy",
+      "id": "custom.sportivnyy"
+    },
+    {
+      "group": "Sports",
+      "name": "Sportivnyy",
+      "id": "sportivnyy.ru@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Sports Television",
+      "id": "sportstelevision.kp@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "Sqala TV",
+      "id": "sqalatv.pe@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Strongman",
+      "id": "strongman.us@germany"
+    },
+    {
+      "group": "Sports",
+      "name": "Strongman UK",
+      "id": "strongman.us@uk"
+    },
+    {
+      "group": "Sports",
+      "name": "T Sports",
+      "id": "tsports.bd"
+    },
+    {
+      "group": "Sports",
+      "name": "T Sports 7",
+      "id": "tsports7.th@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "TAPMAD",
+      "id": "custom.tapmad"
+    },
+    {
+      "group": "Sports",
+      "name": "TJK TV",
+      "id": "tjktv.tr@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "TR Sport",
+      "id": "custom.trsport"
+    },
+    {
+      "group": "Sports",
+      "name": "TR Sport",
+      "id": "trsport.it@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Trace Sport",
+      "id": "custom.tracesport"
+    },
+    {
+      "group": "Sports",
+      "name": "Trace Sport Stars Russia",
+      "id": "tracesportstars.fr@russia"
+    },
+    {
+      "group": "Sports",
+      "name": "TSN The Ocho",
+      "id": "custom.tsntheocho"
+    },
+    {
+      "group": "Sports",
+      "name": "Turf Movil",
+      "id": "turfmovil.cl@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Turkmenistan Sport",
+      "id": "turkmenistansport.tm@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "TVS Bowling Network",
+      "id": "tvsbowlingnetwork.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "TVS Boxing",
+      "id": "tvsboxing.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "TVS Classic Sports",
+      "id": "tvsclassicsports.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "TVS Sports",
+      "id": "tvssports.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "TVS Sports Bureau",
+      "id": "tvssportsbureau.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "TVS Turbo",
+      "id": "tvsturbo.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "TVS Women Sports",
+      "id": "tvswomensports.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "TYC Sports",
+      "id": "custom.tycsports"
+    },
+    {
+      "group": "Sports",
+      "name": "TyC Sports USA",
+      "id": "tycsportsusa.ar@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "viju+ Sport",
+      "id": "vijuplussport.ru@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "Voyo Sport 1",
+      "id": "voyosport1.ro@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "Win+ Futbol",
+      "id": "winplusfutbol.co@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "World of Freesports",
+      "id": "custom.worldoffreesports"
+    },
+    {
+      "group": "Sports",
+      "name": "World Poker Tour Poland",
+      "id": "worldpokertour.us@poland"
+    },
+    {
+      "group": "Sweden",
+      "name": "Merry Christmas from Viafree",
+      "id": "merrychristmasfromviafree.se@se"
+    },
+    {
+      "group": "Sweden",
+      "name": "Merry Christmas from Viafree DK",
+      "id": "merrychristmasfromviafree.se@dk"
+    },
+    {
+      "group": "Sweden",
+      "name": "Merry Christmas from Viafree NO",
+      "id": "merrychristmasfromviafree.se@no"
+    },
+    {
+      "group": "Sweden",
+      "name": "NonStop Kung Fu",
+      "id": "nonstopkungfu.se@se"
+    },
+    {
+      "group": "Sweden",
+      "name": "NonStop Kung Fu DK",
+      "id": "nonstopkungfu.se@dk"
+    },
+    {
+      "group": "Sweden",
+      "name": "NonStop Kung Fu NO",
+      "id": "nonstopkungfu.se@no"
+    },
+    {
+      "group": "Turkey",
+      "name": "Dream Turk",
+      "id": "dreamturk.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "Grand Cinema",
+      "id": "grandcinema.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "Med Muzik",
+      "id": "medmuzik.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "Number 1 Ask",
+      "id": "number1ask.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "Number 1 Damar",
+      "id": "number1damar.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "Number 1 Dance",
+      "id": "number1dance.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "Number 1 TV",
+      "id": "number1tv.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "Power Dance",
+      "id": "powerdance.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "Power Love",
+      "id": "powerlove.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "PowerTurk Akustik",
+      "id": "powerturkakustik.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "PowerTurk Slow",
+      "id": "powerturkslow.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "PowerTurk Taptaze",
+      "id": "powerturktaptaze.tr@sd"
+    },
+    {
+      "group": "Turkey",
+      "name": "PowerTürk TV",
+      "id": "powerturktv.tr"
+    },
+    {
+      "group": "Ukraine",
+      "name": "Cine+ Legend",
+      "id": "cinepluslegend.ua@sd"
+    },
+    {
+      "group": "Ukraine",
+      "name": "FilmUA Live",
+      "id": "filmualive.ua@sd"
+    },
+    {
+      "group": "Ukraine",
+      "name": "FilmUADrama",
+      "id": "custom.filmuadrama-ua-movie"
+    },
+    {
+      "group": "Ukraine",
+      "name": "InRating TV",
+      "id": "inratingtv.ua@sd"
+    },
+    {
+      "group": "Ukraine",
+      "name": "Kino 2",
+      "id": "kino2.ua"
+    },
+    {
+      "group": "Ukraine",
+      "name": "M1 (Ukraine)",
+      "id": "m1.ua@sd"
+    },
+    {
+      "group": "Ukraine",
+      "name": "M2 (Ukraine)",
+      "id": "m2.ua@sd"
+    },
+    {
+      "group": "Ukraine",
+      "name": "Megogo Music",
+      "id": "megogomusic.ua@sd"
+    },
+    {
+      "group": "Ukraine",
+      "name": "NASHE Music",
+      "id": "nashemusic.ua@sd"
+    },
+    {
+      "group": "Ukraine",
+      "name": "Viasat Kino",
+      "id": "custom.viasat-kino-ua-movie"
+    },
+    {
+      "group": "Ukraine",
+      "name": "Viasat Kino Action",
+      "id": "custom.viasat-kino-action-ua-movie"
+    },
+    {
+      "group": "Ukraine",
+      "name": "Viasat Kino World",
+      "id": "viasatkinoworld.ua@sd"
+    },
+    {
+      "group": "Ukraine",
+      "name": "Viasat Serial",
+      "id": "viasatserial.ua@hd"
+    },
+    {
+      "group": "United Kingdom",
+      "name": "FMTV",
+      "id": "custom.fmtv-gb-music"
+    },
+    {
+      "group": "United Kingdom",
+      "name": "MovieSphere UK",
+      "id": "custom.moviesphere-uk"
+    },
+    {
+      "group": "United Kingdom",
+      "name": "Totalmusic 2000s",
+      "id": "totalmusic2000s.uk@hd"
+    },
+    {
+      "group": "United Kingdom",
+      "name": "Totalmusic 80s",
+      "id": "totalmusic80s.uk"
+    },
+    {
+      "group": "United Kingdom",
+      "name": "Totalmusic Concerts",
+      "id": "totalmusicconcerts.uk"
+    },
+    {
+      "group": "United Kingdom",
+      "name": "Totalmusic Dance",
+      "id": "totalmusicdance.uk@hd"
+    },
+    {
+      "group": "United Kingdom",
+      "name": "Trace UK",
+      "id": "traceuk.uk@hd"
+    },
+    {
+      "group": "United Kingdom",
+      "name": "V2BEAT TV",
+      "id": "v2beattv.uk@sd"
+    },
+    {
+      "group": "United Kingdom",
+      "name": "Vantage Music UK",
+      "id": "vantagemusic.ee@uk"
+    },
+    {
+      "group": "United States",
+      "name": "00s Replay",
+      "id": "00sreplay.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "1Mus",
+      "id": "1mus.us"
+    },
+    {
+      "group": "United States",
+      "name": "30A Music",
+      "id": "30amusic.us"
+    },
+    {
+      "group": "United States",
+      "name": "30A TV Classic Movies",
+      "id": "30atvclassicmovies.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "3ABN Praise Him Music Network",
+      "id": "custom.3abn-praise-him-music-network-us-music"
+    },
+    {
+      "group": "United States",
+      "name": "ABN Bible Movies Channel",
+      "id": "custom.abn-bible-movies-channel-us-movie"
+    },
+    {
+      "group": "United States",
+      "name": "Adrenalina Pura TV (720p)",
+      "id": "adrenalinapuratv.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "AMC Latin America (1080p)",
+      "id": "amclatinamerica.us@panregional"
+    },
+    {
+      "group": "United States",
+      "name": "AMC Series Latin America",
+      "id": "amcserieslatinamerica.us@panregional"
+    },
+    {
+      "group": "United States",
+      "name": "American Horrors",
+      "id": "americanhorrors.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "AMG TV Classic",
+      "id": "amgtvclassic.us"
+    },
+    {
+      "group": "United States",
+      "name": "ARTFLIX Movie Classics",
+      "id": "artflixmovieclassics.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Avang TV",
+      "id": "avangtv.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "AVI Rewind",
+      "id": "avirewind.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "AXN Crime",
+      "id": "axncrime.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "AXN Latin America",
+      "id": "axnlatinamerica.us@centralamerica"
+    },
+    {
+      "group": "United States",
+      "name": "AXN Latin America Andes",
+      "id": "axnlatinamerica.us@andes"
+    },
+    {
+      "group": "United States",
+      "name": "Battlestar Galactica",
+      "id": "battlestargalactica.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "BET Cinema",
+      "id": "betcinema.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "BET Comedy Movies",
+      "id": "betcomedymovies.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "BET Visionaries",
+      "id": "betvisionaries.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Bonanza",
+      "id": "bonanza.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Bonanza CA",
+      "id": "bonanza.us@ca"
+    },
+    {
+      "group": "United States",
+      "name": "Botflix Radioo",
+      "id": "botflixradioo.us@hd"
+    },
+    {
+      "group": "United States",
+      "name": "California Music Channel",
+      "id": "californiamusicchannel.us"
+    },
+    {
+      "group": "United States",
+      "name": "Cine Amor",
+      "id": "cineamor.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Cine Familiar (1080p)",
+      "id": "cinefamiliar.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Cine Hispano (1080p)",
+      "id": "cinehispano.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Cine Premium (1080p)",
+      "id": "cinepremium.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Cinecanal (1080p)",
+      "id": "cinecanal.us@panregional"
+    },
+    {
+      "group": "United States",
+      "name": "Cinecanal Pacific",
+      "id": "cinecanal.us@pacific"
+    },
+    {
+      "group": "United States",
+      "name": "Cinecanal Panregional",
+      "id": "custom.cinecanal-panregional-us-movie"
+    },
+    {
+      "group": "United States",
+      "name": "Cinecanal South",
+      "id": "cinecanal.us@south"
+    },
+    {
+      "group": "United States",
+      "name": "Cinemax Latin America",
+      "id": "cinemaxlatinamerica.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "CMC-USA Country Music Channel",
+      "id": "cmcusacountrymusicchannel.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "DHE (1080p)",
+      "id": "dhe.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "DUST",
+      "id": "custom.dust-us-movie"
+    },
+    {
+      "group": "United States",
+      "name": "EBS Cinema",
+      "id": "ebscinema.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "EBS Musika",
+      "id": "ebsmusika.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Epix",
+      "id": "epix.us"
+    },
+    {
+      "group": "United States",
+      "name": "Epix Hits",
+      "id": "epixhits.us"
+    },
+    {
+      "group": "United States",
+      "name": "Filmes Suspense",
+      "id": "filmessuspense.us@br"
+    },
+    {
+      "group": "United States",
+      "name": "FilmRise Forensic Files (720p) [Geo-blocked]",
+      "id": "filmriseforensicfiles.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "FrightFlix",
+      "id": "custom.frightflix-us-movie"
+    },
+    {
+      "group": "United States",
+      "name": "FXM",
+      "id": "fxm.us"
+    },
+    {
+      "group": "United States",
+      "name": "Harmony Gospel Music TV",
+      "id": "custom.harmony-gospel-music-tv-us-music"
+    },
+    {
+      "group": "United States",
+      "name": "HBO 2 Latin America",
+      "id": "hbo2latinamerica.us@hd"
+    },
+    {
+      "group": "United States",
+      "name": "HBO Family Latin America",
+      "id": "hbofamilylatinamerica.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "HBO Latin America",
+      "id": "hbolatinamerica.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "HBO Mundi Latin America",
+      "id": "hbomundilatinamerica.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "HBO Xtreme Latin America",
+      "id": "hboxtremelatinamerica.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "High Vision TV",
+      "id": "highvisiontv.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "HMI PROMZ NEWS",
+      "id": "custom.hmi-promz-news-us-music"
+    },
+    {
+      "group": "United States",
+      "name": "HTV",
+      "id": "htv.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Lifetime Movies",
+      "id": "lifetimemovies.us"
+    },
+    {
+      "group": "United States",
+      "name": "Maxcine",
+      "id": "maxcine.us@hd"
+    },
+    {
+      "group": "United States",
+      "name": "Maxcine 2",
+      "id": "maxcine2.us@hd"
+    },
+    {
+      "group": "United States",
+      "name": "Maxcine Comedy",
+      "id": "maxcinecomedy.us@hd"
+    },
+    {
+      "group": "United States",
+      "name": "Maxcine Family",
+      "id": "maxcinefamily.us@hd"
+    },
+    {
+      "group": "United States",
+      "name": "MCN6 Music Channel",
+      "id": "custom.mcn6-music-channel-us-music"
+    },
+    {
+      "group": "United States",
+      "name": "Metaleitor TV",
+      "id": "metaleitortv.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Mi Musica Hits",
+      "id": "mimusicahits.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Mi Musica Reggaeton",
+      "id": "mimusicareggaeton.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Mi Musica Romantica",
+      "id": "mimusicaromantica.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Mi Musica Salsa",
+      "id": "mimusicasalsa.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Movies! KPVM-LD",
+      "id": "movies.us@kpvmld"
+    },
+    {
+      "group": "United States",
+      "name": "MovieSphere Gold WFXT",
+      "id": "moviespheregold.us@wfxt"
+    },
+    {
+      "group": "United States",
+      "name": "RJTV",
+      "id": "rjtv.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Sony Movies",
+      "id": "sony.us"
+    },
+    {
+      "group": "United States",
+      "name": "Spirit TV [ ]",
+      "id": "spirittv.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Stryk TV",
+      "id": "stryktv.us@hd"
+    },
+    {
+      "group": "United States",
+      "name": "TCM Latin America South",
+      "id": "tcmlatinamerica.us@south"
+    },
+    {
+      "group": "United States",
+      "name": "The Country Network",
+      "id": "custom.the-country-network-us-music"
+    },
+    {
+      "group": "United States",
+      "name": "TVS Classic Movies",
+      "id": "tvsclassicmovies.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "TVS Drive In Movie",
+      "id": "tvsdriveinmovie.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "TVS Music Network",
+      "id": "tvsmusicnetwork.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "TVS Nostalgia Movies",
+      "id": "tvsnostalgiamovies.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "TVS Western Movie",
+      "id": "tvswesternmovie.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Universal Cinema",
+      "id": "universalcinema.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Vevo '70s & '80s",
+      "id": "vevo70s80s.us"
+    },
+    {
+      "group": "United States",
+      "name": "Vevo '90s & '00s",
+      "id": "vevo90s00s.us"
+    },
+    {
+      "group": "United States",
+      "name": "Video Mix TV",
+      "id": "videomixtv.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Watch it Scream!",
+      "id": "custom.watch-it-scream-us-movie"
+    },
+    {
+      "group": "United States",
+      "name": "Whiplash Cinema",
+      "id": "whiplashcinema.us"
+    },
+    {
+      "group": "United States",
+      "name": "WVCU-LP",
+      "id": "wvculp.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Young Hollywood",
+      "id": "younghollywood.us@sd"
+    },
+    {
+      "group": "Uzbekistan",
+      "name": "BIZ Cinema",
+      "id": "custom.biz-cinema-uz-movie"
+    },
+    {
+      "group": "Uzbekistan",
+      "name": "BIZ Music",
+      "id": "custom.biz-music-uz-music"
+    },
+    {
+      "group": "Uzbekistan",
+      "name": "FTV (Uzbekistan)",
+      "id": "ftv.uz@sd"
+    },
+    {
+      "group": "Uzbekistan",
+      "name": "Kinoteatr",
+      "id": "kinoteatr.uz@sd"
+    },
+    {
+      "group": "Uzbekistan",
+      "name": "Muz TV Uzbekistan",
+      "id": "muztvuzbekistan.uz@sd"
+    },
+    {
+      "group": "Vietnam",
+      "name": "HTVC Movies",
+      "id": "htvcmovies.vn@sd"
+    },
+    {
+      "group": "Vietnam",
+      "name": "ON Cine",
+      "id": "oncine.vn@sd"
+    },
+    {
+      "group": "Vietnam",
+      "name": "ON Movies",
+      "id": "onmovies.vn@sd"
+    },
+    {
+      "group": "Vietnam",
+      "name": "ON Music",
+      "id": "onmusic.vn@sd"
+    },
+    {
+      "group": "Vietnam",
+      "name": "Tra Vinh TV",
+      "id": "travinhtv.vn@sd"
+    },
+    {
+      "group": "Vietnam",
+      "name": "Vinh Long TV 3",
+      "id": "vinhlongtv3.vn@sd"
+    }
+  ],
+  "mapped_without_usable": [
+    {
+      "group": "Argentina",
+      "name": "Cosmos Tv",
+      "id": "cosmostv.ar@hd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "Maasranga TV",
+      "id": "maasrangatv.bd"
+    },
+    {
+      "group": "Bangladesh",
+      "name": "RTV",
+      "id": "rtv.bd"
+    },
+    {
+      "group": "Bulgaria",
+      "name": "Kino Nova",
+      "id": "kinonova.bg@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Classic Rock",
+      "id": "stingrayclassicrock.ca"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Cozy Cafe",
+      "id": "custom.stingray-cozy-cafe-ca-music"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Easy Listening",
+      "id": "stingrayeasylistening.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Euro Hits",
+      "id": "custom.stingray-euro-hits-ca-music"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Flashback 70's",
+      "id": "stingrayflashback70s.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Hit List",
+      "id": "stingrayhitlist.ca"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Holidayscapes",
+      "id": "stingrayholidayscapes.ca@hd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Hot Country",
+      "id": "stingrayhotcountry.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Jukebox Oldies",
+      "id": "stingrayjukeboxoldies.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Nothin' But 90s",
+      "id": "stingraynothinbut90s.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Remember the 80s",
+      "id": "stingrayrememberthe80s.ca"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Romance Latino",
+      "id": "stingrayromancelatino.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Smooth Jazz",
+      "id": "stingraysmoothjazz.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Soul Storm",
+      "id": "stingraysoulstorm.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray The Spa",
+      "id": "stingraythespa.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Today's K-Pop",
+      "id": "stingraytodayskpop.ca@sd"
+    },
+    {
+      "group": "Canada",
+      "name": "Stingray Today's Latin Pop",
+      "id": "stingraytodayslatinpop.ca@sd"
+    },
+    {
+      "group": "Colombia",
+      "name": "Rumba TV",
+      "id": "rumbatv.co@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "4K Travel",
+      "id": "travel.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "BBC Earth US",
+      "id": "bbcearth.uk@us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Bon Voyage",
+      "id": "bonvoyage.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "BritBox Mysteries",
+      "id": "britboxmysteries.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "China Travel",
+      "id": "chinatravel.cn@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Crime & Justice",
+      "id": "crimejustice.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Crime Scene TV",
+      "id": "crimescenetv.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Dateline 24/7",
+      "id": "dateline247.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Discovering China",
+      "id": "discoveringchina.cn@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Epic Crimes",
+      "id": "epiccrimes.in"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Epic Crimes",
+      "id": "epiccrimes.in@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Escape TV",
+      "id": "escapetv.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "History & Warfare Now",
+      "id": "historywarfarenow.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "House of Crime",
+      "id": "houseofcrime.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "InFast",
+      "id": "infast.nl"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "InWonder",
+      "id": "inwonder.nl"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "InWonder",
+      "id": "inwonder.nl@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Love the Planet",
+      "id": "lovetheplanet.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Love The Planet",
+      "id": "lovetheplanet.es@en"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Mayday: Air Disaster",
+      "id": "maydayairdisaster.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Mysteries Xplored",
+      "id": "usbb5200028mm"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "NatureTime France",
+      "id": "naturetime.ca@france"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "OuterSphere",
+      "id": "outersphere.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "PowerNation TV",
+      "id": "powernationtv.us@sd"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Real Wild",
+      "id": "realwild.uk"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Robot Wars by Mech+",
+      "id": "robotwarsbymech.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Survivor",
+      "id": "survivor.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Terra Mater WILD",
+      "id": "terramaterwild.de@german"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Wheel World",
+      "id": "wheelworld.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Wild Flix Hindi",
+      "id": "wildflixhindi.in"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "Witness to Justice",
+      "id": "witnesstojustice.us"
+    },
+    {
+      "group": "Documentary & Wildlife",
+      "name": "XXTreme Jobs Hindi",
+      "id": "xxtremejobshindi.in"
+    },
+    {
+      "group": "Dominican Republic",
+      "name": "Tarima TV",
+      "id": "tarimatv.do@hd"
+    },
+    {
+      "group": "France",
+      "name": "Qwest TV",
+      "id": "qwesttv.fr@sd"
+    },
+    {
+      "group": "France",
+      "name": "Trace Brazuca",
+      "id": "tracebrazuca.fr@hd"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "Amar Bangla",
+      "id": "aamarbangla.in"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "Bangla Jago TV",
+      "id": "banglajagotv.in"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "Dhoom Music Bangla",
+      "id": "custom.bdix.dhoom-music-bangla"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "KTV Bangla",
+      "id": "ktvbangla.in@sd"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "Sonar Bangla",
+      "id": "sonarbangla.in@sd"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "Tara TV",
+      "id": "taratv.in"
+    },
+    {
+      "group": "Indian Bangla",
+      "name": "ZB Cinema",
+      "id": "zbcinema.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "4 SiDES TV",
+      "id": "4sidestv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Aaryaa TV",
+      "id": "aaryaatv.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Ekamra Bharat Odia",
+      "id": "ekamrabharatodia.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Global Punjab",
+      "id": "globalpunjab.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Hosanna TV",
+      "id": "hosannatv.in@tamil"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Manoranjan Prime",
+      "id": "manoranjanprime.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "NTC TV",
+      "id": "ntctv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "One Paschima",
+      "id": "onepaschima.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Sarv Dharm Sangam",
+      "id": "sarvdharmsangam.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Shemaroo Umang",
+      "id": "shemarooumang.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Suriya TV",
+      "id": "suriyatv.in"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Suriya TV",
+      "id": "suriyatv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Suriyan TV",
+      "id": "suriyantv.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "WeatherSpy (India)",
+      "id": "weatherspy.in@sd"
+    },
+    {
+      "group": "Indian Entertainment",
+      "name": "Zingabad",
+      "id": "zingabad.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Bollygold",
+      "id": "bollygold.in@hd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Ekamra Cinema",
+      "id": "ekamracinema.in"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Goldmines Movies",
+      "id": "goldminesmovies.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Namma Bangalore",
+      "id": "nammabangalore.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "NH Tamil Gold",
+      "id": "nhtamilgold.in"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "NH Tamil Gold",
+      "id": "nhtamilgold.in@hd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Public Movies",
+      "id": "publicmovies.in@sd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "South Station",
+      "id": "southstation.in"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "South Station",
+      "id": "southstation.in@hd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Thalaa TV",
+      "id": "thalaatv.in@hd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "The Movie Club",
+      "id": "themovieclub.in@hd"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "The Movie Club +2",
+      "id": "themovieclub.in@plus2"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Tolly TV",
+      "id": "tollytv.in"
+    },
+    {
+      "group": "Indian Movies",
+      "name": "Tolly TV",
+      "id": "tollytv.in@hd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Aaryaa TV",
+      "id": "aaryaatv.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Ekamra Musiq",
+      "id": "ekamramusiq.in"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Mastiii",
+      "id": "mastiii.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Only Music",
+      "id": "only.music.in"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Steelbird Music",
+      "id": "steelbirdmusic.in@sd"
+    },
+    {
+      "group": "Indian Music",
+      "name": "Ultimate TV",
+      "id": "ultimatetv.in@sd"
+    },
+    {
+      "group": "International",
+      "name": "Action Hollywood Movies",
+      "id": "plex.tv.action.hollywood.movies.plex"
+    },
+    {
+      "group": "International",
+      "name": "AMC Thrillers",
+      "id": "plex.tv.amc.thrillers.plex"
+    },
+    {
+      "group": "International",
+      "name": "Bang Bang TV",
+      "id": "bangbangtv"
+    },
+    {
+      "group": "International",
+      "name": "MyTime Movie Network East",
+      "id": "mytimemovienetworkeast.us"
+    },
+    {
+      "group": "International",
+      "name": "PMC",
+      "id": "pmc.ae@sd"
+    },
+    {
+      "group": "International",
+      "name": "Shanson TV",
+      "id": "shansontv.ru"
+    },
+    {
+      "group": "International",
+      "name": "Stingray The Spa",
+      "id": "stingraythespa.ca"
+    },
+    {
+      "group": "International",
+      "name": "Stingray Today's KPOP",
+      "id": "stingraytodayskpop.us"
+    },
+    {
+      "group": "International",
+      "name": "Stingray Today's Latin Pop",
+      "id": "stingraytodayslatinpop.ca"
+    },
+    {
+      "group": "International",
+      "name": "XITE Hits",
+      "id": "xitehits.nl"
+    },
+    {
+      "group": "Iran",
+      "name": "T2 TV",
+      "id": "t2tv.ir@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "Kiss Kiss TV",
+      "id": "kisskisstv.it@sd"
+    },
+    {
+      "group": "Italy",
+      "name": "RTL 102.5 Caliente",
+      "id": "rtl1025caliente.it@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Atfal & Mawaheb TV",
+      "id": "atfalmawahebtv.sa@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Baby Shark TV",
+      "id": "babysharktv.us"
+    },
+    {
+      "group": "Kids",
+      "name": "BeJoy.kids",
+      "id": "bejoykids.it@hd"
+    },
+    {
+      "group": "Kids",
+      "name": "Caillou",
+      "id": "caillou.fr@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Camp Spoopy",
+      "id": "campspoopy.us@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "EKids",
+      "id": "ekids.bg@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "HappyKids",
+      "id": "happykids.us@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Hooray Kids",
+      "id": "custom.hooraykids"
+    },
+    {
+      "group": "Kids",
+      "name": "KidDo MATIX",
+      "id": "kiddomatix.us"
+    },
+    {
+      "group": "Kids",
+      "name": "Mr Bean Animated",
+      "id": "mrbeananimated.uk"
+    },
+    {
+      "group": "Kids",
+      "name": "Nickelodeon (Brazil)",
+      "id": "nickelodeon.br@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Ninja Kidz TV",
+      "id": "ninjakidztv.us@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Pixel TV",
+      "id": "pixeltv.ua@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "RetroCrush",
+      "id": "retrocrush.us"
+    },
+    {
+      "group": "Kids",
+      "name": "Ryzhiy",
+      "id": "ryzhiy.ru@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Sonic The Hedgehog",
+      "id": "custom.sonicthehedgehog"
+    },
+    {
+      "group": "Kids",
+      "name": "Strawberry Shortcake",
+      "id": "strawberryshortcake.us"
+    },
+    {
+      "group": "Kids",
+      "name": "Taha TV",
+      "id": "tahatv.lb@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Teletubbies",
+      "id": "teletubbies.uk"
+    },
+    {
+      "group": "Kids",
+      "name": "Teletubbies",
+      "id": "teletubbies.uk@sd"
+    },
+    {
+      "group": "Kids",
+      "name": "Yu-Gi-Oh!",
+      "id": "yugioh.us@sd"
+    },
+    {
+      "group": "Mexico",
+      "name": "MultiPremier",
+      "id": "multipremier.mx@sd"
+    },
+    {
+      "group": "Poland",
+      "name": "Stingray Greatest Hits",
+      "id": "custom.stingray-greatest-hits-pl-music"
+    },
+    {
+      "group": "Religious",
+      "name": "Iqraa TV",
+      "id": "iqraatv"
+    },
+    {
+      "group": "Religious",
+      "name": "Makkah TV",
+      "id": "makkahtv.sa"
+    },
+    {
+      "group": "Russia",
+      "name": "Shanson TV",
+      "id": "shansontv.ru@sd"
+    },
+    {
+      "group": "Russia",
+      "name": "Star Family",
+      "id": "starfamily.ru@sd"
+    },
+    {
+      "group": "Spain",
+      "name": "Cine Western (Spain)",
+      "id": "cinewestern.es@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "American Ninja Warrior",
+      "id": "americanninjawarrior.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "ESPN Premium (Argentina)",
+      "id": "espnpremium.ar@hd"
+    },
+    {
+      "group": "Sports",
+      "name": "FIFA+",
+      "id": "custom.fifa"
+    },
+    {
+      "group": "Sports",
+      "name": "FITE 24/7",
+      "id": "fite247.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "InTrouble",
+      "id": "introuble.nl@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Kozoom TV",
+      "id": "kozoomtv.fr@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Pac 12 Insider",
+      "id": "custom.pac12insider"
+    },
+    {
+      "group": "Sports",
+      "name": "Racer Select",
+      "id": "racerselect.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Sporty TV",
+      "id": "sportytv.cz@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Strongman Champions League",
+      "id": "strongmanchampionsleague.uk@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Win Sports",
+      "id": "winsports.co@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "Women's Sports Network",
+      "id": "womenssportsnetwork.us@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "World of Freesports",
+      "id": "worldoffreesports.de@sd"
+    },
+    {
+      "group": "Sports",
+      "name": "World Poker Tour",
+      "id": "worldpokertour.us@us"
+    },
+    {
+      "group": "Ukraine",
+      "name": "Enter-Film",
+      "id": "enterfilm.ua@sd"
+    },
+    {
+      "group": "United States",
+      "name": "24 Hour Free Movies",
+      "id": "custom.24-hour-free-movies"
+    },
+    {
+      "group": "United States",
+      "name": "Cine Romantico",
+      "id": "cineromantico.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Classic Movie Westerns",
+      "id": "classicmoviewesterns.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "FilmRise Western",
+      "id": "custom.filmrise-western-us-movie"
+    },
+    {
+      "group": "United States",
+      "name": "Hallmark Movies & More",
+      "id": "hallmarkmoviesmore.us"
+    },
+    {
+      "group": "United States",
+      "name": "OuterSphere",
+      "id": "outersphere.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Paramount Movie Channel",
+      "id": "paramountmoviechannel.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "Stingray Greatest Holiday Hits",
+      "id": "stingraygreatestholidayhits.us@sd"
+    },
+    {
+      "group": "United States",
+      "name": "XITE Celebrates",
+      "id": "custom.xite-celebrates-us-music"
+    }
+  ]
+}
