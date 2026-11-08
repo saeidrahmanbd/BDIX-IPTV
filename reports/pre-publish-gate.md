@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-08T11:33:08+00:00**
-Source playlist SHA-256: **56bfb01abfd601e1a1971134720650745d4d799bb6c0a74683e24f375f1f22f6**
+Generated: **2026-11-08T13:34:31+00:00**
+Source playlist SHA-256: **314c5dc9ebb651e864423c1f54c189ba2f39050b1ceaebca5615636237ec6dcf**
 
-Status: **PASS**
+Status: **BLOCK**
 
-- Current entries: **942**
+- Current entries: **934**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -23,9 +23,9 @@ Status: **PASS**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **0**
-- Raw resolution/geoblock name tags: **0**
+- Raw resolution/geoblock name tags: **1**
 - Missing logos in active groups: **0**
-- Missing logos deferred in review groups (Review/New Channels/New Backups): **1**
+- Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
@@ -37,13 +37,13 @@ Status: **PASS**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-No blocking conditions detected.
+- raw resolution/geoblock tags in channel names: 1
 
 ## Review-queue logo gaps
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
-- **Hamdard TV**
+None.
 
 ## Metadata conflicts
 
@@ -51,7 +51,7 @@ None.
 
 ## Raw name tags
 
-None.
+- **Discovery Channel (India) (HD)** — Documentary & Wildlife
 
 ## Queue validation
 
