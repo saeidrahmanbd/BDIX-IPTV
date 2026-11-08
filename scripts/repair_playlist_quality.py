@@ -2,10 +2,13 @@
 """Deterministic quality repair for IPTV-Playlist.m3u only.
 
 This script is scoped to IPTV-Playlist.m3u only; it never accesses the International playlist.
+Manual use only. It is a dry run unless --apply is passed. Renumbering is owned by
+scripts/renumber_active_channels.py, so run that after reviewing this script's output.
 """
-from pathlib import Path
 import re
+import sys
 import unicodedata
+from pathlib import Path
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -170,6 +173,9 @@ def repair():
         next_number += 1
         changes += 1
 
+    if "--apply" not in sys.argv:
+        print(f"IPTV-Playlist.m3u quality repair (dry run): changes={changes}. Pass --apply to write.")
+        return
     PLAYLIST.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"IPTV-Playlist.m3u quality repair: changes={changes}")
 

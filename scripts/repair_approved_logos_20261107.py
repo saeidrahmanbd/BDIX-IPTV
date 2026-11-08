@@ -3,6 +3,7 @@
 
 The script is limited to these three local logo assets. It does not change
 stream URLs, channel IDs, grouping or any other playlist metadata.
+One-time, already applied on 2026-11-07. Manual use only; refuses to run again without --force.
 """
 from __future__ import annotations
 
@@ -42,6 +43,13 @@ def save_png(image: Image.Image, path: Path) -> None:
         raise RuntimeError(f"Invalid PNG output: {path}")
 
 def main() -> None:
+    import sys
+
+    if REPORT.exists() and "--force" not in sys.argv:
+        raise SystemExit(
+            "This one-time logo repair was already applied (reports/logo-repair-2026-11-07.md exists). "
+            "Pass --force only to deliberately re-download and overwrite the three logos."
+        )
     LOGOS.mkdir(parents=True, exist_ok=True)
     REPORT.parent.mkdir(parents=True, exist_ok=True)
 
