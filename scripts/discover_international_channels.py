@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Discover eligible channels into New Channels/New Backups for manual review.
 
-Bangladesh is unrestricted by genre. India excludes News, all Religious and
-Educational/Business-Finance channels; Indian Kids and Sports remain eligible.
+Bangladesh is unrestricted by genre. India excludes News, all Religious, Educational
+/knowledge, Business/Finance and Farming channels; Indian Kids and Sports remain eligible.
 Every other country is Movie/Music only. New candidates are never promoted
 automatically. Foreign country groups require five unique primary channels.
 Playback is checked by the downstream validation step.

@@ -34,6 +34,8 @@ FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
     "religious": re.compile(r"\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
     "educational": re.compile(r"\b(?:education(?:al)?|learning|school|university|college|academy|e-?vidya|vidya|gyan\s*darshan|knowledge\s*channel)\b", re.IGNORECASE),
+    # Farming is part of the owner's original India prohibition; docs already state it.
+    "farming": re.compile(r"\b(?:farming|farm\s*tv|agriculture|agri\w*|krishi\w*|kisan\w*|krishak\w*)\b", re.IGNORECASE),
 }
 # These additional genre exclusions apply only to IPTV New Channels/New Backup intake.
 DISCOVERY_EXTRA_CATEGORY_PATTERNS = {
