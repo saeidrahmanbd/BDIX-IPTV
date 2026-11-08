@@ -110,6 +110,24 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         self.assertFalse(guard.run_blocks_retry(runs[1]))
         self.assertTrue(guard.run_blocks_retry(runs[2]))
 
+    def test_current_run_date_is_anchored_to_created_at_not_queue_start_time(self):
+        run = {"id": 70, "created_at": "2026-11-07T17:59:00Z"}
+        self.assertEqual(guard.bangladesh_date(run["created_at"]), date(2026, 11, 7))
+
+    def test_directly_fetched_current_run_wins_over_eventually_consistent_list(self):
+        listed = [{
+            "id": 80, "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T01:05:00Z",
+        }]
+        current = {
+            "id": 79, "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T01:00:00Z",
+        }
+        merged = {run["id"]: run for run in listed}
+        merged[current["id"]] = current
+        todays = guard.runs_for_date(list(merged.values()), self.today)
+        self.assertEqual(guard.first_run_id(todays), 79)
+
     def test_watchdog_can_retry_when_all_daily_attempts_failed(self):
         runs = [
             {
