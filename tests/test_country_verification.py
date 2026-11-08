@@ -70,6 +70,28 @@ class DiscoveryTests(unittest.TestCase):
         self.assertTrue(disc.norm("সংবাদ"))
         self.assertEqual(disc.norm("Somoy TV HD"), disc.norm("somoy_tv (SD)"))
 
+    def test_curated_india_feed_overrides_for_cartoon_network_and_colors_cineplex(self):
+        url = "https://cdn.example.com/live/index.m3u8"
+        cases = [
+            ({"tvg-id": "CartoonNetwork.us", "channel-id": "CartoonNetwork.us",
+              "tvg-country": "US"}, "Cartoon Network", "CartoonNetwork.in"),
+            ({"tvg-id": "ColorsCineplex.uk", "channel-id": "ColorsCineplex.uk",
+              "tvg-country": "GB"}, "Colors Cineplex [UK]", "ColorsCineplex.in"),
+        ]
+        for attrs, name, expected_id in cases:
+            with self.subTest(name=name):
+                normalized, reason = disc.evaluate("India", attrs, name, url)
+                self.assertEqual(reason, "")
+                self.assertEqual(normalized["tvg-country"], "IN")
+                self.assertEqual(normalized["tvg-id"], expected_id)
+                self.assertEqual(normalized["channel-id"], expected_id)
+        # The exceptions are not global: unknown/foreign feeds remain rejected.
+        self.assertFalse(cv.verify_country(
+            {"tvg-id": "CartoonNetwork.us", "tvg-country": "US"},
+            "Cartoon Network", None, None).ok)
+        self.assertIsNone(disc.evaluate(
+            "Bangladesh", cases[0][0], cases[0][1], url)[0])
+
     def test_evaluate_normalizes_country_and_rejects_foreign(self):
         url = "https://cdn.example.com/live/index.m3u8"
         a, why = disc.evaluate("India", {"tvg-id": "Star Utsav.in@SD"}, "Star Utsav", url)
