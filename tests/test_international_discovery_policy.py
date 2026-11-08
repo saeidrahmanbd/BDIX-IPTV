@@ -133,6 +133,21 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         ]:
             self.assertEqual(self.classify(name, group, "IN", tvg_id)[0], "Kids")
         self.assertEqual(self.classify("DD Sports", "Sports", "IN", "DDSports.in")[0], "Sports")
+        self.assertEqual(self.classify("Colors Cineplex", "Entertainment", "IN", "ColorsCineplex.in")[0], "Indian Movies")
+
+    def test_aruba_vip_tv_music_exception_is_limited_to_verified_identity(self):
+        attrs = {
+            "group-title": "Aruba",
+            "tvg-country": "AW",
+            "tvg-id": "custom.vip-tv-aw-music",
+            "channel-id": "custom.vip-tv-aw-music",
+            "tvg-content": "Music",
+        }
+        policy_attrs = dict(attrs, **{"group-title": "International"})
+        self.assertEqual(discovery.policy(policy_attrs, "VIP TV", allow_legacy_group=True), ("International Music", None, "AW"))
+        self.assertEqual(intl_validator.foreign_movie_music_error(attrs, "VIP TV", "AW"), "")
+        wrong_identity = dict(policy_attrs, **{"tvg-id": "VIPTV.aw"})
+        self.assertIsNone(discovery.policy(wrong_identity, "VIP TV", allow_legacy_group=True)[0])
 
     def test_bangladesh_religious_educational_kids_and_sports_are_not_genre_filtered(self):
         examples = [

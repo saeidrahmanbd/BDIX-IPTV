@@ -13,6 +13,8 @@ import sys
 import unicodedata
 from collections import Counter
 from pathlib import Path
+
+from permanent_removals import PERMANENTLY_REMOVED_NAMES
 from urllib.parse import urlsplit
 
 SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
@@ -21,48 +23,6 @@ PLAYLIST = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("IPTV-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 PROTECTED = {"Backup", "Review", "Not Playing"}
-PERMANENTLY_REMOVED_NAMES = {
-    # Removed per owner instruction: no local logo and no verified logo source.
-    "Bollywood Masala",
-    "Crime + Investigation",
-    "History Hunters",
-    "True History",
-    "FX 2",
-    "Al-Mahdi TV",
-    "IBN TV",
-    "IBN TV Africa",
-    "Safeer TV",
-    "accuweather",
-    "america's got talent",
-    "american idol",
-    "baraza music tv",
-    "the walking dead universe",
-    "popflix",
-    "60 days in",
-    "deadly women",
-    "highway thru hell",
-    "mini",
-    "mundial",
-    "tvc arabic kids",
-    "grace network",
-    "joshua tv",
-    "king tv",
-    "jeremiah tv",
-    "cbn tv usa",
-    "dios te ve kids",
-    "zb bhakti",
-    "aaj tak",
-    "gnt",
-    "good news today",
-    "network 10",
-    "angel tv",
-    "calvary tv",
-    "hosanna tv",
-    "hosanna tv hindi",
-    "prarthana tv",
-    "santvani channel",
-    "sharnam tv",
-}
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",

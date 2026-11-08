@@ -103,6 +103,14 @@ def country_code(a):
   if code in ISO_CODES:return code
  return "ZZ"
 def country_group(code): return COUNTRY_NAMES.get(code,code if code in ISO_CODES else "")
+def is_verified_aruba_vip_music(a, code):
+ # One verified legacy Aruba music service. Do not generalize the VIP TV name.
+ if code != "AW" or norm(str(a.get("tvg-content", ""))) not in {"music", "musics"}:
+  return False
+ tvg_id = str(a.get("tvg-id", "")).strip().casefold()
+ channel_id = str(a.get("channel-id", "")).strip().casefold()
+ return tvg_id == "custom.vip-tv-aw-music" and channel_id in {"", "custom.vip-tv-aw-music"}
+
 def policy(a,name,allow_legacy_group=False):
  code=country_code(a)
  group_text=(a.get("group-title") or "").strip().casefold()
@@ -146,7 +154,7 @@ def policy(a,name,allow_legacy_group=False):
  if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
   return None,"documentary/wildlife is outside the Movie/Music-only policy",code
  if FASHION_RE.search(text): return None,"fashion is outside the Movie/Music-only policy",code
- if GENERAL_OUT_OF_SCOPE_RE.search(text): return None,"general entertainment is not a dedicated Movie/Music channel",code
+ if GENERAL_OUT_OF_SCOPE_RE.search(text) and not is_verified_aruba_vip_music(a, code): return None,"general entertainment is not a dedicated Movie/Music channel",code
  if SERIES_OUT_OF_SCOPE_RE.search(text): return None,"TV series is not a dedicated Movie/Music channel",code
 
  source_category=bool(group_text) and norm(group_text) not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_text=="international")
