@@ -709,19 +709,22 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("id: superseded_guard", workflow)
         self.assertIn("echo 'skip=true' >> \"$GITHUB_OUTPUT\"", workflow)
         self.assertIn("echo 'skip=false' >> \"$GITHUB_OUTPUT\"", workflow)
+        lines = workflow.splitlines()
         for marker in (
             "- uses: actions/setup-python@",
             "- uses: actions/setup-node@",
             "- name: Install Python dependencies",
             "- name: Validate EPG configuration and quality rules",
             "- name: Regenerate, validate and publish XMLTV",
+            "- name: Upload EPG freshness diagnostic",
         ):
-            start = workflow.index(marker)
-            step_prefix = workflow[workflow.rfind("      - ", 0, start):start]
-            self.assertIn("if: steps.superseded_guard.outputs.skip != 'true'", step_prefix, marker)
-        artifact_start = workflow.index("- name: Upload EPG freshness diagnostic")
-        artifact_prefix = workflow[workflow.rfind("      - ", 0, artifact_start):artifact_start]
-        self.assertIn("if: always() && steps.superseded_guard.outputs.skip != 'true'", artifact_prefix)
+            index = next(i for i, line in enumerate(lines) if marker in line)
+            expected = (
+                "if: always() && steps.superseded_guard.outputs.skip != 'true'"
+                if "Upload EPG freshness diagnostic" in marker
+                else "if: steps.superseded_guard.outputs.skip != 'true'"
+            )
+            self.assertIn(expected, lines[index + 1], marker)
 
     def test_epg_refresh_serializes_builds_and_keeps_known_good_guide_safe(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
