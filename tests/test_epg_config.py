@@ -315,10 +315,10 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("tests/test_epg_config.py", workflow)
 
     def test_generator_parses_the_payload_for_each_fetched_source(self):
-        self.assertIn(
-            'data = source_payloads[src]\n            for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):',
-            GEN,
-        )
+        self.assertIn("data = source_payloads[src]", GEN)
+        self.assertIn('ET.iterparse(io.BytesIO(data), events=("end",))', GEN)
+        self.assertIn("scanned_programmes += 1", GEN)
+        self.assertIn("mapped_programmes += 1", GEN)
 
     def test_country_specific_feeds_are_scanned_for_active_playlist_regions(self):
         with tempfile.TemporaryDirectory() as tmp:
