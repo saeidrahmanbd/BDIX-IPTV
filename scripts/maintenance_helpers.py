@@ -23,7 +23,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from logo_asset_naming import is_blocked_logo_basename
-from permanent_removals import PERMANENTLY_REMOVED_NAMES
+from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS, PERMANENTLY_REMOVED_NAMES
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
@@ -175,8 +175,29 @@ def _is_authorized_duplicate_backup(info: str, url: str) -> bool:
     return bool(key[1]) and key in AUTHORIZED_DUPLICATE_BACKUPS
 
 
+def _is_authorized_orphan_backup_removal(info: str, url: str) -> bool:
+    """Match only the exact Backup identity + endpoint authorized for deletion."""
+    if _group(info) != "Backup":
+        return False
+    a = _attrs(info)
+    ids = {
+        value.strip().casefold()
+        for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
+        if value.strip()
+    }
+    candidate_url = str(url or "").strip().casefold()
+    return any(
+        channel_id in ids and candidate_url == expected_url.casefold()
+        for channel_id, expected_url in AUTHORIZED_ORPHAN_BACKUP_REMOVALS.items()
+    )
+
+
 def _is_authorized_removal(info: str, url: str) -> bool:
-    return _is_permanently_removed(info) or _is_authorized_duplicate_backup(info, url)
+    return (
+        _is_permanently_removed(info)
+        or _is_authorized_duplicate_backup(info, url)
+        or _is_authorized_orphan_backup_removal(info, url)
+    )
 
 
 def _protected_blocks(text: str) -> list[dict[str, object]]:
