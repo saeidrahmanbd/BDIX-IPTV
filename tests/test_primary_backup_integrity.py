@@ -107,7 +107,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         rplus_url = "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e5dcc9dc-3a33-4b19-a361-5a5b3aa022f7/index.m3u8"
         alternate_bhi_url = "https://different.example/bhi-alternate.m3u8"
         sample = (
-            "#EXTM3U\\n"
+            "#EXTM3U" + chr(10)
             + row("BHI.Channel.in", "BHI Channel", "Backup", bhi_url, country="IN")
             + row("RPlus.in@SD", "R Plus", "Backup", rplus_url, country="IN")
             + row("BHI.Channel.in", "BHI Channel", "Backup", alternate_bhi_url, country="IN")
