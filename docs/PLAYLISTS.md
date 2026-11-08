@@ -41,7 +41,13 @@ The companion International playlist includes Bangladesh and India under their a
 
 Adult channels are not excluded by this policy; they are kept in the Adult group of the International playlist.
 
-New channel candidates and alternate streams are kept in **New Channels** and **New Backups** for manual review. The discovery workflows do not automatically approve or promote those entries. The five-unique-channel threshold for a foreign country group applies only after candidates have been manually reviewed.
+The main playlist has three distinct non-numbered queues:
+
+- **Review** is reserved for unresolved or questionable entries that the owner wants to check manually.
+- **New Channels** is populated automatically by the scheduled Bangladesh/India discovery workflow when it finds a first validated stream for a new channel identity.
+- **New Backups** is populated automatically by that workflow when it finds another validated stream for an existing or newly discovered channel identity.
+
+The Bangladesh/India discovery workflow runs daily at **07:00 Asia/Dhaka** and can be started manually. Discovery automatically adds candidates to New Channels/New Backups, but it does not approve or promote them into curated groups. Manual review is required before promotion. All three queues are excluded from Xtream and have no channel numbers. The five-unique-channel threshold for a foreign country group applies only after candidates have been manually reviewed.
 
 ## Add an M3U playlist to your player
 

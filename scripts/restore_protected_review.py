@@ -14,7 +14,7 @@ import unicodedata
 from collections import Counter
 from pathlib import Path
 
-from permanent_removals import PERMANENTLY_REMOVED_NAMES
+from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS, PERMANENTLY_REMOVED_NAMES
 from urllib.parse import urlsplit
 
 SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
@@ -136,6 +136,23 @@ def canonical_url_base(url: str) -> str:
     return parsed.netloc.casefold() + path
 
 
+def is_authorized_orphan_backup_removal(info: str, url: str) -> bool:
+    """Authorize only the exact Backup identity and endpoint the owner rejected."""
+    a = attrs(info)
+    if a.get("group-title", "").strip() != "Backup":
+        return False
+    ids = {
+        value.strip().casefold()
+        for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
+        if value.strip()
+    }
+    candidate_url = str(url or "").strip().casefold()
+    return any(
+        channel_id in ids and candidate_url == expected_url.casefold()
+        for channel_id, expected_url in AUTHORIZED_ORPHAN_BACKUP_REMOVALS.items()
+    )
+
+
 def is_authorized_duplicate_backup(info: str, url: str) -> bool:
     if group_of(info) != "Backup" or normalize_name(display_name(info)) != "sparklemovies":
         return False
@@ -147,7 +164,11 @@ def is_authorized_duplicate_backup(info: str, url: str) -> bool:
 
 
 def is_authorized_removal(info: str, url: str) -> bool:
-    return is_permanently_removed(info) or is_authorized_duplicate_backup(info, url)
+    return (
+        is_permanently_removed(info)
+        or is_authorized_duplicate_backup(info, url)
+        or is_authorized_orphan_backup_removal(info, url)
+    )
 
 def count_unapproved_removed_url_occurrences(old_entries, current_entries) -> int:
     """Count missing URL occurrences, excluding only exact authorized removals."""

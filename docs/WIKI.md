@@ -18,14 +18,15 @@ The root [README](../README.md) is the project overview. This page records the c
 
 The main playlist's multi-country scope is distinct from the source scope of any individual discovery workflow. The International discovery workflow is specifically limited to eligible movie/music candidates from Pakistan and other countries; it must not stage non-Bangladesh/India news, sports, religious, kids, educational, documentary, radio, VOD or general-entertainment channels as eligible movie/music candidates. A country-specific group for other countries requires at least five unique, manually curated primary channel identities.
 
-## Discovery and manual review
+## Review and automatic discovery queues
 
-- First-stream candidates for genuinely new channels are placed in **New Channels**.
-- Alternate streams are placed in **New Backups**.
-- Both groups are **manual-review queues**. Automation must not approve, promote or move candidates from these queues into curated groups.
-- Queue entries do not count toward the five-channel country-group threshold.
+- **Review** is the manual-check queue for unresolved, questionable or quarantined entries. It is not an automatic discovery destination. Keep its entries available for the owner's inspection; do not silently promote them into curated groups.
+- **New Channels** is automatically populated by the scheduled Bangladesh/India discovery workflow. The first validated stream for a genuinely new channel identity is added here.
+- **New Backups** is automatically populated by the same discovery workflow. Additional validated stream URLs for an existing or newly discovered identity are added here.
+- The discovery workflow runs daily at **07:00 Asia/Dhaka** and can also be started manually. Automatic discovery only collects and validates candidates; it does not approve or promote them into curated groups. Manual review is required before promotion.
+- **Review**, **New Channels** and **New Backups** are unnumbered and excluded from Xtream. Their entries do not count toward the five-channel country-group threshold.
+- Existing **Backup** records are alternate streams linked to a primary channel identity. Do not delete them solely because a probe is inconclusive; only explicitly owner-authorized removals may be deleted.
 - Keep uncertain stream checks available for manual review; remove only duplicates, clearly invalid/non-TV sources, explicitly prohibited candidates, unsafe proxy/tokenized links or definitively dead endpoints under the workflow's validation rules.
-- Existing **Backup** and **Not Playing** records have separate preservation rules. Do not delete them solely because a probe is inconclusive.
 
 ## Metadata and logos
 

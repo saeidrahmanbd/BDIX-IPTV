@@ -35,10 +35,10 @@ class ActiveChannelNumberingTests(unittest.TestCase):
         self.assertLess(updated.index(",Alpha"), updated.index(",Zeta"))
         self.assertLess(updated.index(",Zeta"), updated.index(",Movie"))
 
-    def test_review_queues_are_unnumbered_and_keep_internal_order(self):
+    def test_review_and_discovery_queues_are_unnumbered_and_in_canonical_order(self):
         updated, _ = normalize_playlist_text(self.sample)
-        self.assertLess(updated.index(",Queue B"), updated.index(",New B"))
         self.assertLess(updated.index(",New B"), updated.index(",New Backup B"))
+        self.assertLess(updated.index(",New Backup B"), updated.index(",Queue B"))
         self.assertNotIn('tvg-chno="700"', updated)
         self.assertNotIn('tvg-chno="701"', updated)
         self.assertNotIn('tvg-chno="702"', updated)

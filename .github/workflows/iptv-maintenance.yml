@@ -17,6 +17,7 @@ on:
       - scripts/renumber_active_channels.py
       - tests/test_channel_numbering.py
       - scripts/reconcile_backup_metadata_exact_id.py
+      - scripts/permanent_removals.py
       - scripts/enforce_primary_backup_integrity.py
       - tests/test_primary_backup_integrity.py
       - tests/test_backup_metadata_reconcile.py

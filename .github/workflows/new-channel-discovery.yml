@@ -21,6 +21,7 @@ on:
       - 'tests/test_country_verification.py'
       - 'tests/test_discovery_schedule_guard.py'
       - 'scripts/final_playlist_hardening.py'
+      - 'scripts/permanent_removals.py'
       - 'scripts/enforce_primary_backup_integrity.py'
       - 'tests/test_primary_backup_integrity.py'
       - 'scripts/sort_playlists.py'

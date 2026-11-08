@@ -2,11 +2,13 @@
 """Final policy/structure repair for IPTV-Playlist.m3u only.
 
 This pass is deliberately conservative: it changes metadata/group structure,
-removes exact duplicate URLs, and preserves orphan Backup records for manual
-review instead of deleting them. It preserves known required movie/drama records
+removes exact duplicate URLs and the two explicitly rejected orphan Backup endpoints.
+Other orphan Backup records are preserved in Review for manual review. It preserves known required records
 and never changes a stream URL merely because a live probe fails.
 """
 from pathlib import Path
+
+from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS
 import re
 import unicodedata
 
@@ -17,7 +19,7 @@ ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Backup", "Review", "New Channels", "New Backups",
+    "Review", "New Channels", "New Backups", "Backup",
 ]
 NO_NUMBER = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}
 BACKUP = "Backup"
@@ -116,6 +118,7 @@ def main():
     changed = 0
     removed_duplicate = 0
     orphan_backups_preserved = 0
+    authorized_orphan_backups_removed = 0
     removed_malformed = 0
 
     seen_urls = set()
@@ -128,6 +131,18 @@ def main():
 
         if not url:
             removed_malformed += 1
+            continue
+
+        ids = {
+            value.strip().casefold()
+            for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
+            if value.strip()
+        }
+        if group == "Backup" and any(
+            channel_id in ids and url.casefold() == expected_url.casefold()
+            for channel_id, expected_url in AUTHORIZED_ORPHAN_BACKUP_REMOVALS.items()
+        ):
+            authorized_orphan_backups_removed += 1
             continue
 
         if group == "Not Playing":
@@ -205,7 +220,8 @@ def main():
     P.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     print(
         f"Playlist policy repair: changed={changed}, duplicate_urls_removed={removed_duplicate}, "
-        f"orphan_backups_preserved={orphan_backups_preserved}, malformed_records_removed={removed_malformed}, "
+        f"orphan_backups_preserved={orphan_backups_preserved}, authorized_orphan_backups_removed={authorized_orphan_backups_removed}, "
+        f"malformed_records_removed={removed_malformed}, "
         f"required_records_restored={added_required}, entries={len(blocks)}"
     )
 

@@ -8,7 +8,7 @@ The main **multi-country IPTV M3U playlist** is a broad collection—not limited
 
 - **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — a companion collection for Bangladesh and India plus eligible movie and music channels from Pakistan and other countries.
 
-See the [multi-country IPTV playlist guide](PLAYLISTS.md) for eligibility rules, direct URLs and setup instructions. New channel and alternate-stream candidates remain in New Channels and New Backups for manual review.
+See the [multi-country IPTV playlist guide](PLAYLISTS.md) for eligibility rules, direct URLs and setup instructions. The daily Bangladesh/India discovery workflow automatically fills New Channels with first streams and New Backups with alternate streams; both remain manual-approval queues. Review is a separate queue for entries selected for the owner's manual check.
 
 > **EPG status:** The XMLTV refresh pipeline is enabled. The maintained playlists advertise the repository guide URL, and programme data is published only after the generated guide passes freshness and quality validation. The EPG pipeline combines configured public or otherwise accessible schedule feeds while keeping private credentials and personalized URLs out of the public repository. EPG.PW remains excluded from public-guide ingestion because its Terms of Service prohibit copying/retransmission and limit use to personal use. Other EPG sources and the EPG refresh workflow remain enabled. Source-review metadata is advisory rather than a build gate. See the [EPG status report](../reports/epg-coverage.md).
 

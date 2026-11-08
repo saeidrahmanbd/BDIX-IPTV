@@ -6,7 +6,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from enforce_primary_backup_integrity import GROUP_ORDER, repair_playlist_text
+from enforce_primary_backup_integrity import GROUP_ORDER, is_authorized_orphan_backup_removal, repair_playlist_text
+from restore_protected_review import is_authorized_removal
+from maintenance_helpers import _is_authorized_removal
 
 
 LOGO = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/x.png"
@@ -78,9 +80,46 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         for name in ("Review", "New Channels", "New Backups"):
             self.assertIn(f'group-title="{name}"', updated)
         self.assertNotIn('group-title="Review" tvg-chno=', updated)
-        self.assertLess(updated.index('group-title="Backup"'), updated.index('group-title="Review"'))
         self.assertLess(updated.index('group-title="Review"'), updated.index('group-title="New Channels"'))
         self.assertLess(updated.index('group-title="New Channels"'), updated.index('group-title="New Backups"'))
+        self.assertLess(updated.index('group-title="New Backups"'), updated.index('group-title="Backup"'))
+
+    def test_only_two_exact_orphan_backup_endpoints_are_authorized_for_removal(self):
+        bhi_url = "https://server.livelegitpro.in/bhichannel/bhichannel/tracks-v1a1/mono.m3u8"
+        rplus_url = "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e5dcc9dc-3a33-4b19-a361-5a5b3aa022f7/index.m3u8"
+        bhi_info = row("BHI.Channel.in", "BHI Channel", "Backup", bhi_url, country="IN").splitlines()[0]
+        rplus_info = row("RPlus.in@SD", "R Plus", "Backup", rplus_url, country="IN").splitlines()[0]
+
+        for info, url in ((bhi_info, bhi_url), (rplus_info, rplus_url)):
+            self.assertTrue(is_authorized_orphan_backup_removal(info, url))
+            self.assertTrue(is_authorized_removal(info, url))
+            self.assertTrue(_is_authorized_removal(info, url))
+
+        # The exception is exact: it does not authorize another stream URL or a
+        # row moved into Review, and it does not authorize the whole channel name.
+        self.assertFalse(is_authorized_orphan_backup_removal(bhi_info, "https://different.example/bhi.m3u8"))
+        review_info = bhi_info.replace('group-title="Backup"', 'group-title="Review"')
+        self.assertFalse(is_authorized_removal(review_info, bhi_url))
+        self.assertFalse(_is_authorized_removal(review_info, bhi_url))
+
+    def test_exactly_authorized_orphan_backup_rows_are_removed_but_other_orphans_are_reviewed(self):
+        bhi_url = "https://server.livelegitpro.in/bhichannel/bhichannel/tracks-v1a1/mono.m3u8"
+        rplus_url = "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e5dcc9dc-3a33-4b19-a361-5a5b3aa022f7/index.m3u8"
+        alternate_bhi_url = "https://different.example/bhi-alternate.m3u8"
+        sample = (
+            "#EXTM3U" + chr(10)
+            + row("BHI.Channel.in", "BHI Channel", "Backup", bhi_url, country="IN")
+            + row("RPlus.in@SD", "R Plus", "Backup", rplus_url, country="IN")
+            + row("BHI.Channel.in", "BHI Channel", "Backup", alternate_bhi_url, country="IN")
+        )
+        updated, stats, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertNotIn(bhi_url, updated)
+        self.assertNotIn(rplus_url, updated)
+        self.assertIn(alternate_bhi_url, updated)
+        self.assertEqual(stats["user_authorized_orphan_backups_removed"], 2)
+        alternate_info = updated.split(alternate_bhi_url)[0].split("#EXTINF:")[-1]
+        self.assertIn('group-title="Review"', alternate_info)
 
     def test_stream_urls_are_preserved(self):
         updated, _, errors = repair_playlist_text(self.sample)
