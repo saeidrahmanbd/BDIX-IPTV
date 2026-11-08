@@ -32,6 +32,10 @@ The endpoint streams the published guide and return HTTP 503 if the guide is tem
 ## Security
 
 - Xtream credentials are supplied through deployment secrets; do not commit usernames or passwords.
+- Xtream-compatible clients send credentials in request URLs (query parameters for API authentication and username/password path segments for stream URLs). This is a protocol compatibility requirement in the current worker, not a private transport mechanism.
+- Treat every authenticated gateway URL as a secret: URLs may be retained in client history, reverse-proxy/edge access logs, diagnostics, screenshots and telemetry. Do not paste them into public issues, chat rooms or support screenshots.
+- Use HTTPS, restrict access to deployment logs, and redact query strings and authenticated path segments before sharing diagnostics. Never log complete authenticated request URLs or credentials.
+- Use a dedicated gateway credential pair and rotate it if an authenticated URL is exposed. These precautions do not change the existing Xtream endpoint format.
 - Do not place real credentials in this repository or in example configuration files.
 - The workers are downstream consumers of the published playlist data.
 - Review reports only after checking their timestamps and source fingerprints. The pre-publish gate is a generated snapshot, not a live authorization signal.
