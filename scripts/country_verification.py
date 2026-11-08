@@ -43,7 +43,7 @@ ALLOWED = frozenset({"BD", "IN"})
 # an unknown feed or for similarly named international channels.
 INDIA_FEED_ID_OVERRIDES = {
     "cartoonnetwork": "CartoonNetwork.in",
-    "colorscineplexuk": "ColorsCineplex.in",
+    "colorscineplex": "ColorsCineplex.in",
 }
 
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
