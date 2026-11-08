@@ -804,13 +804,14 @@ MAX_AUTOMATIC_SOURCE_OFFSET_MINUTES = 14 * 60
 
 
 def infer_source_offsets(records, manual_review=None):
-    """Infer conservative feed/ID offsets from independent cross-source evidence.
+    """Infer conservative feed/ID offsets from independent provider evidence.
 
-    A programme signature must occur in at least three different feed inputs;
-    multiple channel IDs inside one feed are not independent corroboration.
-    Corrections are limited to plausible timezone displacements (2 to 14 hours).
-    Larger, strongly recurring shifts are returned through manual_review and
-    deliberately left unchanged.
+    A programme signature must occur in at least three distinct provider hosts.
+    Multiple country files or channel IDs served by one host count as one vote.
+    If one host reports conflicting times for the same signature, it is excluded
+    from that signature's consensus. Corrections are limited to plausible
+    timezone displacements (2 to 14 hours); larger shifts remain manual-review
+    items and are never applied automatically.
     """
     signatures = {}
     for r in records:
@@ -822,36 +823,55 @@ def infer_source_offsets(records, manual_review=None):
         key = (title, duration_bin)
         signatures.setdefault(key, {}).setdefault((r["source_index"], r["source_id"]), []).append(r)
 
+    def provider_key(record):
+        host = urlparse(str(record.get("source") or "")).hostname
+        if host:
+            return host.casefold()
+        return f"feed-index:{record.get('source_index', 'unknown')}"
+
     proposals = {}
     for source_map in signatures.values():
         unique = {source_key: rows[0] for source_key, rows in source_map.items() if len(rows) == 1}
-        # Distinct IDs from one XMLTV feed are not independent source evidence.
-        if len({source_key[0] for source_key in unique}) < 3:
+        by_provider = {}
+        for source_key, record in unique.items():
+            by_provider.setdefault(provider_key(record), []).append((source_key, record))
+
+        # Give each provider host one vote. Exclude hosts whose files/IDs disagree
+        # on this programme's start time instead of allowing duplicate feeds to
+        # overwhelm the median or masquerade as independent corroboration.
+        provider_items = []
+        for provider, items in by_provider.items():
+            starts = [record["start_dt"] for _, record in items]
+            if (max(starts) - min(starts)).total_seconds() > 600:
+                continue
+            provider_items.append(
+                (provider, min(items, key=lambda item: item[0][0]))
+            )
+        if len(provider_items) < 3:
             continue
-        ordered = sorted(unique.items(), key=lambda item: item[1]["start_dt"])
+
+        ordered = sorted(provider_items, key=lambda item: item[1][1]["start_dt"])
         clusters = []
         for item in ordered:
-            start = item[1]["start_dt"]
-            if not clusters or (start - clusters[-1][-1][1]["start_dt"]).total_seconds() > 600:
+            start = item[1][1]["start_dt"]
+            if not clusters or (start - clusters[-1][-1][1][1]["start_dt"]).total_seconds() > 600:
                 clusters.append([item])
             else:
                 clusters[-1].append(item)
         if len(clusters) < 2:
             continue
-        consensus = max(
-            clusters,
-            key=lambda cluster: (len(cluster), len({item[0][0] for item in cluster})),
-        )
-        consensus_feed_indexes = {item[0][0] for item in consensus}
-        if len(consensus_feed_indexes) < 2:
+        consensus = max(clusters, key=len)
+        consensus_providers = {item[0] for item in consensus}
+        if len(consensus_providers) < 2:
             continue
-        consensus_start = sorted(item[1]["start_dt"] for item in consensus)[len(consensus) // 2]
+        consensus_start = sorted(
+            item[1][1]["start_dt"] for item in consensus
+        )[len(consensus) // 2]
         for cluster in clusters:
             if cluster is consensus or len(cluster) != 1:
                 continue
-            source_key, record = cluster[0]
-            # Never correct an ID using another ID from the same feed as consensus.
-            if source_key[0] in consensus_feed_indexes:
+            provider, (source_key, record) = cluster[0]
+            if provider in consensus_providers:
                 continue
             delta = consensus_start - record["start_dt"]
             minutes = round(delta.total_seconds() / 300) * 5
