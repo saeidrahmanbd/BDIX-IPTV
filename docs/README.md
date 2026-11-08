@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-- **[Bangladeshi IPTV Playlist Guide](PLAYLISTS.md)** — Bangladesh and India M3U playlists, international eligibility and player setup
+- **[Multi-Country IPTV Playlist Guide](PLAYLISTS.md)** — main multi-country M3U collection, channel eligibility and player setup
 - **[Search Visibility & SEO Tracking](SEO-TRACKING.md)** — Google Search Console, Bing Webmaster Tools, query groups and review cadence
 - **[Project Overview](PROJECT-README.md)** — repository overview, playlists, maintenance and policies
 - **[Playlist Studio 5.0](PLAYLIST-STUDIO.md)** — features, download, usage and build instructions
@@ -15,7 +15,7 @@
 
 ### Main Resources
 
-- [Main IPTV Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)
+- [Main Multi-Country IPTV Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)
 - [International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)
 - [Xtream Documentation](../xtream/README.md)
 - [Xtream Main Worker](../xtream-main/)
