@@ -378,6 +378,53 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             intl_validator.foreign_movie_music_error(valid_music, "8XM", "PK"), ""
         )
 
+    def test_foreign_channels_in_generic_genre_groups_are_rejected(self):
+        examples = [
+            ("Documentary & Wildlife", "US", "4K Travel", "custom.4k.travel"),
+            ("Kids", "PL", "4 Fun Kids", "4FunKids.pl"),
+            ("Religious", "PK", "ARY Qtv", "ARYQTV.pk"),
+            ("Sports", "TR", "A Spor", "ASpor.tr"),
+        ]
+        for group, country, name, tvg_id in examples:
+            with self.subTest(group=group, country=country, name=name):
+                attrs = {
+                    "group-title": group,
+                    "tvg-country": country,
+                    "tvg-id": tvg_id,
+                    "tvg-content": "Movies",
+                }
+                self.assertNotEqual(
+                    intl_validator.genre_group_policy_error(attrs, name, group), ""
+                )
+
+    def test_bangladesh_and_allowed_indian_genre_groups_are_preserved(self):
+        examples = [
+            ("Religious", "BD", "Madani TV", "MadaniTV.bd"),
+            ("Documentary & Wildlife", "BD", "Discovery Bangla", "DiscoveryBangla.bd"),
+            ("Kids", "IN", "Pogo", "Pogo.in"),
+            ("Sports", "IN", "DD Sports", "DDSports.in"),
+        ]
+        for group, country, name, tvg_id in examples:
+            with self.subTest(group=group, country=country, name=name):
+                attrs = {
+                    "group-title": group,
+                    "tvg-country": country,
+                    "tvg-id": tvg_id,
+                }
+                self.assertEqual(
+                    intl_validator.genre_group_policy_error(attrs, name, group), ""
+                )
+
+    def test_indian_religious_genre_group_is_rejected(self):
+        attrs = {
+            "group-title": "Religious",
+            "tvg-country": "IN",
+            "tvg-id": "PeaceTV.in",
+        }
+        self.assertNotEqual(
+            intl_validator.genre_group_policy_error(attrs, "Peace TV", "Religious"), ""
+        )
+
     def test_foreign_primary_country_groups_reject_missing_or_conflicting_movie_music_tags(self):
         missing = {
             "group-title": "Pakistani", "tvg-country": "PK", "tvg-id": "HumTV.pk",
