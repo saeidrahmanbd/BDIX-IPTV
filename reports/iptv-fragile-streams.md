@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-08T09:40:15+00:00**
-IPTV-Playlist.m3u SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9c629b15ff2d**
+Generated: **2026-11-08T10:56:43+00:00**
+IPTV-Playlist.m3u SHA-256: **42d6d2b01b52c16d2c9a8f0d0593b6df532bef90c37667e755cfc1b085f5540c**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **203**
+- Flagged streams: **200**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -96,11 +96,8 @@ These streams are not automatically removed. URL credentials, user information a
 | Al Quran Al Kareem TV | Religious | credential-bearing route pattern (values redacted) | `https://cdn-globecast.akamaized.net/live/REDACTED/REDACTED/hls_roku/index.m3u8` |
 | Al-Zahra TV Turkic | Religious | credential-bearing route pattern (values redacted) | `https://live.al-zahratv.com/live/playlist.m3u8` |
 | Bahrain Quran | Religious | credential-bearing route pattern (values redacted) | `https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/playlist.m3u8` |
-| IBN TV | Religious | credential-bearing route pattern (values redacted) | `http://138.68.138.119:8080/live/5a8993709ea19/index.m3u8` |
-| IBN TV Africa | Religious | credential-bearing route pattern (values redacted) | `http://68.183.41.209:8080/live/5d9a537c64b9c/index.m3u8` |
 | Islamic TV | Religious | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/islamic_tv/index.m3u8` |
 | Medina Live | Religious | credential-bearing route pattern (values redacted) | `https://cdn-globecast.akamaized.net/live/REDACTED/REDACTED/hls_roku/index.m3u8` |
-| Safeer TV | Religious | credential-bearing route pattern (values redacted) | `https://cdn3.wowza.com/1/YStGZlJRdktzZkdK/VXROZWNW/hls/live/playlist.m3u8` |
 | ATG Live | Sports | credential-bearing route pattern (values redacted) | `https://kanal75xto-llhls.akamaized.net/live/REDACTED/REDACTED/HLS-Legacy-HL/atg-kanal-15-02a-rr.m3u8` |
 | Bahrain Sports 2 | Sports | credential-bearing route pattern (values redacted) | `https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8` |
 | Eurosport | Sports | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8` |

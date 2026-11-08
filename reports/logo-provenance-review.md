@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-08T09:40:16+00:00**
+Generated: **2026-11-08T10:56:44+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9c629b15ff2d**
-- International-Playlist.m3u SHA-256: **7cc909e5c9d9086ae1f28f720653c7bdd68a1bb1b5e64a61e3280074253069a5**
+- IPTV-Playlist.m3u SHA-256: **42d6d2b01b52c16d2c9a8f0d0593b6df532bef90c37667e755cfc1b085f5540c**
+- International-Playlist.m3u SHA-256: **be459b74430ed16017a820fe84a7d7fee7d861c0724f5a3698fd5397008da43f**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 10 | 0 | 942 |
+| IPTV-Playlist.m3u | 0 | 10 | 0 | 933 |
 | International-Playlist.m3u | 0 | 836 | 0 | 2194 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3136**
+- Logos needing attribution review: **3127**
 - Unofficial fallback logos: **0**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3136 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3127 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
@@ -67,9 +67,9 @@ Showing up to 40 of 3136 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | Al Qamar | AlQamarTV.ae | al-qamar.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Al Quran Al Kareem TV | AlQuranAlKareemTV.sa | al-quran-al-kareem-tv.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Al Quran Al Kareem TV | AlQuranAlKareemTV.sa | al-quran-al-kareem-tv.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | Al-Mahdi TV | AlMahdiTV.us |  | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Al-Zahra TV Turkic | AlZahraTVTurkic.sa | al-zahra-tv-turkic.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Alankar TV | AlankarTV.in@SD | alankar-tv.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | Alone | Alone.us | alone.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 
 ## Shared logo assets across distinct channel identities
 

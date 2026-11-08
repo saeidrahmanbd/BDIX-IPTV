@@ -1,27 +1,27 @@
 # Update Report
 
-_Last generated: **2026-11-08 09:40 UTC**_
+_Last generated: **2026-11-08 10:56 UTC**_
 
-Source playlist SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9c629b15ff2d**
+Source playlist SHA-256: **42d6d2b01b52c16d2c9a8f0d0593b6df532bef90c37667e755cfc1b085f5540c**
 
 | Metric | Current |
 |---|---:|
-| Streams | **952** |
-| Active Channel Identities | **618** |
-| Active Primary Streams | **618** |
+| Streams | **943** |
+| Active Channel Identities | **609** |
+| Active Primary Streams | **609** |
 | Bangladesh | **66** |
-| India | **295** |
+| India | **294** |
 | Backup Stream Entries | **333** |
-| IPTV Local Logos | **98.9%** |
+| IPTV Local Logos | **99.9%** |
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
-| Stream Health Tested | **952** |
-| Stream Health Failures | **54** |
-| Persistent Failures | **46** |
+| Stream Health Tested | **943** |
+| Stream Health Failures | **56** |
+| Persistent Failures | **49** |
 | Near-Duplicate URL Families | **2** |
-| Audit Blocking Issues | **10** |
+| Audit Blocking Issues | **1** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-11-08T09:39:52+00:00** |
+| Pre-Publish Gate Generated | **2026-11-08T10:56:14+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
@@ -32,7 +32,7 @@ Source playlist SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
-- Logo exceptions: **10**
+- Logo exceptions: **1**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Alphabetical ordering issues: **0**
@@ -62,14 +62,14 @@ Source playlist SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-08T09:39:52.250327+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-08T10:56:14.381524+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-08T02:50:41+00:00** | **PENDING — guide missing or freshness not PASS** |
-| Stream health | **2026-11-08T09:40:15+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-08T09:39:52+00:00** | **CURRENT** |
+| Stream health | **2026-11-08T10:56:43+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-08T10:56:14+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
-- Latest entries change: **952 → 952**
-- Latest health failures: **58 → 54**
+- Latest entries change: **952 → 943**
+- Latest health failures: **54 → 56**
 
 Historical records are retained in reports/maintenance-history.json.

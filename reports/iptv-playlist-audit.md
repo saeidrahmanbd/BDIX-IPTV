@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-08T09:39:52.250327+00:00**
-Source playlist SHA-256: **6a28ea1a0563866ab751af2be458465788011ee1f8c39e3adfba9c629b15ff2d**
+Generated: **2026-11-08T10:56:14.381524+00:00**
+Source playlist SHA-256: **42d6d2b01b52c16d2c9a8f0d0593b6df532bef90c37667e755cfc1b085f5540c**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **952**
-- Unique channel IDs: **619**
+- Playlist entries: **943**
+- Unique channel IDs: **610**
 - IDs with multiple streams: **183**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -18,10 +18,10 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **10**
+- Logo exceptions requiring repair: **1**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **952**
+- Logo references checked: **943**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
@@ -782,7 +782,7 @@ None.
 
 ## Primary Channel-Number Sequence
 
-Contiguous numbering verified: 1–618.
+Contiguous numbering verified: 1–609.
 
 ## Malformed EXTINF Entries
 
@@ -823,7 +823,7 @@ None.
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 None.
-- missing: **10**
+- missing: **1**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
