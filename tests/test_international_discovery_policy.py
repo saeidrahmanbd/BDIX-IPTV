@@ -144,10 +144,10 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             "tvg-content": "Music",
         }
         policy_attrs = dict(attrs, **{"group-title": "International"})
-        self.assertEqual(discovery.policy(policy_attrs, "VIP TV"), ("International Music", None, "AW"))
+        self.assertEqual(discovery.policy(policy_attrs, "VIP TV", allow_legacy_group=True), ("International Music", None, "AW"))
         self.assertEqual(intl_validator.foreign_movie_music_error(attrs, "VIP TV", "AW"), "")
         wrong_identity = dict(policy_attrs, **{"tvg-id": "VIPTV.aw"})
-        self.assertIsNone(discovery.policy(wrong_identity, "VIP TV")[0])
+        self.assertIsNone(discovery.policy(wrong_identity, "VIP TV", allow_legacy_group=True)[0])
 
     def test_bangladesh_religious_educational_kids_and_sports_are_not_genre_filtered(self):
         examples = [
