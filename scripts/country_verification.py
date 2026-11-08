@@ -35,6 +35,17 @@ from pathlib import Path
 REVIEW_QUEUES = frozenset({"New Channels", "New Backups", "New Backup"})
 NON_PRIMARY_GROUPS = frozenset({"Backup", "Review", "Not Playing", *REVIEW_QUEUES})
 ALLOWED = frozenset({"BD", "IN"})
+
+# Curated exceptions for India-feed variants whose upstream catalogue IDs carry
+# a distribution-market suffix (for example .uk/.us) rather than the Indian
+# service identity. These are exact normalized channel-name matches and apply
+# ONLY when the discovery source itself is the India feed. Never use them for
+# an unknown feed or for similarly named international channels.
+INDIA_FEED_ID_OVERRIDES = {
+    "cartoonnetwork": "CartoonNetwork.in",
+    "colorscineplexuk": "ColorsCineplex.in",
+}
+
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 ID_CC_RE = re.compile(r"\.([a-z]{2})(?:@|$)")
@@ -131,6 +142,13 @@ def verify_country(a: dict[str, str], name: str, reference: Reference | None = N
     declared = a.get("tvg-country", "").strip().upper()
     ids = [x.strip() for x in (a.get("tvg-id", ""), a.get("channel-id", "")) if x and x.strip()]
     ccs = {id_country(x) for x in ids} - {None}
+
+    # Some India-feed catalogues publish Indian services with a UK/US
+    # distribution suffix. Accept only the two explicitly curated identities,
+    # only on the India feed, and rewrite them to canonical .in IDs downstream.
+    override_id = INDIA_FEED_ID_OVERRIDES.get(norm_name(name or a.get("tvg-name", "")))
+    if feed == "IN" and override_id:
+        return Verdict("IN", tvg_id=override_id, basis="curated-india-feed-override")
 
     if declared and declared not in ALLOWED:
         return Verdict(None, reason=f"declared country {declared} is not BD/IN")
