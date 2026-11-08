@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T05:27:26+00:00",
+  "generated": "2026-11-08T05:32:13+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -231,6 +231,20 @@
       "primary": 1,
       "backup": 0
     },
+    "afrolandtv": {
+      "names": [
+        "AfroLandTV"
+      ],
+      "ids": [
+        "afrolandtv.us@sd"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "alankartv": {
       "names": [
         "Alankar TV"
@@ -268,6 +282,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "almahditv": {
+      "names": [
+        "Al-Mahdi TV"
+      ],
+      "ids": [
+        "almahditv.us"
+      ],
+      "groups": [
+        "Religious"
       ],
       "streams": 1,
       "primary": 1,
@@ -1162,6 +1190,20 @@
       "primary": 1,
       "backup": 0
     },
+    "bollywoodmasala": {
+      "names": [
+        "Bollywood Masala"
+      ],
+      "ids": [
+        "bollywoodmasala.in"
+      ],
+      "groups": [
+        "Indian Movies"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "bsfilm": {
       "names": [
         "BS Film"
@@ -1357,7 +1399,7 @@
         "Channel Europe"
       ],
       "ids": [
-        "channeleurope"
+        "channeleurope.uk"
       ],
       "groups": [
         "Bangladesh"
@@ -1718,6 +1760,20 @@
       ],
       "ids": [
         "crimejustice.us"
+      ],
+      "groups": [
+        "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "crimeplusinvestigation": {
+      "names": [
+        "Crime + Investigation"
+      ],
+      "ids": [
+        "crimeplusinvestigation.us@sd"
       ],
       "groups": [
         "Documentary & Wildlife"
@@ -3780,6 +3836,20 @@
       "primary": 1,
       "backup": 0
     },
+    "failarmy": {
+      "names": [
+        "FailArmy"
+      ],
+      "ids": [
+        "failarmy.us"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "faktmarathi": {
       "names": [
         "Fakt Marathi"
@@ -3916,6 +3986,34 @@
       ],
       "groups": [
         "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "fx1": {
+      "names": [
+        "FX 1"
+      ],
+      "ids": [
+        "fx1.ir"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "fx2": {
+      "names": [
+        "FX 2"
+      ],
+      "ids": [
+        "fx2.ir"
+      ],
+      "groups": [
+        "Kids"
       ],
       "streams": 1,
       "primary": 1,
@@ -4272,6 +4370,34 @@
       "primary": 1,
       "backup": 0
     },
+    "historyhunters": {
+      "names": [
+        "History Hunters"
+      ],
+      "ids": [
+        "historyhunters.uk"
+      ],
+      "groups": [
+        "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "homesunderhammer": {
+      "names": [
+        "Homes Under The Hammer"
+      ],
+      "ids": [
+        "homesunderhammer.uk"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "houseofcrime": {
       "names": [
         "House of Crime"
@@ -4339,6 +4465,34 @@
       ],
       "groups": [
         "Kids"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "ibntv": {
+      "names": [
+        "IBN TV"
+      ],
+      "ids": [
+        "ibntv.tz@sd"
+      ],
+      "groups": [
+        "Religious"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "ibntvafrica": {
+      "names": [
+        "IBN TV Africa"
+      ],
+      "ids": [
+        "ibntvafrica.tz@sd"
+      ],
+      "groups": [
+        "Religious"
       ],
       "streams": 1,
       "primary": 1,
@@ -6649,16 +6803,18 @@
     },
     "powerturktv": {
       "names": [
+        "Power Turk (Not 24/7)",
         "PowerTürk TV"
       ],
       "ids": [
-        "powerturktv.tr"
+        "powerturktv.tr",
+        "powerturktv.tr@sd"
       ],
       "groups": [
         "International"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "pravasichannel": {
@@ -6907,6 +7063,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "radionorbatv": {
+      "names": [
+        "Radio Norba TV"
+      ],
+      "ids": [
+        "radionorbatv.it"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "raftaarmedia": {
       "names": [
@@ -7339,13 +7509,29 @@
     },
     "safaritv": {
       "names": [
-        "Safari TV"
+        "Safari TV",
+        "Safari TV Tamil (Not 24/7)"
       ],
       "ids": [
         "safaritv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Documentary & Wildlife"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
+    },
+    "safeertv": {
+      "names": [
+        "Safeer TV"
+      ],
+      "ids": [
+        "safeertv.uk@sd"
+      ],
+      "groups": [
+        "Religious"
       ],
       "streams": 1,
       "primary": 1,
@@ -8492,6 +8678,20 @@
       "primary": 1,
       "backup": 0
     },
+    "tbstv": {
+      "names": [
+        "TBS TV"
+      ],
+      "ids": [
+        "tbstv.kr"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "tehzeebtv": {
       "names": [
         "Tehzeeb TV"
@@ -8833,6 +9033,20 @@
       "primary": 1,
       "backup": 0
     },
+    "truehistory": {
+      "names": [
+        "True History"
+      ],
+      "ids": [
+        "truehistory.us@sd"
+      ],
+      "groups": [
+        "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "tsports": {
       "names": [
         "T Sports"
@@ -8870,6 +9084,20 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "tvriworld": {
+      "names": [
+        "TVRI World"
+      ],
+      "ids": [
+        "tvriworld.id@sd"
+      ],
+      "groups": [
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -9202,6 +9430,20 @@
       "primary": 1,
       "backup": 0
     },
+    "wkaq-dt.us_locals1": {
+      "names": [
+        "Telemundo Puerto Rico"
+      ],
+      "ids": [
+        "wkaq-dt.us_locals1"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "wonder": {
       "names": [
         "Wonder"
@@ -9334,6 +9576,20 @@
       "streams": 3,
       "primary": 2,
       "backup": 1
+    },
+    "ytatv": {
+      "names": [
+        "YTA TV"
+      ],
+      "ids": [
+        "ytatv.us@sd"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "zainabiachannel": {
       "names": [

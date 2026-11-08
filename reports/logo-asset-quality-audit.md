@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-08T05:27:04+00:00**
+Generated: **2026-11-08T05:31:50+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **ba3d0054b73cb0318a5c4696368ca7c81842e955420369aab9dd0af0b697e941**
+- IPTV-Playlist.m3u SHA-256: **a5c0d5cbdb7c6b01393b624290f84e0e0b5b5df4437d63e967fd8228383264fd**
 - International-Playlist.m3u SHA-256: **7cc909e5c9d9086ae1f28f720653c7bdd68a1bb1b5e64a61e3280074253069a5**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **694**
-- Playlist references whose asset stem differs from the normalized channel name: **1392**
-- Unreferenced files immediately inside logos/: **1423** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1396**
+- Unreferenced files immediately inside logos/: **1420** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -1063,6 +1063,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Cooking Channel | local-logo-cooking-channel.png | International |
 | IPTV-Playlist.m3u | Dance TV | dance-tv.png | International |
 | IPTV-Playlist.m3u | Dong Nai TV 2 | dong-nai-tv-2.png | International |
+| IPTV-Playlist.m3u | FailArmy | nvisionbd-official-fail-army.png | International |
 | IPTV-Playlist.m3u | Fashion TV | fashiontv-1080p-37cc035c2c.png | International |
 | IPTV-Playlist.m3u | iFilm English | ifilm-english-s-e5f0438e73.png | International |
 | IPTV-Playlist.m3u | iON TV UK | ion-tv-uk.png | International |
@@ -1071,7 +1072,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | LoL TV | lol-tv.png | International |
 | IPTV-Playlist.m3u | Music Channel | music-channel-21d02d561c.png | International |
 | IPTV-Playlist.m3u | POP World TV | pop-world-tv-720p-3faede8b6c.png | International |
+| IPTV-Playlist.m3u | Power Turk (Not 24/7) | powerturk-tv-1080p-7651888d90.png | International |
 | IPTV-Playlist.m3u | PowerTürk TV | powerturk-tv-1080p-7651888d90.png | International |
+| IPTV-Playlist.m3u | Radio Norba TV | radio-norba-tv.svg | International |
 | IPTV-Playlist.m3u | Rakuten TV Action Movies UK | rakuten-tv-action-movies-uk-1080p-75f2eea4ce.png | International |
 | IPTV-Playlist.m3u | Rakuten TV Comedy Movies UK | rakuten-tv-comedy-movies.png | International |
 | IPTV-Playlist.m3u | Rakuten TV Family Movies UK | rakuten-tv-family-movies.png | International |
@@ -1262,6 +1265,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
+| IPTV-Playlist.m3u | Safari TV Tamil (Not 24/7) | safari-tv.png | Backup |
 | IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
 | IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
 | IPTV-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Backup |

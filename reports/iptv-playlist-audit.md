@@ -1,33 +1,33 @@
 # IPTV Playlist Audit
-Generated: **2026-11-08T05:27:05.568580+00:00**
-Source playlist SHA-256: **ba3d0054b73cb0318a5c4696368ca7c81842e955420369aab9dd0af0b697e941**
+Generated: **2026-11-08T05:31:51.031826+00:00**
+Source playlist SHA-256: **a5c0d5cbdb7c6b01393b624290f84e0e0b5b5df4437d63e967fd8228383264fd**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1018**
-- Unique channel IDs: **680**
-- IDs with multiple streams: **188**
+- Playlist entries: **1038**
+- Unique channel IDs: **699**
+- IDs with multiple streams: **189**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
-- Cross-queue same-ID name variants (review): **0**
+- Cross-queue same-ID name variants (review): **1**
 - Cross-queue normalized-name/different-ID groups (review): **2**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **1**
+- Logo exceptions requiring repair: **16**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1018**
+- Logo references checked: **1038**
 - Duplicate primary identities: **0**
-- Potential near-duplicate primary name groups (review only): **1**
+- Potential near-duplicate primary name groups (review only): **2**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues: **662**
+- Primary channel-number sequence issues: **681**
 - Primary entries missing channel numbers: **0**
-- Primary entries missing tvg-country: **1**
+- Primary entries missing tvg-country: **2**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
@@ -41,11 +41,12 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 ## Primary Metadata Completeness
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
-- Active primary entries missing tvg-country: **1**
+- Active primary entries missing tvg-country: **2**
 - Active primary entries missing tvg-language: **0**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
+| International | 1 | 0 |
 | Kids | 1 | 0 |
 
 ## Review Queue Country Verification
@@ -60,7 +61,7 @@ Canonical registry matches the permanent IPTV category order.
 
 These diagnostics include canonical and review groups. Name/ID differences can be legitimate; this section does not merge identities, remove entries, or print stream URLs.
 
-No same-ID label variants found across groups.
+- Same ID safaritv.in@sd: Safari TV [Documentary & Wildlife]; Safari TV Tamil (Not 24/7) [Backup]
 
 - Same normalized name: AMG TV (Classic) [amgtv.us] (International); AMG TV Classic [amgtvclassic.us] (International)
 - Same normalized name: Discovery Channel (India) (HD) [discoverychannel.in@hd] (Documentary & Wildlife); Discovery Channel (India) [discoverychannel.in@sd] (Documentary & Wildlife)
@@ -660,6 +661,9 @@ No same-ID label variants found across groups.
 - Ruposhi Bangla — Backup — https://cdn.pishow.tv/ott/live/1039/master.m3u8
 - Ruposhi Bangla — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:rupashibangla.smil/playlist.m3u8
 - Ruposhi Bangla — Backup — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/tracks-v1a1/mono.m3u8
+### safaritv.in@sd (2 streams)
+- Safari TV — Documentary & Wildlife — https://mumt04.tangotv.in/m18aqlK4SAFARITV/index.m3u8
+- Safari TV Tamil (Not 24/7) — Backup — https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
 ### sanandatv.in (4 streams)
 - Sananda — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8
 - Sananda — Backup — http://115.187.41.216:8080/hls/sanandatv/index.m3u8
@@ -789,6 +793,7 @@ None.
 ## Potential Near-Duplicate Primary Names (Review Only)
 
 - Discovery Channel (India) [discoverychannel.in@sd] (Documentary & Wildlife); Discovery Channel (India) (HD) [discoverychannel.in@hd] (Documentary & Wildlife)
+- Power Turk (Not 24/7) [powerturktv.tr@sd] (International); PowerTürk TV [powerturktv.tr] (International)
 
 These are review suggestions only. The audit does not merge identities, change channel order, or remove streams.
 
@@ -881,7 +886,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1017**
+- Healthy/local references: **1022**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
@@ -889,7 +894,7 @@ None.
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 None.
-- missing: **1**
+- missing: **16**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**

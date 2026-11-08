@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-08T05:27:26+00:00**
-IPTV-Playlist.m3u SHA-256: **ba3d0054b73cb0318a5c4696368ca7c81842e955420369aab9dd0af0b697e941**
+Generated: **2026-11-08T05:32:13+00:00**
+IPTV-Playlist.m3u SHA-256: **a5c0d5cbdb7c6b01393b624290f84e0e0b5b5df4437d63e967fd8228383264fd**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **215**
+- Flagged streams: **220**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -89,8 +89,10 @@ These streams are not automatically removed. URL credentials, user information a
 | MBC Drama USA | International | credential-bearing route pattern (values redacted) | `https://shd-gcp-live.edgenextcdn.net/live/REDACTED/REDACTED/index.m3u8` |
 | MBC+ Drama | International | credential-bearing route pattern (values redacted) | `https://shd-gcp-live.edgenextcdn.net/live/REDACTED/REDACTED/index.m3u8` |
 | Saudi TV | International | credential-bearing route pattern (values redacted) | `https://shd-gcp-live.edgenextcdn.net/live/REDACTED/REDACTED/index.m3u8` |
+| Telemundo Puerto Rico | International | credential-bearing route pattern (values redacted) | `https://nbculocallive.akamaized.net/hls/live/REDACTED/REDACTED/stream1/master_1080.m3u8` |
 | Totalmusic | International | credential-bearing route pattern (values redacted) | `https://cdn.global.elektamedia.com/live/REDACTED/REDACTED/SA_LIVE_hls_enc/master.m3u8` |
 | Totalmusic Dance | International | credential-bearing route pattern (values redacted) | `https://cdn.40mediagroup.com/live/REDACTED/REDACTED/SA_LIVE_hls_enc/master.m3u8` |
+| TVRI World | International | credential-bearing route pattern (values redacted) | `https://ott-balancer.tvri.go.id/live/REDACTED/REDACTED/hls/TVRIWorld.m3u8?checkedby%3Aiptvcat.com=` |
 | Animal Planet | Documentary & Wildlife | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd_abr/index.m3u8` |
 | CGTN Documentary | Documentary & Wildlife | credential-bearing route pattern (values redacted) | `https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8` |
 | Discovery Channel (India) (HD) | Documentary & Wildlife | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_hd_abr/index.m3u8` |
@@ -110,8 +112,11 @@ These streams are not automatically removed. URL credentials, user information a
 | Al Quran Al Kareem TV | Religious | credential-bearing route pattern (values redacted) | `https://cdn-globecast.akamaized.net/live/REDACTED/REDACTED/hls_roku/index.m3u8` |
 | Al-Zahra TV Turkic | Religious | credential-bearing route pattern (values redacted) | `https://live.al-zahratv.com/live/playlist.m3u8` |
 | Bahrain Quran | Religious | credential-bearing route pattern (values redacted) | `https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/playlist.m3u8` |
+| IBN TV | Religious | credential-bearing route pattern (values redacted) | `http://138.68.138.119:8080/live/5a8993709ea19/index.m3u8` |
+| IBN TV Africa | Religious | credential-bearing route pattern (values redacted) | `http://68.183.41.209:8080/live/5d9a537c64b9c/index.m3u8` |
 | Islamic TV | Religious | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/islamic_tv/index.m3u8` |
 | Medina Live | Religious | credential-bearing route pattern (values redacted) | `https://cdn-globecast.akamaized.net/live/REDACTED/REDACTED/hls_roku/index.m3u8` |
+| Safeer TV | Religious | credential-bearing route pattern (values redacted) | `https://cdn3.wowza.com/1/YStGZlJRdktzZkdK/VXROZWNW/hls/live/playlist.m3u8` |
 | ATG Live | Sports | credential-bearing route pattern (values redacted) | `https://kanal75xto-llhls.akamaized.net/live/REDACTED/REDACTED/HLS-Legacy-HL/atg-kanal-15-02a-rr.m3u8` |
 | Bahrain Sports 2 | Sports | credential-bearing route pattern (values redacted) | `https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8` |
 | Eurosport | Sports | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8` |
