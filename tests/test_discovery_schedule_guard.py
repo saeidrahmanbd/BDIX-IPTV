@@ -190,5 +190,81 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         }
         self.assertFalse(guard.run_blocks_retry(guard_only_run))
 
+    def test_manual_dispatch_can_refresh_after_successful_daily_discovery(self):
+        successful_daily_run = {
+            "id": 100,
+            "event": "schedule",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-07T01:00:00Z",
+            "jobs": [
+                {"name": "daily_guard", "status": "completed", "conclusion": "success"},
+                {"name": "discover", "status": "completed", "conclusion": "success"},
+            ],
+        }
+        manual_run = {
+            "id": 101,
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": None,
+            "created_at": "2026-11-07T12:00:00Z",
+        }
+        runs = [successful_daily_run, manual_run]
+
+        self.assertFalse(
+            guard.should_current_run_execute(runs, 101, self.today, event="schedule")
+        )
+        self.assertTrue(
+            guard.should_current_run_execute(
+                runs, 101, self.today, event="workflow_dispatch"
+            )
+        )
+
+    def test_manual_dispatch_does_not_overlap_an_active_discovery_run(self):
+        active_run = {
+            "id": 110,
+            "event": "schedule",
+            "status": "in_progress",
+            "conclusion": None,
+            "created_at": "2026-11-07T01:00:00Z",
+        }
+        manual_run = {
+            "id": 111,
+            "event": "workflow_dispatch",
+            "status": "in_progress",
+            "conclusion": None,
+            "created_at": "2026-11-07T01:10:00Z",
+        }
+        self.assertFalse(
+            guard.should_current_run_execute(
+                [active_run, manual_run], 111, self.today, event="workflow_dispatch"
+            )
+        )
+
+    def test_later_scheduled_run_remains_blocked_by_successful_discovery(self):
+        successful_run = {
+            "id": 120,
+            "event": "workflow_dispatch",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-07T01:00:00Z",
+            "jobs": [
+                {"name": "daily_guard", "status": "completed", "conclusion": "success"},
+                {"name": "discover", "status": "completed", "conclusion": "success"},
+            ],
+        }
+        scheduled_run = {
+            "id": 121,
+            "event": "schedule",
+            "status": "in_progress",
+            "conclusion": None,
+            "created_at": "2026-11-07T01:20:00Z",
+        }
+        self.assertFalse(
+            guard.should_current_run_execute(
+                [successful_run, scheduled_run], 121, self.today, event="schedule"
+            )
+        )
+
 if __name__ == "__main__":
     unittest.main()
