@@ -3,7 +3,7 @@
 
 Distinct alternate stream URLs are preserved. Duplicate primary copies are
 reclassified as Backup; Backup records without an exact primary identity are
-quarantined into Review. No stream URL is rewritten or silently discarded.
+quarantined into Review, except for exact owner-authorized orphan Backup removals. No other stream URL is silently discarded.
 """
 from __future__ import annotations
 
@@ -13,6 +13,8 @@ import re
 import unicodedata
 from collections import defaultdict
 from pathlib import Path
+
+from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/primary-backup-integrity.md")
@@ -24,7 +26,7 @@ PRIMARY_GROUPS = [
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
 ]
-GROUP_ORDER = PRIMARY_GROUPS + ["Backup", "Review", "New Channels", "New Backups"]
+GROUP_ORDER = PRIMARY_GROUPS + ["Review", "New Channels", "New Backups", "Backup"]
 REVIEW_GROUPS = {"Review", "New Channels", "New Backups", "Not Playing"}
 LEGACY_GROUPS = {"Not Playing": "Review"}
 
@@ -147,6 +149,23 @@ def identity_ids(info: str) -> set[str]:
     }
 
 
+def is_authorized_orphan_backup_removal(info: str, url: str) -> bool:
+    """Match only the exact channel identity + URL explicitly rejected by the owner."""
+    a = attrs(info)
+    if a.get("group-title", "").strip() != "Backup":
+        return False
+    ids = {
+        value.strip().casefold()
+        for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
+        if value.strip()
+    }
+    candidate_url = str(url or "").strip().casefold()
+    return any(
+        channel_id in ids and candidate_url == expected_url.casefold()
+        for channel_id, expected_url in AUTHORIZED_ORPHAN_BACKUP_REMOVALS.items()
+    )
+
+
 def normalized_channel_name(value: str) -> str:
     value = unicodedata.normalize("NFKD", str(value or "")).casefold()
     value = "".join(char for char in value if not unicodedata.combining(char))
@@ -181,6 +200,7 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
         "unknown_groups_quarantined": 0,
         "duplicate_primary_demoted": 0,
         "orphan_backups_quarantined": 0,
+        "user_authorized_orphan_backups_removed": 0,
         "orphan_backups_promoted": 0,
         "restricted_backups_reviewed": 0,
         "name_matched_backups_linked": 0,
@@ -197,6 +217,9 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
     retained_records: list[list[str]] = []
     for record in records:
         info = record[0]
+        if is_authorized_orphan_backup_removal(info, stream_url(record)):
+            stats["user_authorized_orphan_backups_removed"] += 1
+            continue
         ids = identity_ids(info)
         if ids & REMOVE_CHANNEL_IDS:
             stats["non_kids_review_removed"] += 1
@@ -455,6 +478,7 @@ def write_report(stats: dict[str, object], errors: list[str]) -> None:
         f"- Review-only entries (Review / New Channels / New Backups): **{stats.get('review_entries', 0)}**",
         f"- Duplicate primary copies moved to Backup: **{stats.get('duplicate_primary_demoted', 0)}**",
         f"- Orphan Backup entries moved to Review: **{stats.get('orphan_backups_quarantined', 0)}**",
+        f"- Owner-authorized orphan Backup entries removed: **{stats.get('user_authorized_orphan_backups_removed', 0)}**",
         f"- Verified orphan Backup streams promoted to a primary genre: **{stats.get('orphan_backups_promoted', 0)}**",
         f"- Backup rows linked to an existing primary by unique exact name: **{stats.get('name_matched_backups_linked', 0)}**",
         f"- Restricted Indian news/kids/religious rows retained in Review: **{stats.get('restricted_backups_reviewed', 0)}**",
@@ -497,7 +521,8 @@ def main() -> int:
         "Primary/Backup integrity: "
         f"primary={stats['primary_entries']} backup={stats['backup_entries']} "
         f"review={stats['review_entries']} demoted={stats['duplicate_primary_demoted']} "
-        f"orphan_backups_quarantined={stats['orphan_backups_quarantined']}"
+        f"orphan_backups_quarantined={stats['orphan_backups_quarantined']} "
+        f"owner_authorized_orphan_backups_removed={stats['user_authorized_orphan_backups_removed']}"
     )
     return 0
 
