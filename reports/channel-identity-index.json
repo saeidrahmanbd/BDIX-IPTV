@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T05:20:24+00:00",
+  "generated": "2026-11-08T05:23:57+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -373,6 +373,20 @@
       "primary": 1,
       "backup": 0
     },
+    "amgtv": {
+      "names": [
+        "AMG TV (Classic)"
+      ],
+      "ids": [
+        "amgtv.us"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "amgtvclassic": {
       "names": [
         "AMG TV Classic"
@@ -427,9 +441,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
-      "backup": 4
+      "backup": 5
     },
     "anandtv": {
       "names": [
@@ -1319,9 +1333,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "channel52": {
       "names": [
@@ -1337,6 +1351,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "channeleurope": {
+      "names": [
+        "Channel Europe"
+      ],
+      "ids": [
+        "channeleurope"
+      ],
+      "groups": [
+        "Bangladesh"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "channeli": {
       "names": [
@@ -3082,11 +3110,12 @@
         "deeptotv.bd"
       ],
       "groups": [
+        "Backup",
         "Bangladesh"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "deewanahd": {
       "names": [
@@ -3520,6 +3549,20 @@
       "streams": 6,
       "primary": 1,
       "backup": 5
+    },
+    "emanchannel": {
+      "names": [
+        "Eman Channel"
+      ],
+      "ids": [
+        "emanchannel"
+      ],
+      "groups": [
+        "Religious"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "enter10bangla": {
       "names": [
@@ -4251,11 +4294,12 @@
         "hummasala.pk"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "humsitaray": {
       "names": [
@@ -4325,9 +4369,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "indiatalkies": {
       "names": [
@@ -7717,11 +7761,12 @@
         "sonyentertainmenttelevision.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "sonykalhindi": {
       "names": [
@@ -9371,9 +9416,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
-      "backup": 5
+      "backup": 6
     },
     "zeebanglasonar": {
       "names": [
@@ -9514,9 +9559,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "zoomoo": {
       "names": [

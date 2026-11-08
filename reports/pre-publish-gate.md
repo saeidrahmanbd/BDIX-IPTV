@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-08T05:20:05+00:00**
-Source playlist SHA-256: **90a62dd358fda44303cd601078218e4d569d8c342a838ebda275b59cd0025a6b**
+Generated: **2026-11-08T05:23:31+00:00**
+Source playlist SHA-256: **ba3d0054b73cb0318a5c4696368ca7c81842e955420369aab9dd0af0b697e941**
 
 Status: **BLOCK**
 
-- Current entries: **1007**
+- Current entries: **1018**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -16,8 +16,8 @@ Status: **BLOCK**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues: **0**
-- Numbered review entries: **330**
+- Primary channel-number sequence issues: **662**
+- Numbered review entries: **338**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **1**
@@ -38,7 +38,8 @@ New Channels and New Backups are active BD/IN-only review queues used by discove
 
 ## Blocking Reasons
 - active entries with incomplete identity/country/logo metadata: 1
-- review entries still numbered: 330
+- primary channel-number sequence gaps/order errors: 662
+- review entries still numbered: 338
 - raw resolution/geoblock tags in channel names: 1
 
 ## Review-queue logo gaps
