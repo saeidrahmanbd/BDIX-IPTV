@@ -85,6 +85,13 @@ PERMANENTLY_BANNED_CHANNEL_NAMES = {
         "Mei Alai TV",
         "Makkal TV",
         "Madhimugam TV",
+        "Bangla Jago TV",
+        "DD Bharati",
+        "Food Food",
+        "Discovery Turbo India",
+        "XXTreme Jobs Hindi",
+        "Power Turk",
+        "Safari TV Tamil",
     )
 }
 # Stable base channel IDs (region/quality suffixes after "@" are ignored). This
@@ -115,6 +122,12 @@ PERMANENTLY_BANNED_CHANNEL_IDS = {
     "meialaitv.in",
     "makkaltv.in",
     "madhimugamtv.in",
+    "banglajagotv.in",
+    "ddbharati.in",
+    "foodfood.in",
+    "discoveryturbo.in",
+    "xxtremejobshindi.in",
+    "powerturktv.tr",
 }
 # A programme title is not a standalone linear TV channel. Keep this exact
 # denylist narrow so incomplete optional metadata alone never blocks a channel.
@@ -430,7 +443,7 @@ def main() -> int:
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational/Knowledge and Business/Finance channels are prohibited; Indian Kids and Sports channels are allowed.**",
-        "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 25 additional channel IDs/names listed in the canonical permanent denylist.",
+        "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
         f"- Existing prohibited review-queue rows removed: **{len(purged)}**",
         f"- New channels: **{len(new_channels)}**",

@@ -17,9 +17,12 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "E-Vidya 5 (576p) (India)", "E-Vidya 6 (576p) (India)",
             "E-Vidya 7 (576p) (India)", "E-Vidya 8 (576p) (India)",
             "E-Vidya 9 (576p) (India)", "Friends TV (1080p) (India)",
+            "Bangla Jago TV", "DD Bharati", "Food Food",
+            "Discovery Turbo India", "XXTreme Jobs Hindi", "Power Turk",
+            "Safari TV Tamil (Not 24/7)",
         ]
-        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_NAMES), 36)
-        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_IDS), 25)
+        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_NAMES), 43)
+        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_IDS), 31)
         for name in names:
             with self.subTest(name=name):
                 self.assertIn(canonical_channel_name(name), PERMANENTLY_BANNED_CHANNEL_NAMES)
@@ -35,6 +38,12 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("JeevanTV.in@SD", "Generic Malayalam TV"),
             ("MeiAlaiTV.in", "Tamil entertainment"),
             ("MadhimugamTV.in", "Regional feed"),
+            ("BanglaJagoTV.in@HD", "Bangla Jago alternate"),
+            ("DDBharati.in@HD", "DD Bharati alternate"),
+            ("FoodFood.in@HD", "Food Food alternate"),
+            ("DiscoveryTurbo.in@HD", "Discovery Turbo alternate"),
+            ("XXTremeJobsHindi.in@SD", "XXTreme Jobs alternate"),
+            ("PowerTurkTV.tr@HD", "Power Turk alternate"),
         ]
         for channel_id, alias in examples:
             with self.subTest(channel_id=channel_id):
@@ -46,6 +55,16 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                     ),
                     "permanently banned channel",
                 )
+
+    def test_safari_tv_tamil_is_blocked_without_blocking_main_safari_tv(self):
+        attrs = {"tvg-id": "SafariTV.in@SD", "tvg-name": "Safari TV Tamil (Not 24/7)"}
+        self.assertEqual(
+            prohibited_channel(attrs, "Safari TV Tamil (Not 24/7)"),
+            "permanently banned channel",
+        )
+        self.assertIsNone(
+            prohibited_channel({"tvg-id": "SafariTV.in@SD", "tvg-name": "Safari TV"}, "Safari TV")
+        )
 
     def test_permanently_banned_channels_are_purged_from_existing_review_queues(self):
         text = (
