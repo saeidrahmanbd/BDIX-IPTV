@@ -1,38 +1,38 @@
 # IPTV Playlist Audit
-Generated: **2026-11-08T05:31:51.031826+00:00**
-Source playlist SHA-256: **a5c0d5cbdb7c6b01393b624290f84e0e0b5b5df4437d63e967fd8228383264fd**
+Generated: **2026-11-08T08:48:21.491675+00:00**
+Source playlist SHA-256: **f1ecd6bd351968ef79708f50c7251d6967d4aaf442066e439f621b0a600240ec**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1038**
-- Unique channel IDs: **699**
-- IDs with multiple streams: **189**
+- Playlist entries: **952**
+- Unique channel IDs: **619**
+- IDs with multiple streams: **183**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
-- Cross-queue same-ID name variants (review): **1**
-- Cross-queue normalized-name/different-ID groups (review): **2**
+- Cross-queue same-ID name variants (review): **0**
+- Cross-queue normalized-name/different-ID groups (review): **1**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **16**
+- Logo exceptions requiring repair: **10**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1038**
+- Logo references checked: **952**
 - Duplicate primary identities: **0**
-- Potential near-duplicate primary name groups (review only): **2**
+- Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues: **681**
+- Primary channel-number sequence issues: **553**
 - Primary entries missing channel numbers: **0**
-- Primary entries missing tvg-country: **2**
+- Primary entries missing tvg-country: **1**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
-- Alphabetical ordering issues: **2**
+- Alphabetical ordering issues: **3**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **8**
 - Embedded Xtream-style credential paths (redacted): **0**
@@ -41,12 +41,11 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 ## Primary Metadata Completeness
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
-- Active primary entries missing tvg-country: **2**
+- Active primary entries missing tvg-country: **1**
 - Active primary entries missing tvg-language: **0**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
-| International | 1 | 0 |
 | Kids | 1 | 0 |
 
 ## Review Queue Country Verification
@@ -61,9 +60,8 @@ Canonical registry matches the permanent IPTV category order.
 
 These diagnostics include canonical and review groups. Name/ID differences can be legitimate; this section does not merge identities, remove entries, or print stream URLs.
 
-- Same ID safaritv.in@sd: Safari TV [Documentary & Wildlife]; Safari TV Tamil (Not 24/7) [Backup]
+No same-ID label variants found across groups.
 
-- Same normalized name: AMG TV (Classic) [amgtv.us] (International); AMG TV Classic [amgtvclassic.us] (International)
 - Same normalized name: Discovery Channel (India) (HD) [discoverychannel.in@hd] (Documentary & Wildlife); Discovery Channel (India) [discoverychannel.in@sd] (Documentary & Wildlife)
 
 ## Duplicate IDs
@@ -260,15 +258,9 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - DD Bangla — Backup — https://cdn.pishow.tv/ott/live/37/master.m3u8
 - DD Bangla — Backup — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7ff57cc9046b4c188b51a0d506f36e7f/index_3.m3u8
 - DD Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/dd-bangla-1/index.m3u8
-### ddbharati.in@sd (2 streams)
-- DD Bharati — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/67cec794d8b14f9ba21f73924ac65797/index.m3u8
-- DD Bharati — Backup — https://cdn.pishow.tv/ott/live/10/master.m3u8
 ### ddchandana.in@sd (2 streams)
 - DD Chandana — Indian Entertainment — https://cdn.pishow.tv/ott/live/28/master.m3u8
 - DD Chandana — Backup — https://d2lk5u59tns74c.cloudfront.net/out/v1/0c980455d2fb4b69bcc6235745ee6039/index.m3u8
-### ddindia.in@sd (2 streams)
-- DD India — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/ceda14583477426aa162a65392d8ea07/index.m3u8
-- DD India — Backup — https://mumbai-edge.smartplaytv.in/DDIndia/index.m3u8
 ### ddjharkhand.in@sd (2 streams)
 - DD Jharkhand — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/e8c3741f8c154d3185831f4e31777fb2/index.m3u8
 - DD Jharkhand — Backup — https://cdn.pishow.tv/ott/live/1617/master.m3u8
@@ -451,9 +443,6 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Jamuna TV — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/jamuna-tv/index.m3u8
 - Jamuna TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jamuna-tv-1/index.m3u8
 - Jamuna TV — Backup — https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8
-### jeevantv.in@sd (2 streams)
-- Jeevan TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/1467/master.m3u8
-- Jeevan TV — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/JeevanTV.m3u8
 ### kairalitv.in@sd (2 streams)
 - Kairali TV — Indian Entertainment — https://streams.tangotv.in/KAIRALI/ORIGIN/index.m3u8
 - Kairali TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8
@@ -480,9 +469,6 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Maasranga TV — Backup — https://mtv.sunplex.live/MAASRANGA/tracks-v1a1/mono.m3u8
 - Maasranga TV — Backup — https://tvsen5.aynaott.com/maasrangatv/index.m3u8
 - Maasranga TV — Backup — https://tvsen6.aynaott.com/maasrangatv/index.m3u8
-### madhimugamtv.in (2 streams)
-- Madhimugam TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/1476/master.m3u8
-- Madhimugam TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8
 ### mahaamax.in (2 streams)
 - Mahaa Max — Indian Entertainment — https://mumt03.tangotv.in/Dsly5z3HMAHAAMAX/index.m3u8
 - Mahaa Max — Backup — https://mumbai-edge.smartplaytv.in/MahaMax/index.m3u8
@@ -661,9 +647,6 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Ruposhi Bangla — Backup — https://cdn.pishow.tv/ott/live/1039/master.m3u8
 - Ruposhi Bangla — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:rupashibangla.smil/playlist.m3u8
 - Ruposhi Bangla — Backup — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/tracks-v1a1/mono.m3u8
-### safaritv.in@sd (2 streams)
-- Safari TV — Documentary & Wildlife — https://mumt04.tangotv.in/m18aqlK4SAFARITV/index.m3u8
-- Safari TV Tamil (Not 24/7) — Backup — https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
 ### sanandatv.in (4 streams)
 - Sananda — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8
 - Sananda — Backup — http://115.187.41.216:8080/hls/sanandatv/index.m3u8
@@ -732,9 +715,6 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 ### suriyantv.in@sd (2 streams)
 - Suriyan TV — Indian Entertainment — https://hlslive.olidigital.in/suriyantv/suriyantv/index.m3u8
 - Suriyan TV — Backup — https://stream.ottlive.co.in/suriyantvtamil/index.m3u8
-### taazatv.in@sd (2 streams)
-- Taaza TV — Indian Entertainment — https://live.we2live.in/taazatv/live/playlist.m3u8
-- Taaza TV — Backup — https://tvsen3.aynaott.com/yRMLky2j/index.m3u8
 ### tabbarhits.in (2 streams)
 - Tabbar Hits — Indian Music — https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8
 - Tabbar Hits — Backup — https://livingindiaottlive.akamaized.net/tabbarhits/index.m3u8
@@ -793,7 +773,6 @@ None.
 ## Potential Near-Duplicate Primary Names (Review Only)
 
 - Discovery Channel (India) [discoverychannel.in@sd] (Documentary & Wildlife); Discovery Channel (India) (HD) [discoverychannel.in@hd] (Documentary & Wildlife)
-- Power Turk (Not 24/7) [powerturktv.tr@sd] (International); PowerTürk TV [powerturktv.tr] (International)
 
 These are review suggestions only. The audit does not merge identities, change channel order, or remove streams.
 
@@ -862,6 +841,7 @@ None.
 
 Category block order: OK.
 - **Bangladesh** — **18 — Channel I** appears after **677 — Channel Europe**
+- **International** — **4ever Cinema** appears after **30A Music**
 - **Documentary & Wildlife** — **Discovery Channel (India)** appears after **Discovery Channel (India) (HD)**
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
@@ -886,7 +866,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1022**
+- Healthy/local references: **942**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
@@ -894,7 +874,7 @@ None.
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 None.
-- missing: **16**
+- missing: **10**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**

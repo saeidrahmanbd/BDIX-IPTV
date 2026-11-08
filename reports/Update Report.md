@@ -1,41 +1,41 @@
 # Update Report
 
-_Last generated: **2026-11-08 05:32 UTC**_
+_Last generated: **2026-11-08 08:48 UTC**_
 
-Source playlist SHA-256: **a5c0d5cbdb7c6b01393b624290f84e0e0b5b5df4437d63e967fd8228383264fd**
+Source playlist SHA-256: **f1ecd6bd351968ef79708f50c7251d6967d4aaf442066e439f621b0a600240ec**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1038** |
-| Active Channel Identities | **698** |
-| Active Primary Streams | **698** |
+| Streams | **952** |
+| Active Channel Identities | **618** |
+| Active Primary Streams | **618** |
 | Bangladesh | **66** |
-| India | **323** |
-| Backup Stream Entries | **339** |
-| IPTV Local Logos | **98.5%** |
+| India | **295** |
+| Backup Stream Entries | **333** |
+| IPTV Local Logos | **98.9%** |
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
-| Stream Health Tested | **1038** |
-| Stream Health Failures | **65** |
-| Persistent Failures | **60** |
-| Near-Duplicate URL Families | **3** |
-| Audit Blocking Issues | **18** |
+| Stream Health Tested | **952** |
+| Stream Health Failures | **58** |
+| Persistent Failures | **49** |
+| Near-Duplicate URL Families | **2** |
+| Audit Blocking Issues | **13** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-11-08T05:31:51+00:00** |
+| Pre-Publish Gate Generated | **2026-11-08T08:48:21+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
 - Metadata conflicts (canonical primary scope): **0**
 - Same-name / different-ID collisions (canonical primary scope): **0**
-- Cross-queue metadata identity variants: **1**
+- Cross-queue metadata identity variants: **0**
 - Cross-queue same-name / different-ID collisions: **1**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
-- Logo exceptions: **16**
+- Logo exceptions: **10**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **2**
+- Alphabetical ordering issues: **3**
 - Signed/tokenized URLs: **8**
 
 ## Safety & Automation
@@ -62,14 +62,14 @@ Source playlist SHA-256: **a5c0d5cbdb7c6b01393b624290f84e0e0b5b5df4437d63e967fd8
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-08T05:31:51.031826+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-08T08:48:21.491675+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-08T02:50:41+00:00** | **PENDING — guide missing or freshness not PASS** |
-| Stream health | **2026-11-08T05:32:13+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-08T05:31:51+00:00** | **CURRENT** |
+| Stream health | **2026-11-08T08:48:44+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-08T08:48:21+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
-- Latest entries change: **1018 → 1038**
-- Latest health failures: **68 → 65**
+- Latest entries change: **1038 → 952**
+- Latest health failures: **65 → 58**
 
 Historical records are retained in reports/maintenance-history.json.
