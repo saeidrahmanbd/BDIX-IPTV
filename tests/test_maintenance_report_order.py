@@ -24,8 +24,14 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         for relative in writer_workflows:
             with self.subTest(workflow=relative):
                 source = (ROOT / relative).read_text(encoding="utf-8")
-                match = re.search(r"(?m)^  group:\s*([^\s#]+)", source)
-                self.assertIsNotNone(match, f"{relative}: missing top-level concurrency group")
+                # The queue must live on the writing job (6-space indent), not the
+                # workflow, so runs whose jobs are skipped do not hold the queue.
+                self.assertIsNone(
+                    re.search(r"(?m)^  concurrency:", source),
+                    f"{relative}: writer queue must be job-level, not workflow-level",
+                )
+                match = re.search(r"(?m)^ {4}concurrency:\n {6}group:\s*([^\s#]+)", source)
+                self.assertIsNotNone(match, f"{relative}: missing job-level concurrency group")
                 self.assertEqual(match.group(1), expected, f"{relative}: writer queue mismatch")
 
     def test_iptv_playlist_registry_includes_review_queues(self):

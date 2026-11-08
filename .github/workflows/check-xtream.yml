@@ -25,6 +25,8 @@ permissions:
 
 jobs:
   check:
+    # Scheduled and manual checks always run; chained runs only after a successful upstream run.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:

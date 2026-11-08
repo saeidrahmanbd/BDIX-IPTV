@@ -10,15 +10,15 @@ on:
 permissions:
   contents: write
 
-# Serialize changelog/report writes with the shared main-branch writer queue.
-concurrency:
-  group: iptv-playlist-main-writer-v3
-  cancel-in-progress: false
-  queue: max
-
 jobs:
   changelog:
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    # Shared main-branch writer queue. Set on the writing job, not the workflow,
+    # so runs whose jobs are skipped do not occupy the queue.
+    concurrency:
+      group: iptv-playlist-main-writer-v3
+      cancel-in-progress: false
+      queue: max
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

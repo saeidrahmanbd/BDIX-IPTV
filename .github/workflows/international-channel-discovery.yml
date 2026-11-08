@@ -30,13 +30,6 @@ permissions:
   actions: read
   contents: write
 
-# All playlist writers share one queue to protect main-branch playlist updates.
-# Versioned writer queue isolates new runs from stale v2 runs already queued.
-concurrency:
-  group: iptv-playlist-main-writer-v3
-  cancel-in-progress: false
-  queue: max
-
 jobs:
   daily_guard:
     runs-on: ubuntu-latest
@@ -62,6 +55,12 @@ jobs:
   discover:
     needs: daily_guard
     if: needs.daily_guard.outputs.should_run == 'true'
+    # Shared main-branch writer queue. Set on the writing job, not the workflow,
+    # so runs whose jobs are skipped do not occupy the queue.
+    concurrency:
+      group: iptv-playlist-main-writer-v3
+      cancel-in-progress: false
+      queue: max
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -121,13 +120,17 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add International-Playlist.m3u reports/international-channel-discovery.md logos/ scripts/validate_discovery_run.py tests/test_discovery_run_validation.py
           if git diff --cached --quiet; then
             echo "No International discovery changes to publish."
             exit 0
           fi
           git commit -m 'Discover and add international channels'
+          # Only the staged files above are published. Discard the runner's remaining generated
+          # files, which would otherwise block 'git pull --rebase' with unstaged changes.
+          git status --short
+          git reset --hard HEAD
+          git clean -fd
           for attempt in 1 2 3; do
             git fetch origin main
             if ! git pull --rebase origin main; then
@@ -138,7 +141,7 @@ jobs:
             if git push origin HEAD:main; then
               exit 0
             fi
-            echo "::warning::Push attempt \${attempt} failed; retrying after rebase."
+            echo "::warning::Push attempt ${attempt} failed; retrying after rebase."
             sleep 3
           done
           echo "::error::Unable to publish International discovery after three attempts."

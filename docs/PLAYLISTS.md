@@ -35,8 +35,8 @@ The companion International playlist includes Bangladesh and India under their a
 | Origin / collection | IPTV-Playlist.m3u | International-Playlist.m3u |
 |---|---|---|
 | Bangladesh | Included; all genres are eligible. | Included; all genres are eligible. |
-| India | Included; News, all religious channels (including Islamic), educational, business/finance, farming, kids and sports channels are excluded. | Same Indian exclusions. |
-| Pakistan | Supported in the Pakistani group. News, religious, educational, business/finance, farming, kids and sports channels are excluded, as for India. | Eligible dedicated movie and music channels. |
+| India | Included; News, all religious channels (including Islamic), educational, business/finance and farming channels are excluded. Kids and sports are allowed. | Same Indian exclusions; kids and sports are allowed. |
+| Pakistan | Supported in the Pakistani group. News, religious, educational, business/finance, farming, kids and sports channels are excluded. The Indian kids and sports exception does not apply. | Eligible dedicated movie and music channels. |
 | Other countries | Eligible channels can appear in International or qualified country groups, subject to the established genre rules. | Only dedicated movie and music channels are eligible. |
 
 Adult channels are not excluded by this policy; they are kept in the Adult group of the International playlist.
