@@ -64,7 +64,7 @@ jobs:
           set -euo pipefail
           git fetch origin main
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
-          if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
+          if [[ "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
               CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/([^/]*epg[^/]*\.py|official_epg_sources\.py|validate_report_freshness\.py|generate_dashboard\.py)|tests/test_(epg_[^/]*|[^/]*epg[^/]*|iptv_org_epg_targeting|report_freshness|dashboard_freshness)\.py|docs/requirements\.txt)$' || true)"
             if [[ -n "$CHANGED_INPUTS" ]]; then
               echo "::notice::Skipping superseded EPG refresh because newer commits changed EPG inputs or code."
@@ -104,10 +104,10 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           mkdir -p reports epg
 
-          # Only a scheduled run may skip a fresh guide. Pushes to playlist,
-          # mapping, generator, validation, or workflow inputs must exercise the
-          # updated pipeline even when the previously published guide is recent.
-          if [[ "${GITHUB_EVENT_NAME}" == "schedule" ]] && python scripts/epg_refresh_needed.py --max-age-hours 8; then
+          # Scheduled and workflow_run events may reuse a fresh guide when it
+          # already matches the current playlists. Pushes and manual dispatches
+          # still exercise the updated mapping/generator/validation pipeline.
+          if [[ "${GITHUB_EVENT_NAME}" == "schedule" || "${GITHUB_EVENT_NAME}" == "workflow_run" ]] && python scripts/epg_refresh_needed.py --max-age-hours 8; then
             echo '::notice::A fresh EPG already exists for the current playlists; refreshing dashboard and maintenance snapshots without rebuilding XMLTV.'
             python scripts/generate_dashboard.py
             python scripts/validate_report_freshness.py --mode epg
