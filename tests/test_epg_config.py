@@ -1,4 +1,4 @@
-import ast, csv, io, os, re, tempfile, unittest, sys
+import ast, csv, gzip, io, os, re, tempfile, unittest, sys
 from datetime import datetime, timezone, timedelta
 from unittest.mock import patch
 from pathlib import Path
@@ -314,11 +314,68 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn('BANGLADESH_SOURCE_AUDIT_REPORT = Path("reports/bangladesh-epg-source-audit.md")', COV)
         self.assertIn("tests/test_epg_config.py", workflow)
 
-    def test_generator_parses_the_payload_for_each_fetched_source(self):
-        self.assertIn("data = source_payloads[src]", GEN)
-        self.assertIn('ET.iterparse(io.BytesIO(data), events=("end",))', GEN)
+    def test_generator_streams_cached_source_files_without_loading_all_feeds_into_memory(self):
+        self.assertIn("source_path, source_is_cached = source_payloads[src]", GEN)
+        self.assertIn("iterparse_xmltv_file(source_path)", GEN)
+        self.assertIn("source_path.unlink(missing_ok=True)", GEN)
+        self.assertNotIn("ET.iterparse(io.BytesIO(data)", GEN)
         self.assertIn("scanned_programmes += 1", GEN)
         self.assertIn("mapped_programmes += 1", GEN)
+
+    def test_generator_streams_plain_and_gzip_xmltv_files_preserving_programme_titles(self):
+        xml = (
+            b'<?xml version="1.0" encoding="utf-8"?>'
+            b'<tv><channel id="test.channel"><display-name>Test</display-name></channel>'
+            b'<programme channel="test.channel" start="20261108140000 +0000" '
+            b'stop="20261108143000 +0000"><title lang="en">Test Programme</title></programme></tv>'
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            plain = Path(tmp) / "guide.xml"
+            compressed = Path(tmp) / "guide.data"
+            plain.write_bytes(xml)
+            compressed.write_bytes(gzip.compress(xml))
+            for path in (plain, compressed):
+                titles = []
+                for elem in generate_epg.iterparse_xmltv_file(path):
+                    if elem.tag == "programme":
+                        title = elem.find("title")
+                        titles.append((title.text or "").strip() if title is not None else "")
+                self.assertEqual(titles, ["Test Programme"])
+
+    def test_shared_source_file_cache_streams_download_and_reuses_cache(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            private_url = "https://m3u4u.com/epg/private-feed-token.xml.gz"
+            payload = gzip.compress(b'<?xml version="1.0"?><tv/>')
+            with (
+                patch.dict(
+                    os.environ,
+                    {
+                        "EPG_SOURCE_CACHE_DIR": tmp,
+                        "EPG_SOURCE_CACHE_TTL_SECONDS": "3600",
+                    },
+                ),
+                patch.object(
+                    epg_source_cache.urllib.request,
+                    "urlopen",
+                    return_value=io.BytesIO(payload),
+                ) as urlopen,
+            ):
+                first_path, first_cached = epg_source_cache.fetch_source_file(
+                    private_url,
+                    headers={"User-Agent": "test", "Accept": "application/xml"},
+                    timeout=5,
+                )
+                second_path, second_cached = epg_source_cache.fetch_source_file(
+                    private_url,
+                    headers={"User-Agent": "test", "Accept": "application/xml"},
+                    timeout=5,
+                )
+            self.assertEqual(first_path, second_path)
+            self.assertTrue(first_cached)
+            self.assertTrue(second_cached)
+            self.assertEqual(first_path.read_bytes(), payload)
+            self.assertEqual(urlopen.call_count, 1)
+            self.assertNotIn("private-feed-token", first_path.name)
 
     def test_country_specific_feeds_are_scanned_for_active_playlist_regions(self):
         with tempfile.TemporaryDirectory() as tmp:

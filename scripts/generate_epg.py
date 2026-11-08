@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from difflib import SequenceMatcher
 from pathlib import Path
-from epg_source_cache import fetch_source_bytes
+from epg_source_cache import fetch_source_file
 from epg_mapping_policy import mapping_id_region_compatible, CURATED_REGION_OVERRIDES
 from official_epg_sources import (
     HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes,
@@ -403,14 +403,44 @@ SINGLE_SHOW_CHANNEL_IDS = {"Mythbusters.us", "AxMen.us", "StrawberryShortcake.us
 
 
 def fetch(url):
-    data = fetch_source_bytes(
+    """Fetch an XMLTV feed to a cache file instead of retaining decompressed bytes."""
+    return fetch_source_file(
         url,
         headers={"User-Agent": "BDIX-IPTV-EPG/1.0", "Accept": "application/gzip,application/xml,*/*"},
         timeout=SOURCE_FETCH_TIMEOUT_SECONDS,
     )
-    if data[:2] == b"\x1f\x8b" or url.endswith(".gz"):
-        data = gzip.decompress(data)
-    return data
+
+
+def iterparse_xmltv_file(source_path):
+    """Stream plain or gzip-compressed XMLTV records from disk.
+
+    Child elements stay attached until their containing channel/programme is
+    complete, so programme titles and metadata remain available to consumers.
+    Completed top-level records are then detached from the root to bound memory.
+    """
+    with Path(source_path).open("rb") as raw:
+        magic = raw.read(2)
+        raw.seek(0)
+        if magic == b"\x1f\x8b":
+            with gzip.GzipFile(fileobj=raw, mode="rb") as stream:
+                yield from _iterparse_xmltv_stream(stream)
+        else:
+            yield from _iterparse_xmltv_stream(raw)
+
+
+def _iterparse_xmltv_stream(stream):
+    events = ET.iterparse(stream, events=("start", "end"))
+    try:
+        _, root = next(events)
+    except StopIteration:
+        return
+    for event, elem in events:
+        if event != "end" or elem is root:
+            continue
+        yield elem
+        if elem.tag in {"channel", "programme"}:
+            elem.clear()
+            root.clear()
 
 
 def fetch_xmltv_sources_concurrently(source_urls, max_workers=SOURCE_FETCH_WORKERS):
@@ -1011,58 +1041,59 @@ def main():
             if src not in source_payloads:
                 source_stats[src] = "FETCH_FAILED (missing payload)"
                 continue
-            data = source_payloads[src]
-            scanned_programmes = 0
-            mapped_programmes = 0
-            for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
-                if elem.tag != "programme":
-                    continue
-                scanned_programmes += 1
-                source_id = elem.attrib.get("channel", "").strip()
-                targets = [
-                    target for target in reverse.get(source_id, [])
-                    if target in mapped_targets
-                    and source_mapping_id_compatible(target, source_id, src, channel_countries)
-                ]
-                if not targets:
-                    elem.clear()
-                    continue
-                mapped_programmes += 1
-                start_dt = stamp(elem.attrib.get("start", ""))
-                stop_dt = stamp(elem.attrib.get("stop", "")) if elem.attrib.get("stop") else None
-                if not start_dt or start_dt > upper or (stop_dt and stop_dt < lower):
-                    elem.clear()
-                    continue
-                title_elem = preferred_title_element(elem)
-                title = (title_elem.text or "").strip() if title_elem is not None else ""
-                children = clone_children(elem)
-                for target in targets:
-                    if title_elem is None or not (title_elem.text or "").strip() or not is_english_text_element(title_elem):
+            source_path, source_is_cached = source_payloads[src]
+            try:
+                scanned_programmes = 0
+                mapped_programmes = 0
+                for elem in iterparse_xmltv_file(source_path):
+                    if elem.tag != "programme":
                         continue
-                    safe_children = []
-                    for child in children:
-                        if child.tag in TEXT_FIELDS and not is_english_text_element(child):
+                    scanned_programmes += 1
+                    source_id = elem.attrib.get("channel", "").strip()
+                    targets = [
+                        target for target in reverse.get(source_id, [])
+                        if target in mapped_targets
+                        and source_mapping_id_compatible(target, source_id, src, channel_countries)
+                    ]
+                    if not targets:
+                        continue
+                    mapped_programmes += 1
+                    start_dt = stamp(elem.attrib.get("start", ""))
+                    stop_dt = stamp(elem.attrib.get("stop", "")) if elem.attrib.get("stop") else None
+                    if not start_dt or start_dt > upper or (stop_dt and stop_dt < lower):
+                        continue
+                    title_elem = preferred_title_element(elem)
+                    title = (title_elem.text or "").strip() if title_elem is not None else ""
+                    children = clone_children(elem)
+                    for target in targets:
+                        if title_elem is None or not (title_elem.text or "").strip() or not is_english_text_element(title_elem):
                             continue
-                        safe_children.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
-                    attrs = dict(elem.attrib)
-                    attrs["channel"] = target
-                    rec = {
-                        "attrs": attrs,
-                        "title": title,
-                        "language_rank": language_priority(title_elem),
-                        "children": safe_children,
-                        "start_dt": start_dt,
-                        "stop_dt": stop_dt,
-                        "source_index": source_index,
-                        "source": src,
-                        "source_id": source_id,
-                    }
-                    candidates.setdefault((target, source_index, source_id), []).append(rec)
-                elem.clear()
-            source_stats[src] = (
-                f"OK: {scanned_programmes} programme rows scanned; "
-                f"{mapped_programmes} rows matched mapped source IDs"
-            )
+                        safe_children = []
+                        for child in children:
+                            if child.tag in TEXT_FIELDS and not is_english_text_element(child):
+                                continue
+                            safe_children.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
+                        attrs = dict(elem.attrib)
+                        attrs["channel"] = target
+                        rec = {
+                            "attrs": attrs,
+                            "title": title,
+                            "language_rank": language_priority(title_elem),
+                            "children": safe_children,
+                            "start_dt": start_dt,
+                            "stop_dt": stop_dt,
+                            "source_index": source_index,
+                            "source": src,
+                            "source_id": source_id,
+                        }
+                        candidates.setdefault((target, source_index, source_id), []).append(rec)
+                source_stats[src] = (
+                    f"OK: {scanned_programmes} programme rows scanned; "
+                    f"{mapped_programmes} rows matched mapped source IDs"
+                )
+            finally:
+                if not source_is_cached:
+                    source_path.unlink(missing_ok=True)
         except Exception as exc:
             # Exception messages from HTTP clients can contain request URLs or
             # query parameters. Record only the exception class in public logs.
