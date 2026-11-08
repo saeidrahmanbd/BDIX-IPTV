@@ -1,21 +1,22 @@
 # BDIX-IPTV Operational Wiki
 
-The root [README](../README.md) is the project overview. This page records the current **Bangladeshi IPTV, Bangla IPTV and International M3U playlist policies** so that documentation and automation use the same rules.
+The root [README](../README.md) is the project overview. This page records the current **multi-country IPTV M3U playlist policies** so that documentation and automation use the same rules.
 
 ## Maintained playlists
 
-- [IPTV-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) — Bangladesh and India channel collection.
-- [International-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) — Bangladesh and India under the same rules, plus eligible international movie and music channels.
+- [IPTV-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) — the broad, multi-country main collection, including Bangladesh, Indian categories, Pakistani, International and other genre/country groups. It is not limited to Bangladesh and India.
+- [International-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) — a companion collection containing Bangladesh and India under their applicable rules, plus eligible movie and music channels from Pakistan and other countries.
 
 ## Current channel eligibility
 
-| Origin | IPTV-Playlist.m3u | International-Playlist.m3u |
+| Origin / collection | IPTV-Playlist.m3u | International-Playlist.m3u |
 |---|---|---|
 | Bangladesh | All genres are eligible. | All genres are eligible. |
 | India | News, all religious channels (including Islamic), educational and business/finance channels are prohibited. Kids and sports are allowed. | Same Indian exclusions; kids and sports are allowed. |
-| Other countries | Not included. | Only dedicated movie and music channels are eligible. |
+| Pakistan | Supported in the Pakistani group under the established country/genre rules. | Eligible dedicated movie and music channels. |
+| Other countries | Eligible channels may appear in International or qualified country groups, subject to the established genre rules. | Only dedicated movie and music channels are eligible. |
 
-The International discovery workflow must not stage non-Bangladesh/India news, sports, religious, kids, educational, documentary, radio, VOD or general-entertainment channels as eligible movie/music candidates. A country-specific group for other countries requires at least five unique, manually curated primary channel identities.
+The main playlist's multi-country scope is distinct from the source scope of any individual discovery workflow. The International discovery workflow is specifically limited to eligible movie/music candidates from Pakistan and other countries; it must not stage non-Bangladesh/India news, sports, religious, kids, educational, documentary, radio, VOD or general-entertainment channels as eligible movie/music candidates. A country-specific group for other countries requires at least five unique, manually curated primary channel identities.
 
 ## Discovery and manual review
 
@@ -54,7 +55,7 @@ For an EPG gap, verify both the channel identity and whether a usable matching s
 
 ## Related documentation
 
-- [Bangladeshi IPTV playlist guide](PLAYLISTS.md)
+- [Multi-country IPTV playlist guide](PLAYLISTS.md)
 - [Download Center](DOWNLOADS.md)
 - [Playlist Studio guide](PLAYLIST-STUDIO.md)
 - [Xtream Gateway](../xtream/README.md)
