@@ -1,14 +1,14 @@
 
-<h1 align="center">BDIX IPTV: Bangladesh, India & International M3U Playlists with EPG</h1>
+<h1 align="center">BDIX IPTV: Multi-Country M3U Playlists with XMLTV EPG</h1>
 
 <p align="center">
-  <strong>Organized IPTV playlists (M3U/M3U8) for Bangladesh, India and international channels, supported by channel metadata, locally stored logo assets and an XMLTV TV program guide (EPG).</strong><br>
+  <strong>A complete, organized multi-country IPTV collection (M3U/M3U8) covering Bangladesh, India, Pakistan and eligible channels from other countries, supported by channel metadata, locally stored logo assets and an XMLTV TV program guide (EPG).</strong><br>
   <sub>Compatible with XCIPTV, TiviMate, OTT Navigator, IPTV Smarters, VLC, Kodi and other M3U-compatible players.</sub>
 </p>
 
 <p align="center">
   <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/">
-    <img src="assets/BDIX-IPTV-banner.png" alt="BDIX-IPTV M3U playlists for Bangladesh, India and international movie and music channels, with XMLTV EPG" width="100%">
+    <img src="assets/BDIX-IPTV-banner.png" alt="BDIX-IPTV multi-country M3U playlists with XMLTV EPG" width="100%">
   </a>
 </p>
 
@@ -22,7 +22,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Playlist-M3U%20%2F%20M3U8-6f42c1?style=flat-square" alt="M3U and M3U8 playlist format">
   <img src="https://img.shields.io/badge/Program%20Guide-XMLTV%20EPG-2ea44f?style=flat-square" alt="XMLTV EPG program guide">
-  <img src="https://img.shields.io/badge/Channels-Bangladesh%20%7C%20India%20%7C%20International-ff6b35?style=flat-square" alt="Bangladesh, India and international channels">
+  <img src="https://img.shields.io/badge/Channels-Bangladesh%20%7C%20India%20%7C%20International-ff6b35?style=flat-square" alt="Multi-country IPTV channels">
   <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/actions/workflows/iptv-maintenance.yml"><img src="https://github.com/saeidrahmanbd/BDIX-IPTV/actions/workflows/iptv-maintenance.yml/badge.svg" alt="IPTV maintenance workflow status"></a>
 </p>
 
@@ -39,7 +39,7 @@
 
 ## About BDIX-IPTV
 
-**BDIX-IPTV** is a public collection of organized IPTV playlists in M3U/M3U8 format. It features television channels from Bangladesh and India, as well as a separate International playlist featuring movie and music channels from other countries.
+**BDIX-IPTV** is a public collection of organized, multi-country IPTV playlists in M3U/M3U8 format. The main **IPTV-Playlist.m3u** is a broad collection—not a Bangladesh-and-India-only playlist—with country and genre groups covering Bangladesh, India, Pakistan and eligible channels from other countries. The separate **International-Playlist.m3u** provides a companion international collection.
 
 The playlists are maintained with organized channel groups, channel information and locally stored logo assets where available. A shared **XMLTV Electronic Programme Guide (EPG)** is also provided for compatible IPTV players. Automated workflows support channel discovery, playlist maintenance, stream checks and EPG updates.
 
@@ -47,9 +47,9 @@ Stream availability and programme-guide coverage depend on third-party sources a
 
 <table align="center">
   <tr>
-    <td align="center" width="25%"><h3>🇧🇩</h3><strong>Bangladesh</strong><br><sub>Bangla TV and other channels</sub></td>
-    <td align="center" width="25%"><h3>🇮🇳</h3><strong>India</strong><br><sub>Indian television channels</sub></td>
-    <td align="center" width="25%"><h3>🌍</h3><strong>International</strong><br><sub>Movie and music channels</sub></td>
+    <td align="center" width="25%"><h3>🌏</h3><strong>Multi-country</strong><br><sub>Bangladesh, India, Pakistan and more</sub></td>
+    <td align="center" width="25%"><h3>📺</h3><strong>Country &amp; genre groups</strong><br><sub>Organized channel collections</sub></td>
+    <td align="center" width="25%"><h3>🌍</h3><strong>International</strong><br><sub>Companion international collection</sub></td>
     <td align="center" width="25%"><h3>🗓️</h3><strong>XMLTV EPG</strong><br><sub>TV programme guide</sub></td>
   </tr>
 </table>
@@ -64,12 +64,12 @@ Choose the collection you want to use. Each playlist is available through a dire
 <table>
   <tr>
     <td align="center" width="50%" valign="top">
-      <h2>🇧🇩 🇮🇳</h2>
-      <h3>Bangladesh &amp; India IPTV</h3>
+      <h2>🌏</h2>
+      <h3>Multi-Country IPTV</h3>
       <p><strong>IPTV-Playlist.m3u</strong></p>
-      <p>The main collection of Bangladeshi and Indian television channels, including Bangla TV and selected entertainment categories.</p>
+      <p>The main multi-country collection, covering Bangladesh, India, Pakistan and eligible channels from other countries across organized country and genre groups.</p>
       <a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u">
-        <img src="https://img.shields.io/badge/▶%20OPEN%20MAIN%20PLAYLIST-0969da?style=for-the-badge" alt="Open the Bangladesh and India IPTV M3U playlist">
+        <img src="https://img.shields.io/badge/▶%20OPEN%20MAIN%20PLAYLIST-0969da?style=for-the-badge" alt="Open the multi-country IPTV M3U playlist">
       </a>
       <br><br>
       <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/IPTV-Playlist.m3u">View playlist source</a>
@@ -92,13 +92,13 @@ Choose the collection you want to use. Each playlist is available through a dire
 
 Use the copy icon at the top-right of each code block to copy the URL.
 
-**Main playlist — Bangladesh &amp; India**
+**Main playlist — Multi-Country IPTV**
 
 ```text
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u
 ```
 
-**International playlist**
+**International companion playlist**
 
 ```text
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u
