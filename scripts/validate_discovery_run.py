@@ -350,7 +350,9 @@ def final_mode(playlist, report, baseline, mode):
         errors.append(f"{len(malformed)} malformed EXTINF/URL pairs")
     if duplicate_count:
         errors.append(f"{duplicate_count} duplicate stream URLs remain")
-    required = (["Backup", "Review", "New Channels", "New Backups"]
+    # Match the canonical 15-group IPTV registry enforced by
+    # normalize_metadata.py, final_playlist_hardening.py and sort_playlists.py.
+    required = (["Review", "New Channels", "New Backups", "Backup"]
                 if mode == "iptv" else ["Review", "New Channels", "New Backups", "Backup"])
     registry_line = next((line for line in lines if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")), "")
     try:
