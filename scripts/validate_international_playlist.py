@@ -70,6 +70,31 @@ def foreign_movie_music_error(a, name, country_code):
     return ""
 
 
+GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS = {
+    "documentary & wildlife", "kids", "religious", "sports",
+}
+
+
+def genre_group_policy_error(a, name, group):
+    """Keep foreign genre groups out of active categories; preserve BD and allowed Indian groups."""
+    group_key = str(group or "").strip().casefold()
+    if group_key not in GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS:
+        return ""
+
+    code = discovery.country_code(a)
+    if code not in discovery.ISO_CODES:
+        # Unknown country metadata is reported by the metadata audit; do not
+        # guess a territory or reject an otherwise protected legacy row here.
+        return ""
+    if code not in {"BD", "IN"}:
+        return foreign_movie_music_error(a, name, code)
+    if code == "IN" and group_key == "religious":
+        _target, reason, _verified = discovery.policy(a, name)
+        return reason or "Indian religious channels are prohibited"
+    # Bangladesh is unrestricted. Indian Kids and Sports are explicitly allowed.
+    return ""
+
+
 def main():
     if not PLAYLIST.is_file():
         raise SystemExit("International playlist is missing.")
@@ -142,6 +167,13 @@ def main():
                 content = (a.get("tvg-content") or "").strip().casefold()
                 if content not in {"movies", "movie", "music", "musics"}:
                     raise SystemExit(f"Non-Bangladesh/India review entry is not tagged Movies/Music: {name!r} in {group!r}.")
+        genre_issue = genre_group_policy_error(a, name, group)
+        if genre_issue:
+            raise SystemExit(
+                f"Channel violates country/content policy in genre group {group!r}: "
+                f"{name!r} ({genre_issue})."
+            )
+
         if group and group not in group_set:
             group_set.add(group)
             groups_seen.append(group)
