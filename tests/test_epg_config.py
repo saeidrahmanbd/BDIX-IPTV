@@ -704,6 +704,25 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("group-title is Bangladesh OR whose tvg-id has a .bd country suffix", source)
         self.assertIn("The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title", source)
 
+    def test_superseded_epg_guard_skips_all_expensive_following_steps(self):
+        workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn("id: superseded_guard", workflow)
+        self.assertIn("echo 'skip=true' >> \"$GITHUB_OUTPUT\"", workflow)
+        self.assertIn("echo 'skip=false' >> \"$GITHUB_OUTPUT\"", workflow)
+        for marker in (
+            "- uses: actions/setup-python@",
+            "- uses: actions/setup-node@",
+            "- name: Install Python dependencies",
+            "- name: Validate EPG configuration and quality rules",
+            "- name: Regenerate, validate and publish XMLTV",
+        ):
+            start = workflow.index(marker)
+            step_prefix = workflow[workflow.rfind("      - ", 0, start):start]
+            self.assertIn("if: steps.superseded_guard.outputs.skip != 'true'", step_prefix, marker)
+        artifact_start = workflow.index("- name: Upload EPG freshness diagnostic")
+        artifact_prefix = workflow[workflow.rfind("      - ", 0, artifact_start):artifact_start]
+        self.assertIn("if: always() && steps.superseded_guard.outputs.skip != 'true'", artifact_prefix)
+
     def test_epg_refresh_serializes_builds_and_keeps_known_good_guide_safe(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("group: iptv-playlist-main-writer-v3", workflow)
