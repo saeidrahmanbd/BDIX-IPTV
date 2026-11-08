@@ -99,6 +99,10 @@ def channel_key(name):
         "animalplanetindia": "animalplanet",
         # TLC India is a regional stream/variant of the TLC primary channel.
         "tlcindia": "tlc",
+        # Zee Anmol TV is also listed by providers as Anmol TV; keep one identity.
+        "anmoltv": "zeeanmoltv",
+        "zeeanmol": "zeeanmoltv",
+        "zeeanmoltv": "zeeanmoltv",
     }
     return aliases.get(key, key)
 
