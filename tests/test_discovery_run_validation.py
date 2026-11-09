@@ -107,7 +107,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Review","New Channels","New Backups","Backup"]\n'
                 '#EXTINF:-1 tvg-name="Bangladesh One" group-title="Bangladesh",Bangladesh One\n'
                 'https://example.org/bangladesh.m3u8\n'
-                '#EXTINF:-1 tvg-name="World Music" tvg-logo="logos/world-music.svg" tvg-content="Music" group-title="New Channels",World Music\n'
+                '#EXTINF:-1 tvg-id="WorldMusic.us" tvg-name="World Music" tvg-country="US" tvg-logo="logos/world-music.svg" tvg-content="Music" group-title="New Channels",World Music\n'
                 'https://example.org/world-music.m3u8\n'
                 '#EXTINF:-1 tvg-name="Backup One" group-title="Backup",Backup One\n'
                 'https://example.org/backup.m3u8\n'
