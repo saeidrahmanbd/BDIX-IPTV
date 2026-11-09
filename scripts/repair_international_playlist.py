@@ -242,7 +242,7 @@ def classify_primary_group(info,current):
   return ''
  kids={'babysharktv','bantulthegreat','cartoonnetwork','discoverykids','discoveryfamily','disneychannel','disneyjr','doraemontv','ducktv','epickidsdigital','kartoonchannel','kiddomatix','legochannel','moonbugkids','mrbeananimated','nickbangla','pogo','pbskids','pop','powerkidskartoonchannel','smurftv','strawberryshortcake','teennick','teletubbies','tinypop','tomandjerry','toonamiaftermatheast','toongoggles','toongogglesjunior','zoomoo','wowkidzhindi','wowkidztoamil','wowkidztoelugu','zbcartoon','tooku'}
  if re.search(r'national geographic|cgtn documentary|smithsonian channel|destination america|american heroes channel|law & crime|motortrend|world fishing network|true crime network|love nature',name,re.I):return 'Documentary & Wildlife'
- if current_key=='international' and country not in {'BD','IN'}:
+ if current_key=='international' and country not in {'BD','IN','PK'}:
   if re.search(movie_re,name,re.I):return 'International Movies'
   if re.search(music_re,name,re.I):return 'International Music'
   return ''
