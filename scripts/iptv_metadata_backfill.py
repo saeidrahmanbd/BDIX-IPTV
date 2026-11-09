@@ -15,7 +15,7 @@ CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
 FEEDS_URL = "https://iptv-org.github.io/api/feeds.json"
 ACTIVE_GROUPS = {
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
-    "Indian Entertainment", "Fashion", "Pakistani", "International",
+    "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
 }
 TARGET_GROUPS = ACTIVE_GROUPS | {"Backup"}
