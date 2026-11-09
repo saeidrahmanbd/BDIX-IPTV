@@ -33,6 +33,18 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         self.assertTrue(guard.is_manual_retry("schedule", "3"))
         self.assertFalse(guard.is_manual_retry("push", 1))
         self.assertFalse(guard.is_manual_retry("schedule", None))
+        self.assertTrue(guard.is_manual_retry(
+            "push", 1, "international-channel-discovery.yml",
+            "Manual International maintenance [manual-international-discovery]",
+        ))
+        self.assertFalse(guard.is_manual_retry(
+            "push", 1, "new-channel-discovery.yml",
+            "Manual International maintenance [manual-international-discovery]",
+        ))
+        self.assertFalse(guard.is_manual_retry(
+            "push", 1, "international-channel-discovery.yml",
+            "Routine maintenance commit",
+        ))
 
     def test_any_existing_run_prevents_watchdog_redispatch(self):
         runs = [
