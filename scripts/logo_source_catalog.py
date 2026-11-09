@@ -130,7 +130,7 @@ def find_page_logo(page_url, allow_og_image=False):
     for tag in re.findall(r"<img\b[^>]*>", source, flags=re.I):
         attrs = {
             key.lower(): html.unescape(value)
-            for key, _, value in re.findall(r"""([\w:-]+)\s*=\s*["']([^"']*)["']""", tag)
+            for key, value in re.findall(r"""([\w:-]+)\s*=\s*["']([^"']*)["']""", tag)
         }
         src = attrs.get("src") or attrs.get("data-src") or ""
         if not src or src.startswith(("data:", "blob:")):
@@ -147,7 +147,7 @@ def find_page_logo(page_url, allow_og_image=False):
         for tag in meta_tags:
             attrs = {
                 key.lower(): html.unescape(value)
-                for key, _, value in re.findall(r"""([\w:-]+)\s*=\s*["']([^"']*)["']""", tag)
+                for key, value in re.findall(r"""([\w:-]+)\s*=\s*["']([^"']*)["']""", tag)
             }
             property_name = (attrs.get("property") or attrs.get("name") or "").lower()
             image_url = attrs.get("content") or ""
