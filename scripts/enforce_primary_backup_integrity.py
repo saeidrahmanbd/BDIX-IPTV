@@ -38,6 +38,8 @@ LEGACY_GROUPS = {"Not Playing": "Review"}
 MIGRATION_GROUP_BY_ID = {
     "channelwin.in@sd": "REMOVE",
     "darshanatv.in@sd": "REMOVE",
+    "eurosport.in@sd": "Sports",
+    "humtv.pk": "Pakistani",
     "greengoldtv.in@india": "Kids",
     "gtcpunjabi.in@uk": "Indian Entertainment",
     "hungama.in@sd": "Kids",

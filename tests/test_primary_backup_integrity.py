@@ -179,6 +179,8 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             + row("GTCPunjabi.in@UK", "GTC Punjabi UK", "Backup", "https://stream.example/gtc.m3u8", language="pan", country="IN")
             + row("MHOne.in@SD", "MH One", "Backup", "https://stream.example/mhone.m3u8", language="pan", country="IN")
             + row("QTV.in", "Q TV", "Backup", "https://stream.example/qtv.m3u8", language="hin", country="IN")
+            + row("Eurosport.in@SD", "Eurosport", "Backup", "https://stream.example/eurosport.m3u8", language="eng", country="IN")
+            + row("HumTV.pk", "Hum TV", "Backup", "https://stream.example/humtv.m3u8", language="urd", country="PK")
         )
         updated, stats, errors = repair_playlist_text(sample)
         self.assertEqual(errors, [])
@@ -187,7 +189,11 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertIn('tvg-name="MH One"', updated)
         self.assertIn('group-title="Indian Music"', updated)
         self.assertIn('tvg-name="Q TV"', updated)
-        self.assertEqual(stats["orphan_backups_promoted"], 3)
+        self.assertIn('tvg-name="Eurosport"', updated)
+        self.assertIn('group-title="Sports"', updated)
+        self.assertIn('tvg-name="Hum TV"', updated)
+        self.assertIn('group-title="Pakistani"', updated)
+        self.assertEqual(stats["orphan_backups_promoted"], 5)
 
     def test_removed_non_kids_candidates_are_deleted_and_unknown_backup_stays_reviewed(self):
         sample = (
