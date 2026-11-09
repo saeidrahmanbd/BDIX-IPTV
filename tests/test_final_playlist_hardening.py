@@ -16,6 +16,8 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
             "#EXTM3U",
             '#EXTINF:-1 tvg-id="ChannelS.uk@679aa9" tvg-name="Channel S UK" tvg-chno="21" channel-id="ChannelS.uk@679aa9" group-title="Bangladesh",Channel S UK',
             "https://example.invalid/channel-s-main.m3u8",
+            '#EXTINF:-1 tvg-id="ChannelS.uk@679aa9" tvg-name="Channel S UK" tvg-country="GB" tvg-language="ben" channel-id="ChannelS.uk@679aa9" group-title="International",Channel S UK',
+            "https://example.invalid/channel-s-intl.m3u8",
             '#EXTINF:-1 tvg-id="ChannelS.uk@679aa9" tvg-name="Channel S UK" channel-id="ChannelS.uk@679aa9" group-title="Backup",Channel S UK',
             "https://example.invalid/channel-s-backup.m3u8",
             '#EXTINF:-1 tvg-id="ChannelS.uk@679aa9" tvg-name="Channel S UK" channel-id="ChannelS.uk@679aa9" group-title="Review",Channel S UK',
@@ -27,6 +29,7 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
             hardening.process(path)
             result = path.read_text(encoding="utf-8")
         self.assertIn('group-title="Bangladesh",Channel S UK', result)
+        self.assertIn('group-title="International",Channel S UK', result)
         self.assertIn('group-title="Backup",Channel S UK', result)
         self.assertIn('group-title="Review",Channel S UK', result)
         self.assertNotIn('group-title="Not Playing"', result)
