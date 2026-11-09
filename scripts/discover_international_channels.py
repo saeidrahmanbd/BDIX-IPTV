@@ -457,10 +457,12 @@ def main():
    group="New Backups"
   elif old_key=="new channels" and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
-   base,reason,policy_code=policy(policy_a,name)
-   genre=infer_genre(policy_a,name)
-   if base is None or (policy_code not in {"BD","IN","PK"} and not genre):
+   base,reason,policy_code,genre=queue_policy(policy_a,name)
+   if base is None:
     filtered_existing.append((name,old,reason or "entry is not confidently classifiable under country policy"))
+    continue
+   if not safe_url(url_of(b)):
+    filtered_existing.append((name,old,"unsafe or tokenized URL"))
     continue
    queue_logo=local_logo(a,name)
    if not queue_logo:
