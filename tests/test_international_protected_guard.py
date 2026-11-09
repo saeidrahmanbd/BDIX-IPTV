@@ -125,7 +125,7 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
 
 
     def test_pakistan_uses_the_same_five_unique_primary_channel_threshold(self):
-        header = "#EXTM3U\\n#PLAYLIST-STUDIO-NAME: Test\\n"
+        header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
         four = "".join(
             entry(f"Pakistan Channel {i}", "Pakistani", f"http://pk.example/{i}.m3u8", 'tvg-country="PK" ')
             for i in range(1, 5)
@@ -158,7 +158,7 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
         self.assertNotIn('group-title="International"', five_output)
 
     def test_eligible_orphan_backup_is_promoted_and_counts_toward_threshold(self):
-        header = "#EXTM3U\\n#PLAYLIST-STUDIO-NAME: Test\\n"
+        header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
         four_primary = "".join(
             entry(f"Albania Movie {i}", "International", f"http://al.example/{i}.m3u8",
                   'tvg-country="AL" tvg-content="Movies" ')
@@ -190,7 +190,7 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
         self.assertIn("http://al.example/alternate.m3u8", output)
 
     def test_adult_orphan_backup_is_restored_to_adult_group(self):
-        header = "#EXTM3U\\n#PLAYLIST-STUDIO-NAME: Test\\n"
+        header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
         adult_orphan = entry(
             "Pink Erotic 2", "Backup", "http://adult.example/pink-erotic-2.m3u8",
             'tvg-country="US" tvg-content="Adult" '
