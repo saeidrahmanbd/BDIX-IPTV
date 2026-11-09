@@ -76,7 +76,7 @@ GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS = {
 
 
 def genre_group_policy_error(a, name, group):
-    """Keep foreign genre groups out of active categories; preserve BD and allowed Indian groups."""
+    """Restrict generic genre groups only for countries outside BD/IN/PK, with Indian exceptions."""
     group_key = str(group or "").strip().casefold()
     if group_key not in GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS:
         return ""
