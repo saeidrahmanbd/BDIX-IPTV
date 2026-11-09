@@ -18,29 +18,25 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-09 — `International-Playlist.m3u`
 
-- New channel identities: **27**
-- Channel identities removed: **2**
-- Stream URLs added / removed: **46 / 5**
+- New channel identities: **0**
+- Channel identities removed: **62**
+- Stream URLs added / removed: **0 / 96**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Added channel identities (up to 10):
-- &pictures
-- Cartoon Network (India)
-- Cartoon Network HD+
-- Colors Cineplex Bollywood
-- Colors Cineplex Superhits
-- Discovery Kids
-- Lollywood HD TV
-- Muzhskoy
-- Namma Bangalore
-- Nick Jr. (India)
-
 Removed channel identities (up to 10):
-- Discovery Turbo (India) (720p)
-- Makkal TV (576i)
+- 7 RadioVisione
+- ACC Network
+- AMC (United States)
+- Aneflix Live
+- Angel TV
+- Animal Planet (United States)
+- AXS TV
+- AyM Sports
+- Blokbaster
+- Bravo! Kids TV
 
 ## [5.0.0] — Playlist Studio
 
