@@ -129,12 +129,12 @@ def is_permanently_removed(info: str) -> bool:
 
 
 def canonical_url_base(url: str) -> str:
-    parsed = urlsplit(str(url or "").strip())
+    parsed = urlsplit(stream_url_key(url))
     if not parsed.netloc or not parsed.path:
         return ""
-    path = parsed.path.casefold().rstrip("/")
+    path = parsed.path.rstrip("/")
     path = re.sub(r"\.(?:m3u8?|mpd)$", "", path, flags=re.IGNORECASE)
-    return parsed.netloc.casefold() + path
+    return parsed.netloc + path
 
 
 def is_authorized_orphan_backup_removal(info: str, url: str) -> bool:

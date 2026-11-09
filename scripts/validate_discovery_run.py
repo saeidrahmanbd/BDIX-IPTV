@@ -202,7 +202,7 @@ def consolidate_international_country_groups(playlist_path):
     blocks.sort(key=lambda block: (
         rank.get(discovery.attrs(block[0]).get("group-title", "").strip().casefold(), len(rank)),
         discovery.natural_key(discovery.name_of(block)),
-        discovery.url_of(block).casefold(),
+        stream_url_key(discovery.url_of(block)),
     ))
     preamble = [line for line in prefix if not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
     header = "#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry, ensure_ascii=False)
