@@ -25,6 +25,11 @@ from urllib.parse import urlsplit
 from logo_asset_naming import is_blocked_logo_basename
 from stream_url_identity import stream_url_key
 from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS, PERMANENTLY_REMOVED_NAMES
+from restore_protected_review import (
+    AUTHORIZED_MIGRATION_SOURCE_GROUPS,
+    authorized_backup_migration_target,
+    normalize_name as _restore_normalize_name,
+)
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
@@ -448,6 +453,7 @@ def verify_no_unauthorized_removals() -> int:
             a = _attrs(info)
             primary_ids.update(value.strip().casefold() for value in (a.get("tvg-id", ""), a.get("channel-id", "")) if value.strip())
     allowed_new_protected = set()
+    allowed_queue_migrations = set()
     group_transition_errors = []
     for url, block in current_by_url.items():
         current_group = _group(str(block["info"]))
@@ -467,17 +473,28 @@ def verify_no_unauthorized_removals() -> int:
             allowed_new_protected.add(url)
         elif old_group in {"Review", "Not Playing"} and current_group == "Backup":
             group_transition_errors.append(f"Review entry promoted to Backup: {_name(str(block['info']))}")
-        elif old_group == "Backup" and current_group not in {"Backup", "Review"}:
-            group_transition_errors.append(f"Backup entry promoted out of review: {_name(str(block['info']))}")
+        elif old_group == "Backup" and current_group != "Backup":
+            channel_name = _name(str(block["info"]))
+            migration_target = authorized_backup_migration_target(str(block["info"]), str(block["url"]))
+            migration_source = AUTHORIZED_MIGRATION_SOURCE_GROUPS.get(
+                _restore_normalize_name(channel_name), "Backup"
+            )
+            if old_group == migration_source and current_group == migration_target:
+                allowed_queue_migrations.add(url)
+            else:
+                group_transition_errors.append(
+                    f"Unapproved Backup migration to {current_group}: {channel_name}"
+                )
         elif old_group == "Review" and current_group != "Review":
             group_transition_errors.append(f"Review entry reclassified: {_name(str(block['info']))}")
     if group_transition_errors:
         print("Change Guard BLOCKED: " + "; ".join(group_transition_errors[:10]), file=sys.stderr)
         return 1
 
-    current_protected = _protected_text(current_text, allowed_new_protected)
+    ignored_migration_urls = allowed_new_protected | allowed_queue_migrations
+    current_protected = _protected_text(current_text, ignored_migration_urls)
     expected_protected = (
-        _protected_text(PROTECTED_SNAPSHOT.read_text(encoding="utf-8"))
+        _protected_text(PROTECTED_SNAPSHOT.read_text(encoding="utf-8"), ignored_migration_urls)
         if PROTECTED_SNAPSHOT.exists()
         else ""
     )
