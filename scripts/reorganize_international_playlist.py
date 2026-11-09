@@ -214,7 +214,7 @@ def classify(a, name, group, country):
         if target is None:
             return None, None, reason or "outside discovery policy"
         kind = infer_kind(name, group, a)
-        if code not in {"BD", "IN"} and not kind:
+        if code not in {"BD", "IN", "PK"} and not kind:
             return None, None, "foreign candidate is not clearly Movies/Music"
         return ("New Backups" if group_key in {"new backup", "new backups"} else "New Channels"), kind, None
 
@@ -222,7 +222,7 @@ def classify(a, name, group, country):
     if group_key in BACKUP_GROUPS or group_key == "not playing":
         return "Backup", infer_kind(name, group, a), None
 
-    # Bangladesh is unrestricted by genre (apart from fake/VOD/non-TV entries).
+    # Bangladesh and Pakistan are unrestricted by genre (apart from fake/VOD/non-TV entries).
     if country == "BD" or group == "Bangladesh":
         return "Bangladesh", None, None
 
@@ -244,7 +244,11 @@ def classify(a, name, group, country):
             return "Indian Music", None, None
         return "Indian Entertainment", None, None
 
-    # Every country other than Bangladesh and India is strictly Movies/Music.
+    # Pakistan is a regional exception and is not subject to the Movie/Music-only rule.
+    if country == "PK" or group == "Pakistani":
+        return "Pakistani", infer_kind(name, group, a), None
+
+    # Only countries other than Bangladesh, India and Pakistan are strictly Movies/Music.
     # Run the canonical policy even for legacy rows so a News/general-entertainment
     # label cannot pass because of a misleading tvg-content tag.
     policy_attrs = dict(a)
@@ -278,8 +282,7 @@ def set_extinf(block, name, group, country, content_kind, keep_logo, is_queue=Fa
     original_content = attrs(block[0]).get("tvg-content", "").strip()
     if group == "Review" and original_content:
         fields.append(f'tvg-content="{original_content}"')
-    # The Pakistani primary group, like country-specific movie/music queues,
-    # is restricted to dedicated Movies/Music channels; retain its content tag.
+    # Pakistan is not genre-restricted; retain a content tag only when one is known.
     elif content_kind and (is_queue or group == "Pakistani" or group not in FIXED + TAIL):
         tag = "Movies" if content_kind == "movie" else "Music"
         fields.append(f'tvg-content="{tag}"')
@@ -430,7 +433,7 @@ def main():
         if match:
             row["content_kind"] = match.get("content_kind") or match.get("kind")
             emit(row, "Backup", as_backup=True)
-        elif row["country"] in {"BD", "IN"} or row["group"] in {"Religious", "Adult", "Kids", "Sports", "Documentary & Wildlife"} or row.get("kind"):
+        elif row["country"] in {"BD", "IN", "PK"} or row["group"] in {"Religious", "Adult", "Kids", "Sports", "Documentary & Wildlife"} or row.get("kind"):
             emit(row, "Backup", as_backup=True)
         elif row.get("was_protected"):
             preserved["protected Backup/Not Playing kept despite orphan policy"] += 1
@@ -477,7 +480,7 @@ def main():
                 raise SystemExit(f"Review queue entry violates regional policy: {name} ({reason or 'not eligible'})")
             if not a.get("tvg-logo", "").strip():
                 raise SystemExit(f"Review queue entry lacks a local logo: {name}")
-            if code not in {"BD", "IN"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
+            if code not in {"BD", "IN", "PK"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
                 raise SystemExit(f"Foreign review queue entry lacks Movie/Music classification: {name}")
         final_urls.append(url.casefold())
         group_counts[group] += 1
@@ -496,7 +499,7 @@ def main():
         f"- Exact duplicate URLs omitted: {removed['exact duplicate URL']}",
         f"- Additional same-channel streams moved to Backup: {removed['duplicate channel stream moved to Backup']}",
         "- Bangladesh channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.",
-        "- For countries other than Bangladesh and India, only dedicated Movies and Music channels are eligible.",
+        "- For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.",
         "- New Channels and New Backups are manual-review queues; candidates are never automatically promoted. Foreign country groups require five unique, manually curated primary channel identities.",
         "- Retained stream URLs are preserved; playback/availability was not tested.", "",
         "## Removal summary", "", *[f"- {reason}: {count}" for reason, count in sorted(removed.items())], "",

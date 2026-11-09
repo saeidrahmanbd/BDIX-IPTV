@@ -40,9 +40,9 @@ def normalized_stream_url(url):
 
 
 def foreign_movie_music_error(a, name, country_code):
-    """Return a policy error unless a foreign primary row is explicitly Movies/Music."""
+    """Require Movies/Music only for primary rows from countries outside BD/IN/PK."""
     code = str(country_code or "").strip().upper()
-    if code in {"BD", "IN"}:
+    if code in {"BD", "IN", "PK"}:
         return ""
     policy_attrs = dict(a)
     # Country-group labels are authoritative for the country. Reuse the same
@@ -76,7 +76,7 @@ GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS = {
 
 
 def genre_group_policy_error(a, name, group):
-    """Keep foreign genre groups out of active categories; preserve BD and allowed Indian groups."""
+    """Restrict generic genre groups only for countries outside BD/IN/PK, with Indian exceptions."""
     group_key = str(group or "").strip().casefold()
     if group_key not in GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS:
         return ""
@@ -86,7 +86,7 @@ def genre_group_policy_error(a, name, group):
         # Unknown country metadata is reported by the metadata audit; do not
         # guess a territory or reject an otherwise protected legacy row here.
         return ""
-    if code not in {"BD", "IN"}:
+    if code not in {"BD", "IN", "PK"}:
         return f"foreign channels are not permitted in the {group} genre group"
     if code == "IN" and group_key == "religious":
         _target, reason, _verified = discovery.policy(a, name)
@@ -151,8 +151,8 @@ def main():
             if not discovery.FASHION_RE.search(name):
                 raise SystemExit(f"Invalid Fashion TV exception entry: {name!r}.")
         elif group_key in country_group_labels or group_key == "pakistani":
-            # Dedicated country labels do not exempt legacy rows from the strict
-            # foreign Movies/Music-only policy.
+            # Dedicated country labels are checked against the country-specific policy;
+            # Bangladesh, India and Pakistan are exempt from the general Movies/Music-only rule.
             code = country_group_labels.get(group_key, "PK")
             reason = foreign_movie_music_error(a, name, code)
             if reason:
@@ -163,10 +163,10 @@ def main():
             target, reason, code = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
             if target is None:
                 raise SystemExit(f"Channel violates country/content policy in {group}: {name!r} ({reason or 'not eligible'}).")
-            if code not in {"BD", "IN"}:
+            if code not in {"BD", "IN", "PK"}:
                 content = (a.get("tvg-content") or "").strip().casefold()
                 if content not in {"movies", "movie", "music", "musics"}:
-                    raise SystemExit(f"Non-Bangladesh/India review entry is not tagged Movies/Music: {name!r} in {group!r}.")
+                    raise SystemExit(f"Non-Bangladesh/India/Pakistan review entry is not tagged Movies/Music: {name!r} in {group!r}.")
         genre_issue = genre_group_policy_error(a, name, group)
         if genre_issue:
             raise SystemExit(
@@ -184,6 +184,8 @@ def main():
         ]
         if len(stream_rows) != 1:
             raise SystemExit(f"Expected exactly one URL row for {name!r}; found {len(stream_rows)}.")
+        if group_key in {"new channels", "new backup", "new backups"} and not discovery.safe_url(stream_rows[0]):
+            raise SystemExit(f"Manual-review queue contains an unsafe or tokenized URL: {name!r}.")
         urls.append(normalized_stream_url(stream_rows[0]))
 
         logo = a.get("tvg-logo", "").strip()
