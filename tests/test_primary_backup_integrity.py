@@ -39,6 +39,69 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             + row("UNKNOWN.bd", "Unknown Language", "Bangladesh", "https://stream.example/unknown.m3u8", language="")
         )
 
+    def test_live_playlist_selected_audit_repairs_are_applied(self):
+        playlist = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        entries = []
+        current = None
+        for line in playlist.splitlines():
+            if line.startswith("#EXTINF:"):
+                if current is not None:
+                    entries.append(current)
+                attrs = dict(re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"', line))
+                current = {"attrs": attrs, "url": ""}
+            elif current is not None and line.strip().startswith(("http://", "https://")):
+                current["url"] = line.strip()
+        if current is not None:
+            entries.append(current)
+
+        primary_groups = {
+            "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
+            "Indian Entertainment", "Pakistani", "International",
+            "Documentary & Wildlife", "Kids", "Religious", "Sports",
+        }
+        active_ids = [
+            e["attrs"].get("tvg-id", "").casefold()
+            for e in entries if e["attrs"].get("group-title") in primary_groups
+            and e["attrs"].get("tvg-id")
+        ]
+        self.assertEqual(len(active_ids), len(set(active_ids)), "primary tvg-id values must be unique")
+
+        islamic = [e for e in entries if e["attrs"].get("tvg-name") == "Islamic TV"]
+        self.assertEqual(len(islamic), 2)
+        active_islamic = [e for e in islamic if e["attrs"].get("group-title") == "Religious"]
+        self.assertEqual(len(active_islamic), 1)
+        self.assertEqual(active_islamic[0]["attrs"].get("tvg-id"), "IslamicTV.bd")
+        self.assertEqual(active_islamic[0]["attrs"].get("channel-id"), "IslamicTV.bd")
+        self.assertEqual(active_islamic[0]["attrs"].get("tvg-country"), "BD")
+        self.assertEqual(active_islamic[0]["attrs"].get("tvg-language"), "ben")
+        self.assertEqual(active_islamic[0]["attrs"].get("tvg-chno"), "537")
+
+        for name in ("D Talk", "Prime TV", "TV One UK"):
+            candidate = [e for e in entries if e["attrs"].get("tvg-name") == name]
+            self.assertEqual(len(candidate), 1)
+            self.assertEqual(candidate[0]["attrs"].get("group-title"), "Review")
+
+        for e in entries:
+            if e["attrs"].get("group-title") == "Bangladesh":
+                self.assertEqual(e["attrs"].get("tvg-country"), "BD", e["attrs"].get("tvg-name"))
+
+        raj_primary = [e for e in entries if e["attrs"].get("tvg-name") == "Rajdhani TV"
+                       and e["attrs"].get("group-title") == "Bangladesh"]
+        raj_backup = [e for e in entries if e["attrs"].get("tvg-name") == "Rajdhani TV"
+                      and e["attrs"].get("group-title") == "Backup"]
+        self.assertEqual(len(raj_primary), 1)
+        self.assertEqual(raj_primary[0]["url"], "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8")
+        self.assertEqual(len(raj_backup), 1)
+        self.assertEqual(raj_backup[0]["url"], "http://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8")
+
+        placeholder_ids = {
+            "Colors.in", "Colors.Bangla.in", "ColorsBanglaCinema.in@SD",
+            "ColorsCineplex.uk", "StarGold.in@HD",
+        }
+        quarantined = [e for e in entries if e["attrs"].get("tvg-id") in placeholder_ids
+                       and e["attrs"].get("group-title") == "Review"]
+        self.assertGreaterEqual(len(quarantined), 6)
+
     def test_primary_without_verified_local_logo_is_preserved_in_review(self):
         dtalk_url = "https://stream.example/d-talk.m3u8"
         prime_url = "https://stream.example/prime-tv.m3u8"
@@ -65,7 +128,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         url = "https://stream.example/nkr-tv-kannada.m3u8"
         fallback = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg"
         sample = (
-            "#EXTM3U\\n"
+            "#EXTM3U\n"
             + row("NKRTVKannada.in@SD", "NKR TV Kannada", "Indian Entertainment", url,
                   language="kan", country="IN", logo=fallback)
         )

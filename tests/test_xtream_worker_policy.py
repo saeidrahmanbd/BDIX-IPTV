@@ -35,6 +35,14 @@ class XtreamWorkerPolicyTests(unittest.TestCase):
                 self.assertIn('request.method==="OPTIONS"', source)
                 self.assertIn("function constantTimeEqual(a,b)", source)
 
+    def test_main_worker_bypasses_stale_raw_playlist_cache(self):
+        source = self.read_worker("xtream-main")
+        playlist_fetch = source.split("async function playlist(env)", 1)[1].split("function constantTimeEqual", 1)[0]
+        self.assertIn('"Cache-Control":"no-cache, no-store"', playlist_fetch)
+        self.assertIn('"Pragma":"no-cache"', playlist_fetch)
+        self.assertIn("cacheTtl:0", playlist_fetch)
+        self.assertIn("cacheEverything:false", playlist_fetch)
+
     def test_both_workers_use_order_independent_stream_ids(self):
         for name in ("xtream-main",):
             with self.subTest(worker=name):

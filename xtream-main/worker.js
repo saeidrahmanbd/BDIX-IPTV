@@ -79,7 +79,13 @@ async function playlist(env){
   const source=env.PLAYLIST_URL||PLAYLIST_URL;
   const r=await fetch(source,{
     headers:{
-      "User-Agent":"BDIX-IPTV-Xtream/6.3"
+      "User-Agent":"BDIX-IPTV-Xtream/6.4",
+      "Cache-Control":"no-cache, no-store",
+      "Pragma":"no-cache"
+    },
+    cf:{
+      cacheTtl:0,
+      cacheEverything:false
     }
   }
   );
