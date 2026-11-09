@@ -105,7 +105,8 @@ jobs:
               if normalized != baseline:
                   raise SystemExit("Non-logo playlist content changed: " + name)
               entries = [line for line in current.splitlines() if line.startswith("#EXTINF:")]
-              missing = external = nvision = broken = adult_ignored = 0
+              missing = review_missing = external = nvision = broken = adult_ignored = 0
+              review_groups = {"review", "new channels", "new backups", "not playing"}
               for line in entries:
                   meta = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
                   group = (meta.get("group-title") or "").strip().casefold()
@@ -118,7 +119,10 @@ jobs:
                   m = re.search(r'tvg-logo="([^"]*)"', line)
                   logo = m.group(1).strip() if m else ""
                   if not logo:
-                      missing += 1
+                      if group in review_groups:
+                          review_missing += 1
+                      else:
+                          missing += 1
                       continue
                   if not logo.startswith(base):
                       external += 1
