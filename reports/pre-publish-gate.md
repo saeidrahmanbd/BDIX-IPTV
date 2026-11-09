@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-09T15:32:43+00:00**
-Source playlist SHA-256: **8c1b3678eefb9c990ece2f8fcbd1fb1e5f2f3c8d7be6d1f4566fa0cf555b0267**
+Generated: **2026-11-09T16:15:30+00:00**
+Source playlist SHA-256: **1238de7a6f4d50b9fefee2a4e2d3d675e879522d6eaf0e88a8799ac94e2261bc**
 
 Status: **BLOCK**
 
@@ -15,11 +15,11 @@ Status: **BLOCK**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **1**
-- Primary entries missing channel numbers: **21**
-- Primary channel-number sequence issues: **552**
-- Numbered review entries: **1**
+- Primary entries missing channel numbers: **38**
+- Primary channel-number sequence issues: **569**
+- Numbered review entries: **2**
 - Same-ID metadata name conflicts: **0**
-- Orphan Backup entries: **2**
+- Orphan Backup entries: **1**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **10**
@@ -38,20 +38,20 @@ New Channels and New Backups are active BD/IN-only review queues used by discove
 
 ## Blocking Reasons
 - duplicate primary channel numbers: 1
-- orphan Backup entries: 2
+- orphan Backup entries: 1
 - entries missing tvg-language: 10
-- primary entries missing tvg-chno: 21
-- primary channel-number sequence gaps/order errors: 552
-- review entries still numbered: 1
+- primary entries missing tvg-chno: 38
+- primary channel-number sequence gaps/order errors: 569
+- review entries still numbered: 2
 - incorrect/placeholder/generic logos: 10
 
 ## Review-queue logo gaps
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
-- **D Talk**
+- **Ten TV Prime**
+- **Shikor TV Canada**
 - **TV One UK**
-- **Prime TV**
 
 ## Metadata conflicts
 
