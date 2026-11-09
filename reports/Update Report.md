@@ -1,41 +1,41 @@
 # Update Report
 
-_Last generated: **2026-11-09 09:40 UTC**_
+_Last generated: **2026-11-09 10:32 UTC**_
 
-Source playlist SHA-256: **d4bab23c700d8a1cfd18c45af6ffafabb6fcc5dece8fef83fa4f96629a9580eb**
+Source playlist SHA-256: **0680bfb8102b091d27c93ed5c2b58c175616473b7d81543b8dfdfcb0f1fa6b54**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1061** |
-| Active Channel Identities | **592** |
-| Active Primary Streams | **592** |
-| Bangladesh | **60** |
+| Streams | **1069** |
+| Active Channel Identities | **578** |
+| Active Primary Streams | **578** |
+| Bangladesh | **57** |
 | India | **294** |
-| Backup Stream Entries | **376** |
-| IPTV Local Logos | **99.5%** |
-| IPTV EPG Programme Coverage | **53%** |
-| IPTV EPG Mapping | **61.7%** |
-| Stream Health Tested | **1061** |
-| Stream Health Failures | **175** |
-| Persistent Failures | **156** |
+| Backup Stream Entries | **335** |
+| IPTV Local Logos | **99.7%** |
+| IPTV EPG Programme Coverage | **PENDING** |
+| IPTV EPG Mapping | **PENDING** |
+| Stream Health Tested | **1069** |
+| Stream Health Failures | **183** |
+| Persistent Failures | **161** |
 | Near-Duplicate URL Families | **2** |
-| Audit Blocking Issues | **24** |
+| Audit Blocking Issues | **18** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-11-09T09:39:54+00:00** |
+| Pre-Publish Gate Generated | **2026-11-09T10:32:03+00:00** |
 
 ## Quality Controls 
-- Duplicate stream URLs: **1**
+- Duplicate stream URLs: **0**
 - Metadata conflicts (canonical primary scope): **0**
-- Same-name / different-ID collisions (canonical primary scope): **0**
+- Same-name / different-ID collisions (canonical primary scope): **1**
 - Cross-queue metadata identity variants: **0**
-- Cross-queue same-name / different-ID collisions: **2**
+- Cross-queue same-name / different-ID collisions: **3**
 - Duplicate primary identities: **0**
-- Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **1**
-- Logo exceptions: **5**
+- Primary channel-number collisions: **1**
+- Primary entries missing channel numbers: **9**
+- Logo exceptions: **3**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **11**
-- Alphabetical ordering issues: **6**
+- Category block-order issues: **2**
+- Alphabetical ordering issues: **3**
 - Signed/tokenized URLs: **8**
 
 ## Safety & Automation
@@ -52,24 +52,24 @@ Source playlist SHA-256: **d4bab23c700d8a1cfd18c45af6ffafabb6fcc5dece8fef83fa4f9
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
 ## EPG
-- EPG IDs audited: **592**
-- Mapped: **365 (61.7%)**
-- Current/future programme coverage: **316/592 (53.4%)**
-- No mapping: **227**
-- EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against both current playlist inventories)**
+- EPG IDs audited: **PENDING — guide not current**
+- Mapped: **PENDING — no current validated guide**
+- Current/future programme coverage: **PENDING — no current validated guide**
+- No mapping: **PENDING — guide not current**
+- EPG metric scope: **IPTV-Playlist.m3u published-guide row (awaiting a valid, fresh published guide)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
 
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-09T09:39:53.555877+00:00** | **CURRENT** |
-| EPG coverage / two-playlist inventory | **2026-11-09T09:19:49+00:00** | **CURRENT** |
-| Stream health | **2026-11-09T09:40:29+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-09T09:39:54+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-09T10:32:03.224311+00:00** | **CURRENT** |
+| EPG coverage / two-playlist inventory | **2026-11-09T09:19:49+00:00** | **PENDING — guide missing or freshness not PASS** |
+| Stream health | **2026-11-09T10:32:41+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-09T10:32:03+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
-- Latest entries change: **1061 → 1061**
-- Latest health failures: **166 → 175**
+- Latest entries change: **1061 → 1069**
+- Latest health failures: **175 → 183**
 
 Historical records are retained in reports/maintenance-history.json.

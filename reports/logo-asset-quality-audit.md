@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-09T09:39:52+00:00**
+Generated: **2026-11-09T10:32:02+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **d4bab23c700d8a1cfd18c45af6ffafabb6fcc5dece8fef83fa4f96629a9580eb**
-- International-Playlist.m3u SHA-256: **64f6e31a895db7736fcbadb84d77e8cb98a02eb673c57a909112688a53b5a8f4**
+- IPTV-Playlist.m3u SHA-256: **0680bfb8102b091d27c93ed5c2b58c175616473b7d81543b8dfdfcb0f1fa6b54**
+- International-Playlist.m3u SHA-256: **89bfb16e2da6a658d45bd5fa8d6fead9267a45572b08ad94c0ea064abff5e789**
 
 ## Summary
 
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **699**
-- Playlist references whose asset stem differs from the normalized channel name: **1338**
-- Unreferenced files immediately inside logos/: **1448** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1363**
+- Unreferenced files immediately inside logos/: **1443** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -639,7 +639,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/pluto-tv-wild-west-dk.png, logos/international/pluto-tv-wild-west-no.png, logos/international/pluto-tv-wild-west.png
 - logos/international/premialnoe-hd-1080p.png, logos/premialnoe-8c61801efd.png
 - logos/international/qmusic.png, logos/qmusic.png
-- logos/international/rakuten-tv-action-movies-austria-720p.png, logos/international/rakuten-tv-action-movies-germany-1080p.png, logos/international/rakuten-tv-action-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-austria-720p.png, logos/international/rakuten-tv-comedy-movies-germany-1080p.png, logos/international/rakuten-tv-comedy-movies-italy-1080p.png, logos/international/rakuten-tv-drama-movies-austria-720p.png, logos/international/rakuten-tv-drama-movies-germany-1080p.png, logos/international/rakuten-tv-family-movies-austria-720p.png, logos/international/rakuten-tv-family-movies-germany-1080p.png, logos/international/rakuten-tv-family-movies-italy-1080p.png, logos/international/rakuten-tv-family-movies-switzerland-720p.png, logos/international/rakuten-tv-family-movies-uk-1080p.png, logos/international/rakuten-tv-top-movies-germany-1080p.png, logos/international/rakuten-tv-top-movies-italy-1080p.png, logos/rakuten-tv-action-movies-italy-1080p.png, logos/rakuten-tv-action-movies-uk-1080p-75f2eea4ce.png, logos/rakuten-tv-comedy-movies-germany-1080p.png, logos/rakuten-tv-drama-movies-italy-166043b571.png, logos/rakuten-tv-family-movies-uk-1080p.png
+- logos/international/rakuten-tv-action-movies-austria-720p.png, logos/international/rakuten-tv-action-movies-germany-1080p.png, logos/international/rakuten-tv-action-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-austria-720p.png, logos/international/rakuten-tv-comedy-movies-germany-1080p.png, logos/international/rakuten-tv-comedy-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-uk-1080p.png, logos/international/rakuten-tv-drama-movies-austria-720p.png, logos/international/rakuten-tv-drama-movies-germany-1080p.png, logos/international/rakuten-tv-drama-movies-uk-1080p.png, logos/international/rakuten-tv-family-movies-austria-720p.png, logos/international/rakuten-tv-family-movies-germany-1080p.png, logos/international/rakuten-tv-family-movies-italy-1080p.png, logos/international/rakuten-tv-family-movies-switzerland-720p.png, logos/international/rakuten-tv-family-movies-uk-1080p.png, logos/international/rakuten-tv-top-movies-germany-1080p.png, logos/international/rakuten-tv-top-movies-italy-1080p.png, logos/international/rakuten-tv-top-movies-uk-1080p.png, logos/rakuten-tv-action-movies-italy-1080p.png, logos/rakuten-tv-action-movies-uk-1080p-75f2eea4ce.png, logos/rakuten-tv-comedy-movies-germany-1080p.png, logos/rakuten-tv-drama-movies-italy-166043b571.png, logos/rakuten-tv-family-movies-uk-1080p.png
 - logos/international/rawhide-united-states-ca.png, logos/international/rawhide-united-states.png
 - logos/international/rodnoe-kino-576p.png, logos/rodnoe-kino-576p.png
 - logos/international/rumba-tv.png, logos/rumba-tv-3182ea7301.png, logos/unused/rumba-tv-3182ea7301.png
@@ -938,16 +938,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Enter TV | enter-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | G TV | g-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Bangladesh |
-| IPTV-Playlist.m3u | Independent TV | independent-tv.png | Bangladesh |
-| IPTV-Playlist.m3u | iON TV UK | ion-tv-uk.png | Bangladesh |
-| IPTV-Playlist.m3u | JA TV | ja-tv.svg | Bangladesh |
 | IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Jonmobhumi TV | jonmobhumi-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | ME TV | me-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Bangladesh |
 | IPTV-Playlist.m3u | My TV | my-tv.png | Bangladesh |
-| IPTV-Playlist.m3u | Nagorik TV | nagorik-tv-90b5d16aaf.png | Bangladesh |
 | IPTV-Playlist.m3u | Nexus TV | nexus-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | NRB TV | nrb-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Probashi TV | probashi-tv.png | Bangladesh |
@@ -955,154 +951,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Rupashi Bangla TV | rupashi-bangla-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Bangladesh |
-| IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
-| IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
-| IPTV-Playlist.m3u | Al Quran Al Kareem TV | al-quran-al-kareem-tv.png | Backup |
-| IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
-| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
-| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
-| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
-| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
-| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
-| IPTV-Playlist.m3u | Anjan TV | anjan-tv.png | Backup |
-| IPTV-Playlist.m3u | ARY Q TV | ary-q-tv.png | Backup |
-| IPTV-Playlist.m3u | Asian TV | asian-tv.png | Backup |
-| IPTV-Playlist.m3u | Asian TV | asian-tv.png | Backup |
-| IPTV-Playlist.m3u | Azan TV | azan-tv-15e8ac79.png | Backup |
-| IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Backup |
-| IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Backup |
-| IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
-| IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
-| IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
-| IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
-| IPTV-Playlist.m3u | Bijoy TV | bijoy-tv.png | Backup |
-| IPTV-Playlist.m3u | Bijoy TV | bijoy-tv.png | Backup |
-| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
-| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
-| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
-| IPTV-Playlist.m3u | Cartoon Network | cartoon-network-hd.png | Backup |
-| IPTV-Playlist.m3u | Channel 1 | channel-1.png | Backup |
-| IPTV-Playlist.m3u | Channel 1 | channel-1.png | Backup |
-| IPTV-Playlist.m3u | Channel 16 | channel-16.png | Backup |
-| IPTV-Playlist.m3u | Channel 24 | channel-24.png | Backup |
-| IPTV-Playlist.m3u | Channel 24 | channel-24.png | Backup |
-| IPTV-Playlist.m3u | Channel 24 | channel-24.png | Backup |
-| IPTV-Playlist.m3u | Channel 24 | channel-24.png | Backup |
-| IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
-| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
-| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
-| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
-| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
-| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
-| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
-| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
-| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
-| IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
-| IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
-| IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
-| IPTV-Playlist.m3u | Channel S UK | channel-s-uk.png | Backup |
-| IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Backup |
-| IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Backup |
-| IPTV-Playlist.m3u | Deepto TV | deepto-tv.png | Backup |
-| IPTV-Playlist.m3u | Desh TV | desh-tv.png | Backup |
-| IPTV-Playlist.m3u | Desh TV | desh-tv.png | Backup |
-| IPTV-Playlist.m3u | Desi Channel | desi-channel.png | Backup |
-| IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Backup |
-| IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Backup |
-| IPTV-Playlist.m3u | Ekattor TV | ekattor-tv.png | Backup |
-| IPTV-Playlist.m3u | Ekattor TV | ekattor-tv.png | Backup |
-| IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Backup |
-| IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Backup |
-| IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Backup |
-| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
-| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
-| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
-| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
-| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
-| IPTV-Playlist.m3u | Enter TV | enter-tv.png | Backup |
-| IPTV-Playlist.m3u | Enter TV | enter-tv.png | Backup |
-| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
-| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
-| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
-| IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
-| IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
-| IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
-| IPTV-Playlist.m3u | Goldmines 2 | goldmines.png | Backup |
-| IPTV-Playlist.m3u | Goldmines 2 | goldmines.png | Backup |
-| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
-| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
-| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
-| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
-| IPTV-Playlist.m3u | Independent TV | independent-tv.png | Backup |
-| IPTV-Playlist.m3u | Independent TV | independent-tv.png | Backup |
-| IPTV-Playlist.m3u | Independent TV | independent-tv.png | Backup |
-| IPTV-Playlist.m3u | Islam Channel Bangla | islam-channel-bangla.png | Backup |
-| IPTV-Playlist.m3u | Islamic TV | islamic-tv.png | Backup |
-| IPTV-Playlist.m3u | JA TV | ja-tv.svg | Backup |
-| IPTV-Playlist.m3u | Jalwa TV | jalwa-tv.png | Backup |
-| IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
-| IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
-| IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
-| IPTV-Playlist.m3u | Jonmobhumi TV | jonmobhumi-tv.png | Backup |
-| IPTV-Playlist.m3u | Kairali TV | kairali-tv.png | Backup |
-| IPTV-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Backup |
-| IPTV-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Backup |
-| IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
-| IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
-| IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
-| IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
-| IPTV-Playlist.m3u | Makkah TV | makkah-tv.png | Backup |
-| IPTV-Playlist.m3u | Makkah TV | makkah-tv.png | Backup |
-| IPTV-Playlist.m3u | Matribhumi TV | matri-bhumi-tv.png | Backup |
-| IPTV-Playlist.m3u | ME TV | me-tv.png | Backup |
-| IPTV-Playlist.m3u | ME TV | me-tv.png | Backup |
-| IPTV-Playlist.m3u | ME TV | me-tv.png | Backup |
-| IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Backup |
-| IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Backup |
-| IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
-| IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
-| IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
-| IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
-| IPTV-Playlist.m3u | Nagorik TV | nagorik-tv-90b5d16aaf.png | Backup |
-| IPTV-Playlist.m3u | Nexus TV | nexus-tv.png | Backup |
-| IPTV-Playlist.m3u | Pardesi TV | pardesi-tv.png | Backup |
-| IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Backup |
-| IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Backup |
-| IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
-| IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
-| IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
-| IPTV-Playlist.m3u | Probashi TV | probashi-tv.png | Backup |
-| IPTV-Playlist.m3u | Q TV | q-tv.png | Backup |
-| IPTV-Playlist.m3u | Q TV | q-tv.png | Backup |
-| IPTV-Playlist.m3u | Quran TV | quran-tv.png | Backup |
-| IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Backup |
-| IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Backup |
-| IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
-| IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
-| IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
-| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
-| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
-| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
-| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
-| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
-| IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
-| IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
-| IPTV-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Backup |
-| IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
-| IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
-| IPTV-Playlist.m3u | Sony Entertainment Television HD | sony-entertainment-tv.png | Backup |
-| IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Backup |
-| IPTV-Playlist.m3u | Ultimate TV | ultimate-tv.png | Backup |
-| IPTV-Playlist.m3u | Vanitha TV | vanitha-tv.png | Backup |
-| IPTV-Playlist.m3u | Vasanth TV | vasanth-tv.png | Backup |
-| IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
-| IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
-| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Backup |
-| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Backup |
-| IPTV-Playlist.m3u | Zodiak TV | zodiak-tv.png | Backup |
-| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
-| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
-| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Jhankar TV | jhankar-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Matribhumi TV | matri-bhumi-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | News 21 | news-21-bangla-tv.png | Indian Bangla |
@@ -1113,19 +961,17 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Bollygold | nh-bollygold-dbedeff9.png | Indian Movies |
 | IPTV-Playlist.m3u | Goldmines 2 | goldmines.png | Indian Movies |
 | IPTV-Playlist.m3u | Indywood TV | indywood-tv.png | Indian Movies |
+| IPTV-Playlist.m3u | JA TV | ja-tv.svg | Indian Movies |
 | IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Pravasi Channel | pravasi-channel.png | Indian Movies |
 | IPTV-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Thalaa TV | thalaa-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Tolly TV | tolly-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Indian Music |
-| IPTV-Playlist.m3u | AMN TV | amn-tv.png | Indian Music |
-| IPTV-Playlist.m3u | Deewana | deewana-hd.png | Indian Music |
 | IPTV-Playlist.m3u | Dhool TV | dhool-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Gangaur TV | gangaur-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Indian Music |
 | IPTV-Playlist.m3u | MH One Music | mh-1-music.png | Indian Music |
-| IPTV-Playlist.m3u | Oli TV | oli-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Songdew TV | songdew-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Ultimate TV | ultimate-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Indian Music |
@@ -1146,7 +992,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Kalika TV | kalika-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | KCL TV | kcl-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Indian Entertainment |
+| IPTV-Playlist.m3u | Mei Alai TV | generated-fallback-channel.svg | Indian Entertainment |
 | IPTV-Playlist.m3u | Metro TV | metro-tv-1080p-ee3f23e15b.png | Indian Entertainment |
+| IPTV-Playlist.m3u | NKR TV Kannada | generated-fallback-channel.svg | Indian Entertainment |
 | IPTV-Playlist.m3u | NTC TV | ntc-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pardesi TV | pardesi-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pasand TV | pasand-tv.png | Indian Entertainment |
@@ -1164,11 +1012,14 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Shemaroo TV | shemaroo-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Sirippoli TV | sirippoli-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Sony Entertainment Television HD | sony-entertainment-tv.png | Indian Entertainment |
+| IPTV-Playlist.m3u | Subin TV | generated-fallback-channel.svg | Indian Entertainment |
 | IPTV-Playlist.m3u | Sun TV | sun-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Suriya TV | suriya-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Indian Entertainment |
+| IPTV-Playlist.m3u | Tamilan TV | generated-fallback-channel.svg | Indian Entertainment |
 | IPTV-Playlist.m3u | Tarang TV | tarang-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Thendral TV | thendral-tv-ed9b933eb5.png | Indian Entertainment |
+| IPTV-Playlist.m3u | Unique TV | generated-fallback-channel.svg | Indian Entertainment |
 | IPTV-Playlist.m3u | Vaanavil TV | vaanavil-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Vanitha TV | vanitha-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Vasanth TV | vasanth-tv.png | Indian Entertainment |
@@ -1177,12 +1028,17 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Indian Entertainment |
 | IPTV-Playlist.m3u | aur LIFE | aurlife.png | Pakistani |
 | IPTV-Playlist.m3u | Falak TV | falak-tv.png | Pakistani |
-| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Jalwa TV | jalwa-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Paighan TV | paighan-tv.png | Pakistani |
 | IPTV-Playlist.m3u | See TV | see-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Tag TV | tag-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Waseb TV | waseb-tv.png | Pakistani |
+| IPTV-Playlist.m3u | Fashion&LifeStyle | generated-fallback-fashion-1-85fe46a6.svg | Fashion |
+| IPTV-Playlist.m3u | FashionBox | generated-fallback-fashion-1-85fe46a6.svg | Fashion |
+| IPTV-Playlist.m3u | FashionTV | fashion-tv-aa7f9461cf.png | Fashion |
+| IPTV-Playlist.m3u | FashionTV Paris L'Original | fashion-tv-aa7f9461cf.png | Fashion |
+| IPTV-Playlist.m3u | FashionTV Secrets | fashion-tv-aa7f9461cf.png | Fashion |
+| IPTV-Playlist.m3u | Global Fashion Channel | generated-fallback-digital-fashion-7f86a23d.svg | Fashion |
 | IPTV-Playlist.m3u | AMC Thrillers | amc-triller.png | International |
 | IPTV-Playlist.m3u | Bang Bang TV | bang-bang-tv.png | International |
 | IPTV-Playlist.m3u | CMC TV | cmc-tv.png | International |
@@ -1202,8 +1058,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Autentic Adventure Earth | autentic-adventure-earth-english-german.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Crime & Justice | crime-and-justice.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Crime Scene TV | crime-scene-tv.png | Documentary & Wildlife |
-| IPTV-Playlist.m3u | Discovery Channel (India) | discovery-channel-india.png | Documentary & Wildlife |
-| IPTV-Playlist.m3u | Discovery Channel (India) | discovery-channel-india.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | DocuBay TV | docubay-tv.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Mystery TV | mystery-tv.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Nat Geo TV | national-geographic.png | Documentary & Wildlife |
@@ -1216,7 +1070,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | ADN TV+ | adn-tv.png | Kids |
 | IPTV-Playlist.m3u | Afarin TV | afarin-tv.png | Kids |
 | IPTV-Playlist.m3u | Baby Shark TV | baby-shark-tv.png | Kids |
-| IPTV-Playlist.m3u | Cartoon Network | cartoon-network-hd.png | Kids |
 | IPTV-Playlist.m3u | Duck TV | duck-tv.png | Kids |
 | IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Kids |
 | IPTV-Playlist.m3u | Green Gold TV | green-gold-tv.png | Kids |
@@ -1237,7 +1090,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Iqraa TV | iqraa-tv.png | Religious |
 | IPTV-Playlist.m3u | Islam Channel Bangla | islam-channel-bangla.png | Religious |
 | IPTV-Playlist.m3u | Islam TV | islam-tv.png | Religious |
-| IPTV-Playlist.m3u | Islamic TV | islamic-tv.png | Religious |
 | IPTV-Playlist.m3u | Madani TV | madani-tv.png | Religious |
 | IPTV-Playlist.m3u | Makkah TV | makkah-tv.png | Religious |
 | IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Religious |
@@ -1254,35 +1106,193 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Red Bull TV | red-bull-tv.png | Sports |
 | IPTV-Playlist.m3u | Sports First TV | sports-first-tv.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports | us-willow-sports-hd.png | Sports |
+| IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
+| IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
+| IPTV-Playlist.m3u | Al Quran Al Kareem TV | al-quran-al-kareem-tv.png | Backup |
+| IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
+| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
+| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
+| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
+| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
+| IPTV-Playlist.m3u | Anjan TV | anjan-tv.png | Backup |
+| IPTV-Playlist.m3u | ARY Q TV | ary-q-tv.png | Backup |
+| IPTV-Playlist.m3u | Asian TV | asian-tv.png | Backup |
+| IPTV-Playlist.m3u | Azan TV | azan-tv-15e8ac79.png | Backup |
+| IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Backup |
+| IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Backup |
+| IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
+| IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
+| IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
+| IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
+| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
+| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
+| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
+| IPTV-Playlist.m3u | Cartoon Network | cartoon-network-hd.png | Backup |
+| IPTV-Playlist.m3u | Channel 16 | channel-16.png | Backup |
+| IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
+| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
+| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
+| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
+| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
+| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
+| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
+| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
+| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
+| IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
+| IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
+| IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
+| IPTV-Playlist.m3u | Channel S UK | channel-s-uk.png | Backup |
+| IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Backup |
+| IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Backup |
+| IPTV-Playlist.m3u | Desh TV | desh-tv.png | Backup |
+| IPTV-Playlist.m3u | Desi Channel | desi-channel.png | Backup |
+| IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Backup |
+| IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Backup |
+| IPTV-Playlist.m3u | Ekattor TV | ekattor-tv.png | Backup |
+| IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Backup |
+| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
+| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
+| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
+| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
+| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
+| IPTV-Playlist.m3u | Enter TV | enter-tv.png | Backup |
+| IPTV-Playlist.m3u | Enter TV | enter-tv.png | Backup |
+| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
+| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
+| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
+| IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
+| IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
+| IPTV-Playlist.m3u | Goldmines 2 | goldmines.png | Backup |
+| IPTV-Playlist.m3u | Goldmines 2 | goldmines.png | Backup |
+| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
+| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
+| IPTV-Playlist.m3u | Islam Channel Bangla | islam-channel-bangla.png | Backup |
+| IPTV-Playlist.m3u | Islamic TV | islamic-tv.png | Backup |
+| IPTV-Playlist.m3u | JA TV | ja-tv.svg | Backup |
+| IPTV-Playlist.m3u | Jalwa TV | jalwa-tv.png | Backup |
+| IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
+| IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
+| IPTV-Playlist.m3u | Jonmobhumi TV | jonmobhumi-tv.png | Backup |
+| IPTV-Playlist.m3u | Kairali TV | kairali-tv.png | Backup |
+| IPTV-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Backup |
+| IPTV-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Backup |
+| IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
+| IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
+| IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
+| IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
+| IPTV-Playlist.m3u | Makkah TV | makkah-tv.png | Backup |
+| IPTV-Playlist.m3u | Makkah TV | makkah-tv.png | Backup |
+| IPTV-Playlist.m3u | Matribhumi TV | matri-bhumi-tv.png | Backup |
+| IPTV-Playlist.m3u | ME TV | me-tv.png | Backup |
+| IPTV-Playlist.m3u | ME TV | me-tv.png | Backup |
+| IPTV-Playlist.m3u | ME TV | me-tv.png | Backup |
+| IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Backup |
+| IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
+| IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
+| IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
+| IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
+| IPTV-Playlist.m3u | Pardesi TV | pardesi-tv.png | Backup |
+| IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Backup |
+| IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Backup |
+| IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
+| IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
+| IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
+| IPTV-Playlist.m3u | Probashi TV | probashi-tv.png | Backup |
+| IPTV-Playlist.m3u | Q TV | q-tv.png | Backup |
+| IPTV-Playlist.m3u | Q TV | q-tv.png | Backup |
+| IPTV-Playlist.m3u | Quran TV | quran-tv.png | Backup |
+| IPTV-Playlist.m3u | Raj TV | raj-tv.png | Backup |
+| IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Backup |
+| IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
+| IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
+| IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
+| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
+| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
+| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
+| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
+| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
+| IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
+| IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
+| IPTV-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Backup |
+| IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
+| IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Backup |
+| IPTV-Playlist.m3u | Ultimate TV | ultimate-tv.png | Backup |
+| IPTV-Playlist.m3u | Vanitha TV | vanitha-tv.png | Backup |
+| IPTV-Playlist.m3u | Vasanth TV | vasanth-tv.png | Backup |
+| IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
+| IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
+| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Backup |
+| IPTV-Playlist.m3u | Zodiak TV | zodiak-tv.png | Backup |
+| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
+| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
+| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
+| IPTV-Playlist.m3u | AMN TV | amn-tv.png | Review |
+| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Review |
+| IPTV-Playlist.m3u | Asian TV | asian-tv.png | Review |
 | IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Review |
+| IPTV-Playlist.m3u | Bijoy TV | bijoy-tv.png | Review |
+| IPTV-Playlist.m3u | Bijoy TV | bijoy-tv.png | Review |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Review |
 | IPTV-Playlist.m3u | BTV News | repaired-btv-news-0646349a43.png | Review |
 | IPTV-Playlist.m3u | Cartoon Network | cartoon-network-hd.png | Review |
+| IPTV-Playlist.m3u | Cartoon Network | cartoon-network-hd.png | Review |
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Review |
+| IPTV-Playlist.m3u | Channel 1 | channel-1.png | Review |
+| IPTV-Playlist.m3u | Channel 1 | channel-1.png | Review |
+| IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
+| IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
+| IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
+| IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
+| IPTV-Playlist.m3u | Deepto TV | deepto-tv.png | Review |
 | IPTV-Playlist.m3u | Deewana | deewana-hd.png | Review |
+| IPTV-Playlist.m3u | Deewana | deewana-hd.png | Review |
+| IPTV-Playlist.m3u | Desh TV | desh-tv.png | Review |
+| IPTV-Playlist.m3u | Discovery Channel (India) | discovery-channel-india.png | Review |
+| IPTV-Playlist.m3u | Discovery Channel (India) | discovery-channel-india.png | Review |
 | IPTV-Playlist.m3u | Disney Channel India | disney-channel-india.png | Review |
 | IPTV-Playlist.m3u | Doraemon TV | doraemon-tv.png | Review |
 | IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Review |
+| IPTV-Playlist.m3u | Ekattor TV | ekattor-tv.png | Review |
+| IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Review |
+| IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Review |
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Review |
 | IPTV-Playlist.m3u | Epic TV Digital | epic-tv-digital.png | Review |
 | IPTV-Playlist.m3u | G TV | g-tv.png | Review |
 | IPTV-Playlist.m3u | G TV | g-tv.png | Review |
+| IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Review |
 | IPTV-Playlist.m3u | Green TV | repaired-green-tv-d4fdf1175a.png | Review |
 | IPTV-Playlist.m3u | Green TV | repaired-green-tv-d4fdf1175a.png | Review |
+| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Review |
+| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Review |
+| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Review |
+| IPTV-Playlist.m3u | Independent TV | independent-tv.png | Review |
+| IPTV-Playlist.m3u | Independent TV | independent-tv.png | Review |
+| IPTV-Playlist.m3u | Independent TV | independent-tv.png | Review |
+| IPTV-Playlist.m3u | Independent TV | independent-tv.png | Review |
+| IPTV-Playlist.m3u | Islamic TV | islamic-tv.png | Review |
+| IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Review |
 | IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
 | IPTV-Playlist.m3u | Madani Channel Bangla | madani-channel-bangla.png | Review |
 | IPTV-Playlist.m3u | Mango Mobile TV | mango-mobile-tv.png | Review |
+| IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Review |
 | IPTV-Playlist.m3u | Movies Now | movies-now-hd.png | Review |
 | IPTV-Playlist.m3u | Movies Now | movies-now-hd.png | Review |
+| IPTV-Playlist.m3u | Nagorik TV | nagorik-tv-90b5d16aaf.png | Review |
+| IPTV-Playlist.m3u | Nagorik TV | nagorik-tv-90b5d16aaf.png | Review |
 | IPTV-Playlist.m3u | Nat Geo TV | national-geographic.png | Review |
-| IPTV-Playlist.m3u | Raj TV | raj-tv.png | Review |
+| IPTV-Playlist.m3u | Nexus TV | nexus-tv.png | Review |
+| IPTV-Playlist.m3u | Oli TV | oli-tv.png | Review |
+| IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Review |
 | IPTV-Playlist.m3u | Shekinah TV | shekinah-tv.png | Review |
+| IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Review |
+| IPTV-Playlist.m3u | Sony Entertainment Television HD | sony-entertainment-tv.png | Review |
 | IPTV-Playlist.m3u | Sooriyan TV | sooriyan-tv.png | Review |
 | IPTV-Playlist.m3u | Star Gold | repaired-star-gold-de06c8e974.png | Review |
 | IPTV-Playlist.m3u | Star Gold | repaired-star-gold-de06c8e974.png | Review |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Tom and Jerry | repaired-tom-and-jerry-b0ff227b3a.png | Review |
+| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Review |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Bangladesh |
 | International-Playlist.m3u | Asian TV | asian-tv.png | Bangladesh |
 | International-Playlist.m3u | Ayna TV | ayna-tv.png | Bangladesh |
@@ -1365,14 +1375,18 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Channel WIN | channel-win.png | Indian Entertainment |
 | International-Playlist.m3u | Dangal TV | dangal-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Desi Channel | desi-channel.png | Indian Entertainment |
+| International-Playlist.m3u | DocuBay TV | docubay-tv.png | Indian Entertainment |
+| International-Playlist.m3u | Epic TV Digital | epic-tv-digital-1080p.png | Indian Entertainment |
 | International-Playlist.m3u | Gangaur TV | gangaur-tv.png | Indian Entertainment |
 | International-Playlist.m3u | history | history-tv18.png | Indian Entertainment |
 | International-Playlist.m3u | Jaihind TV | jaihind-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Kairali TV | kairali-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Kalaignar TV | kalaignar-tv-82de1b8f.png | Indian Entertainment |
 | International-Playlist.m3u | Kappa TV | kappa-tv.png | Indian Entertainment |
+| International-Playlist.m3u | Mango Mobile TV | mango-mobile-tv-1080p.png | Indian Entertainment |
 | International-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Marutam TV | marutam-tv-5f5ac641e3.png | Indian Entertainment |
+| International-Playlist.m3u | MBC TV | mbc-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Metro TV (India) | metro-tv-india-0625d4e893.png | Indian Entertainment |
 | International-Playlist.m3u | NTC TV | ntc-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Oli TV | oli-tv.png | Indian Entertainment |
@@ -1389,7 +1403,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Rongeen TV | rongeen-tv.png | Indian Entertainment |
 | International-Playlist.m3u | SADA TV | sada-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Safari TV | safari-tv.png | Indian Entertainment |
+| International-Playlist.m3u | Sana TV | sana-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Shemaroo TV | shemaroo-tv.png | Indian Entertainment |
+| International-Playlist.m3u | Shiksha TV | shiksha-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Sirippoli TV | sirippoli-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Sony entertainment tv | sony-entertainment-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Sun TV | sun-tv.png | Indian Entertainment |
@@ -1485,7 +1501,41 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Christmas tutto l'anno | pluto-tv-christmas-tutto-l-anno.png | Germany |
 | International-Playlist.m3u | Pluto TV Cine Comedia (Germany) | pluto-tv-cine-comedia-germany.png | Germany |
 | International-Playlist.m3u | Pluto TV Cine de autor | pluto-tv-cine-de-autor.png | Germany |
+| International-Playlist.m3u | Pluto TV Cine Romantico | pluto-tv-cine-romantico.png | Germany |
+| International-Playlist.m3u | Pluto TV Cinema Italiano | pluto-tv-cinema-italiano.png | Germany |
+| International-Playlist.m3u | Pluto TV Cinema Orientale | pluto-tv-cinema-orientale.png | Germany |
+| International-Playlist.m3u | Pluto TV Comedias Romanticas | pluto-tv-comedias-romanticas.png | Germany |
+| International-Playlist.m3u | Pluto TV Comedies Cultes | pluto-tv-comedies-cultes.png | Germany |
+| International-Playlist.m3u | Pluto TV Cult Films (Germany) | pluto-tv-cult-films-germany.png | Germany |
+| International-Playlist.m3u | Pluto TV Family Movie Club | pluto-tv-family-movie-club.png | Germany |
+| International-Playlist.m3u | Pluto TV Fantasy & Horror | pluto-tv-fantasy-horror.png | Germany |
+| International-Playlist.m3u | Pluto TV Film (Germany) | pluto-tv-film-germany.png | Germany |
+| International-Playlist.m3u | Pluto TV Film Azione | pluto-tv-film-azione.png | Germany |
+| International-Playlist.m3u | Pluto TV Film Commedia | pluto-tv-film-commedia.png | Germany |
+| International-Playlist.m3u | Pluto TV Film Romantici | pluto-tv-film-romantici.png | Germany |
+| International-Playlist.m3u | Pluto TV Film Storici | pluto-tv-film-storici.png | Germany |
+| International-Playlist.m3u | Pluto TV Film Thriller | pluto-tv-film-thriller.png | Germany |
+| International-Playlist.m3u | Pluto TV Haialarm | pluto-tv-haialarm.png | Germany |
+| International-Playlist.m3u | Pluto TV Invasion Alien | pluto-tv-invasion-alien.png | Germany |
+| International-Playlist.m3u | Pluto TV Kult Comedies | pluto-tv-kult-comedies.png | Germany |
+| International-Playlist.m3u | Pluto TV Kultfilme | pluto-tv-kultfilme.png | Germany |
+| International-Playlist.m3u | Pluto TV Legami Letali | pluto-tv-legami-letali.png | Germany |
+| International-Playlist.m3u | Pluto TV Movies | pluto-tv-movies.png | Germany |
+| International-Playlist.m3u | Pluto TV Movies GB | pluto-tv-movies-gb.png | Germany |
+| International-Playlist.m3u | Pluto TV Notti di Passione | pluto-tv-notti-di-passione.png | Germany |
+| International-Playlist.m3u | Pluto TV Psycho | pluto-tv-psycho.png | Germany |
+| International-Playlist.m3u | Pluto TV Serie Sci-Fi | pluto-tv-serie-sci-fi.png | Germany |
+| International-Playlist.m3u | Pluto TV Star Trek (Germany) | pluto-tv-star-trek-germany.png | Germany |
+| International-Playlist.m3u | Pluto TV Toto | pluto-tv-toto.png | Germany |
+| International-Playlist.m3u | Pluto TV Western | pluto-tv-western.png | Germany |
+| International-Playlist.m3u | Pluto TV Western ES | pluto-tv-western-es.png | Germany |
+| International-Playlist.m3u | Pluto TV Western IT | pluto-tv-western-it.png | Germany |
+| International-Playlist.m3u | Pluto TV Westerns (Germany) | pluto-tv-westerns-germany.png | Germany |
+| International-Playlist.m3u | Pluto TV Zombies | pluto-tv-zombies.png | Germany |
 | International-Playlist.m3u | Rakuten TV Comedy Movies Germany | rakuten-tv-comedy-movies-germany-1080p.png | Germany |
+| International-Playlist.m3u | Rakuten TV Drama Movies Germany | rakuten-tv-drama-movies-germany-1080p.png | Germany |
+| International-Playlist.m3u | Rakuten TV Family Movies Germany | rakuten-tv-family-movies-germany-1080p.png | Germany |
+| International-Playlist.m3u | Rakuten TV Top Movies Germany | rakuten-tv-top-movies-germany-1080p.png | Germany |
 | International-Playlist.m3u | TV Bozsike Hamburg | tv-bozsike-hamburg-aad2e10d17.png | Germany |
 | International-Playlist.m3u | Volksmusik TV | volksmusik-tv-7b239333b5.png | Germany |
 | International-Playlist.m3u | Baraza TV | baraza-tv-1080p.png | Greece |
@@ -1514,7 +1564,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | R101 TV | 18-028b925b47.png | Italy |
 | International-Playlist.m3u | RadioItaliaTV | 18-028b925b47.png | Italy |
 | International-Playlist.m3u | Rakuten TV Action Movies Italy | rakuten-tv-action-movies-italy-1080p.png | Italy |
+| International-Playlist.m3u | Rakuten TV Comedy Movies Italy | rakuten-tv-comedy-movies-italy-1080p.png | Italy |
 | International-Playlist.m3u | Rakuten TV Drama Movies Italy | rakuten-tv-drama-movies-italy-166043b571.png | Italy |
+| International-Playlist.m3u | Rakuten TV Family Movies Italy | rakuten-tv-family-movies-italy-1080p.png | Italy |
+| International-Playlist.m3u | Rakuten TV Top Movies Italy | rakuten-tv-top-movies-italy-1080p.png | Italy |
 | International-Playlist.m3u | RDS Social TV | 18-028b925b47.png | Italy |
 | International-Playlist.m3u | RTL 102.5 | 18-028b925b47.png | Italy |
 | International-Playlist.m3u | RTL 102.5 Bro&Sis | rtl-102-5-bro-and-sis-dd72d1e17b.png | Italy |
@@ -1573,13 +1626,17 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Tequila Music TV | tequila-music-tv-f31787c376.png | Romania |
 | International-Playlist.m3u | Traditional TV | traditional-tv-2d093e74ee.png | Romania |
 | International-Playlist.m3u | TV AS | tv-as-81959ea5ae.webp | Romania |
+| International-Playlist.m3u | Blokbaster | blokbaster-hd-1080p.png | Russia |
 | International-Playlist.m3u | Bollywood | bollywood-hd-576p.png | Russia |
 | International-Playlist.m3u | Bollywood HD Russia | bollywood-hd-russia-576p.png | Russia |
 | International-Playlist.m3u | City Eden KinoAsia [ ] | city-eden-kinoasia-not-24-7.png | Russia |
+| International-Playlist.m3u | Evrokino | evrokino-hd-1080p.png | Russia |
 | International-Playlist.m3u | Illusion+ | illusion-plus-8d8f90fef7.png | Russia |
 | International-Playlist.m3u | Kino TV | kino-tv-hd.png | Russia |
 | International-Playlist.m3u | Kinopokaz | verified-kinopokaz-ad1d4126d2.png | Russia |
 | International-Playlist.m3u | Live Music Channel | live-music-channel-f7ff6ec731.png | Russia |
+| International-Playlist.m3u | Muzhskoy | muzhskoy-hd-1080p.png | Russia |
+| International-Playlist.m3u | Premialnoe | premialnoe-hd-1080p.png | Russia |
 | International-Playlist.m3u | RU.TV | ru-tv-1e1acce47e.svg | Russia |
 | International-Playlist.m3u | Russkiy Detektiv | 18-028b925b47.png | Russia |
 | International-Playlist.m3u | Shanson TV | shanson-tv.png | Russia |
@@ -1594,14 +1651,49 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Onda 15 TV | onda-15-tv-224p.png | Spain |
 | International-Playlist.m3u | Onda Valencia TV | onda-valencia-tv-720p.png | Spain |
 | International-Playlist.m3u | POP World TV | pop-world-tv-720p-3faede8b6c.png | Spain |
+| International-Playlist.m3u | Rakuten TV Action Movies | rakuten-tv-action-movies.png | Spain |
 | International-Playlist.m3u | Rakuten TV Action Movies Germany | 18-028b925b47.png | Spain |
+| International-Playlist.m3u | Rakuten TV Comedy Movies | rakuten-tv-comedy-movies.png | Spain |
+| International-Playlist.m3u | Rakuten TV Drama Movies | rakuten-tv-drama-movies.png | Spain |
 | International-Playlist.m3u | Rakuten TV Family Movies | rakuten-tv-family-movies.png | Spain |
+| International-Playlist.m3u | Rakuten TV Top Movies | rakuten-tv-top-movies.png | Spain |
 | International-Playlist.m3u | Pluto TV Action (Sweden) | pluto-tv-action-sweden.png | Sweden |
 | International-Playlist.m3u | Pluto TV Action (Sweden) DK | pluto-tv-action-sweden-dk.png | Sweden |
 | International-Playlist.m3u | Pluto TV Action (Sweden) NO | pluto-tv-action-sweden-no.png | Sweden |
 | International-Playlist.m3u | Pluto TV Bud & Terence (Sweden) | pluto-tv-bud-terence-sweden.png | Sweden |
 | International-Playlist.m3u | Pluto TV Bud & Terence (Sweden) DK | pluto-tv-bud-terence-sweden-dk.png | Sweden |
 | International-Playlist.m3u | Pluto TV Bud & Terence (Sweden) NO | pluto-tv-bud-terence-sweden-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Danske klassikere | pluto-tv-danske-klassikere.png | Sweden |
+| International-Playlist.m3u | Pluto TV Film (Sweden) | pluto-tv-film-sweden.png | Sweden |
+| International-Playlist.m3u | Pluto TV Film (Sweden) DK | pluto-tv-film-sweden-dk.png | Sweden |
+| International-Playlist.m3u | Pluto TV Film (Sweden) NO | pluto-tv-film-sweden-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Harlequin | pluto-tv-harlequin.png | Sweden |
+| International-Playlist.m3u | Pluto TV Harlequin DK | pluto-tv-harlequin-dk.png | Sweden |
+| International-Playlist.m3u | Pluto TV Harlequin NO | pluto-tv-harlequin-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Horror (Sweden) | pluto-tv-horror-sweden.png | Sweden |
+| International-Playlist.m3u | Pluto TV Horror (Sweden) DK | pluto-tv-horror-sweden-dk.png | Sweden |
+| International-Playlist.m3u | Pluto TV Horror (Sweden) NO | pluto-tv-horror-sweden-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Humor (Sweden) | pluto-tv-humor-sweden.png | Sweden |
+| International-Playlist.m3u | Pluto TV John Wayne | pluto-tv-john-wayne.png | Sweden |
+| International-Playlist.m3u | Pluto TV John Wayne DK | pluto-tv-john-wayne-dk.png | Sweden |
+| International-Playlist.m3u | Pluto TV John Wayne NO | pluto-tv-john-wayne-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Komedi | pluto-tv-komedi.png | Sweden |
+| International-Playlist.m3u | Pluto TV Komedie | pluto-tv-komedie.png | Sweden |
+| International-Playlist.m3u | Pluto TV Kultfilm | pluto-tv-kultfilm.png | Sweden |
+| International-Playlist.m3u | Pluto TV Kultfilmer | pluto-tv-kultfilmer.png | Sweden |
+| International-Playlist.m3u | Pluto TV Kultfilmer NO | pluto-tv-kultfilmer-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Paranormal (Sweden) | pluto-tv-paranormal-sweden.png | Sweden |
+| International-Playlist.m3u | Pluto TV Paranormal (Sweden) DK | pluto-tv-paranormal-sweden-dk.png | Sweden |
+| International-Playlist.m3u | Pluto TV Romantik | pluto-tv-romantik.png | Sweden |
+| International-Playlist.m3u | Pluto TV Romantik DK | pluto-tv-romantik-dk.png | Sweden |
+| International-Playlist.m3u | Pluto TV Romantikk | pluto-tv-romantikk.png | Sweden |
+| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) | pluto-tv-sci-fi-sweden.png | Sweden |
+| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) DK | pluto-tv-sci-fi-sweden-dk.png | Sweden |
+| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) NO | pluto-tv-sci-fi-sweden-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Star Trek (Sweden) | pluto-tv-star-trek-sweden.png | Sweden |
+| International-Playlist.m3u | Pluto TV Wild West | pluto-tv-wild-west.png | Sweden |
+| International-Playlist.m3u | Pluto TV Wild West DK | pluto-tv-wild-west-dk.png | Sweden |
+| International-Playlist.m3u | Pluto TV Wild West NO | pluto-tv-wild-west-no.png | Sweden |
 | International-Playlist.m3u | Number 1 TV | number-1-tv-757229b80e.png | Turkey |
 | International-Playlist.m3u | PowerTürk TV | powerturk-tv-1080p-7651888d90.png | Turkey |
 | International-Playlist.m3u | Cine+ | cine-plus-54bc891b49.png | Ukraine |
@@ -1612,6 +1704,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Film 4 | film4.png | United Kingdom |
 | International-Playlist.m3u | MTV Classic | mtv.png | United Kingdom |
 | International-Playlist.m3u | Rakuten TV Action Movies UK | rakuten-tv-action-movies-uk-1080p-75f2eea4ce.png | United Kingdom |
+| International-Playlist.m3u | Rakuten TV Comedy Movies UK | rakuten-tv-comedy-movies-uk-1080p.png | United Kingdom |
+| International-Playlist.m3u | Rakuten TV Drama Movies UK | rakuten-tv-drama-movies-uk-1080p.png | United Kingdom |
+| International-Playlist.m3u | Rakuten TV Family Movies UK | rakuten-tv-family-movies-uk-1080p.png | United Kingdom |
+| International-Playlist.m3u | Rakuten TV Top Movies UK | rakuten-tv-top-movies-uk-1080p.png | United Kingdom |
 | International-Playlist.m3u | V2BEAT TV | v2beat-tv-3e2b4ecb78.png | United Kingdom |
 | International-Playlist.m3u | Adrenalina Pura TV | adrenalina-pura-tv-720p.png | United States |
 | International-Playlist.m3u | AMC Thrillers | amc-triller.png | United States |
@@ -1651,7 +1747,47 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Cine Drama | pluto-tv-cine-drama.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Drama LatAm | pluto-tv-cine-drama-latam.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Estelar | pluto-tv-cine-estelar.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Familia | pluto-tv-cine-familia.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Familia LatAm | pluto-tv-cine-familia-latam.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Inspiracao | pluto-tv-cine-inspiracao.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Inspirador | pluto-tv-cine-inspirador.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Romance | pluto-tv-cine-romance.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Romance LatAm | pluto-tv-cine-romance-latam.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Sucessos | pluto-tv-cine-sucessos.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Suspenso | pluto-tv-cine-suspenso.png | United States |
+| International-Playlist.m3u | Pluto TV Comedy Movies | pluto-tv-comedy-movies.png | United States |
+| International-Playlist.m3u | Pluto TV Crime Drama | pluto-tv-crime-drama.png | United States |
+| International-Playlist.m3u | Pluto TV Crime Drama CA | pluto-tv-crime-drama-ca.png | United States |
+| International-Playlist.m3u | Pluto TV Crime Movies | pluto-tv-crime-movies.png | United States |
+| International-Playlist.m3u | Pluto TV Cult Films (United States) | pluto-tv-cult-films-united-states.png | United States |
+| International-Playlist.m3u | Pluto TV Drama | pluto-tv-drama.png | United States |
+| International-Playlist.m3u | Pluto TV Drama Movies | pluto-tv-drama-movies.png | United States |
+| International-Playlist.m3u | Pluto TV Estrellas de Accion | pluto-tv-estrellas-de-accion.png | United States |
+| International-Playlist.m3u | Pluto TV Ficcao Cientifica | pluto-tv-ficcao-cientifica.png | United States |
+| International-Playlist.m3u | Pluto TV Filmes Acao | pluto-tv-filmes-acao.png | United States |
+| International-Playlist.m3u | Pluto TV Filmes Aventura | pluto-tv-filmes-aventura.png | United States |
+| International-Playlist.m3u | Pluto TV Filmes de Luta | pluto-tv-filmes-de-luta.png | United States |
+| International-Playlist.m3u | Pluto TV Filmes Nacionais | pluto-tv-filmes-nacionais.png | United States |
+| International-Playlist.m3u | Pluto TV Franchise Favorites | pluto-tv-franchise-favorites.png | United States |
+| International-Playlist.m3u | Pluto TV Horror (United States) | pluto-tv-horror-united-states.png | United States |
+| International-Playlist.m3u | Pluto TV Horror (United States) CA | pluto-tv-horror-united-states-ca.png | United States |
+| International-Playlist.m3u | Pluto TV Icons | pluto-tv-icons.png | United States |
+| International-Playlist.m3u | Pluto TV Netmovies | pluto-tv-netmovies.png | United States |
+| International-Playlist.m3u | Pluto TV Nuestro Cine | pluto-tv-nuestro-cine.png | United States |
+| International-Playlist.m3u | Pluto TV Reaction | pluto-tv-reaction.png | United States |
+| International-Playlist.m3u | Pluto TV Retro Action Movies | pluto-tv-retro-action-movies.png | United States |
+| International-Playlist.m3u | Pluto TV Romance | pluto-tv-romance.png | United States |
+| International-Playlist.m3u | Pluto TV Sci-Fi (United States) | pluto-tv-sci-fi-united-states.png | United States |
+| International-Playlist.m3u | Pluto TV Sci-Fi (United States) CA | pluto-tv-sci-fi-united-states-ca.png | United States |
+| International-Playlist.m3u | Pluto TV Sci-Fi (United States) LatAm | pluto-tv-sci-fi-united-states-latam.png | United States |
+| International-Playlist.m3u | Pluto TV Spotlight | pluto-tv-spotlight.png | United States |
+| International-Playlist.m3u | Pluto TV Staff Picks | pluto-tv-staff-picks.png | United States |
+| International-Playlist.m3u | Pluto TV Terror | pluto-tv-terror.png | United States |
+| International-Playlist.m3u | Pluto TV Terror Trash | pluto-tv-terror-trash.png | United States |
+| International-Playlist.m3u | Pluto TV Thrillers | pluto-tv-thrillers.png | United States |
+| International-Playlist.m3u | Pluto TV Trending Now | pluto-tv-trending-now.png | United States |
+| International-Playlist.m3u | Pluto TV Westerns (United States) | pluto-tv-westerns-united-states.png | United States |
+| International-Playlist.m3u | Pluto TV Westerns (United States) CA | pluto-tv-westerns-united-states-ca.png | United States |
 | International-Playlist.m3u | Spirit TV [ ] | spirit-tv-720p-not-24-7.png | United States |
 | International-Playlist.m3u | Stryk TV | stryk-tv-c41744b651.png | United States |
 | International-Playlist.m3u | Turner Classic Movies | classic-movies.png | United States |
@@ -1680,6 +1816,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Kayhan TV | kayhan-tv-720p-470680d85f.png | International |
 | International-Playlist.m3u | Klape i Tambure TV | klape-i-tambure-tv-302ab07bf9.png | International |
 | International-Playlist.m3u | KN Music TV | kn-music-tv-ad8cb6ea77.png | International |
+| International-Playlist.m3u | Lollywood HD TV | lollywood-hd-tv.png | International |
 | International-Playlist.m3u | Look Thoong TV | look-thoong-tv-2c41090ebc.png | International |
 | International-Playlist.m3u | Love TV | love-tv-de27ad2005.png | International |
 | International-Playlist.m3u | Maah TV | maah-tv-8ab855a0a8.png | International |
@@ -1701,6 +1838,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | VIP TV | vip-tv-720p.png | International |
 | International-Playlist.m3u | ZICO TV | zico-tv-cfebb586da.png | International |
 | International-Playlist.m3u | DISNEY CHANNEL [IN] | disney-channel-india.png | Kids |
+| International-Playlist.m3u | God Stands Kids Club TV | god-stands-kids-club-tv.jpg | Kids |
+| International-Playlist.m3u | God Stands Kids Club TV Arabic | god-stands-kids-club-tv-arabic.jpg | Kids |
+| International-Playlist.m3u | God Stands Kids Club TV Chinese | god-stands-kids-club-tv-chinese.jpg | Kids |
+| International-Playlist.m3u | God Stands Kids Club TV Urdu | god-stands-kids-club-tv-urdu.png | Kids |
 | International-Playlist.m3u | Green Gold TV | green-gold-tv.png | Kids |
 | International-Playlist.m3u | AsiaN | asian-tv.png | Adult |
 | International-Playlist.m3u | Fap TV 6 | fap-tv-6.png | Adult |
@@ -1723,13 +1864,16 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Mycamtv White Girls | mtv.png | Adult |
 | International-Playlist.m3u | VERIFIED AMATEURS: MIKANIKA69 | 9.png | Adult |
 | International-Playlist.m3u | &TV International | tv-international-1080p.png | Review |
+| International-Playlist.m3u | A-Plus TV | a-plus-tv.png | Review |
 | International-Playlist.m3u | AFN TV | afn-tv.png | Review |
 | International-Playlist.m3u | AlbKanale Music TV | albkanale-music-tv-hd-1080p.png | Review |
 | International-Playlist.m3u | AMN TV | amn-tv.png | Review |
 | International-Playlist.m3u | AMusic Channel | amusic-channel-480p-59acbdb4c0.png | Review |
 | International-Playlist.m3u | Anand TV | anand-tv.png | Review |
+| International-Playlist.m3u | Apna Channel | apna-channel.png | Review |
 | International-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Review |
 | International-Playlist.m3u | Better Life Nature Channel | better-life-nature-channel-296e05e978.png | Review |
+| International-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Review |
 | International-Playlist.m3u | Bravo Farsi TV | bravo-farsi-tv-360p.jpg | Review |
 | International-Playlist.m3u | BTV News | repaired-btv-news-0646349a43.png | Review |
 | International-Playlist.m3u | Canal 3 KMK TV | canal-3-kmk-tv-720p.jpg | Review |
@@ -1740,6 +1884,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | City Eden KinoSemya [ ] | city-eden-kinosemya-not-24-7.png | Review |
 | International-Playlist.m3u | CMC-USA Country Music Channel | cmc-usa-country-music-channel-720p-8a071853aa.png | Review |
 | International-Playlist.m3u | Colimdo TV | colimdo-tv-e106271533.png | Review |
+| International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | Review |
+| International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | Review |
 | International-Playlist.m3u | CTB Perth Movies Channel | ctb-perth-movies-channel-720p.jpg | Review |
 | International-Playlist.m3u | Deewana | deewana-hd-540p.png | Review |
 | International-Playlist.m3u | Detskoe kino [ ] | detskoe-kino-not-24-7.png | Review |
@@ -1749,9 +1895,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Dom kino Premium | dom-kino-premium-hd.png | Review |
 | International-Playlist.m3u | Doraemon TV | doraemon-tv.png | Review |
 | International-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Review |
+| International-Playlist.m3u | Ekhon TV | ekhon-tv.png | Review |
 | International-Playlist.m3u | El Chavo TV | el-chavo-tv-4a2cbb92d2.png | Review |
 | International-Playlist.m3u | Evrokino | evrokino-hd-1080p.png | Review |
 | International-Playlist.m3u | GAZI TV | g-tv.png | Review |
+| International-Playlist.m3u | GAZI TV | gazi-tv-1080p.png | Review |
 | International-Playlist.m3u | Gex TV | gex-tv-eb7ee59ee5.png | Review |
 | International-Playlist.m3u | Ghost TV [ ] | ghost-tv-712p-not-24-7.png | Review |
 | International-Playlist.m3u | Green TV | green-tv-1080p.jpg | Review |
@@ -1761,17 +1909,25 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Independent TV | independent-tv.png | Review |
 | International-Playlist.m3u | Itage TV | itage-tv-480p-453d42d446.png | Review |
 | International-Playlist.m3u | Jaihind TV | jaihind-tv.png | Review |
+| International-Playlist.m3u | Jeremiah TV | jeremiah-tv.png | Review |
 | International-Playlist.m3u | Jiangsu Movie Channel | jiangsu-movie-channel-576p.jpg | Review |
+| International-Playlist.m3u | Jilin Movie Channel | jilin-movie-channel.jpg | Review |
 | International-Playlist.m3u | Kino 2 | 18-028b925b47.png | Review |
+| International-Playlist.m3u | Kino TV | kino-tv-hd.png | Review |
 | International-Playlist.m3u | Klasik [ ] | klasik-576p-not-24-7.png | Review |
 | International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
+| International-Playlist.m3u | Masala TV | masala-tv.png | Review |
 | International-Playlist.m3u | MBC TV | mbc-tv.png | Review |
+| International-Playlist.m3u | Mega Extreno | mega-extreno-hd-720p.jpg | Review |
+| International-Playlist.m3u | Mehran TV | mehran-tv.png | Review |
 | International-Playlist.m3u | Mei Ah Movie Channel | mei-ah-movie-channel.png | Review |
 | International-Playlist.m3u | Mei Ah Movie Channel | mei-ah-movie-channel.png | Review |
 | International-Playlist.m3u | Metaleitor TV | metaleitor-tv-c73eb9b874.png | Review |
+| International-Playlist.m3u | Molahits TV | molahits-tv-720p.png | Review |
 | International-Playlist.m3u | Montones TV | montones-tv-af126eccd7.png | Review |
 | International-Playlist.m3u | Movies Now | movies-now-hd-1080p.png | Review |
 | International-Playlist.m3u | Movies Now | movies-now-hd.png | Review |
+| International-Playlist.m3u | Movies Now | movies-now-hd-1080p.png | Review |
 | International-Playlist.m3u | Music Mastii | mastiii.png | Review |
 | International-Playlist.m3u | My Cinema [ ] | my-cinema-geo-blocked.png | Review |
 | International-Playlist.m3u | Nande Portetepe TV | nande-portetepe-tv.jpg | Review |
@@ -1780,10 +1936,17 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Nat Geo TV | national-geographic.png | Review |
 | International-Playlist.m3u | Next | next-hd-480p.png | Review |
 | International-Playlist.m3u | Ostrosyuzhetnoye | ostrosyuzhetnoye-hd-1080p.png | Review |
+| International-Playlist.m3u | Paighan TV | paighan-tv.png | Review |
 | International-Playlist.m3u | Pantalla Clasica EC [ ] | pantalla-clasica-ec-512p-not-24-7.jpg | Review |
 | International-Playlist.m3u | Pear TV | pear-tv.png | Review |
 | International-Playlist.m3u | Pooya TV | pooya-tv-6fbf1da8c1.png | Review |
+| International-Playlist.m3u | Rakuten TV Action Movies Austria | rakuten-tv-action-movies-austria-720p.png | Review |
+| International-Playlist.m3u | Rakuten TV Comedy Movies Austria | rakuten-tv-comedy-movies-austria-720p.png | Review |
+| International-Playlist.m3u | Rakuten TV Drama Movies Austria | rakuten-tv-drama-movies-austria-720p.png | Review |
+| International-Playlist.m3u | Rakuten TV Family Movies Austria | rakuten-tv-family-movies-austria-720p.png | Review |
+| International-Playlist.m3u | Rakuten TV Family Movies Switzerland | rakuten-tv-family-movies-switzerland-720p.png | Review |
 | International-Playlist.m3u | Rewind TV | rewind-tv-401b1f9957.png | Review |
+| International-Playlist.m3u | SAB TV | sab-tv.png | Review |
 | International-Playlist.m3u | Safari TV | safari-tv.png | Review |
 | International-Playlist.m3u | Somoy TV | somoy-tv.png | Review |
 | International-Playlist.m3u | SONY AATH kids | sony-aath.png | Review |
@@ -1791,159 +1954,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Sunna TV | sunna-tv-127849e5a3.png | Review |
 | International-Playlist.m3u | Taha TV | taha-tv-8dcab21652.png | Review |
 | International-Playlist.m3u | Unique TV | unique-tv.png | Review |
+| International-Playlist.m3u | Vokta TV | vokta-tv.png | Review |
+| International-Playlist.m3u | Zee TV | zee-tv.svg | Review |
 | International-Playlist.m3u | Zee TV | zee-tv.svg | Review |
 | International-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Review |
-| International-Playlist.m3u | A-Plus TV | a-plus-tv.png | New Channels |
-| International-Playlist.m3u | Apna Channel | apna-channel.png | New Channels |
-| International-Playlist.m3u | Blokbaster | blokbaster-hd-1080p.png | New Channels |
-| International-Playlist.m3u | DocuBay TV | docubay-tv.png | New Channels |
-| International-Playlist.m3u | Epic TV Digital | epic-tv-digital-1080p.png | New Channels |
-| International-Playlist.m3u | God Stands Kids Club TV | god-stands-kids-club-tv.jpg | New Channels |
-| International-Playlist.m3u | God Stands Kids Club TV Arabic | god-stands-kids-club-tv-arabic.jpg | New Channels |
-| International-Playlist.m3u | God Stands Kids Club TV Chinese | god-stands-kids-club-tv-chinese.jpg | New Channels |
-| International-Playlist.m3u | God Stands Kids Club TV Urdu | god-stands-kids-club-tv-urdu.png | New Channels |
-| International-Playlist.m3u | Jeremiah TV | jeremiah-tv.png | New Channels |
-| International-Playlist.m3u | Jilin Movie Channel | jilin-movie-channel.jpg | New Channels |
-| International-Playlist.m3u | Lollywood HD TV | lollywood-hd-tv.png | New Channels |
-| International-Playlist.m3u | Mango Mobile TV | mango-mobile-tv-1080p.png | New Channels |
-| International-Playlist.m3u | Masala TV | masala-tv.png | New Channels |
-| International-Playlist.m3u | Mega Extreno | mega-extreno-hd-720p.jpg | New Channels |
-| International-Playlist.m3u | Mehran TV | mehran-tv.png | New Channels |
-| International-Playlist.m3u | Muzhskoy | muzhskoy-hd-1080p.png | New Channels |
-| International-Playlist.m3u | Paighan TV | paighan-tv.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cine Familia | pluto-tv-cine-familia.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cine Familia LatAm | pluto-tv-cine-familia-latam.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cine Inspiracao | pluto-tv-cine-inspiracao.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cine Inspirador | pluto-tv-cine-inspirador.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cine Romance LatAm | pluto-tv-cine-romance-latam.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cine Romantico | pluto-tv-cine-romantico.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cine Sucessos | pluto-tv-cine-sucessos.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cine Suspenso | pluto-tv-cine-suspenso.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cinema Italiano | pluto-tv-cinema-italiano.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cinema Orientale | pluto-tv-cinema-orientale.png | New Channels |
-| International-Playlist.m3u | Pluto TV Comedias Romanticas | pluto-tv-comedias-romanticas.png | New Channels |
-| International-Playlist.m3u | Pluto TV Comedies Cultes | pluto-tv-comedies-cultes.png | New Channels |
-| International-Playlist.m3u | Pluto TV Comedy Movies | pluto-tv-comedy-movies.png | New Channels |
-| International-Playlist.m3u | Pluto TV Crime Drama | pluto-tv-crime-drama.png | New Channels |
-| International-Playlist.m3u | Pluto TV Crime Drama CA | pluto-tv-crime-drama-ca.png | New Channels |
-| International-Playlist.m3u | Pluto TV Crime Movies | pluto-tv-crime-movies.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cult Films (Germany) | pluto-tv-cult-films-germany.png | New Channels |
-| International-Playlist.m3u | Pluto TV Cult Films (United States) | pluto-tv-cult-films-united-states.png | New Channels |
-| International-Playlist.m3u | Pluto TV Danske klassikere | pluto-tv-danske-klassikere.png | New Channels |
-| International-Playlist.m3u | Pluto TV Drama | pluto-tv-drama.png | New Channels |
-| International-Playlist.m3u | Pluto TV Drama Movies | pluto-tv-drama-movies.png | New Channels |
-| International-Playlist.m3u | Pluto TV Estrellas de Accion | pluto-tv-estrellas-de-accion.png | New Channels |
-| International-Playlist.m3u | Pluto TV Family Movie Club | pluto-tv-family-movie-club.png | New Channels |
-| International-Playlist.m3u | Pluto TV Fantasy & Horror | pluto-tv-fantasy-horror.png | New Channels |
-| International-Playlist.m3u | Pluto TV Ficcao Cientifica | pluto-tv-ficcao-cientifica.png | New Channels |
-| International-Playlist.m3u | Pluto TV Film (Germany) | pluto-tv-film-germany.png | New Channels |
-| International-Playlist.m3u | Pluto TV Film (Sweden) | pluto-tv-film-sweden.png | New Channels |
-| International-Playlist.m3u | Pluto TV Film (Sweden) DK | pluto-tv-film-sweden-dk.png | New Channels |
-| International-Playlist.m3u | Pluto TV Film (Sweden) NO | pluto-tv-film-sweden-no.png | New Channels |
-| International-Playlist.m3u | Pluto TV Film Azione | pluto-tv-film-azione.png | New Channels |
-| International-Playlist.m3u | Pluto TV Film Commedia | pluto-tv-film-commedia.png | New Channels |
-| International-Playlist.m3u | Pluto TV Film Romantici | pluto-tv-film-romantici.png | New Channels |
-| International-Playlist.m3u | Pluto TV Film Storici | pluto-tv-film-storici.png | New Channels |
-| International-Playlist.m3u | Pluto TV Film Thriller | pluto-tv-film-thriller.png | New Channels |
-| International-Playlist.m3u | Pluto TV Filmes Acao | pluto-tv-filmes-acao.png | New Channels |
-| International-Playlist.m3u | Pluto TV Filmes Aventura | pluto-tv-filmes-aventura.png | New Channels |
-| International-Playlist.m3u | Pluto TV Filmes de Luta | pluto-tv-filmes-de-luta.png | New Channels |
-| International-Playlist.m3u | Pluto TV Filmes Nacionais | pluto-tv-filmes-nacionais.png | New Channels |
-| International-Playlist.m3u | Pluto TV Franchise Favorites | pluto-tv-franchise-favorites.png | New Channels |
-| International-Playlist.m3u | Pluto TV Haialarm | pluto-tv-haialarm.png | New Channels |
-| International-Playlist.m3u | Pluto TV Harlequin | pluto-tv-harlequin.png | New Channels |
-| International-Playlist.m3u | Pluto TV Harlequin DK | pluto-tv-harlequin-dk.png | New Channels |
-| International-Playlist.m3u | Pluto TV Harlequin NO | pluto-tv-harlequin-no.png | New Channels |
-| International-Playlist.m3u | Pluto TV Horror (Sweden) | pluto-tv-horror-sweden.png | New Channels |
-| International-Playlist.m3u | Pluto TV Horror (Sweden) DK | pluto-tv-horror-sweden-dk.png | New Channels |
-| International-Playlist.m3u | Pluto TV Horror (Sweden) NO | pluto-tv-horror-sweden-no.png | New Channels |
-| International-Playlist.m3u | Pluto TV Horror (United States) | pluto-tv-horror-united-states.png | New Channels |
-| International-Playlist.m3u | Pluto TV Horror (United States) CA | pluto-tv-horror-united-states-ca.png | New Channels |
-| International-Playlist.m3u | Pluto TV Humor (Sweden) | pluto-tv-humor-sweden.png | New Channels |
-| International-Playlist.m3u | Pluto TV Icons | pluto-tv-icons.png | New Channels |
-| International-Playlist.m3u | Pluto TV Invasion Alien | pluto-tv-invasion-alien.png | New Channels |
-| International-Playlist.m3u | Pluto TV John Wayne | pluto-tv-john-wayne.png | New Channels |
-| International-Playlist.m3u | Pluto TV John Wayne DK | pluto-tv-john-wayne-dk.png | New Channels |
-| International-Playlist.m3u | Pluto TV John Wayne NO | pluto-tv-john-wayne-no.png | New Channels |
-| International-Playlist.m3u | Pluto TV Komedi | pluto-tv-komedi.png | New Channels |
-| International-Playlist.m3u | Pluto TV Komedie | pluto-tv-komedie.png | New Channels |
-| International-Playlist.m3u | Pluto TV Kult Comedies | pluto-tv-kult-comedies.png | New Channels |
-| International-Playlist.m3u | Pluto TV Kultfilm | pluto-tv-kultfilm.png | New Channels |
-| International-Playlist.m3u | Pluto TV Kultfilme | pluto-tv-kultfilme.png | New Channels |
-| International-Playlist.m3u | Pluto TV Kultfilmer | pluto-tv-kultfilmer.png | New Channels |
-| International-Playlist.m3u | Pluto TV Kultfilmer NO | pluto-tv-kultfilmer-no.png | New Channels |
-| International-Playlist.m3u | Pluto TV Legami Letali | pluto-tv-legami-letali.png | New Channels |
-| International-Playlist.m3u | Pluto TV Movies | pluto-tv-movies.png | New Channels |
-| International-Playlist.m3u | Pluto TV Movies GB | pluto-tv-movies-gb.png | New Channels |
-| International-Playlist.m3u | Pluto TV Netmovies | pluto-tv-netmovies.png | New Channels |
-| International-Playlist.m3u | Pluto TV Notti di Passione | pluto-tv-notti-di-passione.png | New Channels |
-| International-Playlist.m3u | Pluto TV Nuestro Cine | pluto-tv-nuestro-cine.png | New Channels |
-| International-Playlist.m3u | Pluto TV Paranormal (Sweden) | pluto-tv-paranormal-sweden.png | New Channels |
-| International-Playlist.m3u | Pluto TV Paranormal (Sweden) DK | pluto-tv-paranormal-sweden-dk.png | New Channels |
-| International-Playlist.m3u | Pluto TV Psycho | pluto-tv-psycho.png | New Channels |
-| International-Playlist.m3u | Pluto TV Reaction | pluto-tv-reaction.png | New Channels |
-| International-Playlist.m3u | Pluto TV Retro Action Movies | pluto-tv-retro-action-movies.png | New Channels |
-| International-Playlist.m3u | Pluto TV Romance | pluto-tv-romance.png | New Channels |
-| International-Playlist.m3u | Pluto TV Romantik | pluto-tv-romantik.png | New Channels |
-| International-Playlist.m3u | Pluto TV Romantik DK | pluto-tv-romantik-dk.png | New Channels |
-| International-Playlist.m3u | Pluto TV Romantikk | pluto-tv-romantikk.png | New Channels |
-| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) | pluto-tv-sci-fi-sweden.png | New Channels |
-| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) DK | pluto-tv-sci-fi-sweden-dk.png | New Channels |
-| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) NO | pluto-tv-sci-fi-sweden-no.png | New Channels |
-| International-Playlist.m3u | Pluto TV Sci-Fi (United States) | pluto-tv-sci-fi-united-states.png | New Channels |
-| International-Playlist.m3u | Pluto TV Sci-Fi (United States) CA | pluto-tv-sci-fi-united-states-ca.png | New Channels |
-| International-Playlist.m3u | Pluto TV Sci-Fi (United States) LatAm | pluto-tv-sci-fi-united-states-latam.png | New Channels |
-| International-Playlist.m3u | Pluto TV Serie Sci-Fi | pluto-tv-serie-sci-fi.png | New Channels |
-| International-Playlist.m3u | Pluto TV Spotlight | pluto-tv-spotlight.png | New Channels |
-| International-Playlist.m3u | Pluto TV Staff Picks | pluto-tv-staff-picks.png | New Channels |
-| International-Playlist.m3u | Pluto TV Star Trek (Germany) | pluto-tv-star-trek-germany.png | New Channels |
-| International-Playlist.m3u | Pluto TV Star Trek (Sweden) | pluto-tv-star-trek-sweden.png | New Channels |
-| International-Playlist.m3u | Pluto TV Terror | pluto-tv-terror.png | New Channels |
-| International-Playlist.m3u | Pluto TV Terror Trash | pluto-tv-terror-trash.png | New Channels |
-| International-Playlist.m3u | Pluto TV Thrillers | pluto-tv-thrillers.png | New Channels |
-| International-Playlist.m3u | Pluto TV Toto | pluto-tv-toto.png | New Channels |
-| International-Playlist.m3u | Pluto TV Trending Now | pluto-tv-trending-now.png | New Channels |
-| International-Playlist.m3u | Pluto TV Western | pluto-tv-western.png | New Channels |
-| International-Playlist.m3u | Pluto TV Western ES | pluto-tv-western-es.png | New Channels |
-| International-Playlist.m3u | Pluto TV Western IT | pluto-tv-western-it.png | New Channels |
-| International-Playlist.m3u | Pluto TV Westerns (Germany) | pluto-tv-westerns-germany.png | New Channels |
-| International-Playlist.m3u | Pluto TV Westerns (United States) | pluto-tv-westerns-united-states.png | New Channels |
-| International-Playlist.m3u | Pluto TV Westerns (United States) CA | pluto-tv-westerns-united-states-ca.png | New Channels |
-| International-Playlist.m3u | Pluto TV Wild West | pluto-tv-wild-west.png | New Channels |
-| International-Playlist.m3u | Pluto TV Wild West DK | pluto-tv-wild-west-dk.png | New Channels |
-| International-Playlist.m3u | Pluto TV Wild West NO | pluto-tv-wild-west-no.png | New Channels |
-| International-Playlist.m3u | Pluto TV Zombies | pluto-tv-zombies.png | New Channels |
-| International-Playlist.m3u | Premialnoe | premialnoe-hd-1080p.png | New Channels |
-| International-Playlist.m3u | Rakuten TV Action Movies | rakuten-tv-action-movies.png | New Channels |
-| International-Playlist.m3u | Rakuten TV Action Movies Austria | rakuten-tv-action-movies-austria-720p.png | New Channels |
-| International-Playlist.m3u | Rakuten TV Comedy Movies | rakuten-tv-comedy-movies.png | New Channels |
-| International-Playlist.m3u | Rakuten TV Comedy Movies Austria | rakuten-tv-comedy-movies-austria-720p.png | New Channels |
-| International-Playlist.m3u | SAB TV | sab-tv.png | New Channels |
-| International-Playlist.m3u | Sana TV | sana-tv.png | New Channels |
-| International-Playlist.m3u | Shiksha TV | shiksha-tv.png | New Channels |
-| International-Playlist.m3u | Vokta TV | vokta-tv.png | New Channels |
-| International-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | New Backups |
-| International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | New Backups |
-| International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | New Backups |
-| International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | New Backups |
-| International-Playlist.m3u | Corazon TV | corazon-tv.png | New Backups |
-| International-Playlist.m3u | Ekhon TV | ekhon-tv.png | New Backups |
-| International-Playlist.m3u | Evrokino | evrokino-hd-1080p.png | New Backups |
-| International-Playlist.m3u | GAZI TV | gazi-tv-1080p.png | New Backups |
-| International-Playlist.m3u | Kappa TV | kappa-tv.png | New Backups |
-| International-Playlist.m3u | Kino TV | kino-tv-hd.png | New Backups |
-| International-Playlist.m3u | MBC TV | mbc-tv.png | New Backups |
-| International-Playlist.m3u | Molahits TV | molahits-tv-720p.png | New Backups |
-| International-Playlist.m3u | Movies Now | movies-now-hd-1080p.png | New Backups |
-| International-Playlist.m3u | Now 80s | now-80-s.png | New Backups |
-| International-Playlist.m3u | Raj TV | raj-tv.png | New Backups |
-| International-Playlist.m3u | Rumba TV | rumba-tv.png | New Backups |
-| International-Playlist.m3u | Shanson TV | shanson-tv.png | New Backups |
-| International-Playlist.m3u | Trace Brazuca | trace-brazuca-hd.png | New Backups |
-| International-Playlist.m3u | Vasanth TV | vasanth-tv.png | New Backups |
-| International-Playlist.m3u | Vendhar TV | vendhar-tv.png | New Backups |
-| International-Playlist.m3u | Zee Telugu | zee-telugu-hd-720p.png | New Backups |
-| International-Playlist.m3u | Zee TV | zee-tv.svg | New Backups |
 | International-Playlist.m3u | 4 SiDES TV | 4-sides-tv-6a436fa007.png | Backup |
 | International-Playlist.m3u | 4K Travel | 4k-travel.png | Backup |
 | International-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
@@ -2004,9 +2018,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Channel S | channel-s.png | Backup |
 | International-Playlist.m3u | Channel S UK | channel-s-uk.png | Backup |
 | International-Playlist.m3u | Chinola TV | chinola-tv-73b6331ca0.png | Backup |
+| International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | Backup |
 | International-Playlist.m3u | Cinemax Asia [ ] | cinemax-asia-720p-geo-blocked.png | Backup |
 | International-Playlist.m3u | Cooking Channel | local-logo-cooking-channel.png | Backup |
 | International-Playlist.m3u | Cooking Channel | local-logo-cooking-channel.png | Backup |
+| International-Playlist.m3u | Corazon TV | corazon-tv.png | Backup |
 | International-Playlist.m3u | Cosmos Tv | cosmos-tv-7521381461.webp | Backup |
 | International-Playlist.m3u | Court TV | court-tv-f02bea9403.png | Backup |
 | International-Playlist.m3u | Crime & Justice | crime-and-justice.png | Backup |
@@ -2104,6 +2120,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | JonmoBhumi TV | jonmobhumi-tv.png | Backup |
 | International-Playlist.m3u | Kairali TV | kairali-tv.png | Backup |
 | International-Playlist.m3u | Kappa TV | kappa-tv.png | Backup |
+| International-Playlist.m3u | Kappa TV | kappa-tv.png | Backup |
 | International-Playlist.m3u | Kartoon Channel! | kartoon-channel.png | Backup |
 | International-Playlist.m3u | Kartoon Channel! | kartoon-channel.png | Backup |
 | International-Playlist.m3u | Kaumudy TV | kaumudy-tv.png | Backup |
@@ -2152,6 +2169,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Nickelodeon | nick.png | Backup |
 | International-Playlist.m3u | Ninja Kidz TV | ninja-kidz-tv-de42a39fa0.png | Backup |
 | International-Playlist.m3u | NKR TV Kannada | nkr-tv-kannada.png | Backup |
+| International-Playlist.m3u | Now 80s | now-80-s.png | Backup |
 | International-Playlist.m3u | NOW Rock | 18-028b925b47.png | Backup |
 | International-Playlist.m3u | Odisha TV | odisha-tv.png | Backup |
 | International-Playlist.m3u | Oman Sports TV | oman-sports-tv.png | Backup |
@@ -2172,6 +2190,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Q TV | q-tv.png | Backup |
 | International-Playlist.m3u | Quran TV | quran-tv.png | Backup |
 | International-Playlist.m3u | Quran TV | quran-tv.png | Backup |
+| International-Playlist.m3u | Raj TV | raj-tv.png | Backup |
 | International-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Backup |
 | International-Playlist.m3u | Rally TV | rally-tv-19891a8fa6.png | Backup |
 | International-Playlist.m3u | Real Madrid TV | real-madrid-tv-a93e7915a6.png | Backup |
@@ -2190,6 +2209,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
 | International-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
 | International-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
+| International-Playlist.m3u | Rumba TV | rumba-tv.png | Backup |
 | International-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | International-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | International-Playlist.m3u | SA TV | sa-tv.png | Backup |
@@ -2200,6 +2220,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Sansad TV 2 | sansad-tv-2.png | Backup |
 | International-Playlist.m3u | Santvani Channel | santvani-channel.png | Backup |
 | International-Playlist.m3u | SATV | sa-tv.png | Backup |
+| International-Playlist.m3u | Shanson TV | shanson-tv.png | Backup |
 | International-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
 | International-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
 | International-Playlist.m3u | Sharnam TV | sharnam-tv.png | Backup |
@@ -2229,6 +2250,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Tochka.rf | tochkarf.png | Backup |
 | International-Playlist.m3u | ToonGoggles | toon-goggles.png | Backup |
 | International-Playlist.m3u | Total TV Haryana | total-tv-haryana.png | Backup |
+| International-Playlist.m3u | Trace Brazuca | trace-brazuca-hd.png | Backup |
 | International-Playlist.m3u | TraLaLa TV | tralala-tv-2f2b3be533.png | Backup |
 | International-Playlist.m3u | Travel Channel East | travel-channel.png | Backup |
 | International-Playlist.m3u | Travel XP Bangla | travelxp-bangla.png | Backup |
@@ -2238,6 +2260,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Unique TV | unique-tv-c64872bc2a.png | Backup |
 | International-Playlist.m3u | V Classic TV | v-classic-tv.png | Backup |
 | International-Playlist.m3u | Vanitha TV | vanitha-tv.png | Backup |
+| International-Playlist.m3u | Vasanth TV | vasanth-tv.png | Backup |
+| International-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
 | International-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
 | International-Playlist.m3u | Video Tour Channel | video-tour-channel-6285619dfa.png | Backup |
 | International-Playlist.m3u | viju+ Sport | viju-plus-sport-14b136d70c.png | Backup |
@@ -2249,6 +2273,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | World Fishing Network | worldfishingnetwork.png | Backup |
 | International-Playlist.m3u | World War TV | world-war-tv.png | Backup |
 | International-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Backup |
+| International-Playlist.m3u | Zee Telugu | zee-telugu-hd-720p.png | Backup |
 | International-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
 | International-Playlist.m3u | Zoo Moo | zoomoo.png | Backup |
 
