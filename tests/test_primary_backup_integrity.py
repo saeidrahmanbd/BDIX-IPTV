@@ -107,13 +107,17 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
                       and e["attrs"].get("group-title") == "Backup"]
         self.assertEqual(len(raj_primary), 1)
         self.assertEqual(raj_primary[0]["url"], "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8")
-        self.assertEqual(len(raj_backup), 2)
+        self.assertEqual(len(raj_backup), 1)
         self.assertEqual(
             {e["url"] for e in raj_backup},
-            {
-                "http://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8",
-                "https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8",
-            },
+            {"http://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"},
+        )
+        raj_review = [e for e in entries if e["attrs"].get("tvg-name") == "Rajdhani TV"
+                      and e["attrs"].get("group-title") == "Review"]
+        self.assertEqual(len(raj_review), 1)
+        self.assertEqual(
+            raj_review[0]["url"],
+            "https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8",
         )
 
         unresolved_placeholder_ids = {"ColorsBanglaCinema.in@SD", "StarGold.in@HD"}
@@ -128,8 +132,8 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             unresolved_placeholder_ids,
         )
 
-        # The other audited Colors variants now have working primary feeds;
-        # their failed alternates remain safely in Backup, not Review.
+        # The other audited Colors variants each retain one active primary.
+        # Alternate URLs are classified independently by their own health evidence.
         for channel_id in ("Colors.in", "Colors.Bangla.in", "ColorsCineplex.uk"):
             active = [
                 e for e in entries
