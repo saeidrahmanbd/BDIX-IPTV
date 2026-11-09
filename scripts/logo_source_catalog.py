@@ -151,8 +151,10 @@ def find_page_logo(page_url, allow_og_image=False):
             }
             property_name = (attrs.get("property") or attrs.get("name") or "").lower()
             image_url = attrs.get("content") or ""
-            if property_name in ("og:image", "twitter:image") and image_url.startswith(("http://", "https://")):
-                return image_url
+            if property_name in ("og:image", "twitter:image") and image_url.strip():
+                resolved = urljoin(page_url, image_url.strip())
+                if resolved.startswith(("http://", "https://")):
+                    return resolved
     return None
 
 # Exact station assets discovered on broadcaster/streaming-service pages.
