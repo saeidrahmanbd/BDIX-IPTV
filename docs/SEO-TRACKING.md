@@ -2,6 +2,15 @@
 
 This document records the repository's search-engine setup, the public pages intended for indexing, and the off-site actions that help people discover the project. It is an operational checklist, not a claim that the site currently ranks for particular keywords.
 
+## Latest SEO maintenance — 2026-11-09
+
+- Corrected the English homepage title, H1, meta description, Open Graph title and Twitter title to consistently describe Bangladesh, India and the wider multi-country collection.
+- Updated the English playlist guide title and description and aligned its social-sharing titles.
+- Updated structured-data modification dates for changed English pages and kept the XML sitemap dates aligned with actual page changes.
+- Confirmed all three public pages have unique titles and descriptions, matching canonical and Open Graph URLs, and valid JSON-LD blocks.
+- GitHub Actions completed the SEO validation successfully and the GitHub Pages deployment succeeded.
+- The IndexNow workflow confirmed that its verification-key file is publicly reachable and received HTTP 200 after submitting the three canonical landing-page URLs. This is a successful notification, not proof of crawling or indexing.
+
 ## Public pages
 
 The canonical English and Bengali landing pages are:
@@ -66,20 +75,15 @@ An initial repository workflow run received HTTP 202 from IndexNow, which means 
 
 The repository's GitHub description, topics, homepage field and README are also discovery surfaces. The current repository already has a homepage URL and relevant topics such as bangladesh-iptv, bangla-iptv, bdix-iptv, iptv-m3u, iptv-m3u8, iptv-playlist and epg.
 
-Suggested repository description for GitHub's **About** panel:
+The repository's live GitHub **About** description and topic list were checked on 2026-11-09.
 
-> Multi-country IPTV M3U/M3U8 playlists covering Bangladesh, India, Pakistan and eligible channels from other countries, Bangla TV, international movie/music collections, XMLTV EPG and channel logos.
+Current description:
 
-Suggested topic additions or replacements, keeping GitHub's topic limit in mind:
+> Free Bangladesh, India, & International IPTV M3U/M3U8 playlists featuring Bangla TV, Indian channels, international movies and music, and an XMLTV EPG.
 
-- international-iptv
-- xmltv
-- bangla-tv
-- bangladesh-iptv
-- iptv-m3u
-- iptv-m3u8
+The homepage field points to the English landing page. Existing topics already cover Bangladesh IPTV, Bangla TV, BDIX, India IPTV, international IPTV, M3U/M3U8 and XMLTV/EPG. The repository currently uses GitHub's 20-topic allowance, so any future topic additions should replace a less useful topic rather than exceed the limit.
 
-The available GitHub connector can update repository files but does not expose the repository About/topics editor. The description and topic suggestions above therefore still need to be applied in **GitHub → BDIX-IPTV → About → Edit repository details**.
+The available GitHub connector can update repository files but does not expose the About/topics editor. No repository description or topic change is pending at this time.
 
 ## Off-site discovery and backlinks
 
