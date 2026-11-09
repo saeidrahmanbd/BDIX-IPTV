@@ -144,9 +144,9 @@ def consolidate_international_country_groups(playlist_path):
     p = Path(playlist_path)
     prefix, blocks = discovery.parse(p.read_text(encoding="utf-8-sig"))
     labels = {
-        discovery.country_group(code).casefold(): code
+        ("pakistani" if code == "PK" else discovery.country_group(code).casefold()): code
         for code in discovery.ISO_CODES
-        if code not in {"BD", "IN", "PK"}
+        if code not in {"BD", "IN"}
     }
     dynamic_codes = set(labels.values())
     identities = defaultdict(set)
@@ -185,7 +185,7 @@ def consolidate_international_country_groups(playlist_path):
         elif old_key == "international":
             code = discovery.country_code(a)
             if code in qualified:
-                target = discovery.country_group(code)
+                target = "Pakistani" if code == "PK" else discovery.country_group(code)
         if target and target != old:
             block[0] = discovery.set_attr(block[0], "group-title", target)
             changes.append((discovery.name_of(block), old, target))
@@ -383,11 +383,19 @@ def probe_mode(playlist, report, baseline, mode):
             details.append(f"- Moved {e['name']} to Review — stream could not be conclusively verified ({reason}).")
         new_extinf, localized, unavailable = ensure_local_logo(e)
         if unavailable:
-            remove_starts.add(e["start"])
-            counts["candidates removed for missing local logo"] += 1
-            details.append(
-                f"- Held {e['name']} out of {e['group']} — no authentic local logo asset is available."
-            )
+            counts["candidates held for missing local logo"] += 1
+            if mode == "international":
+                update_lines[e["start"]] = discovery.set_attr(e["extinf"], "group-title", "Review")
+                inconclusive_starts.add(e["start"])
+                details.append(
+                    f"- Moved {e['name']} to Review — no authentic local logo asset is available."
+                )
+            else:
+                remove_starts.add(e["start"])
+                counts["candidates removed for missing local logo"] += 1
+                details.append(
+                    f"- Held {e['name']} out of {e['group']} — no authentic local logo asset is available."
+                )
             continue
         if new_extinf != e["extinf"]:
             update_lines[e["start"]] = new_extinf
@@ -396,7 +404,7 @@ def probe_mode(playlist, report, baseline, mode):
         if localized:
             counts["logos localized to repository assets"] += 1
     if mode == "international":
-        promotions = promote_verified_candidates(probe_targets, verified_starts, inconclusive_starts, update_lines)
+        promotions = promote_verified_candidates(entries, verified_starts, inconclusive_starts, update_lines)
         counts["verified primary channels promoted"] += sum(1 for _, _, target, _ in promotions if target not in {"Backup", "Review"})
         counts["verified alternate streams moved to Backup"] += sum(1 for _, _, target, _ in promotions if target == "Backup")
         counts["inconclusive candidates moved to Review"] += sum(1 for _, _, target, _ in promotions if target == "Review")
@@ -491,7 +499,8 @@ def final_mode(playlist, report, baseline, mode):
         logo = e["logo"]
         if not logo:
             missing_logo += 1
-            errors.append(f"missing local logo for discovery candidate {e['name']}")
+            if e["group"].casefold() != "review":
+                errors.append(f"missing local logo for discovery candidate {e['name']}")
         else:
             path = local_logo_path(logo)
             if path is None or not path.is_file():
