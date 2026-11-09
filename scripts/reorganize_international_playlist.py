@@ -7,6 +7,7 @@ import re
 import unicodedata
 import discover_international_channels as discovery
 import discover_bd_in_new_queues as bd_policy
+from stream_url_identity import stream_url_key
 
 PLAYLIST = Path("International-Playlist.m3u")
 LOGOS = Path("logos")
@@ -483,7 +484,7 @@ def main():
     international_bucket = ["International"] if any(row["group"].casefold() == "international" for row in primary) else []
     group_order = FIXED + dynamic_country_groups + international_bucket + TAIL
     group_rank = {group: index for index, group in enumerate(group_order)}
-    primary.sort(key=lambda row: (group_rank.get(row["group"], len(group_rank)), natural_key(row["name"]), row["url"].casefold()))
+    primary.sort(key=lambda row: (group_rank.get(row["group"], len(group_rank)), natural_key(row["name"]), stream_url_key(row["url"])))
     identity_primary = {}
     for row in primary:
         identity_primary.setdefault((row["country"], row["key"]), row)
@@ -491,7 +492,7 @@ def main():
     seen_primary_ids = {}
 
     def emit(row, group, as_backup=False):
-        url_key = row["url"].casefold()
+        url_key = stream_url_key(row["url"])
         if url_key in seen_urls:
             removed["exact duplicate URL"] += 1
             return
@@ -544,7 +545,7 @@ def main():
     international_bucket = ["International"] if any(group.casefold() == "international" for group in present) else []
     category_order = FIXED + dynamic + international_bucket + TAIL
     category_rank = {group: index for index, group in enumerate(category_order)}
-    output.sort(key=lambda row: (category_rank.get(row["group"], len(category_rank)), natural_key(row["name"]), row["url"].casefold()))
+    output.sort(key=lambda row: (category_rank.get(row["group"], len(category_rank)), natural_key(row["name"]), stream_url_key(row["url"])))
 
     header = [line for line in preamble if line and not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
     name_index = next((i for i, line in enumerate(header) if line.startswith("#PLAYLIST-STUDIO-NAME:")), None)
@@ -580,7 +581,7 @@ def main():
                 raise SystemExit(f"Review queue entry lacks a local logo: {name}")
             if code not in {"BD", "IN", "PK"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
                 raise SystemExit(f"Foreign review queue entry lacks Movie/Music classification: {name}")
-        final_urls.append(url.casefold())
+        final_urls.append(stream_url_key(url))
         group_counts[group] += 1
     if len(final_urls) != len(set(final_urls)):
         raise SystemExit("Duplicate stream URLs remain after reorganization.")

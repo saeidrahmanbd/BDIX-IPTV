@@ -3,6 +3,7 @@
 from collections import defaultdict
 from pathlib import Path
 import re
+from stream_url_identity import stream_url_key
 
 P = Path("IPTV-Playlist.m3u")
 ACTIVE = {"Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports"}
@@ -72,7 +73,7 @@ def main():
         if group in ACTIVE:
             if cid and name:
                 ids_by_name[name].add(cid)
-            active_urls.add(row["url"].casefold())
+            active_urls.add(stream_url_key(row["url"]))
     canonical_ids = {name: next(iter(ids)) for name, ids in ids_by_name.items() if len(ids) == 1}
     removed_lines, review_url_kept = set(), {}
     changed = 0
@@ -115,7 +116,7 @@ def main():
                 if 'channel-id="' in info:
                     info = set_attr(info, "channel-id", canonical)
                 changed += 1
-        url_key = row["url"].casefold()
+        url_key = stream_url_key(row["url"])
         if group in REVIEW and url_key in active_urls:
             removed_lines.update({row["info_idx"], row["url_idx"]})
             continue

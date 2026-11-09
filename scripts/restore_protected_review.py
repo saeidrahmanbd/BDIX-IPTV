@@ -15,6 +15,7 @@ from collections import Counter
 from pathlib import Path
 
 from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS, PERMANENTLY_REMOVED_NAMES
+from stream_url_identity import stream_url_key
 from urllib.parse import urlsplit
 
 SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
@@ -103,7 +104,7 @@ def is_authorized_primary_to_backup_migration(
     return (
         group_of(info) == "Backup"
         and original_group.strip() == expected_source_group
-        and str(url or "").strip().casefold() == expected_url.casefold()
+        and stream_url_key(url) == stream_url_key(expected_url)
     )
 
 
@@ -114,7 +115,7 @@ def authorized_backup_migration_target(info: str, url: str) -> str | None:
     if not rule:
         return None
     expected_url, target_group = rule
-    if str(url or "").strip().casefold() != expected_url.casefold():
+    if stream_url_key(url) != stream_url_key(expected_url):
         return None
     return target_group
 
@@ -128,9 +129,12 @@ def is_permanently_removed(info: str) -> bool:
 
 
 def canonical_url_base(url: str) -> str:
-    parsed = urlsplit(str(url or "").strip())
+    parsed = urlsplit(stream_url_key(url))
     if not parsed.netloc or not parsed.path:
         return ""
+    # This helper is used only for the owner-allowlisted Sparkle Movies
+    # duplicate endpoint, whose known CDN route is case-insensitive. Do not use
+    # it for general stream identity comparisons.
     path = parsed.path.casefold().rstrip("/")
     path = re.sub(r"\.(?:m3u8?|mpd)$", "", path, flags=re.IGNORECASE)
     return parsed.netloc.casefold() + path
@@ -146,9 +150,9 @@ def is_authorized_orphan_backup_removal(info: str, url: str) -> bool:
         for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
         if value.strip()
     }
-    candidate_url = str(url or "").strip().casefold()
+    candidate_url = stream_url_key(url)
     return any(
-        channel_id in ids and candidate_url == expected_url.casefold()
+        channel_id in ids and candidate_url == stream_url_key(expected_url)
         for channel_id, expected_url in AUTHORIZED_ORPHAN_BACKUP_REMOVALS.items()
     )
 
@@ -173,12 +177,12 @@ def is_authorized_removal(info: str, url: str) -> bool:
 def count_unapproved_removed_url_occurrences(old_entries, current_entries) -> int:
     """Count missing URL occurrences, excluding only exact authorized removals."""
     old_urls = Counter(
-        url.strip().casefold()
+        stream_url_key(url)
         for info, url in old_entries
         if url.strip() and not is_authorized_removal(info, url)
     )
     current_urls = Counter(
-        url.strip().casefold()
+        stream_url_key(url)
         for _, url in current_entries
         if url.strip()
     )
@@ -188,7 +192,7 @@ def count_unapproved_removed_url_occurrences(old_entries, current_entries) -> in
 def protected_primary_url_changes(old_entries, current_entries, primary_exceptions):
     """Return unexpected missing primary URLs in the audit's established report format."""
     old_primary_urls = Counter(
-        url.strip().casefold()
+        stream_url_key(url)
         for info, url in old_entries
         if (
             url.strip()
@@ -197,7 +201,7 @@ def protected_primary_url_changes(old_entries, current_entries, primary_exceptio
         )
     )
     current_urls = Counter(
-        url.strip().casefold()
+        stream_url_key(url)
         for _, url in current_entries
         if url.strip()
     )
@@ -389,13 +393,13 @@ def merge_safe_local_logo_repairs(
     """
     current_by_url: dict[str, list[str]] = {}
     for record in current_records:
-        url = url_of(record).casefold()
+        url = stream_url_key(url_of(record))
         if url and group_of(record[0]) in PROTECTED:
             current_by_url.setdefault(url, record)
 
     repairs = 0
     for record in snapshot_records:
-        url = url_of(record).casefold()
+        url = stream_url_key(url_of(record))
         candidate = current_by_url.get(url)
         if not candidate or group_of(candidate[0]) != group_of(record[0]):
             continue
@@ -413,7 +417,7 @@ def merge_safe_local_logo_repairs(
         record[0] = set_attr(record[0], "tvg-logo", new_logo)
         for item in baseline:
             if (
-                str(item.get("url", "")).strip().casefold() == url
+                stream_url_key(str(item.get("url", ""))) == url
                 and str(item.get("group", "")).strip() == group_of(record[0])
             ):
                 item["info"] = set_attr(str(item.get("info", "")), "tvg-logo", new_logo)
@@ -441,7 +445,7 @@ def restore() -> None:
         if not is_authorized_removal(record[0], url_of(record))
     ]
     repaired_protected_logos = merge_safe_local_logo_repairs(current_records, snapshot_records, baseline)
-    snapshot_urls = [url_of(record).casefold() for record in snapshot_records]
+    snapshot_urls = [stream_url_key(url_of(record)) for record in snapshot_records]
     if any(not url for url in snapshot_urls) or len(snapshot_urls) != len(set(snapshot_urls)):
         raise SystemExit("ERROR: protected snapshot contains a missing or duplicate URL; refusing restore.")
     protected_occurrences_to_restore = Counter(snapshot_urls)
@@ -453,7 +457,7 @@ def restore() -> None:
         info = str(item.get("info", ""))
         group = str(item.get("group", "")).strip()
         if url:
-            key = url.casefold()
+            key = stream_url_key(url)
             if key in baseline_by_url:
                 raise SystemExit(
                     f"ERROR: baseline contains repeated stream URL for {url}; refusing ambiguous restore."
@@ -496,7 +500,7 @@ def restore() -> None:
         if is_authorized_removal(record[0], url):
             permanently_removed_count += 1
             return
-        key = url.casefold()
+        key = stream_url_key(url)
         current_group = group_of(record[0])
         original = baseline_by_url.get(key)
 
@@ -549,7 +553,7 @@ def restore() -> None:
             permanently_removed_count += 1
             continue
         group = group_of(record[0])
-        if url_of(record).casefold() in migrated_urls:
+        if stream_url_key(url_of(record)) in migrated_urls:
             # Do not restore a snapshot copy of any explicitly migrated record.
             continue
         if group == "Backup":
