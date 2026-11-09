@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-09T04:58:55+00:00**
-IPTV-Playlist.m3u SHA-256: **0971846e84de0e04e79a2d27a11b6d8df7a8def644acead8f3facd9ecf556bf3**
+Generated: **2026-11-09T06:15:08+00:00**
+IPTV-Playlist.m3u SHA-256: **a905c8a79fc9167d61323692f4a7b8df541e7e086f76552bc5632544ac4f00d7**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **201**
+- Flagged streams: **202**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -128,6 +128,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Orange Bangla TV | Indian Bangla | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1499/master.m3u8` |
 | Sananda | Indian Bangla | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8` |
 | Sony Aath | Indian Bangla | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/sony_aath_abr/index.m3u8` |
+| All Time Movies | Indian Movies | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/54/54_0.m3u8` |
 | Chithiram | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1243/master.m3u8` |
 | ETV Cinema | Indian Movies | sensitive query parameter (value redacted) | `https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=REDACTED` |
 | Maha Movie | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/10007/master.m3u8` |

@@ -1,15 +1,15 @@
 # IPTV Playlist Audit
-Generated: **2026-11-09T04:58:21.237966+00:00**
-Source playlist SHA-256: **0971846e84de0e04e79a2d27a11b6d8df7a8def644acead8f3facd9ecf556bf3**
+Generated: **2026-11-09T06:14:23.734801+00:00**
+Source playlist SHA-256: **a905c8a79fc9167d61323692f4a7b8df541e7e086f76552bc5632544ac4f00d7**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **989**
-- Unique channel IDs: **631**
-- IDs with multiple streams: **193**
+- Playlist entries: **996**
+- Unique channel IDs: **635**
+- IDs with multiple streams: **195**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -18,21 +18,21 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **0**
+- Logo exceptions requiring repair: **1**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **989**
+- Logo references checked: **996**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues: **557**
+- Primary channel-number sequence issues: **525**
 - Primary entries missing channel numbers: **1**
 - Primary entries missing tvg-country: **0**
-- Primary entries missing tvg-language: **0**
+- Primary entries missing tvg-language: **2**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **11**
 - Category registry issues: **1**
-- Alphabetical ordering issues: **1**
+- Alphabetical ordering issues: **3**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **8**
 - Embedded Xtream-style credential paths (redacted): **0**
@@ -42,10 +42,12 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
 - Active primary entries missing tvg-country: **0**
-- Active primary entries missing tvg-language: **0**
+- Active primary entries missing tvg-language: **2**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
+| Indian Movies | 0 | 1 |
+| Indian Music | 0 | 1 |
 
 ## Review Queue Country Verification
 
@@ -466,6 +468,9 @@ No same-ID label variants found across groups.
 - Jamuna TV — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/jamuna-tv/index.m3u8
 - Jamuna TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jamuna-tv-1/index.m3u8
 - Jamuna TV — Backup — https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8
+### jonmobhumitv.bd (2 streams)
+- Jonmobhumi TV — Bangladesh — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/tracks-v1a1/mono.m3u8
+- Jonmobhumi TV — Backup — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/playlist.m3u8
 ### kairalitv.in@sd (2 streams)
 - Kairali TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8
 - Kairali TV — Indian Entertainment — https://streams.tangotv.in/KAIRALI/ORIGIN/index.m3u8
@@ -599,6 +604,9 @@ No same-ID label variants found across groups.
 ### pardesitv.ca (2 streams)
 - Pardesi TV — Backup — http://stream.pardesitv.online/pardesi/tracks-v1a1/mono.m3u8
 - Pardesi TV — Indian Entertainment — http://stream.pardesitv.online/pardesi/index.m3u8
+### peacetvbangla.ae (2 streams)
+- Peace TV Bangla — Backup — https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8
+- Peace TV Bangla — Religious — https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v3a1/mono.m3u8
 ### pitaara.in@sd (4 streams)
 - Pitaara TV — Backup — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index_5.m3u8
 - Pitaara TV — Backup — https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8
@@ -781,12 +789,13 @@ No same-ID label variants found across groups.
 ### yrfmusic.in (2 streams)
 - YRF Music — Backup — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
 - YRF Music — Indian Music — https://amg01412-xiaomiasia-yrfmusic-xiaomi-1rmk2.amagi.tv/playlist/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
-### zeebangla.in@hd (6 streams)
+### zeebangla.in@hd (7 streams)
 - Zee Bangla — Backup — https://d1rc86nwwc9fag.cloudfront.net/260723/smil:zeebangla.smil/chunklist_b896000.m3u8
 - Zee Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8
 - Zee Bangla — Backup — https://raw.githubusercontent.com/ahan443/vibe-tv/refs/heads/main/ZeeBanglaHD.m3u8
 - Zee Bangla — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8
 - Zee Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/zeebangla/2500.m3u8
+- Zee Bangla — Backup — https://livetv.shamon-cable.net:8443/ZEE-Bangla/index.m3u8
 - Zee Bangla — Indian Bangla — https://tvsen6.aynaott.com/ZeeBangla/index.m3u8
 ### zeebanglasonar.in@sd (2 streams)
 - Zee Bangla Sonar — Review — http://103.135.253.32:8080/ZEE-BANGLA-CINEMA/index.m3u8
@@ -849,32 +858,32 @@ None.
 - **Movie Bangla** — expected channel number 41, found 42
 - **My TV** — expected channel number 42, found 43
 - **Nagorik TV** — expected channel number 43, found 44
-- **News 24** — expected channel number 44, found 45
-- **Nexus TV** — expected channel number 45, found 46
-- **NRB TV** — expected channel number 46, found 47
-- **NTV** — expected channel number 47, found 48
-- **NTV Europe** — expected channel number 48, found 49
-- **Probashi TV** — expected channel number 49, found 50
-- **Rajdhani TV** — expected channel number 50, found 51
-- **RTV** — expected channel number 51, found 52
-- **SA TV** — expected channel number 52, found 53
-- **Somoy TV** — expected channel number 53, found 54
-- **SRK** — expected channel number 54, found 55
-- **Thikana** — expected channel number 55, found 57
-- **Time Television** — expected channel number 56, found 58
-- **Aakaash Aath** — expected channel number 57, found 59
-- **Amar Bangla** — expected channel number 58, found 60
-- **Amar Bangla Digital** — expected channel number 59, found 61
-- **Bangla Plus** — expected channel number 60, found 62
-- **Colors Bangla** — expected channel number 61, found 63
-- **DD Bangla** — expected channel number 62, found 64
-- **DD Tripura** — expected channel number 63, found 65
-- **Dhoom Music Bangla** — expected channel number 64, found 66
-- **Enter10 Bangla** — expected channel number 65, found 67
-- **Jalsha Movies** — expected channel number 66, found 68
-- **Jhankar TV** — expected channel number 67, found 69
-- **Khushboo Bangla** — expected channel number 68, found 70
-- **KTV Bangla** — expected channel number 69, found 71
+- **NAN TV** — expected channel number 44, found 597
+- **Rupashi Bangla TV** — expected channel number 53, found 598
+- **SA TV** — expected channel number 54, found 53
+- **Somoy TV** — expected channel number 55, found 54
+- **SRK** — expected channel number 56, found 55
+- **Tara TV** — expected channel number 85, found 86
+- **U Bangla** — expected channel number 86, found 87
+- **ZB Cinema** — expected channel number 87, found 88
+- **ZB Music** — expected channel number 88, found 89
+- **Zee 24 Ghanta** — expected channel number 89, found 90
+- **Zee Bangla** — expected channel number 90, found 91
+- **Zodiak TV** — expected channel number 91, found 92
+- **All Time Movies** — expected channel number 92, found 599
+- **Asianet Movies** — expected channel number 93, found 94
+- **B4U Bhojpuri Plus** — expected channel number 94, found 95
+- **B4U Kadak** — expected channel number 95, found 96
+- **B4U Movies** — expected channel number 96, found 97
+- **Bhojpuri Cinema** — expected channel number 97, found 98
+- **Bollygold** — expected channel number 98, found 99
+- **Chhaya Chitram Telugu** — expected channel number 99, found 100
+- **Chithiram** — expected channel number 100, found 101
+- **Colors Cineplex [UK]** — expected channel number 101, found 102
+- **Ekamra Cinema** — expected channel number 102, found 103
+- **Epic Bhojpuri** — expected channel number 103, found 104
+- **Epic Bhojpuri Digital** — expected channel number 104, found 105
+- **ETV Cinema** — expected channel number 105, found 106
 
 ## Malformed EXTINF Entries
 
@@ -893,6 +902,8 @@ None.
 - category block **Religious** — out of canonical block order
 - category block **Sports** — out of canonical block order
 - category block **Review** — out of canonical block order
+- **Bangladesh** — **45 — News 24** appears after **597 — NAN TV**
+- **Bangladesh** — **53 — SA TV** appears after **598 — Rupashi Bangla TV**
 - **International** — **4ever Cinema** appears after **30A Music**
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
@@ -917,7 +928,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **989**
+- Healthy/local references: **995**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
@@ -925,7 +936,7 @@ None.
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 None.
-- missing: **0**
+- missing: **1**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**

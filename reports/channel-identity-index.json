@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T04:58:56+00:00",
+  "generated": "2026-11-09T06:15:08+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -244,6 +244,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "alltimemovies": {
+      "names": [
+        "All Time Movies"
+      ],
+      "ids": [
+        "alltimemovies.in@sd"
+      ],
+      "groups": [
+        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,
@@ -4253,11 +4267,12 @@
         "jonmobhumitv.bd"
       ],
       "groups": [
+        "Backup",
         "Bangladesh"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "joomusic": {
       "names": [
@@ -5240,6 +5255,20 @@
       "primary": 1,
       "backup": 0
     },
+    "nantv": {
+      "names": [
+        "NAN TV"
+      ],
+      "ids": [
+        "nantv.bd@sd"
+      ],
+      "groups": [
+        "Bangladesh"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "natgeotv": {
       "names": [
         "Nat Geo TV"
@@ -5642,6 +5671,20 @@
       "primary": 1,
       "backup": 0
     },
+    "pankh": {
+      "names": [
+        "Pankh"
+      ],
+      "ids": [
+        "pankh.in@sd"
+      ],
+      "groups": [
+        "Indian Music"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "pardesitv": {
       "names": [
         "Pardesi TV"
@@ -5707,11 +5750,12 @@
         "peacetvbangla.ae"
       ],
       "groups": [
+        "Backup",
         "Religious"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "peacetvenglish": {
       "names": [
@@ -6586,6 +6630,20 @@
       "streams": 7,
       "primary": 2,
       "backup": 5
+    },
+    "rupashibanglatv": {
+      "names": [
+        "Rupashi Bangla TV"
+      ],
+      "ids": [
+        "rupashibanglatv.bd@sd"
+      ],
+      "groups": [
+        "Bangladesh"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "rupasibangla": {
       "names": [
@@ -8640,9 +8698,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
-      "backup": 5
+      "backup": 6
     },
     "zeebanglasonar": {
       "names": [

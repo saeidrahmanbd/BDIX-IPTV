@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-09T04:58:21+00:00**
-Source playlist SHA-256: **0971846e84de0e04e79a2d27a11b6d8df7a8def644acead8f3facd9ecf556bf3**
+Generated: **2026-11-09T06:14:24+00:00**
+Source playlist SHA-256: **a905c8a79fc9167d61323692f4a7b8df541e7e086f76552bc5632544ac4f00d7**
 
 Status: **BLOCK**
 
-- Current entries: **989**
+- Current entries: **996**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -16,15 +16,15 @@ Status: **BLOCK**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **1**
-- Primary channel-number sequence issues: **557**
+- Primary channel-number sequence issues: **525**
 - Numbered review entries: **26**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
-- Active rows with incomplete required metadata: **0**
+- Active rows with incomplete required metadata: **1**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **0**
+- Entries missing tvg-language: **2**
 - Raw resolution/geoblock name tags: **0**
-- Missing logos in active groups: **0**
+- Missing logos in active groups: **1**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
@@ -37,9 +37,12 @@ Status: **BLOCK**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
+- active entries with incomplete identity/country/logo metadata: 1
+- entries missing tvg-language: 2
 - primary entries missing tvg-chno: 1
-- primary channel-number sequence gaps/order errors: 557
+- primary channel-number sequence gaps/order errors: 525
 - review entries still numbered: 26
+- missing logos: 1
 
 ## Review-queue logo gaps
 

@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-09T04:58:20+00:00**
+Generated: **2026-11-09T06:14:23+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **0971846e84de0e04e79a2d27a11b6d8df7a8def644acead8f3facd9ecf556bf3**
+- IPTV-Playlist.m3u SHA-256: **a905c8a79fc9167d61323692f4a7b8df541e7e086f76552bc5632544ac4f00d7**
 - International-Playlist.m3u SHA-256: **7b5b134e3388d23a567590234d6be11b4ef78731aae7228a473c7a3ace143c3e**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **697**
-- Playlist references whose asset stem differs from the normalized channel name: **1304**
+- Playlist references whose asset stem differs from the normalized channel name: **1307**
 - Unreferenced files immediately inside logos/: **1467** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
@@ -947,6 +947,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | NRB TV | nrb-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Probashi TV | probashi-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Bangladesh |
+| IPTV-Playlist.m3u | Rupashi Bangla TV | rupashi-bangla-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
@@ -1026,6 +1027,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
 | IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
 | IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
+| IPTV-Playlist.m3u | Jonmobhumi TV | jonmobhumi-tv.png | Backup |
 | IPTV-Playlist.m3u | Kairali TV | kairali-tv.png | Backup |
 | IPTV-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Backup |
 | IPTV-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Backup |
@@ -1047,6 +1049,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Nagorik TV | nagorik-tv-90b5d16aaf.png | Backup |
 | IPTV-Playlist.m3u | Nexus TV | nexus-tv.png | Backup |
 | IPTV-Playlist.m3u | Pardesi TV | pardesi-tv.png | Backup |
+| IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Backup |
 | IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
 | IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
 | IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
