@@ -22,6 +22,7 @@ PRIMARY_EXCEPTIONS = {"Backup", "Review", "Not Playing", "New Channels", "New Ba
 from playlist_order_policy import should_check_alphabetical_order
 from country_verification import queue_errors as review_queue_country_errors, reference_from_playlists
 from restore_protected_review import count_unapproved_removed_url_occurrences, protected_primary_url_changes
+from stream_url_identity import stream_url_key
 CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Review", "New Channels", "New Backups", "Backup"]
 REGISTRY_ORDER = CATEGORY_ORDER
 
@@ -238,7 +239,7 @@ for info, url in entries:
     if name:
         by_name[name].append((info, url))
     if url:
-        urls[url.lower()].append((info, url))
+        urls[stream_url_key(url)].append((info, url))
 
 duplicate_ids = {k:v for k,v in by_id.items() if len(v) > 1}
 duplicate_urls = {k:v for k,v in urls.items() if len(v) > 1}
@@ -585,8 +586,8 @@ def run_change_guard():
     old_entries = parse(old_text)
     # Use the allowlist-aware removal count, but retain the complete prior URL
     # inventory for the separate additions limit.
-    old_urls = Counter(url.strip().casefold() for _, url in old_entries if url.strip())
-    new_urls = Counter(url.strip().casefold() for _, url in entries if url.strip())
+    old_urls = Counter(stream_url_key(url) for _, url in old_entries if url.strip())
+    new_urls = Counter(stream_url_key(url) for _, url in entries if url.strip())
     removed = count_unapproved_removed_url_occurrences(old_entries, entries)
     if removed:
         raise SystemExit(
