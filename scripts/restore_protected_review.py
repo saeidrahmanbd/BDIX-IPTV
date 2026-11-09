@@ -72,6 +72,8 @@ AUTHORIZED_BACKUP_MIGRATIONS = {
     "ptvsports": ("http://103.135.253.32:8080/PTV-SPORTS/tracks-v1a1/mono.m3u8", "Pakistani"),
     "starsportsselect1": ("http://103.135.253.32:8080/STAR-SPORTS-SELECT-1/index.m3u8", "Sports"),
     "channel52": ("http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
+    # Only verified, reachable Indian feed; all old Review alternatives remain quarantined.
+    "animalplanet": ("https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8", "Documentary & Wildlife"),
 }
 AUTHORIZED_MIGRATION_SOURCE_GROUPS = {
     "7xpunjabi": "Backup",
@@ -80,6 +82,7 @@ AUTHORIZED_MIGRATION_SOURCE_GROUPS = {
     "ptvsports": "Backup",
     "starsportsselect1": "Backup",
     "channel52": "Not Playing",
+    "animalplanet": "Backup",
 }
 
 # An explicitly reviewed active-to-Backup move. This is intentionally narrow:
