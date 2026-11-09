@@ -7,6 +7,7 @@ from datetime import datetime,timezone
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 from country_verification import reference_from_playlists,verify_country
+from stream_url_identity import stream_url_key
 from logo_asset_naming import is_blocked_logo_basename
 from restore_protected_review import authorized_backup_migration_target, is_authorized_removal
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
@@ -70,23 +71,23 @@ def review_state(entries):
         # Permanent-removal allowlist entries are intentionally removed by policy;
         # do not misreport them as accidental deletions from protected review queues.
         if group in EXCLUDE and not is_authorized_removal(info,u):
-            out[u.lower()]={"group":group,"name":a.get("tvg-name","").strip(),"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower()}
+            out[stream_url_key(u)]={"group":group,"name":a.get("tvg-name","").strip(),"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower()}
     return out
 def main():
     current=parse(P.read_text(encoding="utf-8-sig"))
     try: old=parse(subprocess.check_output(["git","show","HEAD:IPTV-Playlist.m3u"],text=True))
     except (subprocess.CalledProcessError, OSError, UnicodeError): old=[]
-    cur_urls=Counter(u.lower() for _,_,u in current); dup_urls=[u for u,n in cur_urls.items() if n>1]
+    cur_urls=Counter(stream_url_key(u) for _,_,u in current); dup_urls=[u for u,n in cur_urls.items() if n>1]
     cur_primary=[(a,u) for _,a,u in current if a.get("group-title","").strip() not in EXCLUDE]
     old_primary=[(info,a,u) for info,a,u in old if a.get("group-title","").strip() not in EXCLUDE]
     cur_all_groups=defaultdict(set)
-    for _,a,u in current: cur_all_groups[u.lower()].add(a.get("group-title","").strip())
+    for _,a,u in current: cur_all_groups[stream_url_key(u)].add(a.get("group-title","").strip())
     quarantined=[]; removed=[]; approved_removed=[]
     for info,a,u in old_primary:
-        groups=cur_all_groups.get(u.lower(),set())
+        groups=cur_all_groups.get(stream_url_key(u),set())
         if groups & {"Backup","Review","New Channels","New Backups"}: quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup","Review","New Channels","New Backups"}))))
         elif not groups: (approved_removed if (approved_removal(u) or is_authorized_removal(info,u)) else removed).append((a.get("tvg-name",""),u))
-    old_review=review_state(old); cur_review=review_state(current); current_by_url={u.lower():(a,u) for _,a,u in current}
+    old_review=review_state(old); cur_review=review_state(current); current_by_url={stream_url_key(u):(a,u) for _,a,u in current}
     review_reclassified=[]; review_promoted=[]; authorized_promoted=[]; review_removed=[]
     for url,state in old_review.items():
         cur=cur_review.get(url)
@@ -177,7 +178,7 @@ def main():
         if not u.lower().startswith(("http://","https://")): queue_errors.append(f"{a.get('tvg-name','')} has invalid stream URL")
     if queue_errors: issues.append(f"New queue validation failures: {len(queue_errors)}")
     status="PASS" if not issues else "BLOCK"
-    old_by_url={u.lower():(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in old}; cur_by_url_all={u.lower():(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in current}
+    old_by_url={stream_url_key(u):(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in old}; cur_by_url_all={stream_url_key(u):(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in current}
     added=[u for u in cur_by_url_all if u not in old_by_url]; removed_all=[u for u in old_by_url if u not in cur_by_url_all]; modified=[u for u in cur_by_url_all if u in old_by_url and cur_by_url_all[u]!=old_by_url[u]]
     lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Primary streams intentionally removed as known bad: **{len(approved_removed)}**",f"- Primary streams quarantined: **{len(quarantined)}**",f"- Review entries reclassified: **{len(review_reclassified)}**",f"- Review entries promoted: **{len(review_promoted)}**",f"- Authorized review promotions: **{len(authorized_promoted)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",f"- Primary entries missing channel numbers: **{len(missing)}**",f"- Primary channel-number sequence issues: **{len(chno_sequence_issues)}**",f"- Numbered review entries: **{len(review_numbered)}**",f"- Same-ID metadata name conflicts: **{len(metadata_conflicts)}**",f"- Orphan Backup entries: **{len(orphan_backups)}**",f"- Active rows with incomplete required metadata: **{len(incomplete_metadata)}**",f"- tvg-id/channel-id inconsistencies: **{len(id_pair_conflicts)}**",f"- Entries missing tvg-language: **{len(missing_languages)}**",f"- Raw resolution/geoblock name tags: **{len(raw_name_issues)}**",f"- Missing logos in active groups: **{len(logo_missing)}**",f"- Missing logos deferred in review groups (Review/New Channels/New Backups): **{len(logo_missing_review)}**",f"- External logo URLs: **{len(logo_external)}**",f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",f"- Missing referenced local logo files: **{len(logo_missing_files)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Protected-queue policy","New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.","","## Blocking Reasons"]
     lines.extend("- "+x for x in issues) if issues else lines.append("No blocking conditions detected.")
