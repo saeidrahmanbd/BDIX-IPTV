@@ -1,5 +1,6 @@
 name: Playlist Logo Repair and Localization
 # Fresh current-main retry to replace cancelled logo localization after the shared writer-queue fix (2026-10-26).
+# Re-run logo localization against the current verified source catalog; playlist stream URLs remain protected.
 
 on:
   push:
