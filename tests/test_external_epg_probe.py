@@ -8,6 +8,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from probe_amazeyourself_epg import (  # noqa: E402
     find_exact_matches,
+    markdown_cell,
     normalize_name,
     parse_playlist_text,
     parse_xmltv_datetime,
@@ -19,6 +20,9 @@ class ExternalEpgProbeTests(unittest.TestCase):
         self.assertEqual(normalize_name("Channel 24 HD"), "channel24")
         self.assertEqual(normalize_name("  OLI-TV "), "olitv")
         self.assertNotEqual(normalize_name("News 24"), normalize_name("News 21"))
+
+    def test_markdown_report_preserves_zero_counts(self):
+        self.assertEqual(markdown_cell(0), "0")
 
     def test_parse_kableone_timestamp_with_t_separator(self):
         value = parse_xmltv_datetime("20261109T040000 +0530")
