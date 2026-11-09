@@ -469,7 +469,7 @@ def main():
    policy_a=dict(a); policy_a["group-title"]="New Backups" if old_key in {"new backup","new backups"} else "New Channels"
    base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
-   if base is None or (policy_code not in {"BD","IN"} and not genre):
+   if base is None or (policy_code not in {"BD","IN","PK"} and not genre):
     filtered_existing.append((name,old,reason or "new candidate did not pass country/content policy"))
     continue
    group="New Backups" if old_key in {"new backup","new backups"} else "New Channels"
