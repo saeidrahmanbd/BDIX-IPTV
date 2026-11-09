@@ -6,8 +6,8 @@
 #=================================
 #PLAYLIST-STUDIO-NAME:"IPTV-Playlist.m3u"
 #PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Review", "New Channels", "New Backups"]
-#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Ananda TV
-http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/index.m3u8
+#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Ananda TV
+https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/live-orgin/anandatv.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-chno="2" channel-id="AsianTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Asian TV
 https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="ATNBangla.bd" tvg-name="ATN Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" tvg-chno="3" channel-id="ATNBangla.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",ATN Bangla
@@ -44,8 +44,8 @@ https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8
 https://tvsen6.aynaott.com/pF66Tkz0qFwP2aMMqHyt/index.m3u8
 #EXTINF:-1 tvg-id="DeeptoTV.bd" tvg-name="Deepto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deepto-tv.png" tvg-chno="20" channel-id="DeeptoTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Deepto TV
 https://byphdgllyk.gpcdn.net/hls/deeptotv/index.m3u8
-#EXTINF:-1 tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" channel-id="DeshTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Desh TV
-http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/deshtv.stream/index.m3u8
+#EXTINF:-1 channel-id="DeshTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-language="ben" tvg-country="BD" group-title="Bangladesh",Desh TV
+https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8
 #EXTINF:-1 tvg-id="EkattorTV.bd" tvg-name="Ekattor TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekattor-tv.png" tvg-chno="26" channel-id="EkattorTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Ekattor TV
 https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8
 #EXTINF:-1 channel-id="EkhonTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekhon-tv.png" tvg-id="EkhonTV.bd" tvg-name="Ekhon TV" tvg-language="ben" tvg-country="BD" group-title="Bangladesh",Ekhon TV
@@ -897,6 +897,8 @@ https://streams2.sofast.tv/sofastplayout/33c31ac4-51fa-46ae-afd0-0d1fe5e60a80_0_
 https://autentic-adventure-earth-1-eu.rakuten.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="Alone.us" tvg-name="Alone" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alone.png" tvg-chno="427" channel-id="Alone.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Alone
 https://d3181anftsyl2u.cloudfront.net/v1/aenetworks_alone_1/samsungheadend_us/latest/main/hls/playlist.m3u8
+#EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" channel-id="AnimalPlanet.in@SD" tvg-country="IN" tvg-language="eng;hin;tam" group-title="Documentary & Wildlife",Animal Planet
+https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8
 #EXTINF:-1 tvg-id="AutenticAdventureEarth.us" tvg-name="Autentic Adventure Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/autentic-adventure-earth-english-german.png" tvg-chno="429" channel-id="AutenticAdventureEarth.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Autentic Adventure Earth
 https://a57e9c69976649b582a8d7604c00e69a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AdventureEarth/playlist.m3u8
 #EXTINF:-1 tvg-id="AutenticHistory.de" tvg-name="Autentic History" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/autentic-history.png" tvg-chno="430" channel-id="AutenticHistory.de" tvg-country="DE" tvg-language="eng" group-title="Documentary & Wildlife",Autentic History
@@ -1005,6 +1007,8 @@ https://d3b73b34o7cvkq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 https://65f16f0fdfc51.streamlock.net/afarinTV/livestream/playlist.m3u8
 #EXTINF:-1 tvg-id="BabySharkTV.us" tvg-name="Baby Shark TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/baby-shark-tv.png" tvg-chno="485" channel-id="BabySharkTV.us" tvg-country="US" tvg-language="eng" group-title="Kids",Baby Shark TV
 https://newidco-babysharktv-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png" channel-id="CartoonNetwork.us" tvg-country="US" tvg-language="eng" group-title="Kids",Cartoon Network
+https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/playlist.m3u8
 #EXTINF:-1 tvg-id="DiscoveryKids.au" tvg-name="Discovery Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-kids.png" tvg-chno="489" channel-id="DiscoveryKids.au" tvg-country="AU" tvg-language="eng" group-title="Kids",Discovery Kids
 https://stream.ottplus.live/live/discovery_kids_abr/index.m3u8
 #EXTINF:-1 tvg-id="DisneyJr.us" tvg-name="Disney Jr" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr.png" tvg-chno="490" channel-id="DisneyJr.us" tvg-country="US" tvg-language="eng" group-title="Kids",Disney Jr
@@ -1244,15 +1248,21 @@ https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxI
 #EXTINF:-1 tvg-id="AmritaTV.in@SD" tvg-name="Amrita TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amrita-tv.png" channel-id="AmritaTV.in@SD" tvg-country="IN" tvg-language="mal" group-title="Backup",Amrita TV
 https://ddash74r36xqp.cloudfront.net/master_2000.m3u8
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ananda TV
+http://103.135.253.32:8080/Anando-TV/index.m3u8
+#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ananda TV
+http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/index.m3u8
+#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ananda TV
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ananda TV
 http://live-stream.amarbanglatv.in:8080/hls/sanandatv/index.m3u8
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ananda TV
-https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/live-orgin/anandatv.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 #EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" channel-id="AnimalPlanet.in@SD" tvg-country="IN" tvg-language="eng;hin;tam" group-title="Backup",Animal Planet
-https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8
+https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd_abr/index.m3u8
+#EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" channel-id="AnimalPlanet.in@SD" tvg-country="IN" tvg-language="eng;hin;tam" group-title="Backup",Animal Planet
+https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8
+#EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" channel-id="AnimalPlanet.in@SD" tvg-country="IN" tvg-language="eng;hin;tam" group-title="Backup",Animal Planet
+https://drk6xq0vhn.gpcdn.net/live/animal_planet_sd_abr/index.m3u8
 #EXTINF:-1 tvg-id="AnjanTV.in@SD" tvg-name="Anjan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/anjan-tv.png" channel-id="AnjanTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",Anjan TV
 https://anjan.vstream.online/anjanorg/ngrp:anjan_hdall/playlist.m3u8
 #EXTINF:-1 tvg-id="ARYQTV.pk" tvg-name="ARY Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ary-q-tv.png" channel-id="ARYQTV.pk" tvg-country="PK" tvg-language="urd" group-title="Backup",ARY Q TV
@@ -1345,8 +1355,10 @@ https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-1/index.m3u8
 https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="BTVChattogram.bd" tvg-name="BTV Chattogram" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-chattogram.png" channel-id="BTVChattogram.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",BTV Chattogram
 https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png" channel-id="CartoonNetwork.us" tvg-country="IN" tvg-language="und" group-title="Backup",Cartoon Network
+http://103.135.253.32:8080/CN-NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png" channel-id="CartoonNetwork.us" tvg-country="US" tvg-language="eng" group-title="Backup",Cartoon Network
-https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/playlist.m3u8
+https://drk6xq0vhn.gpcdn.net/live/cn_hd_abr/index.m3u8
 #EXTINF:-1 tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" channel-id="Channel9.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Channel 9
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel9hd.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" channel-id="Channel9.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Channel 9
@@ -1491,8 +1503,10 @@ https://app.ncare.live/live-orgin/deentv.stream/playlist.m3u8
 https://tvsen3.aynaott.com/TJcnZW3U/index.m3u8
 #EXTINF:-1 tvg-id="DeeptoTV.bd" tvg-name="Deepto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deepto-tv.png" channel-id="DeeptoTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Deepto TV
 http://103.135.253.32:8080/Deepto-TV/index.m3u8
-#EXTINF:-1 channel-id="DeshTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-language="ben" tvg-country="BD" group-title="Backup",Desh TV
-https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8
+#EXTINF:-1 tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" channel-id="DeshTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Desh TV
+http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/deshtv.stream/index.m3u8
+#EXTINF:-1 tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" channel-id="DeshTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Desh TV
+https://stream.ottplus.live/live/desh_tv_abr/index.m3u8
 #EXTINF:-1 tvg-id="DesheBideshe.ca" tvg-name="Deshe Bideshe" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deshe-bideshe.png" channel-id="DesheBideshe.ca" tvg-country="CA" tvg-language="ben" group-title="Backup",Deshe Bideshe
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/deshebideshe.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="DesiChannel.in" tvg-name="Desi Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desi-channel.png" channel-id="DesiChannel.in" tvg-country="IN" tvg-language="hin" group-title="Backup",Desi Channel
@@ -2015,24 +2029,12 @@ https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 #EXTINF:-1 channel-id="AndPictures.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pictures.png" tvg-id="AndPictures.in@SD" tvg-name="&pictures" tvg-language="hin" tvg-country="IN" group-title="Review",&pictures
 http://103.135.253.32:8080/PICTURE-HD/index.m3u8
-#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Ananda TV
-http://103.135.253.32:8080/Anando-TV/index.m3u8
-#EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" channel-id="AnimalPlanet.in@SD" tvg-country="IN" tvg-language="eng;hin;tam" group-title="Review",Animal Planet
-https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd_abr/index.m3u8
-#EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" channel-id="AnimalPlanet.in@SD" tvg-country="IN" tvg-language="eng;hin;tam" group-title="Review",Animal Planet
-https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8
-#EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" channel-id="AnimalPlanet.in@SD" tvg-country="IN" tvg-language="eng;hin;tam" group-title="Review",Animal Planet
-https://drk6xq0vhn.gpcdn.net/live/animal_planet_sd_abr/index.m3u8
 #EXTINF:-1 channel-id="BantulTheGreat.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bantul-the-great-35f9777f.png" tvg-id="BantulTheGreat.us" tvg-name="Bantul the Great" tvg-language="eng" tvg-country="US" group-title="Review",Bantul the Great
 https://live20.bozztv.com/giatvplayout7/giatv-209869/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 channel-id="BengaliBeats.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bengali-beats.png" tvg-id="BengaliBeats.bd" tvg-name="Bengali Beats" tvg-language="ben" tvg-country="BD" group-title="Review",Bengali Beats
 https://live20.bozztv.com/giatvplayout7/giatv-209587/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="BSFilm.pk@SD" tvg-name="BS Film" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bs-film.png" channel-id="BSFilm.pk@SD" tvg-country="PK" tvg-language="urd" group-title="Review",BS Film
 https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png" channel-id="CartoonNetwork.us" tvg-country="IN" tvg-language="und" group-title="Review",Cartoon Network
-http://103.135.253.32:8080/CN-NETWORK/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png" channel-id="CartoonNetwork.us" tvg-country="US" tvg-language="eng" group-title="Review",Cartoon Network
-https://drk6xq0vhn.gpcdn.net/live/cn_hd_abr/index.m3u8
 #EXTINF:-1 tvg-id="CartoonNetwork.uk" tvg-name="Cartoon Network UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-uk.png" channel-id="CartoonNetwork.uk" tvg-country="GB" tvg-language="eng" group-title="Review",Cartoon Network UK
 https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8
 #EXTINF:-1 tvg-id="Channel1.bd" tvg-name="Channel 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-1.png" channel-id="Channel1.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Channel 1
@@ -2049,8 +2051,6 @@ https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF9
 https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8
 #EXTINF:-1 channel-id="DeewanaHD.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deewana-hd.png" tvg-id="DeewanaHD.in" tvg-name="Deewana" tvg-language="hin" tvg-country="IN" group-title="Review",Deewana
 https://live20.bozztv.com/giatvplayout7/giatv-209592/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" channel-id="DeshTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Desh TV
-https://stream.ottplus.live/live/desh_tv_abr/index.m3u8
 #EXTINF:-1 tvg-id="Dhamaal.in@SD" tvg-name="Dhamaal" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhamaal.png" channel-id="Dhamaal.in@SD" tvg-country="IN" tvg-language="und" group-title="Review",Dhamaal
 https://tvsen6.aynaott.com/F4Z6es8E/index.m3u8
 #EXTINF:-1 tvg-id="DiscoveryChannel.in@HD" tvg-name="Discovery Channel (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-channel-india.png" channel-id="DiscoveryChannel.in@HD" tvg-country="IN" tvg-language="ben;eng;hin;kan;mal;mar;tam;tel" group-title="Review",Discovery Channel (India)
