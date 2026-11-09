@@ -223,5 +223,84 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         self.assertFalse(discovery.country_group_threshold_issues(rows))
 
 
+
+    def test_verified_channels_auto_promote_alternates_go_to_backup_and_inconclusive_go_to_review(self):
+        import tempfile
+        import validate_discovery_run as validation
+        from pathlib import Path
+
+        rows = []
+        for i in range(1, 5):
+            rows.append(
+                f'#EXTINF:-1 tvg-id="PK{i}.pk" tvg-name="Pakistan Primary {i}" tvg-country="PK" group-title="International",Pakistan Primary {i}\n'
+                f'https://example.org/pk{i}.m3u8'
+            )
+        rows.extend([
+            '#EXTINF:-1 tvg-id="PK5.pk" tvg-name="Pakistan Primary 5" tvg-country="PK" group-title="New Channels",Pakistan Primary 5\nhttps://example.org/pk5.m3u8',
+            '#EXTINF:-1 tvg-id="PK1.pk" tvg-name="Pakistan Primary 1" tvg-country="PK" group-title="New Backups",Pakistan Primary 1 alternate\nhttps://example.org/pk1-alt.m3u8',
+            '#EXTINF:-1 tvg-id="IN-Kids.in" tvg-name="Indian Kids Example" tvg-country="IN" tvg-content="Kids" group-title="New Channels",Indian Kids Example\nhttps://example.org/indian-kids.m3u8',
+        ])
+        _, entries, malformed = parse_playlist("\n".join(rows) + "\n")
+        self.assertFalse(malformed)
+        verified = {entries[4]["start"], entries[5]["start"]}
+        inconclusive = {entries[6]["start"]}
+        updates = {}
+        decisions = validation.promote_verified_candidates(entries, verified, inconclusive, updates)
+        targets = {name: target for name, _old, target, _reason in decisions}
+        self.assertEqual(targets["Pakistan Primary 5"], "Pakistani")
+        self.assertEqual(targets["Pakistan Primary 1"], "Backup")
+        self.assertEqual(targets["Indian Kids Example"], "Review")
+
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "International-Playlist.m3u"
+            text = "#EXTM3U\n" + "\n".join(rows) + "\n"
+            lines = text.splitlines()
+            for index, updated in updates.items():
+                lines[index] = updated
+            playlist.write_text("\n".join(lines) + "\n", encoding="utf-8")
+            validation.consolidate_international_country_groups(playlist)
+            output = playlist.read_text(encoding="utf-8")
+        self.assertEqual(output.count('group-title="Pakistani"'), 5)
+        self.assertNotIn('group-title="International"', output)
+        self.assertIn('group-title="Backup"', output)
+        self.assertIn('group-title="Review"', output)
+
+    def test_inconclusive_candidate_without_local_logo_is_preserved_in_review(self):
+        import os
+        import tempfile
+        from unittest.mock import patch
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "International-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            content = (
+                '#EXTM3U\n'
+                '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Review","New Channels","New Backups","Backup"]\n'
+                '#EXTINF:-1 tvg-id="TestBD.bd" tvg-name="Bangladesh Test Channel" tvg-country="BD" group-title="New Channels",Bangladesh Test Channel\n'
+                'https://example.org/bd-test.m3u8\n'
+            )
+            playlist.write_text(content, encoding="utf-8")
+            baseline.write_text('#EXTM3U\n', encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            with patch.object(validation, "probe_url", return_value=("unknown", "HTTP 403")), \
+                 patch.object(validation, "ensure_local_logo", side_effect=lambda entry: (entry["extinf"], False, True)):
+                validation.probe_mode(str(playlist), str(report), str(baseline), "international")
+            output = playlist.read_text(encoding="utf-8")
+            self.assertIn('group-title="Review"', output)
+            self.assertIn("https://example.org/bd-test.m3u8", output)
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "international")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
+
 if __name__ == "__main__":
     unittest.main()
