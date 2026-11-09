@@ -77,10 +77,21 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertEqual(active_islamic[0]["attrs"].get("tvg-language"), "ben")
         self.assertEqual(active_islamic[0]["attrs"].get("tvg-chno"), "537")
 
-        for name in ("D Talk", "Prime TV", "TV One UK"):
+        expected_review_metadata = {
+            "Shikor TV Canada": ("custom.shikortvcanada", "CA"),
+            "Ten TV Prime": ("custom.tentvprime", "BD"),
+            "TV One UK": ("TVOne.uk", "GB"),
+        }
+        for name, (channel_id, country) in expected_review_metadata.items():
             candidate = [e for e in entries if e["attrs"].get("tvg-name") == name]
-            self.assertEqual(len(candidate), 1)
-            self.assertEqual(candidate[0]["attrs"].get("group-title"), "Review")
+            self.assertEqual(len(candidate), 1, name)
+            self.assertEqual(candidate[0]["attrs"].get("group-title"), "Review", name)
+            self.assertEqual(
+                candidate[0]["attrs"].get("channel-id") or candidate[0]["attrs"].get("tvg-id"),
+                channel_id,
+                name,
+            )
+            self.assertEqual(candidate[0]["attrs"].get("tvg-country"), country, name)
 
         for e in entries:
             if e["attrs"].get("group-title") == "Bangladesh":
@@ -136,9 +147,9 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         prime_url = "https://stream.example/prime-tv.m3u8"
         sample = (
             "#EXTM3U\n"
-            + '#EXTINF:-1 tvg-name="D Talk" channel-id="custom.shikortvcanada" tvg-country="BD" tvg-language="ben" tvg-chno="17" group-title="Bangladesh",D Talk\n'
+            + '#EXTINF:-1 tvg-name="Shikor TV Canada" channel-id="custom.shikortvcanada" tvg-country="CA" tvg-language="ben" tvg-chno="17" group-title="International",Shikor TV Canada\n'
             + dtalk_url + "\n"
-            + '#EXTINF:-1 tvg-name="Prime TV" channel-id="custom.tentvprime" tvg-country="IN" tvg-language="ben" tvg-chno="76" group-title="Indian Bangla",Prime TV\n'
+            + '#EXTINF:-1 tvg-name="Ten TV Prime" channel-id="custom.tentvprime" tvg-country="BD" tvg-language="ben" tvg-chno="76" group-title="Bangladesh",Ten TV Prime\n'
             + prime_url + "\n"
         )
         updated, stats, errors = repair_playlist_text(sample)
@@ -151,8 +162,8 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertIn('group-title="Review"', updated)
         self.assertNotIn('tvg-chno="17"', updated)
         self.assertNotIn('tvg-chno="76"', updated)
-        self.assertEqual(stats["missing_logos_deferred"].count("D Talk"), 1)
-        self.assertEqual(stats["missing_logos_deferred"].count("Prime TV"), 1)
+        self.assertEqual(stats["missing_logos_deferred"].count("Shikor TV Canada"), 1)
+        self.assertEqual(stats["missing_logos_deferred"].count("Ten TV Prime"), 1)
     def test_generic_logo_is_removed_when_primary_is_quarantined(self):
         url = "https://stream.example/nkr-tv-kannada.m3u8"
         fallback = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg"
