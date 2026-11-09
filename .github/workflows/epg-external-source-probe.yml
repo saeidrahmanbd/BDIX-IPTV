@@ -1,0 +1,48 @@
+name: Probe amazeyourself EPG sources
+
+# Exploratory only: this workflow never writes the production XMLTV guide.
+on:
+  push:
+    branches:
+      - epg/amazeyourself-source-audit
+    paths:
+      - "scripts/probe_amazeyourself_epg.py"
+      - "tests/test_external_epg_probe.py"
+      - ".github/workflows/epg-external-source-probe.yml"
+      - "IPTV-Playlist.m3u"
+      - "International-Playlist.m3u"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: external-epg-source-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.12"
+
+      - name: Run probe regression tests
+        run: python -m unittest discover -s tests -p "test_external_epg_probe.py" -v
+
+      - name: Probe four published XMLTV exports
+        run: python scripts/probe_amazeyourself_epg.py reports/epg-amazeyourself-source-probe.md
+
+      - name: Upload qualification report
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: amazeyourself-epg-source-qualification
+          path: reports/epg-amazeyourself-source-probe.md
+          if-no-files-found: error
+          retention-days: 14
