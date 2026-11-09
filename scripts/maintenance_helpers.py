@@ -28,6 +28,7 @@ from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS, PERMANENTLY_RE
 from restore_protected_review import (
     AUTHORIZED_MIGRATION_SOURCE_GROUPS,
     authorized_backup_migration_target,
+    authorized_review_to_primary_target,
     normalize_name as _restore_normalize_name,
 )
 
@@ -480,7 +481,13 @@ def verify_no_unauthorized_removals() -> int:
             continue
 
         if old_group in {"Review", "Not Playing"} and current_group != "Review":
-            group_transition_errors.append(f"Review entry reclassified: {_name(info)}")
+            review_target = authorized_review_to_primary_target(
+                info, str(block["url"]), old_group
+            )
+            if review_target and current_group == review_target:
+                allowed_queue_migrations.add(url)
+            else:
+                group_transition_errors.append(f"Review entry reclassified: {_name(info)}")
             continue
 
         if current_group not in PROTECTED_GROUPS:
