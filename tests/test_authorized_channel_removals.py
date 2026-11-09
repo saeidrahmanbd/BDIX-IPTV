@@ -261,6 +261,17 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
         changed_url = unnumbered.replace(url, "https://example.invalid/other.m3u8")
         self.assertNotEqual(guard._protected_text(numbered), guard._protected_text(changed_url))
 
+    def test_cartoon_network_us_orphan_backup_removal_is_exact(self):
+        info = (
+            '#EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Cartoon Network" '
+            'group-title="Backup",Cartoon Network'
+        )
+        url = "https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/playlist.m3u8"
+        self.assertTrue(guard._is_authorized_removal(info, url))
+        self.assertTrue(removal_policy.is_authorized_removal(info, url))
+        self.assertFalse(guard._is_authorized_removal(info.replace('group-title="Backup"', 'group-title="Kids"'), url))
+        self.assertFalse(guard._is_authorized_removal(info, url + "?changed=1"))
+
     def test_exact_sparkle_duplicate_is_authorized_only_as_backup(self):
         info = '#EXTINF:-1 tvg-name="Sparkle Movies" group-title="Backup",Sparkle Movies'
         url = (
@@ -420,6 +431,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             ("PTV Sports", "http://103.135.253.32:8080/PTV-SPORTS/tracks-v1a1/mono.m3u8", "Pakistani"),
             ("Star Sports Select 1", "http://103.135.253.32:8080/STAR-SPORTS-SELECT-1/index.m3u8", "Sports"),
             ("Channel 52", "http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
+            ("Animal Planet", "https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8", "Documentary & Wildlife"),
         ]
         for name, url, target in cases:
             info = channel(name, "Backup", url).splitlines()[0]
