@@ -153,6 +153,7 @@ jobs:
                       broken += 1
               summaries[name] = {
                   "entries": len(entries), "missing_logo_metadata": missing,
+                  "review_missing_logo_metadata": review_missing,
                   "adult_entries_ignored": adult_ignored,
                   "nonrepository_logo_refs": external, "nvision_refs": nvision,
                   "invalid_or_blocked_refs": broken,
