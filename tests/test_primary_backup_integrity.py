@@ -95,6 +95,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
                 name,
             )
             self.assertEqual(candidate[0]["attrs"].get("tvg-country"), country, name)
+            self.assertFalse(candidate[0]["attrs"].get("tvg-chno"), name)
 
         for e in entries:
             if e["attrs"].get("group-title") == "Bangladesh":
