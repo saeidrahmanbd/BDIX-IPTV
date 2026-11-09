@@ -12,7 +12,7 @@
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
 - Bangladesh and Pakistan channels of all genres are eligible. Indian News, all Religious, Educational and Business/Finance channels are excluded; Indian Kids and Sports remain eligible. Only countries other than Bangladesh, India and Pakistan are limited to dedicated Movie/Music channels.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
-- Every new primary candidate remains in New Channels and every alternate stream remains in New Backups for manual review; no automatic promotion occurs.
+- New discoveries are staged in New Channels/New Backups before probing. Verified unique primary channels are automatically promoted into policy-eligible groups, verified alternate streams move to Backup, and inconclusive or untrusted-logo candidates remain in Review.
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
