@@ -13,7 +13,7 @@ from pathlib import Path
 
 CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
-    "Indian Entertainment", "Pakistani", "International",
+    "Indian Entertainment", "Fashion", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
     "Review", "New Channels", "New Backups", "Backup",
 ]

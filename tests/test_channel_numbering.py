@@ -26,6 +26,19 @@ class ActiveChannelNumberingTests(unittest.TestCase):
             'https://stream.example/movie.m3u8\n'
         )
 
+    def test_fashion_is_a_valid_primary_category_and_is_numbered(self):
+        sample = (
+            '#EXTM3U\n'
+            '#EXTINF:-1 tvg-id="fashion.one" tvg-name="Fashion One" group-title="Fashion",Fashion One\n'
+            'https://stream.example/fashion-one.m3u8\n'
+            '#EXTINF:-1 tvg-id="fashion.two" tvg-name="Fashion Two" group-title="Fashion",Fashion Two\n'
+            'https://stream.example/fashion-two.m3u8\n'
+        )
+        updated, count = normalize_playlist_text(sample)
+        self.assertEqual(count, 2)
+        self.assertIn('tvg-name="Fashion One" tvg-chno="1" group-title="Fashion"', updated)
+        self.assertIn('tvg-name="Fashion Two" tvg-chno="2" group-title="Fashion"', updated)
+
     def test_active_entries_are_sorted_and_numbered_gaplessly(self):
         updated, count = normalize_playlist_text(self.sample)
         self.assertEqual(count, 3)
