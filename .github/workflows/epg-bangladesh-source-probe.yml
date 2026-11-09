@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: epg-bangladesh-source-probe
+  group: epg-bangladesh-official-pages-probe
   cancel-in-progress: true
 
 jobs:
