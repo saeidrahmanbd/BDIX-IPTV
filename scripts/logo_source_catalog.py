@@ -111,6 +111,12 @@ DIRECT_PAGE_HINTS = {
     "Dream Music Prime": ("https://zeno.fm/radio/dream-music-prime/", True),
     "Wifm 100.9": ("https://www.wifmradio.com/", False),
     "Tapmad": ("https://www.tapmad.com/", False),
+    # Jagobd identifies itself as an authorized broadcaster partner and exposes
+    # station-specific pages for these three channels. Prefer explicit logo
+    # image tags; use OG image only as the channel-page fallback.
+    "Shikor TV Canada": ("https://www.jagobd.com/shikortv", True),
+    "Ten TV Prime": ("https://www.jagobd.com/primetv", True),
+    "TV One UK": ("https://www.jagobd.com/tv-one-uk", True),
 }
 
 
