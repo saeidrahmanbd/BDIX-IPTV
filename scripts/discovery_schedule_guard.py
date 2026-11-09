@@ -50,6 +50,15 @@ def today_in_bangladesh(now: datetime | None = None) -> date:
     return now.astimezone(BD_TZ).date()
 
 
+def is_manual_retry(event: str | None, run_attempt: Any = 1) -> bool:
+    """Treat explicit dispatches and user-requested GitHub reruns as manual work."""
+    try:
+        attempt = int(run_attempt or 1)
+    except (TypeError, ValueError):
+        attempt = 1
+    return str(event or "").casefold() == "workflow_dispatch" or attempt > 1
+
+
 def runs_for_date(runs: list[dict[str, Any]], target_date: date) -> list[dict[str, Any]]:
     """Include every event/status for the date; pending and failed runs count too."""
     return [
@@ -226,15 +235,18 @@ def guard(workflow_file: str) -> int:
     todays = runs_for_date(list(by_id.values()), target_date)
 
     event = str(current_run.get("event") or "").casefold()
+    manual_retry = is_manual_retry(event, current_run.get("run_attempt", 1))
+    execution_event = "workflow_dispatch" if manual_retry else event
     execute = should_current_run_execute(
-        todays, current_run_id, target_date, client, event=event
+        todays, current_run_id, target_date, client, event=execution_event
     )
     write_output("should_run", "true" if execute else "false")
-    if execute and event == "workflow_dispatch":
+    if execute and manual_retry:
+        action = "dispatch" if event == "workflow_dispatch" else "rerun"
         print(
-            f"Manual discovery dispatch accepted: run {current_run_id} may refresh "
+            f"Manual discovery {action} accepted: run {current_run_id} may refresh "
             f"{workflow_file} for Bangladesh date {target_date}; completed daily runs "
-            f"do not block an explicit manual request."
+            f"do not block an explicit manual retry."
         )
     elif execute:
         print(
@@ -242,7 +254,7 @@ def guard(workflow_file: str) -> int:
             f"{workflow_file} run for Bangladesh date {target_date}."
         )
     else:
-        if event == "workflow_dispatch":
+        if manual_retry:
             blockers = [
                 run for run in todays
                 if int(run.get("id") or -1) != int(current_run_id)
