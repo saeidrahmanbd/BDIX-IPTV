@@ -90,7 +90,8 @@ def parse_playlist_text(text, playlist_name):
         line = raw_line.strip()
         if line.startswith("#EXTINF:"):
             attrs = dict(ATTR_RE.findall(line))
-            display = line.split(",", 1)[1].strip() if "," in line else ""
+            separator = line.rfind('",')
+            display = line[separator + 2:].strip() if separator >= 0 else (line.split(",", 1)[1].strip() if "," in line else "")
             current = {
                 "id": attrs.get("tvg-id", "").strip(),
                 "tvg_name": attrs.get("tvg-name", "").strip(),
