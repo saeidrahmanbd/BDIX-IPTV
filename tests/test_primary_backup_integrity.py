@@ -112,13 +112,27 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             },
         )
 
-        placeholder_ids = {
-            "Colors.in", "Colors.Bangla.in", "ColorsBanglaCinema.in@SD",
-            "ColorsCineplex.uk", "StarGold.in@HD",
-        }
-        quarantined = [e for e in entries if e["attrs"].get("tvg-id") in placeholder_ids
-                       and e["attrs"].get("group-title") == "Review"]
-        self.assertGreaterEqual(len(quarantined), 6)
+        unresolved_placeholder_ids = {"ColorsBanglaCinema.in@SD", "StarGold.in@HD"}
+        quarantined = [
+            e for e in entries
+            if e["attrs"].get("tvg-id") in unresolved_placeholder_ids
+            and e["attrs"].get("group-title") == "Review"
+        ]
+        self.assertEqual(len(quarantined), 3)
+        self.assertEqual(
+            {e["attrs"].get("tvg-id") for e in quarantined},
+            unresolved_placeholder_ids,
+        )
+
+        # The other audited Colors variants now have working primary feeds;
+        # their failed alternates remain safely in Backup, not Review.
+        for channel_id in ("Colors.in", "Colors.Bangla.in", "ColorsCineplex.uk"):
+            active = [
+                e for e in entries
+                if e["attrs"].get("tvg-id") == channel_id
+                and e["attrs"].get("group-title") in primary_groups
+            ]
+            self.assertEqual(len(active), 1, channel_id)
 
         https_mirrors = {
             "Bangla TV": (
