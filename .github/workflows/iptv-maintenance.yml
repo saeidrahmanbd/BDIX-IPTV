@@ -1,6 +1,7 @@
 name: IPTV Playlist Update
 # Rebuild all playlist-owned audit, gate, stream-health, logo and dashboard snapshots.
 # Playlist-only maintenance. EPG generation/validation is owned by Refresh IPTV EPG.
+# Stream URL identity must use scripts/stream_url_identity.py; never lowercase an entire stream URL.
 # Specialized discovery/logo workflows own their generated playlist commits.
 on:
   push:
