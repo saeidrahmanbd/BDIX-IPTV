@@ -1,23 +1,17 @@
 name: Discovery Schedule Watchdog
 # GitHub's schedule trigger is best-effort, especially at minute 00.
-# Keep 07:00 BDT as the primary trigger; these off-hour retries only dispatch
-# an official discovery workflow when no run of that workflow exists today.
+# The official discovery workflows run at 07:00 BDT; these two spaced
+# recovery checkpoints dispatch only workflows with no successful/active run today.
 on:
   schedule:
-    - cron: '5 1 * * *'   # 07:05 Asia/Dhaka
-    - cron: '15 1 * * *'  # 07:15 Asia/Dhaka
-    - cron: '30 1 * * *'  # 07:30 Asia/Dhaka
-    - cron: '45 1 * * *'  # 07:45 Asia/Dhaka
-    - cron: '0 2 * * *'   # 08:00 Asia/Dhaka
-    - cron: '15 2 * * *'  # 08:15 Asia/Dhaka
+    - cron: '15 1 * * *'  # 07:15 Asia/Dhaka: first recovery checkpoint
+    - cron: '15 2 * * *'  # 08:15 Asia/Dhaka: final recovery checkpoint
 
 permissions:
   actions: write
   contents: read
 
-# Serialize watchdog checks so two fallback ticks cannot dispatch the same
-# missing workflow at the same time. The official workflows have their own
-# per-day first-run guard as a second layer of duplicate protection.
+# Serialize checks; official discovery workflows also have a per-day guard.
 concurrency:
   group: discovery-schedule-watchdog
   cancel-in-progress: false
