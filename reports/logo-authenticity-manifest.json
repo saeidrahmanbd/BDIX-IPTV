@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-09T00:03:25.979427+00:00",
+  "generated_at_utc": "2026-11-09T00:40:42.521000+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,7 +11,7 @@
     "International-Playlist.m3u": 3071
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "a02d892fda4e692ec37814a8206c4ff6c6ab200d77b7592a17da1d7c01fd070b",
+    "IPTV-Playlist.m3u": "8675200ab8b37acc114ba0d5fc456d80611f2715c3226f08837681133391c6b5",
     "International-Playlist.m3u": "78f1aa33f238b6584576ea03b006d78132bd54bbafb7f665f62da461309aa5e0"
   },
   "status_counts": {
@@ -7944,7 +7944,7 @@
       "channel_name": "G TV",
       "tvg_id": "GaziTV.bd",
       "channel_id": "GaziTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gazi-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-tv.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
