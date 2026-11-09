@@ -372,7 +372,7 @@ for info, url in entries:
     item = (display_name(info), identity(info), issue, logo)
     if issue == "external":
         logo_warnings.append(item)
-    elif issue == "missing" and group in {"New Channels", "New Backups"}:
+    elif issue == "missing" and group in {"Review", "Not Playing", "New Channels", "New Backups"}:
         # Candidate queues may lack a verified source logo; report for follow-up,
         # but never substitute a placeholder or external logo to force a pass.
         review_logo_exceptions.append(item)
@@ -551,7 +551,7 @@ if xtream_credential_paths:
     for name, group, url in xtream_credential_paths: lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
 else: lines.append("None.")
 lines += ["", "## Logo Integrity", "", f"- Healthy/local references: **{logo_counts['healthy']}**", f"- External references (review only): **{logo_counts['external']}**"]
-lines += ["", "## Missing Logos in Discovery Queues", "", "These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.", ""]
+lines += ["", "## Missing Logos in Review/Discovery Queues", "", "These entries remain quarantined for manual review because no verified local logo is available; they are not published as active primary channels.", ""]
 if review_logo_exceptions:
     lines.extend(f"- **{name}** [{cid}]" for name, cid, issue, logo in review_logo_exceptions)
 else:
