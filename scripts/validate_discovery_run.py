@@ -144,9 +144,9 @@ def consolidate_international_country_groups(playlist_path):
     p = Path(playlist_path)
     prefix, blocks = discovery.parse(p.read_text(encoding="utf-8-sig"))
     labels = {
-        discovery.country_group(code).casefold(): code
+        ("pakistani" if code == "PK" else discovery.country_group(code).casefold()): code
         for code in discovery.ISO_CODES
-        if code not in {"BD", "IN", "PK"}
+        if code not in {"BD", "IN"}
     }
     dynamic_codes = set(labels.values())
     identities = defaultdict(set)
@@ -185,13 +185,10 @@ def consolidate_international_country_groups(playlist_path):
         elif old_key == "international":
             code = discovery.country_code(a)
             if code in qualified:
-                target = discovery.country_group(code)
+                target = "Pakistani" if code == "PK" else discovery.country_group(code)
         if target and target != old:
             block[0] = discovery.set_attr(block[0], "group-title", target)
             changes.append((discovery.name_of(block), old, target))
-
-    if not changes:
-        return []
 
     present_groups = {discovery.attrs(block[0]).get("group-title", "").strip() for block in blocks}
     registry = discovery.category_registry(present_groups)
@@ -230,6 +227,107 @@ def append_section(report_path, heading, body):
         original = re.split(rf"\n## {re.escape(heading)}\b", original, maxsplit=1)[0].rstrip()
     p.write_text(original + "\n\n## " + heading + "\n\n" + body.rstrip() + "\n", encoding="utf-8")
 
+
+def promote_verified_candidates(entries, verified_starts, inconclusive_starts, update_lines):
+    """Graduate only verified, logo-backed International discovery rows.
+
+    Unique new channel identities become primary rows. Alternate streams go to
+    Backup. Uncertain checks go to Review, never into Xtream-visible groups.
+    Country thresholds are calculated from existing primaries plus this batch.
+    """
+    queue_groups = {"new channels", "new backup", "new backups"}
+    excluded_groups = queue_groups | {"backup", "backups", "review", "not playing", "test"}
+    country_labels = {
+        ("pakistani" if code == "PK" else discovery.country_group(code).casefold()): code
+        for code in discovery.ISO_CODES if code not in {"BD", "IN"}
+    }
+    primary_ids = defaultdict(set)
+    active_identity_keys = set()
+    for entry in entries:
+        attrs = entry["attrs"]
+        group = entry["group"].strip().casefold()
+        code = discovery.country_code(attrs)
+        if code not in discovery.ISO_CODES:
+            code = country_labels.get(group, code)
+        if group in excluded_groups or code not in discovery.ISO_CODES:
+            continue
+        identity = discovery.primary_identity(attrs, entry["name"])
+        if not identity:
+            continue
+        active_identity_keys.add((code, identity))
+        if discovery.counts_toward_country_group(group, code):
+            primary_ids[code].add(identity)
+
+    decisions = []
+    reserved = set(active_identity_keys)
+    added_ids = defaultdict(set)
+    for entry in entries:
+        old_group = entry["group"].strip().casefold()
+        if old_group not in queue_groups:
+            continue
+        start = entry["start"]
+        if start in inconclusive_starts:
+            decisions.append((entry, "Review", "inconclusive stream check"))
+            continue
+        if start not in verified_starts:
+            continue
+        attrs = dict(entry["attrs"])
+        code = discovery.country_code(attrs)
+        identity = discovery.primary_identity(attrs, entry["name"])
+        if code not in discovery.ISO_CODES or not identity:
+            decisions.append((entry, "Review", "country or channel identity is not verified"))
+            continue
+        identity_key = (code, identity)
+        if identity_key in reserved:
+            decisions.append((entry, "Backup", "verified alternate stream"))
+            continue
+        policy_attrs = dict(attrs)
+        policy_attrs["group-title"] = "New Channels"
+        base, reason, policy_code = discovery.policy(policy_attrs, entry["name"])
+        if base is None or policy_code != code:
+            decisions.append((entry, "Review", reason or "candidate failed country/content policy"))
+            continue
+        reserved.add(identity_key)
+        if code not in {"BD", "IN"}:
+            added_ids[code].add(identity)
+        decisions.append((entry, None, "verified primary candidate"))
+
+    qualified = discovery.qualified_country_groups(primary_ids, added_ids)
+    results = []
+    for entry, fixed_target, reason in decisions:
+        if fixed_target:
+            target = fixed_target
+        else:
+            attrs = dict(entry["attrs"])
+            code = discovery.country_code(attrs)
+            name = entry["name"]
+            content = str(attrs.get("tvg-content", "")).strip().casefold()
+            adult_name = re.search(
+                r"\b(?:adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel)\b",
+                name, re.I,
+            )
+            if content in {"adult", "xxx", "porn", "adultentertainment"} or adult_name:
+                target = "Adult"
+            elif discovery.FASHION_RE.search(name):
+                target = "Fashion TV"
+            else:
+                special = discovery.special_group(attrs, name)
+                if special:
+                    target = special
+                else:
+                    attrs["group-title"] = "New Channels"
+                    base, policy_reason, policy_code = discovery.policy(attrs, name)
+                    if base is None or policy_code != code:
+                        target = "Review"
+                        reason = policy_reason or "candidate failed country/content policy"
+                    else:
+                        target = discovery.primary_target(base, code, qualified)
+        current = update_lines.get(entry["start"], entry["extinf"])
+        update_lines[entry["start"]] = discovery.set_attr(current, "group-title", target)
+        results.append((entry["name"], entry["group"], target, reason))
+    return results
+
+
 def probe_mode(playlist, report, baseline, mode):
     p = Path(playlist)
     bp = Path(baseline)
@@ -259,6 +357,8 @@ def probe_mode(playlist, report, baseline, mode):
         seen.add(urlkey)
     probe_targets = [e for e in targets if e["start"] not in remove_starts]
     results = {}
+    verified_starts = set()
+    inconclusive_starts = set()
     with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
         futures = {pool.submit(probe_url, e["url"]): e for e in probe_targets}
         for future in concurrent.futures.as_completed(futures):
@@ -279,19 +379,36 @@ def probe_mode(playlist, report, baseline, mode):
             counts["verified streams"] += 1
         else:
             counts["primary streams retained as unverified"] += 1
-            details.append(f"- Retained {e['name']} for review — stream could not be conclusively verified ({reason}).")
+            inconclusive_starts.add(e["start"])
+            details.append(f"- Moved {e['name']} to Review — stream could not be conclusively verified ({reason}).")
         new_extinf, localized, unavailable = ensure_local_logo(e)
         if unavailable:
-            remove_starts.add(e["start"])
-            counts["candidates removed for missing local logo"] += 1
-            details.append(
-                f"- Held {e['name']} out of {e['group']} — no authentic local logo asset is available."
-            )
+            counts["candidates held for missing local logo"] += 1
+            if mode == "international":
+                update_lines[e["start"]] = discovery.set_attr(e["extinf"], "group-title", "Review")
+                inconclusive_starts.add(e["start"])
+                details.append(
+                    f"- Moved {e['name']} to Review — no authentic local logo asset is available."
+                )
+            else:
+                remove_starts.add(e["start"])
+                counts["candidates removed for missing local logo"] += 1
+                details.append(
+                    f"- Held {e['name']} out of {e['group']} — no authentic local logo asset is available."
+                )
             continue
         if new_extinf != e["extinf"]:
             update_lines[e["start"]] = new_extinf
+        if status == "verified":
+            verified_starts.add(e["start"])
         if localized:
             counts["logos localized to repository assets"] += 1
+    if mode == "international":
+        promotions = promote_verified_candidates(entries, verified_starts, inconclusive_starts, update_lines)
+        counts["verified primary channels promoted"] += sum(1 for _, _, target, _ in promotions if target not in {"Backup", "Review"})
+        counts["verified alternate streams moved to Backup"] += sum(1 for _, _, target, _ in promotions if target == "Backup")
+        counts["inconclusive candidates moved to Review"] += sum(1 for _, _, target, _ in promotions if target == "Review")
+        details.extend(f"- Promoted {name} from {old_group} to {target} — {reason}." for name, old_group, target, reason in promotions)
     remove_indices = set()
     by_start = {e["start"]: e for e in entries}
     for start in remove_starts:
@@ -311,13 +428,17 @@ def probe_mode(playlist, report, baseline, mode):
         f"- Mode: {mode}",
         f"- New entries and discovery queues probed: {len(probe_targets)}",
         f"- Verified live media responses: {counts['verified streams']}",
+        f"- Verified new primary channels automatically promoted: {counts['verified primary channels promoted']}",
+        f"- Verified alternate streams moved to Backup: {counts['verified alternate streams moved to Backup']}",
+        f"- Inconclusive candidates moved to Review: {counts['inconclusive candidates moved to Review']}",
         f"- Primary entries retained but not conclusively verified: {counts['primary streams retained as unverified']}",
         f"- Definitively dead/invalid candidates removed: {counts['removed invalid/dead or unverified backup entries']}",
         f"- Inconclusive primary/backup candidates retained for manual review: {counts['primary streams retained as unverified']}",
         f"- Duplicate discovery entries removed: {counts['duplicate discovery entries removed']}",
         f"- Country-group rows consolidated after stream probing: {counts['country-group rows consolidated after stream probing']}",
         f"- Logo references localized to authentic repository assets: {counts['logos localized to repository assets']}",
-        f"- Candidates held out because no authentic local logo was available: {counts['candidates removed for missing local logo']}",
+        f"- Candidates without local logos moved to Review: {counts['candidates held for missing local logo']}",
+        f"- Candidates removed for missing local logos (IPTV mode): {counts['candidates removed for missing local logo']}",
         "",
         "### Stream probe details",
         *(details[:100] if details else ["- No stream removals or uncertain responses to report."]),
@@ -379,7 +500,8 @@ def final_mode(playlist, report, baseline, mode):
         logo = e["logo"]
         if not logo:
             missing_logo += 1
-            errors.append(f"missing local logo for discovery candidate {e['name']}")
+            if e["group"].casefold() != "review":
+                errors.append(f"missing local logo for discovery candidate {e['name']}")
         else:
             path = local_logo_path(logo)
             if path is None or not path.is_file():
