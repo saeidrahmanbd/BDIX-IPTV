@@ -7,23 +7,13 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-09 — `IPTV-Playlist.m3u`
 
-- New channel identities: **5**
-- Channel identities removed: **1**
-- Stream URLs added / removed: **9 / 1**
+- New channel identities: **0**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **1**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- Star Sports Select 2
-- Zee Comedy Nation
-- Zee Dil Se
-- Zee Horror Nights
-- Zee South Flix
-
-Removed channel identities (up to 10):
-- Baraza Music TV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-09 — `International-Playlist.m3u`
