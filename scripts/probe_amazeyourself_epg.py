@@ -292,7 +292,7 @@ def find_exact_matches(feed_channels, programme_counts, playlist_channels):
 
 
 def markdown_cell(value):
-    return str(value or "").replace("|", "/").replace("\n", " ").strip()
+    return str("" if value is None else value).replace("|", "/").replace("\n", " ").strip()
 
 
 def probe_feed(label, url, playlist_channels, window_start, window_end):
