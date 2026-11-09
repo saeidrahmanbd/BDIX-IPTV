@@ -32,7 +32,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         import tempfile
         with tempfile.TemporaryDirectory() as directory:
             report = Path(directory) / "report.md"
-            report.write_text("# Report\\n\\n## Stream verification\\n\\n- Verified streams: 2\\n", encoding="utf-8")
+            report.write_text("# Report\n\n## Stream verification\n\n- Verified streams: 2\n", encoding="utf-8")
             append_section(report, "Final validation", "- Validation status: PASS")
             content = report.read_text(encoding="utf-8")
             self.assertIn("## Stream verification", content)
@@ -143,21 +143,21 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             report = root / "report.md"
             registry = ["Pakistani", "Review", "New Channels", "New Backups", "Backup"]
             rows = [
-                f'#EXTINF:-1 tvg-id="PK{i}.pk" tvg-name="Pakistani Primary {i}" tvg-country="PK" group-title="Pakistani",Pakistani Primary {i}\\nhttps://example.org/pk{i}.m3u8'
+                f'#EXTINF:-1 tvg-id="PK{i}.pk" tvg-name="Pakistani Primary {i}" tvg-country="PK" group-title="Pakistani",Pakistani Primary {i}\nhttps://example.org/pk{i}.m3u8'
                 for i in range(1, 6)
             ]
             rows.extend([
-                '#EXTINF:-1 tvg-id="ATV.pk" tvg-name="ATV (Pakistan)" tvg-country="PK" tvg-logo="logos/atv.svg" group-title="New Channels",ATV (Pakistan)\\nhttps://example.org/atv.m3u8',
-                '#EXTINF:-1 tvg-id="BSTV.pk" tvg-name="BSTV (Pakistan)" tvg-country="PK" tvg-logo="logos/bstv.svg" group-title="New Channels",BSTV (Pakistan)\\nhttps://example.org/bstv.m3u8',
+                '#EXTINF:-1 tvg-id="ATV.pk" tvg-name="ATV (Pakistan)" tvg-country="PK" tvg-logo="logos/atv.svg" group-title="New Channels",ATV (Pakistan)\nhttps://example.org/atv.m3u8',
+                '#EXTINF:-1 tvg-id="BSTV.pk" tvg-name="BSTV (Pakistan)" tvg-country="PK" tvg-logo="logos/bstv.svg" group-title="New Channels",BSTV (Pakistan)\nhttps://example.org/bstv.m3u8',
             ])
             content = (
-                "#EXTM3U\\n"
-                "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\\n"
-                + "\\n".join(rows) + "\\n"
+                "#EXTM3U\n"
+                "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
+                + "\n".join(rows) + "\n"
             )
             playlist.write_text(content, encoding="utf-8")
             baseline.write_text(content, encoding="utf-8")
-            report.write_text("# Report\\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
             previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
             os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
             old_cwd = Path.cwd()
