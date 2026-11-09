@@ -41,6 +41,10 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             reorg.classify(backup_attrs, "Adult Channel Alpha", "Backup", "US"),
             ("Backup", None, None),
         )
+        self.assertEqual(
+            reorg.classify(backup_attrs, "Adult Channel Alpha", "Backup", "US", promote_backup=True),
+            ("Adult", None, None),
+        )
 
     def test_known_channel_aliases_share_one_identity_key(self):
         pairs = [
@@ -310,15 +314,17 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(discovery.COUNTRY_THRESHOLD, 5)
         self.assertNotIn("AT", discovery.qualified_country_groups({"AT": {"a", "b", "c", "d"}}))
         self.assertIn("AT", discovery.qualified_country_groups({"AT": {"a", "b", "c", "d", "e"}}))
-        # Routing changed in 2f5ee4f: a country that has reached the threshold
-        # gets its dedicated group; below it, channels remain in International.
-        # BD, IN and PK always keep their established regional groups.
+        # Every country except Bangladesh and India, including Pakistan, needs
+        # five unique primary identities before its dedicated group is used.
         self.assertEqual(discovery.primary_target("International Movies", "AT", {"AT"}), "Austria")
         self.assertEqual(discovery.primary_target("International Music", "AT", {"AT"}), "Austria")
         self.assertEqual(discovery.primary_target("International Movies", "AT", set()), "International")
         self.assertEqual(discovery.primary_target("International Music", "DE", set()), "International")
         self.assertEqual(discovery.primary_target("International Movies", "BD", set()), "Bangladesh")
-        self.assertEqual(discovery.primary_target("Pakistani", "PK", set()), "Pakistani")
+        self.assertNotIn("PK", discovery.qualified_country_groups({"PK": {"a", "b", "c", "d"}}))
+        self.assertIn("PK", discovery.qualified_country_groups({"PK": {"a", "b", "c", "d", "e"}}))
+        self.assertEqual(discovery.primary_target("Pakistani", "PK", set()), "International")
+        self.assertEqual(discovery.primary_target("Pakistani", "PK", {"PK"}), "Pakistani")
         self.assertEqual(discovery.primary_target("International Movies", "IN", set()), "Indian Movies")
         self.assertEqual(discovery.primary_target("International Music", "IN", set()), "Indian Music")
 
@@ -341,6 +347,11 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         }
         target, reason, genre = discovery.existing_international_target(
             pakistan, "Hum TV", set()
+        )
+        self.assertEqual((target, reason, genre), ("International", None, ""))
+
+        target, reason, genre = discovery.existing_international_target(
+            pakistan, "Hum TV", {"PK"}
         )
         self.assertEqual((target, reason, genre), ("Pakistani", None, ""))
 
