@@ -45,15 +45,15 @@ class EpgConfigTests(unittest.TestCase):
             root = Path(tmp)
             playlist = root / "IPTV-Playlist.m3u"
             playlist.write_text(
-                '#EXTM3U\\n'
-                '#EXTINF:-1 tvg-id="Active.in" group-title="Indian Movies",Active\\n'
-                'https://example.test/active.m3u8\\n'
-                '#EXTINF:-1 tvg-id="Backup.in" group-title="Backup",Backup\\n'
-                'https://example.test/backup.m3u8\\n'
-                '#EXTINF:-1 tvg-id="Review.in" group-title="Review",Review\\n'
-                'https://example.test/review.m3u8\\n'
-                '#EXTINF:-1 tvg-id="Queue.in" group-title="New Channels",Queue\\n'
-                'https://example.test/queue.m3u8\\n',
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-id="Active.in" group-title="Indian Movies",Active\n'
+                'https://example.test/active.m3u8\n'
+                '#EXTINF:-1 tvg-id="Backup.in" group-title="Backup",Backup\n'
+                'https://example.test/backup.m3u8\n'
+                '#EXTINF:-1 tvg-id="Review.in" group-title="Review",Review\n'
+                'https://example.test/review.m3u8\n'
+                '#EXTINF:-1 tvg-id="Queue.in" group-title="New Channels",Queue\n'
+                'https://example.test/queue.m3u8\n',
                 encoding="utf-8",
             )
             with patch.object(epg_publish_gate, "PLAYLISTS", (playlist,)):
