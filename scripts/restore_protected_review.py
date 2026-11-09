@@ -78,6 +78,7 @@ AUTHORIZED_BACKUP_MIGRATIONS = {
     "jatv": ("https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/jtvbd12.stream/tracks-v1a1/mono.m3u8", "Review"),
     "ddyadagiri": ("https://fta.ektv.in/live/678/master.m3u8", "Review"),
     "gtv": ("https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8", "Review"),
+    "sangeetbangla": ("https://tvsen6.aynaott.com/hT5jHczt/tracks-v1a1/mono.ts.m3u8", "Review"),
 }
 AUTHORIZED_MIGRATION_SOURCE_GROUPS = {
     "7xpunjabi": "Backup",
@@ -90,6 +91,7 @@ AUTHORIZED_MIGRATION_SOURCE_GROUPS = {
     "jatv": "Backup",
     "ddyadagiri": "Backup",
     "gtv": "Backup",
+    "sangeetbangla": "Backup",
 }
 
 # An explicitly reviewed active-to-Backup move. This is intentionally narrow:
@@ -105,6 +107,8 @@ AUTHORIZED_PRIMARY_TO_REVIEW_MIGRATIONS = {
     # Repeated 404/504 failures confirmed in the latest health-history snapshot.
     "jatv": ("https://dish.porosh.com.bd/hls/jtvnews.m3u8", "Bangladesh"),
     "kiddomatix": ("https://cc-le0kohm4qt3mk.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-le0kohm4qt3mk/OTM/OTM_KiddoMatix-SCTE_SAMSUNG/playlist.m3u8", "Kids"),
+    "channel24": ("https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8", "Bangladesh"),
+    "zbcartoon": ("https://server.zillarbarta.com/zbcatun/video.m3u8", "Kids"),
 }
 
 AUTHORIZED_REVIEW_TO_PRIMARY_MIGRATIONS = {
