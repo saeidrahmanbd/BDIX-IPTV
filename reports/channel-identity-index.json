@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T18:05:15+00:00",
+  "generated": "2026-11-09T00:03:24+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -1640,20 +1640,6 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.barazamusictv": {
-      "names": [
-        "Baraza Music TV"
-      ],
-      "ids": [
-        "custom.barazamusictv"
-      ],
-      "groups": [
-        "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "custom.beinsportsxtraenespanol": {
       "names": [
         "beIN Sports XTRA en Espanol"
@@ -2943,7 +2929,7 @@
     },
     "disneychannel": {
       "names": [
-        "Disney Channel (India)"
+        "Disney Channel India"
       ],
       "ids": [
         "disneychannel.in@hd"
@@ -3578,12 +3564,10 @@
     },
     "gazitv": {
       "names": [
-        "G TV",
-        "Gazi TV"
+        "G TV"
       ],
       "ids": [
-        "gazitv.bd",
-        "gazitv.bd@sd"
+        "gazitv.bd"
       ],
       "groups": [
         "Backup",

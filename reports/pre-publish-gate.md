@@ -1,23 +1,23 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-08T18:04:47+00:00**
-Source playlist SHA-256: **dee4c0905162325bb433379bae254831ad1834640807c7670b213f343caec9f3**
+Generated: **2026-11-09T00:02:37+00:00**
+Source playlist SHA-256: **a02d892fda4e692ec37814a8206c4ff6c6ab200d77b7592a17da1d7c01fd070b**
 
-Status: **BLOCK**
+Status: **PASS**
 
-- Current entries: **999**
+- Current entries: **998**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
-- Primary streams intentionally removed as known bad: **0**
+- Primary streams intentionally removed as known bad: **1**
 - Primary streams quarantined: **0**
 - Review entries reclassified: **0**
 - Review entries promoted: **0**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing channel numbers: **1**
-- Primary channel-number sequence issues: **514**
-- Numbered review entries: **1**
+- Primary entries missing channel numbers: **0**
+- Primary channel-number sequence issues: **0**
+- Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
@@ -30,16 +30,14 @@ Status: **BLOCK**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
-- Entries removed this run: **0**
-- Entries modified this run: **0**
+- Entries removed this run: **1**
+- Entries modified this run: **2**
 
 ## Protected-queue policy
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-- primary entries missing tvg-chno: 1
-- primary channel-number sequence gaps/order errors: 514
-- review entries still numbered: 1
+No blocking conditions detected.
 
 ## Review-queue logo gaps
 

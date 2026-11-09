@@ -1,78 +1,72 @@
 # International Playlist Organization Audit
 
-> **Historical audit snapshot:** The policy summary and category counts below predate the current discovery policy. Current rules are documented in the [operational wiki](../docs/WIKI.md): Bangladesh allows all genres; India excludes News, all Religious (including Islamic), Educational and Kids while allowing Sports; every other country in the International playlist is limited to Movies/Music. New Channels and New Backups remain manual-review queues and are not automatically promoted. The next successful maintenance run will regenerate this audit using the updated policy wording.
-
-
-- Entries before: 3344
-- Entries after: 3306
-- Channel names normalized: 21
+- Entries before: 3071
+- Entries after: 3071
+- Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
-- Additional same-channel streams moved to Backup: 1
-- News outside Bangladesh and non-Islamic religious channels are excluded.
-- Foreign movie/music services are placed under country names after at least five unique primary channels; smaller/unknown countries remain in New Channels with tvg-content tags.
+- Additional same-channel streams moved to Backup: 0
+- Bangladesh channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.
+- For countries other than Bangladesh and India, only dedicated Movies and Music channels are eligible.
+- New Channels and New Backups are manual-review queues; candidates are never automatically promoted. Foreign country groups require five unique, manually curated primary channel identities.
 - Retained stream URLs are preserved; playback/availability was not tested.
 
 ## Removal summary
 
-- duplicate channel stream moved to Backup: 1
-- test/VOD/non-TV name: 38
 
-## Protected Backup/Not Playing entries preserved (policy would have removed them)
+## Protected Backup/Review/Not Playing entries preserved (policy would have removed them)
 
-- non-Bangladesh news: 2
-- protected Backup/Not Playing kept despite orphan policy: 15
+- protected Backup/Not Playing kept despite orphan policy: 1014
+- test/VOD/non-TV name: 1
 
 ## Category counts
 
-- Bangladesh: 66
-- Indian Bangla: 37
-- Indian Movies: 83
-- Indian Music: 63
-- Indian Entertainment: 205
-- Pakistani: 8
-- Argentina: 16
-- Austria: 8
-- Brazil: 13
-- Bulgaria: 22
-- Canada: 30
-- Chile: 16
-- China: 12
-- Colombia: 12
-- Czech Republic: 27
-- Estonia: 9
-- Finland: 9
-- France: 50
-- Germany: 88
+- Bangladesh: 61
+- Indian Bangla: 28
+- Indian Movies: 62
+- Indian Music: 56
+- Indian Entertainment: 150
+- Pakistani: 4
+- Argentina: 12
+- Brazil: 11
+- Bulgaria: 19
+- Canada: 31
+- Chile: 11
+- China: 9
+- Colombia: 10
+- Costa Rica: 11
+- Czech Republic: 24
+- DO: 11
+- Estonia: 6
+- France: 41
+- Germany: 39
 - Greece: 8
-- Hungary: 16
-- Iran: 16
-- Italy: 31
+- Hungary: 15
+- Iran: 12
+- Italy: 25
 - Lebanon: 6
-- Mexico: 20
-- Netherlands: 19
-- North Macedonia: 5
-- Peru: 10
-- Poland: 29
-- Portugal: 6
-- Romania: 41
-- Russia: 109
-- Saudi Arabia: 15
-- Serbia: 5
-- Spain: 25
-- Sweden: 55
-- Turkey: 22
-- Ukraine: 32
-- United Kingdom: 25
-- United States: 272
+- Mexico: 15
+- Netherlands: 17
+- Panama: 5
+- Peru: 7
+- Poland: 26
+- Romania: 28
+- Russia: 54
+- Saudi Arabia: 9
+- Singapore: 5
+- Spain: 18
+- Sweden: 12
+- Turkey: 14
+- Ukraine: 19
+- United Kingdom: 20
+- United States: 171
 - Uzbekistan: 5
 - Vietnam: 6
-- Fashion TV: 1
-- Documentary & Wildlife: 191
-- Kids: 221
-- Religious: 30
-- Sports: 245
-- Adult: 354
-- New Channels: 155
-- Backup: 557
+- International: 103
+- Kids: 8
+- Sports: 6
+- Review: 237
+- New Channels: 141
+- New Backups: 130
+- Backup: 1353

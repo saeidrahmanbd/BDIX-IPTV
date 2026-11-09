@@ -1,38 +1,38 @@
 # IPTV Playlist Audit
-Generated: **2026-11-08T18:04:47.035925+00:00**
-Source playlist SHA-256: **dee4c0905162325bb433379bae254831ad1834640807c7670b213f343caec9f3**
+Generated: **2026-11-09T00:02:37.144433+00:00**
+Source playlist SHA-256: **a02d892fda4e692ec37814a8206c4ff6c6ab200d77b7592a17da1d7c01fd070b**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **999**
-- Unique channel IDs: **640**
+- Playlist entries: **998**
+- Unique channel IDs: **638**
 - IDs with multiple streams: **194**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-queue same-ID name variants (review): **0**
-- Cross-queue normalized-name/different-ID groups (review): **3**
+- Cross-queue normalized-name/different-ID groups (review): **2**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **0**
+- IDs with multiple logo references: **1**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **999**
+- Logo references checked: **998**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues: **514**
-- Primary entries missing channel numbers: **1**
+- Primary channel-number sequence issues: **0**
+- Primary entries missing channel numbers: **0**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **14**
+- Category block-order issues: **0**
 - Category registry issues: **0**
-- Alphabetical ordering issues: **3**
+- Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **8**
 - Embedded Xtream-style credential paths (redacted): **0**
@@ -62,7 +62,6 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 No same-ID label variants found across groups.
 
 - Same normalized name: Discovery Channel (India) [discoverychannel.in@hd] (Documentary & Wildlife); Discovery Channel (India) [discoverychannel.in@sd] (Documentary & Wildlife)
-- Same normalized name: G TV [gazitv.bd] (Backup); G TV [gazitv.bd] (Bangladesh); Gazi TV [gazitv.bd@sd] (New Backups)
 - Same normalized name: Travelxp [travelxp.in@4khdr] (New Backups); Travelxp [travelxp.in@hd] (New Channels)
 
 ## Duplicate IDs
@@ -392,8 +391,9 @@ No same-ID label variants found across groups.
 ### faktmarathi.in@sd (2 streams)
 - Fakt Marathi — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8
 - Fakt Marathi — Backup — https://cdn.pishow.tv/ott/live/10002/master.m3u8
-### gazitv.bd (5 streams)
+### gazitv.bd (6 streams)
 - G TV — Bangladesh — http://103.135.253.32:8080/Gazi-TV/index.m3u8
+- G TV — New Backups — http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
 - G TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8
 - G TV — Backup — https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8
 - G TV — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/playlist.m3u8
@@ -731,8 +731,8 @@ No same-ID label variants found across groups.
 - SRK — Bangladesh — https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8
 - SRK — Backup — https://srktv.net/srktvhls/cdnlive_srktv.m3u8
 ### star.jalsha.in (2 streams)
-- Star Jalsha — Backup — http://103.135.253.32:8080/STAR-JALSHA-HD/index.m3u8
 - Star Jalsha — Indian Bangla — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
+- Star Jalsha — Backup — http://103.135.253.32:8080/STAR-JALSHA-HD/index.m3u8
 ### star.jalsha.movies.in (2 streams)
 - Jalsha Movies — Indian Bangla — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
 - Jalsha Movies — Backup — http://103.135.253.32:8080/Jalsha_movies-HD/index.m3u8
@@ -829,56 +829,7 @@ None.
 
 ## Primary Channel-Number Sequence
 
-- **Sun Bangla** — expected channel number 84, found 85
-- **Tara TV** — expected channel number 85, found 86
-- **U Bangla** — expected channel number 86, found 87
-- **ZB Cinema** — expected channel number 87, found 88
-- **ZB Music** — expected channel number 88, found 89
-- **Zee 24 Ghanta** — expected channel number 89, found 90
-- **Zee Bangla** — expected channel number 90, found 91
-- **Zodiak TV** — expected channel number 91, found 92
-- **&pictures** — expected channel number 92, found 93
-- **Asianet Movies** — expected channel number 93, found 94
-- **B4U Bhojpuri Plus** — expected channel number 94, found 95
-- **B4U Kadak** — expected channel number 95, found 96
-- **B4U Movies** — expected channel number 96, found 97
-- **Bhojpuri Cinema** — expected channel number 97, found 98
-- **Bollygold** — expected channel number 98, found 99
-- **Chhaya Chitram Telugu** — expected channel number 99, found 100
-- **Chithiram** — expected channel number 100, found 101
-- **Colors Cineplex [UK]** — expected channel number 101, found 102
-- **Ekamra Cinema** — expected channel number 102, found 103
-- **Epic Bhojpuri** — expected channel number 103, found 104
-- **Epic Bhojpuri Digital** — expected channel number 104, found 105
-- **ETV Cinema** — expected channel number 105, found 106
-- **Goldmines** — expected channel number 106, found 107
-- **Goldmines 2** — expected channel number 107, found 108
-- **Goldmines Action** — expected channel number 108, found 109
-- **Goldmines Bollywood** — expected channel number 109, found 110
-- **Goldmines Movies** — expected channel number 110, found 111
-- **Hindi Movie Classic 24** — expected channel number 111, found 112
-- **India Talkies** — expected channel number 112, found 113
-- **Indywood TV** — expected channel number 113, found 114
-- **K Cine** — expected channel number 114, found 115
-- **Kairali We** — expected channel number 115, found 116
-- **Maha Movie** — expected channel number 116, found 117
-- **Mango** — expected channel number 117, found 118
-- **Manoranjan Movies** — expected channel number 118, found 119
-- **MBC Bollywood** — expected channel number 119, found 120
-- **MH One Movies** — expected channel number 120, found 121
-- **Movie Punjab** — expected channel number 121, found 122
-- **Movies Now** — expected channel number 122, found 123
-- **Namma Bangalore** — expected channel number 123, found 124
-- **NH BollyFlix** — expected channel number 124, found 125
-- **NH Tamil Gold** — expected channel number 125, found 126
-- **Oscar Movies Bhojpuri** — expected channel number 126, found 127
-- **Pitaara Comedy** — expected channel number 127, found 128
-- **Pitaara TV** — expected channel number 128, found 129
-- **Pocket Films** — expected channel number 129, found 130
-- **Pravasi Channel** — expected channel number 130, found 131
-- **Public Movies** — expected channel number 131, found 132
-- **Raj Digital Plus** — expected channel number 132, found 133
-- **Roja Movies** — expected channel number 133, found 134
+Contiguous numbering verified: 1–596.
 
 ## Malformed EXTINF Entries
 
@@ -886,23 +837,8 @@ None.
 
 ## Ordering
 
-- category block **Indian Bangla** — out of canonical block order
-- category block **Indian Movies** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Entertainment** — out of canonical block order
-- category block **Pakistani** — out of canonical block order
-- category block **International** — out of canonical block order
-- category block **Documentary & Wildlife** — out of canonical block order
-- category block **Kids** — out of canonical block order
-- category block **Religious** — out of canonical block order
-- category block **Sports** — out of canonical block order
-- category block **Review** — out of canonical block order
-- category block **New Channels** — out of canonical block order
-- category block **New Backups** — out of canonical block order
-- category block **Indian Bangla** — out of canonical block order
-- **Indian Bangla** — **Star Jalsha** appears after **Zodiak TV**
-- **Indian Bangla** — **Star Jalsha** appears after **Zodiak TV**
-- **Indian Bangla** — **Star Jalsha** appears after **Zodiak TV**
+Category block order: OK.
+Primary-category alphabetical/channel-number order: OK.
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
 ## Suspicious URLs
@@ -926,7 +862,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **999**
+- Healthy/local references: **998**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues

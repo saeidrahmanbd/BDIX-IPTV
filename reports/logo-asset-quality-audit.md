@@ -1,24 +1,24 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-08T18:04:46+00:00**
+Generated: **2026-11-09T00:02:36+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **dee4c0905162325bb433379bae254831ad1834640807c7670b213f343caec9f3**
-- International-Playlist.m3u SHA-256: **6cfdbccaea7a89afdfd09ef4ff8c5601e3dc03f6abce6353851dcbfa914a1f21**
+- IPTV-Playlist.m3u SHA-256: **a02d892fda4e692ec37814a8206c4ff6c6ab200d77b7592a17da1d7c01fd070b**
+- International-Playlist.m3u SHA-256: **78f1aa33f238b6584576ea03b006d78132bd54bbafb7f665f62da461309aa5e0**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **695**
-- Playlist references whose asset stem differs from the normalized channel name: **1321**
-- Unreferenced files immediately inside logos/: **1430** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1320**
+- Unreferenced files immediately inside logos/: **1431** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -1030,7 +1030,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Waseb TV | waseb-tv.png | Pakistani |
 | IPTV-Playlist.m3u | AMC Thrillers | amc-triller.png | International |
 | IPTV-Playlist.m3u | Bang Bang TV | bang-bang-tv.png | International |
-| IPTV-Playlist.m3u | Baraza Music TV | baraza-music-tv.png | International |
 | IPTV-Playlist.m3u | CMC TV | cmc-tv.png | International |
 | IPTV-Playlist.m3u | Dance TV | dance-tv.png | International |
 | IPTV-Playlist.m3u | iFilm English | ifilm-english-s-e5f0438e73.png | International |
@@ -1111,7 +1110,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Green TV | repaired-green-tv-d4fdf1175a.png | Review |
 | IPTV-Playlist.m3u | Star Gold Select | repaired-star-gold-select-aa253ac6d3.png | Review |
 | IPTV-Playlist.m3u | Disha TV | disha-tv.png | New Channels |
-| IPTV-Playlist.m3u | Disney Channel (India) | disney-channel-india.png | New Channels |
+| IPTV-Playlist.m3u | Disney Channel India | disney-channel-india.png | New Channels |
 | IPTV-Playlist.m3u | Epic TV Digital | epic-tv-digital.png | New Channels |
 | IPTV-Playlist.m3u | Madani Channel Bangla | madani-channel-bangla.png | New Channels |
 | IPTV-Playlist.m3u | Mango Mobile TV | mango-mobile-tv.png | New Channels |
@@ -1122,7 +1121,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Vokta TV | vokta-tv.png | New Channels |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | New Backups |
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | New Backups |
-| IPTV-Playlist.m3u | Gazi TV | gazi-tv.png | New Backups |
+| IPTV-Playlist.m3u | G TV | gazi-tv.png | New Backups |
 | IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | New Backups |
 | IPTV-Playlist.m3u | Movies Now | movies-now-hd.png | New Backups |
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | New Backups |
