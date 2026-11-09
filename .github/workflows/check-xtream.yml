@@ -39,6 +39,7 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           import json, os, re, time, urllib.error, urllib.parse, urllib.request
+          import xml.etree.ElementTree as ET
           from collections import Counter
 
           USER = os.environ["XTREAM_USERNAME"]
@@ -120,12 +121,36 @@ jobs:
 
               xml_url = f"https://{host}/xmltv.php?{urllib.parse.urlencode(CREDS)}"
               xml_req = urllib.request.Request(xml_url, headers=HEADERS)
-              with open_retry(xml_req) as response:
-                  sample = response.read(512).lstrip()
+              with open_retry(xml_req, timeout=90) as response:
                   content_type = response.headers.get("Content-Type", "").lower()
-                  if response.status != 200 or "xml" not in content_type or not (sample.startswith(b"<?xml") or sample.startswith(b"<tv")):
-                      raise SystemExit(f"{host}: xmltv.php did not return XMLTV content")
-              print(f"{host} xmltv.php: HTTP=200 content-type=XML")
+                  if response.status != 200 or "xml" not in content_type:
+                      raise SystemExit(f"{host}: xmltv.php did not return an XML content type")
+                  root_tag = None
+                  channel_count = 0
+                  programme_count = 0
+                  try:
+                      for event, element in ET.iterparse(response, events=("start", "end")):
+                          tag = element.tag.rsplit("}", 1)[-1].lower()
+                          if event == "start" and root_tag is None:
+                              root_tag = tag
+                              if root_tag != "tv":
+                                  raise SystemExit(f"{host}: xmltv.php root element is {root_tag!r}, expected 'tv'")
+                          elif event == "end":
+                              if tag == "channel":
+                                  channel_count += 1
+                              elif tag == "programme":
+                                  programme_count += 1
+                              element.clear()
+                  except ET.ParseError as error:
+                      raise SystemExit(f"{host}: xmltv.php returned malformed XML: {error}") from error
+                  if root_tag != "tv" or channel_count == 0 or programme_count == 0:
+                      raise SystemExit(
+                          f"{host}: XMLTV is empty or incomplete (channels={channel_count}, programmes={programme_count})"
+                      )
+              print(
+                  f"{host} xmltv.php: HTTP=200 XML parsed "
+                  f"channels={channel_count} programmes={programme_count}"
+              )
 
           def playback_probe(host, stream):
               stream_id = stream.get("stream_id")
