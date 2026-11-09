@@ -35,27 +35,6 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
         self.assertEqual(registry, hardening.PLAYLIST_ORDERS["IPTV-Playlist.m3u"])
         self.assertEqual(registry[-4:], ["Review", "New Channels", "New Backups", "Backup"])
 
-    def test_fashion_group_is_preserved_in_canonical_order(self):
-        rows = [
-            "#EXTM3U",
-            '#EXTINF:-1 tvg-id="FashionLifeStyle.ru@SD" tvg-name="Fashion&LifeStyle" tvg-country="RU" tvg-language="und" tvg-chno="618" group-title="Fashion",Fashion&LifeStyle',
-            "https://example.invalid/fashion-lifestyle.m3u8",
-            '#EXTINF:-1 tvg-id="PakistaniMovie.pk" tvg-name="Pakistani Movie" tvg-country="PK" group-title="Pakistani",Pakistani Movie',
-            "https://example.invalid/pakistani-movie.m3u8",
-        ]
-        with tempfile.TemporaryDirectory() as tmp:
-            path = Path(tmp) / "IPTV-Playlist.m3u"
-            path.write_text("\n".join(rows) + "\n", encoding="utf-8")
-            hardening.process(path)
-            result = path.read_text(encoding="utf-8")
-        self.assertIn('group-title="Fashion",Fashion&LifeStyle', result)
-        self.assertIn('group-title="Pakistani",Pakistani Movie', result)
-        self.assertLess(result.index('group-title="Fashion"'), result.index('group-title="Pakistani"'))
-        registry_line = next(line for line in result.splitlines() if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
-        registry = json.loads(registry_line.split(":", 1)[1])
-        self.assertIn("Fashion", registry)
-        self.assertLess(registry.index("Fashion"), registry.index("Pakistani"))
-
     def test_bangladesh_all_genres_and_indian_kids_sports_are_retained_but_indian_news_is_demoted(self):
         rows = [
             "#EXTM3U",

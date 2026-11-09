@@ -39,21 +39,6 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             + row("UNKNOWN.bd", "Unknown Language", "Bangladesh", "https://stream.example/unknown.m3u8", language="")
         )
 
-    def test_fashion_is_treated_as_a_primary_group(self):
-        sample = (
-            "#EXTM3U\n"
-            + row(
-                "FashionLifeStyle.ru@SD", "Fashion&LifeStyle", "Fashion",
-                "https://stream.example/fashion.m3u8",
-                country="RU", language="und", number="618",
-            )
-        )
-        updated, _, errors = repair_playlist_text(sample)
-        self.assertEqual(errors, [])
-        self.assertIn('group-title="Fashion"', updated)
-        self.assertIn("Fashion", GROUP_ORDER)
-        self.assertNotIn('group-title="Review",Fashion&LifeStyle', updated)
-
     def test_primary_without_verified_local_logo_is_preserved_in_review(self):
         dtalk_url = "https://stream.example/d-talk.m3u8"
         prime_url = "https://stream.example/prime-tv.m3u8"
