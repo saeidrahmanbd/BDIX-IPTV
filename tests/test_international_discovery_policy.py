@@ -435,14 +435,14 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             "tvg-id": "CinemaWorld.us", "tvg-content": "Movies",
         }
         valid_music = {
-            "group-title": "Pakistani", "tvg-country": "PK",
-            "tvg-id": "8XM.pk", "tvg-content": "Music",
+            "group-title": "United Kingdom", "tvg-country": "GB",
+            "tvg-id": "WorldMusic.uk", "tvg-content": "Music",
         }
         self.assertEqual(
             intl_validator.foreign_movie_music_error(valid_movie, "Cinema World", "US"), ""
         )
         self.assertEqual(
-            intl_validator.foreign_movie_music_error(valid_music, "8XM", "PK"), ""
+            intl_validator.foreign_movie_music_error(valid_music, "World Music", "GB"), ""
         )
 
     def test_non_exempt_foreign_channels_in_generic_genre_groups_are_rejected(self):
@@ -500,7 +500,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             intl_validator.genre_group_policy_error(attrs, "Peace TV", "Religious"), ""
         )
 
-    def test_non_exempt_foreign_primary_country_groups_reject_missing_or_conflicting_movie_music_tags(self):
+    def test_pk_is_exempt_while_non_exempt_foreign_primary_country_groups_require_tags(self):
         missing = {
             "group-title": "Pakistani", "tvg-country": "PK", "tvg-id": "HumTV.pk",
         }
@@ -514,6 +514,10 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         }
         self.assertEqual(
             intl_validator.foreign_movie_music_error(missing, "Hum TV", "PK"), ""
+        )
+        self.assertEqual(
+            reorg.classify({"tvg-country": "PK"}, "Pakistan News", "International", "PK"),
+            ("Pakistani", None, None),
         )
         self.assertNotEqual(
             intl_validator.foreign_movie_music_error(conflicting, "Cinema World", "US"), ""
@@ -558,6 +562,10 @@ class LegacyInternationalRepairPolicyTests(unittest.TestCase):
         self.assertEqual(
             legacy_repair.classify_primary_group(info("Channel 24", "BD"), "International"),
             "Bangladesh",
+        )
+        self.assertEqual(
+            legacy_repair.classify_primary_group(info("Hum TV", "PK"), "International"),
+            "Pakistani",
         )
 
 
