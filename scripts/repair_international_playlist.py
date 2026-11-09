@@ -230,6 +230,7 @@ def classify_primary_group(info,current):
  a=attrs(info); name=name_of(info); country=a.get('tvg-country','ZZ').upper()
  language=(a.get('tvg-language','und').split(';')[0] or 'und').lower()
  n=norm(name); current_key=str(current or '').casefold()
+ if current_key=='adult':return 'Adult'
  if current_key=='international movies':return 'International Movies'
  if current_key=='international music':return 'International Music'
  movie_re=r'\b(?:movie|movies|cinema|film|films|bollywood|aflam|moviesphere)\b'
