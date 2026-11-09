@@ -403,7 +403,8 @@ def final_mode(playlist, report, baseline, mode):
             )
             if target is None:
                 policy_issues.append(f"country/content policy: {e['name']} ({reason or 'not eligible'})")
-            elif policy_country not in {"BD", "IN"}:
+            # Pakistan is unrestricted by genre; only its primary-group threshold applies.
+            elif policy_country not in {"BD", "IN", "PK"}:
                 content = attrs.get("tvg-content", "").strip().casefold()
                 if content not in {"movie", "movies", "film", "films", "music", "musics"}:
                     policy_issues.append(f"non-Bangladesh/India entry lacks Movie/Music tag: {e['name']}")
