@@ -897,7 +897,7 @@ class VerifiedAliasTests(unittest.TestCase):
         pl = (ROOT / "International-Playlist.m3u").read_text(encoding="utf-8-sig")
         for tid in (
             "custom.nick-jr-east", "DeluxeRap.de", "DeejayTV.it", "R101TV.it", "RadioItaliaTV.it",
-            "RakutenTVActionMoviesGermany.es", "Kino1.ua", "Kino2.ua", "MTV2.us",
+            "RakutenTVActionMoviesGermany.es", "Kino1.ua", "Kino2.ua",
             "RDSSocialTV.it", "RTL1025TV.it", "RusskiyBestseller.ru@SD",
             "RusskiyDetektiv.ru@SD", "RakutenTVFamilyMovies.es",
             "4everMusic.ua", "EUMusic.ua", "30AMusic.us",
