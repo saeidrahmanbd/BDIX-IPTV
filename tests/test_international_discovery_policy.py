@@ -109,12 +109,13 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNone(self.classify("Cinema World", group, "US", "CinemaWorld.us")[0])
                 self.assertIsNone(self.classify("World Music", group, "US", "WorldMusic.us")[0])
 
-    def test_bangladesh_news_is_allowed_but_indian_and_foreign_news_are_rejected(self):
+    def test_bangladesh_and_pakistan_news_are_allowed_but_indian_and_other_foreign_news_are_rejected(self):
         self.assertEqual(self.classify("Channel 24", "News", "BD", "Channel24.bd")[0], "Bangladesh")
         self.assertEqual(self.classify("Somoy TV", "Entertainment", "BD", "SomoyTV.bd")[0], "Bangladesh")
-        for country, tvg_id in (("IN", "WorldNews.in"), ("PK", "WorldNews.pk"), ("US", "WorldNews.us"), (None, "WorldNews.us")):
+        for country, tvg_id in (("IN", "WorldNews.in"), ("US", "WorldNews.us"), (None, "WorldNews.us")):
             with self.subTest(country=country):
                 self.assertIsNone(self.classify("World News", "News", country, tvg_id)[0])
+        self.assertEqual(self.classify("Pakistan News", "News", "PK", "PakistanNews.pk")[0], "Pakistani")
         self.assertIsNone(self.classify("CNBC World", "Business", "SG", "CNBCWorld.sg")[0])
 
     def test_indian_policy_matches_iptv_playlist_exclusions_and_keeps_sports(self):
@@ -231,7 +232,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertIsNone(self.classify("Hope Channel PROYECTO JA", "Music", "US", "HopeChannel.us")[0])
         self.assertIsNone(self.classify("Canal Cine Dios", "Movies", "CO", "CanalCineDios.co")[0])
 
-    def test_generic_genre_policy_has_bangladesh_and_india_exceptions(self):
+    def test_generic_genre_policy_has_bangladesh_india_and_pakistan_exceptions(self):
         for name, group, tvg_id in (
             ("Entertainment World", "General", "EntertainmentWorld.bd"),
             ("World Channel", "", "WorldChannel.bd"),
@@ -244,10 +245,48 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         ):
             with self.subTest(country="IN", name=name):
                 self.assertEqual(self.classify(name, group, "IN", tvg_id)[0], "Indian Entertainment")
-        for country, tvg_id in (("PK", "EntertainmentWorld.pk"), ("US", "EntertainmentWorld.us"), (None, "EntertainmentWorld.us")):
+        for name, group, tvg_id in (
+            ("Entertainment World", "General", "EntertainmentWorld.pk"),
+            ("World Channel", "", "WorldChannel.pk"),
+            ("Pakistan News", "News", "PakistanNews.pk"),
+            ("ARY QTV", "Religious", "ARYQTV.pk"),
+            ("Pakistan Sports", "Sports", "PakistanSports.pk"),
+        ):
+            with self.subTest(country="PK", name=name):
+                self.assertEqual(self.classify(name, group, "PK", tvg_id)[0], "Pakistani")
+        for country, tvg_id in (("US", "EntertainmentWorld.us"), (None, "EntertainmentWorld.us")):
             with self.subTest(country=country):
                 self.assertIsNone(self.classify("Entertainment World", "General", country, tvg_id)[0])
                 self.assertIsNone(self.classify("World Channel", "", country, tvg_id)[0])
+
+    def test_backup_queue_policy_does_not_require_movie_music_for_bd_in_pk(self):
+        cases = [
+            ("Colors Rishtey", "General", "IN", "ColorsRishtey.in", "Indian Entertainment"),
+            ("DD Sports", "Sports", "IN", "DDSports.in", "Sports"),
+            ("Madani TV", "Religious", "BD", "MadaniTV.bd", "Bangladesh"),
+            ("Hum TV", "General", "PK", "HumTV.pk", "Pakistani"),
+            ("ARY News", "News", "PK", "ARYNews.pk", "Pakistani"),
+        ]
+        for name, group, country, tvg_id, expected in cases:
+            attrs = {
+                "group-title": "New Backups",
+                "tvg-country": country,
+                "tvg-id": tvg_id,
+            }
+            target, reason, verified, genre = discovery.queue_policy(attrs, name)
+            with self.subTest(name=name, country=country):
+                self.assertEqual((target, reason, verified), (expected, None, country))
+                self.assertEqual(genre, "")
+
+        foreign = {
+            "group-title": "New Backups",
+            "tvg-country": "US",
+            "tvg-id": "GeneralChannel.us",
+        }
+        target, reason, country, _genre = discovery.queue_policy(foreign, "General Channel")
+        self.assertIsNone(target)
+        self.assertEqual(country, "US")
+        self.assertIn("Movies or Music", reason)
 
     def test_five_channel_country_threshold_is_retained(self):
         self.assertEqual(discovery.COUNTRY_THRESHOLD, 5)
@@ -261,7 +300,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(discovery.primary_target("International Movies", "AT", set()), "International")
         self.assertEqual(discovery.primary_target("International Music", "DE", set()), "International")
         self.assertEqual(discovery.primary_target("International Movies", "BD", set()), "Bangladesh")
-        self.assertEqual(discovery.primary_target("International Music", "PK", set()), "Pakistani")
+        self.assertEqual(discovery.primary_target("Pakistani", "PK", set()), "Pakistani")
         self.assertEqual(discovery.primary_target("International Movies", "IN", set()), "Indian Movies")
         self.assertEqual(discovery.primary_target("International Music", "IN", set()), "Indian Music")
 
@@ -276,6 +315,16 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             music, "Macedonian Music TV", set()
         )
         self.assertEqual((target, reason, genre), ("International", None, "Music"))
+
+        pakistan = {
+            "group-title": "International",
+            "tvg-country": "PK",
+            "tvg-id": "HumTV.pk",
+        }
+        target, reason, genre = discovery.existing_international_target(
+            pakistan, "Hum TV", set()
+        )
+        self.assertEqual((target, reason, genre), ("Pakistani", None, ""))
 
         target, reason, genre = discovery.existing_international_target(
             music, "Macedonian Music TV", {"MK"}
@@ -394,11 +443,10 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             intl_validator.foreign_movie_music_error(valid_music, "8XM", "PK"), ""
         )
 
-    def test_foreign_channels_in_generic_genre_groups_are_rejected(self):
+    def test_non_exempt_foreign_channels_in_generic_genre_groups_are_rejected(self):
         examples = [
             ("Documentary & Wildlife", "US", "4K Travel", "custom.4k.travel"),
             ("Kids", "PL", "4 Fun Kids", "4FunKids.pl"),
-            ("Religious", "PK", "ARY Qtv", "ARYQTV.pk"),
             ("Sports", "TR", "A Spor", "ASpor.tr"),
         ]
         for group, country, name, tvg_id in examples:
@@ -412,13 +460,22 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
                 self.assertNotEqual(
                     intl_validator.genre_group_policy_error(attrs, name, group), ""
                 )
+        pakistani = {
+            "group-title": "Religious",
+            "tvg-country": "PK",
+            "tvg-id": "ARYQTV.pk",
+        }
+        self.assertEqual(intl_validator.genre_group_policy_error(pakistani, "ARY Qtv", "Religious"), "")
 
-    def test_bangladesh_and_allowed_indian_genre_groups_are_preserved(self):
+    def test_bangladesh_indian_and_pakistani_genre_exceptions_are_preserved(self):
         examples = [
             ("Religious", "BD", "Madani TV", "MadaniTV.bd"),
             ("Documentary & Wildlife", "BD", "Discovery Bangla", "DiscoveryBangla.bd"),
             ("Kids", "IN", "Pogo", "Pogo.in"),
             ("Sports", "IN", "DD Sports", "DDSports.in"),
+            ("Religious", "PK", "ARY Qtv", "ARYQTV.pk"),
+            ("Kids", "PK", "Cartoon Pakistan", "CartoonPakistan.pk"),
+            ("Sports", "PK", "Pakistan Sports", "PakistanSports.pk"),
         ]
         for group, country, name, tvg_id in examples:
             with self.subTest(group=group, country=country, name=name):
@@ -441,7 +498,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             intl_validator.genre_group_policy_error(attrs, "Peace TV", "Religious"), ""
         )
 
-    def test_foreign_primary_country_groups_reject_missing_or_conflicting_movie_music_tags(self):
+    def test_non_exempt_foreign_primary_country_groups_reject_missing_or_conflicting_movie_music_tags(self):
         missing = {
             "group-title": "Pakistani", "tvg-country": "PK", "tvg-id": "HumTV.pk",
         }
@@ -453,7 +510,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             "group-title": "United Kingdom", "tvg-country": "GB",
             "tvg-id": "WorldNews.uk", "tvg-content": "Movies",
         }
-        self.assertNotEqual(
+        self.assertEqual(
             intl_validator.foreign_movie_music_error(missing, "Hum TV", "PK"), ""
         )
         self.assertNotEqual(
