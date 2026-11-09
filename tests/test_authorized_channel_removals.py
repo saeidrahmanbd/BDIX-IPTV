@@ -432,11 +432,84 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             ("Star Sports Select 1", "http://103.135.253.32:8080/STAR-SPORTS-SELECT-1/index.m3u8", "Sports"),
             ("Channel 52", "http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
             ("Animal Planet", "https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8", "Documentary & Wildlife"),
+            ("JA TV", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/jtvbd12.stream/tracks-v1a1/mono.m3u8", "Review"),
+            ("DD Yadagiri", "https://fta.ektv.in/live/678/master.m3u8", "Review"),
+            ("G TV", "https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8", "Review"),
         ]
         for name, url, target in cases:
             info = channel(name, "Backup", url).splitlines()[0]
             self.assertEqual(restore.authorized_backup_migration_target(info, url), target, name)
             self.assertIsNone(restore.authorized_backup_migration_target(info, url + "?changed=1"), name)
+
+    def test_primary_to_review_migration_requires_exact_identity_url_and_source(self):
+        cases = [
+            ("JA TV", "https://dish.porosh.com.bd/hls/jtvnews.m3u8", "Bangladesh"),
+            ("KidDo MATIX", "https://cc-le0kohm4qt3mk.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-le0kohm4qt3mk/OTM/OTM_KiddoMatix-SCTE_SAMSUNG/playlist.m3u8", "Kids"),
+        ]
+        for name, url, source in cases:
+            info = channel(name, "Review", url).splitlines()[0]
+            self.assertTrue(restore.is_authorized_primary_to_review_migration(info, url, source), name)
+            self.assertFalse(restore.is_authorized_primary_to_review_migration(info, url + "?changed=1", source), name)
+            self.assertFalse(restore.is_authorized_primary_to_review_migration(info, url, "International"), name)
+
+    def test_restore_keeps_only_exact_failed_backup_migrations_in_review(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            snapshot = root / "protected.m3u"
+            baseline = root / "baseline.json"
+            failed_url = "https://fta.ektv.in/live/678/master.m3u8"
+            safe_url = "https://example.invalid/safe-backup.m3u8"
+            old_failed = channel("DD Yadagiri", "Backup", failed_url).splitlines()
+            safe_backup = channel("Safe Backup", "Backup", safe_url).splitlines()
+            current_failed = channel("DD Yadagiri", "Review", failed_url).splitlines()
+            current_safe = channel("Safe Backup", "Backup", safe_url).splitlines()
+            playlist.write_text(
+                "#EXTM3U\\n" + "\\n".join(current_failed + current_safe) + "\\n",
+                encoding="utf-8",
+            )
+            snapshot.write_text("\\n".join(old_failed + safe_backup) + "\\n", encoding="utf-8")
+            baseline.write_text(json.dumps([
+                {"info": old_failed[0], "url": failed_url, "group": "Backup", "stable": failed_url, "name": "DD Yadagiri"},
+                {"info": safe_backup[0], "url": safe_url, "group": "Backup", "stable": safe_url, "name": "Safe Backup"},
+            ]), encoding="utf-8")
+            with (
+                patch.object(restore, "PLAYLIST", playlist),
+                patch.object(restore, "SNAPSHOT", snapshot),
+                patch.object(restore, "BASELINE", baseline),
+                redirect_stdout(io.StringIO()),
+            ):
+                restore.restore()
+            result = playlist.read_text(encoding="utf-8")
+            self.assertEqual(result.count(failed_url), 1)
+            self.assertEqual(result.count(safe_url), 1)
+            self.assertIn('tvg-name="DD Yadagiri" group-title="Review"', result)
+            self.assertIn('tvg-name="Safe Backup" group-title="Backup"', result)
+
+    def test_restore_preserves_exact_primary_to_review_quarantine(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            snapshot = root / "protected.m3u"
+            baseline = root / "baseline.json"
+            url = "https://dish.porosh.com.bd/hls/jtvnews.m3u8"
+            original = channel("JA TV", "Bangladesh", url).splitlines()
+            current = channel("JA TV", "Review", url).splitlines()
+            playlist.write_text("#EXTM3U\\n" + "\\n".join(current) + "\\n", encoding="utf-8")
+            snapshot.write_text("", encoding="utf-8")
+            baseline.write_text(json.dumps([
+                {"info": original[0], "url": url, "group": "Bangladesh", "stable": url, "name": "JA TV"},
+            ]), encoding="utf-8")
+            with (
+                patch.object(restore, "PLAYLIST", playlist),
+                patch.object(restore, "SNAPSHOT", snapshot),
+                patch.object(restore, "BASELINE", baseline),
+                redirect_stdout(io.StringIO()),
+            ):
+                restore.restore()
+            result = playlist.read_text(encoding="utf-8")
+            self.assertEqual(result.count(url), 1)
+            self.assertIn('tvg-name="JA TV" group-title="Review"', result)
 
     def test_restore_keeps_exactly_authorized_backup_migration_and_other_queue(self):
         with tempfile.TemporaryDirectory() as tmp:
