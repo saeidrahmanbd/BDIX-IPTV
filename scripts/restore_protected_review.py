@@ -2,8 +2,8 @@
 """Restore protected review queues while allowing narrowly authorized migrations.
 
 Backup and Not Playing records are restored from the snapshot, except for exact,
-allowlisted channel removals and exact-URL Backup-to-primary migrations. Every other
-protected stream and review entry remains protected.
+allowlisted channel removals and exact-URL Backup migrations. Exact primary-to-Review
+quarantines are also retained; every other protected stream remains protected.
 """
 from __future__ import annotations
 
@@ -74,6 +74,10 @@ AUTHORIZED_BACKUP_MIGRATIONS = {
     "channel52": ("http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
     # Only verified, reachable Indian feed; all old Review alternatives remain quarantined.
     "animalplanet": ("https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8", "Documentary & Wildlife"),
+    # Repeated non-geographic failures: keep the exact failed alternates in Review.
+    "jatv": ("https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/jtvbd12.stream/tracks-v1a1/mono.m3u8", "Review"),
+    "ddyadagiri": ("https://fta.ektv.in/live/678/master.m3u8", "Review"),
+    "gtv": ("https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8", "Review"),
 }
 AUTHORIZED_MIGRATION_SOURCE_GROUPS = {
     "7xpunjabi": "Backup",
@@ -83,6 +87,9 @@ AUTHORIZED_MIGRATION_SOURCE_GROUPS = {
     "starsportsselect1": "Backup",
     "channel52": "Not Playing",
     "animalplanet": "Backup",
+    "jatv": "Backup",
+    "ddyadagiri": "Backup",
+    "gtv": "Backup",
 }
 
 # An explicitly reviewed active-to-Backup move. This is intentionally narrow:
@@ -93,6 +100,29 @@ AUTHORIZED_PRIMARY_TO_BACKUP_MIGRATIONS = {
         "International",
     ),
 }
+
+AUTHORIZED_PRIMARY_TO_REVIEW_MIGRATIONS = {
+    # Repeated 404/504 failures confirmed in the latest health-history snapshot.
+    "jatv": ("https://dish.porosh.com.bd/hls/jtvnews.m3u8", "Bangladesh"),
+    "kiddomatix": ("https://cc-le0kohm4qt3mk.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-le0kohm4qt3mk/OTM/OTM_KiddoMatix-SCTE_SAMSUNG/playlist.m3u8", "Kids"),
+}
+
+
+def is_authorized_primary_to_review_migration(
+    info: str, url: str, original_group: str
+) -> bool:
+    """Allow only a reviewed exact-URL quarantine from a primary group to Review."""
+    key = normalize_name(display_name(info))
+    rule = AUTHORIZED_PRIMARY_TO_REVIEW_MIGRATIONS.get(key)
+    if not rule:
+        return False
+    expected_url, expected_source_group = rule
+    return (
+        group_of(info) == "Review"
+        and original_group.strip() == expected_source_group
+        and stream_url_key(url) == stream_url_key(expected_url)
+    )
+
 
 
 def is_authorized_primary_to_backup_migration(
@@ -528,8 +558,9 @@ def restore() -> None:
                 return
 
         if original and current_group in PROTECTED and original["group"] not in PROTECTED:
-            if not is_authorized_primary_to_backup_migration(
-                record[0], url, original["group"]
+            if not (
+                is_authorized_primary_to_backup_migration(record[0], url, original["group"])
+                or is_authorized_primary_to_review_migration(record[0], url, original["group"])
             ):
                 record[0] = original["info"]
                 current_group = group_of(record[0])
