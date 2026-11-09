@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-09T10:32:02+00:00**
+Generated: **2026-11-09T10:42:45+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **0680bfb8102b091d27c93ed5c2b58c175616473b7d81543b8dfdfcb0f1fa6b54**
-- International-Playlist.m3u SHA-256: **89bfb16e2da6a658d45bd5fa8d6fead9267a45572b08ad94c0ea064abff5e789**
+- International-Playlist.m3u SHA-256: **0b7ad38c19aeedcba6d5b239ca9a83747bc8ae4c21ec6983a355e214665ebde1**
 
 ## Summary
 
@@ -1403,7 +1403,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Rongeen TV | rongeen-tv.png | Indian Entertainment |
 | International-Playlist.m3u | SADA TV | sada-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Safari TV | safari-tv.png | Indian Entertainment |
-| International-Playlist.m3u | Sana TV | sana-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Shemaroo TV | shemaroo-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Shiksha TV | shiksha-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Sirippoli TV | sirippoli-tv.png | Indian Entertainment |
@@ -1626,7 +1625,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Tequila Music TV | tequila-music-tv-f31787c376.png | Romania |
 | International-Playlist.m3u | Traditional TV | traditional-tv-2d093e74ee.png | Romania |
 | International-Playlist.m3u | TV AS | tv-as-81959ea5ae.webp | Romania |
-| International-Playlist.m3u | Blokbaster | blokbaster-hd-1080p.png | Russia |
 | International-Playlist.m3u | Bollywood | bollywood-hd-576p.png | Russia |
 | International-Playlist.m3u | Bollywood HD Russia | bollywood-hd-russia-576p.png | Russia |
 | International-Playlist.m3u | City Eden KinoAsia [ ] | city-eden-kinoasia-not-24-7.png | Russia |
@@ -1873,6 +1871,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Apna Channel | apna-channel.png | Review |
 | International-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Review |
 | International-Playlist.m3u | Better Life Nature Channel | better-life-nature-channel-296e05e978.png | Review |
+| International-Playlist.m3u | Blokbaster | blokbaster-hd-1080p.png | Review |
 | International-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Review |
 | International-Playlist.m3u | Bravo Farsi TV | bravo-farsi-tv-360p.jpg | Review |
 | International-Playlist.m3u | BTV News | repaired-btv-news-0646349a43.png | Review |
@@ -1948,6 +1947,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Rewind TV | rewind-tv-401b1f9957.png | Review |
 | International-Playlist.m3u | SAB TV | sab-tv.png | Review |
 | International-Playlist.m3u | Safari TV | safari-tv.png | Review |
+| International-Playlist.m3u | Sana TV | sana-tv.png | Review |
 | International-Playlist.m3u | Somoy TV | somoy-tv.png | Review |
 | International-Playlist.m3u | SONY AATH kids | sony-aath.png | Review |
 | International-Playlist.m3u | Sooriyan TV | sooriyan-tv.png | Review |

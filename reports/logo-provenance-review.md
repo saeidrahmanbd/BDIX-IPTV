@@ -1,6 +1,6 @@
 # Logo Provenance Review
 
-Generated: **2026-11-09T10:32:42+00:00**
+Generated: **2026-11-09T10:43:24+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
@@ -8,7 +8,7 @@ Unattributed logos are **not provenance-passed**; they remain pending review. Th
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **0680bfb8102b091d27c93ed5c2b58c175616473b7d81543b8dfdfcb0f1fa6b54**
-- International-Playlist.m3u SHA-256: **89bfb16e2da6a658d45bd5fa8d6fead9267a45572b08ad94c0ea064abff5e789**
+- International-Playlist.m3u SHA-256: **0b7ad38c19aeedcba6d5b239ca9a83747bc8ae4c21ec6983a355e214665ebde1**
 
 ## Provenance status by playlist
 
