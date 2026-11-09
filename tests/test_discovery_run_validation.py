@@ -302,5 +302,49 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
             self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
 
+
+    def test_final_validation_accepts_promoted_foreign_country_group_rows(self):
+        import json
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "logos").mkdir()
+            for i in range(1, 6):
+                (root / "logos" / f"albania-movie-{i}.svg").write_text("<svg/>", encoding="utf-8")
+            playlist = root / "International-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Albania", "Review", "New Channels", "New Backups", "Backup"]
+            rows = []
+            for i in range(1, 6):
+                rows.append(
+                    f'#EXTINF:-1 tvg-id="Movie{i}.al" tvg-name="Albania Movie {i}" tvg-country="AL" '
+                    f'tvg-logo="logos/albania-movie-{i}.svg" tvg-content="Movies" group-title="Albania",Albania Movie {i}\n'
+                    f'https://example.org/albania-movie-{i}.m3u8'
+                )
+            content = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry) + "\n" + "\n".join(rows) + "\n"
+            playlist.write_text(content, encoding="utf-8")
+            baseline.write_text("#EXTM3U\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            old_cwd = Path.cwd()
+            os.chdir(root)
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "international")
+            finally:
+                os.chdir(old_cwd)
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            final_report = report.read_text(encoding="utf-8")
+            self.assertIn("- Validation status: PASS", final_report)
+            self.assertIn("- Geography/content policy issues: 0", final_report)
+
+
 if __name__ == "__main__":
     unittest.main()
