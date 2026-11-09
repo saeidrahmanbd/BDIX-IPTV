@@ -1,27 +1,27 @@
 # Update Report
 
-_Last generated: **2026-11-09 04:17 UTC**_
+_Last generated: **2026-11-09 04:58 UTC**_
 
-Source playlist SHA-256: **e55dc8cf1536db3e5db4794947ea664c267179f08882d87e89517b0eacd5e286**
+Source playlist SHA-256: **0971846e84de0e04e79a2d27a11b6d8df7a8def644acead8f3facd9ecf556bf3**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1000** |
-| Active Channel Identities | **596** |
-| Active Primary Streams | **596** |
-| Bangladesh | **58** |
-| India | **291** |
+| Streams | **989** |
+| Active Channel Identities | **576** |
+| Active Primary Streams | **576** |
+| Bangladesh | **56** |
+| India | **282** |
 | Backup Stream Entries | **324** |
 | IPTV Local Logos | **100.0%** |
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
-| Stream Health Tested | **1000** |
-| Stream Health Failures | **136** |
-| Persistent Failures | **133** |
+| Stream Health Tested | **989** |
+| Stream Health Failures | **135** |
+| Persistent Failures | **130** |
 | Near-Duplicate URL Families | **2** |
-| Audit Blocking Issues | **0** |
-| Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-11-09T04:16:56+00:00** |
+| Audit Blocking Issues | **13** |
+| Pre-Publish Gate | **BLOCK** |
+| Pre-Publish Gate Generated | **2026-11-09T04:58:21+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
@@ -31,18 +31,18 @@ Source playlist SHA-256: **e55dc8cf1536db3e5db4794947ea664c267179f08882d87e89517
 - Cross-queue same-name / different-ID collisions: **2**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
+- Primary entries missing channel numbers: **1**
 - Logo exceptions: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
-- Alphabetical ordering issues: **0**
+- Category block-order issues: **11**
+- Alphabetical ordering issues: **1**
 - Signed/tokenized URLs: **8**
 
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
 - `Backup` stores alternate streams; `Review`, `New Channels`, and `New Backups` are review-only queues and are excluded from Xtream.
-- Pre-publish gate status: **PASS**
+- Pre-publish gate status: **BLOCK**
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## Counting Scope
@@ -62,14 +62,14 @@ Source playlist SHA-256: **e55dc8cf1536db3e5db4794947ea664c267179f08882d87e89517
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-09T04:16:56.277873+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-09T04:58:21.237966+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-09T03:42:12+00:00** | **PENDING — guide missing or freshness not PASS** |
-| Stream health | **2026-11-09T04:17:26+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-09T04:16:56+00:00** | **CURRENT** |
+| Stream health | **2026-11-09T04:58:55+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-09T04:58:21+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
-- Latest entries change: **998 → 1000**
-- Latest health failures: **139 → 136**
+- Latest entries change: **1000 → 989**
+- Latest health failures: **136 → 135**
 
 Historical records are retained in reports/maintenance-history.json.
