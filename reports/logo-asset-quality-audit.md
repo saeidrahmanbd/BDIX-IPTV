@@ -1,31 +1,31 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-09T03:43:43+00:00**
+Generated: **2026-11-09T03:47:43+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **8675200ab8b37acc114ba0d5fc456d80611f2715c3226f08837681133391c6b5**
-- International-Playlist.m3u SHA-256: **77d479da50947b78e831995c97d6eccfbb7af8d6bac6b04e829115c707dbb143**
+- IPTV-Playlist.m3u SHA-256: **934fd544e2d927da61ba8f0366333b122784205ea5d56b3b0178fc1e4e2de601**
+- International-Playlist.m3u SHA-256: **b3ffb22a9cf5daedf00ffb7fbece4b8d3e7107d43fd18e6a1ed482664e1c0430**
 
 ## Summary
 
-- Safe repairs applied this run: **0**
+- Safe repairs applied this run: **1**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
-- Exact-byte duplicate asset clusters: **695**
-- Playlist references whose asset stem differs from the normalized channel name: **1291**
-- Unreferenced files immediately inside logos/: **1470** (not deleted; other tooling or playlists may use them)
+- Exact-byte duplicate asset clusters: **697**
+- Playlist references whose asset stem differs from the normalized channel name: **1300**
+- Unreferenced files immediately inside logos/: **1466** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| mega-extreno-hd-720p.jpg | PNG | JPEG | 320×240 | 320×240 | re-encoded to match extension, re-encoded/compressed |
 
 ## Remaining extension mismatches
 
@@ -549,6 +549,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/kandelatv-480p.jpg, logos/kandelatv-9abf7258b1.jpg
 - logos/international/kino-tv-hd.png, logos/kino-tv-hd.png
 - logos/international/kinopokaz.png, logos/kinopokaz.png, logos/verified-kinopokaz-ad1d4126d2.png
+- logos/international/kinosemja-576p.png, logos/kinosemja-19c5905acc.png
 - logos/international/kinoseriya-1080p.png, logos/kinoseriya-1080p.png
 - logos/international/kral-pop-tv-720p.png, logos/unused/kral-pop-tv-720p-bd49bfe47b.png
 - logos/international/la-kalle-1080p.png, logos/la-kalle-1080p.png
@@ -633,6 +634,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/pluto-tv-western-es.png, logos/international/pluto-tv-western-it.png, logos/international/pluto-tv-western.png
 - logos/international/pluto-tv-westerns-united-states-ca.png, logos/international/pluto-tv-westerns-united-states.png
 - logos/international/pluto-tv-wild-west-dk.png, logos/international/pluto-tv-wild-west-no.png, logos/international/pluto-tv-wild-west.png
+- logos/international/premialnoe-hd-1080p.png, logos/premialnoe-8c61801efd.png
 - logos/international/qmusic.png, logos/qmusic.png
 - logos/international/rakuten-tv-action-movies-austria-720p.png, logos/international/rakuten-tv-action-movies-germany-1080p.png, logos/international/rakuten-tv-action-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-austria-720p.png, logos/international/rakuten-tv-comedy-movies-germany-1080p.png, logos/international/rakuten-tv-comedy-movies-italy-1080p.png, logos/international/rakuten-tv-drama-movies-austria-720p.png, logos/international/rakuten-tv-drama-movies-germany-1080p.png, logos/international/rakuten-tv-family-movies-austria-720p.png, logos/international/rakuten-tv-family-movies-germany-1080p.png, logos/international/rakuten-tv-family-movies-italy-1080p.png, logos/international/rakuten-tv-family-movies-switzerland-720p.png, logos/international/rakuten-tv-family-movies-uk-1080p.png, logos/international/rakuten-tv-top-movies-germany-1080p.png, logos/international/rakuten-tv-top-movies-italy-1080p.png, logos/rakuten-tv-action-movies-italy-1080p.png, logos/rakuten-tv-action-movies-uk-1080p-75f2eea4ce.png, logos/rakuten-tv-comedy-movies-germany-1080p.png, logos/rakuten-tv-drama-movies-italy-166043b571.png, logos/rakuten-tv-family-movies-uk-1080p.png
 - logos/international/rawhide-united-states-ca.png, logos/international/rawhide-united-states.png
@@ -1125,6 +1127,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | New Backups |
 | IPTV-Playlist.m3u | Movies Now | movies-now-hd.png | New Backups |
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | New Backups |
+| IPTV-Playlist.m3u | Star Gold | repaired-star-gold-de06c8e974.png | New Backups |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | New Backups |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
@@ -1737,10 +1740,14 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Unique TV | unique-tv.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv.svg | Review |
 | International-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Review |
+| International-Playlist.m3u | Blokbaster | blokbaster-hd-1080p.png | New Channels |
 | International-Playlist.m3u | DocuBay TV | docubay-tv.png | New Channels |
 | International-Playlist.m3u | Epic TV Digital | epic-tv-digital-1080p.png | New Channels |
+| International-Playlist.m3u | Hero [ ] | hero-720p-not-24-7.png | New Channels |
+| International-Playlist.m3u | Jilin Movie Channel | jilin-movie-channel.jpg | New Channels |
 | International-Playlist.m3u | Lollywood HD TV | lollywood-hd-tv.png | New Channels |
 | International-Playlist.m3u | Mango Mobile TV | mango-mobile-tv-1080p.png | New Channels |
+| International-Playlist.m3u | Mega Extreno | mega-extreno-hd-720p.jpg | New Channels |
 | International-Playlist.m3u | Muzhskoy | muzhskoy-hd-1080p.png | New Channels |
 | International-Playlist.m3u | Pluto TV Cine Familia | pluto-tv-cine-familia.png | New Channels |
 | International-Playlist.m3u | Pluto TV Cine Familia LatAm | pluto-tv-cine-familia-latam.png | New Channels |
@@ -1841,26 +1848,30 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Westerns (United States) | pluto-tv-westerns-united-states.png | New Channels |
 | International-Playlist.m3u | Pluto TV Westerns (United States) CA | pluto-tv-westerns-united-states-ca.png | New Channels |
 | International-Playlist.m3u | Pluto TV Wild West | pluto-tv-wild-west.png | New Channels |
+| International-Playlist.m3u | Pluto TV Wild West DK | pluto-tv-wild-west-dk.png | New Channels |
+| International-Playlist.m3u | Pluto TV Wild West NO | pluto-tv-wild-west-no.png | New Channels |
+| International-Playlist.m3u | Pluto TV Zombies | pluto-tv-zombies.png | New Channels |
+| International-Playlist.m3u | Premialnoe | premialnoe-hd-1080p.png | New Channels |
+| International-Playlist.m3u | Rakuten TV Action Movies | rakuten-tv-action-movies.png | New Channels |
+| International-Playlist.m3u | Rakuten TV Action Movies Austria | rakuten-tv-action-movies-austria-720p.png | New Channels |
+| International-Playlist.m3u | Rakuten TV Comedy Movies | rakuten-tv-comedy-movies.png | New Channels |
+| International-Playlist.m3u | Sana TV | sana-tv.png | New Channels |
 | International-Playlist.m3u | Shiksha TV | shiksha-tv.png | New Channels |
 | International-Playlist.m3u | Vokta TV | vokta-tv.png | New Channels |
+| International-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | New Backups |
 | International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | New Backups |
 | International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | New Backups |
 | International-Playlist.m3u | Corazon TV | corazon-tv.png | New Backups |
+| International-Playlist.m3u | Ekhon TV | ekhon-tv.png | New Backups |
 | International-Playlist.m3u | Evrokino | evrokino-hd-1080p.png | New Backups |
-| International-Playlist.m3u | Kappa TV | kappa-tv.png | New Backups |
-| International-Playlist.m3u | MBC TV | mbc-tv.png | New Backups |
+| International-Playlist.m3u | GAZI TV | gazi-tv-1080p.png | New Backups |
+| International-Playlist.m3u | Kino TV | kino-tv-hd.png | New Backups |
+| International-Playlist.m3u | Molahits TV | molahits-tv-720p.png | New Backups |
 | International-Playlist.m3u | Movies Now | movies-now-hd-1080p.png | New Backups |
 | International-Playlist.m3u | Now 80s | now-80-s.png | New Backups |
-| International-Playlist.m3u | Raj TV | raj-tv.png | New Backups |
 | International-Playlist.m3u | Rumba TV | rumba-tv.png | New Backups |
 | International-Playlist.m3u | Shanson TV | shanson-tv.png | New Backups |
-| International-Playlist.m3u | Star Jalsha [ ] | star-jalsha-1080p-geo-blocked.png | New Backups |
 | International-Playlist.m3u | Trace Brazuca | trace-brazuca-hd.png | New Backups |
-| International-Playlist.m3u | Vasanth TV | vasanth-tv.png | New Backups |
-| International-Playlist.m3u | Vendhar TV | vendhar-tv.png | New Backups |
-| International-Playlist.m3u | Zee Tamil [ ] | zee-tamil-576p-geo-blocked.png | New Backups |
-| International-Playlist.m3u | Zee Telugu | zee-telugu-hd-720p.png | New Backups |
-| International-Playlist.m3u | Zee TV | zee-tv.svg | New Backups |
 | International-Playlist.m3u | 4 SiDES TV | 4-sides-tv-6a436fa007.png | Backup |
 | International-Playlist.m3u | 4K Travel | 4k-travel.png | Backup |
 | International-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
