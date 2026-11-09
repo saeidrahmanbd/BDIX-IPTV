@@ -9,6 +9,8 @@ import generate_epg
 import epg_coverage
 import epg_source_cache
 import official_epg_sources
+import run_generate_epg
+import epg_publish_gate_v2 as epg_publish_gate
 import augment_epg_mapping_from_additional_sources as additional_augment
 import augment_epg_mapping_from_iptv_org as iptv_org_augment
 
@@ -24,6 +26,59 @@ def literal(src, name):
 
 
 class EpgConfigTests(unittest.TestCase):
+    def test_iptv_org_local_guide_uses_streamable_path_payload(self):
+        xml = b'<?xml version="1.0"?><tv><channel id="demo"><display-name>Demo</display-name></channel></tv>'
+        with tempfile.TemporaryDirectory() as tmp:
+            guide = Path(tmp) / "iptv-org-guide.xml"
+            guide.write_bytes(xml)
+            with patch.object(run_generate_epg, "LOCAL_GUIDE", guide):
+                source_path, is_cached = run_generate_epg.fetch_with_local_guide(
+                    guide.as_uri(),
+                    lambda url: self.fail(f"local guide should not use remote fetch: {url}"),
+                )
+            self.assertEqual(source_path, guide)
+            self.assertTrue(is_cached)
+            self.assertEqual(source_path.read_bytes(), xml)
+
+    def test_epg_publish_gate_uses_active_playlist_ids_for_retention(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            playlist.write_text(
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-id="Active.in" group-title="Indian Movies",Active\n'
+                'https://example.test/active.m3u8\n'
+                '#EXTINF:-1 tvg-id="Backup.in" group-title="Backup",Backup\n'
+                'https://example.test/backup.m3u8\n'
+                '#EXTINF:-1 tvg-id="Review.in" group-title="Review",Review\n'
+                'https://example.test/review.m3u8\n'
+                '#EXTINF:-1 tvg-id="Queue.in" group-title="New Channels",Queue\n'
+                'https://example.test/queue.m3u8\n',
+                encoding="utf-8",
+            )
+            with patch.object(epg_publish_gate, "PLAYLISTS", (playlist,)):
+                self.assertEqual(epg_publish_gate.active_playlist_ids(), {"Active.in"})
+
+                now = datetime.now(timezone.utc)
+                start = (now - timedelta(minutes=30)).strftime("%Y%m%d%H%M%S +0000")
+                stop = (now + timedelta(minutes=30)).strftime("%Y%m%d%H%M%S +0000")
+                guide = root / "guide.xml"
+                guide.write_text(
+                    '<?xml version="1.0"?><tv>'
+                    '<channel id="Active.in"><display-name>Active</display-name></channel>'
+                    '<channel id="Retired.in"><display-name>Retired</display-name></channel>'
+                    f'<programme channel="Active.in" start="{start}" stop="{stop}"><title>Active Show</title></programme>'
+                    f'<programme channel="Retired.in" start="{start}" stop="{stop}"><title>Retired Show</title></programme>'
+                    '</tv>',
+                    encoding="utf-8",
+                )
+                active_metrics = epg_publish_gate.quality(guide, {"Active.in"})
+                all_metrics = epg_publish_gate.quality(guide)
+                self.assertEqual(active_metrics["window_channels"], 1)
+                self.assertEqual(active_metrics["window_programmes"], 1)
+                self.assertEqual(all_metrics["window_channels"], 2)
+                self.assertEqual(all_metrics["window_programmes"], 2)
+
     def test_sources_synchronized_and_unique(self):
         a, b = literal(COV, "SOURCES"), literal(GEN, "SOURCES")
         self.assertEqual(a, b)

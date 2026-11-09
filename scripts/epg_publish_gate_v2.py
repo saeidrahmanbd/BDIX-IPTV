@@ -15,6 +15,8 @@ from pathlib import Path
 OLD = Path("/tmp/iptv-epg-previous.xml")
 NEW = Path("epg/epg.xml")
 MIN_CHANNEL_RETENTION = 0.95  # Require at least 95% of prior current-window channel coverage.
+PLAYLISTS = (Path("IPTV-Playlist.m3u"), Path("International-Playlist.m3u"))
+INACTIVE_GROUPS = {"Backup", "Review", "Test", "Not Playing", "New Channels", "New Backups", "New Backup"}
 GENERIC = {"movie", "movies", "program", "programme", "entertainment", "live", "live tv", "tba", "to be announced", "unknown", "schedule", "telecast", "show", "music", "test", "testing", "coming soon", "no data", "no information", "no info", "n/a", "none", "no title", "no program", "no programs", "no programme", "no programmes", "no schedule", "no schedule available", "not available", "program not available", "programme not available"}
 # Blank time slots labelled like "Program @ 5:00 AM" carry no programme information.
 SLOT_PLACEHOLDER_RE = re.compile(r"^(program|programme|show|slot)\s*@\s*\d")
@@ -54,6 +56,28 @@ def parse(path):
     return channels, programmes, title_violations
 
 
+def active_playlist_ids():
+    """Return IDs with a stream in a currently active group in either playlist."""
+    active = set()
+    for playlist in PLAYLISTS:
+        if not playlist.is_file():
+            continue
+        current = None
+        for line in playlist.read_text(encoding="utf-8-sig").splitlines():
+            if line.startswith("#EXTINF:"):
+                current = {
+                    match[1]: match[2]
+                    for match in re.finditer(r'([\w-]+)="([^"]*)"', line)
+                }
+            elif current and line.strip().startswith(("http://", "https://")):
+                group = current.get("group-title", "").strip()
+                channel_id = current.get("tvg-id", "").strip()
+                if channel_id and group not in INACTIVE_GROUPS:
+                    active.add(channel_id)
+                current = None
+    return active
+
+
 def parse_time(value):
     value = (value or "").strip()
     if len(value) < 14:
@@ -87,7 +111,7 @@ def overlap_count(programmes):
     return overlaps
 
 
-def quality(path):
+def quality(path, active_ids=None):
     channels, programmes, title_violations = parse(path)
     generic = sum(
         1 for _, _, _, title in programmes
@@ -102,9 +126,11 @@ def quality(path):
         start, stop = parse_time(programme[1]), parse_time(programme[2])
         if start is None or stop is None or stop <= start:
             continue
-        if stop >= lower and start <= upper:
+        channel_id = programme[0]
+        is_active = active_ids is None or channel_id in active_ids
+        if stop >= lower and start <= upper and is_active:
             window_programmes.append(programme)
-        if start <= now < stop:
+        if start <= now < stop and is_active:
             current_programmes.append(programme)
     return {
         "channels": len(channels),
@@ -123,7 +149,10 @@ def quality(path):
 
 
 def main():
-    new = quality(NEW)
+    active_ids = active_playlist_ids()
+    if not active_ids:
+        raise SystemExit("EPG gate BLOCK: no active playlist channel IDs found; refusing unscoped retention comparison")
+    new = quality(NEW, active_ids)
     if new["channels"] == 0 or new["programmes"] == 0:
         raise SystemExit("EPG gate BLOCK: generated guide has no usable channels/programmes")
     if new["title_violations"]:
@@ -134,7 +163,7 @@ def main():
         raise SystemExit(f"EPG gate BLOCK: placeholder-title ratio is {new['generic_ratio']:.3f}, above 0.010")
 
     if OLD.exists():
-        old = quality(OLD)
+        old = quality(OLD, active_ids)
         if old["window_channels"] and new["window_channels"] < max(1, int(old["window_channels"] * MIN_CHANNEL_RETENTION)):
             raise SystemExit(
                 "EPG gate BLOCK: usable current-window channel coverage regressed below "
