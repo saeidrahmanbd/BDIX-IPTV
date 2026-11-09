@@ -180,7 +180,7 @@ def safe_url(url):
   if p.scheme not in {"http","https"} or not p.hostname or p.username or p.password or p.fragment:return False
   if any(x in p.hostname.casefold() for x in ("workers.dev","pages.dev","corsproxy","streamproxy","localhost")):return False
   bad={"token","auth","authorization","password","passwd","pwd","username","signature","sig","expires","jwt","session","ticket"}
-  return not any(k.casefold() in bad for k,_ in urllib.parse.parse_qsl(p.query,keep_blank_values=True))
+  return not any(k.casefold() in bad or "token" in k.casefold() for k,_ in urllib.parse.parse_qsl(p.query,keep_blank_values=True))
  except ValueError:return False
 def slug(value):
  x=unicodedata.normalize("NFKD",value).encode("ascii","ignore").decode().casefold(); x=re.sub(r"[^a-z0-9]+","-",x).strip("-")[:80]; return x or "channel-"+hashlib.sha256(value.encode()).hexdigest()[:10]
