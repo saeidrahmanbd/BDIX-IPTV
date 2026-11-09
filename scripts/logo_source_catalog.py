@@ -117,6 +117,10 @@ DIRECT_PAGE_HINTS = {
     "Shikor TV Canada": ("https://www.jagobd.com/shikortv", True),
     "Ten TV Prime": ("https://www.jagobd.com/primetv", True),
     "TV One UK": ("https://www.jagobd.com/tv-one-uk", True),
+    # Official broadcaster pages; accept only explicitly logo-marked image tags.
+    "Mei Alai TV": ("https://www.meialai.in/", False),
+    "NKR TV Kannada": ("https://www.nkrtv.in/", False),
+    "Tamilan TV": ("https://tamilantelevision.com/", False),
 }
 
 
@@ -326,6 +330,14 @@ DIRECT_LOGO_HINTS = {
         "source": "Wikimedia Commons",
         "license": "Public domain text logo",
         "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    },
+    "Unique TV": {
+        "url": "https://jiotvimages.cdn.jio.com/dare_images/images/Unique_Tv.png",
+        "format": "PNG",
+        "page": "https://iptv-org.github.io/channels/in/UniqueTV",
+        "source": "IPTV-org channel record; image served by JioTV",
+        "license": "Channel artwork listed for Unique TV; original rights retained by broadcaster/platform",
+        "license_url": "",
     },
     "Oman Sports": {
         "url": "https://i.imgur.com/1omi7p8.png",
