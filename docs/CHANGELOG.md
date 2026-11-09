@@ -7,42 +7,61 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-09 — `IPTV-Playlist.m3u`
 
-- New channel identities: **1**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **2 / 0**
+- New channel identities: **26**
+- Channel identities removed: **6**
+- Stream URLs added / removed: **50 / 7**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Sony Yay!
+- Channel 9
+- D Talk
+- TV One UK
+- Prime Tv
+- Colors Cineplex Bollywood
+- Colors Cineplex Superhits
+- Sony Wah
+- Star Gold Select
+- Star Utsav Movies
+- Pankh
+
+Removed channel identities (up to 10):
+- CVR Health
+- Disha TV
+- NAN TV
+- R Plus
+- Vokta TV
+- WeatherSpy (India)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-09 — `International-Playlist.m3u`
 
-- New channel identities: **25**
-- Channel identities removed: **1**
-- Stream URLs added / removed: **43 / 1**
+- New channel identities: **40**
+- Channel identities removed: **3**
+- Stream URLs added / removed: **42 / 5**
 - Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **3**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- AMC (United States)
-- Aneflix Live
-- Blokbaster
-- Cine+ Classic
-- Cinemax Classics
-- EBC Foreign Movie
-- Film Mania
-- GEM Pixel
-- Hero [ ]
-- Jilin Movie Channel
+- Bol Entertainment
+- Rakuten TV Drama Movies Germany
+- Rakuten TV Family Movies Germany
+- Rakuten TV Top Movies Germany
+- Rakuten TV Comedy Movies Italy
+- Rakuten TV Family Movies Italy
+- Rakuten TV Top Movies Italy
+- Rakuten TV Drama Movies
+- Rakuten TV Top Movies
+- Rakuten TV Comedy Movies UK
 
 Removed channel identities (up to 10):
-- Star Jalsha [ ]
+- Cartoon Network (India)
+- Pogo
+- Sony SAB
 
 ## [5.0.0] — Playlist Studio
 
