@@ -272,6 +272,45 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
         self.assertFalse(guard._is_authorized_removal(info.replace('group-title="Backup"', 'group-title="Kids"'), url))
         self.assertFalse(guard._is_authorized_removal(info, url + "?changed=1"))
 
+    def test_change_guard_allows_only_exact_backup_migrations_and_quarantines(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.json"
+            protected = root / "protected.m3u"
+            report = root / "proposed-removals.md"
+            animal_url = "https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8"
+            failed_url = "https://fta.ektv.in/live/678/master.m3u8"
+            safe_url = "https://example.invalid/safe-backup.m3u8"
+            animal_old = channel("Animal Planet", "Backup", animal_url).splitlines()
+            failed_old = channel("DD Yadagiri", "Backup", failed_url).splitlines()
+            safe_old = channel("Safe Backup", "Backup", safe_url).splitlines()
+            animal_new = channel("Animal Planet", "Documentary & Wildlife", animal_url).splitlines()
+            failed_new = channel("DD Yadagiri", "Review", failed_url).splitlines()
+            safe_new = channel("Safe Backup", "Backup", safe_url).splitlines()
+            playlist.write_text(
+                "#EXTM3U\\n" + "\\n".join(animal_new + failed_new + safe_new) + "\\n",
+                encoding="utf-8",
+            )
+            snapshot.write_text(
+                "\\n".join(animal_old + failed_old + safe_old) + "\\n",
+                encoding="utf-8",
+            )
+            baseline.write_text(json.dumps([
+                {"info": animal_old[0], "url": animal_url, "group": "Backup", "stable": animal_url, "name": "Animal Planet"},
+                {"info": failed_old[0], "url": failed_url, "group": "Backup", "stable": failed_url, "name": "DD Yadagiri"},
+                {"info": safe_old[0], "url": safe_url, "group": "Backup", "stable": safe_url, "name": "Safe Backup"},
+            ]), encoding="utf-8")
+            with (
+                patch.object(guard, "PLAYLIST", playlist),
+                patch.object(guard, "BASELINE", baseline),
+                patch.object(guard, "PROTECTED_SNAPSHOT", snapshot),
+                patch.object(guard, "REMOVAL_REPORT", report),
+                redirect_stdout(io.StringIO()),
+                redirect_stderr(io.StringIO()),
+            ):
+                self.assertEqual(guard.verify_no_unauthorized_removals(), 0)
+
     def test_exact_sparkle_duplicate_is_authorized_only_as_backup(self):
         info = '#EXTINF:-1 tvg-name="Sparkle Movies" group-title="Backup",Sparkle Movies'
         url = (
