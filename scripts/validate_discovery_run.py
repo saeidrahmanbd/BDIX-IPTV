@@ -190,9 +190,6 @@ def consolidate_international_country_groups(playlist_path):
             block[0] = discovery.set_attr(block[0], "group-title", target)
             changes.append((discovery.name_of(block), old, target))
 
-    if not changes:
-        return []
-
     present_groups = {discovery.attrs(block[0]).get("group-title", "").strip() for block in blocks}
     registry = discovery.category_registry(present_groups)
     rank = {group.casefold(): index for index, group in enumerate(registry)}
