@@ -230,6 +230,104 @@ def append_section(report_path, heading, body):
         original = re.split(rf"\n## {re.escape(heading)}\b", original, maxsplit=1)[0].rstrip()
     p.write_text(original + "\n\n## " + heading + "\n\n" + body.rstrip() + "\n", encoding="utf-8")
 
+
+def promote_verified_candidates(entries, verified_starts, inconclusive_starts, update_lines):
+    """Graduate only verified, logo-backed International discovery rows.
+
+    Unique new channel identities become primary rows. Alternate streams go to
+    Backup. Uncertain checks go to Review, never into Xtream-visible groups.
+    Country thresholds are calculated from existing primaries plus this batch.
+    """
+    queue_groups = {"new channels", "new backup", "new backups"}
+    excluded_groups = queue_groups | {"backup", "backups", "review", "not playing", "test", "adult"}
+    country_labels = {
+        ("pakistani" if code == "PK" else discovery.country_group(code).casefold()): code
+        for code in discovery.ISO_CODES if code not in {"BD", "IN"}
+    }
+    primary_ids = defaultdict(set)
+    for entry in entries:
+        attrs = entry["attrs"]
+        group = entry["group"].strip().casefold()
+        code = discovery.country_code(attrs)
+        if code not in discovery.ISO_CODES:
+            code = country_labels.get(group, code)
+        if group in excluded_groups or code not in discovery.ISO_CODES:
+            continue
+        if discovery.counts_toward_country_group(group, code):
+            identity = discovery.primary_identity(attrs, entry["name"])
+            if identity:
+                primary_ids[code].add(identity)
+
+    decisions = []
+    reserved = {(code, identity) for code, values in primary_ids.items() for identity in values}
+    added_ids = defaultdict(set)
+    for entry in entries:
+        old_group = entry["group"].strip().casefold()
+        if old_group not in queue_groups:
+            continue
+        start = entry["start"]
+        if start in inconclusive_starts:
+            decisions.append((entry, "Review", "inconclusive stream check"))
+            continue
+        if start not in verified_starts:
+            continue
+        attrs = dict(entry["attrs"])
+        code = discovery.country_code(attrs)
+        identity = discovery.primary_identity(attrs, entry["name"])
+        if code not in discovery.ISO_CODES or not identity:
+            decisions.append((entry, "Review", "country or channel identity is not verified"))
+            continue
+        identity_key = (code, identity)
+        if identity_key in reserved:
+            decisions.append((entry, "Backup", "verified alternate stream"))
+            continue
+        policy_attrs = dict(attrs)
+        policy_attrs["group-title"] = "New Channels"
+        base, reason, policy_code = discovery.policy(policy_attrs, entry["name"])
+        if base is None or policy_code != code:
+            decisions.append((entry, "Review", reason or "candidate failed country/content policy"))
+            continue
+        reserved.add(identity_key)
+        if code not in {"BD", "IN"}:
+            added_ids[code].add(identity)
+        decisions.append((entry, None, "verified primary candidate"))
+
+    qualified = discovery.qualified_country_groups(primary_ids, added_ids)
+    results = []
+    for entry, fixed_target, reason in decisions:
+        if fixed_target:
+            target = fixed_target
+        else:
+            attrs = dict(entry["attrs"])
+            code = discovery.country_code(attrs)
+            name = entry["name"]
+            content = str(attrs.get("tvg-content", "")).strip().casefold()
+            adult_name = re.search(
+                r"\b(?:adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel)\b",
+                name, re.I,
+            )
+            if content in {"adult", "xxx", "porn", "adultentertainment"} or adult_name:
+                target = "Adult"
+            elif discovery.FASHION_RE.search(name):
+                target = "Fashion TV"
+            else:
+                special = discovery.special_group(attrs, name)
+                if special:
+                    target = special
+                else:
+                    attrs["group-title"] = "New Channels"
+                    base, policy_reason, policy_code = discovery.policy(attrs, name)
+                    if base is None or policy_code != code:
+                        target = "Review"
+                        reason = policy_reason or "candidate failed country/content policy"
+                    else:
+                        target = discovery.primary_target(base, code, qualified)
+        current = update_lines.get(entry["start"], entry["extinf"])
+        update_lines[entry["start"]] = discovery.set_attr(current, "group-title", target)
+        results.append((entry["name"], entry["group"], target, reason))
+    return results
+
+
 def probe_mode(playlist, report, baseline, mode):
     p = Path(playlist)
     bp = Path(baseline)
