@@ -50,13 +50,28 @@ def today_in_bangladesh(now: datetime | None = None) -> date:
     return now.astimezone(BD_TZ).date()
 
 
-def is_manual_retry(event: str | None, run_attempt: Any = 1) -> bool:
-    """Treat explicit dispatches and user-requested GitHub reruns as manual work."""
+def is_manual_retry(
+    event: str | None,
+    run_attempt: Any = 1,
+    workflow_file: str | None = None,
+    commit_message: str = "",
+) -> bool:
+    """Recognize explicit dispatches, reruns, and a workflow-scoped push marker."""
     try:
         attempt = int(run_attempt or 1)
     except (TypeError, ValueError):
         attempt = 1
-    return str(event or "").casefold() == "workflow_dispatch" or attempt > 1
+    if str(event or "").casefold() == "workflow_dispatch" or attempt > 1:
+        return True
+    markers = {
+        "international-channel-discovery.yml": "[manual-international-discovery]",
+    }
+    marker = markers.get(str(workflow_file or "").strip())
+    return (
+        str(event or "").casefold() == "push"
+        and bool(marker)
+        and marker in str(commit_message or "")
+    )
 
 
 def runs_for_date(runs: list[dict[str, Any]], target_date: date) -> list[dict[str, Any]]:
@@ -235,7 +250,13 @@ def guard(workflow_file: str) -> int:
     todays = runs_for_date(list(by_id.values()), target_date)
 
     event = str(current_run.get("event") or "").casefold()
-    manual_retry = is_manual_retry(event, current_run.get("run_attempt", 1))
+    head_commit = current_run.get("head_commit") or {}
+    manual_retry = is_manual_retry(
+        event,
+        current_run.get("run_attempt", 1),
+        workflow_file,
+        str(head_commit.get("message") or ""),
+    )
     execution_event = "workflow_dispatch" if manual_retry else event
     execute = should_current_run_execute(
         todays, current_run_id, target_date, client, event=execution_event
