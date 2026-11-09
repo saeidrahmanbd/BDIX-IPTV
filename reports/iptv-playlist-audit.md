@@ -1,15 +1,15 @@
 # IPTV Playlist Audit
-Generated: **2026-11-09T03:43:44.203247+00:00**
-Source playlist SHA-256: **8675200ab8b37acc114ba0d5fc456d80611f2715c3226f08837681133391c6b5**
+Generated: **2026-11-09T04:16:56.277873+00:00**
+Source playlist SHA-256: **e55dc8cf1536db3e5db4794947ea664c267179f08882d87e89517b0eacd5e286**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **998**
-- Unique channel IDs: **638**
-- IDs with multiple streams: **194**
+- Playlist entries: **1000**
+- Unique channel IDs: **639**
+- IDs with multiple streams: **195**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -21,7 +21,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **998**
+- Logo references checked: **1000**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **0**
@@ -736,6 +736,9 @@ No same-ID label variants found across groups.
 ### star.jalsha.movies.in (2 streams)
 - Jalsha Movies — Indian Bangla — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
 - Jalsha Movies — Backup — http://103.135.253.32:8080/Jalsha_movies-HD/index.m3u8
+### stargold.in@hd (2 streams)
+- Star Gold — New Channels — http://103.185.24.134:3001/Star-Gold/index.m3u8
+- Star Gold — New Backups — http://103.135.253.32:8080/STAR-GOLD-HD/index.m3u8
 ### starmoviesselect.in@hd (2 streams)
 - Star Movies Select — Indian Movies — http://103.135.253.32:8080/STAR-MOVIES-SEL/index.m3u8
 - Star Movies Select — Review — https://livetv.shamon-cable.net:8443/Star-movies-select/index.m3u8
@@ -862,7 +865,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **998**
+- Healthy/local references: **1000**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues

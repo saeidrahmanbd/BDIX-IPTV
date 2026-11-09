@@ -1,25 +1,23 @@
 # International Playlist Organization Audit
 
-- Entries before: 2983
-- Entries after: 2975
+- Entries before: 3017
+- Entries after: 3017
 - Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
 - Bangladesh channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.
-- For countries other than Bangladesh and India, only dedicated Movies and Music channels are eligible.
+- For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.
 - New Channels and New Backups are manual-review queues; candidates are never automatically promoted. Foreign country groups require five unique, manually curated primary channel identities.
 - Retained stream URLs are preserved; playback/availability was not tested.
 
 ## Removal summary
 
-- Indian knowledge channel is prohibited: 7
-- test/VOD/non-TV name: 1
 
 ## Protected Backup/Review/Not Playing entries preserved (policy would have removed them)
 
-- protected Backup/Not Playing kept despite orphan policy: 986
+- protected Backup/Not Playing kept despite orphan policy: 987
 - test/VOD/non-TV name: 1
 
 ## Category counts
@@ -69,6 +67,6 @@
 - Kids: 7
 - Sports: 5
 - Review: 206
-- New Channels: 130
-- New Backups: 115
+- New Channels: 156
+- New Backups: 131
 - Backup: 1350

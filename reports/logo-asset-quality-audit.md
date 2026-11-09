@@ -1,31 +1,31 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-09T03:47:43+00:00**
+Generated: **2026-11-09T04:16:55+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **934fd544e2d927da61ba8f0366333b122784205ea5d56b3b0178fc1e4e2de601**
-- International-Playlist.m3u SHA-256: **b3ffb22a9cf5daedf00ffb7fbece4b8d3e7107d43fd18e6a1ed482664e1c0430**
+- IPTV-Playlist.m3u SHA-256: **e55dc8cf1536db3e5db4794947ea664c267179f08882d87e89517b0eacd5e286**
+- International-Playlist.m3u SHA-256: **2f73d5e7ee3cde3ea44fe9a60438d57aa0ea6ddcdcddf39dbe53ca5be0132b4f**
 
 ## Summary
 
-- Safe repairs applied this run: **1**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **697**
-- Playlist references whose asset stem differs from the normalized channel name: **1300**
-- Unreferenced files immediately inside logos/: **1466** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1309**
+- Unreferenced files immediately inside logos/: **1464** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| mega-extreno-hd-720p.jpg | PNG | JPEG | 320×240 | 320×240 | re-encoded to match extension, re-encoded/compressed |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 
@@ -1861,17 +1861,26 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | New Backups |
 | International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | New Backups |
 | International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | New Backups |
+| International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | New Backups |
 | International-Playlist.m3u | Corazon TV | corazon-tv.png | New Backups |
 | International-Playlist.m3u | Ekhon TV | ekhon-tv.png | New Backups |
 | International-Playlist.m3u | Evrokino | evrokino-hd-1080p.png | New Backups |
 | International-Playlist.m3u | GAZI TV | gazi-tv-1080p.png | New Backups |
+| International-Playlist.m3u | Kappa TV | kappa-tv.png | New Backups |
 | International-Playlist.m3u | Kino TV | kino-tv-hd.png | New Backups |
+| International-Playlist.m3u | MBC TV | mbc-tv.png | New Backups |
 | International-Playlist.m3u | Molahits TV | molahits-tv-720p.png | New Backups |
 | International-Playlist.m3u | Movies Now | movies-now-hd-1080p.png | New Backups |
 | International-Playlist.m3u | Now 80s | now-80-s.png | New Backups |
+| International-Playlist.m3u | Raj TV | raj-tv.png | New Backups |
 | International-Playlist.m3u | Rumba TV | rumba-tv.png | New Backups |
 | International-Playlist.m3u | Shanson TV | shanson-tv.png | New Backups |
 | International-Playlist.m3u | Trace Brazuca | trace-brazuca-hd.png | New Backups |
+| International-Playlist.m3u | Vasanth TV | vasanth-tv.png | New Backups |
+| International-Playlist.m3u | Vendhar TV | vendhar-tv.png | New Backups |
+| International-Playlist.m3u | Zee Tamil [ ] | zee-tamil-576p-geo-blocked.png | New Backups |
+| International-Playlist.m3u | Zee Telugu | zee-telugu-hd-720p.png | New Backups |
+| International-Playlist.m3u | Zee TV | zee-tv.svg | New Backups |
 | International-Playlist.m3u | 4 SiDES TV | 4-sides-tv-6a436fa007.png | Backup |
 | International-Playlist.m3u | 4K Travel | 4k-travel.png | Backup |
 | International-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |

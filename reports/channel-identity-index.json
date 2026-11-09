@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T03:44:13+00:00",
+  "generated": "2026-11-09T04:17:26+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -7217,6 +7217,20 @@
       "primary": 1,
       "backup": 0
     },
+    "sonyyay": {
+      "names": [
+        "Sony Yay!"
+      ],
+      "ids": [
+        "sonyyay.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "sooriyantv": {
       "names": [
         "Sooriyan TV"
@@ -7341,10 +7355,11 @@
         "stargold.in@hd"
       ],
       "groups": [
+        "New Backups",
         "New Channels"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "stargoldselect": {
