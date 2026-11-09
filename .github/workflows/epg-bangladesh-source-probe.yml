@@ -6,7 +6,7 @@ name: Probe EPG sources for Bangladesh
 on:
   workflow_dispatch:
   push:
-    branches: [epg-source-probe]
+    branches: [epg-source-probe, epg/bangladesh-official-schedule-probe-20261109]
     paths:
       - 'scripts/probe_epg_sources_for_bangladesh.py'
       - 'scripts/probe_bangladesh_official_schedule_pages.py'
