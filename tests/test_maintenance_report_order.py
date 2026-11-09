@@ -67,6 +67,11 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertTrue(should_check_alphabetical_order("Bangladesh"))
         self.assertTrue(should_check_alphabetical_order("Indian Music"))
 
+    def test_missing_logos_in_review_are_nonblocking_quarantine_items(self):
+        audit = (ROOT / "scripts" / "audit_playlist.py").read_text(encoding="utf-8")
+        self.assertIn('group in {"Review", "Not Playing", "New Channels", "New Backups"}', audit)
+        self.assertIn("review_logo_exceptions.append(item)", audit)
+
     def test_public_epg_generation_is_owned_by_epg_refresh_workflow(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         # Playlist maintenance must not own or duplicate EPG generation.
