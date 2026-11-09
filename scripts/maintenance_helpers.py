@@ -23,6 +23,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from logo_asset_naming import is_blocked_logo_basename
+from stream_url_identity import stream_url_key
 from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS, PERMANENTLY_REMOVED_NAMES
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
@@ -92,12 +93,12 @@ def _canonical_extinf(info: str) -> str:
 
 def _canonical_channel_url_base(url: str) -> str:
     """Normalize transport/query/manifest suffixes for exact feed comparison."""
-    parsed = urlsplit(str(url or "").strip())
+    parsed = urlsplit(stream_url_key(url))
     if not parsed.netloc or not parsed.path:
         return ""
-    path = parsed.path.casefold().rstrip("/")
+    path = parsed.path.rstrip("/")
     path = re.sub(r"\.(?:m3u8?|mpd)$", "", path, flags=re.IGNORECASE)
-    return parsed.netloc.casefold() + path
+    return parsed.netloc + path
 
 
 def _attrs(ext: str) -> dict[str, str]:
@@ -152,7 +153,7 @@ def _parse(text: str) -> list[tuple[str, str]]:
 
 def _stable(info: str, url: str) -> str:
     """Use the stream URL as preservation identity, not mutable metadata."""
-    return url.strip().casefold()
+    return stream_url_key(url)
 
 
 def _group(info: str) -> str:
@@ -185,9 +186,9 @@ def _is_authorized_orphan_backup_removal(info: str, url: str) -> bool:
         for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
         if value.strip()
     }
-    candidate_url = str(url or "").strip().casefold()
+    candidate_url = stream_url_key(url)
     return any(
-        channel_id in ids and candidate_url == expected_url.casefold()
+        channel_id in ids and candidate_url == stream_url_key(expected_url)
         for channel_id, expected_url in AUTHORIZED_ORPHAN_BACKUP_REMOVALS.items()
     )
 
@@ -213,15 +214,15 @@ def _protected_blocks(text: str) -> list[dict[str, object]]:
 
 def _protected_text(text: str, skip_urls: set[str] | None = None) -> str:
     """Compare protected rows while permitting validated Backup↔Review quarantine moves."""
-    skip_urls = {value.casefold() for value in (skip_urls or set())}
-    blocks = [block for block in _protected_blocks(text) if str(block["url"]).casefold() not in skip_urls]
+    skip_urls = {stream_url_key(value) for value in (skip_urls or set())}
+    blocks = [block for block in _protected_blocks(text) if stream_url_key(str(block["url"])) not in skip_urls]
     if not blocks:
         return ""
     # Sort by identity and URL only; moving an orphan Backup to Review must
     # not alter the comparison order of protected records.
     blocks.sort(key=lambda block: (
         _canonical_channel_name(_name(str(block["info"]))),
-        str(block["url"]).casefold(),
+        stream_url_key(str(block["url"])),
     ))
     serialized = []
     for block in blocks:
@@ -250,7 +251,7 @@ def _protected_snapshot_text(text: str) -> str:
     blocks = _protected_blocks(text)
     blocks.sort(key=lambda block: (
         _canonical_channel_name(_name(str(block["info"]))),
-        str(block["url"]).casefold(),
+        stream_url_key(str(block["url"])),
     ))
     serialized = []
     for block in blocks:
@@ -383,7 +384,7 @@ def verify_no_unauthorized_removals() -> int:
             if item["group"] in PROTECTED_GROUPS
         ]
         duplicate_urls = Counter(
-            str(item["url"]).strip().casefold()
+            stream_url_key(str(item["url"]))
             for item in baseline
             if str(item["url"]).strip()
         )
@@ -394,8 +395,8 @@ def verify_no_unauthorized_removals() -> int:
         )
         duplicate_candidates = [
             item for item in removals
-            if duplicate_urls[item["url"].strip().casefold()] > 1
-            and current_urls[item["url"].strip().casefold()] >= 1
+            if duplicate_urls[stream_url_key(item["url"])] > 1
+            and current_urls[stream_url_key(item["url"])] >= 1
             and item["group"] not in PROTECTED_GROUPS
         ]
 
@@ -435,7 +436,7 @@ def verify_no_unauthorized_removals() -> int:
     # Backup rows may be quarantined to Review when no exact primary identity
     # exists. A primary duplicate may be demoted to Backup only while an exact
     # primary ID remains. Review rows themselves may never be promoted to Backup.
-    baseline_by_url = {str(item.get("url", "")).strip().casefold(): item for item in baseline if str(item.get("url", "")).strip()}
+    baseline_by_url = {stream_url_key(str(item.get("url", ""))): item for item in baseline if str(item.get("url", "")).strip()}
     current_by_url = {str(block["url"]).strip().casefold(): block for block in current if str(block["url"]).strip()}
     primary_ids = set()
     for block in current:

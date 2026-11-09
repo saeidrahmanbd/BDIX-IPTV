@@ -16,7 +16,6 @@ from pathlib import Path
 
 import discover_international_channels as discovery
 import discover_bd_in_new_queues as bd_discovery
-from stream_url_identity import stream_url_key
 
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 LOGOS = Path("logos")
@@ -43,13 +42,8 @@ def parse_playlist(text):
         if not line.startswith("#EXTINF:"):
             continue
         j = i + 1
-        while j < len(lines):
-            candidate = lines[j].strip()
-            # M3U player options are metadata for this entry, not a broken URL pair.
-            if not candidate or (candidate.startswith("#") and not candidate.startswith("#EXTINF:")):
-                j += 1
-                continue
-            break
+        while j < len(lines) and not lines[j].strip():
+            j += 1
         if j >= len(lines) or not lines[j].strip().lower().startswith(("http://", "https://")):
             malformed.append((i, line, lines[j] if j < len(lines) else "<EOF>"))
             continue
@@ -346,16 +340,16 @@ def probe_mode(playlist, report, baseline, mode):
     if malformed or before_malformed:
         append_section(report, "Stream verification", f"- Run timestamp: {now()}\n- BLOCKER: malformed EXTINF/URL pairs detected before stream verification; playlist left unchanged.")
         raise SystemExit(1)
-    baseline_urls = {stream_url_key(e["url"]) for e in before_entries}
+    baseline_urls = {e["url"].casefold() for e in before_entries}
     queues = {"new channels", "new backup", "new backups"}
-    targets = [e for e in entries if e["group"].casefold() in queues or stream_url_key(e["url"]) not in baseline_urls]
+    targets = [e for e in entries if e["group"].casefold() in queues or e["url"].casefold() not in baseline_urls]
     counts = Counter()
     details = []
     remove_starts = set()
     update_lines = {}
     seen = set()
     for e in entries:
-        urlkey = stream_url_key(e["url"])
+        urlkey = e["url"].casefold()
         if urlkey in seen and (urlkey not in baseline_urls or e["group"].casefold() in queues):
             remove_starts.add(e["start"])
             counts["duplicate discovery entries removed"] += 1
@@ -460,14 +454,14 @@ def final_mode(playlist, report, baseline, mode):
     before = bp.read_text(encoding="utf-8-sig")
     lines, entries, malformed = parse_playlist(text)
     _, before_entries, _ = parse_playlist(before)
-    baseline_urls = {stream_url_key(e["url"]) for e in before_entries}
+    baseline_urls = {e["url"].casefold() for e in before_entries}
     groups = []
     for e in entries:
         if e["group"] and e["group"] not in groups:
             groups.append(e["group"])
     queue_names = {"new channels", "new backup", "new backups"}
-    candidates = [e for e in entries if e["group"].casefold() in queue_names or stream_url_key(e["url"]) not in baseline_urls]
-    url_counts = Counter(stream_url_key(e["url"]) for e in entries)
+    candidates = [e for e in entries if e["group"].casefold() in queue_names or e["url"].casefold() not in baseline_urls]
+    url_counts = Counter(e["url"].casefold() for e in entries)
     duplicate_count = sum(n - 1 for n in url_counts.values() if n > 1)
     errors = []
     validator_outcome = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME", "success").casefold()

@@ -11,6 +11,7 @@ from pathlib import Path
 from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS
 import re
 import unicodedata
+from stream_url_identity import stream_url_key
 
 P = Path("IPTV-Playlist.m3u")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -99,10 +100,10 @@ def repair_category_registry(pre):
 
 
 def ensure_required_records(blocks):
-    urls = {url_of(b).strip().casefold() for b in blocks if url_of(b).strip()}
+    urls = {stream_url_key(url_of(b)) for b in blocks if url_of(b).strip()}
     added = 0
     for record in REQUIRED_RECORDS:
-        url = record[1].casefold()
+        url = stream_url_key(record[1])
         if url not in urls:
             blocks.append(list(record))
             urls.add(url)
@@ -139,7 +140,7 @@ def main():
             if value.strip()
         }
         if group == "Backup" and any(
-            channel_id in ids and url.casefold() == expected_url.casefold()
+            channel_id in ids and stream_url_key(url) == stream_url_key(expected_url)
             for channel_id, expected_url in AUTHORIZED_ORPHAN_BACKUP_REMOVALS.items()
         ):
             authorized_orphan_backups_removed += 1
@@ -158,7 +159,7 @@ def main():
             info = remove_attr(info, "tvg-chno")
             changed += 1
 
-        key = url.casefold()
+        key = stream_url_key(url)
         if key in seen_urls:
             removed_duplicate += 1
             continue
@@ -210,7 +211,7 @@ def main():
     blocks.sort(key=lambda b: (
         rank.get(attrs(b[0]).get("group-title", "").strip(), len(rank)),
         natural(display_name(b[0])),
-        url_of(b).casefold(),
+        stream_url_key(url_of(b)),
     ))
 
     pre = repair_category_registry(pre)

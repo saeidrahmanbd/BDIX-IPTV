@@ -15,6 +15,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS
+from stream_url_identity import stream_url_key
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/primary-backup-integrity.md")
@@ -159,9 +160,9 @@ def is_authorized_orphan_backup_removal(info: str, url: str) -> bool:
         for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
         if value.strip()
     }
-    candidate_url = str(url or "").strip().casefold()
+    candidate_url = stream_url_key(url)
     return any(
-        channel_id in ids and candidate_url == expected_url.casefold()
+        channel_id in ids and candidate_url == stream_url_key(expected_url)
         for channel_id, expected_url in AUTHORIZED_ORPHAN_BACKUP_REMOVALS.items()
     )
 
@@ -237,7 +238,7 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
         if not url:
             errors.append(f"Entry {index + 1}: missing HTTP(S) stream URL")
             continue
-        url_key = url.casefold()
+        url_key = stream_url_key(url)
         if url_key in seen_urls:
             errors.append(f"Duplicate stream URL: {url}")
         seen_urls.add(url_key)
@@ -443,7 +444,7 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
     records.sort(key=lambda record: (
         rank.get(attrs(record[0]).get("group-title", "").strip(), len(rank)),
         natural_key(display_name(record[0])),
-        stream_url(record).casefold(),
+        stream_url_key(stream_url(record)),
     ))
     preamble = update_registry(preamble)
     updated = "\n".join(preamble + [line for record in records for line in record]).rstrip() + "\n"

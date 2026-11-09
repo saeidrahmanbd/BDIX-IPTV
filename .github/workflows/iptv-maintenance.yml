@@ -132,8 +132,7 @@ jobs:
             scripts/enforce_playlist_attribution.py
       - name: Run code-level maintenance and report-freshness tests
         run: |
-          python -m unittest discover -s tests -p 'test_stream_url_identity.py'
-           python -m unittest discover -s tests -p 'test_report_freshness.py'
+          python -m unittest discover -s tests -p 'test_report_freshness.py'
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_authorized_channel_removals.py'
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'

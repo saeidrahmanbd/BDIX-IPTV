@@ -6,7 +6,6 @@ changed or removed; exact duplicate URLs block the run for manual review.
 """
 from pathlib import Path
 import json, re, sys, unicodedata
-from stream_url_identity import stream_url_key
 from country_verification import reference_from_playlists, verify_country
 from discover_bd_in_new_queues import prohibited_channel
 
@@ -99,7 +98,7 @@ def process(path):
  seen=set(); duplicate_urls=[]
  for r in rec:
   u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
-  k=stream_url_key(u)
+  k=u.casefold()
   if k and k in seen: duplicate_urls.append(u)
   if k: seen.add(k)
  if duplicate_urls:
@@ -124,8 +123,8 @@ def process(path):
   if g == 'Bangladesh':
    raw=a.get('tvg-chno','').strip()
    number=int(raw) if raw.isdigit() else 10**12
-   return (rank.get(g,len(rank)),number,key(n),stream_url_key(u))
-  return (rank.get(g,len(rank)),key(n),stream_url_key(u))
+   return (rank.get(g,len(rank)),number,key(n),u.casefold())
+  return (rank.get(g,len(rank)),key(n),u.casefold())
  # Fill missing Bangladesh channel numbers deterministically without changing
  # any existing number. This prevents one unnumbered legacy row from blocking
  # discovery; the final sort restores numeric order.

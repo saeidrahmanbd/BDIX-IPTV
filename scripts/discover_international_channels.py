@@ -11,6 +11,7 @@ import hashlib,re,unicodedata,urllib.parse,urllib.request
 from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
+from stream_url_identity import stream_url_key
 from logo_asset_naming import is_blocked_logo_basename
 from country_verification import ISO_CODES as ALL_ISO_CODES
 import discover_bd_in_new_queues as bd_discovery
@@ -64,7 +65,7 @@ def remove_duplicate_queue_urls(blocks):
  """Remove duplicate URLs from discovery queues, preserving primary playlist rows."""
  queue_groups = {"new channels", "new backup", "new backups"}
  primary_urls = {
-  url_of(block).casefold()
+  stream_url_key(url_of(block))
   for block in blocks
   if url_of(block) and attrs(block[0]).get("group-title", "").strip().casefold() not in queue_groups
  }
@@ -72,7 +73,7 @@ def remove_duplicate_queue_urls(blocks):
  kept, removed = [], []
  for block in blocks:
   a = attrs(block[0]); group = (a.get("group-title") or "").strip().casefold()
-  url = url_of(block).casefold()
+  url = stream_url_key(url_of(block))
   if group in queue_groups and url and (url in primary_urls or url in seen_queue_urls):
    removed.append((name_of(block), group, url))
    continue
@@ -376,7 +377,7 @@ def main():
  if not raw or len(raw)>MAX_SOURCE_BYTES:raise SystemExit("Source feed is empty or too large; playlist unchanged.")
  _,source=parse(raw.decode("utf-8-sig","replace")); prefix,existing=parse(PLAYLIST.read_text(encoding="utf-8-sig"))
  if not source:raise SystemExit("Source feed contains no channel records; playlist unchanged.")
- existing_urls={url_of(b).casefold() for b in existing if url_of(b)}
+ existing_urls={stream_url_key(url_of(b)) for b in existing if url_of(b)}
  existing_primary=defaultdict(list); country_primary_ids=defaultdict(set)
  queue_or_nonprimary={"backup","backups","new backup","new backups","not playing","review","adult","test"}
  for b in existing:
@@ -392,13 +393,13 @@ def main():
   if not name:rejected["missing channel name"]+=1; continue
   if BAD_NAME_RE.search(name):rejected["test/VOD/non-TV name"]+=1; continue
   if not safe_url(url):rejected["unsafe or tokenized URL"]+=1; continue
-  if url.casefold() in existing_urls:
+  if stream_url_key(url) in existing_urls:
    exact_existing+=1; continue
-  if url.casefold() in seen:
+  if stream_url_key(url) in seen:
    exact_source_duplicates+=1; continue
   base,reason,code=policy(a,name)
   if base is None:rejected[reason]+=1; continue
-  seen.add(url.casefold()); candidates.append((a,name,url,norm(name),base,code))
+  seen.add(stream_url_key(url)); candidates.append((a,name,url,norm(name),base,code))
  country_groups=qualified_country_groups(country_primary_ids)
  additions=[]; new_rows=[]; backup_rows=[]; per_group=Counter(); per_country=Counter(); added_primary_ids=defaultdict(set); planned={k:list(v) for k,v in existing_primary.items()}
  for a,name,url,key,base,code in candidates:
@@ -536,7 +537,7 @@ def main():
  logo_refs_repaired+=logo_repaired
  logo_refs_removed+=logo_removed
  present_groups={attrs(b[0]).get("group-title","").strip() for b in normalized}; dynamic=category_registry(present_groups); rank={g.casefold():i for i,g in enumerate(dynamic)}
- normalized.sort(key=lambda b:(rank.get(attrs(b[0]).get("group-title","").strip().casefold(),len(rank)),natural_key(name_of(b)),url_of(b).casefold()))
+ normalized.sort(key=lambda b:(rank.get(attrs(b[0]).get("group-title","").strip().casefold(),len(rank)),natural_key(name_of(b)),stream_url_key(url_of(b))))
  header="#PLAYLIST-STUDIO-CATEGORIES:"+str(dynamic).replace("'",'"'); out=[x for x in prefix if not x.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]; idx=next((i+1 for i,x in enumerate(out) if x.startswith("#EXTM3U")),0); out.insert(idx,header)
  for b in normalized:out.extend(b)
  PLAYLIST.write_text("\n".join(out).rstrip()+"\n",encoding="utf-8")
