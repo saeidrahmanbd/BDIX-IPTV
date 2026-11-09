@@ -166,7 +166,8 @@ def process(path):
   cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
   name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip().casefold()
   country=a.get('tvg-country','').strip().upper()
-  if name=='channel s uk' and (g not in {'Bangladesh','International','Backup','Review','Not Playing'} or cid!='channels.uk@679aa9' or country!='GB'): errors.append('Channel S UK must retain its canonical GB identity in International/Backup/Review (Bangladesh legacy allowed)')
+  valid_channel_s_group=(g in {'Bangladesh','Backup','Review','Not Playing'} and country in {'','GB'}) or (g=='International' and country=='GB')
+  if name=='channel s uk' and (not valid_channel_s_group or cid!='channels.uk@679aa9'): errors.append('Channel S UK must retain its canonical identity in Bangladesh/International/Backup/Review')
   if cid=='ultimatetv.in@sd' and g not in {'Indian Music','Backup'}: errors.append('Ultimate TV must be Indian Music primary or Backup alternate')
  if errors:
   raise SystemExit(f'{path}: '+ '; '.join(errors))
