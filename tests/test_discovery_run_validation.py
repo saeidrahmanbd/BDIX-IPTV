@@ -4,6 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from validate_discovery_run import NEWS_RE, append_section, classify_response, consolidate_international_country_groups, ensure_local_logo, final_mode, parse_playlist
+from discover_bd_in_new_queues import parse as parse_bd_playlist
 
 
 class DiscoveryRunValidationTests(unittest.TestCase):
@@ -188,6 +189,31 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         self.assertEqual(updated, extinf)
         self.assertFalse(localized)
         self.assertTrue(unavailable)
+
+    def test_parser_skips_vlc_and_kodi_directives_before_media_url(self):
+        text = (
+            '#EXTM3U\n'
+            '#EXTINF:-1 tvg-name="Example",Example\n'
+            '#EXTVLCOPT:http-user-agent=Mozilla/5.0\n'
+            '#KODIPROP:inputstream.adaptive.manifest_type=hls\n'
+            'https://cdn.example.test/Path/CaseSensitive.m3u8\n'
+        )
+        _, entries, malformed = parse_playlist(text)
+        self.assertEqual(malformed, [])
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0]["url"], "https://cdn.example.test/Path/CaseSensitive.m3u8")
+        self.assertEqual(entries[0]["end"], 4)
+
+    def test_bd_discovery_parser_skips_vlc_directive_before_media_url(self):
+        text = (
+            '#EXTM3U\n'
+            '#EXTINF:-1 tvg-id="Demo.bd" tvg-name="Demo",Demo\n'
+            '#EXTVLCOPT:http-user-agent=Mozilla/5.0\n'
+            'https://cdn.example.test/Demo/live.m3u8\n'
+        )
+        entries = parse_bd_playlist(text)
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0][2], "https://cdn.example.test/Demo/live.m3u8")
 
     def test_parser_detects_malformed_extinf_pair(self):
         _, entries, malformed = parse_playlist('#EXTM3U\n#EXTINF:-1 group-title="New Channels",Example\n')

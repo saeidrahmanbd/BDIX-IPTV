@@ -81,6 +81,8 @@ jobs:
         run: cp IPTV-Playlist.m3u /tmp/IPTV-Playlist.before.m3u
       - name: Test channel discovery exclusion policy
         run: python -m unittest discover -s tests -p 'test_channel_discovery_policy.py'
+      - name: Test stream URL identity rules
+        run: python -m unittest discover -s tests -p 'test_stream_url_identity.py'
       - name: Test discovery stream validator
         run: python -m unittest discover -s tests -p 'test_discovery_run_validation.py'
       - name: Test report freshness rules

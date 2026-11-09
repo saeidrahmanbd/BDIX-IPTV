@@ -18,6 +18,7 @@ from pathlib import Path
 from urllib.parse import parse_qsl, urlparse
 
 from country_verification import norm_name, reference_from_playlists, verify_country
+from stream_url_identity import stream_url_key
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/iptv-channel-discovery.md")
@@ -199,8 +200,12 @@ def parse(text: str):
         if not line.startswith("#EXTINF:"):
             continue
         j = i + 1
-        while j < len(lines) and not lines[j].strip():
-            j += 1
+        while j < len(lines):
+            candidate = lines[j].strip()
+            if not candidate or (candidate.startswith("#") and not candidate.startswith("#EXTINF:")):
+                j += 1
+                continue
+            break
         if j >= len(lines) or not lines[j].strip().lower().startswith(("http://", "https://")):
             continue
         a = attrs(line)
@@ -375,7 +380,7 @@ def main() -> int:
         PLAYLIST.write_text(original, encoding="utf-8")
         print(f"Removed {len(purged)} prohibited Indian review-queue rows before discovery.")
     entries = parse(original)
-    existing_urls = {u.casefold() for _, _, u in entries}
+    existing_urls = {stream_url_key(u) for _, _, u in entries}
     existing_names = {norm(n) for _, n, _ in entries}
     existing_ids = {base_id(a.get("tvg-id") or a.get("channel-id")) for a, _, _ in entries if base_id(a.get("tvg-id") or a.get("channel-id"))}
 
@@ -392,7 +397,7 @@ def main() -> int:
             print(f"Source unavailable: {source}: {exc}")
             continue
         for a, name, url in parse(text):
-            key = url.casefold()
+            key = stream_url_key(url)
             normalized, reason = evaluate(country, a, name, url, reference)
             if normalized is not None and key not in seen_source_urls:
                 candidates.append((country, normalized, name, url))
