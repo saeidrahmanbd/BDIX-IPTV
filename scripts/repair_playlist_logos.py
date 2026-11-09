@@ -316,6 +316,13 @@ def set_logo(line, url):
     return line[:comma] + ' tvg-logo="' + url + '"' + line[comma:]
 
 
+def render_updated_playlist(output_lines, original_text):
+    """Replace logo-bearing lines while preserving all original trailing newlines."""
+    trailing_newlines = len(original_text) - len(original_text.rstrip("\n"))
+    body = "\n".join(output_lines).rstrip("\n")
+    return body + ("\n" * trailing_newlines)
+
+
 def clean_channel(value):
     value = str(value or "").strip()
     value = re.sub(r"\s*\[[^\]]*\]", " ", value)
@@ -916,7 +923,7 @@ def main():
                 report_rows.append((playlist, line_number, channel, basename, "", "none", "", "", result_note))
             output.append(line)
 
-        new_text = "\n".join(output).rstrip() + "\n"
+        new_text = render_updated_playlist(output, original)
         if new_text != original:
             path.write_text(new_text, encoding="utf-8")
         # Confirm reference counts against the resulting file.
