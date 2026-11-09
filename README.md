@@ -45,26 +45,6 @@ The playlists are maintained with organized channel groups, channel information 
 
 Stream availability and programme-guide coverage depend on third-party sources and may change over time.
 
-### Channel discovery policy
-
-- **Bangladesh:** all legitimate genres are eligible.
-- **India:** Kids, Sports, Movies, Music, Bangla and general entertainment are eligible. News, Religious (including Islamic religious), Educational/Knowledge, and Business/Finance channels are excluded.
-- **International discovery:** Bangladesh and India are both eligible; Indian genre restrictions still apply. Pakistan and other foreign country groups remain subject to the dedicated Movies/Music-only rules enforced by the discovery validator.
-
-### Main playlist review and discovery queues
-
-The **Review** group is reserved for manual checking of unresolved or questionable entries. The daily Bangladesh/India discovery workflow automatically populates **New Channels** with first streams for new channel identities and **New Backups** with alternate streams. Discovery does not automatically approve or promote candidates into curated groups; manual review is required. All three queues are unnumbered and hidden from Xtream.
-
-For operator-run utilities and their safety requirements, see [Manual maintenance tools](docs/manual-maintenance-tools.md).
-
-<table align="center">
-  <tr>
-    <td align="center" width="25%"><h3>🌏</h3><strong>Multi-country</strong><br><sub>Bangladesh, India, Pakistan and more</sub></td>
-    <td align="center" width="25%"><h3>📺</h3><strong>Country &amp; genre groups</strong><br><sub>Organized channel collections</sub></td>
-    <td align="center" width="25%"><h3>🌍</h3><strong>International</strong><br><sub>Companion international collection</sub></td>
-    <td align="center" width="25%"><h3>🗓️</h3><strong>XMLTV EPG</strong><br><sub>TV programme guide</sub></td>
-  </tr>
-</table>
 
 ---
 
