@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-09T17:17:00+00:00**
-Source playlist SHA-256: **f50a8a1a719081af7d1e77ccd1457ce89c860ec875ed99a5f933958bfdedae39**
+Generated: **2026-11-09T17:59:35+00:00**
+Source playlist SHA-256: **a80224275689d04a654f3fc01a4b30296f2ea27428dae1fcf51b66198a66bb9c**
 
 Status: **BLOCK**
 
@@ -49,8 +49,8 @@ New Channels and New Backups are active BD/IN-only review queues used by discove
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
-- **D Talk**
-- **Prime TV**
+- **Shikor TV Canada**
+- **Ten TV Prime**
 - **TV One UK**
 
 ## Metadata conflicts
