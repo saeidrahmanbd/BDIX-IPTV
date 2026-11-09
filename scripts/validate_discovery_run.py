@@ -357,6 +357,8 @@ def probe_mode(playlist, report, baseline, mode):
         seen.add(urlkey)
     probe_targets = [e for e in targets if e["start"] not in remove_starts]
     results = {}
+    verified_starts = set()
+    inconclusive_starts = set()
     with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
         futures = {pool.submit(probe_url, e["url"]): e for e in probe_targets}
         for future in concurrent.futures.as_completed(futures):
@@ -377,7 +379,8 @@ def probe_mode(playlist, report, baseline, mode):
             counts["verified streams"] += 1
         else:
             counts["primary streams retained as unverified"] += 1
-            details.append(f"- Retained {e['name']} for review — stream could not be conclusively verified ({reason}).")
+            inconclusive_starts.add(e["start"])
+            details.append(f"- Moved {e['name']} to Review — stream could not be conclusively verified ({reason}).")
         new_extinf, localized, unavailable = ensure_local_logo(e)
         if unavailable:
             remove_starts.add(e["start"])
@@ -388,8 +391,16 @@ def probe_mode(playlist, report, baseline, mode):
             continue
         if new_extinf != e["extinf"]:
             update_lines[e["start"]] = new_extinf
+        if status == "verified":
+            verified_starts.add(e["start"])
         if localized:
             counts["logos localized to repository assets"] += 1
+    if mode == "international":
+        promotions = promote_verified_candidates(probe_targets, verified_starts, inconclusive_starts, update_lines)
+        counts["verified primary channels promoted"] += sum(1 for _, _, target, _ in promotions if target not in {"Backup", "Review"})
+        counts["verified alternate streams moved to Backup"] += sum(1 for _, _, target, _ in promotions if target == "Backup")
+        counts["inconclusive candidates moved to Review"] += sum(1 for _, _, target, _ in promotions if target == "Review")
+        details.extend(f"- Promoted {name} from {old_group} to {target} — {reason}." for name, old_group, target, reason in promotions)
     remove_indices = set()
     by_start = {e["start"]: e for e in entries}
     for start in remove_starts:
@@ -409,6 +420,9 @@ def probe_mode(playlist, report, baseline, mode):
         f"- Mode: {mode}",
         f"- New entries and discovery queues probed: {len(probe_targets)}",
         f"- Verified live media responses: {counts['verified streams']}",
+        f"- Verified new primary channels automatically promoted: {counts['verified primary channels promoted']}",
+        f"- Verified alternate streams moved to Backup: {counts['verified alternate streams moved to Backup']}",
+        f"- Inconclusive candidates moved to Review: {counts['inconclusive candidates moved to Review']}",
         f"- Primary entries retained but not conclusively verified: {counts['primary streams retained as unverified']}",
         f"- Definitively dead/invalid candidates removed: {counts['removed invalid/dead or unverified backup entries']}",
         f"- Inconclusive primary/backup candidates retained for manual review: {counts['primary streams retained as unverified']}",
