@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Discover eligible channels into New Channels/New Backups for manual review.
 
-Bangladesh is unrestricted by genre. India excludes News, all Religious and
-Educational/Business-Finance channels; Indian Kids and Sports remain eligible.
+Bangladesh and India are excluded from International discovery entirely.
 Every other country is Movie/Music only. New candidates are never promoted
 automatically. Foreign country groups require five unique primary channels.
 Playback is checked by the downstream validation step.
@@ -121,26 +120,9 @@ def policy(a,name,allow_legacy_group=False):
  if not name or name_key in {"","na","unknown","test","demo","sample","placeholder","newchannel","unnamed","noname","notavailable","channel","tv"}:
   return None,"non-real/test channel",code
 
- # Bangladesh and India use the same rules as IPTV-Playlist, not the foreign
- # Movie/Music-only filter. Bangladesh is unrestricted by genre.
- if code=="BD": return "Bangladesh",None,code
- if code=="IN":
-  reason=bd_discovery.prohibited_channel(a,name,"IN")
-  if reason: return None,reason,code
-  # Preserve the explicit Indian Kids and Sports categories.
-  if KIDS_NAME_RE.search(text) or any(part in {"kid","kids","children","childrens","child"} for part in group_parts):
-   return "Kids",None,code
-  if SPORTS_NAME_RE.search(text) or any(part in {"sport","sports"} for part in group_parts):
-   return "Sports",None,code
-  language=(a.get("tvg-language") or "").casefold()
-  if re.search(r"\b(?:ben|bengali|bangla)\b",language+" "+text,re.I):
-   return "Indian Bangla",None,code
-  content_hint=norm(str(a.get("tvg-content","")))
-  movie=any(part in MOVIE_CATEGORY_PARTS for part in group_parts) or bool(MOVIE_NAME_RE.search(text)) or content_hint in {"movie","movies","film","films"}
-  music=any(part in MUSIC_CATEGORY_PARTS for part in group_parts) or bool(MUSIC_NAME_RE.search(text)) or content_hint in {"music","musics"}
-  if movie and not music: return "Indian Movies",None,code
-  if music and not movie: return "Indian Music",None,code
-  return "Indian Entertainment",None,code
+ # International discovery excludes Bangladesh and India, including alternate streams.
+ if code in {"BD","IN"}: return None,"Bangladesh/India excluded from International discovery",code
+ if code=="ZZ": return None,"country not verified",code
 
  # All other countries, including Pakistan, are Movies/Music only.
  if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
@@ -348,7 +330,7 @@ def existing_international_target(a,name,country_groups):
  policy_a=dict(a); policy_a["group-title"]="International"
  base,reason,code=policy(policy_a,name,allow_legacy_group=True)
  genre=infer_genre(policy_a,name)
- if base is None or (code not in {"BD","IN"} and not genre):
+ if base is None or not genre:
   return None,reason or "entry is not confidently classifiable under country policy",genre
  return primary_target(base,code,country_groups),None,genre
 def main():
@@ -430,7 +412,7 @@ def main():
    policy_a=dict(a); policy_a["group-title"]="New Backups"
    base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
-   if base is None or (policy_code not in {"BD","IN"} and not genre):
+   if base is None or not genre:
     filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
     continue
    queue_logo=local_logo(a,name)
