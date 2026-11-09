@@ -474,6 +474,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             ("JA TV", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/jtvbd12.stream/tracks-v1a1/mono.m3u8", "Review"),
             ("DD Yadagiri", "https://fta.ektv.in/live/678/master.m3u8", "Review"),
             ("G TV", "https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8", "Review"),
+            ("Sangeet Bangla", "https://tvsen6.aynaott.com/hT5jHczt/tracks-v1a1/mono.ts.m3u8", "Review"),
         ]
         for name, url, target in cases:
             info = channel(name, "Backup", url).splitlines()[0]
@@ -484,6 +485,8 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
         cases = [
             ("JA TV", "https://dish.porosh.com.bd/hls/jtvnews.m3u8", "Bangladesh"),
             ("KidDo MATIX", "https://cc-le0kohm4qt3mk.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-le0kohm4qt3mk/OTM/OTM_KiddoMatix-SCTE_SAMSUNG/playlist.m3u8", "Kids"),
+            ("Channel 24", "https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8", "Bangladesh"),
+            ("ZB Cartoon", "https://server.zillarbarta.com/zbcatun/video.m3u8", "Kids"),
         ]
         for name, url, source in cases:
             info = channel(name, "Review", url).splitlines()[0]
