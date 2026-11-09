@@ -47,4 +47,6 @@ PERMANENTLY_REMOVED_NAMES = (
 AUTHORIZED_ORPHAN_BACKUP_REMOVALS = {
     "bhi.channel.in": "https://server.livelegitpro.in/bhichannel/bhichannel/tracks-v1a1/mono.m3u8",
     "rplus.in@sd": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e5dcc9dc-3a33-4b19-a361-5a5b3aa022f7/index.m3u8",
+    # US kids feed is outside the IPTV-Playlist country/genre scope; retain its failed Review candidates.
+    "cartoonnetwork.us": "https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/playlist.m3u8",
 }
