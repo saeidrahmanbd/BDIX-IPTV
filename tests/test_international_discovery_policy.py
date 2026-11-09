@@ -24,6 +24,24 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             attrs["tvg-language"] = language
         return discovery.policy(attrs, name)
 
+    def test_curated_adult_group_is_preserved_but_backup_alternates_stay_backup(self):
+        adult_attrs = {
+            "group-title": "Adult",
+            "tvg-country": "US",
+            "tvg-id": "AdultChannelAlpha.us",
+        }
+        self.assertEqual(
+            reorg.classify(adult_attrs, "Adult Channel Alpha", "Adult", "US"),
+            ("Adult", None, None),
+        )
+
+        # The correction must not promote an alternate stream out of Backup.
+        backup_attrs = dict(adult_attrs, **{"group-title": "Backup"})
+        self.assertEqual(
+            reorg.classify(backup_attrs, "Adult Channel Alpha", "Backup", "US"),
+            ("Backup", None, None),
+        )
+
     def test_known_channel_aliases_share_one_identity_key(self):
         pairs = [
             ("Rupasi Bangla", "Ruposhi Bangla"),
@@ -566,6 +584,10 @@ class LegacyInternationalRepairPolicyTests(unittest.TestCase):
         self.assertEqual(
             legacy_repair.classify_primary_group(info("Hum TV", "PK"), "International"),
             "Pakistani",
+        )
+        self.assertEqual(
+            legacy_repair.classify_primary_group(info("Adult Channel Alpha", "US", "Adult"), "Adult"),
+            "Adult",
         )
 
 

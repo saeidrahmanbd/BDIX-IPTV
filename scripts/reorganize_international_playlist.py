@@ -197,6 +197,11 @@ def classify(a, name, group, country):
     key = channel_key(name)
     joined = f"{name} {a.get('tvg-id', '')} {a.get('channel-id', '')}"
 
+    # Adult is an explicit curated category, not a country-group candidate.
+    # Preserve its rows before name/content heuristics can demote them to Backup.
+    if group_key == "adult":
+        return "Adult", None, None
+
     # Health-flagged rows remain in Review until the stream checker clears them.
     if group_key == "review":
         return "Review", infer_kind(name, group, a), None
