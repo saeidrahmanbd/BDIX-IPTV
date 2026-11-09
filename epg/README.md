@@ -96,3 +96,11 @@ Never commit:
 - API keys or other secrets
 
 Use GitHub Actions secrets for credentials or private source endpoints.
+
+## External EPG source qualification
+
+The repository includes an isolated, read-only probe for the four XMLTV exports published by [amazeyourself/epg](https://github.com/amazeyourself/epg): KableOne, NeoTV+, Oli TV, and RunnTV.
+
+The probe is available through [epg-external-source-probe.yml](../.github/workflows/epg-external-source-probe.yml) and its implementation is [probe_amazeyourself_epg.py](../scripts/probe_amazeyourself_epg.py). It checks feed availability, XMLTV structure, explicit timezone handling, non-placeholder current/future schedules, and exact ID or unique normalized display-name matches against both maintained playlists.
+
+This is a qualification stage only. These feeds are not part of the production generator and do not write to `epg/epg.xml`, the mapping CSV, or playlists. Results are uploaded as a workflow artifact for review. A source may be considered for production only after its schedule quality, exact channel identity, regional compatibility, and public redistribution rights have been established. The upstream repository's code licence is not treated as a data licence.
