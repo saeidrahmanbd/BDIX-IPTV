@@ -279,6 +279,14 @@ def infer_genre(a,name):
  music=content in {"music","musics"} or any(p in MUSIC_CATEGORY_PARTS for p in group_parts) or bool(MUSIC_NAME_RE.search(text))
  if movie==music:return ""
  return "Movies" if movie else "Music"
+def queue_policy(a,name):
+ base,reason,code=policy(a,name)
+ genre=infer_genre(a,name)
+ if base is None:
+  return None,reason,code,genre
+ if code not in {"BD","IN","PK"} and not genre:
+  return None,"channel is not clearly Movies or Music",code,genre
+ return base,None,code,genre
 def special_group(a,name):
  text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
  content=norm(str(a.get("tvg-content","")))
@@ -434,10 +442,12 @@ def main():
    group="Fashion TV"
   elif old_key in {"new backup","new backups"} and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Backups"
-   base,reason,policy_code=policy(policy_a,name)
-   genre=infer_genre(policy_a,name)
-   if base is None or (policy_code not in {"BD","IN","PK"} and not genre):
+   base,reason,policy_code,genre=queue_policy(policy_a,name)
+   if base is None:
     filtered_existing.append((name,old,reason or "entry is not confidently classifiable under country policy"))
+    continue
+   if not safe_url(url_of(b)):
+    filtered_existing.append((name,old,"unsafe or tokenized URL"))
     continue
    queue_logo=local_logo(a,name)
    if not queue_logo:
@@ -467,10 +477,9 @@ def main():
     migrated.append((name,old,"Backup"))
   elif is_new:
    policy_a=dict(a); policy_a["group-title"]="New Backups" if old_key in {"new backup","new backups"} else "New Channels"
-   base,reason,policy_code=policy(policy_a,name)
-   genre=infer_genre(policy_a,name)
-   if base is None or (policy_code not in {"BD","IN","PK"} and not genre):
-    filtered_existing.append((name,old,reason or "new candidate did not pass country/content policy"))
+   base,reason,policy_code,genre=queue_policy(policy_a,name)
+   if base is None or not safe_url(url_of(b)):
+    filtered_existing.append((name,old,reason or "unsafe or ineligible discovery candidate"))
     continue
    group="New Backups" if old_key in {"new backup","new backups"} else "New Channels"
   else:
