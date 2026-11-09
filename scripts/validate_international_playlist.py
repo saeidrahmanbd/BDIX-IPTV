@@ -40,7 +40,7 @@ def normalized_stream_url(url):
 
 
 def foreign_movie_music_error(a, name, country_code):
-    """Return a policy error unless a foreign primary row is explicitly Movies/Music."""
+    """Require Movies/Music only for primary rows from countries outside BD/IN/PK."""
     code = str(country_code or "").strip().upper()
     if code in {"BD", "IN", "PK"}:
         return ""
