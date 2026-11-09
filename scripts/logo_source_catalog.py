@@ -597,6 +597,46 @@ DIRECT_LOGO_HINTS = {
         "license": "Station logo served by directory; reuse rights not specified",
         "license_url": "",
     },
+    "Star Gold Select": {
+        "url": "https://cdn.jiostar.com/jiostar/wp-content/uploads/2024/11/Star-Gold-Select-HD.png",
+        "format": "PNG",
+        "page": "https://www.jiostar.com/mediatoolkit/all-logos/",
+        "source": "JioStar official media toolkit (Star Gold Select HD)",
+        "license": "Official broadcaster/channel logo; rights retained by JioStar",
+        "license_url": "",
+    },
+    "FashionBox": {
+        "url": "https://spiintl.com/data/files/kcfinderUploadDir/images/logo/fashionboxhd-logo.png",
+        "format": "PNG",
+        "page": "https://spiintl.com/channels/fashionbox",
+        "source": "SPI International official FashionBox HD channel page",
+        "license": "Official channel logo; rights retained by SPI International",
+        "license_url": "",
+    },
+    "Fashion&LifeStyle": {
+        "url": "https://fast.ntvplus.tv/files/image/68/79/05/-channel%218rb.png",
+        "format": "PNG",
+        "page": "https://ntvplus.tv/channel/fashion-lifestyle-hd-562",
+        "source": "NTV+ official Fashion&LifeStyle HD channel listing image",
+        "license": "Official channel image served by NTV+; reuse rights not separately specified",
+        "license_url": "",
+    },
+    "Global Fashion Channel": {
+        "url": "https://globalfashionchannel.com/wp-content/uploads/2016/03/GFC400r.png",
+        "format": "PNG",
+        "page": "https://globalfashionchannel.com/about-2/",
+        "source": "Global Fashion Channel official website",
+        "license": "Official brand logo; trademark and copyright retained by Global Fashion Channel",
+        "license_url": "",
+    },
+    "Subin TV": {
+        "url": "https://www.subintv.in/SUBINLOGO.png",
+        "format": "PNG",
+        "page": "https://www.subintv.in/",
+        "source": "Subin TV official broadcaster website",
+        "license": "Official broadcaster logo; rights retained by Subin TV",
+        "license_url": "",
+    },
 }
 
 STOP_WORDS = {"hd", "uhd", "fhd", "sd", "4k", "8k", "1080p", "720p", "576p", "hevc", "h265", "h264"}
