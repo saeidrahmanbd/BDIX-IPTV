@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-09 06:15 UTC
+- Last scan: 2026-11-09 07:01 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12173
 - Existing playlist records: 3017
@@ -128,12 +128,12 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-11-09T06:16:37+00:00
+- Run timestamp: 2026-11-09T07:02:09+00:00
 - Mode: international
 - New entries and discovery queues probed: 350
-- Verified live media responses: 237
+- Verified live media responses: 232
 - Primary entries retained but not conclusively verified: 74
-- Definitively dead/invalid candidates removed: 39
+- Definitively dead/invalid candidates removed: 44
 - Inconclusive primary/backup candidates retained for manual review: 74
 - Duplicate discovery entries removed: 0
 - Country-group rows consolidated after stream probing: 0
@@ -152,6 +152,7 @@
 - Retained BS Film for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained BSTV (Pakistan) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed Captain from New Channels — HTTP 404.
+- Removed Cartoon Network (India) from New Channels — HTTP 404.
 - Retained Cine+ Classic for review — stream could not be conclusively verified (connection could not be confirmed: TimeoutError).
 - Removed Cinevault 80s from New Channels — HTTP 404.
 - Retained Colors Infinity for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
@@ -189,6 +190,7 @@
 - Removed Pluto TV Notti di Sangue from New Channels — HTTP 404.
 - Removed Pluto TV Notti di Terrore from New Channels — HTTP 404.
 - Removed Pluto TV Weihnachten im Sommer from New Channels — HTTP 404.
+- Removed Pogo from New Channels — HTTP 404.
 - Removed Prokino from New Channels — HTTP 404.
 - Retained QTV-3 for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Rakuten TV Action Movies Austria for review — stream could not be conclusively verified (HTTP 504; access/availability could not be confirmed).
@@ -197,6 +199,7 @@
 - Removed Rakuten TV Comedy Movies Finland from New Channels — HTTP 404.
 - Retained SAB TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Sony Pal for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Removed Sony SAB from New Channels — HTTP 404.
 - Retained Star Kiran for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Vokta TV for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Zee Bangla Sonar for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
@@ -238,43 +241,16 @@
 - Retained Sony Aath for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Sony Entertainment Television for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Sony Entertainment Television for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Sony Max for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Star Jalsha for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Star Sports 2 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 
 ## Final validation
 
-- Run timestamp: 2026-11-09T06:16:37+00:00
-- Validation status: FAIL
-- M3U entries parsed: 3041
+- Run timestamp: 2026-11-09T07:02:09+00:00
+- Validation status: PASS
+- M3U entries parsed: 3036
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
 - Discovery entries missing a logo (left blank rather than using a placeholder): 0
 - Non-local discovery logo references: 0
-- Geography/content policy issues: 22
+- Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
-
-### Blockers
-- non-Bangladesh/India entry lacks Movie/Music tag: A-Plus TV
-- non-Bangladesh/India entry lacks Movie/Music tag: Aaj Entertainment
-- non-Bangladesh/India entry lacks Movie/Music tag: Apna Channel
-- non-Bangladesh/India entry lacks Movie/Music tag: ATV (Pakistan)
-- non-Bangladesh/India entry lacks Movie/Music tag: AVT Khyber
-- non-Bangladesh/India entry lacks Movie/Music tag: Bol Entertainment
-- non-Bangladesh/India entry lacks Movie/Music tag: BSTV (Pakistan)
-- non-Bangladesh/India entry lacks Movie/Music tag: Express Entertainment
-- non-Bangladesh/India entry lacks Movie/Music tag: God Stands Kids Club TV
-- non-Bangladesh/India entry lacks Movie/Music tag: God Stands Kids Club TV Arabic
-- non-Bangladesh/India entry lacks Movie/Music tag: God Stands Kids Club TV Chinese
-- non-Bangladesh/India entry lacks Movie/Music tag: God Stands Kids Club TV Urdu
-- non-Bangladesh/India entry lacks Movie/Music tag: Jeremiah TV
-- non-Bangladesh/India entry lacks Movie/Music tag: Kay2
-- non-Bangladesh/India entry lacks Movie/Music tag: Kids Zone
-- non-Bangladesh/India entry lacks Movie/Music tag: LTN Family
-- non-Bangladesh/India entry lacks Movie/Music tag: Masala TV
-- non-Bangladesh/India entry lacks Movie/Music tag: Mehran TV
-- non-Bangladesh/India entry lacks Movie/Music tag: Paighan TV
-- non-Bangladesh/India entry lacks Movie/Music tag: Pashto 1
-- non-Bangladesh/India entry lacks Movie/Music tag: Play Entertainment
-- non-Bangladesh/India entry lacks Movie/Music tag: SAB TV
