@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-09T18:00:28+00:00**
-IPTV-Playlist.m3u SHA-256: **a80224275689d04a654f3fc01a4b30296f2ea27428dae1fcf51b66198a66bb9c**
+Generated: **2026-11-09T18:12:19+00:00**
+IPTV-Playlist.m3u SHA-256: **7f2e81547740b18d20fa6f73e80fac1aa4b99bf7321468f0467d55b7e6d74a42**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
@@ -95,6 +95,54 @@ These streams are not automatically removed. URL credentials, user information a
 | Rally TV | Sports | credential-bearing route pattern (values redacted) | `https://rally-tv-live.akamaized.net/hls/live/REDACTED/REDACTED/master.m3u8` |
 | Real Madrid TV | Sports | credential-bearing route pattern (values redacted) | `https://rmtv.akamaized.net/hls/live/REDACTED/REDACTED/master.m3u8` |
 | TR Sport | Sports | credential-bearing route pattern (values redacted) | `https://livetr.teleromagna.it/mia/live/playlist.m3u8` |
+| Animal Planet | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd_abr/index.m3u8` |
+| Animal Planet | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8` |
+| Animal Planet | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/animal_planet_sd_abr/index.m3u8` |
+| Asian TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/asian_tv_abr/index.m3u8` |
+| B4U Movies | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/b4u_movies_abr/index.m3u8` |
+| B4U Music | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8` |
+| Bijoy TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/bijoy_tv_abr/index.m3u8` |
+| Bijoy TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/bijoy_tv_abr/index.m3u8` |
+| Cartoon Network | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/cn_hd_abr/index.m3u8` |
+| Cartoon Network UK | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8` |
+| Channel 1 | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/channel_1_hd_abr/index.m3u8` |
+| Channel 1 | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8` |
+| Channel 1 | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/REDACTED/REDACTED/channel_1_hd_720/chunks.m3u8` |
+| Channel 24 | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/index.m3u8` |
+| Channel 24 | Review | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/channel-24-hd-1/index.m3u8` |
+| Channel 24 | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/channel_24_abr/index.m3u8` |
+| Desh TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/desh_tv_abr/index.m3u8` |
+| Discovery Channel (India) | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_hd_abr/index.m3u8` |
+| Discovery Channel (India) | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_sd_abr/index.m3u8` |
+| Discovery Kids | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_kids_abr/index.m3u8` |
+| Discovery Science | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_science_abr/index.m3u8` |
+| Ekattor TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/ekattor_tv_abr/index.m3u8` |
+| Ekhon TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8` |
+| Ekhon TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8` |
+| Eurosport | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8` |
+| Global TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/global_tv_abr/index.m3u8` |
+| Hum TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8` |
+| Hum TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/REDACTED/REDACTED/hum_tv_720/chunks.m3u8` |
+| Hum TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/hum_tv_abr/index.m3u8` |
+| Independent TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/index.m3u8` |
+| Independent TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/REDACTED/REDACTED/independent_tv_720/chunks.m3u8` |
+| Islamic TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/islamic_tv/index.m3u8` |
+| Jamuna TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8` |
+| Mohona TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8` |
+| Movie Bangla | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/movie_bangla_abr/index.m3u8` |
+| Nexus TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/nexus_tv_abr/index.m3u8` |
+| Pogo | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/pogo_sd_abr/index.m3u8` |
+| Raj Musix Tamil | Review | credential-bearing route pattern (values redacted) | `https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u8` |
+| Rajdhani TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8` |
+| Somoy TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/somoy_tv_abr/index.m3u8` |
+| Sony Aath | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8` |
+| Sony Aath | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/sony_aath_abr/index.m3u8` |
+| Sony Max 2 | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/max_2_abr/index.m3u8` |
+| Sony SAB | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/sub_hd_abr/index.m3u8` |
+| TLC (India) | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/tlc_hd_abr/index.m3u8` |
+| TLC (India) | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/tlc_sd_abr/index.m3u8` |
+| Zee Tamil | Review | credential-bearing route pattern (values redacted) | `https://d2o8pibksxtln6.cloudfront.net/live/REDACTED/REDACTED/hls/Zee_Tamil_HD.m3u8` |
+| DD Yadagiri | Review | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/678/master.m3u8` |
 | Al Quran Al Kareem TV | Backup | credential-bearing route pattern (values redacted) | `http://m.live.net.sa:1935/live/quran/playlist.m3u8` |
 | ATN Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/atn-bangla-1/index.m3u8` |
 | ATN News | Backup | dynamic/proxy endpoint | `https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8` |
@@ -135,7 +183,6 @@ These streams are not automatically removed. URL credentials, user information a
 | DD Sports | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1161/master.m3u8` |
 | DD Tamil | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1737/master.m3u8` |
 | DD Urdu | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/8/master.m3u8` |
-| DD Yadagiri | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/678/master.m3u8` |
 | Dhoom Music Bangla | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1456/master.m3u8` |
 | E24 | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/159/master.m3u8` |
 | Enter TV | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8` |
@@ -195,50 +242,3 @@ These streams are not automatically removed. URL credentials, user information a
 | Vendhar TV | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1271/master.m3u8` |
 | Vendhar TV | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/223/master.m3u8` |
 | Zee Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8` |
-| Animal Planet | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd_abr/index.m3u8` |
-| Animal Planet | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8` |
-| Animal Planet | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/animal_planet_sd_abr/index.m3u8` |
-| Asian TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/asian_tv_abr/index.m3u8` |
-| B4U Movies | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/b4u_movies_abr/index.m3u8` |
-| B4U Music | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8` |
-| Bijoy TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/bijoy_tv_abr/index.m3u8` |
-| Bijoy TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/bijoy_tv_abr/index.m3u8` |
-| Cartoon Network | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/cn_hd_abr/index.m3u8` |
-| Cartoon Network UK | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8` |
-| Channel 1 | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/channel_1_hd_abr/index.m3u8` |
-| Channel 1 | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8` |
-| Channel 1 | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/REDACTED/REDACTED/channel_1_hd_720/chunks.m3u8` |
-| Channel 24 | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/index.m3u8` |
-| Channel 24 | Review | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/channel-24-hd-1/index.m3u8` |
-| Channel 24 | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/channel_24_abr/index.m3u8` |
-| Desh TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/desh_tv_abr/index.m3u8` |
-| Discovery Channel (India) | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_hd_abr/index.m3u8` |
-| Discovery Channel (India) | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_sd_abr/index.m3u8` |
-| Discovery Kids | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_kids_abr/index.m3u8` |
-| Discovery Science | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_science_abr/index.m3u8` |
-| Ekattor TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/ekattor_tv_abr/index.m3u8` |
-| Ekhon TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8` |
-| Ekhon TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8` |
-| Eurosport | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8` |
-| Global TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/global_tv_abr/index.m3u8` |
-| Hum TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8` |
-| Hum TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/REDACTED/REDACTED/hum_tv_720/chunks.m3u8` |
-| Hum TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/hum_tv_abr/index.m3u8` |
-| Independent TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/index.m3u8` |
-| Independent TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/REDACTED/REDACTED/independent_tv_720/chunks.m3u8` |
-| Islamic TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/islamic_tv/index.m3u8` |
-| Jamuna TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8` |
-| Mohona TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8` |
-| Movie Bangla | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/movie_bangla_abr/index.m3u8` |
-| Nexus TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/nexus_tv_abr/index.m3u8` |
-| Pogo | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/pogo_sd_abr/index.m3u8` |
-| Raj Musix Tamil | Review | credential-bearing route pattern (values redacted) | `https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u8` |
-| Rajdhani TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8` |
-| Somoy TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/somoy_tv_abr/index.m3u8` |
-| Sony Aath | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8` |
-| Sony Aath | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/sony_aath_abr/index.m3u8` |
-| Sony Max 2 | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/max_2_abr/index.m3u8` |
-| Sony SAB | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/sub_hd_abr/index.m3u8` |
-| TLC (India) | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/tlc_hd_abr/index.m3u8` |
-| TLC (India) | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/tlc_sd_abr/index.m3u8` |
-| Zee Tamil | Review | credential-bearing route pattern (values redacted) | `https://d2o8pibksxtln6.cloudfront.net/live/REDACTED/REDACTED/hls/Zee_Tamil_HD.m3u8` |

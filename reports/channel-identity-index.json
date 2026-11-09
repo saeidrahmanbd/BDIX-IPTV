@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T18:00:28+00:00",
+  "generated": "2026-11-09T18:12:19+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -459,12 +459,12 @@
         "animalplanet.in@sd"
       ],
       "groups": [
-        "Backup",
+        "Documentary & Wildlife",
         "Review"
       ],
       "streams": 4,
-      "primary": 3,
-      "backup": 1
+      "primary": 4,
+      "backup": 0
     },
     "anjantv": {
       "names": [
@@ -1088,12 +1088,11 @@
         "cartoonnetwork.us"
       ],
       "groups": [
-        "Backup",
         "Review"
       ],
-      "streams": 4,
+      "streams": 3,
       "primary": 3,
-      "backup": 1
+      "backup": 0
     },
     "ccv": {
       "names": [
@@ -2798,12 +2797,12 @@
         "ddyadagiri.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "Review"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "deentv": {
       "names": [
@@ -3744,8 +3743,8 @@
         "Review"
       ],
       "streams": 6,
-      "primary": 3,
-      "backup": 3
+      "primary": 4,
+      "backup": 2
     },
     "gbaj400042t1": {
       "names": [
@@ -4423,12 +4422,11 @@
         "jatv.bd"
       ],
       "groups": [
-        "Backup",
-        "Bangladesh"
+        "Review"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "jhankartv": {
       "names": [
@@ -4683,7 +4681,7 @@
         "kiddomatix.us"
       ],
       "groups": [
-        "Kids"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
