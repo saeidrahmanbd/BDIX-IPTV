@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-09T10:42:45+00:00**
+Generated: **2026-11-09T11:30:14+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **0680bfb8102b091d27c93ed5c2b58c175616473b7d81543b8dfdfcb0f1fa6b54**
+- IPTV-Playlist.m3u SHA-256: **c0c115f5324a59094ecc502e03a3358f243ec4f6e74dc583e650e5009bf997b6**
 - International-Playlist.m3u SHA-256: **0b7ad38c19aeedcba6d5b239ca9a83747bc8ae4c21ec6983a355e214665ebde1**
 
 ## Summary
@@ -1033,12 +1033,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | See TV | see-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Tag TV | tag-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Waseb TV | waseb-tv.png | Pakistani |
-| IPTV-Playlist.m3u | Fashion&LifeStyle | generated-fallback-fashion-1-85fe46a6.svg | Fashion |
-| IPTV-Playlist.m3u | FashionBox | generated-fallback-fashion-1-85fe46a6.svg | Fashion |
-| IPTV-Playlist.m3u | FashionTV | fashion-tv-aa7f9461cf.png | Fashion |
-| IPTV-Playlist.m3u | FashionTV Paris L'Original | fashion-tv-aa7f9461cf.png | Fashion |
-| IPTV-Playlist.m3u | FashionTV Secrets | fashion-tv-aa7f9461cf.png | Fashion |
-| IPTV-Playlist.m3u | Global Fashion Channel | generated-fallback-digital-fashion-7f86a23d.svg | Fashion |
+| IPTV-Playlist.m3u | Fashion&LifeStyle | generated-fallback-fashion-1-85fe46a6.svg | International |
+| IPTV-Playlist.m3u | FashionBox | generated-fallback-fashion-1-85fe46a6.svg | International |
+| IPTV-Playlist.m3u | FashionTV | fashion-tv-aa7f9461cf.png | International |
+| IPTV-Playlist.m3u | FashionTV Paris L'Original | fashion-tv-aa7f9461cf.png | International |
+| IPTV-Playlist.m3u | FashionTV Secrets | fashion-tv-aa7f9461cf.png | International |
+| IPTV-Playlist.m3u | Global Fashion Channel | generated-fallback-digital-fashion-7f86a23d.svg | International |
 | IPTV-Playlist.m3u | AMC Thrillers | amc-triller.png | International |
 | IPTV-Playlist.m3u | Bang Bang TV | bang-bang-tv.png | International |
 | IPTV-Playlist.m3u | CMC TV | cmc-tv.png | International |

@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-09T10:42:46+00:00**
-Source playlist SHA-256: **0680bfb8102b091d27c93ed5c2b58c175616473b7d81543b8dfdfcb0f1fa6b54**
+Generated: **2026-11-09T11:30:15+00:00**
+Source playlist SHA-256: **c0c115f5324a59094ecc502e03a3358f243ec4f6e74dc583e650e5009bf997b6**
 
 Status: **BLOCK**
 
@@ -82,7 +82,7 @@ New Channels/New Backups contain only validated BD/IN entries.
 | Subin TV | Indian Entertainment | generated-fallback-channel.svg |
 | Tamilan TV | Indian Entertainment | generated-fallback-channel.svg |
 | Unique TV | Indian Entertainment | generated-fallback-channel.svg |
-| Fashion&LifeStyle | Fashion | generated-fallback-fashion-1-85fe46a6.svg |
-| FashionBox | Fashion | generated-fallback-fashion-1-85fe46a6.svg |
-| Global Fashion Channel | Fashion | generated-fallback-digital-fashion-7f86a23d.svg |
+| Fashion&LifeStyle | International | generated-fallback-fashion-1-85fe46a6.svg |
+| FashionBox | International | generated-fallback-fashion-1-85fe46a6.svg |
+| Global Fashion Channel | International | generated-fallback-digital-fashion-7f86a23d.svg |
 | Star Gold Select | Backup | star-gold-select.png |

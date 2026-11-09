@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-09T10:42:45.994255+00:00**
-Source playlist SHA-256: **0680bfb8102b091d27c93ed5c2b58c175616473b7d81543b8dfdfcb0f1fa6b54**
+Generated: **2026-11-09T11:30:15.390351+00:00**
+Source playlist SHA-256: **c0c115f5324a59094ecc502e03a3358f243ec4f6e74dc583e650e5009bf997b6**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -30,9 +30,9 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **10**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **2**
+- Category block-order issues: **1**
 - Category registry issues: **1**
-- Alphabetical ordering issues: **3**
+- Alphabetical ordering issues: **4**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **8**
 - Embedded Xtream-style credential paths (redacted): **0**
@@ -46,10 +46,10 @@ Missing country/language values are informational, not a reason to delete, recla
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
-| Fashion | 0 | 6 |
 | Indian Entertainment | 0 | 2 |
 | Indian Movies | 0 | 1 |
 | Indian Music | 0 | 1 |
+| International | 0 | 6 |
 
 ## Review Queue Country Verification
 
@@ -982,10 +982,10 @@ None.
 
 ## Ordering
 
-- category block **Fashion** — out of canonical block order
 - category block **Review** — out of canonical block order
 - **Bangladesh** — **15 — Channel Europe** appears after **609 — Channel 9**
 - **Bangladesh** — **53 — SA TV** appears after **598 — Rupashi Bangla TV**
+- **International** — **24 Hour Free Movies** appears after **Global Fashion Channel**
 - **International** — **4ever Cinema** appears after **30A Music**
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 

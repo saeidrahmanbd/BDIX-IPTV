@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-09T10:43:22+00:00**
-IPTV-Playlist.m3u SHA-256: **0680bfb8102b091d27c93ed5c2b58c175616473b7d81543b8dfdfcb0f1fa6b54**
+Generated: **2026-11-09T11:30:52+00:00**
+IPTV-Playlist.m3u SHA-256: **c0c115f5324a59094ecc502e03a3358f243ec4f6e74dc583e650e5009bf997b6**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
@@ -62,7 +62,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Tarang TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8` |
 | Unique TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/688/master.m3u8` |
 | Zee Kannada | Indian Entertainment | sensitive query parameter (value redacted) | `https://yuppnimresmum.akamaized.net/28072023/smil:zeekannadahd.smil/playlist.m3u8?hdnts=REDACTED` |
-| FashionBox | Fashion | credential-bearing route pattern (values redacted) | `https://dash2.antik.sk/live/test_fashionbox_medium_atk/playlist.m3u8` |
+| FashionBox | International | credential-bearing route pattern (values redacted) | `https://dash2.antik.sk/live/test_fashionbox_medium_atk/playlist.m3u8` |
 | DW News | International | credential-bearing route pattern (values redacted) | `https://dwamdstream102.akamaized.net/hls/live/REDACTED/REDACTED/stream02/streamPlaylist.m3u8` |
 | M20 Music | International | credential-bearing route pattern (values redacted) | `https://streamcdne2-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/REDACTED/REDACTED/chunklist_b1064000.m3u8` |
 | Totalmusic | International | credential-bearing route pattern (values redacted) | `https://cdn.global.elektamedia.com/live/REDACTED/REDACTED/SA_LIVE_hls_enc/master.m3u8` |

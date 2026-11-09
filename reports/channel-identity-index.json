@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T10:43:22+00:00",
+  "generated": "2026-11-09T11:30:52+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -3573,7 +3573,7 @@
         "fashionbox.nl@sd"
       ],
       "groups": [
-        "Fashion"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -3587,7 +3587,7 @@
         "fashionlifestyle.ru@sd"
       ],
       "groups": [
-        "Fashion"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -3601,7 +3601,7 @@
         "fashiontv.ru@sd"
       ],
       "groups": [
-        "Fashion"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -3615,7 +3615,7 @@
         "fashiontvparisloriginal.fr@sd"
       ],
       "groups": [
-        "Fashion"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -3629,7 +3629,7 @@
         "fashiontvsecrets.fr@hd"
       ],
       "groups": [
-        "Fashion"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -3799,7 +3799,7 @@
         "globalfashionchannel.us@sd"
       ],
       "groups": [
-        "Fashion"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
