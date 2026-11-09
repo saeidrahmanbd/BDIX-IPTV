@@ -3286,8 +3286,6 @@ http://103.151.60.162:2122/play/a014/index.m3u8?hls
 http://163.61.226.31:9981/stream/channelid/1743466790?profile=pass
 #EXTINF:-1 tvg-id="Star.Jalsha.in" tvg-language="ben" channel-id="Star.Jalsha.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-country="IN" group-title="New Backups" tvg-name="Star Jalsha",Star Jalsha
 http://103.151.60.162:2122/play/a00w/index.m3u8?hls
-#EXTINF:-1 tvg-id="StarJalsha.in@SD" channel-id="StarJalsha.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/star-jalsha-1080p-geo-blocked.png" tvg-country="IN" group-title="New Backups" tvg-name="Star Jalsha [ ]",Star Jalsha [ ]
-http://cdn98.com/play/live.php?extension=ts&mac=00:1A:79:99:54:11&play_token=o1cczsG9wV&stream=225805
 #EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-language="eng" channel-id="StarMoviesSelect.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/star-movies-select.png" tvg-country="IN" tvg-content="Movies" group-title="New Backups" tvg-name="Star Movies Select",Star Movies Select
 https://livetv.shamon-cable.net:8443/Star-movies-select/index.m3u8
 #EXTINF:-1 tvg-id="StarSports2.in" tvg-language="eng" channel-id="StarSports2.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2.png" tvg-country="IN" group-title="New Backups" tvg-name="Star Sports 2",Star Sports 2
@@ -6042,5 +6040,6 @@ https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg0
 https://zoomoo-samsungau.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.1-international-ru-music" channel-id="custom.1-international-ru-music" tvg-language="rus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-international.png" tvg-country="RU" group-title="Backup" tvg-name="Музыка 1 International",Музыка 1 International
 https://kino-1.catcast.tv/content/37742/index.m3u8
+
 
 
