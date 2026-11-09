@@ -163,7 +163,7 @@ def main():
             target, reason, code = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
             if target is None:
                 raise SystemExit(f"Channel violates country/content policy in {group}: {name!r} ({reason or 'not eligible'}).")
-            if code not in {"BD", "IN"}:
+            if code not in {"BD", "IN", "PK"}:
                 content = (a.get("tvg-content") or "").strip().casefold()
                 if content not in {"movies", "movie", "music", "musics"}:
                     raise SystemExit(f"Non-Bangladesh/India/Pakistan review entry is not tagged Movies/Music: {name!r} in {group!r}.")
