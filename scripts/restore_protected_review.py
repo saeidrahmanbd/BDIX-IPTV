@@ -132,9 +132,12 @@ def canonical_url_base(url: str) -> str:
     parsed = urlsplit(stream_url_key(url))
     if not parsed.netloc or not parsed.path:
         return ""
-    path = parsed.path.rstrip("/")
+    # This helper is used only for the owner-allowlisted Sparkle Movies
+    # duplicate endpoint, whose known CDN route is case-insensitive. Do not use
+    # it for general stream identity comparisons.
+    path = parsed.path.casefold().rstrip("/")
     path = re.sub(r"\.(?:m3u8?|mpd)$", "", path, flags=re.IGNORECASE)
-    return parsed.netloc + path
+    return parsed.netloc.casefold() + path
 
 
 def is_authorized_orphan_backup_removal(info: str, url: str) -> bool:
