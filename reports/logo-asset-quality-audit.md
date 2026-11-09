@@ -1,24 +1,24 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-09T02:59:09+00:00**
+Generated: **2026-11-09T03:43:43+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **8675200ab8b37acc114ba0d5fc456d80611f2715c3226f08837681133391c6b5**
-- International-Playlist.m3u SHA-256: **e82b876b16ceeb0ef3eaaf434c50d2d793b985a7e5fe1205230f2c14c620d6ff**
+- International-Playlist.m3u SHA-256: **77d479da50947b78e831995c97d6eccfbb7af8d6bac6b04e829115c707dbb143**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **695**
-- Playlist references whose asset stem differs from the normalized channel name: **1294**
-- Unreferenced files immediately inside logos/: **1469** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1291**
+- Unreferenced files immediately inside logos/: **1470** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -157,9 +157,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | rouge-tv-5bb327e21c.png | 114×42 | no |
 | ryan-and-friends-a5fae48e0c.png | 512×63 | no |
 | sa-tv.png | 187×53 | yes |
-| smart-radio-6c4415267f.png | 245×40 | yes |
+| smart-radio-6c4415267f.png | 245×40 | no |
 | songtv-russia-53ffc24d1b.png | 141×30 | yes |
-| sport-3-be6e1e361e.png | 325×60 | yes |
+| sport-3-be6e1e361e.png | 325×60 | no |
 | sport-4-19a83fa7a4.png | 329×60 | no |
 | sports-grid.png | 141×42 | yes |
 | sportsgrid-bb9303e31f.png | 141×42 | no |
@@ -1328,6 +1328,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Vaanavil TV | vaanavil-tv.png | Indian Music |
 | International-Playlist.m3u | &TV | tv.png | Indian Entertainment |
 | International-Playlist.m3u | Alright! TV | alright-tv.png | Indian Entertainment |
+| International-Playlist.m3u | Amazing Discoveries TV | amazing-discoveries-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Anjan TV | anjan-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Baiscope TV | baiscope-tv.png | Indian Entertainment |
@@ -1663,11 +1664,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | VAM TV | vam-tv-6d3bc0b9e5.png | International |
 | International-Playlist.m3u | VIP TV | vip-tv-720p.png | International |
 | International-Playlist.m3u | ZICO TV | zico-tv-cfebb586da.png | International |
-| International-Playlist.m3u | Amazing Discoveries TV | amazing-discoveries-tv.png | Documentary & Wildlife |
 | International-Playlist.m3u | DISNEY CHANNEL [IN] | disney-channel-india.png | Kids |
 | International-Playlist.m3u | Green Gold TV | green-gold-tv.png | Kids |
-| International-Playlist.m3u | Islamic TV | islamic-tv.png | Religious |
-| International-Playlist.m3u | Sqala TV | sqala-tv-1080p-d174c17569.png | Sports |
 | International-Playlist.m3u | &TV International | tv-international-1080p.png | Review |
 | International-Playlist.m3u | AFN TV | afn-tv.png | Review |
 | International-Playlist.m3u | AlbKanale Music TV | albkanale-music-tv-hd-1080p.png | Review |
@@ -1739,7 +1737,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Unique TV | unique-tv.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv.svg | Review |
 | International-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Review |
-| International-Playlist.m3u | Discovery Channel (India) | discovery-channel-india.png | New Channels |
 | International-Playlist.m3u | DocuBay TV | docubay-tv.png | New Channels |
 | International-Playlist.m3u | Epic TV Digital | epic-tv-digital-1080p.png | New Channels |
 | International-Playlist.m3u | Lollywood HD TV | lollywood-hd-tv.png | New Channels |
@@ -1849,9 +1846,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | New Backups |
 | International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | New Backups |
 | International-Playlist.m3u | Corazon TV | corazon-tv.png | New Backups |
-| International-Playlist.m3u | Discovery Channel (India) | discovery-channel-india.png | New Backups |
 | International-Playlist.m3u | Evrokino | evrokino-hd-1080p.png | New Backups |
-| International-Playlist.m3u | History TV18 HD [ ] | history-tv18-hd-1080p-geo-blocked.png | New Backups |
 | International-Playlist.m3u | Kappa TV | kappa-tv.png | New Backups |
 | International-Playlist.m3u | MBC TV | mbc-tv.png | New Backups |
 | International-Playlist.m3u | Movies Now | movies-now-hd-1080p.png | New Backups |
@@ -2025,6 +2020,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Inter TV (Italy) | inter-tv-italy-014d12b302.png | Backup |
 | International-Playlist.m3u | Iqraa TV | iqraa-tv.png | Backup |
 | International-Playlist.m3u | Islam TV Urdu | islam-tv.png | Backup |
+| International-Playlist.m3u | Islamic TV | islamic-tv.png | Backup |
 | International-Playlist.m3u | Iunior TV | iunior-tv-84b41aacae.png | Backup |
 | International-Playlist.m3u | Jalwa TV | jalwa-tv.png | Backup |
 | International-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
@@ -2162,6 +2158,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Sport TV | sport-tv-c190ab4c27.png | Backup |
 | International-Playlist.m3u | Sports First TV | sports-first-tv.png | Backup |
 | International-Playlist.m3u | Sporty TV | sporty-tv-092e0d27cf.jpg | Backup |
+| International-Playlist.m3u | Sqala TV | sqala-tv-1080p-d174c17569.png | Backup |
 | International-Playlist.m3u | Starz Kids & Family | starz-kids-and-family-6c2cde1a69.png | Backup |
 | International-Playlist.m3u | Subin TV | subin-tv.png | Backup |
 | International-Playlist.m3u | Sunnah TV | sunnah-tv.png | Backup |

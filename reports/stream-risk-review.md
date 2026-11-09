@@ -1,6 +1,6 @@
 # Stream Risk Review
 
-Generated: **2026-11-09T02:59:58+00:00**
+Generated: **2026-11-09T03:44:13+00:00**
 IPTV-Playlist.m3u SHA-256: **8675200ab8b37acc114ba0d5fc456d80611f2715c3226f08837681133391c6b5**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
@@ -18,147 +18,147 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 998 |
-| Reachable | 837 |
-| Failed this check | 161 |
+| Reachable | 859 |
+| Failed this check | 139 |
 | Persistent failures (3+ consecutive) | 132 |
-| HTTP 404 (not found) | 6 |
-| HTTP 5xx (server) | 7 |
-| Timeout | 42 |
+| HTTP 404 (not found) | 9 |
+| HTTP 5xx (server) | 8 |
+| Timeout | 16 |
 
 ### Persistent failures
 
-- **9X Jalwa** — Backup — consecutive failures: **68** — HTTP 403
-- **Aakaash Aath** — Backup — consecutive failures: **68** — HTTP 403
-- **Ananda TV** — Backup — consecutive failures: **6** — Connection
-- **B4U Movies** — Backup — consecutive failures: **6** — Connection
-- **Channel 24** — Backup — consecutive failures: **6** — Connection
-- **Colors** — Backup — consecutive failures: **6** — Connection
-- **Dangal 2** — Backup — consecutive failures: **68** — HTTP 403
-- **Deepto TV** — Backup — consecutive failures: **6** — Connection
-- **Deewana** — Backup — consecutive failures: **3** — DNS
-- **Epic Bhojpuri** — Backup — consecutive failures: **68** — HTTP 403
-- **Goldmines 2** — Backup — consecutive failures: **68** — HTTP 403
-- **Goldmines Action** — Backup — consecutive failures: **68** — HTTP 403
-- **Goldmines Bollywood** — Backup — consecutive failures: **68** — HTTP 403
-- **Independent TV** — Backup — consecutive failures: **6** — Connection
-- **Jalsha Movies** — Backup — consecutive failures: **6** — Connection
-- **Kairali TV** — Backup — consecutive failures: **68** — HTTP 403
-- **Kairali We** — Backup — consecutive failures: **49** — HTTP 403
-- **Khushboo Bangla** — Backup — consecutive failures: **68** — HTTP 403
-- **MH One Movies** — Backup — consecutive failures: **30** — HTTP 403
-- **Mazhavil Manorama** — Backup — consecutive failures: **68** — HTTP 403
-- **Ramdhenu** — Backup — consecutive failures: **68** — HTTP 403
-- **Sony Entertainment TV** — Backup — consecutive failures: **6** — Connection
-- **Star Jalsha** — Backup — consecutive failures: **6** — Connection
-- **Star Sports 2** — Backup — consecutive failures: **56** — HTTP 403
-- **Zee TV** — Backup — consecutive failures: **6** — Connection
-- **Bengali Beats** — Bangladesh — consecutive failures: **3** — DNS
-- **Duronto TV** — Bangladesh — consecutive failures: **6** — Connection
-- **G TV** — Bangladesh — consecutive failures: **6** — Connection
-- **Star News** — Bangladesh — consecutive failures: **6** — Connection
-- **Nat Geo TV** — Documentary & Wildlife — consecutive failures: **6** — Connection
-- **Aakaash Aath** — Indian Bangla — consecutive failures: **68** — HTTP 403
-- **KTV Bangla** — Indian Bangla — consecutive failures: **4** — HTTP 404
-- **Khushboo Bangla** — Indian Bangla — consecutive failures: **68** — HTTP 403
-- **Sun Bangla** — Indian Bangla — consecutive failures: **6** — Connection
-- **Asianet Middle East** — Indian Entertainment — consecutive failures: **68** — HTTP 403
-- **Kairali Arabia** — Indian Entertainment — consecutive failures: **68** — HTTP 403
-- **Kerala Vision** — Indian Entertainment — consecutive failures: **68** — HTTP 403
-- **Mahaa Max** — Indian Entertainment — consecutive failures: **68** — HTTP 403
-- **Pear TV** — Indian Entertainment — consecutive failures: **68** — HTTP 403
-- **Siri Kannada** — Indian Entertainment — consecutive failures: **68** — HTTP 403
-- **Sooriyan TV** — Indian Entertainment — consecutive failures: **3** — DNS
-- **Star Bharat** — Indian Entertainment — consecutive failures: **6** — Connection
-- **Star Plus** — Indian Entertainment — consecutive failures: **6** — Connection
-- **Studio Yuva** — Indian Entertainment — consecutive failures: **68** — HTTP 403
-- **Sun Surya** — Indian Entertainment — consecutive failures: **54** — HTTP 403
-- **Sun TV** — Indian Entertainment — consecutive failures: **54** — HTTP 403
-- **Vanitha TV** — Indian Entertainment — consecutive failures: **68** — HTTP 403
-- **&pictures** — Indian Movies — consecutive failures: **6** — Connection
-- **Epic Bhojpuri** — Indian Movies — consecutive failures: **68** — HTTP 403
-- **Goldmines 2** — Indian Movies — consecutive failures: **68** — HTTP 403
-- **Goldmines Action** — Indian Movies — consecutive failures: **68** — HTTP 403
-- **MH One Movies** — Indian Movies — consecutive failures: **30** — HTTP 403
-- **Movies Now** — Indian Movies — consecutive failures: **6** — Connection
-- **Star Movies** — Indian Movies — consecutive failures: **6** — Connection
-- **Star Movies Select** — Indian Movies — consecutive failures: **6** — Connection
-- **Zee Bangla Sonar** — Indian Movies — consecutive failures: **6** — Connection
-- **7S Music** — Indian Music — consecutive failures: **68** — HTTP 403
-- **Andy Haryana** — Indian Music — consecutive failures: **68** — HTTP 403
-- **Deewana** — Indian Music — consecutive failures: **3** — DNS
-- **Kappa TV (Music)** — Indian Music — consecutive failures: **68** — HTTP 403
-- **MH One Dil Se** — Indian Music — consecutive failures: **30** — HTTP 403
-- **Raj Musix Kannada** — Indian Music — consecutive failures: **68** — HTTP 403
-- **Ramdhenu** — Indian Music — consecutive failures: **68** — HTTP 403
-- **Sangeet Bhojpuri** — Indian Music — consecutive failures: **68** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **37** — HTTP 403
-- **Bantul the Great** — Kids — consecutive failures: **3** — DNS
-- **Doraemon TV** — Kids — consecutive failures: **3** — DNS
-- **Hungama** — Kids — consecutive failures: **6** — Connection
-- **KidDo MATIX** — Kids — consecutive failures: **16** — HTTP 504
-- **Nick Bangla** — Kids — consecutive failures: **6** — Connection
-- **Tom and Jerry** — Kids — consecutive failures: **3** — DNS
-- **9XM** — New Backups — consecutive failures: **6** — HTTP 403
-- **ATN Bangla** — New Backups — consecutive failures: **6** — Timeout
-- **Aakaash Aath** — New Backups — consecutive failures: **6** — Timeout
-- **Boishakhi TV** — New Backups — consecutive failures: **6** — TLS
-- **Colors Bangla** — New Backups — consecutive failures: **6** — Timeout
-- **DBC News** — New Backups — consecutive failures: **6** — Network
-- **ETV Cinema** — New Backups — consecutive failures: **6** — DNS
-- **Ekhon TV** — New Backups — consecutive failures: **6** — TLS
-- **Epic Music** — New Backups — consecutive failures: **6** — Timeout
-- **G TV** — New Backups — consecutive failures: **6** — Network
-- **Maasranga TV** — New Backups — consecutive failures: **6** — Timeout
-- **Movie Punjab** — New Backups — consecutive failures: **6** — HTTP 403
-- **Movies Now** — New Backups — consecutive failures: **6** — Connection
-- **RTV** — New Backups — consecutive failures: **6** — Timeout
-- **Sony Aath** — New Backups — consecutive failures: **6** — Timeout
-- **Star Plus** — New Backups — consecutive failures: **6** — Timeout
-- **Thanthi One** — New Backups — consecutive failures: **6** — HTTP 404
-- **Travelxp** — New Backups — consecutive failures: **6** — HTTP 403
-- **Zee Bangla Sonar** — New Backups — consecutive failures: **6** — Timeout
-- **Zee Cinema** — New Backups — consecutive failures: **6** — Connection
-- **Zee Cinema** — New Backups — consecutive failures: **6** — DNS
-- **Zee Tamil** — New Backups — consecutive failures: **6** — HTTP 403
-- **Colors Bangla Cinema** — New Channels — consecutive failures: **6** — Connection
-- **Dhamaal** — New Channels — consecutive failures: **6** — HTTP 404
-- **Disney Channel India** — New Channels — consecutive failures: **6** — Timeout
-- **ETV Plus** — New Channels — consecutive failures: **6** — DNS
-- **Nick Jr (India)** — New Channels — consecutive failures: **6** — Timeout
-- **Nickelodeon (India)** — New Channels — consecutive failures: **6** — Timeout
-- **Rupashi Bangla TV** — New Channels — consecutive failures: **3** — Timeout
-- **Shekinah TV** — New Channels — consecutive failures: **6** — TLS
-- **Shemaroo Filmi Gaane** — New Channels — consecutive failures: **6** — HTTP 403
-- **Sonic** — New Channels — consecutive failures: **6** — Timeout
-- **Sony Max** — New Channels — consecutive failures: **6** — Connection
-- **Sony Pal** — New Channels — consecutive failures: **6** — HTTP 403
-- **Spondon** — New Channels — consecutive failures: **6** — TLS
-- **Star Gold** — New Channels — consecutive failures: **6** — Timeout
-- **Star Sports Select 2** — New Channels — consecutive failures: **6** — Timeout
-- **VTU** — New Channels — consecutive failures: **3** — DNS
-- **Vokta TV** — New Channels — consecutive failures: **6** — HTTP 403
-- **Zee Cine Classic** — New Channels — consecutive failures: **6** — HTTP 403
-- **Zee Comedy Nation** — New Channels — consecutive failures: **6** — HTTP 403
-- **Zee Dil Se** — New Channels — consecutive failures: **6** — HTTP 403
-- **Zee Horror Nights** — New Channels — consecutive failures: **6** — HTTP 403
-- **Zee South Flix** — New Channels — consecutive failures: **6** — HTTP 403
-- **BS Film** — Pakistani — consecutive failures: **6** — DNS
-- **BTV National** — Review — consecutive failures: **7** — HTTP 530
-- **BTV News** — Review — consecutive failures: **7** — HTTP 530
-- **Bangla TV** — Review — consecutive failures: **19** — HTTP 404
-- **Cartoon Network** — Review — consecutive failures: **6** — Connection
-- **Channel 1** — Review — consecutive failures: **11** — Timeout
-- **Colors Cineplex [UK]** — Review — consecutive failures: **6** — Connection
-- **DD National** — Review — consecutive failures: **31** — HTTP 403
-- **Green TV** — Review — consecutive failures: **19** — HTTP 404
-- **Green TV** — Review — consecutive failures: **19** — HTTP 404
-- **Raj Musix Tamil** — Review — consecutive failures: **18** — Timeout
-- **PK Sports** — Sports — consecutive failures: **3** — DNS
-- **PTV Sports** — Sports — consecutive failures: **6** — Connection
-- **Star Sports 2** — Sports — consecutive failures: **104** — HTTP 403
-- **Star Sports Select 1** — Sports — consecutive failures: **6** — Connection
-- **T Sports** — Sports — consecutive failures: **6** — Connection
-- **TAPMAD** — Sports — consecutive failures: **56** — HTTP 403
+- **9X Jalwa** — Backup — consecutive failures: **69** — HTTP 403
+- **Aakaash Aath** — Backup — consecutive failures: **69** — HTTP 403
+- **Ananda TV** — Backup — consecutive failures: **7** — Connection
+- **B4U Movies** — Backup — consecutive failures: **7** — Connection
+- **Channel 24** — Backup — consecutive failures: **7** — Connection
+- **Colors** — Backup — consecutive failures: **7** — Connection
+- **Dangal 2** — Backup — consecutive failures: **69** — HTTP 403
+- **Deepto TV** — Backup — consecutive failures: **7** — Connection
+- **Deewana** — Backup — consecutive failures: **4** — DNS
+- **Epic Bhojpuri** — Backup — consecutive failures: **69** — HTTP 403
+- **Goldmines 2** — Backup — consecutive failures: **69** — HTTP 403
+- **Goldmines Action** — Backup — consecutive failures: **69** — HTTP 403
+- **Goldmines Bollywood** — Backup — consecutive failures: **69** — HTTP 403
+- **Independent TV** — Backup — consecutive failures: **7** — Connection
+- **Jalsha Movies** — Backup — consecutive failures: **7** — Connection
+- **Kairali TV** — Backup — consecutive failures: **69** — HTTP 403
+- **Kairali We** — Backup — consecutive failures: **50** — HTTP 403
+- **Khushboo Bangla** — Backup — consecutive failures: **69** — HTTP 403
+- **MH One Movies** — Backup — consecutive failures: **31** — HTTP 403
+- **Mazhavil Manorama** — Backup — consecutive failures: **69** — HTTP 403
+- **Ramdhenu** — Backup — consecutive failures: **69** — HTTP 403
+- **Shanson TV** — Backup — consecutive failures: **3** — HTTP 403
+- **Sony Entertainment TV** — Backup — consecutive failures: **7** — Connection
+- **Star Jalsha** — Backup — consecutive failures: **7** — Connection
+- **Star Sports 2** — Backup — consecutive failures: **57** — HTTP 403
+- **Zee TV** — Backup — consecutive failures: **7** — Connection
+- **Bengali Beats** — Bangladesh — consecutive failures: **4** — DNS
+- **Duronto TV** — Bangladesh — consecutive failures: **7** — Connection
+- **G TV** — Bangladesh — consecutive failures: **7** — Connection
+- **Star News** — Bangladesh — consecutive failures: **7** — Connection
+- **Nat Geo TV** — Documentary & Wildlife — consecutive failures: **7** — Connection
+- **Aakaash Aath** — Indian Bangla — consecutive failures: **69** — HTTP 403
+- **KTV Bangla** — Indian Bangla — consecutive failures: **5** — HTTP 404
+- **Khushboo Bangla** — Indian Bangla — consecutive failures: **69** — HTTP 403
+- **Sun Bangla** — Indian Bangla — consecutive failures: **7** — Connection
+- **Asianet Middle East** — Indian Entertainment — consecutive failures: **69** — HTTP 403
+- **Kairali Arabia** — Indian Entertainment — consecutive failures: **69** — HTTP 403
+- **Kerala Vision** — Indian Entertainment — consecutive failures: **69** — HTTP 403
+- **Mahaa Max** — Indian Entertainment — consecutive failures: **69** — HTTP 403
+- **Pear TV** — Indian Entertainment — consecutive failures: **69** — HTTP 403
+- **Siri Kannada** — Indian Entertainment — consecutive failures: **69** — HTTP 403
+- **Sooriyan TV** — Indian Entertainment — consecutive failures: **4** — DNS
+- **Star Bharat** — Indian Entertainment — consecutive failures: **7** — Connection
+- **Star Plus** — Indian Entertainment — consecutive failures: **7** — Connection
+- **Studio Yuva** — Indian Entertainment — consecutive failures: **69** — HTTP 403
+- **Sun Surya** — Indian Entertainment — consecutive failures: **55** — HTTP 403
+- **Sun TV** — Indian Entertainment — consecutive failures: **55** — HTTP 403
+- **Vanitha TV** — Indian Entertainment — consecutive failures: **69** — HTTP 403
+- **&pictures** — Indian Movies — consecutive failures: **7** — Connection
+- **Epic Bhojpuri** — Indian Movies — consecutive failures: **69** — HTTP 403
+- **Goldmines 2** — Indian Movies — consecutive failures: **69** — HTTP 403
+- **Goldmines Action** — Indian Movies — consecutive failures: **69** — HTTP 403
+- **MH One Movies** — Indian Movies — consecutive failures: **31** — HTTP 403
+- **Movies Now** — Indian Movies — consecutive failures: **7** — Connection
+- **Star Movies** — Indian Movies — consecutive failures: **7** — Connection
+- **Star Movies Select** — Indian Movies — consecutive failures: **7** — Connection
+- **Zee Bangla Sonar** — Indian Movies — consecutive failures: **7** — Connection
+- **7S Music** — Indian Music — consecutive failures: **69** — HTTP 403
+- **Andy Haryana** — Indian Music — consecutive failures: **69** — HTTP 403
+- **Deewana** — Indian Music — consecutive failures: **4** — DNS
+- **Kappa TV (Music)** — Indian Music — consecutive failures: **69** — HTTP 403
+- **MH One Dil Se** — Indian Music — consecutive failures: **31** — HTTP 403
+- **Raj Musix Kannada** — Indian Music — consecutive failures: **69** — HTTP 403
+- **Ramdhenu** — Indian Music — consecutive failures: **69** — HTTP 403
+- **Sangeet Bhojpuri** — Indian Music — consecutive failures: **69** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **38** — HTTP 403
+- **Bantul the Great** — Kids — consecutive failures: **4** — DNS
+- **Doraemon TV** — Kids — consecutive failures: **4** — DNS
+- **Hungama** — Kids — consecutive failures: **7** — Connection
+- **KidDo MATIX** — Kids — consecutive failures: **17** — HTTP 504
+- **Nick Bangla** — Kids — consecutive failures: **7** — Connection
+- **Tom and Jerry** — Kids — consecutive failures: **4** — DNS
+- **9XM** — New Backups — consecutive failures: **7** — HTTP 403
+- **ATN Bangla** — New Backups — consecutive failures: **7** — Timeout
+- **Aakaash Aath** — New Backups — consecutive failures: **7** — Timeout
+- **Boishakhi TV** — New Backups — consecutive failures: **7** — TLS
+- **Colors Bangla** — New Backups — consecutive failures: **7** — Timeout
+- **DBC News** — New Backups — consecutive failures: **7** — Network
+- **ETV Cinema** — New Backups — consecutive failures: **7** — DNS
+- **Ekhon TV** — New Backups — consecutive failures: **7** — TLS
+- **Epic Music** — New Backups — consecutive failures: **7** — Timeout
+- **G TV** — New Backups — consecutive failures: **7** — Network
+- **Maasranga TV** — New Backups — consecutive failures: **7** — Timeout
+- **Movie Punjab** — New Backups — consecutive failures: **7** — HTTP 403
+- **Movies Now** — New Backups — consecutive failures: **7** — Connection
+- **RTV** — New Backups — consecutive failures: **7** — Timeout
+- **Sony Aath** — New Backups — consecutive failures: **7** — Timeout
+- **Star Plus** — New Backups — consecutive failures: **7** — Timeout
+- **Thanthi One** — New Backups — consecutive failures: **7** — HTTP 404
+- **Travelxp** — New Backups — consecutive failures: **7** — HTTP 403
+- **Zee Bangla Sonar** — New Backups — consecutive failures: **7** — Timeout
+- **Zee Cinema** — New Backups — consecutive failures: **7** — Connection
+- **Zee Cinema** — New Backups — consecutive failures: **7** — DNS
+- **Zee Tamil** — New Backups — consecutive failures: **7** — HTTP 403
+- **Colors Bangla Cinema** — New Channels — consecutive failures: **7** — Connection
+- **Dhamaal** — New Channels — consecutive failures: **7** — HTTP 404
+- **Disney Channel India** — New Channels — consecutive failures: **7** — Timeout
+- **ETV Plus** — New Channels — consecutive failures: **7** — DNS
+- **Nick Jr (India)** — New Channels — consecutive failures: **7** — Timeout
+- **Nickelodeon (India)** — New Channels — consecutive failures: **7** — Timeout
+- **Shekinah TV** — New Channels — consecutive failures: **7** — TLS
+- **Shemaroo Filmi Gaane** — New Channels — consecutive failures: **7** — HTTP 403
+- **Sonic** — New Channels — consecutive failures: **7** — Timeout
+- **Sony Max** — New Channels — consecutive failures: **7** — Connection
+- **Sony Pal** — New Channels — consecutive failures: **7** — HTTP 403
+- **Spondon** — New Channels — consecutive failures: **7** — TLS
+- **Star Gold** — New Channels — consecutive failures: **7** — Timeout
+- **Star Sports Select 2** — New Channels — consecutive failures: **7** — Timeout
+- **VTU** — New Channels — consecutive failures: **4** — DNS
+- **Vokta TV** — New Channels — consecutive failures: **7** — HTTP 403
+- **Zee Cine Classic** — New Channels — consecutive failures: **7** — HTTP 403
+- **Zee Comedy Nation** — New Channels — consecutive failures: **7** — HTTP 403
+- **Zee Dil Se** — New Channels — consecutive failures: **7** — HTTP 403
+- **Zee Horror Nights** — New Channels — consecutive failures: **7** — HTTP 403
+- **Zee South Flix** — New Channels — consecutive failures: **7** — HTTP 403
+- **BS Film** — Pakistani — consecutive failures: **7** — DNS
+- **BTV National** — Review — consecutive failures: **8** — HTTP 530
+- **BTV News** — Review — consecutive failures: **8** — HTTP 530
+- **Bangla TV** — Review — consecutive failures: **20** — HTTP 404
+- **Cartoon Network** — Review — consecutive failures: **7** — Connection
+- **Channel 1** — Review — consecutive failures: **12** — HTTP 404
+- **Colors Cineplex [UK]** — Review — consecutive failures: **7** — Connection
+- **DD National** — Review — consecutive failures: **32** — HTTP 403
+- **Green TV** — Review — consecutive failures: **20** — HTTP 404
+- **Green TV** — Review — consecutive failures: **20** — HTTP 404
+- **Raj Musix Tamil** — Review — consecutive failures: **19** — HTTP 404
+- **PK Sports** — Sports — consecutive failures: **4** — DNS
+- **PTV Sports** — Sports — consecutive failures: **7** — Connection
+- **Star Sports 2** — Sports — consecutive failures: **105** — HTTP 403
+- **Star Sports Select 1** — Sports — consecutive failures: **7** — Connection
+- **T Sports** — Sports — consecutive failures: **7** — Connection
+- **TAPMAD** — Sports — consecutive failures: **57** — HTTP 403
 
 ## /streamtest/ Endpoints
 
