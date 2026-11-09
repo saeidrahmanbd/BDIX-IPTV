@@ -5,62 +5,52 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-08 — `IPTV-Playlist.m3u`
+### 2026-11-09 — `IPTV-Playlist.m3u`
 
-- New channel identities: **32**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **56 / 0**
+- New channel identities: **5**
+- Channel identities removed: **1**
+- Stream URLs added / removed: **9 / 1**
 - Backup URL updates: **0**
-- Logo reference changes: **3**
+- Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Cine Jomjomat
-- Colors Bangla Cinema
-- CVR Health
-- Dhamaal
-- Disha TV
-- Disney Channel (India)
-- Epic TV Digital
-- ETV Plus
-- Madani Channel Bangla
-- Mango Mobile TV
-
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-08 — `International-Playlist.m3u`
-
-- New channel identities: **202**
-- Channel identities removed: **67**
-- Stream URLs added / removed: **331 / 68**
-- Backup URL updates: **0**
-- Logo reference changes: **79**
-- Replaced channel identities: **0**
-- Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- India Talkies (360p)
-- CineStar Action Bulgaria
-- Movie Star (720p)
-- Jiangxi Movie Channel
-- Medium (Germany)
-- Pluto TV 90's Classics
-- Pluto TV Alberto Sordi
-- Pluto TV Bud & Terence (Germany)
-- Pluto TV Catastrofes
-- Pluto TV Christmas tutto l'anno
+- Star Sports Select 2
+- Zee Comedy Nation
+- Zee Dil Se
+- Zee Horror Nights
+- Zee South Flix
 
 Removed channel identities (up to 10):
-- Beats Radio
-- Mas FM
-- Radio Realpolitik
-- Cool FM 98.9
-- Heart Radio Aruba
-- Power 101.7 FM
-- Wavez FM
-- X 102.7 FM
-- Hitradio O3
-- TikTok Radio Brasil
+- Baraza Music TV
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-09 — `International-Playlist.m3u`
+
+- New channel identities: **27**
+- Channel identities removed: **2**
+- Stream URLs added / removed: **46 / 5**
+- Backup URL updates: **0**
+- Logo reference changes: **0**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- &pictures
+- Cartoon Network (India)
+- Cartoon Network HD+
+- Colors Cineplex Bollywood
+- Colors Cineplex Superhits
+- Discovery Kids
+- Lollywood HD TV
+- Muzhskoy
+- Namma Bangalore
+- Nick Jr. (India)
+
+Removed channel identities (up to 10):
+- Discovery Turbo (India) (720p)
+- Makkal TV (576i)
 
 ## [5.0.0] — Playlist Studio
 
