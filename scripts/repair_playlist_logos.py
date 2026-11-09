@@ -3,7 +3,7 @@
 
 Policy: search this repository's /logos tree first (including /logos/unused),
 then use exact channel/ID matches from curated sources, IPTV-org, or Wikimedia
-Commons. Never invent a broadcaster logo or use an unrelated lookalike.
+Commons. Never invent a broadcaster logo or use an unrelated lookalike.\nActive groups require verified local logo assets; Review queues may retain missing\nlogo metadata while awaiting manual identity/source verification.
 """
 import argparse
 from pathlib import Path
