@@ -210,6 +210,7 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
         "metadata_fields_filled": 0,
         "backup_metadata_reconciled": 0,
         "missing_logos_deferred": [],
+        "review_invalid_logos_cleared": 0,
         "undetermined_languages": [],
     }
     errors: list[str] = []
@@ -285,6 +286,11 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
         valid_local_logo = logo.startswith(RAW_LOGO_BASE) and not is_blocked_logo_basename(logo_name)
         if group in PRIMARY_GROUPS and not valid_local_logo:
             info = set_group(info, "Review")
+            # Never leave a generic, blocked, external or otherwise unverified
+            # logo attached to a quarantined channel. The stream and identity
+            # stay intact; the logo can be restored after a genuine local asset
+            # has been verified.
+            info = remove_attr(info, "tvg-logo")
             group = "Review"
             stats["missing_logos_quarantined"] += 1
 
@@ -449,8 +455,16 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
 
     for record in records:
         info = record[0]
-        if attrs(info).get("group-title", "").strip() in REVIEW_GROUPS:
-            record[0] = remove_attr(info, "tvg-chno")
+        group = attrs(info).get("group-title", "").strip()
+        if group in REVIEW_GROUPS:
+            info = remove_attr(info, "tvg-chno")
+            review_logo = attrs(info).get("tvg-logo", "").strip()
+            if review_logo:
+                logo_name = review_logo.split("?", 1)[0].rsplit("/", 1)[-1]
+                if not review_logo.startswith(RAW_LOGO_BASE) or is_blocked_logo_basename(logo_name):
+                    info = remove_attr(info, "tvg-logo")
+                    stats["review_invalid_logos_cleared"] += 1
+            record[0] = info
 
     rank = {name: index for index, name in enumerate(GROUP_ORDER)}
     records.sort(key=lambda record: (

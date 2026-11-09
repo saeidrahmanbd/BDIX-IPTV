@@ -61,6 +61,22 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertNotIn('tvg-chno="76"', updated)
         self.assertEqual(stats["missing_logos_deferred"].count("D Talk"), 1)
         self.assertEqual(stats["missing_logos_deferred"].count("Prime TV"), 1)
+    def test_generic_logo_is_removed_when_primary_is_quarantined(self):
+        url = "https://stream.example/nkr-tv-kannada.m3u8"
+        fallback = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg"
+        sample = (
+            "#EXTM3U\\n"
+            + row("NKRTVKannada.in@SD", "NKR TV Kannada", "Indian Entertainment", url,
+                  language="kan", country="IN", logo=fallback)
+        )
+        updated, stats, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        entry = updated.split(url)[0].split("#EXTINF:")[-1]
+        self.assertIn('group-title="Review"', entry)
+        self.assertNotIn("tvg-logo=", entry)
+        self.assertIn(url, updated)
+        self.assertEqual(stats["missing_logos_quarantined"], 1)
+
     def test_duplicate_primary_demotes_alternate_and_backup_has_primary(self):
         updated, stats, errors = repair_playlist_text(self.sample)
         self.assertEqual(errors, [])
