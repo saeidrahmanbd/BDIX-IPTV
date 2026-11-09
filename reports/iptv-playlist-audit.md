@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-09T13:42:10.715768+00:00**
-Source playlist SHA-256: **c05a91e4f6ff628f4f9416d8fbd7490004c83ce45cbd7913e415698c3c812421**
+Generated: **2026-11-09T15:24:38.568533+00:00**
+Source playlist SHA-256: **8c1b3678eefb9c990ece2f8fcbd1fb1e5f2f3c8d7be6d1f4566fa0cf555b0267**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -22,17 +22,17 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
 - Logo references checked: **1069**
-- Duplicate primary identities: **1**
+- Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **1**
-- Primary channel-number sequence issues: **571**
-- Primary entries missing channel numbers: **22**
+- Primary channel-number sequence issues: **552**
+- Primary entries missing channel numbers: **21**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **10**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **37**
+- Category block-order issues: **1**
 - Category registry issues: **1**
-- Alphabetical ordering issues: **43**
+- Alphabetical ordering issues: **16**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **8**
 - Embedded Xtream-style credential paths (redacted): **0**
@@ -71,8 +71,8 @@ No same-ID label variants found across groups.
 ## Duplicate IDs
 
 ### 7smusic.in@sd (2 streams)
-- 7S Music — Backup — https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 - 7S Music — Indian Music — https://cdn.pishow.tv/ott/live/1257/master.m3u8
+- 7S Music — Backup — https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 ### 8xm.pk@sd (2 streams)
 - 8XM — Pakistani — https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
 - 8XM — Backup — https://vodzong.mjunoon.tv:8087/streamtest/8XM-131/playlist.m3u8
@@ -92,9 +92,9 @@ No same-ID label variants found across groups.
 - 9X Tashan — Indian Music — https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8
 - 9X Tashan — Review — https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
 ### aakaashaath.in@sd (4 streams)
+- Aakaash Aath — Indian Bangla — https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/index.m3u8
 - Aakaash Aath — Backup — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8
 - Aakaash Aath — Backup — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/tracks-v1a1/mono.m3u8
-- Aakaash Aath — Indian Bangla — https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/index.m3u8
 - Aakaash Aath — Review — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
 ### aamarbangla.in (3 streams)
 - Amar Bangla — Indian Bangla — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8
@@ -138,7 +138,7 @@ No same-ID label variants found across groups.
 - ATN Bangla — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/atnbd-8-org.stream/tracks-v1a1/mono.m3u8
 - ATN Bangla — Review — http://tvsen5.aynascope.net/atnbangla/index.m3u8
 ### atnbanglauk.uk (2 streams)
-- ATN Bangla UK — Bangladesh — https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
+- ATN Bangla UK — International — https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
 - ATN Bangla UK — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8
 ### atnnews.bd (6 streams)
 - ATN News — Bangladesh — https://tvsen6.aynaott.com/da6WMXAk/index.m3u8
@@ -170,9 +170,9 @@ No same-ID label variants found across groups.
 - Balle Balle — Backup — https://mcncdndigital.com/worldpunjabitv/index.m3u8
 - Balle Balle — Backup — https://streams.tangotv.in/BALLEBALLE/ORIGIN/index.m3u8
 ### banglatv.bd (4 streams)
-- Bangla TV — Bangladesh — http://116.204.149.16/banglatv/index.m3u8
+- Bangla TV — Bangladesh — https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8
+- Bangla TV — Backup — http://116.204.149.16/banglatv/index.m3u8
 - Bangla TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/bangla-tv-2/index.m3u8
-- Bangla TV — Backup — https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8
 - Bangla TV — Review — https://cdn.ghuddi.live/Bangla_TV/Bangla_TV_BD/playlist.m3u8
 ### banglavision.bd (5 streams)
 - Bangla Vision — Bangladesh — https://tvsen5.aynaott.com/banglavision/index.m3u8
@@ -232,12 +232,12 @@ No same-ID label variants found across groups.
 - Channel I — Backup — https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/tracks-v1a1/mono.ts.m3u8
 - Channel I — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channeli-8-org.stream/tracks-v1a1/mono.m3u8
 ### channels.uk (4 streams)
-- Channel S — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8
+- Channel S — International — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8
 - Channel S — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8
 - Channel S — Backup — https://app.ncare.live/live-orgin/channels.stream/live-orgin/channels.stream/chunks.m3u8
 - Channel S — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-s-1/index.m3u8
 ### channels.uk@679aa9 (2 streams)
-- Channel S UK — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
+- Channel S UK — International — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
 - Channel S UK — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/chsukoff.stream/live-orgin/chsukoff.stream/chunks.m3u8
 ### cnn.us (2 streams)
 - CNN — International — https://tvsen6.aynaott.com/cnn/index.m3u8
@@ -361,11 +361,11 @@ No same-ID label variants found across groups.
 - Deewana — Review — https://live20.bozztv.com/giatvplayout7/giatv-209592/tracks-v1a1/mono.ts.m3u8
 - Deewana — Review — https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8
 ### deshebideshe.ca (2 streams)
-- Deshe Bideshe — Bangladesh — https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8
+- Deshe Bideshe — International — https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8
 - Deshe Bideshe — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/deshebideshe.stream/tracks-v1a1/mono.m3u8
 ### deshtv.bd (3 streams)
-- Desh TV — Backup — https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8
 - Desh TV — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/deshtv.stream/index.m3u8
+- Desh TV — Backup — https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8
 - Desh TV — Review — https://stream.ottplus.live/live/desh_tv_abr/index.m3u8
 ### desichannel.in (2 streams)
 - Desi Channel — Indian Entertainment — https://livestream.unlimitedcdn.com/agm-dc/desi-channel/index.m3u8
@@ -435,7 +435,7 @@ No same-ID label variants found across groups.
 - ETV Cinema — Indian Movies — https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=[REDACTED]
 - ETV Cinema — Review — https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
 ### eurosport.in@sd (2 streams)
-- Eurosport — Backup — https://livetv.shamon-cable.net:8443/Eurosport-HD/index.m3u8
+- Eurosport — Sports — https://livetv.shamon-cable.net:8443/Eurosport-HD/index.m3u8
 - Eurosport — Review — https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8
 ### faktmarathi.in@sd (2 streams)
 - Fakt Marathi — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8
@@ -459,13 +459,13 @@ No same-ID label variants found across groups.
 - Goldmines — Backup — https://streams.tangotv.in/GOLDMINES/ORIGIN/tracks-v1a1/mono.m3u8
 - Goldmines — Backup — https://fta.ektv.in/live/53/53_0.m3u8
 ### goldmines2.in@sd (3 streams)
+- Goldmines 2 — Indian Movies — https://fta.ektv.in/live/46/46_0.m3u8
 - Goldmines 2 — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINES2/index.m3u8
 - Goldmines 2 — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINES2/tracks-v1a1/mono.m3u8
-- Goldmines 2 — Indian Movies — https://fta.ektv.in/live/46/46_0.m3u8
 ### goldminesaction.in (3 streams)
+- Goldmines Action — Indian Movies — https://fta.ektv.in/live/584/master.m3u8
 - Goldmines Action — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8
 - Goldmines Action — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/tracks-v1a1/mono.m3u8
-- Goldmines Action — Indian Movies — https://fta.ektv.in/live/584/master.m3u8
 ### goldminesbollywood.in@sd (4 streams)
 - Goldmines Bollywood — Indian Movies — https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8
 - Goldmines Bollywood — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8
@@ -485,14 +485,14 @@ No same-ID label variants found across groups.
 - GTC Punjabi — Indian Entertainment — https://gtc-yupp.vgcdn.net/vglive-sk-254807/index.m3u8
 - GTC Punjabi — Backup — https://cdn.ottlive.co.in/gtcpunjabi/index.m3u8
 ### hindihits.in (2 streams)
-- Hindi Hits — Indian Music — http://146.59.253.52:8080/hindihitshd/index.m3u8
-- Hindi Hits — Backup — https://samitaorigin.tangotv.in/HINDIHITS/SAMITAORIGIN/index.m3u8
+- Hindi Hits — Indian Music — https://samitaorigin.tangotv.in/HINDIHITS/SAMITAORIGIN/index.m3u8
+- Hindi Hits — Backup — http://146.59.253.52:8080/hindihitshd/index.m3u8
 ### hummasala.pk (2 streams)
 - HUM Masala — Pakistani — https://j6nfugukcl.gpcdn.net/tile_1/master.m3u8
 - HUM Masala — Backup — http://38.101.217.46/HumMasala/index.m3u8
 ### humtv.pk (5 streams)
+- Hum TV — Pakistani — https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
 - Hum TV — Backup — https://cdn4.mjunoon.tv:8087/streamtest/82M/chunks.m3u8
-- Hum TV — Backup — https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
 - Hum TV — Review — https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
 - Hum TV — Review — https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/live/hum_tv_720/chunks.m3u8
 - Hum TV — Review — https://stream.ottplus.live/live/hum_tv_abr/index.m3u8
@@ -508,8 +508,8 @@ No same-ID label variants found across groups.
 - Iqra Bangla — Religious — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/iqrabanglatvoffice.stream/live-orgin/iqrabanglatvoffice.stream/chunks.m3u8
 - Iqra Bangla — Backup — https://tvsen3.aynaott.com/EuEy5mBW/index.m3u8
 - Iqra Bangla — Backup — https://tvsen5.aynaott.com/iqrabangla/index.m3u8
-### islamictv.sa (2 streams)
-- Islamic TV — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamictvbd.stream/tracks-v1a1/mono.m3u8
+### islamictv.bd (2 streams)
+- Islamic TV — Religious — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamictvbd.stream/tracks-v1a1/mono.m3u8
 - Islamic TV — Review — https://drk6xq0vhn.gpcdn.net/live/islamic_tv/index.m3u8
 ### jagonews24.bd (3 streams)
 - Jago News 24 — Bangladesh — https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
@@ -525,7 +525,7 @@ No same-ID label variants found across groups.
 - Jamuna TV — Review — https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8
 ### jatv.bd (2 streams)
 - JA TV — Bangladesh — https://dish.porosh.com.bd/hls/jtvnews.m3u8
-- JA TV — Bangladesh — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/jtvbd12.stream/tracks-v1a1/mono.m3u8
+- JA TV — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/jtvbd12.stream/tracks-v1a1/mono.m3u8
 ### jonmobhumitv.bd (2 streams)
 - Jonmobhumi TV — Bangladesh — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/tracks-v1a1/mono.m3u8
 - Jonmobhumi TV — Backup — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/playlist.m3u8
@@ -539,15 +539,15 @@ No same-ID label variants found across groups.
 - Kalaignar Murasu — Indian Entertainment — https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/murasu_nim_https/050522/murasu/playlist.m3u8
 - Kalaignar Murasu — Backup — https://segment.yuppcdn.net/050522/murasu/playlist.m3u8
 ### kappatv.in@alt1 (3 streams)
-- Kappa TV (Music) — Backup — https://mumt03.tangotv.in/Dsly5z3HKAPPATV/index.m3u8
 - Kappa TV (Music) — Indian Music — https://cdn.pishow.tv/ott/live/1123/master.m3u8
+- Kappa TV (Music) — Backup — https://mumt03.tangotv.in/Dsly5z3HKAPPATV/index.m3u8
 - Kappa TV (Music) — Backup — https://d1msejlow1t3l4.cloudfront.net/fta/kappatv/playlist.m3u8
 ### keralavision.in@sd (2 streams)
-- Kerala Vision — Backup — https://mumt03.tangotv.in/Dsly5z3HKERALAVISION/index.m3u8
 - Kerala Vision — Indian Entertainment — https://cdn.pishow.tv/ott/live/243/master.m3u8
+- Kerala Vision — Backup — https://mumt03.tangotv.in/Dsly5z3HKERALAVISION/index.m3u8
 ### khushboobangla.in@sd (3 streams)
-- Khushboo Bangla — Backup — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 - Khushboo Bangla — Indian Bangla — https://cdn.pishow.tv/ott/live/1473/master.m3u8
+- Khushboo Bangla — Backup — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 - Khushboo Bangla — Backup — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/tracks-v1a1/mono.m3u8
 ### maasrangatv.bd (6 streams)
 - Maasranga TV — Bangladesh — https://mtv.sunplex.live/MAASRANGA/index.m3u8
@@ -557,8 +557,8 @@ No same-ID label variants found across groups.
 - Maasranga TV — Backup — https://tvsen6.aynaott.com/maasrangatv/index.m3u8
 - Maasranga TV — Review — http://tvsen5.aynascope.net/maasrangatv/index.m3u8
 ### mahaamax.in (2 streams)
-- Mahaa Max — Backup — https://mumt03.tangotv.in/Dsly5z3HMAHAAMAX/index.m3u8
 - Mahaa Max — Indian Entertainment — https://mumbai-edge.smartplaytv.in/MahaMax/index.m3u8
+- Mahaa Max — Backup — https://mumt03.tangotv.in/Dsly5z3HMAHAAMAX/index.m3u8
 ### mahamovie.in@sd (2 streams)
 - Maha Movie — Indian Movies — https://cdn.pishow.tv/ott/live/10007/master.m3u8
 - Maha Movie — Backup — https://fta.ektv.in/live/48/48_0.m3u8
@@ -602,13 +602,13 @@ No same-ID label variants found across groups.
 - MH One — Indian Music — https://samitaorigin.tangotv.in/MHONE/SAMITAORIGIN/index.m3u8
 - MH One — Backup — https://fta.ektv.in/live/353/master.m3u8
 ### mhonedilse.in@sd (3 streams)
-- MH One Dil Se — Backup — https://mumt01.tangotv.in/O5aw8Zn3MHONEDILSE/index.m3u8
 - MH One Dil Se — Indian Music — https://streams.tangotv.in/MHONEDILSE/ORIGIN/index.m3u8
+- MH One Dil Se — Backup — https://mumt01.tangotv.in/O5aw8Zn3MHONEDILSE/index.m3u8
 - MH One Dil Se — Backup — https://fta.ektv.in/live/351/master.m3u8
 ### mhonemovies.in@sd (3 streams)
+- MH One Movies — Indian Movies — https://fta.ektv.in/live/639/master.m3u8
 - MH One Movies — Backup — https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/index.m3u8
 - MH One Movies — Backup — https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/tracks-v1a1/mono.m3u8
-- MH One Movies — Indian Movies — https://fta.ektv.in/live/639/master.m3u8
 ### mksix.in (2 streams)
 - MK Six — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVMKSIX/index.m3u8
 - MK Six — Backup — https://cdn.pishow.tv/ott/live/1253/master.m3u8
@@ -689,7 +689,7 @@ No same-ID label variants found across groups.
 - Pocket Films — Indian Movies — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/e02a0ce5-6c42-4cca-bb53-e5cfecff74a9/0.m3u8
 - Pocket Films — Backup — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/6408f97591ee7861ab0d4839eefdbbee/0.m3u8
 ### pogo.in@sd (2 streams)
-- Pogo — Backup — https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
+- Pogo — Kids — https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
 - Pogo — Review — https://drk6xq0vhn.gpcdn.net/live/pogo_sd_abr/index.m3u8
 ### probashitv.bd (2 streams)
 - Probashi TV — Bangladesh — http://158.69.24.53:8080/probashi_tv/index.m3u8
@@ -722,8 +722,8 @@ No same-ID label variants found across groups.
 - Quran TV — Religious — https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
 - Quran TV — Backup — https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8
 ### rajdhanitv.bd (3 streams)
-- Rajdhani TV — Bangladesh — http://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8
-- Rajdhani TV — Backup — https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8
+- Rajdhani TV — Bangladesh — https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8
+- Rajdhani TV — Backup — http://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8
 - Rajdhani TV — Review — https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8
 ### rajtv.in@sd (2 streams)
 - Raj TV — Indian Entertainment — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/b8640d6b-d131-4401-9451-944e1e65fe79/0.m3u8
@@ -775,14 +775,14 @@ No same-ID label variants found across groups.
 - Sangeet Bangla — Backup — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/tracks-v1a1/mono.m3u8
 - Sangeet Bangla — Backup — https://tvsen6.aynaott.com/hT5jHczt/tracks-v1a1/mono.ts.m3u8
 ### sangeetbhojpuri.in@sd (2 streams)
-- Sangeet Bhojpuri — Backup — https://mumt01.tangotv.in/O5aw8Zn3SANGEETBHOJPURI/index.m3u8
 - Sangeet Bhojpuri — Indian Music — https://fta.ektv.in/live/349/master.m3u8
+- Sangeet Bhojpuri — Backup — https://mumt01.tangotv.in/O5aw8Zn3SANGEETBHOJPURI/index.m3u8
 ### satv.bd (6 streams)
-- SA TV — Bangladesh — http://116.204.149.16/satv/index.m3u8
+- SA TV — Bangladesh — https://j6nfugukcl.gpcdn.net/tile_5/master.m3u8
+- SA TV — Backup — http://116.204.149.16/satv/index.m3u8
 - SA TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8
 - SA TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8
 - SA TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-2/index.m3u8
-- SA TV — Backup — https://j6nfugukcl.gpcdn.net/tile_5/master.m3u8
 - SA TV — Backup — https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8
 ### shansontv.ru (3 streams)
 - Shanson TV — International — http://catchup.videoline.ru/shanson/index.m3u8
@@ -867,8 +867,8 @@ No same-ID label variants found across groups.
 - UTV Palakkad — Indian Entertainment — https://em4qj6nedyvg-hls-live.wmncdn.net/utv/ab2de115318ae40bdd434e193a2f2e7f.sdp/playlist.m3u8
 - UTV Palakkad — Backup — https://em4qj6nedyvg-hls-live.wmncdn.net/liveunit/89b1e919eed04e59383cf820d644c20e.sdp/playlist.m3u8
 ### vanithatv.in@sd (2 streams)
-- Vanitha TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3VANITHA/index.m3u8
 - Vanitha TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/393/master.m3u8
+- Vanitha TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3VANITHA/index.m3u8
 ### vasanthtv.in@sd (2 streams)
 - Vasanth TV — Indian Entertainment — https://mumt04.tangotv.in/m18aqlK4VASANTHTV/index.m3u8
 - Vasanth TV — Backup — https://fta.ektv.in/live/228/master.m3u8
@@ -901,8 +901,8 @@ No same-ID label variants found across groups.
 - Zee Telugu — Indian Entertainment — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeTeluguHD.m3u8
 - Zee Telugu — Backup — https://listas-m3u8.github.io/iptv/128.19.173.10:8888/ZEETELUGUHD.m3u8
 ### zeetv.in@sd (3 streams)
-- Zee TV — Indian Entertainment — http://41.205.93.154/ZEE-TV/index.m3u8
-- Zee TV — Backup — https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8
+- Zee TV — Indian Entertainment — https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8
+- Zee TV — Backup — http://41.205.93.154/ZEE-TV/index.m3u8
 - Zee TV — Review — http://103.135.253.32:8080/ZEE-TV/index.m3u8
 ### zodiaktv.in@sd (2 streams)
 - Zodiak TV — Indian Bangla — https://ranacable.duckdns.org/ZodiakTv/index.m3u8
@@ -915,7 +915,7 @@ No same-ID label variants found across groups.
 
 ## Duplicate Primary Identities
 
-- **jatv.bd** — JA TV [Bangladesh] — https://dish.porosh.com.bd/hls/jtvnews.m3u8; JA TV [Bangladesh] — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/jtvbd12.stream/tracks-v1a1/mono.m3u8
+None.
 
 ## Potential Near-Duplicate Primary Names (Review Only)
 
@@ -927,56 +927,56 @@ None.
 
 ## Primary Channel-Number Sequence
 
-- **Bijoy TV** — expected channel number 8, found 9
-- **Boishakhi TV** — expected channel number 9, found 10
-- **BTV Chattogram** — expected channel number 10, found 11
-- **Channel 1** — expected channel number 11, found (missing)
-- **Channel 16** — expected channel number 12, found (missing)
-- **Channel 9** — expected channel number 15, found 609
-- **Channel Europe** — expected channel number 16, found 15
-- **Channel I** — expected channel number 17, found 16
-- **Channel S** — expected channel number 18, found 17
-- **Channel S UK** — expected channel number 19, found 18
-- **D Talk** — expected channel number 20, found (missing)
-- **DBC News** — expected channel number 21, found 19
-- **Deepto TV** — expected channel number 22, found 20
-- **Deshe Bideshe** — expected channel number 23, found 22
-- **Deshi TV** — expected channel number 24, found 23
-- **Doyel TV** — expected channel number 25, found 24
-- **Ekhon TV** — expected channel number 27, found (missing)
-- **Global TV** — expected channel number 32, found (missing)
-- **Jago News 24** — expected channel number 33, found 35
-- **Jalsha Bangla BD** — expected channel number 34, found 36
-- **Jamuna TV** — expected channel number 35, found 37
-- **Jonmobhumi TV** — expected channel number 36, found 38
-- **Maasranga TV** — expected channel number 37, found 39
-- **ME TV** — expected channel number 38, found 40
-- **Mohona TV** — expected channel number 39, found 41
-- **Movie Bangla** — expected channel number 40, found 42
-- **My TV** — expected channel number 41, found 43
-- **News 24** — expected channel number 42, found 45
-- **Nexus TV** — expected channel number 43, found (missing)
-- **NRB TV** — expected channel number 44, found 47
-- **NTV** — expected channel number 45, found 48
-- **NTV Europe** — expected channel number 46, found 49
-- **Probashi TV** — expected channel number 47, found 50
-- **Rajdhani TV** — expected channel number 48, found 51
-- **RTV** — expected channel number 49, found 52
-- **Rupashi Bangla TV** — expected channel number 50, found 598
-- **SA TV** — expected channel number 51, found 53
-- **Somoy TV** — expected channel number 52, found 54
-- **SRK** — expected channel number 53, found 55
-- **Thikana** — expected channel number 54, found 57
-- **Time Television** — expected channel number 55, found 58
-- **TV One UK** — expected channel number 56, found (missing)
-- **Amar Bangla** — expected channel number 57, found 60
-- **Amar Bangla Digital** — expected channel number 58, found 61
-- **Bangla Plus** — expected channel number 59, found 62
-- **Colors Bangla** — expected channel number 60, found 63
-- **DD Bangla** — expected channel number 61, found 64
-- **DD Tripura** — expected channel number 62, found 65
-- **Dhoom Music Bangla** — expected channel number 63, found 66
-- **Enter10 Bangla** — expected channel number 64, found 67
+- **ATN News** — expected channel number 4, found 5
+- **Bangla Vision** — expected channel number 5, found 7
+- **Bijoy TV** — expected channel number 6, found 9
+- **Boishakhi TV** — expected channel number 7, found 10
+- **BTV Chattogram** — expected channel number 8, found 11
+- **Channel 1** — expected channel number 9, found (missing)
+- **Channel 16** — expected channel number 10, found (missing)
+- **Channel 24** — expected channel number 11, found 13
+- **Channel 52** — expected channel number 12, found 14
+- **Channel 9** — expected channel number 13, found 609
+- **Channel I** — expected channel number 14, found 16
+- **DBC News** — expected channel number 15, found 19
+- **Deepto TV** — expected channel number 16, found 20
+- **Ekattor TV** — expected channel number 17, found 26
+- **Ekhon TV** — expected channel number 18, found (missing)
+- **Ekushey TV** — expected channel number 19, found 28
+- **Enter TV** — expected channel number 20, found 29
+- **G Series Drama** — expected channel number 21, found 30
+- **G TV** — expected channel number 22, found 31
+- **Global TV** — expected channel number 23, found (missing)
+- **Jago News 24** — expected channel number 24, found 35
+- **Jalsha Bangla BD** — expected channel number 25, found 36
+- **Jamuna TV** — expected channel number 26, found 37
+- **Jonmobhumi TV** — expected channel number 27, found 38
+- **Maasranga TV** — expected channel number 28, found 39
+- **ME TV** — expected channel number 29, found 40
+- **Mohona TV** — expected channel number 30, found 41
+- **Movie Bangla** — expected channel number 31, found 42
+- **My TV** — expected channel number 32, found 43
+- **News 24** — expected channel number 33, found 45
+- **Nexus TV** — expected channel number 34, found (missing)
+- **NTV** — expected channel number 35, found 48
+- **NTV Europe** — expected channel number 36, found 49
+- **Probashi TV** — expected channel number 37, found 50
+- **Rajdhani TV** — expected channel number 38, found 51
+- **RTV** — expected channel number 39, found 52
+- **Rupashi Bangla TV** — expected channel number 40, found 598
+- **Somoy TV** — expected channel number 41, found 54
+- **SRK** — expected channel number 42, found 55
+- **JA TV** — expected channel number 43, found 34
+- **Desh TV** — expected channel number 44, found (missing)
+- **Bangla TV** — expected channel number 45, found 6
+- **SA TV** — expected channel number 46, found 53
+- **Amar Bangla** — expected channel number 47, found 60
+- **Amar Bangla Digital** — expected channel number 48, found 61
+- **Bangla Plus** — expected channel number 49, found 62
+- **Colors Bangla** — expected channel number 50, found 63
+- **DD Bangla** — expected channel number 51, found 64
+- **DD Tripura** — expected channel number 52, found 65
+- **Dhoom Music Bangla** — expected channel number 53, found 66
 
 ## Malformed EXTINF Entries
 
@@ -984,86 +984,23 @@ None.
 
 ## Ordering
 
-- category block **Bangladesh** — out of canonical block order
-- category block **Indian Bangla** — out of canonical block order
-- category block **Indian Bangla** — out of canonical block order
-- category block **Indian Movies** — out of canonical block order
-- category block **Indian Movies** — out of canonical block order
-- category block **Bangladesh** — out of canonical block order
-- category block **Indian Movies** — out of canonical block order
-- category block **Indian Movies** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Entertainment** — out of canonical block order
-- category block **Indian Entertainment** — out of canonical block order
-- category block **Indian Entertainment** — out of canonical block order
-- category block **Indian Entertainment** — out of canonical block order
-- category block **Pakistani** — out of canonical block order
-- category block **International** — out of canonical block order
-- category block **Documentary & Wildlife** — out of canonical block order
-- category block **Kids** — out of canonical block order
-- category block **Religious** — out of canonical block order
-- category block **Sports** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Bangla** — out of canonical block order
-- category block **Bangladesh** — out of canonical block order
-- category block **Indian Movies** — out of canonical block order
-- category block **Indian Movies** — out of canonical block order
-- category block **Bangladesh** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Entertainment** — out of canonical block order
-- category block **Indian Bangla** — out of canonical block order
-- category block **Indian Entertainment** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Movies** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Entertainment** — out of canonical block order
 - category block **Review** — out of canonical block order
-- **Bangladesh** — **15 — Channel Europe** appears after **609 — Channel 9**
-- **Bangladesh** — **53 — SA TV** appears after **598 — Rupashi Bangla TV**
-- **Bangladesh** — **34 — JA TV** appears after **58 — Time Television**
-- **Bangladesh** — **15 — Channel Europe** appears after **609 — Channel 9**
-- **Bangladesh** — **53 — SA TV** appears after **598 — Rupashi Bangla TV**
-- **Bangladesh** — **34 — JA TV** appears after **58 — Time Television**
-- **Indian Bangla** — **Aakaash Aath** appears after **Zodiak TV**
+- **Bangladesh** — **16 — Channel I** appears after **609 — Channel 9**
+- **Bangladesh** — **54 — Somoy TV** appears after **598 — Rupashi Bangla TV**
+- **Bangladesh** — **34 — JA TV** appears after **55 — SRK**
+- **Bangladesh** — **6 — Bangla TV** appears after **34 — JA TV**
 - **Indian Bangla** — **Aakaash Aath** appears after **Zodiak TV**
 - **Indian Movies** — **Goldmines 2** appears after **Zee Cinema**
-- **Indian Movies** — **Goldmines 2** appears after **Zee Cinema**
-- **Bangladesh** — **15 — Channel Europe** appears after **609 — Channel 9**
-- **Bangladesh** — **53 — SA TV** appears after **598 — Rupashi Bangla TV**
-- **Bangladesh** — **34 — JA TV** appears after **58 — Time Television**
-- **Indian Movies** — **Goldmines 2** appears after **Zee Cinema**
-- **Indian Movies** — **Goldmines 2** appears after **Zee Cinema**
 - **Indian Music** — **7S Music** appears after **Zoom**
-- **Indian Music** — **7S Music** appears after **Zoom**
-- **Indian Music** — **7S Music** appears after **Zoom**
-- **Indian Music** — **7S Music** appears after **Zoom**
+- **Indian Music** — **Hindi Hits** appears after **Sangeet Bhojpuri**
 - **Indian Entertainment** — **Kerala Vision** appears after **Zingabad**
-- **Indian Entertainment** — **Kerala Vision** appears after **Zingabad**
-- **Indian Entertainment** — **Kerala Vision** appears after **Zingabad**
-- **Indian Entertainment** — **Kerala Vision** appears after **Zingabad**
+- **Pakistani** — **Hum TV** appears after **Waseb TV**
+- **International** — **Fashion&LifeStyle** appears after **Time Television**
 - **International** — **24 Hour Free Movies** appears after **Global Fashion Channel**
 - **International** — **4ever Cinema** appears after **30A Music**
-- **Indian Music** — **7S Music** appears after **Zoom**
-- **Indian Bangla** — **Aakaash Aath** appears after **Zodiak TV**
-- **Bangladesh** — **15 — Channel Europe** appears after **609 — Channel 9**
-- **Bangladesh** — **53 — SA TV** appears after **598 — Rupashi Bangla TV**
-- **Bangladesh** — **34 — JA TV** appears after **58 — Time Television**
-- **Indian Movies** — **Goldmines 2** appears after **Zee Cinema**
-- **Indian Movies** — **Goldmines 2** appears after **Zee Cinema**
-- **Bangladesh** — **15 — Channel Europe** appears after **609 — Channel 9**
-- **Bangladesh** — **53 — SA TV** appears after **598 — Rupashi Bangla TV**
-- **Bangladesh** — **34 — JA TV** appears after **58 — Time Television**
-- **Indian Music** — **7S Music** appears after **Zoom**
-- **Indian Entertainment** — **Kerala Vision** appears after **Zingabad**
-- **Indian Bangla** — **Aakaash Aath** appears after **Zodiak TV**
-- **Indian Entertainment** — **Kerala Vision** appears after **Zingabad**
-- **Indian Music** — **7S Music** appears after **Zoom**
-- **Indian Movies** — **Goldmines 2** appears after **Zee Cinema**
-- **Indian Music** — **7S Music** appears after **Zoom**
-- **Indian Entertainment** — **Kerala Vision** appears after **Zingabad**
+- **Kids** — **Pogo** appears after **Zoo Moo**
+- **Religious** — **Islamic TV** appears after **Zainabia Channel**
+- **Sports** — **Eurosport** appears after **World of Freesports**
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
 ## Suspicious URLs

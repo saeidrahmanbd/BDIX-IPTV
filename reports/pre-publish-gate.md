@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-09T13:42:11+00:00**
-Source playlist SHA-256: **c05a91e4f6ff628f4f9416d8fbd7490004c83ce45cbd7913e415698c3c812421**
+Generated: **2026-11-09T15:24:39+00:00**
+Source playlist SHA-256: **8c1b3678eefb9c990ece2f8fcbd1fb1e5f2f3c8d7be6d1f4566fa0cf555b0267**
 
 Status: **BLOCK**
 
@@ -15,17 +15,17 @@ Status: **BLOCK**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **1**
-- Primary entries missing channel numbers: **22**
-- Primary channel-number sequence issues: **571**
-- Numbered review entries: **51**
+- Primary entries missing channel numbers: **21**
+- Primary channel-number sequence issues: **552**
+- Numbered review entries: **1**
 - Same-ID metadata name conflicts: **0**
-- Orphan Backup entries: **7**
-- Active rows with incomplete required metadata: **3**
+- Orphan Backup entries: **2**
+- Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **10**
 - Raw resolution/geoblock name tags: **0**
-- Missing logos in active groups: **3**
-- Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
+- Missing logos in active groups: **0**
+- Missing logos deferred in review groups (Review/New Channels/New Backups): **3**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **10**
 - Missing referenced local logo files: **0**
@@ -38,21 +38,20 @@ New Channels and New Backups are active BD/IN-only review queues used by discove
 
 ## Blocking Reasons
 - duplicate primary channel numbers: 1
-- duplicate primary identities: 1
-- orphan Backup entries: 7
-- active entries with incomplete identity/country/logo metadata: 3
+- orphan Backup entries: 2
 - entries missing tvg-language: 10
-- primary entries missing tvg-chno: 22
-- primary channel-number sequence gaps/order errors: 571
-- review entries still numbered: 51
-- missing logos: 3
+- primary entries missing tvg-chno: 21
+- primary channel-number sequence gaps/order errors: 552
+- review entries still numbered: 1
 - incorrect/placeholder/generic logos: 10
 
 ## Review-queue logo gaps
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
-None.
+- **D Talk**
+- **TV One UK**
+- **Prime TV**
 
 ## Metadata conflicts
 

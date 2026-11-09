@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T13:42:48+00:00",
+  "generated": "2026-11-09T15:25:35+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -593,7 +593,7 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "International"
       ],
       "streams": 2,
       "primary": 1,
@@ -1207,7 +1207,7 @@
         "channeleurope.uk"
       ],
       "groups": [
-        "Bangladesh"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -1239,7 +1239,7 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "International"
       ],
       "streams": 6,
       "primary": 2,
@@ -2005,7 +2005,7 @@
         "custom.shikortvcanada"
       ],
       "groups": [
-        "Bangladesh"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -2103,7 +2103,7 @@
         "custom.tentvprime"
       ],
       "groups": [
-        "Indian Bangla"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -2859,7 +2859,7 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "International"
       ],
       "streams": 2,
       "primary": 1,
@@ -2873,7 +2873,7 @@
         "deshitv.ca@sd"
       ],
       "groups": [
-        "Bangladesh"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -3090,7 +3090,7 @@
         "doyeltv.ca@sd"
       ],
       "groups": [
-        "Bangladesh"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -3529,12 +3529,12 @@
         "eurosport.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Review"
+        "Review",
+        "Sports"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "faktmarathi": {
       "names": [
@@ -4109,11 +4109,12 @@
       ],
       "groups": [
         "Backup",
+        "Pakistani",
         "Review"
       ],
       "streams": 5,
-      "primary": 3,
-      "backup": 2
+      "primary": 4,
+      "backup": 1
     },
     "hungama": {
       "names": [
@@ -4332,15 +4333,15 @@
         "Islamic TV"
       ],
       "ids": [
-        "islamictv.sa"
+        "islamictv.bd"
       ],
       "groups": [
-        "Backup",
+        "Religious",
         "Review"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "islamtv": {
       "names": [
@@ -4424,11 +4425,12 @@
         "jatv.bd"
       ],
       "groups": [
+        "Backup",
         "Bangladesh"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "jhankartv": {
       "names": [
@@ -5723,7 +5725,7 @@
         "nrbtv.ca"
       ],
       "groups": [
-        "Bangladesh"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -6152,12 +6154,12 @@
         "pogo.in@sd"
       ],
       "groups": [
-        "Backup",
+        "Kids",
         "Review"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "polimertv": {
       "names": [
@@ -8296,7 +8298,7 @@
         "thikanatv.us"
       ],
       "groups": [
-        "Bangladesh"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -8310,7 +8312,7 @@
         "timetelevision.us"
       ],
       "groups": [
-        "Bangladesh"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -8551,7 +8553,7 @@
         "tvone.uk"
       ],
       "groups": [
-        "Bangladesh"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
