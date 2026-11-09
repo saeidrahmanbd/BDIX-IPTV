@@ -1,5 +1,6 @@
 """Unit tests for exact primary/Backup integrity and Review quarantine."""
 import json
+import re
 import sys
 import unittest
 from pathlib import Path
