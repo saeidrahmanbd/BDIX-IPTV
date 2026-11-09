@@ -581,7 +581,7 @@ https://cdn.pishow.tv/ott/live/1474/master.m3u8
 https://cdn.pishow.tv/ott/live/1013/master.m3u8
 #EXTINF:-1 tvg-id="MazhavilManorama.in@SD" tvg-name="Mazhavil Manorama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mazhavil-manorama.png" tvg-chno="285" channel-id="MazhavilManorama.in@SD" tvg-country="IN" tvg-language="mal" group-title="Indian Entertainment",Mazhavil Manorama
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
-#EXTINF:-1 tvg-id="MeiAlaiTV.in@SD" tvg-name="Mei Alai TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-chno="286" channel-id="MeiAlaiTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Mei Alai TV
+#EXTINF:-1 tvg-id="MeiAlaiTV.in@SD" tvg-name="Mei Alai TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-alai-tv.png" tvg-chno="286" channel-id="MeiAlaiTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Mei Alai TV
 https://meialai.iptelevishion.com/meialai/2/index.m3u8
 #EXTINF:-1 tvg-id="MetroTV.in@SD" tvg-name="Metro TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/metro-tv-1080p-ee3f23e15b.png" tvg-chno="287" channel-id="MetroTV.in@SD" tvg-country="IN" tvg-language="tel" group-title="Indian Entertainment",Metro TV
 https://mercury.streambridge.link:8042/telugu/metrotv/index.m3u8
@@ -593,7 +593,7 @@ https://mntv.livebox.co.in/mntvhls/live.m3u8
 https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="Nepal1.in@SD" tvg-name="Nepal 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nepal-1.png" tvg-chno="291" channel-id="Nepal1.in@SD" tvg-country="IN" tvg-language="nep" group-title="Indian Entertainment",Nepal 1
 https://mumt05.tangotv.in/87NeALx2NEPAL1/index.m3u8
-#EXTINF:-1 tvg-id="NKRTVKannada.in@SD" tvg-name="NKR TV Kannada" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-chno="292" channel-id="NKRTVKannada.in@SD" tvg-country="IN" tvg-language="kan" group-title="Indian Entertainment",NKR TV Kannada
+#EXTINF:-1 tvg-id="NKRTVKannada.in@SD" tvg-name="NKR TV Kannada" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nkr-tv-kannada.png" tvg-chno="292" channel-id="NKRTVKannada.in@SD" tvg-country="IN" tvg-language="kan" group-title="Indian Entertainment",NKR TV Kannada
 https://stream.ottlive.co.in/nkrtv/index.m3u8
 #EXTINF:-1 tvg-id="NTCTV.in@SD" tvg-name="NTC TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntc-tv.png" tvg-chno="293" channel-id="NTCTV.in@SD" tvg-country="IN" tvg-language="nep" group-title="Indian Entertainment",NTC TV
 https://galaxyott.live/hls/ntv.m3u8
@@ -675,7 +675,7 @@ https://stream.ottlive.co.in/suryatvtamil/index.m3u8
 https://hlslive.olidigital.in/suriyantv/suriyantv/index.m3u8
 #EXTINF:-1 tvg-id="Swantham.in@SD" tvg-name="Swantham" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/swantham.png" tvg-chno="332" channel-id="Swantham.in@SD" tvg-country="IN" tvg-language="mal" group-title="Indian Entertainment",Swantham
 http://cloud.logichost.in:1935/SWANTHAM/live/index.m3u8
-#EXTINF:-1 tvg-id="TamilanTV.in@SD" tvg-name="Tamilan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-chno="333" channel-id="TamilanTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Tamilan TV
+#EXTINF:-1 tvg-id="TamilanTV.in@SD" tvg-name="Tamilan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tamilan-tv.png" tvg-chno="333" channel-id="TamilanTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Tamilan TV
 https://mumt04.tangotv.in/m18aqlK4TAMILANTELEVISION/index.m3u8
 #EXTINF:-1 tvg-id="TarangTV.in@SD" tvg-name="Tarang TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-tv.png" tvg-chno="334" channel-id="TarangTV.in@SD" tvg-country="IN" tvg-language="ori" group-title="Indian Entertainment",Tarang TV
 https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8
@@ -685,7 +685,7 @@ https://teluguone-yupptv.vgcdn.net/v1/019be9e3f04d1ea55784338b5c3e89/019be9e4474
 https://mumt07.tangotv.in/zHjX9OFlTHANTHIONE/index.m3u8
 #EXTINF:-1 tvg-id="ThendralTV.in@SD" tvg-name="Thendral TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thendral-tv-ed9b933eb5.png" tvg-chno="337" channel-id="ThendralTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Thendral TV
 https://hls.thendraltv.in/thendraltv_1210b43d/index.m3u8
-#EXTINF:-1 tvg-id="UniqueTV.in@SD" tvg-name="Unique TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-chno="338" channel-id="UniqueTV.in@SD" tvg-country="IN" tvg-language="und" group-title="Indian Entertainment",Unique TV
+#EXTINF:-1 tvg-id="UniqueTV.in@SD" tvg-name="Unique TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unique-tv.png" tvg-chno="338" channel-id="UniqueTV.in@SD" tvg-country="IN" tvg-language="und" group-title="Indian Entertainment",Unique TV
 https://fta.ektv.in/live/688/master.m3u8
 #EXTINF:-1 tvg-id="UTVPalakkad.in@SD" tvg-name="UTV Palakkad" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/utv-palakkad.png" tvg-chno="339" channel-id="UTVPalakkad.in@SD" tvg-country="IN" tvg-language="mal" group-title="Indian Entertainment",UTV Palakkad
 https://em4qj6nedyvg-hls-live.wmncdn.net/utv/ab2de115318ae40bdd434e193a2f2e7f.sdp/playlist.m3u8
