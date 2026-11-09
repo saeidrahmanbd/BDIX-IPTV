@@ -45,6 +45,14 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "push", 1, "international-channel-discovery.yml",
             "Routine maintenance commit",
         ))
+        self.assertTrue(guard.is_manual_retry(
+            "push", 1, "new-channel-discovery.yml",
+            "Verify fixed IPTV discovery [manual-new-channel-discovery]",
+        ))
+        self.assertFalse(guard.is_manual_retry(
+            "push", 1, "international-channel-discovery.yml",
+            "Verify fixed IPTV discovery [manual-new-channel-discovery]",
+        ))
 
     def test_any_existing_run_prevents_watchdog_redispatch(self):
         runs = [
