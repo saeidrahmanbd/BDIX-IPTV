@@ -7,6 +7,7 @@ rows are normalized to Review; stream URLs are never rewritten.
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import unicodedata
 from pathlib import Path
@@ -85,6 +86,19 @@ def normalize_playlist_text(text: str) -> tuple[str, int]:
     had_final_newline = text.endswith(("\n", "\r"))
     normalized = text.replace("\r\n", "\n").replace("\r", "\n")
     preamble, records = parse_records(normalized)
+    # Keep Playlist Studio's category registry aligned with the canonical
+    # order enforced below; a stale registry can make clients display groups
+    # differently even when the M3U records themselves are correctly sorted.
+    registry_prefix = "#PLAYLIST-STUDIO-CATEGORIES:"
+    registry_positions = [i for i, line in enumerate(preamble) if line.startswith(registry_prefix)]
+    if len(registry_positions) > 1:
+        raise ValueError("Multiple category registries; refusing ambiguous rewrite.")
+    registry_line = registry_prefix + json.dumps(CATEGORY_ORDER, ensure_ascii=False)
+    if registry_positions:
+        preamble[registry_positions[0]] = registry_line
+    else:
+        header_index = next((i + 1 for i, line in enumerate(preamble) if line.startswith("#EXTM3U")), len(preamble))
+        preamble.insert(header_index, registry_line)
     original_urls = url_inventory(records)
     for record in records:
         if attrs(record[0]).get("group-title", "").strip() == "Not Playing":
