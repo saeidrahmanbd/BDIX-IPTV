@@ -437,7 +437,7 @@ def verify_no_unauthorized_removals() -> int:
     # exists. A primary duplicate may be demoted to Backup only while an exact
     # primary ID remains. Review rows themselves may never be promoted to Backup.
     baseline_by_url = {stream_url_key(str(item.get("url", ""))): item for item in baseline if str(item.get("url", "")).strip()}
-    current_by_url = {str(block["url"]).strip().casefold(): block for block in current if str(block["url"]).strip()}
+    current_by_url = {stream_url_key(str(block["url"])): block for block in current if str(block["url"]).strip()}
     primary_ids = set()
     for block in current:
         info = str(block["info"]); group = _group(info)
