@@ -520,8 +520,12 @@ def final_mode(playlist, report, baseline, mode):
             if reason:
                 policy_issues.append(f"Indian prohibited category: {e['name']} ({reason})")
         elif mode == "international":
+            # Validate newly discovered rows against the country/content policy,
+            # not the destination country-group label (e.g. "Albania" or "United States").
+            policy_attrs = dict(attrs)
+            policy_attrs["group-title"] = "International"
             target, reason, policy_country = discovery.policy(
-                attrs, e["name"], allow_legacy_group=(e["group"].casefold() == "international")
+                policy_attrs, e["name"], allow_legacy_group=True
             )
             if target is None:
                 policy_issues.append(f"country/content policy: {e['name']} ({reason or 'not eligible'})")
