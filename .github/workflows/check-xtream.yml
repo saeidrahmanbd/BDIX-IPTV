@@ -294,13 +294,56 @@ jobs:
                               for group in sorted(set(source_counts) | set(api_counts))
                               if source_counts.get(group, 0) != api_counts.get(group, 0)
                           }
+                          parity_mismatches = []
                           if not missing_ids and not extra_ids and not count_diff:
-                              last_sync_detail = ""
-                              break
-                          last_sync_detail = (
-                              f"missing_stream_ids={len(missing_ids)} "
-                              f"extra_stream_ids={len(extra_ids)} category_differences={count_diff}"
-                          )
+                              # Category counts can match while the Worker still serves stale
+                              # channel numbers, logos or stream metadata. Include full source
+                              # parity in the convergence loop so a just-published playlist
+                              # does not produce a false failure during Worker propagation.
+                              for stream_id, expected in expected_by_id.items():
+                                  actual = api_by_id[stream_id]
+                                  try:
+                                      expected_num = float(expected["chno"]) if expected["chno"] else 0
+                                  except ValueError:
+                                      expected_num = 0
+                                  expected_fields = {
+                                      "direct_source": expected["url"],
+                                      "name": expected["name"],
+                                      "tvg_name": expected["name"],
+                                      "stream_icon": expected["logo"],
+                                      "tvg_id": expected["tvg_id"],
+                                      "epg_channel_id": expected["tvg_id"],
+                                      "num": expected_num,
+                                      "group": expected["group"],
+                                  }
+                                  actual_fields = {
+                                      "direct_source": actual.get("direct_source"),
+                                      "name": actual.get("name"),
+                                      "tvg_name": actual.get("tvg_name"),
+                                      "stream_icon": actual.get("stream_icon"),
+                                      "tvg_id": actual.get("tvg_id"),
+                                      "epg_channel_id": actual.get("epg_channel_id"),
+                                      "num": actual.get("num"),
+                                      "group": category_names.get(str(actual.get("category_id"))),
+                                  }
+                                  mismatches = [
+                                      field for field, expected_value in expected_fields.items()
+                                      if actual_fields.get(field) != expected_value
+                                  ]
+                                  if mismatches:
+                                      parity_mismatches.append(f"{stream_id}:{','.join(mismatches)}")
+                              if not parity_mismatches:
+                                  last_sync_detail = ""
+                                  break
+                              last_sync_detail = (
+                                  f"metadata_mismatches={len(parity_mismatches)} "
+                                  f"sample={parity_mismatches[:3]}"
+                              )
+                          else:
+                              last_sync_detail = (
+                                  f"missing_stream_ids={len(missing_ids)} "
+                                  f"extra_stream_ids={len(extra_ids)} category_differences={count_diff}"
+                              )
                   print(f"{name}: Worker inventory sync attempt {sync_attempt}/{sync_attempts}: {last_sync_detail}")
                   if sync_attempt < sync_attempts:
                       time.sleep(10)
