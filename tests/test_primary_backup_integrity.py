@@ -103,8 +103,14 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
                       and e["attrs"].get("group-title") == "Backup"]
         self.assertEqual(len(raj_primary), 1)
         self.assertEqual(raj_primary[0]["url"], "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8")
-        self.assertEqual(len(raj_backup), 1)
-        self.assertEqual(raj_backup[0]["url"], "http://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8")
+        self.assertEqual(len(raj_backup), 2)
+        self.assertEqual(
+            {e["url"] for e in raj_backup},
+            {
+                "http://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8",
+                "https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8",
+            },
+        )
 
         placeholder_ids = {
             "Colors.in", "Colors.Bangla.in", "ColorsBanglaCinema.in@SD",
