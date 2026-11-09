@@ -65,6 +65,7 @@ def is_manual_retry(
         return True
     markers = {
         "international-channel-discovery.yml": "[manual-international-discovery]",
+        "new-channel-discovery.yml": "[manual-new-channel-discovery]",
     }
     marker = markers.get(str(workflow_file or "").strip())
     return (
