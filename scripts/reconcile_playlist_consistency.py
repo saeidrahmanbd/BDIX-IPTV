@@ -6,7 +6,7 @@ import re
 from stream_url_identity import stream_url_key
 
 P = Path("IPTV-Playlist.m3u")
-ACTIVE = {"Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Fashion", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports"}
+ACTIVE = {"Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports"}
 REVIEW_PRIORITY = {"New Channels": 4, "New Backups": 3, "New Backup": 3, "Review": 2, "Not Playing": 2}
 REVIEW = set(REVIEW_PRIORITY)
 ATTR = re.compile(r'([\w-]+)="([^"]*)"')
