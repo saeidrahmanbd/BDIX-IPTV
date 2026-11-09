@@ -236,12 +236,13 @@ def promote_verified_candidates(entries, verified_starts, inconclusive_starts, u
     Country thresholds are calculated from existing primaries plus this batch.
     """
     queue_groups = {"new channels", "new backup", "new backups"}
-    excluded_groups = queue_groups | {"backup", "backups", "review", "not playing", "test", "adult"}
+    excluded_groups = queue_groups | {"backup", "backups", "review", "not playing", "test"}
     country_labels = {
         ("pakistani" if code == "PK" else discovery.country_group(code).casefold()): code
         for code in discovery.ISO_CODES if code not in {"BD", "IN"}
     }
     primary_ids = defaultdict(set)
+    active_identity_keys = set()
     for entry in entries:
         attrs = entry["attrs"]
         group = entry["group"].strip().casefold()
@@ -250,13 +251,15 @@ def promote_verified_candidates(entries, verified_starts, inconclusive_starts, u
             code = country_labels.get(group, code)
         if group in excluded_groups or code not in discovery.ISO_CODES:
             continue
+        identity = discovery.primary_identity(attrs, entry["name"])
+        if not identity:
+            continue
+        active_identity_keys.add((code, identity))
         if discovery.counts_toward_country_group(group, code):
-            identity = discovery.primary_identity(attrs, entry["name"])
-            if identity:
-                primary_ids[code].add(identity)
+            primary_ids[code].add(identity)
 
     decisions = []
-    reserved = {(code, identity) for code, values in primary_ids.items() for identity in values}
+    reserved = set(active_identity_keys)
     added_ids = defaultdict(set)
     for entry in entries:
         old_group = entry["group"].strip().casefold()
