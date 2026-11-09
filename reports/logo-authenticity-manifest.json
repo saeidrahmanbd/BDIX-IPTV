@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-09T18:00:29.713441+00:00",
+  "generated_at_utc": "2026-11-09T18:02:19.125200+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,23 +11,21 @@
     "International-Playlist.m3u": 3054
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "a80224275689d04a654f3fc01a4b30296f2ea27428dae1fcf51b66198a66bb9c",
-    "International-Playlist.m3u": "0b7ad38c19aeedcba6d5b239ca9a83747bc8ae4c21ec6983a355e214665ebde1"
+    "IPTV-Playlist.m3u": "4a3e0afbad3f233c498e6b490f323fcb43cb0b7f6b97b3e0b2517aac62010cc0",
+    "International-Playlist.m3u": "55590260231b80063a9d2c1e065a8f89ae36dccd133fc2229846dfd3c32e16f6"
   },
   "status_counts": {
-    "needs_review": 3289,
-    "third_party_verified": 826,
-    "generated_fallback": 8
+    "needs_review": 3291,
+    "third_party_verified": 832
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1049,
-      "third_party_verified": 12,
-      "generated_fallback": 8
+      "needs_review": 1052,
+      "third_party_verified": 17
     },
     "International-Playlist.m3u": {
-      "needs_review": 2240,
-      "third_party_verified": 814
+      "needs_review": 2239,
+      "third_party_verified": 815
     }
   },
   "entry_count": 4123,
@@ -1634,7 +1632,7 @@
       "channel_name": "Star Gold Select",
       "tvg_id": "StarGoldSelect.in@HD",
       "channel_id": "StarGoldSelect.in@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select-fa81030f74.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -3458,11 +3456,11 @@
       "channel_name": "Mei Alai TV",
       "tvg_id": "MeiAlaiTV.in@SD",
       "channel_id": "MeiAlaiTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-alai-tv.png",
+      "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
-      "reason": "Explicitly labelled local fallback artwork; it is not an official broadcaster logo."
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -3530,11 +3528,11 @@
       "channel_name": "NKR TV Kannada",
       "tvg_id": "NKRTVKannada.in@SD",
       "channel_id": "NKRTVKannada.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nkr-tv-kannada.png",
+      "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
-      "reason": "Explicitly labelled local fallback artwork; it is not an official broadcaster logo."
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -3950,11 +3948,11 @@
       "channel_name": "Subin TV",
       "tvg_id": "SubinTV.in@SD",
       "channel_id": "SubinTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/subin-tv.png",
+      "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
-      "reason": "Explicitly labelled local fallback artwork; it is not an official broadcaster logo."
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4022,11 +4020,11 @@
       "channel_name": "Tamilan TV",
       "tvg_id": "TamilanTV.in@SD",
       "channel_id": "TamilanTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tamilan-tv.png",
+      "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
-      "reason": "Explicitly labelled local fallback artwork; it is not an official broadcaster logo."
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4082,11 +4080,11 @@
       "channel_name": "Unique TV",
       "tvg_id": "UniqueTV.in@SD",
       "channel_id": "UniqueTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg",
-      "status": "generated_fallback",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "Explicitly labelled local fallback artwork; it is not an official broadcaster logo."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unique-tv-c64872bc2a.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/UNIQUE-TV-logo_2000_X_1125_Transpharent.png",
+      "reason": "IPTV-org exact ID: UniqueTV.in IPTV-org public logo dataset Source page: https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/UNIQUE-TV-logo_2000_X_1125_Transpharent.png"
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4214,7 +4212,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.svg",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -4682,11 +4680,11 @@
       "channel_name": "Fashion&LifeStyle",
       "tvg_id": "FashionLifeStyle.ru@SD",
       "channel_id": "FashionLifeStyle.ru@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-fashion-1-85fe46a6.svg",
-      "status": "generated_fallback",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "Explicitly labelled local fallback artwork; it is not an official broadcaster logo."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashion-and-lifestyle-7b3ff05313.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://fast.ntvplus.tv/files/image/68/79/05/-channel%218rb.png",
+      "reason": "NTV+ official Fashion&LifeStyle HD channel listing image Official channel image served by NTV+; reuse rights not separately specified Source page: https://ntvplus.tv/channel/fashion-lifestyle-hd-562"
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4694,11 +4692,11 @@
       "channel_name": "FashionBox",
       "tvg_id": "FashionBox.nl@SD",
       "channel_id": "FashionBox.nl@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-fashion-1-85fe46a6.svg",
-      "status": "generated_fallback",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "Explicitly labelled local fallback artwork; it is not an official broadcaster logo."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashionbox-1c79f5c995.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://spiintl.com/data/files/kcfinderUploadDir/images/logo/fashionboxhd-logo.png",
+      "reason": "SPI International official FashionBox HD channel page Official channel logo; rights retained by SPI International Source page: https://spiintl.com/channels/fashionbox"
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4754,11 +4752,11 @@
       "channel_name": "Global Fashion Channel",
       "tvg_id": "GlobalFashionChannel.us@SD",
       "channel_id": "GlobalFashionChannel.us@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-digital-fashion-7f86a23d.svg",
-      "status": "generated_fallback",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "Explicitly labelled local fallback artwork; it is not an official broadcaster logo."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-fashion-channel-017dbd8b8f.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://globalfashionchannel.com/wp-content/uploads/2016/03/GFC400r.png",
+      "reason": "Global Fashion Channel official website Official brand logo; trademark and copyright retained by Global Fashion Channel Source page: https://globalfashionchannel.com/about-2/"
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -10898,7 +10896,7 @@
       "channel_name": "Star Gold Select",
       "tvg_id": "StarGoldSelect.in@HD",
       "channel_id": "StarGoldSelect.in@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select-fa81030f74.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -11174,7 +11172,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.svg",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -11642,7 +11640,7 @@
       "channel_name": "Shikor TV Canada",
       "tvg_id": "",
       "channel_id": "custom.shikortvcanada",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shikor-tv-canada-ac43f0fa9e.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -12254,7 +12252,7 @@
       "channel_name": "Ten TV Prime",
       "tvg_id": "",
       "channel_id": "custom.tentvprime",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-tv-prime-ac43f0fa9e.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -12710,11 +12708,11 @@
       "channel_name": "TV One UK",
       "tvg_id": "TVOne.uk",
       "channel_id": "TVOne.uk",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-one-uk-ac43f0fa9e.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://www.jagobd.com/wp-content/themes/jagobd-wp/assets/img/logo.png?x89217",
+      "reason": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://www.jagobd.com/tv-one-uk"
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -12854,7 +12852,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.svg",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -33758,11 +33756,11 @@
       "channel_name": "BSTV (Pakistan)",
       "tvg_id": "BSTV.pk@SD",
       "channel_id": "BSTV.pk@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bstv-pakistan-576p.jpg",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bstv-pakistan-c97ac280ed.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://www.vivalivetv.com/public/files/shows/0/1/3952-640x360-FFFFFF.jpg",
+      "reason": "IPTV-org exact ID: BSTV.pk IPTV-org public logo dataset Source page: https://www.vivalivetv.com/public/files/shows/0/1/3952-640x360-FFFFFF.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",

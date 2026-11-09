@@ -3488,7 +3488,7 @@ https://bravoohls.wns.live/hls/stream.m3u8
 http://31.148.48.15/Bridge_TV_HD/index.m3u8
 #EXTINF:-1 tvg-id="BSFilm.pk@SD" channel-id="BSFilm.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bs-film.png" tvg-country="PK" tvg-content="Movies" group-title="Review" tvg-name="BS Film",BS Film
 https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
-#EXTINF:-1 tvg-id="BSTV.pk@SD" channel-id="BSTV.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bstv-pakistan-576p.jpg" tvg-country="PK" group-title="Review" tvg-name="BSTV (Pakistan)",BSTV (Pakistan)
+#EXTINF:-1 tvg-id="BSTV.pk@SD" channel-id="BSTV.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bstv-pakistan-c97ac280ed.png" tvg-country="PK" group-title="Review" tvg-name="BSTV (Pakistan)",BSTV (Pakistan)
 https://lbgo.bozztv.com/ssh101/ssh101/bstv/playlist.m3u8
 #EXTINF:-1 tvg-id="BTVNational.bd" channel-id="BTVNational.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-national-2db28e10.png" tvg-country="BD" group-title="Review" tvg-name="BTV National",BTV National
 https://btv.hridoytv-channel.workers.dev/btv.m3u8

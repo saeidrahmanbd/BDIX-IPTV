@@ -5883,5 +5883,40 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/t3i1HtE.jpg",
     "notes": "IPTV-org exact unique channel name: TheRetroChannel.pr IPTV-org public logo dataset Source page: https://i.imgur.com/t3i1HtE.jpg"
+  },
+  "IPTV-Playlist.m3u|FashionLifeStyle.ru@SD|Fashion&LifeStyle|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashion-and-lifestyle-7b3ff05313.png": {
+    "status": "third_party_verified",
+    "source_url": "https://fast.ntvplus.tv/files/image/68/79/05/-channel%218rb.png",
+    "notes": "NTV+ official Fashion&LifeStyle HD channel listing image Official channel image served by NTV+; reuse rights not separately specified Source page: https://ntvplus.tv/channel/fashion-lifestyle-hd-562"
+  },
+  "IPTV-Playlist.m3u|FashionBox.nl@SD|FashionBox|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashionbox-1c79f5c995.png": {
+    "status": "third_party_verified",
+    "source_url": "https://spiintl.com/data/files/kcfinderUploadDir/images/logo/fashionboxhd-logo.png",
+    "notes": "SPI International official FashionBox HD channel page Official channel logo; rights retained by SPI International Source page: https://spiintl.com/channels/fashionbox"
+  },
+  "IPTV-Playlist.m3u|GlobalFashionChannel.us@SD|Global Fashion Channel|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-fashion-channel-017dbd8b8f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://globalfashionchannel.com/wp-content/uploads/2016/03/GFC400r.png",
+    "notes": "Global Fashion Channel official website Official brand logo; trademark and copyright retained by Global Fashion Channel Source page: https://globalfashionchannel.com/about-2/"
+  },
+  "IPTV-Playlist.m3u|custom.shikortvcanada|Shikor TV Canada|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shikor-tv-canada-ac43f0fa9e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.jagobd.com/wp-content/themes/jagobd-wp/assets/img/logo.png?x89217",
+    "notes": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://www.jagobd.com/shikortv"
+  },
+  "IPTV-Playlist.m3u|custom.tentvprime|Ten TV Prime|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-tv-prime-ac43f0fa9e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.jagobd.com/wp-content/themes/jagobd-wp/assets/img/logo.png?x89217",
+    "notes": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://www.jagobd.com/primetv"
+  },
+  "IPTV-Playlist.m3u|TVOne.uk|TV One UK|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-one-uk-ac43f0fa9e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.jagobd.com/wp-content/themes/jagobd-wp/assets/img/logo.png?x89217",
+    "notes": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://www.jagobd.com/tv-one-uk"
+  },
+  "International-Playlist.m3u|BSTV.pk@SD|BSTV (Pakistan)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bstv-pakistan-c97ac280ed.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.vivalivetv.com/public/files/shows/0/1/3952-640x360-FFFFFF.jpg",
+    "notes": "IPTV-org exact ID: BSTV.pk IPTV-org public logo dataset Source page: https://www.vivalivetv.com/public/files/shows/0/1/3952-640x360-FFFFFF.jpg"
   }
 }
