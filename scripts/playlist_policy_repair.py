@@ -18,7 +18,7 @@ ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 # Permanent IPTV-Playlist.m3u group order. Keep in sync with sort_playlists.py.
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
-    "Indian Entertainment", "Pakistani", "International",
+    "Indian Entertainment", "Fashion", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
     "Review", "New Channels", "New Backups", "Backup",
 ]

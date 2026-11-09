@@ -39,6 +39,21 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             + row("UNKNOWN.bd", "Unknown Language", "Bangladesh", "https://stream.example/unknown.m3u8", language="")
         )
 
+    def test_fashion_is_treated_as_a_primary_group(self):
+        sample = (
+            "#EXTM3U\n"
+            + row(
+                "FashionLifeStyle.ru@SD", "Fashion&LifeStyle", "Fashion",
+                "https://stream.example/fashion.m3u8",
+                country="RU", language="und", number="618",
+            )
+        )
+        updated, _, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertIn('group-title="Fashion"', updated)
+        self.assertIn("Fashion", GROUP_ORDER)
+        self.assertNotIn('group-title="Review",Fashion&LifeStyle', updated)
+
     def test_duplicate_primary_demotes_alternate_and_backup_has_primary(self):
         updated, stats, errors = repair_playlist_text(self.sample)
         self.assertEqual(errors, [])

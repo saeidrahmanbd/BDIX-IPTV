@@ -24,7 +24,7 @@ ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
 PRIMARY_GROUPS = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
-    "Indian Entertainment", "Pakistani", "International",
+    "Indian Entertainment", "Fashion", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
 ]
 GROUP_ORDER = PRIMARY_GROUPS + ["Review", "New Channels", "New Backups", "Backup"]

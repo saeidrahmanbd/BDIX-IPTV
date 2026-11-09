@@ -16,7 +16,7 @@ Direct URL:
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u
 ~~~
 
-This is the primary, broad collection—not a Bangladesh-and-India-only playlist. It is organized into country and genre groups, including Bangladesh, Indian categories, Pakistani, International, Documentary & Wildlife, Kids, Religious and Sports. Channel eligibility remains governed by the established country- and genre-specific rules.
+This is the primary, broad collection—not a Bangladesh-and-India-only playlist. It is organized into country and genre groups, including Bangladesh, Indian categories, the six-channel Fashion group, Pakistani, International, Documentary & Wildlife, Kids, Religious and Sports. Channel eligibility remains governed by the established country- and genre-specific rules.
 
 ### International — International-Playlist.m3u
 

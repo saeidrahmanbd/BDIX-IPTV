@@ -8,7 +8,7 @@ from urllib.parse import urlsplit
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/metadata-normalization.md")
-ACTIVE_GROUPS = {"Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports"}
+ACTIVE_GROUPS = {"Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Fashion", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports"}
 REVIEW_GROUPS = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"

@@ -3,7 +3,7 @@ const EPG_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/
 // Review and discovery queues are deliberately withheld from every Xtream endpoint.
 // Keep Not Playing as a hidden legacy alias so stale playlist rows cannot leak.
 const INACTIVE = new Set(["Test", "Review", "Not Playing", "New Channels", "New Backups"]);
-const CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Review", "New Channels", "New Backups", "Backup", "Not Playing"];
+const CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Fashion", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Review", "New Channels", "New Backups", "Backup", "Not Playing"];
 const CATEGORY_RANK = new Map(CATEGORY_ORDER.map((name, i) => [name, i]));
 const CORS_HEADERS = {
   "access-control-allow-origin":"*","access-control-allow-methods":"GET, HEAD, OPTIONS","access-control-allow-headers":"Content-Type, Authorization","access-control-max-age":"86400"
