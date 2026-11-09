@@ -357,8 +357,8 @@ def primary_target(base,code,country_groups):
  if code in country_groups and country_group(code):return country_group(code)
  return "International"
 def existing_international_target(a,name,country_groups):
- # Revalidate legacy catch-all rows. BD/IN may be any genre; all other
- # countries must still be unambiguously Movies/Music.
+ # Revalidate legacy catch-all rows. BD/IN/PK may be any eligible genre;
+ # all other countries must still be unambiguously Movies/Music.
  policy_a=dict(a); policy_a["group-title"]="International"
  base,reason,code=policy(policy_a,name,allow_legacy_group=True)
  genre=infer_genre(policy_a,name)
