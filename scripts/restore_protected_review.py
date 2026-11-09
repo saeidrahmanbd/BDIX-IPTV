@@ -107,6 +107,25 @@ AUTHORIZED_PRIMARY_TO_REVIEW_MIGRATIONS = {
     "kiddomatix": ("https://cc-le0kohm4qt3mk.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-le0kohm4qt3mk/OTM/OTM_KiddoMatix-SCTE_SAMSUNG/playlist.m3u8", "Kids"),
 }
 
+AUTHORIZED_REVIEW_TO_PRIMARY_MIGRATIONS = {
+    # Reachable streams with verified identities; restore them to their proper groups.
+    "shikortvcanada": (
+        "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/shikortv.stream/tracks-v1a1/mono.m3u8",
+        "Review",
+        "Bangladesh",
+    ),
+    "tentvprime": (
+        "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/primetv.stream/tracks-v1a1/mono.m3u8",
+        "Review",
+        "Bangladesh",
+    ),
+    "tvoneuk": (
+        "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/tvoneuksni.stream/tracks-v1a1/mono.m3u8",
+        "Review",
+        "Religious",
+    ),
+}
+
 
 def is_authorized_primary_to_review_migration(
     info: str, url: str, original_group: str
@@ -139,6 +158,24 @@ def is_authorized_primary_to_backup_migration(
         and original_group.strip() == expected_source_group
         and stream_url_key(url) == stream_url_key(expected_url)
     )
+
+
+def authorized_review_to_primary_target(
+    info: str, url: str, original_group: str
+) -> str | None:
+    """Return a target only for an exact, reviewed Review-to-primary migration."""
+    key = normalize_name(display_name(info))
+    rule = AUTHORIZED_REVIEW_TO_PRIMARY_MIGRATIONS.get(key)
+    if not rule:
+        return None
+    expected_url, expected_source_group, target_group = rule
+    if (
+        original_group.strip() != expected_source_group
+        or group_of(info) != target_group
+        or stream_url_key(url) != stream_url_key(expected_url)
+    ):
+        return None
+    return target_group
 
 
 def authorized_backup_migration_target(info: str, url: str) -> str | None:
@@ -523,12 +560,13 @@ def restore() -> None:
     restored_from_queue = 0
     reclassification_reverted = 0
     migrated_count = 0
+    review_promoted_count = 0
     migration_counts: Counter[str] = Counter()
     migrated_urls: set[str] = set()
     permanently_removed_count = 0
 
     def process_record(record: list[str], from_snapshot: bool = False) -> None:
-        nonlocal next_number, restored_from_queue, reclassification_reverted, migrated_count, permanently_removed_count
+        nonlocal next_number, restored_from_queue, reclassification_reverted, migrated_count, review_promoted_count, permanently_removed_count
         url = url_of(record)
         if is_authorized_removal(record[0], url):
             permanently_removed_count += 1
@@ -542,6 +580,9 @@ def restore() -> None:
             migration_source = AUTHORIZED_MIGRATION_SOURCE_GROUPS.get(
                 normalize_name(display_name(record[0])), "Backup"
             )
+            review_target = authorized_review_to_primary_target(
+                record[0], url, original["group"]
+            )
             if (
                 original["group"] == migration_source
                 and target_group
@@ -551,6 +592,12 @@ def restore() -> None:
                 protected_occurrences_to_restore[key] -= 1
                 migrated_urls.add(key)
                 migrated_count += 1
+                migration_counts[current_group] += 1
+            elif review_target and current_group == review_target:
+                # A stream proven reachable again leaves Review for its verified group.
+                protected_occurrences_to_restore[key] -= 1
+                migrated_urls.add(key)
+                review_promoted_count += 1
                 migration_counts[current_group] += 1
             else:
                 protected_occurrences_to_restore[key] -= 1
@@ -655,6 +702,7 @@ def restore() -> None:
         f"restored_exact={restored_from_queue} "
         f"primary_reclassifications_reverted={reclassification_reverted} "
         f"backup_migrated={migrated_count} "
+        f"review_promoted={review_promoted_count} "
         f"migration_groups={dict(sorted(migration_counts.items()))} "
         f"unexpected_backup_retained={len(unexpected_backup)} "
         f"unexpected_review_retained={len(unexpected_review)} "
