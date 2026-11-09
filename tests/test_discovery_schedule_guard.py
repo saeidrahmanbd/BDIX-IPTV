@@ -27,6 +27,13 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             date(2026, 11, 8),
         )
 
+    def test_github_rerun_attempt_is_treated_as_manual_retry(self):
+        self.assertTrue(guard.is_manual_retry("workflow_dispatch", 1))
+        self.assertTrue(guard.is_manual_retry("push", 2))
+        self.assertTrue(guard.is_manual_retry("schedule", "3"))
+        self.assertFalse(guard.is_manual_retry("push", 1))
+        self.assertFalse(guard.is_manual_retry("schedule", None))
+
     def test_any_existing_run_prevents_watchdog_redispatch(self):
         runs = [
             {
