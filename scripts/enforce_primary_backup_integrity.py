@@ -16,6 +16,7 @@ from pathlib import Path
 
 from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS
 from stream_url_identity import stream_url_key
+from logo_asset_naming import is_blocked_logo_basename
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/primary-backup-integrity.md")
@@ -199,6 +200,7 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
         "kids_promoted_from_review": 0,
         "non_kids_review_removed": 0,
         "unknown_groups_quarantined": 0,
+        "missing_logos_quarantined": 0,
         "duplicate_primary_demoted": 0,
         "orphan_backups_quarantined": 0,
         "user_authorized_orphan_backups_removed": 0,
@@ -275,6 +277,16 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
         if not identity_ids(info) and group in PRIMARY_GROUPS + ["Backup"]:
             info = set_group(info, "Review")
             group = "Review"
+
+        # Active primaries need a verified local, non-placeholder logo. Keep
+        # their URLs and metadata, but quarantine unresolved rows for manual review.
+        logo = attrs(info).get("tvg-logo", "").strip()
+        logo_name = logo.split("?", 1)[0].rsplit("/", 1)[-1]
+        valid_local_logo = logo.startswith(RAW_LOGO_BASE) and not is_blocked_logo_basename(logo_name)
+        if group in PRIMARY_GROUPS and not valid_local_logo:
+            info = set_group(info, "Review")
+            group = "Review"
+            stats["missing_logos_quarantined"] += 1
 
         if group in REVIEW_GROUPS and attrs(info).get("tvg-chno"):
             info = remove_attr(info, "tvg-chno")

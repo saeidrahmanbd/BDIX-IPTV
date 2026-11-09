@@ -54,6 +54,28 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertIn("Fashion", GROUP_ORDER)
         self.assertNotIn('group-title="Review",Fashion&LifeStyle', updated)
 
+    def test_primary_without_verified_local_logo_is_preserved_in_review(self):
+        dtalk_url = "https://stream.example/d-talk.m3u8"
+        prime_url = "https://stream.example/prime-tv.m3u8"
+        sample = (
+            "#EXTM3U\n"
+            + '#EXTINF:-1 tvg-name="D Talk" channel-id="custom.shikortvcanada" tvg-country="BD" tvg-language="ben" tvg-chno="17" group-title="Bangladesh",D Talk\n'
+            + dtalk_url + "\n"
+            + '#EXTINF:-1 tvg-name="Prime TV" channel-id="custom.tentvprime" tvg-country="IN" tvg-language="ben" tvg-chno="76" group-title="Indian Bangla",Prime TV\n'
+            + prime_url + "\n"
+        )
+        updated, stats, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertEqual(stats["missing_logos_quarantined"], 2)
+        self.assertIn(dtalk_url, updated)
+        self.assertIn(prime_url, updated)
+        self.assertIn('tvg-id="custom.shikortvcanada"', updated)
+        self.assertIn('tvg-id="custom.tentvprime"', updated)
+        self.assertIn('group-title="Review"', updated)
+        self.assertNotIn('tvg-chno="17"', updated)
+        self.assertNotIn('tvg-chno="76"', updated)
+        self.assertEqual(stats["missing_logos_deferred"].count("D Talk"), 1)
+        self.assertEqual(stats["missing_logos_deferred"].count("Prime TV"), 1)
     def test_duplicate_primary_demotes_alternate_and_backup_has_primary(self):
         updated, stats, errors = repair_playlist_text(self.sample)
         self.assertEqual(errors, [])
