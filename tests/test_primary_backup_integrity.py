@@ -103,6 +103,22 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
                        and e["attrs"].get("group-title") == "Review"]
         self.assertGreaterEqual(len(quarantined), 6)
 
+        https_mirrors = {
+            "Bangla TV": "https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8",
+            "SA TV": "https://j6nfugukcl.gpcdn.net/tile_5/master.m3u8",
+            "Hindi Hits": "https://samitaorigin.tangotv.in/HINDIHITS/SAMITAORIGIN/index.m3u8",
+            "Zee TV": "https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8",
+        }
+        for name, url in https_mirrors.items():
+            primary = [e for e in entries if e["attrs"].get("tvg-name") == name
+                       and e["attrs"].get("group-title") in primary_groups]
+            backup = [e for e in entries if e["attrs"].get("tvg-name") == name
+                      and e["attrs"].get("group-title") == "Backup"
+                      and e["url"].startswith("http://")]
+            self.assertEqual(len(primary), 1, name)
+            self.assertEqual(primary[0]["url"], url, name)
+            self.assertEqual(len(backup), 1, name)
+
     def test_primary_without_verified_local_logo_is_preserved_in_review(self):
         dtalk_url = "https://stream.example/d-talk.m3u8"
         prime_url = "https://stream.example/prime-tv.m3u8"
