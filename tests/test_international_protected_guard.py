@@ -124,6 +124,91 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
         self.assertIn('"International"', output)
 
 
+    def test_pakistan_uses_the_same_five_unique_primary_channel_threshold(self):
+        header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
+        four = "".join(
+            entry(f"Pakistan Channel {i}", "Pakistani", f"http://pk.example/{i}.m3u8", 'tvg-country="PK" ')
+            for i in range(1, 5)
+        )
+        five = "".join(
+            entry(f"Pakistan Channel {i}", "Pakistani", f"http://pk5.example/{i}.m3u8", 'tvg-country="PK" ')
+            for i in range(1, 6)
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            Path(tmp, "International-Playlist.m3u").write_text(header + four, encoding="utf-8")
+            Path(tmp, "reports").mkdir()
+            result = subprocess.run(
+                [sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
+                cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)), capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            four_output = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+
+            Path(tmp, "International-Playlist.m3u").write_text(header + five, encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
+                cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)), capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            five_output = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+
+        self.assertEqual(four_output.count('group-title="International"'), 4)
+        self.assertNotIn('group-title="Pakistani"', four_output)
+        self.assertEqual(five_output.count('group-title="Pakistani"'), 5)
+        self.assertNotIn('group-title="International"', five_output)
+
+    def test_eligible_orphan_backup_is_promoted_and_counts_toward_threshold(self):
+        header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
+        four_primary = "".join(
+            entry(f"Albania Movie {i}", "International", f"http://al.example/{i}.m3u8",
+                  'tvg-country="AL" tvg-content="Movies" ')
+            for i in range(1, 5)
+        )
+        orphan = entry(
+            "Albania Movie 5", "Backup", "http://al.example/orphan.m3u8",
+            'tvg-country="AL" tvg-content="Movies" '
+        )
+        same_channel_alternate = entry(
+            "Albania Movie 1", "Backup", "http://al.example/alternate.m3u8",
+            'tvg-country="AL" tvg-content="Movies" '
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            Path(tmp, "International-Playlist.m3u").write_text(
+                header + four_primary + orphan + same_channel_alternate, encoding="utf-8"
+            )
+            Path(tmp, "reports").mkdir()
+            result = subprocess.run(
+                [sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
+                cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)), capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            output = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+
+        self.assertEqual(output.count('group-title="Albania"'), 5)
+        self.assertEqual(output.count('group-title="Backup"'), 1)
+        self.assertIn("http://al.example/orphan.m3u8", output)
+        self.assertIn("http://al.example/alternate.m3u8", output)
+
+    def test_adult_orphan_backup_is_restored_to_adult_group(self):
+        header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
+        adult_orphan = entry(
+            "Pink Erotic 2", "Backup", "http://adult.example/pink-erotic-2.m3u8",
+            'tvg-country="US" tvg-content="Adult" '
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            Path(tmp, "International-Playlist.m3u").write_text(header + adult_orphan, encoding="utf-8")
+            Path(tmp, "reports").mkdir()
+            result = subprocess.run(
+                [sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
+                cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)), capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            output = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+
+        self.assertIn('group-title="Adult"', output)
+        self.assertIn('tvg-content="Adult"', output)
+        self.assertNotIn('group-title="Backup"', output)
+
     def test_review_queues_remain_manual_and_follow_regional_policy(self):
         header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
         rows = (

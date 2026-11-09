@@ -190,16 +190,34 @@ def infer_kind(name, group, a):
         return None
     return None
 
-def classify(a, name, group, country):
-    """Apply regional policy while keeping discovery rows in manual review queues."""
+def is_adult_channel(a, name, group):
+    """Recognize Adult rows and known Adult streams that have been stranded in Backup."""
+    group_key = str(group or "").strip().casefold()
+    content_key = re.sub(r"[^a-z0-9]+", "", str(a.get("tvg-content") or "").casefold())
+    ident = (a.get("tvg-id") or a.get("channel-id") or "").strip().casefold()
+    joined = f"{name} {a.get('tvg-name', '')} {ident}"
+    known_backup_keys = {
+        "evilangel", "pinkerotic2", "pinkerotic3", "pinkerotic5", "pinkerotic7", "pinkerotic8",
+    }
+    return (
+        group_key in {"adult", "xxx", "adult movies"}
+        or content_key in {"adult", "xxx", "porn", "adultentertainment"}
+        or ".xxx" in ident
+        or channel_key(name) in known_backup_keys
+        or bool(ADULT_RE.search(joined))
+    )
+
+
+def classify(a, name, group, country, promote_backup=False):
+    """Apply regional policy; keep discovery queues manual and optionally reclassify true orphan backups."""
     group = str(group or "").strip()
     group_key = group.casefold()
     key = channel_key(name)
     joined = f"{name} {a.get('tvg-id', '')} {a.get('channel-id', '')}"
 
-    # Adult is an explicit curated category, not a country-group candidate.
-    # Preserve its rows before name/content heuristics can demote them to Backup.
-    if group_key == "adult":
+    # Adult is a protected curated category. Clearly identified Adult orphans
+    # are recovered only in the explicit orphan-promotion pass.
+    if group_key in {"adult", "xxx", "adult movies"} or (promote_backup and is_adult_channel(a, name, group)):
         return "Adult", None, None
 
     # Health-flagged rows remain in Review until the stream checker clears them.
@@ -223,8 +241,9 @@ def classify(a, name, group, country):
             return None, None, "foreign candidate is not clearly Movies/Music"
         return ("New Backups" if group_key in {"new backup", "new backups"} else "New Channels"), kind, None
 
-    # Existing backup rows are kept as backups; they are not promoted.
-    if group_key in BACKUP_GROUPS or group_key == "not playing":
+    # Keep alternates in Backup during ordinary classification. The organizer
+    # opts into reclassification only after proving that no primary identity exists.
+    if (group_key in BACKUP_GROUPS or group_key == "not playing") and not promote_backup:
         return "Backup", infer_kind(name, group, a), None
 
     # Bangladesh and Pakistan are unrestricted by genre (apart from fake/VOD/non-TV entries).
@@ -237,15 +256,17 @@ def classify(a, name, group, country):
         reason = bd_policy.prohibited_channel(a, name, "IN")
         if reason:
             return "Backup", None, None
-        if KIDS_RE.search(joined) or group == "Kids":
+        special = discovery.special_group(a, name)
+        if KIDS_RE.search(joined) or group == "Kids" or special == "Kids":
             return "Kids", None, None
-        if SPORTS_RE.search(joined) or group == "Sports":
+        if SPORTS_RE.search(joined) or group == "Sports" or special == "Sports":
             return "Sports", None, None
+        kind_hint = infer_kind(name, group, a)
         if group == "Indian Bangla" or re.search(r"\b(?:bengali|bangla)\b", f"{a.get('tvg-language','')} {name}", re.I):
             return "Indian Bangla", None, None
-        if group == "Indian Movies" or MOVIE_RE.search(joined):
+        if group == "Indian Movies" or MOVIE_RE.search(joined) or kind_hint == "movie":
             return "Indian Movies", None, None
-        if group == "Indian Music" or MUSIC_RE.search(joined):
+        if group == "Indian Music" or MUSIC_RE.search(joined) or kind_hint == "music":
             return "Indian Music", None, None
         return "Indian Entertainment", None, None
 
@@ -285,7 +306,7 @@ def set_extinf(block, name, group, country, content_kind, keep_logo, is_queue=Fa
         fields.append(f'tvg-country="{country}"')
     # Keep the original content type while a failed stream is in Review.
     original_content = attrs(block[0]).get("tvg-content", "").strip()
-    if group == "Review" and original_content:
+    if group in {"Review", "Adult"} and original_content:
         fields.append(f'tvg-content="{original_content}"')
     # Pakistan is not genre-restricted; retain a content tag only when one is known.
     elif content_kind and (is_queue or group == "Pakistani" or group not in FIXED + TAIL):
@@ -363,7 +384,7 @@ def main():
                   and not re.match(r"#EXTVLCOPT:http-(?:user-agent|referrer)=", line.strip(), re.I)]
         staged.append({
             "block": block, "a": a, "name": name, "key": channel_key(name),
-            "group": target, "country": country, "kind": kind, "content_kind": kind,
+            "group": target, "original_group": group, "country": country, "kind": kind, "content_kind": kind,
             "url": url, "options": options, "extras": extras, "keep_logo": local_logo is not None,
             "was_backup": group.casefold() in BACKUP_GROUPS or is_protected,
             "was_review": group.casefold() == "review",
@@ -371,21 +392,93 @@ def main():
             "identity": (a.get("tvg-id") or a.get("channel-id") or channel_key(name)).strip().casefold(),
         })
 
-    country_identities = defaultdict(set)
-    for row in staged:
-        if row["was_backup"] or row["group"] != "__FOREIGN__" or row["country"] not in discovery.ISO_CODES:
-            continue
-        country_identities[row["country"]].add(row["key"])
-    qualifying_countries = {cc for cc, ids in country_identities.items() if len(ids) >= discovery.COUNTRY_THRESHOLD}
-    for row in staged:
-        if row["group"] != "__FOREIGN__":
-            continue
-        row["group"] = discovery.country_group(row["country"]) if row["country"] in qualifying_countries else "International"
-        if not row["group"]:
-            row["group"] = "International"
-
     primary = [row for row in staged if not row["was_backup"]]
     backup_rows = [row for row in staged if row["was_backup"]]
+
+    # A Backup is an alternate only when the same channel identity has a primary.
+    # Promote eligible orphans before calculating the country counts. Review,
+    # Not Playing and New Backups remain protected/manual queues.
+    identity_primary = {}
+    primary_ids = {}
+    for row in primary:
+        ident = (row["country"], row["key"])
+        identity_primary.setdefault(ident, row)
+        channel_id = (row["a"].get("tvg-id") or row["a"].get("channel-id") or "").strip().casefold()
+        if channel_id:
+            primary_ids.setdefault((row["country"], channel_id), row)
+
+    remaining_backup_rows = []
+    promoted_orphans = 0
+    for row in backup_rows:
+        original_group = str(row["original_group"] or "").strip().casefold()
+        if row.get("was_review") or row["group"] in {"New Backup", "New Backups"}:
+            remaining_backup_rows.append(row)
+            continue
+
+        ident = (row["country"], row["key"])
+        channel_id = (row["a"].get("tvg-id") or row["a"].get("channel-id") or "").strip().casefold()
+        match = identity_primary.get(ident) or (primary_ids.get((row["country"], channel_id)) if channel_id else None)
+        if match:
+            row["content_kind"] = match.get("content_kind") or match.get("kind")
+            remaining_backup_rows.append(row)
+            continue
+
+        # Only true Backup/Backups rows are eligible for automatic promotion.
+        # Legacy Not Playing and explicit review rows are never auto-promoted.
+        if original_group not in {"backup", "backups"}:
+            remaining_backup_rows.append(row)
+            continue
+
+        target, kind, reason = classify(
+            row["a"], row["name"], row["original_group"], row["country"], promote_backup=True
+        )
+        if reason or target == "Backup":
+            # Unknown/ineligible orphans are retained for manual review; never discard them.
+            remaining_backup_rows.append(row)
+            continue
+
+        row["group"] = target
+        row["kind"] = kind
+        row["content_kind"] = kind
+        row["was_backup"] = False
+        row["promoted_orphan"] = True
+        primary.append(row)
+        identity_primary[ident] = row
+        if channel_id:
+            primary_ids[(row["country"], channel_id)] = row
+        promoted_orphans += 1
+
+    backup_rows = remaining_backup_rows
+
+    # Pakistan is subject to the same five-unique-primary-identity rule as
+    # every country except Bangladesh and India. Backup alternates never count.
+    country_identities = defaultdict(set)
+    for row in primary:
+        if row["country"] not in discovery.ISO_CODES:
+            continue
+        is_foreign_bucket = row["group"] == "__FOREIGN__"
+        is_pakistani_bucket = row["country"] == "PK" and row["group"] == "Pakistani"
+        if is_foreign_bucket or is_pakistani_bucket:
+            country_identities[row["country"]].add(row["key"])
+
+    qualifying_countries = {
+        cc for cc, ids in country_identities.items()
+        if cc not in {"BD", "IN"} and len(ids) >= discovery.COUNTRY_THRESHOLD
+    }
+    for row in primary:
+        if row["group"] == "__FOREIGN__":
+            if row["country"] == "PK":
+                row["group"] = "Pakistani" if "PK" in qualifying_countries else "International"
+            else:
+                row["group"] = (
+                    discovery.country_group(row["country"])
+                    if row["country"] in qualifying_countries else "International"
+                )
+            if not row["group"]:
+                row["group"] = "International"
+        elif row["country"] == "PK" and row["group"] == "Pakistani":
+            if "PK" not in qualifying_countries:
+                row["group"] = "International"
     dynamic_country_groups = sorted({row["group"] for row in primary if row["group"] not in FIXED + TAIL and row["group"].casefold() != "international"})
     international_bucket = ["International"] if any(row["group"].casefold() == "international" for row in primary) else []
     group_order = FIXED + dynamic_country_groups + international_bucket + TAIL
@@ -503,9 +596,13 @@ def main():
         f"- Invalid/external logo references removed: {invalid_logos}",
         f"- Exact duplicate URLs omitted: {removed['exact duplicate URL']}",
         f"- Additional same-channel streams moved to Backup: {removed['duplicate channel stream moved to Backup']}",
-        "- Bangladesh channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.",
+        f"- Eligible orphan Backup rows promoted to primary: {promoted_orphans}",
+        "- Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.",
         "- For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.",
-        "- New Channels and New Backups are manual-review queues; candidates are never automatically promoted. Foreign country groups require five unique, manually curated primary channel identities.",
+        "- Every country except Bangladesh and India, including Pakistan, requires five unique primary channel identities before a dedicated country group is used.",
+        "- Eligible orphan Backup rows without a matching primary identity are migrated to their country/genre primary group; matching alternates remain in Backup. Unclassifiable orphans are retained for manual review.",
+        "- Adult rows are preserved in Adult; clearly identified Adult orphans are restored to Adult rather than filtered by foreign genre rules.",
+        "- New Channels and New Backups remain manual-review queues; candidates are never automatically promoted.",
         "- Retained stream URLs are preserved; playback/availability was not tested.", "",
         "## Removal summary", "", *[f"- {reason}: {count}" for reason, count in sorted(removed.items())], "",
         "## Protected Backup/Review/Not Playing entries preserved (policy would have removed them)", "",

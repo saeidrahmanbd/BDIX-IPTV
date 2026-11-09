@@ -307,6 +307,8 @@ def category_registry(groups):
 def counts_toward_country_group(group,code):
  group=(group or "").strip().casefold()
  # New Channels/New Backups are manual-review queues and never count.
+ if code=="PK":
+  return group in {"international","pakistani"}
  return group=="international" or group==country_group(code).casefold()
 def promote_qualified_country_candidates(blocks,country_groups):
  """Never promote manually staged New Channels candidates."""
@@ -316,13 +318,14 @@ def qualified_country_groups(existing_ids, added_ids=None):
  added_ids=added_ids or {}
  groups=set()
  for code in set(existing_ids)|set(added_ids):
-  if code in {"BD","IN","PK"} or not country_group(code):continue
+  if code in {"BD","IN"} or not country_group(code):continue
   if len(set(existing_ids.get(code,set()))|set(added_ids.get(code,set())))>=COUNTRY_THRESHOLD:
    groups.add(code)
  return groups
 def country_group_threshold_issues(blocks):
  """Report dynamic-country groups that violate the five-unique-name rule."""
- labels={country_group(code).casefold():code for code in ISO_CODES if code not in {"BD","IN","PK"}}
+ labels={("pakistani" if code=="PK" else country_group(code).casefold()):code
+          for code in ISO_CODES if code not in {"BD","IN"}}
  identities=defaultdict(set); dedicated=defaultdict(set); international=defaultdict(set)
  for block in blocks:
   a=attrs(block[0]); group=(a.get("group-title") or "").strip().casefold()
@@ -332,7 +335,7 @@ def country_group_threshold_issues(blocks):
    code=country_code(a); bucket=international
   else:
    continue
-  if code not in ISO_CODES or code in {"BD","IN","PK"} or not country_group(code):continue
+  if code not in ISO_CODES or code in {"BD","IN"} or not country_group(code):continue
   ident=primary_identity(a,name_of(block))
   if not ident:continue
   identities[code].add(ident); bucket[code].add(ident)
@@ -348,7 +351,7 @@ def country_group_threshold_issues(blocks):
 def primary_target(base,code,country_groups):
  # Used only when reclassifying legacy curated International rows.
  if code=="BD":return "Bangladesh"
- if code=="PK":return "Pakistani"
+ if code=="PK":return "Pakistani" if code in country_groups else "International"
  if code=="IN":
   if base in {"Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Kids","Sports"}:return base
   if base=="International Movies":return "Indian Movies"
@@ -357,8 +360,9 @@ def primary_target(base,code,country_groups):
  if code in country_groups and country_group(code):return country_group(code)
  return "International"
 def existing_international_target(a,name,country_groups):
- # Revalidate legacy catch-all rows. BD/IN/PK may be any eligible genre;
- # all other countries must still be unambiguously Movies/Music.
+ # Revalidate legacy catch-all rows. Bangladesh, India and Pakistan retain
+ # their country-specific genre rules; Pakistan still needs five primary identities
+ # before it receives the dedicated Pakistani group. Other countries are Movie/Music only.
  policy_a=dict(a); policy_a["group-title"]="International"
  base,reason,code=policy(policy_a,name,allow_legacy_group=True)
  genre=infer_genre(policy_a,name)
@@ -507,9 +511,11 @@ def main():
   (name, group, "duplicate stream URL already present in the playlist or discovery queue")
   for name, group, _ in duplicate_queue_rows
  )
- # Apply the established five-channel threshold only to dynamic country groups.
+ # Apply the five-channel threshold to every country except Bangladesh and India.
+ # Pakistan keeps its Pakistani label only after five unique primary identities.
  # Entries are preserved and moved to International when their country group falls below threshold.
- dynamic_group_to_code={country_group(code).casefold():code for code in ISO_CODES if code not in {"BD","IN","PK"}}
+ dynamic_group_to_code={("pakistani" if code=="PK" else country_group(code).casefold()):code
+                        for code in ISO_CODES if code not in {"BD","IN"}}
  cleaned_ids=defaultdict(set)
  for b in normalized:
   a=attrs(b[0]); name=name_of(b); group=a.get("group-title","").strip(); code=country_code(a) or dynamic_group_to_code.get(group.casefold())
@@ -546,7 +552,7 @@ def main():
  new_rows=[(n,final_group_by_identity.get((norm(n),c or ""),final_group_by_name.get(norm(n),g)),c,u) for n,g,c,u in new_rows]
  REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
   f"- Existing logo references localized/repaired: {logo_refs_repaired}",
-  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Bangladesh and Pakistan channels of all genres are eligible. Indian News, all Religious, Educational and Business/Finance channels are excluded; Indian Kids and Sports remain eligible. Only countries other than Bangladesh, India and Pakistan are limited to dedicated Movie/Music channels.","- Every new primary candidate remains in New Channels and every alternate stream remains in New Backups for manual review; no automatic promotion occurs.","- Only discovery queues are filtered; unrelated entries are preserved, with the five-channel threshold applied to dynamic country groups.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
+  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for every country except Bangladesh and India, including Pakistan.","- Bangladesh and Pakistan channels of all genres are eligible. Indian News, all Religious, Educational and Business/Finance channels are excluded; Indian Kids and Sports remain eligible. Only countries other than Bangladesh, India and Pakistan are limited to dedicated Movie/Music channels.","- Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.","- Every new primary candidate remains in New Channels and every alternate stream remains in New Backups for manual review; no automatic promotion occurs.","- Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
  report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Existing discovery-queue entries removed",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  print(f"International discovery complete: new={len(new_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} qualifying_country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())

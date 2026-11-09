@@ -131,8 +131,8 @@ def main():
 
     urls, groups_seen, group_set = [], [], set()
     missing_logos, broken_logos = 0, []
-    country_group_labels = {discovery.country_group(code).casefold(): code
-                            for code in discovery.ISO_CODES if code not in {"BD", "IN", "PK"}}
+    country_group_labels = {("pakistani" if code == "PK" else discovery.country_group(code).casefold()): code
+                            for code in discovery.ISO_CODES if code not in {"BD", "IN"}}
     for block in blocks:
         info = block[0]
         a = attrs(info)

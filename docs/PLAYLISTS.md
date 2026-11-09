@@ -39,7 +39,7 @@ The companion International playlist includes Bangladesh and India under their a
 | Pakistan | Supported in the Pakistani group. News, religious, educational, business/finance, farming, kids and sports channels are excluded. The Indian kids and sports exception does not apply. | Eligible dedicated movie and music channels. |
 | Other countries | Eligible channels can appear in International or qualified country groups, subject to the established genre rules. | Only dedicated movie and music channels are eligible. |
 
-Adult channels are not excluded by this policy; they are kept in the Adult group of the International playlist.
+Adult channels are not excluded by this policy; they are preserved in the Adult group of the International playlist. Clearly identified Adult channels stranded in Backup are restored to Adult during reorganization.
 
 The main playlist has three distinct non-numbered queues:
 
@@ -47,7 +47,7 @@ The main playlist has three distinct non-numbered queues:
 - **New Channels** is populated automatically by the scheduled Bangladesh/India discovery workflow when it finds a first validated stream for a new channel identity.
 - **New Backups** is populated automatically by that workflow when it finds another validated stream for an existing or newly discovered channel identity.
 
-The Bangladesh/India discovery workflow runs daily at **07:00 Asia/Dhaka** and can be started manually. Discovery automatically adds candidates to New Channels/New Backups, but it does not approve or promote them into curated groups. Manual review is required before promotion. All three queues are excluded from Xtream and have no channel numbers. The five-unique-channel threshold for a foreign country group applies only after candidates have been manually reviewed.
+The Bangladesh/India discovery workflow runs daily at **07:00 Asia/Dhaka** and can be started manually. Discovery automatically adds candidates to New Channels/New Backups, but it does not approve or promote them into curated groups. Manual review is required before promotion. All three queues are excluded from Xtream and have no channel numbers. Every country except Bangladesh and India, including Pakistan, needs five unique primary channel identities before it receives a dedicated country group; eligible channels below the threshold remain in International. Backup alternates do not count, while an eligible orphan Backup row without a matching primary is promoted before threshold calculation.
 
 ## Add an M3U playlist to your player
 
