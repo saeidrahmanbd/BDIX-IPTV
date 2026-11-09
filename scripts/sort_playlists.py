@@ -8,7 +8,7 @@ import unicodedata
 # Permanent IPTV-Playlist.m3u group order. Keep in sync with playlist_policy_repair.py.
 CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
-    "Indian Entertainment", "Fashion", "Pakistani", "International",
+    "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
     "Review", "New Channels", "New Backups", "Backup",
 ]
