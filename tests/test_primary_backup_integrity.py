@@ -104,17 +104,29 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertGreaterEqual(len(quarantined), 6)
 
         https_mirrors = {
-            "Bangla TV": "https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8",
-            "SA TV": "https://j6nfugukcl.gpcdn.net/tile_5/master.m3u8",
-            "Hindi Hits": "https://samitaorigin.tangotv.in/HINDIHITS/SAMITAORIGIN/index.m3u8",
-            "Zee TV": "https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8",
+            "Bangla TV": (
+                "https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8",
+                "http://116.204.149.16/banglatv/index.m3u8",
+            ),
+            "SA TV": (
+                "https://j6nfugukcl.gpcdn.net/tile_5/master.m3u8",
+                "http://116.204.149.16/satv/index.m3u8",
+            ),
+            "Hindi Hits": (
+                "https://samitaorigin.tangotv.in/HINDIHITS/SAMITAORIGIN/index.m3u8",
+                "http://146.59.253.52:8080/hindihitshd/index.m3u8",
+            ),
+            "Zee TV": (
+                "https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8",
+                "http://41.205.93.154/ZEE-TV/index.m3u8",
+            ),
         }
-        for name, url in https_mirrors.items():
+        for name, (url, original_http) in https_mirrors.items():
             primary = [e for e in entries if e["attrs"].get("tvg-name") == name
                        and e["attrs"].get("group-title") in primary_groups]
             backup = [e for e in entries if e["attrs"].get("tvg-name") == name
                       and e["attrs"].get("group-title") == "Backup"
-                      and e["url"].startswith("http://")]
+                      and e["url"] == original_http]
             self.assertEqual(len(primary), 1, name)
             self.assertEqual(primary[0]["url"], url, name)
             self.assertEqual(len(backup), 1, name)
