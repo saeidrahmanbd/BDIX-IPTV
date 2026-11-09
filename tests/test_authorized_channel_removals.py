@@ -525,6 +525,80 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertIn('tvg-name="DD Yadagiri" group-title="Review"', result)
             self.assertIn('tvg-name="Safe Backup" group-title="Backup"', result)
 
+    def test_review_to_primary_migration_requires_exact_identity_url_source_and_target(self):
+        cases = [
+            ("Shikor TV Canada", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/shikortv.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
+            ("Ten TV Prime", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/primetv.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
+            ("TV One UK", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/tvoneuksni.stream/tracks-v1a1/mono.m3u8", "Religious"),
+        ]
+        for name, url, target in cases:
+            info = channel(name, target, url).splitlines()[0]
+            self.assertEqual(restore.authorized_review_to_primary_target(info, url, "Review"), target, name)
+            self.assertIsNone(restore.authorized_review_to_primary_target(info, url + "?changed=1", "Review"), name)
+            self.assertIsNone(restore.authorized_review_to_primary_target(info, url, "Backup"), name)
+
+    def test_restore_promotes_only_exactly_verified_working_review_entries(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            snapshot = root / "protected.m3u"
+            baseline = root / "baseline.json"
+            cases = [
+                ("Shikor TV Canada", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/shikortv.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
+                ("Ten TV Prime", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/primetv.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
+                ("TV One UK", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/tvoneuksni.stream/tracks-v1a1/mono.m3u8", "Religious"),
+            ]
+            old_records = [channel(name, "Review", url).splitlines() for name, url, target in cases]
+            current_records = [channel(name, target, url).splitlines() for name, url, target in cases]
+            playlist.write_text("#EXTM3U\\n" + "\\n".join(sum(current_records, [])) + "\\n", encoding="utf-8")
+            snapshot.write_text("\\n".join(sum(old_records, [])) + "\\n", encoding="utf-8")
+            baseline.write_text(json.dumps([
+                {"info": old[0], "url": url, "group": "Review", "stable": url, "name": name}
+                for (name, url, target), old in zip(cases, old_records)
+            ]), encoding="utf-8")
+            with (
+                patch.object(restore, "PLAYLIST", playlist),
+                patch.object(restore, "SNAPSHOT", snapshot),
+                patch.object(restore, "BASELINE", baseline),
+                redirect_stdout(io.StringIO()),
+            ):
+                restore.restore()
+            result = playlist.read_text(encoding="utf-8")
+            for name, url, target in cases:
+                self.assertEqual(result.count(url), 1)
+                self.assertIn(f'tvg-name="{name}" group-title="{target}"', result)
+            self.assertNotIn('group-title="Review"', result)
+
+    def test_change_guard_allows_exact_verified_review_promotions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.json"
+            protected = root / "protected.m3u"
+            report = root / "proposed-removals.md"
+            cases = [
+                ("Shikor TV Canada", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/shikortv.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
+                ("Ten TV Prime", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/primetv.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
+                ("TV One UK", "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/tvoneuksni.stream/tracks-v1a1/mono.m3u8", "Religious"),
+            ]
+            old_records = [channel(name, "Review", url).splitlines() for name, url, target in cases]
+            current_records = [channel(name, target, url).splitlines() for name, url, target in cases]
+            playlist.write_text("#EXTM3U\\n" + "\\n".join(sum(current_records, [])) + "\\n", encoding="utf-8")
+            protected.write_text("\\n".join(sum(old_records, [])) + "\\n", encoding="utf-8")
+            baseline.write_text(json.dumps([
+                {"info": old[0], "url": url, "group": "Review", "stable": url, "name": name}
+                for (name, url, target), old in zip(cases, old_records)
+            ]), encoding="utf-8")
+            with (
+                patch.object(guard, "PLAYLIST", playlist),
+                patch.object(guard, "BASELINE", baseline),
+                patch.object(guard, "PROTECTED_SNAPSHOT", protected),
+                patch.object(guard, "REMOVAL_REPORT", report),
+                redirect_stdout(io.StringIO()),
+                redirect_stderr(io.StringIO()),
+            ):
+                self.assertEqual(guard.verify_no_unauthorized_removals(), 0)
+
     def test_restore_preserves_exact_primary_to_review_quarantine(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
