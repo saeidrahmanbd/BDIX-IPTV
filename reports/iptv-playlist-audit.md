@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-09T18:14:20.529236+00:00**
-Source playlist SHA-256: **7f2e81547740b18d20fa6f73e80fac1aa4b99bf7321468f0467d55b7e6d74a42**
+Generated: **2026-11-09T18:20:40.700071+00:00**
+Source playlist SHA-256: **fef2a109e2349dbd620cb09d4d8f529d164723c199fbdea3fff4527e4912b1c7**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -206,7 +206,7 @@ No same-ID label variants found across groups.
 - Channel 16 — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
 - Channel 16 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
 ### channel24.bd (5 streams)
-- Channel 24 — Bangladesh — https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8
+- Channel 24 — Review — https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8
 - Channel 24 — Review — http://103.135.253.32:8080/Channel-24/index.m3u8
 - Channel 24 — Review — https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/index.m3u8
 - Channel 24 — Review — https://iptvlive.ahmed-bd-org.workers.dev/channel-24-hd-1/index.m3u8
@@ -765,10 +765,10 @@ No same-ID label variants found across groups.
 - Sana Plus — Backup — https://galaxyott.live/hls/sanaplus.m3u8
 ### sangeetbangla.in@sd (5 streams)
 - Sangeet Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8
+- Sangeet Bangla — Review — https://tvsen6.aynaott.com/hT5jHczt/tracks-v1a1/mono.ts.m3u8
 - Sangeet Bangla — Backup — http://103.175.73.12:8080/live/379/379_0.m3u8
 - Sangeet Bangla — Backup — https://cdn.pishow.tv/ott/live/1143/master.m3u8
 - Sangeet Bangla — Backup — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/tracks-v1a1/mono.m3u8
-- Sangeet Bangla — Backup — https://tvsen6.aynaott.com/hT5jHczt/tracks-v1a1/mono.ts.m3u8
 ### sangeetbhojpuri.in@sd (2 streams)
 - Sangeet Bhojpuri — Indian Music — https://fta.ektv.in/live/349/master.m3u8
 - Sangeet Bhojpuri — Backup — https://mumt01.tangotv.in/O5aw8Zn3SANGEETBHOJPURI/index.m3u8
@@ -922,7 +922,7 @@ None.
 
 ## Primary Channel-Number Sequence
 
-Contiguous numbering verified: 1–598.
+Contiguous numbering verified: 1–599.
 
 ## Malformed EXTINF Entries
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T18:14:49+00:00",
+  "generated": "2026-11-09T18:21:09+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -1160,7 +1160,6 @@
         "channel24.bd"
       ],
       "groups": [
-        "Bangladesh",
         "Review"
       ],
       "streams": 5,
@@ -2003,7 +2002,7 @@
         "custom.shikortvcanada"
       ],
       "groups": [
-        "Review"
+        "Bangladesh"
       ],
       "streams": 1,
       "primary": 1,
@@ -2101,7 +2100,7 @@
         "custom.tentvprime"
       ],
       "groups": [
-        "Review"
+        "Bangladesh"
       ],
       "streams": 1,
       "primary": 1,
@@ -7000,11 +6999,12 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "Review"
       ],
       "streams": 5,
-      "primary": 1,
-      "backup": 4
+      "primary": 2,
+      "backup": 3
     },
     "sangeetbhojpuri": {
       "names": [
@@ -8552,7 +8552,7 @@
         "tvone.uk"
       ],
       "groups": [
-        "Review"
+        "Religious"
       ],
       "streams": 1,
       "primary": 1,
@@ -8999,7 +8999,7 @@
         "zbcartoon.in"
       ],
       "groups": [
-        "Kids"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,

@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-09T18:14:19+00:00**
+Generated: **2026-11-09T18:20:40+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **7f2e81547740b18d20fa6f73e80fac1aa4b99bf7321468f0467d55b7e6d74a42**
+- IPTV-Playlist.m3u SHA-256: **fef2a109e2349dbd620cb09d4d8f529d164723c199fbdea3fff4527e4912b1c7**
 - International-Playlist.m3u SHA-256: **55590260231b80063a9d2c1e065a8f89ae36dccd133fc2229846dfd3c32e16f6**
 
 ## Summary
@@ -159,7 +159,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | rouge-tv-5bb327e21c.png | 114×42 | no |
 | ryan-and-friends-a5fae48e0c.png | 512×63 | no |
 | sa-tv.png | 187×53 | yes |
-| shikor-tv-canada-ac43f0fa9e.png | 160×60 | no |
+| shikor-tv-canada-ac43f0fa9e.png | 160×60 | yes |
 | smart-radio-6c4415267f.png | 245×40 | no |
 | songtv-russia-53ffc24d1b.png | 141×30 | yes |
 | sport-3-be6e1e361e.png | 325×60 | no |
@@ -169,11 +169,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | stingray-holiday-hits.png | 110×40 | yes |
 | teletrak-tv-cef4f2bf85.png | 133×58 | no |
 | ten-cricket.png | 132×32 | no |
-| ten-tv-prime-ac43f0fa9e.png | 160×60 | no |
+| ten-tv-prime-ac43f0fa9e.png | 160×60 | yes |
 | tjk-tv-1dac3e1586.png | 70×46 | no |
 | trace-ivoire-fffbf7a0d2.png | 68×50 | yes |
 | travel-xp-english-eu.png | 220×53 | no |
-| tv-one-uk-ac43f0fa9e.png | 160×60 | no |
+| tv-one-uk-ac43f0fa9e.png | 160×60 | yes |
 | 2-tv-720p-727302c803.png | 124×58 | no |
 | al-horreya-tv-1080p-d9e00a5578.png | 51×69 | no |
 | altena-tv-720p-d781fda1d9.png | 62×9 | no |
@@ -929,7 +929,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 9 | channel-9.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Bangladesh |
-| IPTV-Playlist.m3u | Channel 24 | channel-24.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 52 | channel-52.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Bangladesh |
 | IPTV-Playlist.m3u | Deepto TV | deepto-tv.png | Bangladesh |
@@ -952,7 +951,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Rupashi Bangla TV | rupashi-bangla-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Bangladesh |
+| IPTV-Playlist.m3u | Shikor TV Canada | shikor-tv-canada-ac43f0fa9e.png | Bangladesh |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Bangladesh |
+| IPTV-Playlist.m3u | Ten TV Prime | ten-tv-prime-ac43f0fa9e.png | Bangladesh |
 | IPTV-Playlist.m3u | Jhankar TV | jhankar-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Matribhumi TV | matri-bhumi-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | News 21 | news-21-bangla-tv.png | Indian Bangla |
@@ -1109,6 +1110,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Peace TV English | peace-tv-english.png | Religious |
 | IPTV-Playlist.m3u | Peace TV Urdu | peace-tv-urdu.png | Religious |
 | IPTV-Playlist.m3u | Quran TV | quran-tv.png | Religious |
+| IPTV-Playlist.m3u | TV One UK | tv-one-uk-ac43f0fa9e.png | Religious |
 | IPTV-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Religious |
 | IPTV-Playlist.m3u | ACI Sport TV | aci-sport-tv.png | Sports |
 | IPTV-Playlist.m3u | Fuel TV | fuel-tv.png | Sports |
@@ -1119,6 +1121,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Red Bull TV | red-bull-tv.png | Sports |
 | IPTV-Playlist.m3u | Sports First TV | sports-first-tv.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports | us-willow-sports-hd.png | Sports |
+| IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
 | IPTV-Playlist.m3u | JA TV | ja-tv.svg | Review |
 | IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Review |
 | IPTV-Playlist.m3u | Asian TV | asian-tv.png | Review |
@@ -1135,7 +1138,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
-| IPTV-Playlist.m3u | Shikor TV Canada | shikor-tv-canada-ac43f0fa9e.png | Review |
 | IPTV-Playlist.m3u | Deepto TV | deepto-tv.png | Review |
 | IPTV-Playlist.m3u | Deewana | deewana-hd.png | Review |
 | IPTV-Playlist.m3u | Deewana | deewana-hd.png | Review |
@@ -1169,7 +1171,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Movies Now | movies-now-hd.png | Review |
 | IPTV-Playlist.m3u | Nat Geo TV | national-geographic.png | Review |
 | IPTV-Playlist.m3u | Nexus TV | nexus-tv.png | Review |
-| IPTV-Playlist.m3u | Ten TV Prime | ten-tv-prime-ac43f0fa9e.png | Review |
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Review |
 | IPTV-Playlist.m3u | Shekinah TV | shekinah-tv.png | Review |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Review |
@@ -1180,7 +1181,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Tom and Jerry | repaired-tom-and-jerry-b0ff227b3a.png | Review |
-| IPTV-Playlist.m3u | TV One UK | tv-one-uk-ac43f0fa9e.png | Review |
 | IPTV-Playlist.m3u | Zee TV | zee-tv.svg | Review |
 | IPTV-Playlist.m3u | G TV | g-tv.png | Review |
 | IPTV-Playlist.m3u | JA TV | ja-tv.svg | Review |
