@@ -52,6 +52,17 @@ def load_mapping_all_sources():
     return {source_id: sorted(targets) for source_id, targets in reverse.items()}
 
 
+def fetch_with_local_guide(url, remote_fetch):
+    """Return the targeted local XMLTV guide in the same shape as cached remote feeds."""
+    if url == LOCAL_GUIDE.as_uri():
+        if not LOCAL_GUIDE.is_file() or LOCAL_GUIDE.stat().st_size == 0:
+            raise FileNotFoundError(f"Missing non-empty iptv-org guide: {LOCAL_GUIDE}")
+        # generate_epg.fetch returns (Path, is_cached); raw bytes are not accepted
+        # by the generator's streaming iterparse path.
+        return LOCAL_GUIDE, True
+    return remote_fetch(url)
+
+
 def main():
     if not LOCAL_GUIDE.is_file() or LOCAL_GUIDE.stat().st_size == 0:
         raise SystemExit("Missing /tmp/iptv-org-guide.xml; run fetch_iptv_org_epg.py first")
@@ -67,9 +78,7 @@ def main():
     original_loader = generate_epg.load_mapping
 
     def fetch_with_local(url):
-        if url.startswith("file://"):
-            return LOCAL_GUIDE.read_bytes()
-        return original_fetch(url)
+        return fetch_with_local_guide(url, original_fetch)
 
     try:
         # Deduplicate while preserving the generator's established source order.
