@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T11:43:48+00:00",
+  "generated": "2026-11-09T13:42:48+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -2097,7 +2097,7 @@
     },
     "custom.tentvprime": {
       "names": [
-        "Prime Tv"
+        "Prime TV"
       ],
       "ids": [
         "custom.tentvprime"
@@ -4424,24 +4424,10 @@
         "jatv.bd"
       ],
       "groups": [
-        "Backup"
+        "Bangladesh"
       ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
-    },
-    "jatv.bin": {
-      "names": [
-        "JA TV"
-      ],
-      "ids": [
-        "jatv.bin"
-      ],
-      "groups": [
-        "Indian Movies"
-      ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "jhankartv": {

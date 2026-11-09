@@ -1,13 +1,13 @@
 # Logo Provenance Review
 
-Generated: **2026-11-09T11:43:49+00:00**
+Generated: **2026-11-09T13:42:49+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **c0c115f5324a59094ecc502e03a3358f243ec4f6e74dc583e650e5009bf997b6**
+- IPTV-Playlist.m3u SHA-256: **c05a91e4f6ff628f4f9416d8fbd7490004c83ce45cbd7913e415698c3c812421**
 - International-Playlist.m3u SHA-256: **0b7ad38c19aeedcba6d5b239ca9a83747bc8ae4c21ec6983a355e214665ebde1**
 
 ## Provenance status by playlist
@@ -91,8 +91,6 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | generated-fallback-fashion-1-85fe46a6.svg | Fashion&LifeStyle | FashionLifeStyle.ru@SD |
 | goldmines.png | Goldmines | Goldmines.in@SD |
 | goldmines.png | Goldmines 2 | Goldmines2.in@SD |
-| ja-tv.svg | JA TV | JATV.bd |
-| ja-tv.svg | JA TV | JATV.bin |
 | sonic.png | Sonic | Sonic.in@SD |
 | sonic.png | Sonic The Hedgehog | custom.sonicthehedgehog |
 | travelxp.png | Travelxp | Travelxp.in@4KHDR |

@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-09T11:43:12+00:00**
-Source playlist SHA-256: **c0c115f5324a59094ecc502e03a3358f243ec4f6e74dc583e650e5009bf997b6**
+Generated: **2026-11-09T13:42:11+00:00**
+Source playlist SHA-256: **c05a91e4f6ff628f4f9416d8fbd7490004c83ce45cbd7913e415698c3c812421**
 
 Status: **BLOCK**
 
@@ -15,13 +15,13 @@ Status: **BLOCK**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **1**
-- Primary entries missing channel numbers: **9**
-- Primary channel-number sequence issues: **540**
+- Primary entries missing channel numbers: **22**
+- Primary channel-number sequence issues: **571**
 - Numbered review entries: **51**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **7**
 - Active rows with incomplete required metadata: **3**
-- tvg-id/channel-id inconsistencies: **1**
+- tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **10**
 - Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **3**
@@ -38,12 +38,12 @@ New Channels and New Backups are active BD/IN-only review queues used by discove
 
 ## Blocking Reasons
 - duplicate primary channel numbers: 1
+- duplicate primary identities: 1
 - orphan Backup entries: 7
 - active entries with incomplete identity/country/logo metadata: 3
-- tvg-id/channel-id inconsistencies: 1
 - entries missing tvg-language: 10
-- primary entries missing tvg-chno: 9
-- primary channel-number sequence gaps/order errors: 540
+- primary entries missing tvg-chno: 22
+- primary channel-number sequence gaps/order errors: 571
 - review entries still numbered: 51
 - missing logos: 3
 - incorrect/placeholder/generic logos: 10
