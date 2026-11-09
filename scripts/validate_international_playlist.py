@@ -184,6 +184,8 @@ def main():
         ]
         if len(stream_rows) != 1:
             raise SystemExit(f"Expected exactly one URL row for {name!r}; found {len(stream_rows)}.")
+        if group_key in {"new channels", "new backup", "new backups"} and not discovery.safe_url(stream_rows[0]):
+            raise SystemExit(f"Manual-review queue contains an unsafe or tokenized URL: {name!r}.")
         urls.append(normalized_stream_url(stream_rows[0]))
 
         logo = a.get("tvg-logo", "").strip()
