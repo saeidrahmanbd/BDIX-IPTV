@@ -405,6 +405,8 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
 
     def test_tokenized_urls_are_rejected_without_playback_testing(self):
         self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?token=abc"))
+        self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?play_token=abc"))
+        self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?access_token=abc"))
         self.assertTrue(discovery.safe_url("https://example.org/channel/index.m3u8"))
 
     def test_country_threshold_counts_unique_normalized_channel_names_not_stream_ids(self):
