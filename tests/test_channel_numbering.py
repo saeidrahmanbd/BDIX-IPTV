@@ -36,8 +36,8 @@ class ActiveChannelNumberingTests(unittest.TestCase):
         )
         updated, count = normalize_playlist_text(sample)
         self.assertEqual(count, 2)
-        self.assertIn('group-title="Fashion" tvg-chno="1"', updated)
-        self.assertIn('group-title="Fashion" tvg-chno="2"', updated)
+        self.assertIn('tvg-name="Fashion One" tvg-chno="1" group-title="Fashion"', updated)
+        self.assertIn('tvg-name="Fashion Two" tvg-chno="2" group-title="Fashion"', updated)
 
     def test_active_entries_are_sorted_and_numbered_gaplessly(self):
         updated, count = normalize_playlist_text(self.sample)
