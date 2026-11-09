@@ -7,36 +7,42 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-09 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
+- New channel identities: **1**
 - Channel identities removed: **0**
-- Stream URLs added / removed: **0 / 0**
-- Backup URL updates: **0**
-- Logo reference changes: **1**
-- Replaced channel identities: **0**
-- Duplicate URL occurrences removed: **0**
-
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-09 — `International-Playlist.m3u`
-
-- New channel identities: **0**
-- Channel identities removed: **62**
-- Stream URLs added / removed: **0 / 96**
+- Stream URLs added / removed: **2 / 0**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Removed channel identities (up to 10):
-- 7 RadioVisione
-- ACC Network
+Added channel identities (up to 10):
+- Sony Yay!
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-09 — `International-Playlist.m3u`
+
+- New channel identities: **25**
+- Channel identities removed: **1**
+- Stream URLs added / removed: **43 / 1**
+- Backup URL updates: **0**
+- Logo reference changes: **0**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
 - AMC (United States)
 - Aneflix Live
-- Angel TV
-- Animal Planet (United States)
-- AXS TV
-- AyM Sports
 - Blokbaster
-- Bravo! Kids TV
+- Cine+ Classic
+- Cinemax Classics
+- EBC Foreign Movie
+- Film Mania
+- GEM Pixel
+- Hero [ ]
+- Jilin Movie Channel
+
+Removed channel identities (up to 10):
+- Star Jalsha [ ]
 
 ## [5.0.0] — Playlist Studio
 
