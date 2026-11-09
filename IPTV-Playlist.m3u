@@ -2045,8 +2045,6 @@ https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8
 https://stream.ottplus.live/live/channel_1_hd_abr/live/channel_1_hd_720/chunks.m3u8
 #EXTINF:-1 tvg-id="ColorsBanglaCinema.in@SD" tvg-name="Colors Bangla Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-cinema.png" channel-id="ColorsBanglaCinema.in@SD" tvg-country="IN" tvg-language="und" group-title="Review",Colors Bangla Cinema
 http://103.135.253.32:8080/COLORS-BANGLA-CINEMA/index.m3u8
-#EXTINF:-1 channel-id="custom.shikortvcanada" tvg-name="D Talk" tvg-language="ben" tvg-country="BD" group-title="Review",D Talk
-https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/shikortv.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="DeewanaHD.in" tvg-name="Deewana" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deewana-hd.png" channel-id="DeewanaHD.in" tvg-country="IN" tvg-language="hin" group-title="Review",Deewana
 https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8
 #EXTINF:-1 channel-id="DeewanaHD.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deewana-hd.png" tvg-id="DeewanaHD.in" tvg-name="Deewana" tvg-language="hin" tvg-country="IN" group-title="Review",Deewana
@@ -2063,6 +2061,8 @@ https://drk6xq0vhn.gpcdn.net/live/discovery_science_abr/index.m3u8
 http://66.102.126.10:8000/play/a013/index.m3u8
 #EXTINF:-1 tvg-id="DoraemonTV.us" tvg-name="Doraemon TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/doraemon-tv.png" channel-id="DoraemonTV.us" tvg-country="US" tvg-language="eng" group-title="Review",Doraemon TV
 https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 channel-id="custom.tentvprime" tvg-name="E Ten TV Prime" tvg-language="ben" tvg-country="BD" group-title="Review",E Ten TV Prime
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/primetv.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="ETVPlus.in@HD" tvg-name="ETV Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus.png" channel-id="ETVPlus.in@HD" tvg-country="IN" tvg-language="und" group-title="Review",ETV Plus
 https://d12ee3o8yfkkhd.cloudfront.net/c6a4b411295f47f48c908d2ac0605bad/index.m3u8
 #EXTINF:-1 tvg-id="GreenTV.bd@SD" tvg-name="Green TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/repaired-green-tv-d4fdf1175a.png" channel-id="GreenTV.bd@SD" tvg-country="BD" tvg-language="ben" group-title="Review",Green TV
@@ -2093,8 +2093,6 @@ http://103.185.24.134:3001/NICK-JR/index.m3u8
 http://103.185.24.134:3001/NICK/index.m3u8
 #EXTINF:-1 tvg-id="PKSports.pk@SD" tvg-name="PK Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pk-sports.png" channel-id="PKSports.pk@SD" tvg-country="PK" tvg-language="urd" group-title="Review",PK Sports
 https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8
-#EXTINF:-1 channel-id="custom.tentvprime" tvg-name="Prime TV" tvg-language="ben" tvg-country="IN" group-title="Review",Prime TV
-https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/primetv.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="PTVSports.pk" tvg-name="PTV Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptv-sports.png" channel-id="PTVSports.pk" tvg-country="PK" tvg-language="urd" group-title="Review",PTV Sports
 http://103.135.253.32:8080/PTV-SPORTS/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="RajMusixTamil.in@SD" tvg-name="Raj Musix Tamil" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-musix-tamil.png" channel-id="RajMusixTamil.in@SD" tvg-country="IN" tvg-language="tam" group-title="Review",Raj Musix Tamil
@@ -2103,6 +2101,8 @@ https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u
 https://livetv.timeiptv.in/ShekinahNewsIndia/955ad3298db330b5ee880c2c9e6f23a0.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="ShemarooFilmiGaane.in@HD" tvg-name="Shemaroo Filmi Gaane" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shemaroo-filmi-gaane.png" channel-id="ShemarooFilmiGaane.in@HD" tvg-country="IN" tvg-language="und" group-title="Review",Shemaroo Filmi Gaane
 https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8
+#EXTINF:-1 channel-id="custom.shikortvcanada" tvg-name="Shikor TV Canada" tvg-language="ben" tvg-country="CA" group-title="Review",Shikor TV Canada
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/shikortv.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="Sonic.in@SD" tvg-name="Sonic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" channel-id="Sonic.in@SD" tvg-country="IN" tvg-language="und" group-title="Review",Sonic
 http://103.185.24.134:3001/SONIC/index.m3u8
 #EXTINF:-1 tvg-id="SonyAath.in@SD" tvg-name="Sony Aath" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png" channel-id="SonyAath.in@SD" tvg-country="IN" tvg-language="und" group-title="Review",Sony Aath
