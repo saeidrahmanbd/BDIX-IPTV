@@ -3,7 +3,7 @@
 
 Rules:
 - Only the Bangladesh and India country feeds are considered.
-- Bangladesh channels of all genres remain eligible. Indian News, Religious (including Islamic), Educational/Knowledge and Business/Finance channels are prohibited; Indian Kids and Sports channels are allowed.
+- Bangladesh channels of all genres remain eligible. Indian News, Religious (including Islamic), Educational/Knowledge and Business/Finance channels are prohibited; Indian Kids and Sports channels are prohibited.
 - Existing stream URLs and normalized channel identities are never duplicated.
 - First unseen stream for a new identity -> New Channels.
 - Additional unseen streams for an existing/newly discovered identity -> New Backups.
@@ -31,6 +31,8 @@ BAD_WORDS = {
 }
 # India-only exclusions. Bangladesh channels remain unrestricted by genre.
 FORBIDDEN_CATEGORY_PATTERNS = {
+    "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|nickelodeon|nick\s*jr|sonic|pogo|hungama|disney\s*(?:junior|channel)|discovery\s*kids)\b", re.IGNORECASE),
+    "sports": re.compile(r"\b(?:sports?|star\s*sports|dd\s*sports|eurosport|sony\s*ten|sports18|cricket|football|espn)\b", re.IGNORECASE),
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
     "religious": re.compile(r"\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
     "educational": re.compile(r"\b(?:education(?:al)?|learning|school|university|college|academy|e-?vidya|vidya|gyan\s*darshan|knowledge\s*channel)\b", re.IGNORECASE),
@@ -442,7 +444,7 @@ def main() -> int:
         "# IPTV Channel Discovery", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
-        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational/Knowledge and Business/Finance channels are prohibited; Indian Kids and Sports channels are allowed.**",
+        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational/Knowledge and Business/Finance channels are prohibited; Indian Kids and Sports channels are prohibited.**",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
         f"- Existing prohibited review-queue rows removed: **{len(purged)}**",
