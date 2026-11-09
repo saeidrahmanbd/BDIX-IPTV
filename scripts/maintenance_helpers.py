@@ -456,26 +456,18 @@ def verify_no_unauthorized_removals() -> int:
     allowed_queue_migrations = set()
     group_transition_errors = []
     for url, block in current_by_url.items():
-        current_group = _group(str(block["info"]))
-        if current_group not in PROTECTED_GROUPS:
-            continue
+        info = str(block["info"])
+        current_group = _group(info)
         original = baseline_by_url.get(url)
         if not original:
-            group_transition_errors.append(f"protected entry has no baseline: {_name(str(block['info']))}")
+            if current_group in PROTECTED_GROUPS:
+                group_transition_errors.append(f"protected entry has no baseline: {_name(info)}")
             continue
+
         old_group = str(original.get("group", "")).strip()
-        if old_group not in PROTECTED_GROUPS:
-            if current_group == "Backup":
-                ids = {value.strip().casefold() for value in (_attrs(str(block["info"])).get("tvg-id", ""), _attrs(str(block["info"])).get("channel-id", "")) if value.strip()}
-                if not (ids & primary_ids):
-                    group_transition_errors.append(f"primary-to-Backup move has no matching primary: {_name(str(block['info']))}")
-                    continue
-            allowed_new_protected.add(url)
-        elif old_group in {"Review", "Not Playing"} and current_group == "Backup":
-            group_transition_errors.append(f"Review entry promoted to Backup: {_name(str(block['info']))}")
-        elif old_group == "Backup" and current_group != "Backup":
-            channel_name = _name(str(block["info"]))
-            migration_target = authorized_backup_migration_target(str(block["info"]), str(block["url"]))
+        if old_group == "Backup" and current_group != "Backup":
+            channel_name = _name(info)
+            migration_target = authorized_backup_migration_target(info, str(block["url"]))
             migration_source = AUTHORIZED_MIGRATION_SOURCE_GROUPS.get(
                 _restore_normalize_name(channel_name), "Backup"
             )
@@ -485,8 +477,33 @@ def verify_no_unauthorized_removals() -> int:
                 group_transition_errors.append(
                     f"Unapproved Backup migration to {current_group}: {channel_name}"
                 )
-        elif old_group == "Review" and current_group != "Review":
-            group_transition_errors.append(f"Review entry reclassified: {_name(str(block['info']))}")
+            continue
+
+        if old_group in {"Review", "Not Playing"} and current_group != "Review":
+            group_transition_errors.append(f"Review entry reclassified: {_name(info)}")
+            continue
+
+        if current_group not in PROTECTED_GROUPS:
+            continue
+
+        if old_group not in PROTECTED_GROUPS:
+            if current_group == "Backup":
+                ids = {
+                    value.strip().casefold()
+                    for value in (
+                        _attrs(info).get("tvg-id", ""),
+                        _attrs(info).get("channel-id", ""),
+                    )
+                    if value.strip()
+                }
+                if not (ids & primary_ids):
+                    group_transition_errors.append(
+                        f"primary-to-Backup move has no matching primary: {_name(info)}"
+                    )
+                    continue
+            allowed_new_protected.add(url)
+        elif old_group in {"Review", "Not Playing"} and current_group == "Backup":
+            group_transition_errors.append(f"Review entry promoted to Backup: {_name(info)}")
     if group_transition_errors:
         print("Change Guard BLOCKED: " + "; ".join(group_transition_errors[:10]), file=sys.stderr)
         return 1
