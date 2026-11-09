@@ -279,7 +279,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             content = (
                 '#EXTM3U\n'
                 '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Review","New Channels","New Backups","Backup"]\n'
-                '#EXTINF:-1 tvg-id="TestBD.bd" tvg-name="Bangladesh Test Channel" tvg-country="BD" group-title="New Channels",Bangladesh Test Channel\n'
+                '#EXTINF:-1 tvg-id="NetworkOneBD.bd" tvg-name="Bangladesh Network One" tvg-country="BD" group-title="New Channels",Bangladesh Network One\n'
                 'https://example.org/bd-test.m3u8\n'
             )
             playlist.write_text(content, encoding="utf-8")
