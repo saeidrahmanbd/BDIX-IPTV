@@ -194,15 +194,17 @@ jobs:
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             # Protected Backup/Not Playing records are restored after every step that may rewrite them.
             python scripts/restore_protected_review.py
-            # Report-coupled mutators run LAST so their fingerprinted reports match the final bytes.
+            # Finish every structural playlist mutation before producing fingerprinted reports.
+            python scripts/reconcile_backup_metadata_exact_id.py
+            python scripts/enforce_primary_backup_integrity.py
+            # Sorting must precede numbering: numbering is the final structural playlist write.
+            python scripts/sort_playlists.py IPTV-Playlist.m3u
+            python scripts/renumber_active_channels.py IPTV-Playlist.m3u
+            # These report-coupled tools are deliberately last. Their playlist changes are
+            # idempotent metadata-only repairs; no later step may rewrite either playlist.
             python scripts/iptv_metadata_backfill.py
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix
-            python scripts/reconcile_backup_metadata_exact_id.py
-            python scripts/enforce_primary_backup_integrity.py
-            python scripts/renumber_active_channels.py IPTV-Playlist.m3u
-            # Final canonical group order after every playlist mutator.
-            python scripts/sort_playlists.py IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
             python scripts/verify_international_protected.py verify
           }
