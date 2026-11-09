@@ -1,20 +1,20 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-08T18:02:02+00:00**
+Generated: **2026-11-09T00:38:59+00:00**
 
 This report measures the two maintained M3U playlists included in the automated EPG pipeline. This report covers only the two maintained playlists.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 999 | 597 | 366 | 329 | 378 | 304 | 231 | OK |
-| International-Playlist.m3u | 3071 | 1209 | 516 | 480 | 564 | 483 | 693 | OK |
+| IPTV-Playlist.m3u | 998 | 596 | 366 | 327 | 378 | 278 | 230 | OK |
+| International-Playlist.m3u | 3071 | 1209 | 516 | 477 | 564 | 459 | 693 | OK |
 
 ## Group coverage
 
 | Group | Active unique IDs | Mapped IDs | Current/future source schedules | No mapping |
 |---|---:|---:|---:|---:|
 | Argentina | 12 | 1 | 0 | 11 |
-| Bangladesh | 71 | 5 | 3 | 66 |
+| Bangladesh | 71 | 5 | 2 | 66 |
 | Brazil | 10 | 3 | 3 | 7 |
 | Bulgaria | 19 | 6 | 6 | 13 |
 | Canada | 30 | 23 | 17 | 7 |
@@ -32,9 +32,9 @@ This report measures the two maintained M3U playlists included in the automated 
 | Hungary | 15 | 7 | 7 | 8 |
 | Indian Bangla | 42 | 31 | 29 | 11 |
 | Indian Entertainment | 174 | 147 | 142 | 27 |
-| Indian Movies | 82 | 60 | 57 | 22 |
+| Indian Movies | 82 | 60 | 54 | 22 |
 | Indian Music | 69 | 57 | 54 | 12 |
-| International | 163 | 32 | 24 | 131 |
+| International | 162 | 32 | 24 | 130 |
 | Iran | 12 | 1 | 0 | 11 |
 | Italy | 24 | 11 | 11 | 13 |
 | Kids | 41 | 25 | 22 | 16 |
@@ -70,5 +70,5 @@ This report measures the two maintained M3U playlists included in the automated 
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **dee4c0905162325bb433379bae254831ad1834640807c7670b213f343caec9f3**
-- International-Playlist.m3u SHA-256: **6cfdbccaea7a89afdfd09ef4ff8c5601e3dc03f6abce6353851dcbfa914a1f21**
+- IPTV-Playlist.m3u SHA-256: **a02d892fda4e692ec37814a8206c4ff6c6ab200d77b7592a17da1d7c01fd070b**
+- International-Playlist.m3u SHA-256: **78f1aa33f238b6584576ea03b006d78132bd54bbafb7f665f62da461309aa5e0**
