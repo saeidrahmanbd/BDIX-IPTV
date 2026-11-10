@@ -183,11 +183,15 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
             )
             self.assertEqual(result.returncode, 0, result.stderr)
             output = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+            audit = Path(tmp, "reports", "international-playlist-audit.md").read_text(encoding="utf-8")
 
         self.assertEqual(output.count('group-title="Albania"'), 5)
         self.assertEqual(output.count('group-title="Backup"'), 1)
         self.assertIn("http://al.example/orphan.m3u8", output)
         self.assertIn("http://al.example/alternate.m3u8", output)
+        self.assertIn("Eligible orphan Backup rows promoted to primary: 1", audit)
+        self.assertIn("Matching alternate streams retained in Backup: 1", audit)
+        self.assertIn("True orphan Backup rows evaluated: 1", audit)
 
     def test_adult_orphan_backup_is_restored_to_adult_group(self):
         header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
