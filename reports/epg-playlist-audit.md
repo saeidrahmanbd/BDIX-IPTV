@@ -1,12 +1,12 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-10T12:34:36+00:00**
+Generated: **2026-11-10T13:07:49+00:00**
 
 This report measures the two maintained M3U playlists included in the automated EPG pipeline. This report covers only the two maintained playlists.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1150 | 590 | 360 | 322 | 360 | 311 | 230 | OK |
+| IPTV-Playlist.m3u | 1151 | 590 | 360 | 322 | 360 | 311 | 230 | OK |
 | International-Playlist.m3u | 3075 | 1667 | 566 | 527 | 558 | 494 | 1101 | OK |
 
 ## Group coverage
@@ -71,5 +71,5 @@ This report measures the two maintained M3U playlists included in the automated 
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **cad47ab906061198dde4b340ad8d12ae82144957cc14020cd84df15b093ce4ab**
+- IPTV-Playlist.m3u SHA-256: **810bd296df25477c8020711267bf2062f97b9386ab54cd783171bac96e9d7bc0**
 - International-Playlist.m3u SHA-256: **088cc6fee8e2211d4c5731a8f086e9ad91b51d302a33d9297b979ce4432e3cf6**
