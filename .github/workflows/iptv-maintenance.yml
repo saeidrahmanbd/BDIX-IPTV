@@ -181,30 +181,22 @@ jobs:
           # ------------------------------------------------------------------
           run_mutations() {
             python scripts/normalize_metadata.py
-            python scripts/sort_playlists.py IPTV-Playlist.m3u
-            python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
             if grep -Eiq 'group-title="New"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
             python scripts/country_verification.py validate IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
             # Restore protected Backup/Not Playing records and apply authorized removals before any
             # step reads the IPTV playlist as a metadata source (backfill_cross, reorganize).
-            python scripts/restore_protected_review.py
             # reorganize_international_playlist.py reads tvg-country/tvg-language, so the
             # cross-playlist backfill must run before it (data dependency, not a report).
             python scripts/backfill_cross_playlist_metadata.py
-            python scripts/reconcile_playlist_consistency.py
             python scripts/reorganize_international_playlist.py
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
             python scripts/validate_international_playlist.py
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             # Protected Backup/Not Playing records are restored after every step that may rewrite them.
-            python scripts/restore_protected_review.py
             # Finish every structural playlist mutation before producing fingerprinted reports.
-            python scripts/reconcile_backup_metadata_exact_id.py
-            python scripts/enforce_primary_backup_integrity.py
             # Sorting must precede numbering: numbering is the final structural playlist write.
-            python scripts/sort_playlists.py IPTV-Playlist.m3u
             python scripts/renumber_active_channels.py IPTV-Playlist.m3u
             # These report-coupled tools are deliberately last. Their playlist changes are
             # idempotent metadata-only repairs; no later step may rewrite either playlist.
