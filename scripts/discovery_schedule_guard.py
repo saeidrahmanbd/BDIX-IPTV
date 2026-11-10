@@ -27,6 +27,12 @@ DEFAULT_BRANCH = "main"
 VALID_WORKFLOWS = {
     "new-channel-discovery.yml",
     "international-channel-discovery.yml",
+    "international-stream-health.yml",
+}
+REQUIRED_JOB_BY_WORKFLOW = {
+    "new-channel-discovery.yml": "discover",
+    "international-channel-discovery.yml": "discover",
+    "international-stream-health.yml": "check",
 }
 
 
@@ -83,17 +89,23 @@ def runs_for_date(runs: list[dict[str, Any]], target_date: date) -> list[dict[st
     ]
 
 
-def successful_discovery_job(jobs: list[dict[str, Any]]) -> bool:
-    """True only when the actual discovery writer job completed successfully."""
+def successful_required_job(jobs: list[dict[str, Any]], workflow_file: str) -> bool:
+    """True only when the workflow's actual writer/check job completed successfully."""
+    required_job = REQUIRED_JOB_BY_WORKFLOW.get(workflow_file, "discover")
     return any(
-        str(job.get("name") or "").casefold() == "discover"
+        str(job.get("name") or "").casefold() == required_job
         and str(job.get("status") or "").casefold() == "completed"
         and str(job.get("conclusion") or "").casefold() in {"success", "neutral"}
         for job in jobs
     )
 
 
-def run_blocks_retry(run: dict[str, Any], client=None) -> bool:
+def successful_discovery_job(jobs: list[dict[str, Any]]) -> bool:
+    """Backward-compatible discovery-job predicate used by daily guards."""
+    return successful_required_job(jobs, "new-channel-discovery.yml")
+
+
+def run_blocks_retry(run: dict[str, Any], client=None, workflow_file: str = "new-channel-discovery.yml") -> bool:
     """Only an active run or a successful *discovery job* owns today's execution.
 
     A workflow can conclude successfully when its discover job was skipped by
@@ -108,12 +120,12 @@ def run_blocks_retry(run: dict[str, Any], client=None) -> bool:
     if conclusion not in {"success", "neutral"}:
         return False
     jobs = client.workflow_run_jobs(int(run["id"])) if client is not None else run.get("jobs", [])
-    return successful_discovery_job(jobs if isinstance(jobs, list) else [])
+    return successful_required_job(jobs if isinstance(jobs, list) else [], workflow_file)
 
 
-def first_run_id(runs: list[dict[str, Any]], client=None) -> int | None:
+def first_run_id(runs: list[dict[str, Any]], client=None, workflow_file: str = "new-channel-discovery.yml") -> int | None:
     """Return the earliest active or genuinely successful discovery run."""
-    eligible = [run for run in runs if run_blocks_retry(run, client)]
+    eligible = [run for run in runs if run_blocks_retry(run, client, workflow_file)]
     if not eligible:
         return None
     ordered = sorted(
@@ -311,7 +323,7 @@ def watchdog(workflow_files: list[str]) -> int:
     for workflow_file in workflow_files:
         runs = client.workflow_runs(workflow_file)
         todays = runs_for_date(runs, target_date)
-        blocking = [run for run in todays if run_blocks_retry(run, client)]
+        blocking = [run for run in todays if run_blocks_retry(run, client, workflow_file)]
         if blocking:
             owner = min(
                 blocking,
@@ -333,7 +345,7 @@ def watchdog(workflow_files: list[str]) -> int:
                 f"({len(todays)} run(s)); dispatching recovery run."
             )
         print(
-            f"No {workflow_file} run exists for Bangladesh date {target_date}; "
+            f"No active or successful required job exists for {workflow_file} on Bangladesh date {target_date}; "
             f"dispatching the repository's official workflow on {DEFAULT_BRANCH}."
         )
         client.dispatch(workflow_file)
