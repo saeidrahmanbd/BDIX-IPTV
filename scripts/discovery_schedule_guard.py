@@ -357,12 +357,12 @@ def main(argv: list[str]) -> int:
     if len(argv) < 2:
         raise SystemExit(
             "Usage: discovery_schedule_guard.py guard <workflow.yml> | "
-            "watchdog <workflow1.yml> <workflow2.yml>"
+            "watchdog <workflow1.yml> <workflow2.yml> [workflow3.yml ...]"
         )
     mode = argv[0]
     if mode == "guard" and len(argv) == 2:
         return guard(argv[1])
-    if mode == "watchdog" and len(argv) == 3:
+    if mode == "watchdog" and len(argv) >= 3:
         return watchdog(argv[1:])
     raise SystemExit("Invalid arguments")
 
