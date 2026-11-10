@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-10T11:49:12+00:00**
+Generated: **2026-11-10T12:36:21+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **cad47ab906061198dde4b340ad8d12ae82144957cc14020cd84df15b093ce4ab**
+- IPTV-Playlist.m3u SHA-256: **810bd296df25477c8020711267bf2062f97b9386ab54cd783171bac96e9d7bc0**
 - International-Playlist.m3u SHA-256: **088cc6fee8e2211d4c5731a8f086e9ad91b51d302a33d9297b979ce4432e3cf6**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **155**
 - Exact-byte duplicate asset clusters: **704**
-- Playlist references whose asset stem differs from the normalized channel name: **1401**
+- Playlist references whose asset stem differs from the normalized channel name: **1402**
 - Unreferenced files immediately inside logos/: **1449** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
@@ -1192,9 +1192,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Tom and Jerry | repaired-tom-and-jerry-b0ff227b3a.png | Review |
 | IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Review |
-| IPTV-Playlist.m3u | Aryan TV National | aryan-tv-national.png | New Channels |
 | IPTV-Playlist.m3u | Disha TV | disha-tv.png | New Channels |
+| IPTV-Playlist.m3u | TV 100 (India) | tv-100-india.png | New Channels |
 | IPTV-Playlist.m3u | Vokta TV | vokta-tv.png | New Channels |
+| IPTV-Playlist.m3u | Jaihind TV | jaihind-tv.png | New Backups |
 | IPTV-Playlist.m3u | Matribhumi TV | matri-bhumi-tv.png | New Backups |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
