@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-10T02:34:42+00:00**
+Generated: **2026-11-10T07:38:15+00:00**
 
-- Active Bangladesh playlist identities: **70**
-- Identities with a retained source mapping: **4**
-- Identities with usable current/future schedules: **2**
-- Identities without a source mapping: **66**
+- Active Bangladesh playlist identities: **68**
+- Identities with a retained source mapping: **3**
+- Identities with usable current/future schedules: **1**
+- Identities without a source mapping: **65**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -14,7 +14,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 
 | Source label | Matched Bangladesh IDs | IDs with usable current/future schedules | Source health | Error / note |
 |---|---:|---:|---|---|
-| https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | OK | - |
 | iptv-org/epg (targeted build-time guide) | 1 | 1 | OK | - |
 
 ## Bangladesh-relevant source health
@@ -22,7 +21,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry) |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 68 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 71 | - |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
@@ -39,7 +38,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Bijoy TV | BijoyTV.bd | NO_GUIDE_HIT |
 | Boishakhi TV | BoishakhiTV.bd | NO_GUIDE_HIT |
 | BTV Chattogram | BTVChattogram.bd | NO_GUIDE_HIT |
-| BTV News | BTVNews.bd | NO_GUIDE_HIT |
 | Channel 1 | Channel1.bd | NO_GUIDE_HIT |
 | Channel 16 | Channel16.bd | NO_GUIDE_HIT |
 | Channel 24 | Channel24.bd | NO_GUIDE_HIT |
@@ -60,12 +58,14 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | G TV | GaziTV.bd | NO_GUIDE_HIT |
 | GAZI TV | GaziTV.bd@SD | NO_GUIDE_HIT |
 | Global TV | GlobalTV.bd | NO_GUIDE_HIT |
+| Independent TV | IndependentTV.bd | NO_GUIDE_HIT |
 | Islamic TV | IslamicTV.bd | NO_GUIDE_HIT |
+| JA TV | JATV.bd | NO_GUIDE_HIT |
 | Jago News 24 | JagoNews24.bd | NO_GUIDE_HIT |
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
+| Jhankar TV | JhankarTV.ca | NO_GUIDE_HIT |
 | Jonmobhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
-| Madani Channel Bangla | MadaniChannelBangla.bd@SD | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd@HD | NO_GUIDE_HIT |
 | ME TV | METV.bd | NO_GUIDE_HIT |
@@ -76,7 +76,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | MUSIC BANGLA | MUSICBANGLA | NO_GUIDE_HIT |
 | My TV | MyTV.bd | NO_GUIDE_HIT |
 | Nagorik TV | NagorikTV.bd | NO_GUIDE_HIT |
-| NAN TV | NANTV.bd@SD | NO_GUIDE_HIT |
 | News 21 | News21BanglaTV.bd@SD | NO_GUIDE_HIT |
 | NEWS 21 BANGLA | custom.bdix.news21-bangla | NO_GUIDE_HIT |
 | News 24 | News24.bd | NO_GUIDE_HIT |
@@ -88,7 +87,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Probashi TV | ProbashiTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | RajdhaniTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | custom.rajdhani | NO_GUIDE_HIT |
-| Rupashi Bangla TV | RupashiBanglaTV.bd@SD | NO_GUIDE_HIT |
 | SA TV | SATV.bd | NO_GUIDE_HIT |
 | Shikor TV Canada | custom.shikortvcanada | NO_GUIDE_HIT |
 | Somoy TV | SomoyNewsTV.bd | NO_GUIDE_HIT |
