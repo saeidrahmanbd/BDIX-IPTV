@@ -1,15 +1,15 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-10T01:50:56.942042+00:00**
+Generated: **2026-11-10T11:48:45.993381+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational/Knowledge and Business/Finance channels are prohibited; Indian Kids and Sports channels are prohibited.**
 - Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.
 - Country-group threshold: **5** legitimate primary identities
 - Existing prohibited review-queue rows removed: **0**
-- New channels: **19**
-- New backups: **18**
-- Rejected/held candidates: **844**
+- New channels: **17**
+- New backups: **11**
+- Rejected/held candidates: **853**
 - Country policy: only candidates verified as BD/IN (valid `.bd`/`.in` id, or repository-mapping evidence when the id is missing/malformed) are queued; conflicting or unverifiable candidates are held.
 
 ## Rejection reasons
@@ -21,7 +21,7 @@ Generated: **2026-11-10T01:50:56.942042+00:00**
 - Indian religious channel is prohibited: 115
 - country not verified: id carries a non-BD/IN country suffix: 27
 - country not verified: id country IN conflicts with BD source feed: 10
-- duplicate stream URL: 295
+- duplicate stream URL: 304
 - known Indian prohibited MH One Prime channel is prohibited: 1
 - known Indian prohibited brand/category is prohibited: 19
 - permanently banned channel: 30
@@ -32,7 +32,6 @@ Generated: **2026-11-10T01:50:56.942042+00:00**
 ## New Channels
 
 - ATN Music (360p) (Bangladesh) — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
-- NAN TV (720p) (Bangladesh) — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
 - Vokta TV (720p) (Bangladesh) — https://vokta.raytahost.com/live/voktatv/index.m3u8
 - Anmol TV (720p) (India) — https://drk6xq0vhn.gpcdn.net/live/zee_anmol_abr/index.m3u8
 - Aryan TV National (576p) (India) — https://mumt04.tangotv.in/m18aqlK4ARYANTVNATIONAL/index.m3u8
@@ -41,7 +40,6 @@ Generated: **2026-11-10T01:50:56.942042+00:00**
 - Disha TV (396p) (India) — https://d1msejlow1t3l4.cloudfront.net/fta/dishatv/playlist.m3u8
 - ETV Life (1080p) (India) — https://mumbai-edge.smartplaytv.in/ETVLIFE/index.m3u8
 - ETV Telugu HD (1080p) (India) — https://mumbai-edge.smartplaytv.in/ETVHD/index.m3u8
-- Jaihind TV (576p) (India) — https://fta.ektv.in/live/700/master.m3u8
 - Jaya Plus (576p) (India) — https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8
 - MBC TV (576p) (India) — https://cdn.pishow.tv/ott/live/1017/master.m3u8
 - Punjabi Beats HD (720p) (India) — https://mumt01.tangotv.in/O5aw8Zn3PUNJABIBEATSHD/index.m3u8
@@ -53,31 +51,24 @@ Generated: **2026-11-10T01:50:56.942042+00:00**
 
 ## New Backups
 
+- Matribhumi TV (720p) (Bangladesh) — http://live.playmax.live/matribhumi/index.m3u8
 - T Sports (1080p) (Bangladesh) — https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
 - DD Assam (576p) (India) — https://fta.ektv.in/live/672/master.m3u8
 - DD Manipur (576p) (India) — https://fta.ektv.in/live/671/master.m3u8
 - DD Nagaland (576p) (India) — https://fta.ektv.in/live/670/master.m3u8
-- DD National HD (1080p) (India) — https://fta.ektv.in/live/15/master.m3u8
 - DD Punjabi (576p) (India) — https://fta.ektv.in/live/177/master.m3u8
-- DD Tamil (576p) (India) — https://fta.ektv.in/live/679/master.m3u8
 - DD Tripura (576p) (India) — https://fta.ektv.in/live/661/master.m3u8
-- Epic Bharat (576p) (India) — https://fta.ektv.in/live/471/master.m3u8
-- Epic Bhojpuri (576p) (India) — https://fta.ektv.in/live/467/master.m3u8
 - ETV Music (1080p) (India) — https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
-- Fakt Marathi (576p) (India) — https://fta.ektv.in/live/188/master.m3u8
 - FashionTV (India) (576p) (India) — https://fta.ektv.in/live/144/144_0.m3u8
-- Goldmines Movies (576p) (India) — https://mumt04.tangotv.in/m18aqlK4GOLDMINEMOVIES/index.m3u8
-- Music India (576p) (India) — https://fta.ektv.in/live/158/master.m3u8
-- Pear TV (576p) (India) — https://fta.ektv.in/live/695/master.m3u8
-- Public Music (576p) (India) — https://fta.ektv.in/live/240/master.m3u8
+- Jaihind TV (576p) (India) — https://fta.ektv.in/live/700/master.m3u8
 - Vanitha TV (576p) (India) — https://mumbai-edge.smartplaytv.in/VanithaTV/index.m3u8
 
 ## Stream verification
 
-- Run timestamp: 2026-11-10T01:51:02+00:00
+- Run timestamp: 2026-11-10T11:48:50+00:00
 - Mode: iptv
-- New entries and discovery queues probed: 36
-- Verified live media responses: 15
+- New entries and discovery queues probed: 27
+- Verified live media responses: 6
 - Verified new primary channels automatically promoted: 0
 - Verified alternate streams moved to Backup: 0
 - Inconclusive candidates moved to Review: 0
@@ -93,14 +84,13 @@ Generated: **2026-11-10T01:50:56.942042+00:00**
 ### Stream probe details
 - Removed FashionTV from Review — HTTP 404.
 - Removed Anmol TV from New Channels — HTTP 404.
-- Removed Aryan TV National from New Channels — HTTP 404.
 - Removed ATN Music from New Channels — HTTP 404.
 - Removed Captain from New Channels — HTTP 404.
 - Removed ETV Life from New Channels — HTTP 404.
 - Removed ETV Telugu from New Channels — HTTP 404.
 - Removed Jaya Plus from New Channels — HTTP 404.
-- Removed NAN TV from New Channels — HTTP 404.
 - Removed Punjabi Beats from New Channels — HTTP 404.
+- Removed TV 100 (India) from New Channels — HTTP 404.
 - Moved Vokta TV to Review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Removed Win TV from New Channels — HTTP 404.
 - Removed Zee Action from New Channels — HTTP 404.
@@ -110,14 +100,15 @@ Generated: **2026-11-10T01:50:56.942042+00:00**
 - Removed DD Punjabi from New Backups — HTTP 404.
 - Removed DD Tripura from New Backups — HTTP 404.
 - Removed ETV Music from New Backups — HTTP 404.
+- Removed Jaihind TV from New Backups — HTTP 404.
 - Removed T Sports from New Backups — HTTP 404.
 - Removed Vanitha TV from New Backups — HTTP 404.
 
 ## Final validation
 
-- Run timestamp: 2026-11-10T01:51:03+00:00
+- Run timestamp: 2026-11-10T11:48:50+00:00
 - Validation status: PASS
-- M3U entries parsed: 1074
+- M3U entries parsed: 1150
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
