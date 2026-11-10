@@ -1,11 +1,14 @@
 name: Discovery Schedule Watchdog
-# GitHub's schedule trigger is best-effort, especially at minute 00.
-# The official discovery workflows run at 07:00 BDT; these two spaced
-# recovery checkpoints dispatch only workflows with no successful/active run today.
+# GitHub schedule events are best-effort. Staggered checkpoints independently
+# recover missed discovery AND stream-health runs throughout the Bangladesh morning.
+# The guard inspects each workflow's real writer/check job, not wrapper conclusions.
 on:
   schedule:
-    - cron: '15 1 * * *'  # 07:15 Asia/Dhaka: first recovery checkpoint
-    - cron: '15 2 * * *'  # 08:15 Asia/Dhaka: final recovery checkpoint
+    - cron: '15 1 * * *'  # 07:15 Asia/Dhaka: discovery recovery
+    - cron: '45 1 * * *'  # 07:45 Asia/Dhaka: discovery recovery
+    - cron: '15 2 * * *'  # 08:15 Asia/Dhaka: final discovery recovery
+    - cron: '15 3 * * *'  # 09:15 Asia/Dhaka: stream-health recovery
+    - cron: '15 4 * * *'  # 10:15 Asia/Dhaka: final stream-health recovery
 
 permissions:
   actions: write
@@ -34,4 +37,5 @@ jobs:
         run: |
           python scripts/discovery_schedule_guard.py watchdog \
             new-channel-discovery.yml \
-            international-channel-discovery.yml
+            international-channel-discovery.yml \
+            international-stream-health.yml
