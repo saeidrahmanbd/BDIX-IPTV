@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-10T01:51:29+00:00**
+Generated: **2026-11-10T03:41:44+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **fd5245ea3bdc1231dd6a4cdc22f82db1b887c7ca4c7d3f028ee6c831c7ba927a**
-- International-Playlist.m3u SHA-256: **55590260231b80063a9d2c1e065a8f89ae36dccd133fc2229846dfd3c32e16f6**
+- IPTV-Playlist.m3u SHA-256: **3a82bd3bb723138e3d18d13e4a394f6fe0c1e806e1159349bd3bcf4611413c78**
+- International-Playlist.m3u SHA-256: **058f10a9eee15c2a4bda72db44a2e0cf83ba81a767e151537de6393d5d6cf5cf**
 
 ## Summary
 
@@ -16,8 +16,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **156**
-- Exact-byte duplicate asset clusters: **701**
-- Playlist references whose asset stem differs from the normalized channel name: **1362**
+- Exact-byte duplicate asset clusters: **703**
+- Playlist references whose asset stem differs from the normalized channel name: **1367**
 - Unreferenced files immediately inside logos/: **1445** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
@@ -647,6 +647,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/rakuten-tv-action-movies-austria-720p.png, logos/international/rakuten-tv-action-movies-germany-1080p.png, logos/international/rakuten-tv-action-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-austria-720p.png, logos/international/rakuten-tv-comedy-movies-germany-1080p.png, logos/international/rakuten-tv-comedy-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-uk-1080p.png, logos/international/rakuten-tv-drama-movies-austria-720p.png, logos/international/rakuten-tv-drama-movies-germany-1080p.png, logos/international/rakuten-tv-drama-movies-uk-1080p.png, logos/international/rakuten-tv-family-movies-austria-720p.png, logos/international/rakuten-tv-family-movies-germany-1080p.png, logos/international/rakuten-tv-family-movies-italy-1080p.png, logos/international/rakuten-tv-family-movies-switzerland-720p.png, logos/international/rakuten-tv-family-movies-uk-1080p.png, logos/international/rakuten-tv-top-movies-germany-1080p.png, logos/international/rakuten-tv-top-movies-italy-1080p.png, logos/international/rakuten-tv-top-movies-uk-1080p.png, logos/rakuten-tv-action-movies-italy-1080p.png, logos/rakuten-tv-action-movies-uk-1080p-75f2eea4ce.png, logos/rakuten-tv-comedy-movies-germany-1080p.png, logos/rakuten-tv-drama-movies-italy-166043b571.png, logos/rakuten-tv-family-movies-uk-1080p.png
 - logos/international/rawhide-united-states-ca.png, logos/international/rawhide-united-states.png
 - logos/international/rodnoe-kino-576p.png, logos/rodnoe-kino-576p.png
+- logos/international/rotana-cinema-egypt-1080p-geo-blocked.png, logos/rotana-cinema-egypt-2f3fea2474.png
+- logos/international/rotana-cinema-ksa-1080p-geo-blocked.png, logos/rotana-cinema-ksa-7d593b9f93.png
 - logos/international/rumba-tv.png, logos/rumba-tv-3182ea7301.png, logos/unused/rumba-tv-3182ea7301.png
 - logos/international/russkiy-roman-1080p.png, logos/russkiy-roman-1080p.png
 - logos/international/shemaroo-filmi-gaane-1080p.png, logos/nvisionbd-verified-shemaroo-filmi-gaane-0ec7fc7a82.png
@@ -1429,6 +1431,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | ARY Q TV | ary-q-tv.png | Pakistani |
 | International-Playlist.m3u | aur LIFE | aurlife.png | Pakistani |
 | International-Playlist.m3u | Falak TV | falak-tv.png | Pakistani |
+| International-Playlist.m3u | God Stands Kids Club TV | god-stands-kids-club-tv.jpg | Pakistani |
+| International-Playlist.m3u | God Stands Kids Club TV Arabic | god-stands-kids-club-tv-arabic.jpg | Pakistani |
+| International-Playlist.m3u | God Stands Kids Club TV Chinese | god-stands-kids-club-tv-chinese.jpg | Pakistani |
+| International-Playlist.m3u | God Stands Kids Club TV Urdu | god-stands-kids-club-tv-urdu.png | Pakistani |
 | International-Playlist.m3u | Hum TV | hum-tv.png | Pakistani |
 | International-Playlist.m3u | Jalwa TV | jalwa-tv.png | Pakistani |
 | International-Playlist.m3u | Peace TV Urdu | peace-tv-urdu.png | Pakistani |
@@ -1540,6 +1546,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Rakuten TV Drama Movies Germany | rakuten-tv-drama-movies-germany-1080p.png | Germany |
 | International-Playlist.m3u | Rakuten TV Family Movies Germany | rakuten-tv-family-movies-germany-1080p.png | Germany |
 | International-Playlist.m3u | Rakuten TV Top Movies Germany | rakuten-tv-top-movies-germany-1080p.png | Germany |
+| International-Playlist.m3u | SensaCine TV x Pluto | sensacine-tv-x-pluto.png | Germany |
 | International-Playlist.m3u | TV Bozsike Hamburg | tv-bozsike-hamburg-aad2e10d17.png | Germany |
 | International-Playlist.m3u | Volksmusik TV | volksmusik-tv-7b239333b5.png | Germany |
 | International-Playlist.m3u | Baraza TV | baraza-tv-1080p.png | Greece |
@@ -1643,6 +1650,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | RU.TV | ru-tv-1e1acce47e.svg | Russia |
 | International-Playlist.m3u | Russkiy Detektiv | 18-028b925b47.png | Russia |
 | International-Playlist.m3u | Shanson TV | shanson-tv.png | Russia |
+| International-Playlist.m3u | Shokiruyushchee | shokiruyushchee-hd-1080p.png | Russia |
 | International-Playlist.m3u | TV 21 | tv-21-f7fc662314.png | Russia |
 | International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | Singapore |
 | International-Playlist.m3u | HBO Asia SD [ ] | hbo-asia-sd-720p-geo-blocked.png | Singapore |
@@ -1841,10 +1849,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | VIP TV | vip-tv-720p.png | International |
 | International-Playlist.m3u | ZICO TV | zico-tv-cfebb586da.png | International |
 | International-Playlist.m3u | DISNEY CHANNEL [IN] | disney-channel-india.png | Kids |
-| International-Playlist.m3u | God Stands Kids Club TV | god-stands-kids-club-tv.jpg | Kids |
-| International-Playlist.m3u | God Stands Kids Club TV Arabic | god-stands-kids-club-tv-arabic.jpg | Kids |
-| International-Playlist.m3u | God Stands Kids Club TV Chinese | god-stands-kids-club-tv-chinese.jpg | Kids |
-| International-Playlist.m3u | God Stands Kids Club TV Urdu | god-stands-kids-club-tv-urdu.png | Kids |
 | International-Playlist.m3u | Green Gold TV | green-gold-tv.png | Kids |
 | International-Playlist.m3u | AsiaN | asian-tv.png | Adult |
 | International-Playlist.m3u | Fap TV 6 | fap-tv-6.png | Adult |
@@ -1950,12 +1954,15 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Rakuten TV Family Movies Austria | rakuten-tv-family-movies-austria-720p.png | Review |
 | International-Playlist.m3u | Rakuten TV Family Movies Switzerland | rakuten-tv-family-movies-switzerland-720p.png | Review |
 | International-Playlist.m3u | Rewind TV | rewind-tv-401b1f9957.png | Review |
+| International-Playlist.m3u | Rotana Cinema Egypt [ ] | rotana-cinema-egypt-1080p-geo-blocked.png | Review |
+| International-Playlist.m3u | Rotana Cinema KSA [ ] | rotana-cinema-ksa-1080p-geo-blocked.png | Review |
 | International-Playlist.m3u | SAB TV | sab-tv.png | Review |
 | International-Playlist.m3u | Safari TV | safari-tv.png | Review |
 | International-Playlist.m3u | Sana TV | sana-tv.png | Review |
 | International-Playlist.m3u | Somoy TV | somoy-tv.png | Review |
 | International-Playlist.m3u | SONY AATH kids | sony-aath.png | Review |
 | International-Playlist.m3u | Sooriyan TV | sooriyan-tv.png | Review |
+| International-Playlist.m3u | Star Gold | star-gold-hd-1080p.png | Review |
 | International-Playlist.m3u | Sunna TV | sunna-tv-127849e5a3.png | Review |
 | International-Playlist.m3u | Taha TV | taha-tv-8dcab21652.png | Review |
 | International-Playlist.m3u | Unique TV | unique-tv.png | Review |

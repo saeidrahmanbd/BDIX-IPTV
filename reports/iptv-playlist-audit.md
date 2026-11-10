@@ -1,27 +1,27 @@
 # IPTV Playlist Audit
-Generated: **2026-11-10T01:49:30.132241+00:00**
-Source playlist SHA-256: **1cdf6fb9b301583e715aaa78826992aa3bb5ef9ef2de94b2d35437d2bfcc3676**
+Generated: **2026-11-10T03:41:45.660005+00:00**
+Source playlist SHA-256: **3a82bd3bb723138e3d18d13e4a394f6fe0c1e806e1159349bd3bcf4611413c78**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1068**
-- Unique channel IDs: **659**
-- IDs with multiple streams: **216**
+- Playlist entries: **1074**
+- Unique channel IDs: **655**
+- IDs with multiple streams: **218**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-queue same-ID name variants (review): **0**
-- Cross-queue normalized-name/different-ID groups (review): **2**
+- Cross-queue normalized-name/different-ID groups (review): **1**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1068**
+- Logo references checked: **1074**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **0**
@@ -62,7 +62,6 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 No same-ID label variants found across groups.
 
 - Same normalized name: Discovery Channel (India) [discoverychannel.in@hd] (Review); Discovery Channel (India) [discoverychannel.in@sd] (Review)
-- Same normalized name: Travelxp [travelxp.in@4khdr] (Review); Travelxp [travelxp.in@hd] (Documentary & Wildlife)
 
 ## Duplicate IDs
 
@@ -114,8 +113,8 @@ No same-ID label variants found across groups.
 - Ananda TV — Backup — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 ### animalplanet.in@sd (4 streams)
 - Animal Planet — Documentary & Wildlife — https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8
-- Animal Planet — Review — https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd_abr/index.m3u8
 - Animal Planet — Review — https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8
+- Animal Planet — Review — https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd_abr/index.m3u8
 - Animal Planet — Review — https://drk6xq0vhn.gpcdn.net/live/animal_planet_sd_abr/index.m3u8
 ### anjantv.in@sd (2 streams)
 - Anjan TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/993/master.m3u8
@@ -313,9 +312,10 @@ No same-ID label variants found across groups.
 ### ddmalayalam.in@sd (2 streams)
 - DD Malayalam — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/c313674ffced4c9a90f1bba436df2b9b/index.m3u8
 - DD Malayalam — Backup — https://fta.ektv.in/live/680/master.m3u8
-### ddnational.in@sd (5 streams)
+### ddnational.in@sd (6 streams)
 - DD National — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8
 - DD National — Review — http://107.167.16.138/ddnational/index.m3u8
+- DD National — New Backups — https://fta.ektv.in/live/15/master.m3u8
 - DD National — Backup — http://163.61.226.31:9981/stream/channelid/1991369999?profile=pass
 - DD National — Backup — https://cdn.pishow.tv/ott/live/11/master.m3u8
 - DD National — Backup — https://mumbai-edge.smartplaytv.in/DDNational/index.m3u8
@@ -336,8 +336,9 @@ No same-ID label variants found across groups.
 - DD Sports — Sports — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8
 - DD Sports — Backup — https://cdn.pishow.tv/ott/live/1161/master.m3u8
 - DD Sports — Backup — https://mumbai-edge.smartplaytv.in/DDSportsHD/index.m3u8
-### ddtamil.in@sd (2 streams)
+### ddtamil.in@sd (3 streams)
 - DD Tamil — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/abf46b14847e45499f4a47f3a9afe93d/index.m3u8
+- DD Tamil — New Backups — https://fta.ektv.in/live/679/master.m3u8
 - DD Tamil — Backup — https://cdn.pishow.tv/ott/live/1737/master.m3u8
 ### ddurdu.in@sd (2 streams)
 - DD Urdu — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/9b91e9007e754db39a8b32c6bfc5b24a/index.m3u8
@@ -411,11 +412,13 @@ No same-ID label variants found across groups.
 - Enter TV — Bangladesh — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8
 - Enter TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8
 - Enter TV — Backup — https://live1.entertv.com.bd/entertv/index.fmp4.m3u8
-### epicbharat.in@sd (2 streams)
+### epicbharat.in@sd (3 streams)
 - Epic Bharat — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVEPICTV/index.m3u8
+- Epic Bharat — New Backups — https://fta.ektv.in/live/471/master.m3u8
 - Epic Bharat — Backup — https://epiconvh.akamaized.net/live/nazara/master.m3u8
-### epicbhojpuri.in@sd (2 streams)
+### epicbhojpuri.in@sd (3 streams)
 - Epic Bhojpuri — Indian Movies — https://mumt01.tangotv.in/O5aw8Zn3EPICBHOJPURI/index.m3u8
+- Epic Bhojpuri — New Backups — https://fta.ektv.in/live/467/master.m3u8
 - Epic Bhojpuri — Backup — https://mumt01.tangotv.in/O5aw8Zn3EPICBHOJPURI/tracks-v1a1/mono.m3u8
 ### epicbhojpuridigital.in (2 streams)
 - Epic Bhojpuri Digital — Indian Movies — https://cc-8hy4a26pz2uos.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8hy4a26pz2uos/playlist.m3u8
@@ -432,8 +435,9 @@ No same-ID label variants found across groups.
 ### eurosport.in@sd (2 streams)
 - Eurosport — Sports — https://livetv.shamon-cable.net:8443/Eurosport-HD/index.m3u8
 - Eurosport — Review — https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8
-### faktmarathi.in@sd (2 streams)
+### faktmarathi.in@sd (3 streams)
 - Fakt Marathi — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8
+- Fakt Marathi — New Backups — https://fta.ektv.in/live/188/master.m3u8
 - Fakt Marathi — Backup — https://cdn.pishow.tv/ott/live/10002/master.m3u8
 ### gazitv.bd (6 streams)
 - G TV — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8
@@ -466,8 +470,9 @@ No same-ID label variants found across groups.
 - Goldmines Bollywood — Backup — https://fta.ektv.in/live/52/52_0.m3u8
 - Goldmines Bollywood — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8
 - Goldmines Bollywood — Backup — https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/tracks-v1a1/mono.m3u8
-### goldminesmovies.in@sd (3 streams)
+### goldminesmovies.in@sd (4 streams)
 - Goldmines Movies — Indian Movies — https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8
+- Goldmines Movies — New Backups — https://mumt04.tangotv.in/m18aqlK4GOLDMINEMOVIES/index.m3u8
 - Goldmines Movies — Backup — https://cdn.pishow.tv/ott/live/1461/master.m3u8
 - Goldmines Movies — Backup — https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/tracks-v1a1/mono.m3u8
 ### greentv.bd@sd (2 streams)
@@ -594,12 +599,12 @@ No same-ID label variants found across groups.
 - ME TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-2/index.m3u8
 - ME TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-3/index.m3u8
 ### mhone.in@sd (2 streams)
-- MH One — Indian Music — https://samitaorigin.tangotv.in/MHONE/SAMITAORIGIN/index.m3u8
-- MH One — Backup — https://fta.ektv.in/live/353/master.m3u8
+- MH One — Indian Music — https://fta.ektv.in/live/353/master.m3u8
+- MH One — Backup — https://samitaorigin.tangotv.in/MHONE/SAMITAORIGIN/index.m3u8
 ### mhonedilse.in@sd (3 streams)
-- MH One Dil Se — Indian Music — https://streams.tangotv.in/MHONEDILSE/ORIGIN/index.m3u8
-- MH One Dil Se — Backup — https://fta.ektv.in/live/351/master.m3u8
+- MH One Dil Se — Indian Music — https://fta.ektv.in/live/351/master.m3u8
 - MH One Dil Se — Backup — https://mumt01.tangotv.in/O5aw8Zn3MHONEDILSE/index.m3u8
+- MH One Dil Se — Backup — https://streams.tangotv.in/MHONEDILSE/ORIGIN/index.m3u8
 ### mhonemovies.in@sd (3 streams)
 - MH One Movies — Indian Movies — https://fta.ektv.in/live/639/master.m3u8
 - MH One Movies — Backup — https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/index.m3u8
@@ -622,8 +627,9 @@ No same-ID label variants found across groups.
 ### moviesnow.in@sd (2 streams)
 - Movies Now — Review — http://103.135.253.32:8080/MN-PLUS/index.m3u8
 - Movies Now — Review — http://103.135.253.32:8080/MOVIES-NOW/index.m3u8
-### musicindia.in@sd (2 streams)
+### musicindia.in@sd (3 streams)
 - Music India — Indian Music — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
+- Music India — New Backups — https://fta.ektv.in/live/158/master.m3u8
 - Music India — Backup — https://cdn.pishow.tv/ott/live/226/master.m3u8
 ### mytv.bd (5 streams)
 - My TV — Bangladesh — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8
@@ -675,6 +681,9 @@ No same-ID label variants found across groups.
 - Peace TV Bangla — Religious — https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v3a1/mono.m3u8
 - Peace TV Bangla — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/peacetvban.stream/tracks-v1a1/mono.m3u8
 - Peace TV Bangla — Backup — https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8
+### peartv.in@sd (2 streams)
+- Pear TV — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3PEARTV/index.m3u8
+- Pear TV — New Backups — https://fta.ektv.in/live/695/master.m3u8
 ### pitaara.in@sd (4 streams)
 - Pitaara TV — Indian Movies — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index.m3u8
 - Pitaara TV — Backup — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index_5.m3u8
@@ -685,7 +694,7 @@ No same-ID label variants found across groups.
 - Pocket Films — Backup — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/6408f97591ee7861ab0d4839eefdbbee/0.m3u8
 ### pogo.in@sd (2 streams)
 - Pogo — Kids — https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
-- Pogo — Review — https://drk6xq0vhn.gpcdn.net/live/pogo_sd_abr/index.m3u8
+- Pogo — Backup — https://drk6xq0vhn.gpcdn.net/live/pogo_sd_abr/index.m3u8
 ### probashitv.bd (2 streams)
 - Probashi TV — Bangladesh — http://158.69.24.53:8080/probashi_tv/index.m3u8
 - Probashi TV — Backup — http://158.69.24.53:8080/probashi_tv/tracks-v1a1/mono.m3u8
@@ -700,8 +709,9 @@ No same-ID label variants found across groups.
 - Public Movies — Indian Movies — https://mumt04.tangotv.in/m18aqlK4PUBLICMOVIES/index.m3u8
 - Public Movies — Backup — https://fta.ektv.in/live/239/master.m3u8
 - Public Movies — Backup — https://mumt04.tangotv.in/m18aqlK4PUBLICMOVIES/tracks-v1a1/mono.m3u8
-### publicmusic.in@sd (2 streams)
+### publicmusic.in@sd (3 streams)
 - Public Music — Indian Music — https://mumt04.tangotv.in/m18aqlK4PUBLICMUSIC/index.m3u8
+- Public Music — New Backups — https://fta.ektv.in/live/240/master.m3u8
 - Public Music — Backup — https://cdn.pishow.tv/ott/live/441/master.m3u8
 ### punjabihits.in (2 streams)
 - Punjabi Hits — Indian Music — https://stream.ottlive.co.in/punjabihits/index.m3u8
@@ -710,8 +720,8 @@ No same-ID label variants found across groups.
 - Punjabi Shorts — Indian Entertainment — https://vglivessai.akamaized.net/ptnr-yupptv/title-Punjabi_Shorts/in/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/27c3fd7a-b01f-4b00-ac03-557ac77acd47/index.m3u8
 - Punjabi Shorts — Backup — https://gtc.ottlive.co.in/punjabshort/index.m3u8
 ### qtv.in (3 streams)
-- Q TV — Indian Entertainment — https://mumt05.tangotv.in/87NeALx2THEQ/index.m3u8
-- Q TV — Backup — https://fta.ektv.in/live/25/master.m3u8
+- Q TV — Indian Entertainment — https://fta.ektv.in/live/25/master.m3u8
+- Q TV — Backup — https://mumt05.tangotv.in/87NeALx2THEQ/index.m3u8
 - Q TV — Backup — https://samitaorigin.tangotv.in/THEQ/SAMITAORIGIN/index.m3u8
 ### qurantv.iq (2 streams)
 - Quran TV — Religious — https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
@@ -802,8 +812,8 @@ No same-ID label variants found across groups.
 - Sony Aath — Review — https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
 - Sony Aath — Review — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
 ### sonyentertainmenttelevision.in@hd (2 streams)
-- Sony Entertainment Television HD — Indian Entertainment — http://38.96.178.205/SONYHD/index.m3u8
-- Sony Entertainment Television HD — Review — http://103.135.253.32:8080/SONY-ENTARTANMEN/index.m3u8
+- Sony Entertainment TV — Indian Entertainment — http://38.96.178.205/SONYHD/index.m3u8
+- Sony Entertainment TV — Review — http://103.135.253.32:8080/SONY-ENTARTANMEN/index.m3u8
 ### southstation.in (2 streams)
 - South Station — Indian Movies — https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/SS_IN.m3u8
 - South Station — Backup — https://jmp2.uk/stvp-IN3800008CX
@@ -849,6 +859,9 @@ No same-ID label variants found across groups.
 ### totalmusic.uk (2 streams)
 - Totalmusic — International — https://cdn.global.elektamedia.com/live/c7eds/Totalmusic/SA_LIVE_hls_enc/master.m3u8
 - Totalmusic — Backup — https://cdn.40mediagroup.com/live/c7eds/Totalmusic/SA_LIVE_hls_enc/master.m3u8
+### travelxp.in@hd (2 streams)
+- Travelxp — Documentary & Wildlife — https://amg00416-amg00416c9-samsung-in-4882.playouts.now.amagi.tv/playlist/amg00416-travelxp-travelxphd-samsungin/playlist.m3u8
+- Travelxp — Review — https://deltatesttatasky.akamaized.net/out/i/968284.m3u8
 ### tunes6.in (2 streams)
 - Tunes 6 — Indian Music — https://stream.d6-pro.com/tunes6music/live/video.m3u8
 - Tunes 6 — Backup — https://stream.d6-pro.com/Tunes6music/live/video.m3u8
@@ -922,7 +935,7 @@ None.
 
 ## Primary Channel-Number Sequence
 
-Contiguous numbering verified: 1–599.
+Contiguous numbering verified: 1–591.
 
 ## Malformed EXTINF Entries
 
@@ -955,7 +968,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1068**
+- Healthy/local references: **1074**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
