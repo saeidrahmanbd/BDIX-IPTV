@@ -104,6 +104,9 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         ):
             self.assertNotIn(forbidden, mutations)
         self.assertIn("python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u", workflow)
+        normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
+        self.assertIn("Keep the original record sequence exactly", normalizer)
+        self.assertNotIn("records.sort(", normalizer)
         self.assertGreaterEqual(workflow.count("python scripts/protect_main_playlist.py verify IPTV-Playlist.m3u"), 2)
         self.assertIn("python -m unittest discover -s tests -p 'test_main_playlist_protection.py'", workflow)
         self.assertIn("python scripts/reorganize_international_playlist.py", mutations)
