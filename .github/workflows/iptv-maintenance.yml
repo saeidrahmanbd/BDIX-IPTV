@@ -67,6 +67,8 @@ on:
       - tests/test_migrate_logo_unset.py
       - tests/test_international_protected_guard.py
       - scripts/verify_international_protected.py
+      - scripts/protect_main_playlist.py
+      - tests/test_main_playlist_protection.py
   schedule:
     - cron: '17 2 * * *' # 08:17 Asia/Dhaka (UTC+6)
   workflow_dispatch:
@@ -97,6 +99,7 @@ jobs:
           python -m py_compile \
             scripts/maintenance_helpers.py \
             scripts/verify_international_protected.py \
+            scripts/protect_main_playlist.py \
             scripts/reconcile_playlist_consistency.py \
             scripts/restore_protected_review.py \
             scripts/audit_playlist.py \
@@ -134,6 +137,7 @@ jobs:
       - name: Run code-level maintenance and report-freshness tests
         run: |
           python -m unittest discover -s tests -p 'test_stream_url_identity.py'
+          python -m unittest discover -s tests -p 'test_main_playlist_protection.py'
            python -m unittest discover -s tests -p 'test_report_freshness.py'
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_authorized_channel_removals.py'
@@ -218,8 +222,10 @@ jobs:
             python scripts/maintenance_helpers.py snapshot
             python scripts/verify_international_protected.py snapshot
             rm -rf fixed_output
-            echo 'Non-destructive maintenance mode: using current repair/validation pipeline.'
+            echo 'Non-destructive maintenance mode: protecting existing IPTV channel rows.'
+            python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u /tmp/iptv-main-protection.json
             run_mutations
+            python scripts/protect_main_playlist.py verify IPTV-Playlist.m3u /tmp/iptv-main-protection.json
             set +e
             python scripts/audit_playlist.py
             AUDIT_STATUS=$?
@@ -229,6 +235,7 @@ jobs:
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
               echo '::warning::Audit or pre-publish gate found issues; running one automatic correction pass (same mutation sequence, failures not suppressed).'
               run_mutations
+              python scripts/protect_main_playlist.py verify IPTV-Playlist.m3u /tmp/iptv-main-protection.json
               set +e
               python scripts/audit_playlist.py
               AUDIT_STATUS=$?
