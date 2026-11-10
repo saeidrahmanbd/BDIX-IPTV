@@ -232,6 +232,29 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
     def test_reintroduced_allowlisted_channel_is_blocked(self):
         self.assertEqual(self._run_guard([]), 1)
 
+    def test_permanently_excluded_channel_may_remain_in_review_quarantine(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.json"
+            protected = root / "protected.m3u"
+            report = root / "proposed-removals.md"
+            original = "#EXTM3U\n" + channel(
+                "Network 10", "Review", "https://example.invalid/network10.m3u8"
+            ) + "\n"
+            playlist.write_text(original, encoding="utf-8")
+            with (
+                patch.object(guard, "PLAYLIST", playlist),
+                patch.object(guard, "BASELINE", baseline),
+                patch.object(guard, "PROTECTED_SNAPSHOT", protected),
+                patch.object(guard, "REMOVAL_REPORT", report),
+                redirect_stdout(io.StringIO()),
+                redirect_stderr(io.StringIO()),
+            ):
+                guard.snapshot_playlist()
+                guard.snapshot_protected()
+                self.assertEqual(guard.verify_no_unauthorized_removals(), 0)
+
 
     def test_protected_snapshot_ignores_only_attribute_order(self):
         url = "https://example.invalid/reliable.m3u8"
