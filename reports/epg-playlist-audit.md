@@ -1,12 +1,12 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-10T01:43:36+00:00**
+Generated: **2026-11-10T02:34:42+00:00**
 
 This report measures the two maintained M3U playlists included in the automated EPG pipeline. This report covers only the two maintained playlists.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1068 | 599 | 364 | 323 | 364 | 309 | 235 | OK |
+| IPTV-Playlist.m3u | 1074 | 591 | 361 | 322 | 361 | 308 | 230 | OK |
 | International-Playlist.m3u | 3054 | 1700 | 581 | 536 | 570 | 498 | 1119 | OK |
 
 ## Group coverage
@@ -32,13 +32,13 @@ This report measures the two maintained M3U playlists included in the automated 
 | Greece | 8 | 2 | 2 | 6 |
 | Hungary | 15 | 7 | 7 | 8 |
 | Indian Bangla | 39 | 28 | 26 | 11 |
-| Indian Entertainment | 197 | 161 | 154 | 36 |
-| Indian Movies | 83 | 62 | 55 | 21 |
-| Indian Music | 66 | 57 | 54 | 9 |
+| Indian Entertainment | 188 | 156 | 150 | 32 |
+| Indian Movies | 83 | 62 | 56 | 21 |
+| Indian Music | 65 | 57 | 54 | 8 |
 | International | 174 | 34 | 26 | 140 |
 | Iran | 11 | 1 | 0 | 10 |
 | Italy | 27 | 11 | 11 | 16 |
-| Kids | 38 | 20 | 18 | 18 |
+| Kids | 39 | 21 | 19 | 18 |
 | Lebanon | 6 | 1 | 0 | 5 |
 | Mexico | 16 | 7 | 6 | 9 |
 | Netherlands | 15 | 9 | 6 | 6 |
@@ -48,7 +48,7 @@ This report measures the two maintained M3U playlists included in the automated 
 | Poland | 25 | 13 | 12 | 12 |
 | Religious | 26 | 5 | 5 | 21 |
 | Romania | 28 | 9 | 9 | 19 |
-| Russia | 56 | 15 | 15 | 41 |
+| Russia | 56 | 15 | 14 | 41 |
 | Saudi Arabia | 8 | 0 | 0 | 8 |
 | Singapore | 5 | 1 | 1 | 4 |
 | Spain | 22 | 4 | 4 | 18 |
@@ -71,5 +71,5 @@ This report measures the two maintained M3U playlists included in the automated 
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **1cdf6fb9b301583e715aaa78826992aa3bb5ef9ef2de94b2d35437d2bfcc3676**
+- IPTV-Playlist.m3u SHA-256: **fd5245ea3bdc1231dd6a4cdc22f82db1b887c7ca4c7d3f028ee6c831c7ba927a**
 - International-Playlist.m3u SHA-256: **55590260231b80063a9d2c1e065a8f89ae36dccd133fc2229846dfd3c32e16f6**
