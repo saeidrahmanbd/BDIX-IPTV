@@ -4,8 +4,8 @@
 # Facebook: https://www.facebook.com/saeid.rahman.sr
 # Email: saeidrahman.mkt@gmail.com
 #=================================
-#PLAYLIST-STUDIO-NAME:"International Playlist"
 #PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "Argentina", "Brazil", "Bulgaria", "Canada", "Chile", "China", "Colombia", "Costa Rica", "Czech Republic", "DO", "Estonia", "France", "Germany", "Greece", "Hungary", "Iran", "Italy", "Lebanon", "Mexico", "Netherlands", "Panama", "Peru", "Poland", "Romania", "Russia", "Saudi Arabia", "Singapore", "Spain", "Sweden", "Turkey", "Ukraine", "United Kingdom", "United States", "Uzbekistan", "Vietnam", "International", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
+#PLAYLIST-STUDIO-NAME:"International Playlist"
 #EXTINF:-1 tvg-id="AnandaTV.bd" channel-id="AnandaTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Ananda TV",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" channel-id="AsianTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Asian TV",Asian TV
@@ -298,6 +298,8 @@ https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8
 #EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-language="eng" channel-id="StarMoviesSelect.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/star-movies-select.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Star Movies Select",Star Movies Select
 https://livetv.shamon-cable.net:8443/Star-movies-select/index.m3u8
+#EXTINF:-1 tvg-id="StarUtsavMovies.in@SD" channel-id="StarUtsavMovies.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-utsav-movies-576p.png" tvg-country="IN" tvg-content="Movies" group-title="Indian Movies" tvg-name="Star Utsav Movies",Star Utsav Movies
+http://163.61.226.31:9981/stream/channelid/1225596390?profile=pass
 #EXTINF:-1 tvg-id="StudioOnePlus.in@SD" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/studio-one-plus-f44320b032.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Studio One +",Studio One +
 https://cdn.pishow.tv/ott/live/276/master.m3u8
 #EXTINF:-1 tvg-id="SunGemini.in@SD" channel-id="SunGemini.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-gemini-1a4fc59fb6.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Sun Gemini",Sun Gemini
@@ -854,6 +856,14 @@ https://appletree-mytime-samsungbrazil.amagi.tv/playlist.m3u8
 https://eu1.servers10.com:8081/8126/index.m3u8
 #EXTINF:-1 tvg-id="TelecineAction.br@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/telecine-action-aff752fd7a.png" tvg-country="BR" tvg-content="Movies" group-title="Brazil" tvg-name="Telecine Action",Telecine Action
 http://46.151.196.223:14326/
+#EXTINF:-1 tvg-id="TelecineCult.br@SD" channel-id="TelecineCult.br@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/telecine-cult.png" tvg-country="BR" tvg-content="Movies" group-title="Brazil" tvg-name="Telecine Cult",Telecine Cult
+http://45.185.15.154:9080/stream/64/index.m3u8
+#EXTINF:-1 tvg-id="TelecineFun.br@SD" channel-id="TelecineFun.br@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/telecine-fun.png" tvg-country="BR" tvg-content="Movies" group-title="Brazil" tvg-name="Telecine Fun",Telecine Fun
+http://45.185.15.154:9080/stream/63/index.m3u8
+#EXTINF:-1 tvg-id="TelecinePremium.br@SD" channel-id="TelecinePremium.br@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/telecine-premium.png" tvg-country="BR" tvg-content="Movies" group-title="Brazil" tvg-name="Telecine Premium",Telecine Premium
+http://45.185.15.154:9080/stream/28/index.m3u8
+#EXTINF:-1 tvg-id="TelecineTouch.br@SD" channel-id="TelecineTouch.br@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/telecine-touch.png" tvg-country="BR" tvg-content="Movies" group-title="Brazil" tvg-name="Telecine Touch",Telecine Touch
+http://45.185.15.154:9080/stream/29/index.m3u8
 #EXTINF:-1 tvg-id="BOXTV.bg@SD" channel-id="BOXTV.bg@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/box-tv.png" tvg-country="BG" tvg-content="Music" group-title="Bulgaria" tvg-name="BOX TV",BOX TV
 http://213.91.179.28:8000/play/a0an
 #EXTINF:-1 tvg-id="bTVAction.bg@SD" channel-id="bTVAction.bg@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/btv-action.png" tvg-country="BG" tvg-content="Movies" group-title="Bulgaria" tvg-name="bTV Action",bTV Action
@@ -1406,6 +1416,8 @@ https://slonehls.wns.live/hls/stream.m3u8
 https://sltwohls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="T2TV.ir@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t2-tv-750d652855.png" tvg-country="IR" tvg-content="Music" group-title="Iran" tvg-name="T2 TV",T2 TV
 https://t2hls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="Tamasha.ir@SD" channel-id="Tamasha.ir@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/tamasha.png" tvg-country="IR" tvg-content="Movies" group-title="Iran" tvg-name="Tamasha",Tamasha
+https://ncdn.telewebion.ir/hdtest/live/playlist.m3u8
 #EXTINF:-1 tvg-id="7080TV.it@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/70-80-tv.png" tvg-country="IT" tvg-content="Music" group-title="Italy" tvg-name="70-80 TV",70-80 TV
 https://585b674743bbb.streamlock.net/9050/9050/playlist.m3u8
 #EXTINF:-1 tvg-id="Cine34.it@HD" channel-id="Cine34.it@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cine34-hd-1080p.png" tvg-country="IT" tvg-content="Movies" group-title="Italy" tvg-name="Cine34",Cine34
@@ -2434,8 +2446,12 @@ https://amc-amcpresents-1-us.xumo.wurl.tv/playlist.m3u8
 https://fffffff110156200.tvustream.com:8298/ryfy.m3u8
 #EXTINF:-1 tvg-id="SYFY.us@East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/syfy.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="SYFY",SYFY
 http://23.237.104.106:8080/USA_SYFY/index.m3u8
+#EXTINF:-1 tvg-id="TCM.us@East" channel-id="TCM.us@East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/tcm-720p-geo-blocked.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="TCM [ ]",TCM [ ]
+https://turnerlive.warnermediacdn.com/hls/live/2023186/tcmeast/noslate/VIDEO_1_5128000.m3u8
 #EXTINF:-1 tvg-id="TCMLatinAmerica.us@South" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tcm-latin-america-south-f645084339.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="TCM Latin America South",TCM Latin America South
 http://45.171.64.30:6060/play/a014/index.m3u8
+#EXTINF:-1 tvg-id="TCM.us@West" channel-id="TCM.us@West" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/tcm-west-720p-geo-blocked.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="TCM West [ ]",TCM West [ ]
+https://turnerlive.warnermediacdn.com/hls/live/2023187/tcmwest/noslate/VIDEO_1_5128000.m3u8
 #EXTINF:-1 tvg-id="Teleritmo.us" channel-id="Teleritmo.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/teleritmo.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Teleritmo",Teleritmo
 http://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8
 #EXTINF:-1 tvg-id="custom.the-country-network-us-music" channel-id="custom.the-country-network-us-music" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-country-network-1080p.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="The Country Network",The Country Network
@@ -3948,6 +3964,8 @@ https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_015/Stream/playlist.m3u
 https://stream.starmenajo.com/hls/app/live/ts:fhd.m3u8
 #EXTINF:-1 tvg-id="ThanthiOne.in@SD" channel-id="ThanthiOne.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thanthi-one.png" tvg-country="IN" group-title="Review" tvg-name="Thanthi One",Thanthi One
 https://mumbai-edge.smartplaytv.in/thanthione/index.m3u8
+#EXTINF:-1 tvg-id="Thrill.hk@SD" channel-id="Thrill.hk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/thrill-540p.png" tvg-country="HK" tvg-content="Movies" group-title="Review" tvg-name="Thrill",Thrill
+https://cdn10jtedge.indihometv.com/atm/DASH/thrill/manifest.mpd
 #EXTINF:-1 tvg-id="TigoSports.hn@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tigo-sports-honduras-35a2af98a0.png" tvg-country="HN" group-title="Review" tvg-name="Tigo Sports (Honduras)",Tigo Sports (Honduras)
 http://168.196.127.137:6001/play/a0ay/index.m3u8
 #EXTINF:-1 tvg-id="TigoSports.py@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tigo-sports-paraguay-35a2af98a0.png" tvg-country="PY" group-title="Review" tvg-name="Tigo Sports (Paraguay)",Tigo Sports (Paraguay)
@@ -3992,6 +4010,14 @@ https://rpn.bozztv.com/gusa/gusa-tvswsn/index.m3u8
 https://fta.ektv.in/live/688/master.m3u8
 #EXTINF:-1 tvg-id="VCV.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vcv.png" tvg-country="IN" group-title="Review" tvg-name="VCV",VCV
 https://5a1178b42cc03.streamlock.net/8210/8210/playlist.m3u8
+#EXTINF:-1 tvg-id="VelvetEuropeanMovies.ru@HD" channel-id="VelvetEuropeanMovies.ru@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/velvet-european-movies-1080p.png" tvg-country="RU" tvg-content="Movies" group-title="Review" tvg-name="Velvet. European Movies",Velvet. European Movies
+https://cdn.rostelekom-tv.xyz/live/LQ3j0n7j0Kq4OQm8.m3u8
+#EXTINF:-1 tvg-id="VelvetGoldenCollection.ru@HD" channel-id="VelvetGoldenCollection.ru@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/velvet-golden-collection-1080p.png" tvg-country="RU" tvg-content="Movies" group-title="Review" tvg-name="Velvet. Golden Collection",Velvet. Golden Collection
+https://cdn.rostelekom-tv.xyz/live/v804qFZr0QVQ1s9Z.m3u8
+#EXTINF:-1 tvg-id="VelvetScary.ru@HD" channel-id="VelvetScary.ru@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/velvet-scary-1080p.png" tvg-country="RU" tvg-content="Movies" group-title="Review" tvg-name="Velvet. Scary",Velvet. Scary
+https://cdn.rostelekom-tv.xyz/live/NImhIFLevxCbtcP-.m3u8
+#EXTINF:-1 tvg-id="VelvetSovetskoeKino.ru@HD" channel-id="VelvetSovetskoeKino.ru@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/velvet-sovetskoe-kino-1080p.png" tvg-country="RU" tvg-content="Movies" group-title="Review" tvg-name="Velvet. Sovetskoe Kino",Velvet. Sovetskoe Kino
+https://cdn.rostelekom-tv.xyz/live/nF4sFCa49nFPHSF_.m3u8
 #EXTINF:-1 tvg-id="VevoPop.us" tvg-language="eng" channel-id="VevoPop.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-pop.png" tvg-country="US" tvg-content="Music" group-title="Review" tvg-name="Vevo Pop",Vevo Pop
 https://d128y56w6v2kax.cloudfront.net/playlist/amg00056-vevotv-vevopopau-samsungau/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.viju-tv1000-action-ru-movie" tvg-language="rus" channel-id="custom.viju-tv1000-action-ru-movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viju-tv1000-action-576p.png" tvg-country="RU" tvg-content="Movies" group-title="Review" tvg-name="viju TV1000 action",viju TV1000 action
