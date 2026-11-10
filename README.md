@@ -1,8 +1,8 @@
 
-<h1 align="center">BDIX IPTV: Multi-Country M3U Playlists with XMLTV EPG</h1>
+<h1 align="center">BDIX-IPTV: Bangladesh IPTV M3U/M3U8 Playlists &amp; XMLTV EPG</h1>
 
 <p align="center">
-  <strong>A complete, organized multi-country IPTV collection (M3U/M3U8) covering Bangladesh, India, Pakistan and eligible channels from other countries, supported by channel metadata, locally stored logo assets and an XMLTV TV program guide (EPG).</strong><br>
+  <strong>A curated, regularly maintained Bangladesh IPTV and multi-country M3U/M3U8 playlist collection featuring Bangla TV, Indian, Pakistani and eligible international channels, with organized groups, local channel logos, alternate streams and an XMLTV EPG.</strong><br>
   <sub>Compatible with XCIPTV, TiviMate, OTT Navigator, IPTV Smarters, VLC, Kodi and other M3U-compatible players.</sub>
 </p>
 
@@ -39,7 +39,7 @@
 
 ## About BDIX-IPTV
 
-**BDIX-IPTV** is a public collection of organized, multi-country IPTV playlists in M3U/M3U8 format. The main **IPTV-Playlist.m3u** is a broad collection— covering Bangladesh, India, Pakistan, and eligible channels from other countries. The separate **International-Playlist.m3u** provides a companion international collection.
+**BDIX-IPTV** provides Bangladesh IPTV and multi-country M3U/M3U8 playlists for Bangla TV, Indian, Pakistani and eligible international channels. The main **IPTV-Playlist.m3u** is the broad collection, organized into country and genre groups. The companion **International-Playlist.m3u** provides a separate international selection.
 
 The playlists are maintained with organized channel groups, channel information and locally stored logo assets where available. A shared **XMLTV Electronic Programme Guide (EPG)** is also provided for compatible IPTV players. Automated workflows support channel discovery, playlist maintenance, stream checks and EPG updates.
 
