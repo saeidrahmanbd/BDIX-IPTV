@@ -4,6 +4,7 @@ Automatic corrections require four repeated title/duration matches, >=75% agreem
 
 ## Detected corrections
 
+- **Balle Balle** (BalleBalle.in@SD): source ID BalleBalle.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **Cine Jomjomat** (CineJomjomat.in@SD): source ID IN2100007QM from https://i.mjh.nz/SamsungTVPlus/in.xml shifted by -5.5 hours after repeated cross-source agreement.
 
 ### Large source-offset proposals — manual review only
@@ -17,10 +18,6 @@ Automatic corrections require four repeated title/duration matches, >=75% agreem
 - **DD Bihar** (DDBihar.in@SD): source ID DDBihar.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Goa** (DDGoa.in@SD): source ID DDGOA.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Kashir** (DDKashir.in@SD): source ID DDKashir.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-
-### Large source-offset proposals — manual review only
-
-- **DD Malayalam** (DDMalayalam.in@SD): source ID 142791 has a proposed -48-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
 - **DD Meghalaya** (DDMeghalaya.in@SD): source ID DDMEGHALAYA.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Mizoram** (DDMizoram.in): source ID DDMIZORAM.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Nagaland** (DDNagaland.in@SD): source ID DDNAGALAND.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
@@ -41,6 +38,6 @@ Automatic corrections require four repeated title/duration matches, >=75% agreem
 
 ## Feed-wide offset patterns
 
-- **https://www.open-epg.com/files/india.xml.gz**: 21 channels were corrected by the same -5.5 hours. This looks like a feed-wide timezone problem; other channels from this feed without cross-source overlap may still be shifted and should be reviewed.
+- **https://www.open-epg.com/files/india.xml.gz**: 22 channels were corrected by the same -5.5 hours. This looks like a feed-wide timezone problem; other channels from this feed without cross-source overlap may still be shifted and should be reviewed.
 
-Detected source-ID corrections: **22**
+Detected source-ID corrections: **23**
