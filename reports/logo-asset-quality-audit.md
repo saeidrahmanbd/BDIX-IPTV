@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-10T03:45:51+00:00**
+Generated: **2026-11-10T03:48:36+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
