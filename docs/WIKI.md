@@ -66,6 +66,7 @@ For an EPG gap, verify both the channel identity and whether a usable matching s
 - [Download Center](DOWNLOADS.md)
 - [Playlist Studio guide](PLAYLIST-STUDIO.md)
 - [Xtream Gateway](../xtream/README.md)
+- [Playlist Automation Policy](PLAYLIST-AUTOMATION-POLICY.md)
 - [Contributing](CONTRIBUTING.md)
 - [Security policy](SECURITY.md)
 
