@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10T06:28:56+00:00",
+  "generated": "2026-11-10T09:57:42+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -12,9 +12,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "7xpunjabi": {
       "names": [
@@ -56,9 +56,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "9xjhakaas": {
       "names": [
@@ -68,12 +68,13 @@
         "9xjhakaas.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Music",
         "Review"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 2,
-      "backup": 0
+      "backup": 1
     },
     "9xm": {
       "names": [
@@ -87,9 +88,9 @@
         "Indian Music",
         "Review"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 2,
-      "backup": 2
+      "backup": 3
     },
     "9xtashan": {
       "names": [
@@ -99,12 +100,13 @@
         "9xtashan.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Music",
         "Review"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 2,
-      "backup": 0
+      "backup": 1
     },
     "aakaashaath": {
       "names": [
@@ -118,9 +120,9 @@
         "Indian Bangla",
         "Review"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 2,
-      "backup": 2
+      "backup": 3
     },
     "aamarbangla": {
       "names": [
@@ -258,11 +260,12 @@
         "alltimemovies.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Movies"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "alone": {
       "names": [
@@ -375,9 +378,9 @@
         "Backup",
         "Indian Entertainment"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "anandatv": {
       "names": [
@@ -477,9 +480,9 @@
         "Backup",
         "Indian Entertainment"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "aryqtv": {
       "names": [
@@ -918,9 +921,9 @@
         "Backup",
         "Indian Movies"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "bigtv": {
       "names": [
@@ -990,6 +993,20 @@
       ],
       "groups": [
         "Indian Movies"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "booglebollywood": {
+      "names": [
+        "Boogle Bollywood"
+      ],
+      "ids": [
+        "booglebollywood.in"
+      ],
+      "groups": [
+        "Indian Music"
       ],
       "streams": 1,
       "primary": 1,
@@ -1220,11 +1237,12 @@
         "Channel S UK"
       ],
       "ids": [
-        "channels.uk",
+        "channels.bd",
         "channels.uk@679aa9"
       ],
       "groups": [
         "Backup",
+        "Bangladesh",
         "International"
       ],
       "streams": 6,
@@ -2598,9 +2616,9 @@
         "Indian Entertainment",
         "Review"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 2,
-      "backup": 4
+      "backup": 5
     },
     "ddodia": {
       "names": [
@@ -3376,9 +3394,9 @@
         "Indian Music",
         "Review"
       ],
-      "streams": 5,
+      "streams": 7,
       "primary": 2,
-      "backup": 3
+      "backup": 5
     },
     "epictv": {
       "names": [
@@ -3388,11 +3406,12 @@
         "epictv.in@digital"
       ],
       "groups": [
+        "Backup",
         "Review"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "espn": {
       "names": [
@@ -3684,11 +3703,12 @@
         "gangaurtv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Music"
       ],
-      "streams": 1,
+      "streams": 3,
       "primary": 1,
-      "backup": 0
+      "backup": 2
     },
     "gazitv": {
       "names": [
@@ -3967,9 +3987,9 @@
         "Backup",
         "Indian Entertainment"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 3,
-      "backup": 1
+      "backup": 2
     },
     "hidost": {
       "names": [
@@ -4500,9 +4520,9 @@
         "Backup",
         "Indian Movies"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "kalaignarmurasu": {
       "names": [
@@ -4617,9 +4637,9 @@
         "Indian Bangla",
         "Review"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 2,
-      "backup": 1
+      "backup": 2
     },
     "kiddomatix": {
       "names": [
@@ -4788,9 +4808,9 @@
         "Backup",
         "Indian Entertainment"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "mahamovie": {
       "names": [
@@ -4900,11 +4920,12 @@
         "manoranjangrand.in"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "manoranjanmovies": {
       "names": [
@@ -4944,11 +4965,12 @@
         "manoranjantv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Review"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "marutamtv": {
       "names": [
@@ -4988,7 +5010,7 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Bangladesh"
       ],
       "streams": 2,
       "primary": 1,
@@ -5297,9 +5319,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "mycinema": {
       "names": [
@@ -5758,11 +5780,12 @@
         "oscarmoviesbhojpuri.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Movies"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "outdoorchannel": {
       "names": [
@@ -5815,6 +5838,20 @@
       ],
       "groups": [
         "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "pankh": {
+      "names": [
+        "Pankh"
+      ],
+      "ids": [
+        "pankh.in"
+      ],
+      "groups": [
+        "Indian Music"
       ],
       "streams": 1,
       "primary": 1,
@@ -5943,11 +5980,12 @@
         "pepperstv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 3,
       "primary": 1,
-      "backup": 0
+      "backup": 2
     },
     "pgatour": {
       "names": [
@@ -5986,11 +6024,12 @@
         "pitaaracomedy.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Movies"
       ],
-      "streams": 1,
+      "streams": 3,
       "primary": 1,
-      "backup": 0
+      "backup": 2
     },
     "pksports": {
       "names": [
@@ -6072,11 +6111,12 @@
         "polimertv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 3,
       "primary": 1,
-      "backup": 0
+      "backup": 2
     },
     "pop": {
       "names": [
@@ -6171,11 +6211,12 @@
         "ptcchakde.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Music"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "ptcmusic": {
       "names": [
@@ -6188,9 +6229,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 2,
+      "streams": 4,
       "primary": 1,
-      "backup": 1
+      "backup": 3
     },
     "ptcpunjabi": {
       "names": [
@@ -6203,9 +6244,9 @@
         "Backup",
         "Indian Entertainment"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "ptcpunjabigold": {
       "names": [
@@ -6215,11 +6256,12 @@
         "ptcpunjabigold.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "ptvsports": {
       "names": [
@@ -6273,11 +6315,12 @@
         "pularitv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "punjabihits": {
       "names": [
@@ -6290,9 +6333,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "punjabimusichd": {
       "names": [
@@ -6331,11 +6374,12 @@
         "punjabitv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "puthuyugamtv": {
       "names": [
@@ -6447,11 +6491,12 @@
         "rajmusixkannada.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Music"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "rajmusixmalayalam": {
       "names": [
@@ -6461,11 +6506,12 @@
         "rajmusixmalayalam.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Music"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "rajmusixtamil": {
       "names": [
@@ -6909,9 +6955,9 @@
         "Indian Bangla",
         "Review"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 2,
-      "backup": 3
+      "backup": 4
     },
     "sangeetbhojpuri": {
       "names": [
@@ -6924,9 +6970,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "sangeetmarathi": {
       "names": [
@@ -6936,11 +6982,12 @@
         "sangeetmarathi.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Music"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "satv": {
       "names": [
@@ -7066,11 +7113,12 @@
         "shemarootv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 3,
       "primary": 1,
-      "backup": 0
+      "backup": 2
     },
     "shemarooumang": {
       "names": [
@@ -7080,11 +7128,12 @@
         "shemarooumang.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "shubhcinematv": {
       "names": [
@@ -7407,11 +7456,12 @@
         "spondon.in@sd"
       ],
       "groups": [
+        "Backup",
         "Review"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "sportsfirsttv": {
       "names": [
@@ -7803,11 +7853,12 @@
         "studiooneplus.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Movies"
       ],
-      "streams": 1,
+      "streams": 3,
       "primary": 1,
-      "backup": 0
+      "backup": 2
     },
     "studioyuva": {
       "names": [
@@ -7962,9 +8013,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "tagtv": {
       "names": [
@@ -8534,9 +8585,9 @@
         "Backup",
         "Indian Entertainment"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "vevopop": {
       "names": [
@@ -8603,6 +8654,20 @@
       ],
       "groups": [
         "Review"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "wahpunjabi": {
+      "names": [
+        "Wah Punjabi"
+      ],
+      "ids": [
+        "wahpunjabi.in"
+      ],
+      "groups": [
+        "Indian Music"
       ],
       "streams": 1,
       "primary": 1,
@@ -9123,9 +9188,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "zoomoo": {
       "names": [

@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-10T06:28:17+00:00**
-Source playlist SHA-256: **0c1edb1d00f703b7c5176236b251a547670551d4be1f47619cfb735b64cfaa5b**
+Generated: **2026-11-10T09:57:03+00:00**
+Source playlist SHA-256: **963a30fd1d7f8b62a5c75208c6fa67adc11d24316ad9d3ff6b7ad3927000737d**
 
 Status: **BLOCK**
 
-- Current entries: **1066**
+- Current entries: **1121**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -15,16 +15,16 @@ Status: **BLOCK**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing channel numbers: **3**
-- Primary channel-number sequence issues: **554**
+- Primary entries missing channel numbers: **6**
+- Primary channel-number sequence issues: **542**
 - Numbered review entries: **17**
 - Same-ID metadata name conflicts: **0**
-- Orphan Backup entries: **0**
-- Active rows with incomplete required metadata: **0**
+- Orphan Backup entries: **3**
+- Active rows with incomplete required metadata: **1**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **0**
 - Raw resolution/geoblock name tags: **0**
-- Missing logos in active groups: **0**
+- Missing logos in active groups: **1**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
@@ -37,9 +37,12 @@ Status: **BLOCK**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-- primary entries missing tvg-chno: 3
-- primary channel-number sequence gaps/order errors: 554
+- orphan Backup entries: 3
+- active entries with incomplete identity/country/logo metadata: 1
+- primary entries missing tvg-chno: 6
+- primary channel-number sequence gaps/order errors: 542
 - review entries still numbered: 17
+- missing logos: 1
 
 ## Review-queue logo gaps
 
