@@ -207,6 +207,42 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         self.assertTrue(guard.run_blocks_retry(successful_run))
         self.assertEqual(guard.first_run_id([later_no_op, successful_run]), 91)
 
+    def test_stream_health_only_blocks_retry_when_check_job_succeeds(self):
+        successful_health = {
+            "id": 94, "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T02:45:00Z",
+            "jobs": [
+                {"name": "check", "status": "completed", "conclusion": "success"},
+            ],
+        }
+        skipped_health = {
+            "id": 95, "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T03:00:00Z",
+            "jobs": [
+                {"name": "check", "status": "completed", "conclusion": "skipped"},
+            ],
+        }
+        self.assertTrue(guard.run_blocks_retry(successful_health, workflow_file="international-stream-health.yml"))
+        self.assertFalse(guard.run_blocks_retry(skipped_health, workflow_file="international-stream-health.yml"))
+        self.assertEqual(
+            guard.first_run_id(
+                [skipped_health, successful_health],
+                workflow_file="international-stream-health.yml",
+            ),
+            94,
+        )
+
+    def test_active_stream_health_run_prevents_duplicate_watchdog_dispatch(self):
+        active_health = {
+            "id": 96, "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T03:15:00Z",
+        }
+        self.assertTrue(
+            guard.run_blocks_retry(
+                active_health, workflow_file="international-stream-health.yml"
+            )
+        )
+
     def test_completed_success_without_discover_job_does_not_own_the_day(self):
         guard_only_run = {
             "id": 93,
