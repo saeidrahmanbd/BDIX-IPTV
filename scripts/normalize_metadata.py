@@ -274,10 +274,8 @@ if m3u_index is not None:
  lines=[m3u_header,category_line]+lines
 else:
  lines.insert(0,category_line)
-# Normalize the renamed review group before applying metadata rules.
-for i, line in enumerate(lines):
- if line.startswith("#EXTINF:") and 'group-title="Not Playing"' in line:
-  lines[i]=line.replace('group-title="Not Playing"', 'group-title="Review"', 1)
+# Existing IPTV group membership is owner-curated. Never rename or relocate
+# existing rows during automated metadata normalization.
 rows=[]
 for i,l in enumerate(lines):
  if l.startswith("#EXTINF:"):
