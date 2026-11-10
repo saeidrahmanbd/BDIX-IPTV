@@ -39,25 +39,34 @@ Removed channel identities (up to 10):
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-10 — `International-Playlist.m3u`
 
-- New channel identities: **17**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **19 / 0**
+- New channel identities: **13**
+- Channel identities removed: **7**
+- Stream URLs added / removed: **13 / 11**
 - Backup URL updates: **0**
-- Logo reference changes: **1**
+- Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- SensaCine TV x Pluto
-- Shokiruyushchee
-- Star Trek Movies
-- Star Trek Movies DK
-- Star Trek Movies NO
-- Magnificent Movies Network
-- Rawhide (United States) CA
-- Runtime
-- Rotana Cinema Egypt [ ]
-- Rotana Cinema KSA [ ]
+- Star Utsav Movies
+- Telecine Cult
+- Telecine Fun
+- Telecine Premium
+- Telecine Touch
+- Tamasha
+- TCM [ ]
+- TCM West [ ]
+- Thrill
+- Velvet. European Movies
+
+Removed channel identities (up to 10):
+- ATN Bangla
+- HBO (United States)
+- HBO Hits
+- Kinosvidanie
+- Raj Musix Tamil
+- Rewind TV
+- RTV
 
 ## [5.0.0] — Playlist Studio
 
