@@ -5,63 +5,59 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-09 — `IPTV-Playlist.m3u`
+### 2026-11-10 — `IPTV-Playlist.m3u`
 
-- New channel identities: **26**
-- Channel identities removed: **6**
-- Stream URLs added / removed: **50 / 7**
+- New channel identities: **7**
+- Channel identities removed: **10**
+- Stream URLs added / removed: **16 / 11**
 - Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **8**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Channel 9
-- D Talk
-- TV One UK
-- Prime Tv
-- Colors Cineplex Bollywood
-- Colors Cineplex Superhits
-- Sony Wah
-- Star Gold Select
-- Star Utsav Movies
-- Pankh
-
-Removed channel identities (up to 10):
 - CVR Health
 - Disha TV
-- NAN TV
+- Jaihind TV
 - R Plus
+- TV 100 (India)
 - Vokta TV
 - WeatherSpy (India)
 
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-09 — `International-Playlist.m3u`
+Removed channel identities (up to 10):
+- Pankh
+- DD Bharati
+- Friends TV
+- KCL TV
+- Mei Alai TV
+- NKR TV Kannada
+- Siri Kannada All Time
+- Subin TV
+- Tamilan TV
+- Unique TV
 
-- New channel identities: **40**
-- Channel identities removed: **3**
-- Stream URLs added / removed: **42 / 5**
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-10 — `International-Playlist.m3u`
+
+- New channel identities: **17**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **19 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **3**
+- Logo reference changes: **1**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Bol Entertainment
-- Rakuten TV Drama Movies Germany
-- Rakuten TV Family Movies Germany
-- Rakuten TV Top Movies Germany
-- Rakuten TV Comedy Movies Italy
-- Rakuten TV Family Movies Italy
-- Rakuten TV Top Movies Italy
-- Rakuten TV Drama Movies
-- Rakuten TV Top Movies
-- Rakuten TV Comedy Movies UK
-
-Removed channel identities (up to 10):
-- Cartoon Network (India)
-- Pogo
-- Sony SAB
+- SensaCine TV x Pluto
+- Shokiruyushchee
+- Star Trek Movies
+- Star Trek Movies DK
+- Star Trek Movies NO
+- Magnificent Movies Network
+- Rawhide (United States) CA
+- Runtime
+- Rotana Cinema Egypt [ ]
+- Rotana Cinema KSA [ ]
 
 ## [5.0.0] — Playlist Studio
 
