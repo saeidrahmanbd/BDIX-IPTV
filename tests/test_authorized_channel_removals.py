@@ -289,11 +289,11 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             failed_new = channel("DD Yadagiri", "Review", failed_url).splitlines()
             safe_new = channel("Safe Backup", "Backup", safe_url).splitlines()
             playlist.write_text(
-                "#EXTM3U\\n" + "\\n".join(animal_new + failed_new + safe_new) + "\\n",
+                "#EXTM3U\n" + "\n".join(animal_new + failed_new + safe_new) + "\n",
                 encoding="utf-8",
             )
-            snapshot.write_text(
-                "\\n".join(animal_old + failed_old + safe_old) + "\\n",
+            protected.write_text(
+                "\n".join(animal_old + failed_old + safe_old) + "\n",
                 encoding="utf-8",
             )
             baseline.write_text(json.dumps([
@@ -304,7 +304,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             with (
                 patch.object(guard, "PLAYLIST", playlist),
                 patch.object(guard, "BASELINE", baseline),
-                patch.object(guard, "PROTECTED_SNAPSHOT", snapshot),
+                patch.object(guard, "PROTECTED_SNAPSHOT", protected),
                 patch.object(guard, "REMOVAL_REPORT", report),
                 redirect_stdout(io.StringIO()),
                 redirect_stderr(io.StringIO()),
@@ -507,10 +507,10 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             current_failed = channel("DD Yadagiri", "Review", failed_url).splitlines()
             current_safe = channel("Safe Backup", "Backup", safe_url).splitlines()
             playlist.write_text(
-                "#EXTM3U\\n" + "\\n".join(current_failed + current_safe) + "\\n",
+                "#EXTM3U\n" + "\n".join(current_failed + current_safe) + "\n",
                 encoding="utf-8",
             )
-            snapshot.write_text("\\n".join(old_failed + safe_backup) + "\\n", encoding="utf-8")
+            snapshot.write_text("\n".join(old_failed + safe_backup) + "\n", encoding="utf-8")
             baseline.write_text(json.dumps([
                 {"info": old_failed[0], "url": failed_url, "group": "Backup", "stable": failed_url, "name": "DD Yadagiri"},
                 {"info": safe_backup[0], "url": safe_url, "group": "Backup", "stable": safe_url, "name": "Safe Backup"},
@@ -553,8 +553,8 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             ]
             old_records = [channel(name, "Review", url).splitlines() for name, url, target in cases]
             current_records = [channel(name, target, url).splitlines() for name, url, target in cases]
-            playlist.write_text("#EXTM3U\\n" + "\\n".join(sum(current_records, [])) + "\\n", encoding="utf-8")
-            snapshot.write_text("\\n".join(sum(old_records, [])) + "\\n", encoding="utf-8")
+            playlist.write_text("#EXTM3U\n" + "\n".join(sum(current_records, [])) + "\n", encoding="utf-8")
+            snapshot.write_text("\n".join(sum(old_records, [])) + "\n", encoding="utf-8")
             baseline.write_text(json.dumps([
                 {"info": old[0], "url": url, "group": "Review", "stable": url, "name": name}
                 for (name, url, target), old in zip(cases, old_records)
@@ -586,8 +586,8 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             ]
             old_records = [channel(name, "Review", url).splitlines() for name, url, target in cases]
             current_records = [channel(name, target, url).splitlines() for name, url, target in cases]
-            playlist.write_text("#EXTM3U\\n" + "\\n".join(sum(current_records, [])) + "\\n", encoding="utf-8")
-            protected.write_text("\\n".join(sum(old_records, [])) + "\\n", encoding="utf-8")
+            playlist.write_text("#EXTM3U\n" + "\n".join(sum(current_records, [])) + "\n", encoding="utf-8")
+            protected.write_text("\n".join(sum(old_records, [])) + "\n", encoding="utf-8")
             baseline.write_text(json.dumps([
                 {"info": old[0], "url": url, "group": "Review", "stable": url, "name": name}
                 for (name, url, target), old in zip(cases, old_records)
@@ -611,7 +611,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             url = "https://dish.porosh.com.bd/hls/jtvnews.m3u8"
             original = channel("JA TV", "Bangladesh", url).splitlines()
             current = channel("JA TV", "Review", url).splitlines()
-            playlist.write_text("#EXTM3U\\n" + "\\n".join(current) + "\\n", encoding="utf-8")
+            playlist.write_text("#EXTM3U\n" + "\n".join(current) + "\n", encoding="utf-8")
             snapshot.write_text("", encoding="utf-8")
             baseline.write_text(json.dumps([
                 {"info": original[0], "url": url, "group": "Bangladesh", "stable": url, "name": "JA TV"},
