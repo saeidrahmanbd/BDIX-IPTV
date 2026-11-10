@@ -82,6 +82,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
 
         expected_active_metadata = {
             "Shikor TV Canada": ("custom.shikortvcanada", "CA", "Bangladesh"),
+            "Jhankar TV": ("JhankarTV.ca", "CA", "Bangladesh"),
             "Ten TV Prime": ("custom.tentvprime", "BD", "Bangladesh"),
             "TV One UK": ("TVOne.uk", "GB", "Religious"),
         }
@@ -97,7 +98,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         for e in entries:
             if (
                 e["attrs"].get("group-title") == "Bangladesh"
-                and e["attrs"].get("tvg-name") != "Shikor TV Canada"
+                and e["attrs"].get("tvg-name") not in {"Shikor TV Canada", "Jhankar TV"}
             ):
                 self.assertEqual(e["attrs"].get("tvg-country"), "BD", e["attrs"].get("tvg-name"))
 
