@@ -56,7 +56,7 @@ https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="GlobalTV.bd" tvg-name="Global TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-tv-1080p-5ffc043912.png" tvg-chno="26" channel-id="GlobalTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Global TV
 https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8
-#EXTINF:-1 channel-id="JATV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ja-tv.svg" tvg-id="JATV.bd" tvg-name="JA TV" tvg-language="ben" tvg-country="BD" group-title="Bangladesh",JA TV
+#EXTINF:-1 channel-id="JATV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ja-tv.png" tvg-id="JATV.bd" tvg-name="JA TV" tvg-language="ben" tvg-country="BD" group-title="Bangladesh",JA TV
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/jtvbd12.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="JagoNews24.bd" tvg-name="Jago News 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jago-news-24.png" tvg-chno="27" channel-id="JagoNews24.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Jago News 24
 https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
@@ -120,6 +120,8 @@ https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/52b998e9510d41c29ad2ceca8ea3d849/in
 https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 #EXTINF:-1 tvg-id="Enter10Bangla.in" tvg-name="Enter10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" tvg-chno="58" channel-id="Enter10Bangla.in" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Enter10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_360p/chunks.m3u8
+#EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-chno="60" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" channel-id="KhushbooBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Khushboo Bangla
+https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 #EXTINF:-1 tvg-id="KTVBangla.in@SD" tvg-name="KTV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ktv-bangla.png" tvg-chno="61" channel-id="KTVBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",KTV Bangla
 https://server.livelegitpro.in:9899/tribetv/tribetv/index.m3u8
 #EXTINF:-1 tvg-id="MatribhumiTV.bd" tvg-name="Matribhumi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/matri-bhumi-tv.png" tvg-chno="62" channel-id="MatribhumiTV.bd" tvg-country="BD" tvg-language="ben" group-title="Indian Bangla",Matribhumi TV
@@ -225,7 +227,7 @@ https://stmv6.voxtvhd.com.br/cinehindi/cinehindi/playlist.m3u8
 https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/index.m3u8
 #EXTINF:-1 tvg-id="MBCBollywood.ae" tvg-name="MBC Bollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-bollywood.png" tvg-chno="112" channel-id="MBCBollywood.ae" tvg-country="AE" tvg-language="eng;hin;ara" group-title="Indian Movies",MBC Bollywood
 https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-bollywood/546eb40d7dcf9a209255dd2496903764/index.m3u8
-#EXTINF:-1 tvg-id="MHOneMovies.in@SD" tvg-name="MH One Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-movies.svg" tvg-chno="113" channel-id="MHOneMovies.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",MH One Movies
+#EXTINF:-1 tvg-id="MHOneMovies.in@SD" tvg-name="MH One Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-movies.png" tvg-chno="113" channel-id="MHOneMovies.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",MH One Movies
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
 https://fta.ektv.in/live/639/master.m3u8
 #EXTINF:-1 tvg-id="MoviePunjab.in@SD" tvg-name="Movie Punjab" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/movie-punjab-720p.png" tvg-chno="114" channel-id="MoviePunjab.in@SD" tvg-country="IN" tvg-language="pan" group-title="Indian Movies",Movie Punjab
@@ -335,7 +337,7 @@ https://mumbai-edge.smartplaytv.in/MastiMusic/index.m3u8
 #EXTINF:-1 tvg-id="MHOne.in@SD" tvg-name="MH One" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one.png" tvg-chno="167" channel-id="MHOne.in@SD" tvg-country="IN" tvg-language="pan" group-title="Indian Music",MH One
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
 https://fta.ektv.in/live/353/master.m3u8
-#EXTINF:-1 tvg-id="MHOneDilSe.in@SD" tvg-name="MH One Dil Se" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-dil-se.svg" tvg-chno="168" channel-id="MHOneDilSe.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Music",MH One Dil Se
+#EXTINF:-1 tvg-id="MHOneDilSe.in@SD" tvg-name="MH One Dil Se" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-dil-se.png" tvg-chno="168" channel-id="MHOneDilSe.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Music",MH One Dil Se
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
 https://fta.ektv.in/live/351/master.m3u8
 #EXTINF:-1 tvg-id="Mh1Music.in@SD" tvg-name="MH One Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-1-music.png" tvg-chno="169" channel-id="Mh1Music.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Music",MH One Music
@@ -565,7 +567,7 @@ https://mntv.livebox.co.in/mntvhls/live.m3u8
 https://mumt05.tangotv.in/87NeALx2NEPAL1/index.m3u8
 #EXTINF:-1 tvg-id="NTCTV.in@SD" tvg-name="NTC TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntc-tv.png" tvg-chno="287" channel-id="NTCTV.in@SD" tvg-country="IN" tvg-language="nep" group-title="Indian Entertainment",NTC TV
 https://galaxyott.live/hls/ntv.m3u8
-#EXTINF:-1 tvg-id="NTV.in" tvg-name="NTV Malayalam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv-malayalam.svg" tvg-chno="288" channel-id="NTV.in" tvg-country="IN" tvg-language="mal" group-title="Indian Entertainment",NTV Malayalam
+#EXTINF:-1 tvg-id="NTV.in" tvg-name="NTV Malayalam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv-malayalam.png" tvg-chno="288" channel-id="NTV.in" tvg-country="IN" tvg-language="mal" group-title="Indian Entertainment",NTV Malayalam
 https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8
 #EXTINF:-1 tvg-id="OliTV.in@SD" tvg-name="Oli TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/oli-tv.png" tvg-chno="289" channel-id="OliTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Oli TV
 https://live.olidigital.in/olitv/olitv/index.m3u8
@@ -668,7 +670,7 @@ https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:zeetamil1.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="ZeeTelugu.in@HD" tvg-name="Zee Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-telugu.png" tvg-chno="338" channel-id="ZeeTelugu.in@HD" tvg-country="IN" tvg-language="tel" group-title="Indian Entertainment",Zee Telugu
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeTeluguHD.m3u8
-#EXTINF:-1 tvg-id="ZeeTV.in@SD" tvg-name="Zee TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg" tvg-chno="339" channel-id="ZeeTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Zee TV
+#EXTINF:-1 tvg-id="ZeeTV.in@SD" tvg-name="Zee TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.png" tvg-chno="339" channel-id="ZeeTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Zee TV
 https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8
 #EXTINF:-1 tvg-id="Zingabad.in@SD" tvg-name="Zingabad" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zingabad-d05910f0bb.png" tvg-chno="340" channel-id="Zingabad.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Zingabad
 https://stream.ottlive.co.in/zingabad/index.m3u8
@@ -798,7 +800,7 @@ http://ocko-live.ssl.cdn.cra.cz/channels/ocko_expres/playlist/cze/live_hq.m3u8
 https://oxygenmusic.hu:2443/hls/oxygenmusic.m3u8
 #EXTINF:-1 tvg-id="POPWorldTV.es" tvg-name="POP World TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pop-world-tv-720p-3faede8b6c.png" tvg-chno="403" channel-id="POPWorldTV.es" tvg-country="ES" tvg-language="eng" group-title="International",POP World TV
 https://janus.xpbroadcasting.com:8443/hls/popworld.m3u8
-#EXTINF:-1 tvg-id="RadionorbaTV.it" tvg-name="Radio Norba TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-norba-tv.svg" tvg-chno="404" channel-id="RadionorbaTV.it" tvg-country="IT" tvg-language="ita" group-title="International",Radio Norba TV
+#EXTINF:-1 tvg-id="RadionorbaTV.it" tvg-name="Radio Norba TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-norba-tv.png" tvg-chno="404" channel-id="RadionorbaTV.it" tvg-country="IT" tvg-language="ita" group-title="International",Radio Norba TV
 https://router.xdevel.com/video0s975885-462/stream/playlist_dvr.m3u8
 #EXTINF:-1 tvg-id="RakutenMovies" tvg-name="Rakuten Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rakuten-movies.png" tvg-chno="405" channel-id="RakutenMovies" tvg-country="US" tvg-language="eng" group-title="International",Rakuten Movies
 https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8
@@ -970,6 +972,8 @@ https://stream.ottplus.live/live/discovery_kids_abr/index.m3u8
 http://190.93.224.42/DISNEY-JR/index.m3u8
 #EXTINF:-1 tvg-id="DuckTV.us" tvg-name="Duck TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duck-tv.png" tvg-chno="491" channel-id="DuckTV.us" tvg-country="US" tvg-language="eng" group-title="Kids",Duck TV
 https://d6lk10bkdgfae.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-n0stmvwxmsf5c/playlist.m3u8
+#EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-chno="492" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv-2b3c7dd202.png" channel-id="DurontoTV.bd" tvg-country="BD" tvg-language="ben" group-title="Kids",Duronto TV
+https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
 #EXTINF:-1 tvg-id="EpicKidsDigital.us" tvg-name="Epic Kids Digital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-kids-digital.png" tvg-chno="493" channel-id="EpicKidsDigital.us" tvg-country="US" tvg-language="eng" group-title="Kids",Epic Kids Digital
 https://cc-t8lqe1o99pszu.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-t8lqe1o99pszu/playlist.m3u8
 #EXTINF:-1 tvg-id="GreenGoldTV.in@India" tvg-name="Green Gold TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-gold-tv.png" tvg-chno="494" channel-id="GreenGoldTV.in@India" tvg-country="IN" tvg-language="hin" group-title="Kids",Green Gold TV
@@ -1403,8 +1407,6 @@ https://cdn.pishow.tv/ott/live/1456/master.m3u8
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/discoverpakistan.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv-2b3c7dd202.png" channel-id="DurontoTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Duronto TV
 https://tvsen5.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.fmp4.m3u8
-#EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv-2b3c7dd202.png" channel-id="DurontoTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Duronto TV
-https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
 #EXTINF:-1 tvg-id="E24.in" tvg-name="E24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/e24.png" channel-id="E24.in" tvg-country="IN" tvg-language="hin" group-title="Backup",E24
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
 https://fta.ektv.in/live/159/master.m3u8
@@ -1516,7 +1518,7 @@ https://tvsen3.aynaott.com/EuEy5mBW/index.m3u8
 https://tvsen5.aynaott.com/iqrabangla/index.m3u8
 #EXTINF:-1 tvg-id="custom.islamchannelbangla" tvg-name="Islam Channel Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/islam-channel-bangla.png" channel-id="custom.islamchannelbangla" tvg-country="GB" tvg-language="ben" group-title="Backup",Islam Channel Bangla
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamchbangla.stream/tracks-v1a1/mono.m3u8
-#EXTINF:-1 channel-id="JATV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ja-tv.svg" tvg-id="JATV.bd" tvg-name="JA TV" tvg-language="ben" tvg-country="BD" group-title="Backup",JA TV
+#EXTINF:-1 channel-id="JATV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ja-tv.png" tvg-id="JATV.bd" tvg-name="JA TV" tvg-language="ben" tvg-country="BD" group-title="Backup",JA TV
 https://dish.porosh.com.bd/hls/jtvnews.m3u8
 #EXTINF:-1 tvg-id="JagoNews24.bd" tvg-name="Jago News 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jago-news-24.png" channel-id="JagoNews24.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Jago News 24
 https://app.ncare.live/live-orgin/jagonews24.stream/live-orgin/jagonews24.stream/chunks.m3u8
@@ -1542,8 +1544,6 @@ https://d1msejlow1t3l4.cloudfront.net/fta/kappatv/playlist.m3u8
 https://mumt03.tangotv.in/Dsly5z3HKAPPATV/index.m3u8
 #EXTINF:-1 tvg-id="KeralaVision.in@SD" tvg-name="Kerala Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kerala-vision.png" channel-id="KeralaVision.in@SD" tvg-country="IN" tvg-language="mal" group-title="Backup",Kerala Vision
 https://mumt03.tangotv.in/Dsly5z3HKERALAVISION/index.m3u8
-#EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" channel-id="KhushbooBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Backup",Khushboo Bangla
-https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 #EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" channel-id="KhushbooBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Backup",Khushboo Bangla
 https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="MaasrangaTV.bd" tvg-name="Maasranga TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maasranga-tv.png" channel-id="MaasrangaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Maasranga TV
@@ -1591,13 +1591,13 @@ http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92
 http://m.live.net.sa:1935/live/sunnah/playlist.m3u8
 #EXTINF:-1 tvg-id="MHOne.in@SD" tvg-name="MH One" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one.png" channel-id="MHOne.in@SD" tvg-country="IN" tvg-language="pan" group-title="Backup",MH One
 https://samitaorigin.tangotv.in/MHONE/SAMITAORIGIN/index.m3u8
-#EXTINF:-1 tvg-id="MHOneDilSe.in@SD" tvg-name="MH One Dil Se" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-dil-se.svg" channel-id="MHOneDilSe.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",MH One Dil Se
+#EXTINF:-1 tvg-id="MHOneDilSe.in@SD" tvg-name="MH One Dil Se" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-dil-se.png" channel-id="MHOneDilSe.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",MH One Dil Se
 https://mumt01.tangotv.in/O5aw8Zn3MHONEDILSE/index.m3u8
-#EXTINF:-1 tvg-id="MHOneDilSe.in@SD" tvg-name="MH One Dil Se" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-dil-se.svg" channel-id="MHOneDilSe.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",MH One Dil Se
+#EXTINF:-1 tvg-id="MHOneDilSe.in@SD" tvg-name="MH One Dil Se" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-dil-se.png" channel-id="MHOneDilSe.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",MH One Dil Se
 https://streams.tangotv.in/MHONEDILSE/ORIGIN/index.m3u8
-#EXTINF:-1 tvg-id="MHOneMovies.in@SD" tvg-name="MH One Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-movies.svg" channel-id="MHOneMovies.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",MH One Movies
+#EXTINF:-1 tvg-id="MHOneMovies.in@SD" tvg-name="MH One Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-movies.png" channel-id="MHOneMovies.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",MH One Movies
 https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/index.m3u8
-#EXTINF:-1 tvg-id="MHOneMovies.in@SD" tvg-name="MH One Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-movies.svg" channel-id="MHOneMovies.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",MH One Movies
+#EXTINF:-1 tvg-id="MHOneMovies.in@SD" tvg-name="MH One Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-movies.png" channel-id="MHOneMovies.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",MH One Movies
 https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="MKSix.in" tvg-name="MK Six" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mk-six.png" channel-id="MKSix.in" tvg-country="IN" tvg-language="tam" group-title="Backup",MK Six
 https://cdn.pishow.tv/ott/live/1253/master.m3u8
@@ -1952,7 +1952,7 @@ http://66.102.126.10:8000/play/a013/index.m3u8
 https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv-2b3c7dd202.png" channel-id="DurontoTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Duronto TV
 http://103.135.253.32:8080/DORONTU-TV/index.m3u8
-#EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv-2b3c7dd202.png" tvg-chno="492" channel-id="DurontoTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Duronto TV
+#EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv-2b3c7dd202.png" channel-id="DurontoTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Duronto TV
 https://livetv.shamon-cable.net:8443/Duronto/index.m3u8
 #EXTINF:-1 tvg-id="EkattorTV.bd" tvg-name="Ekattor TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekattor-tv.png" channel-id="EkattorTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Ekattor TV
 https://stream.ottplus.live/live/ekattor_tv_abr/index.m3u8
@@ -2008,7 +2008,7 @@ https://drk6xq0vhn.gpcdn.net/live/islamic_tv/index.m3u8
 http://103.135.253.32:8080/Jalsha_movies-HD/index.m3u8
 #EXTINF:-1 tvg-id="JamunaTV.bd" tvg-name="Jamuna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jamuna-tv.png" channel-id="JamunaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Jamuna TV
 https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8
-#EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" tvg-chno="60" channel-id="KhushbooBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Review",Khushboo Bangla
+#EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" channel-id="KhushbooBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Review",Khushboo Bangla
 https://cdn.pishow.tv/ott/live/1473/master.m3u8
 #EXTINF:-1 tvg-id="MaasrangaTV.bd" tvg-name="Maasranga TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maasranga-tv.png" channel-id="MaasrangaTV.bd" tvg-country="BD" tvg-language="und" group-title="Review",Maasranga TV
 http://tvsen5.aynascope.net/maasrangatv/index.m3u8
@@ -2160,7 +2160,7 @@ https://amg00862-amg00862c7-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-a
 https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
 #EXTINF:-1 tvg-id="ZeeTamil.in@SD" tvg-name="Zee Tamil" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tamil.png" channel-id="ZeeTamil.in@SD" tvg-country="IN" tvg-language="und" group-title="Review",Zee Tamil
 https://d2o8pibksxtln6.cloudfront.net/live/media/Zee_Tamil_HD/hls/Zee_Tamil_HD.m3u8
-#EXTINF:-1 tvg-id="ZeeTV.in@SD" tvg-name="Zee TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg" channel-id="ZeeTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",Zee TV
+#EXTINF:-1 tvg-id="ZeeTV.in@SD" tvg-name="Zee TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.png" channel-id="ZeeTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",Zee TV
 http://103.135.253.32:8080/ZEE-TV/index.m3u8
-#EXTINF:-1 tvg-id="ZeeTV.in@SD" tvg-name="Zee TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg" channel-id="ZeeTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",Zee TV
+#EXTINF:-1 tvg-id="ZeeTV.in@SD" tvg-name="Zee TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.png" channel-id="ZeeTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",Zee TV
 http://41.205.93.154/ZEE-TV/index.m3u8
