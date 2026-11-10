@@ -159,7 +159,9 @@ FORBIDDEN_BRANDS = re.compile(
     re.IGNORECASE,
 )
 BAD_HOSTS = ("proxy", "proxied", "cors", "localhost", "workers.dev", "worker.dev", "pages.dev")
-BAD_QUERY_KEYS = {"token", "auth", "authorization", "hdnts", "sig", "signature", "expires", "session", "jwt", "ticket", "key"}
+# Expiry timestamps are not authentication failures by themselves. Keep rejecting
+# credentials/signatures; preserve ordinary expires/e query parameters unchanged.
+BAD_QUERY_KEYS = {"token", "auth", "authorization", "hdnts", "sig", "signature", "session", "jwt", "ticket", "key"}
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
 COUNTRY_CODE = {"Bangladesh": "bd", "India": "in"}
 # Country-group threshold used by discovery-policy validation. A new country group
