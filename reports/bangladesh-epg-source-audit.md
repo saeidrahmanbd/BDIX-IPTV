@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-10T07:38:15+00:00**
+Generated: **2026-11-10T08:57:31+00:00**
 
-- Active Bangladesh playlist identities: **68**
+- Active Bangladesh playlist identities: **70**
 - Identities with a retained source mapping: **3**
 - Identities with usable current/future schedules: **1**
-- Identities without a source mapping: **65**
+- Identities without a source mapping: **67**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -44,7 +44,9 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Channel 52 | Channel52.bd | NO_GUIDE_HIT |
 | Channel 9 | Channel9.bd | NO_GUIDE_HIT |
 | Channel I | ChannelI.bd | NO_GUIDE_HIT |
+| Channel S | ChannelS.bd | NO_GUIDE_HIT |
 | Channel S | ChannelS.bd@SD | NO_GUIDE_HIT |
+| Channel S | ChannelS.uk | NO_GUIDE_HIT |
 | DBC News | DBCNews.bd | NO_GUIDE_HIT |
 | Deepto TV | DeeptoTV.bd | NO_GUIDE_HIT |
 | Desh TV | DeshTV.bd | NO_GUIDE_HIT |

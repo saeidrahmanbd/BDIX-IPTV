@@ -1,6 +1,6 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-10T07:38:15+00:00**
+Generated: **2026-11-10T08:57:31+00:00**
 
 This report measures the two maintained M3U playlists included in the automated EPG pipeline. This report covers only the two maintained playlists.
 
@@ -15,7 +15,7 @@ This report measures the two maintained M3U playlists included in the automated 
 |---|---:|---:|---:|---:|
 | Adult | 325 | 8 | 8 | 317 |
 | Argentina | 13 | 1 | 0 | 12 |
-| Bangladesh | 63 | 3 | 1 | 60 |
+| Bangladesh | 66 | 3 | 1 | 63 |
 | Brazil | 13 | 7 | 7 | 6 |
 | Bulgaria | 21 | 6 | 6 | 15 |
 | Canada | 29 | 22 | 16 | 7 |
@@ -31,11 +31,11 @@ This report measures the two maintained M3U playlists included in the automated 
 | Germany | 74 | 18 | 18 | 56 |
 | Greece | 8 | 2 | 2 | 6 |
 | Hungary | 15 | 7 | 7 | 8 |
-| Indian Bangla | 38 | 28 | 26 | 10 |
+| Indian Bangla | 37 | 28 | 26 | 9 |
 | Indian Entertainment | 182 | 150 | 144 | 32 |
 | Indian Movies | 81 | 61 | 56 | 20 |
 | Indian Music | 65 | 57 | 54 | 8 |
-| International | 167 | 32 | 24 | 135 |
+| International | 166 | 32 | 24 | 134 |
 | Iran | 13 | 1 | 0 | 12 |
 | Italy | 27 | 11 | 11 | 16 |
 | Kids | 36 | 21 | 19 | 15 |
@@ -71,5 +71,5 @@ This report measures the two maintained M3U playlists included in the automated 
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **0c1edb1d00f703b7c5176236b251a547670551d4be1f47619cfb735b64cfaa5b**
+- IPTV-Playlist.m3u SHA-256: **b9788f72fccc6068192664229352aba60bf534028a8d2362a740cf7623425e9c**
 - International-Playlist.m3u SHA-256: **088cc6fee8e2211d4c5731a8f086e9ad91b51d302a33d9297b979ce4432e3cf6**
