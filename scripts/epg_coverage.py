@@ -79,6 +79,13 @@ EPG_ALIASES = {
     # FightBox Poland -> FightBox.pl (56 usable current/future programme rows).
     "FightBox.nl@Poland": ["FightBox.pl"],
 
+    "MTV.in@SD": ["MTV.in", "jtv248", "248"],
+    "DDNational.in@SD": ["DD.National.in", "DDNational.in", "577110", "158252", "158253", "ts1218", "ts191", "LIVETV_LIVETVCHANNEL_DD_NATIONAL", "LIVETV_LIVETVCHANNEL_DD_NATIONAL_HD", "jtv202", "202"],
+    "JaihindTV.in@SD": ["Jaihind.tv.in", "JAI.HIND.in", "577033", "143217", "ts370", "LIVETV_LIVETVCHANNEL_JAIHIND_TV", "jtv465", "307", "465"],
+    "DangalTV.in@SD": ["DANGAL.in", "Dangal.in", "576965", "142771", "LIVETV_LIVETVCHANNEL_DANGAL", "jtv701", "701"],
+    "ShemarooTV.in@SD": ["Shemaroo.TV.in", "ShemarooTV.in", "577145", "143778", "ts818", "LIVETV_LIVETVCHANNEL_SHEMAROO_TV", "jtv1961", "1961"],
+    "9XJalwa.in": ["9X.Jalwa.in", "407811", "9XJalwa.in", "INBC2800013L6", "LIVETV_LIVETVCHANNEL_9X_JALWA", "jtv440", "440"],
+    "VasanthTV.in@SD": ["Vasanth.TV.in", "VASANTH.TV.in", "VasanthTV.in", "577216", "144068", "ts499", "LIVETV_LIVETVCHANNEL_VASANTH_TV", "jtv727", "727"],
     # Exact display-name matches (after stripping quality tags) in fresh India
     # provider feeds that are already in SOURCES (airtel/jiotv/yupptv). Checked
     # 2026-10-26 against the feed repo's current files: each ID had >=20
