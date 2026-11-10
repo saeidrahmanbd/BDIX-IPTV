@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-10T13:25:46.094034+00:00**
-Source playlist SHA-256: **1fecff40e4b2f5a4a6e31805dc88b93179bdf2d752f56b8ae8cfc6aaacd8a6db**
+Generated: **2026-11-10T14:59:03.175083+00:00**
+Source playlist SHA-256: **8b798099a5a4fd789da0456a308e8091c7d2c5da6795cd227c44c1e6258a7ef7**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1169**
-- Unique channel IDs: **678**
+- Playlist entries: **1171**
+- Unique channel IDs: **679**
 - IDs with multiple streams: **244**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -21,18 +21,18 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1169**
+- Logo references checked: **1171**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues: **376**
-- Primary entries missing channel numbers: **0**
+- Primary channel-number sequence issues (review only): **377**
+- Primary entries missing channel numbers: **1**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
-- Alphabetical ordering issues: **0**
+- Alphabetical ordering issues: **1**
 - Suspicious URL credentials/syntax: **1**
 - Signed/tokenized stream URLs: **19**
 - Embedded Xtream-style credential paths (redacted): **0**
@@ -850,11 +850,12 @@ No same-ID label variants found across groups.
 - R Plus Gold — Backup — https://stream.ottlive.co.in/rplusgold/index.m3u8
 - R Plus Gold — Backup — https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8
 - R Plus Gold — Backup — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/cf883da3-f9f5-4c70-b0ef-b3ac2e2ad1e3/5552ef1c-ee8a-4743-8321-08b260d3b1f3/0.m3u8
-### rtv.bd (7 streams)
+### rtv.bd (8 streams)
 - RTV — Bangladesh — https://tvsen5.aynaott.com/RtvHD/index.m3u8
 - RTV — Review — http://tvsen5.aynascope.net/RtvHD/index.m3u8
 - RTV — Backup — http://116.204.149.16/rtvhd/index.m3u8
 - RTV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8
+- RTV — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8
 - RTV — Backup — https://j6nfugukcl.gpcdn.net/tile_6/master.m3u8
 - RTV — Backup — https://tvsen5.aynaott.com/ba47dHpDk3Se/index.m3u8
 - RTV — Backup — https://tvsen6.aynaott.com/rtv/tracks-v1a1/mono.ts.m3u8
@@ -1057,7 +1058,7 @@ None.
 
 None.
 
-## Primary Channel-Number Sequence
+## Primary Channel-Number Sequence (Review Only)
 
 - **Darshana TV** — expected channel number 230, found 599
 - **DD Arun Prabha** — expected channel number 231, found 230
@@ -1117,7 +1118,7 @@ None.
 ## Ordering
 
 Category block order: OK.
-Primary-category alphabetical/channel-number order: OK.
+- **Kids** — **Toon Goggles** appears after **Unique TV**
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
 ## Suspicious URLs
@@ -1152,7 +1153,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1169**
+- Healthy/local references: **1171**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
