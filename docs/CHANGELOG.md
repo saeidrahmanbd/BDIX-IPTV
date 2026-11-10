@@ -7,34 +7,27 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-10 — `IPTV-Playlist.m3u`
 
-- New channel identities: **7**
-- Channel identities removed: **10**
-- Stream URLs added / removed: **16 / 11**
+- New channel identities: **9**
+- Channel identities removed: **1**
+- Stream URLs added / removed: **78 / 1**
 - Backup URL updates: **0**
 - Logo reference changes: **8**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- CVR Health
-- Disha TV
-- Jaihind TV
-- R Plus
-- TV 100 (India)
-- Vokta TV
-- WeatherSpy (India)
+- Ayna TV
+- NAN TV
+- Bollywood
+- Boogle Bollywood
+- MTV India
+- Wah Punjabi
+- The Q
+- MH 1 Prime
+- Network 10
 
 Removed channel identities (up to 10):
-- Pankh
-- DD Bharati
-- Friends TV
-- KCL TV
-- Mei Alai TV
-- NKR TV Kannada
-- Siri Kannada All Time
-- Subin TV
-- Tamilan TV
-- Unique TV
+- Bantul the Great
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-10 — `International-Playlist.m3u`
