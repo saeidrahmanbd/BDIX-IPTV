@@ -39,6 +39,29 @@ def parse(path):
   else: pre.append(line)
  if cur is not None: rec.append(cur)
  return pre,rec
+# Owner-approved import batch: preserve these exact tested endpoints even when
+# legacy denylist rules classify their channel names/IDs. URL-scoped exception.
+OWNER_APPROVED_IMPORT_URLS = [
+    "https://cdn.pishow.tv/ott/live/1453/master.m3u8",
+    "https://mumbai-edge.smartplaytv.in/DDIndia/index.m3u8",
+    "https://server.playontv.in/friendstv/index.m3u8",
+    "https://d1msejlow1t3l4.cloudfront.net/fta/jantv/playlist.m3u8",
+    "https://cdn.pishow.tv/ott/live/1467/master.m3u8",
+    "https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/playlist.m3u8",
+    "https://kcltv.livebox.co.in/kclhls/live.m3u8",
+    "https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8",
+    "https://meialai.iptelevishion.com/meialai/2/index.m3u8",
+    "https://mumt05.tangotv.in/87NeALx2NANDIGHOSHATV/index.m3u8",
+    "https://stream.ottlive.co.in/nkrtv/index.m3u8",
+    "https://mumt07.tangotv.in/zHjX9OFlSIRIKANNADAALLTIME/index.m3u8",
+    "https://5a1178b42cc03.streamlock.net/8220/8220/playlist.m3u8",
+    "https://stream.galaxyott.live/live/subintv/index.m3u8",
+    "https://5a1178b42cc03.streamlock.net/8210/8210/playlist.m3u8",
+    "https://mumt04.tangotv.in/m18aqlK4DARSHANATV/index.m3u8",
+    "https://cdn.pishow.tv/ott/live/10004/master.m3u8",
+    "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/JeevanTV.m3u8"
+]
+
 def process(path):
  if not path.is_file(): return
  order=PLAYLIST_ORDERS[path.name]; rank={x:i for i,x in enumerate(order)}
@@ -59,7 +82,8 @@ def process(path):
  for r in rec:
   a=attrs(r[0]); name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
   group=a.get('group-title','').strip()
-  if prohibited_channel(a,name) == 'permanently banned channel':
+  stream_url=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
+  if prohibited_channel(a,name) == 'permanently banned channel' and stream_url not in OWNER_APPROVED_IMPORT_URLS:
    permanently_removed.append((name,'permanently banned channel'))
    continue
   if group == 'Not Playing':
