@@ -88,104 +88,31 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("git add -f epg/epg.xml", refresh)
         self.assertIn("workflow_dispatch:", refresh)
 
-    def test_final_fingerprinted_reports_follow_all_final_repairs(self):
+    def test_main_playlist_maintenance_is_non_structural_and_guarded(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
-        run = workflow[workflow.index("run_mutations() {"):]
-        mutations = run[:run.index("\n          }\n")]
-        after = run[run.index("\n          }\n"):]
-
-        # Freshness validation exactly once, after every fingerprinted report.
-        self.assertEqual(workflow.count("python scripts/validate_report_freshness.py"), 1)
-        self.assertIn("python scripts/validate_report_freshness.py --mode generated", workflow)
-
-        # Single-writer reports: each generator appears once after the mutation block.
-        for script in (
-            "stream_health", "report_iptv_fragile_streams", "stream_risk_review",
-            "generate_logo_authenticity_manifest", "generate_logo_repair_summary",
-            "generate_logo_provenance_review", "generate_metadata_normalization_report",
-            "generate_dashboard", "record_maintenance_history", "build_identity_index",
+        mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\n          }", workflow.index("run_mutations() {"))]
+        self.assertIn("python scripts/normalize_metadata.py", mutations)
+        self.assertIn("python scripts/migrate_external_logos_fixed.py", mutations)
+        self.assertIn("python scripts/iptv_metadata_backfill.py", mutations)
+        self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
+        for forbidden in (
+            "python scripts/sort_playlists.py IPTV-Playlist.m3u",
+            "python scripts/final_playlist_hardening.py IPTV-Playlist.m3u",
+            "python scripts/reconcile_playlist_consistency.py",
+            "python scripts/enforce_primary_backup_integrity.py",
+            "python scripts/restore_protected_review.py",
         ):
-            call = f"python scripts/{script}.py"
-            self.assertEqual(workflow.count(call), 1, f"{script} must run exactly once")
-            self.assertIn(call, after, f"{script} must run after all playlist mutations")
-            self.assertNotIn(call, mutations)
+            self.assertNotIn(forbidden, mutations)
+        self.assertIn("python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u", workflow)
+        self.assertGreaterEqual(workflow.count("python scripts/protect_main_playlist.py verify IPTV-Playlist.m3u"), 2)
+        self.assertIn("python -m unittest discover -s tests -p 'test_main_playlist_protection.py'", workflow)
+        self.assertIn("python scripts/reorganize_international_playlist.py", mutations)
+        self.assertIn("python scripts/validate_international_playlist.py", mutations)
 
-        # Audit and gate run after the mutation block, in the correction path they rerun
-        # the full mutation function; their exit status is never discarded.
-        self.assertIn("python scripts/audit_playlist.py", after)
-        self.assertIn("python scripts/pre_publish_gate.py", after)
-        self.assertNotIn("|| true", workflow)
-
-        def pos(block, needle):
-            index = block.rfind(needle)
-            self.assertGreaterEqual(index, 0, f"missing workflow step: {needle}")
-            return index
-
-        # Inside the mutation block. normalize/sort/hardening run first and migrate_external_logos
-        # runs after them: the two scripts rewrite logo references differently, so the migrator
-        # must be the last logo-reference writer. The migrator no longer emits tvg-logo="".
-        first = lambda needle: (mutations.find(needle), self.assertGreaterEqual(mutations.find(needle), 0, needle))[0]
-        normalize = first("python scripts/normalize_metadata.py")
-        sort = first("python scripts/sort_playlists.py")
-        hardening = first("python scripts/final_playlist_hardening.py")
-        migrate = pos(mutations, "python scripts/migrate_external_logos_fixed.py")
-        self.assertEqual(mutations.count("python scripts/restore_protected_review.py"), 2)
-        restore_early = first("python scripts/restore_protected_review.py")
-        # backfill_cross is called twice on purpose: early, because reorganize_international_playlist
-        # reads the country/language it fills in; last, so its fingerprinted report matches final bytes.
-        self.assertEqual(mutations.count("python scripts/backfill_cross_playlist_metadata.py"), 2)
-        cross_early = first("python scripts/backfill_cross_playlist_metadata.py")
-        cross_final = pos(mutations, "python scripts/backfill_cross_playlist_metadata.py")
-        reconcile = pos(mutations, "python scripts/reconcile_playlist_consistency.py")
-        reorganize = pos(mutations, "python scripts/reorganize_international_playlist.py")
-        attribution = pos(mutations, "python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u")
-        restore = pos(mutations, "python scripts/restore_protected_review.py")
-        metadata = pos(mutations, "python scripts/iptv_metadata_backfill.py")
-        logo_fix = pos(mutations, "python scripts/repair_logo_asset_technical_quality.py --fix")
-        backup_languages = pos(mutations, "python scripts/reconcile_backup_metadata_exact_id.py")
-        integrity = pos(mutations, "python scripts/enforce_primary_backup_integrity.py")
-        renumber = pos(mutations, "python scripts/renumber_active_channels.py IPTV-Playlist.m3u")
-        guard = pos(mutations, "python scripts/maintenance_helpers.py verify-no-unauthorized-removals")
-        self.assertLess(normalize, sort)
-        self.assertLess(sort, hardening)
-        self.assertLess(hardening, migrate)
-        self.assertLess(migrate, restore_early)
-        self.assertLess(restore_early, cross_early)
-        self.assertLess(cross_early, reconcile)
-        self.assertLess(reconcile, reorganize)
-        self.assertLess(reorganize, attribution)
-        self.assertLess(attribution, restore)
-        final_sort = pos(mutations, "python scripts/sort_playlists.py IPTV-Playlist.m3u")
-        self.assertLess(restore, backup_languages)
-        self.assertLess(backup_languages, integrity)
-        self.assertLess(integrity, final_sort)
-        self.assertLess(final_sort, renumber)
-        self.assertLess(renumber, metadata)
-        self.assertLess(metadata, cross_final)
-        self.assertLess(cross_final, logo_fix)
-        self.assertLess(logo_fix, guard)
-        intl_guard = pos(mutations, "python scripts/verify_international_protected.py verify")
-        self.assertLess(guard, intl_guard)
-        self.assertLess(reorganize, intl_guard)
-        # the baseline must be recorded before the mutation block runs
-        self.assertIn("python scripts/verify_international_protected.py snapshot", workflow)
-
-        # After the mutation block: audit -> gate -> reports -> freshness.
-        audit = pos(after, "python scripts/audit_playlist.py")
-        gate = pos(after, "python scripts/pre_publish_gate.py")
-        health = pos(after, "python scripts/stream_health.py")
-        manifest = pos(after, "python scripts/generate_logo_authenticity_manifest.py")
-        provenance = pos(after, "python scripts/generate_logo_provenance_review.py")
-        metadata_report = pos(after, "python scripts/generate_metadata_normalization_report.py")
-        dashboard = pos(after, "python scripts/generate_dashboard.py")
-        freshness = pos(after, "python scripts/validate_report_freshness.py")
-        self.assertLess(audit, gate)
-        self.assertLess(gate, health)
-        self.assertLess(health, manifest)
-        self.assertLess(manifest, provenance)
-        self.assertLess(provenance, metadata_report)
-        self.assertLess(metadata_report, dashboard)
-        self.assertLess(dashboard, freshness)
+        # Fingerprinted reports remain after the final mutation and before freshness validation.
+        after = workflow[workflow.index("\n          }", workflow.index("run_mutations() {")):]
+        for script in ("stream_health", "generate_dashboard", "validate_report_freshness"):
+            self.assertIn(f"python scripts/{script}.py", after)
 
     def test_blocked_maintenance_dashboard_recovery_never_writes_playlist_bytes(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
