@@ -280,5 +280,26 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(foreign_reason, "unknown source feed")
 
 
+
+    def test_expiry_timestamps_are_not_mistaken_for_auth_tokens(self):
+        attrs = {"tvg-id": "SampleChannel.in", "group-title": "Indian Entertainment"}
+        for parameter in ("expires=1790000000", "e=1790000000"):
+            with self.subTest(parameter=parameter):
+                entry, reason = evaluate(
+                    "India", attrs, "Sample Channel",
+                    f"https://example.org/channel.m3u8?{parameter}",
+                )
+                self.assertIsNotNone(entry, reason)
+
+        # Expiry metadata is safe to preserve; credential-bearing URLs still
+        # require a separate owner-approved/manual path.
+        entry, reason = evaluate(
+            "India", attrs, "Sample Channel",
+            "https://example.org/channel.m3u8?token=secret",
+        )
+        self.assertIsNone(entry)
+        self.assertEqual(reason, "tokenized URL")
+
+
 if __name__ == "__main__":
     unittest.main()
