@@ -80,25 +80,25 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             "Islamic TV must have a numeric channel number; contiguous numbering is checked by the numbering/gate tests",
         )
 
-        expected_review_metadata = {
-            "Shikor TV Canada": ("custom.shikortvcanada", "CA"),
-            "Ten TV Prime": ("custom.tentvprime", "BD"),
-            "TV One UK": ("TVOne.uk", "GB"),
+        expected_active_metadata = {
+            "Shikor TV Canada": ("custom.shikortvcanada", "CA", "Bangladesh"),
+            "Ten TV Prime": ("custom.tentvprime", "BD", "Bangladesh"),
+            "TV One UK": ("TVOne.uk", "GB", "Religious"),
         }
-        for name, (channel_id, country) in expected_review_metadata.items():
+        for name, (channel_id, country, group) in expected_active_metadata.items():
             candidate = [e for e in entries if e["attrs"].get("tvg-name") == name]
             self.assertEqual(len(candidate), 1, name)
-            self.assertEqual(candidate[0]["attrs"].get("group-title"), "Review", name)
-            self.assertEqual(
-                candidate[0]["attrs"].get("channel-id") or candidate[0]["attrs"].get("tvg-id"),
-                channel_id,
-                name,
-            )
+            self.assertEqual(candidate[0]["attrs"].get("group-title"), group, name)
+            self.assertEqual(candidate[0]["attrs"].get("tvg-id"), channel_id, name)
+            self.assertEqual(candidate[0]["attrs"].get("channel-id"), channel_id, name)
             self.assertEqual(candidate[0]["attrs"].get("tvg-country"), country, name)
-            self.assertFalse(candidate[0]["attrs"].get("tvg-chno"), name)
+            self.assertTrue(candidate[0]["attrs"].get("tvg-chno", "").isdigit(), name)
 
         for e in entries:
-            if e["attrs"].get("group-title") == "Bangladesh":
+            if (
+                e["attrs"].get("group-title") == "Bangladesh"
+                and e["attrs"].get("tvg-name") != "Shikor TV Canada"
+            ):
                 self.assertEqual(e["attrs"].get("tvg-country"), "BD", e["attrs"].get("tvg-name"))
 
         raj_primary = [e for e in entries if e["attrs"].get("tvg-name") == "Rajdhani TV"
