@@ -3,6 +3,11 @@ name: Discovery Schedule Watchdog
 # recover missed discovery AND stream-health runs throughout the Bangladesh morning.
 # The guard inspects each workflow's real writer/check job, not wrapper conclusions.
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/discovery-schedule-watchdog.yml'
+      - 'scripts/discovery_schedule_guard.py'
   schedule:
     - cron: '15 1 * * *'  # 07:15 Asia/Dhaka: discovery recovery
     - cron: '45 1 * * *'  # 07:45 Asia/Dhaka: discovery recovery
