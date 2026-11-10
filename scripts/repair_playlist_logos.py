@@ -56,6 +56,10 @@ BAD_ASSETS = {
     "tom-and-jerry.png",
     "arirang-tv.png",  # KBS WORLD wordmark under an Arirang filename.
     "16-a308b78988.png",  # Provenance maps this image to Channel16.ru; it was reused on unrelated channels.
+    # Same 160x60 placeholder artwork was reused for three unrelated stations.
+    "shikor-tv-canada-ac43f0fa9e.png",
+    "ten-tv-prime-ac43f0fa9e.png",
+    "tv-one-uk-ac43f0fa9e.png",
 }
 GENERIC_ASSETS = {
     "generated-fallback-btv-news.png",
