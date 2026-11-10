@@ -1,404 +1,387 @@
 # Stream Health Report
 
-Generated: **2026-11-10T09:57:42+00:00**
-Stream URL inventory SHA-256: **2f28122cb299e67f3d3412192b9bb1818766e7bf97a0022247540a2110783a78**
+Generated: **2026-11-10T13:11:29+00:00**
+Stream URL inventory SHA-256: **2dcc8d750891af8e369989b83c2895d9aa6c890de0de8d9965d0de846d7ca799**
 
 Probe environment: **GitHub-hosted ubuntu-latest runner**.
 A successful HTTP response confirms endpoint reachability, not guaranteed video/audio playback. HTTP 401/403 can reflect authentication, entitlement, or geographic restrictions; results from a GitHub-hosted runner should not be treated as proof of Bangladesh/India-local playback availability.
 
 ## Summary
 
-- Streams tested: **1121**
-- Reachable: **922**
-- Failed this check: **199**
+- Streams tested: **1169**
+- Reachable: **987**
+- Failed this check: **182**
 - Persistent failures (3+ consecutive): **166**
-- Intermittent failures: **33**
-- Primary tested: **580**
-- Backup tested: **379**
-- Review-queue entries tested: **162**
+- Intermittent failures: **16**
+- Primary tested: **605**
+- Backup tested: **393**
+- Review-queue entries tested: **171**
 - Near-duplicate URL families: **2**
 
 ## Failure Classification
 
 - Connection: **40**
 - DNS: **3**
-- HTTP 401/403 (access/auth): **38**
-- HTTP 404 (not found): **86**
-- HTTP 5xx (server): **7**
+- HTTP 401/403 (access/auth): **42**
+- HTTP 404 (not found): **66**
+- HTTP 5xx (server): **10**
 - Network: **2**
-- TLS: **4**
-- Timeout: **19**
+- TLS: **6**
+- Timeout: **13**
 
 ## Persistent Failures
 
-- **7S Music** — Backup — consecutive failures: **116** — HTTP 403
-- **9X Jalwa** — Backup — consecutive failures: **116** — HTTP 403
-- **Aakaash Aath** — Backup — consecutive failures: **116** — HTTP 403
-- **Aakaash Aath** — Backup — consecutive failures: **116** — HTTP 403
-- **Dangal 2** — Backup — consecutive failures: **116** — HTTP 403
-- **Goldmines 2** — Backup — consecutive failures: **116** — HTTP 403
-- **Goldmines 2** — Backup — consecutive failures: **116** — HTTP 403
-- **Goldmines Action** — Backup — consecutive failures: **116** — HTTP 403
-- **Goldmines Action** — Backup — consecutive failures: **116** — HTTP 403
-- **Goldmines Bollywood** — Backup — consecutive failures: **116** — HTTP 403
-- **Kappa TV (Music)** — Backup — consecutive failures: **116** — HTTP 403
-- **Kerala Vision** — Backup — consecutive failures: **116** — HTTP 403
-- **MH One Movies** — Backup — consecutive failures: **78** — HTTP 403
-- **MH One Movies** — Backup — consecutive failures: **78** — HTTP 403
-- **Mahaa Max** — Backup — consecutive failures: **116** — HTTP 403
-- **Mazhavil Manorama** — Backup — consecutive failures: **116** — HTTP 403
-- **Star Sports 2** — Backup — consecutive failures: **104** — HTTP 403
-- **AMN TV** — Indian Entertainment — consecutive failures: **3** — HTTP 503
-- **Asianet Middle East** — Indian Entertainment — consecutive failures: **116** — HTTP 403
-- **Kairali Arabia** — Indian Entertainment — consecutive failures: **116** — HTTP 403
-- **Siri Kannada** — Indian Entertainment — consecutive failures: **116** — HTTP 403
-- **Sun Surya** — Indian Entertainment — consecutive failures: **102** — HTTP 403
-- **Sun TV** — Indian Entertainment — consecutive failures: **102** — HTTP 403
-- **Andy Haryana** — Indian Music — consecutive failures: **116** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **85** — HTTP 403
-- **&pictures** — Review — consecutive failures: **54** — Connection
-- **9XM** — Review — consecutive failures: **54** — HTTP 403
-- **ATN Bangla** — Review — consecutive failures: **54** — HTTP 404
-- **Aakaash Aath** — Review — consecutive failures: **54** — HTTP 404
-- **Amar Bangla** — Review — consecutive failures: **43** — HTTP 404
-- **Ananda TV** — Review — consecutive failures: **54** — Connection
-- **Animal Planet** — Review — consecutive failures: **44** — HTTP 404
-- **Animal Planet** — Review — consecutive failures: **44** — HTTP 404
-- **Animal Planet** — Review — consecutive failures: **44** — HTTP 404
-- **Asian TV** — Review — consecutive failures: **41** — HTTP 404
-- **B4U Movies** — Review — consecutive failures: **54** — Connection
-- **B4U Movies** — Review — consecutive failures: **44** — HTTP 404
-- **B4U Music** — Review — consecutive failures: **44** — HTTP 404
-- **BS Film** — Review — consecutive failures: **54** — HTTP 502
-- **Bangla TV** — Review — consecutive failures: **67** — HTTP 404
-- **Bengali Beats** — Review — consecutive failures: **51** — Connection
-- **Bijoy TV** — Review — consecutive failures: **44** — HTTP 404
-- **Bijoy TV** — Review — consecutive failures: **41** — HTTP 404
-- **Boishakhi TV** — Review — consecutive failures: **54** — TLS
-- **Cartoon Network** — Review — consecutive failures: **54** — Connection
-- **Cartoon Network** — Review — consecutive failures: **44** — HTTP 404
-- **Cartoon Network UK** — Review — consecutive failures: **44** — HTTP 404
-- **Channel 1** — Review — consecutive failures: **44** — HTTP 404
-- **Channel 1** — Review — consecutive failures: **42** — HTTP 404
-- **Channel 1** — Review — consecutive failures: **42** — HTTP 404
-- **Channel 24** — Review — consecutive failures: **54** — Connection
-- **Channel 24** — Review — consecutive failures: **44** — HTTP 404
-- **Channel 24** — Review — consecutive failures: **41** — HTTP 404
-- **Channel 24** — Review — consecutive failures: **41** — HTTP 404
-- **Colors** — Review — consecutive failures: **54** — Connection
-- **Colors Bangla** — Review — consecutive failures: **54** — Timeout
-- **Colors Bangla Cinema** — Review — consecutive failures: **54** — Connection
-- **Colors Cineplex [UK]** — Review — consecutive failures: **54** — Connection
-- **DBC News** — Review — consecutive failures: **54** — Network
-- **DD National** — Review — consecutive failures: **79** — HTTP 403
-- **DD Yadagiri** — Review — consecutive failures: **32** — HTTP 404
-- **Deepto TV** — Review — consecutive failures: **54** — Connection
-- **Deewana** — Review — consecutive failures: **51** — Connection
-- **Deewana** — Review — consecutive failures: **51** — Connection
-- **Desh TV** — Review — consecutive failures: **42** — HTTP 404
-- **Dhamaal** — Review — consecutive failures: **54** — HTTP 404
-- **Discovery Channel (India)** — Review — consecutive failures: **44** — HTTP 404
-- **Discovery Channel (India)** — Review — consecutive failures: **44** — HTTP 404
-- **Discovery Kids** — Review — consecutive failures: **44** — HTTP 404
-- **Discovery Science** — Review — consecutive failures: **44** — HTTP 404
-- **Disney Channel India** — Review — consecutive failures: **54** — Timeout
-- **Doraemon TV** — Review — consecutive failures: **51** — Connection
-- **Duronto TV** — Review — consecutive failures: **54** — Connection
-- **Duronto TV** — Review — consecutive failures: **8** — Timeout
-- **ETV Cinema** — Review — consecutive failures: **54** — DNS
-- **ETV Plus** — Review — consecutive failures: **54** — DNS
-- **Ekattor TV** — Review — consecutive failures: **41** — HTTP 404
-- **Ekhon TV** — Review — consecutive failures: **54** — TLS
-- **Ekhon TV** — Review — consecutive failures: **44** — HTTP 404
-- **Ekhon TV** — Review — consecutive failures: **41** — HTTP 404
-- **Epic Music** — Review — consecutive failures: **54** — Timeout
-- **Eurosport** — Review — consecutive failures: **44** — HTTP 404
-- **Eurosport** — Review — consecutive failures: **8** — Timeout
-- **G TV** — Review — consecutive failures: **54** — Connection
-- **G TV** — Review — consecutive failures: **54** — Network
-- **Global TV** — Review — consecutive failures: **42** — HTTP 404
-- **Green TV** — Review — consecutive failures: **67** — HTTP 404
-- **Green TV** — Review — consecutive failures: **67** — HTTP 404
-- **Hum TV** — Review — consecutive failures: **44** — HTTP 404
-- **Hum TV** — Review — consecutive failures: **44** — HTTP 404
-- **Hum TV** — Review — consecutive failures: **42** — HTTP 404
-- **Hungama** — Review — consecutive failures: **54** — Connection
-- **Independent TV** — Review — consecutive failures: **54** — Connection
-- **Independent TV** — Review — consecutive failures: **43** — HTTP 500
-- **Independent TV** — Review — consecutive failures: **44** — HTTP 404
-- **Independent TV** — Review — consecutive failures: **44** — HTTP 404
-- **Islamic TV** — Review — consecutive failures: **44** — HTTP 404
-- **Jalsha Movies** — Review — consecutive failures: **54** — Connection
-- **Jamuna TV** — Review — consecutive failures: **41** — HTTP 404
-- **Maasranga TV** — Review — consecutive failures: **54** — HTTP 404
-- **Mohona TV** — Review — consecutive failures: **42** — HTTP 404
-- **Movie Bangla** — Review — consecutive failures: **42** — HTTP 404
-- **Movies Now** — Review — consecutive failures: **54** — Connection
-- **Movies Now** — Review — consecutive failures: **54** — Connection
-- **Nat Geo TV** — Review — consecutive failures: **54** — Connection
-- **Nexus TV** — Review — consecutive failures: **42** — HTTP 404
-- **Nick Bangla** — Review — consecutive failures: **54** — Connection
-- **Nick Jr (India)** — Review — consecutive failures: **54** — Timeout
-- **Nickelodeon (India)** — Review — consecutive failures: **54** — Timeout
-- **PK Sports** — Review — consecutive failures: **51** — HTTP 502
-- **PTV Sports** — Review — consecutive failures: **54** — Connection
-- **Pogo** — Review — consecutive failures: **44** — HTTP 404
-- **RTV** — Review — consecutive failures: **54** — HTTP 404
-- **Raj Musix Tamil** — Review — consecutive failures: **66** — HTTP 404
-- **Rajdhani TV** — Review — consecutive failures: **44** — HTTP 404
-- **Shekinah TV** — Review — consecutive failures: **54** — TLS
-- **Shemaroo Filmi Gaane** — Review — consecutive failures: **54** — HTTP 403
-- **Somoy TV** — Review — consecutive failures: **44** — HTTP 404
-- **Sonic** — Review — consecutive failures: **54** — Timeout
-- **Sony Aath** — Review — consecutive failures: **54** — Timeout
-- **Sony Aath** — Review — consecutive failures: **44** — HTTP 404
-- **Sony Aath** — Review — consecutive failures: **42** — HTTP 404
-- **Sony Entertainment TV** — Review — consecutive failures: **54** — Connection
-- **Sony Max** — Review — consecutive failures: **54** — Connection
-- **Sony Max 2** — Review — consecutive failures: **44** — HTTP 404
-- **Sony Pal** — Review — consecutive failures: **54** — HTTP 403
-- **Sony SAB** — Review — consecutive failures: **44** — HTTP 404
-- **Sony Yay!** — Review — consecutive failures: **43** — Timeout
-- **Sooriyan TV** — Review — consecutive failures: **51** — Connection
-- **Spondon** — Review — consecutive failures: **54** — TLS
-- **Star Bharat** — Review — consecutive failures: **54** — Connection
-- **Star Gold** — Review — consecutive failures: **47** — Connection
-- **Star Gold** — Review — consecutive failures: **54** — Timeout
-- **Star Gold Select** — Review — consecutive failures: **8** — Timeout
-- **Star Gold Select** — Review — consecutive failures: **8** — Timeout
-- **Star Jalsha** — Review — consecutive failures: **54** — Connection
-- **Star Movies** — Review — consecutive failures: **54** — Connection
-- **Star Movies Select** — Review — consecutive failures: **54** — Connection
-- **Star News** — Review — consecutive failures: **54** — Connection
-- **Star Plus** — Review — consecutive failures: **54** — Connection
-- **Star Plus** — Review — consecutive failures: **54** — Timeout
-- **Star Sports Select 1** — Review — consecutive failures: **54** — Connection
-- **Star Sports Select 2** — Review — consecutive failures: **54** — HTTP 404
-- **Sun Bangla** — Review — consecutive failures: **54** — Connection
-- **T Sports** — Review — consecutive failures: **54** — Connection
-- **TLC (India)** — Review — consecutive failures: **44** — HTTP 404
-- **TLC (India)** — Review — consecutive failures: **44** — HTTP 404
-- **Thanthi One** — Review — consecutive failures: **54** — HTTP 404
-- **Thikana** — Review — consecutive failures: **8** — HTTP 404
-- **Tom and Jerry** — Review — consecutive failures: **51** — Connection
-- **Travelxp** — Review — consecutive failures: **54** — HTTP 403
-- **VTU** — Review — consecutive failures: **51** — HTTP 502
-- **Zee Bangla** — Review — consecutive failures: **8** — Timeout
-- **Zee Bangla Sonar** — Review — consecutive failures: **54** — Connection
-- **Zee Bangla Sonar** — Review — consecutive failures: **54** — Timeout
-- **Zee Cine Classic** — Review — consecutive failures: **54** — HTTP 403
-- **Zee Cinema** — Review — consecutive failures: **54** — Connection
-- **Zee Cinema** — Review — consecutive failures: **54** — DNS
-- **Zee Comedy Nation** — Review — consecutive failures: **54** — HTTP 403
-- **Zee Dil Se** — Review — consecutive failures: **54** — HTTP 403
-- **Zee Horror Nights** — Review — consecutive failures: **54** — HTTP 403
-- **Zee South Flix** — Review — consecutive failures: **54** — HTTP 403
-- **Zee TV** — Review — consecutive failures: **54** — Connection
-- **Zee Tamil** — Review — consecutive failures: **54** — HTTP 403
-- **Star Sports 2** — Sports — consecutive failures: **152** — HTTP 403
-- **TAPMAD** — Sports — consecutive failures: **104** — HTTP 403
+- **7S Music** — Backup — consecutive failures: **117** — HTTP 403
+- **9X Jalwa** — Backup — consecutive failures: **117** — HTTP 403
+- **Aakaash Aath** — Backup — consecutive failures: **117** — HTTP 403
+- **Aakaash Aath** — Backup — consecutive failures: **117** — HTTP 403
+- **Channel I** — Backup — consecutive failures: **3** — HTTP 504
+- **Dangal 2** — Backup — consecutive failures: **117** — HTTP 403
+- **Deen TV** — Backup — consecutive failures: **3** — Timeout
+- **Goldmines 2** — Backup — consecutive failures: **117** — HTTP 403
+- **Goldmines 2** — Backup — consecutive failures: **117** — HTTP 403
+- **Goldmines Action** — Backup — consecutive failures: **117** — HTTP 403
+- **Goldmines Action** — Backup — consecutive failures: **117** — HTTP 403
+- **Goldmines Bollywood** — Backup — consecutive failures: **117** — HTTP 403
+- **Iqra Bangla** — Backup — consecutive failures: **3** — Timeout
+- **Kappa TV (Music)** — Backup — consecutive failures: **117** — HTTP 403
+- **Kerala Vision** — Backup — consecutive failures: **117** — HTTP 403
+- **MH One Movies** — Backup — consecutive failures: **79** — HTTP 403
+- **MH One Movies** — Backup — consecutive failures: **79** — HTTP 403
+- **Mahaa Max** — Backup — consecutive failures: **117** — HTTP 403
+- **Mazhavil Manorama** — Backup — consecutive failures: **117** — HTTP 403
+- **Pogo** — Backup — consecutive failures: **45** — HTTP 404
+- **Star Sports 2** — Backup — consecutive failures: **105** — HTTP 403
+- **AMN TV** — Indian Entertainment — consecutive failures: **4** — HTTP 503
+- **Asianet Middle East** — Indian Entertainment — consecutive failures: **117** — HTTP 403
+- **Kairali Arabia** — Indian Entertainment — consecutive failures: **117** — HTTP 403
+- **Siri Kannada** — Indian Entertainment — consecutive failures: **117** — HTTP 403
+- **Sun Surya** — Indian Entertainment — consecutive failures: **103** — HTTP 403
+- **Sun TV** — Indian Entertainment — consecutive failures: **103** — HTTP 403
+- **Andy Haryana** — Indian Music — consecutive failures: **117** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **86** — HTTP 403
+- **Hungama** — Kids — consecutive failures: **55** — Connection
+- **KidDo MATIX** — Kids — consecutive failures: **3** — HTTP 504
+- **Madani TV** — Religious — consecutive failures: **3** — Timeout
+- **&pictures** — Review — consecutive failures: **55** — Connection
+- **9XM** — Review — consecutive failures: **55** — HTTP 403
+- **ATN Bangla** — Review — consecutive failures: **55** — HTTP 404
+- **Aakaash Aath** — Review — consecutive failures: **55** — HTTP 404
+- **Amar Bangla** — Review — consecutive failures: **44** — HTTP 404
+- **Ananda TV** — Review — consecutive failures: **55** — Connection
+- **Animal Planet** — Review — consecutive failures: **45** — HTTP 404
+- **Animal Planet** — Review — consecutive failures: **45** — HTTP 404
+- **Animal Planet** — Review — consecutive failures: **45** — HTTP 404
+- **Asian TV** — Review — consecutive failures: **42** — HTTP 404
+- **B4U Movies** — Review — consecutive failures: **55** — Connection
+- **B4U Movies** — Review — consecutive failures: **45** — HTTP 404
+- **B4U Music** — Review — consecutive failures: **45** — HTTP 404
+- **BS Film** — Review — consecutive failures: **55** — HTTP 502
+- **Bangla TV** — Review — consecutive failures: **68** — HTTP 404
+- **Bengali Beats** — Review — consecutive failures: **52** — Connection
+- **Bijoy TV** — Review — consecutive failures: **45** — HTTP 404
+- **Bijoy TV** — Review — consecutive failures: **42** — HTTP 404
+- **Boishakhi TV** — Review — consecutive failures: **55** — TLS
+- **Cartoon Network** — Review — consecutive failures: **55** — Connection
+- **Cartoon Network** — Review — consecutive failures: **45** — HTTP 404
+- **Cartoon Network UK** — Review — consecutive failures: **45** — HTTP 404
+- **Channel 1** — Review — consecutive failures: **45** — HTTP 404
+- **Channel 1** — Review — consecutive failures: **43** — HTTP 404
+- **Channel 1** — Review — consecutive failures: **43** — HTTP 404
+- **Channel 24** — Review — consecutive failures: **55** — Connection
+- **Channel 24** — Review — consecutive failures: **45** — HTTP 404
+- **Channel 24** — Review — consecutive failures: **42** — HTTP 404
+- **Channel 24** — Review — consecutive failures: **42** — HTTP 404
+- **Colors** — Review — consecutive failures: **55** — Connection
+- **Colors Bangla** — Review — consecutive failures: **55** — Timeout
+- **Colors Bangla Cinema** — Review — consecutive failures: **55** — Connection
+- **Colors Cineplex [UK]** — Review — consecutive failures: **55** — Connection
+- **DBC News** — Review — consecutive failures: **55** — Network
+- **DD National** — Review — consecutive failures: **80** — HTTP 403
+- **DD Yadagiri** — Review — consecutive failures: **33** — HTTP 404
+- **Deepto TV** — Review — consecutive failures: **55** — Connection
+- **Deewana** — Review — consecutive failures: **52** — Connection
+- **Deewana** — Review — consecutive failures: **52** — Connection
+- **Desh TV** — Review — consecutive failures: **43** — HTTP 404
+- **Dhamaal** — Review — consecutive failures: **55** — HTTP 404
+- **Discovery Channel (India)** — Review — consecutive failures: **45** — HTTP 404
+- **Discovery Channel (India)** — Review — consecutive failures: **45** — HTTP 404
+- **Discovery Kids** — Review — consecutive failures: **45** — HTTP 404
+- **Discovery Science** — Review — consecutive failures: **45** — HTTP 404
+- **Disney Channel India** — Review — consecutive failures: **55** — Timeout
+- **Doraemon TV** — Review — consecutive failures: **52** — Connection
+- **Duronto TV** — Review — consecutive failures: **55** — Connection
+- **ETV Cinema** — Review — consecutive failures: **55** — DNS
+- **ETV Plus** — Review — consecutive failures: **55** — DNS
+- **Ekattor TV** — Review — consecutive failures: **42** — HTTP 404
+- **Ekhon TV** — Review — consecutive failures: **45** — HTTP 404
+- **Ekhon TV** — Review — consecutive failures: **42** — HTTP 404
+- **Ekhon TV** — Review — consecutive failures: **55** — TLS
+- **Epic Music** — Review — consecutive failures: **55** — Timeout
+- **Eurosport** — Review — consecutive failures: **45** — HTTP 404
+- **G TV** — Review — consecutive failures: **55** — Connection
+- **G TV** — Review — consecutive failures: **55** — Network
+- **Global TV** — Review — consecutive failures: **43** — HTTP 404
+- **Green TV** — Review — consecutive failures: **68** — HTTP 404
+- **Green TV** — Review — consecutive failures: **68** — HTTP 404
+- **Hum TV** — Review — consecutive failures: **45** — HTTP 404
+- **Hum TV** — Review — consecutive failures: **45** — HTTP 404
+- **Hum TV** — Review — consecutive failures: **43** — HTTP 404
+- **Independent TV** — Review — consecutive failures: **55** — Connection
+- **Independent TV** — Review — consecutive failures: **44** — HTTP 500
+- **Independent TV** — Review — consecutive failures: **45** — HTTP 404
+- **Independent TV** — Review — consecutive failures: **45** — HTTP 404
+- **Islamic TV** — Review — consecutive failures: **45** — HTTP 404
+- **Jalsha Movies** — Review — consecutive failures: **55** — Connection
+- **Jamuna TV** — Review — consecutive failures: **42** — HTTP 404
+- **Maasranga TV** — Review — consecutive failures: **55** — HTTP 404
+- **Mohona TV** — Review — consecutive failures: **43** — HTTP 404
+- **Movie Bangla** — Review — consecutive failures: **43** — HTTP 404
+- **Movies Now** — Review — consecutive failures: **55** — Connection
+- **Movies Now** — Review — consecutive failures: **55** — Connection
+- **Nat Geo TV** — Review — consecutive failures: **55** — Connection
+- **Nexus TV** — Review — consecutive failures: **43** — HTTP 404
+- **Nick Bangla** — Review — consecutive failures: **55** — Connection
+- **Nick Jr (India)** — Review — consecutive failures: **55** — Timeout
+- **Nickelodeon (India)** — Review — consecutive failures: **55** — Timeout
+- **PK Sports** — Review — consecutive failures: **52** — HTTP 502
+- **PTV Sports** — Review — consecutive failures: **55** — Connection
+- **RTV** — Review — consecutive failures: **55** — HTTP 404
+- **Rajdhani TV** — Review — consecutive failures: **45** — HTTP 404
+- **Sangeet Bangla** — Review — consecutive failures: **3** — HTTP 404
+- **Shekinah TV** — Review — consecutive failures: **55** — TLS
+- **Shemaroo Filmi Gaane** — Review — consecutive failures: **55** — HTTP 403
+- **Somoy TV** — Review — consecutive failures: **45** — HTTP 404
+- **Sonic** — Review — consecutive failures: **55** — Timeout
+- **Sony Aath** — Review — consecutive failures: **55** — Timeout
+- **Sony Aath** — Review — consecutive failures: **45** — HTTP 404
+- **Sony Aath** — Review — consecutive failures: **43** — HTTP 404
+- **Sony Entertainment TV** — Review — consecutive failures: **55** — Connection
+- **Sony Max** — Review — consecutive failures: **55** — Connection
+- **Sony Max 2** — Review — consecutive failures: **45** — HTTP 404
+- **Sony Pal** — Review — consecutive failures: **55** — HTTP 403
+- **Sony SAB** — Review — consecutive failures: **45** — HTTP 404
+- **Sony Yay!** — Review — consecutive failures: **44** — HTTP 404
+- **Sooriyan TV** — Review — consecutive failures: **52** — Connection
+- **Spondon** — Review — consecutive failures: **55** — TLS
+- **Star Bharat** — Review — consecutive failures: **55** — Connection
+- **Star Gold** — Review — consecutive failures: **48** — Connection
+- **Star Gold** — Review — consecutive failures: **55** — Timeout
+- **Star Jalsha** — Review — consecutive failures: **55** — Connection
+- **Star Movies** — Review — consecutive failures: **55** — Connection
+- **Star Movies Select** — Review — consecutive failures: **55** — Connection
+- **Star News** — Review — consecutive failures: **55** — Connection
+- **Star Plus** — Review — consecutive failures: **55** — Connection
+- **Star Plus** — Review — consecutive failures: **55** — Timeout
+- **Star Sports Select 1** — Review — consecutive failures: **55** — Connection
+- **Star Sports Select 2** — Review — consecutive failures: **55** — HTTP 404
+- **Sun Bangla** — Review — consecutive failures: **55** — Connection
+- **T Sports** — Review — consecutive failures: **55** — Connection
+- **TLC (India)** — Review — consecutive failures: **45** — HTTP 404
+- **TLC (India)** — Review — consecutive failures: **45** — HTTP 404
+- **Thanthi One** — Review — consecutive failures: **55** — HTTP 404
+- **Thikana** — Review — consecutive failures: **9** — HTTP 404
+- **Tom and Jerry** — Review — consecutive failures: **52** — Connection
+- **Travelxp** — Review — consecutive failures: **55** — HTTP 403
+- **VTU** — Review — consecutive failures: **52** — HTTP 502
+- **Zee Bangla Sonar** — Review — consecutive failures: **55** — Connection
+- **Zee Bangla Sonar** — Review — consecutive failures: **55** — Timeout
+- **Zee Cine Classic** — Review — consecutive failures: **55** — HTTP 403
+- **Zee Cinema** — Review — consecutive failures: **55** — Connection
+- **Zee Cinema** — Review — consecutive failures: **55** — DNS
+- **Zee Comedy Nation** — Review — consecutive failures: **55** — HTTP 403
+- **Zee Dil Se** — Review — consecutive failures: **55** — HTTP 403
+- **Zee Horror Nights** — Review — consecutive failures: **55** — HTTP 403
+- **Zee South Flix** — Review — consecutive failures: **55** — HTTP 403
+- **Zee TV** — Review — consecutive failures: **55** — Connection
+- **Zee Tamil** — Review — consecutive failures: **55** — HTTP 403
+- **Star Sports 2** — Sports — consecutive failures: **153** — HTTP 403
+- **TAPMAD** — Sports — consecutive failures: **105** — HTTP 403
 
 ## Failed This Check
 
-- **7S Music** — Backup — streak 116 — HTTP 403
-- **9X Jalwa** — Backup — streak 116 — HTTP 403
-- **Aakaash Aath** — Backup — streak 116 — HTTP 403
-- **Aakaash Aath** — Backup — streak 116 — HTTP 403
-- **Channel I** — Backup — streak 2 — HTTP 504
-- **DD Girnar** — Backup — streak 1 — HTTP 404
-- **DD Haryana** — Backup — streak 1 — HTTP 404
-- **DD Himachal Pradesh** — Backup — streak 1 — HTTP 404
-- **DD National** — Backup — streak 1 — HTTP 404
-- **DD Sahyadri** — Backup — streak 1 — HTTP 404
-- **DD Tamil** — Backup — streak 1 — HTTP 404
-- **Dangal 2** — Backup — streak 116 — HTTP 403
-- **Deen TV** — Backup — streak 2 — Timeout
-- **E24** — Backup — streak 1 — HTTP 404
-- **Fakt Marathi** — Backup — streak 1 — HTTP 404
-- **Goldmines** — Backup — streak 1 — HTTP 404
-- **Goldmines 2** — Backup — streak 116 — HTTP 403
-- **Goldmines 2** — Backup — streak 116 — HTTP 403
-- **Goldmines Action** — Backup — streak 116 — HTTP 403
-- **Goldmines Action** — Backup — streak 116 — HTTP 403
-- **Goldmines Bollywood** — Backup — streak 1 — HTTP 404
-- **Goldmines Bollywood** — Backup — streak 116 — HTTP 403
-- **Iqra Bangla** — Backup — streak 2 — Timeout
-- **Kappa TV (Music)** — Backup — streak 116 — HTTP 403
-- **Kerala Vision** — Backup — streak 116 — HTTP 403
-- **Khushboo Bangla** — Backup — streak 1 — HTTP 404
-- **MH One Movies** — Backup — streak 78 — HTTP 403
-- **MH One Movies** — Backup — streak 78 — HTTP 403
-- **Maha Movie** — Backup — streak 1 — HTTP 404
-- **Mahaa Max** — Backup — streak 116 — HTTP 403
-- **Manoranjan Movies** — Backup — streak 1 — HTTP 404
-- **Mazhavil Manorama** — Backup — streak 1 — HTTP 404
-- **Mazhavil Manorama** — Backup — streak 116 — HTTP 403
-- **Music India** — Backup — streak 1 — HTTP 404
-- **Pear TV** — Backup — streak 1 — HTTP 404
-- **Rengoni** — Backup — streak 1 — HTTP 404
-- **Sangeet Bangla** — Backup — streak 1 — HTTP 404
-- **Shanson TV** — Backup — streak 1 — HTTP 403
-- **Star Sports 2** — Backup — streak 104 — HTTP 403
-- **AMN TV** — Indian Entertainment — streak 3 — HTTP 503
-- **Asianet Middle East** — Indian Entertainment — streak 116 — HTTP 403
-- **Kairali Arabia** — Indian Entertainment — streak 116 — HTTP 403
-- **Q TV** — Indian Entertainment — streak 1 — HTTP 404
-- **Siri Kannada** — Indian Entertainment — streak 116 — HTTP 403
-- **Sun Surya** — Indian Entertainment — streak 102 — HTTP 403
-- **Sun TV** — Indian Entertainment — streak 102 — HTTP 403
-- **All Time Movies** — Indian Movies — streak 1 — HTTP 404
-- **Goldmines 2** — Indian Movies — streak 1 — HTTP 404
-- **Goldmines Action** — Indian Movies — streak 1 — HTTP 404
-- **MH One Movies** — Indian Movies — streak 1 — HTTP 404
-- **Andy Haryana** — Indian Music — streak 116 — HTTP 403
-- **MH One** — Indian Music — streak 1 — HTTP 404
-- **MH One Dil Se** — Indian Music — streak 1 — HTTP 404
-- **Sangeet Bhojpuri** — Indian Music — streak 1 — HTTP 404
-- **Teleritmo** — International — streak 85 — HTTP 403
-- **KidDo MATIX** — Kids — streak 2 — HTTP 504
-- **Madani TV** — Religious — streak 2 — Timeout
-- **&pictures** — Review — streak 54 — Connection
-- **9XM** — Review — streak 54 — HTTP 403
-- **ATN Bangla** — Review — streak 54 — HTTP 404
-- **Aakaash Aath** — Review — streak 54 — HTTP 404
-- **Amar Bangla** — Review — streak 43 — HTTP 404
-- **Ananda TV** — Review — streak 54 — Connection
-- **Animal Planet** — Review — streak 44 — HTTP 404
-- **Animal Planet** — Review — streak 44 — HTTP 404
-- **Animal Planet** — Review — streak 44 — HTTP 404
-- **Asian TV** — Review — streak 41 — HTTP 404
-- **B4U Movies** — Review — streak 54 — Connection
-- **B4U Movies** — Review — streak 44 — HTTP 404
-- **B4U Music** — Review — streak 44 — HTTP 404
-- **BS Film** — Review — streak 54 — HTTP 502
-- **Bangla TV** — Review — streak 67 — HTTP 404
-- **Bengali Beats** — Review — streak 51 — Connection
-- **Bijoy TV** — Review — streak 44 — HTTP 404
-- **Bijoy TV** — Review — streak 41 — HTTP 404
-- **Boishakhi TV** — Review — streak 54 — TLS
-- **Cartoon Network** — Review — streak 54 — Connection
-- **Cartoon Network** — Review — streak 44 — HTTP 404
-- **Cartoon Network UK** — Review — streak 44 — HTTP 404
-- **Channel 1** — Review — streak 44 — HTTP 404
-- **Channel 1** — Review — streak 42 — HTTP 404
-- **Channel 1** — Review — streak 42 — HTTP 404
-- **Channel 24** — Review — streak 54 — Connection
-- **Channel 24** — Review — streak 44 — HTTP 404
-- **Channel 24** — Review — streak 41 — HTTP 404
-- **Channel 24** — Review — streak 41 — HTTP 404
-- **Colors** — Review — streak 54 — Connection
-- **Colors Bangla** — Review — streak 54 — Timeout
-- **Colors Bangla Cinema** — Review — streak 54 — Connection
-- **Colors Cineplex [UK]** — Review — streak 54 — Connection
-- **DBC News** — Review — streak 54 — Network
-- **DD National** — Review — streak 79 — HTTP 403
-- **DD Yadagiri** — Review — streak 32 — HTTP 404
-- **Deepto TV** — Review — streak 54 — Connection
-- **Deewana** — Review — streak 51 — Connection
-- **Deewana** — Review — streak 51 — Connection
-- **Desh TV** — Review — streak 42 — HTTP 404
-- **Dhamaal** — Review — streak 54 — HTTP 404
-- **Discovery Channel (India)** — Review — streak 44 — HTTP 404
-- **Discovery Channel (India)** — Review — streak 44 — HTTP 404
-- **Discovery Kids** — Review — streak 44 — HTTP 404
-- **Discovery Science** — Review — streak 44 — HTTP 404
-- **Disney Channel India** — Review — streak 54 — Timeout
-- **Doraemon TV** — Review — streak 51 — Connection
-- **Duronto TV** — Review — streak 54 — Connection
-- **Duronto TV** — Review — streak 8 — Timeout
-- **ETV Cinema** — Review — streak 54 — DNS
-- **ETV Plus** — Review — streak 54 — DNS
-- **Ekattor TV** — Review — streak 41 — HTTP 404
-- **Ekhon TV** — Review — streak 54 — TLS
-- **Ekhon TV** — Review — streak 44 — HTTP 404
-- **Ekhon TV** — Review — streak 41 — HTTP 404
-- **Epic Music** — Review — streak 54 — Timeout
-- **Eurosport** — Review — streak 44 — HTTP 404
-- **Eurosport** — Review — streak 8 — Timeout
-- **G TV** — Review — streak 54 — Connection
-- **G TV** — Review — streak 54 — Network
-- **Global TV** — Review — streak 42 — HTTP 404
-- **Green TV** — Review — streak 67 — HTTP 404
-- **Green TV** — Review — streak 67 — HTTP 404
-- **Hum TV** — Review — streak 44 — HTTP 404
-- **Hum TV** — Review — streak 44 — HTTP 404
-- **Hum TV** — Review — streak 42 — HTTP 404
-- **Hungama** — Review — streak 54 — Connection
-- **Independent TV** — Review — streak 54 — Connection
-- **Independent TV** — Review — streak 43 — HTTP 500
-- **Independent TV** — Review — streak 44 — HTTP 404
-- **Independent TV** — Review — streak 44 — HTTP 404
-- **Islamic TV** — Review — streak 44 — HTTP 404
-- **Jalsha Movies** — Review — streak 54 — Connection
-- **Jamuna TV** — Review — streak 41 — HTTP 404
-- **Maasranga TV** — Review — streak 54 — HTTP 404
-- **Mohona TV** — Review — streak 42 — HTTP 404
-- **Movie Bangla** — Review — streak 42 — HTTP 404
-- **Movies Now** — Review — streak 54 — Connection
-- **Movies Now** — Review — streak 54 — Connection
-- **Nat Geo TV** — Review — streak 54 — Connection
-- **Nexus TV** — Review — streak 42 — HTTP 404
-- **Nick Bangla** — Review — streak 54 — Connection
-- **Nick Jr (India)** — Review — streak 54 — Timeout
-- **Nickelodeon (India)** — Review — streak 54 — Timeout
-- **PK Sports** — Review — streak 51 — HTTP 502
-- **PTV Sports** — Review — streak 54 — Connection
-- **Pogo** — Review — streak 44 — HTTP 404
-- **RTV** — Review — streak 54 — HTTP 404
-- **Raj Musix Tamil** — Review — streak 66 — HTTP 404
-- **Rajdhani TV** — Review — streak 44 — HTTP 404
-- **Sangeet Bangla** — Review — streak 2 — HTTP 404
-- **Shekinah TV** — Review — streak 54 — TLS
-- **Shemaroo Filmi Gaane** — Review — streak 54 — HTTP 403
-- **Somoy TV** — Review — streak 44 — HTTP 404
-- **Sonic** — Review — streak 54 — Timeout
-- **Sony Aath** — Review — streak 54 — Timeout
-- **Sony Aath** — Review — streak 44 — HTTP 404
-- **Sony Aath** — Review — streak 42 — HTTP 404
-- **Sony Entertainment TV** — Review — streak 54 — Connection
-- **Sony Max** — Review — streak 54 — Connection
-- **Sony Max 2** — Review — streak 44 — HTTP 404
-- **Sony Pal** — Review — streak 54 — HTTP 403
-- **Sony SAB** — Review — streak 44 — HTTP 404
-- **Sony Yay!** — Review — streak 43 — Timeout
-- **Sooriyan TV** — Review — streak 51 — Connection
-- **Spondon** — Review — streak 54 — TLS
-- **Star Bharat** — Review — streak 54 — Connection
-- **Star Gold** — Review — streak 47 — Connection
-- **Star Gold** — Review — streak 54 — Timeout
-- **Star Gold Select** — Review — streak 8 — Timeout
-- **Star Gold Select** — Review — streak 8 — Timeout
-- **Star Jalsha** — Review — streak 54 — Connection
-- **Star Movies** — Review — streak 54 — Connection
-- **Star Movies Select** — Review — streak 54 — Connection
-- **Star News** — Review — streak 54 — Connection
-- **Star Plus** — Review — streak 54 — Connection
-- **Star Plus** — Review — streak 54 — Timeout
-- **Star Sports Select 1** — Review — streak 54 — Connection
-- **Star Sports Select 2** — Review — streak 54 — HTTP 404
-- **Sun Bangla** — Review — streak 54 — Connection
-- **T Sports** — Review — streak 54 — Connection
-- **TLC (India)** — Review — streak 44 — HTTP 404
-- **TLC (India)** — Review — streak 44 — HTTP 404
-- **Thanthi One** — Review — streak 54 — HTTP 404
-- **Thikana** — Review — streak 8 — HTTP 404
-- **Tom and Jerry** — Review — streak 51 — Connection
-- **Travelxp** — Review — streak 54 — HTTP 403
-- **VTU** — Review — streak 51 — HTTP 502
-- **Zee Bangla** — Review — streak 8 — Timeout
-- **Zee Bangla Sonar** — Review — streak 54 — Connection
-- **Zee Bangla Sonar** — Review — streak 54 — Timeout
-- **Zee Cine Classic** — Review — streak 54 — HTTP 403
-- **Zee Cinema** — Review — streak 54 — Connection
-- **Zee Cinema** — Review — streak 54 — DNS
-- **Zee Comedy Nation** — Review — streak 54 — HTTP 403
-- **Zee Dil Se** — Review — streak 54 — HTTP 403
-- **Zee Horror Nights** — Review — streak 54 — HTTP 403
-- **Zee South Flix** — Review — streak 54 — HTTP 403
-- **Zee TV** — Review — streak 54 — Connection
-- **Zee Tamil** — Review — streak 54 — HTTP 403
-- **Star Sports 2** — Sports — streak 152 — HTTP 403
-- **TAPMAD** — Sports — streak 104 — HTTP 403
+- **7S Music** — Backup — streak 117 — HTTP 403
+- **9X Jalwa** — Backup — streak 117 — HTTP 403
+- **9X Jalwa** — Backup — streak 1 — HTTP 404
+- **Aakaash Aath** — Backup — streak 117 — HTTP 403
+- **Aakaash Aath** — Backup — streak 117 — HTTP 403
+- **Channel I** — Backup — streak 3 — HTTP 504
+- **Dangal 2** — Backup — streak 117 — HTTP 403
+- **Deen TV** — Backup — streak 3 — Timeout
+- **Ekhon TV** — Backup — streak 1 — HTTP 500
+- **Goldmines 2** — Backup — streak 117 — HTTP 403
+- **Goldmines 2** — Backup — streak 117 — HTTP 403
+- **Goldmines Action** — Backup — streak 117 — HTTP 403
+- **Goldmines Action** — Backup — streak 117 — HTTP 403
+- **Goldmines Bollywood** — Backup — streak 117 — HTTP 403
+- **Iqra Bangla** — Backup — streak 3 — Timeout
+- **Kappa TV (Music)** — Backup — streak 117 — HTTP 403
+- **Kerala Vision** — Backup — streak 117 — HTTP 403
+- **Khushboo Bangla** — Backup — streak 2 — HTTP 404
+- **MH One Movies** — Backup — streak 79 — HTTP 403
+- **MH One Movies** — Backup — streak 79 — HTTP 403
+- **Madani TV** — Backup — streak 1 — HTTP 403
+- **Mahaa Max** — Backup — streak 117 — HTTP 403
+- **Mazhavil Manorama** — Backup — streak 117 — HTTP 403
+- **Movie Bangla** — Backup — streak 1 — HTTP 500
+- **Pogo** — Backup — streak 45 — HTTP 404
+- **Sangeet Bangla** — Backup — streak 2 — HTTP 404
+- **Shanson TV** — Backup — streak 2 — HTTP 403
+- **Star Sports 2** — Backup — streak 105 — HTTP 403
+- **UTV Palakkad** — Backup — streak 1 — TLS
+- **KTV Bangla** — Indian Bangla — streak 1 — HTTP 404
+- **AMN TV** — Indian Entertainment — streak 4 — HTTP 503
+- **Asianet Middle East** — Indian Entertainment — streak 117 — HTTP 403
+- **Jaihind TV** — Indian Entertainment — streak 1 — HTTP 403
+- **Kairali Arabia** — Indian Entertainment — streak 117 — HTTP 403
+- **Manoranjan TV** — Indian Entertainment — streak 1 — HTTP 404
+- **Siri Kannada** — Indian Entertainment — streak 117 — HTTP 403
+- **Sun Surya** — Indian Entertainment — streak 103 — HTTP 403
+- **Sun TV** — Indian Entertainment — streak 103 — HTTP 403
+- **The Q** — Indian Entertainment — streak 1 — HTTP 404
+- **UTV Palakkad** — Indian Entertainment — streak 1 — TLS
+- **Andy Haryana** — Indian Music — streak 117 — HTTP 403
+- **MTV India** — Indian Music — streak 1 — HTTP 403
+- **Rakuten Movies** — International — streak 1 — HTTP 504
+- **Teleritmo** — International — streak 86 — HTTP 403
+- **Hungama** — Kids — streak 55 — Connection
+- **KidDo MATIX** — Kids — streak 3 — HTTP 504
+- **Vokta TV** — New Channels — streak 1 — HTTP 403
+- **Madani TV** — Religious — streak 3 — Timeout
+- **&pictures** — Review — streak 55 — Connection
+- **9XM** — Review — streak 55 — HTTP 403
+- **ATN Bangla** — Review — streak 55 — HTTP 404
+- **Aakaash Aath** — Review — streak 55 — HTTP 404
+- **Amar Bangla** — Review — streak 44 — HTTP 404
+- **Ananda TV** — Review — streak 55 — Connection
+- **Animal Planet** — Review — streak 45 — HTTP 404
+- **Animal Planet** — Review — streak 45 — HTTP 404
+- **Animal Planet** — Review — streak 45 — HTTP 404
+- **Asian TV** — Review — streak 42 — HTTP 404
+- **B4U Movies** — Review — streak 55 — Connection
+- **B4U Movies** — Review — streak 45 — HTTP 404
+- **B4U Music** — Review — streak 45 — HTTP 404
+- **BS Film** — Review — streak 55 — HTTP 502
+- **Bangla TV** — Review — streak 68 — HTTP 404
+- **Bengali Beats** — Review — streak 52 — Connection
+- **Bijoy TV** — Review — streak 45 — HTTP 404
+- **Bijoy TV** — Review — streak 42 — HTTP 404
+- **Boishakhi TV** — Review — streak 55 — TLS
+- **Cartoon Network** — Review — streak 55 — Connection
+- **Cartoon Network** — Review — streak 45 — HTTP 404
+- **Cartoon Network UK** — Review — streak 45 — HTTP 404
+- **Channel 1** — Review — streak 45 — HTTP 404
+- **Channel 1** — Review — streak 43 — HTTP 404
+- **Channel 1** — Review — streak 43 — HTTP 404
+- **Channel 24** — Review — streak 55 — Connection
+- **Channel 24** — Review — streak 45 — HTTP 404
+- **Channel 24** — Review — streak 42 — HTTP 404
+- **Channel 24** — Review — streak 42 — HTTP 404
+- **Colors** — Review — streak 55 — Connection
+- **Colors Bangla** — Review — streak 55 — Timeout
+- **Colors Bangla Cinema** — Review — streak 55 — Connection
+- **Colors Cineplex [UK]** — Review — streak 55 — Connection
+- **DBC News** — Review — streak 55 — Network
+- **DD National** — Review — streak 80 — HTTP 403
+- **DD Yadagiri** — Review — streak 33 — HTTP 404
+- **Deepto TV** — Review — streak 55 — Connection
+- **Deewana** — Review — streak 52 — Connection
+- **Deewana** — Review — streak 52 — Connection
+- **Desh TV** — Review — streak 43 — HTTP 404
+- **Dhamaal** — Review — streak 55 — HTTP 404
+- **Discovery Channel (India)** — Review — streak 45 — HTTP 404
+- **Discovery Channel (India)** — Review — streak 45 — HTTP 404
+- **Discovery Kids** — Review — streak 45 — HTTP 404
+- **Discovery Science** — Review — streak 45 — HTTP 404
+- **Disney Channel India** — Review — streak 55 — Timeout
+- **Doraemon TV** — Review — streak 52 — Connection
+- **Duronto TV** — Review — streak 55 — Connection
+- **ETV Cinema** — Review — streak 55 — DNS
+- **ETV Plus** — Review — streak 55 — DNS
+- **Ekattor TV** — Review — streak 42 — HTTP 404
+- **Ekhon TV** — Review — streak 45 — HTTP 404
+- **Ekhon TV** — Review — streak 42 — HTTP 404
+- **Ekhon TV** — Review — streak 55 — TLS
+- **Epic Music** — Review — streak 55 — Timeout
+- **Eurosport** — Review — streak 45 — HTTP 404
+- **G TV** — Review — streak 55 — Connection
+- **G TV** — Review — streak 55 — Network
+- **Global TV** — Review — streak 43 — HTTP 404
+- **Green TV** — Review — streak 68 — HTTP 404
+- **Green TV** — Review — streak 68 — HTTP 404
+- **Hum TV** — Review — streak 45 — HTTP 404
+- **Hum TV** — Review — streak 45 — HTTP 404
+- **Hum TV** — Review — streak 43 — HTTP 404
+- **Independent TV** — Review — streak 55 — Connection
+- **Independent TV** — Review — streak 44 — HTTP 500
+- **Independent TV** — Review — streak 45 — HTTP 404
+- **Independent TV** — Review — streak 45 — HTTP 404
+- **Islamic TV** — Review — streak 45 — HTTP 404
+- **Jalsha Movies** — Review — streak 55 — Connection
+- **Jamuna TV** — Review — streak 42 — HTTP 404
+- **Maasranga TV** — Review — streak 55 — HTTP 404
+- **Mohona TV** — Review — streak 43 — HTTP 404
+- **Movie Bangla** — Review — streak 43 — HTTP 404
+- **Movies Now** — Review — streak 55 — Connection
+- **Movies Now** — Review — streak 55 — Connection
+- **Nat Geo TV** — Review — streak 55 — Connection
+- **Nexus TV** — Review — streak 43 — HTTP 404
+- **Nick Bangla** — Review — streak 55 — Connection
+- **Nick Jr (India)** — Review — streak 55 — Timeout
+- **Nickelodeon (India)** — Review — streak 55 — Timeout
+- **PK Sports** — Review — streak 52 — HTTP 502
+- **PTV Sports** — Review — streak 55 — Connection
+- **RTV** — Review — streak 55 — HTTP 404
+- **Rajdhani TV** — Review — streak 45 — HTTP 404
+- **Sangeet Bangla** — Review — streak 3 — HTTP 404
+- **Shekinah TV** — Review — streak 55 — TLS
+- **Shemaroo Filmi Gaane** — Review — streak 55 — HTTP 403
+- **Somoy TV** — Review — streak 45 — HTTP 404
+- **Sonic** — Review — streak 55 — Timeout
+- **Sony Aath** — Review — streak 55 — Timeout
+- **Sony Aath** — Review — streak 45 — HTTP 404
+- **Sony Aath** — Review — streak 43 — HTTP 404
+- **Sony Entertainment TV** — Review — streak 55 — Connection
+- **Sony Max** — Review — streak 55 — Connection
+- **Sony Max 2** — Review — streak 45 — HTTP 404
+- **Sony Pal** — Review — streak 55 — HTTP 403
+- **Sony SAB** — Review — streak 45 — HTTP 404
+- **Sony Yay!** — Review — streak 44 — HTTP 404
+- **Sooriyan TV** — Review — streak 52 — Connection
+- **Spondon** — Review — streak 55 — TLS
+- **Star Bharat** — Review — streak 55 — Connection
+- **Star Gold** — Review — streak 48 — Connection
+- **Star Gold** — Review — streak 55 — Timeout
+- **Star Jalsha** — Review — streak 55 — Connection
+- **Star Movies** — Review — streak 55 — Connection
+- **Star Movies Select** — Review — streak 55 — Connection
+- **Star News** — Review — streak 55 — Connection
+- **Star Plus** — Review — streak 55 — Connection
+- **Star Plus** — Review — streak 55 — Timeout
+- **Star Sports Select 1** — Review — streak 55 — Connection
+- **Star Sports Select 2** — Review — streak 55 — HTTP 404
+- **Sun Bangla** — Review — streak 55 — Connection
+- **T Sports** — Review — streak 55 — Connection
+- **TLC (India)** — Review — streak 45 — HTTP 404
+- **TLC (India)** — Review — streak 45 — HTTP 404
+- **Thanthi One** — Review — streak 55 — HTTP 404
+- **Thikana** — Review — streak 9 — HTTP 404
+- **Tom and Jerry** — Review — streak 52 — Connection
+- **Travelxp** — Review — streak 55 — HTTP 403
+- **VTU** — Review — streak 52 — HTTP 502
+- **Zee Bangla Sonar** — Review — streak 55 — Connection
+- **Zee Bangla Sonar** — Review — streak 55 — Timeout
+- **Zee Cine Classic** — Review — streak 55 — HTTP 403
+- **Zee Cinema** — Review — streak 55 — Connection
+- **Zee Cinema** — Review — streak 55 — DNS
+- **Zee Comedy Nation** — Review — streak 55 — HTTP 403
+- **Zee Dil Se** — Review — streak 55 — HTTP 403
+- **Zee Horror Nights** — Review — streak 55 — HTTP 403
+- **Zee South Flix** — Review — streak 55 — HTTP 403
+- **Zee TV** — Review — streak 55 — Connection
+- **Zee Tamil** — Review — streak 55 — HTTP 403
+- **Star Sports 2** — Sports — streak 153 — HTTP 403
+- **TAPMAD** — Sports — streak 105 — HTTP 403
 
 ## Near-Duplicate URL Families
 
