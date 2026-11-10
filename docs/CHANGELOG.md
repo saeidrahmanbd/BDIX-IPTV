@@ -7,27 +7,25 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-10 — `IPTV-Playlist.m3u`
 
-- New channel identities: **9**
-- Channel identities removed: **1**
-- Stream URLs added / removed: **78 / 1**
+- New channel identities: **15**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **18 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **8**
+- Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Ayna TV
-- NAN TV
-- Bollywood
-- Boogle Bollywood
-- MTV India
-- Wah Punjabi
-- The Q
-- MH 1 Prime
-- Network 10
-
-Removed channel identities (up to 10):
-- Bantul the Great
+- Darshana TV
+- DD India
+- Friends TV
+- Jan TV
+- Jeevan TV
+- Kaumudy TV
+- KCL TV
+- Makkal TV
+- Mei Alai TV
+- Nandighosha TV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-10 — `International-Playlist.m3u`
