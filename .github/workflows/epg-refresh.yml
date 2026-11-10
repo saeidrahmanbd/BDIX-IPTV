@@ -1,5 +1,6 @@
 name: Refresh IPTV EPG
 # Re-run after the two-playlist inventory migration to rebuild validated coverage and dashboard metrics.
+# Rebuild requested after IPTV-Playlist.m3u metadata, numbering and EPG inventory corrections.
 
 on:
   push:
