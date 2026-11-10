@@ -429,9 +429,13 @@ def verify_no_unauthorized_removals() -> int:
         )
         return 1
 
+    # Permanently excluded identities may remain in the owner-curated Review
+    # quarantine. Review is deliberately retained for manual inspection and is
+    # not an active publication group; its presence must not block maintenance.
     authorized_still_present = [
         str(block["info"]) for block in current
-        if _is_authorized_removal(str(block["info"]), str(block["url"]))
+        if _group(str(block["info"])) != "Review"
+        and _is_authorized_removal(str(block["info"]), str(block["url"]))
     ]
     if authorized_still_present:
         names = sorted({_name(info) for info in authorized_still_present})
