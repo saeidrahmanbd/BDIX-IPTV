@@ -408,6 +408,7 @@ def main():
         if channel_id:
             primary_ids.setdefault((row["country"], channel_id), row)
 
+    original_backup_rows_count = len(backup_rows)
     remaining_backup_rows = []
     promoted_orphans = 0
     matched_backup_alternates = 0
@@ -603,7 +604,7 @@ def main():
         f"- Invalid/external logo references removed: {invalid_logos}",
         f"- Exact duplicate URLs omitted: {removed['exact duplicate URL']}",
         f"- Additional same-channel streams moved to Backup: {removed['duplicate channel stream moved to Backup']}",
-        f"- Original Backup/Backups rows examined: {len([row for row in backup_rows]) + matched_backup_alternates + orphan_backup_candidates + promoted_orphans}",
+        f"- Original Backup/Backups and protected queue rows examined: {original_backup_rows_count}",
         f"- Matching alternate streams retained in Backup: {matched_backup_alternates}",
         f"- True orphan Backup rows evaluated: {orphan_backup_candidates}",
         f"- Eligible orphan Backup rows promoted to primary: {promoted_orphans}",
