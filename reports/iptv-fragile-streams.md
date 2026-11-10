@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-10T15:04:46+00:00**
-IPTV-Playlist.m3u SHA-256: **8b798099a5a4fd789da0456a308e8091c7d2c5da6795cd227c44c1e6258a7ef7**
+Generated: **2026-11-10T15:10:31+00:00**
+IPTV-Playlist.m3u SHA-256: **a7fce54b25229033af7ba06f82a1ef694995f79680b58cbc8abcaa1932353a04**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **266**
+- Flagged streams: **273**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -26,6 +26,8 @@ These streams are not automatically removed. URL credentials, user information a
 | Studio One + | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/276/master.m3u8` |
 | Sun Gemini | Indian Movies | credential-bearing route pattern (values redacted) | `http://ptuf.ridsys.in/riptv/live/GEMINI_TV/index.m3u8` |
 | Vision (India) | Indian Movies | credential-bearing route pattern (values redacted) | `http://103.85.204.205:1935/VISIONMEDIA/live/playlist.m3u8` |
+| Zee Bangla Cinema | Indian Movies | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_bangla_cinema_abr/index.m3u8` |
+| Zee Bollywood | Indian Movies | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_bollywood_abr/index.m3u8` |
 | 7S Music | Indian Music | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1257/master.m3u8` |
 | Boogle Bollywood | Indian Music | sensitive query parameter (value redacted) | `https://yuppnimrestreammum.akamaized.net/181224/smil:bogglebollywood.smil/playlist.m3u8?hdnts=REDACTED` |
 | Kappa TV (Music) | Indian Music | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1123/master.m3u8` |
@@ -271,7 +273,12 @@ These streams are not automatically removed. URL credentials, user information a
 | Studio Yuva | Backup | sensitive query parameter (value redacted) | `https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=REDACTED` |
 | Totalmusic | Backup | credential-bearing route pattern (values redacted) | `https://cdn.40mediagroup.com/live/REDACTED/REDACTED/SA_LIVE_hls_enc/master.m3u8` |
 | Tunes 6 | Backup | credential-bearing route pattern (values redacted) | `https://stream.d6-pro.com/Tunes6music/live/video.m3u8` |
+| &TV | Backup | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8` |
 | Vasanth TV | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/228/master.m3u8` |
 | Vendhar TV | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1271/master.m3u8` |
 | Vendhar TV | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/223/master.m3u8` |
 | Zee Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8` |
+| Zee Bangla | Backup | credential-bearing route pattern (values redacted) | `http://rgkkw.live:80/live/REDACTED/REDACTED/98881.ts` |
+| Zee Bangla | Backup | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_bangla_720/index.m3u8` |
+| Zee Cinema | Backup | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_cinema_hd_abr/index.m3u8` |
+| Zee TV | Backup | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8` |

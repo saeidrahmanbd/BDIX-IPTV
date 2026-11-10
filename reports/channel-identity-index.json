@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10T15:04:46+00:00",
+  "generated": "2026-11-10T15:10:31+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -434,11 +434,12 @@
         "andtv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "andyharyana": {
       "names": [
@@ -805,9 +806,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "bangbangtv": {
       "names": [
@@ -876,11 +877,12 @@
         "bbcearth.ca"
       ],
       "groups": [
+        "Backup",
         "Documentary & Wildlife"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "beinsportsxtra": {
       "names": [
@@ -2378,9 +2380,9 @@
         "Backup",
         "Indian Entertainment"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "darshanatv": {
       "names": [
@@ -2456,6 +2458,20 @@
       "streams": 4,
       "primary": 1,
       "backup": 3
+    },
+    "ddbharati": {
+      "names": [
+        "DD Bharati"
+      ],
+      "ids": [
+        "ddbharati.in@sd"
+      ],
+      "groups": [
+        "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "ddbihar": {
       "names": [
@@ -3908,9 +3924,9 @@
         "Bangladesh",
         "Review"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 2,
-      "backup": 3
+      "backup": 4
     },
     "goaltv": {
       "names": [
@@ -4051,11 +4067,12 @@
         "greengoldtv.in@india"
       ],
       "groups": [
+        "Backup",
         "Kids"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "greentv": {
       "names": [
@@ -5434,11 +5451,12 @@
         "moonbugkids.uk"
       ],
       "groups": [
+        "Backup",
         "Kids"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "moviebangla": {
       "names": [
@@ -6197,11 +6215,12 @@
         "pbskids.us@sd"
       ],
       "groups": [
+        "Backup",
         "Kids"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "peacetvbangla": {
       "names": [
@@ -7113,9 +7132,9 @@
         "Bangladesh",
         "Review"
       ],
-      "streams": 8,
+      "streams": 9,
       "primary": 2,
-      "backup": 6
+      "backup": 7
     },
     "rupashibanglatv": {
       "names": [
@@ -9387,22 +9406,38 @@
         "Indian Bangla",
         "Review"
       ],
-      "streams": 7,
+      "streams": 9,
       "primary": 2,
-      "backup": 5
+      "backup": 7
     },
     "zeebanglasonar": {
       "names": [
+        "Zee Bangla Cinema",
         "Zee Bangla Sonar"
       ],
       "ids": [
         "zeebanglasonar.in@sd"
       ],
       "groups": [
+        "Indian Movies",
         "Review"
       ],
-      "streams": 2,
-      "primary": 2,
+      "streams": 3,
+      "primary": 3,
+      "backup": 0
+    },
+    "zeebollywood": {
+      "names": [
+        "Zee Bollywood"
+      ],
+      "ids": [
+        "zeebollywood.in@sd"
+      ],
+      "groups": [
+        "Indian Movies"
+      ],
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "zeecineclassic": {
@@ -9427,12 +9462,13 @@
         "zeecinema.in@hd"
       ],
       "groups": [
+        "Backup",
         "Indian Movies",
         "Review"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 3,
-      "backup": 0
+      "backup": 1
     },
     "zeecomedynation": {
       "names": [
@@ -9560,9 +9596,9 @@
         "Indian Entertainment",
         "Review"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 2,
-      "backup": 1
+      "backup": 2
     },
     "zingabad": {
       "names": [
@@ -9616,11 +9652,12 @@
         "zoomoo.sg"
       ],
       "groups": [
+        "Backup",
         "Kids"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     }
   }
 }
