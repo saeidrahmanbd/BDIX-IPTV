@@ -352,27 +352,8 @@ if cur is not None: records.append(cur)
 def group_of(rec):
  return re.search(r'group-title="([^"]+)"', rec[0]).group(1) if re.search(r'group-title="([^"]+)"', rec[0]) else ""
 review_groups={"Review","Not Playing","New Channels","New Backups"}
-backup_records=[r for r in records if group_of(r)=="Backup"]
-review_records=[r for r in records if group_of(r) in review_groups]
-normal_records=[r for r in records if group_of(r) not in {"Backup"} and group_of(r) not in review_groups]
-records=normal_records+backup_records+review_records
-CATEGORY_RANK={name:i for i,name in enumerate(CATEGORY_REGISTRY)}
-def natural_sort_key(value):
- value=unicodedata.normalize("NFKD",str(value or "")).casefold().strip()
- return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)",value)]
-def record_display(rec):
- _,display=split_extinf(rec[0])
- return display.strip()
-def record_url(rec):
- return next((line.strip() for line in rec[1:] if line.strip().startswith(("http://","https://"))), "")
-original_record_order = {id(rec): index for index, rec in enumerate(records)}
-def record_sort_key(rec):
- group = group_of(rec)
- rank = CATEGORY_RANK.get(group, len(CATEGORY_RANK))
- if group == "Adult":
-  return (rank, 0, original_record_order[id(rec)])
- return (rank, 1, natural_sort_key(record_display(rec)), record_url(rec))
-records.sort(key=record_sort_key)
+# Keep the original record sequence exactly as supplied by the owner.
+# Metadata normalization must never sort, group, promote or relocate existing rows.
 lines=preamble+[line for rec in records for line in rec]
 P.write_text("\n".join(lines)+"\n",encoding="utf-8")
 digest=hashlib.sha256(P.read_bytes()).hexdigest()
