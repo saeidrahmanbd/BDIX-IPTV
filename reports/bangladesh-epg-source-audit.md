@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-09T19:14:47+00:00**
+Generated: **2026-11-10T01:43:36+00:00**
 
-- Active Bangladesh playlist identities: **68**
+- Active Bangladesh playlist identities: **70**
 - Identities with a retained source mapping: **4**
 - Identities with usable current/future schedules: **2**
-- Identities without a source mapping: **64**
+- Identities without a source mapping: **66**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -22,7 +22,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry) |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 70 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 67 | - |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
@@ -90,9 +90,11 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Rajdhani TV | custom.rajdhani | NO_GUIDE_HIT |
 | Rupashi Bangla TV | RupashiBanglaTV.bd@SD | NO_GUIDE_HIT |
 | SA TV | SATV.bd | NO_GUIDE_HIT |
+| Shikor TV Canada | custom.shikortvcanada | NO_GUIDE_HIT |
 | Somoy TV | SomoyNewsTV.bd | NO_GUIDE_HIT |
 | SRK | SRK.bd | NO_GUIDE_HIT |
 | TBN24 | TBN24.us | NO_GUIDE_HIT |
+| Ten TV Prime | custom.tentvprime | NO_GUIDE_HIT |
 
 ## Matching and source notes
 
