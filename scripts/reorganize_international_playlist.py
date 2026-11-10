@@ -410,6 +410,9 @@ def main():
 
     remaining_backup_rows = []
     promoted_orphans = 0
+    matched_backup_alternates = 0
+    orphan_backup_candidates = 0
+    unresolved_orphans_retained = 0
     for row in backup_rows:
         original_group = str(row["original_group"] or "").strip().casefold()
         if row.get("was_review") or row["group"] in {"New Backup", "New Backups"}:
@@ -421,6 +424,7 @@ def main():
         match = identity_primary.get(ident) or (primary_ids.get((row["country"], channel_id)) if channel_id else None)
         if match:
             row["content_kind"] = match.get("content_kind") or match.get("kind")
+            matched_backup_alternates += 1
             remaining_backup_rows.append(row)
             continue
 
@@ -430,11 +434,13 @@ def main():
             remaining_backup_rows.append(row)
             continue
 
+        orphan_backup_candidates += 1
         target, kind, reason = classify(
             row["a"], row["name"], row["original_group"], row["country"], promote_backup=True
         )
         if reason or target == "Backup":
             # Unknown/ineligible orphans are retained for manual review; never discard them.
+            unresolved_orphans_retained += 1
             remaining_backup_rows.append(row)
             continue
 
@@ -597,7 +603,11 @@ def main():
         f"- Invalid/external logo references removed: {invalid_logos}",
         f"- Exact duplicate URLs omitted: {removed['exact duplicate URL']}",
         f"- Additional same-channel streams moved to Backup: {removed['duplicate channel stream moved to Backup']}",
+        f"- Original Backup/Backups rows examined: {len([row for row in backup_rows]) + matched_backup_alternates + orphan_backup_candidates + promoted_orphans}",
+        f"- Matching alternate streams retained in Backup: {matched_backup_alternates}",
+        f"- True orphan Backup rows evaluated: {orphan_backup_candidates}",
         f"- Eligible orphan Backup rows promoted to primary: {promoted_orphans}",
+        f"- Ineligible/unclassified orphan Backup rows retained: {unresolved_orphans_retained}",
         "- Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.",
         "- For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.",
         "- Every country except Bangladesh and India, including Pakistan, requires five unique primary channel identities before a dedicated country group is used.",
@@ -617,6 +627,10 @@ def main():
                       "normalized_names": names_normalized, "malformed_http_options_moved": malformed_options,
                       "duplicate_urls": removed["exact duplicate URL"],
                       "duplicate_channels_moved_to_backup": removed["duplicate channel stream moved to Backup"],
+                      "backup_alternates_retained": matched_backup_alternates,
+                      "orphan_backup_candidates": orphan_backup_candidates,
+                      "promoted_orphans": promoted_orphans,
+                      "unresolved_orphans_retained": unresolved_orphans_retained,
                       "groups": dict(group_counts)}, ensure_ascii=False))
 
 if __name__ == "__main__":
