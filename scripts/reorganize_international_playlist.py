@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Reorganize International-Playlist.m3u with strict naming, country and content rules."""
+# Manual recovery marker: rerun orphan Backup migration after audit-policy update.
 from collections import Counter, defaultdict
 from pathlib import Path
 import json
