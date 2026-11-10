@@ -5,9 +5,10 @@ Thanks for helping improve the project.
 ## Before changing playlists
 
 - Preserve the `#PLAYLIST-STUDIO-CATEGORIES` registry and canonical category order.
-- Do not remove an existing primary stream silently.
-- Do not remove Backup or review-queue entries solely because an automated health check failed.
-- Keep New Channels and New Backups automatically populated by their discovery workflows, but treat them as manual-approval queues: never auto-approve or promote entries into curated groups. Keep Review as the separate owner-directed manual-check/quarantine queue.
+- For `IPTV-Playlist.m3u`, automation may normalize names, repair metadata, localize logos, improve EPG mappings, validate streams and add policy-eligible discoveries, but must never delete or move an existing stream row between groups or reorder existing rows. New rows may be added while preserving the relative order of all existing rows.
+- For `International-Playlist.m3u`, automation has full policy-based authority to add, filter, delete, move, migrate, deduplicate and reorganize channel rows, including backup reconciliation.
+- Do not remove Backup or review-queue entries from the main IPTV playlist solely because an automated health check failed.
+- Keep New Channels and New Backups populated by discovery workflows; apply each playlist's separate approval and promotion rules.
 - Use local repository logos only in published playlists.
 - Follow the regional discovery policy: Bangladesh allows all genres; India excludes News, all Religious (including Islamic), Educational, Business/Finance and Farming, and allows Kids and Sports; Pakistan excludes News, all Religious, Educational, Business/Finance, Farming, Kids and Sports; other countries in the International playlist allow Movies/Music only.
 - Avoid duplicate stream URLs.
@@ -15,6 +16,8 @@ Thanks for helping improve the project.
 - Treat signed, tokenized, session-specific, and rendition-only URLs as review items rather than proof of independent redundancy.
 
 ## Automation changes
+
+See [Playlist Automation Policy](PLAYLIST-AUTOMATION-POLICY.md) for the mandatory per-playlist permission boundary.
 
 When modifying a workflow or script:
 
