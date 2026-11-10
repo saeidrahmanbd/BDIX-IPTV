@@ -7,6 +7,12 @@ The root [README](../README.md) is the project overview. This page records the c
 - [IPTV-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) — the broad, multi-country main collection, including Bangladesh, Indian categories, Pakistani, International and other genre/country groups. It is not limited to Bangladesh and India.
 - [International-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) — a companion collection containing Bangladesh and India under their applicable rules, plus eligible movie and music channels from Pakistan and other countries.
 
+## Automation permissions
+
+- `IPTV-Playlist.m3u` is owner-curated. Automation may normalize names, repair metadata, localize logos, improve EPG mappings, validate streams and add qualifying new discoveries. It must preserve every pre-existing stream URL, its group and its relative order. It must not delete or relocate existing rows. The maintenance workflow enforces this with a snapshot/verification guard; a violation blocks publication.
+- `International-Playlist.m3u` is automation-controlled. Workflows may add, filter, delete, move, migrate, deduplicate and reorganize entries under the country/genre policy below.
+- These permissions are independent. Never apply the main playlist's no-delete/no-move restriction to the International playlist, and never let International's full-management permission affect the main playlist.
+
 ## Current channel eligibility
 
 | Origin / collection | IPTV-Playlist.m3u | International-Playlist.m3u |
@@ -23,7 +29,7 @@ The main playlist's multi-country scope is distinct from the source scope of any
 - **Review** is the manual-check queue for unresolved, questionable or quarantined entries. It is not an automatic discovery destination. Keep its entries available for the owner's inspection; do not silently promote them into curated groups.
 - **New Channels** is automatically populated by the scheduled Bangladesh/India discovery workflow. The first validated stream for a genuinely new channel identity is added here.
 - **New Backups** is automatically populated by the same discovery workflow. Additional validated stream URLs for an existing or newly discovered identity are added here.
-- The discovery workflow runs daily at **07:00 Asia/Dhaka** and can also be started manually. Automatic discovery only collects and validates candidates; it does not approve or promote them into curated groups. Manual review is required before promotion.
+- The discovery workflow runs daily at **07:00 Asia/Dhaka** and can also be started manually. The Bangladesh/India discovery workflow stages qualifying candidates in the main playlist's New Channels/New Backups queues for owner review. International discovery and maintenance may automatically promote, migrate or remove candidates when they pass the International playlist's policy and validation.
 - **Review**, **New Channels** and **New Backups** are unnumbered and excluded from Xtream. Their entries do not count toward the five-channel country-group threshold.
 - Existing **Backup** records are alternate streams linked to a primary channel identity. Do not delete them solely because a probe is inconclusive; only explicitly owner-authorized removals may be deleted.
 - Keep uncertain stream checks available for manual review; remove only duplicates, clearly invalid/non-TV sources, explicitly prohibited candidates, unsafe proxy/tokenized links or definitively dead endpoints under the workflow's validation rules.
