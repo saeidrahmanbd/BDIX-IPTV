@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install SVG converter
-        run: python -m pip install --disable-pip-version-check cairosvg
+        run: python -m pip install --disable-pip-version-check cairosvg pillow
 
       - name: Convert referenced SVGs and normalize playlist
         shell: bash
@@ -35,6 +35,9 @@ jobs:
           from urllib.parse import urlparse
           import re
           import cairosvg
+          import base64
+          import io
+          from PIL import Image, ImageFile
 
           playlist = Path("IPTV-Playlist.m3u")
           raw = playlist.read_text(encoding="utf-8")
@@ -95,7 +98,22 @@ jobs:
               target = Path("logos") / target_name
               if not source.is_file():
                   raise SystemExit(f"Missing source SVG: {source}")
-              cairosvg.svg2png(url=str(source), write_to=str(target))
+              if source_name == "ntv-malayalam.svg":
+                  svg_text = source.read_text(encoding="utf-8")
+                  embedded_match = re.search(r'data:image/png;base64,([^"]+)', svg_text, re.DOTALL)
+                  if not embedded_match:
+                      raise SystemExit("NTV Malayalam SVG has no embedded PNG data")
+                  embedded_png = base64.b64decode("".join(embedded_match.group(1).split()))
+                  try:
+                      image = Image.open(io.BytesIO(embedded_png))
+                      image.load()
+                  except Exception:
+                      ImageFile.LOAD_TRUNCATED_IMAGES = True
+                      image = Image.open(io.BytesIO(embedded_png))
+                      image.load()
+                  image.convert("RGBA").save(target, format="PNG", optimize=True)
+              else:
+                  cairosvg.svg2png(url=str(source), write_to=str(target))
               if not target.is_file() or target.stat().st_size < 100:
                   raise SystemExit(f"PNG conversion failed or produced an empty file: {target}")
 
