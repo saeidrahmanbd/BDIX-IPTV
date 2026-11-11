@@ -649,7 +649,7 @@ def restore() -> None:
                 record[0] = set_attr(record[0], "group-title", "Review")
             snapshot_review.append(record)
 
-    # Canonical order: curated primary groups, Review, discovery queues, Backup last.
+    # Canonical order: curated primary groups, Backup, Review, then discovery queues.
     queue_groups = {"New Channels", "New Backups", "New Backup"}
     active_primary = [
         record for record in active_records if group_of(record[0]) not in queue_groups
@@ -659,12 +659,12 @@ def restore() -> None:
     ]
     final_records = (
         active_primary
-        + snapshot_review
-        + unexpected_review
-        + active_queues
         + migrated_backup
         + snapshot_backup
         + unexpected_backup
+        + snapshot_review
+        + unexpected_review
+        + active_queues
     )
     new_text = serialize(preamble, final_records)
     if new_text != current_text:
