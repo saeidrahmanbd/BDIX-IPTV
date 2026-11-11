@@ -140,6 +140,7 @@ ID_LOGO_MAP = {
     "surfer.tv.com@surfer.tv": "https://images-cdn2.welcomesoftware.com/assets/Surfer-hero.jpg/Zz01YmUxZThmYWEwOTgxMWVmYWNmNDY2OGUwNDMwMWU2OQ%3D%3D?height=448&width=800",
     "si solo calcio.it": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/SI_Solo_Calcio_logo_%282019%29.svg/1280px-SI_Solo_Calcio_logo_%282019%29.svg.png",
     "tvssportsbureau.us@sd": "https://i.imgur.com/pXOyNEy.png",
+    "wwe.superstar.central.com": "https://trademarks.justia.com/media/image.php?serial=99049129",
     "the.grappling.network.com": "https://satkurier.pl/uploads/zapy/6645.jpg",
     "ekamracinema.in@sd": "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Cinema.png",
     "ekamramanoranjan.in@sd": "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Manoranjan.png",
