@@ -14,10 +14,6 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: iptv-playlist-main-writer-v3
-  cancel-in-progress: false
-
 jobs:
   localize:
     runs-on: ubuntu-latest
