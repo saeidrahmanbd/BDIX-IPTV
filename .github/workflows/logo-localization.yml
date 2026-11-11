@@ -68,12 +68,22 @@ jobs:
           fi
 
           git commit -m 'Localize verified IPTV channel logos'
-          git fetch origin main
-          if [[ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]]; then
-            echo "::error::main changed during logo localization; refusing to publish a stale playlist snapshot."
-            exit 1
-          fi
-          git push origin HEAD:main
-
-          unresolved="$(($(wc -l < reports/logo-migration-unresolved.csv) - 1))"
-          echo "Committed logo localization. Unresolved identities remaining: $unresolved"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::Could not safely rebase logo-only changes onto latest main."
+              exit 1
+            fi
+            # Re-verify against the original snapshot after rebasing. If a concurrent
+            # playlist edit changed anything other than logo attributes, stop here.
+            python scripts/verify_logo_only_migration.py /tmp/IPTV-Playlist.before-logo-migration.m3u
+            if git push origin HEAD:main; then
+              unresolved="$(($(wc -l < reports/logo-migration-unresolved.csv) - 1))"
+              echo "Committed logo localization. Unresolved identities remaining: $unresolved"
+              exit 0
+            fi
+            echo "::warning::Logo-only push attempt ${attempt} failed; retrying against latest main."
+          done
+          echo "::error::Could not publish the validated logo-only commit."
+          exit 1
