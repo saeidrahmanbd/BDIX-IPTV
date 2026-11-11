@@ -1,33 +1,30 @@
 # Primary / Backup Integrity Audit
 
-- Based on commit: **a123ced31a6cb4107e38e54aff1f12f5b1e628c3**
-- Original EXTINF blocks: **1407**
-- Zero-URL malformed records removed: **27** (these contained no playable stream URL)
-- Playable stream entries retained: **1380**
-- Primary entries: **678**
-- Backup entries: **451**
-- Review entries: **251**
-- Exact-English primary channels moved to International: **112**
-- Duplicate primary copies retained as Backup: **8**
-- Backup rows reconciled by ID: **451**
-- Backup rows reconciled by unique normalized name: **31**
-- Orphan Backup streams promoted to a primary group: **5**
-- Unresolved Backup streams moved to Review: **4**
-- Logo references repaired to verified local assets: **11**
-- Rows moved to Review for missing/unverified logos: **46**
-- Rows moved to Review for unknown country: **20**
+- Based on commit: **cc790abe1819eaa31110b1ca07910bddba025d2d**
+- Stream entries after M3U normalization: **1380**
+- Misattributed duplicate URL lines removed from wrong channel entries: **14**
+- Repeated URL references deduplicated: **0**
+- Formerly empty primary rows restored from matching working streams: **7**
+- Exact-English primary channels assigned to International: **157**
+- Duplicate primary rows retained as Backup: **3**
+- Backup links reconciled by ID: **454**
+- Backup links reconciled by unique channel name: **0**
+- Orphan Backup streams promoted: **0**
+- Unresolved Backup streams kept in Review: **0**
+- Logos repaired: **0**
+- Unverifiable logo entries quarantined: **0**
+- Unknown-country entries quarantined: **0**
 
-## Final invariant checks
+## Final checks
 
-- Required active metadata: **PASS**
-- Existing local non-placeholder logos for primary: **PASS**
-- Duplicate primary identities: **0**
+- One HTTP(S) URL per EXTINF record: **PASS**
+- All unique stream URLs preserved: **PASS**
+- Duplicate URL references: **0**
+- Duplicate primary channel IDs: **0**
 - Orphan Backup rows: **0**
-- Duplicate stream URLs: **0**
-- English-only channels outside International: **0**
-- All playable stream URLs preserved: **PASS**
-- Every Backup row matches exactly one primary: **PASS**
+- Required primary metadata gaps: **0**
+- Missing/nonlocal/blocked active logos: **0**
+- English-only primary rows outside International: **0**
 - Sequential primary numbering: **PASS**
-- Review queue unnumbered; blocked logos cleared: **PASS**
 
-Unverified language was not guessed. Entries with unresolved country/logo metadata remain in Review. No stream URL was removed; the 27 malformed EXTINF blocks removed had no associated playable URL. EPG mapping and XMLTV regeneration are delegated to the post-push EPG refresh workflow; no unsupported EPG IDs were invented.
+Unverified metadata was not guessed. Review entries retain their stream URLs. Repeated URLs that were listed under an unrelated channel record were removed only from the incorrect duplicate placement. EPG mapping and XMLTV regeneration are handled by the post-commit EPG refresh workflow; no unsupported EPG IDs were fabricated.
