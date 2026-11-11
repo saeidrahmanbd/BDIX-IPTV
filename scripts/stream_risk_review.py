@@ -2,7 +2,7 @@
 """Report fragile playlist URL patterns without leaking credentials or mutating routes."""
 import hashlib
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import parse_qsl, urlsplit
@@ -23,13 +23,13 @@ def token_expiry(url):
         key = key.casefold()
         raw_values = [value]
         if key == "hdnts":
-            match = re.search(r"(?:^|~)exp=(\\d{10})(?:~|$)", value)
+            match = re.search(r"(?:^|~)exp=(\d{10})(?:~|$)", value)
             if match:
                 raw_values.append(match.group(1))
         if key in {"exp", "expires", "expiry", "e"}:
             raw_values.append(value)
         for raw in raw_values:
-            if re.fullmatch(r"\\d{10}", str(raw or "").strip()):
+            if re.fullmatch(r"\d{10}", str(raw or "").strip()):
                 try:
                     epoch = int(raw)
                     if 1_500_000_000 <= epoch <= 4_102_444_800:
@@ -46,7 +46,7 @@ def expiry_status(epoch, now=None):
     expiry = datetime.fromtimestamp(epoch, timezone.utc)
     if expiry <= now:
         status = "EXPIRED"
-    elif expiry <= now + __import__("datetime").timedelta(days=3):
+    elif expiry <= now + timedelta(days=3):
         status = "EXPIRING_WITHIN_72H"
     else:
         status = "FUTURE"
