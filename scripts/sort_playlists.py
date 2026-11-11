@@ -10,7 +10,7 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Review", "New Channels", "New Backups", "Backup",
+    "Backup", "Review", "New Channels", "New Backups",
 ]
 RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
 NON_NUMBERED = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}
@@ -79,7 +79,11 @@ def sort_playlist(path):
             if attrs(record[0]).get("group-title", "").strip() == "Not Playing":
                 record[0] = set_attr(record[0], "group-title", "Review")
     intl_rank=international_rank(records) if path.name=="International-Playlist.m3u" else None
-    records.sort(key=lambda record:record_key(record,path.name,intl_rank)); next_number=1
+    # IPTV-Playlist.m3u is owner-curated: never reorder its existing rows.
+    # Its category registry controls UI category order; International remains policy-sortable.
+    if path.name != "IPTV-Playlist.m3u":
+        records.sort(key=lambda record:record_key(record,path.name,intl_rank))
+    next_number=1
     for record in records:
         record[0]=canonical_extinf(record[0]); group=attrs(record[0]).get("group-title","").strip()
         if path.name=="IPTV-Playlist.m3u":
