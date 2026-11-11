@@ -80,9 +80,9 @@ Removed channel identities (up to 10):
 
 See the [v5.1 release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1), [feature guide](PLAYLIST-STUDIO.md) and [release integrity record](PLAYLIST-STUDIO-INTEGRITY.md).
 
-## [5.0.0] — Playlist Studio
+## [5.0.0] — Playlist Studio (historical)
 
-- Historical v5.0 release. See the [BDIX-IPTV v5.0.0 release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0).
+See the [BDIX-IPTV v5.0.0 release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0) for the original 5.0 release details.
 
 ## 2026-10-08
 
