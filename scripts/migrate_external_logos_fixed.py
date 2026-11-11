@@ -127,6 +127,8 @@ ID_LOGO_MAP = {
     "chukker.com": "https://images.squarespace-cdn.com/content/v1/62d1add63a9fc13aeb8e8465/1659311957056-19KA2EFVVMAA78AYSH0P/image-asset.jpeg",
     "dazn.ringside.com": "https://assets.goal.com/images/v3/bltde30cb5e2e36ea68/dazn_ringside%20logo.jpg",
     "fight.tv.com": "https://static.wixstatic.com/media/5c7bc0_b97c7c3f3a0c4bacb47e795e66fd3e2e~mv2.jpg/v1/fill/w_320%2Ch_180%2Cenc_auto/file.jpeg",
+    "five.stars.sports.com": "https://tvlogo.org/israel/5stars-il.png",
+    "five.stars.sports.com@five.stars.sports": "https://tvlogo.org/israel/5stars-il.png",
     "golf.golfpass.com": "https://images-cdn3.welcomesoftware.com/assets/GolfPass.jpg/Zz0yMGY5NGM5NDE1OWUxMWYwYmJhODdlM2RjNmFmNDE3Ng%3D%3D?width=1200",
     "golfpass.com": "https://images-cdn3.welcomesoftware.com/assets/GolfPass.jpg/Zz0yMGY5NGM5NDE1OWUxMWYwYmJhODdlM2RjNmFmNDE3Ng%3D%3D?width=1200",
     "hoop.tv.com": "https://vcz-ktest2-cloud-vodlix-com.b-cdn.net/u/ktest2/files/thumbs/2025/07/01/1751331303opJn647Bhy-original-y6kX3egV.png",
