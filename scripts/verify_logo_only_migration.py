@@ -3,21 +3,20 @@
 import argparse
 import re
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import unquote
 
 from PIL import Image
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
-LOCAL_BASES = ("logos/", RAW_BASE)
 
 
 def attrs(line):
-    return dict(re.findall(r'([\\w-]+)="([^"]*)"', line))
+    return dict(re.findall(r'([\w-]+)="([^"]*)"', line))
 
 
 def strip_logo(line):
-    return re.sub(r'\\s+tvg-logo="[^"]*"', "", line, count=1)
+    return re.sub(r'\s+tvg-logo="[^"]*"', "", line, count=1)
 
 
 def local_path(value):
@@ -50,8 +49,8 @@ def main():
 
     before_text = Path(args.before).read_text(encoding="utf-8-sig")
     after_text = PLAYLIST.read_text(encoding="utf-8-sig")
-    before_lines = before_text.replace("\\r", "").splitlines()
-    after_lines = after_text.replace("\\r", "").splitlines()
+    before_lines = before_text.replace("\r", "").splitlines()
+    after_lines = after_text.replace("\r", "").splitlines()
 
     before_ext = [x for x in before_lines if x.startswith("#EXTINF:")]
     after_ext = [x for x in after_lines if x.startswith("#EXTINF:")]
