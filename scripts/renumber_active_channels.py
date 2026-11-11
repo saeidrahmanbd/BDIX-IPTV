@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sort active IPTV groups and assign contiguous channel numbers without rewriting stream URLs.
+"""Preserve curated IPTV row order and assign contiguous channel numbers in place.
 
 Backup, Review, New Channels and New Backups remain unnumbered. Legacy Not Playing
 rows are normalized to Review; stream URLs are never rewritten.
@@ -87,8 +87,7 @@ def normalize_playlist_text(text: str) -> tuple[str, int]:
     normalized = text.replace("\r\n", "\n").replace("\r", "\n")
     preamble, records = parse_records(normalized)
     # Keep Playlist Studio's category registry aligned with the canonical
-    # order enforced below; a stale registry can make clients display groups
-    # differently even when the M3U records themselves are correctly sorted.
+    # UI order. This does not authorize moving any playlist record.
     registry_prefix = "#PLAYLIST-STUDIO-CATEGORIES:"
     registry_positions = [i for i, line in enumerate(preamble) if line.startswith(registry_prefix)]
     if len(registry_positions) > 1:
@@ -144,12 +143,12 @@ def main() -> int:
     after, count = normalize_playlist_text(before)
     if args.check:
         if after != before:
-            raise SystemExit("Active playlist order/channel numbers are not canonical.")
-        print(f"OK: {count} active channels are sorted and numbered contiguously.")
+            raise SystemExit("Category registry or in-place channel numbering is not canonical.")
+        print(f"OK: {count} active channels are numbered in existing row order.")
         return 0
     if after != before:
         path.write_text(after, encoding="utf-8", newline="")
-        print(f"Normalized {count} active channels; stream URLs and review-queue order were preserved.")
+        print(f"Normalized {count} active channels in place; all playlist row positions and stream URLs were preserved.")
     else:
         print(f"No changes needed: {count} active channels are already canonical.")
     return 0
