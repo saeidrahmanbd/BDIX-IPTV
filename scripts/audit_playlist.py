@@ -629,3 +629,5 @@ if backup_channel_numbers: raise SystemExit("Backup entries must not carry tvg-c
 if missing_primary_chno: raise SystemExit("All active primary entries must carry tvg-chno.")
 if review_queue_country_issues: raise SystemExit("New Channels/New Backups contain entries not verified as BD/IN; refusing automatic commit.")
 if logo_exceptions: raise SystemExit("Logo integrity failures detected in active/reviewable entries.")
+
+# Generated audit source: keep this script in the IPTV maintenance workflow.
