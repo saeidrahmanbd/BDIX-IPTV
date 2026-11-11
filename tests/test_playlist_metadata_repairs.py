@@ -92,7 +92,7 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         self.assertIn("Unverified Provider Playback Routes (Review Only)", audit)
         self.assertIn("Unverified provider playback routes (review only)", audit)
         self.assertNotIn('suspicious_urls.append((display_name(info), "", url))', audit)
-        self.assertIn(r"dvltv\\.cc", audit)
+        self.assertIn(r"dvltv\.cc", audit)
         self.assertIn("[REDACTED]", audit)
 
     def test_adult_entries_are_explicitly_protected_from_maintenance(self):
