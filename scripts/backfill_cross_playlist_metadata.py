@@ -8,6 +8,8 @@ queues are never changed. Unknown or ambiguous values remain blank rather than g
 import hashlib
 import re
 import unicodedata
+import json
+import urllib.request
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -18,6 +20,9 @@ PLAYLISTS = (
 )
 TARGETS = (Path("International-Playlist.m3u"),)
 REPORT = Path("reports/playlist-metadata-backfill.md")
+IPTV_ORG_CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
+IPTV_ORG_FEEDS_URL = "https://iptv-org.github.io/api/feeds.json"
+ID_SUFFIXES = {"SD", "HD", "FHD", "UHD", "4K", "INDIA", "UK", "HINDI", "TELUGU", "ALT1"}
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 COUNTRY_RE = re.compile(r"^[A-Z]{2}$")
 LANGUAGE_LIST_RE = re.compile(r"^[a-z]{3}(?:;[a-z]{3})*$")
@@ -121,6 +126,83 @@ def build_indexes(text_by_path):
     return by_id, by_name
 
 
+def build_external_indexes(channels, feeds):
+    """Build conservative exact-ID and unique-name metadata from iptv-org."""
+    language_by_channel = defaultdict(set)
+    for feed in feeds if isinstance(feeds, list) else []:
+        channel_id = str(feed.get("channel") or "").strip()
+        if not channel_id:
+            continue
+        for language in feed.get("languages") or []:
+            value = str(language).strip().lower()
+            if re.fullmatch(r"[a-z]{3}", value):
+                language_by_channel[channel_id].add(value)
+
+    values_by_id = {}
+    names = defaultdict(lambda: {"ids": set(), "country": set(), "language": set()})
+    for channel in channels if isinstance(channels, list) else []:
+        channel_id = str(channel.get("id") or "").strip()
+        if not channel_id:
+            continue
+        country = valid_country(channel.get("country") or "")
+        languages = set(language_by_channel.get(channel_id, set()))
+        # The API channel record may also expose languages in some versions.
+        for language in channel.get("languages") or []:
+            value = str(language).strip().lower()
+            if re.fullmatch(r"[a-z]{3}", value):
+                languages.add(value)
+        values_by_id[channel_id] = {
+            "country": country,
+            "language": ";".join(sorted(languages)) if languages else "",
+        }
+        for name in [channel.get("name"), *(channel.get("alt_names") or [])]:
+            key = normalize_name(name)
+            if not key:
+                continue
+            names[key]["ids"].add(channel_id)
+            if country:
+                names[key]["country"].add(country)
+            names[key]["language"].update(languages)
+
+    by_name = {}
+    for name, values in names.items():
+        if len(values["ids"]) == 1:
+            by_name[name] = {
+                "country": next(iter(values["country"])) if len(values["country"]) == 1 else "",
+                "language": ";".join(sorted(values["language"])) if values["language"] else "",
+            }
+    return values_by_id, by_name
+
+
+def merge_external_indexes(by_id, by_name, external_id, external_name):
+    """Use upstream data only where local exact-ID/name evidence is missing."""
+    for channel_id, source in external_id.items():
+        target = by_id.setdefault(channel_id, {"country": "", "language": ""})
+        if not target.get("country") and source.get("country"):
+            target["country"] = source["country"]
+        if not target.get("language") and source.get("language"):
+            target["language"] = source["language"]
+    for name, source in external_name.items():
+        target = by_name.setdefault(name, {"country": "", "language": ""})
+        if not target.get("country") and source.get("country"):
+            target["country"] = source["country"]
+        if not target.get("language") and source.get("language"):
+            target["language"] = source["language"]
+
+
+def load_external_indexes():
+    """Fetch current public channel/feed metadata; fail soft to local evidence."""
+    def load(url):
+        request = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV metadata audit"})
+        with urllib.request.urlopen(request, timeout=25) as response:
+            return json.loads(response.read().decode("utf-8"))
+    channels = load(IPTV_ORG_CHANNELS_URL)
+    feeds = load(IPTV_ORG_FEEDS_URL)
+    if not isinstance(channels, list) or not isinstance(feeds, list):
+        raise ValueError("iptv-org channel/feed response is not a JSON list")
+    return build_external_indexes(channels, feeds)
+
+
 def backfill_text(text, by_id, by_name):
     lines = text.splitlines(keepends=True)
     updated = list(lines)
@@ -152,7 +234,15 @@ def backfill_text(text, by_id, by_name):
             if value.strip()
         }
         name_key = normalize_name(meta.get("tvg-name") or info.rsplit(",", 1)[-1])
-        id_sources = [by_id[channel_id] for channel_id in channel_ids if channel_id in by_id]
+        id_sources = []
+        for channel_id in channel_ids:
+            source = by_id.get(channel_id)
+            if source is None and "@" in channel_id:
+                base, suffix = channel_id.rsplit("@", 1)
+                if suffix.upper() in ID_SUFFIXES:
+                    source = by_id.get(base)
+            if source is not None:
+                id_sources.append(source)
         country_values = {valid_country(source.get("country", "")) for source in id_sources}
         language_values = {valid_languages(source.get("language", "")) for source in id_sources}
         country_values.discard("")
@@ -199,6 +289,14 @@ def main():
         original_urls[path] = url_inventory(text)
 
     by_id, by_name = build_indexes(text_by_path)
+    external_status = "unavailable"
+    try:
+        external_id, external_name = load_external_indexes()
+        merge_external_indexes(by_id, by_name, external_id, external_name)
+        external_status = "loaded"
+        print("Loaded iptv-org exact channel/feed metadata indexes.")
+    except Exception as exc:
+        print("iptv-org metadata unavailable; using exact cross-playlist evidence only: {}".format(str(exc)[:240]))
     summary = {}
     for path in TARGETS:
         raw = path.read_bytes()
@@ -254,7 +352,7 @@ def main():
         "## Source playlist fingerprints", "",
         *[f"- {path.name} SHA-256: **{summary[path.name]['sha256']}**" for path in PLAYLISTS],
         "",
-        "Only missing tvg-country and tvg-language values were filled. Source evidence was an exact tvg-id match or an unambiguous exact tvg-name match. Unknown or ambiguous values remain blank.",
+        "Only missing tvg-country and tvg-language values were filled. Sources: exact playlist tvg-id/channel-id, unique exact channel names, and iptv-org channel/feed metadata. Unknown or ambiguous values remain blank. iptv-org catalogue status: {}.".format(external_status),
         "The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, stream URLs, or Backup/Review/Adult/Not Playing entries.", "",
         "## Playlist results", "",
         "| Playlist | Entries changed | Country fields filled | Language fields filled | Active entries still missing either field | Stream URL inventory | SHA-256 |",
