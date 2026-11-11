@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-11 07:43 UTC
+- Last scan: 2026-11-11 12:16 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12157
-- Existing playlist records: 3074
+- Existing playlist records: 3085
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 1
-- Exact source URLs already in playlist: 2135
-- Duplicate URLs within source feed: 10
-- New eligible source records after URL/policy filtering: 304
+- Exact source URLs already in playlist: 2147
+- Duplicate URLs within source feed: 9
+- New eligible source records after URL/policy filtering: 293
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
 - Bangladesh and Pakistan channels of all genres are eligible. Indian News, all Religious, Educational and Business/Finance channels are excluded; Indian Kids and Sports remain eligible. Only countries other than Bangladesh, India and Pakistan are limited to dedicated Movie/Music channels.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
@@ -16,13 +16,12 @@
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
-- New Backups staged for manual review: 18
+- New Backups staged for manual review: 17
 - Category migrations: 0
 - Existing discovery-queue entries removed: 1
 
 ## New primary channels
 
-- **Pogo (576p)** — New Channels — IN — http://103.135.253.32:8080/POGO/index.m3u8
 - **HarPal Geo (360p)** — New Channels — PK — https://jk3lz82elw79-hls-live.5centscdn.com/harPalGeo/955ad3298db330b5ee880c2c9e6f23a0.sdp/playlist.m3u8
 - **Jaya Plus (576p)** — New Channels — IN — https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8
 - **Anmol TV (576p)** — New Channels — IN — https://fta.ektv.in/live/256/master.m3u8
@@ -58,20 +57,21 @@
 - **Rakuten TV Family Movies Finland (1080p)** — New Channels — ES — https://758ee983d61e400381dea6fa8154f4e0.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6227/master.m3u8
 - **Rakuten TV Nordic Films (1080p)** — New Channels — ES — https://4aa9ef08b70d4b0c8f3519c5950b1930.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6303/master.m3u8
 - **Rakuten TV Top Movies Finland (1080p)** — New Channels — ES — https://1d1b0d4cb6ae4c31985d13221795695b.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6057/master.m3u8
-- **Sky Cinema Due** — New Channels — IT — http://109.169.87.42:8080/stream/10/index.m3u8
-- **Sony Movies Latin America (720p)** — New Channels — US — http://15.204.246.24:8080/SonyMoviesHD/index.m3u8
 - **Starz Cinema (720p)** — New Channels — US — http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8
 - **Summer of Movies** — New Channels — US — https://jmp2.uk/plu-6654adb1f99922000854388c.m3u8
 - **Sundance TV (Spain)** — New Channels — ES — https://cdn.stmify.com/zapitv/stream/SUNDANCE_TV/sundance_hd.mpd
 - **TVS Film Noir Network (720p)** — New Channels — US — https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
-- **Viafree Movies** — New Channels — SE — https://jmp2.uk/plu-62f64ec9eb1045000728cad6.m3u8
-- **Viafree Movies DK** — New Channels — SE — https://jmp2.uk/plu-62bebc3459624e00078209c3.m3u8
-- **Viafree Movies NO** — New Channels — SE — https://jmp2.uk/plu-62beb44e3afd120007915d1b.m3u8
-- **Viasat Kino Balkan (1080p)** — New Channels — UA — http://176.61.157.250/TV1000/index.m3u8
 - **Viasat Kino Romania** — New Channels — UA — https://flash1.bogulus1.cfd/tivi10/usergenrxs4f7zc.m3u8
-- **viju TV1000 (576p)** — New Channels — RU — http://46.53.200.153:7777/play/TV_1000/index.m3u8
-- **viju+ Megahit HD (1080p)** — New Channels — RU — http://46.53.200.153:7777/play/Viju_Megahit_HD/index.m3u8
-- **viju+ Premiere HD (1080p)** — New Channels — RU — http://46.53.200.153:7777/play/Viju_Premiere/index.m3u8
+- **Zee South Flix (1080p)** — New Channels — IN — https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
+- **2TV (1080p)** — New Channels — LT — https://lnk5511.bstrm.net/live/687e3ff1679c8d4d68fab6c5/hd/manifest.mpd
+- **15+ Music (1080p)** — New Channels — RU — https://live.15plusmg.ru/memfs/ce3366b1-bf25-4e24-96bb-1adf0d44bd3d.m3u8
+- **A1 (576p)** — New Channels — RU — http://31.148.48.15/A1/index.m3u8
+- **ACW UG TV (480p)** — New Channels — UG — https://live.acwugtv.com/hls/stream.m3u8
+- **Alegria TV (720p)** — New Channels — BO — https://lbgo.bozztv.com/ssh101/ssh101/confirmatv/playlist.m3u8
+- **AMC (Afghanistan) (1080p)** — New Channels — AF — https://amchls.wns.live/hls/stream.m3u8
+- **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
+- **Antenne Vorarlberg (720p) [Not 24/7]** — New Channels — AT — https://5857db5306b83.streamlock.net/antennevorarlberg-live/_definst_/mp4:livestream/playlist.m3u8
+- **ARY Musik (1080p)** — New Channels — PK — https://arymusik.aryzap.com/3fd38b2c62d0c3bbd74aedabb533c03a/6459fa78/v1/01847ac7a4930b8ed5aa6ed04aba/01847ac8f5f70b8ed5aa6ed04abd/main.m3u8
 
 ## Backup alternates
 
@@ -89,7 +89,6 @@
 - **Viasat Kino** — UA — http://dtv.vol.net.ua/Viasat_Kino/index.m3u8
 - **Viasat Kino Action** — UA — http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
 - **Zee Action** — IN — https://fta.ektv.in/live/270/master.m3u8
-- **AMusic Channel** — NG — http://mn-nl.mncdn.com/amusictv/amusicsrt.stream/playlist.m3u8
 - **ETV Music** — IN — https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
 - **FON Music** — US — https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
 - **M1 (Ukraine)** — UA — http://dtv.vol.net.ua/M1-HD/index.m3u8
@@ -117,7 +116,7 @@
 - kids is outside the Movie/Music-only policy: 287
 - known Indian prohibited brand/category is prohibited: 14
 - news is outside the Movie/Music-only policy: 754
-- no authentic local repository logo: 9
+- no authentic local repository logo: 11
 - non-real/test channel: 1
 - permanently banned channel: 10
 - religious is outside the Movie/Music-only policy: 630
@@ -128,16 +127,16 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-11-11T07:43:19+00:00
+- Run timestamp: 2026-11-11T12:17:03+00:00
 - Mode: international
-- New entries and discovery queues probed: 74
-- Verified live media responses: 15
-- Verified new primary channels automatically promoted: 8
-- Verified alternate streams moved to Backup: 7
-- Inconclusive candidates moved to Review: 3
-- Primary entries retained but not conclusively verified: 3
-- Definitively dead/invalid candidates removed: 56
-- Inconclusive primary/backup candidates retained for manual review: 3
+- New entries and discovery queues probed: 66
+- Verified live media responses: 1
+- Verified new primary channels automatically promoted: 1
+- Verified alternate streams moved to Backup: 0
+- Inconclusive candidates moved to Review: 8
+- Primary entries retained but not conclusively verified: 8
+- Definitively dead/invalid candidates removed: 57
+- Inconclusive primary/backup candidates retained for manual review: 8
 - Duplicate discovery entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
@@ -145,7 +144,15 @@
 - Candidates removed for missing local logos (IPTV mode): 0
 
 ### Stream probe details
+- Moved 15+ Music to Review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Moved A1 to Review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Moved ACW UG TV to Review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Moved Alegria TV to Review — stream could not be conclusively verified (HTTP 502; access/availability could not be confirmed).
+- Moved AMC (Afghanistan) to Review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed AMC (United States) [ ] from New Channels — HTTP 404.
+- Removed Andina RTV from New Channels — HTTP 404.
+- Moved Antenne Vorarlberg [ ] to Review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Moved ARY Musik to Review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Removed AXN Movies (Spain) from New Channels — HTTP 404.
 - Removed Captain from New Channels — HTTP 404.
 - Removed Cinevault 80s from New Channels — HTTP 404.
@@ -171,7 +178,6 @@
 - Removed Pluto TV Notti di Sangue from New Channels — HTTP 404.
 - Removed Pluto TV Notti di Terrore from New Channels — HTTP 404.
 - Removed Pluto TV Weihnachten im Sommer from New Channels — HTTP 404.
-- Moved Pogo to Review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed Prokino from New Channels — HTTP 404.
 - Removed Rakuten TV Action Movies Finland from New Channels — HTTP 404.
 - Removed Rakuten TV Comedy Movies Finland from New Channels — HTTP 404.
@@ -184,10 +190,9 @@
 - Removed Summer of Movies from New Channels — HTTP 404.
 - Removed Sundance TV (Spain) from New Channels — HTTP 404.
 - Removed TVS Film Noir Network from New Channels — HTTP success returned an HTML/error page, not a TV stream.
-- Moved Viasat Kino Balkan to Review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Removed Viasat Kino Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
+- Moved Zee South Flix to Review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Removed Aakaash Aath from New Backups — HTTP 404.
-- Moved AMusic Channel to Review — stream could not be conclusively verified (connection could not be confirmed: ConnectionResetError).
 - Removed Anmol TV from New Backups — HTTP 404.
 - Removed ATN Bangla from New Backups — HTTP 404.
 - Removed DD Assam from New Backups — HTTP 404.
@@ -204,30 +209,21 @@
 - Removed Viasat Kino from New Backups — HTTP 404.
 - Removed Viasat Kino Action from New Backups — HTTP 404.
 - Removed Zee Action from New Backups — HTTP 404.
-- Promoted Pogo from New Channels to Review — inconclusive stream check.
-- Promoted Sky Cinema Due from New Channels to Italy — verified primary candidate.
-- Promoted Sony Movies Latin America from New Channels to United States — verified primary candidate.
-- Promoted Viafree Movies from New Channels to Sweden — verified primary candidate.
-- Promoted Viafree Movies DK from New Channels to Sweden — verified primary candidate.
-- Promoted Viafree Movies NO from New Channels to Sweden — verified primary candidate.
-- Promoted Viasat Kino Balkan from New Channels to Review — inconclusive stream check.
-- Promoted viju TV1000 from New Channels to Russia — verified primary candidate.
-- Promoted viju+ Megahit from New Channels to Russia — verified primary candidate.
-- Promoted viju+ Premiere from New Channels to Russia — verified primary candidate.
-- Promoted AMusic Channel from New Backups to Review — inconclusive stream check.
-- Promoted Asianet Middle East from New Backups to Backup — verified alternate stream.
-- Promoted Jaihind TV from New Backups to Backup — verified alternate stream.
-- Promoted Kinopokaz from New Backups to Backup — verified alternate stream.
-- Promoted Pear TV from New Backups to Backup — verified alternate stream.
-- Promoted Rodnoe Kino from New Backups to Backup — verified alternate stream.
-- Promoted Safari TV from New Backups to Backup — verified alternate stream.
-- Promoted viju TV1000 action from New Backups to Backup — verified alternate stream.
+- Promoted 2TV from New Channels to International — verified primary candidate.
+- Promoted 15+ Music from New Channels to Review — inconclusive stream check.
+- Promoted A1 from New Channels to Review — inconclusive stream check.
+- Promoted ACW UG TV from New Channels to Review — inconclusive stream check.
+- Promoted Alegria TV from New Channels to Review — inconclusive stream check.
+- Promoted AMC (Afghanistan) from New Channels to Review — inconclusive stream check.
+- Promoted Antenne Vorarlberg [ ] from New Channels to Review — inconclusive stream check.
+- Promoted ARY Musik from New Channels to Review — inconclusive stream check.
+- Promoted Zee South Flix from New Channels to Review — inconclusive stream check.
 
 ## Final validation
 
-- Run timestamp: 2026-11-11T07:43:20+00:00
+- Run timestamp: 2026-11-11T12:17:03+00:00
 - Validation status: PASS
-- M3U entries parsed: 3085
+- M3U entries parsed: 3094
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed

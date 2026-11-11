@@ -2510,6 +2510,8 @@ https://freem3u.xyz/api/live/play.m3u8?vid=185
 https://freem3u.xyz/api/live/play.m3u8?vid=91
 #EXTINF:-1 tvg-id="VinhLongTV3.vn@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vinh-long-tv-3-31bea4254b.png" tvg-country="VN" tvg-content="Movies" group-title="Vietnam" tvg-name="Vinh Long TV 3",Vinh Long TV 3
 https://dethich.pw/thvl3/index.m3u8
+#EXTINF:-1 tvg-id="2TV.lt@SD" channel-id="2TV.lt@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/2tv-1080p.png" tvg-country="LT" tvg-content="Music" group-title="International" tvg-name="2TV",2TV
+https://lnk5511.bstrm.net/live/687e3ff1679c8d4d68fab6c5/hd/manifest.mpd
 #EXTINF:-1 tvg-id="A2iMusic.sn@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a2i-music-b2b7a2a426.jpg" tvg-country="SN" tvg-content="Music" group-title="International" tvg-name="A2i Music",A2i Music
 https://stream.sen-gt.com/A2iMusic/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="AlloCine.cm@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/allo-cine-1080p.webp" tvg-country="CM" tvg-content="Movies" group-title="International" tvg-name="Allo Cine",Allo Cine
@@ -3392,16 +3394,22 @@ http://stream.mcquack.net/258/index.m3u8
 http://stream.mcquack.net/257/index.m3u8
 #EXTINF:-1 tvg-id="9XM.in@SD" tvg-language="hin" channel-id="9XM.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9xm.png" tvg-country="IN" tvg-content="Music" group-title="Review" tvg-name="9XM",9XM
 https://9xjio.wiseplayout.com/9XM/master.m3u8
+#EXTINF:-1 tvg-id="15PlusMusic.ru@HD" channel-id="15PlusMusic.ru@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/15-music-1080p.png" tvg-country="RU" tvg-content="Music" group-title="Review" tvg-name="15+ Music",15+ Music
+https://live.15plusmg.ru/memfs/ce3366b1-bf25-4e24-96bb-1adf0d44bd3d.m3u8
 #EXTINF:-1 tvg-id="312Kino.kg@SD" channel-id="312Kino.kg@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/312-kino-406p.png" tvg-country="KG" tvg-content="Movies" group-title="Review" tvg-name="312 Kino",312 Kino
 http://176.126.166.43:1935/live/312kino/playlist.m3u8
 #EXTINF:-1 tvg-id="Andpictures.in@HD" channel-id="Andpictures.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pictures.png" tvg-country="IN" tvg-content="Movies" group-title="Review" tvg-name="&pictures",&pictures
 http://103.135.253.32:8080/PICTURE-HD/index.m3u8
 #EXTINF:-1 tvg-id="AndTV.in@International" channel-id="AndTV.in@International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-international-1080p.png" tvg-country="IN" tvg-content="Movies" group-title="Review" tvg-name="&TV International",&TV International
 https://amg01117-amg01117c1-amgplt0029.playout.now3.amagi.tv/playlist/amg01117-amg01117c1-amgplt0029/playlist.m3u8
+#EXTINF:-1 tvg-id="A1.ru@SD" channel-id="A1.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/a1-576p.png" tvg-country="RU" tvg-content="Music" group-title="Review" tvg-name="A1",A1
+http://31.148.48.15/A1/index.m3u8
 #EXTINF:-1 tvg-id="APlusTV.pk@SD" channel-id="APlusTV.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus-tv.png" tvg-country="PK" group-title="Review" tvg-name="A-Plus TV",A-Plus TV
 http://115.42.65.142:9981/stream/channelid/113328724
 #EXTINF:-1 tvg-id="AajEntertainment.pk@SD" channel-id="AajEntertainment.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aaj-entertainment.png" tvg-country="PK" group-title="Review" tvg-name="Aaj Entertainment",Aaj Entertainment
 https://ml-pull-dvc-myco.io:2096/AAJ_ENTERTAINMENT/index.m3u8
+#EXTINF:-1 tvg-id="ACWUGTV.ug@SD" channel-id="ACWUGTV.ug@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/acw-ug-tv-480p.jpg" tvg-country="UG" tvg-content="Music" group-title="Review" tvg-name="ACW UG TV",ACW UG TV
+https://live.acwugtv.com/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AfarinBaxcha.iq@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/afarin-baxcha-2a4de6bd4e.png" tvg-country="IQ" group-title="Review" tvg-name="Afarin Baxcha",Afarin Baxcha
 https://5dcabf026b188.streamlock.net/afarinTV/livestream/playlist.m3u8
 #EXTINF:-1 tvg-id="AfghanNobelMovies.ca@SD" channel-id="AfghanNobelMovies.ca@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/afghan-nobel-movies-720p.png" tvg-country="CA" tvg-content="Movies" group-title="Review" tvg-name="Afghan Nobel Movies",Afghan Nobel Movies
@@ -3414,12 +3422,16 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315852.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315853.ts
 #EXTINF:-1 tvg-id="AlbKanaleMusicTV.al@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/albkanale-music-tv-hd-1080p.png" tvg-country="AL" tvg-content="Music" group-title="Review" tvg-name="AlbKanale Music TV",AlbKanale Music TV
 https://albportal.net/albkanalemusic.m3u8
+#EXTINF:-1 tvg-id="AlegriaTV.bo@SD" channel-id="AlegriaTV.bo@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/alegria-tv-720p.png" tvg-country="BO" tvg-content="Music" group-title="Review" tvg-name="Alegria TV",Alegria TV
+https://lbgo.bozztv.com/ssh101/ssh101/confirmatv/playlist.m3u8
 #EXTINF:-1 tvg-id="AllTimeMovies.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/all-time-movies.png" tvg-country="IN" group-title="Review" tvg-name="All Time Movies",All Time Movies
 https://tvsen6.aynaott.com/a2cKGQtB/index.m3u8
 #EXTINF:-1 tvg-id="alphaCinema.ru@HD" channel-id="alphaCinema.ru@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/alpha-cinema-1080p.png" tvg-country="RU" tvg-content="Movies" group-title="Review" tvg-name="alpha Cinema",alpha Cinema
 https://live.15plusmg.ru/memfs/b389173a-df4e-4171-8904-e249893e71eb.m3u8
 #EXTINF:-1 tvg-id="AlternaTV.ar@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alternatv-55a3825bbb.png" tvg-country="AR" group-title="Review" tvg-name="AlternaTV",AlternaTV
 https://tv.alterna.ar/stream/hls/live.m3u8
+#EXTINF:-1 tvg-id="AMC.af@SD" channel-id="AMC.af@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/amc-afghanistan-1080p.png" tvg-country="AF" tvg-content="Music" group-title="Review" tvg-name="AMC (Afghanistan)",AMC (Afghanistan)
+https://amchls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AMC.us@EastHD" channel-id="AMC.us@EastHD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amc-united-states-720p.png" tvg-country="US" tvg-content="Movies" group-title="Review" tvg-name="AMC (United States)",AMC (United States)
 http://23.239.31.26:8989/amc/index.m3u8
 #EXTINF:-1 tvg-id="AMCEurope.uk@Romania" channel-id="AMCEurope.uk@Romania" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/amc-europe-romania.png" tvg-country="RO" tvg-content="Movies" group-title="Review" tvg-name="AMC Europe Romania",AMC Europe Romania
@@ -3438,12 +3450,16 @@ http://mn-nl.mncdn.com/amusictv/amusicsrt.stream/playlist.m3u8
 https://stream-cdn-iad.vaughnsoft.net/play/live_a_neflix01.flv
 #EXTINF:-1 tvg-id="AnimalPlanet.in@SD" channel-id="AnimalPlanet.in@SD" tvg-language="eng;hin;tam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" tvg-country="IN" group-title="Review" tvg-name="Animal Planet",Animal Planet
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/17870.ts
+#EXTINF:-1 tvg-id="AntenneVorarlberg.at@SD" channel-id="AntenneVorarlberg.at@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/antenne-vorarlberg-720p-not-24-7.png" tvg-country="AT" tvg-content="Music" group-title="Review" tvg-name="Antenne Vorarlberg [ ]",Antenne Vorarlberg [ ]
+https://5857db5306b83.streamlock.net/antennevorarlberg-live/_definst_/mp4:livestream/playlist.m3u8
 #EXTINF:-1 tvg-id="ApnaChannel.pk@SD" channel-id="ApnaChannel.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/apna-channel.png" tvg-country="PK" group-title="Review" tvg-name="Apna Channel",Apna Channel
 http://115.42.65.142:9981/stream/channelid/1273966657
 #EXTINF:-1 tvg-id="custom.arabica-tv" tvg-language="ara" channel-id="custom.arabica-tv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/arabica-tv.png" tvg-country="LB" tvg-content="Music" group-title="Review" tvg-name="Arabica TV",Arabica TV
 http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8
 #EXTINF:-1 tvg-id="ArmeniaPremium.am@SD" channel-id="ArmeniaPremium.am@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/armenia-premium-9b5936f400.png" tvg-country="AM" tvg-content="Movies" group-title="Review" tvg-name="Armenia Premium",Armenia Premium
 http://stream.mcquack.net/123/index.m3u8
+#EXTINF:-1 tvg-id="ARYMusik.pk@SD" channel-id="ARYMusik.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ary-musik.png" tvg-country="PK" tvg-content="Music" group-title="Review" tvg-name="ARY Musik",ARY Musik
+https://arymusik.aryzap.com/3fd38b2c62d0c3bbd74aedabb533c03a/6459fa78/v1/01847ac7a4930b8ed5aa6ed04aba/01847ac8f5f70b8ed5aa6ed04abd/main.m3u8
 #EXTINF:-1 tvg-id="custom.asia-flix-tv-ph-movie" channel-id="custom.asia-flix-tv-ph-movie" tvg-language="tgl" tvg-country="PH" tvg-content="Movies" group-title="Review" tvg-name="Asia Flix TV",Asia Flix TV
 https://asiaflixtvph.itunerworldwide.workers.dev/master.live.m3u8
 #EXTINF:-1 tvg-id="AsiaN.kr" channel-id="AsiaN.kr" tvg-language="kor" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-country="KR" group-title="Review" tvg-name="AsiaN",AsiaN
@@ -4122,6 +4138,8 @@ https://amg00862-amg00862c5-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-a
 https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8
 #EXTINF:-1 tvg-id="ZeeHorrorNights.in@HD" channel-id="ZeeHorrorNights.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-horror-nights-1080p.png" tvg-country="IN" tvg-content="Movies" group-title="Review" tvg-name="Zee Horror Nights",Zee Horror Nights
 https://amg00862-amg00862c7-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c7-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeSouthFlix.in@HD" channel-id="ZeeSouthFlix.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-south-flix.png" tvg-country="IN" tvg-content="Movies" group-title="Review" tvg-name="Zee South Flix",Zee South Flix
+https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
 #EXTINF:-1 tvg-id="ZeeTamil.in@SD" channel-id="ZeeTamil.in@SD" tvg-language="tam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tamil.png" tvg-country="IN" group-title="Review" tvg-name="Zee Tamil [ ]",Zee Tamil [ ]
 https://ev-eu-hw-fast-mpd.starzplayarabia.com/Zee_Tamil/dash/drm/index.mpd
 #EXTINF:-1 tvg-id="ZeeTV.in@HD" channel-id="ZeeTV.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/zee-tv.svg" tvg-country="IN" group-title="Review" tvg-name="Zee TV",Zee TV
@@ -5174,7 +5192,7 @@ https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=50
 https://dash4.antik.sk/live/test_kika_tizen/playlist.m3u8
 #EXTINF:-1 tvg-id="KiKA.de@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kika-35f698b7a6.png" tvg-country="DE" group-title="Backup" tvg-name="KiKA",KiKA
 https://kikahls.akamaized.net/hls/live/2022690/livetvkika_ww/master.m3u8
-#EXTINF:-1 tvg-id="custom.kinopokaz-ru-movie" tvg-language="rus" channel-id="custom.kinopokaz-ru-movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kinopokaz.png" tvg-country="RU" tvg-content="Movies" group-title="Backup" tvg-name="Kinopokaz",Kinopokaz
+#EXTINF:-1 tvg-id="custom.kinopokaz-ru-movie" tvg-language="rus" channel-id="custom.kinopokaz-ru-movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kinopokaz.png" tvg-country="RU" group-title="Backup" tvg-name="Kinopokaz",Kinopokaz
 http://stream.mcquack.net/64/index.m3u8
 #EXTINF:-1 tvg-id="KnowledgeNetwork.ca" channel-id="KnowledgeNetwork.ca" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/knowledge-network.png" tvg-country="CA" group-title="Backup" tvg-name="Knowledge Network",Knowledge Network
 https://d1wal6k3d7ssin.cloudfront.net/out/v1/ea91db0906c847a4931b46a9ec36e77b/index.m3u8
@@ -5704,7 +5722,7 @@ https://rictv.iptv-playoutcenter.de/rictv/rictv-web/playlist.m3u8
 https://a-cdn.klowdtv.com/live2/rightnowtv_720p/playlist.m3u8
 #EXTINF:-1 tvg-id="RobotWarsByMech.us" channel-id="RobotWarsByMech.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/robot-wars-by-mech.png" tvg-country="US" group-title="Backup" tvg-name="Robot Wars by Mech+",Robot Wars by Mech+
 https://0a644b20819046a0935afa1cf6debf23.mediatailor.us-east-1.amazonaws.com/v1/master/0fb304b2320b25f067414d481a779b77db81760d/Samsung-gb_MechPlus/playlist.m3u8?ads.wurl_channel=1413&ads.wurl_name=MechPlus&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D
-#EXTINF:-1 tvg-id="custom.rodnoe-kino-ru-movie" tvg-language="rus" channel-id="custom.rodnoe-kino-ru-movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rodnoe-kino-576p.png" tvg-country="RU" tvg-content="Movies" group-title="Backup" tvg-name="Rodnoe Kino",Rodnoe Kino
+#EXTINF:-1 tvg-id="custom.rodnoe-kino-ru-movie" tvg-language="rus" channel-id="custom.rodnoe-kino-ru-movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rodnoe-kino-576p.png" tvg-country="RU" group-title="Backup" tvg-name="Rodnoe Kino",Rodnoe Kino
 http://stream.mcquack.net/242/index.m3u8
 #EXTINF:-1 tvg-id="RongeenTV.in@SD" channel-id="RongeenTV.in@SD" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" tvg-country="IN" group-title="Backup" tvg-name="Rongeen TV",Rongeen TV
 https://iptvlive.ahmed-bd-org.workers.dev/rongeen-tv-1/index.m3u8
@@ -6082,7 +6100,7 @@ https://59ef525c24caa.streamlock.net/videotour/videotour/playlist.m3u8
 http://178.124.179.122:8080/HistoryHD/index.m3u8
 #EXTINF:-1 tvg-id="custom.viju-tv1000-action-ru-movie" tvg-language="rus" channel-id="custom.viju-tv1000-action-ru-movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viju-tv1000-action-576p.png" tvg-country="RU" group-title="Backup" tvg-name="viju TV1000 action",viju TV1000 action
 http://46.53.200.153:7777/play/a01h/index.m3u8
-#EXTINF:-1 tvg-id="custom.viju-tv1000-action-ru-movie" tvg-language="rus" channel-id="custom.viju-tv1000-action-ru-movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viju-tv1000-action-576p.png" tvg-country="RU" tvg-content="Movies" group-title="Backup" tvg-name="viju TV1000 action",viju TV1000 action
+#EXTINF:-1 tvg-id="custom.viju-tv1000-action-ru-movie" tvg-language="rus" channel-id="custom.viju-tv1000-action-ru-movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viju-tv1000-action-576p.png" tvg-country="RU" group-title="Backup" tvg-name="viju TV1000 action",viju TV1000 action
 http://stream.mcquack.net/100/index.m3u8
 #EXTINF:-1 tvg-id="custom.viju-tv1000-russkoe-ru-movie" tvg-language="rus" channel-id="custom.viju-tv1000-russkoe-ru-movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/viju-tv1000-russkoe.png" tvg-country="RU" group-title="Backup" tvg-name="viju TV1000 russkoe",viju TV1000 russkoe
 http://46.53.200.153:7777/play/a01g/index.m3u8
