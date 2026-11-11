@@ -92,6 +92,13 @@ FORCED_CHANNEL_LOGOS = {
 # only consulted after the repository-wide local logo search. Keep them here
 # so all playlist variants reuse the same locally stored image.
 EXTRA_DIRECT_HINTS = {
+    "Channel Fight": {
+        "url": "https://cdn.castify.ai/files/app/web/channelfightfutterlogo.png",
+        "format": "PNG",
+        "page": "https://www.channelfight.com/about",
+        "license": "Official Channel Fight website image asset; channel identity confirmed on broadcaster's About page",
+        "license_url": "",
+    },
     "10 TV": {
         "url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_10TV/images/LOGO_HD/image.png",
         "format": "PNG",
