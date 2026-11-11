@@ -54,12 +54,9 @@ jobs:
     # workflow is blocked: failed maintenance publishes no new playlist bytes, but
     # must not suppress EPG freshness/coverage work for the last known-good inputs.
     if: ${{ (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion != 'cancelled') && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
-    # Shared main-branch writer queue. Set on the writing job, not the workflow,
-    # so runs whose jobs are skipped do not occupy the queue.
-    concurrency:
-      group: iptv-playlist-main-writer-v3
-      cancel-in-progress: false
-      queue: max
+    # EPG publishes with an input-SHA guard and a rebase loop below.
+    # Keep it out of the playlist-maintenance queue so stale maintenance runs
+    # cannot indefinitely starve XMLTV generation.
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
