@@ -261,6 +261,12 @@ jobs:
               if server.get("server_protocol") != "https" or server.get("url") != host or str(server.get("https_port")) != "443":
                   raise SystemExit(f"{name}: incompatible server_info")
 
+          # Report the playlist URL actually configured in the deployed Worker; credentials are never logged.
+          health_req = urllib.request.Request(f"https://{host}/health", headers=HEADERS)
+          with open_retry(health_req) as response:
+              health = json.loads(response.read().decode("utf-8", "replace"))
+              print(f"{name} Worker source: ok={health.get('ok')} streams={health.get('streams')} playlist={health.get('playlist')}")
+
               source_streams = source_playlist_snapshot()
               expected_by_id = {
                   str(stable_stream_id(stream["tvg_id"], stream["url"])): stream
@@ -331,7 +337,7 @@ jobs:
                                       if actual_fields.get(field) != expected_value
                                   ]
                                   if mismatches:
-                                      parity_mismatches.append(f"{stream_id}:{','.join(mismatches)}")
+                                      parity_mismatches.append(f"{stream_id}:{','.join(mismatches)}:source_num={expected.get('chno')}:api_num={actual.get('num')}")
                               if not parity_mismatches:
                                   last_sync_detail = ""
                                   break
