@@ -28,7 +28,7 @@ ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup",
-    "Review", "New Channels", "New Backups",
+    "New Channels", "New Backups", "Review",
 ]
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
@@ -649,7 +649,7 @@ def restore() -> None:
                 record[0] = set_attr(record[0], "group-title", "Review")
             snapshot_review.append(record)
 
-    # Canonical order: curated primary groups, Backup, Review, then discovery queues.
+    # Canonical order: curated primary groups, Backup, discovery queues, then Review.
     queue_groups = {"New Channels", "New Backups", "New Backup"}
     active_primary = [
         record for record in active_records if group_of(record[0]) not in queue_groups
