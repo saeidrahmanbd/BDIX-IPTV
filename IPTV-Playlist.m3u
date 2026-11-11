@@ -2660,7 +2660,7 @@ https://livetv.timeiptv.in/ShekinahNewsIndia/955ad3298db330b5ee880c2c9e6f23a0.sd
 https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8
 #EXTINF:-1 tvg-id="ShemarooTV.in@SD" tvg-name="Shemaroo TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shemaroo-tv.png" channel-id="ShemarooTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",Shemaroo TV
 https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=1784102595&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=2347b8a1b6f0ba558b12440528ea38a5
-#EXTINF:-1 tvg-id="Si Solo Calcio.it" tvg-name="SOLOCALCIO ITALIA" channel-id="Si Solo Calcio.it" tvg-language="und" tvg-country="IT" group-title="Review",SOLOCALCIO ITALIA
+#EXTINF:-1 tvg-id="Si Solo Calcio.it" tvg-name="SOLOCALCIO ITALIA" channel-id="Si Solo Calcio.it" tvg-language="und" tvg-country="IT" group-title="Review" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/solocalcio-italia.png",SOLOCALCIO ITALIA
 https://italiansport-solocalcio-samsung.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="SomoyNewsTV.bd" tvg-name="Somoy TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/somoy-tv.png" channel-id="SomoyNewsTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Somoy TV
 https://drk6xq0vhn.gpcdn.net/live/somoy_tv_abr/index.m3u8
@@ -2734,7 +2734,7 @@ https://drk6xq0vhn.gpcdn.net/live/tlc_hd_abr/index.m3u8
 https://drk6xq0vhn.gpcdn.net/live/tlc_sd_abr/index.m3u8
 #EXTINF:-1 tvg-id="TOPBarca.pl@SD" tvg-name="TOP Barca" channel-id="TOPBarca.pl@SD" tvg-language="und" tvg-country="PL" group-title="Review" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/top-barca.png",TOP Barca
 https://amg17560-fcb-amg17560c1-rakuten-uk-4891.playouts.now.amagi.tv/playlist/amg17560-fcbarcelona-topbarcaenglish-rakutenuk/playlist.m3u8
-#EXTINF:-1 tvg-id="TVSSportsBureau.us@SD" tvg-name="TVS Sports Bureau" channel-id="TVSSportsBureau.us@SD" tvg-language="und" tvg-country="US" group-title="Review",TVS Sports Bureau
+#EXTINF:-1 tvg-id="TVSSportsBureau.us@SD" tvg-name="TVS Sports Bureau" channel-id="TVSSportsBureau.us@SD" tvg-language="und" tvg-country="US" group-title="Review" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvs-sports-bureau.png",TVS Sports Bureau
 https://rpn.bozztv.com/gusa/gusa-tvssportsbureau/index.m3u8
 #EXTINF:-1 tvg-id="UTVPalakkad.in@SD" tvg-name="UTV Palakkad" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/utv-palakkad.png" channel-id="UTVPalakkad.in@SD" tvg-country="IN" tvg-language="mal" group-title="Review",UTV Palakkad
 https://em4qj6nedyvg-hls-live.wmncdn.net/utv/ab2de115318ae40bdd434e193a2f2e7f.sdp/playlist.m3u8
