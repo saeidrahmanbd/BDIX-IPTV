@@ -1,12 +1,19 @@
-# Playlist Studio v5.0.0 Release Integrity
+# Playlist Studio v5.1 Release Integrity
 
-The official Playlist Studio v5.0.0 GitHub release currently publishes SHA-256 digests for its downloadable assets.
+The SHA-256 digests below are taken from the published GitHub release asset metadata for [Playlist Studio v5.1](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1).
 
-| Asset | SHA-256 |
-|---|---|
-| `Playlist-Studio-5.0.exe` | `ddecae31e33e5750691e3675680fe728ded73263e9aac51bd34d8f5a9547eee0` |
-| `Playlist-Studio-5_0-Windows-Build-Kit-Debug22.zip` | `d72b097dc909958845c2ba210dd633ed8e71aae00e81a4fbae7d3bed3d3826ac` |
+| Asset | Size | SHA-256 |
+|---|---:|---|
+| `Playlist-Studio-5.1.exe` | 102,526,298 bytes | `ef0b58e0108dc76d886b92a88170ff5fd231704604150d6283feb6f1b9f48412` |
+| `Playlist-Studio-5_1-Windows-Build-Kit-r2.zip` | 688,328 bytes | `66d1de92f3d2285c38afae767697dae71e74a842266ce644700f8cd745453335` |
 
-These digests are taken from the v5.0.0 release metadata. The `Debug22` string is part of the published Build Kit filename; it should not be interpreted as the portable EXE being a debug build.
+These values identify the exact assets published on the v5.1 release at the time this file was updated. Verify a downloaded file locally before running or extracting it.
 
-For the authoritative release metadata and downloads, use the [Playlist Studio v5.0.0 release](https://github.com/saeidrahmanbd/Playlist-Studio/releases/tag/v5.0.0).
+## Verify on Windows
+
+In PowerShell, run:
+
+    Get-FileHash .\Playlist-Studio-5.1.exe -Algorithm SHA256
+    Get-FileHash .\Playlist-Studio-5_1-Windows-Build-Kit-r2.zip -Algorithm SHA256
+
+Compare the resulting `Hash` values with the corresponding values above. The release page remains the authoritative source if an asset is replaced.
