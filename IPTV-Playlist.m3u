@@ -2314,9 +2314,9 @@ https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg012
 https://9xjio.wiseplayout.com/9XM/master.m3u8
 #EXTINF:-1 tvg-id="AakaashAath.in@SD" tvg-name="Aakaash Aath" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath.png" channel-id="AakaashAath.in@SD" tvg-country="IN" tvg-language="und" group-title="Review",Aakaash Aath
 http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
-#EXTINF:-1 tvg-id="abc.sport.in.90.seconds.com" tvg-name="ABC Sport in 90 Seconds" channel-id="abc.sport.in.90.seconds.com" tvg-language="und" tvg-country="AU" group-title="Review",ABC Sport in 90 Seconds
+#EXTINF:-1 tvg-id="abc.sport.in.90.seconds.com" tvg-name="ABC Sport in 90 Seconds" channel-id="abc.sport.in.90.seconds.com" tvg-language="und" tvg-country="AU" tvg-chno="683" group-title="Sports",ABC Sport in 90 Seconds
 https://c.mjh.nz/sport_in_90_seconds
-#EXTINF:-1 tvg-id="absinthe.tv.com" tvg-name="Absinthe TV" channel-id="absinthe.tv.com" tvg-language="und" tvg-country="US" group-title="Review",Absinthe TV
+#EXTINF:-1 tvg-id="absinthe.tv.com" tvg-name="Absinthe TV" channel-id="absinthe.tv.com" tvg-language="und" tvg-country="US" tvg-chno="684" group-title="Sports",Absinthe TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/254b2fef-a3dd-4a6d-af18-38711e02e31c/manifest.m3u8
 #EXTINF:-1 tvg-id="action.bollywood.movies.in" tvg-name="Action Bollywood Movies" channel-id="action.bollywood.movies.in" tvg-country="IN" tvg-language="und" group-title="Review",Action Bollywood Movies
 https://amg01076-lightningintern-actionhollywood-samsungnz-82rry.amagi.tv/playlist/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
@@ -2348,17 +2348,17 @@ https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8
 https://cdn.ghuddi.live/Bangla_TV/Bangla_TV_BD/playlist.m3u8
 #EXTINF:-1 tvg-id="BengaliBeats.bd" tvg-name="Bengali Beats" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bengali-beats.png" channel-id="BengaliBeats.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Bengali Beats
 https://live20.bozztv.com/giatvplayout7/giatv-209587/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="big.12.studios.com" tvg-name="Big 12 Studios" channel-id="big.12.studios.com" tvg-language="und" tvg-country="US" group-title="Review",Big 12 Studios
+#EXTINF:-1 tvg-id="big.12.studios.com" tvg-name="Big 12 Studios" channel-id="big.12.studios.com" tvg-language="und" tvg-country="US" tvg-chno="685" group-title="Sports",Big 12 Studios
 https://d18pj8s9gbivdq.cloudfront.net/The_Big_12.m3u8
 #EXTINF:-1 tvg-id="BijoyTV.bd" tvg-name="Bijoy TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bijoy-tv.png" channel-id="BijoyTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Bijoy TV
 https://drk6xq0vhn.gpcdn.net/live/bijoy_tv_abr/index.m3u8
 #EXTINF:-1 tvg-id="BijoyTV.bd" tvg-name="Bijoy TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bijoy-tv.png" channel-id="BijoyTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Bijoy TV
 https://stream.ottplus.live/live/bijoy_tv_abr/index.m3u8
-#EXTINF:-1 tvg-id="billiards.com" tvg-name="Billiards+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cctv-billiards-1080p-b0f7f58939.png" channel-id="billiards.com" tvg-language="und" tvg-country="US" group-title="Review",Billiards+
+#EXTINF:-1 tvg-id="billiards.com" tvg-name="Billiards+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cctv-billiards-1080p-b0f7f58939.png" channel-id="billiards.com" tvg-language="und" tvg-country="US" tvg-chno="686" group-title="Sports",Billiards+
 https://streams2.sofast.tv/WiseM3U8_18/sofast/cleanhls/master.m3u8
 #EXTINF:-1 tvg-id="BoishakhiTV.bd" tvg-name="Boishakhi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/boishakhi-tv.png" channel-id="BoishakhiTV.bd" tvg-country="BD" tvg-language="und" group-title="Review",Boishakhi TV
 https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
-#EXTINF:-1 tvg-id="bowling.tv.com" tvg-name="Bowling TV" channel-id="bowling.tv.com" tvg-language="und" tvg-country="US" group-title="Review",Bowling TV
+#EXTINF:-1 tvg-id="bowling.tv.com" tvg-name="Bowling TV" channel-id="bowling.tv.com" tvg-language="und" tvg-country="US" tvg-chno="687" group-title="Sports",Bowling TV
 https://bozztv.com/gusa/gusa-tvsbowling/index.m3u8
 #EXTINF:-1 tvg-id="BSFilm.pk@SD" tvg-name="BS Film" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bs-film.png" channel-id="BSFilm.pk@SD" tvg-country="PK" tvg-language="urd" group-title="Review",BS Film
 https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
@@ -2388,13 +2388,13 @@ https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/index.m3u8
 https://iptvlive.ahmed-bd-org.workers.dev/channel-24-hd-1/index.m3u8
 #EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" channel-id="Channel24.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Channel 24
 https://stream.ottplus.live/live/channel_24_abr/index.m3u8
-#EXTINF:-1 tvg-id="channel.fight.com" tvg-country="US" tvg-name="Channel Fight" channel-id="channel.fight.com" tvg-language="und" group-title="Review",Channel Fight
+#EXTINF:-1 tvg-id="channel.fight.com" tvg-country="US" tvg-name="Channel Fight" channel-id="channel.fight.com" tvg-language="und" tvg-chno="688" group-title="Sports",Channel Fight
 https://d15wqvt0xm15k4.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/ChannelFight-Nuestra/266.m3u8
-#EXTINF:-1 tvg-id="channel.fight.com@channel.fight" tvg-country="US" tvg-name="Channel Fight" channel-id="channel.fight.com@channel.fight" tvg-language="und" group-title="Review",Channel Fight
+#EXTINF:-1 tvg-id="channel.fight.com@channel.fight" tvg-country="US" tvg-name="Channel Fight" channel-id="channel.fight.com@channel.fight" tvg-language="und" tvg-chno="689" group-title="Sports",Channel Fight
 https://d15wqvt0xm15k4.cloudfront.net/scheduler/scheduleMaster/266.m3u8
 #EXTINF:-1 tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" channel-id="ChannelI.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Channel I
 https://tvsen3.b-cdn.net/qUud8Nxs/index.m3u8
-#EXTINF:-1 tvg-id="chukker.com" tvg-country="US" tvg-name="Chukker" channel-id="chukker.com" tvg-language="und" group-title="Review",Chukker
+#EXTINF:-1 tvg-id="chukker.com" tvg-country="US" tvg-name="Chukker" channel-id="chukker.com" tvg-language="und" tvg-chno="690" group-title="Sports",Chukker
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/3bd726a3-0d30-491d-b5e7-e1afb6e02112/manifest.m3u8
 #EXTINF:-1 tvg-id="CineJomjomat.in@SD" tvg-name="Cine Jomjomat" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cine-jomjomat.png" channel-id="CineJomjomat.in@SD" tvg-country="IN" tvg-language="und" group-title="Review",Cine Jomjomat
 https://amg13779-amg13779c1-amgplt0016.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg13779-amg13779c1-amgplt0016/playlist.m3u8
@@ -2414,7 +2414,7 @@ http://103.135.253.32:8080/COLOR-CINEPLEX/index.m3u8
 https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg17292-tetonridgellc-tetonridgefast-distrotvus/playlist.m3u8
 #EXTINF:-1 tvg-id="DangalTV.in@SD" tvg-name="Dangal" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal.png" channel-id="DangalTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",Dangal
 https://tvsen3.aynaott.com/qPNg4LJK/index.m3u8
-#EXTINF:-1 tvg-id="dazn.ringside.com" tvg-country="GB" tvg-name="Dazn Ringside" channel-id="dazn.ringside.com" tvg-language="und" group-title="Review",Dazn Ringside
+#EXTINF:-1 tvg-id="dazn.ringside.com" tvg-country="GB" tvg-name="Dazn Ringside" channel-id="dazn.ringside.com" tvg-language="und" tvg-chno="691" group-title="Sports",Dazn Ringside
 https://aegis-cloudfront-1.tubi.video/bfad29e2-5bee-44f3-8256-127324e8b106/playlist.m3u8
 #EXTINF:-1 tvg-id="DBCNews.bd" tvg-name="DBC News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dbc-news.png" channel-id="DBCNews.bd" tvg-country="BD" tvg-language="und" group-title="Review",DBC News
 http://tvn3.chowdhury-shaheb.com/dbc/index.m3u8
@@ -2460,7 +2460,7 @@ https://cc-p1izg43bk7sj5.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 http://66.102.126.10:8000/play/a01i/index.m3u8
 #EXTINF:-1 tvg-id="EpicTV.in@Digital" tvg-name="Epic TV Digital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-tv-digital.png" channel-id="EpicTV.in@Digital" tvg-country="IN" tvg-language="und" group-title="Review",Epic TV Digital
 https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8
-#EXTINF:-1 tvg-id="equus.tv.com" tvg-country="US" tvg-name="Equus TV" channel-id="equus.tv.com" tvg-language="und" group-title="Review",Equus TV
+#EXTINF:-1 tvg-id="equus.tv.com" tvg-country="US" tvg-name="Equus TV" channel-id="equus.tv.com" tvg-language="und" tvg-chno="692" group-title="Sports",Equus TV
 https://d2gwqf8gdwq1zs.cloudfront.net/scheduler/scheduleMaster/426.m3u8
 #EXTINF:-1 tvg-id="ETVCinema.in" tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema-360p-14e6148301.png" channel-id="ETVCinema.in" tvg-country="IN" tvg-language="und" group-title="Review",ETV Cinema
 https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
@@ -2468,19 +2468,19 @@ https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a
 https://d12ee3o8yfkkhd.cloudfront.net/c6a4b411295f47f48c908d2ac0605bad/index.m3u8
 #EXTINF:-1 tvg-id="Eurosport.in@SD" tvg-name="Eurosport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eurosport.png" channel-id="Eurosport.in@SD" tvg-country="IN" tvg-language="eng" group-title="Review",Eurosport
 https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8
-#EXTINF:-1 tvg-id="fight.mvmt.culture.com" tvg-country="US" tvg-name="FIGHT | MVMT Culture" channel-id="fight.mvmt.culture.com" tvg-language="und" group-title="Review",FIGHT | MVMT Culture
+#EXTINF:-1 tvg-id="fight.mvmt.culture.com" tvg-country="US" tvg-name="FIGHT | MVMT Culture" channel-id="fight.mvmt.culture.com" tvg-language="und" tvg-chno="693" group-title="Sports",FIGHT | MVMT Culture
 https://d15g7z5n3epv7t.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/TheGrapplingNetwork-SportsTribal/236.m3u8
-#EXTINF:-1 tvg-id="fight.pfl.com" tvg-name="FIGHT | PFL" channel-id="fight.pfl.com" tvg-language="und" tvg-country="US" group-title="Review",FIGHT | PFL
+#EXTINF:-1 tvg-id="fight.pfl.com" tvg-name="FIGHT | PFL" channel-id="fight.pfl.com" tvg-language="und" tvg-country="US" tvg-chno="694" group-title="Sports",FIGHT | PFL
 https://d2w9b8sam7j3zv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-5g55ahrn9ajah/v1/pfl_pflmma_1/samsungheadend_us/latest/main/hls/playlist.m3u8
-#EXTINF:-1 tvg-id="fight.tv.com" tvg-name="Fight TV" channel-id="fight.tv.com" tvg-language="und" tvg-country="US" group-title="Review",Fight TV
+#EXTINF:-1 tvg-id="fight.tv.com" tvg-name="Fight TV" channel-id="fight.tv.com" tvg-language="und" tvg-country="US" tvg-chno="695" group-title="Sports",Fight TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/70e45fc8-1f6c-4492-ac26-9868f70f4e02/manifest.m3u8
-#EXTINF:-1 tvg-id="five.stars.sports.com" tvg-country="IL" tvg-name="Five Stars Sports" channel-id="five.stars.sports.com" tvg-language="und" group-title="Review",Five Stars Sports
+#EXTINF:-1 tvg-id="five.stars.sports.com" tvg-country="IL" tvg-name="Five Stars Sports" channel-id="five.stars.sports.com" tvg-language="und" tvg-chno="696" group-title="Sports",Five Stars Sports
 http://38.75.136.137:98/gslb/dsdqpub/wxtyhd.m3u8?auth=testpub
-#EXTINF:-1 tvg-id="five.stars.sports.com@five.stars.sports" tvg-country="IL" tvg-name="Five Stars Sports" channel-id="five.stars.sports.com@five.stars.sports" tvg-language="und" group-title="Review",Five Stars Sports
+#EXTINF:-1 tvg-id="five.stars.sports.com@five.stars.sports" tvg-country="IL" tvg-name="Five Stars Sports" channel-id="five.stars.sports.com@five.stars.sports" tvg-language="und" tvg-chno="697" group-title="Sports",Five Stars Sports
 http://rd.gavinping.top:8188/rtp/238.200.200.131:5540
 #EXTINF:-1 tvg-id="FloHockey.us@HD" tvg-name="FloHockey 24" channel-id="FloHockey.us@HD" tvg-language="und" tvg-country="US" group-title="Review",FloHockey 24
 https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="fox.sports.com" tvg-name="FOX Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fox-sports.png" channel-id="fox.sports.com" tvg-language="und" tvg-country="US" group-title="Review",FOX Sports
+#EXTINF:-1 tvg-id="fox.sports.com" tvg-name="FOX Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fox-sports.png" channel-id="fox.sports.com" tvg-language="und" tvg-country="US" tvg-chno="698" group-title="Sports",FOX Sports
 https://d1jzu95oc8fgt3.cloudfront.net/FOX_Sports.m3u8
 #EXTINF:-1 tvg-id="GaziTV.bd" tvg-name="G TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-tv.png" channel-id="GaziTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",G TV
 http://103.135.253.32:8080/Gazi-TV/index.m3u8
@@ -2488,17 +2488,17 @@ http://103.135.253.32:8080/Gazi-TV/index.m3u8
 http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
 #EXTINF:-1 tvg-id="GlobalTV.bd" tvg-name="Global TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-tv-1080p-5ffc043912.png" channel-id="GlobalTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Global TV
 https://stream.ottplus.live/live/global_tv_abr/index.m3u8
-#EXTINF:-1 tvg-id="golf.golfpass.com" tvg-name="GOLF | GOLFPASS" channel-id="golf.golfpass.com" tvg-language="und" tvg-country="US" group-title="Review",GOLF | GOLFPASS
+#EXTINF:-1 tvg-id="golf.golfpass.com" tvg-name="GOLF | GOLFPASS" channel-id="golf.golfpass.com" tvg-language="und" tvg-country="US" tvg-chno="699" group-title="Sports",GOLF | GOLFPASS
 https://d2icntm6fhxrry.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-egqimi4i6n3rh/master.m3u8
-#EXTINF:-1 tvg-id="golfpass.com" tvg-name="GolfPass" channel-id="golfpass.com" tvg-language="und" tvg-country="US" group-title="Review",GolfPass
+#EXTINF:-1 tvg-id="golfpass.com" tvg-name="GolfPass" channel-id="golfpass.com" tvg-language="und" tvg-country="US" tvg-chno="700" group-title="Sports",GolfPass
 https://d2icntm6fhxrry.cloudfront.net/master.m3u8
 #EXTINF:-1 tvg-id="GreenTV.bd@SD" tvg-name="Green TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/repaired-green-tv-d4fdf1175a.png" channel-id="GreenTV.bd@SD" tvg-country="BD" tvg-language="ben" group-title="Review",Green TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="GreenTV.bd@SD" tvg-name="Green TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/repaired-green-tv-d4fdf1175a.png" channel-id="GreenTV.bd@SD" tvg-country="BD" tvg-language="ben" group-title="Review",Green TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="homerun.tv.com" tvg-country="US" tvg-name="Homerun TV" channel-id="homerun.tv.com" tvg-language="und" group-title="Review",Homerun TV
+#EXTINF:-1 tvg-id="homerun.tv.com" tvg-country="US" tvg-name="Homerun TV" channel-id="homerun.tv.com" tvg-language="und" tvg-chno="701" group-title="Sports",Homerun TV
 https://streams2.sofast.tv/WiseM3U8_29/sofast/cleanhls/master.m3u8
-#EXTINF:-1 tvg-id="hoop.tv.com" tvg-country="US" tvg-name="Hoop TV" channel-id="hoop.tv.com" tvg-language="und" group-title="Review",Hoop TV
+#EXTINF:-1 tvg-id="hoop.tv.com" tvg-country="US" tvg-name="Hoop TV" channel-id="hoop.tv.com" tvg-language="und" tvg-chno="702" group-title="Sports",Hoop TV
 https://streams2.sofast.tv/WiseM3U8_28/sofast/cleanhls/master.m3u8
 #EXTINF:-1 tvg-id="HumTV.pk" tvg-name="Hum TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-tv.png" channel-id="HumTV.pk" tvg-country="PK" tvg-language="urd" group-title="Review",Hum TV
 https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
@@ -2534,17 +2534,17 @@ http://tvsen5.aynascope.net/maasrangatv/index.m3u8
 https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8
 #EXTINF:-1 tvg-id="MadaniTV.sa" tvg-name="Madani TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-tv.png" channel-id="MadaniTV.sa" tvg-country="SA" tvg-language="ara" group-title="Review",Madani TV
 https://tvsen3.aynaott.com/z24qLsqV/index.m3u8
-#EXTINF:-1 tvg-id="major.league.cricket.com" tvg-name="Major League Cricket" channel-id="major.league.cricket.com" tvg-language="und" tvg-country="US" group-title="Review",Major League Cricket
+#EXTINF:-1 tvg-id="major.league.cricket.com" tvg-name="Major League Cricket" channel-id="major.league.cricket.com" tvg-language="und" tvg-country="US" tvg-chno="703" group-title="Sports",Major League Cricket
 https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=uiXES2ePt7xTpQnbJxn7Dg&e=2074684474&scheme=https|user-agent=Mozilla
 #EXTINF:-1 tvg-id="MangoMobileTV.in@HD" tvg-name="Mango Mobile TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mango-mobile-tv.png" channel-id="MangoMobileTV.in@HD" tvg-country="IN" tvg-language="und" group-title="Review",Mango Mobile TV
 https://amg01911-mangotv-amg01911c1-xiaomi-in-1270.playouts.now.amagi.tv/playlist/amg01911-mangomassmedia-mangotv-xiaomiin/playlist.m3u8
-#EXTINF:-1 tvg-id="mixer.sportsgrid.com" tvg-name="MIXER | SportsGrid" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sports-grid.png" channel-id="mixer.sportsgrid.com" tvg-language="und" tvg-country="US" group-title="Review",MIXER | SportsGrid
+#EXTINF:-1 tvg-id="mixer.sportsgrid.com" tvg-name="MIXER | SportsGrid" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sports-grid.png" channel-id="mixer.sportsgrid.com" tvg-language="und" tvg-country="US" tvg-chno="704" group-title="Sports",MIXER | SportsGrid
 https://sportsgrid-tribal.amagi.tv/playlistR432p.m3u8
-#EXTINF:-1 tvg-id="mixer.strongman.champions.league.com" tvg-country="NL" tvg-name="MIXER | Strongman Champions League" channel-id="mixer.strongman.champions.league.com" tvg-language="und" group-title="Review",MIXER | Strongman Champions League
+#EXTINF:-1 tvg-id="mixer.strongman.champions.league.com" tvg-country="NL" tvg-name="MIXER | Strongman Champions League" channel-id="mixer.strongman.champions.league.com" tvg-language="und" tvg-chno="705" group-title="Sports",MIXER | Strongman Champions League
 https://3f4b9dde8740443b9b90459fc7b67cdd.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-gb_StrongmanChampionsLeague/playlist.m3u8?ads.wurl_channel=1102&ads.wurl_name=StrongmanChampionsLeague&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D
-#EXTINF:-1 tvg-id="mixer.trace.sports.stars.com" tvg-country="FR" tvg-name="MIXER | Trace Sports Stars" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-sport.png" channel-id="mixer.trace.sports.stars.com" tvg-language="und" group-title="Review",MIXER | Trace Sports Stars
+#EXTINF:-1 tvg-id="mixer.trace.sports.stars.com" tvg-country="FR" tvg-name="MIXER | Trace Sports Stars" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-sport.png" channel-id="mixer.trace.sports.stars.com" tvg-language="und" tvg-chno="706" group-title="Sports",MIXER | Trace Sports Stars
 https://trace-sportstars-samsungnz.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="mixer.world.of.freesports.com" tvg-name="MIXER | World of Freesports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/world-of-freesports.png" channel-id="mixer.world.of.freesports.com" tvg-language="und" tvg-country="DE" group-title="Review",MIXER | World of Freesports
+#EXTINF:-1 tvg-id="mixer.world.of.freesports.com" tvg-name="MIXER | World of Freesports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/world-of-freesports.png" channel-id="mixer.world.of.freesports.com" tvg-language="und" tvg-country="DE" tvg-chno="707" group-title="Sports",MIXER | World of Freesports
 https://amg01866-mainstreammedia-freesportsinc-sportstribal-b3zdo.amagi.tv/ts-eu-w1-n2/playlist/amg01866-mainstreammedia-freesportsinc-sportstribal/playlist.m3u8
 #EXTINF:-1 tvg-id="MNBSport.mn@SD" tvg-name="MNB Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mnb-sport-037e6fd069.png" channel-id="MNBSport.mn@SD" tvg-language="und" tvg-country="MN" group-title="Review",MNB Sport
 https://live.mnb.mn/hls/mnb_sport.stream.m3u8
@@ -2556,9 +2556,9 @@ https://vods2.aynaott.com/hindimovies/tracks-v1a1/mono.ts.m3u8
 https://stream.ottplus.live/live/movie_bangla_abr/index.m3u8
 #EXTINF:-1 tvg-id="MRTVSports.mm@SD" tvg-name="MRTV Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mrtv-sports-d111012fdd.png" channel-id="MRTVSports.mm@SD" tvg-language="und" tvg-country="MM" group-title="Review",MRTV Sports
 https://mrtvott.com/cache/MRTV-SPORT/master.m3u8
-#EXTINF:-1 tvg-id="msg.sportszone.com" tvg-name="MSG SportsZone" channel-id="msg.sportszone.com" tvg-language="und" tvg-country="US" group-title="Review",MSG SportsZone
+#EXTINF:-1 tvg-id="msg.sportszone.com" tvg-name="MSG SportsZone" channel-id="msg.sportszone.com" tvg-language="und" tvg-country="US" tvg-chno="708" group-title="Sports",MSG SportsZone
 https://d2a31kzot4f8t3.cloudfront.net/v1/amc_msgsportszone_1/samsungheadend_us/latest/main/hls/playlist.m3u8
-#EXTINF:-1 tvg-id="mvmt.of.culture.com" tvg-country="US" tvg-name="MVMT of Culture" channel-id="mvmt.of.culture.com" tvg-language="und" group-title="Review",MVMT of Culture
+#EXTINF:-1 tvg-id="mvmt.of.culture.com" tvg-country="US" tvg-name="MVMT of Culture" channel-id="mvmt.of.culture.com" tvg-language="und" tvg-chno="709" group-title="Sports",MVMT of Culture
 https://d2kwqe56yti97f.cloudfront.net/scheduler/scheduleMaster/490.m3u8
 #EXTINF:-1 tvg-id="NagorikTV.bd" tvg-name="Nagorik TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nagorik-tv-90b5d16aaf.png" channel-id="NagorikTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Nagorik TV
 https://box.bbaria.net/Nagorik_TV/tracks-v1a1/mono.m3u8
@@ -2568,17 +2568,17 @@ https://box.bbaria.net:8083/Nagorik_TV/video.m3u8
 http://103.135.253.32:8080/NATGEO-HD/index.m3u8
 #EXTINF:-1 tvg-id="NexusTV.bd" tvg-name="Nexus TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nexus-tv.png" channel-id="NexusTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Nexus TV
 https://stream.ottplus.live/live/nexus_tv_abr/index.m3u8
-#EXTINF:-1 tvg-id="nhl.network.hd.com" tvg-name="NHL Network HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nhl-network.png" channel-id="nhl.network.hd.com" tvg-language="und" tvg-country="US" group-title="Review",NHL Network HD
+#EXTINF:-1 tvg-id="nhl.network.hd.com" tvg-name="NHL Network HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nhl-network.png" channel-id="nhl.network.hd.com" tvg-language="und" tvg-country="US" tvg-chno="710" group-title="Sports",NHL Network HD
 https://aegis-cloudfront-1.tubi.video/1f4cbb33-cb23-40ab-b54b-2965cc551b32/playlist.m3u8
 #EXTINF:-1 tvg-id="NickBangla.bd" tvg-name="Nick Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-bangla-26fef2ac19.png" channel-id="NickBangla.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Nick Bangla
 http://103.135.253.32:8080/NICK/index.m3u8
-#EXTINF:-1 tvg-id="omstars.com" tvg-name="Omstars" channel-id="omstars.com" tvg-language="und" tvg-country="US" group-title="Review",Omstars
+#EXTINF:-1 tvg-id="omstars.com" tvg-name="Omstars" channel-id="omstars.com" tvg-language="und" tvg-country="US" tvg-chno="711" group-title="Sports",Omstars
 https://d1too6m5v9oyet.cloudfront.net/scheduler/scheduleMaster/281.m3u8
 #EXTINF:-1 tvg-id="OscarMoviesBhojpuri.in@SD" tvg-name="Oscar Movies Bhojpuri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/oscar-movies-bhojpuri.png" channel-id="OscarMoviesBhojpuri.in@SD" tvg-country="IN" tvg-language="bho" group-title="Review",Oscar Movies Bhojpuri
 https://cdn.pishow.tv/ott/live/233/master.m3u8
 #EXTINF:-1 tvg-id="PBRRidePass.us@HD" tvg-name="PBR RidePass 24" channel-id="PBRRidePass.us@HD" tvg-language="und" tvg-country="US" group-title="Review",PBR RidePass 24
 https://amg17573-amg17573c1-flosports-worldwide-8159.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="pfl.com" tvg-name="PFL" channel-id="pfl.com" tvg-language="und" tvg-country="US" group-title="Review",PFL
+#EXTINF:-1 tvg-id="pfl.com" tvg-name="PFL" channel-id="pfl.com" tvg-language="und" tvg-country="US" tvg-chno="712" group-title="Sports",PFL
 https://d2w9b8sam7j3zv.cloudfront.net/v1/pfl_pflmma_1/samsungheadend_us/latest/main/hls/playlist.m3u8
 #EXTINF:-1 tvg-id="PKSports.pk@SD" tvg-name="PK Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pk-sports.png" channel-id="PKSports.pk@SD" tvg-country="PK" tvg-language="urd" group-title="Review",PK Sports
 https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8
@@ -2586,21 +2586,21 @@ https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8
 https://app.ncare.live/live-orgin/channels.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="Pogo.in@SD" tvg-name="Pogo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pogo.png" channel-id="Pogo.in@SD" tvg-country="IN" tvg-language="eng" group-title="Review",Pogo
 https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
-#EXTINF:-1 tvg-id="powder.tv.com" tvg-country="US" tvg-name="Powder TV" channel-id="powder.tv.com" tvg-language="und" group-title="Review",Powder TV
+#EXTINF:-1 tvg-id="powder.tv.com" tvg-country="US" tvg-name="Powder TV" channel-id="powder.tv.com" tvg-language="und" tvg-chno="713" group-title="Sports",Powder TV
 https://linear-265.frequency.stream/dist/plex/265/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="PTVSports.pk" tvg-name="PTV Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptv-sports.png" channel-id="PTVSports.pk" tvg-country="PK" tvg-language="urd" group-title="Review",PTV Sports
 http://103.135.253.32:8080/PTV-SPORTS/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="QazSport.kz@SD" tvg-name="QazSport" channel-id="QazSport.kz@SD" tvg-language="und" tvg-country="KZ" group-title="Review",QazSport
 https://qazsporttv-stream.qazcdn.com/qazsporttv/qazsporttv/playlist.m3u8
-#EXTINF:-1 tvg-id="racing.hagerty.com" tvg-name="RACING | Hagerty" channel-id="racing.hagerty.com" tvg-language="und" tvg-country="US" group-title="Review",RACING | Hagerty
+#EXTINF:-1 tvg-id="racing.hagerty.com" tvg-name="RACING | Hagerty" channel-id="racing.hagerty.com" tvg-language="und" tvg-country="US" tvg-chno="714" group-title="Sports",RACING | Hagerty
 https://dqw6u0upa8l21.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-0etl87ne2tj77/Hagerty.m3u8
 #EXTINF:-1 tvg-id="RajdhaniTV.bd" tvg-name="Rajdhani TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv.png" channel-id="RajdhaniTV.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Rajdhani TV
 https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8
 #EXTINF:-1 channel-id="RakutenMovies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rakuten-movies.png" tvg-id="RakutenMovies" tvg-name="Rakuten Movies" tvg-language="eng" tvg-country="US" group-title="Review",Rakuten Movies
 https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8
-#EXTINF:-1 tvg-id="real.madrid.com" tvg-name="REAL MADRID" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/real-madrid-tv-a93e7915a6.png" channel-id="real.madrid.com" tvg-language="und" tvg-country="ES" group-title="Review",REAL MADRID
+#EXTINF:-1 tvg-id="real.madrid.com" tvg-name="REAL MADRID" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/real-madrid-tv-a93e7915a6.png" channel-id="real.madrid.com" tvg-language="und" tvg-country="ES" tvg-chno="715" group-title="Sports",REAL MADRID
 https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8
-#EXTINF:-1 tvg-id="redbull.com" tvg-name="RedBull" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/red-bull-tv-au-4ec4c704c2.png" channel-id="redbull.com" tvg-language="und" tvg-country="AT" group-title="Review",RedBull
+#EXTINF:-1 tvg-id="redbull.com" tvg-name="RedBull" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/red-bull-tv-au-4ec4c704c2.png" channel-id="redbull.com" tvg-language="und" tvg-country="AT" tvg-chno="716" group-title="Sports",RedBull
 https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8
 #EXTINF:-1 tvg-id="RTV.bd" tvg-name="RTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rtv.png" channel-id="RTV.bd" tvg-country="BD" tvg-language="und" group-title="Review",RTV
 http://tvsen5.aynascope.net/RtvHD/index.m3u8
@@ -2622,9 +2622,9 @@ https://livetv.timeiptv.in/ShekinahNewsIndia/955ad3298db330b5ee880c2c9e6f23a0.sd
 https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8
 #EXTINF:-1 tvg-id="ShemarooTV.in@SD" tvg-name="Shemaroo TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shemaroo-tv.png" channel-id="ShemarooTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",Shemaroo TV
 https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=1784102595&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=2347b8a1b6f0ba558b12440528ea38a5
-#EXTINF:-1 tvg-id="shooting.sports.life.com" tvg-country="US" tvg-name="Shooting Sports Life" channel-id="shooting.sports.life.com" tvg-language="und" group-title="Review",Shooting Sports Life
+#EXTINF:-1 tvg-id="shooting.sports.life.com" tvg-country="US" tvg-name="Shooting Sports Life" channel-id="shooting.sports.life.com" tvg-language="und" tvg-chno="717" group-title="Sports",Shooting Sports Life
 https://linear-1312.frequency.stream/dist/stirr/1312/hls/master/playlist.m3u8
-#EXTINF:-1 tvg-id="sn.tv.com" tvg-country="GB" tvg-name="SN TV" channel-id="sn.tv.com" tvg-language="und" group-title="Review",SN TV
+#EXTINF:-1 tvg-id="sn.tv.com" tvg-country="GB" tvg-name="SN TV" channel-id="sn.tv.com" tvg-language="und" tvg-chno="718" group-title="Sports",SN TV
 https://linear-502.frequency.stream/dist/plex/502/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="Si Solo Calcio.it" tvg-name="SOLOCALCIO ITALIA" channel-id="Si Solo Calcio.it" tvg-language="und" tvg-country="IT" group-title="Review",SOLOCALCIO ITALIA
 https://italiansport-solocalcio-samsung.amagi.tv/playlist.m3u8
@@ -2654,7 +2654,7 @@ https://livetv.shamon-cable.net:8443/sony_yay/index.m3u8
 https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8
 #EXTINF:-1 tvg-id="Spondon.in@SD" tvg-name="Spondon" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/spondon.png" channel-id="Spondon.in@SD" tvg-country="IN" tvg-language="und" group-title="Review",Spondon
 https://nktv.smartstream.video/smartstream-us/spondon/spondon/playlist.m3u8
-#EXTINF:-1 tvg-id="sport.fishing.tv.com" tvg-country="US" tvg-name="Sport Fishing TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-sports-fishing-tv.png" channel-id="sport.fishing.tv.com" tvg-language="und" group-title="Review",Sport Fishing TV
+#EXTINF:-1 tvg-id="sport.fishing.tv.com" tvg-country="US" tvg-name="Sport Fishing TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-sports-fishing-tv.png" channel-id="sport.fishing.tv.com" tvg-language="und" tvg-chno="719" group-title="Sports",Sport Fishing TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/eea68b79-bfe2-451e-a227-d637a5b9548a/manifest.m3u8
 #EXTINF:-1 tvg-id="StarBharat.in" tvg-name="Star Bharat" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-bharat.png" channel-id="StarBharat.in" tvg-country="IN" tvg-language="hin" group-title="Review",Star Bharat
 http://103.135.253.32:8080/STAR-BHARAT/index.m3u8
@@ -2684,17 +2684,17 @@ http://tvsen7.aynascope.net/ssport2hd/index.m3u8
 http://103.135.253.32:8080/SUN-BANGLA/index.m3u8
 #EXTINF:-1 tvg-id="SunTV.in@HD" tvg-name="Sun TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-tv.png" channel-id="SunTV.in@HD" tvg-country="IN" tvg-language="tam" group-title="Review",Sun TV
 https://d2px1d6ssc60fw.cloudfront.net/SunTV/SunTV-HDR10-IN-index.m3u8
-#EXTINF:-1 tvg-id="surf.cinema.com" tvg-country="US" tvg-name="Surf Cinema" channel-id="surf.cinema.com" tvg-language="und" group-title="Review",Surf Cinema
+#EXTINF:-1 tvg-id="surf.cinema.com" tvg-country="US" tvg-name="Surf Cinema" channel-id="surf.cinema.com" tvg-language="und" tvg-chno="720" group-title="Sports",Surf Cinema
 https://amg13231-actve-amg13231c4-samsung-au-2990.playouts.now.amagi.tv/playlist/amg13231-actvefast-surfer-samsungau/playlist.m3u8
-#EXTINF:-1 tvg-id="surf.cinema.com@surf.cinema" tvg-country="US" tvg-name="Surf Cinema" channel-id="surf.cinema.com@surf.cinema" tvg-language="und" group-title="Review",Surf Cinema
+#EXTINF:-1 tvg-id="surf.cinema.com@surf.cinema" tvg-country="US" tvg-name="Surf Cinema" channel-id="surf.cinema.com@surf.cinema" tvg-language="und" tvg-chno="721" group-title="Sports",Surf Cinema
 https://amg13231-actve-amg13231c4-samsung-nz-3093.playouts.now.amagi.tv/playlist/amg13231-actvefast-surfer-samsungnz/playlist.m3u8
-#EXTINF:-1 tvg-id="surfer.tv.com" tvg-country="US" tvg-name="Surfer TV" channel-id="surfer.tv.com" tvg-language="und" group-title="Review",Surfer TV
+#EXTINF:-1 tvg-id="surfer.tv.com" tvg-country="US" tvg-name="Surfer TV" channel-id="surfer.tv.com" tvg-language="und" tvg-chno="722" group-title="Sports",Surfer TV
 https://dgwfm675921lp.cloudfront.net/playlist.m3u8
 #EXTINF:-1 tvg-id="surfer.tv.com@surfer.tv" tvg-name="Surfer TV" channel-id="surfer.tv.com@surfer.tv" tvg-language="und" tvg-country="TV" group-title="Review",Surfer TV
 https://linear-149.frequency.stream/dist/plex/149/hls/master/playlist.m3u8
-#EXTINF:-1 tvg-id="surfing.com" tvg-country="CN" tvg-name="Surfing+ 冲浪" channel-id="surfing.com" tvg-language="und" group-title="Review",Surfing+ 冲浪
+#EXTINF:-1 tvg-id="surfing.com" tvg-country="CN" tvg-name="Surfing+ 冲浪" channel-id="surfing.com" tvg-language="und" tvg-chno="723" group-title="Sports",Surfing+ 冲浪
 https://dr4jwhk0sty71.cloudfront.net/scheduler/scheduleMaster/444.m3u8
-#EXTINF:-1 tvg-id="swerve.sports.com" tvg-name="Swerve Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/swerve-sports-5bcc3e9a7f.png" channel-id="swerve.sports.com" tvg-language="und" tvg-country="US" group-title="Review",Swerve Sports
+#EXTINF:-1 tvg-id="swerve.sports.com" tvg-name="Swerve Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/swerve-sports-5bcc3e9a7f.png" channel-id="swerve.sports.com" tvg-language="und" tvg-country="US" tvg-chno="724" group-title="Sports",Swerve Sports
 https://linear-1013.frequency.stream/dist/plex/1013/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="TSports.bd" tvg-name="T Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png" channel-id="TSports.bd" tvg-country="BD" tvg-language="ben" group-title="Review",T Sports
 http://103.135.253.32:8080/T-SPORTS-FULL-HD/tracks-v1a1/mono.m3u8
@@ -2702,11 +2702,11 @@ http://103.135.253.32:8080/T-SPORTS-FULL-HD/tracks-v1a1/mono.m3u8
 https://tvsen7.aynaott.com/rEBp38Ax/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="custom.tentvprime" tvg-name="Ten TV Prime" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-tv-prime-ac43f0fa9e.png" channel-id="custom.tentvprime" tvg-country="BD" tvg-language="ben" group-title="Review",Ten TV Prime
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/primetv.stream/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="tennis.com" tvg-country="US" tvg-name="Tennis+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cctv-golf-and-tennis-68e8bff175.png" channel-id="tennis.com" tvg-language="und" group-title="Review",Tennis+
+#EXTINF:-1 tvg-id="tennis.com" tvg-country="US" tvg-name="Tennis+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cctv-golf-and-tennis-68e8bff175.png" channel-id="tennis.com" tvg-language="und" tvg-chno="725" group-title="Sports",Tennis+
 https://amg01935-amg01935c1-amgplt0165.playout.now3.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="ThanthiOne.in" tvg-name="Thanthi One" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thanthi-one.png" channel-id="ThanthiOne.in" tvg-country="IN" tvg-language="und" group-title="Review",Thanthi One
 https://mumbai-edge.smartplaytv.in/thanthione/index.m3u8
-#EXTINF:-1 tvg-id="the.grappling.network.com" tvg-country="US" tvg-name="The Grappling Network" channel-id="the.grappling.network.com" tvg-language="und" group-title="Review",The Grappling Network
+#EXTINF:-1 tvg-id="the.grappling.network.com" tvg-country="US" tvg-name="The Grappling Network" channel-id="the.grappling.network.com" tvg-language="und" tvg-chno="726" group-title="Sports",The Grappling Network
 https://d1vwakhda3vp6p.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/STIRR-MuxIP-TheGrapplingNetwork/236.m3u8
 #EXTINF:-1 tvg-id="custom.the.q" tvg-name="The Q" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-q-india.svg" channel-id="custom.the.q" tvg-country="IN" tvg-language="hin" group-title="Review",The Q
 https://tvsen6.aynaott.com/3PjZZahm/index.m3u8?e=1784102596&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=92ddc6a5821e135aef133dbd8b8b6fc7
@@ -2720,7 +2720,7 @@ https://drk6xq0vhn.gpcdn.net/live/tlc_sd_abr/index.m3u8
 https://amg17560-fcb-amg17560c1-rakuten-uk-4891.playouts.now.amagi.tv/playlist/amg17560-fcbarcelona-topbarcaenglish-rakutenuk/playlist.m3u8
 #EXTINF:-1 tvg-id="TVSSportsBureau.us@SD" tvg-name="TVS Sports Bureau" channel-id="TVSSportsBureau.us@SD" tvg-language="und" tvg-country="US" group-title="Review",TVS Sports Bureau
 https://rpn.bozztv.com/gusa/gusa-tvssportsbureau/index.m3u8
-#EXTINF:-1 tvg-id="ufc.com" tvg-name="UFC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ufc-tv.png" channel-id="ufc.com" tvg-language="und" tvg-country="US" group-title="Review",UFC
+#EXTINF:-1 tvg-id="ufc.com" tvg-name="UFC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ufc-tv.png" channel-id="ufc.com" tvg-language="und" tvg-country="US" tvg-chno="727" group-title="Sports",UFC
 https://linear-893.frequency.stream/dist/plex/893/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="UTVPalakkad.in@SD" tvg-name="UTV Palakkad" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/utv-palakkad.png" channel-id="UTVPalakkad.in@SD" tvg-country="IN" tvg-language="mal" group-title="Review",UTV Palakkad
 https://em4qj6nedyvg-hls-live.wmncdn.net/utv/ab2de115318ae40bdd434e193a2f2e7f.sdp/playlist.m3u8
@@ -2732,9 +2732,9 @@ https://5a1178b42cc03.streamlock.net/8210/8210/playlist.m3u8
 https://lbgo.bozztv.com/ssh101/ssh101/afghantheatretv/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.willowsports" tvg-name="Willow Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/us-willow-sports-hd.png" channel-id="custom.willowsports" tvg-country="US" tvg-language="eng" group-title="Review",Willow Sports
 https://tvsen5.aynaott.com/willowhd/index.m3u8
-#EXTINF:-1 tvg-id="wwe.superstar.central.com" tvg-name="WWE Superstar Central" channel-id="wwe.superstar.central.com" tvg-language="und" tvg-country="US" group-title="Review",WWE Superstar Central
+#EXTINF:-1 tvg-id="wwe.superstar.central.com" tvg-name="WWE Superstar Central" channel-id="wwe.superstar.central.com" tvg-language="und" tvg-country="US" tvg-chno="728" group-title="Sports",WWE Superstar Central
 https://dpv6ceilvhyrw.cloudfront.net/playlist.m3u8
-#EXTINF:-1 tvg-id="xtrem.sports.com" tvg-country="ES" tvg-name="Xtrem Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/m-sports.png" channel-id="xtrem.sports.com" tvg-language="und" group-title="Review",Xtrem Sports
+#EXTINF:-1 tvg-id="xtrem.sports.com" tvg-country="ES" tvg-name="Xtrem Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/m-sports.png" channel-id="xtrem.sports.com" tvg-language="und" tvg-chno="729" group-title="Sports",Xtrem Sports
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e0b81a5c-6ab5-48cd-aaa9-f82de4ab5bf9/manifest.m3u8
 #EXTINF:-1 tvg-id="ZBCartoon.in" tvg-name="ZB Cartoon" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zb-cartoon.png" channel-id="ZBCartoon.in" tvg-country="IN" tvg-language="eng" group-title="Review",ZB Cartoon
 https://server.zillarbarta.com/zbcatun/video.m3u8
@@ -2778,13 +2778,13 @@ http://103.135.253.32:8080/ZEE-TV/index.m3u8
 https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8
 #EXTINF:-1 tvg-id="ZillarBartaNews.in@HD" tvg-name="ZillarBarta News" channel-id="ZillarBartaNews.in@HD" tvg-country="BD" tvg-language="ben" group-title="Review",ZillarBarta News
 https://server.zillarbarta.com/zillarbarta/index.m3u8
-#EXTINF:-1 tvg-id="channel.com" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com" tvg-language="und" tvg-country="CN" group-title="Review",广东体育
+#EXTINF:-1 tvg-id="channel.com" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com" tvg-language="und" tvg-country="CN" tvg-chno="730" group-title="Sports",广东体育
 http://hyde-ipv6.dynv6.net:8100/rtp/239.77.0.112:5146
-#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" group-title="Review",广东体育
+#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" tvg-chno="731" group-title="Sports",广东体育
 http://hydeqnapnas.mycloudnas.com:8100/rtp/239.77.0.112:5146
-#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" group-title="Review",广东体育
+#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" tvg-chno="732" group-title="Sports",广东体育
 http://hydeqnapnas.mycloudnas.com:8100/rtp/239.77.0.168:5146
-#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" group-title="Review",广东体育
+#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" tvg-chno="733" group-title="Sports",广东体育
 http://xxika.synology.me:8188/rtp/239.77.0.112:5146
-#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" group-title="Review",广东体育
+#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" tvg-chno="734" group-title="Sports",广东体育
 http://xxika.synology.me:8188/rtp/239.77.0.168:5146
