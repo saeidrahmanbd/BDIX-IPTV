@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10T15:12:51+00:00",
+  "generated": "2026-11-11T06:34:56+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -2384,21 +2384,6 @@
       "primary": 1,
       "backup": 4
     },
-    "darshanatv": {
-      "names": [
-        "Darshana TV"
-      ],
-      "ids": [
-        "darshanatv.in@sd"
-      ],
-      "groups": [
-        "Backup",
-        "Indian Entertainment"
-      ],
-      "streams": 2,
-      "primary": 1,
-      "backup": 1
-    },
     "dbcnews": {
       "names": [
         "DBC News"
@@ -2458,20 +2443,6 @@
       "streams": 4,
       "primary": 1,
       "backup": 3
-    },
-    "ddbharati": {
-      "names": [
-        "DD Bharati"
-      ],
-      "ids": [
-        "ddbharati.in@sd"
-      ],
-      "groups": [
-        "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
     },
     "ddbihar": {
       "names": [
@@ -2584,7 +2555,7 @@
         "ddindia.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -3819,7 +3790,7 @@
         "friendstv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -4489,11 +4460,10 @@
         "jaihindtv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment",
-        "New Backups"
+        "Indian Entertainment"
       ],
-      "streams": 2,
-      "primary": 2,
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "jalshabanglabd": {
@@ -4549,12 +4519,11 @@
         "jantv.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "jatv": {
       "names": [
@@ -4579,12 +4548,11 @@
         "jeevantv.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "jhankartv": {
       "names": [
@@ -4781,7 +4749,7 @@
         "kaumudytv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -4809,7 +4777,7 @@
         "kcltv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -5098,7 +5066,7 @@
         "makkaltv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -5291,7 +5259,7 @@
         "meialaitv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -5712,7 +5680,7 @@
         "nandighoshatv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -5970,7 +5938,7 @@
         "nkrtvkannada.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -6407,9 +6375,9 @@
         "Backup",
         "Kids"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "polimertv": {
       "names": [
@@ -7494,7 +7462,7 @@
         "sirikannadaalltime.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -7964,7 +7932,7 @@
         "starnet.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -8233,7 +8201,7 @@
         "subintv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -8879,20 +8847,6 @@
       "primary": 1,
       "backup": 1
     },
-    "uniquetv": {
-      "names": [
-        "Unique TV"
-      ],
-      "ids": [
-        "uniquetv.in@sd"
-      ],
-      "groups": [
-        "Kids"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "usbb5200028mm": {
       "names": [
         "Mysteries Xplored"
@@ -8974,7 +8928,7 @@
         "vcv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
