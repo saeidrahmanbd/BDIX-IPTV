@@ -847,9 +847,11 @@ class EpgConfigTests(unittest.TestCase):
 
     def test_epg_refresh_coalesces_obsolete_runs_and_serializes_main_writes(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
-        self.assertIn("group: iptv-epg-refresh-${{ github.ref }}", workflow)
-        self.assertIn("cancel-in-progress: false", workflow)
-        self.assertIn("group: iptv-playlist-main-writer-v3", workflow)
+        self.assertNotIn("group: iptv-epg-refresh-${{ github.ref }}", workflow)
+        self.assertRegex(
+            workflow,
+            r"(?m)^    concurrency:\n      group: iptv-playlist-main-writer-v3\n      cancel-in-progress: false$",
+        )
         self.assertIn("queue: max", workflow)
         self.assertIn("Skip superseded queued EPG refresh", workflow)
         self.assertIn("refusing to publish stale output", workflow)
