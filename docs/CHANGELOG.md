@@ -59,33 +59,30 @@ Removed channel identities (up to 10):
 - Rewind TV
 - RTV
 
+## [5.1] — Playlist Studio (2026-11-11)
+
+### Added and improved
+
+- EPG Centre for multiple XMLTV sources from URLs and local XML, GZ, XZ and ZIP files.
+- EPG coverage dashboard, channel guide statuses and local-time Now / Next with `tvg-shift`.
+- Searchable, sortable and editable `tvg-id`; bulk metadata editing with preview and Undo; persistent manual EPG corrections.
+- Stream scanner statuses distinguishing Dead from unreachable, restricted, stale, unavailable, unverified and error outcomes.
+- Pause, resume and cancel; per-server limits, timeouts, retries and player identity; HLS freshness and optional deep diagnostics.
+- Persistent Good / Bad / Review verdicts, notes and scan history; Excel and JSON exports.
+- Background Xtream and Stalker / MAC login and import, cancellation, Xtream M3U fallback and undoable Stalker imports.
+- Windows DPAPI protection for remembered provider logins.
+- Safer playlist import and saving, preservation of directives/comments/unknown header keys, credential masking, autosave/recovery and playback hotkeys.
+
+### Release assets
+
+- [Playlist-Studio-5.1.exe](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.1/Playlist-Studio-5.1.exe) — portable Windows x64 application.
+- [Playlist-Studio-5_1-Windows-Build-Kit-r2.zip](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.1/Playlist-Studio-5_1-Windows-Build-Kit-r2.zip) — Windows build kit.
+
+See the [v5.1 release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1), [feature guide](PLAYLIST-STUDIO.md) and [release integrity record](PLAYLIST-STUDIO-INTEGRITY.md).
+
 ## [5.0.0] — Playlist Studio
 
-### Added
-
-- Playlist Studio 5.0 Windows application
-- Portable Windows executable
-- M3U / M3U8 playlist management
-- Built-in playlist playback
-- Channel and category management
-- Stream scanning and status review
-- Duplicate channel and stream detection
-- Xtream Codes support
-- MAC / Stalker Portal support
-- Multiple interface themes
-- GitHub integration
-- Windows Build Kit with `BUILD-Windows.cmd`
-
-### Documentation
-
-- Updated repository README for Playlist Studio 5.0
-- Added Playlist Studio documentation
-- Added repository Download Center
-- Added direct release download links
-- Added Program Glimpse
-- Updated Playlist Studio Build Kit links to Debug 22 on October 12, 2026
-
-For the primary application release, see **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/Playlist-Studio/releases/tag/v5.0.0)**. The build files are also mirrored in the [BDIX-IPTV v5.0.0 release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0).
+- Historical v5.0 release. See the [BDIX-IPTV v5.0.0 release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0).
 
 ## 2026-10-08
 
