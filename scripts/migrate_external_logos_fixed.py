@@ -57,6 +57,7 @@ FALLBACK_LOGOS = {
 # Exact playlist ID -> explicit logo source. Add only verified mappings here.
 # These are intentionally keyed by playlist identity, never by stream URL or display name.
 ID_LOGO_MAP = {
+    "bowling.tv.com": "https://images.squarespace-cdn.com/content/v1/6a0f1667e14e7d311009eebc/b1eeb2bc-abb8-4d8f-9796-32ec785e1ef9/Bowling%2BTV_Horizontal_White.png",
     "vyaschannel.in@sd": "https://www.yupptv.com/seo_img/UGC_GEC_big.jpg",
     "zeecineclassic.in@sd": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN21000014R_20260325T012324SQUARE.png",
     "zeecomedynation.in@hd": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN2100002GD_20260325T012327SQUARE.png",
