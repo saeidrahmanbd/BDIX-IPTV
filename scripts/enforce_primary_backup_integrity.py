@@ -203,6 +203,7 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
         "non_kids_review_removed": 0,
         "unknown_groups_quarantined": 0,
         "missing_logos_quarantined": 0,
+        "missing_logos_unresolved": [],
         "duplicate_primary_demoted": 0,
         "orphan_backups_quarantined": 0,
         "user_authorized_orphan_backups_removed": 0,
@@ -281,20 +282,15 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
             info = set_group(info, "Review")
             group = "Review"
 
-        # Active primaries need a verified local, non-placeholder logo. Keep
-        # their URLs and metadata, but quarantine unresolved rows for manual review.
+        # A missing or unverified logo is a publish-gate issue, not permission
+        # to reclassify an owner-curated primary. Keep its group, number, stream
+        # URL, and channel identity unchanged; remove only an unsafe logo ref.
         logo = attrs(info).get("tvg-logo", "").strip()
         logo_name = logo.split("?", 1)[0].rsplit("/", 1)[-1]
         valid_local_logo = logo.startswith(RAW_LOGO_BASE) and not is_blocked_logo_basename(logo_name)
         if group in PRIMARY_GROUPS and not valid_local_logo:
-            info = set_group(info, "Review")
-            # Never leave a generic, blocked, external or otherwise unverified
-            # logo attached to a quarantined channel. The stream and identity
-            # stay intact; the logo can be restored after a genuine local asset
-            # has been verified.
             info = remove_attr(info, "tvg-logo")
-            group = "Review"
-            stats["missing_logos_quarantined"] += 1
+            stats["missing_logos_unresolved"].append(display_name(info))
 
         if group in REVIEW_GROUPS and attrs(info).get("tvg-chno"):
             info = remove_attr(info, "tvg-chno")
@@ -510,6 +506,7 @@ def write_report(stats: dict[str, object], errors: list[str]) -> None:
         f"- Backup rows linked to an existing primary by unique exact name: **{stats.get('name_matched_backups_linked', 0)}**",
         f"- Restricted Indian news/kids/religious rows retained in Review: **{stats.get('restricted_backups_reviewed', 0)}**",
         f"- Legacy Not Playing groups renamed to Review: **{stats.get('legacy_review_renamed', 0)}**",
+        f"- Active channels retained with unresolved logos (not reclassified): **{len(stats.get('missing_logos_unresolved', []))}**",
         f"- Kids entries moved from Review to Kids: **{stats.get('kids_promoted_from_review', 0)}**",
         f"- Explicitly removed non-kids Review entries: **{stats.get('non_kids_review_removed', 0)}**",
         f"- Backup metadata records reconciled from exact primary IDs: **{stats.get('backup_metadata_reconciled', 0)}**",
