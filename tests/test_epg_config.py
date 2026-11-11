@@ -790,11 +790,13 @@ class EpgConfigTests(unittest.TestCase):
             if re.search(r"\.bd(@|$)", key):
                 self.assertTrue(all(i.endswith(".bd") or i == key for i in ids), key)
 
-    def test_alias_ids_exist_in_playlist(self):
-        pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
-        for tid in ("Hungama.in@SD", "ZBMusic.in@HD"):
-            self.assertIn(f'tvg-id="{tid}"', pl)
-        self.assertNotIn('tvg-id="ZBBhakti.in@HD"', pl)
+    def test_alias_ids_exist_in_their_current_playlist(self):
+        iptv = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
+        international = (ROOT / "International-Playlist.m3u").read_text(encoding="utf-8-sig")
+        # Hungama is maintained in the International playlist, not the main IPTV playlist.
+        self.assertIn('tvg-id="Hungama.in@SD"', international)
+        self.assertIn('tvg-id="ZBMusic.in@HD"', iptv)
+        self.assertNotIn('tvg-id="ZBBhakti.in@HD"', iptv)
 
     def test_epg_refresh_runs_after_completed_playlist_writer_workflows_even_when_blocked(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
