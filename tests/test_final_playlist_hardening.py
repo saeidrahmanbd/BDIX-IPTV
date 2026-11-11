@@ -36,7 +36,7 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
         registry_line = next(line for line in result.splitlines() if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
         registry = json.loads(registry_line.split(":", 1)[1])
         self.assertEqual(registry, hardening.PLAYLIST_ORDERS["IPTV-Playlist.m3u"])
-        self.assertEqual(registry[-4:], ["Review", "New Channels", "New Backups", "Backup"])
+        self.assertEqual(registry[-4:], ["Backup", "Review", "New Channels", "New Backups"])
 
     def test_bangladesh_all_genres_and_indian_kids_sports_are_retained_but_indian_news_is_demoted(self):
         rows = [
@@ -78,8 +78,23 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
             for line in result.splitlines()
             if line.startswith("#EXTINF:") and hardening.attrs(line).get("group-title") == "Bangladesh"
         ]
-        self.assertEqual(numbered, [1, 7])
+        self.assertEqual(numbered, [7, 1])
         self.assertIn('tvg-chno="7"', result)
+
+    def test_existing_rows_within_a_category_keep_their_relative_order(self):
+        rows = [
+            "#EXTM3U",
+            '#EXTINF:-1 tvg-id="Zeta.bd" tvg-name="Zeta" tvg-country="BD" tvg-chno="2" group-title="Bangladesh",Zeta',
+            "https://example.invalid/zeta.m3u8",
+            '#EXTINF:-1 tvg-id="Alpha.bd" tvg-name="Alpha" tvg-country="BD" tvg-chno="1" group-title="Bangladesh",Alpha',
+            "https://example.invalid/alpha.m3u8",
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "IPTV-Playlist.m3u"
+            path.write_text("\\n".join(rows) + "\\n", encoding="utf-8")
+            hardening.process(path)
+            result = path.read_text(encoding="utf-8")
+        self.assertLess(result.index(",Zeta"), result.index(",Alpha"))
 
     def test_permanently_banned_channels_are_removed_from_primary_and_backup(self):
         rows = [
