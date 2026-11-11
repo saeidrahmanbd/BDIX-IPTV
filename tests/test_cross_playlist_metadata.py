@@ -97,8 +97,8 @@ class CrossPlaylistMetadataTests(unittest.TestCase):
 
     def test_quality_suffix_uses_exact_base_channel_metadata(self):
         text = (
-            '#EXTINF:-1 tvg-id="BBCNews.uk@HD" tvg-name="BBC News" group-title="International",BBC News\\n'
-            'https://example.test/bbc-hd.m3u8\\n'
+            '#EXTINF:-1 tvg-id="BBCNews.uk@HD" tvg-name="BBC News" group-title="International",BBC News\n'
+            'https://example.test/bbc-hd.m3u8\n'
         )
         updated, counts = backfill_text(text, {
             "BBCNews.uk": {"country": "GB", "language": "eng"}
