@@ -23,7 +23,7 @@ from playlist_order_policy import should_check_alphabetical_order
 from country_verification import queue_errors as review_queue_country_errors, reference_from_playlists
 from restore_protected_review import count_unapproved_removed_url_occurrences, protected_primary_url_changes
 from stream_url_identity import stream_url_key
-CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Review", "New Channels", "New Backups", "Backup"]
+CATEGORY_ORDER = ["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","Review","New Channels","New Backups"]
 REGISTRY_ORDER = CATEGORY_ORDER
 
 def attrs(line):
