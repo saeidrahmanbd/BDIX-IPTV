@@ -47,7 +47,7 @@ jobs:
     # must not suppress EPG freshness/coverage work for the last known-good inputs.
     if: ${{ (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion != 'cancelled') && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
     concurrency:
-      group: iptv-playlist-main-writer-v3
+      group: iptv-playlist-main-writer-v4
       queue: max
       cancel-in-progress: false
     # EPG publishes with an input-SHA guard and a rebase loop below. The shared
