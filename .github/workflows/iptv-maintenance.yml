@@ -93,6 +93,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 50
+          # Keep recent commit ancestry for report-freshness tests; sparse checkout avoids unrelated application trees.
           sparse-checkout: |
             .
             .github/workflows

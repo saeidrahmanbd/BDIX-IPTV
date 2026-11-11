@@ -37,6 +37,7 @@ jobs:
           ref: main
           fetch-depth: 20
           # Sparse checkout omits the large EPG guide; logo assets and playlists remain included.
+          # Queued runs reset to latest main unless the workflow definition itself has changed.
           sparse-checkout: |
             .
             .github/workflows
