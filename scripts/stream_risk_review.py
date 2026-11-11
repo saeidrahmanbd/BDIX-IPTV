@@ -5,14 +5,52 @@ import re
 from datetime import datetime, timezone
 from collections import Counter, defaultdict
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import parse_qsl, urlsplit
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 HEALTH = Path("reports/stream-health.md")
 REPORT = Path("reports/stream-risk-review.md")
 ATTR = re.compile(r'([\w-]+)="([^"]*)"')
 PROXY_HOSTS = {"iptv-proxy.ahmed-bd-org.workers.dev", "iptvlive.ahmed-bd-org.workers.dev"}
-TOKEN_KEYS = {"hdnts", "token", "sig", "signature", "jwt", "session", "key", "authorization"}
+TOKEN_KEYS = {"hdnts", "token", "sig", "signature", "jwt", "session", "key", "authorization", "auth", "expires", "exp", "e"}
+
+
+def token_expiry(url):
+    """Return a safely parsed Unix expiry embedded in common signed URL formats."""
+    parsed = urlsplit(url)
+    candidates = []
+    for key, value in parse_qsl(parsed.query, keep_blank_values=True):
+        key = key.casefold()
+        raw_values = [value]
+        if key == "hdnts":
+            match = re.search(r"(?:^|~)exp=(\\d{10})(?:~|$)", value)
+            if match:
+                raw_values.append(match.group(1))
+        if key in {"exp", "expires", "expiry", "e"}:
+            raw_values.append(value)
+        for raw in raw_values:
+            if re.fullmatch(r"\\d{10}", str(raw or "").strip()):
+                try:
+                    epoch = int(raw)
+                    if 1_500_000_000 <= epoch <= 4_102_444_800:
+                        candidates.append(epoch)
+                except (TypeError, ValueError, OverflowError):
+                    pass
+    return min(candidates) if candidates else None
+
+
+def expiry_status(epoch, now=None):
+    if epoch is None:
+        return "UNKNOWN", ""
+    now = now or datetime.now(timezone.utc)
+    expiry = datetime.fromtimestamp(epoch, timezone.utc)
+    if expiry <= now:
+        status = "EXPIRED"
+    elif expiry <= now + __import__("datetime").timedelta(days=3):
+        status = "EXPIRING_WITHIN_72H"
+    else:
+        status = "FUTURE"
+    return status, expiry.isoformat(timespec="seconds")
 
 def playlist_rows():
     lines = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
@@ -41,7 +79,10 @@ def main():
         qkeys = sorted({part.split("=",1)[0].lower() for part in u.query.split("&")
                         if part and part.split("=",1)[0].lower() in TOKEN_KEYS})
         if qkeys:
-            signed.append({**item,"keys":", ".join(qkeys)})
+            expiry_epoch = token_expiry(row["url"])
+            expiry_state, expiry_utc = expiry_status(expiry_epoch)
+            signed.append({**item, "keys": ", ".join(qkeys),
+                           "expiry_state": expiry_state, "expiry_utc": expiry_utc})
         if re.search(r"/live/[^/?#]+/[^/?#]+/[^/?#]+\.ts(?:[?#]|$)", path, re.I):
             safe_path = re.sub(r"(/live/)[^/]+/[^/]+/([^/]+\.ts)", r"\1[REDACTED]/[REDACTED]/\2", path, flags=re.I)
             xtream.append({**item,"path":safe_path})
@@ -71,6 +112,9 @@ def main():
         "## Summary", "",
         f"- /streamtest/ endpoints: **{len(streamtest)}**",
         f"- Signed/token-query endpoints: **{len(signed)}**",
+        f"- Signed endpoints with expired embedded expiry: **{sum(x['expiry_state'] == 'EXPIRED' for x in signed)}**",
+        f"- Signed endpoints expiring within 72 hours: **{sum(x['expiry_state'] == 'EXPIRING_WITHIN_72H' for x in signed)}**",
+        f"- Signed endpoints with no parseable expiry: **{sum(x['expiry_state'] == 'UNKNOWN' for x in signed)}**",
         f"- Xtream-style credential paths (credentials redacted): **{len(xtream)}**",
         f"- Proxy/worker-host routes: **{len(proxies)}** ({sum(x['group'] != 'Backup' for x in proxies)} primary, {sum(x['group'] == 'Backup' for x in proxies)} Backup)",
         f"- /api/play/ relay routes: **{len(api_relays)}**", "",
@@ -83,8 +127,9 @@ def main():
     lines += [f"| {x['name']} | {x['group']} | {x['host']} | {x['path']} |" for x in streamtest] or ["| — | — | — | — |"]
     lines += ["", "## Signed / Token-Query Endpoints", "",
               "Query values are omitted because they may be expiring signatures or access tokens.", "",
-              "| Channel | Group | Host | Parameter names |", "|---|---|---|---|"]
-    lines += [f"| {x['name']} | {x['group']} | {x['host']} | {x['keys']} |" for x in signed] or ["| — | — | — | — |"]
+              "Expiry is classified only when a numeric Unix timestamp is explicitly present (including the exp field inside hdnts). No signature/token values are written to this report.", "",
+              "| Channel | Group | Host | Parameter names | Expiry status | Expiry (UTC) |", "|---|---|---|---|---|---|"]
+    lines += [f"| {x['name']} | {x['group']} | {x['host']} | {x['keys']} | {x['expiry_state']} | {x['expiry_utc'] or 'Not exposed'} |" for x in signed] or ["| — | — | — | — | — | — |"]
     lines += ["", "## Xtream-Style Credential Paths", "",
               "Credentials are intentionally redacted; only the host and safe route pattern are shown.", "",
               "| Channel | Group | Host | Redacted path |", "|---|---|---|---|"]
