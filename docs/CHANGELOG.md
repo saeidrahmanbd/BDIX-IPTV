@@ -5,59 +5,33 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-10 — `IPTV-Playlist.m3u`
+### 2026-11-11 — `IPTV-Playlist.m3u`
 
-- New channel identities: **15**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **18 / 0**
+- New channel identities: **1**
+- Channel identities removed: **2**
+- Stream URLs added / removed: **18 / 4**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Darshana TV
-- DD India
-- Friends TV
-- Jan TV
-- Jeevan TV
-- Kaumudy TV
-- KCL TV
-- Makkal TV
-- Mei Alai TV
-- Nandighosha TV
-
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-10 — `International-Playlist.m3u`
-
-- New channel identities: **13**
-- Channel identities removed: **7**
-- Stream URLs added / removed: **13 / 11**
-- Backup URL updates: **0**
-- Logo reference changes: **0**
-- Replaced channel identities: **0**
-- Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- Star Utsav Movies
-- Telecine Cult
-- Telecine Fun
-- Telecine Premium
-- Telecine Touch
-- Tamasha
-- TCM [ ]
-- TCM West [ ]
-- Thrill
-- Velvet. European Movies
+- Zee Bollywood
 
 Removed channel identities (up to 10):
-- ATN Bangla
-- HBO (United States)
-- HBO Hits
-- Kinosvidanie
-- Raj Musix Tamil
-- Rewind TV
-- RTV
+- MTV India
+- Darshana TV
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-11 — `International-Playlist.m3u`
+
+- New channel identities: **0**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **0 / 1**
+- Backup URL updates: **0**
+- Logo reference changes: **0**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
