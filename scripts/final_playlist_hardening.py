@@ -11,7 +11,7 @@ from country_verification import reference_from_playlists, verify_country
 from discover_bd_in_new_queues import prohibited_channel
 
 PLAYLIST_ORDERS={
-    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Review','New Channels','New Backups','Backup'],
+    'IPTV-Playlist.m3u': ["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","Review","New Channels","New Backups"],
 }
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 NON_NUMBERED={'Backup','Review','Not Playing','New Channels','New Backups'}
