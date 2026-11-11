@@ -28,7 +28,7 @@ PRIMARY_GROUPS = [
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
 ]
-GROUP_ORDER = PRIMARY_GROUPS + ["Review", "New Channels", "New Backups", "Backup"]
+GROUP_ORDER = PRIMARY_GROUPS + ["Backup", "Review", "New Channels", "New Backups"]
 REVIEW_GROUPS = {"Review", "New Channels", "New Backups", "Not Playing"}
 LEGACY_GROUPS = {"Not Playing": "Review"}
 
@@ -469,11 +469,9 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
             record[0] = info
 
     rank = {name: index for index, name in enumerate(GROUP_ORDER)}
-    records.sort(key=lambda record: (
-        rank.get(attrs(record[0]).get("group-title", "").strip(), len(rank)),
-        natural_key(display_name(record[0])),
-        stream_url_key(stream_url(record)),
-    ))
+    # Stable category-only sort: enforce the user's category order while
+    # preserving the relative order of all rows inside each category.
+    records.sort(key=lambda record: rank.get(attrs(record[0]).get("group-title", "").strip(), len(rank)))
     preamble = update_registry(preamble)
     updated = "\n".join(preamble + [line for record in records for line in record]).rstrip() + "\n"
 
