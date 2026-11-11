@@ -1356,8 +1356,6 @@ https://d39accvx65hq9o.cloudfront.net/Womens_Sports_Network.m3u8
 https://aegis-cloudfront-1.tubi.video/e974981b-bbcd-42a3-a6c1-6c25e14f10bd/playlist.m3u8
 #EXTINF:-1 tvg-id="WorldPokerTour.us@UK" tvg-name="World Poker Tour" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/world-poker-tour.png" tvg-chno="683" channel-id="WorldPokerTour.us@UK" tvg-language="und" tvg-country="GB" group-title="Sports",World Poker Tour
 https://amg00477-samsungelectron-worldpokertour-samsunguk-81igb.amagi.tv/playlist/amg00477-samsungelectron-worldpokertour-samsunguk/playlist.m3u8
-#EXTINF:-1 tvg-id="WorldPokerTour.us@US" tvg-name="World Poker Tour" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/world-poker-tour.png" tvg-chno="684" channel-id="WorldPokerTour.us@US" tvg-language="und" tvg-country="US" group-title="Sports",World Poker Tour
-https://d2e00kr7m9coe4.cloudfront.net/scheduler/scheduleMaster/406.m3u8
 #EXTINF:-1 tvg-id="WorldPokerTour.us@US@world.poker.tour" tvg-name="World Poker Tour" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/world-poker-tour.png" tvg-chno="685" channel-id="WorldPokerTour.us@US@world.poker.tour" tvg-language="und" tvg-country="US" group-title="Sports",World Poker Tour
 https://amg00218-wptenterprisesi-worldpokertour-klowdtv-5619e.amagi.tv/playlist/amg00218-wptenterprisesi-worldpokertour-klowdtv/playlist.m3u8
 #EXTINF:-1 tvg-id="abc.sport.in.90.seconds.com" tvg-name="ABC Sport in 90 Seconds" channel-id="abc.sport.in.90.seconds.com" tvg-language="und" tvg-country="AU" tvg-chno="686" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/abc-sport-in-90-seconds.png",ABC Sport in 90 Seconds
@@ -1372,22 +1370,16 @@ https://streams2.sofast.tv/WiseM3U8_18/sofast/cleanhls/master.m3u8
 https://bozztv.com/gusa/gusa-tvsbowling/index.m3u8
 #EXTINF:-1 tvg-id="channel.fight.com" tvg-country="US" tvg-name="Channel Fight" channel-id="channel.fight.com" tvg-language="und" tvg-chno="691" group-title="Sports",Channel Fight
 https://d15wqvt0xm15k4.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/ChannelFight-Nuestra/266.m3u8
-#EXTINF:-1 tvg-id="channel.fight.com@channel.fight" tvg-country="US" tvg-name="Channel Fight" channel-id="channel.fight.com@channel.fight" tvg-language="und" tvg-chno="692" group-title="Sports",Channel Fight
-https://d15wqvt0xm15k4.cloudfront.net/scheduler/scheduleMaster/266.m3u8
 #EXTINF:-1 tvg-id="chukker.com" tvg-country="US" tvg-name="Chukker" channel-id="chukker.com" tvg-language="und" tvg-chno="693" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/chukker.png",Chukker
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/3bd726a3-0d30-491d-b5e7-e1afb6e02112/manifest.m3u8
 #EXTINF:-1 tvg-id="dazn.ringside.com" tvg-country="GB" tvg-name="Dazn Ringside" channel-id="dazn.ringside.com" tvg-language="und" tvg-chno="694" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dazn-ringside.png",Dazn Ringside
 https://aegis-cloudfront-1.tubi.video/bfad29e2-5bee-44f3-8256-127324e8b106/playlist.m3u8
-#EXTINF:-1 tvg-id="equus.tv.com" tvg-country="US" tvg-name="Equus TV" channel-id="equus.tv.com" tvg-language="und" tvg-chno="695" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/equus-tv.png",Equus TV
-https://d2gwqf8gdwq1zs.cloudfront.net/scheduler/scheduleMaster/426.m3u8
 #EXTINF:-1 tvg-id="fight.mvmt.culture.com" tvg-country="US" tvg-name="FIGHT | MVMT Culture" channel-id="fight.mvmt.culture.com" tvg-language="und" tvg-chno="696" group-title="Sports",FIGHT | MVMT Culture
 https://d15g7z5n3epv7t.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/TheGrapplingNetwork-SportsTribal/236.m3u8
 #EXTINF:-1 tvg-id="fight.pfl.com" tvg-name="FIGHT | PFL" channel-id="fight.pfl.com" tvg-language="und" tvg-country="US" tvg-chno="697" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fight-pfl.png",FIGHT | PFL
 https://d2w9b8sam7j3zv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-5g55ahrn9ajah/v1/pfl_pflmma_1/samsungheadend_us/latest/main/hls/playlist.m3u8
 #EXTINF:-1 tvg-id="fight.tv.com" tvg-name="Fight TV" channel-id="fight.tv.com" tvg-language="und" tvg-country="US" tvg-chno="698" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fight-tv.png",Fight TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/70e45fc8-1f6c-4492-ac26-9868f70f4e02/manifest.m3u8
-#EXTINF:-1 tvg-id="five.stars.sports.com" tvg-country="IL" tvg-name="Five Stars Sports" channel-id="five.stars.sports.com" tvg-language="und" tvg-chno="699" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/five-stars-sports.png",Five Stars Sports
-http://38.75.136.137:98/gslb/dsdqpub/wxtyhd.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="five.stars.sports.com@five.stars.sports" tvg-country="IL" tvg-name="Five Stars Sports" channel-id="five.stars.sports.com@five.stars.sports" tvg-language="und" tvg-chno="700" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/five-stars-sports.png",Five Stars Sports
 http://rd.gavinping.top:8188/rtp/238.200.200.131:5540
 #EXTINF:-1 tvg-id="fox.sports.com" tvg-name="FOX Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fox-sports.png" channel-id="fox.sports.com" tvg-language="und" tvg-country="US" tvg-chno="701" group-title="Sports",FOX Sports
@@ -1412,12 +1404,8 @@ https://trace-sportstars-samsungnz.amagi.tv/playlist.m3u8
 https://amg01866-mainstreammedia-freesportsinc-sportstribal-b3zdo.amagi.tv/ts-eu-w1-n2/playlist/amg01866-mainstreammedia-freesportsinc-sportstribal/playlist.m3u8
 #EXTINF:-1 tvg-id="msg.sportszone.com" tvg-name="MSG SportsZone" channel-id="msg.sportszone.com" tvg-language="und" tvg-country="US" tvg-chno="711" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/msg-sportszone.png",MSG SportsZone
 https://d2a31kzot4f8t3.cloudfront.net/v1/amc_msgsportszone_1/samsungheadend_us/latest/main/hls/playlist.m3u8
-#EXTINF:-1 tvg-id="mvmt.of.culture.com" tvg-country="US" tvg-name="MVMT of Culture" channel-id="mvmt.of.culture.com" tvg-language="und" tvg-chno="712" group-title="Sports",MVMT of Culture
-https://d2kwqe56yti97f.cloudfront.net/scheduler/scheduleMaster/490.m3u8
 #EXTINF:-1 tvg-id="nhl.network.hd.com" tvg-name="NHL Network HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nhl-network.png" channel-id="nhl.network.hd.com" tvg-language="und" tvg-country="US" tvg-chno="713" group-title="Sports",NHL Network HD
 https://aegis-cloudfront-1.tubi.video/1f4cbb33-cb23-40ab-b54b-2965cc551b32/playlist.m3u8
-#EXTINF:-1 tvg-id="omstars.com" tvg-name="Omstars" channel-id="omstars.com" tvg-language="und" tvg-country="US" tvg-chno="714" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/omstars.png",Omstars
-https://d1too6m5v9oyet.cloudfront.net/scheduler/scheduleMaster/281.m3u8
 #EXTINF:-1 tvg-id="pfl.com" tvg-name="PFL" channel-id="pfl.com" tvg-language="und" tvg-country="US" tvg-chno="715" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pfl.png",PFL
 https://d2w9b8sam7j3zv.cloudfront.net/v1/pfl_pflmma_1/samsungheadend_us/latest/main/hls/playlist.m3u8
 #EXTINF:-1 tvg-id="powder.tv.com" tvg-country="US" tvg-name="Powder TV" channel-id="powder.tv.com" tvg-language="und" tvg-chno="716" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/powder-tv.png",Powder TV
@@ -1440,8 +1428,6 @@ https://amg13231-actve-amg13231c4-samsung-au-2990.playouts.now.amagi.tv/playlist
 https://amg13231-actve-amg13231c4-samsung-nz-3093.playouts.now.amagi.tv/playlist/amg13231-actvefast-surfer-samsungnz/playlist.m3u8
 #EXTINF:-1 tvg-id="surfer.tv.com" tvg-country="US" tvg-name="Surfer TV" channel-id="surfer.tv.com" tvg-language="und" tvg-chno="725" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/surfer-tv.png",Surfer TV
 https://dgwfm675921lp.cloudfront.net/playlist.m3u8
-#EXTINF:-1 tvg-id="surfing.com" tvg-country="CN" tvg-name="Surfing+ 冲浪" channel-id="surfing.com" tvg-language="und" tvg-chno="726" group-title="Sports",Surfing+ 冲浪
-https://dr4jwhk0sty71.cloudfront.net/scheduler/scheduleMaster/444.m3u8
 #EXTINF:-1 tvg-id="swerve.sports.com" tvg-name="Swerve Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/swerve-sports-5bcc3e9a7f.png" channel-id="swerve.sports.com" tvg-language="und" tvg-country="US" tvg-chno="727" group-title="Sports",Swerve Sports
 https://linear-1013.frequency.stream/dist/plex/1013/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="tennis.com" tvg-country="US" tvg-name="Tennis+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cctv-golf-and-tennis-68e8bff175.png" channel-id="tennis.com" tvg-language="und" tvg-chno="728" group-title="Sports",Tennis+
