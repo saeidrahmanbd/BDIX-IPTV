@@ -163,7 +163,9 @@ def process(path):
    r[0]=set_attr(r[0],'tvg-chno',next_number)
    used_numbers.add(next_number)
    next_number+=1
- rec.sort(key=rkey)
+ # Stable category-only ordering: category blocks follow the canonical registry,
+ # while every channel keeps its relative position inside its category.
+ rec.sort(key=lambda r: rank.get(attrs(r[0]).get('group-title','').strip(), len(rank)))
  errors=[]; transitions=[]; last=None
  for r in rec:
   g=attrs(r[0]).get('group-title','').strip()
@@ -178,13 +180,8 @@ def process(path):
  for g in order:
   group_records=[r for r in rec if attrs(r[0]).get('group-title','').strip()==g]
   if not group_records: continue
-  if g == 'Bangladesh':
-   numbers=[int(attrs(r[0]).get('tvg-chno','')) for r in group_records if attrs(r[0]).get('tvg-chno','').strip().isdigit()]
-   if len(numbers)!=len(group_records) or numbers!=sorted(numbers):
-    errors.append('channel-number order/coverage: Bangladesh')
-  elif g not in REVIEW_GROUPS:
-   names=[(attrs(r[0]).get('tvg-name') or r[0].rsplit(',',1)[-1]).strip() for r in group_records]
-   if names!=sorted(names,key=key): errors.append(f'A-Z order: {g}')
+  # Channel-number sequence and A-Z order are review-only here. This pass must
+  # never alphabetize or renumber curated rows; maintenance handles numbering in place.
  for r in rec:
   a=attrs(r[0]); g=a.get('group-title','').strip()
   cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
