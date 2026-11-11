@@ -19,6 +19,7 @@ jobs:
     concurrency:
       group: iptv-playlist-main-writer-v4
       cancel-in-progress: false
+      queue: max
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
