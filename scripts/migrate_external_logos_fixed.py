@@ -58,7 +58,7 @@ FALLBACK_LOGOS = {
 # These are intentionally keyed by playlist identity, never by stream URL or display name.
 ID_LOGO_MAP = {
     "bowling.tv.com": "https://images.squarespace-cdn.com/content/v1/6a0f1667e14e7d311009eebc/b1eeb2bc-abb8-4d8f-9796-32ec785e1ef9/Bowling%2BTV_Horizontal_White.png",
-    "msg.sportszone.com": "https://www.tvchannellists.com/wiki/images/5/50/MSG_SportsZone_%28SamsungTV%2B%29.png",
+    "msg.sportszone.com": "https://cdn.mos.cms.futurecdn.net/p42PbCAdwsBYUwXJg7f8Ke.jpeg",
     "powder.tv.com": "https://provider-static.plex.tv/epg/cms/production/103b18dc-d465-46d3-b1e6-7a5a88a5c583/PLEX_1500X1000_PNG_WHT_POWDER_TV_Logo.png",
     "vyaschannel.in@sd": "https://www.yupptv.com/seo_img/UGC_GEC_big.jpg",
     "zeecineclassic.in@sd": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN21000014R_20260325T012324SQUARE.png",
@@ -116,7 +116,7 @@ ID_LOGO_MAP = {
     "zeebiskope.in@sd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BISKOPE/images/LOGO_HD/LOGO_HD_image.png",
     # Exact-ID sports identities with broadcaster/official organization logo sources.
     "big.12.studios.com": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_12_Conference_logo.svg",
-    "equus.tv.com": "https://trademarks.justia.com/media/image.php?serial=97639476",
+    "equus.tv.com": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3e/df/76/3edf768a-e6c3-0c36-3006-5e8bd26a36fe/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/1200x630wa.png",
     "major.league.cricket.com": "https://tickets.majorleaguecricket.com/light_custom/lightTheme/majorleaguecricket_logo__1_.png",
     "fight.pfl.com": "https://upload.wikimedia.org/wikipedia/commons/5/56/Professional_Fighters_League_Primary_Logo.jpg",
     "pfl.com": "https://upload.wikimedia.org/wikipedia/commons/5/56/Professional_Fighters_League_Primary_Logo.jpg",
@@ -129,6 +129,7 @@ ID_LOGO_MAP = {
     "fight.tv.com": "https://static.wixstatic.com/media/5c7bc0_b97c7c3f3a0c4bacb47e795e66fd3e2e~mv2.jpg/v1/fill/w_320%2Ch_180%2Cenc_auto/file.jpeg",
     "five.stars.sports.com": "https://tvlogo.org/israel/5stars-il.png",
     "five.stars.sports.com@five.stars.sports": "https://tvlogo.org/israel/5stars-il.png",
+    "shooting.sports.life.com": "https://cdn.prod.website-files.com/692c6a042a2e69279c8f3d39/698a1e60156d848809824885_Shooting-Sports-Life-Web-Clip.jpg",
     "golf.golfpass.com": "https://images-cdn3.welcomesoftware.com/assets/GolfPass.jpg/Zz0yMGY5NGM5NDE1OWUxMWYwYmJhODdlM2RjNmFmNDE3Ng%3D%3D?width=1200",
     "golfpass.com": "https://images-cdn3.welcomesoftware.com/assets/GolfPass.jpg/Zz0yMGY5NGM5NDE1OWUxMWYwYmJhODdlM2RjNmFmNDE3Ng%3D%3D?width=1200",
     "hoop.tv.com": "https://vcz-ktest2-cloud-vodlix-com.b-cdn.net/u/ktest2/files/thumbs/2025/07/01/1751331303opJn647Bhy-original-y6kX3egV.png",
