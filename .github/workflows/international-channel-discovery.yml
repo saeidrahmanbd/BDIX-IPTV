@@ -1,4 +1,12 @@
 name: International Channel Discovery
+
+# Serialize complete workflow runs, including the daily guard. Without this,
+# two simultaneous manual dispatches can each see the other as active and both
+# skip the discover job (mutual-exclusion race).
+concurrency:
+  group: international-channel-discovery-run-v1
+  cancel-in-progress: false
+  queue: max
 # Retry after enforcing the under-five-channel International catch-all and legacy-row policy.
 # Fresh discovery trigger: 2026-11-01 00:59 UTC
 
