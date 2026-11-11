@@ -1472,11 +1472,11 @@ https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e0
 http://hyde-ipv6.dynv6.net:8100/rtp/239.77.0.112:5146
 #EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" tvg-chno="733" group-title="Sports",广东体育
 http://hydeqnapnas.mycloudnas.com:8100/rtp/239.77.0.112:5146
-#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" tvg-chno="734" group-title="Sports",广东体育
+#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" group-title="Backup",广东体育
 http://hydeqnapnas.mycloudnas.com:8100/rtp/239.77.0.168:5146
-#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" tvg-chno="735" group-title="Sports",广东体育
+#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" group-title="Backup",广东体育
 http://xxika.synology.me:8188/rtp/239.77.0.112:5146
-#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" tvg-chno="736" group-title="Sports",广东体育
+#EXTINF:-1 tvg-id="channel.com@channel" tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-1-international.png" channel-id="channel.com@channel" tvg-language="und" tvg-country="CN" group-title="Backup",广东体育
 http://xxika.synology.me:8188/rtp/239.77.0.168:5146
 #EXTINF:-1 tvg-id="7SMusic.in@SD" tvg-name="7S Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" channel-id="7SMusic.in@SD" tvg-country="IN" tvg-language="tam" group-title="Backup",7S Music
 https://mumbai-edge.smartplaytv.in/7SMusic/index.m3u8
