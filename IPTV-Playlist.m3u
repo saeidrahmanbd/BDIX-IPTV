@@ -750,7 +750,7 @@ https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8
 #EXTINF:-1 tvg-id="PaighanTV.pk@SD" tvg-name="Paighan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/paighan-tv.png" tvg-chno="372" channel-id="PaighanTV.pk@SD" tvg-country="PK" tvg-language="urd" group-title="Pakistani",Paighan TV
 https://cdn4.mjunoon.tv:8087/streamtest/107M/chunks.m3u8
-#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="PK" tvg-language="urd" group-title="Pakistani",Q TV
+#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="PK" tvg-language="urd" group-title="Religious",Q TV
 http://163.61.226.31:9981/stream/channelid/359164420?profile=pass
 #EXTINF:-1 tvg-id="SeeTV.pk" tvg-name="See TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/see-tv.png" tvg-chno="374" channel-id="SeeTV.pk" tvg-country="PK" tvg-language="urd" group-title="Pakistani",See TV
 https://vodzong.mjunoon.tv:8087/streamtest/SeeTV-156/playlist.m3u8
