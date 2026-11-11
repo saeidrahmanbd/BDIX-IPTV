@@ -7,31 +7,47 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-11 — `IPTV-Playlist.m3u`
 
-- New channel identities: **1**
-- Channel identities removed: **2**
-- Stream URLs added / removed: **18 / 4**
+- New channel identities: **0**
+- Channel identities removed: **28**
+- Stream URLs added / removed: **0 / 41**
+- Backup URL updates: **0**
+- Logo reference changes: **0**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
+
+Removed channel identities (up to 10):
+- NAN TV
+- Zodiak TV
+- CCV
+- 30A Music
+- Hungama
+- KidDo MATIX
+- Kabaddi 24x7
+- Cartoon Network
+- Cartoon Network UK
+- Discovery Science
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-11 — `International-Playlist.m3u`
+
+- New channel identities: **9**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **11 / 0**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Zee Bollywood
-
-Removed channel identities (up to 10):
-- MTV India
-- Darshana TV
-
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-11 — `International-Playlist.m3u`
-
-- New channel identities: **0**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **0 / 1**
-- Backup URL updates: **0**
-- Logo reference changes: **0**
-- Replaced channel identities: **0**
-- Duplicate URL occurrences removed: **0**
+- Sky Cinema Due
+- viju TV1000
+- viju+ Megahit
+- viju+ Premiere
+- Viafree Movies
+- Viafree Movies DK
+- Viafree Movies NO
+- Pogo
+- Viasat Kino Balkan
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
