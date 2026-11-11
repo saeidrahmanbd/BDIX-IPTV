@@ -107,6 +107,17 @@ class CrossPlaylistMetadataTests(unittest.TestCase):
         self.assertIn('tvg-country="GB"', updated)
         self.assertEqual(counts["language_fields_filled"], 1)
 
+    def test_unknown_language_is_marked_und_not_guessed(self):
+        text = (
+            '#EXTINF:-1 tvg-id="UnknownChannel.us" tvg-name="Unknown Channel" tvg-country="US" group-title="International",Unknown Channel\n'
+            'https://example.test/unknown.m3u8\n'
+        )
+        updated, counts = backfill_text(text, {}, {})
+        self.assertIn('tvg-language="und"', updated)
+        self.assertNotIn('tvg-language="eng"', updated)
+        self.assertEqual(counts["language_fields_marked_undetermined"], 1)
+        self.assertEqual(counts["language_fields_filled"], 1)
+
     def test_adult_entries_are_never_backfilled(self):
         text = (
             '#EXTINF:-1 tvg-id="BBCNews.uk" tvg-name="BBC News" group-title="Adult",BBC News\n'
