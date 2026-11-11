@@ -1,4 +1,4 @@
-const PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u";
+const PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u?v=374a9f0aa32b1499cc2ee14c07e4d31085aedaf9";
 const EPG_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml";
 // Review and discovery queues are deliberately withheld from every Xtream endpoint.
 // Keep Not Playing as a hidden legacy alias so stale playlist rows cannot leak.
