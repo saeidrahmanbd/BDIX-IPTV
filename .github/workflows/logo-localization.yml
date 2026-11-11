@@ -1,0 +1,79 @@
+name: IPTV Logo Localization
+# Isolated, non-destructive logo-only pass. It never changes stream URLs,
+# channel IDs, group assignments, channel numbers, or playlist row order.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/logo-localization.yml
+      - scripts/migrate_external_logos_fixed.py
+      - scripts/verify_logo_only_migration.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: iptv-playlist-main-writer-v3
+  cancel-in-progress: false
+
+jobs:
+  localize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+
+      - name: Install image processing dependencies
+        run: python -m pip install --disable-pip-version-check -r docs/requirements.txt
+
+      - name: Snapshot playlist and localize verified logos
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp IPTV-Playlist.m3u /tmp/IPTV-Playlist.before-logo-migration.m3u
+          python -m py_compile scripts/migrate_external_logos_fixed.py scripts/verify_logo_only_migration.py
+          python scripts/migrate_external_logos_fixed.py
+          python scripts/verify_logo_only_migration.py /tmp/IPTV-Playlist.before-logo-migration.m3u
+          test -s reports/logo-migration-unresolved.csv
+
+      - name: Commit only verified logo assets and logo attributes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # Fail closed if the runner workspace contains any unexpected output.
+          git add IPTV-Playlist.m3u logos/ reports/logo-migration-unresolved.csv
+          changed="$(git diff --cached --name-only)"
+          while IFS= read -r path; do
+            [[ -z "$path" ]] && continue
+            case "$path" in
+              IPTV-Playlist.m3u|logos/*|reports/logo-migration-unresolved.csv) ;;
+              *) echo "::error::Unexpected staged path: $path"; exit 1 ;;
+            esac
+          done <<< "$changed"
+
+          if git diff --cached --quiet; then
+            echo "No logo assets or references needed updating."
+            exit 0
+          fi
+
+          git commit -m 'Localize verified IPTV channel logos'
+          git fetch origin main
+          if [[ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]]; then
+            echo "::error::main changed during logo localization; refusing to publish a stale playlist snapshot."
+            exit 1
+          fi
+          git push origin HEAD:main
+
+          unresolved="$(($(wc -l < reports/logo-migration-unresolved.csv) - 1))"
+          echo "Committed logo localization. Unresolved identities remaining: $unresolved"
