@@ -196,7 +196,8 @@ jobs:
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             # Protected Backup/Not Playing records are restored after every step that may rewrite them.
             # Finish every structural playlist mutation before producing fingerprinted reports.
-            # Sorting must precede numbering: numbering is the final structural playlist write.
+            # Preserve curated row positions; renumber_active_channels updates numbers in place
+            # and refreshes only the Playlist Studio category registry. No playlist row sorting.
             python scripts/renumber_active_channels.py IPTV-Playlist.m3u
             # These report-coupled tools are deliberately last. Their playlist changes are
             # idempotent metadata-only repairs; no later step may rewrite either playlist.
