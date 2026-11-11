@@ -349,7 +349,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             info, url.replace("61fc4f1a40a342daa23f92141853b7b4", "different")
         ))
 
-    def test_sorting_renumbers_primary_entries_and_leaves_review_groups_unnumbered(self):
+    def test_main_playlist_sorter_preserves_rows_and_renumbers_in_place(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "IPTV-Playlist.m3u"
             path.write_text("\n".join([
@@ -367,7 +367,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             ]) + "\n", encoding="utf-8")
             sorter.sort_playlist(path)
             content = path.read_text(encoding="utf-8")
-            self.assertLess(content.index('tvg-name="Alpha"'), content.index('tvg-name="Zulu"'))
+            self.assertLess(content.index('tvg-name="Zulu"'), content.index('tvg-name="Alpha"'))
             primary = [line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Bangladesh"' in line]
             nums = [int(re.search(r'tvg-chno="(\d+)"', line).group(1)) for line in primary]
             self.assertEqual(nums, [1, 2])
@@ -411,10 +411,13 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     group = re.search(r'group-title="([^"]+)"', line).group(1)
                     if not groups or groups[-1] != group:
                         groups.append(group)
-            self.assertEqual(groups[-3:], ["New Channels", "New Backups", "Backup"])
-            self.assertLess(groups.index("Review"), groups.index("New Channels"))
+            registry_line = next(line for line in path.read_text(encoding="utf-8").splitlines() if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
+            registry = json.loads(registry_line.split(":", 1)[1])
+            self.assertEqual(registry[-4:], ["Backup", "Review", "New Channels", "New Backups"])
+            self.assertLess(content.index("Curated Backup"), content.index("Pending"))
+            self.assertLess(content.index("Pending"), content.index("Fresh Backup"))
 
-    def test_restore_places_not_playing_before_discovery_queues_and_backup_last(self):
+    def test_restore_places_backup_before_review_and_discovery_queues(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             playlist = root / "IPTV-Playlist.m3u"
@@ -447,8 +450,8 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     group = re.search(r'group-title="([^"]+)"', line).group(1)
                     if not groups or groups[-1] != group:
                         groups.append(group)
-            self.assertEqual(groups, ["Bangladesh", "Review", "New Channels", "New Backups", "Backup"])
-            self.assertEqual(groups[-3:], ["New Channels", "New Backups", "Backup"])
+            self.assertEqual(groups, ["Bangladesh", "Backup", "Review", "New Channels", "New Backups"])
+            self.assertEqual(groups[-4:], ["Backup", "Review", "New Channels", "New Backups"])
 
     def test_restore_repairs_missing_local_logo_in_protected_queue_only(self):
         with tempfile.TemporaryDirectory() as tmp:
