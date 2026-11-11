@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-11T06:34:08.839501+00:00**
-Source playlist SHA-256: **8ef94f81f3cac966cc88b0eac2b173686e44c385802f6d1a02e6e42227e97ae8**
+Generated: **2026-11-11T07:01:35.022642+00:00**
+Source playlist SHA-256: **de1b7f58ac232ec72d734c2aca3bb35070d31536fda83b52f4e4ac1cc39dde5a**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -33,7 +33,8 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Category block-order issues: **0**
 - Category registry issues: **0**
 - Alphabetical ordering issues: **0**
-- Suspicious URL credentials/syntax: **1**
+- Suspicious URL credentials/syntax: **0**
+- Unverified provider playback routes (review only): **1**
 - Signed/tokenized stream URLs: **19**
 - Embedded Xtream-style credential paths (redacted): **1**
 
@@ -958,7 +959,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Jalsha Movies — Indian Movies — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
 - Jalsha Movies — Review — http://103.135.253.32:8080/Jalsha_movies-HD/index.m3u8
 ### stargold.in@hd (3 streams)
-- Star Gold — Indian Movies — http://dvltv.cc/play/uxN8_xYmP3o_GFqK372_h88Vwd-RYjQbJ-cqkeqI9-8
+- Star Gold — Indian Movies — http://dvltv.cc/play/[REDACTED]
 - Star Gold — Review — http://103.135.253.32:8080/STAR-GOLD-HD/index.m3u8
 - Star Gold — Review — http://103.185.24.134:3001/Star-Gold/index.m3u8
 ### stargoldselect.in@hd (2 streams)
@@ -1096,7 +1097,13 @@ Backup/Review/New Channels/New Backups internal order is preserved for manual re
 
 ## Suspicious URLs
 
-- **Star Gold** —  — http://dvltv.cc/play/uxN8_xYmP3o_GFqK372_h88Vwd-RYjQbJ-cqkeqI9-8
+None.
+
+## Unverified Provider Playback Routes (Review Only)
+
+Opaque provider-specific playback paths remain unchanged and require manual source verification.
+
+- **Star Gold** — Indian Movies — http://dvltv.cc/play/[REDACTED]
 
 ## Signed / Tokenized Stream URLs
 
