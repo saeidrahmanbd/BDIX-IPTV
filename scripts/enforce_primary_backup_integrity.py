@@ -28,7 +28,7 @@ PRIMARY_GROUPS = [
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
 ]
-GROUP_ORDER = PRIMARY_GROUPS + ["Backup", "Review", "New Channels", "New Backups"]
+GROUP_ORDER = PRIMARY_GROUPS + ["Backup", "New Channels", "New Backups", "Review"]
 REVIEW_GROUPS = {"Review", "New Channels", "New Backups", "Not Playing"}
 LEGACY_GROUPS = {"Not Playing": "Review"}
 
