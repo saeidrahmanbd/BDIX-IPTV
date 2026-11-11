@@ -92,6 +92,20 @@ FORCED_CHANNEL_LOGOS = {
 # only consulted after the repository-wide local logo search. Keep them here
 # so all playlist variants reuse the same locally stored image.
 EXTRA_DIRECT_HINTS = {
+    "FIGHT | MVMT Culture": {
+        "url": "https://media.unreel.me/prod/freelivesports/logo/98403785-3bba-4f7d-bee8-0eada4d790c8",
+        "format": "",
+        "page": "https://gist.github.com/sh400sp-ctrl/6bbd74b685e6bd0b79d329767e237949",
+        "license": "Exact FIGHT | MVMT Culture logo paired with the same channel identity in a public Free Live Sports playlist; validate image bytes before localization",
+        "license_url": "",
+    },
+    "WWE Superstar Central": {
+        "url": "https://static.trademarkia.com/images/99049129",
+        "format": "",
+        "page": "https://www.trademarkia.com/wwe-superstar-central-99049129",
+        "license": "Exact WWE SUPERSTAR CENTRAL figurative mark shown in trademark filing; owner identified as World Wrestling Entertainment, LLC; validate image bytes before localization",
+        "license_url": "",
+    },
     "Channel Fight": {
         "url": "https://cdn.castify.ai/files/app/web/channelfightfutterlogo.png",
         "format": "PNG",
