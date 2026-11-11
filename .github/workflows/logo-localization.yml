@@ -16,6 +16,9 @@ permissions:
 
 jobs:
   localize:
+    concurrency:
+      group: iptv-playlist-main-writer-v3
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
