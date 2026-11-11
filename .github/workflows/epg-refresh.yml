@@ -38,9 +38,12 @@ on:
 # Coalesce repeated EPG triggers: keep one active run and only the newest pending refresh.
 # An active build is allowed to finish its safety checks; the shared writer lock
 # below still serializes all writes to main with playlist-maintenance workflows.
+# Keep only the newest EPG candidate. Cancelling an older run is safe because
+# the candidate is not published until all validation gates pass and the final
+# commit is rebased against the latest main.
 concurrency:
   group: iptv-epg-refresh-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions:
   contents: write
