@@ -446,7 +446,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     if not groups or groups[-1] != group:
                         groups.append(group)
             self.assertEqual(groups, ["Bangladesh", "Backup", "New Channels", "New Backups", "Review"])
-            self.assertEqual(groups[-4:], ["Backup", "Review", "New Channels", "New Backups"])
+            self.assertEqual(groups[-4:], ["Backup", "New Channels", "New Backups", "Review"])
 
     def test_restore_repairs_missing_local_logo_in_protected_queue_only(self):
         with tempfile.TemporaryDirectory() as tmp:
