@@ -7,25 +7,25 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-11 — `IPTV-Playlist.m3u`
 
-- New channel identities: **165**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **275 / 0**
+- New channel identities: **0**
+- Channel identities removed: **52**
+- Stream URLs added / removed: **0 / 60**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Added channel identities (up to 10):
-- Anananda Tv
-- BD | TBN 24 USA
-- JTV BANGLA
+Removed channel identities (up to 10):
 - Peoples Radio
-- Thikana TV
-- VISION 24
-- Colors Bangla Cinema
-- Goldmines Movies 2
-- Jalsha Movies
-- Pitaara
+- Star Gold 2 HD
+- Jaihind TV
+- Jan TV
+- Nandighosha TV
+- Knowledge Network
+- ATG Live
+- FTF Sports
+- Horse & Country TV
+- Horse TV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-11 — `International-Playlist.m3u`
