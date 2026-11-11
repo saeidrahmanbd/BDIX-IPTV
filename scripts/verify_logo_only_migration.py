@@ -27,9 +27,12 @@ def local_path(value):
     else:
         raise ValueError(f"Non-local logo reference: {value}")
     path = Path(relative)
-    if path.is_absolute() or ".." in path.parts or len(path.parts) != 1:
+    if path.is_absolute() or not path.parts or any(part in {"", ".", ".."} for part in path.parts):
         raise ValueError(f"Unsafe local logo path: {value}")
-    target = Path("logos") / path
+    root = Path("logos").resolve()
+    target = (root / path).resolve()
+    if target == root or root not in target.parents:
+        raise ValueError(f"Logo path escapes the repository logos directory: {value}")
     if not target.is_file():
         raise ValueError(f"Referenced logo file is missing: {target}")
     if target.suffix.lower() == ".svg":
