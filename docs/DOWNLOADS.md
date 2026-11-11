@@ -1,30 +1,36 @@
 # 📥 BDIX-IPTV Download Center
 
-## 📺 IPTV Playlist
+## 📺 IPTV Playlists
 
 **[▶️ Download Main IPTV Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
 
-The main **multi-country IPTV M3U playlist** is a broad collection—not limited to Bangladesh and India. It includes country and genre groups for Bangladesh, Indian channels, Pakistan and eligible channels from other countries. It works with M3U-compatible players such as VLC, Kodi, TiviMate, XCIPTV and IPTV Smarters.
+The main **multi-country IPTV M3U playlist** includes country and genre groups for Bangladesh, India, Pakistan and eligible channels from other countries. It works with M3U-compatible players such as VLC, Kodi, TiviMate, XCIPTV and IPTV Smarters.
 
-- **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — a companion collection for Bangladesh and India plus eligible movie and music channels from Pakistan and other countries.
+- **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — a companion collection featuring Bangladesh and India plus eligible movie and music channels from other countries.
 
-See the [multi-country IPTV playlist guide](PLAYLISTS.md) for eligibility rules, direct URLs and setup instructions. The daily Bangladesh/India discovery workflow automatically fills New Channels with first streams and New Backups with alternate streams; both remain manual-approval queues. Review is a separate queue for entries selected for the owner's manual check.
+See the [multi-country IPTV playlist guide](PLAYLISTS.md) for eligibility rules, direct URLs and setup instructions. New channel candidates and alternate streams are staged for manual review.
 
-> **EPG status:** The XMLTV refresh pipeline is enabled. The maintained playlists advertise the repository guide URL, and programme data is published only after the generated guide passes freshness and quality validation. The EPG pipeline combines configured public or otherwise accessible schedule feeds while keeping private credentials and personalized URLs out of the public repository. EPG.PW remains excluded from public-guide ingestion because its Terms of Service prohibit copying/retransmission and limit use to personal use. Other EPG sources and the EPG refresh workflow remain enabled. Source-review metadata is advisory rather than a build gate. See the [EPG status report](../reports/epg-coverage.md).
+> **EPG status:** XMLTV refresh is enabled. The public guide is published after generated data passes freshness and quality validation. Coverage depends on available channel mappings and schedule sources. See the [EPG status report](../reports/epg-coverage.md).
 
-## 🖥️ Playlist Studio 5.0
+## 🖥️ Playlist Studio 5.1
 
-### Portable Windows Application
+Playlist Studio 5.1 is a Windows playlist manager, editor, EPG tool and player.
 
-**[⬇️ Download Playlist-Studio-5.0.exe](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)**
+### Portable Windows application
 
-No traditional installation is required.
+**[⬇️ Download Playlist-Studio-5.1.exe](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.1/Playlist-Studio-5.1.exe)**
 
-### Windows Build Kit
+No traditional installation is required. Windows 10/11 x64; VLC playback is bundled.
 
-**[📦 Download Playlist-Studio-5_0-Windows-Build-Kit-Debug22.zip](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug22.zip)**
+### Windows Build Kit r2
 
-See the **[Playlist Studio documentation](PLAYLIST-STUDIO.md)** for build instructions.
+**[📦 Download Playlist-Studio-5_1-Windows-Build-Kit-r2.zip](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.1/Playlist-Studio-5_1-Windows-Build-Kit-r2.zip)**
+
+The build kit uses a dedicated virtual environment. It supports 64-bit Python 3.10–3.13 (3.13 recommended); Python 3.14/3.15 are not supported by the current pinned PyInstaller dependencies. The Python Launcher is recommended but optional; use `PS_PYTHON` to select an interpreter directly. See [Playlist Studio 5.1 documentation](PLAYLIST-STUDIO.md) for build instructions.
+
+### Release integrity
+
+Verify downloads using the published hashes in [Playlist Studio v5.1 Release Integrity](PLAYLIST-STUDIO-INTEGRITY.md).
 
 ## 🛜 Xtream
 
@@ -33,7 +39,7 @@ See the **[Playlist Studio documentation](PLAYLIST-STUDIO.md)** for build instru
 ## 📄 Reports
 
 - [IPTV Playlist Audit](../reports/iptv-playlist-audit.md)
-- [IPTV Channel Discovery](../reports/iptv-channel-discovery.md) — the current IPTV new-channel discovery feed scope is narrower than the curated multi-country playlist: Bangladesh channels of all genres and Indian candidates excluding News, all Religious (including Islamic), Educational, Business/Finance and Farming (Indian Kids and Sports are allowed), and Pakistani candidates excluding News, Religious, Educational, Business/Finance, Farming, Kids and Sports. New candidates and alternate streams are staged in New Channels and New Backups for manual review.
+- [IPTV Channel Discovery](../reports/iptv-channel-discovery.md)
 - [Stream Health](../reports/stream-health.md)
 - [EPG Coverage](../reports/epg-coverage.md)
 - [Update Report](../reports/Update%20Report.md)
@@ -44,4 +50,4 @@ See the **[Playlist Studio documentation](PLAYLIST-STUDIO.md)** for build instru
 
 ---
 
-**[View all releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)**
+**[View all BDIX-IPTV releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)**
