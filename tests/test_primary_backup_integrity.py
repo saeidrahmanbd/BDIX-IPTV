@@ -256,7 +256,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
 
     def test_existing_rows_within_a_category_keep_their_relative_order(self):
         sample = (
-            "#EXTM3U\\n"
+            "#EXTM3U\n"
             + row("Zeta.bd", "Zeta", "Bangladesh", "https://stream.example/zeta.m3u8")
             + row("Alpha.bd", "Alpha", "Bangladesh", "https://stream.example/alpha.m3u8")
         )
