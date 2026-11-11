@@ -1382,7 +1382,7 @@ https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/25
 https://d18pj8s9gbivdq.cloudfront.net/The_Big_12.m3u8
 #EXTINF:-1 tvg-id="billiards.com" tvg-name="Billiards+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cctv-billiards-1080p-b0f7f58939.png" channel-id="billiards.com" tvg-language="und" tvg-country="US" tvg-chno="688" group-title="Sports",Billiards+
 https://streams2.sofast.tv/WiseM3U8_18/sofast/cleanhls/master.m3u8
-#EXTINF:-1 tvg-id="bowling.tv.com" tvg-name="Bowling TV" channel-id="bowling.tv.com" tvg-language="und" tvg-country="US" tvg-chno="689" group-title="Sports",Bowling TV
+#EXTINF:-1 tvg-id="bowling.tv.com" tvg-name="Bowling TV" channel-id="bowling.tv.com" tvg-language="und" tvg-country="US" tvg-chno="689" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bowling-tv.png",Bowling TV
 https://bozztv.com/gusa/gusa-tvsbowling/index.m3u8
 #EXTINF:-1 tvg-id="channel.fight.com" tvg-country="US" tvg-name="Channel Fight" channel-id="channel.fight.com" tvg-language="und" tvg-chno="690" group-title="Sports",Channel Fight
 https://d15wqvt0xm15k4.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/ChannelFight-Nuestra/266.m3u8
