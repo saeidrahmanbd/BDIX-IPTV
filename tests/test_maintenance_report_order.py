@@ -49,7 +49,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
                 "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
                 "Indian Entertainment", "Pakistani", "International",
                 "Documentary & Wildlife", "Kids", "Religious", "Sports",
-                "Backup", "Review", "New Channels", "New Backups",
+                "Backup", "New Channels", "New Backups", "Review",
             ],
         )
         self.assertIn(
