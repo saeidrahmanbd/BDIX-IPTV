@@ -86,6 +86,15 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
                 self.assertIn("function constantTimeEqual", source)
                 self.assertIn("function stableId", source)
 
+    def test_opaque_provider_play_routes_are_review_only_and_redacted(self):
+        audit = (ROOT / "scripts/audit_playlist.py").read_text(encoding="utf-8")
+        self.assertIn("advisory_urls.append", audit)
+        self.assertIn("Unverified Provider Playback Routes (Review Only)", audit)
+        self.assertIn("Unverified provider playback routes (review only)", audit)
+        self.assertNotIn('suspicious_urls.append((display_name(info), "", url))', audit)
+        self.assertIn(r"dvltv\\.cc", audit)
+        self.assertIn("[REDACTED]", audit)
+
     def test_adult_entries_are_explicitly_protected_from_maintenance(self):
         normalizer = (ROOT / "scripts/normalize_metadata.py").read_text(encoding="utf-8")
         logo_migration = (ROOT / "scripts/migrate_external_logos_fixed.py").read_text(encoding="utf-8")
