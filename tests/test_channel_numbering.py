@@ -29,8 +29,8 @@ class ActiveChannelNumberingTests(unittest.TestCase):
     def test_active_entries_keep_owner_row_order_and_are_numbered_gaplessly(self):
         updated, count = normalize_playlist_text(self.sample)
         self.assertEqual(count, 3)
-        self.assertIn('tvg-name="Alpha" tvg-chno="1"', updated)
-        self.assertIn('tvg-name="Zeta" tvg-chno="2"', updated)
+        self.assertIn('tvg-name="Zeta" tvg-chno="1"', updated)
+        self.assertIn('tvg-name="Alpha" tvg-chno="2"', updated)
         self.assertIn('tvg-name="Movie" tvg-chno="3"', updated)
         self.assertLess(updated.index(",Zeta"), updated.index(",Alpha"))
         self.assertLess(updated.index(",Alpha"), updated.index(",Movie"))
