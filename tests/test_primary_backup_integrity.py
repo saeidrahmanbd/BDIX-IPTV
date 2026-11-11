@@ -127,10 +127,18 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             if e["attrs"].get("tvg-id") in unresolved_placeholder_ids
             and e["attrs"].get("group-title") == "Review"
         ]
-        self.assertEqual(len(quarantined), 3)
         self.assertEqual(
             {e["attrs"].get("tvg-id") for e in quarantined},
             unresolved_placeholder_ids,
+        )
+        self.assertEqual(
+            sum(e["attrs"].get("tvg-id") == "ColorsBanglaCinema.in@SD" for e in quarantined),
+            1,
+        )
+        self.assertGreaterEqual(
+            sum(e["attrs"].get("tvg-id") == "StarGold.in@HD" for e in quarantined),
+            2,
+            "all known Star Gold review alternatives must remain protected",
         )
 
         # The other audited Colors variants each retain one active primary.
