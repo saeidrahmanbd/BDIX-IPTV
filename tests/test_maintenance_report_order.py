@@ -49,13 +49,18 @@ class MaintenanceReportOrderTests(unittest.TestCase):
                 "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
                 "Indian Entertainment", "Pakistani", "International",
                 "Documentary & Wildlife", "Kids", "Religious", "Sports",
-                "Review", "New Channels", "New Backups", "Backup",
+                "Backup", "Review", "New Channels", "New Backups",
             ],
         )
         self.assertIn(
             "REGISTRY_ORDER = CATEGORY_ORDER",
             audit,
         )
+        renumber = (ROOT / "scripts" / "renumber_active_channels.py").read_text(encoding="utf-8")
+        self.assertIn("ordered = records", renumber)
+        self.assertNotIn("primary.sort(", renumber)
+        sorter = (ROOT / "scripts" / "sort_playlists.py").read_text(encoding="utf-8")
+        self.assertIn('if path.name != "IPTV-Playlist.m3u":', sorter)
 
     def test_review_queue_order_is_not_an_automatic_blocker(self):
         self.assertFalse(should_check_alphabetical_order("Backup"))
