@@ -24,41 +24,21 @@ Automatic corrections require four repeated title/duration matches, >=75% agreem
 
 ### Large source-offset proposals — manual review only
 
-- **Isai Aruvi** (IsaiAruvi.in@SD): source ID ISAI.ARUVI.in has a proposed -24-hour displacement from 5/5 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
+- **Isai Aruvi** (IsaiAruvi.in@SD): source ID ISAI.ARUVI.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
 - **MBC TV** (MBCTV.in@SD): source ID MBCTV.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-
-### Large source-offset proposals — manual review only
-
-- **Nepal 1** (Nepal1.in@SD): source ID NEPAL.1.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
 - **Pitaara** (Pitaara.in): source ID Pitaara.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **Pitaara TV** (Pitaara.in@SD): source ID Pitaara.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **Pitaara** (Pitaara.in@SD@pitaara): source ID Pitaara.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 
 ### Large source-offset proposals — manual review only
 
-- **Raj Musix Kannada** (RajMusixKannada.in@SD): source ID RAJ.MUSIX.KANNADA.in has a proposed -24-hour displacement from 5/5 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
-
-### Large source-offset proposals — manual review only
-
-- **Raj Musix Tamil** (RajMusixTamil.in@SD): source ID RAJ.MUSIX.TAMIL.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
+- **Raj Musix Kannada** (RajMusixKannada.in@SD): source ID RAJ.MUSIX.KANNADA.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
 - **Siri Kannada** (SiriKannada.in@SD): source ID SiriKannada.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **Star Gold Select** (StarGoldSelect.in@HD): source ID StarGoldSelect.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 
 ### Large source-offset proposals — manual review only
 
-- **Sun Music** (SunMusic.in@SD): source ID SUN.MUSIC.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
-
-### Large source-offset proposals — manual review only
-
-- **Sun TV** (SunTV.in@HD): source ID SUN.TV.in has a proposed -24-hour displacement from 5/5 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
-
-### Large source-offset proposals — manual review only
-
-- **Vissa TV** (VissaTV.in@SD): source ID VISSA.TV.in has a proposed -24-hour displacement from 5/5 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
-
-### Large source-offset proposals — manual review only
-
-- **Zee Telugu** (ZeeTelugu.in@HD): source ID ZEE.TELUGU.in has a proposed -24-hour displacement from 7/7 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
+- **Vissa TV** (VissaTV.in@SD): source ID VISSA.TV.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
 
 ## Feed-wide offset patterns
 

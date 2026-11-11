@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-11T18:30:53+00:00**
+Generated: **2026-11-11T19:26:32+00:00**
 
-- Active Bangladesh playlist identities: **77**
-- Identities with a retained source mapping: **4**
-- Identities with usable current/future schedules: **2**
-- Identities without a source mapping: **73**
+- Active Bangladesh playlist identities: **85**
+- Identities with a retained source mapping: **5**
+- Identities with usable current/future schedules: **3**
+- Identities without a source mapping: **80**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -15,7 +15,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Source label | Matched Bangladesh IDs | IDs with usable current/future schedules | Source health | Error / note |
 |---|---:|---:|---|---|
 | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | OK | - |
-| iptv-org/epg (targeted build-time guide) | 1 | 1 | OK | - |
+| iptv-org/epg (targeted build-time guide) | 2 | 2 | OK | - |
 
 ## Bangladesh-relevant source health
 
@@ -45,13 +45,18 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Channel 24 | Channel24.bd | NO_GUIDE_HIT |
 | Channel 52 | Channel52.bd | NO_GUIDE_HIT |
 | Channel 9 | Channel9.bd | NO_GUIDE_HIT |
+| Channel Europe | ChannelEurope.uk | NO_GUIDE_HIT |
 | Channel I | ChannelI.bd | NO_GUIDE_HIT |
 | Channel S | ChannelS.bd | NO_GUIDE_HIT |
 | Channel S | ChannelS.bd@SD | NO_GUIDE_HIT |
 | Channel S | ChannelS.uk | NO_GUIDE_HIT |
+| Channel S UK | ChannelS.uk@679aa9 | NO_GUIDE_HIT |
 | DBC News | DBCNews.bd | NO_GUIDE_HIT |
 | Deepto TV | DeeptoTV.bd | NO_GUIDE_HIT |
 | Desh TV | DeshTV.bd | NO_GUIDE_HIT |
+| Deshe Bideshe | DesheBideshe.ca | NO_GUIDE_HIT |
+| Deshi TV | DeshiTV.ca@SD | NO_GUIDE_HIT |
+| Doyel TV | DoyelTV.ca@SD | NO_GUIDE_HIT |
 | Duronto TV | DurontoTV.bd | NO_GUIDE_HIT |
 | Duronto TV | DurontoTV.bd@SD | NO_GUIDE_HIT |
 | Ekattor TV | EkattorTV.bd | NO_GUIDE_HIT |
@@ -87,6 +92,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Nexus TV | NexusTV.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd@SD | NO_GUIDE_HIT |
 | NRB | custom.bdix.nrb-hd | NO_GUIDE_HIT |
+| NRB TV | NRBTV.ca | NO_GUIDE_HIT |
 | NTV | NTV-IN | NO_GUIDE_HIT |
 | NTV | NTV.bd | NO_GUIDE_HIT |
 | Probashi TV | ProbashiTV.bd | NO_GUIDE_HIT |
@@ -101,6 +107,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Ten TV Prime | custom.tentvprime | NO_GUIDE_HIT |
 | Thikana | ThikanaTV.us | NO_GUIDE_HIT |
 | Thikana TV | thikana.tv.bd | NO_GUIDE_HIT |
+| Time Television | TimeTelevision.us | NO_GUIDE_HIT |
 | VISION 24 | vision.24.bd | NO_GUIDE_HIT |
 
 ## Matching and source notes
