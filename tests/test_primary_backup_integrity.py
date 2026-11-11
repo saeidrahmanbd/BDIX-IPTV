@@ -251,7 +251,8 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             self.assertIn(f'group-title="{name}"', updated)
         self.assertNotIn('group-title="Review" tvg-chno=', updated)
         self.assertLess(updated.index('group-title="Backup"'), updated.index('group-title="Review"'))
-        self.assertLess(updated.index('group-title="Review"'), updated.index('group-title="New Channels"'))
+        self.assertLess(updated.index('group-title="New Channels"'), updated.index('group-title="New Backups"'))
+        self.assertLess(updated.index('group-title="New Backups"'), updated.index('group-title="Review"'))
         self.assertLess(updated.index('group-title="New Channels"'), updated.index('group-title="New Backups"'))
 
     def test_existing_rows_within_a_category_keep_their_relative_order(self):
