@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-11T12:51:58+00:00**
+Generated: **2026-11-11T18:30:53+00:00**
 
-- Active Bangladesh playlist identities: **70**
+- Active Bangladesh playlist identities: **77**
 - Identities with a retained source mapping: **4**
 - Identities with usable current/future schedules: **2**
-- Identities without a source mapping: **66**
+- Identities without a source mapping: **73**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -22,13 +22,14 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry) |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 63 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 73 | - |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
 
 | Channel | Playlist tvg-id | Mapping status |
 |---|---|---|
+| Anananda Tv | anananda.tv.bd | NO_GUIDE_HIT |
 | Ananda TV | AnandaTV.bd | NO_GUIDE_HIT |
 | Asian TV | AsianTV.bd | NO_GUIDE_HIT |
 | ATN Bangla | ATNBangla.bd | NO_GUIDE_HIT |
@@ -36,6 +37,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Ayna TV | custom.bdix.ayna-tv | NO_GUIDE_HIT |
 | Bangla TV | BanglaTV.bd | NO_GUIDE_HIT |
 | Bangla Vision | BanglaVision.bd | NO_GUIDE_HIT |
+| BD \| TBN 24 USA | bd.tbn.24.usa.bd | NO_GUIDE_HIT |
 | Bijoy TV | BijoyTV.bd | NO_GUIDE_HIT |
 | Boishakhi TV | BoishakhiTV.bd | NO_GUIDE_HIT |
 | BTV Chattogram | BTVChattogram.bd | NO_GUIDE_HIT |
@@ -68,6 +70,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
 | Jhankar TV | JhankarTV.ca | NO_GUIDE_HIT |
 | Jonmobhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
+| JTV BANGLA | jtv.bangla.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd@HD | NO_GUIDE_HIT |
 | ME TV | METV.bd | NO_GUIDE_HIT |
@@ -89,12 +92,16 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Probashi TV | ProbashiTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | RajdhaniTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | custom.rajdhani | NO_GUIDE_HIT |
+| Rupashi Bangla TV | RupashiBanglaTV.bd@SD | NO_GUIDE_HIT |
 | SA TV | SATV.bd | NO_GUIDE_HIT |
 | Shikor TV Canada | custom.shikortvcanada | NO_GUIDE_HIT |
 | Somoy TV | SomoyNewsTV.bd | NO_GUIDE_HIT |
 | SRK | SRK.bd | NO_GUIDE_HIT |
 | TBN24 | TBN24.us | NO_GUIDE_HIT |
+| Ten TV Prime | custom.tentvprime | NO_GUIDE_HIT |
 | Thikana | ThikanaTV.us | NO_GUIDE_HIT |
+| Thikana TV | thikana.tv.bd | NO_GUIDE_HIT |
+| VISION 24 | vision.24.bd | NO_GUIDE_HIT |
 
 ## Matching and source notes
 
