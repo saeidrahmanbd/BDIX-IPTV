@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-11T07:41:46+00:00**
-Source playlist SHA-256: **de1b7f58ac232ec72d734c2aca3bb35070d31536fda83b52f4e4ac1cc39dde5a**
+Generated: **2026-11-11T08:19:32+00:00**
+Source playlist SHA-256: **34f9bc33c915a05f01807e768ede043d93d7e59798afa56826f95acd3cf0fbde**
 
-Status: **PASS**
+Status: **BLOCK**
 
-- Current entries: **1184**
+- Current entries: **1143**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -15,11 +15,11 @@ Status: **PASS**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **0**
-- Numbered review entries: **0**
+- Primary entries missing channel numbers: **22**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **543**
+- Numbered review entries: **17**
 - Same-ID metadata name conflicts: **0**
-- Orphan Backup entries: **0**
+- Orphan Backup entries: **3**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **0**
@@ -37,10 +37,13 @@ Status: **PASS**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **0**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **543**.
 
 ## Blocking Reasons
-No blocking conditions detected.
+- duplicate primary identities: 1
+- orphan Backup entries: 3
+- primary entries missing tvg-chno: 22
+- review entries still numbered: 17
 
 ## Review-queue logo gaps
 
