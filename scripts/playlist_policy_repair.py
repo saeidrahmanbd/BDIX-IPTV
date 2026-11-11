@@ -208,11 +208,8 @@ def main():
     def natural(value):
         s = unicodedata.normalize("NFKD", str(value or "")).casefold().strip()
         return tuple(int(x) if x.isdigit() else x for x in re.split(r"(\d+)", s))
-    blocks.sort(key=lambda b: (
-        rank.get(attrs(b[0]).get("group-title", "").strip(), len(rank)),
-        natural(display_name(b[0])),
-        stream_url_key(url_of(b)),
-    ))
+    # Stable category-only ordering: preserve channel order inside each group.
+    blocks.sort(key=lambda b: rank.get(attrs(b[0]).get("group-title", "").strip(), len(rank)))
 
     pre = repair_category_registry(pre)
     lines = list(pre)
