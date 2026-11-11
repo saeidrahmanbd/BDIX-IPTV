@@ -117,7 +117,8 @@ def main():
         f"- Signed endpoints with no parseable expiry: **{sum(x['expiry_state'] == 'UNKNOWN' for x in signed)}**",
         f"- Xtream-style credential paths (credentials redacted): **{len(xtream)}**",
         f"- Proxy/worker-host routes: **{len(proxies)}** ({sum(x['group'] != 'Backup' for x in proxies)} primary, {sum(x['group'] == 'Backup' for x in proxies)} Backup)",
-        f"- /api/play/ relay routes: **{len(api_relays)}**", "",
+        f"- /api/play/ relay routes: **{len(api_relays)}**",
+        "- Expiry is parsed only from explicit Unix timestamps; opaque signatures remain UNKNOWN and are never guessed.", "",
         "## Latest Stream-Health Snapshot", "",
         "| Metric | Count |", "|---|---:|"
     ]
