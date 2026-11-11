@@ -662,9 +662,9 @@ def restore() -> None:
         + migrated_backup
         + snapshot_backup
         + unexpected_backup
+        + active_queues
         + snapshot_review
         + unexpected_review
-        + active_queues
     )
     new_text = serialize(preamble, final_records)
     if new_text != current_text:
