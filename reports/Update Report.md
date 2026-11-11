@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-11-11 09:30 UTC**_
+_Last generated: **2026-11-11 11:16 UTC**_
 
 Source playlist SHA-256: **81708ed765570d9c3d509cd9a471595b621b5f2145e4decc0d8bed1cea81d3ce**
 
@@ -13,8 +13,8 @@ Source playlist SHA-256: **81708ed765570d9c3d509cd9a471595b621b5f2145e4decc0d8be
 | India | **293** |
 | Backup Stream Entries | **385** |
 | IPTV Local Logos | **100.0%** |
-| IPTV EPG Programme Coverage | **PENDING** |
-| IPTV EPG Mapping | **PENDING** |
+| IPTV EPG Programme Coverage | **54%** |
+| IPTV EPG Mapping | **61.7%** |
 | Stream Health Tested | **1143** |
 | Stream Health Failures | **190** |
 | Persistent Failures | **183** |
@@ -52,18 +52,18 @@ Source playlist SHA-256: **81708ed765570d9c3d509cd9a471595b621b5f2145e4decc0d8be
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
 ## EPG
-- EPG IDs audited: **PENDING — guide not current**
-- Mapped: **PENDING — no current validated guide**
-- Current/future programme coverage: **PENDING — no current validated guide**
-- No mapping: **PENDING — guide not current**
-- EPG metric scope: **IPTV-Playlist.m3u published-guide row (awaiting a valid, fresh published guide)**
+- EPG IDs audited: **579**
+- Mapped: **357 (61.7%)**
+- Current/future programme coverage: **310/579 (53.5%)**
+- No mapping: **222**
+- EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against both current playlist inventories)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
 
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-11T09:29:34.207066+00:00** | **CURRENT** |
-| EPG coverage / two-playlist inventory | **2026-11-11T07:39:02+00:00** | **PENDING — guide missing or freshness not PASS** |
+| EPG coverage / two-playlist inventory | **2026-11-11T11:16:45+00:00** | **CURRENT** |
 | Stream health | **2026-11-11T09:30:17+00:00** | **CURRENT** |
 | Pre-publish gate | **2026-11-11T09:29:34+00:00** | **CURRENT** |
 
