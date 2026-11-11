@@ -12,6 +12,8 @@ on:
       - .github/workflows/playlist-logo-localization.yml
       - scripts/repair_playlist_logos.py
       - scripts/logo_source_catalog.py
+  schedule:
+    - cron: '0 2 * * *' # 08:00 Asia/Dhaka (UTC+6), after the 07:00 maintenance pass
   workflow_dispatch:
 
 permissions:
