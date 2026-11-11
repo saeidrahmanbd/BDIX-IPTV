@@ -69,6 +69,10 @@ on:
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
       - tests/test_main_playlist_protection.py
+  workflow_run:
+    workflows: ["IPTV Logo Localization"]
+    types: [completed]
+    branches: [main]
   schedule:
     - cron: '17 2 * * *' # 08:17 Asia/Dhaka (UTC+6)
   workflow_dispatch:
