@@ -33,15 +33,8 @@ jobs:
       - name: Install image processing dependencies
         run: python -m pip install --disable-pip-version-check -r docs/requirements.txt
 
-      - name: Snapshot playlist and localize verified logos
-        shell: bash
-        run: |
-          set -euo pipefail
-          cp IPTV-Playlist.m3u /tmp/IPTV-Playlist.before-logo-migration.m3u
-          python -m py_compile scripts/migrate_external_logos_fixed.py scripts/verify_logo_only_migration.py
-          python scripts/migrate_external_logos_fixed.py
-          python scripts/verify_logo_only_migration.py /tmp/IPTV-Playlist.before-logo-migration.m3u
-          test -s reports/logo-migration-unresolved.csv
+      - name: Validate logo migration tooling
+        run: python -m py_compile scripts/migrate_external_logos_fixed.py scripts/verify_logo_only_migration.py
 
       - name: Commit only verified logo assets and logo attributes
         shell: bash
@@ -50,39 +43,39 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-          # Fail closed if the runner workspace contains any unexpected output.
-          git add IPTV-Playlist.m3u logos/ reports/logo-migration-unresolved.csv
-          changed="$(git diff --cached --name-only)"
-          while IFS= read -r path; do
-            [[ -z "$path" ]] && continue
-            case "$path" in
-              IPTV-Playlist.m3u|logos/*|reports/logo-migration-unresolved.csv) ;;
-              *) echo "::error::Unexpected staged path: $path"; exit 1 ;;
-            esac
-          done <<< "$changed"
-
-          if git diff --cached --quiet; then
-            echo "No logo assets or references needed updating."
-            exit 0
-          fi
-
-          git commit -m 'Localize verified IPTV channel logos'
+          # Each retry starts from the latest main snapshot and regenerates both
+          # the playlist logo attributes and unresolved CSV from that same state.
+          # This avoids stale CSV merge conflicts during concurrent main updates.
           for attempt in 1 2 3; do
             git fetch origin main
-            if ! git rebase origin/main; then
-              git rebase --abort || true
-              echo "::error::Could not safely rebase logo-only changes onto latest main."
-              exit 1
-            fi
-            # Re-verify against the original snapshot after rebasing. If a concurrent
-            # playlist edit changed anything other than logo attributes, stop here.
+            git reset --hard origin/main
+            cp IPTV-Playlist.m3u /tmp/IPTV-Playlist.before-logo-migration.m3u
+            python scripts/migrate_external_logos_fixed.py
             python scripts/verify_logo_only_migration.py /tmp/IPTV-Playlist.before-logo-migration.m3u
+            test -s reports/logo-migration-unresolved.csv
+
+            git add IPTV-Playlist.m3u logos/ reports/logo-migration-unresolved.csv
+            changed="$(git diff --cached --name-only)"
+            while IFS= read -r path; do
+              [[ -z "$path" ]] && continue
+              case "$path" in
+                IPTV-Playlist.m3u|logos/*|reports/logo-migration-unresolved.csv) ;;
+                *) echo "::error::Unexpected staged path: $path"; exit 1 ;;
+              esac
+            done <<< "$changed"
+
+            if git diff --cached --quiet; then
+              echo "No logo assets or references needed updating."
+              exit 0
+            fi
+
+            git commit -m 'Localize verified IPTV channel logos'
             if git push origin HEAD:main; then
               unresolved="$(($(wc -l < reports/logo-migration-unresolved.csv) - 1))"
               echo "Committed logo localization. Unresolved identities remaining: $unresolved"
               exit 0
             fi
-            echo "::warning::Logo-only push attempt ${attempt} failed; retrying against latest main."
+            echo "::warning::Logo-only push attempt ${attempt} lost a race; retrying from latest main."
           done
-          echo "::error::Could not publish the validated logo-only commit."
+          echo "::error::Could not publish the validated logo-only commit after 3 fresh snapshots."
           exit 1
