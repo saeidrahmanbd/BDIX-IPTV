@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Resolve missing/external channel logos and store them as local PNG files."""
-import io, json, re, urllib.request, hashlib
+import io, json, re, urllib.request, hashlib, csv
 from pathlib import Path
 from logo_asset_naming import is_blocked_logo_basename, safe_logo_filename
 from logo_embedded_png import recover_embedded_png_from_svg
@@ -411,7 +411,7 @@ for line in lines:
 
     # No verified asset matched. Keep the logo unset instead of publishing fabricated artwork.
     output.append(force_local(line, ""))
-    unresolved.append(title)
+    unresolved.append({"channel": title, "tvg_id": channel_id, "group_title": metadata.get("group-title", ""), "status": "NO_VERIFIED_ASSET"})
     continue
 
 new_text = "\n".join(output).rstrip() + "\n"
@@ -426,4 +426,12 @@ print(f"Resolved from IPTV-org catalogue: {resolved_from_catalogue}")
 print(f"Local non-PNG logos converted: {converted_local}")
 print(f"Logo downloads failed: {failed}")
 print(f"Still unresolved (no usable logo attached): {len(unresolved)}")
-for title in unresolved: print(f"UNRESOLVED: {title}")
+for row in unresolved:
+    print(f"UNRESOLVED: {row['channel']} [{row['tvg_id']}] group={row['group_title']}")
+report = Path("reports/logo-migration-unresolved.csv")
+report.parent.mkdir(parents=True, exist_ok=True)
+with report.open("w", encoding="utf-8", newline="") as handle:
+    writer = csv.DictWriter(handle, fieldnames=["channel", "tvg_id", "group_title", "status"])
+    writer.writeheader()
+    writer.writerows(unresolved)
+print(f"Unresolved-logo identity report: {report} ({len(unresolved)} rows)")
