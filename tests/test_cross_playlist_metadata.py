@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from backfill_cross_playlist_metadata import backfill_text, build_indexes
+from backfill_cross_playlist_metadata import backfill_text, build_external_indexes, build_indexes
 
 
 class CrossPlaylistMetadataTests(unittest.TestCase):
@@ -76,6 +76,35 @@ class CrossPlaylistMetadataTests(unittest.TestCase):
         self.assertIn('tvg-country="IN"', updated)
         self.assertIn('tvg-language="hin"', updated)
         self.assertEqual(counts["country_fields_filled"], 1)
+        self.assertEqual(counts["language_fields_filled"], 1)
+
+
+    def test_external_catalogue_uses_feed_languages_and_unique_names(self):
+        channels = [
+            {"id": "BBCNews.uk", "name": "BBC News", "alt_names": ["BBC World News"], "country": "GB"},
+            {"id": "France3.fr", "name": "France 3", "alt_names": ["France Three"], "country": "FR"},
+            {"id": "Other.fr", "name": "France 3", "alt_names": [], "country": "FR"},
+        ]
+        feeds = [
+            {"channel": "BBCNews.uk", "languages": ["eng"]},
+            {"channel": "BBCNews.uk", "languages": ["fra"]},
+            {"channel": "France3.fr", "languages": ["fra"]},
+        ]
+        by_id, by_name = build_external_indexes(channels, feeds)
+        self.assertEqual(by_id["BBCNews.uk"]["language"], "eng;fra")
+        self.assertEqual(by_name["bbc world news"]["language"], "eng;fra")
+        self.assertNotIn("france 3", by_name)
+
+    def test_quality_suffix_uses_exact_base_channel_metadata(self):
+        text = (
+            '#EXTINF:-1 tvg-id="BBCNews.uk@HD" tvg-name="BBC News" group-title="International",BBC News\\n'
+            'https://example.test/bbc-hd.m3u8\\n'
+        )
+        updated, counts = backfill_text(text, {
+            "BBCNews.uk": {"country": "GB", "language": "eng"}
+        }, {})
+        self.assertIn('tvg-language="eng"', updated)
+        self.assertIn('tvg-country="GB"', updated)
         self.assertEqual(counts["language_fields_filled"], 1)
 
     def test_adult_entries_are_never_backfilled(self):
