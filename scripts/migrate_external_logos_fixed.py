@@ -58,6 +58,8 @@ FALLBACK_LOGOS = {
 # These are intentionally keyed by playlist identity, never by stream URL or display name.
 ID_LOGO_MAP = {
     "bowling.tv.com": "https://images.squarespace-cdn.com/content/v1/6a0f1667e14e7d311009eebc/b1eeb2bc-abb8-4d8f-9796-32ec785e1ef9/Bowling%2BTV_Horizontal_White.png",
+    "msg.sportszone.com": "https://www.tvchannellists.com/wiki/images/5/50/MSG_SportsZone_%28SamsungTV%2B%29.png",
+    "powder.tv.com": "https://provider-static.plex.tv/epg/cms/production/103b18dc-d465-46d3-b1e6-7a5a88a5c583/PLEX_1500X1000_PNG_WHT_POWDER_TV_Logo.png",
     "vyaschannel.in@sd": "https://www.yupptv.com/seo_img/UGC_GEC_big.jpg",
     "zeecineclassic.in@sd": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN21000014R_20260325T012324SQUARE.png",
     "zeecomedynation.in@hd": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN2100002GD_20260325T012327SQUARE.png",
