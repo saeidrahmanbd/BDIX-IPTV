@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
-#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","Review","New Channels","New Backups"]
+#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backups","Review"]
 #=================================
 # Developed by: SAEID RAHMAN
 # Facebook: https://www.facebook.com/saeid.rahman.sr
@@ -366,6 +366,8 @@ https://samitaorigin.tangotv.in/MHONE/SAMITAORIGIN/index.m3u8
 https://mumt01.tangotv.in/O5aw8Zn3MHONEDILSE/index.m3u8
 #EXTINF:-1 tvg-chno="176" tvg-id="Mh1Music.in@SD" tvg-name="MH One Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-1-music.png" channel-id="Mh1Music.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Music",MH One Music
 https://livestream.jswk.online/playlisttest/live/playlist.m3u8
+#EXTINF:-1 tvg-id="MTV.in@SD" tvg-name="MTV India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv-india-hd-720p.png" tvg-chno="176" channel-id="MTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Music",MTV India
+https://yupp-music.keralive.workers.dev/out/v1/a797c00cba954265ba781f92a57e2cf5/index.m3u8
 #EXTINF:-1 tvg-id="MusicIndia.in@SD" tvg-name="Music India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/music-india.png" tvg-chno="177" channel-id="MusicIndia.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Music",Music India
 https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="NHBollyRaga.in" tvg-name="NH BollyRaga" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-bollyraga.png" tvg-chno="178" channel-id="NHBollyRaga.in" tvg-country="IN" tvg-language="hin" group-title="Indian Music",NH BollyRaga
@@ -644,6 +646,8 @@ https://vglivessai.akamaized.net/ptnr-yupptv/title-Punjabi_Shorts/in/v1/master/6
 https://samitaorigin.tangotv.in/PUNJABITV/SAMITAORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="PuthuyugamTV.in@SD" tvg-name="Puthuyugam TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/puthuyugam-tv.png" tvg-chno="314" channel-id="PuthuyugamTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Puthuyugam TV
 https://mumt04.tangotv.in/m18aqlK4PUTHUYUGAMTV/index.m3u8
+#EXTINF:-1 tvg-chno="306" tvg-id="QTV.in" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" channel-id="QTV.in" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Q TV
+https://fta.ektv.in/live/25/master.m3u8
 #EXTINF:-1 tvg-id="RajTV.in@SD" tvg-name="Raj TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-tv.png" tvg-chno="315" channel-id="RajTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Raj TV
 https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/b8640d6b-d131-4401-9451-944e1e65fe79/0.m3u8
 #EXTINF:-1 tvg-id="Rang.in@SD" tvg-name="Rang" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rang.png" tvg-chno="316" channel-id="Rang.in@SD" tvg-country="IN" tvg-language="asm" group-title="Indian Entertainment",Rang
@@ -1650,6 +1654,14 @@ https://iptvlive.ahmed-bd-org.workers.dev/dd-bangla-1/index.m3u8
 https://fta.ektv.in/live/197/master.m3u8
 #EXTINF:-1 tvg-id="DDChandana.in@SD" tvg-name="DD Chandana" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-chandana.png" channel-id="DDChandana.in@SD" tvg-country="IN" tvg-language="kan" group-title="Backup",DD Chandana
 https://d2lk5u59tns74c.cloudfront.net/out/v1/0c980455d2fb4b69bcc6235745ee6039/index.m3u8
+#EXTINF:-1 tvg-id="DDGirnar.in@SD" tvg-name="DD Girnar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-girnar.png" channel-id="DDGirnar.in@SD" tvg-country="IN" tvg-language="guj" group-title="Backup",DD Girnar
+https://fta.ektv.in/live/368/master.m3u8
+#EXTINF:-1 tvg-id="DDGoa.in@SD" tvg-name="DD Goa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-goa.png" channel-id="DDGoa.in@SD" tvg-country="IN" tvg-language="kok" group-title="Backup",DD Goa
+https://fta.ektv.in/live/367/master.m3u8
+#EXTINF:-1 tvg-id="DDHaryana.in@SD" tvg-name="DD Haryana" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-haryana.png" channel-id="DDHaryana.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",DD Haryana
+https://fta.ektv.in/live/580/master.m3u8
+#EXTINF:-1 tvg-id="DDHimachalPradesh.in@SD" tvg-name="DD Himachal Pradesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-himachal-pradesh.png" channel-id="DDHimachalPradesh.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",DD Himachal Pradesh
+https://fta.ektv.in/live/575/master.m3u8
 #EXTINF:-1 tvg-id="DDJharkhand.in@SD" tvg-name="DD Jharkhand" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-jharkhand.png" channel-id="DDJharkhand.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",DD Jharkhand
 https://cdn.pishow.tv/ott/live/1617/master.m3u8
 #EXTINF:-1 channel-id="DDKashir.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-kashir.png" tvg-id="DDKashir.in@SD" tvg-name="DD Kashir" tvg-language="hin" tvg-country="IN" group-title="Backup",DD Kashir
@@ -1658,6 +1670,8 @@ https://cdn.pishow.tv/ott/live/16/master.m3u8
 https://cdn.pishow.tv/ott/live/31/master.m3u8
 #EXTINF:-1 tvg-id="DDMadhyaPradesh.in@SD" tvg-name="DD Madhya Pradesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-madhya-pradesh.png" channel-id="DDMadhyaPradesh.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",DD Madhya Pradesh
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b5256b391a7c4ae6977535b73fd6f591/index.m3u8
+#EXTINF:-1 tvg-id="DDMalayalam.in@SD" tvg-name="DD Malayalam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-malayalam.png" channel-id="DDMalayalam.in@SD" tvg-country="IN" tvg-language="mal" group-title="Backup",DD Malayalam
+https://fta.ektv.in/live/680/master.m3u8
 #EXTINF:-1 tvg-id="DDNational.in@SD" tvg-name="DD National" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-national.png" channel-id="DDNational.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",DD National
 http://163.61.226.31:9981/stream/channelid/1991369999?profile=pass
 #EXTINF:-1 tvg-id="DDNational.in@SD" tvg-name="DD National" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-national.png" channel-id="DDNational.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",DD National
@@ -1674,6 +1688,8 @@ https://mumbai-edge.smartplaytv.in/ddodiya/index.m3u8
 http://163.61.226.31:9981/stream/channelid/2094424586?profile=pass
 #EXTINF:-1 tvg-id="DDRajasthan.in@SD" tvg-name="DD Rajasthan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-rajasthan.png" channel-id="DDRajasthan.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",DD Rajasthan
 https://d2lk5u59tns74c.cloudfront.net/out/v1/5b6bbbf682b741ecbe279f75a4a9a3e6/index.m3u8
+#EXTINF:-1 tvg-id="DDSahyadri.in@SD" tvg-name="DD Sahyadri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sahyadri.png" channel-id="DDSahyadri.in@SD" tvg-country="IN" tvg-language="mar" group-title="Backup",DD Sahyadri
+https://fta.ektv.in/live/187/master.m3u8
 #EXTINF:-1 tvg-id="DDSaptagiri.in@SD" tvg-name="DD Saptagiri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-saptagiri.png" channel-id="DDSaptagiri.in@SD" tvg-country="IN" tvg-language="tel" group-title="Backup",DD Saptagiri
 https://cdn.pishow.tv/ott/live/22/master.m3u8
 #EXTINF:-1 tvg-id="DDSports.in@SD" tvg-name="DD Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" channel-id="DDSports.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",DD Sports
@@ -1690,6 +1706,8 @@ https://cdn.pishow.tv/ott/live/1737/master.m3u8
 https://fta.ektv.in/live/679/master.m3u8
 #EXTINF:-1 tvg-id="DDUrdu.in@SD" tvg-name="DD Urdu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-urdu.png" channel-id="DDUrdu.in@SD" tvg-country="IN" tvg-language="urd;hin;eng" group-title="Backup",DD Urdu
 https://cdn.pishow.tv/ott/live/8/master.m3u8
+#EXTINF:-1 channel-id="DDYadagiri.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-yadagiri.png" tvg-id="DDYadagiri.in@SD" tvg-name="DD Yadagiri" tvg-language="tel" tvg-country="IN" group-title="Backup",DD Yadagiri
+https://fta.ektv.in/live/678/master.m3u8
 #EXTINF:-1 tvg-id="DeenTV.uk" tvg-name="Deen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deen-tv-576p.png" channel-id="DeenTV.uk" tvg-country="GB" tvg-language="ben" group-title="Backup",Deen TV
 https://app.ncare.live/live-orgin/deentv.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="DeeptoTV.bd" tvg-name="Deepto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deepto-tv.png" channel-id="DeeptoTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Deepto TV
@@ -1880,6 +1898,8 @@ https://mtv.sunplex.live/MAASRANGA/tracks-v1a1/mono.m3u8
 https://tvsen5.aynaott.com/maasrangatv/index.m3u8
 #EXTINF:-1 tvg-id="MaasrangaTV.bd" tvg-name="Maasranga TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maasranga-tv.png" channel-id="MaasrangaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Maasranga TV
 https://tvsen6.aynaott.com/maasrangatv/index.m3u8
+#EXTINF:-1 tvg-id="MahaMovie.in@SD" tvg-name="Maha Movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maha-movie.png" channel-id="MahaMovie.in@SD" tvg-country="IN" tvg-language="tel" group-title="Backup",Maha Movie
+https://fta.ektv.in/live/48/48_0.m3u8
 #EXTINF:-1 tvg-id="MahaaMax.in" tvg-name="Mahaa Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mahaa-max.png" channel-id="MahaaMax.in" tvg-country="IN" tvg-language="tel" group-title="Backup",Mahaa Max
 https://cdn.pishow.tv/ott/live/1147/master.m3u8
 #EXTINF:-1 tvg-id="MahaaMax.in" tvg-name="Mahaa Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mahaa-max.png" channel-id="MahaaMax.in" tvg-country="IN" tvg-language="tel" group-title="Backup",Mahaa Max
@@ -2244,6 +2264,8 @@ https://mumbai-edge.smartplaytv.in/utv/index.m3u8
 https://unbeaten-tcl.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="VanithaTV.in@SD" tvg-name="Vanitha TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vanitha-tv.png" channel-id="VanithaTV.in@SD" tvg-country="IN" tvg-language="tel" group-title="Backup",Vanitha TV
 https://mumt01.tangotv.in/O5aw8Zn3VANITHA/index.m3u8
+#EXTINF:-1 tvg-id="VasanthTV.in@SD" tvg-name="Vasanth TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vasanth-tv.png" channel-id="VasanthTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Backup",Vasanth TV
+https://fta.ektv.in/live/228/master.m3u8
 #EXTINF:-1 tvg-id="VendharTV.in@SD" tvg-name="Vendhar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vendhar-tv.png" channel-id="VendharTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Backup",Vendhar TV
 https://cdn.pishow.tv/ott/live/1271/master.m3u8
 #EXTINF:-1 tvg-id="VendharTV.in@SD" tvg-name="Vendhar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vendhar-tv.png" channel-id="VendharTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Backup",Vendhar TV
