@@ -1,4 +1,3 @@
-
 <h1 align="center">BDIX-IPTV: Bangladesh IPTV M3U/M3U8 Playlists &amp; XMLTV EPG</h1>
 
 <p align="center">
@@ -7,9 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/">
-    <img src="assets/BDIX-IPTV-banner.png" alt="BDIX-IPTV multi-country M3U playlists with XMLTV EPG" width="100%">
-  </a>
+  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/"><img src="assets/BDIX-IPTV-banner.png" alt="BDIX-IPTV multi-country M3U playlists with XMLTV EPG" width="100%"></a>
 </p>
 
 <p align="center">
@@ -27,11 +24,12 @@
 </p>
 
 <p align="center">
-  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/"><strong>🌐 Project Website</strong></a> &nbsp;·&nbsp;
-  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html"><strong>📖 Playlist Guide</strong></a> &nbsp;·&nbsp;
-  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html" lang="bn"><strong>🇧🇩 বাংলা IPTV</strong></a> &nbsp;·&nbsp;
-  <a href="#playlists"><strong>📺 Playlists</strong></a> &nbsp;·&nbsp;
-  <a href="#epg"><strong>🗓️ EPG</strong></a> &nbsp;·&nbsp;
+  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/"><strong>🌐 Project Website</strong></a> ·
+  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html"><strong>📖 Playlist Guide</strong></a> ·
+  <a href="https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html" lang="bn"><strong>🇧🇩 বাংলা IPTV</strong></a> ·
+  <a href="#playlists"><strong>📺 Playlists</strong></a> ·
+  <a href="#epg"><strong>🗓️ EPG</strong></a> ·
+  <a href="#playlist-studio"><strong>🖥️ Playlist Studio</strong></a> ·
   <a href="#contact"><strong>📞 Contact</strong></a>
 </p>
 
@@ -45,13 +43,10 @@ The playlists are maintained with organized channel groups, channel information 
 
 Stream availability and programme-guide coverage depend on third-party sources and may change over time.
 
-
 ---
 
 <a id="playlists"></a>
 ## 📺 Choose Your IPTV Playlist
-
-Choose the collection you want to use. Each playlist is available through a direct M3U URL that you can add to a compatible IPTV player.
 
 <table>
   <tr>
@@ -60,54 +55,35 @@ Choose the collection you want to use. Each playlist is available through a dire
       <h3>Multi-Country IPTV</h3>
       <p><strong>IPTV-Playlist.m3u</strong></p>
       <p>The main multi-country collection, covering Bangladesh, India, Pakistan and eligible channels from other countries across organized country and genre groups.</p>
-      <a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u">
-        <img src="https://img.shields.io/badge/▶%20OPEN%20MAIN%20PLAYLIST-0969da?style=for-the-badge" alt="Open the multi-country IPTV M3U playlist">
-      </a>
-      <br><br>
-      <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/IPTV-Playlist.m3u">View playlist source</a>
+      <a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u"><img src="https://img.shields.io/badge/▶%20OPEN%20MAIN%20PLAYLIST-0969da?style=for-the-badge" alt="Open the multi-country IPTV M3U playlist"></a>
+      <br><br><a href="https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/IPTV-Playlist.m3u">View playlist source</a>
     </td>
     <td align="center" width="50%" valign="top">
       <h2>🌍</h2>
       <h3>International IPTV</h3>
       <p><strong>International-Playlist.m3u</strong></p>
       <p>A broader collection featuring Bangladesh and India, alongside eligible movie and music channels from other countries.</p>
-      <a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u">
-        <img src="https://img.shields.io/badge/▶%20OPEN%20INTERNATIONAL%20PLAYLIST-8957e5?style=for-the-badge" alt="Open the international IPTV M3U playlist">
-      </a>
-      <br><br>
-      <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/International-Playlist.m3u">View playlist source</a>
+      <a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u"><img src="https://img.shields.io/badge/▶%20OPEN%20INTERNATIONAL%20PLAYLIST-8957e5?style=for-the-badge" alt="Open the international IPTV M3U playlist"></a>
+      <br><br><a href="https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/International-Playlist.m3u">View playlist source</a>
     </td>
   </tr>
 </table>
 
 ### Copy playlist URLs
 
-Use the copy icon at the top-right of each code block to copy the URL.
-
 **Main playlist — Multi-Country IPTV**
-
 ```text
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u
 ```
 
 **International companion playlist**
-
 ```text
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u
 ```
 
 ### 📱 Compatible IPTV Players
 
-The M3U playlists can be used with popular applications that support remote playlist URLs, including:
-
-<p align="center">
-  <img src="https://img.shields.io/badge/XCIPTV-Compatible-111827?style=for-the-badge" alt="XCIPTV">
-  <img src="https://img.shields.io/badge/TiviMate-Compatible-1677ff?style=for-the-badge" alt="TiviMate">
-  <img src="https://img.shields.io/badge/OTT%20Navigator-Compatible-20a779?style=for-the-badge" alt="OTT Navigator">
-  <img src="https://img.shields.io/badge/IPTV%20Smarters-Compatible-20a779?style=for-the-badge" alt="IPTV Smarters">
-  <img src="https://img.shields.io/badge/VLC-Compatible-f58220?style=for-the-badge&logo=vlc" alt="VLC Media Player">
-  <img src="https://img.shields.io/badge/Kodi-Compatible-1683c5?style=for-the-badge&logo=kodi" alt="Kodi">
-</p>
+The M3U playlists can be used with applications supporting remote playlist URLs, including XCIPTV, TiviMate, OTT Navigator, IPTV Smarters, VLC and Kodi.
 
 **How to add a playlist:** Copy the M3U URL, open your IPTV player, choose **Add Playlist by URL**, paste the link and refresh the channel list. Menu names may differ between applications.
 
@@ -116,34 +92,81 @@ The M3U playlists can be used with popular applications that support remote play
 <a id="epg"></a>
 ## 🗓️ XMLTV EPG – TV Programme Guide
 
-Both playlists use a shared **XMLTV Electronic Programme Guide (EPG)**. Add the following URL in your player's **EPG** or **XMLTV** settings to load programme information for channels with matching schedules.
+Both playlists use a shared **XMLTV Electronic Programme Guide (EPG)**. Add the following URL in your player's **EPG** or **XMLTV** settings:
 
 ```text
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml
 ```
 
-The guide is maintained through an automated process that updates channel mappings, collects available programme schedules and validates the generated XMLTV data before publication. Coverage varies by channel and source availability.
+The guide is maintained through automated channel mapping, schedule collection and validation before publication. Coverage varies by channel and source availability.
 
 ---
 
-## 🖥️ Playlist Studio for Windows
+<a id="playlist-studio"></a>
+## 🖥️ Playlist Studio 5.1 for Windows
 
-[**Playlist Studio 5.0**](https://github.com/saeidrahmanbd/Playlist-Studio) is a separate Windows application for managing, editing, testing and playing IPTV playlists.
-
-<p align="center">
-  <a href="https://github.com/saeidrahmanbd/Playlist-Studio">
-    <img src="assets/playlist-studio-5.png" alt="Playlist Studio 5.0 Windows application for managing, editing and testing IPTV playlists" width="85%">
-  </a>
-</p>
+**Playlist Studio 5.1** is the Windows playlist manager, editor, EPG tool and player maintained with this project. It manages, organizes, edits, tests and plays M3U/M3U8 playlists from one workspace.
 
 <p align="center">
-  <a href="https://github.com/saeidrahmanbd/Playlist-Studio/releases">
-    <img src="https://img.shields.io/badge/⬇%20DOWNLOAD-PLAYLIST%20STUDIO-0969da?style=for-the-badge" alt="Download Playlist Studio">
-  </a>
-  <a href="https://github.com/saeidrahmanbd/Playlist-Studio">
-    <img src="https://img.shields.io/badge/VIEW-SOURCE%20CODE-24292f?style=for-the-badge&logo=github" alt="View Playlist Studio source code">
-  </a>
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1"><img src="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/Playlist-Studio-5.1.JPG" alt="Playlist Studio 5.1 Windows application" width="85%"></a>
 </p>
+
+### What's new in 5.1
+
+- **EPG Centre:** Load multiple XMLTV guides from URLs or local XML, GZ, XZ and ZIP files; review guide coverage, statuses and Now/Next.
+- **EPG editing:** Search, sort and edit `tvg-id` values, preview bulk metadata edits and undo; manual EPG corrections persist through refreshes and re-imports.
+- **Smarter stream scanner:** Responsive, Dead, Unreachable, Restricted, Stale, Unavailable, Unverified and Error statuses; timeouts and blocked requests are not automatically marked Dead.
+- **Scan controls:** Pause, resume and cancel; configure limits, timeouts, retries and player identity; scan selected channels, a category or the current view; optional HLS freshness and deep diagnostics.
+- **Persistent review history:** Good, Bad and Review verdicts, notes and scan history are retained between sessions; a new scan does not overwrite your verdict.
+- **Xtream and Stalker:** Background login/import with cancellation; Xtream can fall back to M3U download; Stalker imports are undoable.
+- **Credential protection:** Remembered provider logins are protected with Windows DPAPI; credentials can be masked in the channel list.
+- **Safer playlist handling:** UTF-8 saving, preservation of directives/comments/unknown header keys, safer backups, autosave/recovery and malformed-line import repair.
+
+### Portable application
+
+No traditional installation is required. Download the portable EXE and run it on 64-bit Windows. VLC playback is bundled.
+
+<p align="center">
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.1/Playlist-Studio-5.1.exe"><img src="https://img.shields.io/badge/⬇%20DOWNLOAD-PLAYLIST%20STUDIO%205.1-0969da?style=for-the-badge" alt="Download Playlist Studio 5.1 portable EXE"></a>
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1"><img src="https://img.shields.io/badge/VIEW-v5.1%20RELEASE-24292f?style=for-the-badge&logo=github" alt="View Playlist Studio v5.1 release"></a>
+</p>
+
+> **Windows SmartScreen:** Windows may warn because the executable is unsigned. Download only from this official release. If you trust the source, choose **More info → Run anyway**.
+
+### Windows Build Kit r2
+
+The release includes **Playlist-Studio-5_1-Windows-Build-Kit-r2.zip**. It creates an isolated build environment, installs pinned dependencies, runs automated tests, bundles VLC with checksum verification and builds the portable EXE.
+
+**Build requirements:** Windows 10/11 x64 and 64-bit Python 3.10–3.13 (Python 3.13 recommended). Python 3.14 and 3.15 are not supported by the current pinned PyInstaller dependency set. Newer Python installations can remain installed alongside Python 3.13.
+
+1. Download and extract the [Windows Build Kit r2](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.1/Playlist-Studio-5_1-Windows-Build-Kit-r2.zip).
+2. Run `BUILD-WINDOWS.cmd`.
+3. Wait for **BUILD COMPLETE**.
+4. Run `Playlist-Studio-5.1.exe` from the build kit folder.
+
+**No Python Launcher?** The Python Launcher is recommended but not required. Set `PS_PYTHON` to the full path of a compatible Python executable and run the builder in the same Command Prompt session. Example (adjust paths):
+
+```cmd
+set "PS_PYTHON=C:\Program Files\Python313\python.exe"
+cd /d "D:\Software\Playlist-Studio-5_1-Windows-Build-Kit-r2"
+BUILD-WINDOWS.cmd --fresh
+```
+
+The `--fresh` option recreates the kit's `.venv-build` environment. `PS_PYTHON` applies only to that Command Prompt session. If a build step fails, inspect `BUILD-LOG.txt` beside the builder. The ZIP includes its own README and known-limitations notes.
+
+### Release details
+
+| Item | Details |
+|---|---|
+| Release | [Playlist Studio v5.1](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1) |
+| Platform | Windows 10 / 11, x64 |
+| Edition | Portable EXE |
+| Playlist formats | M3U / M3U8 |
+| EPG | XMLTV from URLs and local files |
+| Playback | Built-in player with bundled VLC |
+| Build Python | 3.13 recommended; 3.10–3.13 accepted |
+
+See the [feature guide](docs/PLAYLIST-STUDIO.md) and [release integrity record](docs/PLAYLIST-STUDIO-INTEGRITY.md).
 
 ---
 
@@ -187,17 +210,11 @@ The repository's original code and documentation are licensed under the [MIT Lic
 <p align="center">
   <strong>⭐ If you find this project useful, please consider starring it on GitHub!</strong>
   <br><br>
-  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV">
-    <img src="https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?style=for-the-badge&logo=github&color=f5c542"
-         alt="Star BDIX-IPTV on GitHub">
-  </a>
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV"><img src="https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?style=for-the-badge&logo=github&color=f5c542" alt="Star BDIX-IPTV on GitHub"></a>
   <br>
   <sub>Click the badge to visit the repository, then click GitHub's Star button.</sub>
   <br><br>
-  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV">
-    <strong>github.com/saeidrahmanbd/BDIX-IPTV</strong>
-  </a>
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV"><strong>github.com/saeidrahmanbd/BDIX-IPTV</strong></a>
   <br><br>
-  Developed and maintained with ❤️ by
-  <a href="https://github.com/saeidrahmanbd"><strong>Saeid Rahman</strong></a>
+  Developed and maintained with ❤️ by <a href="https://github.com/saeidrahmanbd"><strong>Saeid Rahman</strong></a>
 </p>
