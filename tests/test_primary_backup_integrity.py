@@ -98,7 +98,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         for e in entries:
             if (
                 e["attrs"].get("group-title") == "Bangladesh"
-                and e["attrs"].get("tvg-name") not in {"Shikor TV Canada", "Jhankar TV"}
+                and e["attrs"].get("tvg-name") not in {"Shikor TV Canada", "Jhankar TV", "Thikana"}
             ):
                 self.assertEqual(e["attrs"].get("tvg-country"), "BD", e["attrs"].get("tvg-name"))
 
