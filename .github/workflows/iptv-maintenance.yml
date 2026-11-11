@@ -158,6 +158,12 @@ jobs:
         run: |
           set -euo pipefail
           git fetch origin main
+          EVENT_COMMIT="$GITHUB_SHA"
+          CURRENT_COMMIT="$(git rev-parse FETCH_HEAD)"
+          if [[ "$EVENT_COMMIT" != "$CURRENT_COMMIT" ]]; then
+            echo "::notice::Skipping superseded queued IPTV maintenance run; event commit $EVENT_COMMIT is behind main $CURRENT_COMMIT. No playlist files were changed."
+            exit 0
+          fi
           EVENT_WORKFLOW_BLOB="$(git rev-parse "${GITHUB_SHA}:.github/workflows/iptv-maintenance.yml")"
           CURRENT_WORKFLOW_BLOB="$(git rev-parse "FETCH_HEAD:.github/workflows/iptv-maintenance.yml")"
           if [[ "$EVENT_WORKFLOW_BLOB" != "$CURRENT_WORKFLOW_BLOB" ]]; then
