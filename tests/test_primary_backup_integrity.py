@@ -171,7 +171,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             self.assertEqual(primary[0]["url"], url, name)
             self.assertEqual(len(backup), 1, name)
 
-    def test_primary_without_verified_local_logo_is_preserved_in_review(self):
+    def test_primary_without_verified_local_logo_keeps_its_curated_group(self):
         dtalk_url = "https://stream.example/d-talk.m3u8"
         prime_url = "https://stream.example/prime-tv.m3u8"
         sample = (
@@ -182,18 +182,19 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             + prime_url + "\n"
         )
         updated, stats, errors = repair_playlist_text(sample)
-        self.assertEqual(errors, [])
-        self.assertEqual(stats["missing_logos_quarantined"], 2)
+        self.assertEqual(stats["missing_logos_quarantined"], 0)
+        self.assertEqual(stats["missing_logos_unresolved"], ["Shikor TV Canada", "Ten TV Prime"])
+        self.assertEqual(sum("missing local logo" in error for error in errors), 2)
         self.assertIn(dtalk_url, updated)
         self.assertIn(prime_url, updated)
         self.assertIn('tvg-id="custom.shikortvcanada"', updated)
         self.assertIn('tvg-id="custom.tentvprime"', updated)
-        self.assertIn('group-title="Review"', updated)
-        self.assertNotIn('tvg-chno="17"', updated)
-        self.assertNotIn('tvg-chno="76"', updated)
-        self.assertEqual(stats["missing_logos_deferred"].count("Shikor TV Canada"), 1)
-        self.assertEqual(stats["missing_logos_deferred"].count("Ten TV Prime"), 1)
-    def test_generic_logo_is_removed_when_primary_is_quarantined(self):
+        self.assertIn('group-title="International"', updated)
+        self.assertIn('group-title="Bangladesh"', updated)
+        self.assertIn('tvg-chno="17"', updated)
+        self.assertIn('tvg-chno="76"', updated)
+        self.assertEqual(stats["missing_logos_deferred"], [])
+    def test_generic_logo_is_removed_without_reclassifying_primary(self):
         url = "https://stream.example/nkr-tv-kannada.m3u8"
         fallback = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg"
         sample = (
@@ -202,12 +203,14 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
                   language="kan", country="IN", logo=fallback)
         )
         updated, stats, errors = repair_playlist_text(sample)
-        self.assertEqual(errors, [])
+        self.assertEqual(sum("missing local logo" in error for error in errors), 1)
         entry = updated.split(url)[0].split("#EXTINF:")[-1]
-        self.assertIn('group-title="Review"', entry)
+        self.assertIn('group-title="Indian Entertainment"', entry)
         self.assertNotIn("tvg-logo=", entry)
+        self.assertIn('tvg-chno="1"', entry)
         self.assertIn(url, updated)
-        self.assertEqual(stats["missing_logos_quarantined"], 1)
+        self.assertEqual(stats["missing_logos_quarantined"], 0)
+        self.assertEqual(stats["missing_logos_unresolved"], ["NKR TV Kannada"])
 
     def test_duplicate_primary_demotes_alternate_and_backup_has_primary(self):
         updated, stats, errors = repair_playlist_text(self.sample)
