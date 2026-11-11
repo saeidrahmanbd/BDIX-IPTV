@@ -35,16 +35,8 @@ on:
   # Keep manual dispatch available for post-change EPG quality verification.
   workflow_dispatch:
 
-# Coalesce repeated EPG triggers: keep one active run and only the newest pending refresh.
-# An active build is allowed to finish its safety checks; the shared writer lock
-# below still serializes all writes to main with playlist-maintenance workflows.
-# Keep only the newest EPG candidate. Cancelling an older run is safe because
-# the candidate is not published until all validation gates pass and the final
-# commit is rebased against the latest main.
-concurrency:
-  group: iptv-epg-refresh-${{ github.ref }}
-  cancel-in-progress: true
-
+# EPG generation is a main-branch writer. Keep it in the shared writer queue so it
+# cannot publish concurrently with playlist, logo, discovery or dashboard commits.
 permissions:
   contents: write
 
@@ -54,9 +46,11 @@ jobs:
     # workflow is blocked: failed maintenance publishes no new playlist bytes, but
     # must not suppress EPG freshness/coverage work for the last known-good inputs.
     if: ${{ (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion != 'cancelled') && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
-    # EPG publishes with an input-SHA guard and a rebase loop below.
-    # Keep it out of the playlist-maintenance queue so stale maintenance runs
-    # cannot indefinitely starve XMLTV generation.
+    concurrency:
+      group: iptv-playlist-main-writer-v3
+      cancel-in-progress: false
+    # EPG publishes with an input-SHA guard and a rebase loop below. The shared
+    # job-level writer lock serializes this publication with all other main writers.
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
