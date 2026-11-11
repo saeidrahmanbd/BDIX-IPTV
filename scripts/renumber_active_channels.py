@@ -16,7 +16,7 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Review", "New Channels", "New Backups", "Backup",
+    "Backup", "Review", "New Channels", "New Backups",
 ]
 CATEGORY_RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
 REVIEW_GROUPS = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}
@@ -114,21 +114,16 @@ def normalize_playlist_text(text: str) -> tuple[str, int]:
                 raise ValueError(f"Unknown IPTV category; refusing to reorder: {group!r}")
             primary.append(record)
 
-    primary.sort(key=lambda record: (
-        CATEGORY_RANK[attrs(record[0]).get("group-title", "").strip()],
-        natural_key(display_name(record)),
-        stream_url(record).casefold(),
-    ))
-    # Stable sort moves review queues into canonical block order but preserves
-    # each queue's original record order for manual review.
-    review.sort(key=lambda record: CATEGORY_RANK[attrs(record[0]).get("group-title", "").strip()])
+    # Preserve every existing record position. The Playlist Studio registry above
+    # controls category display order; maintenance must not sort or move channel rows.
+    # Primary numbering follows the existing file order; review queues remain unnumbered.
 
     for number, record in enumerate(primary, start=1):
         record[0] = set_channel_number(record[0], number)
     for record in review:
         record[0] = remove_channel_number(record[0])
 
-    ordered = primary + review
+    ordered = records
     if sorted(url_inventory(ordered)) != sorted(original_urls):
         raise ValueError("Stream URL inventory changed during primary ordering/numbering.")
     result = newline.join(preamble + [line for record in ordered for line in record])
