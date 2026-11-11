@@ -1,26 +1,33 @@
-# Primary / Backup Integrity
+# Primary / Backup Integrity Audit
 
-- Primary entries: **592**
-- Backup entries: **406**
-- Review-only entries (Review / New Channels / New Backups): **206**
-- Duplicate primary copies moved to Backup: **1**
-- Orphan Backup entries moved to Review: **16**
-- Owner-authorized orphan Backup entries removed: **0**
-- Verified orphan Backup streams promoted to a primary genre: **5**
-- Backup rows linked to an existing primary by unique exact name: **0**
-- Restricted Indian news/kids/religious rows retained in Review: **0**
-- Legacy Not Playing groups renamed to Review: **0**
-- Kids entries moved from Review to Kids: **1**
-- Explicitly removed non-kids Review entries: **3**
-- Backup metadata records reconciled from exact primary IDs: **1**
-- Missing language values set to und (undetermined): **19**
+- Based on commit: **a123ced31a6cb4107e38e54aff1f12f5b1e628c3**
+- Original EXTINF blocks: **1407**
+- Zero-URL malformed records removed: **27** (these contained no playable stream URL)
+- Playable stream entries retained: **1380**
+- Primary entries: **678**
+- Backup entries: **451**
+- Review entries: **251**
+- Exact-English primary channels moved to International: **112**
+- Duplicate primary copies retained as Backup: **8**
+- Backup rows reconciled by ID: **451**
+- Backup rows reconciled by unique normalized name: **31**
+- Orphan Backup streams promoted to a primary group: **5**
+- Unresolved Backup streams moved to Review: **4**
+- Logo references repaired to verified local assets: **11**
+- Rows moved to Review for missing/unverified logos: **46**
+- Rows moved to Review for unknown country: **20**
 
-Unknown languages are marked und; no language is guessed. Incomplete logos are retained only in Review queues.
+## Final invariant checks
 
-## Missing logos deferred to Review
+- Required active metadata: **PASS**
+- Existing local non-placeholder logos for primary: **PASS**
+- Duplicate primary identities: **0**
+- Orphan Backup rows: **0**
+- Duplicate stream URLs: **0**
+- English-only channels outside International: **0**
+- All playable stream URLs preserved: **PASS**
+- Every Backup row matches exactly one primary: **PASS**
+- Sequential primary numbering: **PASS**
+- Review queue unnumbered; blocked logos cleared: **PASS**
 
-None.
-
-## Blocking validation errors
-
-None.
+Unverified language was not guessed. Entries with unresolved country/logo metadata remain in Review. No stream URL was removed; the 27 malformed EXTINF blocks removed had no associated playable URL. EPG mapping and XMLTV regeneration are delegated to the post-push EPG refresh workflow; no unsupported EPG IDs were invented.
