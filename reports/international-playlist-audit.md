@@ -1,16 +1,16 @@
 # International Playlist Organization Audit
 
-- Entries before: 3075
+- Entries before: 3074
 - Entries after: 3074
 - Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1406
+- Original Backup/Backups and protected queue rows examined: 1392
 - Matching alternate streams retained in Backup: 354
-- True orphan Backup rows evaluated: 675
-- Eligible orphan Backup rows promoted to primary: 14
+- True orphan Backup rows evaluated: 661
+- Eligible orphan Backup rows promoted to primary: 0
 - Ineligible/unclassified orphan Backup rows retained: 661
 - Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.
 - For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.
@@ -22,7 +22,6 @@
 
 ## Removal summary
 
-- permanently banned channel: 1
 
 ## Protected Backup/Review/Not Playing entries preserved (policy would have removed them)
 
