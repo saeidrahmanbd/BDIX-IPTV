@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-11T08:56:08.671140+00:00**
-Source playlist SHA-256: **34f9bc33c915a05f01807e768ede043d93d7e59798afa56826f95acd3cf0fbde**
+Generated: **2026-11-11T09:19:44.607535+00:00**
+Source playlist SHA-256: **81708ed765570d9c3d509cd9a471595b621b5f2145e4decc0d8bed1cea81d3ce**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -25,14 +25,14 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Duplicate primary identities: **1**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues (review only): **543**
+- Primary channel-number sequence issues (review only): **555**
 - Primary entries missing channel numbers: **22**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
-- Alphabetical ordering issues: **0**
+- Alphabetical ordering issues: **1**
 - Suspicious URL credentials/syntax: **0**
 - Unverified provider playback routes (review only): **1**
 - Signed/tokenized stream URLs: **19**
@@ -391,8 +391,8 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Desi Channel — Indian Entertainment — https://livestream.unlimitedcdn.com/agm-dc/desi-channel/index.m3u8
 - Desi Channel — Backup — https://livestream.unlimitedcdn.com/agm-dc/desi-channel/tracks-v1a1/mono.m3u8
 ### dhoommusic.in@sd (2 streams)
-- Dhoom Music Bangla — Indian Bangla — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 - Dhoom Music Bangla — Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
+- Dhoom Music Bangla — Review — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 ### discoverpakistan.pk@sd (2 streams)
 - Discover Pakistan — Pakistani — https://livecdn.live247stream.com/discoverpakistan/web/playlist.m3u8
 - Discover Pakistan — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/discoverpakistan.stream/playlist.m3u8
@@ -471,9 +471,9 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 ### gazitv.bd (5 streams)
 - G TV — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8
 - G TV — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/playlist.m3u8
+- G TV — Backup — https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8
 - G TV — Review — http://103.135.253.32:8080/Gazi-TV/index.m3u8
 - G TV — Review — http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
-- G TV — Review — https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8
 ### globaltv.bd (6 streams)
 - Global TV — Bangladesh — https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8
 - Global TV — Backup — http://116.204.149.16/globaltv/index.m3u8
@@ -531,11 +531,11 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Hum TV — Review — https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/live/hum_tv_720/chunks.m3u8
 - Hum TV — Review — https://stream.ottplus.live/live/hum_tv_abr/index.m3u8
 ### independenttv.bd (5 streams)
-- Independent TV — Bangladesh — https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 - Independent TV — Review — http://103.135.253.32:8080/Indipendent/index.m3u8
 - Independent TV — Review — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/independent-8-org.stream/tracks-v1a1/mono.m3u8
 - Independent TV — Review — https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/index.m3u8
 - Independent TV — Review — https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/live/independent_tv_720/chunks.m3u8
+- Independent TV — Review — https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 ### insync.in (2 streams)
 - Insync — Indian Music — https://mumt04.tangotv.in/m18aqlK4INSYNC/index.m3u8
 - Insync — Backup — https://d1msejlow1t3l4.cloudfront.net/fta/insync/playlist.m3u8
@@ -591,7 +591,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Khushboo Bangla — Indian Bangla — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 - Khushboo Bangla — Backup — https://cdn.pishow.tv/ott/live/1473/master.m3u8
 - Khushboo Bangla — Backup — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/tracks-v1a1/mono.m3u8
-- Khushboo Bangla — Review — https://tvsen6.aynaott.com/mzwbzfZ4/index.m3u8
+- Khushboo Bangla — Backup — https://tvsen6.aynaott.com/mzwbzfZ4/index.m3u8
 ### maasrangatv.bd (6 streams)
 - Maasranga TV — Bangladesh — https://mtv.sunplex.live/MAASRANGA/index.m3u8
 - Maasranga TV — Backup — http://116.204.149.16/maasranga/index.m3u8
@@ -696,8 +696,8 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - My TV — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/tracks-v1a1/mono.m3u8
 - My TV — Backup — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/tracks-v1a1/mono.ts.m3u8
 ### nagoriktv.bd (2 streams)
-- Nagorik TV — Bangladesh — https://box.bbaria.net/Nagorik_TV/tracks-v1a1/mono.m3u8
-- Nagorik TV — Backup — https://box.bbaria.net:8083/Nagorik_TV/video.m3u8
+- Nagorik TV — Review — https://box.bbaria.net/Nagorik_TV/tracks-v1a1/mono.m3u8
+- Nagorik TV — Review — https://box.bbaria.net:8083/Nagorik_TV/video.m3u8
 ### natgeotv.us (2 streams)
 - Nat Geo TV — Documentary & Wildlife — http://iptv.prosto.tv:7000/ch83/video.m3u8
 - Nat Geo TV — Review — http://103.135.253.32:8080/NATGEO-HD/index.m3u8
@@ -873,8 +873,8 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Sangeet Bangla — Backup — http://103.175.73.12:8080/live/379/379_0.m3u8
 - Sangeet Bangla — Backup — https://cdn.pishow.tv/ott/live/1143/master.m3u8
 - Sangeet Bangla — Backup — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/tracks-v1a1/mono.m3u8
-- Sangeet Bangla — Backup — https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
 - Sangeet Bangla — Review — https://tvsen6.aynaott.com/hT5jHczt/tracks-v1a1/mono.ts.m3u8
+- Sangeet Bangla — Review — https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
 ### sangeetbhojpuri.in@sd (3 streams)
 - Sangeet Bhojpuri — Indian Music — https://fta.ektv.in/live/349/master.m3u8
 - Sangeet Bhojpuri — Backup — https://cdn.pishow.tv/ott/live/1293/master.m3u8
@@ -935,8 +935,8 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Star Jalsha — Indian Bangla — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
 - Star Jalsha — Review — http://103.135.253.32:8080/STAR-JALSHA-HD/index.m3u8
 ### star.jalsha.movies.in (2 streams)
-- Jalsha Movies — Indian Movies — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
 - Jalsha Movies — Review — http://103.135.253.32:8080/Jalsha_movies-HD/index.m3u8
+- Jalsha Movies — Review — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
 ### stargold.in@hd (3 streams)
 - Star Gold — Review — http://103.135.253.32:8080/STAR-GOLD-HD/index.m3u8
 - Star Gold — Review — http://103.185.24.134:3001/Star-Gold/index.m3u8
@@ -1057,42 +1057,42 @@ None.
 - **G Series Drama** — expected channel number 25, found 26
 - **G TV** — expected channel number 26, found 27
 - **Global TV** — expected channel number 27, found 28
-- **Independent TV** — expected channel number 28, found 29
-- **JA TV** — expected channel number 29, found 30
-- **Jago News 24** — expected channel number 30, found 31
-- **Jalsha Bangla BD** — expected channel number 31, found 32
-- **Jamuna TV** — expected channel number 32, found 33
-- **Jhankar TV** — expected channel number 33, found 34
-- **Jonmobhumi TV** — expected channel number 34, found 35
-- **Maasranga TV** — expected channel number 35, found 36
-- **Matribhumi TV** — expected channel number 36, found 37
-- **Matribhumi TV** — expected channel number 37, found (missing)
-- **ME TV** — expected channel number 38, found (missing)
-- **Mohona TV** — expected channel number 39, found 38
-- **Movie Bangla** — expected channel number 40, found 39
-- **My TV** — expected channel number 41, found 40
-- **Nagorik TV** — expected channel number 42, found 41
-- **Thikana** — expected channel number 54, found (missing)
-- **Orange Bangla TV** — expected channel number 67, found 68
-- **R Plus Gold** — expected channel number 68, found 69
-- **Rongeen TV** — expected channel number 69, found 70
-- **Ruposhi Bangla** — expected channel number 70, found 71
-- **Sananda** — expected channel number 71, found 72
-- **Sangeet Bangla** — expected channel number 72, found 73
-- **SNB Cinema** — expected channel number 73, found 74
-- **Sonar Bangla** — expected channel number 74, found 75
-- **Star Jalsha** — expected channel number 75, found 76
-- **Tara TV** — expected channel number 76, found 77
-- **U Bangla** — expected channel number 77, found 78
-- **ZB Cinema** — expected channel number 78, found 79
-- **ZB Music** — expected channel number 79, found 80
-- **Zee 24 Ghanta** — expected channel number 80, found 81
-- **Zee Bangla** — expected channel number 81, found 82
-- **All Time Movies** — expected channel number 82, found 84
-- **Asianet Movies** — expected channel number 83, found 85
-- **B4U Bhojpuri Plus** — expected channel number 84, found 86
-- **B4U Kadak** — expected channel number 85, found 87
-- **B4U Movies** — expected channel number 86, found 88
+- **JA TV** — expected channel number 28, found 30
+- **Jago News 24** — expected channel number 29, found 31
+- **Jalsha Bangla BD** — expected channel number 30, found 32
+- **Jamuna TV** — expected channel number 31, found 33
+- **Jhankar TV** — expected channel number 32, found 34
+- **Jonmobhumi TV** — expected channel number 33, found 35
+- **Maasranga TV** — expected channel number 34, found 36
+- **Matribhumi TV** — expected channel number 35, found 37
+- **Matribhumi TV** — expected channel number 36, found (missing)
+- **ME TV** — expected channel number 37, found (missing)
+- **News 21** — expected channel number 41, found 67
+- **News 24** — expected channel number 42, found 43
+- **Nexus TV** — expected channel number 43, found 44
+- **NTV** — expected channel number 44, found 45
+- **NTV Europe** — expected channel number 45, found 46
+- **Probashi TV** — expected channel number 46, found 47
+- **Rajdhani TV** — expected channel number 47, found 48
+- **RTV** — expected channel number 48, found 49
+- **SA TV** — expected channel number 49, found 50
+- **Shikor TV Canada** — expected channel number 50, found 51
+- **Somoy TV** — expected channel number 51, found 52
+- **SRK** — expected channel number 52, found 53
+- **Thikana** — expected channel number 53, found (missing)
+- **Aakaash Aath** — expected channel number 54, found 55
+- **Amar Bangla** — expected channel number 55, found 56
+- **Amar Bangla Digital** — expected channel number 56, found 57
+- **Bangla Plus** — expected channel number 57, found 58
+- **Colors Bangla** — expected channel number 58, found 59
+- **DD Bangla** — expected channel number 59, found 60
+- **DD Tripura** — expected channel number 60, found 61
+- **Enter10 Bangla** — expected channel number 61, found 63
+- **Khushboo Bangla** — expected channel number 62, found 64
+- **KTV Bangla** — expected channel number 63, found 65
+- **Mon Bangla** — expected channel number 64, found 66
+- **Orange Bangla TV** — expected channel number 65, found 68
+- **R Plus Gold** — expected channel number 66, found 69
 
 ## Malformed EXTINF Entries
 
@@ -1101,7 +1101,7 @@ None.
 ## Ordering
 
 Category block order: OK.
-Primary-category alphabetical/channel-number order: OK.
+- **Bangladesh** — **43 — News 24** appears after **67 — News 21**
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
 ## Suspicious URLs
@@ -1116,7 +1116,6 @@ Opaque provider-specific playback paths remain unchanged and require manual sour
 
 ## Signed / Tokenized Stream URLs
 
-- **Independent TV** — Bangladesh — https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 - **ETV Cinema** — Indian Movies — https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Boogle Bollywood** — Indian Music — https://yuppnimrestreammum.akamaized.net/181224/smil:bogglebollywood.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Songdew TV** — Indian Music — https://yuppnimrestreammum.akamaized.net/181224/smil:songdewtv.smil/playlist.m3u8?hdnts=[REDACTED]
@@ -1133,6 +1132,7 @@ Opaque provider-specific playback paths remain unchanged and require manual sour
 - **Madani TV** — Backup — https://tvsen7.aynaott.com/MadaniTV/index.m3u8?e=1784102568&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 - **Studio Yuva** — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
 - **9X Jalwa** — Review — https://tvsen6.aynaott.com/CiPT1VTG8bVekeAZiibd/index.m3u8?e=1784102591&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- **Independent TV** — Review — https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 - **Shemaroo TV** — Review — https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=1784102595&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 - **The Q** — Review — https://tvsen6.aynaott.com/3PjZZahm/index.m3u8?e=1784102596&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 

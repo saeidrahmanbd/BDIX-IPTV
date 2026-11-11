@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-11T08:57:06+00:00**
-IPTV-Playlist.m3u SHA-256: **34f9bc33c915a05f01807e768ede043d93d7e59798afa56826f95acd3cf0fbde**
+Generated: **2026-11-11T09:20:24+00:00**
+IPTV-Playlist.m3u SHA-256: **81708ed765570d9c3d509cd9a471595b621b5f2145e4decc0d8bed1cea81d3ce**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
@@ -9,7 +9,7 @@ These streams are not automatically removed. URL credentials, user information a
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
-| Independent TV | Bangladesh | sensitive query parameter (value redacted) | `https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=REDACTED&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=REDACTED` |
+| News 21 | Bangladesh | credential-bearing route pattern (values redacted) | `http://103.190.133.68:1935/news21live/live/playlist.m3u8` |
 | Orange Bangla TV | Indian Bangla | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1499/master.m3u8` |
 | Sananda | Indian Bangla | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8` |
 | All Time Movies | Indian Movies | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/54/54_0.m3u8` |
@@ -245,12 +245,12 @@ These streams are not automatically removed. URL credentials, user information a
 | Hum TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/hum_tv_abr/index.m3u8` |
 | Independent TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/index.m3u8` |
 | Independent TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/REDACTED/REDACTED/independent_tv_720/chunks.m3u8` |
+| Independent TV | Review | sensitive query parameter (value redacted) | `https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=REDACTED&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=REDACTED` |
 | Investigation Discovery | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/id_hd_abr/index.m3u8` |
 | Islamic TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/islamic_tv/index.m3u8` |
 | Jamuna TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8` |
 | Mohona TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8` |
 | Movie Bangla | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/movie_bangla_abr/index.m3u8` |
-| News 21 | Review | credential-bearing route pattern (values redacted) | `http://103.190.133.68:1935/news21live/live/playlist.m3u8` |
 | Nexus TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/nexus_tv_abr/index.m3u8` |
 | Oscar Movies Bhojpuri | Review | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/233/master.m3u8` |
 | Pogo | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8` |

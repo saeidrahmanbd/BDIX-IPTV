@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11T08:57:06+00:00",
+  "generated": "2026-11-11T09:20:24+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -2080,7 +2080,7 @@
         "custom.tapmad"
       ],
       "groups": [
-        "Sports"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -2234,7 +2234,7 @@
         "custom.willowsports"
       ],
       "groups": [
-        "Sports"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -2956,7 +2956,7 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Review"
       ],
       "streams": 2,
       "primary": 1,
@@ -3699,8 +3699,8 @@
         "Review"
       ],
       "streams": 5,
-      "primary": 4,
-      "backup": 1
+      "primary": 3,
+      "backup": 2
     },
     "gbaj400042t1": {
       "names": [
@@ -4092,7 +4092,6 @@
         "independenttv.bd"
       ],
       "groups": [
-        "Bangladesh",
         "Review"
       ],
       "streams": 5,
@@ -4657,12 +4656,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla",
-        "Review"
+        "Indian Bangla"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "knowledgenetwork": {
       "names": [
@@ -5472,12 +5470,11 @@
         "nagoriktv.bd"
       ],
       "groups": [
-        "Backup",
-        "Bangladesh"
+        "Review"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "nammabangalore": {
       "names": [
@@ -5587,7 +5584,7 @@
         "news21banglatv.bd@sd"
       ],
       "groups": [
-        "Review"
+        "Bangladesh"
       ],
       "streams": 1,
       "primary": 1,
@@ -6603,7 +6600,7 @@
         "rakutenmovies"
       ],
       "groups": [
-        "International"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -6997,8 +6994,8 @@
         "Review"
       ],
       "streams": 6,
-      "primary": 2,
-      "backup": 4
+      "primary": 3,
+      "backup": 3
     },
     "sangeetbhojpuri": {
       "names": [
@@ -7571,7 +7568,6 @@
         "star.jalsha.movies.in"
       ],
       "groups": [
-        "Indian Movies",
         "Review"
       ],
       "streams": 2,
@@ -8978,7 +8974,7 @@
         "zbcartoon.in"
       ],
       "groups": [
-        "Kids"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -8992,7 +8988,7 @@
         "zbcinema.in"
       ],
       "groups": [
-        "Indian Bangla"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,
@@ -9006,7 +9002,7 @@
         "zbmusic.in@hd"
       ],
       "groups": [
-        "Indian Bangla"
+        "Review"
       ],
       "streams": 1,
       "primary": 1,

@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-11T08:56:09+00:00**
-Source playlist SHA-256: **34f9bc33c915a05f01807e768ede043d93d7e59798afa56826f95acd3cf0fbde**
+Generated: **2026-11-11T09:19:45+00:00**
+Source playlist SHA-256: **81708ed765570d9c3d509cd9a471595b621b5f2145e4decc0d8bed1cea81d3ce**
 
 Status: **BLOCK**
 
@@ -16,10 +16,10 @@ Status: **BLOCK**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **22**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **543**
-- Numbered review entries: **17**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **555**
+- Numbered review entries: **26**
 - Same-ID metadata name conflicts: **0**
-- Orphan Backup entries: **3**
+- Orphan Backup entries: **4**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **0**
@@ -37,13 +37,13 @@ Status: **BLOCK**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **543**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **555**.
 
 ## Blocking Reasons
 - duplicate primary identities: 1
-- orphan Backup entries: 3
+- orphan Backup entries: 4
 - primary entries missing tvg-chno: 22
-- review entries still numbered: 17
+- review entries still numbered: 26
 
 ## Review-queue logo gaps
 
