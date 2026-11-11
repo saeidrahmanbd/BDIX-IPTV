@@ -87,6 +87,7 @@ def near_duplicate_name(name):
 
 def redact_url(url):
     url = re.sub(r'(/live/)[^/?#]+/[^/?#]+/([^/?#]+\.ts)(?=$|[?#])', r'\1[REDACTED]/[REDACTED]/\2', url, flags=re.I)
+    url = re.sub(r'(^https?://(?:[^/]+\.)?dvltv\.cc(?::\d+)?/play/)[^/?#]+', r'\1[REDACTED]', url, flags=re.I)
     return re.sub(r'([?&](?:token|sig|signature|jwt|session|key|authorization|hdnts)=[^&\s]+)', lambda m: m.group(1).split("=", 1)[0] + "=[REDACTED]", url, flags=re.I)
 
 def logo_issue(info):
@@ -265,6 +266,7 @@ for expected_number, (info, url) in enumerate(primary_entries, start=1):
         primary_chno_sequence_issues.append((expected_number, actual_number or "(missing)", display_name(info)))
 
 suspicious_urls = []
+advisory_urls = []
 signed_urls = []
 xtream_credential_paths = []
 for info, url in entries:
@@ -279,7 +281,9 @@ for info, url in entries:
     elif re.search(r"[?&]hdnts=$", url, re.I):
         suspicious_urls.append((display_name(info), "empty hdnts", url))
     if re.search(r"^https?://(?:[^/]+\.)?dvltv\.cc(?::\d+)?/play(?:/|$)", url, re.I):
-        suspicious_urls.append((display_name(info), "", url))
+        # Opaque provider playback routes are unverified, not proof of malformed
+        # syntax or embedded credentials. Preserve the row and flag for review.
+        advisory_urls.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
 
 metadata_conflicts = []
 for cid, items in sorted(by_id.items()):
@@ -456,7 +460,7 @@ review_queue_country_issues = review_queue_country_errors(
 
 lines = [
     "# IPTV Playlist Audit", "", "Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.", "Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.", "", "## Summary", "",
-    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-queue same-ID name variants (review): **{len(cross_queue_metadata_variants)}**", f"- Cross-queue normalized-name/different-ID groups (review): **{len(cross_queue_name_id_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- Missing logos in review queues (review only): **{len(review_logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Potential near-duplicate primary name groups (review only): **{len(near_duplicate_name_groups)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary channel-number sequence issues (review only): **{len(primary_chno_sequence_issues)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Primary entries missing tvg-country: **{len(missing_primary_country)}**", f"- Primary entries missing tvg-language: **{len(missing_primary_language)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Category registry issues: **{len(category_registry_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", ""]
+    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-queue same-ID name variants (review): **{len(cross_queue_metadata_variants)}**", f"- Cross-queue normalized-name/different-ID groups (review): **{len(cross_queue_name_id_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- Missing logos in review queues (review only): **{len(review_logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Potential near-duplicate primary name groups (review only): **{len(near_duplicate_name_groups)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary channel-number sequence issues (review only): **{len(primary_chno_sequence_issues)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Primary entries missing tvg-country: **{len(missing_primary_country)}**", f"- Primary entries missing tvg-language: **{len(missing_primary_language)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Category registry issues: **{len(category_registry_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Unverified provider playback routes (review only): **{len(advisory_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", ""]
 lines += ["", "## Primary Metadata Completeness", "",
     "Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.",
     f"- Active primary entries missing tvg-country: **{len(missing_primary_country)}**",
@@ -542,6 +546,12 @@ lines += ["", "## Suspicious URLs", ""]
 if suspicious_urls:
     for name, reason, url in suspicious_urls: lines.append(f"- **{name}** — {reason} — {redact_url(url)}")
 else: lines.append("None.")
+lines += ["", "## Unverified Provider Playback Routes (Review Only)", "", "Opaque provider-specific playback paths remain unchanged and require manual source verification.", ""]
+if advisory_urls:
+    for name, group, url in advisory_urls:
+        lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
+else:
+    lines.append("None.")
 lines += ["", "## Signed / Tokenized Stream URLs", ""]
 if signed_urls:
     for name, group, url in signed_urls: lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
