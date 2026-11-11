@@ -141,15 +141,22 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             "all known Star Gold review alternatives must remain protected",
         )
 
-        # The other audited Colors variants each retain one active primary.
-        # Alternate URLs are classified independently by their own health evidence.
-        for channel_id in ("Colors.in", "Colors.Bangla.in", "ColorsCineplex.uk"):
+        # The verified Colors variants retain one active primary each.
+        # The legacy Colors Bangla alias is deliberately quarantined in Review;
+        # Colors Bangla HD is the active feed and must not be conflated with it.
+        for channel_id in ("Colors.in", "ColorsBangla.in@HD", "ColorsCineplex.uk"):
             active = [
                 e for e in entries
                 if e["attrs"].get("tvg-id") == channel_id
                 and e["attrs"].get("group-title") in primary_groups
             ]
             self.assertEqual(len(active), 1, channel_id)
+        legacy_colors_bangla = [
+            e for e in entries
+            if e["attrs"].get("tvg-id") == "Colors.Bangla.in"
+        ]
+        self.assertEqual(len(legacy_colors_bangla), 1)
+        self.assertEqual(legacy_colors_bangla[0]["attrs"].get("group-title"), "Review")
 
         https_mirrors = {
             "Bangla TV": (
