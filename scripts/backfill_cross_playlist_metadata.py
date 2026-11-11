@@ -210,6 +210,7 @@ def backfill_text(text, by_id, by_name):
         "entries_changed": 0,
         "country_fields_filled": 0,
         "language_fields_filled": 0,
+        "language_fields_marked_undetermined": 0,
         "ambiguous_or_unknown": 0,
     }
     current_index = None
@@ -257,8 +258,13 @@ def backfill_text(text, by_id, by_name):
         additions = []
         if not meta.get("tvg-country", "").strip() and country:
             additions.append(("tvg-country", country))
-        if not meta.get("tvg-language", "").strip() and language:
-            additions.append(("tvg-language", language))
+        if not meta.get("tvg-language", "").strip():
+            if language:
+                additions.append(("tvg-language", language))
+            else:
+                # ISO 639-2 "und" means undetermined. Never guess a broadcast language.
+                additions.append(("tvg-language", "und"))
+                counts["language_fields_marked_undetermined"] += 1
         if not additions:
             if not meta.get("tvg-country", "").strip() or not meta.get("tvg-language", "").strip():
                 counts["ambiguous_or_unknown"] += 1
@@ -352,18 +358,19 @@ def main():
         "## Source playlist fingerprints", "",
         *[f"- {path.name} SHA-256: **{summary[path.name]['sha256']}**" for path in PLAYLISTS],
         "",
-        "Only missing tvg-country and tvg-language values were filled. Sources: exact playlist tvg-id/channel-id, unique exact channel names, and iptv-org channel/feed metadata. Unknown or ambiguous values remain blank. iptv-org catalogue status: {}.".format(external_status),
+        "Only missing tvg-country and tvg-language values were filled. Sources: exact playlist tvg-id/channel-id, unique exact channel names, and iptv-org channel/feed metadata. Unresolved broadcast languages are marked und (ISO 639-2 undetermined), never guessed. iptv-org catalogue status: {}.".format(external_status),
         "The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, stream URLs, or Backup/Review/Adult/Not Playing entries.", "",
         "## Playlist results", "",
-        "| Playlist | Entries changed | Country fields filled | Language fields filled | Active entries still missing either field | Stream URL inventory | SHA-256 |",
-        "|---|---:|---:|---:|---:|---|---|",
+        "| Playlist | Entries changed | Country fields filled | Language fields filled | Language marked undetermined | Active entries still missing either field | Stream URL inventory | SHA-256 |",
+        "|---|---:|---:|---:|---:|---:|---|---|",
     ]
     for path in PLAYLISTS:
         item = summary[path.name]
         inv = inventory_hash[path.name]
         lines.append(
             f"| {path.name} | {item.get('entries_changed', 0)} | {item.get('country_fields_filled', 0)} | "
-            f"{item.get('language_fields_filled', 0)} | {item.get('entries_missing_country_or_language_after', 0)} | unchanged ({inv[:12]}...) | {item['sha256']} |"
+            f"{item.get('language_fields_filled', 0)} | {item.get('language_fields_marked_undetermined', 0)} | "
+            f"{item.get('entries_missing_country_or_language_after', 0)} | unchanged ({inv[:12]}...) | {item['sha256']} |"
         )
     lines += [
         "", "## Policy", "",
@@ -379,6 +386,7 @@ def main():
             f"  {playlist}: entries changed={item.get('entries_changed', 0)}, "
             f"country={item.get('country_fields_filled', 0)}, "
             f"language={item.get('language_fields_filled', 0)}, "
+            f"undetermined={item.get('language_fields_marked_undetermined', 0)}, "
             f"remaining gaps={item.get('entries_missing_country_or_language_after', 'n/a')}"
         )
 
