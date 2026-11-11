@@ -7,11 +7,10 @@
 - **[Multi-Country IPTV Playlist Guide](PLAYLISTS.md)** — main multi-country M3U collection, channel eligibility and player setup
 - **[Search Visibility & SEO Tracking](SEO-TRACKING.md)** — Google Search Console, Bing Webmaster Tools, query groups and review cadence
 - **[Project Overview](PROJECT-README.md)** — repository overview, playlists, maintenance and policies
-- **[Playlist Studio 5.0](PLAYLIST-STUDIO.md)** — features, download, usage and build instructions
-- **[Playlist Studio v5.0.0 Release Integrity](PLAYLIST-STUDIO-INTEGRITY.md)** — published SHA-256 asset digests
+- **[Playlist Studio 5.1](PLAYLIST-STUDIO.md)** — v5.1 features, downloads and build instructions
+- **[Playlist Studio v5.1 Release Integrity](PLAYLIST-STUDIO-INTEGRITY.md)** — SHA-256 values from the published v5.1 release assets
 
 ## Playlist Project
-
 
 ### Main Resources
 
@@ -23,27 +22,26 @@
 - [Stream Health](../reports/stream-health.md)
 - [Backup Independence Audit](../reports/backup-independence-audit.md)
 - [Stream Risk Review](../reports/stream-risk-review.md)
-- [EPG Publication Status](../reports/epg-coverage.md) — XMLTV refresh is enabled; current guide publication and coverage depend on a successful validated refresh
+- [EPG Publication Status](../reports/epg-coverage.md)
 - [IPTV Channel Discovery](../reports/iptv-channel-discovery.md)
 - [Update Report](../reports/Update%20Report.md)
 
-### Project Documentation
+## Project Documentation
 
 - [Download Center](DOWNLOADS.md)
 - [Changelog](CHANGELOG.md)
-- [Playlist Studio 5.0](PLAYLIST-STUDIO.md)
-- [Playlist Studio release integrity](PLAYLIST-STUDIO-INTEGRITY.md)
+- [Playlist Studio 5.1](PLAYLIST-STUDIO.md)
+- [Playlist Studio v5.1 release integrity](PLAYLIST-STUDIO-INTEGRITY.md)
 - [Wiki Reference](WIKI.md)
 - [Project Overview](PROJECT-README.md)
 
-### Repository Policies
+## Repository Policies
 
 - [Contributing](CONTRIBUTING.md)
 - [Security Policy](SECURITY.md)
 - [License](LICENSE)
 - [Python requirements](requirements.txt)
 
-### Releases
+## Releases
 
-For the latest Playlist Studio release and downloadable files, visit the **[Playlist Studio Releases](https://github.com/saeidrahmanbd/Playlist-Studio/releases)** page. The v5.0.0 assets are also mirrored in the [BDIX-IPTV release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0), where available.
-
+The latest Playlist Studio release is **[v5.1](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1)**. It includes the portable Windows application and the r2 Windows Build Kit. See the [Download Center](DOWNLOADS.md) for direct downloads and build requirements.
