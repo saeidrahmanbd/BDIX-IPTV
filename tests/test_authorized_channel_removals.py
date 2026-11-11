@@ -408,7 +408,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             content = path.read_text(encoding="utf-8")
             registry_line = next(line for line in content.splitlines() if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
             registry = json.loads(registry_line.split(":", 1)[1])
-            self.assertEqual(registry[-4:], ["Backup", "Review", "New Channels", "New Backups"])
+            self.assertEqual(registry[-4:], ["Backup", "New Channels", "New Backups", "Review"])
             self.assertLess(content.index("Curated Backup"), content.index("Pending"))
             self.assertLess(content.index("Pending"), content.index("Fresh Backup"))
 
@@ -445,7 +445,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     group = re.search(r'group-title="([^"]+)"', line).group(1)
                     if not groups or groups[-1] != group:
                         groups.append(group)
-            self.assertEqual(groups, ["Bangladesh", "Backup", "Review", "New Channels", "New Backups"])
+            self.assertEqual(groups, ["Bangladesh", "Backup", "New Channels", "New Backups", "Review"])
             self.assertEqual(groups[-4:], ["Backup", "Review", "New Channels", "New Backups"])
 
     def test_restore_repairs_missing_local_logo_in_protected_queue_only(self):
