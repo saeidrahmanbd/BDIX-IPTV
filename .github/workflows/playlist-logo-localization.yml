@@ -35,7 +35,17 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: main
-          fetch-depth: 0
+          fetch-depth: 20
+          sparse-checkout: |
+            .
+            .github/workflows
+            assets
+            docs
+            logos
+            reports
+            scripts
+            tests
+          sparse-checkout-cone-mode: true
       - name: Skip superseded queued logo localization run
         shell: bash
         run: |
