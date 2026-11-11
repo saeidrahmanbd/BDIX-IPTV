@@ -20,7 +20,7 @@ ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Backup", "Review", "New Channels", "New Backups",
+    "Backup", "New Channels", "New Backups", "Review",
 ]
 NO_NUMBER = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}
 BACKUP = "Backup"
