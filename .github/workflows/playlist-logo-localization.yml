@@ -36,6 +36,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 20
+          # Sparse checkout omits the large EPG guide; logo assets and playlists remain included.
           sparse-checkout: |
             .
             .github/workflows
