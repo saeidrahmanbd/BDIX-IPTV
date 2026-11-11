@@ -388,7 +388,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertNotIn("tvg-chno", review)
 
 
-    def test_sorting_keeps_new_groups_immediately_before_backup(self):
+    def test_sorter_preserves_queue_rows_and_writes_canonical_registry(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "IPTV-Playlist.m3u"
             path.write_text("\n".join([
@@ -405,13 +405,8 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                 "https://example.invalid/primary.m3u8",
             ]) + "\n", encoding="utf-8")
             sorter.sort_playlist(path)
-            groups = []
-            for line in path.read_text(encoding="utf-8").splitlines():
-                if line.startswith("#EXTINF:"):
-                    group = re.search(r'group-title="([^"]+)"', line).group(1)
-                    if not groups or groups[-1] != group:
-                        groups.append(group)
-            registry_line = next(line for line in path.read_text(encoding="utf-8").splitlines() if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
+            content = path.read_text(encoding="utf-8")
+            registry_line = next(line for line in content.splitlines() if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
             registry = json.loads(registry_line.split(":", 1)[1])
             self.assertEqual(registry[-4:], ["Backup", "Review", "New Channels", "New Backups"])
             self.assertLess(content.index("Curated Backup"), content.index("Pending"))
