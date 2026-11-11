@@ -91,7 +91,7 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
         ]
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "IPTV-Playlist.m3u"
-            path.write_text("\\n".join(rows) + "\\n", encoding="utf-8")
+            path.write_text("\n".join(rows) + "\n", encoding="utf-8")
             hardening.process(path)
             result = path.read_text(encoding="utf-8")
         self.assertLess(result.index(",Zeta"), result.index(",Alpha"))
