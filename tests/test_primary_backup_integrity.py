@@ -250,9 +250,19 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         for name in ("Review", "New Channels", "New Backups"):
             self.assertIn(f'group-title="{name}"', updated)
         self.assertNotIn('group-title="Review" tvg-chno=', updated)
+        self.assertLess(updated.index('group-title="Backup"'), updated.index('group-title="Review"'))
         self.assertLess(updated.index('group-title="Review"'), updated.index('group-title="New Channels"'))
         self.assertLess(updated.index('group-title="New Channels"'), updated.index('group-title="New Backups"'))
-        self.assertLess(updated.index('group-title="New Backups"'), updated.index('group-title="Backup"'))
+
+    def test_existing_rows_within_a_category_keep_their_relative_order(self):
+        sample = (
+            "#EXTM3U\\n"
+            + row("Zeta.bd", "Zeta", "Bangladesh", "https://stream.example/zeta.m3u8")
+            + row("Alpha.bd", "Alpha", "Bangladesh", "https://stream.example/alpha.m3u8")
+        )
+        updated, _, errors = repair_playlist_text(sample)
+        self.assertEqual(errors, [])
+        self.assertLess(updated.index(",Zeta"), updated.index(",Alpha"))
 
     def test_only_two_exact_orphan_backup_endpoints_are_authorized_for_removal(self):
         bhi_url = "https://server.livelegitpro.in/bhichannel/bhichannel/tracks-v1a1/mono.m3u8"
