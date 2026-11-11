@@ -100,7 +100,7 @@ class EPGPublicationSafetyTests(unittest.TestCase):
         refresh = (ROOT / ".github/workflows/epg-refresh.yml").read_text(encoding="utf-8")
         self.assertNotIn("LAST_GOOD_EPG_COMMIT", refresh)
         self.assertIn("HAVE_PUBLISHED_FALLBACK=false", refresh)
-        self.assertIn("group: iptv-playlist-main-writer-v3", refresh)
+        self.assertIn("group: iptv-playlist-main-writer-v4", refresh)
         self.assertIn("cancel-in-progress: false", refresh)
         self.assertIn("queue: max", refresh)
         self.assertGreater(
