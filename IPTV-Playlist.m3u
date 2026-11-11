@@ -1436,7 +1436,7 @@ https://aegis-cloudfront-1.tubi.video/1f4cbb33-cb23-40ab-b54b-2965cc551b32/playl
 https://d1too6m5v9oyet.cloudfront.net/scheduler/scheduleMaster/281.m3u8
 #EXTINF:-1 tvg-id="pfl.com" tvg-name="PFL" channel-id="pfl.com" tvg-language="und" tvg-country="US" tvg-chno="715" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pfl.png",PFL
 https://d2w9b8sam7j3zv.cloudfront.net/v1/pfl_pflmma_1/samsungheadend_us/latest/main/hls/playlist.m3u8
-#EXTINF:-1 tvg-id="powder.tv.com" tvg-country="US" tvg-name="Powder TV" channel-id="powder.tv.com" tvg-language="und" tvg-chno="716" group-title="Sports",Powder TV
+#EXTINF:-1 tvg-id="powder.tv.com" tvg-country="US" tvg-name="Powder TV" channel-id="powder.tv.com" tvg-language="und" tvg-chno="716" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/powder-tv.png",Powder TV
 https://linear-265.frequency.stream/dist/plex/265/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="racing.hagerty.com" tvg-name="RACING | Hagerty" channel-id="racing.hagerty.com" tvg-language="und" tvg-country="US" tvg-chno="717" group-title="Sports",RACING | Hagerty
 https://dqw6u0upa8l21.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-0etl87ne2tj77/Hagerty.m3u8
