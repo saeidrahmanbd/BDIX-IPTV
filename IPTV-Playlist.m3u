@@ -208,7 +208,7 @@ https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8
 https://jmp2.uk/stvp-IN4000600Q
 #EXTINF:-1 tvg-id="Bollywood.ru@HD" tvg-name="Bollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bollywood-hd-576p.png" tvg-chno="90" channel-id="Bollywood.ru@HD" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",Bollywood
 http://176.118.197.101/Bollywood_HD/index.m3u8
-#EXTINF:-1 channel-id="mov.bollywood.old.in" tvg-id="mov.bollywood.old.in" tvg-name="Bollywood OLD" tvg-language="und" tvg-country="IN" group-title="Indian Movies",Bollywood OLD
+#EXTINF:-1 channel-id="mov.bollywood.old.in" tvg-id="mov.bollywood.old.in" tvg-name="Bollywood OLD" tvg-language="und" tvg-country="IN" group-title="Indian Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bollywood-old.png",Bollywood OLD
 https://vods2.aynaott.com/hindimovies/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="ChhayaChitramTelugu.in@SD" tvg-name="Chhaya Chitram Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/chhaya-chitram-telugu-7e1e93e465.png" tvg-chno="91" channel-id="ChhayaChitramTelugu.in@SD" tvg-country="IN" tvg-language="tel" group-title="Indian Movies",Chhaya Chitram Telugu
 https://samitaorigin.tangotv.in/CHHAYACHITRAMTELUGU/SAMITAORIGIN/index.m3u8
@@ -1120,7 +1120,7 @@ https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8
 https://cdn3.wowza.com/5/ZWQ1K2NYTmpFbGsr/BEK-WOWZA-1/smil:BEKPRIMEW.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="big.12.studios.com" tvg-name="Big 12 Studios" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/big-12-studios.png" tvg-chno="655" channel-id="big.12.studios.com" tvg-country="US" tvg-language="und" group-title="Sports",Big 12 Studios
 https://d18pj8s9gbivdq.cloudfront.net/The_Big_12.m3u8
-#EXTINF:-1 tvg-id="channel.fight.com" tvg-name="Channel Fight" tvg-chno="656" channel-id="channel.fight.com" tvg-country="US" tvg-language="und" group-title="Sports",Channel Fight
+#EXTINF:-1 tvg-id="channel.fight.com" tvg-name="Channel Fight" tvg-chno="656" channel-id="channel.fight.com" tvg-country="US" tvg-language="und" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-fight.png",Channel Fight
 https://d15wqvt0xm15k4.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/ChannelFight-Nuestra/266.m3u8
 #EXTINF:-1 tvg-id="CricketGold.au@SD" tvg-name="Cricket Gold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cricket-gold.png" tvg-chno="395" channel-id="CricketGold.au@SD" tvg-country="AU" tvg-language="eng" group-title="Sports",Cricket Gold
 https://d1nj4u39ja4cn0.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/FLS-MuxIP-CricketGold/418.m3u8
