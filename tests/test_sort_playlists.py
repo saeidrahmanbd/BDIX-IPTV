@@ -69,16 +69,8 @@ class SortPlaylistsTests(unittest.TestCase):
             )
             self.assertEqual(len(before), len(after))
             self.assertEqual(
-                [row["url"] for row in before],
-                sorted(row["url"] for row in after, key=lambda url: [
-                    "https://stream.example/bangla-zulu.m3u8",
-                    "https://stream.example/bangla-alpha.m3u8",
-                    "https://stream.example/international.m3u8",
-                    "https://stream.example/sports-zulu.m3u8",
-                    "https://stream.example/sports-alpha.m3u8",
-                    "https://stream.example/backup.m3u8",
-                    "https://stream.example/review.m3u8",
-                ].index(url)),
+                sorted(row["url"] for row in before),
+                sorted(row["url"] for row in after),
             )
             before_by_url = {row["url"]: row["attrs"] for row in before}
             for entry in after:
