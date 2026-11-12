@@ -69,6 +69,8 @@ on:
       - tests/test_international_protected_guard.py
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
+      - scripts/reclassify_main_playlist_groups.py
+      - tests/test_main_playlist_grouping.py
       - tests/test_main_playlist_protection.py
   workflow_run:
     workflows: ["IPTV Logo Localization"]
@@ -121,6 +123,7 @@ jobs:
             scripts/maintenance_helpers.py \
             scripts/verify_international_protected.py \
             scripts/protect_main_playlist.py \
+            scripts/reclassify_main_playlist_groups.py \
             scripts/reconcile_playlist_consistency.py \
             scripts/restore_protected_review.py \
             scripts/audit_playlist.py \
@@ -159,6 +162,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_stream_url_identity.py'
           python -m unittest discover -s tests -p 'test_main_playlist_protection.py'
+          python -m unittest discover -s tests -p 'test_main_playlist_grouping.py'
            python -m unittest discover -s tests -p 'test_report_freshness.py'
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_authorized_channel_removals.py'
@@ -217,6 +221,8 @@ jobs:
             # reorganize_international_playlist.py reads tvg-country/tvg-language, so the
             # cross-playlist backfill must run before it (data dependency, not a report).
             python scripts/backfill_cross_playlist_metadata.py
+            # Evidence-backed BD/IN primary grouping only; URL and manual-queue guards remain active.
+            python scripts/reclassify_main_playlist_groups.py
             python scripts/reorganize_international_playlist.py
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
             python scripts/validate_international_playlist.py
