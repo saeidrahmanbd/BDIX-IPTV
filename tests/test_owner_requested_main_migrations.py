@@ -7,6 +7,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import migrate_owner_requested_main_queues as migration
+import probe_owner_requested_main_queues as owner_probe
 
 class OwnerRequestedMigrationTests(unittest.TestCase):
     def setUp(self):
@@ -16,6 +17,41 @@ class OwnerRequestedMigrationTests(unittest.TestCase):
             patcher = patch.object(migration, name, Path(self.temp_dir.name) / f"{name.lower()}.json")
             patcher.start()
             self.addCleanup(patcher.stop)
+
+    def test_probe_skips_unique_same_identity_backup(self):
+        backup = {
+            "info": '#EXTINF:-1 tvg-id="Example.in@SD" tvg-name="Example HD" tvg-country="IN" group-title="Backup",Example HD',
+            "url": "https://example.test/backup.m3u8",
+        }
+        primary = [{
+            "info": '#EXTINF:-1 tvg-id="Example.in@HD" tvg-name="Example" tvg-country="IN" group-title="Indian Entertainment",Example',
+            "url": "https://example.test/primary.m3u8",
+        }]
+        self.assertTrue(owner_probe.has_unique_primary_match(backup["info"], primary))
+
+    def test_probe_does_not_skip_same_name_backup_from_different_country(self):
+        backup = '#EXTINF:-1 tvg-id="Thikana.bd" tvg-name="Thikana TV" tvg-country="BD" group-title="Backup",Thikana TV'
+        primary = [{
+            "info": '#EXTINF:-1 tvg-id="Thikana.us" tvg-name="Thikana TV" tvg-country="US" group-title="Bangladesh",Thikana TV',
+            "url": "https://example.test/primary.m3u8",
+        }]
+        self.assertFalse(owner_probe.has_unique_primary_match(backup, primary))
+
+    def test_probe_skips_unique_same_name_same_country_backup(self):
+        backup = '#EXTINF:-1 tvg-id="OldAlias.bd" tvg-name="Ananda TV" tvg-country="BD" group-title="Backup",Ananda TV'
+        primary = [{
+            "info": '#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-country="BD" group-title="Bangladesh",Ananda TV',
+            "url": "https://example.test/primary.m3u8",
+        }]
+        self.assertTrue(owner_probe.has_unique_primary_match(backup, primary))
+
+    def test_probe_keeps_ambiguous_backup_identity_for_review(self):
+        backup = '#EXTINF:-1 tvg-id="Example.in@SD" tvg-name="Example" tvg-country="IN" group-title="Backup",Example'
+        primary = [
+            {"info": '#EXTINF:-1 tvg-id="Example.in@HD" group-title="Indian Entertainment",Example', "url": "https://example.test/a.m3u8"},
+            {"info": '#EXTINF:-1 tvg-id="Example.in@FHD" group-title="Indian Entertainment",Example', "url": "https://example.test/b.m3u8"},
+        ]
+        self.assertFalse(owner_probe.has_unique_primary_match(backup, primary))
 
     def test_identity_key_ignores_quality_suffix(self):
         self.assertEqual(migration.id_key("ZeeTV.in@HD"), migration.id_key("ZeeTV.in@SD"))
