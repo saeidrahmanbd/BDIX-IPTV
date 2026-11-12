@@ -100,6 +100,8 @@ def verify(playlist: Path, state: Path):
     if missing:
         raise SystemExit(f"IPTV URL preservation failed: {sum(missing.values())} existing URL occurrence(s) missing.")
     added = actual_counts - expected_counts
+    if any(count > 1 for url, count in added.items() if url not in expected_counts):
+        raise SystemExit("IPTV URL preservation failed: a newly discovered stream URL appears more than once.")
     if any(count for count in added.values()):
         # Existing URLs can never be duplicated by a discovery candidate.
         duplicated = sum(count for url, count in added.items() if url in expected_counts)
@@ -134,8 +136,6 @@ def verify(playlist: Path, state: Path):
                 failures.append(f"Unapproved group migration for {current['name']}: {old_group} -> {new_group}")
             if old_group == new_group and not migration_mode and current["number"] != str(original.get("number", "")):
                 failures.append(f"Existing channel number changed for {current['name']}")
-            if old_group != new_group and not exact_approval:
-                failures.append(f"Unapproved group migration for {current['name']}: {old_group} -> {new_group}")
             if new_group not in CATEGORY_ORDER:
                 failures.append(f"Unknown category {new_group!r}: {current['name']}")
 
