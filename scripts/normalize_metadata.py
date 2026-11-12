@@ -320,7 +320,6 @@ for r in rows:
    m=set_attr(m,"channel-id","Colors.Bangla.in")
    m=set_attr(m,"tvg-name","Colors Bangla")
    m=set_attr(m,"group-title","Review")
-   m=re.sub(r'\\s+tvg-chno="[^"]*"',"",m,count=1)
    lines[r["i"]]=f"{m},Colors Bangla"
    stats["backups"]+=1
    continue
