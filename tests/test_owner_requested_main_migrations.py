@@ -82,5 +82,19 @@ class OwnerRequestedMigrationTests(unittest.TestCase):
         self.assertNotIn('group-title="Review"', updated)
         self.assertEqual(stats["inconclusive_probe_deferred"], 1)
 
+
+    def test_existing_review_entry_metadata_and_stream_url_are_preserved(self):
+        review_info = '#EXTINF:-1 tvg-id="custom.review" tvg-name="Review Channel HD (720p)" tvg-chno="777" channel-id="custom.review" group-title="Review",Review Channel HD (720p)'
+        text = "\\n".join([
+            '#EXTM3U',
+            '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backups","Review"]',
+            review_info,
+            'https://example.test/review.m3u8',
+            ''
+        ])
+        updated, stats, changes, approvals = migration.migrate(text, {"results":[]})
+        self.assertIn(review_info, updated)
+        self.assertIn('https://example.test/review.m3u8', updated)
+
 if __name__ == "__main__":
     unittest.main()
