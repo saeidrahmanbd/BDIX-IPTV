@@ -41,7 +41,7 @@ class DiscoveryReportOrderTests(unittest.TestCase):
         ):
             self.assertNotIn(forbidden, source)
 
-        self.assertIn("New Channels/New Backups", source)
+        self.assertIn("Discover Bangladesh and India candidates into manual-review queues", source)
         self.assertIn("Commit discovery queue additions only", source)
         self.assertIn("git add IPTV-Playlist.m3u reports/iptv-channel-discovery.md", source)
 
