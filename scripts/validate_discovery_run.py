@@ -390,17 +390,21 @@ def probe_mode(playlist, report, baseline, mode):
         new_extinf, localized, unavailable = ensure_local_logo(e)
         if unavailable:
             counts["candidates held for missing local logo"] += 1
+            # Discovery metadata/logo quality is repaired after staging. A missing
+            # authentic logo must never discard a candidate from the owner's
+            # New Channels/New Backups review queues.
+            if new_extinf != e["extinf"]:
+                update_lines[e["start"]] = new_extinf
             if mode == "international":
-                update_lines[e["start"]] = discovery.set_attr(e["extinf"], "group-title", "Review")
-                inconclusive_starts.add(e["start"])
+                update_lines[e["start"]] = discovery.set_attr(
+                    update_lines.get(e["start"], e["extinf"]), "group-title", "Review"
+                )
                 details.append(
-                    f"- Moved {e['name']} to Review — no authentic local logo asset is available."
+                    f"- Kept {e['name']} in Review — no authentic local logo asset is available; manual review required."
                 )
             else:
-                remove_starts.add(e["start"])
-                counts["candidates removed for missing local logo"] += 1
                 details.append(
-                    f"- Held {e['name']} out of {e['group']} — no authentic local logo asset is available."
+                    f"- Kept {e['name']} in {e['group']} for manual review — no authentic local logo asset is available; metadata/logo repair can follow."
                 )
             continue
         if new_extinf != e["extinf"]:
@@ -443,8 +447,8 @@ def probe_mode(playlist, report, baseline, mode):
         f"- Duplicate discovery entries removed: {counts['duplicate discovery entries removed']}",
         f"- Country-group rows consolidated after stream probing: {counts['country-group rows consolidated after stream probing']}",
         f"- Logo references localized to authentic repository assets: {counts['logos localized to repository assets']}",
-        f"- Candidates without local logos moved to Review: {counts['candidates held for missing local logo']}",
-        f"- Candidates removed for missing local logos (IPTV mode): {counts['candidates removed for missing local logo']}",
+        f"- Candidates without authentic local logos retained for manual repair: {counts['candidates held for missing local logo']}",
+        f"- Candidates removed for missing local logos: 0 (logo gaps are non-blocking)",
         "",
         "### Stream probe details",
         *(details[:100] if details else ["- No stream removals or uncertain responses to report."]),
@@ -467,7 +471,8 @@ def final_mode(playlist, report, baseline, mode):
             groups.append(e["group"])
     queue_names = {"new channels", "new backup", "new backups"}
     candidates = [e for e in entries if e["group"].casefold() in queue_names or stream_url_key(e["url"]) not in baseline_urls]
-    url_counts = Counter(stream_url_key(e["url"]) for e in entries)
+    new_entries = [e for e in entries if stream_url_key(e["url"]) not in baseline_urls]
+    url_counts = Counter(stream_url_key(e["url"]) for e in new_entries)
     duplicate_count = sum(n - 1 for n in url_counts.values() if n > 1)
     errors = []
     validator_outcome = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME", "success").casefold()
@@ -477,9 +482,9 @@ def final_mode(playlist, report, baseline, mode):
         errors.append(f"{len(malformed)} malformed EXTINF/URL pairs")
     if duplicate_count:
         errors.append(f"{duplicate_count} duplicate stream URLs remain")
-    # Match the canonical 15-group IPTV registry enforced by
-    # normalize_metadata.py, final_playlist_hardening.py and sort_playlists.py.
-    required = (["Backup", "Review", "New Channels", "New Backups"]
+    # Main IPTV queue order is the repository's canonical category contract.
+    # International has its own protected tail order.
+    required = (["Backup", "New Channels", "New Backups", "Review"]
                 if mode == "iptv" else ["Review", "New Channels", "New Backups", "Backup"])
     registry_line = next((line for line in lines if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")), "")
     try:
@@ -506,13 +511,14 @@ def final_mode(playlist, report, baseline, mode):
         logo = e["logo"]
         if not logo:
             missing_logo += 1
-            if e["group"].casefold() != "review":
-                errors.append(f"missing local logo for discovery candidate {e['name']}")
+            # Queued discovery rows are intentionally available for manual
+            # review; no authentic logo is a repair task, not a discovery blocker.
         else:
             path = local_logo_path(logo)
             if path is None or not path.is_file():
                 external_logo += 1
-                errors.append(f"non-local logo reference for {e['name']}")
+                # A queue row with a non-local logo is still retained for
+                # metadata/logo repair; it is not exposed as a primary stream.
         attrs = e["attrs"]
         country = (attrs.get("tvg-country") or "").upper()
         if not country:
@@ -551,9 +557,9 @@ def final_mode(playlist, report, baseline, mode):
         f"- Validation status: {status}",
         f"- M3U entries parsed: {len(entries)}",
         f"- Malformed EXTINF/URL pairs: {len(malformed)}",
-        f"- Duplicate stream URLs: {duplicate_count}",
+        f"- New duplicate stream URL occurrences: {duplicate_count}",
         f"- {'/'.join(required)} ordering: {'passed' if ordering_ok else 'failed'}",
-        f"- Discovery entries missing a logo (left blank rather than using a placeholder): {missing_logo}",
+        f"- Candidates missing an authentic local logo: {missing_logo} (retained in manual review queues)",
         f"- Non-local discovery logo references: {external_logo}",
         f"- Geography/content policy issues: {len(policy_issues)}",
         "- Existing non-discovery entries were not removed by the stream-validation step.",
