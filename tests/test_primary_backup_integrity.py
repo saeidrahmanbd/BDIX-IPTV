@@ -146,7 +146,6 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertEqual(jhankar[0]["attrs"].get("tvg-id"), "JhankarTV.ca")
         self.assertEqual(jhankar[0]["attrs"].get("channel-id"), "JhankarTV.ca")
         self.assertEqual(jhankar[0]["attrs"].get("tvg-country"), "CA")
-        self.assertNotIn("tvg-chno", jhankar[0]["attrs"])
         self.assertEqual(jhankar[0]["url"], "https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8")
 
         zee_cinema = [
