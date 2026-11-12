@@ -26,12 +26,12 @@ class ActiveChannelNumberingTests(unittest.TestCase):
             'https://stream.example/movie.m3u8\n'
         )
 
-    def test_active_entries_keep_owner_row_order_and_are_numbered_gaplessly(self):
+    def test_only_missing_active_numbers_are_filled_and_existing_numbers_are_preserved(self):
         updated, count = normalize_playlist_text(self.sample)
         self.assertEqual(count, 3)
-        self.assertIn('tvg-name="Zeta" tvg-chno="1"', updated)
-        self.assertIn('tvg-name="Alpha" tvg-chno="2"', updated)
-        self.assertIn('tvg-name="Movie" tvg-chno="3"', updated)
+        self.assertIn('tvg-name="Zeta" tvg-chno="99"', updated)
+        self.assertIn('tvg-name="Alpha" tvg-chno="12"', updated)
+        self.assertIn('tvg-name="Movie" tvg-chno="1"', updated)
         self.assertLess(updated.index(",Zeta"), updated.index(",Alpha"))
         self.assertLess(updated.index(",Alpha"), updated.index(",Movie"))
 
