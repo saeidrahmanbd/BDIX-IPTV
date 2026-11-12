@@ -670,23 +670,27 @@ def source_id_country(source_id):
     return playlist_id_country_code(source_id)
 
 def source_region_compatible(target_country, source_id, source_url="", target_id=""):
-    """Apply the shared region policy to ID matches and name matches alike."""
+    """Require region agreement for name-derived candidates."""
     explicit_override = source_id in CURATED_REGION_OVERRIDES.get(target_id, set())
     return mapping_id_region_compatible(
         normalize_country_code(target_country),
         source_id_country(source_id),
         source_country_codes(source_url),
         explicit_override=explicit_override,
+        require_feed_match=True,
     )
 
 
 def source_id_mapping_compatible(channel, source_id, source_url):
-    """Use the same region policy for exact/normalized IDs and name matches."""
-    return source_region_compatible(
-        channel.get("country", ""),
-        source_id,
-        source_url,
-        target_id=channel.get("tvg_id", ""),
+    """Use the same shared policy for exact/normalized source IDs."""
+    target_id = channel.get("tvg_id", "")
+    explicit_override = source_id in CURATED_REGION_OVERRIDES.get(target_id, set())
+    return mapping_id_region_compatible(
+        normalize_country_code(channel.get("country", "")),
+        source_id_country(source_id),
+        source_country_codes(source_url),
+        explicit_override=explicit_override,
+        require_feed_match=False,
     )
 
 
