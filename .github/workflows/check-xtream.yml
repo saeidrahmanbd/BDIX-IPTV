@@ -268,7 +268,6 @@ jobs:
                   print(f"{name} Worker source: ok={health.get('ok')} streams={health.get('streams')} playlist={health.get('playlist')}")
 
               source_streams = source_playlist_snapshot()
-              source_streams = source_playlist_snapshot()
               expected_by_id = {
                   str(stable_stream_id(stream["tvg_id"], stream["url"])): stream
                   for stream in source_streams
