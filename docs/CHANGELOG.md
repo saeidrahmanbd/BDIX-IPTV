@@ -28,26 +28,23 @@ Removed channel identities (up to 10):
 - Horse TV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-11 — `International-Playlist.m3u`
+### 2026-11-12 — `International-Playlist.m3u`
 
-- New channel identities: **9**
+- New channel identities: **6**
 - Channel identities removed: **0**
-- Stream URLs added / removed: **9 / 0**
+- Stream URLs added / removed: **13 / 0**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- 2TV
-- 15+ Music
-- A1
-- ACW UG TV
-- Alegria TV
-- AMC (Afghanistan)
-- Antenne Vorarlberg [ ]
-- ARY Musik
-- Zee South Flix
+- Movies Now
+- 7X Music
+- Punjab Plus
+- Swastik Stories
+- Scares by Shudder
+- AXS TV
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
