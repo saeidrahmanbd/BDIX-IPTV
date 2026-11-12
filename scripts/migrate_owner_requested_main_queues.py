@@ -245,9 +245,8 @@ def migrate(text, probe_data):
         if not probe.get("ok"):
             if old_group != "Review":
                 record[0] = remove_attr(set_group(info, "Review"), "tvg-chno")
-                if old_group == "Backup":
-                    approvals.append({"url": url, "source_group": old_group,
-                                      "target_group": "Review", "allow_metadata": True})
+                approvals.append({"url": url, "source_group": old_group,
+                                  "target_group": "Review", "allow_metadata": True})
                 stats["not_streaming_to_review"] += 1
                 changes.append((name, old_group, "Review", probe.get("error") or f"HTTP {probe.get('status')}"))
             continue
@@ -264,8 +263,17 @@ def migrate(text, probe_data):
             if local_png_exists(logo):
                 info = set_attr(info, "tvg-logo", logo)
             if old_group in QUEUE:
+                logo = attrs(info).get("tvg-logo", "").strip()
+                if not local_png_exists(logo):
+                    info = remove_attr(info, "tvg-logo")
+                    record[0] = info
+                    stats["queue_alternates_without_local_logo_deferred"] += 1
+                    changes.append((name, old_group, old_group, "reachable alternate; authentic local PNG logo still needs repair"))
+                    continue
                 info = set_group(info, "Backup")
                 info = remove_attr(info, "tvg-chno")
+                approvals.append({"url": url, "source_group": old_group,
+                                  "target_group": "Backup", "allow_metadata": True})
                 stats["queue_alternates_to_backup"] += 1
                 changes.append((name, old_group, "Backup", "reachable alternate for an existing primary"))
             elif old_group == "Backup":
@@ -285,16 +293,24 @@ def migrate(text, probe_data):
                                   "target_group": "Review", "allow_metadata": True})
                 stats["unclassified_orphans_to_review"] += 1
                 changes.append((name, "Backup", "Review", "country/genre could not be safely verified"))
+            elif old_group in QUEUE:
+                record[0] = remove_attr(info, "tvg-logo")
+                stats["queue_policy_review_deferred"] += 1
+                changes.append((name, old_group, old_group, "country/genre eligibility not established; left in discovery queue"))
             continue
         logo = a.get("tvg-logo", "").strip()
         if not local_png_exists(logo):
-            # A missing authentic local asset remains in its discovery queue.
+            # Do not publish an active/Backup row without an authentic local PNG.
             if old_group == "Backup":
                 record[0] = remove_attr(set_group(info, "Review"), "tvg-chno")
                 approvals.append({"url": url, "source_group": "Backup",
                                   "target_group": "Review", "allow_metadata": True})
                 stats["orphan_without_local_logo_to_review"] += 1
                 changes.append((name, "Backup", "Review", "no authentic local PNG logo available"))
+            elif old_group in QUEUE:
+                record[0] = remove_attr(info, "tvg-logo")
+                stats["queue_without_local_logo_deferred"] += 1
+                changes.append((name, old_group, old_group, "authentic local PNG not available; left in discovery queue"))
             continue
         cid = (a.get("tvg-id") or a.get("channel-id") or "").strip()
         if not cid:
@@ -303,6 +319,9 @@ def migrate(text, probe_data):
                 approvals.append({"url": url, "source_group": "Backup",
                                   "target_group": "Review", "allow_metadata": True})
                 stats["orphan_without_identity_to_review"] += 1
+            elif old_group in QUEUE:
+                record[0] = remove_attr(info, "tvg-logo")
+                stats["queue_without_identity_deferred"] += 1
             continue
         info = set_group(info, target)
         info = set_attr(info, "tvg-id", cid)
@@ -314,8 +333,8 @@ def migrate(text, probe_data):
             info = set_attr(info, "tvg-language", "und")
         info = remove_attr(info, "tvg-chno")
         record[0] = info
-        if old_group == "Backup":
-            approvals.append({"url": url, "source_group": "Backup",
+        if old_group == "Backup" or old_group in QUEUE:
+            approvals.append({"url": url, "source_group": old_group,
                               "target_group": target, "allow_metadata": True})
         new_row = [info] + record[1:]
         primary_rows.append(new_row)
