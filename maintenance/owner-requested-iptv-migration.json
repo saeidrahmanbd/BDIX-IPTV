@@ -4,21 +4,27 @@
   "requested_at": "2026-11-12T16:39:00+06:00",
   "playlist": "IPTV-Playlist.m3u",
   "scope": [
-    "reconcile orphan Backup entries using exact channel identity and stream URL",
-    "probe New Channels and New Backups and migrate only reachable, eligible entries with verified identity and authentic local artwork",
-    "move currently non-streaming migration candidates to Review without deleting or changing their stream URLs",
-    "leave all pre-existing Review entries unchanged",
-    "fill only missing primary tvg-chno values without changing existing channel numbers",
-    "restore contiguous category blocks and canonical Playlist Studio category registry",
-    "localize WWE Superstar Central using the authentic WWE-owned trademark filing artwork when the image validates"
+    "reconcile orphan Backup entries using canonical channel identity and a unique same-name match only when country evidence agrees",
+    "probe unmatched orphan Backup rows plus New Channels and New Backups; migrate only reachable, eligible rows with verified identity and authentic local artwork",
+    "move only definitive HTTP 404/410 migration candidates to Review without deleting or changing their stream URLs",
+    "leave pre-existing Review group assignments, stream URLs, identities and all non-numbering metadata unchanged",
+    "fill only missing or invalid primary tvg-chno values while preserving every existing positive primary channel number",
+    "remove legacy tvg-chno attributes from Backup, Review, New Channels and New Backups; do not change their group assignments except for exact-URL-approved migration candidates",
+    "restore contiguous category blocks and the canonical Playlist Studio category registry",
+    "repair same-identity Backup metadata conflicts and inconsistent tvg-id/channel-id pairs using a unique exact-ID or country-matched identity",
+    "normalize technical resolution suffixes and complete supported language metadata without guessing unknown values",
+    "localize WWE Superstar Central using the authentic WWE-owned trademark filing artwork only if the returned image validates"
   ],
   "safeguards": [
-    "preserve every pre-existing stream URL occurrence",
-    "do not delete channels based on probe failures",
-    "do not replace stream URLs",
-    "do not alter existing Review rows",
-    "do not migrate reachable but unclassified or logo-incomplete candidates out of discovery queues",
-    "do not modify International-Playlist.m3u"
+    "preserve every pre-existing stream URL occurrence exactly",
+    "do not delete or replace any stream URL",
+    "preserve every existing positive primary tvg-chno value",
+    "do not modify International-Playlist.m3u or its logos",
+    "do not change pre-existing Review rows except remove their obsolete tvg-chno attribute",
+    "do not move a candidate to a primary group without a verified channel identity, country eligibility, successful stream probe and authentic local logo",
+    "do not use name-only matching across different or unknown countries",
+    "do not classify HTTP 401/403/429/5xx, DNS, TLS, timeout or other inconclusive probe results as dead",
+    "do not promote reachable but unclassified or logo-incomplete candidates out of discovery queues"
   ],
   "consume_only_after": "reports/owner-requested-main-migrations.md is published to main"
 }
