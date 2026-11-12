@@ -1,6 +1,6 @@
 # Strict Unmapped EPG Audit
 
-Generated: **2026-11-12T08:55:45+00:00**
+Generated: **2026-11-12T09:43:46+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
 Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
@@ -17,13 +17,13 @@ Bangladesh-group channels are not name-matched here. Their domestic schedules re
 
 ## Bangladesh-specific review
 
-- Bangladesh-group IDs without a mapping: **70**
+- Bangladesh-group IDs without a mapping: **71**
 The nasimali/epg-auto diaspora guide uses numeric Sky channel IDs with generic display names such as Channel 3914; channel identity is never inferred from list ordering. Explicit sources are used for Iqra Bangla, ATN Bangla UK, NTV Europe, Channel S UK, and Deen TV. These mappings do not imply a general domestic Bangladesh EPG source.
 No dependable public, current XMLTV feed for the domestic Bangladesh channel set was verified. NTV Europe and Channel S UK use dedicated UK diaspora channel feeds; the remaining domestic channels stay unmapped until a trustworthy exact-ID schedule source is verified. No schedule is fabricated from stale static schedules or unrelated foreign channels.
 
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **c4dece2f2bf4cd4b4b2d6b11c052f7a7f46d338791823e770a8ff3f38d53f646**
+- IPTV-Playlist.m3u SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
 - International-Playlist.m3u SHA-256: **e2e9d5abca13f4ea9053057d21d4725713d3e7407fc4a0d5d8bcdd5347d789fa**
 
