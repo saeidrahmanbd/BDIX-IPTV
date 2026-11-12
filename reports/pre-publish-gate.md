@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-12T14:24:19+00:00**
-Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
+Generated: **2026-11-12T15:28:38+00:00**
+Source playlist SHA-256: **d6e1529751e08b7398130851537c569ab346feb702af65937d14753d6f1146f1**
 
 Status: **PASS**
 
@@ -16,10 +16,10 @@ Status: **PASS**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **13**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **632**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **607**
 - Numbered review entries: **425**
-- Same-ID metadata name conflicts: **1**
-- Orphan Backup entries: **15**
+- Same-ID metadata name conflicts: **2**
+- Orphan Backup entries: **16**
 - Active rows with incomplete required metadata: **1**
 - tvg-id/channel-id inconsistencies: **1**
 - Entries missing tvg-language: **18**
@@ -37,20 +37,20 @@ Status: **PASS**
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. Exact URL-scoped migrations in the owner-requested migration approval file may promote reachable queue/orphan streams or quarantine non-streaming candidates; every stream URL must be preserved. Review, New Channels and New Backups are excluded from Xtream.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **632**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **607**.
 
 ## Blocking Reasons
 No hard safety blockers detected.
 
 ## Warnings / Manual Review
 
-- orphan Backup entries awaiting owner review: 15
+- orphan Backup entries awaiting owner review: 16
 - active entries with incomplete identity/country/logo metadata: 1
 - tvg-id/channel-id inconsistencies: 1
 - entries missing tvg-language: 18
 - primary entries missing tvg-chno: 13
 - Backup/Review/discovery entries still numbered: 425
-- same-ID metadata name conflicts: 1
+- same-ID metadata name conflicts: 2
 - raw resolution/geoblock tags in channel names: 18
 - missing logos: 1
 - New queue candidates pending owner review: 18
@@ -64,6 +64,7 @@ None.
 ## Metadata conflicts
 
 - **dangaltv.in@sd@dangal.tv** — Dangal [Backup]; Dangal TV [Backup]; Dangal TV [Backup]; Dangal TV [Backup]
+- **pitaara.in@sd** — Pitaara [Indian Movies]; Pitaara TV [Backup]; Pitaara TV [Backup]; Pitaara TV [Backup]
 
 ## Raw name tags
 

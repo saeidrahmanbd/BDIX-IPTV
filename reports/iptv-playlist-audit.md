@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-12T14:24:18.762956+00:00**
-Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
+Generated: **2026-11-12T15:28:37.524662+00:00**
+Source playlist SHA-256: **d6e1529751e08b7398130851537c569ab346feb702af65937d14753d6f1146f1**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -13,8 +13,8 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **6**
-- Cross-queue same-ID name variants (review): **1**
-- Cross-queue normalized-name/different-ID groups (review): **25**
+- Cross-queue same-ID name variants (review): **2**
+- Cross-queue normalized-name/different-ID groups (review): **26**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **1**
 - Protected primary-entry changes: **0**
@@ -23,16 +23,16 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - External logo references (review only): **0**
 - Logo references checked: **1242**
 - Duplicate primary identities: **0**
-- Potential near-duplicate primary name groups (review only): **6**
+- Potential near-duplicate primary name groups (review only): **3**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues (review only): **632**
+- Primary channel-number sequence issues (review only): **607**
 - Primary entries missing channel numbers: **13**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **3**
+- Category block-order issues: **31**
 - Category registry issues: **1**
-- Alphabetical ordering issues: **18**
+- Alphabetical ordering issues: **59**
 - Suspicious URL credentials/syntax: **0**
 - Unverified provider playback routes (review only): **0**
 - Signed/tokenized stream URLs: **18**
@@ -61,29 +61,31 @@ New Channels/New Backups contain only entries verified as BD/IN.
 These diagnostics include canonical and review groups. Name/ID differences can be legitimate; this section does not merge identities, remove entries, or print stream URLs.
 
 - Same ID dangaltv.in@sd@dangal.tv: Dangal [Backup]; Dangal TV [Backup]
+- Same ID pitaara.in@sd: Pitaara [Indian Movies]; Pitaara TV [Backup]
 
 - Same normalized name: Action Hollywood Movies [action.hollywood.movies.en] (Backup); Action Hollywood Movies [plex.tv.action.hollywood.movies.plex] (International)
 - Same normalized name: Ananda TV [anananda.tv.bd] (Backup); Ananda TV [anandatv.bd] (Backup); Ananda TV [anandatv.bd] (Bangladesh); Ananda TV [anandatv.bd] (Review)
 - Same normalized name: Asianet [asianet.in] (Indian Entertainment); Asianet [asianet.in@hd] (Backup)
 - Same normalized name: Channel S [channels.bd] (Backup); Channel S [channels.bd] (Bangladesh); Channel S [playlist.m3u8.bd] (Backup)
-- Same normalized name: Colors Bangla Cinema [colorsbanglacinema.in@sd] (Review); Colors Bangla Cinema [colorsbanglacinema.in@sd@colors.bangla.cinema] (Indian Movies)
+- Same normalized name: Colors Bangla Cinema [colorsbanglacinema.in@sd] (Review); Colors Bangla Cinema [colorsbanglacinema.in@sd@colors.bangla.cinema] (Indian Bangla)
 - Same normalized name: Dangal [dangaltv.in@sd] (Backup); Dangal [dangaltv.in@sd] (Indian Entertainment); Dangal [dangaltv.in@sd] (Review); Dangal [dangaltv.in@sd@dangal.tv] (Backup)
 - Same normalized name: DD Sports [ddsports.in@hd] (Backup); DD Sports [ddsports.in@sd] (Backup); DD Sports [ddsports.in@sd] (Sports)
 - Same normalized name: Desi Channel [desichannel.in] (Backup); Desi Channel [desichannel.in] (Indian Entertainment); Desi Channel (1080p) [desichannel.in@sd] (New Backups)
 - Same normalized name: Dhoom Music [dhoommusic.in@sd] (Backup); Dhoom Music [dhoommusic.in@sd@dhoom.music] (Indian Bangla)
 - Same normalized name: Discovery Channel (India) [discoverychannel.in@hd] (Review); Discovery Channel (India) [discoverychannel.in@sd] (Review)
 - Same normalized name: E24 [e24.in] (Backup); E24 [e24.in] (Indian Music); E 24 (576p) [e24.in@sd] (New Backups)
-- Same normalized name: ESPN [espn.us] (Sports); ESPN [espn.us@hd] (Backup); ESPN [espn.us@sd] (Sports)
+- Same normalized name: ESPN [espn.us] (Sports); ESPN [espn.us@hd] (Backup); ESPN [espn.us@sd] (Backup)
 - Same normalized name: Eurosport [eurosport.fr@asia] (Sports); Eurosport [eurosport.in@sd] (Review)
 - Same normalized name: Goldmines Action [goldminesaction.in] (Backup); Goldmines Action [goldminesaction.in] (Indian Movies); Goldmines Action (576p) [goldminesaction.in@sd] (New Backups)
 - Same normalized name: Jalsha Movies [jalshamovies.in@sd] (Indian Bangla); Jalsha Movies [star.jalsha.movies.in] (Backup); Jalsha Movies [star.jalsha.movies.in] (Review)
 - Same normalized name: M Sports [msports.pk@sd] (Sports); M Sports [msports.pk@sd@m.sports] (Backup)
 - Same normalized name: NBC Sports Now [nbcsportsnow.us@sd] (Sports); NBC Sports Now [nbcsportsnow.us@sd@nbc.sports.now] (Backup)
+- Same normalized name: Pitaara [pitaara.in@sd] (Indian Movies); Pitaara [pitaara.in@sd@pitaara] (Backup)
 - Same normalized name: Q TV [qtv.in] (Indian Entertainment); Q TV [qtv.in@sd] (Backup); Q TV [qtv.in@sd] (Religious)
 - Same normalized name: Raj Musix Telugu [rajmusictelugu.in@sd] (Backup); Raj Musix Telugu [rajmusixtelugu.in@sd] (Indian Music)
 - Same normalized name: Real Madrid TV English [realmadridtvenglish.es@sd] (Sports); Real Madrid TV English [realmadridtvenglish.es@sd@real.madrid.tv.english] (Backup)
 - Same normalized name: Sony Pal [sonypal.in@sd] (Review); Sony Pal [sonypal.in@sd@sony.pal] (Indian Entertainment)
-- Same normalized name: Star Jalsha [star.jalsha.in] (Indian Bangla); Star Jalsha [star.jalsha.in] (Review); Star Jalsha [starjalsha.in@sd] (Review)
+- Same normalized name: Star Jalsha [star.jalsha.in] (Backup); Star Jalsha [star.jalsha.in] (Review); Star Jalsha [starjalsha.in@sd] (Review)
 - Same normalized name: Thikana TV [thikana.tv.bd] (Backup); Thikana TV [thikanatv.us] (Bangladesh)
 - Same normalized name: Tolly TV [tollytv.in] (Indian Movies); Tolly TV (1080p) [tollytv.in@hd] (New Backups)
 - Same normalized name: YRF Music [yrfmusic.in] (Backup); YRF Music [yrfmusic.in] (Indian Music); YRF Music [yrfmusic.in@nepal] (Backup)
@@ -299,7 +301,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - CNN — International — https://tvsen6.aynaott.com/cnn/index.m3u8
 - CNN — Backup — https://amg01448-samsungin-cnnnow-samsungin-4npqg.amagi.tv/playlist/amg01448-samsungin-cnnnow-samsungin/playlist.m3u8
 ### colors.in (2 streams)
-- Colors — Indian Entertainment — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ColorsAPAC.m3u8
+- Colors — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ColorsAPAC.m3u8
 - Colors — Review — http://103.135.253.32:8080/Color-HD/index.m3u8
 ### colorscineplex.uk (3 streams)
 - Colors Cineplex [UK] — Indian Movies — https://d1rc86nwwc9fag.cloudfront.net/260723/smil:rishteycineplexukdev.smil/chunklist_b1928000.m3u8
@@ -787,17 +789,17 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - PGA Tour — Sports — https://d11k1mnrgfposz.cloudfront.net/playlist.m3u8
 - PGA Tour — Backup — https://linear-1006.frequency.stream/dist/plex/1006/hls/master/playlist.m3u8
 ### pitaara.in@sd (4 streams)
-- Pitaara TV — Indian Movies — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index.m3u8
+- Pitaara — Indian Movies — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index.m3u8
 - Pitaara TV — Backup — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index_5.m3u8
 - Pitaara TV — Backup — https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8
 - Pitaara TV — Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
 ### pitaara.in@sd@pitaara (4 streams)
-- Pitaara — Indian Movies — https://d3i5c1nmken8bh.cloudfront.net/Live/Pitaara_TV_SCTE/playlist.m3u8
+- Pitaara — Backup — https://d3i5c1nmken8bh.cloudfront.net/Live/Pitaara_TV_SCTE/playlist.m3u8
 - Pitaara — Backup — https://pitaara-lg.vgcdn.net/v1/vglive-sk-326599/playlist.m3u8
 - Pitaara — Backup — https://fta.ektv.in/live/352/master.m3u8
 - Pitaara — Backup — https://mumt04.tangotv.in/m18aqlK4PITAARA/index.m3u8
 ### pitaaracomedy.in@sd (4 streams)
-- Pitaara Comedy — Indian Movies — https://vglivessai.akamaized.net/ptnr-lgtv/title-Pitaara_Comedy_LG/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/5a5410c0-1b79-4adc-9243-0139b249798b/playlist.m3u8
+- Pitaara Comedy — Indian Entertainment — https://vglivessai.akamaized.net/ptnr-lgtv/title-Pitaara_Comedy_LG/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/5a5410c0-1b79-4adc-9243-0139b249798b/playlist.m3u8
 - Pitaara Comedy — Backup — https://pitaara-lg.vgcdn.net/v1/vglive-sk-217489/playlist.m3u8
 - Pitaara Comedy — Backup — https://vg-pitaaratvyupp.akamaized.net/ptnr-yupptv/title-Pitaara_Comedy/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-343626/playlist.m3u8
 - Pitaara Comedy — Backup — https://janya-pitaaralive.akamaized.net/ptnr-monitoring/v1/vglive-sk-217489/live/PitaaraComedy_15/chunks.m3u8
@@ -981,7 +983,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - SRK — Bangladesh — https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8
 - SRK — Backup — https://srktv.net/srktvhls/cdnlive_srktv.m3u8
 ### star.jalsha.in (2 streams)
-- Star Jalsha — Indian Bangla — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
+- Star Jalsha — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
 - Star Jalsha — Review — http://103.135.253.32:8080/STAR-JALSHA-HD/index.m3u8
 ### star.jalsha.movies.in (2 streams)
 - Jalsha Movies — Backup — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
@@ -1002,7 +1004,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Suriyan TV — Indian Entertainment — https://hlslive.olidigital.in/suriyantv/suriyantv/index.m3u8
 - Suriyan TV — Backup — https://stream.ottlive.co.in/suriyantvtamil/index.m3u8
 ### tabbarhits.in (3 streams)
-- Tabbar Hits — Indian Music — https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8
+- Tabbar Hits — Indian Movies — https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8
 - Tabbar Hits — Backup — https://livingindiaottlive.akamaized.net/tabbarhits/index.m3u8
 - Tabbar Hits — Backup — https://server.thelegitpro.in/tabbarhits/tabbarhits/index.m3u8
 ### thalaatv.in@hd (2 streams)
@@ -1082,11 +1084,8 @@ None.
 
 ## Potential Near-Duplicate Primary Names (Review Only)
 
-- Colors [colors.in] (Indian Entertainment); Colors HD [colors.in@hd] (Indian Entertainment)
 - Channel Fight [channel.fight.com] (Sports); Fight TV [fight.tv.com] (Sports)
 - Futbol [futbol.tj@sd] (Sports); Futbol TV [futboltv.uz@hd] (Sports)
-- Pitaara [pitaara.in@sd@pitaara] (Indian Movies); Pitaara TV [pitaara.in@sd] (Indian Movies)
-- Star Jalsha [star.jalsha.in] (Indian Bangla); Star Jalsha HD [starjalsha.in@hd] (Indian Bangla)
 - Tennis Channel [tennischannel.us@sd] (Sports); Tennis+ [tennis.com] (Sports)
 
 These are review suggestions only. The audit does not merge identities, change channel order, or remove streams.
@@ -1155,6 +1154,34 @@ None.
 ## Ordering
 
 - category block **Bangladesh** — out of canonical block order
+- category block **Indian Bangla** — out of canonical block order
+- category block **Bangladesh** — out of canonical block order
+- category block **Indian Bangla** — out of canonical block order
+- category block **Indian Movies** — out of canonical block order
+- category block **Indian Bangla** — out of canonical block order
+- category block **Indian Movies** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
+- category block **Indian Movies** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
+- category block **Indian Movies** — out of canonical block order
+- category block **Indian Music** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
+- category block **Indian Music** — out of canonical block order
+- category block **Indian Movies** — out of canonical block order
+- category block **Indian Music** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
+- category block **Indian Music** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
+- category block **Indian Bangla** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
+- category block **Pakistani** — out of canonical block order
+- category block **International** — out of canonical block order
+- category block **Documentary & Wildlife** — out of canonical block order
+- category block **Kids** — out of canonical block order
+- category block **Religious** — out of canonical block order
+- category block **Sports** — out of canonical block order
+- category block **Sports** — out of canonical block order
 - category block **New Channels** — out of canonical block order
 - category block **New Backups** — out of canonical block order
 - **Bangladesh** — **5 — ATN News** appears after **386 — ATN Bangla UK**
@@ -1164,7 +1191,9 @@ None.
 - **Bangladesh** — **23 — Ekattor TV** appears after **400 — Doyel TV**
 - **Bangladesh** — **46 — NTV** appears after **440 — NRB TV**
 - **Bangladesh** — **9 — TBN 24 USA** appears after **55 — SRK**
-- **Bangladesh** — **58 — VISION 24** appears after **467 — Time Television**
+- **Bangladesh** — **58 — Vision 24** appears after **467 — Time Television**
+- **Bangladesh** — **36 — JTV Bangla** appears after **58 — Vision 24**
+- **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
 - **Bangladesh** — **5 — ATN News** appears after **386 — ATN Bangla UK**
 - **Bangladesh** — **15 — Channel 9** appears after **17 — Channel 52**
 - **Bangladesh** — **18 — Channel I** appears after **390 — Channel Europe**
@@ -1172,8 +1201,47 @@ None.
 - **Bangladesh** — **23 — Ekattor TV** appears after **400 — Doyel TV**
 - **Bangladesh** — **46 — NTV** appears after **440 — NRB TV**
 - **Bangladesh** — **9 — TBN 24 USA** appears after **55 — SRK**
-- **Bangladesh** — **58 — VISION 24** appears after **467 — Time Television**
+- **Bangladesh** — **58 — Vision 24** appears after **467 — Time Television**
+- **Bangladesh** — **36 — JTV Bangla** appears after **58 — Vision 24**
+- **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
+- **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
+- **Bangladesh** — **5 — ATN News** appears after **386 — ATN Bangla UK**
+- **Bangladesh** — **15 — Channel 9** appears after **17 — Channel 52**
+- **Bangladesh** — **18 — Channel I** appears after **390 — Channel Europe**
+- **Bangladesh** — **20 — DBC News** appears after **391 — Channel S UK**
+- **Bangladesh** — **23 — Ekattor TV** appears after **400 — Doyel TV**
+- **Bangladesh** — **46 — NTV** appears after **440 — NRB TV**
+- **Bangladesh** — **9 — TBN 24 USA** appears after **55 — SRK**
+- **Bangladesh** — **58 — Vision 24** appears after **467 — Time Television**
+- **Bangladesh** — **36 — JTV Bangla** appears after **58 — Vision 24**
+- **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
+- **Indian Movies** — **Tabbar Hits** appears after **Zee Cinema**
+- **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
+- **Indian Movies** — **Tabbar Hits** appears after **Zee Cinema**
+- **Indian Entertainment** — **KCL TV** appears after **Pitaara Comedy**
+- **Indian Entertainment** — **&TV** appears after **KCL TV**
+- **Indian Movies** — **Tabbar Hits** appears after **Zee Cinema**
+- **Indian Entertainment** — **KCL TV** appears after **Pitaara Comedy**
+- **Indian Entertainment** — **&TV** appears after **KCL TV**
+- **Indian Movies** — **Tabbar Hits** appears after **Zee Cinema**
+- **Indian Music** — **Aaryaa TV** appears after **Zoom**
+- **Indian Entertainment** — **KCL TV** appears after **Pitaara Comedy**
+- **Indian Entertainment** — **&TV** appears after **KCL TV**
+- **Indian Music** — **Aaryaa TV** appears after **Zoom**
+- **Indian Movies** — **Tabbar Hits** appears after **Zee Cinema**
+- **Indian Music** — **Aaryaa TV** appears after **Zoom**
+- **Indian Entertainment** — **KCL TV** appears after **Pitaara Comedy**
+- **Indian Entertainment** — **&TV** appears after **KCL TV**
+- **Indian Music** — **Aaryaa TV** appears after **Zoom**
+- **Indian Entertainment** — **KCL TV** appears after **Pitaara Comedy**
+- **Indian Entertainment** — **&TV** appears after **KCL TV**
+- **Indian Entertainment** — **KCL TV** appears after **Pitaara Comedy**
+- **Indian Entertainment** — **&TV** appears after **KCL TV**
+- **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
+- **Indian Entertainment** — **KCL TV** appears after **Pitaara Comedy**
+- **Indian Entertainment** — **&TV** appears after **KCL TV**
 - **International** — **4ever Cinema** appears after **24 Hour Free Movies**
+- **Sports** — **Türkmenistan Sport** appears after **TYC Sports**
 - **Sports** — **Türkmenistan Sport** appears after **TYC Sports**
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 

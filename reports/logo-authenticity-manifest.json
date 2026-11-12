@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-12T14:24:59.130629+00:00",
+  "generated_at_utc": "2026-11-12T15:29:19.065587+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,7 +11,7 @@
     "International-Playlist.m3u": 3107
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e",
+    "IPTV-Playlist.m3u": "d6e1529751e08b7398130851537c569ab346feb702af65937d14753d6f1146f1",
     "International-Playlist.m3u": "e2e9d5abca13f4ea9053057d21d4725713d3e7407fc4a0d5d8bcdd5347d789fa"
   },
   "status_counts": {
@@ -765,7 +765,7 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 131,
-      "channel_name": "VISION 24",
+      "channel_name": "Vision 24",
       "tvg_id": "vision.24.bd",
       "channel_id": "vision.24.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vision.png",
@@ -909,7 +909,7 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 155,
-      "channel_name": "JTV BANGLA",
+      "channel_name": "JTV Bangla",
       "tvg_id": "jtv.bangla.bd",
       "channel_id": "jtv.bangla.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jtv-bangla.png",
@@ -1653,7 +1653,7 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 279,
-      "channel_name": "Pitaara TV",
+      "channel_name": "Pitaara",
       "tvg_id": "Pitaara.in@SD",
       "channel_id": "Pitaara.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pitaara-tv.png",
@@ -7125,7 +7125,7 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 1191,
-      "channel_name": "INTROUBLE",
+      "channel_name": "InTrouble",
       "tvg_id": "InTrouble.nl@SD",
       "channel_id": "InTrouble.nl@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/introuble-1080p.png",
@@ -7497,7 +7497,7 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 1253,
-      "channel_name": "SOLOCALCIO ITALIA",
+      "channel_name": "Solo Calcio Italia",
       "tvg_id": "Si Solo Calcio.it",
       "channel_id": "Si Solo Calcio.it",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/solocalcio-italia.png",

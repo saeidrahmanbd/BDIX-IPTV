@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-12T14:24:18+00:00**
+Generated: **2026-11-12T15:28:36+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
+- IPTV-Playlist.m3u SHA-256: **d6e1529751e08b7398130851537c569ab346feb702af65937d14753d6f1146f1**
 - International-Playlist.m3u SHA-256: **e2e9d5abca13f4ea9053057d21d4725713d3e7407fc4a0d5d8bcdd5347d789fa**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 512000 bytes: **7**
 - Raster/SVG assets with short side under 64 px: **155**
 - Exact-byte duplicate asset clusters: **713**
-- Playlist references whose asset stem differs from the normalized channel name: **1472**
+- Playlist references whose asset stem differs from the normalized channel name: **1473**
 - Unreferenced files immediately inside logos/: **1468** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
@@ -983,7 +983,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Shikor TV Canada | shikor-tv-canada-ac43f0fa9e.png | Bangladesh |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | TBN 24 USA | tbn-24.png | Bangladesh |
-| IPTV-Playlist.m3u | VISION 24 | vision.png | Bangladesh |
+| IPTV-Playlist.m3u | Vision 24 | vision.png | Bangladesh |
 | IPTV-Playlist.m3u | Colors Bangla HD | colors-bangla-hd.png | Indian Bangla |
 | IPTV-Playlist.m3u | Orange Bangla TV | orange-bangla-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Indian Bangla |
@@ -994,8 +994,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Goldmines 2 | goldmines.png | Indian Movies |
 | IPTV-Playlist.m3u | Goldmines Movies 2 | goldmines-movies.png | Indian Movies |
 | IPTV-Playlist.m3u | Indywood TV | indywood-tv.png | Indian Movies |
-| IPTV-Playlist.m3u | Pitaara | pitaara-comedy.png | Indian Movies |
-| IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Indian Movies |
+| IPTV-Playlist.m3u | Pitaara | pitaara-comedy.png | Backup |
+| IPTV-Playlist.m3u | Pitaara | pitaara-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Pravasi Channel | pravasi-channel.png | Indian Movies |
 | IPTV-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Thalaa TV | thalaa-tv.png | Indian Movies |
@@ -1004,14 +1004,14 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Dhool TV | dhool-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Gangaur TV | gangaur-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Indian Music |
-| IPTV-Playlist.m3u | KCL TV | kcl-tv.png | Indian Music |
+| IPTV-Playlist.m3u | KCL TV | kcl-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Mei Alai TV | mei-alai-tv.png | Indian Music |
 | IPTV-Playlist.m3u | MH One Music | mh-1-music.png | Indian Music |
 | IPTV-Playlist.m3u | Songdew TV | songdew-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Ultimate TV | ultimate-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Indian Music |
 | IPTV-Playlist.m3u | &TV | tv.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Aaryaa TV | aaryaa-tv.png | Indian Entertainment |
+| IPTV-Playlist.m3u | Aaryaa TV | aaryaa-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Alankar TV | alankar-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Alright! TV | alright-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Indian Entertainment |
@@ -1165,6 +1165,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Red Bull TV UK | red-bull-tv.png | Sports |
 | IPTV-Playlist.m3u | Red Bull TV US | red-bull-tv-us-4ec4c704c2.png | Sports |
 | IPTV-Playlist.m3u | SN TV | sn-tv.png | Sports |
+| IPTV-Playlist.m3u | Solo Calcio Italia | solocalcio-italia.png | Sports |
 | IPTV-Playlist.m3u | Sports First TV | sports-first-tv.png | Sports |
 | IPTV-Playlist.m3u | Star Sports 2 Telugu HD | star-sports-2.png | Sports |
 | IPTV-Playlist.m3u | Surfer TV | surfer-tv.png | Sports |

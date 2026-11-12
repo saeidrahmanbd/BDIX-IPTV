@@ -1,13 +1,13 @@
 # Logo Provenance Review
 
-Generated: **2026-11-12T14:24:59+00:00**
+Generated: **2026-11-12T15:29:19+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
+- IPTV-Playlist.m3u SHA-256: **d6e1529751e08b7398130851537c569ab346feb702af65937d14753d6f1146f1**
 - International-Playlist.m3u SHA-256: **e2e9d5abca13f4ea9053057d21d4725713d3e7407fc4a0d5d8bcdd5347d789fa**
 
 ## Provenance status by playlist
@@ -143,7 +143,7 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | tolly-tv.png | Tolly TV | TollyTV.in |
 | tolly-tv.png | Tolly TV (1080p) | TollyTV.in@HD |
 | vision.png | Eurovision Sport | EurovisionSport.uk@Europe |
-| vision.png | VISION 24 | vision.24.bd |
+| vision.png | Vision 24 | vision.24.bd |
 | yrf-music.png | YRF Music | YRFMusic.in |
 | yrf-music.png | YRF Music | YRFMusic.in@Nepal |
 

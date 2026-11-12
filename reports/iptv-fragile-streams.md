@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-12T14:24:58+00:00**
-IPTV-Playlist.m3u SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
+Generated: **2026-11-12T15:29:17+00:00**
+IPTV-Playlist.m3u SHA-256: **d6e1529751e08b7398130851537c569ab346feb702af65937d14753d6f1146f1**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
@@ -21,7 +21,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Goldmines Movies 2 | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1460/master.m3u8` |
 | Maha Movie | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/10007/master.m3u8` |
 | MBC Bollywood | Indian Movies | credential-bearing route pattern (values redacted) | `https://shd-gcp-live.edgenextcdn.net/live/REDACTED/REDACTED/index.m3u8` |
-| Pitaara | Indian Movies | credential-bearing route pattern (values redacted) | `https://d3i5c1nmken8bh.cloudfront.net/Live/Pitaara_TV_SCTE/playlist.m3u8` |
+| Pitaara | Backup | credential-bearing route pattern (values redacted) | `https://d3i5c1nmken8bh.cloudfront.net/Live/Pitaara_TV_SCTE/playlist.m3u8` |
 | Studio One + | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/276/master.m3u8` |
 | Sun Gemini | Indian Movies | credential-bearing route pattern (values redacted) | `http://ptuf.ridsys.in/riptv/live/GEMINI_TV/index.m3u8` |
 | Vision (India) | Indian Movies | credential-bearing route pattern (values redacted) | `http://103.85.204.205:1935/VISIONMEDIA/live/playlist.m3u8` |
