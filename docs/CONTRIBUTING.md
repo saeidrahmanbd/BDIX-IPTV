@@ -5,7 +5,7 @@ Thanks for helping improve the project.
 ## Before changing playlists
 
 - Preserve the `#PLAYLIST-STUDIO-CATEGORIES` registry and canonical category order.
-- For `IPTV-Playlist.m3u`, automation may normalize names, repair metadata, localize logos, improve EPG mappings, validate streams and add policy-eligible discoveries, but must never delete or move an existing stream row between groups or reorder existing rows. New rows may be added while preserving the relative order of all existing rows.
+- For `IPTV-Playlist.m3u`, automation may repair metadata and authentic local logos, diagnose blocked/broken streams, improve EPG mappings and stage eligible discoveries in `New Channels` / `New Backups`. It must never delete/replace an existing stream, change an existing group assignment or channel number, reorder existing rows, or promote discovery/review rows.
 - For `International-Playlist.m3u`, automation has full policy-based authority to add, filter, delete, move, migrate, deduplicate and reorganize channel rows, including backup reconciliation.
 - Do not remove Backup or review-queue entries from the main IPTV playlist solely because an automated health check failed.
 - Keep New Channels and New Backups populated by discovery workflows; apply each playlist's separate approval and promotion rules.
