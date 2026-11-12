@@ -113,7 +113,7 @@ class MainPlaylistProtectionTests(unittest.TestCase):
              ("Bangladesh", "B metadata fixed", "https://b", "", "b.bd")],
         )
 
-    def test_owner_approved_migration_can_reassemble_groups_and_renumber(self):
+    def test_owner_approved_migration_can_reassemble_groups_and_fill_only_missing_numbers(self):
         with tempfile.TemporaryDirectory() as directory:
             playlist = Path(directory) / "IPTV-Playlist.m3u"
             state = Path(directory) / "state.json"
@@ -121,7 +121,27 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             self.write(
                 playlist,
                 [("Indian Movies", "B", "https://b", "23", "b.in"),
-                 ("Bangladesh", "A", "https://a", "12", "a.bd")],
+                 ("Bangladesh", "A", "https://a", "", "a.bd")],
+            )
+            guard.snapshot(playlist, state)
+            approvals.write_text("[]", encoding="utf-8")
+            self.write(
+                playlist,
+                [("Bangladesh", "A", "https://a", "1", "a.bd"),
+                 ("Indian Movies", "B", "https://b", "23", "b.in")],
+            )
+            with patch.object(guard, "OWNER_APPROVALS", approvals):
+                guard.verify(playlist, state)
+
+    def test_owner_migration_cannot_renumber_existing_primary_channels(self):
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "IPTV-Playlist.m3u"
+            state = Path(directory) / "state.json"
+            approvals = Path(directory) / "approvals.json"
+            self.write(
+                playlist,
+                [("Bangladesh", "A", "https://a", "12", "a.bd"),
+                 ("Bangladesh", "B", "https://b", "23", "b.bd")],
             )
             guard.snapshot(playlist, state)
             approvals.write_text(json.dumps([{
@@ -131,10 +151,12 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             self.write(
                 playlist,
                 [("Bangladesh", "A", "https://a", "1", "a.bd"),
-                 ("Indian Movies", "B", "https://b", "2", "b.in")],
+                 ("Bangladesh", "B", "https://b", "2", "b.bd")],
             )
             with patch.object(guard, "OWNER_APPROVALS", approvals):
-                guard.verify(playlist, state)
+                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+                    with self.assertRaises(SystemExit):
+                        guard.verify(playlist, state)
 
     def test_non_primary_rows_must_be_unnumbered(self):
         self.assert_guard_blocks(
