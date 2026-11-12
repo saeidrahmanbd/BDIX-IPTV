@@ -35,8 +35,9 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             self.write(playlist, before, before_categories)
             guard.snapshot(playlist, state)
             self.write(playlist, after, after_categories if after_categories is not None else before_categories)
-            with self.assertRaises(SystemExit):
-                guard.verify(playlist, state)
+            with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+                with self.assertRaises(SystemExit):
+                    guard.verify(playlist, state)
 
     def test_metadata_repairs_and_new_discovery_rows_are_allowed(self):
         self.run_guard(
@@ -85,21 +86,52 @@ class MainPlaylistProtectionTests(unittest.TestCase):
                 with self.assertRaises(SystemExit):
                     guard.verify(playlist, state)
 
-    def test_canonical_group_sorting_is_allowed(self):
-        self.run_guard(
+    def test_canonical_group_sorting_is_blocked_during_routine_maintenance(self):
+        self.assert_guard_blocks(
             [("Indian Movies", "B", "https://b", "2", "b.in"),
              ("Bangladesh", "A", "https://a", "1", "a.bd")],
             [("Bangladesh", "A", "https://a", "1", "a.bd"),
              ("Indian Movies", "B", "https://b", "2", "b.in")],
         )
 
-    def test_primary_renumbering_is_allowed_when_sequential(self):
-        self.run_guard(
+    def test_primary_renumbering_is_blocked_during_routine_maintenance(self):
+        self.assert_guard_blocks(
             [("Bangladesh", "A", "https://a", "12", "a.bd"),
              ("Bangladesh", "B", "https://b", "23", "b.bd")],
             [("Bangladesh", "A", "https://a", "1", "a.bd"),
              ("Bangladesh", "B", "https://b", "2", "b.bd")],
         )
+
+    def test_preexisting_numbered_backup_and_unnumbered_primary_are_preserved(self):
+        self.run_guard(
+            [("Backup", "A alternate", "https://a", "501", "a.bd"),
+             ("Bangladesh", "B", "https://b", "", "b.bd")],
+            [("Backup", "A alternate metadata fixed", "https://a", "501", "a.bd"),
+             ("Bangladesh", "B metadata fixed", "https://b", "", "b.bd")],
+        )
+
+    def test_owner_approved_migration_can_reassemble_groups_and_renumber(self):
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "IPTV-Playlist.m3u"
+            state = Path(directory) / "state.json"
+            approvals = Path(directory) / "approvals.json"
+            self.write(
+                playlist,
+                [("Indian Movies", "B", "https://b", "23", "b.in"),
+                 ("Bangladesh", "A", "https://a", "12", "a.bd")],
+            )
+            guard.snapshot(playlist, state)
+            approvals.write_text(json.dumps([{
+                "url": "https://a", "source_group": "Bangladesh",
+                "target_group": "Bangladesh", "allow_metadata": True
+            }]), encoding="utf-8")
+            self.write(
+                playlist,
+                [("Bangladesh", "A", "https://a", "1", "a.bd"),
+                 ("Indian Movies", "B", "https://b", "2", "b.in")],
+            )
+            with patch.object(guard, "OWNER_APPROVALS", approvals):
+                guard.verify(playlist, state)
 
     def test_non_primary_rows_must_be_unnumbered(self):
         self.assert_guard_blocks(
