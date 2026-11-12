@@ -100,10 +100,10 @@ EXTRA_DIRECT_HINTS = {
         "license_url": "",
     },
     "WWE Superstar Central": {
-        "url": "https://static.trademarkia.com/images/99049129",
+        "url": "https://trademarks.justia.com/media/image.php?serial=99048431",
         "format": "",
-        "page": "https://www.trademarkia.com/wwe-superstar-central-99049129",
-        "license": "Exact WWE SUPERSTAR CENTRAL figurative mark shown in trademark filing; owner identified as World Wrestling Entertainment, LLC; validate image bytes before localization",
+        "page": "https://trademarks.justia.com/990/48/ww-superstar-99048431.html",
+        "license": "Exact WWE SUPERSTAR CENTRAL figurative mark from the 2025 WWE-owned trademark filing (serial 99048431); image is hosted with the trademark record and must pass PNG validation before localization",
         "license_url": "",
     },
     "Channel Fight": {
