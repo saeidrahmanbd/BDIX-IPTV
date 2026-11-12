@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Preserve curated IPTV row order and assign contiguous channel numbers in place.
+"""Preserve curated IPTV row order and existing primary numbers; fill only missing values.
 
 Backup, Review, New Channels and New Backups remain unnumbered. Legacy Not Playing
 rows are normalized to Review; stream URLs are never rewritten.
