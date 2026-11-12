@@ -42,6 +42,13 @@ PAGES = {
             "x-default": BASE,
         },
     },
+    "playlist-studio.html": {
+        "canonical": BASE + "playlist-studio.html",
+        "hreflang": {
+            "en": BASE + "playlist-studio.html",
+            "x-default": BASE + "playlist-studio.html",
+        },
+    },
 }
 SITEMAP_NS = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
 INDEXNOW_KEY_FILE = DOCS / "4e1c93ab76d25f0881a4b7c3e9d6205f.txt"
