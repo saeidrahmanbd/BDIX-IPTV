@@ -219,8 +219,9 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 ) as logo_repair:
                     validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
             output = playlist.read_text(encoding="utf-8")
-            self.assertIn('group-title="New Channels",Fresh Candidate', output)
-            self.assertIn('group-title="New Channels",Old Queue Row', output)
+            self.assertIn('group-title="New Channels"', output)
+            self.assertIn('tvg-name="Fresh Candidate"', output)
+            self.assertIn('tvg-name="Old Queue Row"', output)
             self.assertIn('tvg-id="Fresh.us"', output)
             self.assertIn('tvg-country="US"', output)
             self.assertEqual(probe.call_count, 1)

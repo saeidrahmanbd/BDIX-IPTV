@@ -13,6 +13,8 @@ on:
       - 'tests/test_channel_discovery_policy.py'
       - 'tests/test_country_verification.py'
       - 'tests/test_discovery_run_validation.py'
+      - 'tests/test_discovery_report_order.py'
+      - 'tests/test_report_freshness.py'
       - 'tests/test_discovery_schedule_guard.py'
       - 'tests/test_stream_url_identity.py'
   schedule:
@@ -72,6 +74,10 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_discovery_run_validation.py'
       - name: Test discovery daily guard
         run: python -m unittest discover -s tests -p 'test_discovery_schedule_guard.py'
+      - name: Test discovery workflow isolation
+        run: python -m unittest discover -s tests -p 'test_discovery_report_order.py'
+      - name: Test report freshness helpers
+        run: python -m unittest discover -s tests -p 'test_report_freshness.py'
       - name: Discover Bangladesh and India candidates into manual-review queues
         run: python scripts/run_bd_discovery_with_policy.py
       - name: Probe only newly discovered streams; retain uncertain or incomplete candidates
