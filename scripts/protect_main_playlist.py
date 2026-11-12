@@ -1,16 +1,23 @@
 #!/usr/bin/env python3
-"""Protect every existing IPTV stream URL while allowing verified group repairs.
+"""Protect owner-curated IPTV rows while allowing metadata fixes and queued discoveries.
 
-Metadata/group classification may be corrected and category blocks may be
-reassembled. Existing stream URL occurrences may never be deleted, replaced or
-duplicated. Separate maintenance guards continue to protect manual queues.
+Existing rows must retain their stream URL, group, channel number and relative
+order. New rows are accepted only in the manual New Channels/New Backups queues.
 """
 from __future__ import annotations
 
 import json
+import re
 import sys
 from collections import Counter
 from pathlib import Path
+
+ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+DISCOVERY_GROUPS = {"New Channels", "New Backups"}
+
+
+def attrs(info: str) -> dict[str, str]:
+    return dict(ATTR.findall(info))
 
 
 def records(path: Path):
@@ -18,47 +25,98 @@ def records(path: Path):
     current = None
     for line in path.read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n").splitlines():
         if line.startswith("#EXTINF:"):
-            if current is not None:
+            if current is not None and current["url"]:
+                meta = attrs(current["info"])
+                current["group"] = meta.get("group-title", "").strip()
+                current["number"] = meta.get("tvg-chno", "").strip()
                 result.append(current)
             current = {"info": line, "url": ""}
         elif current is not None and line.strip().lower().startswith(("http://", "https://")) and not current["url"]:
             current["url"] = line.strip()
-    if current is not None:
+    if current is not None and current["url"]:
+        meta = attrs(current["info"])
+        current["group"] = meta.get("group-title", "").strip()
+        current["number"] = meta.get("tvg-chno", "").strip()
         result.append(current)
-    return [row for row in result if row["url"]]
+    return result
 
 
 def snapshot(playlist: Path, state: Path):
-    rows = [{"url": row["url"]} for row in records(playlist)]
+    rows = [
+        {"url": row["url"], "group": row["group"], "number": row["number"]}
+        for row in records(playlist)
+    ]
     state.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Protected {len(rows)} existing IPTV stream URL occurrences.")
+    print(
+        f"Protected {len(rows)} existing IPTV rows: exact stream URLs, "
+        "group assignments, channel numbers and relative order."
+    )
 
 
 def verify(playlist: Path, state: Path):
     before = json.loads(state.read_text(encoding="utf-8"))
     after = records(playlist)
-    expected = Counter(str(row["url"]) for row in before)
-    actual = Counter(str(row["url"]) for row in after)
-    missing = expected - actual
-    # New unique discovery URLs are allowed. Flag only an extra occurrence
-    # of a URL that already existed, or a duplicate among newly added rows.
-    duplicated = Counter({
-        url: count - max(expected.get(url, 0), 1)
-        for url, count in actual.items()
-        if count > max(expected.get(url, 0), 1)
-    })
+    expected_counts = Counter(str(row["url"]) for row in before)
+    actual_counts = Counter(str(row["url"]) for row in after)
+
     errors = []
+    missing = expected_counts - actual_counts
     if missing:
         errors.append(f"{sum(missing.values())} existing stream URL occurrence(s) were deleted or replaced")
+
+    duplicated = {
+        url: count - expected_counts.get(url, 0)
+        for url, count in actual_counts.items()
+        if count > expected_counts.get(url, 0)
+    }
     if duplicated:
         errors.append(f"{sum(duplicated.values())} unexpected duplicate stream URL occurrence(s) were added")
+
+    # Match every baseline row as an ordered subsequence of the updated file.
+    # Metadata may be repaired, but existing group placement and numbering stay fixed.
+    cursor = 0
+    matched_indices = set()
+    for original in before:
+        url = str(original.get("url", ""))
+        found = next((i for i in range(cursor, len(after)) if after[i]["url"] == url), None)
+        if found is None:
+            errors.append("Existing row order changed or an existing row is missing")
+            break
+        matched_indices.add(found)
+        current = after[found]
+        if current["group"] != str(original.get("group", "")):
+            errors.append(
+                f"Existing group assignment changed for {url}: "
+                f"{original.get('group', '')!r} -> {current['group']!r}"
+            )
+        if current["number"] != str(original.get("number", "")):
+            errors.append(
+                f"Existing channel number changed for {url}: "
+                f"{original.get('number', '')!r} -> {current['number']!r}"
+            )
+        cursor = found + 1
+
+    # New channel discovery is staging-only. Existing primary/Backup/Review
+    # rows cannot be inserted, promoted or structurally changed by automation.
+    for index, row in enumerate(after):
+        if index in matched_indices:
+            continue
+        if row["group"] not in DISCOVERY_GROUPS:
+            errors.append(
+                f"New row outside manual discovery queues: {row['info'].rsplit(',', 1)[-1].strip()!r} "
+                f"(group={row['group']!r})"
+            )
+
     if errors:
         for error in errors:
             print(f"::error::{error}")
-        raise SystemExit("IPTV-Playlist.m3u URL-preservation guard failed; refusing to publish.")
+        raise SystemExit("IPTV-Playlist.m3u owner-protection guard failed; refusing to publish.")
+
     print(
-        f"IPTV URL-preservation passed: all {sum(expected.values())} existing stream URL "
-        "occurrences retained exactly. Evidence-backed group corrections and new discoveries are allowed."
+        f"IPTV owner-protection passed: all {len(before)} existing rows retained "
+        "with their exact URLs, groups, numbers and relative order; "
+        "new rows are confined to New Channels/New Backups. "
+        "Metadata/logo repairs remain permitted."
     )
 
 
