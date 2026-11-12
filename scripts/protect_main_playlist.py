@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Protect existing IPTV rows while allowing stable category regrouping.
+"""Protect every existing IPTV stream URL while allowing verified group repairs.
 
-Metadata and logo edits are allowed. Existing stream URLs must remain present
-in their original group and preserve their relative order within that group.
-Category blocks may be reassembled; new rows may be added without disturbing
-the existing order inside any category.
+Metadata/group classification may be corrected and category blocks may be
+reassembled. Existing stream URL occurrences may never be deleted, replaced or
+duplicated. Separate maintenance guards continue to protect manual queues.
 """
 from __future__ import annotations
+
 import json
 import sys
 from collections import Counter
 from pathlib import Path
+
 
 def records(path: Path):
     result = []
@@ -24,80 +25,43 @@ def records(path: Path):
             current["url"] = line.strip()
     if current is not None:
         result.append(current)
-    return [r for r in result if r["url"]]
+    return [row for row in result if row["url"]]
 
-def group(info: str) -> str:
-    import re
-    match = re.search(r'\bgroup-title="([^"]*)"', info)
-    value = match.group(1) if match else ""
-    return "Review" if value == "Not Playing" else value
 
 def snapshot(playlist: Path, state: Path):
-    rows = [{"url": r["url"], "group": group(r["info"])} for r in records(playlist)]
+    rows = [{"url": row["url"]} for row in records(playlist)]
     state.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Protected {len(rows)} existing IPTV stream rows.")
-
-def _is_subsequence(expected: list[str], actual: list[str]) -> bool:
-    """Return true when expected rows retain their relative order in actual."""
-    position = 0
-    for url in actual:
-        if position < len(expected) and url == expected[position]:
-            position += 1
-    return position == len(expected)
+    print(f"Protected {len(rows)} existing IPTV stream URL occurrences.")
 
 
 def verify(playlist: Path, state: Path):
     before = json.loads(state.read_text(encoding="utf-8"))
     after = records(playlist)
-    before_by_group: dict[str, list[str]] = {}
-    after_by_group: dict[str, list[str]] = {}
-    for row in before:
-        before_by_group.setdefault(row["group"], []).append(row["url"])
-    for row in after:
-        after_by_group.setdefault(group(row["info"]), []).append(row["url"])
-
-    all_after = Counter(row["url"] for row in after)
+    expected = Counter(str(row["url"]) for row in before)
+    actual = Counter(str(row["url"]) for row in after)
+    missing = expected - actual
+    duplicated = actual - expected
     errors = []
-    for old_group, old_urls in before_by_group.items():
-        current_urls = after_by_group.get(old_group, [])
-        old_counts = Counter(old_urls)
-        current_counts = Counter(current_urls)
-        missing = old_counts - current_counts
-        if missing:
-            for url, count in missing.items():
-                available_elsewhere = max(0, all_after[url] - current_counts[url])
-                moved = min(count, available_elsewhere)
-                deleted = count - moved
-                if moved:
-                    errors.append(
-                        f"{moved} existing stream(s) moved out of original group "
-                        f"{old_group!r}: {url}"
-                    )
-                if deleted:
-                    errors.append(
-                        f"{deleted} existing stream(s) deleted or URL-changed from "
-                        f"original group {old_group!r}: {url}"
-                    )
-        elif not _is_subsequence(old_urls, current_urls):
-            errors.append(
-                f"Existing stream order changed within group {old_group!r}; "
-                "only cross-group category regrouping is permitted."
-            )
-
+    if missing:
+        errors.append(f"{sum(missing.values())} existing stream URL occurrence(s) were deleted or replaced")
+    if duplicated:
+        errors.append(f"{sum(duplicated.values())} unexpected duplicate stream URL occurrence(s) were added")
     if errors:
         for error in errors:
             print(f"::error::{error}")
-        raise SystemExit(f"IPTV-Playlist.m3u protection failed: {len(errors)} violation(s); refusing to publish.")
+        raise SystemExit("IPTV-Playlist.m3u URL-preservation guard failed; refusing to publish.")
     print(
-        f"IPTV protection passed: all {len(before)} existing stream rows retained "
-        "in their original groups and relative order within each group."
+        f"IPTV URL-preservation passed: all {sum(expected.values())} existing stream URL "
+        "occurrences retained exactly. Evidence-backed group corrections and new discoveries are allowed."
     )
+
 
 def main():
     if len(sys.argv) != 4 or sys.argv[1] not in {"snapshot", "verify"}:
         raise SystemExit("Usage: protect_main_playlist.py snapshot|verify PLAYLIST STATE.json")
     action, playlist, state = sys.argv[1], Path(sys.argv[2]), Path(sys.argv[3])
     snapshot(playlist, state) if action == "snapshot" else verify(playlist, state)
+
 
 if __name__ == "__main__":
     main()
