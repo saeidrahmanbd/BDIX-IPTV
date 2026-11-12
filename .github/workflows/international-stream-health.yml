@@ -38,7 +38,7 @@ jobs:
     # Shared main-branch writer queue. Set on the writing job, not the workflow,
     # so runs whose jobs are skipped do not hold the queue.
     concurrency:
-      group: iptv-playlist-main-writer-v4
+      group: iptv-playlist-main-writer-v5
       cancel-in-progress: false
       queue: max
     runs-on: ubuntu-latest

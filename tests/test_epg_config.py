@@ -935,7 +935,7 @@ class EpgConfigTests(unittest.TestCase):
         self.assertNotIn("group: iptv-epg-refresh-${{ github.ref }}", workflow)
         self.assertRegex(
             workflow,
-            r"(?m)^    concurrency:\n      group: iptv-playlist-main-writer-v4\n      queue: max\n      cancel-in-progress: false$",
+            r"(?m)^    concurrency:\n      group: iptv-playlist-main-writer-v5\n      queue: max\n      cancel-in-progress: false$",
         )
         self.assertIn("queue: max", workflow)
         self.assertIn("Skip superseded queued EPG refresh", workflow)
