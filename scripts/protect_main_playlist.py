@@ -41,12 +41,26 @@ def records(path: Path):
     return result
 
 
+def category_registry(playlist: Path):
+    for line in playlist.read_text(encoding="utf-8-sig").splitlines():
+        if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"):
+            return json.loads(line.split(":", 1)[1])
+    return None
+
+
 def snapshot(playlist: Path, state: Path):
     rows = [
         {"url": row["url"], "group": row["group"], "number": row["number"]}
         for row in records(playlist)
     ]
-    state.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    state.write_text(
+        json.dumps(
+            {"rows": rows, "category_registry": category_registry(playlist)},
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
+        encoding="utf-8",
+    )
     print(
         f"Protected {len(rows)} existing IPTV rows: exact stream URLs, "
         "group assignments, channel numbers and relative order."
@@ -54,10 +68,13 @@ def snapshot(playlist: Path, state: Path):
 
 
 def verify(playlist: Path, state: Path):
-    before = json.loads(state.read_text(encoding="utf-8"))
+    saved = json.loads(state.read_text(encoding="utf-8"))
+    before = saved["rows"]
     after = records(playlist)
+    if category_registry(playlist) != saved.get("category_registry"):
+        raise SystemExit("IPTV-Playlist.m3u category registry/order changed; refusing to publish.")
     expected_counts = Counter(str(row["url"]) for row in before)
-    actual_counts = Counter(str(row["url"]) for row in after)
+     actual_counts = Counter(str(row["url"]) for row in after)
 
     errors = []
     missing = expected_counts - actual_counts
