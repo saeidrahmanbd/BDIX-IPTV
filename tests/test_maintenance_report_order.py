@@ -37,7 +37,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
     def test_iptv_playlist_registry_includes_review_queues(self):
         normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
         audit = (ROOT / "scripts" / "audit_playlist.py").read_text(encoding="utf-8")
-        self.assertIn('line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")', normalizer)
+        self.assertIn('l.startswith("#PLAYLIST-STUDIO-CATEGORIES:")', normalizer)
         self.assertIn("Preserve its exact", normalizer)
         self.assertNotIn("CATEGORY_REGISTRY=", normalizer)
         self.assertIn(
@@ -128,7 +128,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("Keep the original record sequence exactly", normalizer)
         self.assertNotIn("records.sort(", normalizer)
         self.assertIn("Preserve its exact", normalizer)
-        self.assertIn('line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")', normalizer)
+        self.assertIn('l.startswith("#PLAYLIST-STUDIO-CATEGORIES:")', normalizer)
         self.assertNotIn("CATEGORY_REGISTRY=", normalizer)
         self.assertNotIn('set_attr(m,"tvg-chno"', normalizer)
         self.assertNotIn('tvg-chno="[^"]*"', normalizer)
