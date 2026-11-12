@@ -215,6 +215,10 @@ def migrate(text, probe_data):
     for record in records:
         info = record[0]
         a = attrs(info)
+        if a.get("group-title", "").strip() in {"Review", "Not Playing"}:
+            # Preserve existing quarantine entries exactly; only newly failed
+            # candidates may enter Review during this authorized pass.
+            continue
         old_name = display_name(info)
         new_name = normalized_label(old_name)
         if (a.get("tvg-id", "").casefold() == "mov.bollywood.old.in"
@@ -498,7 +502,7 @@ def migrate(text, probe_data):
     report = [
         "# Owner-Requested Main Playlist Migrations", "",
         "- Every existing stream URL was retained; this pass changes metadata/group placement only.",
-        "- Existing Review entries were not changed. Candidates returning definitive HTTP 404/410 responses were moved to Review; access-restricted and transient failures remain in their existing queues.",
+        "- Existing Review entries remain in Review with their original stream URLs and metadata. Queue numbering normalization may remove tvg-chno from Review rows. Only new migration candidates returning definitive HTTP 404/410 responses enter Review; access-restricted and transient failures remain in their original groups.",
         "",
         "## Summary", "",
     ]
@@ -521,7 +525,7 @@ def main():
     lines = [
         "# Owner-Requested Main Playlist Migrations", "",
         "- Every existing stream URL was retained; this pass changes metadata/group placement only.",
-        "- Existing Review entries were not changed. Candidates returning definitive HTTP 404/410 responses were moved to Review; access-restricted and transient failures remain in their existing queues.",
+        "- Existing Review entries remain in Review with their original stream URLs and metadata. Queue numbering normalization may remove tvg-chno from Review rows. Only new migration candidates returning definitive HTTP 404/410 responses enter Review; access-restricted and transient failures remain in their original groups.",
         "",
         "## Summary", "",
     ]
