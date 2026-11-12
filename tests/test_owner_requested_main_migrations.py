@@ -13,6 +13,10 @@ class OwnerRequestedMigrationTests(unittest.TestCase):
     def test_name_key_ignores_resolution_and_quality(self):
         self.assertEqual(migration.name_key("Movies Now HD (576p)"), migration.name_key("Movies Now"))
 
+    def test_display_normalization_removes_quality_prefixes_and_suffixes(self):
+        self.assertEqual(migration.normalized_label("IN | Movies Now HD (576p)"), "Movies Now")
+        self.assertEqual(migration.normalized_label("TamilVision-TV (1080p)"), "TamilVision TV")
+
     def test_indian_movie_music_kids_and_sports_groups(self):
         self.assertEqual(migration.target_group({"tvg-country":"IN","tvg-language":"hin"}, "Movies Now", 18), "Indian Movies")
         self.assertEqual(migration.target_group({"tvg-country":"IN","tvg-language":"ben"}, "KTV Bangla", 18), "Indian Bangla")
@@ -32,6 +36,21 @@ class OwnerRequestedMigrationTests(unittest.TestCase):
         self.assertIn('group-title="Review"', updated)
         self.assertEqual(stats["not_streaming_to_review"], 1)
         self.assertIn("https://example.test/movies.m3u8", updated)
+
+
+    def test_reachable_unclassified_orphan_stays_in_new_channels_not_review(self):
+        text = "\n".join([
+            '#EXTM3U',
+            '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backups","Review"]',
+            '#EXTINF:-1 tvg-id="custom.unknownservice" channel-id="custom.unknownservice" tvg-name="Unknown Service" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unknown-service.png" tvg-country="" tvg-language="und" group-title="Backup",Unknown Service',
+            'https://example.test/unknown.m3u8',
+            ''
+        ])
+        probe_data = {"results":[{"url":"https://example.test/unknown.m3u8","ok":True,"status":200,"bytes":512,"error":""}]}
+        updated, stats, changes, approvals = migration.migrate(text, probe_data)
+        self.assertIn('group-title="New Channels"', updated)
+        self.assertNotIn('group-title="Review"', updated)
+        self.assertEqual(stats["unclassified_orphans_staged_for_manual_review"], 1)
 
 if __name__ == "__main__":
     unittest.main()

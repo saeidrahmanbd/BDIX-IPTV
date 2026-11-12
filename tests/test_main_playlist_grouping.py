@@ -52,11 +52,13 @@ class MainPlaylistGroupingTests(unittest.TestCase):
             self.assertIn(url, out)
         self.assertIn("Verified primary rows reclassified: **5**", report)
 
-    def test_indian_prohibited_genre_is_quarantined_not_deleted(self):
+    def test_indian_policy_excluded_stream_stays_out_of_review(self):
         source = entry("Indian Quran Channel", "Indian Entertainment", "https://in.example/quran.m3u8", "IN", "hin")
-        out, _ = self.run_script(source)
-        self.assertIn('group-title="Review"', out)
+        out, report = self.run_script(source)
+        self.assertIn('group-title="Indian Entertainment"', out)
+        self.assertNotIn('group-title="Review"', out)
         self.assertIn("https://in.example/quran.m3u8", out)
+        self.assertIn("policy-excluded", report)
 
     def test_manual_queues_and_adult_are_untouched(self):
         source = (

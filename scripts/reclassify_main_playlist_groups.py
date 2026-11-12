@@ -7,6 +7,7 @@ Bangladesh/India rows. Existing manual queues remain under owner control.
 """
 from __future__ import annotations
 
+import json
 import re
 from collections import Counter
 from pathlib import Path
@@ -17,6 +18,7 @@ import discover_bd_in_new_queues as bd_policy
 PLAYLIST = Path("IPTV-Playlist.m3u")
 INTERNATIONAL = Path("International-Playlist.m3u")
 REPORT = Path("reports/iptv-grouping-corrections.md")
+APPROVALS = Path("/tmp/iptv-owner-requested-migrations.json")
 
 ACTIVE_GROUPS = {
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
@@ -106,7 +108,7 @@ def target_group(a: dict[str, str], name: str, current: str, reference) -> tuple
     if country == "IN":
         prohibited = bd_policy.prohibited_channel(a, name, "IN", discovery=True)
         if prohibited:
-            return "Review", prohibited
+            return None, f"policy-excluded: {prohibited}; retained in the current group because Review is reserved for streams that do not currently work"
     return genre_target(a, name, current, country), verdict.basis
 
 
@@ -117,6 +119,7 @@ def main() -> int:
     preamble, blocks = parse_playlist(original)
     reference = country_verification.reference_from_playlists([PLAYLIST, INTERNATIONAL])
     changed = []
+    approvals = []
     skipped = Counter()
     output = []
 
@@ -145,12 +148,24 @@ def main() -> int:
         if target != current:
             old = current
             block[0] = set_group(info, target)
+            approvals.append({"url": url, "source_group": old, "target_group": target, "allow_metadata": True})
             changed.append((name, old, target, evidence))
         output.append(block)
 
     updated = "\n".join(preamble + [line for block in output for line in block]).rstrip() + "\n"
     if updated != original:
         PLAYLIST.write_text(updated, encoding="utf-8")
+    if approvals:
+        prior = []
+        if APPROVALS.is_file():
+            try:
+                prior = json.loads(APPROVALS.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                prior = []
+        by_key = {}
+        for item in prior + approvals:
+            by_key[(item.get("url"), item.get("source_group"), item.get("target_group"))] = item
+        APPROVALS.write_text(json.dumps(list(by_key.values()), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     lines = [
@@ -159,7 +174,7 @@ def main() -> int:
         f"- Existing stream URLs deleted/replaced: **0** (not permitted by this script)",
         f"- Rows skipped because country was not conclusively verified: **{sum(skipped.values())}**",
         "- Backup, Review, New Channels, New Backups and Adult rows are outside this pass.",
-        "- Indian policy-excluded rows are retained in Review for manual inspection; no channel is deleted.", "",
+        "- Policy-excluded rows remain in their current group for owner inspection; Review is reserved for streams that do not currently work.", "",
         "| Channel | Previous group | Corrected group | Evidence |",
         "|---|---|---|---|",
     ]

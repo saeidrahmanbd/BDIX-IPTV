@@ -57,6 +57,10 @@ FALLBACK_LOGOS = {
 # Exact playlist ID -> explicit logo source. Add only verified mappings here.
 # These are intentionally keyed by playlist identity, never by stream URL or display name.
 ID_LOGO_MAP = {
+    # Exact channel identities mapped to broadcaster/provider artwork.
+    "mov.bollywood.old.in": "https://s3.aynaott.com/storage/3132515182ec50091b496fe515564084",
+    "channel.fight.com": "https://play-lh.googleusercontent.com/SWuIl9Ii5--5QIyDyisWGebr_XPG4OiVsbRg3SJ5Qb1WoTAsLyPQPWCbeqUB_25rzF0-6yBbpQbSNpIoJo_2yw=w240-h480",
+    "wwe.superstar.central.com": "https://trademarks.justia.com/media/image.php?serial=99049129",
     "bowling.tv.com": "https://images.squarespace-cdn.com/content/v1/6a0f1667e14e7d311009eebc/b1eeb2bc-abb8-4d8f-9796-32ec785e1ef9/Bowling%2BTV_Horizontal_White.png",
     "msg.sportszone.com": "https://cdn.mos.cms.futurecdn.net/p42PbCAdwsBYUwXJg7f8Ke.jpeg",
     "powder.tv.com": "https://provider-static.plex.tv/epg/cms/production/103b18dc-d465-46d3-b1e6-7a5a88a5c583/PLEX_1500X1000_PNG_WHT_POWDER_TV_Logo.png",

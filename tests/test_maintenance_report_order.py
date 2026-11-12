@@ -95,42 +95,34 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("git add -f epg/epg.xml", refresh)
         self.assertIn("workflow_dispatch:", refresh)
 
-    def test_main_playlist_maintenance_is_metadata_only_and_preserves_owner_structure(self):
+    def test_main_playlist_owner_cleanup_is_explicitly_one_time_and_url_guarded(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\n          }", workflow.index("run_mutations() {"))]
+        self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then', mutations)
+        self.assertIn("python scripts/reclassify_main_playlist_groups.py", mutations)
+        self.assertIn("python scripts/probe_owner_requested_main_queues.py", mutations)
+        self.assertIn("python scripts/migrate_owner_requested_main_queues.py", mutations)
+        self.assertIn("python scripts/sort_playlists.py IPTV-Playlist.m3u", mutations)
+        self.assertIn("python scripts/renumber_active_channels.py IPTV-Playlist.m3u", mutations)
+        self.assertIn('== "Owner-requested one-time IPTV cleanup"', workflow)
+        self.assertIn('[[ "${GITHUB_EVENT_NAME}" == "push" ]]', workflow)
         self.assertIn("python scripts/normalize_metadata.py", mutations)
         self.assertIn("python scripts/migrate_external_logos_fixed.py", mutations)
-        self.assertIn("python scripts/iptv_metadata_backfill.py", mutations)
         self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
         self.assertIn("python scripts/reorganize_international_playlist.py", mutations)
         self.assertIn("python scripts/validate_international_playlist.py", mutations)
-        for forbidden in (
-            "python scripts/reclassify_main_playlist_groups.py",
-            "python scripts/probe_owner_requested_main_queues.py",
-            "python scripts/migrate_owner_requested_main_queues.py",
-            "python scripts/renumber_active_channels.py IPTV-Playlist.m3u",
-            "python scripts/sort_playlists.py IPTV-Playlist.m3u",
-            "python scripts/maintenance_helpers.py verify-no-unauthorized-removals",
-            "python scripts/final_playlist_hardening.py IPTV-Playlist.m3u",
-            "python scripts/reconcile_playlist_consistency.py",
-            "python scripts/enforce_primary_backup_integrity.py",
-            "python scripts/restore_protected_review.py",
-        ):
-            self.assertNotIn(forbidden, mutations)
         self.assertIn("python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u", workflow)
         self.assertGreaterEqual(workflow.count("python scripts/protect_main_playlist.py verify IPTV-Playlist.m3u"), 2)
         self.assertIn("python -m unittest discover -s tests -p 'test_main_playlist_protection.py'", workflow)
         guard = (ROOT / "scripts" / "protect_main_playlist.py").read_text(encoding="utf-8")
-        self.assertIn('DISCOVERY_GROUPS = {"New Channels", "New Backups"}', guard)
-        self.assertIn('current["group"] != str(original.get("group", ""))', guard)
-        self.assertIn('current["number"] != str(original.get("number", ""))', guard)
-        self.assertIn("Existing row order changed", guard)
-
+        self.assertIn("OWNER_APPROVALS", guard)
+        self.assertIn("Counter", guard)
+        self.assertIn("CATEGORY_ORDER", guard)
+        self.assertIn("Duplicate primary channel identity", guard)
+        self.assertNotIn("Existing row order changed", guard)
         normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
         self.assertIn("Keep the original record sequence exactly", normalizer)
         self.assertNotIn("records.sort(", normalizer)
-
-        # Fingerprinted reports remain after the final mutation and before freshness validation.
         after = workflow[workflow.index("\n          }", workflow.index("run_mutations() {")):]
         for script in ("stream_health", "generate_dashboard", "validate_report_freshness"):
             self.assertIn(f"python scripts/{script}.py", after)

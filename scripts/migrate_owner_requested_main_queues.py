@@ -80,6 +80,17 @@ def id_key(value):
         return ""
     return value.split("@", 1)[0]
 
+
+def normalized_label(value):
+    """Remove technical feed prefixes/suffixes while preserving channel identity."""
+    value = unicodedata.normalize("NFKC", str(value or "")).strip()
+    value = re.sub(r"^(?:\[[A-Z]{2,3}\]\s*|[A-Z]{2,3}\s*[|:/-]\s*)", "", value, flags=re.I)
+    quality = r"(?:HD|FHD|UHD|SD|4K|\d{3,4}p|\d{3,4}i)"
+    value = re.sub(rf"\s*[\(\[]\s*{quality}\s*[\)\]]\s*$", "", value, flags=re.I)
+    value = re.sub(rf"\s+{quality}\s*$", "", value, flags=re.I)
+    value = re.sub(r"\s*[-_]\s*", " ", value)
+    return re.sub(r"\s+", " ", value).strip(" -|:")
+
 def country_for(a):
     country = (a.get("tvg-country") or "").strip().upper()
     if re.fullmatch(r"[A-Z]{2}", country):
@@ -193,10 +204,51 @@ def target_group(a, name, pakistani_count):
 def migrate(text, probe_data):
     preamble, records = parse_playlist(text)
     probe_by_url = {row["url"]: row for row in probe_data.get("results", [])}
+    # One-time owner-requested metadata cleanup. Channel IDs and stream URLs
+    # remain unchanged; only feed-quality labels and supported metadata are fixed.
+    normalized_names = 0
+    metadata_fields_filled = 0
+    for record in records:
+        info = record[0]
+        a = attrs(info)
+        old_name = display_name(info)
+        new_name = normalized_label(old_name)
+        if (a.get("tvg-id", "").casefold() == "mov.bollywood.old.in"
+                or a.get("channel-id", "").casefold() == "mov.bollywood.old.in"):
+            new_name = "Hindi Movie Classic 24"
+        if new_name and new_name != old_name:
+            info = set_attr(info, "tvg-name", new_name)
+            info = set_display(info, new_name)
+            normalized_names += 1
+        elif new_name and not a.get("tvg-name", "").strip():
+            info = set_attr(info, "tvg-name", new_name)
+            metadata_fields_filled += 1
+        a = attrs(info)
+        if not a.get("tvg-id", "").strip() and a.get("channel-id", "").strip():
+            info = set_attr(info, "tvg-id", a["channel-id"].strip())
+            metadata_fields_filled += 1
+        elif not a.get("channel-id", "").strip() and a.get("tvg-id", "").strip():
+            info = set_attr(info, "channel-id", a["tvg-id"].strip())
+            metadata_fields_filled += 1
+        a = attrs(info)
+        country = country_for(a)
+        if not a.get("tvg-country", "").strip() and country:
+            info = set_attr(info, "tvg-country", country)
+            metadata_fields_filled += 1
+        if not a.get("tvg-language", "").strip():
+            info = set_attr(info, "tvg-language", "und")
+            metadata_fields_filled += 1
+        elif a.get("tvg-language", "").strip() != a["tvg-language"].strip().lower():
+            info = set_attr(info, "tvg-language", a["tvg-language"].strip().lower())
+        record[0] = info
     initial_primary = [r for r in records if attrs(r[0]).get("group-title", "").strip() in PRIMARY]
     pakistani_count = len({id_key(attrs(r[0]).get("tvg-id") or attrs(r[0]).get("channel-id")) for r in initial_primary
                            if attrs(r[0]).get("group-title", "").strip() == "Pakistani"})
     changes, approvals, stats = [], [], Counter()
+    if normalized_names:
+        stats["channel_names_normalized"] += normalized_names
+    if metadata_fields_filled:
+        stats["metadata_fields_completed"] += metadata_fields_filled
     primary_rows = list(initial_primary)
 
     # First reconcile alternate IDs/names to a unique existing primary identity.
@@ -288,11 +340,11 @@ def migrate(text, probe_data):
         target = target_group(a, name, pakistani_count)
         if not target:
             if old_group == "Backup":
-                record[0] = remove_attr(set_group(info, "Review"), "tvg-chno")
+                record[0] = remove_attr(set_group(info, "New Channels"), "tvg-chno")
                 approvals.append({"url": url, "source_group": "Backup",
-                                  "target_group": "Review", "allow_metadata": True})
-                stats["unclassified_orphans_to_review"] += 1
-                changes.append((name, "Backup", "Review", "country/genre could not be safely verified"))
+                                  "target_group": "New Channels", "allow_metadata": True})
+                stats["unclassified_orphans_staged_for_manual_review"] += 1
+                changes.append((name, "Backup", "New Channels", "reachable, but country/genre eligibility needs owner review"))
             elif old_group in QUEUE:
                 record[0] = remove_attr(info, "tvg-logo")
                 stats["queue_policy_review_deferred"] += 1
@@ -300,13 +352,14 @@ def migrate(text, probe_data):
             continue
         logo = a.get("tvg-logo", "").strip()
         if not local_png_exists(logo):
-            # Do not publish an active/Backup row without an authentic local PNG.
+            # A reachable orphan is not a non-streaming Review entry. Keep it
+            # staged until an authentic local PNG can be attached.
             if old_group == "Backup":
-                record[0] = remove_attr(set_group(info, "Review"), "tvg-chno")
+                record[0] = remove_attr(set_group(info, "New Channels"), "tvg-chno")
                 approvals.append({"url": url, "source_group": "Backup",
-                                  "target_group": "Review", "allow_metadata": True})
-                stats["orphan_without_local_logo_to_review"] += 1
-                changes.append((name, "Backup", "Review", "no authentic local PNG logo available"))
+                                  "target_group": "New Channels", "allow_metadata": True})
+                stats["orphan_without_local_logo_staged"] += 1
+                changes.append((name, "Backup", "New Channels", "reachable; authentic local PNG logo still needs repair"))
             elif old_group in QUEUE:
                 record[0] = remove_attr(info, "tvg-logo")
                 stats["queue_without_local_logo_deferred"] += 1
@@ -315,10 +368,10 @@ def migrate(text, probe_data):
         cid = (a.get("tvg-id") or a.get("channel-id") or "").strip()
         if not cid:
             if old_group == "Backup":
-                record[0] = remove_attr(set_group(info, "Review"), "tvg-chno")
+                record[0] = remove_attr(set_group(info, "New Channels"), "tvg-chno")
                 approvals.append({"url": url, "source_group": "Backup",
-                                  "target_group": "Review", "allow_metadata": True})
-                stats["orphan_without_identity_to_review"] += 1
+                                  "target_group": "New Channels", "allow_metadata": True})
+                stats["orphan_without_identity_staged"] += 1
             elif old_group in QUEUE:
                 record[0] = remove_attr(info, "tvg-logo")
                 stats["queue_without_identity_deferred"] += 1
@@ -364,6 +417,8 @@ def migrate(text, probe_data):
                     info = set_attr(info, key, value)
             info = remove_attr(set_group(info, "Backup"), "tvg-chno")
             record[0] = info
+            approvals.append({"url": url_of(record), "source_group": group,
+                              "target_group": "Backup", "allow_metadata": True})
             stats["duplicate_primary_demoted_to_backup"] += 1
             changes.append((name, group, "Backup", "duplicate primary identity retained as alternate stream"))
             continue
