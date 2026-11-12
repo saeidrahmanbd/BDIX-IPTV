@@ -85,8 +85,9 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             }]), encoding="utf-8")
             self.write(playlist, [("Indian Movies", "Broken candidate", "https://a", "1", "broken.in")])
             with patch.object(guard, "OWNER_APPROVALS", approvals):
-                with self.assertRaises(SystemExit):
-                    guard.verify(playlist, state)
+                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+                    with self.assertRaises(SystemExit):
+                        guard.verify(playlist, state)
 
     def test_canonical_group_sorting_is_blocked_during_routine_maintenance(self):
         self.assert_guard_blocks(
@@ -171,6 +172,14 @@ class MainPlaylistProtectionTests(unittest.TestCase):
         self.assert_guard_blocks(
             [("Bangladesh", "A", "https://a", "1", "a.bd")],
             [("Bangladesh", "A", "https://replacement", "1", "a.bd")],
+        )
+
+    def test_duplicate_new_discovery_url_is_blocked(self):
+        self.assert_guard_blocks(
+            [("Bangladesh", "A", "https://a", "1", "a.bd")],
+            [("Bangladesh", "A", "https://a", "1", "a.bd"),
+             ("New Channels", "Discovery A", "https://new", "", "new.in"),
+             ("New Backups", "Discovery B", "https://new", "", "new.in")],
         )
 
     def test_duplicate_url_occurrence_is_blocked(self):
