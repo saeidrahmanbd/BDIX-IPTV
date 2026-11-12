@@ -34,7 +34,7 @@ class OwnerRequestedMigrationTests(unittest.TestCase):
         probe_data = {"results":[{"url":"https://example.test/movies.m3u8","ok":False,"status":404,"error":"HTTP 404"}]}
         updated, stats, changes, approvals = migration.migrate(text, probe_data)
         self.assertIn('group-title="Review"', updated)
-        self.assertEqual(stats["not_streaming_to_review"], 1)
+        self.assertEqual(stats["definitive_offline_to_review"], 1)
         self.assertIn("https://example.test/movies.m3u8", updated)
 
 
@@ -66,6 +66,21 @@ class OwnerRequestedMigrationTests(unittest.TestCase):
         self.assertIn('group-title="New Channels"', updated)
         self.assertNotIn('group-title="Indian Movies"', updated)
         self.assertEqual(stats["unverified_queue_candidates_deferred"], 1)
+
+
+    def test_access_restricted_candidate_is_deferred_not_quarantined(self):
+        text = "\\n".join([
+            '#EXTM3U',
+            '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backups","Review"]',
+            '#EXTINF:-1 tvg-id="MoviesNow.in@HD" channel-id="MoviesNow.in@HD" tvg-name="Movies Now" tvg-country="IN" tvg-language="hin" group-title="New Channels",Movies Now',
+            'https://example.test/movies.m3u8',
+            ''
+        ])
+        probe_data = {"results":[{"url":"https://example.test/movies.m3u8","ok":False,"status":403,"error":"HTTP 403"}]}
+        updated, stats, changes, approvals = migration.migrate(text, probe_data)
+        self.assertIn('group-title="New Channels"', updated)
+        self.assertNotIn('group-title="Review"', updated)
+        self.assertEqual(stats["inconclusive_probe_deferred"], 1)
 
 if __name__ == "__main__":
     unittest.main()
