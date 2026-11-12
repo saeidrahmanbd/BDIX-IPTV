@@ -96,7 +96,6 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
 
         expected_active_metadata = {
             "Shikor TV Canada": ("custom.shikortvcanada", "CA", "Bangladesh"),
-            "Jhankar TV": ("JhankarTV.ca", "CA", "Bangladesh"),
             "Ten TV Prime": ("custom.tentvprime", "BD", "Bangladesh"),
             "TV One UK": ("TVOne.uk", "GB", "Religious"),
         }
@@ -124,7 +123,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             "TimeTelevision.us": "US",
         }
         seen_diaspora = {}
-        existing_exceptions = {"Shikor TV Canada", "Jhankar TV", "Thikana"}
+        existing_exceptions = {"Shikor TV Canada", "Thikana"}
         for e in entries:
             a = e["attrs"]
             if a.get("group-title") != "Bangladesh":
@@ -138,6 +137,17 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             elif name not in existing_exceptions:
                 self.assertEqual(a.get("tvg-country"), "BD", name)
         self.assertEqual(seen_diaspora, allowed_diaspora)
+
+        # Jhankar TV is a Bangladesh-diaspora broadcaster but its stream has
+        # failed repeatedly; Review is now reserved for non-streaming entries.
+        jhankar = [e for e in entries if e["attrs"].get("tvg-name") == "Jhankar TV"]
+        self.assertEqual(len(jhankar), 1)
+        self.assertEqual(jhankar[0]["attrs"].get("group-title"), "Review")
+        self.assertEqual(jhankar[0]["attrs"].get("tvg-id"), "JhankarTV.ca")
+        self.assertEqual(jhankar[0]["attrs"].get("channel-id"), "JhankarTV.ca")
+        self.assertEqual(jhankar[0]["attrs"].get("tvg-country"), "CA")
+        self.assertNotIn("tvg-chno", jhankar[0]["attrs"])
+        self.assertEqual(jhankar[0]["url"], "https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8")
 
         zee_cinema = [
             e for e in entries
