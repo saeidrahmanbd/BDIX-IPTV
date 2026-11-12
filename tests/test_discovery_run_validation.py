@@ -211,9 +211,13 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             playlist.write_text("#EXTM3U\n" + existing + fresh, encoding="utf-8")
             baseline.write_text("#EXTM3U\n" + existing, encoding="utf-8")
             report.write_text("# Report\n", encoding="utf-8")
-            with patch.object(validation, "probe_url", return_value=("unknown", "HTTP 403")) as probe, \\
-                 patch.object(validation, "ensure_local_logo", side_effect=lambda entry: (entry["extinf"], False, True)):
-                validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
+            with patch.object(validation, "probe_url", return_value=("unknown", "HTTP 403")) as probe:
+                with patch.object(
+                    validation,
+                    "ensure_local_logo",
+                    side_effect=lambda entry: (entry["extinf"], False, True),
+                ):
+                    validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
             output = playlist.read_text(encoding="utf-8")
             self.assertIn('group-title="New Channels",Fresh Candidate', output)
             self.assertIn('group-title="New Channels",Old Queue Row', output)

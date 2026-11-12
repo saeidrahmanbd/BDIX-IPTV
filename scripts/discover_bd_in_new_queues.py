@@ -295,8 +295,8 @@ def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=Non
     p = urlparse(url)
     if p.scheme not in {"http", "https"} or not p.netloc or p.fragment:
         return None, "invalid stream URL"
-    bad_name = re.sub(r"\\btest\\b", " ", name, flags=re.IGNORECASE) if re.search(
-        r"\\btest\\s+cricket\\b", name, re.IGNORECASE
+    bad_name = re.sub(r"\btest\b", " ", name, flags=re.IGNORECASE) if re.search(
+        r"\btest\s+cricket\b", name, re.IGNORECASE
     ) else name
     if BAD_RE.search(" ".join((bad_name, a.get("tvg-id", ""), a.get("group-title", ""))).casefold()):
         return None, "bad word (vod/test/proxy/...)"
