@@ -97,7 +97,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
 
     def test_main_playlist_maintenance_is_metadata_only_and_preserves_owner_structure(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
-        mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\\n          }", workflow.index("run_mutations() {"))]
+        mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\n          }", workflow.index("run_mutations() {"))]
         self.assertIn("python scripts/normalize_metadata.py", mutations)
         self.assertIn("python scripts/migrate_external_logos_fixed.py", mutations)
         self.assertIn("python scripts/iptv_metadata_backfill.py", mutations)
@@ -129,7 +129,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertNotIn("records.sort(", normalizer)
 
         # Fingerprinted reports remain after the final mutation and before freshness validation.
-        after = workflow[workflow.index("\\n          }", workflow.index("run_mutations() {")):]
+        after = workflow[workflow.index("\n          }", workflow.index("run_mutations() {")):]
         for script in ("stream_health", "generate_dashboard", "validate_report_freshness"):
             self.assertIn(f"python scripts/{script}.py", after)
 
