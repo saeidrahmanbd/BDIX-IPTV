@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, RAW_BASE, EXCLUDE, REVIEW_QUEUES
+from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, RAW_BASE, EXCLUDE, REVIEW_QUEUES, identity_key
 
 
 class PrePublishLogoPathTests(unittest.TestCase):
@@ -57,6 +57,10 @@ class PrePublishLogoPathTests(unittest.TestCase):
         url = RAW_BASE + "international/music/channel.png?raw=1"
         self.assertEqual(referenced_logo_relative_path(url), Path("international/music/channel.png"))
         self.assertEqual(referenced_logo_file(url, self.root), path.resolve())
+
+    def test_identity_key_ignores_hd_sd_quality_suffix(self):
+        self.assertEqual(identity_key("AnandaTV.bd@HD"), identity_key("AnandaTV.bd@SD"))
+        self.assertEqual(identity_key("DangalTV.in@SD@dangal.tv"), identity_key("DangalTV.in@HD"))
 
     def test_root_level_logo_still_resolves(self):
         path = self.root / "channel.png"
