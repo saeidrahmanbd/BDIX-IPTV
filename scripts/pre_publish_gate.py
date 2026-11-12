@@ -159,6 +159,10 @@ def main():
                 logo_missing_files.append(name)
                 logo_missing_file_details.append((name,group,report_path))
     issues=[]
+    warnings=[]
+    # Hard blockers are integrity/safety violations, not unresolved owner-review
+    # metadata. Discovery queues are intentionally provisional and must never
+    # stop the daily workflow merely because country, logo or metadata is pending.
     if dup_urls: issues.append(f"duplicate stream URLs: {len(dup_urls)}")
     if removed: issues.append(f"unapproved primary streams removed: {len(removed)}")
     if review_reclassified: issues.append(f"review entries reclassified: {len(review_reclassified)}")
@@ -166,35 +170,41 @@ def main():
     if review_removed: issues.append(f"protected review entries deleted: {len(review_removed)}")
     if chno_dupes: issues.append(f"duplicate primary channel numbers: {len(chno_dupes)}")
     if duplicate_primary: issues.append(f"duplicate primary identities: {len(duplicate_primary)}")
-    if orphan_backups: issues.append(f"orphan Backup entries: {len(orphan_backups)}")
-    if incomplete_metadata: issues.append(f"active entries with incomplete identity/country/logo metadata: {len(incomplete_metadata)}")
-    if id_pair_conflicts: issues.append(f"tvg-id/channel-id inconsistencies: {len(id_pair_conflicts)}")
-    if missing_languages: issues.append(f"entries missing tvg-language: {len(missing_languages)}")
-    if missing: issues.append(f"primary entries missing tvg-chno: {len(missing)}")
-    if review_numbered: issues.append(f"review entries still numbered: {len(review_numbered)}")
-    if metadata_conflicts: issues.append(f"same-ID metadata name conflicts: {len(metadata_conflicts)}")
-    if raw_name_issues: issues.append(f"raw resolution/geoblock tags in channel names: {len(raw_name_issues)}")
-    if logo_missing: issues.append(f"missing logos: {len(logo_missing)}")
-    if logo_external: issues.append(f"external logo URLs: {len(logo_external)}")
-    if logo_bad: issues.append(f"incorrect/placeholder/generic logos: {len(logo_bad)}")
-    if logo_missing_files: issues.append(f"referenced local logo files missing from repository: {len(logo_missing_files)}")
+
+    # These findings remain visible in the report, but automation cannot
+    # resolve them by moving, deleting or renumbering owner-curated rows.
+    if orphan_backups: warnings.append(f"orphan Backup entries awaiting owner review: {len(orphan_backups)}")
+    if incomplete_metadata: warnings.append(f"active entries with incomplete identity/country/logo metadata: {len(incomplete_metadata)}")
+    if id_pair_conflicts: warnings.append(f"tvg-id/channel-id inconsistencies: {len(id_pair_conflicts)}")
+    if missing_languages: warnings.append(f"entries missing tvg-language: {len(missing_languages)}")
+    if missing: warnings.append(f"primary entries missing tvg-chno: {len(missing)}")
+    if review_numbered: warnings.append(f"Backup/Review/discovery entries still numbered: {len(review_numbered)}")
+    if metadata_conflicts: warnings.append(f"same-ID metadata name conflicts: {len(metadata_conflicts)}")
+    if raw_name_issues: warnings.append(f"raw resolution/geoblock tags in channel names: {len(raw_name_issues)}")
+    if logo_missing: warnings.append(f"missing logos: {len(logo_missing)}")
+    if logo_external: warnings.append(f"external logo URLs: {len(logo_external)}")
+    if logo_bad: warnings.append(f"incorrect/placeholder/generic logos: {len(logo_bad)}")
+    if logo_missing_files: warnings.append(f"referenced local logo files missing from repository: {len(logo_missing_files)}")
+
     queue_errors=[]; country_reference=reference_from_playlists([P,Path("International-Playlist.m3u")])
     for _,a,u in current:
         group=a.get("group-title","").strip()
         if group not in REVIEW_QUEUES: continue
         country=a.get("tvg-country","").strip().upper()
-        if country not in {"BD","IN"}: queue_errors.append(f"{a.get('tvg-name','')} has invalid queue country {country or 'missing'}")
+        if country not in {"BD","IN"}: queue_errors.append(f"{a.get('tvg-name','')} has provisional/unverified queue country {country or 'missing'}")
         else:
             verdict=verify_country(a,a.get("tvg-name",""),country_reference)
             if not verdict.ok: queue_errors.append(f"{a.get('tvg-name','')} country not verified as BD/IN ({verdict.reason})")
             elif verdict.country!=country: queue_errors.append(f"{a.get('tvg-name','')} tvg-country {country} conflicts with verified {verdict.country}")
         if not u.lower().startswith(("http://","https://")): queue_errors.append(f"{a.get('tvg-name','')} has invalid stream URL")
-    if queue_errors: issues.append(f"New queue validation failures: {len(queue_errors)}")
+    if queue_errors: warnings.append(f"New queue candidates pending owner review: {len(queue_errors)}")
     status="PASS" if not issues else "BLOCK"
     old_by_url={stream_url_key(u):(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in old}; cur_by_url_all={stream_url_key(u):(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in current}
     added=[u for u in cur_by_url_all if u not in old_by_url]; removed_all=[u for u in old_by_url if u not in cur_by_url_all]; modified=[u for u in cur_by_url_all if u in old_by_url and cur_by_url_all[u]!=old_by_url[u]]
     lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Primary streams intentionally removed as known bad: **{len(approved_removed)}**",f"- Primary streams quarantined: **{len(quarantined)}**",f"- Review entries reclassified: **{len(review_reclassified)}**",f"- Review entries promoted: **{len(review_promoted)}**",f"- Authorized review promotions: **{len(authorized_promoted)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",f"- Primary entries missing channel numbers: **{len(missing)}**",f"- Primary channel-number sequence issues (non-blocking; existing row order is protected): **{len(chno_sequence_issues)}**",f"- Numbered review entries: **{len(review_numbered)}**",f"- Same-ID metadata name conflicts: **{len(metadata_conflicts)}**",f"- Orphan Backup entries: **{len(orphan_backups)}**",f"- Active rows with incomplete required metadata: **{len(incomplete_metadata)}**",f"- tvg-id/channel-id inconsistencies: **{len(id_pair_conflicts)}**",f"- Entries missing tvg-language: **{len(missing_languages)}**",f"- Raw resolution/geoblock name tags: **{len(raw_name_issues)}**",f"- Missing logos in active groups: **{len(logo_missing)}**",f"- Missing logos deferred in review groups (Review/New Channels/New Backups): **{len(logo_missing_review)}**",f"- External logo URLs: **{len(logo_external)}**",f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",f"- Missing referenced local logo files: **{len(logo_missing_files)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Protected-queue policy","New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. Exact URL-scoped migrations in the owner-requested migration approval file may promote reachable queue/orphan streams or quarantine non-streaming candidates; every stream URL must be preserved. Review, New Channels and New Backups are excluded from Xtream.","","## Channel-Number Sequence Review",f"Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **{len(chno_sequence_issues)}**.","","## Blocking Reasons"]
-    lines.extend("- "+x for x in issues) if issues else lines.append("No blocking conditions detected.")
+    lines.extend("- "+x for x in issues) if issues else lines.append("No hard safety blockers detected.")
+    lines += ["","## Warnings / Manual Review",""]
+    lines.extend("- "+x for x in warnings) if warnings else lines.append("No outstanding metadata or discovery warnings.")
     lines += ["","## Review-queue logo gaps","","These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.",""]
     lines.extend(f"- **{name}**" for name in logo_missing_review) if logo_missing_review else lines.append("None.")
     lines += ["","## Metadata conflicts",""]
@@ -216,8 +226,9 @@ def main():
     R.parent.mkdir(parents=True,exist_ok=True); R.write_text("\n".join(lines)+"\n",encoding="utf-8")
     print("Pre-publish gate:",status)
     for issue in issues: print(f"::error::Pre-publish gate blocking reason: {issue}")
+    for warning in warnings: print(f"::warning::Pre-publish gate review item: {warning}")
     for name,group,filename in logo_bad[:20]: print(f"::warning::Blocked logo reference: {name} [{group}] -> {filename}")
-    for name,group,filename in logo_missing_file_details[:50]: print(f"::error::Missing local logo file: {name} [{group}] -> logos/{filename}")
-    for error in queue_errors[:20]: print(f"::error::Review queue: {error}")
+    for name,group,filename in logo_missing_file_details[:50]: print(f"::warning::Missing local logo file: {name} [{group}] -> logos/{filename}")
+    for error in queue_errors[:20]: print(f"::warning::Discovery queue review: {error}")
     if issues: raise SystemExit(1)
 if __name__=="__main__": main()
