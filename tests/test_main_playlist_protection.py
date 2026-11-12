@@ -118,6 +118,8 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             playlist = Path(directory) / "IPTV-Playlist.m3u"
             state = Path(directory) / "state.json"
             approvals = Path(directory) / "approvals.json"
+            authorization = Path(directory) / "owner-authorized"
+            authorization.touch()
             self.write(
                 playlist,
                 [("Indian Movies", "B", "https://b", "23", "b.in"),
@@ -130,7 +132,7 @@ class MainPlaylistProtectionTests(unittest.TestCase):
                 [("Bangladesh", "A", "https://a", "1", "a.bd"),
                  ("Indian Movies", "B", "https://b", "23", "b.in")],
             )
-            with patch.object(guard, "OWNER_APPROVALS", approvals):
+            with patch.object(guard, "OWNER_APPROVALS", approvals), patch.object(guard, "OWNER_MIGRATION_AUTHORIZED", authorization):
                 guard.verify(playlist, state)
 
     def test_owner_migration_cannot_renumber_existing_primary_channels(self):
@@ -138,6 +140,8 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             playlist = Path(directory) / "IPTV-Playlist.m3u"
             state = Path(directory) / "state.json"
             approvals = Path(directory) / "approvals.json"
+            authorization = Path(directory) / "owner-authorized"
+            authorization.touch()
             self.write(
                 playlist,
                 [("Bangladesh", "A", "https://a", "12", "a.bd"),
@@ -153,7 +157,7 @@ class MainPlaylistProtectionTests(unittest.TestCase):
                 [("Bangladesh", "A", "https://a", "1", "a.bd"),
                  ("Bangladesh", "B", "https://b", "2", "b.bd")],
             )
-            with patch.object(guard, "OWNER_APPROVALS", approvals):
+            with patch.object(guard, "OWNER_APPROVALS", approvals), patch.object(guard, "OWNER_MIGRATION_AUTHORIZED", authorization):
                 with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
                     with self.assertRaises(SystemExit):
                         guard.verify(playlist, state)
