@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-12T07:58:17+00:00**
-Source playlist SHA-256: **b4bd82f1c2158f3f4cef5a6a16f9567e9db54d682a807b9dbc4ee64ccc0d59a4**
+Generated: **2026-11-12T08:00:28+00:00**
+Source playlist SHA-256: **c4dece2f2bf4cd4b4b2d6b11c052f7a7f46d338791823e770a8ff3f38d53f646**
 
 Status: **BLOCK**
 
@@ -26,7 +26,7 @@ Status: **BLOCK**
 - Raw resolution/geoblock name tags: **18**
 - Missing logos in active groups: **3**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
-- External logo URLs: **18**
+- External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
@@ -49,7 +49,6 @@ Existing playlist row order is preserved; numbering sequence discrepancies are r
 - same-ID metadata name conflicts: 1
 - raw resolution/geoblock tags in channel names: 18
 - missing logos: 3
-- external logo URLs: 18
 - New queue validation failures: 18
 
 ## Review-queue logo gaps

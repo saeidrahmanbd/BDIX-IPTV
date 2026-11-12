@@ -1,13 +1,13 @@
 # Logo Provenance Review
 
-Generated: **2026-11-12T07:58:58+00:00**
+Generated: **2026-11-12T08:01:12+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **b4bd82f1c2158f3f4cef5a6a16f9567e9db54d682a807b9dbc4ee64ccc0d59a4**
+- IPTV-Playlist.m3u SHA-256: **c4dece2f2bf4cd4b4b2d6b11c052f7a7f46d338791823e770a8ff3f38d53f646**
 - International-Playlist.m3u SHA-256: **e2e9d5abca13f4ea9053057d21d4725713d3e7407fc4a0d5d8bcdd5347d789fa**
 
 ## Provenance status by playlist
@@ -93,6 +93,8 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | desi-channel.png | Desi Channel (1080p) | DesiChannel.in@SD |
 | discovery-channel-india.png | Discovery Channel (India) | DiscoveryChannel.in@HD |
 | discovery-channel-india.png | Discovery Channel (India) | DiscoveryChannel.in@SD |
+| e24.png | E24 | E24.in |
+| e24.png | E 24 (576p) | E24.in@SD |
 | espn.png | ESPN | ESPN.us |
 | espn.png | ESPN | ESPN.us@SD |
 | eurosport.png | Eurosport | Eurosport.fr@Asia |
@@ -105,19 +107,18 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | fashion-tv-aa7f9461cf.png | FashionTV Secrets | FashionTVSecrets.fr@HD |
 | futbol-tv-068fcbdde9.png | Futbol | Futbol.tj@SD |
 | futbol-tv-068fcbdde9.png | Futbol TV | FutbolTV.uz@HD |
+| goldmines-action.png | Goldmines Action | GoldminesAction.in |
+| goldmines-action.png | Goldmines Action (576p) | GoldminesAction.in@SD |
 | goldmines-movies.png | Goldmines Movies | GoldminesMovies.in@SD |
 | goldmines-movies.png | Goldmines Movies 2 | goldmines.movies.2.in |
 | goldmines.png | Goldmines | Goldmines.in@SD |
 | goldmines.png | Goldmines 2 | Goldmines2.in@SD |
-| image.png | DD Odia (576p) | DDOdia.in@SD |
-| image.png | E 24 (576p) | E24.in@SD |
-| image.png | Movies Now HD (576p) | MoviesNow.in@HD |
-| image.png | Public Movies (576p) | PublicMovies.in@SD |
-| image.png | Sony Aath (1080p) | SonyAath.in@SD |
 | jalsha-movies.png | Jalsha Movies | JalshaMovies.in@SD |
 | jalsha-movies.png | Jalsha Movies | Star.Jalsha.Movies.in |
 | m-sports.png | M Sports | MSports.pk@SD |
 | m-sports.png | M Sports | MSports.pk@SD@m.sports |
+| mazhavil-manorama.png | Mazhavil Manorama HD (1080p) | MazhavilManorama.in@HD |
+| mazhavil-manorama.png | Mazhavil Manorama | MazhavilManorama.in@SD |
 | nbc-sports-now-48667e2ba4.png | NBC Sports Now | NBCSportsNOW.us@SD |
 | nbc-sports-now-48667e2ba4.png | NBC Sports Now | NBCSportsNOW.us@SD@nbc.sports.now |
 | pitaara-comedy.png | Pitaara | Pitaara.in@SD@pitaara |
@@ -139,6 +140,8 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | star-sports-2.png | Star Sports 2 Telugu HD | StarSports2Telugu.in@HD |
 | thikana.png | Thikana TV | ThikanaTV.us |
 | thikana.png | Thikana TV | thikana.tv.bd |
+| tolly-tv.png | Tolly TV | TollyTV.in |
+| tolly-tv.png | Tolly TV (1080p) | TollyTV.in@HD |
 | vision.png | Eurovision Sport | EurovisionSport.uk@Europe |
 | vision.png | VISION 24 | vision.24.bd |
 | yrf-music.png | YRF Music | YRFMusic.in |

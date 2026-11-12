@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-12T07:58:15+00:00**
+Generated: **2026-11-12T08:00:26+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **b4bd82f1c2158f3f4cef5a6a16f9567e9db54d682a807b9dbc4ee64ccc0d59a4**
+- IPTV-Playlist.m3u SHA-256: **c4dece2f2bf4cd4b4b2d6b11c052f7a7f46d338791823e770a8ff3f38d53f646**
 - International-Playlist.m3u SHA-256: **e2e9d5abca13f4ea9053057d21d4725713d3e7407fc4a0d5d8bcdd5347d789fa**
 
 ## Summary
@@ -16,9 +16,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1600px): **6**
 - Raster assets over 512000 bytes: **7**
 - Raster/SVG assets with short side under 64 px: **155**
-- Exact-byte duplicate asset clusters: **711**
-- Playlist references whose asset stem differs from the normalized channel name: **1476**
-- Unreferenced files immediately inside logos/: **1463** (not deleted; other tooling or playlists may use them)
+- Exact-byte duplicate asset clusters: **713**
+- Playlist references whose asset stem differs from the normalized channel name: **1471**
+- Unreferenced files immediately inside logos/: **1468** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -357,6 +357,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/cctv-storm-music-1080p-7d4f900934.png, logos/unused/cctv-storm-music-1080p-7d4f900934.png
 - logos/cctv-storm-theater-1080p-50f2bff2fb.png, logos/unused/cctv-storm-theater-1080p-50f2bff2fb.png
 - logos/cctv-the-first-theater-1080p-16513a0aad.png, logos/unused/cctv-the-first-theater-1080p-16513a0aad.png
+- logos/ccv-480p.png, logos/ccv.png
 - logos/ceacom-tv-0e4b08d706.png, logos/international/ceacom-tv-1080p-not-24-7.png
 - logos/chamame-tv.png, logos/international/chamame-tv.png
 - logos/charge-1080p.webp, logos/international/charge-1080p.webp
@@ -747,11 +748,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/mei-ah-movie-channel-1080p.png, logos/mei-ah-movie-channel.png, logos/unused/mei-ah-movie-channel-b6a14207.png
 - logos/metro-tv-india-0625d4e893.png, logos/nvisionbd-verified-metro-tv-india-0625d4e893.png, logos/unused/metro-tv.png
 - logos/minimax-cee-c3c7e32bdc.png, logos/minimax-hungary-c3c7e32bdc.png
-- logos/mixer-strongman-champions-league.png, logos/strongman-champions-league-ebb0bbbbb3.png
+- logos/mixer-strongman-champions-league.png, logos/strongman-champions-league-ebb0bbbbb3.png, logos/strongman-champions-league.png
 - logos/mohona-tv-a1da8879e5.png, logos/nvisionbd-verified-mohona-tv-a1da8879e5.png
 - logos/more-than-sports-tv.png, logos/unused/more-than-sports-tv.png
 - logos/movie-music-by-stingray-1080p-cf132e65b8.png, logos/unused/movie-music-by-stingray-1080p-cf132e65b8.png
-- logos/movies-now-hd-1080p.png, logos/movies-now-hd.png, logos/movies-now.png
+- logos/movies-now-hd-1080p.png, logos/movies-now-hd-576p.png, logos/movies-now-hd.png, logos/movies-now.png
 - logos/moviesphere.png, logos/unused/moviesphere.png
 - logos/mtv-germany-bafd7b214a.png, logos/mtv-united-states-bafd7b214a.png
 - logos/music-box-hits.png, logos/unused/music-box-hits-7f2dd7fb76.png
@@ -839,6 +840,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/rs-bharat-576p.png, logos/rs-bharat.png
 - logos/rupashi-bangla-tv-720p.png, logos/rupashi-bangla-tv.png
 - logos/rupasi-bangla-576p-e677fd1858.png, logos/unused/rupasi-bangla-576p-e677fd1858.png
+- logos/sangeet-bhojpuri-576p.png, logos/sangeet-bhojpuri.png
 - logos/shanson-tv.png, logos/unused/shanson-tv.png
 - logos/shemaroo-josh.png, logos/unused/shemaroo-josh-360p-28e43c141a.png
 - logos/shemaroo-umang-720p.png, logos/shemaroo-umang.png
@@ -1057,9 +1059,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Vasanth TV | vasanth-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Vissa TV | vissa-tv.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Indian Entertainment |
+| IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Ary Digital | arydigital.png | Pakistani |
-| IPTV-Playlist.m3u | Ary News | nvisionbd-ary-news.svg | Pakistani |
 | IPTV-Playlist.m3u | aur LIFE | aurlife.png | Pakistani |
 | IPTV-Playlist.m3u | Falak TV | falak-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Green Entertainment | greenentertainment.png | Pakistani |
@@ -1148,12 +1149,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Futbol TV | futbol-tv-068fcbdde9.png | Sports |
 | IPTV-Playlist.m3u | Goal TV | goal-tv-237cfbed.png | Sports |
 | IPTV-Playlist.m3u | Golf Channel | golf-channel-73bed53091.png | Sports |
-| IPTV-Playlist.m3u | GolfPass | golf-golfpass.png | Sports |
 | IPTV-Playlist.m3u | Hoop TV | hoop-tv.png | Sports |
 | IPTV-Playlist.m3u | MLB | mlb-strike-zone-4930a654ce.png | Sports |
 | IPTV-Playlist.m3u | MMA TV.com 格斗 | mma-tv-com-85ca206b32.png | Sports |
 | IPTV-Playlist.m3u | NBA TV | nba-tv.png | Sports |
-| IPTV-Playlist.m3u | PFL | fight-pfl.png | Sports |
 | IPTV-Playlist.m3u | Rally TV | rally-tv.png | Sports |
 | IPTV-Playlist.m3u | Real Madrid TV | real-madrid-tv.png | Sports |
 | IPTV-Playlist.m3u | Real Madrid TV English | real-madrid-tv-english.png | Sports |
@@ -1167,7 +1166,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | SN TV | sn-tv.png | Sports |
 | IPTV-Playlist.m3u | Sports First TV | sports-first-tv.png | Sports |
 | IPTV-Playlist.m3u | Star Sports 2 Telugu HD | star-sports-2.png | Sports |
-| IPTV-Playlist.m3u | Strongman Champions League | mixer-strongman-champions-league.png | Sports |
 | IPTV-Playlist.m3u | Surfer TV | surfer-tv.png | Sports |
 | IPTV-Playlist.m3u | Tennis Channel | tennis-channel.png | Sports |
 | IPTV-Playlist.m3u | Tennis Channel 2 | tennis-channel-2.png | Sports |
@@ -1325,7 +1323,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Vasanth TV | vasanth-tv.png | Backup |
 | IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
 | IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
-| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Backup |
+| IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
 | IPTV-Playlist.m3u | Zoo Moo | zoomoo.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
@@ -1395,27 +1393,26 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Sun TV | sun-tv.png | Review |
-| IPTV-Playlist.m3u | The Q | the-q-india.svg | Review |
-| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Review |
-| IPTV-Playlist.m3u | Zee TV | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Review |
-| IPTV-Playlist.m3u | CCV (480p) | 4ss0KfA.png | New Channels |
-| IPTV-Playlist.m3u | Movies Now HD (576p) | image.png | New Channels |
-| IPTV-Playlist.m3u | TamilVision-TV (1080p) | DodsLuW.png | New Channels |
-| IPTV-Playlist.m3u | All Time Movies (576p) | U4INXhwmEUOABHoemQBpI6C9t4jb9iBmDvZ3ZT3lAb9Au_jVl32NL8XDpy-9cBjRJ2LP69Ovzg=s900-c-k-c0x00ffffff-no-rj | New Backups |
-| IPTV-Playlist.m3u | DD Odia (576p) | image.png | New Backups |
+| IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Review |
+| IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Review |
+| IPTV-Playlist.m3u | CCV (480p) | ccv-480p.png | New Channels |
+| IPTV-Playlist.m3u | Movies Now HD (576p) | movies-now-hd-576p.png | New Channels |
+| IPTV-Playlist.m3u | TamilVision-TV (1080p) | tamilvision-tv-1080p.png | New Channels |
+| IPTV-Playlist.m3u | All Time Movies (576p) | all-time-movies.png | New Backups |
+| IPTV-Playlist.m3u | DD Odia (576p) | dd-odia.png | New Backups |
 | IPTV-Playlist.m3u | Desi Channel (1080p) | desi-channel.png | New Backups |
-| IPTV-Playlist.m3u | E 24 (576p) | image.png | New Backups |
-| IPTV-Playlist.m3u | Goldmines Action (576p) | _X6U6bMLF-pTu5wBMFwsSI6aubGrXk2B0kUKdGiLIMqFLyDIne4Ot4ro76BS1S8fX3pWcCwS=s900-c-k-c0x00ffffff-no-rj | New Backups |
-| IPTV-Playlist.m3u | KTV Bangla (1080p) | 2f8e3b371c660faa2f43a7f0942948a4.png | New Backups |
-| IPTV-Playlist.m3u | Manoranjan Movies (576p) | s143303_ld_h15_aa.png | New Backups |
-| IPTV-Playlist.m3u | Mazhavil Manorama HD (1080p) | fjgzW20.png | New Backups |
-| IPTV-Playlist.m3u | Public Movies (576p) | image.png | New Backups |
-| IPTV-Playlist.m3u | Rengoni (576p) | s143722_ld_h15_aa.png | New Backups |
-| IPTV-Playlist.m3u | Sangeet Bhojpuri (576p) | s143757_ld_h15_aa.png | New Backups |
-| IPTV-Playlist.m3u | Sony Aath (1080p) | image.png | New Backups |
+| IPTV-Playlist.m3u | E 24 (576p) | e24.png | New Backups |
+| IPTV-Playlist.m3u | Goldmines Action (576p) | goldmines-action.png | New Backups |
+| IPTV-Playlist.m3u | KTV Bangla (1080p) | ktv-bangla.png | New Backups |
+| IPTV-Playlist.m3u | Manoranjan Movies (576p) | manoranjan-movies-576p-96091e62b1.png | New Backups |
+| IPTV-Playlist.m3u | Mazhavil Manorama HD (1080p) | mazhavil-manorama.png | New Backups |
+| IPTV-Playlist.m3u | Public Movies (576p) | public-movies.png | New Backups |
+| IPTV-Playlist.m3u | Rengoni (576p) | rengoni.png | New Backups |
+| IPTV-Playlist.m3u | Sangeet Bhojpuri (576p) | sangeet-bhojpuri-576p.png | New Backups |
+| IPTV-Playlist.m3u | Sony Aath (1080p) | sony-aath.png | New Backups |
 | IPTV-Playlist.m3u | Thalaa TV (1080p) | thalaa-tv.png | New Backups |
-| IPTV-Playlist.m3u | Tolly TV (1080p) | aumnrs.png | New Backups |
-| IPTV-Playlist.m3u | Vendhar TV (576p) | Vendhar_TV.png | New Backups |
+| IPTV-Playlist.m3u | Tolly TV (1080p) | tolly-tv.png | New Backups |
+| IPTV-Playlist.m3u | Vendhar TV (576p) | vendhar-tv.png | New Backups |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Bangladesh |
 | International-Playlist.m3u | Asian TV | asian-tv.png | Bangladesh |
 | International-Playlist.m3u | Ayna TV | ayna-tv.png | Bangladesh |

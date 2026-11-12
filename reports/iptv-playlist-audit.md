@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-12T07:58:16.683834+00:00**
-Source playlist SHA-256: **b4bd82f1c2158f3f4cef5a6a16f9567e9db54d682a807b9dbc4ee64ccc0d59a4**
+Generated: **2026-11-12T08:00:27.924819+00:00**
+Source playlist SHA-256: **c4dece2f2bf4cd4b4b2d6b11c052f7a7f46d338791823e770a8ff3f38d53f646**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -16,11 +16,11 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-queue same-ID name variants (review): **1**
 - Cross-queue normalized-name/different-ID groups (review): **25**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **10**
+- IDs with multiple logo references: **1**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **3**
 - Missing logos in review queues (review only): **0**
-- External logo references (review only): **18**
+- External logo references (review only): **0**
 - Logo references checked: **1242**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **6**
@@ -1205,8 +1205,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1221**
-- External references (review only): **18**
+- Healthy/local references: **1239**
+- External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
 
@@ -1223,24 +1223,7 @@ None.
 
 ## External Logo Review
 
-- CCV (480p) [ccv.in@sd] — https://i.imgur.com/4ss0KfA.png
-- Movies Now HD (576p) [moviesnow.in@hd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png
-- TamilVision-TV (1080p) [tamilvisiontv.ca@sd] — https://i.imgur.com/DodsLuW.png
-- All Time Movies (576p) [alltimemovies.in@sd] — https://yt3.googleusercontent.com/U4INXhwmEUOABHoemQBpI6C9t4jb9iBmDvZ3ZT3lAb9Au_jVl32NL8XDpy-9cBjRJ2LP69Ovzg=s900-c-k-c0x00ffffff-no-rj
-- DD Odia (576p) [ddodia.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DD_ORIYA/images/LOGO_HD/image.png
-- Desi Channel (1080p) [desichannel.in@sd] — https://desichannel.in/wp-content/uploads/2025/01/desi-channel.png
-- E 24 (576p) [e24.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_E24/images/LOGO_HD/image.png
-- Goldmines Action (576p) [goldminesaction.in@sd] — https://yt3.googleusercontent.com/_X6U6bMLF-pTu5wBMFwsSI6aubGrXk2B0kUKdGiLIMqFLyDIne4Ot4ro76BS1S8fX3pWcCwS=s900-c-k-c0x00ffffff-no-rj
-- KTV Bangla (1080p) [ktvbangla.in@sd] — https://jiotvimages.cdn.jio.com/dare_images/images/channel/2f8e3b371c660faa2f43a7f0942948a4.png
-- Manoranjan Movies (576p) [manoranjanmovies.in@sd] — https://dtil.tmsimg.com/assets/s143303_ld_h15_aa.png?lock=720x540
-- Mazhavil Manorama HD (1080p) [mazhavilmanorama.in@hd] — https://i.imgur.com/fjgzW20.png
-- Public Movies (576p) [publicmovies.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PUBLIC_MOVIES/images/LOGO_HD/image.png
-- Rengoni (576p) [rengoni.in@sd] — https://dtil.tmsimg.com/assets/s143722_ld_h15_aa.png?lock=720x540
-- Sangeet Bhojpuri (576p) [sangeetbhojpuri.in@sd] — https://dtil.tmsimg.com/assets/s143757_ld_h15_aa.png?lock=720x540
-- Sony Aath (1080p) [sonyaath.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_8/images/LOGO_HD/image.png
-- Thalaa TV (1080p) [thalaatv.in@hd] — https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/thalaa-tv.png
-- Tolly TV (1080p) [tollytv.in@hd] — https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/aumnrs.png
-- Vendhar TV (576p) [vendhartv.in@sd] — https://jiotvimages.cdn.jio.com/dare_images/images/Vendhar_TV.png
+None.
 
 ## Protected Primary Entries
 
