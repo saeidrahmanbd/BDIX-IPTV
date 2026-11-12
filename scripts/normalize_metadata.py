@@ -318,6 +318,14 @@ for r in rows:
   elif not a.get("tvg-logo") and LOGOS.get(name): m=set_attr(m,"tvg-logo",RAW+LOGOS[name]); stats["logos"]+=1
  else:
   key=norm(a.get("tvg-name") or r["name"]); pr=byname.get(key)
+  # Same-name channels in different broadcast countries are distinct identities.
+  # In particular, the US-distributed Thikana TV must not overwrite the
+  # Bangladesh Backup identity merely because their display names match.
+  if pr:
+   backup_country=(a.get("tvg-country") or id_country(a.get("tvg-id") or a.get("channel-id")) or "").upper()
+   primary_country=(pr["a"].get("tvg-country") or id_country(pr["a"].get("tvg-id") or pr["a"].get("channel-id")) or "").upper()
+   if backup_country and primary_country and backup_country != primary_country:
+    pr=None
   if not pr and key=="jalshamovies": pr=byname.get(norm("Jalsha Movies HD"))
   name=CASE.get(clean((pr["a"].get("tvg-name") or pr["name"]) if pr else (a.get("tvg-name") or r["name"])),clean((pr["a"].get("tvg-name") or pr["name"]) if pr else (a.get("tvg-name") or r["name"])))
   if key=="natgeowild" and not pr: name="Nat Geo Wild"
