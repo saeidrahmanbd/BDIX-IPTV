@@ -140,6 +140,32 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertLess(reorganize, validate)
         self.assertIn("reports/international-playlist-audit.md", workflow)
 
+    def test_main_playlist_review_metadata_and_discovery_issues_are_warnings(self):
+        gate = (ROOT / "scripts" / "pre_publish_gate.py").read_text(encoding="utf-8")
+        self.assertIn("warnings=[]", gate)
+        self.assertIn("if queue_errors: warnings.append", gate)
+        self.assertNotIn("if queue_errors: issues.append", gate)
+        for finding in (
+            "orphan Backup entries awaiting owner review",
+            "entries missing tvg-chno",
+            "Backup/Review/discovery entries still numbered",
+            "raw resolution/geoblock tags in channel names",
+            "missing logos",
+        ):
+            self.assertIn(finding, gate)
+
+        audit = (ROOT / "scripts" / "audit_playlist.py").read_text(encoding="utf-8")
+        for legacy_blocker in (
+            'if category_order_issues or alphabetical_order_issues: raise',
+            'if backup_channel_numbers: raise',
+            'if missing_primary_chno: raise',
+            'if review_queue_country_issues: raise',
+            'if logo_exceptions: raise',
+        ):
+            self.assertNotIn(legacy_blocker, audit)
+        self.assertIn("preserving owner order", audit)
+        self.assertIn("manual review", audit)
+
     def test_blocked_maintenance_dashboard_recovery_never_writes_playlist_bytes(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         recovery = workflow[workflow.index("Publish fresh dashboard diagnostics after blocked maintenance"):]
