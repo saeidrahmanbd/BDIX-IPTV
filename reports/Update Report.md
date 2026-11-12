@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-11-12 09:59 UTC**_
+_Last generated: **2026-11-12 10:48 UTC**_
 
 Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
 
@@ -16,12 +16,12 @@ Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2ed
 | IPTV EPG Programme Coverage | **52%** |
 | IPTV EPG Mapping | **58.9%** |
 | Stream Health Tested | **1242** |
-| Stream Health Failures | **174** |
-| Persistent Failures | **163** |
+| Stream Health Failures | **210** |
+| Persistent Failures | **161** |
 | Near-Duplicate URL Families | **1** |
 | Audit Blocking Issues | **35** |
-| Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-11-12T09:26:42+00:00** |
+| Pre-Publish Gate | **PASS** |
+| Pre-Publish Gate Generated | **2026-11-12T10:47:49+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
@@ -42,7 +42,7 @@ Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2ed
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
 - `Backup` stores alternate streams; `Review`, `New Channels`, and `New Backups` are review-only queues and are excluded from Xtream.
-- Pre-publish gate status: **BLOCK**
+- Pre-publish gate status: **PASS**
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## Counting Scope
@@ -62,14 +62,14 @@ Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2ed
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-12T09:26:41.445154+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-12T10:47:48.554480+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-12T09:43:47+00:00** | **CURRENT** |
-| Stream health | **2026-11-12T09:27:23+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-12T09:26:42+00:00** | **CURRENT** |
+| Stream health | **2026-11-12T10:48:47+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-12T10:47:49+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
 - Latest entries change: **1242 → 1242**
-- Latest health failures: **166 → 174**
+- Latest health failures: **174 → 210**
 
 Historical records are retained in reports/maintenance-history.json.

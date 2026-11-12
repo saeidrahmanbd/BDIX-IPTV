@@ -1,9 +1,9 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-12T09:26:42+00:00**
+Generated: **2026-11-12T10:47:49+00:00**
 Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
 
-Status: **BLOCK**
+Status: **PASS**
 
 - Current entries: **1242**
 - Duplicate stream URLs: **0**
@@ -40,16 +40,20 @@ New Channels and New Backups are discovery queues. Backup and Review remain prot
 Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **632**.
 
 ## Blocking Reasons
-- orphan Backup entries: 29
+No hard safety blockers detected.
+
+## Warnings / Manual Review
+
+- orphan Backup entries awaiting owner review: 29
 - active entries with incomplete identity/country/logo metadata: 1
 - tvg-id/channel-id inconsistencies: 1
 - entries missing tvg-language: 18
 - primary entries missing tvg-chno: 13
-- review entries still numbered: 425
+- Backup/Review/discovery entries still numbered: 425
 - same-ID metadata name conflicts: 1
 - raw resolution/geoblock tags in channel names: 18
 - missing logos: 1
-- New queue validation failures: 18
+- New queue candidates pending owner review: 18
 
 ## Review-queue logo gaps
 
@@ -84,24 +88,24 @@ None.
 
 ## Queue validation
 
-- CCV (480p) has invalid queue country missing
-- Movies Now HD (576p) has invalid queue country missing
-- TamilVision-TV (1080p) has invalid queue country missing
-- All Time Movies (576p) has invalid queue country missing
-- DD Odia (576p) has invalid queue country missing
-- Desi Channel (1080p) has invalid queue country missing
-- E 24 (576p) has invalid queue country missing
-- Goldmines Action (576p) has invalid queue country missing
-- KTV Bangla (1080p) has invalid queue country missing
-- Manoranjan Movies (576p) has invalid queue country missing
-- Mazhavil Manorama HD (1080p) has invalid queue country missing
-- Public Movies (576p) has invalid queue country missing
-- Rengoni (576p) has invalid queue country missing
-- Sangeet Bhojpuri (576p) has invalid queue country missing
-- Sony Aath (1080p) has invalid queue country missing
-- Thalaa TV (1080p) has invalid queue country missing
-- Tolly TV (1080p) has invalid queue country missing
-- Vendhar TV (576p) has invalid queue country missing
+- CCV (480p) has provisional/unverified queue country missing
+- Movies Now HD (576p) has provisional/unverified queue country missing
+- TamilVision-TV (1080p) has provisional/unverified queue country missing
+- All Time Movies (576p) has provisional/unverified queue country missing
+- DD Odia (576p) has provisional/unverified queue country missing
+- Desi Channel (1080p) has provisional/unverified queue country missing
+- E 24 (576p) has provisional/unverified queue country missing
+- Goldmines Action (576p) has provisional/unverified queue country missing
+- KTV Bangla (1080p) has provisional/unverified queue country missing
+- Manoranjan Movies (576p) has provisional/unverified queue country missing
+- Mazhavil Manorama HD (1080p) has provisional/unverified queue country missing
+- Public Movies (576p) has provisional/unverified queue country missing
+- Rengoni (576p) has provisional/unverified queue country missing
+- Sangeet Bhojpuri (576p) has provisional/unverified queue country missing
+- Sony Aath (1080p) has provisional/unverified queue country missing
+- Thalaa TV (1080p) has provisional/unverified queue country missing
+- Tolly TV (1080p) has provisional/unverified queue country missing
+- Vendhar TV (576p) has provisional/unverified queue country missing
 
 ## Missing local logo files
 
