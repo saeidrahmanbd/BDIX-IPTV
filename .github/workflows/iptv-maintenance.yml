@@ -221,8 +221,6 @@ jobs:
             python scripts/country_verification.py validate IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
-            python scripts/probe_owner_requested_main_queues.py
-            python scripts/migrate_owner_requested_main_queues.py
             # reorganize_international_playlist.py reads tvg-country/tvg-language, so the
             # cross-playlist backfill must run before it (data dependency, not a report).
             python scripts/backfill_cross_playlist_metadata.py
