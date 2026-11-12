@@ -83,8 +83,9 @@ def stream_url(block: list[str]) -> str:
 CHANNEL_GROUP_OVERRIDES = {
     "aaryaatv.in": "Indian Music",
     "nammabangalore.in@sd": "Indian Entertainment",
-    "pitaara.in@sd": "Indian Entertainment",
+    "pitaara.in@sd": "Indian Movies",
     "pitaaracomedy.in@sd": "Indian Entertainment",
+    "tabbarhits.in": "Indian Movies",
 }
 
 def genre_target(a: dict[str, str], name: str, current: str, country: str) -> str:

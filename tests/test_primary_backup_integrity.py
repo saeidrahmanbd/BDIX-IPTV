@@ -217,9 +217,8 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             "all known Star Gold review alternatives must remain protected",
         )
 
-        # The verified Colors variants retain one active primary each.
-        # The legacy Colors Bangla alias is deliberately quarantined in Review;
-        # Colors Bangla HD is the active feed and must not be conflated with it.
+        # Colors HD and Colors Bangla HD retain distinct active primary identities.
+        # The separate legacy Colors Bangla Cinema row remains protected in Review.
         for channel_id in ("Colors.in@HD", "ColorsBangla.in@HD", "ColorsCineplex.uk"):
             active = [
                 e for e in entries
