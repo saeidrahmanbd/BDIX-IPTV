@@ -12,7 +12,7 @@ from playlist_order_policy import should_check_alphabetical_order
 
 class MaintenanceReportOrderTests(unittest.TestCase):
     def test_all_main_branch_writers_share_one_concurrency_group(self):
-        expected = "iptv-playlist-main-writer-v4"
+        expected = "iptv-playlist-main-writer-v5"
         writer_workflows = (
             ".github/workflows/iptv-maintenance.yml",
             ".github/workflows/new-channel-discovery.yml",
