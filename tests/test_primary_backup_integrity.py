@@ -123,7 +123,12 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             "TimeTelevision.us": "US",
         }
         seen_diaspora = {}
-        existing_exceptions = {"Shikor TV Canada", "Thikana"}
+        existing_exceptions = {"Shikor TV Canada", "Thikana TV"}
+        # The exact ThikanaTV.us feed is a US-distributed Bangla diaspora service.
+        thikana_us = [e for e in entries if e["attrs"].get("tvg-id") == "ThikanaTV.us"]
+        self.assertEqual(len(thikana_us), 1)
+        self.assertEqual(thikana_us[0]["attrs"].get("group-title"), "Bangladesh")
+        self.assertEqual(thikana_us[0]["attrs"].get("tvg-country"), "US")
         for e in entries:
             a = e["attrs"]
             if a.get("group-title") != "Bangladesh":
