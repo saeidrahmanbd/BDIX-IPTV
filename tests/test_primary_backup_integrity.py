@@ -49,11 +49,25 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
                 if current is not None:
                     entries.append(current)
                 attrs = dict(re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"', line))
-                current = {"attrs": attrs, "url": ""}
+                current = {"attrs": attrs, "url": "", "info": line}
             elif current is not None and line.strip().startswith(("http://", "https://")):
                 current["url"] = line.strip()
         if current is not None:
             entries.append(current)
+
+        # EXTINF metadata uses one stable attribute order. The comma and
+        # display name separator must remain intact for every record.
+        canonical_attribute_order = [
+            "tvg-id", "tvg-name", "tvg-logo", "tvg-chno",
+            "channel-id", "tvg-country", "tvg-language", "group-title",
+        ]
+        canonical_rank = {key: index for index, key in enumerate(canonical_attribute_order)}
+        for e in entries:
+            info = e["info"]
+            self.assertIn(",", info, f"EXTINF display separator missing for {e['attrs'].get('tvg-name', '')}")
+            keys = re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"', info)
+            ranks = [canonical_rank.get(key, len(canonical_rank)) for key, _ in keys]
+            self.assertEqual(ranks, sorted(ranks), f"Non-canonical EXTINF attribute order: {e['attrs'].get('tvg-name', '')}")
 
         primary_groups = {
             "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
