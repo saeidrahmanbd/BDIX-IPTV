@@ -29,7 +29,8 @@ def records(path: Path):
 def group(info: str) -> str:
     import re
     match = re.search(r'\bgroup-title="([^"]*)"', info)
-    return match.group(1) if match else ""
+    value = match.group(1) if match else ""
+    return "Review" if value == "Not Playing" else value
 
 def snapshot(playlist: Path, state: Path):
     rows = [{"url": r["url"], "group": group(r["info"])} for r in records(playlist)]
