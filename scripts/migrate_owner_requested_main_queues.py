@@ -8,6 +8,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from discover_bd_in_new_queues import prohibited_channel
+from country_verification import reference_from_playlists, verify_country
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 PROBES = Path("/tmp/iptv-owner-requested-probes.json")
@@ -204,6 +205,9 @@ def target_group(a, name, pakistani_count):
 def migrate(text, probe_data):
     preamble, records = parse_playlist(text)
     probe_by_url = {row["url"]: row for row in probe_data.get("results", [])}
+    # Only promote candidates whose BD/IN identity is independently verified.
+    # Provisional or incorrect queue country metadata remains a manual-review warning.
+    country_reference = reference_from_playlists([PLAYLIST, Path("International-Playlist.m3u")])
     # One-time owner-requested metadata cleanup. Channel IDs and stream URLs
     # remain unchanged; only feed-quality labels and supported metadata are fixed.
     normalized_names = 0
@@ -337,6 +341,29 @@ def migrate(text, probe_data):
             record[0] = info
             continue
 
+        verdict = verify_country(a, name, country_reference)
+        if not verdict.ok:
+            if old_group == "Backup":
+                record[0] = remove_attr(set_group(info, "New Channels"), "tvg-chno")
+                approvals.append({"url": url, "source_group": old_group,
+                                  "target_group": "New Channels", "allow_metadata": True})
+                stats["unverified_orphans_staged_for_manual_review"] += 1
+                changes.append((name, "Backup", "New Channels",
+                                "reachable, but BD/IN country identity is not independently verified"))
+            else:
+                stats["unverified_queue_candidates_deferred"] += 1
+                changes.append((name, old_group, old_group,
+                                "reachable, but BD/IN country identity is not independently verified"))
+            continue
+        # Fill country/ID only from the independent verification result.
+        if not a.get("tvg-country", "").strip():
+            info = set_attr(info, "tvg-country", verdict.country)
+        if verdict.tvg_id and not a.get("tvg-id", "").strip():
+            info = set_attr(info, "tvg-id", verdict.tvg_id)
+        if not attrs(info).get("channel-id", "").strip() and attrs(info).get("tvg-id", "").strip():
+            info = set_attr(info, "channel-id", attrs(info)["tvg-id"])
+        record[0] = info
+        a = attrs(info)
         target = target_group(a, name, pakistani_count)
         if not target:
             if old_group == "Backup":
