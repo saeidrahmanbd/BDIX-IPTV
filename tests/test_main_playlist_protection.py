@@ -1,9 +1,9 @@
 import json
 import tempfile
 import unittest
-from collections import Counter
 from pathlib import Path
 import sys
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import protect_main_playlist as guard
 
@@ -12,69 +12,105 @@ class MainPlaylistProtectionTests(unittest.TestCase):
     def write(self, path, rows):
         path.write_text(
             "#EXTM3U\n" + "".join(
-                f'#EXTINF:-1 group-title="{g}" tvg-name="{n}",{n}\n{u}\n'
-                for g, n, u in rows
+                f'#EXTINF:-1 tvg-chno="{number}" group-title="{group}" tvg-name="{name}",{name}\n{url}\n'
+                for group, name, url, number in rows
             ),
             encoding="utf-8",
         )
 
     def run_guard(self, before, after):
-        with tempfile.TemporaryDirectory() as d:
-            p, s = Path(d) / "IPTV-Playlist.m3u", Path(d) / "state.json"
-            self.write(p, before)
-            guard.snapshot(p, s)
-            self.write(p, after)
-            guard.verify(p, s)
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "IPTV-Playlist.m3u"
+            state = Path(directory) / "state.json"
+            self.write(playlist, before)
+            guard.snapshot(playlist, state)
+            self.write(playlist, after)
+            guard.verify(playlist, state)
 
-    def test_metadata_changes_and_new_rows_are_allowed(self):
+    def assert_guard_blocks(self, before, after):
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "IPTV-Playlist.m3u"
+            state = Path(directory) / "state.json"
+            self.write(playlist, before)
+            guard.snapshot(playlist, state)
+            self.write(playlist, after)
+            with self.assertRaises(SystemExit):
+                guard.verify(playlist, state)
+
+    def test_metadata_repairs_and_manual_queue_discoveries_are_allowed(self):
         self.run_guard(
-            [("Bangladesh", "A", "https://a"), ("Indian Movies", "B", "https://b")],
-            [("Bangladesh", "A HD", "https://a"), ("Bangladesh", "New", "https://new"),
-             ("Indian Movies", "B HD", "https://b")],
+            [
+                ("Bangladesh", "A", "https://a", "1"),
+                ("Indian Movies", "B", "https://b", "2"),
+            ],
+            [
+                ("Bangladesh", "A HD (metadata fixed)", "https://a", "1"),
+                ("Indian Movies", "B HD (metadata fixed)", "https://b", "2"),
+                ("New Channels", "New discovery", "https://new", ""),
+                ("New Backups", "Alternate discovery", "https://alternate", ""),
+            ],
         )
 
-    def test_verified_existing_group_correction_is_allowed(self):
-        self.run_guard(
-            [("International", "Bangla Movie", "https://a")],
-            [("Indian Movies", "Bangla Movie", "https://a")],
+    def test_existing_group_change_is_blocked(self):
+        self.assert_guard_blocks(
+            [("International", "A", "https://a", "1")],
+            [("Indian Movies", "A", "https://a", "1")],
         )
 
-    def test_category_regrouping_and_existing_row_reordering_are_allowed(self):
-        self.run_guard(
-            [("Bangladesh", "A", "https://a"), ("Sports", "X", "https://x"),
-             ("Bangladesh", "B", "https://b"), ("International", "I", "https://i"),
-             ("Sports", "Y", "https://y")],
-            [("Sports", "Y", "https://y"), ("Bangladesh", "B", "https://b"),
-             ("International", "I", "https://i"), ("Sports", "X", "https://x"),
-             ("Bangladesh", "A", "https://a")],
+    def test_existing_row_reordering_is_blocked(self):
+        self.assert_guard_blocks(
+            [
+                ("Bangladesh", "A", "https://a", "1"),
+                ("Bangladesh", "B", "https://b", "2"),
+            ],
+            [
+                ("Bangladesh", "B", "https://b", "2"),
+                ("Bangladesh", "A", "https://a", "1"),
+            ],
+        )
+
+    def test_existing_channel_number_change_is_blocked(self):
+        self.assert_guard_blocks(
+            [("Bangladesh", "A", "https://a", "1")],
+            [("Bangladesh", "A", "https://a", "7")],
+        )
+
+    def test_new_discoveries_outside_manual_queues_are_blocked(self):
+        self.assert_guard_blocks(
+            [("Bangladesh", "A", "https://a", "1")],
+            [
+                ("Bangladesh", "A", "https://a", "1"),
+                ("Indian Movies", "Unreviewed discovery", "https://new", ""),
+            ],
         )
 
     def test_existing_deletion_is_blocked(self):
-        with tempfile.TemporaryDirectory() as d:
-            p, s = Path(d) / "IPTV-Playlist.m3u", Path(d) / "state.json"
-            self.write(p, [("Bangladesh", "A", "https://a"), ("Bangladesh", "B", "https://b")])
-            guard.snapshot(p, s)
-            self.write(p, [("Bangladesh", "B", "https://b")])
-            with self.assertRaises(SystemExit):
-                guard.verify(p, s)
+        self.assert_guard_blocks(
+            [
+                ("Bangladesh", "A", "https://a", "1"),
+                ("Bangladesh", "B", "https://b", "2"),
+            ],
+            [("Bangladesh", "B", "https://b", "2")],
+        )
 
     def test_existing_url_replacement_is_blocked(self):
-        with tempfile.TemporaryDirectory() as d:
-            p, s = Path(d) / "IPTV-Playlist.m3u", Path(d) / "state.json"
-            self.write(p, [("Bangladesh", "A", "https://a")])
-            guard.snapshot(p, s)
-            self.write(p, [("Bangladesh", "A", "https://replacement")])
-            with self.assertRaises(SystemExit):
-                guard.verify(p, s)
+        self.assert_guard_blocks(
+            [("Bangladesh", "A", "https://a", "1")],
+            [("Bangladesh", "A", "https://replacement", "1")],
+        )
 
-    def test_duplicate_url_occurrence_is_not_silently_dropped(self):
-        with tempfile.TemporaryDirectory() as d:
-            p, s = Path(d) / "IPTV-Playlist.m3u", Path(d) / "state.json"
-            self.write(p, [("Bangladesh", "A", "https://same"), ("Backup", "A alt", "https://same")])
-            guard.snapshot(p, s)
-            self.write(p, [("Bangladesh", "A", "https://same")])
-            with self.assertRaises(SystemExit):
-                guard.verify(p, s)
+    def test_duplicate_url_occurrence_is_not_silently_added_or_dropped(self):
+        self.assert_guard_blocks(
+            [
+                ("Bangladesh", "A", "https://same", "1"),
+                ("Backup", "A alternate", "https://same", ""),
+            ],
+            [
+                ("Bangladesh", "A", "https://same", "1"),
+                ("Backup", "A alternate", "https://same", ""),
+                ("New Backups", "Duplicate new backup", "https://same", ""),
+            ],
+        )
 
 
 if __name__ == "__main__":
