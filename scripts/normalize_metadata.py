@@ -282,26 +282,15 @@ def set_attr(m,k,v):
  p=re.compile(rf'{re.escape(k)}="[^"]*"')
  return p.sub(f'{k}="{v}"',m,1) if p.search(m) else m.replace("#EXTINF:-1 ",f'#EXTINF:-1 {k}="{v}" ',1)
 lines=P.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
-# Preserve the Playlist Studio category registry.  It is part of the playlist
-# contract and must survive every maintenance normalization pass, including
-# Canonical categories retained by the playlist.
-CATEGORY_REGISTRY=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backups","Review"]
-category_line="#PLAYLIST-STUDIO-CATEGORIES:"+json.dumps(CATEGORY_REGISTRY,ensure_ascii=False)
-# Remove only blank lines and other legacy Studio directives; the canonical
-# category registry is restored immediately below.
-lines=[l for l in lines if l.strip() and not (l.startswith("#PLAYLIST-STUDIO-") and not l.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))]
-lines=[l for l in lines if not l.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
-# Standard M3U consumers expect the global #EXTM3U line first; keep its
-# url-tvg/x-tvg-url attributes intact, then preserve Studio's category registry.
-m3u_index=next((i for i,line in enumerate(lines) if line.startswith("#EXTM3U")),None)
-if m3u_index is not None:
- m3u_header=lines.pop(m3u_index)
- # Non-EXTM3U preamble comments remain present, but follow the real playlist header.
- lines=[m3u_header,category_line]+lines
-else:
- lines.insert(0,category_line)
-# Existing IPTV group membership is owner-curated. Never rename or relocate
-# existing rows during automated metadata normalization.
+# The category registry is owner-managed structure. Preserve its exact
+# existing content and position during routine metadata normalization.
+# Other obsolete Playlist Studio directives may be removed, but never synthesize
+# or reorder the owner's category registry here.
+lines=[l for l in lines if l.strip() and not (
+ l.startswith("#PLAYLIST-STUDIO-") and not l.startswith("#PLAYLIST-STUDIO-CATEGORIES:")
+)]
+# Existing IPTV group membership, category registry and channel numbers are owner-curated.
+# Routine normalization may repair supported identity/language/logo metadata only.
 rows=[]
 for i,l in enumerate(lines):
  if l.startswith("#EXTINF:"):
@@ -309,22 +298,6 @@ for i,l in enumerate(lines):
 primary=[r for r in rows if r["a"].get("group-title","").strip() not in EXCLUDE]
 byname={}
 for r in primary: byname.setdefault(norm(r["a"].get("tvg-name") or r["name"]),r)
-used={int(r["a"]["tvg-chno"]) for r in primary if r["a"].get("tvg-chno","").isdigit() and int(r["a"]["tvg-chno"])>0}
-missing=[r for r in primary if not r["a"].get("tvg-chno","").isdigit()]
-assign={}
-for r in missing:
- prev=0; nxt=10**9
- for x in reversed([x for x in primary if x["i"]<r["i"]]):
-  if x["a"].get("tvg-chno","").isdigit(): prev=int(x["a"]["tvg-chno"]); break
- for x in [x for x in primary if x["i"]>r["i"]]:
-  if x["a"].get("tvg-chno","").isdigit(): nxt=int(x["a"]["tvg-chno"]); break
- c=next((n for n in range(max(1,prev+1),nxt) if n not in used),None)
- if c is None:
-  mid=(prev+nxt)/2; pool=[n for n in range(1,max(2000,nxt+500)) if n not in used]; c=min(pool,key=lambda n:(abs(n-mid),n))
- assign[r["i"]]=c; used.add(c)
-for r in missing:
- if r["name"]=="Desh TV": assign[r["i"]]=30
- if r["name"]=="Sony Max": assign[r["i"]]=384
 stats={"numbers":0,"logos":0,"backups":0}
 for r in rows:
  a=r["a"]; g=a.get("group-title","").strip(); m,_ = split_extinf(r["line"]); display=r["name"]
@@ -343,7 +316,6 @@ for r in rows:
    desired=RAW+forced_logo
    if a.get("tvg-logo") != desired: m=set_attr(m,"tvg-logo",desired); stats["logos"]+=1
   elif not a.get("tvg-logo") and LOGOS.get(name): m=set_attr(m,"tvg-logo",RAW+LOGOS[name]); stats["logos"]+=1
-  if r["i"] in assign: m=set_attr(m,"tvg-chno",str(assign[r["i"]])); stats["numbers"]+=1
  else:
   key=norm(a.get("tvg-name") or r["name"]); pr=byname.get(key)
   if not pr and key=="jalshamovies": pr=byname.get(norm("Jalsha Movies HD"))
@@ -358,7 +330,7 @@ for r in rows:
    current_logo=(a.get("tvg-logo") or "").strip()
    if not current_logo or (pr and current_logo != logo_url):
     m=set_attr(m,"tvg-logo",logo_url); stats["logos"]+=1
-  m=re.sub(r'\s*tvg-chno="[^"]*"',"",m); stats["backups"]+=1
+  stats["backups"]+=1
  # Do not publish empty logo attributes when no verified local asset is available.
  m=re.sub(r'\s+tvg-logo=""(?=\s|$)', "", m)
  lines[r["i"]]=f"{m},{name}"
