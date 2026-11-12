@@ -236,12 +236,18 @@ jobs:
             python scripts/country_verification.py validate IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
-            # reorganize_international_playlist.py reads tvg-country/tvg-language, so the
-            # cross-playlist backfill must run before it (data dependency, not a report).
-            python scripts/backfill_cross_playlist_metadata.py
-            python scripts/reorganize_international_playlist.py
-            python scripts/enforce_playlist_attribution.py International-Playlist.m3u
-            python scripts/validate_international_playlist.py
+            # The one-time owner request is scoped strictly to IPTV-Playlist.m3u.
+            # Do not let this authorization mutate International-Playlist.m3u or shared
+            # logo assets used by it. Routine non-owner maintenance retains the separate
+            # International playlist maintenance path.
+            if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then
+              # reorganize_international_playlist.py reads tvg-country/tvg-language,
+              # so the cross-playlist backfill must run before it.
+              python scripts/backfill_cross_playlist_metadata.py
+              python scripts/reorganize_international_playlist.py
+              python scripts/enforce_playlist_attribution.py International-Playlist.m3u
+              python scripts/validate_international_playlist.py
+            fi
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             # Routine main-playlist maintenance is metadata/logo-only. A separately
             # authorized one-time owner commit enables the exact-URL-approved migration
@@ -250,7 +256,9 @@ jobs:
             # These report-coupled tools are deliberately last. Their playlist changes are
             # idempotent metadata-only repairs; no later step may rewrite either playlist.
             python scripts/iptv_metadata_backfill.py
-            python scripts/backfill_cross_playlist_metadata.py
+            if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then
+              python scripts/backfill_cross_playlist_metadata.py
+            fi
             if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then
               # Exact-URL approvals authorize only this requested migration batch.
               python scripts/reclassify_main_playlist_groups.py
@@ -262,7 +270,9 @@ jobs:
               python scripts/iptv_metadata_backfill.py
               python scripts/backfill_cross_playlist_metadata.py
             fi
-            python scripts/repair_logo_asset_technical_quality.py --fix
+            if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then
+              python scripts/repair_logo_asset_technical_quality.py --fix
+            fi
             python scripts/verify_international_protected.py verify
           }
           if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then
