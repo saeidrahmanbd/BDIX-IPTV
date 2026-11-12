@@ -9,9 +9,11 @@ import protect_main_playlist as guard
 
 
 class MainPlaylistProtectionTests(unittest.TestCase):
-    def write(self, path, rows):
+    def write(self, path, rows, categories=None):
+        if categories is None:
+            categories = ["Bangladesh", "Indian Movies", "Backup", "New Channels", "New Backups", "Review"]
         path.write_text(
-            "#EXTM3U\n" + "".join(
+            "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(categories) + "\n" + "".join(
                 f'#EXTINF:-1 tvg-chno="{number}" group-title="{group}" tvg-name="{name}",{name}\n{url}\n'
                 for group, name, url, number in rows
             ),
@@ -27,13 +29,13 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             self.write(playlist, after)
             guard.verify(playlist, state)
 
-    def assert_guard_blocks(self, before, after):
+    def assert_guard_blocks(self, before, after, before_categories=None, after_categories=None):
         with tempfile.TemporaryDirectory() as directory:
             playlist = Path(directory) / "IPTV-Playlist.m3u"
             state = Path(directory) / "state.json"
-            self.write(playlist, before)
+            self.write(playlist, before, before_categories)
             guard.snapshot(playlist, state)
-            self.write(playlist, after)
+            self.write(playlist, after, after_categories if after_categories is not None else before_categories)
             with self.assertRaises(SystemExit):
                 guard.verify(playlist, state)
 
@@ -55,6 +57,15 @@ class MainPlaylistProtectionTests(unittest.TestCase):
         self.assert_guard_blocks(
             [("International", "A", "https://a", "1")],
             [("Indian Movies", "A", "https://a", "1")],
+        )
+
+    def test_category_registry_change_is_blocked(self):
+        rows = [("Bangladesh", "A", "https://a", "1")]
+        self.assert_guard_blocks(
+            rows,
+            rows,
+            ["Bangladesh", "Indian Movies", "Backup", "New Channels", "New Backups", "Review"],
+            ["Indian Movies", "Bangladesh", "Backup", "New Channels", "New Backups", "Review"],
         )
 
     def test_existing_row_reordering_is_blocked(self):
