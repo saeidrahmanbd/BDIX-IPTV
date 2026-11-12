@@ -383,7 +383,8 @@ review_groups={"Review","Not Playing","New Channels","New Backups"}
 # Keep the original record sequence exactly as supplied by the owner.
 # Metadata normalization must never sort, group, promote or relocate existing rows.
 lines=preamble+[line for rec in records for line in rec]
-lines = [canonicalize_extinf(line) if line.startswith("#EXTINF:") else line for line in lines]\nP.write_text("\\n".join(lines)+"\\n",encoding="utf-8")
+lines = [canonicalize_extinf(line) if line.startswith("#EXTINF:") else line for line in lines]
+P.write_text("\n".join(lines)+"\n",encoding="utf-8")
 digest=hashlib.sha256(P.read_bytes()).hexdigest()
 R.write_text("# Playlist Metadata Normalization\n\n"+f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**\nSource playlist SHA-256: **{digest}**\n\n"+f"- Entries processed: **{len(rows)}**\n- Primary channel numbers added: **{stats['numbers']}**\n- Logo references repaired: **{stats['logos']}**\n- Backup/review entries normalized: **{stats['backups']}**\n",encoding="utf-8")
 print(f"Normalization: entries={len(rows)} numbers={stats['numbers']} logos={stats['logos']} backup_entries={stats['backups']}")
