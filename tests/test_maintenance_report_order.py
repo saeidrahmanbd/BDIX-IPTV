@@ -14,7 +14,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
     def test_iptv_maintenance_ignores_test_only_and_unrelated_workflow_edits(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("- .github/workflows/iptv-maintenance.yml", workflow)
-        self.assertNotIn("- tests/**", workflow)
+        self.assertNotIn("      - tests/", workflow)
         self.assertNotIn("- .github/workflows/**", workflow)
 
     def test_all_main_branch_writers_share_one_concurrency_group(self):
