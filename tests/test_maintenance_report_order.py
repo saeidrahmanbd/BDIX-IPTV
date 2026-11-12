@@ -60,7 +60,9 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("ordered = records", renumber)
         self.assertNotIn("primary.sort(", renumber)
         sorter = (ROOT / "scripts" / "sort_playlists.py").read_text(encoding="utf-8")
-        self.assertIn('if path.name != "IPTV-Playlist.m3u":', sorter)
+        self.assertIn('if path.name == "IPTV-Playlist.m3u":', sorter)
+        self.assertIn("records.sort(key=category_key)", sorter)
+        self.assertIn("Do not rewrite channel numbers or group metadata.", sorter)
 
     def test_review_queue_order_is_not_an_automatic_blocker(self):
         self.assertFalse(should_check_alphabetical_order("Backup"))
@@ -101,7 +103,6 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("python scripts/iptv_metadata_backfill.py", mutations)
         self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
         for forbidden in (
-            "python scripts/sort_playlists.py IPTV-Playlist.m3u",
             "python scripts/final_playlist_hardening.py IPTV-Playlist.m3u",
             "python scripts/reconcile_playlist_consistency.py",
             "python scripts/enforce_primary_backup_integrity.py",
@@ -116,6 +117,15 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("python -m unittest discover -s tests -p 'test_main_playlist_protection.py'", workflow)
         self.assertIn("python scripts/reorganize_international_playlist.py", mutations)
         self.assertIn("python scripts/validate_international_playlist.py", mutations)
+        self.assertIn("python scripts/sort_playlists.py IPTV-Playlist.m3u", mutations)
+        self.assertLess(
+            mutations.index("python scripts/renumber_active_channels.py"),
+            mutations.index("python scripts/sort_playlists.py IPTV-Playlist.m3u"),
+        )
+        self.assertLess(
+            mutations.index("python scripts/sort_playlists.py IPTV-Playlist.m3u"),
+            mutations.index("python scripts/iptv_metadata_backfill.py"),
+        )
 
         # Fingerprinted reports remain after the final mutation and before freshness validation.
         after = workflow[workflow.index("\n          }", workflow.index("run_mutations() {")):]
