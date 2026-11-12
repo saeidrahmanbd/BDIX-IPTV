@@ -1,6 +1,18 @@
 name: International Stream Health
 # Daily playback validation and three-consecutive-day retirement for the International playlist.
 on:
+  # Run a fresh validation when the health policy, checker or its regression tests change.
+  # Playlist/report commits made by this workflow do not match these paths, preventing loops.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/international-stream-health.yml'
+      - 'scripts/international_stream_health.py'
+      - 'scripts/reorganize_international_playlist.py'
+      - 'scripts/validate_international_health_output.py'
+      - 'tests/test_international_stream_health.py'
+      - 'tests/test_international_protected_guard.py'
+      - 'tests/test_international_discovery_policy.py'
   # Independent daily trigger: health checks must still run when playlist maintenance fails.
   schedule:
     - cron: '45 2 * * *' # 08:45 Asia/Dhaka
@@ -17,13 +29,14 @@ permissions:
 jobs:
   check:
     if: >-
+      github.event_name == 'push' ||
       github.event_name == 'schedule' ||
       github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'workflow_run' &&
        github.event.workflow_run.event == 'workflow_dispatch' &&
        github.event.workflow_run.conclusion == 'success')
     # Shared main-branch writer queue. Set on the writing job, not the workflow,
-    # so runs whose jobs are skipped do not occupy the queue.
+    # so runs whose jobs are skipped do not hold the queue.
     concurrency:
       group: iptv-playlist-main-writer-v4
       cancel-in-progress: false
