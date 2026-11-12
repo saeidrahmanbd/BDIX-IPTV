@@ -219,7 +219,8 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 ):
                     validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
             output = playlist.read_text(encoding="utf-8")
-            self.assertIn('group-title="New Channels",Fresh Candidate', output)
+            self.assertIn('group-title="New Channels"', output)
+            self.assertIn('tvg-name="Fresh Candidate",Fresh Candidate', output)
             self.assertIn('group-title="New Channels",Old Queue Row', output)
             self.assertEqual(probe.call_count, 1)
             self.assertIn("manual review", report.read_text(encoding="utf-8").casefold())
