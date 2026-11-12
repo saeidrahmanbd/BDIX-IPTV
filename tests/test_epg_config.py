@@ -88,10 +88,10 @@ class EpgConfigTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             mapping = Path(tmp) / "epg-channel-mapping.csv"
             mapping.write_text(
-                "group,channel,tvg_id,epg_id,source,status,note\\n"
-                "Indian Movies,Current,Current.in,Current.source,feed,MAPPED,\\n"
-                "Indian Movies,Stale,Stale.in,Stale.source,,MAPPED_NOT_CURRENTLY_FOUND,\\n"
-                "Indian Movies,NoSchedule,NoSchedule.in,NoSchedule.source,,MAPPED_ID_ONLY,\\n",
+                "group,channel,tvg_id,epg_id,source,status,note\n"
+                "Indian Movies,Current,Current.in,Current.source,feed,MAPPED,\n"
+                "Indian Movies,Stale,Stale.in,Stale.source,,MAPPED_NOT_CURRENTLY_FOUND,\n"
+                "Indian Movies,NoSchedule,NoSchedule.in,NoSchedule.source,,MAPPED_ID_ONLY,\n",
                 encoding="utf-8",
             )
             with patch.object(generate_epg, "MAPPING", mapping):
@@ -1080,9 +1080,9 @@ class EpgMappingAugmentationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             iptv = Path(tmp) / "IPTV-Playlist.m3u"
             international = Path(tmp) / "International-Playlist.m3u"
-            iptv.write_text("#EXTM3U\\n", encoding="utf-8")
+            iptv.write_text("#EXTM3U\n", encoding="utf-8")
             international.write_text(
-                "#EXTM3U\\n"
+                "#EXTM3U\n"
                 + self._entry("Channel.in@UK", "Channel UK", "Indian Entertainment")
                 + self._entry("Channel.in@India", "Channel India", "International"),
                 encoding="utf-8",
