@@ -115,6 +115,8 @@ class MaintenanceReportOrderTests(unittest.TestCase):
             "python scripts/reconcile_playlist_consistency.py",
             "python scripts/enforce_primary_backup_integrity.py",
             "python scripts/restore_protected_review.py",
+            "python scripts/probe_owner_requested_main_queues.py",
+            "python scripts/migrate_owner_requested_main_queues.py",
         ):
             self.assertNotIn(forbidden, mutations)
         self.assertIn("python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u", workflow)
