@@ -113,12 +113,24 @@ def normalize_playlist_text(text: str) -> tuple[str, int]:
                 raise ValueError(f"Unknown IPTV category; refusing to reorder: {group!r}")
             primary.append(record)
 
-    # Preserve every existing record position. The Playlist Studio registry above
-    # controls category display order; maintenance must not sort or move channel rows.
-    # Primary numbering follows the existing file order; review queues remain unnumbered.
-
-    for number, record in enumerate(primary, start=1):
-        record[0] = set_channel_number(record[0], number)
+    # Preserve every existing primary channel number. Fill only missing/invalid
+    # primary numbers with the lowest unused positive integers; this repairs gaps
+    # without renumbering the owner's already-numbered channels.
+    used_numbers = set()
+    for record in primary:
+        raw = attrs(record[0]).get("tvg-chno", "").strip()
+        if raw.isdigit() and int(raw) > 0:
+            used_numbers.add(int(raw))
+    next_number = 1
+    for record in primary:
+        raw = attrs(record[0]).get("tvg-chno", "").strip()
+        if raw.isdigit() and int(raw) > 0:
+            continue
+        while next_number in used_numbers:
+            next_number += 1
+        record[0] = set_channel_number(record[0], next_number)
+        used_numbers.add(next_number)
+        next_number += 1
     for record in review:
         record[0] = remove_channel_number(record[0])
 
