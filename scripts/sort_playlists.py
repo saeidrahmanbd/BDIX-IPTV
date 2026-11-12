@@ -36,6 +36,7 @@ def split_head_display(info):
         elif char=="," and not quoted: return info[:index],info[index:]
     return info,""
 def canonical_extinf(info):
+    """Serialize EXTINF attributes in the canonical order used by audits and players."""
     head,display=split_head_display(info); duration=re.match(r"^#EXTINF:\S+",head)
     if not duration:return info
     matches=list(ATTR.finditer(head))
