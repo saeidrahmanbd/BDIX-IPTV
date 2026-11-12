@@ -1,4 +1,5 @@
 name: IPTV Playlist Update
+# Owner-requested one-time cleanup is activated by the exact guarded commit subject below.
 # Rebuild all playlist-owned audit, gate, stream-health, logo and dashboard snapshots.
 # Playlist-only maintenance. EPG generation/validation is owned by Refresh IPTV EPG.
 # Stream URL identity must use scripts/stream_url_identity.py; never lowercase an entire stream URL.
