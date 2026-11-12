@@ -28,7 +28,7 @@ jobs:
       actions: read
       contents: read
     outputs:
-      should_run: \${{ steps.guard.outputs.should_run }}
+      should_run: ${{ steps.guard.outputs.should_run }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -39,7 +39,7 @@ jobs:
       - name: Enforce one discovery run per Bangladesh calendar date
         id: guard
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
           GH_WORKFLOW_FILE: new-channel-discovery.yml
         run: python scripts/discovery_schedule_guard.py guard "$GH_WORKFLOW_FILE"
 
@@ -80,7 +80,7 @@ jobs:
       - name: Record final discovery validation
         if: always()
         env:
-          OFFICIAL_VALIDATOR_OUTCOME: \${{ steps.validate_review_queues.outcome }}
+          OFFICIAL_VALIDATOR_OUTCOME: ${{ steps.validate_review_queues.outcome }}
         run: python scripts/validate_discovery_run.py finalize IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
       - name: Commit discovery queue additions only
         shell: bash
