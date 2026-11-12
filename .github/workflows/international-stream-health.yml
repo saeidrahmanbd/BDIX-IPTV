@@ -84,6 +84,14 @@ jobs:
       - name: Probe all International streams and apply three-day policy
         if: steps.revision.outputs.current == 'true'
         run: python scripts/international_stream_health.py
+      - name: Reconcile country groups after health removals and Review recovery
+        if: steps.revision.outputs.current == 'true'
+        run: |
+          # Re-evaluate the five-identity threshold after streams are retired or
+          # Review rows are restored; keep eligible orphan Backup reconciliation
+          # and country grouping in the same International-only automation path.
+          python scripts/reorganize_international_playlist.py
+          python scripts/validate_international_playlist.py
       - name: Validate playlist structure, metadata preservation and group ordering
         if: steps.revision.outputs.current == 'true'
         run: python scripts/validate_international_health_output.py
@@ -100,7 +108,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add International-Playlist.m3u reports/international-stream-health.md reports/international-stream-health-history.json
+          git add International-Playlist.m3u reports/international-stream-health.md reports/international-stream-health-history.json reports/international-playlist-audit.md
           if git diff --cached --quiet; then
             echo "No International stream-health changes to publish."
             exit 0
