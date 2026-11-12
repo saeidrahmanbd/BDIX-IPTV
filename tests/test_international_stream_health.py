@@ -65,7 +65,7 @@ class InternationalStreamHealthTests(unittest.TestCase):
         self.assertEqual(events[0]["streak"], 1)
 
     def test_success_reclassifies_auto_review_to_correct_primary_group(self):
-        output, history, _ = apply(self.playlist(row()), "fail", {}, "2026-11-07")
+        output, history, _ = apply(self.playlist(row(name="Example Movie")), "fail", {}, "2026-11-07")
         output, history, events = apply(output, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
         self.assertIn('group-title="International"', output)
         self.assertEqual(events[0]["action"], "restored-to-primary")
@@ -89,8 +89,8 @@ class InternationalStreamHealthTests(unittest.TestCase):
 
     def test_working_review_channel_forms_country_group_on_fifth_primary_identity(self):
         header = (
-            "#EXTM3U\\n"
-            '#PLAYLIST-STUDIO-CATEGORIES:["International","Review","New Channels","New Backups","Backup"]\\n'
+            "#EXTM3U\n"
+            '#PLAYLIST-STUDIO-CATEGORIES:["International","Review","New Channels","New Backups","Backup"]\n'
         )
         rows = []
         for number in range(1, 5):
