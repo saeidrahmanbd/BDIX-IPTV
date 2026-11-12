@@ -205,9 +205,13 @@ jobs:
           # One-time owner-requested queue/orphan migration. Scheduled and
           # workflow_run maintenance never repeat this structural cleanup.
           OWNER_MIGRATION_REQUESTED=false
-          if [[ "${GITHUB_EVENT_NAME}" == "push" ]] && [[ "$(git log -1 --format=%s "${GITHUB_SHA}")" == "Owner-requested one-time IPTV cleanup" ]]; then
+          MIGRATION_EVENT_SUBJECT="$(git log -1 --format=%s "${GITHUB_SHA}")"
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_run" ]]; then
+            MIGRATION_EVENT_SUBJECT="$(jq -r '.workflow_run.head_commit.message // ""' "${GITHUB_EVENT_PATH}" | sed -n '1p')"
+          fi
+          if [[ ("${GITHUB_EVENT_NAME}" == "push" || "${GITHUB_EVENT_NAME}" == "workflow_run") ]] && [[ "${MIGRATION_EVENT_SUBJECT}" == "Owner-requested one-time IPTV cleanup" ]] && [[ ! -s reports/owner-requested-main-migrations.md ]]; then
             OWNER_MIGRATION_REQUESTED=true
-            echo "Owner-requested one-time main-playlist migration enabled for this commit."
+            echo "Owner-requested one-time main-playlist migration enabled for its originating event."
           fi
           # ------------------------------------------------------------------
           # Ordering contract (enforced by tests/test_maintenance_report_order.py)
