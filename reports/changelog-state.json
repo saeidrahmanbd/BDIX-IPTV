@@ -2,11 +2,11 @@
   "schema_version": 2,
   "playlists": {
     "IPTV-Playlist.m3u": {
-      "commit": "ecdd6fa736e42a6368ab5add536043530a7c5325"
+      "commit": "05d247a4ccbffebe115fff1a71337665f222355f"
     },
     "International-Playlist.m3u": {
       "commit": "d830823f68f5362eb51445c6254a27e44146ace9"
     }
   },
-  "generated": "2026-11-12T09:19:24.384760+00:00"
+  "generated": "2026-11-12T09:49:28.720306+00:00"
 }
