@@ -254,6 +254,10 @@ def canonicalize_extinf(line):
         f'{key}="{value}"' for key, value, _ in pairs
     ) + "," + display
 
+def id_country(value):
+ match=re.search(r"\\.([a-z]{2})(?:@|$)",str(value or ""),flags=re.I)
+ return match.group(1).upper() if match else None
+
 def norm(s):
  s=str(s or "").lower()
  s=re.sub(r"\[[^]]*\]|\([^)]*\)"," ",s)
