@@ -279,7 +279,7 @@ jobs:
               # The Worker can briefly serve the previous category assignment after a
               # GitHub playlist commit. Retry inventory consistency before reporting a
               # real failure; stream IDs and category counts must both converge.
-              sync_attempts = 6
+              sync_attempts = 12
               last_sync_detail = "no inventory response"
               for sync_attempt in range(1, sync_attempts + 1):
                   status, categories = api(host, {**CREDS, "action": "get_live_categories"})
