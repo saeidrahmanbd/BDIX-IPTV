@@ -40,7 +40,13 @@ def verify(playlist: Path, state: Path):
     expected = Counter(str(row["url"]) for row in before)
     actual = Counter(str(row["url"]) for row in after)
     missing = expected - actual
-    duplicated = actual - expected
+    # New unique discovery URLs are allowed. Flag only an extra occurrence
+    # of a URL that already existed, or a duplicate among newly added rows.
+    duplicated = Counter({
+        url: count - max(expected.get(url, 0), 1)
+        for url, count in actual.items()
+        if count > max(expected.get(url, 0), 1)
+    })
     errors = []
     if missing:
         errors.append(f"{sum(missing.values())} existing stream URL occurrence(s) were deleted or replaced")
