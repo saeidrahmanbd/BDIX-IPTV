@@ -95,12 +95,53 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             self.assertEqual(candidate[0]["attrs"].get("tvg-country"), country, name)
             self.assertTrue(candidate[0]["attrs"].get("tvg-chno", "").isdigit(), name)
 
+        # The Bangladesh group intentionally includes several diaspora
+        # Bangla broadcasters. Keep these as exact ID -> broadcast-country
+        # exceptions so their curated group placement is preserved while
+        # arbitrary non-BD channels remain blocked.
+        allowed_diaspora = {
+            "ATNBanglaUK.uk": "GB",
+            "ChannelEurope.uk": "GB",
+            "ChannelS.uk@679aa9": "GB",
+            "DesheBideshe.ca": "CA",
+            "DeshiTV.ca@SD": "CA",
+            "DoyelTV.ca@SD": "CA",
+            "NRBTV.ca": "CA",
+            "TimeTelevision.us": "US",
+        }
+        seen_diaspora = {}
+        existing_exceptions = {"Shikor TV Canada", "Jhankar TV", "Thikana"}
         for e in entries:
-            if (
-                e["attrs"].get("group-title") == "Bangladesh"
-                and e["attrs"].get("tvg-name") not in {"Shikor TV Canada", "Jhankar TV", "Thikana"}
-            ):
-                self.assertEqual(e["attrs"].get("tvg-country"), "BD", e["attrs"].get("tvg-name"))
+            a = e["attrs"]
+            if a.get("group-title") != "Bangladesh":
+                continue
+            name = a.get("tvg-name", "")
+            channel_id = a.get("tvg-id", "")
+            if channel_id in allowed_diaspora:
+                expected_country = allowed_diaspora[channel_id]
+                self.assertEqual(a.get("tvg-country"), expected_country, name)
+                seen_diaspora[channel_id] = a.get("tvg-country")
+            elif name not in existing_exceptions:
+                self.assertEqual(a.get("tvg-country"), "BD", name)
+        self.assertEqual(seen_diaspora, allowed_diaspora)
+
+        zee_cinema = [
+            e for e in entries
+            if e["attrs"].get("tvg-name") == "Zee Bangla Cinema"
+            and e["attrs"].get("group-title") == "Review"
+        ]
+        self.assertEqual(len(zee_cinema), 1)
+        self.assertEqual(zee_cinema[0]["attrs"].get("tvg-id"), "zeebanglacinema.in@sd")
+        self.assertEqual(zee_cinema[0]["attrs"].get("channel-id"), "zeebanglacinema.in@sd")
+
+        colors_cineplex = [
+            e for e in entries
+            if e["attrs"].get("tvg-name") == "Colors Cineplex [UK]"
+            and e["attrs"].get("group-title") == "Review"
+        ]
+        self.assertEqual(len(colors_cineplex), 1)
+        self.assertEqual(colors_cineplex[0]["attrs"].get("tvg-country"), "GB")
+        self.assertEqual(colors_cineplex[0]["attrs"].get("tvg-language"), "hin")
 
         raj_primary = [e for e in entries if e["attrs"].get("tvg-name") == "Rajdhani TV"
                        and e["attrs"].get("group-title") == "Bangladesh"]
