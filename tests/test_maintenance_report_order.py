@@ -37,21 +37,9 @@ class MaintenanceReportOrderTests(unittest.TestCase):
     def test_iptv_playlist_registry_includes_review_queues(self):
         normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
         audit = (ROOT / "scripts" / "audit_playlist.py").read_text(encoding="utf-8")
-        registry_line = next(
-            line for line in normalizer.splitlines()
-            if line.startswith("CATEGORY_REGISTRY=")
-        )
-        import json
-        registry = json.loads(registry_line.split("=", 1)[1])
-        self.assertEqual(
-            registry,
-            [
-                "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
-                "Indian Entertainment", "Pakistani", "International",
-                "Documentary & Wildlife", "Kids", "Religious", "Sports",
-                "Backup", "New Channels", "New Backups", "Review",
-            ],
-        )
+        self.assertIn('line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")', normalizer)
+        self.assertIn("Preserve its exact", normalizer)
+        self.assertNotIn("CATEGORY_REGISTRY=", normalizer)
         self.assertIn(
             "REGISTRY_ORDER = CATEGORY_ORDER",
             audit,
