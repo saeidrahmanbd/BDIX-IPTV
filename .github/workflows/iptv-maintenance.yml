@@ -17,6 +17,7 @@ on:
       - scripts/sort_playlists.py
       - scripts/renumber_active_channels.py
       - tests/test_channel_numbering.py
+      - tests/test_sort_playlists.py
       - scripts/reconcile_backup_metadata_exact_id.py
       - scripts/permanent_removals.py
       - scripts/enforce_primary_backup_integrity.py
@@ -222,9 +223,10 @@ jobs:
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             # Protected Backup/Not Playing records are restored after every step that may rewrite them.
             # Finish every structural playlist mutation before producing fingerprinted reports.
-            # Preserve curated row positions; renumber_active_channels updates numbers in place
-            # and refreshes only the Playlist Studio category registry. No playlist row sorting.
+            # Preserve existing channel numbers and row order within each category.
+            # Then reassemble fragmented categories into the canonical contiguous block order.
             python scripts/renumber_active_channels.py IPTV-Playlist.m3u
+            python scripts/sort_playlists.py IPTV-Playlist.m3u
             # These report-coupled tools are deliberately last. Their playlist changes are
             # idempotent metadata-only repairs; no later step may rewrite either playlist.
             python scripts/iptv_metadata_backfill.py
@@ -265,6 +267,7 @@ jobs:
             # Data-level metadata assertions run against the final playlist bytes.
             python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
           python -m unittest discover -s tests -p 'test_channel_numbering.py'
+          python -m unittest discover -s tests -p 'test_sort_playlists.py'
           python -m unittest discover -s tests -p 'test_backup_metadata_reconcile.py'
           python -m unittest discover -s tests -p 'test_primary_backup_integrity.py'
 

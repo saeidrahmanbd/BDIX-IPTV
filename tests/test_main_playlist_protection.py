@@ -27,6 +27,26 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 guard.verify(p,s)
 
+    def test_category_regrouping_is_allowed_when_group_order_is_preserved(self):
+        with tempfile.TemporaryDirectory() as d:
+            p, s = Path(d)/"IPTV-Playlist.m3u", Path(d)/"state.json"
+            self.write(p, [
+                ("Bangladesh","A","https://a"),
+                ("Sports","X","https://x"),
+                ("Bangladesh","B","https://b"),
+                ("International","I","https://i"),
+                ("Sports","Y","https://y"),
+            ])
+            guard.snapshot(p,s)
+            self.write(p, [
+                ("Bangladesh","A","https://a"),
+                ("Bangladesh","B","https://b"),
+                ("International","I","https://i"),
+                ("Sports","X","https://x"),
+                ("Sports","Y","https://y"),
+            ])
+            guard.verify(p,s)
+
     def test_existing_deletion_is_blocked(self):
         with tempfile.TemporaryDirectory() as d:
             p, s = Path(d)/"IPTV-Playlist.m3u", Path(d)/"state.json"

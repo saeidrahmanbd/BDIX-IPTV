@@ -349,7 +349,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             info, url.replace("61fc4f1a40a342daa23f92141853b7b4", "different")
         ))
 
-    def test_main_playlist_sorter_preserves_rows_and_renumbers_in_place(self):
+    def test_main_playlist_sorter_regroups_categories_without_changing_channel_numbers(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "IPTV-Playlist.m3u"
             path.write_text("\n".join([
@@ -368,25 +368,20 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             sorter.sort_playlist(path)
             content = path.read_text(encoding="utf-8")
             self.assertLess(content.index('tvg-name="Zulu"'), content.index('tvg-name="Alpha"'))
-            primary = [line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Bangladesh"' in line]
-            nums = [int(re.search(r'tvg-chno="(\d+)"', line).group(1)) for line in primary]
-            self.assertEqual(nums, [1, 2])
-            sport = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Sports"' in line)
-            self.assertEqual(re.search(r'tvg-chno="(\d+)"', sport).group(1), "3")
-            primary_numbers = [
-                int(re.search(r'tvg-chno="(\d+)"', line).group(1))
-                for line in content.splitlines()
-                if line.startswith("#EXTINF:")
-                and 'group-title="' in line
-                and not any(f'group-title="{group}"' in line for group in {"Backup", "New Channels", "New Backups", "Not Playing"})
-                and re.search(r'tvg-chno="(\d+)"', line)
+            group_sequence = [
+                re.search(r'group-title="([^"]+)"', line).group(1)
+                for line in content.splitlines() if line.startswith("#EXTINF:")
             ]
-            self.assertEqual(primary_numbers, [1, 2, 3])
-            backup = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Backup"' in line)
-            self.assertNotIn("tvg-chno", backup)
-            review = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Review"' in line)
-            self.assertNotIn("tvg-chno", review)
-
+            self.assertEqual(group_sequence, ["Bangladesh", "Bangladesh", "Sports", "Backup", "Review"])
+            rows_by_name = {
+                re.search(r'tvg-name="([^"]+)"', line).group(1): line
+                for line in content.splitlines() if line.startswith("#EXTINF:")
+            }
+            self.assertEqual(re.search(r'tvg-chno="(\d+)"', rows_by_name["Zulu"]).group(1), "91")
+            self.assertEqual(re.search(r'tvg-chno="(\d+)"', rows_by_name["Alpha"]).group(1), "4")
+            self.assertEqual(re.search(r'tvg-chno="(\d+)"', rows_by_name["Sport One"]).group(1), "1")
+            self.assertEqual(re.search(r'tvg-chno="(\d+)"', rows_by_name["Backup One"]).group(1), "501")
+            self.assertEqual(re.search(r'tvg-chno="(\d+)"', rows_by_name["Quiet Review"]).group(1), "3")
 
     def test_sorter_preserves_queue_rows_and_writes_canonical_registry(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -409,8 +404,13 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             registry_line = next(line for line in content.splitlines() if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
             registry = json.loads(registry_line.split(":", 1)[1])
             self.assertEqual(registry[-4:], ["Backup", "New Channels", "New Backups", "Review"])
-            self.assertLess(content.index("Curated Backup"), content.index("Pending"))
-            self.assertLess(content.index("Pending"), content.index("Fresh Backup"))
+            self.assertLess(content.index("Curated Backup"), content.index("Fresh Channel"))
+            self.assertLess(content.index("Fresh Channel"), content.index("Fresh Backup"))
+            self.assertLess(content.index("Fresh Backup"), content.index("Pending"))
+            self.assertIn('group-title="Review"', next(
+                line for line in content.splitlines()
+                if line.startswith("#EXTINF:") and "Pending" in line
+            ))
 
     def test_restore_places_backup_before_review_and_discovery_queues(self):
         with tempfile.TemporaryDirectory() as tmp:
