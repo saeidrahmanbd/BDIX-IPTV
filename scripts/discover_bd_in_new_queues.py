@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Discover Bangladesh/India IPTV-org candidates into review-only queues.
+"""Discover Bangladesh/India candidates into manual-review queues.
 
-Rules:
-- Only the Bangladesh and India country feeds are considered.
-- Bangladesh channels of all genres remain eligible. Indian Kids and Sports channels are allowed; Indian News, Religious (including Islamic), Educational/Knowledge and Business/Finance channels are prohibited.
-- Existing stream URLs and normalized channel identities are never duplicated.
-- First unseen stream for a new identity -> New Channels.
-- Additional unseen streams for an existing/newly discovered identity -> New Backups.
-- New queues are review-only and are consumed by Xtream only when explicitly enabled;
-  the repository's Xtream workers currently exclude both groups.
+The source feed sets policy scope, not a hard metadata-verification gate. Keep
+source metadata as supplied; country, IDs, language and logos can be corrected
+after owner review. Definite policy/URL exclusions and duplicate stream URLs
+prevent queueing. Dead streams are removed by the subsequent probe; inconclusive
+streams remain for manual review.
+
+Bangladesh channels of all genres are eligible. Indian Kids and Sports (including
+cricket and football) are eligible; Indian News, Religious, Educational,
+Knowledge and Business/Finance channels remain excluded.
 """
 from __future__ import annotations
 import json, re, unicodedata, urllib.request
@@ -280,17 +281,24 @@ def prohibited_channel(
     return None
 
 def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=None):
-    """Return (normalized attrs | None, reason). Country must be verified BD/IN."""
+    """Return source metadata unchanged when policy and URL checks pass.
+
+    The source-feed country is used for country-specific content exclusions; it
+    is not proof that tvg-country or channel IDs are accurate. Missing,
+    conflicting or unverified metadata stays in the manual-review queue.
+    """
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
-    # Bangladesh channels of all genres remain allowed; genre exclusions apply only to India.
     forbidden = prohibited_channel(a, name, country, discovery=True)
     if forbidden:
         return None, forbidden
     p = urlparse(url)
     if p.scheme not in {"http", "https"} or not p.netloc or p.fragment:
         return None, "invalid stream URL"
-    if BAD_RE.search(" ".join((name, a.get("tvg-id", ""), a.get("group-title", ""))).casefold()):
+    bad_name = re.sub(r"\\btest\\b", " ", name, flags=re.IGNORECASE) if re.search(
+        r"\\btest\\s+cricket\\b", name, re.IGNORECASE
+    ) else name
+    if BAD_RE.search(" ".join((bad_name, a.get("tvg-id", ""), a.get("group-title", ""))).casefold()):
         return None, "bad word (vod/test/proxy/...)"
     if any(x in p.netloc.casefold() for x in BAD_HOSTS):
         return None, "proxy/worker host"
@@ -298,16 +306,7 @@ def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=Non
         return None, "tokenized URL"
     if not (p.path.casefold().endswith((".m3u8", ".m3u", ".ts")) and "vod" not in p.path.casefold() and "catchup" not in p.path.casefold()):
         return None, "unsupported stream path"
-    verdict = verify_country(a, name, reference, COUNTRY_CODE[country].upper())
-    if not verdict.ok:
-        return None, "country not verified: " + verdict.reason
-    out = dict(a)
-    out["tvg-country"] = verdict.country
-    out["tvg-id"] = verdict.tvg_id
-    if not out.get("channel-id", "").strip() or not re.search(
-            r"\." + verdict.country.casefold() + r"(?:@|$)", out["channel-id"].casefold()):
-        out["channel-id"] = verdict.tvg_id
-    return out, ""
+    return dict(a), ""
 
 
 def acceptable(country: str, a: dict[str, str], name: str, url: str, reference=None) -> bool:
@@ -340,16 +339,6 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
         name = (a.get("tvg-name") or display).strip()
         if group in queue_groups:
             reason = prohibited_channel(a, name, discovery=True)
-            declared_country = a.get("tvg-country", "").strip().upper()
-            id_countries = {
-                match.group(1).upper()
-                for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
-                if (match := ID_CC_RE.search((value or "").strip().casefold()))
-            }
-            if not reason and declared_country and declared_country not in {"BD", "IN"}:
-                reason = f"declared country {declared_country} is outside BD/IN"
-            if not reason and id_countries - {"BD", "IN"}:
-                reason = "channel id identifies a country outside BD/IN"
             if not reason and canonical_channel_name(name) in NON_CHANNEL_PROGRAM_NAMES:
                 reason = "programme title, not a standalone live TV channel"
             if reason:
@@ -360,33 +349,28 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
     return result, removed
 
 
-def extinf(a: dict[str, str], name: str, group: str, country: str) -> str | None:
-    cid = (a.get("tvg-id") or a.get("channel-id") or "").strip()
-    if not cid or country not in COUNTRY_CODE or a.get("tvg-country", "").strip().upper() != COUNTRY_CODE[country].upper():
-        return None
-    fields = [f'tvg-id="{cid}"', f'tvg-name="{name}"']
-    if a.get("tvg-logo", "").strip():
-        fields.append(f'tvg-logo="{a["tvg-logo"].strip()}"')
-    fields.append(f'tvg-country="{COUNTRY_CODE[country].upper()}"')
-    if a.get("tvg-language", "").strip():
-        fields.append(f'tvg-language="{a["tvg-language"].strip()}"')
-    fields.append(f'channel-id="{a.get("channel-id", cid).strip()}"')
+def extinf(a: dict[str, str], name: str, group: str, country: str) -> str:
+    """Build a review-queue row without guessing or repairing metadata."""
+    fields = []
+    for key in ("tvg-id", "tvg-name", "tvg-logo", "tvg-country", "tvg-language", "channel-id"):
+        value = (a.get(key) or "").strip()
+        if value:
+            fields.append(f'{key}="{name if key == "tvg-name" else value}"')
+    if not a.get("tvg-name", "").strip():
+        fields.append(f'tvg-name="{name}"')
     fields.append(f'group-title="{group}"')
     return "#EXTINF:-1 " + " ".join(fields) + "," + name
 
 
 def main() -> int:
+    # Existing playlist rows and manual-review queues are owner-controlled.
+    # Discovery may append new candidates but never purges or rewrites old rows.
     original = PLAYLIST.read_text(encoding="utf-8-sig")
-    original, purged = purge_forbidden_existing_queue_rows(original)
-    if purged:
-        PLAYLIST.write_text(original, encoding="utf-8")
-        print(f"Removed {len(purged)} prohibited Indian review-queue rows before discovery.")
     entries = parse(original)
     existing_urls = {stream_url_key(u) for _, _, u in entries}
     existing_names = {norm(n) for _, n, _ in entries}
     existing_ids = {base_id(a.get("tvg-id") or a.get("channel-id")) for a, _, _ in entries if base_id(a.get("tvg-id") or a.get("channel-id"))}
 
-    reference = reference_from_playlists([PLAYLIST, *OTHER_PLAYLISTS])
     candidates = []
     rejected = 0
     reasons: Counter = Counter()
@@ -426,49 +410,73 @@ def main() -> int:
     new_channels = new_channels[:40]
     new_backups = new_backups[:80]
 
-    lines = original.replace("\r", "").splitlines()
-    additions = []
-    for country, a, name, url in new_channels:
-        info = extinf(a, name, "New Channels", country)
-        if info:
-            additions.extend([info, url])
-    for country, a, name, url in new_backups:
-        info = extinf(a, name, "New Backups", country)
-        if info:
-            additions.extend([info, url])
+    def insert_queue_rows(current_lines, group, additions):
+        if not additions:
+            return current_lines
+        category_order = [
+            "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
+            "Indian Entertainment", "Pakistani", "International",
+            "Documentary & Wildlife", "Kids", "Religious", "Sports",
+            "Backup", "New Channels", "New Backups", "Review",
+        ]
+        rank = {value: index for index, value in enumerate(category_order)}
+        matching = [
+            i for i, line in enumerate(current_lines)
+            if line.startswith("#EXTINF:") and attrs(line).get("group-title", "").strip() == group
+        ]
+        if matching:
+            last = matching[-1]
+            insert_at = next(
+                (i for i in range(last + 1, len(current_lines)) if current_lines[i].startswith("#EXTINF:")),
+                len(current_lines),
+            )
+        else:
+            target_rank = rank[group]
+            insert_at = next(
+                (i for i, line in enumerate(current_lines)
+                 if line.startswith("#EXTINF:")
+                 and rank.get(attrs(line).get("group-title", "").strip(), len(rank)) > target_rank),
+                len(current_lines),
+            )
+        current_lines[insert_at:insert_at] = additions
+        return current_lines
 
-    if additions:
-        while lines and not lines[-1].strip():
-            lines.pop()
-        lines.append("")
-        lines.extend(additions)
-        PLAYLIST.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    lines = original.replace("\r", "").splitlines()
+    new_channel_rows = []
+    for country, a, name, url in new_channels:
+        new_channel_rows.extend([extinf(a, name, "New Channels", country), url])
+    new_backup_rows = []
+    for country, a, name, url in new_backups:
+        new_backup_rows.extend([extinf(a, name, "New Backups", country), url])
+    # Modify only the two discovery queues; do not sort or normalize old records.
+    lines = insert_queue_rows(lines, "New Channels", new_channel_rows)
+    lines = insert_queue_rows(lines, "New Backups", new_backup_rows)
+    if new_channel_rows or new_backup_rows:
+        PLAYLIST.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     report = [
         "# IPTV Channel Discovery", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
-        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladesh channels of all genres are eligible; Indian News, Religious (including Islamic), Educational/Knowledge and Business/Finance channels are prohibited; Indian Kids and Sports channels are prohibited.**",
+        "- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**",
+        "- Bangladesh channels of all genres are eligible. Indian Kids and Sports channels (including cricket and football) are eligible; Indian News, Religious (including Islamic), Educational, Knowledge and Business/Finance channels remain prohibited.",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
-        f"- Existing prohibited review-queue rows removed: **{len(purged)}**",
+        "- Existing manual-review queue rows changed by discovery: **0**",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected/held candidates: **{rejected}**",
-        "- Country policy: only candidates verified as BD/IN (valid `.bd`/`.in` id, or repository-mapping evidence when the id is missing/malformed) are queued; conflicting or unverifiable candidates are held.", "",
+        "- Country metadata, channel IDs, language and logos are advisory at this stage; retain uncertain values for owner review and repair later.", "",
         "## Rejection reasons", "",
         *(f"- {r}: {n}" for r, n in sorted(reasons.items())), "",
         "## New Channels", "",
     ]
-    report.extend(f"- {name} ({country}) — {url}" for country, _, name, url in new_channels)
+    report.extend(f"- {name} (source feed: {country}) — {url}" for country, _, name, url in new_channels)
     report += ["", "## New Backups", ""]
-    report.extend(f"- {name} ({country}) — {url}" for country, _, name, url in new_backups)
-    if purged:
-        report += ["", "## Existing prohibited review-queue rows removed", ""]
-        report.extend(f"- {name}" for name in sorted(purged, key=norm))
+    report.extend(f"- {name} (source feed: {country}) — {url}" for country, _, name, url in new_backups)
     REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
-    print(f"Discovery: {len(new_channels)} new channels, {len(new_backups)} new backups, {rejected} rejected; purged {len(purged)} prohibited review-queue rows.")
+    print(f"Discovery: {len(new_channels)} new channels, {len(new_backups)} new backups, {rejected} rejected; existing review queues preserved.")
     return 0
 
 

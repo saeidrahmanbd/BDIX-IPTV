@@ -1,25 +1,13 @@
 #!/usr/bin/env python3
-"""Country verification shared by discovery, hardening, the audit and the gates.
+"""Country metadata diagnostics for discovery queues.
 
-New Channels / New Backups may only hold channels whose country is verified as
-Bangladesh (BD) or India (IN).  ``tvg-id`` is strong evidence but is never the
-only classifier:
+New Channels / New Backups are intentionally manual-review queues. Their source
+country, tvg-country, IDs, language and logo may be missing or inconsistent;
+those metadata defects are warnings, not discovery gates. Strict verification
+helpers remain available for later audits and metadata repair.
 
-1. A valid ``.bd`` / ``.in`` suffix on ``tvg-id`` / ``channel-id`` is strong
-   evidence.  It must agree with the source feed (when one is known) and with
-   any ``tvg-country`` already present.
-2. If the id is missing or malformed (no recognised country suffix) the country
-   must be established from existing repository mappings: an exact normalized
-   channel-name match against already-published BD/IN entries.  A discovery
-   source feed is only an additional consistency check, never sufficient alone.
-3. Conflicting evidence (a foreign country suffix, BD vs IN, a different
-   ``tvg-country``, a feed mismatch, or a name that is also known as an
-   International/foreign channel) rejects the candidate.
-4. Name similarity alone never verifies a channel.
-
-CLI: ``python scripts/country_verification.py validate [playlist ...]`` exits
-non-zero if a review-queue row cannot be verified as BD/IN or its
-``tvg-country`` is not normalized.
+The validate command reports country metadata warnings and fails only on
+invalid stream URL syntax.
 """
 from __future__ import annotations
 
@@ -208,20 +196,32 @@ def reference_from_playlists(paths) -> Reference:
     return build_reference(rows)
 
 
-def queue_errors(entries, reference: Reference) -> list[str]:
-    """Errors for review-queue rows. entries: iterable of (attrs, name, url)."""
-    errors = []
+def queue_metadata_warnings(entries, reference: Reference) -> list[str]:
+    """Describe uncertain discovery metadata without treating it as an error."""
+    warnings = []
     for a, name, url in entries:
         if a.get("group-title", "").strip() not in REVIEW_QUEUES:
             continue
         label = name or a.get("tvg-name", "") or url
         verdict = verify_country(a, name, reference)
         if not verdict.ok:
-            errors.append(f"{label}: country not verified as BD/IN ({verdict.reason})")
+            warnings.append(f"{label}: country metadata needs manual review ({verdict.reason})")
             continue
         declared = a.get("tvg-country", "").strip().upper()
         if declared != verdict.country:
-            errors.append(f"{label}: tvg-country {declared or 'missing'} does not match verified {verdict.country}")
+            warnings.append(
+                f"{label}: tvg-country is {declared or 'missing'}; metadata suggests {verdict.country}"
+            )
+    return warnings
+
+
+def queue_errors(entries, reference: Reference) -> list[str]:
+    """Only malformed/non-HTTP stream URLs are hard queue errors."""
+    errors = []
+    for a, name, url in entries:
+        if a.get("group-title", "").strip() not in REVIEW_QUEUES:
+            continue
+        label = name or a.get("tvg-name", "") or url
         if not url.lower().startswith(("http://", "https://")):
             errors.append(f"{label}: invalid stream URL")
     return errors
@@ -233,6 +233,12 @@ def validate_playlist(path: Path, extra_reference_paths=()) -> list[str]:
     return queue_errors([(a, n, u) for _, a, n, u in rows], reference)
 
 
+def validate_playlist_warnings(path: Path, extra_reference_paths=()) -> list[str]:
+    rows = list(parse_entries(path.read_text(encoding="utf-8-sig", errors="replace")))
+    reference = reference_from_playlists([path, *extra_reference_paths])
+    return queue_metadata_warnings([(a, n, u) for _, a, n, u in rows], reference)
+
+
 def main(argv: list[str]) -> int:
     if not argv or argv[0] != "validate":
         print(__doc__)
@@ -241,13 +247,16 @@ def main(argv: list[str]) -> int:
     extra = [Path("International-Playlist.m3u")]
     failed = False
     for p in paths:
+        warnings = validate_playlist_warnings(p, [x for x in extra if x != p])
+        for warning in warnings:
+            print(f"::warning::{p}: {warning}")
         errors = validate_playlist(p, [x for x in extra if x != p])
-        for e in errors:
-            print(f"::error::{p}: {e}")
+        for error in errors:
+            print(f"::error::{p}: {error}")
         failed = failed or bool(errors)
     if failed:
         return 1
-    print("New Channels/New Backups contain only entries verified as BD/IN with normalized tvg-country.")
+    print("Discovery queues remain available for manual review; country metadata warnings do not block.")
     return 0
 
 

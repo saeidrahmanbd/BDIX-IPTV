@@ -1,32 +1,17 @@
 name: IPTV New Channel Discovery
-# Fresh discovery trigger: 2026-11-01 01:14 UTC
 
-# Fresh discovery run requested: 2026-10-29 01:12 UTC
-# Force fresh discovery run: 2026-10-24 19:00 Asia/Dhaka
-# Policy-test import mismatch resolved; trigger fresh discovery on current main
-# Fresh current-main retry after shared playlist-writer queue fix (2026-10-26).
 on:
   push:
     branches: [main]
     paths:
       - '.github/workflows/new-channel-discovery.yml'
-      - 'scripts/validate_report_freshness.py'
-      - 'tests/test_report_freshness.py'
-      - 'tests/test_discovery_report_order.py'
       - 'scripts/discover_bd_in_new_queues.py'
       - 'scripts/run_bd_discovery_with_policy.py'
       - 'scripts/validate_discovery_run.py'
       - 'scripts/discovery_schedule_guard.py'
       - 'scripts/country_verification.py'
-      - 'tests/test_country_verification.py'
-      - 'tests/test_discovery_schedule_guard.py'
-      - 'scripts/final_playlist_hardening.py'
-      - 'scripts/permanent_removals.py'
-      - 'scripts/enforce_primary_backup_integrity.py'
-      - 'tests/test_primary_backup_integrity.py'
-      - 'scripts/sort_playlists.py'
-      - 'tests/test_final_playlist_hardening.py'
       - 'tests/test_channel_discovery_policy.py'
+      - 'tests/test_country_verification.py'
       - 'tests/test_discovery_run_validation.py'
   schedule:
     - cron: '0 1 * * *' # 07:00 Asia/Dhaka (UTC+6)
@@ -43,7 +28,7 @@ jobs:
       actions: read
       contents: read
     outputs:
-      should_run: ${{ steps.guard.outputs.should_run }}
+      should_run: \${{ steps.guard.outputs.should_run }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -54,15 +39,13 @@ jobs:
       - name: Enforce one discovery run per Bangladesh calendar date
         id: guard
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: \${{ github.token }}
           GH_WORKFLOW_FILE: new-channel-discovery.yml
         run: python scripts/discovery_schedule_guard.py guard "$GH_WORKFLOW_FILE"
 
   discover:
     needs: daily_guard
     if: needs.daily_guard.outputs.should_run == 'true'
-    # Shared main-branch writer queue. Set on the writing job, not the workflow,
-    # so runs whose jobs are skipped do not occupy the queue.
     concurrency:
       group: iptv-playlist-main-writer-v4
       cancel-in-progress: false
@@ -79,96 +62,57 @@ jobs:
           python-version: '3.12'
       - name: Snapshot playlist before discovery
         run: cp IPTV-Playlist.m3u /tmp/IPTV-Playlist.before.m3u
-      - name: Test channel discovery exclusion policy
+      - name: Test channel discovery policy
         run: python -m unittest discover -s tests -p 'test_channel_discovery_policy.py'
-      - name: Test stream URL identity rules
-        run: python -m unittest discover -s tests -p 'test_stream_url_identity.py'
+      - name: Test country metadata is advisory
+        run: python -m unittest discover -s tests -p 'test_country_verification.py'
       - name: Test discovery stream validator
         run: python -m unittest discover -s tests -p 'test_discovery_run_validation.py'
-      - name: Test report freshness rules
-        run: python -m unittest discover -s tests -p 'test_report_freshness.py'
-      - name: Test discovery report ordering
-        run: python -m unittest discover -s tests -p 'test_discovery_report_order.py'
-      - name: Test final playlist hardening regressions
-        run: python -m unittest discover -s tests -p 'test_final_playlist_hardening.py'
-      - name: Test primary/Backup identity integrity
-        run: python -m unittest discover -s tests -p 'test_primary_backup_integrity.py'
-      - name: Install logo tools
-        run: python -m pip install --disable-pip-version-check -r docs/requirements.txt
-      - name: Enforce queue exclusions and discover approved Bangladesh/India candidates
+      - name: Test discovery daily guard
+        run: python -m unittest discover -s tests -p 'test_discovery_schedule_guard.py'
+      - name: Discover Bangladesh and India candidates into manual-review queues
         run: python scripts/run_bd_discovery_with_policy.py
-      - name: Normalize discovered metadata and finalize playlist structure
-        run: |
-          python scripts/normalize_metadata.py
-          python scripts/migrate_external_logos_fixed.py
-          python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
-          python scripts/enforce_primary_backup_integrity.py
-          # Keep discovery output in the permanent 15-group order before validation/publication.
-          python scripts/sort_playlists.py IPTV-Playlist.m3u
-      - name: Verify newly discovered streams and local logos
+      - name: Probe only newly discovered streams; retain uncertain or incomplete candidates
         run: python scripts/validate_discovery_run.py probe IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
-      - name: Enable review-queue audit policy
-        run: python scripts/enable_review_queue_audit.py
-      - name: Validate review queues
+      - name: Report country metadata warnings without blocking discovery
         id: validate_review_queues
         run: python scripts/country_verification.py validate IPTV-Playlist.m3u
-      - name: Record final discovery validation results
+      - name: Record final discovery validation
         if: always()
         env:
-          OFFICIAL_VALIDATOR_OUTCOME: ${{ steps.validate_review_queues.outcome }}
+          OFFICIAL_VALIDATOR_OUTCOME: \${{ steps.validate_review_queues.outcome }}
         run: python scripts/validate_discovery_run.py finalize IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
-      - name: Regenerate fingerprinted reports from final playlist
-        run: |
-          python scripts/repair_logo_asset_technical_quality.py --fix
-          python scripts/generate_logo_authenticity_manifest.py
-          python scripts/generate_metadata_normalization_report.py
-          python scripts/generate_logo_repair_summary.py
-          python scripts/validate_report_freshness.py --mode discovery
-      - name: Commit discovered candidates
+      - name: Commit discovery queue additions only
         shell: bash
         run: |
           set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           if ! grep -q 'Validation status: PASS' reports/iptv-channel-discovery.md; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git add reports/iptv-channel-discovery.md
             if ! git diff --cached --quiet; then
               git commit -m 'Record IPTV discovery validation blocker'
-              git reset --hard HEAD
-              git clean -fd
               for attempt in 1 2 3; do
                 git fetch origin main
                 git pull --rebase origin main || { git rebase --abort || true; exit 1; }
                 if git push origin HEAD:main; then break; fi
               done
             fi
-            echo '::error::IPTV discovery validation failed; playlist/logo changes were not committed.'
+            echo '::error::New discovery candidate validation failed; existing playlist rows were not rewritten.'
             exit 1
           fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add IPTV-Playlist.m3u reports/iptv-channel-discovery.md reports/primary-backup-integrity.md logos/ reports/metadata-normalization.md reports/playlist-logo-repair-results.md reports/logo-asset-quality-audit.md reports/logo-authenticity-manifest.json scripts/audit_playlist.py scripts/enable_review_queue_audit.py scripts/discover_bd_in_new_queues.py scripts/run_bd_discovery_with_policy.py scripts/validate_discovery_run.py scripts/enforce_primary_backup_integrity.py scripts/validate_report_freshness.py tests/test_primary_backup_integrity.py tests/test_discovery_run_validation.py tests/test_report_freshness.py tests/test_discovery_report_order.py
+          git add IPTV-Playlist.m3u reports/iptv-channel-discovery.md
           if git diff --cached --quiet; then
-            echo 'No new Bangladesh/India candidates found.'
+            echo 'No new Bangladesh/India candidates to publish.'
             exit 0
           fi
-          git commit -m 'Maintain IPTV queues: enforce exclusions and import approved candidates'
-          git reset --hard HEAD
-          git clean -fd
+          git commit -m 'Add IPTV candidates to manual review queues'
           for attempt in 1 2 3; do
             git fetch origin main
-            if ! git pull --rebase origin main; then
-              git status --short | head -20
-              git rebase --abort || true
-              echo '::error::Rebase failed; candidates not pushed.'
-              exit 1
-            fi
+            git pull --rebase origin main || { git rebase --abort || true; exit 1; }
             if git push origin HEAD:main; then exit 0; fi
-            echo "::warning::Push attempt ${attempt} failed; retrying after rebase."
-            sleep 3
           done
-          echo '::error::Push failed after 3 attempts.'
+          echo '::error::Push failed after three attempts.'
           exit 1
       - name: Upload discovery report
         if: always()

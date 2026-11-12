@@ -176,6 +176,25 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                     name,
                 ))
 
+    def test_cricket_and_football_are_eligible_from_india_feed_even_with_country_metadata_mismatch(self):
+        for name, genre in [
+            ("Cricket 24", "Cricket"),
+            ("Test Cricket HD", "Cricket"),
+            ("Football Live", "Football"),
+        ]:
+            with self.subTest(name=name):
+                source_metadata = {
+                    "tvg-id": "Candidate.us",
+                    "channel-id": "Candidate.us",
+                    "tvg-country": "US",
+                    "group-title": genre,
+                }
+                candidate, reason = evaluate(
+                    "India", source_metadata, name, "https://example.org/live/index.m3u8"
+                )
+                self.assertEqual(reason, "")
+                self.assertEqual(candidate, source_metadata)
+
     def test_bangladeshi_news_is_allowed(self):
         attrs = {"group-title": "News", "tvg-country": "BD", "tvg-id": "Channel24.bd"}
         self.assertIsNone(prohibited_channel(attrs, "Channel 24"))
@@ -233,7 +252,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn('group-title="New Channels",Mahua Play', filtered)
         self.assertIn('group-title="Indian Entertainment",E-Vidya 4', filtered)
 
-    def test_foreign_country_and_program_title_rows_are_purged_from_discovery_queues(self):
+    def test_foreign_country_metadata_does_not_purge_manual_review_candidates(self):
         text = (
             "#EXTM3U\n"
             '#EXTINF:-1 tvg-name="ARY Music" tvg-country="PK" tvg-id="ARYMusic.pk" group-title="New Channels",ARY Music\n'
@@ -246,9 +265,9 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "https://example.invalid/channel24.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
-        self.assertEqual(set(removed), {"ARY Music", "Madani Channel", "Gopal Bhar"})
-        self.assertNotIn('group-title="New Channels",ARY Music', filtered)
-        self.assertNotIn('group-title="New Channels",Madani Channel', filtered)
+        self.assertEqual(removed, ["Gopal Bhar"])
+        self.assertIn('group-title="New Channels",ARY Music', filtered)
+        self.assertIn('group-title="New Channels",Madani Channel', filtered)
         self.assertNotIn('group-title="New Channels",Gopal Bhar', filtered)
         self.assertIn('group-title="New Channels",Channel 24', filtered)
 

@@ -46,13 +46,14 @@ class CountryVerificationTests(unittest.TestCase):
         r = ref(({"tvg-id": "Q.in", "group-title": "New Channels"}, "Queue TV"))
         self.assertFalse(cv.verify_country({}, "Queue TV", r).ok)
 
-    def test_queue_errors(self):
+    def test_country_metadata_warnings_do_not_block_manual_review_queues(self):
         good = ({"tvg-id": "A.in", "tvg-country": "IN", "group-title": "New Channels"}, "A", "https://x/a.m3u8")
         unnormalized = ({"tvg-id": "B.bd", "group-title": "New Backup"}, "B", "https://x/b.m3u8")
         foreign = ({"tvg-id": "C.us", "tvg-country": "US", "group-title": "New Channels"}, "C", "https://x/c.m3u8")
         errs = cv.queue_errors([good, unnormalized, foreign], ref())
-        self.assertEqual(len(errs), 2)
-        self.assertFalse(any(e.startswith("A:") for e in errs))
+        warnings = cv.queue_metadata_warnings([good, unnormalized, foreign], ref())
+        self.assertEqual(errs, [])
+        self.assertEqual(len(warnings), 2)
 
 
 class DiscoveryTests(unittest.TestCase):
@@ -70,43 +71,46 @@ class DiscoveryTests(unittest.TestCase):
         self.assertTrue(disc.norm("সংবাদ"))
         self.assertEqual(disc.norm("Somoy TV HD"), disc.norm("somoy_tv (SD)"))
 
-    def test_curated_india_feed_overrides_for_cartoon_network_and_colors_cineplex(self):
+    def test_country_metadata_is_preserved_without_verification_or_rewriting(self):
         url = "https://cdn.example.com/live/index.m3u8"
         cases = [
             ({"tvg-id": "CartoonNetwork.us", "channel-id": "CartoonNetwork.us",
-              "tvg-country": "US"}, "Cartoon Network", "CartoonNetwork.in"),
+              "tvg-country": "US"}, "Cartoon Network"),
             ({"tvg-id": "ColorsCineplex.uk", "channel-id": "ColorsCineplex.uk",
-              "tvg-country": "GB"}, "Colors Cineplex [UK]", "ColorsCineplex.in"),
+              "tvg-country": "GB"}, "Colors Cineplex [UK]"),
         ]
-        for attrs, name, expected_id in cases:
+        for attrs, name in cases:
             with self.subTest(name=name):
-                normalized, reason = disc.evaluate("India", attrs, name, url)
+                candidate, reason = disc.evaluate("India", attrs, name, url)
                 self.assertEqual(reason, "")
-                self.assertEqual(normalized["tvg-country"], "IN")
-                self.assertEqual(normalized["tvg-id"], expected_id)
-                self.assertEqual(normalized["channel-id"], expected_id)
-        # The exceptions are not global: unknown/foreign feeds remain rejected.
-        self.assertFalse(cv.verify_country(
-            {"tvg-id": "CartoonNetwork.us", "tvg-country": "US"},
-            "Cartoon Network", None, None).ok)
-        self.assertIsNone(disc.evaluate(
-            "Bangladesh", cases[0][0], cases[0][1], url)[0])
+                self.assertEqual(candidate, attrs)
+        self.assertEqual(disc.evaluate(
+            "Bangladesh", cases[0][0], cases[0][1], url)[0], cases[0][0])
 
-    def test_evaluate_normalizes_country_and_rejects_foreign(self):
+    def test_evaluate_retains_country_and_identity_metadata_for_manual_review(self):
         url = "https://cdn.example.com/live/index.m3u8"
-        a, why = disc.evaluate("India", {"tvg-id": "Star Utsav.in@SD"}, "Star Utsav", url)
+        original = {"tvg-id": "Star Utsav.in@SD"}
+        candidate, why = disc.evaluate("India", original, "Star Utsav", url)
         self.assertEqual(why, "")
-        self.assertEqual(a["tvg-country"], "IN")
-        line = disc.extinf(a, "Star Utsav", "New Channels", "India")
-        self.assertIn('tvg-country="IN"', line)
-        self.assertIsNone(disc.evaluate("India", {"tvg-id": "Star Utsav.us"}, "Star Utsav", url)[0])
-        self.assertIsNone(disc.evaluate("India", {}, "Star Utsav", url)[0])
-        self.assertIsNone(disc.evaluate("Bangladesh", {"tvg-id": "X.in"}, "X", url)[0])
-        # Indian News is prohibited by repository policy, independent of country verification.
-        self.assertIsNone(disc.evaluate("India", {"tvg-id": "Latest News.in@SD"}, "Latest News", url)[0])
+        self.assertEqual(candidate, original)
+        self.assertNotIn("tvg-country", candidate)
+        line = disc.extinf(candidate, "Star Utsav", "New Channels", "India")
+        self.assertNotIn("tvg-country=", line)
+        foreign, why = disc.evaluate("India", {"tvg-id": "Star Utsav.us"}, "Star Utsav", url)
+        self.assertEqual(why, "")
+        self.assertEqual(foreign["tvg-id"], "Star Utsav.us")
+        no_ids, why = disc.evaluate("India", {}, "Unmapped Channel", url)
+        self.assertEqual(why, "")
+        self.assertEqual(no_ids, {})
+        mismatch, why = disc.evaluate("Bangladesh", {"tvg-id": "X.in"}, "X", url)
+        self.assertEqual(why, "")
+        self.assertEqual(mismatch["tvg-id"], "X.in")
+        self.assertIsNone(disc.evaluate("India", {"tvg-id": "Latest News.us"}, "Latest News", url)[0])
 
-    def test_extinf_refuses_unverified_country(self):
-        self.assertIsNone(disc.extinf({"tvg-id": "X.in"}, "X", "New Channels", "India"))
+    def test_extinf_accepts_missing_identity_fields(self):
+        line = disc.extinf({}, "Unidentified Candidate", "New Channels", "India")
+        self.assertIn('tvg-name="Unidentified Candidate"', line)
+        self.assertIn('group-title="New Channels"', line)
 
 
 if __name__ == "__main__":

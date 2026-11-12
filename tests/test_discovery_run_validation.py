@@ -182,13 +182,82 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         self.assertNotIn('tvg-logo=""', updated)
         self.assertTrue(cleared)
 
-    def test_candidate_without_logo_is_held_out_of_discovery_queue(self):
+    def test_candidate_without_logo_is_marked_unavailable_but_not_rewritten(self):
         extinf = '#EXTINF:-1 tvg-name="No Authentic Asset Candidate",No Authentic Asset Candidate'
         entry = {"extinf": extinf, "logo": "", "name": "No Authentic Asset Candidate"}
         updated, localized, unavailable = ensure_local_logo(entry)
         self.assertEqual(updated, extinf)
         self.assertFalse(localized)
         self.assertTrue(unavailable)
+
+    def test_iptv_discovery_keeps_new_manual_review_candidate_with_wrong_country_and_no_logo(self):
+        import tempfile
+        from unittest.mock import patch
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            existing = (
+                '#EXTINF:-1 tvg-id="Old.us" tvg-country="US" group-title="New Channels" tvg-name="Old Queue Row",Old Queue Row\n'
+                'https://example.org/old-queue.m3u8\n'
+            )
+            fresh = (
+                '#EXTINF:-1 tvg-id="Fresh.us" tvg-country="US" group-title="New Channels" tvg-name="Fresh Candidate",Fresh Candidate\n'
+                'https://example.org/fresh-candidate.m3u8\n'
+            )
+            playlist.write_text("#EXTM3U\n" + existing + fresh, encoding="utf-8")
+            baseline.write_text("#EXTM3U\n" + existing, encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            with patch.object(validation, "probe_url", return_value=("unknown", "HTTP 403")) as probe, \\
+                 patch.object(validation, "ensure_local_logo", side_effect=lambda entry: (entry["extinf"], False, True)):
+                validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
+            output = playlist.read_text(encoding="utf-8")
+            self.assertIn('group-title="New Channels",Fresh Candidate', output)
+            self.assertIn('group-title="New Channels",Old Queue Row', output)
+            self.assertEqual(probe.call_count, 1)
+            self.assertIn("manual review", report.read_text(encoding="utf-8").casefold())
+
+    def test_final_iptv_validation_ignores_country_logo_and_preexisting_playlist_duplicates(self):
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Bangladesh", "Backup", "New Channels", "New Backups", "Review"]
+            duplicate_existing = (
+                '#EXTINF:-1 tvg-name="Old duplicate A" group-title="Bangladesh",Old duplicate A\n'
+                'https://example.org/old-duplicate.m3u8\n'
+                '#EXTINF:-1 tvg-name="Old duplicate B" group-title="Bangladesh",Old duplicate B\n'
+                'https://example.org/old-duplicate.m3u8\n'
+            )
+            fresh = (
+                '#EXTINF:-1 tvg-id="Fresh.us" tvg-country="US" group-title="New Channels" tvg-name="Fresh Candidate",Fresh Candidate\n'
+                'https://example.org/fresh-candidate.m3u8\n'
+            )
+            prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
+            playlist.write_text(prefix + duplicate_existing + fresh, encoding="utf-8")
+            baseline.write_text(prefix + duplicate_existing, encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "iptv")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            final_report = report.read_text(encoding="utf-8")
+            self.assertIn("- Validation status: PASS", final_report)
+            self.assertIn("missing an authentic local logo: 1", final_report)
+            self.assertIn("New duplicate stream URL occurrences: 0", final_report)
 
     def test_parser_skips_vlc_and_kodi_directives_before_media_url(self):
         text = (

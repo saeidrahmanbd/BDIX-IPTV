@@ -356,10 +356,10 @@ def probe_mode(playlist, report, baseline, mode):
     seen = set()
     for e in entries:
         urlkey = stream_url_key(e["url"])
-        if urlkey in seen and (urlkey not in baseline_urls or e["group"].casefold() in queues):
+        if urlkey in seen and urlkey not in baseline_urls:
             remove_starts.add(e["start"])
             counts["duplicate discovery entries removed"] += 1
-            details.append(f"- Removed duplicate discovery entry {e['name']} — duplicate stream URL.")
+            details.append(f"- Removed duplicate newly discovered entry {e['name']} — duplicate stream URL.")
         seen.add(urlkey)
     probe_targets = [e for e in targets if e["start"] not in remove_starts]
     results = {}

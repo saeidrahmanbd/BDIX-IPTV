@@ -88,18 +88,7 @@ def process(path):
    continue
   if group == 'Not Playing':
    r[0]=set_attr(r[0],'group-title','Review'); group='Review'
-  # A foreign country suffix in a discovery queue is not an eligible BD/IN
-  # candidate. Preserve it in the general Review quarantine instead of aborting
-  # the entire daily discovery run or silently relabelling its country.
-  if group in REVIEW_GROUPS:
-   declared_suffixes={
-    match.group(1).upper()
-    for value in (a.get('tvg-id',''),a.get('channel-id',''))
-    if (match:=re.search(r'\.([a-z]{2})(?:@|$)',value.strip(),re.I))
-   }
-   if declared_suffixes and (len(declared_suffixes)!=1 or not declared_suffixes.issubset({'BD','IN'})):
-    r[0]=set_attr(r[0],'group-title','Review')
-    group='Review'
+  # Manual-review discovery queues retain source country metadata as supplied.
   verified=verify_country(a,name,reference)
   if verified.ok and verified.country=='IN':
    reason=prohibited_channel(a,name,'IN')
@@ -128,15 +117,7 @@ def process(path):
   if k: seen.add(k)
  if duplicate_urls:
   raise SystemExit(f'{path}: {len(duplicate_urls)} duplicate stream URL occurrences; refusing to delete any entry.')
- # New Channels/New Backups may hold only candidates verified as BD/IN; normalize tvg-country, never delete.
- country_errors=[]
- for r in rec:
-  a=attrs(r[0])
-  if a.get('group-title','').strip() in REVIEW_GROUPS:
-   v=verify_country(a,(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip(),reference)
-   if not v.ok: country_errors.append(f"review queue entry not verified as BD/IN: {(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()} ({v.reason})")
-   elif a.get('tvg-country','').strip().upper()!=v.country: r[0]=set_attr(r[0],'tvg-country',v.country)
- if country_errors: raise SystemExit(f'{path}: '+'; '.join(country_errors))
+ # Keep New Channels/New Backups source metadata unchanged for manual review.
  for r in rec:
   a=attrs(r[0]); cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold(); g=a.get('group-title','').strip()
   if cid=='ultimatetv.in@sd' and g!='Backup': r[0]=set_attr(r[0],'group-title','Indian Music')
