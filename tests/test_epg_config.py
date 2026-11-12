@@ -1080,9 +1080,9 @@ class EpgMappingAugmentationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             iptv = Path(tmp) / "IPTV-Playlist.m3u"
             international = Path(tmp) / "International-Playlist.m3u"
-            iptv.write_text("#EXTM3U\n", encoding="utf-8")
+            iptv.write_text("#EXTM3U\\n", encoding="utf-8")
             international.write_text(
-                "#EXTM3U\n"
+                "#EXTM3MU\\n"
                 + self._entry("Channel.in@UK", "Channel UK", "Indian Entertainment")
                 + self._entry("Channel.in@India", "Channel India", "International"),
                 encoding="utf-8",
