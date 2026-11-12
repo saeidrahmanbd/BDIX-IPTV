@@ -50,7 +50,22 @@ class OwnerRequestedMigrationTests(unittest.TestCase):
         updated, stats, changes, approvals = migration.migrate(text, probe_data)
         self.assertIn('group-title="New Channels"', updated)
         self.assertNotIn('group-title="Review"', updated)
-        self.assertEqual(stats["unclassified_orphans_staged_for_manual_review"], 1)
+        self.assertEqual(stats["unverified_orphans_staged_for_manual_review"], 1)
+
+
+    def test_wrong_country_queue_candidate_is_not_promoted(self):
+        text = "\\n".join([
+            '#EXTM3U',
+            '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backups","Review"]',
+            '#EXTINF:-1 tvg-id="MoviesNow.in@HD" channel-id="MoviesNow.in@HD" tvg-name="Movies Now" tvg-country="US" tvg-language="hin" group-title="New Channels",Movies Now',
+            'https://example.test/movies.m3u8',
+            ''
+        ])
+        probe_data = {"results":[{"url":"https://example.test/movies.m3u8","ok":True,"status":200,"bytes":512,"error":""}]}
+        updated, stats, changes, approvals = migration.migrate(text, probe_data)
+        self.assertIn('group-title="New Channels"', updated)
+        self.assertNotIn('group-title="Indian Movies"', updated)
+        self.assertEqual(stats["unverified_queue_candidates_deferred"], 1)
 
 if __name__ == "__main__":
     unittest.main()
