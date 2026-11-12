@@ -391,7 +391,7 @@ def _primary_identity_state(blocks):
     primary_keys: set[tuple[str, str, str]] = set()
     country_ids: dict[str, set[str]] = defaultdict(set)
     excluded = {"backup", "backups", "not playing", "review",
-                "new channels", "new backup", "new backups", "adult"}
+                "new channels", "new backup", "new backups"}
     for block in blocks:
         group = group_of(block[0])
         if group.casefold() in excluded:
@@ -407,7 +407,7 @@ def _primary_identity_state(blocks):
             or (country == "PK" and group == "Pakistani")
             or international_policy.country_from_group(group) == country
         )
-        if country not in {"BD", "IN"} and is_country_group:
+        if group.casefold() != "adult" and country not in {"BD", "IN"} and is_country_group:
             country_ids[country].add(international_policy.channel_key(name))
     return primary_keys, country_ids
 
@@ -424,15 +424,20 @@ def _review_recovery_target(info: str, original_group: str,
         return None
     if country == "IN" and international_policy.bd_policy.prohibited_channel(a, name, "IN"):
         return None
-    target, _kind, reason = international_policy.classify(
+    target, kind, reason = international_policy.classify(
         a, name, context_group, country, promote_backup=True
     )
     if reason or not target or target == "Review":
         return None
+    # "Backup" with no inferred primary/genre kind is the organizer's
+    # quarantine outcome for an out-of-policy or unclassifiable channel, not
+    # proof that a working Review row is a valid alternate stream.
+    if target == "Backup" and kind is None:
+        return None
 
     name_key = international_policy.channel_key(name)
     identity_keys = _row_identity_keys(info, country)
-    if target not in {"Backup", "Adult"} and identity_keys & primary_keys:
+    if target != "Backup" and identity_keys & primary_keys:
         return "Backup"
 
     # Country-specific groups require five unique primary identities. Review
@@ -453,9 +458,9 @@ def _review_recovery_target(info: str, original_group: str,
         if len(candidates) < international_policy.discovery.COUNTRY_THRESHOLD:
             target = "International"
 
-    if target not in {"Backup", "Adult", "Review"}:
+    if target not in {"Backup", "Review"}:
         primary_keys.update(identity_keys)
-        if country not in {"BD", "IN"} and (
+        if target != "Adult" and country not in {"BD", "IN"} and (
             target == "International"
             or target == "Pakistani"
             or international_policy.country_from_group(target) == country
