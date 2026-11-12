@@ -17,7 +17,8 @@ The owner remains responsible for the final channel selection and manual review.
 - Repair missing or invalid logo references using verified, authentic repository-local assets under `/logos/`; never invent or substitute unrelated logos.
 - Improve EPG identity mappings and report schedule gaps. The dedicated EPG workflow owns XMLTV generation/publication.
 - Discover eligible Bangladesh/India channels and alternate streams into the manual `New Channels` and `New Backups` queues. These queues remain for owner approval; candidates are not automatically promoted.
-- Correct an active primary row's `group-title` only when its country and genre are conclusively verified, and maintain the canonical primary category grouping. Indian policy-excluded candidates are retained in Review for the owner's inspection.
+- Diagnose broken, blocked, restricted, fragile and inconclusive streams. Correct supported metadata and authentic local logos, and queue discovered channels/alternates for manual review.
+- Keep every existing row's `group-title`, `tvg-chno`, category placement and relative order unchanged. New discoveries may be added only to `New Channels` / `New Backups`; they are never promoted automatically.
 - Probe streams and identify broken, blocked, restricted, fragile or inconclusive endpoints so the owner can inspect them.
 
 Automation must not make channel-selection decisions for the owner:
@@ -27,7 +28,7 @@ Automation must not make channel-selection decisions for the owner:
 - A stream failure, authentication block, geo-restriction, rate limit or transient network problem is diagnostic information—not authorization to delete or silently replace the stream.
 - Do not alter `Adult` entries or guess country/genre metadata when evidence is ambiguous.
 
-Evidence-backed primary group corrections and discovery additions are allowed; every pre-existing stream URL occurrence must remain present. Stream-health results for this playlist are advisory and do not use the International playlist's three-day retirement rule.
+Metadata/logo repairs are allowed, but every existing stream URL, group assignment, channel number and relative row order must remain unchanged. New discovery entries are permitted only in the manual New Channels/New Backups queues. Stream blocking/health results for this playlist are advisory and never trigger deletion or URL replacement; the three-day retirement rule applies only to International-Playlist.m3u.
 
 ### International-Playlist.m3u — automation-controlled
 
@@ -74,7 +75,7 @@ All times below are Bangladesh time (`Asia/Dhaka`):
 
 | Workflow | Schedule | Scope |
 |---|---:|---|
-| IPTV Playlist Update / maintenance | 07:00 | Metadata, verified grouping, policy validation and maintenance for both playlists |
+| IPTV Playlist Update / maintenance | 07:00 | IPTV: metadata/logo repair only, preserving existing rows; International: full policy-based maintenance and reorganization |
 | Playlist Logo Repair and Localization | 08:00 | Authentic local logos for both playlists |
 | International Stream Health | 08:45 | Stream probes, Review recovery and three-day retirement for International only |
 | Refresh IPTV EPG | 09:00 | EPG mapping audit and XMLTV publication for both playlists |
