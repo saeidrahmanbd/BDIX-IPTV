@@ -1,48 +1,48 @@
 # Update Report
 
-_Last generated: **2026-11-12 05:42 UTC**_
+_Last generated: **2026-11-12 06:18 UTC**_
 
-Source playlist SHA-256: **ebabf8e5d80fa4c1524209e86de1022f0c7195719266f81eccbad13b250bca95**
+Source playlist SHA-256: **da00dcae1e57f4bf8f743e612c8c55bb19699c12744f59b6264957e7ee792387**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1331** |
+| Streams | **1381** |
 | Active Channel Identities | **685** |
 | Active Primary Streams | **685** |
 | Bangladesh | **67** |
 | India | **301** |
 | Backup Stream Entries | **463** |
-| IPTV Local Logos | **99.5%** |
+| IPTV Local Logos | **STALE** |
 | IPTV EPG Programme Coverage | **52%** |
 | IPTV EPG Mapping | **59.4%** |
-| Stream Health Tested | **1331** |
-| Stream Health Failures | **185** |
-| Persistent Failures | **175** |
-| Near-Duplicate URL Families | **2** |
-| Audit Blocking Issues | **19** |
-| Pre-Publish Gate | **BLOCK** |
+| Stream Health Tested | **STALE** |
+| Stream Health Failures | **STALE** |
+| Persistent Failures | **STALE** |
+| Near-Duplicate URL Families | **STALE / UNKNOWN** |
+| Audit Blocking Issues | **STALE / UNKNOWN** |
+| Pre-Publish Gate | **STALE / UNKNOWN** |
 | Pre-Publish Gate Generated | **2026-11-12T05:40:29+00:00** |
 
-## Quality Controls 
-- Duplicate stream URLs: **0**
-- Metadata conflicts (canonical primary scope): **0**
-- Same-name / different-ID collisions (canonical primary scope): **2**
+## Quality Controls (STALE / UNKNOWN — saved audit values shown for reference)
+- Duplicate stream URLs: **STALE / UNKNOWN (last saved: 0)**
+- Metadata conflicts (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
+- Same-name / different-ID collisions (canonical primary scope): **STALE / UNKNOWN (last saved: 2)**
 - Cross-queue metadata identity variants: **0**
-- Cross-queue same-name / different-ID collisions: **16**
-- Duplicate primary identities: **0**
-- Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
-- Logo exceptions: **7**
-- Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
-- Alphabetical ordering issues: **12**
-- Signed/tokenized URLs: **23**
+- Cross-queue same-name / different-ID collisions: **20**
+- Duplicate primary identities: **STALE / UNKNOWN (last saved: 0)**
+- Primary channel-number collisions: **STALE / UNKNOWN (last saved: 0)**
+- Primary entries missing channel numbers: **STALE / UNKNOWN (last saved: 0)**
+- Logo exceptions: **STALE / UNKNOWN (last saved: 7)**
+- Malformed EXTINF entries: **STALE / UNKNOWN (last saved: 0)**
+- Category block-order issues: **STALE / UNKNOWN (last saved: 0)**
+- Alphabetical ordering issues: **STALE / UNKNOWN (last saved: 12)**
+- Signed/tokenized URLs: **STALE / UNKNOWN (last saved: 23)**
 
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
 - `Backup` stores alternate streams; `Review`, `New Channels`, and `New Backups` are review-only queues and are excluded from Xtream.
-- Pre-publish gate status: **BLOCK**
+- Pre-publish gate status: **STALE / UNKNOWN**
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## Counting Scope
@@ -62,10 +62,10 @@ Source playlist SHA-256: **ebabf8e5d80fa4c1524209e86de1022f0c7195719266f81eccbad
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-12T05:40:28.612813+00:00** | **CURRENT** |
-| EPG coverage / two-playlist inventory | **2026-11-12T05:23:28+00:00** | **CURRENT** |
-| Stream health | **2026-11-12T05:41:10+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-12T05:40:29+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-12T05:40:28.612813+00:00** | **STALE** |
+| EPG coverage / two-playlist inventory | **2026-11-12T06:18:19+00:00** | **CURRENT** |
+| Stream health | **2026-11-12T05:41:10+00:00** | **STALE** |
+| Pre-publish gate | **2026-11-12T05:40:29+00:00** | **STALE** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
