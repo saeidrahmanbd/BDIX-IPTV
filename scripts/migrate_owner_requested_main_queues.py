@@ -299,12 +299,21 @@ def migrate(text, probe_data):
             continue
         name = display_name(info)
         if not probe.get("ok"):
-            if old_group != "Review":
-                record[0] = remove_attr(set_group(info, "Review"), "tvg-chno")
-                approvals.append({"url": url, "source_group": old_group,
-                                  "target_group": "Review", "allow_metadata": True})
-                stats["not_streaming_to_review"] += 1
-                changes.append((name, old_group, "Review", probe.get("error") or f"HTTP {probe.get('status')}"))
+            # Only a definitive missing-resource response justifies quarantine.
+            # 401/403, 5xx, DNS, TLS, timeouts and runner/network failures are
+            # inconclusive or access-restricted; keep those rows in their current
+            # group so a transient probe limitation cannot misclassify a channel.
+            if probe.get("status") in {404, 410}:
+                if old_group != "Review":
+                    record[0] = remove_attr(set_group(info, "Review"), "tvg-chno")
+                    approvals.append({"url": url, "source_group": old_group,
+                                      "target_group": "Review", "allow_metadata": True})
+                    stats["definitive_offline_to_review"] += 1
+                    changes.append((name, old_group, "Review", probe.get("error") or f"HTTP {probe.get('status')}"))
+            else:
+                stats["inconclusive_probe_deferred"] += 1
+                changes.append((name, old_group, old_group,
+                                probe.get("error") or f"HTTP {probe.get('status')} — inconclusive/access restricted"))
             continue
 
         match = primary_match(info, primary_rows)
