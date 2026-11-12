@@ -16,7 +16,7 @@ class DiscoveryReportOrderTests(unittest.TestCase):
             return index
 
         snapshot = position("cp IPTV-Playlist.m3u /tmp/IPTV-Playlist.before.m3u")
-        policy_tests = position("test_channel_discovery_policy.py")
+        policy_tests = position("python -m unittest discover -s tests -p 'test_channel_discovery_policy.py'")
         discovery = position("python scripts/run_bd_discovery_with_policy.py")
         probe = position("python scripts/validate_discovery_run.py probe ")
         country_warnings = position("python scripts/country_verification.py validate ")
