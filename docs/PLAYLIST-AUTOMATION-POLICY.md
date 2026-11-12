@@ -9,7 +9,6 @@ Daily automation may:
 - Replace invalid/external logo references only with verified authentic repository-local assets.
 - Improve EPG identity mappings and report schedule gaps; the dedicated EPG workflow owns XMLTV generation/publication.
 - Discover eligible new Bangladesh/India channels and alternate streams into the manual `New Channels` / `New Backups` queues.
-- Validate/probe streams and report broken, blocked, inconclusive and fragile endpoints.
 - Diagnose broken, blocked, restricted, fragile and inconclusive endpoints. Use reliable evidence to correct metadata or queue a discovered alternate in `New Backups`; stream access failures never authorize URL replacement.
 - Keep every existing row's `group-title`, `tvg-chno`, category position and relative row order unchanged. New discoveries may be appended only to the manual `New Channels` / `New Backups` queues.
 
