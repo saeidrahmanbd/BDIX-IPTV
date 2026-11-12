@@ -36,6 +36,8 @@ class MainPlaylistGroupingTests(unittest.TestCase):
         source = (
             entry("Somoy TV", "International", "https://bd.example/somoy.m3u8", "BD", "ben")
             + entry("Star Jalsha Movies", "Indian Entertainment", "https://in.example/movies.m3u8", "IN", "ben", "Movies")
+            + entry("Dhoom Music", "Indian Entertainment", "https://in.example/dhoom.m3u8", "IN", "ben", "Music")
+            + entry("Hindi Movie Channel", "Indian Entertainment", "https://in.example/hindi-movies.m3u8", "IN", "hin", "Movies")
             + entry("9XM Music", "Indian Entertainment", "https://in.example/music.m3u8", "IN", "hin", "Music")
             + entry("Pogo Kids", "Indian Entertainment", "https://in.example/kids.m3u8", "IN", "hin", "Kids")
             + entry("Star Sports 1", "Indian Entertainment", "https://in.example/sports.m3u8", "IN", "hin", "Sports")
@@ -47,9 +49,34 @@ class MainPlaylistGroupingTests(unittest.TestCase):
         self.assertIn('group-title="Kids"', out)
         self.assertIn('group-title="Sports"', out)
         for url in ("https://bd.example/somoy.m3u8", "https://in.example/movies.m3u8",
+                    "https://in.example/dhoom.m3u8", "https://in.example/hindi-movies.m3u8",
                     "https://in.example/music.m3u8", "https://in.example/kids.m3u8",
                     "https://in.example/sports.m3u8"):
             self.assertIn(url, out)
+        def channel_group(name):
+            row = next(line for line in out.splitlines()
+                       if line.startswith("#EXTINF:") and f'tvg-name="{name}"' in line)
+            return re.search(r'group-title="([^"]+)"', row).group(1)
+        self.assertEqual(channel_group("Star Jalsha Movies"), "Indian Bangla")
+        self.assertEqual(channel_group("Dhoom Music"), "Indian Bangla")
+        self.assertEqual(channel_group("Hindi Movie Channel"), "Indian Movies")
+        self.assertEqual(channel_group("9XM Music"), "Indian Music")
+        self.assertIn("Verified primary rows reclassified: **7**", report)
+
+    def test_explicit_indian_channel_genre_overrides(self):
+        source = (
+            entry("Aaryaa TV", "Indian Entertainment", "https://in.example/aaryaa.m3u8", "IN", "hin", channel_id="AaryaaTV.in")
+            + entry("KCL TV", "Indian Music", "https://in.example/kcl.m3u8", "IN", "mal", channel_id="KCLTV.in@SD")
+            + entry("Namma Bangalore", "Indian Movies", "https://in.example/namma.m3u8", "IN", "kan", channel_id="NammaBangalore.in@SD")
+            + entry("Pitaara TV", "Indian Movies", "https://in.example/pitaara.m3u8", "IN", "pan", channel_id="Pitaara.in@SD")
+            + entry("Pitaara Comedy", "Indian Movies", "https://in.example/pitaara-comedy.m3u8", "IN", "pan", channel_id="PitaaraComedy.in@SD")
+        )
+        out, report = self.run_script(source)
+        rows = {name: next(row for row in out.split("#EXTINF:") if f'tvg-name="{name}"' in row)
+                for name in ("Aaryaa TV", "KCL TV", "Namma Bangalore", "Pitaara TV", "Pitaara Comedy")}
+        self.assertIn('group-title="Indian Music"', rows["Aaryaa TV"])
+        for name in ("KCL TV", "Namma Bangalore", "Pitaara TV", "Pitaara Comedy"):
+            self.assertIn('group-title="Indian Entertainment"', rows[name])
         self.assertIn("Verified primary rows reclassified: **5**", report)
 
     def test_indian_policy_excluded_stream_stays_out_of_review(self):

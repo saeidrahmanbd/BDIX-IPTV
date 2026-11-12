@@ -79,9 +79,24 @@ def stream_url(block: list[str]) -> str:
     return next((line.strip() for line in block[1:] if line.strip().startswith(("http://", "https://"))), "")
 
 
+# Verified channel-specific genre corrections for Indian services.
+CHANNEL_GROUP_OVERRIDES = {
+    "aaryaatv.in": "Indian Music",
+    "kcltv.in@sd": "Indian Entertainment",
+    "nammabangalore.in@sd": "Indian Entertainment",
+    "pitaara.in@sd": "Indian Entertainment",
+    "pitaaracomedy.in@sd": "Indian Entertainment",
+}
+
 def genre_target(a: dict[str, str], name: str, current: str, country: str) -> str:
     content = a.get("tvg-content", "").casefold()
     evidence = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""), a.get("channel-id", ""), content))
+    if country == "IN":
+        language_tags = {part.strip().casefold() for part in a.get("tvg-language", "").split(";")}
+        # Language-first policy: Bengali Indian channels stay in Indian Bangla,
+        # including Bengali movie and music services.
+        if language_tags.intersection({"ben", "bn", "bengali", "beng"}) or BANGLA_RE.search(evidence):
+            return "Indian Bangla"
     if current in GENRE_GROUPS:
         return current
     if content == "kids" or KIDS_RE.search(evidence):
@@ -93,9 +108,6 @@ def genre_target(a: dict[str, str], name: str, current: str, country: str) -> st
             return "Indian Movies"
         if content in {"music", "musics"} or MUSIC_RE.search(evidence):
             return "Indian Music"
-        language = a.get("tvg-language", "").casefold()
-        if language in {"ben", "bn", "bengali", "beng"} or BANGLA_RE.search(evidence):
-            return "Indian Bangla"
         return "Indian Entertainment"
     return "Bangladesh"
 
@@ -109,6 +121,10 @@ def target_group(a: dict[str, str], name: str, current: str, reference) -> tuple
         prohibited = bd_policy.prohibited_channel(a, name, "IN", discovery=True)
         if prohibited:
             return None, f"policy-excluded: {prohibited}; retained in the current group because Review is reserved for streams that do not currently work"
+        identity = (a.get("tvg-id") or a.get("channel-id") or "").strip().casefold()
+        override = CHANNEL_GROUP_OVERRIDES.get(identity)
+        if override:
+            return override, "verified channel-specific category mapping"
     return genre_target(a, name, current, country), verdict.basis
 
 

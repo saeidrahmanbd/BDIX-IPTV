@@ -279,7 +279,11 @@ def clean(s):
  s=re.sub(r"\s*\(\s*(?:\d{3,4}p|\d{3,4}i|UHD|FHD|HD\+?|SD)\s*\)\s*$","",s,flags=re.I)
  s=re.sub(r"\s+(?:\d{3,4}p|\d{3,4}i|4k(?:\s+hdr)?|uhd|fhd|hd\+?|sd)\s*$","",s,flags=re.I)
  return s.strip()
-CASE={"ATN BANGLA UK":"ATN Bangla UK","SUN BANGLA":"Sun Bangla","Ekhone TV":"Ekhon TV","EKHONE TV":"Ekhon TV","Ekattor Tv":"Ekattor TV","Sony MAX":"Sony Max","Sony AATH":"Sony Aath","Sony Entertainment Television":"Sony Entertainment TV","Love nature":"Love Nature","Jtv Classic":"JTV Classic","Get factual":"Get Factual"}
+CASE={"ATN BANGLA UK":"ATN Bangla UK","SUN BANGLA":"Sun Bangla","Ekhone TV":"Ekhon TV","EKHONE TV":"Ekhon TV","Ekattor Tv":"Ekattor TV","Sony MAX":"Sony Max","Sony AATH":"Sony Aath","Sony Entertainment Television":"Sony Entertainment TV","Love nature":"Love Nature","Jtv Classic":"JTV Classic",
+  "JTV BANGLA": "JTV Bangla",
+  "VISION 24": "Vision 24",
+  "SOLOCALCIO ITALIA": "Solo Calcio Italia",
+  "INTROUBLE": "InTrouble","Get factual":"Get Factual"}
 def normalize_id(cid):
  return re.sub(r"@SD(?=@ALT1$)","",str(cid or ""),flags=re.I)
 def set_attr(m,k,v):
@@ -312,16 +316,13 @@ for r in rows:
   # their original EXTINF line without metadata, logo, or channel-number edits.
   continue
  if g not in EXCLUDE:
-  # This feed is a legacy Colors Bangla alias, not the active Colors Bangla HD
-  # service. Keep its URL and artwork, but quarantine it under its distinct
-  # canonical legacy identity instead of publishing it as Indian Movies.
+  # Bengali-language Colors Bangla Cinema remains a primary Indian Bangla channel.
+  # Preserve the original ID and stream; maintain the user's language-first group policy.
   if (a.get("tvg-id") or "").casefold() == "colorsbanglacinema.in@sd@colors.bangla.cinema":
-   m=set_attr(m,"tvg-id","Colors.Bangla.in")
-   m=set_attr(m,"channel-id","Colors.Bangla.in")
-   m=set_attr(m,"tvg-name","Colors Bangla")
-   m=set_attr(m,"group-title","Review")
-   lines[r["i"]]=f"{m},Colors Bangla"
-   stats["backups"]+=1
+   m=set_attr(m,"tvg-name","Colors Bangla Cinema")
+   m=set_attr(m,"group-title","Indian Bangla")
+   m=set_attr(m,"tvg-language","ben")
+   lines[r["i"]]=f"{m},Colors Bangla Cinema"
    continue
   name=CASE.get(clean(a.get("tvg-name") or r["name"]),clean(a.get("tvg-name") or r["name"]))
   cid=normalize_id(a.get("tvg-id") or a.get("channel-id") or IDS.get(name) or "custom."+norm(name))
