@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-12T03:25:45+00:00**
+Generated: **2026-11-12T05:35:06+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **ebabf8e5d80fa4c1524209e86de1022f0c7195719266f81eccbad13b250bca95**
-- International-Playlist.m3u SHA-256: **649d07a3b17461e5e99879bed2563de5e9d4e74ca79495fd0fc32c5d873058e7**
+- International-Playlist.m3u SHA-256: **9b5feeea76c79307222ed7e33cfe4de550fab4feaf35331d8e39fa4f45c4fa5e**
 
 ## Summary
 
@@ -16,9 +16,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1600px): **6**
 - Raster assets over 512000 bytes: **7**
 - Raster/SVG assets with short side under 64 px: **155**
-- Exact-byte duplicate asset clusters: **710**
-- Playlist references whose asset stem differs from the normalized channel name: **1487**
-- Unreferenced files immediately inside logos/: **1454** (not deleted; other tooling or playlists may use them)
+- Exact-byte duplicate asset clusters: **711**
+- Playlist references whose asset stem differs from the normalized channel name: **1492**
+- Unreferenced files immediately inside logos/: **1453** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -674,6 +674,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/south-park-kyle-collection-germany.png, logos/international/south-park-kyle-collection-sweden-dk.png, logos/international/south-park-kyle-collection-sweden-no.png, logos/international/south-park-kyle-collection-sweden.png
 - logos/international/south-park-rockin-out-dk.png, logos/international/south-park-rockin-out-no.png, logos/international/south-park-rockin-out.png
 - logos/international/south-park-stan-collection-germany.png, logos/international/south-park-stan-collection-sweden-dk.png, logos/international/south-park-stan-collection-sweden-no.png, logos/international/south-park-stan-collection-sweden.png
+- logos/international/star-cinema.png, logos/star-cinema-5a96e69773.png
 - logos/international/star-trek-movies-dk.png, logos/international/star-trek-movies-no.png, logos/international/star-trek-movies.png
 - logos/international/star-trek-the-original-series-germany.png, logos/international/star-trek-the-original-series-sweden-dk.png, logos/international/star-trek-the-original-series-sweden-no.png, logos/international/star-trek-the-original-series-sweden.png
 - logos/international/star-trek-voyager-germany-it.png, logos/international/star-trek-voyager-germany.png
@@ -1483,6 +1484,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Bollygold | nh-bollygold-dbedeff9.png | Indian Movies |
 | International-Playlist.m3u | Goldmines 2 | goldmines.png | Indian Movies |
 | International-Playlist.m3u | Indywood TV | indywood-tv.png | Indian Movies |
+| International-Playlist.m3u | Movies Now | movies-now-hd-1080p.png | Indian Movies |
 | International-Playlist.m3u | Pitaara | pitaara-tv.png | Indian Movies |
 | International-Playlist.m3u | Pitaara TV | pitaara-tv.png | Indian Movies |
 | International-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Indian Movies |
@@ -2002,6 +2004,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Arabica TV | arabica-tv.png | Review |
 | International-Playlist.m3u | AsiaN | asian-tv.png | Review |
 | International-Playlist.m3u | Asian Sony Max 2 | sony-max-2.png | Review |
+| International-Playlist.m3u | AXS TV | axs-tv-576p.png | Review |
 | International-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Review |
 | International-Playlist.m3u | Bravo Farsi TV | bravo-farsi-tv-360p.jpg | Review |
 | International-Playlist.m3u | BTV News | repaired-btv-news-0646349a43.png | Review |
@@ -2193,6 +2196,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Deen TV | deen-tv-576p.png | Backup |
 | International-Playlist.m3u | Deen TV | deen-tv-576p.png | Backup |
 | International-Playlist.m3u | Desh TV | desh-tv.png | Backup |
+| International-Playlist.m3u | Desi Channel | desi-channel.png | Backup |
 | International-Playlist.m3u | Desi Channel | desi-channel.png | Backup |
 | International-Playlist.m3u | Destination America | destinationamerica.png | Backup |
 | International-Playlist.m3u | Discovery Channel (Czech Republic) | discovery-channel-czech-republic-1c5cac427a.svg | Backup |
@@ -2395,9 +2399,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Teletoon+ | teletoon-plus-5964656136.png | Backup |
 | International-Playlist.m3u | Tennis Channel | tennis-channel-33d8a8afe2.png | Backup |
 | International-Playlist.m3u | Tennis Channel 2 | tennis-channel-2-e549657b98.png | Backup |
+| International-Playlist.m3u | Thalaa TV | thalaa-tv.png | Backup |
 | International-Playlist.m3u | Tiguerito TV | tiguerito-tv-464395cdf0.jpg | Backup |
 | International-Playlist.m3u | TJK TV | tjk-tv-1dac3e1586.png | Backup |
 | International-Playlist.m3u | Tochka.rf | tochkarf.png | Backup |
+| International-Playlist.m3u | Tolly TV | tolly-tv.png | Backup |
 | International-Playlist.m3u | ToonGoggles | toon-goggles.png | Backup |
 | International-Playlist.m3u | Total TV Haryana | total-tv-haryana.png | Backup |
 | International-Playlist.m3u | Trace Brazuca | trace-brazuca-hd.png | Backup |
