@@ -91,6 +91,7 @@ jobs:
     # so runs whose jobs are skipped do not occupy the queue.
     concurrency:
       group: iptv-playlist-main-writer-v5
+      # Keep this v5 identifier aligned across every main-branch playlist writer workflow.
       cancel-in-progress: false
       queue: max
     runs-on: ubuntu-latest
