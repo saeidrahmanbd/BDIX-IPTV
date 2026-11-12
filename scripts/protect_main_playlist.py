@@ -142,10 +142,13 @@ def verify(playlist: Path, state: Path):
                 old_number = str(original.get("number", "")).strip()
                 new_number = str(current["number"]).strip()
                 may_fill_missing_primary = (
-                    old_group in PRIMARY_GROUPS and (not old_number.isdigit() or int(old_number) <= 0) and new_number.isdigit()
+                    migration_mode and old_group in PRIMARY_GROUPS
+                    and (not old_number.isdigit() or int(old_number) <= 0)
+                    and new_number.isdigit()
                 )
                 may_clear_nonprimary_queue = (
-                    old_group not in PRIMARY_GROUPS and bool(old_number) and not new_number
+                    migration_mode and old_group not in PRIMARY_GROUPS
+                    and bool(old_number) and not new_number
                 )
                 if not (may_fill_missing_primary or may_clear_nonprimary_queue):
                     failures.append(f"Existing channel number changed for {current['name']}")
