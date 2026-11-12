@@ -239,13 +239,14 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8",
             "https://d3i5c1nmken8bh.cloudfront.net/Live/Pitaara_TV_SCTE/playlist.m3u8",
             "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ColorsAPAC.m3u8",
+            "http://212.5.144.156:8080/espn/index.m3u8",
         }
         for url in duplicate_backup_urls:
             matches = [e for e in entries if e["url"] == url]
             self.assertEqual(len(matches), 1, url)
             self.assertEqual(matches[0]["attrs"].get("group-title"), "Backup", url)
             self.assertNotIn("tvg-chno", matches[0]["attrs"], url)
-        for channel_id in ("StarJalsha.in@HD", "Pitaara.in@SD", "Colors.in@HD"):
+        for channel_id in ("StarJalsha.in@HD", "Pitaara.in@SD", "Colors.in@HD", "ESPN.us"):
             active = [e for e in entries if e["attrs"].get("tvg-id") == channel_id
                       and e["attrs"].get("group-title") in primary_groups]
             self.assertEqual(len(active), 1, channel_id)
