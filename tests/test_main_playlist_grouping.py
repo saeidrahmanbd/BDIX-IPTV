@@ -82,7 +82,9 @@ class MainPlaylistGroupingTests(unittest.TestCase):
         before = source.splitlines()
         out, _ = self.run_script(source)
         after = out.splitlines()
-        self.assertEqual(before[1], after[1])
+        original_info = before[1].replace('group-title="International"', 'group-title="__GROUP__"')
+        corrected_info = after[1].replace('group-title="Bangladesh"', 'group-title="__GROUP__"')
+        self.assertEqual(original_info, corrected_info)
         self.assertEqual(before[2], after[2])
         self.assertIn('group-title="Bangladesh"', after[1])
 
