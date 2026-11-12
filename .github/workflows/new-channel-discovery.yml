@@ -51,7 +51,7 @@ jobs:
     needs: daily_guard
     if: needs.daily_guard.outputs.should_run == 'true'
     concurrency:
-      group: iptv-playlist-main-writer-v4
+      group: iptv-playlist-main-writer-v5
       cancel-in-progress: false
       queue: max
     runs-on: ubuntu-latest
