@@ -228,6 +228,32 @@ def split_extinf(line):
         escaped = (ch == "\\") and not escaped
         if ch != "\\": escaped = False
     return line, ""
+
+# Canonical EXTINF attribute order. This is a formatting-only repair: preserve
+# every key/value pair, display label, playlist record position and stream URL.
+ATTRIBUTE_ORDER = (
+    "tvg-id", "tvg-name", "tvg-logo", "tvg-chno",
+    "channel-id", "tvg-country", "tvg-language", "group-title",
+)
+
+def canonicalize_extinf(line):
+    head, display = split_extinf(line)
+    duration = re.match(r"^#EXTINF:\\S+", head)
+    if not duration:
+        return line
+    matches = list(ATTR.finditer(head))
+    if not matches:
+        return line
+    residual = ATTR.sub("", head[duration.end():]).strip()
+    if residual:
+        return line
+    rank = {key: index for index, key in enumerate(ATTRIBUTE_ORDER)}
+    pairs = [(match.group(1), match.group(2), index) for index, match in enumerate(matches)]
+    pairs.sort(key=lambda item: (rank.get(item[0], len(rank)), item[2]))
+    return duration.group(0) + " " + " ".join(
+        f'{key}="{value}"' for key, value, _ in pairs
+    ) + display
+
 def norm(s):
  s=str(s or "").lower()
  s=re.sub(r"\[[^]]*\]|\([^)]*\)"," ",s)
@@ -357,7 +383,7 @@ review_groups={"Review","Not Playing","New Channels","New Backups"}
 # Keep the original record sequence exactly as supplied by the owner.
 # Metadata normalization must never sort, group, promote or relocate existing rows.
 lines=preamble+[line for rec in records for line in rec]
-P.write_text("\n".join(lines)+"\n",encoding="utf-8")
+lines = [canonicalize_extinf(line) if line.startswith("#EXTINF:") else line for line in lines]\nP.write_text("\\n".join(lines)+"\\n",encoding="utf-8")
 digest=hashlib.sha256(P.read_bytes()).hexdigest()
 R.write_text("# Playlist Metadata Normalization\n\n"+f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**\nSource playlist SHA-256: **{digest}**\n\n"+f"- Entries processed: **{len(rows)}**\n- Primary channel numbers added: **{stats['numbers']}**\n- Logo references repaired: **{stats['logos']}**\n- Backup/review entries normalized: **{stats['backups']}**\n",encoding="utf-8")
 print(f"Normalization: entries={len(rows)} numbers={stats['numbers']} logos={stats['logos']} backup_entries={stats['backups']}")
