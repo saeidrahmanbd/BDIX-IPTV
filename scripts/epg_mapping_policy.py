@@ -16,12 +16,14 @@ def mapping_id_region_compatible(
     source_feed_countries=(),
     *,
     explicit_override: bool = False,
+    require_feed_match: bool = False,
 ) -> bool:
     """Reject mismatched regional IDs or regional feeds unless an alias is curated.
 
-    A country suffix/territory on the XMLTV channel ID is the strongest signal.
-    When the source ID carries no region, a known country-specific feed provides
-    the secondary guard. Global/unknown feeds remain eligible for manual aliases.
+    A country suffix/territory on an exact XMLTV ID is authoritative. When
+    the source ID carries no region, a country-specific feed provides a fallback
+    guard. Name-derived candidates set require_feed_match=True so that the feed
+    territory must also agree, even when its IDs carry a country suffix.
     """
     if explicit_override:
         return True
@@ -36,7 +38,6 @@ def mapping_id_region_compatible(
 
     if target and source and target != source:
         return False
-    # A matching suffix does not excuse a contradictory country-specific feed.
-    if target and feeds and target not in feeds:
+    if target and feeds and target not in feeds and (require_feed_match or not source):
         return False
     return True
