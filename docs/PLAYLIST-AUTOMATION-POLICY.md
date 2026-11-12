@@ -10,8 +10,8 @@ Daily automation may:
 - Improve EPG identity mappings and report schedule gaps; the dedicated EPG workflow owns XMLTV generation/publication.
 - Discover eligible new Bangladesh/India channels and alternate streams into the manual `New Channels` / `New Backups` queues.
 - Validate/probe streams and report broken, blocked, inconclusive and fragile endpoints.
-- Correct an existing active primary row's `group-title` only when its country and genre are conclusively verified. Indian policy-excluded categories are retained in `Review` for the owner's inspection.
-- Reassemble canonical category blocks after evidence-backed classification while retaining all existing stream URLs.
+- Diagnose broken, blocked, restricted, fragile and inconclusive endpoints. Use reliable evidence to correct metadata or queue a discovered alternate in `New Backups`; stream access failures never authorize URL replacement.
+- Keep every existing row's `group-title`, `tvg-chno`, category position and relative row order unchanged. New discoveries may be appended only to the manual `New Channels` / `New Backups` queues.
 
 Automation must never:
 - Delete an existing stream row or replace/change its stream URL.
@@ -20,7 +20,7 @@ Automation must never:
 - Alter `Adult` entries or guess country/genre metadata when evidence is ambiguous.
 - Treat an HTTP block, regional restriction, transient outage or inconclusive probe as authorization to remove a channel.
 
-The main-playlist publication gate verifies that every pre-existing stream URL occurrence remains present. Verified primary-group corrections and new discovery additions are allowed; deletion or URL replacement blocks publication. The stream-health report is advisory only: the three-consecutive-day deletion rule applies only to `International-Playlist.m3u`.
+The main-playlist publication gate verifies that every pre-existing stream URL occurrence remains present in the same relative order, with its original group assignment and channel number. Metadata and authentic local-logo repairs are allowed; deletion, URL replacement, group changes, renumbering, reordering, or new rows outside the two manual discovery queues block publication. Stream blocking/health results are diagnostic only for this playlist; the three-consecutive-day retirement rule applies only to `International-Playlist.m3u`.
 
 ## International-Playlist.m3u — automation-controlled
 
