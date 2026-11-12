@@ -238,7 +238,7 @@ ATTRIBUTE_ORDER = (
 
 def canonicalize_extinf(line):
     head, display = split_extinf(line)
-    duration = re.match(r"^#EXTINF:\\S+", head)
+    duration = re.match(r"^#EXTINF:\S+", head)
     if not duration:
         return line
     matches = list(ATTR.finditer(head))
