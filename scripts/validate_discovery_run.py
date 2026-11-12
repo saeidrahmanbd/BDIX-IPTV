@@ -347,8 +347,10 @@ def probe_mode(playlist, report, baseline, mode):
         append_section(report, "Stream verification", f"- Run timestamp: {now()}\n- BLOCKER: malformed EXTINF/URL pairs detected before stream verification; playlist left unchanged.")
         raise SystemExit(1)
     baseline_urls = {stream_url_key(e["url"]) for e in before_entries}
-    queues = {"new channels", "new backup", "new backups"}
-    targets = [e for e in entries if e["group"].casefold() in queues or stream_url_key(e["url"]) not in baseline_urls]
+    # Probe only rows introduced since the baseline. Existing manual queue
+    # entries are not re-probed by discovery; the dedicated health workflow
+    # handles ongoing checks without repeatedly probing the same queue.
+    targets = [e for e in entries if stream_url_key(e["url"]) not in baseline_urls]
     counts = Counter()
     details = []
     remove_starts = set()
