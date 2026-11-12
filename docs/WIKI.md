@@ -17,9 +17,8 @@ The owner remains responsible for the final channel selection and manual review.
 - Repair missing or invalid logo references using verified, authentic repository-local assets under `/logos/`; never invent or substitute unrelated logos.
 - Improve EPG identity mappings and report schedule gaps. The dedicated EPG workflow owns XMLTV generation/publication.
 - Discover eligible Bangladesh/India channels and alternate streams into the manual `New Channels` and `New Backups` queues. These queues remain for owner approval; candidates are not automatically promoted.
-- Diagnose broken, blocked, restricted, fragile and inconclusive streams. Correct supported metadata and authentic local logos, and queue discovered channels/alternates for manual review.
 - Keep every existing row's `group-title`, `tvg-chno`, category placement and relative order unchanged. New discoveries may be added only to `New Channels` / `New Backups`; they are never promoted automatically.
-- Probe streams and identify broken, blocked, restricted, fragile or inconclusive endpoints so the owner can inspect them.
+- Probe streams and identify broken, blocked, restricted, fragile or inconclusive endpoints for owner review. Blocking/access restrictions are diagnostic only and never authorize deletion or URL replacement.
 
 Automation must not make channel-selection decisions for the owner:
 
