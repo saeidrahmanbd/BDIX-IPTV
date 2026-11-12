@@ -1,5 +1,6 @@
 name: IPTV Playlist Update
-# Owner-requested one-time cleanup is activated by the exact guarded commit subject below.
+# Owner-requested one-time cleanup is activated by a durable, explicit request marker.
+# A superseded run leaves the marker intact; only a published migration report consumes it.
 # Rebuild all playlist-owned audit, gate, stream-health, logo and dashboard snapshots.
 # Playlist-only maintenance. EPG generation/validation is owned by Refresh IPTV EPG.
 # Stream URL identity must use scripts/stream_url_identity.py; never lowercase an entire stream URL.
@@ -76,6 +77,7 @@ on:
       - scripts/migrate_owner_requested_main_queues.py
       - tests/test_owner_requested_main_migrations.py
       - tests/test_main_playlist_protection.py
+      - maintenance/owner-requested-iptv-migration.json
   workflow_run:
     workflows: ["IPTV Logo Localization"]
     types: [completed]
@@ -204,16 +206,16 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          # One-time owner-requested queue/orphan migration. Scheduled and
-          # workflow_run maintenance never repeat this structural cleanup.
+          # Durable one-time owner authorization. The marker survives superseded
+          # push/workflow_run events and scheduled retries. It is considered consumed
+          # only after the migration report is published to main; a failed or skipped
+          # run therefore cannot silently discard the owner's authorization.
           OWNER_MIGRATION_REQUESTED=false
-          MIGRATION_EVENT_SUBJECT="$(git log -1 --format=%s "${GITHUB_SHA}")"
-          if [[ "${GITHUB_EVENT_NAME}" == "workflow_run" ]]; then
-            MIGRATION_EVENT_SUBJECT="$(jq -r '.workflow_run.head_commit.message // ""' "${GITHUB_EVENT_PATH}" | sed -n '1p')"
-          fi
-          if [[ ("${GITHUB_EVENT_NAME}" == "push" || "${GITHUB_EVENT_NAME}" == "workflow_run") ]] && [[ "${MIGRATION_EVENT_SUBJECT}" == "Owner-requested one-time IPTV cleanup" ]] && [[ ! -s reports/owner-requested-main-migrations.md ]]; then
+          MIGRATION_REQUEST_FILE="maintenance/owner-requested-iptv-migration.json"
+          MIGRATION_COMPLETION_REPORT="reports/owner-requested-main-migrations.md"
+          if [[ -s "${MIGRATION_REQUEST_FILE}" && ! -s "${MIGRATION_COMPLETION_REPORT}" ]]; then
             OWNER_MIGRATION_REQUESTED=true
-            echo "Owner-requested one-time main-playlist migration enabled for its originating event."
+            echo "Durable owner-requested one-time IPTV migration is pending."
           fi
           # ------------------------------------------------------------------
           # Ordering contract (enforced by tests/test_maintenance_report_order.py)
