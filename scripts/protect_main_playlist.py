@@ -81,22 +81,45 @@ def snapshot(playlist: Path, state: Path):
 def verify(playlist: Path, state: Path):
     saved = json.loads(state.read_text(encoding="utf-8"))
     before, after = saved["rows"], records(playlist)
-    if category_registry(playlist) != CATEGORY_ORDER:
-        raise SystemExit("IPTV-Playlist.m3u category registry is not the canonical category order.")
+    approvals = load_approvals()
+    # The approvals artifact is written only by the explicitly owner-requested
+    # one-time cleanup branch. Routine daily maintenance has no such authority.
+    migration_mode = bool(approvals)
+
+    current_registry = category_registry(playlist)
+    previous_registry = saved.get("category_registry")
+    if migration_mode:
+        if current_registry != CATEGORY_ORDER:
+            raise SystemExit("Owner-approved migration did not produce the canonical category registry.")
+    elif current_registry != previous_registry:
+        raise SystemExit("Routine IPTV maintenance changed the owner's category registry.")
+
     expected_counts = Counter(str(row["url"]) for row in before)
     actual_counts = Counter(str(row["url"]) for row in after)
     missing = expected_counts - actual_counts
     if missing:
         raise SystemExit(f"IPTV URL preservation failed: {sum(missing.values())} existing URL occurrence(s) missing.")
     added = actual_counts - expected_counts
+    if any(count for count in added.values()):
+        # Existing URLs can never be duplicated by a discovery candidate.
+        duplicated = sum(count for url, count in added.items() if url in expected_counts)
+        if duplicated:
+            raise SystemExit(f"IPTV URL preservation failed: {duplicated} duplicate existing URL occurrence(s) added.")
 
     before_by_url, after_by_url = defaultdict(list), defaultdict(list)
     for row in before:
         before_by_url[str(row["url"])].append(row)
     for row in after:
         after_by_url[str(row["url"])].append(row)
-    approvals = load_approvals()
+
     failures = []
+    baseline_order = [str(row["url"]) for row in before]
+    after_existing_order = [str(row["url"]) for row in after if str(row["url"]) in expected_counts]
+    # Daily repair/discovery jobs cannot reorder any existing row. The one-time
+    # owner-approved cleanup may sort/reassemble categories after exact approvals.
+    if not migration_mode and after_existing_order != baseline_order:
+        failures.append("Existing row order changed or an existing row is missing")
+
     for url, original_rows in before_by_url.items():
         updated_rows = after_by_url[url]
         if len(original_rows) != len(updated_rows):
@@ -105,61 +128,70 @@ def verify(playlist: Path, state: Path):
         for original, current in zip(original_rows, updated_rows):
             old_group = str(original.get("group", "")).strip()
             new_group = str(current.get("group", "")).strip()
-            if old_group != new_group:
-                approval = approvals.get((url, old_group, new_group))
-                if old_group == "Review" or not approval or approval.get("allow_metadata") is not True:
-                    failures.append(f"Unapproved group migration for {current['name']}: {old_group} -> {new_group}")
+            approved = approvals.get((url, old_group, new_group))
+            exact_approval = bool(approved and approved.get("allow_metadata") is True)
+            if old_group != new_group and (old_group == "Review" or not exact_approval):
+                failures.append(f"Unapproved group migration for {current['name']}: {old_group} -> {new_group}")
+            if old_group == new_group and not migration_mode and current["number"] != str(original.get("number", "")):
+                failures.append(f"Existing channel number changed for {current['name']}")
+            if old_group != new_group and not exact_approval:
+                failures.append(f"Unapproved group migration for {current['name']}: {old_group} -> {new_group}")
             if new_group not in CATEGORY_ORDER:
                 failures.append(f"Unknown category {new_group!r}: {current['name']}")
-            if new_group in PRIMARY_GROUPS and not current["number"].isdigit():
-                failures.append(f"Primary channel has no numeric tvg-chno: {current['name']}")
-            if new_group not in PRIMARY_GROUPS and current["number"]:
-                failures.append(f"Non-primary channel carries tvg-chno: {current['name']} ({new_group})")
 
-    remaining_additions = added.copy()
-    for row in after:
-        url = str(row["url"])
-        if remaining_additions[url] > 0:
-            if url in expected_counts:
-                failures.append(f"Duplicate stream URL occurrence added: {row['name']}")
+    # Metadata/country/logo defects in these queues are intentionally deferred
+    # to the owner's manual review; they must never stop discovery from staging.
+    for url, count in added.items():
+        rows = after_by_url[url]
+        if url in expected_counts:
+            failures.append(f"Duplicate existing stream URL occurrence added: {url}")
+            continue
+        for row in rows:
             if row["group"] not in DISCOVERY_GROUPS:
                 failures.append(f"New row outside discovery queues: {row['name']} ({row['group']})")
-            remaining_additions[url] -= 1
 
-    seen_groups = []
-    for row in after:
-        group = row["group"]
-        if not seen_groups or seen_groups[-1] != group:
-            if group in seen_groups:
-                failures.append(f"Category block is split: {group}")
-            seen_groups.append(group)
-    ranks = [CATEGORY_ORDER.index(group) for group in seen_groups if group in CATEGORY_ORDER]
-    if ranks != sorted(ranks):
-        failures.append("Category blocks do not follow the canonical category order.")
+    # Routine maintenance preserves existing row placement, so category block
+    # order and manual numbering anomalies remain diagnostics rather than a
+    # reason to reshuffle the owner's playlist. The owner-approved one-time
+    # migration is allowed to reassemble canonical category blocks.
+    if migration_mode:
+        seen_groups = []
+        for row in after:
+            group = row["group"]
+            if not seen_groups or seen_groups[-1] != group:
+                if group in seen_groups:
+                    failures.append(f"Category block is split: {group}")
+                seen_groups.append(group)
+        ranks = [CATEGORY_ORDER.index(group) for group in seen_groups if group in CATEGORY_ORDER]
+        if ranks != sorted(ranks):
+            failures.append("Category blocks do not follow the canonical category order.")
 
-    primary_numbers = []
-    seen_ids = {}
-    duplicate_urls = [url for url, count in Counter(row["url"] for row in after).items() if count > 1]
-    if duplicate_urls:
-        failures.append(f"Duplicate stream URL occurrences remain: {len(duplicate_urls)}")
-    for row in after:
-        if row["group"] not in PRIMARY_GROUPS:
-            continue
-        primary_numbers.append(int(row["number"]) if row["number"].isdigit() else -1)
-        for channel_id in row["ids"]:
-            previous = seen_ids.get(channel_id)
-            if previous and previous != row["url"]:
-                failures.append(f"Duplicate primary channel identity: {channel_id} ({row['name']})")
-            seen_ids[channel_id] = row["url"]
-    if primary_numbers != list(range(1, len(primary_numbers) + 1)):
-        failures.append("Primary tvg-chno values are not sequential in playlist order.")
+        primary_numbers = []
+        seen_ids = {}
+        for row in after:
+            if row["group"] not in PRIMARY_GROUPS:
+                continue
+            if not row["number"].isdigit():
+                failures.append(f"Owner-approved migration left a primary row unnumbered: {row['name']}")
+            else:
+                primary_numbers.append(int(row["number"]))
+            for channel_id in row["ids"]:
+                previous = seen_ids.get(channel_id)
+                if previous and previous != row["url"]:
+                    failures.append(f"Duplicate primary channel identity: {channel_id} ({row['name']})")
+                seen_ids[channel_id] = row["url"]
+        if primary_numbers and primary_numbers != list(range(1, len(primary_numbers) + 1)):
+            failures.append("Owner-approved migration did not produce sequential primary channel numbers.")
 
     if failures:
         for item in failures[:30]:
             print(f"::error::{item}", file=sys.stderr)
-        raise SystemExit(f"IPTV cleanup safety gate failed with {len(failures)} issue(s).")
-    print(f"IPTV cleanup guard passed: {sum(actual_counts.values())} stream URLs preserved; "
-          "all group changes exact-URL approved; category blocks, identities and numbering valid.")
+        raise SystemExit(f"IPTV owner-protection gate failed with {len(failures)} issue(s).")
+    print(
+        f"IPTV owner-protection passed: {sum(actual_counts.values())} stream URLs preserved; "
+        f"{'owner-approved migration' if migration_mode else 'routine metadata/logo/discovery'} "
+        "permissions respected."
+    )
 
 
 def main():
