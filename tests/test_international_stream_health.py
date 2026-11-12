@@ -64,12 +64,72 @@ class InternationalStreamHealthTests(unittest.TestCase):
         self.assertIn('group-title="Review"', output)
         self.assertEqual(events[0]["streak"], 1)
 
-    def test_success_restores_original_group(self):
-        output, history, _ = apply(self.playlist(row()), "fail", {}, "2026-11-07")
+    def test_success_reclassifies_auto_review_to_correct_primary_group(self):
+        output, history, _ = apply(self.playlist(row(name="Example Movie")), "fail", {}, "2026-11-07")
         output, history, events = apply(output, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
-        self.assertIn('group-title="International Movies"', output)
-        self.assertEqual(events[0]["action"], "restored")
+        self.assertIn('group-title="International"', output)
+        self.assertEqual(events[0]["action"], "restored-to-primary")
         self.assertEqual(events[0]["streak"], 0)
+
+
+    def test_working_manual_review_channel_moves_to_primary(self):
+        source = self.playlist(row(name="Manual Movie", group="Review"))
+        output, _, events = apply(source, "ok", {}, "2026-11-08", status=200, reason="Media bytes received")
+        self.assertIn('group-title="International"', output)
+        self.assertEqual(events[0]["action"], "restored-to-primary")
+
+    def test_working_review_alternate_moves_to_backup_when_primary_exists(self):
+        primary = row(name="Shared Movie", group="International Movies", url="https://example.test/primary.m3u8")
+        review = row(name="Shared Movie", group="Review", url="https://example.test/alternate.m3u8")
+        source = self.playlist(primary + review)
+        output, _, events = apply(source, "ok", {}, "2026-11-08", status=200, reason="Media bytes received")
+        self.assertIn('group-title="Backup"', output)
+        self.assertEqual(events[1]["action"], "restored-to-backup")
+        self.assertIn("https://example.test/alternate.m3u8", output)
+
+    def test_working_review_channel_forms_country_group_on_fifth_primary_identity(self):
+        header = (
+            "#EXTM3U\n"
+            '#PLAYLIST-STUDIO-CATEGORIES:["International","Review","New Channels","New Backups","Backup"]\n'
+        )
+        rows = []
+        for number in range(1, 5):
+            rows.append(row(
+                name=f"Albania Movie {number}", group="International",
+                url=f"https://al.example/{number}.m3u8",
+            ).replace("testmovie.us", f"albania{number}.al").replace('tvg-country="US"', 'tvg-country="AL"').replace('tvg-language="eng"', 'tvg-language="sqi"').replace('tvg-logo="logos/test-movie.png"', 'tvg-logo="logos/albania.png"'))
+        candidate = row(
+            name="Albania Movie 5", group="Review",
+            url="https://al.example/5.m3u8",
+        ).replace("testmovie.us", "albania5.al").replace('tvg-country="US"', 'tvg-country="AL"').replace('tvg-language="eng"', 'tvg-language="sqi"').replace('tvg-logo="logos/test-movie.png"', 'tvg-logo="logos/albania.png"')
+        source = header + "".join(rows) + candidate
+        output, _, _ = health.apply_results(
+            source,
+            [{"state": "ok", "status": 200, "reason": "Media bytes received"}] * 5,
+            {},
+            "2026-11-08",
+        )
+        self.assertIn('group-title="Albania"', output)
+        self.assertIn('"Albania"', next(x for x in output.splitlines() if x.startswith("#PLAYLIST-STUDIO-CATEGORIES:")))
+
+    def test_working_but_policy_ineligible_indian_review_stays_in_review(self):
+        source = self.playlist(
+            row(name="Indian Quran Channel", group="Review")
+            .replace("testmovie.us", "indianquranchannel.in")
+            .replace('tvg-country="US"', 'tvg-country="IN"')
+        )
+        output, _, events = apply(source, "ok", {}, "2026-11-08", status=200, reason="Media bytes received")
+        self.assertIn('group-title="Review"', output)
+        self.assertEqual(events[0]["action"], "unchanged")
+
+
+    def test_working_but_unclassified_foreign_review_stays_in_review(self):
+        source = self.playlist(
+            row(name="General Entertainment Channel", group="Review")
+        )
+        output, _, events = apply(source, "ok", {}, "2026-11-08", status=200, reason="Media bytes received")
+        self.assertIn('group-title="Review"', output)
+        self.assertEqual(events[0]["action"], "unchanged")
 
     def test_token_rotation_does_not_reset_history(self):
         one = row(url="https://example.test/live/user/pass/12.m3u8?token=old")

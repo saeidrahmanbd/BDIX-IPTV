@@ -95,11 +95,12 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("git add -f epg/epg.xml", refresh)
         self.assertIn("workflow_dispatch:", refresh)
 
-    def test_main_playlist_maintenance_is_non_structural_and_guarded(self):
+    def test_main_playlist_maintenance_allows_verified_group_corrections_and_guards_urls(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\n          }", workflow.index("run_mutations() {"))]
         self.assertIn("python scripts/normalize_metadata.py", mutations)
         self.assertIn("python scripts/migrate_external_logos_fixed.py", mutations)
+        self.assertIn("python scripts/reclassify_main_playlist_groups.py", mutations)
         self.assertIn("python scripts/iptv_metadata_backfill.py", mutations)
         self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
         for forbidden in (
@@ -110,6 +111,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         ):
             self.assertNotIn(forbidden, mutations)
         self.assertIn("python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u", workflow)
+        self.assertIn("python -m unittest discover -s tests -p 'test_main_playlist_grouping.py'", workflow)
         normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
         self.assertIn("Keep the original record sequence exactly", normalizer)
         self.assertNotIn("records.sort(", normalizer)
