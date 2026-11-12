@@ -13,6 +13,8 @@ on:
       - 'tests/test_channel_discovery_policy.py'
       - 'tests/test_country_verification.py'
       - 'tests/test_discovery_run_validation.py'
+      - 'tests/test_discovery_schedule_guard.py'
+      - 'tests/test_stream_url_identity.py'
   schedule:
     - cron: '0 1 * * *' # 07:00 Asia/Dhaka (UTC+6)
   workflow_dispatch:

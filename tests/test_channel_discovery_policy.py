@@ -195,6 +195,21 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertEqual(reason, "")
                 self.assertEqual(candidate, source_metadata)
 
+    def test_indian_cricket_and_football_sports_channels_are_discovery_eligible(self):
+        for name in ("Cricket 24", "Test Cricket HD", "Football Live", "Football Sports"):
+            with self.subTest(name=name):
+                attrs = {
+                    "tvg-id": "ExampleChannel.in",
+                    "channel-id": "ExampleChannel.in",
+                    "tvg-country": "IN",
+                    "group-title": "Sports",
+                }
+                candidate, reason = evaluate(
+                    "India", attrs, name, "https://example.org/sports/live/index.m3u8"
+                )
+                self.assertEqual(reason, "")
+                self.assertEqual(candidate, attrs)
+
     def test_bangladeshi_news_is_allowed(self):
         attrs = {"group-title": "News", "tvg-country": "BD", "tvg-id": "Channel24.bd"}
         self.assertIsNone(prohibited_channel(attrs, "Channel 24"))

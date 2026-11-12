@@ -343,24 +343,65 @@ def probe_mode(playlist, report, baseline, mode):
     before = bp.read_text(encoding="utf-8-sig")
     lines, entries, malformed = parse_playlist(text)
     _, before_entries, before_malformed = parse_playlist(before)
-    if malformed or before_malformed:
-        append_section(report, "Stream verification", f"- Run timestamp: {now()}\n- BLOCKER: malformed EXTINF/URL pairs detected before stream verification; playlist left unchanged.")
+    # Pre-existing malformed rows are historical playlist defects, not discovery
+    # failures. Only malformed EXTINF/URL pairs introduced by this run block.
+    baseline_bad = Counter((item[1], item[2]) for item in before_malformed)
+    new_malformed = []
+    for item in malformed:
+        signature = (item[1], item[2])
+        if baseline_bad[signature]:
+            baseline_bad[signature] -= 1
+        else:
+            new_malformed.append(item)
+    if new_malformed:
+        append_section(
+            report,
+            "Stream verification",
+            f"- Run timestamp: {now()}\n- BLOCKER: {len(new_malformed)} newly introduced malformed EXTINF/URL pair(s); new discovery rows were not published.",
+        )
         raise SystemExit(1)
+
     baseline_urls = {stream_url_key(e["url"]) for e in before_entries}
     queues = {"new channels", "new backup", "new backups"}
-    targets = [e for e in entries if e["group"].casefold() in queues or stream_url_key(e["url"]) not in baseline_urls]
+    # IPTV manual-review queues are immutable after insertion: do not re-probe
+    # or rewrite old queue rows on subsequent discovery runs.
+    if mode == "iptv":
+        baseline_records = Counter((e["extinf"], e["url"]) for e in before_entries)
+        consumed_records = Counter()
+        new_entries = []
+        for entry in entries:
+            signature = (entry["extinf"], entry["url"])
+            if consumed_records[signature] < baseline_records[signature]:
+                consumed_records[signature] += 1
+            else:
+                new_entries.append(entry)
+        targets = new_entries
+    else:
+        targets = [e for e in entries if e["group"].casefold() in queues or stream_url_key(e["url"]) not in baseline_urls]
+
     counts = Counter()
     details = []
     remove_starts = set()
     update_lines = {}
-    seen = set()
-    for e in entries:
-        urlkey = stream_url_key(e["url"])
-        if urlkey in seen and urlkey not in baseline_urls:
-            remove_starts.add(e["start"])
-            counts["duplicate discovery entries removed"] += 1
-            details.append(f"- Removed duplicate newly discovered entry {e['name']} — duplicate stream URL.")
-        seen.add(urlkey)
+    if mode == "iptv":
+        seen_new = set()
+        for e in targets:
+            urlkey = stream_url_key(e["url"])
+            if urlkey in seen_new:
+                remove_starts.add(e["start"])
+                counts["duplicate discovery entries removed"] += 1
+                details.append(f"- Removed duplicate newly discovered entry {e['name']} — duplicate stream URL.")
+            seen_new.add(urlkey)
+    else:
+        # Preserve International's historical duplicate handling for queued rows.
+        seen = set()
+        for e in entries:
+            urlkey = stream_url_key(e["url"])
+            if urlkey in seen and urlkey not in baseline_urls:
+                remove_starts.add(e["start"])
+                counts["duplicate discovery entries removed"] += 1
+                details.append(f"- Removed duplicate discovery entry {e['name']} — duplicate stream URL.")
+            seen.add(urlkey)
     probe_targets = [e for e in targets if e["start"] not in remove_starts]
     results = {}
     verified_starts = set()
@@ -373,40 +414,48 @@ def probe_mode(playlist, report, baseline, mode):
     for e in probe_targets:
         status, reason = results[e["start"]]
         counts[f"stream status: {status}"] += 1
-        group_key = e["group"].casefold()
-        is_backup = group_key in {"new backup", "new backups"}
         if status == "dead":
+            # A definitive dead/invalid response is the discovery-time stream
+            # failure that removes a newly sourced candidate.
             remove_starts.add(e["start"])
-            why = reason if status == "dead" else f"backup stream not verified ({reason})"
-            details.append(f"- Removed {e['name']} from {e['group']} — {why}.")
-            counts["removed invalid/dead or unverified backup entries"] += 1
+            details.append(f"- Removed newly discovered {e['name']} from {e['group']} — {reason}.")
+            counts["definitively dead new candidates removed"] += 1
             continue
+
         if status == "verified":
             counts["verified streams"] += 1
+            verified_starts.add(e["start"])
         else:
-            counts["primary streams retained as unverified"] += 1
+            counts["inconclusive streams retained for manual review"] += 1
             inconclusive_starts.add(e["start"])
-            details.append(f"- Moved {e['name']} to Review — stream could not be conclusively verified ({reason}).")
+            details.append(
+                f"- Retained {e['name']} in {e['group']} for manual review — stream probe was inconclusive ({reason})."
+            )
+
+        if mode == "iptv":
+            # New Channels/New Backups are private manual-review queues. Do not
+            # rewrite source metadata, move groups, or require a local logo here.
+            logo_path = local_logo_path(e["logo"])
+            if logo_path is None or not logo_path.is_file():
+                counts["candidates needing local logo repair"] += 1
+                details.append(
+                    f"- {e['name']} has no verified local logo; kept in {e['group']} for later repair."
+                )
+            continue
+
+        # International discovery retains its stricter promotion/local-logo
+        # policy; this branch is deliberately not applied to IPTV manual queues.
         new_extinf, localized, unavailable = ensure_local_logo(e)
         if unavailable:
             counts["candidates held for missing local logo"] += 1
-            if mode == "international":
-                update_lines[e["start"]] = discovery.set_attr(e["extinf"], "group-title", "Review")
-                inconclusive_starts.add(e["start"])
-                details.append(
-                    f"- Moved {e['name']} to Review — no authentic local logo asset is available."
-                )
-            else:
-                remove_starts.add(e["start"])
-                counts["candidates removed for missing local logo"] += 1
-                details.append(
-                    f"- Held {e['name']} out of {e['group']} — no authentic local logo asset is available."
-                )
+            update_lines[e["start"]] = discovery.set_attr(e["extinf"], "group-title", "Review")
+            inconclusive_starts.add(e["start"])
+            details.append(
+                f"- Moved {e['name']} to Review — no authentic local logo asset is available."
+            )
             continue
         if new_extinf != e["extinf"]:
             update_lines[e["start"]] = new_extinf
-        if status == "verified":
-            verified_starts.add(e["start"])
         if localized:
             counts["logos localized to repository assets"] += 1
     if mode == "international":
@@ -436,15 +485,13 @@ def probe_mode(playlist, report, baseline, mode):
         f"- Verified live media responses: {counts['verified streams']}",
         f"- Verified new primary channels automatically promoted: {counts['verified primary channels promoted']}",
         f"- Verified alternate streams moved to Backup: {counts['verified alternate streams moved to Backup']}",
-        f"- Inconclusive candidates moved to Review: {counts['inconclusive candidates moved to Review']}",
-        f"- Primary entries retained but not conclusively verified: {counts['primary streams retained as unverified']}",
-        f"- Definitively dead/invalid candidates removed: {counts['removed invalid/dead or unverified backup entries']}",
-        f"- Inconclusive primary/backup candidates retained for manual review: {counts['primary streams retained as unverified']}",
-        f"- Duplicate discovery entries removed: {counts['duplicate discovery entries removed']}",
+        f"- Inconclusive candidates retained for manual review: {counts['inconclusive streams retained for manual review'] if mode == 'iptv' else counts['primary streams retained as unverified']}",
+        f"- Definitively dead new candidates removed: {counts['definitively dead new candidates removed']}",
+        f"- Duplicate newly discovered stream entries removed: {counts['duplicate discovery entries removed']}",
         f"- Country-group rows consolidated after stream probing: {counts['country-group rows consolidated after stream probing']}",
         f"- Logo references localized to authentic repository assets: {counts['logos localized to repository assets']}",
-        f"- Candidates without local logos moved to Review: {counts['candidates held for missing local logo']}",
-        f"- Candidates removed for missing local logos (IPTV mode): {counts['candidates removed for missing local logo']}",
+        f"- IPTV manual-review candidates needing later local-logo repair (warning only): {counts['candidates needing local logo repair']}",
+        f"- International candidates held for missing local logos: {counts['candidates held for missing local logo']}",
         "",
         "### Stream probe details",
         *(details[:100] if details else ["- No stream removals or uncertain responses to report."]),
@@ -459,7 +506,99 @@ def final_mode(playlist, report, baseline, mode):
     text = p.read_text(encoding="utf-8-sig")
     before = bp.read_text(encoding="utf-8-sig")
     lines, entries, malformed = parse_playlist(text)
-    _, before_entries, _ = parse_playlist(before)
+    _, before_entries, before_malformed = parse_playlist(before)
+
+    if mode == "iptv":
+        # Compare only this run's additions against the exact pre-run snapshot.
+        # Legacy malformed rows, duplicates, category order, country metadata,
+        # logos and other historical defects must not block manual-review intake.
+        baseline_records = Counter((e["extinf"], e["url"]) for e in before_entries)
+        consumed_records = Counter()
+        new_entries = []
+        for entry in entries:
+            signature = (entry["extinf"], entry["url"])
+            if consumed_records[signature] < baseline_records[signature]:
+                consumed_records[signature] += 1
+            else:
+                new_entries.append(entry)
+
+        baseline_bad = Counter((item[1], item[2]) for item in before_malformed)
+        new_malformed = []
+        for item in malformed:
+            signature = (item[1], item[2])
+            if baseline_bad[signature]:
+                baseline_bad[signature] -= 1
+            else:
+                new_malformed.append(item)
+
+        baseline_url_counts = Counter(stream_url_key(e["url"]) for e in before_entries)
+        current_url_counts = Counter(stream_url_key(e["url"]) for e in entries)
+        new_duplicate_count = sum(
+            max(0, count - max(1, baseline_url_counts[url]))
+            for url, count in current_url_counts.items()
+        )
+
+        errors = []
+        validator_outcome = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME", "success").casefold()
+        if validator_outcome != "success":
+            errors.append(f"queue URL validator result: {validator_outcome}")
+        if new_malformed:
+            errors.append(f"{len(new_malformed)} newly introduced malformed EXTINF/URL pair(s)")
+        if new_duplicate_count:
+            errors.append(f"{new_duplicate_count} newly introduced duplicate stream URL occurrence(s)")
+
+        wrong_queue = [
+            entry["name"] for entry in new_entries
+            if entry["group"].casefold() not in {"new channels", "new backup", "new backups"}
+        ]
+        if wrong_queue:
+            errors.append(
+                "new candidates must remain in New Channels/New Backups: "
+                + ", ".join(wrong_queue[:20])
+            )
+
+        missing_logo = 0
+        nonlocal_logo = 0
+        country_warning = 0
+        for entry in new_entries:
+            logo_path = local_logo_path(entry["logo"])
+            if logo_path is None or not logo_path.is_file():
+                missing_logo += 1
+                if entry["logo"]:
+                    nonlocal_logo += 1
+
+            declared = (entry["attrs"].get("tvg-country") or "").strip().upper()
+            id_countries = {
+                match.group(1).upper()
+                for value in (entry["attrs"].get("tvg-id", ""), entry["attrs"].get("channel-id", ""))
+                if (match := re.search(r"\.([a-z]{2})(?:@|$)", value.strip(), re.I))
+            }
+            if declared not in {"BD", "IN"} or (id_countries and (
+                len(id_countries) != 1 or not id_countries.issubset({"BD", "IN"})
+                or (declared and declared not in id_countries)
+            )):
+                country_warning += 1
+
+        status = "PASS" if not errors else "FAIL"
+        body = [
+            f"- Run timestamp: {now()}",
+            f"- Validation status: {status}",
+            f"- New manual-review candidates retained: {len(new_entries)}",
+            f"- New malformed EXTINF/URL pairs: {len(new_malformed)}",
+            f"- New duplicate stream URL occurrences: {new_duplicate_count}",
+            f"- New candidates missing an authentic local logo: {missing_logo} (warning only)",
+            f"- New candidates with non-local logo references: {nonlocal_logo} (warning only)",
+            f"- New candidates with country metadata requiring manual review: {country_warning} (warning only)",
+            f"- New candidates outside New Channels/New Backups: {len(wrong_queue)}",
+            "- Existing playlist defects, country metadata and logo completeness do not block discovery.",
+            "- New candidates remain in New Channels/New Backups for owner review; only definitively dead streams are removed.",
+        ]
+        if errors:
+            body += ["", "### Blockers", *(f"- {error}" for error in errors[:100])]
+        append_section(report, "Final validation", "\n".join(body))
+        print("\n".join(body))
+        return
+
     baseline_urls = {stream_url_key(e["url"]) for e in before_entries}
     groups = []
     for e in entries:

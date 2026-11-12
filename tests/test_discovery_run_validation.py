@@ -216,12 +216,15 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                     validation,
                     "ensure_local_logo",
                     side_effect=lambda entry: (entry["extinf"], False, True),
-                ):
+                ) as logo_repair:
                     validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
             output = playlist.read_text(encoding="utf-8")
             self.assertIn('group-title="New Channels",Fresh Candidate', output)
             self.assertIn('group-title="New Channels",Old Queue Row', output)
+            self.assertIn('tvg-id="Fresh.us"', output)
+            self.assertIn('tvg-country="US"', output)
             self.assertEqual(probe.call_count, 1)
+            logo_repair.assert_not_called()
             self.assertIn("manual review", report.read_text(encoding="utf-8").casefold())
 
     def test_final_iptv_validation_ignores_country_logo_and_preexisting_playlist_duplicates(self):

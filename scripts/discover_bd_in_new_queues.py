@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qsl, urlparse
 
-from country_verification import norm_name, reference_from_playlists, verify_country
+from country_verification import norm_name
 from stream_url_identity import stream_url_key
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
@@ -384,7 +384,7 @@ def main() -> int:
             continue
         for a, name, url in parse(text):
             key = stream_url_key(url)
-            normalized, reason = evaluate(country, a, name, url, reference)
+            normalized, reason = evaluate(country, a, name, url)
             if normalized is not None and key not in seen_source_urls:
                 candidates.append((country, normalized, name, url))
                 seen_source_urls.add(key)
@@ -460,7 +460,7 @@ def main() -> int:
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**",
-        "- Bangladesh channels of all genres are eligible. Indian Kids and Sports channels (including cricket and football) are eligible; Indian News, Religious (including Islamic), Educational, Knowledge and Business/Finance channels remain prohibited.",
+        "- Bangladesh channels of all genres are eligible. Indian Kids and Sports channels are eligible, explicitly including cricket and football; Indian News, Religious (including Islamic), Educational, Knowledge and Business/Finance channels remain prohibited.",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
         "- Existing manual-review queue rows changed by discovery: **0**",
