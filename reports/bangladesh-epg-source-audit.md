@@ -1,6 +1,6 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-12T09:43:47+00:00**
+Generated: **2026-11-12T16:02:32+00:00**
 
 - Active Bangladesh playlist identities: **81**
 - Identities with a retained source mapping: **5**
@@ -22,7 +22,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry) |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 71 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 62 | - |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
@@ -71,7 +71,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
 | Jonmobhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
-| JTV BANGLA | jtv.bangla.bd | NO_GUIDE_HIT |
+| JTV Bangla | jtv.bangla.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd@HD | NO_GUIDE_HIT |
 | ME TV | METV.bd | NO_GUIDE_HIT |
@@ -104,7 +104,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Ten TV Prime | custom.tentvprime | NO_GUIDE_HIT |
 | Thikana TV | ThikanaTV.us | NO_GUIDE_HIT |
 | Time Television | TimeTelevision.us | NO_GUIDE_HIT |
-| VISION 24 | vision.24.bd | NO_GUIDE_HIT |
+| Vision 24 | vision.24.bd | NO_GUIDE_HIT |
 
 ## Matching and source notes
 
