@@ -103,7 +103,7 @@ class InternationalStreamHealthTests(unittest.TestCase):
             url="https://al.example/5.m3u8",
         ).replace("testmovie.us", "albania5.al").replace('tvg-country="US"', 'tvg-country="AL"').replace('tvg-language="eng"', 'tvg-language="sqi"').replace('tvg-logo="logos/test-movie.png"', 'tvg-logo="logos/albania.png"')
         source = header + "".join(rows) + candidate
-        _, output, _ = health.apply_results(
+        output, _, _ = health.apply_results(
             source,
             [{"state": "ok", "status": 200, "reason": "Media bytes received"}] * 5,
             {},
