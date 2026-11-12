@@ -312,6 +312,18 @@ for r in rows:
   # their original EXTINF line without metadata, logo, or channel-number edits.
   continue
  if g not in EXCLUDE:
+  # This feed is a legacy Colors Bangla alias, not the active Colors Bangla HD
+  # service. Keep its URL and artwork, but quarantine it under its distinct
+  # canonical legacy identity instead of publishing it as Indian Movies.
+  if (a.get("tvg-id") or "").casefold() == "colorsbanglacinema.in@sd@colors.bangla.cinema":
+   m=set_attr(m,"tvg-id","Colors.Bangla.in")
+   m=set_attr(m,"channel-id","Colors.Bangla.in")
+   m=set_attr(m,"tvg-name","Colors Bangla")
+   m=set_attr(m,"group-title","Review")
+   m=re.sub(r'\\s+tvg-chno="[^"]*"',"",m,count=1)
+   lines[r["i"]]=f"{m},Colors Bangla"
+   stats["backups"]+=1
+   continue
   name=CASE.get(clean(a.get("tvg-name") or r["name"]),clean(a.get("tvg-name") or r["name"]))
   cid=normalize_id(a.get("tvg-id") or a.get("channel-id") or IDS.get(name) or "custom."+norm(name))
   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name)
