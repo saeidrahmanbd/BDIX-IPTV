@@ -73,6 +73,11 @@ def sort_playlist(path):
         elif current is None:preamble.append(line)
         else:current.append(line)
     if current is not None:records.append(current)
+    if path.name == "IPTV-Playlist.m3u":
+        # Legacy Not Playing entries are now part of the Review queue.
+        for record in records:
+            if attrs(record[0]).get("group-title", "").strip() == "Not Playing":
+                record[0] = set_attr(record[0], "group-title", "Review")
     intl_rank=international_rank(records) if path.name=="International-Playlist.m3u" else None
     if path.name == "IPTV-Playlist.m3u":
         # Reassemble one contiguous block per declared category. Python's sort
