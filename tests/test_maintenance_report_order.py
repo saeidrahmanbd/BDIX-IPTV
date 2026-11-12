@@ -139,6 +139,11 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
         self.assertIn("Keep the original record sequence exactly", normalizer)
         self.assertNotIn("records.sort(", normalizer)
+        self.assertIn("Preserve its exact", normalizer)
+        self.assertIn('line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")', normalizer)
+        self.assertNotIn("CATEGORY_REGISTRY=", normalizer)
+        self.assertNotIn('set_attr(m,"tvg-chno"', normalizer)
+        self.assertNotIn('tvg-chno="[^"]*"', normalizer)
         after = workflow[workflow.index("\n          }", workflow.index("run_mutations() {")):]
         for script in ("stream_health", "generate_dashboard", "validate_report_freshness"):
             self.assertIn(f"python scripts/{script}.py", after)
