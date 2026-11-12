@@ -99,6 +99,17 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\n          }", workflow.index("run_mutations() {"))]
         self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then', mutations)
+        owner_branch_start = mutations.index('if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then')
+        owner_branch_end = mutations.index("\\n            fi", owner_branch_start)
+        owner_branch = mutations[owner_branch_start:owner_branch_end]
+        for forbidden in (
+            "reclassify_main_playlist_groups.py",
+            "backfill_cross_playlist_metadata.py",
+            "reorganize_international_playlist.py",
+            "enforce_playlist_attribution.py International-Playlist.m3u",
+            "repair_logo_asset_technical_quality.py --fix",
+        ):
+            self.assertNotIn(forbidden, owner_branch)
         self.assertIn("python scripts/probe_owner_requested_main_queues.py", mutations)
         self.assertIn("python scripts/migrate_owner_requested_main_queues.py", mutations)
         self.assertIn("python scripts/sort_playlists.py IPTV-Playlist.m3u", mutations)
