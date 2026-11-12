@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-12T05:41:11+00:00**
+Generated: **2026-11-12T07:40:36+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **ebabf8e5d80fa4c1524209e86de1022f0c7195719266f81eccbad13b250bca95**
-- International-Playlist.m3u SHA-256: **9b5feeea76c79307222ed7e33cfe4de550fab4feaf35331d8e39fa4f45c4fa5e**
+- IPTV-Playlist.m3u SHA-256: **b4bd82f1c2158f3f4cef5a6a16f9567e9db54d682a807b9dbc4ee64ccc0d59a4**
+- International-Playlist.m3u SHA-256: **a8b9b1e3476703ce73fb6c3b2fd859079df32c86a0e59edac3a1aa093ffa4ccc**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 18 | 0 | 1313 |
+| IPTV-Playlist.m3u | 0 | 18 | 0 | 1224 |
 | International-Playlist.m3u | 0 | 813 | 0 | 2294 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3607**
+- Logos needing attribution review: **3518**
 - Unofficial fallback logos: **0**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3607 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3518 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
@@ -40,7 +40,6 @@ Showing up to 40 of 3607 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | 7S Music | 7SMusic.in@SD | 7s-music.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 7S Music | 7SMusic.in@SD | 7s-music.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 7S Music | 7SMusic.in@SD | 7s-music.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | 7S Music | 7SMusic.in@SD | 7s-music.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 7X Punjabi | 7XPunjabi.in | 7x-punjabi.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 8XM | 8XM.pk@SD | 8xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 8XM | 8XM.pk@SD | 8xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
@@ -49,20 +48,15 @@ Showing up to 40 of 3607 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jhakaas | 9XJhakaas.in@SD | 9x-jhakaas.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jhakaas | 9XJhakaas.in@SD | 9x-jhakaas.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jhakaas | 9XJhakaas.in@SD | 9x-jhakaas.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | 9X Jhakaas | 9XJhakaas.in@SD | 9x-jhakaas.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Tashan | 9XTashan.in@SD | 9x-tashan.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Tashan | 9XTashan.in@SD | 9x-tashan.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Tashan | 9XTashan.in@SD | 9x-tashan.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Tashan | 9XTashan.in@SD | 9x-tashan.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Tashan | 9XTashan.in@SD | 9x-tashan.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Tashan | 9XTashan.in@SD | 9x-tashan.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | 9X Tashan | 9XTashan.in@SD | 9x-tashan.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
@@ -70,6 +64,12 @@ Showing up to 40 of 3607 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9XM | 9XM.in@SD | 9xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | A Sports | ASports.pk | a-sports-65a3e1d8fd.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | Aaryaa TV | AaryaaTV.in | aaryaa-tv.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | ACCDN | custom.accdn | accdn.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 
 ## Shared logo assets across distinct channel identities
 
@@ -77,17 +77,20 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 
 | Local asset | Channel identity | tvg-id |
 |---|---|---|
-| 1-1-international.png | 广东体育 | channel.com |
-| 1-1-international.png | 广东体育 | channel.com@channel |
+| action-hollywood-movies.png | Action Hollywood Movies | action.hollywood.movies.en |
+| action-hollywood-movies.png | Action Hollywood Movies | plex.tv.Action.Hollywood.Movies.plex |
 | ananda-tv.png | Ananda TV | AnandaTV.bd |
-| ananda-tv.png | Anananda Tv | anananda.tv.bd |
+| ananda-tv.png | Ananda TV | anananda.tv.bd |
 | asianet-576p.png | Asianet | Asianet.in |
-| asianet-576p.png | Asianet HD | Asianet.in@HD |
+| asianet-576p.png | Asianet | Asianet.in@HD |
+| channel-s.png | Channel S | ChannelS.bd |
+| channel-s.png | Channel S | playlist.m3u8.bd |
 | colors-bangla-cinema.png | Colors Bangla Cinema | ColorsBanglaCinema.in@SD |
 | colors-bangla-cinema.png | Colors Bangla Cinema | ColorsBanglaCinema.in@SD@colors.bangla.cinema |
-| dd-sports-fb997548.png | DD Sports HD | DDSports.in@HD |
+| dd-sports-fb997548.png | DD Sports | DDSports.in@HD |
 | dd-sports-fb997548.png | DD Sports | DDSports.in@SD |
-| dd-sports-fb997548.png | DD Sports SD | DDSports.in@SD@dd.sports.sd |
+| desi-channel.png | Desi Channel | DesiChannel.in |
+| desi-channel.png | Desi Channel (1080p) | DesiChannel.in@SD |
 | discovery-channel-india.png | Discovery Channel (India) | DiscoveryChannel.in@HD |
 | discovery-channel-india.png | Discovery Channel (India) | DiscoveryChannel.in@SD |
 | espn.png | ESPN | ESPN.us |
@@ -100,26 +103,23 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | fashion-tv-aa7f9461cf.png | FashionTV | FashionTV.ru@SD |
 | fashion-tv-aa7f9461cf.png | FashionTV Paris L'Original | FashionTVParisLOriginal.fr@SD |
 | fashion-tv-aa7f9461cf.png | FashionTV Secrets | FashionTVSecrets.fr@HD |
-| fite-24-7.png | FITE 24 | FITE247.us |
-| fite-24-7.png | FITE 24/7 | FITE247.us@SD |
-| fox-sports.png | Fox Sports News | FoxSportsNews.au@SD |
-| fox-sports.png | FOX Sports | fox.sports.com |
 | futbol-tv-068fcbdde9.png | Futbol | Futbol.tj@SD |
 | futbol-tv-068fcbdde9.png | Futbol TV | FutbolTV.uz@HD |
 | goldmines-movies.png | Goldmines Movies | GoldminesMovies.in@SD |
 | goldmines-movies.png | Goldmines Movies 2 | goldmines.movies.2.in |
 | goldmines.png | Goldmines | Goldmines.in@SD |
 | goldmines.png | Goldmines 2 | Goldmines2.in@SD |
+| image.png | DD Odia (576p) | DDOdia.in@SD |
+| image.png | E 24 (576p) | E24.in@SD |
+| image.png | Movies Now HD (576p) | MoviesNow.in@HD |
+| image.png | Public Movies (576p) | PublicMovies.in@SD |
+| image.png | Sony Aath (1080p) | SonyAath.in@SD |
 | jalsha-movies.png | Jalsha Movies | JalshaMovies.in@SD |
 | jalsha-movies.png | Jalsha Movies | Star.Jalsha.Movies.in |
 | m-sports.png | M Sports | MSports.pk@SD |
 | m-sports.png | M Sports | MSports.pk@SD@m.sports |
-| mma-tv-com-85ca206b32.png | MMA TV.com 格斗 | MMATVcom.ru@SD |
-| mma-tv-com-85ca206b32.png | MMA-TV.com | MMATVcom.ru@SD@mma.tv.com |
 | nbc-sports-now-48667e2ba4.png | NBC Sports Now | NBCSportsNOW.us@SD |
 | nbc-sports-now-48667e2ba4.png | NBC Sports Now | NBCSportsNOW.us@SD@nbc.sports.now |
-| nhl-network.png | NHL Network | NHLNetwork.us |
-| nhl-network.png | NHL Network HD | nhl.network.hd.com |
 | pitaara-comedy.png | Pitaara | Pitaara.in@SD@pitaara |
 | pitaara-comedy.png | Pitaara Comedy | PitaaraComedy.in@SD |
 | q-tv.png | Q TV | QTV.in |
@@ -127,37 +127,22 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | real-madrid-tv-english.png | Real Madrid TV English | RealMadridTVEnglish.es@SD |
 | real-madrid-tv-english.png | Real Madrid TV English | RealMadridTVEnglish.es@SD@real.madrid.tv.english |
 | red-bull-tv-au-4ec4c704c2.png | Red Bull TV AU | RedBullTV.at@AU |
-| red-bull-tv-au-4ec4c704c2.png | RedBull | redbull.com |
-| red-bull-tv.png | Red Bull TV | RedBullTV.at@EUMENA |
-| red-bull-tv.png | MIXER | Red Bull TV UK | RedBullTV.at@SD |
+| red-bull-tv-au-4ec4c704c2.png | Red Bull TV | redbull.com |
 | sonic.png | Sonic | Sonic.in@SD |
 | sonic.png | Sonic The Hedgehog | custom.sonicthehedgehog |
 | sony-pal.png | Sony Pal | SonyPal.in@SD |
 | sony-pal.png | Sony Pal | SonyPal.in@SD@sony.pal |
-| sports-grid.png | Sports Grid | custom.sportsgrid |
-| sports-grid.png | MIXER | SportsGrid | mixer.sportsgrid.com |
 | star-jalsha.png | Star Jalsha | Star.Jalsha.in |
 | star-jalsha.png | Star Jalsha HD | StarJalsha.in@HD |
 | star-jalsha.png | Star Jalsha | StarJalsha.in@SD |
 | star-sports-2.png | Star Sports 2 | StarSports2.in |
 | star-sports-2.png | Star Sports 2 Telugu HD | StarSports2Telugu.in@HD |
-| swerve-sports-5bcc3e9a7f.png | Swerve Sports | SwerveSports.us@SD |
-| swerve-sports-5bcc3e9a7f.png | Swerve Sports | swerve.sports.com |
-| tennis-channel.png | Tennis Channel | TennisChannel.us@SD |
-| tennis-channel.png | Tennis Channel | TennisChannel.us@SD@tennis.channel |
-| tennis-channel.png | Tennis Channel HD | TennisChannel.us@SD@tennis.channel.hd |
-| thikana.png | Thikana | ThikanaTV.us |
+| thikana.png | Thikana TV | ThikanaTV.us |
 | thikana.png | Thikana TV | thikana.tv.bd |
-| trace-sport.png | Trace Sport | custom.tracesport |
-| trace-sport.png | MIXER | Trace Sports Stars | mixer.trace.sports.stars.com |
-| turkmenistan-sport-714745951c.png | Türkmenistan Sport | TurkmenistanSport.tm@SD |
-| turkmenistan-sport-714745951c.png | Türkmenistan Sport | TurkmenistanSport.tm@SD@tu.rkmenistan.sport |
 | vision.png | Eurovision Sport | EurovisionSport.uk@Europe |
 | vision.png | VISION 24 | vision.24.bd |
-| women-s-sports-network-d2bc35e249.png | Women's Sports Network | WomensSportsNetwork.us@SD |
-| women-s-sports-network-d2bc35e249.png | Women's Sports Network | WomensSportsNetwork.us@SD@women.s.sports.network |
-| world-of-freesports.png | World of Freesports | custom.worldoffreesports |
-| world-of-freesports.png | MIXER | World of Freesports | mixer.world.of.freesports.com |
+| yrf-music.png | YRF Music | YRFMusic.in |
+| yrf-music.png | YRF Music | YRFMusic.in@Nepal |
 
 ## Review policy
 

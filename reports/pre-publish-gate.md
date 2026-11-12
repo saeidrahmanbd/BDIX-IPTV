@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-12T05:40:29+00:00**
-Source playlist SHA-256: **ebabf8e5d80fa4c1524209e86de1022f0c7195719266f81eccbad13b250bca95**
+Generated: **2026-11-12T07:39:57+00:00**
+Source playlist SHA-256: **b4bd82f1c2158f3f4cef5a6a16f9567e9db54d682a807b9dbc4ee64ccc0d59a4**
 
 Status: **BLOCK**
 
-- Current entries: **1331**
+- Current entries: **1242**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -15,18 +15,18 @@ Status: **BLOCK**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **626**
-- Numbered review entries: **463**
-- Same-ID metadata name conflicts: **0**
-- Orphan Backup entries: **0**
-- Active rows with incomplete required metadata: **4**
-- tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **0**
-- Raw resolution/geoblock name tags: **0**
-- Missing logos in active groups: **4**
-- Missing logos deferred in review groups (Review/New Channels/New Backups): **3**
-- External logo URLs: **0**
+- Primary entries missing channel numbers: **13**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **632**
+- Numbered review entries: **425**
+- Same-ID metadata name conflicts: **1**
+- Orphan Backup entries: **29**
+- Active rows with incomplete required metadata: **3**
+- tvg-id/channel-id inconsistencies: **1**
+- Entries missing tvg-language: **18**
+- Raw resolution/geoblock name tags: **18**
+- Missing logos in active groups: **3**
+- Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
+- External logo URLs: **18**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
@@ -37,32 +37,72 @@ Status: **BLOCK**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **626**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **632**.
 
 ## Blocking Reasons
-- active entries with incomplete identity/country/logo metadata: 4
-- review entries still numbered: 463
-- missing logos: 4
+- orphan Backup entries: 29
+- active entries with incomplete identity/country/logo metadata: 3
+- tvg-id/channel-id inconsistencies: 1
+- entries missing tvg-language: 18
+- primary entries missing tvg-chno: 13
+- review entries still numbered: 425
+- same-ID metadata name conflicts: 1
+- raw resolution/geoblock tags in channel names: 18
+- missing logos: 3
+- external logo URLs: 18
+- New queue validation failures: 18
 
 ## Review-queue logo gaps
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
-- **Action Bollywood Movies**
-- **MOV | Bollywood OLD**
-- **playlist.m3u8**
+None.
 
 ## Metadata conflicts
 
-None.
+- **dangaltv.in@sd@dangal.tv** — Dangal [Backup]; Dangal TV [Backup]; Dangal TV [Backup]; Dangal TV [Backup]
 
 ## Raw name tags
 
-None.
+- **CCV (480p)** — New Channels
+- **Movies Now HD (576p)** — New Channels
+- **TamilVision-TV (1080p)** — New Channels
+- **All Time Movies (576p)** — New Backups
+- **DD Odia (576p)** — New Backups
+- **Desi Channel (1080p)** — New Backups
+- **E 24 (576p)** — New Backups
+- **Goldmines Action (576p)** — New Backups
+- **KTV Bangla (1080p)** — New Backups
+- **Manoranjan Movies (576p)** — New Backups
+- **Mazhavil Manorama HD (1080p)** — New Backups
+- **Public Movies (576p)** — New Backups
+- **Rengoni (576p)** — New Backups
+- **Sangeet Bhojpuri (576p)** — New Backups
+- **Sony Aath (1080p)** — New Backups
+- **Thalaa TV (1080p)** — New Backups
+- **Tolly TV (1080p)** — New Backups
+- **Vendhar TV (576p)** — New Backups
 
 ## Queue validation
 
-New Channels/New Backups contain only validated BD/IN entries.
+- CCV (480p) has invalid queue country missing
+- Movies Now HD (576p) has invalid queue country missing
+- TamilVision-TV (1080p) has invalid queue country missing
+- All Time Movies (576p) has invalid queue country missing
+- DD Odia (576p) has invalid queue country missing
+- Desi Channel (1080p) has invalid queue country missing
+- E 24 (576p) has invalid queue country missing
+- Goldmines Action (576p) has invalid queue country missing
+- KTV Bangla (1080p) has invalid queue country missing
+- Manoranjan Movies (576p) has invalid queue country missing
+- Mazhavil Manorama HD (1080p) has invalid queue country missing
+- Public Movies (576p) has invalid queue country missing
+- Rengoni (576p) has invalid queue country missing
+- Sangeet Bhojpuri (576p) has invalid queue country missing
+- Sony Aath (1080p) has invalid queue country missing
+- Thalaa TV (1080p) has invalid queue country missing
+- Tolly TV (1080p) has invalid queue country missing
+- Vendhar TV (576p) has invalid queue country missing
 
 ## Missing local logo files
 
