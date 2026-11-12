@@ -89,6 +89,9 @@ def verify(playlist: Path, state: Path):
     # group transitions are needed. Its existence authorizes category-block
     # reassembly and missing-number repair; individual group moves still need
     # their own exact URL approval below.
+    # Structural permission is separate from per-URL group-transition approvals.
+    # Only the maintenance workflow creates this runtime marker for a pending,
+    # durable owner request; test fixtures and ordinary approvals cannot enable it.
     migration_mode = OWNER_MIGRATION_AUTHORIZED.is_file()
 
     current_registry = category_registry(playlist)
