@@ -10,6 +10,9 @@ import socket
 import ssl
 import time
 import unicodedata
+from collections import defaultdict
+
+import reorganize_international_playlist as international_policy
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -350,12 +353,115 @@ def render_playlist(preamble, blocks):
     if REVIEW not in registry:
         pos = next((i for i, g in enumerate(registry) if g in {"New Channels", "New Backups", "Backup"}), len(registry))
         registry.insert(pos, REVIEW)
+    # A recovered stream can create the fifth qualifying primary identity for
+    # a country. Register that newly materialized country group before the
+    # International catch-all and the fixed tail queues.
+    present_groups = {group_of(block[0]) for block in blocks if group_of(block[0])}
+    missing_groups = present_groups - set(registry)
+    if missing_groups:
+        tail_names = set(international_policy.TAIL)
+        insert_at = next((i for i, group in enumerate(registry) if group == "International"), None)
+        if insert_at is None:
+            insert_at = next((i for i, group in enumerate(registry) if group in tail_names), len(registry))
+        dynamic = sorted(group for group in missing_groups if group not in tail_names)
+        registry[insert_at:insert_at] = dynamic
     preamble[idx] = "#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry, ensure_ascii=False)
     rank = {g: i for i, g in enumerate(registry)}
     def natural(s):
         return tuple(int(x) if x.isdigit() else x.casefold() for x in re.split(r"(\d+)", s or ""))
     blocks.sort(key=lambda b: (rank.get(group_of(b[0]), len(rank)), natural(name_of(b[0])), (urls(b)[0] if urls(b) else "").casefold()))
     return "\n".join(preamble + [line for b in blocks for line in b]).rstrip() + "\n"
+
+
+
+def _row_identity_keys(info: str, country: str) -> set[tuple[str, str, str]]:
+    """Stable channel identity keys for duplicate-primary detection."""
+    a = attrs(info)
+    name_key = international_policy.channel_key(name_of(info))
+    keys = {("name", country, name_key)} if name_key else set()
+    for field in ("tvg-id", "channel-id"):
+        value = (a.get(field) or "").strip().casefold().split("@", 1)[0]
+        if value:
+            keys.add(("id", country, value))
+    return keys
+
+
+def _primary_identity_state(blocks):
+    """Index existing primary identities and non-BD/IN country-group counts."""
+    primary_keys: set[tuple[str, str, str]] = set()
+    country_ids: dict[str, set[str]] = defaultdict(set)
+    excluded = {"backup", "backups", "not playing", "review",
+                "new channels", "new backup", "new backups", "adult"}
+    for block in blocks:
+        group = group_of(block[0])
+        if group.casefold() in excluded:
+            continue
+        a = attrs(block[0])
+        name = name_of(block[0])
+        country = international_policy.country_code(a, group, name)
+        if not country or country == "ZZ":
+            continue
+        primary_keys.update(_row_identity_keys(block[0], country))
+        is_country_group = (
+            group == "International"
+            or (country == "PK" and group == "Pakistani")
+            or international_policy.country_from_group(group) == country
+        )
+        if country not in {"BD", "IN"} and is_country_group:
+            country_ids[country].add(international_policy.channel_key(name))
+    return primary_keys, country_ids
+
+
+def _review_recovery_target(info: str, original_group: str,
+                            primary_keys: set[tuple[str, str, str]],
+                            country_ids: dict[str, set[str]]) -> str | None:
+    """Classify a working Review stream, routing duplicate identities to Backup."""
+    a = attrs(info)
+    name = name_of(info)
+    context_group = original_group if original_group and original_group.casefold() != REVIEW.casefold() else "International"
+    country = international_policy.country_code(a, context_group, name)
+    if not country or country == "ZZ":
+        return None
+    if country == "IN" and international_policy.bd_policy.prohibited_channel(a, name, "IN"):
+        return None
+    target, _kind, reason = international_policy.classify(
+        a, name, context_group, country, promote_backup=True
+    )
+    if reason or not target or target == "Review":
+        return None
+
+    name_key = international_policy.channel_key(name)
+    identity_keys = _row_identity_keys(info, country)
+    if target not in {"Backup", "Adult"} and identity_keys & primary_keys:
+        return "Backup"
+
+    # Country-specific groups require five unique primary identities. Review
+    # rows and Backup alternates do not count; the recovered channel itself does.
+    if target == "__FOREIGN__":
+        candidates = set(country_ids.get(country, set()))
+        if name_key:
+            candidates.add(name_key)
+        target = (
+            international_policy.discovery.country_group(country)
+            if len(candidates) >= international_policy.discovery.COUNTRY_THRESHOLD
+            else "International"
+        ) or "International"
+    elif target == "Pakistani":
+        candidates = set(country_ids.get("PK", set()))
+        if name_key:
+            candidates.add(name_key)
+        if len(candidates) < international_policy.discovery.COUNTRY_THRESHOLD:
+            target = "International"
+
+    if target not in {"Backup", "Adult", "Review"}:
+        primary_keys.update(identity_keys)
+        if country not in {"BD", "IN"} and (
+            target == "International"
+            or target == "Pakistani"
+            or international_policy.country_from_group(target) == country
+        ):
+            country_ids[country].add(name_key)
+    return target
 
 
 def apply_results(text, results, history, check_date):
@@ -367,6 +473,7 @@ def apply_results(text, results, history, check_date):
     entries = history.setdefault("entries", {})
     removed_log = history.setdefault("removed", [])
     output, events, removed_urls = [], [], set()
+    primary_keys, country_ids = _primary_identity_state(blocks)
 
     for block, result in zip(blocks, results):
         entry_urls = urls(block)
@@ -399,12 +506,13 @@ def apply_results(text, results, history, check_date):
         else:
             previous_date, previous_status = rec.get("last_checked_date", ""), rec.get("last_status", "")
             if state == "ok":
-                if rec.get("auto_review") and current.casefold() == REVIEW.casefold():
+                if current.casefold() == REVIEW.casefold():
                     original = rec.get("original_group", "")
-                    if original and original.casefold() != REVIEW.casefold():
-                        info = set_group(info, original)
-                        current = original
-                        action = "restored"
+                    target = _review_recovery_target(info, original, primary_keys, country_ids)
+                    if target and target.casefold() != REVIEW.casefold():
+                        info = set_group(info, target)
+                        current = target
+                        action = "restored-to-backup" if target == "Backup" else "restored-to-primary"
                 rec["consecutive_failures"] = 0
                 rec["auto_review"] = False
                 rec["last_status"] = "ok"
@@ -474,7 +582,7 @@ def build_report(events, history, check_date, generated, total):
     failures = [e for e in events if e["state"] == "fail"]
     uncertain = [e for e in events if e["state"] == "inconclusive"]
     moved = [e for e in events if e["action"] == "moved-to-review"]
-    recovered = [e for e in events if e["action"] == "restored"]
+    recovered = [e for e in events if e["action"] in {"restored", "restored-to-primary", "restored-to-backup"}]
     removed = [e for e in events if e["action"] == "removed-after-three-failed-days"]
     flagged = sum(1 for r in history["entries"].values() if r.get("auto_review") and not r.get("removed"))
     lines = [
@@ -486,13 +594,14 @@ def build_report(events, history, check_date, generated, total):
         f"- Definitive failures today: **{len(failures)}**",
         f"- Inconclusive checks: **{len(uncertain)}**",
         f"- Newly moved to Review: **{len(moved)}**",
-        f"- Restored to original group: **{len(recovered)}**",
+        f"- Restored from Review to primary/Backup: **{len(recovered)}**",
         f"- Removed after three consecutive failed days: **{len(removed)}**",
         f"- Automatically flagged rows still under Review: **{flagged}**", "",
         "## Rules", "",
         "- First definitive failed day: move the row to Review; all metadata and its logo stay intact.",
-        "- A successful later check restores the original category.",
+        "- A successful later check reclassifies a Review row to its eligible primary category; a working alternate whose identity already has a primary is placed in Backup.",
         "- Third consecutive definitive failed Bangladesh calendar day: remove the stream row.",
+        "- A working Review row that is not eligible under the country/genre policy remains in Review.",
         "- Reruns on the same Bangladesh date do not increase the streak; a missed day restarts it.",
         "- HTTP 401/403/407/429/451 are inconclusive, not dead-stream verdicts, to avoid false removals caused by authentication, rate limits or regional restrictions on GitHub runners.",
         "- HLS validation checks a media segment rather than relying only on a manifest HTTP 200. Raw stream URLs and credentials are not stored in the report/history.", "",
