@@ -74,7 +74,7 @@ def verify(playlist: Path, state: Path):
     if category_registry(playlist) != saved.get("category_registry"):
         raise SystemExit("IPTV-Playlist.m3u category registry/order changed; refusing to publish.")
     expected_counts = Counter(str(row["url"]) for row in before)
-     actual_counts = Counter(str(row["url"]) for row in after)
+    actual_counts = Counter(str(row["url"]) for row in after)
 
     errors = []
     missing = expected_counts - actual_counts
