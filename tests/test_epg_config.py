@@ -91,7 +91,8 @@ class EpgConfigTests(unittest.TestCase):
                 "group,channel,tvg_id,epg_id,source,status,note\n"
                 "Indian Movies,Current,Current.in,Current.source,feed,MAPPED,\n"
                 "Indian Movies,Stale,Stale.in,Stale.source,,MAPPED_NOT_CURRENTLY_FOUND,\n"
-                "Indian Movies,NoSchedule,NoSchedule.in,NoSchedule.source,,MAPPED_ID_ONLY,\n",
+                "Indian Movies,NoSchedule,NoSchedule.in,NoSchedule.source,,MAPPED_ID_ONLY,\n"
+                "Indian Movies,Unknown,Unknown.in,Unknown.source,,,\n",
                 encoding="utf-8",
             )
             with patch.object(generate_epg, "MAPPING", mapping):
