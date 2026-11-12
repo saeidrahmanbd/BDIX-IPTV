@@ -600,6 +600,11 @@ def preferred_title_element(elem):
 
 
 def load_mapping():
+    """Load only currently validated mapping rows for source-to-playlist routing.
+
+    Retained/stale IDs remain in the audit CSV for diagnosis, but must not be
+    treated as valid schedule identities merely because they were present last run.
+    """
     reverse = {}
     if not MAPPING.exists():
         return reverse
@@ -607,6 +612,9 @@ def load_mapping():
         for row in csv.DictReader(fh):
             target = row.get("tvg_id", "").strip()
             if not target:
+                continue
+            status = (row.get("status") or "").strip().upper()
+            if status != "MAPPED":
                 continue
             ids = [x.strip() for x in row.get("epg_id", "").split("|") if x.strip()]
             if row.get("group", "").strip() == "Indian Bangla":

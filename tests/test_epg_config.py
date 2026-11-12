@@ -84,6 +84,21 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(a, b)
         self.assertEqual(len(a), len(set(a)))
 
+    def test_load_mapping_ignores_stale_or_noncurrent_mapping_rows(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            mapping = Path(tmp) / "epg-channel-mapping.csv"
+            mapping.write_text(
+                "group,channel,tvg_id,epg_id,source,status,note\n"
+                "Indian Movies,Current,Current.in,Current.source,feed,MAPPED,\n"
+                "Indian Movies,Stale,Stale.in,Stale.source,,MAPPED_NOT_CURRENTLY_FOUND,\n"
+                "Indian Movies,NoSchedule,NoSchedule.in,NoSchedule.source,,MAPPED_ID_ONLY,\n"
+                "Indian Movies,Unknown,Unknown.in,Unknown.source,,,\n",
+                encoding="utf-8",
+            )
+            with patch.object(generate_epg, "MAPPING", mapping):
+                reverse = generate_epg.load_mapping()
+        self.assertEqual(reverse, {"Current.source": ["Current.in"]})
+
     def test_epg_pw_is_excluded_from_public_ingestion_without_redistribution_permission(self):
         source = "https://epg.pw/xmltv/epg_IN.xml.gz"
         self.assertNotIn(source, literal(COV, "SOURCES"))
@@ -564,6 +579,76 @@ class EpgConfigTests(unittest.TestCase):
                 "GB", "generic-channel-id", "M3U4U XMLTV (private Actions secret)"
             )
         )
+
+    def test_source_candidate_identity_rejects_wrong_numeric_and_legacy_alias_names(self):
+        channel = {
+            "tvg_id": "custom.bdix.dhoom-music-bangla",
+            "name": "Dhoom Music Bangla",
+            "aliases": ["Dhoom Music Bangla"],
+        }
+        # Same numeric value, but this source feed labels it as the different
+        # Dhoom Music service. The ID alone cannot establish channel identity.
+        self.assertFalse(
+            epg_coverage.source_candidate_identity_compatible(
+                channel, "142882", {"dhoommusic": {"142882"}}
+            )
+        )
+        self.assertTrue(
+            epg_coverage.source_candidate_identity_compatible(
+                channel, "142882", {"dhoommusicbangla": {"142882"}}
+            )
+        )
+        # A previous-run alias must not validate itself without an exact
+        # source-side channel-name match.
+        self.assertFalse(
+            epg_coverage.source_candidate_identity_compatible(
+                {"tvg_id": "custom.swervecombat", "name": "Swerve Combat", "aliases": ["Swerve Combat"]},
+                "SwerveSports.us@SD",
+                {"swervesports": {"SwerveSports.us@SD"}},
+                legacy=True,
+            )
+        )
+        self.assertTrue(
+            epg_coverage.source_candidate_identity_compatible(
+                {"tvg_id": "custom.swervecombat", "name": "Swerve Combat", "aliases": ["Swerve Combat"]},
+                "SwerveSports.us@SD",
+                {"swervecombat": {"SwerveSports.us@SD"}},
+                legacy=True,
+            )
+        )
+
+    def test_explicit_locked_numeric_alias_can_use_non_descriptive_provider_label(self):
+        channel = {
+            "tvg_id": "IqraBangla.uk",
+            "name": "Iqra Bangla",
+            "aliases": ["Iqra Bangla"],
+        }
+        self.assertTrue(
+            epg_coverage.source_candidate_identity_compatible(
+                channel, "3914", {"channel3914": {"3914"}}, locked=True
+            )
+        )
+
+    def test_name_matching_uses_the_same_shared_region_policy_and_curated_override(self):
+        feed = "https://iptv-epg.org/files/epg-gb.xml.gz"
+        channel = {"tvg_id": "TravelxpEnglish.us", "country": "US"}
+        self.assertTrue(epg_coverage.source_id_mapping_compatible(channel, "Travelxp.uk", feed))
+        self.assertTrue(
+            epg_coverage.source_region_compatible(
+                "US", "Travelxp.uk", feed, target_id="TravelxpEnglish.us"
+            )
+        )
+        self.assertFalse(
+            epg_coverage.source_region_compatible(
+                "US", "Travelxp.uk", feed, target_id="OtherChannel.us"
+            )
+        )
+
+    def test_suffix_stripping_is_not_used_for_strict_candidate_research(self):
+        source = (ROOT / "scripts" / "epg_coverage.py").read_text(encoding="utf-8")
+        self.assertNotIn("def without_region_suffix", source)
+        self.assertNotIn("EXACT_AFTER_REGION_SUFFIX", source)
+        self.assertIn("target_name == source_name_key", source)
 
     def test_mytime_movie_network_east_uses_exact_us_samsung_identity(self):
         self.assertEqual(

@@ -669,28 +669,64 @@ def source_id_country(source_id):
     """Infer a country only from a recognized terminal ISO-style XMLTV ID suffix."""
     return playlist_id_country_code(source_id)
 
-def source_region_compatible(target_country, source_id, source_url=""):
-    """Reject name-only matches that conflict with the playlist, XMLTV ID, or feed region."""
-    target = normalize_country_code(target_country)
-    source = source_id_country(source_id)
-    if target and source and target != source:
-        return False
-    feed_countries = source_country_codes(source_url)
-    if target and feed_countries and target not in feed_countries:
-        return False
-    return True
+def source_region_compatible(target_country, source_id, source_url="", target_id=""):
+    """Require region agreement for name-derived candidates."""
+    explicit_override = source_id in CURATED_REGION_OVERRIDES.get(target_id, set())
+    return mapping_id_region_compatible(
+        normalize_country_code(target_country),
+        source_id_country(source_id),
+        source_country_codes(source_url),
+        explicit_override=explicit_override,
+        require_feed_match=True,
+    )
 
 
 def source_id_mapping_compatible(channel, source_id, source_url):
-    """Apply the same region policy to exact/normalized IDs as to name matches."""
+    """Use the same shared policy for exact/normalized source IDs."""
     target_id = channel.get("tvg_id", "")
     explicit_override = source_id in CURATED_REGION_OVERRIDES.get(target_id, set())
     return mapping_id_region_compatible(
-        channel.get("country", ""),
-        playlist_id_country_code(source_id),
+        normalize_country_code(channel.get("country", "")),
+        source_id_country(source_id),
         source_country_codes(source_url),
         explicit_override=explicit_override,
+        require_feed_match=False,
     )
+
+
+def source_id_name_matches_channel(channel, source_id, source_names):
+    """Require a source-feed display name to identify a numeric/legacy alias.
+
+    Numeric IDs are provider-local in practice. A number is not an identity by
+    itself: its display name must agree with this playlist channel in this feed.
+    """
+    expected = {
+        norm_name(value)
+        for value in channel.get("aliases", [channel.get("name", "")])
+        if norm_name(value)
+    }
+    observed = {
+        str(name).strip()
+        for name, ids in source_names.items()
+        if source_id in ids and str(name).strip()
+    }
+    return bool(expected and observed and observed.intersection(expected) and observed <= expected)
+
+
+def source_candidate_identity_compatible(
+    channel, source_id, source_names, *, legacy=False, locked=False
+):
+    """Prevent provider-local numeric IDs and stale aliases from self-validating.
+
+    Explicit identity locks remain authoritative. Other bare numeric IDs must
+    have an exact display-name match in the current source feed. Legacy IDs
+    carried forward from the mapping CSV must also pass that identity check.
+    """
+    if locked:
+        return True
+    if str(source_id).isdigit() or legacy:
+        return source_id_name_matches_channel(channel, source_id, source_names)
+    return True
 
 
 def main():
@@ -703,6 +739,11 @@ def main():
     rows=[]
     for ch in channels:
         candidates=[]; prev=previous.get(ch["tvg_id"],{}); locked_ids=EPG_LOCKS.get(ch["tvg_id"]); is_bangladesh=(ch["group"].strip()=="Bangladesh" or bool(re.search(r"\.bd(?:@|$)", ch["tvg_id"], re.I)))
+        previous_ids = {
+            x.strip() for x in (prev.get("epg_id", "").split("|") if prev.get("epg_id") else []) if x.strip()
+        }
+        explicit_alias_ids = set(EPG_ALIASES.get(ch["tvg_id"], []))
+        locked_id_set = set(locked_ids or [])
         if locked_ids: candidates=list(dict.fromkeys(x.strip() for x in locked_ids if x.strip()))
         elif is_bangladesh: candidates=[ch["tvg_id"]] + EPG_ALIASES.get(ch["tvg_id"], [])
         else:
@@ -713,25 +754,46 @@ def main():
         hits=[]; hit_sources=[]; total=0; live=False; best_live=[]
         for src,data in zip(source_urls,source_data):
             ids,future,counts,names=data
+            def identity_ok(source_id):
+                locked = source_id in locked_id_set
+                legacy = (
+                    source_id in previous_ids
+                    and source_id not in explicit_alias_ids
+                    and source_id != ch["tvg_id"]
+                )
+                return source_candidate_identity_compatible(
+                    ch, source_id, names, legacy=legacy, locked=locked
+                )
+
             if is_bangladesh:
-                # Safety: exact playlist IDs/explicit aliases only; never use ID normalization or name fuzzy matching.
-                src_hits=[x for x in candidates if x in ids]
+                # Bangladesh remains exact-ID/explicit-alias only. Numeric
+                # aliases are accepted only when locked or named exactly in-feed.
+                src_hits=[
+                    x for x in candidates
+                    if x in ids and identity_ok(x)
+                ]
             else:
                 src_hits=[
                     x for x in candidates
-                    if x in ids and source_id_mapping_compatible(ch, x, src)
+                    if x in ids
+                    and source_id_mapping_compatible(ch, x, src)
+                    and identity_ok(x)
                 ]
                 if not src_hits:
                     src_hits=[
                         x for x in ids
-                        if norm_id(x) in normalized and source_id_mapping_compatible(ch, x, src)
+                        if norm_id(x) in normalized
+                        and source_id_mapping_compatible(ch, x, src)
+                        and identity_ok(x)
                     ]
                 if not src_hits:
                     name_hits=set()
                     for name_key in name_keys:
                         name_hits.update(
                             source_id for source_id in names.get(name_key,set())
-                            if source_region_compatible(ch.get("country", ""), source_id, src)
+                            if source_region_compatible(
+                                ch.get("country", ""), source_id, src, target_id=ch["tvg_id"]
+                            )
                         )
                     src_hits=sorted(name_hits)
             matched_schedule_ids = [cid for cid in src_hits if counts.get(cid, 0) > 0]
@@ -765,22 +827,10 @@ def main():
         else: status="NO_GUIDE_HIT"
         rows.append({"group":ch["group"],"channel":ch["name"],"tvg_id":ch["tvg_id"],"epg_id":epg_id,"source":" | ".join(hit_sources),"status":status,"note":"Auto-maintained; verify ambiguous/name matches manually."})
 
-    # Strict candidates are exact channel-name matches after removing known
-    # territory/language suffixes. They are review-only and never auto-applied.
-    # Bangladesh-group channels are excluded from fuzzy name matching entirely.
-    def without_region_suffix(value):
-        value = norm_name(value)
-        suffixes = (
-            "czechrepublic", "unitedkingdom", "international", "malayalam",
-            "telugu", "bengali", "hindi", "tamil", "canada", "australia",
-            "ukraine", "poland", "france", "germany", "mexico", "arabia",
-            "india", "europe", "english", "favoris", "east", "west",
-            "mena", "usa", "uae", "uk", "us", "au", "br", "ca", "fr", "de", "in",
-        )
-        for suffix in suffixes:
-            if value.endswith(suffix) and len(value) - len(suffix) >= 5:
-                return value[:-len(suffix)]
-        return value
+    # Strict candidates use exact normalized display names only. Removing
+    # territory/language words can collapse distinct services into false matches.
+    # This list is manual-review evidence, never an automatic mapping mechanism.
+    # Bangladesh-group channels are excluded from name matching entirely.
 
     audit_rows = []
     unmapped_rows = [row for row in rows if not row["epg_id"]]
@@ -789,7 +839,6 @@ def main():
         if row["group"].strip() == "Bangladesh":
             continue
         target_name = norm_name(row["channel"])
-        target_regionless = without_region_suffix(row["channel"])
         target_country = next(
             (channel.get("country", "") for channel in channels if channel["tvg_id"] == row["tvg_id"]),
             "",
@@ -800,21 +849,19 @@ def main():
             for source_name_key, source_ids_for_name in source_names.items():
                 if not source_name_key or len(source_name_key) < 5:
                     continue
-                source_regionless = without_region_suffix(source_name_key)
-                # Strict equality only: no fuzzy or substring-based candidates.
+                # Exact equality only. Regional suffixes remain part of identity.
                 is_exact = target_name == source_name_key
-                is_region_variant = bool(target_regionless and target_regionless == source_regionless)
-                if not (is_exact or is_region_variant):
+                if not is_exact:
                     continue
                 for source_id in source_ids_for_name:
-                    if source_id not in source_future or not source_region_compatible(target_country, source_id, src):
+                    if source_id not in source_future or not source_region_compatible(target_country, source_id, src, target_id=row["tvg_id"]):
                         continue
                     item = candidates_by_id.setdefault(source_id, {
                         "source_id": source_id,
                         "source_name": source_name_key,
                         "programme_rows": source_counts.get(source_id, 0),
                         "sources": [],
-                        "match_type": "EXACT_NAME" if is_exact else "EXACT_AFTER_REGION_SUFFIX",
+                        "match_type": "EXACT_NAME",
                     })
                     item["programme_rows"] = max(item["programme_rows"], source_counts.get(source_id, 0))
                     if source_label(src) not in item["sources"]:
