@@ -1,52 +1,54 @@
 # Strict Unmapped EPG Audit
 
-Generated: **2026-11-11T19:26:31+00:00**
+Generated: **2026-11-12T01:32:21+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
 Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
 
-- Unmapped active channel identities reviewed: **1282**
-- Unmapped identities with exact/region-normalized schedule candidates: **13**
-- Candidate rows: **33**
-- Unmapped identities without an exact schedule-backed candidate: **1269**
+- Unmapped active channel identities reviewed: **1280**
+- Unmapped identities with exact/region-normalized schedule candidates: **15**
+- Candidate rows: **35**
+- Unmapped identities without an exact schedule-backed candidate: **1265**
 
 ## Exact candidates for manual review
 
 | Group | Playlist channel | Playlist tvg-id | Candidate source name | Candidate EPG ID | Match type | Usable programme rows | Source feed(s) | Decision |
 |---|---|---|---|---|---|---:|---|---|
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colorsbengali | Colors.Bengali.HD.in | EXACT_AFTER_REGION_SUFFIX | 68 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colorsbengali | Colors.Bengali.HD.in | EXACT_AFTER_REGION_SUFFIX | 68 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.HD.in | EXACT_AFTER_REGION_SUFFIX | 71 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colors | Colors.HD.in | EXACT_AFTER_REGION_SUFFIX | 71 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.SD.in | EXACT_AFTER_REGION_SUFFIX | 71 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colors | Colors.SD.in | EXACT_AFTER_REGION_SUFFIX | 71 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | ColorsMENA.in | colorsbengali | Colors.Bengali.HD.in | EXACT_AFTER_REGION_SUFFIX | 63 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colorsbengali | Colors.Bengali.HD.in | EXACT_AFTER_REGION_SUFFIX | 63 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.HD.in | EXACT_AFTER_REGION_SUFFIX | 62 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colors | Colors.HD.in | EXACT_AFTER_REGION_SUFFIX | 62 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.SD.in | EXACT_AFTER_REGION_SUFFIX | 62 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colors | Colors.SD.in | EXACT_AFTER_REGION_SUFFIX | 62 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Colors MENA | ColorsMENA.in | colors | LIVETV_LIVETVCHANNEL_COLORS | EXACT_AFTER_REGION_SUFFIX | 70 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colors | LIVETV_LIVETVCHANNEL_COLORS | EXACT_AFTER_REGION_SUFFIX | 70 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Colors MENA | ColorsMENA.in | colors | LIVETV_LIVETVCHANNEL_COLORS_HD | EXACT_AFTER_REGION_SUFFIX | 71 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Colors MENA | ColorsMENA.in@HD | colors | LIVETV_LIVETVCHANNEL_COLORS_HD | EXACT_AFTER_REGION_SUFFIX | 71 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | 202704 | EXACT_AFTER_REGION_SUFFIX | 38 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | 7127 | EXACT_AFTER_REGION_SUFFIX | 9 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | LIVETV_LIVETVCHANNEL_GTCSYMUNDERSCOREPUNJABI | EXACT_AFTER_REGION_SUFFIX | 50 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | SWIFTTV_LIVECHANNEL_309 | EXACT_AFTER_REGION_SUFFIX | 51 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | jtv3470 | EXACT_AFTER_REGION_SUFFIX | 21 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | 202704 | EXACT_AFTER_REGION_SUFFIX | 38 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | 7127 | EXACT_AFTER_REGION_SUFFIX | 9 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | LIVETV_LIVETVCHANNEL_GTCSYMUNDERSCOREPUNJABI | EXACT_AFTER_REGION_SUFFIX | 50 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | SWIFTTV_LIVECHANNEL_309 | EXACT_AFTER_REGION_SUFFIX | 51 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | jtv3470 | EXACT_AFTER_REGION_SUFFIX | 21 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | 143247 | EXACT_AFTER_REGION_SUFFIX | 39 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | KAIRALI.in | EXACT_AFTER_REGION_SUFFIX | 19 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairaliin | KairaliTV.in | EXACT_AFTER_REGION_SUFFIX | 25 | https://www.open-epg.com/files/india.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | LIVETV_LIVETVCHANNEL_KAIRALI_TV | EXACT_AFTER_REGION_SUFFIX | 47 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | jtv710 | EXACT_AFTER_REGION_SUFFIX | 26 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
-| Sports | Red Bull TV AU | RedBullTV.at@AU | redbull | RedBullTV.at@SD | EXACT_AFTER_REGION_SUFFIX | 84 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
-| Sports | Red Bull TV BR | RedBullTV.at@BR | redbull | RedBullTV.at@SD | EXACT_AFTER_REGION_SUFFIX | 84 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
-| Sports | Red Bull TV DE | RedBullTV.at@DE | redbull | RedBullTV.at@SD | EXACT_AFTER_REGION_SUFFIX | 84 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
-| Sports | Red Bull TV UK | RedBullTV.at@UK@red.bull.tv.uk | redbull | RedBullTV.at@SD | EXACT_AFTER_REGION_SUFFIX | 84 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
-| Sports | Red Bull TV US | RedBullTV.at@US | redbull | RedBullTV.at@SD | EXACT_AFTER_REGION_SUFFIX | 84 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
-| United States | Cine Terror BR | CineTerror.us@BR | cineterror | CineTerror.us@US | EXACT_AFTER_REGION_SUFFIX | 22 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | 202704 | EXACT_AFTER_REGION_SUFFIX | 34 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | IN4000635D | EXACT_AFTER_REGION_SUFFIX | 6 | https://i.mjh.nz/SamsungTVPlus/in.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | LIVETV_LIVETVCHANNEL_GTCSYMUNDERSCOREPUNJABI | EXACT_AFTER_REGION_SUFFIX | 48 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | SWIFTTV_LIVECHANNEL_309 | EXACT_AFTER_REGION_SUFFIX | 50 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | GTC Punjabi UK | GTCPunjabi.in@UK | gtcpunjabi | jtv3470 | EXACT_AFTER_REGION_SUFFIX | 17 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | 202704 | EXACT_AFTER_REGION_SUFFIX | 34 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | IN4000635D | EXACT_AFTER_REGION_SUFFIX | 6 | https://i.mjh.nz/SamsungTVPlus/in.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | LIVETV_LIVETVCHANNEL_GTCSYMUNDERSCOREPUNJABI | EXACT_AFTER_REGION_SUFFIX | 48 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | SWIFTTV_LIVECHANNEL_309 | EXACT_AFTER_REGION_SUFFIX | 50 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | GTC Punjabi US | GTCPunjabi.in@US | gtcpunjabi | jtv3470 | EXACT_AFTER_REGION_SUFFIX | 17 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | 143247 | EXACT_AFTER_REGION_SUFFIX | 33 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | KAIRALI.in | EXACT_AFTER_REGION_SUFFIX | 18 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz<br>https://m3u-edit.com/epg-source.php?file=IN4.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairaliin | KairaliTV.in | EXACT_AFTER_REGION_SUFFIX | 19 | https://www.open-epg.com/files/india.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | LIVETV_LIVETVCHANNEL_KAIRALI_TV | EXACT_AFTER_REGION_SUFFIX | 46 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | jtv710 | EXACT_AFTER_REGION_SUFFIX | 19 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
+| Sports | Real Madrid TV English | RealMadridTVEnglish.es@SD | realmadrid | Real.Madrid.TV.es | EXACT_AFTER_REGION_SUFFIX | 31 | https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz | MANUAL_REVIEW_ONLY |
+| Sports | Real Madrid TV English | RealMadridTVEnglish.es@SD@real.madrid.tv.english | realmadrid | Real.Madrid.TV.es | EXACT_AFTER_REGION_SUFFIX | 31 | https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz | MANUAL_REVIEW_ONLY |
+| Sports | Red Bull TV AU | RedBullTV.at@AU | redbull | RedBullTV.at@SD | EXACT_AFTER_REGION_SUFFIX | 56 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
+| Sports | Red Bull TV BR | RedBullTV.at@BR | redbull | RedBullTV.at@SD | EXACT_AFTER_REGION_SUFFIX | 56 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
+| Sports | Red Bull TV DE | RedBullTV.at@DE | redbull | RedBullTV.at@SD | EXACT_AFTER_REGION_SUFFIX | 56 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
+| Sports | Red Bull TV UK | RedBullTV.at@UK@red.bull.tv.uk | redbull | RedBullTV.at@SD | EXACT_AFTER_REGION_SUFFIX | 56 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
+| Sports | Red Bull TV US | RedBullTV.at@US | redbull | RedBullTV.at@SD | EXACT_AFTER_REGION_SUFFIX | 56 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
+| United States | Cine Terror BR | CineTerror.us@BR | cineterror | CineTerror.us@US | EXACT_AFTER_REGION_SUFFIX | 14 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
 | United States | MovieSphere CA | MovieSphere.us@CA | moviesphere | USBD17000117B | EXACT_AFTER_REGION_SUFFIX | 4 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
-| United States | Pluto TV Crime Drama CA | PlutoTVCrimeDrama.us@CA | plutocrimedrama | PlutoTVCrimeDrama.us@SD | EXACT_AFTER_REGION_SUFFIX | 48 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
+| United States | Pluto TV Crime Drama CA | PlutoTVCrimeDrama.us@CA | plutocrimedrama | PlutoTVCrimeDrama.us@SD | EXACT_AFTER_REGION_SUFFIX | 30 | iptv-org/epg (targeted build-time guide) | MANUAL_REVIEW_ONLY |
 
 ## Bangladesh-specific review
 
@@ -57,6 +59,6 @@ No dependable public, current XMLTV feed for the domestic Bangladesh channel set
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **a98bfb7e890a2d639d238b957b98d47678e6aef0a035b526716557990ef5c04f**
+- IPTV-Playlist.m3u SHA-256: **5a54e040bb664441fb8a4bfa95c7348db27946fd99c5e762144dc1308cf95225**
 - International-Playlist.m3u SHA-256: **649d07a3b17461e5e99879bed2563de5e9d4e74ca79495fd0fc32c5d873058e7**
 
