@@ -17,6 +17,19 @@ class CountryVerificationTests(unittest.TestCase):
         self.assertEqual((v.country, v.basis), ("BD", "id"))
         self.assertEqual(cv.verify_country({"tvg-id": "Zee.in"}, "Zee", None, "IN").country, "IN")
 
+    def test_ten_tv_prime_custom_id_is_verified_as_bangladeshi(self):
+        a = {
+            "tvg-id": "custom.tentvprime",
+            "channel-id": "custom.tentvprime",
+            "tvg-country": "BD",
+            "tvg-language": "ben",
+        }
+        verdict = cv.verify_country(a, "Ten TV Prime")
+        self.assertEqual((verdict.country, verdict.basis), ("BD", "curated-exact-id-override"))
+        self.assertFalse(cv.verify_country({**a, "tvg-country": "IN"}, "Ten TV Prime").ok)
+        self.assertFalse(cv.verify_country(a, "Ten TV Prime", feed_country="IN").ok)
+        self.assertFalse(cv.verify_country({**a, "tvg-id": "custom.other"}, "Ten TV Prime").ok)
+
     def test_id_conflicts_are_held(self):
         self.assertFalse(cv.verify_country({"tvg-id": "X.in"}, "X", None, "BD").ok)          # feed mismatch
         self.assertFalse(cv.verify_country({"tvg-id": "X.us"}, "X", None, "IN").ok)          # foreign id

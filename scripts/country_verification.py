@@ -34,6 +34,12 @@ INDIA_FEED_ID_OVERRIDES = {
     "colorscineplex": "ColorsCineplex.in",
 }
 
+# Verified custom-ID Bangladeshi broadcaster. This exact ID is used by the
+# repository's Ten TV Prime entry; the broadcaster is based in Dhaka.
+BANGLADESH_CUSTOM_ID_OVERRIDES = {
+    "custom.tentvprime": "Ten TV Prime",
+}
+
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 ID_CC_RE = re.compile(r"\.([a-z]{2})(?:@|$)")
@@ -130,6 +136,17 @@ def verify_country(a: dict[str, str], name: str, reference: Reference | None = N
     declared = a.get("tvg-country", "").strip().upper()
     ids = [x.strip() for x in (a.get("tvg-id", ""), a.get("channel-id", "")) if x and x.strip()]
     ccs = {id_country(x) for x in ids} - {None}
+
+    custom_bd_id = next((value for value in ids if value.casefold() in BANGLADESH_CUSTOM_ID_OVERRIDES), "")
+    if custom_bd_id:
+        expected_name = BANGLADESH_CUSTOM_ID_OVERRIDES[custom_bd_id.casefold()]
+        if norm_name(name or a.get("tvg-name", "")) != norm_name(expected_name):
+            return Verdict(None, reason="custom Bangladesh ID is paired with an unexpected channel name")
+        if declared and declared != "BD":
+            return Verdict(None, reason=f"curated custom ID conflicts with tvg-country {declared}")
+        if feed and feed != "BD":
+            return Verdict(None, reason=f"curated custom ID conflicts with {feed} source feed")
+        return Verdict("BD", tvg_id=custom_bd_id, basis="curated-exact-id-override")
 
     # Some India-feed catalogues publish Indian services with a UK/US
     # distribution suffix. Accept only the two explicitly curated identities,
