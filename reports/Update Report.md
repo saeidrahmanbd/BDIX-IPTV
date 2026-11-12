@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-11-12 11:05 UTC**_
+_Last generated: **2026-11-12 11:07 UTC**_
 
 Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
 
@@ -21,7 +21,7 @@ Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2ed
 | Near-Duplicate URL Families | **1** |
 | Audit Blocking Issues | **35** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-11-12T11:04:52+00:00** |
+| Pre-Publish Gate Generated | **2026-11-12T11:06:29+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
@@ -62,14 +62,14 @@ Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2ed
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-12T11:04:52.379228+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-12T11:06:28.456446+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-12T09:43:47+00:00** | **CURRENT** |
-| Stream health | **2026-11-12T11:05:32+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-12T11:04:52+00:00** | **CURRENT** |
+| Stream health | **2026-11-12T11:07:07+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-12T11:06:29+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
 - Latest entries change: **1242 → 1242**
-- Latest health failures: **212 → 170**
+- Latest health failures: **170 → 170**
 
 Historical records are retained in reports/maintenance-history.json.
