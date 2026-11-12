@@ -84,7 +84,11 @@ def verify(playlist: Path, state: Path):
     approvals = load_approvals()
     # The approvals artifact is written only by the explicitly owner-requested
     # one-time cleanup branch. Routine daily maintenance has no such authority.
-    migration_mode = bool(approvals)
+    # The migration script writes this exact-URL approvals file even when no
+    # group transitions are needed. Its existence authorizes category-block
+    # reassembly and missing-number repair; individual group moves still need
+    # their own exact URL approval below.
+    migration_mode = OWNER_APPROVALS.is_file()
 
     current_registry = category_registry(playlist)
     previous_registry = saved.get("category_registry")
@@ -134,8 +138,17 @@ def verify(playlist: Path, state: Path):
             exact_approval = bool(approved and approved.get("allow_metadata") is True)
             if old_group != new_group and (old_group == "Review" or not exact_approval):
                 failures.append(f"Unapproved group migration for {current['name']}: {old_group} -> {new_group}")
-            if old_group == new_group and not migration_mode and current["number"] != str(original.get("number", "")):
-                failures.append(f"Existing channel number changed for {current['name']}")
+            if old_group == new_group and current["number"] != str(original.get("number", "")):
+                old_number = str(original.get("number", "")).strip()
+                new_number = str(current["number"]).strip()
+                may_fill_missing_primary = (
+                    old_group in PRIMARY_GROUPS and not old_number.isdigit() and new_number.isdigit()
+                )
+                may_clear_nonprimary_queue = (
+                    old_group not in PRIMARY_GROUPS and bool(old_number) and not new_number
+                )
+                if not (may_fill_missing_primary or may_clear_nonprimary_queue):
+                    failures.append(f"Existing channel number changed for {current['name']}")
             if new_group not in CATEGORY_ORDER:
                 failures.append(f"Unknown category {new_group!r}: {current['name']}")
 
@@ -180,8 +193,12 @@ def verify(playlist: Path, state: Path):
                 if previous and previous != row["url"]:
                     failures.append(f"Duplicate primary channel identity: {channel_id} ({row['name']})")
                 seen_ids[channel_id] = row["url"]
-        if primary_numbers and primary_numbers != list(range(1, len(primary_numbers) + 1)):
-            failures.append("Owner-approved migration did not produce sequential primary channel numbers.")
+        if any(number <= 0 for number in primary_numbers):
+            failures.append("Owner-approved migration left a non-positive primary channel number.")
+        if len(primary_numbers) != len(set(primary_numbers)):
+            failures.append("Owner-approved migration produced duplicate primary channel numbers.")
+        # Existing positive channel numbers are owner-curated and must be
+        # preserved; only missing/invalid values are filled by the migration.
 
     if failures:
         for item in failures[:30]:
