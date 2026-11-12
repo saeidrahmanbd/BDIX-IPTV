@@ -228,10 +228,10 @@ jobs:
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
             python scripts/validate_international_playlist.py
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
-          # Main-playlist owner boundary: metadata/logo repair only. The protection
-          # snapshot below rejects deletion, URL replacement, group changes, renumbering,
-          # reordering and additions outside the two manual discovery queues.
-          # International-Playlist.m3u is reorganized separately under its own policy.
+            # Main-playlist owner boundary: metadata/logo repair only. The protection
+            # snapshot below rejects deletion, URL replacement, group changes, renumbering,
+            # reordering and additions outside the two manual discovery queues.
+            # International-Playlist.m3u is reorganized separately under its own policy.
             # These report-coupled tools are deliberately last. Their playlist changes are
             # idempotent metadata-only repairs; no later step may rewrite either playlist.
             python scripts/iptv_metadata_backfill.py
