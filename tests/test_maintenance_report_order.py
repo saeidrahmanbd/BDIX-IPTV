@@ -100,7 +100,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\n          }", workflow.index("run_mutations() {"))]
         self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then', mutations)
         owner_branch_start = mutations.index('if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then')
-        owner_branch_end = mutations.index("\\n            fi", owner_branch_start)
+        owner_branch_end = mutations.index("\n            fi", owner_branch_start)
         owner_branch = mutations[owner_branch_start:owner_branch_end]
         for forbidden in (
             "reclassify_main_playlist_groups.py",
