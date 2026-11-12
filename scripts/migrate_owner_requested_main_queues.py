@@ -498,7 +498,7 @@ def migrate(text, probe_data):
     report = [
         "# Owner-Requested Main Playlist Migrations", "",
         "- Every existing stream URL was retained; this pass changes metadata/group placement only.",
-        "- Existing Review entries were not changed. Candidates that failed the current probe were moved to Review for later rechecking.",
+        "- Existing Review entries were not changed. Candidates returning definitive HTTP 404/410 responses were moved to Review; access-restricted and transient failures remain in their existing queues.",
         "",
         "## Summary", "",
     ]
@@ -521,7 +521,7 @@ def main():
     lines = [
         "# Owner-Requested Main Playlist Migrations", "",
         "- Every existing stream URL was retained; this pass changes metadata/group placement only.",
-        "- Existing Review entries were not changed. Candidates that failed the current probe were moved to Review for later rechecking.",
+        "- Existing Review entries were not changed. Candidates returning definitive HTTP 404/410 responses were moved to Review; access-restricted and transient failures remain in their existing queues.",
         "",
         "## Summary", "",
     ]
