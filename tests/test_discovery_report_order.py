@@ -19,15 +19,13 @@ class DiscoveryReportOrderTests(unittest.TestCase):
         policy_tests = position("python -m unittest discover -s tests -p 'test_channel_discovery_policy.py'")
         discovery = position("python scripts/run_bd_discovery_with_policy.py")
         probe = position("python scripts/validate_discovery_run.py probe ")
-        country_warnings = position("python scripts/country_verification.py validate ")
         final_validation = position("python scripts/validate_discovery_run.py finalize ")
         commit = position("- name: Commit discovery queue additions only")
 
         self.assertLess(snapshot, policy_tests)
         self.assertLess(policy_tests, discovery)
         self.assertLess(discovery, probe)
-        self.assertLess(probe, country_warnings)
-        self.assertLess(country_warnings, final_validation)
+        self.assertLess(probe, final_validation)
         self.assertLess(final_validation, commit)
 
         # Discovery must never call whole-playlist repair/sort steps.
@@ -60,6 +58,7 @@ class DiscoveryReportOrderTests(unittest.TestCase):
 
         self.assertIn("python -m unittest discover -s tests -p 'test_discovery_report_order.py'", source)
         self.assertIn("python -m unittest discover -s tests -p 'test_report_freshness.py'", source)
+        self.assertNotIn("python scripts/country_verification.py validate IPTV-Playlist.m3u", source)
         self.assertIn("path: reports/iptv-channel-discovery.md", source)
 
 

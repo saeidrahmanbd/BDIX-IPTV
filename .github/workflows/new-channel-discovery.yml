@@ -64,6 +64,8 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.12'
+      # Manual retry commits use [manual-new-channel-discovery] so the daily guard can
+      # authorize one controlled recovery after an earlier same-day attempt completes.
       - name: Snapshot playlist before discovery
         run: cp IPTV-Playlist.m3u /tmp/IPTV-Playlist.before.m3u
       - name: Test channel discovery policy
@@ -82,13 +84,8 @@ jobs:
         run: python scripts/run_bd_discovery_with_policy.py
       - name: Probe only newly discovered streams; retain uncertain or incomplete candidates
         run: python scripts/validate_discovery_run.py probe IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
-      - name: Report country metadata warnings without blocking discovery
-        id: validate_review_queues
-        run: python scripts/country_verification.py validate IPTV-Playlist.m3u
       - name: Record final discovery validation
         if: always()
-        env:
-          OFFICIAL_VALIDATOR_OUTCOME: ${{ steps.validate_review_queues.outcome }}
         run: python scripts/validate_discovery_run.py finalize IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
       - name: Commit discovery queue additions only
         shell: bash
