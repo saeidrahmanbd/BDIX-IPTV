@@ -1,6 +1,6 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-12T07:39:57+00:00**
+Generated: **2026-11-12T07:44:02+00:00**
 Source playlist SHA-256: **b4bd82f1c2158f3f4cef5a6a16f9567e9db54d682a807b9dbc4ee64ccc0d59a4**
 
 Status: **BLOCK**
@@ -34,7 +34,7 @@ Status: **BLOCK**
 - Entries modified this run: **0**
 
 ## Protected-queue policy
-New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
+New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. Exact URL-scoped migrations in the owner-requested migration approval file may promote reachable queue/orphan streams or quarantine non-streaming candidates; every stream URL must be preserved. Review, New Channels and New Backups are excluded from Xtream.
 
 ## Channel-Number Sequence Review
 Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **632**.
