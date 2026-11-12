@@ -274,7 +274,8 @@ jobs:
             python scripts/verify_international_protected.py verify
           }
           if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then
-            rm -f /tmp/iptv-owner-requested-probes.json /tmp/iptv-owner-requested-migrations.json
+            rm -f /tmp/iptv-owner-requested-probes.json /tmp/iptv-owner-requested-migrations.json /tmp/iptv-owner-migration-authorized
+            touch /tmp/iptv-owner-migration-authorized
           fi
           for attempt in 1 2 3; do
             git fetch origin main
