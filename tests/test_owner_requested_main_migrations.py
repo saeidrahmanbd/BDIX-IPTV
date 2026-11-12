@@ -54,7 +54,7 @@ class OwnerRequestedMigrationTests(unittest.TestCase):
 
 
     def test_wrong_country_queue_candidate_is_not_promoted(self):
-        text = "\\n".join([
+        text = "\n".join([
             '#EXTM3U',
             '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backups","Review"]',
             '#EXTINF:-1 tvg-id="MoviesNow.in@HD" channel-id="MoviesNow.in@HD" tvg-name="Movies Now" tvg-country="US" tvg-language="hin" group-title="New Channels",Movies Now',
@@ -69,7 +69,7 @@ class OwnerRequestedMigrationTests(unittest.TestCase):
 
 
     def test_access_restricted_candidate_is_deferred_not_quarantined(self):
-        text = "\\n".join([
+        text = "\n".join([
             '#EXTM3U',
             '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backups","Review"]',
             '#EXTINF:-1 tvg-id="MoviesNow.in@HD" channel-id="MoviesNow.in@HD" tvg-name="Movies Now" tvg-country="IN" tvg-language="hin" group-title="New Channels",Movies Now',
@@ -85,7 +85,7 @@ class OwnerRequestedMigrationTests(unittest.TestCase):
 
     def test_existing_review_entry_metadata_and_stream_url_are_preserved(self):
         review_info = '#EXTINF:-1 tvg-id="custom.review" tvg-name="Review Channel HD (720p)" tvg-chno="777" channel-id="custom.review" group-title="Review",Review Channel HD (720p)'
-        text = "\\n".join([
+        text = "\n".join([
             '#EXTM3U',
             '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backups","Review"]',
             review_info,
