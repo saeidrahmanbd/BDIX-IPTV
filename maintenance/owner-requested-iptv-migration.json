@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "request": "owner-authorized-one-time-iptv-playlist-correction",
+  "requested_at": "2026-11-12T16:39:00+06:00",
+  "playlist": "IPTV-Playlist.m3u",
+  "scope": [
+    "reconcile orphan Backup entries using exact channel identity and stream URL",
+    "probe New Channels and New Backups and migrate only reachable, eligible entries with verified identity and authentic local artwork",
+    "move currently non-streaming migration candidates to Review without deleting or changing their stream URLs",
+    "leave all pre-existing Review entries unchanged",
+    "fill only missing primary tvg-chno values without changing existing channel numbers",
+    "restore contiguous category blocks and canonical Playlist Studio category registry",
+    "localize WWE Superstar Central using the authentic WWE-owned trademark filing artwork when the image validates"
+  ],
+  "safeguards": [
+    "preserve every pre-existing stream URL occurrence",
+    "do not delete channels based on probe failures",
+    "do not replace stream URLs",
+    "do not alter existing Review rows",
+    "do not migrate reachable but unclassified or logo-incomplete candidates out of discovery queues",
+    "do not modify International-Playlist.m3u"
+  ],
+  "consume_only_after": "reports/owner-requested-main-migrations.md is published to main"
+}
