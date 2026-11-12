@@ -36,6 +36,7 @@ def mapping_id_region_compatible(
 
     if target and source and target != source:
         return False
-    if target and not source and feeds and target not in feeds:
+    # A matching suffix does not excuse a contradictory country-specific feed.
+    if target and feeds and target not in feeds:
         return False
     return True
