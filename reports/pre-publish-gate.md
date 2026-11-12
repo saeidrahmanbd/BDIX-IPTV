@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-11T14:59:54+00:00**
-Source playlist SHA-256: **0923016ca9694c93b3ec171f3ceb07b921cbf2187a7858070c4154aaeb354cb7**
+Generated: **2026-11-12T03:25:47+00:00**
+Source playlist SHA-256: **ebabf8e5d80fa4c1524209e86de1022f0c7195719266f81eccbad13b250bca95**
 
 Status: **BLOCK**
 
-- Current entries: **1391**
+- Current entries: **1331**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -14,18 +14,18 @@ Status: **BLOCK**
 - Review entries promoted: **0**
 - Authorized review promotions: **0**
 - Review entries deleted: **0**
-- Duplicate primary channel numbers: **2**
+- Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **695**
-- Numbered review entries: **0**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **626**
+- Numbered review entries: **463**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
-- Active rows with incomplete required metadata: **34**
+- Active rows with incomplete required metadata: **4**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **0**
 - Raw resolution/geoblock name tags: **0**
-- Missing logos in active groups: **34**
-- Missing logos deferred in review groups (Review/New Channels/New Backups): **12**
+- Missing logos in active groups: **4**
+- Missing logos deferred in review groups (Review/New Channels/New Backups): **3**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
@@ -37,30 +37,20 @@ Status: **BLOCK**
 New Channels and New Backups are active BD/IN-only review queues used by discovery and validation. Backup and Review are protected queues; orphan Backup streams may be quarantined into Review without URL loss. Review, New Channels and New Backups are excluded from Xtream. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **695**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **626**.
 
 ## Blocking Reasons
-- duplicate primary channel numbers: 2
-- duplicate primary identities: 1
-- active entries with incomplete identity/country/logo metadata: 34
-- missing logos: 34
+- active entries with incomplete identity/country/logo metadata: 4
+- review entries still numbered: 463
+- missing logos: 4
 
 ## Review-queue logo gaps
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
 - **Action Bollywood Movies**
-- **Cowboy + Channel**
-- **FloHockey 24**
 - **MOV | Bollywood OLD**
-- **PBR RidePass 24**
 - **playlist.m3u8**
-- **QazSport**
-- **SOLOCALCIO ITALIA**
-- **Surfer TV**
-- **TOP Barca**
-- **TVS Sports Bureau**
-- **ZillarBarta News**
 
 ## Metadata conflicts
 
