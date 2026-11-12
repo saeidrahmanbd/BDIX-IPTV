@@ -261,14 +261,12 @@ jobs:
             fi
             if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then
               # Exact-URL approvals authorize only this requested migration batch.
-              python scripts/reclassify_main_playlist_groups.py
               python scripts/probe_owner_requested_main_queues.py
               python scripts/migrate_owner_requested_main_queues.py
               python scripts/sort_playlists.py IPTV-Playlist.m3u
               python scripts/renumber_active_channels.py IPTV-Playlist.m3u
               # Complete supported metadata for newly promoted primary rows.
               python scripts/iptv_metadata_backfill.py
-              python scripts/backfill_cross_playlist_metadata.py
             fi
             if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then
               python scripts/repair_logo_asset_technical_quality.py --fix
