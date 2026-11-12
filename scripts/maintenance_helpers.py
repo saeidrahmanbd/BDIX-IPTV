@@ -37,6 +37,18 @@ BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PROTECTED_SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 REMOVAL_REPORT = Path("reports/proposed-removals.md")
 PROTECTED_GROUPS = {"Backup", "Review", "Not Playing"}
+OWNER_MIGRATION_APPROVALS = Path("/tmp/iptv-owner-requested-migrations.json")
+
+
+def _owner_migration_approvals() -> dict[str, dict[str, object]]:
+    if not OWNER_MIGRATION_APPROVALS.is_file():
+        return {}
+    try:
+        rows = json.loads(OWNER_MIGRATION_APPROVALS.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {stream_url_key(str(row.get("url", ""))): row for row in rows
+            if isinstance(row, dict) and row.get("url")}
 
 
 def _canonical_channel_name(value: str) -> str:
@@ -248,7 +260,7 @@ def _protected_text(text: str, skip_urls: set[str] | None = None) -> str:
                 # Only channel numbering is mutable in a protected row. Group transitions
                 # are checked separately against the exact baseline identity above; channel
                 # name, ID, logo, country and language remain protected metadata.
-                for key in ("tvg-chno", "group-title"):
+                for key in ("tvg-chno", "group-title", "tvg-logo"):
                     info = re.sub(rf'\s+{re.escape(key)}="[^"]*"', "", info, count=1)
             lines[0] = _canonical_extinf(info)
         serialized.extend(lines)
@@ -451,6 +463,7 @@ def verify_no_unauthorized_removals() -> int:
     # primary ID remains. Review rows themselves may never be promoted to Backup.
     baseline_by_url = {stream_url_key(str(item.get("url", ""))): item for item in baseline if str(item.get("url", "")).strip()}
     current_by_url = {stream_url_key(str(block["url"])): block for block in current if str(block["url"]).strip()}
+    owner_approvals = _owner_migration_approvals()
     primary_ids = set()
     for block in current:
         info = str(block["info"]); group = _group(info)
@@ -470,13 +483,31 @@ def verify_no_unauthorized_removals() -> int:
             continue
 
         old_group = str(original.get("group", "")).strip()
+        owner_approval = owner_approvals.get(url)
+        if (
+            old_group == "Backup" and current_group == "Backup"
+            and owner_approval
+            and owner_approval.get("source_group") == "Backup"
+            and owner_approval.get("target_group") == "Backup"
+            and owner_approval.get("allow_metadata")
+        ):
+            allowed_queue_migrations.add(url)
+            continue
         if old_group == "Backup" and current_group != "Backup":
             channel_name = _name(info)
             migration_target = authorized_backup_migration_target(info, str(block["url"]))
             migration_source = AUTHORIZED_MIGRATION_SOURCE_GROUPS.get(
                 _restore_normalize_name(channel_name), "Backup"
             )
-            if old_group == migration_source and current_group == migration_target:
+            owner_target = (
+                owner_approval.get("target_group")
+                if owner_approval and owner_approval.get("source_group") == "Backup"
+                else None
+            )
+            if (
+                (old_group == migration_source and current_group == migration_target)
+                or (owner_target == current_group and owner_approval.get("source_group") == old_group)
+            ):
                 allowed_queue_migrations.add(url)
             else:
                 group_transition_errors.append(

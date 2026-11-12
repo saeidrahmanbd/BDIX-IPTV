@@ -300,19 +300,9 @@ for line in lines:
             failed += 1
             print(f"Explicit ID logo failed: {title} [{channel_id}]: {exc}")
 
-    if logo and is_local(logo) and Path(urlsplit(logo).path).suffix.lower() == ".svg":
-        # SVG is a supported local logo format. Do not rasterize it just to
-        # satisfy an optional PNG optimization step; preserve the verified
-        # repository asset and avoid fragile Cairo conversion of embedded PNGs.
-        svg_path = LOGOS / Path(urlsplit(logo).path).name
-        if svg_path.is_file():
-            try:
-                svg_text = svg_path.read_text(encoding="utf-8")
-                if "<svg" in svg_text[:2048] and "</svg>" in svg_text[-2048:]:
-                    output.append(line)
-                    continue
-            except (OSError, UnicodeError):
-                pass
+    # Local SVG assets deliberately fall through to the local-image path below.
+    # download_png() rasterizes valid SVG (including embedded-PNG recovery) and
+    # the playlist is rewritten to a repository-local .png reference.
 
     if logo and is_local(logo):
         if logo.lower().endswith(".png"):
@@ -339,20 +329,8 @@ for line in lines:
             continue
         except Exception as exc:
             failed += 1
-            # A valid, repository-local SVG must not be discarded merely because
-            # optional PNG rasterization failed (e.g. Cairo cannot decode an
-            # embedded raster). Keep the original local asset and let the SVG
-            # consumer render it; never replace it with a guessed channel logo.
-            local_path = (LOGOS / filename) if logo.startswith(RAW_BASE) else (LOGOS / Path(urlsplit(logo).path).name)
-            if Path(urlsplit(logo).path).suffix.lower() == ".svg" and local_path.is_file():
-                try:
-                    svg_text = local_path.read_text(encoding="utf-8")
-                    if "<svg" in svg_text[:2048] and "</svg>" in svg_text[-2048:]:
-                        output.append(line)
-                        print(f"Local SVG retained after PNG conversion failure: {title}: {exc}")
-                        continue
-                except (OSError, UnicodeError):
-                    pass
+            if Path(urlsplit(logo).path).suffix.lower() == ".svg":
+                print(f"SVG-to-PNG conversion failed; retaining the existing reference for audit: {title}: {exc}")
             print(f"Local logo conversion failed: {title}: {exc}")
 
     # 1) Exact playlist ID match — safest.
