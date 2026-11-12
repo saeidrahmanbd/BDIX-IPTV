@@ -1082,7 +1082,7 @@ class EpgMappingAugmentationTests(unittest.TestCase):
             international = Path(tmp) / "International-Playlist.m3u"
             iptv.write_text("#EXTM3U\\n", encoding="utf-8")
             international.write_text(
-                "#EXTM3MU\\n"
+                "#EXTM3U\\n"
                 + self._entry("Channel.in@UK", "Channel UK", "Indian Entertainment")
                 + self._entry("Channel.in@India", "Channel India", "International"),
                 encoding="utf-8",
