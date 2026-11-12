@@ -111,6 +111,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("python scripts/normalize_metadata.py", mutations)
         self.assertIn("python scripts/migrate_external_logos_fixed.py", mutations)
         self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
+        self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then', mutations)
         self.assertIn("python scripts/reorganize_international_playlist.py", mutations)
         self.assertIn("python scripts/validate_international_playlist.py", mutations)
         self.assertIn("python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u", workflow)
