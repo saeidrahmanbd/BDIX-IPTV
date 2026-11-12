@@ -252,7 +252,7 @@ def canonicalize_extinf(line):
     pairs.sort(key=lambda item: (rank.get(item[0], len(rank)), item[2]))
     return duration.group(0) + " " + " ".join(
         f'{key}="{value}"' for key, value, _ in pairs
-    ) + display
+    ) + "," + display
 
 def norm(s):
  s=str(s or "").lower()
