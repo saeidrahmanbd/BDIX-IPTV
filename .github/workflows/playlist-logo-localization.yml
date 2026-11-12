@@ -59,6 +59,13 @@ jobs:
             echo "::notice::Skipping superseded queued logo localization run; a newer workflow definition is on main. No playlist files were changed."
             exit 0
           fi
+          # A one-time owner-authorized IPTV operation has priority. Do not
+          # let this two-playlist logo workflow mutate International while that
+          # request is pending; the durable marker remains until its report lands.
+          if [[ -s maintenance/owner-requested-iptv-migration.json && ! -s reports/owner-requested-main-migrations.md ]]; then
+            echo "::notice::Deferring two-playlist logo localization until the owner-requested IPTV migration is published."
+            exit 0
+          fi
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
           if [[ "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
             echo "::notice::Main advanced while logo localization was queued; using the latest committed playlist and logo inventory."
