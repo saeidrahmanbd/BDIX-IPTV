@@ -614,7 +614,7 @@ def load_mapping():
             if not target:
                 continue
             status = (row.get("status") or "").strip().upper()
-            if status and status != "MAPPED":
+            if status != "MAPPED":
                 continue
             ids = [x.strip() for x in row.get("epg_id", "").split("|") if x.strip()]
             if row.get("group", "").strip() == "Indian Bangla":
