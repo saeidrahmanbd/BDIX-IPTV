@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-12T08:21:35.989932+00:00",
+  "generated_at_utc": "2026-11-12T09:17:24.192768+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,7 +11,7 @@
     "International-Playlist.m3u": 3107
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "c4dece2f2bf4cd4b4b2d6b11c052f7a7f46d338791823e770a8ff3f38d53f646",
+    "IPTV-Playlist.m3u": "9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e",
     "International-Playlist.m3u": "e2e9d5abca13f4ea9053057d21d4725713d3e7407fc4a0d5d8bcdd5347d789fa"
   },
   "status_counts": {
@@ -1248,7 +1248,7 @@
       "channel_name": "Bollywood OLD",
       "tvg_id": "mov.bollywood.old.in",
       "channel_id": "mov.bollywood.old.in",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bollywood-old.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -6720,7 +6720,7 @@
       "channel_name": "Channel Fight",
       "tvg_id": "channel.fight.com",
       "channel_id": "channel.fight.com",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-fight.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",

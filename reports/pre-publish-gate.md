@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-12T08:20:54+00:00**
-Source playlist SHA-256: **c4dece2f2bf4cd4b4b2d6b11c052f7a7f46d338791823e770a8ff3f38d53f646**
+Generated: **2026-11-12T09:16:43+00:00**
+Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
 
 Status: **BLOCK**
 
@@ -20,11 +20,11 @@ Status: **BLOCK**
 - Numbered review entries: **425**
 - Same-ID metadata name conflicts: **1**
 - Orphan Backup entries: **29**
-- Active rows with incomplete required metadata: **3**
+- Active rows with incomplete required metadata: **1**
 - tvg-id/channel-id inconsistencies: **1**
 - Entries missing tvg-language: **18**
 - Raw resolution/geoblock name tags: **18**
-- Missing logos in active groups: **3**
+- Missing logos in active groups: **1**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
@@ -41,14 +41,14 @@ Existing playlist row order is preserved; numbering sequence discrepancies are r
 
 ## Blocking Reasons
 - orphan Backup entries: 29
-- active entries with incomplete identity/country/logo metadata: 3
+- active entries with incomplete identity/country/logo metadata: 1
 - tvg-id/channel-id inconsistencies: 1
 - entries missing tvg-language: 18
 - primary entries missing tvg-chno: 13
 - review entries still numbered: 425
 - same-ID metadata name conflicts: 1
 - raw resolution/geoblock tags in channel names: 18
-- missing logos: 3
+- missing logos: 1
 - New queue validation failures: 18
 
 ## Review-queue logo gaps

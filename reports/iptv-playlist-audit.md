@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-12T08:20:53.974404+00:00**
-Source playlist SHA-256: **c4dece2f2bf4cd4b4b2d6b11c052f7a7f46d338791823e770a8ff3f38d53f646**
+Generated: **2026-11-12T09:16:43.093797+00:00**
+Source playlist SHA-256: **9035b8514990d9681dc96a8d7ea6999c2c0777762e2945cdaf2edbd8fdce224e**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -18,7 +18,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **1**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **3**
+- Logo exceptions requiring repair: **1**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
 - Logo references checked: **1242**
@@ -30,9 +30,9 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **2**
+- Category block-order issues: **3**
 - Category registry issues: **1**
-- Alphabetical ordering issues: **10**
+- Alphabetical ordering issues: **18**
 - Suspicious URL credentials/syntax: **0**
 - Unverified provider playback routes (review only): **0**
 - Signed/tokenized stream URLs: **18**
@@ -1154,8 +1154,17 @@ None.
 
 ## Ordering
 
+- category block **Bangladesh** — out of canonical block order
 - category block **New Channels** — out of canonical block order
 - category block **New Backups** — out of canonical block order
+- **Bangladesh** — **5 — ATN News** appears after **386 — ATN Bangla UK**
+- **Bangladesh** — **15 — Channel 9** appears after **17 — Channel 52**
+- **Bangladesh** — **18 — Channel I** appears after **390 — Channel Europe**
+- **Bangladesh** — **20 — DBC News** appears after **391 — Channel S UK**
+- **Bangladesh** — **23 — Ekattor TV** appears after **400 — Doyel TV**
+- **Bangladesh** — **46 — NTV** appears after **440 — NRB TV**
+- **Bangladesh** — **9 — TBN 24 USA** appears after **55 — SRK**
+- **Bangladesh** — **58 — VISION 24** appears after **467 — Time Television**
 - **Bangladesh** — **5 — ATN News** appears after **386 — ATN Bangla UK**
 - **Bangladesh** — **15 — Channel 9** appears after **17 — Channel 52**
 - **Bangladesh** — **18 — Channel I** appears after **390 — Channel Europe**
@@ -1205,7 +1214,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1239**
+- Healthy/local references: **1241**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
@@ -1213,7 +1222,7 @@ None.
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 None.
-- missing: **3**
+- missing: **1**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
