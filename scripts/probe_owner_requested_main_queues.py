@@ -40,7 +40,7 @@ def country_for(metadata):
     if re.fullmatch(r"[A-Z]{2}", country):
         return country
     for value in (metadata.get("tvg-id", ""), metadata.get("channel-id", "")):
-        match = re.search(r"\\.([a-z]{2})(?:@|$)", str(value or ""), re.I)
+        match = re.search(r"\.([a-z]{2})(?:@|$)", str(value or ""), re.I)
         if match:
             return match.group(1).upper()
     return ""
