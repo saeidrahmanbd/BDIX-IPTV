@@ -1,56 +1,92 @@
 # BDIX-IPTV Operational Wiki
 
-The root [README](../README.md) is the project overview. This page records the current **multi-country IPTV M3U playlist policies** so that documentation and automation use the same rules.
+The root [README](../README.md) is the project overview. This page records the current multi-country playlist policies and automation boundaries.
 
 ## Maintained playlists
 
-- [IPTV-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) — the broad, multi-country main collection, including Bangladesh, Indian categories, Pakistani, International and other genre/country groups. It is not limited to Bangladesh and India.
-- [International-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) — a companion collection containing Bangladesh and India under their applicable rules, plus eligible movie and music channels from Pakistan and other countries.
+- [IPTV-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) — the owner-curated main collection, including Bangladesh, Indian categories, Pakistani, International and other genre/country groups.
+- [International-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) — the automation-managed companion collection, including Bangladesh and India under their applicable rules, plus eligible movie and music channels from Pakistan and other countries.
 
 ## Automation permissions
 
-- `IPTV-Playlist.m3u` is owner-curated. Automation may normalize names, repair metadata, localize logos, improve EPG mappings, validate streams and add qualifying new discoveries. It must preserve every pre-existing stream URL, its group and its relative order. It must not delete or relocate existing rows. The maintenance workflow enforces this with a snapshot/verification guard; a violation blocks publication.
-- `International-Playlist.m3u` is automation-controlled. Workflows may add, filter, delete, move, migrate, deduplicate and reorganize entries under the country/genre policy below.
-- These permissions are independent. Never apply the main playlist's no-delete/no-move restriction to the International playlist, and never let International's full-management permission affect the main playlist.
+### IPTV-Playlist.m3u — owner-curated and manually checked
+
+The owner remains responsible for the final channel selection and manual review. Automation may only perform the following maintenance:
+
+- Correct channel names, IDs, country/language metadata and other metadata when supported by reliable evidence.
+- Repair missing or invalid logo references using verified, authentic repository-local assets under `/logos/`; never invent or substitute unrelated logos.
+- Improve EPG identity mappings and report schedule gaps. The dedicated EPG workflow owns XMLTV generation/publication.
+- Discover eligible Bangladesh/India channels and alternate streams into the manual `New Channels` and `New Backups` queues. These queues remain for owner approval; candidates are not automatically promoted.
+- Correct an active primary row's `group-title` only when its country and genre are conclusively verified, and maintain the canonical primary category grouping. Indian policy-excluded candidates are retained in Review for the owner's inspection.
+- Probe streams and identify broken, blocked, restricted, fragile or inconclusive endpoints so the owner can inspect them.
+
+Automation must not make channel-selection decisions for the owner:
+
+- Never delete an existing channel/stream row or automatically retire a channel after failed probes.
+- Never replace an existing stream URL, promote/demote an existing Backup or Review entry, or automatically migrate entries out of `New Channels` / `New Backups`.
+- A stream failure, authentication block, geo-restriction, rate limit or transient network problem is diagnostic information—not authorization to delete or silently replace the stream.
+- Do not alter `Adult` entries or guess country/genre metadata when evidence is ambiguous.
+
+Evidence-backed primary group corrections and discovery additions are allowed; every pre-existing stream URL occurrence must remain present. Stream-health results for this playlist are advisory and do not use the International playlist's three-day retirement rule.
+
+### International-Playlist.m3u — automation-controlled
+
+Daily automation manages the International playlist end to end:
+
+- Maintain channel metadata, authentic local logos, EPG mappings and correct country/genre grouping.
+- Probe all stream entries and retain a consecutive Bangladesh-calendar-day failure history.
+- On the first definitive failure, move the stream to `Review`. Remove it only after **three consecutive Bangladesh calendar days** of definitive failure.
+- A missed calendar day restarts the failure streak. Inconclusive results—including authentication, rate-limit and geo-restriction responses—do not count as definitive failures and cannot authorize deletion.
+- Re-test `Review` entries. A working entry that still satisfies the regional/genre policy must be restored to its correct primary group. When that channel identity already has a primary stream, place the recovered alternate in `Backup`. Keep failed, ambiguous or policy-ineligible entries in `Review`.
+- A dedicated country group requires at least **five unique primary channel identities**. Backup alternates and Review rows do not count. Bangladesh and India retain their established fixed groups; Pakistan and every other country-specific group follow the five-identity threshold. Below the threshold, eligible rows stay in `International`.
+- Reorganize and validate the playlist under the current regional policy while preserving protected `Adult`, `Review`, `New Channels` and `New Backups` rules.
+
+A single failed probe, an inconclusive response or a runner-wide reachability incident must never cause stream removal. The health batch safety gate must block publication when results indicate a global network anomaly.
 
 ## Current channel eligibility
 
 | Origin / collection | IPTV-Playlist.m3u | International-Playlist.m3u |
 |---|---|---|
-| Bangladesh | All genres are eligible. | All genres are eligible. |
-| India | News, all religious channels (including Islamic), educational, business/finance and farming channels are prohibited. Kids and sports are allowed. | Same Indian exclusions; kids and sports are allowed. |
-| Pakistan | Supported in the Pakistani group. News, religious, educational, business/finance, farming, kids and sports channels are prohibited. The Indian kids and sports exception does not apply. | Eligible dedicated movie and music channels. |
-| Other countries | Eligible channels may appear in International or qualified country groups, subject to the established genre rules. | Only dedicated movie and music channels are eligible. |
+| Bangladesh | Eligible; owner-curated | All genres are eligible |
+| India | News, religious (including Islamic), educational, business/finance and farming are prohibited. Kids and sports—including cricket and football—are allowed. | Same Indian exclusions; kids and sports are allowed |
+| Pakistan | Supported only where explicitly accepted by the main playlist's manual curation | Eligible under Pakistan's unrestricted country policy |
+| Other countries | Existing owner-curated entries remain subject to manual selection | Only dedicated Movie and Music channels are eligible |
 
-The main playlist's multi-country scope is distinct from the source scope of any individual discovery workflow. The International discovery workflow accepts Bangladesh and Pakistan channels under their unrestricted genre rules, India under its regional exclusions, and Movie/Music-only candidates from other countries; it must not stage non-Bangladesh/India/Pakistan news, sports, religious, kids, educational, documentary, radio, VOD or general-entertainment channels as eligible Movie/Music candidates. Every country except Bangladesh and India, including Pakistan, requires at least five unique primary channel identities before it gets a dedicated country group. Below five, eligible channels remain in International. Backup alternates do not count; eligible orphan Backup rows without a matching primary identity are promoted before the threshold is calculated.
+The main playlist's source scope for new discovery is Bangladesh and India. Its New Channels/New Backups queues exist for manual owner review. The International discovery workflow accepts Bangladesh and Pakistan under their unrestricted country rules, India under its regional exclusions, and Movie/Music-only candidates from other countries.
 
-## Review and automatic discovery queues
+## Grouping and Review rules
 
-- **Review** is the manual-check queue for unresolved, questionable or quarantined entries. It is not an automatic discovery destination. Keep its entries available for the owner's inspection; do not silently promote them into curated groups.
-- **New Channels** is automatically populated by the scheduled Bangladesh/India discovery workflow. The first validated stream for a genuinely new channel identity is added here.
-- **New Backups** is automatically populated by the same discovery workflow. Additional validated stream URLs for an existing or newly discovered identity are added here.
-- The discovery workflow runs daily at **07:00 Asia/Dhaka** and can also be started manually. The Bangladesh/India discovery workflow stages qualifying candidates in the main playlist's New Channels/New Backups queues for owner review. International discovery and maintenance may automatically promote, migrate or remove candidates when they pass the International playlist's policy and validation.
-- **Review**, **New Channels** and **New Backups** are unnumbered and excluded from Xtream. Their entries do not count toward the five-channel country-group threshold.
-- Existing **Backup** records are alternate streams linked to a primary channel identity. Do not delete them solely because a probe is inconclusive; only explicitly owner-authorized removals may be deleted.
-- Keep uncertain stream checks available for manual review; remove only duplicates, clearly invalid/non-TV sources, explicitly prohibited candidates, unsafe proxy/tokenized links or definitively dead endpoints under the workflow's validation rules.
+- The International country-group threshold is five **unique primary identities**, not five stream URLs. Backup and Review entries are excluded from the count.
+- Working and policy-eligible International Review entries are migrated automatically: to the correct primary group for a new identity, or to Backup when a primary identity already exists.
+- Failed, ambiguous or policy-ineligible International entries stay in Review; only definitive failures on three consecutive Bangladesh calendar dates are removed.
+- Main-playlist Review, Backup, New Channels and New Backups remain under owner control and are never automatically promoted or removed.
+- `Review`, `New Channels` and `New Backups` are excluded from Xtream. Adult entries remain protected.
 
-## Metadata and logos
+## Metadata, logos and EPG
 
-Keep channel IDs, names, logo paths, country, language, group, channel number and displayed name consistent. Do not invent channel IDs or assign a logo merely because a filename looks similar. Published playlists use repository-local logo files under /logos/; use an asset only when it is a reasonable identity match.
+Keep channel IDs, names, logo paths, country, language, group, channel number and displayed name consistent. Do not invent channel IDs or assign a logo merely because a filename looks similar. Published playlists use repository-local logo files under `/logos/`; only verified identity matches are accepted.
 
-The all-playlist EPG mapping registry is reports/epg-channel-mapping.csv. Adult-group rows are excluded from the public mapping report to avoid publishing named-performer inventory.
+The all-playlist EPG mapping registry is `reports/epg-channel-mapping.csv`. The EPG refresh workflow audits both maintained playlists and publishes the public guide to `epg/epg.xml) only after source, freshness and quality checks pass. The last-known-good guide is protected from empty, stale or degraded publication. Adult-group rows are excluded from the public mapping report.
 
-## EPG publication
+## Daily automation schedule
 
-The public XMLTV refresh pipeline is enabled. A guide is published to epg/epg.xml after source-fetch, freshness and quality checks pass. The maintained playlist headers advertise the public raw XMLTV URL. The main Xtream worker serves the guide through its authenticated xmltv.php endpoint. Source-review metadata is advisory; source-specific restrictions and private credentials remain protected.
+All times below are Bangladesh time (`Asia/Dhaka`):
 
-See [EPG status and maintenance](../epg/README.md) and the [EPG coverage report](../reports/epg-coverage.md).
+| Workflow | Schedule | Scope |
+|---|---:|---|
+| IPTV Playlist Update / maintenance | 07:00 | Metadata, verified grouping, policy validation and maintenance for both playlists |
+| Playlist Logo Repair and Localization | 08:00 | Authentic local logos for both playlists |
+| International Stream Health | 08:45 | Stream probes, Review recovery and three-day retirement for International only |
+| Refresh IPTV EPG | 09:00 | EPG mapping audit and XMLTV publication for both playlists |
+
+GitHub may delay scheduled Actions. A workflow's configured schedule is not proof that a run completed; verify the run status and freshness of its output reports.
 
 ## Operations and reports
 
 Reports are generated snapshots, not live status pages. Check the generation timestamp and source fingerprint before relying on them.
 
 - [IPTV playlist audit](../reports/iptv-playlist-audit.md)
+- [International stream health](../reports/international-stream-health.md)
 - [Stream health](../reports/stream-health.md)
 - [Backup independence](../reports/backup-independence-audit.md)
 - [Maintenance report](../reports/maintenance-report.md)
