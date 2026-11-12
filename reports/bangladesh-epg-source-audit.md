@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-12T06:18:19+00:00**
+Generated: **2026-11-12T07:12:48+00:00**
 
-- Active Bangladesh playlist identities: **85**
+- Active Bangladesh playlist identities: **82**
 - Identities with a retained source mapping: **5**
 - Identities with usable current/future schedules: **3**
-- Identities without a source mapping: **80**
+- Identities without a source mapping: **77**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -29,7 +29,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 
 | Channel | Playlist tvg-id | Mapping status |
 |---|---|---|
-| Anananda Tv | anananda.tv.bd | NO_GUIDE_HIT |
 | Ananda TV | AnandaTV.bd | NO_GUIDE_HIT |
 | Asian TV | AsianTV.bd | NO_GUIDE_HIT |
 | ATN Bangla | ATNBangla.bd | NO_GUIDE_HIT |
@@ -37,11 +36,11 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Ayna TV | custom.bdix.ayna-tv | NO_GUIDE_HIT |
 | Bangla TV | BanglaTV.bd | NO_GUIDE_HIT |
 | Bangla Vision | BanglaVision.bd | NO_GUIDE_HIT |
-| BD \| TBN 24 USA | bd.tbn.24.usa.bd | NO_GUIDE_HIT |
 | Bijoy TV | BijoyTV.bd | NO_GUIDE_HIT |
 | Boishakhi TV | BoishakhiTV.bd | NO_GUIDE_HIT |
 | BTV Chattogram | BTVChattogram.bd | NO_GUIDE_HIT |
 | Channel 1 | Channel1.bd | NO_GUIDE_HIT |
+| Channel 16 | Channel16.bd | NO_GUIDE_HIT |
 | Channel 24 | Channel24.bd | NO_GUIDE_HIT |
 | Channel 52 | Channel52.bd | NO_GUIDE_HIT |
 | Channel 9 | Channel9.bd | NO_GUIDE_HIT |
@@ -73,7 +72,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Jago News 24 | JagoNews24.bd | NO_GUIDE_HIT |
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
-| Jhankar TV | JhankarTV.ca | NO_GUIDE_HIT |
 | Jonmobhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
 | JTV BANGLA | jtv.bangla.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
@@ -103,10 +101,9 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Shikor TV Canada | custom.shikortvcanada | NO_GUIDE_HIT |
 | Somoy TV | SomoyNewsTV.bd | NO_GUIDE_HIT |
 | SRK | SRK.bd | NO_GUIDE_HIT |
+| TBN 24 USA | bd.tbn.24.usa.bd | NO_GUIDE_HIT |
 | TBN24 | TBN24.us | NO_GUIDE_HIT |
-| Ten TV Prime | custom.tentvprime | NO_GUIDE_HIT |
-| Thikana | ThikanaTV.us | NO_GUIDE_HIT |
-| Thikana TV | thikana.tv.bd | NO_GUIDE_HIT |
+| Thikana TV | ThikanaTV.us | NO_GUIDE_HIT |
 | Time Television | TimeTelevision.us | NO_GUIDE_HIT |
 | VISION 24 | vision.24.bd | NO_GUIDE_HIT |
 
