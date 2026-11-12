@@ -122,6 +122,15 @@ class InternationalStreamHealthTests(unittest.TestCase):
         self.assertIn('group-title="Review"', output)
         self.assertEqual(events[0]["action"], "unchanged")
 
+
+    def test_working_but_unclassified_foreign_review_stays_in_review(self):
+        source = self.playlist(
+            row(name="General Entertainment Channel", group="Review")
+        )
+        output, _, events = apply(source, "ok", {}, "2026-11-08", status=200, reason="Media bytes received")
+        self.assertIn('group-title="Review"', output)
+        self.assertEqual(events[0]["action"], "unchanged")
+
     def test_token_rotation_does_not_reset_history(self):
         one = row(url="https://example.test/live/user/pass/12.m3u8?token=old")
         two = row(url="https://example.test/live/user/pass/12.m3u8?token=new")
