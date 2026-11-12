@@ -35,6 +35,43 @@ def id_key(value):
         return ""
     return value.split("@", 1)[0]
 
+def country_for(metadata):
+    country = str(metadata.get("tvg-country", "") or "").strip().upper()
+    if re.fullmatch(r"[A-Z]{2}", country):
+        return country
+    for value in (metadata.get("tvg-id", ""), metadata.get("channel-id", "")):
+        match = re.search(r"\\.([a-z]{2})(?:@|$)", str(value or ""), re.I)
+        if match:
+            return match.group(1).upper()
+    return ""
+
+
+def has_unique_primary_match(info, primary_rows):
+    """Mirror migrate_owner_requested_main_queues.primary_match exactly.
+
+    A same-name candidate in a different country is not treated as a match;
+    ambiguous matches are still probed so the migration can retain them safely.
+    """
+    metadata = attrs(info)
+    ids = {id_key(value) for value in (metadata.get("tvg-id"), metadata.get("channel-id")) if id_key(value)}
+    current_name = metadata.get("tvg-name") or info.rsplit(",", 1)[-1]
+    normalized_name = name_key(current_name)
+    id_matches = []
+    name_matches = []
+    for row in primary_rows:
+        primary = attrs(row["info"])
+        primary_ids = {id_key(value) for value in (primary.get("tvg-id"), primary.get("channel-id")) if id_key(value)}
+        if ids & primary_ids:
+            id_matches.append(row)
+        elif normalized_name and name_key(primary.get("tvg-name") or row["info"].rsplit(",", 1)[-1]) == normalized_name:
+            left_country = country_for(metadata)
+            right_country = country_for(primary)
+            if not left_country or not right_country or left_country == right_country:
+                name_matches.append(row)
+    if id_matches:
+        return len(id_matches) == 1
+    return len(name_matches) == 1
+
 def parse():
     rows, current = [], None
     for line in PLAYLIST.read_text(encoding="utf-8-sig").replace("\r", "").splitlines():
@@ -92,13 +129,10 @@ def probe(url):
 
 def main():
     rows = parse()
-    primary_ids, primary_names = set(), set()
-    for row in rows:
-        a = attrs(row["info"])
-        if a.get("group-title", "").strip() not in ACTIVE:
-            continue
-        primary_ids.update(id_key(x) for x in (a.get("tvg-id"), a.get("channel-id")) if id_key(x))
-        primary_names.add(name_key(a.get("tvg-name") or row["info"].rsplit(",", 1)[-1]))
+    primary_rows = [
+        row for row in rows
+        if attrs(row["info"]).get("group-title", "").strip() in ACTIVE
+    ]
     candidates = []
     seen = set()
     for row in rows:
@@ -107,9 +141,7 @@ def main():
         if group in QUEUE:
             include = True
         elif group == "Backup":
-            ids = {id_key(x) for x in (a.get("tvg-id"), a.get("channel-id")) if id_key(x)}
-            name = name_key(a.get("tvg-name") or row["info"].rsplit(",", 1)[-1])
-            include = not (ids & primary_ids) and name not in primary_names
+            include = not has_unique_primary_match(row["info"], primary_rows)
         else:
             include = False
         url = row["url"]
