@@ -1,17 +1,17 @@
 # International Playlist Organization Audit
 
-- Entries before: 3074
-- Entries after: 3074
+- Entries before: 3107
+- Entries after: 3107
 - Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1392
-- Matching alternate streams retained in Backup: 354
-- True orphan Backup rows evaluated: 661
-- Eligible orphan Backup rows promoted to primary: 0
-- Ineligible/unclassified orphan Backup rows retained: 661
+- Original Backup/Backups and protected queue rows examined: 1397
+- Matching alternate streams retained in Backup: 370
+- True orphan Backup rows evaluated: 658
+- Eligible orphan Backup rows promoted to primary: 3
+- Ineligible/unclassified orphan Backup rows retained: 655
 - Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.
 - For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.
 - Every country except Bangladesh and India, including Pakistan, requires five unique primary channel identities before a dedicated country group is used.
@@ -25,55 +25,56 @@
 
 ## Protected Backup/Review/Not Playing entries preserved (policy would have removed them)
 
-- protected Backup/Not Playing kept despite orphan policy: 596
+- protected Backup/Not Playing kept despite orphan policy: 590
 - test/VOD/non-TV name: 1
 
 ## Category counts
 
-- Bangladesh: 61
-- Indian Bangla: 29
-- Indian Movies: 63
-- Indian Music: 54
+- Bangladesh: 60
+- Indian Bangla: 28
+- Indian Movies: 65
+- Indian Music: 56
 - Indian Entertainment: 167
-- Pakistani: 22
-- Argentina: 13
+- Pakistani: 23
+- Argentina: 14
 - Brazil: 14
 - Bulgaria: 21
-- Canada: 30
+- Canada: 31
 - Chile: 11
 - China: 9
-- Colombia: 9
-- Costa Rica: 9
+- Colombia: 7
+- Costa Rica: 8
 - Czech Republic: 22
 - DO: 10
 - Estonia: 6
 - France: 40
-- Germany: 74
+- Germany: 73
 - Greece: 8
 - Hungary: 15
 - Iran: 13
 - Italy: 28
-- Lebanon: 5
+- Lebanon: 6
 - Mexico: 16
 - Netherlands: 17
 - Panama: 5
+- Paraguay: 5
 - Peru: 7
 - Poland: 25
 - Romania: 28
 - Russia: 62
 - Saudi Arabia: 9
-- Spain: 19
-- Sweden: 46
+- Singapore: 5
+- Spain: 20
+- Sweden: 49
 - Turkey: 14
-- Ukraine: 24
-- United Kingdom: 23
-- United States: 205
+- Ukraine: 18
+- United Kingdom: 24
+- United States: 216
 - Uzbekistan: 5
-- Vietnam: 6
+- Vietnam: 5
 - International: 96
 - Kids: 8
 - Sports: 5
-- Adult: 329
-- Review: 370
-- New Backups: 7
-- Backup: 1015
+- Adult: 339
+- Review: 369
+- Backup: 1025
