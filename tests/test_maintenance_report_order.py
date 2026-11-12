@@ -106,6 +106,8 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("python scripts/validate_international_playlist.py", mutations)
         for forbidden in (
             "python scripts/reclassify_main_playlist_groups.py",
+            "python scripts/probe_owner_requested_main_queues.py",
+            "python scripts/migrate_owner_requested_main_queues.py",
             "python scripts/renumber_active_channels.py IPTV-Playlist.m3u",
             "python scripts/sort_playlists.py IPTV-Playlist.m3u",
             "python scripts/maintenance_helpers.py verify-no-unauthorized-removals",
