@@ -1,12 +1,22 @@
 import sys
+import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import migrate_owner_requested_main_queues as migration
 
 class OwnerRequestedMigrationTests(unittest.TestCase):
+    def setUp(self):
+        self.temp_dir = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp_dir.cleanup)
+        for name in ("APPROVALS", "PROBES", "REPORT"):
+            patcher = patch.object(migration, name, Path(self.temp_dir.name) / f"{name.lower()}.json")
+            patcher.start()
+            self.addCleanup(patcher.stop)
+
     def test_identity_key_ignores_quality_suffix(self):
         self.assertEqual(migration.id_key("ZeeTV.in@HD"), migration.id_key("ZeeTV.in@SD"))
 
