@@ -5,27 +5,37 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-11 — `IPTV-Playlist.m3u`
+### 2026-11-12 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **52**
-- Stream URLs added / removed: **0 / 60**
+- New channel identities: **8**
+- Channel identities removed: **35**
+- Stream URLs added / removed: **18 / 107**
 - Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **3**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
+Added channel identities (up to 10):
+- CCV (480p)
+- Movies Now HD (576p)
+- TamilVision-TV (1080p)
+- Desi Channel (1080p)
+- E 24 (576p)
+- Goldmines Action (576p)
+- Mazhavil Manorama HD (1080p)
+- Tolly TV (1080p)
+
 Removed channel identities (up to 10):
-- Peoples Radio
-- Star Gold 2 HD
-- Jaihind TV
-- Jan TV
-- Nandighosha TV
-- Knowledge Network
-- ATG Live
-- FTF Sports
-- Horse & Country TV
-- Horse TV
+- FITE 24/7
+- Red Bull TV
+- talkSPORT
+- Trace Sport
+- DD Sports SD
+- Eurosport HD
+- Fox Sports News
+- Hard Knocks
+- Inter TV (Italy)
+- MMA-TV.com
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-12 — `International-Playlist.m3u`
