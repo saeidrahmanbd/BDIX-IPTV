@@ -1,4 +1,5 @@
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -66,18 +67,17 @@ class MainPlaylistGroupingTests(unittest.TestCase):
     def test_explicit_indian_channel_genre_overrides(self):
         source = (
             entry("Aaryaa TV", "Indian Entertainment", "https://in.example/aaryaa.m3u8", "IN", "hin", channel_id="AaryaaTV.in")
-            + entry("KCL TV", "Indian Music", "https://in.example/kcl.m3u8", "IN", "mal", channel_id="KCLTV.in@SD")
             + entry("Namma Bangalore", "Indian Movies", "https://in.example/namma.m3u8", "IN", "kan", channel_id="NammaBangalore.in@SD")
             + entry("Pitaara TV", "Indian Movies", "https://in.example/pitaara.m3u8", "IN", "pan", channel_id="Pitaara.in@SD")
             + entry("Pitaara Comedy", "Indian Movies", "https://in.example/pitaara-comedy.m3u8", "IN", "pan", channel_id="PitaaraComedy.in@SD")
         )
         out, report = self.run_script(source)
         rows = {name: next(row for row in out.split("#EXTINF:") if f'tvg-name="{name}"' in row)
-                for name in ("Aaryaa TV", "KCL TV", "Namma Bangalore", "Pitaara TV", "Pitaara Comedy")}
+                for name in ("Aaryaa TV", "Namma Bangalore", "Pitaara TV", "Pitaara Comedy")}
         self.assertIn('group-title="Indian Music"', rows["Aaryaa TV"])
         for name in ("KCL TV", "Namma Bangalore", "Pitaara TV", "Pitaara Comedy"):
             self.assertIn('group-title="Indian Entertainment"', rows[name])
-        self.assertIn("Verified primary rows reclassified: **5**", report)
+        self.assertIn("Verified primary rows reclassified: **4**", report)
 
     def test_indian_policy_excluded_stream_stays_out_of_review(self):
         source = entry("Indian Quran Channel", "Indian Entertainment", "https://in.example/quran.m3u8", "IN", "hin")

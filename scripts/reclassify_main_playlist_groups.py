@@ -82,7 +82,6 @@ def stream_url(block: list[str]) -> str:
 # Verified channel-specific genre corrections for Indian services.
 CHANNEL_GROUP_OVERRIDES = {
     "aaryaatv.in": "Indian Music",
-    "kcltv.in@sd": "Indian Entertainment",
     "nammabangalore.in@sd": "Indian Entertainment",
     "pitaara.in@sd": "Indian Entertainment",
     "pitaaracomedy.in@sd": "Indian Entertainment",
