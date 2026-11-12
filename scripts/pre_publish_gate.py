@@ -22,6 +22,12 @@ EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups"}; REVIEW_Q
 RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"; ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 RAW_NAME_TAG=re.compile(r"\s*(?:\[[^]]*(?:geo-blocked|geo blocked)[^]]*\]|\((?:\d{3,4}p|\d{3,4}i|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}p|\d{3,4}i))\s*$",re.I)
 def attrs(s): return dict(ATTR.findall(s))
+def identity_key(value):
+    """Normalize only feed-quality suffixes while retaining the channel identity."""
+    value = str(value or "").strip().casefold()
+    return value.split("@", 1)[0] if value else ""
+
+
 def parse(text):
     lines=text.replace("\r","").splitlines(); out=[]; cur=None
     for line in lines:
@@ -119,14 +125,14 @@ def main():
         for cid in {value.strip().casefold() for value in (a.get("tvg-id",""),a.get("channel-id","")) if value.strip()}:
             primary_identity[cid].append((a.get("tvg-name",""),a.get("group-title",""),u))
     duplicate_primary=[k for k,v in primary_identity.items() if len(v)>1]
-    primary_ids=set(primary_identity)
+    primary_ids={identity_key(value) for value in primary_identity}
     orphan_backups=[]
     incomplete_metadata=[]
     id_pair_conflicts=[]
     missing_languages=[]
     for _,a,u in current:
         group=a.get("group-title","").strip()
-        ids={value.strip().casefold() for value in (a.get("tvg-id",""),a.get("channel-id","")) if value.strip()}
+        ids={identity_key(value) for value in (a.get("tvg-id",""),a.get("channel-id","")) if value.strip()}
         if group=="Backup" and not (ids & primary_ids): orphan_backups.append(a.get("tvg-name",""))
         if a.get("tvg-id","").strip() and a.get("channel-id","").strip() and a["tvg-id"].strip().casefold()!=a["channel-id"].strip().casefold():
             id_pair_conflicts.append(a.get("tvg-name",""))
