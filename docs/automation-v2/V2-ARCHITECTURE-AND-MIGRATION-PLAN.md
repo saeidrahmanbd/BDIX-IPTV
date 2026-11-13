@@ -27,8 +27,8 @@ Replace overlapping automation with one policy source, isolated playlist engines
 | Run ledger | Idempotent run reservation model and Bangladesh-date International probe ledger implemented; durable orchestration/persistence still requires integration |
 | Transaction safety | Engine path allowlists, SHA-256 candidate evidence, stale-input checks, fail-closed gate, shared lock and atomic candidate-directory staging implemented; no production publisher |
 | Logo audit | Playlist/runtime/report references separated; exact duplicate hashes reported; no deletion, quarantine or move |
-| V2 CI | V2 CI passed 201 tests and the immutable baseline dry run on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8; latest verified branch CI commit d2a14e92e46ee10f1f4df5c30a57efeb048c4bc3 passed |
-| Legacy regression | Latest full repository regression run passed 732 tests on commit d2a14e92e46ee10f1f4df5c30a57efeb048c4bc3 |
+| V2 CI | V2 CI passed 212 tests and the immutable baseline dry run on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8; latest verified branch CI commit 564139d881a4bd8b0115e25347a13dfcc7db8846 passed |
+| Legacy regression | Latest full repository regression run passed 743 tests on commit d2a14e92e46ee10f1f4df5c30a57efeb048c4bc3 |
 | Real-baseline measurements | Exact production blob fingerprints verified; IPTV 1,280 rows; International 3,120 rows; EPG 30,944,668 bytes |
 | Workflow migration/cutover | Not started; all existing production workflows remain enabled and unchanged |
 
