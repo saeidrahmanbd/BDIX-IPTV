@@ -10,6 +10,11 @@ from discover_bd_in_new_queues import (
 
 
 class ChannelDiscoveryPolicyTests(unittest.TestCase):
+    def test_indian_farming_and_agriculture_channels_are_prohibited(self):
+        for name in ("Indian Farming TV", "Krishi Darshan", "Agri World", "Agriculture Today", "Horticulture Channel"):
+            with self.subTest(name=name):
+                reason = prohibited_channel({"tvg-country": "IN", "group-title": "Entertainment"}, name)
+                self.assertEqual(reason, "Indian farming/agriculture channel is prohibited")
     def test_permanently_banned_names_are_blocked_with_quality_and_country_suffixes(self):
         names = [
             "E-Vidya 10 (576p) (India)", "E-Vidya 11 (576p) (India)",
