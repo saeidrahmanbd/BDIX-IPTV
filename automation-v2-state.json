@@ -13,7 +13,7 @@
         "engine": "bundle",
         "idempotency_key": "83b69968ae9061ad0997f6a0e0e4f98eea291b7c83b1a62aa5797815ab32a4d9",
         "started_at": "2026-11-13T18:06:53.484790+06:00",
-        "status": "running"
+        "status": "failed"
       }
     ],
     "schema_version": 1,
