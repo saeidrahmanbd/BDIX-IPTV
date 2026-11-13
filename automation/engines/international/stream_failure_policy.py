@@ -19,11 +19,17 @@ def is_definitive_failure(probe: Probe) -> bool:
             and not probe.geo_blocked and probe.status_code in DEFINITIVE_HTTP_FAILURES)
 
 def consecutive_definitive_failure_days(probes: list[Probe], today: date) -> int:
-    """Count only a complete, consecutive Bangladesh-calendar-day streak ending today."""
-    by_day = {probe.day: probe for probe in probes}
+    """Count only one unambiguous definitive result per consecutive Dhaka calendar day."""
+    grouped: dict[date, list[Probe]] = {}
+    for probe in probes:
+        grouped.setdefault(probe.day, []).append(probe)
     count = 0
     day = today
-    while day in by_day and is_definitive_failure(by_day[day]):
+    while day in grouped:
+        daily = grouped[day]
+        # Duplicate observations for one day are ambiguous; fail closed and reset the streak.
+        if len(daily) != 1 or not is_definitive_failure(daily[0]):
+            break
         count += 1
         day -= timedelta(days=1)
     return count
