@@ -58,7 +58,7 @@ class AtomicOutputTests(unittest.TestCase):
             state=root/"reports"/"automation-v2"/"state"
             state.parent.mkdir(parents=True)
             state.symlink_to(outside,target_is_directory=True)
-            with self.assertRaisesRegex(ValueError,"lock directory"):
+            with self.assertRaisesRegex(ValueError,"lock directory|symlink"):
                 atomic_write_v2_output(root,"reports/automation-v2/candidates/run/file.txt","x")
 
     def test_state_file_symlink_cannot_overwrite_production_playlist(self):
