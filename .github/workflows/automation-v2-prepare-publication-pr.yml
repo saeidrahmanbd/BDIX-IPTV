@@ -132,15 +132,30 @@ jobs:
           RUN_ID: ${{ inputs.candidate_run_id }}
         run: |
           set -euo pipefail
-          gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$BRANCH" \
-            --title "Review Automation V2 production candidates: $TRANSACTION_ID" \
-            --body "## Controlled Automation V2 publication review
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          repo = os.environ["GITHUB_REPOSITORY"]
+          run_id = os.environ["RUN_ID"]
+          baseline = os.environ["BASELINE"]
+          transaction = os.environ["TRANSACTION_ID"]
+          body = f"""## Controlled Automation V2 publication review
 
-          This PR was prepared from successful shadow run [$RUN_ID](https://github.com/$GITHUB_REPOSITORY/actions/runs/$RUN_ID), based on commit `$BASELINE`.
+          This PR was prepared from successful shadow run [{run_id}](https://github.com/{repo}/actions/runs/{run_id}), based on commit `{baseline}`.
 
-          - Candidate transaction: `$TRANSACTION_ID`
+          - Candidate transaction: `{transaction}`
           - Changes are limited to `IPTV-Playlist.m3u`, `International-Playlist.m3u`, and `epg/epg.xml`.
           - Artifact fingerprints, IPTV preservation, International preservation (no removals), XMLTV validity, EPG channel-definition retention, and candidate counts were checked before this PR was created.
           - This workflow does **not** push to `main`, merge this PR, disable legacy workflows, or enable automatic publication.
 
-          **Owner review and merge are required for production changes.** Do not merge unless all required checks pass and the candidate content has been reviewed."
+          **Owner review and merge are required for production changes.** Do not merge unless all required checks pass and the candidate content has been reviewed.
+          """
+          Path(os.environ["RUNNER_TEMP"], "automation-v2-pr-body.md").write_text(body, encoding="utf-8")
+          PY
+          if ! gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$BRANCH" \
+            --title "Review Automation V2 production candidates: $TRANSACTION_ID" \
+            --body-file "$RUNNER_TEMP/automation-v2-pr-body.md"; then
+            echo "::error::GitHub refused PR creation. In repository Settings > Actions > General, enable 'Allow GitHub Actions to create and approve pull requests', then rerun this workflow. The candidate branch has already been pushed and is safe for manual PR creation."
+            echo "Candidate branch: $BRANCH"
+            exit 1
+          fi
