@@ -44,5 +44,10 @@ class InternationalPlannerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"duplicate"):
             plan_lifecycle(PLAYLIST,inputs,date(2026,11,13))
 
+
+    def test_verified_indian_movie_group_is_preserved_not_moved_to_backup(self):
+        result=plan_lifecycle(PLAYLIST,[RowLifecycleInput(0,"a","Indian Movies","primary")],date(2026,11,13))
+        self.assertEqual(result.changes[0].target_group,"Indian Movies")
+
 if __name__=="__main__":
     unittest.main()

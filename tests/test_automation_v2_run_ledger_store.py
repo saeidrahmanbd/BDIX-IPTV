@@ -87,5 +87,29 @@ class RunLedgerStoreTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"attempt"):
             parse_run_ledger_json(bad)
 
+    def test_recent_running_lease_blocks_but_expired_lease_allows_retry(self):
+        from datetime import datetime, timedelta
+        from automation.core.run_ledger import RunRequest, reserve_run, make_idempotency_key
+        started = datetime.fromisoformat("2026-11-13T09:00:00+06:00")
+        request = RunRequest("iptv", date(2026,11,13), "b"*40, "d"*64,
+                             requested_at=started + timedelta(minutes=30))
+        running_request = RunRequest("iptv", date(2026,11,13), "b"*40, "d"*64, requested_at=started)
+        running = LedgerEntry(make_idempotency_key(running_request),"iptv",date(2026,11,13),"b"*40,"running",1,started)
+        blocked = reserve_run(request,[running])
+        self.assertFalse(blocked.allowed)
+        expired_request = RunRequest("iptv", date(2026,11,13), "b"*40, "d"*64,
+                                     requested_at=started + timedelta(hours=4))
+        retried = reserve_run(expired_request,[running])
+        self.assertTrue(retried.allowed)
+        self.assertEqual(retried.attempt,2)
+
+    def test_running_entry_without_timestamp_fails_closed(self):
+        from datetime import datetime
+        from automation.core.run_ledger import RunRequest, reserve_run, make_idempotency_key
+        request = RunRequest("iptv",date(2026,11,13),"b"*40,"d"*64,
+                             requested_at=datetime.fromisoformat("2026-11-13T10:00:00+06:00"))
+        unknown_age = LedgerEntry(make_idempotency_key(request),"iptv",date(2026,11,13),"b"*40,"running",1)
+        self.assertFalse(reserve_run(request,[unknown_age]).allowed)
+
 if __name__=="__main__":
     unittest.main()

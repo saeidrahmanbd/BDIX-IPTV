@@ -67,5 +67,16 @@ class TransactionStagingTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"paths"):
                 stage_transaction_bundle(temp,"tx-001",self.manifests,self.artifacts,{"IPTV-Playlist.m3u":self.after["IPTV-Playlist.m3u"]},BASE)
 
+    def test_atomic_publish_failure_cleans_partial_staging_directory(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as temp:
+            with patch("automation.core.transaction_staging.os.replace", side_effect=OSError("injected rename failure")):
+                with self.assertRaisesRegex(OSError, "injected rename failure"):
+                    stage_transaction_bundle(temp,"tx-fail",self.manifests,self.artifacts,self.after,BASE)
+            parent=Path(temp)/"reports/automation-v2/candidates/transactions"
+            self.assertFalse((parent/"tx-fail").exists())
+            self.assertEqual(list(parent.glob(".staging-*")), [])
+
+
 if __name__=="__main__":
     unittest.main()

@@ -5,7 +5,7 @@ from datetime import date
 from automation.core.playlist_contract import parse_rows, ATTR_RE
 from automation.engines.international.candidate_engine import GroupChange
 from automation.engines.international.lifecycle import ChannelState, decide_channel
-from automation.engines.international.country_groups import ChannelIdentity, eligible_country_groups
+from automation.engines.international.country_groups import ChannelIdentity, eligible_country_groups, FIXED_PRIMARY_GROUPS
 
 @dataclass(frozen=True)
 class RowLifecycleInput:
@@ -47,7 +47,7 @@ def plan_lifecycle(playlist_text: str, inputs: list[RowLifecycleInput], today: d
         if item.primary_group and item.verified_stream_role == "primary"
     ]
     eligible_groups = eligible_country_groups(primary_identities, minimum_country_group_size)
-    fixed = {"bangladesh", "india"}
+    fixed = FIXED_PRIMARY_GROUPS
 
     changes: list[GroupChange] = []
     removal_review: list[str] = []

@@ -8,6 +8,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from typing import Callable
 
 STATE_PATH = "automation-v2-state.json"
@@ -140,6 +142,7 @@ def reserve_remote_run(store: GitHubStateStore, request, active_transaction_id: 
         request.baseline_commit.lower(),
         "running",
         decision.attempt,
+        request.requested_at or datetime.now(ZoneInfo(TIMEZONE)),
     ))
     updated = dict(snapshot.state)
     updated["run_ledger"] = json.loads(serialize_run_ledger(entries))
@@ -178,3 +181,17 @@ def record_remote_probe(store: GitHubStateStore, identity: str, probe):
     updated["international_probe_ledger"] = updated_probe
     store.save(updated, snapshot.blob_sha)
     return updated_probe
+
+
+def execute_remote_run(store: GitHubStateStore, request, operation):
+    """Run a candidate operation under a durable idempotency reservation."""
+    decision = reserve_remote_run(store, request)
+    if not decision.allowed:
+        return decision, None
+    try:
+        result = operation()
+    except Exception:
+        finish_remote_run(store, decision.idempotency_key, decision.attempt, "failed")
+        raise
+    finish_remote_run(store, decision.idempotency_key, decision.attempt, "succeeded")
+    return decision, result
