@@ -8,11 +8,12 @@
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
 - Original Backup/Backups and protected queue rows examined: 1378
-- Matching alternate streams retained in Backup: 372
-- True orphan Backup rows evaluated: 650
-- Eligible orphan Backup rows promoted to primary: 0
+- Matching alternate streams retained in Backup: 362
+- True orphan Backup rows evaluated: 660
+- Eligible orphan Backup rows promoted to primary: 10
+- Clearly identified Adult orphans restored to Adult: 10
 - Ineligible/unclassified orphan Backup rows retained: 650
-- Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.
+- Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational/Knowledge, Business/Finance and Farming/Agriculture are excluded; Indian Kids and Sports remain eligible.
 - For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.
 - Every country except Bangladesh and India, including Pakistan, requires five unique primary channel identities before a dedicated country group is used.
 - Eligible orphan Backup rows without a matching primary identity are migrated to their country/genre primary group; matching alternates remain in Backup. Unclassifiable orphans are retained for manual review.
@@ -34,7 +35,7 @@
 - Indian Bangla: 28
 - Indian Movies: 65
 - Indian Music: 55
-- Indian Entertainment: 169
+- Indian Entertainment: 165
 - Pakistani: 23
 - Argentina: 14
 - Brazil: 14
@@ -75,6 +76,6 @@
 - International: 99
 - Kids: 8
 - Sports: 5
-- Adult: 341
+- Adult: 351
 - Review: 356
-- Backup: 1022
+- Backup: 1016
