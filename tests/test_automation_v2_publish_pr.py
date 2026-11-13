@@ -153,7 +153,7 @@ class AutomationV2PublishPRTests(unittest.TestCase):
             outside = root.parent / (root.name + "-outside")
             outside.mkdir()
             (outside / "epg.xml").write_text(CANDIDATE_FILES["epg/epg.xml"], encoding="utf-8")
-            (transaction / "epg").unlink()
+            (transaction / "epg").rmdir()
             (transaction / "epg").symlink_to(outside, target_is_directory=True)
             try:
                 with self.assertRaisesRegex(ValueError, "symlink or escapes"):
