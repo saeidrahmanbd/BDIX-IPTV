@@ -16,9 +16,12 @@ class StreamProbeTests(unittest.TestCase):
     def test_200_is_working(self,mock):
         response=MagicMock()
         response.__enter__.return_value.getcode.return_value=200
+        response.__enter__.return_value.headers={"Content-Type":"application/vnd.apple.mpegurl"}
+        response.__enter__.return_value.read.return_value=b"#EXTM3U\n#EXT-X-VERSION:3\n"
         mock.return_value=response
         result=probe_stream("https://example.com/live.m3u8",DAY)
         self.assertEqual(result.status_code,200)
+        self.assertEqual(result.stream_state,"verified")
         self.assertFalse(is_definitive_failure(result))
 
     @patch("automation.engines.international.stream_probe.urlopen")
@@ -26,6 +29,7 @@ class StreamProbeTests(unittest.TestCase):
         mock.side_effect=HTTPError("https://example.com/live",404,"Not Found",{},None)
         result=probe_stream("https://example.com/live",DAY)
         self.assertTrue(is_definitive_failure(result))
+        self.assertEqual(result.stream_state,"dead")
 
     @patch("automation.engines.international.stream_probe.urlopen")
     def test_410_is_definitive(self,mock):
@@ -46,6 +50,17 @@ class StreamProbeTests(unittest.TestCase):
         mock.side_effect=URLError("connection failed")
         result=probe_stream("https://example.com/live",DAY)
         self.assertTrue(result.network_error)
+        self.assertFalse(is_definitive_failure(result))
+
+    @patch("automation.engines.international.stream_probe.urlopen")
+    def test_html_success_is_not_verified_media(self,mock):
+        response=MagicMock()
+        response.__enter__.return_value.getcode.return_value=200
+        response.__enter__.return_value.headers={"Content-Type":"text/html"}
+        response.__enter__.return_value.read.return_value=b"<html><body>Access denied</body></html>"
+        mock.return_value=response
+        result=probe_stream("https://example.com/live.m3u8",DAY)
+        self.assertEqual(result.stream_state,"dead")
         self.assertFalse(is_definitive_failure(result))
 
     def test_private_and_credential_urls_rejected(self):
