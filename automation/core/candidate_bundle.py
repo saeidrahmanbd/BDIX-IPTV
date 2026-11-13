@@ -75,7 +75,7 @@ def write_candidate_bundle(root: str | Path, run_id: str, bundle: CandidateBundl
                 output=stage/Path(*path.parts)
                 output.parent.mkdir(parents=True,exist_ok=True)
                 with output.open("w",encoding="utf-8",newline="") as stream:
-                    stream.write(content)
+                stream.write("\n")
                     stream.flush()
                     os.fsync(stream.fileno())
             metadata={
@@ -90,7 +90,7 @@ def write_candidate_bundle(root: str | Path, run_id: str, bundle: CandidateBundl
             metadata_path=stage/"candidate-bundle.json"
             with metadata_path.open("w",encoding="utf-8") as stream:
                 json.dump(metadata,stream,indent=2,sort_keys=True)
-                stream.write("\\n")
+                stream.write("\n")
                 stream.flush()
                 os.fsync(stream.fileno())
             os.replace(stage,target)
