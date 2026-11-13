@@ -7,10 +7,10 @@
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1380
+- Original Backup/Backups and protected queue rows examined: 1378
 - Matching alternate streams retained in Backup: 372
-- True orphan Backup rows evaluated: 652
-- Eligible orphan Backup rows promoted to primary: 2
+- True orphan Backup rows evaluated: 650
+- Eligible orphan Backup rows promoted to primary: 0
 - Ineligible/unclassified orphan Backup rows retained: 650
 - Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.
 - For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.
