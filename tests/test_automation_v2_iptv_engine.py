@@ -31,6 +31,11 @@ class IptvCandidateEngineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"New Channels"):
             build_candidate(BASE,[item])
 
+    def test_missing_m3u_header_rejected(self):
+        item=DiscoveryCandidate('#EXTINF:-1 group-title="New Channels",B','https://b.example/b.m3u8')
+        with self.assertRaisesRegex(ValueError,"#EXTM3U"):
+            build_candidate("not a playlist", [item])
+
     def test_non_http_url_rejected(self):
         item=DiscoveryCandidate('#EXTINF:-1 group-title="New Channels",B','file:///tmp/a')
         with self.assertRaises(ValueError):
