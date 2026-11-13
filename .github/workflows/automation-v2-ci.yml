@@ -14,6 +14,8 @@ on:
       - 'tests/test_automation_v2_*.py'
       - 'scripts/audit_logo_references.py'
       - 'scripts/run_automation_v2_dry_run.py'
+      - 'scripts/run_automation_v2_candidate_bundle.py'
+      - '.github/workflows/automation-v2-candidate-bundle.yml'
       - '.github/workflows/automation-v2-ci.yml'
   pull_request:
     branches:
