@@ -44,5 +44,16 @@ class InternationalMonitorTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"identity"):
             probe_and_record(None," ","https://example.com/live",DAY)
 
+
+    @patch("automation.engines.international.monitor.probe_stream")
+    def test_changed_stream_url_is_reprobed_on_the_same_day(self,mock):
+        mock.side_effect=[Probe(DAY,404),Probe(DAY,200,stream_state="verified")]
+        first=probe_and_record(None,"channel-a","https://example.com/old.m3u8",DAY)
+        second=probe_and_record(first.ledger_json,"channel-a","https://example.com/new.m3u8",DAY)
+        self.assertFalse(second.already_probed_today)
+        self.assertEqual(second.probe_status,200)
+        self.assertEqual(second.failure_streak,0)
+        self.assertEqual(mock.call_count,2)
+
 if __name__=="__main__":
     unittest.main()
