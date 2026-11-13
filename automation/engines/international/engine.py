@@ -16,7 +16,7 @@ class InternationalCandidate:
 def build_international_candidate(playlist_text: str, inputs: list[RowLifecycleInput],
                                   today: date, minimum_country_group_size: int = 5,
                                   discoveries: list | None = None) -> InternationalCandidate:
-    """Apply only planned group changes while preserving every stream URL and row."""
+    """Apply planned group changes and only the explicitly authorized three-day removals."""
     plan=plan_lifecycle(playlist_text,inputs,today,minimum_country_group_size)
     candidate=build_candidate(playlist_text,list(plan.changes),plan.remove_identities)
     group_candidate=candidate
