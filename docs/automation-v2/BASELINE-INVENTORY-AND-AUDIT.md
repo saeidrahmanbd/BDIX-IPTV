@@ -43,23 +43,24 @@ There are 18 GitHub Actions workflow files (119,365 bytes), 79 Python scripts, 5
 
 ### Workflow inventory
 
-1. `changelog.yml`
-2. `check-xtream.yml`
-3. `deploy-analytics.yml`
-4. `deploy-xtream.yml`
-5. `discovery-schedule-watchdog.yml`
-6. `epg-bangladesh-source-probe.yml`
-7. `epg-external-source-probe.yml`
-8. `epg-refresh.yml`
-9. `indexnow.yml`
-10. `international-channel-discovery.yml`
-11. `international-stream-health.yml`
-12. `iptv-maintenance.yml`
-13. `logo-localization.yml`
-14. `new-channel-discovery.yml`
-15. `playlist-logo-localization.yml`
-16. `seo-validation.yml`
-17. `test-suite.yml`
+1. `automation-v2-ci.yml`
+2. `changelog.yml`
+3. `check-xtream.yml`
+4. `deploy-analytics.yml`
+5. `deploy-xtream.yml`
+6. `discovery-schedule-watchdog.yml`
+7. `epg-bangladesh-source-probe.yml`
+8. `epg-external-source-probe.yml`
+9. `epg-refresh.yml`
+10. `indexnow.yml`
+11. `international-channel-discovery.yml`
+12. `international-stream-health.yml`
+13. `iptv-maintenance.yml`
+14. `logo-localization.yml`
+15. `new-channel-discovery.yml`
+16. `playlist-logo-localization.yml`
+17. `seo-validation.yml`
+18. `test-suite.yml`
 
 ## 3. Recent Actions evidence
 
