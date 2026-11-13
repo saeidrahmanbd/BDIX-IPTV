@@ -99,5 +99,56 @@ class GitHubStateStoreTests(unittest.TestCase):
             store.load()
 
 
+    def test_remote_run_reservation_and_terminal_status_survive_reload(self):
+        from datetime import date
+        from automation.core.github_state_store import reserve_remote_run, finish_remote_run
+        from automation.core.run_ledger import RunRequest
+        state = empty_state()
+        current = {"sha": "a" * 40, "state": state}
+        def memory_opener(request, timeout=20):
+            if request.method == "GET":
+                return FakeResponse({
+                    "sha": current["sha"],
+                    "content": base64.b64encode(json.dumps(current["state"]).encode()).decode(),
+                })
+            payload = json.loads(request.data)
+            self.assertEqual(payload.get("sha"), current["sha"])
+            current["state"] = json.loads(base64.b64decode(payload["content"]).decode())
+            current["sha"] = "b" * 40
+            return FakeResponse({"content": {"sha": current["sha"]}})
+        store = GitHubStateStore("owner/repo", "automation-v2-state", "token", memory_opener)
+        request = RunRequest("iptv", date(2026, 11, 13), "c" * 40, "d" * 64)
+        first = reserve_remote_run(store, request)
+        self.assertTrue(first.allowed)
+        blocked = reserve_remote_run(store, request)
+        self.assertFalse(blocked.allowed)
+        terminal = finish_remote_run(store, first.idempotency_key, first.attempt, "succeeded")
+        self.assertEqual(terminal.status, "succeeded")
+        self.assertEqual(current["state"]["run_ledger"]["entries"][0]["status"], "succeeded")
+
+    def test_remote_probe_history_survives_reload(self):
+        from datetime import date
+        from automation.core.github_state_store import record_remote_probe
+        from automation.engines.international.probe_ledger import probes_for
+        from automation.engines.international.stream_failure_policy import Probe
+        current = {"sha": "a" * 40, "state": empty_state()}
+        def memory_opener(request, timeout=20):
+            if request.method == "GET":
+                return FakeResponse({
+                    "sha": current["sha"],
+                    "content": base64.b64encode(json.dumps(current["state"]).encode()).decode(),
+                })
+            payload = json.loads(request.data)
+            self.assertEqual(payload.get("sha"), current["sha"])
+            current["state"] = json.loads(base64.b64decode(payload["content"]).decode())
+            current["sha"] = "b" * 40
+            return FakeResponse({"content": {"sha": current["sha"]}})
+        store = GitHubStateStore("owner/repo", "automation-v2-state", "token", memory_opener)
+        record_remote_probe(store, "channel-1", Probe(date(2026, 11, 11), 404))
+        record_remote_probe(store, "channel-1", Probe(date(2026, 11, 12), 404))
+        probes = probes_for(current["state"]["international_probe_ledger"], "channel-1")
+        self.assertEqual([item.day.isoformat() for item in probes], ["2026-11-11", "2026-11-12"])
+
+
 if __name__ == "__main__":
     unittest.main()
