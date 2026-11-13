@@ -58,7 +58,8 @@ def apply_approved_aliases(playlist_text: str, baseline_xml: str,
         source, target = alias.source_id.strip(), alias.target_id.strip()
         channel_copy = copy.deepcopy(channels[source])
         channel_copy.set("id",target)
-        root.append(channel_copy)
+        first_programme = next((index for index,node in enumerate(root) if node.tag == "programme"),len(root))
+        root.insert(first_programme,channel_copy)
         for programme in programmes[source]:
             programme_copy = copy.deepcopy(programme)
             programme_copy.set("channel",target)
