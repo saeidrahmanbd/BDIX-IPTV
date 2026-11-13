@@ -59,7 +59,7 @@ class InternationalCandidateEngineTests(unittest.TestCase):
 
 
     def test_preservation_guard_rejects_duplicate_existing_url_in_review_queue(self):
-        candidate=BASE+'#EXTINF:-1 tvg-id="x" group-title="New Channels",Duplicate\\nhttps://a.example/a.m3u8\\n'
+        candidate=BASE+'#EXTINF:-1 tvg-id="x" group-title="New Channels",Duplicate\nhttps://a.example/a.m3u8\n'
         with self.assertRaisesRegex(ValueError,"duplicated or displaced"):
             assert_international_existing_rows_preserved(BASE,candidate)
 
