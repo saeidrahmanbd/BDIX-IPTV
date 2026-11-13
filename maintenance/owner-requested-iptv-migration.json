@@ -31,5 +31,5 @@
   "retry_reason": "Previous run #1549 was superseded before the migration step; rerun the still-pending owner-authorized playlist correction on current main.",
   "status": "authorized",
   "authorized_at": "2026-11-13T12:00:00+06:00",
-  "authorization_note": "Re-authorized by the repository owner in ChatGPT on 2026-11-13. Execute the original one-time scope with exact-URL approvals and protection gates."
+  "authorization_note": "Re-authorized again by the repository owner in ChatGPT on 2026-11-13. Execute the original one-time scope against latest main with exact-URL approvals and all protection gates. Do not consume until the completion report is published."
 }
