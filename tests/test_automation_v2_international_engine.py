@@ -1,9 +1,14 @@
 import sys
 import unittest
+from datetime import date, timedelta
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from automation.engines.international.candidate_engine import GroupChange, build_candidate, assert_international_existing_rows_preserved, assert_international_rows_preserved
+from automation.engines.international.engine import build_international_candidate
+from automation.engines.international.planner import RowLifecycleInput
+from automation.engines.international.probe_ledger import url_fingerprint
+from automation.engines.international.stream_failure_policy import Probe
 
 BASE = '#EXTM3U\n#EXTINF:-1 tvg-id="x" tvg-chno="1" group-title="Nepal",A\nhttps://a.example/a.m3u8\n#EXTINF:-1 tvg-id="y" tvg-chno="2" group-title="Nepal",B\nhttps://b.example/b.m3u8\n'
 
@@ -85,6 +90,21 @@ class InternationalCandidateEngineTests(unittest.TestCase):
         assert_international_existing_rows_preserved(BASE,candidate,allowed_removed_identities={"x"})
         with self.assertRaisesRegex(ValueError,"unauthorized row"):
             assert_international_rows_preserved(BASE,candidate)
+
+
+    def test_end_to_end_engine_removes_after_three_same_url_404_days(self):
+        today=date(2026,11,13)
+        fingerprint=url_fingerprint("https://a.example/a.m3u8")
+        history=tuple(
+            Probe(today-timedelta(days=offset),404,url_fingerprint=fingerprint)
+            for offset in (2,1,0)
+        )
+        result=build_international_candidate(
+            BASE,[RowLifecycleInput(0,"x","Nepal",None,history)],today
+        )
+        self.assertEqual(result.plan.remove_identities,("x",))
+        self.assertEqual(result.candidate_rows,result.baseline_rows-1)
+        self.assertNotIn('tvg-id="x"',result.text)
 
 if __name__=="__main__":
     unittest.main()
