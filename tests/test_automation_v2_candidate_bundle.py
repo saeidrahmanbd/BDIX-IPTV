@@ -58,6 +58,18 @@ class CandidateBundleTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"escapes"):
                 write_candidate_bundle(root,"run-123",bundle,contents)
 
+    def test_symlinked_candidate_parent_is_rejected(self):
+        import tempfile
+        from pathlib import Path
+        from automation.core.candidate_bundle import write_candidate_bundle
+        with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
+            root=Path(temp)
+            (root/"reports").symlink_to(outside,target_is_directory=True)
+            contents={"IPTV-Playlist.m3u":"after"}
+            bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"before"},contents,{"IPTV-Playlist.m3u":True})
+            with self.assertRaisesRegex(ValueError,"symlink"):
+                write_candidate_bundle(root,"run-123",bundle,contents)
+
     def test_blocked_bundle_is_not_written(self):
         contents={"IPTV-Playlist.m3u":"after"}
         bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"before"},contents,{"IPTV-Playlist.m3u":False})
