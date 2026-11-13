@@ -42,12 +42,22 @@ def git_bytes(root: Path, *args: str) -> bytes:
     return result.stdout
 
 
+def _safe_artifact_file(root: Path, path: Path, label: str) -> Path:
+    root_resolved = root.resolve()
+    if path.is_symlink() or not path.resolve().is_relative_to(root_resolved):
+        raise ValueError(f"{label} is a symlink or escapes the candidate artifact")
+    if not path.is_file():
+        raise ValueError(f"{label} is missing from the candidate artifact")
+    return path
+
+
 def load_artifact(candidate_root: Path, transaction_id: str, baseline_commit: str):
-    report_path = candidate_root / "candidate-run.json"
+    candidate_root = candidate_root.resolve()
+    report_path = _safe_artifact_file(candidate_root, candidate_root / "candidate-run.json", "candidate run report")
     transaction_root = candidate_root / "candidates" / "transactions" / transaction_id
-    manifest_path = transaction_root / "transaction-bundle.json"
-    if not report_path.is_file() or not manifest_path.is_file():
-        raise ValueError("candidate artifact is missing its run report or transaction manifest")
+    if transaction_root.is_symlink() or not transaction_root.resolve().is_relative_to(candidate_root):
+        raise ValueError("candidate transaction directory is a symlink or escapes the artifact")
+    manifest_path = _safe_artifact_file(candidate_root, transaction_root / "transaction-bundle.json", "transaction manifest")
     report = json.loads(report_path.read_text(encoding="utf-8"))
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     if report.get("status") != "staged_for_owner_review" or report.get("allowed") is not True:
@@ -58,8 +68,12 @@ def load_artifact(candidate_root: Path, transaction_id: str, baseline_commit: st
         raise ValueError("candidate run transaction ID does not match the requested transaction")
     if report.get("baseline_commit") != baseline_commit:
         raise ValueError("candidate run baseline does not match the requested baseline")
+    if manifest.get("schema_version") != 1:
+        raise ValueError("transaction manifest schema version is unsupported")
     if manifest.get("transaction_id") != transaction_id:
         raise ValueError("transaction manifest ID mismatch")
+    if manifest.get("engines") != ["epg", "international", "iptv"]:
+        raise ValueError("transaction manifest does not contain exactly the three expected engines")
     if manifest.get("baseline_commit") != baseline_commit:
         raise ValueError("transaction manifest baseline mismatch")
     if manifest.get("ready_for_owner_review") is not True or manifest.get("publish") is not False:
@@ -70,9 +84,7 @@ def load_artifact(candidate_root: Path, transaction_id: str, baseline_commit: st
         raise ValueError("transaction manifest does not contain exactly the three production outputs")
     contents = {}
     for relative in PRODUCTION_PATHS:
-        path = transaction_root / relative
-        if path.is_symlink() or not path.is_file():
-            raise ValueError(f"candidate output is missing or unsafe: {relative}")
+        path = _safe_artifact_file(candidate_root, transaction_root / relative, f"candidate output {relative}")
         raw = path.read_bytes()
         if sha256_bytes(raw) != manifest["candidate_fingerprints"][relative]:
             raise ValueError(f"candidate fingerprint mismatch: {relative}")
