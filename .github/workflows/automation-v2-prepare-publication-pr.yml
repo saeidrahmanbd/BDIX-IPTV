@@ -61,11 +61,14 @@ jobs:
           BASELINE: ${{ inputs.baseline_commit }}
         run: |
           set -euo pipefail
-          gh run view "$RUN_ID" --repo "$GITHUB_REPOSITORY" --json name,headSha,conclusion > "$RUNNER_TEMP/source-run.json"
+          gh run view "$RUN_ID" --repo "$GITHUB_REPOSITORY" --json name,workflowName,headBranch,headSha,event,conclusion > "$RUNNER_TEMP/source-run.json"
           python - <<'PY'
           import json, os
           data=json.load(open(os.environ["RUNNER_TEMP"] + "/source-run.json", encoding="utf-8"))
           assert data.get("name") == "Automation V2 Candidate Bundle", "source run is not the V2 candidate workflow"
+          assert data.get("workflowName") == "Automation V2 Candidate Bundle", "source workflow identity mismatch"
+          assert data.get("headBranch") == "main", "candidate run must originate from main"
+          assert data.get("event") in {"schedule", "workflow_dispatch", "push"}, "unsupported candidate run event"
           assert data.get("conclusion") == "success", "source candidate workflow did not succeed"
           assert data.get("headSha") == os.environ["BASELINE"], "source run SHA does not match the requested baseline"
           PY

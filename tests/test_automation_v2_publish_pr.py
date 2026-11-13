@@ -46,8 +46,10 @@ class AutomationV2PublishPRTests(unittest.TestCase):
         transaction.mkdir(parents=True)
         raw = {path: value.encode("utf-8") for path, value in CANDIDATE_FILES.items()}
         manifest = {
+            "schema_version": 1,
             "transaction_id": transaction_id,
             "baseline_commit": baseline_commit,
+            "engines": ["epg", "international", "iptv"],
             "candidate_fingerprints": {path: digest(data) for path, data in raw.items()},
             "ready_for_owner_review": True,
             "publish": publish,
@@ -121,6 +123,45 @@ class AutomationV2PublishPRTests(unittest.TestCase):
             self.assertEqual(evidence["publication"], "pull_request_only")
             self.assertEqual(evidence["removed_international_rows"], 0)
             self.assertFalse(evidence["production_main_modified"])
+
+    def test_manifest_with_missing_engine_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            transaction_id, manifest = self.make_artifact(root)
+            manifest["engines"] = ["epg", "iptv"]
+            path = root / "candidates" / "transactions" / transaction_id / "transaction-bundle.json"
+            path.write_text(json.dumps(manifest), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "exactly the three expected engines"):
+                load_artifact(root, transaction_id, "a" * 40)
+
+    def test_symlinked_candidate_parent_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            transaction_id, _ = self.make_artifact(root)
+            transaction = root / "candidates" / "transactions" / transaction_id
+            epg_dir = transaction / "epg"
+            epg_dir.rename(transaction / "epg-original")
+            epg_dir.symlink_to(transaction / "epg-original", target_is_directory=True)
+            with self.assertRaisesRegex(ValueError, "symlink or escapes"):
+                load_artifact(root, transaction_id, "a" * 40)
+
+    def test_symlinked_candidate_escape_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            transaction_id, _ = self.make_artifact(root)
+            transaction = root / "candidates" / "transactions" / transaction_id
+            outside = root.parent / (root.name + "-outside")
+            outside.mkdir()
+            (outside / "epg.xml").write_text(CANDIDATE_FILES["epg/epg.xml"], encoding="utf-8")
+            import shutil
+            shutil.rmtree(transaction / "epg")
+            (transaction / "epg").symlink_to(outside, target_is_directory=True)
+            try:
+                with self.assertRaisesRegex(ValueError, "symlink or escapes"):
+                    load_artifact(root, transaction_id, "a" * 40)
+            finally:
+                import shutil
+                shutil.rmtree(outside, ignore_errors=True)
 
     def test_baseline_mismatch_is_rejected(self):
         with tempfile.TemporaryDirectory() as temp:
