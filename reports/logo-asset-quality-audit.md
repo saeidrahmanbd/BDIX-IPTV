@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-13T06:37:50+00:00**
+Generated: **2026-11-13T06:44:42+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **4757dc831cd0ebeecd432ee55cb3d5529eaf7e11858aa6a72ac73eff4ad7e4eb**
-- International-Playlist.m3u SHA-256: **a2f760023fdce2a71a470fe0decfd9868de916a3a5f1b3464b1114b0fb6c690a**
+- International-Playlist.m3u SHA-256: **f200621e75f7b8e287487941d4dbb8903ae627f607c2898471d1ed9c70c97b58**
 
 ## Summary
 
@@ -1500,7 +1500,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | DocuBay TV | docubay-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Epic TV Digital | epic-tv-digital-1080p.png | Indian Entertainment |
 | International-Playlist.m3u | Gangaur TV | gangaur-tv.png | Indian Entertainment |
-| International-Playlist.m3u | history | history-tv18.png | Indian Entertainment |
 | International-Playlist.m3u | Jaihind TV | jaihind-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Kairali TV | kairali-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Kalaignar TV | kalaignar-tv-82de1b8f.png | Indian Entertainment |
@@ -2247,6 +2246,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Golf Channel | golf-channel-73bed53091.png | Backup |
 | International-Playlist.m3u | Harmony Gospel Music TV | harmony-gospel-music-tv-d6f16022d1.png | Backup |
 | International-Playlist.m3u | HBO Asia SD [ ] | hbo-asia-sd.png | Backup |
+| International-Playlist.m3u | history | history-tv18.png | Backup |
 | International-Playlist.m3u | Horse TV | horse-tv-97d2ca3236.png | Backup |
 | International-Playlist.m3u | Hosanna TV | hosanna-tv-016e291e22.png | Backup |
 | International-Playlist.m3u | HTSpor TV | htspor-tv-57784e12bd.png | Backup |
