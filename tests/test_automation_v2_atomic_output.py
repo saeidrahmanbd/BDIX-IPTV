@@ -1,6 +1,7 @@
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
@@ -19,6 +20,27 @@ class AtomicOutputTests(unittest.TestCase):
             atomic_write_v2_output(temp,relative,'{"runs":[]}\n')
             atomic_write_v2_output(temp,relative,'{"runs":[1]}\n')
             self.assertEqual((Path(temp)/relative).read_text(encoding="utf-8"),'{"runs":[1]}\n')
+
+    def test_replace_failure_preserves_last_known_good_and_cleans_temp(self):
+        with tempfile.TemporaryDirectory() as temp:
+            relative="reports/automation-v2/state/run-ledger.json"
+            target=Path(temp)/relative
+            atomic_write_v2_output(temp,relative,'{"version":1}\n')
+            with patch("automation.core.atomic_output.os.replace",side_effect=OSError("simulated replace failure")):
+                with self.assertRaisesRegex(OSError,"simulated"):
+                    atomic_write_v2_output(temp,relative,'{"version":2}\n')
+            self.assertEqual(target.read_text(encoding="utf-8"),'{"version":1}\n')
+            self.assertEqual(list(target.parent.glob(".v2-tmp-*")),[])
+
+    def test_lock_file_symlink_rejected(self):
+        with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
+            root=Path(temp)
+            state=root/"reports"/"automation-v2"/"state"
+            state.mkdir(parents=True)
+            lock=state/".publisher.lock"
+            lock.symlink_to(Path(outside)/"outside.lock")
+            with self.assertRaisesRegex(ValueError,"lock file"):
+                atomic_write_v2_output(root,"reports/automation-v2/state/run-ledger.json","{}")
 
     def test_production_playlist_path_rejected(self):
         with tempfile.TemporaryDirectory() as temp:
