@@ -913,7 +913,11 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("id: superseded_guard", workflow)
         self.assertIn("echo 'skip=true' >> \"$GITHUB_OUTPUT\"", workflow)
         self.assertIn("echo 'skip=false' >> \"$GITHUB_OUTPUT\"", workflow)
-        lines = workflow.splitlines()
+        # Daily deduplication is a separate prerequisite job; this test
+        # checks that the expensive refresh steps remain guarded by the
+        # per-run supersession check inside the refresh job.
+        refresh_workflow = workflow[workflow.index("\n  refresh:"):]
+        lines = refresh_workflow.splitlines()
         for marker in (
             "- uses: actions/setup-python@",
             "- uses: actions/setup-node@",
