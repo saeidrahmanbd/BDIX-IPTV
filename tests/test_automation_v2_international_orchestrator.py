@@ -56,6 +56,7 @@ class InternationalOrchestratorTests(unittest.TestCase):
             run_international_candidate(PLAYLIST,None,targets,DAY)
 
 
+    @patch("automation.engines.international.monitor.probe_stream")
     def test_unverified_http_success_does_not_restore_review_channel(self,mock):
         review=PLAYLIST.replace('group-title="Nepal"','group-title="Review"')
         mock.return_value=Probe(DAY,200,stream_state="unknown")
