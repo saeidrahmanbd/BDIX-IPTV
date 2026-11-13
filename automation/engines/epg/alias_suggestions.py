@@ -61,10 +61,13 @@ def suggest_aliases(playlist_text: str, xmltv_text: str,
     active = extract_active_channels(playlist_text)
     epg = extract_epg_channels(xmltv_text)
     epg_id_normalized: dict[str,list[str]] = defaultdict(list)
+    epg_name_normalized: dict[str,set[str]] = defaultdict(set)
     epg_names: dict[str,list[tuple[str,str]]] = {}
     for channel_id,channel in epg.items():
         epg_id_normalized[normalize_name(channel_id)].append(channel_id)
         epg_names[channel_id] = [(name,normalize_name(name)) for name in channel.names if normalize_name(name)]
+        for _,normalized in epg_names[channel_id]:
+            epg_name_normalized[normalized].add(channel_id)
 
     suggestions: list[dict] = []
     ambiguous: list[dict] = []
@@ -86,6 +89,21 @@ def suggest_aliases(playlist_text: str, xmltv_text: str,
         if len(id_matches) > 1:
             ambiguous.append({"tvg_id":tvg_id,"playlist_names":list(channel.names),
                               "candidate_ids":sorted(id_matches),"reason":"normalized ID collision"})
+            continue
+
+        exact_targets = sorted({target for name in channel.names for target in epg_name_normalized.get(normalize_name(name),set())})
+        if len(exact_targets) == 1:
+            target = exact_targets[0]
+            matched_names = [name for name in epg[target].names if normalize_name(name) in {normalize_name(x) for x in channel.names}]
+            suggestions.append({
+                "tvg_id":tvg_id,"epg_channel_id":target,"playlist_names":list(channel.names),
+                "epg_names":matched_names,"match_type":"exact_name",
+                "confidence":1.0,"status":"manual_review_required",
+            })
+            continue
+        if len(exact_targets) > 1:
+            ambiguous.append({"tvg_id":tvg_id,"playlist_names":list(channel.names),
+                              "candidate_ids":exact_targets,"reason":"exact display-name collision"})
             continue
 
         scores: dict[str,tuple[float,str]] = {}
