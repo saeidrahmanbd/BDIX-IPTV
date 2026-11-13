@@ -28,11 +28,15 @@ def _safe_target(root: Path, relative_path: str) -> Path:
 def transaction_lock(root: str | Path):
     """Acquire the one shared V2 publisher lock."""
     base=Path(root).resolve()
-    state_dir=base/"reports"/"automation-v2"/"state"
-    state_dir.mkdir(parents=True,exist_ok=True)
+    state_dir=base
+    for part in ("reports","automation-v2","state"):
+        state_dir=state_dir/part
+        if state_dir.is_symlink():
+            raise ValueError("publisher lock path cannot traverse a symlink")
+        state_dir.mkdir(exist_ok=True)
+        if not state_dir.resolve().is_relative_to(base):
+            raise ValueError("publisher lock directory escapes repository root")
     resolved_state=state_dir.resolve()
-    if not resolved_state.is_relative_to(base):
-        raise ValueError("publisher lock directory escapes repository root")
     lock_path=resolved_state/".publisher.lock"
     if lock_path.is_symlink():
         raise ValueError("publisher lock file cannot be a symlink")
