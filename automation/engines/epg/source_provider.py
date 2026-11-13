@@ -86,8 +86,6 @@ def build_epg_source_candidate(repository_root: str | Path,
                 env=environment,
                 check=True,
                 timeout=timeout_seconds,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
                 text=True,
             )
         except subprocess.TimeoutExpired as exc:
