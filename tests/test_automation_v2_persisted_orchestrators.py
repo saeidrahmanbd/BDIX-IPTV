@@ -118,5 +118,6 @@ class PersistedOrchestratorTests(unittest.TestCase):
         source.assert_called_once_with(".", iptv_playlist_text=None, international_playlist_text=None)
         build.assert_called_once()
 
+
 if __name__ == "__main__":
     unittest.main()
