@@ -2,8 +2,9 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from datetime import date
-from automation.engines.international.monitor import probe_and_record
-from automation.engines.international.probe_ledger import parse_ledger, probes_for
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from automation.engines.international import monitor
+from automation.engines.international.probe_ledger import parse_ledger, probes_for, record_probe
 from automation.engines.international.engine import InternationalCandidate, build_international_candidate
 from automation.engines.international.planner import RowLifecycleInput
 from automation.engines.iptv.candidate_engine import DiscoveryCandidate
@@ -30,27 +31,58 @@ def run_international_candidate(playlist_text: str, ledger_text: str | None,
                                timeout: int = 8,
                                discoveries: list[DiscoveryCandidate] | None = None) -> InternationalMaintenanceResult:
     """Probe once per Bangladesh date, update candidate ledger in memory, and propose safe group changes."""
+    if timeout < 1 or timeout > 30:
+        raise ValueError("probe timeout must be between 1 and 30 seconds")
+    ordered_targets=sorted(targets,key=lambda item:item.row_index)
     row_indexes=set()
     identities=set()
-    current_ledger=ledger_text
-    lifecycle_inputs=[]
-    probed=reused=0
-    for target in sorted(targets,key=lambda item:item.row_index):
+    ledger=parse_ledger(ledger_text)
+    pending=[]
+    reused=0
+    for target in ordered_targets:
         if target.row_index in row_indexes:
             raise ValueError("duplicate stream target row index")
         if target.identity.strip().casefold() in identities:
             raise ValueError("duplicate stream target identity")
         row_indexes.add(target.row_index)
         identities.add(target.identity.strip().casefold())
-        observation=probe_and_record(current_ledger,target.identity,target.url,today,timeout)
-        current_ledger=observation.ledger_json
-        if observation.already_probed_today:
-            reused+=1
+        history=probes_for(ledger,target.identity)
+        if any(item.day == today for item in history):
+            reused += 1
         else:
-            probed+=1
-        probe_history = probes_for(parse_ledger(current_ledger),target.identity)
-        latest = probe_history[-1] if probe_history else None
-        verified_role = (
+            pending.append(target)
+
+    # Probe independent stream URLs concurrently, but apply observations to the
+    # ledger in row order so serialized state remains deterministic.
+    observations={}
+    if pending:
+        with ThreadPoolExecutor(max_workers=min(8,len(pending))) as pool:
+            futures={
+                pool.submit(monitor.probe_stream,target.url,today,timeout): target
+                for target in pending
+            }
+            for future in as_completed(futures):
+                target=futures[future]
+                try:
+                    observations[target.identity]=future.result()
+                except ValueError:
+                    # Malformed or unsafe URLs are inconclusive, never a dead stream.
+                    from automation.engines.international.stream_failure_policy import Probe
+                    observations[target.identity]=Probe(today,None,network_error=True)
+
+    current_ledger=ledger_text or ""
+    for target in pending:
+        current_ledger=record_probe(
+            current_ledger,target.identity,observations[target.identity]
+        )
+
+    probed=len(pending)
+    lifecycle_inputs=[]
+    final_ledger=parse_ledger(current_ledger)
+    for target in ordered_targets:
+        probe_history=probes_for(final_ledger,target.identity)
+        latest=probe_history[-1] if probe_history else None
+        verified_role=(
             target.verified_stream_role
             if latest is not None and latest.stream_state == "verified"
             else None

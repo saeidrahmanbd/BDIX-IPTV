@@ -7,6 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from automation.engines.international.orchestrator import StreamTarget, run_international_candidate, derive_primary_stream_targets
 from automation.engines.international.stream_failure_policy import Probe
+from automation.engines.international.probe_ledger import parse_ledger
 
 DAY=date(2026,11,13)
 PLAYLIST='#EXTM3U\n#EXTINF:-1 tvg-id="a" group-title="Nepal",A\nhttps://a.example/live\n'
@@ -103,6 +104,29 @@ class InternationalOrchestratorTests(unittest.TestCase):
         )
         self.assertIn('group-title="Bangladesh"',result.candidate.text)
         self.assertNotIn('group-title="Review"',result.candidate.text)
+
+
+    @patch("automation.engines.international.monitor.probe_stream")
+    def test_independent_targets_are_probed_and_ledgered_as_one_batch(self,mock):
+        playlist = PLAYLIST + (
+            '#EXTINF:-1 tvg-id="b" group-title="Nepal",B\n'
+            'https://b.example/live\n'
+        )
+        mock.side_effect = [
+            Probe(DAY,200,stream_state="verified"),
+            Probe(DAY,200,stream_state="verified"),
+        ]
+        result = run_international_candidate(
+            playlist,None,
+            [
+                StreamTarget(0,"a","https://a.example/live","Nepal","primary"),
+                StreamTarget(1,"b","https://b.example/live","Nepal","primary"),
+            ],
+            DAY,
+        )
+        self.assertEqual(result.probed_count,2)
+        self.assertEqual(set(parse_ledger(result.ledger_json)["channels"]),{"a","b"})
+        self.assertEqual(mock.call_count,2)
 
 if __name__=="__main__":
     unittest.main()
