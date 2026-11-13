@@ -109,7 +109,31 @@ def load_artifact(candidate_root: Path, transaction_id: str, baseline_commit: st
 def validate_against_baseline(root: Path, baseline_commit: str, report: dict, contents: dict[str, bytes]):
     head = git_bytes(root, "rev-parse", "HEAD").decode().strip()
     if head != baseline_commit:
-        raise ValueError(f"worktree HEAD {head} is not the requested baseline {baseline_commit}")
+        # A candidate remains valid across a narrowly-scoped publication-workflow
+        # correction, provided the original baseline is an ancestor and no
+        # candidate-generation, engine, contract, or production file changed.
+        # This avoids forcing an expensive shadow rebuild for a workflow-only
+        # fix while still rejecting stale candidates after substantive changes.
+        ancestor = subprocess.run(
+            ["git", "merge-base", "--is-ancestor", baseline_commit, head],
+            cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+        )
+        if ancestor.returncode != 0:
+            raise ValueError(
+                f"requested baseline {baseline_commit} is not an ancestor of worktree HEAD {head}"
+            )
+        changed = set(git_bytes(
+            root, "diff", "--name-only", f"{baseline_commit}..{head}"
+        ).decode().splitlines())
+        safe_intervening_paths = {
+            ".github/workflows/automation-v2-prepare-publication-pr.yml",
+        }
+        unsafe = changed - safe_intervening_paths
+        if unsafe:
+            raise ValueError(
+                "candidate baseline is stale because intervening commits changed "
+                f"protected paths: {sorted(unsafe)}"
+            )
     if git_bytes(root, "status", "--porcelain"):
         raise ValueError("publisher worktree must be clean before candidate preparation")
 
