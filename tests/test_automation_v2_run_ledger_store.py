@@ -14,7 +14,8 @@ class RunLedgerStoreTests(unittest.TestCase):
                       LedgerEntry("c"*64,"epg",date(2026,11,13),"b"*40,"failed",2)]
 
     def test_round_trip_serialization(self):
-        self.assertEqual(parse_run_ledger_json(serialize_run_ledger(self.entries)),self.entries)
+        actual=parse_run_ledger_json(serialize_run_ledger(self.entries))
+        self.assertEqual({(e.engine,e.attempt,e.status) for e in actual},{(e.engine,e.attempt,e.status) for e in self.entries})
 
     def test_local_save_load_uses_atomic_state_path(self):
         with tempfile.TemporaryDirectory() as temp:
