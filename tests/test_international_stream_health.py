@@ -141,6 +141,11 @@ class InternationalStreamHealthTests(unittest.TestCase):
             health.stream_key(b[0][0], health.urls(b[0])[0]),
         )
 
+    def test_network_probe_failures_are_inconclusive_not_dead_streams(self):
+        from unittest.mock import patch
+        with patch.object(health, "fetch", return_value={"kind": "network", "status": 0, "error": "Timeout"}):
+            self.assertEqual(health.probe_resource("https://example.test/live.m3u8", {})["state"], "inconclusive")
+
     def test_batch_safety_stop_prevents_mass_false_review_when_runner_reaches_nothing(self):
         results = [{"state": "fail", "reason": "Timeout"} for _ in range(3098)]
         with self.assertRaisesRegex(SystemExit, "zero media streams"):
@@ -155,11 +160,11 @@ class InternationalStreamHealthTests(unittest.TestCase):
         results = ([{"state": "ok"}] * 2200) + ([{"state": "fail"}] * 700) + ([{"state": "inconclusive"}] * 198)
         health.validate_probe_batch(results)
 
-    def test_auth_and_rate_limit_http_codes_are_inconclusive(self):
-        for status in (401, 403, 407, 429, 451):
+    def test_auth_rate_limit_timeout_and_server_http_codes_are_inconclusive(self):
+        for status in (401, 403, 407, 408, 425, 429, 451, 500, 502, 503, 504, 599):
             self.assertEqual(health.http_state(status), "inconclusive")
         self.assertEqual(health.http_state(404), "fail")
-        self.assertEqual(health.http_state(500), "fail")
+        self.assertEqual(health.http_state(404), "fail")
 
     def test_health_rewrite_preserves_every_metadata_field_and_logo(self):
         source = self.playlist(row(extra='tvg-network="Example" '))
