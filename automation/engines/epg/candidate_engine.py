@@ -93,7 +93,10 @@ def preserve_missing_fresh_schedules(playlist_text: str, baseline_xml: str,
             f"{restored_programmes} still-current/future baseline programmes.",
             flush=True,
         )
-    return ET.tostring(candidate_root, encoding="unicode")
+        return ET.tostring(candidate_root, encoding="unicode")
+    # Preserve byte-for-byte source text on a no-op dry run. XML serialization
+    # alone can normalize whitespace and falsely look like a production change.
+    return candidate_xml
 
 
 
