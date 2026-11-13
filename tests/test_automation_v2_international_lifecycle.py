@@ -21,21 +21,20 @@ class InternationalLifecycleTests(unittest.TestCase):
         self.assertEqual(result.target_group,"Review")
         self.assertEqual(result.action,"REQUIRES_OWNER_REMOVAL_REVIEW")
 
-    def test_recovered_review_channel_returns_to_primary(self):
-        today=date(2026,11,13)
-        state=ChannelState("id-1","Review","Nepal",True,())
-        result=decide_channel(state,today)
+    def test_recovered_verified_primary_returns_to_primary(self):
+        state=ChannelState("id-1","Review","Nepal","primary",())
+        result=decide_channel(state,date(2026,11,13))
         self.assertEqual((result.target_group,result.action),("Nepal","RESTORE_TO_PRIMARY"))
 
-    def test_recovered_alternate_goes_to_backup(self):
-        state=ChannelState("id-1","Review","Nepal",False,())
+    def test_recovered_verified_alternate_goes_to_backup(self):
+        state=ChannelState("id-1","Review","Nepal","alternate",())
         result=decide_channel(state,date(2026,11,13))
         self.assertEqual((result.target_group,result.action),("Backup","RESTORE_TO_BACKUP"))
 
-    def test_unclassified_review_channel_stays_in_review(self):
-        state=ChannelState("id-1","Review",None,False,())
+    def test_unverified_review_channel_stays_in_review(self):
+        state=ChannelState("id-1","Review","Nepal",None,())
         result=decide_channel(state,date(2026,11,13))
-        self.assertEqual(result.action,"KEEP_REVIEW_UNCLASSIFIED")
+        self.assertEqual(result.action,"KEEP_REVIEW_UNVERIFIED_OR_UNCLASSIFIED")
 
     def test_invalid_identity_rejected(self):
         with self.assertRaises(ValueError):
