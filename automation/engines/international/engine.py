@@ -32,6 +32,6 @@ def build_international_candidate(playlist_text: str, inputs: list[RowLifecycleI
         raise ValueError("International candidate removed more rows than the three-day policy authorized")
     if candidate_count > expected_count and not discoveries:
         raise ValueError("International candidate added unexpected stream rows")
-    if not discoveries and candidate_count != baseline_count:
+    if not discoveries and candidate_count != expected_count:
         raise ValueError("International maintenance candidate cannot add stream rows without discovery input")
     return InternationalCandidate(candidate,plan,baseline_count,candidate_count,False)
