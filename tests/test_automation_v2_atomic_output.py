@@ -61,6 +61,25 @@ class AtomicOutputTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"lock directory"):
                 atomic_write_v2_output(root,"reports/automation-v2/candidates/run/file.txt","x")
 
+    def test_state_file_symlink_cannot_overwrite_production_playlist(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            production=root/"IPTV-Playlist.m3u"
+            production.write_text("production")
+            state=root/"reports"/"automation-v2"/"state"
+            state.mkdir(parents=True)
+            (state/"run-ledger.json").symlink_to(production)
+            with self.assertRaisesRegex(ValueError,"approved V2 output directory"):
+                atomic_write_v2_output(root,"reports/automation-v2/state/run-ledger.json","tampered")
+            self.assertEqual(production.read_text(),"production")
+
+    def test_reports_root_symlink_rejected(self):
+        with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
+            root=Path(temp)
+            (root/"reports").symlink_to(outside,target_is_directory=True)
+            with self.assertRaisesRegex(ValueError,"symlink"):
+                atomic_write_v2_output(root,"reports/automation-v2/state/run-ledger.json","x")
+
     def test_symlink_escape_rejected(self):
         with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
             root=Path(temp)
