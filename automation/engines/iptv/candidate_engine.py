@@ -11,6 +11,8 @@ class DiscoveryCandidate:
 
 def build_candidate(baseline_text: str, discoveries: list[DiscoveryCandidate]) -> str:
     """Append valid discoveries to manual-review queues while preserving every old row."""
+    if not baseline_text.lstrip("\ufeff").startswith("#EXTM3U"):
+        raise ValueError("baseline must have an #EXTM3U header")
     baseline_rows = parse_rows(baseline_text)
     existing_urls = {row.url for row in baseline_rows}
     additions: list[str] = []
