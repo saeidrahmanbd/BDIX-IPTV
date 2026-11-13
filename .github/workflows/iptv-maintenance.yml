@@ -1,7 +1,6 @@
 name: IPTV Playlist Update
-# Owner-requested one-time cleanup is activated by a durable, explicit request marker.
+# IPTV-Playlist.m3u is owner-curated: existing rows are immutable; only metadata/logo/EPG repairs and new manual-queue rows are allowed.
 # A queued run superseded by later commits must be retriggered from the current main revision.
-# A superseded run leaves the marker intact; only a published migration report consumes it.
 # Rebuild all playlist-owned audit, gate, stream-health, logo and dashboard snapshots.
 # Playlist-only maintenance. EPG generation/validation is owned by Refresh IPTV EPG.
 # Stream URL identity must use scripts/stream_url_identity.py; never lowercase an entire stream URL.
@@ -17,8 +16,6 @@ on:
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/normalize_metadata.py
-      - scripts/sort_playlists.py
-      - scripts/renumber_active_channels.py
       - scripts/reconcile_backup_metadata_exact_id.py
       - scripts/permanent_removals.py
       - scripts/enforce_primary_backup_integrity.py
@@ -51,10 +48,12 @@ on:
       - scripts/validate_international_playlist.py
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
+      - tests/test_main_playlist_protection.py
+      - tests/test_authorized_channel_removals.py
+      - tests/test_maintenance_report_order.py
       - scripts/reclassify_main_playlist_groups.py
       - scripts/probe_owner_requested_main_queues.py
       - scripts/migrate_owner_requested_main_queues.py
-      - maintenance/owner-requested-iptv-migration.json
   workflow_run:
     workflows: ["IPTV Logo Localization"]
     types: [completed]
