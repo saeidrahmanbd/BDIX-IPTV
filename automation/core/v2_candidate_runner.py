@@ -217,7 +217,7 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
             ))
 
         transaction_digest = _sha("\0".join(
-            contents[path] for path in sorted(contents)
+            [baseline_commit.lower(), *(contents[path] for path in sorted(contents))]
         ))[:16]
         transaction_id = f"v2-{today.isoformat()}-{transaction_digest}"
         try:
