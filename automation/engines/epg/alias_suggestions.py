@@ -4,6 +4,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from difflib import SequenceMatcher
 import unicodedata
+import re
 import xml.etree.ElementTree as ET
 from automation.core.playlist_contract import parse_rows, ATTR_RE
 from automation.engines.epg.validator import validate_xmltv
@@ -54,6 +55,25 @@ def extract_epg_channels(xmltv_text: str) -> dict[str,EpgChannel]:
             names[channel_id].add(channel_id)
     return {key:EpgChannel(key,tuple(sorted(value))) for key,value in names.items()}
 
+def _locale_signature(channel_id: str) -> tuple[str | None,str | None]:
+    value = channel_id.casefold()
+    country_match = re.search(r"\\.([a-z]{2})(?:@|$)",value)
+    country = country_match.group(1) if country_match else None
+    region_match = re.search(r"@([a-z]+)$",value)
+    region = region_match.group(1) if region_match else None
+    if region in {"sd","hd","uhd","fhd","4k"}:
+        region = None
+    return country,region
+
+def _locale_conflict(active_id: str, epg_id: str) -> str | None:
+    active_country,active_region = _locale_signature(active_id)
+    epg_country,epg_region = _locale_signature(epg_id)
+    if active_country and epg_country and active_country != epg_country:
+        return f"country suffix differs ({active_country} vs {epg_country})"
+    if active_region and epg_region and active_region != epg_region:
+        return f"region suffix differs ({active_region} vs {epg_region})"
+    return None
+
 def suggest_aliases(playlist_text: str, xmltv_text: str,
                     minimum_score: float = 0.90, minimum_margin: float = 0.05) -> dict:
     if not 0 < minimum_score <= 1 or not 0 <= minimum_margin <= 1:
@@ -92,6 +112,13 @@ def suggest_aliases(playlist_text: str, xmltv_text: str,
             continue
 
         exact_targets = sorted({target for name in channel.names for target in epg_name_normalized.get(normalize_name(name),set())})
+        locale_conflicts = [(target,_locale_conflict(tvg_id,target)) for target in exact_targets]
+        locale_conflicts = [(target,reason) for target,reason in locale_conflicts if reason]
+        if locale_conflicts:
+            ambiguous.append({"tvg_id":tvg_id,"playlist_names":list(channel.names),
+                              "candidate_ids":[target for target,_ in locale_conflicts],
+                              "reason":"; ".join(reason for _,reason in locale_conflicts)})
+            continue
         if len(exact_targets) == 1:
             target = exact_targets[0]
             matched_names = [name for name in epg[target].names if normalize_name(name) in {normalize_name(x) for x in channel.names}]
@@ -107,7 +134,12 @@ def suggest_aliases(playlist_text: str, xmltv_text: str,
             continue
 
         scores: dict[str,tuple[float,str]] = {}
+        locale_rejected: list[tuple[str,str]] = []
         for target_id,candidates in epg_names.items():
+            conflict = _locale_conflict(tvg_id,target_id)
+            if conflict:
+                locale_rejected.append((target_id,conflict))
+                continue
             best = (0.0,"")
             for active_name in channel.names:
                 active_norm = normalize_name(active_name)
@@ -120,6 +152,10 @@ def suggest_aliases(playlist_text: str, xmltv_text: str,
             scores[target_id] = best
         ranked = sorted(((score,target_id,name) for target_id,(score,name) in scores.items()),reverse=True)
         if not ranked or ranked[0][0] < minimum_score:
+            if locale_rejected and not ranked:
+                ambiguous.append({"tvg_id":tvg_id,"playlist_names":list(channel.names),
+                                  "candidate_ids":[target for target,_ in locale_rejected[:5]],
+                                  "reason":"all name candidates conflict by locale"})
             continue
         top_score,top_id,top_name = ranked[0]
         second_score = ranked[1][0] if len(ranked) > 1 else 0.0
