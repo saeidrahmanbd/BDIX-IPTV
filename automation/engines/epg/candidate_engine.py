@@ -160,6 +160,12 @@ def restore_lost_active_coverage(playlist_text: str, baseline_xml: str,
     from zoneinfo import ZoneInfo
     from automation.engines.epg.coverage import calculate_coverage
     from automation.engines.epg.freshness import calculate_freshness, _parse_xmltv_datetime
+    from automation.engines.epg.validator import validate_xmltv
+
+    # Structural failures are left for the main candidate gate to report; this
+    # fallback must not turn a malformed/empty provider result into an exception.
+    if not validate_xmltv(candidate_xml).valid:
+        return candidate_xml
 
     if as_of is None:
         as_of = datetime.now(ZoneInfo("Asia/Dhaka"))
