@@ -62,11 +62,14 @@ def write_candidate_bundle(root: str | Path, run_id: str, bundle: CandidateBundl
         if _sha256(content) != bundle.manifest.candidate_fingerprints.get(path):
             raise ValueError(f"candidate content fingerprint changed after validation: {path}")
     base=Path(root).resolve()
-    parent=base/"reports"/"automation-v2"/"candidates"
-    parent.mkdir(parents=True,exist_ok=True)
-    parent=parent.resolve()
-    if not parent.is_relative_to(base):
-        raise ValueError("candidate staging directory escapes repository root")
+    parent=base
+    for part in ("reports","automation-v2","candidates"):
+        parent=parent/part
+        if parent.is_symlink():
+            raise ValueError("candidate output directory cannot traverse a symlink")
+        parent.mkdir(exist_ok=True)
+        if not parent.resolve().is_relative_to(base):
+            raise ValueError("candidate output directory escapes repository root")
     target=parent/run_id
     with transaction_lock(base):
         if target.exists():
