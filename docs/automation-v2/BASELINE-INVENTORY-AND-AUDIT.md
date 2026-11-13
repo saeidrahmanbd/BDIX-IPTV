@@ -153,14 +153,14 @@ V2 should promote these requirements into a machine-readable central policy and 
 - [x] Create separate audit branch from exact main baseline.
 - [x] Capture complete recursive tree inventory and key production blob IDs.
 - [x] Inspect latest 100 Actions runs and retrieve logs for two recent failed maintenance runs.
-- [ ] Complete workflow-to-script/test dependency graph.
-- [ ] Complete script overlap and import/call graph.
-- [ ] Define central machine-readable policy and schemas.
-- [ ] Implement V2 engines and fixture-based tests on this branch.
+- [x] Complete workflow-to-script/test dependency graph (static workflow and critical-path mapping).
+- [x] Complete critical script import/call overlap audit; [ ] finish exhaustive nested subprocess/runtime tracing.
+- [x] Define central machine-readable policy and schema.
+- [x] Add the first V2 contract layer and 10 policy/invariant tests on this branch; [ ] implement scoped playlist engines.
 - [ ] Run read-only dry-run comparisons against baseline playlists.
 - [ ] Require all regression tests and invariants to pass before any production publication.
 - [ ] Open reviewable migration PR; keep main production workflows unchanged until approval and staged validation.
 
-## 7. Safety gate
+## 7. Phase 2 progress\n\nThe branch now contains a central JSON policy, a JSON Schema, a dependency-free policy conformance validator, a pure IPTV existing-row preservation contract, a manual-queue visibility guard, 10 focused contract tests, and a read-only branch-only CI workflow. The local contract test run passed all 10 tests. GitHub Actions status for the new branch CI has not yet been independently observed through the available GitHub interface. A further side-effect audit identified nested subprocess calls and a hidden git-staging side effect in the logo provenance manifest generator; see RUNTIME-SIDE-EFFECT-AUDIT.md.\n\n## 8. Safety gate
 
 No file in the production playlist, logo, EPG, or live workflow areas has been edited by this audit. This branch currently exists only to hold the audit baseline and this documentation. Do not merge or promote it to production until the migration tests, dry-run invariants, and publication rollback checks pass.
