@@ -47,4 +47,11 @@ jobs:
       - name: Run V2 contract tests
         run: python -m unittest discover -s tests -p 'test_automation_v2_*.py' -v
       - name: Run conservative logo reference audit
-        run: python scripts/audit_logo_references.py --output /tmp/logo-reference-audit.json
+        run: python scripts/audit_logo_references.py --output reports/automation-v2/logo-reference-audit.json
+      - name: Upload logo audit report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: automation-v2-logo-reference-audit
+          path: reports/automation-v2/logo-reference-audit.json
+          if-no-files-found: error
+          retention-days: 14
