@@ -54,7 +54,7 @@ class LogoReferenceAuditTests(unittest.TestCase):
             result=scan(root)
             self.assertEqual(result["all_explicitly_referenced_logo_files"],2)
             self.assertEqual(result["runtime_referenced_logo_files"],1)
-            self.assertEqual(result["apparently_unreferenced_by_runtime"],1)
+            self.assertEqual(len(result["apparently_unreferenced_by_runtime"]),1)
 
 if __name__=="__main__":
     unittest.main()
