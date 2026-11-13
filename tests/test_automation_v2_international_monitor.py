@@ -22,7 +22,9 @@ class InternationalMonitorTests(unittest.TestCase):
 
     @patch("automation.engines.international.monitor.probe_stream")
     def test_second_daily_run_reuses_existing_probe_idempotently(self,mock):
-        ledger=record_probe(None,"channel-a",Probe(DAY,404))
+        mock.return_value=Probe(DAY,404)
+        ledger=probe_and_record(None,"channel-a","https://example.com/live",DAY).ledger_json
+        mock.reset_mock()
         result=probe_and_record(ledger,"channel-a","https://example.com/live",DAY)
         mock.assert_not_called()
         self.assertTrue(result.already_probed_today)
