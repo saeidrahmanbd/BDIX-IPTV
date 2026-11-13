@@ -33,6 +33,11 @@ class IptvMetadataRepairTests(unittest.TestCase):
         result=apply_metadata_patches(BASE,[patch],self.root)
         self.assertIn('tvg-logo="logos/new.png"',result)
 
+    def test_backslash_logo_path_rejected(self):
+        patch=MetadataPatch(0,"source",True,tvg_logo="logos\\\\..\\\\secret.png")
+        with self.assertRaises(ValueError):
+            apply_metadata_patches(BASE,[patch],self.root)
+
     def test_remote_logo_rejected(self):
         patch=MetadataPatch(0,"source URL",True,tvg_logo="https://example.com/logo.png")
         with self.assertRaisesRegex(ValueError,"repository-local"):
