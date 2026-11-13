@@ -4,6 +4,7 @@ import hashlib
 from dataclasses import dataclass
 from automation.engines.epg.validator import validate_xmltv
 from automation.engines.epg.coverage import compare_coverage
+from automation.engines.epg.freshness import compare_freshness
 
 @dataclass(frozen=True)
 class EpgCandidateDecision:
@@ -16,7 +17,8 @@ def _digest(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
 
 def evaluate_candidate(baseline_xml: str, candidate_xml: str,
-                       active_playlist_text: str | None = None) -> EpgCandidateDecision:
+                       active_playlist_text: str | None = None,
+                       as_of=None) -> EpgCandidateDecision:
     """Accept only structurally valid, non-regressing candidates; publication remains disabled."""
     baseline_hash = _digest(baseline_xml)
     candidate_hash = _digest(candidate_xml)
@@ -35,4 +37,10 @@ def evaluate_candidate(baseline_xml: str, candidate_xml: str,
             return EpgCandidateDecision(False,baseline_hash,candidate_hash,f"coverage evaluation failed: {exc}")
         if not comparison.accepted:
             return EpgCandidateDecision(False,baseline_hash,candidate_hash,"candidate coverage regressed: " + "; ".join(comparison.reasons))
+        try:
+            freshness = compare_freshness(active_playlist_text,baseline_xml,candidate_xml,as_of)
+        except ValueError as exc:
+            return EpgCandidateDecision(False,baseline_hash,candidate_hash,f"freshness evaluation failed: {exc}")
+        if not freshness.accepted:
+            return EpgCandidateDecision(False,baseline_hash,candidate_hash,"candidate schedule freshness regressed: " + "; ".join(freshness.reasons))
     return EpgCandidateDecision(True,baseline_hash,candidate_hash,"candidate passed structural and configured coverage checks; publication remains disabled")
