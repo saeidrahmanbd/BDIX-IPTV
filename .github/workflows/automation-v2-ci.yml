@@ -3,6 +3,7 @@ name: Automation V2 Branch CI
 on:
   push:
     branches:
+      - main
       - automation-v2/**
     paths:
       - 'automation/**'
