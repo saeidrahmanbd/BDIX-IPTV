@@ -33,6 +33,7 @@ def build_epg_candidate_persisted(playlist_text: str, last_known_good_xml: str,
     """Build one idempotently reserved EPG candidate; no publication or production writes."""
     import hashlib
     import json
+    from zoneinfo import ZoneInfo
     from automation.core.github_state_store import execute_remote_run
     from automation.core.run_ledger import RunRequest
 
@@ -48,7 +49,7 @@ def build_epg_candidate_persisted(playlist_text: str, last_known_good_xml: str,
         as_of.isoformat() if as_of else "",
     ))
     fingerprint = hashlib.sha256(material.encode("utf-8")).hexdigest()
-    request = RunRequest("epg", (as_of.date() if as_of else datetime.now().date()),
+    request = RunRequest("epg", (as_of.date() if as_of else datetime.now(ZoneInfo("Asia/Dhaka")).date()),
                          baseline_commit, fingerprint)
     return execute_remote_run(
         store, request,
