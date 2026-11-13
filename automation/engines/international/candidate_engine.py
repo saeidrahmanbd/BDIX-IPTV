@@ -72,24 +72,23 @@ CATEGORY_ORDER = [
 ]
 
 def assert_international_existing_rows_preserved(before: str, after: str) -> None:
-    """All prior rows must remain byte-identical and in the same relative order."""
+    """Preserve every old stream in order; group-title-only changes are permitted."""
     old_rows,new_rows=parse_rows(before),parse_rows(after)
-    old_signatures=[(row.extinf,row.url) for row in old_rows]
-    remaining={}
-    for signature in old_signatures:
-        remaining[signature]=remaining.get(signature,0)+1
-    preserved=[]
+
+    def stable_signature(row):
+        normalized=GROUP_RE.sub('group-title="__GROUP__"',row.extinf,count=1)
+        return normalized,row.url
+
+    old_index=0
+    review_queues={"New Channels","New Backups"}
     for row in new_rows:
-        signature=(row.extinf,row.url)
-        if remaining.get(signature,0):
-            preserved.append(signature)
-            remaining[signature]-=1
-        else:
-            group=dict(ATTR_RE.findall(row.extinf)).get("group-title","").strip()
-            if group not in {"New Channels","New Backups"}:
-                raise ValueError("International candidate added a row outside manual-review queues")
-    if preserved != old_signatures or any(remaining.values()):
-        raise ValueError("International candidate changed or reordered an existing row")
+        if old_index < len(old_rows) and stable_signature(row)==stable_signature(old_rows[old_index]):
+            old_index += 1
+            continue
+        if row.group.strip() not in review_queues:
+            raise ValueError("International candidate added a row outside manual-review queues")
+    if old_index != len(old_rows):
+        raise ValueError("International candidate changed, removed or reordered an existing row")
 
 def append_discovery_candidates(playlist_text: str,
                                 discoveries: list[DiscoveryCandidate]) -> str:
