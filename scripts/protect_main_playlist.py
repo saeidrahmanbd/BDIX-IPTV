@@ -6,6 +6,7 @@ import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+from stream_url_identity import stream_url_key
 
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 CATEGORY_ORDER = [
@@ -66,8 +67,13 @@ def load_approvals():
         raise SystemExit(f"Could not read exact-URL migration approvals: {exc}")
     if not isinstance(rows, list):
         raise SystemExit("Migration approvals must be a JSON list.")
+    # URI scheme and host are case-insensitive; canonicalize only those
+    # components so signed paths, query strings and exact stream identity remain
+    # protected while approvals survive harmless host/scheme casing differences.
     return {
-        (str(row.get("url", "")), str(row.get("source_group", "")), str(row.get("target_group", ""))): row
+        (stream_url_key(str(row.get("url", ""))),
+         str(row.get("source_group", "")).strip(),
+         str(row.get("target_group", "")).strip()): row
         for row in rows if isinstance(row, dict) and row.get("url")
     }
 
@@ -124,7 +130,8 @@ def verify(playlist: Path, state: Path):
         for old, new in zip(old_rows, new_rows):
             old_group = str(old.get("group", "")).strip()
             new_group = str(new.get("group", "")).strip()
-            if old_group != new_group and (url, old_group, new_group) not in approvals:
+            approval_key = (stream_url_key(url), old_group, new_group)
+            if old_group != new_group and approval_key not in approvals:
                 failures.append(f"Unapproved existing group change for {new['name']}: {old_group} -> {new_group}.")
             old_number = str(old.get("number", "")).strip()
             new_number = str(new.get("number", "")).strip()
