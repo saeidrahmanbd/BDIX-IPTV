@@ -30,6 +30,17 @@ class EpgValidatorTests(unittest.TestCase):
         result=validate_xmltv('<tv><channel id="c1"/><programme channel="c1" start="20261113100000" stop="20261113090000"/></tv>')
         self.assertFalse(result.valid)
 
+    def test_invalid_timezone_offset_rejected(self):
+        xml='<tv><channel id="c1"/><programme channel="c1" start="20261113090000 +2560" stop="20261113100000 +0600"/></tv>'
+        result=validate_xmltv(xml)
+        self.assertFalse(result.valid)
+        self.assertTrue(any("timezone offset" in e for e in result.errors))
+
+    def test_different_offsets_compared_as_absolute_time(self):
+        xml='<tv><channel id="c1"/><programme channel="c1" start="20261113090000 +0600" stop="20261113040000 +0100"/></tv>'
+        result=validate_xmltv(xml)
+        self.assertFalse(result.valid)
+
     def test_empty_guide_rejected(self):
         self.assertFalse(validate_xmltv("<tv/>").valid)
 
