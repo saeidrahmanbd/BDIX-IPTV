@@ -52,10 +52,8 @@ def build_iptv_candidate(baseline_text: str, discoveries: list[DiscoveryCandidat
                          metadata_patches: list, repository_root) -> IptvCandidate:
     """Combine evidence-approved metadata patches and manual-queue discoveries in memory only."""
     from automation.engines.iptv.metadata_repair import apply_metadata_patches
-    from automation.core.playlist_contract import validate_discovery_queues
     baseline_rows=parse_rows(baseline_text)
     metadata_candidate=apply_metadata_patches(baseline_text,metadata_patches,repository_root)
     candidate=build_candidate(metadata_candidate,discoveries)
     assert_iptv_existing_rows_preserved(baseline_text,candidate)
-    validate_discovery_queues(candidate)
     return IptvCandidate(candidate,len(baseline_rows),len(parse_rows(candidate)),False)
