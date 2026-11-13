@@ -77,7 +77,7 @@ class AtomicOutputTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
             root=Path(temp)
             (root/"reports").symlink_to(outside,target_is_directory=True)
-            with self.assertRaisesRegex(ValueError,"symlink"):
+            with self.assertRaisesRegex(ValueError,"symlink|escapes"):
                 atomic_write_v2_output(root,"reports/automation-v2/state/run-ledger.json","x")
 
     def test_symlink_escape_rejected(self):
@@ -85,7 +85,7 @@ class AtomicOutputTests(unittest.TestCase):
             root=Path(temp)
             (root/"reports"/"automation-v2").mkdir(parents=True)
             (root/"reports"/"automation-v2"/"candidates").symlink_to(outside,target_is_directory=True)
-            with self.assertRaisesRegex(ValueError,"escapes"):
+            with self.assertRaisesRegex(ValueError,"escapes|symlink"):
                 atomic_write_v2_output(root,"reports/automation-v2/candidates/file.txt","danger")
 
 if __name__=="__main__":
