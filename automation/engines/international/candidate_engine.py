@@ -2,7 +2,8 @@
 from __future__ import annotations
 import re
 from dataclasses import dataclass
-from automation.core.playlist_contract import parse_rows
+from automation.core.playlist_contract import parse_rows, ATTR_RE
+from automation.engines.iptv.candidate_engine import DiscoveryCandidate
 
 GROUP_RE = re.compile(r'(\bgroup-title=")[^"]*(")')
 
@@ -61,4 +62,74 @@ def build_candidate(baseline_text: str, changes: list[GroupChange]) -> str:
             output.append(line)
     candidate = "".join(output)
     assert_international_rows_preserved(baseline_text, candidate)
+    return candidate
+
+
+CATEGORY_ORDER = [
+    "Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment",
+    "Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports",
+    "Backup","New Channels","New Backups","Review",
+]
+
+def assert_international_existing_rows_preserved(before: str, after: str) -> None:
+    """All prior rows must remain byte-identical and in the same relative order."""
+    old_rows,new_rows=parse_rows(before),parse_rows(after)
+    old_signatures=[(row.extinf,row.url) for row in old_rows]
+    remaining={}
+    for signature in old_signatures:
+        remaining[signature]=remaining.get(signature,0)+1
+    preserved=[]
+    for row in new_rows:
+        signature=(row.extinf,row.url)
+        if remaining.get(signature,0):
+            preserved.append(signature)
+            remaining[signature]-=1
+        else:
+            group=dict(ATTR_RE.findall(row.extinf)).get("group-title","").strip()
+            if group not in {"New Channels","New Backups"}:
+                raise ValueError("International candidate added a row outside manual-review queues")
+    if preserved != old_signatures or any(remaining.values()):
+        raise ValueError("International candidate changed or reordered an existing row")
+
+def append_discovery_candidates(playlist_text: str,
+                                discoveries: list[DiscoveryCandidate]) -> str:
+    """Insert new discovery rows into their queue blocks without rewriting existing rows."""
+    if not discoveries:
+        return playlist_text
+    lines=playlist_text.replace("\\r","").splitlines()
+    seen_urls={row.url for row in parse_rows(playlist_text)}
+    additions={"New Channels":[],"New Backups":[]}
+    for item in discoveries:
+        url=item.url.strip()
+        extinf=item.extinf.strip()
+        if not url.startswith(("http://","https://")):
+            raise ValueError("discovery URL must be HTTP(S)")
+        if not extinf.startswith("#EXTINF:") or "\\n" in extinf or "\\r" in extinf or "\\n" in url or "\\r" in url:
+            raise ValueError("discovery record must be a valid single-line M3U pair")
+        expected="New Backups" if item.backup else "New Channels"
+        actual=dict(ATTR_RE.findall(extinf)).get("group-title","").strip()
+        if actual != expected:
+            raise ValueError(f"discovery row must be assigned to {expected}")
+        if url in seen_urls:
+            continue
+        seen_urls.add(url)
+        additions[expected].extend((extinf,url))
+
+    rank={name:index for index,name in enumerate(CATEGORY_ORDER)}
+    for group in ("New Channels","New Backups"):
+        block=additions[group]
+        if not block:
+            continue
+        matching=[i for i,line in enumerate(lines) if line.startswith("#EXTINF:") and dict(ATTR_RE.findall(line)).get("group-title","").strip()==group]
+        if matching:
+            last=matching[-1]
+            insert_at=next((i for i in range(last+1,len(lines)) if lines[i].startswith("#EXTINF:")),len(lines))
+        else:
+            target_rank=rank[group]
+            insert_at=next((i for i,line in enumerate(lines)
+                            if line.startswith("#EXTINF:") and
+                            rank.get(dict(ATTR_RE.findall(line)).get("group-title","").strip(),len(rank))>target_rank),len(lines))
+        lines[insert_at:insert_at]=block
+    candidate="\\n".join(lines).rstrip()+"\\n"
+    assert_international_existing_rows_preserved(playlist_text,candidate)
     return candidate
