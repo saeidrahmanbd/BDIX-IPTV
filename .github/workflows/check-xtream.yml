@@ -9,7 +9,7 @@ on:
       - "IPTV-Playlist.m3u"
       - "epg/epg.xml"
   schedule:
-    - cron: "17 17 * * *" # 23:17 Asia/Dhaka (UTC+6); compensate for the repeatedly observed 5h42-6h51 GitHub schedule dispatch delay so the check lands before the 07:00 report; playlist/deploy changes also trigger checks
+    - cron: "17 17 * * *" # 23:17 Asia/Dhaka (UTC+6); compensate for the repeatedly observed 5h42-7h GitHub schedule dispatch delay so the check lands before the 07:00 report; playlist/deploy changes also trigger checks
   workflow_dispatch:
   workflow_run:
     workflows:
