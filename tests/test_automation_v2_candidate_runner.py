@@ -244,5 +244,31 @@ class CandidateBundleRunnerTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError,"GITHUB_TOKEN is required"):
                 _assert_current_main_head("c"*40)
 
+    def test_transaction_identity_changes_when_baseline_commit_changes(self):
+        temp, root = self.make_root()
+        self.addCleanup(temp.cleanup)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), source_warnings=(), publish=False)
+        maintenance = SimpleNamespace(
+            candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0),
+            ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
+            probed_count=0, reused_count=0, publish=False,
+        )
+        international = SimpleNamespace(maintenance=maintenance, publish=False)
+        epg = SimpleNamespace(xml_text="<tv/>", decision=SimpleNamespace(accepted=True, errors=()), publish=False)
+        with (
+            patch("automation.core.v2_candidate_runner._assert_current_main_head"),
+            patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv),
+            patch("automation.core.v2_candidate_runner.derive_primary_stream_targets", return_value=[]),
+            patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=international),
+            patch("automation.core.v2_candidate_runner.assert_international_existing_rows_preserved"),
+            patch("automation.core.v2_candidate_runner.build_epg_source_candidate", return_value="<tv/>"),
+            patch("automation.core.v2_candidate_runner.build_epg_candidate", return_value=epg),
+        ):
+            _, first = run_candidate_bundle(root,date(2026,11,13),"c"*40,MemoryStore())
+            _, second = run_candidate_bundle(root,date(2026,11,13),"d"*40,MemoryStore())
+        self.assertNotEqual(first.transaction_id,second.transaction_id)
+        transactions=root/"reports/automation-v2/candidates/transactions"
+        self.assertEqual(len(list(transactions.iterdir())),2)
+
 if __name__ == "__main__":
     unittest.main()
