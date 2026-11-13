@@ -105,7 +105,10 @@ def build_international_discovery_batch(playlist_text: str, source_text: str,
         if key in seen_urls:
             rejected["duplicate stream URL"] = rejected.get("duplicate stream URL",0)+1
             continue
-        code=policy.country_code(attrs)
+        declared_country=policy.country_code({"tvg-country":attrs.get("tvg-country","")})
+        id_country=policy.country_code({"tvg-id":attrs.get("tvg-id",""),"channel-id":attrs.get("channel-id","")})
+        country_conflict=declared_country!="ZZ" and id_country!="ZZ" and declared_country!=id_country
+        code="ZZ" if country_conflict else policy.country_code(attrs)
         if code not in UNRESTRICTED_COUNTRIES and code != "ZZ":
             _,reason,_=policy.policy(attrs,name)
             if reason:
@@ -114,11 +117,12 @@ def build_international_discovery_batch(playlist_text: str, source_text: str,
         elif code=="ZZ":
             warnings.append(f"{name}: country could not be verified; retained in manual-review queue")
 
-        declared=policy.country_code({"tvg-country":attrs.get("tvg-country","")})
-        if declared=="ZZ" and code!="ZZ":
+        if country_conflict:
+            warnings.append(f"{name}: tvg-country conflicts with channel ID; retained without country-based filtering for owner review")
+        elif declared_country=="ZZ" and id_country=="ZZ" and code=="ZZ":
+            warnings.append(f"{name}: country could not be verified; retained in manual-review queue")
+        elif declared_country=="ZZ" and code!="ZZ":
             warnings.append(f"{name}: tvg-country missing or unverified; source ID retained for owner review")
-        elif declared!="ZZ" and code!="ZZ" and declared!=code:
-            warnings.append(f"{name}: country metadata conflicts with channel identity; retained for owner review")
 
         safe_attrs=dict(attrs)
         original_logo=(safe_attrs.get("tvg-logo") or "").strip()
