@@ -1,6 +1,14 @@
 name: Automation V2 State Store Check
 
 on:
+  push:
+    branches:
+      - automation-v2/**
+    paths:
+      - '.github/workflows/automation-v2-state-store-check.yml'
+      - 'automation/core/github_state_store.py'
+      - 'scripts/check_automation_v2_state_store.py'
+      - 'tests/test_automation_v2_github_state_store.py'
   workflow_dispatch:
 
 permissions:
