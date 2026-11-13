@@ -19,7 +19,9 @@ DEFAULT_TIMEOUT_SECONDS = 20 * 60
 
 def build_epg_source_candidate(repository_root: str | Path,
                                timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
-                               max_workers: int = 8) -> str:
+                               max_workers: int = 8,
+                               iptv_playlist_text: str | None = None,
+                               international_playlist_text: str | None = None) -> str:
     """Generate a candidate XMLTV file in an isolated temporary workspace."""
     if timeout_seconds < 60 or timeout_seconds > 60 * 60:
         raise ValueError("EPG source timeout must be between 60 and 3600 seconds")
@@ -54,7 +56,12 @@ def build_epg_source_candidate(repository_root: str | Path,
         ):
             destination = workspace / relative
             destination.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(root / relative, destination)
+            if relative == "IPTV-Playlist.m3u" and iptv_playlist_text is not None:
+                destination.write_text(iptv_playlist_text, encoding="utf-8")
+            elif relative == "International-Playlist.m3u" and international_playlist_text is not None:
+                destination.write_text(international_playlist_text, encoding="utf-8")
+            else:
+                shutil.copy2(root / relative, destination)
 
         runner = workspace / "run_epg_candidate.py"
         runner.write_text(
