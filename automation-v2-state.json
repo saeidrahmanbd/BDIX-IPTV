@@ -5,7 +5,17 @@
     "timezone": "Asia/Dhaka"
   },
   "run_ledger": {
-    "entries": [],
+    "entries": [
+      {
+        "attempt": 1,
+        "baseline_commit": "4cc2ae7e7f1f59b50effa7dc783f7606bc601e9a",
+        "business_day": "2026-11-13",
+        "engine": "bundle",
+        "idempotency_key": "83b69968ae9061ad0997f6a0e0e4f98eea291b7c83b1a62aa5797815ab32a4d9",
+        "started_at": "2026-11-13T18:06:53.484790+06:00",
+        "status": "running"
+      }
+    ],
     "schema_version": 1,
     "timezone": "Asia/Dhaka"
   },
