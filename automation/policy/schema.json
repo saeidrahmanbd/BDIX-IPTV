@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"BDIX-IPTV Automation V2 Policy",
+  "type":"object",
+  "required":["policy_version","timezone","playlists","shared"],
+  "properties":{
+    "policy_version":{"type":"integer","minimum":1},
+    "timezone":{"const":"Asia/Dhaka"},
+    "playlists":{"type":"object","required":["IPTV-Playlist.m3u","International-Playlist.m3u"],"properties":{
+      "IPTV-Playlist.m3u":{"type":"object","required":["owner","mutation_mode","existing_rows","manual_queues","discovery"],"properties":{"owner":{"const":"owner_curated"},"mutation_mode":{"const":"append_only_for_existing_streams"},"existing_rows":{"type":"object"},"manual_queues":{"type":"array","items":{"type":"string"}},"discovery":{"type":"object"}},"additionalProperties":true},
+      "International-Playlist.m3u":{"type":"object","required":["owner","failure_policy","country_groups","review_recovery"],"properties":{"owner":{"const":"automation_controlled"},"failure_policy":{"type":"object","required":["consecutive_definitive_failed_days_before_removal","first_definitive_failed_day_group"],"properties":{"consecutive_definitive_failed_days_before_removal":{"const":3},"first_definitive_failed_day_group":{"const":"Review"}}},"country_groups":{"type":"object","properties":{"minimum_unique_primary_identities":{"const":5}}}},"additionalProperties":true}
+    }},
+    "shared":{"type":"object"}
+  },
+  "additionalProperties":false
+}
