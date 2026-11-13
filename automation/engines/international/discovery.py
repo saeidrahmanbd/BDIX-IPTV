@@ -59,6 +59,17 @@ def _local_logo(root: Path, value: str) -> str:
         return ""
     return value
 
+def _build_extinf(attrs: dict[str,str], name: str, group: str) -> str:
+    fields=[]
+    for key in ("tvg-id","tvg-name","tvg-logo","tvg-country","tvg-language","channel-id","tvg-content"):
+        value=(attrs.get(key) or "").replace('"',"").strip()
+        if value:
+            fields.append(f'{key}="{value}"')
+    if not attrs.get("tvg-name","").strip():
+        fields.append(f'tvg-name="{name.replace(chr(34),"").strip()}"')
+    fields.append(f'group-title="{group}"')
+    return "#EXTINF:-1 " + " ".join(fields) + "," + name.replace('"',"").strip()
+
 def build_international_discovery_batch(playlist_text: str, source_text: str,
                                         repository_root: str | Path,
                                         max_new_channels: int = 50,
@@ -124,7 +135,7 @@ def build_international_discovery_batch(playlist_text: str, source_text: str,
         identity=policy.norm(policy.primary_identity(safe_attrs,name))
         backup=identity in existing_identities
         queue="New Backups" if backup else "New Channels"
-        candidates.append((name,url,policy.extinf(safe_attrs,name,queue,code if code!="ZZ" else "" ),backup,identity))
+        candidates.append((name,url,_build_extinf(safe_attrs,name,queue),backup,identity))
         seen_urls.add(key)
         if identity:
             existing_identities.add(identity)
