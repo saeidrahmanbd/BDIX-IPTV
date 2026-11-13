@@ -14,6 +14,7 @@ sys.path.insert(0,str(ROOT))
 from automation.core.playlist_contract import parse_rows, assert_iptv_existing_rows_preserved
 from automation.engines.international.candidate_engine import build_candidate as build_international_candidate, assert_international_rows_preserved
 from automation.engines.iptv.candidate_engine import build_candidate as build_iptv_candidate
+from automation.engines.iptv.metadata_repair import apply_metadata_patches
 from automation.engines.epg.coverage import calculate_coverage
 from automation.engines.epg.freshness import calculate_freshness
 from automation.engines.epg.alias_suggestions import suggest_aliases
@@ -51,6 +52,9 @@ def run(root: Path) -> dict:
     assert_iptv_existing_rows_preserved(iptv_text,iptv_candidate)
     if iptv_candidate != iptv_text:
         raise ValueError("empty IPTV dry run unexpectedly changed the playlist")
+    metadata_candidate = apply_metadata_patches(iptv_text,[],root)
+    if metadata_candidate != iptv_text:
+        raise ValueError("empty IPTV metadata dry run unexpectedly changed the playlist")
 
     international_candidate = build_international_candidate(international_text,[])
     assert_international_rows_preserved(international_text,international_candidate)
