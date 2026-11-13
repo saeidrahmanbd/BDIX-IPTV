@@ -23,7 +23,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: automation-v2-ci-${{ github.ref }}
+  group: automation-v2-ci-${{ github.ref }}-${{ github.run_id }}
   cancel-in-progress: true
 
 jobs:
