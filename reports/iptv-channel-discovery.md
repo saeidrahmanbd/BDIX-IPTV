@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-12T05:45:23.853909+00:00**
+Generated: **2026-11-13T06:49:16.841231+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**
@@ -9,8 +9,8 @@ Generated: **2026-11-12T05:45:23.853909+00:00**
 - Country-group threshold: **5** legitimate primary identities
 - Existing manual-review queue rows changed by discovery: **0**
 - New channels: **40**
-- New backups: **27**
-- Rejected/held candidates: **795**
+- New backups: **17**
+- Rejected/held candidates: **811**
 - Country metadata, channel IDs, language and logos are advisory at this stage; retain uncertain values for owner review and repair later.
 
 ## Rejection reasons
@@ -18,9 +18,9 @@ Generated: **2026-11-12T05:45:23.853909+00:00**
 - Indian business/finance channel is prohibited: 8
 - Indian educational channel is prohibited: 7
 - Indian knowledge channel is prohibited: 7
-- Indian news channel is prohibited: 297
+- Indian news channel is prohibited: 300
 - Indian religious channel is prohibited: 116
-- duplicate stream URL: 281
+- duplicate stream URL: 294
 - known Indian prohibited MH One Prime channel is prohibited: 1
 - known Indian prohibited brand/category is prohibited: 19
 - permanently banned channel: 29
@@ -43,7 +43,6 @@ Generated: **2026-11-12T05:45:23.853909+00:00**
 - Aryan TV National (576p) (source feed: India) — https://mumt04.tangotv.in/m18aqlK4ARYANTVNATIONAL/index.m3u8
 - Captain (576p) (source feed: India) — https://fta.ektv.in/live/173/master.m3u8
 - Cartoon Network HD+ (1080p) (source feed: India) — http://103.135.253.32:8080/CN-NETWORK/index.m3u8
-- CCV (480p) (source feed: India) — https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
 - CVR Health (576p) (source feed: India) — https://mumbai-edge.smartplaytv.in/CVRHealth/index.m3u8
 - Disha TV (396p) (source feed: India) — https://d1msejlow1t3l4.cloudfront.net/fta/dishatv/playlist.m3u8
 - Doraemon (720p) (source feed: India) — https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8
@@ -56,7 +55,6 @@ Generated: **2026-11-12T05:45:23.853909+00:00**
 - Kabaddi 24x7 (720p) (source feed: India) — https://samitaorigin.tangotv.in/KABADDI24X7/SAMITAORIGIN/index.m3u8
 - KCM India (1080p) [Geo-blocked] (source feed: India) — https://amg02159-amg02159c7-samsung-in-4001.playouts.now.amagi.tv/playlist/amg02159-kcglobal-kcm-samsungin/playlist.m3u8
 - MBC TV (576p) (source feed: India) — https://cdn.pishow.tv/ott/live/1017/master.m3u8
-- Movies Now HD (576p) (source feed: India) — http://27.124.71.27/Movies_Now/index.m3u8
 - NDTV Good Times (1080p) (source feed: India) — https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8
 - Punjabi Beats HD (720p) (source feed: India) — https://mumt01.tangotv.in/O5aw8Zn3PUNJABIBEATSHD/index.m3u8
 - Punjab Plus (1080p) (source feed: India) — https://punjabplustv.akamaized.net/punjabplustv/master.m3u8
@@ -68,53 +66,45 @@ Generated: **2026-11-12T05:45:23.853909+00:00**
 - Stingray DJAZZ (1080p) (source feed: India) — https://lotus.stingray.com/manifest/djazz-djaads-montreal/samsungtvplus/master.m3u8
 - Stingray Easy Listening (1080p) (source feed: India) — https://lotus.stingray.com/manifest/ose-137ads-montreal/samsungtvplus/master.m3u8
 - Swastik Stories (1080p) (source feed: India) — https://amg14122-amg14122c1-amgplt0835.playout.now3.amagi.tv/playout/amg14122/amg14122c1/amgplt0835/amgplt0835.m3u8
-- TamilVision-TV (1080p) (source feed: India) — https://live.cmr24.fm/TVI/HD/chunks.m3u8
 - The Pet Collective India (720p) (source feed: India) — https://the-pet-collective-international-in.samsung.wurl.tv/playlist.m3u8
+- The Q India (576p) (source feed: India) — http://103.175.73.12:8080/live/25/25_0.m3u8
+- Travelxp HD (1080p) [Geo-blocked] (source feed: India) — https://amg00416-amg00416c9-samsung-in-4882.playouts.now.amagi.tv/playlist/amg00416-travelxp-travelxphd-samsungin/playlist.m3u8
+- TV 100 (India) (576p) (source feed: India) — https://fta.ektv.in/live/310/master.m3u8
 
 ## New Backups
 
+- Green TV (1080p) (source feed: Bangladesh) — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
 - T Sports (1080p) (source feed: Bangladesh) — https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
-- All Time Movies (576p) (source feed: India) — https://fta.ektv.in/live/54/54_0.m3u8
+- B4U Music (1080p) (source feed: India) — https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/720p/index.m3u8
 - DD Assam (576p) (source feed: India) — https://fta.ektv.in/live/672/master.m3u8
 - DD Manipur (576p) (source feed: India) — https://fta.ektv.in/live/671/master.m3u8
 - DD Nagaland (576p) (source feed: India) — https://fta.ektv.in/live/670/master.m3u8
-- DD Odia (576p) (source feed: India) — https://fta.ektv.in/live/384/master.m3u8
+- DD National HD (1080p) (source feed: India) — https://fta.ektv.in/live/15/master.m3u8
 - DD Punjabi (576p) (source feed: India) — https://fta.ektv.in/live/177/master.m3u8
 - DD Tripura (576p) (source feed: India) — https://fta.ektv.in/live/661/master.m3u8
-- Desi Channel (1080p) (source feed: India) — https://desichannel.kableone.com/desichannel/master.m3u8
-- E 24 (576p) (source feed: India) — https://fta.ektv.in/live/159/master.m3u8
 - ETV Music (1080p) (source feed: India) — https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
+- Eurosport (India) HD (1080p) (source feed: India) — https://livetv.shamon-cable.net:8443/Eurosport-HD/index.m3u8
 - FashionTV (India) (576p) (source feed: India) — https://fta.ektv.in/live/144/144_0.m3u8
-- Goldmines Action (576p) (source feed: India) — https://fta.ektv.in/live/584/master.m3u8
-- KTV Bangla (1080p) (source feed: India) — https://stream.ottlive.co.in/ktvbangla/index.m3u8
-- Manoranjan Movies (576p) (source feed: India) — https://fta.ektv.in/live/47/47_0.m3u8
-- Mazhavil Manorama HD (1080p) (source feed: India) — https://fta.ektv.in/live/245/master.m3u8
+- GTC Punjabi (1080p) (source feed: India) — https://cdn.ottlive.co.in/gtcpunjabi/index.m3u8
 - Mr Bean Animated (1080p) (source feed: India) — https://amg00627-amg00627c23-samsung-au-4110.playouts.now.amagi.tv/playlist.m3u8
 - Pogo (576p) (source feed: India) — http://103.135.253.32:8080/POGO/index.m3u8
-- Public Movies (576p) (source feed: India) — https://fta.ektv.in/live/239/master.m3u8
-- Rengoni (576p) (source feed: India) — https://fta.ektv.in/live/709/master.m3u8
-- Sangeet Bhojpuri (576p) (source feed: India) — https://fta.ektv.in/live/349/master.m3u8
-- Sony Aath (1080p) (source feed: India) — http://27.124.71.27/Sony_Aath/index.m3u8
-- Thalaa TV (1080p) (source feed: India) — https://streams2.sofast.tv/ptnr-khabriya/title-THALAA-TV-TAM_Khabriya/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/c9d5c8a0-8c52-47bc-954d-e64a11314de2/manifest.m3u8
-- Tolly TV (1080p) (source feed: India) — https://streams2.sofast.tv/ptnr-khabriya/title-TOLLY-TV-TEL_Khabriya/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/9bb55dff-7a74-43aa-bcf7-ea537e8b9e92/manifest.m3u8
 - Travelxp 4K HDR (2160p) [Geo-blocked] (source feed: India) — https://deltatesttatasky.akamaized.net/out/i/968284.m3u8
 - Vanitha TV (576p) (source feed: India) — https://mumbai-edge.smartplaytv.in/VanithaTV/index.m3u8
-- Vendhar TV (576p) (source feed: India) — https://fta.ektv.in/live/223/master.m3u8
 
 ## Stream verification
 
-- Run timestamp: 2026-11-12T05:45:33+00:00
+- Run timestamp: 2026-11-13T06:49:26+00:00
 - Mode: iptv
-- New entries and discovery queues probed: 67
-- Verified live media responses: 40
+- New entries and discovery queues probed: 57
+- Verified live media responses: 28
 - Verified new primary channels automatically promoted: 0
 - Verified alternate streams moved to Backup: 0
 - Inconclusive candidates retained for manual review: 10
-- Definitively dead new candidates removed: 17
+- Definitively dead new candidates removed: 19
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
-- IPTV manual-review candidates needing later local-logo repair (warning only): 50
+- IPTV manual-review candidates needing later local-logo repair (warning only): 38
 - International candidates held for missing local logos: 0
 
 ### Stream probe details
@@ -136,7 +126,6 @@ Generated: **2026-11-12T05:45:23.853909+00:00**
 - Removed newly discovered Captain (576p) from New Channels — HTTP 404.
 - Retained Cartoon Network HD+ (1080p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Cartoon Network HD+ (1080p) has no verified local logo; kept in New Channels for later repair.
-- CCV (480p) has no verified local logo; kept in New Channels for later repair.
 - CVR Health (576p) has no verified local logo; kept in New Channels for later repair.
 - Disha TV (396p) has no verified local logo; kept in New Channels for later repair.
 - Retained Doraemon (720p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
@@ -145,12 +134,11 @@ Generated: **2026-11-12T05:45:23.853909+00:00**
 - Removed newly discovered ETV Telugu HD (1080p) from New Channels — HTTP 404.
 - Gaunda Punjab TV (720p) has no verified local logo; kept in New Channels for later repair.
 - Hyder TV (720p) has no verified local logo; kept in New Channels for later repair.
-- Jaihind TV (576p) has no verified local logo; kept in New Channels for later repair.
+- Removed newly discovered Jaihind TV (576p) from New Channels — HTTP 404.
 - Removed newly discovered Jaya Plus (576p) from New Channels — HTTP 404.
 - Kabaddi 24x7 (720p) has no verified local logo; kept in New Channels for later repair.
 - KCM India (1080p) [Geo-blocked] has no verified local logo; kept in New Channels for later repair.
 - MBC TV (576p) has no verified local logo; kept in New Channels for later repair.
-- Movies Now HD (576p) has no verified local logo; kept in New Channels for later repair.
 - NDTV Good Times (1080p) has no verified local logo; kept in New Channels for later repair.
 - Removed newly discovered Punjabi Beats HD (720p) from New Channels — HTTP 404.
 - Punjab Plus (1080p) has no verified local logo; kept in New Channels for later repair.
@@ -164,48 +152,40 @@ Generated: **2026-11-12T05:45:23.853909+00:00**
 - Stingray DJAZZ (1080p) has no verified local logo; kept in New Channels for later repair.
 - Stingray Easy Listening (1080p) has no verified local logo; kept in New Channels for later repair.
 - Swastik Stories (1080p) has no verified local logo; kept in New Channels for later repair.
-- TamilVision-TV (1080p) has no verified local logo; kept in New Channels for later repair.
 - The Pet Collective India (720p) has no verified local logo; kept in New Channels for later repair.
+- The Q India (576p) has no verified local logo; kept in New Channels for later repair.
+- Travelxp HD (1080p) [Geo-blocked] has no verified local logo; kept in New Channels for later repair.
+- TV 100 (India) (576p) has no verified local logo; kept in New Channels for later repair.
+- Removed newly discovered Green TV (1080p) from New Backups — HTTP 404.
 - Removed newly discovered T Sports (1080p) from New Backups — HTTP 404.
-- All Time Movies (576p) has no verified local logo; kept in New Backups for later repair.
+- B4U Music (1080p) has no verified local logo; kept in New Backups for later repair.
 - Removed newly discovered DD Assam (576p) from New Backups — HTTP 404.
 - Removed newly discovered DD Manipur (576p) from New Backups — HTTP 404.
 - Removed newly discovered DD Nagaland (576p) from New Backups — HTTP 404.
-- DD Odia (576p) has no verified local logo; kept in New Backups for later repair.
+- DD National HD (1080p) has no verified local logo; kept in New Backups for later repair.
 - Removed newly discovered DD Punjabi (576p) from New Backups — HTTP 404.
 - Removed newly discovered DD Tripura (576p) from New Backups — HTTP 404.
-- Desi Channel (1080p) has no verified local logo; kept in New Backups for later repair.
-- E 24 (576p) has no verified local logo; kept in New Backups for later repair.
 - Removed newly discovered ETV Music (1080p) from New Backups — HTTP 404.
+- Eurosport (India) HD (1080p) has no verified local logo; kept in New Backups for later repair.
 - Removed newly discovered FashionTV (India) (576p) from New Backups — HTTP 404.
-- Goldmines Action (576p) has no verified local logo; kept in New Backups for later repair.
-- KTV Bangla (1080p) has no verified local logo; kept in New Backups for later repair.
-- Manoranjan Movies (576p) has no verified local logo; kept in New Backups for later repair.
-- Mazhavil Manorama HD (1080p) has no verified local logo; kept in New Backups for later repair.
+- GTC Punjabi (1080p) has no verified local logo; kept in New Backups for later repair.
 - Mr Bean Animated (1080p) has no verified local logo; kept in New Backups for later repair.
 - Retained Pogo (576p) in New Backups for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Pogo (576p) has no verified local logo; kept in New Backups for later repair.
-- Public Movies (576p) has no verified local logo; kept in New Backups for later repair.
-- Rengoni (576p) has no verified local logo; kept in New Backups for later repair.
-- Sangeet Bhojpuri (576p) has no verified local logo; kept in New Backups for later repair.
-- Sony Aath (1080p) has no verified local logo; kept in New Backups for later repair.
-- Thalaa TV (1080p) has no verified local logo; kept in New Backups for later repair.
-- Tolly TV (1080p) has no verified local logo; kept in New Backups for later repair.
 - Retained Travelxp 4K HDR (2160p) [Geo-blocked] in New Backups for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Travelxp 4K HDR (2160p) [Geo-blocked] has no verified local logo; kept in New Backups for later repair.
 - Removed newly discovered Vanitha TV (576p) from New Backups — HTTP 404.
-- Vendhar TV (576p) has no verified local logo; kept in New Backups for later repair.
 
 ## Final validation
 
-- Run timestamp: 2026-11-12T05:45:33+00:00
+- Run timestamp: 2026-11-13T06:49:26+00:00
 - Validation status: PASS
-- New manual-review candidates retained: 50
+- New manual-review candidates retained: 38
 - New malformed EXTINF/URL pairs: 0
 - New duplicate stream URL occurrences: 0
-- New candidates missing an authentic local logo: 50 (warning only)
-- New candidates with non-local logo references: 50 (warning only)
-- New candidates with country metadata requiring manual review: 50 (warning only)
+- New candidates missing an authentic local logo: 38 (warning only)
+- New candidates with non-local logo references: 38 (warning only)
+- New candidates with country metadata requiring manual review: 38 (warning only)
 - New candidates outside New Channels/New Backups: 0
 - Existing playlist defects, country metadata and logo completeness do not block discovery.
 - New candidates remain in New Channels/New Backups for owner review; only definitively dead streams are removed.
