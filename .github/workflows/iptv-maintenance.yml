@@ -190,9 +190,12 @@ jobs:
           OWNER_MIGRATION_REQUESTED=false
           MIGRATION_REQUEST_FILE="maintenance/owner-requested-iptv-migration.json"
           MIGRATION_COMPLETION_REPORT="reports/owner-requested-main-migrations.md"
-          if [[ -s "${MIGRATION_REQUEST_FILE}" && ! -s "${MIGRATION_COMPLETION_REPORT}" ]]; then
+          if [[ -s "${MIGRATION_REQUEST_FILE}" && ! -s "${MIGRATION_COMPLETION_REPORT}" ]] \
+             && jq -e '.status == "pending"' "${MIGRATION_REQUEST_FILE}" >/dev/null; then
             OWNER_MIGRATION_REQUESTED=true
-            echo "Durable owner-requested one-time IPTV migration is pending."
+            echo "Explicitly pending owner-requested IPTV migration is active."
+          else
+            echo "No active owner-requested migration; existing IPTV rows remain immutable."
           fi
           # ------------------------------------------------------------------
           # Ordering contract (enforced by tests/test_maintenance_report_order.py)
