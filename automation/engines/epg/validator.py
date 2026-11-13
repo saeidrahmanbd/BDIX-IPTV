@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 import re
 import xml.etree.ElementTree as ET
 
-OFFSET_RE = re.compile(r"^([+-])(\d{2})(\d{2})$")
+OFFSET_RE = re.compile(r"^([+-])([0-9]{2})([0-9]{2})$")
 
 @dataclass(frozen=True)
 class EpgValidation:
