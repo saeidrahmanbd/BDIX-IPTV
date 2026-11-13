@@ -129,7 +129,7 @@ def verify(playlist: Path, state: Path):
             old_number = str(old.get("number", "")).strip()
             new_number = str(new.get("number", "")).strip()
             if old_number != new_number:
-                if old_group not in PRIMARY_GROUPS and new_group == old_group and not new_number:
+                if OWNER_MIGRATION_AUTHORIZED.is_file() and old_group not in PRIMARY_GROUPS and new_group == old_group and not new_number:
                     pass
                 else:
                     failures.append(f"Existing channel number changed for {new['name']}.")
