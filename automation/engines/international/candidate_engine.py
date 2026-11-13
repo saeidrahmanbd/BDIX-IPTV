@@ -81,12 +81,17 @@ def assert_international_existing_rows_preserved(before: str, after: str) -> Non
 
     old_index=0
     review_queues={"New Channels","New Backups"}
+    old_urls={row.url for row in old_rows}
+    new_urls=set()
     for row in new_rows:
         if old_index < len(old_rows) and stable_signature(row)==stable_signature(old_rows[old_index]):
             old_index += 1
             continue
+        if row.url in old_urls or row.url in new_urls:
+            raise ValueError("International candidate duplicated or displaced an existing stream URL")
         if row.group.strip() not in review_queues:
             raise ValueError("International candidate added a row outside manual-review queues")
+        new_urls.add(row.url)
     if old_index != len(old_rows):
         raise ValueError("International candidate changed, removed or reordered an existing row")
 
