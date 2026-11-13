@@ -28,7 +28,7 @@ class IptvCandidateEngineTests(unittest.TestCase):
 
     def test_wrong_queue_rejected(self):
         item=DiscoveryCandidate('#EXTINF:-1 group-title="Bangladesh",B','https://b.example/b.m3u8')
-        with self.assertRaisesRegex(ValueError,"manual-review"):
+        with self.assertRaisesRegex(ValueError,"New Channels"):
             build_candidate(BASE,[item])
 
     def test_non_http_url_rejected(self):
