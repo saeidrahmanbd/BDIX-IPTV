@@ -434,7 +434,9 @@ def migrate(text, probe_data):
         stats["promoted_to_primary"] += 1
         changes.append((name, old_group, target, "reachable, identity and local PNG logo verified"))
 
-    # Enforce a single primary identity; retain a duplicate stream as Backup.
+    # Detect duplicate primary identities without demoting existing primary rows.
+    # The owner explicitly authorized preserving every existing positive tvg-chno;
+    # duplicate cleanup must therefore remain metadata-only in this one-time pass.
     seen_id, seen_name = {}, {}
     for record in records:
         info = record[0]
@@ -455,12 +457,12 @@ def migrate(text, probe_data):
                 value = canonical.get(key, "").strip()
                 if value:
                     info = set_attr(info, key, value)
-            info = remove_attr(set_group(info, "Backup"), "tvg-chno")
+            # Keep the existing group and channel number exactly as found.
+            # Reconcile only identity metadata; never demote/renumber a pre-existing
+            # primary row as a side effect of duplicate detection.
             record[0] = info
-            approvals.append({"url": url_of(record), "source_group": group,
-                              "target_group": "Backup", "allow_metadata": True})
-            stats["duplicate_primary_demoted_to_backup"] += 1
-            changes.append((name, group, "Backup", "duplicate primary identity retained as alternate stream"))
+            stats["duplicate_primary_metadata_reconciled"] += 1
+            changes.append((name, group, group, "duplicate primary identity metadata reconciled; group and channel number preserved"))
             continue
         if cid:
             seen_id[cid] = record
