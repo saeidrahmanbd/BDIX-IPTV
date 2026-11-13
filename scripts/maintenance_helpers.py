@@ -400,7 +400,7 @@ def verify_no_unauthorized_removals() -> int:
             old_number = _attrs(str(old.get("info", ""))).get("tvg-chno", "").strip()
             new_number = _attrs(info).get("tvg-chno", "").strip()
             if old_number != new_number:
-                if old_group not in PRIMARY_GROUPS and new_group == old_group and not new_number:
+                if OWNER_MIGRATION_AUTHORIZED.exists() and old_group not in PRIMARY_GROUPS and new_group == old_group and not new_number:
                     pass
                 else:
                     failures.append(f"existing channel number changed for {_name(info)}")
