@@ -110,12 +110,12 @@ class PersistedOrchestratorTests(unittest.TestCase):
         with patch("automation.engines.epg.source_provider.build_epg_source_candidate", return_value="<tv/>") as source:
             with patch("automation.engines.epg.candidate_engine.build_epg_candidate", return_value=fake) as build:
                 decision, value = build_epg_candidate_persisted(
-                    "#EXTM3U\\n", "<tv/>", "b" * 40, store,
+                    "#EXTM3U\n", "<tv/>", "b" * 40, store,
                     as_of=as_of, repository_root=".",
                 )
         self.assertTrue(decision.allowed)
         self.assertIs(value, fake)
-        source.assert_called_once_with(".")
+        source.assert_called_once_with(".", iptv_playlist_text=None, international_playlist_text=None)
         build.assert_called_once()
 
 if __name__ == "__main__":
