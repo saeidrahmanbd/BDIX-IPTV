@@ -96,7 +96,7 @@ def append_discovery_candidates(playlist_text: str,
     """Insert new discovery rows into their queue blocks without rewriting existing rows."""
     if not discoveries:
         return playlist_text
-    lines=playlist_text.replace("\\r","").splitlines()
+    lines=playlist_text.replace("\r","").splitlines()
     seen_urls={row.url for row in parse_rows(playlist_text)}
     additions={"New Channels":[],"New Backups":[]}
     for item in discoveries:
@@ -104,7 +104,7 @@ def append_discovery_candidates(playlist_text: str,
         extinf=item.extinf.strip()
         if not url.startswith(("http://","https://")):
             raise ValueError("discovery URL must be HTTP(S)")
-        if not extinf.startswith("#EXTINF:") or "\\n" in extinf or "\\r" in extinf or "\\n" in url or "\\r" in url:
+        if not extinf.startswith("#EXTINF:") or "\n" in extinf or "\r" in extinf or "\n" in url or "\r" in url:
             raise ValueError("discovery record must be a valid single-line M3U pair")
         expected="New Backups" if item.backup else "New Channels"
         actual=dict(ATTR_RE.findall(extinf)).get("group-title","").strip()
@@ -130,6 +130,6 @@ def append_discovery_candidates(playlist_text: str,
                             if line.startswith("#EXTINF:") and
                             rank.get(dict(ATTR_RE.findall(line)).get("group-title","").strip(),len(rank))>target_rank),len(lines))
         lines[insert_at:insert_at]=block
-    candidate="\\n".join(lines).rstrip()+"\\n"
+    candidate="\n".join(lines).rstrip()+"\n"
     assert_international_existing_rows_preserved(playlist_text,candidate)
     return candidate
