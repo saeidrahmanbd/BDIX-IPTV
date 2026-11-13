@@ -273,6 +273,11 @@ jobs:
               GATE_STATUS=$?
               set -e
             fi
+            # The durable authorization marker must remain present even if a prior
+            # mutation helper touched the maintenance directory; restore the tracked
+            # copy from this commit before the report-order assertion reads it.
+            git checkout HEAD -- "$MIGRATION_REQUEST_FILE"
+            test -s "$MIGRATION_REQUEST_FILE"
             # Data-level metadata assertions run against the final playlist bytes.
             python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
           python -m unittest discover -s tests -p 'test_channel_numbering.py'
