@@ -13,6 +13,7 @@ class ProbeLedgerTests(unittest.TestCase):
         text=record_probe(None,"channel-a",Probe(date(2026,11,13),404))
         ledger=parse_ledger(text)
         self.assertEqual(len(probes_for(ledger,"channel-a")),1)
+        self.assertEqual(probes_for(ledger,"channel-a")[0].stream_state,"unknown")
 
     def test_duplicate_same_day_probes_fail_closed(self):
         text=record_probe(None,"channel-a",Probe(date(2026,11,13),404))
