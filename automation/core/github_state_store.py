@@ -178,3 +178,17 @@ def record_remote_probe(store: GitHubStateStore, identity: str, probe):
     updated["international_probe_ledger"] = updated_probe
     store.save(updated, snapshot.blob_sha)
     return updated_probe
+
+
+def execute_remote_run(store: GitHubStateStore, request, operation):
+    """Run a candidate operation under a durable idempotency reservation."""
+    decision = reserve_remote_run(store, request)
+    if not decision.allowed:
+        return decision, None
+    try:
+        result = operation()
+    except Exception:
+        finish_remote_run(store, decision.idempotency_key, decision.attempt, "failed")
+        raise
+    finish_remote_run(store, decision.idempotency_key, decision.attempt, "succeeded")
+    return decision, result
