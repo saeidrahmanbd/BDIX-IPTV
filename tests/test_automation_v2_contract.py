@@ -55,8 +55,8 @@ class AutomationV2PolicyTests(unittest.TestCase):
             assert_iptv_existing_rows_preserved(before, after)
 
     def test_discovery_cannot_be_inserted_between_existing_rows(self):
-        before = "#EXTM3U\\n" + row("A", "https://a.example/a.m3u8") + row("B", "https://b.example/b.m3u8", number="2")
-        after = "#EXTM3U\\n" + row("A", "https://a.example/a.m3u8") + row("Candidate", "https://new.example/new.m3u8", group="New Channels") + row("B", "https://b.example/b.m3u8", number="2")
+        before = "#EXTM3U\n" + row("A", "https://a.example/a.m3u8") + row("B", "https://b.example/b.m3u8", number="2")
+        after = "#EXTM3U\n" + row("A", "https://a.example/a.m3u8") + row("Candidate", "https://new.example/new.m3u8", group="New Channels") + row("B", "https://b.example/b.m3u8", number="2")
         with self.assertRaisesRegex(ValueError,"prefix"):
             assert_iptv_existing_rows_preserved(before, after)
 
