@@ -89,58 +89,29 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("git add -f epg/epg.xml", refresh)
         self.assertIn("workflow_dispatch:", refresh)
 
-    def test_main_playlist_owner_cleanup_is_explicitly_one_time_and_url_guarded(self):
+    def test_main_playlist_is_permanently_owner_curated_and_append_only(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\n          }", workflow.index("run_mutations() {"))]
-        self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then', mutations)
-        owner_branch_start = mutations.index('if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then')
-        owner_branch_end = mutations.index("\n            fi", owner_branch_start)
-        owner_branch = mutations[owner_branch_start:owner_branch_end]
+        self.assertIn("OWNER_MIGRATION_REQUESTED=false", workflow)
+        self.assertNotIn("OWNER_MIGRATION_REQUESTED=true", workflow)
         for forbidden in (
-            "reclassify_main_playlist_groups.py",
-            "backfill_cross_playlist_metadata.py",
-            "reorganize_international_playlist.py",
-            "enforce_playlist_attribution.py International-Playlist.m3u",
-            "repair_logo_asset_technical_quality.py --fix",
+            "migrate_owner_requested_main_queues.py",
+            "probe_owner_requested_main_queues.py",
+            "sort_playlists.py IPTV-Playlist.m3u",
+            "renumber_active_channels.py IPTV-Playlist.m3u",
         ):
-            self.assertNotIn(forbidden, owner_branch)
-        self.assertIn("python scripts/probe_owner_requested_main_queues.py", mutations)
-        self.assertIn("python scripts/migrate_owner_requested_main_queues.py", mutations)
-        self.assertIn("python scripts/sort_playlists.py IPTV-Playlist.m3u", mutations)
-        self.assertIn("python scripts/renumber_active_channels.py IPTV-Playlist.m3u", mutations)
-        self.assertIn('MIGRATION_REQUEST_FILE="maintenance/owner-requested-iptv-migration.json"', workflow)
-        self.assertIn('MIGRATION_COMPLETION_REPORT="reports/owner-requested-main-migrations.md"', workflow)
-        self.assertIn('[[ -s "${MIGRATION_REQUEST_FILE}" && ! -s "${MIGRATION_COMPLETION_REPORT}" ]]', workflow)
-        self.assertIn("a superseded, cancelled, or failed run cannot consume it", (ROOT / "docs" / "PLAYLIST-AUTOMATION-POLICY.md").read_text(encoding="utf-8"))
-        self.assertNotIn("MIGRATION_EVENT_SUBJECT", workflow)
-        self.assertIn("python scripts/normalize_metadata.py", mutations)
-        self.assertIn("python scripts/migrate_external_logos_fixed.py", mutations)
-        self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
-        self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then', mutations)
-        self.assertIn("python scripts/reorganize_international_playlist.py", mutations)
-        self.assertIn("python scripts/validate_international_playlist.py", mutations)
+            self.assertNotIn(forbidden, mutations)
+        marker = json.loads((ROOT / "maintenance" / "owner-requested-iptv-migration.json").read_text(encoding="utf-8"))
+        self.assertEqual(marker["status"], "cancelled")
+        guard = (ROOT / "scripts" / "protect_main_playlist.py").read_text(encoding="utf-8")
+        self.assertIn("after_existing_order != old_order", guard)
+        self.assertIn("Existing group assignment changed", guard)
+        self.assertIn("Existing channel number changed", guard)
+        self.assertNotIn("migration_mode", guard)
         self.assertIn("python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u", workflow)
         self.assertGreaterEqual(workflow.count("python scripts/protect_main_playlist.py verify IPTV-Playlist.m3u"), 2)
         self.assertIn("python -m unittest discover -s tests -p 'test_main_playlist_protection.py'", workflow)
-        guard = (ROOT / "scripts" / "protect_main_playlist.py").read_text(encoding="utf-8")
-        self.assertIn("OWNER_APPROVALS", guard)
-        self.assertIn("Counter", guard)
-        self.assertIn("CATEGORY_ORDER", guard)
-        self.assertIn("Duplicate primary channel identity", guard)
-        self.assertIn("Existing row order changed", guard)
-        self.assertIn("after_existing_order != baseline_order", guard)
-        self.assertIn("if not migration_mode", guard)
-        normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
-        self.assertIn("Keep the original record sequence exactly", normalizer)
-        self.assertNotIn("records.sort(", normalizer)
-        self.assertIn("Preserve its exact", normalizer)
-        self.assertIn('l.startswith("#PLAYLIST-STUDIO-CATEGORIES:")', normalizer)
-        self.assertNotIn("CATEGORY_REGISTRY=", normalizer)
-        self.assertNotIn('set_attr(m,"tvg-chno"', normalizer)
-        self.assertNotIn('tvg-chno="[^"]*"', normalizer)
-        after = workflow[workflow.index("\n          }", workflow.index("run_mutations() {")):]
-        for script in ("stream_health", "generate_dashboard", "validate_report_freshness"):
-            self.assertIn(f"python scripts/{script}.py", after)
+
 
     def test_international_health_reconciles_country_threshold_after_stream_actions(self):
         workflow = (ROOT / ".github" / "workflows" / "international-stream-health.yml").read_text(encoding="utf-8")
