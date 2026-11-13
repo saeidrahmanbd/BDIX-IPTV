@@ -39,7 +39,7 @@ def assert_iptv_existing_rows_preserved(before: str, after: str) -> None:
     if missing:
         raise ValueError(f"Existing IPTV stream URL occurrences removed: {sum(missing.values())}")
     if [row.url for row in new[:len(old)]] != old_urls:
-        raise ValueError("Existing IPTV rows must remain an unchanged prefix; new rows append only")
+        raise ValueError("Existing IPTV rows were reordered or displaced; they must remain an unchanged prefix and new rows append only")
     for index, (old_row, new_row) in enumerate(zip(old, new[:len(old)]), 1):
         if old_row.group != new_row.group:
             raise ValueError(f"Existing IPTV group changed for stream occurrence {index}")
