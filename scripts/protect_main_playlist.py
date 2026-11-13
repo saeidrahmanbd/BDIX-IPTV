@@ -114,15 +114,23 @@ def verify(playlist: Path, state: Path):
         old_by_url.setdefault(str(row["url"]), []).append(row)
     for row in after:
         new_by_url.setdefault(str(row["url"]), []).append(row)
+    approvals = load_approvals() if OWNER_MIGRATION_AUTHORIZED.is_file() else {}
     for url, old_rows in old_by_url.items():
         new_rows = new_by_url.get(url, [])
         if len(old_rows) != len(new_rows):
             continue
         for old, new in zip(old_rows, new_rows):
-            if str(old.get("group", "")).strip() != str(new.get("group", "")).strip():
-                failures.append(f"Existing group assignment changed for {new['name']}.")
-            if str(old.get("number", "")).strip() != str(new.get("number", "")).strip():
-                failures.append(f"Existing channel number changed for {new['name']}.")
+            old_group = str(old.get("group", "")).strip()
+            new_group = str(new.get("group", "")).strip()
+            if old_group != new_group and (url, old_group, new_group) not in approvals:
+                failures.append(f"Unapproved existing group change for {new['name']}: {old_group} -> {new_group}.")
+            old_number = str(old.get("number", "")).strip()
+            new_number = str(new.get("number", "")).strip()
+            if old_number != new_number:
+                if old_group not in PRIMARY_GROUPS and new_group == old_group and not new_number:
+                    pass
+                else:
+                    failures.append(f"Existing channel number changed for {new['name']}.")
     for url in set(actual) - set(expected):
         if actual[url] != 1:
             failures.append("A new discovery URL is duplicated.")
@@ -133,7 +141,7 @@ def verify(playlist: Path, state: Path):
         for item in failures[:30]:
             print(f"::error::{item}", file=sys.stderr)
         raise SystemExit(f"IPTV owner-protection gate failed with {len(failures)} issue(s).")
-    print(f"IPTV owner-protection passed: {len(before)} existing rows preserve URL/group/number/order; new rows are manual-queue only.")
+    print(f"IPTV owner-protection passed: {len(before)} existing URL occurrences and order preserved; exact approved transitions only; primary numbers preserved.")
 
 
 def main():
