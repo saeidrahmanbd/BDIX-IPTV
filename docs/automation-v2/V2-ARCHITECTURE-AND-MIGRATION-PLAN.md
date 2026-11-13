@@ -17,7 +17,7 @@ Replace overlapping automation with one policy source, isolated playlist engines
 
 | Area | Current state |
 |---|---|
-| Baseline inventory and backup | Complete on branch; baseline commit 46275f5ebafa2ae1b56f3e480f684ac1e85ae45e |
+| Baseline inventory and backup | Complete on branch; baseline commit aec37357dfbb47f0792682af744ccaf111416d7a |
 | Dependency and side-effect audits | Static workflow/script audit complete; exhaustive nested runtime tracing remains incomplete |
 | Central policy and conformance | JSON policy, schema and conformance validator implemented |
 | Playlist contracts | IPTV existing-row order, URLs, groups and channel numbers protected; approved metadata repairs and queue-only discovery supported |
@@ -27,8 +27,8 @@ Replace overlapping automation with one policy source, isolated playlist engines
 | Run ledger | Append-only JSON ledger model with monotonic status transitions and Bangladesh timezone metadata implemented |
 | Transaction safety | Engine path allowlists, SHA-256 candidate evidence, stale-input checks, fail-closed gate, shared lock and atomic candidate-directory staging implemented; no production publisher |
 | Logo audit | Playlist/runtime/report references separated; exact duplicate hashes reported; no deletion, quarantine or move |
-| V2 CI | V2 CI passed 168 tests and the immutable baseline dry run on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8; latest hardening commit f4af3fe24e8cef5192c13c31e425d9a660f3878a is awaiting its V2 CI run |
-| Legacy regression | Latest full repository regression run passed 707 tests on commit f4af3fe24e8cef5192c13c31e425d9a660f3878a |
+| V2 CI | V2 CI passed 201 tests and the immutable baseline dry run on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8; latest verified branch CI commit d2a14e92e46ee10f1f4df5c30a57efeb048c4bc3 passed |
+| Legacy regression | Latest full repository regression run passed 732 tests on commit f4af3fe24e8cef5192c13c31e425d9a660f3878a |
 | Real-baseline measurements | Exact production blob fingerprints verified; IPTV 1,280 rows; International 3,120 rows; EPG 30,944,668 bytes |
 | Workflow migration/cutover | Not started; all existing production workflows remain enabled and unchanged |
 
