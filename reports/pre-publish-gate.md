@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-13T06:44:44+00:00**
-Source playlist SHA-256: **4757dc831cd0ebeecd432ee55cb3d5529eaf7e11858aa6a72ac73eff4ad7e4eb**
+Generated: **2026-11-13T06:50:56+00:00**
+Source playlist SHA-256: **c5e166a3a86ed6ff4a74ad8d55217cba0064d516238eb6a6c0223469b8ab878f**
 
 Status: **PASS**
 
-- Current entries: **1242**
+- Current entries: **1280**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -22,11 +22,11 @@ Status: **PASS**
 - Orphan Backup entries: **16**
 - Active rows with incomplete required metadata: **1**
 - tvg-id/channel-id inconsistencies: **1**
-- Entries missing tvg-language: **18**
-- Raw resolution/geoblock name tags: **18**
+- Entries missing tvg-language: **56**
+- Raw resolution/geoblock name tags: **55**
 - Missing logos in active groups: **1**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
-- External logo URLs: **0**
+- External logo URLs: **38**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
@@ -47,13 +47,14 @@ No hard safety blockers detected.
 - orphan Backup entries awaiting owner review: 16
 - active entries with incomplete identity/country/logo metadata: 1
 - tvg-id/channel-id inconsistencies: 1
-- entries missing tvg-language: 18
+- entries missing tvg-language: 56
 - primary entries missing tvg-chno: 13
 - Backup/Review/discovery entries still numbered: 428
 - same-ID metadata name conflicts: 2
-- raw resolution/geoblock tags in channel names: 18
+- raw resolution/geoblock tags in channel names: 55
 - missing logos: 1
-- New queue candidates pending owner review: 18
+- external logo URLs: 38
+- New queue candidates pending owner review: 56
 
 ## Review-queue logo gaps
 
@@ -71,6 +72,36 @@ None.
 - **CCV (480p)** — New Channels
 - **Movies Now HD (576p)** — New Channels
 - **TamilVision-TV (1080p)** — New Channels
+- **BTL TV (Netherlands) (1080p)** — New Channels
+- **NAN TV (720p)** — New Channels
+- **Nickelodeon (India) (576p)** — New Channels
+- **Nick Jr. (India) (576p)** — New Channels
+- **Vokta TV (720p)** — New Channels
+- **7X Music (1080p)** — New Channels
+- **Animax Asia India (1080p) [Geo-blocked]** — New Channels
+- **Cartoon Network HD+ (1080p)** — New Channels
+- **CVR Health (576p)** — New Channels
+- **Disha TV (396p)** — New Channels
+- **Doraemon (720p)** — New Channels
+- **Gaunda Punjab TV (720p)** — New Channels
+- **Hyder TV (720p)** — New Channels
+- **Kabaddi 24x7 (720p)** — New Channels
+- **KCM India (1080p) [Geo-blocked]** — New Channels
+- **MBC TV (576p)** — New Channels
+- **NDTV Good Times (1080p)** — New Channels
+- **Punjab Plus (1080p)** — New Channels
+- **Qello Concerts by Stingray (1080p)** — New Channels
+- **R Plus (1080p)** — New Channels
+- **Shekinah TV (1080p)** — New Channels
+- **Shin-chan (720p)** — New Channels
+- **Stingray Classic Rock (1080p)** — New Channels
+- **Stingray DJAZZ (1080p)** — New Channels
+- **Stingray Easy Listening (1080p)** — New Channels
+- **Swastik Stories (1080p)** — New Channels
+- **The Pet Collective India (720p)** — New Channels
+- **The Q India (576p)** — New Channels
+- **Travelxp HD (1080p) [Geo-blocked]** — New Channels
+- **TV 100 (India) (576p)** — New Channels
 - **All Time Movies (576p)** — New Backups
 - **DD Odia (576p)** — New Backups
 - **Desi Channel (1080p)** — New Backups
@@ -86,12 +117,50 @@ None.
 - **Thalaa TV (1080p)** — New Backups
 - **Tolly TV (1080p)** — New Backups
 - **Vendhar TV (576p)** — New Backups
+- **B4U Music (1080p)** — New Backups
+- **DD National HD (1080p)** — New Backups
+- **Eurosport (India) HD (1080p)** — New Backups
+- **GTC Punjabi (1080p)** — New Backups
+- **Mr Bean Animated (1080p)** — New Backups
+- **Pogo (576p)** — New Backups
+- **Travelxp 4K HDR (2160p) [Geo-blocked]** — New Backups
 
 ## Queue validation
 
 - CCV (480p) has provisional/unverified queue country missing
 - Movies Now HD (576p) has provisional/unverified queue country missing
 - TamilVision-TV (1080p) has provisional/unverified queue country missing
+- BTL TV (Netherlands) (1080p) has provisional/unverified queue country missing
+- Cartoon Network (Pakistan) has provisional/unverified queue country missing
+- NAN TV (720p) has provisional/unverified queue country missing
+- Nickelodeon (India) (576p) has provisional/unverified queue country missing
+- Nick Jr. (India) (576p) has provisional/unverified queue country missing
+- Vokta TV (720p) has provisional/unverified queue country missing
+- 7X Music (1080p) has provisional/unverified queue country missing
+- Animax Asia India (1080p) [Geo-blocked] has provisional/unverified queue country missing
+- Cartoon Network HD+ (1080p) has provisional/unverified queue country missing
+- CVR Health (576p) has provisional/unverified queue country missing
+- Disha TV (396p) has provisional/unverified queue country missing
+- Doraemon (720p) has provisional/unverified queue country missing
+- Gaunda Punjab TV (720p) has provisional/unverified queue country missing
+- Hyder TV (720p) has provisional/unverified queue country missing
+- Kabaddi 24x7 (720p) has provisional/unverified queue country missing
+- KCM India (1080p) [Geo-blocked] has provisional/unverified queue country missing
+- MBC TV (576p) has provisional/unverified queue country missing
+- NDTV Good Times (1080p) has provisional/unverified queue country missing
+- Punjab Plus (1080p) has provisional/unverified queue country missing
+- Qello Concerts by Stingray (1080p) has provisional/unverified queue country missing
+- R Plus (1080p) has provisional/unverified queue country missing
+- Shekinah TV (1080p) has provisional/unverified queue country missing
+- Shin-chan (720p) has provisional/unverified queue country missing
+- Stingray Classic Rock (1080p) has provisional/unverified queue country missing
+- Stingray DJAZZ (1080p) has provisional/unverified queue country missing
+- Stingray Easy Listening (1080p) has provisional/unverified queue country missing
+- Swastik Stories (1080p) has provisional/unverified queue country missing
+- The Pet Collective India (720p) has provisional/unverified queue country missing
+- The Q India (576p) has provisional/unverified queue country missing
+- Travelxp HD (1080p) [Geo-blocked] has provisional/unverified queue country missing
+- TV 100 (India) (576p) has provisional/unverified queue country missing
 - All Time Movies (576p) has provisional/unverified queue country missing
 - DD Odia (576p) has provisional/unverified queue country missing
 - Desi Channel (1080p) has provisional/unverified queue country missing
@@ -107,6 +176,13 @@ None.
 - Thalaa TV (1080p) has provisional/unverified queue country missing
 - Tolly TV (1080p) has provisional/unverified queue country missing
 - Vendhar TV (576p) has provisional/unverified queue country missing
+- B4U Music (1080p) has provisional/unverified queue country missing
+- DD National HD (1080p) has provisional/unverified queue country missing
+- Eurosport (India) HD (1080p) has provisional/unverified queue country missing
+- GTC Punjabi (1080p) has provisional/unverified queue country missing
+- Mr Bean Animated (1080p) has provisional/unverified queue country missing
+- Pogo (576p) has provisional/unverified queue country missing
+- Travelxp 4K HDR (2160p) [Geo-blocked] has provisional/unverified queue country missing
 
 ## Missing local logo files
 

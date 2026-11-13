@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-13T06:44:42+00:00**
+Generated: **2026-11-13T06:50:54+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **4757dc831cd0ebeecd432ee55cb3d5529eaf7e11858aa6a72ac73eff4ad7e4eb**
-- International-Playlist.m3u SHA-256: **f200621e75f7b8e287487941d4dbb8903ae627f607c2898471d1ed9c70c97b58**
+- IPTV-Playlist.m3u SHA-256: **c5e166a3a86ed6ff4a74ad8d55217cba0064d516238eb6a6c0223469b8ab878f**
+- International-Playlist.m3u SHA-256: **fc5185b896fb990eab093fb9f1a7cd96328f3354fb18dcd97b9335d9491de9e1**
 
 ## Summary
 
@@ -16,9 +16,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1600px): **6**
 - Raster assets over 512000 bytes: **7**
 - Raster/SVG assets with short side under 64 px: **155**
-- Exact-byte duplicate asset clusters: **713**
-- Playlist references whose asset stem differs from the normalized channel name: **1473**
-- Unreferenced files immediately inside logos/: **1468** (not deleted; other tooling or playlists may use them)
+- Exact-byte duplicate asset clusters: **715**
+- Playlist references whose asset stem differs from the normalized channel name: **1515**
+- Unreferenced files immediately inside logos/: **1466** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -383,6 +383,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/cinemax-latin-america-720p.png, logos/international/cinemax-latin-america-720p.png
 - logos/cinevault-westerns.png, logos/international/cinevault-westerns-540p-geo-blocked.png
 - logos/cinewow.png, logos/international/cinewow.png
+- logos/city-eden-birma-play-c04db7f6ee.png, logos/international/city-eden-birma-play-not-24-7.png
 - logos/city-eden-kinoart-c15c2fdbd4.png, logos/international/city-eden-kinoart-not-24-7.png
 - logos/city-eden-kinodetektiv-ec5108195c.png, logos/international/city-eden-kinodetektiv-not-24-7.png
 - logos/city-eden-kinodrama-3e97de8b69.png, logos/international/city-eden-kinodrama-not-24-7.png
@@ -390,6 +391,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/city-eden-kinoklassika-86dc6272e0.png, logos/international/city-eden-kinoklassika-not-24-7.png
 - logos/city-eden-kinokomediya-c8e00e66c6.png, logos/international/city-eden-kinokomediya-not-24-7.png
 - logos/city-eden-kinomistika-103e676799.png, logos/international/city-eden-kinomistika-not-24-7.png
+- logos/city-eden-sirtaki-tv-00cefab928.png, logos/international/city-eden-sirtaki-tv-not-24-7.png
 - logos/city-tv-bulgaria-55b1af3877.png, logos/international/city-tv-bulgaria-576p-not-24-7.png
 - logos/ckno-fm-616p.png, logos/international/ckno-fm-616p.png
 - logos/claro-cinema-1080p.jpg, logos/international/claro-cinema-1080p.jpg
@@ -1400,6 +1402,37 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | CCV (480p) | ccv-480p.png | New Channels |
 | IPTV-Playlist.m3u | Movies Now HD (576p) | movies-now-hd-576p.png | New Channels |
 | IPTV-Playlist.m3u | TamilVision-TV (1080p) | tamilvision-tv-1080p.png | New Channels |
+| IPTV-Playlist.m3u | BTL TV (Netherlands) (1080p) | APkrFKZYgQTsDhkbaqmPRCPZIf0UgZqF1wa6aG2eo8ti=s176-c-k-c0x00ffffff-no-rj-mo | New Channels |
+| IPTV-Playlist.m3u | Cartoon Network (Pakistan) | 960px-Cartoon_Network_2010_logo.svg.png | New Channels |
+| IPTV-Playlist.m3u | NAN TV (720p) | NAN-TV-Logo-02.png | New Channels |
+| IPTV-Playlist.m3u | Nickelodeon (India) (576p) | image.png | New Channels |
+| IPTV-Playlist.m3u | Nick Jr. (India) (576p) | image.png | New Channels |
+| IPTV-Playlist.m3u | Vokta TV (720p) | szAGBCU.png | New Channels |
+| IPTV-Playlist.m3u | 7X Music (1080p) | 7X_Music.png | New Channels |
+| IPTV-Playlist.m3u | Animax Asia India (1080p) [Geo-blocked] | Animax.png | New Channels |
+| IPTV-Playlist.m3u | Cartoon Network HD+ (1080p) | image.png | New Channels |
+| IPTV-Playlist.m3u | CVR Health (576p) | bCyW32I.png | New Channels |
+| IPTV-Playlist.m3u | Disha TV (396p) | Disha_tv.png | New Channels |
+| IPTV-Playlist.m3u | Doraemon (720p) | Doraemon_Merch_EN_Logo.svg | New Channels |
+| IPTV-Playlist.m3u | Gaunda Punjab TV (720p) | ArRZRM3.png | New Channels |
+| IPTV-Playlist.m3u | Hyder TV (720p) | reHjjRZ.png | New Channels |
+| IPTV-Playlist.m3u | Kabaddi 24x7 (720p) | kabaddi_24x7.png | New Channels |
+| IPTV-Playlist.m3u | KCM India (1080p) [Geo-blocked] | KCM.png | New Channels |
+| IPTV-Playlist.m3u | MBC TV (576p) | s135691_ld_h15_aa.png | New Channels |
+| IPTV-Playlist.m3u | NDTV Good Times (1080p) | image.png | New Channels |
+| IPTV-Playlist.m3u | Punjab Plus (1080p) | Punjab_Plus.png | New Channels |
+| IPTV-Playlist.m3u | Qello Concerts by Stingray (1080p) | IRyFTWq.png | New Channels |
+| IPTV-Playlist.m3u | R Plus (1080p) | XUnWcZF.png | New Channels |
+| IPTV-Playlist.m3u | Shekinah TV (1080p) | Shekinah.png | New Channels |
+| IPTV-Playlist.m3u | Shin-chan (720p) | fIYWvHIeqc1A9D4PyayFkgjRxCh.png | New Channels |
+| IPTV-Playlist.m3u | Stingray Classic Rock (1080p) | FBgu8yB.png | New Channels |
+| IPTV-Playlist.m3u | Stingray DJAZZ (1080p) | 960px-Stingray_Djazz.png | New Channels |
+| IPTV-Playlist.m3u | Stingray Easy Listening (1080p) | 960px-Stingray_Music_logo.svg.png | New Channels |
+| IPTV-Playlist.m3u | Swastik Stories (1080p) | Swastik_Stories.png | New Channels |
+| IPTV-Playlist.m3u | The Pet Collective India (720p) | yH7n2dF.png | New Channels |
+| IPTV-Playlist.m3u | The Q India (576p) | s144002_ld_h15_aa.png | New Channels |
+| IPTV-Playlist.m3u | Travelxp HD (1080p) [Geo-blocked] | image.png | New Channels |
+| IPTV-Playlist.m3u | TV 100 (India) (576p) | TV_100.png | New Channels |
 | IPTV-Playlist.m3u | All Time Movies (576p) | all-time-movies.png | New Backups |
 | IPTV-Playlist.m3u | DD Odia (576p) | dd-odia.png | New Backups |
 | IPTV-Playlist.m3u | Desi Channel (1080p) | desi-channel.png | New Backups |
@@ -1415,6 +1448,13 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Thalaa TV (1080p) | thalaa-tv.png | New Backups |
 | IPTV-Playlist.m3u | Tolly TV (1080p) | tolly-tv.png | New Backups |
 | IPTV-Playlist.m3u | Vendhar TV (576p) | vendhar-tv.png | New Backups |
+| IPTV-Playlist.m3u | B4U Music (1080p) | hytapio.png | New Backups |
+| IPTV-Playlist.m3u | DD National HD (1080p) | DD%20National.png | New Backups |
+| IPTV-Playlist.m3u | Eurosport (India) HD (1080p) | GNLZZGG002E9LQS.png | New Backups |
+| IPTV-Playlist.m3u | GTC Punjabi (1080p) | gtc-pujabin-s.jpg | New Backups |
+| IPTV-Playlist.m3u | Mr Bean Animated (1080p) | Mr._Bean_Animated_Series_stacked_logo.png | New Backups |
+| IPTV-Playlist.m3u | Pogo (576p) | image.png | New Backups |
+| IPTV-Playlist.m3u | Travelxp 4K HDR (2160p) [Geo-blocked] | image.png | New Backups |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Bangladesh |
 | International-Playlist.m3u | Asian TV | asian-tv.png | Bangladesh |
 | International-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Bangladesh |
@@ -1750,8 +1790,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Blokbaster | blokbaster-hd-1080p.png | Russia |
 | International-Playlist.m3u | Bollywood | bollywood-hd-576p.png | Russia |
 | International-Playlist.m3u | Bollywood HD Russia | bollywood-hd-russia-576p.png | Russia |
+| International-Playlist.m3u | City Eden Birma Play [ ] | city-eden-birma-play-not-24-7.png | Russia |
 | International-Playlist.m3u | City Eden KinoAction [ ] | city-eden-kinoaction-not-24-7.png | Russia |
 | International-Playlist.m3u | City Eden KinoAsia [ ] | city-eden-kinoasia-not-24-7.png | Russia |
+| International-Playlist.m3u | City Eden Sirtaki TV [ ] | city-eden-sirtaki-tv-not-24-7.png | Russia |
 | International-Playlist.m3u | Evrokino | evrokino-hd-1080p.png | Russia |
 | International-Playlist.m3u | Illusion+ | illusion-plus-8d8f90fef7.png | Russia |
 | International-Playlist.m3u | Kino TV | kino-tv-hd.png | Russia |
@@ -2005,6 +2047,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Channel I | channel-i.png | Review |
 | International-Playlist.m3u | Cine34 [ ] | cine34-geo-blocked.png | Review |
 | International-Playlist.m3u | City Eden KinoSemya [ ] | city-eden-kinosemya-not-24-7.png | Review |
+| International-Playlist.m3u | Clubbing TV France | clubbing-tv-france.png | Review |
 | International-Playlist.m3u | Colimdo TV | colimdo-tv-e106271533.png | Review |
 | International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | Review |
 | International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | Review |
@@ -2047,6 +2090,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Kino TV | kino-tv-hd.png | Review |
 | International-Playlist.m3u | Klasik [ ] | klasik-576p-not-24-7.png | Review |
 | International-Playlist.m3u | Law & Crime | lawcrime.jpg | Review |
+| International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
 | International-Playlist.m3u | Madani TV | madani-tv.png | Review |
 | International-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Review |
 | International-Playlist.m3u | Masala TV | masala-tv.png | Review |

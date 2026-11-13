@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-13T06:45:23+00:00**
-IPTV-Playlist.m3u SHA-256: **4757dc831cd0ebeecd432ee55cb3d5529eaf7e11858aa6a72ac73eff4ad7e4eb**
+Generated: **2026-11-13T06:51:37+00:00**
+IPTV-Playlist.m3u SHA-256: **c5e166a3a86ed6ff4a74ad8d55217cba0064d516238eb6a6c0223469b8ab878f**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **274**
+- Flagged streams: **281**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -273,6 +273,12 @@ These streams are not automatically removed. URL credentials, user information a
 | Zee Cinema | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_cinema_hd_abr/index.m3u8` |
 | Zee Tamil | Review | credential-bearing route pattern (values redacted) | `https://d2o8pibksxtln6.cloudfront.net/live/REDACTED/REDACTED/hls/Zee_Tamil_HD.m3u8` |
 | Zee TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8` |
+| BTL TV (Netherlands) (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.liveplustv.com/v1/live/btl-tv/master.m3u8` |
+| Cartoon Network (Pakistan) | New Channels | credential-bearing route pattern (values redacted) | `https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8` |
+| Vokta TV (720p) | New Channels | credential-bearing route pattern (values redacted) | `https://vokta.raytahost.com/live/voktatv/index.m3u8` |
+| MBC TV (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1017/master.m3u8` |
+| The Q India (576p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/25/25_0.m3u8` |
+| TV 100 (India) (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/310/master.m3u8` |
 | All Time Movies (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/54/54_0.m3u8` |
 | DD Odia (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/384/master.m3u8` |
 | E 24 (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/159/master.m3u8` |
@@ -283,3 +289,4 @@ These streams are not automatically removed. URL credentials, user information a
 | Rengoni (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/709/master.m3u8` |
 | Sangeet Bhojpuri (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/349/master.m3u8` |
 | Vendhar TV (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/223/master.m3u8` |
+| DD National HD (1080p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/15/master.m3u8` |

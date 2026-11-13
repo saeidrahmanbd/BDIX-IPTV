@@ -1,27 +1,27 @@
 # IPTV Playlist Audit
-Generated: **2026-11-13T06:44:43.930141+00:00**
-Source playlist SHA-256: **4757dc831cd0ebeecd432ee55cb3d5529eaf7e11858aa6a72ac73eff4ad7e4eb**
+Generated: **2026-11-13T06:50:55.882587+00:00**
+Source playlist SHA-256: **c5e166a3a86ed6ff4a74ad8d55217cba0064d516238eb6a6c0223469b8ab878f**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1242**
-- Unique channel IDs: **741**
-- IDs with multiple streams: **242**
+- Playlist entries: **1280**
+- Unique channel IDs: **776**
+- IDs with multiple streams: **243**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **6**
 - Cross-queue same-ID name variants (review): **2**
-- Cross-queue normalized-name/different-ID groups (review): **26**
+- Cross-queue normalized-name/different-ID groups (review): **27**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **1**
+- IDs with multiple logo references: **4**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **1**
 - Missing logos in review queues (review only): **0**
-- External logo references (review only): **0**
-- Logo references checked: **1242**
+- External logo references (review only): **38**
+- Logo references checked: **1280**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **3**
 - Primary channel-number collisions: **0**
@@ -78,6 +78,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Same normalized name: Eurosport [eurosport.fr@asia] (Sports); Eurosport [eurosport.in@sd] (Review)
 - Same normalized name: Goldmines Action [goldminesaction.in] (Backup); Goldmines Action [goldminesaction.in] (Indian Movies); Goldmines Action (576p) [goldminesaction.in@sd] (New Backups)
 - Same normalized name: Jalsha Movies [jalshamovies.in@sd] (Indian Bangla); Jalsha Movies [star.jalsha.movies.in] (Backup); Jalsha Movies [star.jalsha.movies.in] (Review)
+- Same normalized name: Mr Bean Animated [mrbeananimated.uk] (Kids); Mr Bean Animated (1080p) [mrbeananimated.uk@english] (New Backups)
 - Same normalized name: M Sports [msports.pk@sd] (Sports); M Sports [msports.pk@sd@m.sports] (Backup)
 - Same normalized name: NBC Sports Now [nbcsportsnow.us@sd] (Sports); NBC Sports Now [nbcsportsnow.us@sd@nbc.sports.now] (Backup)
 - Same normalized name: Pitaara [pitaara.in@sd] (Indian Movies); Pitaara [pitaara.in@sd@pitaara] (Backup)
@@ -206,7 +207,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - B4U Movies — Backup — http://163.61.226.31:9981/stream/channelid/1547127176?profile=pass
 - B4U Movies — Review — http://103.135.253.32:8080/B4U-MOVIES/index.m3u8
 - B4U Movies — Review — https://drk6xq0vhn.gpcdn.net/live/b4u_movies_abr/index.m3u8
-### b4umusic.in@india (8 streams)
+### b4umusic.in@india (9 streams)
 - B4U Music — Indian Music — https://streams.tangotv.in/B4UMUSIC/ORIGIN/index.m3u8
 - B4U Music — Backup — http://103.175.73.12:8080/live/157/master.m3u8
 - B4U Music — Backup — https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/playlist.m3u8
@@ -215,6 +216,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - B4U Music — Backup — https://mumt04.tangotv.in/m18aqlK4B4UMUSIC/index.m3u8
 - B4U Music — Backup — http://163.61.226.31:9981/stream/channelid/494430938?profile=pass
 - B4U Music — Review — https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8
+- B4U Music (1080p) — New Backups — https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/720p/index.m3u8
 ### balleballe.in@sd (6 streams)
 - Balle Balle — Indian Music — https://mcncdndigital.com/balleballetv/index.m3u8
 - Balle Balle — Backup — https://mcncdndigital.com/worldpunjabitv/index.m3u8
@@ -554,9 +556,10 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 ### gseriesdrama.bd (2 streams)
 - G Series Drama — Bangladesh — https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8
 - G Series Drama — Backup — https://vods2.aynaott.com/gseriesDrama/index.m3u8
-### gtcpunjabi.in@sd (2 streams)
+### gtcpunjabi.in@sd (3 streams)
 - GTC Punjabi — Indian Entertainment — https://gtc-yupp.vgcdn.net/vglive-sk-254807/index.m3u8
 - GTC Punjabi — Backup — https://gtc.ottlive.co.in/gtcpunjabi/index.m3u8
+- GTC Punjabi (1080p) — New Backups — https://cdn.ottlive.co.in/gtcpunjabi/index.m3u8
 ### hindihits.in (2 streams)
 - Hindi Hits — Indian Music — https://samitaorigin.tangotv.in/HINDIHITS/SAMITAORIGIN/index.m3u8
 - Hindi Hits — Backup — http://146.59.253.52:8080/hindihitshd/index.m3u8
@@ -806,6 +809,9 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 ### pocketfilms.in (2 streams)
 - Pocket Films — Indian Movies — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/e02a0ce5-6c42-4cca-bb53-e5cfecff74a9/0.m3u8
 - Pocket Films — Backup — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/6408f97591ee7861ab0d4839eefdbbee/0.m3u8
+### pogo.in@sd (2 streams)
+- Pogo — Review — https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
+- Pogo (576p) — New Backups — http://103.135.253.32:8080/POGO/index.m3u8
 ### polimertv.in@sd (3 streams)
 - Polimer TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/1241/master.m3u8
 - Polimer TV — Backup — https://mumt04.tangotv.in/m18aqlK4POLIMERTV/index.m3u8
@@ -1283,7 +1289,7 @@ None.
 ## Logo Integrity
 
 - Healthy/local references: **1241**
-- External references (review only): **0**
+- External references (review only): **38**
 
 ## Missing Logos in Discovery Queues
 
@@ -1300,7 +1306,44 @@ None.
 
 ## External Logo Review
 
-None.
+- BTL TV (Netherlands) (1080p) [btltv.nl@sd] — https://yt3.googleusercontent.com/ytc/APkrFKZYgQTsDhkbaqmPRCPZIf0UgZqF1wa6aG2eo8ti=s176-c-k-c0x00ffffff-no-rj-mo
+- Cartoon Network (Pakistan) [cartoonnetwork.pk@sd] — https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png
+- NAN TV (720p) [nantv.bd@sd] — https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png
+- Nickelodeon (India) (576p) [nickelodeon.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png
+- Nick Jr. (India) (576p) [nickjr.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png
+- Vokta TV (720p) [voktatv.bd@sd] — https://i.imgur.com/szAGBCU.png
+- 7X Music (1080p) [7xmusic.in@sd] — https://jiotvimages.cdn.jio.com/dare_images/images/7X_Music.png
+- Animax Asia India (1080p) [Geo-blocked] [animaxasia.sg@india] — https://jiotvimages.cdn.jio.com/dare_images/images/Animax.png
+- Cartoon Network HD+ (1080p) [cartoonnetworkhdplus.in@hd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CARTOON_NETWORK_HDSYMPLUS/images/LOGO_HD/image.png
+- CVR Health (576p) [cvrhealth.in@sd] — https://i.imgur.com/bCyW32I.png
+- Disha TV (396p) [dishatv.in@sd] — https://jiotvimages.cdn.jio.com/dare_images/images/Disha_tv.png
+- Doraemon (720p) [doraemon.us@sd] — https://upload.wikimedia.org/wikipedia/commons/0/01/Doraemon_Merch_EN_Logo.svg
+- Gaunda Punjab TV (720p) [gaundapunjabtv.ca@sd] — https://i.imgur.com/ArRZRM3.png
+- Hyder TV (720p) [hydertv.ca@sd] — https://i.imgur.com/reHjjRZ.png
+- Kabaddi 24x7 (720p) [kabaddi24x7.in@sd] — https://papaji.freetvindia.com/media/kabaddi_24x7.png
+- KCM India (1080p) [Geo-blocked] [kcm.sg@india] — https://jiotvimages.cdn.jio.com/dare_images/images/KCM.png
+- MBC TV (576p) [mbctv.in@sd] — https://dtil.tmsimg.com/assets/s135691_ld_h15_aa.png?lock=720x540
+- NDTV Good Times (1080p) [ndtvgoodtimes.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOOD_TIMES/images/LOGO_HD/image.png
+- Punjab Plus (1080p) [punjabplus.in@sd] — https://jiotvimages.cdn.jio.com/dare_images/images/Punjab_Plus.png
+- Qello Concerts by Stingray (1080p) [qelloconcertsbystingray.ca@sd] — https://i.imgur.com/IRyFTWq.png
+- R Plus (1080p) [rplus.in@sd] — https://i.imgur.com/XUnWcZF.png
+- Shekinah TV (1080p) [shekinahtv.in@sd] — https://jiotvimages.cdn.jio.com/dare_images/images/Shekinah.png
+- Shin-chan (720p) [shinchan.us@sd] — https://image.tmdb.org/t/p/original/fIYWvHIeqc1A9D4PyayFkgjRxCh.png
+- Stingray Classic Rock (1080p) [stingrayclassicrock.ca@sd] — https://i.imgur.com/FBgu8yB.png
+- Stingray DJAZZ (1080p) [stingraydjazz.ca@sd] — https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Stingray_Djazz.png/960px-Stingray_Djazz.png
+- Stingray Easy Listening (1080p) [stingrayeasylistening.ca@sd] — https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Stingray_Music_logo.svg/960px-Stingray_Music_logo.svg.png
+- Swastik Stories (1080p) [swastikstories.in@sd] — https://jiotvimages.cdn.jio.com/dare_images/images/Swastik_Stories.png
+- The Pet Collective India (720p) [thepetcollective.us@india] — https://i.imgur.com/yH7n2dF.png
+- The Q India (576p) [theqindia.us@sd] — https://dtil.tmsimg.com/assets/s144002_ld_h15_aa.png?lock=720x540
+- Travelxp HD (1080p) [Geo-blocked] [travelxp.in@hd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TRAVELXP/images/LOGO_HD/image.png
+- TV 100 (India) (576p) [tv100.in@sd] — https://jiotvimages.cdn.jio.com/dare_images/images/TV_100.png
+- B4U Music (1080p) [b4umusic.in@india] — https://i.imgur.com/hytapio.png
+- DD National HD (1080p) [ddnational.in@hd] — https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20National.png
+- Eurosport (India) HD (1080p) [eurosport.in@hd] — https://dtil.tmsimg.com/assets/GNLZZGG002E9LQS.png?lock=720x540
+- GTC Punjabi (1080p) [gtcpunjabi.in@sd] — https://media.thegtcnetwork.com/uploads/gtc-pujabin-s.jpg
+- Mr Bean Animated (1080p) [mrbeananimated.uk@english] — https://static.wikia.nocookie.net/logopedia/images/2/25/Mr._Bean_Animated_Series_stacked_logo.png
+- Pogo (576p) [pogo.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_POGO/images/LOGO_HD/image.png
+- Travelxp 4K HDR (2160p) [Geo-blocked] [travelxp.in@4khdr] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TRAVELXP/images/LOGO_HD/image.png
 
 ## Protected Primary Entries
 
