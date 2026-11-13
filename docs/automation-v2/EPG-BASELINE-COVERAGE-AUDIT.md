@@ -37,4 +37,23 @@ The guide contained 42,425 programmes with stop times later than the dry-run tim
 6. Reject any candidate that loses an existing mapped or currently scheduled active channel without explicit owner-reviewed justification.
 7. Do not replace the published EPG until the candidate passes all checks and the production cutover is separately approved.
 
+## Conservative alias suggestion results
+
+The dry-run also generated manual-only alias suggestions by comparing playlist display names and IDs with XMLTV channel display names. Country/region suffix conflicts and ambiguous duplicate names are separated from suggestions.
+
+| Result | IPTV | International |
+|---|---:|---:|
+| Already mapped IDs | 411 | 662 |
+| Candidate alias suggestions | 19 | 60 |
+| Normalized-ID suggestions | 1 | 2 |
+| Exact display-name suggestions | 10 | 48 |
+| Fuzzy-name suggestions | 8 | 10 |
+| Ambiguous candidates | 5 | 9 |
+| No safe suggestion | 341 | 1,953 |
+
+**None of the 79 suggestions were applied.** Exact and fuzzy matches still require manual review, particularly for regional feeds, HD/SD variants and custom EPG IDs. Country/region mismatches are flagged rather than silently mapped.
+
+The machine-readable suggestions are included in the baseline dry-run artifact from CI run 96:
+https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/43404269138
+
 The V2 EPG candidate gate currently rejects structural errors, channel-count regressions, mapping regressions and current/future schedule regressions. It does not publish or modify epg.xml.
