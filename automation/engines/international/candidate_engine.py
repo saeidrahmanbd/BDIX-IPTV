@@ -18,20 +18,43 @@ def _replace_group(extinf_line: str, target: str) -> str:
         raise ValueError("International row has no group-title attribute")
     return GROUP_RE.sub(lambda match: match.group(1) + target + match.group(2), extinf_line, count=1)
 
-def assert_international_rows_preserved(before: str, after: str) -> None:
-    old_rows, new_rows = parse_rows(before), parse_rows(after)
-    if len(old_rows) != len(new_rows):
-        raise ValueError("International candidate changed the number of stream rows")
-    for index, (old, new) in enumerate(zip(old_rows, new_rows)):
-        if old.url != new.url:
-            raise ValueError(f"International stream row reordered or URL changed at row {index}")
-        if old.channel_number != new.channel_number:
-            raise ValueError(f"International channel number changed at row {index}")
-        if _replace_group(old.extinf, new.group) != new.extinf:
-            raise ValueError(f"International metadata changed beyond group-title at row {index}")
+def assert_international_rows_preserved(before: str, after: str,
+                                        allowed_removed_identities: set[str] | tuple[str,...] = ()) -> None:
+    """Preserve row order and metadata except group-title; only authorized IDs may be removed."""
+    old_rows,new_rows=parse_rows(before),parse_rows(after)
+    allowed={identity.strip().casefold() for identity in allowed_removed_identities}
+    old_identity_counts={}
+    for row in old_rows:
+        identity=dict(ATTR_RE.findall(row.extinf)).get("tvg-id","").strip().casefold()
+        old_identity_counts[identity]=old_identity_counts.get(identity,0)+1
+    if any(old_identity_counts.get(identity,0)!=1 for identity in allowed):
+        raise ValueError("removal identity must match exactly one existing International row")
 
-def build_candidate(baseline_text: str, changes: list[GroupChange]) -> str:
-    """Apply explicit group-only changes by parsed row index; all stream rows remain present."""
+    def stable_signature(row):
+        return GROUP_RE.sub('group-title="__GROUP__"',row.extinf,count=1),row.url
+
+    old_index=new_index=0
+    removed_seen=set()
+    while old_index < len(old_rows):
+        old=old_rows[old_index]
+        identity=dict(ATTR_RE.findall(old.extinf)).get("tvg-id","").strip().casefold()
+        if identity in allowed:
+            removed_seen.add(identity)
+            old_index += 1
+            continue
+        if new_index >= len(new_rows) or stable_signature(old)!=stable_signature(new_rows[new_index]):
+            raise ValueError(f"International candidate changed, removed or reordered an unauthorized row at index {old_index}")
+        old_index += 1
+        new_index += 1
+    if new_index != len(new_rows):
+        raise ValueError("International candidate added rows during maintenance")
+    if removed_seen != allowed:
+        raise ValueError("International candidate removal list does not match the removed rows")
+
+
+def build_candidate(baseline_text: str, changes: list[GroupChange],
+                    remove_identities: set[str] | tuple[str,...] = ()) -> str:
+    """Apply group changes and policy-authorized removals; never edits files or publishes."""
     if not baseline_text.lstrip("\ufeff").startswith("#EXTM3U"):
         raise ValueError("baseline must have an #EXTM3U header")
     rows = parse_rows(baseline_text)
@@ -44,25 +67,106 @@ def build_candidate(baseline_text: str, changes: list[GroupChange]) -> str:
         if change.row_index in by_index:
             raise ValueError(f"duplicate group change for row: {change.row_index}")
         by_index[change.row_index] = change.target_group.strip()
-    if not by_index:
+
+    remove_set={identity.strip().casefold() for identity in remove_identities}
+    if "" in remove_set:
+        raise ValueError("removal identity is required")
+    row_indexes_by_identity={}
+    removed_indexes=set()
+    protected_groups={"backup","backups","new channels","new backups","new backup","not playing","test"}
+    for index,row in enumerate(rows):
+        attrs=dict(ATTR_RE.findall(row.extinf))
+        identity=(attrs.get("tvg-id") or "").strip().casefold()
+        if identity:
+            row_indexes_by_identity.setdefault(identity,[]).append(index)
+        if identity in remove_set:
+            if row.group.strip().casefold() in protected_groups:
+                raise ValueError("Backup and discovery-queue rows are protected from automatic removal")
+            removed_indexes.add(index)
+    for identity in remove_set:
+        if len(row_indexes_by_identity.get(identity,[])) != 1:
+            raise ValueError("removal identity must match exactly one existing International row")
+    if set(by_index).intersection(removed_indexes):
+        raise ValueError("a row cannot be changed and removed in the same plan")
+    if not by_index and not removed_indexes:
         return baseline_text
 
     output: list[str] = []
     extinf_index = 0
+    skip_removed_row = False
     for line in baseline_text.splitlines(keepends=True):
         if line.lstrip().startswith("#EXTINF:"):
-            if extinf_index in by_index:
+            current_index=extinf_index
+            extinf_index += 1
+            if current_index in removed_indexes:
+                skip_removed_row=True
+                continue
+            skip_removed_row=False
+            if current_index in by_index:
                 ending = "\r\n" if line.endswith("\r\n") else "\n" if line.endswith("\n") else ""
                 body = line[:-len(ending)] if ending else line
-                output.append(_replace_group(body, by_index[extinf_index]) + ending)
+                output.append(_replace_group(body, by_index[current_index]) + ending)
             else:
                 output.append(line)
-            extinf_index += 1
-        else:
-            output.append(line)
+            continue
+        if skip_removed_row:
+            if line.strip() and not line.lstrip().startswith("#"):
+                skip_removed_row=False
+            continue
+        output.append(line)
     candidate = "".join(output)
-    assert_international_rows_preserved(baseline_text, candidate)
+    assert_international_rows_preserved(baseline_text,candidate,remove_set)
     return candidate
+
+
+def assert_international_existing_rows_preserved(before: str, after: str,
+                                                  allowed_removed_identities: set[str] | tuple[str,...] = ()) -> None:
+    """Preserve old rows in order; allow only policy-authorized removals and group-only changes."""
+    old_rows,new_rows=parse_rows(before),parse_rows(after)
+    allowed={identity.strip().casefold() for identity in allowed_removed_identities}
+    old_identity_counts={}
+    for row in old_rows:
+        identity=dict(ATTR_RE.findall(row.extinf)).get("tvg-id","").strip().casefold()
+        old_identity_counts[identity]=old_identity_counts.get(identity,0)+1
+    if any(old_identity_counts.get(identity,0)!=1 for identity in allowed):
+        raise ValueError("removal identity must match exactly one existing International row")
+
+    def stable_signature(row):
+        normalized=GROUP_RE.sub('group-title="__GROUP__"',row.extinf,count=1)
+        return normalized,row.url
+
+    old_index=0
+    review_queues={"New Channels","New Backups"}
+    old_urls={row.url for row in old_rows}
+    new_urls=set()
+    removed_seen=set()
+    for row in new_rows:
+        while old_index < len(old_rows):
+            old_identity=dict(ATTR_RE.findall(old_rows[old_index].extinf)).get("tvg-id","").strip().casefold()
+            if old_identity in allowed:
+                removed_seen.add(old_identity)
+                old_index += 1
+            else:
+                break
+        if old_index < len(old_rows) and stable_signature(row)==stable_signature(old_rows[old_index]):
+            old_index += 1
+            continue
+        if row.url in old_urls or row.url in new_urls:
+            raise ValueError("International candidate duplicated or displaced an existing stream URL")
+        if row.group.strip() not in review_queues:
+            raise ValueError("International candidate added a row outside manual-review queues")
+        new_urls.add(row.url)
+    while old_index < len(old_rows):
+        old_identity=dict(ATTR_RE.findall(old_rows[old_index].extinf)).get("tvg-id","").strip().casefold()
+        if old_identity in allowed:
+            removed_seen.add(old_identity)
+            old_index += 1
+        else:
+            break
+    if old_index != len(old_rows):
+        raise ValueError("International candidate changed, removed or reordered an existing row")
+    if removed_seen != allowed:
+        raise ValueError("International candidate removal list does not match the removed rows")
 
 
 CATEGORY_ORDER = [
