@@ -1,0 +1,38 @@
+name: Automation V2 State Store Check
+
+on:
+  push:
+    branches:
+      - automation-v2/**
+    paths:
+      - '.github/workflows/automation-v2-state-store-check.yml'
+      - 'automation/core/github_state_store.py'
+      - 'scripts/check_automation_v2_state_store.py'
+      - 'tests/test_automation_v2_github_state_store.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: automation-v2-state-store
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Verify isolated durable state branch read/write
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          AUTOMATION_V2_STATE_BRANCH: automation-v2-state
+        run: python scripts/check_automation_v2_state_store.py

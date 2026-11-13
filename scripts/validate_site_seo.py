@@ -34,6 +34,13 @@ PAGES = {
             "x-default": BASE + "playlists.html",
         },
     },
+    "playlist-studio.html": {
+        "canonical": BASE + "playlist-studio.html",
+        "hreflang": {
+            "en": BASE + "playlist-studio.html",
+            "x-default": BASE + "playlist-studio.html",
+        },
+    },
     "bangla-iptv.html": {
         "canonical": BASE + "bangla-iptv.html",
         "hreflang": {
