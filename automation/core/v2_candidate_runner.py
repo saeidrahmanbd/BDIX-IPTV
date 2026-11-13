@@ -6,6 +6,7 @@ from datetime import date, datetime
 import hashlib
 import json
 from pathlib import Path
+import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
 
 from automation.core.candidate_manifest import CandidateManifest
@@ -162,7 +163,7 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
             international_candidate_rows=intl_run.maintenance.candidate.candidate_rows,
             international_probed=intl_run.maintenance.probed_count,
             international_reused=intl_run.maintenance.reused_count,
-            epg_programmes=epg_run.decision.candidate_programmes,
+            epg_programmes=len(ET.fromstring(epg_run.xml_text).findall("programme")),
             publish=False,
         )
 
