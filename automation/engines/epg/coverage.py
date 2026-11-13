@@ -31,6 +31,10 @@ def calculate_coverage(playlist_text: str, xmltv_text: str) -> EpgCoverage:
         for row in parse_rows(playlist_text)
         for attrs in [dict(ATTR_RE.findall(row.extinf))]
         if attrs.get("tvg-id", "").strip()
+        and attrs.get("group-title", "").strip().casefold() not in {
+            "backup", "review", "test", "not playing",
+            "new channels", "new backups", "new backup",
+        }
     }
     if not active_ids:
         raise ValueError("playlist contains no active tvg-id values")
@@ -55,12 +59,10 @@ def compare_coverage(playlist_text: str, baseline_xml: str, candidate_xml: str) 
     reasons: list[str] = []
     if candidate.mapped_channel_ids < baseline.mapped_channel_ids:
         reasons.append("mapped channel coverage regressed")
-    if candidate.scheduled_channel_ids < baseline.scheduled_channel_ids:
-        reasons.append("programme schedule coverage regressed")
     lost_mapped = set(baseline.mapped_ids) - set(candidate.mapped_ids)
     if lost_mapped:
         reasons.append("mapped channel IDs lost: " + ", ".join(sorted(lost_mapped)))
-    lost_scheduled = set(baseline.scheduled_ids) - set(candidate.scheduled_ids)
-    if lost_scheduled:
-        reasons.append("scheduled channel IDs lost: " + ", ".join(sorted(lost_scheduled)))
+    # Programme freshness is deliberately evaluated by freshness.py. Raw
+    # programme IDs include expired historical listings and must not block a
+    # candidate merely because an old schedule was correctly pruned.
     return EpgCoverageComparison(not reasons,baseline,candidate,tuple(reasons))

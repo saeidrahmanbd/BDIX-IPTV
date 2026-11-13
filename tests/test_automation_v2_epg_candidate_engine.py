@@ -22,17 +22,40 @@ class EpgCandidateEngineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"explicit approval"):
             build_epg_candidate(PLAYLIST,BASE,approved_aliases=[ApprovedAlias("source","target","",False)],as_of=AS_OF)
 
-    def test_candidate_schedule_regression_is_rejected(self):
+    def test_missing_fresh_schedule_falls_back_when_source_candidate_is_stale(self):
         playlist='#EXTM3U\n#EXTINF:-1 tvg-id="a" group-title="Bangladesh",A\nhttps://a.example/a\n'
-        baseline='<tv><channel id="a"/><programme channel="a" start="20261113090000 +0600" stop="20261113100000 +0600"/></tv>'
-        candidate='<tv><channel id="a"/><programme channel="a" start="20261112090000 +0600" stop="20261112100000 +0600"/></tv>'
+        baseline='<tv><channel id="a"/><programme channel="a" start="20261113090000 +0600" stop="20261113100000 +0600"><title>Fresh baseline</title></programme></tv>'
+        candidate='<tv><channel id="a"/><programme channel="a" start="20261111090000 +0600" stop="20261111100000 +0600"/></tv>'
         result=build_epg_candidate(playlist,baseline,candidate,as_of=AS_OF)
-        self.assertFalse(result.decision.accepted)
-        self.assertIn("freshness regressed",result.decision.reason)
+        self.assertTrue(result.decision.accepted, result.decision.reason)
+        self.assertIn("<title>Fresh baseline</title>",result.xml_text)
 
-    def test_candidate_engine_never_publishes(self):
+    def test_missing_source_schedule_restores_only_fresh_baseline_programmes(self):
+        playlist='#EXTM3U\n#EXTINF:-1 tvg-id="a" group-title="Bangladesh",A\nhttps://a.example/live\n'
+        baseline='<tv><channel id="a"><display-name>A</display-name></channel><programme channel="a" start="20261113090000 +0600" stop="20261113100000 +0600"><title>Fresh</title></programme></tv>'
+        result=build_epg_candidate(
+            playlist, baseline, '<tv/>',
+            as_of=datetime(2026,11,13,2,0,tzinfo=timezone.utc),
+        )
+        self.assertTrue(result.decision.accepted, result.decision.reason)
+        self.assertIn('channel id="a"', result.xml_text)
+        self.assertIn("<title>Fresh</title>", result.xml_text)
+        self.assertFalse(result.publish)
+
+    def test_expired_baseline_schedule_is_not_resurrected(self):
+        playlist='#EXTM3U\n#EXTINF:-1 tvg-id="a" group-title="Bangladesh",A\nhttps://a.example/live\n'
+        baseline='<tv><channel id="a"/><programme channel="a" start="20261112090000 +0600" stop="20261112100000 +0600"><title>Expired</title></programme></tv>'
+        result=build_epg_candidate(
+            playlist, baseline, '<tv/>',
+            as_of=datetime(2026,11,13,2,0,tzinfo=timezone.utc),
+        )
+        self.assertFalse(result.decision.accepted)
+        self.assertNotIn("<title>Expired</title>", result.xml_text)
+
+    def test_candidate_engine_never_publishes_and_preserves_noop_text(self):
         result=build_epg_candidate(PLAYLIST,BASE,as_of=AS_OF)
         self.assertFalse(result.publish)
+        self.assertEqual(result.xml_text,BASE)
         self.assertIn("publication remains disabled",result.decision.reason)
 
 if __name__=="__main__":

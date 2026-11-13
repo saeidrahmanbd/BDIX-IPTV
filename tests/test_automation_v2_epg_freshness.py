@@ -29,6 +29,13 @@ class EpgFreshnessTests(unittest.TestCase):
         self.assertFalse(result.accepted)
         self.assertIn("a",result.reasons[0])
 
+    def test_inactive_queue_schedules_are_excluded_from_freshness_scope(self):
+        playlist=PLAYLIST + '#EXTINF:-1 tvg-id="backup-id" group-title="Backup",Backup\nhttps://backup.example/live\n'
+        xml='<tv><channel id="a"/><channel id="b"/><channel id="backup-id"/><programme channel="a" start="20261113090000 +0600" stop="20261113100000 +0600"/><programme channel="b" start="20261112090000 +0600" stop="20261112100000 +0600"/><programme channel="backup-id" start="20261113090000 +0600" stop="20261113100000 +0600"/></tv>'
+        result=calculate_freshness(playlist,xml,AS_OF)
+        self.assertEqual(result.active_channel_ids,2)
+        self.assertEqual(result.fresh_scheduled_channel_ids,("a",))
+
     def test_naive_as_of_rejected(self):
         with self.assertRaisesRegex(ValueError,"timezone-aware"):
             calculate_freshness(PLAYLIST,BASE,datetime(2026,11,13,3,0))
