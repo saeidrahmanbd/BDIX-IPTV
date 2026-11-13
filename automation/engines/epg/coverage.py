@@ -31,6 +31,10 @@ def calculate_coverage(playlist_text: str, xmltv_text: str) -> EpgCoverage:
         for row in parse_rows(playlist_text)
         for attrs in [dict(ATTR_RE.findall(row.extinf))]
         if attrs.get("tvg-id", "").strip()
+        and attrs.get("group-title", "").strip().casefold() not in {
+            "backup", "review", "test", "not playing",
+            "new channels", "new backups", "new backup",
+        }
     }
     if not active_ids:
         raise ValueError("playlist contains no active tvg-id values")
