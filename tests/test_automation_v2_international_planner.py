@@ -35,6 +35,10 @@ class InternationalPlannerTests(unittest.TestCase):
         self.assertEqual(result.review_identities,("a",))
         self.assertFalse(result.publish)
 
+    def test_row_identity_must_match_tvg_id(self):
+        with self.assertRaisesRegex(ValueError,"does not match"):
+            plan_lifecycle(PLAYLIST,[RowLifecycleInput(0,"wrong-id")],date(2026,11,13))
+
     def test_invalid_duplicate_row_inputs_rejected(self):
         inputs=[RowLifecycleInput(0,"a"),RowLifecycleInput(0,"b")]
         with self.assertRaisesRegex(ValueError,"duplicate"):
