@@ -17,6 +17,18 @@ class LogoReferenceAuditTests(unittest.TestCase):
             self.assertEqual(result["explicitly_referenced_logo_files"],1)
             self.assertIn("logos/missing.svg",result["missing_explicit_logo_targets"])
 
+    def test_inventory_manifests_do_not_self_reference_every_asset(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            (root/"logos").mkdir()
+            (root/"docs"/"automation-v2").mkdir(parents=True)
+            (root/"logos"/"orphan.png").write_bytes(b"image")
+            (root/"docs"/"automation-v2"/"baseline-tree-manifest.json").write_text('{"path":"logos/orphan.png"}',encoding="utf-8")
+            (root/"docs"/"automation-v2"/"logo-reference-baseline.json").write_text('{"unused":["logos/orphan.png"]}',encoding="utf-8")
+            result=scan(root)
+            self.assertEqual(result["explicitly_referenced_logo_files"],0)
+            self.assertEqual(result["apparently_unreferenced_logo_files"],1)
+
     def test_exact_duplicate_assets_are_reported_not_deleted(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)
