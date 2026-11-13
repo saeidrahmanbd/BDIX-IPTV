@@ -44,11 +44,18 @@ def git_bytes(root: Path, *args: str) -> bytes:
 
 def _safe_artifact_file(root: Path, path: Path, label: str) -> Path:
     root_resolved = root.resolve()
-    if path.is_symlink() or not path.resolve().is_relative_to(root_resolved):
-        raise ValueError(f"{label} is a symlink or escapes the candidate artifact")
-    if not path.is_file():
+    try:
+        relative = path.relative_to(root_resolved)
+    except ValueError as exc:
+        raise ValueError(f"{label} escapes the candidate artifact") from exc
+    current = root_resolved
+    for part in relative.parts:
+        current = current / part
+        if current.is_symlink() or not current.resolve().is_relative_to(root_resolved):
+            raise ValueError(f"{label} traverses a symlink or escapes the candidate artifact")
+    if not current.is_file():
         raise ValueError(f"{label} is missing from the candidate artifact")
-    return path
+    return current
 
 
 def load_artifact(candidate_root: Path, transaction_id: str, baseline_commit: str):
