@@ -43,6 +43,13 @@ class IptvDiscoveryAdapterTests(unittest.TestCase):
         self.assertEqual(len(result.candidates),1)
         self.assertNotIn("https://cdn.example/logo.png",result.candidates[0].extinf)
 
+    def test_private_or_credential_stream_urls_are_rejected(self):
+        feed='#EXTM3U\\n#EXTINF:-1 tvg-id="private.in" tvg-name="Private",Private\\nhttp://192.168.1.2/live.m3u8\\n#EXTINF:-1 tvg-id="auth.in" tvg-name="Auth",Auth\\nhttps://user:pass@example.com/live.m3u8\\n'
+        with tempfile.TemporaryDirectory() as temp:
+            result=build_discovery_batch(BASE,{"India":feed},temp)
+        self.assertEqual(result.candidates,())
+        self.assertTrue(any(reason=="unsafe stream URL" for reason,count in result.rejected_reasons))
+
     def test_unsupported_source_country_is_warning_not_a_candidate(self):
         with tempfile.TemporaryDirectory() as temp:
             result=build_discovery_batch(BASE,{"Nepal":IN_FEED},temp)
