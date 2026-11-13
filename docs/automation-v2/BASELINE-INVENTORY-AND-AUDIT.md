@@ -164,3 +164,28 @@ V2 should promote these requirements into a machine-readable central policy and 
 ## 7. Phase 2 progress\n\nThe branch now contains a central JSON policy, a JSON Schema, a dependency-free policy conformance validator, a pure IPTV existing-row preservation contract, a manual-queue visibility guard, 10 focused contract tests, and a read-only branch-only CI workflow. The local contract test run passed all 10 tests. GitHub Actions status for the new branch CI has not yet been independently observed through the available GitHub interface. A further side-effect audit identified nested subprocess calls and a hidden git-staging side effect in the logo provenance manifest generator; see RUNTIME-SIDE-EFFECT-AUDIT.md.\n\n## 8. Safety gate
 
 No file in the production playlist, logo, EPG, or live workflow areas has been edited by this audit. This branch currently exists only to hold the audit baseline and this documentation. Do not merge or promote it to production until the migration tests, dry-run invariants, and publication rollback checks pass.
+
+
+## 9. Automation V2 implementation progress (branch-only)
+
+- Central JSON policy and JSON Schema added.
+- Read-only parser and IPTV existing-row preservation contract added.
+- Candidate validation explicitly reports `publish=false`; International currently reports `PARSE_ONLY` until its full invariants are implemented.
+- Candidate manifest path allowlists added to prevent cross-playlist engine writes.
+- International stream-failure lifecycle primitive added: only definitive 404/410, first/second day Review, third consecutive day eligible for a separate removal review.
+- International country-group threshold primitive added: five unique primary identities; fixed Bangladesh and India groups.
+- Conservative logo reference inventory added: 5,366 image files, 2,395 exact playlist references, 2,971 apparent non-references from playlist-only matching. These are not approved for deletion.
+- Repository-wide explicit logo reference scanner added. It is report-only and never deletes assets.
+- Branch CI expanded to include all `test_automation_v2_*.py` tests and the logo scanner.
+- The GitHub connector currently returns no workflow run or status records for the latest branch commit, so CI execution has not been independently confirmed. The new tests must be treated as pending until an actual Actions result is observed.
+- Production playlist, EPG and legacy workflow blob SHAs were rechecked against `main` and remain identical to the baseline.
+
+## 10. Remaining before migration can be called test-passed
+
+1. Confirm and repair any CI failures; run all V2 tests and all applicable legacy tests.
+2. Build complete candidate-only IPTV and International orchestration engines.
+3. Port stream identity, logo, discovery and EPG behaviors behind explicit contracts.
+4. Run repository-wide logo reference scan on a checked-out baseline; inspect dynamic references and duplicates.
+5. Generate dry-run candidates from immutable baseline files and validate all invariants.
+6. Test stale baseline rejection, concurrent-run locking, partial failure, rollback and last-known-good EPG.
+7. Only then prepare a draft PR and owner-reviewed cutover plan.
