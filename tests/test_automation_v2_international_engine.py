@@ -63,5 +63,21 @@ class InternationalCandidateEngineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"duplicated or displaced"):
             assert_international_existing_rows_preserved(BASE,candidate)
 
+
+    def test_policy_authorized_removal_removes_only_the_failed_identity(self):
+        candidate=build_candidate(BASE,[],{"x"})
+        self.assertEqual(candidate.count("#EXTINF:"),1)
+        self.assertNotIn('tvg-id="x"',candidate)
+        self.assertIn('tvg-id="y"',candidate)
+
+    def test_backup_rows_are_protected_from_automatic_removal(self):
+        backup=BASE.replace('group-title="Nepal"','group-title="Backup"')
+        with self.assertRaisesRegex(ValueError,"protected"):
+            build_candidate(backup,[],{"x"})
+
+    def test_removal_identity_must_exist_exactly_once(self):
+        with self.assertRaisesRegex(ValueError,"exactly one"):
+            build_candidate(BASE,[],{"missing"})
+
 if __name__=="__main__":
     unittest.main()
