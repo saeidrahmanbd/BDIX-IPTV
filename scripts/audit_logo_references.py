@@ -94,7 +94,7 @@ def main() -> int:
         args.output.write_text(rendered, encoding="utf-8")
     else:
         print(rendered, end="")
-    print(f"Logo audit: {result['logo_image_files']} assets; {result['playlist_referenced_logo_files']} playlist refs; {result['runtime_referenced_logo_files']} runtime refs; {result['apparently_unreferenced_by_runtime']} apparent runtime non-refs; {len(result['missing_runtime_logo_targets'])} missing runtime targets; {result['exact_duplicate_groups']} exact duplicate groups; no deletion or quarantine", flush=True)
+    print(f"Logo audit: {result['logo_image_files']} assets; {result['playlist_referenced_logo_files']} playlist refs; {result['runtime_referenced_logo_files']} runtime refs; {len(result['apparently_unreferenced_by_runtime'])} apparent runtime non-refs; {len(result['missing_runtime_logo_targets'])} missing runtime targets; {result['exact_duplicate_groups']} exact duplicate groups; no deletion or quarantine", flush=True)
     return 0
 
 if __name__ == "__main__":
