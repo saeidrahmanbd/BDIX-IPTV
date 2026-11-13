@@ -64,6 +64,28 @@ class AutomationV2PolicyTests(unittest.TestCase):
         after = before + row("Candidate", "https://new.example/new.m3u8", group="New Channels")
         assert_iptv_existing_rows_preserved(before, after)
 
+    def test_candidate_validation_is_read_only_and_never_authorizes_publish(self):
+        import tempfile
+        from candidate import validate_candidate
+        with tempfile.TemporaryDirectory() as directory:
+            baseline = Path(directory) / "baseline.m3u"
+            candidate = Path(directory) / "candidate.m3u"
+            baseline.write_text("#EXTM3U\\n" + '#EXTINF:-1 tvg-chno="1" group-title="Bangladesh",A\\nhttps://a.example/a\\n', encoding="utf-8")
+            candidate.write_text(baseline.read_text(encoding="utf-8") + '#EXTINF:-1 group-title="New Channels",B\\nhttps://b.example/b\\n', encoding="utf-8")
+            result = validate_candidate("IPTV-Playlist.m3u", baseline, candidate)
+            self.assertEqual(result["invariants"], "PASS")
+            self.assertFalse(result["publish"])
+            self.assertEqual(result["baseline_rows"], 1)
+            self.assertEqual(result["candidate_rows"], 2)
+
+    def test_candidate_cannot_overwrite_its_baseline(self):
+        from candidate import validate_candidate
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "same.m3u"
+            path.write_text("#EXTM3U\\n", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "separate file"):
+                validate_candidate("IPTV-Playlist.m3u", path, path)
+
     def test_baseline_playlists_parse_without_losing_rows(self):
         from playlist_contract import parse_rows
         for filename in ("IPTV-Playlist.m3u", "International-Playlist.m3u"):
