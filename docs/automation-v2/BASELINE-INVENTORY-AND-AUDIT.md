@@ -12,7 +12,7 @@ The audit branch was created from the exact production main commit above. That G
 
 Key immutable baseline blob IDs:
 - `IPTV-Playlist.m3u`: `eb46b5ef4ddfde11a010389d1f0202a7bd418b0a` (445,629 bytes)
-- `International-Playlist.m3u`: `f98c433afa7df88b9345a7191e58ea83f833d1b9` (987,903 bytes)
+- `International-Playlist.m3u`: `f98c433afa7df88b9345a7191e58ea83f833d1b9` (987,933 bytes)
 - `epg/epg.xml`: `b28414c75937bd155067c6db5e6e2083ee4004b4` (30,944,668 bytes)
 - `README.md`: `95c17697b536218d30c6f1eb3dcf5be8aa0cc93d`
 
@@ -20,25 +20,26 @@ The branch's common ancestor is the baseline main commit. Rollback is by returni
 
 ## 2. Repository inventory
 
-The recursive Git tree is complete (GitHub reported `truncated=false`): 5,633 tree entries.
+The recursive Git tree is complete (GitHub reported `truncated=false`): 5,652 tree entries.
 
 | Area | Files | Bytes |
 |---|---:|---:|
 | Root | 5 | 1,449,106 |
-| .github | 18 | 118,419 |
+| .github | 19 | 119,769 |
 | analytics | 4 | 13,499 |
 | assets | 10 | 1,138,255 |
-| docs | 25 | 137,038 |
+| automation | 5 | 10,893 |
+| docs | 32 | 956,487 |
 | epg | 3 | 30,985,548 |
 | logos | 5,372 | 306,093,613 |
 | maintenance | 1 | 2,897 |
-| reports | 44 | 5,946,938 |
+| reports | 44 | 5,954,444 |
 | scripts | 79 | 1,078,245 |
-| tests | 50 | 449,513 |
+| tests | 51 | 455,113 |
 | xtream-main | 2 | 9,299 |
 | xtream | 1 | 4,078 |
 
-There are 17 GitHub Actions workflow files (118,015 bytes), 79 Python scripts, 50 test files, and 5,372 logo files. The largest repository payload is the logo directory (about 306 MB), not the workflow source.
+There are 18 GitHub Actions workflow files (118,015 bytes), 79 Python scripts, 51 test files, and 5,372 logo files. The largest repository payload is the logo directory (about 306 MB), not the workflow source.
 
 ### Workflow inventory
 
