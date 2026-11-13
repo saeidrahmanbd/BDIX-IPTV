@@ -14,10 +14,14 @@ class InternationalCandidate:
     publish: bool = False
 
 def build_international_candidate(playlist_text: str, inputs: list[RowLifecycleInput],
-                                  today: date, minimum_country_group_size: int = 5) -> InternationalCandidate:
+                                  today: date, minimum_country_group_size: int = 5,
+                                  discoveries: list | None = None) -> InternationalCandidate:
     """Apply only planned group changes while preserving every stream URL and row."""
     plan=plan_lifecycle(playlist_text,inputs,today,minimum_country_group_size)
     candidate=build_candidate(playlist_text,list(plan.changes))
+    if discoveries:
+        from automation.engines.international.candidate_engine import append_discovery_candidates
+        candidate=append_discovery_candidates(candidate,discoveries)
     from automation.core.playlist_contract import parse_rows
     baseline_count=len(parse_rows(playlist_text))
     candidate_count=len(parse_rows(candidate))
