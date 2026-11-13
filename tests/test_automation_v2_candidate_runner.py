@@ -47,7 +47,7 @@ class CandidateBundleRunnerTests(unittest.TestCase):
             name: (root / name).read_bytes()
             for name in ("IPTV-Playlist.m3u", "International-Playlist.m3u", "epg/epg.xml")
         }
-        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), publish=False)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), source_warnings=(), publish=False)
         maintenance = SimpleNamespace(
             candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0),
             ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
@@ -90,7 +90,7 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         temp, root = self.make_root()
         self.addCleanup(temp.cleanup)
         store = MemoryStore()
-        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), publish=False)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), source_warnings=(), publish=False)
         maintenance = SimpleNamespace(
             candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0),
             ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
@@ -123,7 +123,7 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         self.addCleanup(temp.cleanup)
         original = '#EXTM3U\n#EXTINF:-1 tvg-id="x" group-title="Bangladesh",X\nhttps://x.example/live\n'
         (root / "IPTV-Playlist.m3u").write_text(original, encoding="utf-8")
-        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), publish=False)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), source_warnings=(), publish=False)
         with patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv):
             with self.assertRaisesRegex(ValueError, "removed"):
                 run_candidate_bundle(root, date(2026, 11, 13), "c" * 40, MemoryStore())
@@ -133,7 +133,7 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         temp, root = self.make_root()
         self.addCleanup(temp.cleanup)
         store = MemoryStore()
-        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), publish=False)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), source_warnings=(), publish=False)
         ledger = {
             "schema_version": 1,
             "timezone": "Asia/Dhaka",
