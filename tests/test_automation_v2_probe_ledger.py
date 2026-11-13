@@ -5,7 +5,7 @@ from datetime import date
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from automation.engines.international.probe_ledger import empty_ledger, parse_ledger, probes_for, record_probe
+from automation.engines.international.probe_ledger import empty_ledger, parse_ledger, probes_for, record_probe, record_probes
 from automation.engines.international.stream_failure_policy import Probe, consecutive_definitive_failure_days
 
 class ProbeLedgerTests(unittest.TestCase):
@@ -54,6 +54,17 @@ class ProbeLedgerTests(unittest.TestCase):
         })
         with self.assertRaisesRegex(ValueError,"URL fingerprint"):
             parse_ledger(bad)
+
+
+    def test_batch_recording_persists_multiple_url_bound_observations(self):
+        from automation.engines.international.probe_ledger import record_probes
+        observations=[
+            ("channel-a",Probe(date(2026,11,13),404,url_fingerprint="a"*64)),
+            ("channel-b",Probe(date(2026,11,13),200,stream_state="verified",url_fingerprint="b"*64)),
+        ]
+        ledger=parse_ledger(record_probes(None,observations))
+        self.assertEqual(probes_for(ledger,"channel-a")[0].url_fingerprint,"a"*64)
+        self.assertEqual(probes_for(ledger,"channel-b")[0].stream_state,"verified")
 
 if __name__=="__main__":
     unittest.main()

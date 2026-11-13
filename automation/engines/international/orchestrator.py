@@ -4,7 +4,7 @@ from dataclasses import dataclass, replace
 from datetime import date
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from automation.engines.international import monitor
-from automation.engines.international.probe_ledger import parse_ledger, probes_for, record_probe, url_fingerprint
+from automation.engines.international.probe_ledger import parse_ledger, probes_for, record_probes, url_fingerprint
 from automation.engines.international.engine import InternationalCandidate, build_international_candidate
 from automation.engines.international.planner import RowLifecycleInput
 from automation.engines.iptv.candidate_engine import DiscoveryCandidate
@@ -76,11 +76,10 @@ def run_international_candidate(playlist_text: str, ledger_text: str | None,
                         url_fingerprint=url_fingerprint(target.url),
                     )
 
-    current_ledger=ledger_text or ""
-    for target in pending:
-        current_ledger=record_probe(
-            current_ledger,target.identity,observations[target.identity]
-        )
+    current_ledger=record_probes(
+        ledger_text,
+        [(target.identity,observations[target.identity]) for target in pending],
+    ) if pending else (ledger_text or "")
 
     probed=len(pending)
     lifecycle_inputs=[]
