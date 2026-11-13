@@ -164,7 +164,6 @@ class InternationalStreamHealthTests(unittest.TestCase):
         for status in (401, 403, 407, 408, 425, 429, 451, 500, 502, 503, 504, 599):
             self.assertEqual(health.http_state(status), "inconclusive")
         self.assertEqual(health.http_state(404), "fail")
-        self.assertEqual(health.http_state(404), "fail")
 
     def test_health_rewrite_preserves_every_metadata_field_and_logo(self):
         source = self.playlist(row(extra='tvg-network="Example" '))
