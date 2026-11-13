@@ -2,10 +2,14 @@
 from __future__ import annotations
 from datetime import date
 import json
+import hashlib
 from automation.engines.international.stream_failure_policy import Probe
 
 SCHEMA_VERSION = 1
 TIMEZONE = "Asia/Dhaka"
+
+def url_fingerprint(url: str) -> str:
+    return hashlib.sha256(url.strip().encode("utf-8")).hexdigest()
 
 def empty_ledger() -> dict:
     return {"schema_version":SCHEMA_VERSION,"timezone":TIMEZONE,"channels":{}}
@@ -40,6 +44,13 @@ def _validate_observation(item: dict) -> None:
         raise ValueError("probe HTTP status must be 100..599 or null")
     if item.get("stream_state","unknown") not in {"verified","dead","unknown"}:
         raise ValueError("probe stream_state is invalid")
+    fingerprint = item.get("url_fingerprint", "")
+    if fingerprint and (
+        not isinstance(fingerprint,str)
+        or len(fingerprint) != 64
+        or any(char not in "0123456789abcdef" for char in fingerprint)
+    ):
+        raise ValueError("probe URL fingerprint must be a lowercase SHA-256 digest")
     if not isinstance(item.get("reason",""),str):
         raise ValueError("probe reason must be text")
     for key in ("network_error","auth_error","rate_limited","geo_blocked"):
@@ -52,7 +63,7 @@ def probes_for(ledger: dict, identity: str) -> tuple[Probe,...]:
     return tuple(Probe(date.fromisoformat(item["day"]),item.get("status_code"),
                        item.get("network_error",False),item.get("auth_error",False),
                        item.get("rate_limited",False),item.get("geo_blocked",False),
-                       item.get("stream_state","unknown"),item.get("reason",""))
+                       item.get("stream_state","unknown"),item.get("reason",""),item.get("url_fingerprint",""))
                  for item in records)
 
 def record_probe(ledger_text: str | None, identity: str, probe: Probe) -> str:
@@ -73,6 +84,7 @@ def record_probe(ledger_text: str | None, identity: str, probe: Probe) -> str:
         "geo_blocked":probe.geo_blocked,
         "stream_state":probe.stream_state,
         "reason":probe.reason,
+        "url_fingerprint":probe.url_fingerprint,
     })
     observations.sort(key=lambda item:item["day"])
     return json.dumps(ledger,sort_keys=True,indent=2) + "\n"
