@@ -141,7 +141,10 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
         if intl_run.publish or intl_run.maintenance.publish:
             raise RuntimeError("International candidate engine unexpectedly enabled publication")
         parse_rows(international_candidate)
-        assert_international_existing_rows_preserved(international_baseline, international_candidate)
+        assert_international_existing_rows_preserved(
+            international_baseline, international_candidate,
+            allowed_removed_identities=intl_run.maintenance.candidate.plan.remove_identities,
+        )
 
         # Persist completed dated probes before the slower EPG source stage. If EPG
         # acquisition fails or the runner is interrupted later, the day's probes
