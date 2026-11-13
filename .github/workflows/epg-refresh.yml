@@ -41,11 +41,30 @@ permissions:
   contents: write
 
 jobs:
+  daily_guard:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    outputs:
+      should_run: ${{ steps.guard.outputs.should_run }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 5
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Deduplicate daily EPG refresh events
+        id: guard
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/discovery_schedule_guard.py guard epg-refresh.yml
   refresh:
+    needs: daily_guard
     # Refresh against the latest committed playlists even when a playlist-maintenance
-    # workflow is blocked: failed maintenance publishes no new playlist bytes, but
-    # must not suppress EPG freshness/coverage work for the last known-good inputs.
-    if: ${{ (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion != 'cancelled') && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
+    # workflow is blocked, but run at most once per Bangladesh calendar date.
+    if: ${{ needs.daily_guard.outputs.should_run == 'true' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion != 'cancelled') && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
     concurrency:
       group: iptv-playlist-main-writer-v5
       queue: max
