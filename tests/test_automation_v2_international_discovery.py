@@ -33,6 +33,13 @@ class InternationalDiscoveryAdapterTests(unittest.TestCase):
         self.assertIn("Unknown Country Channel",names)
         self.assertTrue(any("country could not be verified" in warning for warning in result.warnings))
 
+    def test_conflicting_country_metadata_is_warning_only(self):
+        feed='#EXTM3U\n#EXTINF:-1 tvg-id="conflict.in" tvg-name="India News" tvg-country="US" group-title="News",India News\nhttps://conflict.example/live.m3u8\n'
+        with tempfile.TemporaryDirectory() as temp:
+            result=build_international_discovery_batch(BASE,feed,temp)
+        self.assertEqual(len(result.candidates),1)
+        self.assertTrue(any("conflicts with channel ID" in warning for warning in result.warnings))
+
     def test_missing_or_external_logo_does_not_block_discovery(self):
         with tempfile.TemporaryDirectory() as temp:
             result=build_international_discovery_batch(BASE,FEED,temp)
