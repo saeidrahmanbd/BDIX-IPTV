@@ -87,16 +87,16 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         temp, root = self.make_root()
         self.addCleanup(temp.cleanup)
         store = MemoryStore()
-        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), publish=False)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), publish=False)
         maintenance = SimpleNamespace(
-            candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0),
+            candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0),
             ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
             probed_count=0, reused_count=0, publish=False,
         )
         international = SimpleNamespace(maintenance=maintenance, publish=False)
         epg = SimpleNamespace(xml_text="<tv/>", decision=SimpleNamespace(accepted=True, errors=()), publish=False)
         def change_live_baseline(*args, **kwargs):
-            (root / "IPTV-Playlist.m3u").write_text("#EXTM3U\\n#concurrent-change\\n", encoding="utf-8")
+            (root / "IPTV-Playlist.m3u").write_text("#EXTM3U\n#concurrent-change\n", encoding="utf-8")
             return iptv
         with patch("automation.core.v2_candidate_runner.run_iptv_discovery", side_effect=change_live_baseline), \\
              patch("automation.core.v2_candidate_runner.derive_primary_stream_targets", return_value=[]), \\
@@ -113,9 +113,9 @@ class CandidateBundleRunnerTests(unittest.TestCase):
     def test_iptv_candidate_cannot_silently_drop_existing_rows(self):
         temp, root = self.make_root()
         self.addCleanup(temp.cleanup)
-        original = '#EXTM3U\\n#EXTINF:-1 tvg-id="x" group-title="Bangladesh",X\\nhttps://x.example/live\\n'
+        original = '#EXTM3U\n#EXTINF:-1 tvg-id="x" group-title="Bangladesh",X\nhttps://x.example/live\n'
         (root / "IPTV-Playlist.m3u").write_text(original, encoding="utf-8")
-        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), publish=False)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), publish=False)
         with patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv):
             with self.assertRaisesRegex(ValueError, "removed"):
                 run_candidate_bundle(root, date(2026,11,13), "c"*40, MemoryStore())
