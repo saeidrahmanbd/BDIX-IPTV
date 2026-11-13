@@ -8,6 +8,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from typing import Callable
 
 STATE_PATH = "automation-v2-state.json"
