@@ -30,6 +30,28 @@ class EpgCandidateEngineTests(unittest.TestCase):
         self.assertFalse(result.decision.accepted)
         self.assertIn("freshness regressed",result.decision.reason)
 
+    def test_missing_source_schedule_restores_only_fresh_baseline_programmes(self):
+        playlist='#EXTM3U\n#EXTINF:-1 tvg-id="a" group-title="Bangladesh",A\nhttps://a.example/live\n'
+        baseline='<tv><channel id="a"><display-name>A</display-name></channel><programme channel="a" start="20261113090000 +0600" stop="20261113100000 +0600"><title>Fresh</title></programme></tv>'
+        result=build_epg_candidate(
+            playlist, baseline, '<tv/>',
+            as_of=datetime(2026,11,13,2,0,tzinfo=timezone.utc),
+        )
+        self.assertTrue(result.decision.accepted, result.decision.reason)
+        self.assertIn('channel id="a"', result.xml_text)
+        self.assertIn("<title>Fresh</title>", result.xml_text)
+        self.assertFalse(result.publish)
+
+    def test_expired_baseline_schedule_is_not_resurrected(self):
+        playlist='#EXTM3U\n#EXTINF:-1 tvg-id="a" group-title="Bangladesh",A\nhttps://a.example/live\n'
+        baseline='<tv><channel id="a"/><programme channel="a" start="20261112090000 +0600" stop="20261112100000 +0600"><title>Expired</title></programme></tv>'
+        result=build_epg_candidate(
+            playlist, baseline, '<tv/>',
+            as_of=datetime(2026,11,13,2,0,tzinfo=timezone.utc),
+        )
+        self.assertFalse(result.decision.accepted)
+        self.assertNotIn("<title>Expired</title>", result.xml_text)
+
     def test_candidate_engine_never_publishes(self):
         result=build_epg_candidate(PLAYLIST,BASE,as_of=AS_OF)
         self.assertFalse(result.publish)
