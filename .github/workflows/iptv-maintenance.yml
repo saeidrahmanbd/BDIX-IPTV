@@ -86,6 +86,7 @@ jobs:
             docs
             epg
             logos
+            maintenance
             reports
             scripts
             tests
