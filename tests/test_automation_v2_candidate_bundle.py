@@ -46,6 +46,18 @@ class CandidateBundleTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"fingerprint changed"):
                 write_candidate_bundle(temp,"run-123",bundle,{"IPTV-Playlist.m3u":"tampered"})
 
+    def test_symlinked_candidate_directory_is_rejected(self):
+        from pathlib import Path
+        contents={"IPTV-Playlist.m3u":"after"}
+        bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"before"},contents,{"IPTV-Playlist.m3u":True})
+        with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
+            root=Path(temp)
+            parent=root/"reports"/"automation-v2"
+            parent.mkdir(parents=True)
+            (parent/"candidates").symlink_to(outside,target_is_directory=True)
+            with self.assertRaisesRegex(ValueError,"escapes"):
+                write_candidate_bundle(root,"run-123",bundle,contents)
+
     def test_blocked_bundle_is_not_written(self):
         contents={"IPTV-Playlist.m3u":"after"}
         bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"before"},contents,{"IPTV-Playlist.m3u":False})
