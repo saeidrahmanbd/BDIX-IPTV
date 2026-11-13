@@ -5918,5 +5918,55 @@
     "status": "third_party_verified",
     "source_url": "https://www.vivalivetv.com/public/files/shows/0/1/3952-640x360-FFFFFF.jpg",
     "notes": "IPTV-org exact ID: BSTV.pk IPTV-org public logo dataset Source page: https://www.vivalivetv.com/public/files/shows/0/1/3952-640x360-FFFFFF.jpg"
+  },
+  "IPTV-Playlist.m3u|BTLTV.nl@SD|BTL TV (Netherlands) (1080p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btl-tv-netherlands-2790d02135.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://yt3.googleusercontent.com/ytc/APkrFKZYgQTsDhkbaqmPRCPZIf0UgZqF1wa6aG2eo8ti=s176-c-k-c0x00ffffff-no-rj-mo",
+    "notes": "IPTV-org exact ID: BTLTV.nl IPTV-org public logo dataset Source page: https://yt3.googleusercontent.com/ytc/APkrFKZYgQTsDhkbaqmPRCPZIf0UgZqF1wa6aG2eo8ti=s176-c-k-c0x00ffffff-no-rj-mo"
+  },
+  "IPTV-Playlist.m3u|AnimaxAsia.sg@India|Animax Asia India (1080p) [Geo-blocked]|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animax-asia-india-1080p-geo-blocked-dc2259f958.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Animax.png/960px-Animax.png",
+    "notes": "IPTV-org exact ID: AnimaxAsia.sg IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Animax.png/960px-Animax.png"
+  },
+  "IPTV-Playlist.m3u|CartoonNetworkHDPlus.in@HD|Cartoon Network HD+ (1080p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd-plus-0af84f2a76.png": {
+    "status": "third_party_verified",
+    "source_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CARTOON_NETWORK_HDSYMPLUS/images/LOGO_HD/image.png",
+    "notes": "IPTV-org exact ID: CartoonNetworkHDPlus.in IPTV-org public logo dataset Source page: https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CARTOON_NETWORK_HDSYMPLUS/images/LOGO_HD/image.png"
+  },
+  "IPTV-Playlist.m3u|Doraemon.us@SD|Doraemon (720p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/doraemon-cf58b50f0c.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Doraemon_Merch_EN_Logo.svg",
+    "notes": "IPTV-org exact ID: Doraemon.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/0/01/Doraemon_Merch_EN_Logo.svg"
+  },
+  "IPTV-Playlist.m3u|GaundaPunjabTV.ca@SD|Gaunda Punjab TV (720p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gaunda-punjab-tv-001fec37aa.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/ArRZRM3.png",
+    "notes": "IPTV-org exact ID: GaundaPunjabTV.ca IPTV-org public logo dataset Source page: https://i.imgur.com/ArRZRM3.png"
+  },
+  "IPTV-Playlist.m3u|HyderTV.ca@SD|Hyder TV (720p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hyder-tv-ab08d4568b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/reHjjRZ.png",
+    "notes": "IPTV-org exact ID: HyderTV.ca IPTV-org public logo dataset Source page: https://i.imgur.com/reHjjRZ.png"
+  },
+  "IPTV-Playlist.m3u|Shinchan.us@SD|Shin-chan (720p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shin-chan-a008e6d285.png": {
+    "status": "third_party_verified",
+    "source_url": "https://image.tmdb.org/t/p/original/fIYWvHIeqc1A9D4PyayFkgjRxCh.png",
+    "notes": "IPTV-org exact ID: Shinchan.us IPTV-org public logo dataset Source page: https://image.tmdb.org/t/p/original/fIYWvHIeqc1A9D4PyayFkgjRxCh.png"
+  },
+  "IPTV-Playlist.m3u|ThePetCollective.us@India|The Pet Collective India (720p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-pet-collective-india-460b4e0e70.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/yH7n2dF.png",
+    "notes": "IPTV-org exact ID: ThePetCollective.us IPTV-org public logo dataset Source page: https://i.imgur.com/yH7n2dF.png"
+  },
+  "IPTV-Playlist.m3u|Eurosport.in@HD|Eurosport (India) HD (1080p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eurosport-india-993030c6b6.png": {
+    "status": "third_party_verified",
+    "source_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_EUROSPORT_HD/images/LOGO_HD/image.png",
+    "notes": "IPTV-org exact ID: Eurosport.in IPTV-org public logo dataset Source page: https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_EUROSPORT_HD/images/LOGO_HD/image.png"
+  },
+  "IPTV-Playlist.m3u|Travelxp.in@4KHDR|Travelxp 4K HDR (2160p) [Geo-blocked]|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-4k-hdr-2160p-geo-blocked-d2beea8758.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: Travelxp.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540"
   }
 }

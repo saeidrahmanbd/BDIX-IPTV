@@ -6088,7 +6088,7 @@ https://rpn.bozztv.com/gusa/gusa-hitops/index.m3u8
 https://rpn.bozztv.com/gusa/gusa-tvshollywoohistory/index.m3u8
 #EXTINF:-1 tvg-id="TVSSports.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvs-sports-1a961bba94.png" tvg-country="US" group-title="Backup" tvg-name="TVS Sports",TVS Sports
 https://rpn.bozztv.com/gusa/gusa-tvssports/index.m3u8
-#EXTINF:-1 tvg-id="TVSSportsBureau.us@SD" tvg-country="US" group-title="Backup" tvg-name="TVS Sports Bureau",TVS Sports Bureau
+#EXTINF:-1 tvg-id="TVSSportsBureau.us@SD" tvg-country="US" group-title="Backup" tvg-name="TVS Sports Bureau" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvs-sports-bureau.png",TVS Sports Bureau
 https://rpn.bozztv.com/gusa/gusa-tvssportsbureau/index.m3u8
 #EXTINF:-1 tvg-id="TVSTurbo.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvs-turbo-a9ffd7b881.png" tvg-country="US" group-title="Backup" tvg-name="TVS Turbo",TVS Turbo
 https://rpn.bozztv.com/gusa/gusa-tvsturbo/index.m3u8
