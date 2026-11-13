@@ -12,22 +12,25 @@ class ChannelIdentity:
     is_primary: bool = True
 
 def eligible_country_groups(channels: list[ChannelIdentity], minimum: int = 5) -> set[str]:
-    """Return non-fixed country groups meeting the unique-primary-identity threshold."""
+    """Return display names for non-fixed groups meeting the case-insensitive identity threshold."""
     if minimum < 1:
         raise ValueError("minimum must be positive")
     identities: dict[str, set[str]] = {}
+    display_names: dict[str, str] = {}
     for channel in channels:
         group = channel.country_group.strip()
         normalized = group.casefold()
-        if not channel.is_primary or normalized in NON_PRIMARY_GROUPS or not channel.identity.strip():
+        identity = channel.identity.strip().casefold()
+        if not channel.is_primary or normalized in NON_PRIMARY_GROUPS or not identity:
             continue
         if normalized in FIXED_GROUPS:
             continue
-        identities.setdefault(group, set()).add(channel.identity.strip().casefold())
-    return {group for group, members in identities.items() if len(members) >= minimum}
+        identities.setdefault(normalized, set()).add(identity)
+        display_names.setdefault(normalized, group)
+    return {display_names[key] for key, members in identities.items() if len(members) >= minimum}
 
 def should_create_country_group(group: str, channels: list[ChannelIdentity], minimum: int = 5) -> bool:
     normalized = group.strip().casefold()
     if normalized in FIXED_GROUPS:
         return True
-    return group in eligible_country_groups(channels, minimum)
+    return any(candidate.casefold() == normalized for candidate in eligible_country_groups(channels, minimum))
