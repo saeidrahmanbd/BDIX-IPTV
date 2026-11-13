@@ -1,6 +1,7 @@
 """Read-only candidate comparison; this module never publishes or mutates playlists."""
 from __future__ import annotations
 import hashlib
+from collections import Counter
 from pathlib import Path
 from automation.core.playlist_contract import parse_rows, assert_iptv_existing_rows_preserved
 
@@ -32,8 +33,10 @@ def validate_candidate(playlist: str, baseline_path: str | Path, candidate_path:
     before_rows, after_rows = parse_rows(before_text), parse_rows(after_text)
     if playlist == "IPTV-Playlist.m3u":
         assert_iptv_existing_rows_preserved(before_text, after_text)
-    before_urls = [row.url for row in before_rows]
-    after_urls = [row.url for row in after_rows]
+    before_counts = Counter(row.url for row in before_rows)
+    after_counts = Counter(row.url for row in after_rows)
+    added = sum((after_counts - before_counts).values())
+    removed = sum((before_counts - after_counts).values())
     return {
         "schema_version": 1,
         "playlist": playlist,
@@ -41,8 +44,8 @@ def validate_candidate(playlist: str, baseline_path: str | Path, candidate_path:
         "candidate_sha256": sha256(candidate),
         "baseline_rows": len(before_rows),
         "candidate_rows": len(after_rows),
-        "added_url_occurrences": max(0, len(after_urls) - len(before_urls)),
-        "removed_url_occurrences": max(0, len(before_urls) - len(after_urls)),
-        "invariants": "PASS",
+        "added_url_occurrences": added,
+        "removed_url_occurrences": removed,
+        "invariants": "PASS" if playlist == "IPTV-Playlist.m3u" else "PARSE_ONLY",
         "publish": False
     }
