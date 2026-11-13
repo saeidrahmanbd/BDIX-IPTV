@@ -35,6 +35,11 @@ class InternationalMonitorTests(unittest.TestCase):
         result=probe_and_record(None,"channel-a","https://example.com/live",DAY)
         self.assertEqual(result.failure_streak,0)
 
+    def test_malformed_or_unsafe_url_is_recorded_as_inconclusive(self):
+        result=probe_and_record(None,"channel-a","file:///tmp/live",DAY)
+        self.assertEqual(result.probe_status,None)
+        self.assertEqual(result.failure_streak,0)
+
     def test_identity_required(self):
         with self.assertRaisesRegex(ValueError,"identity"):
             probe_and_record(None," ","https://example.com/live",DAY)
