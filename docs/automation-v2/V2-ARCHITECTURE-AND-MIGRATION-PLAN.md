@@ -27,8 +27,8 @@ Replace overlapping automation with one policy source, isolated playlist engines
 | Run ledger | Idempotent run reservations, validated JSON serialization, Bangladesh-date probe ledger and locked atomic local persistence implemented; GitHub durable-state commit/recovery integration remains |
 | Transaction safety | Engine path allowlists, SHA-256 candidate evidence, stale-input checks, fail-closed gate, shared lock and atomic candidate-directory staging implemented; no production publisher |
 | Logo audit | Playlist/runtime/report references separated; exact duplicate hashes reported; no deletion, quarantine or move |
-| V2 CI | V2 CI passed 212 tests and the immutable baseline dry run on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8; latest verified branch CI commit 564139d881a4bd8b0115e25347a13dfcc7db8846 passed |
-| Legacy regression | Latest full repository regression run passed 743 tests on commit 564139d881a4bd8b0115e25347a13dfcc7db8846 |
+| V2 CI | V2 CI passed 223 tests and the immutable baseline dry run on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8; latest verified branch CI commit 414e29644efd846ac045beba08e8de4d3526f400 passed |
+| Legacy regression | Latest full repository regression run passed 754 tests on commit 4c66cd6e5e4822633b3f9a8fcc20710fdb2216fe |
 | Real-baseline measurements | Exact production blob fingerprints verified; IPTV 1,280 rows; International 3,120 rows; EPG 30,944,668 bytes |
 | Workflow migration/cutover | Not started; all existing production workflows remain enabled and unchanged |
 
