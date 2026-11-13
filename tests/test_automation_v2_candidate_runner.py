@@ -178,5 +178,33 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         )
         self.assertEqual(store.state["run_ledger"]["entries"][0]["status"], "failed")
 
+    def test_remote_main_advance_during_generation_aborts_candidate_stage(self):
+        temp, root = self.make_root()
+        self.addCleanup(temp.cleanup)
+        store = MemoryStore()
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), source_warnings=(), publish=False)
+        maintenance = SimpleNamespace(
+            candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0),
+            ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
+            probed_count=0, reused_count=0, publish=False,
+        )
+        international = SimpleNamespace(maintenance=maintenance, publish=False)
+        epg = SimpleNamespace(xml_text="<tv/>", decision=SimpleNamespace(accepted=True, errors=()), publish=False)
+        with (
+            patch("automation.core.v2_candidate_runner._assert_current_main_head", side_effect=[None, RuntimeError("main advanced during candidate generation")]) as head_check,
+            patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv),
+            patch("automation.core.v2_candidate_runner.derive_primary_stream_targets", return_value=[]),
+            patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=international),
+            patch("automation.core.v2_candidate_runner.assert_international_existing_rows_preserved"),
+            patch("automation.core.v2_candidate_runner.build_epg_source_candidate", return_value="<tv/>"),
+            patch("automation.core.v2_candidate_runner.build_epg_candidate", return_value=epg),
+        ):
+            with self.assertRaisesRegex(RuntimeError, "main advanced"):
+                run_candidate_bundle(root, date(2026, 11, 13), "c" * 40, store)
+
+        self.assertEqual(head_check.call_count, 2)
+        self.assertFalse((root / "reports/automation-v2/candidates/transactions").exists())
+        self.assertEqual(store.state["run_ledger"]["entries"][0]["status"], "failed")
+
 if __name__ == "__main__":
     unittest.main()
