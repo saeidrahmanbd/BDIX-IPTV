@@ -16,8 +16,8 @@ scheduler -> run ledger -> policy resolver -> scoped engine -> candidate artifac
 
 ## Migration phases
 1. Inventory and baseline preservation — completed.
-2. Central policy and contract tests — in progress.
-3. Port parsers and identity helpers with equivalence tests.
+2. Central policy and contract tests — initial policy, parser invariants, candidate manifest isolation, International three-day failure lifecycle and five-identity country-group rules implemented; CI execution still needs confirmation.
+3. Port parsers and identity helpers with equivalence tests — initial parser and baseline row-count checks added; full equivalence suite pending.
 4. Build isolated IPTV and International engines that produce candidates only.
 5. Port discovery, logos and EPG behind scoped interfaces.
 6. Run all existing and V2 tests; classify obsolete tests instead of deleting blindly.
@@ -32,3 +32,7 @@ scheduler -> run ledger -> policy resolver -> scoped engine -> candidate artifac
 - Never weaken owner-protection checks to make failed runs green.
 - Do not disable existing workflows before full replacement validation and rollback testing.
 - Never force-push; rollback uses revert or safe ref restoration.
+
+## Logo audit status
+
+A baseline playlist-only exact-reference scan found 5,366 image assets, 2,395 referenced by the two playlist files, and 2,971 apparent non-references. These are not deletion candidates until repository-wide and dynamic references are audited. See `LOGO-STORAGE-AUDIT.md` and `logo-reference-baseline.json`. No logo has been deleted or moved.
