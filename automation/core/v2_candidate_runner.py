@@ -64,8 +64,13 @@ def _assert_current_main_head(expected_commit: str) -> None:
             payload = json.loads(response.read().decode("utf-8"))
     except (urllib.error.URLError, TimeoutError, urllib.error.HTTPError) as exc:
         raise RuntimeError("unable to verify current main baseline; refusing to stage candidates") from exc
-    actual = payload.get("object", {}).get("sha") if isinstance(payload, dict) else None
-    if not isinstance(actual, str) or len(actual) not in (40, 64):
+    obj = payload.get("object") if isinstance(payload, dict) else None
+    actual = obj.get("sha") if isinstance(obj, dict) else None
+    if (
+        not isinstance(actual, str)
+        or len(actual) not in (40, 64)
+        or any(char not in "0123456789abcdefABCDEF" for char in actual)
+    ):
         raise RuntimeError("GitHub returned an invalid main branch head")
     if actual.lower() != expected_commit.lower():
         raise RuntimeError(
