@@ -14,6 +14,7 @@ from automation.core.run_ledger import RunRequest
 from automation.core.github_state_store import execute_remote_run
 from automation.core.transaction_gate import ArtifactEvidence
 from automation.core.transaction_staging import stage_transaction_bundle
+from automation.core.playlist_contract import parse_rows, assert_iptv_existing_rows_preserved
 from automation.engines.iptv.orchestrator import run_iptv_discovery
 from automation.engines.international.discovery_orchestrator import run_international_discovery
 from automation.engines.international.orchestrator import derive_primary_stream_targets
@@ -67,6 +68,8 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
         iptv_candidate = iptv_run.candidate.text
         if iptv_run.publish:
             raise RuntimeError("IPTV candidate engine unexpectedly enabled publication")
+        parse_rows(iptv_candidate)
+        assert_iptv_existing_rows_preserved(iptv_baseline, iptv_candidate)
 
         targets = derive_primary_stream_targets(international_baseline)
         intl_run = run_international_discovery(
@@ -80,6 +83,7 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
         international_candidate = intl_run.maintenance.candidate.text
         if intl_run.publish or intl_run.maintenance.publish:
             raise RuntimeError("International candidate engine unexpectedly enabled publication")
+        parse_rows(international_candidate)
         assert_international_existing_rows_preserved(international_baseline, international_candidate)
 
         source_candidate = build_epg_source_candidate(
@@ -119,6 +123,12 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
             ("epg", "epg/epg.xml"),
         ):
             baseline_digest = _sha(baseline_by_path[path])
+            current_path = root / path
+            if current_path.is_symlink() or not current_path.resolve().is_relative_to(root):
+                raise RuntimeError(f"production baseline path is unsafe: {path}")
+            current_digest = _sha(current_path.read_text(encoding="utf-8-sig" if path.endswith(".m3u") else "utf-8"))
+            if current_digest != baseline_digest:
+                raise RuntimeError(f"production baseline changed during candidate generation: {path}")
             candidate_digest = _sha(contents[path])
             manifests.append(CandidateManifest(
                 engine=engine,
@@ -130,7 +140,7 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
                 path=path,
                 baseline_sha256=baseline_digest,
                 candidate_sha256=candidate_digest,
-                baseline_current_sha256=baseline_digest,
+                baseline_current_sha256=current_digest,
                 candidate_current_sha256=candidate_digest,
                 validator_passed=True,
             ))
