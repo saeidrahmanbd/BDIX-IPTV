@@ -23,6 +23,10 @@ class CountryGroupPolicyTests(unittest.TestCase):
         rows += [ChannelIdentity(f"queue-{i}",group) for i,group in enumerate(["Backup","Review","New Channels","New Backups","Backup"])]
         self.assertEqual(eligible_country_groups(rows),set())
 
+    def test_group_names_are_case_insensitive(self):
+        rows=[ChannelIdentity(f"id-{i}", "Nepal" if i<3 else "nepal") for i in range(5)]
+        self.assertTrue(should_create_country_group("NEPAL", rows))
+
     def test_bangladesh_and_india_are_fixed_groups(self):
         self.assertTrue(should_create_country_group("Bangladesh",[]))
         self.assertTrue(should_create_country_group("India",[]))
