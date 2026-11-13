@@ -18,7 +18,7 @@ class RowLifecycleInput:
 @dataclass(frozen=True)
 class InternationalPlan:
     changes: tuple[GroupChange, ...]
-    removal_review_identities: tuple[str, ...]
+    remove_identities: tuple[str, ...]
     review_identities: tuple[str, ...]
     publish: bool = False
 
@@ -50,7 +50,7 @@ def plan_lifecycle(playlist_text: str, inputs: list[RowLifecycleInput], today: d
     fixed = FIXED_PRIMARY_GROUPS
 
     changes: list[GroupChange] = []
-    removal_review: list[str] = []
+    remove: list[str] = []
     review: list[str] = []
     for index, item in sorted(by_index.items()):
         row = rows[index]
@@ -62,10 +62,11 @@ def plan_lifecycle(playlist_text: str, inputs: list[RowLifecycleInput], today: d
         if decision.action == "RESTORE_TO_PRIMARY":
             if target.casefold() not in fixed and target.casefold() not in {g.casefold() for g in eligible_groups}:
                 target = "Backup"
-        if decision.action == "REQUIRES_OWNER_REMOVAL_REVIEW":
-            removal_review.append(item.identity)
+        if decision.action == "REMOVE":
+            remove.append(item.identity)
+            continue
         if target.casefold() == "review":
             review.append(item.identity)
         if target != row.group:
             changes.append(GroupChange(index,target,decision.action))
-    return InternationalPlan(tuple(changes),tuple(removal_review),tuple(review),False)
+    return InternationalPlan(tuple(changes),tuple(remove),tuple(review),False)
