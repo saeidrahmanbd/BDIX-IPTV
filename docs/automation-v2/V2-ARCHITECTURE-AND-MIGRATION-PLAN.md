@@ -21,14 +21,14 @@ Replace overlapping automation with one policy source, isolated playlist engines
 | Dependency and side-effect audits | Static audit complete; dynamic runtime tracing remains incomplete |
 | Central policy and policy conformance | Initial policy, schema and conformance checks added |
 | Playlist contracts | IPTV existing rows must remain an unchanged prefix; metadata/logo repair allowed; discovery rows append only |
-| IPTV engine | Candidate-only discovery append engine added; no production file I/O |
+| IPTV engine | Candidate-only discovery append and evidence-gated local metadata/logo repair engines added; no production file I/O |
 | International engine | Failure lifecycle, verified recovery decisions, five-identity country-group threshold and group-only candidate builder added |
 | EPG engine | XMLTV structural, mapping coverage, future-schedule freshness and conservative alias suggestion checks added |
 | Run ledger | Deterministic idempotency keys, per-engine run exclusion and global transaction-lock policy added; durable persistence not yet implemented |
 | Transaction safety | Per-engine manifests, stale-input checks and cross-engine bundle gate added; no publisher |
 | Logo audit | Playlist/runtime/report references separated; exact duplicate hashes reported; no deletion or quarantine |
-| V2 CI | Latest verified branch CI passed **108 tests** and completed the immutable production dry run |
-| Legacy regression | Latest full repository run passed **639 tests** with repository-declared image dependencies installed |
+| V2 CI | Latest verified branch CI passed **118 tests** and completed the immutable production dry run |
+| Legacy regression | Latest full repository run passed **649 tests** with repository-declared image dependencies installed |
 | Real-baseline dry runs | Completed read-only: exact production blob fingerprints verified; IPTV 1,280 rows; International 3,120 rows; EPG 30,944,668 bytes |
 | EPG mapping review | Baseline coverage audited; 79 manual-only alias suggestions and 14 ambiguous cases produced; none applied |
 | Workflow migration/cutover | Not started; legacy workflows remain enabled |
