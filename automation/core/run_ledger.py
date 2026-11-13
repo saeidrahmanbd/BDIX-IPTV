@@ -30,8 +30,8 @@ class ReservationDecision:
     reason: str
 
 def make_idempotency_key(request: RunRequest) -> str:
-    material = "|".join((request.engine,request.business_day.isoformat(),
-                         request.baseline_commit,request.input_fingerprint))
+    material = "|".join((request.engine.strip().casefold(),request.business_day.isoformat(),
+                         request.baseline_commit.lower(),request.input_fingerprint.lower()))
     return hashlib.sha256(material.encode("utf-8")).hexdigest()
 
 def reserve_run(request: RunRequest, entries: list[LedgerEntry],
