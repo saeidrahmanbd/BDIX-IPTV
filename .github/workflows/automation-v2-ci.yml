@@ -8,6 +8,7 @@ on:
       - 'automation/**'
       - 'tests/test_automation_v2_*.py'
       - 'scripts/audit_logo_references.py'
+      - 'scripts/run_automation_v2_dry_run.py'
       - '.github/workflows/automation-v2-ci.yml'
   pull_request:
     branches:
@@ -46,6 +47,15 @@ jobs:
         run: python automation/validators/policy_conformance.py
       - name: Run V2 contract tests
         run: python -m unittest discover -s tests -p 'test_automation_v2_*.py' -v
+      - name: Run immutable production baseline dry run
+        run: python scripts/run_automation_v2_dry_run.py --output reports/automation-v2/baseline-dry-run.json
+      - name: Upload baseline dry-run report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: automation-v2-baseline-dry-run
+          path: reports/automation-v2/baseline-dry-run.json
+          if-no-files-found: error
+          retention-days: 14
       - name: Run conservative logo reference audit
         run: python scripts/audit_logo_references.py --output reports/automation-v2/logo-reference-audit.json
       - name: Upload logo audit report
