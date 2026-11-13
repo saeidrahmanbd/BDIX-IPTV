@@ -63,8 +63,9 @@ jobs:
           # A one-time owner-authorized IPTV operation has priority. Do not
           # let this two-playlist logo workflow mutate International while that
           # request is pending; the durable marker remains until its report lands.
-          if [[ -s maintenance/owner-requested-iptv-migration.json && ! -s reports/owner-requested-main-migrations.md ]]; then
-            echo "::notice::Deferring two-playlist logo localization until the owner-requested IPTV migration is published."
+          if [[ -s maintenance/owner-requested-iptv-migration.json ]] \
+             && jq -e '.status == "pending"' maintenance/owner-requested-iptv-migration.json >/dev/null; then
+            echo "::notice::Deferring logo localization only for an explicitly pending owner migration."
             exit 0
           fi
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
