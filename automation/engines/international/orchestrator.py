@@ -53,3 +53,43 @@ def run_international_candidate(playlist_text: str, ledger_text: str | None,
         ))
     candidate=build_international_candidate(playlist_text,lifecycle_inputs,today,discoveries=discoveries)
     return InternationalMaintenanceResult(candidate,current_ledger or "",probed,reused,False)
+
+
+
+def run_international_candidate_persisted(playlist_text: str, targets: list[StreamTarget],
+                                          today: date, baseline_commit: str, store,
+                                          timeout: int = 8,
+                                          discoveries: list[DiscoveryCandidate] | None = None):
+    """Run International maintenance with durable dated probes and an idempotent run reservation."""
+    import hashlib
+    import json
+    from automation.core.github_state_store import execute_remote_run
+    from automation.core.run_ledger import RunRequest
+    from automation.engines.international.probe_ledger import parse_ledger
+
+    target_material = [
+        (item.row_index, item.identity, item.url, item.primary_group, item.verified_stream_role)
+        for item in sorted(targets, key=lambda item: item.row_index)
+    ]
+    discovery_material = [
+        (item.extinf, item.url, item.backup) for item in (discoveries or [])
+    ]
+    fingerprint = hashlib.sha256((
+        playlist_text + "\0" +
+        json.dumps(target_material, ensure_ascii=False) + "\0" +
+        json.dumps(discovery_material, ensure_ascii=False)
+    ).encode("utf-8")).hexdigest()
+    request = RunRequest("international", today, baseline_commit, fingerprint)
+
+    def operation():
+        snapshot = store.load()
+        ledger_text = json.dumps(snapshot.state["international_probe_ledger"])
+        result = run_international_candidate(
+            playlist_text, ledger_text, targets, today, timeout, discoveries
+        )
+        updated = dict(snapshot.state)
+        updated["international_probe_ledger"] = parse_ledger(result.ledger_json)
+        store.save(updated, snapshot.blob_sha)
+        return result
+
+    return execute_remote_run(store, request, operation)
