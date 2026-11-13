@@ -30,6 +30,15 @@ class AtomicOutputTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"outside|escapes"):
                 atomic_write_v2_output(temp,"reports/automation-v2/candidates/../../IPTV-Playlist.m3u","danger")
 
+    def test_symlinked_state_directory_rejected(self):
+        with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
+            root=Path(temp)
+            state=root/"reports"/"automation-v2"/"state"
+            state.parent.mkdir(parents=True)
+            state.symlink_to(outside,target_is_directory=True)
+            with self.assertRaisesRegex(ValueError,"lock directory"):
+                atomic_write_v2_output(root,"reports/automation-v2/candidates/run/file.txt","x")
+
     def test_symlink_escape_rejected(self):
         with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
             root=Path(temp)
