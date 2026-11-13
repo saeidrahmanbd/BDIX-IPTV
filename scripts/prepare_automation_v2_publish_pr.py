@@ -14,6 +14,13 @@ import subprocess
 import sys
 import xml.etree.ElementTree as ET
 
+# Executing a script by path sets sys.path[0] to scripts/, not the repository root.
+# Add the checkout root explicitly so the repository's automation namespace package
+# is importable in GitHub Actions and local invocations alike.
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
+
 from automation.core.playlist_contract import (
     parse_rows,
     assert_iptv_existing_rows_preserved,
