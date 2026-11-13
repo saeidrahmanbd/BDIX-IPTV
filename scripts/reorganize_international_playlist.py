@@ -435,11 +435,9 @@ def main():
         channel_id = (row["a"].get("tvg-id") or row["a"].get("channel-id") or "").strip().casefold()
         match = identity_primary.get(ident) or (primary_ids.get((row["country"], channel_id)) if channel_id else None)
         if is_adult_channel(row["a"], row["name"], row["original_group"]):
-            if match and str(match.get("group", "")).casefold() == "adult":
-                row["content_kind"] = "Adult"
-                matched_backup_alternates += 1
-                remaining_backup_rows.append(row)
-                continue
+            # Explicitly Adult-coded Backup rows belong in Adult even when a
+            # matching Adult primary exists; keep both stream URLs but normalize
+            # their category rather than leaving Adult feeds mixed into Backup.
             orphan_backup_candidates += 1
             row["group"] = "Adult"
             row["kind"] = "Adult"
@@ -447,9 +445,9 @@ def main():
             row["was_backup"] = False
             row["promoted_orphan"] = True
             primary.append(row)
-            identity_primary[ident] = row
+            identity_primary.setdefault(ident, row)
             if channel_id:
-                primary_ids[(row["country"], channel_id)] = row
+                primary_ids.setdefault((row["country"], channel_id), row)
             promoted_orphans += 1
             adult_orphans_restored += 1
             continue
