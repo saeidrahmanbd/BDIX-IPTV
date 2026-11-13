@@ -46,6 +46,13 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             ("Adult", None, None),
         )
 
+    def test_explicit_adult_backup_ids_are_restored_to_adult_group(self):
+        attrs = {"group-title": "Backup", "tvg-id": "custom.xxx-bang-bus", "tvg-content": ""}
+        self.assertEqual(reorg.classify(attrs, "Bang Bus", "Backup", "US"), ("Adult", None, None))
+
+    def test_generic_adult_word_does_not_reclassify_backup(self):
+        attrs = {"group-title": "Backup", "tvg-id": "AdultChannelAlpha.us"}
+        self.assertEqual(reorg.classify(attrs, "Adult Channel Alpha", "Backup", "US"), ("Backup", None, None))
     def test_known_channel_aliases_share_one_identity_key(self):
         pairs = [
             ("Rupasi Bangla", "Ruposhi Bangla"),
