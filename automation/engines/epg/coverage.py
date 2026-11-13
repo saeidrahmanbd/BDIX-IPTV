@@ -55,8 +55,6 @@ def compare_coverage(playlist_text: str, baseline_xml: str, candidate_xml: str) 
     reasons: list[str] = []
     if candidate.mapped_channel_ids < baseline.mapped_channel_ids:
         reasons.append("mapped channel coverage regressed")
-    if candidate.mapped_channel_ids < baseline.mapped_channel_ids:
-        reasons.append("mapped channel coverage regressed")
     if candidate.scheduled_channel_ids < baseline.scheduled_channel_ids:
         reasons.append("programme schedule coverage regressed")
     lost_mapped = set(baseline.mapped_ids) - set(candidate.mapped_ids)
