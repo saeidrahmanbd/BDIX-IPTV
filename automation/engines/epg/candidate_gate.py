@@ -1,6 +1,7 @@
 """Fail-closed EPG candidate gate; validates candidate against last-known-good text."""
 from __future__ import annotations
 import hashlib
+from datetime import datetime
 from dataclasses import dataclass
 from automation.engines.epg.validator import validate_xmltv
 from automation.engines.epg.coverage import compare_coverage
@@ -18,7 +19,7 @@ def _digest(value: str) -> str:
 
 def evaluate_candidate(baseline_xml: str, candidate_xml: str,
                        active_playlist_text: str | None = None,
-                       as_of=None) -> EpgCandidateDecision:
+                       as_of: datetime | None = None) -> EpgCandidateDecision:
     """Accept only structurally valid, non-regressing candidates; publication remains disabled."""
     baseline_hash = _digest(baseline_xml)
     candidate_hash = _digest(candidate_xml)
