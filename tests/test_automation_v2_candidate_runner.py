@@ -17,8 +17,10 @@ class MemoryStore:
     def __init__(self):
         self.state = empty_state()
         self.sha = "a" * 40
+
     def load(self):
         return StateSnapshot(self.state, self.sha)
+
     def save(self, state, expected_sha):
         if expected_sha != self.sha:
             raise RuntimeError("stale state")
@@ -54,16 +56,18 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         international = SimpleNamespace(maintenance=maintenance, publish=False)
         epg = SimpleNamespace(
             xml_text="<tv/>",
-            decision=SimpleNamespace(accepted=True, errors=(), candidate_programmes=0),
+            decision=SimpleNamespace(accepted=True, errors=()),
             publish=False,
         )
-        with patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv), \
-             patch("automation.core.v2_candidate_runner.derive_primary_stream_targets", return_value=[]), \
-             patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=international), \
-             patch("automation.core.v2_candidate_runner.assert_international_existing_rows_preserved"), \
-             patch("automation.core.v2_candidate_runner.build_epg_source_candidate", return_value="<tv/>"), \
-             patch("automation.core.v2_candidate_runner.build_epg_candidate", return_value=epg):
-            decision, result = run_candidate_bundle(root, date(2026,11,13), "c"*40, MemoryStore())
+        with (
+            patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv),
+            patch("automation.core.v2_candidate_runner.derive_primary_stream_targets", return_value=[]),
+            patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=international),
+            patch("automation.core.v2_candidate_runner.assert_international_existing_rows_preserved"),
+            patch("automation.core.v2_candidate_runner.build_epg_source_candidate", return_value="<tv/>"),
+            patch("automation.core.v2_candidate_runner.build_epg_candidate", return_value=epg),
+        ):
+            decision, result = run_candidate_bundle(root, date(2026, 11, 13), "c" * 40, MemoryStore())
 
         self.assertTrue(decision.allowed)
         self.assertIsNotNone(result)
@@ -79,9 +83,8 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         (root / "epg/epg.xml").unlink()
         store = MemoryStore()
         with self.assertRaisesRegex(FileNotFoundError, "epg.xml"):
-            run_candidate_bundle(root, date(2026,11,13), "c"*40, store)
+            run_candidate_bundle(root, date(2026, 11, 13), "c" * 40, store)
         self.assertEqual(store.state["run_ledger"]["entries"], [])
-
 
     def test_live_baseline_change_during_candidate_build_aborts_staging(self):
         temp, root = self.make_root()
@@ -95,17 +98,22 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         )
         international = SimpleNamespace(maintenance=maintenance, publish=False)
         epg = SimpleNamespace(xml_text="<tv/>", decision=SimpleNamespace(accepted=True, errors=()), publish=False)
+
         def change_live_baseline(*args, **kwargs):
             (root / "IPTV-Playlist.m3u").write_text("#EXTM3U\n#concurrent-change\n", encoding="utf-8")
             return iptv
-        with patch("automation.core.v2_candidate_runner.run_iptv_discovery", side_effect=change_live_baseline), \\
-             patch("automation.core.v2_candidate_runner.derive_primary_stream_targets", return_value=[]), \\
-             patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=international), \\
-             patch("automation.core.v2_candidate_runner.assert_international_existing_rows_preserved"), \\
-             patch("automation.core.v2_candidate_runner.build_epg_source_candidate", return_value="<tv/>"), \\
-             patch("automation.core.v2_candidate_runner.build_epg_candidate", return_value=epg):
+
+        with (
+            patch("automation.core.v2_candidate_runner.run_iptv_discovery", side_effect=change_live_baseline),
+            patch("automation.core.v2_candidate_runner.derive_primary_stream_targets", return_value=[]),
+            patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=international),
+            patch("automation.core.v2_candidate_runner.assert_international_existing_rows_preserved"),
+            patch("automation.core.v2_candidate_runner.build_epg_source_candidate", return_value="<tv/>"),
+            patch("automation.core.v2_candidate_runner.build_epg_candidate", return_value=epg),
+        ):
             with self.assertRaisesRegex(RuntimeError, "baseline changed during candidate generation"):
-                run_candidate_bundle(root, date(2026,11,13), "c"*40, store)
+                run_candidate_bundle(root, date(2026, 11, 13), "c" * 40, store)
+
         transactions = root / "reports/automation-v2/candidates/transactions"
         self.assertFalse(transactions.exists())
         self.assertEqual(store.state["run_ledger"]["entries"][0]["status"], "failed")
@@ -118,7 +126,8 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), publish=False)
         with patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv):
             with self.assertRaisesRegex(ValueError, "removed"):
-                run_candidate_bundle(root, date(2026,11,13), "c"*40, MemoryStore())
+                run_candidate_bundle(root, date(2026, 11, 13), "c" * 40, MemoryStore())
+
 
 if __name__ == "__main__":
     unittest.main()
