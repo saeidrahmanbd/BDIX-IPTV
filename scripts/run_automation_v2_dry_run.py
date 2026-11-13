@@ -3,9 +3,13 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 
 from automation.core.playlist_contract import parse_rows, assert_iptv_existing_rows_preserved
 from automation.engines.international.candidate_engine import build_candidate as build_international_candidate, assert_international_rows_preserved
