@@ -26,7 +26,7 @@ class EpgAliasSuggestionTests(unittest.TestCase):
     def test_exact_display_name_suggestion(self):
         result=suggest_aliases(playlist([("missing.id","Star Jalsha")]),guide([("epg.id","Star Jalsha")]))
         self.assertEqual(result["suggestion_count"],1)
-        self.assertEqual(result["suggestions"][0]["match_type"],"fuzzy_name")
+        self.assertEqual(result["suggestions"][0]["match_type"],"exact_name")
         self.assertEqual(result["suggestions"][0]["confidence"],1.0)
 
     def test_fuzzy_name_suggestion_is_manual_only(self):
