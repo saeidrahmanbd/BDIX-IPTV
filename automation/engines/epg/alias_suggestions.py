@@ -57,7 +57,7 @@ def extract_epg_channels(xmltv_text: str) -> dict[str,EpgChannel]:
 
 def _locale_signature(channel_id: str) -> tuple[str | None,str | None]:
     value = channel_id.casefold()
-    country_match = re.search(r"\\.([a-z]{2})(?:@|$)",value)
+    country_match = re.search(r"\.([a-z]{2})(?:@|$)",value)
     country = country_match.group(1) if country_match else None
     region_match = re.search(r"@([a-z]+)$",value)
     region = region_match.group(1) if region_match else None
