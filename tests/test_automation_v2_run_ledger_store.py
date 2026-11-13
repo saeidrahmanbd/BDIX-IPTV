@@ -105,7 +105,7 @@ class RunLedgerStoreTests(unittest.TestCase):
 
     def test_running_entry_without_timestamp_fails_closed(self):
         from datetime import datetime
-        from automation.core.run_ledger import RunRequest, reserve_run
+        from automation.core.run_ledger import RunRequest, reserve_run, make_idempotency_key
         request = RunRequest("iptv",date(2026,11,13),"b"*40,"d"*64,
                              requested_at=datetime.fromisoformat("2026-11-13T10:00:00+06:00"))
         unknown_age = LedgerEntry(make_idempotency_key(request),"iptv",date(2026,11,13),"b"*40,"running",1)
