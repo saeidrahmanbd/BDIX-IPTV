@@ -106,5 +106,37 @@ class AutomationV2PolicyTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "excluded from Xtream"):
             validate_discovery_queues("#EXTM3U\n" + row("Candidate", "https://new.example/live.m3u8", group="New Channels"))
 
+
+    def test_international_removal_policy_is_three_definitive_dhaka_days(self):
+        international = self.policy["playlists"]["International-Playlist.m3u"]
+        failure = international["failure_policy"]
+        self.assertEqual(failure["timezone"], "Asia/Dhaka")
+        self.assertEqual(failure["consecutive_definitive_failed_days_before_removal"], 3)
+        self.assertEqual(failure["definitive_http_statuses"], [404, 410])
+        self.assertTrue(failure["missed_day_resets_streak"])
+        self.assertTrue(failure["inconclusive_resets_streak"])
+        self.assertIn("never_authorizes_removal", failure["network_auth_rate_limit_geo_block_or_global_incident"])
+
+    def test_international_country_group_requires_five_primary_identities(self):
+        groups = self.policy["playlists"]["International-Playlist.m3u"]["country_groups"]
+        self.assertEqual(groups["minimum_unique_primary_identities"], 5)
+        self.assertEqual(groups["fixed_groups"], ["Bangladesh", "India"])
+        self.assertFalse(groups["backup_review_and_discovery_rows_count"])
+
+    def test_manual_discovery_queues_are_hidden_from_xtream(self):
+        international = self.policy["playlists"]["International-Playlist.m3u"]
+        self.assertEqual(international["manual_queues"], ["New Channels", "New Backups"])
+        self.assertFalse(international["queue_visibility_in_xtream"])
+        self.assertFalse(self.policy["shared"]["new_channels_and_new_backups_xtream_visible"])
+
+    def test_iptv_existing_rows_remain_owner_controlled(self):
+        iptv = self.policy["playlists"]["IPTV-Playlist.m3u"]
+        self.assertEqual(iptv["owner"], "owner_curated")
+        self.assertEqual(iptv["mutation_mode"], "append_only_for_existing_streams")
+        self.assertEqual(iptv["owner_controlled_queues"], ["Backup", "Review", "New Channels", "New Backups"])
+        self.assertEqual(iptv["stream_failure_action"], "diagnostic_only")
+        self.assertEqual(iptv["existing_rows"]["deletion"], "forbidden")
+        self.assertEqual(iptv["existing_rows"]["url_replacement"], "forbidden")
+
 if __name__ == "__main__":
     unittest.main()
