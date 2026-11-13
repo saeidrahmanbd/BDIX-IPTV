@@ -907,6 +907,13 @@ def main():
                     license_name = "Unofficial generated fallback art; not a broadcaster-original logo"
                     license_url = ""
 
+            # A source page can expose the same known placeholder image under
+            # a fresh download. Validate the final repository-local reference,
+            # not only its HTTP source metadata; if it is still quarantined,
+            # discard it and remove the unsafe old reference below.
+            if new_file and not is_valid_local_logo_reference(raw_url(new_file)):
+                new_file = None
+
             if new_file:
                 fixes_cache[key] = new_file
                 logo_reference = raw_url(new_file)
