@@ -1,5 +1,6 @@
 name: IPTV Playlist Update
 # Owner-requested one-time cleanup is activated by a durable, explicit request marker.
+# A queued run superseded by later commits must be retriggered from the current main revision.
 # A superseded run leaves the marker intact; only a published migration report consumes it.
 # Rebuild all playlist-owned audit, gate, stream-health, logo and dashboard snapshots.
 # Playlist-only maintenance. EPG generation/validation is owned by Refresh IPTV EPG.
