@@ -191,7 +191,10 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "created_at": "2026-11-07T01:00:00Z",
             "jobs": [
                 {"name": "daily_guard", "status": "completed", "conclusion": "success"},
-                {"name": "discover", "status": "completed", "conclusion": "success"},
+                {"name": "discover", "status": "completed", "conclusion": "success", "steps": [{
+                    "name": "Discover Bangladesh and India candidates into manual-review queues",
+                    "conclusion": "success",
+                }]},
             ],
         }
         later_no_op = {
@@ -212,7 +215,13 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "id": 94, "status": "completed", "conclusion": "success",
             "created_at": "2026-11-07T02:45:00Z",
             "jobs": [
-                {"name": "check", "status": "completed", "conclusion": "success"},
+                {
+                    "name": "check", "status": "completed", "conclusion": "success",
+                    "steps": [{
+                        "name": "Probe all International streams and apply three-day policy",
+                        "conclusion": "success",
+                    }],
+                },
             ],
         }
         skipped_health = {
@@ -262,7 +271,10 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "created_at": "2026-11-07T01:00:00Z",
             "jobs": [
                 {"name": "daily_guard", "status": "completed", "conclusion": "success"},
-                {"name": "discover", "status": "completed", "conclusion": "success"},
+                {"name": "discover", "status": "completed", "conclusion": "success", "steps": [{
+                    "name": "Discover Bangladesh and India candidates into manual-review queues",
+                    "conclusion": "success",
+                }]},
             ],
         }
         manual_run = {
