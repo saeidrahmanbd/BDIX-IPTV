@@ -35,7 +35,7 @@ def _validate_local_logo(root: Path, value: str) -> str:
     if not logo.startswith("logos/"):
         raise ValueError("tvg_logo must reference a repository-local logos/ path")
     relative = Path(logo)
-    if relative.is_absolute() or ".." in relative.parts:
+    if relative.is_absolute() or ".." in relative.parts or "\\" in logo:
         raise ValueError("tvg_logo path traversal is forbidden")
     logo_root = (root / "logos").resolve()
     target = (root / relative).resolve()
