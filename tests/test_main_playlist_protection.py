@@ -170,6 +170,23 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             [("Backup", "A alternate", "https://a", "1", "a.bd")],
         )
 
+    def test_owner_migration_can_remove_backup_number_when_quarantining_to_review(self):
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "IPTV-Playlist.m3u"
+            state = Path(directory) / "state.json"
+            approvals = Path(directory) / "approvals.json"
+            authorization = Path(directory) / "owner-authorized"
+            authorization.touch()
+            self.write(playlist, [("Backup", "A alternate", "https://a", "501", "a.bd")])
+            guard.snapshot(playlist, state)
+            approvals.write_text(json.dumps([{
+                "url": "https://a", "source_group": "Backup",
+                "target_group": "Review", "allow_metadata": True
+            }]), encoding="utf-8")
+            self.write(playlist, [("Review", "A alternate", "https://a", "", "a.bd")])
+            with patch.object(guard, "OWNER_APPROVALS", approvals), patch.object(guard, "OWNER_MIGRATION_AUTHORIZED", authorization):
+                guard.verify(playlist, state)
+
     def test_primary_number_gap_is_blocked(self):
         self.assert_guard_blocks(
             [("Bangladesh", "A", "https://a", "1", "a.bd"),
