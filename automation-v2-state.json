@@ -22,7 +22,7 @@
         "engine": "bundle",
         "idempotency_key": "a2fcb8fba1b0d11a57ebda8d3af30c8186f9012603842caf6fa245054f80593e",
         "started_at": "2026-11-13T18:33:15.005973+06:00",
-        "status": "running"
+        "status": "failed"
       }
     ],
     "schema_version": 1,
