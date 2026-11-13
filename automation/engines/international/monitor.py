@@ -1,8 +1,8 @@
 """Compose one daily probe with durable ledger serialization and lifecycle streak calculation."""
 from __future__ import annotations
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import date
-from automation.engines.international.probe_ledger import parse_ledger, probes_for, record_probe
+from automation.engines.international.probe_ledger import parse_ledger, probes_for, record_probe, url_fingerprint
 from automation.engines.international.stream_failure_policy import Probe, consecutive_definitive_failure_days
 from automation.engines.international.stream_probe import probe_stream
 
@@ -21,7 +21,8 @@ def probe_and_record(ledger_text: str | None, identity: str, url: str,
     if not key:
         raise ValueError("channel identity is required")
     ledger=parse_ledger(ledger_text)
-    existing=probes_for(ledger,key)
+    fingerprint=url_fingerprint(url)
+    existing=tuple(item for item in probes_for(ledger,key) if item.url_fingerprint == fingerprint)
     if any(item.day == today for item in existing):
         latest=next(item for item in reversed(existing) if item.day == today)
         streak=consecutive_definitive_failure_days(list(existing),today)
@@ -33,6 +34,10 @@ def probe_and_record(ledger_text: str | None, identity: str, url: str,
     except ValueError:
         # Malformed or unsafe URLs are inconclusive; they must never abort the batch or count as failure.
         observation=Probe(today,None,network_error=True)
+    observation=replace(observation,url_fingerprint=fingerprint)
     updated=record_probe(ledger_text,key,observation)
-    streak=consecutive_definitive_failure_days(list(probes_for(parse_ledger(updated),key)),today)
+    streak=consecutive_definitive_failure_days(
+        [item for item in probes_for(parse_ledger(updated),key) if item.url_fingerprint == fingerprint],
+        today,
+    )
     return ObservationResult(key,observation.status_code,streak,updated,False)

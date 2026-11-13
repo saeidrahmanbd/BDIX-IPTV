@@ -1,10 +1,10 @@
 """Candidate-only International maintenance orchestrator over supplied stream targets."""
 from __future__ import annotations
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import date
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from automation.engines.international import monitor
-from automation.engines.international.probe_ledger import parse_ledger, probes_for, record_probe
+from automation.engines.international.probe_ledger import parse_ledger, probes_for, record_probe, url_fingerprint
 from automation.engines.international.engine import InternationalCandidate, build_international_candidate
 from automation.engines.international.planner import RowLifecycleInput
 from automation.engines.iptv.candidate_engine import DiscoveryCandidate
@@ -46,7 +46,8 @@ def run_international_candidate(playlist_text: str, ledger_text: str | None,
             raise ValueError("duplicate stream target identity")
         row_indexes.add(target.row_index)
         identities.add(target.identity.strip().casefold())
-        history=probes_for(ledger,target.identity)
+        fingerprint=url_fingerprint(target.url)
+        history=tuple(item for item in probes_for(ledger,target.identity) if item.url_fingerprint == fingerprint)
         if any(item.day == today for item in history):
             reused += 1
         else:
@@ -64,11 +65,16 @@ def run_international_candidate(playlist_text: str, ledger_text: str | None,
             for future in as_completed(futures):
                 target=futures[future]
                 try:
-                    observations[target.identity]=future.result()
+                    observations[target.identity]=replace(
+                        future.result(),url_fingerprint=url_fingerprint(target.url)
+                    )
                 except ValueError:
                     # Malformed or unsafe URLs are inconclusive, never a dead stream.
                     from automation.engines.international.stream_failure_policy import Probe
-                    observations[target.identity]=Probe(today,None,network_error=True)
+                    observations[target.identity]=Probe(
+                        today,None,network_error=True,
+                        url_fingerprint=url_fingerprint(target.url),
+                    )
 
     current_ledger=ledger_text or ""
     for target in pending:
@@ -80,7 +86,11 @@ def run_international_candidate(playlist_text: str, ledger_text: str | None,
     lifecycle_inputs=[]
     final_ledger=parse_ledger(current_ledger)
     for target in ordered_targets:
-        probe_history=probes_for(final_ledger,target.identity)
+        fingerprint=url_fingerprint(target.url)
+        probe_history=tuple(
+            item for item in probes_for(final_ledger,target.identity)
+            if item.url_fingerprint == fingerprint
+        )
         latest=probe_history[-1] if probe_history else None
         verified_role=(
             target.verified_stream_role

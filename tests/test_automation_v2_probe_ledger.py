@@ -41,5 +41,19 @@ class ProbeLedgerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"identity"):
             record_probe(None," ",Probe(date(2026,11,13),404))
 
+
+    def test_url_fingerprint_round_trips_with_observation(self):
+        fingerprint="a"*64
+        text=record_probe(None,"channel-a",Probe(date(2026,11,13),404,url_fingerprint=fingerprint))
+        self.assertEqual(probes_for(parse_ledger(text),"channel-a")[0].url_fingerprint,fingerprint)
+
+    def test_invalid_url_fingerprint_is_rejected(self):
+        bad=json.dumps({
+            "schema_version":1,"timezone":"Asia/Dhaka",
+            "channels":{"channel-a":[{"day":"2026-11-13","url_fingerprint":"not-a-digest"}]},
+        })
+        with self.assertRaisesRegex(ValueError,"URL fingerprint"):
+            parse_ledger(bad)
+
 if __name__=="__main__":
     unittest.main()

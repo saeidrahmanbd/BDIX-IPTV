@@ -1,4 +1,6 @@
 import sys
+import os
+import json
 import tempfile
 import unittest
 from datetime import date
@@ -10,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from automation.core.github_state_store import StateSnapshot, empty_state
-from automation.core.v2_candidate_runner import run_candidate_bundle
+from automation.core.v2_candidate_runner import run_candidate_bundle, _assert_current_main_head
 
 
 class MemoryStore:
@@ -177,6 +179,70 @@ class CandidateBundleRunnerTests(unittest.TestCase):
             404,
         )
         self.assertEqual(store.state["run_ledger"]["entries"][0]["status"], "failed")
+
+    def test_remote_main_advance_during_generation_aborts_candidate_stage(self):
+        temp, root = self.make_root()
+        self.addCleanup(temp.cleanup)
+        store = MemoryStore()
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), source_warnings=(), publish=False)
+        maintenance = SimpleNamespace(
+            candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0),
+            ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
+            probed_count=0, reused_count=0, publish=False,
+        )
+        international = SimpleNamespace(maintenance=maintenance, publish=False)
+        epg = SimpleNamespace(xml_text="<tv/>", decision=SimpleNamespace(accepted=True, errors=()), publish=False)
+        with (
+            patch("automation.core.v2_candidate_runner._assert_current_main_head", side_effect=[None, RuntimeError("main advanced during candidate generation")]) as head_check,
+            patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv),
+            patch("automation.core.v2_candidate_runner.derive_primary_stream_targets", return_value=[]),
+            patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=international),
+            patch("automation.core.v2_candidate_runner.assert_international_existing_rows_preserved"),
+            patch("automation.core.v2_candidate_runner.build_epg_source_candidate", return_value="<tv/>"),
+            patch("automation.core.v2_candidate_runner.build_epg_candidate", return_value=epg),
+        ):
+            with self.assertRaisesRegex(RuntimeError, "main advanced"):
+                run_candidate_bundle(root, date(2026, 11, 13), "c" * 40, store)
+
+        self.assertEqual(head_check.call_count, 2)
+        self.assertFalse((root / "reports/automation-v2/candidates/transactions").exists())
+        self.assertEqual(store.state["run_ledger"]["entries"][0]["status"], "failed")
+
+    def test_remote_main_head_check_accepts_exact_current_commit(self):
+        class Response:
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return json.dumps({"object":{"sha":"c"*40}}).encode()
+        with patch.dict(os.environ, {
+            "AUTOMATION_V2_REQUIRE_REMOTE_HEAD_CHECK":"1",
+            "GITHUB_REPOSITORY":"owner/repo",
+            "GITHUB_TOKEN":"test-token",
+        }, clear=True):
+            with patch("automation.core.v2_candidate_runner.urllib.request.urlopen", return_value=Response()) as request:
+                _assert_current_main_head("c"*40)
+        self.assertIn("/repos/owner/repo/git/ref/heads/main",request.call_args.args[0].full_url)
+
+    def test_remote_main_head_check_fails_closed_when_ref_api_is_unavailable(self):
+        import urllib.error
+        with patch.dict(os.environ, {
+            "AUTOMATION_V2_REQUIRE_REMOTE_HEAD_CHECK":"1",
+            "GITHUB_REPOSITORY":"owner/repo",
+            "GITHUB_TOKEN":"test-token",
+        }, clear=True):
+            with patch("automation.core.v2_candidate_runner.urllib.request.urlopen", side_effect=urllib.error.URLError("offline")):
+                with self.assertRaisesRegex(RuntimeError,"unable to verify current main baseline"):
+                    _assert_current_main_head("c"*40)
+
+    def test_remote_main_head_check_requires_token_when_enabled(self):
+        with patch.dict(os.environ, {
+            "AUTOMATION_V2_REQUIRE_REMOTE_HEAD_CHECK":"1",
+            "GITHUB_REPOSITORY":"owner/repo",
+        }, clear=True):
+            with self.assertRaisesRegex(RuntimeError,"GITHUB_TOKEN is required"):
+                _assert_current_main_head("c"*40)
 
 if __name__ == "__main__":
     unittest.main()

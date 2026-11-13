@@ -128,5 +128,22 @@ class InternationalOrchestratorTests(unittest.TestCase):
         self.assertEqual(set(parse_ledger(result.ledger_json)["channels"]),{"a","b"})
         self.assertEqual(mock.call_count,2)
 
+
+    @patch("automation.engines.international.monitor.probe_stream")
+    def test_changed_stream_url_is_not_reused_from_prior_probe(self,mock):
+        mock.return_value=Probe(DAY,404)
+        old=run_international_candidate(
+            PLAYLIST,None,[StreamTarget(0,"a","https://a.example/old.m3u8","Nepal","primary")],DAY
+        )
+        mock.reset_mock()
+        mock.return_value=Probe(DAY,200,stream_state="verified")
+        new=run_international_candidate(
+            PLAYLIST,old.ledger_json,
+            [StreamTarget(0,"a","https://a.example/new.m3u8","Nepal","primary")],DAY
+        )
+        self.assertEqual(new.probed_count,1)
+        self.assertEqual(new.reused_count,0)
+        self.assertEqual(mock.call_count,1)
+
 if __name__=="__main__":
     unittest.main()
