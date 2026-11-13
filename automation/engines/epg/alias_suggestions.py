@@ -114,13 +114,9 @@ def suggest_aliases(playlist_text: str, xmltv_text: str,
         exact_targets = sorted({target for name in channel.names for target in epg_name_normalized.get(normalize_name(name),set())})
         locale_conflicts = [(target,_locale_conflict(tvg_id,target)) for target in exact_targets]
         locale_conflicts = [(target,reason) for target,reason in locale_conflicts if reason]
-        if locale_conflicts:
-            ambiguous.append({"tvg_id":tvg_id,"playlist_names":list(channel.names),
-                              "candidate_ids":[target for target,_ in locale_conflicts],
-                              "reason":"; ".join(reason for _,reason in locale_conflicts)})
-            continue
-        if len(exact_targets) == 1:
-            target = exact_targets[0]
+        valid_exact_targets = [target for target in exact_targets if not _locale_conflict(tvg_id,target)]
+        if len(valid_exact_targets) == 1:
+            target = valid_exact_targets[0]
             matched_names = [name for name in epg[target].names if normalize_name(name) in {normalize_name(x) for x in channel.names}]
             suggestions.append({
                 "tvg_id":tvg_id,"epg_channel_id":target,"playlist_names":list(channel.names),
@@ -128,9 +124,14 @@ def suggest_aliases(playlist_text: str, xmltv_text: str,
                 "confidence":1.0,"status":"manual_review_required",
             })
             continue
-        if len(exact_targets) > 1:
+        if len(valid_exact_targets) > 1:
             ambiguous.append({"tvg_id":tvg_id,"playlist_names":list(channel.names),
-                              "candidate_ids":exact_targets,"reason":"exact display-name collision"})
+                              "candidate_ids":valid_exact_targets,"reason":"exact display-name collision"})
+            continue
+        if locale_conflicts:
+            ambiguous.append({"tvg_id":tvg_id,"playlist_names":list(channel.names),
+                              "candidate_ids":[target for target,_ in locale_conflicts],
+                              "reason":"; ".join(reason for _,reason in locale_conflicts)})
             continue
 
         scores: dict[str,tuple[float,str]] = {}
