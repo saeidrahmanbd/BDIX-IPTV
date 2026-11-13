@@ -71,7 +71,7 @@ def build_epg_source_candidate(repository_root: str | Path,
         )
         environment = os.environ.copy()
         environment["EPG_SOURCE_CACHE_DIR"] = str(workspace / "source-cache")
-        environment.setdefault("EPG_SOURCE_CACHE_TTL_SECONDS", "0")
+        environment["EPG_SOURCE_CACHE_TTL_SECONDS"] = "0"
         try:
             subprocess.run(
                 [sys.executable, str(runner)],
