@@ -198,6 +198,80 @@ https://stream.ottlive.co.in/anb/index.m3u8
 https://cdn.pishow.tv/ott/live/453/master.m3u8
 #EXTINF:-1 tvg-id="AngelTV.in@Africa" tvg-name="Angel TV Africa (720p)" group-title="New Channels",Angel TV Africa (720p)
 https://janya-digimix.akamaized.net/vglive-sk-904559/africa/ngrp:angelafrica_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@America" tvg-name="Angel TV America (720p)" group-title="New Channels",Angel TV America (720p)
+https://janya-digimix.akamaized.net/vglive-sk-374850/america/ngrp:angelamerica_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@Arabia" tvg-name="Angel TV Arabia (720p)" group-title="New Channels",Angel TV Arabia (720p)
+https://janya-digimix.akamaized.net/vglive-sk-213167/arabia/ngrp:angelarabia_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@Australia" tvg-name="Angel TV Australia (720p)" group-title="New Channels",Angel TV Australia (720p)
+https://janya-digimix.akamaized.net/vglive-sk-310787/australia/ngrp:angelaustralia_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@Chinese" tvg-name="Angel TV Chinese (720p)" group-title="New Channels",Angel TV Chinese (720p)
+https://janya-digimix.akamaized.net/vglive-sk-999451/chinese/ngrp:angelchinese_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@Europe" tvg-name="Angel TV Europe (720p)" group-title="New Channels",Angel TV Europe (720p)
+https://janya-digimix.akamaized.net/vglive-sk-512011/europe/ngrp:angeleurope_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@FarEast" tvg-name="Angel TV FarEast (720p)" group-title="New Channels",Angel TV FarEast (720p)
+https://janya-digimix.akamaized.net/vglive-sk-438760/fareast/ngrp:angelfareast_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@Hebrew" tvg-name="Angel TV Hebrew (720p)" group-title="New Channels",Angel TV Hebrew (720p)
+https://janya-digimix.akamaized.net/vglive-sk-150533/hebrew/ngrp:angelhebrew_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@IndoChina" tvg-name="Angel TV Indo-China (720p)" group-title="New Channels",Angel TV Indo-China (720p)
+https://janya-digimix.akamaized.net/vglive-sk-703035/indochina/ngrp:angelindochina_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@Indonesia" tvg-name="Angel TV Indonesia (720p)" group-title="New Channels",Angel TV Indonesia (720p)
+https://janya-digimix.akamaized.net/vglive-sk-234616/indonesia/ngrp:angelindonesia_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@Nepal" tvg-name="Angel TV Nepal (720p)" group-title="New Channels",Angel TV Nepal (720p)
+https://janya-digimix.akamaized.net/vglive-sk-109639/nepali/ngrp:angelnepali_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@Portuguese" tvg-name="Angel TV Portuguese (720p)" group-title="New Channels",Angel TV Portuguese (720p)
+https://janya-digimix.akamaized.net/vglive-sk-382409/portuese/ngrp:angelportuguese_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@Russian" tvg-name="Angel TV Russian (720p)" group-title="New Channels",Angel TV Russian (720p)
+https://janya-digimix.akamaized.net/vglive-sk-955415/russia/ngrp:angelrussia_all/playlist.m3u8
+#EXTINF:-1 tvg-id="AngelTV.in@Spanish" tvg-name="Angel TV Spanish (720p)" group-title="New Channels",Angel TV Spanish (720p)
+https://janya-digimix.akamaized.net/vglive-sk-351398/spanish/ngrp:angelspanish_all/playlist.m3u8
+#EXTINF:-1 tvg-id="APN.in@SD" tvg-name="APN (576p)" group-title="New Channels",APN (576p)
+https://d1msejlow1t3l4.cloudfront.net/fta/apnnews/playlist.m3u8
+#EXTINF:-1 tvg-id="ArgusNews.in@SD" tvg-name="Argus News (576p)" group-title="New Channels",Argus News (576p)
+https://mumt05.tangotv.in/87NeALx2ARGUSNEWS/index.m3u8
+#EXTINF:-1 tvg-id="ArputharYesuTV.in@SD" tvg-name="Arputhar Yesu TV (576p)" group-title="New Channels",Arputhar Yesu TV (576p)
+https://account33.livebox.co.in/jesushelpshls/live.m3u8
+#EXTINF:-1 tvg-id="ARYNews.pk@SD" tvg-name="ARY News" group-title="New Channels",ARY News
+https://cdn07lhr.tamashaweb.com:8087/jazzauth/vsat-arynews-abr/live/vsat-arynews-H/chunks_dvr_timeshift-0-3600.m3u8
+#EXTINF:-1 tvg-id="AshwaveegaNews24x7.in@SD" tvg-name="Ashwaveega News 24x7 (720p)" group-title="New Channels",Ashwaveega News 24x7 (720p)
+https://mars.streambridge.cloud/sls/ashwaveega/playlist.m3u8
+#EXTINF:-1 tvg-id="AsianetNews.in@SD" tvg-name="Asianet News (1080p)" group-title="New Channels",Asianet News (1080p)
+https://amg13737-amg13737c1-amgplt0016.playout.now3.amagi.tv/playlist/amg13737-amg13737c1-amgplt0016/playlist.m3u8
+#EXTINF:-1 tvg-id="AsianetSuvarnaNews.in@SD" tvg-name="Asianet Suvarna News (720p)" group-title="New Channels",Asianet Suvarna News (720p)
+https://asianet-prasarbharati.vgcdn.net/out/v1/bd05c931d9d94d288bbe455cc0f7e229/playlist.m3u8
+#EXTINF:-1 tvg-id="AsianNews.in@SD" tvg-name="Asian News (1080p)" group-title="New Channels",Asian News (1080p)
+https://stream.ottlive.co.in/asiannews/index.m3u8
+#EXTINF:-1 tvg-id="Astroscience.in@SD" tvg-name="Astroscience (576p)" group-title="New Channels",Astroscience (576p)
+https://yuppnimrestreammum.akamaized.net/181224/smil:astrotech.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+#EXTINF:-1 tvg-id="ATNSamachar.in@SD" tvg-name="ATN Samachar (1080p)" group-title="New Channels",ATN Samachar (1080p)
+https://newsliveindia.com:4433/atn/index.m3u8
+#EXTINF:-1 tvg-id="AwaazIndiaTV.in@SD" tvg-name="Awaaz India TV (720p) [Not 24/7]" group-title="New Channels",Awaaz India TV (720p) [Not 24/7]
+https://awaazindia.livebox.co.in/AwaazIndaTVhls/Live.m3u8
+#EXTINF:-1 tvg-id="AwakeningTV.in@SD" tvg-name="Awakening TV (576p)" group-title="New Channels",Awakening TV (576p)
+https://d2gvyg6lvauoko.cloudfront.net/230226/awakeningtv/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+#EXTINF:-1 tvg-id="BadaKhabar.in@SD" tvg-name="Bada Khabar (576p)" group-title="New Channels",Bada Khabar (576p)
+https://mumbai-edge.smartplaytv.in/BADAKHABAR/index.m3u8
+#EXTINF:-1 tvg-id="BanglaJago.in@SD" tvg-name="Bangla Jago (720p)" group-title="New Channels",Bangla Jago (720p)
+https://banglajagotv.livebox.co.in/banglajagohls/24x7.m3u8
+#EXTINF:-1 tvg-id="BansalNews.in@SD" tvg-name="Bansal News (1080p)" group-title="New Channels",Bansal News (1080p)
+https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/4f8d92312b9a4783bbd706cf7ed86085/index.m3u8
+#EXTINF:-1 tvg-id="BhagyamTV.in@SD" tvg-name="Bhagyam TV (1080p)" group-title="New Channels",Bhagyam TV (1080p)
+https://ott.bhagyam.net/hls/bhagyamweb/index-1409148900-now.m3u8
+#EXTINF:-1 tvg-id="BhakthiSiri.in@SD" tvg-name="Bhakthi Siri (576p)" group-title="New Channels",Bhakthi Siri (576p)
+https://mumbai-edge.smartplaytv.in/Bhakthisiri/index.m3u8
+#EXTINF:-1 tvg-id="BhakthiTV.in@SD" tvg-name="Bhakthi TV (720p)" group-title="New Channels",Bhakthi TV (720p)
+https://cdn.pishow.tv/ott/live/397/master.m3u8
+#EXTINF:-1 tvg-id="BhaktiDhara.in@SD" tvg-name="Bhakti Dhara (720p)" group-title="New Channels",Bhakti Dhara (720p)
+https://newsliveindia.com:4433/bhaktidhara/index.m3u8
+#EXTINF:-1 tvg-id="BhaktiSagar.in@SD" tvg-name="Bhakti Sagar (576p)" group-title="New Channels",Bhakti Sagar (576p)
+https://mumt05.tangotv.in/87NeALx2BHAKTISAGAR/index.m3u8
+#EXTINF:-1 tvg-id="Bharat24.in@SD" tvg-name="Bharat24 (1080p)" group-title="New Channels",Bharat24 (1080p)
+https://vglivessai.akamaized.net/ptnr-lg/title-Bharat24News_LGIndia/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/ebcf5152-686a-43ae-ad13-15bc198112b7/index.m3u8
+#EXTINF:-1 tvg-id="BharatAtoZ.in@SD" tvg-name="Bharat AtoZ (720p)" group-title="New Channels",Bharat AtoZ (720p)
+https://live.ekamraott.com/4tv/bharata2z/index.m3u8
+#EXTINF:-1 tvg-id="BharatExpress.in@SD" tvg-name="Bharat Express (1080p)" group-title="New Channels",Bharat Express (1080p)
+https://stream.ottlive.co.in/bharatexpress/index.m3u8
+#EXTINF:-1 tvg-id="BharatSamachar.in@SD" tvg-name="Bharat Samachar (576p)" group-title="New Channels",Bharat Samachar (576p)
+https://fta.ektv.in/live/97/97_0.m3u8
 #EXTINF:-1 tvg-id="24NewsHD.pk@SD" tvg-name="24 News HD" group-title="New Backups",24 News HD
 https://cdn4.mjunoon.tv:8087/streamtest/146M/chunks.m3u8
 #EXTINF:-1 tvg-id="AajTak.in@HD" tvg-name="Aaj Tak HD (1080p)" group-title="New Backups",Aaj Tak HD (1080p)
@@ -260,6 +334,14 @@ https://fta.ektv.in/live/688/master.m3u8
 https://tvsen6.aynaott.com/DpPnXP9r/index.m3u8
 #EXTINF:-1 tvg-id="ZeeBusiness.in@SD" tvg-name="Zee Business (1080p)" group-title="New Backups",Zee Business (1080p)
 https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zee_business/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/af1b3fa3-f56d-4741-9c63-78409a798988/main.m3u8
+#EXTINF:-1 tvg-id="DDNews.in@SD" tvg-name="DD News (1080p)" group-title="New Backups",DD News (1080p)
+https://mumbai-edge.smartplaytv.in/DDNews/index.m3u8
+#EXTINF:-1 tvg-id="Gyandarshan.in@SD" tvg-name="Gyandarshan (720p)" group-title="New Backups",Gyandarshan (720p)
+https://cdn.pishow.tv/ott/live/14/master.m3u8
+#EXTINF:-1 tvg-id="TimesNowNavbharat.in@SD" tvg-name="Times Now Navbharat (1080p)" group-title="New Backups",Times Now Navbharat (1080p)
+https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/a5ee7c4e7a2a4b15a22a3bcf523b9776/index.m3u8
+#EXTINF:-1 tvg-id="Travelxp.in@4KCzechia" tvg-name="Travelxp 4K Czechia" group-title="New Backups",Travelxp 4K Czechia
+http://88.212.7.14/live/travel_xp_4k/index.m3u8
 #EXTINF:-1 tvg-id="custom.rajdhani" channel-id="custom.rajdhani" tvg-language="asm" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv.png" tvg-country="BD" group-title="Review" tvg-name="Rajdhani TV",Rajdhani TV
 http://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8
 #EXTINF:-1 tvg-id="RTV.bd" channel-id="RTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rtv.png" tvg-country="BD" group-title="Bangladesh" tvg-name="RTV",RTV
