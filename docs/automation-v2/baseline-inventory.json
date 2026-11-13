@@ -1,0 +1,58 @@
+{
+  "audit_date": "2026-11-13",
+  "repository": "saeidrahmanbd/BDIX-IPTV",
+  "production_branch": "main",
+  "baseline_commit": "46275f5ebafa2ae1b56f3e480f684ac1e85ae45e",
+  "audit_branch": "automation-v2/inventory-audit",
+  "recursive_tree_entries": 5633,
+  "recursive_tree_truncated": false,
+  "counts": {
+    "workflows": 17,
+    "scripts": 79,
+    "tests": 50,
+    "logo_files": 5372,
+    "reports": 44,
+    "epg_files": 3
+  },
+  "baseline_blobs": {
+    "IPTV-Playlist.m3u": {
+      "sha": "eb46b5ef4ddfde11a010389d1f0202a7bd418b0a",
+      "bytes": 445629
+    },
+    "International-Playlist.m3u": {
+      "sha": "c49c650d4e445620ae5fb91627eaa7f481ccea38",
+      "bytes": 987933
+    },
+    "epg/epg.xml": {
+      "sha": "b28414c75937bd155067c6db5e6e2083ee4004b",
+      "bytes": 30944668
+    },
+    "README.md": {
+      "sha": "95c17697b536218d30c6f1eb3dcf5be8aa0cc93d",
+      "bytes": 13698
+    }
+  },
+  "recent_100_runs": {
+    "iptv_playlist_update_failures": 6,
+    "test_suite_success": 3,
+    "test_suite_failure": 1,
+    "test_suite_cancelled": 2,
+    "epg_refresh_success": 17,
+    "xtream_health_success": 20
+  },
+  "diagnosed_failure": {
+    "runs": [
+      1588,
+      1589
+    ],
+    "job": "maintain",
+    "failure": "IPTV owner-protection gate failed with 4 issue(s)",
+    "changed_channel_numbers": [
+      "GTC Punjabi",
+      "Manoranjan TV",
+      "The Movie Club",
+      "Thikana TV"
+    ]
+  },
+  "production_mutations": false
+}
