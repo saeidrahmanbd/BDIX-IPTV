@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "baseline_commit": "46275f5ebafa2ae1b56f3e480f684ac1e85ae45e",
+  "baseline_commit": "aec37357dfbb47f0792682af744ccaf111416d7a",
   "scope": "exact tvg-logo path references in IPTV-Playlist.m3u and International-Playlist.m3u only; source/config/report references are not yet assessed",
   "logo_image_files_total": 5366,
   "unique_normalized_tvg_logo_paths": 2395,
