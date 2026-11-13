@@ -26,7 +26,10 @@
     "do not classify HTTP 401/403/429/5xx, DNS, TLS, timeout or other inconclusive probe results as dead",
     "do not promote reachable but unclassified or logo-incomplete candidates out of discovery queues"
   ],
-  "consume_only_after": "reports/owner-requested-main-migrations.md is published to main",
+  "consume_only_after": null,
   "retry_requested_at": "2026-11-12T19:42:00+06:00",
-  "retry_reason": "Previous run #1549 was superseded before the migration step; rerun the still-pending owner-authorized playlist correction on current main."
+  "retry_reason": "Previous run #1549 was superseded before the migration step; rerun the still-pending owner-authorized playlist correction on current main.",
+  "status": "cancelled",
+  "cancelled_at": "2026-11-13T12:08:00+06:00",
+  "cancellation_reason": "Superseded by the current non-destructive permission policy. Existing IPTV rows may not be moved, promoted, demoted, deleted, replaced, sorted or renumbered."
 }
