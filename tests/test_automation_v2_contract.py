@@ -71,8 +71,8 @@ class AutomationV2PolicyTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             baseline = Path(directory) / "baseline.m3u"
             candidate = Path(directory) / "candidate.m3u"
-            baseline.write_text("#EXTM3U\\n" + '#EXTINF:-1 tvg-chno="1" group-title="Bangladesh",A\\nhttps://a.example/a\\n', encoding="utf-8")
-            candidate.write_text(baseline.read_text(encoding="utf-8") + '#EXTINF:-1 group-title="New Channels",B\\nhttps://b.example/b\\n', encoding="utf-8")
+            baseline.write_text("#EXTM3U\n" + '#EXTINF:-1 tvg-chno="1" group-title="Bangladesh",A\nhttps://a.example/a\n', encoding="utf-8")
+            candidate.write_text(baseline.read_text(encoding="utf-8") + '#EXTINF:-1 group-title="New Channels",B\nhttps://b.example/b\n', encoding="utf-8")
             result = validate_candidate("IPTV-Playlist.m3u", baseline, candidate)
             self.assertEqual(result["invariants"], "PASS")
             self.assertFalse(result["publish"])
@@ -83,7 +83,7 @@ class AutomationV2PolicyTests(unittest.TestCase):
         from candidate import validate_candidate
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "same.m3u"
-            path.write_text("#EXTM3U\\n", encoding="utf-8")
+            path.write_text("#EXTM3U\n", encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "separate file"):
                 validate_candidate("IPTV-Playlist.m3u", path, path)
 
