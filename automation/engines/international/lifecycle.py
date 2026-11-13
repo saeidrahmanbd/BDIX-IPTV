@@ -2,7 +2,7 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from datetime import date
-from stream_failure_policy import Probe, consecutive_definitive_failure_days, action_for_failure_streak
+from automation.engines.international.stream_failure_policy import Probe, consecutive_definitive_failure_days, action_for_failure_streak
 
 @dataclass(frozen=True)
 class ChannelState:
