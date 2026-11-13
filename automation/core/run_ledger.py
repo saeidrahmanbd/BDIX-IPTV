@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 import hashlib
 
 VALID_STATUSES = {"running","succeeded","failed","cancelled"}
-RUN_LEASE_MINUTES = 180
+RUN_LEASE_MINUTES = 130
 TIMEZONE = "Asia/Dhaka"
 
 @dataclass(frozen=True)
