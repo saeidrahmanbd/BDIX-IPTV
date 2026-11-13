@@ -30,7 +30,9 @@ def build_epg_candidate_persisted(playlist_text: str, last_known_good_xml: str,
                                   source_candidate_xml: str | None = None,
                                   approved_aliases: list[ApprovedAlias] | None = None,
                                   as_of: datetime | None = None,
-                                  repository_root: str | None = None):
+                                  repository_root: str | None = None,
+                                  iptv_playlist_text: str | None = None,
+                                  international_playlist_text: str | None = None):
     """Build one idempotently reserved EPG candidate; no publication or production writes."""
     import hashlib
     import json
@@ -56,7 +58,11 @@ def build_epg_candidate_persisted(playlist_text: str, last_known_good_xml: str,
         candidate_xml = source_candidate_xml
         if candidate_xml is None and repository_root is not None:
             from automation.engines.epg.source_provider import build_epg_source_candidate
-            candidate_xml = build_epg_source_candidate(repository_root)
+            candidate_xml = build_epg_source_candidate(
+                repository_root,
+                iptv_playlist_text=iptv_playlist_text,
+                international_playlist_text=international_playlist_text,
+            )
         return build_epg_candidate(
             playlist_text, last_known_good_xml, candidate_xml,
             approved_aliases, as_of
