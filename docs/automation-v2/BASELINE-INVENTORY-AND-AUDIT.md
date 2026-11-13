@@ -204,3 +204,12 @@ This section supersedes the early Phase 2 progress notes above.
 - V2 now includes candidate-only IPTV metadata/discovery, International stream probe/ledger/lifecycle, EPG candidate/approved-alias, run-ledger, transaction-gate and atomic candidate-bundle components.
 - Still not implemented: production Git publisher, full discovery-source integration, complete legacy workflow retirement/replacement, exhaustive dynamic side-effect tracing, failure-injection/rollback testing, and production cutover.
 - Production playlists, EPG and legacy workflows remain unchanged. No V2 production publishing is enabled.
+
+
+## 12. Latest hardening verification (2026-11-13)
+
+- Full repository regression: **707 tests passed** on commit f4af3fe24e8cef5192c13c31e425d9a660f3878a.
+- The latest additions cover idempotent daily International probes, malformed URL handling as inconclusive, batch lifecycle orchestration, row-index/tvg-id identity binding, symlink-safe transaction locks and candidate staging.
+- V2 contract CI for this latest hardening commit is queued; the preceding V2 CI run passed 168 focused tests, policy checks, all-engine immutable baseline dry run and logo audit.
+- The successful all-engine baseline dry run accepted IPTV, International and both EPG candidates without changes; candidate playlist changes=0, EPG changes=0, publish=false and production_files_modified=false.
+- The legacy workflow retirement map is documented in LEGACY-WORKFLOW-RETIREMENT-MAP.md. No legacy workflow has been disabled or replaced on main.
