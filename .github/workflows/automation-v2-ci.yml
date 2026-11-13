@@ -16,6 +16,7 @@ on:
       - '.github/workflows/automation-v2-ci.yml'
   pull_request:
     branches:
+      - main
       - automation-v2/**
     paths:
       - 'automation/**'
