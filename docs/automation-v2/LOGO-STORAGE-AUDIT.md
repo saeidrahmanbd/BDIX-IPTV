@@ -12,7 +12,7 @@ Baseline: 46275f5ebafa2ae1b56f3e480f684ac1e85ae45e
 
 The complete preliminary path list is in logo-reference-baseline.json.
 
-## Repository-wide audit (CI run 69)
+## Repository-wide audit (verified V2 CI run 43409009201)
 
 The repository-wide scanner now separates active playlist references, runtime code/config/registry references, and report-only references. It also checks exact byte-identical file hashes.
 
@@ -25,8 +25,8 @@ The repository-wide scanner now separates active playlist references, runtime co
 - Duplicate groups with no runtime-referenced member: **146 groups / 373 files**.
 - Missing targets referenced by runtime sources: **75**. The audit did not find any of these 75 missing targets referenced directly by either production playlist; their listed sources are scripts and logo registries/manifests.
 
-The full machine-readable report is uploaded as the automation-v2-logo-reference-audit artifact in CI run 69:
-https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/43402368928
+The full machine-readable report is uploaded as the automation-v2-logo-reference-audit artifact in the verified V2 CI run:
+https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/43409009201
 
 It includes exact file lists and source paths.
 
