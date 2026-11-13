@@ -219,7 +219,14 @@ def classify(a, name, group, country, promote_backup=False):
 
     # Adult is a protected curated category. Clearly identified Adult orphans
     # are recovered only in the explicit orphan-promotion pass.
-    if group_key in {"adult", "xxx", "adult movies"} or (promote_backup and is_adult_channel(a, name, group)):
+    ident = (a.get("tvg-id") or a.get("channel-id") or "").strip().casefold()
+    content_key = re.sub(r"[^a-z0-9]+", "", str(a.get("tvg-content") or "").casefold())
+    # Restore unmistakably Adult-coded alternates to the curated Adult group.
+    # Generic names alone must never reclassify an ordinary Backup stream.
+    explicit_adult_backup = group_key in BACKUP_GROUPS and (
+        ".xxx" in ident or content_key in {"adult", "xxx", "porn", "adultentertainment"}
+    )
+    if group_key in {"adult", "xxx", "adult movies"} or explicit_adult_backup or (promote_backup and is_adult_channel(a, name, group)):
         return "Adult", None, None
 
     # Health-flagged rows remain in Review until the stream checker clears them.
