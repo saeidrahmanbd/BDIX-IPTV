@@ -83,8 +83,20 @@ def verify(playlist: Path, state: Path):
     saved = json.loads(state.read_text(encoding="utf-8"))
     before, after = saved["rows"], records(playlist)
     failures = []
-    if category_registry(playlist) != saved.get("category_registry"):
-        failures.append("The owner's Playlist Studio category registry changed.")
+    primary_ids = {}
+    for row in after:
+        if row.get("group") not in PRIMARY_GROUPS:
+            continue
+        identity_name = re.sub(r"[^a-z0-9]+", "", str(row.get("name", "")).casefold())
+        for identity in row.get("ids", set()):
+            previous = primary_ids.get(identity)
+            if previous is not None and previous != identity_name:
+                failures.append(
+                    f"Duplicate primary channel identity {identity!r}: assigned to multiple channel names."
+                )
+            else:
+                primary_ids[identity] = identity_name
+    if category_registry(playlist) != saved.get("category_registry"):        failures.append("The owner's Playlist Studio category registry changed.")
     expected = Counter(str(row["url"]) for row in before)
     actual = Counter(str(row["url"]) for row in after)
     missing = expected - actual
