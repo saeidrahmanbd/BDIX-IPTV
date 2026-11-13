@@ -31,6 +31,10 @@ class InternationalCandidateEngineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"#EXTM3U"):
             build_candidate("not a playlist",[GroupChange(0,"Review","x")])
 
+    def test_unsafe_group_value_rejected(self):
+        with self.assertRaisesRegex(ValueError,"single line"):
+            build_candidate(BASE,[GroupChange(0,'Bad"Group',"unsafe")])
+
     def test_unchanged_input_returns_identical_text(self):
         self.assertEqual(build_candidate(BASE,[]),BASE)
 
