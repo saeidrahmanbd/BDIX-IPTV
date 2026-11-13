@@ -64,6 +64,15 @@ class AutomationV2PolicyTests(unittest.TestCase):
         after = before + row("Candidate", "https://new.example/new.m3u8", group="New Channels")
         assert_iptv_existing_rows_preserved(before, after)
 
+    def test_baseline_playlists_parse_without_losing_rows(self):
+        from playlist_contract import parse_rows
+        for filename in ("IPTV-Playlist.m3u", "International-Playlist.m3u"):
+            text = (ROOT / filename).read_text(encoding="utf-8-sig")
+            expected = sum(line.startswith("#EXTINF:") for line in text.splitlines())
+            parsed = parse_rows(text)
+            self.assertEqual(len(parsed), expected, filename)
+            self.assertTrue(all(row.url.startswith(("http://", "https://")) for row in parsed), filename)
+
     def test_discovery_queues_are_not_xtream_publishable(self):
         with self.assertRaisesRegex(ValueError, "excluded from Xtream"):
             validate_discovery_queues("#EXTM3U\n" + row("Candidate", "https://new.example/live.m3u8", group="New Channels"))
