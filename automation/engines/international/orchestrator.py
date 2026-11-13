@@ -7,6 +7,7 @@ from automation.engines.international.probe_ledger import parse_ledger, probes_f
 from automation.engines.international.engine import InternationalCandidate, build_international_candidate
 from automation.engines.international.planner import RowLifecycleInput
 from automation.engines.iptv.candidate_engine import DiscoveryCandidate
+from automation.core.playlist_contract import parse_rows, ATTR_RE
 
 @dataclass(frozen=True)
 class StreamTarget:
@@ -47,9 +48,16 @@ def run_international_candidate(playlist_text: str, ledger_text: str | None,
             reused+=1
         else:
             probed+=1
+        probe_history = probes_for(parse_ledger(current_ledger),target.identity)
+        latest = probe_history[-1] if probe_history else None
+        verified_role = (
+            target.verified_stream_role
+            if latest is not None and latest.stream_state == "verified"
+            else None
+        )
         lifecycle_inputs.append(RowLifecycleInput(
             target.row_index,target.identity,target.primary_group,
-            target.verified_stream_role,probes_for(parse_ledger(current_ledger),target.identity)
+            verified_role,probe_history
         ))
     candidate=build_international_candidate(playlist_text,lifecycle_inputs,today,discoveries=discoveries)
     return InternationalMaintenanceResult(candidate,current_ledger or "",probed,reused,False)
@@ -93,3 +101,25 @@ def run_international_candidate_persisted(playlist_text: str, targets: list[Stre
         return result
 
     return execute_remote_run(store, request, operation)
+
+
+def derive_primary_stream_targets(playlist_text: str) -> list[StreamTarget]:
+    """Derive only unambiguous primary rows; queues/backups and duplicate IDs are excluded."""
+    rows = parse_rows(playlist_text)
+    queue_groups = {"backup", "review", "new channels", "new backups", "new backup", "not playing"}
+    candidates = []
+    counts = {}
+    for index, row in enumerate(rows):
+        attrs = dict(ATTR_RE.findall(row.extinf))
+        identity = (attrs.get("tvg-id") or "").strip()
+        if not identity or row.group.strip().casefold() in queue_groups:
+            continue
+        if not row.url.startswith(("http://", "https://")):
+            continue
+        counts[identity.casefold()] = counts.get(identity.casefold(), 0) + 1
+        candidates.append((index, identity, row.url, row.group.strip()))
+    return [
+        StreamTarget(index, identity, url, group, "primary")
+        for index, identity, url, group in candidates
+        if counts[identity.casefold()] == 1
+    ]
