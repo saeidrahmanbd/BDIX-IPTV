@@ -1,10 +1,13 @@
 """Deterministic run-ledger reservation policy; persistence and publishing are intentionally absent."""
 from __future__ import annotations
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
 import hashlib
 
 VALID_STATUSES = {"running","succeeded","failed","cancelled"}
+RUN_LEASE_MINUTES = 180
+TIMEZONE = "Asia/Dhaka"
 
 @dataclass(frozen=True)
 class RunRequest:
@@ -12,6 +15,7 @@ class RunRequest:
     business_day: date
     baseline_commit: str
     input_fingerprint: str
+    requested_at: datetime | None = None
 
 @dataclass(frozen=True)
 class LedgerEntry:
@@ -21,6 +25,7 @@ class LedgerEntry:
     baseline_commit: str
     status: str
     attempt: int
+    started_at: datetime | None = None
 
 @dataclass(frozen=True)
 class ReservationDecision:
@@ -50,8 +55,21 @@ def reserve_run(request: RunRequest, entries: list[LedgerEntry],
         raise ValueError("ledger contains an unknown run status")
     if active_transaction_id:
         return ReservationDecision(False,key,0,"another publication transaction holds the global lock")
-    if any(entry.engine.strip().casefold() == engine and entry.status == "running" for entry in entries):
-        return ReservationDecision(False,key,0,"another run for this engine is already running")
+    now = request.requested_at or datetime.now(ZoneInfo(TIMEZONE))
+    if now.tzinfo is None or now.utcoffset() is None:
+        raise ValueError("requested_at must be timezone-aware")
+    active_runs = []
+    for entry in entries:
+        if entry.engine.strip().casefold() != engine or entry.status != "running":
+            continue
+        # Unknown timestamps fail closed. A known lease expires only after a
+        # generous window longer than the longest candidate-generation workflow.
+        if entry.started_at is None or entry.started_at.tzinfo is None or entry.started_at.utcoffset() is None:
+            active_runs.append(entry)
+        elif now - entry.started_at <= timedelta(minutes=RUN_LEASE_MINUTES):
+            active_runs.append(entry)
+    if active_runs:
+        return ReservationDecision(False,key,0,"another non-expired run for this engine is already running")
     if any(entry.status == "succeeded" for entry in matching):
         return ReservationDecision(False,key,0,"this exact input has already completed successfully")
     attempt = max((entry.attempt for entry in matching),default=0) + 1
