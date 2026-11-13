@@ -59,6 +59,9 @@ def write_candidate_bundle(root: str | Path, run_id: str, bundle: CandidateBundl
         raise ValueError("candidate bundle has not passed all gates or is marked publishable")
     if set(candidate_contents) != set(bundle.manifest.changed_paths):
         raise ValueError("candidate content paths do not match the validated manifest")
+    for path,content in candidate_contents.items():
+        if _sha256(content) != bundle.manifest.candidate_fingerprints.get(path):
+            raise ValueError(f"candidate content fingerprint changed after validation: {path}")
     base=Path(root).resolve()
     parent=base/"reports"/"automation-v2"/"candidates"
     parent.mkdir(parents=True,exist_ok=True)
