@@ -9,11 +9,15 @@ on:
       - '.github/workflows/discovery-schedule-watchdog.yml'
       - 'scripts/discovery_schedule_guard.py'
   schedule:
-    - cron: '15 1 * * *'  # 07:15 Asia/Dhaka: discovery recovery
-    - cron: '45 1 * * *'  # 07:45 Asia/Dhaka: discovery recovery
-    - cron: '15 2 * * *'  # 08:15 Asia/Dhaka: final discovery recovery
-    - cron: '15 3 * * *'  # 09:15 Asia/Dhaka: stream-health recovery
-    - cron: '15 4 * * *'  # 10:15 Asia/Dhaka: final stream-health recovery
+    - cron: '15 1 * * *'  # 07:15 early checkpoint
+    - cron: '30 1 * * *'  # 07:30 maintenance/discovery recovery
+    - cron: '45 1 * * *'  # 07:45 second discovery checkpoint
+    - cron: '15 2 * * *'  # 08:15 final discovery checkpoint
+    - cron: '30 2 * * *'  # 08:30 full logo recovery
+    - cron: '15 3 * * *'  # 09:15 stream-health recovery
+    - cron: '30 3 * * *'  # 09:30 EPG recovery
+    - cron: '15 4 * * *'  # 10:15 final checkpoint
+    - cron: '15 5 * * *'  # 11:15 last checkpoint
 
 permissions:
   actions: write
@@ -41,6 +45,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           python scripts/discovery_schedule_guard.py watchdog \
+            iptv-maintenance.yml \
             new-channel-discovery.yml \
             international-channel-discovery.yml \
-            international-stream-health.yml
+            playlist-logo-localization.yml \
+            international-stream-health.yml \
+            epg-refresh.yml
