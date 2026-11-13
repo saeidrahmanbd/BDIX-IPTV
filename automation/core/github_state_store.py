@@ -121,3 +121,60 @@ def store_from_environment() -> GitHubStateStore:
     branch = os.environ.get("AUTOMATION_V2_STATE_BRANCH", "automation-v2-state")
     token = os.environ.get("GITHUB_TOKEN", "") or os.environ.get("GH_TOKEN", "")
     return GitHubStateStore(repository, branch, token)
+
+
+def reserve_remote_run(store: GitHubStateStore, request, active_transaction_id: str | None = None):
+    """Reserve one run against cross-run state; a failed remote write aborts the run."""
+    from automation.core.run_ledger import LedgerEntry, reserve_run
+    from automation.core.run_ledger_store import parse_run_ledger_json, serialize_run_ledger
+
+    snapshot = store.load()
+    entries = parse_run_ledger_json(json.dumps(snapshot.state["run_ledger"]))
+    decision = reserve_run(request, entries, active_transaction_id)
+    if not decision.allowed:
+        return decision
+    entries.append(LedgerEntry(
+        decision.idempotency_key,
+        request.engine.strip().casefold(),
+        request.business_day,
+        request.baseline_commit.lower(),
+        "running",
+        decision.attempt,
+    ))
+    updated = dict(snapshot.state)
+    updated["run_ledger"] = json.loads(serialize_run_ledger(entries))
+    store.save(updated, snapshot.blob_sha)
+    return decision
+
+
+def finish_remote_run(store: GitHubStateStore, idempotency_key: str, attempt: int, status: str):
+    """Finalize one exact remote running attempt using compare-and-swap."""
+    from dataclasses import replace
+    from automation.core.run_ledger_store import parse_run_ledger_json, serialize_run_ledger
+
+    if status not in {"succeeded", "failed", "cancelled"}:
+        raise ValueError("final run status must be succeeded, failed or cancelled")
+    snapshot = store.load()
+    entries = parse_run_ledger_json(json.dumps(snapshot.state["run_ledger"]))
+    matches = [i for i, entry in enumerate(entries)
+               if entry.idempotency_key == idempotency_key and entry.attempt == attempt]
+    if len(matches) != 1 or entries[matches[0]].status != "running":
+        raise ValueError("remote run attempt must exist exactly once and still be running")
+    entries[matches[0]] = replace(entries[matches[0]], status=status)
+    updated = dict(snapshot.state)
+    updated["run_ledger"] = json.loads(serialize_run_ledger(entries))
+    store.save(updated, snapshot.blob_sha)
+    return entries[matches[0]]
+
+
+def record_remote_probe(store: GitHubStateStore, identity: str, probe):
+    """Persist an International probe observation in the same cross-run state document."""
+    from automation.engines.international.probe_ledger import record_probe, parse_ledger
+
+    snapshot = store.load()
+    probe_text = json.dumps(snapshot.state["international_probe_ledger"])
+    updated_probe = parse_ledger(record_probe(probe_text, identity, probe))
+    updated = dict(snapshot.state)
+    updated["international_probe_ledger"] = updated_probe
+    store.save(updated, snapshot.blob_sha)
+    return updated_probe
