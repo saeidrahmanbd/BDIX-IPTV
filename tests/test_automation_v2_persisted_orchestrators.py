@@ -103,5 +103,20 @@ class PersistedOrchestratorTests(unittest.TestCase):
         self.assertEqual(retry.attempt, 2)
 
 
+    def test_epg_persisted_runner_fetches_source_in_isolated_workspace_when_requested(self):
+        store = MemoryStateStore()
+        fake = EpgCandidate(xml_text="<tv/>", decision=None)
+        as_of = __import__("datetime").datetime(2026, 11, 13, 9, 0)
+        with patch("automation.engines.epg.source_provider.build_epg_source_candidate", return_value="<tv/>") as source:
+            with patch("automation.engines.epg.candidate_engine.build_epg_candidate", return_value=fake) as build:
+                decision, value = build_epg_candidate_persisted(
+                    "#EXTM3U\\n", "<tv/>", "b" * 40, store,
+                    as_of=as_of, repository_root=".",
+                )
+        self.assertTrue(decision.allowed)
+        self.assertIs(value, fake)
+        source.assert_called_once_with(".")
+        build.assert_called_once()
+
 if __name__ == "__main__":
     unittest.main()
