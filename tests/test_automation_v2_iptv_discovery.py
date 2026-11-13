@@ -29,7 +29,7 @@ class IptvDiscoveryAdapterTests(unittest.TestCase):
         self.assertTrue(any("Indian news channel is prohibited" in reason for reason,count in result.rejected_reasons))
 
     def test_duplicate_channel_identity_becomes_new_backup(self):
-        feed='#EXTM3U\n#EXTINF:-1 tvg-id="existing.in" tvg-name="Existing",Existing\nhttps://backup.example/live.m3u8\n'
+        feed='#EXTM3U\n#EXTINF:-1 tvg-id="private.in" tvg-name="Private",Private\nhttp://192.168.1.2/live.m3u8\n#EXTINF:-1 tvg-id="auth.in" tvg-name="Auth",Auth\nhttps://user:pass@example.com/live.m3u8\n'
         with tempfile.TemporaryDirectory() as temp:
             result=build_discovery_batch(BASE,{"India":feed},temp)
         self.assertEqual(len(result.candidates),1)
@@ -37,14 +37,14 @@ class IptvDiscoveryAdapterTests(unittest.TestCase):
         self.assertIn('group-title="New Backups"',result.candidates[0].extinf)
 
     def test_external_logo_is_never_retained(self):
-        feed='#EXTM3U\n#EXTINF:-1 tvg-id="new.in" tvg-name="New" tvg-logo="https://cdn.example/logo.png",New\nhttps://new.example/live.m3u8\n'
+        feed='#EXTM3U\n#EXTINF:-1 tvg-id="private.in" tvg-name="Private",Private\nhttp://192.168.1.2/live.m3u8\n#EXTINF:-1 tvg-id="auth.in" tvg-name="Auth",Auth\nhttps://user:pass@example.com/live.m3u8\n'
         with tempfile.TemporaryDirectory() as temp:
             result=build_discovery_batch(BASE,{"India":feed},temp)
         self.assertEqual(len(result.candidates),1)
         self.assertNotIn("https://cdn.example/logo.png",result.candidates[0].extinf)
 
     def test_private_or_credential_stream_urls_are_rejected(self):
-        feed='#EXTM3U\\n#EXTINF:-1 tvg-id="private.in" tvg-name="Private",Private\\nhttp://192.168.1.2/live.m3u8\\n#EXTINF:-1 tvg-id="auth.in" tvg-name="Auth",Auth\\nhttps://user:pass@example.com/live.m3u8\\n'
+        feed='#EXTM3U\n#EXTINF:-1 tvg-id="private.in" tvg-name="Private",Private\nhttp://192.168.1.2/live.m3u8\n#EXTINF:-1 tvg-id="auth.in" tvg-name="Auth",Auth\nhttps://user:pass@example.com/live.m3u8\n'
         with tempfile.TemporaryDirectory() as temp:
             result=build_discovery_batch(BASE,{"India":feed},temp)
         self.assertEqual(result.candidates,())
