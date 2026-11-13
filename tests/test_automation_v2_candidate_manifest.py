@@ -21,6 +21,10 @@ class CandidateManifestTests(unittest.TestCase):
         manifest=CandidateManifest("iptv","a"*40,paths,{p:"d"*64 for p in paths})
         self.assertTrue(validate_manifest(manifest))
 
+    def test_non_hex_baseline_commit_is_rejected(self):
+        manifest=CandidateManifest("iptv","z"*40,("IPTV-Playlist.m3u",),{"IPTV-Playlist.m3u":"b"*64})
+        self.assertTrue(any("hexadecimal" in x for x in validate_manifest(manifest)))
+
     def test_invalid_hash_is_rejected(self):
         path="IPTV-Playlist.m3u"
         manifest=CandidateManifest("iptv","a"*40,(path,),{path:"not-a-hash"})
