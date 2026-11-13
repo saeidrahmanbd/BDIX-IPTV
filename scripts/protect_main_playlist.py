@@ -82,140 +82,45 @@ def snapshot(playlist: Path, state: Path):
 def verify(playlist: Path, state: Path):
     saved = json.loads(state.read_text(encoding="utf-8"))
     before, after = saved["rows"], records(playlist)
-    approvals = load_approvals()
-    # The approvals artifact is written only by the explicitly owner-requested
-    # one-time cleanup branch. Routine daily maintenance has no such authority.
-    # The migration script writes this exact-URL approvals file even when no
-    # group transitions are needed. Its existence authorizes category-block
-    # reassembly and missing-number repair; individual group moves still need
-    # their own exact URL approval below.
-    # Structural permission is separate from per-URL group-transition approvals.
-    # Only the maintenance workflow creates this runtime marker for a pending,
-    # durable owner request; test fixtures and ordinary approvals cannot enable it.
-    migration_mode = OWNER_MIGRATION_AUTHORIZED.is_file()
-
-    current_registry = category_registry(playlist)
-    previous_registry = saved.get("category_registry")
-    if migration_mode:
-        if current_registry != CATEGORY_ORDER:
-            raise SystemExit("Owner-approved migration did not produce the canonical category registry.")
-    elif current_registry != previous_registry:
-        raise SystemExit("Routine IPTV maintenance changed the owner's category registry.")
-
-    expected_counts = Counter(str(row["url"]) for row in before)
-    actual_counts = Counter(str(row["url"]) for row in after)
-    missing = expected_counts - actual_counts
-    if missing:
-        raise SystemExit(f"IPTV URL preservation failed: {sum(missing.values())} existing URL occurrence(s) missing.")
-    added = actual_counts - expected_counts
-    if any(count > 1 for url, count in added.items() if url not in expected_counts):
-        raise SystemExit("IPTV URL preservation failed: a newly discovered stream URL appears more than once.")
-    if any(count for count in added.values()):
-        # Existing URLs can never be duplicated by a discovery candidate.
-        duplicated = sum(count for url, count in added.items() if url in expected_counts)
-        if duplicated:
-            raise SystemExit(f"IPTV URL preservation failed: {duplicated} duplicate existing URL occurrence(s) added.")
-
-    before_by_url, after_by_url = defaultdict(list), defaultdict(list)
-    for row in before:
-        before_by_url[str(row["url"])].append(row)
-    for row in after:
-        after_by_url[str(row["url"])].append(row)
-
     failures = []
-    baseline_order = [str(row["url"]) for row in before]
-    after_existing_order = [str(row["url"]) for row in after if str(row["url"]) in expected_counts]
-    # Daily repair/discovery jobs cannot reorder any existing row. The one-time
-    # owner-approved cleanup may sort/reassemble categories after exact approvals.
-    if not migration_mode and after_existing_order != baseline_order:
-        failures.append("Existing row order changed or an existing row is missing")
-
-    for url, original_rows in before_by_url.items():
-        updated_rows = after_by_url[url]
-        if len(original_rows) != len(updated_rows):
-            failures.append(f"URL occurrence count changed: {url}")
+    if category_registry(playlist) != saved.get("category_registry"):
+        failures.append("The owner's Playlist Studio category registry changed.")
+    expected = Counter(str(row["url"]) for row in before)
+    actual = Counter(str(row["url"]) for row in after)
+    missing = expected - actual
+    if missing:
+        failures.append(f"{sum(missing.values())} pre-existing URL occurrence(s) disappeared or were replaced.")
+    if any(url in expected for url in (actual - expected)):
+        failures.append("An additional occurrence of a pre-existing URL was added.")
+    old_order = [str(row["url"]) for row in before]
+    new_order = [str(row["url"]) for row in after if str(row["url"]) in expected]
+    if new_order != old_order:
+        failures.append("Pre-existing stream rows were reordered or removed.")
+    old_by_url, new_by_url = defaultdict(list), defaultdict(list)
+    for row in before:
+        old_by_url.setdefault(str(row["url"]), []).append(row)
+    for row in after:
+        new_by_url.setdefault(str(row["url"]), []).append(row)
+    for url, old_rows in old_by_url.items():
+        new_rows = new_by_url.get(url, [])
+        if len(old_rows) != len(new_rows):
             continue
-        for original, current in zip(original_rows, updated_rows):
-            old_group = str(original.get("group", "")).strip()
-            new_group = str(current.get("group", "")).strip()
-            approved = approvals.get((url, old_group, new_group))
-            exact_approval = bool(approved and approved.get("allow_metadata") is True)
-            if old_group != new_group and (old_group == "Review" or not exact_approval):
-                failures.append(f"Unapproved group migration for {current['name']}: {old_group} -> {new_group}")
-            if old_group == new_group and current["number"] != str(original.get("number", "")):
-                old_number = str(original.get("number", "")).strip()
-                new_number = str(current["number"]).strip()
-                may_fill_missing_primary = (
-                    migration_mode and old_group in PRIMARY_GROUPS
-                    and (not old_number.isdigit() or int(old_number) <= 0)
-                    and new_number.isdigit()
-                )
-                may_clear_nonprimary_queue = (
-                    migration_mode and old_group not in PRIMARY_GROUPS
-                    and bool(old_number) and not new_number
-                )
-                if not (may_fill_missing_primary or may_clear_nonprimary_queue):
-                    failures.append(f"Existing channel number changed for {current['name']}")
-            if new_group not in CATEGORY_ORDER:
-                failures.append(f"Unknown category {new_group!r}: {current['name']}")
-
-    # Metadata/country/logo defects in these queues are intentionally deferred
-    # to the owner's manual review; they must never stop discovery from staging.
-    for url, count in added.items():
-        rows = after_by_url[url]
-        if url in expected_counts:
-            failures.append(f"Duplicate existing stream URL occurrence added: {url}")
-            continue
-        for row in rows:
+        for old, new in zip(old_rows, new_rows):
+            if str(old.get("group", "")).strip() != str(new.get("group", "")).strip():
+                failures.append(f"Existing group assignment changed for {new['name']}.")
+            if str(old.get("number", "")).strip() != str(new.get("number", "")).strip():
+                failures.append(f"Existing channel number changed for {new['name']}.")
+    for url in set(actual) - set(expected):
+        if actual[url] != 1:
+            failures.append("A new discovery URL is duplicated.")
+        for row in new_by_url[url]:
             if row["group"] not in DISCOVERY_GROUPS:
-                failures.append(f"New row outside discovery queues: {row['name']} ({row['group']})")
-
-    # Routine maintenance preserves existing row placement, so category block
-    # order and manual numbering anomalies remain diagnostics rather than a
-    # reason to reshuffle the owner's playlist. The owner-approved one-time
-    # migration is allowed to reassemble canonical category blocks.
-    if migration_mode:
-        seen_groups = []
-        for row in after:
-            group = row["group"]
-            if not seen_groups or seen_groups[-1] != group:
-                if group in seen_groups:
-                    failures.append(f"Category block is split: {group}")
-                seen_groups.append(group)
-        ranks = [CATEGORY_ORDER.index(group) for group in seen_groups if group in CATEGORY_ORDER]
-        if ranks != sorted(ranks):
-            failures.append("Category blocks do not follow the canonical category order.")
-
-        primary_numbers = []
-        seen_ids = {}
-        for row in after:
-            if row["group"] not in PRIMARY_GROUPS:
-                continue
-            if not row["number"].isdigit():
-                failures.append(f"Owner-approved migration left a primary row unnumbered: {row['name']}")
-            else:
-                primary_numbers.append(int(row["number"]))
-            for channel_id in row["ids"]:
-                previous = seen_ids.get(channel_id)
-                if previous and previous != row["url"]:
-                    failures.append(f"Duplicate primary channel identity: {channel_id} ({row['name']})")
-                seen_ids[channel_id] = row["url"]
-        if any(number <= 0 for number in primary_numbers):
-            failures.append("Owner-approved migration left a non-positive primary channel number.")
-        if len(primary_numbers) != len(set(primary_numbers)):
-            failures.append("Owner-approved migration produced duplicate primary channel numbers.")
-        # Existing positive channel numbers are owner-curated and must be
-        # preserved; only missing/invalid values are filled by the migration.
-
+                failures.append(f"New row outside manual queues: {row['name']} ({row['group']}).")
     if failures:
         for item in failures[:30]:
             print(f"::error::{item}", file=sys.stderr)
         raise SystemExit(f"IPTV owner-protection gate failed with {len(failures)} issue(s).")
-    print(
-        f"IPTV owner-protection passed: {sum(actual_counts.values())} stream URLs preserved; "
-        f"{'owner-approved migration' if migration_mode else 'routine metadata/logo/discovery'} "
-        "permissions respected."
-    )
+    print(f"IPTV owner-protection passed: {len(before)} existing rows preserve URL/group/number/order; new rows are manual-queue only.")
 
 
 def main():
