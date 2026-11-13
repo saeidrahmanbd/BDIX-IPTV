@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from automation.core.run_ledger import LedgerEntry
-from automation.core.run_ledger_store import LEDGER_PATH, load_run_ledger, parse_run_ledger_json, save_run_ledger, serialize_run_ledger
+from automation.core.run_ledger_store import LEDGER_PATH, finish_persisted_run, load_run_ledger, parse_run_ledger_json, reserve_persisted_run, save_run_ledger, serialize_run_ledger
 
 class RunLedgerStoreTests(unittest.TestCase):
     def setUp(self):
@@ -30,6 +30,51 @@ class RunLedgerStoreTests(unittest.TestCase):
     def test_duplicate_attempt_rejected(self):
         with self.assertRaisesRegex(ValueError,"duplicate"):
             serialize_run_ledger([self.entries[0],self.entries[0]])
+
+    def test_persisted_reservation_blocks_duplicate_same_engine(self):
+        from automation.core.run_ledger import RunRequest
+        with tempfile.TemporaryDirectory() as temp:
+            request=RunRequest("iptv",date(2026,11,13),"b"*40,"d"*64)
+            first=reserve_persisted_run(temp,request)
+            second=reserve_persisted_run(temp,request)
+            self.assertTrue(first.allowed)
+            self.assertFalse(second.allowed)
+            self.assertEqual(len(load_run_ledger(temp)),1)
+
+    def test_engine_case_does_not_bypass_persisted_lock(self):
+        from automation.core.run_ledger import RunRequest
+        with tempfile.TemporaryDirectory() as temp:
+            reserve_persisted_run(temp,RunRequest("iptv",date(2026,11,13),"b"*40,"d"*64))
+            blocked=reserve_persisted_run(temp,RunRequest("IPTV",date(2026,11,13),"b"*40,"e"*64))
+            self.assertFalse(blocked.allowed)
+
+    def test_finalize_run_and_allow_retry_after_failure(self):
+        from automation.core.run_ledger import RunRequest
+        with tempfile.TemporaryDirectory() as temp:
+            request=RunRequest("epg",date(2026,11,13),"b"*40,"d"*64)
+            first=reserve_persisted_run(temp,request)
+            failed=finish_persisted_run(temp,first.idempotency_key,first.attempt,"failed")
+            self.assertEqual(failed.status,"failed")
+            retry=reserve_persisted_run(temp,request)
+            self.assertTrue(retry.allowed)
+            self.assertEqual(retry.attempt,2)
+
+    def test_successful_run_cannot_be_reserved_twice(self):
+        from automation.core.run_ledger import RunRequest
+        with tempfile.TemporaryDirectory() as temp:
+            request=RunRequest("epg",date(2026,11,13),"b"*40,"d"*64)
+            first=reserve_persisted_run(temp,request)
+            finish_persisted_run(temp,first.idempotency_key,first.attempt,"succeeded")
+            second=reserve_persisted_run(temp,request)
+            self.assertFalse(second.allowed)
+
+    def test_running_attempt_cannot_be_finalized_twice(self):
+        from automation.core.run_ledger import RunRequest
+        with tempfile.TemporaryDirectory() as temp:
+            first=reserve_persisted_run(temp,RunRequest("iptv",date(2026,11,13),"b"*40,"d"*64))
+            finish_persisted_run(temp,first.idempotency_key,first.attempt,"cancelled")
+            with self.assertRaisesRegex(ValueError,"running"):
+                finish_persisted_run(temp,first.idempotency_key,first.attempt,"failed")
 
     def test_unknown_status_rejected(self):
         bad='{"schema_version":1,"timezone":"Asia/Dhaka","entries":[{"idempotency_key":"'+("a"*64)+'","engine":"iptv","business_day":"2026-11-13","baseline_commit":"'+("b"*40)+'","status":"unknown","attempt":1}]}'
