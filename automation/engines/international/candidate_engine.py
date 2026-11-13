@@ -175,30 +175,6 @@ CATEGORY_ORDER = [
     "Backup","New Channels","New Backups","Review",
 ]
 
-def assert_international_existing_rows_preserved(before: str, after: str) -> None:
-    """Preserve every old stream in order; group-title-only changes are permitted."""
-    old_rows,new_rows=parse_rows(before),parse_rows(after)
-
-    def stable_signature(row):
-        normalized=GROUP_RE.sub('group-title="__GROUP__"',row.extinf,count=1)
-        return normalized,row.url
-
-    old_index=0
-    review_queues={"New Channels","New Backups"}
-    old_urls={row.url for row in old_rows}
-    new_urls=set()
-    for row in new_rows:
-        if old_index < len(old_rows) and stable_signature(row)==stable_signature(old_rows[old_index]):
-            old_index += 1
-            continue
-        if row.url in old_urls or row.url in new_urls:
-            raise ValueError("International candidate duplicated or displaced an existing stream URL")
-        if row.group.strip() not in review_queues:
-            raise ValueError("International candidate added a row outside manual-review queues")
-        new_urls.add(row.url)
-    if old_index != len(old_rows):
-        raise ValueError("International candidate changed, removed or reordered an existing row")
-
 def append_discovery_candidates(playlist_text: str,
                                 discoveries: list[DiscoveryCandidate]) -> str:
     """Insert new discovery rows into their queue blocks without rewriting existing lines."""
