@@ -1,8 +1,12 @@
 """Read-only XMLTV candidate validation; no file publication or network access."""
 from __future__ import annotations
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
+import re
 import xml.etree.ElementTree as ET
+
+OFFSET_RE = re.compile(r"^([+-])(\\d{2})(\\d{2})$")
 
 @dataclass(frozen=True)
 class EpgValidation:
@@ -12,11 +16,24 @@ class EpgValidation:
     errors: tuple[str, ...]
 
 def _timestamp(value: str) -> datetime:
-    # XMLTV timestamps commonly use YYYYMMDDhhmmss with an optional timezone suffix.
-    core = value.strip()[:14]
+    raw = value.strip()
+    core = raw[:14]
     if len(core) != 14 or not core.isdigit():
         raise ValueError("invalid XMLTV timestamp")
-    return datetime.strptime(core, "%Y%m%d%H%M%S")
+    parsed = datetime.strptime(core, "%Y%m%d%H%M%S")
+    suffix = raw[14:].strip()
+    if suffix:
+        match = OFFSET_RE.fullmatch(suffix)
+        if not match:
+            raise ValueError("invalid XMLTV timezone offset")
+        hours, minutes = int(match.group(2)), int(match.group(3))
+        if hours > 23 or minutes > 59:
+            raise ValueError("invalid XMLTV timezone offset")
+        sign = 1 if match.group(1) == "+" else -1
+        parsed = parsed.replace(tzinfo=timezone(timedelta(hours=hours, minutes=minutes) * sign))
+    else:
+        parsed = parsed.replace(tzinfo=ZoneInfo("Asia/Dhaka"))
+    return parsed.astimezone(timezone.utc)
 
 def validate_xmltv(xml_text: str) -> EpgValidation:
     errors: list[str] = []
@@ -45,8 +62,8 @@ def validate_xmltv(xml_text: str) -> EpgValidation:
             stop = _timestamp(programme.get("stop") or "")
             if stop <= start:
                 errors.append(f"programme stop is not after start for channel: {channel_id}")
-        except ValueError:
-            errors.append(f"programme has invalid start/stop timestamp for channel: {channel_id}")
+        except ValueError as exc:
+            errors.append(f"programme has invalid timestamp for channel {channel_id}: {exc}")
     if not channel_ids:
         errors.append("XMLTV contains no channels")
     if programme_count == 0:
