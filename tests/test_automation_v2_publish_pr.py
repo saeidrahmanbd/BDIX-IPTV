@@ -40,14 +40,14 @@ def digest(value: bytes) -> str:
 
 
 class AutomationV2PublishPRTests(unittest.TestCase):
-    def make_artifact(self, root: Path, *, publish: bool = False):
+    def make_artifact(self, root: Path, *, publish: bool = False, baseline_commit: str = "a" * 40):
         transaction_id = "v2-test-transaction"
         transaction = root / "candidates" / "transactions" / transaction_id
         transaction.mkdir(parents=True)
         raw = {path: value.encode("utf-8") for path, value in CANDIDATE_FILES.items()}
         manifest = {
             "transaction_id": transaction_id,
-            "baseline_commit": "a" * 40,
+            "baseline_commit": baseline_commit,
             "candidate_fingerprints": {path: digest(data) for path, data in raw.items()},
             "ready_for_owner_review": True,
             "publish": publish,
@@ -64,7 +64,7 @@ class AutomationV2PublishPRTests(unittest.TestCase):
             "publish": False,
             "production_files_modified": False,
             "transaction_id": transaction_id,
-            "baseline_commit": "a" * 40,
+            "baseline_commit": baseline_commit,
             "iptv_candidate_rows": 2,
             "international_candidate_rows": 2,
             "epg_programmes": 2,
@@ -115,7 +115,7 @@ class AutomationV2PublishPRTests(unittest.TestCase):
             baseline = self.make_git_repo(repo)
             artifact = temp_root / "artifact"
             artifact.mkdir()
-            transaction_id, _ = self.make_artifact(artifact)
+            transaction_id, _ = self.make_artifact(artifact, baseline_commit=baseline)
             report, _, contents = load_artifact(artifact, transaction_id, baseline)
             evidence = validate_against_baseline(repo, baseline, report, contents)
             self.assertEqual(evidence["publication"], "pull_request_only")
