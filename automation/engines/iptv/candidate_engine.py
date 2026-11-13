@@ -3,8 +3,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 from automation.core.playlist_contract import parse_rows, assert_iptv_existing_rows_preserved
 
-ALLOWED_DISCOVERY_QUEUES = {"New Channels", "New Backups"}
-
 @dataclass(frozen=True)
 class DiscoveryCandidate:
     extinf: str
@@ -29,14 +27,13 @@ def build_candidate(baseline_text: str, discoveries: list[DiscoveryCandidate]) -
         queue = "New Backups" if item.backup else "New Channels"
         if f'group-title="{queue}"' not in extinf:
             raise ValueError(f"new discovery must be assigned to {queue}")
-        # Reject injected extra records and malformed metadata.
-        if "\\n" in extinf or "\\r" in extinf or "\\n" in url or "\\r" in url:
+        if "\n" in extinf or "\r" in extinf or "\n" in url or "\r" in url:
             raise ValueError("discovery record must be a single line")
         additions.extend((extinf, url))
         seen_new.add(url)
     if not additions:
         return baseline_text
-    separator = "" if baseline_text.endswith("\\n") else "\\n"
-    candidate = baseline_text + separator + "\\n".join(additions) + "\\n"
+    separator = "" if baseline_text.endswith("\n") else "\n"
+    candidate = baseline_text + separator + "\n".join(additions) + "\n"
     assert_iptv_existing_rows_preserved(baseline_text, candidate)
     return candidate
