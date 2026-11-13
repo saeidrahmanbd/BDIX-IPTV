@@ -56,9 +56,11 @@
   },
   "production_mutations": false,
   "latest_verified_validation": {
-    "branch_ci_commit": "d2a14e92e46ee10f1f4df5c30a57efeb048c4bc3",
-    "branch_ci_tests": 201,
-    "legacy_regression_tests": 732,
+    "branch_ci_run": 43413115470,
+    "legacy_regression_run": 43413115463,
+    "commit": "564139d881a4bd8b0115e25347a13dfcc7db8846",
+    "branch_ci_tests": 212,
+    "legacy_regression_tests": 743,
     "branch_ci": "success",
     "legacy_regression": "success"
   }
