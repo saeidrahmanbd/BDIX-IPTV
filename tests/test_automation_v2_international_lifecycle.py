@@ -14,7 +14,7 @@ class InternationalLifecycleTests(unittest.TestCase):
         result=decide_channel(state,today)
         self.assertEqual((result.target_group,result.action),("Review","MOVE_TO_REVIEW"))
 
-    def test_three_days_require_review_not_automatic_deletion(self):
+    def test_three_days_trigger_policy_authorized_removal(self):
         today=date(2026,11,13)
         probes=tuple(Probe(today-timedelta(days=i),404) for i in range(3))
         result=decide_channel(ChannelState("id-1","Nepal",probes=probes),today)
