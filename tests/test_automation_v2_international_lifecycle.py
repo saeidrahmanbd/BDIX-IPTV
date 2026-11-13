@@ -18,8 +18,8 @@ class InternationalLifecycleTests(unittest.TestCase):
         today=date(2026,11,13)
         probes=tuple(Probe(today-timedelta(days=i),404) for i in range(3))
         result=decide_channel(ChannelState("id-1","Nepal",probes=probes),today)
-        self.assertEqual(result.target_group,"Review")
-        self.assertEqual(result.action,"REQUIRES_OWNER_REMOVAL_REVIEW")
+        self.assertEqual(result.target_group,"")
+        self.assertEqual(result.action,"REMOVE")
 
     def test_recovered_verified_primary_returns_to_primary(self):
         state=ChannelState("id-1","Review","Nepal","primary",())
