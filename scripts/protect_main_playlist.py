@@ -96,7 +96,8 @@ def verify(playlist: Path, state: Path):
                 )
             else:
                 primary_ids[identity] = identity_name
-    if category_registry(playlist) != saved.get("category_registry"):        failures.append("The owner's Playlist Studio category registry changed.")
+    if category_registry(playlist) != saved.get("category_registry"):
+        failures.append("The owner's Playlist Studio category registry changed.")
     expected = Counter(str(row["url"]) for row in before)
     actual = Counter(str(row["url"]) for row in after)
     missing = expected - actual
