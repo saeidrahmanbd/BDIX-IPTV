@@ -6,6 +6,7 @@ from pathlib import Path
 
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
 TEXT_SUFFIXES = {".py", ".yml", ".yaml", ".json", ".md", ".txt", ".m3u", ".xml", ".html", ".js", ".css", ".toml", ".ini", ".sh"}
+EXCLUDED_REFERENCE_FILES = {"docs/automation-v2/baseline-tree-manifest.json", "docs/automation-v2/logo-reference-baseline.json"}
 LOGO_REF = re.compile(r'(?:https?://[^\s"\']+?/)?(logos/[A-Za-z0-9_./@+-]+\.(?:png|jpe?g|webp|gif|svg))', re.I)
 
 def _sha256(path: Path) -> str:
@@ -21,7 +22,8 @@ def scan(root: Path) -> dict:
     assets = [p.relative_to(root).as_posix() for p in asset_paths]
     references: dict[str, set[str]] = {}
     for path in root.rglob("*"):
-        if not path.is_file() or "logos" in path.relative_to(root).parts:
+        relative = path.relative_to(root).as_posix()
+        if not path.is_file() or "logos" in path.relative_to(root).parts or relative in EXCLUDED_REFERENCE_FILES:
             continue
         if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
