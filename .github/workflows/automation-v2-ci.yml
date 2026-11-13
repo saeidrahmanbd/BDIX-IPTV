@@ -6,7 +6,8 @@ on:
       - automation-v2/**
     paths:
       - 'automation/**'
-      - 'tests/test_automation_v2_contract.py'
+      - 'tests/test_automation_v2_*.py'
+      - 'scripts/audit_logo_references.py'
       - '.github/workflows/automation-v2-ci.yml'
   pull_request:
     branches:
