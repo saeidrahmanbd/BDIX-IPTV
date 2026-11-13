@@ -6,6 +6,7 @@ from automation.engines.international.monitor import probe_and_record
 from automation.engines.international.probe_ledger import parse_ledger, probes_for
 from automation.engines.international.engine import InternationalCandidate, build_international_candidate
 from automation.engines.international.planner import RowLifecycleInput
+from automation.engines.iptv.candidate_engine import DiscoveryCandidate
 
 @dataclass(frozen=True)
 class StreamTarget:
@@ -25,7 +26,8 @@ class InternationalMaintenanceResult:
 
 def run_international_candidate(playlist_text: str, ledger_text: str | None,
                                targets: list[StreamTarget], today: date,
-                               timeout: int = 8) -> InternationalMaintenanceResult:
+                               timeout: int = 8,
+                               discoveries: list[DiscoveryCandidate] | None = None) -> InternationalMaintenanceResult:
     """Probe once per Bangladesh date, update candidate ledger in memory, and propose safe group changes."""
     row_indexes=set()
     identities=set()
@@ -49,5 +51,5 @@ def run_international_candidate(playlist_text: str, ledger_text: str | None,
             target.row_index,target.identity,target.primary_group,
             target.verified_stream_role,probes_for(parse_ledger(current_ledger),target.identity)
         ))
-    candidate=build_international_candidate(playlist_text,lifecycle_inputs,today)
+    candidate=build_international_candidate(playlist_text,lifecycle_inputs,today,discoveries=discoveries)
     return InternationalMaintenanceResult(candidate,current_ledger or "",probed,reused,False)
