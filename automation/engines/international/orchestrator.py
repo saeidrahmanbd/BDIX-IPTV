@@ -105,23 +105,57 @@ def run_international_candidate_persisted(playlist_text: str, targets: list[Stre
     return execute_remote_run(store, request, operation)
 
 
+def _review_primary_group(attrs: dict[str, str]) -> str | None:
+    """Infer a Review row's destination only from explicit, unambiguous metadata."""
+    country = (attrs.get("tvg-country") or "").strip()
+    language = (attrs.get("tvg-language") or "").strip().casefold()
+    content = (attrs.get("tvg-content") or "").strip().casefold()
+    country_key = country.casefold()
+    if country_key in {"bd", "bangladesh"}:
+        return "Bangladesh"
+    if country_key in {"pk", "pakistan"}:
+        return "Pakistani"
+    if country_key in {"in", "india"}:
+        if language in {"bn", "ben", "bengali", "bangla"}:
+            return "Indian Bangla"
+        if any(token in content for token in ("movie", "film")):
+            return "Indian Movies"
+        if "music" in content:
+            return "Indian Music"
+        if any(token in content for token in ("entertainment", "series", "serial")):
+            return "Indian Entertainment"
+        return "India"
+    # Accept an explicit country name; do not guess a display name from a 2-letter code.
+    if len(country) > 2 and country.replace(" ", "").isalpha():
+        return country.title()
+    return None
+
+
 def derive_primary_stream_targets(playlist_text: str) -> list[StreamTarget]:
-    """Derive only unambiguous primary rows; queues/backups and duplicate IDs are excluded."""
+    """Select unique primary and Review rows; never probe Backup or discovery queues."""
     rows = parse_rows(playlist_text)
-    queue_groups = {"backup", "review", "new channels", "new backups", "new backup", "not playing", "test"}
+    excluded_groups = {"backup", "backups", "new channels", "new backups", "new backup", "not playing", "test"}
     candidates = []
     counts = {}
     for index, row in enumerate(rows):
         attrs = dict(ATTR_RE.findall(row.extinf))
         identity = (attrs.get("tvg-id") or "").strip()
-        if not identity or row.group.strip().casefold() in queue_groups:
+        group = row.group.strip()
+        if not identity or group.casefold() in excluded_groups:
             continue
         if not row.url.startswith(("http://", "https://")):
             continue
+        if group.casefold() == "review":
+            destination = _review_primary_group(attrs)
+            role = "primary" if destination else None
+        else:
+            destination = group
+            role = "primary"
         counts[identity.casefold()] = counts.get(identity.casefold(), 0) + 1
-        candidates.append((index, identity, row.url, row.group.strip()))
+        candidates.append((index, identity, row.url, destination, role))
+    # Duplicate tvg-id values are ambiguous and remain untouched for owner review.
     return [
-        StreamTarget(index, identity, url, group, "primary")
-        for index, identity, url, group in candidates
+        StreamTarget(index, identity, url, group, role)
+        for index, identity, url, group, role in candidates
         if counts[identity.casefold()] == 1
     ]
