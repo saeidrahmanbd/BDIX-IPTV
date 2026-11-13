@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-12T15:30:27+00:00**
-Source playlist SHA-256: **d6e1529751e08b7398130851537c569ab346feb702af65937d14753d6f1146f1**
+Generated: **2026-11-13T06:29:08+00:00**
+Source playlist SHA-256: **4757dc831cd0ebeecd432ee55cb3d5529eaf7e11858aa6a72ac73eff4ad7e4eb**
 
 Status: **PASS**
 
@@ -17,7 +17,7 @@ Status: **PASS**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **13**
 - Primary channel-number sequence issues (non-blocking; existing row order is protected): **607**
-- Numbered review entries: **425**
+- Numbered review entries: **428**
 - Same-ID metadata name conflicts: **2**
 - Orphan Backup entries: **16**
 - Active rows with incomplete required metadata: **1**
@@ -49,7 +49,7 @@ No hard safety blockers detected.
 - tvg-id/channel-id inconsistencies: 1
 - entries missing tvg-language: 18
 - primary entries missing tvg-chno: 13
-- Backup/Review/discovery entries still numbered: 425
+- Backup/Review/discovery entries still numbered: 428
 - same-ID metadata name conflicts: 2
 - raw resolution/geoblock tags in channel names: 18
 - missing logos: 1
