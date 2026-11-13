@@ -37,6 +37,14 @@ REQUIRED_JOB_BY_WORKFLOW = {
     "international-stream-health.yml": "check",
     "epg-refresh.yml": "refresh",
 }
+REQUIRED_STEP_BY_WORKFLOW = {
+    "iptv-maintenance.yml": "Run maintenance",
+    "new-channel-discovery.yml": "Discover Bangladesh and India candidates into manual-review queues",
+    "international-channel-discovery.yml": "Reorganize International playlist and enforce unique primary IDs",
+    "playlist-logo-localization.yml": "Localize and commit logos",
+    "international-stream-health.yml": "Probe all International streams and apply three-day policy",
+    "epg-refresh.yml": "Regenerate, validate and publish XMLTV",
+}
 RECOVERY_AFTER_LOCAL = {
     "iptv-maintenance.yml": (7, 30),
     "new-channel-discovery.yml": (7, 30),
@@ -111,14 +119,25 @@ def runs_for_date(runs: list[dict[str, Any]], target_date: date) -> list[dict[st
 
 
 def successful_required_job(jobs: list[dict[str, Any]], workflow_file: str) -> bool:
-    """True only when the workflow's actual writer/check job completed successfully."""
+    """Require success of the workflow's real writer/probe step, not a guard-only no-op."""
     required_job = REQUIRED_JOB_BY_WORKFLOW.get(workflow_file, "discover")
-    return any(
-        str(job.get("name") or "").casefold() == required_job
-        and str(job.get("status") or "").casefold() == "completed"
-        and str(job.get("conclusion") or "").casefold() in {"success", "neutral"}
-        for job in jobs
-    )
+    required_step = REQUIRED_STEP_BY_WORKFLOW.get(workflow_file)
+    if not required_step:
+        return False
+    for job in jobs:
+        if str(job.get("name") or "").casefold() != required_job.casefold():
+            continue
+        if str(job.get("status") or "").casefold() != "completed":
+            continue
+        if str(job.get("conclusion") or "").casefold() not in {"success", "neutral"}:
+            return False
+        steps = job.get("steps") or []
+        return any(
+            str(step.get("name") or "").casefold() == required_step.casefold()
+            and str(step.get("conclusion") or "").casefold() in {"success", "neutral"}
+            for step in steps
+        )
+    return False
 
 
 def successful_discovery_job(jobs: list[dict[str, Any]]) -> bool:
