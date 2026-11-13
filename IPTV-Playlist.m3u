@@ -2460,7 +2460,7 @@ https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
 http://27.124.71.27/Movies_Now/index.m3u8
 #EXTINF:-1 tvg-id="TamilVisionTV.ca@SD" tvg-name="TamilVision-TV (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tamilvision-tv-1080p.png" group-title="New Channels",TamilVision-TV (1080p)
 https://live.cmr24.fm/TVI/HD/chunks.m3u8
-#EXTINF:-1 tvg-id="BTLTV.nl@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btl-tv-netherlands-2790d02135.jpg" tvg-name="BTL TV (Netherlands) (1080p)" group-title="New Channels",BTL TV (Netherlands) (1080p)
+#EXTINF:-1 tvg-id="BTLTV.nl@SD" tvg-name="BTL TV (Netherlands) (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btl-tv-netherlands-2790d02135.jpg" group-title="New Channels",BTL TV (Netherlands) (1080p)
 https://cdn.liveplustv.com/v1/live/btl-tv/master.m3u8
 #EXTINF:-1 tvg-id="CartoonNetwork.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-pakistan.png" tvg-name="Cartoon Network (Pakistan)" group-title="New Channels",Cartoon Network (Pakistan)
 https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8
