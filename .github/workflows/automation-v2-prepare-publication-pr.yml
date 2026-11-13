@@ -1,0 +1,143 @@
+name: Automation V2 Prepare Publication PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_run_id:
+        description: Successful Automation V2 Candidate Bundle run ID
+        required: true
+        type: string
+      transaction_id:
+        description: Exact transaction ID from that run's candidate-run.json
+        required: true
+        type: string
+      baseline_commit:
+        description: Exact 40-character main commit used by the candidate run
+        required: true
+        type: string
+      confirmation:
+        description: Type PREPARE PUBLISH PR to create a review-only PR (never publishes to main)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
+concurrency:
+  group: automation-v2-publication-pr
+  cancel-in-progress: false
+
+jobs:
+  prepare-publication-pr:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Require explicit owner intent
+        env:
+          CONFIRMATION: ${{ inputs.confirmation }}
+          BASELINE: ${{ inputs.baseline_commit }}
+          RUN_ID: ${{ inputs.candidate_run_id }}
+          TRANSACTION_ID: ${{ inputs.transaction_id }}
+        run: |
+          set -euo pipefail
+          test "$CONFIRMATION" = "PREPARE PUBLISH PR"
+          [[ "$BASELINE" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$RUN_ID" =~ ^[0-9]+$ ]]
+          [[ "$TRANSACTION_ID" =~ ^[A-Za-z0-9._-]{1,128}$ ]]
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Verify source candidate run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ inputs.candidate_run_id }}
+          BASELINE: ${{ inputs.baseline_commit }}
+        run: |
+          set -euo pipefail
+          gh run view "$RUN_ID" --repo "$GITHUB_REPOSITORY" --json name,headSha,conclusion > "$RUNNER_TEMP/source-run.json"
+          python - <<'PY'
+          import json, os
+          data=json.load(open(os.environ["RUNNER_TEMP"] + "/source-run.json", encoding="utf-8"))
+          assert data.get("name") == "Automation V2 Candidate Bundle", "source run is not the V2 candidate workflow"
+          assert data.get("conclusion") == "success", "source candidate workflow did not succeed"
+          assert data.get("headSha") == os.environ["BASELINE"], "source run SHA does not match the requested baseline"
+          PY
+
+      - name: Download the immutable candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ inputs.candidate_run_id }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/v2-candidate"
+          gh run download "$RUN_ID" --repo "$GITHUB_REPOSITORY" --name automation-v2-candidate-bundle --dir "$RUNNER_TEMP/v2-candidate"
+
+      - name: Verify artifact, preservation contracts and EPG before touching worktree
+        env:
+          RUNNER_TEMP: ${{ runner.temp }}
+          TRANSACTION_ID: ${{ inputs.transaction_id }}
+          BASELINE: ${{ inputs.baseline_commit }}
+        run: |
+          set -euo pipefail
+          python scripts/prepare_automation_v2_publish_pr.py \
+            --candidate-root "$RUNNER_TEMP/v2-candidate" \
+            --transaction-id "$TRANSACTION_ID" \
+            --baseline-commit "$BASELINE" \
+            --repo-root . \
+            --report "$RUNNER_TEMP/v2-publication-pr-evidence.json"
+
+      - name: Verify only the three approved production outputs changed
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import subprocess
+          expected={"IPTV-Playlist.m3u","International-Playlist.m3u","epg/epg.xml"}
+          actual=set(subprocess.check_output(["git","diff","--name-only"],text=True).splitlines())
+          if actual != expected:
+              raise SystemExit(f"unexpected changed paths: {sorted(actual)}")
+          PY
+
+      - name: Create isolated publication review branch
+        id: branch
+        env:
+          TRANSACTION_ID: ${{ inputs.transaction_id }}
+          RUN_ID: ${{ inputs.candidate_run_id }}
+        run: |
+          set -euo pipefail
+          BRANCH="automation-v2/publish-${TRANSACTION_ID}-${RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$BRANCH"
+          git add -- IPTV-Playlist.m3u International-Playlist.m3u epg/epg.xml
+          git commit -m "Prepare Automation V2 production candidate review"
+          git push --set-upstream origin "$BRANCH"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Open owner-review pull request (no auto-merge)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ steps.branch.outputs.branch }}
+          TRANSACTION_ID: ${{ inputs.transaction_id }}
+          BASELINE: ${{ inputs.baseline_commit }}
+          RUN_ID: ${{ inputs.candidate_run_id }}
+        run: |
+          set -euo pipefail
+          gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$BRANCH" \
+            --title "Review Automation V2 production candidates: $TRANSACTION_ID" \
+            --body "## Controlled Automation V2 publication review
+
+          This PR was prepared from successful shadow run [$RUN_ID](https://github.com/$GITHUB_REPOSITORY/actions/runs/$RUN_ID), based on commit `$BASELINE`.
+
+          - Candidate transaction: `$TRANSACTION_ID`
+          - Changes are limited to `IPTV-Playlist.m3u`, `International-Playlist.m3u`, and `epg/epg.xml`.
+          - Artifact fingerprints, IPTV preservation, International preservation (no removals), XMLTV validity, EPG channel-definition retention, and candidate counts were checked before this PR was created.
+          - This workflow does **not** push to `main`, merge this PR, disable legacy workflows, or enable automatic publication.
+
+          **Owner review and merge are required for production changes.** Do not merge unless all required checks pass and the candidate content has been reviewed."
