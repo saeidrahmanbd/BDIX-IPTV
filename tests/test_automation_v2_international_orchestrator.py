@@ -65,13 +65,13 @@ class InternationalOrchestratorTests(unittest.TestCase):
 
     def test_target_derivation_excludes_queues_and_ambiguous_duplicate_ids(self):
         text = (
-            '#EXTM3U\\n'
-            '#EXTINF:-1 tvg-id="primary" group-title="Nepal",Primary\\nhttps://one.example/live\\n'
-            '#EXTINF:-1 tvg-id="duplicate" group-title="Nepal",Duplicate A\\nhttps://two.example/live\\n'
-            '#EXTINF:-1 tvg-id="duplicate" group-title="Nepal",Duplicate B\\nhttps://three.example/live\\n'
-            '#EXTINF:-1 tvg-id="backup" group-title="Backup",Backup\\nhttps://four.example/live\\n'
-            '#EXTINF:-1 tvg-id="review" group-title="Review",Review\\nhttps://five.example/live\\n'
-            '#EXTINF:-1 group-title="Nepal",Missing ID\\nhttps://six.example/live\\n'
+            '#EXTM3U\n'
+            '#EXTINF:-1 tvg-id="primary" group-title="Nepal",Primary\nhttps://one.example/live\n'
+            '#EXTINF:-1 tvg-id="duplicate" group-title="Nepal",Duplicate A\nhttps://two.example/live\n'
+            '#EXTINF:-1 tvg-id="duplicate" group-title="Nepal",Duplicate B\nhttps://three.example/live\n'
+            '#EXTINF:-1 tvg-id="backup" group-title="Backup",Backup\nhttps://four.example/live\n'
+            '#EXTINF:-1 tvg-id="review" group-title="Review",Review\nhttps://five.example/live\n'
+            '#EXTINF:-1 group-title="Nepal",Missing ID\nhttps://six.example/live\n'
         )
         targets = derive_primary_stream_targets(text)
         self.assertEqual([(item.identity,item.row_index) for item in targets], [("primary",0)])
