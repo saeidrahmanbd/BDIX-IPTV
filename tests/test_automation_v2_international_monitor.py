@@ -1,6 +1,6 @@
 import sys
 import unittest
-from datetime import date
+from datetime import date, timedelta
 from unittest.mock import patch
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -56,6 +56,24 @@ class InternationalMonitorTests(unittest.TestCase):
         self.assertEqual(second.probe_status,200)
         self.assertEqual(second.failure_streak,0)
         self.assertEqual(mock.call_count,2)
+
+
+    @patch("automation.engines.international.monitor.probe_stream")
+    def test_failure_streak_does_not_transfer_to_replacement_url(self,mock):
+        from automation.engines.international.probe_ledger import record_probe, url_fingerprint
+        old_fingerprint=url_fingerprint("https://example.com/old.m3u8")
+        ledger=None
+        for offset in (2,1,0):
+            day=DAY-timedelta(days=offset)
+            ledger=record_probe(
+                ledger,"channel-a",
+                Probe(day,404,url_fingerprint=old_fingerprint),
+            )
+        mock.return_value=Probe(DAY,404)
+        result=probe_and_record(ledger,"channel-a","https://example.com/new.m3u8",DAY)
+        self.assertEqual(result.failure_streak,1)
+        self.assertFalse(result.already_probed_today)
+        mock.assert_called_once()
 
 if __name__=="__main__":
     unittest.main()
