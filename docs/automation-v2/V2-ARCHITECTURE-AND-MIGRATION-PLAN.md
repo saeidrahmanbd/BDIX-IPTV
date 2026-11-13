@@ -9,7 +9,7 @@ Replace overlapping automation with one policy source, isolated playlist engines
 - A recovered Review row can leave Review only after an explicitly verified working stream and classification as primary or alternate.
 - New Channels and New Backups are manual-review queues and must not appear in Xtream output.
 - Bangladesh and India remain fixed groups. Other country groups require five unique primary identities; group-name matching is case-insensitive. Backup, Review and discovery rows do not count.
-- EPG uses candidate generation, independent XMLTV validation and a last-known-good gate. Publication remains disabled.
+- EPG uses candidate generation, independent XMLTV validation, active-channel mapping/schedule comparison and current/future freshness checks against last-known-good. Publication remains disabled.
 - Logo repair uses authentic local assets only. Reporting is read-only and never mutates playlists.
 - One future serialized publisher is the only permitted write boundary. Rollback uses revert or safe ref restoration, never force-push.
 
@@ -20,29 +20,33 @@ Replace overlapping automation with one policy source, isolated playlist engines
 | Baseline inventory and backup | Complete on branch; baseline commit 46275f5ebafa2ae1b56f3e480f684ac1e85ae45e |
 | Dependency and side-effect audits | Static audit complete; dynamic runtime tracing remains incomplete |
 | Central policy and policy conformance | Initial policy, schema and conformance checks added |
-| Playlist contracts | IPTV preservation invariants and discovery queue visibility checks added |
+| Playlist contracts | IPTV existing rows must remain an unchanged prefix; metadata/logo repair allowed; discovery rows append only |
 | IPTV engine | Candidate-only discovery append engine added; no production file I/O |
-| International engine | Failure lifecycle, verified recovery decisions, country-group threshold and group-only candidate builder added |
-| EPG engine | XMLTV structural validator and last-known-good candidate gate added; full schedule coverage/freshness analysis pending |
-| Logo audit | Explicit reference scan and exact byte-duplicate report added; no deletion or quarantine |
+| International engine | Failure lifecycle, verified recovery decisions, five-identity country-group threshold and group-only candidate builder added |
+| EPG engine | XMLTV structural, mapping coverage and future-schedule freshness checks added; candidate gate is fail-closed |
+| Run ledger | Deterministic idempotency keys, per-engine run exclusion and global transaction-lock policy added; persistence not yet implemented |
+| Logo audit | Playlist/runtime/report references separated; exact duplicate hashes reported; no deletion or quarantine |
 | Transaction safety | Candidate manifest and fail-closed transaction readiness evaluator added; no publisher |
-| CI | Branch-only workflow exists; latest Actions run must complete successfully before tests can be called passed |
-| Full migration and legacy regression | Not started |
+| V2 CI | Latest verified V2 CI passed **93 tests** and uploaded the logo audit report |
+| Legacy regression | Latest full repository run passed **624 tests** with declared Pillow/CairoSVG dependencies installed |
+| Real-baseline dry runs | Not started |
+| Workflow migration/cutover | Not started; legacy workflows remain enabled |
 
-## Logo audit status
-The initial playlist-only exact-reference scan found 5,366 image assets, 2,395 referenced by the two playlist files, and 2,971 apparent non-references. These are not confirmed unused. The repository-wide scanner now checks explicit text references and byte-identical duplicates, but dynamically constructed references and visual duplicates with different bytes still need manual/automated review. No logo has been deleted, moved or quarantined.
+## Verified logo audit
+
+Repository-wide CI audit found 5,366 image assets, 2,395 distinct playlist-referenced assets, 2,691 distinct runtime-referenced assets, 2,675 assets with no explicit runtime-source reference, 718 byte-identical duplicate groups and 75 missing runtime-source targets. No missing target was directly referenced by either production playlist. These remain review candidates only; no logo was deleted or moved. See LOGO-STORAGE-AUDIT.md and the downloadable artifact in CI run 69.
 
 ## Migration phases
 1. Inventory and baseline preservation — completed.
-2. Central policy and contract tests — initial implementation added; CI result pending.
-3. Port parsers and identity helpers with equivalence tests — initial parser and candidate invariants added; full equivalence suite pending.
-4. Build isolated IPTV and International engines that produce candidates only — initial candidate engines added; broader normalization, identity resolution and category ordering remain.
-5. Port discovery, logos and EPG behind scoped interfaces — logo scanner and EPG validator/gate added; source integration and coverage analysis remain.
-6. Run all V2 tests and relevant legacy regression tests; classify obsolete tests rather than deleting blindly.
-7. Generate dry-run candidates from immutable baseline copies and prove all invariants.
-8. Test transaction failure, stale-input rejection, rollback and last-known-good EPG.
-9. Prepare a draft migration PR with exact workflow retirement/replacement map.
-10. Only after all checks pass, prepare a separate owner-reviewed production cutover.
+2. Central policy and contract tests — initial implementation added and passing.
+3. Port parsers and identity helpers with equivalence tests — initial parser and invariants added; real-playlist equivalence coverage still needs expansion.
+4. Build isolated IPTV and International engines that produce candidates only — initial candidate engines added; broader normalization, identity resolution, stream-health evidence integration and category ordering remain.
+5. Port discovery, logos and EPG behind scoped interfaces — logo scanner, EPG validation/coverage/freshness and run-ledger policy added; discovery source integration and durable state remain.
+6. Run all V2 tests and relevant legacy regression tests — **624 repository tests passed**; continue adding regression cases as engines are ported.
+7. Generate dry-run candidates from immutable production baseline copies and prove all invariants — pending.
+8. Test transaction failure, stale-input rejection, durable lock recovery, rollback and last-known-good EPG — pure gates tested; integration and rollback tests pending.
+9. Prepare a draft migration PR with exact workflow retirement/replacement map — pending.
+10. Only after all checks pass, prepare a separate owner-reviewed production cutover — not authorized or started.
 
 ## Safety boundary
 - No V2 workflow may publish production playlists or EPG during migration.
