@@ -1,6 +1,14 @@
 name: Automation V2 Candidate Bundle
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'automation/core/v2_candidate_runner.py'
+      - 'automation/engines/**'
+      - 'scripts/run_automation_v2_candidate_bundle.py'
+      - '.github/workflows/automation-v2-candidate-bundle.yml'
   workflow_dispatch:
 
 permissions:
@@ -13,8 +21,13 @@ concurrency:
 jobs:
   candidate-bundle:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
+      - name: Require the protected main branch
+        if: github.ref != 'refs/heads/main'
+        run: |
+          echo "The V2 shadow runner only executes from main."
+          exit 1
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: ${{ github.sha }}
