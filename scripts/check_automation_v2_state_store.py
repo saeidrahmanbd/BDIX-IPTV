@@ -1,4 +1,8 @@
 """Manual read/write smoke test for the isolated Automation V2 state branch."""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from automation.core.github_state_store import store_from_environment
 
 def main() -> int:
