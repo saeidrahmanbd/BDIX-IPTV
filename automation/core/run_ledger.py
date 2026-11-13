@@ -37,8 +37,9 @@ def make_idempotency_key(request: RunRequest) -> str:
 def reserve_run(request: RunRequest, entries: list[LedgerEntry],
                 active_transaction_id: str | None = None) -> ReservationDecision:
     """Decide whether a run may start; does not mutate or persist the ledger."""
-    if not request.engine.strip():
+    if not isinstance(request.engine,str) or not request.engine.strip():
         raise ValueError("engine is required")
+    engine=request.engine.strip().casefold()
     if len(request.baseline_commit) not in (40,64) or any(c not in "0123456789abcdefABCDEF" for c in request.baseline_commit):
         raise ValueError("baseline commit must be a full hexadecimal object id")
     if len(request.input_fingerprint) != 64 or any(c not in "0123456789abcdefABCDEF" for c in request.input_fingerprint):
@@ -49,7 +50,7 @@ def reserve_run(request: RunRequest, entries: list[LedgerEntry],
         raise ValueError("ledger contains an unknown run status")
     if active_transaction_id:
         return ReservationDecision(False,key,0,"another publication transaction holds the global lock")
-    if any(entry.engine == request.engine and entry.status == "running" for entry in entries):
+    if any(entry.engine.strip().casefold() == engine and entry.status == "running" for entry in entries):
         return ReservationDecision(False,key,0,"another run for this engine is already running")
     if any(entry.status == "succeeded" for entry in matching):
         return ReservationDecision(False,key,0,"this exact input has already completed successfully")
