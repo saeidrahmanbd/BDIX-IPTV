@@ -40,6 +40,8 @@ PROTECTED_SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 REMOVAL_REPORT = Path("reports/proposed-removals.md")
 PROTECTED_GROUPS = {"Backup", "Review", "Not Playing"}
 OWNER_MIGRATION_APPROVALS = Path("/tmp/iptv-owner-requested-migrations.json")
+OWNER_MIGRATION_AUTHORIZED = Path("/tmp/iptv-owner-migration-authorized")
+PRIMARY_GROUPS = {"Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports"}
 
 
 def _owner_migration_approvals() -> dict[str, dict[str, object]]:
@@ -390,7 +392,7 @@ def verify_no_unauthorized_removals() -> int:
             old_group = str(old.get("group", "")).strip()
             new_group = _group(info)
             if old_group != new_group:
-                approved = _owner_migration_approvals().get(url, {})
+                approved = _owner_migration_approvals().get(stream_url_key(url), {})
                 if not (OWNER_MIGRATION_AUTHORIZED.exists()
                         and approved.get("source_group") == old_group
                         and approved.get("target_group") == new_group):
