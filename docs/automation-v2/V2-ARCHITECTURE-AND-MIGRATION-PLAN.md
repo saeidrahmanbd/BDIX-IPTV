@@ -22,13 +22,13 @@ Replace overlapping automation with one policy source, isolated playlist engines
 | Central policy and conformance | JSON policy, schema and conformance validator implemented |
 | Playlist contracts | IPTV existing-row order, URLs, groups and channel numbers protected; approved metadata repairs and queue-only discovery supported |
 | IPTV engine | Combined candidate engine applies evidence-approved local metadata/logo patches and appends discoveries to manual-review queues; no production I/O |
-| International engine | HTTP probe adapter, daily probe ledger, 404/410-only failure policy, verified recovery, five-identity grouping, lifecycle planner and group-only candidate engine implemented |
+| International engine | HTTP probe adapter, idempotent daily probe ledger, 404/410-only failure policy, verified recovery, five-identity grouping, row-identity-bound lifecycle planner, batch orchestrator and group-only candidate engine implemented |
 | EPG engine | XMLTV structural/timezone validation, coverage, schedule freshness, conservative alias suggestions, explicit-approved alias application and candidate regression gate implemented |
 | Run ledger | Append-only JSON ledger model with monotonic status transitions and Bangladesh timezone metadata implemented |
 | Transaction safety | Engine path allowlists, SHA-256 candidate evidence, stale-input checks, fail-closed gate, shared lock and atomic candidate-directory staging implemented; no production publisher |
 | Logo audit | Playlist/runtime/report references separated; exact duplicate hashes reported; no deletion, quarantine or move |
-| V2 CI | Latest branch CI passed 168 V2 tests and completed the immutable baseline dry run on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8 |
-| Legacy regression | Latest full repository regression run passed 699 tests on the same commit |
+| V2 CI | V2 CI passed 168 tests and the immutable baseline dry run on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8; latest hardening commit f4af3fe24e8cef5192c13c31e425d9a660f3878a is awaiting its V2 CI run |
+| Legacy regression | Latest full repository regression run passed 707 tests on commit f4af3fe24e8cef5192c13c31e425d9a660f3878a |
 | Real-baseline measurements | Exact production blob fingerprints verified; IPTV 1,280 rows; International 3,120 rows; EPG 30,944,668 bytes |
 | Workflow migration/cutover | Not started; all existing production workflows remain enabled and unchanged |
 
@@ -43,9 +43,9 @@ Repository-wide CI audit found 5,366 image assets, 2,395 distinct playlist-refer
 
 ## Remaining migration phases
 1. Inventory and baseline preservation — completed.
-2. Central policy, parser contracts and regression harness — implemented; 699 full repository tests passed.
+2. Central policy, parser contracts and regression harness — implemented; 707 full repository tests passed.
 3. Candidate-only IPTV, International and EPG engines — implemented for supplied, evidence-backed inputs; real discovery/source adapters and full production-scale maintenance orchestration remain.
-4. Durable state and transaction staging — JSON ledgers, per-engine allowlists, fingerprint checks, shared lock and atomic candidate bundle staging implemented; failure-injection and recovery tests still need expansion.
+4. Durable state and transaction staging — JSON ledgers, per-engine allowlists, fingerprint checks, symlink-safe shared lock and atomic candidate bundle staging implemented; failure-injection and recovery tests still need expansion.
 5. Immutable production baseline dry run — passed. All three candidate engines accepted unchanged baseline copies: IPTV 1,280/1,280 rows, International 3,120/3,120 rows, EPG accepted for both playlists; zero candidate changes, publish=false, production_files_modified=false.
 6. Substantive candidate tests — still required for real discovery inputs, multi-day probe histories, approved metadata changes, large EPG candidate changes and logo quarantine manifests.
 7. Workflow replacement — still pending: map every legacy writer/dependency, build replacement workflows, prove one-writer serialization, and test cancellation/retry/rollback before retiring anything.
