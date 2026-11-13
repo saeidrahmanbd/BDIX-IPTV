@@ -270,5 +270,36 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         transactions=root/"reports/automation-v2/candidates/transactions"
         self.assertEqual(len(list(transactions.iterdir())),2)
 
+    def test_bundle_accepts_only_planner_authorized_three_day_removal(self):
+        temp, root = self.make_root()
+        self.addCleanup(temp.cleanup)
+        international_before=(
+            '#EXTM3U\\n'
+            '#EXTINF:-1 tvg-id="dead" group-title="Review",Dead\\n'
+            'https://dead.example/live\\n'
+        )
+        (root/"International-Playlist.m3u").write_text(international_before,encoding="utf-8")
+        iptv=SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n",candidate_rows=0),source_warnings=(),publish=False)
+        plan=SimpleNamespace(remove_identities=("dead",))
+        maintenance=SimpleNamespace(
+            candidate=SimpleNamespace(text="#EXTM3U\\n",candidate_rows=0,plan=plan),
+            ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
+            probed_count=0,reused_count=1,publish=False,
+        )
+        international=SimpleNamespace(maintenance=maintenance,publish=False)
+        epg=SimpleNamespace(xml_text="<tv/>",decision=SimpleNamespace(accepted=True,errors=()),publish=False)
+        with (
+            patch("automation.core.v2_candidate_runner._assert_current_main_head"),
+            patch("automation.core.v2_candidate_runner.run_iptv_discovery",return_value=iptv),
+            patch("automation.core.v2_candidate_runner.derive_primary_stream_targets",return_value=[]),
+            patch("automation.core.v2_candidate_runner.run_international_discovery",return_value=international),
+            patch("automation.core.v2_candidate_runner.build_epg_source_candidate",return_value="<tv/>"),
+            patch("automation.core.v2_candidate_runner.build_epg_candidate",return_value=epg),
+        ):
+            decision,result=run_candidate_bundle(root,date(2026,11,13),"c"*40,MemoryStore())
+        self.assertTrue(decision.allowed)
+        staged=(Path(result.transaction_path)/"International-Playlist.m3u").read_text(encoding="utf-8")
+        self.assertEqual(staged,"#EXTM3U\\n")
+
 if __name__ == "__main__":
     unittest.main()
