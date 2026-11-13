@@ -3,7 +3,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 FIXED_GROUPS = {"bangladesh", "india"}
-NON_PRIMARY_GROUPS = {"backup", "review", "new channels", "new backups"}
+NON_COUNTRY_PRIMARY_GROUPS = {
+    "indian bangla", "indian movies", "indian music", "indian entertainment",
+    "international", "fashion tv", "documentary & wildlife", "kids",
+    "religious", "sports", "adult", "test",
+}
+FIXED_PRIMARY_GROUPS = FIXED_GROUPS | NON_COUNTRY_PRIMARY_GROUPS
+NON_PRIMARY_GROUPS = {
+    "backup", "review", "new channels", "new backups", "new backup",
+    "not playing", "not playing...",
+} | NON_COUNTRY_PRIMARY_GROUPS
 
 @dataclass(frozen=True)
 class ChannelIdentity:
