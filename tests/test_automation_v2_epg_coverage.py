@@ -28,7 +28,7 @@ class EpgCoverageTests(unittest.TestCase):
         self.assertIn("programme schedule coverage regressed",result.reasons)
 
     def test_equal_counts_cannot_hide_lost_channel_mappings(self):
-        playlist=PLAYLIST + '#EXTINF:-1 tvg-id="c" group-title="Bangladesh",C\\nhttps://c.example/c\\n'
+        playlist=PLAYLIST + '#EXTINF:-1 tvg-id="c" group-title="Bangladesh",C\nhttps://c.example/c\n'
         baseline='<tv><channel id="a"/><channel id="b"/><programme channel="a" start="20261113090000" stop="20261113100000"/><programme channel="b" start="20261113090000" stop="20261113100000"/></tv>'
         candidate='<tv><channel id="a"/><channel id="c"/><programme channel="a" start="20261113090000" stop="20261113100000"/><programme channel="c" start="20261113090000" stop="20261113100000"/></tv>'
         result=compare_coverage(playlist,baseline,candidate)
