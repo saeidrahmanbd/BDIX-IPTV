@@ -262,7 +262,7 @@ def classify(a, name, group, country, promote_backup=False):
     # India follows the approved regional policy: News, all Religious and
     # Educational/Business-Finance are excluded; Kids and Sports remain eligible.
     if country == "IN" or group in INDIAN_GROUPS:
-        reason = bd_policy.prohibited_channel(a, name, "IN")
+        reason = bd_policy.prohibited_channel(a, name, "IN", discovery=True)
         if reason:
             return "Backup", None, None
         special = discovery.special_group(a, name)
@@ -422,37 +422,50 @@ def main():
     matched_backup_alternates = 0
     orphan_backup_candidates = 0
     unresolved_orphans_retained = 0
+    adult_orphans_restored = 0
     for row in backup_rows:
         original_group = str(row["original_group"] or "").strip().casefold()
         if row.get("was_review") or row["group"] in {"New Backup", "New Backups"}:
             remaining_backup_rows.append(row)
             continue
-
+        if original_group not in {"backup", "backups"}:
+            remaining_backup_rows.append(row)
+            continue
         ident = (row["country"], row["key"])
         channel_id = (row["a"].get("tvg-id") or row["a"].get("channel-id") or "").strip().casefold()
         match = identity_primary.get(ident) or (primary_ids.get((row["country"], channel_id)) if channel_id else None)
+        if is_adult_channel(row["a"], row["name"], row["original_group"]):
+            if match and str(match.get("group", "")).casefold() == "adult":
+                row["content_kind"] = "Adult"
+                matched_backup_alternates += 1
+                remaining_backup_rows.append(row)
+                continue
+            orphan_backup_candidates += 1
+            row["group"] = "Adult"
+            row["kind"] = "Adult"
+            row["content_kind"] = "Adult"
+            row["was_backup"] = False
+            row["promoted_orphan"] = True
+            primary.append(row)
+            identity_primary[ident] = row
+            if channel_id:
+                primary_ids[(row["country"], channel_id)] = row
+            promoted_orphans += 1
+            adult_orphans_restored += 1
+            continue
         if match:
             row["content_kind"] = match.get("content_kind") or match.get("kind")
             matched_backup_alternates += 1
             remaining_backup_rows.append(row)
             continue
-
-        # Only true Backup/Backups rows are eligible for automatic promotion.
-        # Legacy Not Playing and explicit review rows are never auto-promoted.
-        if original_group not in {"backup", "backups"}:
-            remaining_backup_rows.append(row)
-            continue
-
         orphan_backup_candidates += 1
         target, kind, reason = classify(
             row["a"], row["name"], row["original_group"], row["country"], promote_backup=True
         )
         if reason or target == "Backup":
-            # Unknown/ineligible orphans are retained for manual review; never discard them.
             unresolved_orphans_retained += 1
             remaining_backup_rows.append(row)
             continue
-
         row["group"] = target
         row["kind"] = kind
         row["content_kind"] = kind
@@ -513,7 +526,9 @@ def main():
             return
         target = group
         ident = (row["country"], row["key"])
-        if not as_backup and group not in {"New Backup", "New Backups"}:
+        if group == "Adult":
+            target = "Adult"
+        elif not as_backup and group not in {"New Backup", "New Backups"}:
             if ident in seen_channels:
                 target = "New Backups" if group == "New Channels" else "Backup"
                 removed["duplicate channel stream moved to Backup"] += 1
@@ -616,8 +631,9 @@ def main():
         f"- Matching alternate streams retained in Backup: {matched_backup_alternates}",
         f"- True orphan Backup rows evaluated: {orphan_backup_candidates}",
         f"- Eligible orphan Backup rows promoted to primary: {promoted_orphans}",
+        f"- Clearly identified Adult orphans restored to Adult: {adult_orphans_restored}",
         f"- Ineligible/unclassified orphan Backup rows retained: {unresolved_orphans_retained}",
-        "- Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational and Business/Finance are excluded; Indian Kids and Sports remain eligible.",
+        "- Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational/Knowledge, Business/Finance and Farming/Agriculture are excluded; Indian Kids and Sports remain eligible.",
         "- For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.",
         "- Every country except Bangladesh and India, including Pakistan, requires five unique primary channel identities before a dedicated country group is used.",
         "- Eligible orphan Backup rows without a matching primary identity are migrated to their country/genre primary group; matching alternates remain in Backup. Unclassifiable orphans are retained for manual review.",
