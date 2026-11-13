@@ -61,19 +61,14 @@ jobs:
       - name: Run V2 contract tests
         run: python -m unittest discover -s tests -p 'test_automation_v2_*.py' -v
       - name: Check out immutable production baseline
-        if: github.event_name == 'pull_request'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
-          ref: ${{ github.event.pull_request.base.sha }}
+          ref: aec37357dfbb47f0792682af744ccaf111416d7a
           path: automation-v2-production-baseline
           persist-credentials: false
       - name: Run immutable production baseline dry run
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            python scripts/run_automation_v2_dry_run.py --root "${{ github.workspace }}/automation-v2-production-baseline" --output reports/automation-v2/baseline-dry-run.json
-          else
-            python scripts/run_automation_v2_dry_run.py --output reports/automation-v2/baseline-dry-run.json
-          fi
+          python scripts/run_automation_v2_dry_run.py --root "${{ github.workspace }}/automation-v2-production-baseline" --output reports/automation-v2/baseline-dry-run.json
       - name: Upload baseline dry-run report
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
