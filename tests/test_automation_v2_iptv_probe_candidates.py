@@ -24,7 +24,7 @@ class IptvDiscoveryProbeTests(unittest.TestCase):
             Probe(DAY,404,stream_state="dead",reason="HTTP 404"),
             Probe(DAY,403,auth_error=True,reason="access inconclusive"),
         ]
-        result=probe_discovery_candidates(CANDIDATES,DAY)
+        result=probe_discovery_candidates(CANDIDATES,DAY,max_workers=1)
         self.assertEqual([x.extinf for x in result.retained],[CANDIDATES[0].extinf,CANDIDATES[2].extinf])
         self.assertEqual(result.verified_count,1)
         self.assertEqual(result.inconclusive_count,1)
