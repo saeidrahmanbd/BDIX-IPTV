@@ -43,4 +43,6 @@ jobs:
       - name: Run policy conformance gate
         run: python automation/validators/policy_conformance.py
       - name: Run V2 contract tests
-        run: python -m unittest discover -s tests -p 'test_automation_v2_contract.py' -v
+        run: python -m unittest discover -s tests -p 'test_automation_v2_*.py' -v
+      - name: Run conservative logo reference audit
+        run: python scripts/audit_logo_references.py --output /tmp/logo-reference-audit.json
