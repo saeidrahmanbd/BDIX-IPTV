@@ -7,7 +7,7 @@ sys.path.insert(0,str(ROOT))
 from automation.engines.international.planner import RowLifecycleInput, plan_lifecycle
 from automation.engines.international.stream_failure_policy import Probe
 
-PLAYLIST='#EXTM3U\\n#EXTINF:-1 tvg-id="a" tvg-chno="1" group-title="Review",A\\nhttps://a.example/a\\n#EXTINF:-1 tvg-id="b" tvg-chno="2" group-title="Review",B\\nhttps://b.example/b\\n'
+PLAYLIST='#EXTM3U\n#EXTINF:-1 tvg-id="a" tvg-chno="1" group-title="Review",A\nhttps://a.example/a\n#EXTINF:-1 tvg-id="b" tvg-chno="2" group-title="Review",B\nhttps://b.example/b\n'
 
 class InternationalPlannerTests(unittest.TestCase):
     def test_review_channel_returns_to_fixed_india_group_when_verified_primary(self):
@@ -20,7 +20,7 @@ class InternationalPlannerTests(unittest.TestCase):
         self.assertEqual(result.changes[0].target_group,"Backup")
 
     def test_five_unique_verified_primary_identities_allow_country_group(self):
-        text="#EXTM3U\\n"+"".join(f'#EXTINF:-1 tvg-id="n{i}" group-title="Review",N{i}\\nhttps://n{i}.example/live\\n' for i in range(5))
+        text="#EXTM3U\n"+"".join(f'#EXTINF:-1 tvg-id="n{i}" group-title="Review",N{i}\nhttps://n{i}.example/live\n' for i in range(5))
         inputs=[RowLifecycleInput(i,f"n{i}","Nepal","primary") for i in range(5)]
         result=plan_lifecycle(text,inputs,date(2026,11,13))
         self.assertEqual(len(result.changes),5)
