@@ -16,7 +16,7 @@ class PlaylistRow:
 def parse_rows(text: str) -> list[PlaylistRow]:
     rows = []
     current = None
-    for raw in text.replace("\\r", "").splitlines():
+    for raw in text.replace("\r", "").splitlines():
         line = raw.strip()
         if line.startswith("#EXTINF:"):
             if current is not None:
