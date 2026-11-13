@@ -6,7 +6,7 @@ from pathlib import Path
 
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
 TEXT_SUFFIXES = {".py", ".yml", ".yaml", ".json", ".md", ".txt", ".m3u", ".xml", ".html", ".js", ".css", ".toml", ".ini", ".sh"}
-LOGO_REF = re.compile(r'(?:https?://[^\\s"\']+?/)?(logos/[A-Za-z0-9_./@+-]+\\.(?:png|jpe?g|webp|gif|svg))', re.I)
+LOGO_REF = re.compile(r'(?:https?://[^\s"\']+?/)?(logos/[A-Za-z0-9_./@+-]+\.(?:png|jpe?g|webp|gif|svg))', re.I)
 
 def _sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -64,7 +64,7 @@ def main() -> int:
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     result = scan(args.root.resolve())
-    rendered = json.dumps(result, indent=2) + "\\n"
+    rendered = json.dumps(result, indent=2) + "\n"
     if args.output:
         args.output.write_text(rendered, encoding="utf-8")
     else:
