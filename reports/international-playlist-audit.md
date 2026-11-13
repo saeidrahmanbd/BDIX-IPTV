@@ -1,13 +1,13 @@
 # International Playlist Organization Audit
 
-- Entries before: 3107
-- Entries after: 3107
+- Entries before: 3120
+- Entries after: 3120
 - Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1372
+- Original Backup/Backups and protected queue rows examined: 1379
 - Matching alternate streams retained in Backup: 361
 - True orphan Backup rows evaluated: 655
 - Eligible orphan Backup rows promoted to primary: 0
@@ -55,27 +55,27 @@
 - Iran: 13
 - Italy: 28
 - Lebanon: 6
-- Mexico: 16
+- Mexico: 17
 - Netherlands: 17
 - Panama: 5
 - Paraguay: 5
 - Peru: 7
 - Poland: 24
 - Romania: 28
-- Russia: 63
+- Russia: 65
 - Saudi Arabia: 9
 - Singapore: 5
 - Spain: 20
 - Sweden: 49
 - Turkey: 14
-- Ukraine: 22
+- Ukraine: 23
 - United Kingdom: 24
-- United States: 219
+- United States: 221
 - Uzbekistan: 5
 - Vietnam: 6
 - International: 99
 - Kids: 8
 - Sports: 5
 - Adult: 351
-- Review: 356
+- Review: 363
 - Backup: 1016
