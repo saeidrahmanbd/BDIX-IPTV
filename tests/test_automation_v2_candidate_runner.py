@@ -135,7 +135,7 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         temp, root = self.make_root()
         self.addCleanup(temp.cleanup)
         store = MemoryStore()
-        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), source_warnings=(), publish=False)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), source_warnings=(), publish=False)
         ledger = {
             "schema_version": 1,
             "timezone": "Asia/Dhaka",
@@ -153,7 +153,7 @@ class CandidateBundleRunnerTests(unittest.TestCase):
             },
         }
         maintenance = SimpleNamespace(
-            candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0),
+            candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0),
             ledger_json=__import__("json").dumps(ledger),
             probed_count=1, reused_count=0, publish=False,
         )
@@ -184,9 +184,9 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         temp, root = self.make_root()
         self.addCleanup(temp.cleanup)
         store = MemoryStore()
-        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), source_warnings=(), publish=False)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), source_warnings=(), publish=False)
         maintenance = SimpleNamespace(
-            candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0),
+            candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0),
             ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
             probed_count=0, reused_count=0, publish=False,
         )
@@ -247,9 +247,9 @@ class CandidateBundleRunnerTests(unittest.TestCase):
     def test_transaction_identity_changes_when_baseline_commit_changes(self):
         temp, root = self.make_root()
         self.addCleanup(temp.cleanup)
-        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), source_warnings=(), publish=False)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), source_warnings=(), publish=False)
         maintenance = SimpleNamespace(
-            candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0),
+            candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0),
             ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
             probed_count=0, reused_count=0, publish=False,
         )
@@ -274,15 +274,15 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         temp, root = self.make_root()
         self.addCleanup(temp.cleanup)
         international_before=(
-            '#EXTM3U\\n'
-            '#EXTINF:-1 tvg-id="dead" group-title="Review",Dead\\n'
-            'https://dead.example/live\\n'
+            '#EXTM3U\n'
+            '#EXTINF:-1 tvg-id="dead" group-title="Review",Dead\n'
+            'https://dead.example/live\n'
         )
         (root/"International-Playlist.m3u").write_text(international_before,encoding="utf-8")
-        iptv=SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n",candidate_rows=0),source_warnings=(),publish=False)
+        iptv=SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n",candidate_rows=0),source_warnings=(),publish=False)
         plan=SimpleNamespace(remove_identities=("dead",))
         maintenance=SimpleNamespace(
-            candidate=SimpleNamespace(text="#EXTM3U\\n",candidate_rows=0,plan=plan),
+            candidate=SimpleNamespace(text="#EXTM3U\n",candidate_rows=0,plan=plan),
             ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
             probed_count=0,reused_count=1,publish=False,
         )
@@ -299,7 +299,7 @@ class CandidateBundleRunnerTests(unittest.TestCase):
             decision,result=run_candidate_bundle(root,date(2026,11,13),"c"*40,MemoryStore())
         self.assertTrue(decision.allowed)
         staged=(Path(result.transaction_path)/"International-Playlist.m3u").read_text(encoding="utf-8")
-        self.assertEqual(staged,"#EXTM3U\\n")
+        self.assertEqual(staged,"#EXTM3U\n")
 
 if __name__ == "__main__":
     unittest.main()
