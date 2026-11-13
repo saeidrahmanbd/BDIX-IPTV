@@ -40,6 +40,16 @@ class InternationalOrchestratorTests(unittest.TestCase):
         result=run_international_candidate(review,None,[StreamTarget(0,"a","https://a.example/live","India","primary")],DAY)
         self.assertIn('group-title="India"',result.candidate.text)
 
+    @patch("automation.engines.international.monitor.probe_stream")
+    def test_discovery_candidates_are_combined_with_existing_maintenance(self,mock):
+        from automation.engines.iptv.candidate_engine import DiscoveryCandidate
+        mock.return_value=Probe(DAY,200,stream_state="verified")
+        discovery=DiscoveryCandidate('#EXTINF:-1 group-title="New Channels",New','https://new.example/live.m3u8')
+        result=run_international_candidate(PLAYLIST,None,[],DAY,discoveries=[discovery])
+        self.assertIn('group-title="New Channels"',result.candidate.text)
+        self.assertIn('https://new.example/live.m3u8',result.candidate.text)
+        self.assertEqual(result.candidate.candidate_rows,2)
+
     def test_duplicate_targets_rejected(self):
         targets=[StreamTarget(0,"a","https://a.example/live"),StreamTarget(0,"b","https://b.example/live")]
         with self.assertRaisesRegex(ValueError,"row index"):
