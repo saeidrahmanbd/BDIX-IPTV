@@ -13,9 +13,15 @@ def _safe_target(root: Path, relative_path: str) -> Path:
     if relative.is_absolute() or ".." in relative.parts or not any(relative_path.startswith(prefix) for prefix in ALLOWED_PREFIXES):
         raise ValueError("write target is outside V2 candidate/state output directories")
     resolved_root=root.resolve()
+    allowed_root=resolved_root/Path(*relative.parts[:3])
+    current=resolved_root
+    for part in relative.parts[:3]:
+        current=current/part
+        if current.is_symlink():
+            raise ValueError("write target cannot traverse a symlink")
     target=(resolved_root/Path(*relative.parts)).resolve()
-    if not target.is_relative_to(resolved_root):
-        raise ValueError("write target escapes repository root")
+    if not target.is_relative_to(allowed_root.resolve()):
+        raise ValueError("write target escapes its approved V2 output directory")
     return target
 
 @contextmanager
