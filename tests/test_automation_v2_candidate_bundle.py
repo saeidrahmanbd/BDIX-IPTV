@@ -1,9 +1,11 @@
 import sys
 import unittest
+import json
+import tempfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from automation.core.candidate_bundle import build_candidate_bundle
+from automation.core.candidate_bundle import build_candidate_bundle, write_candidate_bundle
 
 class CandidateBundleTests(unittest.TestCase):
     def test_valid_bundle_is_ready_for_review_but_never_published(self):
@@ -29,26 +31,20 @@ class CandidateBundleTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"cannot be empty"):
             build_candidate_bundle("iptv","a"*40,{}, {}, {})
 
-if __name__=="__main__":
-    unittest.main()
-
-
     def test_ready_bundle_written_as_one_candidate_directory(self):
-        import tempfile
-        from pathlib import Path
-        from automation.core.candidate_bundle import write_candidate_bundle
+        contents={"IPTV-Playlist.m3u":"#EXTM3U\n"}
+        bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"#EXTM3U\n"},contents,{"IPTV-Playlist.m3u":True})
         with tempfile.TemporaryDirectory() as temp:
-            contents={"IPTV-Playlist.m3u":"#EXTM3U\\n"}
-            bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"#EXTM3U\\n"},contents,{"IPTV-Playlist.m3u":True})
             path=write_candidate_bundle(temp,"run-123",bundle,contents)
-            self.assertEqual((path/"IPTV-Playlist.m3u").read_text(encoding="utf-8"),"#EXTM3U\\n")
+            self.assertEqual((path/"IPTV-Playlist.m3u").read_text(encoding="utf-8"),"#EXTM3U\n")
             self.assertFalse(json.loads((path/"candidate-bundle.json").read_text())["publish"])
 
     def test_blocked_bundle_is_not_written(self):
-        import tempfile
-        from automation.core.candidate_bundle import write_candidate_bundle
+        contents={"IPTV-Playlist.m3u":"after"}
+        bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"before"},contents,{"IPTV-Playlist.m3u":False})
         with tempfile.TemporaryDirectory() as temp:
-            contents={"IPTV-Playlist.m3u":"after"}
-            bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"before"},contents,{"IPTV-Playlist.m3u":False})
             with self.assertRaisesRegex(ValueError,"passed all gates"):
                 write_candidate_bundle(temp,"run-123",bundle,contents)
+
+if __name__=="__main__":
+    unittest.main()
