@@ -52,9 +52,10 @@ class EpgCandidateEngineTests(unittest.TestCase):
         self.assertFalse(result.decision.accepted)
         self.assertNotIn("<title>Expired</title>", result.xml_text)
 
-    def test_candidate_engine_never_publishes(self):
+    def test_candidate_engine_never_publishes_and_preserves_noop_text(self):
         result=build_epg_candidate(PLAYLIST,BASE,as_of=AS_OF)
         self.assertFalse(result.publish)
+        self.assertEqual(result.xml_text,BASE)
         self.assertIn("publication remains disabled",result.decision.reason)
 
 if __name__=="__main__":
