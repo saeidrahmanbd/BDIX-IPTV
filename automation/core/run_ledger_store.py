@@ -1,7 +1,8 @@
 """Validated JSON persistence and serialized run reservations; local atomic writes only, no Git/network."""
 from __future__ import annotations
 from dataclasses import replace
-from datetime import date
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 import json
 from pathlib import Path
 from automation.core.atomic_output import atomic_write_v2_output, atomic_write_v2_output_locked, transaction_lock
@@ -31,6 +32,7 @@ def _validate_entry(item: dict) -> LedgerEntry:
         baseline=item["baseline_commit"]
         status=item["status"]
         attempt=item["attempt"]
+        started_raw=item.get("started_at")
     except (KeyError,TypeError,ValueError) as exc:
         raise ValueError("run ledger entry is incomplete or invalid") from exc
     if not isinstance(key,str) or len(key)!=64 or any(c not in "0123456789abcdef" for c in key):
@@ -43,7 +45,13 @@ def _validate_entry(item: dict) -> LedgerEntry:
         raise ValueError("run ledger status is invalid")
     if not isinstance(attempt,int) or isinstance(attempt,bool) or attempt<1:
         raise ValueError("run ledger attempt must be a positive integer")
-    return LedgerEntry(key,engine,day,baseline,status,attempt)
+    try:
+        started_at = datetime.fromisoformat(started_raw) if started_raw else None
+    except (TypeError, ValueError) as exc:
+        raise ValueError("run ledger started_at timestamp is invalid") from exc
+    if started_at is not None and (started_at.tzinfo is None or started_at.utcoffset() is None):
+        raise ValueError("run ledger started_at must include a timezone")
+    return LedgerEntry(key,engine,day,baseline,status,attempt,started_at)
 
 def parse_run_ledger_json(text: str | None) -> list[LedgerEntry]:
     if not text:
@@ -66,14 +74,14 @@ def parse_run_ledger_json(text: str | None) -> list[LedgerEntry]:
 def serialize_run_ledger(entries: list[LedgerEntry]) -> str:
     validated=[_validate_entry({
         "idempotency_key":e.idempotency_key,"engine":e.engine,"business_day":e.business_day.isoformat(),
-        "baseline_commit":e.baseline_commit,"status":e.status,"attempt":e.attempt
+        "baseline_commit":e.baseline_commit,"status":e.status,"attempt":e.attempt,"started_at":e.started_at.isoformat() if e.started_at else None
     }) for e in entries]
     identities=[(e.idempotency_key,e.attempt) for e in validated]
     if len(set(identities))!=len(identities):
         raise ValueError("duplicate run ledger attempt")
     payload={"schema_version":SCHEMA_VERSION,"timezone":TIMEZONE,"entries":[
         {"idempotency_key":e.idempotency_key,"engine":e.engine,"business_day":e.business_day.isoformat(),
-         "baseline_commit":e.baseline_commit,"status":e.status,"attempt":e.attempt}
+         "baseline_commit":e.baseline_commit,"status":e.status,"attempt":e.attempt,"started_at":e.started_at.isoformat() if e.started_at else None}
         for e in sorted(validated,key=lambda x:(x.business_day,x.engine,x.idempotency_key,x.attempt))
     ]}
     return json.dumps(payload,sort_keys=True,indent=2)+"\n"
@@ -95,7 +103,7 @@ def reserve_persisted_run(root: str | Path, request: RunRequest,
         decision=reserve_run(request,entries,active_transaction_id)
         if decision.allowed:
             entries.append(LedgerEntry(decision.idempotency_key,request.engine.strip().casefold(),
-                                       request.business_day,request.baseline_commit.lower(),"running",decision.attempt))
+                                       request.business_day,request.baseline_commit.lower(),"running",decision.attempt,request.requested_at or datetime.now(ZoneInfo(TIMEZONE))))
             atomic_write_v2_output_locked(root,LEDGER_PATH,serialize_run_ledger(entries))
         return decision
 
