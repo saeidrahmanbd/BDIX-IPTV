@@ -13,6 +13,8 @@ class Probe:
     auth_error: bool = False
     rate_limited: bool = False
     geo_blocked: bool = False
+    stream_state: str = "unknown"
+    reason: str = ""
 
 def is_definitive_failure(probe: Probe) -> bool:
     return (not probe.network_error and not probe.auth_error and not probe.rate_limited
