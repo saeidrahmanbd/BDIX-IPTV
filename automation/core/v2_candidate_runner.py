@@ -171,7 +171,7 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
             as_of=datetime.now(ZoneInfo("Asia/Dhaka")),
         )
         if not epg_run.decision.accepted:
-            raise ValueError("EPG candidate rejected: " + "; ".join(epg_run.decision.errors))
+            raise ValueError("EPG candidate rejected: " + epg_run.decision.reason)
         if epg_run.publish:
             raise RuntimeError("EPG candidate engine unexpectedly enabled publication")
         print("V2 bundle: EPG candidate passed validation and coverage gates.", flush=True)
