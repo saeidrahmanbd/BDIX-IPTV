@@ -5,7 +5,7 @@ from unittest.mock import patch
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from automation.engines.international.orchestrator import StreamTarget, run_international_candidate
+from automation.engines.international.orchestrator import StreamTarget, run_international_candidate, derive_primary_stream_targets
 from automation.engines.international.stream_failure_policy import Probe
 
 DAY=date(2026,11,13)
@@ -36,7 +36,7 @@ class InternationalOrchestratorTests(unittest.TestCase):
     @patch("automation.engines.international.monitor.probe_stream")
     def test_verified_working_review_stream_restores_primary(self,mock):
         review=PLAYLIST.replace('group-title="Nepal"','group-title="Review"')
-        mock.return_value=Probe(DAY,200)
+        mock.return_value=Probe(DAY,200,stream_state="verified")
         result=run_international_candidate(review,None,[StreamTarget(0,"a","https://a.example/live","India","primary")],DAY)
         self.assertIn('group-title="India"',result.candidate.text)
 
@@ -54,6 +54,26 @@ class InternationalOrchestratorTests(unittest.TestCase):
         targets=[StreamTarget(0,"a","https://a.example/live"),StreamTarget(0,"b","https://b.example/live")]
         with self.assertRaisesRegex(ValueError,"row index"):
             run_international_candidate(PLAYLIST,None,targets,DAY)
+
+
+    def test_unverified_http_success_does_not_restore_review_channel(self,mock):
+        review=PLAYLIST.replace('group-title="Nepal"','group-title="Review"')
+        mock.return_value=Probe(DAY,200,stream_state="unknown")
+        result=run_international_candidate(review,None,[StreamTarget(0,"a","https://a.example/live","India","primary")],DAY)
+        self.assertIn('group-title="Review"',result.candidate.text)
+
+    def test_target_derivation_excludes_queues_and_ambiguous_duplicate_ids(self):
+        text = (
+            '#EXTM3U\\n'
+            '#EXTINF:-1 tvg-id="primary" group-title="Nepal",Primary\\nhttps://one.example/live\\n'
+            '#EXTINF:-1 tvg-id="duplicate" group-title="Nepal",Duplicate A\\nhttps://two.example/live\\n'
+            '#EXTINF:-1 tvg-id="duplicate" group-title="Nepal",Duplicate B\\nhttps://three.example/live\\n'
+            '#EXTINF:-1 tvg-id="backup" group-title="Backup",Backup\\nhttps://four.example/live\\n'
+            '#EXTINF:-1 tvg-id="review" group-title="Review",Review\\nhttps://five.example/live\\n'
+            '#EXTINF:-1 group-title="Nepal",Missing ID\\nhttps://six.example/live\\n'
+        )
+        targets = derive_primary_stream_targets(text)
+        self.assertEqual([(item.identity,item.row_index) for item in targets], [("primary",0)])
 
 if __name__=="__main__":
     unittest.main()
