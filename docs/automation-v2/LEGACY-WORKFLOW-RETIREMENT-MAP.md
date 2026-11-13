@@ -1,6 +1,6 @@
 # Legacy workflow retirement and V2 replacement map
 
-Baseline: 46275f5ebafa2ae1b56f3e480f684ac1e85ae45e  
+Baseline: aec37357dfbb47f0792682af744ccaf111416d7a  
 Audit branch: automation-v2/inventory-audit
 
 This is a migration plan only. No legacy workflow is disabled, edited or retired by this document.
@@ -38,8 +38,8 @@ This is a migration plan only. No legacy workflow is disabled, edited or retired
 - Candidate-only IPTV engine: implemented for approved metadata/logo patches and supplied discovery candidates.
 - Candidate-only International engine: implemented for supplied probe targets, durable probe ledger observations, lifecycle decisions and group-only changes.
 - Candidate-only EPG engine: implemented for structural validation, active-channel coverage/freshness checks and explicit-approved alias additions.
-- Candidate transaction infrastructure: per-engine allowlists, SHA-256 evidence, stale-input rejection, shared lock, append-only run ledger and atomic candidate-directory staging.
-- Verification: 168 V2 tests and 699 full repository tests passed on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8; all three candidate engines passed an immutable no-change baseline dry run.
+- Candidate transaction infrastructure: per-engine allowlists, SHA-256 evidence, stale-input rejection, shared lock, idempotent run-reservation model and durable International probe ledger and atomic candidate-directory staging.
+- Verification: 201 V2 tests and 732 full repository tests passed on commit d2a14e92e46ee10f1f4df5c30a57efeb048c4bc3; all three candidate engines passed an immutable no-change baseline dry run.
 - Not ready for production: discovery-source adapters, production Git publisher, durable state commit/recovery, exhaustive dynamic side-effect tracing, failure-injection/rollback and complete workflow equivalence remain open.
 
 ## Required cutover sequence
