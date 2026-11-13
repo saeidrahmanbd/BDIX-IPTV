@@ -105,7 +105,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         marker = json.loads((ROOT / "maintenance" / "owner-requested-iptv-migration.json").read_text(encoding="utf-8"))
         self.assertEqual(marker["status"], "cancelled")
         guard = (ROOT / "scripts" / "protect_main_playlist.py").read_text(encoding="utf-8")
-        self.assertIn("after_existing_order != old_order", guard)
+        self.assertIn("new_order != old_order", guard)
         self.assertIn("Existing group assignment changed", guard)
         self.assertIn("Existing channel number changed", guard)
         self.assertNotIn("migration_mode", guard)
