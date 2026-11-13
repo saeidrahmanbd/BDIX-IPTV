@@ -13,6 +13,10 @@ class RunLedgerTests(unittest.TestCase):
     def test_idempotency_key_is_deterministic(self):
         self.assertEqual(make_idempotency_key(self.request),make_idempotency_key(self.request))
 
+    def test_hex_case_does_not_change_idempotency_key(self):
+        upper=RunRequest("IPTV",date(2026,11,13),"A"*40,"B"*64)
+        self.assertEqual(make_idempotency_key(self.request),make_idempotency_key(upper))
+
     def test_exact_successful_input_is_not_run_twice(self):
         key=make_idempotency_key(self.request)
         entry=LedgerEntry(key,"iptv",date(2026,11,13),"a"*40,"succeeded",1)
