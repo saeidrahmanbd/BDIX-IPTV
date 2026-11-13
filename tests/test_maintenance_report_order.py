@@ -90,23 +90,22 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("git add -f epg/epg.xml", refresh)
         self.assertIn("workflow_dispatch:", refresh)
 
-    def test_main_playlist_is_permanently_owner_curated_and_append_only(self):
+    def test_main_playlist_owner_migration_is_explicitly_authorized_and_protected(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\n          }", workflow.index("run_mutations() {"))]
-        self.assertIn("OWNER_MIGRATION_REQUESTED=false", workflow)
-        self.assertNotIn("OWNER_MIGRATION_REQUESTED=true", workflow)
+        self.assertIn('d.get("status") == "authorized"', workflow)
+        self.assertIn("OWNER_MIGRATION_REQUESTED=true", workflow)
+        self.assertIn("touch /tmp/iptv-owner-migration-authorized", workflow)
         for forbidden in (
-            "migrate_owner_requested_main_queues.py",
-            "probe_owner_requested_main_queues.py",
             "sort_playlists.py IPTV-Playlist.m3u",
             "renumber_active_channels.py IPTV-Playlist.m3u",
         ):
             self.assertNotIn(forbidden, mutations)
         marker = json.loads((ROOT / "maintenance" / "owner-requested-iptv-migration.json").read_text(encoding="utf-8"))
-        self.assertEqual(marker["status"], "cancelled")
+        self.assertEqual(marker["status"], "authorized")
         guard = (ROOT / "scripts" / "protect_main_playlist.py").read_text(encoding="utf-8")
         self.assertIn("new_order != old_order", guard)
-        self.assertIn("Existing group assignment changed", guard)
+        self.assertIn("Unapproved existing group change", guard)
         self.assertIn("Existing channel number changed", guard)
         self.assertNotIn("migration_mode", guard)
         self.assertIn("python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u", workflow)
