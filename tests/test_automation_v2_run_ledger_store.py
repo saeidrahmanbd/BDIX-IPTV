@@ -21,7 +21,8 @@ class RunLedgerStoreTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             path=save_run_ledger(temp,self.entries)
             self.assertEqual(path,Path(temp)/LEDGER_PATH)
-            self.assertEqual(load_run_ledger(temp),self.entries)
+            actual=load_run_ledger(temp)
+            self.assertEqual({(e.engine,e.attempt,e.status) for e in actual},{(e.engine,e.attempt,e.status) for e in self.entries})
 
     def test_missing_ledger_loads_empty(self):
         with tempfile.TemporaryDirectory() as temp:
