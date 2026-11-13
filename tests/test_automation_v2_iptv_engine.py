@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from automation.engines.iptv.candidate_engine import DiscoveryCandidate, build_candidate
 
-BASE = '#EXTM3U\\n#EXTINF:-1 tvg-chno="1" group-title="Bangladesh",A\\nhttps://a.example/a.m3u8\\n'
+BASE = '#EXTM3U\n#EXTINF:-1 tvg-chno="1" group-title="Bangladesh",A\nhttps://a.example/a.m3u8\n'
 
 class IptvCandidateEngineTests(unittest.TestCase):
     def test_discovery_appends_to_manual_queue(self):
