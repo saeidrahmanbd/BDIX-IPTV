@@ -39,6 +39,13 @@ class CandidateBundleTests(unittest.TestCase):
             self.assertEqual((path/"IPTV-Playlist.m3u").read_text(encoding="utf-8"),"#EXTM3U\n")
             self.assertFalse(json.loads((path/"candidate-bundle.json").read_text())["publish"])
 
+    def test_tampered_candidate_content_is_rejected(self):
+        contents={"IPTV-Playlist.m3u":"after"}
+        bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"before"},contents,{"IPTV-Playlist.m3u":True})
+        with tempfile.TemporaryDirectory() as temp:
+            with self.assertRaisesRegex(ValueError,"fingerprint changed"):
+                write_candidate_bundle(temp,"run-123",bundle,{"IPTV-Playlist.m3u":"tampered"})
+
     def test_blocked_bundle_is_not_written(self):
         contents={"IPTV-Playlist.m3u":"after"}
         bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"before"},contents,{"IPTV-Playlist.m3u":False})
