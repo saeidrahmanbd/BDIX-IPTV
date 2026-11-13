@@ -131,6 +131,7 @@ class InternationalOrchestratorTests(unittest.TestCase):
 
     @patch("automation.engines.international.monitor.probe_stream")
     def test_changed_stream_url_is_not_reused_from_prior_probe(self,mock):
+        mock.return_value=Probe(DAY,404)
         old=run_international_candidate(
             PLAYLIST,None,[StreamTarget(0,"a","https://a.example/old.m3u8","Nepal","primary")],DAY
         )
