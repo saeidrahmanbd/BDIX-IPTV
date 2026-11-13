@@ -189,3 +189,18 @@ No file in the production playlist, logo, EPG, or live workflow areas has been e
 5. Generate dry-run candidates from immutable baseline files and validate all invariants.
 6. Test stale baseline rejection, concurrent-run locking, partial failure, rollback and last-known-good EPG.
 7. Only then prepare a draft PR and owner-reviewed cutover plan.
+
+
+## 11. Updated V2 verification status (2026-11-13)
+
+This section supersedes the early Phase 2 progress notes above.
+
+- Latest verified V2 branch CI: run 43409563969, commit 568177d9a87a1a693a52a7d7722cf1391689c0f8 — 168 V2 tests passed; policy conformance, immutable baseline dry run, and repository-wide logo audit all passed.
+- Latest full repository regression: 699 tests passed on the same commit.
+- The all-engine baseline dry run exercised the IPTV, International and EPG candidate engines using immutable production copies. All four engine checks were accepted (IPTV, International, EPG/IPTV and EPG/International); candidate playlist rows remained 1,280 and 3,120 respectively; EPG and playlist candidate changes were zero; publish=false; production_files_modified=false.
+- Baseline EPG measurement: IPTV 776 active IDs / 411 mapped / 363 scheduled / 321 with current or future schedules; International 2,684 active IDs / 662 mapped / 586 scheduled / 541 with current or future schedules.
+- Alias review: 19 IPTV and 60 International suggestions, plus 14 ambiguous cases. Suggestions are manual-review-only; no alias was applied.
+- Logo audit: 5,366 images; 2,395 playlist-referenced assets; 2,691 runtime-referenced assets; 2,675 without explicit runtime-source references; 718 exact duplicate groups; 75 missing runtime-source targets. Zero missing targets are directly referenced by either production playlist. No logos were deleted, moved or quarantined.
+- V2 now includes candidate-only IPTV metadata/discovery, International stream probe/ledger/lifecycle, EPG candidate/approved-alias, run-ledger, transaction-gate and atomic candidate-bundle components.
+- Still not implemented: production Git publisher, full discovery-source integration, complete legacy workflow retirement/replacement, exhaustive dynamic side-effect tracing, failure-injection/rollback testing, and production cutover.
+- Production playlists, EPG and legacy workflows remain unchanged. No V2 production publishing is enabled.
