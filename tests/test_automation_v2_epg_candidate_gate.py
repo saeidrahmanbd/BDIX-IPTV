@@ -42,10 +42,17 @@ class EpgCandidateGateTests(unittest.TestCase):
         self.assertFalse(result.accepted)
         self.assertIn("schedule freshness regressed",result.reason)
 
-    def test_channel_count_regression_rejected(self):
+    def test_channel_count_regression_rejected_without_playlist_context(self):
         result=evaluate_candidate(BETTER,BASE)
         self.assertFalse(result.accepted)
-        self.assertIn("regressed",result.reason)
+        self.assertIn("channel count regressed",result.reason)
+
+    def test_orphan_xmltv_channels_may_be_removed_when_active_playlist_coverage_is_preserved(self):
+        playlist='#EXTM3U\n#EXTINF:-1 tvg-id="a" group-title="Bangladesh",A\nhttps://a.example/a\n'
+        baseline='<tv><channel id="a"/><channel id="orphan"/><programme channel="a" start="20261113090000" stop="20261113100000"/></tv>'
+        candidate='<tv><channel id="a"/><programme channel="a" start="20261113090000" stop="20261113100000"/></tv>'
+        result=evaluate_candidate(baseline,candidate,playlist)
+        self.assertTrue(result.accepted, result.reason)
 
 if __name__=="__main__":
     unittest.main()

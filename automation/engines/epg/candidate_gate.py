@@ -29,7 +29,10 @@ def evaluate_candidate(baseline_xml: str, candidate_xml: str,
     candidate = validate_xmltv(candidate_xml)
     if not candidate.valid:
         return EpgCandidateDecision(False,baseline_hash,candidate_hash,"candidate failed validation: " + "; ".join(candidate.errors[:5]))
-    if candidate.channel_count < baseline.channel_count:
+    # A generated guide may intentionally drop orphaned/retired XMLTV channels.
+    # When active playlists are available, the playlist-scoped coverage gate below
+    # is authoritative; raw global counts include unused IDs and can reject a safe guide.
+    if active_playlist_text is None and candidate.channel_count < baseline.channel_count:
         return EpgCandidateDecision(False,baseline_hash,candidate_hash,"candidate channel count regressed")
     if active_playlist_text is not None:
         try:
