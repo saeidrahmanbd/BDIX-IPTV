@@ -48,9 +48,6 @@ on:
       - scripts/validate_international_playlist.py
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
-      - tests/test_main_playlist_protection.py
-      - tests/test_authorized_channel_removals.py
-      - tests/test_maintenance_report_order.py
       - scripts/reclassify_main_playlist_groups.py
       - scripts/probe_owner_requested_main_queues.py
       - scripts/migrate_owner_requested_main_queues.py
