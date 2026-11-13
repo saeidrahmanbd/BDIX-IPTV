@@ -29,6 +29,8 @@ from restore_protected_review import (
     AUTHORIZED_MIGRATION_SOURCE_GROUPS,
     authorized_backup_migration_target,
     authorized_review_to_primary_target,
+    is_authorized_primary_to_backup_migration,
+    is_authorized_primary_to_review_migration,
     normalize_name as _restore_normalize_name,
 )
 
@@ -349,62 +351,106 @@ def _write_removal_report(removals: list[dict[str, str]]) -> None:
 
 
 def verify_no_unauthorized_removals() -> int:
-    """Block all structural changes to the owner-curated IPTV playlist."""
+    """Protect existing streams while permitting only exact, reviewed migrations."""
     if not BASELINE.exists():
         print("ERROR: playlist safety baseline is missing", file=sys.stderr)
         return 2
     baseline = json.loads(BASELINE.read_text(encoding="utf-8"))
     current = _parse_blocks(PLAYLIST.read_text(encoding="utf-8-sig"))
-    old_urls = [str(x.get("url", "")) for x in baseline]
-    old_counts, new_counts = Counter(old_urls), Counter(str(x.get("url", "")) for x in current)
+    old_counts = Counter(str(x.get("url", "")) for x in baseline)
+    new_counts = Counter(str(x.get("url", "")) for x in current)
     missing, added = old_counts - new_counts, new_counts - old_counts
     failures, removals = [], []
+
+    # Permanent removals are allowed only by exact normalized name; unrelated
+    # missing URLs remain protected, including every non-allowlisted Backup.
     for url, count in missing.items():
         candidates = [x for x in baseline if str(x.get("url", "")) == url]
         for old in candidates[:count]:
+            info = str(old.get("info", ""))
             removals.append({"name": str(old.get("name", "")), "group": str(old.get("group", "")),
                              "url": url, "reason": "pre-existing stream URL occurrence disappeared or was replaced"})
-    if missing:
-        failures.append(f"{sum(missing.values())} existing URL occurrence(s) disappeared")
-    if any(url in old_counts for url in added):
-        failures.append("duplicate occurrence of an existing URL added")
-    existing_order = [str(x.get("url", "")) for x in current if str(x.get("url", "")) in old_counts]
-    if existing_order != old_urls:
-        failures.append("pre-existing rows reordered or removed")
+            if not _is_authorized_removal(info, url):
+                failures.append(f"unauthorized existing URL removal: {_name(info)}")
+
+    # A permanently excluded channel may be quarantined in Review, but must not
+    # be reintroduced into an active or Backup category.
+    for block in current:
+        info, url = str(block.get("info", "")), str(block.get("url", ""))
+        if _is_permanently_removed(info) and _group(info) != "Review":
+            failures.append(f"permanently excluded channel reintroduced: {_name(info)}")
+
     old_by_url, new_by_url = {}, {}
-    for x in baseline:
-        old_by_url.setdefault(str(x.get("url", "")), []).append(x)
-    for x in current:
-        new_by_url.setdefault(str(x.get("url", "")), []).append(x)
+    for row in baseline:
+        old_by_url.setdefault(str(row.get("url", "")), []).append(row)
+    for row in current:
+        new_by_url.setdefault(str(row.get("url", "")), []).append(row)
+
+    def authorized_group_change(old_info: str, new_info: str, url: str, old_group: str, new_group: str) -> bool:
+        if old_group == new_group:
+            return True
+        if old_group == "Not Playing" and new_group == "Review":
+            return True
+        if old_group == "Backup":
+            return authorized_backup_migration_target(old_info, url) == new_group
+        if old_group == "Review":
+            return authorized_review_to_primary_target(new_info, url, old_group) == new_group
+        if new_group == "Review":
+            return is_authorized_primary_to_review_migration(new_info, url, old_group)
+        if new_group == "Backup":
+            return is_authorized_primary_to_backup_migration(new_info, url, old_group)
+        return False
+
     for url, old_rows in old_by_url.items():
-        rows = new_by_url.get(url, [])
-        if len(rows) != len(old_rows):
+        new_rows = new_by_url.get(url, [])
+        if len(new_rows) != len(old_rows):
             continue
-        for old, new in zip(old_rows, rows):
-            info = str(new.get("info", ""))
-            if str(old.get("group", "")).strip() != _group(info):
-                failures.append(f"existing group changed for {_name(info)}")
-            old_number = _attrs(str(old.get("info", ""))).get("tvg-chno", "").strip()
-            new_number = _attrs(info).get("tvg-chno", "").strip()
+        for old, new in zip(old_rows, new_rows):
+            old_info = str(old.get("info", ""))
+            new_info = str(new.get("info", ""))
+            old_group, new_group = str(old.get("group", "")).strip(), _group(new_info)
+            if not authorized_group_change(old_info, new_info, url, old_group, new_group):
+                failures.append(f"unauthorized group change for {_name(new_info)}: {old_group} -> {new_group}")
+            old_number = _attrs(old_info).get("tvg-chno", "").strip()
+            new_number = _attrs(new_info).get("tvg-chno", "").strip()
             if old_number != new_number:
-                failures.append(f"existing channel number changed for {_name(info)}")
+                allowed_queue_number_change = old_group in PROTECTED_GROUPS or (
+                    new_group in PROTECTED_GROUPS and authorized_group_change(old_info, new_info, url, old_group, new_group)
+                )
+                if not allowed_queue_number_change:
+                    failures.append(f"existing primary channel number changed for {_name(new_info)}")
+
+    # Existing rows retain their relative order after excluding only explicitly
+    # authorized permanent removals. A new URL is permitted only in manual queues.
+    preserved_urls = [
+        str(row.get("url", "")) for row in baseline
+        if not _is_authorized_removal(str(row.get("info", "")), str(row.get("url", "")))
+    ]
+    current_preserved_order = [
+        str(row.get("url", "")) for row in current
+        if str(row.get("url", "")) in Counter(preserved_urls)
+    ]
+    if current_preserved_order != preserved_urls:
+        failures.append("pre-existing rows reordered or removed")
+
     for url, count in added.items():
         if url in old_counts:
+            failures.append("duplicate occurrence of an existing URL added")
             continue
         if count != 1:
             failures.append(f"new stream URL duplicated: {url}")
         for block in new_by_url.get(url, []):
             if _group(str(block.get("info", ""))) not in {"New Channels", "New Backups"}:
                 failures.append(f"new row outside manual queues: {_name(str(block.get('info', '')))}")
+
     _write_removal_report(removals)
     if failures:
         for item in failures[:30]:
             print(f"::error::{item}", file=sys.stderr)
-        print("Change Guard BLOCKED: only new manual-queue rows may be added; existing rows are immutable.", file=sys.stderr)
+        print("Change Guard BLOCKED: only exact authorized migrations/removals and new manual-queue rows are allowed.", file=sys.stderr)
         return 1
-    print(f"Change Guard passed: {len(baseline)} existing rows preserve URL/group/number/order; new rows are manual-queue only.")
+    print(f"Change Guard passed: {len(baseline)} existing rows preserve URLs; exact reviewed migrations only; new rows are manual-queue only.")
     return 0
-
 
 def invalidate_bad_logos(message: str) -> None:
     """Remove only known-bad logo references; never touch stream URLs."""
