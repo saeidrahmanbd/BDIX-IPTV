@@ -16,6 +16,8 @@ class ApprovedEpgAliasTests(unittest.TestCase):
         root=ET.fromstring(candidate)
         self.assertIsNotNone(root.find('channel[@id="target"]'))
         self.assertIsNotNone(root.find('programme[@channel="target"]'))
+        tags=[node.tag for node in root]
+        self.assertLess(tags.index("channel"),tags.index("programme"))
         self.assertEqual(calculate_coverage(PLAYLIST,candidate).mapped_channel_ids,1)
 
     def test_unapproved_alias_rejected(self):
