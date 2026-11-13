@@ -1,5 +1,5 @@
 """Tests for daily discovery scheduling and duplicate-run protection."""
-from datetime import date
+from datetime import date, datetime
 import sys
 import unittest
 from pathlib import Path
@@ -328,6 +328,31 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
                 [successful_run, scheduled_run], 121, self.today, event="schedule"
             )
         )
+
+    def test_successful_health_check_is_the_daily_winner_for_health_workflow(self):
+        runs = [{
+            "id": 130,
+            "event": "schedule",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-07T02:45:00Z",
+            "jobs": [{"name": "check", "status": "completed", "conclusion": "success"}],
+        }]
+        self.assertEqual(
+            guard.first_run_id(runs, workflow_file="international-stream-health.yml"),
+            130,
+        )
+        self.assertIsNone(
+            guard.first_run_id(runs, workflow_file="new-channel-discovery.yml")
+        )
+
+    def test_watchdog_recovery_uses_workflow_specific_local_grace_time(self):
+        before = datetime(2026, 11, 7, 7, 29, tzinfo=guard.BD_TZ)
+        after = datetime(2026, 11, 7, 7, 30, tzinfo=guard.BD_TZ)
+        self.assertFalse(guard.recovery_is_due("iptv-maintenance.yml", before))
+        self.assertTrue(guard.recovery_is_due("iptv-maintenance.yml", after))
+        self.assertFalse(guard.recovery_is_due("epg-refresh.yml", after))
+
 
 if __name__ == "__main__":
     unittest.main()
