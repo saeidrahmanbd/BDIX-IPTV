@@ -4,11 +4,11 @@
 **Baseline branch:** `main`  
 **Baseline commit:** `aec37357dfbb47f0792682af744ccaf111416d7a`  
 **Audit branch:** `automation-v2/inventory-audit`  
-**Production mutation status:** NONE. This audit branch is a snapshot plus audit documentation only.
+**Production mutation status:** NONE. V2 implementation and tests are isolated on the audit branch; production playlists, logos, EPG and legacy workflows remain untouched by V2.
 
 ## 1. Preservation and rollback boundary
 
-The audit branch was created from the exact production main commit above. That Git commit preserves the complete repository tree, including both production M3U playlists, all logo assets, the EPG guide, source registers, reports, scripts, tests, site files, and Workers. No production playlist, logo, EPG file, workflow, or main-branch ref was changed for this audit.
+The baseline is pinned to the exact current production main commit above. The audit branch includes subsequent branch-only V2 implementation commits. No production playlist, logo, EPG file, legacy workflow, or main-branch ref has been changed by V2 work.
 
 Key immutable baseline blob IDs:
 - `IPTV-Playlist.m3u`: `eb46b5ef4ddfde11a010389d1f0202a7bd418b0a` (445,629 bytes)
@@ -16,7 +16,7 @@ Key immutable baseline blob IDs:
 - `epg/epg.xml`: `b28414c75937bd155067c6db5e6e2083ee4004b4` (30,944,668 bytes)
 - `README.md`: `95c17697b536218d30c6f1eb3dcf5be8aa0cc93d`
 
-The branch's common ancestor is the baseline main commit. Rollback is by returning to the untouched main ref; no destructive cleanup has been performed.
+The audit branch is compared against current main before migration; baseline fingerprints are independently pinned to the production commit. Rollback remains a safe ref/revert operation; no destructive cleanup has been performed.
 
 ## 2. Repository inventory
 
@@ -39,7 +39,7 @@ The recursive Git tree is complete (GitHub reported `truncated=false`): 5,652 tr
 | xtream-main | 2 | 9,299 |
 | xtream | 1 | 4,078 |
 
-There are 18 GitHub Actions workflow files (118,015 bytes), 79 Python scripts, 51 test files, and 5,372 logo files. The largest repository payload is the logo directory (about 306 MB), not the workflow source.
+There are 18 GitHub Actions workflow files (119,365 bytes), 79 Python scripts, 51 test files, and 5,372 logo files. The largest repository payload is the logo directory (about 306 MB), not the workflow source.
 
 ### Workflow inventory
 
