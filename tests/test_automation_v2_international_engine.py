@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from automation.engines.international.candidate_engine import GroupChange, build_candidate, assert_international_existing_rows_preserved
+from automation.engines.international.candidate_engine import GroupChange, build_candidate, assert_international_existing_rows_preserved, assert_international_rows_preserved
 
 BASE = '#EXTM3U\n#EXTINF:-1 tvg-id="x" tvg-chno="1" group-title="Nepal",A\nhttps://a.example/a.m3u8\n#EXTINF:-1 tvg-id="y" tvg-chno="2" group-title="Nepal",B\nhttps://b.example/b.m3u8\n'
 
