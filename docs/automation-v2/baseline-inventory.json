@@ -56,12 +56,14 @@
   },
   "production_mutations": false,
   "latest_verified_validation": {
-    "branch_ci_run": 43413115470,
-    "legacy_regression_run": 43413115463,
-    "commit": "564139d881a4bd8b0115e25347a13dfcc7db8846",
-    "branch_ci_tests": 212,
-    "legacy_regression_tests": 743,
+    "branch_ci_run": 43414367810,
+    "legacy_regression_run": 43414292444,
+    "branch_ci_commit": "414e29644efd846ac045beba08e8de4d3526f400",
+    "legacy_regression_commit": "4c66cd6e5e4822633b3f9a8fcc20710fdb2216fe",
+    "branch_ci_tests": 223,
+    "legacy_regression_tests": 754,
     "branch_ci": "success",
-    "legacy_regression": "success"
+    "legacy_regression": "success",
+    "baseline_dry_run": "success"
   }
 }
