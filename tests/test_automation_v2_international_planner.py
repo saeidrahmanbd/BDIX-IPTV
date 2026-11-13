@@ -31,7 +31,8 @@ class InternationalPlannerTests(unittest.TestCase):
         probes=tuple(Probe(today-timedelta(days=i),404) for i in range(3))
         result=plan_lifecycle(PLAYLIST,[RowLifecycleInput(0,"a",probes=probes)],today)
         self.assertEqual(result.removal_review_identities,("a",))
-        self.assertEqual(result.changes[0].target_group,"Review")
+        self.assertEqual(result.changes,())
+        self.assertEqual(result.review_identities,("a",))
         self.assertFalse(result.publish)
 
     def test_invalid_duplicate_row_inputs_rejected(self):
