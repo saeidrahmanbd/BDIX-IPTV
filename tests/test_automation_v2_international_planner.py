@@ -26,13 +26,13 @@ class InternationalPlannerTests(unittest.TestCase):
         self.assertEqual(len(result.changes),5)
         self.assertTrue(all(change.target_group=="Nepal" for change in result.changes))
 
-    def test_three_failures_flag_owner_review_without_deleting(self):
+    def test_three_failures_authorize_removal_without_review(self):
         today=date(2026,11,13)
         probes=tuple(Probe(today-timedelta(days=i),404) for i in range(3))
         result=plan_lifecycle(PLAYLIST,[RowLifecycleInput(0,"a",probes=probes)],today)
-        self.assertEqual(result.removal_review_identities,("a",))
+        self.assertEqual(result.remove_identities,("a",))
         self.assertEqual(result.changes,())
-        self.assertEqual(result.review_identities,("a",))
+        self.assertEqual(result.review_identities,())
         self.assertFalse(result.publish)
 
     def test_row_identity_must_match_tvg_id(self):

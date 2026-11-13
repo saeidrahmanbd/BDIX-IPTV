@@ -42,4 +42,4 @@ def action_for_failure_streak(streak: int) -> str:
         return "KEEP_CURRENT_GROUP"
     if streak < 3:
         return "MOVE_TO_REVIEW"
-    return "ELIGIBLE_FOR_REMOVAL_REVIEW"
+    return "REMOVE"

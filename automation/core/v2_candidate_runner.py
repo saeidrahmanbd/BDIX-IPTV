@@ -141,7 +141,12 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
         if intl_run.publish or intl_run.maintenance.publish:
             raise RuntimeError("International candidate engine unexpectedly enabled publication")
         parse_rows(international_candidate)
-        assert_international_existing_rows_preserved(international_baseline, international_candidate)
+        removal_plan = getattr(intl_run.maintenance.candidate,"plan",None)
+        authorized_removals = getattr(removal_plan,"remove_identities",())
+        assert_international_existing_rows_preserved(
+            international_baseline, international_candidate,
+            allowed_removed_identities=authorized_removals,
+        )
 
         # Persist completed dated probes before the slower EPG source stage. If EPG
         # acquisition fails or the runner is interrupted later, the day's probes
@@ -168,7 +173,7 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
             as_of=datetime.now(ZoneInfo("Asia/Dhaka")),
         )
         if not epg_run.decision.accepted:
-            raise ValueError("EPG candidate rejected: " + "; ".join(epg_run.decision.errors))
+            raise ValueError("EPG candidate rejected: " + epg_run.decision.reason)
         if epg_run.publish:
             raise RuntimeError("EPG candidate engine unexpectedly enabled publication")
         print("V2 bundle: EPG candidate passed validation and coverage gates.", flush=True)

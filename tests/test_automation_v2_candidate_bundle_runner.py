@@ -85,7 +85,7 @@ class CandidateBundleRunnerTests(unittest.TestCase):
     def test_rejected_epg_candidate_fails_bundle_without_staging(self):
         ledger = '{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}'
         iptv, intl, epg = fixture_runs(self.iptv, self.international, ledger)
-        epg.decision = SimpleNamespace(accepted=False, errors=("coverage regression",))
+        epg.decision = SimpleNamespace(accepted=False, reason="coverage regression")
         with patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv), \
              patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=intl), \
              patch("automation.core.v2_candidate_runner.build_epg_source_candidate", return_value="<tv/>"), \

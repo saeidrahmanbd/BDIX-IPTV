@@ -26,11 +26,11 @@ class InternationalFailurePolicyTests(unittest.TestCase):
         self.assertEqual(consecutive_definitive_failure_days(probes,today),2)
         self.assertEqual(action_for_failure_streak(2),"MOVE_TO_REVIEW")
 
-    def test_three_consecutive_days_are_only_eligible_for_removal_review(self):
+    def test_three_consecutive_days_authorize_automatic_removal(self):
         today=date(2026,11,13)
         probes=[Probe(today-timedelta(days=i),410) for i in range(3)]
         self.assertEqual(consecutive_definitive_failure_days(probes,today),3)
-        self.assertEqual(action_for_failure_streak(3),"ELIGIBLE_FOR_REMOVAL_REVIEW")
+        self.assertEqual(action_for_failure_streak(3),"REMOVE")
 
     def test_missing_day_resets_streak(self):
         today=date(2026,11,13)
