@@ -55,6 +55,13 @@ class TransactionStagingTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"overlapping"):
                 stage_transaction_bundle(temp,"tx-001",overlapping,self.artifacts,self.after,BASE)
 
+    def test_symlinked_transaction_parent_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
+            root=Path(temp)
+            (root/"reports").symlink_to(outside,target_is_directory=True)
+            with self.assertRaisesRegex(ValueError,"symlink"):
+                stage_transaction_bundle(root,"tx-001",self.manifests,self.artifacts,self.after,BASE)
+
     def test_candidate_path_set_must_match(self):
         with tempfile.TemporaryDirectory() as temp:
             with self.assertRaisesRegex(ValueError,"paths"):
