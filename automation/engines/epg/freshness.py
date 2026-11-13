@@ -37,8 +37,11 @@ def _parse_xmltv_datetime(value: str) -> datetime:
         match = OFFSET_RE.fullmatch(suffix)
         if not match:
             raise ValueError("invalid XMLTV timezone offset")
+        hours, minutes = int(match.group(2)), int(match.group(3))
+        if hours > 23 or minutes > 59:
+            raise ValueError("invalid XMLTV timezone offset")
         sign = 1 if match.group(1) == "+" else -1
-        offset = timedelta(hours=int(match.group(2)),minutes=int(match.group(3))) * sign
+        offset = timedelta(hours=hours,minutes=minutes) * sign
         parsed = parsed.replace(tzinfo=timezone(offset))
     else:
         parsed = parsed.replace(tzinfo=ZoneInfo("Asia/Dhaka"))
