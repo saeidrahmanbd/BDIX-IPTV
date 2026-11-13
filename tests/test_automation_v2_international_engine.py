@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from automation.engines.international.candidate_engine import GroupChange, build_candidate
+from automation.engines.international.candidate_engine import GroupChange, build_candidate, assert_international_existing_rows_preserved
 
 BASE = '#EXTM3U\n#EXTINF:-1 tvg-id="x" tvg-chno="1" group-title="Nepal",A\nhttps://a.example/a.m3u8\n#EXTINF:-1 tvg-id="y" tvg-chno="2" group-title="Nepal",B\nhttps://b.example/b.m3u8\n'
 
@@ -37,6 +37,25 @@ class InternationalCandidateEngineTests(unittest.TestCase):
 
     def test_unchanged_input_returns_identical_text(self):
         self.assertEqual(build_candidate(BASE,[]),BASE)
+
+
+    def test_preservation_guard_allows_group_only_change_to_existing_row(self):
+        changed=build_candidate(BASE,[GroupChange(0,"Bangladesh","verified Review recovery")])
+        assert_international_existing_rows_preserved(BASE,changed)
+
+    def test_preservation_guard_allows_new_rows_only_in_manual_review_queues(self):
+        candidate=(
+            '#EXTM3U\n'
+            '#EXTINF:-1 tvg-id="x" tvg-chno="1" group-title="Bangladesh",A\nhttps://a.example/a.m3u8\n'
+            '#EXTINF:-1 tvg-id="new" group-title="New Channels",New\nhttps://new.example/live\n'
+            '#EXTINF:-1 tvg-id="y" tvg-chno="2" group-title="Nepal",B\nhttps://b.example/b.m3u8\n'
+        )
+        assert_international_existing_rows_preserved(BASE,candidate)
+
+    def test_preservation_guard_rejects_new_primary_row(self):
+        candidate=BASE+'#EXTINF:-1 tvg-id="new" group-title="Nepal",New\nhttps://new.example/live\n'
+        with self.assertRaisesRegex(ValueError,"outside manual-review queues"):
+            assert_international_existing_rows_preserved(BASE,candidate)
 
 if __name__=="__main__":
     unittest.main()
