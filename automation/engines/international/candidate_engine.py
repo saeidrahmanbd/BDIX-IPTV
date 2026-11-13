@@ -38,7 +38,7 @@ def build_candidate(baseline_text: str, changes: list[GroupChange]) -> str:
     for change in changes:
         if change.row_index < 0 or change.row_index >= len(rows):
             raise ValueError(f"row index out of range: {change.row_index}")
-        if not change.target_group.strip() or "\n" in change.target_group or "\r" in change.target_group:
+        if not change.target_group.strip() or '"' in change.target_group or "\n" in change.target_group or "\r" in change.target_group:
             raise ValueError("target group must be a non-empty single line")
         if change.row_index in by_index:
             raise ValueError(f"duplicate group change for row: {change.row_index}")
