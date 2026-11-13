@@ -16,6 +16,7 @@ from automation.engines.international.candidate_engine import build_candidate as
 from automation.engines.iptv.candidate_engine import build_candidate as build_iptv_candidate
 from automation.engines.epg.coverage import calculate_coverage
 from automation.engines.epg.freshness import calculate_freshness
+from automation.engines.epg.alias_suggestions import suggest_aliases
 
 BASELINE_COMMIT = "46275f5ebafa2ae1b56f3e480f684ac1e85ae45e"
 EXPECTED_BLOB_SHAS = {
@@ -61,6 +62,8 @@ def run(root: Path) -> dict:
     international_coverage = calculate_coverage(international_text,epg_text)
     iptv_freshness = calculate_freshness(iptv_text,epg_text,as_of)
     international_freshness = calculate_freshness(international_text,epg_text,as_of)
+    iptv_alias_suggestions = suggest_aliases(iptv_text,epg_text)
+    international_alias_suggestions = suggest_aliases(international_text,epg_text)
 
     return {
         "schema_version":1,
@@ -95,6 +98,8 @@ def run(root: Path) -> dict:
             "no_schedule_ids":list(international_freshness.no_schedule_channel_ids),
             "future_programme_count":international_freshness.future_programme_count,
         },
+        "iptv_epg_alias_suggestions":iptv_alias_suggestions,
+        "international_epg_alias_suggestions":international_alias_suggestions,
         "candidate_playlist_changes":0,
         "candidate_epg_changes":0,
         "publish":False,
