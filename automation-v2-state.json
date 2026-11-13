@@ -25571,6 +25571,15 @@
         "idempotency_key": "d1288ba3546ef637c7d3c4136a637361efea18701637fe749845844526155842",
         "started_at": "2026-11-13T18:38:21.017081+06:00",
         "status": "failed"
+      },
+      {
+        "attempt": 1,
+        "baseline_commit": "18e8b731f8212e0dac5f20584f12db0231963aed",
+        "business_day": "2026-11-13",
+        "engine": "bundle",
+        "idempotency_key": "ea9ec13f934b3dbff978d2967b026f59c44ac2fb564df43879ac14c719742e00",
+        "started_at": "2026-11-13T21:29:44.344176+06:00",
+        "status": "running"
       }
     ],
     "schema_version": 1,
