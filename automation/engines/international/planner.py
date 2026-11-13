@@ -2,7 +2,7 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from datetime import date
-from automation.core.playlist_contract import parse_rows
+from automation.core.playlist_contract import parse_rows, ATTR_RE
 from automation.engines.international.candidate_engine import GroupChange
 from automation.engines.international.lifecycle import ChannelState, decide_channel
 from automation.engines.international.country_groups import ChannelIdentity, eligible_country_groups
@@ -34,6 +34,11 @@ def plan_lifecycle(playlist_text: str, inputs: list[RowLifecycleInput], today: d
             raise ValueError(f"duplicate lifecycle input for row: {item.row_index}")
         if not item.identity.strip():
             raise ValueError("lifecycle identity is required")
+        actual_identity=dict(ATTR_RE.findall(rows[item.row_index].extinf)).get("tvg-id","").strip()
+        if not actual_identity:
+            raise ValueError(f"International row {item.row_index} has no tvg-id identity")
+        if actual_identity.casefold() != item.identity.strip().casefold():
+            raise ValueError(f"lifecycle identity does not match row {item.row_index} tvg-id")
         by_index[item.row_index] = item
 
     primary_identities = [
