@@ -43,9 +43,13 @@ class CandidateBundleResult:
 def _assert_current_main_head(expected_commit: str) -> None:
     """Fail closed if the remote main branch moved away from this candidate baseline."""
     repository = os.environ.get("GITHUB_REPOSITORY", "").strip()
-    if not repository:
-        # Local isolated tests can omit GitHub context; production workflow always sets it.
+    required = os.environ.get("AUTOMATION_V2_REQUIRE_REMOTE_HEAD_CHECK") == "1"
+    if not required:
+        # Unit tests and local dry runs may omit credentials. The production
+        # shadow workflow explicitly enables this mandatory remote check.
         return
+    if not repository:
+        raise RuntimeError("GITHUB_REPOSITORY is required to verify the current main baseline")
     token = os.environ.get("GITHUB_TOKEN", "").strip()
     if not token:
         raise RuntimeError("GITHUB_TOKEN is required to verify the current main baseline")
