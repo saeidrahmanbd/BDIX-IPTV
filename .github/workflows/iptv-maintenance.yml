@@ -182,11 +182,14 @@ jobs:
           OWNER_MIGRATION_REQUESTED=false
           MIGRATION_REQUEST_FILE="maintenance/owner-requested-iptv-migration.json"
           MIGRATION_COMPLETION_REPORT="reports/owner-requested-main-migrations.md"
-          # Structural IPTV migrations are permanently disabled by the
-          # current owner-curated permission policy. The historical marker is
-          # retained only as a cancelled audit record.
-          OWNER_MIGRATION_REQUESTED=false
-          echo "Owner migration disabled: existing IPTV rows cannot move, sort, renumber or be deleted."
+          if python -c 'import json,sys; d=json.load(open(sys.argv[1])); sys.exit(0 if d.get("status") == "authorized" and d.get("playlist") == "IPTV-Playlist.m3u" else 1)' "$MIGRATION_REQUEST_FILE"; then
+            OWNER_MIGRATION_REQUESTED=true
+            touch /tmp/iptv-owner-migration-authorized
+            echo "::notice::One-time owner authorization active for exact-URL-approved IPTV reconciliation."
+          else
+            rm -f /tmp/iptv-owner-migration-authorized
+            echo "No pending one-time owner migration authorization."
+          fi
           # ------------------------------------------------------------------
           # Ordering contract (enforced by tests/test_maintenance_report_order.py)
           #   1. snapshots           (once per attempt)
@@ -245,6 +248,11 @@ jobs:
             rm -rf fixed_output
             echo 'Non-destructive maintenance mode: protecting existing IPTV channel rows.'
             python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u /tmp/iptv-main-protection.json
+            if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then
+              python scripts/probe_owner_requested_main_queues.py
+              python scripts/migrate_owner_requested_main_queues.py
+              test -s "$MIGRATION_COMPLETION_REPORT"
+            fi
             run_mutations
             python scripts/protect_main_playlist.py verify IPTV-Playlist.m3u /tmp/iptv-main-protection.json
             set +e
@@ -290,7 +298,11 @@ jobs:
               echo "Pre-publish gate status: $GATE_STATUS"
               exit 1
             fi
+            if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then
+              python -c 'import json,sys; from datetime import datetime,timezone; p=sys.argv[1]; d=json.load(open(p)); d["status"]="completed"; d["completed_at"]=datetime.now(timezone.utc).isoformat(); d["completion_report"]="reports/owner-requested-main-migrations.md"; open(p,"w").write(json.dumps(d,ensure_ascii=False,indent=2)+"\\n")' "$MIGRATION_REQUEST_FILE"
+            fi
             git add IPTV-Playlist.m3u International-Playlist.m3u reports/ logos/ assets/dashboard.svg
+            if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then git add "$MIGRATION_REQUEST_FILE"; fi
             python -c 'import sys; sys.path.insert(0,"scripts"); from pathlib import Path; from collections import Counter; from stream_url_identity import stream_url_key; p=Path("IPTV-Playlist.m3u"); urls=[stream_url_key(s) for s in (x.strip() for x in p.read_text(encoding="utf-8",errors="replace").splitlines()) if s.startswith(("http://","https://"))]; d=[u for u,n in Counter(urls).items() if n>1]; print(f"::error::Duplicate stream URLs remain: {len(d)} unique URLs are repeated.") if d else print(f"URL uniqueness check passed: {len(urls)} stream URLs, 0 duplicates."); raise SystemExit(1 if d else 0)'
             if git diff --cached --quiet; then echo 'No maintenance changes to publish.'; exit 0; fi
             git commit -m 'Run IPTV playlist maintenance'
