@@ -1,0 +1,46 @@
+name: Automation V2 Branch CI
+
+on:
+  push:
+    branches:
+      - automation-v2/**
+    paths:
+      - 'automation/**'
+      - 'tests/test_automation_v2_contract.py'
+      - '.github/workflows/automation-v2-ci.yml'
+  pull_request:
+    branches:
+      - automation-v2/**
+    paths:
+      - 'automation/**'
+      - 'tests/test_automation_v2_contract.py'
+      - '.github/workflows/automation-v2-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: automation-v2-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Validate policy JSON and schema JSON syntax
+        run: |
+          python -m json.tool automation/policy/policy.json > /dev/null
+          python -m json.tool automation/policy/schema.json > /dev/null
+      - name: Run policy conformance gate
+        run: python automation/validators/policy_conformance.py
+      - name: Run V2 contract tests
+        run: python -m unittest discover -s tests -p 'test_automation_v2_contract.py' -v
