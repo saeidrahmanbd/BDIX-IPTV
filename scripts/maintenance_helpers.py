@@ -349,232 +349,60 @@ def _write_removal_report(removals: list[dict[str, str]]) -> None:
 
 
 def verify_no_unauthorized_removals() -> int:
-    """Block publication whenever an existing stream URL disappears."""
+    """Block all structural changes to the owner-curated IPTV playlist."""
     if not BASELINE.exists():
         print("ERROR: playlist safety baseline is missing", file=sys.stderr)
         return 2
-
     baseline = json.loads(BASELINE.read_text(encoding="utf-8"))
-    current_text = PLAYLIST.read_text(encoding="utf-8-sig")
-    current = _parse_blocks(current_text)
-
-    # Exclude only exact channel identities from the explicit allowlist. This is
-    # deliberately name-based, not URL-based: an unrelated record sharing a URL
-    # never inherits another channel's deletion authorization.
-    baseline_guarded = [
-        item for item in baseline
-        if not _is_authorized_removal(str(item.get("info", "")), str(item.get("url", "")))
-    ]
-    current_guarded = [
-        block for block in current
-        if not _is_authorized_removal(str(block["info"]), str(block["url"]))
-    ]
-    baseline_counts = Counter(
-        str(item["stable"]) for item in baseline_guarded if item.get("stable")
-    )
-    current_counts = Counter(
-        _stable(str(block["info"]), str(block["url"]))
-        for block in current_guarded
-        if str(block["url"]).strip()
-    )
-
-    removals: list[dict[str, str]] = []
-    remaining_current = current_counts.copy()
-
-    # Consume URL occurrences one at a time; repeated baseline URLs must not
-    # multiply the count of proposed removals.
-    for item in baseline_guarded:
-        stable = str(item.get("stable", ""))
-        if not stable:
+    current = _parse_blocks(PLAYLIST.read_text(encoding="utf-8-sig"))
+    old_urls = [str(x.get("url", "")) for x in baseline]
+    old_counts, new_counts = Counter(old_urls), Counter(str(x.get("url", "")) for x in current)
+    missing, added = old_counts - new_counts, new_counts - old_counts
+    failures, removals = [], []
+    for url, count in missing.items():
+        candidates = [x for x in baseline if str(x.get("url", "")) == url]
+        for old in candidates[:count]:
+            removals.append({"name": str(old.get("name", "")), "group": str(old.get("group", "")),
+                             "url": url, "reason": "pre-existing stream URL occurrence disappeared or was replaced"})
+    if missing:
+        failures.append(f"{sum(missing.values())} existing URL occurrence(s) disappeared")
+    if any(url in old_counts for url in added):
+        failures.append("duplicate occurrence of an existing URL added")
+    existing_order = [str(x.get("url", "")) for x in current if str(x.get("url", "")) in old_counts]
+    if existing_order != old_urls:
+        failures.append("pre-existing rows reordered or removed")
+    old_by_url, new_by_url = {}, {}
+    for x in baseline:
+        old_by_url.setdefault(str(x.get("url", "")), []).append(x)
+    for x in current:
+        new_by_url.setdefault(str(x.get("url", "")), []).append(x)
+    for url, old_rows in old_by_url.items():
+        rows = new_by_url.get(url, [])
+        if len(rows) != len(old_rows):
             continue
-        if remaining_current[stable] > 0:
-            remaining_current[stable] -= 1
+        for old, new in zip(old_rows, rows):
+            info = str(new.get("info", ""))
+            if str(old.get("group", "")).strip() != _group(info):
+                failures.append(f"existing group changed for {_name(info)}")
+            old_number = _attrs(str(old.get("info", ""))).get("tvg-chno", "").strip()
+            new_number = _attrs(info).get("tvg-chno", "").strip()
+            if old_number != new_number:
+                failures.append(f"existing channel number changed for {_name(info)}")
+    for url, count in added.items():
+        if url in old_counts:
             continue
-        removals.append({
-            "name": str(item["name"]),
-            "group": str(item["group"]),
-            "url": str(item["url"]),
-            "reason": "existing stream URL disappeared or changed",
-        })
-
+        if count != 1:
+            failures.append(f"new stream URL duplicated: {url}")
+        for block in new_by_url.get(url, []):
+            if _group(str(block.get("info", ""))) not in {"New Channels", "New Backups"}:
+                failures.append(f"new row outside manual queues: {_name(str(block.get('info', '')))}")
     _write_removal_report(removals)
-
-    if removals:
-        protected_removed = [
-            item for item in removals
-            if item["group"] in PROTECTED_GROUPS
-        ]
-        duplicate_urls = Counter(
-            stream_url_key(str(item["url"]))
-            for item in baseline
-            if str(item["url"]).strip()
-        )
-        current_urls = Counter(
-            _stable(str(block["info"]), str(block["url"]))
-            for block in current
-            if str(block["url"]).strip()
-        )
-        duplicate_candidates = [
-            item for item in removals
-            if duplicate_urls[stream_url_key(item["url"])] > 1
-            and current_urls[stream_url_key(item["url"])] >= 1
-            and item["group"] not in PROTECTED_GROUPS
-        ]
-
-        if protected_removed:
-            print(
-                f"Change Guard BLOCKED: {len(protected_removed)} "
-                "Backup/Review entries would be removed.",
-                file=sys.stderr,
-            )
-        else:
-            print(
-                f"Change Guard BLOCKED: {len(removals)} existing stream URLs "
-                "would be removed. No automatic deletion is authorized.",
-                file=sys.stderr,
-            )
-
-        print(
-            f"Diagnostic: {len(duplicate_candidates)} proposed removals are "
-            "exact-URL duplicate candidates; they are report-only.",
-            file=sys.stderr,
-        )
+    if failures:
+        for item in failures[:30]:
+            print(f"::error::{item}", file=sys.stderr)
+        print("Change Guard BLOCKED: only new manual-queue rows may be added; existing rows are immutable.", file=sys.stderr)
         return 1
-
-    # Permanently excluded identities may remain in the owner-curated Review
-    # quarantine. Review is deliberately retained for manual inspection and is
-    # not an active publication group; its presence must not block maintenance.
-    authorized_still_present = [
-        str(block["info"]) for block in current
-        if _group(str(block["info"])) != "Review"
-        and _is_authorized_removal(str(block["info"]), str(block["url"]))
-    ]
-    if authorized_still_present:
-        names = sorted({_name(info) for info in authorized_still_present})
-        print(
-            "Change Guard BLOCKED: permanent-removal entries still present: "
-            + ", ".join(names),
-            file=sys.stderr,
-        )
-        return 1
-
-    # Backup rows may be quarantined to Review when no exact primary identity
-    # exists. A primary duplicate may be demoted to Backup only while an exact
-    # primary ID remains. Review rows themselves may never be promoted to Backup.
-    baseline_by_url = {stream_url_key(str(item.get("url", ""))): item for item in baseline if str(item.get("url", "")).strip()}
-    current_by_url = {stream_url_key(str(block["url"])): block for block in current if str(block["url"]).strip()}
-    owner_approvals = _owner_migration_approvals()
-    primary_ids = set()
-    for block in current:
-        info = str(block["info"]); group = _group(info)
-        if group not in PROTECTED_GROUPS:
-            a = _attrs(info)
-            primary_ids.update(value.strip().casefold() for value in (a.get("tvg-id", ""), a.get("channel-id", "")) if value.strip())
-    allowed_new_protected = set()
-    allowed_queue_migrations = set()
-    group_transition_errors = []
-    for url, block in current_by_url.items():
-        info = str(block["info"])
-        current_group = _group(info)
-        original = baseline_by_url.get(url)
-        if not original:
-            if current_group in PROTECTED_GROUPS:
-                group_transition_errors.append(f"protected entry has no baseline: {_name(info)}")
-            continue
-
-        old_group = str(original.get("group", "")).strip()
-        owner_approval = owner_approvals.get(url)
-        if (
-            old_group == "Backup" and current_group == "Backup"
-            and owner_approval
-            and owner_approval.get("source_group") == "Backup"
-            and owner_approval.get("target_group") == "Backup"
-            and owner_approval.get("allow_metadata")
-        ):
-            allowed_queue_migrations.add(url)
-            continue
-        if old_group == "Backup" and current_group != "Backup":
-            channel_name = _name(info)
-            migration_target = authorized_backup_migration_target(info, str(block["url"]))
-            migration_source = AUTHORIZED_MIGRATION_SOURCE_GROUPS.get(
-                _restore_normalize_name(channel_name), "Backup"
-            )
-            owner_target = (
-                owner_approval.get("target_group")
-                if owner_approval and owner_approval.get("source_group") == "Backup"
-                else None
-            )
-            if (
-                (old_group == migration_source and current_group == migration_target)
-                or (owner_target == current_group and owner_approval.get("source_group") == old_group)
-            ):
-                allowed_queue_migrations.add(url)
-            else:
-                group_transition_errors.append(
-                    f"Unapproved Backup migration to {current_group}: {channel_name}"
-                )
-            continue
-
-        if old_group in {"Review", "Not Playing"} and current_group != "Review":
-            review_target = authorized_review_to_primary_target(
-                info, str(block["url"]), old_group
-            )
-            if review_target and current_group == review_target:
-                allowed_queue_migrations.add(url)
-            else:
-                group_transition_errors.append(f"Review entry reclassified: {_name(info)}")
-            continue
-
-        if current_group not in PROTECTED_GROUPS:
-            continue
-
-        if old_group not in PROTECTED_GROUPS:
-            if current_group == "Backup":
-                ids = {
-                    value.strip().casefold()
-                    for value in (
-                        _attrs(info).get("tvg-id", ""),
-                        _attrs(info).get("channel-id", ""),
-                    )
-                    if value.strip()
-                }
-                if not (ids & primary_ids):
-                    group_transition_errors.append(
-                        f"primary-to-Backup move has no matching primary: {_name(info)}"
-                    )
-                    continue
-            allowed_new_protected.add(url)
-        elif old_group in {"Review", "Not Playing"} and current_group == "Backup":
-            group_transition_errors.append(f"Review entry promoted to Backup: {_name(info)}")
-    if group_transition_errors:
-        print("Change Guard BLOCKED: " + "; ".join(group_transition_errors[:10]), file=sys.stderr)
-        return 1
-
-    ignored_migration_urls = allowed_new_protected | allowed_queue_migrations
-    current_protected = _protected_text(current_text, ignored_migration_urls)
-    expected_protected = (
-        _protected_text(PROTECTED_SNAPSHOT.read_text(encoding="utf-8"), ignored_migration_urls)
-        if PROTECTED_SNAPSHOT.exists()
-        else ""
-    )
-
-    if current_protected != expected_protected:
-        with REMOVAL_REPORT.open("a", encoding="utf-8") as handle:
-            handle.write(
-                "\n**BLOCKED:** Backup/Not Playing content changed "
-                "byte-for-byte.\n"
-            )
-        print(
-            "Change Guard BLOCKED: Backup/Not Playing content is not "
-            "byte-for-byte identical to the maintenance snapshot.",
-            file=sys.stderr,
-        )
-        return 1
-
-    print(
-        "Change Guard passed: no existing stream URL disappeared; "
-        "Backup/Review content is unchanged except for validated quarantine moves."
-    )
+    print(f"Change Guard passed: {len(baseline)} existing rows preserve URL/group/number/order; new rows are manual-queue only.")
     return 0
 
 
