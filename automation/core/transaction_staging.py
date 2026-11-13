@@ -24,7 +24,8 @@ def stage_transaction_bundle(root: str | Path, transaction_id: str,
         raise ValueError("transaction_id is invalid")
     decision=evaluate_bundle(manifests,artifacts,expected_baseline_commit)
     if not decision.ready_for_owner_review or decision.publish:
-        raise ValueError("transaction bundle has not passed all gates or is marked publishable")
+        detail="; ".join(decision.errors) or "publication is disabled"
+        raise ValueError("transaction bundle has not passed all gates: " + detail)
     declared={path for manifest in manifests for path in manifest.changed_paths}
     if set(candidate_contents)!=declared:
         raise ValueError("candidate content paths do not match transaction manifests")
