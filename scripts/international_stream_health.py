@@ -29,7 +29,8 @@ WORKERS = 48
 TIMEOUT = 8
 RETRIES = 2
 READ_BYTES = 8192
-INCONCLUSIVE_HTTP = {401, 403, 407, 408, 425, 429, 451} | set(range(500, 600))
+DEFINITIVE_HTTP = {404, 410}
+INCONCLUSIVE_HTTP = set(range(400, 600)) - DEFINITIVE_HTTP
 SECRET_QUERY = {
     "token", "access_token", "refresh_token", "sig", "signature", "jwt",
     "session", "key", "api_key", "apikey", "authorization", "auth",
@@ -166,7 +167,7 @@ def fetch(url, headers):
 
 
 def http_state(status):
-    return "inconclusive" if status in INCONCLUSIVE_HTTP else "fail"
+    return "fail" if int(status) in DEFINITIVE_HTTP else "inconclusive"
 
 
 def probe_resource(url, headers, depth=0):
@@ -179,24 +180,24 @@ def probe_resource(url, headers, depth=0):
     if status >= 400:
         return {"state": http_state(status), "status": status, "reason": f"HTTP {status}", "type": ctype, "bytes": len(data)}
     if not data:
-        return {"state": "fail", "status": status, "reason": "Empty response", "type": ctype, "bytes": 0}
+        return {"state": "inconclusive", "status": status, "reason": "Empty response; not proof of a dead stream", "type": ctype, "bytes": 0}
     sample = data.lstrip(b"\xef\xbb\xbf \t\r\n")
     low = sample[:1024].lower()
     if low.startswith((b"<!doctype html", b"<html", b"<head", b"<body")) or "text/html" in ctype or "application/json" in ctype or "text/json" in ctype:
-        return {"state": "fail", "status": status, "reason": "HTML/JSON error, not media", "type": ctype, "bytes": len(data)}
+        return {"state": "inconclusive", "status": status, "reason": "HTML/JSON response may be an access restriction, not media", "type": ctype, "bytes": len(data)}
     if any(x in low for x in (b"access denied", b"unauthorized", b"forbidden", b"stream unavailable", b"channel offline")):
-        return {"state": "fail", "status": status, "reason": "Stream error response", "type": ctype, "bytes": len(data)}
+        return {"state": "inconclusive", "status": status, "reason": "Access-restricted/provider-denial response", "type": ctype, "bytes": len(data)}
 
     final_url = r.get("url", url)
     final_path = urlsplit(final_url).path.casefold()
     hls = sample.startswith(b"#EXTM3U") or "mpegurl" in ctype or final_path.endswith(".m3u8")
     if hls:
         if depth >= 2:
-            return {"state": "fail", "status": status, "reason": "HLS nesting limit", "type": ctype, "bytes": len(data)}
+            return {"state": "inconclusive", "status": status, "reason": "HLS nesting limit; media status unconfirmed", "type": ctype, "bytes": len(data)}
         lines = sample.decode("utf-8", "replace").splitlines()
         resources = [s.strip() for s in lines if s.strip() and not s.lstrip().startswith("#")]
         if not resources:
-            return {"state": "fail", "status": status, "reason": "HLS manifest has no media resources", "type": ctype, "bytes": len(data)}
+            return {"state": "inconclusive", "status": status, "reason": "HLS manifest has no accessible media resources", "type": ctype, "bytes": len(data)}
         inconclusive = None
         last_failure = None
         for item in resources[:2]:
@@ -210,13 +211,13 @@ def probe_resource(url, headers, depth=0):
                 inconclusive = child
             else:
                 last_failure = child
-        return inconclusive or last_failure or {"state": "fail", "status": status, "reason": "No reachable HLS media segment", "type": ctype, "bytes": len(data)}
+        return inconclusive or last_failure or {"state": "inconclusive", "status": status, "reason": "No media segment could be conclusively checked", "type": ctype, "bytes": len(data)}
 
     if "dash+xml" in ctype or sample[:256].lstrip().startswith(b"<?xml"):
         if b"<MPD" in sample[:4096] and (b"<Segment" in sample or b"<BaseURL" in sample):
             return {"state": "ok", "status": status, "reason": "DASH manifest reachable", "type": ctype, "bytes": len(data)}
         if "dash+xml" in ctype:
-            return {"state": "fail", "status": status, "reason": "Invalid DASH manifest", "type": ctype, "bytes": len(data)}
+            return {"state": "inconclusive", "status": status, "reason": "Invalid/unrecognized DASH manifest; endpoint status inconclusive", "type": ctype, "bytes": len(data)}
     return {"state": "ok", "status": status, "reason": "Media bytes received", "type": ctype, "bytes": len(data)}
 
 
@@ -608,7 +609,7 @@ def build_report(events, history, check_date, generated, total):
         "- Third consecutive definitive failed Bangladesh calendar day: remove the stream row.",
         "- A working Review row that is not eligible under the country/genre policy remains in Review.",
         "- Reruns on the same Bangladesh date do not increase the streak; a missed day restarts it.",
-        "- HTTP 401/403/407/429/451 are inconclusive, not dead-stream verdicts, to avoid false removals caused by authentication, rate limits or regional restrictions on GitHub runners.",
+        "- Only HTTP 404/410 are definitive HTTP failures. All other HTTP errors, access-denial pages, empty responses, DNS/TLS/timeouts and connection failures are inconclusive and never advance the three-day retirement streak.",
         "- HLS validation checks a media segment rather than relying only on a manifest HTTP 200. Raw stream URLs and credentials are not stored in the report/history.", "",
         "## Newly marked Review", "",
     ]
