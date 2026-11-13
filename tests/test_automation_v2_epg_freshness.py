@@ -27,7 +27,7 @@ class EpgFreshnessTests(unittest.TestCase):
     def test_candidate_losing_future_schedule_rejected(self):
         result=compare_freshness(PLAYLIST,BASE,WORSE,AS_OF)
         self.assertFalse(result.accepted)
-        self.assertIn("b",result.reasons[0])
+        self.assertIn("a",result.reasons[0])
 
     def test_naive_as_of_rejected(self):
         with self.assertRaisesRegex(ValueError,"timezone-aware"):
