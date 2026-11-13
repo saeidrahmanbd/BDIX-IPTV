@@ -2,7 +2,7 @@
 
 **Audit date:** 2026-11-13  
 **Baseline branch:** `main`  
-**Baseline commit:** `46275f5ebafa2ae1b56f3e480f684ac1e85ae45e`  
+**Baseline commit:** `aec37357dfbb47f0792682af744ccaf111416d7a`  
 **Audit branch:** `automation-v2/inventory-audit`  
 **Production mutation status:** NONE. This audit branch is a snapshot plus audit documentation only.
 
@@ -12,7 +12,7 @@ The audit branch was created from the exact production main commit above. That G
 
 Key immutable baseline blob IDs:
 - `IPTV-Playlist.m3u`: `eb46b5ef4ddfde11a010389d1f0202a7bd418b0a` (445,629 bytes)
-- `International-Playlist.m3u`: `c49c650d4e445620ae5fb91627eaa7f481ccea38` (987,933 bytes)
+- `International-Playlist.m3u`: `f98c433afa7df88b9345a7191e58ea83f833d1b9` (987,903 bytes)
 - `epg/epg.xml`: `b28414c75937bd155067c6db5e6e2083ee4004b4` (30,944,668 bytes)
 - `README.md`: `95c17697b536218d30c6f1eb3dcf5be8aa0cc93d`
 
