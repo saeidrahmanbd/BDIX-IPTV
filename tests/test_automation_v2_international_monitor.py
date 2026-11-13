@@ -20,10 +20,14 @@ class InternationalMonitorTests(unittest.TestCase):
         self.assertEqual(result.failure_streak,1)
         self.assertFalse(result.already_probed_today)
 
-    def test_second_daily_probe_is_rejected(self):
+    @patch("automation.engines.international.monitor.probe_stream")
+    def test_second_daily_run_reuses_existing_probe_idempotently(self,mock):
         ledger=record_probe(None,"channel-a",Probe(DAY,404))
-        with self.assertRaisesRegex(ValueError,"already has a probe"):
-            probe_and_record(ledger,"channel-a","https://example.com/live",DAY)
+        result=probe_and_record(ledger,"channel-a","https://example.com/live",DAY)
+        mock.assert_not_called()
+        self.assertTrue(result.already_probed_today)
+        self.assertEqual(result.probe_status,404)
+        self.assertEqual(result.ledger_json,ledger)
 
     @patch("automation.engines.international.monitor.probe_stream")
     def test_network_failure_is_recorded_but_does_not_count(self,mock):
