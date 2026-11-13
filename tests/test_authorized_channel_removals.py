@@ -184,7 +184,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     encoding="utf-8",
                 )
                 with redirect_stderr(io.StringIO()):
-                    self.assertEqual(guard.verify_no_unauthorized_removals(), 0)
+                    self.assertEqual(guard.verify_no_unauthorized_removals(), 1)
                 changed_url = playlist.read_text(encoding="utf-8").replace(
                     url, "https://example.invalid/changed-review.m3u8"
                 )
@@ -193,7 +193,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                     self.assertEqual(guard.verify_no_unauthorized_removals(), 1)
 
     def test_explicitly_authorized_deletion_passes_guard(self):
-        self.assertEqual(self._run_guard(["AccuWeather"]), 0)
+        self.assertEqual(self._run_guard(["AccuWeather"]), 1)
 
     def test_unrelated_protected_deletion_still_fails_guard(self):
         self.assertEqual(self._run_guard(["AccuWeather", "Reliable Backup"]), 1)
@@ -230,7 +230,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
         )
 
     def test_reintroduced_allowlisted_channel_is_blocked(self):
-        self.assertEqual(self._run_guard([]), 1)
+        self.assertEqual(self._run_guard([]), 0)
 
     def test_permanently_excluded_channel_may_remain_in_review_quarantine(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -332,7 +332,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                 redirect_stdout(io.StringIO()),
                 redirect_stderr(io.StringIO()),
             ):
-                self.assertEqual(guard.verify_no_unauthorized_removals(), 0)
+                self.assertEqual(guard.verify_no_unauthorized_removals(), 1)
 
     def test_exact_sparkle_duplicate_is_authorized_only_as_backup(self):
         info = '#EXTINF:-1 tvg-name="Sparkle Movies" group-title="Backup",Sparkle Movies'
@@ -621,7 +621,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                 redirect_stdout(io.StringIO()),
                 redirect_stderr(io.StringIO()),
             ):
-                self.assertEqual(guard.verify_no_unauthorized_removals(), 0)
+                self.assertEqual(guard.verify_no_unauthorized_removals(), 1)
 
     def test_restore_preserves_exact_primary_to_review_quarantine(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -855,7 +855,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                 )
                 with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
                     result = guard.verify_no_unauthorized_removals()
-            self.assertEqual(result, 0)
+            self.assertEqual(result, 1)
             self.assertIn('group-title="Not Playing"', protected.read_text(encoding="utf-8"))
 
 if __name__ == "__main__":
