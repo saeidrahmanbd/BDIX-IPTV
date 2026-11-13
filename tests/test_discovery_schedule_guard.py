@@ -313,7 +313,13 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "created_at": "2026-11-07T01:00:00Z",
             "jobs": [
                 {"name": "daily_guard", "status": "completed", "conclusion": "success"},
-                {"name": "discover", "status": "completed", "conclusion": "success"},
+                {
+                    "name": "discover", "status": "completed", "conclusion": "success",
+                    "steps": [{
+                        "name": "Discover Bangladesh and India candidates into manual-review queues",
+                        "conclusion": "success",
+                    }],
+                },
             ],
         }
         scheduled_run = {
@@ -336,7 +342,13 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "status": "completed",
             "conclusion": "success",
             "created_at": "2026-11-07T02:45:00Z",
-            "jobs": [{"name": "check", "status": "completed", "conclusion": "success"}],
+            "jobs": [{
+                "name": "check", "status": "completed", "conclusion": "success",
+                "steps": [{
+                    "name": "Probe all International streams and apply three-day policy",
+                    "conclusion": "success",
+                }],
+            }],
         }]
         self.assertEqual(
             guard.first_run_id(runs, workflow_file="international-stream-health.yml"),
@@ -352,6 +364,33 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         self.assertFalse(guard.recovery_is_due("iptv-maintenance.yml", before))
         self.assertTrue(guard.recovery_is_due("iptv-maintenance.yml", after))
         self.assertFalse(guard.recovery_is_due("epg-refresh.yml", after))
+
+
+    def test_guard_only_success_does_not_count_as_completed_work(self):
+        skipped_health = {
+            "id": 140, "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T02:45:00Z",
+            "jobs": [{
+                "name": "check", "status": "completed", "conclusion": "success",
+                "steps": [
+                    {"name": "Check whether this queued health revision is current", "conclusion": "success"},
+                    {"name": "Probe all International streams and apply three-day policy", "conclusion": "skipped"},
+                ],
+            }],
+        }
+        skipped_epg = {
+            "id": 141, "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T03:00:00Z",
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "success",
+                "steps": [
+                    {"name": "Skip superseded queued EPG refresh", "conclusion": "success"},
+                    {"name": "Regenerate, validate and publish XMLTV", "conclusion": "skipped"},
+                ],
+            }],
+        }
+        self.assertFalse(guard.run_blocks_retry(skipped_health, workflow_file="international-stream-health.yml"))
+        self.assertFalse(guard.run_blocks_retry(skipped_epg, workflow_file="epg-refresh.yml"))
 
 
 if __name__ == "__main__":
