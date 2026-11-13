@@ -13,8 +13,9 @@ sys.path.insert(0,str(ROOT))
 
 from automation.core.playlist_contract import parse_rows, assert_iptv_existing_rows_preserved
 from automation.engines.international.candidate_engine import build_candidate as build_international_candidate, assert_international_rows_preserved
-from automation.engines.iptv.candidate_engine import build_candidate as build_iptv_candidate
-from automation.engines.iptv.metadata_repair import apply_metadata_patches
+from automation.engines.iptv.candidate_engine import build_iptv_candidate
+from automation.engines.international.engine import build_international_candidate
+from automation.engines.epg.candidate_engine import build_epg_candidate
 from automation.engines.epg.coverage import calculate_coverage
 from automation.engines.epg.freshness import calculate_freshness
 from automation.engines.epg.alias_suggestions import suggest_aliases
@@ -48,18 +49,26 @@ def run(root: Path) -> dict:
     iptv_rows = parse_rows(iptv_text)
     international_rows = parse_rows(international_text)
 
-    iptv_candidate = build_iptv_candidate(iptv_text,[])
+    iptv_result = build_iptv_candidate(iptv_text,[],[],root)
+    iptv_candidate = iptv_result.text
     assert_iptv_existing_rows_preserved(iptv_text,iptv_candidate)
-    if iptv_candidate != iptv_text:
-        raise ValueError("empty IPTV dry run unexpectedly changed the playlist")
-    metadata_candidate = apply_metadata_patches(iptv_text,[],root)
-    if metadata_candidate != iptv_text:
-        raise ValueError("empty IPTV metadata dry run unexpectedly changed the playlist")
+    if iptv_candidate != iptv_text or iptv_result.publish:
+        raise ValueError("empty IPTV engine dry run unexpectedly changed or published the playlist")
 
-    international_candidate = build_international_candidate(international_text,[])
+    international_result = build_international_candidate(international_text,[],datetime.now(ZoneInfo("Asia/Dhaka")).date())
+    international_candidate = international_result.text
     assert_international_rows_preserved(international_text,international_candidate)
-    if international_candidate != international_text:
-        raise ValueError("empty International dry run unexpectedly changed the playlist")
+    if international_candidate != international_text or international_result.publish:
+        raise ValueError("empty International engine dry run unexpectedly changed or published the playlist")
+
+    epg_iptv_result = build_epg_candidate(iptv_text,epg_text,as_of=datetime.now(ZoneInfo("Asia/Dhaka")))
+    epg_international_result = build_epg_candidate(international_text,epg_text,as_of=datetime.now(ZoneInfo("Asia/Dhaka")))
+    if not epg_iptv_result.decision.accepted or not epg_international_result.decision.accepted:
+        raise ValueError("baseline EPG candidate failed its coverage/freshness gate")
+    if epg_iptv_result.xml_text != epg_text or epg_international_result.xml_text != epg_text:
+        raise ValueError("empty EPG dry run unexpectedly changed the guide")
+    if epg_iptv_result.publish or epg_international_result.publish:
+        raise ValueError("EPG dry run unexpectedly enabled publication")
 
     as_of = datetime.now(ZoneInfo("Asia/Dhaka"))
     iptv_coverage = calculate_coverage(iptv_text,epg_text)
@@ -106,6 +115,12 @@ def run(root: Path) -> dict:
         "international_epg_alias_suggestions":international_alias_suggestions,
         "candidate_playlist_changes":0,
         "candidate_epg_changes":0,
+        "engine_validation":{
+            "iptv":{"accepted":True,"baseline_rows":iptv_result.baseline_rows,"candidate_rows":iptv_result.candidate_rows,"publish":iptv_result.publish},
+            "international":{"accepted":True,"baseline_rows":international_result.baseline_rows,"candidate_rows":international_result.candidate_rows,"publish":international_result.publish},
+            "epg_iptv":{"accepted":epg_iptv_result.decision.accepted,"publish":epg_iptv_result.publish},
+            "epg_international":{"accepted":epg_international_result.decision.accepted,"publish":epg_international_result.publish},
+        },
         "publish":False,
         "production_files_modified":False,
     }
