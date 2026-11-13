@@ -5,7 +5,10 @@ from dataclasses import dataclass
 from datetime import date, datetime
 import hashlib
 import json
+import os
 from pathlib import Path
+import urllib.error
+import urllib.request
 import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
 
@@ -36,6 +39,39 @@ class CandidateBundleResult:
     publish: bool = False
 
 
+
+def _assert_current_main_head(expected_commit: str) -> None:
+    """Fail closed if the remote main branch moved away from this candidate baseline."""
+    repository = os.environ.get("GITHUB_REPOSITORY", "").strip()
+    if not repository:
+        # Local isolated tests can omit GitHub context; production workflow always sets it.
+        return
+    token = os.environ.get("GITHUB_TOKEN", "").strip()
+    if not token:
+        raise RuntimeError("GITHUB_TOKEN is required to verify the current main baseline")
+    request = urllib.request.Request(
+        f"https://api.github.com/repos/{repository}/git/ref/heads/main",
+        headers={
+            "Accept": "application/vnd.github+json",
+            "Authorization": f"Bearer {token}",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": "BDIX-IPTV-AutomationV2",
+        },
+        method="GET",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=15) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except (urllib.error.URLError, TimeoutError, urllib.error.HTTPError) as exc:
+        raise RuntimeError("unable to verify current main baseline; refusing to stage candidates") from exc
+    actual = payload.get("object", {}).get("sha") if isinstance(payload, dict) else None
+    if not isinstance(actual, str) or len(actual) not in (40, 64):
+        raise RuntimeError("GitHub returned an invalid main branch head")
+    if actual.lower() != expected_commit.lower():
+        raise RuntimeError(
+            f"main advanced during candidate generation (expected {expected_commit}, current {actual})"
+        )
+
 def _sha(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
@@ -63,6 +99,7 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
 
     def operation():
         # Read the current remote state only after the bundle reservation is held.
+        _assert_current_main_head(baseline_commit)
         print("V2 bundle: reservation acquired; production baselines captured.", flush=True)
         snapshot = store.load()
         iptv_run = run_iptv_discovery(iptv_baseline, root, today)
@@ -137,6 +174,9 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
             "International-Playlist.m3u": international_baseline,
             "epg/epg.xml": epg_baseline,
         }
+        # The working-tree fingerprints protect against local writes; this remote
+        # ref check also catches a concurrent push/merge to main while the run worked.
+        _assert_current_main_head(baseline_commit)
         manifests = []
         artifacts = []
         for engine, path in (
