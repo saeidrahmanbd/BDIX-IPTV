@@ -54,5 +54,12 @@
       "Thikana TV"
     ]
   },
-  "production_mutations": false
+  "production_mutations": false,
+  "latest_verified_validation": {
+    "branch_ci_commit": "d2a14e92e46ee10f1f4df5c30a57efeb048c4bc3",
+    "branch_ci_tests": 201,
+    "legacy_regression_tests": 732,
+    "branch_ci": "success",
+    "legacy_regression": "success"
+  }
 }
