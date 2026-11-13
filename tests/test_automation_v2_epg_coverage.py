@@ -35,6 +35,12 @@ class EpgCoverageTests(unittest.TestCase):
         self.assertFalse(result.accepted)
         self.assertIn("mapped channel IDs lost: b",result.reasons)
 
+    def test_inactive_queue_groups_are_not_counted_as_active_epg_channels(self):
+        playlist=PLAYLIST + '#EXTINF:-1 tvg-id="backup-id" group-title="Backup",Backup\nhttps://backup.example/live\n' + '#EXTINF:-1 tvg-id="review-id" group-title="Review",Review\nhttps://review.example/live\n'
+        result=calculate_coverage(playlist,BASE)
+        self.assertEqual(result.active_channel_ids,2)
+        self.assertEqual(result.unmapped_ids,("b",))
+
     def test_invalid_xmltv_rejected(self):
         with self.assertRaisesRegex(ValueError,"failed validation"):
             calculate_coverage(PLAYLIST,"<tv>")
