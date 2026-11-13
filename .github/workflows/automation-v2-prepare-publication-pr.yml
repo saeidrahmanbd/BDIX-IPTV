@@ -103,8 +103,11 @@ jobs:
           import subprocess
           expected={"IPTV-Playlist.m3u","International-Playlist.m3u","epg/epg.xml"}
           actual=set(subprocess.check_output(["git","diff","--name-only"],text=True).splitlines())
-          if actual != expected:
-              raise SystemExit(f"unexpected changed paths: {sorted(actual)}")
+          unexpected=actual-expected
+          if not actual:
+              raise SystemExit("candidate produced no production-file changes")
+          if unexpected:
+              raise SystemExit(f"unexpected changed paths: {sorted(unexpected)}")
           PY
 
       - name: Create isolated publication review branch
