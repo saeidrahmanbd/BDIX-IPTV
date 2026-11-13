@@ -60,3 +60,38 @@ class EpgCandidateEngineTests(unittest.TestCase):
 
 if __name__=="__main__":
     unittest.main()
+
+
+    def test_two_playlist_active_channels_retain_all_last_known_good_coverage(self):
+        from automation.engines.epg.candidate_engine import restore_lost_active_coverage
+        playlist = (
+            '#EXTM3U\\n'
+            '#EXTINF:-1 tvg-id="bd.one" group-title="Bangladesh",BD One\\nhttps://a.example/live\\n'
+            '#EXTM3U\\n'
+            '#EXTINF:-1 tvg-id="intl.one" group-title="India",Intl One\\nhttps://b.example/live\\n'
+        )
+        baseline = (
+            '<tv><channel id="bd.one"/><channel id="intl.one"/>'
+            '<programme channel="bd.one" start="20261114090000 +0600" stop="20261114100000 +0600"><title>BD</title></programme>'
+            '<programme channel="intl.one" start="20261114090000 +0600" stop="20261114100000 +0600"><title>Intl</title></programme></tv>'
+        )
+        candidate = (
+            '<tv><channel id="bd.one"/>'
+            '<programme channel="bd.one" start="20261114090000 +0600" stop="20261114100000 +0600"><title>BD</title></programme></tv>'
+        )
+        result = restore_lost_active_coverage(
+            playlist, baseline, candidate,
+            datetime(2026, 11, 13, 2, 0, tzinfo=timezone.utc),
+        )
+        self.assertIn('channel id="intl.one"', result)
+        self.assertIn('channel="intl.one"', result)
+        from automation.engines.epg.coverage import calculate_coverage
+        from automation.engines.epg.freshness import calculate_freshness
+        self.assertEqual(
+            calculate_coverage(playlist, baseline).mapped_ids,
+            calculate_coverage(playlist, result).mapped_ids,
+        )
+        self.assertEqual(
+            calculate_freshness(playlist, baseline, datetime(2026, 11, 13, 2, 0, tzinfo=timezone.utc)).fresh_scheduled_channel_ids,
+            calculate_freshness(playlist, result, datetime(2026, 11, 13, 2, 0, tzinfo=timezone.utc)).fresh_scheduled_channel_ids,
+        )
