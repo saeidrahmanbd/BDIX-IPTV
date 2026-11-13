@@ -24,8 +24,8 @@ permissions:
   contents: read
 
 concurrency:
-  group: automation-v2-ci-${{ github.ref }}-${{ github.run_id }}
-  cancel-in-progress: true
+  group: automation-v2-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   contract-tests:
