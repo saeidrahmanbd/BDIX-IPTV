@@ -37,7 +37,7 @@ def _validate_entry(item: dict) -> LedgerEntry:
         raise ValueError("run ledger entry is incomplete or invalid") from exc
     if not isinstance(key,str) or len(key)!=64 or any(c not in "0123456789abcdef" for c in key):
         raise ValueError("run ledger idempotency key must be a SHA-256 hex digest")
-    if not isinstance(engine,str) or engine not in {"iptv","international","epg"}:
+    if not isinstance(engine,str) or engine not in {"iptv","international","epg","bundle"}:
         raise ValueError("run ledger engine is invalid")
     if not isinstance(baseline,str) or len(baseline) not in (40,64) or any(c not in "0123456789abcdefABCDEF" for c in baseline):
         raise ValueError("run ledger baseline commit is invalid")
