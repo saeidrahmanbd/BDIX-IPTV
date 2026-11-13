@@ -30,6 +30,7 @@ class MemoryStore:
 def fixture_runs(iptv_text, intl_text, ledger):
     iptv = SimpleNamespace(
         candidate=SimpleNamespace(text=iptv_text, candidate_rows=1),
+        source_warnings=(),
         publish=False,
     )
     maintenance = SimpleNamespace(
