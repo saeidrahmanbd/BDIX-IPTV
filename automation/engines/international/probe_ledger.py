@@ -58,24 +58,18 @@ def _validate_observation(item: dict) -> None:
             raise ValueError(f"probe flag {key} must be boolean")
 
 def probes_for(ledger: dict, identity: str) -> tuple[Probe,...]:
-    data = parse_ledger(json.dumps(ledger))
-    records = data["channels"].get(identity,[])
+    """Read one channel's observations from an already validated ledger."""
+    if not isinstance(ledger,dict) or not isinstance(ledger.get("channels"),dict):
+        raise ValueError("probe ledger must be parsed before reading channel observations")
+    records = ledger["channels"].get(identity,[])
     return tuple(Probe(date.fromisoformat(item["day"]),item.get("status_code"),
                        item.get("network_error",False),item.get("auth_error",False),
                        item.get("rate_limited",False),item.get("geo_blocked",False),
                        item.get("stream_state","unknown"),item.get("reason",""),item.get("url_fingerprint",""))
                  for item in records)
 
-def record_probe(ledger_text: str | None, identity: str, probe: Probe) -> str:
-    """Append an observation; duplicate same-day probes are retained to fail closed."""
-    key = identity.strip()
-    if not key:
-        raise ValueError("channel identity is required")
-    if probe.status_code is not None and (probe.status_code < 100 or probe.status_code > 599):
-        raise ValueError("probe HTTP status must be 100..599 or null")
-    ledger = parse_ledger(ledger_text)
-    observations = ledger["channels"].setdefault(key,[])
-    observations.append({
+def _probe_record(probe: Probe) -> dict:
+    item={
         "day":probe.day.isoformat(),
         "status_code":probe.status_code,
         "network_error":probe.network_error,
@@ -85,6 +79,24 @@ def record_probe(ledger_text: str | None, identity: str, probe: Probe) -> str:
         "stream_state":probe.stream_state,
         "reason":probe.reason,
         "url_fingerprint":probe.url_fingerprint,
-    })
-    observations.sort(key=lambda item:item["day"])
+    }
+    _validate_observation(item)
+    return item
+
+def record_probes(ledger_text: str | None, observations: list[tuple[str,Probe]]) -> str:
+    """Append a batch of observations with one parse/serialize cycle."""
+    ledger=parse_ledger(ledger_text)
+    touched=set()
+    for identity,probe in observations:
+        key=identity.strip()
+        if not key:
+            raise ValueError("channel identity is required")
+        ledger["channels"].setdefault(key,[]).append(_probe_record(probe))
+        touched.add(key)
+    for key in touched:
+        ledger["channels"][key].sort(key=lambda item:item["day"])
     return json.dumps(ledger,sort_keys=True,indent=2) + "\n"
+
+def record_probe(ledger_text: str | None, identity: str, probe: Probe) -> str:
+    """Append one observation; duplicate same-day probes are retained to fail closed."""
+    return record_probes(ledger_text,[(identity,probe)])
