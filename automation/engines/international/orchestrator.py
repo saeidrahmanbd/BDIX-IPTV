@@ -108,7 +108,7 @@ def run_international_candidate_persisted(playlist_text: str, targets: list[Stre
 def derive_primary_stream_targets(playlist_text: str) -> list[StreamTarget]:
     """Derive only unambiguous primary rows; queues/backups and duplicate IDs are excluded."""
     rows = parse_rows(playlist_text)
-    queue_groups = {"backup", "review", "new channels", "new backups", "new backup", "not playing"}
+    queue_groups = {"backup", "review", "new channels", "new backups", "new backup", "not playing", "test"}
     candidates = []
     counts = {}
     for index, row in enumerate(rows):
