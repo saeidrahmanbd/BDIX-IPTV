@@ -39,7 +39,7 @@ This is a migration plan only. No legacy workflow is disabled, edited or retired
 - Candidate-only International engine: implemented for supplied probe targets, durable probe ledger observations, lifecycle decisions and group-only changes.
 - Candidate-only EPG engine: implemented for structural validation, active-channel coverage/freshness checks and explicit-approved alias additions.
 - Candidate transaction infrastructure: per-engine allowlists, SHA-256 evidence, stale-input rejection, shared lock, idempotent run-reservation model and durable International probe ledger and atomic candidate-directory staging.
-- Verification: 201 V2 tests and 732 full repository tests passed on commit d2a14e92e46ee10f1f4df5c30a57efeb048c4bc3; all three candidate engines passed an immutable no-change baseline dry run.
+- Verification: 212 V2 tests and 743 full repository tests passed on commit 564139d881a4bd8b0115e25347a13dfcc7db8846; all three candidate engines passed an immutable no-change baseline dry run.
 - Not ready for production: discovery-source adapters, production Git publisher, durable state commit/recovery, exhaustive dynamic side-effect tracing, failure-injection/rollback and complete workflow equivalence remain open.
 
 ## Required cutover sequence
