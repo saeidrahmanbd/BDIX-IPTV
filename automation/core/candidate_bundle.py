@@ -64,6 +64,9 @@ def write_candidate_bundle(root: str | Path, run_id: str, bundle: CandidateBundl
     base=Path(root).resolve()
     parent=base/"reports"/"automation-v2"/"candidates"
     parent.mkdir(parents=True,exist_ok=True)
+    parent=parent.resolve()
+    if not parent.is_relative_to(base):
+        raise ValueError("candidate staging directory escapes repository root")
     target=parent/run_id
     with transaction_lock(base):
         if target.exists():
