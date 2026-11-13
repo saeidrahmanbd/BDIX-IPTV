@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 import re
 import xml.etree.ElementTree as ET
 
-OFFSET_RE = re.compile(r"^([+-])(\\d{2})(\\d{2})$")
+OFFSET_RE = re.compile(r"^([+-])(\d{2})(\d{2})$")
 
 @dataclass(frozen=True)
 class EpgValidation:
@@ -69,3 +69,6 @@ def validate_xmltv(xml_text: str) -> EpgValidation:
     if programme_count == 0:
         errors.append("XMLTV contains no programmes")
     return EpgValidation(not errors,len(channel_ids),programme_count,tuple(errors))
+
+if __name__ == "__main__":
+    raise SystemExit(0)
