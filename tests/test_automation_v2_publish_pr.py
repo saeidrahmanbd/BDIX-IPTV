@@ -197,5 +197,43 @@ class AutomationV2PublishPRTests(unittest.TestCase):
                 validate_against_baseline(repo, "a" * 40, report, contents)
 
 
+    def test_workflow_only_descendant_commit_keeps_candidate_baseline_valid(self):
+        with tempfile.TemporaryDirectory() as temp:
+            temp_root = Path(temp)
+            repo = temp_root / "repo"
+            repo.mkdir()
+            baseline = self.make_git_repo(repo)
+            workflow = repo / ".github" / "workflows" / "automation-v2-prepare-publication-pr.yml"
+            workflow.parent.mkdir(parents=True)
+            workflow.write_text("workflow-only correction\\n", encoding="utf-8")
+            subprocess.run(["git", "add", ".github/workflows/automation-v2-prepare-publication-pr.yml"], cwd=repo, check=True)
+            subprocess.run(["git", "commit", "-qm", "workflow-only correction"], cwd=repo, check=True)
+            artifact = temp_root / "artifact"
+            artifact.mkdir()
+            transaction_id, _ = self.make_artifact(artifact, baseline_commit=baseline)
+            report, _, contents = load_artifact(artifact, transaction_id, baseline)
+            evidence = validate_against_baseline(repo, baseline, report, contents)
+            self.assertEqual(evidence["baseline_commit"], baseline)
+            self.assertEqual(evidence["publication"], "pull_request_only")
+
+    def test_candidate_baseline_rejects_intervening_engine_changes(self):
+        with tempfile.TemporaryDirectory() as temp:
+            temp_root = Path(temp)
+            repo = temp_root / "repo"
+            repo.mkdir()
+            baseline = self.make_git_repo(repo)
+            engine_file = repo / "automation" / "engines" / "changed.py"
+            engine_file.parent.mkdir(parents=True)
+            engine_file.write_text("# changed engine\\n", encoding="utf-8")
+            subprocess.run(["git", "add", "automation/engines/changed.py"], cwd=repo, check=True)
+            subprocess.run(["git", "commit", "-qm", "change candidate engine"], cwd=repo, check=True)
+            artifact = temp_root / "artifact"
+            artifact.mkdir()
+            transaction_id, _ = self.make_artifact(artifact, baseline_commit=baseline)
+            report, _, contents = load_artifact(artifact, transaction_id, baseline)
+            with self.assertRaisesRegex(ValueError, "protected paths"):
+                validate_against_baseline(repo, baseline, report, contents)
+
+
 if __name__ == "__main__":
     unittest.main()
