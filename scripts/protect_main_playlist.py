@@ -136,7 +136,16 @@ def verify(playlist: Path, state: Path):
             old_number = str(old.get("number", "")).strip()
             new_number = str(new.get("number", "")).strip()
             if old_number != new_number:
-                if OWNER_MIGRATION_AUTHORIZED.is_file() and old_group not in PRIMARY_GROUPS and new_group == old_group and not new_number:
+                if (
+                    OWNER_MIGRATION_AUTHORIZED.is_file()
+                    and old_group not in PRIMARY_GROUPS
+                    and not new_number
+                    and new_group in {"Backup", "Review", "New Channels", "New Backups"}
+                ):
+                    # The authorized one-time request explicitly removes legacy
+                    # numbering from non-primary queues, including Backup rows
+                    # quarantined to Review. Group changes remain independently
+                    # protected by the exact-URL approval check above.
                     pass
                 else:
                     failures.append(f"Existing channel number changed for {new['name']}.")
