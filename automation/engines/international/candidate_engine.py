@@ -93,10 +93,11 @@ def assert_international_existing_rows_preserved(before: str, after: str) -> Non
 
 def append_discovery_candidates(playlist_text: str,
                                 discoveries: list[DiscoveryCandidate]) -> str:
-    """Insert new discovery rows into their queue blocks without rewriting existing rows."""
+    """Insert new discovery rows into their queue blocks without rewriting existing lines."""
     if not discoveries:
         return playlist_text
-    lines=playlist_text.replace("\r","").splitlines()
+    newline="\r\n" if "\r\n" in playlist_text else "\n"
+    lines=playlist_text.splitlines(keepends=True)
     seen_urls={row.url for row in parse_rows(playlist_text)}
     additions={"New Channels":[],"New Backups":[]}
     for item in discoveries:
@@ -113,23 +114,30 @@ def append_discovery_candidates(playlist_text: str,
         if url in seen_urls:
             continue
         seen_urls.add(url)
-        additions[expected].extend((extinf,url))
+        additions[expected].extend((extinf+newline,url+newline))
 
     rank={name:index for index,name in enumerate(CATEGORY_ORDER)}
     for group in ("New Channels","New Backups"):
         block=additions[group]
         if not block:
             continue
-        matching=[i for i,line in enumerate(lines) if line.startswith("#EXTINF:") and dict(ATTR_RE.findall(line)).get("group-title","").strip()==group]
-        if matching:
-            last=matching[-1]
-            insert_at=next((i for i in range(last+1,len(lines)) if lines[i].startswith("#EXTINF:")),len(lines))
+        extinf_indexes=[
+            i for i,line in enumerate(lines)
+            if line.lstrip().startswith("#EXTINF:") and
+            dict(ATTR_RE.findall(line.rstrip("\r\n"))).get("group-title","").strip()==group
+        ]
+        if extinf_indexes:
+            last=extinf_indexes[-1]
+            insert_at=next((i for i in range(last+1,len(lines))
+                            if lines[i].lstrip().startswith("#EXTINF:")),len(lines))
         else:
             target_rank=rank[group]
             insert_at=next((i for i,line in enumerate(lines)
-                            if line.startswith("#EXTINF:") and
-                            rank.get(dict(ATTR_RE.findall(line)).get("group-title","").strip(),len(rank))>target_rank),len(lines))
+                            if line.lstrip().startswith("#EXTINF:") and
+                            rank.get(dict(ATTR_RE.findall(line.rstrip("\r\n"))).get("group-title","").strip(),len(rank))>target_rank),len(lines))
+        if insert_at==len(lines) and lines and not lines[-1].endswith(("\n","\r")):
+            lines[-1]=lines[-1]+newline
         lines[insert_at:insert_at]=block
-    candidate="\n".join(lines).rstrip()+"\n"
+    candidate="".join(lines)
     assert_international_existing_rows_preserved(playlist_text,candidate)
     return candidate
