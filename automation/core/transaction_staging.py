@@ -33,8 +33,14 @@ def stage_transaction_bundle(root: str | Path, transaction_id: str,
             if manifest.candidate_fingerprints.get(path)!=_digest(candidate_contents[path]):
                 raise ValueError(f"candidate content fingerprint mismatch: {path}")
     base=Path(root).resolve()
-    parent=base/"reports"/"automation-v2"/"candidates"/"transactions"
-    parent.mkdir(parents=True,exist_ok=True)
+    parent=base
+    for part in ("reports","automation-v2","candidates","transactions"):
+        parent=parent/part
+        if parent.is_symlink():
+            raise ValueError("transaction output directory cannot traverse a symlink")
+        parent.mkdir(exist_ok=True)
+        if not parent.resolve().is_relative_to(base):
+            raise ValueError("transaction output directory escapes repository root")
     target=parent/transaction_id
     with transaction_lock(base):
         if target.exists():
