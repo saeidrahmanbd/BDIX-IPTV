@@ -16,6 +16,17 @@ class CandidateManifestTests(unittest.TestCase):
         manifest=CandidateManifest("international","a"*40,paths,fingerprints)
         self.assertEqual(validate_manifest(manifest),[])
 
+    def test_international_engine_can_declare_probe_state(self):
+        paths=("International-Playlist.m3u","reports/automation-v2/state/international-probes.json")
+        fingerprints={path:"f"*64 for path in paths}
+        manifest=CandidateManifest("international","a"*40,paths,fingerprints)
+        self.assertEqual(validate_manifest(manifest),[])
+
+    def test_shared_run_ledger_path_is_allowed(self):
+        path="reports/automation-v2/state/run-ledger.json"
+        manifest=CandidateManifest("epg","a"*40,(path,),{path:"f"*64})
+        self.assertEqual(validate_manifest(manifest),[])
+
     def test_parent_traversal_and_absolute_paths_are_rejected(self):
         paths=("../IPTV-Playlist.m3u","/IPTV-Playlist.m3u")
         manifest=CandidateManifest("iptv","a"*40,paths,{p:"d"*64 for p in paths})
