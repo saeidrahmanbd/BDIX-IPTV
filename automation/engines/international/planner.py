@@ -24,7 +24,7 @@ class InternationalPlan:
 
 def plan_lifecycle(playlist_text: str, inputs: list[RowLifecycleInput], today: date,
                    minimum_country_group_size: int = 5) -> InternationalPlan:
-    """Plan safe group-only moves; never removes rows, writes files, or publishes."""
+    """Plan safe group moves and three-day removals; never writes files or publishes."""
     rows = parse_rows(playlist_text)
     by_index: dict[int, RowLifecycleInput] = {}
     for item in inputs:
