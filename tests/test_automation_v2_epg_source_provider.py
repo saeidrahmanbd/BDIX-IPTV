@@ -39,10 +39,16 @@ class EpgSourceProviderTests(unittest.TestCase):
         production_before = (self.root / "epg/epg.xml").read_text()
         def generate(*args, **kwargs):
             cwd = Path(kwargs["cwd"])
+            self.assertEqual((cwd / "IPTV-Playlist.m3u").read_text(), "#EXTM3U\n#staged-iptv\n")
+            self.assertEqual((cwd / "International-Playlist.m3u").read_text(), "#EXTM3U\n#staged-international\n")
             (cwd / "epg/epg.xml").write_text("<tv><channel id='x'/></tv>", encoding="utf-8")
             return subprocess.CompletedProcess(args[0], 0, stdout="", stderr="")
         with patch("automation.engines.epg.source_provider.subprocess.run", side_effect=generate) as run:
-            candidate = build_epg_source_candidate(self.root, timeout_seconds=60, max_workers=2)
+            candidate = build_epg_source_candidate(
+                self.root, timeout_seconds=60, max_workers=2,
+                iptv_playlist_text="#EXTM3U\n#staged-iptv\n",
+                international_playlist_text="#EXTM3U\n#staged-international\n",
+            )
         self.assertIn("<tv>", candidate)
         self.assertEqual((self.root / "epg/epg.xml").read_text(), production_before)
         self.assertEqual(run.call_args.kwargs["timeout"], 60)
