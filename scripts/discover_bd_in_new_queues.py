@@ -41,7 +41,7 @@ FORBIDDEN_CATEGORY_PATTERNS = {
 # These additional genre exclusions apply only to IPTV New Channels/New Backup intake.
 DISCOVERY_EXTRA_CATEGORY_PATTERNS = {
     "knowledge": re.compile(r"\b(?:knowledge|documentary|wildlife|history|science|discovery|animal\s*planet|national\s*geographic|nat\s*geo|infotainment)\b", re.IGNORECASE),
-    "business/finance": re.compile(r"\b(?:business|finance|financial|stock\s*market|market\s*news|econom(?:y|ic)|cnbc|bloomberg|zee\s*business|et\s*now)\b", re.IGNORECASE),,
+    "business/finance": re.compile(r"\b(?:business|finance|financial|stock\s*market|market\s*news|econom(?:y|ic)|cnbc|bloomberg|zee\s*business|et\s*now)\b", re.IGNORECASE),
     "farming/agriculture": re.compile(r"\b(?:farm(?:s|ing)?|agricultur(?:e|al)|agronomy|kisan|kisaan|krishi|krush[iy]|agri(?:culture)?\s*(?:tv|channel)?|rural\s+agriculture)\b", re.IGNORECASE),
 }
 
