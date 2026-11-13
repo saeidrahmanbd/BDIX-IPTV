@@ -36,6 +36,32 @@ class IptvCandidateEngineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"#EXTM3U"):
             build_candidate("not a playlist", [item])
 
+    def test_combined_candidate_preserves_existing_rows_and_appends_discovery(self):
+        import tempfile
+        from pathlib import Path
+        from automation.engines.iptv.metadata_repair import MetadataPatch
+        from automation.engines.iptv.candidate_engine import build_iptv_candidate
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            (root/"logos").mkdir()
+            (root/"logos"/"new.png").write_bytes(b"logo")
+            patch=MetadataPatch(0,"official channel identity",True,tvg_name="A Official",tvg_logo="logos/new.png",display_name="A Official")
+            discovery=DiscoveryCandidate('#EXTINF:-1 group-title="New Channels",B','https://b.example/b.m3u8')
+            result=build_iptv_candidate(BASE,[discovery],[patch],root)
+            self.assertFalse(result.publish)
+            self.assertEqual((result.baseline_rows,result.candidate_rows),(1,2))
+            self.assertIn('tvg-name="A Official"',result.text)
+            self.assertIn('group-title="New Channels"',result.text)
+
+    def test_combined_candidate_rejects_unapproved_metadata_patch(self):
+        import tempfile
+        from automation.engines.iptv.metadata_repair import MetadataPatch
+        from automation.engines.iptv.candidate_engine import build_iptv_candidate
+        with tempfile.TemporaryDirectory() as temp:
+            patch=MetadataPatch(0,"",False,tvg_name="A changed")
+            with self.assertRaisesRegex(ValueError,"approval and evidence"):
+                build_iptv_candidate(BASE,[],[patch],temp)
+
     def test_non_http_url_rejected(self):
         item=DiscoveryCandidate('#EXTINF:-1 group-title="New Channels",B','file:///tmp/a')
         with self.assertRaises(ValueError):
