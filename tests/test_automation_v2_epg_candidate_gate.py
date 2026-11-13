@@ -32,6 +32,16 @@ class EpgCandidateGateTests(unittest.TestCase):
         self.assertFalse(result.accepted)
         self.assertIn("coverage regressed",result.reason)
 
+    def test_future_schedule_regression_rejected(self):
+        from datetime import datetime, timezone
+        playlist='#EXTM3U\\n#EXTINF:-1 tvg-id="a" group-title="Bangladesh",A\\nhttps://a.example/a\\n#EXTINF:-1 tvg-id="b" group-title="Bangladesh",B\\nhttps://b.example/b\\n'
+        baseline='<tv><channel id="a"/><channel id="b"/><programme channel="a" start="20261113090000 +0600" stop="20261113100000 +0600"/><programme channel="b" start="20261113110000 +0600" stop="20261113120000 +0600"/></tv>'
+        candidate='<tv><channel id="a"/><channel id="b"/><programme channel="a" start="20261112090000 +0600" stop="20261112100000 +0600"/><programme channel="b" start="20261112090000 +0600" stop="20261112100000 +0600"/></tv>'
+        as_of=datetime(2026,11,13,3,0,tzinfo=timezone.utc)
+        result=evaluate_candidate(baseline,candidate,playlist,as_of)
+        self.assertFalse(result.accepted)
+        self.assertIn("schedule freshness regressed",result.reason)
+
     def test_channel_count_regression_rejected(self):
         result=evaluate_candidate(BETTER,BASE)
         self.assertFalse(result.accepted)
