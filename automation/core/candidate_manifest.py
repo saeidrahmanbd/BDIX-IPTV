@@ -5,10 +5,10 @@ from pathlib import PurePosixPath
 
 PLAYLIST_ALLOWLIST = {
     "iptv": {"IPTV-Playlist.m3u"},
-    "international": {"International-Playlist.m3u"},
+    "international": {"International-Playlist.m3u", "reports/automation-v2/state/international-probes.json"},
     "epg": {"epg/epg.xml"},
 }
-COMMON_REPORTS = {"reports/automation-v2/run-report.json"}
+COMMON_REPORTS = {"reports/automation-v2/run-report.json", "reports/automation-v2/state/run-ledger.json"}
 
 @dataclass(frozen=True)
 class CandidateManifest:
