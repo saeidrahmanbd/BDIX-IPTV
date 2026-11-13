@@ -64,7 +64,7 @@ def run_international_candidate(playlist_text: str, ledger_text: str | None,
 
 
 
-def run_international_candidate_persisted(playlist_text: str, targets: list[StreamTarget],
+def run_international_candidate_persisted(playlist_text: str, targets: list[StreamTarget] | None,
                                           today: date, baseline_commit: str, store,
                                           timeout: int = 8,
                                           discoveries: list[DiscoveryCandidate] | None = None):
@@ -75,6 +75,8 @@ def run_international_candidate_persisted(playlist_text: str, targets: list[Stre
     from automation.core.run_ledger import RunRequest
     from automation.engines.international.probe_ledger import parse_ledger
 
+    if targets is None:
+        targets = derive_primary_stream_targets(playlist_text)
     target_material = [
         (item.row_index, item.identity, item.url, item.primary_group, item.verified_stream_role)
         for item in sorted(targets, key=lambda item: item.row_index)
