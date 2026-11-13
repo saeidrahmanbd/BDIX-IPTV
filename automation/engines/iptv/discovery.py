@@ -3,7 +3,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
+import ipaddress
 import sys
+from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 from automation.engines.iptv.candidate_engine import DiscoveryCandidate
 
@@ -62,6 +64,22 @@ def fetch_all_source_feeds(timeout: int = DEFAULT_TIMEOUT) -> tuple[dict[str,str
             warnings.append(f"{country} source unavailable: {type(exc).__name__}")
     return feeds,tuple(warnings)
 
+def _safe_public_url(url: str) -> bool:
+    try:
+        parsed=urlsplit(url)
+        if parsed.scheme not in {"http","https"} or not parsed.hostname or parsed.username or parsed.password or parsed.fragment:
+            return False
+        host=parsed.hostname.casefold().rstrip(".")
+        if host=="localhost" or host.endswith(".localhost") or host.endswith(".local"):
+            return False
+        try:
+            address=ipaddress.ip_address(host)
+        except ValueError:
+            address=None
+        return address is None or address.is_global
+    except ValueError:
+        return False
+
 def _local_logo(root: Path, logo_value: str) -> str:
     if not logo_value.startswith("logos/"):
         return ""
@@ -100,6 +118,9 @@ def build_discovery_batch(playlist_text: str, source_feeds: dict[str,str],
         source_rows=policy.parse(source_text)
         source_counts.append((country,len(source_rows)))
         for attrs,name,url in source_rows:
+            if not _safe_public_url(url):
+                rejected["unsafe stream URL"] = rejected.get("unsafe stream URL",0)+1
+                continue
             normalized,reason=policy.evaluate(country,attrs,name,url)
             if normalized is None:
                 rejected[reason or "policy rejected"] = rejected.get(reason or "policy rejected",0)+1
