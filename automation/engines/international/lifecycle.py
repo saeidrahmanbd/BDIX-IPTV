@@ -30,8 +30,8 @@ def decide_channel(state: ChannelState, today: date) -> LifecycleDecision:
 
     if failure_action == "MOVE_TO_REVIEW":
         return LifecycleDecision(state.identity, current, "Review", "MOVE_TO_REVIEW", streak)
-    if failure_action == "ELIGIBLE_FOR_REMOVAL_REVIEW":
-        return LifecycleDecision(state.identity, current, "Review", "REQUIRES_OWNER_REMOVAL_REVIEW", streak)
+    if failure_action == "REMOVE":
+        return LifecycleDecision(state.identity, current, "", "REMOVE", streak)
 
     if current.casefold() == "review":
         if state.verified_stream_role == "primary" and state.primary_group:
