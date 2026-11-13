@@ -25,15 +25,36 @@ BD_TZ = ZoneInfo("Asia/Dhaka")
 API = "https://api.github.com"
 DEFAULT_BRANCH = "main"
 VALID_WORKFLOWS = {
-    "new-channel-discovery.yml",
-    "international-channel-discovery.yml",
-    "international-stream-health.yml",
+    "iptv-maintenance.yml", "new-channel-discovery.yml",
+    "international-channel-discovery.yml", "playlist-logo-localization.yml",
+    "international-stream-health.yml", "epg-refresh.yml",
 }
 REQUIRED_JOB_BY_WORKFLOW = {
+    "iptv-maintenance.yml": "maintain",
     "new-channel-discovery.yml": "discover",
     "international-channel-discovery.yml": "discover",
+    "playlist-logo-localization.yml": "localize",
     "international-stream-health.yml": "check",
+    "epg-refresh.yml": "refresh",
 }
+RECOVERY_AFTER_LOCAL = {
+    "iptv-maintenance.yml": (7, 30),
+    "new-channel-discovery.yml": (7, 30),
+    "international-channel-discovery.yml": (7, 30),
+    "playlist-logo-localization.yml": (8, 30),
+    "international-stream-health.yml": (9, 15),
+    "epg-refresh.yml": (9, 30),
+}
+
+
+def recovery_is_due(workflow_file: str, now: datetime | None = None) -> bool:
+    if workflow_file not in RECOVERY_AFTER_LOCAL:
+        raise ValueError(f"Unsupported recovery workflow: {workflow_file}")
+    current = now or datetime.now(BD_TZ)
+    current = current.replace(tzinfo=BD_TZ) if current.tzinfo is None else current.astimezone(BD_TZ)
+    hour, minute = RECOVERY_AFTER_LOCAL[workflow_file]
+    return (current.hour, current.minute) >= (hour, minute)
+
 
 
 def parse_github_timestamp(value: str) -> datetime:
@@ -141,8 +162,9 @@ def should_current_run_execute(
     target_date: date,
     client=None,
     event: str | None = None,
+    workflow_file: str = "new-channel-discovery.yml",
 ) -> bool:
-    """Apply daily deduplication while allowing intentional manual re-runs.
+    """Apply workflow-specific daily deduplication and allow intentional manual re-runs.
 
     Scheduled/push runs are limited to the earliest real discovery run for the
     Bangladesh calendar date. An explicit workflow_dispatch may run again after
@@ -161,7 +183,7 @@ def should_current_run_execute(
         ]
         return not active_others
 
-    return first_run_id(todays, client) == int(current_run_id)
+    return first_run_id(todays, client, workflow_file) == int(current_run_id)
 
 
 class GitHubActions:
@@ -272,7 +294,8 @@ def guard(workflow_file: str) -> int:
     )
     execution_event = "workflow_dispatch" if manual_retry else event
     execute = should_current_run_execute(
-        todays, current_run_id, target_date, client, event=execution_event
+        todays, current_run_id, target_date, client, event=execution_event,
+        workflow_file=workflow_file,
     )
     write_output("should_run", "true" if execute else "false")
     if execute and manual_retry:
@@ -315,12 +338,19 @@ def guard(workflow_file: str) -> int:
 
 
 def watchdog(workflow_files: list[str]) -> int:
+    if os.environ.get("GITHUB_EVENT_NAME", "").casefold() == "push":
+        print("Push-triggered workflows own this commit; watchdog will not dispatch duplicates.")
+        return 0
     repository = os.environ["GITHUB_REPOSITORY"]
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
     target_date = today_in_bangladesh()
     client = GitHubActions(repository, token)
 
     for workflow_file in workflow_files:
+        if not recovery_is_due(workflow_file):
+            hour, minute = RECOVERY_AFTER_LOCAL[workflow_file]
+            print(f"Recovery deferred for {workflow_file} until {hour:02d}:{minute:02d} Asia/Dhaka.")
+            continue
         runs = client.workflow_runs(workflow_file)
         todays = runs_for_date(runs, target_date)
         blocking = [run for run in todays if run_blocks_retry(run, client, workflow_file)]
