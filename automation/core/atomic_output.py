@@ -22,8 +22,14 @@ def _safe_target(root: Path, relative_path: str) -> Path:
 def transaction_lock(root: str | Path):
     """Acquire the one shared V2 publisher lock."""
     base=Path(root).resolve()
-    lock_path=base/"reports"/"automation-v2"/"state"/".publisher.lock"
-    lock_path.parent.mkdir(parents=True,exist_ok=True)
+    state_dir=base/"reports"/"automation-v2"/"state"
+    state_dir.mkdir(parents=True,exist_ok=True)
+    resolved_state=state_dir.resolve()
+    if not resolved_state.is_relative_to(base):
+        raise ValueError("publisher lock directory escapes repository root")
+    lock_path=resolved_state/".publisher.lock"
+    if lock_path.is_symlink():
+        raise ValueError("publisher lock file cannot be a symlink")
     descriptor=os.open(lock_path,os.O_CREAT|os.O_RDWR,0o600)
     try:
         fcntl.flock(descriptor,fcntl.LOCK_EX)
