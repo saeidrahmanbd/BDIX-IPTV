@@ -120,7 +120,7 @@ def validate_against_baseline(root: Path, baseline_commit: str, report: dict, co
         )
         if ancestor.returncode != 0:
             raise ValueError(
-                f"requested baseline {baseline_commit} is not an ancestor of worktree HEAD {head}"
+                f"worktree HEAD {head} is not the requested baseline {baseline_commit} or a safe descendant"
             )
         changed = set(git_bytes(
             root, "diff", "--name-only", f"{baseline_commit}..{head}"
