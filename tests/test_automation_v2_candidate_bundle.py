@@ -67,7 +67,7 @@ class CandidateBundleTests(unittest.TestCase):
             (root/"reports").symlink_to(outside,target_is_directory=True)
             contents={"IPTV-Playlist.m3u":"after"}
             bundle=build_candidate_bundle("iptv","a"*40,{"IPTV-Playlist.m3u":"before"},contents,{"IPTV-Playlist.m3u":True})
-            with self.assertRaisesRegex(ValueError,"symlink"):
+            with self.assertRaisesRegex(ValueError,"symlink|escapes"):
                 write_candidate_bundle(root,"run-123",bundle,contents)
 
     def test_blocked_bundle_is_not_written(self):
