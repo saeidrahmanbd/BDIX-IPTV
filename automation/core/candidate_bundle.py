@@ -25,7 +25,7 @@ def build_candidate_bundle(engine: str, baseline_commit: str,
                            baseline_contents: dict[str,str],
                            candidate_contents: dict[str,str],
                            validator_results: dict[str,bool]) -> CandidateBundle:
-    """Create a deterministic evidence bundle; all declared paths must have baseline and validator evidence."""
+    """Create a deterministic evidence bundle; all declared paths need baseline and validator evidence."""
     if not candidate_contents:
         raise ValueError("candidate bundle cannot be empty")
     paths = tuple(sorted(candidate_contents))
@@ -49,10 +49,9 @@ def build_candidate_bundle(engine: str, baseline_commit: str,
     decision = evaluate_transaction(manifest,list(evidence),baseline_commit)
     return CandidateBundle(manifest,evidence,decision,False)
 
-
 def write_candidate_bundle(root: str | Path, run_id: str, bundle: CandidateBundle,
                            candidate_contents: dict[str,str]) -> Path:
-    """Publish a complete candidate directory atomically; production files remain untouched."""
+    """Atomically stage a complete candidate directory; production files remain untouched."""
     if not re.fullmatch(r"[A-Za-z0-9._-]{1,128}",run_id):
         raise ValueError("run_id is invalid")
     if not bundle.decision.ready_for_owner_review or bundle.publish:
@@ -78,7 +77,7 @@ def write_candidate_bundle(root: str | Path, run_id: str, bundle: CandidateBundl
                 output=stage/Path(*path.parts)
                 output.parent.mkdir(parents=True,exist_ok=True)
                 with output.open("w",encoding="utf-8",newline="") as stream:
-                stream.write("\n")
+                    stream.write(content)
                     stream.flush()
                     os.fsync(stream.fileno())
             metadata={
