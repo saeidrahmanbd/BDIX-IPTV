@@ -124,6 +124,26 @@ class AutomationV2PublishPRTests(unittest.TestCase):
             self.assertEqual(evidence["removed_international_rows"], 0)
             self.assertFalse(evidence["production_main_modified"])
 
+    def test_missing_baseline_epg_channel_definitions_are_restored_without_programmes(self):
+        with tempfile.TemporaryDirectory() as temp:
+            temp_root = Path(temp)
+            repo = temp_root / "repo"
+            repo.mkdir()
+            baseline = self.make_git_repo(repo)
+            artifact = temp_root / "artifact"
+            artifact.mkdir()
+            transaction_id, _ = self.make_artifact(artifact, baseline_commit=baseline)
+            report, _, contents = load_artifact(artifact, transaction_id, baseline)
+            # Remove the baseline channel definition from the candidate, while
+            # retaining its programme to prove only definitions are restored.
+            contents["epg/epg.xml"] = contents["epg/epg.xml"].replace(
+                b'<channel id="one"><display-name>One</display-name></channel>', b""
+            )
+            evidence = validate_against_baseline(repo, baseline, report, contents)
+            self.assertEqual(evidence["restored_baseline_epg_channel_definitions"], 1)
+            self.assertIn(b'<channel id="one">', contents["epg/epg.xml"])
+            self.assertEqual(evidence["epg_programmes"], 2)
+
     def test_manifest_with_missing_engine_is_rejected(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
