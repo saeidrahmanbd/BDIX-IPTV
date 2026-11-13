@@ -38,6 +38,10 @@ def _validate_observation(item: dict) -> None:
     status = item.get("status_code")
     if status is not None and (not isinstance(status,int) or status < 100 or status > 599):
         raise ValueError("probe HTTP status must be 100..599 or null")
+    if item.get("stream_state","unknown") not in {"verified","dead","unknown"}:
+        raise ValueError("probe stream_state is invalid")
+    if not isinstance(item.get("reason",""),str):
+        raise ValueError("probe reason must be text")
     for key in ("network_error","auth_error","rate_limited","geo_blocked"):
         if not isinstance(item.get(key,False),bool):
             raise ValueError(f"probe flag {key} must be boolean")
@@ -47,7 +51,8 @@ def probes_for(ledger: dict, identity: str) -> tuple[Probe,...]:
     records = data["channels"].get(identity,[])
     return tuple(Probe(date.fromisoformat(item["day"]),item.get("status_code"),
                        item.get("network_error",False),item.get("auth_error",False),
-                       item.get("rate_limited",False),item.get("geo_blocked",False))
+                       item.get("rate_limited",False),item.get("geo_blocked",False),
+                       item.get("stream_state","unknown"),item.get("reason",""))
                  for item in records)
 
 def record_probe(ledger_text: str | None, identity: str, probe: Probe) -> str:
@@ -66,6 +71,8 @@ def record_probe(ledger_text: str | None, identity: str, probe: Probe) -> str:
         "auth_error":probe.auth_error,
         "rate_limited":probe.rate_limited,
         "geo_blocked":probe.geo_blocked,
+        "stream_state":probe.stream_state,
+        "reason":probe.reason,
     })
     observations.sort(key=lambda item:item["day"])
     return json.dumps(ledger,sort_keys=True,indent=2) + "\n"
