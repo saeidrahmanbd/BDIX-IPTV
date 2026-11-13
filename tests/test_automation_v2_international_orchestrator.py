@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from automation.engines.international.orchestrator import StreamTarget, run_international_candidate, derive_primary_stream_targets
 from automation.engines.international.stream_failure_policy import Probe
-from automation.engines.international.probe_ledger import parse_ledger
+from automation.engines.international.probe_ledger import parse_ledger, record_probes, url_fingerprint
 
 DAY=date(2026,11,13)
 PLAYLIST='#EXTM3U\n#EXTINF:-1 tvg-id="a" group-title="Nepal",A\nhttps://a.example/live\n'
@@ -144,6 +144,25 @@ class InternationalOrchestratorTests(unittest.TestCase):
         self.assertEqual(new.probed_count,1)
         self.assertEqual(new.reused_count,0)
         self.assertEqual(mock.call_count,1)
+
+
+    @patch("automation.engines.international.monitor.probe_stream")
+    def test_three_consecutive_url_bound_404_days_remove_primary_candidate(self,mock):
+        fingerprint=url_fingerprint("https://a.example/live")
+        ledger=record_probes(None,[
+            ("a",Probe(DAY-timedelta(days=offset),404,url_fingerprint=fingerprint))
+            for offset in (2,1,0)
+        ])
+        result=run_international_candidate(
+            PLAYLIST,ledger,
+            [StreamTarget(0,"a","https://a.example/live","Nepal","primary")],
+            DAY,
+        )
+        self.assertNotIn('tvg-id="a"',result.candidate.text)
+        self.assertEqual(result.candidate.plan.remove_identities,("a",))
+        self.assertEqual(result.probed_count,0)
+        self.assertEqual(result.reused_count,1)
+        mock.assert_not_called()
 
 if __name__=="__main__":
     unittest.main()
