@@ -23,6 +23,9 @@ def build_epg_candidate(playlist_text: str, last_known_good_xml: str,
     candidate=preserve_missing_fresh_schedules(
         playlist_text,last_known_good_xml,candidate,as_of
     )
+    candidate=restore_lost_active_coverage(
+        playlist_text,last_known_good_xml,candidate,as_of
+    )
     decision=evaluate_candidate(last_known_good_xml,candidate,playlist_text,as_of)
     return EpgCandidate(candidate,decision,False)
 
@@ -144,3 +147,82 @@ def build_epg_candidate_persisted(playlist_text: str, last_known_good_xml: str,
         )
 
     return execute_remote_run(store, request, operation)
+
+
+
+def restore_lost_active_coverage(playlist_text: str, baseline_xml: str,
+                                 candidate_xml: str,
+                                 as_of: datetime | None = None) -> str:
+    """Restore last-known-good mappings and fresh schedules lost by a provider refresh."""
+    import copy
+    import xml.etree.ElementTree as ET
+    from datetime import timezone
+    from zoneinfo import ZoneInfo
+    from automation.engines.epg.coverage import calculate_coverage
+    from automation.engines.epg.freshness import calculate_freshness, _parse_xmltv_datetime
+
+    if as_of is None:
+        as_of = datetime.now(ZoneInfo("Asia/Dhaka"))
+    if as_of.tzinfo is None or as_of.utcoffset() is None:
+        raise ValueError("as_of must be timezone-aware")
+    as_of_utc = as_of.astimezone(timezone.utc)
+
+    baseline_coverage = calculate_coverage(playlist_text, baseline_xml)
+    candidate_coverage = calculate_coverage(playlist_text, candidate_xml)
+    baseline_freshness = calculate_freshness(playlist_text, baseline_xml, as_of)
+    candidate_freshness = calculate_freshness(playlist_text, candidate_xml, as_of)
+    lost_mapped = set(baseline_coverage.mapped_ids) - set(candidate_coverage.mapped_ids)
+    lost_fresh = (
+        set(baseline_freshness.fresh_scheduled_channel_ids)
+        - set(candidate_freshness.fresh_scheduled_channel_ids)
+    )
+    if not lost_mapped and not lost_fresh:
+        return candidate_xml
+
+    baseline_root = ET.fromstring(baseline_xml)
+    candidate_root = ET.fromstring(candidate_xml)
+    candidate_channel_ids = {
+        (node.get("id") or "").strip() for node in candidate_root.findall("channel")
+    }
+    restored_channels = 0
+    for node in baseline_root.findall("channel"):
+        channel_id = (node.get("id") or "").strip()
+        if channel_id in lost_mapped and channel_id not in candidate_channel_ids:
+            candidate_root.append(copy.deepcopy(node))
+            candidate_channel_ids.add(channel_id)
+            restored_channels += 1
+
+    existing_programmes = {
+        ET.tostring(node, encoding="unicode")
+        for node in candidate_root.findall("programme")
+    }
+    restored_programmes = 0
+    for node in baseline_root.findall("programme"):
+        channel_id = (node.get("channel") or "").strip()
+        if channel_id not in lost_fresh:
+            continue
+        if _parse_xmltv_datetime(node.get("stop") or "") <= as_of_utc:
+            continue
+        signature = ET.tostring(node, encoding="unicode")
+        if signature not in existing_programmes:
+            candidate_root.append(copy.deepcopy(node))
+            existing_programmes.add(signature)
+            restored_programmes += 1
+
+    if restored_channels or restored_programmes:
+        print(
+            "EPG safety fallback: restored "
+            f"{restored_channels} mapped channel definitions and "
+            f"{restored_programmes} fresh baseline programmes.",
+            flush=True,
+        )
+        restored = ET.tostring(candidate_root, encoding="unicode")
+        # A restoration is accepted only if it actually repairs the regression.
+        final_coverage = calculate_coverage(playlist_text, restored)
+        final_freshness = calculate_freshness(playlist_text, restored, as_of)
+        if set(baseline_coverage.mapped_ids) - set(final_coverage.mapped_ids):
+            raise ValueError("EPG fallback could not restore all previously mapped active channel IDs")
+        if set(baseline_freshness.fresh_scheduled_channel_ids) - set(final_freshness.fresh_scheduled_channel_ids):
+            raise ValueError("EPG fallback could not restore all previously fresh active-channel schedules")
+        return restored
+    return candidate_xml
