@@ -160,7 +160,7 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         international = SimpleNamespace(maintenance=maintenance, publish=False)
         rejected_epg = SimpleNamespace(
             xml_text="<tv/>",
-            decision=SimpleNamespace(accepted=False, errors=("coverage regression",)),
+            decision=SimpleNamespace(accepted=False, reason="coverage regression"),
             publish=False,
         )
         with (
