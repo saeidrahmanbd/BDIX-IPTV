@@ -10,6 +10,7 @@ on:
       - 'scripts/validate_discovery_run.py'
       - 'scripts/discovery_schedule_guard.py'
       - 'scripts/country_verification.py'
+      - 'scripts/discover_bd_in_new_queues.py'
       - 'tests/test_channel_discovery_policy.py'
       - 'tests/test_country_verification.py'
       - 'tests/test_discovery_run_validation.py'
