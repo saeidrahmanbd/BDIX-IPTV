@@ -39,6 +39,18 @@ class EpgAliasSuggestionTests(unittest.TestCase):
         self.assertEqual(result["suggestion_count"],0)
         self.assertEqual(result["ambiguous_count"],1)
 
+    def test_country_suffix_conflict_is_ambiguous(self):
+        result=suggest_aliases(playlist([("TraceLatina.us","Trace Latina")]),guide([("TraceLatina.fr","Trace Latina")]))
+        self.assertEqual(result["suggestion_count"],0)
+        self.assertEqual(result["ambiguous_count"],1)
+        self.assertIn("country suffix differs",result["ambiguous"][0]["reason"])
+
+    def test_region_suffix_conflict_is_ambiguous(self):
+        result=suggest_aliases(playlist([("MovieSphere.us@CA","MovieSphere")]),guide([("MovieSphere.us@US","MovieSphere")]))
+        self.assertEqual(result["suggestion_count"],0)
+        self.assertEqual(result["ambiguous_count"],1)
+        self.assertIn("region suffix differs",result["ambiguous"][0]["reason"])
+
     def test_unmatched_channel_is_reported_without_alias(self):
         result=suggest_aliases(playlist([("missing.id","Unrelated Channel")]),guide([("epg.id","Other Name")]))
         self.assertEqual(result["unmatched_count"],1)
