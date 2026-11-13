@@ -20,10 +20,10 @@ from automation.engines.epg.coverage import calculate_coverage
 from automation.engines.epg.freshness import calculate_freshness
 from automation.engines.epg.alias_suggestions import suggest_aliases
 
-BASELINE_COMMIT = "46275f5ebafa2ae1b56f3e480f684ac1e85ae45e"
+BASELINE_COMMIT = "aec37357dfbb47f0792682af744ccaf111416d7a"
 EXPECTED_BLOB_SHAS = {
     "IPTV-Playlist.m3u": "eb46b5ef4ddfde11a010389d1f0202a7bd418b0a",
-    "International-Playlist.m3u": "c49c650d4e445620ae5fb91627eaa7f481ccea38",
+    "International-Playlist.m3u": "f98c433afa7df88b9345a7191e58ea83f833d1b9",
     "epg/epg.xml": "b28414c75937bd155067c6db5e6e2083ee4004b4",
 }
 
