@@ -86,6 +86,13 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
         parse_rows(international_candidate)
         assert_international_existing_rows_preserved(international_baseline, international_candidate)
 
+        # Persist completed dated probes before the slower EPG source stage. If EPG
+        # acquisition fails or the runner is interrupted later, the day's probes
+        # remain available to the next disposable Actions runner.
+        updated_state = dict(snapshot.state)
+        updated_state["international_probe_ledger"] = parse_ledger(intl_run.maintenance.ledger_json)
+        store.save(updated_state, snapshot.blob_sha)
+
         source_candidate = build_epg_source_candidate(
             root,
             timeout_seconds=epg_timeout_seconds,
@@ -161,10 +168,6 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
             expected = {path: _sha(value) for path, value in contents.items()}
             if metadata.get("candidate_fingerprints") != expected or metadata.get("baseline_commit") != baseline_commit:
                 raise RuntimeError("existing staged transaction does not match this candidate bundle")
-
-        updated = dict(snapshot.state)
-        updated["international_probe_ledger"] = parse_ledger(intl_run.maintenance.ledger_json)
-        store.save(updated, snapshot.blob_sha)
 
         return CandidateBundleResult(
             transaction_id=transaction_id,
