@@ -79,5 +79,12 @@ class InternationalCandidateEngineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"exactly one"):
             build_candidate(BASE,[],{"missing"})
 
+
+    def test_existing_row_guard_accepts_only_explicitly_authorized_removal(self):
+        candidate=build_candidate(BASE,[],{"x"})
+        assert_international_existing_rows_preserved(BASE,candidate,allowed_removed_identities={"x"})
+        with self.assertRaisesRegex(ValueError,"unauthorized row"):
+            assert_international_rows_preserved(BASE,candidate)
+
 if __name__=="__main__":
     unittest.main()
