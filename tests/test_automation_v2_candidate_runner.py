@@ -33,8 +33,8 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         root = Path(temp.name)
         (root / "epg").mkdir()
         (root / "reports").mkdir()
-        (root / "IPTV-Playlist.m3u").write_text("#EXTM3U\\n", encoding="utf-8")
-        (root / "International-Playlist.m3u").write_text("#EXTM3U\\n", encoding="utf-8")
+        (root / "IPTV-Playlist.m3u").write_text("#EXTM3U\n", encoding="utf-8")
+        (root / "International-Playlist.m3u").write_text("#EXTM3U\n", encoding="utf-8")
         (root / "epg/epg.xml").write_text("<tv/>", encoding="utf-8")
         return temp, root
 
@@ -45,9 +45,9 @@ class CandidateBundleRunnerTests(unittest.TestCase):
             name: (root / name).read_bytes()
             for name in ("IPTV-Playlist.m3u", "International-Playlist.m3u", "epg/epg.xml")
         }
-        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), publish=False)
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0), publish=False)
         maintenance = SimpleNamespace(
-            candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0),
+            candidate=SimpleNamespace(text="#EXTM3U\n", candidate_rows=0),
             ledger_json='{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
             probed_count=0, reused_count=0, publish=False,
         )
