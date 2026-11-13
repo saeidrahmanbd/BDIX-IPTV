@@ -82,10 +82,10 @@ class InternationalOrchestratorTests(unittest.TestCase):
 
     def test_review_destination_uses_only_explicit_country_and_language_metadata(self):
         text = (
-            '#EXTM3U\\n'
-            '#EXTINF:-1 tvg-id="bd-review" tvg-country="BD" group-title="Review",BD Review\\nhttps://bd.example/live\\n'
-            '#EXTINF:-1 tvg-id="in-bn-review" tvg-country="IN" tvg-language="Bengali" group-title="Review",Bangla Review\\nhttps://in.example/live\\n'
-            '#EXTINF:-1 tvg-id="unknown-review" tvg-country="ZZ" group-title="Review",Unknown Review\\nhttps://unknown.example/live\\n'
+            '#EXTM3U\n'
+            '#EXTINF:-1 tvg-id="bd-review" tvg-country="BD" group-title="Review",BD Review\nhttps://bd.example/live\n'
+            '#EXTINF:-1 tvg-id="in-bn-review" tvg-country="IN" tvg-language="Bengali" group-title="Review",Bangla Review\nhttps://in.example/live\n'
+            '#EXTINF:-1 tvg-id="unknown-review" tvg-country="ZZ" group-title="Review",Unknown Review\nhttps://unknown.example/live\n'
         )
         targets = derive_primary_stream_targets(text)
         self.assertEqual(
