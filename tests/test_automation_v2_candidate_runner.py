@@ -129,5 +129,54 @@ class CandidateBundleRunnerTests(unittest.TestCase):
                 run_candidate_bundle(root, date(2026, 11, 13), "c" * 40, MemoryStore())
 
 
+    def test_probe_ledger_is_checkpointed_before_epg_failure(self):
+        temp, root = self.make_root()
+        self.addCleanup(temp.cleanup)
+        store = MemoryStore()
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), publish=False)
+        ledger = {
+            "schema_version": 1,
+            "timezone": "Asia/Dhaka",
+            "channels": {
+                "probe-id": [{
+                    "day": "2026-11-13",
+                    "status_code": 404,
+                    "network_error": False,
+                    "auth_error": False,
+                    "rate_limited": False,
+                    "geo_blocked": False,
+                    "stream_state": "dead",
+                    "reason": "not found",
+                }]
+            },
+        }
+        maintenance = SimpleNamespace(
+            candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0),
+            ledger_json=__import__("json").dumps(ledger),
+            probed_count=1, reused_count=0, publish=False,
+        )
+        international = SimpleNamespace(maintenance=maintenance, publish=False)
+        rejected_epg = SimpleNamespace(
+            xml_text="<tv/>",
+            decision=SimpleNamespace(accepted=False, errors=("coverage regression",)),
+            publish=False,
+        )
+        with (
+            patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv),
+            patch("automation.core.v2_candidate_runner.derive_primary_stream_targets", return_value=[]),
+            patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=international),
+            patch("automation.core.v2_candidate_runner.assert_international_existing_rows_preserved"),
+            patch("automation.core.v2_candidate_runner.build_epg_source_candidate", return_value="<tv/>"),
+            patch("automation.core.v2_candidate_runner.build_epg_candidate", return_value=rejected_epg),
+        ):
+            with self.assertRaisesRegex(ValueError, "coverage regression"):
+                run_candidate_bundle(root, date(2026, 11, 13), "c" * 40, store)
+
+        self.assertEqual(
+            store.state["international_probe_ledger"]["channels"]["probe-id"][0]["status_code"],
+            404,
+        )
+        self.assertEqual(store.state["run_ledger"]["entries"][0]["status"], "failed")
+
 if __name__ == "__main__":
     unittest.main()
