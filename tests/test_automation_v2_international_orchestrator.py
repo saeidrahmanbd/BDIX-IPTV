@@ -74,7 +74,24 @@ class InternationalOrchestratorTests(unittest.TestCase):
             '#EXTINF:-1 group-title="Nepal",Missing ID\nhttps://six.example/live\n'
         )
         targets = derive_primary_stream_targets(text)
-        self.assertEqual([(item.identity,item.row_index) for item in targets], [("primary",0)])
+        self.assertEqual(
+            [(item.identity,item.row_index,item.primary_group,item.verified_stream_role) for item in targets],
+            [("primary",0,"Nepal","primary"),("review",4,None,None)],
+        )
+
+
+    def test_review_destination_uses_only_explicit_country_and_language_metadata(self):
+        text = (
+            '#EXTM3U\\n'
+            '#EXTINF:-1 tvg-id="bd-review" tvg-country="BD" group-title="Review",BD Review\\nhttps://bd.example/live\\n'
+            '#EXTINF:-1 tvg-id="in-bn-review" tvg-country="IN" tvg-language="Bengali" group-title="Review",Bangla Review\\nhttps://in.example/live\\n'
+            '#EXTINF:-1 tvg-id="unknown-review" tvg-country="ZZ" group-title="Review",Unknown Review\\nhttps://unknown.example/live\\n'
+        )
+        targets = derive_primary_stream_targets(text)
+        self.assertEqual(
+            [(item.primary_group,item.verified_stream_role) for item in targets],
+            [("Bangladesh","primary"),("Indian Bangla","primary"),(None,None)],
+        )
 
 if __name__=="__main__":
     unittest.main()
