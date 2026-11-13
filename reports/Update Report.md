@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-11-13 07:26 UTC**_
+_Last generated: **2026-11-13 07:28 UTC**_
 
 Source playlist SHA-256: **b2d641cfb05c47f5ab58b602feac8b88d5daaa6c520470b8609f5d59b6ea8d5c**
 
@@ -16,12 +16,12 @@ Source playlist SHA-256: **b2d641cfb05c47f5ab58b602feac8b88d5daaa6c520470b8609f5
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
 | Stream Health Tested | **1280** |
-| Stream Health Failures | **198** |
-| Persistent Failures | **196** |
+| Stream Health Failures | **200** |
+| Persistent Failures | **197** |
 | Near-Duplicate URL Families | **1** |
 | Audit Blocking Issues | **107** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-11-13T07:25:15+00:00** |
+| Pre-Publish Gate Generated | **2026-11-13T07:27:12+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
@@ -62,14 +62,14 @@ Source playlist SHA-256: **b2d641cfb05c47f5ab58b602feac8b88d5daaa6c520470b8609f5
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-13T07:25:15.048522+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-13T07:27:11.864904+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-13T01:32:49+00:00** | **PENDING — guide missing or freshness not PASS** |
-| Stream health | **2026-11-13T07:26:05+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-13T07:25:15+00:00** | **CURRENT** |
+| Stream health | **2026-11-13T07:28:05+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-13T07:27:12+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
 - Latest entries change: **1280 → 1280**
-- Latest health failures: **209 → 198**
+- Latest health failures: **198 → 200**
 
 Historical records are retained in reports/maintenance-history.json.
