@@ -1,0 +1,27 @@
+{
+  "policy_version": 1,
+  "timezone": "Asia/Dhaka",
+  "playlists": {
+    "IPTV-Playlist.m3u": {
+      "owner": "owner_curated",
+      "mutation_mode": "append_only_for_existing_streams",
+      "existing_rows": {"stream_urls":"immutable","group_title":"immutable","channel_number":"immutable","relative_order":"immutable","deletion":"forbidden","url_replacement":"forbidden"},
+      "allowed_changes": ["evidence_based_metadata_repair","authentic_local_logo_repair","append_discovery_to_manual_queues"],
+      "manual_queues": ["New Channels","New Backups"],
+      "owner_controlled_queues": ["Backup","Review","New Channels","New Backups"],
+      "discovery": {"countries":["BD","IN"],"uncertain_country_or_logo":"warning_only","queue_visibility_in_xtream":false},
+      "stream_failure_action": "diagnostic_only",
+      "existing_row_promotion_or_demotion": "forbidden"
+    },
+    "International-Playlist.m3u": {
+      "owner": "automation_controlled",
+      "failure_policy": {"timezone":"Asia/Dhaka","consecutive_definitive_failed_days_before_removal":3,"first_definitive_failed_day_group":"Review","missed_day_resets_streak":true,"inconclusive_resets_streak":true,"definitive_http_statuses":[404,410],"inconclusive_http_statuses":"all_other_http_errors","network_auth_rate_limit_geo_block_or_global_incident":"never_authorizes_removal"},
+      "country_groups": {"minimum_unique_primary_identities":5,"fixed_groups":["Bangladesh","India"],"backup_review_and_discovery_rows_count":false},
+      "review_recovery": {"working_eligible_primary":"primary_group","working_alternate_when_primary_exists":"Backup","ineligible_or_unclassified":"Review"},
+      "manual_queues": ["New Channels","New Backups"],
+      "queue_visibility_in_xtream": false,
+      "logo_policy": "authentic_repository_local_only"
+    }
+  },
+  "shared": {"writer_model":"single_serialized_transactional_publisher","candidate_outputs_only_until_all_gates_pass":true,"epg_publication":"candidate_validate_then_atomic_last_known_good","reporting":"read_only_of_published_snapshots","rollback":"revert_or_atomic_ref_rollback_never_force_push","discovery_metadata_and_logo_uncertainty":"warning_only","new_channels_and_new_backups_xtream_visible":false}
+}
