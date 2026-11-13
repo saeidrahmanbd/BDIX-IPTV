@@ -8,6 +8,14 @@ on:
       - 'tests/**'
       - 'automation/**'
       - '.github/workflows/automation-v2-legacy-audit.yml'
+  pull_request:
+    branches:
+      - main
+      - automation-v2/**
+    paths:
+      - 'tests/**'
+      - 'automation/**'
+      - '.github/workflows/automation-v2-legacy-audit.yml'
   workflow_dispatch:
 
 permissions:
