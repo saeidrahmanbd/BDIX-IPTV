@@ -29,7 +29,7 @@ WORKERS = 48
 TIMEOUT = 8
 RETRIES = 2
 READ_BYTES = 8192
-INCONCLUSIVE_HTTP = {401, 403, 407, 429, 451}
+INCONCLUSIVE_HTTP = {401, 403, 407, 408, 425, 429, 451} | set(range(500, 600))
 SECRET_QUERY = {
     "token", "access_token", "refresh_token", "sig", "signature", "jwt",
     "session", "key", "api_key", "apikey", "authorization", "auth",
@@ -174,7 +174,7 @@ def probe_resource(url, headers, depth=0):
     if r["kind"] == "http":
         return {"state": http_state(r["status"]), "status": r["status"], "reason": f"HTTP {r['status']}", "type": r["type"], "bytes": 0}
     if r["kind"] == "network":
-        return {"state": "fail", "status": 0, "reason": r.get("error", "Network"), "type": "", "bytes": 0}
+        return {"state": "inconclusive", "status": 0, "reason": r.get("error", "Network"), "type": "", "bytes": 0}
     status, data, ctype = r["status"], r["data"], (r["type"] or "").casefold()
     if status >= 400:
         return {"state": http_state(status), "status": status, "reason": f"HTTP {status}", "type": ctype, "bytes": len(data)}
