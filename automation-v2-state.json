@@ -25552,7 +25552,7 @@
         "engine": "bundle",
         "idempotency_key": "75c4f276a17941826bb21a7ed668e0c570f807b36086a771909572c5af5f9fca",
         "started_at": "2026-11-13T23:02:35.669549+06:00",
-        "status": "running"
+        "status": "succeeded"
       },
       {
         "attempt": 1,
