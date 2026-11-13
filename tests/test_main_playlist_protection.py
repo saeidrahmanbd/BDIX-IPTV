@@ -57,7 +57,7 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             [("Indian Movies", "A", "https://a", "1", "a.us")],
         )
 
-    def test_exact_url_approved_queue_migration_is_allowed(self):
+    def test_exact_url_approval_cannot_promote_existing_queue_row(self):
         with tempfile.TemporaryDirectory() as directory:
             playlist = Path(directory) / "IPTV-Playlist.m3u"
             state = Path(directory) / "state.json"
@@ -70,7 +70,9 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             }]), encoding="utf-8")
             self.write(playlist, [("Indian Movies", "Movies Now", "https://a", "1", "moviesnow.in")])
             with patch.object(guard, "OWNER_APPROVALS", approvals):
-                guard.verify(playlist, state)
+                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+                    with self.assertRaises(SystemExit):
+                        guard.verify(playlist, state)
 
     def test_review_cannot_be_promoted_by_cleanup(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -113,11 +115,10 @@ class MainPlaylistProtectionTests(unittest.TestCase):
              ("Bangladesh", "B metadata fixed", "https://b", "", "b.bd")],
         )
 
-    def test_owner_approved_migration_can_reassemble_groups_and_fill_only_missing_numbers(self):
+    def test_stale_owner_migration_authorization_cannot_reassemble_or_renumber(self):
         with tempfile.TemporaryDirectory() as directory:
             playlist = Path(directory) / "IPTV-Playlist.m3u"
             state = Path(directory) / "state.json"
-            approvals = Path(directory) / "approvals.json"
             authorization = Path(directory) / "owner-authorized"
             authorization.touch()
             self.write(
@@ -126,14 +127,15 @@ class MainPlaylistProtectionTests(unittest.TestCase):
                  ("Bangladesh", "A", "https://a", "", "a.bd")],
             )
             guard.snapshot(playlist, state)
-            approvals.write_text("[]", encoding="utf-8")
             self.write(
                 playlist,
                 [("Bangladesh", "A", "https://a", "1", "a.bd"),
                  ("Indian Movies", "B", "https://b", "23", "b.in")],
             )
-            with patch.object(guard, "OWNER_APPROVALS", approvals), patch.object(guard, "OWNER_MIGRATION_AUTHORIZED", authorization):
-                guard.verify(playlist, state)
+            with patch.object(guard, "OWNER_MIGRATION_AUTHORIZED", authorization):
+                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+                    with self.assertRaises(SystemExit):
+                        guard.verify(playlist, state)
 
     def test_owner_migration_cannot_renumber_existing_primary_channels(self):
         with tempfile.TemporaryDirectory() as directory:
