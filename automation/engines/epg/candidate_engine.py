@@ -20,8 +20,80 @@ def build_epg_candidate(playlist_text: str, last_known_good_xml: str,
     aliases=approved_aliases or []
     if aliases:
         candidate=apply_approved_aliases(playlist_text,candidate,aliases)
+    candidate=preserve_missing_fresh_schedules(
+        playlist_text,last_known_good_xml,candidate,as_of
+    )
     decision=evaluate_candidate(last_known_good_xml,candidate,playlist_text,as_of)
     return EpgCandidate(candidate,decision,False)
+
+
+def preserve_missing_fresh_schedules(playlist_text: str, baseline_xml: str,
+                                     candidate_xml: str,
+                                     as_of: datetime | None = None) -> str:
+    """Restore missing active-channel metadata and still-valid baseline programmes."""
+    import copy
+    import xml.etree.ElementTree as ET
+    from datetime import timezone
+    from zoneinfo import ZoneInfo
+    from automation.core.playlist_contract import parse_rows, ATTR_RE
+    from automation.engines.epg.freshness import _parse_xmltv_datetime
+
+    if as_of is None:
+        as_of = datetime.now(ZoneInfo("Asia/Dhaka"))
+    if as_of.tzinfo is None:
+        raise ValueError("as_of must be timezone-aware")
+    as_of_utc = as_of.astimezone(timezone.utc)
+    inactive_groups = {
+        "backup", "review", "test", "not playing",
+        "new channels", "new backups", "new backup",
+    }
+    active_ids = set()
+    for row in parse_rows(playlist_text):
+        attrs = dict(ATTR_RE.findall(row.extinf))
+        channel_id = attrs.get("tvg-id", "").strip()
+        group = attrs.get("group-title", "").strip().casefold()
+        if channel_id and group not in inactive_groups:
+            active_ids.add(channel_id)
+    if not active_ids:
+        raise ValueError("playlist contains no active EPG channel IDs")
+
+    baseline_root = ET.fromstring(baseline_xml)
+    candidate_root = ET.fromstring(candidate_xml)
+    candidate_channels = {(node.get("id") or "").strip()
+                          for node in candidate_root.findall("channel")}
+    candidate_scheduled = set()
+    for node in candidate_root.findall("programme"):
+        channel_id = (node.get("channel") or "").strip()
+        stop = _parse_xmltv_datetime(node.get("stop") or "")
+        if channel_id in active_ids and stop > as_of_utc:
+            candidate_scheduled.add(channel_id)
+
+    restored_channels = 0
+    for node in baseline_root.findall("channel"):
+        channel_id = (node.get("id") or "").strip()
+        if channel_id in active_ids and channel_id not in candidate_channels:
+            candidate_root.append(copy.deepcopy(node))
+            candidate_channels.add(channel_id)
+            restored_channels += 1
+
+    restored_programmes = 0
+    for node in baseline_root.findall("programme"):
+        channel_id = (node.get("channel") or "").strip()
+        if channel_id not in active_ids or channel_id in candidate_scheduled:
+            continue
+        stop = _parse_xmltv_datetime(node.get("stop") or "")
+        if stop > as_of_utc:
+            candidate_root.append(copy.deepcopy(node))
+            restored_programmes += 1
+
+    if restored_channels or restored_programmes:
+        print(
+            "EPG fallback: restored "
+            f"{restored_channels} active channel definitions and "
+            f"{restored_programmes} still-current/future baseline programmes.",
+            flush=True,
+        )
+    return ET.tostring(candidate_root, encoding="unicode")
 
 
 
