@@ -93,5 +93,16 @@ class InternationalOrchestratorTests(unittest.TestCase):
             [("Bangladesh","primary"),("Indian Bangla","primary"),(None,None)],
         )
 
+
+    @patch("automation.engines.international.monitor.probe_stream")
+    def test_verified_review_channel_returns_to_metadata_supported_primary_group(self,mock):
+        review=PLAYLIST.replace('group-title="Nepal"','group-title="Review"')
+        mock.return_value=Probe(DAY,200,stream_state="verified")
+        result=run_international_candidate(
+            review,None,[StreamTarget(0,"a","https://a.example/live","Bangladesh","primary")],DAY
+        )
+        self.assertIn('group-title="Bangladesh"',result.candidate.text)
+        self.assertNotIn('group-title="Review"',result.candidate.text)
+
 if __name__=="__main__":
     unittest.main()
