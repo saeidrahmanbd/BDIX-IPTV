@@ -23,7 +23,9 @@ def probe_and_record(ledger_text: str | None, identity: str, url: str,
     ledger=parse_ledger(ledger_text)
     existing=probes_for(ledger,key)
     if any(item.day == today for item in existing):
-        raise ValueError("channel already has a probe observation for today")
+        latest=next(item for item in reversed(existing) if item.day == today)
+        streak=consecutive_definitive_failure_days(list(existing),today)
+        return ObservationResult(key,latest.status_code,streak,ledger_text or "",True)
     observation=probe_stream(url,today,timeout)
     updated=record_probe(ledger_text,key,observation)
     streak=consecutive_definitive_failure_days(list(probes_for(parse_ledger(updated),key)),today)
