@@ -142,6 +142,7 @@ def reserve_remote_run(store: GitHubStateStore, request, active_transaction_id: 
         request.baseline_commit.lower(),
         "running",
         decision.attempt,
+        request.requested_at or datetime.now(ZoneInfo(TIMEZONE)),
     ))
     updated = dict(snapshot.state)
     updated["run_ledger"] = json.loads(serialize_run_ledger(entries))
