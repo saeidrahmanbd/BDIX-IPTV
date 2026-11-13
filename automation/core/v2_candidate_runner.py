@@ -63,8 +63,14 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
 
     def operation():
         # Read the current remote state only after the bundle reservation is held.
+        print("V2 bundle: reservation acquired; production baselines captured.", flush=True)
         snapshot = store.load()
         iptv_run = run_iptv_discovery(iptv_baseline, root, today)
+        print(
+            f"V2 bundle: IPTV candidate ready ({iptv_run.candidate.candidate_rows} rows; "
+            f"{len(iptv_run.source_warnings)} source warnings).",
+            flush=True,
+        )
         iptv_candidate = iptv_run.candidate.text
         if iptv_run.publish:
             raise RuntimeError("IPTV candidate engine unexpectedly enabled publication")
@@ -81,6 +87,11 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
             timeout=probe_timeout_seconds,
         )
         international_candidate = intl_run.maintenance.candidate.text
+        print(
+            f"V2 bundle: International candidate ready ({intl_run.maintenance.candidate.candidate_rows} rows; "
+            f"{intl_run.maintenance.probed_count} probed; {intl_run.maintenance.reused_count} reused).",
+            flush=True,
+        )
         if intl_run.publish or intl_run.maintenance.publish:
             raise RuntimeError("International candidate engine unexpectedly enabled publication")
         parse_rows(international_candidate)
@@ -92,13 +103,16 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
         updated_state = dict(snapshot.state)
         updated_state["international_probe_ledger"] = parse_ledger(intl_run.maintenance.ledger_json)
         store.save(updated_state, snapshot.blob_sha)
+        print("V2 bundle: International probe history checkpointed to durable state.", flush=True)
 
+        print("V2 bundle: starting isolated EPG source acquisition.", flush=True)
         source_candidate = build_epg_source_candidate(
             root,
             timeout_seconds=epg_timeout_seconds,
             iptv_playlist_text=iptv_candidate,
             international_playlist_text=international_candidate,
         )
+        print(f"V2 bundle: EPG source candidate acquired ({len(source_candidate.encode('utf-8'))} bytes).", flush=True)
         active_candidate_playlists = iptv_candidate + "\n" + international_candidate
         epg_run = build_epg_candidate(
             active_candidate_playlists,
@@ -111,6 +125,7 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
             raise ValueError("EPG candidate rejected: " + "; ".join(epg_run.decision.errors))
         if epg_run.publish:
             raise RuntimeError("EPG candidate engine unexpectedly enabled publication")
+        print("V2 bundle: EPG candidate passed validation and coverage gates.", flush=True)
 
         contents = {
             "IPTV-Playlist.m3u": iptv_candidate,
@@ -169,6 +184,7 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
             if metadata.get("candidate_fingerprints") != expected or metadata.get("baseline_commit") != baseline_commit:
                 raise RuntimeError("existing staged transaction does not match this candidate bundle")
 
+        print(f"V2 bundle: all candidates staged for owner review ({transaction_id}); publish=false.", flush=True)
         return CandidateBundleResult(
             transaction_id=transaction_id,
             transaction_path=str(staged_path),
