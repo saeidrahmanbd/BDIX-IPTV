@@ -43,6 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           AUTOMATION_V2_STATE_BRANCH: automation-v2-state
+          AUTOMATION_V2_REQUIRE_REMOTE_HEAD_CHECK: "1"
         run: >-
           python scripts/run_automation_v2_candidate_bundle.py
           --baseline-commit "${{ github.sha }}"
