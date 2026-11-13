@@ -37,6 +37,11 @@ class InternationalFailurePolicyTests(unittest.TestCase):
         probes=[Probe(today,404),Probe(today-timedelta(days=2),404)]
         self.assertEqual(consecutive_definitive_failure_days(probes,today),1)
 
+    def test_ambiguous_duplicate_day_resets_streak(self):
+        today=date(2026,11,13)
+        probes=[Probe(today,404),Probe(today,410),Probe(today-timedelta(days=1),404)]
+        self.assertEqual(consecutive_definitive_failure_days(probes,today),0)
+
     def test_inconclusive_day_resets_streak(self):
         today=date(2026,11,13)
         probes=[Probe(today,404),Probe(today-timedelta(days=1),403),Probe(today-timedelta(days=2),404)]
