@@ -1,4 +1,4 @@
-"""Pure International lifecycle planner. It emits group-only candidate changes and owner-review items."""
+"""Pure International lifecycle planner. It emits group changes and policy-authorized three-day removals."""
 from __future__ import annotations
 from dataclasses import dataclass
 from datetime import date
