@@ -65,12 +65,12 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: ${{ github.event.pull_request.base.sha }}
-          path: ${{ runner.temp }}/automation-v2-production-baseline
+          path: automation-v2-production-baseline
           persist-credentials: false
       - name: Run immutable production baseline dry run
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            python scripts/run_automation_v2_dry_run.py --root "${{ runner.temp }}/automation-v2-production-baseline" --output reports/automation-v2/baseline-dry-run.json
+            python scripts/run_automation_v2_dry_run.py --root "${{ github.workspace }}/automation-v2-production-baseline" --output reports/automation-v2/baseline-dry-run.json
           else
             python scripts/run_automation_v2_dry_run.py --output reports/automation-v2/baseline-dry-run.json
           fi
