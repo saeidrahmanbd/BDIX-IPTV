@@ -2,14 +2,14 @@
   "audit_date": "2026-11-13",
   "repository": "saeidrahmanbd/BDIX-IPTV",
   "production_branch": "main",
-  "baseline_commit": "46275f5ebafa2ae1b56f3e480f684ac1e85ae45e",
+  "baseline_commit": "aec37357dfbb47f0792682af744ccaf111416d7a",
   "audit_branch": "automation-v2/inventory-audit",
-  "recursive_tree_entries": 5633,
+  "recursive_tree_entries": 5652,
   "recursive_tree_truncated": false,
   "counts": {
-    "workflows": 17,
+    "workflows": 18,
     "scripts": 79,
-    "tests": 50,
+    "tests": 51,
     "logo_files": 5372,
     "reports": 44,
     "epg_files": 3
@@ -20,7 +20,7 @@
       "bytes": 445629
     },
     "International-Playlist.m3u": {
-      "sha": "c49c650d4e445620ae5fb91627eaa7f481ccea38",
+      "sha": "f98c433afa7df88b9345a7191e58ea83f833d1b9",
       "bytes": 987933
     },
     "epg/epg.xml": {
@@ -54,5 +54,16 @@
       "Thikana TV"
     ]
   },
-  "production_mutations": false
+  "production_mutations": false,
+  "latest_verified_validation": {
+    "branch_ci_run": 43414367810,
+    "legacy_regression_run": 43414292444,
+    "branch_ci_commit": "414e29644efd846ac045beba08e8de4d3526f400",
+    "legacy_regression_commit": "4c66cd6e5e4822633b3f9a8fcc20710fdb2216fe",
+    "branch_ci_tests": 223,
+    "legacy_regression_tests": 754,
+    "branch_ci": "success",
+    "legacy_regression": "success",
+    "baseline_dry_run": "success"
+  }
 }

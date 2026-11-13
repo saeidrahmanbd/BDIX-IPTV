@@ -1,0 +1,60 @@
+name: Automation V2 Legacy Regression Audit
+
+on:
+  push:
+    branches:
+      - automation-v2/**
+    paths:
+      - 'tests/**'
+      - 'automation/**'
+      - '.github/workflows/automation-v2-legacy-audit.yml'
+  pull_request:
+    branches:
+      - main
+      - automation-v2/**
+    paths:
+      - 'tests/**'
+      - 'automation/**'
+      - '.github/workflows/automation-v2-legacy-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: automation-v2-legacy-audit-${{ github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  legacy-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Install repository-declared test dependencies
+        run: python -m pip install --disable-pip-version-check -r docs/requirements.txt
+      - name: Run complete repository unittest suite
+        id: legacy-tests
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python -m unittest discover -s tests -p 'test_*.py' -v 2>&1 | tee legacy-test-results.txt
+      - name: Upload full legacy test results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: automation-v2-legacy-test-results
+          path: legacy-test-results.txt
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Report legacy test outcome
+        if: steps.legacy-tests.outcome == 'failure'
+        run: |
+          echo "Legacy regression suite has failures. This audit is diagnostic; production workflows and playlists were not changed."
+          exit 1

@@ -2,63 +2,65 @@
 
 **Audit date:** 2026-11-13  
 **Baseline branch:** `main`  
-**Baseline commit:** `46275f5ebafa2ae1b56f3e480f684ac1e85ae45e`  
+**Baseline commit:** `aec37357dfbb47f0792682af744ccaf111416d7a`  
 **Audit branch:** `automation-v2/inventory-audit`  
-**Production mutation status:** NONE. This audit branch is a snapshot plus audit documentation only.
+**Production mutation status:** NONE. V2 implementation and tests are isolated on the audit branch; production playlists, logos, EPG and legacy workflows remain untouched by V2.
 
 ## 1. Preservation and rollback boundary
 
-The audit branch was created from the exact production main commit above. That Git commit preserves the complete repository tree, including both production M3U playlists, all logo assets, the EPG guide, source registers, reports, scripts, tests, site files, and Workers. No production playlist, logo, EPG file, workflow, or main-branch ref was changed for this audit.
+The baseline is pinned to the exact current production main commit above. The audit branch includes subsequent branch-only V2 implementation commits. No production playlist, logo, EPG file, legacy workflow, or main-branch ref has been changed by V2 work.
 
 Key immutable baseline blob IDs:
 - `IPTV-Playlist.m3u`: `eb46b5ef4ddfde11a010389d1f0202a7bd418b0a` (445,629 bytes)
-- `International-Playlist.m3u`: `c49c650d4e445620ae5fb91627eaa7f481ccea38` (987,933 bytes)
+- `International-Playlist.m3u`: `f98c433afa7df88b9345a7191e58ea83f833d1b9` (987,933 bytes)
 - `epg/epg.xml`: `b28414c75937bd155067c6db5e6e2083ee4004b4` (30,944,668 bytes)
 - `README.md`: `95c17697b536218d30c6f1eb3dcf5be8aa0cc93d`
 
-The branch's common ancestor is the baseline main commit. Rollback is by returning to the untouched main ref; no destructive cleanup has been performed.
+The audit branch is compared against current main before migration; baseline fingerprints are independently pinned to the production commit. Rollback remains a safe ref/revert operation; no destructive cleanup has been performed.
 
 ## 2. Repository inventory
 
-The recursive Git tree is complete (GitHub reported `truncated=false`): 5,633 tree entries.
+The recursive Git tree is complete (GitHub reported `truncated=false`): 5,652 tree entries.
 
 | Area | Files | Bytes |
 |---|---:|---:|
 | Root | 5 | 1,449,106 |
-| .github | 18 | 118,419 |
+| .github | 19 | 119,769 |
 | analytics | 4 | 13,499 |
 | assets | 10 | 1,138,255 |
-| docs | 25 | 137,038 |
+| automation | 5 | 10,893 |
+| docs | 32 | 956,487 |
 | epg | 3 | 30,985,548 |
 | logos | 5,372 | 306,093,613 |
 | maintenance | 1 | 2,897 |
-| reports | 44 | 5,946,938 |
+| reports | 44 | 5,954,444 |
 | scripts | 79 | 1,078,245 |
-| tests | 50 | 449,513 |
+| tests | 51 | 455,113 |
 | xtream-main | 2 | 9,299 |
 | xtream | 1 | 4,078 |
 
-There are 17 GitHub Actions workflow files (118,015 bytes), 79 Python scripts, 50 test files, and 5,372 logo files. The largest repository payload is the logo directory (about 306 MB), not the workflow source.
+There are 18 GitHub Actions workflow files (119,365 bytes), 79 Python scripts, 51 test files, and 5,372 logo files. The largest repository payload is the logo directory (about 306 MB), not the workflow source.
 
 ### Workflow inventory
 
-1. `changelog.yml`
-2. `check-xtream.yml`
-3. `deploy-analytics.yml`
-4. `deploy-xtream.yml`
-5. `discovery-schedule-watchdog.yml`
-6. `epg-bangladesh-source-probe.yml`
-7. `epg-external-source-probe.yml`
-8. `epg-refresh.yml`
-9. `indexnow.yml`
-10. `international-channel-discovery.yml`
-11. `international-stream-health.yml`
-12. `iptv-maintenance.yml`
-13. `logo-localization.yml`
-14. `new-channel-discovery.yml`
-15. `playlist-logo-localization.yml`
-16. `seo-validation.yml`
-17. `test-suite.yml`
+1. `automation-v2-ci.yml`
+2. `changelog.yml`
+3. `check-xtream.yml`
+4. `deploy-analytics.yml`
+5. `deploy-xtream.yml`
+6. `discovery-schedule-watchdog.yml`
+7. `epg-bangladesh-source-probe.yml`
+8. `epg-external-source-probe.yml`
+9. `epg-refresh.yml`
+10. `indexnow.yml`
+11. `international-channel-discovery.yml`
+12. `international-stream-health.yml`
+13. `iptv-maintenance.yml`
+14. `logo-localization.yml`
+15. `new-channel-discovery.yml`
+16. `playlist-logo-localization.yml`
+17. `seo-validation.yml`
+18. `test-suite.yml`
 
 ## 3. Recent Actions evidence
 
@@ -164,3 +166,52 @@ V2 should promote these requirements into a machine-readable central policy and 
 ## 7. Phase 2 progress\n\nThe branch now contains a central JSON policy, a JSON Schema, a dependency-free policy conformance validator, a pure IPTV existing-row preservation contract, a manual-queue visibility guard, 10 focused contract tests, and a read-only branch-only CI workflow. The local contract test run passed all 10 tests. GitHub Actions status for the new branch CI has not yet been independently observed through the available GitHub interface. A further side-effect audit identified nested subprocess calls and a hidden git-staging side effect in the logo provenance manifest generator; see RUNTIME-SIDE-EFFECT-AUDIT.md.\n\n## 8. Safety gate
 
 No file in the production playlist, logo, EPG, or live workflow areas has been edited by this audit. This branch currently exists only to hold the audit baseline and this documentation. Do not merge or promote it to production until the migration tests, dry-run invariants, and publication rollback checks pass.
+
+
+## 9. Automation V2 implementation progress (branch-only)
+
+- Central JSON policy and JSON Schema added.
+- Read-only parser and IPTV existing-row preservation contract added.
+- Candidate validation explicitly reports `publish=false`; International currently reports `PARSE_ONLY` until its full invariants are implemented.
+- Candidate manifest path allowlists added to prevent cross-playlist engine writes.
+- International stream-failure lifecycle primitive added: only definitive 404/410, first/second day Review, third consecutive day eligible for a separate removal review.
+- International country-group threshold primitive added: five unique primary identities; fixed Bangladesh and India groups.
+- Conservative logo reference inventory added: 5,366 image files, 2,395 exact playlist references, 2,971 apparent non-references from playlist-only matching. These are not approved for deletion.
+- Repository-wide explicit logo reference scanner added. It is report-only and never deletes assets.
+- Branch CI expanded to include all `test_automation_v2_*.py` tests and the logo scanner.
+- The GitHub connector currently returns no workflow run or status records for the latest branch commit, so CI execution has not been independently confirmed. The new tests must be treated as pending until an actual Actions result is observed.
+- Production playlist, EPG and legacy workflow blob SHAs were rechecked against `main` and remain identical to the baseline.
+
+## 10. Remaining before migration can be called test-passed
+
+1. Confirm and repair any CI failures; run all V2 tests and all applicable legacy tests.
+2. Build complete candidate-only IPTV and International orchestration engines.
+3. Port stream identity, logo, discovery and EPG behaviors behind explicit contracts.
+4. Run repository-wide logo reference scan on a checked-out baseline; inspect dynamic references and duplicates.
+5. Generate dry-run candidates from immutable baseline files and validate all invariants.
+6. Test stale baseline rejection, concurrent-run locking, partial failure, rollback and last-known-good EPG.
+7. Only then prepare a draft PR and owner-reviewed cutover plan.
+
+
+## 11. Updated V2 verification status (2026-11-13)
+
+This section supersedes the early Phase 2 progress notes above.
+
+- Latest verified V2 branch CI: run 43409563969, commit 568177d9a87a1a693a52a7d7722cf1391689c0f8 — 168 V2 tests passed; policy conformance, immutable baseline dry run, and repository-wide logo audit all passed.
+- Latest full repository regression: 699 tests passed on the same commit.
+- The all-engine baseline dry run exercised the IPTV, International and EPG candidate engines using immutable production copies. All four engine checks were accepted (IPTV, International, EPG/IPTV and EPG/International); candidate playlist rows remained 1,280 and 3,120 respectively; EPG and playlist candidate changes were zero; publish=false; production_files_modified=false.
+- Baseline EPG measurement: IPTV 776 active IDs / 411 mapped / 363 scheduled / 321 with current or future schedules; International 2,684 active IDs / 662 mapped / 586 scheduled / 541 with current or future schedules.
+- Alias review: 19 IPTV and 60 International suggestions, plus 14 ambiguous cases. Suggestions are manual-review-only; no alias was applied.
+- Logo audit: 5,366 images; 2,395 playlist-referenced assets; 2,691 runtime-referenced assets; 2,675 without explicit runtime-source references; 718 exact duplicate groups; 75 missing runtime-source targets. Zero missing targets are directly referenced by either production playlist. No logos were deleted, moved or quarantined.
+- V2 now includes candidate-only IPTV metadata/discovery, International stream probe/ledger/lifecycle, EPG candidate/approved-alias, run-ledger, transaction-gate and atomic candidate-bundle components.
+- Still not implemented: production Git publisher, full discovery-source integration, complete legacy workflow retirement/replacement, exhaustive dynamic side-effect tracing, failure-injection/rollback testing, and production cutover.
+- Production playlists, EPG and legacy workflows remain unchanged. No V2 production publishing is enabled.
+
+
+## 12. Latest hardening verification (2026-11-13)
+
+- Full repository regression: **707 tests passed** on commit f4af3fe24e8cef5192c13c31e425d9a660f3878a.
+- The latest additions cover idempotent daily International probes, malformed URL handling as inconclusive, batch lifecycle orchestration, row-index/tvg-id identity binding, symlink-safe transaction locks and candidate staging.
+- V2 contract CI for this latest hardening commit is queued; the preceding V2 CI run passed 168 focused tests, policy checks, all-engine immutable baseline dry run and logo audit.
+- The successful all-engine baseline dry run accepted IPTV, International and both EPG candidates without changes; candidate playlist changes=0, EPG changes=0, publish=false and production_files_modified=false.
+- The legacy workflow retirement map is documented in LEGACY-WORKFLOW-RETIREMENT-MAP.md. No legacy workflow has been disabled or replaced on main.

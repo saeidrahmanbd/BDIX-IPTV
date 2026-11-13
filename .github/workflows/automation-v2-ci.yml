@@ -6,23 +6,36 @@ on:
       - automation-v2/**
     paths:
       - 'automation/**'
-      - 'tests/test_automation_v2_contract.py'
+      - 'IPTV-Playlist.m3u'
+      - 'International-Playlist.m3u'
+      - 'epg/epg.xml'
+      - 'logos/**'
+      - 'tests/test_automation_v2_*.py'
+      - 'scripts/audit_logo_references.py'
+      - 'scripts/run_automation_v2_dry_run.py'
       - '.github/workflows/automation-v2-ci.yml'
   pull_request:
     branches:
+      - main
       - automation-v2/**
     paths:
       - 'automation/**'
-      - 'tests/test_automation_v2_contract.py'
+      - 'tests/test_automation_v2_*.py'
+      - 'scripts/audit_logo_references.py'
+      - 'scripts/run_automation_v2_dry_run.py'
       - '.github/workflows/automation-v2-ci.yml'
+      - 'IPTV-Playlist.m3u'
+      - 'International-Playlist.m3u'
+      - 'epg/epg.xml'
+      - 'logos/**'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: automation-v2-ci-${{ github.ref }}
-  cancel-in-progress: true
+  group: automation-v2-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   contract-tests:
@@ -43,4 +56,38 @@ jobs:
       - name: Run policy conformance gate
         run: python automation/validators/policy_conformance.py
       - name: Run V2 contract tests
-        run: python -m unittest discover -s tests -p 'test_automation_v2_contract.py' -v
+        run: python -m unittest discover -s tests -p 'test_automation_v2_*.py' -v
+      - name: Run immutable production baseline dry run
+        run: python scripts/run_automation_v2_dry_run.py --output reports/automation-v2/baseline-dry-run.json
+      - name: Upload baseline dry-run report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: automation-v2-baseline-dry-run
+          path: reports/automation-v2/baseline-dry-run.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Run conservative logo reference audit
+        run: python scripts/audit_logo_references.py --output reports/automation-v2/logo-reference-audit.json
+      - name: Upload logo audit report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: automation-v2-logo-reference-audit
+          path: reports/automation-v2/logo-reference-audit.json
+          if-no-files-found: error
+          retention-days: 14
+  production-pr-regression:
+    if: github.event_name == 'pull_request' && github.base_ref == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Install repository-declared test dependencies
+        run: python -m pip install --disable-pip-version-check -r docs/requirements.txt
+      - name: Run full production regression suite
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
