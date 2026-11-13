@@ -24,11 +24,11 @@ Replace overlapping automation with one policy source, isolated playlist engines
 | IPTV engine | Combined candidate engine applies evidence-approved local metadata/logo patches and appends discoveries to manual-review queues; no production I/O |
 | International engine | HTTP probe adapter, idempotent daily probe ledger, 404/410-only failure policy, verified recovery, five-identity grouping, row-identity-bound lifecycle planner, batch orchestrator and group-only candidate engine implemented |
 | EPG engine | XMLTV structural/timezone validation, coverage, schedule freshness, conservative alias suggestions, explicit-approved alias application and candidate regression gate implemented |
-| Run ledger | Idempotent run reservation model and Bangladesh-date International probe ledger implemented; durable orchestration/persistence still requires integration |
+| Run ledger | Idempotent run reservations, validated JSON serialization, Bangladesh-date probe ledger and locked atomic local persistence implemented; GitHub durable-state commit/recovery integration remains |
 | Transaction safety | Engine path allowlists, SHA-256 candidate evidence, stale-input checks, fail-closed gate, shared lock and atomic candidate-directory staging implemented; no production publisher |
 | Logo audit | Playlist/runtime/report references separated; exact duplicate hashes reported; no deletion, quarantine or move |
 | V2 CI | V2 CI passed 212 tests and the immutable baseline dry run on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8; latest verified branch CI commit 564139d881a4bd8b0115e25347a13dfcc7db8846 passed |
-| Legacy regression | Latest full repository regression run passed 743 tests on commit d2a14e92e46ee10f1f4df5c30a57efeb048c4bc3 |
+| Legacy regression | Latest full repository regression run passed 743 tests on commit 564139d881a4bd8b0115e25347a13dfcc7db8846 |
 | Real-baseline measurements | Exact production blob fingerprints verified; IPTV 1,280 rows; International 3,120 rows; EPG 30,944,668 bytes |
 | Workflow migration/cutover | Not started; all existing production workflows remain enabled and unchanged |
 
