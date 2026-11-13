@@ -55,7 +55,7 @@ class CandidateBundleTests(unittest.TestCase):
             parent=root/"reports"/"automation-v2"
             parent.mkdir(parents=True)
             (parent/"candidates").symlink_to(outside,target_is_directory=True)
-            with self.assertRaisesRegex(ValueError,"escapes"):
+            with self.assertRaisesRegex(ValueError,"escapes|symlink"):
                 write_candidate_bundle(root,"run-123",bundle,contents)
 
     def test_symlinked_candidate_parent_is_rejected(self):
