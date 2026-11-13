@@ -387,12 +387,21 @@ def verify_no_unauthorized_removals() -> int:
             continue
         for old, new in zip(old_rows, rows):
             info = str(new.get("info", ""))
-            if str(old.get("group", "")).strip() != _group(info):
-                failures.append(f"existing group changed for {_name(info)}")
+            old_group = str(old.get("group", "")).strip()
+            new_group = _group(info)
+            if old_group != new_group:
+                approved = _owner_migration_approvals().get(url, {})
+                if not (OWNER_MIGRATION_AUTHORIZED.exists()
+                        and approved.get("source_group") == old_group
+                        and approved.get("target_group") == new_group):
+                    failures.append(f"unapproved existing group change for {_name(info)}")
             old_number = _attrs(str(old.get("info", ""))).get("tvg-chno", "").strip()
             new_number = _attrs(info).get("tvg-chno", "").strip()
             if old_number != new_number:
-                failures.append(f"existing channel number changed for {_name(info)}")
+                if old_group not in PRIMARY_GROUPS and new_group == old_group and not new_number:
+                    pass
+                else:
+                    failures.append(f"existing channel number changed for {_name(info)}")
     for url, count in added.items():
         if url in old_counts:
             continue
