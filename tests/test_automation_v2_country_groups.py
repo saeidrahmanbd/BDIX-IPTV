@@ -31,5 +31,16 @@ class CountryGroupPolicyTests(unittest.TestCase):
         self.assertTrue(should_create_country_group("Bangladesh",[]))
         self.assertTrue(should_create_country_group("India",[]))
 
+
+    def test_genre_and_catch_all_groups_never_count_as_countries(self):
+        rows = [
+            ChannelIdentity(f"id-{i}", group)
+            for i, group in enumerate([
+                "International", "Sports", "Kids", "Documentary & Wildlife",
+                "Indian Movies", "Indian Music", "Religious", "Fashion TV",
+            ])
+        ]
+        self.assertEqual(eligible_country_groups(rows), set())
+
 if __name__=="__main__":
     unittest.main()
