@@ -6,6 +6,10 @@ on:
       - automation-v2/**
     paths:
       - 'automation/**'
+      - 'IPTV-Playlist.m3u'
+      - 'International-Playlist.m3u'
+      - 'epg/epg.xml'
+      - 'logos/**'
       - 'tests/test_automation_v2_*.py'
       - 'scripts/audit_logo_references.py'
       - 'scripts/run_automation_v2_dry_run.py'
@@ -17,7 +21,12 @@ on:
       - 'automation/**'
       - 'tests/test_automation_v2_*.py'
       - 'scripts/audit_logo_references.py'
+      - 'scripts/run_automation_v2_dry_run.py'
       - '.github/workflows/automation-v2-ci.yml'
+      - 'IPTV-Playlist.m3u'
+      - 'International-Playlist.m3u'
+      - 'epg/epg.xml'
+      - 'logos/**'
   workflow_dispatch:
 
 permissions:
