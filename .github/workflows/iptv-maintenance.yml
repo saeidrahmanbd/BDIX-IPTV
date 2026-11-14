@@ -40,6 +40,7 @@ on:
       - scripts/refresh_dashboard_diagnostics.py
       - scripts/enforce_playlist_attribution.py
       - scripts/discover_international_channels.py
+      - scripts/repair_international_playlist.py
       - scripts/validate_discovery_run.py
       - scripts/reorganize_international_playlist.py
       - scripts/validate_international_playlist.py
@@ -61,6 +62,9 @@ on:
       - tests/test_country_verification.py
       - tests/test_migrate_logo_unset.py
       - tests/test_international_protected_guard.py
+      - tests/test_playlist_metadata_repairs.py
+      - tests/test_channel_numbering.py
+      - tests/test_backup_metadata_reconcile.py
       - tests/test_playlist_metadata_repairs.py
       - tests/test_channel_numbering.py
       - tests/test_backup_metadata_reconcile.py
