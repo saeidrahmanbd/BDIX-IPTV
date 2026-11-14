@@ -373,7 +373,7 @@ for info, url in entries:
         logos_by_id[cid].add(logo)
     issue = logo_issue(info)
     logo_counts["healthy" if not issue else issue] += 1
-    item = (display_name(info), identity(info), issue, logo)
+    item = (display_name(info), identity(info), group, issue, logo)
     if issue == "external":
         logo_warnings.append(item)
     elif issue == "missing" and group in {"New Channels", "New Backups"}:
@@ -561,6 +561,14 @@ if xtream_credential_paths:
     for name, group, url in xtream_credential_paths: lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
 else: lines.append("None.")
 lines += ["", "## Logo Integrity", "", f"- Healthy/local references: **{logo_counts['healthy']}**", f"- External references (review only): **{logo_counts['external']}**"]
+lines += ["", "## Logo Exceptions Requiring Repair", "", "Active playlist entries with missing or invalid logo references. These rows are listed for diagnosis; the audit never invents or substitutes artwork.", ""]
+if logo_exceptions:
+    lines.extend(
+        f"- **{name}** [{cid}] — {group or 'Uncategorized'} — {issue} — {logo or '(missing logo reference)'}"
+        for name, cid, group, issue, logo in logo_exceptions
+    )
+else:
+    lines.append("None.")
 lines += ["", "## Missing Logos in Discovery Queues", "", "These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.", ""]
 if review_logo_exceptions:
     lines.extend(f"- **{name}** [{cid}]" for name, cid, issue, logo in review_logo_exceptions)

@@ -184,6 +184,13 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertLess(reorganize, validate)
         self.assertIn("reports/international-playlist-audit.md", workflow)
 
+    def test_audit_report_lists_each_active_logo_exception_with_group_and_reason(self):
+        audit = (ROOT / "scripts" / "audit_playlist.py").read_text(encoding="utf-8")
+        self.assertIn('## Logo Exceptions Requiring Repair', audit)
+        self.assertIn('for name, cid, group, issue, logo in logo_exceptions', audit)
+        self.assertIn("{group or 'Uncategorized'} — {issue}", audit)
+        self.assertIn("logo or '(missing logo reference)'", audit)
+
     def test_main_playlist_review_metadata_and_discovery_issues_are_warnings(self):
         gate = (ROOT / "scripts" / "pre_publish_gate.py").read_text(encoding="utf-8")
         self.assertIn("warnings=[]", gate)
