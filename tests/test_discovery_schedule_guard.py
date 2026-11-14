@@ -446,6 +446,48 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             [current, later], 155, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
         ))
 
+    def test_scheduled_epg_run_takes_priority_over_earlier_successful_push(self):
+        earlier_push = {
+            "id": 158, "event": "push", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T00:09:00Z",
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "success",
+                "steps": [{
+                    "name": "Regenerate, validate and publish XMLTV",
+                    "conclusion": "success",
+                }],
+            }],
+        }
+        scheduled_run = {
+            "id": 159, "event": "schedule", "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T03:00:00Z",
+        }
+        self.assertTrue(guard.should_current_run_execute(
+            [earlier_push, scheduled_run], 159, self.today,
+            event="schedule", workflow_file="epg-refresh.yml",
+        ))
+
+    def test_successful_scheduled_epg_run_blocks_later_automatic_events(self):
+        scheduled_run = {
+            "id": 160, "event": "schedule", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T03:00:00Z",
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "success",
+                "steps": [{
+                    "name": "Regenerate, validate and publish XMLTV",
+                    "conclusion": "success",
+                }],
+            }],
+        }
+        later_push = {
+            "id": 161, "event": "push", "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T04:00:00Z",
+        }
+        self.assertFalse(guard.should_current_run_execute(
+            [scheduled_run, later_push], 161, self.today,
+            event="push", workflow_file="epg-refresh.yml",
+        ))
+
     def test_prior_successful_epg_writer_blocks_later_workflow_run(self):
         previous = {
             "id": 156, "status": "completed", "conclusion": "success",
