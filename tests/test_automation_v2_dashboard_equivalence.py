@@ -94,6 +94,8 @@ class DashboardEquivalenceTests(unittest.TestCase):
             report = compute_metrics(root)
             self.assertEqual(report["status"], "PASS")
             self.assertEqual(report["mismatches"], {})
+            self.assertTrue(report["cutover_ready"])
+            self.assertEqual(report["cutover_blockers"], [])
 
     def test_stale_audit_is_not_counted_as_current(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -105,6 +107,8 @@ class DashboardEquivalenceTests(unittest.TestCase):
             self.assertFalse(report["inputs_current"]["playlist_audit"])
             self.assertEqual(report["expected_metrics"]["IPTV Local Logos"], "STALE")
             self.assertEqual(report["expected_metrics"]["Audit Blocking Issues"], "STALE / UNKNOWN")
+            self.assertFalse(report["cutover_ready"])
+            self.assertIn("playlist_audit", report["cutover_blockers"])
 
 if __name__ == "__main__":
     unittest.main()
