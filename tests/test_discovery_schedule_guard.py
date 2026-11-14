@@ -579,6 +579,52 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             event="schedule", workflow_file="epg-refresh.yml",
         ))
 
+    def test_epg_guard_ignores_completed_pre_schedule_push_for_post_schedule_workflow_run(self):
+        early_push = {
+            "id": 158, "event": "push", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-06T18:09:00Z",
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "success",
+                "steps": [{
+                    "name": "Regenerate, validate and publish XMLTV",
+                    "conclusion": "success",
+                }],
+            }],
+        }
+        current_workflow_run = {
+            "id": 159, "event": "workflow_run", "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T03:15:00Z",
+        }
+        runs = [early_push, current_workflow_run]
+        self.assertTrue(guard.should_current_run_execute(
+            runs, 159, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
+        ))
+        self.assertEqual(
+            guard.first_run_id(runs, workflow_file="epg-refresh.yml"),
+            159,
+        )
+
+    def test_successful_post_schedule_workflow_run_blocks_later_epg_automatic_event(self):
+        completed_refresh = {
+            "id": 162, "event": "workflow_run", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T03:15:00Z",
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "success",
+                "steps": [{
+                    "name": "Regenerate, validate and publish XMLTV",
+                    "conclusion": "success",
+                }],
+            }],
+        }
+        later_run = {
+            "id": 163, "event": "workflow_run", "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T04:00:00Z",
+        }
+        self.assertFalse(guard.should_current_run_execute(
+            [completed_refresh, later_run], 163, self.today,
+            event="workflow_run", workflow_file="epg-refresh.yml",
+        ))
+
     def test_successful_scheduled_epg_run_blocks_later_automatic_events(self):
         scheduled_run = {
             "id": 160, "event": "schedule", "status": "completed", "conclusion": "success",
