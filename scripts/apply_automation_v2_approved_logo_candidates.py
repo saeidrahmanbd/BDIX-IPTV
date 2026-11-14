@@ -164,7 +164,7 @@ def build_candidates(root: Path, manifest_path: Path, output_dir: Path) -> dict:
                 raise ValueError(f"approved source playlist is missing or unsafe: {playlist}")
             continue
         original_bytes = source.read_bytes()
-        has_utf8_bom = original_bytes.startswith(b"\xef\\xbb\\xbf")
+        has_utf8_bom = original_bytes.startswith(b"\xef\xbb\xbf")
         original = original_bytes.decode("utf-8-sig")
         actual_source_sha = _sha256(source)
         if selected and source_hashes.get(playlist) != actual_source_sha:
@@ -177,7 +177,7 @@ def build_candidates(root: Path, manifest_path: Path, output_dir: Path) -> dict:
         if changed:
             destination = output_dir / playlist
             destination.parent.mkdir(parents=True, exist_ok=True)
-            candidate_bytes = (b"\xef\\xbb\\xbf" if has_utf8_bom else b"") + candidate.encode("utf-8")
+            candidate_bytes = (b"\xef\xbb\xbf" if has_utf8_bom else b"") + candidate.encode("utf-8")
             destination.write_bytes(candidate_bytes)
             results.append({
                 "playlist": playlist, "approved_rows": len(selected),
@@ -210,6 +210,16 @@ def main() -> int:
     manifest = args.manifest if args.manifest.is_absolute() else root / args.manifest
     output = args.output_dir if args.output_dir.is_absolute() else root / args.output_dir
     report_path = args.report if args.report.is_absolute() else root / args.report
+    report_path = report_path.absolute()
+    allowed_report_root = (root / CANDIDATE_ROOT).absolute()
+    try:
+        report_path.relative_to(allowed_report_root)
+    except ValueError as exc:
+        raise ValueError("candidate report must remain inside reports/automation-v2/") from exc
+    _reject_symlink_components(report_path, root)
+    if report_path in {(root / "IPTV-Playlist.m3u").absolute(),
+                       (root / "International-Playlist.m3u").absolute()}:
+        raise ValueError("candidate report cannot overwrite a production playlist")
     result = build_candidates(root, manifest, output)
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
