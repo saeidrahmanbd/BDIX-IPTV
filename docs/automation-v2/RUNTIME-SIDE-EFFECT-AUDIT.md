@@ -137,3 +137,14 @@ The exact pinned `action.yml` files were fetched from their referenced repositor
 | `cloudflare/wrangler-action` | Node 24 action; configured `command` may deploy or otherwise mutate Cloudflare resources. | Metadata confirmed. The repository's Wrangler deployment workflow is an infrastructure writer, not a playlist/EPG writer, and remains outside the playlist cutover boundary. |
 
 This confirms the action entrypoint/runtime declarations and documented inputs/outputs only. The compiled `dist/*` bundles, their imported modules, downloaded runtime packages and post-step implementation have not been fully audited. Do not change action SHAs or treat this metadata review as a source-code security audit. The candidate bundle uses a pinned artifact upload action; the six implementation records remain unresolved for full transitive review.
+
+
+### EPG guard runtime contradiction requiring reproduction (2026-11-14)
+
+The latest observed main-branch EPG workflow run `43576391359` completed with overall conclusion `success`, but its `refresh` job was `skipped`. Its `daily_guard` log says:
+
+`Skipping duplicate daily discovery: run 43576391359 (workflow_run, in_progress) already owns epg-refresh.yml for Bangladesh date 2026-11-14.`
+
+The reported owner is the same run whose guard is executing. The source-level unit tests say the first eligible run, including the current active run, should execute. The observed runtime output therefore does not reconcile with the intended guard contract. Do not infer that EPG refreshed, and do not change the guard or bypass daily deduplication until a diagnostic reproduction captures the actual current-run ID, API run list, selected first-run ID, `should_run` output and dependent job condition in one run.
+
+The three most recent EPG workflow_run events inspected (43571104404, 43571202539, 43576391359) all had a successful `daily_guard` job and skipped `refresh` job. This is an outstanding production freshness issue, not an Automation V2 candidate publication. The V2 cutover gate remains closed until a real XMLTV writer run and post-publication fingerprint validation succeed.
