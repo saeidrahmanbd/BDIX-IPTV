@@ -2512,6 +2512,19 @@
           "url_fingerprint": "020ec398585387669ab5d6e67f466649f6f51bffaa27f7e5ad98a355317a35d2"
         }
       ],
+      "AsianetMiddleEast.in@SD": [
+        {
+          "auth_error": true,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": false,
+          "rate_limited": false,
+          "reason": "HTTP 403; authentication/access inconclusive",
+          "status_code": 403,
+          "stream_state": "unknown",
+          "url_fingerprint": "32f54df03d2e3e2deffa313de0f8b66428474ae0ddadbf6e41ea998e3a9f3b25"
+        }
+      ],
       "AsianetMovies.in@SD": [
         {
           "auth_error": false,
@@ -14162,6 +14175,19 @@
           "url_fingerprint": "7630b8b8e21700ecd3a9635158821d68a1ccd1ba6e58efb67f8a5380d34fd28b"
         }
       ],
+      "JaihindTV.in@SD": [
+        {
+          "auth_error": true,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": false,
+          "rate_limited": false,
+          "reason": "HTTP 403; authentication/access inconclusive",
+          "status_code": 403,
+          "stream_state": "unknown",
+          "url_fingerprint": "dda21f39b1a53a6e226d2d74e5375cf8d1cfb4c3e4ef1b477caa11aacc2bf677"
+        }
+      ],
       "JalshaBanglaBD.bd": [
         {
           "auth_error": false,
@@ -14232,6 +14258,19 @@
           "status_code": 206,
           "stream_state": "verified",
           "url_fingerprint": "660f826a8dbac64c5f03f23485efb9ad881fbbc8ef7a04ee188c3a960f110854"
+        }
+      ],
+      "JapanimTV.be@SD": [
+        {
+          "auth_error": false,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": false,
+          "rate_limited": false,
+          "reason": "HTTP 404",
+          "status_code": 404,
+          "stream_state": "dead",
+          "url_fingerprint": "84824805b6d28150673b39231fa412595056c2946ad654aec4de213e9eb5238c"
         }
       ],
       "JeremiahTV.pk@SD": [
@@ -17101,6 +17140,19 @@
           "status_code": 206,
           "stream_state": "verified",
           "url_fingerprint": "d82867ffe438659db4515a8e28caee65f82131d6990f390f763219c8e0bc8ccd"
+        }
+      ],
+      "ManoranjanTV.in@SD": [
+        {
+          "auth_error": false,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": false,
+          "rate_limited": false,
+          "reason": "HLS playlist response",
+          "status_code": 206,
+          "stream_state": "verified",
+          "url_fingerprint": "dafb7c6e92945bbf5f8b9820bb793a6796450aea5500e39f0620991d0650e018"
         }
       ],
       "MarutamTV.in": [
@@ -21386,6 +21438,19 @@
           "status_code": 200,
           "stream_state": "verified",
           "url_fingerprint": "307ba98b093be6ad7fcaab43c12df71e644e5d01c6588f559314d3dc63999bca"
+        }
+      ],
+      "PearTV.in@SD": [
+        {
+          "auth_error": false,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": false,
+          "rate_limited": false,
+          "reason": "HLS playlist response",
+          "status_code": 206,
+          "stream_state": "verified",
+          "url_fingerprint": "9c858733c92627fa88ba8d6daee295ebe903c926507bf2ab1ff5a188caef3316"
         }
       ],
       "PenthouseAfterMidnight.us": [
@@ -27737,6 +27802,19 @@
           "url_fingerprint": "510314ac883d2d567d817e4c77c95e4d92723cb249bf2bf00ef9f74f5e2f4bb7"
         }
       ],
+      "SATV.bd": [
+        {
+          "auth_error": false,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": false,
+          "rate_limited": false,
+          "reason": "HLS playlist response",
+          "status_code": 206,
+          "stream_state": "verified",
+          "url_fingerprint": "cddb873e9cffef715c0a7f08f7fa8a2b201ecd284cf7837fba1bde1d65ed3e05"
+        }
+      ],
       "SNBCinema.in": [
         {
           "auth_error": false,
@@ -27905,6 +27983,19 @@
           "url_fingerprint": "7fdb187ec211f16216190bd869117303fb9c92f1ac91316bfc58e773e9a735fb"
         }
       ],
+      "SafariTV.in@SD": [
+        {
+          "auth_error": false,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": false,
+          "rate_limited": false,
+          "reason": "HLS playlist response",
+          "status_code": 206,
+          "stream_state": "verified",
+          "url_fingerprint": "6bf9c7e553aa7e45ef7810326304526cfdef4378acbac6ba250e634a2eb84ca4"
+        }
+      ],
       "SagaMusic.in": [
         {
           "auth_error": false,
@@ -28023,6 +28114,19 @@
           "status_code": 206,
           "stream_state": "verified",
           "url_fingerprint": "bb61fffc00feba1757a322ffc21531f48d22081e239d8d733f801c18826f6fef"
+        }
+      ],
+      "SanandaTV.in": [
+        {
+          "auth_error": false,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": false,
+          "rate_limited": false,
+          "reason": "HLS playlist response",
+          "status_code": 200,
+          "stream_state": "verified",
+          "url_fingerprint": "c0c2cfa46cafb9c74288531ebcd249aed556f34c77c0dce630938af192bc8660"
         }
       ],
       "SangeetBangla.in@SD": [
@@ -35299,6 +35403,19 @@
           "url_fingerprint": "8fb3fcbfa28ab082b522ab712072cd6418e4eca7691df746b9c601a178ac288e"
         }
       ],
+      "ZeeCinema.in@HD": [
+        {
+          "auth_error": false,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": true,
+          "rate_limited": false,
+          "reason": "network error: URLError",
+          "status_code": null,
+          "stream_state": "unknown",
+          "url_fingerprint": "704d3b09dbcc3b42dd26fc977bf7c5aeadf803122edbc9e3c82bf17288d5f89f"
+        }
+      ],
       "ZeeComedyNation.in@HD": [
         {
           "auth_error": true,
@@ -35441,6 +35558,19 @@
           "status_code": 403,
           "stream_state": "unknown",
           "url_fingerprint": "e6c8ca5dbfb069713a136287e68dc0d27da002fa4db41ee7f9ad2f15c0703d83"
+        }
+      ],
+      "ZeeTV.in@SD": [
+        {
+          "auth_error": false,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": false,
+          "rate_limited": false,
+          "reason": "HLS playlist response",
+          "status_code": 206,
+          "stream_state": "verified",
+          "url_fingerprint": "26b75e019850087eae443b179b1f5fc9e18b5e95331e6bf64a68ad8f2e107a7c"
         }
       ],
       "ZeeTamil.in@HD": [
@@ -47105,6 +47235,19 @@
           "status_code": 200,
           "stream_state": "verified",
           "url_fingerprint": "4a8af91d1c10621f990d7c15fdbe30bad74674b70aa6c4325e743e5ecba9d943"
+        }
+      ],
+      "vh1.us": [
+        {
+          "auth_error": false,
+          "day": "2026-11-14",
+          "geo_blocked": false,
+          "network_error": false,
+          "rate_limited": false,
+          "reason": "HLS playlist response",
+          "status_code": 206,
+          "stream_state": "verified",
+          "url_fingerprint": "dadf5a3ef74a0cef7e1ebca509e5f0af1dec584e944c391b7f24bf928be40034"
         }
       ],
       "vijuPlusMegahit.ru@HD": [
