@@ -210,6 +210,16 @@ def main() -> int:
     manifest = args.manifest if args.manifest.is_absolute() else root / args.manifest
     output = args.output_dir if args.output_dir.is_absolute() else root / args.output_dir
     report_path = args.report if args.report.is_absolute() else root / args.report
+    report_path = report_path.absolute()
+    allowed_report_root = (root / CANDIDATE_ROOT).absolute()
+    try:
+        report_path.relative_to(allowed_report_root)
+    except ValueError as exc:
+        raise ValueError("candidate report must remain inside reports/automation-v2/") from exc
+    _reject_symlink_components(report_path, root)
+    if report_path in {(root / "IPTV-Playlist.m3u").absolute(),
+                       (root / "International-Playlist.m3u").absolute()}:
+        raise ValueError("candidate report cannot overwrite a production playlist")
     result = build_candidates(root, manifest, output)
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
