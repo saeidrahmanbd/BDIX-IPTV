@@ -43,6 +43,14 @@ def live_actions_runs(repository: str, token: str) -> list[dict]:
     return payload["workflow_runs"]
 
 
+def is_stale_bundle_reservation(entry, now: datetime) -> bool:
+    if entry.engine != "bundle" or entry.status != "running":
+        return False
+    if entry.started_at is None:
+        return True
+    return now - entry.started_at > timedelta(minutes=RUN_LEASE_MINUTES)
+
+
 def reconcile(now: datetime | None = None) -> dict:
     repository = os.environ.get("GITHUB_REPOSITORY", "")
     token = os.environ.get("GITHUB_TOKEN", "") or os.environ.get("GH_TOKEN", "")
@@ -63,13 +71,7 @@ def reconcile(now: datetime | None = None) -> dict:
     recovered = []
     updated_entries = []
     for entry in entries:
-        if entry.engine != "bundle" or entry.status != "running":
-            updated_entries.append(entry)
-            continue
-        stale = entry.started_at is None
-        if entry.started_at is not None:
-            stale = current - entry.started_at > timedelta(minutes=RUN_LEASE_MINUTES)
-        if stale:
+        if is_stale_bundle_reservation(entry, current):
             updated_entries.append(replace(entry, status="failed"))
             recovered.append({
                 "idempotency_key": entry.idempotency_key,
