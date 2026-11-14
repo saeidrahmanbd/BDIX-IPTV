@@ -79,6 +79,33 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         for name, content in before.items():
             self.assertEqual((root / name).read_bytes(), content)
 
+
+    def test_unchanged_probe_ledger_skips_remote_checkpoint(self):
+        temp, root = self.make_root()
+        self.addCleanup(temp.cleanup)
+        store = MemoryStore()
+        iptv = SimpleNamespace(candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0), source_warnings=(), publish=False)
+        unchanged = json.dumps(store.state["international_probe_ledger"])
+        maintenance = SimpleNamespace(
+            candidate=SimpleNamespace(text="#EXTM3U\\n", candidate_rows=0),
+            ledger_json=unchanged, probed_count=0, reused_count=1973, publish=False,
+        )
+        international = SimpleNamespace(maintenance=maintenance, publish=False)
+        epg = SimpleNamespace(xml_text="<tv/>", decision=SimpleNamespace(accepted=True, errors=()), publish=False)
+        with (
+            patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv),
+            patch("automation.core.v2_candidate_runner.derive_primary_stream_targets", return_value=[]),
+            patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=international),
+            patch("automation.core.v2_candidate_runner.assert_international_existing_rows_preserved"),
+            patch("automation.core.v2_candidate_runner.checkpoint_remote_probe_ledger") as checkpoint,
+            patch("automation.core.v2_candidate_runner.build_epg_source_candidate", return_value="<tv/>"),
+            patch("automation.core.v2_candidate_runner.build_epg_candidate", return_value=epg),
+        ):
+            decision, result = run_candidate_bundle(root, date(2026, 11, 14), "c" * 40, store)
+        self.assertTrue(decision.allowed)
+        self.assertIsNotNone(result)
+        checkpoint.assert_not_called()
+
     def test_missing_production_baseline_fails_before_remote_reservation(self):
         temp, root = self.make_root()
         self.addCleanup(temp.cleanup)
