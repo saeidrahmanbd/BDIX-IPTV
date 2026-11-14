@@ -54,3 +54,11 @@ The dashboard recovery helper invokes scripts by a runtime `relative` argument, 
 5. The publisher accepts only a fixed allowlist of artifact paths for the selected engine and playlist.
 6. EPG source fetches run before candidate generation; validation and atomic publication remain separate.
 7. Runtime dependency tracing is still incomplete. Before cutover, inspect every script invoked from workflows and every nested subprocess target, then map those targets to contract tests.
+
+## V2 inventory instrumentation (branch-only)
+
+The V2 static inventory has been expanded to scan repository-owned Python files outside `scripts/`, report literal and dynamic subprocess calls, flag `eval()`/`exec()`, and record each GitHub Actions YAML `run:` block as an opaque shell boundary. These boundaries are counted as unresolved rather than treated as successfully traced.
+
+The candidate-bundle workflow runs this inventory and uploads `runtime-dependency-inventory.json` with the shadow artifacts. This improves repeatability and makes unresolved execution paths visible on each candidate run; it does **not** resolve shell interpolation, imported-module side effects, external GitHub Actions, npm scripts, network-loaded code, or runtime-generated command arguments. Those still require targeted trace evidence before any legacy writer can be retired.
+
+The dashboard shadow artifact also now reports the availability and SHA-256 provenance of each captured legacy report input. It continues to mirror the legacy dashboard markdown verbatim; it is not an independently recomputed metric-equivalence proof.
