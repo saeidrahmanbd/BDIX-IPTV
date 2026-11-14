@@ -53,33 +53,44 @@ class GitHubStateStoreTests(unittest.TestCase):
         self.assertEqual(snapshot.state, empty_state())
         self.assertIn("ref=automation-v2-state", self.calls[0].full_url)
 
-    def test_large_state_uses_download_url_when_contents_api_omits_content(self):
+    def test_large_state_reads_exact_immutable_blob_when_contents_api_omits_content(self):
         state = empty_state()
         state["international_probe_ledger"]["channels"] = {"large-channel": []}
-        raw = json.dumps(state).encode()
+        raw = (json.dumps(state) + "\\n").encode()
+        encoded = base64.b64encode(raw).decode()
         calls = []
-        class RawResponse(FakeResponse):
-            def __init__(self, payload):
-                self.payload = payload
-            def read(self):
-                return self.payload
         def large_opener(request, timeout=20):
             calls.append(request)
-            if request.method == "GET" and "api.github.com" in request.full_url:
+            if request.method == "GET" and request.full_url.endswith("/contents/automation-v2-state.json?ref=automation-v2-state"):
                 return FakeResponse({
                     "sha": "a" * 40,
                     "content": "",
                     "download_url": "https://raw.githubusercontent.com/owner/repo/automation-v2-state/automation-v2-state.json",
                 })
-            if request.method == "GET" and "raw.githubusercontent.com" in request.full_url:
-                return RawResponse(raw)
-            raise AssertionError("unexpected request")
+            if request.method == "GET" and request.full_url.endswith("/git/blobs/" + "a" * 40):
+                return FakeResponse({
+                    "sha": "a" * 40,
+                    "encoding": "base64",
+                    "content": encoded,
+                })
+            raise AssertionError("unexpected request: " + request.full_url)
         store = GitHubStateStore("owner/repo", "automation-v2-state", "token", large_opener)
         snapshot = store.load()
         self.assertEqual(snapshot.blob_sha, "a" * 40)
         self.assertEqual(snapshot.state, state)
         self.assertEqual(len(calls), 2)
-        self.assertIn("raw.githubusercontent.com", calls[1].full_url)
+        self.assertIn("git/blobs/" + "a" * 40, calls[1].full_url)
+        self.assertNotIn("raw.githubusercontent.com", calls[1].full_url)
+
+    def test_large_state_rejects_mismatched_blob_sha(self):
+        def mismatch(request, timeout=20):
+            if request.full_url.endswith("/contents/automation-v2-state.json?ref=automation-v2-state"):
+                return FakeResponse({"sha": "a" * 40, "content": ""})
+            return FakeResponse({"sha": "b" * 40, "encoding": "base64",
+                                 "content": base64.b64encode(json.dumps(empty_state()).encode()).decode()})
+        store = GitHubStateStore("owner/repo", "automation-v2-state", "token", mismatch)
+        with self.assertRaisesRegex(RuntimeError, "mismatched"):
+            store.load()
 
     def test_save_uses_compare_and_swap_blob_sha(self):
         store = GitHubStateStore("owner/repo", "automation-v2-state", "token", self.opener)
