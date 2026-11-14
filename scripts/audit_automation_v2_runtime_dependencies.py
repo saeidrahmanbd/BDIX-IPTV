@@ -221,7 +221,7 @@ def build_inventory(root: Path) -> dict:
         {"kind":"mutable_external_source_boundary","source":item["key"],
          "dependency":item.get("external_dependency"),"ref_policy":item.get("external_ref_policy"),
          "effect":item.get("side_effect")}
-        for item in process_reviews.values() if item.get("external_dependency")
+        for item in process_reviews.values() if item.get("external_dependency") and str(item.get("external_ref_policy","")).startswith("mutable")
     ]
     unresolved=runtime_unresolved + list(external_boundaries.values()) + mutable_external_sources + [
         item for item in workflow_actions
