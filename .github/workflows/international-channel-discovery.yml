@@ -25,7 +25,6 @@ on:
       - 'scripts/discovery_schedule_guard.py'
       - 'tests/test_discovery_schedule_guard.py'
       - 'scripts/reorganize_international_playlist.py'
-      - 'scripts/sort_playlists.py'
       - 'scripts/country_verification.py'
       - 'tests/test_international_protected_guard.py'
       - 'tests/test_international_discovery_policy.py'
@@ -98,7 +97,7 @@ jobs:
       - name: Test five-channel threshold and protected groups
         run: python -m unittest discover -s tests -p 'test_international_protected_guard.py'
       - name: Compile discovery and validation scripts
-        run: python -m py_compile scripts/country_verification.py scripts/discover_international_channels.py scripts/reorganize_international_playlist.py scripts/sort_playlists.py scripts/validate_international_playlist.py scripts/validate_discovery_run.py
+        run: python -m py_compile scripts/country_verification.py scripts/discover_international_channels.py scripts/reorganize_international_playlist.py scripts/validate_international_playlist.py scripts/validate_discovery_run.py
       - name: Discover only Movies/Music channels and eligible backup streams
         run: python scripts/discover_international_channels.py
       - name: Enforce required playlist attribution
