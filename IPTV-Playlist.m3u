@@ -7,6 +7,8 @@
 #PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Review", "New Channels", "New Backups"]
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="2" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Ananda TV
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/index.m3u8
+#EXTINF:-1 tvg-id="JalshaBanglaBD.bd" tvg-name="Jalsha Bangla BD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-bangla-bd.png" tvg-chno="32" channel-id="JalshaBanglaBD.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Jalsha Bangla BD
+https://dish.porosh.com.bd/hls/jalshabangla.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-chno="3" channel-id="AsianTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Asian TV
 https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="ATNBangla.bd" tvg-name="ATN Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" tvg-chno="4" channel-id="ATNBangla.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",ATN Bangla
@@ -151,8 +153,6 @@ https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/52b998e9510d41c29ad2ceca8ea3d849/in
 https://fta.ektv.in/live/378/master.m3u8
 #EXTINF:-1 tvg-id="Enter10Bangla.in" tvg-name="Enter10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" tvg-chno="66" channel-id="Enter10Bangla.in" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Enter10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_360p/chunks.m3u8
-#EXTINF:-1 tvg-id="JalshaBanglaBD.bd" tvg-name="Jalsha Bangla BD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-bangla-bd.png" tvg-chno="32" channel-id="JalshaBanglaBD.bd" tvg-country="BD" tvg-language="ben" group-title="Indian Bangla",Jalsha Bangla BD
-https://dish.porosh.com.bd/hls/jalshabangla.m3u8
 #EXTINF:-1 tvg-id="JalshaMovies.in@SD" tvg-name="Jalsha Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-movies.png" tvg-chno="110" channel-id="JalshaMovies.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Jalsha Movies
 https://livetv.shamon-cable.net:8443/Jalsha-Movies/index.m3u8
 #EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" tvg-chno="67" channel-id="KhushbooBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Khushboo Bangla
@@ -265,6 +265,8 @@ https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/index.m3u8
 https://samitaorigin.tangotv.in/MOVIEPUNJAB/SAMITAORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="NammaBangalore.in@SD" tvg-name="Namma Bangalore" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/namma-bangalore.png" tvg-chno="119" channel-id="NammaBangalore.in@SD" tvg-country="IN" tvg-language="kan" group-title="Indian Entertainment",Namma Bangalore
 https://stream.ottlive.co.in/nammatv/index.m3u8
+#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Q TV
+http://163.61.226.31:9981/stream/channelid/359164420?profile=pass
 #EXTINF:-1 tvg-id="NHBollyFlix.in" tvg-name="NH BollyFlix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-bollyflix.png" tvg-chno="120" channel-id="NHBollyFlix.in" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",NH BollyFlix
 https://cc-r5hupcym5oehh.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-r5hupcym5oehh/SBUM/RunnTV/BollyFlix_IN/BollyFlix_IN.m3u8
 #EXTINF:-1 tvg-id="NHTamilGold.in" tvg-name="NH Tamil Gold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-tamil-gold.png" tvg-chno="121" channel-id="NHTamilGold.in" tvg-country="IN" tvg-language="tam" group-title="Indian Movies",NH Tamil Gold
@@ -755,7 +757,7 @@ https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8
 https://cdn4.mjunoon.tv:8087/streamtest/107M/chunks.m3u8
 #EXTINF:-1 tvg-id="SeeTV.pk" tvg-name="See TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/see-tv.png" tvg-chno="374" channel-id="SeeTV.pk" tvg-country="PK" tvg-language="urd" group-title="Pakistani",See TV
 https://vodzong.mjunoon.tv:8087/streamtest/SeeTV-156/playlist.m3u8
-#EXTINF:-1 tvg-id="SindhTV.in@SD" tvg-name="Sindh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sindh-tv.png" tvg-chno="375" channel-id="SindhTV.in@SD" tvg-country="PK" tvg-language="urd" group-title="Pakistani",Sindh TV
+#EXTINF:-1 tvg-id="SindhTV.pk@SD" tvg-name="Sindh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sindh-tv.png" tvg-chno="375" channel-id="SindhTV.pk@SD" tvg-country="PK" tvg-language="urd" group-title="Pakistani",Sindh TV
 https://samitaorigin.tangotv.in/SINDHTV/SAMITAORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="TagTV.pk" tvg-name="Tag TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tag-tv.png" tvg-chno="376" channel-id="TagTV.pk" tvg-country="PK" tvg-language="urd" group-title="Pakistani",Tag TV
 http://cdn11.live247stream.com/tag/tv/playlist.m3u8
@@ -1097,8 +1099,6 @@ https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v3a1/mono.m3u8
 https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8
 #EXTINF:-1 tvg-id="PeaceTVUrdu.pk" tvg-name="Peace TV Urdu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-urdu.png" tvg-chno="587" channel-id="PeaceTVUrdu.pk" tvg-country="PK" tvg-language="urd" group-title="Religious",Peace TV Urdu
 https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8
-#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="PK" tvg-language="urd" group-title="Religious",Q TV
-http://163.61.226.31:9981/stream/channelid/359164420?profile=pass
 #EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-chno="588" channel-id="QuranTV.iq" tvg-country="IQ" tvg-language="ara" group-title="Religious",Quran TV
 https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
 #EXTINF:-1 tvg-id="TVOne.uk" tvg-name="TV One UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-one-uk.png" tvg-chno="567" channel-id="TVOne.uk" tvg-country="GB" tvg-language="eng" group-title="Religious",TV One UK
@@ -1965,9 +1965,9 @@ https://livingindiaottlive.akamaized.net/punjabihits/index.m3u8
 https://gtc.ottlive.co.in/punjabshort/index.m3u8
 #EXTINF:-1 tvg-id="PunjabiTV.in@SD" tvg-name="Punjabi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/punjabi-tv-9b4d7425b3.png" tvg-chno="314" channel-id="PunjabiTV.in@SD" tvg-country="IN" tvg-language="pan" group-title="Backup",Punjabi TV
 https://mumt07.tangotv.in/zHjX9OFlPUNJABITV/index.m3u8
-#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="PK" tvg-language="urd" group-title="Backup",Q TV
+#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",Q TV
 https://mumt05.tangotv.in/87NeALx2THEQ/index.m3u8
-#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="PK" tvg-language="urd" group-title="Backup",Q TV
+#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",Q TV
 https://samitaorigin.tangotv.in/THEQ/SAMITAORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-chno="588" channel-id="QuranTV.iq" tvg-country="IQ" tvg-language="ara" group-title="Backup",Quran TV
 https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8
