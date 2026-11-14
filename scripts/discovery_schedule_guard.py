@@ -205,6 +205,36 @@ def should_current_run_execute(
     if manual:
         return not active_others
 
+    # EPG has a fixed 09:00 Asia/Dhaka daily refresh. Push/workflow_run events
+    # can legitimately rebuild the guide before that time, but they must not
+    # consume the scheduled run's daily slot. The scheduled event therefore
+    # takes priority over earlier non-scheduled successes; once it succeeds,
+    # later automatic events are suppressed for the rest of the Bangladesh day.
+    if workflow_file == "epg-refresh.yml":
+        successful_scheduled = [
+            run for run in others
+            if str(run.get("event") or "").casefold() == "schedule"
+            and run_blocks_retry(run, client, workflow_file)
+        ]
+        if successful_scheduled:
+            return False
+
+        current_created = parse_github_timestamp(current["created_at"])
+        if str(event or "").casefold() == "schedule":
+            earlier_active = [
+                run for run in active_others
+                if parse_github_timestamp(run["created_at"]) <= current_created
+            ]
+            return not earlier_active
+
+        earlier_scheduled_active = [
+            run for run in active_others
+            if str(run.get("event") or "").casefold() == "schedule"
+            and parse_github_timestamp(run["created_at"]) < current_created
+        ]
+        if earlier_scheduled_active:
+            return False
+
     successful_others = [
         run for run in others
         if str(run.get("status") or "").casefold() == "completed"
