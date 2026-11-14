@@ -109,7 +109,7 @@ def build_candidates(root: Path, manifest_path: Path, output_dir: Path) -> dict:
                 raise ValueError(f"approved source playlist is missing or unsafe: {playlist}")
             continue
         original_bytes = source.read_bytes()
-        has_utf8_bom = original_bytes.startswith(b"\\xef\\xbb\\xbf")
+        has_utf8_bom = original_bytes.startswith(b"\xef\xbb\xbf")
         original = original_bytes.decode("utf-8-sig")
         actual_source_sha = _sha256(source)
         if selected and source_hashes.get(playlist) != actual_source_sha:
@@ -123,7 +123,7 @@ def build_candidates(root: Path, manifest_path: Path, output_dir: Path) -> dict:
         changed = candidate != original
         if changed:
             destination = output_dir / playlist
-            candidate_bytes = (b"\\xef\\xbb\\xbf" if has_utf8_bom else b"") + candidate.encode("utf-8")
+            candidate_bytes = (b"\xef\xbb\xbf" if has_utf8_bom else b"") + candidate.encode("utf-8")
             destination.write_bytes(candidate_bytes)
             results.append({
                 "playlist": playlist, "approved_rows": len(selected),
