@@ -119,7 +119,7 @@ def convert_referenced_logos(
         digest = hashlib.sha256(png_bytes).hexdigest()[:10]
         target = source_path.with_suffix(".png")
         if target.exists() and target.read_bytes() != png_bytes:
-            target = source_path.with_name(f"{source_path.stem}-{digest}.png")
+            target = source_path.with_name(f"{source_path.stem}-converted-{digest}.png")
         if target.exists():
             if target.read_bytes() != png_bytes:
                 raise ValueError(f"PNG target collision for {relative}")
@@ -132,7 +132,8 @@ def convert_referenced_logos(
 
     for playlist_name in playlist_names:
         playlist_path = root / playlist_name
-        original = playlist_path.read_text(encoding="utf-8")
+        with playlist_path.open("r", encoding="utf-8", newline="") as stream:
+            original = stream.read()
         references_changed = 0
 
         def replace_logo(match: re.Match) -> str:
@@ -167,8 +168,11 @@ def convert_referenced_logos(
             raise ValueError(f"written asset is not PNG: {target}")
 
     for playlist_path, updated in updated_playlists.items():
-        if updated != playlist_path.read_text(encoding="utf-8"):
-            playlist_path.write_text(updated, encoding="utf-8")
+        with playlist_path.open("r", encoding="utf-8", newline="") as stream:
+            current = stream.read()
+        if updated != current:
+            with playlist_path.open("w", encoding="utf-8", newline="") as stream:
+                stream.write(updated)
 
     converted_count = sum(source_formats.values())
     remaining_non_png = 0
