@@ -97,6 +97,34 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             self.assertTrue(any(x["kind"]=="local_workflow_action" and x["exists"]
                                 for x in report["workflow_actions"]))
 
+    def test_separates_test_only_dynamic_calls_from_runtime_blockers(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); (root/"scripts").mkdir(); (root/"tests").mkdir()
+            (root/"scripts"/"runtime.py").write_text(
+                "import subprocess\\nsubprocess.run(make_command())\\n"
+            )
+            (root/"tests"/"fixture.py").write_text(
+                "import subprocess\\nsubprocess.run(make_test_command())\\n"
+            )
+            report=build_inventory(root)
+            self.assertEqual(len(report["unresolved"]),1)
+            self.assertEqual(report["unresolved"][0]["source"],"scripts/runtime.py")
+            self.assertEqual(len(report["test_only_unresolved"]),1)
+            self.assertEqual(report["test_only_unresolved"][0]["source"],"tests/fixture.py")
+
+    def test_skips_immutable_production_baseline_checkout_copy(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); runtime=root/"scripts"; runtime.mkdir()
+            baseline=root/"automation-v2-production-baseline"/"scripts"
+            baseline.mkdir(parents=True)
+            (runtime/"runtime.py").write_text("import subprocess\\nsubprocess.run(make_command())\\n")
+            (baseline/"copied.py").write_text("import subprocess\\nsubprocess.run(make_command())\\n")
+            report=build_inventory(root)
+            self.assertEqual(
+                [x["source"] for x in report["nested_subprocess_calls"] if x["kind"]=="subprocess_dynamic"],
+                ["scripts/runtime.py"],
+            )
+
     def test_preserves_complete_multiline_workflow_shell_body(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); workflows=root/".github"/"workflows"
