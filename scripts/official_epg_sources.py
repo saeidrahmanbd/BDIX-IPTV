@@ -11,6 +11,7 @@ from zoneinfo import ZoneInfo
 HUM_TV_SOURCE = "https://hum.tv/schedule/"
 HUM_TV_CHANNEL_ID = "HumTV.pk"
 RTV_SOURCE = "https://rtvonline.com/home/"
+RTV_LIVE_SOURCE = "https://www.rtvbd.tv/live.php"
 # The www host currently serves the public weekly schedule; retain the apex host as fallback.
 RTV_LEGACY_SOURCES = ("https://www.rtvbd.tv/schedule.php", "https://rtvbd.tv/schedule.php")
 RTV_CHANNEL_ID = "RTV.bd"
@@ -419,6 +420,103 @@ def _parse_rtv_daily_programmes(text, now_utc):
     return sorted(unique.values(), key=lambda x: (x["start_dt"], x["title"].casefold()))
 
 
+def _parse_rtv_live_programmes(html, now_utc):
+    """Parse RTV's official 'Today's show on Rtv' page with explicit local start times."""
+    parser = _RtvScheduleParser()
+    parser.feed(html or "")
+    parser.close()
+    page_text = parser.text()
+    heading = re.search(r"today['’]?s\s+show\s+on\s+rtv", page_text, re.I)
+    if not heading:
+        return []
+
+    schedule_text = page_text[heading.end():]
+    matches = list(TIME_RE.finditer(schedule_text))
+    if len(matches) < 4:
+        return []
+
+    local_today = now_utc.astimezone(BANGLADESH_TZ).date()
+    lower = now_utc - timedelta(hours=6)
+    upper = now_utc + timedelta(days=1)
+    events = []
+    day_offset = 0
+    previous_minutes = None
+
+    for index, match in enumerate(matches):
+        hour = int(match.group(1)) % 12
+        if match.group(3).upper() == "P":
+            hour += 12
+        minute = int(match.group(2))
+        if hour > 23 or minute > 59:
+            continue
+
+        minutes = hour * 60 + minute
+        if previous_minutes is not None and minutes < previous_minutes - 360:
+            day_offset += 1
+        previous_minutes = minutes
+
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(schedule_text)
+        segment = schedule_text[match.end():end]
+        title_lines = [_clean(line) for line in segment.splitlines() if _clean(line)]
+        title = title_lines[0] if title_lines else ""
+        title = re.sub(r"^[\s\-–—:]+", "", title)
+        title = re.split(r"\s*(?:->|→)\s*", title, maxsplit=1)[0].strip()
+        title = re.sub(r"[।.]+$", "", title).strip()
+        if title and title.casefold() not in RTV_GENERIC:
+            events.append({
+                "day_offset": day_offset,
+                "hour": hour,
+                "minute": minute,
+                "title": title,
+            })
+
+    unique_events = {}
+    for event in events:
+        key = (
+            event["day_offset"], event["hour"], event["minute"],
+            event["title"].casefold(),
+        )
+        unique_events[key] = event
+    events = sorted(
+        unique_events.values(),
+        key=lambda item: (item["day_offset"], item["hour"], item["minute"], item["title"].casefold()),
+    )
+    if len(events) < 4:
+        return []
+
+    programmes = []
+    for current, nxt in zip(events, events[1:]):
+        start_local = datetime.combine(
+            local_today + timedelta(days=current["day_offset"]),
+            time(current["hour"], current["minute"]),
+            tzinfo=BANGLADESH_TZ,
+        )
+        stop_local = datetime.combine(
+            local_today + timedelta(days=nxt["day_offset"]),
+            time(nxt["hour"], nxt["minute"]),
+            tzinfo=BANGLADESH_TZ,
+        )
+        duration = stop_local - start_local
+        if duration <= timedelta(0) or duration > timedelta(minutes=180):
+            continue
+        start = start_local.astimezone(timezone.utc)
+        stop = stop_local.astimezone(timezone.utc)
+        if stop < lower or start > upper:
+            continue
+        programmes.append({
+            "channel_id": RTV_CHANNEL_ID,
+            "title": current["title"],
+            "start_dt": start,
+            "stop_dt": stop,
+        })
+
+    unique = {}
+    for programme in programmes:
+        key = (programme["start_dt"], programme["stop_dt"], programme["title"].casefold())
+        unique[key] = programme
+    return sorted(unique.values(), key=lambda item: (item["start_dt"], item["title"].casefold()))
+
+
 def _parse_rtv_weekly_programmes(html, now_utc):
     """Fallback parser for the retired English weekday-based RTV schedule."""
     parser = _RtvScheduleParser()
@@ -568,6 +666,26 @@ def fetch_rtv_programmes(now=None):
             fetch_errors.append("rtvonline: daily article is stale or has no explicit programme slots")
     except Exception as exc:
         fetch_errors.append(f"rtvonline: {type(exc).__name__}")
+
+    # RTV also publishes a current-day English schedule on its official live page.
+    # Prefer its explicitly timed entries before falling back to the older weekly grid.
+    try:
+        live_request = urllib.request.Request(
+            RTV_LIVE_SOURCE,
+            headers={
+                "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+                "Accept": "text/html,application/xhtml+xml,*/*",
+                "Accept-Language": "en-US,en;q=0.9,bn;q=0.7",
+            },
+        )
+        with urllib.request.urlopen(live_request, timeout=30) as response:
+            live_html = response.read().decode("utf-8", errors="replace")
+        live = _parse_rtv_live_programmes(live_html, now_utc)
+        if live:
+            return live
+        fetch_errors.append("rtvbd.tv/live.php: no current explicit programme slots")
+    except Exception as exc:
+        fetch_errors.append(f"rtvbd.tv/live.php: {type(exc).__name__}")
 
     # Retain the broadcaster's public weekly page as a fallback; TLS verification
     # remains enabled. Retry one transient network failure per host before failing over.

@@ -7,7 +7,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from official_epg_sources import _RtvArticleLinkParser, _parse_rtv_daily_programmes
+from official_epg_sources import (
+    RTV_LIVE_SOURCE,
+    _RtvArticleLinkParser,
+    _parse_rtv_daily_programmes,
+    _parse_rtv_live_programmes,
+)
 
 
 class RtvArticleLinkParserTests(unittest.TestCase):
@@ -45,6 +50,43 @@ class RtvArticleLinkParserTests(unittest.TestCase):
         )
         self.assertEqual(links, [])
 
+
+
+class RtvLiveScheduleParsingTests(unittest.TestCase):
+    def test_official_live_page_parses_explicit_english_times(self):
+        html = """
+        <h2>Today's show on Rtv</h2>
+        <div>09:04 AM - Aj Potrikay -> Live</div>
+        <div>05:00 PM - R-Syudio</div>
+        <div>06:04 PM - ASIA-WEEKLY</div>
+        <div>07:35 PM - Dawater Ranna SC</div>
+        <div>09:20 PM - Boka Poribar -> Drama</div>
+        <div>10:00 PM - Cheater And Gentleman -> Drama</div>
+        <div>11:23 PM - Road to Democracy -> Talk Show</div>
+        """
+        now = datetime(2026, 11, 14, 3, 0, tzinfo=timezone.utc)
+        programmes = _parse_rtv_live_programmes(html, now)
+        self.assertEqual(RTV_LIVE_SOURCE, "https://www.rtvbd.tv/live.php")
+        self.assertEqual(len(programmes), 5)
+        self.assertEqual(programmes[0]["title"], "R-Syudio")
+        self.assertEqual(
+            programmes[0]["start_dt"],
+            datetime(2026, 11, 14, 11, 0, tzinfo=timezone.utc),
+        )
+        self.assertEqual(
+            programmes[0]["stop_dt"],
+            datetime(2026, 11, 14, 12, 4, tzinfo=timezone.utc),
+        )
+        self.assertTrue(all(item["channel_id"] == "RTV.bd" for item in programmes))
+
+    def test_live_page_requires_the_official_today_schedule_heading(self):
+        html = "<h2>Sports news</h2><div>05:00 PM - Unrelated show</div>"
+        self.assertEqual(
+            _parse_rtv_live_programmes(
+                html, datetime(2026, 11, 14, 3, 0, tzinfo=timezone.utc)
+            ),
+            [],
+        )
 
 
 class RtvDailyScheduleParsingTests(unittest.TestCase):
