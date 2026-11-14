@@ -77,6 +77,28 @@ class LogoFormatConversionTests(unittest.TestCase):
             self.assertEqual(outputs[0], outputs[1])
             self.assertTrue((logos / "shared.jpg").is_file())
 
+    def test_blocked_generic_png_name_uses_converted_digest_filename(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            logos = root / "logos"
+            logos.mkdir()
+            (logos / "zee-tv.svg").write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><rect width="100" height="50" fill="#0000ff"/></svg>',
+                encoding="utf-8",
+            )
+            (root / "IPTV-Playlist.m3u").write_text(
+                "#EXTM3U\n"
+                f'#EXTINF:-1 tvg-logo="{RAW_BASE}zee-tv.svg",Zee TV\n'
+                "https://example.invalid/live.m3u8\n",
+                encoding="utf-8",
+            )
+            convert_referenced_logos(root=root, playlist_names=("IPTV-Playlist.m3u",))
+            playlist = (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+            logo = playlist.split('tvg-logo="', 1)[1].split('"', 1)[0]
+            self.assertIn("zee-tv-converted-", logo)
+            self.assertTrue(logo.endswith(".png"))
+            self.assertFalse(logo.endswith("/zee-tv.png"))
+
     def test_existing_different_png_is_never_overwritten(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
