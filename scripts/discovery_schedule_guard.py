@@ -427,6 +427,46 @@ def guard(workflow_file: str) -> int:
     return 0
 
 
+def wait_for_epg_runs_to_settle(
+    client,
+    target_date: date,
+    runs: list[dict[str, Any]],
+    max_polls: int = 8,
+    poll_interval: int = 10,
+    sleep_fn=time.sleep,
+) -> list[dict[str, Any]]:
+    """Wait for same-day EPG runs to finish before deciding whether recovery is needed.
+
+    A workflow_run/push event may still be active at the 09:30 watchdog checkpoint
+    even though its daily guard will skip the actual refresh. Waiting lets the
+    watchdog distinguish a real post-09:00 publication from a guard-only no-op.
+    """
+    def active_today(items):
+        return [
+            run for run in runs_for_date(items, target_date)
+            if str(run.get("status") or "").casefold() != "completed"
+        ]
+
+    active = active_today(runs)
+    for poll in range(max_polls):
+        if not active:
+            return runs
+        print(
+            f"Waiting for {len(active)} same-day EPG run(s) to settle "
+            f"before recovery decision ({poll + 1}/{max_polls})."
+        )
+        sleep_fn(poll_interval)
+        runs = client.workflow_runs("epg-refresh.yml")
+        active = active_today(runs)
+
+    if active:
+        print(
+            f"EPG recovery deferred: {len(active)} same-day run(s) remain active "
+            f"after {max_polls * poll_interval} seconds; the next watchdog checkpoint will re-check."
+        )
+    return runs
+
+
 def watchdog(workflow_files: list[str]) -> int:
     if os.environ.get("GITHUB_EVENT_NAME", "").casefold() == "push":
         print("Push-triggered workflows own this commit; watchdog will not dispatch duplicates.")
@@ -442,6 +482,8 @@ def watchdog(workflow_files: list[str]) -> int:
             print(f"Recovery deferred for {workflow_file} until {hour:02d}:{minute:02d} Asia/Dhaka.")
             continue
         runs = client.workflow_runs(workflow_file)
+        if workflow_file == "epg-refresh.yml":
+            runs = wait_for_epg_runs_to_settle(client, target_date, runs)
         todays = runs_for_date(runs, target_date)
         blocking = [
             run for run in todays
