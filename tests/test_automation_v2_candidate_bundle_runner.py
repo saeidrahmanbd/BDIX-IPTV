@@ -111,5 +111,36 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         run_iptv.assert_called_once()
 
 
+
+    def test_epg_source_failure_preserves_completed_probe_checkpoint_and_marks_run_failed(self):
+        from automation.engines.international.probe_ledger import record_probe
+        from automation.engines.international.stream_failure_policy import Probe
+
+        observation = Probe(
+            date(2026, 11, 14), 404, stream_state="dead",
+            reason="HTTP 404", url_fingerprint="d" * 64,
+        )
+        ledger = record_probe(
+            '{"schema_version":1,"timezone":"Asia/Dhaka","channels":{}}',
+            "probe-me", observation,
+        )
+        iptv, intl, epg = fixture_runs(self.iptv, self.international, ledger)
+
+        with patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv), \\
+             patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=intl), \\
+             patch("automation.core.v2_candidate_runner.build_epg_source_candidate", side_effect=RuntimeError("EPG source timeout")):
+            with self.assertRaisesRegex(RuntimeError, "EPG source timeout"):
+                run_candidate_bundle(self.root, date(2026, 11, 14), "b" * 40, self.store)
+
+        saved = self.store.state["international_probe_ledger"]["channels"]["probe-me"]
+        self.assertEqual(len(saved), 1)
+        self.assertEqual(saved[0]["day"], "2026-11-14")
+        self.assertEqual(saved[0]["url_fingerprint"], "d" * 64)
+        self.assertEqual(self.store.state["run_ledger"]["entries"][0]["status"], "failed")
+        self.assertFalse((self.root / "reports/automation-v2/candidates/transactions").exists())
+        self.assertEqual((self.root / "IPTV-Playlist.m3u").read_text(), self.iptv)
+        self.assertEqual((self.root / "International-Playlist.m3u").read_text(), self.international)
+        self.assertEqual((self.root / "epg/epg.xml").read_text(), self.epg)
+
 if __name__ == "__main__":
     unittest.main()
