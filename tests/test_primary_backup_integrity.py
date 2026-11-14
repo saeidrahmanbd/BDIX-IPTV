@@ -295,7 +295,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             '#EXTINF:-1 tvg-id="sample.bd" tvg-name="Sample TV" '
             'group-title="New Channels" tvg-logo="' + LOGO + '",Sample TV'
         )
-        updated, _, errors = repair_playlist_text("#EXTM3U\\n" + info + "\\nhttps://stream.example/sample.m3u8\\n")
+        updated, _, errors = repair_playlist_text("#EXTM3U\n" + info + "\nhttps://stream.example/sample.m3u8\n")
         self.assertEqual(errors, [])
         repaired = next(line for line in updated.splitlines() if line.startswith("#EXTINF:"))
         keys = re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"', repaired)
