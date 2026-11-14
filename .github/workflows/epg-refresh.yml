@@ -27,7 +27,7 @@ on:
   # GITHUB_TOKEN playlist commits do not reliably start a second workflow via push.
   # Refresh EPG after any completed workflow that may write a maintained playlist; use latest committed main inputs.
   workflow_run:
-    workflows: ["IPTV Playlist Update", "IPTV New Channel Discovery", "International Channel Discovery", "Playlist Logo Repair and Localization", "IPTV Logo Localization"]
+    workflows: ["IPTV Playlist Update", "IPTV New Channel Discovery", "International Channel Discovery", "Playlist Logo Repair and Localization"]
     types: [completed]
     branches: [main]
   schedule:
