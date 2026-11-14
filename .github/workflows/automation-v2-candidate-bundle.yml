@@ -53,6 +53,10 @@ jobs:
         if: always()
         run: |
           python scripts/audit_logo_references.py --output reports/automation-v2/candidate-logo-reference-audit.json
+      - name: Build conservative logo repair proposals
+        if: always()
+        run: |
+          python scripts/build_automation_v2_logo_repair_candidates.py
       - name: Build read-only candidate diagnostics snapshot
         if: always()
         run: |
