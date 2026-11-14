@@ -237,7 +237,6 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         # Keep one canonical primary per service; preserve duplicate stream URLs in Backup.
         duplicate_backup_urls = {
             "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8",
-            "https://d3i5c1nmken8bh.cloudfront.net/Live/Pitaara_TV_SCTE/playlist.m3u8",
             "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ColorsAPAC.m3u8",
             "http://212.5.144.156:8080/espn/index.m3u8",
         }
@@ -246,6 +245,17 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             self.assertEqual(len(matches), 1, url)
             self.assertEqual(matches[0]["attrs"].get("group-title"), "Backup", url)
             self.assertNotIn("tvg-chno", matches[0]["attrs"], url)
+        verified_backup_numbers = {
+            "https://d3i5c1nmken8bh.cloudfront.net/Live/Pitaara_TV_SCTE/playlist.m3u8": "123",
+            "https://cdn.pishow.tv/ott/live/1456/master.m3u8": "161",
+            "https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8": "161",
+        }
+        for url, channel_number in verified_backup_numbers.items():
+            matches = [e for e in entries if e["url"] == url]
+            self.assertEqual(len(matches), 1, url)
+            self.assertEqual(matches[0]["attrs"].get("group-title"), "Backup", url)
+            self.assertEqual(matches[0]["attrs"].get("tvg-chno"), channel_number, url)
+
         for channel_id in ("StarJalsha.in@HD", "Pitaara.in@SD", "Colors.in@HD", "ESPN.us"):
             active = [e for e in entries if e["attrs"].get("tvg-id") == channel_id
                       and e["attrs"].get("group-title") in primary_groups]
