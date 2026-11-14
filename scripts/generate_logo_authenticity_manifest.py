@@ -3,7 +3,6 @@
 import hashlib
 import json
 import re
-import subprocess
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -138,12 +137,8 @@ def main():
     OUT.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {OUT}: {len(records)} entries; statuses={tally}")
 
-    # Newly fetched assets must be staged with the matching playlist reference.
-    try:
-        subprocess.run(["git", "add", "logos/"], check=True)
-        print("Staged repaired logo assets: logos/")
-    except Exception as exc:
-        print(f"Warning: could not stage logo assets automatically: {exc}")
+    # Report generation is deliberately filesystem-only. The calling workflow
+    # or central publisher owns all explicit Git staging decisions.
 
 
 if __name__ == "__main__":
