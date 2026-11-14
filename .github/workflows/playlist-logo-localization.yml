@@ -92,6 +92,8 @@ jobs:
           set -euo pipefail
           python scripts/repair_playlist_logos.py
           python scripts/convert_referenced_logos_to_png.py
+          python scripts/repair_logo_asset_technical_quality.py --fix --max-dimension 1600 --max-bytes 358400
+          python scripts/audit_logo_references.py --output reports/logo-reference-audit.json
           python scripts/generate_logo_authenticity_manifest.py
           python - <<'PY'
           import json
@@ -184,7 +186,7 @@ jobs:
                   raise SystemExit("Logo validation failed: " + name + " " + json.dumps(summaries[name]))
           print(json.dumps(summaries, indent=2))
           PY
-          git add IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json reports/logo-format-conversion.md
+          git add IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json reports/logo-format-conversion.md reports/logo-asset-quality-audit.md reports/logo-reference-audit.json
           if git diff --cached --quiet; then
             echo "No additional local logo changes."
             exit 0
