@@ -18,7 +18,6 @@ on:
       - scripts/normalize_metadata.py
       - scripts/reconcile_backup_metadata_exact_id.py
       - scripts/permanent_removals.py
-      - scripts/enforce_primary_backup_integrity.py
       - scripts/final_playlist_hardening.py
       - scripts/country_verification.py
       - scripts/migrate_external_logos_fixed.py
@@ -48,10 +47,8 @@ on:
       - scripts/validate_international_playlist.py
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
-      - scripts/reclassify_main_playlist_groups.py
       - tests/test_stream_url_identity.py
       - tests/test_main_playlist_protection.py
-      - tests/test_main_playlist_grouping.py
       - tests/test_report_freshness.py
       - tests/test_maintenance_extinf_canonicalization.py
       - tests/test_pre_publish_gate_logo_paths.py
@@ -71,7 +68,6 @@ on:
       - tests/test_channel_numbering.py
       - tests/test_sort_playlists.py
       - tests/test_backup_metadata_reconcile.py
-      - tests/test_primary_backup_integrity.py
   workflow_run:
     workflows: ["Playlist Logo Repair and Localization"]
     types: [completed]
@@ -124,7 +120,6 @@ jobs:
             scripts/maintenance_helpers.py \
             scripts/verify_international_protected.py \
             scripts/protect_main_playlist.py \
-            scripts/reclassify_main_playlist_groups.py \
             scripts/reconcile_playlist_consistency.py \
             scripts/restore_protected_review.py \
             scripts/audit_playlist.py \
@@ -132,7 +127,6 @@ jobs:
             scripts/pre_publish_gate.py \
             scripts/sort_playlists.py \
             scripts/reconcile_backup_metadata_exact_id.py \
-            scripts/enforce_primary_backup_integrity.py \
             scripts/final_playlist_hardening.py \
             scripts/country_verification.py \
             scripts/generate_logo_authenticity_manifest.py \
@@ -162,7 +156,6 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_stream_url_identity.py'
           python -m unittest discover -s tests -p 'test_main_playlist_protection.py'
-          python -m unittest discover -s tests -p 'test_main_playlist_grouping.py'
           python -m unittest discover -s tests -p 'test_report_freshness.py'
           python -m unittest discover -s tests -p 'test_maintenance_extinf_canonicalization.py'
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
@@ -265,7 +258,6 @@ jobs:
           python -m unittest discover -s tests -p 'test_channel_numbering.py'
           python -m unittest discover -s tests -p 'test_sort_playlists.py'
           python -m unittest discover -s tests -p 'test_backup_metadata_reconcile.py'
-          python -m unittest discover -s tests -p 'test_primary_backup_integrity.py'
 
             # Reports: each is written exactly once, from the final playlist bytes.
             python scripts/stream_health.py

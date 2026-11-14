@@ -14,7 +14,7 @@ Historical note: the one-time owner-requested IPTV queue migration and its probe
 | `augment_epg_mapping_from_additional_sources.py` | `epg_coverage`, `generate_epg` |
 | `augment_epg_mapping_from_iptv_org.py` | `fetch_iptv_org_epg`, `generate_epg` |
 | `discover_bd_in_new_queues.py` | `country_verification`, `stream_url_identity` |
-| `enforce_primary_backup_integrity.py` | `permanent_removals`, `stream_url_identity`, `logo_asset_naming` |
+| `enforce_primary_backup_integrity.py` | RETIRED 2026-11-14 — contained automatic promotion, quarantine, regrouping and removal logic incompatible with owner-curated IPTV rows |
 | `epg_coverage.py` | `official_epg_sources`, `epg_source_cache`, `epg_mapping_policy`, `generate_epg` |
 | `fetch_iptv_org_epg.py` | `generate_epg` |
 | `final_playlist_hardening.py` | `stream_url_identity`, `country_verification`, `discover_bd_in_new_queues` |
@@ -22,7 +22,7 @@ Historical note: the one-time owner-requested IPTV queue migration and its probe
 | `migrate_external_logos_fixed.py` | `logo_asset_naming`, `logo_embedded_png` |
 | `playlist_policy_repair.py` | `permanent_removals`, `stream_url_identity` |
 | `probe_bangladesh_official_schedule_pages.py` | `official_epg_sources` |
-| `reclassify_main_playlist_groups.py` | `country_verification`, `discover_bd_in_new_queues` |
+| `reclassify_main_playlist_groups.py` | RETIRED 2026-11-14 — automatic IPTV regrouping conflicts with the owner-curated row/group preservation rule |
 | `reconcile_playlist_consistency.py` | `stream_url_identity` |
 | `restore_protected_review.py` | `permanent_removals`, `stream_url_identity` |
 | `run_bd_discovery_with_policy.py` | `discover_bd_in_new_queues` |
