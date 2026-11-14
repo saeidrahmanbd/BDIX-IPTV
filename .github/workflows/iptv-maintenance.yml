@@ -10,7 +10,6 @@ on:
     branches: [main]
     paths:
       - .github/workflows/iptv-maintenance.yml
-      - maintenance/owner-requested-iptv-migration.json
       - scripts/maintenance_helpers.py
       - scripts/reconcile_playlist_consistency.py
       - scripts/classify_international_backups.py
@@ -49,10 +48,7 @@ on:
       - scripts/validate_international_playlist.py
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
-      - scripts/renumber_active_channels.py
       - scripts/reclassify_main_playlist_groups.py
-      - scripts/probe_owner_requested_main_queues.py
-      - scripts/migrate_owner_requested_main_queues.py
   workflow_run:
     workflows: ["Playlist Logo Repair and Localization"]
     types: [completed]
@@ -107,15 +103,12 @@ jobs:
             scripts/verify_international_protected.py \
             scripts/protect_main_playlist.py \
             scripts/reclassify_main_playlist_groups.py \
-            scripts/probe_owner_requested_main_queues.py \
-            scripts/migrate_owner_requested_main_queues.py \
             scripts/reconcile_playlist_consistency.py \
             scripts/restore_protected_review.py \
             scripts/audit_playlist.py \
             scripts/playlist_order_policy.py \
             scripts/pre_publish_gate.py \
             scripts/sort_playlists.py \
-            scripts/renumber_active_channels.py \
             scripts/reconcile_backup_metadata_exact_id.py \
             scripts/enforce_primary_backup_integrity.py \
             scripts/final_playlist_hardening.py \
@@ -148,8 +141,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_stream_url_identity.py'
           python -m unittest discover -s tests -p 'test_main_playlist_protection.py'
           python -m unittest discover -s tests -p 'test_main_playlist_grouping.py'
-          python -m unittest discover -s tests -p 'test_owner_requested_main_migrations.py'
-           python -m unittest discover -s tests -p 'test_report_freshness.py'
+          python -m unittest discover -s tests -p 'test_report_freshness.py'
           python -m unittest discover -s tests -p 'test_maintenance_extinf_canonicalization.py'
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
@@ -179,21 +171,7 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          # Durable one-time owner authorization. The marker survives superseded
-          # push/workflow_run events and scheduled retries. It is considered consumed
-          # only after the migration report is published to main; a failed or skipped
-          # run therefore cannot silently discard the owner's authorization.
-          OWNER_MIGRATION_REQUESTED=false
-          MIGRATION_REQUEST_FILE="maintenance/owner-requested-iptv-migration.json"
-          MIGRATION_COMPLETION_REPORT="reports/owner-requested-main-migrations.md"
-          if python -c 'import json,sys; d=json.load(open(sys.argv[1])); sys.exit(0 if d.get("status") == "authorized" and d.get("playlist") == "IPTV-Playlist.m3u" else 1)' "$MIGRATION_REQUEST_FILE"; then
-            OWNER_MIGRATION_REQUESTED=true
-            touch /tmp/iptv-owner-migration-authorized
-            echo "::notice::One-time owner authorization active for exact-URL-approved IPTV reconciliation."
-          else
-            rm -f /tmp/iptv-owner-migration-authorized
-            echo "No pending one-time owner migration authorization."
-          fi
+          echo 'Owner-curated IPTV mode: no automatic queue promotion, structural migration or renumbering.'
           # ------------------------------------------------------------------
           # Ordering contract (enforced by tests/test_maintenance_report_order.py)
           #   1. snapshots           (once per attempt)
@@ -213,38 +191,18 @@ jobs:
             python scripts/country_verification.py validate IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
-            # The one-time owner request is scoped strictly to IPTV-Playlist.m3u.
-            # Do not let this authorization mutate International-Playlist.m3u or shared
-            # logo assets used by it. Routine non-owner maintenance retains the separate
-            # International playlist maintenance path.
-            if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then
-              # reorganize_international_playlist.py reads tvg-country/tvg-language,
-              # so the cross-playlist backfill must run before it.
-              python scripts/backfill_cross_playlist_metadata.py
-              python scripts/reorganize_international_playlist.py
-              python scripts/enforce_playlist_attribution.py International-Playlist.m3u
-              python scripts/validate_international_playlist.py
-            fi
+            # International metadata/reorganization is maintained under its own
+            # country/genre policy. IPTV receives metadata/logo-only repairs.
+            python scripts/backfill_cross_playlist_metadata.py
+            python scripts/reorganize_international_playlist.py
+            python scripts/enforce_playlist_attribution.py International-Playlist.m3u
+            python scripts/validate_international_playlist.py
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
-            # Routine main-playlist maintenance is metadata/logo-only. A separately
-            # authorized one-time owner commit enables the exact-URL-approved migration
-            # branch below; the protection gate still forbids URL loss or replacement.
-            # International-Playlist.m3u is reorganized separately under its own policy.
-            # These report-coupled tools are deliberately last. Their playlist changes are
-            # idempotent metadata-only repairs; no later step may rewrite either playlist.
+            # Report-coupled tools run last; no structural IPTV mutation, queue
+            # promotion, category reassembly or renumbering is permitted.
             python scripts/iptv_metadata_backfill.py
-            if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then
-              python scripts/backfill_cross_playlist_metadata.py
-            fi
-            # Existing IPTV rows are never structurally migrated, sorted or renumbered.
-            if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then
-              python scripts/repair_logo_asset_technical_quality.py --fix
-            else
-              # Apply only the numbering normalization explicitly authorized for
-              # this one-time migration. Existing positive primary numbers and
-              # every stream URL remain unchanged; new primary rows get free IDs.
-              python scripts/renumber_active_channels.py IPTV-Playlist.m3u
-            fi
+            python scripts/backfill_cross_playlist_metadata.py
+            python scripts/repair_logo_asset_technical_quality.py --fix
             python scripts/verify_international_protected.py verify
             # Metadata/logo backfills can append attributes after the initial normalizer.
             # Canonicalize EXTINF attribute order once, after every mutator, without
@@ -261,11 +219,6 @@ jobs:
             rm -rf fixed_output
             echo 'Non-destructive maintenance mode: protecting existing IPTV channel rows.'
             python scripts/protect_main_playlist.py snapshot IPTV-Playlist.m3u /tmp/iptv-main-protection.json
-            if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then
-              python scripts/probe_owner_requested_main_queues.py
-              python scripts/migrate_owner_requested_main_queues.py
-              test -s "$MIGRATION_COMPLETION_REPORT"
-            fi
             run_mutations
             python scripts/protect_main_playlist.py verify IPTV-Playlist.m3u /tmp/iptv-main-protection.json
             set +e
@@ -285,11 +238,6 @@ jobs:
               GATE_STATUS=$?
               set -e
             fi
-            # The durable authorization marker must remain present even if a prior
-            # mutation helper touched the maintenance directory; restore the tracked
-            # copy from this commit before the report-order assertion reads it.
-            git checkout HEAD -- "$MIGRATION_REQUEST_FILE"
-            test -s "$MIGRATION_REQUEST_FILE"
             # Data-level metadata assertions run against the final playlist bytes.
             python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
           python -m unittest discover -s tests -p 'test_channel_numbering.py'
@@ -316,11 +264,7 @@ jobs:
               echo "Pre-publish gate status: $GATE_STATUS"
               exit 1
             fi
-            if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then
-              python -c 'import json,sys; from datetime import datetime,timezone; p=sys.argv[1]; d=json.load(open(p)); d["status"]="completed"; d["completed_at"]=datetime.now(timezone.utc).isoformat(); d["completion_report"]="reports/owner-requested-main-migrations.md"; open(p,"w").write(json.dumps(d,ensure_ascii=False,indent=2)+"\\n")' "$MIGRATION_REQUEST_FILE"
-            fi
             git add IPTV-Playlist.m3u International-Playlist.m3u reports/ logos/ assets/dashboard.svg
-            if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then git add "$MIGRATION_REQUEST_FILE"; fi
             python -c 'import sys; sys.path.insert(0,"scripts"); from pathlib import Path; from collections import Counter; from stream_url_identity import stream_url_key; p=Path("IPTV-Playlist.m3u"); urls=[stream_url_key(s) for s in (x.strip() for x in p.read_text(encoding="utf-8",errors="replace").splitlines()) if s.startswith(("http://","https://"))]; d=[u for u,n in Counter(urls).items() if n>1]; print(f"::error::Duplicate stream URLs remain: {len(d)} unique URLs are repeated.") if d else print(f"URL uniqueness check passed: {len(urls)} stream URLs, 0 duplicates."); raise SystemExit(1 if d else 0)'
             if git diff --cached --quiet; then echo 'No maintenance changes to publish.'; exit 0; fi
             git commit -m 'Run IPTV playlist maintenance'
@@ -374,6 +318,5 @@ jobs:
             reports/stream-health.md
             reports/stream-risk-review.md
             reports/pre-publish-gate.md
-            reports/owner-requested-main-migrations.md
           if-no-files-found: warn
           retention-days: 14
