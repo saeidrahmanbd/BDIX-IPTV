@@ -1,14 +1,7 @@
 name: Automation V2 Missed-Run Recovery
 
 on:
-  schedule:
-    # Bangladesh time: 09:45, then retry checkpoints through 11:00.
-    - cron: '45 3 * * *'
-    - cron: '0 4 * * *'
-    - cron: '15 4 * * *'
-    - cron: '30 4 * * *'
-    - cron: '45 4 * * *'
-    - cron: '0 5 * * *'
+  # V2 recovery is paused with candidate execution; retain manual recovery for explicit diagnostics.
   workflow_dispatch:
 
 permissions:
