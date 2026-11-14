@@ -39,7 +39,7 @@ class ApprovedLogoCandidateTests(unittest.TestCase):
             root = Path(tmp)
             playlist, manifest = self._fixture(root)
             before = playlist.read_bytes()
-            result = build_candidates(root, manifest, root / "reports" / "candidate")
+            result = build_candidates(root, manifest, root / "reports" / "automation-v2" / "candidate)
             candidate = root / result["changed_playlists"][0]["candidate_path"]
             self.assertIn('tvg-logo="logos/Exact Channel.png"', candidate.read_text())
             self.assertEqual(playlist.read_bytes(), before)
@@ -54,7 +54,7 @@ class ApprovedLogoCandidateTests(unittest.TestCase):
             data["approvals"][0]["channel_name"] = "Different Channel"
             manifest.write_text(json.dumps(data))
             with self.assertRaisesRegex(ValueError, "channel identity changed"):
-                build_candidates(root, manifest, root / "reports" / "candidate")
+                build_candidates(root, manifest, root / "reports" / "automation-v2" / "candidate)
             self.assertEqual(playlist.read_bytes().count(b"old.png"), 1)
 
     def test_modified_asset_hash_fails_closed(self):
@@ -63,7 +63,7 @@ class ApprovedLogoCandidateTests(unittest.TestCase):
             playlist, manifest = self._fixture(root)
             (root / "logos" / "Exact Channel.png").write_bytes(b"changed")
             with self.assertRaisesRegex(ValueError, "SHA-256 does not match"):
-                build_candidates(root, manifest, root / "reports" / "candidate")
+                build_candidates(root, manifest, root / "reports" / "automation-v2" / "candidate)
             self.assertEqual(playlist.read_bytes().count(b"old.png"), 1)
 
 
@@ -73,7 +73,7 @@ class ApprovedLogoCandidateTests(unittest.TestCase):
             playlist, manifest = self._fixture(root)
             playlist.write_text(playlist.read_text() + "# changed\\n")
             with self.assertRaisesRegex(ValueError, "source playlist SHA-256 changed"):
-                build_candidates(root, manifest, root / "reports" / "candidate")
+                build_candidates(root, manifest, root / "reports" / "automation-v2" / "candidate)
 
     def test_path_traversal_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -90,7 +90,7 @@ class ApprovedLogoCandidateTests(unittest.TestCase):
                 "asset_sha256": "0" * 64
             }]}))
             with self.assertRaisesRegex(ValueError, "resolve to an existing file under logos/"):
-                build_candidates(root, manifest, root / "reports" / "candidate")
+                build_candidates(root, manifest, root / "reports" / "automation-v2" / "candidate)
 
 
 if __name__ == "__main__":
