@@ -53,6 +53,10 @@ jobs:
         if: always()
         run: |
           python scripts/audit_logo_references.py --output reports/automation-v2/candidate-logo-reference-audit.json
+      - name: Build read-only candidate diagnostics snapshot
+        if: always()
+        run: |
+          python scripts/build_automation_v2_diagnostics_snapshot.py
       - name: Upload candidate bundle and diagnostics
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
