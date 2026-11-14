@@ -9,7 +9,7 @@ import argparse, ast, json, re
 from pathlib import Path
 
 WORKFLOW_PYTHON = re.compile(r"(?:python(?:3(?:\.\d+)?)?)\s+([A-Za-z0-9_./-]+\.py)")
-WORKFLOW_ACTION = re.compile(r"^\\s*(?:-\\s*)?uses:\\s*([^\\s#]+)")
+WORKFLOW_ACTION = re.compile(r"^\s*(?:-\s*)?uses:\s*([^\s#]+)")
 SUBPROCESS_NAMES = {"run", "call", "check_call", "check_output", "Popen", "system", "popen"}
 
 def _literal_command(node):
