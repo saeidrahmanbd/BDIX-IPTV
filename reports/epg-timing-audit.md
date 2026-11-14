@@ -22,7 +22,7 @@ Automatic corrections require four repeated title/duration matches, >=75% agreem
 
 ### Large source-offset proposals — manual review only
 
-- **Nepal 1** (Nepal1.in@SD): source ID ts567 has a proposed -24-hour displacement from 12/12 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
+- **Nepal 1** (Nepal1.in@SD): source ID ts567 has a proposed -24-hour displacement from 11/11 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
 - **Pitaara** (Pitaara.in): source ID Pitaara.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **Pitaara** (Pitaara.in@SD): source ID Pitaara.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **Star Gold Select** (StarGoldSelect.in@HD): source ID StarGoldSelect.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
