@@ -47384,7 +47384,7 @@
         "engine": "bundle",
         "idempotency_key": "8d32e8cfb7a6d73eb653f110aaada2b7b2742eb9fb4c63e7d9982f61e592c7f8",
         "started_at": "2026-11-14T11:48:31.885074+06:00",
-        "status": "running"
+        "status": "succeeded"
       }
     ],
     "schema_version": 1,
