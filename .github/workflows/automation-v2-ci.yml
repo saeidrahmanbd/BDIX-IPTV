@@ -119,6 +119,7 @@ jobs:
       - name: Independently verify dashboard metric equivalence
         run: python scripts/audit_automation_v2_dashboard_equivalence.py --strict
       - name: Upload dashboard equivalence report
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: automation-v2-dashboard-equivalence
