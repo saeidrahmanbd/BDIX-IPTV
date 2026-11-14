@@ -54,6 +54,10 @@ def scan_python(path: Path, relative: str) -> list[dict]:
                     alias.asname or alias.name for alias in node.names
                     if alias.name in OS_PROCESS_NAMES
                 )
+    function_nodes=[node for node in ast.walk(tree) if isinstance(node,(ast.FunctionDef,ast.AsyncFunctionDef))]
+    def owning_function(line):
+        matches=[node for node in function_nodes if node.lineno <= line <= (node.end_lineno or node.lineno)]
+        return min(matches,key=lambda node:(node.end_lineno or node.lineno)-node.lineno).name if matches else "<module>"
     found=[]
     for node in ast.walk(tree):
         if not isinstance(node, ast.Call):
@@ -82,11 +86,12 @@ def scan_python(path: Path, relative: str) -> list[dict]:
         )
         if command and not shell_boundary:
             target=next((part for part in command[1:] if part.endswith(".py")), None)
-            found.append({"source":relative,"line":node.lineno,"kind":"subprocess_literal",
-                          "target":target,"command":command})
+            found.append({"source":relative,"line":node.lineno,"function":owning_function(node.lineno),
+                          "kind":"subprocess_literal","target":target,"command":command,"shell_boundary":False})
         else:
-            found.append({"source":relative,"line":node.lineno,"kind":"subprocess_dynamic",
-                          "target":None,"detail":"shell or dynamically constructed command"})
+            found.append({"source":relative,"line":node.lineno,"function":owning_function(node.lineno),
+                          "kind":"subprocess_dynamic","target":None,"shell_boundary":shell_boundary,
+                          "detail":"shell or dynamically constructed command"})
     return found
 
 def build_inventory(root: Path) -> dict:
@@ -172,6 +177,25 @@ def build_inventory(root: Path) -> dict:
             action["metadata_reviewed"]=bool(review)
             if review:
                 action["metadata"]=review
+    process_lock_path=root/"automation"/"policy"/"process-execution-lock.json"
+    try:
+        process_lock=json.loads(process_lock_path.read_text(encoding="utf-8"))
+    except (OSError,json.JSONDecodeError):
+        process_lock={}
+    process_reviews={
+        item.get("key"):item for item in process_lock.get("boundaries",[])
+        if isinstance(item,dict) and isinstance(item.get("key"),str)
+    }
+    for item in nested:
+        if item["kind"]=="subprocess_dynamic" and item.get("execution_scope")!="test_only":
+            key=f'{item["source"]}#{item.get("function","<module>")}'
+            review=process_reviews.get(key)
+            item["process_reviewed"]=bool(
+                review and review.get("review_status")=="reviewed_static_command_boundary"
+                and review.get("shell_boundary") is item.get("shell_boundary")
+            )
+            if review:
+                item["process_review"]=review
     external_boundaries={}
     for action in workflow_actions:
         if action["kind"]!="external_workflow_action":
@@ -186,9 +210,20 @@ def build_inventory(root: Path) -> dict:
         record["workflows"].append({"workflow":action["workflow"],"line":action["line"]})
     known={item["target"] for item in workflow_entries}
     unresolved_kinds={"subprocess_dynamic","parse_error","dynamic_code_execution","workflow_shell_boundary"}
-    runtime_unresolved=[item for item in nested if item.get("execution_scope")!="test_only" and item["kind"] in unresolved_kinds]
+    runtime_unresolved=[
+        item for item in nested
+        if item.get("execution_scope")!="test_only"
+        and item["kind"] in unresolved_kinds
+        and not (item["kind"]=="subprocess_dynamic" and item.get("process_reviewed"))
+    ]
     test_only_unresolved=[item for item in nested if item.get("execution_scope")=="test_only" and item["kind"] in unresolved_kinds]
-    unresolved=runtime_unresolved + list(external_boundaries.values()) + [
+    mutable_external_sources=[
+        {"kind":"mutable_external_source_boundary","source":item["key"],
+         "dependency":item.get("external_dependency"),"ref_policy":item.get("external_ref_policy"),
+         "effect":item.get("side_effect")}
+        for item in process_reviews.values() if item.get("external_dependency")
+    ]
+    unresolved=runtime_unresolved + list(external_boundaries.values()) + mutable_external_sources + [
         item for item in workflow_actions
         if item["kind"]=="local_workflow_action" and not item["exists"]
     ]
@@ -212,6 +247,9 @@ def build_inventory(root: Path) -> dict:
             "nested_subprocess_calls":len(nested),
             "dynamic_or_unparsed_calls":len(unresolved),
             "test_only_dynamic_or_unparsed_calls":len(test_only_unresolved),
+            "reviewed_process_execution_boundaries":sum(1 for item in nested if item.get("process_reviewed")),
+            "unreviewed_process_execution_boundaries":sum(1 for item in nested if item["kind"]=="subprocess_dynamic" and item.get("execution_scope")!="test_only" and not item.get("process_reviewed")),
+            "mutable_external_source_dependencies":len(mutable_external_sources),
             "missing_literal_targets":len(missing),
         },
         "unresolved":unresolved,
