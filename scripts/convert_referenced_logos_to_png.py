@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Convert every referenced local non-PNG playlist logo to a validated PNG.
+"""Convert every supported image under logos/ to validated PNG files.
 
-Only tvg-logo values are rewritten. Original image files are retained for
-rollback/provenance; channel rows, metadata, group assignments, channel numbers,
-and stream URLs are verified unchanged before any playlist is written.
+Playlist tvg-logo references are updated without changing any other metadata.
+After every PNG and playlist update is validated, non-PNG source files are
+removed from logos/; Git history remains the rollback/provenance source.
 """
 from __future__ import annotations
 
@@ -145,6 +145,7 @@ def convert_referenced_logos(
     logos_dir = root / "logos"
     asset_cache: dict[str, tuple[str, bytes]] = {}
     pending_assets: dict[Path, bytes] = {}
+    source_files_to_remove: set[Path] = set()
     updated_playlists: dict[Path, str] = {}
     source_formats: dict[str, int] = {}
     updated_references = 0
@@ -162,6 +163,7 @@ def convert_referenced_logos(
 
         try:
             png_bytes = image_bytes_to_png(source_path.read_bytes(), extension)
+        source_files_to_remove.add(source_path)
         except Exception as exc:
             raise ValueError(
                 f"failed to convert logo {relative}: {type(exc).__name__}: {exc}"
@@ -238,6 +240,13 @@ def convert_referenced_logos(
             with playlist_path.open("w", encoding="utf-8", newline="") as stream:
                 stream.write(updated)
 
+    # Remove originals only after all generated PNGs and playlist writes validate.
+    # Git history preserves the exact original bytes for rollback/provenance.
+    removed_source_count = 0
+    for source_path in sorted(source_files_to_remove):
+        source_path.unlink()
+        removed_source_count += 1
+
     converted_count = sum(source_formats.values())
     remaining_non_png = 0
     for updated in updated_playlists.values():
@@ -256,7 +265,7 @@ def convert_referenced_logos(
         "updated_references": updated_references,
         "source_formats": dict(sorted(source_formats.items())),
         "png_assets_created": len(pending_assets),
-        "original_assets_retained": converted_count,
+        "original_assets_removed": removed_source_count,
         "remaining_non_png_references": remaining_non_png,
     }
     if report_path is None:
@@ -274,10 +283,11 @@ def convert_referenced_logos(
             f"- Playlist logo references updated: **{updated_references}**",
             f"- New PNG assets created: **{len(pending_assets)}**",
             f"- Supported non-PNG image assets found in logos/: **{inventory_image_assets}**",
-            "- Original source assets retained for rollback/provenance: **Yes**",
+            f"- Non-PNG source files removed after successful validation: **{removed_source_count}**",
+            "- Rollback/provenance: **Original bytes remain recoverable from Git history**",
             "- Non-PNG active playlist references remaining: **0**",
             "",
-            "Every supported image asset under logos/ was converted to a validated PNG counterpart. Active local tvg-logo metadata was updated to PNG paths. Original files remain for rollback/provenance. Channel rows, stream URLs, IDs, groups, and channel numbers were preserved.",
+            "Every supported image asset under logos/ was converted to a validated PNG. Active local tvg-logo metadata was updated to PNG paths. Non-PNG source files were removed only after successful conversion and playlist validation; their exact originals remain recoverable from Git history. Channel rows, stream URLs, IDs, groups, and channel numbers were preserved.",
             "",
             "## Source formats",
             "",
