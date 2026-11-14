@@ -1,12 +1,13 @@
 """Regression tests for official Bangladesh schedule-page discovery."""
 import sys
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from official_epg_sources import _RtvArticleLinkParser
+from official_epg_sources import _RtvArticleLinkParser, _parse_rtv_daily_programmes
 
 
 class RtvArticleLinkParserTests(unittest.TestCase):
@@ -43,6 +44,36 @@ class RtvArticleLinkParserTests(unittest.TestCase):
             '<a href="/news/123">বাংলাদেশ-পাকিস্তানের ম্যাচসহ টিভিতে আজকের খেলা</a>'
         )
         self.assertEqual(links, [])
+
+
+
+class RtvDailyScheduleParsingTests(unittest.TestCase):
+    def test_bengali_minute_suffix_is_consumed_without_polluting_programme_title(self):
+        schedule = """
+        শনিবার, ১৪ নভেম্বর ২০২৬, ৩০ কার্তিক ১৪৩৩।
+        সকাল ৯টায় লাইভ টকশো ‘আজ পত্রিকায়’।
+        সকাল ৯টা ৪৫ মিনিটে ‘সকালের সংবাদ’।
+        সকাল ১০টা ১০ মিনিটে বাংলা ছায়াছবি ‘স্বপ্নের পৃথিবী’।
+        দুপুর ২টা ১০ মিনিটে বাংলা ছায়াছবি ‘কিলহিম’।
+        বিকেল ৫টায় কৃষি বিষয়ক অনুষ্ঠান ‘কৃষি ও কৃষ্টি’।
+        সন্ধ্যা ৬টা ৫মিনিটে শিশু-কিশোরদের বাংলা গানের প্রতিযোগিতামূলক আয়োজন ‘লিটল স্টার সিজন-২’।
+        সন্ধ্যা ৭টা ৩০ মিনিটে ‘স্টেপ গ্ল্যামার শো’।
+        রাত ৮টায় নির্বাচিত নাটক ‘খাল কেটে কুমির’।
+        রাত ৯টা ২০ মিনিটে ধারাবাহিক নাটক ‘মোস্তফা’।
+        রাত ১০টায় ধারাবাহিক নাটক ‘ম্যানেজ মাস্টার’।
+        রাত ১০টা ৪৫ মিনিটে ‘রাতের সংবাদ’।
+        রাত ১১টা ২৫ মিনিটে ‘রোড টু ডেমোক্রেসি’।
+        রাত ১২টা ১৫ মিনিটে টকশো ‘মনের কথা’।
+        রাত ১টায় ‘মধ্যরাতের সংবাদ’।
+        """
+        programmes = _parse_rtv_daily_programmes(
+            schedule, datetime(2026, 11, 14, 0, 0, tzinfo=timezone.utc)
+        )
+        titles = [programme["title"] for programme in programmes]
+        self.assertGreaterEqual(len(programmes), 8)
+        self.assertIn("‘সকালের সংবাদ’", titles)
+        self.assertIn("‘রাতের সংবাদ’", titles)
+        self.assertTrue(all(not title.startswith("ে") for title in titles))
 
 
 if __name__ == "__main__":
