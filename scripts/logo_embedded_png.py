@@ -1,7 +1,8 @@
 """Recover an intact PNG stream embedded in an SVG data URI.
 
-Only two structural defects are repaired: an incorrect IDAT CRC and a
-truncated terminal IEND chunk. Pixel data is never modified. Callers must
+Only narrowly bounded structural defects are repaired: an incorrect IDAT
+CRC, a terminal IEND truncation, or an IDAT length that overlaps at most four
+bytes of a complete terminal IEND chunk. Pixel data is never modified. Callers must
 still decode the returned PNG fully before accepting it.
 """
 from __future__ import annotations
@@ -40,6 +41,16 @@ def recover_embedded_png_from_svg(svg_bytes: bytes) -> bytes | None:
         length = struct.unpack(">I", raw[offset:offset + 4])[0]
         chunk_type = raw[offset + 4:offset + 8]
         data_start = offset + 8
+        # Some embedded PNGs have an IDAT length inflated by a few bytes, so
+        # the declared payload consumes the beginning of an otherwise complete
+        # terminal IEND chunk. Recover only when the exact canonical IEND is at
+        # EOF and the corrected IDAT length differs by at most four bytes.
+        if chunk_type == b"IDAT" and raw.endswith(PNG_IEND):
+            iend_offset = len(raw) - len(PNG_IEND)
+            candidate_data_end = iend_offset - 4
+            candidate_length = candidate_data_end - data_start
+            if 0 <= length - candidate_length <= 4:
+                length = candidate_length
         data_end = data_start + length
         crc_end = data_end + 4
         if crc_end > len(raw):
