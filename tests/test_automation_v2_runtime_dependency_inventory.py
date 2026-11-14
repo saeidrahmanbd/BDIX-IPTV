@@ -90,7 +90,7 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             report=build_inventory(root)
             boundary=next(x for x in report["nested_subprocess_calls"]
                           if x["kind"]=="workflow_shell_boundary")
-            self.assertIn("\necho first\n", boundary["detail"])
+            self.assertIn("\n          echo first\n", boundary["detail"])
             self.assertIn(body_line, boundary["detail"])
             self.assertGreater(len(boundary["detail"]), 5000)
 
