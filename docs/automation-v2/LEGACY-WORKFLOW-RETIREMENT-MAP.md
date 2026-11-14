@@ -6,7 +6,7 @@ This is a migration plan only. No legacy workflow is disabled, edited or retired
 
 | Legacy workflow | Exact legacy file | Current production responsibility | V2 replacement / owner | Retirement gate |
 |---|---|---|---|---|
-| Discovery Schedule Watchdog | `.github/workflows/discovery-schedule-watchdog.yml` | Dispatches multiple workflows at checkpoints; second scheduling authority | A single durable V2 scheduler using the run ledger. The candidate-bundle workflow currently has its own schedule, but a missed-run recovery scheduler is not yet implemented. | Prove idempotent scheduling, missed-run recovery, durable reservations and one-writer queue behavior. |
+| Discovery Schedule Watchdog | `.github/workflows/discovery-schedule-watchdog.yml` | Dispatches multiple workflows at checkpoints; second scheduling authority | A V2 missed-run recovery dispatcher at `.github/workflows/automation-v2-missed-run-recovery.yml` checks current-main candidate runs using Bangladesh local date and dispatches only when the current commit has no successful or active run. The candidate runner's durable ledger remains the idempotency authority. | Prove idempotent scheduling, missed-run recovery, durable reservations and one-writer queue behavior. |
 | IPTV Playlist Update | `.github/workflows/iptv-maintenance.yml` | Monolithic maintenance writes both playlists, reports, logos and dashboard | `.github/workflows/automation-v2-candidate-bundle.yml` plus `.github/workflows/automation-v2-prepare-publication-pr.yml`. Candidate generation is shadow-only; the PR preparer is review-only. | Prove exact workflow-to-script parity, IPTV owner-protection invariants, candidate validation and rollback. |
 | IPTV New Channel Discovery | `.github/workflows/new-channel-discovery.yml` | Writes IPTV discovery rows and reports | IPTV discovery stage in `automation/core/v2_candidate_runner.py`; candidate outputs append only to manual-review queues. | Prove real source-adapter coverage, duplicate handling, queue visibility and candidate fixtures. |
 | International Channel Discovery | `.github/workflows/international-channel-discovery.yml` | Writes International playlist and reports | International discovery stage in `automation/core/v2_candidate_runner.py`. | Prove real source-adapter coverage, country/identity/category rules and candidate fixtures. |
@@ -49,7 +49,8 @@ This is a migration plan only. No legacy workflow is disabled, edited or retired
 - The immutable production-baseline dry run has passed with zero production changes.
 - A targeted EPG-timeout/probe-checkpoint recovery test, rollback-policy tests and workflow concurrency-boundary tests are proposed in PR #154; their latest CI results must pass before merge.
 - The rollback PR preparer is a recovery mechanism for already-merged candidate PRs, not an automatic publisher.
-- Not ready for production cutover: missed-run scheduler, complete logo candidate engines, dashboard snapshot consumer, exhaustive runtime dependency tracing, full workflow equivalence and rollback acceptance remain open.
+- Missed-run recovery dispatcher is implemented in the current review branch; it checks current-main SHA and Bangladesh-local run date, avoids overlapping an active run, and retries failed/missing runs. Its CI and live dispatch behavior must be verified before relying on it.
+- Not ready for production cutover: complete logo candidate engines, dashboard snapshot consumer, exhaustive runtime dependency tracing, full workflow equivalence and production-scale rollback acceptance remain open.
 
 ## Required cutover sequence
 

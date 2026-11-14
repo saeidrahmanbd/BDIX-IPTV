@@ -33,6 +33,14 @@ class WorkflowSafetyTests(unittest.TestCase):
         self.assertEqual(concurrency_group(publication), "automation-v2-publication-pr")
         self.assertEqual(concurrency_group(rollback), "automation-v2-publication-pr")
 
+    def test_missed_run_recovery_is_non_cancelling_and_has_actions_write_only(self):
+        source = workflow_text("automation-v2-missed-run-recovery.yml")
+        self.assertEqual(concurrency_group(source), "automation-v2-missed-run-recovery")
+        self.assertIn("actions: write", source)
+        self.assertIn("contents: read", source)
+        self.assertNotIn("contents: write", source)
+        self.assertIn("scripts/recover_automation_v2_candidate_run.py", source)
+
     def test_candidate_bundle_has_no_production_push_or_pull_request_authority(self):
         source = workflow_text("automation-v2-candidate-bundle.yml")
         runner = (ROOT / "scripts" / "run_automation_v2_candidate_bundle.py").read_text(encoding="utf-8")

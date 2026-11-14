@@ -16,10 +16,12 @@ on:
       - 'scripts/run_automation_v2_dry_run.py'
       - 'scripts/prepare_automation_v2_rollback_pr.py'
       - 'scripts/run_automation_v2_candidate_bundle.py'
+      - 'scripts/recover_automation_v2_candidate_run.py'
       - 'scripts/prepare_automation_v2_rollback_pr.py'
       - '.github/workflows/automation-v2-candidate-bundle.yml'
       - '.github/workflows/automation-v2-ci.yml'
       - '.github/workflows/automation-v2-prepare-rollback-pr.yml'
+      - '.github/workflows/automation-v2-missed-run-recovery.yml'
   pull_request:
     branches:
       - main
@@ -29,8 +31,10 @@ on:
       - 'tests/test_automation_v2_*.py'
       - 'scripts/audit_logo_references.py'
       - 'scripts/run_automation_v2_dry_run.py'
+      - 'scripts/recover_automation_v2_candidate_run.py'
       - '.github/workflows/automation-v2-ci.yml'
       - '.github/workflows/automation-v2-prepare-rollback-pr.yml'
+      - '.github/workflows/automation-v2-missed-run-recovery.yml'
       - 'IPTV-Playlist.m3u'
       - 'International-Playlist.m3u'
       - 'epg/epg.xml'
