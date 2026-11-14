@@ -73,5 +73,7 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
                         if x["kind"]=="workflow_shell_boundary"]
             self.assertEqual(len(boundaries),2)
             self.assertGreaterEqual(report["summary"]["dynamic_or_unparsed_calls"],2)
+            build_block=next(x for x in boundaries if "npm ci" in x["detail"])
+            self.assertIn("node build.js",build_block["detail"])
 
 if __name__=="__main__": unittest.main()
