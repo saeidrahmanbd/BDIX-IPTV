@@ -8,65 +8,28 @@ Automatic corrections require four repeated title/duration matches, >=75% agreem
 - **Bhojpuri Cinema** (BhojpuriCinema.in@SD): source ID BhojpuriCinema.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **Colors Cineplex Superhits** (ColorsCineplexSuperhits.in): source ID ColorsCineplexSuperhits.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **Colors Cineplex Superhits** (ColorsCineplexSuperhits.in@SD): source ID ColorsCineplexSuperhits.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
+- **DD Arun Prabha** (DDArunPrabha.in@SD): source ID DDArunPrabha.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Bangla** (DDBangla.in@SD): source ID DDBangla.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Girnar** (DDGirnar.in@SD): source ID DDGirnar.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-- **DD Haryana** (DDHaryana.in@SD): source ID DDHaryana.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Kashir** (DDKashir.in@SD): source ID DDKashir.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
+- **DD Madhya Pradesh** (DDMadhyaPradesh.in@SD): source ID DDMadhyaPradesh.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Malayalam** (DDMalayalam.in@SD): source ID DDMalayalam.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Punjabi** (DDPunjabi.in@SD): source ID DDPunjabi.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Sahyadri** (DDSahyadri.in@SD): source ID DDSahyadri.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Saptagiri** (DDSaptagiri.in@SD): source ID DDSaptagiri.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Yadagiri** (DDYadagiri.in@SD): source ID DDYadagiri.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-
-### Large source-offset proposals — manual review only
-
-- **Enter10 Bangla** (Enter10Bangla.in): source ID ENTER10.BANGLA.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
 - **Fakt Marathi** (FaktMarathi.in@SD): source ID FaktMarathi.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-- **Manoranjan TV** (ManoranjanTV.in@SD): source ID ManoranjanTV.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-- **Nepal 1** (Nepal1.in@SD): source ID Nepal1.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 
 ### Large source-offset proposals — manual review only
 
-- **Nepal 1** (Nepal1.in@SD): source ID NEPAL.1.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
+- **Nepal 1** (Nepal1.in@SD): source ID ts567 has a proposed -24-hour displacement from 12/12 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
 - **Pitaara** (Pitaara.in): source ID Pitaara.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **Pitaara** (Pitaara.in@SD): source ID Pitaara.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-
-### Large source-offset proposals — manual review only
-
-- **Raj Musix Kannada** (RajMusixKannada.in@SD): source ID RAJ.MUSIX.KANNADA.in has a proposed -24-hour displacement from 5/5 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
-- **Shemaroo TV** (ShemarooTV.in@SD): source ID ShemarooTV.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-
-### Large source-offset proposals — manual review only
-
-- **Sony Aath** (SonyAath.in@SD): source ID SONY.AATH.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
-
-### Large source-offset proposals — manual review only
-
-- **Star Maa** (StarMaa.in@HD): source ID STAR.MAA.in has a proposed -24-hour displacement from 4/5 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
-
-### Large source-offset proposals — manual review only
-
-- **Star Maa** (StarMaa.in@SD): source ID STAR.MAA.in has a proposed -24-hour displacement from 4/5 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
+- **Star Gold Select** (StarGoldSelect.in@HD): source ID StarGoldSelect.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **Star Movies Select** (StarMoviesSelect.in@HD): source ID StarMoviesSelect.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-
-### Large source-offset proposals — manual review only
-
-- **Star Utsav** (StarUtsav.in): source ID ts551 has a proposed +24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
-
-### Large source-offset proposals — manual review only
-
-- **Star Utsav** (StarUtsav.in@SD): source ID ts551 has a proposed +24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
-
-### Large source-offset proposals — manual review only
-
-- **Vissa TV** (VissaTV.in@SD): source ID VISSA.TV.in has a proposed -24-hour displacement from 5/5 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
-
-### Large source-offset proposals — manual review only
-
-- **Zee Telugu** (ZeeTelugu.in@HD): source ID ZEE.TELUGU.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
 
 ## Feed-wide offset patterns
 
-- **https://www.open-epg.com/files/india.xml.gz**: 20 channels were corrected by the same -5.5 hours. This looks like a feed-wide timezone problem; other channels from this feed without cross-source overlap may still be shifted and should be reviewed.
+- **https://www.open-epg.com/files/india.xml.gz**: 19 channels were corrected by the same -5.5 hours. This looks like a feed-wide timezone problem; other channels from this feed without cross-source overlap may still be shifted and should be reviewed.
 
-Detected source-ID corrections: **20**
+Detected source-ID corrections: **19**

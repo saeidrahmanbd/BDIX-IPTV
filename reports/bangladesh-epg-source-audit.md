@@ -1,6 +1,6 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-13T18:33:43+00:00**
+Generated: **2026-11-14T12:33:43+00:00**
 
 - Active Bangladesh playlist identities: **82**
 - Identities with a retained source mapping: **5**
@@ -21,8 +21,8 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
-| FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry) |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 72 | - |
+| FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; rtvbd.tv/live.php: URLError; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 63 | - |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
@@ -64,9 +64,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Enter TV | EnterTV.bd | NO_GUIDE_HIT |
 | G Series Drama | GSeriesDrama.bd | NO_GUIDE_HIT |
 | G TV | GaziTV.bd | NO_GUIDE_HIT |
-| GAZI TV | GaziTV.bd@SD | NO_GUIDE_HIT |
 | Global TV | GlobalTV.bd | NO_GUIDE_HIT |
-| Independent TV | IndependentTV.bd | NO_GUIDE_HIT |
 | Islamic TV | IslamicTV.bd | NO_GUIDE_HIT |
 | JA TV | JATV.bd | NO_GUIDE_HIT |
 | Jago News 24 | JagoNews24.bd | NO_GUIDE_HIT |
@@ -86,6 +84,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Nagorik TV | NagorikTV.bd | NO_GUIDE_HIT |
 | NAN TV | NANTV.bd@SD | NO_GUIDE_HIT |
 | News 21 | News21BanglaTV.bd@SD | NO_GUIDE_HIT |
+| NEWS 21 BANGLA | custom.bdix.news21-bangla | NO_GUIDE_HIT |
 | News 24 | News24.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd@SD | NO_GUIDE_HIT |
@@ -95,6 +94,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | NTV | NTV.bd | NO_GUIDE_HIT |
 | Probashi TV | ProbashiTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | RajdhaniTV.bd | NO_GUIDE_HIT |
+| Rajdhani TV | RajdhaniTV.bd@SD | NO_GUIDE_HIT |
 | Rupashi Bangla TV | RupashiBanglaTV.bd@SD | NO_GUIDE_HIT |
 | SA TV | SATV.bd | NO_GUIDE_HIT |
 | Shikor TV Canada | custom.shikortvcanada | NO_GUIDE_HIT |
