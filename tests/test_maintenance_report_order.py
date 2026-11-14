@@ -20,14 +20,13 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         for name in (
             "test_stream_url_identity.py", "test_main_playlist_protection.py", "test_report_freshness.py",
             "test_maintenance_extinf_canonicalization.py", "test_pre_publish_gate_logo_paths.py",
-            "test_maintenance_report_order.py", "test_metadata_backfill.py",
-            "test_reconcile_playlist_consistency.py", "test_logo_authenticity_manifest.py",
+            "test_maintenance_report_order.py", "test_metadata_backfill.py", "test_logo_authenticity_manifest.py",
             "test_logo_asset_naming.py", "test_logo_provenance_review.py",
             "test_logo_repair_source_hints.py", "test_iptv_fragile_streams.py",
             "test_language_policy.py", "test_country_verification.py",
             "test_migrate_logo_unset.py", "test_international_protected_guard.py",
             "test_playlist_metadata_repairs.py", "test_channel_numbering.py",
-            "test_sort_playlists.py", "test_backup_metadata_reconcile.py",
+            "test_backup_metadata_reconcile.py",
         ):
             self.assertIn(f"      - tests/{name}", workflow)
 
@@ -115,10 +114,9 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         renumber = (ROOT / "scripts" / "renumber_active_channels.py").read_text(encoding="utf-8")
         self.assertIn("ordered = records", renumber)
         self.assertNotIn("primary.sort(", renumber)
-        sorter = (ROOT / "scripts" / "sort_playlists.py").read_text(encoding="utf-8")
-        self.assertIn('if path.name == "IPTV-Playlist.m3u":', sorter)
-        self.assertIn("records.sort(key=category_key)", sorter)
-        self.assertIn("Do not rewrite channel numbers or group metadata.", sorter)
+        # Structural sorter is intentionally retired: the owner-curated
+        # IPTV playlist must never be automatically reordered or regrouped.
+        self.assertFalse((ROOT / "scripts" / "sort_playlists.py").exists())
 
     def test_review_queue_order_is_not_an_automatic_blocker(self):
         self.assertFalse(should_check_alphabetical_order("Backup"))

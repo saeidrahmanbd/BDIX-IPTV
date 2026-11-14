@@ -20,6 +20,16 @@ class SimplifiedAutomationArchitectureTests(unittest.TestCase):
         self.assertNotIn("\n  schedule:", trigger_block)
         self.assertIn("workflow_dispatch:", trigger_block)
 
+    def test_owner_curated_playlist_has_no_legacy_structural_tools(self):
+        for name in (
+            "reconcile_playlist_consistency.py",
+            "final_playlist_hardening.py",
+            "sort_playlists.py",
+            "playlist_policy_repair.py",
+        ):
+            self.assertFalse((ROOT / "scripts" / name).exists())
+            self.assertNotIn(name, (ROOT / ".github" / "workflows" / "iptv-maintenance.yml").read_text(encoding="utf-8"))
+
     def test_owner_curated_playlist_has_no_structural_primary_backup_repair(self):
         self.assertFalse((ROOT / "scripts" / "enforce_primary_backup_integrity.py").exists())
         self.assertFalse((ROOT / "tests" / "test_primary_backup_integrity.py").exists())

@@ -11,14 +11,12 @@ on:
     paths:
       - .github/workflows/iptv-maintenance.yml
       - scripts/maintenance_helpers.py
-      - scripts/reconcile_playlist_consistency.py
       - scripts/classify_international_backups.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/normalize_metadata.py
       - scripts/reconcile_backup_metadata_exact_id.py
       - scripts/permanent_removals.py
-      - scripts/final_playlist_hardening.py
       - scripts/country_verification.py
       - scripts/migrate_external_logos_fixed.py
       - scripts/restore_protected_review.py
@@ -54,7 +52,6 @@ on:
       - tests/test_pre_publish_gate_logo_paths.py
       - tests/test_maintenance_report_order.py
       - tests/test_metadata_backfill.py
-      - tests/test_reconcile_playlist_consistency.py
       - tests/test_logo_authenticity_manifest.py
       - tests/test_logo_asset_naming.py
       - tests/test_logo_provenance_review.py
@@ -66,7 +63,6 @@ on:
       - tests/test_international_protected_guard.py
       - tests/test_playlist_metadata_repairs.py
       - tests/test_channel_numbering.py
-      - tests/test_sort_playlists.py
       - tests/test_backup_metadata_reconcile.py
   workflow_run:
     workflows: ["Playlist Logo Repair and Localization"]
@@ -120,14 +116,11 @@ jobs:
             scripts/maintenance_helpers.py \
             scripts/verify_international_protected.py \
             scripts/protect_main_playlist.py \
-            scripts/reconcile_playlist_consistency.py \
             scripts/restore_protected_review.py \
             scripts/audit_playlist.py \
             scripts/playlist_order_policy.py \
             scripts/pre_publish_gate.py \
-            scripts/sort_playlists.py \
             scripts/reconcile_backup_metadata_exact_id.py \
-            scripts/final_playlist_hardening.py \
             scripts/country_verification.py \
             scripts/generate_logo_authenticity_manifest.py \
             scripts/generate_logo_repair_summary.py \
@@ -161,7 +154,6 @@ jobs:
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
-          python -m unittest discover -s tests -p 'test_reconcile_playlist_consistency.py'
           python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
           python -m unittest discover -s tests -p 'test_logo_asset_naming.py'
           python -m unittest discover -s tests -p 'test_logo_provenance_review.py'
@@ -256,7 +248,6 @@ jobs:
             # Data-level metadata assertions run against the final playlist bytes.
             python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
           python -m unittest discover -s tests -p 'test_channel_numbering.py'
-          python -m unittest discover -s tests -p 'test_sort_playlists.py'
           python -m unittest discover -s tests -p 'test_backup_metadata_reconcile.py'
 
             # Reports: each is written exactly once, from the final playlist bytes.
