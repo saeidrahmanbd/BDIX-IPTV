@@ -79,16 +79,17 @@ def build_inventory(root: Path) -> dict:
             lines=workflow.read_text(encoding="utf-8").splitlines()
         except OSError:
             continue
-        in_run=False
+        run_indent=None
         for line_number,line in enumerate(lines,1):
             stripped=line.strip()
+            indent=len(line)-len(line.lstrip(" "))
+            if run_indent is not None and stripped and indent <= run_indent:
+                run_indent=None
             if stripped.startswith("run:") or stripped.startswith("- run:"):
-                in_run=True
+                run_indent=indent
                 shell_boundaries.append({"source":workflow.relative_to(root).as_posix(),
                     "line":line_number,"kind":"workflow_shell_boundary","target":None,
                     "detail":stripped[:300]})
-            elif in_run and stripped and not line.startswith((" ", "\\t")):
-                in_run=False
     nested.extend(shell_boundaries)
     known={item["target"] for item in workflow_entries}
     unresolved=[item for item in nested if item["kind"] in {"subprocess_dynamic","parse_error","dynamic_code_execution","workflow_shell_boundary"}]
