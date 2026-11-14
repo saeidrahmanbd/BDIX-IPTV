@@ -82,15 +82,15 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             workflows.mkdir(parents=True)
             body_line="echo " + ("x" * 5000)
             (workflows/"long.yml").write_text(
-                "jobs:\\n  build:\\n    steps:\\n"
-                "      - name: long command\\n        run: |\\n"
-                "          echo first\\n          " + body_line + "\\n"
-                "      - name: next\\n        run: echo done\\n"
+                "jobs:\n  build:\n    steps:\n"
+                "      - name: long command\n        run: |\n"
+                "          echo first\n          " + body_line + "\n"
+                "      - name: next\n        run: echo done\n"
             )
             report=build_inventory(root)
             boundary=next(x for x in report["nested_subprocess_calls"]
                           if x["kind"]=="workflow_shell_boundary")
-            self.assertIn("\\necho first\\n", boundary["detail"])
+            self.assertIn("\necho first\n", boundary["detail"])
             self.assertIn(body_line, boundary["detail"])
             self.assertGreater(len(boundary["detail"]), 5000)
 
