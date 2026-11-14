@@ -9,17 +9,8 @@ on:
       - 'automation/engines/**'
       - 'scripts/run_automation_v2_candidate_bundle.py'
       - '.github/workflows/automation-v2-candidate-bundle.yml'
-  schedule:
-    # 09:30 Asia/Dhaka, after the legacy 09:00 EPG refresh; shadow only.
-    - cron: '30 3 * * *'
+  # V2 shadow execution is paused. Keep manual dispatch for explicit diagnostics only.
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - Automation V2 Stale Bundle Lock Recovery
-    types:
-      - completed
-    branches:
-      - main
 
 permissions:
   contents: write

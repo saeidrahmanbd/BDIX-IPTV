@@ -150,6 +150,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_main_playlist_grouping.py'
           python -m unittest discover -s tests -p 'test_owner_requested_main_migrations.py'
            python -m unittest discover -s tests -p 'test_report_freshness.py'
+          python -m unittest discover -s tests -p 'test_maintenance_extinf_canonicalization.py'
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
@@ -245,6 +246,10 @@ jobs:
               python scripts/renumber_active_channels.py IPTV-Playlist.m3u
             fi
             python scripts/verify_international_protected.py verify
+            # Metadata/logo backfills can append attributes after the initial normalizer.
+            # Canonicalize EXTINF attribute order once, after every mutator, without
+            # changing IPTV row order, group assignment, channel numbers or stream URLs.
+            python scripts/maintenance_helpers.py canonicalize-extinf
           }
           for attempt in 1 2 3; do
             git fetch origin main

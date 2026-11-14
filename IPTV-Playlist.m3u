@@ -1102,7 +1102,7 @@ https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8
 http://163.61.226.31:9981/stream/channelid/359164420?profile=pass
 #EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-chno="588" channel-id="QuranTV.iq" tvg-country="IQ" tvg-language="ara" group-title="Religious",Quran TV
 https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
-#EXTINF:-1 tvg-id="TVOne.uk" tvg-name="TV One UK" tvg-chno="567" channel-id="TVOne.uk" tvg-country="GB" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-one-uk.png" group-title="Religious",TV One UK
+#EXTINF:-1 tvg-id="TVOne.uk" tvg-name="TV One UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-one-uk.png" tvg-chno="567" channel-id="TVOne.uk" tvg-country="GB" tvg-language="eng" group-title="Religious",TV One UK
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/tvoneuksni.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="ZainabiaChannel.sa" tvg-name="Zainabia Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zainabia-channel.png" tvg-chno="589" channel-id="ZainabiaChannel.sa" tvg-country="SA" tvg-language="ara" group-title="Religious",Zainabia Channel
 https://zainabia.livebox.co.in/ZainabiaChannelhls/channel.m3u8

@@ -422,6 +422,23 @@ def verify_no_unauthorized_removals() -> int:
     return 0
 
 
+def canonicalize_extinf() -> int:
+    """Normalize EXTINF attribute order after all metadata/logo mutators have run."""
+    lines = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
+    updated = [
+        _canonical_extinf(line) if line.startswith("#EXTINF:") else line
+        for line in lines
+    ]
+    changed = sum(
+        before != after
+        for before, after in zip(lines, updated)
+    )
+    if changed:
+        PLAYLIST.write_text("\n".join(updated).rstrip() + "\n", encoding="utf-8")
+    print(f"Canonical EXTINF metadata order: {changed} row(s) normalized.")
+    return changed
+
+
 def invalidate_bad_logos(message: str) -> None:
     """Remove only known-bad logo references; never touch stream URLs."""
     p = PLAYLIST
@@ -450,7 +467,7 @@ def main() -> int:
         print(
             "Usage: maintenance_helpers.py "
             "snapshot|snapshot-playlist|verify-no-unauthorized-removals|"
-            "invalidate-bad-logos|invalidate-bad-logos-correction",
+            "invalidate-bad-logos|invalidate-bad-logos-correction|canonicalize-extinf",
             file=sys.stderr,
         )
         return 2
@@ -465,6 +482,9 @@ def main() -> int:
         return 0
     if command == "verify-no-unauthorized-removals":
         return verify_no_unauthorized_removals()
+    if command == "canonicalize-extinf":
+        canonicalize_extinf()
+        return 0
     if command == "invalidate-bad-logos":
         invalidate_bad_logos("Known-bad local logo references invalidated")
         return 0
