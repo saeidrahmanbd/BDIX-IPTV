@@ -25,7 +25,7 @@ on:
       - 'scripts/build_automation_v2_legacy_dashboard_snapshot.py'
       - 'scripts/audit_automation_v2_runtime_dependencies.py'
       - 'scripts/audit_automation_v2_dashboard_equivalence.py'
-      - 'scripts/audit_automation_v2_dashboard_equivalence.py'
+      - 'automation/policy/external-actions-lock.json'
       - 'scripts/recover_automation_v2_candidate_run.py'
       - 'scripts/reconcile_automation_v2_stale_bundle_lock.py'
       - '.github/workflows/automation-v2-stale-lock-recovery.yml'
