@@ -150,9 +150,11 @@ def convert_referenced_logos(
     # Normalize the complete logos/ image inventory, including assets not
     # currently referenced by either playlist. Non-image files (README, etc.)
     # and existing PNGs are left untouched.
+    inventory_image_assets = 0
     for source_path in sorted(logos_dir.rglob("*")):
         if not source_path.is_file() or source_path.suffix.casefold() not in CONVERTIBLE_EXTENSIONS:
             continue
+        inventory_image_assets += 1
         relative = source_path.relative_to(logos_dir).as_posix()
         convert_one(relative)
 
@@ -214,6 +216,7 @@ def convert_referenced_logos(
     summary = {
         "playlists": list(playlist_names),
         "unique_assets_converted": converted_count,
+        "inventory_image_assets": inventory_image_assets,
         "updated_references": updated_references,
         "source_formats": dict(sorted(source_formats.items())),
         "png_assets_created": len(pending_assets),
@@ -234,7 +237,7 @@ def convert_referenced_logos(
             f"- Unique non-PNG assets converted: **{converted_count}**",
             f"- Playlist logo references updated: **{updated_references}**",
             f"- New PNG assets created: **{len(pending_assets)}**",
-            f"- Supported non-PNG image assets found in logos/: **{converted_count}**",
+            f"- Supported non-PNG image assets found in logos/: **{inventory_image_assets}**",
             "- Original source assets retained for rollback/provenance: **Yes**",
             "- Non-PNG active playlist references remaining: **0**",
             "",
