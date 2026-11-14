@@ -25,36 +25,12 @@ from urllib.parse import urlsplit
 from logo_asset_naming import is_blocked_logo_basename
 from stream_url_identity import stream_url_key
 from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS, PERMANENTLY_REMOVED_NAMES
-from restore_protected_review import (
-    AUTHORIZED_MIGRATION_SOURCE_GROUPS,
-    authorized_backup_migration_target,
-    authorized_review_to_primary_target,
-    is_authorized_primary_to_backup_migration,
-    is_authorized_primary_to_review_migration,
-    normalize_name as _restore_normalize_name,
-)
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PROTECTED_SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 REMOVAL_REPORT = Path("reports/proposed-removals.md")
 PROTECTED_GROUPS = {"Backup", "Review", "Not Playing"}
-OWNER_MIGRATION_APPROVALS = Path("/tmp/iptv-owner-requested-migrations.json")
-OWNER_MIGRATION_AUTHORIZED = Path("/tmp/iptv-owner-migration-authorized")
-PRIMARY_GROUPS = {"Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports"}
-
-
-def _owner_migration_approvals() -> dict[str, dict[str, object]]:
-    if not OWNER_MIGRATION_APPROVALS.is_file():
-        return {}
-    try:
-        rows = json.loads(OWNER_MIGRATION_APPROVALS.read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return {}
-    return {stream_url_key(str(row.get("url", ""))): row for row in rows
-            if isinstance(row, dict) and row.get("url")}
-
-
 def _canonical_channel_name(value: str) -> str:
     """Normalize display names for exact allowlist matching only."""
     value = unicodedata.normalize("NFKD", str(value or "")).casefold()
@@ -392,18 +368,11 @@ def verify_no_unauthorized_removals() -> int:
             old_group = str(old.get("group", "")).strip()
             new_group = _group(info)
             if old_group != new_group:
-                approved = _owner_migration_approvals().get(stream_url_key(url), {})
-                if not (OWNER_MIGRATION_AUTHORIZED.exists()
-                        and approved.get("source_group") == old_group
-                        and approved.get("target_group") == new_group):
-                    failures.append(f"unapproved existing group change for {_name(info)}")
+                failures.append(f"existing owner-curated group assignment changed for {_name(info)}")
             old_number = _attrs(str(old.get("info", ""))).get("tvg-chno", "").strip()
             new_number = _attrs(info).get("tvg-chno", "").strip()
             if old_number != new_number:
-                if OWNER_MIGRATION_AUTHORIZED.exists() and old_group not in PRIMARY_GROUPS and new_group == old_group and not new_number:
-                    pass
-                else:
-                    failures.append(f"existing channel number changed for {_name(info)}")
+                failures.append(f"existing owner-curated channel number changed for {_name(info)}")
     for url, count in added.items():
         if url in old_counts:
             continue
