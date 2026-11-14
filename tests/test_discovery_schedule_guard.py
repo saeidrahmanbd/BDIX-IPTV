@@ -370,6 +370,63 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             guard.first_run_id(runs, workflow_file="new-channel-discovery.yml")
         )
 
+    def test_epg_watchdog_ignores_successful_pre_schedule_refresh(self):
+        midnight_push = {
+            "id": 170, "event": "push", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-06T18:09:00Z",
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "success",
+                "steps": [{
+                    "name": "Regenerate, validate and publish XMLTV",
+                    "conclusion": "success",
+                }],
+            }],
+        }
+        self.assertFalse(guard.watchdog_run_blocks_retry(
+            midnight_push, workflow_file="epg-refresh.yml"
+        ))
+
+    def test_epg_watchdog_accepts_successful_refresh_after_0900(self):
+        scheduled = {
+            "id": 171, "event": "schedule", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T03:00:00Z",
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "success",
+                "steps": [{
+                    "name": "Regenerate, validate and publish XMLTV",
+                    "conclusion": "success",
+                }],
+            }],
+        }
+        self.assertTrue(guard.watchdog_run_blocks_retry(
+            scheduled, workflow_file="epg-refresh.yml"
+        ))
+
+    def test_epg_watchdog_accepts_post_schedule_push_recovery(self):
+        recovery = {
+            "id": 172, "event": "push", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T03:15:00Z",
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "success",
+                "steps": [{
+                    "name": "Regenerate, validate and publish XMLTV",
+                    "conclusion": "success",
+                }],
+            }],
+        }
+        self.assertTrue(guard.watchdog_run_blocks_retry(
+            recovery, workflow_file="epg-refresh.yml"
+        ))
+
+    def test_active_epg_run_still_blocks_watchdog_dispatch(self):
+        active = {
+            "id": 173, "event": "push", "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T00:09:00Z",
+        }
+        self.assertTrue(guard.watchdog_run_blocks_retry(
+            active, workflow_file="epg-refresh.yml"
+        ))
+
     def test_watchdog_recovery_uses_workflow_specific_local_grace_time(self):
         before = datetime(2026, 11, 7, 7, 29, tzinfo=guard.BD_TZ)
         after = datetime(2026, 11, 7, 7, 30, tzinfo=guard.BD_TZ)
