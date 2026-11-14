@@ -89,7 +89,7 @@ class ApprovedLogoCandidateTests(unittest.TestCase):
                 "expected_current_logo": "", "approved_local_logo": "logos/../../outside.png",
                 "asset_sha256": "0" * 64
             }]}))
-            with self.assertRaisesRegex(ValueError, "logos/ path"):
+            with self.assertRaisesRegex(ValueError, "resolve to an existing file under logos/"):
                 build_candidates(root, manifest, root / "reports" / "candidate")
 
 
