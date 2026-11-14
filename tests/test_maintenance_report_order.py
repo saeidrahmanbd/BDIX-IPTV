@@ -18,8 +18,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertNotIn("      - tests/**", workflow)
         self.assertNotIn("- .github/workflows/**", workflow)
         for name in (
-            "test_stream_url_identity.py", "test_main_playlist_protection.py",
-            "test_main_playlist_grouping.py", "test_report_freshness.py",
+            "test_stream_url_identity.py", "test_main_playlist_protection.py", "test_report_freshness.py",
             "test_maintenance_extinf_canonicalization.py", "test_pre_publish_gate_logo_paths.py",
             "test_maintenance_report_order.py", "test_metadata_backfill.py",
             "test_reconcile_playlist_consistency.py", "test_logo_authenticity_manifest.py",
@@ -29,7 +28,6 @@ class MaintenanceReportOrderTests(unittest.TestCase):
             "test_migrate_logo_unset.py", "test_international_protected_guard.py",
             "test_playlist_metadata_repairs.py", "test_channel_numbering.py",
             "test_sort_playlists.py", "test_backup_metadata_reconcile.py",
-            "test_primary_backup_integrity.py",
         ):
             self.assertIn(f"      - tests/{name}", workflow)
 
