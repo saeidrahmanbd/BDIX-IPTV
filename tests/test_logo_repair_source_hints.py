@@ -65,7 +65,7 @@ class LogoRepairSourceTests(unittest.TestCase):
 
     def test_image_extension_is_sniffed_when_source_uses_octet_stream(self):
         self.assertEqual(
-            logo_repair.detected_image_extension(b"\\xff\\xd8\\xff" + b"jpeg", "application/octet-stream"),
+            logo_repair.detected_image_extension(b"\xff\xd8\xff" + b"jpeg", "application/octet-stream"),
             ".jpg",
         )
         self.assertEqual(
@@ -73,7 +73,7 @@ class LogoRepairSourceTests(unittest.TestCase):
             ".webp",
         )
         self.assertEqual(
-            logo_repair.detected_image_extension(b"\\x89PNG\\r\\n\\x1a\\n" + b"png", "application/octet-stream"),
+            logo_repair.detected_image_extension(b"\x89PNG\r\n\x1a\n" + b"png", "application/octet-stream"),
             ".png",
         )
 
