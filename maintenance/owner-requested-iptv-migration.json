@@ -29,7 +29,9 @@
   "consume_only_after": null,
   "retry_requested_at": "2026-11-12T19:42:00+06:00",
   "retry_reason": "Previous run #1549 was superseded before the migration step; rerun the still-pending owner-authorized playlist correction on current main.",
-  "status": "authorized",
+  "status": "revoked",
   "authorized_at": "2026-11-13T12:00:00+06:00",
-  "authorization_note": "Re-authorized again by the repository owner in ChatGPT on 2026-11-13. Execute the original one-time scope against latest main with exact-URL approvals and all protection gates. Do not consume until the completion report is published."
+  "authorization_note": "Re-authorized again by the repository owner in ChatGPT on 2026-11-13. Execute the original one-time scope against latest main with exact-URL approvals and all protection gates. Do not consume until the completion report is published.",
+  "revoked_at": "2026-11-14T16:32:00+06:00",
+  "revocation_reason": "Superseded by the repository owner's approved owner-curated IPTV architecture: existing row order and group assignments must be preserved; no automatic queue promotion, structural migration, or renumbering is authorized."
 }
