@@ -138,20 +138,22 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("git add -f epg/epg.xml", refresh)
         self.assertIn("workflow_dispatch:", refresh)
 
-    def test_main_playlist_owner_migration_is_explicitly_authorized_and_protected(self):
+    def test_stale_main_playlist_migration_is_revoked_and_protected(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\n          }", workflow.index("run_mutations() {"))]
         self.assertIn('d.get("status") == "authorized"', workflow)
         self.assertIn("OWNER_MIGRATION_REQUESTED=true", workflow)
         self.assertIn("touch /tmp/iptv-owner-migration-authorized", workflow)
         self.assertNotIn("sort_playlists.py IPTV-Playlist.m3u", mutations)
-        # Number normalization is authorized only for this one-time owner
-        # migration, never for routine maintenance.
+        # The old one-time migration branch remains guarded for audit history,
+        # but its authorization is revoked under the owner-curated architecture.
         self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then', mutations)
         self.assertIn("python scripts/renumber_active_channels.py IPTV-Playlist.m3u", mutations)
         self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
         marker = json.loads((ROOT / "maintenance" / "owner-requested-iptv-migration.json").read_text(encoding="utf-8"))
-        self.assertEqual(marker["status"], "authorized")
+        self.assertEqual(marker["status"], "revoked")
+        self.assertIn("revoked_at", marker)
+        self.assertIn("row order and group assignments", marker["revocation_reason"])
         guard = (ROOT / "scripts" / "protect_main_playlist.py").read_text(encoding="utf-8")
         self.assertIn("new_order != old_order", guard)
         self.assertIn("Unapproved existing group change", guard)
