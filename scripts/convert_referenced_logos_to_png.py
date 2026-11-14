@@ -38,7 +38,7 @@ def image_bytes_to_png(raw: bytes, source_extension: str) -> bytes:
         svg = raw.decode("utf-8", errors="strict")
         if re.search(r"<\s*script\b|<\s*foreignObject\b|javascript:", svg, re.I):
             raise ValueError("unsafe SVG content")
-        if re.search(r"""(?:href|src)\s*=\s*["']\s*(?:https?:|file:|//)""", svg, re.I):
+        if re.search(r"""(?:href|src)\s*=\s*["']\s*(?:https?:|file:|//)""", svg, re.I) or re.search(r"""url\(\s*["']?\s*(?:https?:|file:|//)""", svg, re.I):
             raise ValueError("SVG contains an external resource reference")
         raw = cairosvg.svg2png(bytestring=raw, output_width=1024)
 
@@ -96,7 +96,7 @@ def convert_referenced_logos(
     raw_base: str = RAW_BASE,
     report_path: Path | None = None,
 ) -> dict:
-    root = Path(root)
+    root = Path(root).resolve()
     logos_dir = root / "logos"
     asset_cache: dict[str, tuple[str, bytes]] = {}
     pending_assets: dict[Path, bytes] = {}
@@ -171,6 +171,16 @@ def convert_referenced_logos(
             playlist_path.write_text(updated, encoding="utf-8")
 
     converted_count = sum(source_formats.values())
+    remaining_non_png = 0
+    for updated in updated_playlists.values():
+        for match in LOGO_RE.finditer(updated):
+            logo = match.group(1).strip()
+            if logo:
+                relative, _style = local_logo_path(logo, raw_base)
+                if Path(relative).suffix.casefold() != ".png":
+                    remaining_non_png += 1
+    if remaining_non_png:
+        raise RuntimeError(f"non-PNG logo references remain after conversion: {remaining_non_png}")
     summary = {
         "playlists": list(playlist_names),
         "unique_assets_converted": converted_count,
@@ -178,7 +188,7 @@ def convert_referenced_logos(
         "source_formats": dict(sorted(source_formats.items())),
         "png_assets_created": len(pending_assets),
         "original_assets_retained": converted_count,
-        "remaining_non_png_references": 0,
+        "remaining_non_png_references": remaining_non_png,
     }
     if report_path is None:
         report_path = root / "reports" / "logo-format-conversion.md"
