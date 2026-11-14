@@ -3,12 +3,8 @@ name: IPTV Logo Localization
 # channel IDs, group assignments, channel numbers, or playlist row order.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/logo-localization.yml
-      - scripts/migrate_external_logos_fixed.py
-      - scripts/verify_logo_only_migration.py
+  # Emergency isolated IPTV logo-only repair; routine localization belongs to
+  # IPTV Playlist Update and Playlist Logo Repair and Localization.
   workflow_dispatch:
 
 permissions:
