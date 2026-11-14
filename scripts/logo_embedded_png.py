@@ -43,6 +43,32 @@ def recover_embedded_png_from_svg(svg_bytes: bytes) -> bytes | None:
         data_end = data_start + length
         crc_end = data_end + 4
         if crc_end > len(raw):
+            # Some broadcaster SVG exports contain an IDAT length that runs
+            # three bytes into the terminal IEND chunk. Recover only when the
+            # final 12 bytes have the exact IEND length/type marker. Infer the
+            # true IDAT boundary from that marker, rebuild its length and CRC,
+            # and let Pillow independently decode the resulting pixel stream.
+            terminal = len(raw) - 12
+            if (
+                chunk_type == b"IDAT"
+                and terminal >= data_start + 4
+                and raw[terminal:terminal + 8] == b"\\x00\\x00\\x00\\x00IEND"
+            ):
+                inferred_length = terminal - data_start - 4
+                if inferred_length < 0:
+                    return None
+                chunk_data = raw[data_start:data_start + inferred_length]
+                actual_crc = zlib.crc32(chunk_type + chunk_data) & 0xFFFFFFFF
+                output.extend(struct.pack(">I", inferred_length))
+                output.extend(chunk_type)
+                output.extend(chunk_data)
+                output.extend(struct.pack(">I", actual_crc))
+                output.extend(PNG_IEND)
+                saw_ihdr = True
+                saw_idat = True
+                saw_iend = True
+                offset = len(raw)
+                break
             # A final IEND chunk may itself be truncated after its length/type
             # or part of its CRC. Accept only a byte-for-byte prefix of IEND.
             if chunk_type == b"IEND" and length == 0 and PNG_IEND.startswith(raw[offset:]):
