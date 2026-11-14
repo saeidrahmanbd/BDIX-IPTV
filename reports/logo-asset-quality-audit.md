@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T11:50:57+00:00**
+Generated: **2026-11-14T11:52:49+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -11,7 +11,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 ## Summary
 
-- Safe repairs applied this run: **3**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **3**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
@@ -25,9 +25,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| mr-bean-animated-es-1080p.png | PNG | PNG | 1024×824 | 663×534 | downscaled, re-encoded/compressed |
-| mr-bean-animated-fr-1080p.png | PNG | PNG | 1024×824 | 663×534 | downscaled, re-encoded/compressed |
-| nickelodeon-brazil-7ca6654cc0.png | PNG | PNG | 1024×785 | 844×647 | downscaled, re-encoded/compressed |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 
