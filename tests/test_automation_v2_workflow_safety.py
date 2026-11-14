@@ -12,7 +12,7 @@ def workflow_text(name):
 
 def concurrency_group(source):
     match = re.search(
-        r"(?ms)^concurrency:\\s*\\n\\s+group:\\s*([^\\n]+)\\n\\s+cancel-in-progress:\\s*false\\s*$",
+        r"(?ms)^concurrency:\s*\n\s+group:\s*([^\n]+)\n\s+cancel-in-progress:\s*false\s*$",
         source,
     )
     if not match:
