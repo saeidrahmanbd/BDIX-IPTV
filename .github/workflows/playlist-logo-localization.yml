@@ -11,6 +11,8 @@ on:
     paths:
       - .github/workflows/playlist-logo-localization.yml
       - scripts/repair_playlist_logos.py
+      - scripts/repair_logo_asset_technical_quality.py
+      - scripts/audit_logo_references.py
       - scripts/logo_source_catalog.py
       - scripts/convert_referenced_logos_to_png.py
       - scripts/logo_embedded_png.py
