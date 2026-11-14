@@ -649,12 +649,12 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_prior_successful_epg_writer_blocks_later_workflow_run(self):
         previous = {
             "id": 156, "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T02:45:00Z",
+            "created_at": "2026-11-07T03:15:00Z",
             "jobs": [{"name": "refresh", "status": "completed", "conclusion": "success",
                       "steps": [{"name": "Regenerate, validate and publish XMLTV", "conclusion": "success"}]}],
         }
         current = {"id": 157, "status": "in_progress", "conclusion": None,
-                   "created_at": "2026-11-07T03:00:00Z"}
+                   "created_at": "2026-11-07T03:20:00Z"}
         self.assertFalse(guard.should_current_run_execute(
             [previous, current], 157, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
         ))
