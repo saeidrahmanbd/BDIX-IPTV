@@ -892,7 +892,7 @@ http://213.91.179.28:8000/play/a05h
 http://213.91.179.28:8000/play/a06b
 #EXTINF:-1 tvg-id="CityTV.bg@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/city-tv-bulgaria-55b1af3877.png" tvg-country="BG" tvg-content="Music" group-title="Bulgaria" tvg-name="City TV (Bulgaria)",City TV (Bulgaria)
 https://tv.city.bg/play/tshls/citytv/index.m3u8
-#EXTINF:-1 tvg-id="Diema.bg@SD" channel-id="Diema.bg@SD" tvg-language="bul" tvg-country="BG" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/diema-3c3f67264b.png" group-title="Bulgaria" tvg-name="Diema",Diema
+#EXTINF:-1 tvg-id="Diema.bg@SD" channel-id="Diema.bg@SD" tvg-language="bul" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/diema-3c3f67264b.png" tvg-country="BG" tvg-content="Movies" group-title="Bulgaria" tvg-name="Diema",Diema
 http://213.91.179.28:8000/play/a045
 #EXTINF:-1 tvg-id="DSTV.bg@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dstv-bulgaria-88284875fc.png" tvg-country="BG" tvg-content="Music" group-title="Bulgaria" tvg-name="DSTV (Bulgaria)",DSTV (Bulgaria)
 http://46.249.95.140:8081/hls/data.m3u8
@@ -1836,7 +1836,7 @@ https://shd-amg-fast.edgenextcdn.net/tx029/playlist.m3u8
 https://shd-amg-fast.edgenextcdn.net/tx019/playlist.m3u8
 #EXTINF:-1 tvg-id="MBCLoud.sa@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-loud-0f87ce91ac.png" tvg-country="SA" tvg-content="Music" group-title="Saudi Arabia" tvg-name="MBC Loud",MBC Loud
 https://radio-loud-fm.mbc.net/radio-loud-fm_1.m3u8
-#EXTINF:-1 tvg-id="MBCMood.sa@HD" tvg-language="ara" tvg-country="SA" tvg-content="Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-mood-ce5185f523.png" group-title="Saudi Arabia" tvg-name="MBC Mood",MBC Mood
+#EXTINF:-1 tvg-id="MBCMood.sa@HD" tvg-language="ara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-mood-ce5185f523.png" tvg-country="SA" tvg-content="Music" group-title="Saudi Arabia" tvg-name="MBC Mood",MBC Mood
 https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-mood/78367bf48ccdba501d0d014a10c21031/index.m3u8
 #EXTINF:-1 tvg-id="MoviesAction.sa@SD" tvg-language="ara;eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-action-c8f8a7fb42.png" tvg-country="SA" tvg-content="Movies" group-title="Saudi Arabia" tvg-name="Movies Action",Movies Action
 https://shd-amg-fast.edgenextcdn.net/tx011/playlist.m3u8
@@ -2206,7 +2206,7 @@ https://jmp2.uk/plu-5dcddf1ed95e740009fef7ab.m3u8
 http://15.204.246.24:8080/CinecanalHD/index.m3u8
 #EXTINF:-1 tvg-id="Cinecanal.us@Pacific" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinecanal-pacific-1080p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cinecanal Pacific",Cinecanal Pacific
 http://138.121.15.230:9002/CINECANAL/index.m3u8
-#EXTINF:-1 tvg-id="custom.cinecanal-panregional-us-movie" channel-id="custom.cinecanal-panregional-us-movie" tvg-language="spa" tvg-country="US" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinecanal-panregional-54ac33a07a.png" group-title="United States" tvg-name="Cinecanal Panregional",Cinecanal Panregional
+#EXTINF:-1 tvg-id="custom.cinecanal-panregional-us-movie" channel-id="custom.cinecanal-panregional-us-movie" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinecanal-panregional-54ac33a07a.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cinecanal Panregional",Cinecanal Panregional
 https://barinaslive1.boldmss.com/CINECANAL/CINECANAL.isml/CINECANAL.m3u8
 #EXTINF:-1 tvg-id="Cinecanal.us@South" channel-id="Cinecanal.us@South" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cinecanal-south.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cinecanal South",Cinecanal South
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/17.m3u8

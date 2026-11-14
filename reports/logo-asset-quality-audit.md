@@ -1,31 +1,32 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T12:03:42+00:00**
+Generated: **2026-11-14T12:36:04+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **d47607e2306ca0561e6181336ea25952f4f93a6f56d47b33abbb2b7d221b6c6b**
-- International-Playlist.m3u SHA-256: **1b649eb78036de31b087396df0e59188005cf36b79dee895ebec5538e0831c7e**
+- International-Playlist.m3u SHA-256: **225d5cf541242d32ce489e1dccd3c1fb234fc78fc60e918ae449ff129b48a5dd**
 
 ## Summary
 
-- Safe repairs applied this run: **0**
+- Safe repairs applied this run: **2**
 - File-format/extension mismatches remaining: **3**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **156**
 - Exact-byte duplicate asset clusters: **735**
 - Playlist references whose asset stem differs from the normalized channel name: **1515**
-- Unreferenced files immediately inside logos/: **1583** (not deleted; other tooling or playlists may use them)
+- Unreferenced files immediately inside logos/: **1584** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| cinecanal-panregional-54ac33a07a.png | PNG | PNG | 2000×1079 | 1600×863 | downscaled, re-encoded/compressed |
+| mbc-mood-ce5185f523.png | PNG | PNG | 3840×2038 | 1600×849 | downscaled, re-encoded/compressed |
 
 ## Remaining extension mismatches
 
