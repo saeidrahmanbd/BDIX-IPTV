@@ -49,11 +49,12 @@ on:
       - scripts/validate_international_playlist.py
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
+      - scripts/renumber_active_channels.py
       - scripts/reclassify_main_playlist_groups.py
       - scripts/probe_owner_requested_main_queues.py
       - scripts/migrate_owner_requested_main_queues.py
   workflow_run:
-    workflows: ["IPTV Logo Localization"]
+    workflows: ["Playlist Logo Repair and Localization"]
     types: [completed]
     branches: [main]
   schedule:
@@ -237,6 +238,11 @@ jobs:
             # Existing IPTV rows are never structurally migrated, sorted or renumbered.
             if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then
               python scripts/repair_logo_asset_technical_quality.py --fix
+            else
+              # Apply only the numbering normalization explicitly authorized for
+              # this one-time migration. Existing positive primary numbers and
+              # every stream URL remain unchanged; new primary rows get free IDs.
+              python scripts/renumber_active_channels.py IPTV-Playlist.m3u
             fi
             python scripts/verify_international_protected.py verify
           }

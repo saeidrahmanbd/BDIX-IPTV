@@ -404,6 +404,61 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         self.assertFalse(guard.run_blocks_retry(skipped_health, workflow_file="international-stream-health.yml"))
         self.assertFalse(guard.run_blocks_retry(skipped_epg, workflow_file="epg-refresh.yml"))
 
+    def test_current_run_owns_day_when_no_other_run_has_completed_work(self):
+        current = {"id": 150, "event": "workflow_run", "status": "in_progress",
+                   "conclusion": None, "created_at": "2026-11-07T03:00:00Z"}
+        self.assertTrue(guard.should_current_run_execute(
+            [current], 150, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
+        ))
+
+    def test_current_run_is_not_rejected_by_its_own_stale_skipped_job_state(self):
+        current = {
+            "id": 151, "event": "workflow_run", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T03:00:00Z",
+            "jobs": [{"name": "refresh", "status": "completed", "conclusion": "skipped",
+                      "steps": [{"name": "Regenerate, validate and publish XMLTV", "conclusion": "skipped"}]}],
+        }
+        self.assertTrue(guard.should_current_run_execute(
+            [current], 151, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
+        ))
+
+    def test_earlier_active_run_owns_daily_slot(self):
+        earlier = {"id": 152, "status": "in_progress", "conclusion": None,
+                   "created_at": "2026-11-07T02:59:00Z"}
+        current = {"id": 153, "status": "in_progress", "conclusion": None,
+                   "created_at": "2026-11-07T03:00:00Z"}
+        self.assertFalse(guard.should_current_run_execute(
+            [earlier, current], 153, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
+        ))
+        self.assertTrue(guard.should_current_run_execute(
+            [earlier, current], 152, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
+        ))
+
+    def test_later_active_run_does_not_displace_earlier_current_run(self):
+        current = {"id": 154, "status": "in_progress", "conclusion": None,
+                   "created_at": "2026-11-07T03:00:00Z"}
+        later = {"id": 155, "status": "in_progress", "conclusion": None,
+                 "created_at": "2026-11-07T03:01:00Z"}
+        self.assertTrue(guard.should_current_run_execute(
+            [current, later], 154, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
+        ))
+        self.assertFalse(guard.should_current_run_execute(
+            [current, later], 155, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
+        ))
+
+    def test_prior_successful_epg_writer_blocks_later_workflow_run(self):
+        previous = {
+            "id": 156, "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T02:45:00Z",
+            "jobs": [{"name": "refresh", "status": "completed", "conclusion": "success",
+                      "steps": [{"name": "Regenerate, validate and publish XMLTV", "conclusion": "success"}]}],
+        }
+        current = {"id": 157, "status": "in_progress", "conclusion": None,
+                   "created_at": "2026-11-07T03:00:00Z"}
+        self.assertFalse(guard.should_current_run_execute(
+            [previous, current], 157, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
+        ))
+
 
 if __name__ == "__main__":
     unittest.main()

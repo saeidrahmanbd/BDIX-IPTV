@@ -1,5 +1,12 @@
 name: IPTV New Channel Discovery
 
+# Serialize the full run, including the daily guard, to prevent simultaneous
+# manual dispatches from mutually skipping the discover job.
+concurrency:
+  group: iptv-new-channel-discovery-run-v1
+  cancel-in-progress: false
+  queue: max
+
 on:
   push:
     branches: [main]

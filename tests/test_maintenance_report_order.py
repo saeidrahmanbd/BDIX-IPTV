@@ -41,6 +41,54 @@ class MaintenanceReportOrderTests(unittest.TestCase):
                 self.assertIsNotNone(match, f"{relative}: missing job-level concurrency group")
                 self.assertEqual(match.group(1), expected, f"{relative}: writer queue mismatch")
 
+    def test_guarded_workflows_serialize_the_full_run_before_daily_deduplication(self):
+        expected = {
+            "new-channel-discovery.yml": "iptv-new-channel-discovery-run-v1",
+            "epg-refresh.yml": "epg-refresh-run-v1",
+        }
+        for filename, group in expected.items():
+            source = (ROOT / ".github" / "workflows" / filename).read_text(encoding="utf-8")
+            match = re.search(r"(?m)^concurrency:\n  group:\s*([^\s#]+)", source)
+            self.assertIsNotNone(match, f"{filename}: full workflow must serialize its daily guard")
+            self.assertEqual(match.group(1), group)
+
+    def test_workflow_run_references_match_real_workflow_names(self):
+        workflow_sources = {}
+        actual_names = set()
+        for path in sorted((ROOT / ".github" / "workflows").glob("*.yml")):
+            source = path.read_text(encoding="utf-8")
+            match = re.search(r"(?m)^name:\s*['\"]?(.+?)['\"]?\s*$", source)
+            if match:
+                actual_names.add(match.group(1))
+            workflow_sources[path.name] = source
+
+        missing = []
+        for filename, source in workflow_sources.items():
+            block_match = re.search(
+                r"(?ms)^  workflow_run:\s*\n(.*?)(?=^  [A-Za-z_][A-Za-z0-9_-]*:\s*(?:#.*)?$|\Z)",
+                source,
+            )
+            if not block_match:
+                continue
+            block = block_match.group(1)
+            workflows_match = re.search(r"(?m)^    workflows:\s*(.*)$", block)
+            if not workflows_match:
+                continue
+            inline = workflows_match.group(1).strip()
+            if inline:
+                referenced = re.findall(r"['\"]([^'\"]+)['\"]", inline)
+            else:
+                workflow_list = block.split("    types:", 1)[0]
+                referenced = re.findall(
+                    r"(?m)^      - ['\"]?([^'\"]+?)['\"]?\s*$",
+                    workflow_list,
+                )
+            missing.extend(
+                f"{filename} references missing workflow name {name!r}"
+                for name in referenced if name not in actual_names
+            )
+        self.assertEqual(missing, [])
+
     def test_iptv_playlist_registry_includes_review_queues(self):
         normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
         audit = (ROOT / "scripts" / "audit_playlist.py").read_text(encoding="utf-8")
@@ -96,11 +144,12 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn('d.get("status") == "authorized"', workflow)
         self.assertIn("OWNER_MIGRATION_REQUESTED=true", workflow)
         self.assertIn("touch /tmp/iptv-owner-migration-authorized", workflow)
-        for forbidden in (
-            "sort_playlists.py IPTV-Playlist.m3u",
-            "renumber_active_channels.py IPTV-Playlist.m3u",
-        ):
-            self.assertNotIn(forbidden, mutations)
+        self.assertNotIn("sort_playlists.py IPTV-Playlist.m3u", mutations)
+        # Number normalization is authorized only for this one-time owner
+        # migration, never for routine maintenance.
+        self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then', mutations)
+        self.assertIn("python scripts/renumber_active_channels.py IPTV-Playlist.m3u", mutations)
+        self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
         marker = json.loads((ROOT / "maintenance" / "owner-requested-iptv-migration.json").read_text(encoding="utf-8"))
         self.assertEqual(marker["status"], "authorized")
         guard = (ROOT / "scripts" / "protect_main_playlist.py").read_text(encoding="utf-8")

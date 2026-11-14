@@ -234,6 +234,76 @@ class MainPlaylistProtectionTests(unittest.TestCase):
              ("New Backups", "Duplicate URL", "https://same", "", "a.bd")],
         )
 
+    def test_owner_migration_can_promote_backup_with_new_primary_number(self):
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "IPTV-Playlist.m3u"
+            state = Path(directory) / "state.json"
+            approvals = Path(directory) / "approvals.json"
+            authorization = Path(directory) / "owner-authorized"
+            authorization.touch()
+            self.write(playlist, [
+                ("Bangladesh", "Existing", "https://existing", "12", "existing.bd"),
+                ("Backup", "Promoted", "https://promoted", "501", "promoted.bd"),
+            ])
+            guard.snapshot(playlist, state)
+            approvals.write_text(json.dumps([{
+                "url": "https://promoted", "source_group": "Backup",
+                "target_group": "Bangladesh", "allow_metadata": True,
+            }]), encoding="utf-8")
+            self.write(playlist, [
+                ("Bangladesh", "Existing", "https://existing", "12", "existing.bd"),
+                ("Bangladesh", "Promoted", "https://promoted", "13", "promoted.bd"),
+            ])
+            with patch.object(guard, "OWNER_APPROVALS", approvals), patch.object(
+                guard, "OWNER_MIGRATION_AUTHORIZED", authorization
+            ):
+                guard.verify(playlist, state)
+
+    def test_owner_migration_cannot_promote_backup_without_assigned_number(self):
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "IPTV-Playlist.m3u"
+            state = Path(directory) / "state.json"
+            approvals = Path(directory) / "approvals.json"
+            authorization = Path(directory) / "owner-authorized"
+            authorization.touch()
+            self.write(playlist, [("Backup", "Promoted", "https://promoted", "501", "promoted.bd")])
+            guard.snapshot(playlist, state)
+            approvals.write_text(json.dumps([{
+                "url": "https://promoted", "source_group": "Backup",
+                "target_group": "Bangladesh", "allow_metadata": True,
+            }]), encoding="utf-8")
+            self.write(playlist, [("Bangladesh", "Promoted", "https://promoted", "", "promoted.bd")])
+            with patch.object(guard, "OWNER_APPROVALS", approvals), patch.object(
+                guard, "OWNER_MIGRATION_AUTHORIZED", authorization
+            ):
+                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+                    with self.assertRaises(SystemExit):
+                        guard.verify(playlist, state)
+
+    def test_owner_migration_can_fill_missing_primary_number_without_renumbering_existing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "IPTV-Playlist.m3u"
+            state = Path(directory) / "state.json"
+            authorization = Path(directory) / "owner-authorized"
+            authorization.touch()
+            self.write(playlist, [
+                ("Bangladesh", "Existing", "https://existing", "12", "existing.bd"),
+                ("Bangladesh", "Missing number", "https://missing", "", "missing.bd"),
+            ])
+            guard.snapshot(playlist, state)
+            self.write(playlist, [
+                ("Bangladesh", "Existing", "https://existing", "12", "existing.bd"),
+                ("Bangladesh", "Missing number", "https://missing", "1", "missing.bd"),
+            ])
+            with patch.object(guard, "OWNER_MIGRATION_AUTHORIZED", authorization):
+                guard.verify(playlist, state)
+
+    def test_missing_primary_number_fill_requires_owner_authorization(self):
+        self.assert_guard_blocks(
+            [("Bangladesh", "Missing number", "https://missing", "", "missing.bd")],
+            [("Bangladesh", "Missing number", "https://missing", "1", "missing.bd")],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "Deploy Xtream Gateways"
+      - "Deploy Xtream Gateway"
       - "IPTV New Channel Discovery"
       - "IPTV Playlist Update"
       - "Refresh IPTV EPG"

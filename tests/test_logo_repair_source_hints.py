@@ -83,6 +83,14 @@ class LogoRepairSourceTests(unittest.TestCase):
             )
         )
 
+    def test_new_logo_attribute_is_inserted_before_group_title(self):
+        line = '#EXTINF:-1 tvg-id="sample.bd" tvg-name="Sample TV" group-title="New Channels",Sample TV'
+        updated = logo_repair.set_logo(
+            line, "https://raw.githubusercontent.com/example/logos/sample.png"
+        )
+        keys = re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"', updated)
+        self.assertEqual([key for key, _ in keys], ["tvg-id", "tvg-name", "tvg-logo", "group-title"])
+
 
 if __name__ == "__main__":
     unittest.main()
