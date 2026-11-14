@@ -1,4 +1,7 @@
+import json
+import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -68,6 +71,62 @@ class RollbackPolicyTests(unittest.TestCase):
         pr["files"].append({"path": "IPTV-Playlist.m3u"})
         with self.assertRaisesRegex(ValueError, "duplicate changed paths"):
             validate_publication_pr(pr, 154)
+
+    def test_merge_commit_rollback_creates_only_a_local_revert_commit(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            def git(*args):
+                return subprocess.run(
+                    ["git", *args], cwd=root, check=True, text=True,
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                ).stdout.strip()
+
+            git("init", "-b", "main")
+            git("config", "user.name", "Automation V2 Test")
+            git("config", "user.email", "automation-v2-test@example.invalid")
+            original = {
+                "IPTV-Playlist.m3u": "#EXTM3U\n",
+                "International-Playlist.m3u": "#EXTM3U\n",
+                "epg/epg.xml": "<tv/>\n",
+            }
+            for path, content in original.items():
+                target = root / path
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(content, encoding="utf-8")
+            git("add", ".")
+            git("commit", "-m", "baseline")
+            git("switch", "-c", "automation-v2/publish-tx-1-123")
+            for path in original:
+                (root / path).write_text(original[path] + "<candidate/>\n", encoding="utf-8")
+            git("add", ".")
+            git("commit", "-m", "candidate publication")
+            git("switch", "main")
+            git("merge", "--no-ff", "automation-v2/publish-tx-1-123", "-m", "merge publication")
+            merge_sha = git("rev-parse", "HEAD")
+
+            pr = self.valid_pr()
+            pr["mergeCommit"] = {"oid": merge_sha}
+            pr["number"] = 154
+            pr_json = root / "publication-pr.json"
+            pr_json.write_text(json.dumps(pr), encoding="utf-8")
+            report_path = root / "rollback-report.json"
+            script = ROOT / "scripts" / "prepare_automation_v2_rollback_pr.py"
+            subprocess.run(
+                [sys.executable, str(script), "--pr-json", str(pr_json),
+                 "--repo-root", str(root), "--report", str(report_path)],
+                cwd=ROOT, check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+            )
+
+            for path, content in original.items():
+                self.assertEqual((root / path).read_text(encoding="utf-8"), content)
+            report = json.loads(report_path.read_text(encoding="utf-8"))
+            self.assertEqual(report["source_merge_commit"], merge_sha)
+            self.assertEqual(report["revert_mode"], "merge-mainline-parent-1")
+            self.assertFalse(report["main_modified"])
+            self.assertFalse(report["force_push"])
+            self.assertTrue(report["owner_review_required"])
+            self.assertEqual(git("branch", "--show-current"), "main")
+            self.assertEqual(git("status", "--porcelain"), "")
 
     def test_invalid_merge_commit_is_rejected(self):
         pr = self.valid_pr()
