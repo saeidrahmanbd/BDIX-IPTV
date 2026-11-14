@@ -9,6 +9,7 @@ import argparse, ast, json, re
 from pathlib import Path
 
 WORKFLOW_PYTHON = re.compile(r"(?:python(?:3(?:\.\d+)?)?)\s+([A-Za-z0-9_./-]+\.py)")
+WORKFLOW_SCRIPT = re.compile(r"(?:bash|sh)\s+([A-Za-z0-9_./-]+\.sh)|node\s+([A-Za-z0-9_./-]+\.(?:js|mjs|cjs))")
 WORKFLOW_ACTION = re.compile(r"^\s*(?:-\s*)?uses:\s*([^\s#]+)")
 SUBPROCESS_NAMES = {"run", "call", "check_call", "check_output", "Popen"}
 OS_PROCESS_NAMES = {"system", "popen"}
@@ -111,26 +112,42 @@ INFRASTRUCTURE_WORKFLOWS = {
 
 
 def trace_workflow_shell_entrypoints(detail: str, root: Path) -> dict:
-    """Link shell blocks to invoked repository scripts without claiming full trace."""
-    entrypoints = []
+    """Link explicit workflow script entrypoints without claiming full transitive trace."""
+    python_entries = []
+    shell_entries = []
+    node_entries = []
     for match in WORKFLOW_PYTHON.finditer(detail):
         target = match.group(1)
-        if target not in entrypoints:
-            entrypoints.append(target)
+        if target not in python_entries:
+            python_entries.append(target)
+    for match in WORKFLOW_SCRIPT.finditer(detail):
+        shell_target, node_target = match.groups()
+        if shell_target and shell_target not in shell_entries:
+            shell_entries.append(shell_target)
+        if node_target and node_target not in node_entries:
+            node_entries.append(node_target)
     commands = []
     for line in detail.splitlines():
         stripped = line.strip()
         if not stripped or stripped.startswith(("run:", "- run:", "#")):
             continue
-        if re.match(r"(?:python|python3|npm|npx|node|git|gh|curl|wget|wrangler)\b", stripped):
+        if re.match(r"(?:python|python3|npm|npx|node|bash|sh|git|gh|curl|wget|wrangler)\b", stripped):
             commands.append(stripped[:500])
     heredoc = bool(re.search(r"python(?:3(?:\.\d+)?)?\s+-\s*<<", detail))
     return {
-        "referenced_python_entrypoints": entrypoints,
-        "referenced_python_entrypoints_exist": all((root / target).is_file() for target in entrypoints),
+        "referenced_python_entrypoints": python_entries,
+        "referenced_python_entrypoints_exist": all((root / target).is_file() for target in python_entries),
+        "referenced_shell_entrypoints": shell_entries,
+        "referenced_shell_entrypoints_exist": all((root / target).is_file() for target in shell_entries),
+        "referenced_node_entrypoints": node_entries,
+        "referenced_node_entrypoints_exist": all((root / target).is_file() for target in node_entries),
         "inline_python_heredoc_present": heredoc,
         "shell_command_lines": commands,
-        "trace_status": "entrypoints_linked_transitive_effects_pending" if entrypoints else "manual_shell_trace_required",
+        "trace_status": (
+            "explicit_script_entrypoints_linked_transitive_effects_pending"
+            if python_entries or shell_entries or node_entries
+            else "manual_shell_trace_required"
+        ),
         "trace_complete": False,
     }
 
