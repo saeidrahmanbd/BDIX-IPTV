@@ -36,7 +36,7 @@ jobs:
               elif p.is_dir():
                   files.extend(x for x in p.rglob("*") if x.is_file())
           files = sorted(set(files), key=lambda p: str(p))
-          limit = 38 * 1024 * 1024
+          limit = 45 * 1024 * 1024
           groups, current, total = [], [], 0
           for path in files:
               size = path.stat().st_size
