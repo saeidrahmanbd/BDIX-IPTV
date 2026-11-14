@@ -91,6 +91,10 @@ jobs:
         if: always() && hashFiles('reports/automation-v2/legacy-dashboard-input-snapshot.json') != ''
         run: |
           python scripts/render_automation_v2_dashboard_parity.py
+      - name: Independently recompute and compare dashboard metrics
+        if: always()
+        run: |
+          python scripts/audit_automation_v2_dashboard_equivalence.py
       - name: Upload candidate bundle and diagnostics
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -107,6 +111,7 @@ jobs:
             reports/automation-v2/candidate-dashboard.md
             reports/automation-v2/legacy-dashboard-input-snapshot.json
             reports/automation-v2/dashboard-parity-mirror.md
+            reports/automation-v2/dashboard-equivalence.json
             reports/automation-v2/candidates/transactions/
           if-no-files-found: warn
           retention-days: 14
