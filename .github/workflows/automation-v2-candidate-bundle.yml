@@ -61,6 +61,12 @@ jobs:
         if: always()
         run: |
           python scripts/build_automation_v2_diagnostics_snapshot.py
+      - name: Render read-only candidate dashboard
+        if: always()
+        run: |
+          if [ -f reports/automation-v2/candidate-diagnostics-snapshot.json ]; then
+            python scripts/render_automation_v2_candidate_dashboard.py
+          fi
       - name: Upload candidate bundle and diagnostics
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -70,6 +76,8 @@ jobs:
             reports/automation-v2/candidate-run.json
             reports/automation-v2/candidate-logo-reference-audit.json
             reports/automation-v2/logo-repair-candidates.json
+            reports/automation-v2/candidate-diagnostics-snapshot.json
+            reports/automation-v2/candidate-dashboard.md
             reports/automation-v2/candidates/transactions/
           if-no-files-found: warn
           retention-days: 14

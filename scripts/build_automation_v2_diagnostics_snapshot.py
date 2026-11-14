@@ -40,8 +40,10 @@ def build_snapshot(root: Path, generated_at: str | None = None) -> dict:
     reports = root / "reports" / "automation-v2"
     run_path = reports / "candidate-run.json"
     logo_path = reports / "candidate-logo-reference-audit.json"
+    repair_path = reports / "logo-repair-candidates.json"
     run, run_error = _load(run_path)
     logo, logo_error = _load(logo_path)
+    repair, repair_error = _load(repair_path)
 
     transaction_path = None
     transaction = None
@@ -67,6 +69,8 @@ def build_snapshot(root: Path, generated_at: str | None = None) -> dict:
                               "sha256": _sha(run_path), "error": run_error},
             "logo_reference_audit": {"path": "reports/automation-v2/candidate-logo-reference-audit.json",
                                      "sha256": _sha(logo_path), "error": logo_error},
+            "logo_repair_candidates": {"path": "reports/automation-v2/logo-repair-candidates.json",
+                                      "sha256": _sha(repair_path), "error": repair_error},
         },
         "candidate": {
             "status": run_status,
@@ -87,6 +91,11 @@ def build_snapshot(root: Path, generated_at: str | None = None) -> dict:
             "exact_duplicate_groups": logo.get("exact_duplicate_groups") if logo else None,
             "deletion_performed": bool(logo.get("deletion_performed", False)) if logo else False,
             "quarantine_performed": bool(logo.get("quarantine_performed", False)) if logo else False,
+        },
+        "logo_repair_candidates": {
+            "available": repair is not None,
+            "proposal_count": len(repair.get("proposals", [])) if repair else None,
+            **(repair.get("counts", {}) if repair else {}),
         },
         "safety": {
             "production_publish_enabled": False,

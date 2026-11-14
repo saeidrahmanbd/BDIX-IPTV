@@ -18,6 +18,7 @@ on:
       - 'scripts/run_automation_v2_candidate_bundle.py'
       - 'scripts/build_automation_v2_diagnostics_snapshot.py'
       - 'scripts/build_automation_v2_logo_repair_candidates.py'
+      - 'scripts/render_automation_v2_candidate_dashboard.py'
       - 'scripts/recover_automation_v2_candidate_run.py'
       - 'scripts/prepare_automation_v2_rollback_pr.py'
       - '.github/workflows/automation-v2-candidate-bundle.yml'
