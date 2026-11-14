@@ -26,6 +26,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
             "test_language_policy.py", "test_country_verification.py",
             "test_migrate_logo_unset.py", "test_international_protected_guard.py",
             "test_playlist_metadata_repairs.py", "test_channel_numbering.py",
+            "test_backup_metadata_reconcile.py",
         ):
             self.assertIn(f"      - tests/{name}", workflow)
 
