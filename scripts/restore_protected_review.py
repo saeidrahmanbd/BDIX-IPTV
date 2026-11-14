@@ -52,7 +52,10 @@ def group_of(info: str) -> str:
     return attrs(info).get("group-title", "").strip()
 
 
-def display_name(info: str) -> str:
+def display_name(info: str | dict[str, str]) -> str:
+    """Return a channel label from either an EXTINF row or its parsed attributes."""
+    if isinstance(info, dict):
+        return (info.get("tvg-name") or info.get("name") or "").strip()
     a = attrs(info)
     return (a.get("tvg-name") or info.rsplit(",", 1)[-1]).strip()
 
@@ -182,7 +185,7 @@ def authorized_review_to_primary_target(
     return target_group
 
 
-def authorized_backup_migration_target(info: str, url: str) -> str | None:
+def authorized_backup_migration_target(info: str | dict[str, str], url: str) -> str | None:
     """Return the target group only for an explicitly allowlisted name + exact URL."""
     key = normalize_name(display_name(info))
     rule = AUTHORIZED_BACKUP_MIGRATIONS.get(key)
