@@ -25,7 +25,11 @@ LOGOS = ROOT / "logos"
 PLAYLISTS = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 REPORT = ROOT / "reports" / "logo-format-conversion.md"
-CONVERTIBLE_EXTENSIONS = {".jpg", ".jpeg", ".webp", ".svg", ".avif"}
+# Every raster/vector logo asset is normalized to PNG. Original files remain as
+# rollback/provenance sources; all active playlist metadata points to PNG.
+CONVERTIBLE_EXTENSIONS = {
+    ".jpg", ".jpeg", ".webp", ".svg", ".avif", ".gif", ".bmp", ".tif", ".tiff", ".ico",
+}
 BLOCKED_OUTPUT_NAMES = set(logo_repair.BAD_ASSETS | logo_repair.GENERIC_ASSETS) | {
     "atn-news.png", "a-sports-5485adff.png", "a-sports-hd.png", "bein-sports-3.png",
     "bangla-tv.png", "btv-news.png", "colors.png", "duronto-tv.png",
@@ -143,6 +147,15 @@ def convert_referenced_logos(
         source_formats[extension.lstrip(".")] = source_formats.get(extension.lstrip("."), 0) + 1
         return new_relative
 
+    # Normalize the complete logos/ image inventory, including assets not
+    # currently referenced by either playlist. Non-image files (README, etc.)
+    # and existing PNGs are left untouched.
+    for source_path in sorted(logos_dir.rglob("*")):
+        if not source_path.is_file() or source_path.suffix.casefold() not in CONVERTIBLE_EXTENSIONS:
+            continue
+        relative = source_path.relative_to(logos_dir).as_posix()
+        convert_one(relative)
+
     for playlist_name in playlist_names:
         playlist_path = root / playlist_name
         with playlist_path.open("r", encoding="utf-8", newline="") as stream:
@@ -221,10 +234,11 @@ def convert_referenced_logos(
             f"- Unique non-PNG assets converted: **{converted_count}**",
             f"- Playlist logo references updated: **{updated_references}**",
             f"- New PNG assets created: **{len(pending_assets)}**",
-            "- Original source assets retained: **Yes**",
-            "- Non-PNG references remaining: **0**",
+            f"- Supported non-PNG image assets found in logos/: **{converted_count}**",
+            "- Original source assets retained for rollback/provenance: **Yes**",
+            "- Non-PNG active playlist references remaining: **0**",
             "",
-            "Only local tvg-logo references were changed. Channel rows, stream URLs, IDs, groups, and channel numbers were preserved.",
+            "Every supported image asset under logos/ was converted to a validated PNG counterpart. Active local tvg-logo metadata was updated to PNG paths. Original files remain for rollback/provenance. Channel rows, stream URLs, IDs, groups, and channel numbers were preserved.",
             "",
             "## Source formats",
             "",
