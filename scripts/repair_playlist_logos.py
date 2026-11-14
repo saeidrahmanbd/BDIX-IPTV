@@ -867,7 +867,7 @@ def main():
             summary[playlist] = {"entries": 0, "changed": 0, "missing_after": 0, "flagged_after": 0, "unresolved": 0}
             continue
         with path.open("r", encoding="utf-8", newline="") as stream:
-            original = stream.read().replace("\r\n", "\n").replace("\r", "\n")
+            original = stream.read()
         lines = original.splitlines()
         changed = unresolved = entries = fallback_count = adult_ignored = 0
         output = []
