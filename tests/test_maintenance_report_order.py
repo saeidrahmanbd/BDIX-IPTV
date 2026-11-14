@@ -114,10 +114,9 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         renumber = (ROOT / "scripts" / "renumber_active_channels.py").read_text(encoding="utf-8")
         self.assertIn("ordered = records", renumber)
         self.assertNotIn("primary.sort(", renumber)
-        sorter = (ROOT / "scripts" / "sort_playlists.py").read_text(encoding="utf-8")
-        self.assertIn('if path.name == "IPTV-Playlist.m3u":', sorter)
-        self.assertIn("records.sort(key=category_key)", sorter)
-        self.assertIn("Do not rewrite channel numbers or group metadata.", sorter)
+        # Structural sorter is intentionally retired: the owner-curated
+        # IPTV playlist must never be automatically reordered or regrouped.
+        self.assertFalse((ROOT / "scripts" / "sort_playlists.py").exists())
 
     def test_review_queue_order_is_not_an_automatic_blocker(self):
         self.assertFalse(should_check_alphabetical_order("Backup"))
