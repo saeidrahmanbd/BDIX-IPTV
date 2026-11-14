@@ -134,6 +134,45 @@ class LogoRepairSourceTests(unittest.TestCase):
             )
         )
 
+    def test_existing_logo_replacement_preserves_noncanonical_attribute_order(self):
+        line = (
+            '#EXTINF:-1 group-title="International" tvg-language="eng" '
+            'tvg-logo="https://old.example/logo.jpg" tvg-name="Diema" '
+            'tvg-id="Diema.bg@SD",Diema'
+        )
+        updated = logo_repair.set_logo(
+            line, "https://raw.githubusercontent.com/example/logos/diema.png"
+        )
+        strip_logo = lambda value: re.sub(r'\s+tvg-logo="[^"]*"', "", value)
+        self.assertEqual(strip_logo(updated), strip_logo(line))
+        self.assertLess(updated.index('group-title="'), updated.index('tvg-language="'))
+        self.assertLess(updated.index('tvg-name="'), updated.index('tvg-id="'))
+        self.assertIn('tvg-logo="https://raw.githubusercontent.com/example/logos/diema.png"', updated)
+
+    def test_new_logo_attribute_preserves_existing_attribute_order(self):
+        line = '#EXTINF:-1 group-title="International" tvg-name="Diema" tvg-id="Diema.bg@SD",Diema'
+        updated = logo_repair.set_logo(
+            line, "https://raw.githubusercontent.com/example/logos/diema.png"
+        )
+        strip_logo = lambda value: re.sub(r'\s+tvg-logo="[^"]*"', "", value)
+        self.assertEqual(strip_logo(updated), strip_logo(line))
+        self.assertLess(updated.index('group-title="'), updated.index('tvg-name="'))
+        self.assertLess(updated.index('tvg-name="'), updated.index('tvg-id="'))
+
+    def test_render_updated_playlist_preserves_crlf_endings(self):
+        original = (
+            "#EXTM3U\r\n"
+            '#EXTINF:-1 group-title="International" tvg-name="Diema",Diema\r\n'
+            "https://example.invalid/live.m3u8\r\n"
+        )
+        lines = original.splitlines()
+        lines[1] = logo_repair.set_logo(
+            lines[1], "https://raw.githubusercontent.com/example/logos/diema.png"
+        )
+        updated = logo_repair.render_updated_playlist(lines, original)
+        self.assertEqual(updated.count("\r\n"), original.count("\r\n"))
+        self.assertNotIn("\n", updated.replace("\r\n", ""))
+
     def test_new_logo_attribute_is_inserted_before_group_title(self):
         line = '#EXTINF:-1 tvg-id="sample.bd" tvg-name="Sample TV" group-title="New Channels",Sample TV'
         updated = logo_repair.set_logo(
