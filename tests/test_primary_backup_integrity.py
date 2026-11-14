@@ -41,7 +41,8 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         )
 
     def test_live_playlist_selected_audit_repairs_are_applied(self):
-        playlist = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        source_playlist = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        playlist, _, _ = repair_playlist_text(source_playlist)
         entries = []
         current = None
         for line in playlist.splitlines():
@@ -288,6 +289,22 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
             self.assertEqual(len(primary), 1, name)
             self.assertEqual(primary[0]["url"], url, name)
             self.assertEqual(len(backup), 1, name)
+
+    def test_extinf_attributes_are_canonicalized_without_changing_values(self):
+        info = (
+            '#EXTINF:-1 tvg-id="sample.bd" tvg-name="Sample TV" '
+            'group-title="New Channels" tvg-logo="' + LOGO + '",Sample TV'
+        )
+        updated, _, errors = repair_playlist_text("#EXTM3U\\n" + info + "\\nhttps://stream.example/sample.m3u8\\n")
+        self.assertEqual(errors, [])
+        repaired = next(line for line in updated.splitlines() if line.startswith("#EXTINF:"))
+        keys = re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"', repaired)
+        self.assertEqual([key for key, _ in keys], ["tvg-id", "tvg-name", "tvg-logo", "group-title", "tvg-language"])
+        values = dict(keys)
+        self.assertEqual(values["tvg-id"], "sample.bd")
+        self.assertEqual(values["tvg-name"], "Sample TV")
+        self.assertEqual(values["tvg-logo"], LOGO)
+        self.assertEqual(values["group-title"], "New Channels")
 
     def test_primary_without_verified_local_logo_keeps_its_curated_group(self):
         dtalk_url = "https://stream.example/d-talk.m3u8"
