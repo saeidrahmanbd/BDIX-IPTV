@@ -38,10 +38,10 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); source=root/"opaque.py"
             source.write_text(
-                "import subprocess, os\\n"
-                "subprocess.run('python child.py', shell=True)\\n"
-                "os.system('python another.py')\\n"
-                "eval('print(1)')\\n"
+                "import subprocess, os\n"
+                "subprocess.run('python child.py', shell=True)\n"
+                "os.system('python another.py')\n"
+                "eval('print(1)')\n"
             )
             found=scan_python(source,"opaque.py")
             kinds={item["kind"] for item in found}
@@ -52,7 +52,7 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); (root/"automation").mkdir()
             (root/"automation"/"engine.py").write_text(
-                "import subprocess\\nsubprocess.run(make_command())\\n"
+                "import subprocess\nsubprocess.run(make_command())\n"
             )
             report=build_inventory(root)
             self.assertTrue(any(item["source"]=="automation/engine.py"
@@ -63,10 +63,10 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             root=Path(tmp); workflows=root/".github"/"workflows"
             workflows.mkdir(parents=True)
             (workflows/"sample.yml").write_text(
-                "jobs:\\n  build:\\n    steps:\\n"
-                "      - name: build\\n        run: |\\n"
-                "          npm ci\\n          node build.js\\n"
-                "      - name: next\\n        run: echo done\\n"
+                "jobs:\n  build:\n    steps:\n"
+                "      - name: build\n        run: |\n"
+                "          npm ci\n          node build.js\n"
+                "      - name: next\n        run: echo done\n"
             )
             report=build_inventory(root)
             boundaries=[x for x in report["nested_subprocess_calls"]
