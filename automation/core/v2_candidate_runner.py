@@ -13,8 +13,8 @@ import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
 
 from automation.core.candidate_manifest import CandidateManifest
-from automation.core.run_ledger import RunRequest
-from automation.core.github_state_store import execute_remote_run
+from automation.core.run_ledger import RunRequest, make_idempotency_key
+from automation.core.github_state_store import execute_remote_run, checkpoint_remote_probe_ledger
 from automation.core.transaction_gate import ArtifactEvidence
 from automation.core.transaction_staging import stage_transaction_bundle
 from automation.core.playlist_contract import parse_rows, assert_iptv_existing_rows_preserved
@@ -151,10 +151,12 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
         # Persist completed dated probes before the slower EPG source stage. If EPG
         # acquisition fails or the runner is interrupted later, the day's probes
         # remain available to the next disposable Actions runner.
-        updated_state = dict(snapshot.state)
-        updated_state["international_probe_ledger"] = parse_ledger(intl_run.maintenance.ledger_json)
-        store.save(updated_state, snapshot.blob_sha)
-        print("V2 bundle: International probe history checkpointed to durable state.", flush=True)
+        checkpoint_remote_probe_ledger(
+            store,
+            make_idempotency_key(request),
+            parse_ledger(intl_run.maintenance.ledger_json),
+        )
+        print("V2 bundle: International probe history checkpointed; active run reservation preserved.", flush=True)
 
         print("V2 bundle: starting isolated EPG source acquisition.", flush=True)
         source_candidate = build_epg_source_candidate(
