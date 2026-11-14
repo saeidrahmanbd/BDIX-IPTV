@@ -44,7 +44,11 @@ def recover_embedded_png_from_svg(svg_bytes: bytes) -> bytes | None:
         # chunk has an exact IEND marker. Pillow validates the reconstructed
         # compressed image data before the caller accepts the result.
         terminal = len(raw) - 12
-        if chunk_type == b"IDAT" and terminal >= data_start + 4 and raw[terminal:terminal + 8] == b"\x00\x00\x00\x00IEND":
+        if (
+            chunk_type == b"IDAT"
+            and terminal >= data_start + 4
+            and raw[terminal:terminal + 8] == b"\x00\x00\x00\x00IEND"
+        ):
             inferred_length = terminal - data_start - 4
             if inferred_length >= 0 and length > inferred_length:
                 length = inferred_length
