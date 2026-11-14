@@ -9,6 +9,7 @@ import argparse, ast, json, re
 from pathlib import Path
 
 WORKFLOW_PYTHON = re.compile(r"(?:python(?:3(?:\.\d+)?)?)\s+([A-Za-z0-9_./-]+\.py)")
+WORKFLOW_ACTION = re.compile(r"^\\s*(?:-\\s*)?uses:\\s*([^\\s#]+)")
 SUBPROCESS_NAMES = {"run", "call", "check_call", "check_output", "Popen", "system", "popen"}
 
 def _literal_command(node):
@@ -58,6 +59,7 @@ def build_inventory(root: Path) -> dict:
     workflows=root/".github"/"workflows"
     scripts=root/"scripts"
     workflow_entries=[]
+    workflow_actions=[]
     for path in sorted(workflows.glob("*.y*ml")):
         try: content=path.read_text(encoding="utf-8")
         except OSError: continue
@@ -65,6 +67,23 @@ def build_inventory(root: Path) -> dict:
             target=match.group(1)
             workflow_entries.append({"workflow":path.relative_to(root).as_posix(),
                                      "target":target,"exists":(root/target).is_file()})
+        for line_number,line in enumerate(content.splitlines(),1):
+            match=WORKFLOW_ACTION.match(line)
+            if not match:
+                continue
+            reference=match.group(1)
+            local=reference.startswith("./")
+            local_path=root/reference if local else None
+            if local and local_path.is_dir():
+                action_file=next((local_path/name for name in ("action.yml","action.yaml") if (local_path/name).is_file()),None)
+            else:
+                action_file=local_path
+            workflow_actions.append({
+                "workflow":path.relative_to(root).as_posix(),"line":line_number,
+                "kind":"local_workflow_action" if local else "external_workflow_action",
+                "reference":reference,"exists":bool(action_file and action_file.is_file()) if local else None,
+                "immutable_ref":bool(re.search(r"@[0-9a-fA-F]{40}$",reference)) if not local else None,
+            })
     nested=[]
     for path in sorted(root.rglob("*.py")):
         if any(part in {".git", ".venv", "venv", "__pycache__"} for part in path.parts):
@@ -101,15 +120,21 @@ def build_inventory(root: Path) -> dict:
     nested.extend(shell_boundaries)
     known={item["target"] for item in workflow_entries}
     unresolved=[item for item in nested if item["kind"] in {"subprocess_dynamic","parse_error","dynamic_code_execution","workflow_shell_boundary"}]
+    unresolved.extend(item for item in workflow_actions if item["kind"]=="external_workflow_action" or not item["exists"])
     missing=[item for item in nested if item["target"] and not (root/item["target"]).is_file()]
+    missing.extend(item for item in workflow_actions if item["kind"]=="local_workflow_action" and not item["exists"])
     return {
         "schema_version":1,
         "report_type":"automation-v2-static-runtime-dependency-inventory",
         "workflow_entrypoints":workflow_entries,
+        "workflow_actions":workflow_actions,
         "nested_subprocess_calls":nested,
         "summary":{
             "workflow_python_entrypoints":len(workflow_entries),
             "unique_workflow_targets":len(known),
+            "workflow_action_references":len(workflow_actions),
+            "external_workflow_actions":sum(1 for item in workflow_actions if item["kind"]=="external_workflow_action"),
+            "unpinned_external_workflow_actions":sum(1 for item in workflow_actions if item["kind"]=="external_workflow_action" and not item["immutable_ref"]),
             "nested_subprocess_calls":len(nested),
             "dynamic_or_unparsed_calls":len(unresolved),
             "missing_literal_targets":len(missing),
