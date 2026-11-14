@@ -5968,5 +5968,10 @@
     "status": "third_party_verified",
     "source_url": "https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540",
     "notes": "IPTV-org exact ID: Travelxp.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|wwe.superstar.central.com|WWE Superstar Central|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wwe-superstar-central-2c9ca1325e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://static.trademarkia.com/images/99048431",
+    "notes": "Exact external logo asset Exact figurative mark owned by World Wrestling Entertainment, LLC (WWE), from trademark filing serial 99048431; served by the trademark record image host, with source attribution only and no copyright licence implied Source page: https://www.trademarkia.com/ww-superstar-central-99048431"
   }
 }

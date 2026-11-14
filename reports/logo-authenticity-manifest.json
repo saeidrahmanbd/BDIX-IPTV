@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-14T11:46:24.030587+00:00",
+  "generated_at_utc": "2026-11-14T11:48:47.821370+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,17 +11,17 @@
     "International-Playlist.m3u": 3124
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "7fd0e715791c7916376cb3c6b854255968394936eb0c4def468bfa8ce4fb0bc0",
-    "International-Playlist.m3u": "7a4bc7da2f2131dbc25986094a3e30fe02503241772fe4730afa8947aec02a7a"
+    "IPTV-Playlist.m3u": "d47607e2306ca0561e6181336ea25952f4f93a6f56d47b33abbb2b7d221b6c6b",
+    "International-Playlist.m3u": "1b649eb78036de31b087396df0e59188005cf36b79dee895ebec5538e0831c7e"
   },
   "status_counts": {
-    "needs_review": 3577,
-    "third_party_verified": 831
+    "needs_review": 3576,
+    "third_party_verified": 832
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1261,
-      "third_party_verified": 23
+      "needs_review": 1260,
+      "third_party_verified": 24
     },
     "International-Playlist.m3u": {
       "needs_review": 2316,
@@ -7824,11 +7824,11 @@
       "channel_name": "WWE Superstar Central",
       "tvg_id": "wwe.superstar.central.com",
       "channel_id": "wwe.superstar.central.com",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wwe-superstar-central-2c9ca1325e.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://static.trademarkia.com/images/99048431",
+      "reason": "Exact external logo asset Exact figurative mark owned by World Wrestling Entertainment, LLC (WWE), from trademark filing serial 99048431; served by the trademark record image host, with source attribution only and no copyright licence implied Source page: https://www.trademarkia.com/ww-superstar-central-99048431"
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -15900,11 +15900,11 @@
       "channel_name": "Matribhumi TV",
       "tvg_id": "MatribhumiTV.bd@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/matribhumi-tv-2bb36a4f0f.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/matribhumi-tv-2bb36a4f0f.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://www.jagobd.com/wp-content/uploads/2024/10/matribhumi.jpg",
-      "reason": "IPTV-org exact ID: MatribhumiTV.bd IPTV-org public logo dataset Source page: https://www.jagobd.com/wp-content/uploads/2024/10/matribhumi.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: MatribhumiTV.bd IPTV-org public logo dataset Source page: https://www.jagobd.com/wp-content/uploads/2024/10/matribhumi.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -15960,7 +15960,7 @@
       "channel_name": "MUSIC BANGLA",
       "tvg_id": "MUSICBANGLA",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/music-bangla.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/music-bangla-converted-95905400d9.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -16404,11 +16404,11 @@
       "channel_name": "Sananda TV",
       "tvg_id": "custom.sananda-tv",
       "channel_id": "custom.sananda-tv",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sananda-tv-af0df4f34c.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sananda-tv-af0df4f34c.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiy-eN4aE_QgRNRcZmOezNCNMP1DJUolSnmxoSfA8ZSQ&s",
-      "reason": "Exact original tvg-logo URL from playlist history Historical source URL; reuse rights not specified Source page: https://github.com/saeidrahmanbd/BDIX-IPTV/blob/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact original tvg-logo URL from playlist history Historical source URL; reuse rights not specified Source page: https://github.com/saeidrahmanbd/BDIX-IPTV/blob/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -17352,7 +17352,7 @@
       "channel_name": "Zee Cinema APAC",
       "tvg_id": "ZeeCinema.in@APAC",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema-apac-efd7650d72.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema-apac-efd7650d72.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -20160,7 +20160,7 @@
       "channel_name": "God Stands Kids Club TV",
       "tvg_id": "GodStandsKidsClubTV.pk@English",
       "channel_id": "GodStandsKidsClubTV.pk@English",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/god-stands-kids-club-tv.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/god-stands-kids-club-tv.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -20172,7 +20172,7 @@
       "channel_name": "God Stands Kids Club TV Arabic",
       "tvg_id": "GodStandsKidsClubTV.pk@Arabic",
       "channel_id": "GodStandsKidsClubTV.pk@Arabic",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/god-stands-kids-club-tv-arabic.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/god-stands-kids-club-tv-arabic.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -20184,7 +20184,7 @@
       "channel_name": "God Stands Kids Club TV Chinese",
       "tvg_id": "GodStandsKidsClubTV.pk@Chinese",
       "channel_id": "GodStandsKidsClubTV.pk@Chinese",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/god-stands-kids-club-tv-chinese.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/god-stands-kids-club-tv-chinese.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -20364,11 +20364,11 @@
       "channel_name": "Cosmos Tv",
       "tvg_id": "CosmosTv.ar@HD",
       "channel_id": "CosmosTv.ar@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cosmos-tv-7521381461.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cosmos-tv-7521381461.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://cdn4.fmcosmos.com/s4/2025/11/03/fmcosmos/images/15/92/159284_a18e887e336fef3bc6b188314a173ce10cbe5157966e839517e2b0428d7aed46/xs.webp",
-      "reason": "IPTV-org exact ID: CosmosTv.ar IPTV-org public logo dataset Source page: https://cdn4.fmcosmos.com/s4/2025/11/03/fmcosmos/images/15/92/159284_a18e887e336fef3bc6b188314a173ce10cbe5157966e839517e2b0428d7aed46/xs.webp"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CosmosTv.ar IPTV-org public logo dataset Source page: https://cdn4.fmcosmos.com/s4/2025/11/03/fmcosmos/images/15/92/159284_a18e887e336fef3bc6b188314a173ce10cbe5157966e839517e2b0428d7aed46/xs.webp"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -20448,11 +20448,11 @@
       "channel_name": "X Level Media",
       "tvg_id": "XLevelMedia.ar@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/x-level-media-4cf7940385.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/x-level-media-4cf7940385.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/BGwQdQW.jpeg",
-      "reason": "IPTV-org exact ID: XLevelMedia.ar IPTV-org public logo dataset Source page: https://i.imgur.com/BGwQdQW.jpeg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: XLevelMedia.ar IPTV-org public logo dataset Source page: https://i.imgur.com/BGwQdQW.jpeg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -21276,11 +21276,11 @@
       "channel_name": "ZenLIFE by Stingray",
       "tvg_id": "ZenLIFEbyStingray.ca@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zenlife-by-stingray-7d01288f39.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zenlife-by-stingray-7d01288f39.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://www.stingray.com/wp-content/uploads/2023/12/stingray_zenlifebystingray_white.svg",
-      "reason": "IPTV-org exact ID: ZenLIFEbyStingray.ca IPTV-org public logo dataset Source page: https://www.stingray.com/wp-content/uploads/2023/12/stingray_zenlifebystingray_white.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: ZenLIFEbyStingray.ca IPTV-org public logo dataset Source page: https://www.stingray.com/wp-content/uploads/2023/12/stingray_zenlifebystingray_white.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -21516,7 +21516,7 @@
       "channel_name": "Jiangxi Movie Channel",
       "tvg_id": "JiangxiMovieChannel.cn@SD",
       "channel_id": "JiangxiMovieChannel.cn@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/jiangxi-movie-channel.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/jiangxi-movie-channel.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -21564,11 +21564,11 @@
       "channel_name": "Parranda Vallenata",
       "tvg_id": "ParrandaVallenata.co@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/parranda-vallenata-a860ad16cd.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/parranda-vallenata-a860ad16cd.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/BzBX7Qx.jpeg",
-      "reason": "IPTV-org exact ID: ParrandaVallenata.co IPTV-org public logo dataset Source page: https://i.imgur.com/BzBX7Qx.jpeg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: ParrandaVallenata.co IPTV-org public logo dataset Source page: https://i.imgur.com/BzBX7Qx.jpeg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -21576,11 +21576,11 @@
       "channel_name": "Radiola TV",
       "tvg_id": "RadiolaTV.co@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radiola-tv-85f3f1c401.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radiola-tv-85f3f1c401.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/3AXjotA.jpg",
-      "reason": "IPTV-org exact ID: RadiolaTV.co IPTV-org public logo dataset Source page: https://i.imgur.com/3AXjotA.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: RadiolaTV.co IPTV-org public logo dataset Source page: https://i.imgur.com/3AXjotA.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -21624,11 +21624,11 @@
       "channel_name": "Supermusica TV",
       "tvg_id": "SupermusicaTV.co@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/supermusica-tv-52340ed26b.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/supermusica-tv-52340ed26b.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/MiVs42N.jpeg",
-      "reason": "IPTV-org exact ID: SupermusicaTV.co IPTV-org public logo dataset Source page: https://i.imgur.com/MiVs42N.jpeg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: SupermusicaTV.co IPTV-org public logo dataset Source page: https://i.imgur.com/MiVs42N.jpeg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -21636,11 +21636,11 @@
       "channel_name": "88 Stereo",
       "tvg_id": "88Stereo.cr@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/88-stereo-82d858a135.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/88-stereo-82d858a135.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://cdn-profiles.tunein.com/s10749/images/logod.jpg?t=637503840760000000",
-      "reason": "Exact external logo asset Station logo served by TuneIn Source page: https://tunein.com/radio/Radio-88-Stereo-887-s10749/"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset Station logo served by TuneIn Source page: https://tunein.com/radio/Radio-88-Stereo-887-s10749/"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -21696,11 +21696,11 @@
       "channel_name": "SOY Plancha TV",
       "tvg_id": "SOYPlanchaTV.cr@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/soy-plancha-tv-0a254093f8.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/soy-plancha-tv-0a254093f8.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.ibb.co/P4kpMgk/1689344714578.jpg",
-      "reason": "IPTV-org exact ID: SOYPlanchaTV.cr IPTV-org public logo dataset Source page: https://i.ibb.co/P4kpMgk/1689344714578.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: SOYPlanchaTV.cr IPTV-org public logo dataset Source page: https://i.ibb.co/P4kpMgk/1689344714578.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -21720,7 +21720,7 @@
       "channel_name": "Vintage Music",
       "tvg_id": "VintageMusic.cr@SD",
       "channel_id": "VintageMusic.cr@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/vintage-music-720p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/vintage-music-720p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -21864,11 +21864,11 @@
       "channel_name": "HBO 3",
       "tvg_id": "HBO3.cz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo-3-13a578a1a8.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo-3-13a578a1a8.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/6/6f/HBO_3_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122202",
-      "reason": "IPTV-org exact ID: HBO3.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/6/6f/HBO_3_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122202"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: HBO3.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/6/6f/HBO_3_%28Metallic%29.png/revision/latest/scale-to-width-down/1000?cb=20190715122202"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -21876,11 +21876,11 @@
       "channel_name": "HBO (Czech Republic)",
       "tvg_id": "HBO.cz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo-czech-republic-eb91a42c95.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo-czech-republic-eb91a42c95.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/a/a9/HBO_Silver_glossy_logo.svg/revision/latest?cb=20260529155924",
-      "reason": "IPTV-org exact ID: HBO.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/a/a9/HBO_Silver_glossy_logo.svg/revision/latest?cb=20260529155924"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: HBO.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/a/a9/HBO_Silver_glossy_logo.svg/revision/latest?cb=20260529155924"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -21972,11 +21972,11 @@
       "channel_name": "Ocko Gold",
       "tvg_id": "OckoGold.cz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ocko-gold-14752c70a2.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ocko-gold-14752c70a2.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/nrWNyLc.jpg",
-      "reason": "IPTV-org exact ID: OckoGold.cz IPTV-org public logo dataset Source page: https://i.imgur.com/nrWNyLc.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: OckoGold.cz IPTV-org public logo dataset Source page: https://i.imgur.com/nrWNyLc.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -22896,11 +22896,11 @@
       "channel_name": "DMF",
       "tvg_id": "DMF.de@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dmf-99a7cc8162.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dmf-99a7cc8162.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/sJaBU7X.jpeg",
-      "reason": "IPTV-org exact ID: DMF.de IPTV-org public logo dataset Source page: https://i.imgur.com/sJaBU7X.jpeg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DMF.de IPTV-org public logo dataset Source page: https://i.imgur.com/sJaBU7X.jpeg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -23940,7 +23940,7 @@
       "channel_name": "SL 1",
       "tvg_id": "custom.sl-1-ir-movie",
       "channel_id": "custom.sl-1-ir-movie",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sl-1-cf9a2b094a.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sl-1-cf9a2b094a.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -23952,7 +23952,7 @@
       "channel_name": "SL 2",
       "tvg_id": "custom.sl-2-ir-movie",
       "channel_id": "custom.sl-2-ir-movie",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sl-2-bf64ffcbcf.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sl-2-bf64ffcbcf.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -24348,11 +24348,11 @@
       "channel_name": "mfm",
       "tvg_id": "mfm.lb@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mfm-3e54afd7b1.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mfm-3e54afd7b1.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://www.mtv.com.lb/images/header/mfm-logo.svg",
-      "reason": "IPTV-org exact ID: mfm.lb IPTV-org public logo dataset Source page: https://www.mtv.com.lb/images/header/mfm-logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: mfm.lb IPTV-org public logo dataset Source page: https://www.mtv.com.lb/images/header/mfm-logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -24432,7 +24432,7 @@
       "channel_name": "Claro Cinema",
       "tvg_id": "ClaroCinema.mx@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/claro-cinema-1080p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/claro-cinema-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -24636,7 +24636,7 @@
       "channel_name": "Dance Television",
       "tvg_id": "DanceTelevision.nl@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dance-television-1080p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dance-television-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -24828,11 +24828,11 @@
       "channel_name": "Pindin TV",
       "tvg_id": "PindinTV.pa@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pindin-tv-2850b210f4.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pindin-tv-2850b210f4.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/UaQC0l8.jpeg",
-      "reason": "IPTV-org exact ID: PindinTV.pa IPTV-org public logo dataset Source page: https://i.imgur.com/UaQC0l8.jpeg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: PindinTV.pa IPTV-org public logo dataset Source page: https://i.imgur.com/UaQC0l8.jpeg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -25464,11 +25464,11 @@
       "channel_name": "Orizont TV",
       "tvg_id": "OrizontTV.ro@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/orizont-tv-86d90ff35c.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/orizont-tv-86d90ff35c.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/8/8b/Orizont_TV.svg/revision/latest/scale-to-width-down/1000?cb=20241219232954",
-      "reason": "IPTV-org exact ID: OrizontTV.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/8/8b/Orizont_TV.svg/revision/latest/scale-to-width-down/1000?cb=20241219232954"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: OrizontTV.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/8/8b/Orizont_TV.svg/revision/latest/scale-to-width-down/1000?cb=20241219232954"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -25476,11 +25476,11 @@
       "channel_name": "Party Mix",
       "tvg_id": "PartyMix.ro@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/party-mix-4d7c657613.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/party-mix-4d7c657613.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://yt3.googleusercontent.com/ytc/AIdro_lCn4ThcMw7giX9jeLHURb1oqoNIYN3YlObhwLkrsSNfg=w226-c-h226-k-c0x00ffffff-no-l90-rj",
-      "reason": "IPTV-org exact ID: PartyMix.ro IPTV-org public logo dataset Source page: https://yt3.googleusercontent.com/ytc/AIdro_lCn4ThcMw7giX9jeLHURb1oqoNIYN3YlObhwLkrsSNfg=w226-c-h226-k-c0x00ffffff-no-l90-rj"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: PartyMix.ro IPTV-org public logo dataset Source page: https://yt3.googleusercontent.com/ytc/AIdro_lCn4ThcMw7giX9jeLHURb1oqoNIYN3YlObhwLkrsSNfg=w226-c-h226-k-c0x00ffffff-no-l90-rj"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -25488,11 +25488,11 @@
       "channel_name": "Pro Cinema",
       "tvg_id": "ProCinema.ro@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pro-cinema-7689898615.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pro-cinema-7689898615.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/a/a6/Pro_Cinema_logo_2022.svg/revision/latest/scale-to-width-down/1000?cb=20220419100521",
-      "reason": "IPTV-org exact ID: ProCinema.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/a/a6/Pro_Cinema_logo_2022.svg/revision/latest/scale-to-width-down/1000?cb=20220419100521"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: ProCinema.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/a/a6/Pro_Cinema_logo_2022.svg/revision/latest/scale-to-width-down/1000?cb=20220419100521"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -25548,11 +25548,11 @@
       "channel_name": "TV AS",
       "tvg_id": "TVAS.ro@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-as-81959ea5ae.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-as-81959ea5ae.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/0/06/TV_AS.png/revision/latest/scale-to-width-down/1000?cb=20241117150631",
-      "reason": "IPTV-org exact ID: TVAS.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/0/06/TV_AS.png/revision/latest/scale-to-width-down/1000?cb=20241117150631"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: TVAS.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/0/06/TV_AS.png/revision/latest/scale-to-width-down/1000?cb=20241117150631"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -26148,11 +26148,11 @@
       "channel_name": "RU.TV",
       "tvg_id": "RUTV.ru@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ru-tv-1e1acce47e.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ru-tv-1e1acce47e.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://ru.tv/_nuxt/img/logo.e3ca789.svg",
-      "reason": "IPTV-org exact ID: RUTV.ru IPTV-org public logo dataset Source page: https://ru.tv/_nuxt/img/logo.e3ca789.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: RUTV.ru IPTV-org public logo dataset Source page: https://ru.tv/_nuxt/img/logo.e3ca789.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -26400,11 +26400,11 @@
       "channel_name": "Majid Al Mohandis",
       "tvg_id": "MajidAlMohandis.sa@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/majid-al-mohandis-be4ee7c613.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/majid-al-mohandis-be4ee7c613.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.discogs.com/Fk9Bm8gTYJYeVXIJKX-EOGmYQ90sVQPtkIW5ZK4fydo/rs:fit/g:sm/q:90/h:372/w:412/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTE2OTY4/MzMtMTU2ODk0NjI5/MC01Njk2LmpwZWc.jpeg",
-      "reason": "IPTV-org exact ID: MajidAlMohandis.sa IPTV-org public logo dataset Source page: https://i.discogs.com/Fk9Bm8gTYJYeVXIJKX-EOGmYQ90sVQPtkIW5ZK4fydo/rs:fit/g:sm/q:90/h:372/w:412/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTE2OTY4/MzMtMTU2ODk0NjI5/MC01Njk2LmpwZWc.jpeg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: MajidAlMohandis.sa IPTV-org public logo dataset Source page: https://i.discogs.com/Fk9Bm8gTYJYeVXIJKX-EOGmYQ90sVQPtkIW5ZK4fydo/rs:fit/g:sm/q:90/h:372/w:412/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTE2OTY4/MzMtMTU2ODk0NjI5/MC01Njk2LmpwZWc.jpeg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -27528,7 +27528,7 @@
       "channel_name": "TRT Muzik",
       "tvg_id": "TRTMuzik.tr@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trt-muzik.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trt-muzik-converted-cd34011c94.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -27732,7 +27732,7 @@
       "channel_name": "Nashe Lubimoe Kino Ukraine",
       "tvg_id": "NasheLubimoeKinoUkraine.ua@SD",
       "channel_id": "NasheLubimoeKinoUkraine.ua@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nashe-lubimoe-kino-ukraine-1080p.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nashe-lubimoe-kino-ukraine-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -27804,11 +27804,11 @@
       "channel_name": "Viasat Serial",
       "tvg_id": "ViasatSerial.ua@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viasat-serial-8e4a9c26e8.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viasat-serial-8e4a9c26e8.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Viasat_Serial.svg",
-      "reason": "IPTV-org exact ID: ViasatSerial.ua IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/7/7d/Viasat_Serial.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: ViasatSerial.ua IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/7/7d/Viasat_Serial.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -28452,11 +28452,11 @@
       "channel_name": "Botflix Radioo",
       "tvg_id": "BotflixRadioo.us@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/botflix-radioo-90c6a6f9a4.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/botflix-radioo-90c6a6f9a4.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://botflix.tv/assets/img/botflix-mark.90c6a6f9a4.webp",
-      "reason": "IPTV-org exact ID: BotflixRadioo.us IPTV-org public logo dataset Source page: https://botflix.tv/assets/img/botflix-mark.90c6a6f9a4.webp"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: BotflixRadioo.us IPTV-org public logo dataset Source page: https://botflix.tv/assets/img/botflix-mark.90c6a6f9a4.webp"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -28476,7 +28476,7 @@
       "channel_name": "Charge!",
       "tvg_id": "Charge.us@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/charge-1080p.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/charge-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -28692,7 +28692,7 @@
       "channel_name": "Cinemax Hits",
       "tvg_id": "CinemaxHits.us@East",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinemax-hits-d7aa5bbda6.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinemax-hits-d7aa5bbda6.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -29052,7 +29052,7 @@
       "channel_name": "Hallmark Mystery [ ]",
       "tvg_id": "HallmarkMystery.us@East",
       "channel_id": "HallmarkMystery.us@East",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/hallmark-mystery-720p-geo-blocked.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/hallmark-mystery-720p-geo-blocked.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -29364,7 +29364,7 @@
       "channel_name": "Movieplex",
       "tvg_id": "movieplex.us",
       "channel_id": "movieplex.us",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-movieplex.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-movieplex.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -29412,11 +29412,11 @@
       "channel_name": "MovieSphere Gold WFXT",
       "tvg_id": "MovieSphereGold.us@WFXT",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moviesphere-gold-wfxt-fda6a3a097.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moviesphere-gold-wfxt-fda6a3a097.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/MovieSphere_Gold_2025_logo.svg",
-      "reason": "IPTV-org exact ID: MovieSphereGold.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/8/87/MovieSphere_Gold_2025_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: MovieSphereGold.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/8/87/MovieSphere_Gold_2025_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -29460,11 +29460,11 @@
       "channel_name": "NOST",
       "tvg_id": "NOST.us@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nost-5d9e212ea1.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nost-5d9e212ea1.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/NOST-1080x1080.jpg/250px-NOST-1080x1080.jpg",
-      "reason": "IPTV-org exact ID: NOST.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/NOST-1080x1080.jpg/250px-NOST-1080x1080.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: NOST.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/NOST-1080x1080.jpg/250px-NOST-1080x1080.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -29520,7 +29520,7 @@
       "channel_name": "Paramount+ Picks",
       "tvg_id": "ParamountPlusPicks.us@SD",
       "channel_id": "ParamountPlusPicks.us@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/paramount-picks.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/paramount-picks.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -30288,7 +30288,7 @@
       "channel_name": "Scares by Shudder",
       "tvg_id": "ScaresbyShudder.us@SD",
       "channel_id": "ScaresbyShudder.us@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/scares-by-shudder-1080p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/scares-by-shudder-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -30804,11 +30804,11 @@
       "channel_name": "FTV (Uzbekistan)",
       "tvg_id": "FTV.uz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ftv-uzbekistan-eaff76a41d.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ftv-uzbekistan-eaff76a41d.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/7lpISyN.jpg",
-      "reason": "IPTV-org exact ID: FTV.uz IPTV-org public logo dataset Source page: https://i.imgur.com/7lpISyN.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: FTV.uz IPTV-org public logo dataset Source page: https://i.imgur.com/7lpISyN.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -30828,11 +30828,11 @@
       "channel_name": "Muz TV Uzbekistan",
       "tvg_id": "MuzTVUzbekistan.uz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/muz-tv-uzbekistan-218f3c70a9.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/muz-tv-uzbekistan-218f3c70a9.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://s8.vcdn.biz/static/f/6010782281/image.jpg",
-      "reason": "IPTV-org exact ID: MuzTVUzbekistan.uz IPTV-org public logo dataset Source page: https://s8.vcdn.biz/static/f/6010782281/image.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: MuzTVUzbekistan.uz IPTV-org public logo dataset Source page: https://s8.vcdn.biz/static/f/6010782281/image.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -30864,11 +30864,11 @@
       "channel_name": "ON Movies",
       "tvg_id": "ONMovies.vn@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/on-movies-e521135430.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/on-movies-e521135430.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.ibb.co/fdbgvtT8/IMG-2523.webp",
-      "reason": "IPTV-org exact ID: ONMovies.vn IPTV-org public logo dataset Source page: https://i.ibb.co/fdbgvtT8/IMG-2523.webp"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: ONMovies.vn IPTV-org public logo dataset Source page: https://i.ibb.co/fdbgvtT8/IMG-2523.webp"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -30876,11 +30876,11 @@
       "channel_name": "ON Music",
       "tvg_id": "ONMusic.vn@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/on-music-d304b15bd2.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/on-music-d304b15bd2.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.ibb.co/DHk2gv86/IMG-2524.webp",
-      "reason": "IPTV-org exact ID: ONMusic.vn IPTV-org public logo dataset Source page: https://i.ibb.co/DHk2gv86/IMG-2524.webp"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: ONMusic.vn IPTV-org public logo dataset Source page: https://i.ibb.co/DHk2gv86/IMG-2524.webp"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -30936,11 +30936,11 @@
       "channel_name": "A2i Music",
       "tvg_id": "A2iMusic.sn@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a2i-music-b2b7a2a426.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a2i-music-b2b7a2a426.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/Fykhzxh.jpg",
-      "reason": "IPTV-org exact ID: A2iMusic.sn IPTV-org public logo dataset Source page: https://i.imgur.com/Fykhzxh.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: A2iMusic.sn IPTV-org public logo dataset Source page: https://i.imgur.com/Fykhzxh.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -30960,7 +30960,7 @@
       "channel_name": "Allo Cine",
       "tvg_id": "AlloCine.cm@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/allo-cine-1080p.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/allo-cine-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -30984,7 +30984,7 @@
       "channel_name": "Antenne Kaernten",
       "tvg_id": "AntenneKaernten.at@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/antenne-kaernten-720p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/antenne-kaernten-720p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -30996,7 +30996,7 @@
       "channel_name": "Antenne Steiermark",
       "tvg_id": "AntenneSteiermark.at@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/antenne-steiermark-720p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/antenne-steiermark-720p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -31296,11 +31296,11 @@
       "channel_name": "HMTV (Nigeria)",
       "tvg_id": "HMTV.ng@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hmtv-nigeria-8973e91330.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hmtv-nigeria-8973e91330.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://watchhmtv.com/hmtv_logo.svg",
-      "reason": "IPTV-org exact ID: HMTV.ng IPTV-org public logo dataset Source page: https://watchhmtv.com/hmtv_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: HMTV.ng IPTV-org public logo dataset Source page: https://watchhmtv.com/hmtv_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -31392,11 +31392,11 @@
       "channel_name": "JRTV Jarviradio",
       "tvg_id": "JRTVJarviradio.fi@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jrtv-jarviradio-a2313c8574.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jrtv-jarviradio-a2313c8574.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://jarviradio.fi/jrtv2/wp-content/uploads/2022/01/jrtv1.jpg",
-      "reason": "IPTV-org exact ID: JRTVJarviradio.fi IPTV-org public logo dataset Source page: https://jarviradio.fi/jrtv2/wp-content/uploads/2022/01/jrtv1.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: JRTVJarviradio.fi IPTV-org public logo dataset Source page: https://jarviradio.fi/jrtv2/wp-content/uploads/2022/01/jrtv1.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -31416,7 +31416,7 @@
       "channel_name": "Kantipur Max [ ]",
       "tvg_id": "KantipurMax.np@SD",
       "channel_id": "KantipurMax.np@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kantipur-max-geo-blocked.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kantipur-max-geo-blocked.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -31488,11 +31488,11 @@
       "channel_name": "Kuriakos Music",
       "tvg_id": "KuriakosMusic.pt@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kuriakos-music-c86ebafd5c.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kuriakos-music-c86ebafd5c.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/Zl40NYi.jpg",
-      "reason": "IPTV-org exact ID: KuriakosMusic.pt IPTV-org public logo dataset Source page: https://i.imgur.com/Zl40NYi.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: KuriakosMusic.pt IPTV-org public logo dataset Source page: https://i.imgur.com/Zl40NYi.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -31512,11 +31512,11 @@
       "channel_name": "La Top 107.7",
       "tvg_id": "LaTop1077.hn@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/la-top-107-7-c9b97b2bd3.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/la-top-107-7-c9b97b2bd3.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/vgHhh1W.jpg",
-      "reason": "IPTV-org exact ID: LaTop1077.hn IPTV-org public logo dataset Source page: https://i.imgur.com/vgHhh1W.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: LaTop1077.hn IPTV-org public logo dataset Source page: https://i.imgur.com/vgHhh1W.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -31668,11 +31668,11 @@
       "channel_name": "Metropoli Medios TV",
       "tvg_id": "MetropoliMediosTV.ec@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/metropoli-medios-tv-266701e2d9.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/metropoli-medios-tv-266701e2d9.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/yID5T2S.jpg",
-      "reason": "IPTV-org exact ID: MetropoliMediosTV.ec IPTV-org public logo dataset Source page: https://i.imgur.com/yID5T2S.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: MetropoliMediosTV.ec IPTV-org public logo dataset Source page: https://i.imgur.com/yID5T2S.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -31692,7 +31692,7 @@
       "channel_name": "MN+",
       "tvg_id": "MNPlus.mn@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mn-plus.jpeg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mn-plus.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -31968,11 +31968,11 @@
       "channel_name": "The Retro Channel",
       "tvg_id": "custom.the-retro-channel-pr-music",
       "channel_id": "custom.the-retro-channel-pr-music",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-retro-channel-1a8ccc02f4.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-retro-channel-1a8ccc02f4.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/t3i1HtE.jpg",
-      "reason": "IPTV-org exact unique channel name: TheRetroChannel.pr IPTV-org public logo dataset Source page: https://i.imgur.com/t3i1HtE.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact unique channel name: TheRetroChannel.pr IPTV-org public logo dataset Source page: https://i.imgur.com/t3i1HtE.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -32028,11 +32028,11 @@
       "channel_name": "TV Cidade",
       "tvg_id": "TVCidade.cv@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-cidade-0e0b8f944f.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-cidade-0e0b8f944f.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/gmSu21X.jpg",
-      "reason": "IPTV-org exact ID: TVCidade.cv IPTV-org public logo dataset Source page: https://i.imgur.com/gmSu21X.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: TVCidade.cv IPTV-org public logo dataset Source page: https://i.imgur.com/gmSu21X.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -32580,7 +32580,7 @@
       "channel_name": "Blonde",
       "tvg_id": "custom.xxx-blonde",
       "channel_id": "custom.xxx-blonde",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blonde.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blonde.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -32772,7 +32772,7 @@
       "channel_name": "Cuckold",
       "tvg_id": "custom.xxx-cuckold",
       "channel_id": "custom.xxx-cuckold",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cuckold.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cuckold.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -33360,7 +33360,7 @@
       "channel_name": "m3u.Com Blonde",
       "tvg_id": "custom.adultm3u-com-blonde",
       "channel_id": "custom.adultm3u-com-blonde",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blonde.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blonde.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -33408,7 +33408,7 @@
       "channel_name": "m3u.Com Cuckold",
       "tvg_id": "custom.adultm3u-com-cuckold",
       "channel_id": "custom.adultm3u-com-cuckold",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cuckold.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cuckold.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -33852,7 +33852,7 @@
       "channel_name": "Mycamtv Blonde Girls",
       "tvg_id": "custom.mycamtv-blonde-girls",
       "channel_id": "custom.mycamtv-blonde-girls",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blonde.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blonde.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -36612,7 +36612,7 @@
       "channel_name": "ACW UG TV",
       "tvg_id": "ACWUGTV.ug@SD",
       "channel_id": "ACWUGTV.ug@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/acw-ug-tv-480p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/acw-ug-tv-480p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -37044,7 +37044,7 @@
       "channel_name": "BIZ Music",
       "tvg_id": "custom.biz-music-uz-music",
       "channel_id": "custom.biz-music-uz-music",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/biz-music-1080p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/biz-music-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -37068,7 +37068,7 @@
       "channel_name": "Blonde",
       "tvg_id": "custom.blonde",
       "channel_id": "custom.blonde",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blonde.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blonde.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -37092,7 +37092,7 @@
       "channel_name": "Bravo Farsi TV",
       "tvg_id": "BravoFarsiTV.ir@SD",
       "channel_id": "BravoFarsiTV.ir@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bravo-farsi-tv-360p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bravo-farsi-tv-360p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -37164,7 +37164,7 @@
       "channel_name": "Canal 3 KMK TV",
       "tvg_id": "Canal3KMKTV.cr@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-3-kmk-tv-720p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-3-kmk-tv-720p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -37308,7 +37308,7 @@
       "channel_name": "Cine+ Classic",
       "tvg_id": "CinePlusClassic.fr@SD",
       "channel_id": "CinePlusClassic.fr@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cine-classic.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cine-classic.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -37320,7 +37320,7 @@
       "channel_name": "Cine+ Frisson",
       "tvg_id": "CinePlusFrisson.fr@SD",
       "channel_id": "CinePlusFrisson.fr@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cine-frisson-1080p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cine-frisson-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -37512,7 +37512,7 @@
       "channel_name": "CTB Perth Movies Channel",
       "tvg_id": "CTBPerthMoviesChannel.au@SD",
       "channel_id": "CTBPerthMoviesChannel.au@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/ctb-perth-movies-channel-720p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/ctb-perth-movies-channel-720p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -37524,7 +37524,7 @@
       "channel_name": "Cuckold",
       "tvg_id": "custom.cuckold",
       "channel_id": "custom.cuckold",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cuckold.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cuckold.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -37860,11 +37860,11 @@
       "channel_name": "DumDum",
       "tvg_id": "DumDum.br@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dumdum-8be5079872.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dumdum-8be5079872.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg",
-      "reason": "IPTV-org exact ID: DumDum.br IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DumDum.br IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -38028,7 +38028,7 @@
       "channel_name": "Famatv [ ]",
       "tvg_id": "Famatv.pt@SD",
       "channel_id": "Famatv.pt@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/famatv-1080p-not-24-7.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/famatv-1080p-not-24-7.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -38340,7 +38340,7 @@
       "channel_name": "Green TV",
       "tvg_id": "GreenTV.bd@SD",
       "channel_id": "GreenTV.bd@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/green-tv-1080p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/green-tv-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -38532,7 +38532,7 @@
       "channel_name": "Jiangsu Movie Channel",
       "tvg_id": "JiangsuMovieChannel.cn@SD",
       "channel_id": "JiangsuMovieChannel.cn@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/jiangsu-movie-channel-576p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/jiangsu-movie-channel-576p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -38544,7 +38544,7 @@
       "channel_name": "Jilin Movie Channel",
       "tvg_id": "JilinMovieChannel.cn@SD",
       "channel_id": "JilinMovieChannel.cn@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/jilin-movie-channel.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/jilin-movie-channel.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -38736,11 +38736,11 @@
       "channel_name": "La Top 102.9",
       "tvg_id": "LaTop1029.hn@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/la-top-102-9-d8535e9176.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/la-top-102-9-d8535e9176.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/ZqwLPag.jpg",
-      "reason": "IPTV-org exact ID: LaTop1029.hn IPTV-org public logo dataset Source page: https://i.imgur.com/ZqwLPag.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: LaTop1029.hn IPTV-org public logo dataset Source page: https://i.imgur.com/ZqwLPag.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -38748,7 +38748,7 @@
       "channel_name": "Law & Crime",
       "tvg_id": "lawandcrime.us",
       "channel_id": "lawandcrime.us",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/lawcrime.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/lawcrime.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -38940,7 +38940,7 @@
       "channel_name": "Mega Extreno",
       "tvg_id": "MegaExtrenoHD.us@HD",
       "channel_id": "MegaExtrenoHD.us@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/mega-extreno-hd-720p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/mega-extreno-hd-720p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -39156,7 +39156,7 @@
       "channel_name": "Nande Portetepe TV",
       "tvg_id": "NandePortetepeTV.py@SD",
       "channel_id": "NandePortetepeTV.py@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nande-portetepe-tv.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nande-portetepe-tv.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -39276,11 +39276,11 @@
       "channel_name": "Nicktoons (United States)",
       "tvg_id": "Nicktoons.us@East",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nicktoons-united-states-2da2648c2b.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nicktoons-united-states-2da2648c2b.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://images.pluto.tv/channels/654ca7f92c1d3300086b608c/colorLogoSVG_1751457678313.svg",
-      "reason": "IPTV-org exact ID: Nicktoons.us IPTV-org public logo dataset Source page: https://images.pluto.tv/channels/654ca7f92c1d3300086b608c/colorLogoSVG_1751457678313.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: Nicktoons.us IPTV-org public logo dataset Source page: https://images.pluto.tv/channels/654ca7f92c1d3300086b608c/colorLogoSVG_1751457678313.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -39324,7 +39324,7 @@
       "channel_name": "Pantalla Clasica EC [ ]",
       "tvg_id": "PantallaClasicaEC.ec@SD",
       "channel_id": "PantallaClasicaEC.ec@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pantalla-clasica-ec-512p-not-24-7.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/pantalla-clasica-ec-512p-not-24-7.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -39516,7 +39516,7 @@
       "channel_name": "QTV-3",
       "tvg_id": "QTV3.cn@SD",
       "channel_id": "QTV3.cn@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/qtv-3.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/qtv-3.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -39768,11 +39768,11 @@
       "channel_name": "Salsa Gorda Television",
       "tvg_id": "SalsaGordaTelevision.co@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/salsa-gorda-television-ce7324b2d1.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/salsa-gorda-television-ce7324b2d1.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/3IhYd7G.jpg",
-      "reason": "IPTV-org exact ID: SalsaGordaTelevision.co IPTV-org public logo dataset Source page: https://i.imgur.com/3IhYd7G.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: SalsaGordaTelevision.co IPTV-org public logo dataset Source page: https://i.imgur.com/3IhYd7G.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -40176,7 +40176,7 @@
       "channel_name": "Star Tamil Television",
       "tvg_id": "StarTamilTelevision.lk@SD",
       "channel_id": "StarTamilTelevision.lk@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/star-tamil-television-360p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/star-tamil-television-360p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -40308,7 +40308,7 @@
       "channel_name": "Tom And Jerry",
       "tvg_id": "TomAndJerry.do@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tom-and-jerry-927bd66719.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tom-and-jerry-927bd66719.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -40320,11 +40320,11 @@
       "channel_name": "Tom and Jerry",
       "tvg_id": "TomAndJerry.do",
       "channel_id": "TomAndJerry.do",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tom-and-jerry-927bd66719.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tom-and-jerry-927bd66719.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://gia.tv/streams/pptv/208314.jpg?1750373428",
-      "reason": "IPTV-org exact ID: TomAndJerry.do IPTV-org public logo dataset Source page: https://gia.tv/streams/pptv/208314.jpg?1750373428"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: TomAndJerry.do IPTV-org public logo dataset Source page: https://gia.tv/streams/pptv/208314.jpg?1750373428"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -40452,7 +40452,7 @@
       "channel_name": "Vixen",
       "tvg_id": "custom.vixen",
       "channel_id": "custom.vixen",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vixen.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vixen.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -40644,7 +40644,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@HD",
       "channel_id": "ZeeTV.in@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/zee-tv.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/zee-tv-converted-4946c72750.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -40656,7 +40656,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@HD",
       "channel_id": "ZeeTV.in@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/zee-tv.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/zee-tv-converted-4946c72750.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -40968,7 +40968,7 @@
       "channel_name": "Adventure Earth",
       "tvg_id": "AdventureEarth.de@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/adventure-earth.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/adventure-earth-converted-36c5bd675d.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -41208,11 +41208,11 @@
       "channel_name": "Animal Planet (Czech Republic)",
       "tvg_id": "AnimalPlanet.cz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet-czech-republic-9d9539fb66.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet-czech-republic-9d9539fb66.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/5/5c/Animal_Planet_2018_%28Vertical%29.svg/revision/latest?cb=20190715124953",
-      "reason": "IPTV-org exact ID: AnimalPlanet.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/5/5c/Animal_Planet_2018_%28Vertical%29.svg/revision/latest?cb=20190715124953"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: AnimalPlanet.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/5/5c/Animal_Planet_2018_%28Vertical%29.svg/revision/latest?cb=20190715124953"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -41220,11 +41220,11 @@
       "channel_name": "Animal Planet (Hungary)",
       "tvg_id": "AnimalPlanet.hu@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet-hungary-e8be83885f.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet-hungary-e8be83885f.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/3/30/Animal_Planet_2018_II.svg/revision/latest?cb=20191206182106",
-      "reason": "IPTV-org exact ID: AnimalPlanet.hu IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/3/30/Animal_Planet_2018_II.svg/revision/latest?cb=20191206182106"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: AnimalPlanet.hu IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/3/30/Animal_Planet_2018_II.svg/revision/latest?cb=20191206182106"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -41400,11 +41400,11 @@
       "channel_name": "AS3 Sport TV",
       "tvg_id": "AS3SportTV.ve@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/as3-sport-tv-9b8dc8f78a.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/as3-sport-tv-9b8dc8f78a.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.ibb.co/bRmGbsyV/A3-SPORTTV.jpg",
-      "reason": "IPTV-org exact ID: AS3SportTV.ve IPTV-org public logo dataset Source page: https://i.ibb.co/bRmGbsyV/A3-SPORTTV.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: AS3SportTV.ve IPTV-org public logo dataset Source page: https://i.ibb.co/bRmGbsyV/A3-SPORTTV.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -41880,11 +41880,11 @@
       "channel_name": "BabyFirst",
       "tvg_id": "BabyFirst.us@US",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/babyfirst-9844e5635e.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/babyfirst-9844e5635e.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/babyfirsttv/images/5/56/BabyFirst_Logo_2019.png/revision/latest?cb=20260612182539",
-      "reason": "IPTV-org exact ID: BabyFirst.us IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/babyfirsttv/images/5/56/BabyFirst_Logo_2019.png/revision/latest?cb=20260612182539"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: BabyFirst.us IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/babyfirsttv/images/5/56/BabyFirst_Logo_2019.png/revision/latest?cb=20260612182539"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -41892,11 +41892,11 @@
       "channel_name": "BabyFirst Spanish",
       "tvg_id": "BabyFirst.us@Spanish",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/babyfirst-spanish-9844e5635e.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/babyfirst-spanish-9844e5635e.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/babyfirsttv/images/5/56/BabyFirst_Logo_2019.png/revision/latest?cb=20260612182539",
-      "reason": "IPTV-org exact ID: BabyFirst.us IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/babyfirsttv/images/5/56/BabyFirst_Logo_2019.png/revision/latest?cb=20260612182539"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: BabyFirst.us IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/babyfirsttv/images/5/56/BabyFirst_Logo_2019.png/revision/latest?cb=20260612182539"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42096,11 +42096,11 @@
       "channel_name": "BBC Earth Czechia",
       "tvg_id": "BBCEarth.uk@Czechia",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth-czechia-9e87fe37a1.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth-czechia-9e87fe37a1.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/BBC_Earth_2023.svg",
-      "reason": "IPTV-org exact ID: BBCEarth.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/7/7e/BBC_Earth_2023.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: BBCEarth.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/7/7e/BBC_Earth_2023.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42108,11 +42108,11 @@
       "channel_name": "BBC Earth Hungary",
       "tvg_id": "BBCEarth.uk@Hungary",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth-hungary-9e87fe37a1.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth-hungary-9e87fe37a1.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/BBC_Earth_2023.svg",
-      "reason": "IPTV-org exact ID: BBCEarth.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/7/7e/BBC_Earth_2023.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: BBCEarth.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/7/7e/BBC_Earth_2023.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42120,11 +42120,11 @@
       "channel_name": "BBC Earth US",
       "tvg_id": "BBCEarth.uk@US",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth-us-9e87fe37a1.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth-us-9e87fe37a1.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/BBC_Earth_2023.svg",
-      "reason": "IPTV-org exact ID: BBCEarth.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/7/7e/BBC_Earth_2023.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: BBCEarth.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/7/7e/BBC_Earth_2023.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42420,11 +42420,11 @@
       "channel_name": "Camp Spoopy",
       "tvg_id": "CampSpoopy.us@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/camp-spoopy-3d8eac6bf9.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/camp-spoopy-3d8eac6bf9.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://img2.static-ottera.com/prod/tg/linear_channel/logo/640x360/camp-spoopy-2021_1920-x-1080_option-5.jpg",
-      "reason": "IPTV-org exact ID: CampSpoopy.us IPTV-org public logo dataset Source page: https://img2.static-ottera.com/prod/tg/linear_channel/logo/640x360/camp-spoopy-2021_1920-x-1080_option-5.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CampSpoopy.us IPTV-org public logo dataset Source page: https://img2.static-ottera.com/prod/tg/linear_channel/logo/640x360/camp-spoopy-2021_1920-x-1080_option-5.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42444,11 +42444,11 @@
       "channel_name": "Canal+ Sport 2 SK",
       "tvg_id": "CanalPlusSport2SK.sk@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-2-sk-430a3721ba.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-2-sk-430a3721ba.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/a/ab/CANAL%2B_SPORT_2.svg/revision/latest?cb=20241028202739",
-      "reason": "IPTV-org exact ID: CanalPlusSport2SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/a/ab/CANAL%2B_SPORT_2.svg/revision/latest?cb=20241028202739"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CanalPlusSport2SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/a/ab/CANAL%2B_SPORT_2.svg/revision/latest?cb=20241028202739"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42456,11 +42456,11 @@
       "channel_name": "Canal+ Sport 3 SK",
       "tvg_id": "CanalPlusSport3SK.sk@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-3-sk-0f6ba1bda5.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-3-sk-0f6ba1bda5.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/4/4c/CANAL%2B_SPORT_3.svg/revision/latest?cb=20241028202810",
-      "reason": "IPTV-org exact ID: CanalPlusSport3SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/4/4c/CANAL%2B_SPORT_3.svg/revision/latest?cb=20241028202810"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CanalPlusSport3SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/4/4c/CANAL%2B_SPORT_3.svg/revision/latest?cb=20241028202810"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42468,11 +42468,11 @@
       "channel_name": "Canal+ Sport 4 SK",
       "tvg_id": "CanalPlusSport4SK.sk@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-4-sk-e97029935f.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-4-sk-e97029935f.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/8/82/CANAL%2B_SPORT_4.svg/revision/latest?cb=20241028202820",
-      "reason": "IPTV-org exact ID: CanalPlusSport4SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/8/82/CANAL%2B_SPORT_4.svg/revision/latest?cb=20241028202820"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CanalPlusSport4SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/8/82/CANAL%2B_SPORT_4.svg/revision/latest?cb=20241028202820"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42480,11 +42480,11 @@
       "channel_name": "Canal+ Sport 5 SK",
       "tvg_id": "CanalPlusSport5SK.sk@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-5-sk-609ac24858.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-5-sk-609ac24858.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/3/39/CANAL%2B_SPORT_5.svg/revision/latest?cb=20241028202829",
-      "reason": "IPTV-org exact ID: CanalPlusSport5SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/3/39/CANAL%2B_SPORT_5.svg/revision/latest?cb=20241028202829"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CanalPlusSport5SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/3/39/CANAL%2B_SPORT_5.svg/revision/latest?cb=20241028202829"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42492,11 +42492,11 @@
       "channel_name": "Canal+ Sport 6 SK",
       "tvg_id": "CanalPlusSport6SK.sk@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-6-sk-7f3a567411.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-6-sk-7f3a567411.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/3/3b/Canal%2B_Sport_6.svg/revision/latest?cb=20251106141229",
-      "reason": "IPTV-org exact ID: CanalPlusSport6SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/3/3b/Canal%2B_Sport_6.svg/revision/latest?cb=20251106141229"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CanalPlusSport6SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/3/3b/Canal%2B_Sport_6.svg/revision/latest?cb=20251106141229"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42504,11 +42504,11 @@
       "channel_name": "Canal+ Sport 7 SK",
       "tvg_id": "CanalPlusSport7SK.sk@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-7-sk-177b54a908.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-7-sk-177b54a908.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/0/03/Canal%2B_Sport_7.svg/revision/latest?cb=20251106141245",
-      "reason": "IPTV-org exact ID: CanalPlusSport7SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/0/03/Canal%2B_Sport_7.svg/revision/latest?cb=20251106141245"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CanalPlusSport7SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/0/03/Canal%2B_Sport_7.svg/revision/latest?cb=20251106141245"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42516,11 +42516,11 @@
       "channel_name": "Canal+ Sport 8 SK",
       "tvg_id": "CanalPlusSport8SK.sk@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-8-sk-1d0abb2873.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-8-sk-1d0abb2873.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/6/64/Canal%2B_Sport_8.svg/revision/latest?cb=20251106141257",
-      "reason": "IPTV-org exact ID: CanalPlusSport8SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/6/64/Canal%2B_Sport_8.svg/revision/latest?cb=20251106141257"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CanalPlusSport8SK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/6/64/Canal%2B_Sport_8.svg/revision/latest?cb=20251106141257"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -42528,11 +42528,11 @@
       "channel_name": "Canal+ Sport SK",
       "tvg_id": "CanalPlusSportSK.sk@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-sk-0d5ef8dd23.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canal-plus-sport-sk-0d5ef8dd23.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/2/25/Canal%2B_Sport_2023.svg/revision/latest?cb=20230901182304",
-      "reason": "IPTV-org exact ID: CanalPlusSportSK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/2/25/Canal%2B_Sport_2023.svg/revision/latest?cb=20230901182304"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CanalPlusSportSK.sk IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/2/25/Canal%2B_Sport_2023.svg/revision/latest?cb=20230901182304"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -43080,11 +43080,11 @@
       "channel_name": "Clan",
       "tvg_id": "Clan.es@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/clan-adcd13d9a5.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/clan-adcd13d9a5.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Clan_2026.svg",
-      "reason": "IPTV-org exact ID: Clan.es IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/6/63/Clan_2026.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: Clan.es IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/6/63/Clan_2026.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -43092,7 +43092,7 @@
       "channel_name": "Claro Cinema",
       "tvg_id": "ClaroCinema.mx@SD",
       "channel_id": "ClaroCinema.mx@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/claro-cinema-1080p.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/claro-cinema-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -43128,11 +43128,11 @@
       "channel_name": "CNA Originals",
       "tvg_id": "CNAOriginals.sg@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cna-originals-3a3fdcc32c.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cna-originals-3a3fdcc32c.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/CNA_new_logo.svg",
-      "reason": "IPTV-org exact ID: CNAOriginals.sg IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/8/83/CNA_new_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CNAOriginals.sg IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/8/83/CNA_new_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -43224,11 +43224,11 @@
       "channel_name": "Cosmos Tv",
       "tvg_id": "CosmosTv.ar@HD",
       "channel_id": "CosmosTv.ar@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cosmos-tv-7521381461.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cosmos-tv-7521381461.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://cdn4.fmcosmos.com/s4/2025/11/03/fmcosmos/images/15/92/159284_a18e887e336fef3bc6b188314a173ce10cbe5157966e839517e2b0428d7aed46/xs.webp",
-      "reason": "IPTV-org exact ID: CosmosTv.ar IPTV-org public logo dataset Source page: https://cdn4.fmcosmos.com/s4/2025/11/03/fmcosmos/images/15/92/159284_a18e887e336fef3bc6b188314a173ce10cbe5157966e839517e2b0428d7aed46/xs.webp"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: CosmosTv.ar IPTV-org public logo dataset Source page: https://cdn4.fmcosmos.com/s4/2025/11/03/fmcosmos/images/15/92/159284_a18e887e336fef3bc6b188314a173ce10cbe5157966e839517e2b0428d7aed46/xs.webp"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44124,11 +44124,11 @@
       "channel_name": "Discovery Channel (Czech Republic)",
       "tvg_id": "DiscoveryChannel.cz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-channel-czech-republic-1c5cac427a.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-channel-czech-republic-1c5cac427a.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/2/27/Discovery_Channel_2019_symbol.svg/revision/latest?cb=20210804150956",
-      "reason": "IPTV-org exact ID: DiscoveryChannel.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/2/27/Discovery_Channel_2019_symbol.svg/revision/latest?cb=20210804150956"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DiscoveryChannel.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/2/27/Discovery_Channel_2019_symbol.svg/revision/latest?cb=20210804150956"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44304,11 +44304,11 @@
       "channel_name": "Disney Channel (Czech Republic)",
       "tvg_id": "DisneyChannel.cz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-czech-republic-9b9957f643.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-czech-republic-9b9957f643.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg",
-      "reason": "IPTV-org exact ID: DisneyChannel.cz IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DisneyChannel.cz IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44316,7 +44316,7 @@
       "channel_name": "Disney Channel (Germany)",
       "tvg_id": "DisneyChannel.de@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-germany-9b9957f643.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-germany-9b9957f643.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -44340,11 +44340,11 @@
       "channel_name": "Disney Channel (Poland)",
       "tvg_id": "DisneyChannel.pl@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-poland-9b9957f643.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-poland-9b9957f643.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg",
-      "reason": "IPTV-org exact ID: DisneyChannel.pl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DisneyChannel.pl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44352,11 +44352,11 @@
       "channel_name": "Disney Channel Latin America Center",
       "tvg_id": "DisneyChannelLatinAmerica.ar@Center",
       "channel_id": "DisneyChannelLatinAmerica.ar@Center",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-latin-america-center-1b160711f2.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-latin-america-center-1b160711f2.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
-      "reason": "IPTV-org exact ID: DisneyChannelLatinAmerica.ar IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DisneyChannelLatinAmerica.ar IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44364,11 +44364,11 @@
       "channel_name": "Disney Channel Latin America Mexico",
       "tvg_id": "DisneyChannelLatinAmerica.ar@Mexico",
       "channel_id": "DisneyChannelLatinAmerica.ar@Mexico",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-latin-america-mexico-1b160711f2.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-latin-america-mexico-1b160711f2.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
-      "reason": "IPTV-org exact ID: DisneyChannelLatinAmerica.ar IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DisneyChannelLatinAmerica.ar IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44376,11 +44376,11 @@
       "channel_name": "Disney Channel Latin America North",
       "tvg_id": "DisneyChannelLatinAmerica.ar@North",
       "channel_id": "DisneyChannelLatinAmerica.ar@North",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-latin-america-north-1b160711f2.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-latin-america-north-1b160711f2.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
-      "reason": "IPTV-org exact ID: DisneyChannelLatinAmerica.ar IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DisneyChannelLatinAmerica.ar IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44388,11 +44388,11 @@
       "channel_name": "Disney Channel Latin America Panregional",
       "tvg_id": "DisneyChannelLatinAmerica.ar@PanregionalHD",
       "channel_id": "DisneyChannelLatinAmerica.ar@PanregionalHD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-latin-america-panregional-1b160711f2.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-latin-america-panregional-1b160711f2.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
-      "reason": "IPTV-org exact ID: DisneyChannelLatinAmerica.ar IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DisneyChannelLatinAmerica.ar IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44412,7 +44412,7 @@
       "channel_name": "Disney Jr. Latin America",
       "tvg_id": "DisneyJrLatinAmerica.ar@North",
       "channel_id": "DisneyJrLatinAmerica.ar@North",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/disney-jr-latin-america-1080p.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/disney-jr-latin-america-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -44424,11 +44424,11 @@
       "channel_name": "Disney Jr. Latin America North",
       "tvg_id": "DisneyJrLatinAmerica.ar@NorthHD",
       "channel_id": "DisneyJrLatinAmerica.ar@NorthHD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr-latin-america-north-044dc1f366.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr-latin-america-north-044dc1f366.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg",
-      "reason": "IPTV-org exact ID: DisneyJrLatinAmerica.ar IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DisneyJrLatinAmerica.ar IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44436,11 +44436,11 @@
       "channel_name": "Disney Junior (Czech Republic)",
       "tvg_id": "DisneyJunior.cz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-junior-czech-republic-044dc1f366.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-junior-czech-republic-044dc1f366.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg",
-      "reason": "IPTV-org exact ID: DisneyJunior.cz IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DisneyJunior.cz IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44448,11 +44448,11 @@
       "channel_name": "Disney XD (Poland)",
       "tvg_id": "DisneyXD.pl@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-xd-poland-7c7a974680.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-xd-poland-7c7a974680.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/2015_Disney_XD_logo.svg",
-      "reason": "IPTV-org exact ID: DisneyXD.pl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/a/a8/2015_Disney_XD_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DisneyXD.pl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/a/a8/2015_Disney_XD_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -44460,11 +44460,11 @@
       "channel_name": "Disney XD (United States)",
       "tvg_id": "DisneyXD.us@East",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-xd-united-states-7c7a974680.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-xd-united-states-7c7a974680.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/2015_Disney_XD_logo.svg",
-      "reason": "IPTV-org exact ID: DisneyXD.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/a/a8/2015_Disney_XD_logo.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: DisneyXD.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/a/a8/2015_Disney_XD_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -45372,11 +45372,11 @@
       "channel_name": "FIFA+ French",
       "tvg_id": "FIFAPlus.uk@French",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-french-68fe723cf8.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-french-68fe723cf8.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg",
-      "reason": "IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -45384,11 +45384,11 @@
       "channel_name": "FIFA+ German",
       "tvg_id": "FIFAPlus.uk@German",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-german-68fe723cf8.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-german-68fe723cf8.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg",
-      "reason": "IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -45396,11 +45396,11 @@
       "channel_name": "FIFA+ Hispanic America",
       "tvg_id": "FIFAPlus.uk@HispanicAmerica",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-hispanic-america-68fe723cf8.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-hispanic-america-68fe723cf8.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg",
-      "reason": "IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -45408,11 +45408,11 @@
       "channel_name": "FIFA+ Italy",
       "tvg_id": "FIFAPlus.uk@Italy",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-italy-68fe723cf8.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-italy-68fe723cf8.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg",
-      "reason": "IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -45420,11 +45420,11 @@
       "channel_name": "FIFA+ Portuguese",
       "tvg_id": "FIFAPlus.uk@Portuguese",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-portuguese-68fe723cf8.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-portuguese-68fe723cf8.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg",
-      "reason": "IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -45432,11 +45432,11 @@
       "channel_name": "FIFA+ Spain",
       "tvg_id": "FIFAPlus.uk@Spain",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-spain-68fe723cf8.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-spain-68fe723cf8.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg",
-      "reason": "IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -45444,11 +45444,11 @@
       "channel_name": "FIFA+ United States",
       "tvg_id": "FIFAPlus.uk@UnitedStates",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-united-states-68fe723cf8.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-united-states-68fe723cf8.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg",
-      "reason": "IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -45552,11 +45552,11 @@
       "channel_name": "Food Network (Czech Republic)",
       "tvg_id": "FoodNetwork.cz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/food-network-czech-republic-20c97211c9.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/food-network-czech-republic-20c97211c9.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/7/75/FN-Logo.svg/revision/latest?cb=20171221110545",
-      "reason": "IPTV-org exact ID: FoodNetwork.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/7/75/FN-Logo.svg/revision/latest?cb=20171221110545"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: FoodNetwork.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/7/75/FN-Logo.svg/revision/latest?cb=20171221110545"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -46392,11 +46392,11 @@
       "channel_name": "Investigation Discovery (Czech Republic)",
       "tvg_id": "InvestigationDiscovery.cz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/investigation-discovery-czech-republic-1b1d1536ce.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/investigation-discovery-czech-republic-1b1d1536ce.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/0/01/ID_%28Print%29.svg/revision/latest?cb=20210101125600",
-      "reason": "IPTV-org exact ID: InvestigationDiscovery.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/0/01/ID_%28Print%29.svg/revision/latest?cb=20210101125600"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: InvestigationDiscovery.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/0/01/ID_%28Print%29.svg/revision/latest?cb=20210101125600"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -46524,11 +46524,11 @@
       "channel_name": "Italiana",
       "tvg_id": "Italiana.it@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/italiana-ddd72b4787.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/italiana-ddd72b4787.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/9/98/Italiana_%282026%29.svg/revision/latest?cb=20260824144626",
-      "reason": "IPTV-org exact ID: Italiana.it IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/9/98/Italiana_%282026%29.svg/revision/latest?cb=20260824144626"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: Italiana.it IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/9/98/Italiana_%282026%29.svg/revision/latest?cb=20260824144626"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -47040,11 +47040,11 @@
       "channel_name": "Law & Crime",
       "tvg_id": "LawCrime.us@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/law-and-crime-f698aa08fe.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/law-and-crime-f698aa08fe.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://yt3.googleusercontent.com/CRP3YudPa55QypbDnIvuh3erLZTsn2HK8ESR-2fJFFiLJVf7US2CKQELCKK_UowmHA3wCjAdxg=s512-c-k-c0x00ffffff-no-rj",
-      "reason": "IPTV-org exact ID: LawCrime.us IPTV-org public logo dataset Source page: https://yt3.googleusercontent.com/CRP3YudPa55QypbDnIvuh3erLZTsn2HK8ESR-2fJFFiLJVf7US2CKQELCKK_UowmHA3wCjAdxg=s512-c-k-c0x00ffffff-no-rj"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: LawCrime.us IPTV-org public logo dataset Source page: https://yt3.googleusercontent.com/CRP3YudPa55QypbDnIvuh3erLZTsn2HK8ESR-2fJFFiLJVf7US2CKQELCKK_UowmHA3wCjAdxg=s512-c-k-c0x00ffffff-no-rj"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -47460,11 +47460,11 @@
       "channel_name": "Match! Ultra",
       "tvg_id": "MatchUltra.ru@4K",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/match-ultra-d5f0557d59.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/match-ultra-d5f0557d59.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://www.kartina.tv/media/news/images/News/SEO/kanal-match-ultra.jpg",
-      "reason": "IPTV-org exact ID: MatchUltra.ru IPTV-org public logo dataset Source page: https://www.kartina.tv/media/news/images/News/SEO/kanal-match-ultra.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: MatchUltra.ru IPTV-org public logo dataset Source page: https://www.kartina.tv/media/news/images/News/SEO/kanal-match-ultra.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -47568,7 +47568,7 @@
       "channel_name": "MCI Television",
       "tvg_id": "custom.mci-television-co-movie",
       "channel_id": "custom.mci-television-co-movie",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mci-television-66d4f17df6.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mci-television-66d4f17df6.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -47988,7 +47988,7 @@
       "channel_name": "Mr Bean Animated ES",
       "tvg_id": "MrBeanAnimated.uk@ES",
       "channel_id": "MrBeanAnimated.uk@ES",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/mr-bean-animated-es-1080p.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/mr-bean-animated-es-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -48000,7 +48000,7 @@
       "channel_name": "Mr Bean Animated FR",
       "tvg_id": "MrBeanAnimated.uk@FR",
       "channel_id": "MrBeanAnimated.uk@FR",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/mr-bean-animated-fr-1080p.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/mr-bean-animated-fr-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -48636,11 +48636,11 @@
       "channel_name": "Nickelodeon (Brazil)",
       "tvg_id": "Nickelodeon.br@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nickelodeon-brazil-7ca6654cc0.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nickelodeon-brazil-7ca6654cc0.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/nickelodeon/images/7/7e/2023_Nick_3D.png",
-      "reason": "IPTV-org exact ID: Nickelodeon.br IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/nickelodeon/images/7/7e/2023_Nick_3D.png"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: Nickelodeon.br IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/nickelodeon/images/7/7e/2023_Nick_3D.png"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -48732,11 +48732,11 @@
       "channel_name": "Nicktoons (Poland)",
       "tvg_id": "Nicktoons.pl@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nicktoons-poland-e9e40cdf81.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nicktoons-poland-e9e40cdf81.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Nicktoons_Logo_2023.svg",
-      "reason": "IPTV-org exact ID: Nicktoons.pl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/b/be/Nicktoons_Logo_2023.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: Nicktoons.pl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/b/be/Nicktoons_Logo_2023.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -49008,11 +49008,11 @@
       "channel_name": "ON Kids",
       "tvg_id": "ONKids.vn@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/on-kids-1d65f54b99.webp",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/on-kids-1d65f54b99.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.ibb.co/RGsg8XfM/IMG-2512.webp",
-      "reason": "IPTV-org exact ID: ONKids.vn IPTV-org public logo dataset Source page: https://i.ibb.co/RGsg8XfM/IMG-2512.webp"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: ONKids.vn IPTV-org public logo dataset Source page: https://i.ibb.co/RGsg8XfM/IMG-2512.webp"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -49464,11 +49464,11 @@
       "channel_name": "Prima Sport Czechia",
       "tvg_id": "PrimaSportCzechia.cz@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/prima-sport-czechia-dbfebefa13.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/prima-sport-czechia-dbfebefa13.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/6/69/Prima_Sport_%28Czech_Republic%29.svg/revision/latest?cb=20260728085614",
-      "reason": "IPTV-org exact ID: PrimaSportCzechia.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/6/69/Prima_Sport_%28Czech_Republic%29.svg/revision/latest?cb=20260728085614"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: PrimaSportCzechia.cz IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/6/69/Prima_Sport_%28Czech_Republic%29.svg/revision/latest?cb=20260728085614"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -51156,11 +51156,11 @@
       "channel_name": "Super!",
       "tvg_id": "Super.it@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/super-bd0192dc15.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/super-bd0192dc15.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Super%21_logo_2015.svg",
-      "reason": "IPTV-org exact ID: Super.it IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/d/d8/Super%21_logo_2015.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: Super.it IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/d/d8/Super%21_logo_2015.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -51252,11 +51252,11 @@
       "channel_name": "Takbeer TV",
       "tvg_id": "TakbeerTV.uk@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/takbeer-tv-4f036ac57f.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/takbeer-tv-4f036ac57f.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://i.imgur.com/Cvnps2J.jpg",
-      "reason": "IPTV-org exact ID: TakbeerTV.uk IPTV-org public logo dataset Source page: https://i.imgur.com/Cvnps2J.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: TakbeerTV.uk IPTV-org public logo dataset Source page: https://i.imgur.com/Cvnps2J.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -51468,11 +51468,11 @@
       "channel_name": "Tiguerito TV",
       "tvg_id": "TigueritoTV.do@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tiguerito-tv-464395cdf0.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tiguerito-tv-464395cdf0.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://dominicanchannels.com/wp-content/uploads/tigueritos-tv.jpg",
-      "reason": "IPTV-org exact ID: TigueritoTV.do IPTV-org public logo dataset Source page: https://dominicanchannels.com/wp-content/uploads/tigueritos-tv.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: TigueritoTV.do IPTV-org public logo dataset Source page: https://dominicanchannels.com/wp-content/uploads/tigueritos-tv.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -51900,11 +51900,11 @@
       "channel_name": "TVS Bowling Network",
       "tvg_id": "TVSBowlingNetwork.us@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvs-bowling-network-cf222fc786.jpg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvs-bowling-network-cf222fc786.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://www.watchyour.tv/channels/logo/tvs-bowling-network.jpg",
-      "reason": "IPTV-org exact ID: TVSBowlingNetwork.us IPTV-org public logo dataset Source page: https://www.watchyour.tv/channels/logo/tvs-bowling-network.jpg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: TVSBowlingNetwork.us IPTV-org public logo dataset Source page: https://www.watchyour.tv/channels/logo/tvs-bowling-network.jpg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -52296,7 +52296,7 @@
       "channel_name": "Viasat Serial",
       "tvg_id": "ViasatSerial.ua@HD",
       "channel_id": "ViasatSerial.ua@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/viasat-serial.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/viasat-serial.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -52404,11 +52404,11 @@
       "channel_name": "Voyo Sport 1",
       "tvg_id": "VoyoSport1.ro@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/voyo-sport-1-607370d90c.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/voyo-sport-1-607370d90c.png",
       "status": "third_party_verified",
-      "registry_match": "exact-key",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://static.wikia.nocookie.net/logopedia/images/a/a3/VoyoSport1.svg",
-      "reason": "IPTV-org exact ID: VoyoSport1.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/a/a3/VoyoSport1.svg"
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: VoyoSport1.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/a/a3/VoyoSport1.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -52884,7 +52884,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@HD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv-2fb6673cf7.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv-2fb6673cf7.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
