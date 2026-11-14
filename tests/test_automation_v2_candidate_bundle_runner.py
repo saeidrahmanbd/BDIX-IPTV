@@ -126,11 +126,11 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         )
         iptv, intl, epg = fixture_runs(self.iptv, self.international, ledger)
 
-        with patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv), \\
-             patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=intl), \\
-             patch("automation.core.v2_candidate_runner.build_epg_source_candidate", side_effect=RuntimeError("EPG source timeout")):
-            with self.assertRaisesRegex(RuntimeError, "EPG source timeout"):
-                run_candidate_bundle(self.root, date(2026, 11, 14), "b" * 40, self.store)
+        with patch("automation.core.v2_candidate_runner.run_iptv_discovery", return_value=iptv):
+            with patch("automation.core.v2_candidate_runner.run_international_discovery", return_value=intl):
+                with patch("automation.core.v2_candidate_runner.build_epg_source_candidate", side_effect=RuntimeError("EPG source timeout")):
+                    with self.assertRaisesRegex(RuntimeError, "EPG source timeout"):
+                        run_candidate_bundle(self.root, date(2026, 11, 14), "b" * 40, self.store)
 
         saved = self.store.state["international_probe_ledger"]["channels"]["probe-me"]
         self.assertEqual(len(saved), 1)
@@ -141,6 +141,7 @@ class CandidateBundleRunnerTests(unittest.TestCase):
         self.assertEqual((self.root / "IPTV-Playlist.m3u").read_text(), self.iptv)
         self.assertEqual((self.root / "International-Playlist.m3u").read_text(), self.international)
         self.assertEqual((self.root / "epg/epg.xml").read_text(), self.epg)
+
 
 if __name__ == "__main__":
     unittest.main()
