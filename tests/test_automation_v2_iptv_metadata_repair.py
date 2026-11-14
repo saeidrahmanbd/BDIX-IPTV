@@ -72,5 +72,25 @@ class IptvMetadataRepairTests(unittest.TestCase):
     def test_no_patches_returns_identical_text(self):
         self.assertEqual(apply_metadata_patches(BASE,[],self.root),BASE)
 
+
+    def test_symlinked_logos_root_rejected(self):
+        import tempfile as tempfile_module
+        with tempfile_module.TemporaryDirectory() as outside:
+            external = Path(outside)
+            (external / "new.png").write_bytes(b"external")
+            (self.root / "logos").rename(self.root / "logos-original")
+            (self.root / "logos").symlink_to(external, target_is_directory=True)
+            patch = MetadataPatch(0, "evidence", True, tvg_logo="logos/new.png")
+            with self.assertRaisesRegex(ValueError, "real repository directory"):
+                apply_metadata_patches(BASE, [patch], self.root)
+
+    def test_symlinked_logo_target_rejected(self):
+        external = self.root / "outside.png"
+        external.write_bytes(b"external")
+        (self.root / "logos" / "linked.png").symlink_to(external)
+        patch = MetadataPatch(0, "evidence", True, tvg_logo="logos/linked.png")
+        with self.assertRaisesRegex(ValueError, "cannot contain symlinks"):
+            apply_metadata_patches(BASE, [patch], self.root)
+
 if __name__=="__main__":
     unittest.main()
