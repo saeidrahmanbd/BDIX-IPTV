@@ -30,6 +30,7 @@ EXPECTED_FORMAT = {
     ".webp": "WEBP",
     ".avif": "AVIF",
 }
+IMAGE_SUFFIXES = set(EXPECTED_FORMAT) | {".svg"}
 
 
 def attrs(line):
@@ -107,6 +108,9 @@ def repair_one(path, fix=False, max_dimension=DEFAULT_MAX_DIMENSION, max_bytes=D
         "bytes_after": size_before,
         "error": "",
     }
+    if path.suffix.lower() not in IMAGE_SUFFIXES:
+        result["large"] = False
+        return result
     if path.suffix.lower() == ".svg":
         try:
             content = path.read_text(encoding="utf-8", errors="ignore")[:20000].lower()
@@ -170,15 +174,20 @@ def repair_one(path, fix=False, max_dimension=DEFAULT_MAX_DIMENSION, max_bytes=D
                     smaller = output_size < original_size
                     within_budget = output_size <= max_bytes
                     last_attempt = attempt == 11 or min(candidate.size) <= 96
-                    if force_repair or smaller or within_budget:
-                        if within_budget or not needs_compress or last_attempt:
-                            temp_path.replace(path)
-                            result["format_repaired"] = needs_format
-                            result["resized"] = needs_resize or candidate.size != source.size
-                            result["compressed"] = output_size < original_size
-                            result["bytes_after"] = output_size
-                            accepted = True
-                            break
+                    # A compression-only pass must meet the byte budget. Do not
+                    # silently accept an oversized result just because the logo
+                    # has reached the minimum safe dimensions.
+                    should_accept = within_budget or (
+                        not needs_compress and (force_repair or smaller)
+                    ) or (force_repair and last_attempt)
+                    if should_accept:
+                        temp_path.replace(path)
+                        result["format_repaired"] = needs_format
+                        result["resized"] = needs_resize or candidate.size != source.size
+                        result["compressed"] = output_size < original_size
+                        result["bytes_after"] = output_size
+                        accepted = True
+                        break
                 finally:
                     if temp_path is not None and temp_path.exists():
                         temp_path.unlink()
@@ -246,7 +255,12 @@ def main():
     if not LOGOS.is_dir():
         raise SystemExit("logos directory is missing")
 
-    logo_files = sorted(path for path in LOGOS.rglob("*") if path.is_file())
+    # Audit image assets only; documentation and other support files under
+    # logos/ are not images and must never appear as oversized logo assets.
+    logo_files = sorted(
+        path for path in LOGOS.rglob("*")
+        if path.is_file() and path.suffix.lower() in IMAGE_SUFFIXES
+    )
     first_pass = [repair_one(path, fix=args.fix, max_dimension=args.max_dimension, max_bytes=args.max_bytes) for path in logo_files]
     refs, active_refs = playlist_logo_refs()
     # Reassess assets after a possible repair, so the final issues section reflects disk state.
@@ -257,7 +271,11 @@ def main():
 
     mismatches = [item for item in final if item["format_mismatch"]]
     oversized = [item for item in final if item["oversized"]]
-    large_assets = [item for item in final if item["bytes_before"] > args.max_bytes]
+    large_assets = [
+        item for item in final
+        if Path(item["path"]).suffix.lower() in EXPECTED_FORMAT
+        and item["bytes_before"] > args.max_bytes
+    ]
     small = [item for item in final if item["width_before"] and min(item["width_before"], item["height_before"]) < 64]
     errors = [item for item in final if item["error"]]
     duplicate_assets = defaultdict(list)
@@ -304,7 +322,7 @@ def main():
         f"- Raster/SVG assets with short side under 64 px: **{len(small)}**",
         f"- Exact-byte duplicate asset clusters: **{len(duplicate_groups)}**",
         f"- Playlist references whose asset stem differs from the normalized channel name: **{len(naming_mismatches)}**",
-        f"- Unreferenced files immediately inside logos/: **{len(unreferenced_root)}** (not deleted; other tooling or playlists may use them)",
+        f"- Unreferenced image assets immediately inside logos/: **{len(unreferenced_root)}** (not deleted; other tooling or playlists may use them)",
         f"- Technical read/repair errors: **{len(errors)}**",
         "", "## Safe repairs applied", "",
         "| Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |",
