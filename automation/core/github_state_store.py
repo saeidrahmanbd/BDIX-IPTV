@@ -100,19 +100,26 @@ class GitHubStateStore:
             if isinstance(encoded, str) and encoded.strip():
                 raw = base64.b64decode(encoded, validate=False).decode("utf-8")
             else:
-                # GitHub's Contents API omits inline content for files larger
-                # than 1 MiB. Read the same branch-pinned object through its
-                # download URL rather than treating a valid large state as lost.
-                download_url = result.get("download_url")
-                if not isinstance(download_url, str) or not download_url.startswith("https://"):
-                    raise RuntimeError("large state file has no safe download URL")
-                request = urllib.request.Request(download_url, headers={
-                    "Authorization": f"Bearer {self.token}",
-                    "Accept": "application/vnd.github.raw",
-                    "User-Agent": "BDIX-IPTV-Automation-V2",
-                }, method="GET")
-                with self.opener(request, timeout=60) as response:
-                    raw = response.read().decode("utf-8")
+                # Contents API omits inline content for files larger than 1 MiB.
+                # Resolve the exact immutable blob SHA returned by that branch-pinned
+                # Contents response. A raw download_url points at a mutable branch ref
+                # and may be served stale by a CDN immediately after a state commit.
+                blob_sha = result.get("sha")
+                if not isinstance(blob_sha, str) or len(blob_sha) != 40 or any(
+                    char not in "0123456789abcdefABCDEF" for char in blob_sha
+                ):
+                    raise RuntimeError("large state file has no valid immutable blob SHA")
+                status, blob = self._request(
+                    "GET", f"{API_ROOT}/repos/{self.repository}/git/blobs/{blob_sha}"
+                )
+                if status != 200 or not isinstance(blob, dict):
+                    raise RuntimeError("GitHub did not return the immutable large state blob")
+                if blob.get("sha") != blob_sha or blob.get("encoding") != "base64":
+                    raise RuntimeError("GitHub returned a mismatched or unsupported state blob")
+                encoded_blob = blob.get("content")
+                if not isinstance(encoded_blob, str) or not encoded_blob.strip():
+                    raise RuntimeError("GitHub returned an empty immutable state blob")
+                raw = base64.b64decode(encoded_blob, validate=False).decode("utf-8")
             state = validate_state(json.loads(raw))
         except (ValueError, UnicodeDecodeError, json.JSONDecodeError) as exc:
             raise RuntimeError("durable state file is corrupt or unsupported; refusing to reset it") from exc
