@@ -21,12 +21,30 @@ def render(snapshot: dict, candidate_snapshot: dict | None = None) -> str:
     actual_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()
     if actual_hash != source.get("sha256"):
         raise ValueError("legacy dashboard markdown SHA-256 mismatch")
+    sources = snapshot.get("sources", {})
+    if not isinstance(sources, dict):
+        raise ValueError("legacy snapshot sources must be an object")
+    source_rows = []
+    for key in sorted(sources):
+        item = sources[key]
+        if not isinstance(item, dict):
+            raise ValueError(f"invalid legacy source record: {key}")
+        status = item.get("status", "unavailable")
+        digest = item.get("sha256", "—") if status == "available" else "—"
+        source_rows.append(f"| {key} | {status} | {digest} |")
+    available_count = sum(1 for item in sources.values()
+                          if isinstance(item, dict) and item.get("status") == "available")
     lines = [
         "# Automation V2 — Dashboard Parity Mirror", "",
         f"- Snapshot generated: {snapshot.get('generated_at', 'unknown')}",
         f"- Legacy dashboard source SHA-256: {actual_hash}",
         "- Metric authority: **legacy dashboard snapshot (verbatim)**",
-        "- This shadow artifact does not replace or write the production dashboard.", "",
+        "- This shadow artifact does not replace or write the production dashboard.",
+        f"- Captured legacy report inputs: **{available_count}/{len(sources)} available**", "",
+        "## Legacy report input provenance", "",
+        "| Input | Snapshot status | SHA-256 |",
+        "|---|---|---|",
+        *source_rows, "",
         "---", "", content.rstrip(), "", "---", "", "## Automation V2 shadow diagnostics", "",
     ]
     if candidate_snapshot is None:
