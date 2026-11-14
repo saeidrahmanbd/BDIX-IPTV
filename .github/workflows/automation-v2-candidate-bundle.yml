@@ -65,6 +65,10 @@ jobs:
         if: always()
         run: |
           python scripts/build_automation_v2_logo_repair_candidates.py
+      - name: Build explicitly approved logo-repair playlist candidates
+        if: always()
+        run: |
+          python scripts/apply_automation_v2_approved_logo_candidates.py
       - name: Build read-only candidate diagnostics snapshot
         if: always()
         run: |
