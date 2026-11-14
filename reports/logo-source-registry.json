@@ -5973,5 +5973,20 @@
     "status": "third_party_verified",
     "source_url": "https://static.trademarkia.com/images/99048431",
     "notes": "Exact external logo asset Exact figurative mark owned by World Wrestling Entertainment, LLC (WWE), from trademark filing serial 99048431; served by the trademark record image host, with source attribution only and no copyright licence implied Source page: https://www.trademarkia.com/ww-superstar-central-99048431"
+  },
+  "International-Playlist.m3u|Diema.bg@SD|Diema|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/diema-3c3f67264b.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Diema_Bulgaria_logo.svg",
+    "notes": "Exact external logo asset Wikimedia Commons PD-textlogo; source credited to Nova Broadcasting Group via Predavatel; current Diema logo dated 12 May 2024 Source page: https://commons.wikimedia.org/wiki/File:Diema_Bulgaria_logo.svg"
+  },
+  "International-Playlist.m3u|MBCMood.sa@HD|MBC Mood|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-mood-ce5185f523.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/MBC_Mood_Logo.png",
+    "notes": "Exact external logo asset Wikimedia Commons PD-textlogo; source author MBC Group; 2026 MBC Mood logo; trademark notice retained Source page: https://commons.wikimedia.org/wiki/File:MBC_Mood_Logo.png"
+  },
+  "International-Playlist.m3u|custom.cinecanal-panregional-us-movie|Cinecanal Panregional|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinecanal-panregional-54ac33a07a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/CinecanalLA.png",
+    "notes": "Exact external logo asset Wikimedia Commons PD-textlogo; source credited to Fox Networks Group Latin America; logo introduced September 2018 Source page: https://commons.wikimedia.org/wiki/File:CinecanalLA.png"
   }
 }

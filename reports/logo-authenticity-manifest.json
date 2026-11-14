@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-14T12:04:28.754449+00:00",
+  "generated_at_utc": "2026-11-14T12:34:45.316578+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -12,11 +12,11 @@
   },
   "source_sha256_by_playlist": {
     "IPTV-Playlist.m3u": "d47607e2306ca0561e6181336ea25952f4f93a6f56d47b33abbb2b7d221b6c6b",
-    "International-Playlist.m3u": "1b649eb78036de31b087396df0e59188005cf36b79dee895ebec5538e0831c7e"
+    "International-Playlist.m3u": "1e359678f55b634d0d4c30d10c19f0ce08847d601b1b5cfa1f3632302dd7d256"
   },
   "status_counts": {
-    "needs_review": 3576,
-    "third_party_verified": 832
+    "needs_review": 3573,
+    "third_party_verified": 835
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
@@ -24,8 +24,8 @@
       "third_party_verified": 24
     },
     "International-Playlist.m3u": {
-      "needs_review": 2316,
-      "third_party_verified": 808
+      "needs_review": 2313,
+      "third_party_verified": 811
     }
   },
   "entry_count": 4408,
@@ -20760,11 +20760,11 @@
       "channel_name": "Diema",
       "tvg_id": "Diema.bg@SD",
       "channel_id": "Diema.bg@SD",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/diema-3c3f67264b.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Diema_Bulgaria_logo.svg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset Wikimedia Commons PD-textlogo; source credited to Nova Broadcasting Group via Predavatel; current Diema logo dated 12 May 2024 Source page: https://commons.wikimedia.org/wiki/File:Diema_Bulgaria_logo.svg"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -26424,11 +26424,11 @@
       "channel_name": "MBC Mood",
       "tvg_id": "MBCMood.sa@HD",
       "channel_id": "",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-mood-ce5185f523.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/MBC_Mood_Logo.png",
+      "reason": "Exact external logo asset Wikimedia Commons PD-textlogo; source author MBC Group; 2026 MBC Mood logo; trademark notice retained Source page: https://commons.wikimedia.org/wiki/File:MBC_Mood_Logo.png"
     },
     {
       "playlist": "International-Playlist.m3u",
@@ -28644,11 +28644,11 @@
       "channel_name": "Cinecanal Panregional",
       "tvg_id": "custom.cinecanal-panregional-us-movie",
       "channel_id": "custom.cinecanal-panregional-us-movie",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinecanal-panregional-54ac33a07a.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/CinecanalLA.png",
+      "reason": "Exact external logo asset Wikimedia Commons PD-textlogo; source credited to Fox Networks Group Latin America; logo introduced September 2018 Source page: https://commons.wikimedia.org/wiki/File:CinecanalLA.png"
     },
     {
       "playlist": "International-Playlist.m3u",
