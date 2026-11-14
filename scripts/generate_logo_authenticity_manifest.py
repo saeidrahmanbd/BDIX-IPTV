@@ -20,7 +20,11 @@ def attrs(line):
 def asset_stem(logo):
     """Return only the local-looking final filename stem, case-insensitively."""
     filename = Path(str(logo or "").split("?", 1)[0].split("#", 1)[0]).name
-    return Path(filename).stem.casefold()
+    stem = Path(filename).stem.casefold()
+    # The converter adds this deterministic suffix only when a same-stem PNG
+    # already exists with different pixels; provenance still belongs to the
+    # same original source asset after format conversion.
+    return re.sub(r"-converted-[0-9a-f]{10}$", "", stem)
 
 
 def provenance_for(registry, playlist, meta, name, logo):
