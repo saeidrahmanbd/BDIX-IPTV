@@ -40,6 +40,27 @@ class InternationalDiscoveryAdapterTests(unittest.TestCase):
         self.assertEqual(len(result.candidates),1)
         self.assertTrue(any("conflicts with channel ID" in warning for warning in result.warnings))
 
+    def test_logo_path_must_be_a_real_asset_inside_logos_directory(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            (root/"logos").mkdir()
+            (root/"elsewhere").mkdir()
+            (root/"elsewhere"/"inside-repo.png").write_bytes(b"not a logo")
+            (root/"logos"/"valid.png").write_bytes(b"valid")
+            (root/"logos"/"linked.png").symlink_to(root/"elsewhere"/"inside-repo.png")
+            feed='#EXTM3U\n'
+            feed += '#EXTINF:-1 tvg-id="valid.in" tvg-name="Valid" tvg-logo="logos/valid.png",Valid\nhttps://valid.example/live.m3u8\n'
+            feed += '#EXTINF:-1 tvg-id="linked.in" tvg-name="Linked" tvg-logo="logos/linked.png",Linked\nhttps://linked.example/live.m3u8\n'
+            feed += '#EXTINF:-1 tvg-id="traversal.in" tvg-name="Traversal" tvg-logo="logos/../elsewhere/inside-repo.png",Traversal\nhttps://traversal.example/live.m3u8\n'
+            result=build_international_discovery_batch(BASE,feed,root)
+        rows={item.extinf.split(",",1)[-1]:item.extinf for item in result.candidates}
+        self.assertIn("Valid",rows)
+        self.assertIn("Linked",rows)
+        self.assertIn("Traversal",rows)
+        self.assertIn('tvg-logo="logos/valid.png"',rows["Valid"])
+        self.assertNotIn("tvg-logo=",rows["Linked"])
+        self.assertNotIn("tvg-logo=",rows["Traversal"])
+
     def test_missing_or_external_logo_does_not_block_discovery(self):
         with tempfile.TemporaryDirectory() as temp:
             result=build_international_discovery_batch(BASE,FEED,temp)
