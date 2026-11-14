@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T11:00:47+00:00**
+Generated: **2026-11-14T11:04:03+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -11,7 +11,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 ## Summary
 
-- Safe repairs applied this run: **5**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **3**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
@@ -25,11 +25,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| bowling-tv.png | PNG | PNG | 2500×756 | 1600×484 | downscaled, re-encoded/compressed |
-| dazn-ringside.png | PNG | PNG | 1920×1080 | 1600×900 | downscaled, re-encoded/compressed |
-| hoop-tv.png | PNG | PNG | 1920×1080 | 1218×685 | downscaled, re-encoded/compressed |
-| msg-sportszone.png | PNG | PNG | 1920×1080 | 1600×900 | downscaled, re-encoded/compressed |
-| surf-cinema.png | PNG | PNG | 1920×1080 | 706×397 | downscaled, re-encoded/compressed |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 
