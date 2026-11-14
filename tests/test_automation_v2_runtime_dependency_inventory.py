@@ -102,6 +102,53 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             self.assertEqual(len(found),1)
             self.assertEqual(found[0]["kind"],"subprocess_dynamic")
 
+    def test_process_execution_lock_reviews_fixed_subprocess_boundary(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); source=root/"scripts"; source.mkdir()
+            policy=root/"automation"/"policy"; policy.mkdir(parents=True)
+            (source/"helper.py").write_text(
+                "import subprocess\\n"
+                "def run_git(*args):\\n"
+                "    return subprocess.run(['git', *args], check=True)\\n"
+            )
+            (policy/"process-execution-lock.json").write_text(json.dumps({
+                "schema_version":1,
+                "boundaries":[{
+                    "key":"scripts/helper.py#run_git",
+                    "review_status":"reviewed_static_command_boundary",
+                    "shell_boundary":False,
+                    "command_shape":"git <reviewed fixed arguments>",
+                    "side_effect":"local git operation; no remote push",
+                }]
+            }))
+            report=build_inventory(root)
+            dynamic=next(x for x in report["nested_subprocess_calls"] if x["kind"]=="subprocess_dynamic")
+            self.assertTrue(dynamic["process_reviewed"])
+            self.assertEqual(report["summary"]["reviewed_process_execution_boundaries"],1)
+            self.assertEqual(report["summary"]["unreviewed_process_execution_boundaries"],0)
+            self.assertFalse(any(x["kind"]=="subprocess_dynamic" for x in report["unresolved"]))
+
+    def test_mutable_external_process_dependency_remains_a_cutover_boundary(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); source=root/"scripts"; source.mkdir()
+            policy=root/"automation"/"policy"; policy.mkdir(parents=True)
+            (source/"fetch.py").write_text(
+                "import subprocess\\ndef run(*args):\\n    return subprocess.run(args)\\n"
+            )
+            (policy/"process-execution-lock.json").write_text(json.dumps({
+                "schema_version":1,
+                "boundaries":[{
+                    "key":"scripts/fetch.py#run",
+                    "review_status":"reviewed_static_command_boundary",
+                    "shell_boundary":False,
+                    "external_dependency":"https://example.test/source.git",
+                    "external_ref_policy":"mutable default branch",
+                    "side_effect":"temporary workspace only",
+                }]
+            }))
+            report=build_inventory(root)
+            self.assertTrue(any(x["kind"]=="mutable_external_source_boundary" for x in report["unresolved"]))
+
     def test_external_action_manifest_reviews_exact_pinned_reference(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); workflows=root/".github"/"workflows"; workflows.mkdir(parents=True)
