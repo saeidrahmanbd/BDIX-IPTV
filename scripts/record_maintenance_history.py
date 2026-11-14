@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 AUDIT_PATH = Path('reports/iptv-playlist-audit.md')
-HEALTH_PATH = Path('reports/stream-health.md')
+HEALTH_PATH = Path('reports/international-stream-health.md')
 HISTORY_PATH = Path('reports/maintenance-history.json')
 
 def metric(text: str, label: str) -> int | None:
@@ -39,9 +39,9 @@ def metrics_from_reports(health_optional: bool) -> dict:
         'logo_exceptions': metric(audit, 'Logo exceptions'),
         'primary_number_collisions': metric(audit, 'Primary channel-number collisions'),
         'protected_primary_changes': metric(audit, 'Protected primary-entry changes'),
-        'health_tested': metric(health, 'Streams tested'),
-        'health_failures': metric(health, 'Failed this check'),
-        'health_persistent': metric(health, 'Persistent failures (3+ consecutive)'),
+        'health_tested': metric(health, 'Playlist rows checked'),
+        'health_failures': metric(health, 'Definitive failures today'),
+        'health_persistent': metric(health, 'Automatically flagged rows still under Review'),
     }
 
 def main() -> None:
