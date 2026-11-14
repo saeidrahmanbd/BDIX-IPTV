@@ -163,6 +163,19 @@ def run_blocks_retry(run: dict[str, Any], client=None, workflow_file: str = "new
     return successful_required_job(jobs if isinstance(jobs, list) else [], workflow_file)
 
 
+def same_epg_input_revision(previous_run: dict[str, Any], current_run: dict[str, Any]) -> bool:
+    """Fail closed unless both runs identify different main-branch input revisions.
+
+    A later playlist/logo/discovery writer can legitimately require another EPG
+    publication on the same Bangladesh date. Successful earlier EPG runs only
+    suppress that follow-up when they were built from the same main revision.
+    Missing SHAs remain conservative and preserve the old duplicate protection.
+    """
+    previous_sha = str(previous_run.get("head_sha") or "").strip()
+    current_sha = str(current_run.get("head_sha") or "").strip()
+    return not previous_sha or not current_sha or previous_sha == current_sha
+
+
 def watchdog_run_blocks_retry(
     run: dict[str, Any],
     client=None,
@@ -241,6 +254,7 @@ def should_current_run_execute(
             run for run in others
             if str(run.get("event") or "").casefold() == "schedule"
             and run_blocks_retry(run, client, workflow_file)
+            and same_epg_input_revision(run, current)
         ]
         if successful_scheduled:
             return False
@@ -266,6 +280,10 @@ def should_current_run_execute(
         run for run in others
         if str(run.get("status") or "").casefold() == "completed"
         and owner_check(run, client, workflow_file)
+        and (
+            workflow_file != "epg-refresh.yml"
+            or same_epg_input_revision(run, current)
+        )
     ]
     if successful_others:
         return False
