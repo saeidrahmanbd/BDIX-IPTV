@@ -27,6 +27,8 @@ def normalize(value: str) -> str:
 def _asset_inventory(root: Path) -> dict[str, list[str]]:
     inventory: dict[str, list[str]] = {}
     logos = root / "logos"
+    if logos.is_symlink():
+        raise ValueError("logos root must not be a symlink")
     if not logos.is_dir():
         return inventory
     resolved_logos = logos.resolve()
@@ -157,8 +159,21 @@ def main() -> int:
     parser.add_argument("--root", type=Path, default=Path("."))
     parser.add_argument("--output", type=Path, default=Path("reports/automation-v2/logo-repair-candidates.json"))
     args = parser.parse_args()
-    root = args.root.resolve()
+    root = args.root.resolve(strict=True)
     output = args.output if args.output.is_absolute() else root / args.output
+    output = output.absolute()
+    allowed = (root / "reports" / "automation-v2").absolute()
+    try:
+        relative = output.relative_to(allowed)
+    except ValueError as exc:
+        raise ValueError("logo repair candidate report must remain inside reports/automation-v2/") from exc
+    current = root
+    for part in output.relative_to(root).parts:
+        current = current / part
+        if current.is_symlink():
+            raise ValueError("logo repair candidate output path cannot contain symlinks")
+    if output == allowed:
+        raise ValueError("logo repair candidate report must use a dedicated file path")
     report = build_proposals(root)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(report, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
