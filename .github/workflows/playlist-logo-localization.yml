@@ -12,6 +12,8 @@ on:
       - .github/workflows/playlist-logo-localization.yml
       - scripts/repair_playlist_logos.py
       - scripts/logo_source_catalog.py
+      - scripts/convert_referenced_logos_to_png.py
+      - tests/test_logo_format_conversion.py
       - scripts/discovery_schedule_guard.py
   schedule:
     - cron: '0 2 * * *' # 08:00 Asia/Dhaka (UTC+6), after the 07:00 maintenance pass
@@ -89,6 +91,7 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/repair_playlist_logos.py
+          python scripts/convert_referenced_logos_to_png.py
           python scripts/generate_logo_authenticity_manifest.py
           python - <<'PY'
           import json
@@ -120,7 +123,7 @@ jobs:
               if normalized != baseline:
                   raise SystemExit("Non-logo playlist content changed: " + name)
               entries = [line for line in current.splitlines() if line.startswith("#EXTINF:")]
-              missing = review_missing = external = nvision = broken = adult_ignored = 0
+              missing = review_missing = external = nvision = broken = adult_ignored = non_png = 0
               review_groups = {"review", "new channels", "new backups", "not playing"}
               for line in entries:
                   meta = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
@@ -144,6 +147,8 @@ jobs:
                       continue
                   rel = unquote(urlparse(logo).path.split("/logos/", 1)[-1]).lstrip("/")
                   asset = Path("logos") / rel
+                  if asset.suffix.casefold() != ".png":
+                      non_png += 1
                   filename = asset.name.casefold()
                   if filename.startswith("nvisionbd-"):
                       nvision += 1
@@ -171,15 +176,15 @@ jobs:
                   "review_missing_logo_metadata": review_missing,
                   "adult_entries_ignored": adult_ignored,
                   "nonrepository_logo_refs": external, "nvision_refs": nvision,
-                  "invalid_or_blocked_refs": broken,
+                  "invalid_or_blocked_refs": broken, "non_png_refs": non_png,
               }
               if name == "IPTV-Playlist.m3u" and missing:
                   print("::warning::Authentic local logo unavailable for some main-playlist rows; leaving those logo fields empty for manual review: " + json.dumps(summaries[name]))
-              if external or nvision or broken:
+              if external or nvision or broken or non_png:
                   raise SystemExit("Logo validation failed: " + name + " " + json.dumps(summaries[name]))
           print(json.dumps(summaries, indent=2))
           PY
-          git add IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json
+          git add IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json reports/logo-format-conversion.md
           if git diff --cached --quiet; then
             echo "No additional local logo changes."
             exit 0

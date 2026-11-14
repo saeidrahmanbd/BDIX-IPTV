@@ -1,0 +1,231 @@
+#!/usr/bin/env python3
+"""Convert every referenced local non-PNG playlist logo to a validated PNG.
+
+Only tvg-logo values are rewritten. Original image files are retained for
+rollback/provenance; channel rows, metadata, group assignments, channel numbers,
+and stream URLs are verified unchanged before any playlist is written.
+"""
+from __future__ import annotations
+
+import hashlib
+import io
+import json
+import re
+from datetime import datetime, timezone
+from pathlib import Path
+from urllib.parse import quote, unquote
+
+import cairosvg
+from PIL import Image, ImageOps
+
+ROOT = Path(__file__).resolve().parents[1]
+LOGOS = ROOT / "logos"
+PLAYLISTS = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
+RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+REPORT = ROOT / "reports" / "logo-format-conversion.md"
+CONVERTIBLE_EXTENSIONS = {".jpg", ".jpeg", ".webp", ".svg", ".avif"}
+LOGO_RE = re.compile(r'tvg-logo="([^"]*)"')
+
+
+def without_logo_attributes(text: str) -> str:
+    return re.sub(r'\s+tvg-logo="[^"]*"', "", text)
+
+
+def image_bytes_to_png(raw: bytes, source_extension: str) -> bytes:
+    """Decode a local raster/vector logo and emit a normalized PNG."""
+    extension = source_extension.casefold()
+    if extension == ".svg":
+        svg = raw.decode("utf-8", errors="strict")
+        if re.search(r"<\s*script\b|<\s*foreignObject\b|javascript:", svg, re.I):
+            raise ValueError("unsafe SVG content")
+        if re.search(r"""(?:href|src)\s*=\s*["']\s*(?:https?:|file:|//)""", svg, re.I) or re.search(r"""url\(\s*["']?\s*(?:https?:|file:|//)""", svg, re.I):
+            raise ValueError("SVG contains an external resource reference")
+        raw = cairosvg.svg2png(bytestring=raw, output_width=1024)
+
+    try:
+        with Image.open(io.BytesIO(raw)) as source_image:
+            source_image.seek(0)
+            image = ImageOps.exif_transpose(source_image)
+            image.load()
+            if image.width < 1 or image.height < 1:
+                raise ValueError("image has invalid dimensions")
+            image.thumbnail((1024, 1024), Image.Resampling.LANCZOS)
+            if image.mode in ("RGBA", "LA") or "transparency" in image.info:
+                image = image.convert("RGBA")
+            else:
+                image = image.convert("RGB")
+            output = io.BytesIO()
+            image.save(output, format="PNG", optimize=True)
+            png = output.getvalue()
+    except Exception as exc:
+        raise ValueError(f"cannot decode {extension} logo: {type(exc).__name__}: {exc}") from exc
+
+    if not png.startswith(b"\x89PNG\r\n\x1a\n"):
+        raise ValueError("PNG encoder returned invalid bytes")
+    with Image.open(io.BytesIO(png)) as check:
+        check.verify()
+    return png
+
+
+def local_logo_path(logo: str, raw_base: str) -> tuple[str, str]:
+    """Return (relative path, URL prefix style) for a repository-local logo."""
+    if logo.startswith(raw_base):
+        relative = unquote(logo[len(raw_base):].split("?", 1)[0].split("#", 1)[0])
+        return relative, "raw"
+    if logo.startswith("logos/"):
+        return unquote(logo[len("logos/"):]), "relative"
+    raise ValueError(f"external or unsupported logo reference: {logo[:160]}")
+
+
+def _safe_logo_file(root: Path, relative: str) -> Path:
+    if not relative or relative.startswith(("/", "\\")):
+        raise ValueError("empty or absolute logo path")
+    candidate = (root / "logos" / Path(relative)).resolve()
+    try:
+        candidate.relative_to((root / "logos").resolve())
+    except ValueError as exc:
+        raise ValueError("logo path escapes the logos directory") from exc
+    if not candidate.is_file():
+        raise FileNotFoundError(f"referenced local logo is missing: {relative}")
+    return candidate
+
+
+def convert_referenced_logos(
+    root: Path = ROOT,
+    playlist_names: tuple[str, ...] = PLAYLISTS,
+    raw_base: str = RAW_BASE,
+    report_path: Path | None = None,
+) -> dict:
+    root = Path(root).resolve()
+    logos_dir = root / "logos"
+    asset_cache: dict[str, tuple[str, bytes]] = {}
+    pending_assets: dict[Path, bytes] = {}
+    updated_playlists: dict[Path, str] = {}
+    source_formats: dict[str, int] = {}
+    updated_references = 0
+
+    def convert_one(relative: str) -> str:
+        if relative in asset_cache:
+            return asset_cache[relative][0]
+        source_path = _safe_logo_file(root, relative)
+        extension = source_path.suffix.casefold()
+        if extension == ".png":
+            asset_cache[relative] = (relative, source_path.read_bytes())
+            return relative
+        if extension not in CONVERTIBLE_EXTENSIONS:
+            raise ValueError(f"unsupported referenced logo format {extension}: {relative}")
+
+        png_bytes = image_bytes_to_png(source_path.read_bytes(), extension)
+        digest = hashlib.sha256(png_bytes).hexdigest()[:10]
+        target = source_path.with_suffix(".png")
+        if target.exists() and target.read_bytes() != png_bytes:
+            target = source_path.with_name(f"{source_path.stem}-converted-{digest}.png")
+        if target.exists():
+            if target.read_bytes() != png_bytes:
+                raise ValueError(f"PNG target collision for {relative}")
+        else:
+            pending_assets[target] = png_bytes
+        new_relative = target.relative_to(logos_dir).as_posix()
+        asset_cache[relative] = (new_relative, png_bytes)
+        source_formats[extension.lstrip(".")] = source_formats.get(extension.lstrip("."), 0) + 1
+        return new_relative
+
+    for playlist_name in playlist_names:
+        playlist_path = root / playlist_name
+        with playlist_path.open("r", encoding="utf-8", newline="") as stream:
+            original = stream.read()
+        references_changed = 0
+
+        def replace_logo(match: re.Match) -> str:
+            nonlocal references_changed
+            logo = match.group(1).strip()
+            if not logo:
+                return match.group(0)
+            relative, style = local_logo_path(logo, raw_base)
+            if Path(relative).suffix.casefold() == ".png":
+                return match.group(0)
+            converted_relative = convert_one(relative)
+            if converted_relative == relative:
+                return match.group(0)
+            encoded = quote(converted_relative, safe="/-._~")
+            new_logo = raw_base + encoded if style == "raw" else "logos/" + encoded
+            references_changed += 1
+            return f'tvg-logo="{new_logo}"'
+
+        updated = LOGO_RE.sub(replace_logo, original)
+        if without_logo_attributes(updated) != without_logo_attributes(original):
+            raise RuntimeError(f"non-logo playlist content changed: {playlist_name}")
+        updated_playlists[playlist_path] = updated
+        updated_references += references_changed
+
+    # All sources and all conversions are validated before any file is written.
+    for target, png_bytes in pending_assets.items():
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(png_bytes)
+        with Image.open(target) as image:
+            image.verify()
+        if not target.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"):
+            raise ValueError(f"written asset is not PNG: {target}")
+
+    for playlist_path, updated in updated_playlists.items():
+        with playlist_path.open("r", encoding="utf-8", newline="") as stream:
+            current = stream.read()
+        if updated != current:
+            with playlist_path.open("w", encoding="utf-8", newline="") as stream:
+                stream.write(updated)
+
+    converted_count = sum(source_formats.values())
+    remaining_non_png = 0
+    for updated in updated_playlists.values():
+        for match in LOGO_RE.finditer(updated):
+            logo = match.group(1).strip()
+            if logo:
+                relative, _style = local_logo_path(logo, raw_base)
+                if Path(relative).suffix.casefold() != ".png":
+                    remaining_non_png += 1
+    if remaining_non_png:
+        raise RuntimeError(f"non-PNG logo references remain after conversion: {remaining_non_png}")
+    summary = {
+        "playlists": list(playlist_names),
+        "unique_assets_converted": converted_count,
+        "updated_references": updated_references,
+        "source_formats": dict(sorted(source_formats.items())),
+        "png_assets_created": len(pending_assets),
+        "original_assets_retained": converted_count,
+        "remaining_non_png_references": remaining_non_png,
+    }
+    if report_path is None:
+        report_path = root / "reports" / "logo-format-conversion.md"
+    report_path = Path(report_path)
+    if converted_count:
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        lines = [
+            "# Logo Format Conversion",
+            "",
+            f"Generated: **{datetime.now(timezone.utc).isoformat()}**",
+            "",
+            f"- Playlists checked: **{', '.join(playlist_names)}**",
+            f"- Unique non-PNG assets converted: **{converted_count}**",
+            f"- Playlist logo references updated: **{updated_references}**",
+            f"- New PNG assets created: **{len(pending_assets)}**",
+            "- Original source assets retained: **Yes**",
+            "- Non-PNG references remaining: **0**",
+            "",
+            "Only local tvg-logo references were changed. Channel rows, stream URLs, IDs, groups, and channel numbers were preserved.",
+            "",
+            "## Source formats",
+            "",
+        ]
+        lines.extend(f"- {extension.upper()}: **{count}**" for extension, count in sorted(source_formats.items()))
+        report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return summary
+
+
+def main() -> int:
+    summary = convert_referenced_logos()
+    print(json.dumps(summary, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

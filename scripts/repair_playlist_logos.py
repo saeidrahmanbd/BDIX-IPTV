@@ -100,10 +100,10 @@ EXTRA_DIRECT_HINTS = {
         "license_url": "",
     },
     "WWE Superstar Central": {
-        "url": "https://trademarks.justia.com/media/image.php?serial=99048431",
+        "url": "https://static.trademarkia.com/images/99048431",
         "format": "",
-        "page": "https://trademarks.justia.com/990/48/ww-superstar-99048431.html",
-        "license": "Exact WWE SUPERSTAR CENTRAL figurative mark from the 2025 WWE-owned trademark filing (serial 99048431); image is hosted with the trademark record and must pass PNG validation before localization",
+        "page": "https://www.trademarkia.com/ww-superstar-central-99048431",
+        "license": "Exact figurative mark owned by World Wrestling Entertainment, LLC (WWE), from trademark filing serial 99048431; served by the trademark record image host, with source attribution only and no copyright licence implied",
         "license_url": "",
     },
     "Channel Fight": {
@@ -552,20 +552,21 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
 
     page_hint = find_mapping(source.DIRECT_PAGE_HINTS, channel)
     if page_hint:
-        page_url, allow_og = page_hint
-        try:
-            image_url = source.find_page_logo(page_url, allow_og_image=allow_og)
-        except (OSError, ValueError, TimeoutError, urllib.error.URLError, json.JSONDecodeError) as exc:
-            print(f"Page-logo lookup failed for {channel}: {type(exc).__name__}: {exc}")
-            image_url = None
-        if image_url:
-            return {
-                "url": image_url,
-                "format": "",
-                "page": page_url,
-                "license": "Logo image served on the broadcaster/station page",
-                "license_url": "",
-            }, "Broadcaster/station page"
+        page_hints = page_hint if isinstance(page_hint, list) else [page_hint]
+        for page_url, allow_og in page_hints:
+            try:
+                image_url = source.find_page_logo(page_url, allow_og_image=allow_og)
+            except (OSError, ValueError, TimeoutError, urllib.error.URLError, json.JSONDecodeError) as exc:
+                print(f"Page-logo lookup failed for {channel} at {page_url}: {type(exc).__name__}: {exc}")
+                image_url = None
+            if image_url:
+                return {
+                    "url": image_url,
+                    "format": "",
+                    "page": page_url,
+                    "license": "Logo image served on the broadcaster/station page",
+                    "license_url": "",
+                }, "Broadcaster/station page"
 
     if iptv_indexes:
         result = source.get_iptv_org_candidate(channel, attrs.get("tvg-id", ""), iptv_indexes)
@@ -603,6 +604,27 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
     return None, ""
 
 
+def detected_image_extension(raw, content_type="", file_format="", source_url=""):
+    """Use image signatures when a CDN serves bytes as application/octet-stream."""
+    fmt = str(file_format or "").upper()
+    if fmt or content_type in {
+        "image/svg+xml", "image/png", "image/jpeg", "image/jpg",
+        "image/webp", "image/avif",
+    }:
+        return source.extension_for(content_type, fmt, source_url)
+    if raw.startswith(b"\x89PNG\r\n\x1a\n"):
+        return ".png"
+    if raw.startswith(b"\xff\xd8\xff"):
+        return ".jpg"
+    if raw[:4] == b"RIFF" and raw[8:12] == b"WEBP":
+        return ".webp"
+    if b"ftypavif" in raw[:40] or b"ftypavis" in raw[:40]:
+        return ".avif"
+    if b"<svg" in raw.lstrip()[:500].lower():
+        return ".svg"
+    return source.extension_for(content_type, fmt, source_url)
+
+
 def download_exact_asset(channel, candidate, canonical_name=False):
     """Fetch and validate exact source bytes, then store them locally.
 
@@ -616,7 +638,7 @@ def download_exact_asset(channel, candidate, canonical_name=False):
     fmt = str(candidate.get("format") or "").upper()
     if not source.valid_image(raw, mime, fmt):
         raise ValueError("source response is not a valid supported image")
-    ext = source.extension_for(mime, fmt, url)
+    ext = detected_image_extension(raw, mime, fmt, url)
     slug = source.slug(channel)
     digest = hashlib.sha256(raw).hexdigest()[:10]
     # Keep channel logos repository-local without adding the prohibited

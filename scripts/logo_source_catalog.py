@@ -114,7 +114,13 @@ DIRECT_PAGE_HINTS = {
     # Jagobd identifies itself as an authorized broadcaster partner and exposes
     # station-specific pages for these three channels. Prefer explicit logo
     # image tags; use OG image only as the channel-page fallback.
-    "Shikor TV Canada": ("https://www.jagobd.com/shikortv", True),
+    "Shikor TV Canada": [
+        # Prefer the broadcaster's own site, accepting only an explicitly
+        # logo-marked image. Jagobd remains a secondary identity-confirmation
+        # page and may expose the channel avatar through its OG image.
+        ("https://shikortvcanada.com/", False),
+        ("https://www.jagobd.com/shikortv", True),
+    ],
     "Ten TV Prime": ("https://www.jagobd.com/primetv", True),
     "TV One UK": ("https://www.jagobd.com/tv-one-uk", True),
     # Official broadcaster pages; accept only explicitly logo-marked image tags.
