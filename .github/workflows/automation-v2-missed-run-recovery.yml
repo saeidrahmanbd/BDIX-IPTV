@@ -1,0 +1,38 @@
+name: Automation V2 Missed-Run Recovery
+
+on:
+  schedule:
+    # Bangladesh time: 09:45, then retry checkpoints through 11:00.
+    - cron: '45 3 * * *'
+    - cron: '0 4 * * *'
+    - cron: '15 4 * * *'
+    - cron: '30 4 * * *'
+    - cron: '45 4 * * *'
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: automation-v2-missed-run-recovery
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Dispatch only when today's current-main candidate run is missing or failed
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/recover_automation_v2_candidate_run.py
