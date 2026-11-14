@@ -271,6 +271,8 @@ def main() -> int:
         "mismatch_count": len(report["mismatches"]),
         "mismatches": report["mismatches"],
         "inputs_current": report["inputs_current"],
+        "cutover_ready": report["cutover_ready"],
+        "cutover_blockers": report["cutover_blockers"],
         "source_sha256": report["source_sha256"],
     }, indent=2))
     if args.strict and not report["equivalent"]:
