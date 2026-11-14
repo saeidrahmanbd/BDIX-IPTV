@@ -98,11 +98,20 @@ def build_candidates(root: Path, manifest_path: Path, output_dir: Path) -> dict:
         raise ValueError("candidate output directory must be inside the repository and not its root")
     output_dir.mkdir(parents=True, exist_ok=True)
     results = []
+    source_hashes = manifest.get("source_playlist_sha256")
+    if not isinstance(source_hashes, dict):
+        raise ValueError("approved logo manifest must pin source_playlist_sha256 for each playlist")
     for playlist in PLAYLISTS:
         source = root / playlist
+        selected = [item for item, _ in validated if item["playlist"] == playlist]
         if not source.is_file() or source.is_symlink():
+            if selected:
+                raise ValueError(f"approved source playlist is missing or unsafe: {playlist}")
             continue
         original = source.read_text(encoding="utf-8-sig")
+        actual_source_sha = _sha256(source)
+        if selected and source_hashes.get(playlist) != actual_source_sha:
+            raise ValueError(f"{playlist}: source playlist SHA-256 changed since approval")
         lines = original.splitlines()
         before = hashlib.sha256(original.encode("utf-8")).hexdigest()
         selected = [item for item, _ in validated if item["playlist"] == playlist]
