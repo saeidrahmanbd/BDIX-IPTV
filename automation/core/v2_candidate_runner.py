@@ -151,12 +151,20 @@ def run_candidate_bundle(repository_root: str | Path, today: date,
         # Persist completed dated probes before the slower EPG source stage. If EPG
         # acquisition fails or the runner is interrupted later, the day's probes
         # remain available to the next disposable Actions runner.
-        checkpoint_remote_probe_ledger(
-            store,
-            make_idempotency_key(request),
-            parse_ledger(intl_run.maintenance.ledger_json),
-        )
-        print("V2 bundle: International probe history checkpointed; active run reservation preserved.", flush=True)
+        updated_probe_ledger = parse_ledger(intl_run.maintenance.ledger_json)
+        original_probe_ledger = parse_ledger(json.dumps(snapshot.state["international_probe_ledger"]))
+        if updated_probe_ledger != original_probe_ledger:
+            checkpoint_remote_probe_ledger(
+                store,
+                make_idempotency_key(request),
+                updated_probe_ledger,
+            )
+            print("V2 bundle: changed International probe history checkpointed.", flush=True)
+        else:
+            # A no-op Contents-API write is not a checkpoint. Avoid requiring an
+            # active reservation when all probes were reused and durable history
+            # is unchanged.
+            print("V2 bundle: no new International probe observations; durable checkpoint skipped.", flush=True)
 
         print("V2 bundle: starting isolated EPG source acquisition.", flush=True)
         source_candidate = build_epg_source_candidate(
