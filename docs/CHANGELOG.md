@@ -5,34 +5,59 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-12 — `IPTV-Playlist.m3u`
+### 2026-11-14 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
+- New channel identities: **39**
 - Channel identities removed: **0**
-- Stream URLs added / removed: **0 / 0**
+- Stream URLs added / removed: **42 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **30**
-- Replaced channel identities: **0**
-- Duplicate URL occurrences removed: **0**
-
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-12 — `International-Playlist.m3u`
-
-- New channel identities: **6**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **13 / 0**
-- Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **5**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Movies Now
-- 7X Music
-- Punjab Plus
-- Swastik Stories
-- Scares by Shudder
-- AXS TV
+- BTL TV (Netherlands) (1080p)
+- Cartoon Network (Pakistan)
+- NAN TV (720p)
+- Nickelodeon (India) (576p)
+- Nick Jr. (India) (576p)
+- Vokta TV (720p)
+- 7X Music (1080p)
+- Animax Asia India (1080p) [Geo-blocked]
+- Cartoon Network HD+ (1080p)
+- CVR Health (576p)
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-14 — `International-Playlist.m3u`
+
+- New channel identities: **24**
+- Channel identities removed: **7**
+- Stream URLs added / removed: **29 / 12**
+- Backup URL updates: **0**
+- Logo reference changes: **1**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- Bangla Jago
+- Ananda Barta
+- APN
+- Bandamax
+- City Eden Birma Play [ ]
+- City Eden Sirtaki TV [ ]
+- Black
+- Classica
+- CMT Equal Play
+- ARY News
+
+Removed channel identities (up to 10):
+- CEACOM TV
+- FUTV
+- Kinopremyera
+- Metropolitana del Cuzco
+- Onda 15 TV
+- Sporty TV
+- Tigo Sports (Honduras)
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
