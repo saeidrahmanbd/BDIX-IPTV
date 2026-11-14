@@ -604,6 +604,27 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
     return None, ""
 
 
+def detected_image_extension(raw, content_type="", file_format="", source_url=""):
+    """Use image signatures when a CDN serves bytes as application/octet-stream."""
+    fmt = str(file_format or "").upper()
+    if fmt or content_type in {
+        "image/svg+xml", "image/png", "image/jpeg", "image/jpg",
+        "image/webp", "image/avif",
+    }:
+        return source.extension_for(content_type, fmt, source_url)
+    if raw.startswith(b"\x89PNG\r\n\x1a\n"):
+        return ".png"
+    if raw.startswith(b"\xff\xd8\xff"):
+        return ".jpg"
+    if raw[:4] == b"RIFF" and raw[8:12] == b"WEBP":
+        return ".webp"
+    if b"ftypavif" in raw[:40] or b"ftypavis" in raw[:40]:
+        return ".avif"
+    if b"<svg" in raw.lstrip()[:500].lower():
+        return ".svg"
+    return source.extension_for(content_type, fmt, source_url)
+
+
 def download_exact_asset(channel, candidate, canonical_name=False):
     """Fetch and validate exact source bytes, then store them locally.
 
@@ -617,7 +638,7 @@ def download_exact_asset(channel, candidate, canonical_name=False):
     fmt = str(candidate.get("format") or "").upper()
     if not source.valid_image(raw, mime, fmt):
         raise ValueError("source response is not a valid supported image")
-    ext = source.extension_for(mime, fmt, url)
+    ext = detected_image_extension(raw, mime, fmt, url)
     slug = source.slug(channel)
     digest = hashlib.sha256(raw).hexdigest()[:10]
     # Keep channel logos repository-local without adding the prohibited
