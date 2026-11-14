@@ -24,6 +24,27 @@ The current workflows use multiple, non-equivalent staging scopes:
 
 This means a helper can stage files outside the apparent workflow step that called it. V2 must make every engine return a declared artifact manifest and make the publisher reject any staged path outside that manifest.
 
+
+## Additional repository-wide source search (2026-11-14)
+
+A second source-level search across the current mainline Python code found these additional execution paths:
+
+| Entry point | Confirmed behavior | V2 treatment |
+|---|---|---|
+| `scripts/refresh_dashboard_diagnostics.py` | Its `run_script(relative)` helper dynamically launches a sequence of audit, stream-health, identity-index, logo-manifest, report and dashboard scripts. At the end it runs `git reset -- logos/`. | Treat this as an orchestration entrypoint with an explicit dependency list, not as a read-only report generator. V2 reporting must consume immutable snapshots and must not reset or stage the Git index. |
+| `scripts/generate_logo_authenticity_manifest.py` | Calls `git add logos/` internally after generating the manifest. | Remove Git staging from the generator during migration; only the central publication boundary may stage declared assets. |
+| `scripts/fetch_iptv_org_epg.py` | Clones the external iptv-org/epg repository, runs `npm ci`, and invokes the scraper with bounded timeouts. | Keep acquisition isolated from candidate validation and publication; preserve last-known-good EPG if acquisition fails. |
+| `automation/engines/epg/source_provider.py` | Executes configured source-provider commands through subprocess with timeout and checked exit status. | Declare provider commands and expected outputs in the EPG source manifest; never allow provider code to publish. |
+| `scripts/run_generate_epg.py` | Launches `augment_epg_mapping_from_iptv_org.py` as a nested subprocess after additional-source mapping. | Preserve the nested stage in the dependency contract or replace it with an explicit in-process EPG engine stage. |
+| `scripts/generate_changelog.py`, `scripts/classify_international_backups.py`, `scripts/audit_playlist.py`, `scripts/pre_publish_gate.py` | Read prior playlist/commit state using Git history commands such as `git show`; no Git write was found in these call sites. | Pass an explicit immutable baseline ref into V2 instead of relying on ambient `HEAD`. |
+| `scripts/prepare_automation_v2_publish_pr.py` | Uses Git subprocess calls to validate ancestry, clean worktree and exact allowlisted diffs before preparing a review branch. | Keep this code exclusively in the owner-review PR preparation boundary; never call it from a candidate engine. |
+
+The source search found no direct `os.system` or `subprocess.Popen` call sites in the searched repository index. This is not proof that all dynamic command construction or imported helper behavior has been traced.
+
+### Remaining runtime-tracing gap
+
+The dashboard recovery helper invokes scripts by a runtime `relative` argument, and the EPG source provider uses configured commands. These indirect call chains still need to be resolved against every workflow invocation and fixture-tested before workflow retirement. This document is therefore a strengthened static audit, not a claim of exhaustive runtime tracing.
+
 ## V2 requirements derived from this audit
 
 1. No engine or report generator may call git add, git commit, git push, or reset.
