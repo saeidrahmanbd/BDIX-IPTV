@@ -1,53 +1,179 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T16:38:02+00:00**
+Generated: **2026-11-14T16:45:37+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **d47607e2306ca0561e6181336ea25952f4f93a6f56d47b33abbb2b7d221b6c6b**
+- IPTV-Playlist.m3u SHA-256: **d5b3d7d2630dd965d842aedc684f1c52b313f42ffcfa670c3b230cbfa1e4352b**
 - International-Playlist.m3u SHA-256: **225d5cf541242d32ce489e1dccd3c1fb234fc78fc60e918ae449ff129b48a5dd**
 
 ## Summary
 
-- Safe repairs applied this run: **0**
-- File-format/extension mismatches remaining: **3**
-- Raster assets still oversized (max side > 1600px): **1**
-- Raster assets over 512000 bytes: **4**
-- Raster/SVG assets with short side under 64 px: **156**
-- Exact-byte duplicate asset clusters: **735**
-- Playlist references whose asset stem differs from the normalized channel name: **1515**
-- Unreferenced files immediately inside logos/: **1586** (not deleted; other tooling or playlists may use them)
+- Safe repairs applied this run: **130**
+- File-format/extension mismatches remaining: **0**
+- Raster assets still oversized (max side > 1600px): **0**
+- Raster assets over 358400 bytes: **3**
+- Raster/SVG assets with short side under 64 px: **154**
+- Exact-byte duplicate asset clusters: **734**
+- Playlist references whose asset stem differs from the normalized channel name: **1517**
+- Unreferenced files immediately inside logos/: **1468** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| aaj-tak-hd.png | PNG | PNG | 893×390 | 739×323 | downscaled, re-encoded/compressed |
+| absinthe-tv.png | PNG | PNG | 1200×674 | 959×539 | downscaled, re-encoded/compressed |
+| america-s-got-talent.png | PNG | PNG | 1000×1000 | 900×900 | downscaled, re-encoded/compressed |
+| angel-tv-a7e5cfebac.png | PNG | PNG | 904×810 | 738×661 | downscaled, re-encoded/compressed |
+| aradana-tv-576p-5ebad635f9.png | PNG | PNG | 670×1005 | 504×756 | downscaled, re-encoded/compressed |
+| ax-men.png | PNG | PNG | 476×476 | 382×382 | downscaled, re-encoded/compressed |
+| ayush-tv.png | PNG | PNG | 852×792 | 690×642 | downscaled, re-encoded/compressed |
+| azahares-radiovisual-multimedia-720p.png | PNG | PNG | 511×512 | 511×512 | re-encoded/compressed |
+| b4u-bhojpuri-1080p.png | PNG | PNG | 771×713 | 578×535 | downscaled, re-encoded/compressed |
+| b4u-bhojpuri-plus-1080p.png | PNG | PNG | 771×713 | 578×535 | downscaled, re-encoded/compressed |
+| b4u-kadak.png | PNG | PNG | 1179×729 | 1030×637 | downscaled, re-encoded/compressed |
+| baiscope-tv.png | PNG | PNG | 1043×1043 | 851×851 | downscaled, re-encoded/compressed |
+| btv-news-33c61f1708.png | PNG | PNG | 1008×675 | 786×526 | downscaled, re-encoded/compressed |
+| camp-spoopy-3d8eac6bf9.png | PNG | PNG | 640×360 | 576×324 | downscaled, re-encoded/compressed |
+| chukker.png | PNG | PNG | 720×406 | 569×320 | downscaled, re-encoded/compressed |
+| colors-cineplex-hd-1080p.png | PNG | PNG | 1046×629 | 881×530 | downscaled, re-encoded/compressed |
+| conexion-positiva-television-31b6b3a46b.png | PNG | PNG | 1075×717 | 968×645 | downscaled, re-encoded/compressed |
+| crime-scene-tv.png | PNG | PNG | 583×583 | 473×473 | downscaled, re-encoded/compressed |
+| dangal-2.png | PNG | PNG | 1056×792 | 763×572 | downscaled, re-encoded/compressed |
+| dd-kisan.png | PNG | PNG | 1600×900 | 1434×807 | downscaled, re-encoded/compressed |
+| dd-rajasthan.png | PNG | PNG | 662×662 | 536×536 | downscaled, re-encoded/compressed |
+| dd-tripura.png | PNG | PNG | 1600×980 | 1261×772 | downscaled, re-encoded/compressed |
+| dd-urdu.png | PNG | PNG | 720×540 | 584×438 | downscaled, re-encoded/compressed |
+| dd-uttarakhand.png | PNG | PNG | 1600×980 | 1162×712 | downscaled, re-encoded/compressed |
+| dd-yadagiri.png | PNG | PNG | 730×707 | 625×605 | downscaled, re-encoded/compressed |
+| deewana-hd-540p.png | PNG | PNG | 1600×533 | 1440×480 | downscaled, re-encoded/compressed |
+| deewana-hd.png | PNG | PNG | 1600×533 | 1440×480 | downscaled, re-encoded/compressed |
+| duck-tv.png | PNG | PNG | 1000×1000 | 785×785 | downscaled, re-encoded/compressed |
+| duronto-tv.png | PNG | PNG | 800×800 | 800×800 | re-encoded/compressed |
+| epic-music-digital.png | PNG | PNG | 1600×900 | 1290×725 | downscaled, re-encoded/compressed |
+| epic-parivar-576p.png | PNG | PNG | 1600×900 | 1440×810 | downscaled, re-encoded/compressed |
+| epic-tv-digital-1080p.png | PNG | PNG | 1600×900 | 1252×704 | downscaled, re-encoded/compressed |
+| etv-life-743b66d370.png | PNG | PNG | 1600×900 | 1170×658 | downscaled, re-encoded/compressed |
+| etv-plus-hd-1080p.png | PNG | PNG | 1600×900 | 1362×766 | downscaled, re-encoded/compressed |
+| god-stands-kids-club-tv-urdu.png | PNG | PNG | 512×341 | 461×307 | downscaled, re-encoded/compressed |
+| goldmines-action.png | PNG | PNG | 580×580 | 475×475 | downscaled, re-encoded/compressed |
+| goldmines-bollywood.png | PNG | PNG | 1105×829 | 919×689 | downscaled, re-encoded/compressed |
+| goldmines.png | PNG | PNG | 978×366 | 807×302 | downscaled, re-encoded/compressed |
+| hmtv-576p-0b2366a0d1.png | PNG | PNG | 1060×664 | 866×543 | downscaled, re-encoded/compressed |
+| hoop-tv.png | PNG | PNG | 1218×685 | 969×545 | downscaled, re-encoded/compressed |
+| hooray-kids-converted-1096fbbd76.png | PNG | PNG | 1024×1024 | 827×827 | downscaled, re-encoded/compressed |
+| hooray-kids.png | PNG | PNG | 1000×1000 | 810×810 | downscaled, re-encoded/compressed |
+| htvc-movies-e07d255b17.png | PNG | PNG | 1115×1040 | 801×747 | downscaled, re-encoded/compressed |
+| azahares-radiovisual-multimedia-720p.png | PNG | PNG | 511×512 | 511×512 | re-encoded/compressed |
+| deewana-hd-540p.png | PNG | PNG | 1600×533 | 1440×480 | downscaled, re-encoded/compressed |
+| discovery-turbo-italy-1080p.png | PNG | PNG | 1089×366 | 918×309 | downscaled, re-encoded/compressed |
+| goldmines-2.png | PNG | PNG | 978×366 | 807×302 | downscaled, re-encoded/compressed |
+| minimax-romania.png | PNG | PNG | 1024×680 | 809×537 | downscaled, re-encoded/compressed |
+| mr-bean-animated-es-1080p-converted-3d6f10f486.png | PNG | PNG | 1024×824 | 573×461 | downscaled, re-encoded/compressed |
+| mr-bean-animated-es-1080p.png | PNG | PNG | 663×534 | 560×451 | downscaled, re-encoded/compressed |
+| mr-bean-animated-fr-1080p-converted-3d6f10f486.png | PNG | PNG | 1024×824 | 573×461 | downscaled, re-encoded/compressed |
+| mr-bean-animated-fr-1080p.png | PNG | PNG | 663×534 | 560×451 | downscaled, re-encoded/compressed |
+| scares-by-shudder-1080p.png | PNG | PNG | 780×438 | 680×382 | downscaled, re-encoded/compressed |
+| the-jungle-book-1080p.png | PNG | PNG | 1021×750 | 919×675 | downscaled, re-encoded/compressed |
+| iq-channel-df4804e706.png | PNG | PNG | 887×887 | 798×798 | downscaled, re-encoded/compressed |
+| jeremiah-tv.png | PNG | PNG | 1266×1266 | 963×963 | downscaled, re-encoded/compressed |
+| jungle-book.png | PNG | PNG | 630×463 | 520×382 | downscaled, re-encoded/compressed |
+| love-the-planet.png | PNG | PNG | 1000×1000 | 792×792 | downscaled, re-encoded/compressed |
+| manoranjan-grand.png | PNG | PNG | 1589×724 | 1150×524 | downscaled, re-encoded/compressed |
+| match-ultra-d5f0557d59.png | PNG | PNG | 1024×576 | 846×476 | downscaled, re-encoded/compressed |
+| megogo-music-d2a1a7f90a.png | PNG | PNG | 1422×440 | 1146×355 | downscaled, re-encoded/compressed |
+| mei-alai-tv.png | PNG | PNG | 1224×816 | 1033×689 | downscaled, re-encoded/compressed |
+| mixer-strongman-champions-league.png | PNG | PNG | 927×618 | 748×499 | downscaled, re-encoded/compressed |
+| mr-bean-animated.png | PNG | PNG | 716×577 | 571×460 | downscaled, re-encoded/compressed |
+| msg-sportszone.png | PNG | PNG | 1600×900 | 1176×662 | downscaled, re-encoded/compressed |
+| mysteries-xplored.png | PNG | PNG | 526×526 | 440×440 | downscaled, re-encoded/compressed |
+| nh-tamil-gold.png | PNG | PNG | 476×476 | 396×396 | downscaled, re-encoded/compressed |
+| nickelodeon-brazil-7ca6654cc0-converted-2390ea4732.png | PNG | PNG | 1024×785 | 717×550 | downscaled, re-encoded/compressed |
+| nickelodeon-brazil-7ca6654cc0.png | PNG | PNG | 844×647 | 701×537 | downscaled, re-encoded/compressed |
+| nvisionbd-official-my-90s-bengali-online.png | PNG | PNG | 670×670 | 570×570 | downscaled, re-encoded/compressed |
+| nvisionbd-official-radio-capital-fm-94-8.png | PNG | PNG | 1024×1024 | 576×576 | downscaled, re-encoded/compressed |
+| nvisionbd-official-radio-padma-99-2-fm.png | PNG | PNG | 1024×1024 | 922×922 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-aadinath-tv-57173dd39d.png | PNG | PNG | 1440×797 | 1213×671 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-aastha-b826b8748b.png | PNG | PNG | 1014×612 | 827×499 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-anb-news-b7d3381203.png | PNG | PNG | 1245×791 | 1245×791 | re-encoded/compressed |
+| nvisionbd-verified-angel-tv-a7e5cfebac.png | PNG | PNG | 904×810 | 738×661 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-awakening-tv-f42bad0d9f.png | PNG | PNG | 866×609 | 730×513 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-btv-news-33c61f1708.png | PNG | PNG | 1008×675 | 786×526 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-channel-win-7f4bd841ad.png | PNG | PNG | 1174×780 | 951×632 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-doyel-radio-4dca18c2f6.png | PNG | PNG | 1024×576 | 707×398 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-etv-life-743b66d370.png | PNG | PNG | 1600×900 | 1170×658 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-jaya-plus-71cf2c6fde.png | PNG | PNG | 839×496 | 736×435 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-mbc-4-80aebd84ac.png | PNG | PNG | 1600×1600 | 1296×1296 | downscaled, re-encoded/compressed |
+| nvisionbd-verified-times-now-navbharat-be6e714868.png | PNG | PNG | 1429×760 | 1045×556 | downscaled, re-encoded/compressed |
+| oggy-and-the-cockroaches.png | PNG | PNG | 797×585 | 654×480 | downscaled, re-encoded/compressed |
+| pardesi-tv.png | PNG | PNG | 900×900 | 653×653 | downscaled, re-encoded/compressed |
+| pasand-tv-576p.png | PNG | PNG | 581×570 | 469×460 | downscaled, re-encoded/compressed |
+| pasand-tv.png | PNG | PNG | 581×570 | 469×460 | downscaled, re-encoded/compressed |
+| pitaara-tv.png | PNG | PNG | 1021×574 | 844×475 | downscaled, re-encoded/compressed |
+| powerkids-kartoon-channel.png | PNG | PNG | 1000×1000 | 900×900 | downscaled, re-encoded/compressed |
+| punjabi-beats.png | PNG | PNG | 803×443 | 657×363 | downscaled, re-encoded/compressed |
+| repaired-btv-news-0646349a43.png | PNG | PNG | 1008×675 | 668×447 | downscaled, re-encoded/compressed |
+| retroclub-7d6ba4c51a.png | PNG | PNG | 717×717 | 575×575 | downscaled, re-encoded/compressed |
+| rupasi-bangla-576p-e677fd1858.png | PNG | PNG | 795×961 | 632×763 | downscaled, re-encoded/compressed |
+| sangeet-marathi.png | PNG | PNG | 620×617 | 558×555 | downscaled, re-encoded/compressed |
+| star-kiran-576p.png | PNG | PNG | 691×813 | 622×732 | downscaled, re-encoded/compressed |
+| strawberry-shortcake.png | PNG | PNG | 532×532 | 430×430 | downscaled, re-encoded/compressed |
+| strongman-champions-league-ebb0bbbbb3.png | PNG | PNG | 927×618 | 748×499 | downscaled, re-encoded/compressed |
+| strongman-champions-league.png | PNG | PNG | 927×618 | 748×499 | downscaled, re-encoded/compressed |
+| surf-cinema.png | PNG | PNG | 706×397 | 606×341 | downscaled, re-encoded/compressed |
+| tequila-music-tv-f31787c376.png | PNG | PNG | 1260×439 | 1036×361 | downscaled, re-encoded/compressed |
+| toon-goggles.png | PNG | PNG | 741×741 | 614×614 | downscaled, re-encoded/compressed |
+| tropical-moon-urban-tv-bfad62c13e.png | PNG | PNG | 900×900 | 775×775 | downscaled, re-encoded/compressed |
+| tvc-arabic-kids-converted-bfab3bb8dc.png | PNG | PNG | 1024×1024 | 731×731 | downscaled, re-encoded/compressed |
+| tvc-arabic-kids.png | PNG | PNG | 1000×1000 | 728×728 | downscaled, re-encoded/compressed |
+| unidentified.png | PNG | PNG | 600×800 | 486×648 | downscaled, re-encoded/compressed |
+| 5-minut-tishiny-720p-4df1fed10c-converted-9bcf25e68a.png | PNG | PNG | 940×493 | 649×340 | downscaled, re-encoded/compressed |
+| 5-minut-tishiny-720p-4df1fed10c.png | PNG | PNG | 846×444 | 700×367 | downscaled, re-encoded/compressed |
+| amazonia-tv-62400b1d98.png | PNG | PNG | 1084×1040 | 882×846 | downscaled, re-encoded/compressed |
+| aradana-tv-576p-5ebad635f9.png | PNG | PNG | 670×1005 | 504×756 | downscaled, re-encoded/compressed |
+| b4u-kadak-576p-f49a2a6e14.png | PNG | PNG | 1179×729 | 1030×637 | downscaled, re-encoded/compressed |
+| dangal-2-720p-18d63673a7.png | PNG | PNG | 1056×792 | 763×572 | downscaled, re-encoded/compressed |
+| dd-bharati-y-53e67f4579.png | PNG | PNG | 512×665 | 512×665 | re-encoded/compressed |
+| dd-odia-480p-f8e5ade40a.png | PNG | PNG | 770×827 | 645×693 | downscaled, re-encoded/compressed |
+| dd-saptagiri-576p-a2a5d3dce3.png | PNG | PNG | 965×922 | 823×786 | downscaled, re-encoded/compressed |
+| dd-urdu-576p-51b76262e4.png | PNG | PNG | 720×540 | 584×438 | downscaled, re-encoded/compressed |
+| goldmines-576p-99e087b760.png | PNG | PNG | 978×366 | 807×302 | downscaled, re-encoded/compressed |
+| kairali-we-576p-e97ca4d762.png | PNG | PNG | 721×865 | 556×668 | downscaled, re-encoded/compressed |
+| mnet-info-a2aa926f1e.png | PNG | PNG | 686×386 | 605×340 | downscaled, re-encoded/compressed |
+| nickelodeon-480p-b7ae374df0-converted-2390ea4732.png | PNG | PNG | 1024×785 | 717×550 | downscaled, re-encoded/compressed |
+| nickelodeon-480p-b7ae374df0.png | PNG | PNG | 831×637 | 693×531 | downscaled, re-encoded/compressed |
+| now-80s-1080p-90e990d562.png | PNG | PNG | 476×467 | 476×467 | re-encoded/compressed |
+| puringla-tv-31652cc93a.png | PNG | PNG | 512×512 | 461×461 | downscaled, re-encoded/compressed |
+| rupasi-bangla-576p-e677fd1858.png | PNG | PNG | 795×961 | 632×763 | downscaled, re-encoded/compressed |
+| vasanth-tv-576p-e81c762aab.png | PNG | PNG | 1347×319 | 1076×255 | downscaled, re-encoded/compressed |
+| vendhar-tv-576p-a135b125f7.png | PNG | PNG | 667×1034 | 540×838 | downscaled, re-encoded/compressed |
+| vision-beats.png | PNG | PNG | 1440×810 | 1050×591 | downscaled, re-encoded/compressed |
+| wipeout-xtra-powered-by-banijay-efac5b76.png | PNG | PNG | 476×476 | 428×428 | downscaled, re-encoded/compressed |
+| ytv.png | PNG | PNG | 1200×630 | 1080×567 | downscaled, re-encoded/compressed |
+| zee-cine-classic.png | PNG | PNG | 1000×1000 | 662×662 | downscaled, re-encoded/compressed |
 
 ## Remaining extension mismatches
 
 | Asset | Declared extension | Detected format | Dimensions | Active reference |
 |---|---|---|---|---|
-| allo-cine-1080p.jpg | .jpg | WEBP | 2152×1208 | no |
-| bstv-pakistan-576p.jpg | .jpg | PNG | 640×360 | no |
-| extrema-kids-tv-not-24-7.jpg | .jpg | PNG | 294×165 | no |
+| — | — | — | — | — |
 
 ## Remaining oversized assets
 
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
-| allo-cine-1080p.jpg | 2152×1208 | 104232 | no |
+| — | — | — | — |
 
 ## Remaining large assets
 
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
-| famatv-9f148af63b.jpg | 221×87 | 562326 | no |
-| famatv-1080p-not-24-7.jpg | 221×87 | 562326 | no |
-| minimax-romania.svg | 0×0 | 992049 | no |
+| famatv-9f148af63b.png | 221×87 | 401832 | no |
+| famatv-1080p-not-24-7.png | 221×87 | 401832 | no |
 | README.md | 0×0 | 602694 | no |
 
 ## Small assets requiring visual review
@@ -106,7 +232,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | girlfriends-films.png | 130×20 | yes |
 | go-tv-720p.png | 128×33 | no |
 | h-t-music-channel-480p.png | 121×59 | no |
-| jiangxi-movie-channel.jpg | 80×50 | no |
 | jiangxi-movie-channel.png | 80×50 | yes |
 | job-tv-1080p.png | 169×54 | no |
 | kineko-1080p.png | 185×32 | no |
@@ -191,7 +316,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | gravitas-movies.png | 107×50 | no |
 | i-am-channel-576p-fdc8693f06.png | 128×59 | no |
 | jalwa-tv-dfcf679014.png | 208×60 | no |
-| lamore-rock-show-webtv-720p-23e63ad29f.avif | 60×60 | no |
 | lamore-rock-show-webtv-720p-23e63ad29f.png | 60×60 | yes |
 | madaniyat-va-ma-rifat-576p-0951caf282.png | 132×35 | no |
 | moldova-tv-1080p-4da3ee2f75.png | 392×47 | no |
@@ -231,17 +355,17 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/4ever-cinema-1080p-46222eea9d.png, logos/international/4ever-cinema-1080p.png
 - logos/4ever-music-1080p-0f54facdb8.png, logos/international/4ever-music-1080p.png
 - logos/4kurd-fc0383f503.png, logos/unused/4kurd-fc0383f503.png
-- logos/51-radio-tv-e8d259fe6e.webp, logos/nvisionbd-official-51-radio-tv-geo-blocked.webp, logos/nvisionbd-verified-51-radio-tv-geo-blocked-e8d259fe6e.webp
+- logos/51-radio-tv-e8d259fe6e.png, logos/nvisionbd-official-51-radio-tv-geo-blocked.png, logos/nvisionbd-verified-51-radio-tv-geo-blocked-e8d259fe6e.png
 - logos/5aab-tv.png, logos/unused/5aab-tv-720p-2dbcc9c083.png
 - logos/70-80-tv.png, logos/international/70-80-tv.png, logos/unused/70-80-tv-1080p-695580bbbc.png
 - logos/7s-music.png, logos/unused/7s-music-576p-afe002c8aa.png
 - logos/7x-music-576p.png, logos/7x-music.png
-- logos/88-stereo-82d858a135.jpg, logos/nvisionbd-verified-88-stereo-not-24-7-82d858a135.jpg
+- logos/88-stereo-82d858a135.png, logos/nvisionbd-verified-88-stereo-not-24-7-82d858a135.png
 - logos/9.png, logos/unused/9.png
-- logos/98-1-pearl-fm-720p.jpg, logos/international/98-1-pearl-fm-720p.jpg, logos/nvisionbd-official-98-1-pearl-fm.jpg
+- logos/98-1-pearl-fm-720p.png, logos/international/98-1-pearl-fm-720p.png, logos/nvisionbd-official-98-1-pearl-fm.png
 - logos/99tv-e8fc39ce2e.png, logos/nvisionbd-verified-99tv-e8fc39ce2e.png
 - logos/a-sports-65a3e1d8fd.png, logos/nvisionbd-verified-a-sports-65a3e1d8fd.png
-- logos/a2i-music-b2b7a2a426.jpg, logos/international/a2i-music-720p-not-24-7.jpg
+- logos/a2i-music-b2b7a2a426.png, logos/international/a2i-music-720p-not-24-7.png
 - logos/aamar-bangla.png, logos/amar-bangla-backup-1.png, logos/amar-bangla.png
 - logos/aaseervatham-tv-360p-c4dc8474a6.png, logos/unused/aaseervatham-tv-360p-c4dc8474a6.png
 - logos/abn-bible-movies-channel-720p-cc14fe65bb.png, logos/unused/abn-bible-movies-channel-720p-cc14fe65bb.png
@@ -263,6 +387,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/alternatv-55a3825bbb.png, logos/international/alternatv-720p-not-24-7.png
 - logos/amar-bangla-digital-backup-1.png, logos/amar-bangla-digital.png
 - logos/amarujala-4ad8f84a24.png, logos/nvisionbd-verified-amarujala-4ad8f84a24.png
+- logos/amc-1080p-95485d9836.png, logos/unused/amc-1080p-95485d9836.png
 - logos/amc-europe-czech-republic.png, logos/amc-europe-hungary-cdbd5044ea.png, logos/amc-latin-america-brazil-cdbd5044ea.png, logos/amc-united-states-720p.png, logos/international/amc-europe-bulgary-576p.png, logos/international/amc-europe-czech-republic.png, logos/international/amc-united-states-1080p-geo-blocked.png, logos/international/amc-united-states-720p.png
 - logos/amc.png, logos/unused/amc.png
 - logos/amedia-hit-1080p.png, logos/international/amedia-hit-1080p.png
@@ -273,18 +398,20 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/aneflix-live-720p.png, logos/international/aneflix-live-720p.png
 - logos/angel-tv-a7e5cfebac.png, logos/nvisionbd-verified-angel-tv-a7e5cfebac.png
 - logos/animal-planet-latin-america-7052c5e36c.png, logos/animal-planet-russia-7052c5e36c.png, logos/animal-planet-united-states-7052c5e36c.png
-- logos/antenne-kaernten-720p.jpg, logos/international/antenne-kaernten-720p.jpg
-- logos/antenne-steiermark-720p.jpg, logos/international/antenne-steiermark-720p.jpg
+- logos/antenne-kaernten-720p.png, logos/international/antenne-kaernten-720p.png
+- logos/antenne-steiermark-720p.png, logos/international/antenne-steiermark-720p.png
 - logos/apna-punjab-tv-720p.png, logos/apna-punjab-tv.png
 - logos/arabica-tv.png, logos/unused/arabica-tv.png
 - logos/aradana-tv-576p-5ebad635f9.png, logos/unused/aradana-tv-576p-5ebad635f9.png
 - logos/arena-sport-1-premium-serbia-e0c0ac701c.png, logos/arena-sport-1-premium-slovenia-e0c0ac701c.png
 - logos/arirang-cd34632359.png, logos/unused/arirang-cd34632359.png
 - logos/armenia-premium-9b5936f400.png, logos/cctv-9-9b5936f400.png, logos/nvisionbd-official-love-gold-bangla.png, logos/penthouse-quickies-9b5936f400.png, logos/xy-max-9b5936f400.png, logos/xy-mix-9b5936f400.png, logos/xy-plus-9b5936f400.png
+- logos/ary-music-ce70dce4.png, logos/unused/ary-music-ce70dce4.png
 - logos/asharq-discovery-1080p-da46bd8597.png, logos/unused/asharq-discovery-1080p-da46bd8597.png
 - logos/asianet-middle-east-576p.png, logos/international/asianet-middle-east-576p.png
 - logos/asom-live-24-533787c1d6.png, logos/nvisionbd-verified-asom-live-24-533787c1d6.png
 - logos/ass-parade-d01c0b1b08.png, logos/bang-bus-d01c0b1b08.png, logos/bangbus-d01c0b1b08.png
+- logos/atn-bangla-uk-converted-2aca234d7b.png, logos/channel-s-uk-converted-2aca234d7b.png
 - logos/atn-news-e0442addb4.png, logos/nvisionbd-verified-atn-news-e0442addb4.png
 - logos/atomic-academy-tv-480p.png, logos/international/atomic-academy-tv-480p.png
 - logos/atomic-tv-360p.png, logos/international/atomic-tv-360p.png
@@ -302,17 +429,17 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/axn-white-poland-3de47dac1d.png, logos/international/axn-white-poland-576i.png
 - logos/az-cinema-1080p.png, logos/international/az-cinema-1080p.png
 - logos/azahares-radiovisual-multimedia-720p.png, logos/international/azahares-radiovisual-multimedia-720p.png
+- logos/azan-tv-15e8ac79.png, logos/unused/azan-tv-15e8ac79.png
 - logos/b4u-bhojpuri-1080p.png, logos/b4u-bhojpuri-plus-1080p.png
 - logos/b4u-kadak.png, logos/unused/b4u-kadak-576p-f49a2a6e14.png
 - logos/babyfirst-9844e5635e.png, logos/babyfirst-spanish-9844e5635e.png
-- logos/babyfirst-9844e5635e.webp, logos/babyfirst-spanish-9844e5635e.webp
 - logos/bahrain-sports-1.png, logos/unused/bahrain-sports-1.png
 - logos/balapan-aadd3c70ef.png, logos/nvisionbd-official-balapan.png
 - logos/bandamax-1080p.png, logos/international/bandamax-1080p.png
 - logos/bangla-tv-9e5f3366c8.png, logos/nvisionbd-verified-bangla-tv-9e5f3366c8.png
+- logos/bantul-the-great-35f9777f.png, logos/unused/bantul-the-great-35f9777f.png
 - logos/baraza-tv-1080p.png, logos/baraza-tv-deep-house-720p.png, logos/baraza-tv-relaxing.png, logos/international/baraza-tv-1080p.png, logos/international/baraza-tv-deep-house-720p.png, logos/nvisionbd-official-baraza-tv.png, logos/unused/baraza-tv-relaxing-1080p-c1e9954245.png
 - logos/bbc-earth-czechia-9e87fe37a1.png, logos/bbc-earth-hungary-9e87fe37a1.png, logos/bbc-earth-us-9e87fe37a1.png
-- logos/bbc-earth-czechia-9e87fe37a1.svg, logos/bbc-earth-hungary-9e87fe37a1.svg, logos/bbc-earth-us-9e87fe37a1.svg
 - logos/beattv-1080p.png, logos/international/beattv-1080p.png
 - logos/bein-sports-3-517e8a74a2.png, logos/nvisionbd-verified-bein-sports-3-517e8a74a2.png
 - logos/bein-sports-xtra.png, logos/unused/bein-sports-xtra-1080p-ef1418fd71.png
@@ -321,7 +448,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/bflix-movies-576p.png, logos/bflix-movies.png
 - logos/bhagyam-tv-1080p-132ad17dbe.png, logos/unused/bhagyam-tv-1080p-132ad17dbe.png, logos/unused/bhagyam-tv-576p-132ad17dbe.png
 - logos/biz-cinema-1080p.png, logos/international/biz-cinema-1080p.png, logos/nvisionbd-official-biz-cinema.png
-- logos/biz-music-720p-9f4c0c5b64.png, logos/international/biz-music-1080p.png
+- logos/biz-music-720p-9f4c0c5b64.png, logos/international/biz-music-1080p.png, logos/unused/biz-music-720p-9f4c0c5b64.png
 - logos/black-1080p.png, logos/international/black-1080p.png
 - logos/blues-tv.png, logos/unused/blues-tv.png
 - logos/boktv-f08b6a0f7b.png, logos/international/boktv-720p-not-24-7.png
@@ -329,18 +456,18 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/bollywood-hd-576p.png, logos/international/bollywood-hd-576p.png
 - logos/bollywood-hd-russia-576p.png, logos/international/bollywood-hd-russia-576p.png
 - logos/bolt-ukraine-1080p.png, logos/international/bolt-russia-576p.png, logos/international/bolt-ukraine-1080p.png
-- logos/boom-tv-1080p-fdb4a495cb.png, logos/unused/boom-tv-1080p-fdb4a495cb.png
+- logos/boom-tv-1080p-fdb4a495cb.png, logos/international/boom-tv-1080p.png, logos/unused/boom-tv-1080p-fdb4a495cb.png
 - logos/boomerang-a974605153.png, logos/nvisionbd-official-boomerang-uk.png, logos/nvisionbd-official-boomerang.png
 - logos/boreal-cd9844f465.png, logos/international/boreal-720p-not-24-7.png
-- logos/botflix-radioo-90c6a6f9a4.webp, logos/international/botflix-tv-1080p.webp
+- logos/botflix-radioo-90c6a6f9a4.png, logos/international/botflix-tv-1080p.png
 - logos/bridge-33debed2b6.png, logos/international/bridge.png
-- logos/bstv-pakistan-c97ac280ed.png, logos/international/bstv-pakistan-576p.jpg
+- logos/bstv.png, logos/international/bstv-pakistan-576p.png
 - logos/bta-tv-720p-4e7cddfa0e.png, logos/international/bta-tv-720p.png, logos/unused/bta-tv-720p-4e7cddfa0e.png
-- logos/btv-news-33c61f1708.jpg, logos/nvisionbd-verified-btv-news-33c61f1708.jpg
+- logos/btv-news-33c61f1708.png, logos/nvisionbd-verified-btv-news-33c61f1708.png
 - logos/c-malayalam-tv-1080p-3b1c6293f5.png, logos/unused/c-malayalam-tv-720p-3b1c6293f5.png
 - logos/cafe-film-38f2518256.png, logos/nvisionbd-verified-cafe-film-38f2518256.png
 - logos/canada-one.png, logos/tvs-sports-bureau.png
-- logos/canal-3-kmk-tv-720p.jpg, logos/international/canal-3-kmk-tv-720p.jpg
+- logos/canal-3-kmk-tv-720p.png, logos/international/canal-3-kmk-tv-720p.png
 - logos/canal-cine-dios.png, logos/international/canal-cine-dios.png
 - logos/captain-576p.png, logos/captain.png
 - logos/cartoon-network-cee-czech-republic-fa14df2c6d.png, logos/cartoon-network-cee-poland-fa14df2c6d.png, logos/cartoon-network-cee-ukraine-fa14df2c6d.png, logos/cartoon-network-latin-america-brazil-fa14df2c6d.png, logos/cartoon-network-latin-america-south-atlantic-fa14df2c6d.png, logos/cartoon-network-latin-america-south-pacific-fa14df2c6d.png, logos/cartoon-network-pakistan.png, logos/international/cartoon-network-asia-720p.png, logos/international/cartoon-network-pakistan.png, logos/international/cartoon-network-united-states-720p.png
@@ -356,8 +483,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/ccv-480p.png, logos/ccv.png
 - logos/ceacom-tv-0e4b08d706.png, logos/international/ceacom-tv-1080p-not-24-7.png
 - logos/chamame-tv.png, logos/international/chamame-tv.png
-- logos/charge-1080p.png, logos/charge.png
-- logos/charge-1080p.webp, logos/international/charge-1080p.webp
+- logos/charge-1080p.png, logos/charge.png, logos/international/charge-1080p.png
 - logos/chhaya-chitram-telugu-7e1e93e465.png, logos/nvisionbd-verified-chhaya-chitram-telugu-7e1e93e465.png
 - logos/chocolate-fm-720p.png, logos/international/chocolate-fm-720p.png
 - logos/cine-friki-1080p.png, logos/international/cine-friki-1080p.png
@@ -391,7 +517,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/city-eden-sirtaki-tv-00cefab928.png, logos/international/city-eden-sirtaki-tv-not-24-7.png
 - logos/city-tv-bulgaria-55b1af3877.png, logos/international/city-tv-bulgaria-576p-not-24-7.png
 - logos/ckno-fm-616p.png, logos/international/ckno-fm-616p.png
-- logos/claro-cinema-1080p.jpg, logos/international/claro-cinema-1080p.jpg
+- logos/claro-cinema-1080p.png, logos/international/claro-cinema-1080p.png
 - logos/claro-musica-tv-1080p.png, logos/international/claro-musica-tv-1080p.png
 - logos/claro-sports-1f0c0ac492.png, logos/nvisionbd-official-claro-sports.png
 - logos/classic-cinema-240p-431cc7a223.png, logos/international/classic-cinema-240p-not-24-7.png, logos/unused/classic-cinema-240p-431cc7a223.png
@@ -411,7 +537,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/cool-fm-98-9-720p.png, logos/international/cool-fm-98-9-720p.png
 - logos/corazon-tv.png, logos/international/corazon-tv.png
 - logos/cowboy-movie-channel.png, logos/unused/cowboy-movie-channel.png
-- logos/dance-television-1080p.jpg, logos/international/dance-television-1080p.jpg
+- logos/dance-television-1080p.png, logos/international/dance-television-1080p.png
 - logos/dance-tv.png, logos/unused/dance-tv.png
 - logos/dancetv-deep-house-district-1080p.png, logos/international/dancetv-deep-house-district-1080p.png
 - logos/dancetv-house-floor-1080p.png, logos/international/dancetv-house-floor-1080p.png
@@ -419,9 +545,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/dangal-2.png, logos/unused/dangal-2-720p-18d63673a7.png
 - logos/dangal-tv.png, logos/unused/dangal-tv.png
 - logos/dbm-tv-1080p-002259b21f.png, logos/international/dbm-tv-1080p.png, logos/unused/dbm-tv-1080p-002259b21f.png
+- logos/dd-urdu.png, logos/unused/dd-urdu-576p-51b76262e4.png
 - logos/de-pelicula-latin-america-9ce9ae4238.png, logos/international/de-pelicula-latin-america.png
 - logos/deep-house-district-1080p.png, logos/international/deep-house-district-1080p.png
-- logos/deewana-hd-540p.png, logos/international/deewana-hd-540p.png
+- logos/deewana-hd-540p.png, logos/deewana-hd.png, logos/international/deewana-hd-540p.png
 - logos/dhamaal-geo-blocked-6c1fb8f527.png, logos/international/dhamaal-576p-geo-blocked.png, logos/nvisionbd-verified-dhamaal-576p-geo-blocked-6c1fb8f527.png
 - logos/dhoom-music-576p-ba62bd030a.png, logos/unused/dhoom-music-576p-ba62bd030a.png
 - logos/disco-polo-music-2b6aaf92aa.png, logos/international/disco-polo-music.png
@@ -429,15 +556,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/discovery-channel-hungary-bf08bd4c8d.png, logos/discovery-channel-italy-bf08bd4c8d.png, logos/discovery-channel-latin-america-bf08bd4c8d.png, logos/discovery-channel-united-states-bf08bd4c8d.png
 - logos/discovery-kids-latin-america-387f33e092.png, logos/discovery-kids-latin-america-chile-387f33e092.png, logos/discovery-kids-latin-america-colombia-387f33e092.png, logos/discovery-kids-latin-america-mexico-387f33e092.png
 - logos/disney-channel-czech-republic-9b9957f643.png, logos/disney-channel-germany-9b9957f643.png, logos/disney-channel-poland-9b9957f643.png
-- logos/disney-channel-czech-republic-9b9957f643.svg, logos/disney-channel-germany-9b9957f643.svg, logos/disney-channel-poland-9b9957f643.svg
-- logos/disney-channel-latin-america-center-1b160711f2.png, logos/disney-channel-latin-america-mexico-1b160711f2.png, logos/disney-channel-latin-america-north-1b160711f2.png, logos/disney-channel-latin-america-panregional-1b160711f2.png
-- logos/disney-channel-latin-america-center-1b160711f2.svg, logos/disney-channel-latin-america-mexico-1b160711f2.svg, logos/disney-channel-latin-america-north-1b160711f2.svg, logos/disney-channel-latin-america-panregional-1b160711f2.svg, logos/international/disneychannellatinamerica.svg
+- logos/disney-channel-latin-america-center-1b160711f2.png, logos/disney-channel-latin-america-mexico-1b160711f2.png, logos/disney-channel-latin-america-north-1b160711f2.png, logos/disney-channel-latin-america-panregional-1b160711f2.png, logos/international/disneychannellatinamerica.png
 - logos/disney-international-hd-1080p-1446d4f852.png, logos/unused/disney-international-hd-1080p-1446d4f852.png
-- logos/disney-jr-latin-america-north-044dc1f366.png, logos/disney-junior-czech-republic-044dc1f366.png, logos/international/disney-jr-latin-america-1080p.png
-- logos/disney-jr-latin-america-north-044dc1f366.svg, logos/disney-junior-czech-republic-044dc1f366.svg, logos/international/disney-jr-latin-america-1080p.svg, logos/nvisionbd-verified-disney-junior-india-044dc1f366.svg, logos/unused/disney-jr-044dc1f3.svg
+- logos/disney-jr-latin-america-north-044dc1f366.png, logos/disney-junior-czech-republic-044dc1f366.png, logos/international/disney-jr-latin-america-1080p.png, logos/nvisionbd-verified-disney-junior-india-044dc1f366.png, logos/unused/disney-jr-044dc1f3.png
 - logos/disney-junior-360p-943f21478f.png, logos/unused/disney-jr-latin-america-1080p-d4a5b563e8.png, logos/unused/disney-junior-360p-943f21478f.png, logos/unused/disney-junior-d4a5b563e8.png
 - logos/disney-xd-poland-7c7a974680.png, logos/disney-xd-united-states-7c7a974680.png
-- logos/disney-xd-poland-7c7a974680.svg, logos/disney-xd-united-states-7c7a974680.svg
 - logos/disney-xd.png, logos/unused/disney-xd-576p-010b4670bf.png, logos/unused/disney-xd-720p-bc0fb95cc7.png
 - logos/dm-sat-576p.png, logos/international/dm-sat-576p.png
 - logos/documentary-2.png, logos/documentary-international.png, logos/documentary-usa.png
@@ -475,13 +598,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/eurosport-india-993030c6b6.png, logos/nvisionbd-official-in-eurosport.png
 - logos/exa-tv.png, logos/international/exa-tv.png
 - logos/express-news-576p.png, logos/express-news.png
-- logos/extrema-kids-tv-not-24-7-0108df4648.png, logos/international/extrema-kids-tv-not-24-7.jpg
 - logos/fabulosa-estereo-100-5-fm-720p.png, logos/international/fabulosa-estereo-100-5-fm-720p.png
-- logos/famatv-9f148af63b.jpg, logos/international/famatv-1080p-not-24-7.jpg
+- logos/famatv-9f148af63b.png, logos/international/famatv-1080p-not-24-7.png
 - logos/fap-tv-5.png, logos/fap-tv-6.png, logos/ptv-home.png, logos/ptv-world.png, logos/ptv.png, logos/unused/ptv.png
 - logos/fashion-tv-aa7f9461cf.png, logos/nvisionbd-official-fashion-tv.png
-- logos/fifa-plus-68fe723cf8.svg, logos/fifa-plus-french-68fe723cf8.svg, logos/fifa-plus-german-68fe723cf8.svg, logos/fifa-plus-hispanic-america-68fe723cf8.svg, logos/fifa-plus-italy-68fe723cf8.svg, logos/fifa-plus-portuguese-68fe723cf8.svg, logos/fifa-plus-spain-68fe723cf8.svg, logos/fifa-plus-united-states-68fe723cf8.svg, logos/nvisionbd-official-fifa-plus.svg
-- logos/fifa-plus-french-68fe723cf8.png, logos/fifa-plus-german-68fe723cf8.png, logos/fifa-plus-hispanic-america-68fe723cf8.png, logos/fifa-plus-italy-68fe723cf8.png, logos/fifa-plus-portuguese-68fe723cf8.png, logos/fifa-plus-spain-68fe723cf8.png, logos/fifa-plus-united-states-68fe723cf8.png
+- logos/fifa-plus-68fe723cf8.png, logos/fifa-plus-french-68fe723cf8.png, logos/fifa-plus-german-68fe723cf8.png, logos/fifa-plus-hispanic-america-68fe723cf8.png, logos/fifa-plus-italy-68fe723cf8.png, logos/fifa-plus-portuguese-68fe723cf8.png, logos/fifa-plus-spain-68fe723cf8.png, logos/fifa-plus-united-states-68fe723cf8.png, logos/nvisionbd-official-fifa-plus.png
 - logos/fight-network.png, logos/unused/fight-network.png
 - logos/fight-pfl.png, logos/pfl.png
 - logos/fightbox-45d2349fcb.png, logos/fightbox-poland-45d2349fcb.png
@@ -513,7 +634,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/grand-cinema.png, logos/unused/grand-cinema.png
 - logos/great-movies-1080p-9cc0399e3e.png, logos/international/great-movies.png
 - logos/great-romance-1080p-7315cca1df.png, logos/international/great-romance.png
-- logos/green-tv-fa848f9d71.jpg, logos/international/green-tv-1080p.jpg, logos/nvisionbd-verified-green-tv-fa848f9d71.jpg
+- logos/green-tv-fa848f9d71.png, logos/international/green-tv-1080p.png, logos/nvisionbd-verified-green-tv-fa848f9d71.png
 - logos/groove.png, logos/unused/groove.png
 - logos/gtc-punjabi-1080p.png, logos/gtc-punjabi-uk.png, logos/gtc-punjabi-us.png, logos/gtc-punjabi.png
 - logos/hallmark-movies-more.png, logos/unused/hallmark-movies-more-1080p-9526bb5c86.png
@@ -545,9 +666,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/bein-movies-turk.png, logos/unused/bein-movies-turk-ef8fc60267.png
 - logos/international/bet-cinema.png, logos/unused/bet-cinema-98dee862af.png
 - logos/international/bet-comedy-movies.png, logos/unused/bet-comedy-movies-b72988086f.png
-- logos/international/biz-music-1080p.jpg, logos/unused/biz-music-720p-9f4c0c5b64.jpg
 - logos/international/bonanza-ca.png, logos/international/bonanza.png
-- logos/international/boom-tv-1080p.jpg, logos/unused/boom-tv-1080p-fdb4a495cb.jpg
 - logos/international/bt-tv-720p.png, logos/nvisionbd-verified-bt-tv-652919e873.png
 - logos/international/business-rockstars-720p.png, logos/unused/business-rockstars-720p-4def98aeb0.png
 - logos/international/canal-action-europe-360p.png, logos/international/canal-action-europe-czechia.png, logos/international/canal-action-europe-magyar.png, logos/international/canal-action-europe-slovakia-720p.png
@@ -564,7 +683,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/filmes-suspense.png, logos/unused/filmes-suspense-19ef6540fd.png
 - logos/international/filmrise-forensic-files-720p-geo-blocked.png, logos/unused/filmrise-forensic-files-720p-56ce9d346d.png
 - logos/international/girlfriends-films.png, logos/unused/girlfriends-films-4990caa383.png
-- logos/international/god-stands-kids-club-tv-arabic.jpg, logos/international/god-stands-kids-club-tv-chinese.jpg, logos/international/god-stands-kids-club-tv.jpg
 - logos/international/god-stands-kids-club-tv-arabic.png, logos/international/god-stands-kids-club-tv-chinese.png, logos/international/god-stands-kids-club-tv.png
 - logos/international/golden-premier-1080p.png, logos/international/golden-premier-2-1080p.png
 - logos/international/hero-720p-not-24-7.png, logos/international/hero.png
@@ -572,7 +690,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/introuble-1080p.png, logos/introuble-1080p.png
 - logos/international/isango-tv-480p-not-24-7.png, logos/isango-tv-bfb00cb121.png
 - logos/international/japanimtv-1080p.png, logos/japanimtv-1080p.png
-- logos/international/kandelatv-480p.jpg, logos/kandelatv-9abf7258b1.jpg
+- logos/international/kandelatv-480p.png, logos/kandelatv-9abf7258b1.png
 - logos/international/kino-tv-hd.png, logos/kino-tv-hd.png
 - logos/international/kinopokaz.png, logos/kinopokaz.png, logos/verified-kinopokaz-ad1d4126d2.png
 - logos/international/kinosemja-576p.png, logos/kinosemja-19c5905acc.png
@@ -580,7 +698,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/kinosvidanie-576p.png, logos/kinosvidanie-6649816108.png
 - logos/international/kral-pop-tv-720p.png, logos/unused/kral-pop-tv-720p-bd49bfe47b.png
 - logos/international/la-kalle-1080p.png, logos/la-kalle-1080p.png
-- logos/international/lawcrime.jpg, logos/law-and-crime-f698aa08fe.jpg
 - logos/international/lawcrime.png, logos/law-and-crime-f698aa08fe.png
 - logos/international/live-music.png, logos/unused/live-music-ae3749c95c.png
 - logos/international/lollywood-hd-tv.png, logos/lollywood-hd-tv-d47e88603a.png
@@ -595,15 +712,15 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/mooz-dance-hd-1080i-geo-blocked.png, logos/international/mooz-dance.png
 - logos/international/movie-punjab-720p.png, logos/movie-punjab-720p.png, logos/nvisionbd-verified-movie-punjab-82d197a4e5.png
 - logos/international/moviedome-720p.png, logos/unused/moviedome-720p-96c8b044c7.png
+- logos/international/mr-bean-animated-es-1080p-converted-3d6f10f486.png, logos/international/mr-bean-animated-fr-1080p-converted-3d6f10f486.png
 - logos/international/mr-bean-animated-es-1080p.png, logos/international/mr-bean-animated-fr-1080p.png
-- logos/international/mr-bean-animated-es-1080p.webp, logos/international/mr-bean-animated-fr-1080p.webp
 - logos/international/mtv-biggest-pop-1080p.png, logos/international/mtv-biggest-pop-br-1080p.png, logos/international/mtv-biggest-pop-ca-1080p.png, logos/international/mtv-biggest-pop-latam-1080p.png, logos/unused/mtv-biggest-pop-1080p-4508e1a99c.png
 - logos/international/mtv-classic-br-720p.png, logos/international/mtv-classic-ca-720p.png, logos/international/mtv-classic-latam-720p.png
 - logos/international/mtv-flow-latino-720p.png, logos/international/mtv-flow-latino-latam-720p.png, logos/unused/mtv-flow-latino-720p-a200c973ae.png
 - logos/international/mtv-spankin-new-1080p.png, logos/international/mtv-spankin-new-ca-1080p.png, logos/unused/mtv-spankin-new-1080p-f62e001de6.png
 - logos/international/music-information-channel-720p.png, logos/unused/music-information-channel-720p-052e9aeeaa.png
 - logos/international/my-cinema-geo-blocked.png, logos/my-cinema.png
-- logos/international/nande-portetepe-tv.jpg, logos/nande-portetepe-tv-baa8a0291c.jpg
+- logos/international/nande-portetepe-tv.png, logos/nande-portetepe-tv-baa8a0291c.png
 - logos/international/naruto-1080p.png, logos/international/naruto-brazil.png, logos/international/naruto-germany-720p.png
 - logos/international/new-k-movies-1080p.png, logos/new-k-movies-1080p-fdc6c325b6.png, logos/unused/new-k-movies-1080p-fdc6c325b6.png
 - logos/international/new-k-pop-1080p.png, logos/new-k-pop-1080p-02d85a425b.png, logos/unused/new-k-pop-1080p-02d85a425b.png
@@ -612,7 +729,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/nonstop-kung-fu-dk.png, logos/international/nonstop-kung-fu-no.png, logos/international/nonstop-kung-fu.png
 - logos/international/one-piece-br.png, logos/international/one-piece-ca.png, logos/international/one-piece-fr.png, logos/international/one-piece-latam.png, logos/international/one-piece-spain.png
 - logos/international/paramount-movie-channel.png, logos/unused/paramount-movie-channel-d46b22ff12.png
-- logos/international/paramount-picks.jpg, logos/unused/paramount-picks-26e6b381c6.jpg
+- logos/international/paramount-picks.png, logos/unused/paramount-picks-26e6b381c6-converted-747147a15a.png
 - logos/international/plim-plim-1080p.png, logos/plim-plim-1080p.png
 - logos/international/pluto-classic-movie-westerns.png, logos/unused/pluto-classic-movie-westerns-70b09a6535.png
 - logos/international/pluto-tv-action-movies.png, logos/unused/pluto-tv-action-movies-13022100eb.png
@@ -701,7 +818,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/the-country-network-1080p.png, logos/the-country-network-1080p.png
 - logos/international/the-film-detective-720p.png, logos/the-film-detective-1080p-20e69a9648.png
 - logos/international/the-twilight-zone-dk.png, logos/international/the-twilight-zone-no.png, logos/international/the-twilight-zone.png
-- logos/international/tiguerito-tv-720p-not-24-7.jpg, logos/tiguerito-tv-464395cdf0.jpg
+- logos/international/tiguerito-tv-720p-not-24-7.png, logos/tiguerito-tv-464395cdf0.png
 - logos/international/toonami-aftermath-west-480p.png, logos/toonami-aftermath-e4688cd178.png
 - logos/international/tooncast-1080p.png, logos/international/tooncast-southamerica-480p.png, logos/tooncast-1080p.png, logos/tooncast-southamerica-480p.png
 - logos/international/trace-brazuca-hd.png, logos/trace-brazuca-hd.png
@@ -722,18 +839,16 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/viasat-kino-comedy.png, logos/viasat-kino-comedy-934854e2dd.png
 - logos/international/viasat-kino-world.png, logos/viasat-kino-world-a9fe5a3be0.png
 - logos/international/viasat-serial.png, logos/viasat-serial-8e4a9c26e8.png
-- logos/international/viasat-serial.svg, logos/viasat-serial-8e4a9c26e8.svg
 - logos/international/viju-megahit-hd-1080p.png, logos/viju-plus-megahit-74d89fb170.png
 - logos/international/viju-tv1000-action-576p.png, logos/nvisionbd-official-viju-tv1000-action.png, logos/viju-tv1000-action-576p.png
 - logos/international/viju-tv1000-russkoe.png, logos/viju-tv1000-russkoe-6a97e6b520.png
-- logos/international/vintage-music-720p.jpg, logos/vintage-music-9548fa87fd.jpg
+- logos/international/vintage-music-720p.png, logos/vintage-music-9548fa87fd.png
 - logos/international/vip-tv-720p.png, logos/vip-tv-720p.png
 - logos/international/viva-latino-1080p.png, logos/viva-latino-1080p.png
 - logos/international/watch-it-scream-720p.png, logos/unused/watch-it-scream-720p-b8531f612b.png, logos/watch-it-scream-720p-b8531f612b.png
 - logos/international/xtrema-cartoons.png, logos/xtrema-cartoons.png
 - logos/international/yo-mtv-1080p.png, logos/international/yo-mtv-ca-1080p.png, logos/unused/yo-mtv-1080p-481061433b.png
-- logos/international/zee-tv-converted-4946c72750.png, logos/zee-tv-2fb6673cf7.png
-- logos/international/zee-tv.svg, logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg, logos/zee-tv-2fb6673cf7.svg, logos/zee-tv.svg
+- logos/international/zee-tv-converted-4946c72750.png, logos/nvisionbd-verified-zee-tv-2fb6673cf7-converted-4946c72750.png, logos/zee-tv-2fb6673cf7.png, logos/zee-tv-converted-4946c72750.png
 - logos/international-dusk.png, logos/international-gotmylf.png, logos/international-penthousegold.png, logos/international-vippov.png, logos/international-visitx.png
 - logos/investigation-discovery-hungary-bc71641620.png, logos/investigation-discovery-latin-america-south-bc71641620.png, logos/investigation-discovery-united-states-bc71641620.png
 - logos/ion-tv-uk.png, logos/unused/ion-tv-uk.png
@@ -748,8 +863,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/kite-victers-720p-not-24-7.png, logos/kite-victers.png
 - logos/kronehit-777ac4e59e.png, logos/nvisionbd-official-kronehit.png
 - logos/ktv-sport-plus.png, logos/unused/ktv-sport-plus.png
-- logos/lacrosse-tv-e4d354c47d.jpg, logos/nvisionbd-official-lacrosse-tv.jpg
+- logos/lacrosse-tv-e4d354c47d.png, logos/nvisionbd-official-lacrosse-tv.png
 - logos/lamore-rock-show-webtv-720p-23e63ad29f.png, logos/unused/lamore-rock-show-webtv-720p-23e63ad29f.png
+- logos/local-logo-cp24.png, logos/local-logo-fx.png
 - logos/m4-sport-0c44a899ae.png, logos/nvisionbd-official-m4-sport.png
 - logos/mad.png, logos/unused/mad.png
 - logos/madina-live-f1fa36621a.png, logos/nvisionbd-official-madina-live.png
@@ -763,6 +879,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/minimax-cee-c3c7e32bdc.png, logos/minimax-hungary-c3c7e32bdc.png
 - logos/mixer-strongman-champions-league.png, logos/strongman-champions-league-ebb0bbbbb3.png, logos/strongman-champions-league.png
 - logos/mohona-tv-a1da8879e5.png, logos/nvisionbd-verified-mohona-tv-a1da8879e5.png
+- logos/mon-bangla-4a53249503.png, logos/unused/mon-bangla-4a53249503.png
 - logos/more-than-sports-tv.png, logos/unused/more-than-sports-tv.png
 - logos/movie-music-by-stingray-1080p-cf132e65b8.png, logos/unused/movie-music-by-stingray-1080p-cf132e65b8.png
 - logos/movies-now-hd-1080p.png, logos/movies-now-hd-576p.png, logos/movies-now-hd.png, logos/movies-now.png
@@ -784,7 +901,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/nick-bangla-26fef2ac19.png, logos/nvisionbd-verified-nick-bangla-26fef2ac19.png
 - logos/nick-jr-croatia-a865fd62c7.png, logos/nick-jr-hungary-a865fd62c7.png, logos/nick-jr-poland-a865fd62c7.png, logos/nick-jr-russia-a865fd62c7.png
 - logos/nick-jr-czech-republic-88856e732a.png, logos/nick-jr-latin-america-88856e732a.png, logos/nick-jr-united-states-88856e732a.png
-- logos/nickelodeon-brazil-7ca6654cc0.webp, logos/unused/nickelodeon-480p-b7ae374df0.webp
+- logos/nickelodeon-brazil-7ca6654cc0-converted-2390ea4732.png, logos/unused/nickelodeon-480p-b7ae374df0-converted-2390ea4732.png
 - logos/nickelodeon-cis-9bff2e9298.png, logos/nickelodeon-czech-republic-9bff2e9298.png, logos/nickelodeon-germany-9bff2e9298.png, logos/nickelodeon-poland-9bff2e9298.png, logos/nickelodeon-united-states-9bff2e9298.png, logos/unused/nickelodeon-73ebd264b3.png
 - logos/nickelodeon-croatia-f61cbaf1ed.png, logos/nickelodeon-global-f61cbaf1ed.png
 - logos/nickelodeon-hungary-034dfb11a2.png, logos/unused/nickelodeon-312f4b9648.png
@@ -795,12 +912,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/nvisionbd-arena-sport-1.png, logos/nvisionbd-verified-arena-sport-1-0a23cf58b8.png
 - logos/nvisionbd-magic-tv.png, logos/nvisionbd-verified-magic-tv-320bdb15d7.png
 - logos/nvisionbd-official-92-8-fm-radio-bhumi.png, logos/nvisionbd-official-radio-bhumi-92-80-fm.png
-- logos/nvisionbd-official-fuel-tv-apac.svg, logos/nvisionbd-official-fuel-tv-europe.svg
+- logos/nvisionbd-official-fuel-tv-apac.png, logos/nvisionbd-official-fuel-tv-europe.png
 - logos/nvisionbd-official-laliga-live-1.png, logos/nvisionbd-official-laliga-live-2.png
 - logos/nvisionbd-official-movie-sphere-au.png, logos/nvisionbd-official-movie-sphere.png
 - logos/nvisionbd-official-persiana-travel.png, logos/nvisionbd-verified-persiana-travel-caec16e5c3.png
 - logos/nvisionbd-official-radio-bangladesh-co.png, logos/nvisionbd-verified-radio-bangladesh-co-25f54ea94e.png
-- logos/nvisionbd-official-radio-shadhin-92-4-fm.jpg, logos/nvisionbd-official-radio-shadin.jpg
+- logos/nvisionbd-official-radio-shadhin-92-4-fm.png, logos/nvisionbd-official-radio-shadin.png
 - logos/nvisionbd-official-screamin.png, logos/screamin-c997eff6ca.png
 - logos/nvisionbd-official-silk-way-cinema.png, logos/silk-way-cinema-d08f775e0b.png
 - logos/nvisionbd-official-sports-fishing-tv.png, logos/nvisionbd-verified-sports-fishing-tv-50d0f501d6.png, logos/sports-fishing-tv-50d0f501d6.png
@@ -810,24 +927,25 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/nvisionbd-official-topestrada-tv.png, logos/topestrada-tv-bae545df77.png
 - logos/nvisionbd-official-turkmenistan-sport.png, logos/turkmenistan-sport-714745951c.png
 - logos/nvisionbd-official-uk-tnt-sports-1.png, logos/nvisionbd-verified-tnt-sport-1-9917866162.png
+- logos/nvisionbd-official-unite8-sports-2.png, logos/unite8-sports-2.png
 - logos/nvisionbd-official-xtrem-sports.png, logos/nvisionbd-verified-xtrem-sports-1d0aff4f7e.png, logos/xtrem-sports-1d0aff4f7e.png
-- logos/nvisionbd-official-ziggo-sport-2.svg, logos/nvisionbd-official-ziggo-sport-3.svg
+- logos/nvisionbd-official-ziggo-sport-2.png, logos/nvisionbd-official-ziggo-sport-3.png
 - logos/nvisionbd-verified-nickelodeon-india-06524ae081.png, logos/unused/nickelodeon-576p-8e7be6884b.png
 - logos/nvisionbd-verified-pankh-3411631a31.png, logos/pankh-3411631a31.png
 - logos/nvisionbd-verified-persiana-travel-2d893462f6.png, logos/persiana-travel-2d893462f6.png
 - logos/nvisionbd-verified-punjabi-music-43b14c7be7.png, logos/punjabi-music-43b14c7be7.png
 - logos/nvisionbd-verified-punjabi-tv-9b4d7425b3.png, logos/punjabi-tv-9b4d7425b3.png
 - logos/nvisionbd-verified-sananda-64faf3c524.png, logos/sananda-64faf3c524.png
-- logos/nvisionbd-verified-sananda-tv-af0df4f34c.jpg, logos/sananda-tv-af0df4f34c.jpg
+- logos/nvisionbd-verified-sananda-tv-af0df4f34c.png, logos/sananda-tv-af0df4f34c.png
 - logos/nvisionbd-verified-sun-gemini-1a4fc59fb6.png, logos/sun-gemini-1a4fc59fb6.png
 - logos/nvisionbd-verified-sun-surya-fbd1ea35f7.png, logos/sun-surya-fbd1ea35f7.png
 - logos/nvisionbd-verified-superhitz-079cde619f.png, logos/superhitz-079cde619f.png
 - logos/nvisionbd-verified-survivor-71b25cd64f.png, logos/survivor-71b25cd64f.png
 - logos/nvisionbd-verified-thendral-tv-ed9b933eb5.png, logos/thendral-tv-ed9b933eb5.png
-- logos/nvisionbd-verified-tom-and-jerry-927bd66719.jpg, logos/tom-and-jerry-927bd66719.jpg
+- logos/nvisionbd-verified-tom-and-jerry-927bd66719.png, logos/tom-and-jerry-927bd66719.png
 - logos/nvisionbd-verified-tunes-6-86e66d6033.png, logos/tunes-6-86e66d6033.png
 - logos/nvisionbd-verified-unique-tv-c64872bc2a.png, logos/unique-tv-c64872bc2a.png
-- logos/nvisionbd-verified-vision-india-66f24a5c85.jpg, logos/vision-india-66f24a5c85.jpg
+- logos/nvisionbd-verified-vision-india-66f24a5c85.png, logos/vision-india-66f24a5c85.png
 - logos/nvisionbd-verified-waterbear-45ac070716.png, logos/waterbear-45ac070716.png
 - logos/nvisionbd-verified-win-tv-a92ce20718.png, logos/win-tv-a92ce20718.png
 - logos/nvisionbd-verified-zee-tv-2fb6673cf7.png, logos/unused/zee-tv-asia-pacific-720p-b84b78bc7a.png
@@ -838,9 +956,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/pasand-tv-576p.png, logos/pasand-tv.png
 - logos/persiana-korea-50841eae46.png, logos/unused/persiana-korea-50841eae46.png
 - logos/pictures.png, logos/unused/pictures.png
-- logos/pishow-stream-10007.svg, logos/pishow.svg
+- logos/pishow-stream-10007-converted-a49a0ada83.png, logos/pishow.png
 - logos/polsat-viasat-history-1080p-62666051f6.png, logos/unused/polsat-viasat-history-1080p-62666051f6.png
 - logos/pooya-tv-6fbf1da8c1.png, logos/unused/pooya-tv-plus-576p-5bf2ade748.png
+- logos/pop-world-tv-720p-3faede8b6c.png, logos/unused/pop-world-tv-720p-3faede8b6c.png
 - logos/powerturk-slow-1080p-6b191586ae.png, logos/unused/powerturk-slow-1080p-6b191586ae.png
 - logos/raj-digital-plus.png, logos/raj-music-telugu.png
 - logos/rakuten-tv-action-movies-finland-1080p.png, logos/rakuten-tv-action-movies.png, logos/rakuten-tv-comedy-movies-finland-1080p.png, logos/rakuten-tv-comedy-movies.png, logos/rakuten-tv-drama-movies-finland-1080p.png, logos/rakuten-tv-drama-movies.png, logos/rakuten-tv-family-movies-finland-1080p.png, logos/rakuten-tv-family-movies.png, logos/rakuten-tv-top-movies-finland-1080p.png, logos/rakuten-tv-top-movies.png
@@ -869,13 +988,17 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/sqala-tv-1080p-d174c17569.png, logos/unused/sqala-tv-1080p-d174c17569.png
 - logos/star-channel-chile-8eaa8f6d2c.png, logos/star-channel-colombia-8eaa8f6d2c.png
 - logos/star-maa-music-576p.png, logos/star-maa-music.png
+- logos/star-movies-2087bb49.png, logos/unused/star-movies-2087bb49.png
+- logos/star-movies-select-37627406.png, logos/unused/star-movies-select-37627406.png
+- logos/star-news-722ad595.png, logos/unused/star-news-722ad595.png
 - logos/star-suvarna-576p.png, logos/star-suvarna-hd.png
 - logos/star-utsav-576p.png, logos/star-utsav.png
 - logos/star-utsav-movies-576p.png, logos/star-utsav-movies.png
+- logos/starz-cinema-1080p-84fe436812.png, logos/unused/starz-cinema-1080p-84fe436812.png
 - logos/stingray-holiday-hits.png, logos/unused/stingray-holiday-hits-1080p-764177135c.png
 - logos/stingray-jukebox-oldies-2834f6a33e.png, logos/stingray-romance-latino-2834f6a33e.png
 - logos/stingray-karaoke.png, logos/unused/stingray-karaoke-720p-8ac71874a5.png
-- logos/stingray-music.svg, logos/stingray-stream-101.svg, logos/stingray-stream-137.svg
+- logos/stingray-music.png, logos/stingray-stream-101-converted-094fb32ac6.png, logos/stingray-stream-137-converted-094fb32ac6.png
 - logos/stingray-pop-adult.png, logos/unused/stingray-pop-adult-1080p-1a61a12a4a.png
 - logos/stingray-remember-the-80s.png, logos/unused/stingray-remember-the-80s.png
 - logos/stingray-stream-101.png, logos/stingray-stream-137.png
@@ -916,7 +1039,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/unused/mtv-reality-720p-f58631e3a4.png, logos/unused/mtv-reality-united-states-ca-f58631e3a4.png
 - logos/unused/mtv-ridiculousness-720p-c68daed535.png, logos/unused/mtv-ridiculousness-united-states-ca-c68daed535.png
 - logos/unused/om-tv-360p-e64336c928.png, logos/unused/om-tv-576p-e64336c928.png
-- logos/unused/podium-tv-1080p-35fa3fb508.jpg, logos/unused/podium-tv-3-1080p-35fa3fb508.jpg
 - logos/unused/podium-tv-1080p-35fa3fb508.png, logos/unused/podium-tv-3-1080p-35fa3fb508.png
 - logos/unused/sl1.png, logos/unused/trace-latino.png
 - logos/unused/tv-brics-chinese-1080p-48fd528d2a.png, logos/unused/tv-brics-english-1080p-21061d9af7.png
@@ -928,11 +1050,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/unused/xite-reggae-vibes-1080p-157e5ece5e.png, logos/xite-reggae-vibes-1080p-157e5ece5e.png
 - logos/unused/xite-rock-x-metal-1080p-08222c2607.png, logos/xite-rock-x-metal.png
 - logos/unused/xite-siempre-latino-1080p-ef6e87e703.png, logos/xite-siempre-latino.png
+- logos/unused/zb-music-7fe42cfc.png, logos/zb-music-7fe42cfc.png
 - logos/unused/zee-bangla-sonar-576p-292f68c192.png, logos/zee-bangla-sonar-backup-1.png, logos/zee-bangla-sonar-backup-2.png, logos/zee-bangla-sonar-backup-4.png, logos/zee-bangla-sonar.png
 - logos/unused/zee-business-576p-33d1a45d8c.png, logos/zee-business-576p-33d1a45d8c.png
 - logos/unused/zee-talkies.png, logos/zee-talkies.png
 - logos/vcv-720p-not-24-7.png, logos/vcv.png
-- logos/viasat-kino-balkan-24c3a8c6c2.svg, logos/viasat-kino-romania-24c3a8c6c2.svg
+- logos/viasat-kino-balkan-24c3a8c6c2.png, logos/viasat-kino-romania-24c3a8c6c2.png
 - logos/vision-india.png, logos/vision.png
 - logos/vokta-tv-720p.png, logos/vokta-tv.png
 - logos/wah-punjabi-576p.png, logos/wah-punjabi.png
@@ -995,6 +1118,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Rupashi Bangla TV | rupashi-bangla-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Bangladesh |
+| IPTV-Playlist.m3u | Shikor TV Canada | shikor-tv-canada.png | Bangladesh |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | TBN 24 USA | tbn-24.png | Bangladesh |
 | IPTV-Playlist.m3u | Vision 24 | vision.png | Bangladesh |
@@ -1002,6 +1126,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Orange Bangla TV | orange-bangla-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Tara TV | tara-tv.png | Indian Bangla |
+| IPTV-Playlist.m3u | Ten TV Prime | ten-tv-prime.png | Bangladesh |
 | IPTV-Playlist.m3u | Bollygold | nh-bollygold-dbedeff9.png | Indian Movies |
 | IPTV-Playlist.m3u | Bollywood | bollywood-hd-576p.png | Indian Movies |
 | IPTV-Playlist.m3u | Goldmines 2 | goldmines.png | Indian Movies |

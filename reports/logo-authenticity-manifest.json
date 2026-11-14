@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-14T16:38:51.304777+00:00",
+  "generated_at_utc": "2026-11-14T16:45:40.155104+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,16 +11,18 @@
     "International-Playlist.m3u": 3124
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "d47607e2306ca0561e6181336ea25952f4f93a6f56d47b33abbb2b7d221b6c6b",
+    "IPTV-Playlist.m3u": "d5b3d7d2630dd965d842aedc684f1c52b313f42ffcfa670c3b230cbfa1e4352b",
     "International-Playlist.m3u": "225d5cf541242d32ce489e1dccd3c1fb234fc78fc60e918ae449ff129b48a5dd"
   },
   "status_counts": {
-    "needs_review": 3573,
+    "needs_review": 3571,
+    "generated_fallback": 2,
     "third_party_verified": 835
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1260,
+      "needs_review": 1258,
+      "generated_fallback": 2,
       "third_party_verified": 24
     },
     "International-Playlist.m3u": {
@@ -696,11 +698,11 @@
       "channel_name": "Shikor TV Canada",
       "tvg_id": "custom.shikortvcanada",
       "channel_id": "custom.shikortvcanada",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shikor-tv-canada.png",
+      "status": "generated_fallback",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+      "reason": "Custom-created local channel artwork, preserved from the previously approved design. This is an unofficial fallback asset and not an official broadcaster logo."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -1092,11 +1094,11 @@
       "channel_name": "Ten TV Prime",
       "tvg_id": "custom.tentvprime",
       "channel_id": "custom.tentvprime",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-tv-prime.png",
+      "status": "generated_fallback",
+      "registry_match": "same-asset-stem-format-conversion",
       "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+      "reason": "Custom-created local channel artwork, preserved from the previously approved design. This is an unofficial fallback asset and not an official broadcaster logo."
     },
     {
       "playlist": "IPTV-Playlist.m3u",

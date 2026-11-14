@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171c31"/><stop offset="1" stop-color="#303c5c"/></linearGradient><linearGradient id="gold" x2="1" y2="1"><stop stop-color="#fff1a6"/><stop offset=".5" stop-color="#e7ad35"/><stop offset="1" stop-color="#a96513"/></linearGradient></defs>
-<rect width="512" height="512" rx="76" fill="url(#bg)"/><circle cx="256" cy="205" r="144" fill="none" stroke="url(#gold)" stroke-width="15"/><circle cx="256" cy="205" r="116" fill="#11182a" stroke="#fff" stroke-opacity=".18" stroke-width="3"/>
-<path d="M198 147l-45-38m161 38 45-38" stroke="url(#gold)" stroke-width="12" stroke-linecap="round"/><circle cx="150" cy="102" r="13" fill="#e9b847"/><circle cx="362" cy="102" r="13" fill="#e9b847"/>
-<text x="256" y="238" text-anchor="middle" font-family="Arial,sans-serif" font-size="115" font-weight="900" fill="#fff">10</text>
-<text x="256" y="282" text-anchor="middle" font-family="Arial,sans-serif" font-size="35" font-weight="800" fill="#e9b847" letter-spacing="8">TV</text>
-<path d="M84 333h344" stroke="#e9b847" stroke-width="5" stroke-linecap="round"/>
-<text x="256" y="396" text-anchor="middle" font-family="Arial,sans-serif" font-size="57" font-weight="900" fill="#fff" letter-spacing="2">PRIME</text>
-<text x="256" y="447" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#d7dfef" letter-spacing="7">ENTERTAINMENT</text></svg>
