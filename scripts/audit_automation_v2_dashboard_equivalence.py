@@ -216,6 +216,12 @@ def compute_metrics(root: Path) -> dict:
             "iptv_playlist": playlist_hash,
             "audit_report_playlist": source_sha(audit),
             "gate_report_playlist": source_sha(gate),
+            "health_report_url_inventory": re.search(
+                r"Stream URL inventory SHA-256:\\s*\\*\\*([a-f0-9]{64})\\*\\*", health, re.I
+            ).group(1).lower() if re.search(
+                r"Stream URL inventory SHA-256:\\s*\\*\\*([a-f0-9]{64})\\*\\*", health, re.I
+            ) else "",
+            "computed_playlist_url_inventory": url_inventory_sha(playlist) if playlist.is_file() else "",
         },
         "expected_metrics": expected,
         "dashboard_metrics": actual,
@@ -250,7 +256,9 @@ def main() -> int:
     print(json.dumps({
         "status": report["status"],
         "mismatch_count": len(report["mismatches"]),
+        "mismatches": report["mismatches"],
         "inputs_current": report["inputs_current"],
+        "source_sha256": report["source_sha256"],
     }, indent=2))
     return 1 if args.strict and not report["equivalent"] else 0
 
