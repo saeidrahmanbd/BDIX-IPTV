@@ -83,9 +83,9 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             root=Path(tmp); workflows=root/".github"/"workflows"
             workflows.mkdir(parents=True)
             (workflows/"iptv-maintenance.yml").write_text(
-                "jobs:\\n  build:\\n    steps:\\n"
-                "      - name: publish\\n        run: |\\n"
-                "          git push origin HEAD:main\\n"
+                "jobs:\n  build:\n    steps:\n"
+                "      - name: publish\n        run: |\n"
+                "          git push origin HEAD:main\n"
             )
             report=build_inventory(root)
             boundary=next(x for x in report["nested_subprocess_calls"] if x["kind"]=="workflow_shell_boundary")
