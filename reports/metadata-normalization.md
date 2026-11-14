@@ -1,7 +1,7 @@
 # Playlist Metadata Normalization
 
-Generated: **2026-11-14T16:38:51+00:00**
-Source playlist SHA-256: **d47607e2306ca0561e6181336ea25952f4f93a6f56d47b33abbb2b7d221b6c6b**
+Generated: **2026-11-14T16:50:40+00:00**
+Source playlist SHA-256: **51bbb54fb8cb3b0e88dde76f1867e227a4e12489d0a86c3e2d74ad0bb410d253**
 
 Read-only snapshot of the current playlist. It does not apply or imply any metadata changes.
 
@@ -11,6 +11,6 @@ Read-only snapshot of the current playlist. It does not apply or imply any metad
 - Active entries missing tvg-chno: **13**
 - Active entries missing tvg-country: **0**
 - Active entries missing tvg-language: **0**
-- Entries missing tvg-logo: **2**
-- Local repository logo references: **1282**
+- Entries missing tvg-logo: **0**
+- Local repository logo references: **1284**
 - Broken local logo references: **0**

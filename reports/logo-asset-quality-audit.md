@@ -1,20 +1,20 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T16:45:37+00:00**
+Generated: **2026-11-14T16:49:32+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **d5b3d7d2630dd965d842aedc684f1c52b313f42ffcfa670c3b230cbfa1e4352b**
+- IPTV-Playlist.m3u SHA-256: **51bbb54fb8cb3b0e88dde76f1867e227a4e12489d0a86c3e2d74ad0bb410d253**
 - International-Playlist.m3u SHA-256: **225d5cf541242d32ce489e1dccd3c1fb234fc78fc60e918ae449ff129b48a5dd**
 
 ## Summary
 
-- Safe repairs applied this run: **130**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1600px): **0**
-- Raster assets over 358400 bytes: **3**
+- Raster assets over 512000 bytes: **1**
 - Raster/SVG assets with short side under 64 px: **154**
 - Exact-byte duplicate asset clusters: **734**
 - Playlist references whose asset stem differs from the normalized channel name: **1517**
@@ -25,136 +25,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| aaj-tak-hd.png | PNG | PNG | 893×390 | 739×323 | downscaled, re-encoded/compressed |
-| absinthe-tv.png | PNG | PNG | 1200×674 | 959×539 | downscaled, re-encoded/compressed |
-| america-s-got-talent.png | PNG | PNG | 1000×1000 | 900×900 | downscaled, re-encoded/compressed |
-| angel-tv-a7e5cfebac.png | PNG | PNG | 904×810 | 738×661 | downscaled, re-encoded/compressed |
-| aradana-tv-576p-5ebad635f9.png | PNG | PNG | 670×1005 | 504×756 | downscaled, re-encoded/compressed |
-| ax-men.png | PNG | PNG | 476×476 | 382×382 | downscaled, re-encoded/compressed |
-| ayush-tv.png | PNG | PNG | 852×792 | 690×642 | downscaled, re-encoded/compressed |
-| azahares-radiovisual-multimedia-720p.png | PNG | PNG | 511×512 | 511×512 | re-encoded/compressed |
-| b4u-bhojpuri-1080p.png | PNG | PNG | 771×713 | 578×535 | downscaled, re-encoded/compressed |
-| b4u-bhojpuri-plus-1080p.png | PNG | PNG | 771×713 | 578×535 | downscaled, re-encoded/compressed |
-| b4u-kadak.png | PNG | PNG | 1179×729 | 1030×637 | downscaled, re-encoded/compressed |
-| baiscope-tv.png | PNG | PNG | 1043×1043 | 851×851 | downscaled, re-encoded/compressed |
-| btv-news-33c61f1708.png | PNG | PNG | 1008×675 | 786×526 | downscaled, re-encoded/compressed |
-| camp-spoopy-3d8eac6bf9.png | PNG | PNG | 640×360 | 576×324 | downscaled, re-encoded/compressed |
-| chukker.png | PNG | PNG | 720×406 | 569×320 | downscaled, re-encoded/compressed |
-| colors-cineplex-hd-1080p.png | PNG | PNG | 1046×629 | 881×530 | downscaled, re-encoded/compressed |
-| conexion-positiva-television-31b6b3a46b.png | PNG | PNG | 1075×717 | 968×645 | downscaled, re-encoded/compressed |
-| crime-scene-tv.png | PNG | PNG | 583×583 | 473×473 | downscaled, re-encoded/compressed |
-| dangal-2.png | PNG | PNG | 1056×792 | 763×572 | downscaled, re-encoded/compressed |
-| dd-kisan.png | PNG | PNG | 1600×900 | 1434×807 | downscaled, re-encoded/compressed |
-| dd-rajasthan.png | PNG | PNG | 662×662 | 536×536 | downscaled, re-encoded/compressed |
-| dd-tripura.png | PNG | PNG | 1600×980 | 1261×772 | downscaled, re-encoded/compressed |
-| dd-urdu.png | PNG | PNG | 720×540 | 584×438 | downscaled, re-encoded/compressed |
-| dd-uttarakhand.png | PNG | PNG | 1600×980 | 1162×712 | downscaled, re-encoded/compressed |
-| dd-yadagiri.png | PNG | PNG | 730×707 | 625×605 | downscaled, re-encoded/compressed |
-| deewana-hd-540p.png | PNG | PNG | 1600×533 | 1440×480 | downscaled, re-encoded/compressed |
-| deewana-hd.png | PNG | PNG | 1600×533 | 1440×480 | downscaled, re-encoded/compressed |
-| duck-tv.png | PNG | PNG | 1000×1000 | 785×785 | downscaled, re-encoded/compressed |
-| duronto-tv.png | PNG | PNG | 800×800 | 800×800 | re-encoded/compressed |
-| epic-music-digital.png | PNG | PNG | 1600×900 | 1290×725 | downscaled, re-encoded/compressed |
-| epic-parivar-576p.png | PNG | PNG | 1600×900 | 1440×810 | downscaled, re-encoded/compressed |
-| epic-tv-digital-1080p.png | PNG | PNG | 1600×900 | 1252×704 | downscaled, re-encoded/compressed |
-| etv-life-743b66d370.png | PNG | PNG | 1600×900 | 1170×658 | downscaled, re-encoded/compressed |
-| etv-plus-hd-1080p.png | PNG | PNG | 1600×900 | 1362×766 | downscaled, re-encoded/compressed |
-| god-stands-kids-club-tv-urdu.png | PNG | PNG | 512×341 | 461×307 | downscaled, re-encoded/compressed |
-| goldmines-action.png | PNG | PNG | 580×580 | 475×475 | downscaled, re-encoded/compressed |
-| goldmines-bollywood.png | PNG | PNG | 1105×829 | 919×689 | downscaled, re-encoded/compressed |
-| goldmines.png | PNG | PNG | 978×366 | 807×302 | downscaled, re-encoded/compressed |
-| hmtv-576p-0b2366a0d1.png | PNG | PNG | 1060×664 | 866×543 | downscaled, re-encoded/compressed |
-| hoop-tv.png | PNG | PNG | 1218×685 | 969×545 | downscaled, re-encoded/compressed |
-| hooray-kids-converted-1096fbbd76.png | PNG | PNG | 1024×1024 | 827×827 | downscaled, re-encoded/compressed |
-| hooray-kids.png | PNG | PNG | 1000×1000 | 810×810 | downscaled, re-encoded/compressed |
-| htvc-movies-e07d255b17.png | PNG | PNG | 1115×1040 | 801×747 | downscaled, re-encoded/compressed |
-| azahares-radiovisual-multimedia-720p.png | PNG | PNG | 511×512 | 511×512 | re-encoded/compressed |
-| deewana-hd-540p.png | PNG | PNG | 1600×533 | 1440×480 | downscaled, re-encoded/compressed |
-| discovery-turbo-italy-1080p.png | PNG | PNG | 1089×366 | 918×309 | downscaled, re-encoded/compressed |
-| goldmines-2.png | PNG | PNG | 978×366 | 807×302 | downscaled, re-encoded/compressed |
-| minimax-romania.png | PNG | PNG | 1024×680 | 809×537 | downscaled, re-encoded/compressed |
-| mr-bean-animated-es-1080p-converted-3d6f10f486.png | PNG | PNG | 1024×824 | 573×461 | downscaled, re-encoded/compressed |
-| mr-bean-animated-es-1080p.png | PNG | PNG | 663×534 | 560×451 | downscaled, re-encoded/compressed |
-| mr-bean-animated-fr-1080p-converted-3d6f10f486.png | PNG | PNG | 1024×824 | 573×461 | downscaled, re-encoded/compressed |
-| mr-bean-animated-fr-1080p.png | PNG | PNG | 663×534 | 560×451 | downscaled, re-encoded/compressed |
-| scares-by-shudder-1080p.png | PNG | PNG | 780×438 | 680×382 | downscaled, re-encoded/compressed |
-| the-jungle-book-1080p.png | PNG | PNG | 1021×750 | 919×675 | downscaled, re-encoded/compressed |
-| iq-channel-df4804e706.png | PNG | PNG | 887×887 | 798×798 | downscaled, re-encoded/compressed |
-| jeremiah-tv.png | PNG | PNG | 1266×1266 | 963×963 | downscaled, re-encoded/compressed |
-| jungle-book.png | PNG | PNG | 630×463 | 520×382 | downscaled, re-encoded/compressed |
-| love-the-planet.png | PNG | PNG | 1000×1000 | 792×792 | downscaled, re-encoded/compressed |
-| manoranjan-grand.png | PNG | PNG | 1589×724 | 1150×524 | downscaled, re-encoded/compressed |
-| match-ultra-d5f0557d59.png | PNG | PNG | 1024×576 | 846×476 | downscaled, re-encoded/compressed |
-| megogo-music-d2a1a7f90a.png | PNG | PNG | 1422×440 | 1146×355 | downscaled, re-encoded/compressed |
-| mei-alai-tv.png | PNG | PNG | 1224×816 | 1033×689 | downscaled, re-encoded/compressed |
-| mixer-strongman-champions-league.png | PNG | PNG | 927×618 | 748×499 | downscaled, re-encoded/compressed |
-| mr-bean-animated.png | PNG | PNG | 716×577 | 571×460 | downscaled, re-encoded/compressed |
-| msg-sportszone.png | PNG | PNG | 1600×900 | 1176×662 | downscaled, re-encoded/compressed |
-| mysteries-xplored.png | PNG | PNG | 526×526 | 440×440 | downscaled, re-encoded/compressed |
-| nh-tamil-gold.png | PNG | PNG | 476×476 | 396×396 | downscaled, re-encoded/compressed |
-| nickelodeon-brazil-7ca6654cc0-converted-2390ea4732.png | PNG | PNG | 1024×785 | 717×550 | downscaled, re-encoded/compressed |
-| nickelodeon-brazil-7ca6654cc0.png | PNG | PNG | 844×647 | 701×537 | downscaled, re-encoded/compressed |
-| nvisionbd-official-my-90s-bengali-online.png | PNG | PNG | 670×670 | 570×570 | downscaled, re-encoded/compressed |
-| nvisionbd-official-radio-capital-fm-94-8.png | PNG | PNG | 1024×1024 | 576×576 | downscaled, re-encoded/compressed |
-| nvisionbd-official-radio-padma-99-2-fm.png | PNG | PNG | 1024×1024 | 922×922 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-aadinath-tv-57173dd39d.png | PNG | PNG | 1440×797 | 1213×671 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-aastha-b826b8748b.png | PNG | PNG | 1014×612 | 827×499 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-anb-news-b7d3381203.png | PNG | PNG | 1245×791 | 1245×791 | re-encoded/compressed |
-| nvisionbd-verified-angel-tv-a7e5cfebac.png | PNG | PNG | 904×810 | 738×661 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-awakening-tv-f42bad0d9f.png | PNG | PNG | 866×609 | 730×513 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-btv-news-33c61f1708.png | PNG | PNG | 1008×675 | 786×526 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-channel-win-7f4bd841ad.png | PNG | PNG | 1174×780 | 951×632 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-doyel-radio-4dca18c2f6.png | PNG | PNG | 1024×576 | 707×398 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-etv-life-743b66d370.png | PNG | PNG | 1600×900 | 1170×658 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-jaya-plus-71cf2c6fde.png | PNG | PNG | 839×496 | 736×435 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-mbc-4-80aebd84ac.png | PNG | PNG | 1600×1600 | 1296×1296 | downscaled, re-encoded/compressed |
-| nvisionbd-verified-times-now-navbharat-be6e714868.png | PNG | PNG | 1429×760 | 1045×556 | downscaled, re-encoded/compressed |
-| oggy-and-the-cockroaches.png | PNG | PNG | 797×585 | 654×480 | downscaled, re-encoded/compressed |
-| pardesi-tv.png | PNG | PNG | 900×900 | 653×653 | downscaled, re-encoded/compressed |
-| pasand-tv-576p.png | PNG | PNG | 581×570 | 469×460 | downscaled, re-encoded/compressed |
-| pasand-tv.png | PNG | PNG | 581×570 | 469×460 | downscaled, re-encoded/compressed |
-| pitaara-tv.png | PNG | PNG | 1021×574 | 844×475 | downscaled, re-encoded/compressed |
-| powerkids-kartoon-channel.png | PNG | PNG | 1000×1000 | 900×900 | downscaled, re-encoded/compressed |
-| punjabi-beats.png | PNG | PNG | 803×443 | 657×363 | downscaled, re-encoded/compressed |
-| repaired-btv-news-0646349a43.png | PNG | PNG | 1008×675 | 668×447 | downscaled, re-encoded/compressed |
-| retroclub-7d6ba4c51a.png | PNG | PNG | 717×717 | 575×575 | downscaled, re-encoded/compressed |
-| rupasi-bangla-576p-e677fd1858.png | PNG | PNG | 795×961 | 632×763 | downscaled, re-encoded/compressed |
-| sangeet-marathi.png | PNG | PNG | 620×617 | 558×555 | downscaled, re-encoded/compressed |
-| star-kiran-576p.png | PNG | PNG | 691×813 | 622×732 | downscaled, re-encoded/compressed |
-| strawberry-shortcake.png | PNG | PNG | 532×532 | 430×430 | downscaled, re-encoded/compressed |
-| strongman-champions-league-ebb0bbbbb3.png | PNG | PNG | 927×618 | 748×499 | downscaled, re-encoded/compressed |
-| strongman-champions-league.png | PNG | PNG | 927×618 | 748×499 | downscaled, re-encoded/compressed |
-| surf-cinema.png | PNG | PNG | 706×397 | 606×341 | downscaled, re-encoded/compressed |
-| tequila-music-tv-f31787c376.png | PNG | PNG | 1260×439 | 1036×361 | downscaled, re-encoded/compressed |
-| toon-goggles.png | PNG | PNG | 741×741 | 614×614 | downscaled, re-encoded/compressed |
-| tropical-moon-urban-tv-bfad62c13e.png | PNG | PNG | 900×900 | 775×775 | downscaled, re-encoded/compressed |
-| tvc-arabic-kids-converted-bfab3bb8dc.png | PNG | PNG | 1024×1024 | 731×731 | downscaled, re-encoded/compressed |
-| tvc-arabic-kids.png | PNG | PNG | 1000×1000 | 728×728 | downscaled, re-encoded/compressed |
-| unidentified.png | PNG | PNG | 600×800 | 486×648 | downscaled, re-encoded/compressed |
-| 5-minut-tishiny-720p-4df1fed10c-converted-9bcf25e68a.png | PNG | PNG | 940×493 | 649×340 | downscaled, re-encoded/compressed |
-| 5-minut-tishiny-720p-4df1fed10c.png | PNG | PNG | 846×444 | 700×367 | downscaled, re-encoded/compressed |
-| amazonia-tv-62400b1d98.png | PNG | PNG | 1084×1040 | 882×846 | downscaled, re-encoded/compressed |
-| aradana-tv-576p-5ebad635f9.png | PNG | PNG | 670×1005 | 504×756 | downscaled, re-encoded/compressed |
-| b4u-kadak-576p-f49a2a6e14.png | PNG | PNG | 1179×729 | 1030×637 | downscaled, re-encoded/compressed |
-| dangal-2-720p-18d63673a7.png | PNG | PNG | 1056×792 | 763×572 | downscaled, re-encoded/compressed |
-| dd-bharati-y-53e67f4579.png | PNG | PNG | 512×665 | 512×665 | re-encoded/compressed |
-| dd-odia-480p-f8e5ade40a.png | PNG | PNG | 770×827 | 645×693 | downscaled, re-encoded/compressed |
-| dd-saptagiri-576p-a2a5d3dce3.png | PNG | PNG | 965×922 | 823×786 | downscaled, re-encoded/compressed |
-| dd-urdu-576p-51b76262e4.png | PNG | PNG | 720×540 | 584×438 | downscaled, re-encoded/compressed |
-| goldmines-576p-99e087b760.png | PNG | PNG | 978×366 | 807×302 | downscaled, re-encoded/compressed |
-| kairali-we-576p-e97ca4d762.png | PNG | PNG | 721×865 | 556×668 | downscaled, re-encoded/compressed |
-| mnet-info-a2aa926f1e.png | PNG | PNG | 686×386 | 605×340 | downscaled, re-encoded/compressed |
-| nickelodeon-480p-b7ae374df0-converted-2390ea4732.png | PNG | PNG | 1024×785 | 717×550 | downscaled, re-encoded/compressed |
-| nickelodeon-480p-b7ae374df0.png | PNG | PNG | 831×637 | 693×531 | downscaled, re-encoded/compressed |
-| now-80s-1080p-90e990d562.png | PNG | PNG | 476×467 | 476×467 | re-encoded/compressed |
-| puringla-tv-31652cc93a.png | PNG | PNG | 512×512 | 461×461 | downscaled, re-encoded/compressed |
-| rupasi-bangla-576p-e677fd1858.png | PNG | PNG | 795×961 | 632×763 | downscaled, re-encoded/compressed |
-| vasanth-tv-576p-e81c762aab.png | PNG | PNG | 1347×319 | 1076×255 | downscaled, re-encoded/compressed |
-| vendhar-tv-576p-a135b125f7.png | PNG | PNG | 667×1034 | 540×838 | downscaled, re-encoded/compressed |
-| vision-beats.png | PNG | PNG | 1440×810 | 1050×591 | downscaled, re-encoded/compressed |
-| wipeout-xtra-powered-by-banijay-efac5b76.png | PNG | PNG | 476×476 | 428×428 | downscaled, re-encoded/compressed |
-| ytv.png | PNG | PNG | 1200×630 | 1080×567 | downscaled, re-encoded/compressed |
-| zee-cine-classic.png | PNG | PNG | 1000×1000 | 662×662 | downscaled, re-encoded/compressed |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 
@@ -172,8 +43,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
-| famatv-9f148af63b.png | 221×87 | 401832 | no |
-| famatv-1080p-not-24-7.png | 221×87 | 401832 | no |
 | README.md | 0×0 | 602694 | no |
 
 ## Small assets requiring visual review
