@@ -38,6 +38,15 @@ class ForceLocalTests(unittest.TestCase):
         self.assertIn(f'tvg-logo="{base}"', added)
         self.assertTrue(added.endswith(",A"))
 
+    def test_added_logo_precedes_group_title(self):
+        base = "https://raw.githubusercontent.com/o/r/main/logos/a.png"
+        line = '#EXTINF:-1 tvg-id="A.in" group-title="Kids",A'
+        added = self.force_local(line, base)
+        self.assertEqual(
+            added,
+            f'#EXTINF:-1 tvg-id="A.in" tvg-logo="{base}" group-title="Kids",A',
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
