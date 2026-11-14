@@ -107,3 +107,18 @@ The current successful checks establish branch-level regression and metric parit
 - Added a dedicated regression test for shell-to-Python entrypoint linkage and the non-complete trace status. The full test suite and legacy regression audit passed on commit `de954f28c6fc360ae59ad04ed232ad44d1eda639`; the subsequent Automation V2 Branch CI run is still in progress.
 
 The EPG guard's skip behavior needs a separately isolated investigation before changing production workflow scheduling or dispatching a writer. No production EPG workflow, playlist or guide was modified by this review-branch work.
+
+
+### Latest shell-link inventory (run 43576731241)
+
+The refreshed runtime artifact confirms:
+
+- 111 workflow shell blocks total.
+- 48 blocks now link to one or more existing Python entrypoints; 9 blocks contain inline Python heredocs.
+- 63 blocks still require manual shell trace because no repository Python entrypoint was extractable.
+- Zero shell blocks are marked fully traced. This is intentional: linking a script path does not establish its imports, subprocess descendants, network access, credentials, Git writes or external package lifecycle effects.
+- 10 shell blocks are identified as direct repository writers; 51 belong to legacy production-writer workflows. V2 shadow candidate workflow has 11 shell blocks.
+- 67 external action references resolve to 6 unique immutable implementations; metadata is reviewed, but implementation-level/transitive code review remains a cutover item.
+- The baseline dry-run continues to accept all four candidate engines with zero playlist or EPG candidate changes and publication disabled. EPG identity matching suggestions remain manual-review-only; no fuzzy or ambiguous mapping was auto-applied.
+
+This is improved trace navigation, not completion of the full runtime trace or approval to retire any writer.
