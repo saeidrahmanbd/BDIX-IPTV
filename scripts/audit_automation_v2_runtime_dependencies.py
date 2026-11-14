@@ -80,16 +80,24 @@ def build_inventory(root: Path) -> dict:
         except OSError:
             continue
         run_indent=None
+        active_boundary=None
         for line_number,line in enumerate(lines,1):
             stripped=line.strip()
             indent=len(line)-len(line.lstrip(" "))
             if run_indent is not None and stripped and indent <= run_indent:
+                active_boundary=None
                 run_indent=None
             if stripped.startswith("run:") or stripped.startswith("- run:"):
                 run_indent=indent
-                shell_boundaries.append({"source":workflow.relative_to(root).as_posix(),
+                active_boundary={"source":workflow.relative_to(root).as_posix(),
                     "line":line_number,"kind":"workflow_shell_boundary","target":None,
-                    "detail":stripped[:300]})
+                    "detail":stripped[:300]}
+                shell_boundaries.append(active_boundary)
+            elif active_boundary is not None and stripped:
+                # Preserve the actual shell body so reviewers can resolve
+                # command chains, npm/node invocations and inline heredocs.
+                body=active_boundary["detail"]
+                active_boundary["detail"]=(body + "\\n" + stripped)[:4000]
     nested.extend(shell_boundaries)
     known={item["target"] for item in workflow_entries}
     unresolved=[item for item in nested if item["kind"] in {"subprocess_dynamic","parse_error","dynamic_code_execution","workflow_shell_boundary"}]
