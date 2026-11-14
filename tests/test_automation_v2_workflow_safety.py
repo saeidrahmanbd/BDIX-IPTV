@@ -35,7 +35,8 @@ class WorkflowSafetyTests(unittest.TestCase):
 
     def test_candidate_bundle_has_no_production_push_or_pull_request_authority(self):
         source = workflow_text("automation-v2-candidate-bundle.yml")
-        self.assertIn("publish=false", source.lower())
+        runner = (ROOT / "scripts" / "run_automation_v2_candidate_bundle.py").read_text(encoding="utf-8")
+        self.assertIn('"publish": False', runner)
         self.assertNotIn("git push", source.lower())
         self.assertNotIn("gh pr create", source.lower())
 
