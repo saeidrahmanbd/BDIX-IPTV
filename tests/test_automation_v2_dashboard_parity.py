@@ -25,6 +25,16 @@ class DashboardParityMirrorTests(unittest.TestCase):
         self.assertIn("| Streams | **1284** |",result)
         self.assertIn("Candidate status: **staged_for_owner_review**",result)
         self.assertIn("Missing runtime logo targets: 3",result)
+    def test_reports_each_legacy_input_hash_and_missing_status(self):
+        legacy="# Update Report\\n| Streams | **1284** |\\n"
+        snap=self.snapshot(legacy)
+        snap["sources"]["playlist_audit"]={"status":"available","sha256":"b"*64}
+        snap["sources"]["epg_coverage"]={"status":"missing"}
+        result=render(snap)
+        self.assertIn("Captured legacy report inputs: **2/3 available**",result)
+        self.assertIn("| playlist_audit | available | " + "b"*64 + " |",result)
+        self.assertIn("| epg_coverage | missing | — |",result)
+
     def test_rejects_tampered_snapshot_content(self):
         snap=self.snapshot("# Update Report\n")
         snap["sources"]["dashboard_markdown"]["content"] += "tampered"
