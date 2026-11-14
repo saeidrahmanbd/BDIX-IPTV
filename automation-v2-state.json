@@ -47402,7 +47402,7 @@
         "engine": "bundle",
         "idempotency_key": "b45d730d791d250fa9802bbc7a0cb870a60b5d0f8b6a6f50c2ad88a87d7876ad",
         "started_at": "2026-11-14T12:43:54.172126+06:00",
-        "status": "running"
+        "status": "succeeded"
       },
       {
         "attempt": 1,
