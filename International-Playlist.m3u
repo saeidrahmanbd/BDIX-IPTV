@@ -434,7 +434,7 @@ https://stream.ottlive.co.in/utvtamil/index.m3u8
 https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="YRFMusic.in" channel-id="YRFMusic.in" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/yrf-music.png" tvg-country="IN" group-title="Indian Music" tvg-name="YRF Music",YRF Music
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
-#EXTINF:-1 tvg-id="YRFMusic.in@Nepal" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/yrf-music-nepal.png" tvg-country="NP" group-title="Indian Music" tvg-name="YRF Music Nepal",YRF Music Nepal
+#EXTINF:-1 tvg-id="YRFMusic.in@Nepal" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/yrf-music-nepal.png" tvg-country="IN" group-title="Indian Music" tvg-name="YRF Music Nepal",YRF Music Nepal
 https://vidaa.kableone.com/hls/live/2111218/YrfMusic/1.m3u8
 #EXTINF:-1 tvg-id="AndTV.in@SD" channel-id="AndTV.in@SD" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="&TV",&TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53373
