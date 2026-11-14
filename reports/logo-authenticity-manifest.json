@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-14T09:14:57.554144+00:00",
+  "generated_at_utc": "2026-11-14T10:06:19.982184+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,17 +11,17 @@
     "International-Playlist.m3u": 3124
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "553390694b4c14da8ea2535d58576a859c432c02065eb50241d293d5f6fcbecc",
+    "IPTV-Playlist.m3u": "28452ea733c9b19507aa133b5ed3977264b2aedcf03dc6d997afc11172a79ad6",
     "International-Playlist.m3u": "7f7bb981468afac6c56e54dd488589517d43fc53102c8cb360cf137253957f26"
   },
   "status_counts": {
-    "needs_review": 3575,
-    "third_party_verified": 833
+    "needs_review": 3577,
+    "third_party_verified": 831
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1259,
-      "third_party_verified": 25
+      "needs_review": 1261,
+      "third_party_verified": 23
     },
     "International-Playlist.m3u": {
       "needs_review": 2316,
@@ -6612,7 +6612,7 @@
       "channel_name": "TV One UK",
       "tvg_id": "TVOne.uk",
       "channel_id": "TVOne.uk",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-one-uk.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -7500,7 +7500,7 @@
       "channel_name": "Solo Calcio Italia",
       "tvg_id": "Si Solo Calcio.it",
       "channel_id": "Si Solo Calcio.it",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/solocalcio-italia.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/solo-calcio-italia.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -14760,11 +14760,11 @@
       "channel_name": "BTL TV (Netherlands) (1080p)",
       "tvg_id": "BTLTV.nl@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btl-tv-netherlands-2790d02135.jpg",
-      "status": "third_party_verified",
-      "registry_match": "exact-key",
-      "source_url": "https://yt3.googleusercontent.com/ytc/APkrFKZYgQTsDhkbaqmPRCPZIf0UgZqF1wa6aG2eo8ti=s176-c-k-c0x00ffffff-no-rj-mo",
-      "reason": "IPTV-org exact ID: BTLTV.nl IPTV-org public logo dataset Source page: https://yt3.googleusercontent.com/ytc/APkrFKZYgQTsDhkbaqmPRCPZIf0UgZqF1wa6aG2eo8ti=s176-c-k-c0x00ffffff-no-rj-mo"
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btl-tv-netherlands-1080p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -14892,11 +14892,11 @@
       "channel_name": "Doraemon (720p)",
       "tvg_id": "Doraemon.us@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/doraemon-cf58b50f0c.svg",
-      "status": "third_party_verified",
-      "registry_match": "exact-key",
-      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Doraemon_Merch_EN_Logo.svg",
-      "reason": "IPTV-org exact ID: Doraemon.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/0/01/Doraemon_Merch_EN_Logo.svg"
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/doraemon-720p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -15096,7 +15096,7 @@
       "channel_name": "The Q India (576p)",
       "tvg_id": "TheQIndia.us@SD",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-q-india.svg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-q-india-576p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
