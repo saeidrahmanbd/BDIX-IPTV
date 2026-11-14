@@ -156,11 +156,11 @@ class LogoFormatConversionTests(unittest.TestCase):
             (logos / "notes.md").write_text("not an image", encoding="utf-8")
             playlist = root / "IPTV-Playlist.m3u"
             playlist.write_text(
-                "#EXTM3U\\n"
-                f'#EXTINF:-1 tvg-id="custom.shikortvcanada" tvg-logo="logos/shikor-tv-canada.svg",Shikor TV Canada\\n'
-                "https://example.invalid/shikor.m3u8\\n"
-                f'#EXTINF:-1 tvg-id="custom.tentvprime" tvg-logo="logos/ten-tv-prime.svg",Ten TV Prime\\n'
-                "https://example.invalid/ten.m3u8\\n",
+                "#EXTM3U\n"
+                f'#EXTINF:-1 tvg-id="custom.shikortvcanada" tvg-logo="logos/shikor-tv-canada.svg",Shikor TV Canada\n'
+                "https://example.invalid/shikor.m3u8\n"
+                f'#EXTINF:-1 tvg-id="custom.tentvprime" tvg-logo="logos/ten-tv-prime.svg",Ten TV Prime\n'
+                "https://example.invalid/ten.m3u8\n",
                 encoding="utf-8",
             )
             summary = convert_referenced_logos(root=root, playlist_names=("IPTV-Playlist.m3u",))
