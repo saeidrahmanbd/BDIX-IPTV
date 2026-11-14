@@ -8,6 +8,9 @@ on:
       - 'automation/core/**'
       - 'automation/engines/**'
       - 'scripts/run_automation_v2_candidate_bundle.py'
+      - 'scripts/audit_automation_v2_runtime_dependencies.py'
+      - 'scripts/audit_automation_v2_dashboard_equivalence.py'
+      - 'automation/policy/external-actions-lock.json'
       - '.github/workflows/automation-v2-candidate-bundle.yml'
   schedule:
     # 09:30 Asia/Dhaka, after the legacy 09:00 EPG refresh; shadow only.
