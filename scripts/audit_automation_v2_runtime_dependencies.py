@@ -10,7 +10,9 @@ from pathlib import Path
 
 WORKFLOW_PYTHON = re.compile(r"(?:python(?:3(?:\.\d+)?)?)\s+([A-Za-z0-9_./-]+\.py)")
 WORKFLOW_ACTION = re.compile(r"^\s*(?:-\s*)?uses:\s*([^\s#]+)")
-SUBPROCESS_NAMES = {"run", "call", "check_call", "check_output", "Popen", "system", "popen"}
+SUBPROCESS_NAMES = {"run", "call", "check_call", "check_output", "Popen"}
+OS_PROCESS_NAMES = {"system", "popen"}
+ASYNC_PROCESS_NAMES = {"create_subprocess_exec", "create_subprocess_shell"}
 
 def _literal_command(node):
     if isinstance(node, (ast.List, ast.Tuple)):
@@ -28,6 +30,30 @@ def scan_python(path: Path, relative: str) -> list[dict]:
         tree=ast.parse(path.read_text(encoding="utf-8"), filename=relative)
     except (OSError, UnicodeDecodeError, SyntaxError) as exc:
         return [{"source":relative,"kind":"parse_error","target":None,"detail":type(exc).__name__}]
+    subprocess_modules = {"subprocess"}
+    os_modules = {"os"}
+    asyncio_modules = {"asyncio"}
+    imported_process_functions = set()
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Import):
+            for alias in node.names:
+                if alias.name == "subprocess":
+                    subprocess_modules.add(alias.asname or alias.name)
+                elif alias.name == "os":
+                    os_modules.add(alias.asname or alias.name)
+                elif alias.name == "asyncio":
+                    asyncio_modules.add(alias.asname or alias.name)
+        elif isinstance(node, ast.ImportFrom):
+            if node.module == "subprocess":
+                imported_process_functions.update(
+                    alias.asname or alias.name for alias in node.names
+                    if alias.name in SUBPROCESS_NAMES
+                )
+            elif node.module == "os":
+                imported_process_functions.update(
+                    alias.asname or alias.name for alias in node.names
+                    if alias.name in OS_PROCESS_NAMES
+                )
     found=[]
     for node in ast.walk(tree):
         if not isinstance(node, ast.Call):
@@ -38,7 +64,16 @@ def scan_python(path: Path, relative: str) -> list[dict]:
             found.append({"source":relative,"line":node.lineno,"kind":"dynamic_code_execution",
                           "target":None,"detail":name + "() prevents static call-graph resolution"})
             continue
-        if name not in SUBPROCESS_NAMES:
+        is_process_call = (
+            isinstance(func, ast.Attribute)
+            and isinstance(func.value, ast.Name)
+            and (
+                (func.value.id in subprocess_modules and name in SUBPROCESS_NAMES)
+                or (func.value.id in os_modules and name in OS_PROCESS_NAMES)
+                or (func.value.id in asyncio_modules and name in ASYNC_PROCESS_NAMES)
+            )
+        ) or (isinstance(func, ast.Name) and name in imported_process_functions)
+        if not is_process_call:
             continue
         command=_literal_command(node.args[0]) if node.args else None
         shell_boundary = name in {"system", "popen"} or any(
@@ -122,13 +157,40 @@ def build_inventory(root: Path) -> dict:
                 body=active_boundary["detail"]
                 active_boundary["detail"]=(body + "\n" + line.rstrip("\r\n"))
     nested.extend(shell_boundaries)
+    action_lock_path=root/"automation"/"policy"/"external-actions-lock.json"
+    try:
+        action_lock=json.loads(action_lock_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        action_lock={}
+    reviewed_actions={
+        item.get("reference"):item for item in action_lock.get("actions",[])
+        if isinstance(item,dict) and isinstance(item.get("reference"),str)
+    }
+    for action in workflow_actions:
+        if action["kind"]=="external_workflow_action":
+            review=reviewed_actions.get(action["reference"])
+            action["metadata_reviewed"]=bool(review)
+            if review:
+                action["metadata"]=review
+    external_boundaries={}
+    for action in workflow_actions:
+        if action["kind"]!="external_workflow_action":
+            continue
+        record=external_boundaries.setdefault(action["reference"],{
+            "kind":"external_action_implementation_boundary",
+            "reference":action["reference"],
+            "immutable_ref":action["immutable_ref"],
+            "metadata_reviewed":action.get("metadata_reviewed",False),
+            "workflows":[],
+        })
+        record["workflows"].append({"workflow":action["workflow"],"line":action["line"]})
     known={item["target"] for item in workflow_entries}
     unresolved_kinds={"subprocess_dynamic","parse_error","dynamic_code_execution","workflow_shell_boundary"}
     runtime_unresolved=[item for item in nested if item.get("execution_scope")!="test_only" and item["kind"] in unresolved_kinds]
     test_only_unresolved=[item for item in nested if item.get("execution_scope")=="test_only" and item["kind"] in unresolved_kinds]
-    unresolved=runtime_unresolved + [
+    unresolved=runtime_unresolved + list(external_boundaries.values()) + [
         item for item in workflow_actions
-        if item["kind"]=="external_workflow_action" or not item["exists"]
+        if item["kind"]=="local_workflow_action" and not item["exists"]
     ]
     missing=[item for item in nested if item.get("execution_scope")!="test_only"
              and item["target"] and not (root/item["target"]).is_file()]
@@ -144,6 +206,8 @@ def build_inventory(root: Path) -> dict:
             "unique_workflow_targets":len(known),
             "workflow_action_references":len(workflow_actions),
             "external_workflow_actions":sum(1 for item in workflow_actions if item["kind"]=="external_workflow_action"),
+            "unique_external_action_implementations":len(external_boundaries),
+            "reviewed_external_action_metadata":sum(1 for item in external_boundaries.values() if item["metadata_reviewed"]),
             "unpinned_external_workflow_actions":sum(1 for item in workflow_actions if item["kind"]=="external_workflow_action" and not item["immutable_ref"]),
             "nested_subprocess_calls":len(nested),
             "dynamic_or_unparsed_calls":len(unresolved),
