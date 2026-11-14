@@ -12,13 +12,13 @@ class WorkflowShellEntrypointTraceTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "scripts").mkdir()
-            (root / "scripts" / "candidate.py").write_text("print('candidate')\\n", encoding="utf-8")
+            (root / "scripts" / "candidate.py").write_text("print('candidate')\n", encoding="utf-8")
             detail = (
-                "run: |\\n"
-                "  python scripts/candidate.py --dry-run\\n"
-                "  python - <<'PY'\\n"
-                "  print('inline')\\n"
-                "  PY\\n"
+                "run: |\n"
+                "  python scripts/candidate.py --dry-run\n"
+                "  python - <<'PY'\n"
+                "  print('inline')\n"
+                "  PY\n"
             )
             trace = trace_workflow_shell_entrypoints(detail, root)
             self.assertEqual(trace["referenced_python_entrypoints"], ["scripts/candidate.py"])
