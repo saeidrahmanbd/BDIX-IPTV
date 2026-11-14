@@ -370,6 +370,61 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             guard.first_run_id(runs, workflow_file="new-channel-discovery.yml")
         )
 
+    def test_epg_watchdog_waits_for_active_guard_only_run_then_recovers(self):
+        active = {
+            "id": 180, "event": "workflow_run", "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T03:20:00Z",
+        }
+        completed_skip = {
+            "id": 180, "event": "workflow_run", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T03:20:00Z",
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "skipped",
+                "steps": [{
+                    "name": "Regenerate, validate and publish XMLTV",
+                    "conclusion": "skipped",
+                }],
+            }],
+        }
+
+        class FakeClient:
+            def __init__(self):
+                self.calls = 0
+
+            def workflow_runs(self, workflow_file):
+                self.calls += 1
+                self.assert_epg_workflow = workflow_file == "epg-refresh.yml"
+                return [completed_skip] if self.calls == 1 else [completed_skip]
+
+        client = FakeClient()
+        settled = guard.wait_for_epg_runs_to_settle(
+            client, self.today, [active], max_polls=2, poll_interval=0,
+            sleep_fn=lambda _seconds: None,
+        )
+        self.assertEqual(client.calls, 1)
+        self.assertFalse(guard.watchdog_run_blocks_retry(
+            settled[0], workflow_file="epg-refresh.yml"
+        ))
+
+    def test_epg_watchdog_keeps_active_run_blocking_after_wait_limit(self):
+        active = {
+            "id": 181, "event": "workflow_run", "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T03:20:00Z",
+        }
+
+        class FakeClient:
+            def workflow_runs(self, workflow_file):
+                return [active]
+
+        settled = guard.wait_for_epg_runs_to_settle(
+            FakeClient(), self.today, [active], max_polls=2, poll_interval=0,
+            sleep_fn=lambda _seconds: None,
+        )
+        self.assertEqual(settled[0]["status"], "in_progress")
+        self.assertTrue(guard.watchdog_run_blocks_retry(
+            settled[0], workflow_file="epg-refresh.yml"
+        ))
+
     def test_epg_watchdog_ignores_successful_pre_schedule_refresh(self):
         midnight_push = {
             "id": 170, "event": "push", "status": "completed", "conclusion": "success",
