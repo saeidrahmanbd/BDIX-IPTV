@@ -37,7 +37,16 @@ def scan(root: Path) -> dict:
     runtime_references: dict[str, set[str]] = {}
     for path in root.rglob("*"):
         relative = path.relative_to(root).as_posix()
-        if path.is_symlink() or not path.is_file() or "logos" in path.relative_to(root).parts or relative in EXCLUDED_REFERENCE_FILES:
+        if (
+            path.is_symlink()
+            or not path.is_file()
+            or "logos" in path.relative_to(root).parts
+            or relative in EXCLUDED_REFERENCE_FILES
+            # Generated audit reports must not count their own inventory of
+            # logo paths as live references. Only the two explicit runtime
+            # registries below are intentionally included from reports/.
+            or (relative.startswith("reports/") and relative not in RUNTIME_REPORTS)
+        ):
             continue
         if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
