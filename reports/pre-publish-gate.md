@@ -1,6 +1,6 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-14T10:50:52+00:00**
+Generated: **2026-11-14T10:59:03+00:00**
 Source playlist SHA-256: **6d59d90055cc32036f9aeee9d86ad878fbced2364308b6f3ef53228686c91771**
 
 Status: **PASS**
@@ -12,7 +12,6 @@ Status: **PASS**
 - Primary streams quarantined: **0**
 - Review entries reclassified: **0**
 - Review entries promoted: **0**
-- Authorized review promotions: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **13**
@@ -34,7 +33,7 @@ Status: **PASS**
 - Entries modified this run: **0**
 
 ## Protected-queue policy
-New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. Exact URL-scoped migrations in the owner-requested migration approval file may promote reachable queue/orphan streams or quarantine non-streaming candidates; every stream URL must be preserved. Review, New Channels and New Backups are excluded from Xtream.
+New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
 
 ## Channel-Number Sequence Review
 Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **607**.
