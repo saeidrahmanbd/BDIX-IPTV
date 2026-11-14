@@ -88,6 +88,8 @@ jobs:
             reports/automation-v2/candidate-run.json
             reports/automation-v2/candidate-logo-reference-audit.json
             reports/automation-v2/logo-repair-candidates.json
+            reports/automation-v2/approved-logo-candidate-playlists.json
+            reports/automation-v2/logo-repair-candidate-playlists/
             reports/automation-v2/candidate-diagnostics-snapshot.json
             reports/automation-v2/candidate-dashboard.md
             reports/automation-v2/candidates/transactions/
