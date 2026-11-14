@@ -332,20 +332,38 @@ def parse_extinf(line):
     return attrs, label
 
 
+def canonicalize_extinf_order(line):
+    """Keep logo edits in the repository's canonical EXTINF attribute order."""
+    comma = line.find(",")
+    head = line if comma < 0 else line[:comma]
+    display = "" if comma < 0 else line[comma:]
+    matches = list(ATTR_RE.finditer(head))
+    if not matches:
+        return line
+    order = {
+        "tvg-id": 0, "tvg-name": 1, "tvg-logo": 2, "tvg-chno": 3,
+        "channel-id": 4, "tvg-country": 5, "tvg-language": 6, "group-title": 7,
+    }
+    pairs = [(m.group(1), m.group(2), i) for i, m in enumerate(matches)]
+    pairs.sort(key=lambda item: (order.get(item[0], len(order)), item[2]))
+    prefix = head[:matches[0].start()].rstrip()
+    return prefix + " " + " ".join(f'{key}="{value}"' for key, value, _ in pairs) + display
+
+
 def set_logo(line, url):
     if re.search(r'tvg-logo="[^"]*"', line):
-        return re.sub(r'tvg-logo="[^"]*"', 'tvg-logo="' + url + '"', line, count=1)
+        updated = re.sub(r'tvg-logo="[^"]*"', 'tvg-logo="' + url + '"', line, count=1)
+        return canonicalize_extinf_order(updated)
     # Keep the canonical EXTINF attribute order: tvg-logo precedes group-title.
-    # Inserting at the comma placed newly localized logos after group-title and
-    # caused the live-playlist metadata regression test to fail.
     group = re.search(r'\s+group-title="', line)
     if group:
-        return line[:group.start()] + ' tvg-logo="' + url + '"' + line[group.start():]
-    comma = line.find(",")
-    if comma < 0:
-        return line
-    return line[:comma] + ' tvg-logo="' + url + '"' + line[comma:]
-
+        updated = line[:group.start()] + ' tvg-logo="' + url + '"' + line[group.start():]
+    else:
+        comma = line.find(",")
+        if comma < 0:
+            return line
+        updated = line[:comma] + ' tvg-logo="' + url + '"' + line[comma:]
+    return canonicalize_extinf_order(updated)
 
 def render_updated_playlist(output_lines, original_text):
     """Replace logo-bearing lines while preserving all original trailing newlines."""
