@@ -11,6 +11,15 @@ from fetch_iptv_org_epg import active_playlist_ids, target_channel_ids, build_ta
 
 
 class TargetedIptvOrgEpgTests(unittest.TestCase):
+    def test_upstream_checkout_uses_an_immutable_commit(self):
+        self.assertRegex(fetcher.UPSTREAM_COMMIT, r"^[0-9a-f]{40}$")
+        with patch.object(fetcher, "run") as run:
+            fetcher.checkout_upstream()
+        calls = [call.args for call in run.call_args_list]
+        self.assertIn(("git", "-C", str(fetcher.WORK), "fetch", "--depth", "1", "origin", fetcher.UPSTREAM_COMMIT), calls)
+        self.assertIn(("git", "-C", str(fetcher.WORK), "checkout", "--detach", "FETCH_HEAD"), calls)
+        self.assertFalse(any("clone" in args for args in calls))
+
     def test_grab_command_does_not_filter_out_bengali_or_other_languages(self):
         args = grab_command()
         self.assertNotIn("--lang=en", args)
