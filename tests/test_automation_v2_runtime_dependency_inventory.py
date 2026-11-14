@@ -76,6 +76,27 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             build_block=next(x for x in boundaries if "npm ci" in x["detail"])
             self.assertIn("node build.js",build_block["detail"])
 
+    def test_inventory_records_external_and_local_workflow_actions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); workflows=root/".github"/"workflows"
+            workflows.mkdir(parents=True)
+            action=root/".github"/"actions"/"local"
+            action.mkdir(parents=True)
+            (action/"action.yml").write_text("name: local\\n")
+            (workflows/"actions.yml").write_text(
+                "jobs:\\n  build:\\n    steps:\\n"
+                "      - uses: actions/checkout@"+("a"*40)+"\\n"
+                "      - uses: ./.github/actions/local\\n"
+            )
+            report=build_inventory(root)
+            self.assertEqual(report["summary"]["workflow_action_references"],2)
+            self.assertEqual(report["summary"]["external_workflow_actions"],1)
+            self.assertEqual(report["summary"]["unpinned_external_workflow_actions"],0)
+            self.assertTrue(any(x["kind"]=="external_workflow_action" and x["immutable_ref"]
+                                for x in report["workflow_actions"]))
+            self.assertTrue(any(x["kind"]=="local_workflow_action" and x["exists"]
+                                for x in report["workflow_actions"]))
+
     def test_preserves_complete_multiline_workflow_shell_body(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); workflows=root/".github"/"workflows"
