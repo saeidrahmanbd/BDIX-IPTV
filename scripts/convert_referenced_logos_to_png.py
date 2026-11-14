@@ -118,6 +118,25 @@ def image_bytes_to_png(raw: bytes, source_extension: str) -> bytes:
     return png
 
 
+
+
+def _validated_png(path: Path) -> bytes | None:
+    """Return a fully decoded PNG sibling, or None when it is absent/invalid."""
+    if not path.is_file():
+        return None
+    try:
+        with Image.open(path) as image:
+            if image.format != "PNG":
+                return None
+            image.load()
+        # Verify structure in a fresh decoder after the full pixel decode.
+        with Image.open(path) as image:
+            image.verify()
+        return path.read_bytes()
+    except Exception:
+        return None
+
+
 def local_logo_path(logo: str, raw_base: str) -> tuple[str, str]:
     """Return (relative path, URL prefix style) for a repository-local logo."""
     if logo.startswith(raw_base):
@@ -154,6 +173,7 @@ def convert_referenced_logos(
     source_files_to_remove: set[Path] = set()
     updated_playlists: dict[Path, str] = {}
     source_formats: dict[str, int] = {}
+    reused_valid_png_sources: list[str] = []
     updated_references = 0
 
     def convert_one(relative: str) -> str:
@@ -171,9 +191,21 @@ def convert_referenced_logos(
             png_bytes = image_bytes_to_png(source_path.read_bytes(), extension)
             source_files_to_remove.add(source_path)
         except Exception as exc:
-            raise ValueError(
-                f"failed to convert logo {relative}: {type(exc).__name__}: {exc}"
-            ) from exc
+            # A damaged/obsolete source wrapper must not block publication when
+            # an independently valid same-stem PNG already exists. Reuse only
+            # after a full Pillow decode and PNG verification; never fabricate
+            # pixels or silently accept a corrupt counterpart.
+            existing_png = source_path.with_suffix(".png")
+            existing_png_bytes = _validated_png(existing_png)
+            if existing_png_bytes is None:
+                raise ValueError(
+                    f"failed to convert logo {relative}: {type(exc).__name__}: {exc}"
+                ) from exc
+            source_files_to_remove.add(source_path)
+            new_relative = existing_png.relative_to(logos_dir).as_posix()
+            asset_cache[relative] = (new_relative, existing_png_bytes)
+            reused_valid_png_sources.append(relative)
+            return new_relative
         digest = hashlib.sha256(png_bytes).hexdigest()[:10]
         target = source_path.with_suffix(".png")
         if (
@@ -272,6 +304,7 @@ def convert_referenced_logos(
         "source_formats": dict(sorted(source_formats.items())),
         "png_assets_created": len(pending_assets),
         "original_assets_removed": removed_source_count,
+        "damaged_sources_replaced_by_valid_png": sorted(reused_valid_png_sources),
         "remaining_non_png_references": remaining_non_png,
     }
     if report_path is None:
@@ -290,6 +323,8 @@ def convert_referenced_logos(
             f"- New PNG assets created: **{len(pending_assets)}**",
             f"- Supported non-PNG image assets found in logos/: **{inventory_image_assets}**",
             f"- Non-PNG source files removed after successful validation: **{removed_source_count}**",
+            f"- Damaged source wrappers safely superseded by a fully validated same-stem PNG: **{len(reused_valid_png_sources)}**",
+            *[f"  - {name}" for name in sorted(reused_valid_png_sources)],
             "- Rollback/provenance: **Original bytes remain recoverable from Git history**",
             "- Non-PNG active playlist references remaining: **0**",
             "",
