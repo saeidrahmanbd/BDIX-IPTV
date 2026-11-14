@@ -16,7 +16,7 @@ from pathlib import Path
 from urllib.parse import quote, unquote
 
 import cairosvg
-from PIL import Image, ImageOps
+from PIL import Image, ImageFile, ImageOps
 
 import repair_playlist_logos as logo_repair
 from logo_embedded_png import DATA_URI, recover_embedded_png_from_svg
@@ -65,29 +65,33 @@ def image_bytes_to_png(raw: bytes, source_extension: str) -> bytes:
                     f"SVG rendering failed and no safely recoverable embedded PNG was found: "
                     f"{type(render_error).__name__}: {render_error}"
                 ) from render_error
+            # A small number of broadcaster SVG wrappers contain an IDAT
+            # stream whose zlib payload is truncated/corrupt even though its
+            # PNG chunk framing and dimensions are recoverable. Pillow can
+            # salvage the decoded scanlines; scope this permissive mode to
+            # this one embedded-raster fallback and restore the global flag.
+            previous_truncated_setting = ImageFile.LOAD_TRUNCATED_IMAGES
             try:
+                ImageFile.LOAD_TRUNCATED_IMAGES = True
                 with Image.open(io.BytesIO(recovered)) as embedded:
                     embedded.load()
+                    if embedded.width < 1 or embedded.height < 1:
+                        raise ValueError("recovered embedded PNG has invalid dimensions")
+                    output_width = 1024
+                    output_height = max(1, round(embedded.height * output_width / embedded.width))
+                    normalized_embedded = embedded.resize(
+                        (output_width, output_height), Image.Resampling.LANCZOS
+                    )
+                    output = io.BytesIO()
+                    normalized_embedded.save(output, format="PNG", optimize=True)
+                    raw = output.getvalue()
             except Exception as embedded_error:
                 raise ValueError(
-                    f"SVG rendering failed; recovered embedded PNG did not decode: "
+                    f"SVG rendering failed; embedded PNG could not be salvaged: "
                     f"{type(embedded_error).__name__}: {embedded_error}"
                 ) from render_error
-            # When an SVG is only a wrapper around an embedded PNG, CairoSVG
-            # may reject a damaged ancillary/IDAT CRC even though the embedded
-            # pixel stream is recoverable. Use the fully decoded, structurally
-            # repaired raster directly instead of asking CairoSVG to decode it
-            # a second time. The common downstream Pillow path normalizes it.
-            with Image.open(io.BytesIO(recovered)) as embedded:
-                embedded.load()
-                output_width = 1024
-                output_height = max(1, round(embedded.height * output_width / embedded.width))
-                normalized_embedded = embedded.resize(
-                    (output_width, output_height), Image.Resampling.LANCZOS
-                )
-                output = io.BytesIO()
-                normalized_embedded.save(output, format="PNG", optimize=True)
-                raw = output.getvalue()
+            finally:
+                ImageFile.LOAD_TRUNCATED_IMAGES = previous_truncated_setting
 
     try:
         with Image.open(io.BytesIO(raw)) as source_image:
