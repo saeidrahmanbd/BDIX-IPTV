@@ -164,7 +164,7 @@ def build_candidates(root: Path, manifest_path: Path, output_dir: Path) -> dict:
                 raise ValueError(f"approved source playlist is missing or unsafe: {playlist}")
             continue
         original_bytes = source.read_bytes()
-        has_utf8_bom = original_bytes.startswith(b"\\xef\\xbb\\xbf")
+        has_utf8_bom = original_bytes.startswith(b"\xef\\xbb\\xbf")
         original = original_bytes.decode("utf-8-sig")
         actual_source_sha = _sha256(source)
         if selected and source_hashes.get(playlist) != actual_source_sha:
@@ -172,12 +172,12 @@ def build_candidates(root: Path, manifest_path: Path, output_dir: Path) -> dict:
         lines = original.splitlines()
         for item in selected:
             _apply_one(lines, item, playlist)
-        candidate = "\\n".join(lines) + ("\\n" if original.endswith("\\n") else "")
+        candidate = "\n".join(lines) + ("\n" if original.endswith("\n") else "")
         changed = candidate != original
         if changed:
             destination = output_dir / playlist
             destination.parent.mkdir(parents=True, exist_ok=True)
-            candidate_bytes = (b"\\xef\\xbb\\xbf" if has_utf8_bom else b"") + candidate.encode("utf-8")
+            candidate_bytes = (b"\xef\\xbb\\xbf" if has_utf8_bom else b"") + candidate.encode("utf-8")
             destination.write_bytes(candidate_bytes)
             results.append({
                 "playlist": playlist, "approved_rows": len(selected),
@@ -212,7 +212,7 @@ def main() -> int:
     report_path = args.report if args.report.is_absolute() else root / args.report
     result = build_candidates(root, manifest, output)
     report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\\n", encoding="utf-8")
+    report_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(result, indent=2, sort_keys=True))
     return 0
 
