@@ -35,6 +35,7 @@ class CountryVerificationTests(unittest.TestCase):
         expected = {
             "JTV Bangla": ("JTVBangla.in@SD", "IN", "Indian Bangla"),
             "Ten TV Prime": ("custom.tentvprime", "IN", "Indian Bangla"),
+            "Jalsha Bangla BD": ("JalshaBanglaBD.bd", "BD", "Bangladesh"),
         }
         for channel, (channel_id, country, group) in expected.items():
             matches = []
@@ -46,6 +47,23 @@ class CountryVerificationTests(unittest.TestCase):
             self.assertIn(f'channel-id="{channel_id}"', matches[0])
             self.assertIn(f'tvg-country="{country}"', matches[0])
             self.assertIn(f'group-title="{group}"', matches[0])
+
+    def test_corrected_country_metadata_for_other_groups(self):
+        root = Path(__file__).resolve().parent.parent
+        main = (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8").splitlines()
+        international = (root / "International-Playlist.m3u").read_text(encoding="utf-8").splitlines()
+        q_tv = [line for line in main if line.startswith("#EXTINF:") and 'tvg-id="QTV.in@SD"' in line and 'group-title="Indian Entertainment"' in line]
+        sindh = [line for line in main if line.startswith("#EXTINF:") and 'tvg-name="Sindh TV"' in line and 'group-title="Pakistani"' in line]
+        yrf = [line for line in international if line.startswith("#EXTINF:") and 'tvg-id="YRFMusic.in@Nepal"' in line]
+        self.assertEqual(len(q_tv), 1)
+        self.assertIn('tvg-country="IN"', q_tv[0])
+        self.assertIn('tvg-language="hin"', q_tv[0])
+        self.assertEqual(len(sindh), 1)
+        self.assertIn('tvg-id="SindhTV.pk@SD"', sindh[0])
+        self.assertIn('channel-id="SindhTV.pk@SD"', sindh[0])
+        self.assertIn('tvg-country="PK"', sindh[0])
+        self.assertEqual(len(yrf), 1)
+        self.assertIn('tvg-country="IN"', yrf[0])
 
     def test_id_conflicts_are_held(self):
         self.assertFalse(cv.verify_country({"tvg-id": "X.in"}, "X", None, "BD").ok)          # feed mismatch
