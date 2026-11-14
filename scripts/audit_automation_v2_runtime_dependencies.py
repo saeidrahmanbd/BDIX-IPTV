@@ -110,7 +110,7 @@ INFRASTRUCTURE_WORKFLOWS = {
 }
 
 
-def trace_workflow_shell_entrypoints(detail: str) -> dict:
+def trace_workflow_shell_entrypoints(detail: str, root: Path) -> dict:
     """Link shell blocks to invoked repository scripts without claiming full trace."""
     entrypoints = []
     for match in WORKFLOW_PYTHON.finditer(detail):
@@ -127,7 +127,7 @@ def trace_workflow_shell_entrypoints(detail: str) -> dict:
     heredoc = bool(re.search(r"python(?:3(?:\\.\\d+)?)?\\s+-\\s*<<", detail))
     return {
         "referenced_python_entrypoints": entrypoints,
-        "referenced_python_entrypoints_exist": all(Path(target).is_file() for target in entrypoints),
+        "referenced_python_entrypoints_exist": all((root / target).is_file() for target in entrypoints),
         "inline_python_heredoc_present": heredoc,
         "shell_command_lines": commands,
         "trace_status": "entrypoints_linked_transitive_effects_pending" if entrypoints else "manual_shell_trace_required",
@@ -250,7 +250,7 @@ def build_inventory(root: Path) -> dict:
                 active_boundary["detail"]=(body + "\n" + line.rstrip("\r\n"))
     for boundary in shell_boundaries:
         boundary.update(classify_workflow_shell(boundary["source"], boundary["detail"]))
-        boundary.update(trace_workflow_shell_entrypoints(boundary["detail"]))
+        boundary.update(trace_workflow_shell_entrypoints(boundary["detail"], root))
     nested.extend(shell_boundaries)
     action_lock_path=root/"automation"/"policy"/"external-actions-lock.json"
     try:
