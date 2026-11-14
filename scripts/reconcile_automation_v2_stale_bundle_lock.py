@@ -24,7 +24,7 @@ TZ = ZoneInfo("Asia/Dhaka")
 
 
 def live_actions_runs(repository: str, token: str) -> list[dict]:
-    url = f"{API}/repos/{repository}/actions/runs?status=in_progress&per_page=100"
+    url = f"{API}/repos/{repository}/actions/workflows/automation-v2-candidate-bundle.yml/runs?status=in_progress&per_page=100"
     request = urllib.request.Request(url, headers={
         "Accept": "application/vnd.github+json",
         "Authorization": f"Bearer {token}",
@@ -39,7 +39,7 @@ def live_actions_runs(repository: str, token: str) -> list[dict]:
     if not isinstance(payload, dict) or not isinstance(payload.get("workflow_runs"), list):
         raise RuntimeError("GitHub Actions returned an invalid in-progress run listing")
     if payload.get("total_count", 0) > 100:
-        raise RuntimeError("more than 100 active runs; pagination is required, refusing recovery")
+        raise RuntimeError("more than 100 active candidate-bundle runs; pagination is required, refusing recovery")
     return payload["workflow_runs"]
 
 
