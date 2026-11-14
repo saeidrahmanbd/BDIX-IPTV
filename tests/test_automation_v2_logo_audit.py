@@ -56,5 +56,37 @@ class LogoReferenceAuditTests(unittest.TestCase):
             self.assertEqual(result["runtime_referenced_logo_files"],1)
             self.assertEqual(len(result["apparently_unreferenced_by_runtime"]),1)
 
+
+    def test_symlinked_logo_asset_is_not_counted_or_hashed(self):
+        with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
+            root = Path(temp)
+            (root / "logos").mkdir()
+            external = Path(outside) / "external.png"
+            external.write_bytes(b"outside")
+            (root / "logos" / "linked.png").symlink_to(external)
+            result = scan(root)
+            self.assertEqual(result["logo_image_files"], 0)
+            self.assertEqual(result["exact_duplicate_groups"], 0)
+
+    def test_symlinked_logos_directory_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
+            root = Path(temp)
+            (Path(outside) / "external.png").write_bytes(b"outside")
+            (root / "logos").symlink_to(Path(outside), target_is_directory=True)
+            with self.assertRaisesRegex(ValueError, "logos directory must not be a symlink"):
+                scan(root)
+
+    def test_symlinked_text_source_is_not_followed(self):
+        with tempfile.TemporaryDirectory() as temp, tempfile.TemporaryDirectory() as outside:
+            root = Path(temp)
+            (root / "logos").mkdir()
+            (root / "logos" / "external.png").write_bytes(b"outside")
+            external = Path(outside) / "playlist.m3u"
+            external.write_text('#EXTINF:-1 tvg-logo="logos/external.png",A\\nhttps://x.example/a\\n', encoding="utf-8")
+            (root / "IPTV-Playlist.m3u").symlink_to(external)
+            result = scan(root)
+            self.assertEqual(result["playlist_referenced_logo_files"], 0)
+
+
 if __name__=="__main__":
     unittest.main()
