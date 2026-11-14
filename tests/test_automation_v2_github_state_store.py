@@ -56,7 +56,7 @@ class GitHubStateStoreTests(unittest.TestCase):
     def test_large_state_reads_exact_immutable_blob_when_contents_api_omits_content(self):
         state = empty_state()
         state["international_probe_ledger"]["channels"] = {"large-channel": []}
-        raw = (json.dumps(state) + "\\n").encode()
+        raw = (json.dumps(state) + "\n").encode()
         encoded = base64.b64encode(raw).decode()
         calls = []
         def large_opener(request, timeout=20):
