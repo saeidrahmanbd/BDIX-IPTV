@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-14T07:38:25.972654+00:00",
+  "generated_at_utc": "2026-11-14T07:39:15.462720+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,7 +11,7 @@
     "International-Playlist.m3u": 3136
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "9680e01648d22546c191e96d60dcc64458c9a4ae771ee3a1e4b1113494e12ddd",
+    "IPTV-Playlist.m3u": "553390694b4c14da8ea2535d58576a859c432c02065eb50241d293d5f6fcbecc",
     "International-Playlist.m3u": "60df11d1f6c7ebbdc12d85d27d3cf58db208cb478dc7430014d3a431666fda92"
   },
   "status_counts": {
@@ -15396,7 +15396,7 @@
       "channel_name": "Jaihind TV (576p)",
       "tvg_id": "JaihindTV.in@SD",
       "channel_id": "",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jaihind-tv-576p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -15408,7 +15408,7 @@
       "channel_name": "VTU (1080p)",
       "tvg_id": "VTU.in@SD",
       "channel_id": "",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vtu.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -15420,7 +15420,7 @@
       "channel_name": "WeatherSpy (India) (720p)",
       "tvg_id": "WeatherSpy.in@SD",
       "channel_id": "",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/weatherspy-india.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -15432,7 +15432,7 @@
       "channel_name": "Zodiak TV (1080p)",
       "tvg_id": "ZodiakTV.in@SD",
       "channel_id": "",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zodiak-tv-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
