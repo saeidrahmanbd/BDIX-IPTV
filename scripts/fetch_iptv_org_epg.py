@@ -19,6 +19,7 @@ from pathlib import Path
 from generate_epg import COUNTRY_GROUP_CODES, normalize_country_code, playlist_entry_country_code, playlist_id_country_code
 
 REPO = "https://github.com/iptv-org/epg.git"
+UPSTREAM_COMMIT = "3feb97ea3c6b1d5e8eaee468e55ff29392c74269"
 WORK = Path("/tmp/iptv-org-epg")
 OUTPUT = Path("/tmp/iptv-org-guide.xml")
 TARGET_CHANNELS = Path("/tmp/iptv-org-target.channels.xml")
@@ -408,6 +409,14 @@ def grab_command():
     ]
 
 
+def checkout_upstream():
+    """Fetch one immutable upstream revision; never clone a moving default branch."""
+    run("git", "init", str(WORK), timeout=30)
+    run("git", "-C", str(WORK), "remote", "add", "origin", REPO, timeout=30)
+    run("git", "-C", str(WORK), "fetch", "--depth", "1", "origin", UPSTREAM_COMMIT, timeout=90)
+    run("git", "-C", str(WORK), "checkout", "--detach", "FETCH_HEAD", timeout=30)
+
+
 def main():
     explicit_mappings = load_explicit_epg_mappings()
     targets = read_active_targets()
@@ -425,7 +434,7 @@ def main():
         TARGET_CHANNELS.unlink()
 
     try:
-        run("git", "clone", "--depth", "1", REPO, str(WORK), timeout=90)
+        checkout_upstream()
         run("npm", "ci", "--no-audit", "--no-fund", cwd=WORK, timeout=240)
 
         catalogue_texts = selected_catalogue_texts()
