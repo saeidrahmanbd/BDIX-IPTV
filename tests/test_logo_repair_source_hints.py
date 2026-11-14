@@ -63,6 +63,17 @@ class LogoRepairSourceTests(unittest.TestCase):
         self.assertIn("zainabiachannel.co.in", hint["license_url"])
         self.assertIn("shialivetv.com", hint["url"])
 
+    def test_wwe_superstar_central_uses_exact_trademark_image_asset(self):
+        hint = logo_repair.EXTRA_DIRECT_HINTS["WWE Superstar Central"]
+        self.assertEqual(hint["url"], "https://static.trademarkia.com/images/99048431")
+        self.assertIn("ww-superstar-central-99048431", hint["page"])
+        self.assertIn("World Wrestling Entertainment", hint["license"])
+
+    def test_shikor_prefers_explicit_logo_on_official_site_then_partner_page(self):
+        hints = logo_source_catalog.DIRECT_PAGE_HINTS["Shikor TV Canada"]
+        self.assertEqual(hints[0], ("https://shikortvcanada.com/", False))
+        self.assertEqual(hints[1], ("https://www.jagobd.com/shikortv", True))
+
     def test_channel16_ru_asset_is_quarantined_from_general_reuse(self):
         self.assertIn("16-a308b78988.png", logo_repair.BAD_ASSETS)
 
