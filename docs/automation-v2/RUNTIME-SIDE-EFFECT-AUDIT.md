@@ -62,3 +62,10 @@ The V2 static inventory has been expanded to scan repository-owned Python files 
 The candidate-bundle workflow runs this inventory and uploads `runtime-dependency-inventory.json` with the shadow artifacts. This improves repeatability and makes unresolved execution paths visible on each candidate run; it does **not** resolve shell interpolation, imported-module side effects, external GitHub Actions, npm scripts, network-loaded code, or runtime-generated command arguments. Those still require targeted trace evidence before any legacy writer can be retired.
 
 The dashboard shadow artifact also now reports the availability and SHA-256 provenance of each captured legacy report input. It continues to mirror the legacy dashboard markdown verbatim; it is not an independently recomputed metric-equivalence proof.
+
+
+## Independent dashboard metric acceptance (branch-only)
+
+The candidate bundle now runs `scripts/audit_automation_v2_dashboard_equivalence.py`. It does not import or execute the legacy dashboard generator. It independently parses the IPTV playlist, audit/EPG/health/gate reports and XMLTV freshness evidence, recomputes every displayed dashboard summary metric, and compares the results with `reports/Update Report.md`. The JSON result records per-input freshness, source fingerprints, expected/actual metrics and mismatches. It writes only under `reports/automation-v2/`; it does not modify the production dashboard or its inputs.
+
+A passing unit test is not production acceptance. The first current-main candidate artifact must show zero metric mismatches and current input fingerprints. If any source is stale, the corresponding expected values remain explicitly stale/pending rather than being treated as current.
