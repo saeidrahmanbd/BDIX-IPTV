@@ -46,6 +46,29 @@ def without_logo_attributes(text: str) -> str:
     return re.sub(r'\s+tvg-logo="[^"]*"', "", text)
 
 
+def _sanitize_svg_internal_entities(svg: str) -> bytes:
+    """Inline safe Illustrator namespace entities and remove its inert DTD."""
+    doctype = re.search(r"<!DOCTYPE\s+[^>\[]*(?:\[[\s\S]*?\]\s*)?>", svg, re.I)
+    if not doctype:
+        return svg.encode("utf-8")
+    block = doctype.group(0)
+    declarations = re.findall(r"""<!ENTITY\s+([A-Za-z_][\w.-]*)\s+(['"])(.*?)\2\s*>""", block, re.S)
+    replacements = {}
+    for name, _quote, value in declarations:
+        if not value.startswith(("http://", "https://")) or any(ch in value for ch in "<>&'") or chr(34) in value:
+            raise ValueError("unsafe SVG entity declaration: " + name)
+        replacements[name] = value
+    if re.search(r"<!ENTITY\s+%", block, re.I):
+        raise ValueError("SVG parameter entities are not supported")
+    cleaned = svg[:doctype.start()] + svg[doctype.end():]
+    for name, value in replacements.items():
+        cleaned = cleaned.replace("&" + name + ";", value)
+    unresolved = re.findall(r"&([A-Za-z_][\w.-]*);", cleaned)
+    unresolved = [name for name in unresolved if name not in {"amp", "lt", "gt", "apos", "quot"}]
+    if unresolved:
+        raise ValueError("SVG contains unresolved named entities: " + ", ".join(sorted(set(unresolved))))
+    return cleaned.encode("utf-8")
+
 def image_bytes_to_png(raw: bytes, source_extension: str) -> bytes:
     """Decode a local raster/vector logo and emit a normalized PNG."""
     extension = source_extension.casefold()
@@ -55,6 +78,8 @@ def image_bytes_to_png(raw: bytes, source_extension: str) -> bytes:
             raise ValueError("unsafe SVG content")
         if re.search(r"""(?:href|src)\s*=\s*["']\s*(?:https?:|file:|//)""", svg, re.I) or re.search(r"""url\(\s*["']?\s*(?:https?:|file:|//)""", svg, re.I):
             raise ValueError("SVG contains an external resource reference")
+        # Safely inline Illustrator's literal namespace entities before CairoSVG parsing.
+        raw = _sanitize_svg_internal_entities(svg)
         try:
             raw = cairosvg.svg2png(bytestring=raw, output_width=1024)
         except Exception as render_error:
