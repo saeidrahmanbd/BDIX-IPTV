@@ -103,7 +103,7 @@ EXTRA_DIRECT_HINTS = {
         "url": "https://static.trademarkia.com/images/99048431",
         "format": "",
         "page": "https://www.trademarkia.com/ww-superstar-central-99048431",
-        "license": "Exact WWE figurative mark from the WWE-owned trademark filing (serial 99048431), served by the trademark record image host; source attribution only, not a copyright licence",
+        "license": "Exact figurative mark owned by World Wrestling Entertainment, LLC (WWE), from trademark filing serial 99048431; served by the trademark record image host, with source attribution only and no copyright licence implied",
         "license_url": "",
     },
     "Channel Fight": {
