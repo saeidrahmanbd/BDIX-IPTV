@@ -1,0 +1,117 @@
+"""Regression tests for safe local logo format conversion."""
+import io
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+from PIL import Image
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from convert_referenced_logos_to_png import (
+    RAW_BASE,
+    convert_referenced_logos,
+    image_bytes_to_png,
+    without_logo_attributes,
+)
+
+
+def image_bytes(fmt, color=(30, 120, 220)):
+    output = io.BytesIO()
+    Image.new("RGB", (80, 40), color).save(output, format=fmt)
+    return output.getvalue()
+
+
+class LogoFormatConversionTests(unittest.TestCase):
+    def test_jpeg_and_webp_are_converted_to_png(self):
+        for extension, fmt in ((".jpg", "JPEG"), (".webp", "WEBP")):
+            with self.subTest(extension=extension):
+                png = image_bytes_to_png(image_bytes(fmt), extension)
+                self.assertTrue(png.startswith(b"\x89PNG\r\n\x1a\n"))
+                with Image.open(io.BytesIO(png)) as image:
+                    self.assertEqual(image.format, "PNG")
+                    self.assertEqual(image.size, (80, 40))
+
+    def test_svg_is_converted_to_png(self):
+        svg = b'<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><rect width="200" height="100" fill="#ff0000"/></svg>'
+        png = image_bytes_to_png(svg, ".svg")
+        self.assertTrue(png.startswith(b"\x89PNG\r\n\x1a\n"))
+        with Image.open(io.BytesIO(png)) as image:
+            self.assertEqual(image.format, "PNG")
+            self.assertEqual(image.size, (1024, 512))
+
+    def test_shared_asset_is_converted_once_and_only_logo_references_change(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            logos = root / "logos"
+            logos.mkdir()
+            (logos / "shared.jpg").write_bytes(image_bytes("JPEG"))
+            line = (
+                '#EXTINF:-1 tvg-id="sample.bd" tvg-name="Sample" '
+                f'tvg-logo="{RAW_BASE}shared.jpg" tvg-chno="7" group-title="Bangladesh",Sample\n'
+                "https://example.invalid/live.m3u8\n"
+            )
+            for playlist in ("IPTV-Playlist.m3u", "International-Playlist.m3u"):
+                (root / playlist).write_text("#EXTM3U\n" + line, encoding="utf-8")
+            before = {
+                playlist: (root / playlist).read_text(encoding="utf-8")
+                for playlist in ("IPTV-Playlist.m3u", "International-Playlist.m3u")
+            }
+            summary = convert_referenced_logos(root=root)
+            self.assertEqual(summary["unique_assets_converted"], 1)
+            self.assertEqual(summary["updated_references"], 2)
+            self.assertEqual(summary["source_formats"], {"jpg": 1})
+            outputs = []
+            for playlist in before:
+                after = (root / playlist).read_text(encoding="utf-8")
+                self.assertEqual(without_logo_attributes(after), without_logo_attributes(before[playlist]))
+                logo = after.split('tvg-logo="', 1)[1].split('"', 1)[0]
+                self.assertTrue(logo.endswith(".png"))
+                outputs.append(logo)
+                relative = logo[len(RAW_BASE):]
+                png_path = logos / relative
+                self.assertTrue(png_path.is_file())
+                self.assertTrue(png_path.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"))
+            self.assertEqual(outputs[0], outputs[1])
+            self.assertTrue((logos / "shared.jpg").is_file())
+
+    def test_existing_different_png_is_never_overwritten(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            logos = root / "logos"
+            logos.mkdir()
+            (logos / "sample.jpg").write_bytes(image_bytes("JPEG", (220, 20, 20)))
+            existing = image_bytes_to_png(image_bytes("PNG", (20, 220, 20)), ".png")
+            (logos / "sample.png").write_bytes(existing)
+            (root / "IPTV-Playlist.m3u").write_text(
+                "#EXTM3U\n"
+                f'#EXTINF:-1 tvg-logo="{RAW_BASE}sample.jpg",Sample\n'
+                "https://example.invalid/live.m3u8\n",
+                encoding="utf-8",
+            )
+            summary = convert_referenced_logos(root=root, playlist_names=("IPTV-Playlist.m3u",))
+            self.assertEqual(summary["unique_assets_converted"], 1)
+            self.assertEqual((logos / "sample.png").read_bytes(), existing)
+            playlist = (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+            self.assertIn("sample-", playlist)
+            self.assertIn(".png", playlist)
+
+    def test_external_logo_reference_fails_without_changing_playlist(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "logos").mkdir()
+            playlist = root / "IPTV-Playlist.m3u"
+            original = (
+                '#EXTINF:-1 tvg-logo="https://cdn.example/logo.jpg",Sample\n'
+                "https://example.invalid/live.m3u8\n"
+            )
+            playlist.write_text(original, encoding="utf-8")
+            with self.assertRaises(ValueError):
+                convert_referenced_logos(root=root, playlist_names=("IPTV-Playlist.m3u",))
+            self.assertEqual(playlist.read_text(encoding="utf-8"), original)
+
+
+if __name__ == "__main__":
+    unittest.main()
