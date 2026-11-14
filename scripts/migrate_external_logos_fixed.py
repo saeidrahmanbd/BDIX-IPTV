@@ -216,6 +216,10 @@ def force_local(line, replacement):
         return re.sub(r'\s+tvg-logo="[^"]*"', "", line, count=1)
     if 'tvg-logo="' in line:
         return re.sub(r'(tvg-logo=")[^"]*(")', r'\1' + replacement + r'\2', line, count=1)
+    # Keep logo attributes before group-title to preserve canonical EXTINF order.
+    group = re.search(r'\\s+group-title="', line)
+    if group:
+        return line[:group.start()] + f' tvg-logo="{replacement}"' + line[group.start():]
     comma = line.find(",")
     return line if comma == -1 else line[:comma] + f' tvg-logo="{replacement}"' + line[comma:]
 def fetch_json(url):
