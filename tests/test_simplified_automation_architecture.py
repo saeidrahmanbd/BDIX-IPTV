@@ -20,6 +20,13 @@ class SimplifiedAutomationArchitectureTests(unittest.TestCase):
         self.assertNotIn("\n  schedule:", trigger_block)
         self.assertIn("workflow_dispatch:", trigger_block)
 
+    def test_owner_curated_playlist_has_no_automatic_regrouping_utility(self):
+        self.assertFalse((ROOT / "scripts" / "reclassify_main_playlist_groups.py").exists())
+        self.assertFalse((ROOT / "tests" / "test_main_playlist_grouping.py").exists())
+        workflow = (ROOT / ".github" / "workflows" / "iptv-maintenance.yml").read_text(encoding="utf-8")
+        self.assertNotIn("reclassify_main_playlist_groups.py", workflow)
+        self.assertNotIn("test_main_playlist_grouping.py", workflow)
+
     def test_no_runtime_owner_migration_authorization_remains(self):
         helper = (ROOT / "scripts" / "maintenance_helpers.py").read_text(encoding="utf-8")
         gate = (ROOT / "scripts" / "pre_publish_gate.py").read_text(encoding="utf-8")
