@@ -18,7 +18,7 @@ Replace overlapping automation with one policy source, isolated playlist engines
 | Area | Current state |
 |---|---|
 | Baseline inventory and backup | Complete on branch; baseline commit aec37357dfbb47f0792682af744ccaf111416d7a |
-| Dependency and side-effect audits | Static workflow/script audit complete; exhaustive nested runtime tracing remains incomplete |
+| Dependency and side-effect audits | Repository-wide Python static inventory and workflow shell-boundary inventory run in the candidate bundle; dynamic/import/external-action runtime tracing remains incomplete |
 | Central policy and conformance | JSON policy, schema and conformance validator implemented |
 | Playlist contracts | IPTV existing-row order, URLs, groups and channel numbers protected; approved metadata repairs and queue-only discovery supported |
 | IPTV engine | Combined candidate engine applies evidence-approved local metadata/logo patches and appends discoveries to manual-review queues; no production I/O |
@@ -30,7 +30,7 @@ Replace overlapping automation with one policy source, isolated playlist engines
 | V2 CI | V2 contract tests and immutable baseline dry run passed in PR #154; the current missed-run scheduler branch adds date/commit-aware retry tests and must pass CI before merge |
 | Legacy regression | Latest full repository regression run passed 754 tests on commit 4c66cd6e5e4822633b3f9a8fcc20710fdb2216fe |
 | Real-baseline measurements | Exact production blob fingerprints verified; IPTV 1,280 rows; International 3,120 rows; EPG 30,944,668 bytes |
-| Workflow migration/cutover | Not started; all existing production workflows remain enabled and unchanged |
+| Workflow migration/cutover | Shadow candidate workflow includes dashboard snapshot/mirror and runtime inventory; legacy production workflows remain enabled and unchanged; replacement/cutover is blocked by incomplete equivalence and runtime tracing |
 
 ## Verified EPG baseline
 - IPTV: 776 active IDs, 411 mapped, 363 with at least one programme, 321 with current/future schedules.
@@ -48,7 +48,7 @@ Repository-wide CI audit found 5,366 image assets, 2,395 distinct playlist-refer
 4. Durable state and transaction staging — JSON ledgers, per-engine allowlists, fingerprint checks, symlink-safe shared lock and atomic candidate bundle staging implemented; failure-injection and recovery tests still need expansion.
 5. Immutable production baseline dry run — passed. All three candidate engines accepted unchanged baseline copies: IPTV 1,280/1,280 rows, International 3,120/3,120 rows, EPG accepted for both playlists; zero candidate changes, publish=false, production_files_modified=false.
 6. Substantive candidate tests — still required for broader real discovery inputs, multi-day probe histories, approved metadata changes, large EPG candidate changes and logo quarantine manifests. A targeted EPG-timeout/probe-checkpoint failure-injection test and rollback-policy/integration tests are being added.
-7. Workflow replacement — partially implemented: exact legacy writer map and missed-run recovery dispatcher are present; complete logo/dashboard parity, exhaustive nested runtime tracing, full workflow equivalence and one-writer acceptance across every legacy writer remain.
+7. Workflow replacement — partially implemented: exact legacy writer map, missed-run recovery dispatcher, candidate-only logo proposal/approval tooling, immutable dashboard input snapshot, separate dashboard parity mirror and runtime inventory are present. Independent dashboard metric parity, dynamic logo-reference parity, resolved runtime boundaries, full workflow equivalence and one-writer acceptance across every legacy writer remain.
 8. Publication and rollback — candidate publication is prepared as a three-file owner-review PR only; a separate explicit-confirmation workflow now prepares a revert PR for a previously merged V2 publication, restricted to the three allowlisted outputs. Both remain PR-only; automatic main publication/merge is deliberately absent.
 9. Prepare a reviewable migration PR with exact workflow retirement/replacement map — map is in place; cutover PR remains blocked by incomplete parity and acceptance.
 10. Only after all gates pass, prepare a separate owner-reviewed production cutover — not authorized or started.
