@@ -150,7 +150,15 @@ def verify(playlist: Path, state: Path):
                     and int(new_number) > 0
                     and approval_key in approvals
                 )
-                if queue_number_cleanup or approved_primary_promotion:
+                authorized_primary_number_fill = (
+                    OWNER_MIGRATION_AUTHORIZED.is_file()
+                    and old_group in PRIMARY_GROUPS
+                    and new_group == old_group
+                    and not (old_number.isdigit() and int(old_number) > 0)
+                    and new_number.isdigit()
+                    and int(new_number) > 0
+                )
+                if queue_number_cleanup or approved_primary_promotion or authorized_primary_number_fill:
                     # The one-time owner authorization permits removing legacy
                     # queue numbers or assigning a fresh positive number to an
                     # exact-URL-approved queue-to-primary promotion. Existing
