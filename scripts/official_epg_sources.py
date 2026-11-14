@@ -231,7 +231,7 @@ class _RtvArticleLinkParser(HTMLParser):
             return
         label = _clean(" ".join(self.current_text))
         is_daily_schedule = (
-            bool(re.search(r"আরটিভিতে\\s+আজ(?:\\s*\\([^)]*\\))?\\s+যা\\s+দেখবেন", label))
+            bool(re.search(r"আরটিভিতে\s+আজ(?:\s*\([^)]*\))?\s+যা\s+দেখবেন", label))
             or "আরটিভিতে আজকের আয়োজন" in label
         )
         if is_daily_schedule:
