@@ -101,10 +101,10 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); (root/"scripts").mkdir(); (root/"tests").mkdir()
             (root/"scripts"/"runtime.py").write_text(
-                "import subprocess\\nsubprocess.run(make_command())\\n"
+                "import subprocess\nsubprocess.run(make_command())\n"
             )
             (root/"tests"/"fixture.py").write_text(
-                "import subprocess\\nsubprocess.run(make_test_command())\\n"
+                "import subprocess\nsubprocess.run(make_test_command())\n"
             )
             report=build_inventory(root)
             self.assertEqual(len(report["unresolved"]),1)
@@ -117,8 +117,8 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             root=Path(tmp); runtime=root/"scripts"; runtime.mkdir()
             baseline=root/"automation-v2-production-baseline"/"scripts"
             baseline.mkdir(parents=True)
-            (runtime/"runtime.py").write_text("import subprocess\\nsubprocess.run(make_command())\\n")
-            (baseline/"copied.py").write_text("import subprocess\\nsubprocess.run(make_command())\\n")
+            (runtime/"runtime.py").write_text("import subprocess\nsubprocess.run(make_command())\n")
+            (baseline/"copied.py").write_text("import subprocess\nsubprocess.run(make_command())\n")
             report=build_inventory(root)
             self.assertEqual(
                 [x["source"] for x in report["nested_subprocess_calls"] if x["kind"]=="subprocess_dynamic"],
