@@ -22,7 +22,7 @@ Historical note: the one-time owner-requested IPTV queue migration and its probe
 | `migrate_external_logos_fixed.py` | `logo_asset_naming`, `logo_embedded_png` |
 | `playlist_policy_repair.py` | `permanent_removals`, `stream_url_identity` |
 | `probe_bangladesh_official_schedule_pages.py` | `official_epg_sources` |
-| `reclassify_main_playlist_groups.py` | `country_verification`, `discover_bd_in_new_queues` |
+| `reclassify_main_playlist_groups.py` | RETIRED 2026-11-14 — automatic IPTV regrouping conflicts with the owner-curated row/group preservation rule |
 | `reconcile_playlist_consistency.py` | `stream_url_identity` |
 | `restore_protected_review.py` | `permanent_removals`, `stream_url_identity` |
 | `run_bd_discovery_with_policy.py` | `discover_bd_in_new_queues` |
