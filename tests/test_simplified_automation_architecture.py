@@ -20,6 +20,13 @@ class SimplifiedAutomationArchitectureTests(unittest.TestCase):
         self.assertNotIn("\n  schedule:", trigger_block)
         self.assertIn("workflow_dispatch:", trigger_block)
 
+    def test_owner_curated_playlist_has_no_structural_primary_backup_repair(self):
+        self.assertFalse((ROOT / "scripts" / "enforce_primary_backup_integrity.py").exists())
+        self.assertFalse((ROOT / "tests" / "test_primary_backup_integrity.py").exists())
+        workflow = (ROOT / ".github" / "workflows" / "iptv-maintenance.yml").read_text(encoding="utf-8")
+        self.assertNotIn("enforce_primary_backup_integrity.py", workflow)
+        self.assertNotIn("test_primary_backup_integrity.py", workflow)
+
     def test_owner_curated_playlist_has_no_automatic_regrouping_utility(self):
         self.assertFalse((ROOT / "scripts" / "reclassify_main_playlist_groups.py").exists())
         self.assertFalse((ROOT / "tests" / "test_main_playlist_grouping.py").exists())
