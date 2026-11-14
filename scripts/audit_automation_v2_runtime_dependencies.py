@@ -94,6 +94,68 @@ def scan_python(path: Path, relative: str) -> list[dict]:
                           "detail":"shell or dynamically constructed command"})
     return found
 
+LEGACY_WRITER_WORKFLOWS = {
+    ".github/workflows/iptv-maintenance.yml",
+    ".github/workflows/new-channel-discovery.yml",
+    ".github/workflows/international-channel-discovery.yml",
+    ".github/workflows/international-stream-health.yml",
+    ".github/workflows/epg-refresh.yml",
+    ".github/workflows/logo-localization.yml",
+    ".github/workflows/playlist-logo-localization.yml",
+    ".github/workflows/changelog.yml",
+}
+INFRASTRUCTURE_WORKFLOWS = {
+    ".github/workflows/deploy-analytics.yml",
+    ".github/workflows/deploy-xtream.yml",
+}
+
+
+def classify_workflow_shell(source: str, detail: str) -> dict:
+    """Label shell effects without treating classification as a completed trace."""
+    text = detail.casefold()
+    if "git push" in text and re.search(r"head:main|head:\$\{\{ github\.ref_name \}\}", text):
+        effect = "direct_repository_writer"
+    elif "wrangler deploy" in text or "wrangler d1 execute" in text:
+        effect = "infrastructure_writer"
+    elif "gh pr create" in text or "git push --set-upstream origin" in text:
+        effect = "review_branch_or_pr_writer"
+    elif "api.indexnow.org" in text and "post" in text:
+        effect = "external_notification"
+    elif "workflow_dispatch" in text or "gh workflow run" in text or "repository_dispatch" in text:
+        effect = "workflow_dispatcher"
+    elif "git push" in text:
+        effect = "repository_writer_scope_requires_review"
+    elif any(token in text for token in ("curl ", "urllib.request", "urlopen(")):
+        effect = "external_read_or_probe"
+    elif any(token in text for token in ("unittest", "pytest", "py_compile", "compileall", "json.tool")):
+        effect = "validation_or_test"
+    elif any(token in text for token in ("git fetch", "git diff", "git status", "gh run view", "gh pr view")):
+        effect = "repository_inspection_or_reconciliation"
+    else:
+        effect = "local_orchestrator_requires_nested_trace"
+
+    if source in LEGACY_WRITER_WORKFLOWS:
+        owner = "legacy_production_writer"
+    elif source in INFRASTRUCTURE_WORKFLOWS:
+        owner = "infrastructure_service"
+    elif source.endswith("automation-v2-candidate-bundle.yml"):
+        owner = "v2_shadow_candidate_writer"
+    elif source.endswith(("automation-v2-prepare-publication-pr.yml", "automation-v2-prepare-rollback-pr.yml")):
+        owner = "owner_review_pr_workflow"
+    elif source.endswith(("automation-v2-state-store-check.yml", "automation-v2-stale-lock-recovery.yml", "automation-v2-missed-run-recovery.yml")):
+        owner = "v2_state_or_recovery_service"
+    elif source.endswith("check-xtream.yml"):
+        owner = "read_only_xtream_health_service"
+    elif source.endswith(("seo-validation.yml", "test-suite.yml", "automation-v2-ci.yml", "automation-v2-legacy-audit.yml")):
+        owner = "validation_service"
+    elif source.endswith("indexnow.yml"):
+        owner = "search_engine_notification_service"
+    else:
+        owner = "separate_utility_or_requires_review"
+    return {"effect_class": effect, "workflow_owner_class": owner,
+            "trace_complete": False}
+
+
 def build_inventory(root: Path) -> dict:
     root=root.resolve(strict=True)
     workflows=root/".github"/"workflows"
@@ -155,6 +217,8 @@ def build_inventory(root: Path) -> dict:
                 active_boundary={"source":workflow.relative_to(root).as_posix(),
                     "line":line_number,"kind":"workflow_shell_boundary","target":None,
                     "execution_scope":"workflow_runtime","detail":line.rstrip("\r\n")}
+                classification=classify_workflow_shell(active_boundary["source"], active_boundary["detail"])
+                active_boundary.update(classification)
                 shell_boundaries.append(active_boundary)
             elif active_boundary is not None:
                 # Preserve the actual shell body so reviewers can resolve
@@ -250,6 +314,10 @@ def build_inventory(root: Path) -> dict:
             "reviewed_process_execution_boundaries":sum(1 for item in nested if item.get("process_reviewed")),
             "unreviewed_process_execution_boundaries":sum(1 for item in nested if item["kind"]=="subprocess_dynamic" and item.get("execution_scope")!="test_only" and not item.get("process_reviewed")),
             "mutable_external_source_dependencies":len(mutable_external_sources),
+            "workflow_shell_boundaries":len(shell_boundaries),
+            "legacy_production_writer_shell_boundaries":sum(1 for item in shell_boundaries if item["workflow_owner_class"]=="legacy_production_writer"),
+            "v2_shadow_shell_boundaries":sum(1 for item in shell_boundaries if item["workflow_owner_class"]=="v2_shadow_candidate_writer"),
+            "direct_repository_writer_shell_boundaries":sum(1 for item in shell_boundaries if item["effect_class"]=="direct_repository_writer"),
             "missing_literal_targets":len(missing),
         },
         "unresolved":unresolved,
