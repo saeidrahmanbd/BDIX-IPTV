@@ -28,9 +28,13 @@ class EpgCandidateGateTests(unittest.TestCase):
         playlist='#EXTM3U\n#EXTINF:-1 tvg-id="a" group-title="Bangladesh",A\nhttps://a.example/a\n#EXTINF:-1 tvg-id="b" group-title="Bangladesh",B\nhttps://b.example/b\n'
         baseline='<tv><channel id="a"/><channel id="b"/><programme channel="a" start="20261114090000" stop="20261114100000"/><programme channel="b" start="20261114090000" stop="20261114100000"/></tv>'
         candidate='<tv><channel id="a"/><channel id="b"/><programme channel="a" start="20261114090000" stop="20261114100000"/></tv>'
-        result=evaluate_candidate(baseline,candidate,playlist)
+        # Pin the clock before the programme start; relying on wall-clock time
+        # made this regression test pass or fail depending on when CI ran.
+        from datetime import datetime, timezone
+        as_of = datetime(2026, 11, 13, 23, 0, tzinfo=timezone.utc)
+        result=evaluate_candidate(baseline,candidate,playlist,as_of)
         self.assertFalse(result.accepted)
-        self.assertIn("freshness regressed",result.reason)
+        self.assertIn("schedule freshness regressed",result.reason)
 
     def test_future_schedule_regression_rejected(self):
         from datetime import datetime, timezone
