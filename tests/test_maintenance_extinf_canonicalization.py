@@ -23,8 +23,8 @@ class MaintenanceExtinfCanonicalizationTests(unittest.TestCase):
         )
         with tempfile.TemporaryDirectory() as directory:
             playlist = Path(directory) / "IPTV-Playlist.m3u"
-            playlist.write_text("#EXTM3U\\n" + first + "\\nhttps://one.test/live.m3u8\\n"
-                                + second + "\\nhttps://two.test/live.m3u8\\n", encoding="utf-8")
+            playlist.write_text("#EXTM3U\n" + first + "\nhttps://one.test/live.m3u8\n"
+                                + second + "\nhttps://two.test/live.m3u8\n", encoding="utf-8")
             with patch.object(maintenance_helpers, "PLAYLIST", playlist):
                 changed = maintenance_helpers.canonicalize_extinf()
             result = playlist.read_text(encoding="utf-8")
@@ -39,10 +39,10 @@ class MaintenanceExtinfCanonicalizationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             playlist = Path(directory) / "IPTV-Playlist.m3u"
             playlist.write_text(
-                '#EXTM3U\\n#EXTINF:-1 tvg-id="one.bd" tvg-name="One" '
+                '#EXTM3U\n#EXTINF:-1 tvg-id="one.bd" tvg-name="One" '
                 'tvg-logo="logos/one.png" tvg-chno="1" channel-id="one.bd" '
-                'tvg-country="BD" tvg-language="ben" group-title="Bangladesh",One\\n'
-                'https://one.test/live.m3u8\\n',
+                'tvg-country="BD" tvg-language="ben" group-title="Bangladesh",One\n'
+                'https://one.test/live.m3u8\n',
                 encoding="utf-8",
             )
             with patch.object(maintenance_helpers, "PLAYLIST", playlist):
