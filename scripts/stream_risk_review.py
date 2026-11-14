@@ -8,7 +8,6 @@ from pathlib import Path
 from urllib.parse import parse_qsl, urlsplit
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
-HEALTH = Path("reports/stream-health.md")
 REPORT = Path("reports/stream-risk-review.md")
 ATTR = re.compile(r'([\w-]+)="([^"]*)"')
 PROXY_HOSTS = {"iptv-proxy.ahmed-bd-org.workers.dev", "iptvlive.ahmed-bd-org.workers.dev"}
@@ -91,24 +90,11 @@ def main():
         if host.lower() == "homair-tv-production.up.railway.app" and path.lower().startswith("/api/play/"):
             api_relays.append(item)
 
-    health = HEALTH.read_text(encoding="utf-8") if HEALTH.exists() else ""
-    metrics = []
-    labels = ["Streams tested","Reachable","Failed this check","Persistent failures (3+ consecutive)",
-              "HTTP 401/403 (auth)","HTTP 404 (not found)","HTTP 5xx (server)","Timeout"]
-    for label in labels:
-        m = re.search(r"- "+re.escape(label)+r": \*\*(\d+)\*\*", health)
-        if m:
-            metrics.append((label,m.group(1)))
-    persistent = []
-    if "## Persistent Failures" in health:
-        chunk = health.split("## Persistent Failures",1)[1].split("\n## ",1)[0]
-        persistent = [line.strip() for line in chunk.splitlines() if line.strip().startswith("- ")]
-
     lines = [
         "# Stream Risk Review", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
         f"IPTV-Playlist.m3u SHA-256: **{hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()}**", "",
-        "Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.", "",
+        "Generated from the current IPTV playlist only. This is a static URL-risk inventory; IPTV stream probing is owner-managed and is not performed here.", "",
         "## Summary", "",
         f"- /streamtest/ endpoints: **{len(streamtest)}**",
         f"- Signed/token-query endpoints: **{len(signed)}**",
@@ -119,12 +105,8 @@ def main():
         f"- Proxy/worker-host routes: **{len(proxies)}** ({sum(x['group'] != 'Backup' for x in proxies)} primary, {sum(x['group'] == 'Backup' for x in proxies)} Backup)",
         f"- /api/play/ relay routes: **{len(api_relays)}**",
         "- Expiry is parsed only from explicit Unix timestamps; opaque signatures remain UNKNOWN and are never guessed.", "",
-        "## Latest Stream-Health Snapshot", "",
-        "| Metric | Count |", "|---|---:|"
+        "## /streamtest/ Endpoints", "", "| Channel | Group | Host | Path |", "|---|---|---|---|"
     ]
-    lines += [f"| {k} | {v} |" for k,v in metrics]
-    lines += ["", "### Persistent failures", ""] + (persistent or ["No persistent failures recorded."])
-    lines += ["", "## /streamtest/ Endpoints", "", "| Channel | Group | Host | Path |", "|---|---|---|---|"]
     lines += [f"| {x['name']} | {x['group']} | {x['host']} | {x['path']} |" for x in streamtest] or ["| — | — | — | — |"]
     lines += ["", "## Signed / Token-Query Endpoints", "",
               "Query values are omitted because they may be expiring signatures or access tokens.", "",
