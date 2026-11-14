@@ -33,6 +33,12 @@ class RollbackPolicyTests(unittest.TestCase):
             ("IPTV-Playlist.m3u", "International-Playlist.m3u", "epg/epg.xml"),
         )
 
+    def test_accepts_merged_state_enum_from_github_cli(self):
+        pr = self.valid_pr()
+        pr["state"] = "MERGED"
+        target = validate_publication_pr(pr, 154)
+        self.assertEqual(target.pull_request_number, 154)
+
     def test_unmerged_pr_is_rejected(self):
         pr = self.valid_pr()
         pr["mergedAt"] = None
