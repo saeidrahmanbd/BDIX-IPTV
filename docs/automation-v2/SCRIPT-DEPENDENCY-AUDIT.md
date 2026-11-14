@@ -17,13 +17,13 @@ Historical note: the one-time owner-requested IPTV queue migration and its probe
 | `enforce_primary_backup_integrity.py` | RETIRED 2026-11-14 — contained automatic promotion, quarantine, regrouping and removal logic incompatible with owner-curated IPTV rows |
 | `epg_coverage.py` | `official_epg_sources`, `epg_source_cache`, `epg_mapping_policy`, `generate_epg` |
 | `fetch_iptv_org_epg.py` | `generate_epg` |
-| `final_playlist_hardening.py` | `stream_url_identity`, `country_verification`, `discover_bd_in_new_queues` |
+| `final_playlist_hardening.py` | RETIRED 2026-11-14 — performed automatic removals, demotions and row reordering |
 | `maintenance_helpers.py` | `logo_asset_naming`, `stream_url_identity`, `permanent_removals`, `restore_protected_review` |
 | `migrate_external_logos_fixed.py` | `logo_asset_naming`, `logo_embedded_png` |
-| `playlist_policy_repair.py` | `permanent_removals`, `stream_url_identity` |
+| `playlist_policy_repair.py` | RETIRED 2026-11-14 — performed structural category repairs, duplicate removals and queue migration |
 | `probe_bangladesh_official_schedule_pages.py` | `official_epg_sources` |
 | `reclassify_main_playlist_groups.py` | RETIRED 2026-11-14 — automatic IPTV regrouping conflicts with the owner-curated row/group preservation rule |
-| `reconcile_playlist_consistency.py` | `stream_url_identity` |
+| `reconcile_playlist_consistency.py` | RETIRED 2026-11-14 — removed duplicate Review rows; conflicts with owner-curated immutable IPTV rows |
 | `restore_protected_review.py` | `permanent_removals`, `stream_url_identity` |
 | `run_bd_discovery_with_policy.py` | `discover_bd_in_new_queues` |
 | `run_generate_epg.py` | `generate_epg`, `augment_epg_mapping_from_additional_sources` |
