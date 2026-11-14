@@ -41,6 +41,43 @@ class MaintenanceReportOrderTests(unittest.TestCase):
                 self.assertIsNotNone(match, f"{relative}: missing job-level concurrency group")
                 self.assertEqual(match.group(1), expected, f"{relative}: writer queue mismatch")
 
+    def test_workflow_run_references_match_real_workflow_names(self):
+        workflow_sources = {}
+        actual_names = set()
+        for path in sorted((ROOT / ".github" / "workflows").glob("*.yml")):
+            source = path.read_text(encoding="utf-8")
+            match = re.search(r"(?m)^name:\\s*['\"]?(.+?)['\"]?\\s*$", source)
+            if match:
+                actual_names.add(match.group(1))
+            workflow_sources[path.name] = source
+
+        missing = []
+        for filename, source in workflow_sources.items():
+            block_match = re.search(
+                r"(?ms)^  workflow_run:\\s*\\n(.*?)(?=^  [A-Za-z_][A-Za-z0-9_-]*:\\s*(?:#.*)?$|\\Z)",
+                source,
+            )
+            if not block_match:
+                continue
+            block = block_match.group(1)
+            workflows_match = re.search(r"(?m)^    workflows:\\s*(.*)$", block)
+            if not workflows_match:
+                continue
+            inline = workflows_match.group(1).strip()
+            if inline:
+                referenced = re.findall(r"['\"]([^'\"]+)['\"]", inline)
+            else:
+                workflow_list = block.split("    types:", 1)[0]
+                referenced = re.findall(
+                    r"(?m)^      - ['\"]?([^'\"]+?)['\"]?\\s*$",
+                    workflow_list,
+                )
+            missing.extend(
+                f"{filename} references missing workflow name {name!r}"
+                for name in referenced if name not in actual_names
+            )
+        self.assertEqual(missing, [])
+
     def test_iptv_playlist_registry_includes_review_queues(self):
         normalizer = (ROOT / "scripts" / "normalize_metadata.py").read_text(encoding="utf-8")
         audit = (ROOT / "scripts" / "audit_playlist.py").read_text(encoding="utf-8")
