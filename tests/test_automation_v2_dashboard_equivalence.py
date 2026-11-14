@@ -69,12 +69,12 @@ class DashboardEquivalenceTests(unittest.TestCase):
             encoding="utf-8",
         )
         return {
-            "Streams": "4", "Active Channel Identities": "2", "Active Primary Streams": "2",
-            "Bangladesh": "1", "India": "1", "Backup Stream Entries": "1",
+            "Streams": 4, "Active Channel Identities": 2, "Active Primary Streams": 2,
+            "Bangladesh": 1, "India": 1, "Backup Stream Entries": 1,
             "IPTV Local Logos": "75.0%", "IPTV EPG Programme Coverage": "50%",
-            "IPTV EPG Mapping": "50.0%", "Stream Health Tested": "4",
-            "Stream Health Failures": "1", "Persistent Failures": "1",
-            "Near-Duplicate URL Families": "0", "Audit Blocking Issues": "0",
+            "IPTV EPG Mapping": "50.0%", "Stream Health Tested": 4,
+            "Stream Health Failures": 1, "Persistent Failures": 1,
+            "Near-Duplicate URL Families": 0, "Audit Blocking Issues": 0,
             "Pre-Publish Gate": "PASS",
             "Pre-Publish Gate Generated": "2026-11-14T00:00:00+00:00",
         }
