@@ -96,11 +96,11 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn('d.get("status") == "authorized"', workflow)
         self.assertIn("OWNER_MIGRATION_REQUESTED=true", workflow)
         self.assertIn("touch /tmp/iptv-owner-migration-authorized", workflow)
-        for forbidden in (
-            "sort_playlists.py IPTV-Playlist.m3u",
-            "renumber_active_channels.py IPTV-Playlist.m3u",
-        ):
-            self.assertNotIn(forbidden, mutations)
+        self.assertNotIn("sort_playlists.py IPTV-Playlist.m3u", mutations)
+        # Number normalization is authorized only for this one-time owner
+        # migration, never for routine maintenance.
+        self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then', mutations)
+        self.assertIn("python scripts/renumber_active_channels.py IPTV-Playlist.m3u", mutations)
         marker = json.loads((ROOT / "maintenance" / "owner-requested-iptv-migration.json").read_text(encoding="utf-8"))
         self.assertEqual(marker["status"], "authorized")
         guard = (ROOT / "scripts" / "protect_main_playlist.py").read_text(encoding="utf-8")
