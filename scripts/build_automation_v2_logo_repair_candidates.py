@@ -12,7 +12,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
 
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -29,12 +29,52 @@ def _asset_inventory(root: Path) -> dict[str, list[str]]:
     logos = root / "logos"
     if not logos.is_dir():
         return inventory
+    resolved_logos = logos.resolve()
     for path in sorted(logos.rglob("*")):
-        if path.is_file() and path.suffix.lower() in IMAGE_SUFFIXES:
-            key = normalize(path.stem)
-            if key:
-                inventory.setdefault(key, []).append(path.relative_to(root).as_posix())
+        if path.is_symlink() or not path.is_file() or path.suffix.lower() not in IMAGE_SUFFIXES:
+            continue
+        try:
+            resolved = path.resolve(strict=True)
+            if not resolved.is_relative_to(resolved_logos):
+                continue
+        except OSError:
+            continue
+        key = normalize(path.stem)
+        if key:
+            inventory.setdefault(key, []).append(path.relative_to(root).as_posix())
     return inventory
+
+
+def _is_verified_local_logo_reference(root: Path, value: str) -> bool:
+    """Accept only a safe logos/ path or this repository's canonical raw-main URL."""
+    value = str(value or "").strip()
+    if not value:
+        return False
+    parsed = urlsplit(value)
+    if parsed.scheme or parsed.netloc:
+        if (parsed.scheme != "https" or parsed.netloc.casefold() != "raw.githubusercontent.com"
+                or parsed.query or parsed.fragment):
+            return False
+        prefix = "/saeidrahmanbd/BDIX-IPTV/main/logos/"
+        if not parsed.path.startswith(prefix):
+            return False
+        relative = unquote(parsed.path[len(prefix):])
+        relative_path = Path("logos") / relative
+    else:
+        if not value.startswith("logos/"):
+            return False
+        relative_path = Path(value)
+    if relative_path.is_absolute() or ".." in relative_path.parts:
+        return False
+    candidate = root / relative_path
+    if candidate.is_symlink():
+        return False
+    try:
+        resolved_root = (root / "logos").resolve()
+        resolved = candidate.resolve(strict=True)
+        return resolved.is_file() and resolved.is_relative_to(resolved_root)
+    except OSError:
+        return False
 
 
 def build_proposals(root: Path) -> dict:
@@ -67,9 +107,7 @@ def build_proposals(root: Path) -> dict:
             counts["active_rows"] += 1
             name = (meta.get("tvg-name") or extinf.rsplit(",", 1)[-1]).strip()
             logo = meta.get("tvg-logo", "").strip()
-            filename = Path(urlsplit(logo).path).name if logo else ""
-            target = (root / "logos" / filename) if filename else None
-            if target and target.is_file():
+            if _is_verified_local_logo_reference(root, logo):
                 counts["already_local"] += 1
                 continue
             if not logo:

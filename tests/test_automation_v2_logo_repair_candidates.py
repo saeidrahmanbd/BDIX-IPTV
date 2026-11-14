@@ -46,6 +46,49 @@ class LogoRepairCandidateTests(unittest.TestCase):
             self.assertEqual(ambiguous[0]["decision"], "ambiguous_no_change")
             self.assertNotIn("proposed_local_logo", ambiguous[0])
 
+    def test_external_logo_with_same_basename_is_not_mistaken_for_local(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._fixture(root)
+            playlist = root / "IPTV-Playlist.m3u"
+            playlist.write_text(
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-name="Exact Channel" tvg-logo="https://evil.example/Exact%20Channel.png" group-title="Bangladesh",Exact Channel\n'
+                'https://example.invalid/live\n', encoding="utf-8")
+            report = build_proposals(root)
+            self.assertEqual(report["counts"]["already_local"], 0)
+            self.assertEqual(report["counts"]["unique_exact_match"], 1)
+            self.assertEqual(report["proposals"][0]["proposed_local_logo"], "logos/Exact Channel.png")
+
+    def test_canonical_repository_logo_url_is_recognized_as_local(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._fixture(root)
+            playlist = root / "IPTV-Playlist.m3u"
+            playlist.write_text(
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-name="Exact Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/Exact%20Channel.png" group-title="Bangladesh",Exact Channel\n'
+                'https://example.invalid/live\n', encoding="utf-8")
+            report = build_proposals(root)
+            self.assertEqual(report["counts"]["already_local"], 1)
+            self.assertEqual(report["counts"]["unique_exact_match"], 0)
+
+    def test_symlinked_assets_are_never_proposed(self):
+        with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as outside:
+            root = Path(tmp)
+            self._fixture(root)
+            external = Path(outside) / "Unsafe Channel.png"
+            external.write_bytes(b"outside")
+            (root / "logos" / "Unsafe Channel.png").symlink_to(external)
+            playlist = root / "IPTV-Playlist.m3u"
+            playlist.write_text(
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-name="Unsafe Channel" group-title="Bangladesh",Unsafe Channel\n'
+                'https://example.invalid/unsafe\n', encoding="utf-8")
+            report = build_proposals(root)
+            self.assertEqual(report["counts"]["unique_exact_match"], 0)
+            self.assertFalse(any(p["channel_name"] == "Unsafe Channel" for p in report["proposals"]))
+
     def test_review_groups_are_excluded(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
