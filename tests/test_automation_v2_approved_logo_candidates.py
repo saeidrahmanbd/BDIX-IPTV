@@ -186,11 +186,11 @@ class ApprovedLogoCandidateTests(unittest.TestCase):
             iptv = root / "IPTV-Playlist.m3u"
             international = root / "International-Playlist.m3u"
             iptv.write_text(
-                '#EXTM3U\\n#EXTINF:-1 tvg-name="IPTV Channel",IPTV Channel\\nhttps://stream.invalid/iptv\\n',
+                '#EXTM3U\n#EXTINF:-1 tvg-name="IPTV Channel",IPTV Channel\nhttps://stream.invalid/iptv\n',
                 encoding="utf-8",
             )
             international.write_text(
-                '#EXTM3U\\n#EXTINF:-1 tvg-name="International Channel" tvg-logo="old.png",International Channel\\nhttps://stream.invalid/int\\n',
+                '#EXTM3U\n#EXTINF:-1 tvg-name="International Channel" tvg-logo="old.png",International Channel\nhttps://stream.invalid/int\n',
                 encoding="utf-8",
             )
             manifest = root / "approved.json"
