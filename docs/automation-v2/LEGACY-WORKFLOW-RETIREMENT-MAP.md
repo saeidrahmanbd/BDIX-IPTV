@@ -66,3 +66,38 @@ This is a migration plan only. No legacy workflow is disabled, edited or retired
 8. Verify the first production transaction and rollback path before enabling recurring V2 schedules.
 
 No force-push, broad workflow deletion, automatic merge or direct playlist mutation is permitted during migration.
+
+## Latest acceptance evidence (2026-11-14)
+
+The following results are from the latest successful Automation V2 Branch CI artifact set on this review branch. They are evidence snapshots, not production publication.
+
+### Immutable baseline dry run
+
+- Baseline commit: `aec37357dfbb47f0792682af744ccaf111416d7a`.
+- IPTV candidate input: 1,280 rows; International candidate input: 3,120 rows.
+- Candidate playlist changes: 0; candidate EPG changes: 0.
+- All four engine validations were accepted in dry-run mode.
+- Publication was false and production files were not modified.
+- IPTV EPG inventory: 646 active identities, 379 mapped, 333 scheduled.
+- International EPG inventory: 1,740 active IDs, 569 mapped, 506 scheduled.
+- The baseline report contains extensive unmapped and mapped-without-schedule identities; no EPG aliases were auto-approved from fuzzy suggestions.
+
+### Dashboard parity and freshness
+
+- Independent metric recomputation: `equivalent=true`, `mismatch_count=0`, `status=PASS`.
+- Dashboard metrics matched for active identities/streams, backups, audit blockers, persistent failures, stream-health totals, country totals, local-logo percentage and gate status.
+- Playlist audit, stream health and pre-publish gate inputs were current.
+- Published EPG input was **not current**; the dashboard correctly reported EPG mapping and programme coverage as `PENDING`. This blocks production cutover until a fresh published guide passes its freshness gate.
+- The audit changed no production dashboard, report, playlist, logo or EPG file.
+
+### Runtime and logo boundaries
+
+- Runtime inventory: 100 workflow Python entrypoints, 65 unique workflow targets, 151 nested process/shell boundaries, 67 external action references across 6 immutable action implementations.
+- All 9 identified Python dynamic process boundaries are explicitly reviewed; no unreviewed Python process boundary remains.
+- The optional `iptv-org/epg` acquisition is now pinned to immutable upstream commit `3feb97ea3c6b1d5e8eaee468e55ff29392c74269`; the mutable external-source blocker is being removed from the inventory gate.
+- The inventory still records 111 opaque workflow shell blocks and 6 external action implementation boundaries. Those must be traced to exact effects and replacement ownership before legacy writers can be retired.
+- Logo reference audit scanned 5,367 image assets and 5,367 explicit references. It found 111 missing explicit targets, 75 missing runtime targets, and 2,665 assets apparently unreferenced by runtime sources. These are audit classifications only: deletion and quarantine were both false. No asset should be removed based only on apparent unreferenced status.
+
+### Cutover decision
+
+**Not ready for production cutover.** Dashboard metric equivalence is now passing, but published EPG freshness, opaque workflow-shell tracing, legacy-writer replacement parity, complete logo authenticity/provenance coverage, and production-scale rollback acceptance remain open. Keep all legacy production workflows enabled and PR #178 in draft until those gates are closed.
