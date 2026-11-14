@@ -47393,7 +47393,7 @@
         "engine": "bundle",
         "idempotency_key": "dc8213df2ff85ab984ec6757f72d0314276ecc59db91191ec8c28803f1e64b90",
         "started_at": "2026-11-14T12:01:45.622324+06:00",
-        "status": "running"
+        "status": "succeeded"
       }
     ],
     "schema_version": 1,
