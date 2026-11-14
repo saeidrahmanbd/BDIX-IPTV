@@ -24,10 +24,10 @@ Replace overlapping automation with one policy source, isolated playlist engines
 | IPTV engine | Combined candidate engine applies evidence-approved local metadata/logo patches and appends discoveries to manual-review queues; no production I/O |
 | International engine | HTTP probe adapter, idempotent daily probe ledger, 404/410-only failure policy, verified recovery, five-identity grouping, row-identity-bound lifecycle planner, batch orchestrator and group-only candidate engine implemented |
 | EPG engine | XMLTV structural/timezone validation, coverage, schedule freshness, conservative alias suggestions, explicit-approved alias application and candidate regression gate implemented |
-| Run ledger | Idempotent run reservations, validated JSON serialization, Bangladesh-date probe ledger, GitHub `automation-v2-state` branch persistence and compare-and-swap writes implemented; failure-injection and interruption-recovery acceptance tests are being expanded |
+| Run ledger | Idempotent run reservations, validated JSON serialization, Bangladesh-date probe ledger, GitHub `automation-v2-state` branch persistence and compare-and-swap writes implemented; EPG-timeout/probe-checkpoint failure injection and rollback integration tests passed in PR #154 |
 | Transaction safety | Engine path allowlists, SHA-256 candidate evidence, stale-input checks, fail-closed gate, shared lock and atomic candidate-directory staging implemented; no production publisher |
 | Logo audit | Playlist/runtime/report references separated; exact duplicate hashes reported; no deletion, quarantine or move |
-| V2 CI | V2 CI passed 223 tests and the immutable baseline dry run on commit 568177d9a87a1a693a52a7d7722cf1391689c0f8; latest verified branch CI commit 414e29644efd846ac045beba08e8de4d3526f400 passed |
+| V2 CI | V2 contract tests and immutable baseline dry run passed in PR #154; the current missed-run scheduler branch adds date/commit-aware retry tests and must pass CI before merge |
 | Legacy regression | Latest full repository regression run passed 754 tests on commit 4c66cd6e5e4822633b3f9a8fcc20710fdb2216fe |
 | Real-baseline measurements | Exact production blob fingerprints verified; IPTV 1,280 rows; International 3,120 rows; EPG 30,944,668 bytes |
 | Workflow migration/cutover | Not started; all existing production workflows remain enabled and unchanged |
@@ -48,9 +48,9 @@ Repository-wide CI audit found 5,366 image assets, 2,395 distinct playlist-refer
 4. Durable state and transaction staging — JSON ledgers, per-engine allowlists, fingerprint checks, symlink-safe shared lock and atomic candidate bundle staging implemented; failure-injection and recovery tests still need expansion.
 5. Immutable production baseline dry run — passed. All three candidate engines accepted unchanged baseline copies: IPTV 1,280/1,280 rows, International 3,120/3,120 rows, EPG accepted for both playlists; zero candidate changes, publish=false, production_files_modified=false.
 6. Substantive candidate tests — still required for broader real discovery inputs, multi-day probe histories, approved metadata changes, large EPG candidate changes and logo quarantine manifests. A targeted EPG-timeout/probe-checkpoint failure-injection test and rollback-policy/integration tests are being added.
-7. Workflow replacement — still pending: map every legacy writer/dependency, build replacement workflows, prove one-writer serialization, and test cancellation/retry/rollback before retiring anything.
+7. Workflow replacement — partially implemented: exact legacy writer map and missed-run recovery dispatcher are present; complete logo/dashboard parity, exhaustive nested runtime tracing, full workflow equivalence and one-writer acceptance across every legacy writer remain.
 8. Publication and rollback — candidate publication is prepared as a three-file owner-review PR only; a separate explicit-confirmation workflow now prepares a revert PR for a previously merged V2 publication, restricted to the three allowlisted outputs. Both remain PR-only; automatic main publication/merge is deliberately absent.
-9. Prepare a reviewable migration PR with exact workflow retirement/replacement map — pending.
+9. Prepare a reviewable migration PR with exact workflow retirement/replacement map — map is in place; cutover PR remains blocked by incomplete parity and acceptance.
 10. Only after all gates pass, prepare a separate owner-reviewed production cutover — not authorized or started.
 
 ## Safety boundary
