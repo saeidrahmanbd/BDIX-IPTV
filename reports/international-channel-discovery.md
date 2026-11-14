@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-13 18:34 UTC
+- Last scan: 2026-11-14 18:28 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
-- Source records parsed: 12171
-- Existing playlist records: 3236
+- Source records parsed: 12179
+- Existing playlist records: 3124
 - Existing logo references localized/repaired: 0
-- Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2282
-- Duplicate URLs within source feed: 7
-- New eligible source records after URL/policy filtering: 258
+- Existing logo references removed because no safe local asset was available: 1
+- Exact source URLs already in playlist: 2171
+- Duplicate URLs within source feed: 8
+- New eligible source records after URL/policy filtering: 261
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
 - Bangladesh and Pakistan channels of all genres are eligible. Indian News, all Religious, Educational and Business/Finance channels are excluded; Indian Kids and Sports remain eligible. Only countries other than Bangladesh, India and Pakistan are limited to dedicated Movie/Music channels.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
@@ -16,9 +16,9 @@
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
-- New Backups staged for manual review: 14
-- Category migrations: 4
-- Existing discovery-queue entries removed: 109
+- New Backups staged for manual review: 13
+- Category migrations: 0
+- Existing discovery-queue entries removed: 1
 
 ## New primary channels
 
@@ -36,6 +36,7 @@
 - **Hollywood Ukraine (576p)** — New Channels — UA — http://dtv.vol.net.ua/Hollywood-HD/index.m3u8
 - **HomePlus** — New Channels — IR — https://homeplushls.wns.live/hls/stream.m3u8
 - **ICC plus (1080p)** — New Channels — US — https://icchls.wns.live/hls/stream.m3u8
+- **Kinopremyera (1080p)** — New Channels — RU — http://5.188.159.128:8070/KINOPREMIERA/index.m3u8
 - **Kinosvidanie (576p)** — New Channels — RU — http://5.188.159.128:8070/kinosvidanie/index.m3u8
 - **Komsan TV [Not 24/7]** — New Channels — KH — http://tv.cootel.com.kh:8077/streams/d/Komsan/playlist.m3u8
 - **More TV Sci-fi** — New Channels — DE — https://jmp2.uk/plu-645e00d5d3fdde000829463a.m3u8
@@ -62,16 +63,15 @@
 - **ATN Music (360p)** — New Channels — BD — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 - **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
 - **BRIDGE Hits (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
+- **CEACOM TV (1080p) [Not 24/7]** — New Channels — BO — https://eu1.servers10.com:8081/ceacom/index.m3u8
 - **Concert Channel (720p)** — New Channels — US — https://jmp2.uk/plu-6868152657543d1f8be4ece3.m3u8
-- **Dance TV [Geo-blocked]** — New Channels — AR — https://op-group1-swiftservehd-1.dens.tv/h/h250/index.m3u8
-- **Deep House District (1080p)** — New Channels — NL — https://eu-nl-012.worldcast.tv/dancetelevisiontwo/dancetelevisiontwo.m3u8
-- **Dhamaal (576p) [Geo-blocked]** — New Channels — IN — https://tvsen6.aynaott.com/F4Z6es8E/index.m3u8
-- **Disco Mix (576i) [Geo-blocked]** — New Channels — RO — https://vs2129.vcdn.biz/781da550c3e711e56f17de33318050f9_megogo/live/hls/b/700_2490_4000/u_sid/0/o/183395021/rsid/39f910cb-e9d4-46a0-b2fb-a12bfc104baf/u_uid/2260062697/u_vod/0/u_device/cms_html5/u_devicekey/_site/lip/81.196.174.41*asn/u_srvc/109126/u_did/web_c02d0d195494991ada83b5ae2a2f87d6041c11b1b8f79fc86ae5b7b557894fa0/type.live/playlist.m3u8
-- **Europa Plus TV (1080p)** — New Channels — RU — http://31.148.48.15/Europa_Plus_HD/index.m3u8
-- **Famatv (1080p) [Not 24/7]** — New Channels — PT — https://tv2.fastcast4u.com:3310/live/famatvlive.m3u8
-- **Farra Play (576p)** — New Channels — PY — https://stream.farra.com.py/live/farra_low.m3u8
-- **Finest TV (288p) [Not 24/7]** — New Channels — DE — https://media.finest.tv/hls/live.m3u8
-- **Folklore TV (720p)** — New Channels — PE — https://play.folkloretv.pe/StreamSD/index.m3u8
+- **Galactica TV** — New Channels — PE — https://stream.neux.site/memfs/e3f59eec-6b93-45e1-a2ab-c82381c2a9ec.m3u8
+- **Galaxy TV (720p) [Not 24/7]** — New Channels — UG — https://stream.castr.com/6463248048d6cd3e143655b2/live_43351ad0f3b411ed81c78fcc31887c54/index.fmp4.m3u8
+- **GMTV (1080p)** — New Channels — US — https://livechannel.mdc.akamaized.net/stitch/livechannel/1341/master1400000.m3u8;session=live_stream_1341
+- **GO TV (720p)** — New Channels — PY — https://rds3.desdeparaguay.net/gotv/gotv/playlist.m3u8
+- **H!t Music Channel (480p)** — New Channels — HU — http://hitmusic.hu/hitmusic.m3u8
+- **Hits 360 TV (720p) [Not 24/7]** — New Channels — DO — http://cm.hostlagarto.com:8081/hits360tv/hits360HD.myStream/playlist.m3u8
+- **Ishtar TV SD (1080p)** — New Channels — IQ — https://stream.ishtartv.com/live/iShtarHD/playlist.m3u8
 
 ## Backup alternates
 
@@ -81,172 +81,59 @@
 - **DD Manipur** — IN — https://fta.ektv.in/live/671/master.m3u8
 - **DD Nagaland** — IN — https://fta.ektv.in/live/670/master.m3u8
 - **DD Tripura** — IN — https://fta.ektv.in/live/661/master.m3u8
-- **FilmUADrama** — UA — http://88.99.215.227/FilmUADrama/index.m3u8
+- **Duronto TV** — BD — https://livetv.shamon-cable.net:8443/Duronto/index.m3u8
 - **Lifetime Movies** — US — http://23.237.104.106:8080/USA_LMN/index.m3u8
 - **Viasat Kino** — UA — http://dtv.vol.net.ua/Viasat_Kino/index.m3u8
 - **Viasat Kino Action** — UA — http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
-- **Zee Action** — IN — https://fta.ektv.in/live/270/master.m3u8
 - **ETV Music** — IN — https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
 - **FON Music** — US — https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
 - **M1 (Ukraine)** — UA — http://dtv.vol.net.ua/M1-HD/index.m3u8
 
 ## Country Migrations
 
-- **ON Cine**: `Vietnam` → `International`
-- **ON Movies**: `Vietnam` → `International`
-- **ON Music**: `Vietnam` → `International`
-- **Tra Vinh TV**: `Vietnam` → `International`
 
 ## Existing discovery-queue entries removed
 
-- **10 TV (720p)** — `New Channels` — no authentic local repository logo
-- **22Scope News (1080p)** — `New Channels` — Indian news channel is prohibited
-- **24 News (576p)** — `New Channels` — Indian news channel is prohibited
-- **365 News** — `New Channels` — no authentic local repository logo
-- **4TV News (576p)** — `New Channels` — Indian news channel is prohibited
-- **6 TV Telugu (576p)** — `New Channels` — no authentic local repository logo
-- **99TV (720p)** — `New Channels` — no authentic local repository logo
-- **9 Plus News (1080p)** — `New Channels` — Indian news channel is prohibited
-- **Aadinath TV (576p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aagaaz Times (1080p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aaj Ki Khabar (1080p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aaj News (576p)** — `New Channels` — no authentic local repository logo
-- **Aaj Tak (1080p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aaseervatham TV (576p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aastha (576p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aastha Bhajan (720p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aastha Gujarati (720p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aastha International (576p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aastha Kannada (720p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aastha Prime 1 (720p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aastha Tamil (480p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aastha Telugu (720p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Aastha UK (576p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Abb Takk (576p)** — `New Channels` — no authentic local repository logo
-- **Abdulmajeed Abdullah (1080p)** — `New Channels` — channel is not clearly Movies or Music
-- **ABN Andhra Jyoti (1080p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **ABN News (1080p)** — `New Channels` — no authentic local repository logo
-- **ABP Ananda (1080p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **ABP Asmita (1080p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **ABP Ganga (1080p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **ABP Majha (576p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **ABP News (1080p)** — `New Channels` — Indian news channel is prohibited
-- **ABP Sanjha (576p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **Adhyatm TV (720p)** — `New Channels` — no authentic local repository logo
-- **Aik News SD** — `New Channels` — no authentic local repository logo
-- **AKD Calcutta News (1080p)** — `New Channels` — Indian news channel is prohibited
-- **Akhon Kolkata (478p)** — `New Channels` — no authentic local repository logo
-- **Amrit Gurbani (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Anandpur Live (720p)** — `New Channels` — no authentic local repository logo
-- **Anand Wari TV (576p)** — `New Channels` — no authentic local repository logo
-- **ANB News (1080p)** — `New Channels` — Indian news channel is prohibited
-- **Angel TV (1080p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Africa (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV America (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Arabia (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Australia (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Chinese (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Europe (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV FarEast (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Hebrew (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Indo-China (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Indonesia (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Nepal (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Portuguese (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Russian (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Angel TV Spanish (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Argus News (576p)** — `New Channels` — Indian news channel is prohibited
-- **Arputhar Yesu TV (576p)** — `New Channels` — no authentic local repository logo
-- **Ashwaveega News 24x7 (720p)** — `New Channels` — Indian news channel is prohibited
-- **Asianet News (1080p)** — `New Channels` — Indian news channel is prohibited
-- **Asianet Suvarna News (720p)** — `New Channels` — Indian news channel is prohibited
-- **Asian News (1080p)** — `New Channels` — Indian news channel is prohibited
-- **Astroscience (576p)** — `New Channels` — no authentic local repository logo
-- **ATN Samachar (1080p)** — `New Channels` — no authentic local repository logo
-- **Awaaz India TV (720p) [Not 24/7]** — `New Channels` — no authentic local repository logo
-- **Awakening TV (576p)** — `New Channels` — no authentic local repository logo
-- **Bada Khabar (576p)** — `New Channels` — no authentic local repository logo
-- **Bansal News (1080p)** — `New Channels` — Indian news channel is prohibited
-- **Bhagyam TV (1080p)** — `New Channels` — no authentic local repository logo
-- **Bhakthi Siri (576p)** — `New Channels` — Indian religious channel is prohibited
-- **Bhakthi TV (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Bhakti Dhara (720p)** — `New Channels` — Indian religious channel is prohibited
-- **Bhakti Sagar (576p)** — `New Channels` — Indian religious channel is prohibited
-- **Bharat24 (1080p)** — `New Channels` — no authentic local repository logo
-- **Bharat AtoZ (720p)** — `New Channels` — no authentic local repository logo
-- **Bharat Express (1080p)** — `New Channels` — no authentic local repository logo
-- **Bharat Samachar (576p)** — `New Channels` — known Indian prohibited brand/category is prohibited
-- **24 News HD** — `New Backups` — no authentic local repository logo
-- **Aaj Tak HD (1080p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Aastha HD (720p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **BIG TV (1080p)** — `New Backups` — no authentic local repository logo
-- **Darshana TV (576p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **DD India (1080p)** — `New Backups` — permanently banned channel
-- **DD News HD (1080p)** — `New Backups` — Indian news channel is prohibited
-- **Duronto TV (1080p)** — `New Backups` — no authentic local repository logo
-- **Food Food (1080p)** — `New Backups` — permanently banned channel
-- **Gyandarshan HD (576p)** — `New Backups` — Indian educational channel is prohibited
-- **Hosanna TV (720p)** — `New Backups` — Indian religious channel is prohibited
-- **Madhimugam TV (576p)** — `New Backups` — permanently banned channel
-- **MH One (576p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **MH One Dil Se (576p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **MH One Movies (576p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Q TV (576p)** — `New Backups` — Indian religious channel is prohibited
-- **Raftaar Media (576p)** — `New Backups` — permanently banned channel
-- **Sai TV (576p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Sansad TV 1 (1080p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Santvani Channel (720p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Sarv Dharm Sangam (576p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Sharnam TV (576p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Times Now Navbharat HD (1080p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Total TV Haryana (1080p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Travelxp Czechia** — `New Backups` — no authentic local repository logo
-- **TV9 Bangla (1080p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Unique TV (576p)** — `New Backups` — permanently banned channel
-- **Zee Business (1080p)** — `New Backups` — Indian business/finance channel is prohibited
-- **DD News (1080p)** — `New Backups` — Indian news channel is prohibited
-- **Gyandarshan (720p)** — `New Backups` — Indian educational channel is prohibited
-- **Times Now Navbharat (1080p)** — `New Backups` — known Indian prohibited brand/category is prohibited
-- **Travelxp 4K Czechia** — `New Backups` — no authentic local repository logo
+- **Duronto TV** — `New Backups` — no authentic local repository logo after localization
 
 ## Rejections
 
-- Indian business/finance channel is prohibited: 7
-- Indian educational channel is prohibited: 4
+- Indian business/finance channel is prohibited: 8
+- Indian educational channel is prohibited: 6
 - Indian farming/agriculture channel is prohibited: 1
 - Indian knowledge channel is prohibited: 2
-- Indian news channel is prohibited: 250
-- Indian religious channel is prohibited: 86
+- Indian news channel is prohibited: 290
+- Indian religious channel is prohibited: 126
 - TV series is not a dedicated Movie/Music channel: 36
 - ambiguous Movie/Music classification: 1
 - country not verified: 11
 - documentary/wildlife is outside the Movie/Music-only policy: 188
 - fashion is outside the Movie/Music-only policy: 6
 - general entertainment is not a dedicated Movie/Music channel: 68
-- kids is outside the Movie/Music-only policy: 293
-- known Indian prohibited brand/category is prohibited: 5
+- kids is outside the Movie/Music-only policy: 295
+- known Indian prohibited brand/category is prohibited: 15
 - news is outside the Movie/Music-only policy: 755
-- no authentic local repository logo: 13
+- no authentic local repository logo: 14
 - non-real/test channel: 1
-- permanently banned channel: 3
+- permanently banned channel: 10
 - religious is outside the Movie/Music-only policy: 631
-- source category is not Movies or Music: 6569
-- sports is outside the Movie/Music-only policy: 294
+- source category is not Movies or Music: 6577
+- sports is outside the Movie/Music-only policy: 300
 - test/VOD/non-TV name: 294
-- unsafe or tokenized URL: 119
+- unsafe or tokenized URL: 118
 
 ## Stream verification
 
-- Run timestamp: 2026-11-13T18:34:55+00:00
+- Run timestamp: 2026-11-14T18:28:32+00:00
 - Mode: international
-- New entries and discovery queues probed: 71
+- New entries and discovery queues probed: 62
 - Verified live media responses: 5
-- Verified new primary channels automatically promoted: 4
-- Verified alternate streams moved to Backup: 1
+- Verified new primary channels automatically promoted: 5
+- Verified alternate streams moved to Backup: 0
 - Inconclusive candidates retained for manual review: 0
-- Definitively dead new candidates removed: 55
+- Definitively dead new candidates removed: 54
 - Duplicate newly discovered stream entries removed: 0
-- Country-group rows consolidated after stream probing: 0
+- Country-group rows consolidated after stream probing: 4
 - Logo references localized to authentic repository assets: 0
 - IPTV manual-review candidates needing later local-logo repair (warning only): 0
 - International candidates held for missing local logos: 0
@@ -254,31 +141,26 @@
 ### Stream probe details
 - Removed newly discovered AMC (United States) [ ] from New Channels — HTTP 404.
 - Removed newly discovered Andina RTV from New Channels — HTTP 404.
-- Retained ARY News in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Removed newly discovered ATN Music from New Channels — HTTP 404.
 - Removed newly discovered AXN Movies (Spain) from New Channels — HTTP 404.
 - Removed newly discovered BRIDGE Classic from New Channels — HTTP 404.
-- Removed newly discovered BRIDGE Hits from New Channels — HTTP 404.
 - Removed newly discovered Captain from New Channels — HTTP 404.
 - Removed newly discovered Cinevault 80s from New Channels — HTTP 404.
 - Removed newly discovered Concert Channel from New Channels — HTTP 404.
-- Retained Dance TV [ ] in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Retained Deep House District in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Retained Dhamaal [ ] in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: TimeoutError).
-- Retained Disco Mix [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Removed newly discovered ETV Life from New Channels — HTTP 404.
 - Removed newly discovered ETV Telugu from New Channels — HTTP 404.
-- Retained Europa Plus TV in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Retained Famatv [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 500; access/availability could not be confirmed).
 - Removed newly discovered FashionTV (India) from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts from New Channels — HTTP 404.
-- Retained Finest TV [ ] in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Retained Folklore TV in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Retained Galaxy TV [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Removed newly discovered GMTV from New Channels — HTTP 404.
+- Retained H!t Music Channel in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Removed newly discovered HarPal Geo from New Channels — HTTP 404.
+- Retained Hits 360 TV [ ] in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Removed newly discovered Hollywood Ukraine from New Channels — HTTP 404.
 - Removed newly discovered HomePlus from New Channels — HTTP 404.
 - Removed newly discovered ICC plus from New Channels — HTTP 404.
 - Removed newly discovered Jaya Plus from New Channels — HTTP 404.
+- Removed newly discovered Kinopremyera from New Channels — HTTP 404.
 - Removed newly discovered Kinosvidanie from New Channels — HTTP 404.
 - Removed newly discovered Komsan TV [ ] from New Channels — HTTP 404.
 - Removed newly discovered More TV Sci-fi from New Channels — HTTP 404.
@@ -308,38 +190,30 @@
 - Removed newly discovered DD Punjabi from New Backups — HTTP 404.
 - Removed newly discovered DD Tripura from New Backups — HTTP 404.
 - Removed newly discovered ETV Music from New Backups — HTTP 404.
-- Removed newly discovered FilmUADrama from New Backups — HTTP 404.
 - Removed newly discovered FON Music from New Backups — HTTP 404.
 - Removed newly discovered Lifetime Movies from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
-- Retained PTV Sports in New Backups for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Removed newly discovered Vanitha TV from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
-- Retained Zee 24 Ghanta in New Backups for manual review — stream probe was inconclusive (connection could not be confirmed: TimeoutError).
-- Removed newly discovered Zee Action from New Backups — HTTP 404.
-- Promoted Ananda Barta from New Channels to Indian Entertainment — verified primary candidate.
-- Promoted APN from New Channels to Indian Entertainment — verified primary candidate.
-- Promoted ARY News from New Channels to Review — inconclusive stream check.
-- Promoted Bangla Jago from New Channels to Indian Entertainment — verified primary candidate.
-- Promoted Dance TV [ ] from New Channels to Review — inconclusive stream check.
-- Promoted Deep House District from New Channels to Review — inconclusive stream check.
-- Promoted Dhamaal [ ] from New Channels to Review — inconclusive stream check.
-- Promoted Disco Mix [ ] from New Channels to Review — inconclusive stream check.
-- Promoted Europa Plus TV from New Channels to Review — inconclusive stream check.
-- Promoted Famatv [ ] from New Channels to Review — inconclusive stream check.
-- Promoted Farra Play from New Channels to Paraguay — verified primary candidate.
-- Promoted Finest TV [ ] from New Channels to Review — inconclusive stream check.
-- Promoted Folklore TV from New Channels to Review — inconclusive stream check.
-- Promoted Channel WIN from New Backups to Backup — verified alternate stream.
-- Promoted PTV Sports from New Backups to Review — inconclusive stream check.
-- Promoted Zee 24 Ghanta from New Backups to Review — inconclusive stream check.
+- Promoted BRIDGE Hits from New Channels to Russia — verified primary candidate.
+- Promoted CEACOM TV [ ] from New Channels to International — verified primary candidate.
+- Promoted Galactica TV from New Channels to Peru — verified primary candidate.
+- Promoted Galaxy TV [ ] from New Channels to Review — inconclusive stream check.
+- Promoted GO TV from New Channels to Paraguay — verified primary candidate.
+- Promoted H!t Music Channel from New Channels to Review — inconclusive stream check.
+- Promoted Hits 360 TV [ ] from New Channels to Review — inconclusive stream check.
+- Promoted Ishtar TV from New Channels to International — verified primary candidate.
+- Moved E40 from International to Paraguay after stream-probe removals and the five-channel threshold check.
+- Moved HEi Now from International to Paraguay after stream-probe removals and the five-channel threshold check.
+- Moved Next from International to Paraguay after stream-probe removals and the five-channel threshold check.
+- Moved Venus Media from International to Paraguay after stream-probe removals and the five-channel threshold check.
 
 ## Final validation
 
-- Run timestamp: 2026-11-13T18:34:56+00:00
+- Run timestamp: 2026-11-14T18:28:33+00:00
 - Validation status: PASS
-- M3U entries parsed: 3136
+- M3U entries parsed: 3132
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
