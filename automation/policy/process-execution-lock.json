@@ -20,10 +20,10 @@
       "key": "scripts/fetch_iptv_org_epg.py#run",
       "review_status": "reviewed_static_command_boundary",
       "shell_boundary": false,
-      "command_shape": "git clone --depth 1 <REPO> <WORK>; npm ci --no-audit --no-fund; npm run grab -- --channels=<TARGET_CHANNELS> --output=<OUTPUT>",
-      "side_effect": "Optional upstream EPG acquisition writes only to /tmp/iptv-org-epg and /tmp/iptv-org-guide.xml; each invocation has a finite timeout; no direct production write.",
+      "command_shape": "git init <WORK>; git -C <WORK> remote add origin <REPO>; git -C <WORK> fetch --depth 1 origin 3feb97ea3c6b1d5e8eaee468e55ff29392c74269; git -C <WORK> checkout --detach FETCH_HEAD; npm ci --no-audit --no-fund; npm run grab -- --channels=<TARGET_CHANNELS> --output=<OUTPUT>",
+      "side_effect": "Optional upstream EPG acquisition checks out an immutable commit and writes only to /tmp/iptv-org-epg and /tmp/iptv-org-guide.xml; bounded timeouts; no direct production write.",
       "external_dependency": "https://github.com/iptv-org/epg.git",
-      "external_ref_policy": "mutable default branch; no immutable commit pin"
+      "external_ref_policy": "immutable commit 3feb97ea3c6b1d5e8eaee468e55ff29392c74269"
     },
     {
       "key": "scripts/generate_changelog.py#git_text",
