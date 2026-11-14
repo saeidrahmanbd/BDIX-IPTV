@@ -160,25 +160,29 @@ jobs:
           # still exercise the updated mapping/generator/validation pipeline.
           if [[ "${GITHUB_EVENT_NAME}" == "schedule" || "${GITHUB_EVENT_NAME}" == "workflow_run" ]] && python scripts/epg_refresh_needed.py --max-age-hours 8; then
             echo '::notice::A fresh EPG already exists for the current playlists; refreshing dashboard and maintenance snapshots without rebuilding XMLTV.'
-            python scripts/generate_dashboard.py
-            python scripts/validate_report_freshness.py --mode epg
-            git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
-            if git diff --cached --quiet; then
-              echo 'EPG and dashboard snapshots are already current.'
-              exit 0
-            fi
-            git commit -m 'Refresh EPG dashboard snapshots'
+            # Dashboard files are derived outputs and frequently overlap with
+            # playlist-maintenance commits. Never rebase a stale snapshot commit:
+            # reset to current main, verify the published EPG still matches its
+            # inputs, then regenerate snapshots on that exact tree for each try.
             for attempt in 1 2 3; do
               git fetch origin main
-              if ! git rebase origin/main; then
-                git rebase --abort || true
-                echo '::error::Dashboard snapshot conflicted with newer main content; no force-push attempted.'
+              git reset --hard origin/main
+              if ! python scripts/validate_report_freshness.py --mode epg; then
+                echo '::error::Published EPG no longer matches current inputs; a full refresh is required.'
                 exit 1
               fi
+              python scripts/generate_dashboard.py
+              python scripts/validate_report_freshness.py --mode epg
+              git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
+              if git diff --cached --quiet; then
+                echo 'EPG and dashboard snapshots are already current.'
+                exit 0
+              fi
+              git commit -m 'Refresh EPG dashboard snapshots'
               if git push origin HEAD:main; then
                 exit 0
               fi
-              echo "::warning::Dashboard push attempt ${attempt} failed; retrying after refreshing main."
+              echo "::warning::Dashboard push attempt ${attempt} failed; refreshing from latest main and regenerating snapshots."
               sleep 3
             done
             echo '::error::Could not publish dashboard snapshots after 3 attempts.'
