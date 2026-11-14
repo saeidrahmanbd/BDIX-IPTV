@@ -37,8 +37,16 @@ def _validate_local_logo(root: Path, value: str) -> str:
     relative = Path(logo)
     if relative.is_absolute() or ".." in relative.parts or "\\" in logo:
         raise ValueError("tvg_logo path traversal is forbidden")
-    logo_root = (root / "logos").resolve()
-    target = (root / relative).resolve()
+    logo_root_path = root / "logos"
+    if logo_root_path.is_symlink() or not logo_root_path.is_dir():
+        raise ValueError("tvg_logo logos root must be a real repository directory")
+    current = logo_root_path
+    for part in relative.parts[1:]:
+        current = current / part
+        if current.is_symlink():
+            raise ValueError("tvg_logo path cannot contain symlinks")
+    logo_root = logo_root_path.resolve(strict=True)
+    target = current.resolve(strict=True)
     if not target.is_relative_to(logo_root):
         raise ValueError("tvg_logo must remain inside the repository logos directory")
     if not target.is_file() or target.suffix.lower() not in {".png",".jpg",".jpeg",".webp",".gif",".svg"}:
