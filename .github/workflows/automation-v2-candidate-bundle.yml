@@ -49,6 +49,10 @@ jobs:
           --baseline-commit "${{ github.sha }}"
           --epg-timeout-seconds 2400
           --probe-timeout-seconds 8
+      - name: Audit logo references without modifying assets
+        if: always()
+        run: |
+          python scripts/audit_logo_references.py --output reports/automation-v2/candidate-logo-reference-audit.json
       - name: Upload candidate bundle and diagnostics
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -56,6 +60,7 @@ jobs:
           name: automation-v2-candidate-bundle
           path: |
             reports/automation-v2/candidate-run.json
+            reports/automation-v2/candidate-logo-reference-audit.json
             reports/automation-v2/candidates/transactions/
           if-no-files-found: warn
           retention-days: 14
