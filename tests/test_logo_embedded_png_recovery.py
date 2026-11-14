@@ -53,6 +53,25 @@ class EmbeddedPngRecoveryTests(unittest.TestCase):
             self.assertEqual(actual.size, expected.size)
             self.assertEqual(actual.convert("RGBA").tobytes(), expected.convert("RGBA").tobytes())
 
+
+    def test_repairs_terminal_iend_crc_without_changing_pixels(self):
+        original = make_png()
+        damaged = bytearray(original)
+        damaged[-1] ^= 0x01  # corrupt only the terminal IEND CRC
+        svg = (
+            b'<svg xmlns="http://www.w3.org/2000/svg"><image href="data:image/png;base64,'
+            + base64.b64encode(damaged)
+            + b'"/></svg>'
+        )
+
+        recovered = recover_embedded_png_from_svg(svg)
+        self.assertIsNotNone(recovered)
+        with Image.open(io.BytesIO(original)) as expected, Image.open(io.BytesIO(recovered)) as actual:
+            expected.load()
+            actual.load()
+            self.assertEqual(actual.size, expected.size)
+            self.assertEqual(actual.convert("RGBA").tobytes(), expected.convert("RGBA").tobytes())
+
     def test_rejects_bad_non_idat_crc(self):
         png = bytearray(make_png())
         png[29] ^= 0x01  # corrupt the IHDR CRC

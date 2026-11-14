@@ -55,7 +55,12 @@ def recover_embedded_png_from_svg(svg_bytes: bytes) -> bytes | None:
         chunk_data = raw[data_start:data_end]
         saved_crc = struct.unpack(">I", raw[data_end:crc_end])[0]
         actual_crc = zlib.crc32(chunk_type + chunk_data) & 0xFFFFFFFF
-        if saved_crc != actual_crc and chunk_type != b"IDAT":
+        # IDAT CRC damage is tolerated because the compressed pixel stream is
+        # independently decoded by the caller. Also repair a damaged IEND CRC,
+        # but only for a zero-length terminal IEND chunk; its canonical CRC is
+        # deterministic and no image data is discarded or modified.
+        terminal_iend = chunk_type == b"IEND" and length == 0 and crc_end == len(raw)
+        if saved_crc != actual_crc and chunk_type != b"IDAT" and not terminal_iend:
             return None
 
         if first_chunk:
