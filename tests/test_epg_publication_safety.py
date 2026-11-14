@@ -123,6 +123,18 @@ class EPGPublicationSafetyTests(unittest.TestCase):
             refresh.rfind("git rebase origin/main"),
         )
 
+    def test_fresh_epg_dashboard_retry_regenerates_from_latest_main_without_rebase(self):
+        refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        fast_path = refresh.split("A fresh EPG already exists", 1)[1].split("HAVE_PUBLISHED_FALLBACK=false", 1)[0]
+        self.assertIn("git reset --hard origin/main", fast_path)
+        self.assertIn("python scripts/validate_report_freshness.py --mode epg", fast_path)
+        self.assertIn("python scripts/generate_dashboard.py", fast_path)
+        self.assertNotIn("git rebase origin/main", fast_path)
+        self.assertLess(
+            fast_path.index("git reset --hard origin/main"),
+            fast_path.index("python scripts/generate_dashboard.py"),
+        )
+
     def test_refresh_rejects_candidates_when_epg_inputs_change_during_build(self):
         refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn('CURRENT_MAIN_SHA="$(git rev-parse origin/main)"', refresh)
