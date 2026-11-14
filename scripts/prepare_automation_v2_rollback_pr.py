@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -35,7 +36,7 @@ def main() -> int:
     number = payload.get("number")
     if not isinstance(number, int) or number < 1:
         raise ValueError("source PR number is invalid")
-    target = validate_publication_pr(payload, number)
+    target = validate_publication_pr(payload, number, os.environ.get('GITHUB_REPOSITORY', 'saeidrahmanbd/BDIX-IPTV'))
 
     head = git(root, "rev-parse", "HEAD")
     ancestor = subprocess.run(
