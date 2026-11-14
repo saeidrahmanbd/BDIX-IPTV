@@ -48,7 +48,6 @@ on:
       - scripts/validate_international_playlist.py
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
-      - scripts/reclassify_main_playlist_groups.py
       - tests/test_stream_url_identity.py
       - tests/test_main_playlist_protection.py
       - tests/test_main_playlist_grouping.py
@@ -124,7 +123,6 @@ jobs:
             scripts/maintenance_helpers.py \
             scripts/verify_international_protected.py \
             scripts/protect_main_playlist.py \
-            scripts/reclassify_main_playlist_groups.py \
             scripts/reconcile_playlist_consistency.py \
             scripts/restore_protected_review.py \
             scripts/audit_playlist.py \
@@ -162,7 +160,6 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_stream_url_identity.py'
           python -m unittest discover -s tests -p 'test_main_playlist_protection.py'
-          python -m unittest discover -s tests -p 'test_main_playlist_grouping.py'
           python -m unittest discover -s tests -p 'test_report_freshness.py'
           python -m unittest discover -s tests -p 'test_maintenance_extinf_canonicalization.py'
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
