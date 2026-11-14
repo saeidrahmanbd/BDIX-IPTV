@@ -67,6 +67,8 @@ def build_inventory(root: Path) -> dict:
                                      "target":target,"exists":(root/target).is_file()})
     nested=[]
     for path in sorted(root.rglob("*.py")):
+        if any(part in {".git", ".venv", "venv", "__pycache__"} for part in path.parts):
+            continue
         nested.extend(scan_python(path,path.relative_to(root).as_posix()))
     known={item["target"] for item in workflow_entries}
     unresolved=[item for item in nested if item["kind"] in {"subprocess_dynamic","parse_error","dynamic_code_execution"}]
