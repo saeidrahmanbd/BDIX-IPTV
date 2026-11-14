@@ -108,7 +108,7 @@ def _safe_candidate_dir(root: Path, output_dir: Path) -> Path:
         relative = output.relative_to(allowed)
     except ValueError as exc:
         raise ValueError("candidate output must be inside reports/automation-v2/") from exc
-    _reject_symlink_components(output, allowed)
+    _reject_symlink_components(output, root)
     if output == allowed:
         raise ValueError("candidate output must use a dedicated subdirectory")
     # Reject an existing non-directory at any output component.
