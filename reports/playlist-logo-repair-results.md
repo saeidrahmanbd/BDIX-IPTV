@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-14 11:48 UTC**  
+Run time: **2026-11-14 11:49 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,7 +9,7 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1284 | 1 | 0 | 2 | 0 | 0 | 2 |
+| IPTV-Playlist.m3u | 1284 | 0 | 0 | 2 | 0 | 0 | 2 |
 | International-Playlist.m3u | 3124 | 0 | 0 | 38 | 359 | 0 | 38 |
 
 ## Repair log
@@ -18,7 +18,6 @@ Historical mapping index: loaded 336 historical name mappings
 |---|---:|---|---|---|---|---|---|
 | IPTV-Playlist.m3u | 118 | Shikor TV Canada | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 184 | Ten TV Prime | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1306 | WWE Superstar Central | (missing) | wwe-superstar-central-2c9ca1325e.png | [Exact external logo asset](https://www.trademarkia.com/ww-superstar-central-99048431) | Exact figurative mark owned by World Wrestling Entertainment, LLC (WWE), from trademark filing serial 99048431; served by the trademark record image host, with source attribution only and no copyright licence implied | replaced |
 | International-Playlist.m3u | 867 | Rádio Temas de Novelas | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 887 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 895 | Diema | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
