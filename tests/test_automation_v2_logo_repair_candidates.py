@@ -86,8 +86,8 @@ class LogoRepairCandidateTests(unittest.TestCase):
                 '#EXTINF:-1 tvg-name="Unsafe Channel" group-title="Bangladesh",Unsafe Channel\\n'
                 'https://example.invalid/unsafe\\n', encoding="utf-8")
             report = build_proposals(root)
-            self.assertEqual(report["counts"]["unique_exact_match"], 1)
-            self.assertNotEqual(report["proposals"][0]["proposed_local_logo"], "logos/Unsafe Channel.png")
+            self.assertEqual(report["counts"]["unique_exact_match"], 0)
+            self.assertFalse(any(p["channel_name"] == "Unsafe Channel" for p in report["proposals"]))
 
     def test_review_groups_are_excluded(self):
         with tempfile.TemporaryDirectory() as tmp:
