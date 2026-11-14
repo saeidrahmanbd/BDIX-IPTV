@@ -311,6 +311,7 @@ for r in rows:
  a=r["a"]; g=a.get("group-title","").strip(); m,_ = split_extinf(r["line"]); display=r["name"]
  group = g
  if group == "Adult":
+  # Equivalent legacy guard: if g == "Adult":
   # Adult entries are explicitly out of scope: preserve every attribute and
   # their original EXTINF line without metadata, logo, or channel-number edits.
   continue
