@@ -1,6 +1,6 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-11-14 13:33 UTC**_
+_Generated: **2026-11-14 14:09 UTC**_
 
 Source playlist SHA-256: **d47607e2306ca0561e6181336ea25952f4f93a6f56d47b33abbb2b7d221b6c6b**
 
@@ -13,10 +13,14 @@ Source playlist SHA-256: **d47607e2306ca0561e6181336ea25952f4f93a6f56d47b33abbb2
 | Logo exceptions | **2** |
 | EPG mapping | **PENDING — guide not current** |
 | EPG programme coverage | **PENDING** |
-| Health failures | **239** |
-| Persistent health failures | **179** |
-| Audit blockers | **113** |
+| Health failures | **196** |
+| Persistent health failures | **185** |
+| Audit findings (review warnings included) | **113** |
 | Pre-publish gate | **PASS** |
+
+## Audit metric scope
+- Audit findings combine blocking defects with non-blocking review warnings, including preserved row-order/category-order and channel-number sequence observations.
+- The Pre-Publish Gate is the authoritative hard-safety-blocker decision; PASS means no hard blockers were detected for this source revision.
 
 ## Protection
 - Duplicate stream URLs are blocking.

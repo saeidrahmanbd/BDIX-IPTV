@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T13:32:31+00:00**
+Generated: **2026-11-14T14:09:06+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -18,7 +18,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster/SVG assets with short side under 64 px: **156**
 - Exact-byte duplicate asset clusters: **735**
 - Playlist references whose asset stem differs from the normalized channel name: **1515**
-- Unreferenced files immediately inside logos/: **1584** (not deleted; other tooling or playlists may use them)
+- Unreferenced files immediately inside logos/: **1586** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
