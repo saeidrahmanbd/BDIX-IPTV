@@ -14,7 +14,7 @@ This is a migration plan only. No legacy workflow is disabled, edited or retired
 | Refresh IPTV EPG | `.github/workflows/epg-refresh.yml` | Multiple triggers/listeners; generates and publishes guide/mappings/reports/dashboard | EPG candidate stage in `automation/core/v2_candidate_runner.py` plus `.github/workflows/automation-v2-prepare-publication-pr.yml`. | Prove source parity, full-guide quality/coverage, freshness, atomic candidate validation and rollback. |
 | IPTV Logo Localization | `.github/workflows/logo-localization.yml` | IPTV playlist/logo mutations | No complete V2 logo repair writer yet; current V2 includes a conservative logo-reference audit only. | Implement a candidate-only IPTV logo repair engine and prove local-asset authenticity and metadata-only scope. |
 | Playlist Logo Repair and Localization | `.github/workflows/playlist-logo-localization.yml` | Mutates both playlists and logo assets/provenance | No complete V2 two-playlist logo repair writer yet; current V2 includes a conservative reference audit only. | Implement per-playlist scoped candidate repair, dynamic-reference coverage and rollback tests. |
-| Generate Dashboard (nested) | `scripts/refresh_dashboard_diagnostics.py`, `scripts/generate_dashboard.py` | Multiple workflow paths regenerate dashboard/reports; recovery path launches a long helper chain | A read-only V2 report consumer of immutable published snapshots. No replacement dashboard workflow is enabled yet. | Prove one report producer, immutable inputs, snapshot freshness and zero playlist/logo staging side effects. |
+| Generate Dashboard (nested) | `scripts/refresh_dashboard_diagnostics.py`, `scripts/generate_dashboard.py` | Multiple workflow paths regenerate dashboard/reports; recovery path launches a long helper chain | Shadow consumer in `.github/workflows/automation-v2-candidate-bundle.yml`: captures immutable report inputs and renders a separate parity mirror; does not replace the legacy production dashboard writer. | Still requires independently recomputed metric/group/channel/EPG equivalence and a single-owner production dashboard writer before legacy dashboard jobs can be retired. |
 
 ## Workflows to retain as separate services
 
@@ -50,7 +50,9 @@ This is a migration plan only. No legacy workflow is disabled, edited or retired
 - A targeted EPG-timeout/probe-checkpoint recovery test, rollback-policy tests and workflow concurrency-boundary tests are proposed in PR #154; their latest CI results must pass before merge.
 - The rollback PR preparer is a recovery mechanism for already-merged candidate PRs, not an automatic publisher.
 - Missed-run recovery dispatcher is implemented in the current review branch; it checks current-main SHA and Bangladesh-local run date, avoids overlapping an active run, and retries failed/missing runs. Its CI and live dispatch behavior must be verified before relying on it.
-- Not ready for production cutover: complete logo candidate engines, dashboard snapshot consumer, exhaustive runtime dependency tracing, full workflow equivalence and production-scale rollback acceptance remain open.
+- Dashboard shadow consumer is now wired into the candidate bundle: it captures report inputs with SHA-256 and renders a separate mirror; it preserves legacy dashboard markdown verbatim, so independent metric equivalence is not yet proven.
+- Runtime inventory now scans repository Python sources, records workflow `run:` boundaries, and flags dynamic subprocess/eval/exec paths. These opaque boundaries remain explicit unresolved evidence, not proof of complete runtime resolution.
+- Not ready for production cutover: complete two-playlist logo candidate engines, independently recomputed dashboard metrics, resolved runtime boundaries, exact workflow equivalence and production-scale rollback acceptance remain open.
 
 ## Required cutover sequence
 
