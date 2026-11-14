@@ -23,14 +23,21 @@ def _is_runtime_source(relative: str) -> bool:
             or relative in RUNTIME_REPORTS)
 
 def scan(root: Path) -> dict:
+    root = root.resolve()
     logo_root = root / "logos"
-    asset_paths = sorted(p for p in logo_root.rglob("*") if p.is_file() and p.suffix.lower() in IMAGE_SUFFIXES)
+    if logo_root.is_symlink():
+        raise ValueError("logos directory must not be a symlink")
+    asset_paths = sorted(
+        p for p in logo_root.rglob("*")
+        if not p.is_symlink() and p.is_file() and p.suffix.lower() in IMAGE_SUFFIXES
+        and p.resolve().is_relative_to(logo_root.resolve())
+    )
     assets = [p.relative_to(root).as_posix() for p in asset_paths]
     references: dict[str, set[str]] = {}
     runtime_references: dict[str, set[str]] = {}
     for path in root.rglob("*"):
         relative = path.relative_to(root).as_posix()
-        if not path.is_file() or "logos" in path.relative_to(root).parts or relative in EXCLUDED_REFERENCE_FILES:
+        if path.is_symlink() or not path.is_file() or "logos" in path.relative_to(root).parts or relative in EXCLUDED_REFERENCE_FILES:
             continue
         if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
