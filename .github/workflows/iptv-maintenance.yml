@@ -49,6 +49,29 @@ on:
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
       - scripts/reclassify_main_playlist_groups.py
+      - tests/test_stream_url_identity.py
+      - tests/test_main_playlist_protection.py
+      - tests/test_main_playlist_grouping.py
+      - tests/test_report_freshness.py
+      - tests/test_maintenance_extinf_canonicalization.py
+      - tests/test_pre_publish_gate_logo_paths.py
+      - tests/test_maintenance_report_order.py
+      - tests/test_metadata_backfill.py
+      - tests/test_reconcile_playlist_consistency.py
+      - tests/test_logo_authenticity_manifest.py
+      - tests/test_logo_asset_naming.py
+      - tests/test_logo_provenance_review.py
+      - tests/test_logo_repair_source_hints.py
+      - tests/test_iptv_fragile_streams.py
+      - tests/test_language_policy.py
+      - tests/test_country_verification.py
+      - tests/test_migrate_logo_unset.py
+      - tests/test_international_protected_guard.py
+      - tests/test_playlist_metadata_repairs.py
+      - tests/test_channel_numbering.py
+      - tests/test_sort_playlists.py
+      - tests/test_backup_metadata_reconcile.py
+      - tests/test_primary_backup_integrity.py
   workflow_run:
     workflows: ["Playlist Logo Repair and Localization"]
     types: [completed]

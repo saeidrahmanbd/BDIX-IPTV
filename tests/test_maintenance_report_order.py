@@ -12,11 +12,26 @@ from playlist_order_policy import should_check_alphabetical_order
 
 
 class MaintenanceReportOrderTests(unittest.TestCase):
-    def test_iptv_maintenance_ignores_test_only_and_unrelated_workflow_edits(self):
+    def test_iptv_maintenance_tracks_only_its_explicit_contract_tests(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("- .github/workflows/iptv-maintenance.yml", workflow)
-        self.assertNotIn("      - tests/", workflow)
+        self.assertNotIn("      - tests/**", workflow)
         self.assertNotIn("- .github/workflows/**", workflow)
+        for name in (
+            "test_stream_url_identity.py", "test_main_playlist_protection.py",
+            "test_main_playlist_grouping.py", "test_report_freshness.py",
+            "test_maintenance_extinf_canonicalization.py", "test_pre_publish_gate_logo_paths.py",
+            "test_maintenance_report_order.py", "test_metadata_backfill.py",
+            "test_reconcile_playlist_consistency.py", "test_logo_authenticity_manifest.py",
+            "test_logo_asset_naming.py", "test_logo_provenance_review.py",
+            "test_logo_repair_source_hints.py", "test_iptv_fragile_streams.py",
+            "test_language_policy.py", "test_country_verification.py",
+            "test_migrate_logo_unset.py", "test_international_protected_guard.py",
+            "test_playlist_metadata_repairs.py", "test_channel_numbering.py",
+            "test_sort_playlists.py", "test_backup_metadata_reconcile.py",
+            "test_primary_backup_integrity.py",
+        ):
+            self.assertIn(f"      - tests/{name}", workflow)
 
     def test_all_main_branch_writers_share_one_concurrency_group(self):
         expected = "iptv-playlist-main-writer-v5"
