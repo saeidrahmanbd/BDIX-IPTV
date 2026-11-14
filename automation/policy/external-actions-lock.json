@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "review_scope": "Exact immutable action.yml metadata at the referenced commit SHA; this does not claim a full source-code audit of the external action implementation.",
+  "actions": [
+    {
+      "reference": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "using": "node24",
+      "main": "dist/index.js",
+      "post": "dist/index.js",
+      "review_status": "action_metadata_reviewed",
+      "runtime_effect": "Checks out the requested repository/ref. action.yml defaults persist-credentials=true; workflow inputs may override it. The post step removes persisted credentials."
+    },
+    {
+      "reference": "actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+      "using": "node24",
+      "main": "dist/setup/index.js",
+      "post": "dist/cache-save/index.js",
+      "review_status": "action_metadata_reviewed",
+      "runtime_effect": "Installs the configured Node.js runtime and optionally configures package-manager caching; post step saves cache."
+    },
+    {
+      "reference": "actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+      "using": "node24",
+      "main": "dist/setup/index.js",
+      "post": "dist/cache-save/index.js",
+      "review_status": "action_metadata_reviewed",
+      "runtime_effect": "Installs the configured Python runtime and optionally configures pip caching; post step saves cache."
+    },
+    {
+      "reference": "actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "using": "node24",
+      "main": "dist/upload/index.js",
+      "post": null,
+      "review_status": "action_metadata_reviewed",
+      "runtime_effect": "Uploads files to a GitHub Actions run artifact; no repository commit or production publication."
+    },
+    {
+      "reference": "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "using": "node20",
+      "main": "dist/upload/index.js",
+      "post": null,
+      "review_status": "action_metadata_reviewed",
+      "runtime_effect": "Uploads files to a GitHub Actions run artifact; no repository commit or production publication."
+    },
+    {
+      "reference": "cloudflare/wrangler-action@953926a2e2182532811c01a25e53647d93bf07c0",
+      "using": "node24",
+      "main": "dist/index.mjs",
+      "post": null,
+      "review_status": "action_metadata_reviewed",
+      "runtime_effect": "Runs Wrangler against Cloudflare using configured secrets; deploy-xtream.yml uses command=deploy, which changes the external Cloudflare Worker deployment."
+    }
+  ]
+}
