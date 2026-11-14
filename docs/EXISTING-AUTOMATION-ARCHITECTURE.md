@@ -96,6 +96,19 @@ A country-specific group requires at least five unique primary channel identitie
 9. Keep generated reports that are public operational outputs; expire stale transient diagnostics only through an explicit retention policy.
 10. Do not change production playlists as part of architecture-only work.
 
+## Current workflow inventory and disposition
+
+The current repository has 25 workflow files:
+
+- Eight Automation V2 workflows are retained as diagnostic/CI evidence; they are not the production architecture.
+- Seventeen existing production, maintenance, deployment, discovery, EPG, logo, health, reporting and validation workflows remain in place.
+- The two logo workflows have overlapping IPTV coverage but different scopes: the isolated logo-localization workflow targets IPTV-Playlist.m3u, while the scheduled playlist-logo workflow handles both playlists. They must be compared for source-catalog and output parity before consolidation.
+- IPTV and International discovery have separate schedules and policy scopes; keep those separate.
+- The two EPG source-probe workflows are source-research utilities, not substitutes for the EPG publication pipeline.
+- Deployment, SEO, IndexNow and test workflows are supporting services, not playlist-maintenance engines.
+
+The scheduled Automation V2 Candidate Bundle and Automation V2 Missed-Run Recovery triggers are paused. Manual dispatch remains available for explicit diagnostics. Branch CI and legacy regression workflows remain available to validate changes. No V2 production cutover is authorized.
+
 ## Automation V2 disposition
 
 Automation V2 development and cutover are frozen. Existing V2 contracts, reports and migration evidence are retained as audit/reference material while the existing production system is repaired. No V2 workflow may become a second production writer or silently take over scheduling.
