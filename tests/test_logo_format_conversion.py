@@ -139,6 +139,41 @@ class LogoFormatConversionTests(unittest.TestCase):
             self.assertIn(b"\\r\\n", converted)
             self.assertNotIn(b"\\n", converted.replace(b"\\r\\n", b""))
 
+    def test_complete_logo_inventory_is_converted_not_only_referenced_assets(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            logos = root / "logos"
+            logos.mkdir()
+            (logos / "shikor-tv-canada.svg").write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60"><rect width="120" height="60" fill="#123456"/></svg>',
+                encoding="utf-8",
+            )
+            (logos / "ten-tv-prime.svg").write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60"><rect width="120" height="60" fill="#654321"/></svg>',
+                encoding="utf-8",
+            )
+            (logos / "unused.webp").write_bytes(image_bytes("WEBP"))
+            (logos / "notes.md").write_text("not an image", encoding="utf-8")
+            playlist = root / "IPTV-Playlist.m3u"
+            playlist.write_text(
+                "#EXTM3U\\n"
+                f'#EXTINF:-1 tvg-id="custom.shikortvcanada" tvg-logo="logos/shikor-tv-canada.svg",Shikor TV Canada\\n'
+                "https://example.invalid/shikor.m3u8\\n"
+                f'#EXTINF:-1 tvg-id="custom.tentvprime" tvg-logo="logos/ten-tv-prime.svg",Ten TV Prime\\n'
+                "https://example.invalid/ten.m3u8\\n",
+                encoding="utf-8",
+            )
+            summary = convert_referenced_logos(root=root, playlist_names=("IPTV-Playlist.m3u",))
+            self.assertEqual(summary["unique_assets_converted"], 3)
+            self.assertEqual(summary["remaining_non_png_references"], 0)
+            updated = playlist.read_text(encoding="utf-8")
+            self.assertIn("logos/shikor-tv-canada.png", updated)
+            self.assertIn("logos/ten-tv-prime.png", updated)
+            self.assertTrue((logos / "unused.png").is_file())
+            self.assertTrue((logos / "shikor-tv-canada.svg").is_file())
+            self.assertTrue((logos / "ten-tv-prime.svg").is_file())
+            self.assertTrue((logos / "notes.md").is_file())
+
     def test_external_logo_reference_fails_without_changing_playlist(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
