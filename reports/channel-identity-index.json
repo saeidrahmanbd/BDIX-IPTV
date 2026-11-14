@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T08:51:00+00:00",
+  "generated": "2026-11-14T07:08:39+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -4843,6 +4843,20 @@
       "streams": 3,
       "primary": 1,
       "backup": 2
+    },
+    "jaihindtv": {
+      "names": [
+        "Jaihind TV (576p)"
+      ],
+      "ids": [
+        "jaihindtv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "jalshabanglabd": {
       "names": [
@@ -10078,6 +10092,20 @@
       "primary": 1,
       "backup": 0
     },
+    "vtu": {
+      "names": [
+        "VTU (1080p)"
+      ],
+      "ids": [
+        "vtu.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "wahpunjabi": {
       "names": [
         "Wah Punjabi"
@@ -10115,6 +10143,20 @@
       ],
       "groups": [
         "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "weatherspy": {
+      "names": [
+        "WeatherSpy (India) (720p)"
+      ],
+      "ids": [
+        "weatherspy.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -10632,6 +10674,20 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "zodiaktv": {
+      "names": [
+        "Zodiak TV (1080p)"
+      ],
+      "ids": [
+        "zodiaktv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,

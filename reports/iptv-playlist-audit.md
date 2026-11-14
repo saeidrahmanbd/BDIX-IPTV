@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-13T08:50:15.218356+00:00**
-Source playlist SHA-256: **006cd670ecdde84fe0481c6405214f3fb618e234a7abe12f8bce3f1553bb6c8d**
+Generated: **2026-11-14T07:07:58.155438+00:00**
+Source playlist SHA-256: **9680e01648d22546c191e96d60dcc64458c9a4ae771ee3a1e4b1113494e12ddd**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1280**
-- Unique channel IDs: **776**
+- Playlist entries: **1284**
+- Unique channel IDs: **780**
 - IDs with multiple streams: **243**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -19,9 +19,9 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **4**
-- Missing logos in review queues (review only): **0**
+- Missing logos in review queues (review only): **4**
 - External logo references (review only): **0**
-- Logo references checked: **1280**
+- Logo references checked: **1284**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **3**
 - Primary channel-number collisions: **0**
@@ -30,7 +30,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **31**
+- Category block-order issues: **32**
 - Category registry issues: **1**
 - Alphabetical ordering issues: **59**
 - Suspicious URL credentials/syntax: **0**
@@ -1190,6 +1190,7 @@ None.
 - category block **Sports** — out of canonical block order
 - category block **New Channels** — out of canonical block order
 - category block **New Backups** — out of canonical block order
+- category block **New Channels** — out of canonical block order
 - **Bangladesh** — **5 — ATN News** appears after **386 — ATN Bangla UK**
 - **Bangladesh** — **15 — Channel 9** appears after **17 — Channel 52**
 - **Bangladesh** — **18 — Channel I** appears after **390 — Channel Europe**
@@ -1295,8 +1296,11 @@ None.
 
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
-None.
-- missing: **4**
+- **Jaihind TV (576p)** [jaihindtv.in@sd]
+- **VTU (1080p)** [vtu.in@sd]
+- **WeatherSpy (India) (720p)** [weatherspy.in@sd]
+- **Zodiak TV (1080p)** [zodiaktv.in@sd]
+- missing: **8**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
