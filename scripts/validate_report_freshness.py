@@ -15,11 +15,11 @@ SINGLE_PLAYLIST_REPORTS = {
     "reports/iptv-playlist-audit.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256", "Playlist SHA-256")),
     "reports/pre-publish-gate.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
     "reports/iptv-metadata-backfill.md": ("IPTV-Playlist.m3u", ("After playlist SHA-256", "Playlist SHA-256", "Source playlist SHA-256")),
-    "reports/iptv-fragile-streams.md": ("IPTV-Playlist.m3u", ("IPTV-Playlist.m3u SHA-256",)),
     "reports/stream-risk-review.md": ("IPTV-Playlist.m3u", ("IPTV-Playlist.m3u SHA-256",)),
     "reports/metadata-normalization.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
     "reports/Update Report.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
     "reports/maintenance-report.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
+    "reports/international-stream-health.md": ("International-Playlist.m3u", ("Source playlist SHA-256",)),
     "reports/playlist-logo-repair-results.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
 }
 SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-playlist-audit.md", "reports/epg-unmapped-audit.md")
@@ -27,7 +27,6 @@ SHARED_PLAYLIST_REPORTS = ("reports/logo-asset-quality-audit.md",)
 TIMESTAMP_ONLY_REPORTS = ("reports/epg-publish-freshness.md",)
 PROVENANCE_REPORT = "reports/logo-provenance-review.md"
 CROSS_PLAYLIST_METADATA_REPORT = "reports/playlist-metadata-backfill.md"
-STREAM_HEALTH_REPORT = "reports/stream-health.md"
 # Reports owned by IPTV New Channel Discovery; other maintenance reports have separate owners.
 DISCOVERY_REPORTS = (
     "reports/iptv-channel-discovery.md",
@@ -67,7 +66,7 @@ def parse_timestamp(value: str):
 
 
 def report_timestamp(text: str):
-    match = re.search(r"(?im)^_?(?:Generated|Last generated|Checked):\s*\*\*([^*]+)\*\*", text)
+    match = re.search(r"(?im)^\s*-?\s*_?(?:Generated|Last generated|Checked):\s*\*\*([^*]+)\*\*", text)
     return parse_timestamp(match.group(1)) if match else None
 
 
@@ -111,7 +110,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
     generated_paths = (
         list(SINGLE_PLAYLIST_REPORTS)
         + list(SHARED_PLAYLIST_REPORTS)
-        + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT, STREAM_HEALTH_REPORT]
+        + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT, "reports/international-stream-health.md"]
     )
     epg_paths = list(SHARED_EPG_REPORTS) + list(TIMESTAMP_ONLY_REPORTS)
     # The playlist workflow checks only reports it owns; the EPG workflow
