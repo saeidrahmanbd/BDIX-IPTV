@@ -217,15 +217,26 @@ def compute_metrics(root: Path) -> dict:
             "audit_report_playlist": source_sha(audit),
             "gate_report_playlist": source_sha(gate),
             "health_report_url_inventory": re.search(
-                r"Stream URL inventory SHA-256:\\s*\\*\\*([a-f0-9]{64})\\*\\*", health, re.I
+                r"Stream URL inventory SHA-256:\s*\*\*([a-f0-9]{64})\*\*", health, re.I
             ).group(1).lower() if re.search(
-                r"Stream URL inventory SHA-256:\\s*\\*\\*([a-f0-9]{64})\\*\\*", health, re.I
+                r"Stream URL inventory SHA-256:\s*\*\*([a-f0-9]{64})\*\*", health, re.I
             ) else "",
             "computed_playlist_url_inventory": url_inventory_sha(playlist) if playlist.is_file() else "",
         },
         "expected_metrics": expected,
         "dashboard_metrics": actual,
         "mismatches": mismatches,
+        "cutover_ready": bool(not mismatches and all((
+            audit_current, health_current, gate_current, epg_current
+        ))),
+        "cutover_blockers": [
+            name for name, current in {
+                "playlist_audit": audit_current,
+                "stream_health": health_current,
+                "pre_publish_gate": gate_current,
+                "published_epg": epg_current,
+            }.items() if not current
+        ] + (["dashboard_metric_mismatch"] if mismatches else []),
         "safety": {
             "production_dashboard_modified": False,
             "production_reports_modified": False,
