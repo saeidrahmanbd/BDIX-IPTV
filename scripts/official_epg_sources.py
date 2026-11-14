@@ -209,9 +209,18 @@ class _RtvArticleLinkParser(HTMLParser):
         self.links = []
 
     def handle_starttag(self, tag, attrs):
-        if tag.lower() == "a":
-            self.current_href = dict(attrs).get("href", "")
+        tag = tag.lower()
+        attributes = dict(attrs)
+        if tag == "a":
+            self.current_href = attributes.get("href", "")
             self.current_text = []
+        elif tag == "img" and self.current_href:
+            # RTV wraps its daily schedule thumbnail in the article link; the
+            # descriptive title is carried by the image alt attribute rather
+            # than visible anchor text on the current homepage.
+            alt = _clean(attributes.get("alt", ""))
+            if alt:
+                self.current_text.append(alt)
 
     def handle_data(self, data):
         if self.current_href:
@@ -221,7 +230,11 @@ class _RtvArticleLinkParser(HTMLParser):
         if tag.lower() != "a" or not self.current_href:
             return
         label = _clean(" ".join(self.current_text))
-        if "আরটিভিতে আজ যা দেখবেন" in label or "আরটিভিতে আজকের আয়োজন" in label:
+        is_daily_schedule = (
+            bool(re.search(r"আরটিভিতে\\s+আজ(?:\\s*\\([^)]*\\))?\\s+যা\\s+দেখবেন", label))
+            or "আরটিভিতে আজকের আয়োজন" in label
+        )
+        if is_daily_schedule:
             self.links.append(urljoin(RTV_SOURCE, self.current_href))
         self.current_href = None
         self.current_text = []
