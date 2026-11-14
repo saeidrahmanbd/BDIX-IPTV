@@ -594,6 +594,7 @@ def build_report(events, history, check_date, generated, total):
     lines = [
         "# International Stream Health", "",
         f"- Generated: **{generated}**",
+        f"- Source playlist SHA-256: **{hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()}**",
         f"- Bangladesh check date: **{check_date}**",
         f"- Playlist rows checked: **{total}**",
         f"- Reachable media streams: **{ok}**",
