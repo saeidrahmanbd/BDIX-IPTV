@@ -21,6 +21,7 @@ on:
       - 'scripts/official_epg_sources.py'
       - 'scripts/validate_report_freshness.py'
       - 'tests/test_epg_source_rights.py'
+      - 'tests/test_official_epg_sources.py'
       - 'tests/test_epg_config.py'
       - 'tests/test_epg_mapping_regions.py'
       - 'tests/test_epg_timing_offsets.py'
@@ -139,6 +140,7 @@ jobs:
           python scripts/check_epg_config.py
           python -m unittest discover -s tests -p 'test_epg_publication_safety.py'
           python -m unittest discover -s tests -p 'test_epg_source_rights.py'
+          python -m unittest discover -s tests -p 'test_official_epg_sources.py'
           python -m unittest discover -s tests -p 'test_epg_timing_offsets.py'
           python -m unittest discover -s tests -p 'test_report_freshness.py'
           python -m unittest discover -s tests -p 'test_dashboard_freshness.py'
