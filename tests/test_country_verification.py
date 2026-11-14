@@ -52,12 +52,17 @@ class CountryVerificationTests(unittest.TestCase):
         root = Path(__file__).resolve().parent.parent
         main = (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8").splitlines()
         international = (root / "International-Playlist.m3u").read_text(encoding="utf-8").splitlines()
-        q_tv = [line for line in main if line.startswith("#EXTINF:") and 'tvg-id="QTV.in@SD"' in line and 'group-title="Indian Entertainment"' in line]
+        q_tv_primary = [line for line in main if line.startswith("#EXTINF:") and 'tvg-id="QTV.in"' in line and 'group-title="Indian Entertainment"' in line]
+        q_tv_alternates = [line for line in main if line.startswith("#EXTINF:") and 'tvg-id="QTV.in@SD"' in line]
         sindh = [line for line in main if line.startswith("#EXTINF:") and 'tvg-name="Sindh TV"' in line and 'group-title="Pakistani"' in line]
         yrf = [line for line in international if line.startswith("#EXTINF:") and 'tvg-id="YRFMusic.in@Nepal"' in line]
-        self.assertEqual(len(q_tv), 1)
-        self.assertIn('tvg-country="IN"', q_tv[0])
-        self.assertIn('tvg-language="hin"', q_tv[0])
+        self.assertEqual(len(q_tv_primary), 1)
+        self.assertIn('tvg-country="IN"', q_tv_primary[0])
+        self.assertEqual(len(q_tv_alternates), 3)
+        for line in q_tv_alternates:
+            self.assertIn('tvg-country="IN"', line)
+            self.assertIn('tvg-language="hin"', line)
+            self.assertIn('group-title="Backup"', line)
         self.assertEqual(len(sindh), 1)
         self.assertIn('tvg-id="SindhTV.pk@SD"', sindh[0])
         self.assertIn('channel-id="SindhTV.pk@SD"', sindh[0])
