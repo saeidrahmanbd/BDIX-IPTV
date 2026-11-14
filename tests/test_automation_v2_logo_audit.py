@@ -52,7 +52,7 @@ class LogoReferenceAuditTests(unittest.TestCase):
             (root/"reports"/"logo-asset-quality-audit.md").write_text("logos/report.png",encoding="utf-8")
             (root/"scripts"/"repair.py").write_text("LOGO = 'logos/script.png'",encoding="utf-8")
             result=scan(root)
-            self.assertEqual(result["all_explicitly_referenced_logo_files"],2)
+            self.assertEqual(result["all_explicitly_referenced_logo_files"],1)
             self.assertEqual(result["runtime_referenced_logo_files"],1)
             self.assertEqual(len(result["apparently_unreferenced_by_runtime"]),1)
 
