@@ -108,12 +108,14 @@ def build_candidates(root: Path, manifest_path: Path, output_dir: Path) -> dict:
             if selected:
                 raise ValueError(f"approved source playlist is missing or unsafe: {playlist}")
             continue
-        original = source.read_text(encoding="utf-8-sig")
+        original_bytes = source.read_bytes()
+        has_utf8_bom = original_bytes.startswith(b"\\xef\\xbb\\xbf")
+        original = original_bytes.decode("utf-8-sig")
         actual_source_sha = _sha256(source)
         if selected and source_hashes.get(playlist) != actual_source_sha:
             raise ValueError(f"{playlist}: source playlist SHA-256 changed since approval")
         lines = original.splitlines()
-        before = hashlib.sha256(original.encode("utf-8")).hexdigest()
+        before = actual_source_sha
         selected = [item for item, _ in validated if item["playlist"] == playlist]
         for item in selected:
             _apply_one(lines, item, playlist)
@@ -121,11 +123,12 @@ def build_candidates(root: Path, manifest_path: Path, output_dir: Path) -> dict:
         changed = candidate != original
         if changed:
             destination = output_dir / playlist
-            destination.write_text(candidate, encoding="utf-8")
+            candidate_bytes = (b"\\xef\\xbb\\xbf" if has_utf8_bom else b"") + candidate.encode("utf-8")
+            destination.write_bytes(candidate_bytes)
             results.append({
                 "playlist": playlist, "approved_rows": len(selected),
                 "baseline_sha256": before,
-                "candidate_sha256": hashlib.sha256(candidate.encode("utf-8")).hexdigest(),
+                "candidate_sha256": hashlib.sha256(candidate_bytes).hexdigest(),
                 "candidate_path": destination.relative_to(root).as_posix(),
             })
     return {
