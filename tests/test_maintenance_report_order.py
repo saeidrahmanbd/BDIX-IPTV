@@ -99,8 +99,9 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertNotIn("sort_playlists.py IPTV-Playlist.m3u", mutations)
         # Number normalization is authorized only for this one-time owner
         # migration, never for routine maintenance.
-        self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" == "true" ]]; then', mutations)
+        self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then', mutations)
         self.assertIn("python scripts/renumber_active_channels.py IPTV-Playlist.m3u", mutations)
+        self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
         marker = json.loads((ROOT / "maintenance" / "owner-requested-iptv-migration.json").read_text(encoding="utf-8"))
         self.assertEqual(marker["status"], "authorized")
         guard = (ROOT / "scripts" / "protect_main_playlist.py").read_text(encoding="utf-8")
