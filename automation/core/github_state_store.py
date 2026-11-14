@@ -199,6 +199,38 @@ def record_remote_probe(store: GitHubStateStore, identity: str, probe):
     return updated_probe
 
 
+def checkpoint_remote_probe_ledger(store: GitHubStateStore, expected_run_key: str, probe_ledger: dict, max_attempts: int = 5):
+    """Checkpoint probe history without ever replacing or dropping the active run reservation.
+
+    Always reload the latest state immediately before mutation. Compare-and-swap
+    conflicts are retried against a fresh snapshot; unrelated state is preserved.
+    """
+    from automation.core.run_ledger_store import parse_run_ledger_json
+    from automation.engines.international.probe_ledger import parse_ledger
+
+    if not isinstance(expected_run_key, str) or len(expected_run_key) != 64:
+        raise ValueError("expected active run key must be a SHA-256 digest")
+    if not isinstance(max_attempts, int) or isinstance(max_attempts, bool) or max_attempts < 1:
+        raise ValueError("max_attempts must be a positive integer")
+    validated_probe = parse_ledger(json.dumps(probe_ledger))
+    for attempt in range(max_attempts):
+        snapshot = store.load()
+        entries = parse_run_ledger_json(json.dumps(snapshot.state["run_ledger"]))
+        matches = [entry for entry in entries if entry.idempotency_key == expected_run_key]
+        if len(matches) != 1 or matches[0].status != "running":
+            raise RuntimeError(
+                "active candidate reservation is missing or not running; refusing probe checkpoint"
+            )
+        updated = dict(snapshot.state)
+        updated["international_probe_ledger"] = validated_probe
+        try:
+            return store.save(updated, snapshot.blob_sha)
+        except RuntimeError as exc:
+            if "durable state changed concurrently" not in str(exc) or attempt + 1 >= max_attempts:
+                raise
+    raise RuntimeError("probe checkpoint could not commit after concurrent state updates")
+
+
 def execute_remote_run(store: GitHubStateStore, request, operation):
     """Run a candidate operation under a durable idempotency reservation."""
     decision = reserve_remote_run(store, request)
