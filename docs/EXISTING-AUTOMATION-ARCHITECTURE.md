@@ -29,7 +29,7 @@ The owner retains structural control. Routine automation may:
 
 Routine automation must preserve every pre-existing row's relative order, group assignment, stream URL and channel number. It must not automatically sort, regroup, renumber, promote, demote, remove or replace an existing row. New discoveries may only be appended to the established manual queues under the existing discovery policy.
 
-The owner-requested one-time migration marker remains a separate, exact-scope authorization. It must not be broadened, consumed by a failed run, or treated as standing permission. It is consumed only after the authorized migration report is successfully published, as defined in the existing policy.
+The former one-time owner-requested IPTV migration was revoked on 2026-11-14. Its workflow branch and queue-promotion scripts are retired. The revoked marker remains only as an audit record; production maintenance does not read it.
 
 ### International-Playlist.m3u — automation-managed
 

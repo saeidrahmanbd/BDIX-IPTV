@@ -138,18 +138,19 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertIn("git add -f epg/epg.xml", refresh)
         self.assertIn("workflow_dispatch:", refresh)
 
-    def test_stale_main_playlist_migration_is_revoked_and_protected(self):
+    def test_owner_curated_main_playlist_has_no_automatic_migration_path(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         mutations = workflow[workflow.index("run_mutations() {"):workflow.index("\n          }", workflow.index("run_mutations() {"))]
-        self.assertIn('d.get("status") == "authorized"', workflow)
-        self.assertIn("OWNER_MIGRATION_REQUESTED=true", workflow)
-        self.assertIn("touch /tmp/iptv-owner-migration-authorized", workflow)
-        self.assertNotIn("sort_playlists.py IPTV-Playlist.m3u", mutations)
-        # The old one-time migration branch remains guarded for audit history,
-        # but its authorization is revoked under the owner-curated architecture.
-        self.assertIn('if [[ "$OWNER_MIGRATION_REQUESTED" != "true" ]]; then', mutations)
-        self.assertIn("python scripts/renumber_active_channels.py IPTV-Playlist.m3u", mutations)
+        for retired in (
+            "OWNER_MIGRATION_REQUESTED",
+            "owner-requested-iptv-migration.json",
+            "probe_owner_requested_main_queues.py",
+            "migrate_owner_requested_main_queues.py",
+            "renumber_active_channels.py",
+        ):
+            self.assertNotIn(retired, workflow)
         self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
+        self.assertIn("python scripts/maintenance_helpers.py canonicalize-extinf", mutations)
         marker = json.loads((ROOT / "maintenance" / "owner-requested-iptv-migration.json").read_text(encoding="utf-8"))
         self.assertEqual(marker["status"], "revoked")
         self.assertIn("revoked_at", marker)

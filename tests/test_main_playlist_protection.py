@@ -2,7 +2,6 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
 from contextlib import redirect_stdout, redirect_stderr
 from io import StringIO
 import sys
@@ -57,39 +56,7 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             [("Indian Movies", "A", "https://a", "1", "a.us")],
         )
 
-    def test_exact_url_approval_cannot_promote_existing_queue_row(self):
-        with tempfile.TemporaryDirectory() as directory:
-            playlist = Path(directory) / "IPTV-Playlist.m3u"
-            state = Path(directory) / "state.json"
-            approvals = Path(directory) / "approvals.json"
-            self.write(playlist, [("New Channels", "Movies Now", "https://a", "", "moviesnow.in")])
-            guard.snapshot(playlist, state)
-            approvals.write_text(json.dumps([{
-                "url": "https://a", "source_group": "New Channels",
-                "target_group": "Indian Movies", "allow_metadata": True
-            }]), encoding="utf-8")
-            self.write(playlist, [("Indian Movies", "Movies Now", "https://a", "1", "moviesnow.in")])
-            with patch.object(guard, "OWNER_APPROVALS", approvals):
-                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
-                    with self.assertRaises(SystemExit):
-                        guard.verify(playlist, state)
 
-    def test_review_cannot_be_promoted_by_cleanup(self):
-        with tempfile.TemporaryDirectory() as directory:
-            playlist = Path(directory) / "IPTV-Playlist.m3u"
-            state = Path(directory) / "state.json"
-            approvals = Path(directory) / "approvals.json"
-            self.write(playlist, [("Review", "Broken candidate", "https://a", "", "broken.in")])
-            guard.snapshot(playlist, state)
-            approvals.write_text(json.dumps([{
-                "url": "https://a", "source_group": "Review",
-                "target_group": "Indian Movies", "allow_metadata": True
-            }]), encoding="utf-8")
-            self.write(playlist, [("Indian Movies", "Broken candidate", "https://a", "1", "broken.in")])
-            with patch.object(guard, "OWNER_APPROVALS", approvals):
-                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
-                    with self.assertRaises(SystemExit):
-                        guard.verify(playlist, state)
 
     def test_canonical_group_sorting_is_blocked_during_routine_maintenance(self):
         self.assert_guard_blocks(
@@ -115,54 +82,21 @@ class MainPlaylistProtectionTests(unittest.TestCase):
              ("Bangladesh", "B metadata fixed", "https://b", "", "b.bd")],
         )
 
-    def test_stale_owner_migration_authorization_cannot_reassemble_or_renumber(self):
-        with tempfile.TemporaryDirectory() as directory:
-            playlist = Path(directory) / "IPTV-Playlist.m3u"
-            state = Path(directory) / "state.json"
-            authorization = Path(directory) / "owner-authorized"
-            authorization.touch()
-            self.write(
-                playlist,
-                [("Indian Movies", "B", "https://b", "23", "b.in"),
-                 ("Bangladesh", "A", "https://a", "", "a.bd")],
-            )
-            guard.snapshot(playlist, state)
-            self.write(
-                playlist,
-                [("Bangladesh", "A", "https://a", "1", "a.bd"),
-                 ("Indian Movies", "B", "https://b", "23", "b.in")],
-            )
-            with patch.object(guard, "OWNER_MIGRATION_AUTHORIZED", authorization):
-                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
-                    with self.assertRaises(SystemExit):
-                        guard.verify(playlist, state)
 
-    def test_owner_migration_cannot_renumber_existing_primary_channels(self):
-        with tempfile.TemporaryDirectory() as directory:
-            playlist = Path(directory) / "IPTV-Playlist.m3u"
-            state = Path(directory) / "state.json"
-            approvals = Path(directory) / "approvals.json"
-            authorization = Path(directory) / "owner-authorized"
-            authorization.touch()
-            self.write(
-                playlist,
-                [("Bangladesh", "A", "https://a", "12", "a.bd"),
-                 ("Bangladesh", "B", "https://b", "23", "b.bd")],
-            )
-            guard.snapshot(playlist, state)
-            approvals.write_text(json.dumps([{
-                "url": "https://a", "source_group": "Bangladesh",
-                "target_group": "Bangladesh", "allow_metadata": True
-            }]), encoding="utf-8")
-            self.write(
-                playlist,
-                [("Bangladesh", "A", "https://a", "1", "a.bd"),
-                 ("Bangladesh", "B", "https://b", "2", "b.bd")],
-            )
-            with patch.object(guard, "OWNER_APPROVALS", approvals), patch.object(guard, "OWNER_MIGRATION_AUTHORIZED", authorization):
-                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
-                    with self.assertRaises(SystemExit):
-                        guard.verify(playlist, state)
+
+    def test_owner_curated_existing_group_and_number_are_immutable(self):
+        before = [
+            ("Backup", "A alternate", "https://a", "501", "a.bd"),
+            ("Bangladesh", "B", "https://b", "12", "b.bd"),
+        ]
+        self.assert_guard_blocks(before, [
+            ("Bangladesh", "A alternate", "https://a", "1", "a.bd"),
+            ("Bangladesh", "B", "https://b", "12", "b.bd"),
+        ])
+        self.assert_guard_blocks(before, [
+            ("Backup", "A alternate", "https://a", "502", "a.bd"),
+            ("Bangladesh", "B", "https://b", "12", "b.bd"),
+        ])
 
     def test_non_primary_rows_must_be_unnumbered(self):
         self.assert_guard_blocks(
@@ -170,22 +104,6 @@ class MainPlaylistProtectionTests(unittest.TestCase):
             [("Backup", "A alternate", "https://a", "1", "a.bd")],
         )
 
-    def test_owner_migration_can_remove_backup_number_when_quarantining_to_review(self):
-        with tempfile.TemporaryDirectory() as directory:
-            playlist = Path(directory) / "IPTV-Playlist.m3u"
-            state = Path(directory) / "state.json"
-            approvals = Path(directory) / "approvals.json"
-            authorization = Path(directory) / "owner-authorized"
-            authorization.touch()
-            self.write(playlist, [("Backup", "A alternate", "https://a", "501", "a.bd")])
-            guard.snapshot(playlist, state)
-            approvals.write_text(json.dumps([{
-                "url": "https://a", "source_group": "Backup",
-                "target_group": "Review", "allow_metadata": True
-            }]), encoding="utf-8")
-            self.write(playlist, [("Review", "A alternate", "https://a", "", "a.bd")])
-            with patch.object(guard, "OWNER_APPROVALS", approvals), patch.object(guard, "OWNER_MIGRATION_AUTHORIZED", authorization):
-                guard.verify(playlist, state)
 
     def test_primary_number_gap_is_blocked(self):
         self.assert_guard_blocks(
@@ -234,69 +152,8 @@ class MainPlaylistProtectionTests(unittest.TestCase):
              ("New Backups", "Duplicate URL", "https://same", "", "a.bd")],
         )
 
-    def test_owner_migration_can_promote_backup_with_new_primary_number(self):
-        with tempfile.TemporaryDirectory() as directory:
-            playlist = Path(directory) / "IPTV-Playlist.m3u"
-            state = Path(directory) / "state.json"
-            approvals = Path(directory) / "approvals.json"
-            authorization = Path(directory) / "owner-authorized"
-            authorization.touch()
-            self.write(playlist, [
-                ("Bangladesh", "Existing", "https://existing", "12", "existing.bd"),
-                ("Backup", "Promoted", "https://promoted", "501", "promoted.bd"),
-            ])
-            guard.snapshot(playlist, state)
-            approvals.write_text(json.dumps([{
-                "url": "https://promoted", "source_group": "Backup",
-                "target_group": "Bangladesh", "allow_metadata": True,
-            }]), encoding="utf-8")
-            self.write(playlist, [
-                ("Bangladesh", "Existing", "https://existing", "12", "existing.bd"),
-                ("Bangladesh", "Promoted", "https://promoted", "13", "promoted.bd"),
-            ])
-            with patch.object(guard, "OWNER_APPROVALS", approvals), patch.object(
-                guard, "OWNER_MIGRATION_AUTHORIZED", authorization
-            ):
-                guard.verify(playlist, state)
 
-    def test_owner_migration_cannot_promote_backup_without_assigned_number(self):
-        with tempfile.TemporaryDirectory() as directory:
-            playlist = Path(directory) / "IPTV-Playlist.m3u"
-            state = Path(directory) / "state.json"
-            approvals = Path(directory) / "approvals.json"
-            authorization = Path(directory) / "owner-authorized"
-            authorization.touch()
-            self.write(playlist, [("Backup", "Promoted", "https://promoted", "501", "promoted.bd")])
-            guard.snapshot(playlist, state)
-            approvals.write_text(json.dumps([{
-                "url": "https://promoted", "source_group": "Backup",
-                "target_group": "Bangladesh", "allow_metadata": True,
-            }]), encoding="utf-8")
-            self.write(playlist, [("Bangladesh", "Promoted", "https://promoted", "", "promoted.bd")])
-            with patch.object(guard, "OWNER_APPROVALS", approvals), patch.object(
-                guard, "OWNER_MIGRATION_AUTHORIZED", authorization
-            ):
-                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
-                    with self.assertRaises(SystemExit):
-                        guard.verify(playlist, state)
 
-    def test_owner_migration_can_fill_missing_primary_number_without_renumbering_existing(self):
-        with tempfile.TemporaryDirectory() as directory:
-            playlist = Path(directory) / "IPTV-Playlist.m3u"
-            state = Path(directory) / "state.json"
-            authorization = Path(directory) / "owner-authorized"
-            authorization.touch()
-            self.write(playlist, [
-                ("Bangladesh", "Existing", "https://existing", "12", "existing.bd"),
-                ("Bangladesh", "Missing number", "https://missing", "", "missing.bd"),
-            ])
-            guard.snapshot(playlist, state)
-            self.write(playlist, [
-                ("Bangladesh", "Existing", "https://existing", "12", "existing.bd"),
-                ("Bangladesh", "Missing number", "https://missing", "1", "missing.bd"),
-            ])
-            with patch.object(guard, "OWNER_MIGRATION_AUTHORIZED", authorization):
-                guard.verify(playlist, state)
 
     def test_missing_primary_number_fill_requires_owner_authorization(self):
         self.assert_guard_blocks(
