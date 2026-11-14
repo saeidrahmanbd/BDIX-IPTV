@@ -163,6 +163,31 @@ def run_blocks_retry(run: dict[str, Any], client=None, workflow_file: str = "new
     return successful_required_job(jobs if isinstance(jobs, list) else [], workflow_file)
 
 
+def watchdog_run_blocks_retry(
+    run: dict[str, Any],
+    client=None,
+    workflow_file: str = "new-channel-discovery.yml",
+) -> bool:
+    """Decide whether a completed run satisfies the watchdog's daily obligation.
+
+    EPG's canonical daily refresh is scheduled for 09:00 Asia/Dhaka. A
+    successful push/workflow_run before 09:00 may have built yesterday's
+    inputs, so it must not suppress the 09:30 recovery dispatch when the
+    scheduled run was missed. Active runs still block overlapping dispatches;
+    successful EPG runs created at/after 09:00 satisfy the daily obligation.
+    """
+    if workflow_file == "epg-refresh.yml":
+        status = str(run.get("status") or "").casefold()
+        if status == "completed":
+            created_at = run.get("created_at")
+            if not created_at:
+                return False
+            local_created = parse_github_timestamp(created_at).astimezone(BD_TZ)
+            if (local_created.hour, local_created.minute) < (9, 0):
+                return False
+    return run_blocks_retry(run, client, workflow_file)
+
+
 def first_run_id(runs: list[dict[str, Any]], client=None, workflow_file: str = "new-channel-discovery.yml") -> int | None:
     """Return the earliest active or genuinely successful discovery run."""
     eligible = [run for run in runs if run_blocks_retry(run, client, workflow_file)]
@@ -418,7 +443,10 @@ def watchdog(workflow_files: list[str]) -> int:
             continue
         runs = client.workflow_runs(workflow_file)
         todays = runs_for_date(runs, target_date)
-        blocking = [run for run in todays if run_blocks_retry(run, client, workflow_file)]
+        blocking = [
+            run for run in todays
+            if watchdog_run_blocks_retry(run, client, workflow_file)
+        ]
         if blocking:
             owner = min(
                 blocking,
