@@ -54,7 +54,7 @@ on:
       - scripts/probe_owner_requested_main_queues.py
       - scripts/migrate_owner_requested_main_queues.py
   workflow_run:
-    workflows: ["IPTV Logo Localization"]
+    workflows: ["Playlist Logo Repair and Localization"]
     types: [completed]
     branches: [main]
   schedule:
