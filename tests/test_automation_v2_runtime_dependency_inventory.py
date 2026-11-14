@@ -34,4 +34,28 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             scan_python(source,"danger.py")
             self.assertFalse(marker.exists())
 
+    def test_detects_shell_and_dynamic_execution_boundaries(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); source=root/"opaque.py"
+            source.write_text(
+                "import subprocess, os\\n"
+                "subprocess.run('python child.py', shell=True)\\n"
+                "os.system('python another.py')\\n"
+                "eval('print(1)')\\n"
+            )
+            found=scan_python(source,"opaque.py")
+            kinds={item["kind"] for item in found}
+            self.assertIn("subprocess_dynamic",kinds)
+            self.assertIn("dynamic_code_execution",kinds)
+
+    def test_inventory_scans_python_outside_scripts_directory(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); (root/"automation").mkdir()
+            (root/"automation"/"engine.py").write_text(
+                "import subprocess\\nsubprocess.run(make_command())\\n"
+            )
+            report=build_inventory(root)
+            self.assertTrue(any(item["source"]=="automation/engine.py"
+                for item in report["nested_subprocess_calls"]))
+
 if __name__=="__main__": unittest.main()
