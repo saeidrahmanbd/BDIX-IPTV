@@ -86,9 +86,13 @@ def build_inventory(root: Path) -> dict:
             })
     nested=[]
     for path in sorted(root.rglob("*.py")):
-        if any(part in {".git", ".venv", "venv", "__pycache__"} for part in path.parts):
+        relative = path.relative_to(root).as_posix()
+        if any(part in {".git", ".venv", "venv", "__pycache__", "automation-v2-production-baseline"} for part in path.parts):
             continue
-        nested.extend(scan_python(path,path.relative_to(root).as_posix()))
+        scope = "test_only" if relative.startswith("tests/") else "repository_runtime"
+        for item in scan_python(path, relative):
+            item["execution_scope"] = scope
+            nested.append(item)
     # Record workflow run blocks as opaque execution boundaries. A static
     # inventory must not imply that shell, npm, node, or action behavior was
     # resolved merely because a Python entrypoint was found.
@@ -110,7 +114,7 @@ def build_inventory(root: Path) -> dict:
                 run_indent=indent
                 active_boundary={"source":workflow.relative_to(root).as_posix(),
                     "line":line_number,"kind":"workflow_shell_boundary","target":None,
-                    "detail":line.rstrip("\r\n")}
+                    "execution_scope":"workflow_runtime","detail":line.rstrip("\r\n")}
                 shell_boundaries.append(active_boundary)
             elif active_boundary is not None:
                 # Preserve the actual shell body so reviewers can resolve
@@ -119,9 +123,15 @@ def build_inventory(root: Path) -> dict:
                 active_boundary["detail"]=(body + "\n" + line.rstrip("\r\n"))
     nested.extend(shell_boundaries)
     known={item["target"] for item in workflow_entries}
-    unresolved=[item for item in nested if item["kind"] in {"subprocess_dynamic","parse_error","dynamic_code_execution","workflow_shell_boundary"}]
-    unresolved.extend(item for item in workflow_actions if item["kind"]=="external_workflow_action" or not item["exists"])
-    missing=[item for item in nested if item["target"] and not (root/item["target"]).is_file()]
+    unresolved_kinds={"subprocess_dynamic","parse_error","dynamic_code_execution","workflow_shell_boundary"}
+    runtime_unresolved=[item for item in nested if item.get("execution_scope")!="test_only" and item["kind"] in unresolved_kinds]
+    test_only_unresolved=[item for item in nested if item.get("execution_scope")=="test_only" and item["kind"] in unresolved_kinds]
+    unresolved=runtime_unresolved + [
+        item for item in workflow_actions
+        if item["kind"]=="external_workflow_action" or not item["exists"]
+    ]
+    missing=[item for item in nested if item.get("execution_scope")!="test_only"
+             and item["target"] and not (root/item["target"]).is_file()]
     missing.extend(item for item in workflow_actions if item["kind"]=="local_workflow_action" and not item["exists"])
     return {
         "schema_version":1,
@@ -137,9 +147,11 @@ def build_inventory(root: Path) -> dict:
             "unpinned_external_workflow_actions":sum(1 for item in workflow_actions if item["kind"]=="external_workflow_action" and not item["immutable_ref"]),
             "nested_subprocess_calls":len(nested),
             "dynamic_or_unparsed_calls":len(unresolved),
+            "test_only_dynamic_or_unparsed_calls":len(test_only_unresolved),
             "missing_literal_targets":len(missing),
         },
         "unresolved":unresolved,
+        "test_only_unresolved":test_only_unresolved,
         "missing_targets":missing,
         "limitations":[
             "Static analysis records dynamic execution and shell boundaries but does not resolve imports, runtime-generated paths, external actions, package scripts or network-loaded code.",
