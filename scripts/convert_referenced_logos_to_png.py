@@ -163,7 +163,7 @@ def convert_referenced_logos(
 
         try:
             png_bytes = image_bytes_to_png(source_path.read_bytes(), extension)
-        source_files_to_remove.add(source_path)
+            source_files_to_remove.add(source_path)
         except Exception as exc:
             raise ValueError(
                 f"failed to convert logo {relative}: {type(exc).__name__}: {exc}"
