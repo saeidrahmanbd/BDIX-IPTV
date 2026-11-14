@@ -41,6 +41,35 @@ class CandidateDiagnosticsSnapshotTests(unittest.TestCase):
             self.assertEqual((run_path.read_bytes(), logo_path.read_bytes()), before)
             self.assertFalse(result["safety"]["playlist_epg_logo_assets_modified"])
 
+
+    def test_symlinked_source_report_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as outside:
+            root = Path(tmp)
+            reports = root / "reports" / "automation-v2"
+            reports.mkdir(parents=True)
+            external = Path(outside) / "run.json"
+            external.write_text(json.dumps({"status": "forged"}), encoding="utf-8")
+            (reports / "candidate-run.json").symlink_to(external)
+            result = build_snapshot(root)
+            self.assertEqual(result["source_files"]["candidate_run"]["error"], "unsafe: symlinked report")
+            self.assertEqual(result["candidate"]["status"], "unavailable")
+
+    def test_symlinked_transaction_directory_is_not_followed(self):
+        with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as outside:
+            root = Path(tmp)
+            reports = root / "reports" / "automation-v2"
+            reports.mkdir(parents=True)
+            target = Path(outside)
+            (target / "transaction-bundle.json").write_text(
+                json.dumps({"ready_for_owner_review": True}), encoding="utf-8")
+            (reports / "candidate-run.json").write_text(
+                json.dumps({"status": "staged_for_owner_review",
+                            "transaction_path": str(root / "linked-transaction")}),
+                encoding="utf-8")
+            (root / "linked-transaction").symlink_to(target, target_is_directory=True)
+            result = build_snapshot(root)
+            self.assertFalse(result["candidate"]["transaction_ready_for_owner_review"])
+
     def test_rejects_transaction_path_outside_repository(self):
         with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as outside:
             root = Path(tmp)
