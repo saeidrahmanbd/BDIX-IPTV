@@ -44,10 +44,10 @@ class IptvDiscoveryAdapterTests(unittest.TestCase):
             (root/"elsewhere"/"inside-repo.png").write_bytes(b"not a logo")
             (root/"logos"/"valid.png").write_bytes(b"valid")
             (root/"logos"/"linked.png").symlink_to(root/"elsewhere"/"inside-repo.png")
-            feed='#EXTM3U\\n'
-            feed += '#EXTINF:-1 tvg-id="valid.in" tvg-name="Valid" tvg-logo="logos/valid.png",Valid\\nhttps://valid.example/live.m3u8\\n'
-            feed += '#EXTINF:-1 tvg-id="linked.in" tvg-name="Linked" tvg-logo="logos/linked.png",Linked\\nhttps://linked.example/live.m3u8\\n'
-            feed += '#EXTINF:-1 tvg-id="traversal.in" tvg-name="Traversal" tvg-logo="logos/../elsewhere/inside-repo.png",Traversal\\nhttps://traversal.example/live.m3u8\\n'
+            feed='#EXTM3U\n'
+            feed += '#EXTINF:-1 tvg-id="valid.in" tvg-name="Valid" tvg-logo="logos/valid.png",Valid\nhttps://valid.example/live.m3u8\n'
+            feed += '#EXTINF:-1 tvg-id="linked.in" tvg-name="Linked" tvg-logo="logos/linked.png",Linked\nhttps://linked.example/live.m3u8\n'
+            feed += '#EXTINF:-1 tvg-id="traversal.in" tvg-name="Traversal" tvg-logo="logos/../elsewhere/inside-repo.png",Traversal\nhttps://traversal.example/live.m3u8\n'
             result=build_discovery_batch(BASE,{"India":feed},root)
         rows={item.extinf.split(",",1)[-1]:item.extinf for item in result.candidates}
         self.assertIn("Valid",rows)
