@@ -30,6 +30,7 @@ PLAYLIST = Path("IPTV-Playlist.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PROTECTED_SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 REMOVAL_REPORT = Path("reports/proposed-removals.md")
+PROTECTED_GROUPS = {"Backup", "Review", "Not Playing"}  # retain legacy group compatibility
 def _canonical_channel_name(value: str) -> str:
     """Normalize display names for exact allowlist matching only."""
     value = unicodedata.normalize("NFKD", str(value or "")).casefold()
