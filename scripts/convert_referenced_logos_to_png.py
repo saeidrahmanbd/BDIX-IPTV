@@ -7,7 +7,6 @@ removed from logos/; Git history remains the rollback/provenance source.
 """
 from __future__ import annotations
 
-import base64
 import hashlib
 import io
 import json
@@ -74,18 +73,21 @@ def image_bytes_to_png(raw: bytes, source_extension: str) -> bytes:
                     f"SVG rendering failed; recovered embedded PNG did not decode: "
                     f"{type(embedded_error).__name__}: {embedded_error}"
                 ) from render_error
-            match = DATA_URI.search(raw)
-            if match is None:
-                raise ValueError("recovered embedded PNG URI disappeared during validation") from render_error
-            replacement = b"data:image/png;base64," + base64.b64encode(recovered)
-            raw = raw[:match.start()] + replacement + raw[match.end():]
-            try:
-                raw = cairosvg.svg2png(bytestring=raw, output_width=1024)
-            except Exception as retry_error:
-                raise ValueError(
-                    f"SVG rendering failed after safe embedded-PNG recovery: "
-                    f"{type(retry_error).__name__}: {retry_error}"
-                ) from retry_error
+            # When an SVG is only a wrapper around an embedded PNG, CairoSVG
+            # may reject a damaged ancillary/IDAT CRC even though the embedded
+            # pixel stream is recoverable. Use the fully decoded, structurally
+            # repaired raster directly instead of asking CairoSVG to decode it
+            # a second time. The common downstream Pillow path normalizes it.
+            with Image.open(io.BytesIO(recovered)) as embedded:
+                embedded.load()
+                output_width = 1024
+                output_height = max(1, round(embedded.height * output_width / embedded.width))
+                normalized_embedded = embedded.resize(
+                    (output_width, output_height), Image.Resampling.LANCZOS
+                )
+                output = io.BytesIO()
+                normalized_embedded.save(output, format="PNG", optimize=True)
+                raw = output.getvalue()
 
     try:
         with Image.open(io.BytesIO(raw)) as source_image:
