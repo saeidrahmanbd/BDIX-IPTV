@@ -5988,5 +5988,15 @@
     "status": "third_party_verified",
     "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/CinecanalLA.png",
     "notes": "Exact external logo asset Wikimedia Commons PD-textlogo; source credited to Fox Networks Group Latin America; logo introduced September 2018 Source page: https://commons.wikimedia.org/wiki/File:CinecanalLA.png"
+  },
+  "IPTV-Playlist.m3u|custom.shikortvcanada|Shikor TV Canada|logos/shikor-tv-canada.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Custom-created local channel artwork, preserved from the previously approved design. This is an unofficial fallback asset and not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|custom.tentvprime|Ten TV Prime|logos/ten-tv-prime.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Custom-created local channel artwork, preserved from the previously approved design. This is an unofficial fallback asset and not an official broadcaster logo."
   }
 }
