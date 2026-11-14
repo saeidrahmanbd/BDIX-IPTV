@@ -15,6 +15,8 @@ from pathlib import Path
 
 
 def _load(path: Path) -> tuple[dict | None, str | None]:
+    if path.is_symlink():
+        return None, "unsafe: symlinked report"
     if not path.is_file():
         return None, "missing"
     try:
@@ -52,7 +54,12 @@ def build_snapshot(root: Path, generated_at: str | None = None) -> dict:
         candidate = raw if raw.is_absolute() else root / raw
         try:
             resolved_root = root.resolve()
-            resolved = candidate.resolve()
+            # Reject symlinks at the transaction root before resolving. The
+            # snapshot must never follow a candidate directory redirected by
+            # an unexpected workspace link.
+            if candidate.is_symlink():
+                raise OSError("transaction path is a symlink")
+            resolved = candidate.resolve(strict=True)
             if resolved.is_relative_to(resolved_root) and resolved.is_dir():
                 transaction_path = resolved
                 transaction, _ = _load(resolved / "transaction-bundle.json")
@@ -114,6 +121,20 @@ def main() -> int:
     args = parser.parse_args()
     root = args.root.resolve()
     output = args.output if args.output.is_absolute() else root / args.output
+    root_resolved = root.resolve()
+    output_parent = output.parent.resolve()
+    if not output_parent.is_relative_to(root_resolved):
+        parser.error("output directory must remain inside the repository root")
+    output = output_parent / output.name
+    protected_inputs = {
+        (root_resolved / "reports/automation-v2/candidate-run.json").resolve(),
+        (root_resolved / "reports/automation-v2/candidate-logo-reference-audit.json").resolve(),
+        (root_resolved / "reports/automation-v2/logo-repair-candidates.json").resolve(),
+    }
+    if output in protected_inputs:
+        parser.error("output must not overwrite a source report")
+    if output.is_symlink():
+        parser.error("output must not be a symlink")
     snapshot = build_snapshot(root)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(snapshot, indent=2, sort_keys=True) + "\n", encoding="utf-8")
