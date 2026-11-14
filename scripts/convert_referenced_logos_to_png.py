@@ -125,6 +125,8 @@ def _validated_png(path: Path) -> bytes | None:
             if image.format != "PNG":
                 return None
             image.load()
+        # Verify structure in a fresh decoder after the full pixel decode.
+        with Image.open(path) as image:
             image.verify()
         return path.read_bytes()
     except Exception:
