@@ -1,5 +1,6 @@
-import json
 from __future__ import annotations
+
+import json
 import tempfile, unittest
 from pathlib import Path
 from scripts.audit_automation_v2_runtime_dependencies import build_inventory, scan_python
