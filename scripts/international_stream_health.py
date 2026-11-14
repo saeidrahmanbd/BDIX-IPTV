@@ -10,7 +10,7 @@ import socket
 import ssl
 import time
 import unicodedata
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 import reorganize_international_playlist as international_policy
 from datetime import date, datetime, timedelta, timezone
@@ -591,6 +591,13 @@ def build_report(events, history, check_date, generated, total):
     recovered = [e for e in events if e["action"] in {"restored", "restored-to-primary", "restored-to-backup"}]
     removed = [e for e in events if e["action"] == "removed-after-three-failed-days"]
     flagged = sum(1 for r in history["entries"].values() if r.get("auto_review") and not r.get("removed"))
+    inconclusive_reasons = Counter(
+        (e.get("reason") or (f"HTTP {e['status']}" if e.get("status") else "Unspecified"))
+        for e in uncertain
+    )
+    inconclusive_statuses = Counter(
+        str(e["status"]) for e in uncertain if int(e.get("status", 0) or 0) > 0
+    )
     lines = [
         "# International Stream Health", "",
         f"- Generated: **{generated}**",
@@ -621,8 +628,13 @@ def build_report(events, history, check_date, generated, total):
     lines += [f"- **{e['name']}** — restored to **{e['group_after']}**" for e in recovered] or ["None."]
     lines += ["", "## Removed after three consecutive failed days", ""]
     lines += [f"- **{e['name']}** — former group: **{e['original_group']}**" for e in removed] or ["None."]
+    lines += ["", "## Inconclusive reason summary", ""]
+    lines += [f"- **{reason}** — {count}" for reason, count in inconclusive_reasons.most_common()] or ["None."]
+    if inconclusive_statuses:
+        lines += ["", "### HTTP status breakdown", ""]
+        lines += [f"- **HTTP {status}** — {count}" for status, count in sorted(inconclusive_statuses.items(), key=lambda item: int(item[0]))]
     lines += ["", "## Inconclusive checks", ""]
-    lines += [f"- **{e['name']}** — HTTP {e['status']}" if e["status"] else f"- **{e['name']}** — {e['reason'] or 'inconclusive'}" for e in uncertain] or ["None."]
+    lines += [f"- **{e['name']}** — HTTP {e['status']} — {e['reason'] or 'inconclusive'}" if e["status"] else f"- **{e['name']}** — {e['reason'] or 'inconclusive'}" for e in uncertain] or ["None."]
     return "\n".join(lines) + "\n"
 
 

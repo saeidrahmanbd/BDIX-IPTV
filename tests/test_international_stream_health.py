@@ -29,6 +29,19 @@ class InternationalStreamHealthTests(unittest.TestCase):
             + entry
         )
 
+    def test_report_summarizes_inconclusive_reasons_and_http_statuses(self):
+        events = [
+            {"state": "inconclusive", "status": 403, "reason": "HTTP 403", "action": "none", "name": "Example 403"},
+            {"state": "inconclusive", "status": 403, "reason": "HTTP 403", "action": "none", "name": "Example 403"},
+            {"state": "inconclusive", "status": 0, "reason": "Timeout", "action": "none", "name": "Example timeout"},
+            {"state": "ok", "status": 200, "reason": "Media bytes received", "action": "none", "name": "Example OK"},
+        ]
+        report = health.build_report(events, {"entries": {}}, "2026-11-14", "2026-11-14T00:00:00+00:00", 4)
+        self.assertIn("## Inconclusive reason summary", report)
+        self.assertIn("**HTTP 403** — 2", report)
+        self.assertIn("**Timeout** — 1", report)
+        self.assertIn("### HTTP status breakdown", report)
+
     def test_first_failure_moves_to_review_and_preserves_metadata(self):
         output, history, events = apply(self.playlist(row()), "fail", {}, "2026-11-07")
         self.assertIn('group-title="Review"', output)
