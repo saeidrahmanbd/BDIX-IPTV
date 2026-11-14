@@ -1,5 +1,5 @@
 # IPTV Playlist Audit
-Generated: **2026-11-14T11:10:29.557914+00:00**
+Generated: **2026-11-14T11:22:28.653499+00:00**
 Source playlist SHA-256: **7fd0e715791c7916376cb3c6b854255968394936eb0c4def468bfa8ce4fb0bc0**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
@@ -1309,6 +1309,14 @@ None.
 
 - Healthy/local references: **1281**
 - External references (review only): **0**
+
+## Logo Exceptions Requiring Repair
+
+Active playlist entries with missing or invalid logo references. These rows are listed for diagnosis; the audit never invents or substitutes artwork.
+
+- **Shikor TV Canada** [custom.shikortvcanada] — Bangladesh — missing — (missing logo reference)
+- **Ten TV Prime** [custom.tentvprime] — Bangladesh — missing — (missing logo reference)
+- **WWE Superstar Central** [wwe.superstar.central.com] — Sports — missing — (missing logo reference)
 
 ## Missing Logos in Discovery Queues
 
