@@ -4,7 +4,7 @@ import unittest
 from datetime import date, datetime, timedelta, timezone
 
 from automation.core.run_ledger import LedgerEntry
-from scripts.reconcile_automation_v2_stale_bundle_lock import is_stale_bundle_reservation
+from scripts.reconcile_automation_v2_stale_bundle_lock import is_orphaned_bundle_reservation
 
 
 class StaleBundleReservationRecoveryTests(unittest.TestCase):
@@ -12,13 +12,13 @@ class StaleBundleReservationRecoveryTests(unittest.TestCase):
         return LedgerEntry("a" * 64, engine, date(2026, 11, 14), "b" * 40,
                            status, 1, started_at)
 
-    def test_missing_timestamp_is_recoverable_only_for_bundle_running_entry(self):
+    def test_any_running_bundle_entry_is_recoverable_after_live_actions_idle_check(self):
         now = datetime(2026, 11, 14, 10, 0, tzinfo=timezone.utc)
         self.assertTrue(is_stale_bundle_reservation(self.entry(), now))
         self.assertFalse(is_stale_bundle_reservation(self.entry(engine="iptv"), now))
         self.assertFalse(is_stale_bundle_reservation(self.entry(status="failed"), now))
 
-    def test_live_lease_is_not_recovered(self):
+    def test_recent_running_bundle_lease_is_recovered_when_actions_is_idle(self):
         now = datetime(2026, 11, 14, 10, 0, tzinfo=timezone.utc)
         started = now - timedelta(minutes=20)
         self.assertFalse(is_stale_bundle_reservation(self.entry(started_at=started), now))
