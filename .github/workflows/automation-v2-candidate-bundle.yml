@@ -46,6 +46,10 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: '3.12'
+      - name: Inventory workflow and nested runtime dependencies
+        if: always()
+        run: |
+          python scripts/audit_automation_v2_runtime_dependencies.py
       - name: Build and stage the three-engine candidate bundle
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -94,6 +98,7 @@ jobs:
           name: automation-v2-candidate-bundle
           path: |
             reports/automation-v2/candidate-run.json
+            reports/automation-v2/runtime-dependency-inventory.json
             reports/automation-v2/candidate-logo-reference-audit.json
             reports/automation-v2/logo-repair-candidates.json
             reports/automation-v2/approved-logo-candidate-playlists.json
