@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14T10:59:46+00:00",
+  "generated": "2026-11-14T11:01:29+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -168,20 +168,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "action.hollywood.movies": {
-      "names": [
-        "Action Hollywood Movies"
-      ],
-      "ids": [
-        "action.hollywood.movies.en"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
     },
     "adntvplus": {
       "names": [
@@ -412,20 +398,6 @@
       "primary": 1,
       "backup": 2
     },
-    "anananda.tv": {
-      "names": [
-        "Ananda TV"
-      ],
-      "ids": [
-        "anananda.tv.bd"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
-    },
     "anandatv": {
       "names": [
         "Ananda TV"
@@ -438,9 +410,9 @@
         "Bangladesh",
         "Review"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 2,
-      "backup": 4
+      "backup": 5
     },
     "anandtv": {
       "names": [
@@ -606,8 +578,7 @@
         "Asianet"
       ],
       "ids": [
-        "asianet.in",
-        "asianet.in@hd"
+        "asianet.in"
       ],
       "groups": [
         "Backup",
@@ -1450,9 +1421,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 2,
-      "backup": 4
+      "backup": 5
     },
     "chhayachitramtelugu": {
       "names": [
@@ -1569,8 +1540,7 @@
     },
     "colors": {
       "names": [
-        "Colors",
-        "Colors HD"
+        "Colors"
       ],
       "ids": [
         "colors.in",
@@ -1601,7 +1571,7 @@
     },
     "colorsbangla": {
       "names": [
-        "Colors Bangla HD"
+        "Colors Bangla"
       ],
       "ids": [
         "colorsbangla.in@hd"
@@ -2890,7 +2860,6 @@
         "DD Sports"
       ],
       "ids": [
-        "ddsports.in@hd",
         "ddsports.in@sd"
       ],
       "groups": [
@@ -3130,7 +3099,6 @@
         "Dhoom Music"
       ],
       "ids": [
-        "dhoommusic.in@sd",
         "dhoommusic.in@sd@dhoom.music"
       ],
       "groups": [
@@ -3646,9 +3614,7 @@
         "ESPN"
       ],
       "ids": [
-        "espn.us",
-        "espn.us@hd",
-        "espn.us@sd"
+        "espn.us"
       ],
       "groups": [
         "Backup",
@@ -3660,7 +3626,7 @@
     },
     "espn2": {
       "names": [
-        "ESPN2 HD"
+        "ESPN2"
       ],
       "ids": [
         "espn2.us@hd"
@@ -4880,11 +4846,12 @@
         "jalshamovies.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Bangla"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "jalwatv": {
       "names": [
@@ -5866,7 +5833,7 @@
     },
     "mmatvcom": {
       "names": [
-        "MMA TV.com 格斗"
+        "MMA TV com 格斗"
       ],
       "ids": [
         "mmatvcom.ru@sd"
@@ -6088,8 +6055,7 @@
         "M Sports"
       ],
       "ids": [
-        "msports.pk@sd",
-        "msports.pk@sd@m.sports"
+        "msports.pk@sd"
       ],
       "groups": [
         "Backup",
@@ -6305,8 +6271,7 @@
         "NBC Sports Now"
       ],
       "ids": [
-        "nbcsportsnow.us@sd",
-        "nbcsportsnow.us@sd@nbc.sports.now"
+        "nbcsportsnow.us@sd"
       ],
       "groups": [
         "Backup",
@@ -6885,8 +6850,7 @@
         "Pitaara TV"
       ],
       "ids": [
-        "pitaara.in@sd",
-        "pitaara.in@sd@pitaara"
+        "pitaara.in@sd"
       ],
       "groups": [
         "Backup",
@@ -6925,20 +6889,6 @@
       "primary": 1,
       "backup": 0
     },
-    "playlist.m3u8": {
-      "names": [
-        "Channel S"
-      ],
-      "ids": [
-        "playlist.m3u8.bd"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
-    },
     "plex.tv.action.hollywood.movies.plex": {
       "names": [
         "Action Hollywood Movies"
@@ -6947,11 +6897,12 @@
         "plex.tv.action.hollywood.movies.plex"
       ],
       "groups": [
+        "Backup",
         "International"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "plex.tv.amc.thrillers.plex": {
       "names": [
@@ -7410,20 +7361,6 @@
       "primary": 1,
       "backup": 0
     },
-    "rajmusictelugu": {
-      "names": [
-        "Raj Musix Telugu"
-      ],
-      "ids": [
-        "rajmusictelugu.in@sd"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
-    },
     "rajmusixkannada": {
       "names": [
         "Raj Musix Kannada"
@@ -7476,11 +7413,12 @@
         "rajmusixtelugu.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Music"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "rajtv": {
       "names": [
@@ -7600,8 +7538,7 @@
         "Real Madrid TV English"
       ],
       "ids": [
-        "realmadridtvenglish.es@sd",
-        "realmadridtvenglish.es@sd@real.madrid.tv.english"
+        "realmadridtvenglish.es@sd"
       ],
       "groups": [
         "Backup",
@@ -8601,12 +8538,11 @@
         "star.jalsha.in"
       ],
       "groups": [
-        "Backup",
         "Review"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "star.jalsha.movies": {
       "names": [
@@ -8616,12 +8552,11 @@
         "star.jalsha.movies.in"
       ],
       "groups": [
-        "Backup",
         "Review"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "starbharat": {
       "names": [
@@ -8667,20 +8602,20 @@
     },
     "starjalsha": {
       "names": [
-        "Star Jalsha",
-        "Star Jalsha HD"
+        "Star Jalsha"
       ],
       "ids": [
         "starjalsha.in@hd",
         "starjalsha.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Bangla",
         "Review"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 2,
-      "backup": 0
+      "backup": 1
     },
     "starmaa": {
       "names": [
@@ -8825,7 +8760,7 @@
     },
     "starsports2telugu": {
       "names": [
-        "Star Sports 2 Telugu HD"
+        "Star Sports 2 Telugu"
       ],
       "ids": [
         "starsports2telugu.in@hd"

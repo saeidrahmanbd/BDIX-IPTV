@@ -1,14 +1,14 @@
 # Logo Provenance Review
 
-Generated: **2026-11-14T10:59:47+00:00**
+Generated: **2026-11-14T11:01:30+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **6d59d90055cc32036f9aeee9d86ad878fbced2364308b6f3ef53228686c91771**
-- International-Playlist.m3u SHA-256: **7f7bb981468afac6c56e54dd488589517d43fc53102c8cb360cf137253957f26**
+- IPTV-Playlist.m3u SHA-256: **7fd0e715791c7916376cb3c6b854255968394936eb0c4def468bfa8ce4fb0bc0**
+- International-Playlist.m3u SHA-256: **7a4bc7da2f2131dbc25986094a3e30fe02503241772fe4730afa8947aec02a7a**
 
 ## Provenance status by playlist
 
@@ -77,30 +77,18 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 
 | Local asset | Channel identity | tvg-id |
 |---|---|---|
-| action-hollywood-movies.png | Action Hollywood Movies | action.hollywood.movies.en |
-| action-hollywood-movies.png | Action Hollywood Movies | plex.tv.Action.Hollywood.Movies.plex |
-| ananda-tv.png | Ananda TV | AnandaTV.bd |
-| ananda-tv.png | Ananda TV | anananda.tv.bd |
-| asianet-576p.png | Asianet | Asianet.in |
-| asianet-576p.png | Asianet | Asianet.in@HD |
-| channel-s.png | Channel S | ChannelS.bd |
-| channel-s.png | Channel S | playlist.m3u8.bd |
 | colors-3cfc323d7c.png | Colors | Colors.in |
-| colors-3cfc323d7c.png | Colors HD | Colors.in@HD |
+| colors-3cfc323d7c.png | Colors | Colors.in@HD |
 | colors-bangla-cinema.png | Colors Bangla Cinema | ColorsBanglaCinema.in@SD |
 | colors-bangla-cinema.png | Colors Bangla Cinema | ColorsBanglaCinema.in@SD@colors.bangla.cinema |
 | dd-national.png | DD National HD (1080p) | DDNational.in@HD |
 | dd-national.png | DD National | DDNational.in@SD |
-| dd-sports-fb997548.png | DD Sports | DDSports.in@HD |
-| dd-sports-fb997548.png | DD Sports | DDSports.in@SD |
 | desi-channel.png | Desi Channel | DesiChannel.in |
 | desi-channel.png | Desi Channel (1080p) | DesiChannel.in@SD |
 | discovery-channel-india.png | Discovery Channel (India) | DiscoveryChannel.in@HD |
 | discovery-channel-india.png | Discovery Channel (India) | DiscoveryChannel.in@SD |
 | e24.png | E24 | E24.in |
 | e24.png | E 24 (576p) | E24.in@SD |
-| espn.png | ESPN | ESPN.us |
-| espn.png | ESPN | ESPN.us@SD |
 | eurosport.png | Eurosport | Eurosport.fr@Asia |
 | eurosport.png | Eurosport | Eurosport.in@SD |
 | eurosport.png | Eurosport 1 Romania | Eurosport1.fr@Romania |
@@ -119,20 +107,12 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | goldmines.png | Goldmines 2 | Goldmines2.in@SD |
 | jalsha-movies.png | Jalsha Movies | JalshaMovies.in@SD |
 | jalsha-movies.png | Jalsha Movies | Star.Jalsha.Movies.in |
-| m-sports.png | M Sports | MSports.pk@SD |
-| m-sports.png | M Sports | MSports.pk@SD@m.sports |
 | mazhavil-manorama.png | Mazhavil Manorama HD (1080p) | MazhavilManorama.in@HD |
 | mazhavil-manorama.png | Mazhavil Manorama | MazhavilManorama.in@SD |
 | mr-bean-animated.png | Mr Bean Animated | MrBeanAnimated.uk |
 | mr-bean-animated.png | Mr Bean Animated (1080p) | MrBeanAnimated.uk@English |
-| nbc-sports-now-48667e2ba4.png | NBC Sports Now | NBCSportsNOW.us@SD |
-| nbc-sports-now-48667e2ba4.png | NBC Sports Now | NBCSportsNOW.us@SD@nbc.sports.now |
-| pitaara-comedy.png | Pitaara | Pitaara.in@SD@pitaara |
-| pitaara-comedy.png | Pitaara Comedy | PitaaraComedy.in@SD |
 | q-tv.png | Q TV | QTV.in |
 | q-tv.png | Q TV | QTV.in@SD |
-| real-madrid-tv-english.png | Real Madrid TV English | RealMadridTVEnglish.es@SD |
-| real-madrid-tv-english.png | Real Madrid TV English | RealMadridTVEnglish.es@SD@real.madrid.tv.english |
 | red-bull-tv-au-4ec4c704c2.png | Red Bull TV AU | RedBullTV.at@AU |
 | red-bull-tv-au-4ec4c704c2.png | Red Bull TV | redbull.com |
 | sonic.png | Sonic | Sonic.in@SD |
@@ -140,10 +120,10 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | sony-pal.png | Sony Pal | SonyPal.in@SD |
 | sony-pal.png | Sony Pal | SonyPal.in@SD@sony.pal |
 | star-jalsha.png | Star Jalsha | Star.Jalsha.in |
-| star-jalsha.png | Star Jalsha HD | StarJalsha.in@HD |
+| star-jalsha.png | Star Jalsha | StarJalsha.in@HD |
 | star-jalsha.png | Star Jalsha | StarJalsha.in@SD |
 | star-sports-2.png | Star Sports 2 | StarSports2.in |
-| star-sports-2.png | Star Sports 2 Telugu HD | StarSports2Telugu.in@HD |
+| star-sports-2.png | Star Sports 2 Telugu | StarSports2Telugu.in@HD |
 | thikana.png | Thikana TV | ThikanaTV.us |
 | thikana.png | Thikana TV | thikana.tv.bd |
 | tolly-tv.png | Tolly TV | TollyTV.in |

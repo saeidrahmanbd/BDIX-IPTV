@@ -1,21 +1,21 @@
 # Cross-Playlist Metadata Backfill
 
-Generated: **2026-11-11T07:41:11+00:00**
+Generated: **2026-11-14T11:00:19+00:00**
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **de1b7f58ac232ec72d734c2aca3bb35070d31536fda83b52f4e4ac1cc39dde5a**
-- International-Playlist.m3u SHA-256: **04d00a92994d4ed13aa2f78ce3d2c0ecf3dc2467eac328f4327fe4d78c36840a**
+- IPTV-Playlist.m3u SHA-256: **7fd0e715791c7916376cb3c6b854255968394936eb0c4def468bfa8ce4fb0bc0**
+- International-Playlist.m3u SHA-256: **7a4bc7da2f2131dbc25986094a3e30fe02503241772fe4730afa8947aec02a7a**
 
-Only missing tvg-country and tvg-language values were filled. Source evidence was an exact tvg-id match or an unambiguous exact tvg-name match. Unknown or ambiguous values remain blank.
+Only missing tvg-country and tvg-language values were filled. Sources: exact playlist tvg-id/channel-id, unique exact channel names, and iptv-org channel/feed metadata. Unresolved broadcast languages are marked und (ISO 639-2 undetermined), never guessed. iptv-org catalogue status: loaded.
 The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, stream URLs, or Backup/Review/Adult/Not Playing entries.
 
 ## Playlist results
 
-| Playlist | Entries changed | Country fields filled | Language fields filled | Active entries still missing either field | Stream URL inventory | SHA-256 |
-|---|---:|---:|---:|---:|---|---|
-| IPTV-Playlist.m3u | 0 | 0 | 0 | 0 | unchanged (7581ebd540e0...) | de1b7f58ac232ec72d734c2aca3bb35070d31536fda83b52f4e4ac1cc39dde5a |
-| International-Playlist.m3u | 0 | 0 | 0 | 896 | unchanged (fc8f60cd00a1...) | 04d00a92994d4ed13aa2f78ce3d2c0ecf3dc2467eac328f4327fe4d78c36840a |
+| Playlist | Entries changed | Country fields filled | Language fields filled | Language marked undetermined | Active entries still missing either field | Stream URL inventory | SHA-256 |
+|---|---:|---:|---:|---:|---:|---|---|
+| IPTV-Playlist.m3u | 0 | 0 | 0 | 0 | 0 | unchanged (5a0a6e938d19...) | 7fd0e715791c7916376cb3c6b854255968394936eb0c4def468bfa8ce4fb0bc0 |
+| International-Playlist.m3u | 0 | 0 | 0 | 0 | 0 | unchanged (f2275dd504fd...) | 7a4bc7da2f2131dbc25986094a3e30fe02503241772fe4730afa8947aec02a7a |
 
 ## Policy
 

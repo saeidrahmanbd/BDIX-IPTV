@@ -1,23 +1,23 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T10:59:02+00:00**
+Generated: **2026-11-14T11:00:47+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **6d59d90055cc32036f9aeee9d86ad878fbced2364308b6f3ef53228686c91771**
-- International-Playlist.m3u SHA-256: **7f7bb981468afac6c56e54dd488589517d43fc53102c8cb360cf137253957f26**
+- IPTV-Playlist.m3u SHA-256: **7fd0e715791c7916376cb3c6b854255968394936eb0c4def468bfa8ce4fb0bc0**
+- International-Playlist.m3u SHA-256: **7a4bc7da2f2131dbc25986094a3e30fe02503241772fe4730afa8947aec02a7a**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **5**
 - File-format/extension mismatches remaining: **3**
-- Raster assets still oversized (max side > 1600px): **6**
-- Raster assets over 512000 bytes: **7**
+- Raster assets still oversized (max side > 1600px): **1**
+- Raster assets over 512000 bytes: **4**
 - Raster/SVG assets with short side under 64 px: **155**
 - Exact-byte duplicate asset clusters: **721**
-- Playlist references whose asset stem differs from the normalized channel name: **1517**
+- Playlist references whose asset stem differs from the normalized channel name: **1512**
 - Unreferenced files immediately inside logos/: **1468** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
@@ -25,7 +25,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| bowling-tv.png | PNG | PNG | 2500×756 | 1600×484 | downscaled, re-encoded/compressed |
+| dazn-ringside.png | PNG | PNG | 1920×1080 | 1600×900 | downscaled, re-encoded/compressed |
+| hoop-tv.png | PNG | PNG | 1920×1080 | 1218×685 | downscaled, re-encoded/compressed |
+| msg-sportszone.png | PNG | PNG | 1920×1080 | 1600×900 | downscaled, re-encoded/compressed |
+| surf-cinema.png | PNG | PNG | 1920×1080 | 706×397 | downscaled, re-encoded/compressed |
 
 ## Remaining extension mismatches
 
@@ -39,23 +43,15 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
-| bowling-tv.png | 2500×756 | 151080 | no |
-| dazn-ringside.png | 1920×1080 | 99685 | yes |
-| hoop-tv.png | 1920×1080 | 1042237 | yes |
 | allo-cine-1080p.jpg | 2152×1208 | 104232 | no |
-| msg-sportszone.png | 1920×1080 | 553756 | yes |
-| surf-cinema.png | 1920×1080 | 2401886 | no |
 
 ## Remaining large assets
 
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
 | famatv-9f148af63b.jpg | 221×87 | 562326 | no |
-| hoop-tv.png | 1920×1080 | 1042237 | yes |
 | famatv-1080p-not-24-7.jpg | 221×87 | 562326 | no |
 | minimax-romania.svg | 0×0 | 992049 | no |
-| msg-sportszone.png | 1920×1080 | 553756 | yes |
-| surf-cinema.png | 1920×1080 | 2401886 | no |
 | README.md | 0×0 | 602694 | no |
 
 ## Small assets requiring visual review
@@ -991,7 +987,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | TBN 24 USA | tbn-24.png | Bangladesh |
 | IPTV-Playlist.m3u | Vision 24 | vision.png | Bangladesh |
-| IPTV-Playlist.m3u | Colors Bangla HD | colors-bangla-hd.png | Indian Bangla |
+| IPTV-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | Indian Bangla |
 | IPTV-Playlist.m3u | Orange Bangla TV | orange-bangla-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Tara TV | tara-tv.png | Indian Bangla |
@@ -1000,7 +996,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Goldmines 2 | goldmines.png | Indian Movies |
 | IPTV-Playlist.m3u | Goldmines Movies 2 | goldmines-movies.png | Indian Movies |
 | IPTV-Playlist.m3u | Indywood TV | indywood-tv.png | Indian Movies |
-| IPTV-Playlist.m3u | Pitaara | pitaara-comedy.png | Backup |
+| IPTV-Playlist.m3u | Pitaara | pitaara-tv.png | Backup |
 | IPTV-Playlist.m3u | Pitaara | pitaara-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Pravasi Channel | pravasi-channel.png | Indian Movies |
 | IPTV-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Indian Movies |
@@ -1143,7 +1139,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Religious |
 | IPTV-Playlist.m3u | ACI Sport TV | aci-sport-tv.png | Sports |
 | IPTV-Playlist.m3u | Channel Fight | channel-fight.png | Sports |
-| IPTV-Playlist.m3u | ESPN2 HD | espn-2-united-states-7a4d2daafc.png | Sports |
+| IPTV-Playlist.m3u | ESPN2 | espn-2-united-states-7a4d2daafc.png | Sports |
 | IPTV-Playlist.m3u | Eurosport 1 Romania | eurosport.png | Sports |
 | IPTV-Playlist.m3u | Eurosport 2 Romania | eurosport.png | Sports |
 | IPTV-Playlist.m3u | Eurosport 4K Romania | eurosport.png | Sports |
@@ -1158,7 +1154,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Golf Channel | golf-channel-73bed53091.png | Sports |
 | IPTV-Playlist.m3u | Hoop TV | hoop-tv.png | Sports |
 | IPTV-Playlist.m3u | MLB | mlb-strike-zone-4930a654ce.png | Sports |
-| IPTV-Playlist.m3u | MMA TV.com 格斗 | mma-tv-com-85ca206b32.png | Sports |
+| IPTV-Playlist.m3u | MMA TV com 格斗 | mma-tv-com-85ca206b32.png | Sports |
 | IPTV-Playlist.m3u | NBA TV | nba-tv.png | Sports |
 | IPTV-Playlist.m3u | Rally TV | rally-tv.png | Sports |
 | IPTV-Playlist.m3u | Real Madrid TV | real-madrid-tv.png | Sports |
@@ -1172,7 +1168,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Red Bull TV US | red-bull-tv-us-4ec4c704c2.png | Sports |
 | IPTV-Playlist.m3u | SN TV | sn-tv.png | Sports |
 | IPTV-Playlist.m3u | Sports First TV | sports-first-tv.png | Sports |
-| IPTV-Playlist.m3u | Star Sports 2 Telugu HD | star-sports-2.png | Sports |
+| IPTV-Playlist.m3u | Star Sports 2 Telugu | star-sports-2.png | Sports |
 | IPTV-Playlist.m3u | Surfer TV | surfer-tv.png | Sports |
 | IPTV-Playlist.m3u | Tennis Channel | tennis-channel.png | Sports |
 | IPTV-Playlist.m3u | Tennis Channel 2 | tennis-channel-2.png | Sports |
@@ -1219,7 +1215,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
 | IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
 | IPTV-Playlist.m3u | Channel S UK | channel-s-uk.png | Backup |
-| IPTV-Playlist.m3u | Dangal | dangal-tv.png | Backup |
 | IPTV-Playlist.m3u | Dangal TV | dangal-tv.png | Backup |
 | IPTV-Playlist.m3u | Dangal TV | dangal-tv.png | Backup |
 | IPTV-Playlist.m3u | Dangal TV | dangal-tv.png | Backup |
@@ -1227,8 +1222,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Deepto TV | deepto-tv.png | Backup |
 | IPTV-Playlist.m3u | Desh TV | desh-tv.png | Backup |
 | IPTV-Playlist.m3u | Desi Channel | desi-channel.png | Backup |
-| IPTV-Playlist.m3u | Dhoom Music | dhoom-music-bangla.png | Backup |
-| IPTV-Playlist.m3u | Dhoom Music | dhoom-music-bangla.png | Backup |
 | IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Backup |
 | IPTV-Playlist.m3u | Ekattor TV | ekattor-tv.png | Backup |
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Backup |
@@ -1238,7 +1231,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | IPTV-Playlist.m3u | Enter TV | enter-tv.png | Backup |
 | IPTV-Playlist.m3u | Enter TV | enter-tv.png | Backup |
-| IPTV-Playlist.m3u | ESPN | espn-united-states-a00882a662.png | Backup |
 | IPTV-Playlist.m3u | Fuel TV | fuel-tv.png | Backup |
 | IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
 | IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
@@ -1288,9 +1280,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Pear TV | pear-tv.png | Backup |
 | IPTV-Playlist.m3u | Peppers TV | peppers-tv.png | Backup |
 | IPTV-Playlist.m3u | Peppers TV | peppers-tv.png | Backup |
-| IPTV-Playlist.m3u | Pitaara | pitaara-comedy.png | Backup |
-| IPTV-Playlist.m3u | Pitaara | pitaara-comedy.png | Backup |
-| IPTV-Playlist.m3u | Pitaara | pitaara-comedy.png | Backup |
+| IPTV-Playlist.m3u | Pitaara | pitaara-tv.png | Backup |
+| IPTV-Playlist.m3u | Pitaara | pitaara-tv.png | Backup |
+| IPTV-Playlist.m3u | Pitaara | pitaara-tv.png | Backup |
 | IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
 | IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
 | IPTV-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
@@ -1302,7 +1294,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Q TV | q-tv.png | Backup |
 | IPTV-Playlist.m3u | Q TV | q-tv.png | Backup |
 | IPTV-Playlist.m3u | Quran TV | quran-tv.png | Backup |
-| IPTV-Playlist.m3u | Raj Musix Telugu | raj-music-telugu.png | Backup |
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Backup |
 | IPTV-Playlist.m3u | Real Madrid TV English | real-madrid-tv-english.png | Backup |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
