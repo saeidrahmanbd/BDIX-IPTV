@@ -45,8 +45,11 @@ def _validate_local_logo(root: Path, value: str) -> str:
         current = current / part
         if current.is_symlink():
             raise ValueError("tvg_logo path cannot contain symlinks")
-    logo_root = logo_root_path.resolve(strict=True)
-    target = current.resolve(strict=True)
+    try:
+        logo_root = logo_root_path.resolve(strict=True)
+        target = current.resolve(strict=True)
+    except FileNotFoundError as exc:
+        raise ValueError("tvg_logo target must be an existing supported local image") from exc
     if not target.is_relative_to(logo_root):
         raise ValueError("tvg_logo must remain inside the repository logos directory")
     if not target.is_file() or target.suffix.lower() not in {".png",".jpg",".jpeg",".webp",".gif",".svg"}:
