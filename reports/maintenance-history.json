@@ -1,19 +1,5 @@
 [
   {
-    "timestamp_utc": "2026-11-09T07:00:29.639484+00:00",
-    "entries": 996,
-    "unique_channel_ids": 635,
-    "duplicate_ids": 195,
-    "duplicate_urls": 0,
-    "metadata_conflicts": 0,
-    "logo_exceptions": null,
-    "primary_number_collisions": 0,
-    "protected_primary_changes": 0,
-    "health_tested": 996,
-    "health_failures": 159,
-    "health_persistent": 127
-  },
-  {
     "timestamp_utc": "2026-11-09T08:49:54.223995+00:00",
     "entries": 1061,
     "unique_channel_ids": 651,
@@ -2518,5 +2504,19 @@
     "health_tested": 1284,
     "health_failures": 184,
     "health_persistent": 171
+  },
+  {
+    "timestamp_utc": "2026-11-14T10:51:34.575892+00:00",
+    "entries": 1284,
+    "unique_channel_ids": 780,
+    "duplicate_ids": 243,
+    "duplicate_urls": 0,
+    "metadata_conflicts": 0,
+    "logo_exceptions": null,
+    "primary_number_collisions": 0,
+    "protected_primary_changes": 0,
+    "health_tested": 1284,
+    "health_failures": 189,
+    "health_persistent": 174
   }
 ]
