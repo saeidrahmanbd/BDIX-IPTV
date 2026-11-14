@@ -122,9 +122,9 @@ def trace_workflow_shell_entrypoints(detail: str, root: Path) -> dict:
         stripped = line.strip()
         if not stripped or stripped.startswith(("run:", "- run:", "#")):
             continue
-        if re.match(r"(?:python|python3|npm|npx|node|git|gh|curl|wget|wrangler)\\b", stripped):
+        if re.match(r"(?:python|python3|npm|npx|node|git|gh|curl|wget|wrangler)\b", stripped):
             commands.append(stripped[:500])
-    heredoc = bool(re.search(r"python(?:3(?:\\.\\d+)?)?\\s+-\\s*<<", detail))
+    heredoc = bool(re.search(r"python(?:3(?:\\.\d+)?)?\s+-\\s*<<", detail))
     return {
         "referenced_python_entrypoints": entrypoints,
         "referenced_python_entrypoints_exist": all((root / target).is_file() for target in entrypoints),
