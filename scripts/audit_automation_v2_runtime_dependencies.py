@@ -58,7 +58,7 @@ def build_inventory(root: Path) -> dict:
             workflow_entries.append({"workflow":path.relative_to(root).as_posix(),
                                      "target":target,"exists":(root/target).is_file()})
     nested=[]
-    for path in sorted(scripts.rglob("*.py")):
+    for path in sorted(root.rglob("*.py")):
         nested.extend(scan_python(path,path.relative_to(root).as_posix()))
     known={item["target"] for item in workflow_entries}
     unresolved=[item for item in nested if item["kind"] in {"subprocess_dynamic","parse_error"}]
