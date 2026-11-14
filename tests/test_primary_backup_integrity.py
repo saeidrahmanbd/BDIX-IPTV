@@ -299,7 +299,7 @@ class PrimaryBackupIntegrityTests(unittest.TestCase):
         self.assertEqual(errors, [])
         repaired = next(line for line in updated.splitlines() if line.startswith("#EXTINF:"))
         keys = re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"', repaired)
-        self.assertEqual([key for key, _ in keys], ["tvg-id", "tvg-name", "tvg-logo", "tvg-language", "group-title"])
+        self.assertEqual([key for key, _ in keys], ["tvg-id", "tvg-name", "tvg-logo", "channel-id", "tvg-country", "tvg-language", "group-title"])
         values = dict(keys)
         self.assertEqual(values["tvg-id"], "sample.bd")
         self.assertEqual(values["tvg-name"], "Sample TV")
