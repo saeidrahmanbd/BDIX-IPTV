@@ -178,7 +178,7 @@ Source playlist SHA-256: **{source_sha}**
 | Stream Health Failures | **{health_fail_value}** |
 | Persistent Failures | **{health_persist_value}** |
 | Near-Duplicate URL Families | **{hnear if health_current else "STALE / UNKNOWN"}** |
-| Audit Blocking Issues | **{issues_value}** |
+| Audit findings (review warnings included) | **{issues_value}** |
 | Pre-Publish Gate | **{gate_status}** |
 | Pre-Publish Gate Generated | **{timestamp(GATE)}** |
 
@@ -238,7 +238,7 @@ Historical records are retained in reports/maintenance-history.json.
     cards=[("Streams",len(e)),("Channel Identities",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Entries",groups.get("Backup",0)),("IPTV Local Logos",logos_value),("IPTV EPG Coverage",epg_coverage_card),("Health Failures",health_fail_value)]
     parts=['<svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650">','<rect width="980" height="650" rx="24" fill="#f8fafc"/>','<rect width="980" height="92" rx="24" fill="#111827"/>',t(42,45,"BDIX-IPTV • PROJECT DASHBOARD",25,True),t(42,70,"Freshness checked • stale metrics labelled",13)]
     for (lab,val),(x,y) in zip(cards,[(34,120),(268,120),(502,120),(736,120),(34,260),(268,260),(502,260),(736,260)]): parts += [f'<rect x="{x}" y="{y}" width="210" height="112" rx="18" fill="white" stroke="#e5e7eb"/>',t(x+18,y+34,lab,14),t(x+18,y+78,val,28,True)]
-    parts += ['<rect x="34" y="400" width="912" height="190" rx="18" fill="white" stroke="#e5e7eb"/>',t(58,435,"Current quality status",18,True),t(58,470,f"Audit blocking issues: {issues_value}",15),t(58,498,f"Pre-publish gate: {gate_status}",15),t(58,526,f"Health failures: {health_fail_value} • persistent: {health_persist_value}",15),t(58,554,f"Generated: {now}",13),'</svg>']
+    parts += ['<rect x="34" y="400" width="912" height="190" rx="18" fill="white" stroke="#e5e7eb"/>',t(58,435,"Current quality status",18,True),t(58,470,f"Audit findings (review warnings included): {issues_value}",15),t(58,498,f"Pre-publish gate: {gate_status}",15),t(58,526,f"Health failures: {health_fail_value} • persistent: {health_persist_value}",15),t(58,554,f"Generated: {now}",13),'</svg>']
     OUT_SVG.write_text("".join(parts),encoding="utf-8")
     OUT_MAINT.write_text(f"""# IPTV Maintenance Report
 
@@ -257,8 +257,12 @@ Source playlist SHA-256: **{source_sha}**
 | EPG programme coverage | **{epg_coverage_card}** |
 | Health failures | **{health_fail_value}** |
 | Persistent health failures | **{health_persist_value}** |
-| Audit blockers | **{issues_value}** |
+| Audit findings (review warnings included) | **{issues_value}** |
 | Pre-publish gate | **{gate_status}** |
+
+## Audit metric scope
+- Audit findings combine blocking defects with non-blocking review warnings, including preserved row-order/category-order and channel-number sequence observations.
+- The Pre-Publish Gate is the authoritative hard-safety-blocker decision; PASS means no hard blockers were detected for this source revision.
 
 ## Protection
 - Duplicate stream URLs are blocking.
