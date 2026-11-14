@@ -48,7 +48,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         }
         for filename, group in expected.items():
             source = (ROOT / ".github" / "workflows" / filename).read_text(encoding="utf-8")
-            match = re.search(r"(?m)^concurrency:\\n  group:\\s*([^\\s#]+)", source)
+            match = re.search(r"(?m)^concurrency:\n  group:\s*([^\s#]+)", source)
             self.assertIsNotNone(match, f"{filename}: full workflow must serialize its daily guard")
             self.assertEqual(match.group(1), group)
 
