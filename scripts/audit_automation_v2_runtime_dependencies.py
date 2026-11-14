@@ -97,7 +97,7 @@ def build_inventory(root: Path) -> dict:
                 # Preserve the actual shell body so reviewers can resolve
                 # command chains, npm/node invocations and inline heredocs.
                 body=active_boundary["detail"]
-                active_boundary["detail"]=(body + "\\n" + stripped)[:4000]
+                active_boundary["detail"]=(body + "\n" + stripped)
     nested.extend(shell_boundaries)
     known={item["target"] for item in workflow_entries}
     unresolved=[item for item in nested if item["kind"] in {"subprocess_dynamic","parse_error","dynamic_code_execution","workflow_shell_boundary"}]
