@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T17:33:19+00:00**
+Generated: **2026-11-14T17:39:40+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -14,12 +14,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1600px): **0**
-- Raster assets over 512000 bytes: **1**
+- Raster assets over 358400 bytes: **3**
 - Raster/SVG assets with short side under 64 px: **154**
-- Exact-byte duplicate asset clusters: **734**
+- Exact-byte duplicate asset clusters: **733**
 - Playlist references whose asset stem differs from the normalized channel name: **1517**
 - Unreferenced files immediately inside logos/: **1468** (not deleted; other tooling or playlists may use them)
-- Technical read/repair errors: **3**
+- Technical read/repair errors: **0**
 
 ## Safe repairs applied
 
@@ -43,15 +43,15 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
+| famatv-9f148af63b.png | 221×87 | 401832 | no |
+| famatv-1080p-not-24-7.png | 221×87 | 401832 | no |
 | README.md | 0×0 | 602694 | no |
 
 ## Technical read/repair errors
 
 | Asset | Detected format | Error |
 |---|---|---|
-| logos/international/nickonline-bob-esponja-720p-not-24-7.png |  | cannot identify image file 'logos/international/nickonline-bob-esponja-720p-not-24-7.png' |
-| logos/international/nickonline-hd-720p.png |  | cannot identify image file 'logos/international/nickonline-hd-720p.png' |
-| logos/unused/yet-tv-custom.png |  | cannot identify image file 'logos/unused/yet-tv-custom.png' |
+| — | — | — |
 
 ## Small assets requiring visual review
 
@@ -602,7 +602,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/new-k-movies-1080p.png, logos/new-k-movies-1080p-fdc6c325b6.png, logos/unused/new-k-movies-1080p-fdc6c325b6.png
 - logos/international/new-k-pop-1080p.png, logos/new-k-pop-1080p-02d85a425b.png, logos/unused/new-k-pop-1080p-02d85a425b.png
 - logos/international/nickelodeon-pluto-tv-720p.png, logos/unused/nickelodeon-pluto-tv-720p-99de7a9302.png
-- logos/international/nickonline-bob-esponja-720p-not-24-7.png, logos/international/nickonline-hd-720p.png
 - logos/international/nonstop-kung-fu-dk.png, logos/international/nonstop-kung-fu-no.png, logos/international/nonstop-kung-fu.png
 - logos/international/one-piece-br.png, logos/international/one-piece-ca.png, logos/international/one-piece-fr.png, logos/international/one-piece-latam.png, logos/international/one-piece-spain.png
 - logos/international/paramount-movie-channel.png, logos/unused/paramount-movie-channel-d46b22ff12.png
