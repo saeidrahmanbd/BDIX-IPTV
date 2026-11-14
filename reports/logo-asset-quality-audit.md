@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T09:14:14+00:00**
+Generated: **2026-11-14T10:08:05+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **553390694b4c14da8ea2535d58576a859c432c02065eb50241d293d5f6fcbecc**
+- IPTV-Playlist.m3u SHA-256: **28452ea733c9b19507aa133b5ed3977264b2aedcf03dc6d997afc11172a79ad6**
 - International-Playlist.m3u SHA-256: **7f7bb981468afac6c56e54dd488589517d43fc53102c8cb360cf137253957f26**
 
 ## Summary
@@ -16,9 +16,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1600px): **6**
 - Raster assets over 512000 bytes: **7**
 - Raster/SVG assets with short side under 64 px: **155**
-- Exact-byte duplicate asset clusters: **719**
+- Exact-byte duplicate asset clusters: **721**
 - Playlist references whose asset stem differs from the normalized channel name: **1517**
-- Unreferenced files immediately inside logos/: **1464** (not deleted; other tooling or playlists may use them)
+- Unreferenced files immediately inside logos/: **1468** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
@@ -851,6 +851,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/shemaroo-josh.png, logos/unused/shemaroo-josh-360p-28e43c141a.png
 - logos/shemaroo-umang-720p.png, logos/shemaroo-umang.png
 - logos/shikor-tv-canada-ac43f0fa9e.png, logos/ten-tv-prime-ac43f0fa9e.png, logos/tv-one-uk-ac43f0fa9e.png
+- logos/solo-calcio-italia.png, logos/solocalcio-italia.png
 - logos/sony-pix-1080p-7e6eaf865e.png, logos/unused/sony-pix-1080p-7e6eaf865e.png
 - logos/sooriyan-tv-1080p.png, logos/sooriyan-tv.png
 - logos/spektratv.png, logos/unused/spektratv-720p-24da903cfa.png
@@ -882,6 +883,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/tarang-tv-720p.png, logos/tarang-tv.png
 - logos/tcm-latin-america-chile-f645084339.png, logos/tcm-latin-america-south-f645084339.png
 - logos/teleritmo.png, logos/unused/teleritmo.png
+- logos/the-q-india-576p.png, logos/the-q.png
 - logos/tigo-sports-honduras-35a2af98a0.png, logos/tigo-sports-paraguay-35a2af98a0.png
 - logos/toonami-aftermath-east.png, logos/toonami-aftermath-movie.png, logos/unused/toonami-aftermath-movie.png
 - logos/trace-africa-1080p-a177d91a65.png, logos/unused/trace-africa-1080p-a177d91a65.png
@@ -1137,6 +1139,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Peace TV Urdu | peace-tv-urdu.png | Religious |
 | IPTV-Playlist.m3u | Q TV | q-tv.png | Religious |
 | IPTV-Playlist.m3u | Quran TV | quran-tv.png | Religious |
+| IPTV-Playlist.m3u | TV One UK | tv-one-uk.png | Religious |
 | IPTV-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Religious |
 | IPTV-Playlist.m3u | ACI Sport TV | aci-sport-tv.png | Sports |
 | IPTV-Playlist.m3u | Channel Fight | channel-fight.png | Sports |
@@ -1168,7 +1171,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Red Bull TV UK | red-bull-tv.png | Sports |
 | IPTV-Playlist.m3u | Red Bull TV US | red-bull-tv-us-4ec4c704c2.png | Sports |
 | IPTV-Playlist.m3u | SN TV | sn-tv.png | Sports |
-| IPTV-Playlist.m3u | Solo Calcio Italia | solocalcio-italia.png | Sports |
 | IPTV-Playlist.m3u | Sports First TV | sports-first-tv.png | Sports |
 | IPTV-Playlist.m3u | Star Sports 2 Telugu HD | star-sports-2.png | Sports |
 | IPTV-Playlist.m3u | Surfer TV | surfer-tv.png | Sports |
@@ -1403,7 +1405,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | CCV (480p) | ccv-480p.png | New Channels |
 | IPTV-Playlist.m3u | Movies Now HD (576p) | movies-now-hd-576p.png | New Channels |
 | IPTV-Playlist.m3u | TamilVision-TV (1080p) | tamilvision-tv-1080p.png | New Channels |
-| IPTV-Playlist.m3u | BTL TV (Netherlands) (1080p) | btl-tv-netherlands-2790d02135.jpg | New Channels |
+| IPTV-Playlist.m3u | BTL TV (Netherlands) (1080p) | btl-tv-netherlands-1080p.png | New Channels |
 | IPTV-Playlist.m3u | NAN TV (720p) | nan-tv.png | New Channels |
 | IPTV-Playlist.m3u | Nickelodeon (India) (576p) | nickelodeon-india.png | New Channels |
 | IPTV-Playlist.m3u | Nick Jr. (India) (576p) | nick-jr-india.png | New Channels |
@@ -1412,7 +1414,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Cartoon Network HD+ (1080p) | cartoon-network-hd-plus-0af84f2a76.png | New Channels |
 | IPTV-Playlist.m3u | CVR Health (576p) | cvr-health.png | New Channels |
 | IPTV-Playlist.m3u | Disha TV (396p) | disha-tv.png | New Channels |
-| IPTV-Playlist.m3u | Doraemon (720p) | doraemon-cf58b50f0c.svg | New Channels |
+| IPTV-Playlist.m3u | Doraemon (720p) | doraemon-720p.png | New Channels |
 | IPTV-Playlist.m3u | Gaunda Punjab TV (720p) | gaunda-punjab-tv-001fec37aa.png | New Channels |
 | IPTV-Playlist.m3u | Hyder TV (720p) | hyder-tv-ab08d4568b.png | New Channels |
 | IPTV-Playlist.m3u | Kabaddi 24x7 (720p) | kabaddi-24x7.png | New Channels |
@@ -1429,7 +1431,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Stingray Easy Listening (1080p) | stingray-easy-listening.png | New Channels |
 | IPTV-Playlist.m3u | Swastik Stories (1080p) | swastik-stories-1080p.png | New Channels |
 | IPTV-Playlist.m3u | The Pet Collective India (720p) | the-pet-collective-india-460b4e0e70.png | New Channels |
-| IPTV-Playlist.m3u | The Q India (576p) | the-q-india.svg | New Channels |
+| IPTV-Playlist.m3u | The Q India (576p) | the-q-india-576p.png | New Channels |
 | IPTV-Playlist.m3u | Travelxp HD (1080p) [Geo-blocked] | travelxp.png | New Channels |
 | IPTV-Playlist.m3u | TV 100 (India) (576p) | tv-100-india.png | New Channels |
 | IPTV-Playlist.m3u | All Time Movies (576p) | all-time-movies.png | New Backups |

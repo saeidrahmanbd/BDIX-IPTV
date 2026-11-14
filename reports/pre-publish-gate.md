@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-14T09:14:15+00:00**
-Source playlist SHA-256: **553390694b4c14da8ea2535d58576a859c432c02065eb50241d293d5f6fcbecc**
+Generated: **2026-11-14T10:08:07+00:00**
+Source playlist SHA-256: **28452ea733c9b19507aa133b5ed3977264b2aedcf03dc6d997afc11172a79ad6**
 
 Status: **PASS**
 
@@ -20,11 +20,11 @@ Status: **PASS**
 - Numbered review entries: **430**
 - Same-ID metadata name conflicts: **2**
 - Orphan Backup entries: **16**
-- Active rows with incomplete required metadata: **4**
+- Active rows with incomplete required metadata: **3**
 - tvg-id/channel-id inconsistencies: **1**
 - Entries missing tvg-language: **60**
 - Raw resolution/geoblock name tags: **59**
-- Missing logos in active groups: **4**
+- Missing logos in active groups: **3**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
@@ -45,14 +45,14 @@ No hard safety blockers detected.
 ## Warnings / Manual Review
 
 - orphan Backup entries awaiting owner review: 16
-- active entries with incomplete identity/country/logo metadata: 4
+- active entries with incomplete identity/country/logo metadata: 3
 - tvg-id/channel-id inconsistencies: 1
 - entries missing tvg-language: 60
 - primary entries missing tvg-chno: 13
 - Backup/Review/discovery entries still numbered: 430
 - same-ID metadata name conflicts: 2
 - raw resolution/geoblock tags in channel names: 59
-- missing logos: 4
+- missing logos: 3
 - New queue candidates pending owner review: 60
 
 ## Review-queue logo gaps
