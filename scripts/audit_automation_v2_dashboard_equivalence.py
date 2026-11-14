@@ -134,11 +134,10 @@ def compute_metrics(root: Path) -> dict:
 
     groups = Counter(row.get("group-title", "") for row in rows)
     active = len({
-        (row.get("tvg-id") or row.get("channel-id") or "").strip().casefold()
+        (row.get("tvg-id") or row.get("channel-id"))
         for row in rows
-        if (row.get("tvg-id") or row.get("channel-id") or "").strip()
-        and row.get("group-title", "").strip().casefold() not in REVIEW_GROUPS
-        and row.get("group-title", "") in ACTIVE_GROUPS
+        if row.get("group-title") in ACTIVE_GROUPS
+        and (row.get("tvg-id") or row.get("channel-id"))
     })
     primary_streams = sum(1 for row in rows if row.get("group-title") in ACTIVE_GROUPS)
     local_count = metric(audit, "Healthy/local references")
@@ -165,8 +164,19 @@ def compute_metrics(root: Path) -> dict:
         map_pct = round(mapped * 100 / epg_ids, 1) if epg_ids else 0.0
         live_pct = round(live * 100 / epg_ids, 1) if epg_ids else 0.0
     else:
-        epg_ids = mapped = live = missing = 0
-        map_pct = live_pct = 0.0
+        total_match = re.search(r"Active unique playlist channel IDs audited:\s*\*\*(\d+)\*\*", epg_coverage, re.I)
+        mapping_match = re.search(r"IDs with an EPG source mapping:\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*\*", epg_coverage, re.I)
+        current_match = re.search(
+            r"IDs with usable current/future (?:English programme data|source schedules \(nonblank (?:English|allowed-language) titles\)):\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*",
+            epg_coverage, re.I,
+        )
+        missing_match = re.search(r"IDs with no EPG source mapping:\s*\*\*(\d+)\*\*", epg_coverage, re.I)
+        epg_ids = int(total_match.group(1)) if total_match else metric(epg_coverage, "Active Indian channels audited")
+        mapped = int(mapping_match.group(1)) if mapping_match else metric(epg_coverage, "Channels with an EPG mapping")
+        live = int(current_match.group(1)) if current_match else 0
+        missing = int(missing_match.group(1)) if missing_match else metric(epg_coverage, "No guide mapping found")
+        live_pct = float(current_match.group(3)) if current_match else 0.0
+        map_pct = float(mapping_match.group(3)) if mapping_match else (round(mapped * 100 / epg_ids, 1) if epg_ids else 0.0)
 
     expected = {
         "Streams": len(rows),
@@ -176,8 +186,8 @@ def compute_metrics(root: Path) -> dict:
         "India": sum(count for group, count in groups.items() if group.startswith("Indian ")),
         "Backup Stream Entries": groups.get("Backup", 0),
         "IPTV Local Logos": logos,
-        "IPTV EPG Programme Coverage": f"{round(live_pct)}%" if epg_current and epg_row else "PENDING",
-        "IPTV EPG Mapping": f"{map_pct:.1f}%" if epg_current and epg_row else "PENDING",
+        "IPTV EPG Programme Coverage": f"{round(live_pct)}%" if epg_current else "PENDING",
+        "IPTV EPG Mapping": f"{map_pct:.1f}%" if epg_current else "PENDING",
         **health_values,
         "Audit Blocking Issues": issues if issues is not None else "STALE / UNKNOWN",
         "Pre-Publish Gate": gate_status,
@@ -222,6 +232,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path("."))
     parser.add_argument("--output", type=Path, default=Path("reports/automation-v2/dashboard-equivalence.json"))
+    parser.add_argument("--strict", action="store_true", help="return non-zero when dashboard metrics differ")
     args = parser.parse_args()
     root = args.root.resolve(strict=True)
     output = args.output if args.output.is_absolute() else root / args.output
@@ -241,7 +252,7 @@ def main() -> int:
         "mismatch_count": len(report["mismatches"]),
         "inputs_current": report["inputs_current"],
     }, indent=2))
-    return 0
+    return 1 if args.strict and not report["equivalent"] else 0
 
 if __name__ == "__main__":
     raise SystemExit(main())
