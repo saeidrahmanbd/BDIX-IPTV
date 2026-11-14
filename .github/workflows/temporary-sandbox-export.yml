@@ -1,0 +1,39 @@
+name: Temporary Sandbox Snapshot Export
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/temporary-sandbox-export.yml
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Package working snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          tar -czf /tmp/bdix-iptv-sandbox-snapshot.tar.gz \
+            --exclude='.git' \
+            logos scripts tests assets docs reports \
+            IPTV-Playlist.m3u International-Playlist.m3u
+          sha256sum /tmp/bdix-iptv-sandbox-snapshot.tar.gz > /tmp/SHA256SUMS.txt
+      - name: Upload snapshot artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bdix-iptv-sandbox-snapshot
+          path: |
+            /tmp/bdix-iptv-sandbox-snapshot.tar.gz
+            /tmp/SHA256SUMS.txt
+          retention-days: 1
+          compression-level: 0
