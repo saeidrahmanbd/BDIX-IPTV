@@ -91,13 +91,13 @@ def build_inventory(root: Path) -> dict:
                 run_indent=indent
                 active_boundary={"source":workflow.relative_to(root).as_posix(),
                     "line":line_number,"kind":"workflow_shell_boundary","target":None,
-                    "detail":line.rstrip("\\r\\n")}
+                    "detail":line.rstrip("\r\n")}
                 shell_boundaries.append(active_boundary)
-            elif active_boundary is not None and stripped:
+            elif active_boundary is not None:
                 # Preserve the actual shell body so reviewers can resolve
                 # command chains, npm/node invocations and inline heredocs.
                 body=active_boundary["detail"]
-                active_boundary["detail"]=(body + "\n" + stripped)
+                active_boundary["detail"]=(body + "\n" + line.rstrip("\r\n"))
     nested.extend(shell_boundaries)
     known={item["target"] for item in workflow_entries}
     unresolved=[item for item in nested if item["kind"] in {"subprocess_dynamic","parse_error","dynamic_code_execution","workflow_shell_boundary"}]
