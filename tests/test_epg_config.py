@@ -234,7 +234,7 @@ class EpgConfigTests(unittest.TestCase):
             self.assertNotIn(private_url, status_line)
             self.assertIn(generate_epg.PRIVATE_SOURCE_LABEL, status_line)
 
-    def test_rtv_schedule_tries_current_daily_then_legacy_https_without_disabling_tls(self):
+    def test_rtv_schedule_tries_current_daily_then_live_then_legacy_https_without_disabling_tls(self):
         weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
         html = "".join(
             f"<p>{day}</p>"
@@ -248,7 +248,7 @@ class EpgConfigTests(unittest.TestCase):
             "urlopen",
             side_effect=[
                 OSError("current daily page unavailable"),
-                OSError("legacy www host temporary network failure"),
+                OSError("official live schedule page unavailable"),
                 io.BytesIO(html.encode("utf-8")),
             ],
         ) as urlopen:
@@ -262,7 +262,7 @@ class EpgConfigTests(unittest.TestCase):
         )
         self.assertEqual(
             urlopen.call_args_list[1].args[0].full_url,
-            "https://www.rtvbd.tv/schedule.php",
+            "https://www.rtvbd.tv/live.php",
         )
         self.assertEqual(
             urlopen.call_args_list[2].args[0].full_url,
