@@ -348,6 +348,12 @@ def main():
         lambda item: [Path(item["path"]).name, f'{item["width_before"]}×{item["height_before"]}', Path(item["path"]).stat().st_size, "yes" if Path(item["path"]).name in active_refs else "no"],
     )
     detail_table(
+        "Technical read/repair errors",
+        errors,
+        ["Asset", "Detected format", "Error"],
+        lambda item: [Path(item["path"]).as_posix(), item.get("format_before", ""), item.get("error", "")],
+    )
+    detail_table(
         "Small assets requiring visual review",
         small,
         ["Asset", "Dimensions", "Active reference"],
