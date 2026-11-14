@@ -245,6 +245,10 @@ jobs:
               python scripts/renumber_active_channels.py IPTV-Playlist.m3u
             fi
             python scripts/verify_international_protected.py verify
+            # Metadata/logo backfills can append attributes after the initial normalizer.
+            # Canonicalize EXTINF attribute order once, after every mutator, without
+            # changing IPTV row order, group assignment, channel numbers or stream URLs.
+            python scripts/maintenance_helpers.py canonicalize-extinf
           }
           for attempt in 1 2 3; do
             git fetch origin main
