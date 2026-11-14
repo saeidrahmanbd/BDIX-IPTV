@@ -315,6 +315,11 @@ for r in rows:
   # Adult entries are explicitly out of scope: preserve every attribute and
   # their original EXTINF line without metadata, logo, or channel-number edits.
   continue
+ if g in {"Review", "Not Playing", "New Channels", "New Backups"}:
+  # These are owner-curated quarantine/discovery queues, not alternate copies
+  # of an active channel. Never inherit a same-name primary ID or rewrite
+  # their identity/metadata during routine normalization.
+  continue
  if g not in EXCLUDE:
   # Bengali-language Colors Bangla Cinema remains a primary Indian Bangla channel.
   # Preserve the original ID and stream; maintain the user's language-first group policy.
