@@ -35,7 +35,6 @@ The following files are invoked or referenced by multiple workflow definitions, 
 | `validate_discovery_run.py` | Maintenance, International discovery, IPTV discovery | Shared finalization semantics may diverge by playlist |
 | `country_verification.py` | Maintenance, International discovery, IPTV discovery | One country validator is used across distinct playlist policies |
 | `reorganize_international_playlist.py` | Maintenance, International discovery, International stream health | International reorganization is called from multiple owners |
-| `sort_playlists.py` | Maintenance, International discovery | Sorting may affect protected ordering if scope is not explicit |
 | `discover_international_channels.py` | Maintenance, International discovery, International stream health | Discovery implementation is imported/called outside its dedicated workflow |
 | `validate_international_playlist.py` | Maintenance, International discovery, International stream health | Same validator sits in multiple write paths |
 | `generate_dashboard.py` | Maintenance, EPG refresh | Dashboard output has multiple producers |
