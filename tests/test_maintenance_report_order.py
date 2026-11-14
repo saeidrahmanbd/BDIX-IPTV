@@ -41,6 +41,17 @@ class MaintenanceReportOrderTests(unittest.TestCase):
                 self.assertIsNotNone(match, f"{relative}: missing job-level concurrency group")
                 self.assertEqual(match.group(1), expected, f"{relative}: writer queue mismatch")
 
+    def test_guarded_workflows_serialize_the_full_run_before_daily_deduplication(self):
+        expected = {
+            "new-channel-discovery.yml": "iptv-new-channel-discovery-run-v1",
+            "epg-refresh.yml": "epg-refresh-run-v1",
+        }
+        for filename, group in expected.items():
+            source = (ROOT / ".github" / "workflows" / filename).read_text(encoding="utf-8")
+            match = re.search(r"(?m)^concurrency:\\n  group:\\s*([^\\s#]+)", source)
+            self.assertIsNotNone(match, f"{filename}: full workflow must serialize its daily guard")
+            self.assertEqual(match.group(1), group)
+
     def test_workflow_run_references_match_real_workflow_names(self):
         workflow_sources = {}
         actual_names = set()
