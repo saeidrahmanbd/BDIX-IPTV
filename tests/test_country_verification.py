@@ -17,18 +17,80 @@ class CountryVerificationTests(unittest.TestCase):
         self.assertEqual((v.country, v.basis), ("BD", "id"))
         self.assertEqual(cv.verify_country({"tvg-id": "Zee.in"}, "Zee", None, "IN").country, "IN")
 
-    def test_ten_tv_prime_custom_id_is_verified_as_bangladeshi(self):
+    def test_ten_tv_prime_custom_id_is_verified_as_indian(self):
         a = {
             "tvg-id": "custom.tentvprime",
             "channel-id": "custom.tentvprime",
-            "tvg-country": "BD",
+            "tvg-country": "IN",
             "tvg-language": "ben",
         }
         verdict = cv.verify_country(a, "Ten TV Prime")
-        self.assertEqual((verdict.country, verdict.basis), ("BD", "curated-exact-id-override"))
-        self.assertFalse(cv.verify_country({**a, "tvg-country": "IN"}, "Ten TV Prime").ok)
-        self.assertFalse(cv.verify_country(a, "Ten TV Prime", feed_country="IN").ok)
+        self.assertEqual((verdict.country, verdict.basis), ("IN", "curated-exact-id-override"))
+        self.assertFalse(cv.verify_country({**a, "tvg-country": "BD"}, "Ten TV Prime").ok)
+        self.assertFalse(cv.verify_country(a, "Ten TV Prime", feed_country="BD").ok)
         self.assertFalse(cv.verify_country({**a, "tvg-id": "custom.other", "channel-id": "custom.other"}, "Ten TV Prime").ok)
+
+    def test_indian_bangla_primary_playlist_classification(self):
+        root = Path(__file__).resolve().parent.parent
+        expected = {
+            "JTV Bangla": ("JTVBangla.in@SD", "IN", "Indian Bangla"),
+            "Ten TV Prime": ("custom.tentvprime", "IN", "Indian Bangla"),
+            "Jalsha Bangla BD": ("JalshaBanglaBD.bd", "BD", "Bangladesh"),
+        }
+        for channel, (channel_id, country, group) in expected.items():
+            matches = []
+            for line in (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8").splitlines():
+                if line.startswith("#EXTINF:") and f'tvg-name="{channel}"' in line:
+                    matches.append(line)
+            self.assertEqual(len(matches), 1, channel)
+            self.assertIn(f'tvg-id="{channel_id}"', matches[0])
+            self.assertIn(f'channel-id="{channel_id}"', matches[0])
+            self.assertIn(f'tvg-country="{country}"', matches[0])
+            self.assertIn(f'group-title="{group}"', matches[0])
+
+    def test_primary_country_and_indian_bangla_group_consistency(self):
+        root = Path(__file__).resolve().parent.parent
+        # Explicitly regionalized UK feed; the broadcaster has a UK edition.
+        feed_country_exceptions = {"GTCPunjabi.in@UK": "GB"}
+        for playlist in ("IPTV-Playlist.m3u", "International-Playlist.m3u"):
+            for line in (root / playlist).read_text(encoding="utf-8").splitlines():
+                if not line.startswith("#EXTINF:"):
+                    continue
+                a = cv.attrs(line)
+                group = a.get("group-title", "")
+                if group in cv.NON_PRIMARY_GROUPS:
+                    continue
+                channel_id = a.get("tvg-id", "")
+                country = a.get("tvg-country", "").upper()
+                suffix_country = cv.id_country(channel_id)
+                if group == "Indian Bangla":
+                    self.assertEqual(country, "IN", line)
+                if group == "Bangladesh":
+                    self.assertNotEqual(suffix_country, "IN", line)
+                if suffix_country in {"BD", "IN"} and country != suffix_country:
+                    self.assertEqual(feed_country_exceptions.get(channel_id), country, line)
+
+    def test_corrected_country_metadata_for_other_groups(self):
+        root = Path(__file__).resolve().parent.parent
+        main = (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8").splitlines()
+        international = (root / "International-Playlist.m3u").read_text(encoding="utf-8").splitlines()
+        q_tv_primary = [line for line in main if line.startswith("#EXTINF:") and 'tvg-id="QTV.in"' in line and 'group-title="Indian Entertainment"' in line]
+        q_tv_alternates = [line for line in main if line.startswith("#EXTINF:") and 'tvg-id="QTV.in@SD"' in line]
+        sindh = [line for line in main if line.startswith("#EXTINF:") and 'tvg-name="Sindh TV"' in line and 'group-title="Pakistani"' in line]
+        yrf = [line for line in international if line.startswith("#EXTINF:") and 'tvg-id="YRFMusic.in@Nepal"' in line]
+        self.assertEqual(len(q_tv_primary), 1)
+        self.assertIn('tvg-country="IN"', q_tv_primary[0])
+        self.assertEqual(len(q_tv_alternates), 3)
+        for line in q_tv_alternates:
+            self.assertIn('tvg-country="IN"', line)
+            self.assertIn('tvg-language="hin"', line)
+            self.assertIn('group-title="Backup"', line)
+        self.assertEqual(len(sindh), 1)
+        self.assertIn('tvg-id="SindhTV.pk@SD"', sindh[0])
+        self.assertIn('channel-id="SindhTV.pk@SD"', sindh[0])
+        self.assertIn('tvg-country="PK"', sindh[0])
+        self.assertEqual(len(yrf), 1)
+        self.assertIn('tvg-country="IN"', yrf[0])
 
     def test_id_conflicts_are_held(self):
         self.assertFalse(cv.verify_country({"tvg-id": "X.in"}, "X", None, "BD").ok)          # feed mismatch
