@@ -111,11 +111,12 @@ class RollbackPolicyTests(unittest.TestCase):
             pr_json.write_text(json.dumps(pr), encoding="utf-8")
             report_path = root / "rollback-report.json"
             script = ROOT / "scripts" / "prepare_automation_v2_rollback_pr.py"
-            subprocess.run(
+            result = subprocess.run(
                 [sys.executable, str(script), "--pr-json", str(pr_json),
                  "--repo-root", str(root), "--report", str(report_path)],
-                cwd=ROOT, check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                cwd=ROOT, check=False, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
             )
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
             for path, content in original.items():
                 self.assertEqual((root / path).read_text(encoding="utf-8"), content)
