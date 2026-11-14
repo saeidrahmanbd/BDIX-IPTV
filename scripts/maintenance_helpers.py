@@ -5,7 +5,7 @@ Policy:
 - A stream may disappear only when its exact normalized channel name is in the
   permanent-removal allowlist or it is the exact, independently verified duplicate
   Backup record listed below.
-- Backup and Not Playing entries are protected except for those exact identities;
+- Backup and Review entries are protected except for those exact identities;
   URL-based authorization never applies to a different channel.
 - EXTINF attribute reordering is normalized for comparison; values, URLs and the
   existence of unrelated records remain protected.
@@ -30,7 +30,6 @@ PLAYLIST = Path("IPTV-Playlist.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PROTECTED_SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 REMOVAL_REPORT = Path("reports/proposed-removals.md")
-PROTECTED_GROUPS = {"Backup", "Review", "Not Playing"}
 def _canonical_channel_name(value: str) -> str:
     """Normalize display names for exact allowlist matching only."""
     value = unicodedata.normalize("NFKD", str(value or "")).casefold()
