@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-14T17:47:24.579425+00:00**
-Source playlist SHA-256: **51bbb54fb8cb3b0e88dde76f1867e227a4e12489d0a86c3e2d74ad0bb410d253**
+Generated: **2026-11-14T18:27:01.286354+00:00**
+Source playlist SHA-256: **7a602ff4a6fe777cc812dcedb118b638ab62913c0987dff0a6ac7d674a974d65**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -8,13 +8,13 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 ## Summary
 
 - Playlist entries: **1284**
-- Unique channel IDs: **767**
+- Unique channel IDs: **766**
 - IDs with multiple streams: **248**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **1**
 - Cross-queue same-ID name variants (review): **1**
-- Cross-queue normalized-name/different-ID groups (review): **16**
+- Cross-queue normalized-name/different-ID groups (review): **15**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
@@ -25,14 +25,14 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **3**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues (review only): **607**
+- Primary channel-number sequence issues (review only): **606**
 - Primary entries missing channel numbers: **13**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **32**
+- Category block-order issues: **30**
 - Category registry issues: **1**
-- Alphabetical ordering issues: **66**
+- Alphabetical ordering issues: **48**
 - Suspicious URL credentials/syntax: **0**
 - Unverified provider playback routes (review only): **0**
 - Signed/tokenized stream URLs: **18**
@@ -72,7 +72,6 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Same normalized name: Goldmines Action [goldminesaction.in] (Backup); Goldmines Action [goldminesaction.in] (Indian Movies); Goldmines Action (576p) [goldminesaction.in@sd] (New Backups)
 - Same normalized name: Jalsha Movies [jalshamovies.in@sd] (Backup); Jalsha Movies [jalshamovies.in@sd] (Indian Bangla); Jalsha Movies [star.jalsha.movies.in] (Review)
 - Same normalized name: Mr Bean Animated [mrbeananimated.uk] (Kids); Mr Bean Animated (1080p) [mrbeananimated.uk@english] (New Backups)
-- Same normalized name: Q TV [qtv.in] (Indian Entertainment); Q TV [qtv.in@sd] (Backup); Q TV [qtv.in@sd] (Religious)
 - Same normalized name: Sony Pal [sonypal.in@sd] (Review); Sony Pal [sonypal.in@sd@sony.pal] (Indian Entertainment)
 - Same normalized name: Star Jalsha [star.jalsha.in] (Review); Star Jalsha [starjalsha.in@hd] (Backup); Star Jalsha [starjalsha.in@hd] (Indian Bangla); Star Jalsha [starjalsha.in@sd] (Review)
 - Same normalized name: Thikana TV [thikana.tv.bd] (Backup); Thikana TV [thikanatv.us] (Bangladesh)
@@ -865,8 +864,9 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 ### punjabitv.in@sd (2 streams)
 - Punjabi TV — Indian Entertainment — https://samitaorigin.tangotv.in/PUNJABITV/SAMITAORIGIN/index.m3u8
 - Punjabi TV — Backup — https://mumt07.tangotv.in/zHjX9OFlPUNJABITV/index.m3u8
-### qtv.in@sd (3 streams)
-- Q TV — Religious — http://163.61.226.31:9981/stream/channelid/359164420?profile=pass
+### qtv.in (4 streams)
+- Q TV — Indian Entertainment — https://fta.ektv.in/live/25/master.m3u8
+- Q TV — Backup — http://163.61.226.31:9981/stream/channelid/359164420?profile=pass
 - Q TV — Backup — https://mumt05.tangotv.in/87NeALx2THEQ/index.m3u8
 - Q TV — Backup — https://samitaorigin.tangotv.in/THEQ/SAMITAORIGIN/index.m3u8
 ### qurantv.iq (2 streams)
@@ -1144,25 +1144,25 @@ None.
 - **Global TV** — expected channel number 33, found 29
 - **JA TV** — expected channel number 34, found 30
 - **Jago News 24** — expected channel number 35, found 31
-- **Jamuna TV** — expected channel number 36, found 33
-- **Jonmobhumi TV** — expected channel number 37, found 35
-- **Maasranga TV** — expected channel number 38, found 37
-- **Matribhumi TV** — expected channel number 39, found 38
-- **ME TV** — expected channel number 40, found 39
-- **Mohona TV** — expected channel number 41, found 40
-- **Movie Bangla** — expected channel number 42, found 41
-- **My TV** — expected channel number 43, found 42
-- **Nagorik TV** — expected channel number 44, found (missing)
-- **News 21** — expected channel number 45, found 43
-- **News 24** — expected channel number 46, found 44
-- **Nexus TV** — expected channel number 47, found 45
-- **NRB TV** — expected channel number 48, found 440
-- **NTV** — expected channel number 49, found 46
-- **NTV Europe** — expected channel number 50, found 47
-- **Probashi TV** — expected channel number 51, found 48
-- **Rajdhani TV** — expected channel number 52, found 49
-- **RTV** — expected channel number 53, found 50
-- **Rupashi Bangla TV** — expected channel number 54, found 51
+- **Jalsha Bangla BD** — expected channel number 36, found 32
+- **Jamuna TV** — expected channel number 37, found 33
+- **Jonmobhumi TV** — expected channel number 38, found 35
+- **Maasranga TV** — expected channel number 39, found 37
+- **Matribhumi TV** — expected channel number 40, found 38
+- **ME TV** — expected channel number 41, found 39
+- **Mohona TV** — expected channel number 42, found 40
+- **Movie Bangla** — expected channel number 43, found 41
+- **My TV** — expected channel number 44, found 42
+- **Nagorik TV** — expected channel number 45, found (missing)
+- **News 21** — expected channel number 46, found 43
+- **News 24** — expected channel number 47, found 44
+- **Nexus TV** — expected channel number 48, found 45
+- **NRB TV** — expected channel number 49, found 440
+- **NTV** — expected channel number 50, found 46
+- **NTV Europe** — expected channel number 51, found 47
+- **Probashi TV** — expected channel number 52, found 48
+- **Rajdhani TV** — expected channel number 53, found 49
+- **RTV** — expected channel number 54, found 50
 
 ## Malformed EXTINF Entries
 
@@ -1170,9 +1170,6 @@ None.
 
 ## Ordering
 
-- category block **Bangladesh** — out of canonical block order
-- category block **Indian Bangla** — out of canonical block order
-- category block **Bangladesh** — out of canonical block order
 - category block **Indian Bangla** — out of canonical block order
 - category block **Indian Movies** — out of canonical block order
 - category block **Indian Bangla** — out of canonical block order
@@ -1191,6 +1188,7 @@ None.
 - category block **Indian Entertainment** — out of canonical block order
 - category block **Indian Entertainment** — out of canonical block order
 - category block **Indian Bangla** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
 - category block **Indian Entertainment** — out of canonical block order
 - category block **Pakistani** — out of canonical block order
 - category block **International** — out of canonical block order
@@ -1210,28 +1208,7 @@ None.
 - **Bangladesh** — **46 — NTV** appears after **440 — NRB TV**
 - **Bangladesh** — **9 — TBN 24 USA** appears after **55 — SRK**
 - **Bangladesh** — **58 — Vision 24** appears after **467 — Time Television**
-- **Bangladesh** — **36 — JTV Bangla** appears after **58 — Vision 24**
 - **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
-- **Bangladesh** — **5 — ATN News** appears after **386 — ATN Bangla UK**
-- **Bangladesh** — **15 — Channel 9** appears after **17 — Channel 52**
-- **Bangladesh** — **18 — Channel I** appears after **390 — Channel Europe**
-- **Bangladesh** — **20 — DBC News** appears after **391 — Channel S UK**
-- **Bangladesh** — **23 — Ekattor TV** appears after **400 — Doyel TV**
-- **Bangladesh** — **46 — NTV** appears after **440 — NRB TV**
-- **Bangladesh** — **9 — TBN 24 USA** appears after **55 — SRK**
-- **Bangladesh** — **58 — Vision 24** appears after **467 — Time Television**
-- **Bangladesh** — **36 — JTV Bangla** appears after **58 — Vision 24**
-- **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
-- **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
-- **Bangladesh** — **5 — ATN News** appears after **386 — ATN Bangla UK**
-- **Bangladesh** — **15 — Channel 9** appears after **17 — Channel 52**
-- **Bangladesh** — **18 — Channel I** appears after **390 — Channel Europe**
-- **Bangladesh** — **20 — DBC News** appears after **391 — Channel S UK**
-- **Bangladesh** — **23 — Ekattor TV** appears after **400 — Doyel TV**
-- **Bangladesh** — **46 — NTV** appears after **440 — NRB TV**
-- **Bangladesh** — **9 — TBN 24 USA** appears after **55 — SRK**
-- **Bangladesh** — **58 — Vision 24** appears after **467 — Time Television**
-- **Bangladesh** — **36 — JTV Bangla** appears after **58 — Vision 24**
 - **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
 - **Indian Movies** — **Tabbar Hits** appears after **Zee Cinema**
 - **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
@@ -1262,6 +1239,9 @@ None.
 - **Indian Entertainment** — **&TV** appears after **KCL TV**
 - **Indian Entertainment** — **Colors** appears after **Colors Gujarati**
 - **Indian Bangla** — **Colors Bangla Cinema** appears after **Zee Bangla**
+- **Indian Entertainment** — **KCL TV** appears after **Pitaara Comedy**
+- **Indian Entertainment** — **&TV** appears after **KCL TV**
+- **Indian Entertainment** — **Colors** appears after **Colors Gujarati**
 - **Indian Entertainment** — **KCL TV** appears after **Pitaara Comedy**
 - **Indian Entertainment** — **&TV** appears after **KCL TV**
 - **Indian Entertainment** — **Colors** appears after **Colors Gujarati**

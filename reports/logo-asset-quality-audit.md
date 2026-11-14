@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T17:47:23+00:00**
+Generated: **2026-11-14T18:27:00+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **51bbb54fb8cb3b0e88dde76f1867e227a4e12489d0a86c3e2d74ad0bb410d253**
+- IPTV-Playlist.m3u SHA-256: **7a602ff4a6fe777cc812dcedb118b638ab62913c0987dff0a6ac7d674a974d65**
 - International-Playlist.m3u SHA-256: **225d5cf541242d32ce489e1dccd3c1fb234fc78fc60e918ae449ff129b48a5dd**
 
 ## Summary
@@ -16,9 +16,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1600px): **0**
 - Raster assets over 512000 bytes: **0**
 - Raster/SVG assets with short side under 64 px: **154**
-- Exact-byte duplicate asset clusters: **733**
+- Exact-byte duplicate asset clusters: **723**
 - Playlist references whose asset stem differs from the normalized channel name: **1517**
-- Unreferenced image assets immediately inside logos/: **1467** (not deleted; other tooling or playlists may use them)
+- Unreferenced image assets immediately inside logos/: **1466** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -242,11 +242,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/a-sports-65a3e1d8fd.png, logos/nvisionbd-verified-a-sports-65a3e1d8fd.png
 - logos/a2i-music-b2b7a2a426.png, logos/international/a2i-music-720p-not-24-7.png
 - logos/aamar-bangla.png, logos/amar-bangla-backup-1.png, logos/amar-bangla.png
-- logos/aaseervatham-tv-360p-c4dc8474a6.png, logos/unused/aaseervatham-tv-360p-c4dc8474a6.png
 - logos/abn-bible-movies-channel-720p-cc14fe65bb.png, logos/unused/abn-bible-movies-channel-720p-cc14fe65bb.png
 - logos/action-24-bd0edfe28d.png, logos/international/action-24-1080p-not-24-7.png, logos/nvisionbd-official-action-24.png
 - logos/activa-tv-720p-0492c146e8.png, logos/unused/activa-tv-720p-0492c146e8.png
-- logos/adhyatm-tv-720p-2506efc675.png, logos/unused/adhyatm-tv-720p-2506efc675.png
 - logos/aflam-f98fdc113e.png, logos/nvisionbd-verified-aflam-f98fdc113e.png
 - logos/afn-tv.png, logos/international/afn-tv.png
 - logos/afra-film-b18a7be433.png, logos/nvisionbd-official-afra-film.png
@@ -264,7 +262,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/amarujala-4ad8f84a24.png, logos/nvisionbd-verified-amarujala-4ad8f84a24.png
 - logos/amc-1080p-95485d9836.png, logos/unused/amc-1080p-95485d9836.png
 - logos/amc-europe-czech-republic.png, logos/amc-europe-hungary-cdbd5044ea.png, logos/amc-latin-america-brazil-cdbd5044ea.png, logos/amc-united-states-720p.png, logos/international/amc-europe-bulgary-576p.png, logos/international/amc-europe-czech-republic.png, logos/international/amc-united-states-1080p-geo-blocked.png, logos/international/amc-united-states-720p.png
-- logos/amc.png, logos/unused/amc.png
 - logos/amedia-hit-1080p.png, logos/international/amedia-hit-1080p.png
 - logos/american-horrors-95025c0d.png, logos/unused/american-horrors-95025c0d.png
 - logos/amg-tv-classic.png, logos/unused/amg-tv-classic.png
@@ -277,11 +274,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/antenne-steiermark-720p.png, logos/international/antenne-steiermark-720p.png
 - logos/apna-punjab-tv-720p.png, logos/apna-punjab-tv.png
 - logos/arabica-tv.png, logos/unused/arabica-tv.png
-- logos/aradana-tv-576p-5ebad635f9.png, logos/unused/aradana-tv-576p-5ebad635f9.png
 - logos/arena-sport-1-premium-serbia-e0c0ac701c.png, logos/arena-sport-1-premium-slovenia-e0c0ac701c.png
-- logos/arirang-cd34632359.png, logos/unused/arirang-cd34632359.png
 - logos/armenia-premium-9b5936f400.png, logos/cctv-9-9b5936f400.png, logos/nvisionbd-official-love-gold-bangla.png, logos/penthouse-quickies-9b5936f400.png, logos/xy-max-9b5936f400.png, logos/xy-mix-9b5936f400.png, logos/xy-plus-9b5936f400.png
-- logos/ary-music-ce70dce4.png, logos/unused/ary-music-ce70dce4.png
 - logos/asharq-discovery-1080p-da46bd8597.png, logos/unused/asharq-discovery-1080p-da46bd8597.png
 - logos/asianet-middle-east-576p.png, logos/international/asianet-middle-east-576p.png
 - logos/asom-live-24-533787c1d6.png, logos/nvisionbd-verified-asom-live-24-533787c1d6.png
@@ -321,11 +315,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/bejoy-kids-823648ad26.png, logos/nvisionbd-official-be-joy-kids.png
 - logos/best-of-dance-tv-1080p.png, logos/international/best-of-dance-tv-1080p.png
 - logos/bflix-movies-576p.png, logos/bflix-movies.png
-- logos/bhagyam-tv-1080p-132ad17dbe.png, logos/unused/bhagyam-tv-1080p-132ad17dbe.png, logos/unused/bhagyam-tv-576p-132ad17dbe.png
+- logos/bhagyam-tv-1080p-132ad17dbe.png, logos/unused/bhagyam-tv-576p-132ad17dbe.png
 - logos/biz-cinema-1080p.png, logos/international/biz-cinema-1080p.png, logos/nvisionbd-official-biz-cinema.png
 - logos/biz-music-720p-9f4c0c5b64.png, logos/international/biz-music-1080p.png, logos/unused/biz-music-720p-9f4c0c5b64.png
 - logos/black-1080p.png, logos/international/black-1080p.png
-- logos/blues-tv.png, logos/unused/blues-tv.png
 - logos/boktv-f08b6a0f7b.png, logos/international/boktv-720p-not-24-7.png
 - logos/bollywood-film-61bc3ef1fe.png, logos/international/bollywood-film.png
 - logos/bollywood-hd-576p.png, logos/international/bollywood-hd-576p.png
@@ -376,7 +369,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/cinemaraton-plus-e964e29b30.png, logos/international/cinemaraton-plus-1080i.png
 - logos/cinemax-2.png, logos/international/cinemax-2-central-europe.png, logos/international/cinemax-2.png
 - logos/cinemax-asia-hd-1080p.png, logos/international/cinemax-asia-720p-geo-blocked.png, logos/international/cinemax-asia-hd-1080p.png
-- logos/cinemax-classics-1080p-2b1cbdb564.png, logos/unused/cinemax-classics-1080p-2b1cbdb564.png
 - logos/cinemax-czech-republic.png, logos/cinemax-united-states-west-720p.png, logos/international/cinemax-central-europe.png, logos/international/cinemax-czech-republic.png, logos/international/cinemax-united-states-west-720p.png
 - logos/cinemax-latin-america-720p.png, logos/international/cinemax-latin-america-720p.png
 - logos/cinevault-westerns.png, logos/international/cinevault-westerns-540p-geo-blocked.png
@@ -432,9 +424,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/discovery-kids-latin-america-387f33e092.png, logos/discovery-kids-latin-america-chile-387f33e092.png, logos/discovery-kids-latin-america-colombia-387f33e092.png, logos/discovery-kids-latin-america-mexico-387f33e092.png
 - logos/disney-channel-czech-republic-9b9957f643.png, logos/disney-channel-germany-9b9957f643.png, logos/disney-channel-poland-9b9957f643.png
 - logos/disney-channel-latin-america-center-1b160711f2.png, logos/disney-channel-latin-america-mexico-1b160711f2.png, logos/disney-channel-latin-america-north-1b160711f2.png, logos/disney-channel-latin-america-panregional-1b160711f2.png, logos/international/disneychannellatinamerica.png
-- logos/disney-international-hd-1080p-1446d4f852.png, logos/unused/disney-international-hd-1080p-1446d4f852.png
 - logos/disney-jr-latin-america-north-044dc1f366.png, logos/disney-junior-czech-republic-044dc1f366.png, logos/international/disney-jr-latin-america-1080p.png, logos/nvisionbd-verified-disney-junior-india-044dc1f366.png, logos/unused/disney-jr-044dc1f3.png
-- logos/disney-junior-360p-943f21478f.png, logos/unused/disney-jr-latin-america-1080p-d4a5b563e8.png, logos/unused/disney-junior-360p-943f21478f.png, logos/unused/disney-junior-d4a5b563e8.png
+- logos/disney-junior-360p-943f21478f.png, logos/unused/disney-jr-latin-america-1080p-d4a5b563e8.png, logos/unused/disney-junior-d4a5b563e8.png
 - logos/disney-xd-poland-7c7a974680.png, logos/disney-xd-united-states-7c7a974680.png
 - logos/disney-xd.png, logos/unused/disney-xd-576p-010b4670bf.png, logos/unused/disney-xd-720p-bc0fb95cc7.png
 - logos/dm-sat-576p.png, logos/international/dm-sat-576p.png
@@ -474,7 +465,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/exa-tv.png, logos/international/exa-tv.png
 - logos/express-news-576p.png, logos/express-news.png
 - logos/fabulosa-estereo-100-5-fm-720p.png, logos/international/fabulosa-estereo-100-5-fm-720p.png
-- logos/famatv-9f148af63b.png, logos/international/famatv-1080p-not-24-7.png
 - logos/fap-tv-5.png, logos/fap-tv-6.png, logos/ptv-home.png, logos/ptv-world.png, logos/ptv.png, logos/unused/ptv.png
 - logos/fashion-tv-aa7f9461cf.png, logos/nvisionbd-official-fashion-tv.png
 - logos/fifa-plus-68fe723cf8.png, logos/fifa-plus-french-68fe723cf8.png, logos/fifa-plus-german-68fe723cf8.png, logos/fifa-plus-hispanic-america-68fe723cf8.png, logos/fifa-plus-italy-68fe723cf8.png, logos/fifa-plus-portuguese-68fe723cf8.png, logos/fifa-plus-spain-68fe723cf8.png, logos/fifa-plus-united-states-68fe723cf8.png, logos/nvisionbd-official-fifa-plus.png
@@ -1000,7 +990,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Orange Bangla TV | orange-bangla-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Tara TV | tara-tv.png | Indian Bangla |
-| IPTV-Playlist.m3u | Ten TV Prime | ten-tv-prime.png | Bangladesh |
+| IPTV-Playlist.m3u | Ten TV Prime | ten-tv-prime.png | Indian Bangla |
 | IPTV-Playlist.m3u | Bollygold | nh-bollygold-dbedeff9.png | Indian Movies |
 | IPTV-Playlist.m3u | Bollywood | bollywood-hd-576p.png | Indian Movies |
 | IPTV-Playlist.m3u | Goldmines 2 | goldmines.png | Indian Movies |
@@ -1055,6 +1045,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Punjabi TV | punjabi-tv-9b4d7425b3.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Puthuyugam TV | puthuyugam-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Q TV | q-tv.png | Indian Entertainment |
+| IPTV-Playlist.m3u | Q TV | q-tv.png | Backup |
 | IPTV-Playlist.m3u | Roja TV | roja-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | SADA TV | sada-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Sana TV | sana-tv.png | Indian Entertainment |
@@ -1143,7 +1134,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Religious |
 | IPTV-Playlist.m3u | Peace TV English | peace-tv-english.png | Religious |
 | IPTV-Playlist.m3u | Peace TV Urdu | peace-tv-urdu.png | Religious |
-| IPTV-Playlist.m3u | Q TV | q-tv.png | Religious |
 | IPTV-Playlist.m3u | Quran TV | quran-tv.png | Religious |
 | IPTV-Playlist.m3u | TV One UK | tv-one-uk.png | Religious |
 | IPTV-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Religious |

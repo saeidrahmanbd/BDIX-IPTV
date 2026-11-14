@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14T17:48:07+00:00",
+  "generated": "2026-11-14T18:27:43+00:00",
   "channels": {
     "7smusic": {
       "names": [
@@ -2232,7 +2232,7 @@
         "custom.tentvprime"
       ],
       "groups": [
-        "Bangladesh"
+        "Indian Bangla"
       ],
       "streams": 1,
       "primary": 1,
@@ -4832,7 +4832,7 @@
         "jalshabanglabd.bd"
       ],
       "groups": [
-        "Indian Bangla"
+        "Bangladesh"
       ],
       "streams": 1,
       "primary": 1,
@@ -4971,15 +4971,15 @@
       "primary": 1,
       "backup": 0
     },
-    "jtv.bangla": {
+    "jtvbangla": {
       "names": [
         "JTV Bangla"
       ],
       "ids": [
-        "jtv.bangla.bd"
+        "jtvbangla.in@sd"
       ],
       "groups": [
-        "Bangladesh"
+        "Indian Bangla"
       ],
       "streams": 1,
       "primary": 1,
@@ -7276,17 +7276,15 @@
         "Q TV"
       ],
       "ids": [
-        "qtv.in",
-        "qtv.in@sd"
+        "qtv.in"
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment",
-        "Religious"
+        "Indian Entertainment"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "qurantv": {
       "names": [
@@ -8133,7 +8131,7 @@
         "Sindh TV"
       ],
       "ids": [
-        "sindhtv.in@sd"
+        "sindhtv.pk@sd"
       ],
       "groups": [
         "Pakistani"

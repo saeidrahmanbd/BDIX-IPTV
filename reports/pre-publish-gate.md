@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-14T17:47:25+00:00**
-Source playlist SHA-256: **51bbb54fb8cb3b0e88dde76f1867e227a4e12489d0a86c3e2d74ad0bb410d253**
+Generated: **2026-11-14T18:27:01+00:00**
+Source playlist SHA-256: **7a602ff4a6fe777cc812dcedb118b638ab62913c0987dff0a6ac7d674a974d65**
 
 Status: **PASS**
 
@@ -15,8 +15,8 @@ Status: **PASS**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **13**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **607**
-- Numbered review entries: **430**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **606**
+- Numbered review entries: **431**
 - Same-ID metadata name conflicts: **1**
 - Orphan Backup entries: **10**
 - Active rows with incomplete required metadata: **0**
@@ -36,7 +36,7 @@ Status: **PASS**
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **607**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **606**.
 
 ## Blocking Reasons
 No hard safety blockers detected.
@@ -46,7 +46,7 @@ No hard safety blockers detected.
 - orphan Backup entries awaiting owner review: 10
 - entries missing tvg-language: 60
 - primary entries missing tvg-chno: 13
-- Backup/Review/discovery entries still numbered: 430
+- Backup/Review/discovery entries still numbered: 431
 - same-ID metadata name conflicts: 1
 - raw resolution/geoblock tags in channel names: 59
 - New queue candidates pending owner review: 60

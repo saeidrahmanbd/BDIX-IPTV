@@ -1,13 +1,13 @@
 # Logo Provenance Review
 
-Generated: **2026-11-14T17:48:08+00:00**
+Generated: **2026-11-14T18:27:44+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **51bbb54fb8cb3b0e88dde76f1867e227a4e12489d0a86c3e2d74ad0bb410d253**
+- IPTV-Playlist.m3u SHA-256: **7a602ff4a6fe777cc812dcedb118b638ab62913c0987dff0a6ac7d674a974d65**
 - International-Playlist.m3u SHA-256: **225d5cf541242d32ce489e1dccd3c1fb234fc78fc60e918ae449ff129b48a5dd**
 
 ## Provenance status by playlist
@@ -111,8 +111,6 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | mazhavil-manorama.png | Mazhavil Manorama | MazhavilManorama.in@SD |
 | mr-bean-animated.png | Mr Bean Animated | MrBeanAnimated.uk |
 | mr-bean-animated.png | Mr Bean Animated (1080p) | MrBeanAnimated.uk@English |
-| q-tv.png | Q TV | QTV.in |
-| q-tv.png | Q TV | QTV.in@SD |
 | red-bull-tv-au-4ec4c704c2.png | Red Bull TV AU | RedBullTV.at@AU |
 | red-bull-tv-au-4ec4c704c2.png | Red Bull TV | redbull.com |
 | sonic.png | Sonic | Sonic.in@SD |

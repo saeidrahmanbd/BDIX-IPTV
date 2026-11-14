@@ -643,7 +643,7 @@ https://samitaorigin.tangotv.in/PUNJABITV/SAMITAORIGIN/index.m3u8
 https://mumt04.tangotv.in/m18aqlK4PUTHUYUGAMTV/index.m3u8
 #EXTINF:-1 tvg-id="QTV.in" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="316" channel-id="QTV.in" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Q TV
 https://fta.ektv.in/live/25/master.m3u8
-#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",Q TV
+#EXTINF:-1 tvg-id="QTV.in" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in" tvg-country="IN" tvg-language="hin" group-title="Backup",Q TV
 http://163.61.226.31:9981/stream/channelid/359164420?profile=pass
 #EXTINF:-1 tvg-id="Rang.in@SD" tvg-name="Rang" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rang.png" tvg-chno="318" channel-id="Rang.in@SD" tvg-country="IN" tvg-language="asm" group-title="Indian Entertainment",Rang
 https://cdn.pishow.tv/ott/live/10017/master.m3u8
@@ -1965,9 +1965,9 @@ https://livingindiaottlive.akamaized.net/punjabihits/index.m3u8
 https://gtc.ottlive.co.in/punjabshort/index.m3u8
 #EXTINF:-1 tvg-id="PunjabiTV.in@SD" tvg-name="Punjabi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/punjabi-tv-9b4d7425b3.png" tvg-chno="314" channel-id="PunjabiTV.in@SD" tvg-country="IN" tvg-language="pan" group-title="Backup",Punjabi TV
 https://mumt07.tangotv.in/zHjX9OFlPUNJABITV/index.m3u8
-#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",Q TV
+#EXTINF:-1 tvg-id="QTV.in" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in" tvg-country="IN" tvg-language="hin" group-title="Backup",Q TV
 https://mumt05.tangotv.in/87NeALx2THEQ/index.m3u8
-#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",Q TV
+#EXTINF:-1 tvg-id="QTV.in" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-chno="373" channel-id="QTV.in" tvg-country="IN" tvg-language="hin" group-title="Backup",Q TV
 https://samitaorigin.tangotv.in/THEQ/SAMITAORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-chno="588" channel-id="QuranTV.iq" tvg-country="IQ" tvg-language="ara" group-title="Backup",Quran TV
 https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8
