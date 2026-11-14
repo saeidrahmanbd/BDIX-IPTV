@@ -107,9 +107,9 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             root=Path(tmp); source=root/"scripts"; source.mkdir()
             policy=root/"automation"/"policy"; policy.mkdir(parents=True)
             (source/"helper.py").write_text(
-                "import subprocess\\n"
-                "def run_git(*args):\\n"
-                "    return subprocess.run(['git', *args], check=True)\\n"
+                "import subprocess\n"
+                "def run_git(*args):\n"
+                "    return subprocess.run(['git', *args], check=True)\n"
             )
             (policy/"process-execution-lock.json").write_text(json.dumps({
                 "schema_version":1,
@@ -133,7 +133,7 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             root=Path(tmp); source=root/"scripts"; source.mkdir()
             policy=root/"automation"/"policy"; policy.mkdir(parents=True)
             (source/"fetch.py").write_text(
-                "import subprocess\\ndef run(*args):\\n    return subprocess.run(args)\\n"
+                "import subprocess\ndef run(*args):\n    return subprocess.run(args)\n"
             )
             (policy/"process-execution-lock.json").write_text(json.dumps({
                 "schema_version":1,
