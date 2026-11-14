@@ -6,6 +6,8 @@
 
 ## 1. Local Python import edges observed
 
+Historical note: the one-time owner-requested IPTV queue migration and its probe script were retired on 2026-11-14 after the owner approved the owner-curated playlist boundary. They are not part of the active automation dependency graph.
+
 | Importing module | Local module dependencies |
 |---|---|
 | `audit_playlist.py` | `playlist_order_policy`, `country_verification`, `restore_protected_review`, `stream_url_identity` |
@@ -18,7 +20,6 @@
 | `final_playlist_hardening.py` | `stream_url_identity`, `country_verification`, `discover_bd_in_new_queues` |
 | `maintenance_helpers.py` | `logo_asset_naming`, `stream_url_identity`, `permanent_removals`, `restore_protected_review` |
 | `migrate_external_logos_fixed.py` | `logo_asset_naming`, `logo_embedded_png` |
-| `migrate_owner_requested_main_queues.py` | `discover_bd_in_new_queues`, `country_verification` |
 | `playlist_policy_repair.py` | `permanent_removals`, `stream_url_identity` |
 | `probe_bangladesh_official_schedule_pages.py` | `official_epg_sources` |
 | `reclassify_main_playlist_groups.py` | `country_verification`, `discover_bd_in_new_queues` |
@@ -35,7 +36,7 @@ Other inspected scripts have no direct local Python import edge in their inspect
 
 ## 2. High-coupling modules
 
-- **Discovery/classification:** `discover_bd_in_new_queues.py` is imported by owner migration, International reorganization, final hardening, main-playlist group reclassification and the discovery wrapper. International discovery is imported by reorganization and discovery-run validation.
+- **Discovery/classification:** `discover_bd_in_new_queues.py` is imported by International reorganization, final hardening, main-playlist group reclassification and the discovery wrapper. International discovery is imported by reorganization and discovery-run validation.
 - **Playlist safety:** `stream_url_identity.py` is a shared primitive across maintenance, audit, protection, migration, reorganization, health and repair. Keep it pure and deterministic.
 - **Country policy:** `country_verification.py` is reused across discovery, migration, reclassification, hardening and audit. Shared evidence parsing should feed separate playlist-specific policies.
 - **EPG:** The generator is a dependency of mapping augmentation and fetch modules. Coverage imports the generator, source registry/cache and mapping policy. Split acquisition, mapping qualification, XMLTV generation and publication.
