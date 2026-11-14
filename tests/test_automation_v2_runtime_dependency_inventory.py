@@ -78,6 +78,22 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             build_block=next(x for x in boundaries if "npm ci" in x["detail"])
             self.assertIn("node build.js",build_block["detail"])
 
+    def test_classifies_workflow_shell_effects_without_marking_trace_complete(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); workflows=root/".github"/"workflows"
+            workflows.mkdir(parents=True)
+            (workflows/"iptv-maintenance.yml").write_text(
+                "jobs:\\n  build:\\n    steps:\\n"
+                "      - name: publish\\n        run: |\\n"
+                "          git push origin HEAD:main\\n"
+            )
+            report=build_inventory(root)
+            boundary=next(x for x in report["nested_subprocess_calls"] if x["kind"]=="workflow_shell_boundary")
+            self.assertEqual(boundary["effect_class"],"direct_repository_writer")
+            self.assertEqual(boundary["workflow_owner_class"],"legacy_production_writer")
+            self.assertFalse(boundary["trace_complete"])
+            self.assertEqual(report["summary"]["direct_repository_writer_shell_boundaries"],1)
+
     def test_ignores_local_function_named_run(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); source=root/"helper.py"
