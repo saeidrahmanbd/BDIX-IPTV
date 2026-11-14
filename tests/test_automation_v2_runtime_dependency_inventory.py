@@ -82,11 +82,11 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             workflows.mkdir(parents=True)
             action=root/".github"/"actions"/"local"
             action.mkdir(parents=True)
-            (action/"action.yml").write_text("name: local\\n")
+            (action/"action.yml").write_text("name: local\n")
             (workflows/"actions.yml").write_text(
-                "jobs:\\n  build:\\n    steps:\\n"
-                "      - uses: actions/checkout@"+("a"*40)+"\\n"
-                "      - uses: ./.github/actions/local\\n"
+                "jobs:\n  build:\n    steps:\n"
+                "      - uses: actions/checkout@"+("a"*40)+"\n"
+                "      - uses: ./.github/actions/local\n"
             )
             report=build_inventory(root)
             self.assertEqual(report["summary"]["workflow_action_references"],2)
