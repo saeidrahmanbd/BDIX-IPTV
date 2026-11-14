@@ -98,5 +98,14 @@ class LogoRepairCandidateTests(unittest.TestCase):
             self.assertEqual(report["counts"]["active_rows"], 3)
 
 
+    def test_symlinked_logos_root_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as outside:
+            root = Path(tmp)
+            (Path(outside) / "Exact Channel.png").write_bytes(b"outside")
+            (root / "logos").symlink_to(Path(outside), target_is_directory=True)
+            with self.assertRaisesRegex(ValueError, "logos root must not be a symlink"):
+                build_proposals(root)
+
+
 if __name__ == "__main__":
     unittest.main()
