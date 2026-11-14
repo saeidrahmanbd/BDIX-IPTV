@@ -1,6 +1,7 @@
 """Tests for Xtream health-check deduplication."""
 from datetime import datetime, timezone
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -86,6 +87,12 @@ class XtreamCheckGuardTests(unittest.TestCase):
         next_bd_day = dict(self.success, created_at="2026-11-07T18:00:00Z")
         self.assertFalse(guard.same_day(next_bd_day, self.current))
 
+
+    def test_github_output_file_uses_a_real_newline(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "output.txt"
+            guard.write_output(str(path), True)
+            self.assertEqual(path.read_text(encoding="utf-8"), "should_run=true\n")
 
 if __name__ == "__main__":
     unittest.main()
