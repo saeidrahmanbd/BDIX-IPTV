@@ -17,18 +17,35 @@ class CountryVerificationTests(unittest.TestCase):
         self.assertEqual((v.country, v.basis), ("BD", "id"))
         self.assertEqual(cv.verify_country({"tvg-id": "Zee.in"}, "Zee", None, "IN").country, "IN")
 
-    def test_ten_tv_prime_custom_id_is_verified_as_bangladeshi(self):
+    def test_ten_tv_prime_custom_id_is_verified_as_indian(self):
         a = {
             "tvg-id": "custom.tentvprime",
             "channel-id": "custom.tentvprime",
-            "tvg-country": "BD",
+            "tvg-country": "IN",
             "tvg-language": "ben",
         }
         verdict = cv.verify_country(a, "Ten TV Prime")
-        self.assertEqual((verdict.country, verdict.basis), ("BD", "curated-exact-id-override"))
-        self.assertFalse(cv.verify_country({**a, "tvg-country": "IN"}, "Ten TV Prime").ok)
-        self.assertFalse(cv.verify_country(a, "Ten TV Prime", feed_country="IN").ok)
+        self.assertEqual((verdict.country, verdict.basis), ("IN", "curated-exact-id-override"))
+        self.assertFalse(cv.verify_country({**a, "tvg-country": "BD"}, "Ten TV Prime").ok)
+        self.assertFalse(cv.verify_country(a, "Ten TV Prime", feed_country="BD").ok)
         self.assertFalse(cv.verify_country({**a, "tvg-id": "custom.other", "channel-id": "custom.other"}, "Ten TV Prime").ok)
+
+    def test_indian_bangla_primary_playlist_classification(self):
+        root = Path(__file__).resolve().parent.parent
+        expected = {
+            "JTV Bangla": ("JTVBangla.in@SD", "IN", "Indian Bangla"),
+            "Ten TV Prime": ("custom.tentvprime", "IN", "Indian Bangla"),
+        }
+        for channel, (channel_id, country, group) in expected.items():
+            matches = []
+            for line in (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8").splitlines():
+                if line.startswith("#EXTINF:") and f'tvg-name="{channel}"' in line:
+                    matches.append(line)
+            self.assertEqual(len(matches), 1, channel)
+            self.assertIn(f'tvg-id="{channel_id}"', matches[0])
+            self.assertIn(f'channel-id="{channel_id}"', matches[0])
+            self.assertIn(f'tvg-country="{country}"', matches[0])
+            self.assertIn(f'group-title="{group}"', matches[0])
 
     def test_id_conflicts_are_held(self):
         self.assertFalse(cv.verify_country({"tvg-id": "X.in"}, "X", None, "BD").ok)          # feed mismatch
