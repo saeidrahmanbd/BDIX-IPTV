@@ -46,7 +46,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         actual_names = set()
         for path in sorted((ROOT / ".github" / "workflows").glob("*.yml")):
             source = path.read_text(encoding="utf-8")
-            match = re.search(r"(?m)^name:\\s*['\"]?(.+?)['\"]?\\s*$", source)
+            match = re.search(r"(?m)^name:\s*['\"]?(.+?)['\"]?\s*$", source)
             if match:
                 actual_names.add(match.group(1))
             workflow_sources[path.name] = source
@@ -54,13 +54,13 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         missing = []
         for filename, source in workflow_sources.items():
             block_match = re.search(
-                r"(?ms)^  workflow_run:\\s*\\n(.*?)(?=^  [A-Za-z_][A-Za-z0-9_-]*:\\s*(?:#.*)?$|\\Z)",
+                r"(?ms)^  workflow_run:\s*\n(.*?)(?=^  [A-Za-z_][A-Za-z0-9_-]*:\s*(?:#.*)?$|\Z)",
                 source,
             )
             if not block_match:
                 continue
             block = block_match.group(1)
-            workflows_match = re.search(r"(?m)^    workflows:\\s*(.*)$", block)
+            workflows_match = re.search(r"(?m)^    workflows:\s*(.*)$", block)
             if not workflows_match:
                 continue
             inline = workflows_match.group(1).strip()
@@ -69,7 +69,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
             else:
                 workflow_list = block.split("    types:", 1)[0]
                 referenced = re.findall(
-                    r"(?m)^      - ['\"]?([^'\"]+?)['\"]?\\s*$",
+                    r"(?m)^      - ['\"]?([^'\"]+?)['\"]?\s*$",
                     workflow_list,
                 )
             missing.extend(
