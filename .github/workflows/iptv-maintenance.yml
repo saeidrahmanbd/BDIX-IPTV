@@ -50,7 +50,6 @@ on:
       - scripts/protect_main_playlist.py
       - tests/test_stream_url_identity.py
       - tests/test_main_playlist_protection.py
-      - tests/test_main_playlist_grouping.py
       - tests/test_report_freshness.py
       - tests/test_maintenance_extinf_canonicalization.py
       - tests/test_pre_publish_gate_logo_paths.py
