@@ -23,7 +23,7 @@ def validate_publication_pr(payload: dict, pull_request_number: int) -> Rollback
     """Accept only a merged Automation V2 candidate PR with allowlisted output files."""
     if not isinstance(payload, dict):
         raise ValueError("publication PR metadata must be an object")
-    if payload.get("state") != "CLOSED" or not payload.get("mergedAt"):
+    if payload.get("state") not in {"CLOSED", "MERGED"} or not payload.get("mergedAt"):
         raise ValueError("source publication PR must be merged and closed")
     if payload.get("baseRefName") != "main":
         raise ValueError("source publication PR must target main")
