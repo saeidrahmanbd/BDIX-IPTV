@@ -100,10 +100,10 @@ EXTRA_DIRECT_HINTS = {
         "license_url": "",
     },
     "WWE Superstar Central": {
-        "url": "https://trademarks.justia.com/media/image.php?serial=99048431",
+        "url": "https://static.trademarkia.com/images/99048431",
         "format": "",
-        "page": "https://trademarks.justia.com/990/48/ww-superstar-99048431.html",
-        "license": "Exact WWE SUPERSTAR CENTRAL figurative mark from the 2025 WWE-owned trademark filing (serial 99048431); image is hosted with the trademark record and must pass PNG validation before localization",
+        "page": "https://www.trademarkia.com/ww-superstar-central-99048431",
+        "license": "Exact WWE figurative mark from the WWE-owned trademark filing (serial 99048431), served by the trademark record image host; source attribution only, not a copyright licence",
         "license_url": "",
     },
     "Channel Fight": {
@@ -552,20 +552,21 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
 
     page_hint = find_mapping(source.DIRECT_PAGE_HINTS, channel)
     if page_hint:
-        page_url, allow_og = page_hint
-        try:
-            image_url = source.find_page_logo(page_url, allow_og_image=allow_og)
-        except (OSError, ValueError, TimeoutError, urllib.error.URLError, json.JSONDecodeError) as exc:
-            print(f"Page-logo lookup failed for {channel}: {type(exc).__name__}: {exc}")
-            image_url = None
-        if image_url:
-            return {
-                "url": image_url,
-                "format": "",
-                "page": page_url,
-                "license": "Logo image served on the broadcaster/station page",
-                "license_url": "",
-            }, "Broadcaster/station page"
+        page_hints = page_hint if isinstance(page_hint, list) else [page_hint]
+        for page_url, allow_og in page_hints:
+            try:
+                image_url = source.find_page_logo(page_url, allow_og_image=allow_og)
+            except (OSError, ValueError, TimeoutError, urllib.error.URLError, json.JSONDecodeError) as exc:
+                print(f"Page-logo lookup failed for {channel} at {page_url}: {type(exc).__name__}: {exc}")
+                image_url = None
+            if image_url:
+                return {
+                    "url": image_url,
+                    "format": "",
+                    "page": page_url,
+                    "license": "Logo image served on the broadcaster/station page",
+                    "license_url": "",
+                }, "Broadcaster/station page"
 
     if iptv_indexes:
         result = source.get_iptv_org_candidate(channel, attrs.get("tvg-id", ""), iptv_indexes)
