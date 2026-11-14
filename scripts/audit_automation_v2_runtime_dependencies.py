@@ -217,14 +217,14 @@ def build_inventory(root: Path) -> dict:
                 active_boundary={"source":workflow.relative_to(root).as_posix(),
                     "line":line_number,"kind":"workflow_shell_boundary","target":None,
                     "execution_scope":"workflow_runtime","detail":line.rstrip("\r\n")}
-                classification=classify_workflow_shell(active_boundary["source"], active_boundary["detail"])
-                active_boundary.update(classification)
                 shell_boundaries.append(active_boundary)
             elif active_boundary is not None:
                 # Preserve the actual shell body so reviewers can resolve
                 # command chains, npm/node invocations and inline heredocs.
                 body=active_boundary["detail"]
                 active_boundary["detail"]=(body + "\n" + line.rstrip("\r\n"))
+    for boundary in shell_boundaries:
+        boundary.update(classify_workflow_shell(boundary["source"], boundary["detail"]))
     nested.extend(shell_boundaries)
     action_lock_path=root/"automation"/"policy"/"external-actions-lock.json"
     try:
