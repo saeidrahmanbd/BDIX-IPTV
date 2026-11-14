@@ -1,15 +1,7 @@
 name: Automation V2 Candidate Bundle
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'automation/core/**'
-      - 'automation/engines/**'
-      - 'scripts/run_automation_v2_candidate_bundle.py'
-      - '.github/workflows/automation-v2-candidate-bundle.yml'
-  # V2 shadow execution is paused. Keep manual dispatch for explicit diagnostics only.
+  # V2 candidate execution is paused; keep manual dispatch for explicit diagnostics only.
   workflow_dispatch:
 
 permissions:
