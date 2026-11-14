@@ -29,6 +29,7 @@ PRIMARY_GROUPS = [
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
 ]
 GROUP_ORDER = PRIMARY_GROUPS + ["Backup", "New Channels", "New Backups", "Review"]
+CANONICAL_ATTR_ORDER = ["tvg-id", "tvg-name", "tvg-logo", "tvg-chno", "channel-id", "tvg-country", "tvg-language", "group-title"]
 REVIEW_GROUPS = {"Review", "New Channels", "New Backups", "Not Playing"}
 LEGACY_GROUPS = {"Not Playing": "Review"}
 
@@ -88,6 +89,20 @@ def split_extinf(info: str) -> tuple[str, str]:
         elif char == "," and not quoted:
             return info[:index], info[index + 1:]
     return info, ""
+
+
+def canonicalize_extinf(info: str) -> str:
+    """Serialize known EXTINF attributes in one stable order without changing values."""
+    head, display = split_extinf(info)
+    matches = ATTR.findall(head)
+    if not matches:
+        return info
+    values = dict(matches)
+    prefix = head.split(None, 1)[0]
+    ordered = [key for key in CANONICAL_ATTR_ORDER if key in values]
+    ordered.extend(key for key, _ in matches if key not in CANONICAL_ATTR_ORDER and key not in ordered)
+    rendered = " ".join(f'{key}="{values[key]}"' for key in ordered)
+    return prefix + (" " + rendered if rendered else "") + ("," + display if "," in info else "")
 
 
 def set_attr(info: str, key: str, value: str) -> str:
@@ -463,6 +478,9 @@ def repair_playlist_text(text: str) -> tuple[str, dict[str, object], list[str]]:
                     info = remove_attr(info, "tvg-logo")
                     stats["review_invalid_logos_cleared"] += 1
             record[0] = info
+
+    for record in records:
+        record[0] = canonicalize_extinf(record[0])
 
     rank = {name: index for index, name in enumerate(GROUP_ORDER)}
     # Stable category-only sort: enforce the user's category order while
