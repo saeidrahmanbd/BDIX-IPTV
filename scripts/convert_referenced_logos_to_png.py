@@ -18,12 +18,22 @@ from urllib.parse import quote, unquote
 import cairosvg
 from PIL import Image, ImageOps
 
+import repair_playlist_logos as logo_repair
+
 ROOT = Path(__file__).resolve().parents[1]
 LOGOS = ROOT / "logos"
 PLAYLISTS = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 REPORT = ROOT / "reports" / "logo-format-conversion.md"
 CONVERTIBLE_EXTENSIONS = {".jpg", ".jpeg", ".webp", ".svg", ".avif"}
+BLOCKED_OUTPUT_NAMES = set(logo_repair.BAD_ASSETS | logo_repair.GENERIC_ASSETS) | {
+    "atn-news.png", "a-sports-5485adff.png", "a-sports-hd.png", "bein-sports-3.png",
+    "bangla-tv.png", "btv-news.png", "colors.png", "duronto-tv.png",
+    "duronto-tv-1ad55c95.png", "ekushey-tv.png", "global-tv.png", "green-tv.png",
+    "mohona-tv.png", "nagorik-tv.png", "nagorik.png", "nick-bangla.png",
+    "sananda-tv.png", "sananda.png", "star-gold-select.png", "star-gold.png",
+    "star-plus.png", "zee-tv.png", "tom-and-jerry.png", "arirang-tv.png",
+}
 LOGO_RE = re.compile(r'tvg-logo="([^"]*)"')
 
 
@@ -118,7 +128,10 @@ def convert_referenced_logos(
         png_bytes = image_bytes_to_png(source_path.read_bytes(), extension)
         digest = hashlib.sha256(png_bytes).hexdigest()[:10]
         target = source_path.with_suffix(".png")
-        if target.exists() and target.read_bytes() != png_bytes:
+        if (
+            target.name.casefold() in BLOCKED_OUTPUT_NAMES
+            or (target.exists() and target.read_bytes() != png_bytes)
+        ):
             target = source_path.with_name(f"{source_path.stem}-converted-{digest}.png")
         if target.exists():
             if target.read_bytes() != png_bytes:
