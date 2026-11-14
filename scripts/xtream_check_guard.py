@@ -140,6 +140,11 @@ class GitHubActions:
         return result.get("jobs", []) if isinstance(result, dict) else []
 
 
+def write_output(path: str, execute: bool) -> None:
+    """Write a correctly newline-terminated GitHub Actions output value."""
+    with open(path, "a", encoding="utf-8") as handle:
+        handle.write(f"should_run={'true' if execute else 'false'}\n")
+
 def main() -> int:
     repository = os.environ["GITHUB_REPOSITORY"]
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
@@ -156,8 +161,7 @@ def main() -> int:
     execute = should_current_run_execute(runs, current, event, attempt, client)
     output = os.environ.get("GITHUB_OUTPUT")
     if output:
-        with open(output, "a", encoding="utf-8") as handle:
-            handle.write(f"should_run={'true' if execute else 'false'}\\n")
+        write_output(output, execute)
     if execute:
         print(
             f"Xtream check accepted: source revision {current['head_sha']} "
