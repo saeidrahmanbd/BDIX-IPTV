@@ -190,7 +190,8 @@ def watchdog_run_blocks_retry(
 
 def first_run_id(runs: list[dict[str, Any]], client=None, workflow_file: str = "new-channel-discovery.yml") -> int | None:
     """Return the earliest active or genuinely successful discovery run."""
-    eligible = [run for run in runs if run_blocks_retry(run, client, workflow_file)]
+    owner_check = watchdog_run_blocks_retry if workflow_file == "epg-refresh.yml" else run_blocks_retry
+    eligible = [run for run in runs if owner_check(run, client, workflow_file)]
     if not eligible:
         return None
     ordered = sorted(
@@ -260,10 +261,11 @@ def should_current_run_execute(
         if earlier_scheduled_active:
             return False
 
+    owner_check = watchdog_run_blocks_retry if workflow_file == "epg-refresh.yml" else run_blocks_retry
     successful_others = [
         run for run in others
         if str(run.get("status") or "").casefold() == "completed"
-        and run_blocks_retry(run, client, workflow_file)
+        and owner_check(run, client, workflow_file)
     ]
     if successful_others:
         return False
