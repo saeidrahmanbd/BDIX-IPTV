@@ -177,5 +177,58 @@ class ApprovedLogoCandidateTests(unittest.TestCase):
             self.assertTrue(candidate.read_bytes().startswith(b"\xef\xbb\xbf"))
 
 
+    def test_international_approval_is_scoped_to_international_candidate_only(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "logos").mkdir()
+            asset = root / "logos" / "International Channel.png"
+            asset.write_bytes(b"verified-international-image")
+            iptv = root / "IPTV-Playlist.m3u"
+            international = root / "International-Playlist.m3u"
+            iptv.write_text(
+                '#EXTM3U\\n#EXTINF:-1 tvg-name="IPTV Channel",IPTV Channel\\nhttps://stream.invalid/iptv\\n',
+                encoding="utf-8",
+            )
+            international.write_text(
+                '#EXTM3U\\n#EXTINF:-1 tvg-name="International Channel" tvg-logo="old.png",International Channel\\nhttps://stream.invalid/int\\n',
+                encoding="utf-8",
+            )
+            manifest = root / "approved.json"
+            manifest.write_text(json.dumps({
+                "schema_version": 1,
+                "source_playlist_sha256": {
+                    "IPTV-Playlist.m3u": hashlib.sha256(iptv.read_bytes()).hexdigest(),
+                    "International-Playlist.m3u": hashlib.sha256(international.read_bytes()).hexdigest(),
+                },
+                "approvals": [{
+                    "playlist": "International-Playlist.m3u",
+                    "line": 2,
+                    "channel_name": "International Channel",
+                    "expected_current_logo": "old.png",
+                    "approved_local_logo": "logos/International Channel.png",
+                    "asset_sha256": hashlib.sha256(asset.read_bytes()).hexdigest(),
+                }],
+            }), encoding="utf-8")
+            iptv_before = iptv.read_bytes()
+            international_before = international.read_bytes()
+            result = build_candidates(
+                root, manifest, root / "reports" / "automation-v2" / "candidate"
+            )
+            self.assertEqual(result["approved_mappings"], 1)
+            self.assertEqual(
+                [item["playlist"] for item in result["changed_playlists"]],
+                ["International-Playlist.m3u"],
+            )
+            candidate = root / result["changed_playlists"][0]["candidate_path"]
+            self.assertIn(
+                'tvg-logo="logos/International Channel.png"',
+                candidate.read_text(encoding="utf-8"),
+            )
+            self.assertEqual(iptv.read_bytes(), iptv_before)
+            self.assertEqual(international.read_bytes(), international_before)
+            self.assertFalse(result["safety"]["production_playlists_modified"])
+            self.assertFalse(result["safety"]["publication_performed"])
+
+
 if __name__ == "__main__":
     unittest.main()
