@@ -63,6 +63,7 @@ on:
       - tests/test_international_protected_guard.py
       - tests/test_playlist_metadata_repairs.py
       - tests/test_channel_numbering.py
+      - tests/test_backup_metadata_reconcile.py
   workflow_run:
     workflows: ["Playlist Logo Repair and Localization"]
     types: [completed]
@@ -247,6 +248,7 @@ jobs:
             # Data-level metadata assertions run against the final playlist bytes.
             python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
           python -m unittest discover -s tests -p 'test_channel_numbering.py'
+          python -m unittest discover -s tests -p 'test_backup_metadata_reconcile.py'
 
             # Reports: each is written exactly once, from the final playlist bytes.
             python scripts/stream_health.py
