@@ -150,6 +150,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_main_playlist_grouping.py'
           python -m unittest discover -s tests -p 'test_owner_requested_main_migrations.py'
            python -m unittest discover -s tests -p 'test_report_freshness.py'
+          python -m unittest discover -s tests -p 'test_maintenance_extinf_canonicalization.py'
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
