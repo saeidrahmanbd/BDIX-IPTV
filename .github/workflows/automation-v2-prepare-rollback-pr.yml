@@ -1,0 +1,84 @@
+name: Automation V2 Prepare Rollback PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      publication_pr_number:
+        description: Merged Automation V2 production-candidate PR number
+        required: true
+        type: string
+      confirmation:
+        description: Type PREPARE ROLLBACK PR to create a review-only revert PR
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: automation-v2-publication-pr
+  cancel-in-progress: false
+
+jobs:
+  prepare-rollback-pr:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Require explicit owner intent
+        env:
+          CONFIRMATION: ${{ inputs.confirmation }}
+          PR_NUMBER: ${{ inputs.publication_pr_number }}
+        run: |
+          set -euo pipefail
+          test "$CONFIRMATION" = "PREPARE ROLLBACK PR"
+          [[ "$PR_NUMBER" =~ ^[0-9]+$ ]]
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Verify merged publication PR metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ inputs.publication_pr_number }}
+        run: |
+          set -euo pipefail
+          gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" \
+            --json number,title,state,mergedAt,baseRefName,headRefName,mergeCommit,files \
+            > "$RUNNER_TEMP/automation-v2-publication-pr.json"
+
+      - name: Create isolated rollback branch
+        env:
+          PR_NUMBER: ${{ inputs.publication_pr_number }}
+        run: |
+          set -euo pipefail
+          BRANCH="automation-v2/rollback-pr-${PR_NUMBER}-${GITHUB_RUN_ID}"
+          git switch -c "$BRANCH"
+          echo "branch=$BRANCH" >> "$GITHUB_ENV"
+
+      - name: Create and verify rollback commit
+        run: |
+          set -euo pipefail
+          python scripts/prepare_automation_v2_rollback_pr.py \
+            --pr-json "$RUNNER_TEMP/automation-v2-publication-pr.json" \
+            --repo-root . \
+            --report "$RUNNER_TEMP/automation-v2-rollback-evidence.json"
+
+      - name: Push rollback branch (never main)
+        run: |
+          set -euo pipefail
+          git push --set-upstream origin "$BRANCH"
+
+      - name: Open owner-review rollback PR (no auto-merge)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ inputs.publication_pr_number }}
+        run: |
+          set -euo pipefail
+          gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$BRANCH" \
+            --title "Review Automation V2 rollback of publication PR #$PR_NUMBER" \
+            --body "This PR reverts the merged Automation V2 publication PR #$PR_NUMBER. The source PR was validated as merged into main and limited to the three allowlisted production outputs. The rollback commit was created on an isolated branch; main was not modified, no force-push was used, and no auto-merge is enabled. Owner review and merge are required to apply the rollback."
