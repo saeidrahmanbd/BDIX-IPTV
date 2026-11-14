@@ -48,6 +48,28 @@ class CountryVerificationTests(unittest.TestCase):
             self.assertIn(f'tvg-country="{country}"', matches[0])
             self.assertIn(f'group-title="{group}"', matches[0])
 
+    def test_primary_country_and_indian_bangla_group_consistency(self):
+        root = Path(__file__).resolve().parent.parent
+        # Explicitly regionalized UK feed; the broadcaster has a UK edition.
+        feed_country_exceptions = {"GTCPunjabi.in@UK": "GB"}
+        for playlist in ("IPTV-Playlist.m3u", "International-Playlist.m3u"):
+            for line in (root / playlist).read_text(encoding="utf-8").splitlines():
+                if not line.startswith("#EXTINF:"):
+                    continue
+                a = cv.attrs(line)
+                group = a.get("group-title", "")
+                if group in cv.NON_PRIMARY_GROUPS:
+                    continue
+                channel_id = a.get("tvg-id", "")
+                country = a.get("tvg-country", "").upper()
+                suffix_country = cv.id_country(channel_id)
+                if group == "Indian Bangla":
+                    self.assertEqual(country, "IN", line)
+                if group == "Bangladesh":
+                    self.assertNotEqual(suffix_country, "IN", line)
+                if suffix_country in {"BD", "IN"} and country != suffix_country:
+                    self.assertEqual(feed_country_exceptions.get(channel_id), country, line)
+
     def test_corrected_country_metadata_for_other_groups(self):
         root = Path(__file__).resolve().parent.parent
         main = (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8").splitlines()
