@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-13T08:50:16+00:00**
-Source playlist SHA-256: **006cd670ecdde84fe0481c6405214f3fb618e234a7abe12f8bce3f1553bb6c8d**
+Generated: **2026-11-14T08:05:10+00:00**
+Source playlist SHA-256: **553390694b4c14da8ea2535d58576a859c432c02065eb50241d293d5f6fcbecc**
 
 Status: **PASS**
 
-- Current entries: **1280**
+- Current entries: **1284**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -17,13 +17,13 @@ Status: **PASS**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing channel numbers: **13**
 - Primary channel-number sequence issues (non-blocking; existing row order is protected): **607**
-- Numbered review entries: **428**
+- Numbered review entries: **430**
 - Same-ID metadata name conflicts: **2**
 - Orphan Backup entries: **16**
 - Active rows with incomplete required metadata: **4**
 - tvg-id/channel-id inconsistencies: **1**
-- Entries missing tvg-language: **56**
-- Raw resolution/geoblock name tags: **55**
+- Entries missing tvg-language: **60**
+- Raw resolution/geoblock name tags: **59**
 - Missing logos in active groups: **4**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -47,13 +47,13 @@ No hard safety blockers detected.
 - orphan Backup entries awaiting owner review: 16
 - active entries with incomplete identity/country/logo metadata: 4
 - tvg-id/channel-id inconsistencies: 1
-- entries missing tvg-language: 56
+- entries missing tvg-language: 60
 - primary entries missing tvg-chno: 13
-- Backup/Review/discovery entries still numbered: 428
+- Backup/Review/discovery entries still numbered: 430
 - same-ID metadata name conflicts: 2
-- raw resolution/geoblock tags in channel names: 55
+- raw resolution/geoblock tags in channel names: 59
 - missing logos: 4
-- New queue candidates pending owner review: 56
+- New queue candidates pending owner review: 60
 
 ## Review-queue logo gaps
 
@@ -123,6 +123,10 @@ None.
 - **Mr Bean Animated (1080p)** — New Backups
 - **Pogo (576p)** — New Backups
 - **Travelxp 4K HDR (2160p) [Geo-blocked]** — New Backups
+- **Jaihind TV (576p)** — New Channels
+- **VTU (1080p)** — New Channels
+- **WeatherSpy (India) (720p)** — New Channels
+- **Zodiak TV (1080p)** — New Channels
 
 ## Queue validation
 
@@ -182,6 +186,10 @@ None.
 - Mr Bean Animated (1080p) has provisional/unverified queue country missing
 - Pogo (576p) has provisional/unverified queue country missing
 - Travelxp 4K HDR (2160p) [Geo-blocked] has provisional/unverified queue country missing
+- Jaihind TV (576p) has provisional/unverified queue country missing
+- VTU (1080p) has provisional/unverified queue country missing
+- WeatherSpy (India) (720p) has provisional/unverified queue country missing
+- Zodiak TV (1080p) has provisional/unverified queue country missing
 
 ## Missing local logo files
 
