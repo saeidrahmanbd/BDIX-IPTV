@@ -122,3 +122,18 @@ The refreshed runtime artifact confirms:
 - The baseline dry-run continues to accept all four candidate engines with zero playlist or EPG candidate changes and publication disabled. EPG identity matching suggestions remain manual-review-only; no fuzzy or ambiguous mapping was auto-applied.
 
 This is improved trace navigation, not completion of the full runtime trace or approval to retire any writer.
+
+
+### Immutable external-action metadata review (2026-11-14)
+
+The exact pinned `action.yml` files were fetched from their referenced repositories and commit SHAs for all six unique implementations:
+
+| Action implementation | Confirmed runtime boundary | Review result |
+|---|---|---|
+| `actions/checkout` | Node 24, `dist/index.js` main and post; default `persist-credentials=true`; post-job credential cleanup. | Metadata confirmed. The V2 candidate workflow explicitly sets `persist-credentials: false`; each legacy caller still needs context-specific credential review. |
+| `actions/setup-python` | Node 24 setup plus post cache-save step. | Metadata confirmed; Python installation and cache behavior remain external action code. |
+| `actions/setup-node` | Node 24 setup plus post cache-save step. | Metadata confirmed; Node installation and cache behavior remain external action code. |
+| `actions/upload-artifact` (two distinct SHAs) | One implementation uses Node 24; the older pinned implementation uses Node 20; both upload workflow artifacts and do not commit to the repository. | Metadata confirmed; retain both as separate immutable implementations. |
+| `cloudflare/wrangler-action` | Node 24 action; configured `command` may deploy or otherwise mutate Cloudflare resources. | Metadata confirmed. The repository's Wrangler deployment workflow is an infrastructure writer, not a playlist/EPG writer, and remains outside the playlist cutover boundary. |
+
+This confirms the action entrypoint/runtime declarations and documented inputs/outputs only. The compiled `dist/*` bundles, their imported modules, downloaded runtime packages and post-step implementation have not been fully audited. Do not change action SHAs or treat this metadata review as a source-code security audit. The candidate bundle uses a pinned artifact upload action; the six implementation records remain unresolved for full transitive review.
