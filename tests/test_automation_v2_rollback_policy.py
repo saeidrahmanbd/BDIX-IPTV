@@ -74,7 +74,9 @@ class RollbackPolicyTests(unittest.TestCase):
 
     def test_merge_commit_rollback_creates_only_a_local_revert_commit(self):
         with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp)
+            scratch = Path(temp)
+            root = scratch / "repo"
+            root.mkdir()
             def git(*args):
                 return subprocess.run(
                     ["git", *args], cwd=root, check=True, text=True,
@@ -107,9 +109,9 @@ class RollbackPolicyTests(unittest.TestCase):
             pr = self.valid_pr()
             pr["mergeCommit"] = {"oid": merge_sha}
             pr["number"] = 154
-            pr_json = root / "publication-pr.json"
+            pr_json = scratch / "publication-pr.json"
             pr_json.write_text(json.dumps(pr), encoding="utf-8")
-            report_path = root / "rollback-report.json"
+            report_path = scratch / "rollback-report.json"
             script = ROOT / "scripts" / "prepare_automation_v2_rollback_pr.py"
             result = subprocess.run(
                 [sys.executable, str(script), "--pr-json", str(pr_json),
