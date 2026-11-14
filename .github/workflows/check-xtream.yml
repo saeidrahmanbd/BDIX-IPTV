@@ -1,5 +1,11 @@
 name: Daily Xtream Health Check
 
+# Serialize all triggers; the guard collapses same-revision workflow_run bursts.
+concurrency:
+  group: xtream-health-check-v1
+  cancel-in-progress: false
+  queue: max
+
 on:
   push:
     branches: [main]
@@ -17,16 +23,35 @@ on:
       - "IPTV New Channel Discovery"
       - "IPTV Playlist Update"
       - "Refresh IPTV EPG"
+      - "Playlist Logo Repair and Localization"
     types: [completed]
     branches: [main]
 
 permissions:
+  actions: read
   contents: read
 
 jobs:
+  daily_guard:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.guard.outputs.should_run }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.12"
+      - name: Deduplicate Xtream checks by Bangladesh date and source revision
+        id: guard
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/xtream_check_guard.py
   check:
+    needs: daily_guard
     # Scheduled and manual checks always run; chained runs only after a successful upstream run.
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ needs.daily_guard.outputs.should_run == 'true' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success') }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
