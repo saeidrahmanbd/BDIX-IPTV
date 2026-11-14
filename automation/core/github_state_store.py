@@ -93,10 +93,26 @@ class GitHubStateStore:
         status, result = self._request("GET", f"{self.url}?{query}")
         if status == 404:
             return StateSnapshot(empty_state(), None)
-        if not isinstance(result, dict) or not result.get("sha") or not result.get("content"):
+        if not isinstance(result, dict) or not result.get("sha"):
             raise RuntimeError("state branch returned an incomplete state file")
         try:
-            raw = base64.b64decode(result["content"], validate=False).decode("utf-8")
+            encoded = result.get("content")
+            if isinstance(encoded, str) and encoded.strip():
+                raw = base64.b64decode(encoded, validate=False).decode("utf-8")
+            else:
+                # GitHub's Contents API omits inline content for files larger
+                # than 1 MiB. Read the same branch-pinned object through its
+                # download URL rather than treating a valid large state as lost.
+                download_url = result.get("download_url")
+                if not isinstance(download_url, str) or not download_url.startswith("https://"):
+                    raise RuntimeError("large state file has no safe download URL")
+                request = urllib.request.Request(download_url, headers={
+                    "Authorization": f"Bearer {self.token}",
+                    "Accept": "application/vnd.github.raw",
+                    "User-Agent": "BDIX-IPTV-Automation-V2",
+                }, method="GET")
+                with self.opener(request, timeout=60) as response:
+                    raw = response.read().decode("utf-8")
             state = validate_state(json.loads(raw))
         except (ValueError, UnicodeDecodeError, json.JSONDecodeError) as exc:
             raise RuntimeError("durable state file is corrupt or unsupported; refusing to reset it") from exc
