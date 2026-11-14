@@ -79,15 +79,15 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
     def test_ignores_local_function_named_run(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); source=root/"helper.py"
-            source.write_text("def run(value):\\n    return value\\nrun(1)\\n")
+            source.write_text("def run(value):\n    return value\nrun(1)\n")
             self.assertEqual(scan_python(source,"helper.py"),[])
 
     def test_detects_subprocess_module_alias_and_imported_function(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); source=root/"helper.py"
             source.write_text(
-                "import subprocess as sp\\nfrom subprocess import run as execute\\n"
-                "sp.run(['python','tool.py'])\\nexecute(build_command())\\n"
+                "import subprocess as sp\nfrom subprocess import run as execute\n"
+                "sp.run(['python','tool.py'])\nexecute(build_command())\n"
             )
             found=scan_python(source,"helper.py")
             self.assertEqual([x["kind"] for x in found],["subprocess_literal","subprocess_dynamic"])
@@ -95,7 +95,7 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
     def test_detects_os_shell_process_calls(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); source=root/"helper.py"
-            source.write_text("import os as operating_system\\noperating_system.system('echo test')\\n")
+            source.write_text("import os as operating_system\noperating_system.system('echo test')\n")
             found=scan_python(source,"helper.py")
             self.assertEqual(len(found),1)
             self.assertEqual(found[0]["kind"],"subprocess_dynamic")
@@ -105,7 +105,7 @@ class RuntimeDependencyInventoryTests(unittest.TestCase):
             root=Path(tmp); workflows=root/".github"/"workflows"; workflows.mkdir(parents=True)
             policy=root/"automation"/"policy"; policy.mkdir(parents=True)
             ref="actions/checkout@"+"a"*40
-            (workflows/"actions.yml").write_text("jobs:\\n  build:\\n    steps:\\n      - uses: "+ref+"\\n")
+            (workflows/"actions.yml").write_text("jobs:\n  build:\n    steps:\n      - uses: "+ref+"\n")
             (policy/"external-actions-lock.json").write_text(json.dumps({
                 "schema_version":1,
                 "actions":[{"reference":ref,"using":"node24","main":"dist/index.js",
