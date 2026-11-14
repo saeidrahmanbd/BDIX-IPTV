@@ -7,6 +7,7 @@ and stream URLs are verified unchanged before any playlist is written.
 """
 from __future__ import annotations
 
+import base64
 import hashlib
 import io
 import json
@@ -19,6 +20,7 @@ import cairosvg
 from PIL import Image, ImageOps
 
 import repair_playlist_logos as logo_repair
+from logo_embedded_png import DATA_URI, recover_embedded_png_from_svg
 
 ROOT = Path(__file__).resolve().parents[1]
 LOGOS = ROOT / "logos"
@@ -54,7 +56,36 @@ def image_bytes_to_png(raw: bytes, source_extension: str) -> bytes:
             raise ValueError("unsafe SVG content")
         if re.search(r"""(?:href|src)\s*=\s*["']\s*(?:https?:|file:|//)""", svg, re.I) or re.search(r"""url\(\s*["']?\s*(?:https?:|file:|//)""", svg, re.I):
             raise ValueError("SVG contains an external resource reference")
-        raw = cairosvg.svg2png(bytestring=raw, output_width=1024)
+        try:
+            raw = cairosvg.svg2png(bytestring=raw, output_width=1024)
+        except Exception as render_error:
+            # Repair only narrowly defined embedded-PNG CRC/IEND defects.
+            recovered = recover_embedded_png_from_svg(raw)
+            if recovered is None:
+                raise ValueError(
+                    f"SVG rendering failed and no safely recoverable embedded PNG was found: "
+                    f"{type(render_error).__name__}: {render_error}"
+                ) from render_error
+            try:
+                with Image.open(io.BytesIO(recovered)) as embedded:
+                    embedded.load()
+            except Exception as embedded_error:
+                raise ValueError(
+                    f"SVG rendering failed; recovered embedded PNG did not decode: "
+                    f"{type(embedded_error).__name__}: {embedded_error}"
+                ) from render_error
+            match = DATA_URI.search(raw)
+            if match is None:
+                raise ValueError("recovered embedded PNG URI disappeared during validation") from render_error
+            replacement = b"data:image/png;base64," + base64.b64encode(recovered)
+            raw = raw[:match.start()] + replacement + raw[match.end():]
+            try:
+                raw = cairosvg.svg2png(bytestring=raw, output_width=1024)
+            except Exception as retry_error:
+                raise ValueError(
+                    f"SVG rendering failed after safe embedded-PNG recovery: "
+                    f"{type(retry_error).__name__}: {retry_error}"
+                ) from retry_error
 
     try:
         with Image.open(io.BytesIO(raw)) as source_image:
@@ -129,7 +160,12 @@ def convert_referenced_logos(
         if extension not in CONVERTIBLE_EXTENSIONS:
             raise ValueError(f"unsupported referenced logo format {extension}: {relative}")
 
-        png_bytes = image_bytes_to_png(source_path.read_bytes(), extension)
+        try:
+            png_bytes = image_bytes_to_png(source_path.read_bytes(), extension)
+        except Exception as exc:
+            raise ValueError(
+                f"failed to convert logo {relative}: {type(exc).__name__}: {exc}"
+            ) from exc
         digest = hashlib.sha256(png_bytes).hexdigest()[:10]
         target = source_path.with_suffix(".png")
         if (
