@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "review_scope": "Reviewed Python subprocess boundaries found by the static inventory. The command wrapper is reviewed with its call-site constraints; shell execution is not allowed. Mutable external source dependencies remain separate unresolved cutover boundaries.",
+  "boundaries": [
+    {
+      "key": "automation/engines/epg/source_provider.py#build_epg_source_candidate",
+      "review_status": "reviewed_static_command_boundary",
+      "shell_boundary": false,
+      "command_shape": "[sys.executable, <temporary workspace>/run_epg_candidate.py]",
+      "side_effect": "Executes the repository's EPG generator only inside a TemporaryDirectory populated with copies; stdout/stderr captured; bounded timeout; production guide remains untouched."
+    },
+    {
+      "key": "scripts/classify_international_backups.py#baseline_backup_urls",
+      "review_status": "reviewed_static_command_boundary",
+      "shell_boundary": false,
+      "command_shape": "git show <BASELINE_REF>:International-Playlist.m3u",
+      "side_effect": "Read-only lookup of a fixed baseline playlist from the local checkout; no write or network."
+    },
+    {
+      "key": "scripts/fetch_iptv_org_epg.py#run",
+      "review_status": "reviewed_static_command_boundary",
+      "shell_boundary": false,
+      "command_shape": "git clone --depth 1 <REPO> <WORK>; npm ci --no-audit --no-fund; npm run grab -- --channels=<TARGET_CHANNELS> --output=<OUTPUT>",
+      "side_effect": "Optional upstream EPG acquisition writes only to /tmp/iptv-org-epg and /tmp/iptv-org-guide.xml; each invocation has a finite timeout; no direct production write.",
+      "external_dependency": "https://github.com/iptv-org/epg.git",
+      "external_ref_policy": "mutable default branch; no immutable commit pin"
+    },
+    {
+      "key": "scripts/generate_changelog.py#git_text",
+      "review_status": "reviewed_static_command_boundary",
+      "shell_boundary": false,
+      "command_shape": "git log / git show with fixed call-site arguments",
+      "side_effect": "Read-only local Git history queries; no write or remote push."
+    },
+    {
+      "key": "scripts/prepare_automation_v2_publish_pr.py#git_bytes",
+      "review_status": "reviewed_static_command_boundary",
+      "shell_boundary": false,
+      "command_shape": "git rev-parse / git diff / git status / git show with fixed call-site arguments",
+      "side_effect": "Read-only local Git inspection used to validate baseline and exact production output paths; no commit or push."
+    },
+    {
+      "key": "scripts/prepare_automation_v2_publish_pr.py#validate_against_baseline",
+      "review_status": "reviewed_static_command_boundary",
+      "shell_boundary": false,
+      "command_shape": "git merge-base --is-ancestor <baseline> <head>",
+      "side_effect": "Read-only ancestry check; rejects stale or unsafe candidate baselines."
+    },
+    {
+      "key": "scripts/prepare_automation_v2_rollback_pr.py#git",
+      "review_status": "reviewed_static_command_boundary",
+      "shell_boundary": false,
+      "command_shape": "git rev-parse / git show / git status / git revert / git diff-tree with validated source PR commit",
+      "side_effect": "Creates a revert commit only in the disposable rollback branch/worktree; workflow opens a PR for owner review; no main push or auto-merge."
+    },
+    {
+      "key": "scripts/prepare_automation_v2_rollback_pr.py#main",
+      "review_status": "reviewed_static_command_boundary",
+      "shell_boundary": false,
+      "command_shape": "git merge-base --is-ancestor <publication merge SHA> <current HEAD>",
+      "side_effect": "Read-only ancestry check before rollback; no write."
+    },
+    {
+      "key": "scripts/refresh_dashboard_diagnostics.py#run_script",
+      "review_status": "reviewed_static_command_boundary",
+      "shell_boundary": false,
+      "command_shape": "[sys.executable, ROOT / relative] from fixed local script list",
+      "side_effect": "Runs fixed repository diagnostics scripts; accepted exit codes are explicit; no shell and no arbitrary command input."
+    }
+  ]
+}
