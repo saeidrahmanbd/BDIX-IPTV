@@ -40,6 +40,14 @@ def recover_embedded_png_from_svg(svg_bytes: bytes) -> bytes | None:
         length = struct.unpack(">I", raw[offset:offset + 4])[0]
         chunk_type = raw[offset + 4:offset + 8]
         data_start = offset + 8
+        # Correct a narrowly scoped IDAT length overrun when the final PNG
+        # chunk has an exact IEND marker. Pillow validates the reconstructed
+        # compressed image data before the caller accepts the result.
+        terminal = len(raw) - 12
+        if chunk_type == b"IDAT" and terminal >= data_start + 4 and raw[terminal:terminal + 8] == b"\\x00\\x00\\x00\\x00IEND":
+            inferred_length = terminal - data_start - 4
+            if inferred_length >= 0 and length > inferred_length:
+                length = inferred_length
         data_end = data_start + length
         crc_end = data_end + 4
         if crc_end > len(raw):
