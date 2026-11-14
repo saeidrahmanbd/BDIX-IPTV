@@ -12,28 +12,104 @@ permissions:
 jobs:
   export:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: main
           fetch-depth: 1
-      - name: Package working snapshot
+      - name: Build bounded snapshot parts
         shell: bash
         run: |
           set -euo pipefail
-          tar -czf /tmp/bdix-iptv-sandbox-snapshot.tar.gz \
-            --exclude='.git' \
-            logos scripts tests assets docs reports \
-            IPTV-Playlist.m3u International-Playlist.m3u
-          sha256sum /tmp/bdix-iptv-sandbox-snapshot.tar.gz > /tmp/SHA256SUMS.txt
-      - name: Upload snapshot artifact
+          python - <<'PY'
+          from pathlib import Path
+          import tarfile
+          roots = ["logos", "scripts", "tests", "assets", "docs", "reports",
+                   "IPTV-Playlist.m3u", "International-Playlist.m3u"]
+          files = []
+          for root in roots:
+              p = Path(root)
+              if p.is_file():
+                  files.append(p)
+              elif p.is_dir():
+                  files.extend(x for x in p.rglob("*") if x.is_file())
+          files = sorted(set(files), key=lambda p: str(p))
+          limit = 38 * 1024 * 1024
+          groups, current, total = [], [], 0
+          for path in files:
+              size = path.stat().st_size
+              if current and total + size > limit:
+                  groups.append(current)
+                  current, total = [], 0
+              current.append(path)
+              total += size
+          if current:
+              groups.append(current)
+          if len(groups) > 8:
+              raise SystemExit(f"Snapshot requires {len(groups)} parts; expected at most 8")
+          for index, group in enumerate(groups, 1):
+              target = Path(f"/tmp/bdix-snapshot-part-{index}.tar.gz")
+              with tarfile.open(target, "w:gz", compresslevel=1) as archive:
+                  for path in group:
+                      archive.add(path, arcname=str(path), recursive=False)
+              print(f"part {index}: {len(group)} files, {target.stat().st_size} bytes")
+          Path("/tmp/part-count.txt").write_text(str(len(groups)))
+          PY
+      - name: Upload snapshot part 1
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: bdix-iptv-sandbox-snapshot
-          path: |
-            /tmp/bdix-iptv-sandbox-snapshot.tar.gz
-            /tmp/SHA256SUMS.txt
+          name: bdix-sandbox-part-1
+          path: /tmp/bdix-snapshot-part-1.tar.gz
           retention-days: 1
-          compression-level: 0
+          if-no-files-found: ignore
+      - name: Upload snapshot part 2
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bdix-sandbox-part-2
+          path: /tmp/bdix-snapshot-part-2.tar.gz
+          retention-days: 1
+          if-no-files-found: ignore
+      - name: Upload snapshot part 3
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bdix-sandbox-part-3
+          path: /tmp/bdix-snapshot-part-3.tar.gz
+          retention-days: 1
+          if-no-files-found: ignore
+      - name: Upload snapshot part 4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bdix-sandbox-part-4
+          path: /tmp/bdix-snapshot-part-4.tar.gz
+          retention-days: 1
+          if-no-files-found: ignore
+      - name: Upload snapshot part 5
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bdix-sandbox-part-5
+          path: /tmp/bdix-snapshot-part-5.tar.gz
+          retention-days: 1
+          if-no-files-found: ignore
+      - name: Upload snapshot part 6
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bdix-sandbox-part-6
+          path: /tmp/bdix-snapshot-part-6.tar.gz
+          retention-days: 1
+          if-no-files-found: ignore
+      - name: Upload snapshot part 7
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bdix-sandbox-part-7
+          path: /tmp/bdix-snapshot-part-7.tar.gz
+          retention-days: 1
+          if-no-files-found: ignore
+      - name: Upload snapshot part 8
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bdix-sandbox-part-8
+          path: /tmp/bdix-snapshot-part-8.tar.gz
+          retention-days: 1
+          if-no-files-found: ignore
