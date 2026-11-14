@@ -1,4 +1,5 @@
 name: IPTV Playlist Update
+# Revalidate the owner-curated maintenance path after policy/test-only repairs are merged.
 # IPTV-Playlist.m3u is owner-curated: existing rows are immutable; only metadata/logo/EPG repairs and new manual-queue rows are allowed.
 # A queued run superseded by later commits must be retriggered from the current main revision.
 # Rebuild all playlist-owned audit, gate, stream-health, logo and dashboard snapshots.
