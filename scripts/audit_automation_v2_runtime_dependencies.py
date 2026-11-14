@@ -9,7 +9,7 @@ import argparse, ast, json, re
 from pathlib import Path
 
 WORKFLOW_PYTHON = re.compile(r"(?:python(?:3(?:\.\d+)?)?)\s+([A-Za-z0-9_./-]+\.py)")
-SUBPROCESS_NAMES = {"run", "call", "check_call", "check_output", "Popen"}
+SUBPROCESS_NAMES = {"run", "call", "check_call", "check_output", "Popen", "system", "popen"}
 
 def _literal_command(node):
     if isinstance(node, (ast.List, ast.Tuple)):
@@ -33,16 +33,24 @@ def scan_python(path: Path, relative: str) -> list[dict]:
             continue
         func=node.func
         name=func.attr if isinstance(func, ast.Attribute) else (func.id if isinstance(func, ast.Name) else "")
+        if name in {"eval", "exec"}:
+            found.append({"source":relative,"line":node.lineno,"kind":"dynamic_code_execution",
+                          "target":None,"detail":name + "() prevents static call-graph resolution"})
+            continue
         if name not in SUBPROCESS_NAMES:
             continue
         command=_literal_command(node.args[0]) if node.args else None
-        if command:
+        shell_boundary = name in {"system", "popen"} or any(
+            keyword.arg == "shell" and isinstance(keyword.value, ast.Constant)
+            and keyword.value.value is True for keyword in node.keywords
+        )
+        if command and not shell_boundary:
             target=next((part for part in command[1:] if part.endswith(".py")), None)
             found.append({"source":relative,"line":node.lineno,"kind":"subprocess_literal",
                           "target":target,"command":command})
         else:
             found.append({"source":relative,"line":node.lineno,"kind":"subprocess_dynamic",
-                          "target":None,"detail":"command is not a literal list/tuple"})
+                          "target":None,"detail":"shell or dynamically constructed command"})
     return found
 
 def build_inventory(root: Path) -> dict:
@@ -61,7 +69,7 @@ def build_inventory(root: Path) -> dict:
     for path in sorted(root.rglob("*.py")):
         nested.extend(scan_python(path,path.relative_to(root).as_posix()))
     known={item["target"] for item in workflow_entries}
-    unresolved=[item for item in nested if item["kind"] in {"subprocess_dynamic","parse_error"}]
+    unresolved=[item for item in nested if item["kind"] in {"subprocess_dynamic","parse_error","dynamic_code_execution"}]
     missing=[item for item in nested if item["target"] and not (root/item["target"]).is_file()]
     return {
         "schema_version":1,
@@ -78,8 +86,8 @@ def build_inventory(root: Path) -> dict:
         "unresolved":unresolved,
         "missing_targets":missing,
         "limitations":[
-            "Static analysis does not resolve imports, eval/exec, shell interpolation, configured subprocess commands or runtime-generated paths.",
-            "Every unresolved dynamic call must be traced manually before legacy workflow retirement.",
+            "Static analysis records dynamic execution and shell boundaries but does not resolve imports, runtime-generated paths, external actions, package scripts or network-loaded code.",
+            "Every unresolved dynamic call and workflow shell block must be traced before legacy workflow retirement.",
         ],
         "safety":{"repository_code_executed":False,"production_files_modified":False,"publication_performed":False},
     }
