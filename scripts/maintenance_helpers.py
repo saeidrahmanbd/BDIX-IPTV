@@ -424,7 +424,7 @@ def verify_no_unauthorized_removals() -> int:
 
 def canonicalize_extinf() -> int:
     """Normalize EXTINF attribute order after all metadata/logo mutators have run."""
-    lines = PLAYLIST.read_text(encoding="utf-8-sig").replace("\\r", "").splitlines()
+    lines = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
     updated = [
         _canonical_extinf(line) if line.startswith("#EXTINF:") else line
         for line in lines
@@ -434,7 +434,7 @@ def canonicalize_extinf() -> int:
         for before, after in zip(lines, updated)
     )
     if changed:
-        PLAYLIST.write_text("\\n".join(updated).rstrip() + "\\n", encoding="utf-8")
+        PLAYLIST.write_text("\n".join(updated).rstrip() + "\n", encoding="utf-8")
     print(f"Canonical EXTINF metadata order: {changed} row(s) normalized.")
     return changed
 
