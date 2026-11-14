@@ -26,7 +26,12 @@ class ApprovedLogoCandidateTests(unittest.TestCase):
             "asset_sha256": hashlib.sha256(asset.read_bytes()).hexdigest(),
         }
         manifest = root / "approved.json"
-        manifest.write_text(json.dumps({"schema_version": 1, "approvals": [approval]}), encoding="utf-8")
+        source_sha = hashlib.sha256(playlist.read_bytes()).hexdigest()
+        manifest.write_text(json.dumps({
+            "schema_version": 1,
+            "source_playlist_sha256": {"IPTV-Playlist.m3u": source_sha},
+            "approvals": [approval],
+        }), encoding="utf-8")
         return playlist, manifest
 
     def test_changes_only_isolated_candidate_and_pins_local_asset(self):
@@ -61,12 +66,25 @@ class ApprovedLogoCandidateTests(unittest.TestCase):
                 build_candidates(root, manifest, root / "reports" / "candidate")
             self.assertEqual(playlist.read_bytes().count(b"old.png"), 1)
 
+
+    def test_stale_source_playlist_fails_closed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist, manifest = self._fixture(root)
+            playlist.write_text(playlist.read_text() + "# changed\\n")
+            with self.assertRaisesRegex(ValueError, "source playlist SHA-256 changed"):
+                build_candidates(root, manifest, root / "reports" / "candidate")
+
     def test_path_traversal_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "logos").mkdir()
             manifest = root / "approved.json"
-            manifest.write_text(json.dumps({"schema_version": 1, "approvals": [{
+            playlist = root / "IPTV-Playlist.m3u"
+            playlist.write_text('#EXTM3U\\n#EXTINF:-1, x\\nhttps://stream.invalid/x\\n')
+            manifest.write_text(json.dumps({"schema_version": 1, "source_playlist_sha256": {
+                "IPTV-Playlist.m3u": hashlib.sha256(playlist.read_bytes()).hexdigest()
+            }, "approvals": [{
                 "playlist": "IPTV-Playlist.m3u", "line": 2, "channel_name": "x",
                 "expected_current_logo": "", "approved_local_logo": "logos/../../outside.png",
                 "asset_sha256": "0" * 64
