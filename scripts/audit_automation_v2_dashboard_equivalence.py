@@ -250,6 +250,8 @@ def main() -> int:
     parser.add_argument("--root", type=Path, default=Path("."))
     parser.add_argument("--output", type=Path, default=Path("reports/automation-v2/dashboard-equivalence.json"))
     parser.add_argument("--strict", action="store_true", help="return non-zero when dashboard metrics differ")
+    parser.add_argument("--require-cutover-ready", action="store_true",
+                        help="return non-zero unless all dashboard source inputs are current and metrics match")
     args = parser.parse_args()
     root = args.root.resolve(strict=True)
     output = args.output if args.output.is_absolute() else root / args.output
@@ -271,7 +273,12 @@ def main() -> int:
         "inputs_current": report["inputs_current"],
         "source_sha256": report["source_sha256"],
     }, indent=2))
-    return 1 if args.strict and not report["equivalent"] else 0
+    if args.strict and not report["equivalent"]:
+        return 1
+    if args.require_cutover_ready and not report["cutover_ready"]:
+        print("Cutover blocked: " + ", ".join(report["cutover_blockers"]))
+        return 1
+    return 0
 
 if __name__ == "__main__":
     raise SystemExit(main())
