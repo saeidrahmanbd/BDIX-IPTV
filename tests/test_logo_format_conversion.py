@@ -75,7 +75,8 @@ class LogoFormatConversionTests(unittest.TestCase):
                 self.assertTrue(png_path.is_file())
                 self.assertTrue(png_path.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"))
             self.assertEqual(outputs[0], outputs[1])
-            self.assertTrue((logos / "shared.jpg").is_file())
+            self.assertFalse((logos / "shared.jpg").exists())
+            self.assertEqual(summary["original_assets_removed"], 1)
 
     def test_blocked_generic_png_name_uses_converted_digest_filename(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -170,8 +171,9 @@ class LogoFormatConversionTests(unittest.TestCase):
             self.assertIn("logos/shikor-tv-canada.png", updated)
             self.assertIn("logos/ten-tv-prime.png", updated)
             self.assertTrue((logos / "unused.png").is_file())
-            self.assertTrue((logos / "shikor-tv-canada.svg").is_file())
-            self.assertTrue((logos / "ten-tv-prime.svg").is_file())
+            self.assertFalse((logos / "shikor-tv-canada.svg").exists())
+            self.assertFalse((logos / "ten-tv-prime.svg").exists())
+            self.assertEqual(summary["original_assets_removed"], 3)
             self.assertTrue((logos / "notes.md").is_file())
 
     def test_external_logo_reference_fails_without_changing_playlist(self):
