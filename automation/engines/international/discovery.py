@@ -50,12 +50,30 @@ def fetch_international_source(url: str | None = None, timeout: int = DEFAULT_TI
     return raw.decode("utf-8-sig","replace")
 
 def _local_logo(root: Path, value: str) -> str:
+    """Accept only a real, non-symlink asset physically contained in logos/."""
     if not value.startswith("logos/"):
         return ""
-    candidate=(root/value).resolve()
-    if not candidate.is_relative_to(root.resolve()) or not candidate.is_file():
+    relative = Path(value)
+    if relative.is_absolute() or ".." in relative.parts:
         return ""
-    if "unused" in candidate.parts or candidate.suffix.lower() not in {".png",".jpg",".jpeg",".webp",".svg"}:
+    logos_root = root / "logos"
+    candidate = root / relative
+    # Reject symlinked logo directories, files, and path components rather than
+    # trusting a resolved target elsewhere in the repository.
+    if logos_root.is_symlink() or candidate.is_symlink():
+        return ""
+    try:
+        resolved_root = logos_root.resolve(strict=True)
+        resolved = candidate.resolve(strict=True)
+        if not resolved_root.is_dir() or not resolved.is_file():
+            return ""
+        if not resolved.is_relative_to(resolved_root):
+            return ""
+    except (OSError, RuntimeError):
+        return ""
+    if "unused" in resolved.parts:
+        return ""
+    if resolved.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".svg"}:
         return ""
     return value
 
