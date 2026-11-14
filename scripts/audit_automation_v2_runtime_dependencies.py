@@ -110,6 +110,31 @@ INFRASTRUCTURE_WORKFLOWS = {
 }
 
 
+def trace_workflow_shell_entrypoints(detail: str) -> dict:
+    """Link shell blocks to invoked repository scripts without claiming full trace."""
+    entrypoints = []
+    for match in WORKFLOW_PYTHON.finditer(detail):
+        target = match.group(1)
+        if target not in entrypoints:
+            entrypoints.append(target)
+    commands = []
+    for line in detail.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith(("run:", "- run:", "#")):
+            continue
+        if re.match(r"(?:python|python3|npm|npx|node|git|gh|curl|wget|wrangler)\\b", stripped):
+            commands.append(stripped[:500])
+    heredoc = bool(re.search(r"python(?:3(?:\\.\\d+)?)?\\s+-\\s*<<", detail))
+    return {
+        "referenced_python_entrypoints": entrypoints,
+        "referenced_python_entrypoints_exist": all(Path(target).is_file() for target in entrypoints),
+        "inline_python_heredoc_present": heredoc,
+        "shell_command_lines": commands,
+        "trace_status": "entrypoints_linked_transitive_effects_pending" if entrypoints else "manual_shell_trace_required",
+        "trace_complete": False,
+    }
+
+
 def classify_workflow_shell(source: str, detail: str) -> dict:
     """Label shell effects without treating classification as a completed trace."""
     text = detail.casefold()
@@ -225,6 +250,7 @@ def build_inventory(root: Path) -> dict:
                 active_boundary["detail"]=(body + "\n" + line.rstrip("\r\n"))
     for boundary in shell_boundaries:
         boundary.update(classify_workflow_shell(boundary["source"], boundary["detail"]))
+        boundary.update(trace_workflow_shell_entrypoints(boundary["detail"]))
     nested.extend(shell_boundaries)
     action_lock_path=root/"automation"/"policy"/"external-actions-lock.json"
     try:
@@ -315,6 +341,9 @@ def build_inventory(root: Path) -> dict:
             "unreviewed_process_execution_boundaries":sum(1 for item in nested if item["kind"]=="subprocess_dynamic" and item.get("execution_scope")!="test_only" and not item.get("process_reviewed")),
             "mutable_external_source_dependencies":len(mutable_external_sources),
             "workflow_shell_boundaries":len(shell_boundaries),
+            "workflow_shell_blocks_with_python_entrypoints":sum(1 for item in shell_boundaries if item["referenced_python_entrypoints"]),
+            "workflow_shell_blocks_with_inline_python":sum(1 for item in shell_boundaries if item["inline_python_heredoc_present"]),
+            "workflow_shell_blocks_fully_traced":sum(1 for item in shell_boundaries if item["trace_complete"]),
             "legacy_production_writer_shell_boundaries":sum(1 for item in shell_boundaries if item["workflow_owner_class"]=="legacy_production_writer"),
             "v2_shadow_shell_boundaries":sum(1 for item in shell_boundaries if item["workflow_owner_class"]=="v2_shadow_candidate_writer"),
             "direct_repository_writer_shell_boundaries":sum(1 for item in shell_boundaries if item["effect_class"]=="direct_repository_writer"),
