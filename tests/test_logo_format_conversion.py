@@ -4,6 +4,7 @@ import io
 import struct
 import sys
 import tempfile
+import zlib
 import unittest
 from pathlib import Path
 
@@ -65,6 +66,36 @@ class LogoFormatConversionTests(unittest.TestCase):
             image.load()
             self.assertEqual(image.format, "PNG")
             self.assertEqual(image.size, (1024, 512))
+    def test_svg_with_truncated_embedded_png_idat_is_salvaged(self):
+        original = image_bytes("PNG", (80, 30, 190))
+        # Keep a valid PNG chunk envelope but truncate the compressed IDAT
+        # payload. This models the damaged broadcaster SVG that broke run #88.
+        offset = 8
+        rebuilt = bytearray(original[:8])
+        while offset + 12 <= len(original):
+            length = struct.unpack(">I", original[offset:offset + 4])[0]
+            kind = original[offset + 4:offset + 8]
+            payload = original[offset + 8:offset + 8 + length]
+            offset += 12 + length
+            if kind == b"IDAT":
+                payload = payload[: max(8, len(payload) // 2)]
+            rebuilt.extend(struct.pack(">I", len(payload)))
+            rebuilt.extend(kind)
+            rebuilt.extend(payload)
+            rebuilt.extend(struct.pack(">I", zlib.crc32(kind + payload) & 0xffffffff))
+            if kind == b"IEND":
+                break
+        svg = (
+            b'<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50">'
+            b'<image href="data:image/png;base64,' + base64.b64encode(bytes(rebuilt))
+            + b'" width="100" height="50"/></svg>'
+        )
+        png = image_bytes_to_png(svg, ".svg")
+        with Image.open(io.BytesIO(png)) as image:
+            image.load()
+            self.assertEqual(image.format, "PNG")
+            self.assertEqual(image.size, (1024, 512))
+
     def test_shared_asset_is_converted_once_and_only_logo_references_change(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
