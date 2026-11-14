@@ -47349,6 +47349,15 @@
         "idempotency_key": "3db52d7bf80383c3c5f29a3e5c96072aad96bcce0d939e7094d7260738200d87",
         "started_at": "2026-11-14T09:29:28.495347+06:00",
         "status": "failed"
+      },
+      {
+        "attempt": 1,
+        "baseline_commit": "908982de05bd699b60e6b2b9f26d7da3dd11cae2",
+        "business_day": "2026-11-14",
+        "engine": "bundle",
+        "idempotency_key": "7168d45b7050be356c8281884ca513c43eb2dab01b9d77fce885a9b045c47696",
+        "started_at": "2026-11-14T10:59:59.928259+06:00",
+        "status": "running"
       }
     ],
     "schema_version": 1,
