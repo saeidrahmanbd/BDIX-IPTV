@@ -72,3 +72,27 @@ A passing unit test is not production acceptance. The first current-main candida
 
 
 The runtime inventory also records every workflow \`uses:\` reference as a separate boundary. Local action paths are checked for an \`action.yml\`/\`action.yaml\` entrypoint; external actions are classified by whether the reference is pinned to a 40-character commit SHA. External action implementations remain unresolved until their exact pinned source and transitive runtime are inspected. Workflow shell bodies are retained without the former 4,000-character truncation and preserve original indentation and blank lines so heredocs and multiline commands remain reviewable.
+
+## Latest evidence and remaining acceptance blockers (2026-11-14)
+
+The current review branch has been synchronized with `main` using a normal merge commit. It is now zero commits behind main. The latest successful Automation V2 Branch CI artifact set reports:
+
+- Immutable baseline dry run accepted all four candidate engines (IPTV, International, IPTV EPG, International EPG); candidate playlist changes = 0, candidate EPG changes = 0, publication = false, and production files modified = false.
+- Independent dashboard recomputation: `equivalent=true`, zero mismatches. The playlist audit, stream-health report and pre-publish gate are current.
+- Published EPG is not current. The audit reports `cutover_ready=false` with the single dashboard freshness blocker `published_epg`; EPG mapping and programme coverage remain explicitly `PENDING`.
+- Runtime inventory: 100 workflow Python entrypoints, 65 unique targets, 151 nested process/shell boundaries, 111 workflow shell blocks, 67 external action references across 6 unique pinned implementations.
+- All 9 detected dynamic Python process boundaries are reviewed; no mutable external source dependency, missing literal target, unpinned action reference or unreviewed Python process boundary remains.
+- The 111 workflow shell blocks are classified by observed effect and owner, but remain unresolved pending exact end-to-end trace. The inventory identifies 51 shell blocks owned by legacy production-writer workflows and 10 direct repository-writer blocks. Classification is not treated as proof that the command's transitive behavior is fully traced.
+- Six external action implementations are pinned and have reviewed metadata, but their full transitive implementations remain explicit unresolved boundaries.
+- Logo audit: 5,367 image files and 5,367 explicit references; 111 missing explicit targets and 75 missing runtime targets; 2,665 files are apparently unreferenced by runtime sources. No deletion or quarantine was performed. These findings require path/provenance review, not bulk cleanup.
+
+### Remaining cutover blockers
+
+1. Publish and validate a fresh XMLTV guide against both current playlist fingerprints; do not mark EPG current merely because dashboard metrics match.
+2. Trace all 111 shell blocks through their invoked scripts, environment inputs, network effects, Git staging and push behavior. Resolve the 51 legacy-writer boundaries against their V2 replacement engines.
+3. Inspect the six pinned action implementations and transitive runtime dependencies, not only their metadata.
+4. Complete authentic-logo provenance and missing-path disposition; do not delete assets based on the unreferenced-by-runtime heuristic.
+5. Prove the complete legacy-to-V2 workflow replacement matrix, single-writer behavior, stale-input rejection, failure recovery and rollback on an isolated branch.
+6. Keep the separate production cutover approval gate closed until every item above has current passing evidence.
+
+The current successful checks establish branch-level regression and metric parity. They do not establish production cutover readiness.
