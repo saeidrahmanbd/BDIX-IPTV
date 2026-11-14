@@ -183,27 +183,43 @@ def should_current_run_execute(
     event: str | None = None,
     workflow_file: str = "new-channel-discovery.yml",
 ) -> bool:
-    """Apply workflow-specific daily deduplication and allow intentional manual re-runs.
+    """Choose a daily owner from competing runs, excluding this run from self-checks.
 
-    Scheduled/push runs are limited to the earliest real discovery run for the
-    Bangladesh calendar date. An explicit workflow_dispatch may run again after
-    any earlier run has completed, but it must not overlap another active run.
+    GitHub can expose stale job-level state for an in-flight run. The current
+    run is therefore not qualified by its own writer-step status. Completed
+    successful writer runs block duplicates; the earliest active run owns the
+    slot. Manual dispatches may retry after completed runs but cannot overlap.
     """
+    current_id = int(current_run_id)
     todays = runs_for_date(runs, target_date)
-    if not todays:
+    current = next((run for run in todays if int(run.get("id") or -1) == current_id), None)
+    if current is None:
         return False
 
-    if str(event or "").casefold() == "workflow_dispatch":
-        current_id = int(current_run_id)
-        active_others = [
-            run for run in todays
-            if int(run.get("id") or -1) != current_id
-            and str(run.get("status") or "").casefold() != "completed"
-        ]
+    others = [run for run in todays if int(run.get("id") or -1) != current_id]
+    manual = str(event or "").casefold() == "workflow_dispatch"
+    active_others = [
+        run for run in others
+        if str(run.get("status") or "").casefold() != "completed"
+    ]
+    if manual:
         return not active_others
 
-    return first_run_id(todays, client, workflow_file) == int(current_run_id)
+    successful_others = [
+        run for run in others
+        if str(run.get("status") or "").casefold() == "completed"
+        and run_blocks_retry(run, client, workflow_file)
+    ]
+    if successful_others:
+        return False
+    if not active_others:
+        return True
 
+    owner = min(
+        active_others + [current],
+        key=lambda run: (parse_github_timestamp(run["created_at"]), int(run["id"])),
+    )
+    return int(owner["id"]) == current_id
 
 class GitHubActions:
     def __init__(self, repository: str, token: str):
@@ -346,7 +362,7 @@ def guard(workflow_file: str) -> int:
                 f"is already running {workflow_file} for Bangladesh date {target_date}."
             )
         else:
-            first_id = first_run_id(todays, client)
+            first_id = first_run_id(todays, client, workflow_file)
             winner = next(run for run in todays if int(run["id"]) == first_id)
             print(
                 f"Skipping duplicate daily discovery: run {first_id} "
