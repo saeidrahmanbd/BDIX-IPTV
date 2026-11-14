@@ -8,7 +8,7 @@ import sys
 import urllib.error
 import urllib.request
 from dataclasses import replace
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -16,7 +16,6 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from automation.core.github_state_store import store_from_environment
-from automation.core.run_ledger import RUN_LEASE_MINUTES
 from automation.core.run_ledger_store import parse_run_ledger_json, serialize_run_ledger
 
 API = "https://api.github.com"
@@ -43,13 +42,13 @@ def live_actions_runs(repository: str, token: str) -> list[dict]:
     return payload["workflow_runs"]
 
 
-def is_stale_bundle_reservation(entry, now: datetime) -> bool:
-    if entry.engine != "bundle" or entry.status != "running":
-        return False
-    if entry.started_at is None:
-        return True
-    return now - entry.started_at > timedelta(minutes=RUN_LEASE_MINUTES)
+def is_orphaned_bundle_reservation(entry) -> bool:
+    """A running reservation is orphaned once GitHub confirms no bundle run is active.
 
+    Lease age is deliberately not used: a crashed run may be younger than the
+    lease, while the authoritative Actions status already proves it ended.
+    """
+    return entry.engine == "bundle" and entry.status == "running"
 
 def reconcile(now: datetime | None = None) -> dict:
     repository = os.environ.get("GITHUB_REPOSITORY", "")
@@ -71,14 +70,14 @@ def reconcile(now: datetime | None = None) -> dict:
     recovered = []
     updated_entries = []
     for entry in entries:
-        if is_stale_bundle_reservation(entry, current):
+        if is_orphaned_bundle_reservation(entry):
             updated_entries.append(replace(entry, status="failed"))
             recovered.append({
                 "idempotency_key": entry.idempotency_key,
                 "attempt": entry.attempt,
                 "business_day": entry.business_day.isoformat(),
                 "started_at": entry.started_at.isoformat() if entry.started_at else None,
-                "reason": "no GitHub Actions runs are in progress; reservation exceeded lease or lacked a timestamp",
+                "reason": "GitHub confirmed no candidate-bundle Actions run is in progress",
             })
         else:
             updated_entries.append(entry)
