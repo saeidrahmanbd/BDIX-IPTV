@@ -78,7 +78,16 @@ def image_bytes_to_png(raw: bytes, source_extension: str) -> bytes:
             # pixel stream is recoverable. Use the fully decoded, structurally
             # repaired raster directly instead of asking CairoSVG to decode it
             # a second time. The common downstream Pillow path normalizes it.
-            raw = recovered
+            with Image.open(io.BytesIO(recovered)) as embedded:
+                embedded.load()
+                output_width = 1024
+                output_height = max(1, round(embedded.height * output_width / embedded.width))
+                normalized_embedded = embedded.resize(
+                    (output_width, output_height), Image.Resampling.LANCZOS
+                )
+                output = io.BytesIO()
+                normalized_embedded.save(output, format="PNG", optimize=True)
+                raw = output.getvalue()
 
     try:
         with Image.open(io.BytesIO(raw)) as source_image:
