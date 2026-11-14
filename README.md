@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/stargazers"><img src="https://img.shields.io/badge/⭐-STAR%20ON%20GITHUB-f5c542?style=for-the-badge&logo=github&logoColor=white" alt="GitHub stars"></a>
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/stargazers"><img src="https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?label=stars&style=for-the-badge&logo=github&logoColor=white&color=f5c542&cacheSeconds=3600" alt="GitHub stars"></a>
   <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/network/members"><img src="https://img.shields.io/github/forks/saeidrahmanbd/BDIX-IPTV?style=for-the-badge&logo=git&logoColor=white&color=2ea44f" alt="GitHub forks"></a>
   <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/commits/main"><img src="https://img.shields.io/github/last-commit/saeidrahmanbd/BDIX-IPTV?style=for-the-badge&color=0969da" alt="Last commit"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License"></a>
@@ -210,7 +210,7 @@ The repository's original code and documentation are licensed under the [MIT Lic
 <p align="center">
   <strong>⭐ If you find this project useful, please consider starring it on GitHub!</strong>
   <br><br>
-  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV"><img src="https://img.shields.io/badge/⭐-STAR%20ON%20GITHUB-f5c542?style=for-the-badge&logo=github&logoColor=white" alt="Star BDIX-IPTV on GitHub"></a>
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV"><img src="https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?label=stars&style=for-the-badge&logo=github&logoColor=white&color=f5c542&cacheSeconds=3600" alt="Star BDIX-IPTV on GitHub"></a>
   <br>
   <sub>Click the badge to visit the repository, then click GitHub's Star button.</sub>
   <br><br>
