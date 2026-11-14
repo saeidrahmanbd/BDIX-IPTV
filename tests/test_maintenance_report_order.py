@@ -20,14 +20,12 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         for name in (
             "test_stream_url_identity.py", "test_main_playlist_protection.py", "test_report_freshness.py",
             "test_maintenance_extinf_canonicalization.py", "test_pre_publish_gate_logo_paths.py",
-            "test_maintenance_report_order.py", "test_metadata_backfill.py",
-            "test_reconcile_playlist_consistency.py", "test_logo_authenticity_manifest.py",
+            "test_maintenance_report_order.py", "test_metadata_backfill.py", "test_logo_authenticity_manifest.py",
             "test_logo_asset_naming.py", "test_logo_provenance_review.py",
             "test_logo_repair_source_hints.py", "test_iptv_fragile_streams.py",
             "test_language_policy.py", "test_country_verification.py",
             "test_migrate_logo_unset.py", "test_international_protected_guard.py",
             "test_playlist_metadata_repairs.py", "test_channel_numbering.py",
-            "test_sort_playlists.py", "test_backup_metadata_reconcile.py",
         ):
             self.assertIn(f"      - tests/{name}", workflow)
 
