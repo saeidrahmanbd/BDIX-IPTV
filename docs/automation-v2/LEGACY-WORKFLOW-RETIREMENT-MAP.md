@@ -50,7 +50,7 @@ This is a migration plan only. No legacy workflow is disabled, edited or retired
 - A targeted EPG-timeout/probe-checkpoint recovery test, rollback-policy tests and workflow concurrency-boundary tests are proposed in PR #154; their latest CI results must pass before merge.
 - The rollback PR preparer is a recovery mechanism for already-merged candidate PRs, not an automatic publisher.
 - Missed-run recovery dispatcher is implemented in the current review branch; it checks current-main SHA and Bangladesh-local run date, avoids overlapping an active run, and retries failed/missing runs. Its CI and live dispatch behavior must be verified before relying on it.
-- Dashboard shadow consumer is now wired into the candidate bundle: it captures report inputs with SHA-256 and renders a separate mirror; it preserves legacy dashboard markdown verbatim, so independent metric equivalence is not yet proven.
+- Dashboard shadow consumer captures report inputs with SHA-256, renders a separate mirror, and now runs an independent metric recomputation/comparison against the legacy dashboard table. Live candidate artifact parity and freshness must pass before cutover.
 - Runtime inventory now scans repository Python sources, records workflow `run:` boundaries, and flags dynamic subprocess/eval/exec paths. These opaque boundaries remain explicit unresolved evidence, not proof of complete runtime resolution.
 - Not ready for production cutover: complete two-playlist logo candidate engines, independently recomputed dashboard metrics, resolved runtime boundaries, exact workflow equivalence and production-scale rollback acceptance remain open.
 
