@@ -199,6 +199,52 @@ class LogoFormatConversionTests(unittest.TestCase):
             self.assertEqual(summary["original_assets_removed"], 3)
             self.assertTrue((logos / "notes.md").is_file())
 
+
+    def test_damaged_unreferenced_svg_uses_only_a_fully_validated_same_stem_png(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            logos = root / "logos"
+            logos.mkdir()
+            valid_png = image_bytes("PNG", (25, 140, 210))
+            (logos / "ntv-malayalam.png").write_bytes(valid_png)
+            (logos / "ntv-malayalam.svg").write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg"><image href="data:image/png;base64,broken"/></svg>',
+                encoding="utf-8",
+            )
+            original = (
+                "#EXTM3U\\n"
+                f'#EXTINF:-1 tvg-id="NTV.in" tvg-logo="{RAW_BASE}ntv-malayalam.svg",NTV Malayalam\\n'
+                "https://example.invalid/live.m3u8\\n"
+            )
+            playlist = root / "IPTV-Playlist.m3u"
+            playlist.write_text(original, encoding="utf-8")
+            summary = convert_referenced_logos(root=root, playlist_names=("IPTV-Playlist.m3u",))
+            updated = playlist.read_text(encoding="utf-8")
+            self.assertIn("ntv-malayalam.png", updated)
+            self.assertEqual(without_logo_attributes(updated), without_logo_attributes(original))
+            self.assertEqual((logos / "ntv-malayalam.png").read_bytes(), valid_png)
+            self.assertFalse((logos / "ntv-malayalam.svg").exists())
+            self.assertEqual(summary["damaged_sources_replaced_by_valid_png"], ["ntv-malayalam.svg"])
+            self.assertEqual(summary["remaining_non_png_references"], 0)
+
+    def test_damaged_svg_without_valid_png_counterpart_still_fails_closed(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            logos = root / "logos"
+            logos.mkdir()
+            (logos / "broken.svg").write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg"><image href="data:image/png;base64,broken"/></svg>',
+                encoding="utf-8",
+            )
+            playlist = root / "IPTV-Playlist.m3u"
+            playlist.write_text(
+                "#EXTM3U\\n" + f'#EXTINF:-1 tvg-logo="{RAW_BASE}broken.svg",Broken\\n'
+                + "https://example.invalid/live.m3u8\\n",
+                encoding="utf-8",
+            )
+            with self.assertRaises(ValueError):
+                convert_referenced_logos(root=root, playlist_names=("IPTV-Playlist.m3u",))
+
     def test_external_logo_reference_fails_without_changing_playlist(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
