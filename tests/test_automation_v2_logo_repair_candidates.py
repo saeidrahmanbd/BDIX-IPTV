@@ -52,9 +52,9 @@ class LogoRepairCandidateTests(unittest.TestCase):
             self._fixture(root)
             playlist = root / "IPTV-Playlist.m3u"
             playlist.write_text(
-                '#EXTM3U\\n'
-                '#EXTINF:-1 tvg-name="Exact Channel" tvg-logo="https://evil.example/Exact%20Channel.png" group-title="Bangladesh",Exact Channel\\n'
-                'https://example.invalid/live\\n', encoding="utf-8")
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-name="Exact Channel" tvg-logo="https://evil.example/Exact%20Channel.png" group-title="Bangladesh",Exact Channel\n'
+                'https://example.invalid/live\n', encoding="utf-8")
             report = build_proposals(root)
             self.assertEqual(report["counts"]["already_local"], 0)
             self.assertEqual(report["counts"]["unique_exact_match"], 1)
@@ -66,9 +66,9 @@ class LogoRepairCandidateTests(unittest.TestCase):
             self._fixture(root)
             playlist = root / "IPTV-Playlist.m3u"
             playlist.write_text(
-                '#EXTM3U\\n'
-                '#EXTINF:-1 tvg-name="Exact Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/Exact%20Channel.png" group-title="Bangladesh",Exact Channel\\n'
-                'https://example.invalid/live\\n', encoding="utf-8")
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-name="Exact Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/Exact%20Channel.png" group-title="Bangladesh",Exact Channel\n'
+                'https://example.invalid/live\n', encoding="utf-8")
             report = build_proposals(root)
             self.assertEqual(report["counts"]["already_local"], 1)
             self.assertEqual(report["counts"]["unique_exact_match"], 0)
@@ -82,9 +82,9 @@ class LogoRepairCandidateTests(unittest.TestCase):
             (root / "logos" / "Unsafe Channel.png").symlink_to(external)
             playlist = root / "IPTV-Playlist.m3u"
             playlist.write_text(
-                '#EXTM3U\\n'
-                '#EXTINF:-1 tvg-name="Unsafe Channel" group-title="Bangladesh",Unsafe Channel\\n'
-                'https://example.invalid/unsafe\\n', encoding="utf-8")
+                '#EXTM3U\n'
+                '#EXTINF:-1 tvg-name="Unsafe Channel" group-title="Bangladesh",Unsafe Channel\n'
+                'https://example.invalid/unsafe\n', encoding="utf-8")
             report = build_proposals(root)
             self.assertEqual(report["counts"]["unique_exact_match"], 0)
             self.assertFalse(any(p["channel_name"] == "Unsafe Channel" for p in report["proposals"]))
