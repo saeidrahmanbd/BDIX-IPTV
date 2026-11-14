@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-14T07:37:41.706221+00:00**
-Source playlist SHA-256: **9680e01648d22546c191e96d60dcc64458c9a4ae771ee3a1e4b1113494e12ddd**
+Generated: **2026-11-14T07:50:17.731382+00:00**
+Source playlist SHA-256: **553390694b4c14da8ea2535d58576a859c432c02065eb50241d293d5f6fcbecc**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -19,7 +19,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **4**
-- Missing logos in review queues (review only): **4**
+- Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
 - Logo references checked: **1284**
 - Duplicate primary identities: **0**
@@ -1289,18 +1289,15 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1276**
+- Healthy/local references: **1280**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
 
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
-- **Jaihind TV (576p)** [jaihindtv.in@sd]
-- **VTU (1080p)** [vtu.in@sd]
-- **WeatherSpy (India) (720p)** [weatherspy.in@sd]
-- **Zodiak TV (1080p)** [zodiaktv.in@sd]
-- missing: **8**
+None.
+- missing: **4**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**

@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-14T07:37:42+00:00**
-Source playlist SHA-256: **9680e01648d22546c191e96d60dcc64458c9a4ae771ee3a1e4b1113494e12ddd**
+Generated: **2026-11-14T07:50:18+00:00**
+Source playlist SHA-256: **553390694b4c14da8ea2535d58576a859c432c02065eb50241d293d5f6fcbecc**
 
 Status: **PASS**
 
@@ -25,7 +25,7 @@ Status: **PASS**
 - Entries missing tvg-language: **60**
 - Raw resolution/geoblock name tags: **59**
 - Missing logos in active groups: **4**
-- Missing logos deferred in review groups (Review/New Channels/New Backups): **4**
+- Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
@@ -59,10 +59,7 @@ No hard safety blockers detected.
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
-- **Jaihind TV (576p)**
-- **VTU (1080p)**
-- **WeatherSpy (India) (720p)**
-- **Zodiak TV (1080p)**
+None.
 
 ## Metadata conflicts
 
