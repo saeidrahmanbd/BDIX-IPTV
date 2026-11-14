@@ -96,3 +96,14 @@ The current review branch has been synchronized with `main` using a normal merge
 6. Keep the separate production cutover approval gate closed until every item above has current passing evidence.
 
 The current successful checks establish branch-level regression and metric parity. They do not establish production cutover readiness.
+
+
+### Follow-up: EPG workflow guard-only runs and shell trace links (2026-11-14)
+
+- Inspected the latest main-branch `Refresh IPTV EPG` runs: `43571104404`, `43571202539`, and `43576391359`.
+- Each run's `daily_guard` job completed successfully, but the actual `refresh` job was skipped. These green workflow conclusions are not evidence of a newly generated or published XMLTV guide.
+- The Automation V2 dashboard artifact continues to report `published_epg=false`, and `cutover_ready=false` with blocker `published_epg`. Do not clear this blocker until the actual EPG publication step has completed and the guide freshness/fingerprint validators pass.
+- The runtime inventory now links each shell block to any explicit Python entrypoints, records inline Python heredocs and recognized command lines, and resolves script existence against the audited repository root. It deliberately leaves transitive effects unresolved; entrypoint linkage is not a completed shell trace.
+- Added a dedicated regression test for shell-to-Python entrypoint linkage and the non-complete trace status. The full test suite and legacy regression audit passed on commit `de954f28c6fc360ae59ad04ed232ad44d1eda639`; the subsequent Automation V2 Branch CI run is still in progress.
+
+The EPG guard's skip behavior needs a separately isolated investigation before changing production workflow scheduling or dispatching a writer. No production EPG workflow, playlist or guide was modified by this review-branch work.
