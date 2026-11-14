@@ -25,6 +25,7 @@ on:
       - 'scripts/build_automation_v2_legacy_dashboard_snapshot.py'
       - 'scripts/audit_automation_v2_runtime_dependencies.py'
       - 'scripts/audit_automation_v2_dashboard_equivalence.py'
+      - 'scripts/audit_automation_v2_dashboard_equivalence.py'
       - 'scripts/recover_automation_v2_candidate_run.py'
       - 'scripts/reconcile_automation_v2_stale_bundle_lock.py'
       - '.github/workflows/automation-v2-stale-lock-recovery.yml'
@@ -45,6 +46,7 @@ on:
       - 'scripts/render_automation_v2_dashboard_parity.py'
       - 'scripts/build_automation_v2_legacy_dashboard_snapshot.py'
       - 'scripts/audit_automation_v2_runtime_dependencies.py'
+      - 'scripts/audit_automation_v2_dashboard_equivalence.py'
       - 'scripts/recover_automation_v2_candidate_run.py'
       - 'scripts/build_automation_v2_diagnostics_snapshot.py'
       - 'scripts/build_automation_v2_logo_repair_candidates.py'
@@ -105,6 +107,24 @@ jobs:
           retention-days: 14
       - name: Run conservative logo reference audit
         run: python scripts/audit_logo_references.py --output reports/automation-v2/logo-reference-audit.json
+      - name: Inventory workflow and nested runtime dependencies
+        run: python scripts/audit_automation_v2_runtime_dependencies.py
+      - name: Upload runtime dependency inventory
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: automation-v2-runtime-dependency-inventory
+          path: reports/automation-v2/runtime-dependency-inventory.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Independently verify dashboard metric equivalence
+        run: python scripts/audit_automation_v2_dashboard_equivalence.py --strict
+      - name: Upload dashboard equivalence report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: automation-v2-dashboard-equivalence
+          path: reports/automation-v2/dashboard-equivalence.json
+          if-no-files-found: error
+          retention-days: 14
       - name: Upload logo audit report
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
