@@ -77,6 +77,32 @@ class LogoRepairSourceTests(unittest.TestCase):
             ".png",
         )
 
+    def test_international_logo_sources_are_exact_and_attributed(self):
+        expected = {
+            "Diema": (
+                "https://upload.wikimedia.org/wikipedia/commons/d/d5/Diema_Bulgaria_logo.svg",
+                "https://commons.wikimedia.org/wiki/File:Diema_Bulgaria_logo.svg",
+            ),
+            "MBC Mood": (
+                "https://upload.wikimedia.org/wikipedia/commons/1/12/MBC_Mood_Logo.png",
+                "https://commons.wikimedia.org/wiki/File:MBC_Mood_Logo.png",
+            ),
+            "Tarab": (
+                "https://assets.mbcmood.com/channels/1738059679TARAB_Logo.png",
+                "https://github.com/iptv-org/database/issues/15624",
+            ),
+            "Cinecanal Panregional": (
+                "https://upload.wikimedia.org/wikipedia/commons/e/e6/CinecanalLA.png",
+                "https://commons.wikimedia.org/wiki/File:CinecanalLA.png",
+            ),
+        }
+        for channel, (asset_url, source_page) in expected.items():
+            with self.subTest(channel=channel):
+                hint = logo_repair.EXTRA_DIRECT_HINTS[channel]
+                self.assertEqual(hint["url"], asset_url)
+                self.assertEqual(hint["page"], source_page)
+                self.assertTrue(hint["license"])
+
     def test_wwe_superstar_central_uses_exact_trademark_image_asset(self):
         hint = logo_repair.EXTRA_DIRECT_HINTS["WWE Superstar Central"]
         self.assertEqual(hint["url"], "https://static.trademarkia.com/images/99048431")
