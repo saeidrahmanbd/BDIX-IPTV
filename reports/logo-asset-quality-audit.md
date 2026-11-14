@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-14T16:49:32+00:00**
+Generated: **2026-11-14T17:28:18+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -44,6 +44,14 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
 | README.md | 0×0 | 602694 | no |
+
+## Technical read/repair errors
+
+| Asset | Detected format | Error |
+|---|---|---|
+| logos/international/nickonline-bob-esponja-720p-not-24-7.png |  | cannot identify image file 'logos/international/nickonline-bob-esponja-720p-not-24-7.png' |
+| logos/international/nickonline-hd-720p.png |  | cannot identify image file 'logos/international/nickonline-hd-720p.png' |
+| logos/unused/yet-tv-custom.png |  | cannot identify image file 'logos/unused/yet-tv-custom.png' |
 
 ## Small assets requiring visual review
 
