@@ -98,6 +98,25 @@ class LogoFormatConversionTests(unittest.TestCase):
             self.assertIn("sample-", playlist)
             self.assertIn(".png", playlist)
 
+
+    def test_crlf_playlist_line_endings_are_preserved(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            logos = root / "logos"
+            logos.mkdir()
+            (logos / "line.jpg").write_bytes(image_bytes("JPEG"))
+            original = (
+                "#EXTM3U\\r\\n"
+                f'#EXTINF:-1 tvg-logo="{RAW_BASE}line.jpg",Line\\r\\n'
+                "https://example.invalid/live.m3u8\\r\\n"
+            )
+            playlist = root / "IPTV-Playlist.m3u"
+            playlist.write_bytes(original.encode("utf-8"))
+            convert_referenced_logos(root=root, playlist_names=("IPTV-Playlist.m3u",))
+            converted = playlist.read_bytes()
+            self.assertIn(b"\\r\\n", converted)
+            self.assertNotIn(b"\\n", converted.replace(b"\\r\\n", b""))
+
     def test_external_logo_reference_fails_without_changing_playlist(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
