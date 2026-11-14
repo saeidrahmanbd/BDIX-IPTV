@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-14T11:45:40.624146+00:00**
-Source playlist SHA-256: **7fd0e715791c7916376cb3c6b854255968394936eb0c4def468bfa8ce4fb0bc0**
+Generated: **2026-11-14T11:50:58.707373+00:00**
+Source playlist SHA-256: **d47607e2306ca0561e6181336ea25952f4f93a6f56d47b33abbb2b7d221b6c6b**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -18,7 +18,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **3**
+- Logo exceptions requiring repair: **2**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
 - Logo references checked: **1284**
@@ -1307,7 +1307,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1281**
+- Healthy/local references: **1282**
 - External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair
@@ -1316,14 +1316,13 @@ Active playlist entries with missing or invalid logo references. These rows are 
 
 - **Shikor TV Canada** [custom.shikortvcanada] — Bangladesh — missing — (missing logo reference)
 - **Ten TV Prime** [custom.tentvprime] — Bangladesh — missing — (missing logo reference)
-- **WWE Superstar Central** [wwe.superstar.central.com] — Sports — missing — (missing logo reference)
 
 ## Missing Logos in Discovery Queues
 
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 None.
-- missing: **3**
+- missing: **2**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
