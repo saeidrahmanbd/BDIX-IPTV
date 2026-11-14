@@ -31,10 +31,10 @@ class InternationalStreamHealthTests(unittest.TestCase):
 
     def test_report_summarizes_inconclusive_reasons_and_http_statuses(self):
         events = [
-            {"state": "inconclusive", "status": 403, "reason": "HTTP 403"},
-            {"state": "inconclusive", "status": 403, "reason": "HTTP 403"},
-            {"state": "inconclusive", "status": 0, "reason": "Timeout"},
-            {"state": "ok", "status": 200, "reason": "Media bytes received"},
+            {"state": "inconclusive", "status": 403, "reason": "HTTP 403", "action": "none", "name": "Example 403"},
+            {"state": "inconclusive", "status": 403, "reason": "HTTP 403", "action": "none", "name": "Example 403"},
+            {"state": "inconclusive", "status": 0, "reason": "Timeout", "action": "none", "name": "Example timeout"},
+            {"state": "ok", "status": 200, "reason": "Media bytes received", "action": "none", "name": "Example OK"},
         ]
         report = health.build_report(events, {"entries": {}}, "2026-11-14", "2026-11-14T00:00:00+00:00", 4)
         self.assertIn("## Inconclusive reason summary", report)
