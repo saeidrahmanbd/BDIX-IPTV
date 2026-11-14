@@ -19,12 +19,16 @@ class RollbackTarget:
     changed_paths: tuple[str, ...]
 
 
-def validate_publication_pr(payload: dict, pull_request_number: int) -> RollbackTarget:
+def validate_publication_pr(payload: dict, pull_request_number: int, expected_repository: str) -> RollbackTarget:
     """Accept only a merged Automation V2 candidate PR with allowlisted output files."""
     if not isinstance(payload, dict):
         raise ValueError("publication PR metadata must be an object")
     if payload.get("state") not in {"CLOSED", "MERGED"} or not payload.get("mergedAt"):
         raise ValueError("source publication PR must be merged and closed")
+    head_repository = payload.get("headRepository")
+    actual_repository = head_repository.get("nameWithOwner") if isinstance(head_repository, dict) else None
+    if not expected_repository or actual_repository != expected_repository:
+        raise ValueError("source publication PR must originate from the same repository")
     if payload.get("baseRefName") != "main":
         raise ValueError("source publication PR must target main")
     title = payload.get("title")
