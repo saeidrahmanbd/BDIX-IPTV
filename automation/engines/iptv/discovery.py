@@ -80,17 +80,33 @@ def _safe_public_url(url: str) -> bool:
     except ValueError:
         return False
 
-def _local_logo(root: Path, logo_value: str) -> str:
-    if not logo_value.startswith("logos/"):
+def _local_logo(root: Path, value: str) -> str:
+    """Accept only a real, non-symlink asset physically contained in logos/."""
+    if not value.startswith("logos/"):
         return ""
-    candidate=(root/logo_value).resolve()
-    if not candidate.is_relative_to(root.resolve()) or not candidate.is_file():
+    relative = Path(value)
+    if relative.is_absolute() or ".." in relative.parts:
         return ""
-    if "unused" in candidate.parts:
+    logos_root = root / "logos"
+    candidate = root / relative
+    # Reject symlinked logo directories, files, and path components rather than
+    # trusting a resolved target elsewhere in the repository.
+    if logos_root.is_symlink() or candidate.is_symlink():
         return ""
-    if candidate.suffix.lower() not in {".png",".jpg",".jpeg",".webp",".svg"}:
+    try:
+        resolved_root = logos_root.resolve(strict=True)
+        resolved = candidate.resolve(strict=True)
+        if not resolved_root.is_dir() or not resolved.is_file():
+            return ""
+        if not resolved.is_relative_to(resolved_root):
+            return ""
+    except (OSError, RuntimeError):
         return ""
-    return logo_value
+    if "unused" in resolved.parts:
+        return ""
+    if resolved.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".svg"}:
+        return ""
+    return value
 
 def build_discovery_batch(playlist_text: str, source_feeds: dict[str,str],
                           repository_root: str | Path,
