@@ -91,7 +91,7 @@ def build_inventory(root: Path) -> dict:
                 run_indent=indent
                 active_boundary={"source":workflow.relative_to(root).as_posix(),
                     "line":line_number,"kind":"workflow_shell_boundary","target":None,
-                    "detail":stripped[:300]}
+                    "detail":line.rstrip("\\r\\n")}
                 shell_boundaries.append(active_boundary)
             elif active_boundary is not None and stripped:
                 # Preserve the actual shell body so reviewers can resolve
