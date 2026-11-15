@@ -23,8 +23,56 @@ def url_fingerprint(url):
     """One-way history key: never persist credentials, tokens, or raw stream URLs."""
     return hashlib.sha256(str(url).strip().encode("utf-8")).hexdigest()
 
+def _legacy_check_date(value):
+    """Convert a legacy UTC timestamp to its Bangladesh calendar date."""
+    if not value:
+        return ""
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(ZoneInfo("Asia/Dhaka")).date().isoformat()
+    except (TypeError, ValueError, OverflowError):
+        return ""
+
+
+def _normalize_history_entry(value):
+    """Preserve lifetime counters while migrating run-based streaks to daily state."""
+    entry = dict(value)
+    # Older history stored run-count streaks and numeric HTTP statuses. Those
+    # counts cannot safely be reinterpreted as consecutive calendar days.
+    if not entry.get("last_checked_date"):
+        dates = [
+            _legacy_check_date(entry.get("last_ok")),
+            _legacy_check_date(entry.get("last_failure")),
+        ]
+        dates = [item for item in dates if item]
+        entry["last_checked_date"] = max(dates) if dates else ""
+    if entry.get("last_status") not in {"ok", "definitive_failure", "inconclusive"}:
+        try:
+            status = int(entry.get("last_status_code", entry.get("last_status", 0)) or 0)
+        except (TypeError, ValueError):
+            status = 0
+        last_failure_date = _legacy_check_date(entry.get("last_failure"))
+        last_ok_date = _legacy_check_date(entry.get("last_ok"))
+        if status in DEFINITIVE_HTTP_FAILURES and last_failure_date and last_failure_date == entry.get("last_checked_date"):
+            entry["last_status"] = "definitive_failure"
+            entry["consecutive_failure_days"] = 1
+        elif status < 400 and last_ok_date and last_ok_date == entry.get("last_checked_date"):
+            entry["last_status"] = "ok"
+            entry["consecutive_failure_days"] = 0
+        else:
+            entry["last_status"] = "inconclusive"
+            entry["consecutive_failure_days"] = 0
+    else:
+        entry.setdefault("consecutive_failure_days", 0)
+    entry["consecutive_failure_days"] = int(entry.get("consecutive_failure_days", 0) or 0)
+    entry["consecutive_failures"] = entry["consecutive_failure_days"]
+    return entry
+
+
 def migrate_history_keys(previous):
-    """Convert legacy raw-URL history keys to fingerprints without losing streaks."""
+    """Fingerprint legacy URL keys and normalize old run-based history values."""
     if not isinstance(previous,dict):
         return {}
     migrated = {}
@@ -33,7 +81,7 @@ def migrate_history_keys(previous):
             continue
         key = str(key)
         safe_key = key if re.fullmatch(r"[0-9a-f]{64}", key) else url_fingerprint(key)
-        migrated[safe_key] = value
+        migrated[safe_key] = _normalize_history_entry(value)
     return migrated
 
 def load_history(path=HISTORY):
