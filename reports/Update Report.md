@@ -1,19 +1,19 @@
 # Update Report
 
-_Last generated: **2026-11-15 06:17 UTC**_
+_Last generated: **2026-11-15 08:14 UTC**_
 
-Source playlist SHA-256: **dca221fc5c3faa47dc7849d90cfeecc8207f30dbe9fb9c72d6259717ae63693d**
+Source playlist SHA-256: **80cee209bddaaed878591d9fb195a8619ba2663a375dd834edd7e8c70c2c1518**
 
 | Metric | Current |
 |---|---:|
 | Streams | **1276** |
-| Active Channel Identities | **644** |
-| Active Primary Streams | **644** |
+| Active Channel Identities | **645** |
+| Active Primary Streams | **645** |
 | Bangladesh | **63** |
-| India | **294** |
-| Backup Stream Entries | **424** |
+| India | **295** |
+| Backup Stream Entries | **423** |
 | IPTV Local Logos | **STALE** |
-| IPTV EPG Programme Coverage | **51%** |
+| IPTV EPG Programme Coverage | **50%** |
 | IPTV EPG Mapping | **58.9%** |
 | Stream Health Tested | **STALE** |
 | Stream Health Failures | **STALE** |
@@ -52,9 +52,9 @@ Source playlist SHA-256: **dca221fc5c3faa47dc7849d90cfeecc8207f30dbe9fb9c72d6259
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
 ## EPG
-- EPG IDs audited: **644**
-- Mapped: **379 (58.9%)**
-- Current/future programme coverage: **326/644 (50.6%)**
+- EPG IDs audited: **645**
+- Mapped: **380 (58.9%)**
+- Current/future programme coverage: **326/645 (50.5%)**
 - No mapping: **265**
 - EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against both current playlist inventories)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
@@ -63,7 +63,7 @@ Source playlist SHA-256: **dca221fc5c3faa47dc7849d90cfeecc8207f30dbe9fb9c72d6259
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-15T02:24:50.754118+00:00** | **STALE** |
-| EPG coverage / two-playlist inventory | **2026-11-15T06:17:40+00:00** | **CURRENT** |
+| EPG coverage / two-playlist inventory | **2026-11-15T08:14:46+00:00** | **CURRENT** |
 | Stream health | **2026-11-15T02:25:32+00:00** | **STALE** |
 | Pre-publish gate | **2026-11-15T02:24:51+00:00** | **STALE** |
 
