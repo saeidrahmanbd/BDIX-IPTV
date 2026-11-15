@@ -33,6 +33,9 @@ MAX_BYTES = 12 * 1024 * 1024
 USER_AGENT = "BDIX-IPTV-Bangladesh-EPG-Research/1.0"
 
 PUBLIC_PAGES = (
+    ("RTV official weekly schedule", "https://www.rtvbd.tv/schedule.php"),
+    ("RTV official live schedule", "https://www.rtvbd.tv/live.php"),
+    ("Maasranga official weekly schedule", "https://maasranga.tv/full-width/program-time-schedule/"),
     ("BTV official homepage", "https://btv.gov.bd/"),
     ("BTV legacy live programme guide", "https://migrate.btvlive.gov.bd/channel/BTV"),
     ("Prothom Alo TV section", "https://www.prothomalo.com/entertainment/tv"),
