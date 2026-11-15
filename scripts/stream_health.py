@@ -35,6 +35,18 @@ def migrate_history_keys(previous):
         migrated[safe_key] = value
     return migrated
 
+def load_history(path=HISTORY):
+    """Load required durable history and fail closed instead of resetting streaks."""
+    path = Path(path)
+    try:
+        previous = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Required stream-health history is missing or unreadable: {path}") from exc
+    if not isinstance(previous, dict) or not previous:
+        raise RuntimeError(f"Required stream-health history is empty or invalid: {path}")
+    return migrate_history_keys(previous)
+
+
 def canonical_url(url):
     """Return a private in-memory family key without URL userinfo or query values."""
     p=urlsplit(url)
@@ -94,27 +106,9 @@ def main():
         for (a,u),f in zip(targets,futs):
             r=f.result(); results.append({"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower(),"name":a.get("_display",""),"group":a.get("group-title","").strip(),"url":u,**r})
     now=datetime.now(timezone.utc).isoformat(timespec="seconds")
-    previous={}
-    if HISTORY.exists():
-        try: previous=json.loads(HISTORY.read_text(encoding="utf-8"))
-        except Exception: previous={}
-    # The PR clears the committed raw-URL history file. On the first run after
-    # merge, recover the first-parent snapshot in memory so streak statistics
-    # survive while the next write replaces every URL key with a fingerprint.
-    if not previous:
-        try:
-            legacy = subprocess.run(
-                ["git", "show", "HEAD^:reports/stream-health-history.json"],
-                check=True, capture_output=True, text=True, timeout=15,
-            )
-            candidate=json.loads(legacy.stdout)
-            if isinstance(candidate,dict):
-                previous=candidate
-        except (OSError, subprocess.SubprocessError, json.JSONDecodeError):
-            previous={}
-    # Migrate legacy raw-URL keys in memory. The next write replaces them with
-    # SHA-256 fingerprints so credentials and signed tokens leave Git history.
-    previous=migrate_history_keys(previous)
+    # History is a required durable input. Never silently reset it: a missing,
+    # malformed, or empty file must stop maintenance before any history is lost.
+    previous=load_history()
     for r in results:
         history_key=url_fingerprint(r["url"])
         h=previous.get(history_key,{"checks":0,"successes":0,"failures":0,"consecutive_failures":0}); h["checks"]+=1

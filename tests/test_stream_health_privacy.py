@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from stream_health import canonical_url, migrate_history_keys, url_fingerprint
+from stream_health import canonical_url, load_history, migrate_history_keys, url_fingerprint
 
 
 class StreamHealthPrivacyTests(unittest.TestCase):
@@ -29,6 +29,7 @@ class StreamHealthPrivacyTests(unittest.TestCase):
     def test_committed_history_contains_only_fingerprints(self):
         history_path = Path(__file__).resolve().parents[1] / "reports" / "stream-health-history.json"
         history = json.loads(history_path.read_text(encoding="utf-8"))
+        self.assertGreater(len(history), 0, "stream-health history must never be silently purged")
         self.assertTrue(all(re.fullmatch(r"[0-9a-f]{64}", key) for key in history))
 
     def test_near_duplicate_family_key_omits_userinfo_and_query(self):
@@ -38,6 +39,19 @@ class StreamHealthPrivacyTests(unittest.TestCase):
         self.assertNotIn("alice", first)
         self.assertNotIn("secret", first)
         self.assertNotIn("token", first)
+
+    def test_load_history_fails_loudly_for_missing_corrupt_or_empty_history(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "history.json"
+            with self.assertRaises(RuntimeError):
+                load_history(path)
+            path.write_text("{broken", encoding="utf-8")
+            with self.assertRaises(RuntimeError):
+                load_history(path)
+            path.write_text("{}", encoding="utf-8")
+            with self.assertRaises(RuntimeError):
+                load_history(path)
 
 
 if __name__ == "__main__":
