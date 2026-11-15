@@ -21,8 +21,9 @@ LOGOS = Path("logos")
 PLAYLISTS = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
 REPORT = Path("reports/logo-asset-quality-audit.md")
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
-DEFAULT_MAX_DIMENSION = 1600
-DEFAULT_MAX_BYTES = 500 * 1024
+# Keep default audit/repair policy aligned with both production logo workflows.
+DEFAULT_MAX_DIMENSION = 1024
+DEFAULT_MAX_BYTES = 153600
 EXPECTED_FORMAT = {
     ".png": "PNG",
     ".jpg": "JPEG",
