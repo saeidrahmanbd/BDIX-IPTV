@@ -51,7 +51,7 @@ class CountryVerificationTests(unittest.TestCase):
     def test_primary_country_and_indian_bangla_group_consistency(self):
         root = Path(__file__).resolve().parent.parent
         # Explicitly regionalized UK feed; the broadcaster has a UK edition.
-        feed_country_exceptions = {"GTCPunjabi.in@UK": "GB"}
+        feed_country_exceptions = {"GTCPunjabi.in@UK": "GB", "YRFMusic.in@Nepal": "NP"}
         for playlist in ("IPTV-Playlist.m3u", "International-Playlist.m3u"):
             for line in (root / playlist).read_text(encoding="utf-8").splitlines():
                 if not line.startswith("#EXTINF:"):
@@ -75,7 +75,7 @@ class CountryVerificationTests(unittest.TestCase):
         main = (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8").splitlines()
         international = (root / "International-Playlist.m3u").read_text(encoding="utf-8").splitlines()
         q_tv_primary = [line for line in main if line.startswith("#EXTINF:") and 'tvg-id="QTV.in"' in line and 'group-title="Indian Entertainment"' in line]
-        q_tv_alternates = [line for line in main if line.startswith("#EXTINF:") and 'tvg-id="QTV.in@SD"' in line]
+        q_tv_alternates = [line for line in main if line.startswith("#EXTINF:") and 'tvg-id="QTV.in"' in line and 'group-title="Backup"' in line]
         sindh = [line for line in main if line.startswith("#EXTINF:") and 'tvg-name="Sindh TV"' in line and 'group-title="Pakistani"' in line]
         yrf = [line for line in international if line.startswith("#EXTINF:") and 'tvg-id="YRFMusic.in@Nepal"' in line]
         self.assertEqual(len(q_tv_primary), 1)
@@ -90,7 +90,7 @@ class CountryVerificationTests(unittest.TestCase):
         self.assertIn('channel-id="SindhTV.pk@SD"', sindh[0])
         self.assertIn('tvg-country="PK"', sindh[0])
         self.assertEqual(len(yrf), 1)
-        self.assertIn('tvg-country="IN"', yrf[0])
+        self.assertIn('tvg-country="NP"', yrf[0])
 
     def test_id_conflicts_are_held(self):
         self.assertFalse(cv.verify_country({"tvg-id": "X.in"}, "X", None, "BD").ok)          # feed mismatch
