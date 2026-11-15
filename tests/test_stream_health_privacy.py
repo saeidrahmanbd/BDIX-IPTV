@@ -22,7 +22,8 @@ class StreamHealthPrivacyTests(unittest.TestCase):
         history = {url: {"checks": 4, "successes": 1, "failures": 3, "consecutive_failures": 2}}
         migrated = migrate_history_keys(history)
         self.assertEqual(list(migrated), [url_fingerprint(url)])
-        self.assertEqual(migrated[url_fingerprint(url)]["consecutive_failures"], 2)
+        self.assertEqual(migrated[url_fingerprint(url)]["legacy_run_failure_count"], 2)
+        self.assertEqual(migrated[url_fingerprint(url)]["consecutive_failure_days"], 0)
         self.assertNotIn(url, str(migrated))
         self.assertEqual(migrate_history_keys(migrated), migrated)
 
