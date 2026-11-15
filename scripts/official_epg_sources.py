@@ -140,7 +140,7 @@ def fetch_hum_tv_programmes(now=None):
     request = urllib.request.Request(
         HUM_TV_SOURCE,
         headers={
-            "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+            "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
             "Accept": "text/html,application/xhtml+xml,*/*",
         },
     )
@@ -626,7 +626,7 @@ def fetch_rtv_programmes(now=None):
     request = urllib.request.Request(
         RTV_SOURCE,
         headers={
-            "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+            "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
             "Accept": "text/html,application/xhtml+xml,*/*",
             "Accept-Language": "bn-BD,bn;q=0.9,en;q=0.7",
         },
@@ -649,7 +649,7 @@ def fetch_rtv_programmes(now=None):
             article_request = urllib.request.Request(
                 article_urls[0],
                 headers={
-                    "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+                    "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
                     "Accept": "text/html,application/xhtml+xml,*/*",
                     "Accept-Language": "bn-BD,bn;q=0.9,en;q=0.7",
                     "Referer": RTV_SOURCE,
@@ -673,7 +673,7 @@ def fetch_rtv_programmes(now=None):
         live_request = urllib.request.Request(
             RTV_LIVE_SOURCE,
             headers={
-                "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+                "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
                 "Accept": "text/html,application/xhtml+xml,*/*",
                 "Accept-Language": "en-US,en;q=0.9,bn;q=0.7",
             },
@@ -696,7 +696,7 @@ def fetch_rtv_programmes(now=None):
             request = urllib.request.Request(
                 source_url,
                 headers={
-                    "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+                    "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
                     "Accept": "text/html,application/xhtml+xml,*/*",
                 },
             )
@@ -800,7 +800,7 @@ def fetch_btv_programmes(now=None):
     request = urllib.request.Request(
         BTV_SOURCE,
         headers={
-            "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+            "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
             "Accept": "text/html,application/xhtml+xml,*/*",
         },
     )
@@ -968,7 +968,7 @@ def fetch_maasranga_programmes(now=None):
     request = urllib.request.Request(
         MAASRANGA_SOURCE,
         headers={
-            "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+            "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
             "Accept": "text/html,application/xhtml+xml,*/*",
         },
     )
