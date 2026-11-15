@@ -1,6 +1,6 @@
 # Bangladesh official schedule source probe
 
-Generated: **2026-11-09T06:17:38+00:00**
+Generated: **2026-11-15T16:32:48+00:00**
 
 ## Safety and scope
 
@@ -19,23 +19,26 @@ Generated: **2026-11-09T06:17:38+00:00**
 | Source | XMLTV channel ID | Result | Usable rows | Unique titles | Exact playlist status | Group | First start (UTC) | Last stop (UTC) | Error |
 |---|---|---|---:|---:|---|---|---|---|---|
 | RTV official weekly/daily schedule | RTV.bd | FAILED | 0 | 0 | EXACT_ACTIVE | Backup, Bangladesh, Review | - | - | RuntimeError: Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry) |
-| BTV official programme guide (legacy endpoint) | BTVNational.bd | OK | 74 | 38 | EXACT_INACTIVE_ONLY | Review | 2026-11-09T01:00+00:00 | 2026-11-15T12:00+00:00 |  |
+| BTV official programme guide (legacy endpoint) | BTVNational.bd | OK | 58 | 26 | EXACT_INACTIVE_ONLY | Review | 2026-11-15T10:30+00:00 | 2026-11-21T15:55+00:00 |  |
 | Maasranga official weekly schedule | MaasrangaTV.bd | FAILED | 0 | 0 | EXACT_ACTIVE | Backup, Bangladesh, Review | - | - | HTTPError: HTTP Error 403: Forbidden |
 
 ## Public schedule-navigation pages
 
 | Page | Fetch result | HTTP | Page URL | Bytes | Candidate schedule links | Note |
 |---|---|---:|---|---:|---|---|
+| RTV official weekly schedule | FAILED | - | https://www.rtvbd.tv/schedule.php | 0 | - | URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1011)> |
+| RTV official live schedule | FAILED | - | https://www.rtvbd.tv/live.php | 0 | - | URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1011)> |
+| Maasranga official weekly schedule | FAILED | - | https://maasranga.tv/full-width/program-time-schedule/ | 0 | - | HTTPError: HTTP Error 403: Forbidden |
 | BTV official homepage | FAILED | - | https://btv.gov.bd/ | 0 | - | URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)> |
-| BTV legacy live programme guide | OK | 200 | https://migrate.btvlive.gov.bd/channel/BTV | 209388 | - | Public page fetch only; links are candidates, not schedule rows. |
-| Prothom Alo TV section | OK | 200 | https://www.prothomalo.com/entertainment/tv | 2981400 | - | Public page fetch only; links are candidates, not schedule rows. |
-| Prothom Alo entertainment section | OK | 200 | https://www.prothomalo.com/entertainment | 3136586 | - | Public page fetch only; links are candidates, not schedule rows. |
+| BTV legacy live programme guide | OK | 200 | https://migrate.btvlive.gov.bd/channel/BTV | 205569 | - | Public page fetch only; links are candidates, not schedule rows. |
+| Prothom Alo TV section | OK | 200 | https://www.prothomalo.com/entertainment/tv | 2978681 | - | Public page fetch only; links are candidates, not schedule rows. |
+| Prothom Alo entertainment section | OK | 200 | https://www.prothomalo.com/entertainment | 3137931 | - | Public page fetch only; links are candidates, not schedule rows. |
 
 ## Summary
 
-- Usable programme rows from tested official adapters: **74**
+- Usable programme rows from tested official adapters: **58**
 - Rows attached to exact active playlist IDs: **0**
-- Rows attached only to exact inactive playlist IDs: **74**
+- Rows attached only to exact inactive playlist IDs: **58**
 - A successfully fetched schedule for a Backup/Review-only channel does not count as active-playlist coverage.
 - A public navigation page without a current dated schedule is not treated as an EPG source.
 - Public pages and adapters require separate data-redistribution review before any schedule data can be added to the public XMLTV guide.
