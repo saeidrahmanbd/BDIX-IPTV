@@ -12,7 +12,7 @@ ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 SENSITIVE = {
     "token", "access_token", "refresh_token", "sig", "signature", "jwt", "session",
     "key", "api_key", "apikey", "authorization", "auth", "client_secret", "hdnts",
-    "expires", "e", "username", "user", "password", "passwd", "pass",
+    "expires", "e", "u", "username", "user", "password", "passwd", "pass",
 }
 CREDENTIAL_PATHS = {"live", "movie", "series", "timeshift"}
 
