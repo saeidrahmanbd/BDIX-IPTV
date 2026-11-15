@@ -540,7 +540,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
 
     def test_earlier_active_run_owns_daily_slot(self):
         earlier = {"id": 152, "status": "in_progress", "conclusion": None,
-                   "created_at": "2026-11-07T02:59:00Z"}
+                   "created_at": "2026-11-06T23:59:00Z"}
         current = {"id": 153, "status": "in_progress", "conclusion": None,
                    "created_at": "2026-11-07T00:00:00Z"}
         self.assertFalse(guard.should_current_run_execute(
