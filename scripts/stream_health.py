@@ -39,8 +39,10 @@ def _legacy_check_date(value):
 def _normalize_history_entry(value):
     """Preserve lifetime counters while migrating run-based streaks to daily state."""
     entry = dict(value)
-    # Older history stored run-count streaks and numeric HTTP statuses. Those
-    # counts cannot safely be reinterpreted as consecutive calendar days.
+    # Older history stored run-count streaks and numeric HTTP statuses. Preserve
+    # that diagnostic count separately; it cannot safely become calendar days.
+    if "last_checked_date" not in entry and "legacy_run_failure_count" not in entry:
+        entry["legacy_run_failure_count"] = int(entry.get("consecutive_failures", 0) or 0)
     if not entry.get("last_checked_date"):
         dates = [
             _legacy_check_date(entry.get("last_ok")),
