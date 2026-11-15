@@ -39,10 +39,8 @@ on:
       - scripts/generate_dashboard.py
       - scripts/refresh_dashboard_diagnostics.py
       - scripts/enforce_playlist_attribution.py
-      - scripts/discover_international_channels.py
       - scripts/repair_international_playlist.py
       - scripts/validate_discovery_run.py
-      - scripts/reorganize_international_playlist.py
       - scripts/validate_international_playlist.py
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
@@ -78,8 +76,33 @@ on:
 permissions:
   contents: write
 jobs:
+  daily_guard:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    concurrency:
+      group: iptv-maintenance-daily-guard-v1
+      cancel-in-progress: false
+      queue: max
+    outputs:
+      should_run: ${{ steps.guard.outputs.should_run }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Deduplicate IPTV maintenance by Bangladesh date
+        id: guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/discovery_schedule_guard.py guard iptv-maintenance.yml
   maintain:
-    if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG'))) }}
+    needs: daily_guard
+    if: ${{ needs.daily_guard.outputs.should_run == 'true' && !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG'))) }}
     # Shared main-branch writer queue. Set on the writing job, not the workflow,
     # so runs whose jobs are skipped do not occupy the queue.
     concurrency:
@@ -135,9 +158,7 @@ jobs:
             scripts/stream_risk_review.py \
             scripts/validate_report_freshness.py \
             scripts/iptv_metadata_backfill.py \
-            scripts/discover_international_channels.py \
             scripts/repair_international_playlist.py \
-            scripts/reorganize_international_playlist.py \
             scripts/validate_international_playlist.py \
             scripts/normalize_metadata.py \
             scripts/migrate_external_logos_fixed.py \
@@ -205,7 +226,8 @@ jobs:
             # International metadata/reorganization is maintained under its own
             # country/genre policy. IPTV receives metadata/logo-only repairs.
             python scripts/backfill_cross_playlist_metadata.py
-            python scripts/reorganize_international_playlist.py
+            # International country/genre reorganization belongs to its dedicated
+            # discovery and stream-health workflows; maintenance does not rewrite it.
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
             python scripts/validate_international_playlist.py
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u

@@ -37,6 +37,8 @@ class MaintenanceReportOrderTests(unittest.TestCase):
             ".github/workflows/new-channel-discovery.yml",
             ".github/workflows/international-channel-discovery.yml",
             ".github/workflows/playlist-logo-localization.yml",
+            ".github/workflows/international-stream-health.yml",
+            ".github/workflows/logo-localization.yml",
             ".github/workflows/changelog.yml",
             ".github/workflows/epg-refresh.yml",
         )
@@ -49,9 +51,11 @@ class MaintenanceReportOrderTests(unittest.TestCase):
                     re.search(r"(?m)^  concurrency:", source),
                     f"{relative}: writer queue must be job-level, not workflow-level",
                 )
-                match = re.search(r"(?m)^ {4}concurrency:\n {6}group:\s*([^\s#]+)", source)
-                self.assertIsNotNone(match, f"{relative}: missing job-level concurrency group")
-                self.assertEqual(match.group(1), expected, f"{relative}: writer queue mismatch")
+                self.assertRegex(
+                    source,
+                    rf"(?m)^ {{4}}concurrency:\n {{6}}group:\s*{re.escape(expected)}(?:\s|$)",
+                    f"{relative}: missing shared job-level writer queue",
+                )
 
     def test_guarded_workflows_serialize_the_full_run_before_daily_deduplication(self):
         expected = {
@@ -174,6 +178,25 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertGreaterEqual(workflow.count("python scripts/protect_main_playlist.py verify IPTV-Playlist.m3u"), 2)
         self.assertIn("python -m unittest discover -s tests -p 'test_main_playlist_protection.py'", workflow)
 
+
+    def test_daily_writer_jobs_have_serialized_real_work_guards(self):
+        expected = {
+            "iptv-maintenance.yml": ("maintain", "Run maintenance", "iptv-maintenance-daily-guard-v1"),
+            "playlist-logo-localization.yml": ("localize", "Localize and commit logos", "playlist-logo-localization-daily-guard-v1"),
+            "international-stream-health.yml": ("check", "Probe all International streams and apply three-day policy", "international-stream-health-daily-guard-v1"),
+        }
+        for filename, (job, step, group) in expected.items():
+            source = (ROOT / ".github" / "workflows" / filename).read_text(encoding="utf-8")
+            with self.subTest(workflow=filename):
+                self.assertIn("  daily_guard:", source)
+                self.assertIn(f"group: {group}", source)
+                self.assertIn(f"  {job}:\n    needs: daily_guard", source)
+                self.assertIn("needs.daily_guard.outputs.should_run == 'true'", source)
+                self.assertIn(step, source)
+
+    def test_iptv_maintenance_does_not_reorganize_international_playlist(self):
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        self.assertNotIn("python scripts/reorganize_international_playlist.py", workflow)
 
     def test_international_health_reconciles_country_threshold_after_stream_actions(self):
         workflow = (ROOT / ".github" / "workflows" / "international-stream-health.yml").read_text(encoding="utf-8")
