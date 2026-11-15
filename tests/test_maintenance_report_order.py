@@ -198,6 +198,36 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         self.assertNotIn("python scripts/reorganize_international_playlist.py", workflow)
 
+
+    def test_daily_pipeline_order_and_maintenance_ownership_are_consistent(self):
+        root = ROOT / ".github" / "workflows"
+        expected = {
+            "new-channel-discovery.yml": "0 23 * * *",
+            "international-channel-discovery.yml": "10 23 * * *",
+            "playlist-logo-localization.yml": "25 23 * * *",
+            "international-stream-health.yml": "35 23 * * *",
+            "iptv-maintenance.yml": "50 23 * * *",
+            "epg-refresh.yml": "10 0 * * *",
+            "check-xtream.yml": "30 0 * * *",
+        }
+        for filename, cron in expected.items():
+            source = (root / filename).read_text(encoding="utf-8")
+            cron_line = next((line for line in source.splitlines() if "cron:" in line), "")
+            observed = cron_line.split("'")[1] if "'" in cron_line else cron_line.split('"')[1]
+            self.assertEqual(observed, cron, filename)
+            fields = observed.split()
+            utc_minute = int(fields[0]) + 60 * int(fields[1])
+            dhaka_minute = (utc_minute + 360) % 1440
+            self.assertGreaterEqual(dhaka_minute, 5 * 60)
+            self.assertLess(dhaka_minute, 7 * 60)
+        maintenance = (root / "iptv-maintenance.yml").read_text(encoding="utf-8")
+        self.assertNotIn("workflow_run:", maintenance.split("permissions:", 1)[0])
+        self.assertEqual(maintenance.count("python scripts/backfill_cross_playlist_metadata.py"), 1)
+        self.assertLess(maintenance.index("python scripts/backfill_cross_playlist_metadata.py"), maintenance.index("python scripts/validate_international_playlist.py"))
+        self.assertLess(maintenance.index("python scripts/maintenance_helpers.py canonicalize-extinf"), maintenance.index("python scripts/validate_international_playlist.py"))
+        epg = (root / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn('"International Stream Health"', epg)
+
     def test_international_health_reconciles_country_threshold_after_stream_actions(self):
         workflow = (ROOT / ".github" / "workflows" / "international-stream-health.yml").read_text(encoding="utf-8")
         health = workflow.index("python scripts/international_stream_health.py")

@@ -1,6 +1,6 @@
 name: Discovery Schedule Watchdog
 # GitHub schedule events are best-effort. Staggered checkpoints recover missed
-# discovery, logo, stream-health and EPG jobs before the 07:00 BDT cutoff.
+# discovery, logo, International health, maintenance and EPG jobs before 07:00 BDT.
 # The guard inspects each workflow's real writer/check job, not wrapper conclusions.
 on:
   push:
@@ -9,12 +9,12 @@ on:
       - '.github/workflows/discovery-schedule-watchdog.yml'
       - 'scripts/discovery_schedule_guard.py'
   schedule:
-    - cron: '25 23 * * *'  # 05:25 early checkpoint
-    - cron: '40 23 * * *'  # 05:40 maintenance/discovery recovery
-    - cron: '55 23 * * *'  # 05:55 logo/stream-health recovery
-    - cron: '10 0 * * *'   # 06:10 final stream-health checkpoint
-    - cron: '15 0 * * *'   # 06:15 EPG recovery
-    - cron: '30 0 * * *'   # 06:30 post-EPG checkpoint
+    - cron: '15 23 * * *'  # 05:15 early discovery checkpoint
+    - cron: '30 23 * * *'  # 05:30 discovery recovery
+    - cron: '45 23 * * *'  # 05:45 logo recovery
+    - cron: '0 0 * * *'    # 06:00 International health recovery
+    - cron: '15 0 * * *'   # 06:15 maintenance recovery
+    - cron: '30 0 * * *'   # 06:30 EPG recovery
     - cron: '45 0 * * *'   # 06:45 final recovery checkpoint
     - cron: '55 0 * * *'   # 06:55 last checkpoint
 
