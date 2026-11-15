@@ -12,8 +12,6 @@ on:
     paths:
       - ".github/workflows/check-xtream.yml"
       - "xtream-main/**"
-      - "IPTV-Playlist.m3u"
-      - "epg/epg.xml"
   schedule:
     - cron: "30 0 * * *" # 06:30 Asia/Dhaka (UTC+6); playlist/deploy changes also trigger checks
   workflow_dispatch:
