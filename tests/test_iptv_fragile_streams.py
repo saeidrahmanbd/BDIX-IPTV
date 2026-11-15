@@ -25,5 +25,11 @@ class RedactUrlTests(unittest.TestCase):
         self.assertNotIn("fragment-secret", redact_url("https://example.invalid/a.m3u8#fragment-secret"))
 
 
+    def test_uuid_query_parameter_is_redacted(self):
+        safe = redact_url("https://media.example/live.m3u8?u=private-uuid&quality=hd")
+        self.assertIn("u=REDACTED", safe)
+        self.assertIn("quality=hd", safe)
+        self.assertNotIn("private-uuid", safe)
+
 if __name__ == "__main__":
     unittest.main()
