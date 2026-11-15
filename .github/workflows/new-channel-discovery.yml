@@ -26,7 +26,7 @@ on:
       - 'tests/test_discovery_schedule_guard.py'
       - 'tests/test_stream_url_identity.py'
   schedule:
-    - cron: '0 1 * * *' # 07:00 Asia/Dhaka (UTC+6)
+    - cron: '10 23 * * *' # 05:10 Asia/Dhaka (UTC+6)
   workflow_dispatch:
 
 permissions:
