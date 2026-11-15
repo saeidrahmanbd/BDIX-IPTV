@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Non-destructive HTTP/HLS stream health probe with persistent failure history."""
-import concurrent.futures, hashlib, json, re, time, os
+import concurrent.futures, hashlib, json, re, time, os, subprocess
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -95,6 +95,20 @@ def main():
     if HISTORY.exists():
         try: previous=json.loads(HISTORY.read_text(encoding="utf-8"))
         except Exception: previous={}
+    # The PR clears the committed raw-URL history file. On the first run after
+    # merge, recover the first-parent snapshot in memory so streak statistics
+    # survive while the next write replaces every URL key with a fingerprint.
+    if not previous:
+        try:
+            legacy = subprocess.run(
+                ["git", "show", "HEAD^:reports/stream-health-history.json"],
+                check=True, capture_output=True, text=True, timeout=15,
+            )
+            candidate=json.loads(legacy.stdout)
+            if isinstance(candidate,dict):
+                previous=candidate
+        except (OSError, subprocess.SubprocessError, json.JSONDecodeError):
+            previous={}
     # Migrate legacy raw-URL keys in memory. The next write replaces them with
     # SHA-256 fingerprints so credentials and signed tokens leave Git history.
     previous=migrate_history_keys(previous)
