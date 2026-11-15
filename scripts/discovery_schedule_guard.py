@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Idempotent daily guard and fallback dispatcher for the official discovery workflows.
+"""Idempotent daily guard and fallback dispatcher for production workflows.
 
-The 05:10 Asia/Dhaka schedule remains the primary trigger. GitHub documents that
-schedule events at the top of an hour can be delayed or dropped before a run is
-created. The watchdog only dispatches an official discovery workflow if no run
-for that workflow exists on the current Bangladesh calendar date. The workflow guard ensures that a late scheduled event cannot run a second time that day.
-An explicit manual dispatch may rerun discovery after a completed daily run, but
-will not overlap another active discovery run.
+Staggered 05:00–06:30 Asia/Dhaka schedules are the primary triggers. GitHub
+schedule events can be delayed or dropped before a run is created, so the
+watchdog dispatches a workflow only when its real writer/probe job has not
+completed for the current Bangladesh calendar date. The per-workflow guard
+prevents late schedule events from duplicating completed work. Explicit manual
+dispatches and reruns remain available without overlapping active runs.
 """
 from __future__ import annotations
 
