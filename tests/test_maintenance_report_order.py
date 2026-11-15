@@ -190,7 +190,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
             with self.subTest(workflow=filename):
                 self.assertIn("  daily_guard:", source)
                 self.assertIn(f"group: {group}", source)
-                self.assertIn(f"  {job}:\\n    needs: daily_guard", source)
+                self.assertIn(f"  {job}:\n    needs: daily_guard", source)
                 self.assertIn("needs.daily_guard.outputs.should_run == 'true'", source)
                 self.assertIn(step, source)
 
