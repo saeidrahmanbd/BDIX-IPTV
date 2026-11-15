@@ -88,7 +88,7 @@ def near_duplicate_name(name):
 def redact_url(url):
     url = re.sub(r'(/live/)[^/?#]+/[^/?#]+/([^/?#]+\.ts)(?=$|[?#])', r'\1[REDACTED]/[REDACTED]/\2', url, flags=re.I)
     url = re.sub(r'(^https?://(?:[^/]+\.)?dvltv\.cc(?::\d+)?/play/)[^/?#]+', r'\1[REDACTED]', url, flags=re.I)
-    return re.sub(r'([?&](?:token|sig|signature|jwt|session|key|authorization|hdnts)=[^&\s]+)', lambda m: m.group(1).split("=", 1)[0] + "=[REDACTED]", url, flags=re.I)
+    return re.sub(r'([?&](?:token|sig|signature|jwt|session|key|authorization|hdnts|u)=[^&\s]+)', lambda m: m.group(1).split("=", 1)[0] + "=[REDACTED]", url, flags=re.I)
 
 def logo_issue(info):
     logo = attrs(info).get("tvg-logo", "").strip()

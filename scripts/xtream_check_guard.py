@@ -64,31 +64,32 @@ def should_current_run_execute(
     run_attempt: int = 1,
     client=None,
 ) -> bool:
-    """Run once per Bangladesh date and commit; allow manual retries and failed retries."""
+    """Deduplicate automatic push/workflow-run checks to one success per Bangladesh date."""
     current_id = int(current.get("id") or -1)
     current_sha = str(current.get("head_sha") or "").strip().lower()
     if len(current_sha) != 40:
         raise ValueError("Current Xtream check has no valid 40-character source commit SHA")
 
-    comparable = [
-        run for run in runs
-        if int(run.get("id") or -1) != current_id
-        and str(run.get("head_sha") or "").strip().lower() == current_sha
-        and same_day(run, current)
-    ]
-    # Concurrency serializes this workflow. Still fail closed if an older
-    # same-revision check is active (for example, a run started before this guard).
-    if any(str(run.get("status") or "").casefold() != "completed" for run in comparable):
-        return False
-
     manual = str(event or "").casefold() == "workflow_dispatch"
+    scheduled = str(event or "").casefold() == "schedule"
     try:
         attempt = int(run_attempt or 1)
     except (TypeError, ValueError):
         attempt = 1
-    if manual or attempt > 1:
+    # Explicit operator/scheduled checks and retries remain unrestricted.
+    if manual or scheduled or attempt > 1:
+        return True
+    event_kind = str(event or "").casefold()
+    if event_kind not in {"push", "workflow_run"}:
         return True
 
+    comparable = [
+        run for run in runs
+        if int(run.get("id") or -1) != current_id and same_day(run, current)
+    ]
+    # A check already in progress for today's date wins regardless of SHA.
+    if any(str(run.get("status") or "").casefold() != "completed" for run in comparable):
+        return False
     return not any(successful_check(run, client) for run in comparable)
 
 

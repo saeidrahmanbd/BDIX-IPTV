@@ -2,7 +2,8 @@
 """Non-destructive HTTP/HLS stream health probe with persistent failure history."""
 import concurrent.futures, hashlib, json, re, time, os, subprocess
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 import socket, ssl
@@ -46,6 +47,32 @@ def load_history(path=HISTORY):
         raise RuntimeError(f"Required stream-health history is empty or invalid: {path}")
     return migrate_history_keys(previous)
 
+
+BD_TZ=ZoneInfo("Asia/Dhaka")
+DEFINITIVE_HTTP_FAILURES={404,410}
+def update_failure_history(history, result, check_date):
+    """Advance a stream failure streak once per Bangladesh date, only for 404/410."""
+    yesterday=(datetime.fromisoformat(check_date).date()-timedelta(days=1)).isoformat()
+    previous_date=history.get("last_checked_date","")
+    if previous_date == check_date:
+        return history, int(history.get("consecutive_failure_days",0)), "already-checked-today"
+    status=int(result.get("status",0) or 0)
+    if result.get("ok"):
+        streak=0
+        history["last_status"]="ok"
+        history["last_ok_date"]=check_date
+    elif status in DEFINITIVE_HTTP_FAILURES:
+        prior=int(history.get("consecutive_failure_days",0))
+        streak=prior+1 if previous_date==yesterday and history.get("last_status")=="definitive_failure" else 1
+        history["last_status"]="definitive_failure"
+        history["last_failure_date"]=check_date
+    else:
+        streak=0
+        history["last_status"]="inconclusive"
+    history["last_checked_date"]=check_date
+    history["consecutive_failure_days"]=streak
+    history["consecutive_failures"]=streak
+    return history, streak, history["last_status"]
 
 def canonical_url(url):
     """Return a private in-memory family key without URL userinfo or query values."""
@@ -106,32 +133,38 @@ def main():
         for (a,u),f in zip(targets,futs):
             r=f.result(); results.append({"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower(),"name":a.get("_display",""),"group":a.get("group-title","").strip(),"url":u,**r})
     now=datetime.now(timezone.utc).isoformat(timespec="seconds")
-    # History is a required durable input. Never silently reset it: a missing,
-    # malformed, or empty file must stop maintenance before any history is lost.
+    check_date=datetime.now(BD_TZ).date().isoformat()
     previous=load_history()
     for r in results:
         history_key=url_fingerprint(r["url"])
-        h=previous.get(history_key,{"checks":0,"successes":0,"failures":0,"consecutive_failures":0}); h["checks"]+=1
-        if r["ok"]: h["successes"]+=1; h["consecutive_failures"]=0; h["last_ok"]=now
-        else: h["failures"]+=1; h["consecutive_failures"]=h.get("consecutive_failures",0)+1; h["last_failure"]=now
-        h["last_status"]=r["status"]; h["last_latency_ms"]=r["latency_ms"]; previous[history_key]=h
-        r["consecutive_failures"]=h["consecutive_failures"]; r["success_rate"]=round(h["successes"]/h["checks"]*100,1)
+        h=previous.get(history_key,{"checks":0,"successes":0,"failures":0,"consecutive_failure_days":0})
+        h["checks"]+=1
+        if r["ok"]: h["successes"]+=1
+        else: h["failures"]+=1
+        h, streak, state=update_failure_history(h,r,check_date)
+        h["last_status_code"]=r["status"]
+        h["last_latency_ms"]=r["latency_ms"]
+        previous[history_key]=h
+        r["consecutive_failures"]=streak
+        r["consecutive_failure_days"]=streak
+        r["history_state"]=state
+        r["success_rate"]=round(h["successes"]/h["checks"]*100,1)
     HISTORY.parent.mkdir(parents=True,exist_ok=True); HISTORY.write_text(json.dumps({url_fingerprint(r["url"]):previous[url_fingerprint(r["url"])] for r in results},indent=2)+"\n",encoding="utf-8")
     ok=sum(r["ok"] for r in results); fail=len(results)-ok
-    failure_classes=Counter(("HTTP 401/403 (access/auth)" if r["status"] in {401,403} else "HTTP 404 (not found)" if r["status"]==404 else "HTTP 4xx (other)" if 400<=r["status"]<500 else "HTTP 5xx (server)" if 500<=r["status"]<600 else r["error"] or "Other") for r in results if not r["ok"])
-    persistent=[r for r in results if r["consecutive_failures"]>=3]; intermittent=[r for r in results if not r["ok"] and r["consecutive_failures"]<3]
+    failure_classes=Counter(("HTTP 404/410 (definitive)" if r["status"] in {404,410} else "Inconclusive HTTP/network failure") for r in results if not r["ok"])
+    persistent=[r for r in results if r["consecutive_failure_days"]>=3]; intermittent=[r for r in results if not r["ok"] and r["consecutive_failure_days"]<3]
     groups=Counter(r["group"] for r in results)
     primary_targets=[r for r in results if r["group"] not in {"Backup","Review","New Channels","New Backups","New Backup","Not Playing"}]
     families={}
     for r in results: families.setdefault(canonical_url(r["url"]),set()).add(url_fingerprint(r["url"]))
     near_duplicates={k:v for k,v in families.items() if len(v)>1}
     runner_context="GitHub-hosted ubuntu-latest runner" if os.getenv("GITHUB_ACTIONS")=="true" else "local/non-GitHub runner"
-    lines=["# Stream Health Report","",f"Generated: **{now}**",f"Stream URL inventory SHA-256: **{stream_url_inventory_sha256()}**","",f"Probe environment: **{runner_context}**.","A successful HTTP response confirms endpoint reachability, not guaranteed video/audio playback. HTTP 401/403 can reflect authentication, entitlement, or geographic restrictions; results from a GitHub-hosted runner should not be treated as proof of Bangladesh/India-local playback availability.","","## Summary","",f"- Streams tested: **{len(results)}**",f"- Reachable: **{ok}**",f"- Failed this check: **{fail}**",f"- Persistent failures (3+ consecutive): **{len(persistent)}**",f"- Intermittent failures: **{len(intermittent)}**",f"- Primary tested: **{len(primary_targets)}**",f"- Backup tested: **{groups.get('Backup',0)}**",f"- Review-queue entries tested: **{sum(groups.get(g,0) for g in REVIEW_GROUPS)}**",f"- Near-duplicate URL families: **{len(near_duplicates)}**","","## Failure Classification",""]
+    lines=["# Stream Health Report","",f"Generated: **{now}**",f"Stream URL inventory SHA-256: **{stream_url_inventory_sha256()}**","",f"Probe environment: **{runner_context}**.","A successful HTTP response confirms endpoint reachability, not guaranteed video/audio playback. HTTP 401/403 can reflect authentication, entitlement, or geographic restrictions; results from a GitHub-hosted runner should not be treated as proof of Bangladesh/India-local playback availability.","","## Summary","",f"- Streams tested: **{len(results)}**",f"- Reachable: **{ok}**",f"- Failed this check: **{fail}**",f"- Persistent failures (3+ consecutive): **{len(persistent)}**",f"- Intermittent failures: **{len(intermittent)}**",f"- Primary tested: **{len(primary_targets)}**",f"- Backup tested: **{groups.get('Backup',0)}**",f"- Review-queue entries tested: **{sum(groups.get(g,0) for g in REVIEW_GROUPS)}**",f"- Near-duplicate URL families: **{len(near_duplicates)}**","","## Failure Classification","","- Only HTTP 404 and 410 count as definitive failures; all other HTTP statuses and network/authentication errors are inconclusive.","- Streaks count consecutive Bangladesh calendar days; repeated runs on one date count once, and a missed day resets the streak.",""]
     lines += [f"- {k}: **{v}**" for k,v in sorted(failure_classes.items())]
     lines += ["","## Persistent Failures",""]
-    lines += ([f"- **{r['name']}** — {r['group']} — consecutive failures: **{r['consecutive_failures']}** — {r['error'] or r['status']}" for r in sorted(persistent,key=lambda x:(x["group"],x["name"]))] if persistent else ["None."])
+    lines += ([f"- **{r['name']}** — {r['group']} — consecutive failed days: **{r['consecutive_failure_days']}** — {r['error'] or r['status']}" for r in sorted(persistent,key=lambda x:(x["group"],x["name"]))] if persistent else ["None."])
     lines += ["","## Failed This Check",""]
-    lines += ([f"- **{r['name']}** — {r['group']} — streak {r['consecutive_failures']} — {r['error'] or r['status']}" for r in sorted([x for x in results if not x["ok"]],key=lambda x:(x["group"],x["name"]))] if fail else ["None."])
+    lines += ([f"- **{r['name']}** — {r['group']} — streak {r['consecutive_failure_days']} days — {r['error'] or r['status']}" for r in sorted([x for x in results if not x["ok"]],key=lambda x:(x["group"],x["name"]))] if fail else ["None."])
     lines += ["","## Near-Duplicate URL Families",""]
     lines += ([f"- URL family fingerprint `{hashlib.sha256(canonical.encode()).hexdigest()[:12]}` — {len(urls)} URL variants; credentials and query values are not published." for canonical,urls in sorted(near_duplicates.items())] if near_duplicates else ["None."])
     lines += ["","## Policy","","- Health failures never delete or reclassify streams automatically.","- Backup streams remain protected even after repeated failures.","- Persistent failures are reported for review; they are never automatic deletion candidates.","- A URL family is not automatically counted as independent redundancy merely because its path, rendition, or query string differs."]

@@ -33,9 +33,9 @@ class XtreamCheckGuardTests(unittest.TestCase):
             [self.success, self.current], self.current, "workflow_run"
         ))
 
-    def test_newer_source_revision_gets_a_new_check(self):
+    def test_newer_source_revision_is_deduplicated_same_bangladesh_day(self):
         previous = dict(self.success, head_sha="b" * 40)
-        self.assertTrue(guard.should_current_run_execute(
+        self.assertFalse(guard.should_current_run_execute(
             [previous, self.current], self.current, "workflow_run"
         ))
 
@@ -87,6 +87,18 @@ class XtreamCheckGuardTests(unittest.TestCase):
         next_bd_day = dict(self.success, created_at="2026-11-07T18:00:00Z")
         self.assertFalse(guard.same_day(next_bd_day, self.current))
 
+
+
+    def test_push_trigger_is_deduplicated_across_different_commits_same_day(self):
+        previous = dict(self.success, head_sha="b" * 40)
+        self.assertFalse(guard.should_current_run_execute(
+            [previous, self.current], self.current, "push"
+        ))
+
+    def test_schedule_remains_unrestricted_after_automatic_success(self):
+        self.assertTrue(guard.should_current_run_execute(
+            [self.success, self.current], self.current, "schedule"
+        ))
 
     def test_github_output_file_uses_a_real_newline(self):
         with tempfile.TemporaryDirectory() as directory:

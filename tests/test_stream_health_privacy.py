@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from stream_health import canonical_url, load_history, migrate_history_keys, url_fingerprint
+from stream_health import canonical_url, load_history, migrate_history_keys, update_failure_history, url_fingerprint
 
 
 class StreamHealthPrivacyTests(unittest.TestCase):
@@ -53,6 +53,27 @@ class StreamHealthPrivacyTests(unittest.TestCase):
             with self.assertRaises(RuntimeError):
                 load_history(path)
 
+
+    def test_only_404_and_410_advance_one_failure_per_bangladesh_day(self):
+        history = {}
+        history, streak, state = update_failure_history(history, {"ok": False, "status": 404}, "2026-11-15")
+        self.assertEqual((streak, state), (1, "definitive_failure"))
+        history, streak, state = update_failure_history(history, {"ok": False, "status": 404}, "2026-11-15")
+        self.assertEqual((streak, state), (1, "already-checked-today"))
+        history, streak, state = update_failure_history(history, {"ok": False, "status": 410}, "2026-11-16")
+        self.assertEqual((streak, state), (2, "definitive_failure"))
+        history, streak, state = update_failure_history(history, {"ok": False, "status": 503}, "2026-11-17")
+        self.assertEqual((streak, state), (0, "inconclusive"))
+        history, streak, state = update_failure_history(history, {"ok": False, "status": 404}, "2026-11-18")
+        self.assertEqual((streak, state), (1, "definitive_failure"))
+
+    def test_success_or_missed_day_resets_definitive_failure_streak(self):
+        history = {}
+        history, _, _ = update_failure_history(history, {"ok": False, "status": 404}, "2026-11-15")
+        history, streak, _ = update_failure_history(history, {"ok": False, "status": 404}, "2026-11-17")
+        self.assertEqual(streak, 1)
+        history, streak, _ = update_failure_history(history, {"ok": True, "status": 206}, "2026-11-18")
+        self.assertEqual(streak, 0)
 
 if __name__ == "__main__":
     unittest.main()
