@@ -1,18 +1,18 @@
 # International Playlist Organization Audit
 
-- Entries before: 3124
-- Entries after: 3124
+- Entries before: 3129
+- Entries after: 3129
 - Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1370
-- Matching alternate streams retained in Backup: 367
-- True orphan Backup rows evaluated: 655
-- Eligible orphan Backup rows promoted to primary: 0
+- Original Backup/Backups and protected queue rows examined: 1377
+- Matching alternate streams retained in Backup: 371
+- True orphan Backup rows evaluated: 652
+- Eligible orphan Backup rows promoted to primary: 1
 - Clearly identified Adult orphans restored to Adult: 0
-- Ineligible/unclassified orphan Backup rows retained: 655
+- Ineligible/unclassified orphan Backup rows retained: 651
 - Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational/Knowledge, Business/Finance and Farming/Agriculture are excluded; Indian Kids and Sports remain eligible.
 - For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.
 - Every country except Bangladesh and India, including Pakistan, requires five unique primary channel identities before a dedicated country group is used.
@@ -26,15 +26,15 @@
 
 ## Protected Backup/Review/Not Playing entries preserved (policy would have removed them)
 
-- protected Backup/Not Playing kept despite orphan policy: 584
+- protected Backup/Not Playing kept despite orphan policy: 582
 - test/VOD/non-TV name: 1
 
 ## Category counts
 
-- Bangladesh: 63
-- Indian Bangla: 29
+- Bangladesh: 65
+- Indian Bangla: 28
 - Indian Movies: 68
-- Indian Music: 55
+- Indian Music: 53
 - Indian Entertainment: 169
 - Pakistani: 23
 - Argentina: 14
@@ -49,7 +49,7 @@
 - DO: 10
 - Estonia: 6
 - France: 40
-- Germany: 73
+- Germany: 72
 - Greece: 8
 - Hungary: 15
 - Iran: 13
@@ -58,23 +58,24 @@
 - Mexico: 17
 - Netherlands: 17
 - Panama: 5
-- Peru: 7
+- Paraguay: 6
+- Peru: 6
 - Poland: 24
 - Romania: 28
-- Russia: 67
+- Russia: 71
 - Saudi Arabia: 9
 - Singapore: 5
 - Spain: 20
 - Sweden: 49
 - Turkey: 14
-- Ukraine: 24
+- Ukraine: 25
 - United Kingdom: 24
 - United States: 222
 - Uzbekistan: 5
 - Vietnam: 6
-- International: 102
+- International: 99
 - Kids: 7
-- Sports: 5
-- Adult: 351
-- Review: 348
+- Sports: 4
+- Adult: 346
+- Review: 354
 - Backup: 1022
