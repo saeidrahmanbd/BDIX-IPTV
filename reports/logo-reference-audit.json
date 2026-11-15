@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5332,
-  "all_explicitly_referenced_logo_files": 2657,
-  "runtime_referenced_logo_files": 2656,
+  "all_explicitly_referenced_logo_files": 2656,
+  "runtime_referenced_logo_files": 2655,
   "playlist_referenced_logo_files": 2415,
-  "apparently_unreferenced_by_any_text_file": 2675,
-  "apparently_unreferenced_by_runtime_sources": 2676,
+  "apparently_unreferenced_by_any_text_file": 2676,
+  "apparently_unreferenced_by_runtime_sources": 2677,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -277,6 +277,8 @@
     "logos/tvs-bowling-network-cf222fc786.jpg",
     "logos/two.png",
     "logos/unrelated.png",
+    "logos/unused/channel-alt.png",
+    "logos/unused/channel.png",
     "logos/used.png",
     "logos/valid.png",
     "logos/viasat-kino-balkan-24c3a8c6c2.svg",
@@ -558,6 +560,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/channel.png": [
+      "tests/test_duplicate_logo_cleanup_plan.py",
       "tests/test_logo_repair_source_hints.py",
       "tests/test_pre_publish_gate_logo_paths.py"
     ],
@@ -1130,6 +1133,12 @@
     ],
     "logos/unrelated.png": [
       "tests/test_automation_v2_rollback_policy.py"
+    ],
+    "logos/unused/channel-alt.png": [
+      "tests/test_duplicate_logo_cleanup_plan.py"
+    ],
+    "logos/unused/channel.png": [
+      "tests/test_duplicate_logo_cleanup_plan.py"
     ],
     "logos/used.png": [
       "tests/test_automation_v2_logo_audit.py"
@@ -6891,7 +6900,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/30a-tv-classic-movies-0f29f1694e.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/360tunebox-1080p-c81dfec860.png": [
       "International-Playlist.m3u",
@@ -6910,9 +6920,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/4-fun-tv.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/4-music.png": [
       "International-Playlist.m3u",
@@ -10995,7 +11002,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/bridge-hits-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/bridge.png": [
       "International-Playlist.m3u",
@@ -11050,7 +11058,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/ceacom-tv-1080p-not-24-7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/celestial-movies-576i.png": [
       "International-Playlist.m3u",
@@ -11466,10 +11475,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/galactica-tv.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/galaxy-tv-720p-not-24-7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/ghost-tv-712p-not-24-7.png": [
       "International-Playlist.m3u",
@@ -11480,7 +11491,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/go-tv-720p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/god-stands-kids-club-tv-arabic.png": [
       "International-Playlist.m3u",
@@ -11523,7 +11535,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/h-t-music-channel-480p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/hallmark-mystery-720p-geo-blocked.png": [
       "International-Playlist.m3u",
@@ -11582,7 +11595,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/hits-360-tv-720p-not-24-7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/hits-movies-576p.png": [
       "International-Playlist.m3u",
@@ -11601,7 +11615,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/ishtar-tv-sd-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/jiangsu-movie-channel-576p.png": [
       "International-Playlist.m3u",
@@ -17037,7 +17052,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/taha-tv-8dcab21652.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/takbeer-tv-4f036ac57f.png": [
@@ -18652,7 +18666,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/30a-tv-classic-movies-0f29f1694e.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/360tunebox-1080p-c81dfec860.png": [
       "International-Playlist.m3u",
@@ -18671,9 +18686,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/4-fun-tv.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/4-music.png": [
       "International-Playlist.m3u",
@@ -22761,7 +22773,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/bridge-hits-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/bridge.png": [
       "International-Playlist.m3u",
@@ -22816,7 +22829,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/ceacom-tv-1080p-not-24-7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/celestial-movies-576i.png": [
       "International-Playlist.m3u",
@@ -23232,10 +23246,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/galactica-tv.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/galaxy-tv-720p-not-24-7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/ghost-tv-712p-not-24-7.png": [
       "International-Playlist.m3u",
@@ -23246,7 +23262,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/go-tv-720p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/god-stands-kids-club-tv-arabic.png": [
       "International-Playlist.m3u",
@@ -23289,7 +23306,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/h-t-music-channel-480p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/hallmark-mystery-720p-geo-blocked.png": [
       "International-Playlist.m3u",
@@ -23348,7 +23366,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/hits-360-tv-720p-not-24-7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/hits-movies-576p.png": [
       "International-Playlist.m3u",
@@ -23367,7 +23386,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/ishtar-tv-sd-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/jiangsu-movie-channel-576p.png": [
       "International-Playlist.m3u",
@@ -28804,7 +28824,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/taha-tv-8dcab21652.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/takbeer-tv-4f036ac57f.png": [
@@ -30369,6 +30388,7 @@
     "logos/1-1-international.png",
     "logos/30a-golf-kingdom.png",
     "logos/4-fun-tv-576i-40c47ee2ab.png",
+    "logos/4-fun-tv.png",
     "logos/4ever-drama-1080p-5925078a10.png",
     "logos/51-radio-tv-e8d259fe6e.png",
     "logos/5aab-tv.png",
