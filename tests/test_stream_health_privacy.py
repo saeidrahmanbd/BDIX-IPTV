@@ -40,6 +40,34 @@ class StreamHealthPrivacyTests(unittest.TestCase):
         self.assertNotIn("secret", first)
         self.assertNotIn("token", first)
 
+    def test_legacy_run_history_is_normalized_without_inventing_daily_streaks(self):
+        legacy = {
+            "a" * 64: {
+                "checks": 20, "successes": 12, "failures": 8,
+                "consecutive_failures": 7, "last_status": 500,
+                "last_ok": "2026-11-14T15:00:00+00:00",
+                "last_failure": "2026-11-15T02:25:32+00:00",
+            },
+            "b" * 64: {
+                "checks": 5, "successes": 2, "failures": 3,
+                "consecutive_failures": 3, "last_status": 404,
+                "last_ok": "2026-11-12T10:00:00+00:00",
+                "last_failure": "2026-11-15T02:25:32+00:00",
+            },
+        }
+        migrated = migrate_history_keys(legacy)
+        transient = migrated["a" * 64]
+        definitive = migrated["b" * 64]
+        self.assertEqual(transient["checks"], 20)
+        self.assertEqual(transient["successes"], 12)
+        self.assertEqual(transient["failures"], 8)
+        self.assertEqual(transient["last_status"], "inconclusive")
+        self.assertEqual(transient["consecutive_failure_days"], 0)
+        self.assertEqual(transient["last_checked_date"], "2026-11-15")
+        self.assertEqual(definitive["last_status"], "definitive_failure")
+        self.assertEqual(definitive["consecutive_failure_days"], 1)
+        self.assertEqual(definitive["consecutive_failures"], 1)
+
     def test_load_history_fails_loudly_for_missing_corrupt_or_empty_history(self):
         import tempfile
         with tempfile.TemporaryDirectory() as tmp:
