@@ -883,24 +883,24 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn('tvg-id="ZBMusic.in@HD"', iptv)
         self.assertNotIn('tvg-id="ZBBhakti.in@HD"', iptv)
 
-    def test_epg_refresh_runs_after_completed_playlist_writer_workflows_even_when_blocked(self):
+    def test_epg_refresh_uses_final_writer_hook_and_scheduled_fallback(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("workflow_run:", workflow)
-        for name in (
-            "IPTV Playlist Update",
+        self.assertIn('workflows: ["IPTV Playlist Update"]', workflow)
+        for intermediate_writer in (
             "IPTV New Channel Discovery",
             "International Channel Discovery",
             "Playlist Logo Repair and Localization",
             "International Stream Health",
         ):
-            self.assertIn(f'"{name}"', workflow)
+            self.assertNotIn(f'"{intermediate_writer}"', workflow)
         self.assertIn("types: [completed]", workflow)
-        # Any completed upstream writer run should trigger a freshness check against
-        # the latest committed main inputs, even when the writer itself failed.
+        # The final scheduled writer is the delayed-run fallback; cancelled runs
+        # do not refresh, while successful and failed completions both can.
         self.assertIn("github.event.workflow_run.conclusion != 'cancelled'", workflow)
         self.assertNotIn("github.event.workflow_run.conclusion == 'success'", workflow)
         self.assertNotIn("github.event.workflow_run.conclusion == 'failure'", workflow)
-        self.assertIn("latest committed main inputs", workflow)
+        self.assertIn("final maintenance completion hook as a delayed-run", workflow)
         self.assertIn("# 06:10 Asia/Dhaka (UTC+6)", workflow)
 
 

@@ -32,10 +32,11 @@ on:
       - 'scripts/generate_dashboard.py'
       - 'tests/test_epg_publication_safety.py'
       - 'docs/requirements.txt'
-  # GITHUB_TOKEN playlist commits do not reliably start a second workflow via push.
-  # Refresh EPG after any completed workflow that may write a maintained playlist; use latest committed main inputs.
+  # The scheduled EPG job is queued after the daily discovery, logo and health
+  # writers. Keep only the final maintenance completion hook as a delayed-run
+  # fallback; listening to every writer creates several serialized no-op EPG runs.
   workflow_run:
-    workflows: ["IPTV Playlist Update", "IPTV New Channel Discovery", "International Channel Discovery", "Playlist Logo Repair and Localization", "International Stream Health"]
+    workflows: ["IPTV Playlist Update"]
     types: [completed]
     branches: [main]
   schedule:

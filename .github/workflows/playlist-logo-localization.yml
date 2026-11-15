@@ -17,6 +17,8 @@ on:
       - scripts/logo_embedded_png.py
       - tests/test_logo_format_conversion.py
       - tests/test_logo_embedded_png_recovery.py
+      - tests/test_logo_asset_technical_quality.py
+      - tests/test_logo_reference_audit.py
       - scripts/discovery_schedule_guard.py
   schedule:
     - cron: '25 23 * * *' # 05:25 Asia/Dhaka (UTC+6), after discovery
@@ -104,6 +106,13 @@ jobs:
           python-version: "3.12"
       - name: Install image validation tools
         run: python -m pip install --disable-pip-version-check pillow cairosvg
+      - name: Run logo conversion and asset-quality regression tests
+        run: |
+          python -m py_compile scripts/convert_referenced_logos_to_png.py scripts/repair_logo_asset_technical_quality.py scripts/audit_logo_references.py
+          python -m unittest discover -s tests -p 'test_logo_format_conversion.py'
+          python -m unittest discover -s tests -p 'test_logo_embedded_png_recovery.py'
+          python -m unittest discover -s tests -p 'test_logo_asset_technical_quality.py'
+          python -m unittest discover -s tests -p 'test_logo_reference_audit.py'
       - name: Capture protected playlist metadata
         shell: bash
         run: |

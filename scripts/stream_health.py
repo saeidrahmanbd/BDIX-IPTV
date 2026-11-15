@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Non-destructive HTTP/HLS stream health probe with persistent failure history."""
-import concurrent.futures, hashlib, json, re, time, os
+import concurrent.futures, hashlib, json, re, time, os, subprocess
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -18,18 +18,37 @@ GROUP_EXCLUDE=set()
 SENSITIVE_QUERY={"token","access_token","refresh_token","sig","signature","jwt","session","key","api_key","apikey","authorization","auth","client_secret","hdnts","expires","e","username","user","password","passwd","pass"}
 
 def attrs(s): return dict(ATTR.findall(s))
+def url_fingerprint(url):
+    """One-way history key: never persist credentials, tokens, or raw stream URLs."""
+    return hashlib.sha256(str(url).strip().encode("utf-8")).hexdigest()
+
+def migrate_history_keys(previous):
+    """Convert legacy raw-URL history keys to fingerprints without losing streaks."""
+    if not isinstance(previous,dict):
+        return {}
+    migrated = {}
+    for key, value in previous.items():
+        if not isinstance(value,dict):
+            continue
+        key = str(key)
+        safe_key = key if re.fullmatch(r"[0-9a-f]{64}", key) else url_fingerprint(key)
+        migrated[safe_key] = value
+    return migrated
+
 def canonical_url(url):
-    p=urlsplit(url); host=(p.hostname or "").lower(); port=p.port
+    """Return a private in-memory family key without URL userinfo or query values."""
+    p=urlsplit(url)
+    host=(p.hostname or "").casefold()
+    try: port=p.port
+    except ValueError: port=None
     netloc=host + (f":{port}" if port and not ((p.scheme.lower()=="http" and port==80) or (p.scheme.lower()=="https" and port==443)) else "")
-    pairs=[(k.lower(),v) for k,v in parse_qsl(p.query,keep_blank_values=True) if k.lower() not in SENSITIVE_QUERY]
-    query="&".join(f"{k}={v}" for k,v in sorted(pairs))
     path_parts=p.path.split("/")
     lower_parts=[x.casefold() for x in path_parts]
     for i,segment in enumerate(lower_parts):
         if segment in {"live","movie","series","timeshift"} and i+3<len(path_parts):
             path_parts[i+1]="REDACTED"; path_parts[i+2]="REDACTED"
     safe_path="/".join(path_parts).rstrip("/") or "/"
-    return urlunsplit((p.scheme.lower(),netloc,safe_path,query,""))
+    return urlunsplit((p.scheme.lower(),netloc,safe_path,"",""))
 def stream_url_inventory_sha256(path=PLAYLIST):
     urls=sorted(line.strip() for line in Path(path).read_text(encoding="utf-8-sig").splitlines() if line.strip().startswith(("http://","https://")))
     return hashlib.sha256("\n".join(urls).encode("utf-8")).hexdigest()
@@ -79,21 +98,38 @@ def main():
     if HISTORY.exists():
         try: previous=json.loads(HISTORY.read_text(encoding="utf-8"))
         except Exception: previous={}
-    if not isinstance(previous,dict): previous={}
+    # The PR clears the committed raw-URL history file. On the first run after
+    # merge, recover the first-parent snapshot in memory so streak statistics
+    # survive while the next write replaces every URL key with a fingerprint.
+    if not previous:
+        try:
+            legacy = subprocess.run(
+                ["git", "show", "HEAD^:reports/stream-health-history.json"],
+                check=True, capture_output=True, text=True, timeout=15,
+            )
+            candidate=json.loads(legacy.stdout)
+            if isinstance(candidate,dict):
+                previous=candidate
+        except (OSError, subprocess.SubprocessError, json.JSONDecodeError):
+            previous={}
+    # Migrate legacy raw-URL keys in memory. The next write replaces them with
+    # SHA-256 fingerprints so credentials and signed tokens leave Git history.
+    previous=migrate_history_keys(previous)
     for r in results:
-        h=previous.get(r["url"],{"checks":0,"successes":0,"failures":0,"consecutive_failures":0}); h["checks"]+=1
+        history_key=url_fingerprint(r["url"])
+        h=previous.get(history_key,{"checks":0,"successes":0,"failures":0,"consecutive_failures":0}); h["checks"]+=1
         if r["ok"]: h["successes"]+=1; h["consecutive_failures"]=0; h["last_ok"]=now
         else: h["failures"]+=1; h["consecutive_failures"]=h.get("consecutive_failures",0)+1; h["last_failure"]=now
-        h["last_status"]=r["status"]; h["last_latency_ms"]=r["latency_ms"]; previous[r["url"]]=h
+        h["last_status"]=r["status"]; h["last_latency_ms"]=r["latency_ms"]; previous[history_key]=h
         r["consecutive_failures"]=h["consecutive_failures"]; r["success_rate"]=round(h["successes"]/h["checks"]*100,1)
-    HISTORY.parent.mkdir(parents=True,exist_ok=True); HISTORY.write_text(json.dumps({r["url"]:previous[r["url"]] for r in results},indent=2)+"\n",encoding="utf-8")
+    HISTORY.parent.mkdir(parents=True,exist_ok=True); HISTORY.write_text(json.dumps({url_fingerprint(r["url"]):previous[url_fingerprint(r["url"])] for r in results},indent=2)+"\n",encoding="utf-8")
     ok=sum(r["ok"] for r in results); fail=len(results)-ok
     failure_classes=Counter(("HTTP 401/403 (access/auth)" if r["status"] in {401,403} else "HTTP 404 (not found)" if r["status"]==404 else "HTTP 4xx (other)" if 400<=r["status"]<500 else "HTTP 5xx (server)" if 500<=r["status"]<600 else r["error"] or "Other") for r in results if not r["ok"])
     persistent=[r for r in results if r["consecutive_failures"]>=3]; intermittent=[r for r in results if not r["ok"] and r["consecutive_failures"]<3]
     groups=Counter(r["group"] for r in results)
     primary_targets=[r for r in results if r["group"] not in {"Backup","Review","New Channels","New Backups","New Backup","Not Playing"}]
     families={}
-    for r in results: families.setdefault(canonical_url(r["url"]),set()).add(r["url"])
+    for r in results: families.setdefault(canonical_url(r["url"]),set()).add(url_fingerprint(r["url"]))
     near_duplicates={k:v for k,v in families.items() if len(v)>1}
     runner_context="GitHub-hosted ubuntu-latest runner" if os.getenv("GITHUB_ACTIONS")=="true" else "local/non-GitHub runner"
     lines=["# Stream Health Report","",f"Generated: **{now}**",f"Stream URL inventory SHA-256: **{stream_url_inventory_sha256()}**","",f"Probe environment: **{runner_context}**.","A successful HTTP response confirms endpoint reachability, not guaranteed video/audio playback. HTTP 401/403 can reflect authentication, entitlement, or geographic restrictions; results from a GitHub-hosted runner should not be treated as proof of Bangladesh/India-local playback availability.","","## Summary","",f"- Streams tested: **{len(results)}**",f"- Reachable: **{ok}**",f"- Failed this check: **{fail}**",f"- Persistent failures (3+ consecutive): **{len(persistent)}**",f"- Intermittent failures: **{len(intermittent)}**",f"- Primary tested: **{len(primary_targets)}**",f"- Backup tested: **{groups.get('Backup',0)}**",f"- Review-queue entries tested: **{sum(groups.get(g,0) for g in REVIEW_GROUPS)}**",f"- Near-duplicate URL families: **{len(near_duplicates)}**","","## Failure Classification",""]
@@ -103,7 +139,7 @@ def main():
     lines += ["","## Failed This Check",""]
     lines += ([f"- **{r['name']}** — {r['group']} — streak {r['consecutive_failures']} — {r['error'] or r['status']}" for r in sorted([x for x in results if not x["ok"]],key=lambda x:(x["group"],x["name"]))] if fail else ["None."])
     lines += ["","## Near-Duplicate URL Families",""]
-    lines += ([f"- **{canonical}** — {len(urls)} URL variants; query/token differences are preserved and require review." for canonical,urls in sorted(near_duplicates.items())] if near_duplicates else ["None."])
+    lines += ([f"- URL family fingerprint `{hashlib.sha256(canonical.encode()).hexdigest()[:12]}` — {len(urls)} URL variants; credentials and query values are not published." for canonical,urls in sorted(near_duplicates.items())] if near_duplicates else ["None."])
     lines += ["","## Policy","","- Health failures never delete or reclassify streams automatically.","- Backup streams remain protected even after repeated failures.","- Persistent failures are reported for review; they are never automatic deletion candidates.","- A URL family is not automatically counted as independent redundancy merely because its path, rendition, or query string differs."]
     REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
     print(f"Stream health: tested={len(results)} ok={ok} failed={fail} persistent={len(persistent)}")
