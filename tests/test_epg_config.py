@@ -900,7 +900,7 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("github.event.workflow_run.conclusion != 'cancelled'", workflow)
         self.assertNotIn("github.event.workflow_run.conclusion == 'success'", workflow)
         self.assertNotIn("github.event.workflow_run.conclusion == 'failure'", workflow)
-        self.assertIn("latest committed main inputs", workflow)
+        self.assertIn("final maintenance completion hook as a delayed-run", workflow)
         self.assertIn("# 06:10 Asia/Dhaka (UTC+6)", workflow)
 
 
