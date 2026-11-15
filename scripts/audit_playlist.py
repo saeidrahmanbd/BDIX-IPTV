@@ -268,10 +268,13 @@ for expected_number, (info, url) in enumerate(primary_entries, start=1):
 suspicious_urls = []
 advisory_urls = []
 signed_urls = []
+opaque_token_urls = []
 xtream_credential_paths = []
 for info, url in entries:
     if re.search(r"[?&](?:token|sig|signature|jwt|session|key|authorization)=[^&]+", url, re.I) or re.search(r"[?&]hdnts=[^&]+", url, re.I):
         signed_urls.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
+    if re.search(r"[?&](?:token|access_token|auth_token)=[^&]+", url, re.I):
+        opaque_token_urls.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
     if re.search(r"/live/[^/?#]+/[^/?#]+/[^/?#]+\.ts(?:[?#]|$)", url, re.I):
         xtream_credential_paths.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
     if re.search(r"[?&](token|auth)=(?:test|testpub)(?:&|$)", url, re.I):
@@ -630,7 +633,7 @@ if primary_duplicate_ids: raise SystemExit("Duplicate primary identities detecte
 if primary_chno_collisions: raise SystemExit("Primary channel-number collisions detected; refusing automatic commit.")
 if malformed_extinf: raise SystemExit("Malformed EXTINF entries detected; refusing automatic commit.")
 if suspicious_urls: raise SystemExit("Suspicious test credentials or malformed URL syntax detected; refusing automatic commit.")
-if signed_urls: raise SystemExit(f"Credential-bearing or signed stream URLs detected ({len(signed_urls)}); refusing automatic publication.")
+if opaque_token_urls: raise SystemExit(f"Opaque token-bearing stream URLs detected ({len(opaque_token_urls)}); refusing automatic publication.")
 
 # The main playlist is manually curated. Report legacy category/numbering,
 # provisional discovery metadata and logo gaps, but do not reorder, renumber,
