@@ -7,16 +7,19 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-15 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **1**
-- Stream URLs added / removed: **0 / 8**
+- New channel identities: **4**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **25 / 3**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
-- Replaced channel identities: **0**
+- Replaced channel identities: **1**
 - Duplicate URL occurrences removed: **0**
 
-Removed channel identities (up to 10):
-- The Q
+Added channel identities (up to 10):
+- Darshana TV
+- Tamilan TV
+- Tehzeeb TV
+- TV BRICS English
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-15 — `International-Playlist.m3u`
