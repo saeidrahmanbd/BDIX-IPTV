@@ -2,7 +2,7 @@
 
 Only same-named copies in logos/unused/ with a byte-identical root-level
 logos/<name> counterpart are eligible for review as low-risk candidates.
-Any explicit path or basename mention in runtime source blocks candidacy.
+Exact path mentions in playlists and runtime registries block candidacy; basename mentions in executable runtime code remain conservative blockers.
 This tool never deletes, moves, renames, or rewrites logo assets.
 """
 from __future__ import annotations
@@ -77,7 +77,16 @@ def build_plan(root: Path) -> dict:
                 reasons.append("one or more runtime text files could not be read")
             else:
                 for source, content in runtime_contents:
-                    if name in content or candidate in content:
+                    if source in PLAYLISTS or source in RUNTIME_REGISTRIES:
+                        # These files record concrete logo paths. A reference to
+                        # logos/<name> uses the retained canonical file and must
+                        # not falsely block removal of logos/unused/<name>.
+                        referenced = candidate in content
+                    else:
+                        # Executable code may construct paths dynamically, so
+                        # keep basename matches as a conservative safety block.
+                        referenced = name in content or candidate in content
+                    if referenced:
                         reasons.append(f"runtime basename/path mention in {source}")
             if reasons:
                 held.append({
