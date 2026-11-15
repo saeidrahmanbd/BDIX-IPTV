@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-15T08:14:46+00:00**
+Generated: **2026-11-15T08:54:37+00:00**
 
-- Active Bangladesh playlist identities: **82**
+- Active Bangladesh playlist identities: **83**
 - Identities with a retained source mapping: **5**
 - Identities with usable current/future schedules: **3**
-- Identities without a source mapping: **77**
+- Identities without a source mapping: **78**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -73,6 +73,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
 | Jonmobhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
+| Madani Channel Bangla | MadaniChannelBangla.bd@SD | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd@HD | NO_GUIDE_HIT |
 | ME TV | METV.bd | NO_GUIDE_HIT |

@@ -8,15 +8,10 @@ Automatic corrections require four repeated title/duration matches, >=75% agreem
 - **Balle Balle** (BalleBalle.in@SD): source ID BalleBalle.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Arun Prabha** (DDArunPrabha.in@SD): source ID DDArunPrabha.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Bangla** (DDBangla.in@SD): source ID DDBangla.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-
-### Large source-offset proposals — manual review only
-
-- **DD Bihar** (DDBihar.in@SD): source ID DD.BIHAR.in has a proposed -24-hour displacement from 4/4 independent programme signatures. This exceeds the plausible ±14-hour timezone limit; timestamps were **not changed**.
 - **DD Girnar** (DDGirnar.in@SD): source ID DDGirnar.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Kashir** (DDKashir.in@SD): source ID DDKashir.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Madhya Pradesh** (DDMadhyaPradesh.in@SD): source ID DDMadhyaPradesh.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Malayalam** (DDMalayalam.in@SD): source ID DDMalayalam.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-- **DD Punjabi** (DDPunjabi.in@SD): source ID DDPunjabi.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Sahyadri** (DDSahyadri.in@SD): source ID DDSahyadri.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Saptagiri** (DDSaptagiri.in@SD): source ID DDSaptagiri.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Yadagiri** (DDYadagiri.in@SD): source ID DDYadagiri.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
@@ -30,6 +25,6 @@ Automatic corrections require four repeated title/duration matches, >=75% agreem
 
 ## Feed-wide offset patterns
 
-- **https://www.open-epg.com/files/india.xml.gz**: 19 channels were corrected by the same -5.5 hours. This looks like a feed-wide timezone problem; other channels from this feed without cross-source overlap may still be shifted and should be reviewed.
+- **https://www.open-epg.com/files/india.xml.gz**: 18 channels were corrected by the same -5.5 hours. This looks like a feed-wide timezone problem; other channels from this feed without cross-source overlap may still be shifted and should be reviewed.
 
-Detected source-ID corrections: **19**
+Detected source-ID corrections: **18**
