@@ -26,11 +26,14 @@ def migrate_history_keys(previous):
     """Convert legacy raw-URL history keys to fingerprints without losing streaks."""
     if not isinstance(previous,dict):
         return {}
-    return {
-        url_fingerprint(key): value
-        for key, value in previous.items()
-        if isinstance(value,dict)
-    }
+    migrated = {}
+    for key, value in previous.items():
+        if not isinstance(value,dict):
+            continue
+        key = str(key)
+        safe_key = key if re.fullmatch(r"[0-9a-f]{64}", key) else url_fingerprint(key)
+        migrated[safe_key] = value
+    return migrated
 
 def canonical_url(url):
     """Return a private in-memory family key without URL userinfo or query values."""
