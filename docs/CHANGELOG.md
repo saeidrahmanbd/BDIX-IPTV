@@ -16,15 +16,29 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 - Duplicate URL occurrences removed: **0**
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-14 — `International-Playlist.m3u`
+### 2026-11-15 — `International-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **0 / 0**
+- New channel identities: **8**
+- Channel identities removed: **2**
+- Stream URLs added / removed: **8 / 3**
 - Backup URL updates: **0**
-- Logo reference changes: **3**
+- Logo reference changes: **1**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- GO TV
+- CEACOM TV [ ]
+- Ishtar TV
+- BRIDGE Hits
+- Galactica TV
+- Galaxy TV [ ]
+- H!t Music Channel
+- Hits 360 TV [ ]
+
+Removed channel identities (up to 10):
+- 4 Fun TV
+- Taha TV
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
