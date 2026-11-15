@@ -1,3 +1,5 @@
+import json
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -22,6 +24,11 @@ class StreamHealthPrivacyTests(unittest.TestCase):
         self.assertEqual(list(migrated), [url_fingerprint(url)])
         self.assertEqual(migrated[url_fingerprint(url)]["consecutive_failures"], 2)
         self.assertNotIn(url, str(migrated))
+
+    def test_committed_history_contains_only_fingerprints(self):
+        history_path = Path(__file__).resolve().parents[1] / "reports" / "stream-health-history.json"
+        history = json.loads(history_path.read_text(encoding="utf-8"))
+        self.assertTrue(all(re.fullmatch(r"[0-9a-f]{64}", key) for key in history))
 
     def test_near_duplicate_family_key_omits_userinfo_and_query(self):
         first = canonical_url("https://alice:secret@provider.example/live/u/p/ch.m3u8?token=one")
