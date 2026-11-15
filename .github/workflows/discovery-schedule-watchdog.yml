@@ -1,6 +1,6 @@
 name: Discovery Schedule Watchdog
 # GitHub schedule events are best-effort. Staggered checkpoints recover missed
-# discovery, logo, stream-health and EPG jobs before the 07:00 BDT cutoff.
+# discovery, logo, International health, maintenance and EPG jobs before 07:00 BDT.
 # The guard inspects each workflow's real writer/check job, not wrapper conclusions.
 on:
   push:
