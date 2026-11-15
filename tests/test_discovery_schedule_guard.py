@@ -226,7 +226,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         }
         skipped_health = {
             "id": 95, "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:00:00Z",
+            "created_at": "2026-11-07T00:00:00Z",
             "jobs": [
                 {"name": "check", "status": "completed", "conclusion": "skipped"},
             ],
@@ -244,7 +244,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_active_stream_health_run_prevents_duplicate_watchdog_dispatch(self):
         active_health = {
             "id": 96, "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T03:15:00Z",
+            "created_at": "2026-11-07T00:15:00Z",
         }
         self.assertTrue(
             guard.run_blocks_retry(
@@ -373,11 +373,11 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_epg_watchdog_waits_for_active_guard_only_run_then_recovers(self):
         active = {
             "id": 180, "event": "workflow_run", "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T03:20:00Z",
+            "created_at": "2026-11-07T00:20:00Z",
         }
         completed_skip = {
             "id": 180, "event": "workflow_run", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:20:00Z",
+            "created_at": "2026-11-07T00:20:00Z",
             "jobs": [{
                 "name": "refresh", "status": "completed", "conclusion": "skipped",
                 "steps": [{
@@ -409,7 +409,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_epg_watchdog_keeps_active_run_blocking_after_wait_limit(self):
         active = {
             "id": 181, "event": "workflow_run", "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T03:20:00Z",
+            "created_at": "2026-11-07T00:20:00Z",
         }
 
         class FakeClient:
@@ -441,10 +441,10 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             midnight_push, workflow_file="epg-refresh.yml"
         ))
 
-    def test_epg_watchdog_accepts_successful_refresh_after_0900(self):
+    def test_epg_watchdog_accepts_successful_refresh_after_0600(self):
         scheduled = {
             "id": 171, "event": "schedule", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:00:00Z",
+            "created_at": "2026-11-07T00:00:00Z",
             "jobs": [{
                 "name": "refresh", "status": "completed", "conclusion": "success",
                 "steps": [{
@@ -460,7 +460,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_epg_watchdog_accepts_post_schedule_push_recovery(self):
         recovery = {
             "id": 172, "event": "push", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:15:00Z",
+            "created_at": "2026-11-07T00:15:00Z",
             "jobs": [{
                 "name": "refresh", "status": "completed", "conclusion": "success",
                 "steps": [{
@@ -483,11 +483,15 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         ))
 
     def test_watchdog_recovery_uses_workflow_specific_local_grace_time(self):
-        before = datetime(2026, 11, 7, 7, 29, tzinfo=guard.BD_TZ)
-        after = datetime(2026, 11, 7, 7, 30, tzinfo=guard.BD_TZ)
+        before = datetime(2026, 11, 7, 5, 29, tzinfo=guard.BD_TZ)
+        after = datetime(2026, 11, 7, 5, 30, tzinfo=guard.BD_TZ)
+        epg_before = datetime(2026, 11, 7, 6, 14, tzinfo=guard.BD_TZ)
+        epg_after = datetime(2026, 11, 7, 6, 15, tzinfo=guard.BD_TZ)
         self.assertFalse(guard.recovery_is_due("iptv-maintenance.yml", before))
         self.assertTrue(guard.recovery_is_due("iptv-maintenance.yml", after))
         self.assertFalse(guard.recovery_is_due("epg-refresh.yml", after))
+        self.assertFalse(guard.recovery_is_due("epg-refresh.yml", epg_before))
+        self.assertTrue(guard.recovery_is_due("epg-refresh.yml", epg_after))
 
 
     def test_guard_only_success_does_not_count_as_completed_work(self):
@@ -504,7 +508,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         }
         skipped_epg = {
             "id": 141, "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:00:00Z",
+            "created_at": "2026-11-07T00:00:00Z",
             "jobs": [{
                 "name": "refresh", "status": "completed", "conclusion": "success",
                 "steps": [
@@ -518,7 +522,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
 
     def test_current_run_owns_day_when_no_other_run_has_completed_work(self):
         current = {"id": 150, "event": "workflow_run", "status": "in_progress",
-                   "conclusion": None, "created_at": "2026-11-07T03:00:00Z"}
+                   "conclusion": None, "created_at": "2026-11-07T00:00:00Z"}
         self.assertTrue(guard.should_current_run_execute(
             [current], 150, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
         ))
@@ -526,7 +530,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_current_run_is_not_rejected_by_its_own_stale_skipped_job_state(self):
         current = {
             "id": 151, "event": "workflow_run", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:00:00Z",
+            "created_at": "2026-11-07T00:00:00Z",
             "jobs": [{"name": "refresh", "status": "completed", "conclusion": "skipped",
                       "steps": [{"name": "Regenerate, validate and publish XMLTV", "conclusion": "skipped"}]}],
         }
@@ -536,9 +540,9 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
 
     def test_earlier_active_run_owns_daily_slot(self):
         earlier = {"id": 152, "status": "in_progress", "conclusion": None,
-                   "created_at": "2026-11-07T02:59:00Z"}
+                   "created_at": "2026-11-06T23:59:00Z"}
         current = {"id": 153, "status": "in_progress", "conclusion": None,
-                   "created_at": "2026-11-07T03:00:00Z"}
+                   "created_at": "2026-11-07T00:00:00Z"}
         self.assertFalse(guard.should_current_run_execute(
             [earlier, current], 153, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
         ))
@@ -548,7 +552,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
 
     def test_later_active_run_does_not_displace_earlier_current_run(self):
         current = {"id": 154, "status": "in_progress", "conclusion": None,
-                   "created_at": "2026-11-07T03:00:00Z"}
+                   "created_at": "2026-11-07T00:00:00Z"}
         later = {"id": 155, "status": "in_progress", "conclusion": None,
                  "created_at": "2026-11-07T03:01:00Z"}
         self.assertTrue(guard.should_current_run_execute(
@@ -572,7 +576,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         }
         scheduled_run = {
             "id": 159, "event": "schedule", "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T03:00:00Z",
+            "created_at": "2026-11-07T00:00:00Z",
         }
         self.assertTrue(guard.should_current_run_execute(
             [earlier_push, scheduled_run], 159, self.today,
@@ -593,7 +597,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         }
         current_workflow_run = {
             "id": 159, "event": "workflow_run", "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T03:15:00Z",
+            "created_at": "2026-11-07T00:15:00Z",
         }
         runs = [early_push, current_workflow_run]
         self.assertTrue(guard.should_current_run_execute(
@@ -607,7 +611,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_successful_post_schedule_workflow_run_blocks_later_epg_automatic_event(self):
         completed_refresh = {
             "id": 162, "event": "workflow_run", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:15:00Z",
+            "created_at": "2026-11-07T00:15:00Z",
             "jobs": [{
                 "name": "refresh", "status": "completed", "conclusion": "success",
                 "steps": [{
@@ -618,7 +622,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         }
         later_run = {
             "id": 163, "event": "workflow_run", "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T04:00:00Z",
+            "created_at": "2026-11-07T01:00:00Z",
         }
         self.assertFalse(guard.should_current_run_execute(
             [completed_refresh, later_run], 163, self.today,
@@ -628,7 +632,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_successful_scheduled_epg_run_blocks_later_automatic_events(self):
         scheduled_run = {
             "id": 160, "event": "schedule", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:00:00Z",
+            "created_at": "2026-11-07T00:00:00Z",
             "jobs": [{
                 "name": "refresh", "status": "completed", "conclusion": "success",
                 "steps": [{
@@ -639,7 +643,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         }
         later_push = {
             "id": 161, "event": "push", "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T04:00:00Z",
+            "created_at": "2026-11-07T01:00:00Z",
         }
         self.assertFalse(guard.should_current_run_execute(
             [scheduled_run, later_push], 161, self.today,
@@ -649,12 +653,12 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_prior_successful_epg_writer_blocks_later_workflow_run(self):
         previous = {
             "id": 156, "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:15:00Z",
+            "created_at": "2026-11-07T00:15:00Z",
             "jobs": [{"name": "refresh", "status": "completed", "conclusion": "success",
                       "steps": [{"name": "Regenerate, validate and publish XMLTV", "conclusion": "success"}]}],
         }
         current = {"id": 157, "status": "in_progress", "conclusion": None,
-                   "created_at": "2026-11-07T03:20:00Z"}
+                   "created_at": "2026-11-07T00:20:00Z"}
         self.assertFalse(guard.should_current_run_execute(
             [previous, current], 157, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
         ))
@@ -663,13 +667,13 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_epg_refresh_retries_after_a_new_playlist_writer_revision(self):
         previous = {
             "id": 164, "event": "workflow_run", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:15:00Z", "head_sha": "old-main-sha",
+            "created_at": "2026-11-07T00:15:00Z", "head_sha": "old-main-sha",
             "jobs": [{"name": "refresh", "status": "completed", "conclusion": "success",
                       "steps": [{"name": "Regenerate, validate and publish XMLTV", "conclusion": "success"}]}],
         }
         current = {
             "id": 165, "event": "workflow_run", "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T04:00:00Z", "head_sha": "new-playlist-writer-sha",
+            "created_at": "2026-11-07T01:00:00Z", "head_sha": "new-playlist-writer-sha",
         }
         self.assertTrue(guard.should_current_run_execute(
             [previous, current], 165, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
@@ -678,13 +682,13 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_epg_refresh_still_suppresses_duplicate_for_same_main_revision(self):
         previous = {
             "id": 166, "event": "workflow_run", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:15:00Z", "head_sha": "same-main-sha",
+            "created_at": "2026-11-07T00:15:00Z", "head_sha": "same-main-sha",
             "jobs": [{"name": "refresh", "status": "completed", "conclusion": "success",
                       "steps": [{"name": "Regenerate, validate and publish XMLTV", "conclusion": "success"}]}],
         }
         current = {
             "id": 167, "event": "workflow_run", "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T04:00:00Z", "head_sha": "same-main-sha",
+            "created_at": "2026-11-07T01:00:00Z", "head_sha": "same-main-sha",
         }
         self.assertFalse(guard.should_current_run_execute(
             [previous, current], 167, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
@@ -693,13 +697,13 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_successful_scheduled_epg_does_not_block_newer_writer_revision(self):
         scheduled = {
             "id": 168, "event": "schedule", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T03:00:00Z", "head_sha": "scheduled-input-sha",
+            "created_at": "2026-11-07T00:00:00Z", "head_sha": "scheduled-input-sha",
             "jobs": [{"name": "refresh", "status": "completed", "conclusion": "success",
                       "steps": [{"name": "Regenerate, validate and publish XMLTV", "conclusion": "success"}]}],
         }
         current = {
             "id": 169, "event": "workflow_run", "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T04:00:00Z", "head_sha": "new-writer-input-sha",
+            "created_at": "2026-11-07T01:00:00Z", "head_sha": "new-writer-input-sha",
         }
         self.assertTrue(guard.should_current_run_execute(
             [scheduled, current], 169, self.today, event="workflow_run", workflow_file="epg-refresh.yml"

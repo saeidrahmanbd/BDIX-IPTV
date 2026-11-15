@@ -39,7 +39,7 @@ on:
     types: [completed]
     branches: [main]
   schedule:
-    - cron: '0 3 * * *' # 09:00 Asia/Dhaka (UTC+6), after 07:00 discovery and 08:17 maintenance
+    - cron: '0 0 * * *' # 06:00 Asia/Dhaka (UTC+6), after discovery and playlist maintenance
   # Keep manual dispatch available for post-change EPG quality verification.
   workflow_dispatch:
 

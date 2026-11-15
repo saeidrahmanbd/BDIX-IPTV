@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Idempotent daily guard and fallback dispatcher for the official discovery workflows.
 
-The 07:00 Asia/Dhaka schedule remains the primary trigger. GitHub documents that
+The 05:10 Asia/Dhaka schedule remains the primary trigger. GitHub documents that
 schedule events at the top of an hour can be delayed or dropped before a run is
 created. The watchdog only dispatches an official discovery workflow if no run
 for that workflow exists on the current Bangladesh calendar date. The workflow guard ensures that a late scheduled event cannot run a second time that day.
@@ -46,12 +46,12 @@ REQUIRED_STEP_BY_WORKFLOW = {
     "epg-refresh.yml": "Regenerate, validate and publish XMLTV",
 }
 RECOVERY_AFTER_LOCAL = {
-    "iptv-maintenance.yml": (7, 30),
-    "new-channel-discovery.yml": (7, 30),
-    "international-channel-discovery.yml": (7, 30),
-    "playlist-logo-localization.yml": (8, 30),
-    "international-stream-health.yml": (9, 15),
-    "epg-refresh.yml": (9, 30),
+    "iptv-maintenance.yml": (5, 30),
+    "new-channel-discovery.yml": (5, 30),
+    "international-channel-discovery.yml": (5, 30),
+    "playlist-logo-localization.yml": (5, 45),
+    "international-stream-health.yml": (5, 55),
+    "epg-refresh.yml": (6, 15),
 }
 
 
@@ -183,11 +183,11 @@ def watchdog_run_blocks_retry(
 ) -> bool:
     """Decide whether a completed run satisfies the watchdog's daily obligation.
 
-    EPG's canonical daily refresh is scheduled for 09:00 Asia/Dhaka. A
-    successful push/workflow_run before 09:00 may have built yesterday's
-    inputs, so it must not suppress the 09:30 recovery dispatch when the
+    EPG's canonical daily refresh is scheduled for 06:00 Asia/Dhaka. A
+    successful push/workflow_run before 06:00 may have built yesterday's
+    inputs, so it must not suppress the 06:15 recovery dispatch when the
     scheduled run was missed. Active runs still block overlapping dispatches;
-    successful EPG runs created at/after 09:00 satisfy the daily obligation.
+    successful EPG runs created at/after 06:00 satisfy the daily obligation.
     """
     if workflow_file == "epg-refresh.yml":
         status = str(run.get("status") or "").casefold()
@@ -196,7 +196,7 @@ def watchdog_run_blocks_retry(
             if not created_at:
                 return False
             local_created = parse_github_timestamp(created_at).astimezone(BD_TZ)
-            if (local_created.hour, local_created.minute) < (9, 0):
+            if (local_created.hour, local_created.minute) < (6, 0):
                 return False
     return run_blocks_retry(run, client, workflow_file)
 
@@ -244,7 +244,7 @@ def should_current_run_execute(
     if manual:
         return not active_others
 
-    # EPG has a fixed 09:00 Asia/Dhaka daily refresh. Push/workflow_run events
+    # EPG has a fixed 06:00 Asia/Dhaka daily refresh. Push/workflow_run events
     # can legitimately rebuild the guide before that time, but they must not
     # consume the scheduled run's daily slot. The scheduled event therefore
     # takes priority over earlier non-scheduled successes; once it succeeds,
@@ -457,9 +457,9 @@ def wait_for_epg_runs_to_settle(
 ) -> list[dict[str, Any]]:
     """Wait for same-day EPG runs to finish before deciding whether recovery is needed.
 
-    A workflow_run/push event may still be active at the 09:30 watchdog checkpoint
+    A workflow_run/push event may still be active at the 06:15 watchdog checkpoint
     even though its daily guard will skip the actual refresh. Waiting lets the
-    watchdog distinguish a real post-09:00 publication from a guard-only no-op.
+    watchdog distinguish a real post-06:00 publication from a guard-only no-op.
     """
     def active_today(items):
         return [
