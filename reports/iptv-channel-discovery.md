@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-14T07:26:12.523864+00:00**
+Generated: **2026-11-15T02:23:28.974940+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**
@@ -10,7 +10,7 @@ Generated: **2026-11-14T07:26:12.523864+00:00**
 - Existing manual-review queue rows changed by discovery: **0**
 - New channels: **9**
 - New backups: **10**
-- Rejected/held candidates: **849**
+- Rejected/held candidates: **847**
 - Country metadata, channel IDs, language and logos are advisory at this stage; retain uncertain values for owner review and repair later.
 
 ## Rejection reasons
@@ -18,7 +18,7 @@ Generated: **2026-11-14T07:26:12.523864+00:00**
 - Indian business/finance channel is prohibited: 8
 - Indian educational channel is prohibited: 7
 - Indian knowledge channel is prohibited: 7
-- Indian news channel is prohibited: 300
+- Indian news channel is prohibited: 298
 - Indian religious channel is prohibited: 116
 - duplicate stream URL: 333
 - known Indian prohibited MH One Prime channel is prohibited: 1
@@ -55,7 +55,7 @@ Generated: **2026-11-14T07:26:12.523864+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-11-14T07:26:14+00:00
+- Run timestamp: 2026-11-15T02:23:30+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 19
 - Verified live media responses: 0
@@ -92,7 +92,7 @@ Generated: **2026-11-14T07:26:12.523864+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-11-14T07:26:14+00:00
+- Run timestamp: 2026-11-15T02:23:30+00:00
 - Validation status: PASS
 - New manual-review candidates retained: 0
 - New malformed EXTINF/URL pairs: 0
