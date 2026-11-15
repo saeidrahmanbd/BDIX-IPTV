@@ -11,7 +11,6 @@ on:
     paths:
       - .github/workflows/iptv-maintenance.yml
       - scripts/maintenance_helpers.py
-      - scripts/classify_international_backups.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/normalize_metadata.py
@@ -39,8 +38,6 @@ on:
       - scripts/generate_dashboard.py
       - scripts/refresh_dashboard_diagnostics.py
       - scripts/enforce_playlist_attribution.py
-      - scripts/repair_international_playlist.py
-      - scripts/validate_discovery_run.py
       - scripts/validate_international_playlist.py
       - scripts/verify_international_protected.py
       - scripts/protect_main_playlist.py
@@ -63,15 +60,8 @@ on:
       - tests/test_playlist_metadata_repairs.py
       - tests/test_channel_numbering.py
       - tests/test_backup_metadata_reconcile.py
-      - tests/test_playlist_metadata_repairs.py
-      - tests/test_channel_numbering.py
-      - tests/test_backup_metadata_reconcile.py
-  workflow_run:
-    workflows: ["Playlist Logo Repair and Localization"]
-    types: [completed]
-    branches: [main]
   schedule:
-    - cron: '0 23 * * *' # 05:00 Asia/Dhaka (UTC+6)
+    - cron: '50 23 * * *' # 05:50 Asia/Dhaka (UTC+6), after discovery, logo and International health
   workflow_dispatch:
 permissions:
   contents: write
@@ -225,22 +215,22 @@ jobs:
             python scripts/migrate_external_logos_fixed.py
             # International metadata/reorganization is maintained under its own
             # country/genre policy. IPTV receives metadata/logo-only repairs.
-            python scripts/backfill_cross_playlist_metadata.py
             # International country/genre reorganization belongs to its dedicated
             # discovery and stream-health workflows; maintenance does not rewrite it.
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
-            python scripts/validate_international_playlist.py
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             # Report-coupled tools run last; no structural IPTV mutation, queue
             # promotion, category reassembly or renumbering is permitted.
             python scripts/iptv_metadata_backfill.py
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix
-            python scripts/verify_international_protected.py verify
-            # Metadata/logo backfills can append attributes after the initial normalizer.
-            # Canonicalize EXTINF attribute order once, after every mutator, without
-            # changing IPTV row order, group assignment, channel numbers or stream URLs.
             python scripts/maintenance_helpers.py canonicalize-extinf
+            python scripts/verify_international_protected.py verify
+            # Validate International metadata only after all final mutations.
+            python scripts/validate_international_playlist.py
+            # Metadata/logo backfills can append attributes after the initial normalizer.
+            # EXTINF canonicalization runs once after every metadata mutator, without
+            # changing IPTV row order, group assignment, channel numbers or stream URLs.
           }
           for attempt in 1 2 3; do
             git fetch origin main
