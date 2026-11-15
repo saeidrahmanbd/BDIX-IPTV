@@ -900,7 +900,7 @@ class EpgConfigTests(unittest.TestCase):
         self.assertNotIn("github.event.workflow_run.conclusion == 'success'", workflow)
         self.assertNotIn("github.event.workflow_run.conclusion == 'failure'", workflow)
         self.assertIn("latest committed main inputs", workflow)
-        self.assertIn("# 09:00 Asia/Dhaka (UTC+6)", workflow)
+        self.assertIn("# 06:00 Asia/Dhaka (UTC+6)", workflow)
 
 
     def test_bangladesh_epg_audit_explains_its_country_suffix_scope(self):
