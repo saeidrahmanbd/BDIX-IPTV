@@ -53,6 +53,14 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "push", 1, "international-channel-discovery.yml",
             "Verify fixed IPTV discovery [manual-new-channel-discovery]",
         ))
+        self.assertTrue(guard.is_manual_retry(
+            "push", 1, "playlist-logo-localization.yml",
+            "[manual-logo-localization] Run post-merge logo audit",
+        ))
+        self.assertFalse(guard.is_manual_retry(
+            "push", 1, "playlist-logo-localization.yml",
+            "Routine logo maintenance commit",
+        ))
 
     def test_any_existing_run_prevents_watchdog_redispatch(self):
         runs = [
