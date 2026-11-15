@@ -105,7 +105,7 @@ def main():
         else: h["failures"]+=1; h["consecutive_failures"]=h.get("consecutive_failures",0)+1; h["last_failure"]=now
         h["last_status"]=r["status"]; h["last_latency_ms"]=r["latency_ms"]; previous[history_key]=h
         r["consecutive_failures"]=h["consecutive_failures"]; r["success_rate"]=round(h["successes"]/h["checks"]*100,1)
-    HISTORY.parent.mkdir(parents=True,exist_ok=True); HISTORY.write_text(json.dumps({r["url"]:previous[r["url"]] for r in results},indent=2)+"\n",encoding="utf-8")
+    HISTORY.parent.mkdir(parents=True,exist_ok=True); HISTORY.write_text(json.dumps({url_fingerprint(r["url"]):previous[url_fingerprint(r["url"])] for r in results},indent=2)+"\n",encoding="utf-8")
     ok=sum(r["ok"] for r in results); fail=len(results)-ok
     failure_classes=Counter(("HTTP 401/403 (access/auth)" if r["status"] in {401,403} else "HTTP 404 (not found)" if r["status"]==404 else "HTTP 4xx (other)" if 400<=r["status"]<500 else "HTTP 5xx (server)" if 500<=r["status"]<600 else r["error"] or "Other") for r in results if not r["ok"])
     persistent=[r for r in results if r["consecutive_failures"]>=3]; intermittent=[r for r in results if not r["ok"] and r["consecutive_failures"]<3]
