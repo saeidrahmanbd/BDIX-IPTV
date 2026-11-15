@@ -184,8 +184,8 @@ def watchdog_run_blocks_retry(
     """Decide whether a completed run satisfies the watchdog's daily obligation.
 
     EPG's canonical daily refresh is scheduled for 06:00 Asia/Dhaka. A
-    successful push/workflow_run before 09:00 may have built yesterday's
-    inputs, so it must not suppress the 09:30 recovery dispatch when the
+    successful push/workflow_run before 06:00 may have built yesterday's
+    inputs, so it must not suppress the 06:15 recovery dispatch when the
     scheduled run was missed. Active runs still block overlapping dispatches;
     successful EPG runs created at/after 06:00 satisfy the daily obligation.
     """
@@ -457,9 +457,9 @@ def wait_for_epg_runs_to_settle(
 ) -> list[dict[str, Any]]:
     """Wait for same-day EPG runs to finish before deciding whether recovery is needed.
 
-    A workflow_run/push event may still be active at the 09:30 watchdog checkpoint
+    A workflow_run/push event may still be active at the 06:15 watchdog checkpoint
     even though its daily guard will skip the actual refresh. Waiting lets the
-    watchdog distinguish a real post-09:00 publication from a guard-only no-op.
+    watchdog distinguish a real post-06:00 publication from a guard-only no-op.
     """
     def active_today(items):
         return [
