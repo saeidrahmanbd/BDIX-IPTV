@@ -30,7 +30,7 @@ on:
       - 'tests/test_international_discovery_policy.py'
       - 'tests/test_discovery_run_validation.py'
   schedule:
-    - cron: '0 1 * * *' # 07:00 Asia/Dhaka (UTC+6)
+    - cron: '20 23 * * *' # 05:20 Asia/Dhaka (UTC+6)
   workflow_dispatch:
 
 permissions:
