@@ -22,6 +22,16 @@ def url_fingerprint(url):
     """One-way history key: never persist credentials, tokens, or raw stream URLs."""
     return hashlib.sha256(str(url).strip().encode("utf-8")).hexdigest()
 
+def migrate_history_keys(previous):
+    """Convert legacy raw-URL history keys to fingerprints without losing streaks."""
+    if not isinstance(previous,dict):
+        return {}
+    return {
+        url_fingerprint(key): value
+        for key, value in previous.items()
+        if isinstance(value,dict)
+    }
+
 def canonical_url(url):
     """Return a private in-memory family key without URL userinfo or query values."""
     p=urlsplit(url)
@@ -85,14 +95,9 @@ def main():
     if HISTORY.exists():
         try: previous=json.loads(HISTORY.read_text(encoding="utf-8"))
         except Exception: previous={}
-    if not isinstance(previous,dict): previous={}
     # Migrate legacy raw-URL keys in memory. The next write replaces them with
     # SHA-256 fingerprints so credentials and signed tokens leave Git history.
-    migrated={}
-    for old_key, value in previous.items():
-        if isinstance(value,dict):
-            migrated[url_fingerprint(old_key)] = value
-    previous=migrated
+    previous=migrate_history_keys(previous)
     for r in results:
         history_key=url_fingerprint(r["url"])
         h=previous.get(history_key,{"checks":0,"successes":0,"failures":0,"consecutive_failures":0}); h["checks"]+=1
