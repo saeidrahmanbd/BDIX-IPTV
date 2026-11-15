@@ -46,12 +46,12 @@ REQUIRED_STEP_BY_WORKFLOW = {
     "epg-refresh.yml": "Regenerate, validate and publish XMLTV",
 }
 RECOVERY_AFTER_LOCAL = {
-    "iptv-maintenance.yml": (5, 30),
-    "new-channel-discovery.yml": (5, 30),
+    "iptv-maintenance.yml": (6, 10),
+    "new-channel-discovery.yml": (5, 20),
     "international-channel-discovery.yml": (5, 30),
     "playlist-logo-localization.yml": (5, 45),
     "international-stream-health.yml": (5, 55),
-    "epg-refresh.yml": (6, 15),
+    "epg-refresh.yml": (6, 25),
 }
 
 
