@@ -224,13 +224,13 @@ jobs:
             python scripts/iptv_metadata_backfill.py
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix
+            # Metadata/logo backfills can append attributes after the initial normalizer.
+            # Canonicalize EXTINF once after every metadata mutator, without changing
+            # IPTV row order, group assignment, channel numbers or stream URLs.
             python scripts/maintenance_helpers.py canonicalize-extinf
             python scripts/verify_international_protected.py verify
             # Validate International metadata only after all final mutations.
             python scripts/validate_international_playlist.py
-            # Metadata/logo backfills can append attributes after the initial normalizer.
-            # EXTINF canonicalization runs once after every metadata mutator, without
-            # changing IPTV row order, group assignment, channel numbers or stream URLs.
           }
           for attempt in 1 2 3; do
             git fetch origin main
