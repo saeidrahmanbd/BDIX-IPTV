@@ -24,6 +24,7 @@ class StreamHealthPrivacyTests(unittest.TestCase):
         self.assertEqual(list(migrated), [url_fingerprint(url)])
         self.assertEqual(migrated[url_fingerprint(url)]["consecutive_failures"], 2)
         self.assertNotIn(url, str(migrated))
+        self.assertEqual(migrate_history_keys(migrated), migrated)
 
     def test_committed_history_contains_only_fingerprints(self):
         history_path = Path(__file__).resolve().parents[1] / "reports" / "stream-health-history.json"
