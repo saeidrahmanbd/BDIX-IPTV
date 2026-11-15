@@ -135,7 +135,7 @@ jobs:
           set -euo pipefail
           python scripts/repair_playlist_logos.py
           python scripts/convert_referenced_logos_to_png.py
-          python scripts/repair_logo_asset_technical_quality.py --fix --max-dimension 1600 --max-bytes 358400
+          python scripts/repair_logo_asset_technical_quality.py --fix --max-dimension 1024 --max-bytes 153600
           python scripts/audit_logo_references.py --output reports/logo-reference-audit.json
           python scripts/plan_duplicate_logo_cleanup.py --output reports/duplicate-logo-cleanup-plan.json
           python scripts/generate_logo_authenticity_manifest.py

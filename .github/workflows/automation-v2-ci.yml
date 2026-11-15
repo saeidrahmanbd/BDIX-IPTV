@@ -3,7 +3,6 @@ name: Automation V2 Branch CI
 on:
   push:
     branches:
-      - main
       - automation-v2/**
     paths:
       - 'automation/**'
@@ -31,7 +30,6 @@ on:
       - '.github/workflows/automation-v2-missed-run-recovery.yml'
   pull_request:
     branches:
-      - main
       - automation-v2/**
     paths:
       - 'automation/**'
