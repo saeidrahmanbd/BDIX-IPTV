@@ -5998,5 +5998,10 @@
     "status": "generated_fallback",
     "source_url": "",
     "notes": "Custom-created local channel artwork, preserved from the previously approved design. This is an unofficial fallback asset and not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|30ATVClassicMovies.us@SD|30A TV Classic Movies|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/30a-tv-classic-movies-0f29f1694e.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://images.weserv.nl/?url=babaktv.com/wp-content/uploads/2023/09/30A-Classi-Movies.jpeg",
+    "notes": "Exact 30A TV Classic Movies logo from a published channel listing Broadcaster logo served by a channel listing through an image proxy; reuse rights not specified Source page: https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8"
   }
 }

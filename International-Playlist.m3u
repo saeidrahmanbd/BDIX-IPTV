@@ -2142,7 +2142,7 @@ http://hz1.teleport.cc/HLS/HD.m3u8
 https://d1j2u714xk898n.cloudfront.net/scheduler/scheduleMaster/145.m3u8
 #EXTINF:-1 tvg-id="30AMusic.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/30a-music-720p-950f250b00.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="30A Music",30A Music
 https://30a-tv.com/music.m3u8
-#EXTINF:-1 tvg-id="30ATVClassicMovies.us@SD" tvg-language="eng" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="30A TV Classic Movies",30A TV Classic Movies
+#EXTINF:-1 tvg-id="30ATVClassicMovies.us@SD" tvg-language="eng" tvg-country="US" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/30a-tv-classic-movies-0f29f1694e.png" group-title="United States" tvg-name="30A TV Classic Movies",30A TV Classic Movies
 https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8
 #EXTINF:-1 tvg-id="50CentAction.us@SD" channel-id="50CentAction.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/50-cent-action-720p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="50 Cent Action",50 Cent Action
 https://jmp2.uk/plu-68487fb3f212bedacf5a53e3.m3u8
