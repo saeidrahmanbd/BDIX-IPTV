@@ -43,6 +43,28 @@ class DuplicateLogoCleanupPlanTests(unittest.TestCase):
             self.assertEqual(len(plan["held_for_review"]), 1)
             self.assertIn("runtime basename/path mention", " ".join(plan["held_for_review"][0]["reasons"]))
 
+    def test_playlist_reference_to_canonical_root_copy_does_not_block_unused_copy(self):
+        temp, root = self.make_repo()
+        with temp:
+            (root / "IPTV-Playlist.m3u").write_text(
+                '#EXTINF:-1 tvg-logo="https://example.test/logos/channel.png",Channel\\n',
+                encoding="utf-8",
+            )
+            plan = build_plan(root)
+            self.assertEqual(len(plan["low_risk_review_candidates"]), 1)
+            self.assertEqual(plan["held_for_review"], [])
+
+    def test_playlist_reference_to_unused_path_blocks_candidate(self):
+        temp, root = self.make_repo()
+        with temp:
+            (root / "IPTV-Playlist.m3u").write_text(
+                '#EXTINF:-1 tvg-logo="https://example.test/logos/unused/channel.png",Channel\\n',
+                encoding="utf-8",
+            )
+            plan = build_plan(root)
+            self.assertEqual(plan["low_risk_review_candidates"], [])
+            self.assertIn("runtime basename/path mention", " ".join(plan["held_for_review"][0]["reasons"]))
+
     def test_different_filename_duplicate_is_held(self):
         temp, root = self.make_repo()
         with temp:
