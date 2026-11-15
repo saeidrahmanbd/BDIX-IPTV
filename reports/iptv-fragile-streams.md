@@ -81,7 +81,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Al Quran Al Kareem TV | Religious | credential-bearing route pattern (values redacted) | `https://cdn-globecast.akamaized.net/live/REDACTED/REDACTED/hls_roku/index.m3u8` |
 | Al-Zahra TV Turkic | Religious | credential-bearing route pattern (values redacted) | `https://live.al-zahratv.com/live/playlist.m3u8` |
 | Bahrain Quran | Religious | credential-bearing route pattern (values redacted) | `https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/playlist.m3u8` |
-| Madani TV | Religious | sensitive query parameter (value redacted) | `https://tvsen7.aynaott.com/MadaniTV/index.m3u8?e=REDACTED&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=REDACTED` |
+| Madani TV | Religious | sensitive query parameter (value redacted) | `[REDACTED: unauthorized third-party stream URL]` |
 | Medina Live | Religious | credential-bearing route pattern (values redacted) | `https://cdn-globecast.akamaized.net/live/REDACTED/REDACTED/hls_roku/index.m3u8` |
 | Bahrain Sports 2 | Sports | credential-bearing route pattern (values redacted) | `https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8` |
 | Major League Cricket | Sports | sensitive query parameter (value redacted) | `https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=uiXES2ePt7xTpQnbJxn7Dg&e=REDACTED&scheme=https%7Cuser-agent%3DMozilla` |
@@ -144,7 +144,7 @@ These streams are not automatically removed. URL credentials, user information a
 | DD Tamil | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/679/master.m3u8` |
 | DD Urdu | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/8/master.m3u8` |
 | DD Yadagiri | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/678/master.m3u8` |
-| Deepto TV | Backup | sensitive query parameter (value redacted) | `https://tvsen5.aynaott.com/tK2BNdfsdfsdf/index.m3u8?e=REDACTED&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=REDACTED` |
+| Deepto TV | Backup | sensitive query parameter (value redacted) | `[REDACTED: unauthorized third-party stream URL]` |
 | Dhoom Music | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1456/master.m3u8` |
 | Enter TV | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8` |
 | Enter10 Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8` |
@@ -220,7 +220,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Zee Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8` |
 | Zee Bangla | Backup | credential-bearing route pattern (values redacted) | `http://rgkkw.live:80/live/REDACTED/REDACTED/98881.ts` |
 | &TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8` |
-| 9X Jalwa | Review | sensitive query parameter (value redacted) | `https://tvsen6.aynaott.com/CiPT1VTG8bVekeAZiibd/index.m3u8?e=REDACTED&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=REDACTED` |
+| 9X Jalwa | Review | sensitive query parameter (value redacted) | `[REDACTED: unauthorized third-party stream URL]` |
 | Animal Planet | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8` |
 | Asian TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/asian_tv_abr/index.m3u8` |
 | B4U Movies | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/b4u_movies_abr/index.m3u8` |
@@ -234,7 +234,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Channel 24 | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/index.m3u8` |
 | Channel 24 | Review | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/channel-24-hd-1/index.m3u8` |
 | Channel 24 | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/channel_24_abr/index.m3u8` |
-| Dangal | Review | sensitive query parameter (value redacted) | `https://tvsen6.aynaott.com/uS9QwrbB/index.m3u8?e=REDACTED&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=REDACTED` |
+| Dangal | Review | sensitive query parameter (value redacted) | `[REDACTED: unauthorized third-party stream URL]` |
 | Desh TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/desh_tv_abr/index.m3u8` |
 | Discovery Channel (India) | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_hd_abr/index.m3u8` |
 | Discovery Channel (India) | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_sd_abr/index.m3u8` |
@@ -246,10 +246,10 @@ These streams are not automatically removed. URL credentials, user information a
 | Hum TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8` |
 | Hum TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/hum_tv_abr/index.m3u8` |
 | Independent TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/index.m3u8` |
-| Independent TV | Review | sensitive query parameter (value redacted) | `https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=REDACTED&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=REDACTED` |
+| Independent TV | Review | sensitive query parameter (value redacted) | `[REDACTED: unauthorized third-party stream URL]` |
 | Islamic TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/islamic_tv/index.m3u8` |
 | Jamuna TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8` |
-| Manoranjan TV | Review | sensitive query parameter (value redacted) | `https://tvsen6.aynaott.com/vhu6qz5Nsd/index.m3u8?e=REDACTED&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=REDACTED` |
+| Manoranjan TV | Review | sensitive query parameter (value redacted) | `[REDACTED: unauthorized third-party stream URL]` |
 | Mohona TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8` |
 | Movie Bangla | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/movie_bangla_abr/index.m3u8` |
 | MTV India | Review | dynamic/proxy endpoint | `https://yupp-music.keralive.workers.dev/out/v1/a797c00cba954265ba781f92a57e2cf5/index.m3u8` |
@@ -260,13 +260,13 @@ These streams are not automatically removed. URL credentials, user information a
 | Raj Musix Tamil | Review | credential-bearing route pattern (values redacted) | `https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u8` |
 | Raj TV | Review | credential-bearing route pattern (values redacted) | `https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RAJTV/master_1.m3u8` |
 | Rajdhani TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8` |
-| Shemaroo TV | Review | sensitive query parameter (value redacted) | `https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=REDACTED&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=REDACTED` |
+| Shemaroo TV | Review | sensitive query parameter (value redacted) | `[REDACTED: unauthorized third-party stream URL]` |
 | Somoy TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/somoy_tv_abr/index.m3u8` |
 | Sony Aath | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8` |
 | Sony Aath | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/sony_aath_abr/index.m3u8` |
 | Sony Max 2 | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/max_2_abr/index.m3u8` |
 | Sony SAB | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/sub_hd_abr/index.m3u8` |
-| The Q | Review | sensitive query parameter (value redacted) | `https://tvsen6.aynaott.com/3PjZZahm/index.m3u8?e=REDACTED&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=REDACTED` |
+| The Q | Review | sensitive query parameter (value redacted) | `[REDACTED: unauthorized third-party stream URL]` |
 | Zee Bangla | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_bangla_720/index.m3u8` |
 | Zee Bangla Cinema | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_bangla_cinema_abr/index.m3u8` |
 | Zee Bollywood | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/zee_bollywood_abr/index.m3u8` |

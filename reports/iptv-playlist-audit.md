@@ -92,7 +92,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - 9X Jalwa — Backup — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
 - 9X Jalwa — Backup — https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
 - 9X Jalwa — Backup — https://fta.ektv.in/live/161/master.m3u8
-- 9X Jalwa — Review — https://tvsen6.aynaott.com/CiPT1VTG8bVekeAZiibd/index.m3u8?e=1784102591&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- 9X Jalwa — Review — [REDACTED: unauthorized third-party stream URL]
 ### 9xjhakaas.in@sd (3 streams)
 - 9X Jhakaas — Indian Music — https://wiselp.wiseplayout.com/9X_Jhakaas/master.m3u8
 - 9X Jhakaas — Backup — https://cdn.pishow.tv/ott/live/6/master.m3u8
@@ -337,7 +337,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Dangal — Backup — https://live-dangal.akamaized.net/liveabr/pub-iodang10p4al/live_720p/chunks.m3u8
 - Dangal — Backup — https://streams.tangotv.in/DANGAL/ORIGIN/index.m3u8
 - Dangal — Review — https://tvsen3.aynaott.com/qPNg4LJK/index.m3u8
-- Dangal — Review — https://tvsen6.aynaott.com/uS9QwrbB/index.m3u8?e=1784102594&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- Dangal — Review — [REDACTED: unauthorized third-party stream URL]
 ### dangaltv.in@sd@dangal.tv (3 streams)
 - Dangal TV — Backup — https://fta.ektv.in/live/17/master.m3u8
 - Dangal TV — Backup — https://mumt04.tangotv.in/m18aqlK4DANGAL/index.m3u8
@@ -425,7 +425,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Deen TV — Review — https://tvsen3.aynaott.com/TJcnZW3U/index.m3u8
 ### deeptotv.bd (3 streams)
 - Deepto TV — Bangladesh — https://byphdgllyk.gpcdn.net/hls/deeptotv/index.m3u8
-- Deepto TV — Backup — https://tvsen5.aynaott.com/tK2BNdfsdfsdf/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- Deepto TV — Backup — [REDACTED: unauthorized third-party stream URL]
 - Deepto TV — Review — http://103.135.253.32:8080/Deepto-TV/index.m3u8
 ### deshebideshe.ca (2 streams)
 - Deshe Bideshe — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/deshebideshe.stream/tracks-v1a1/mono.m3u8
@@ -573,7 +573,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Independent TV — Review — http://103.135.253.32:8080/Indipendent/index.m3u8
 - Independent TV — Review — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/independent-8-org.stream/tracks-v1a1/mono.m3u8
 - Independent TV — Review — https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/index.m3u8
-- Independent TV — Review — https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- Independent TV — Review — [REDACTED: unauthorized third-party stream URL]
 ### insync.in (3 streams)
 - Insync — Indian Music — https://mumt04.tangotv.in/m18aqlK4INSYNC/index.m3u8
 - Insync — Backup — https://d1msejlow1t3l4.cloudfront.net/fta/insync/playlist.m3u8
@@ -645,7 +645,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Maasranga TV — Backup — https://tvsen6.aynaott.com/maasrangatv/index.m3u8
 - Maasranga TV — Review — http://tvsen5.aynascope.net/maasrangatv/index.m3u8
 ### madanitv.sa (2 streams)
-- Madani TV — Religious — https://tvsen7.aynaott.com/MadaniTV/index.m3u8?e=1784102568&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- Madani TV — Religious — [REDACTED: unauthorized third-party stream URL]
 - Madani TV — Review — https://tvsen3.aynaott.com/z24qLsqV/index.m3u8
 ### mahaamax.in (3 streams)
 - Mahaa Max — Indian Entertainment — https://mumbai-edge.smartplaytv.in/MahaMax/index.m3u8
@@ -675,7 +675,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Manoranjan TV — Backup — https://fta.ektv.in/live/23/master.m3u8
 - Manoranjan TV — Backup — https://streams.tangotv.in/MANORANJANTV/ORIGIN/index.m3u8
 - Manoranjan TV — Backup — http://163.61.226.31:9981/stream/channelid/889274687?profile=pass
-- Manoranjan TV — Review — https://tvsen6.aynaott.com/vhu6qz5Nsd/index.m3u8?e=1784102598&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- Manoranjan TV — Review — [REDACTED: unauthorized third-party stream URL]
 ### marutamtv.in (2 streams)
 - MNTV (Tamil) — Indian Entertainment — https://mntv.livebox.co.in/mntvhls/live.m3u8
 - MNTV (Tamil) — Backup — https://www.khuwemultimedia.com/hls/mntv/mntv.m3u8
@@ -971,7 +971,7 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Shemaroo TV — Backup — https://mumt06.tangotv.in/qYyB8fXVSHEMAROOTV/index.m3u8
 - Shemaroo TV — Backup — https://fta.ektv.in/live/274/master.m3u8
 - Shemaroo TV — Backup — https://streams.tangotv.in/SHEMAROOTV/ORIGIN/index.m3u8
-- Shemaroo TV — Review — https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=1784102595&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- Shemaroo TV — Review — [REDACTED: unauthorized third-party stream URL]
 ### shemarooumang.in@sd (4 streams)
 - Shemaroo Umang — Indian Entertainment — https://airtelapp.shemaroo.com/shemarooumang/smil:shemarooumangadp.smil/playlist.m3u8
 - Shemaroo Umang — Backup — https://mumt04.tangotv.in/m18aqlK4SHEMAROOUMANG/index.m3u8
@@ -1271,15 +1271,15 @@ None.
 - **WOW Kidz Hindi** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=[REDACTED]
 - **WOW Kidz Tamil** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=[REDACTED]
 - **WOW Kidz Telugu** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=[REDACTED]
-- **Madani TV** — Religious — https://tvsen7.aynaott.com/MadaniTV/index.m3u8?e=1784102568&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
-- **Deepto TV** — Backup — https://tvsen5.aynaott.com/tK2BNdfsdfsdf/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- **Madani TV** — Religious — [REDACTED: unauthorized third-party stream URL]
+- **Deepto TV** — Backup — [REDACTED: unauthorized third-party stream URL]
 - **Studio Yuva** — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
-- **9X Jalwa** — Review — https://tvsen6.aynaott.com/CiPT1VTG8bVekeAZiibd/index.m3u8?e=1784102591&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
-- **Dangal** — Review — https://tvsen6.aynaott.com/uS9QwrbB/index.m3u8?e=1784102594&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
-- **Independent TV** — Review — https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
-- **Manoranjan TV** — Review — https://tvsen6.aynaott.com/vhu6qz5Nsd/index.m3u8?e=1784102598&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
-- **Shemaroo TV** — Review — https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=1784102595&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
-- **The Q** — Review — https://tvsen6.aynaott.com/3PjZZahm/index.m3u8?e=1784102596&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- **9X Jalwa** — Review — [REDACTED: unauthorized third-party stream URL]
+- **Dangal** — Review — [REDACTED: unauthorized third-party stream URL]
+- **Independent TV** — Review — [REDACTED: unauthorized third-party stream URL]
+- **Manoranjan TV** — Review — [REDACTED: unauthorized third-party stream URL]
+- **Shemaroo TV** — Review — [REDACTED: unauthorized third-party stream URL]
+- **The Q** — Review — [REDACTED: unauthorized third-party stream URL]
 
 ## Embedded Xtream-Style Credential Paths (redacted)
 
