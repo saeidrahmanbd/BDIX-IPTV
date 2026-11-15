@@ -891,6 +891,7 @@ class EpgConfigTests(unittest.TestCase):
             "IPTV New Channel Discovery",
             "International Channel Discovery",
             "Playlist Logo Repair and Localization",
+            "International Stream Health",
         ):
             self.assertIn(f'"{name}"', workflow)
         self.assertIn("types: [completed]", workflow)
