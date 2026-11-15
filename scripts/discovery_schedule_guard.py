@@ -183,11 +183,12 @@ def watchdog_run_blocks_retry(
 ) -> bool:
     """Decide whether a completed run satisfies the watchdog's daily obligation.
 
-    EPG's canonical daily refresh is scheduled for 06:00 Asia/Dhaka. A
-    successful push/workflow_run before 06:00 may have built yesterday's
-    inputs, so it must not suppress the 06:15 recovery dispatch when the
-    scheduled run was missed. Active runs still block overlapping dispatches;
-    successful EPG runs created at/after 06:00 satisfy the daily obligation.
+    EPG's canonical daily refresh is scheduled for 06:10 Asia/Dhaka. A
+    successful push/workflow_run before 06:10 may have built inputs before
+    the final scheduled playlist writers; it must not suppress the 06:30
+    recovery dispatch when the scheduled run was missed. Active runs still
+    block overlapping dispatches; successful EPG runs created at/after 06:10
+    satisfy the daily obligation.
     """
     if workflow_file == "epg-refresh.yml":
         status = str(run.get("status") or "").casefold()
@@ -196,7 +197,7 @@ def watchdog_run_blocks_retry(
             if not created_at:
                 return False
             local_created = parse_github_timestamp(created_at).astimezone(BD_TZ)
-            if (local_created.hour, local_created.minute) < (6, 0):
+            if (local_created.hour, local_created.minute) < (6, 10):
                 return False
     return run_blocks_retry(run, client, workflow_file)
 
@@ -244,7 +245,7 @@ def should_current_run_execute(
     if manual:
         return not active_others
 
-    # EPG has a fixed 06:00 Asia/Dhaka daily refresh. Push/workflow_run events
+    # EPG has a fixed 06:10 Asia/Dhaka daily refresh. Push/workflow_run events
     # can legitimately rebuild the guide before that time, but they must not
     # consume the scheduled run's daily slot. The scheduled event therefore
     # takes priority over earlier non-scheduled successes; once it succeeds,
@@ -459,7 +460,7 @@ def wait_for_epg_runs_to_settle(
 
     A workflow_run/push event may still be active at the 06:15 watchdog checkpoint
     even though its daily guard will skip the actual refresh. Waiting lets the
-    watchdog distinguish a real post-06:00 publication from a guard-only no-op.
+    watchdog distinguish a real post-06:10 publication from a guard-only no-op.
     """
     def active_today(items):
         return [
