@@ -40,6 +40,7 @@ SOURCE_FETCH_TIMEOUT_SECONDS = 90
 SOURCE_FETCH_WORKERS = 8
 
 EPG_ALIASES = {
+    "SiSoloCalcio.it": ["Si Solo Calcio.it"],
     "DDHimachalPradesh.in@SD": ["ts1217", "1217", "LIVETV_LIVETVCHANNEL_DD_SHIMLA"],
     "MTVIndia.in@SD": ["jtv248", "248"], "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
     "KappaTV.in@ALT1": ["jtv786", "786", "377"], "IqraBangla.uk": ["3914", "IqraBangla.uk", "IqraBangla.uk@SD"], "DeenTV.uk": ["1235", "DeenTV.uk", "DeenTV.uk@SD"],
