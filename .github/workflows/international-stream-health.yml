@@ -24,17 +24,45 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: write
 
 jobs:
+  daily_guard:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    concurrency:
+      group: international-stream-health-daily-guard-v1
+      cancel-in-progress: false
+      queue: max
+    outputs:
+      should_run: ${{ steps.guard.outputs.should_run }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.12'
+      - name: Deduplicate International health by Bangladesh date
+        id: guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_WORKFLOW_FILE: international-stream-health.yml
+        run: python scripts/discovery_schedule_guard.py guard "$GH_WORKFLOW_FILE"
   check:
+    needs: daily_guard
     if: >-
-      github.event_name == 'push' ||
-      github.event_name == 'schedule' ||
-      github.event_name == 'workflow_dispatch' ||
-      (github.event_name == 'workflow_run' &&
-       github.event.workflow_run.event == 'workflow_dispatch' &&
-       github.event.workflow_run.conclusion == 'success')
+      needs.daily_guard.outputs.should_run == 'true' &&
+      (github.event_name == 'push' ||
+       github.event_name == 'schedule' ||
+       github.event_name == 'workflow_dispatch' ||
+       (github.event_name == 'workflow_run' &&
+        github.event.workflow_run.event == 'workflow_dispatch' &&
+        github.event.workflow_run.conclusion == 'success'))
     # Shared main-branch writer queue. Set on the writing job, not the workflow,
     # so runs whose jobs are skipped do not hold the queue.
     concurrency:
