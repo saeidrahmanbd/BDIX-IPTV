@@ -630,6 +630,7 @@ if primary_duplicate_ids: raise SystemExit("Duplicate primary identities detecte
 if primary_chno_collisions: raise SystemExit("Primary channel-number collisions detected; refusing automatic commit.")
 if malformed_extinf: raise SystemExit("Malformed EXTINF entries detected; refusing automatic commit.")
 if suspicious_urls: raise SystemExit("Suspicious test credentials or malformed URL syntax detected; refusing automatic commit.")
+if signed_urls: raise SystemExit(f"Credential-bearing or signed stream URLs detected ({len(signed_urls)}); refusing automatic publication.")
 
 # The main playlist is manually curated. Report legacy category/numbering,
 # provisional discovery metadata and logo gaps, but do not reorder, renumber,
