@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-15T04:30:17+00:00**
+Generated: **2026-11-15T04:51:59+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -16,7 +16,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1600px): **0**
 - Raster assets over 358400 bytes: **1**
 - Raster/SVG assets with short side under 64 px: **154**
-- Exact-byte duplicate asset clusters: **724**
+- Exact-byte duplicate asset clusters: **716**
 - Playlist references whose asset stem differs from the normalized channel name: **1523**
 - Unreferenced image assets immediately inside logos/: **1468** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
@@ -224,7 +224,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/360tunebox-1080p-c81dfec860.png, logos/international/360tunebox-1080p.png, logos/unused/360tunebox-1080p-c81dfec860.png
 - logos/3abn-praise-him-music-network-720p-12e7a6309e.png, logos/unused/3abn-praise-him-music-network-720p-12e7a6309e.png
 - logos/4-fun-kids-b7ce951979.png, logos/unused/4-fun-kids-576i-64da9e594d.png
-- logos/4-fun-tv.png, logos/unused/4-fun-tv.png
 - logos/4-music.png, logos/unused/4-music.png
 - logos/4-sides-tv-6a436fa007.png, logos/nvisionbd-verified-4-sides-tv-6a436fa007.png
 - logos/4ever-cinema-1080p-46222eea9d.png, logos/international/4ever-cinema-1080p.png
@@ -465,7 +464,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/exa-tv.png, logos/international/exa-tv.png
 - logos/express-news-576p.png, logos/express-news.png
 - logos/fabulosa-estereo-100-5-fm-720p.png, logos/international/fabulosa-estereo-100-5-fm-720p.png
-- logos/fap-tv-5.png, logos/fap-tv-6.png, logos/ptv-home.png, logos/ptv-world.png, logos/ptv.png, logos/unused/ptv.png
+- logos/fap-tv-5.png, logos/fap-tv-6.png, logos/ptv-home.png, logos/ptv-world.png, logos/ptv.png
 - logos/fashion-tv-aa7f9461cf.png, logos/nvisionbd-official-fashion-tv.png
 - logos/fifa-plus-68fe723cf8.png, logos/fifa-plus-french-68fe723cf8.png, logos/fifa-plus-german-68fe723cf8.png, logos/fifa-plus-hispanic-america-68fe723cf8.png, logos/fifa-plus-italy-68fe723cf8.png, logos/fifa-plus-portuguese-68fe723cf8.png, logos/fifa-plus-spain-68fe723cf8.png, logos/fifa-plus-united-states-68fe723cf8.png, logos/nvisionbd-official-fifa-plus.png
 - logos/fight-network.png, logos/unused/fight-network.png
@@ -500,7 +499,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/great-movies-1080p-9cc0399e3e.png, logos/international/great-movies.png
 - logos/great-romance-1080p-7315cca1df.png, logos/international/great-romance.png
 - logos/green-tv-fa848f9d71.png, logos/international/green-tv-1080p.png, logos/nvisionbd-verified-green-tv-fa848f9d71.png
-- logos/groove.png, logos/unused/groove.png
 - logos/gtc-punjabi-1080p.png, logos/gtc-punjabi-uk.png, logos/gtc-punjabi-us.png, logos/gtc-punjabi.png
 - logos/hallmark-movies-more.png, logos/unused/hallmark-movies-more-1080p-9526bb5c86.png
 - logos/harbin-movie-channel-41537a954e.png, logos/unused/harbin-movie-channel-41537a954e.png
@@ -588,8 +586,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/my-cinema-geo-blocked.png, logos/my-cinema.png
 - logos/international/nande-portetepe-tv.png, logos/nande-portetepe-tv-baa8a0291c.png
 - logos/international/naruto-1080p.png, logos/international/naruto-brazil.png, logos/international/naruto-germany-720p.png
-- logos/international/new-k-movies-1080p.png, logos/new-k-movies-1080p-fdc6c325b6.png, logos/unused/new-k-movies-1080p-fdc6c325b6.png
-- logos/international/new-k-pop-1080p.png, logos/new-k-pop-1080p-02d85a425b.png, logos/unused/new-k-pop-1080p-02d85a425b.png
+- logos/international/new-k-movies-1080p.png, logos/new-k-movies-1080p-fdc6c325b6.png
+- logos/international/new-k-pop-1080p.png, logos/new-k-pop-1080p-02d85a425b.png
 - logos/international/nickelodeon-pluto-tv-720p.png, logos/unused/nickelodeon-pluto-tv-720p-99de7a9302.png
 - logos/international/nonstop-kung-fu-dk.png, logos/international/nonstop-kung-fu-no.png, logos/international/nonstop-kung-fu.png
 - logos/international/one-piece-br.png, logos/international/one-piece-ca.png, logos/international/one-piece-fr.png, logos/international/one-piece-latam.png, logos/international/one-piece-spain.png
@@ -716,7 +714,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/zee-tv-converted-4946c72750.png, logos/nvisionbd-verified-zee-tv-2fb6673cf7-converted-4946c72750.png, logos/zee-tv-2fb6673cf7.png, logos/zee-tv-converted-4946c72750.png
 - logos/international-dusk.png, logos/international-gotmylf.png, logos/international-penthousegold.png, logos/international-vippov.png, logos/international-visitx.png
 - logos/investigation-discovery-hungary-bc71641620.png, logos/investigation-discovery-latin-america-south-bc71641620.png, logos/investigation-discovery-united-states-bc71641620.png
-- logos/ion-tv-uk.png, logos/unused/ion-tv-uk.png
 - logos/itage-tv-480p-453d42d446.png, logos/unused/itage-tv-480p-453d42d446.png
 - logos/jaihind-tv-576p.png, logos/jaihind-tv.png
 - logos/jimjam-6eb2a52d5d.png, logos/jimjam-europe-6eb2a52d5d.png
@@ -751,7 +748,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/moviesphere.png, logos/unused/moviesphere.png
 - logos/mtv-germany-bafd7b214a.png, logos/mtv-united-states-bafd7b214a.png
 - logos/music-box-hits.png, logos/unused/music-box-hits-7f2dd7fb76.png
-- logos/music-box-polska-ukraine-14d7aa0090.png, logos/unused/music-box-polska-ukraine-14d7aa0090.png
 - logos/mytime-movie-network-br.png, logos/mytime-movie.png
 - logos/mytime-movie-network-brazil-0641ac6cd5.png, logos/unused/mytime-movie-network-720p-cc34ff46f5.png
 - logos/mytime-movie-network-mexico-5d68663811.png, logos/mytime-movie-network-spain-5d68663811.png, logos/unused/mytime-movie-network-1080p-79e6ec3226.png
@@ -817,7 +813,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/nvisionbd-verified-zoom-india-nepal-27531244ca.png, logos/zoom-india-27531244ca.png
 - logos/oman-sports-tv.png, logos/unused/oman-sports-tv.png
 - logos/p2m-tv.png, logos/unused/p2m-tv.png
-- logos/paramount-network-1080p-d2d6424e61.png, logos/unused/paramount-network-1080p-d2d6424e61.png, logos/unused/paramount-network-409048c42b.png
+- logos/paramount-network-1080p-d2d6424e61.png, logos/unused/paramount-network-409048c42b.png
 - logos/pasand-tv-576p.png, logos/pasand-tv.png
 - logos/persiana-korea-50841eae46.png, logos/unused/persiana-korea-50841eae46.png
 - logos/pictures.png, logos/unused/pictures.png
@@ -843,7 +839,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/shemaroo-umang-720p.png, logos/shemaroo-umang.png
 - logos/shikor-tv-canada-ac43f0fa9e.png, logos/ten-tv-prime-ac43f0fa9e.png, logos/tv-one-uk-ac43f0fa9e.png
 - logos/solo-calcio-italia.png, logos/solocalcio-italia.png
-- logos/sony-pix-1080p-7e6eaf865e.png, logos/unused/sony-pix-1080p-7e6eaf865e.png
 - logos/sooriyan-tv-1080p.png, logos/sooriyan-tv.png
 - logos/spektratv.png, logos/unused/spektratv-720p-24da903cfa.png
 - logos/spektrum-czech-republic-0eaf56bb6e.png, logos/spektrum-hungary-0eaf56bb6e.png
@@ -859,7 +854,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/star-suvarna-576p.png, logos/star-suvarna-hd.png
 - logos/star-utsav-576p.png, logos/star-utsav.png
 - logos/star-utsav-movies-576p.png, logos/star-utsav-movies.png
-- logos/starz-cinema-1080p-84fe436812.png, logos/unused/starz-cinema-1080p-84fe436812.png
 - logos/stingray-holiday-hits.png, logos/unused/stingray-holiday-hits-1080p-764177135c.png
 - logos/stingray-jukebox-oldies-2834f6a33e.png, logos/stingray-romance-latino-2834f6a33e.png
 - logos/stingray-karaoke.png, logos/unused/stingray-karaoke-720p-8ac71874a5.png
@@ -880,7 +874,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/teleritmo.png, logos/unused/teleritmo.png
 - logos/the-q-india-576p.png, logos/the-q.png
 - logos/tigo-sports-honduras-35a2af98a0.png, logos/tigo-sports-paraguay-35a2af98a0.png
-- logos/toonami-aftermath-east.png, logos/toonami-aftermath-movie.png, logos/unused/toonami-aftermath-movie.png
+- logos/toonami-aftermath-east.png, logos/toonami-aftermath-movie.png
 - logos/trace-africa-1080p-a177d91a65.png, logos/unused/trace-africa-1080p-a177d91a65.png
 - logos/trace-ayiti-1080p-62e392142b.png, logos/unused/trace-ayiti-1080p-62e392142b.png
 - logos/trace-jama-1080p-290110fe8a.png, logos/unused/trace-jama-1080p-290110fe8a.png
@@ -915,9 +909,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/unused/xite-reggae-vibes-1080p-157e5ece5e.png, logos/xite-reggae-vibes-1080p-157e5ece5e.png
 - logos/unused/xite-rock-x-metal-1080p-08222c2607.png, logos/xite-rock-x-metal.png
 - logos/unused/xite-siempre-latino-1080p-ef6e87e703.png, logos/xite-siempre-latino.png
-- logos/unused/zb-music-7fe42cfc.png, logos/zb-music-7fe42cfc.png
 - logos/unused/zee-bangla-sonar-576p-292f68c192.png, logos/zee-bangla-sonar-backup-1.png, logos/zee-bangla-sonar-backup-2.png, logos/zee-bangla-sonar-backup-4.png, logos/zee-bangla-sonar.png
-- logos/unused/zee-business-576p-33d1a45d8c.png, logos/zee-business-576p-33d1a45d8c.png
 - logos/unused/zee-talkies.png, logos/zee-talkies.png
 - logos/vcv-720p-not-24-7.png, logos/vcv.png
 - logos/viasat-kino-balkan-24c3a8c6c2.png, logos/viasat-kino-romania-24c3a8c6c2.png

@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5332,
+  "logo_image_files": 5319,
   "all_explicitly_referenced_logo_files": 2656,
   "runtime_referenced_logo_files": 2655,
   "playlist_referenced_logo_files": 2415,
-  "apparently_unreferenced_by_any_text_file": 2676,
-  "apparently_unreferenced_by_runtime_sources": 2677,
+  "apparently_unreferenced_by_any_text_file": 2663,
+  "apparently_unreferenced_by_runtime_sources": 2664,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -1428,8 +1428,8 @@
     "logos/zee-cinema-apac-efd7650d72.svg",
     "logos/zenlife-by-stingray-7d01288f39.svg"
   ],
-  "exact_duplicate_groups": 724,
-  "exact_duplicate_files": 1069,
+  "exact_duplicate_groups": 716,
+  "exact_duplicate_files": 1056,
   "exact_duplicates": [
     {
       "sha256": "007e8c573fb6e89887e2eb8acce35732fc8d9dcdeb966adab0fca4f593a1dacf",
@@ -1443,8 +1443,7 @@
       "sha256": "0086e2b83c7cbc4157e4ac70f938996c35824331c9424e32dbaad4e4ccb80b24",
       "files": [
         "logos/toonami-aftermath-east.png",
-        "logos/toonami-aftermath-movie.png",
-        "logos/unused/toonami-aftermath-movie.png"
+        "logos/toonami-aftermath-movie.png"
       ]
     },
     {
@@ -1570,13 +1569,6 @@
       "files": [
         "logos/mytime-movie-network-brazil-0641ac6cd5.png",
         "logos/unused/mytime-movie-network-720p-cc34ff46f5.png"
-      ]
-    },
-    {
-      "sha256": "0723ddf887594152ab85a33d31248ea2a64d67b9cc90208eec49f5ae4e6bd7e7",
-      "files": [
-        "logos/music-box-polska-ukraine-14d7aa0090.png",
-        "logos/unused/music-box-polska-ukraine-14d7aa0090.png"
       ]
     },
     {
@@ -2086,13 +2078,6 @@
       ]
     },
     {
-      "sha256": "2121fe6fc54e11c15ecc50bf8f98b96caecfe2bf65e0dcc6206f32af53d2abf3",
-      "files": [
-        "logos/4-fun-tv.png",
-        "logos/unused/4-fun-tv.png"
-      ]
-    },
-    {
       "sha256": "227c06af7f04c8dfdee61cd7b7996979792e15219bb00fb87325c4e28411e2c7",
       "files": [
         "logos/international/pluto-classic-movie-westerns.png",
@@ -2381,13 +2366,6 @@
       "files": [
         "logos/international/comedy-central-south-park-latam.png",
         "logos/international/comedy-central-south-park.png"
-      ]
-    },
-    {
-      "sha256": "313170eb8e1870d0f6722775db6387b08a6bbc3aa593412b67588b20dfcb2c4b",
-      "files": [
-        "logos/sony-pix-1080p-7e6eaf865e.png",
-        "logos/unused/sony-pix-1080p-7e6eaf865e.png"
       ]
     },
     {
@@ -3001,13 +2979,6 @@
       ]
     },
     {
-      "sha256": "54705ba215fad89c2b41e348eef36bab0c7144f3cf985bd452c97e3a04ca25e5",
-      "files": [
-        "logos/groove.png",
-        "logos/unused/groove.png"
-      ]
-    },
-    {
       "sha256": "547c744850f61122ab56d7fb4bac8accec781443ae380cc2345bd8b1de4155ac",
       "files": [
         "logos/cmc-tv.png",
@@ -3064,13 +3035,6 @@
         "logos/international/mtv-flow-latino-720p.png",
         "logos/international/mtv-flow-latino-latam-720p.png",
         "logos/unused/mtv-flow-latino-720p-a200c973ae.png"
-      ]
-    },
-    {
-      "sha256": "55c1b50d2afa706a2d3603defa87d9c08c5c069b52682175a364be40041ec8ef",
-      "files": [
-        "logos/unused/zee-business-576p-33d1a45d8c.png",
-        "logos/zee-business-576p-33d1a45d8c.png"
       ]
     },
     {
@@ -3540,8 +3504,7 @@
       "sha256": "6bb161f67a9aaffa653917f5c0ea5981bf9b4e0ff0f9f7123885ab3edaeff925",
       "files": [
         "logos/international/new-k-movies-1080p.png",
-        "logos/new-k-movies-1080p-fdc6c325b6.png",
-        "logos/unused/new-k-movies-1080p-fdc6c325b6.png"
+        "logos/new-k-movies-1080p-fdc6c325b6.png"
       ]
     },
     {
@@ -4327,8 +4290,7 @@
       "sha256": "9342b79a64b19435ec85cfbede2c8f0100dfd10be85249109c6976efd0dc4cd0",
       "files": [
         "logos/international/new-k-pop-1080p.png",
-        "logos/new-k-pop-1080p-02d85a425b.png",
-        "logos/unused/new-k-pop-1080p-02d85a425b.png"
+        "logos/new-k-pop-1080p-02d85a425b.png"
       ]
     },
     {
@@ -4739,13 +4701,6 @@
       ]
     },
     {
-      "sha256": "a3f0d63282324b02045d405b2d887682b4480ecb8260852b5bd8623c725628f9",
-      "files": [
-        "logos/ion-tv-uk.png",
-        "logos/unused/ion-tv-uk.png"
-      ]
-    },
-    {
       "sha256": "a41205f51a66f9e137c4565430a0d7572a5ae0d62157431c5b981d8ca0a17bdf",
       "files": [
         "logos/aurora-media-films-720p.png",
@@ -4906,13 +4861,6 @@
       "files": [
         "logos/sports-first-tv.png",
         "logos/unused/sports-first-tv.png"
-      ]
-    },
-    {
-      "sha256": "ab6fdda58599013e82a92682df84a7d6560ca2b5fbeb41d0450327eeaba4c0ef",
-      "files": [
-        "logos/starz-cinema-1080p-84fe436812.png",
-        "logos/unused/starz-cinema-1080p-84fe436812.png"
       ]
     },
     {
@@ -5317,7 +5265,6 @@
       "sha256": "bab9b8924a4c18918849ac707eaa72a2f9993a152bb753bd83f7d23cefcec059",
       "files": [
         "logos/paramount-network-1080p-d2d6424e61.png",
-        "logos/unused/paramount-network-1080p-d2d6424e61.png",
         "logos/unused/paramount-network-409048c42b.png"
       ]
     },
@@ -5938,13 +5885,6 @@
       ]
     },
     {
-      "sha256": "d4a56b95fc590df117d7d83137533b6c96efecd46e330548c20ba29577d9515c",
-      "files": [
-        "logos/unused/zb-music-7fe42cfc.png",
-        "logos/zb-music-7fe42cfc.png"
-      ]
-    },
-    {
       "sha256": "d4f9392425b2b302b0016be88eed70d65d65d15455981c62eaf45890147681f1",
       "files": [
         "logos/alcance-fm-play-tv.png",
@@ -6562,8 +6502,7 @@
         "logos/fap-tv-6.png",
         "logos/ptv-home.png",
         "logos/ptv-world.png",
-        "logos/ptv.png",
-        "logos/unused/ptv.png"
+        "logos/ptv.png"
       ]
     },
     {
@@ -32204,7 +32143,6 @@
     "logos/unused/3sat-61975316e4-converted-c99772b907.png",
     "logos/unused/3sat-61975316e4.png",
     "logos/unused/4-fun-kids-576i-64da9e594d.png",
-    "logos/unused/4-fun-tv.png",
     "logos/unused/4-music.png",
     "logos/unused/48-hours-1080p-d4bac131f1.png",
     "logos/unused/4e-1080p-6782ed5d8b.png",
@@ -32512,7 +32450,6 @@
     "logos/unused/gravitas-movies.png",
     "logos/unused/great-movies.png",
     "logos/unused/great-romance.png",
-    "logos/unused/groove.png",
     "logos/unused/grp-veratv-576p-6a0fe055c4.png",
     "logos/unused/gtv-1080p-f96c25a990.png",
     "logos/unused/gyandarshan.png",
@@ -32533,7 +32470,6 @@
     "logos/unused/india-tv-y-e146360ad1.png",
     "logos/unused/infinita-tv-1080p-0108680fa6.png",
     "logos/unused/interalmeria-tv-1080p-c5646e2fd3.png",
-    "logos/unused/ion-tv-uk.png",
     "logos/unused/islamic-tv.png",
     "logos/unused/islita-tv-1080p-18491ab9fa.png",
     "logos/unused/itage-tv-480p-453d42d446.png",
@@ -32658,7 +32594,6 @@
     "logos/unused/mtv-uutiset-live-7a825e278b.png",
     "logos/unused/mundial.png",
     "logos/unused/music-box-hits-7f2dd7fb76.png",
-    "logos/unused/music-box-polska-ukraine-14d7aa0090.png",
     "logos/unused/music-india-576p-7f8b14fb44.png",
     "logos/unused/music-information-channel-720p-052e9aeeaa.png",
     "logos/unused/mystery-science-theater-3000-1080p-4d2e73e786.png",
@@ -32670,8 +32605,6 @@
     "logos/unused/national-geographic-hd.png",
     "logos/unused/national-geographic-latin-america-1080p-843bd1a225.png",
     "logos/unused/nbc-sports.png",
-    "logos/unused/new-k-movies-1080p-fdc6c325b6.png",
-    "logos/unused/new-k-pop-1080p-02d85a425b.png",
     "logos/unused/nghe-an-tv-1080p-91b7f6d05b.png",
     "logos/unused/nh-bollyflix-1080p-e41aefdc58.png",
     "logos/unused/nh-bollyraga-1080p-b51bb627d6.png",
@@ -32719,7 +32652,6 @@
     "logos/unused/paighan-tv-00a9e59079.png",
     "logos/unused/panamericana-tv-1080p-2219e05e40.png",
     "logos/unused/paramount-movie-channel-d46b22ff12.png",
-    "logos/unused/paramount-network-1080p-d2d6424e61.png",
     "logos/unused/paramount-network-409048c42b.png",
     "logos/unused/paramount-picks-26e6b381c6-converted-747147a15a.png",
     "logos/unused/paramount-picks-26e6b381c6.png",
@@ -32777,7 +32709,6 @@
     "logos/unused/prarthana-tv-720p-73b081419a.png",
     "logos/unused/productiva-tv-720p-097f936a86.png",
     "logos/unused/ptv-sports.png",
-    "logos/unused/ptv.png",
     "logos/unused/public-music-576p-278a70b9ab.png",
     "logos/unused/pula-tv-1080p-5d777ef5e3.png",
     "logos/unused/punta-cana-tv-720p-52b6f74159.png",
@@ -32856,7 +32787,6 @@
     "logos/unused/sony-one-favoris-1080p-83506dda91.png",
     "logos/unused/sony-one-hits-action-1080p-5585801d28.png",
     "logos/unused/sony-one-hits-comedie-1080p-0bb63e2359.png",
-    "logos/unused/sony-pix-1080p-7e6eaf865e.png",
     "logos/unused/sony-sab-1080p-c0e78788c4.png",
     "logos/unused/sony-sports-ten-3-hindi-1080p-8dfd79004b.png",
     "logos/unused/sony-ten-cricket-27f5fdd5.png",
@@ -32876,7 +32806,6 @@
     "logos/unused/star-sports-sl-2-d632658a.png",
     "logos/unused/stara-tv-1080p-5086829d0b.png",
     "logos/unused/starplus-1080p-a57bfc74af.png",
-    "logos/unused/starz-cinema-1080p-84fe436812.png",
     "logos/unused/stingray-classic-rock-1080p-c4a6353b45.png",
     "logos/unused/stingray-classic-rock.png",
     "logos/unused/stingray-djazz.png",
@@ -32908,7 +32837,6 @@
     "logos/unused/telesystem-tv-720p-85dcc0a903.png",
     "logos/unused/the-walking-dead-universe.png",
     "logos/unused/toffee-movies-674d6eeb.png",
-    "logos/unused/toonami-aftermath-movie.png",
     "logos/unused/trace-africa-1080p-a177d91a65.png",
     "logos/unused/trace-ayiti-1080p-62e392142b.png",
     "logos/unused/trace-jama-1080p-290110fe8a.png",
@@ -32989,10 +32917,8 @@
     "logos/unused/yo-mtv-1080p-481061433b.png",
     "logos/unused/yta-tv-720p-3f3f6cf736.png",
     "logos/unused/zapadoslovenska-tv-efb593b5ad.png",
-    "logos/unused/zb-music-7fe42cfc.png",
     "logos/unused/zee-bangla-cinema-ceb39eea.png",
     "logos/unused/zee-bangla-sonar-576p-292f68c192.png",
-    "logos/unused/zee-business-576p-33d1a45d8c.png",
     "logos/unused/zee-cafe-41851b96.png",
     "logos/unused/zee-marathi-720p-812ef035e4.png",
     "logos/unused/zee-talkies.png",
