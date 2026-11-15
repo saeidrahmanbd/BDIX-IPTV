@@ -1,20 +1,20 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-15T02:20:42+00:00**
+Generated: **2026-11-15T02:21:52+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **7a602ff4a6fe777cc812dcedb118b638ab62913c0987dff0a6ac7d674a974d65**
-- International-Playlist.m3u SHA-256: **6aec13f56b479a2f8ab35bcd135b3fc6ee385a547c462689c28a10edc7027042**
+- International-Playlist.m3u SHA-256: **8acb8898c683fa633d4a1a86dfef767a1fb68f0a516ff9055f06d9a2fac6c38d**
 
 ## Summary
 
 - Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1600px): **0**
-- Raster assets over 358400 bytes: **1**
+- Raster assets over 512000 bytes: **0**
 - Raster/SVG assets with short side under 64 px: **154**
 - Exact-byte duplicate asset clusters: **724**
 - Playlist references whose asset stem differs from the normalized channel name: **1523**
@@ -43,7 +43,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
-| famatv-1080p-not-24-7.png | 221×87 | 401832 | no |
+| — | — | — | — |
 
 ## Technical read/repair errors
 
