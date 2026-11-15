@@ -12,6 +12,7 @@ on:
       - scripts/repair_playlist_logos.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/audit_logo_references.py
+      - scripts/plan_duplicate_logo_cleanup.py
       - scripts/logo_source_catalog.py
       - scripts/convert_referenced_logos_to_png.py
       - scripts/logo_embedded_png.py
@@ -19,6 +20,7 @@ on:
       - tests/test_logo_embedded_png_recovery.py
       - tests/test_logo_asset_technical_quality.py
       - tests/test_logo_reference_audit.py
+      - tests/test_duplicate_logo_cleanup_plan.py
       - scripts/discovery_schedule_guard.py
   schedule:
     - cron: '25 23 * * *' # 05:25 Asia/Dhaka (UTC+6), after discovery
@@ -108,11 +110,12 @@ jobs:
         run: python -m pip install --disable-pip-version-check pillow cairosvg
       - name: Run logo conversion and asset-quality regression tests
         run: |
-          python -m py_compile scripts/convert_referenced_logos_to_png.py scripts/repair_logo_asset_technical_quality.py scripts/audit_logo_references.py
+          python -m py_compile scripts/convert_referenced_logos_to_png.py scripts/repair_logo_asset_technical_quality.py scripts/audit_logo_references.py scripts/plan_duplicate_logo_cleanup.py
           python -m unittest discover -s tests -p 'test_logo_format_conversion.py'
           python -m unittest discover -s tests -p 'test_logo_embedded_png_recovery.py'
           python -m unittest discover -s tests -p 'test_logo_asset_technical_quality.py'
           python -m unittest discover -s tests -p 'test_logo_reference_audit.py'
+          python -m unittest discover -s tests -p 'test_duplicate_logo_cleanup_plan.py'
       - name: Capture protected playlist metadata
         shell: bash
         run: |
@@ -134,6 +137,7 @@ jobs:
           python scripts/convert_referenced_logos_to_png.py
           python scripts/repair_logo_asset_technical_quality.py --fix --max-dimension 1600 --max-bytes 358400
           python scripts/audit_logo_references.py --output reports/logo-reference-audit.json
+          python scripts/plan_duplicate_logo_cleanup.py --output reports/duplicate-logo-cleanup-plan.json
           python scripts/generate_logo_authenticity_manifest.py
           python - <<'PY'
           import json
@@ -226,7 +230,7 @@ jobs:
                   raise SystemExit("Logo validation failed: " + name + " " + json.dumps(summaries[name]))
           print(json.dumps(summaries, indent=2))
           PY
-          git add IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json reports/logo-format-conversion.md reports/logo-asset-quality-audit.md reports/logo-reference-audit.json
+          git add IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json reports/logo-format-conversion.md reports/logo-asset-quality-audit.md reports/logo-reference-audit.json reports/duplicate-logo-cleanup-plan.json
           if git diff --cached --quiet; then
             echo "No additional local logo changes."
             exit 0
