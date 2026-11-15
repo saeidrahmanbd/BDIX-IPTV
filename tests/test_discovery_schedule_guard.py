@@ -483,13 +483,15 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         ))
 
     def test_watchdog_recovery_uses_workflow_specific_local_grace_time(self):
-        before = datetime(2026, 11, 7, 5, 29, tzinfo=guard.BD_TZ)
-        after = datetime(2026, 11, 7, 5, 30, tzinfo=guard.BD_TZ)
-        epg_before = datetime(2026, 11, 7, 6, 14, tzinfo=guard.BD_TZ)
-        epg_after = datetime(2026, 11, 7, 6, 15, tzinfo=guard.BD_TZ)
-        self.assertFalse(guard.recovery_is_due("iptv-maintenance.yml", before))
-        self.assertTrue(guard.recovery_is_due("iptv-maintenance.yml", after))
-        self.assertFalse(guard.recovery_is_due("epg-refresh.yml", after))
+        maintenance_before = datetime(2026, 11, 7, 6, 9, tzinfo=guard.BD_TZ)
+        maintenance_after = datetime(2026, 11, 7, 6, 10, tzinfo=guard.BD_TZ)
+        epg_before = datetime(2026, 11, 7, 6, 24, tzinfo=guard.BD_TZ)
+        epg_after = datetime(2026, 11, 7, 6, 25, tzinfo=guard.BD_TZ)
+        self.assertFalse(guard.recovery_is_due("iptv-maintenance.yml", maintenance_before))
+        self.assertTrue(guard.recovery_is_due("iptv-maintenance.yml", maintenance_after))
+        self.assertFalse(guard.recovery_is_due("new-channel-discovery.yml", datetime(2026, 11, 7, 5, 19, tzinfo=guard.BD_TZ)))
+        self.assertTrue(guard.recovery_is_due("new-channel-discovery.yml", datetime(2026, 11, 7, 5, 20, tzinfo=guard.BD_TZ)))
+        self.assertFalse(guard.recovery_is_due("epg-refresh.yml", maintenance_after))
         self.assertFalse(guard.recovery_is_due("epg-refresh.yml", epg_before))
         self.assertTrue(guard.recovery_is_due("epg-refresh.yml", epg_after))
 
