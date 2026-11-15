@@ -20,7 +20,7 @@ on:
       - tests/test_logo_embedded_png_recovery.py
       - scripts/discovery_schedule_guard.py
   schedule:
-    - cron: '35 23 * * *' # 05:35 Asia/Dhaka (UTC+6), after playlist discovery
+    - cron: '25 23 * * *' # 05:25 Asia/Dhaka (UTC+6), after discovery
   workflow_dispatch:
 
 permissions:
