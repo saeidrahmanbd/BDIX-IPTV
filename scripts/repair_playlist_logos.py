@@ -107,7 +107,7 @@ EXTRA_DIRECT_HINTS = {
     },
     # Owner-requested correction: exact historic logo shown in RisingBD's unveiling report.
     "Channel 52": {
-        "url": "https://cdn.risingbd.com/media/imgAll/2013December/4420131228144155.jpg",
+        "url": "https://wsrv.nl/?url=cdn.risingbd.com%2Fmedia%2FimgAll%2F2013December%2F4420131228144155.jpg",
         "format": "JPEG",
         "page": "https://www.risingbd.com/চ্যানেল-৫২-এর-লোগো-উন্মোচন/30677",
         "license": "Exact Channel 52 logo image published with RisingBD\u2019s 28 December 2013 report on the broadcaster\u2019s logo unveiling; source attribution only, no separate copyright licence asserted.",
