@@ -6028,5 +6028,10 @@
     "status": "third_party_verified",
     "source_url": "https://github.com/abusaeeidx/Tv-Channel-Logo/blob/main/countries/israel/5sport-il.png",
     "notes": "Local PNG copied from a matching channel asset in the public abusaeeidx/Tv-Channel-Logo repository. Channel/country identity checked against the playlist stream context; broadcaster trademarks remain with their owners."
+  },
+  "IPTV-Playlist.m3u|custom.sport2ukraine|Sport 2 (Ukraine)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport-2-ukraine.png": {
+    "status": "third_party_verified",
+    "source_url": "https://github.com/Karnei4/Karnei4.github.io/blob/master/convert/index_files/sport2ua.png",
+    "notes": "Local PNG from a Ukrainian Sport 2 logo asset. Channel identity corroborated by the matching Sport 2 UA entry and stream URL in a separate Ukrainian playlist; original channel identity also documented by Wikimedia Commons."
   }
 }
