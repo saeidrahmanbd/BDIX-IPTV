@@ -7,57 +7,24 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-16 — `IPTV-Playlist.m3u`
 
-- New channel identities: **48**
-- Channel identities removed: **62**
-- Stream URLs added / removed: **81 / 67**
+- New channel identities: **0**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **2**
-- Replaced channel identities: **1**
+- Logo reference changes: **10**
+- Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- BHI Channel
-- Enterr10 Bangla
-- DD Bharati
-- 30A Music
-- AMC Presents
-- BBC World
-- Blues TV
-- Cinemax MoreMax
-- Circle
-- Cowboy Movie Channel
-
-Removed channel identities (up to 10):
-- Bang Bang TV
-- Fashion&LifeStyle
-- FashionBox
-- FashionTV
-- FashionTV Paris L'Original
-- FashionTV Secrets
-- Global Fashion Channel
-- TV BRICS English
-- Popular Science
-- BEK TV Sports West
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-16 — `International-Playlist.m3u`
 
-- New channel identities: **3**
-- Channel identities removed: **2**
-- Stream URLs added / removed: **8 / 2**
+- New channel identities: **0**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **5**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- Jazz TV [ ]
-- AXN Movies (Spain)
-- Star Action
-
-Removed channel identities (up to 10):
-- Farra Play
-- La Top 102.9
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
