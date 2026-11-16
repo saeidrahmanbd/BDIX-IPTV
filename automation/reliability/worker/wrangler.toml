@@ -1,0 +1,15 @@
+name = "bdix-iptv-reliability-shadow"
+main = "src/index.js"
+compatibility_date = "2026-11-16"
+workers_dev = true
+
+[triggers]
+crons = ["* * * * *"]
+
+[vars]
+MODE = "shadow"
+
+[[d1_databases]]
+binding = "RELIABILITY_DB"
+database_name = "bdix-iptv-reliability-shadow"
+database_id = "REPLACE_WITH_YOUR_CLOUDFLARE_D1_DATABASE_ID"
