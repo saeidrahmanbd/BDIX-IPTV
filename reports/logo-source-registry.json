@@ -6038,5 +6038,30 @@
     "status": "third_party_verified",
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/international/bbc-world-news-int.png",
     "notes": "Local PNG copied from the international BBC World News logo asset in the public TV Logos catalogue; replaces the mismatched BBC News logo."
+  },
+  "IPTV-Playlist.m3u|WOWKidzTamil.in|WOW Kidz Tamil|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz-tamil-868776711e.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://yt3.ggpht.com/a/AATXAJytH39NO3s4QEpDhzrKSGGEg0tf1c6c29ZzsQ%3Ds900-c-k-c0xffffffff-no-rj-mo",
+    "notes": "Exact external logo asset Official WowKidz channel avatar from the broadcaster’s YouTube channel; shared brand wordmark without the incorrect Hindi-language suffix, used for the Tamil feed. Source attribution only; no separate copyright licence asserted. Source page: https://www.youtube.com/channel/UCN8S4CqMRy6tVKVXvs7Bzeg"
+  },
+  "IPTV-Playlist.m3u|custom.maxsport1|Max Sport 1|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/max-sport-1-6af9f2635c.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/0ohnpql.png",
+    "notes": "IPTV-org exact unique channel name: MaxSport1.bg IPTV-org public logo dataset Source page: https://i.imgur.com/0ohnpql.png"
+  },
+  "IPTV-Playlist.m3u|custom.maxsport2|Max Sport 2|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/max-sport-2-c89d29749e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/33m1wPN.png",
+    "notes": "IPTV-org exact unique channel name: MaxSport2.bg IPTV-org public logo dataset Source page: https://i.imgur.com/33m1wPN.png"
+  },
+  "IPTV-Playlist.m3u|custom.maxsport3|Max Sport 3|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/max-sport-3-2ea6ca4d8c.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/eGiGgZ2.png",
+    "notes": "IPTV-org exact unique channel name: MaxSport3.bg IPTV-org public logo dataset Source page: https://i.imgur.com/eGiGgZ2.png"
+  },
+  "IPTV-Playlist.m3u|custom.maxsport4|Max Sport 4|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/max-sport-4-0ee3a4fef1.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/7IxXX6f.png",
+    "notes": "IPTV-org exact unique channel name: MaxSport4.bg IPTV-org public logo dataset Source page: https://i.imgur.com/7IxXX6f.png"
   }
 }

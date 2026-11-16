@@ -1,10 +1,10 @@
 # Logo Format Conversion
 
-Generated: **2026-11-15T02:20:11.872692+00:00**
+Generated: **2026-11-16T09:22:09.008312+00:00**
 
 - Playlists checked: **IPTV-Playlist.m3u, International-Playlist.m3u**
 - Unique non-PNG assets converted: **1**
-- Playlist logo references updated: **1**
+- Playlist logo references updated: **2**
 - New PNG assets created: **1**
 - Supported non-PNG image assets found in logos/: **1**
 - Non-PNG source files removed after successful validation: **1**

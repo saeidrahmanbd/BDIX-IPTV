@@ -1632,7 +1632,7 @@ https://d3i6upqaqzosi1.cloudfront.net/tg/jr_us/tg_jr_us.m3u8
 #EXTINF:-1 tvg-id="WOWKidz.in@Hindi" tvg-name="WOW Kidz Hindi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png" tvg-chno="564" channel-id="WOWKidz.in@Hindi" tvg-country="IN" tvg-language="hin" group-title="Kids",WOW Kidz Hindi
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 
-#EXTINF:-1 tvg-id="WOWKidzTamil.in" tvg-name="WOW Kidz Tamil" tvg-chno="565" channel-id="WOWKidzTamil.in" tvg-country="IN" tvg-language="tam" group-title="Kids",WOW Kidz Tamil
+#EXTINF:-1 tvg-id="WOWKidzTamil.in" tvg-name="WOW Kidz Tamil" tvg-chno="565" channel-id="WOWKidzTamil.in" tvg-country="IN" tvg-language="tam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz-tamil-868776711e.png" group-title="Kids",WOW Kidz Tamil
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 
 #EXTINF:-1 tvg-id="WOWKidz.in@Telugu" tvg-name="WOW Kidz Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz-telugu.png" tvg-chno="566" channel-id="WOWKidz.in@Telugu" tvg-country="IN" tvg-language="tel" group-title="Kids",WOW Kidz Telugu
@@ -1743,7 +1743,7 @@ http://27.124.71.27/beIN_Sports_1/index.m3u8
 #EXTINF:-1 tvg-id="custom.beinsports2" tvg-name="beIN SPORTS 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-2.png" channel-id="custom.beinsports2" tvg-chno="679" tvg-country="QA" tvg-language="ara" group-title="Sports",beIN SPORTS 2
 http://27.124.71.27/beIN_Sports_2/index.m3u8
 
-#EXTINF:-1 tvg-id="custom.beinsports3" tvg-name="beIN SPORTS 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-3.png" channel-id="custom.beinsports3" tvg-chno="683" tvg-country="QA" tvg-language="ara" group-title="Sports",beIN SPORTS 3
+#EXTINF:-1 tvg-id="custom.beinsports3" tvg-name="beIN SPORTS 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-3-517e8a74a2.png" channel-id="custom.beinsports3" tvg-chno="683" tvg-country="QA" tvg-language="ara" group-title="Sports",beIN SPORTS 3
 http://27.124.71.27/beIN_Sports_3/index.m3u8
 
 #EXTINF:-1 tvg-id="beINSPORTSXTRA.us" tvg-name="beIN SPORTS XTRA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-xtra.png" tvg-chno="389" channel-id="beINSPORTSXTRA.us" tvg-country="US" tvg-language="eng" group-title="Sports",beIN SPORTS XTRA
@@ -1848,16 +1848,16 @@ http://88.212.7.14/live/uatlmvixrr/index.m3u8
 #EXTINF:-1 tvg-id="major.league.cricket.com" tvg-name="Major League Cricket" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/major-league-cricket.png" tvg-chno="667" channel-id="major.league.cricket.com" tvg-country="US" tvg-language="und" group-title="Sports",Major League Cricket
 https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=uiXES2ePt7xTpQnbJxn7Dg&e=2074684474&scheme=https|user-agent=Mozilla
 
-#EXTINF:-1 tvg-id="custom.maxsport1" tvg-name="Max Sport 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-max-sport-1.png" channel-id="custom.maxsport1" tvg-chno="688" tvg-country="BG" tvg-language="bul" group-title="Sports",Max Sport 1
+#EXTINF:-1 tvg-id="custom.maxsport1" tvg-name="Max Sport 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/max-sport-1-6af9f2635c.png" channel-id="custom.maxsport1" tvg-chno="688" tvg-country="BG" tvg-language="bul" group-title="Sports",Max Sport 1
 http://213.91.179.28:8000/play/a0as
 
-#EXTINF:-1 tvg-id="custom.maxsport2" tvg-name="Max Sport 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-max-sport-2.png" channel-id="custom.maxsport2" tvg-chno="689" tvg-country="BG" tvg-language="bul" group-title="Sports",Max Sport 2
+#EXTINF:-1 tvg-id="custom.maxsport2" tvg-name="Max Sport 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/max-sport-2-c89d29749e.png" channel-id="custom.maxsport2" tvg-chno="689" tvg-country="BG" tvg-language="bul" group-title="Sports",Max Sport 2
 http://213.91.179.28:8000/play/a0at
 
-#EXTINF:-1 tvg-id="custom.maxsport3" tvg-name="Max Sport 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-max-sport-3.png" channel-id="custom.maxsport3" tvg-chno="690" tvg-country="BG" tvg-language="bul" group-title="Sports",Max Sport 3
+#EXTINF:-1 tvg-id="custom.maxsport3" tvg-name="Max Sport 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/max-sport-3-2ea6ca4d8c.png" channel-id="custom.maxsport3" tvg-chno="690" tvg-country="BG" tvg-language="bul" group-title="Sports",Max Sport 3
 http://213.91.179.28:8000/play/a0ar
 
-#EXTINF:-1 tvg-id="custom.maxsport4" tvg-name="Max Sport 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-max-sport-4.png" channel-id="custom.maxsport4" tvg-chno="691" tvg-country="BG" tvg-language="bul" group-title="Sports",Max Sport 4
+#EXTINF:-1 tvg-id="custom.maxsport4" tvg-name="Max Sport 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/max-sport-4-0ee3a4fef1.png" channel-id="custom.maxsport4" tvg-chno="691" tvg-country="BG" tvg-language="bul" group-title="Sports",Max Sport 4
 http://213.91.179.28:8000/play/a05n
 
 #EXTINF:-1 tvg-id="MLB.us@SD" tvg-name="MLB" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mlb-strike-zone-4930a654ce.png" tvg-chno="623" channel-id="MLB.us@SD" tvg-country="US" tvg-language="und" group-title="Sports",MLB

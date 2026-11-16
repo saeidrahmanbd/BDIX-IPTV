@@ -36,7 +36,7 @@ https://btv.hridoytv-channel.workers.dev/news.m3u8
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="Channel24.bd" channel-id="Channel24.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Channel 24",Channel 24
 https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8
-#EXTINF:-1 tvg-id="Channel52.bd" channel-id="Channel52.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Channel 52",Channel 52
+#EXTINF:-1 tvg-id="Channel52.bd" channel-id="Channel52.bd" tvg-language="ben" tvg-country="BD" group-title="Bangladesh" tvg-name="Channel 52",Channel 52
 http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="ChannelI.bd" channel-id="ChannelI.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Channel I",Channel I
 https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8
@@ -152,7 +152,7 @@ https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="JhankarTV.ca" channel-id="JhankarTV.ca" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jhankar-tv.png" tvg-country="CA" group-title="Indian Bangla" tvg-name="Jhankar TV",Jhankar TV
 https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8
-#EXTINF:-1 tvg-id="JTVBangla.in@SD" channel-id="JTVBangla.in@SD" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jtv-bangla.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="JTV Bangla",JTV Bangla
+#EXTINF:-1 tvg-id="JTVBangla.in@SD" channel-id="JTVBangla.in@SD" tvg-language="ben" tvg-country="IN" group-title="Indian Bangla" tvg-name="JTV Bangla",JTV Bangla
 http://103.67.97.45:81/0.ts
 #EXTINF:-1 tvg-id="JTVClassic.in" channel-id="JTVClassic.in" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jtv-classic.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="JTV Classic",JTV Classic
 http://103.67.97.46/0.ts
@@ -2834,7 +2834,7 @@ https://cc-szrmqvu8zkg16.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 https://cc-4bhi5osabejc9.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4bhi5osabejc9/junglebook.m3u8
 #EXTINF:-1 tvg-id="WOWKidz.in@Hindi" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png" tvg-country="IN" group-title="Kids" tvg-name="WOW Kidz",WOW Kidz
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
-#EXTINF:-1 tvg-id="WOWKidzTamil.in" channel-id="WOWKidzTamil.in" tvg-language="tam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz-tamil.png" tvg-country="IN" group-title="Kids" tvg-name="WOW Kidz Tamil",WOW Kidz Tamil
+#EXTINF:-1 tvg-id="WOWKidzTamil.in" channel-id="WOWKidzTamil.in" tvg-language="tam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz-tamil-868776711e.png" tvg-country="IN" group-title="Kids" tvg-name="WOW Kidz Tamil",WOW Kidz Tamil
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 #EXTINF:-1 tvg-id="WOWKidz.in@Telugu" channel-id="WOWKidz.in@Telugu" tvg-language="tel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz-telugu.png" tvg-country="IN" group-title="Kids" tvg-name="WOW Kidz Telugu",WOW Kidz Telugu
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
@@ -3618,7 +3618,7 @@ https://tvsen3.aynaott.com/X9E6bxg3/index.m3u8
 http://103.135.253.32:8080/B4U-MOVIES/index.m3u8
 #EXTINF:-1 tvg-id="custom.babes-tv-russia" channel-id="custom.babes-tv-russia" tvg-language="und" group-title="Review" tvg-name="Babes TV Russia",Babes TV Russia
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315857.ts
-#EXTINF:-1 tvg-id="custom.24-7-xxx-bangbus" channel-id="custom.24-7-xxx-bangbus" tvg-language="und" group-title="Review" tvg-name="Bangbus",Bangbus
+#EXTINF:-1 tvg-id="custom.24-7-xxx-bangbus" channel-id="custom.24-7-xxx-bangbus" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangbus-d01c0b1b08.png" group-title="Review" tvg-name="Bangbus",Bangbus
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791478.ts
 #EXTINF:-1 tvg-id="BantulTheGreat.us" channel-id="BantulTheGreat.us" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bantul-the-great-35f9777f.png" tvg-country="US" group-title="Review" tvg-name="Bantul the Great",Bantul the Great
 https://live20.bozztv.com/giatvplayout7/giatv-209869/tracks-v1a1/mono.ts.m3u8
@@ -4592,7 +4592,7 @@ https://hls.tvabierta.net/hls/036.m3u8
 https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
 #EXTINF:-1 tvg-id="custom.cgtn-docment" channel-id="custom.cgtn-docment" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cgtn-documentary.png" tvg-country="CN" group-title="Backup" tvg-name="CGTN Documentary",CGTN Documentary
 https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8
-#EXTINF:-1 tvg-id="Channel52.bd" channel-id="Channel52.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" tvg-country="BD" group-title="Backup" tvg-name="Channel 52",Channel 52
+#EXTINF:-1 tvg-id="Channel52.bd" channel-id="Channel52.bd" tvg-language="ben" tvg-country="BD" group-title="Backup" tvg-name="Channel 52",Channel 52
 https://tvsen6.aynaott.com/channel52/index.m3u8
 #EXTINF:-1 tvg-id="ChannelI.bd" channel-id="ChannelI.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-country="BD" group-title="Backup" tvg-name="Channel I",Channel I
 https://iptv-proxy.ahmed-bd-org.workers.dev/channel-i/index.m3u8

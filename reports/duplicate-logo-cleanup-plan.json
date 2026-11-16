@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
-  "exact_duplicate_groups": 679,
-  "exact_duplicate_files": 1010,
+  "exact_duplicate_groups": 683,
+  "exact_duplicate_files": 1014,
   "low_risk_review_candidates": [
     {
       "candidate": "logos/unused/now-70s.png",
@@ -1363,6 +1363,7 @@
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart",
+        "runtime basename/path mention in IPTV-Playlist.m3u",
         "runtime basename/path mention in scripts/repair_playlist_logos.py"
       ]
     },
@@ -2015,6 +2016,7 @@
         "logos/unused/9.png"
       ],
       "reasons": [
+        "runtime basename/path mention in scripts/logo_asset_naming.py",
         "runtime basename/path mention in scripts/logo_source_catalog.py",
         "runtime basename/path mention in scripts/migrate_external_logos_fixed.py",
         "runtime basename/path mention in scripts/normalize_metadata.py",
