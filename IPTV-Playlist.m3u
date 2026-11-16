@@ -44,7 +44,7 @@ http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92
 #EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" tvg-chno="15" channel-id="Channel24.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 24
 https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8
 
-#EXTINF:-1 tvg-id="Channel52.bd" tvg-name="Channel 52" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.jpg" tvg-chno="16" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 52
+#EXTINF:-1 tvg-id="Channel52.bd" tvg-name="Channel 52" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" tvg-chno="16" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 52
 http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" tvg-chno="17" channel-id="Channel9.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 9
@@ -3919,6 +3919,7 @@ http://103.135.253.32:8080/ZEE-TV/index.m3u8
 
 #EXTINF:-1 tvg-id="ZeeTV.in@SD" tvg-name="Zee TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/repaired-zee-tv-b659c984ad.png" channel-id="ZeeTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",Zee TV
 https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8
+
 
 
 
