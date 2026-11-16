@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5319,
-  "all_explicitly_referenced_logo_files": 2656,
-  "runtime_referenced_logo_files": 2655,
-  "playlist_referenced_logo_files": 2415,
-  "apparently_unreferenced_by_any_text_file": 2663,
-  "apparently_unreferenced_by_runtime_sources": 2664,
+  "logo_image_files": 5229,
+  "all_explicitly_referenced_logo_files": 2663,
+  "runtime_referenced_logo_files": 2662,
+  "playlist_referenced_logo_files": 2422,
+  "apparently_unreferenced_by_any_text_file": 2566,
+  "apparently_unreferenced_by_runtime_sources": 2567,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -1428,17 +1428,9 @@
     "logos/zee-cinema-apac-efd7650d72.svg",
     "logos/zenlife-by-stingray-7d01288f39.svg"
   ],
-  "exact_duplicate_groups": 716,
-  "exact_duplicate_files": 1056,
+  "exact_duplicate_groups": 679,
+  "exact_duplicate_files": 1010,
   "exact_duplicates": [
-    {
-      "sha256": "007e8c573fb6e89887e2eb8acce35732fc8d9dcdeb966adab0fca4f593a1dacf",
-      "files": [
-        "logos/mixer-strongman-champions-league.png",
-        "logos/strongman-champions-league-ebb0bbbbb3.png",
-        "logos/strongman-champions-league.png"
-      ]
-    },
     {
       "sha256": "0086e2b83c7cbc4157e4ac70f938996c35824331c9424e32dbaad4e4ccb80b24",
       "files": [
@@ -1492,31 +1484,10 @@
       ]
     },
     {
-      "sha256": "030597dedbbc13543d43173f3fd1617cc756b25d93c5b11b6590e58f94ac0519",
-      "files": [
-        "logos/p2m-tv.png",
-        "logos/unused/p2m-tv.png"
-      ]
-    },
-    {
-      "sha256": "034dfb11a20ee53f2e813bdf00acbbd822bdf4c14ddad27cbee46cf0b75a60c1",
-      "files": [
-        "logos/nickelodeon-hungary-034dfb11a2.png",
-        "logos/unused/nickelodeon-312f4b9648.png"
-      ]
-    },
-    {
       "sha256": "03d30132732e05f1650707a278d3b7841401c93da8882fa0f31c826ec9928573",
       "files": [
         "logos/rds-social-tv.png",
         "logos/unused/rds-social-tv-1080p-58e6544dfa.png"
-      ]
-    },
-    {
-      "sha256": "044e163d2d833455b092d3679fcc1ff01039d505eb2267953175509432df12cd",
-      "files": [
-        "logos/btv-news-33c61f1708.png",
-        "logos/nvisionbd-verified-btv-news-33c61f1708.png"
       ]
     },
     {
@@ -1557,6 +1528,13 @@
       ]
     },
     {
+      "sha256": "05eb2a1869f45821b4eaa7acfe0cd41615645964c39391bc7e6253fdb643bbfa",
+      "files": [
+        "logos/sun-tv-hd-1080p.png",
+        "logos/sun-tv.png"
+      ]
+    },
+    {
       "sha256": "0625d4e893b3f063637ece49e300c1a97b29a52a6f08ee52fd131281c9c1af15",
       "files": [
         "logos/metro-tv-india-0625d4e893.png",
@@ -1579,25 +1557,10 @@
       ]
     },
     {
-      "sha256": "075ea6939e92db5b950d7881331947ebb6591c705ea7c47d7d29984d8cc25e89",
-      "files": [
-        "logos/dance-tv.png",
-        "logos/unused/dance-tv.png"
-      ]
-    },
-    {
       "sha256": "079cde619fbbf1eccdb1eba2a34345adbaa955cb828cbd6827b469be77da0987",
       "files": [
         "logos/nvisionbd-verified-superhitz-079cde619f.png",
         "logos/superhitz-079cde619f.png"
-      ]
-    },
-    {
-      "sha256": "07a2d5caddd43c41a43b6960220ea46f9494a3bc399721c0e630a3c0558b19bf",
-      "files": [
-        "logos/colors-bangla-backup-1.png",
-        "logos/colors-bangla-backup-2.png",
-        "logos/colors-bangla-backup-3.png"
       ]
     },
     {
@@ -1606,13 +1569,6 @@
         "logos/cine-sony-720p-c27cf4bb09.png",
         "logos/international/cine-sony-720p.png",
         "logos/unused/cine-sony-720p-c27cf4bb09.png"
-      ]
-    },
-    {
-      "sha256": "08a20d053efb54f10e5c3230e4bd40b67d7a5b06a423b382f8940952a36ad3c3",
-      "files": [
-        "logos/grand-cinema.png",
-        "logos/unused/grand-cinema.png"
       ]
     },
     {
@@ -1661,6 +1617,16 @@
       ]
     },
     {
+      "sha256": "0afd0ff91869644b04b8771da3f93808d334904424039102e2281373cc1e9308",
+      "files": [
+        "logos/and-tv.png",
+        "logos/nvisionbd-official-and-tv.png",
+        "logos/tv-international-1080p.png",
+        "logos/tv.png",
+        "logos/unused/tv-1080p-0e5df2c3c4.png"
+      ]
+    },
+    {
       "sha256": "0b6e1be6a1932f909cbfc39e5afaea11e0d0095d739ac1dc0390b00be8d33135",
       "files": [
         "logos/maincast-cybersport-0b6e1be6a1.png",
@@ -1668,10 +1634,10 @@
       ]
     },
     {
-      "sha256": "0b7bf205300eec4ae2313ff4ca624e8dcf571d7f97b88ba714216dcd6ac1d88d",
+      "sha256": "0ba4cfc6c6e4f1deba29a66586456c035011e7e7c51bc0956ab312d81525da66",
       "files": [
-        "logos/1hd-music-television-1080p-f2f072fd85.png",
-        "logos/unused/1hd-music-television-1080p-f2f072fd85.png"
+        "logos/unused/xite-rock-x-metal-1080p-08222c2607.png",
+        "logos/xite-rock-x-metal.png"
       ]
     },
     {
@@ -1687,13 +1653,6 @@
       "files": [
         "logos/m4-sport-0c44a899ae.png",
         "logos/nvisionbd-official-m4-sport.png"
-      ]
-    },
-    {
-      "sha256": "0c912f232e6463e6d6b1f82e13b467fb7a3d90dc1259b13ea039548174b37eb0",
-      "files": [
-        "logos/international/pluto-tv-drama-movies.png",
-        "logos/unused/pluto-tv-drama-movies-7a242cb4f6.png"
       ]
     },
     {
@@ -1715,13 +1674,6 @@
       "files": [
         "logos/international/filmrise-forensic-files-720p-geo-blocked.png",
         "logos/unused/filmrise-forensic-files-720p-56ce9d346d.png"
-      ]
-    },
-    {
-      "sha256": "0e3fa9c4da24efeabf9925a1e35e54bf39205a0f2b1a4f8fbb798cb34de678c7",
-      "files": [
-        "logos/kayhan-tv-720p-470680d85f.png",
-        "logos/unused/kayhan-tv-720p-470680d85f.png"
       ]
     },
     {
@@ -1768,6 +1720,13 @@
       ]
     },
     {
+      "sha256": "0f47f2d012917841995d454e6576bdd12331b54612da6d901b7f797d34760562",
+      "files": [
+        "logos/bejoy-kids-823648ad26.png",
+        "logos/nvisionbd-official-be-joy-kids.png"
+      ]
+    },
+    {
       "sha256": "0f56cdce4d61910209c12088e6f5ae84e1736b0b131978856722571c088fe338",
       "files": [
         "logos/stingray-karaoke.png",
@@ -1790,24 +1749,10 @@
       ]
     },
     {
-      "sha256": "119183a8065d9fee81c3bb1395dbb117b9a5ffefe8121b80a4fcf27f0593b134",
-      "files": [
-        "logos/4-music.png",
-        "logos/unused/4-music.png"
-      ]
-    },
-    {
       "sha256": "1191fc1a619e620b41d28e36ebf860240eabc785f4e6bc04c62cb061dbfcf3ad",
       "files": [
         "logos/dorama.png",
         "logos/international/dorama.png"
-      ]
-    },
-    {
-      "sha256": "11b47dd181c3d1de757dcf236457408edc4564af04a403cc26276149275b5d6e",
-      "files": [
-        "logos/tvs-drive-in-movie-576p-d0b4166233.png",
-        "logos/unused/tvs-drive-in-movie-576p-d0b4166233.png"
       ]
     },
     {
@@ -1832,11 +1777,24 @@
       ]
     },
     {
+      "sha256": "1250cf70e2392d07a3318cf25665aeb8051fde92113c41ea8da06c4e8d2533d8",
+      "files": [
+        "logos/dd-bharati.png",
+        "logos/unused/dd-bharati-576p-0dd8dfb333.png"
+      ]
+    },
+    {
       "sha256": "12927783883b8122cda7eb7a2348563bd283242ac6d401fbceb15f2cd898cd54",
       "files": [
         "logos/discover-pakistan.png",
-        "logos/discovery-pakistan-b91039be.png",
-        "logos/unused/discover-pakistan.png"
+        "logos/discovery-pakistan-b91039be.png"
+      ]
+    },
+    {
+      "sha256": "147cd3f82d6befa5b7d761f5d9c36ef08ccafe408750ebacb30c4c3833909cd2",
+      "files": [
+        "logos/enterr-10-bangla-720p-647a1940bb.png",
+        "logos/enterr10-bangla.png"
       ]
     },
     {
@@ -1852,13 +1810,6 @@
         "logos/international/pluto-tv-john-wayne-dk.png",
         "logos/international/pluto-tv-john-wayne-no.png",
         "logos/international/pluto-tv-john-wayne.png"
-      ]
-    },
-    {
-      "sha256": "16484e9d6f18c8ea5ac638e7e6307c0c287cb0c010faa51b60f2ef7aebd01085",
-      "files": [
-        "logos/stingray-today-s-k-pop-1080p-ca046c288b.png",
-        "logos/unused/stingray-today-s-k-pop-1080p-ca046c288b.png"
       ]
     },
     {
@@ -1890,18 +1841,6 @@
       ]
     },
     {
-      "sha256": "16f2add04d8f9de5fd9a751aaf5c293f304916d883ed85bf57c8d1093e204b15",
-      "files": [
-        "logos/baraza-tv-1080p.png",
-        "logos/baraza-tv-deep-house-720p.png",
-        "logos/baraza-tv-relaxing.png",
-        "logos/international/baraza-tv-1080p.png",
-        "logos/international/baraza-tv-deep-house-720p.png",
-        "logos/nvisionbd-official-baraza-tv.png",
-        "logos/unused/baraza-tv-relaxing-1080p-c1e9954245.png"
-      ]
-    },
-    {
       "sha256": "178dc363d40f6148a3a4f7d5e499b5774b6482729c6e53755015bf6897447b5f",
       "files": [
         "logos/international/metropolitana-del-cuzco.png",
@@ -1923,6 +1862,13 @@
       "files": [
         "logos/international/paramount-movie-channel.png",
         "logos/unused/paramount-movie-channel-d46b22ff12.png"
+      ]
+    },
+    {
+      "sha256": "18198128f3f043e957fe9d68e304df91ac7031fe21a062dab4d0077d49cf6ebb",
+      "files": [
+        "logos/international/pluto-tv-retro-action-movies.png",
+        "logos/unused/pluto-tv-retro-action-movies-2c93a6f50d.png"
       ]
     },
     {
@@ -1969,6 +1915,13 @@
       ]
     },
     {
+      "sha256": "1a3e79285f8eec17e064d92941663395947e12f9deb5ab0f6482f163e4f8822e",
+      "files": [
+        "logos/unused/filmrise-classic-tv-720p-0e9327c5d8-converted-d58c70a16e.png",
+        "logos/unused/filmrise-classic-tv-720p-0e9327c5d8.png"
+      ]
+    },
+    {
       "sha256": "1a4fc59fb640e320382f8b4b4a4bf6e2568a902e7904ba1c2a01765d4dd0a9a5",
       "files": [
         "logos/nvisionbd-verified-sun-gemini-1a4fc59fb6.png",
@@ -1981,13 +1934,6 @@
         "logos/international/mtv-spankin-new-1080p.png",
         "logos/international/mtv-spankin-new-ca-1080p.png",
         "logos/unused/mtv-spankin-new-1080p-f62e001de6.png"
-      ]
-    },
-    {
-      "sha256": "1b434ff57e0f74068fed0759b0f6c2a6e5f2805eb554c03ac2bf175b4cf0de2f",
-      "files": [
-        "logos/fight-network.png",
-        "logos/unused/fight-network.png"
       ]
     },
     {
@@ -2035,39 +1981,10 @@
       ]
     },
     {
-      "sha256": "1cdc60a78bd696a29d1c1277725b90bc3a93453320b0564b6ada3b406e9d99a5",
-      "files": [
-        "logos/b4u-kadak.png",
-        "logos/unused/b4u-kadak-576p-f49a2a6e14.png"
-      ]
-    },
-    {
-      "sha256": "1cff0a9e580252d8d4e0f02795089a37792c81b4e4caa27aa0b7e77142984171",
-      "files": [
-        "logos/music-box-hits.png",
-        "logos/unused/music-box-hits-7f2dd7fb76.png"
-      ]
-    },
-    {
       "sha256": "1e007c3f3bc121e34efc21821ecb92c813678f7af2419893eda3c0b776de3a05",
       "files": [
         "logos/international/mcn6-music-channel-1080p-not-24-7.png",
-        "logos/mcn6-music-channel-1080p-b16c4717c3.png",
-        "logos/unused/mcn6-music-channel-1080p-b16c4717c3.png"
-      ]
-    },
-    {
-      "sha256": "1e5ff6bdfdfb363fe8d07d6c79712a2278e3cffb2b9e943ee4a38313f3e30131",
-      "files": [
-        "logos/movie-music-by-stingray-1080p-cf132e65b8.png",
-        "logos/unused/movie-music-by-stingray-1080p-cf132e65b8.png"
-      ]
-    },
-    {
-      "sha256": "1eca4c2ac7a83dfda258a2420c77ac21523cd569dc602cb7a56934735edf4b08",
-      "files": [
-        "logos/history-latin-america-1080p-e7eb0f29d9.png",
-        "logos/unused/history-latin-america-1080p-e7eb0f29d9.png"
+        "logos/mcn6-music-channel-1080p-b16c4717c3.png"
       ]
     },
     {
@@ -2075,6 +1992,13 @@
       "files": [
         "logos/claro-sports-1f0c0ac492.png",
         "logos/nvisionbd-official-claro-sports.png"
+      ]
+    },
+    {
+      "sha256": "2095bb5937c5eaea2cc5ac36f4240c098aa8b2a55e105999a65a19be6e93b121",
+      "files": [
+        "logos/etv-cinema-360p-14e6148301.png",
+        "logos/etv-cinema.png"
       ]
     },
     {
@@ -2092,26 +2016,38 @@
       ]
     },
     {
-      "sha256": "22970fa4b067344546dfc640a7a4394b86b28004aa5feb5a2f67489f2e8da044",
-      "files": [
-        "logos/amg-tv-classic.png",
-        "logos/unused/amg-tv-classic.png"
-      ]
-    },
-    {
       "sha256": "23201162331c82411eeedc5507deef4c0fccff5afa92b4d93d2b1ff0067e6697",
       "files": [
         "logos/international/tvs-nostalgia-movies-480p.png",
-        "logos/tvs-nostalgia-movies-480p-1058c2772e.png",
-        "logos/unused/tvs-nostalgia-movies-480p-1058c2772e.png"
+        "logos/tvs-nostalgia-movies-480p-1058c2772e.png"
+      ]
+    },
+    {
+      "sha256": "234902cfd8f216b54810e9d2d90ac88aa4b223aaa71cd0597fa13b500fff89e8",
+      "files": [
+        "logos/nvisionbd-verified-unique-tv-c64872bc2a.png",
+        "logos/unique-tv-c64872bc2a.png"
+      ]
+    },
+    {
+      "sha256": "23beff4300a4b116aa1fac7f34e217e082d65c2085775bb77fd0bb9d7b856ece",
+      "files": [
+        "logos/el-sol-network-tv-1080p.png",
+        "logos/international/el-sol-network-tv-1080p.png"
+      ]
+    },
+    {
+      "sha256": "23f85d97026842d6e9367399694d2d7000ee6a533e31e1cfe6ef0a5623ca77af",
+      "files": [
+        "logos/all-time-movies-576p.png",
+        "logos/all-time-movies.png"
       ]
     },
     {
       "sha256": "247eec093396b2f60213456520655e281df0ca0eaec18e677a6450e083cce945",
       "files": [
         "logos/boom-tv-1080p-fdb4a495cb.png",
-        "logos/international/boom-tv-1080p.png",
-        "logos/unused/boom-tv-1080p-fdb4a495cb.png"
+        "logos/international/boom-tv-1080p.png"
       ]
     },
     {
@@ -2160,10 +2096,24 @@
       ]
     },
     {
+      "sha256": "26e97a90bb0c31b413a52eff9c5683e0de81e419cb26c57c1b1f222d4605f1e6",
+      "files": [
+        "logos/makkal-tv.png",
+        "logos/nvisionbd-verified-makkal-tv-576i-3961d3e4b6.png"
+      ]
+    },
+    {
       "sha256": "26fef2ac19db14928d4647e3696bfe01c1e2b4c881a3c2a1c969597a2edb2d26",
       "files": [
         "logos/nick-bangla-26fef2ac19.png",
         "logos/nvisionbd-verified-nick-bangla-26fef2ac19.png"
+      ]
+    },
+    {
+      "sha256": "2711f304e9533254bf218eb074b74ed5776527f4d26a114b7fa2e220303f3749",
+      "files": [
+        "logos/repaired-star-plus-166000bdde.png",
+        "logos/unused/starplus-1080p-a57bfc74af.png"
       ]
     },
     {
@@ -2196,18 +2146,17 @@
       ]
     },
     {
-      "sha256": "297c53ff0ec0adcc6f7be61c8a4b1deecb0c690042ed4a46a04d6711c124d34b",
+      "sha256": "29c210914efcaa74ab14bdab9aa4a7f128649a3a57255dadb6868c3287252c11",
       "files": [
-        "logos/98-1-pearl-fm-720p.png",
-        "logos/international/98-1-pearl-fm-720p.png",
-        "logos/nvisionbd-official-98-1-pearl-fm.png"
+        "logos/bantul-the-great-35f9777f.png",
+        "logos/unused/bantul-the-great-35f9777f.png"
       ]
     },
     {
-      "sha256": "29a22a043bf4eac461f5f22472bb15dc87b015dd4cece1ef56ca96443f0c8f82",
+      "sha256": "2a39846fdb3ef33047c93bd63b4784bfc43e61e4a442ead3c7f46b5ed5afa0f5",
       "files": [
-        "logos/harbin-movie-channel-41537a954e.png",
-        "logos/unused/harbin-movie-channel-41537a954e.png"
+        "logos/international/pluto-tv-drama-movies.png",
+        "logos/unused/pluto-tv-drama-movies-7a242cb4f6.png"
       ]
     },
     {
@@ -2247,10 +2196,10 @@
       ]
     },
     {
-      "sha256": "2baf9fa05deddb42d08fd773ddbf16bbba591fcc23ddd3ac36e43759d40f9971",
+      "sha256": "2be53a9009fbc1bb609d29c797dd695a03478fedb545da6b7890914657888cfd",
       "files": [
-        "logos/international/mr-bean-animated-es-1080p.png",
-        "logos/international/mr-bean-animated-fr-1080p.png"
+        "logos/rajdhani-tv-backup-1.png",
+        "logos/unused/rajdhani-alt.png"
       ]
     },
     {
@@ -2258,6 +2207,20 @@
       "files": [
         "logos/international/3abn-kids.png",
         "logos/unused/3abn-kids-720p-d71b6bf537.png"
+      ]
+    },
+    {
+      "sha256": "2c26d49772c5ef717bda0f00ffb34c57b691eac04f691552af2a2e9f5ee227cf",
+      "files": [
+        "logos/dangal-2.png",
+        "logos/unused/dangal-2-720p-18d63673a7.png"
+      ]
+    },
+    {
+      "sha256": "2c6b51f2065b1ff477de1fe91fd6967be713cba0f3c6d09176cb6ceef85a249d",
+      "files": [
+        "logos/star-utsav-576p.png",
+        "logos/star-utsav.png"
       ]
     },
     {
@@ -2280,13 +2243,6 @@
       "files": [
         "logos/international/kral-pop-tv-720p.png",
         "logos/unused/kral-pop-tv-720p-bd49bfe47b.png"
-      ]
-    },
-    {
-      "sha256": "2d027b17b35fdad814cc6a836931fd64e9b12cc03408cf922a59441c25ef4b85",
-      "files": [
-        "logos/trace-sport-stars.png",
-        "logos/unused/trace-sport-stars.png"
       ]
     },
     {
@@ -2313,20 +2269,6 @@
       ]
     },
     {
-      "sha256": "2daafea6ce9efbc2adbf4a495355614c911915a5a119db55bcbdb54b48de8df2",
-      "files": [
-        "logos/nvisionbd-verified-unique-tv-c64872bc2a.png",
-        "logos/unique-tv-c64872bc2a.png"
-      ]
-    },
-    {
-      "sha256": "2dd5af502c8917584578612a886d67997be42524f69fca9615463943d8875c4a",
-      "files": [
-        "logos/activa-tv-720p-0492c146e8.png",
-        "logos/unused/activa-tv-720p-0492c146e8.png"
-      ]
-    },
-    {
       "sha256": "2dde8563ed3825a69e4251df138afb306b475fac02eacb103f6b27d8beeb47ea",
       "files": [
         "logos/etv-plus.png",
@@ -2341,17 +2283,26 @@
       ]
     },
     {
+      "sha256": "2e2f62c7986425ad59a44d5420a95b79abad417512e46f177be6325821d17570",
+      "files": [
+        "logos/international/canal-action-europe-360p.png",
+        "logos/international/canal-action-europe-czechia.png",
+        "logos/international/canal-action-europe-magyar.png",
+        "logos/international/canal-action-europe-slovakia-720p.png"
+      ]
+    },
+    {
+      "sha256": "2e4ab54a5d7ca35e235c9b5e404133bab0e0d95a74ec45e0060e0878289e6706",
+      "files": [
+        "logos/hits-movies-e914f07cda.png",
+        "logos/international/hits-movies-576p.png"
+      ]
+    },
+    {
       "sha256": "2f3fea24741b6067671e986abbe5811b270ddc75778dd13772ec085050d7463a",
       "files": [
         "logos/international/rotana-cinema-egypt-1080p-geo-blocked.png",
         "logos/rotana-cinema-egypt-2f3fea2474.png"
-      ]
-    },
-    {
-      "sha256": "3003d8d428f181409e31d52d0d4e75bf0940de1e8aaad327831c7bda68a8df12",
-      "files": [
-        "logos/international/pluto-tv-retro-action-movies.png",
-        "logos/unused/pluto-tv-retro-action-movies-2c93a6f50d.png"
       ]
     },
     {
@@ -2397,20 +2348,6 @@
       ]
     },
     {
-      "sha256": "32f2ce173aa3d467be0b0bbc00ebbfaac41b1bf02dff648462240b8353bda705",
-      "files": [
-        "logos/itage-tv-480p-453d42d446.png",
-        "logos/unused/itage-tv-480p-453d42d446.png"
-      ]
-    },
-    {
-      "sha256": "32ff6a3f0525d1fced6008c5b2f53766abdfe083ef9efd9cf0f459a01b256272",
-      "files": [
-        "logos/trace-urban.png",
-        "logos/unused/trace-urban.png"
-      ]
-    },
-    {
       "sha256": "330bfbd33d023cae5d31aead39325ec0c3325dbdda5239e94d9d021f42d39ab1",
       "files": [
         "logos/international/cine-terror-br.png",
@@ -2448,31 +2385,10 @@
       ]
     },
     {
-      "sha256": "3403dd2a5c3fcecf11b878b2b1d1ec5cb0e78a743ce593b07d2ddfc45db833a1",
-      "files": [
-        "logos/nickelodeon-brazil-7ca6654cc0-converted-2390ea4732.png",
-        "logos/unused/nickelodeon-480p-b7ae374df0-converted-2390ea4732.png"
-      ]
-    },
-    {
       "sha256": "3411631a3172768bf7430d802afa38fd436f00c0e7101b86739f000b1f7fa423",
       "files": [
         "logos/nvisionbd-verified-pankh-3411631a31.png",
         "logos/pankh-3411631a31.png"
-      ]
-    },
-    {
-      "sha256": "34148b71c040f637a170adc837f63a508fbf2a73d2740ad701779f4b8135bb75",
-      "files": [
-        "logos/azahares-radiovisual-multimedia-720p.png",
-        "logos/international/azahares-radiovisual-multimedia-720p.png"
-      ]
-    },
-    {
-      "sha256": "342d81c5bccf8d0506e48aae1cf3395948c74c8013a54b36a6eb20f391af1cc3",
-      "files": [
-        "logos/espnu-720p-da06a20f5d.png",
-        "logos/unused/espnu-720p-da06a20f5d.png"
       ]
     },
     {
@@ -2504,17 +2420,17 @@
       ]
     },
     {
-      "sha256": "34bd300a163aaf302c49ed20afd5402a97a9b3d515c76616cd73a93e531ae3b7",
-      "files": [
-        "logos/shemaroo-josh.png",
-        "logos/unused/shemaroo-josh-360p-28e43c141a.png"
-      ]
-    },
-    {
       "sha256": "34c30f0d87c2001a5f8a0b09ac22bc89d9975407c91947c2ee1bd6257e7b7a25",
       "files": [
         "logos/a2i-music-b2b7a2a426.png",
         "logos/international/a2i-music-720p-not-24-7.png"
+      ]
+    },
+    {
+      "sha256": "358bc98f56bf6d52b8fb2efb6c7db9d84dd3e61c934893c6ac3bec82ebb2b7e1",
+      "files": [
+        "logos/angel-tv-a7e5cfebac.png",
+        "logos/nvisionbd-verified-angel-tv-a7e5cfebac.png"
       ]
     },
     {
@@ -2535,8 +2451,7 @@
       "sha256": "361997010ee859218ac8bfaa6daa6758d4bf59abc4b7b1f8435ba04e24971b03",
       "files": [
         "logos/360tunebox-1080p-c81dfec860.png",
-        "logos/international/360tunebox-1080p.png",
-        "logos/unused/360tunebox-1080p-c81dfec860.png"
+        "logos/international/360tunebox-1080p.png"
       ]
     },
     {
@@ -2605,24 +2520,10 @@
       ]
     },
     {
-      "sha256": "3b344df36798630af7bb32a131fc2d76955733cbe224fd001026937e3565e6b0",
-      "files": [
-        "logos/pop-world-tv-720p-3faede8b6c.png",
-        "logos/unused/pop-world-tv-720p-3faede8b6c.png"
-      ]
-    },
-    {
       "sha256": "3c2ed0cd1574e3ba78c5f0b862cce87ea29f9275f326b3f56c38c9e410576d7e",
       "files": [
         "logos/unused/mtv-ridiculousness-720p-c68daed535.png",
         "logos/unused/mtv-ridiculousness-united-states-ca-c68daed535.png"
-      ]
-    },
-    {
-      "sha256": "3c6c8beee79698cced4d134e895ce1b32671a5ee1871ba6e975dea9b3fc9373f",
-      "files": [
-        "logos/international/mr-bean-animated-es-1080p-converted-3d6f10f486.png",
-        "logos/international/mr-bean-animated-fr-1080p-converted-3d6f10f486.png"
       ]
     },
     {
@@ -2634,10 +2535,11 @@
       ]
     },
     {
-      "sha256": "3ca417adb00c4349e3a53abce3e8849cb367ee7fe80a4bb98ed9b73eef563810",
+      "sha256": "3c9ec7388b2ce41753bf1099c9cee8f02f6fab01a8bd925815eb8b160a7b7956",
       "files": [
-        "logos/b4u-bhojpuri-1080p.png",
-        "logos/b4u-bhojpuri-plus-1080p.png"
+        "logos/moviesphere-1080p-4c7e63bbc6.png",
+        "logos/moviesphere-ca.png",
+        "logos/moviesphere.png"
       ]
     },
     {
@@ -2677,6 +2579,13 @@
       ]
     },
     {
+      "sha256": "3f0cf066ac7d86b9bee8214cc3d4dfce646b6bbfedefe96ad2014cbb8446686a",
+      "files": [
+        "logos/unused/xite-reggae-vibes-1080p-157e5ece5e-converted-3f0cf066ac.png",
+        "logos/xite-reggae-vibes-1080p-157e5ece5e.png"
+      ]
+    },
+    {
       "sha256": "3f1b6facc6cd4031c8dd5660523d8088f3a95b48a1961c170e4a07929a8b7fa9",
       "files": [
         "logos/kcl-tv-720p.png",
@@ -2698,31 +2607,24 @@
       ]
     },
     {
-      "sha256": "4106403925f193410979f8259a2c286ab10c3978c549968f416afd6a04b0d31a",
+      "sha256": "408a6895cff0ca45f6245b04888ca8311dc19be562f620fdfc98d7e019c76be4",
       "files": [
         "logos/international/pluto-tv-action-movies.png",
         "logos/unused/pluto-tv-action-movies-13022100eb.png"
       ]
     },
     {
-      "sha256": "4163afb6ce5ecd2da5e509c693198f577a60d4d7b0d9c497e1f23331b18ae306",
+      "sha256": "40cbaa4d69a85473c76ad6401a61b12470fb123b8d8b82ba6a1cb92a84545749",
       "files": [
-        "logos/star-news-722ad595.png",
-        "logos/unused/star-news-722ad595.png"
+        "logos/nvisionbd-verified-waterbear-45ac070716.png",
+        "logos/waterbear-45ac070716.png"
       ]
     },
     {
-      "sha256": "41a41c40e8d0f790ce4ce44ac216ed74ad71318cc7cd566ff409cf1507cee0c9",
+      "sha256": "4298572e378e9a03dad75ef188276b3ae62a92303d0c5562f759cbac7de22d54",
       "files": [
-        "logos/k-cine.png",
-        "logos/unused/k-cine.png"
-      ]
-    },
-    {
-      "sha256": "4230405d08ffcd405d46afca7d0d3aa620838af6aac7c003f1be6d587c8bfdf9",
-      "files": [
-        "logos/axn-crime-c719b192f7.png",
-        "logos/unused/axn-crime-c719b192f7.png"
+        "logos/international/maxcine-comedy-720p.png",
+        "logos/maxcine-comedy-4298572e37.png"
       ]
     },
     {
@@ -2730,6 +2632,14 @@
       "files": [
         "logos/canal-3-kmk-tv-720p.png",
         "logos/international/canal-3-kmk-tv-720p.png"
+      ]
+    },
+    {
+      "sha256": "438ba5f062f314e6c3a5dcabf16566bdd5a90e00b2c7a6d764b87e532e525bc7",
+      "files": [
+        "logos/international/50-cent-action-720p.png",
+        "logos/unused/50-cent-action-720p-2a1be4355a-converted-438ba5f062.png",
+        "logos/unused/50-cent-action-720p-2a1be4355a.png"
       ]
     },
     {
@@ -2744,13 +2654,6 @@
       "files": [
         "logos/international/mi-musica-romantica.png",
         "logos/mi-musica-romantica-43d86eb9cc.png"
-      ]
-    },
-    {
-      "sha256": "43db19a141f342758f6de5ffd9f07fb923db813c0cf38898c57ed325daf0bbb7",
-      "files": [
-        "logos/american-horrors-95025c0d.png",
-        "logos/unused/american-horrors-95025c0d.png"
       ]
     },
     {
@@ -2783,13 +2686,6 @@
       ]
     },
     {
-      "sha256": "45ac0707160c54ae32e76544ac4d3ef6888a8f856651624e1e9dc9ae1f4efa76",
-      "files": [
-        "logos/nvisionbd-verified-waterbear-45ac070716.png",
-        "logos/waterbear-45ac070716.png"
-      ]
-    },
-    {
       "sha256": "45d2349fcb018c8b4aa86c8a1c77d66944b0f4090cb9617654bd40dea489b972",
       "files": [
         "logos/fightbox-45d2349fcb.png",
@@ -2801,13 +2697,6 @@
       "files": [
         "logos/international/kinopremyera-1080p.png",
         "logos/kinopremyera-4621304199.png"
-      ]
-    },
-    {
-      "sha256": "46b246e5be260170440b4385f083edec71fb6c85ad7cb2d8ddfba0b1af906730",
-      "files": [
-        "logos/nvisionbd-verified-vision-india-66f24a5c85.png",
-        "logos/vision-india-66f24a5c85.png"
       ]
     },
     {
@@ -2823,6 +2712,13 @@
         "logos/international/pluto-tv-harlequin-dk.png",
         "logos/international/pluto-tv-harlequin-no.png",
         "logos/international/pluto-tv-harlequin.png"
+      ]
+    },
+    {
+      "sha256": "47a8581d6a502945acac5bbdf21217c53f8de13ce3b91b285c2c83ca3ff4ef99",
+      "files": [
+        "logos/ebony-tv-by-lionsgate-1080p-f90858c31e.png",
+        "logos/unused/ebony-tv-by-lionsgate-1080p-f90858c31e-converted-47a8581d6a.png"
       ]
     },
     {
@@ -2871,6 +2767,20 @@
       ]
     },
     {
+      "sha256": "4c230e8d9c78cdb326859a806b5b18da23c08fc47121728e96210787d8484459",
+      "files": [
+        "logos/nvisionbd-verified-vision-india-66f24a5c85.png",
+        "logos/vision-india-66f24a5c85.png"
+      ]
+    },
+    {
+      "sha256": "4c3b175a52d44a67e4fd41424a6756256438597375797aaa3dd94442af884b72",
+      "files": [
+        "logos/dd-urdu.png",
+        "logos/unused/dd-urdu-576p-51b76262e4.png"
+      ]
+    },
+    {
       "sha256": "4ce4ea61f58af8c2ed42b4c749d29bf79535ee2597126d6288974c04a8129d7f",
       "files": [
         "logos/fuel-tv-4ce4ea61f5.png",
@@ -2889,15 +2799,14 @@
       "sha256": "4d0e038b00e3ac1f07cf0cf84f4b905aa5aa0d71e4c5003b0a78d6d357f02096",
       "files": [
         "logos/international/watch-it-scream-720p.png",
-        "logos/unused/watch-it-scream-720p-b8531f612b.png",
         "logos/watch-it-scream-720p-b8531f612b.png"
       ]
     },
     {
-      "sha256": "4d7957be8edec258c4140fb03334548e0e46b84570adf6c4b1fa452c4e50ff92",
+      "sha256": "4e314918b7413a9d6f8f0fdd8bc1ed50d4267e38a13504a6c1c83dcf04c75661",
       "files": [
-        "logos/unused/disney-channel-720p-4686c26017.png",
-        "logos/unused/disney-channel-latin-america-1080p-94455ff877.png"
+        "logos/minimax-cee-c3c7e32bdc.png",
+        "logos/minimax-hungary-c3c7e32bdc.png"
       ]
     },
     {
@@ -2905,13 +2814,6 @@
       "files": [
         "logos/international/viasat-kino-action-576p.png",
         "logos/viasat-kino-action-576p.png"
-      ]
-    },
-    {
-      "sha256": "4eb46a01c7f6b076a6cf62ed369837b7f2d7718b6b1b66f4eacaf2c91e5cf98c",
-      "files": [
-        "logos/international/pluto-tv-comedy-movies.png",
-        "logos/unused/pluto-tv-comedy-movies-989176a87d.png"
       ]
     },
     {
@@ -2926,10 +2828,17 @@
       ]
     },
     {
-      "sha256": "4ff16d78becbd9b5f47d28efbae3c93fbb66d940a712bcb15ef2eb29444d98c6",
+      "sha256": "4f774a8b5208b1b28600035969cea2decda6090374910c5a9c581d71cacbd14e",
       "files": [
-        "logos/dangal-tv.png",
-        "logos/unused/dangal-tv.png"
+        "logos/b4u-bhojpuri-plus.png",
+        "logos/b4u-bhojpuri.png"
+      ]
+    },
+    {
+      "sha256": "505db644578693e33eedcb034b17acb38f82320d48fd3ec4c8d9aa4745c54497",
+      "files": [
+        "logos/world-of-freesports-45c7da464f.png",
+        "logos/world-of-freesports.png"
       ]
     },
     {
@@ -2941,10 +2850,17 @@
       ]
     },
     {
-      "sha256": "517e8a74a2a208ddb282ca82e62c3ca87fc723543adf9d1a7e1259fca579de41",
+      "sha256": "5125334153d8e1a473f47010f902d648f86ddebe5d47e43c06286e9a7462cd67",
       "files": [
-        "logos/bein-sports-3-517e8a74a2.png",
-        "logos/nvisionbd-verified-bein-sports-3-517e8a74a2.png"
+        "logos/international/mntv.png",
+        "logos/unused/mntv-075accb781.png"
+      ]
+    },
+    {
+      "sha256": "52571f3bdfd5dfd354bba15fd20397de0e56eb388ef092bf9006e5186b0ad3ad",
+      "files": [
+        "logos/shemaroo-josh.png",
+        "logos/unused/shemaroo-josh-360p-28e43c141a.png"
       ]
     },
     {
@@ -2976,13 +2892,6 @@
       "files": [
         "logos/normalized/tehzeeb-tv.png",
         "logos/tehzeeb-tv.png"
-      ]
-    },
-    {
-      "sha256": "547c744850f61122ab56d7fb4bac8accec781443ae380cc2345bd8b1de4155ac",
-      "files": [
-        "logos/cmc-tv.png",
-        "logos/unused/cmc-tv.png"
       ]
     },
     {
@@ -3038,24 +2947,25 @@
       ]
     },
     {
-      "sha256": "55e8b1d56b23b996711eb48210512e023ef87a2d43087f09c5c5a50d8994e418",
+      "sha256": "5639924be5cc6ad76bae87d58fd370cc9f394566583daec23677f997212d500f",
       "files": [
-        "logos/trace-mziki-1080p-23c41b7a67.png",
-        "logos/unused/trace-mziki-1080p-23c41b7a67.png"
+        "logos/now-70s.png",
+        "logos/unused/now-70s-720p-bc6643964d.png",
+        "logos/unused/now-70s.png"
       ]
     },
     {
-      "sha256": "56a7c946dc592f555f7faf72ba3871074cd85e4c6a117b00eba3799b48c1e491",
+      "sha256": "5645f7af6a7a3547909b515b749050e9c78c25e2dc5d2837117c8be53513513c",
       "files": [
-        "logos/international/kino-tv-hd.png",
-        "logos/kino-tv-hd.png"
+        "logos/sony-pal-1080p-f991ee016e.png",
+        "logos/sony-pal.png"
       ]
     },
     {
-      "sha256": "56cb9d3b539ab834060d6ceb1688cc64ab56eeacb73a804f4439ba6a9155839d",
+      "sha256": "57bcd5373e3ee7a7e9e34a4b1fed1ed4c914522adbdf5de38b430a9017330752",
       "files": [
-        "logos/cctv-storm-music-1080p-7d4f900934.png",
-        "logos/unused/cctv-storm-music-1080p-7d4f900934.png"
+        "logos/pasand-tv-576p.png",
+        "logos/pasand-tv.png"
       ]
     },
     {
@@ -3063,13 +2973,6 @@
       "files": [
         "logos/international/pluto-tv-movies-gb.png",
         "logos/international/pluto-tv-movies.png"
-      ]
-    },
-    {
-      "sha256": "591a005ebebf7c30f92c4f0afce19ec2fc7d0c1c07d1ef010e77a330b33ebafc",
-      "files": [
-        "logos/polsat-viasat-history-1080p-62666051f6.png",
-        "logos/unused/polsat-viasat-history-1080p-62666051f6.png"
       ]
     },
     {
@@ -3084,13 +2987,6 @@
       "files": [
         "logos/international/tv-arberia-4-muzike-720p.png",
         "logos/international/tv-arberia-retro-hits-720p.png"
-      ]
-    },
-    {
-      "sha256": "5964656136221ebea6c32d65914c18024e9454bcfebc1e0f2e1e6d57af0b0bf7",
-      "files": [
-        "logos/international/teletoon-hd-1080i.png",
-        "logos/teletoon-plus-5964656136.png"
       ]
     },
     {
@@ -3112,6 +3008,13 @@
       "files": [
         "logos/nvisionbd-official-ziggo-sport-2.png",
         "logos/nvisionbd-official-ziggo-sport-3.png"
+      ]
+    },
+    {
+      "sha256": "5a2ea190a142076ff7515ba684d3fd0d231edb93389777826ff994c1fa8cf6e6",
+      "files": [
+        "logos/music-box-hits.png",
+        "logos/unused/music-box-hits-7f2dd7fb76.png"
       ]
     },
     {
@@ -3150,6 +3053,22 @@
       ]
     },
     {
+      "sha256": "5c21087e3187b0407ec172d63e8181ad94640f84df9fdefab211521a9fe78e73",
+      "files": [
+        "logos/unused/xite-hits.png",
+        "logos/xite-hits-1080p-bf41ee4788.png",
+        "logos/xite-hits-germany-1080p.png",
+        "logos/xite-hits-uk-1080p-bf41ee4788.png"
+      ]
+    },
+    {
+      "sha256": "5c42eb54230b1e220c27b49bacd20d472dafef65c9b299fb5f295c173e856c13",
+      "files": [
+        "logos/yet-max-720p.png",
+        "logos/yet-max.png"
+      ]
+    },
+    {
       "sha256": "5c48443e1fa9697f0cb8936e5f6de9d2b80c751f459723741bb258c1e43776e5",
       "files": [
         "logos/emi-tv.png",
@@ -3166,10 +3085,17 @@
       ]
     },
     {
-      "sha256": "5d1041c26517ea3137bd4925757e602822b80393eb76a9e85dd92d8659150dab",
+      "sha256": "5cd8e2eeca00d2a4a1c1feebd7dba3cbad8ce5dd29c3ce1d9f6c4517ea4ff0e7",
       "files": [
-        "logos/super-simple-songs-1080p-f39abf3ffc.png",
-        "logos/unused/super-simple-songs-1080p-f39abf3ffc.png"
+        "logos/suriyan-tv-576p.png",
+        "logos/suriyan-tv.png"
+      ]
+    },
+    {
+      "sha256": "5cfd698031f03594ab327adf35ba0222803fdca786163ba95e473f535421f114",
+      "files": [
+        "logos/international/mr-bean-animated-es-1080p-converted-3d6f10f486.png",
+        "logos/international/mr-bean-animated-fr-1080p-converted-3d6f10f486.png"
       ]
     },
     {
@@ -3198,13 +3124,6 @@
       "files": [
         "logos/international/pluto-tv-anime-movies.png",
         "logos/unused/pluto-tv-anime-movies-5716cf2ebb.png"
-      ]
-    },
-    {
-      "sha256": "5f0eb22f8c3232756253a4b4c774860509bb665b4acecf9056c825ba0f0fd6d2",
-      "files": [
-        "logos/bantul-the-great-35f9777f.png",
-        "logos/unused/bantul-the-great-35f9777f.png"
       ]
     },
     {
@@ -3256,17 +3175,6 @@
       ]
     },
     {
-      "sha256": "622b89d0b9a8fccfad2422ef714756cbac356b9044c252d7c8c567d69968321f",
-      "files": [
-        "logos/and-tv.png",
-        "logos/nvisionbd-official-and-tv.png",
-        "logos/tv-international-1080p.png",
-        "logos/tv.png",
-        "logos/unused/and-tv.png",
-        "logos/unused/tv-1080p-0e5df2c3c4.png"
-      ]
-    },
-    {
       "sha256": "626a61d20e91b10e29748e771877749a508cdea25b1b02f0f01d93b680126fc3",
       "files": [
         "logos/documentary-plus-626a61d20e.png",
@@ -3295,33 +3203,17 @@
       ]
     },
     {
+      "sha256": "63f7c767321fb3e1f44814a93cd919be2f3631828763cd837b6c0641ef23a7c4",
+      "files": [
+        "logos/tarang-tv-720p.png",
+        "logos/tarang-tv.png"
+      ]
+    },
+    {
       "sha256": "6421bd3a03b9bc89244a8f72985eb0aa8d4516047afcd89f39b91629eac3a684",
       "files": [
         "logos/international/classic-tv-drama.png",
         "logos/unused/classic-tv-drama-f5e8cc5c9a.png"
-      ]
-    },
-    {
-      "sha256": "6489239cdddf4c6c511e12c34786e3d2a3c4426baf3d3d0908f8ac48faff2378",
-      "files": [
-        "logos/international/canal-action-europe-360p.png",
-        "logos/international/canal-action-europe-czechia.png",
-        "logos/international/canal-action-europe-magyar.png",
-        "logos/international/canal-action-europe-slovakia-720p.png"
-      ]
-    },
-    {
-      "sha256": "648a8ecf0c38a23717c8789d140d525ce666a3ae5b49135a2fb6f32a6b995bed",
-      "files": [
-        "logos/asharq-discovery-1080p-da46bd8597.png",
-        "logos/unused/asharq-discovery-1080p-da46bd8597.png"
-      ]
-    },
-    {
-      "sha256": "64ad8b127f46de45118402469ab3c9a92f601adb1172de34ef1e28c243c2713d",
-      "files": [
-        "logos/solo-calcio-italia.png",
-        "logos/solocalcio-italia.png"
       ]
     },
     {
@@ -3349,8 +3241,7 @@
       "sha256": "658f4451ba022a6be5948e8c55fd6bfe4cd8f476a7798a9189736a52041de2b6",
       "files": [
         "logos/bta-tv-720p-4e7cddfa0e.png",
-        "logos/international/bta-tv-720p.png",
-        "logos/unused/bta-tv-720p-4e7cddfa0e.png"
+        "logos/international/bta-tv-720p.png"
       ]
     },
     {
@@ -3365,13 +3256,6 @@
       "files": [
         "logos/international/kinosvidanie-576p.png",
         "logos/kinosvidanie-6649816108.png"
-      ]
-    },
-    {
-      "sha256": "667bea50e4de98556d848b4dd66199be11ff4cf95275d48b8d7af8b6d9f88594",
-      "files": [
-        "logos/suriyan-tv-576p.png",
-        "logos/suriyan-tv.png"
       ]
     },
     {
@@ -3419,15 +3303,7 @@
       "sha256": "67fd8b5c50c12e7e0d056da01c1bf8bf988a9b458c2ec2f94ee3836efc2aba5b",
       "files": [
         "logos/classic-cinema-240p-431cc7a223.png",
-        "logos/international/classic-cinema-240p-not-24-7.png",
-        "logos/unused/classic-cinema-240p-431cc7a223.png"
-      ]
-    },
-    {
-      "sha256": "6819b6b796c41f0623a076c821e27ab654e963ae76e9694c09ba666c053f58e0",
-      "files": [
-        "logos/cctv-the-first-theater-1080p-16513a0aad.png",
-        "logos/unused/cctv-the-first-theater-1080p-16513a0aad.png"
+        "logos/international/classic-cinema-240p-not-24-7.png"
       ]
     },
     {
@@ -3442,6 +3318,13 @@
       "files": [
         "logos/international/tv-land-drama.png",
         "logos/unused/tv-land-drama-adc7cdb8a1.png"
+      ]
+    },
+    {
+      "sha256": "6959599512b2a29d65d1fde60bdd90305e00aa0703d42e0574d13c40d6c5706b",
+      "files": [
+        "logos/international/tf1-series-films-1080p.png",
+        "logos/tf1-series-films-6959599512.png"
       ]
     },
     {
@@ -3484,6 +3367,13 @@
       "files": [
         "logos/international/marina-tv-1080p.png",
         "logos/marina-tv-1080p.png"
+      ]
+    },
+    {
+      "sha256": "6a740cf111e0cfca855278509fdaf04d0091b67cc1a301cd5834e5d3a56e3012",
+      "files": [
+        "logos/dd-jharkhand.png",
+        "logos/unused/dd-jharkhand-576p-c8bfe17763.png"
       ]
     },
     {
@@ -3531,6 +3421,15 @@
       ]
     },
     {
+      "sha256": "6c3784d72ac0dc1b613b3fbe7c283cd047110967a12f2a2a48ff699d2c41074c",
+      "files": [
+        "logos/nbc-sports-now-48667e2ba4.png",
+        "logos/nbc-sports.png",
+        "logos/nvisionbd-official-nbc-sports.png",
+        "logos/unused/nbc-sports.png"
+      ]
+    },
+    {
       "sha256": "6c9aa3e23f291da01f32440008ca349dd4f16f8a8c50e4b5a855441e1978aadf",
       "files": [
         "logos/10-tv-6c9aa3e23f.png",
@@ -3538,24 +3437,10 @@
       ]
     },
     {
-      "sha256": "6cb7415c62b90b6fd475f0bf8c725f2caf76de160728355867bf7df232346510",
-      "files": [
-        "logos/dhoom-music-576p-ba62bd030a.png",
-        "logos/unused/dhoom-music-576p-ba62bd030a.png"
-      ]
-    },
-    {
       "sha256": "6d2c9a62429d0833b4d5e0e9758d4ac5d8d8b569644bd4e95e46776326a93867",
       "files": [
         "logos/local-logo-cp24.png",
         "logos/local-logo-fx.png"
-      ]
-    },
-    {
-      "sha256": "6d62779b4dcae5cf1a817e4d42c5850da2665b8273b3c945e1a3524e28e4ae1e",
-      "files": [
-        "logos/stingray-today-s-kpop.png",
-        "logos/unused/stingray-today-s-kpop.png"
       ]
     },
     {
@@ -3587,13 +3472,6 @@
       ]
     },
     {
-      "sha256": "6ed74d7a81744ee9c094a58b648469266d7b78c23d302378f8108c69f7df8383",
-      "files": [
-        "logos/afra-film-b18a7be433.png",
-        "logos/nvisionbd-official-afra-film.png"
-      ]
-    },
-    {
       "sha256": "6fbf1da8c15d45b6e42493b43eae7e77d0b11f7d228230187b5f44955c6c8aaf",
       "files": [
         "logos/pooya-tv-6fbf1da8c1.png",
@@ -3616,6 +3494,13 @@
       ]
     },
     {
+      "sha256": "712ff1dc001e38bd91f6fda982a1d22ef25abf00a8db8840a27becfb284ccb53",
+      "files": [
+        "logos/international/pluto-tv-comedy-movies.png",
+        "logos/unused/pluto-tv-comedy-movies-989176a87d.png"
+      ]
+    },
+    {
       "sha256": "714745951c0982ded87d3d4ba2690abfcfddda1c81a2d87ac3a07e19018dbdd5",
       "files": [
         "logos/nvisionbd-official-turkmenistan-sport.png",
@@ -3627,13 +3512,6 @@
       "files": [
         "logos/nvisionbd-verified-survivor-71b25cd64f.png",
         "logos/survivor-71b25cd64f.png"
-      ]
-    },
-    {
-      "sha256": "71e22bfeacbf18ee4a8f7fd7189160ecd675aea8245b1fb6315d590823223cbe",
-      "files": [
-        "logos/xite-hits-1080p-bf41ee4788.png",
-        "logos/xite-hits-uk-1080p-bf41ee4788.png"
       ]
     },
     {
@@ -3651,10 +3529,10 @@
       ]
     },
     {
-      "sha256": "72d770a34e5fd322fdbc7e02ec5334f5d2ed5fc3c4e53e27e449b9d18dff5e47",
+      "sha256": "72fcdf460c8c9c0b72c102b6411360f36bd39bca3501b3c3bca1b8629cdddddc",
       "files": [
-        "logos/moviesphere.png",
-        "logos/unused/moviesphere.png"
+        "logos/bein-sports-3-517e8a74a2.png",
+        "logos/nvisionbd-verified-bein-sports-3-517e8a74a2.png"
       ]
     },
     {
@@ -3669,8 +3547,7 @@
       "files": [
         "logos/cctv-6-hd-1080p-341f1954fa.png",
         "logos/international/cctv-6-geo-blocked.png",
-        "logos/international/cctv-6-hd-1080p.png",
-        "logos/unused/cctv-6-hd-1080p-341f1954fa.png"
+        "logos/international/cctv-6-hd-1080p.png"
       ]
     },
     {
@@ -3681,18 +3558,25 @@
       ]
     },
     {
-      "sha256": "745dfa2bd3372eb78cfa3af643a2074632d1957d7ef0cec8e51d8f9a37565eb3",
+      "sha256": "73dea3d52fdceda0077294bbd6731af8bb3dab1c0fb93ab098a020092ef13878",
       "files": [
-        "logos/goldmines.png",
-        "logos/international/goldmines-2.png",
-        "logos/unused/goldmines-576p-99e087b760.png"
+        "logos/unused/xite-siempre-latino-1080p-ef6e87e703.png",
+        "logos/xite-siempre-latino.png"
       ]
     },
     {
       "sha256": "747147a15ab1348f3efca359676e76d43df3ff56b34aaea803c0a7cf0e658267",
       "files": [
         "logos/international/paramount-picks.png",
-        "logos/unused/paramount-picks-26e6b381c6-converted-747147a15a.png"
+        "logos/unused/paramount-picks-26e6b381c6-converted-747147a15a.png",
+        "logos/unused/paramount-picks-26e6b381c6.png"
+      ]
+    },
+    {
+      "sha256": "748e5b53a68adb55ae83de4c415b6c1213dda6455a3c0acda812807a734c961d",
+      "files": [
+        "logos/darshana-tv.png",
+        "logos/unused/darshana-tv-360p-172e185e63.png"
       ]
     },
     {
@@ -3703,10 +3587,11 @@
       ]
     },
     {
-      "sha256": "7598e1596ea2985e5d3f264d2301ecb3ff0ecd8c34e3b6de707454c296594599",
+      "sha256": "7518029fc5b510cec0e3734c7eec68af908a2da59bfe7049d4af4b9f553f02fd",
       "files": [
-        "logos/asianet-middle-east-576p.png",
-        "logos/international/asianet-middle-east-576p.png"
+        "logos/98-1-pearl-fm-720p.png",
+        "logos/international/98-1-pearl-fm-720p.png",
+        "logos/nvisionbd-official-98-1-pearl-fm.png"
       ]
     },
     {
@@ -3714,6 +3599,13 @@
       "files": [
         "logos/international/00s-replay.png",
         "logos/unused/00s-replay-c8a4b8109d.png"
+      ]
+    },
+    {
+      "sha256": "76640ece61e247d063433cdc163f1ad7813a381bc82aeb25bb551bdfc94ac1aa",
+      "files": [
+        "logos/international/maxcine-family-720p.png",
+        "logos/maxcine-family-76640ece61.png"
       ]
     },
     {
@@ -3726,18 +3618,18 @@
       ]
     },
     {
-      "sha256": "76ae8e586ca0b081a6d69eca725cebf366d6c48b25b13f8f875f2ed049d44a18",
-      "files": [
-        "logos/unused/xite-siempre-latino-1080p-ef6e87e703.png",
-        "logos/xite-siempre-latino.png"
-      ]
-    },
-    {
       "sha256": "76e16779aba2febd488206efc764c5c29675eee050052eee324a27287ccc6c9d",
       "files": [
         "logos/world-poker-tour-76e16779ab.png",
         "logos/world-poker-tour-poland-76e16779ab.png",
         "logos/world-poker-tour-uk-76e16779ab.png"
+      ]
+    },
+    {
+      "sha256": "7744ff13ad700f62c6e603c5d1d5c743291cd47192d4fb3d4c6113b4cd85b140",
+      "files": [
+        "logos/international/kino-tv-hd.png",
+        "logos/kino-tv-hd.png"
       ]
     },
     {
@@ -3760,6 +3652,13 @@
       "files": [
         "logos/kronehit-777ac4e59e.png",
         "logos/nvisionbd-official-kronehit.png"
+      ]
+    },
+    {
+      "sha256": "7812e75ea9ee58c2e213077d18174439d63c6da4a7956255330f4d53c837ef59",
+      "files": [
+        "logos/unused/channel-9-720p-4976239118-converted-7812e75ea9.png",
+        "logos/unused/channel-9-720p-4976239118.png"
       ]
     },
     {
@@ -3816,13 +3715,6 @@
       "files": [
         "logos/cartoonito-asia-7c8159f019.png",
         "logos/cartoonito-latin-america-7c8159f019.png"
-      ]
-    },
-    {
-      "sha256": "7c836096050c86e6f6ffaa91d0d426329c20e3ec0942e7631522549024572a7a",
-      "files": [
-        "logos/nvisionbd-verified-nickelodeon-india-06524ae081.png",
-        "logos/unused/nickelodeon-576p-8e7be6884b.png"
       ]
     },
     {
@@ -3899,6 +3791,21 @@
       ]
     },
     {
+      "sha256": "7eaeee410e9b7a17cd23b899b371a9894d2cf9cd7f078446fee2bc60d4bb8d6d",
+      "files": [
+        "logos/epic-bharat-digital-1080p.png",
+        "logos/epic-bharat-digital.png",
+        "logos/epic-bharat.png"
+      ]
+    },
+    {
+      "sha256": "7f567a0a101986ed121e6420d14071e7dfaf2c018cce5e2d6368a0e6c76ffdb5",
+      "files": [
+        "logos/studio-one-plus-f44320b032.png",
+        "logos/studio-one.png"
+      ]
+    },
+    {
       "sha256": "7faba4c54268ef0a6121b8945edde1d4c0ecb9dda65505c7cd7563f82bcd9dc6",
       "files": [
         "logos/unused/sl1.png",
@@ -3924,22 +3831,6 @@
       "files": [
         "logos/stingray-holiday-hits.png",
         "logos/unused/stingray-holiday-hits-1080p-764177135c.png"
-      ]
-    },
-    {
-      "sha256": "802b917f344d1a996d462e23a718200b61cb0f9cbf754241175fd3fa697da795",
-      "files": [
-        "logos/mon-bangla-4a53249503.png",
-        "logos/unused/mon-bangla-4a53249503.png"
-      ]
-    },
-    {
-      "sha256": "80393291e7c053de37f1f01ab09e83500aa0b5ca935969ef58b61e36604c593d",
-      "files": [
-        "logos/nbc-sports-now-48667e2ba4.png",
-        "logos/nbc-sports.png",
-        "logos/nvisionbd-official-nbc-sports.png",
-        "logos/unused/nbc-sports.png"
       ]
     },
     {
@@ -3971,10 +3862,11 @@
       ]
     },
     {
-      "sha256": "81b47313fa347d087471cc2da91d78dea1fa8a7da771924a1b70744bbd6c82fc",
+      "sha256": "81a4db9d7e3446d00696f4b64721759d9e911de35a3f0bb1acaed13a3c869b82",
       "files": [
-        "logos/shanson-tv.png",
-        "logos/unused/shanson-tv.png"
+        "logos/goldmines.png",
+        "logos/international/goldmines-2.png",
+        "logos/unused/goldmines-576p-99e087b760.png"
       ]
     },
     {
@@ -4025,28 +3917,10 @@
       ]
     },
     {
-      "sha256": "855baf9d979fae772dcd7664f972f377491527e5822faec2c67fe6eeb4d19266",
-      "files": [
-        "logos/mbc-3-usa.png",
-        "logos/unused/mbc-3-usa.png"
-      ]
-    },
-    {
       "sha256": "856b329a399524207b8849e650e27a00342bff389993dc1e8807f7e444d7edbc",
       "files": [
         "logos/international/rumba-tv.png",
-        "logos/rumba-tv-3182ea7301.png",
-        "logos/unused/rumba-tv-3182ea7301.png"
-      ]
-    },
-    {
-      "sha256": "85a95534fa9bebd4db2989657053d18414e884490bf547cd1f71c68dd8dc1ab9",
-      "files": [
-        "logos/unused/zee-bangla-sonar-576p-292f68c192.png",
-        "logos/zee-bangla-sonar-backup-1.png",
-        "logos/zee-bangla-sonar-backup-2.png",
-        "logos/zee-bangla-sonar-backup-4.png",
-        "logos/zee-bangla-sonar.png"
+        "logos/rumba-tv-3182ea7301.png"
       ]
     },
     {
@@ -4054,6 +3928,13 @@
       "files": [
         "logos/4ever-cinema-1080p-46222eea9d.png",
         "logos/international/4ever-cinema-1080p.png"
+      ]
+    },
+    {
+      "sha256": "86424ccb3012d26e7a88d0b2d4b8865383c8309c02ca8259b9da018dc793b9e1",
+      "files": [
+        "logos/zodiak-tv-1080p.png",
+        "logos/zodiak-tv.png"
       ]
     },
     {
@@ -4071,10 +3952,10 @@
       ]
     },
     {
-      "sha256": "876d16554fc7b48afdb711607a7c3459216600b49d55b2569891f6e97bbc0fea",
+      "sha256": "86fe5e488170278c0399050747b2c834bcfe36162f6584d28211c55dddd3839c",
       "files": [
-        "logos/lamore-rock-show-webtv-720p-23e63ad29f.png",
-        "logos/unused/lamore-rock-show-webtv-720p-23e63ad29f.png"
+        "logos/azahares-radiovisual-multimedia-720p.png",
+        "logos/international/azahares-radiovisual-multimedia-720p.png"
       ]
     },
     {
@@ -4093,13 +3974,6 @@
       ]
     },
     {
-      "sha256": "89955ad47c530e8898e587b7661fe50525e84ae03b80873edca8d8ceba43f478",
-      "files": [
-        "logos/dangal-2.png",
-        "logos/unused/dangal-2-720p-18d63673a7.png"
-      ]
-    },
-    {
       "sha256": "89b5335faaddeb98b07516e046145a197e0aba19d657161cb4158f246af9c4fc",
       "files": [
         "logos/international/tvs-film-noir-network-720p.png",
@@ -4114,13 +3988,6 @@
       ]
     },
     {
-      "sha256": "89c0ac0ca585be5b76ce68b287fe4c8f611038440ba47691aa7d895f5926f8e0",
-      "files": [
-        "logos/stingray-remember-the-80s.png",
-        "logos/unused/stingray-remember-the-80s.png"
-      ]
-    },
-    {
       "sha256": "8b7081ca262eec4f9c6165f600a6c2689dba102c56998281481a124250ce770a",
       "files": [
         "logos/international/south-park-kenny-collection-germany.png",
@@ -4130,10 +3997,10 @@
       ]
     },
     {
-      "sha256": "8b7c2f57297bab383729a9acc69756855c6adef9b403f82bf8aebfff08e642e3",
+      "sha256": "8b72a9d28ed2b10360142b2499d6b3fe5df7af910dd19d7ce081849267c28708",
       "files": [
-        "logos/classique-tv-360p-6f1c2ec605.png",
-        "logos/unused/classique-tv-360p-6f1c2ec605.png"
+        "logos/movie-music-by-stingray-1080p-cf132e65b8.png",
+        "logos/unused/movie-music-by-stingray-1080p-cf132e65b8-converted-8b72a9d28e.png"
       ]
     },
     {
@@ -4141,6 +4008,13 @@
       "files": [
         "logos/international/premialnoe-hd-1080p.png",
         "logos/premialnoe-8c61801efd.png"
+      ]
+    },
+    {
+      "sha256": "8c96879b53032dcd382f8f6b86e323d728aa061eb73de632792a35cb7bafa87a",
+      "files": [
+        "logos/b4u-bhojpuri-1080p.png",
+        "logos/b4u-bhojpuri-plus-1080p.png"
       ]
     },
     {
@@ -4174,13 +4048,6 @@
       ]
     },
     {
-      "sha256": "8def699823ceee0f404a0184ed7b943913c176266a7ebf53050532b445e0fee6",
-      "files": [
-        "logos/13-kids-1080p-09def2902d.png",
-        "logos/unused/13-kids-1080p-09def2902d.png"
-      ]
-    },
-    {
       "sha256": "8df10e4f450750643d7badca9a600144dd5ed0f15a8a3b72817aa012635dce34",
       "files": [
         "logos/cool-fm-98-9-720p.png",
@@ -4192,6 +4059,13 @@
       "files": [
         "logos/babyfirst-9844e5635e.png",
         "logos/babyfirst-spanish-9844e5635e.png"
+      ]
+    },
+    {
+      "sha256": "8e527e66bd3c4fcba6afd55dc6ac8e8819ef9b60246afeaeb102524266a74dd1",
+      "files": [
+        "logos/nickelodeon-hungary-034dfb11a2.png",
+        "logos/unused/nickelodeon-312f4b9648.png"
       ]
     },
     {
@@ -4248,13 +4122,6 @@
       "files": [
         "logos/international/kandelatv-480p.png",
         "logos/kandelatv-9abf7258b1.png"
-      ]
-    },
-    {
-      "sha256": "91070713d32c5ed1c52d789da8c8c4243e4d06ac16f4879bbeb7158f8e09071b",
-      "files": [
-        "logos/unused/amc-europe-95485d9836.png",
-        "logos/unused/amc-latin-america-1080p-95485d9836.png"
       ]
     },
     {
@@ -4344,8 +4211,7 @@
       "sha256": "97ee2dd6116a022281f81b03de4b6c1344209355ddb5603a41ce421b4e878f63",
       "files": [
         "logos/cctv-15-1080p-91371cd633.png",
-        "logos/international/cctv-15-720p.png",
-        "logos/unused/cctv-15-1080p-91371cd633.png"
+        "logos/international/cctv-15-720p.png"
       ]
     },
     {
@@ -4367,6 +4233,14 @@
       "files": [
         "logos/international/pluto-tv-cult-films-united-states.png",
         "logos/unused/pluto-tv-cult-films-united-states-9e595d60f3.png"
+      ]
+    },
+    {
+      "sha256": "98d1f5941dc119215bf54a597bec00de0a3e7c2fbca9379a0a0d0df284096b82",
+      "files": [
+        "logos/hallmark-movies-more.png",
+        "logos/unused/hallmark-movies-more-1080p-9526bb5c86-converted-98d1f5941d.png",
+        "logos/unused/hallmark-movies-more-1080p-9526bb5c86.png"
       ]
     },
     {
@@ -4402,19 +4276,19 @@
       ]
     },
     {
+      "sha256": "995f4ad6dd09535fe351e8412cf7cdf1abf59d857ff858d71504e180ae677f78",
+      "files": [
+        "logos/audiokiss-1080p.png",
+        "logos/international/audiokiss-1080p.png"
+      ]
+    },
+    {
       "sha256": "99cde9a347804d9df64fd9897fa573d45b07fadd3661036d06fa07b44b8901a3",
       "files": [
         "logos/international/south-park-kyle-collection-germany.png",
         "logos/international/south-park-kyle-collection-sweden-dk.png",
         "logos/international/south-park-kyle-collection-sweden-no.png",
         "logos/international/south-park-kyle-collection-sweden.png"
-      ]
-    },
-    {
-      "sha256": "99fb007f49c0054b8519dd6bc5484e24d25a04f81cebfd2aa0f96dd4c9b0db3c",
-      "files": [
-        "logos/epic-bharat-digital-1080p.png",
-        "logos/epic-bharat-digital.png"
       ]
     },
     {
@@ -4436,13 +4310,6 @@
       "files": [
         "logos/international/pluto-tv-filmes-aventura.png",
         "logos/unused/pluto-tv-filmes-aventura-83d1bd4033.png"
-      ]
-    },
-    {
-      "sha256": "9b11a8f5d8ce178eb3d82f0aee83bd331f921bf9fde5071e36a56e1fb64e09ef",
-      "files": [
-        "logos/espn8-the-ocho-1080p-76369a61db.png",
-        "logos/unused/espn8-the-ocho-1080p-76369a61db.png"
       ]
     },
     {
@@ -4535,6 +4402,13 @@
       ]
     },
     {
+      "sha256": "9d3c54d309bd5433a0f540d08475e569bb3f9f16fec0134e24a7091ab79340ba",
+      "files": [
+        "logos/etv-life-743b66d370.png",
+        "logos/nvisionbd-verified-etv-life-743b66d370.png"
+      ]
+    },
+    {
       "sha256": "9d7221b677157a5d322712595d554c1d093f780fcb648bd11293709ba8639e21",
       "files": [
         "logos/international/hit-hd-1080p.png",
@@ -4542,24 +4416,10 @@
       ]
     },
     {
-      "sha256": "9e1ea966890f52ac985a5b7b91388c175064613ab2f1f39d971aa6db7b5c6df3",
-      "files": [
-        "logos/4kurd-fc0383f503.png",
-        "logos/unused/4kurd-fc0383f503.png"
-      ]
-    },
-    {
       "sha256": "9e5f3366c8f5d9b404b67961adf27c1070c1389459da75bf2538969e5245ab3e",
       "files": [
         "logos/bangla-tv-9e5f3366c8.png",
         "logos/nvisionbd-verified-bangla-tv-9e5f3366c8.png"
-      ]
-    },
-    {
-      "sha256": "9ec716d5bd2cb1e3c315f03df5943df3df823ef7577242ba96b6bf925dabb15a",
-      "files": [
-        "logos/nagorik-tv-90b5d16aaf.png",
-        "logos/nvisionbd-verified-nagorik-tv-90b5d16aaf.png"
       ]
     },
     {
@@ -4585,11 +4445,24 @@
       ]
     },
     {
-      "sha256": "9f90993d2811acfc3d3d1c9ca1489a6aeabf14037912c510db6987011e410d31",
+      "sha256": "9f818e959ebea5a6f7f54ac66cee878bf80c342584030551b7a07671b7d71925",
       "files": [
-        "logos/deewana-hd-540p.png",
-        "logos/deewana-hd.png",
-        "logos/international/deewana-hd-540p.png"
+        "logos/unused/sercem-tv-1080p-228c9eac0e-converted-9f818e959e.png",
+        "logos/unused/sercem-tv-1080p-228c9eac0e.png"
+      ]
+    },
+    {
+      "sha256": "9f93270fed3275dfd042d7c7daa633e1c8c6b934b533ec49df63a2716538ba4a",
+      "files": [
+        "logos/dangal-tv.png",
+        "logos/dangal.png"
+      ]
+    },
+    {
+      "sha256": "9fd32b8c0dd09314b7658029a209d6bb69a7461c67a912f715a54993f4bfce16",
+      "files": [
+        "logos/international/maxcine-2-720p.png",
+        "logos/maxcine-2-9fd32b8c0d.png"
       ]
     },
     {
@@ -4603,13 +4476,6 @@
         "logos/espn-latin-america-colombia-a00882a662.png",
         "logos/espn-latin-america-mexico-a00882a662.png",
         "logos/espn-united-states-a00882a662.png"
-      ]
-    },
-    {
-      "sha256": "a062dfdd2e86543529067ca6b2bb68273982d539c241ed8225f4c7145c1f2cc9",
-      "files": [
-        "logos/el-sol-network-tv-1080p.png",
-        "logos/international/el-sol-network-tv-1080p.png"
       ]
     },
     {
@@ -4632,13 +4498,6 @@
         "logos/biz-cinema-1080p.png",
         "logos/international/biz-cinema-1080p.png",
         "logos/nvisionbd-official-biz-cinema.png"
-      ]
-    },
-    {
-      "sha256": "a1b315a333ab7465aefc1084bb77117d52604202965a639b6ddad8c04a287474",
-      "files": [
-        "logos/trace-africa-1080p-a177d91a65.png",
-        "logos/unused/trace-africa-1080p-a177d91a65.png"
       ]
     },
     {
@@ -4709,6 +4568,14 @@
       ]
     },
     {
+      "sha256": "a429f40c499b05c729e6b8843f921e4f7b064623a24cc3a02acb1fd9fb7f3e4d",
+      "files": [
+        "logos/nvisionbd-verified-star-plus-17496c1826.png",
+        "logos/nvisionbd-verified-starplus-india-hd-1080i-824fd0bcd6.png",
+        "logos/star-plus-3a9c981f97.png"
+      ]
+    },
+    {
       "sha256": "a4998b8c2e71931e4095ebda94167230ce7e0447871ebed70a463c0431b82938",
       "files": [
         "logos/vokta-tv-720p.png",
@@ -4720,13 +4587,6 @@
       "files": [
         "logos/pishow-stream-10007-converted-a49a0ada83.png",
         "logos/pishow.png"
-      ]
-    },
-    {
-      "sha256": "a61b3e4c8bccd03e35173fae1f435d1ec5a071679b783ed194628bf6455027b4",
-      "files": [
-        "logos/al-zahra-tv-turkic.png",
-        "logos/unused/al-zahra-tv-turkic.png"
       ]
     },
     {
@@ -4800,6 +4660,13 @@
       ]
     },
     {
+      "sha256": "a9706e9123c3ed7e7ee0110013a5e35a49da2202a73347848ce09d6cd518a394",
+      "files": [
+        "logos/b4u-kadak.png",
+        "logos/unused/b4u-kadak-576p-f49a2a6e14.png"
+      ]
+    },
+    {
       "sha256": "a97460515315d2d169e1f6d010d95e50c199b8760548cef9ba6ffb18039a0be1",
       "files": [
         "logos/boomerang-a974605153.png",
@@ -4815,10 +4682,10 @@
       ]
     },
     {
-      "sha256": "aa03573942b47e813d6bbee0975f12c238d658f777054ef7b84d042fda48a96a",
+      "sha256": "aa0207e8b748f4e3cd9dcb6f68d3bd701e2b897554a45ffb2bc4d443d505ced1",
       "files": [
-        "logos/cctv-billiards-1080p-b0f7f58939.png",
-        "logos/unused/cctv-billiards-1080p-b0f7f58939.png"
+        "logos/ramdhenu.png",
+        "logos/unused/ramdhenu-360p-5f64a8de13.png"
       ]
     },
     {
@@ -4826,13 +4693,6 @@
       "files": [
         "logos/wow-kidz-tamil.png",
         "logos/wow-kidz.png"
-      ]
-    },
-    {
-      "sha256": "aa372451f3055a29de05f1a3929bdf217a32f9b527e484a92c4af9f79ebd1529",
-      "files": [
-        "logos/bejoy-kids-823648ad26.png",
-        "logos/nvisionbd-official-be-joy-kids.png"
       ]
     },
     {
@@ -4857,13 +4717,6 @@
       ]
     },
     {
-      "sha256": "ab3d04bfabdb1a8ea40f9f4c303668d3535d1663960e3e2c7b7b4bd37cea3660",
-      "files": [
-        "logos/sports-first-tv.png",
-        "logos/unused/sports-first-tv.png"
-      ]
-    },
-    {
       "sha256": "ab91e83f1be274d2ca10f8b82a4fdaf6c5c5f11fc042454348f9f335400bc633",
       "files": [
         "logos/international/molahits-tv-720p.png",
@@ -4881,12 +4734,34 @@
       ]
     },
     {
+      "sha256": "abb9c2d25b78f12539bb923a4d46aa89785dc1f62dc6c820a89f10fdfbf2d00a",
+      "files": [
+        "logos/cinemaraton-plus-e964e29b30.png",
+        "logos/international/cinemaraton-plus-1080i.png"
+      ]
+    },
+    {
+      "sha256": "abbde0fd6183c83fcbcb34d69c293cbdf4eee43dce0eda528cec4ebadea46ec7",
+      "files": [
+        "logos/international/god-stands-kids-club-tv-arabic.png",
+        "logos/international/god-stands-kids-club-tv-chinese.png",
+        "logos/international/god-stands-kids-club-tv.png"
+      ]
+    },
+    {
       "sha256": "abdfe2e02212753478bf31217f44a3a88883515c124d6a95b2f7a66c82bfe2e7",
       "files": [
         "logos/international/pluto-tv-film-germany.png",
         "logos/international/pluto-tv-film-sweden-dk.png",
         "logos/international/pluto-tv-film-sweden-no.png",
         "logos/international/pluto-tv-film-sweden.png"
+      ]
+    },
+    {
+      "sha256": "ac1868f03c710541ecb621733e10d7f89055633a7d72a6b7810861417dce282a",
+      "files": [
+        "logos/unused/amc-europe-95485d9836.png",
+        "logos/unused/amc-latin-america-1080p-95485d9836.png"
       ]
     },
     {
@@ -4906,20 +4781,6 @@
       ]
     },
     {
-      "sha256": "ac906e809e0dc0f350c6458380cc7e07220fef6925494b20949c664e82c0a0f5",
-      "files": [
-        "logos/all-time-movies-576p.png",
-        "logos/all-time-movies.png"
-      ]
-    },
-    {
-      "sha256": "ac9ce2555920f931c3e6eaf700f14668a58acf2112e1ad3af58827dc318ec199",
-      "files": [
-        "logos/angel-tv-a7e5cfebac.png",
-        "logos/nvisionbd-verified-angel-tv-a7e5cfebac.png"
-      ]
-    },
-    {
       "sha256": "aca76dfc4a092d57e1a5719d979f301e44ff181796d24ffe990b8c2ad5a0e2fd",
       "files": [
         "logos/international/pluto-tv-filmes-acao.png",
@@ -4934,10 +4795,10 @@
       ]
     },
     {
-      "sha256": "acf3b85f1cbb0654da9aa8bb28daf936ef7a8f22873c09db83e5c7d49f75656a",
+      "sha256": "acef13bfd074cc441f9f9d5f0911f94dd5370743652a72d5a3a162b4d82bb6d1",
       "files": [
-        "logos/zodiak-tv-1080p.png",
-        "logos/zodiak-tv.png"
+        "logos/vision-india.png",
+        "logos/vision.png"
       ]
     },
     {
@@ -5012,8 +4873,7 @@
       "sha256": "af64eb7367be847ae3c7a2d345c0d6bb4821212543dce10b69d3f0acc80ba665",
       "files": [
         "logos/biz-music-720p-9f4c0c5b64.png",
-        "logos/international/biz-music-1080p.png",
-        "logos/unused/biz-music-720p-9f4c0c5b64.png"
+        "logos/international/biz-music-1080p.png"
       ]
     },
     {
@@ -5031,13 +4891,6 @@
       ]
     },
     {
-      "sha256": "afd739d7b7e2f1122fd8dc02155eb7e158e34335838d5ab22a8ae7594ed1d93a",
-      "files": [
-        "logos/star-utsav-576p.png",
-        "logos/star-utsav.png"
-      ]
-    },
-    {
       "sha256": "aff73dda11cc377c274873b435e9db96344ccda2744e7aed6b18bd6c193577e5",
       "files": [
         "logos/europa-plus-tv-belarus-aff73dda11.png",
@@ -5052,24 +4905,10 @@
       ]
     },
     {
-      "sha256": "b054418bb21fee1275b20a76615296c258e3b1ea93d9bc3cd23f02f626b286b1",
-      "files": [
-        "logos/tarang-tv-720p.png",
-        "logos/tarang-tv.png"
-      ]
-    },
-    {
       "sha256": "b120734e2003be7e8c29154133b70ea79a92b1a295938e9dd1f03090d61e08ff",
       "files": [
         "logos/nvisionbd-official-fuel-tv-apac.png",
         "logos/nvisionbd-official-fuel-tv-europe.png"
-      ]
-    },
-    {
-      "sha256": "b1997fbfcfc9eb1c651c0b03a413402d1441c01f703b9a2b7672ab5efae9ce62",
-      "files": [
-        "logos/etv-cinema-360p-14e6148301.png",
-        "logos/etv-cinema.png"
       ]
     },
     {
@@ -5099,6 +4938,13 @@
       "files": [
         "logos/ktv-sport-plus.png",
         "logos/unused/ktv-sport-plus.png"
+      ]
+    },
+    {
+      "sha256": "b37b9bfc3312e98400e56c15a3f7cb22f377099174ecddb7b3235d59899d5173",
+      "files": [
+        "logos/unused/disney-channel-720p-4686c26017.png",
+        "logos/unused/disney-channel-latin-america-1080p-94455ff877.png"
       ]
     },
     {
@@ -5133,13 +4979,6 @@
       ]
     },
     {
-      "sha256": "b66e642d1b6332abc5dbc616378312286eeba59aea697202ee123f15f2ec68b1",
-      "files": [
-        "logos/audiokiss-1080p.png",
-        "logos/international/audiokiss-1080p.png"
-      ]
-    },
-    {
       "sha256": "b67e498130b5f31c7793be772086dd11befc6497b95737064ca72b19d828c79b",
       "files": [
         "logos/nvisionbd-official-unite8-sports-2.png",
@@ -5154,17 +4993,17 @@
       ]
     },
     {
+      "sha256": "b6fc8d2fad7418bd335bed9331cbea4b8a1a0a0ece34ab298a5515880ec5b1d7",
+      "files": [
+        "logos/international/manoranjan-movies-576p.png",
+        "logos/manoranjan-movies-576p-96091e62b1.png"
+      ]
+    },
+    {
       "sha256": "b6fde6ec945f5b8512f256e61722ca188301edcf08932dbce59968b0659b0988",
       "files": [
         "logos/cine-plus-legend-b6fde6ec94.png",
         "logos/international/cine-legend.png"
-      ]
-    },
-    {
-      "sha256": "b7253da712fc5b19067e4006de26cd0e29b83b483c53d7c403249e4c3c3762e4",
-      "files": [
-        "logos/unused/xite-rock-x-metal-1080p-08222c2607.png",
-        "logos/xite-rock-x-metal.png"
       ]
     },
     {
@@ -5176,11 +5015,10 @@
       ]
     },
     {
-      "sha256": "b7b2cea40e4ccf42a50397144b86e7537e9c1539f741c55f7d7d32ccf7bde437",
+      "sha256": "b7b13e1bb78bedfd178f16f68af053ec551b2d483aa8862707fcf43515d31e49",
       "files": [
-        "logos/international/god-stands-kids-club-tv-arabic.png",
-        "logos/international/god-stands-kids-club-tv-chinese.png",
-        "logos/international/god-stands-kids-club-tv.png"
+        "logos/solo-calcio-italia.png",
+        "logos/solocalcio-italia.png"
       ]
     },
     {
@@ -5191,18 +5029,18 @@
       ]
     },
     {
-      "sha256": "b7dfd2258292d51fe64edaab80cf43ebeb04e48f5fe74dbe3a882242f67b31bc",
-      "files": [
-        "logos/goldmines-movies-576p-4a7688df18.png",
-        "logos/goldmines-movies.png"
-      ]
-    },
-    {
       "sha256": "b8132a8c29849350ea44384d6e1ddba0de65a3f4ca065500fd8663ff60c29b29",
       "files": [
         "logos/international/viafree-movies-dk.png",
         "logos/international/viafree-movies-no.png",
         "logos/international/viafree-movies.png"
+      ]
+    },
+    {
+      "sha256": "b879de23bbc5d1b9ed90caca3affb42c2e154eac793beb654ef8e91752c85913",
+      "files": [
+        "logos/btv-news-33c61f1708.png",
+        "logos/nvisionbd-verified-btv-news-33c61f1708.png"
       ]
     },
     {
@@ -5217,13 +5055,6 @@
       "files": [
         "logos/international/bein-movies-turk.png",
         "logos/unused/bein-movies-turk-ef8fc60267.png"
-      ]
-    },
-    {
-      "sha256": "b8b9c43d05524511585899bef9d96afb5138d4af13b2d1447b862c221774ccf6",
-      "files": [
-        "logos/filmrise-western-720p-7d3f145be0.png",
-        "logos/unused/filmrise-western-720p-7d3f145be0.png"
       ]
     },
     {
@@ -5255,31 +5086,10 @@
       ]
     },
     {
-      "sha256": "ba599d34954d4d6f03b130953d3a85bf3981623fb9e8336608c53e0462aec145",
-      "files": [
-        "logos/colors-cineplex-uk.png",
-        "logos/colors-cineplex.png"
-      ]
-    },
-    {
       "sha256": "bab9b8924a4c18918849ac707eaa72a2f9993a152bb753bd83f7d23cefcec059",
       "files": [
         "logos/paramount-network-1080p-d2d6424e61.png",
         "logos/unused/paramount-network-409048c42b.png"
-      ]
-    },
-    {
-      "sha256": "bac6881e0867751223578b07b31b7fc8cd844fa112088a9219ed908cef4fb7a8",
-      "files": [
-        "logos/amc-1080p-95485d9836.png",
-        "logos/unused/amc-1080p-95485d9836.png"
-      ]
-    },
-    {
-      "sha256": "bac8c3d43e66c0922ada79d13f06d5b9820dea403309d5b4edb6a5e5f32acb4a",
-      "files": [
-        "logos/cctv-storm-theater-1080p-50f2bff2fb.png",
-        "logos/unused/cctv-storm-theater-1080p-50f2bff2fb.png"
       ]
     },
     {
@@ -5311,6 +5121,13 @@
       ]
     },
     {
+      "sha256": "bb76c9042c5a749a29a25b04910d5e7ae366fe59471c151a198a9c7f1b8df80b",
+      "files": [
+        "logos/oscar-movies-bhojpuri-720p-3b04cbe81a.png",
+        "logos/oscar-movies-bhojpuri.png"
+      ]
+    },
+    {
       "sha256": "bbaff5270be08da60d77231aef03fe4999d90e06f2addf1a827cca50c1c053a4",
       "files": [
         "logos/nvisionbd-official-tnt-sport-1.png",
@@ -5325,10 +5142,10 @@
       ]
     },
     {
-      "sha256": "bc08152a653092d0bfbc3708e6b95ab20ceb0065fed50cb075db700b401117fe",
+      "sha256": "bc39117603b20b7c8a89a8b56ed5c68a65685f4ddb2412b9824c03b0365b904b",
       "files": [
-        "logos/dd-urdu.png",
-        "logos/unused/dd-urdu-576p-51b76262e4.png"
+        "logos/colors-gujarati-360p-c82f072793.png",
+        "logos/colors-gujarati-9c6989199e.png"
       ]
     },
     {
@@ -5368,13 +5185,6 @@
         "logos/travel-xp.png",
         "logos/travelxp-bangla.png",
         "logos/travelxp-english.png"
-      ]
-    },
-    {
-      "sha256": "be50f5bfe3be70119b788a31fd0093ca5f212eae36aedb63ff1e223071dc0cad",
-      "files": [
-        "logos/sqala-tv-1080p-d174c17569.png",
-        "logos/unused/sqala-tv-1080p-d174c17569.png"
       ]
     },
     {
@@ -5420,8 +5230,7 @@
       "sha256": "bfc80794b1e797450428de05c4abb068227743c8125f0a02674324d185f385c9",
       "files": [
         "logos/13-festival-1080p-c89c0ee60b.png",
-        "logos/international/13-festival-1080p.png",
-        "logos/unused/13-festival-1080p-c89c0ee60b.png"
+        "logos/international/13-festival-1080p.png"
       ]
     },
     {
@@ -5429,13 +5238,6 @@
       "files": [
         "logos/dom-kino-premium-hd.png",
         "logos/international/dom-kino-premium-hd.png"
-      ]
-    },
-    {
-      "sha256": "c02c1355eca2770e5623cb1c6a3e7a6b96634fa0e6ac52048b3de02caa8174a8",
-      "files": [
-        "logos/teleritmo.png",
-        "logos/unused/teleritmo.png"
       ]
     },
     {
@@ -5476,6 +5278,14 @@
       ]
     },
     {
+      "sha256": "c153d622bba53de873b39a16b9e633389995c719e7a713869439583481493a7c",
+      "files": [
+        "logos/deewana-hd-540p.png",
+        "logos/deewana-hd.png",
+        "logos/international/deewana-hd-540p.png"
+      ]
+    },
+    {
       "sha256": "c15c2fdbd458493c022459621f3f5100f65d7c8ab1777de788049b09f51fec1f",
       "files": [
         "logos/city-eden-kinoart-c15c2fdbd4.png",
@@ -5487,13 +5297,6 @@
       "files": [
         "logos/dust-1080p.png",
         "logos/international/dust-1080p.png"
-      ]
-    },
-    {
-      "sha256": "c1af362156a462e18fd0fc4d8243eb40c1ab51707c27049c7146f650b7e4c4e1",
-      "files": [
-        "logos/hallmark-movies-more.png",
-        "logos/unused/hallmark-movies-more-1080p-9526bb5c86.png"
       ]
     },
     {
@@ -5511,6 +5314,13 @@
       ]
     },
     {
+      "sha256": "c34bf8960f7f1385a0cd93be9e85cd37668cc836121493a5d1b37d26b1d4eefb",
+      "files": [
+        "logos/now-80-s.png",
+        "logos/unused/now-80-s.png"
+      ]
+    },
+    {
       "sha256": "c370bd67b46c20880582e9ee736f55ecc89f18411baaface6b554c802fd20c55",
       "files": [
         "logos/international/south-park-rockin-out-dk.png",
@@ -5524,20 +5334,6 @@
         "logos/filmuadrama-1080p.png",
         "logos/international/filmuadrama-1080p.png",
         "logos/nvisionbd-official-filmua-drama.png"
-      ]
-    },
-    {
-      "sha256": "c3c7e32bdcb9ebd16431bf0f521766f06f22f4f4941d0a4eac021434917f3c79",
-      "files": [
-        "logos/minimax-cee-c3c7e32bdc.png",
-        "logos/minimax-hungary-c3c7e32bdc.png"
-      ]
-    },
-    {
-      "sha256": "c453c59632d636ce1570c871d3d97acf278d0000ed2de73c709f79c971dc4fc5",
-      "files": [
-        "logos/1mus.png",
-        "logos/unused/1mus.png"
       ]
     },
     {
@@ -5576,24 +5372,10 @@
       ]
     },
     {
-      "sha256": "c4fa7fb23d93c54ba3f3a1ff7ba3af91e2766e15e96989dee8a76c72f7f50d91",
+      "sha256": "c508f1317c556d5579273ca9778b3a573edef599c652b424b4abb52cb9504900",
       "files": [
-        "logos/30a-golf-kingdom-720p-a0db6020af.png",
-        "logos/unused/30a-golf-kingdom-720p-a0db6020af.png"
-      ]
-    },
-    {
-      "sha256": "c5133655a61026889366f12fa85e485313b92535709bfde0e40dd2ba4ace4b98",
-      "files": [
-        "logos/pasand-tv-576p.png",
-        "logos/pasand-tv.png"
-      ]
-    },
-    {
-      "sha256": "c53115db058451b96bb2d608a4410bbd72939f934b9de35577f5e51261252535",
-      "files": [
-        "logos/trace-mboa-1080p-009457a7c6.png",
-        "logos/unused/trace-mboa-1080p-009457a7c6.png"
+        "logos/international/teletoon-hd-1080i.png",
+        "logos/teletoon-plus-5964656136.png"
       ]
     },
     {
@@ -5601,6 +5383,13 @@
       "files": [
         "logos/international/pluto-tv-cine-familia-latam.png",
         "logos/international/pluto-tv-cine-familia.png"
+      ]
+    },
+    {
+      "sha256": "c7089a07915fa1514f214be10c4157804d7777eb78bc2ce914eba51753fd0243",
+      "files": [
+        "logos/colors-cineplex-uk.png",
+        "logos/colors-cineplex.png"
       ]
     },
     {
@@ -5699,27 +5488,6 @@
       ]
     },
     {
-      "sha256": "cb84ad04dfa30e97c40c58471f8d2ddc7f524f95be2be182bf0127d6fdef8bf6",
-      "files": [
-        "logos/retro-music-tv.png",
-        "logos/unused/retro-music-tv.png"
-      ]
-    },
-    {
-      "sha256": "cbb193ac411c32449f09dbe7d1499bdb6ad34bb8ec06d8ba088609af0eb71cc2",
-      "files": [
-        "logos/3abn-praise-him-music-network-720p-12e7a6309e.png",
-        "logos/unused/3abn-praise-him-music-network-720p-12e7a6309e.png"
-      ]
-    },
-    {
-      "sha256": "cc675d0212ba6393f7766fe00e732539a344e7acef39704e3b97c402e32ab809",
-      "files": [
-        "logos/abn-bible-movies-channel-720p-cc14fe65bb.png",
-        "logos/unused/abn-bible-movies-channel-720p-cc14fe65bb.png"
-      ]
-    },
-    {
       "sha256": "cc71c4df04712aa95a05307dafb8a96132e09d5e515a4fc2a99ea91e06b9a236",
       "files": [
         "logos/nvisionbd-official-radio-bangladesh-co.png",
@@ -5727,10 +5495,11 @@
       ]
     },
     {
-      "sha256": "cd6cb328f8946274439872a6ca029d2ae41eb8fcad16b78cd7735c5eb26c6476",
+      "sha256": "cce69165be99f4d27aad2bae2cae739367ba3be19c49c74a6b4ea19b0b93211d",
       "files": [
-        "logos/trace-vanilla-islands-1080p-ebb8257bc8.png",
-        "logos/unused/trace-vanilla-islands-1080p-ebb8257bc8.png"
+        "logos/nicktoons-cis-8af9304b51.png",
+        "logos/nicktoons-czech-republic-8af9304b51.png",
+        "logos/nicktoons-hungary-8af9304b51.png"
       ]
     },
     {
@@ -5751,6 +5520,13 @@
         "logos/international/amc-europe-czech-republic.png",
         "logos/international/amc-united-states-1080p-geo-blocked.png",
         "logos/international/amc-united-states-720p.png"
+      ]
+    },
+    {
+      "sha256": "cdd017fef90664b0c8e2b0a2e4daa551dd00e3feda3a69883801ed412d2fd88a",
+      "files": [
+        "logos/b4u-movies.png",
+        "logos/unused/b4u-movies-576p-fd61c20d7c.png"
       ]
     },
     {
@@ -5777,6 +5553,13 @@
       ]
     },
     {
+      "sha256": "cf01249744db8f1fddc16a0086ddf0af089e9cdcb71f49b86316829c56ab04de",
+      "files": [
+        "logos/international/the-cabbin-fm.png",
+        "logos/the-cabbin-fm.png"
+      ]
+    },
+    {
       "sha256": "cf1f47a55ed0ee3a0d81c5e6ecc381f38d875a5a87d8f2fa0a995ea61c5710a2",
       "files": [
         "logos/88-stereo-82d858a135.png",
@@ -5788,13 +5571,6 @@
       "files": [
         "logos/colors-infinity-hd-1080p.png",
         "logos/colors-infinity.png"
-      ]
-    },
-    {
-      "sha256": "cfe2610a2112ec14f9e4a17df1888b0400e9410a40102b5d16c11c6d3b62cd53",
-      "files": [
-        "logos/trace-kitoko-1080p-1f2a458d3f.png",
-        "logos/unused/trace-kitoko-1080p-1f2a458d3f.png"
       ]
     },
     {
@@ -5849,25 +5625,52 @@
       ]
     },
     {
-      "sha256": "d1c914462adc50b2c7e94b37212f5b0d46a9f11cf3f7cfa09163c736509b55f9",
+      "sha256": "d0f49fa0118313d61a34b03141b485fa7ca66839bb42422ca045e48beb007943",
       "files": [
-        "logos/trace-jama-1080p-290110fe8a.png",
-        "logos/unused/trace-jama-1080p-290110fe8a.png"
+        "logos/nvisionbd-verified-nickelodeon-india-06524ae081.png",
+        "logos/unused/nickelodeon-576p-8e7be6884b.png"
       ]
     },
     {
-      "sha256": "d27b4d39c0a3c94a536aa99f3d6e36fd00ecec32dbbeb7f34b3222afc5973bc0",
+      "sha256": "d14fbb9c446ed3de1c20687bbe40722479a62d1c82cdefb48ba4a4ba8c8dba51",
       "files": [
-        "logos/colors-3cfc323d7c.png",
-        "logos/nvisionbd-verified-colors-3cfc323d7c.png"
+        "logos/afra-film-b18a7be433.png",
+        "logos/nvisionbd-official-afra-film.png"
+      ]
+    },
+    {
+      "sha256": "d25e7d73b72b4b2a8faa8a270ee48198ec4208d898c08750f6a29f7dd1a9036f",
+      "files": [
+        "logos/international/mr-bean-animated-es-1080p.png",
+        "logos/international/mr-bean-animated-fr-1080p.png"
+      ]
+    },
+    {
+      "sha256": "d2f7945c266d4ea1f92c62bcc6007ab285a1385189d4d711bab661406fdcb1a4",
+      "files": [
+        "logos/goldmines-movies-576p-4a7688df18.png",
+        "logos/goldmines-movies.png"
+      ]
+    },
+    {
+      "sha256": "d33b1742d3e81a27b4585a202bf5bd31c5125e6dbfba25ac7938d4c3938600ed",
+      "files": [
+        "logos/anjan-tv-1080p-4cbe8bff61.png",
+        "logos/anjan-tv.png"
       ]
     },
     {
       "sha256": "d3b119b6f91d1c36d0a865c0374f0f46a52fc8d68d21fb327b6650f2d0feb83b",
       "files": [
         "logos/fmtv-83c0af144c.png",
-        "logos/international/fmtv-not-24-7.png",
-        "logos/unused/fmtv-83c0af144c.png"
+        "logos/international/fmtv-not-24-7.png"
+      ]
+    },
+    {
+      "sha256": "d3f5edc09123baa2be2a37a07d2c82cabbaa5e50ed187ffe4f7297d018347928",
+      "files": [
+        "logos/dd-arun-prabha.png",
+        "logos/unused/dd-arun-prabha-576p-5fb9868af8.png"
       ]
     },
     {
@@ -5892,13 +5695,6 @@
       ]
     },
     {
-      "sha256": "d5a4f10142b2e59c2937c696fd79376d20fdc6c1b2207b37c9fa3d7c8255c11a",
-      "files": [
-        "logos/trace-ayiti-1080p-62e392142b.png",
-        "logos/unused/trace-ayiti-1080p-62e392142b.png"
-      ]
-    },
-    {
       "sha256": "d5a582b043df9165e7a90cd975adcf833b92fbfe5e1faf4d44b884990afccde0",
       "files": [
         "logos/atomic-academy-tv-480p.png",
@@ -5920,6 +5716,13 @@
       ]
     },
     {
+      "sha256": "d5eda366365550307e26c6d5e05fef87c259fe10ab9f1680f3b34c9c4680ec1b",
+      "files": [
+        "logos/asianet-middle-east-576p.png",
+        "logos/international/asianet-middle-east-576p.png"
+      ]
+    },
+    {
       "sha256": "d62238c8809d4d04570c671655718a85873ef97715ad07bad5cb035eb849539b",
       "files": [
         "logos/cinecanal-pacific-1080p.png",
@@ -5936,10 +5739,10 @@
       ]
     },
     {
-      "sha256": "d8570548509ea10c362313d40f5a8c0d3b6fa389fbafca5b9d7b675d6671503b",
+      "sha256": "d85c0623ef4b046807cd46e85b6305a8969e3da39697fc0a5db766e09dd6a77e",
       "files": [
-        "logos/arabica-tv.png",
-        "logos/unused/arabica-tv.png"
+        "logos/filmrise-western-720p-7d3f145be0.png",
+        "logos/unused/filmrise-western-720p-7d3f145be0-converted-d85c0623ef.png"
       ]
     },
     {
@@ -5947,6 +5750,25 @@
       "files": [
         "logos/gangaur-tv-1080p.png",
         "logos/gangaur-tv.png"
+      ]
+    },
+    {
+      "sha256": "d8ac22d97989785ecc532d21aca266a03eb178eb2eeec16df7acab2373c77ecc",
+      "files": [
+        "logos/baraza-tv-1080p.png",
+        "logos/baraza-tv-deep-house-720p.png",
+        "logos/baraza-tv-relaxing.png",
+        "logos/international/baraza-tv-1080p.png",
+        "logos/international/baraza-tv-deep-house-720p.png",
+        "logos/nvisionbd-official-baraza-tv.png",
+        "logos/unused/baraza-tv-relaxing-1080p-c1e9954245.png"
+      ]
+    },
+    {
+      "sha256": "d8cbb0597c6bdab629024de2f48fb5b5e6a9edf8e8d46e07001b1a574c5a0619",
+      "files": [
+        "logos/nickelodeon-brazil-7ca6654cc0-converted-2390ea4732.png",
+        "logos/unused/nickelodeon-480p-b7ae374df0-converted-2390ea4732.png"
       ]
     },
     {
@@ -5964,10 +5786,10 @@
       ]
     },
     {
-      "sha256": "d98ea58f4e47de2aafb295f227842bf866c87f34656c4aa83a0e85d3634134ed",
+      "sha256": "d9940ae439619bcf66f2e6b9a617657cf3bfcbc8b4159d9ae5fcd366d0986076",
       "files": [
-        "logos/rupasi-bangla-576p-e677fd1858.png",
-        "logos/unused/rupasi-bangla-576p-e677fd1858.png"
+        "logos/now-rock-1080p-033d8aedc8.png",
+        "logos/unused/now-rock.png"
       ]
     },
     {
@@ -6036,13 +5858,6 @@
       ]
     },
     {
-      "sha256": "de04479329a9d2c7fb507748ea21027cccaf66465763fad5ea0ff16334214b8f",
-      "files": [
-        "logos/azan-tv-15e8ac79.png",
-        "logos/unused/azan-tv-15e8ac79.png"
-      ]
-    },
-    {
       "sha256": "def8423bda6e1950f3a98dad69ff7d6644d8194488a4dbb7e3d86561853ad67f",
       "files": [
         "logos/international/pluto-tv-romantik-dk.png",
@@ -6064,24 +5879,18 @@
       ]
     },
     {
+      "sha256": "e082bcbd7e6791e0239d7c55c8307c3b7c79d98b33bc70f033178c347068ca45",
+      "files": [
+        "logos/mixer-strongman-champions-league.png",
+        "logos/strongman-champions-league-ebb0bbbbb3.png",
+        "logos/strongman-champions-league.png"
+      ]
+    },
+    {
       "sha256": "e0c0ac701ca95f47160f34301785a0c41307309ae1499f13ee3102e836b9c101",
       "files": [
         "logos/arena-sport-1-premium-serbia-e0c0ac701c.png",
         "logos/arena-sport-1-premium-slovenia-e0c0ac701c.png"
-      ]
-    },
-    {
-      "sha256": "e1238a48d3e52c3b5e9d512b6635196f4057fe086e1186ca1e615521596a4421",
-      "files": [
-        "logos/maverick-black-cinema-1080p-8369c6f55f.png",
-        "logos/unused/maverick-black-cinema-1080p-8369c6f55f.png"
-      ]
-    },
-    {
-      "sha256": "e14cd7a142a06a185b312d716b0d909d3b3de55b55e514a3bbd5c73b37b9fdac",
-      "files": [
-        "logos/ebony-tv-by-lionsgate-1080p-f90858c31e.png",
-        "logos/unused/ebony-tv-by-lionsgate-1080p-f90858c31e.png"
       ]
     },
     {
@@ -6100,10 +5909,10 @@
       ]
     },
     {
-      "sha256": "e221b53ebfaf6e2b59af02a812b5e09c93cd515fca28c146ae5ff4df1728377c",
+      "sha256": "e31c5fecdc29843e4ef6423e7fddb5a6542867e367af1b492f4c0ddfa33e4a8f",
       "files": [
-        "logos/etv-life-743b66d370.png",
-        "logos/nvisionbd-verified-etv-life-743b66d370.png"
+        "logos/colors-3cfc323d7c.png",
+        "logos/nvisionbd-verified-colors-3cfc323d7c.png"
       ]
     },
     {
@@ -6111,13 +5920,6 @@
       "files": [
         "logos/htv-e3435cf5aa.png",
         "logos/international/htv-argentina-720p.png"
-      ]
-    },
-    {
-      "sha256": "e34e30d84fd5edf9725cb4ec09a04445f623ccefdd5f3aa17bd10a0103041ba8",
-      "files": [
-        "logos/eurosport-4k-czechia-1a359dc9dd.png",
-        "logos/unused/eurosport-4k-czechia-1a359dc9dd.png"
       ]
     },
     {
@@ -6212,9 +6014,7 @@
         "logos/makkah-live.png",
         "logos/saudi-quran-2.png",
         "logos/saudi-quran.png",
-        "logos/sunnah-tv.png",
-        "logos/unused/al-sunnah-tv.png",
-        "logos/unused/saudi-quran.png"
+        "logos/sunnah-tv.png"
       ]
     },
     {
@@ -6232,17 +6032,17 @@
       ]
     },
     {
+      "sha256": "e653b3fd44e94d701263dbd8b4815e92f973c0a0a14ca9c8d8be648ab9534da7",
+      "files": [
+        "logos/nagorik-tv-90b5d16aaf.png",
+        "logos/nvisionbd-verified-nagorik-tv-90b5d16aaf.png"
+      ]
+    },
+    {
       "sha256": "e696d4e2fb3818ef97f57670d2387372b10c924cd1b2664867e055ccbf7049c1",
       "files": [
         "logos/sangeet-bhojpuri-576p.png",
         "logos/sangeet-bhojpuri.png"
-      ]
-    },
-    {
-      "sha256": "e71e31557de262132b22e5c3390bbf45b5c165c89be4adcb83b6e3ddbf5b1a7b",
-      "files": [
-        "logos/colors-gujarati-360p-c82f072793.png",
-        "logos/colors-gujarati-9c6989199e.png"
       ]
     },
     {
@@ -6260,13 +6060,6 @@
       ]
     },
     {
-      "sha256": "e892218557c7930ddff609db333a9666718befc4de1352cb2a39e1ab1555448f",
-      "files": [
-        "logos/powerturk-slow-1080p-6b191586ae.png",
-        "logos/unused/powerturk-slow-1080p-6b191586ae.png"
-      ]
-    },
-    {
       "sha256": "e89faf8146368a443bba4b8514349735ea2dcd87a048b876a6fbb5e6b2622ed7",
       "files": [
         "logos/fight-pfl.png",
@@ -6278,20 +6071,6 @@
       "files": [
         "logos/99tv-e8fc39ce2e.png",
         "logos/nvisionbd-verified-99tv-e8fc39ce2e.png"
-      ]
-    },
-    {
-      "sha256": "e914f07cdaccb1b22bd2c6058445b3d1627ed6f5ab39f1b0f036570576967057",
-      "files": [
-        "logos/hits-movies-e914f07cda.png",
-        "logos/international/hits-movies-576p.png"
-      ]
-    },
-    {
-      "sha256": "e964e29b30de410f52cd29636027d706f0fa1c4c9d962709b51e7eb9c820180e",
-      "files": [
-        "logos/cinemaraton-plus-e964e29b30.png",
-        "logos/international/cinemaraton-plus-1080i.png"
       ]
     },
     {
@@ -6311,25 +6090,10 @@
       ]
     },
     {
-      "sha256": "eaa3e19a76e4dda57f8836d72feb6e16dba837d87b3243723b670b4a72bbb843",
-      "files": [
-        "logos/nicktoons-cis-8af9304b51.png",
-        "logos/nicktoons-czech-republic-8af9304b51.png",
-        "logos/nicktoons-hungary-8af9304b51.png"
-      ]
-    },
-    {
       "sha256": "eaa659c47ee2e3b3fba1b0b70c3fa7570faa1b01dd629a442f6c14f69ad5b197",
       "files": [
         "logos/spektratv.png",
         "logos/unused/spektratv-720p-24da903cfa.png"
-      ]
-    },
-    {
-      "sha256": "ec112639d777604e3333c61cb4edb09a847facaef1713e6a558be511bfeafe6c",
-      "files": [
-        "logos/unused/vantage-rock-720p-65f9597043.png",
-        "logos/vantage-rock-720p-65f9597043.png"
       ]
     },
     {
@@ -6362,20 +6126,6 @@
         "logos/disney-channel-latin-america-north-1b160711f2.png",
         "logos/disney-channel-latin-america-panregional-1b160711f2.png",
         "logos/international/disneychannellatinamerica.png"
-      ]
-    },
-    {
-      "sha256": "ed26b62e24ea69a07ebbca509422a231df801ab646610f070c33cf61dd6d4288",
-      "files": [
-        "logos/bahrain-sports-1.png",
-        "logos/unused/bahrain-sports-1.png"
-      ]
-    },
-    {
-      "sha256": "ed6d90ce2a96976d46e8ccc7be91471d6c83299cb490548d28165ebfd9b7ccd2",
-      "files": [
-        "logos/international/the-cabbin-fm.png",
-        "logos/the-cabbin-fm.png"
       ]
     },
     {
@@ -6432,13 +6182,6 @@
       ]
     },
     {
-      "sha256": "f191c39f943f143ad59e19d9d1b4740eab81d17c451a3f8b3ab11c49b0a90375",
-      "files": [
-        "logos/infinita-tv-1080p-0108680fa6.png",
-        "logos/unused/infinita-tv-1080p-0108680fa6.png"
-      ]
-    },
-    {
       "sha256": "f1fa36621a303ccb9224253f52001165fe103a8d52f2bb3420aa163a12369ecf",
       "files": [
         "logos/madina-live-f1fa36621a.png",
@@ -6456,8 +6199,7 @@
       "sha256": "f24bcb51f5e3a99f80f99ea9173791c1b16a227cf085293d9382d73475354b75",
       "files": [
         "logos/amusic-channel-480p-59acbdb4c0.png",
-        "logos/international/amusic-channel-720p.png",
-        "logos/unused/amusic-channel-480p-59acbdb4c0.png"
+        "logos/international/amusic-channel-720p.png"
       ]
     },
     {
@@ -6465,6 +6207,15 @@
       "files": [
         "logos/disney-xd-poland-7c7a974680.png",
         "logos/disney-xd-united-states-7c7a974680.png"
+      ]
+    },
+    {
+      "sha256": "f285edda57a5037ee149eab2b14da175681b0bbac9f7093086298e572e45051d",
+      "files": [
+        "logos/colors-bangla-backup-1.png",
+        "logos/colors-bangla-backup-2.png",
+        "logos/colors-bangla-backup-3.png",
+        "logos/colors-bangla.png"
       ]
     },
     {
@@ -6527,13 +6278,6 @@
       ]
     },
     {
-      "sha256": "f69d24061fbd3c56b99065c2621ed736c3e7da4c03fb43d648d16d7b0004a75f",
-      "files": [
-        "logos/vision-india.png",
-        "logos/vision.png"
-      ]
-    },
-    {
       "sha256": "f6e317e18f2aba909b92a9d1e9dcb567f0689bfa8cd2811e10d867bb73334d6e",
       "files": [
         "logos/international/pluto-tv-crime-movies.png",
@@ -6584,17 +6328,27 @@
       ]
     },
     {
-      "sha256": "f8387cb6660fa2790b0c234985f0e7549c46690199e7a633815530bc34ca6835",
+      "sha256": "f7e1661f55f08e347c96dd21d6ab17e8af12e1076e95c8fae1b386d02890bfbd",
       "files": [
-        "logos/persiana-korea-50841eae46.png",
-        "logos/unused/persiana-korea-50841eae46.png"
+        "logos/paighan-tv.png",
+        "logos/unused/paighan-tv-00a9e59079.png"
       ]
     },
     {
-      "sha256": "f8f44635b721e5cf16aa15ae647361956acc182d8992746fb337a46f0adc9981",
+      "sha256": "f7fd6ada9c3c66b023e11eb7b46ab8b0ff13d2158f108d526f4d02a39772ca72",
       "files": [
-        "logos/more-than-sports-tv.png",
-        "logos/unused/more-than-sports-tv.png"
+        "logos/unused/zee-bangla-sonar-576p-292f68c192.png",
+        "logos/zee-bangla-sonar-backup-1.png",
+        "logos/zee-bangla-sonar-backup-2.png",
+        "logos/zee-bangla-sonar-backup-4.png",
+        "logos/zee-bangla-sonar.png"
+      ]
+    },
+    {
+      "sha256": "f92d2f96efe97a098f7f4e8e78132dfa9a71bf0c4028ec01a267af81945b5fb1",
+      "files": [
+        "logos/international/maxcine-720p.png",
+        "logos/maxcine-f92d2f96ef.png"
       ]
     },
     {
@@ -6620,20 +6374,6 @@
       ]
     },
     {
-      "sha256": "fa7b84f71517f779a9f1d1ea6e23bd16e88feab8bc7900d845dfed9cd91e242b",
-      "files": [
-        "logos/yet-max-720p.png",
-        "logos/yet-max.png"
-      ]
-    },
-    {
-      "sha256": "fade16f6a09f6c8b61ce3a9a2ad8c90daba999a000e7b934c55c1adc6caa7f91",
-      "files": [
-        "logos/sun-tv-hd-1080p.png",
-        "logos/sun-tv.png"
-      ]
-    },
-    {
       "sha256": "fb08d6f4cf25b8678ea97db51850477f45c70373e6d35a560c3e3cf19457c0af",
       "files": [
         "logos/maha-movie-576p.png",
@@ -6646,27 +6386,6 @@
         "logos/disney-junior-360p-943f21478f.png",
         "logos/unused/disney-jr-latin-america-1080p-d4a5b563e8.png",
         "logos/unused/disney-junior-d4a5b563e8.png"
-      ]
-    },
-    {
-      "sha256": "fbaac6219103db67e1381a4a94a3cd28a9dc9a4fed8a3bc62c6bf2e3bf298d62",
-      "files": [
-        "logos/unused/xite-reggae-vibes-1080p-157e5ece5e.png",
-        "logos/xite-reggae-vibes-1080p-157e5ece5e.png"
-      ]
-    },
-    {
-      "sha256": "fbb5da234f47799351703a318ec373003e2d5dd99f9d68ead38a7beaf40ba990",
-      "files": [
-        "logos/unused/vevo-pop.png",
-        "logos/vevo-pop.png"
-      ]
-    },
-    {
-      "sha256": "fbc95b9d3a1d9d7ef74a99fadcc4f0b5b9a5f6e78164b7cba9e716a510e5d41d",
-      "files": [
-        "logos/golf-golfpass.png",
-        "logos/golfpass.png"
       ]
     },
     {
@@ -6687,8 +6406,7 @@
       "sha256": "fc5be6df4e4010ed0c3fb5bc3bbe5b3b5d61498293cec6253ab04e2b12ec3b0a",
       "files": [
         "logos/dbm-tv-1080p-002259b21f.png",
-        "logos/international/dbm-tv-1080p.png",
-        "logos/unused/dbm-tv-1080p-002259b21f.png"
+        "logos/international/dbm-tv-1080p.png"
       ]
     },
     {
@@ -6740,10 +6458,17 @@
       ]
     },
     {
-      "sha256": "fe2746d53d8ce5dd0e7bb87b3b28d122895d768e6893461173a1776ff4991303",
+      "sha256": "fe0d46d826d1b46d81deb2d91e5bca696838b99b55e472b1bbc7a0136bf17b8b",
       "files": [
-        "logos/international/mntv.png",
-        "logos/unused/mntv-075accb781.png"
+        "logos/sony-yay-1080p.png",
+        "logos/sony-yay.png"
+      ]
+    },
+    {
+      "sha256": "fe3c8e1ec43c41b015022d3fbb37198bfcf8ca71669a15f3ef48d7bc2d9be090",
+      "files": [
+        "logos/public-music.png",
+        "logos/unused/public-music-576p-278a70b9ab.png"
       ]
     },
     {
@@ -6754,10 +6479,10 @@
       ]
     },
     {
-      "sha256": "feb8a3f8f3a5bdbd9ffecaed3136d525dea489892abc29a1f4c9b8fb344d74ca",
+      "sha256": "fe9e40a5a25b7db0bbc9f4e0bdecd6c2e7bafe80b120644814c3304e05c3c472",
       "files": [
-        "logos/dua-channel.png",
-        "logos/unused/dua-channel.png"
+        "logos/international/sony-entertainment-television.png",
+        "logos/sony-entertainment-television-10c5801e3c.png"
       ]
     },
     {
@@ -6781,6 +6506,13 @@
         "logos/international/pluto-tv-motor-sweden-dk.png",
         "logos/international/pluto-tv-motor-sweden-no.png",
         "logos/international/pluto-tv-motor-sweden.png"
+      ]
+    },
+    {
+      "sha256": "fffa4091924ba6e167618d5a7efdcffd4b5734b7c7f12e38ceaa83decae44838",
+      "files": [
+        "logos/golf-golfpass.png",
+        "logos/golfpass.png"
       ]
     }
   ],
@@ -8766,6 +8498,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/darshana-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -10880,6 +10613,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/axn-movies-spain.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
     "logos/international/axs-tv-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -11557,6 +11294,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/jazz-tv-1080p-not-24-7.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
     "logos/international/jiangsu-movie-channel-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -11650,6 +11391,22 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/max4.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/maxcine-2-720p.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/maxcine-720p.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/maxcine-comedy-720p.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/maxcine-family-720p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -12497,6 +12254,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/star-action-720p.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
     "logos/international/star-cinema.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -12570,6 +12331,10 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/telehit.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/tf1-series-films-1080p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -16564,6 +16329,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-sports-2-telugu-fd5f54f558.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -17002,6 +16768,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tamilan-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17056,6 +16823,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tehzeeb-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17196,10 +16964,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/the-q-india-576p.png": [
-      "IPTV-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/the-q.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17612,6 +17376,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tv-brics-english.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -20533,6 +20298,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/darshana-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22651,6 +22417,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/axn-movies-spain.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
     "logos/international/axs-tv-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -23328,6 +23098,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/jazz-tv-1080p-not-24-7.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
     "logos/international/jiangsu-movie-channel-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -23421,6 +23195,22 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/max4.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/maxcine-2-720p.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/maxcine-720p.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/maxcine-comedy-720p.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/maxcine-family-720p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -24268,6 +24058,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/star-action-720p.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
     "logos/international/star-cinema.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -24341,6 +24135,10 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/telehit.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/tf1-series-films-1080p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -28336,6 +28134,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-sports-2-telugu-fd5f54f558.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -28774,6 +28573,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tamilan-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -28828,6 +28628,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tehzeeb-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -28969,10 +28770,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/the-q-india-576p.png": [
-      "IPTV-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/the-q.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29385,6 +29182,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tv-brics-english.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -30744,7 +30542,6 @@
     "logos/international/axn-latin-america-mexico.png",
     "logos/international/axn-latin-america-south.png",
     "logos/international/axn-movies-portugal-720p.png",
-    "logos/international/axn-movies-spain.png",
     "logos/international/axn-poland-1080p.png",
     "logos/international/axn-portugal-1080p.png",
     "logos/international/axn-white-poland-576i.png",
@@ -30933,7 +30730,6 @@
     "logos/international/italianissimo-360p-not-24-7.png",
     "logos/international/japanimtv-1080p.png",
     "logos/international/jaya-plus-576p.png",
-    "logos/international/jazz-tv-1080p-not-24-7.png",
     "logos/international/jiangxi-children-s-channel.png",
     "logos/international/jiangxi-economy-life-channel.png",
     "logos/international/job-tv-1080p.png",
@@ -32038,6 +31834,7 @@
     "logos/the-lego-channel.png",
     "logos/the-movie-club-plus2.png",
     "logos/the-q-india.png",
+    "logos/the-q.png",
     "logos/the-walking-dead-universe-1080p-5755c61da2.png",
     "logos/tiktok-radio-brasil-673c420aa2.png",
     "logos/time-television-converted-db3c1e68ea.png",
@@ -32080,9 +31877,7 @@
     "logos/unused/111-tv-720p-048131bc74.png",
     "logos/unused/12-tv-parma-576p-b118b37c38.png",
     "logos/unused/12tv-1080p-0779b126a7.png",
-    "logos/unused/13-festival-1080p-c89c0ee60b.png",
     "logos/unused/13-humor-1080p-d117653b6b.png",
-    "logos/unused/13-kids-1080p-09def2902d.png",
     "logos/unused/13-realities-1080p-92e499a997.png",
     "logos/unused/13c-1080p-6fcbc5ece9.png",
     "logos/unused/13e-1080p-4ccb6bb70b.png",
@@ -32093,9 +31888,7 @@
     "logos/unused/16-anni-e-incinta-fca08398ff.png",
     "logos/unused/16tv-budapest-360p-c2cb0aa756.png",
     "logos/unused/1almeretv-720p-4594bf7d44.png",
-    "logos/unused/1hd-music-television-1080p-f2f072fd85.png",
     "logos/unused/1kzn-tv-576p-76d8dfd066.png",
-    "logos/unused/1mus.png",
     "logos/unused/1tv-720p-612f0d5188.png",
     "logos/unused/1twente-tv-1080p-31444ad8c6.png",
     "logos/unused/2-2-1080p-1547852552.png",
@@ -32110,7 +31903,6 @@
     "logos/unused/2x2-1080p-852df70e1d.png",
     "logos/unused/30a-darcizzle-offshore-720p-f38af23769.png",
     "logos/unused/30a-georgia-hollywood-review-720p-f303cf8635.png",
-    "logos/unused/30a-golf-kingdom-720p-a0db6020af.png",
     "logos/unused/30a-investment-pitch-720p-8c2205b4ad.png",
     "logos/unused/30a-luxe-life-discovered-720p-48feda787a.png",
     "logos/unused/30a-music.png",
@@ -32124,7 +31916,6 @@
     "logos/unused/36-tv-huacho-1080p-bac905f990.png",
     "logos/unused/360-1080p-560da6d395.png",
     "logos/unused/360-rftv-576p-14c8d033d0.png",
-    "logos/unused/360tunebox-1080p-c81dfec860.png",
     "logos/unused/365-days-tv-576p-7949974ac0.png",
     "logos/unused/3abn-canada-720p-8169eb91ab.png",
     "logos/unused/3abn-english-720p-272a13988d-converted-d353cd64f8.png",
@@ -32134,7 +31925,6 @@
     "logos/unused/3abn-kids-720p-d71b6bf537.png",
     "logos/unused/3abn-kids.png",
     "logos/unused/3abn-latino-720p-9aab232e07.png",
-    "logos/unused/3abn-praise-him-music-network-720p-12e7a6309e.png",
     "logos/unused/3abn-proclaim-network-720p-40f4468b19.png",
     "logos/unused/3abn-russia-720p-b6d73bd105.png",
     "logos/unused/3cat-cameres-del-temps-1080p-406c4a57c8.png",
@@ -32143,11 +31933,9 @@
     "logos/unused/3sat-61975316e4-converted-c99772b907.png",
     "logos/unused/3sat-61975316e4.png",
     "logos/unused/4-fun-kids-576i-64da9e594d.png",
-    "logos/unused/4-music.png",
     "logos/unused/48-hours-1080p-d4bac131f1.png",
     "logos/unused/4e-1080p-6782ed5d8b.png",
     "logos/unused/4ever-theater-1080p-ac6eb358a7.png",
-    "logos/unused/4kurd-fc0383f503.png",
     "logos/unused/4u-tv-720p-356b48aaf6.png",
     "logos/unused/5-cops-b6811f2405.png",
     "logos/unused/5-minut-tishiny-720p-4df1fed10c-converted-9bcf25e68a.png",
@@ -32172,10 +31960,8 @@
     "logos/unused/aakaash-aath-720p-5d628a28dd.png",
     "logos/unused/abadan-tv-576p-3360d2aa21.png",
     "logos/unused/abaza-tv-1080p-951c10aa2d.png",
-    "logos/unused/abn-bible-movies-channel-720p-cc14fe65bb.png",
     "logos/unused/abtv-bariloche-eaec05937e.png",
     "logos/unused/academy-tv.png",
-    "logos/unused/activa-tv-720p-0492c146e8.png",
     "logos/unused/ada-tv-1080p-32a5bea8f9.png",
     "logos/unused/adoram-tv-720p-f670d73f7a.png",
     "logos/unused/adrenalina-pura-tv-720p-85f6a8f4d8.png",
@@ -32193,10 +31979,8 @@
     "logos/unused/al-rayyan-tv-1080p-bcd8cb26a7.png",
     "logos/unused/al-souriya-tv-1080p-85d1e9efc8-converted-6b1caf6489.png",
     "logos/unused/al-souriya-tv-1080p-85d1e9efc8.png",
-    "logos/unused/al-sunnah-tv.png",
     "logos/unused/al-wousta-tv-1080p-0c3b36c945.png",
     "logos/unused/al-zahra-tv-turkic-720p-5a6c8b970f.png",
-    "logos/unused/al-zahra-tv-turkic.png",
     "logos/unused/alabbassia-tv-1080p-a283442ef0.png",
     "logos/unused/alanya-posta-tv-240p-1820df71a6.png",
     "logos/unused/alawla-tv-1080p-33c7a600c4.png",
@@ -32221,28 +32005,21 @@
     "logos/unused/am-canal-ddb3ca4da2.png",
     "logos/unused/amazonia-tv-62400b1d98.png",
     "logos/unused/amazonica-tv-480p-047c49902b.png",
-    "logos/unused/amc-1080p-95485d9836.png",
     "logos/unused/amc-en-espanol-720p-0fcb9c1d26.png",
     "logos/unused/amc-europe-95485d9836.png",
     "logos/unused/amc-latin-america-1080p-95485d9836.png",
     "logos/unused/america-tv-720p-3524ac1d9e.png",
-    "logos/unused/american-horrors-95025c0d.png",
-    "logos/unused/amg-tv-classic.png",
     "logos/unused/amga-tv-1080p-7b1283966e.png",
     "logos/unused/amman-tv-720p-b0ba9e03db.png",
-    "logos/unused/amusic-channel-480p-59acbdb4c0.png",
     "logos/unused/anand-tv-720p-51105ebf68.png",
-    "logos/unused/and-tv.png",
     "logos/unused/andorra-tv-1080p-3abea3ace9.png",
     "logos/unused/antena-tv-1080p-a56e77fa1b.png",
     "logos/unused/antofagasta-tv-1080p-ade72d5aaf.png",
     "logos/unused/apsua-tv-1080p-cfea502a65.png",
     "logos/unused/ara-tv-720p-94255596ad.png",
-    "logos/unused/arabica-tv.png",
     "logos/unused/araruna-tv-1080p-27a2b193da.png",
     "logos/unused/artflix-movie-classics-720p-1888c5698d.png",
     "logos/unused/aryan-tv-national.png",
-    "logos/unused/asharq-discovery-1080p-da46bd8597.png",
     "logos/unused/asian-drama-1080p-5da5c4d647.png",
     "logos/unused/astana-tv-576p-4f42e04434.png",
     "logos/unused/atacama-tv-720p-f2d8380ce2.png",
@@ -32259,15 +32036,12 @@
     "logos/unused/axn-asia-1080p-e1b23acc44.png",
     "logos/unused/axn-black-576p-08cff274cc.png",
     "logos/unused/axn-cee-e8caac66d8.png",
-    "logos/unused/axn-crime-c719b192f7.png",
     "logos/unused/axn-movies-720p-8e8860221a.png",
     "logos/unused/axn-spin-7cee26abb8.png",
     "logos/unused/axn-white-576p-52497fac95.png",
     "logos/unused/aza-tv-hd-1080p-b59b0305df.png",
-    "logos/unused/azan-tv-15e8ac79.png",
     "logos/unused/b4u-kadak-576p-f49a2a6e14.png",
     "logos/unused/b4u-movies-576p-fd61c20d7c.png",
-    "logos/unused/bahrain-sports-1.png",
     "logos/unused/balikpapan-tv-720p-7e027105ce.png",
     "logos/unused/balticum-tv-576p-0791a13de3.png",
     "logos/unused/bantul-the-great-35f9777f.png",
@@ -32290,12 +32064,9 @@
     "logos/unused/bet-comedy-movies-b72988086f.png",
     "logos/unused/bhagyam-tv-576p-132ad17dbe.png",
     "logos/unused/biz-music-42f15c54.png",
-    "logos/unused/biz-music-720p-9f4c0c5b64.png",
     "logos/unused/boca-chica-tv-720p-c9ec64c4ed.png",
     "logos/unused/bollywood-classic.png",
-    "logos/unused/boom-tv-1080p-fdb4a495cb.png",
     "logos/unused/boonniyom-tv-720p-32f1060335.png",
-    "logos/unused/bta-tv-720p-4e7cddfa0e.png",
     "logos/unused/business-rockstars-720p-4def98aeb0.png",
     "logos/unused/c-malayalam-tv-720p-3b1c6293f5.png",
     "logos/unused/c-malayalam-tv-f0687ee4.png",
@@ -32310,15 +32081,9 @@
     "logos/unused/cascara-tv-720p-b79fd75df1.png",
     "logos/unused/catv-1080p-041c09b50f.png",
     "logos/unused/cctv-11-720p-fa8fb571ae.png",
-    "logos/unused/cctv-15-1080p-91371cd633.png",
     "logos/unused/cctv-3-720p-6d111d0a4c.png",
     "logos/unused/cctv-4-europe-1a776905fb.png",
-    "logos/unused/cctv-6-hd-1080p-341f1954fa.png",
-    "logos/unused/cctv-billiards-1080p-b0f7f58939.png",
     "logos/unused/cctv-nostalgia-theater-1080p-027994d9fc.png",
-    "logos/unused/cctv-storm-music-1080p-7d4f900934.png",
-    "logos/unused/cctv-storm-theater-1080p-50f2bff2fb.png",
-    "logos/unused/cctv-the-first-theater-1080p-16513a0aad.png",
     "logos/unused/celta-tv-240p-a09e3fd785.png",
     "logos/unused/cfm-tv-channel-98-360p-79b6694ebd.png",
     "logos/unused/cgtn-documentary-english.png",
@@ -32345,14 +32110,11 @@
     "logos/unused/cinemax-moremax.png",
     "logos/unused/cinevault-westerns-04feada5.png",
     "logos/unused/cira-tv-1080p-ae81a659a6.png",
-    "logos/unused/classic-cinema-240p-431cc7a223.png",
     "logos/unused/classic-movie-westerns-f7feb1b7dc.png",
     "logos/unused/classic-movies-27994c39.png",
     "logos/unused/classic-movies-channel-1d5f82d98a.png",
     "logos/unused/classic-tv-crime-drama-655fc0885f.png",
     "logos/unused/classic-tv-drama-f5e8cc5c9a.png",
-    "logos/unused/classique-tv-360p-6f1c2ec605.png",
-    "logos/unused/cmc-tv.png",
     "logos/unused/cmm-tv-1080p-9a09717ac6.png",
     "logos/unused/cmtv-720p-5bf23d265d.png",
     "logos/unused/code-fashion-tv-1080p-eba84a3007.png",
@@ -32364,11 +32126,8 @@
     "logos/unused/cotubanama-tv-1080p-1cf3853ae3.png",
     "logos/unused/cowboy-movie-channel.png",
     "logos/unused/cromtv-1080p-c8af54e682.png",
-    "logos/unused/dance-tv.png",
     "logos/unused/dangal-2-720p-18d63673a7.png",
-    "logos/unused/dangal-tv.png",
     "logos/unused/darshana-tv-360p-172e185e63.png",
-    "logos/unused/dbm-tv-1080p-002259b21f.png",
     "logos/unused/dd-arun-prabha-576p-5fb9868af8.png",
     "logos/unused/dd-bangla-576p-ef9b5af330.png",
     "logos/unused/dd-bharati-576p-0dd8dfb333.png",
@@ -32383,8 +32142,6 @@
     "logos/unused/decima-tv-720p-bbd677259b.png",
     "logos/unused/dellatv-720p-e5cbfd4de7.png",
     "logos/unused/delta-tv-123428a1e9.png",
-    "logos/unused/dhoom-music-576p-ba62bd030a.png",
-    "logos/unused/discover-pakistan.png",
     "logos/unused/discovery-channel-82927394a8.png",
     "logos/unused/discovery-science-06c04bcc.png",
     "logos/unused/discovery-turbo-e8fbc7f6.png",
@@ -32399,11 +32156,9 @@
     "logos/unused/dora-tv-2bd66b2e9e.png",
     "logos/unused/dream-tv-480p-d4a94a77db.png",
     "logos/unused/dreamtv-1080p-f928266d1c.png",
-    "logos/unused/dua-channel.png",
     "logos/unused/duronto-tv-1ad55c95.png",
     "logos/unused/duta-tv-360p-441e03b3d2.png",
     "logos/unused/ebony-tv-by-lionsgate-1080p-f90858c31e-converted-47a8581d6a.png",
-    "logos/unused/ebony-tv-by-lionsgate-1080p-f90858c31e.png",
     "logos/unused/efarina-tv-720p-307c0afabc.png",
     "logos/unused/emantv-1080p-b465ae9d98.png",
     "logos/unused/emporda-tv-1080p-5be79b5610.png",
@@ -32413,18 +32168,14 @@
     "logos/unused/epic-tv-digital.png",
     "logos/unused/espn-3-720p-fb45567d52.png",
     "logos/unused/espn-4-1080p-f9487ad489.png",
-    "logos/unused/espn8-the-ocho-1080p-76369a61db.png",
-    "logos/unused/espnu-720p-da06a20f5d.png",
     "logos/unused/etv-bal-bharat-576p-cbd0976ccf.png",
     "logos/unused/euro-sports-hd.png",
-    "logos/unused/eurosport-4k-czechia-1a359dc9dd.png",
     "logos/unused/extra-tv-42-720p-07d6d24401.png",
     "logos/unused/farmodatv-1080p-6f583b21ac.png",
     "logos/unused/fashiontv-1080p-37cc035c2c.png",
     "logos/unused/fashiontv-paris-l-original-1080p-ccf00a0d8f.png",
     "logos/unused/fashiontv-secrets-1080p-e90e2c8d5b.png",
     "logos/unused/feel-good-drama-ffa7dcc678.png",
-    "logos/unused/fight-network.png",
     "logos/unused/filamtv-network-720p-787b684a7e.png",
     "logos/unused/filmes-suspense-19ef6540fd.png",
     "logos/unused/filmrise-anime-720p-8438bdb320.png",
@@ -32432,8 +32183,6 @@
     "logos/unused/filmrise-classic-tv-720p-0e9327c5d8.png",
     "logos/unused/filmrise-forensic-files-720p-56ce9d346d.png",
     "logos/unused/filmrise-western-720p-7d3f145be0-converted-d85c0623ef.png",
-    "logos/unused/filmrise-western-720p-7d3f145be0.png",
-    "logos/unused/fmtv-83c0af144c.png",
     "logos/unused/fon-music-tnt-music-converted-62a531494a.png",
     "logos/unused/fon-music-tnt-music.png",
     "logos/unused/fortuna-tv-1080p-fc5cd47367.png",
@@ -32446,7 +32195,6 @@
     "logos/unused/goldmines-576p-99e087b760.png",
     "logos/unused/golf-network.png",
     "logos/unused/good-idea-tv-1080p-d45c1d9d62.png",
-    "logos/unused/grand-cinema.png",
     "logos/unused/gravitas-movies.png",
     "logos/unused/great-movies.png",
     "logos/unused/great-romance.png",
@@ -32455,24 +32203,20 @@
     "logos/unused/gyandarshan.png",
     "logos/unused/hallmark-movies-more-1080p-9526bb5c86-converted-98d1f5941d.png",
     "logos/unused/hallmark-movies-more-1080p-9526bb5c86.png",
-    "logos/unused/harbin-movie-channel-41537a954e.png",
     "logos/unused/hare-krsna-tv-1080p-4d437fce39.png",
     "logos/unused/hbo-hits-1080p-27da015c1f.png",
     "logos/unused/hbo-movies-1080p-ab2a081e20.png",
     "logos/unused/hbo-movies-fbbc0604.png",
     "logos/unused/hbo-movies.png",
     "logos/unused/hindi-hits-5806dc82.png",
-    "logos/unused/history-latin-america-1080p-e7eb0f29d9.png",
     "logos/unused/history-warfare-now.png",
     "logos/unused/hola-tv-latin-america-1080p-5e8e2c43ba.png",
     "logos/unused/hunan-tv-2160p-b1ca65294a.png",
     "logos/unused/i-am-channel-576p-fdc8693f06.png",
     "logos/unused/india-tv-y-e146360ad1.png",
-    "logos/unused/infinita-tv-1080p-0108680fa6.png",
     "logos/unused/interalmeria-tv-1080p-c5646e2fd3.png",
     "logos/unused/islamic-tv.png",
     "logos/unused/islita-tv-1080p-18491ab9fa.png",
-    "logos/unused/itage-tv-480p-453d42d446.png",
     "logos/unused/ja-tv.png",
     "logos/unused/jalwa-tv-dfcf679014.png",
     "logos/unused/janam-tv-360p-06787ef535.png",
@@ -32483,7 +32227,6 @@
     "logos/unused/joshua-tv-720p-afd5ecae8e.png",
     "logos/unused/junior-technologia-tv-1080p-c28ca9ce59.png",
     "logos/unused/k-cine-b59bf8eb.png",
-    "logos/unused/k-cine.png",
     "logos/unused/kairali-tv-360p-cde9b280d2.png",
     "logos/unused/kairali-we-576p-e97ca4d762.png",
     "logos/unused/kalaignar-murasu-360p-41b67ab31f.png",
@@ -32492,7 +32235,6 @@
     "logos/unused/kangba-tv-0c24c61427.png",
     "logos/unused/kappa-tv-576p-8bd1b9f690.png",
     "logos/unused/kawanua-tv-720p-c2ddafde8d.png",
-    "logos/unused/kayhan-tv-720p-470680d85f.png",
     "logos/unused/kbs-world-720p-d4518e9176.png",
     "logos/unused/khushboo-bangla-576p-44856f0a5f.png",
     "logos/unused/kids-movie-club-0ab968ea43.png",
@@ -32505,7 +32247,6 @@
     "logos/unused/la-granja-tv-720p-19f40bd590.png",
     "logos/unused/la-ruta-tv-40cff89f1f.png",
     "logos/unused/laliga-hd.png",
-    "logos/unused/lamore-rock-show-webtv-720p-23e63ad29f.png",
     "logos/unused/lana-tv-576p-881f957f1b.png",
     "logos/unused/latina-tv-internacional-720p-ad58e5d823.png",
     "logos/unused/little-guyana-tv-720p-35c9006ca7.png",
@@ -32522,11 +32263,8 @@
     "logos/unused/manoranjan-prime-576p-8c583ccf26.png",
     "logos/unused/manoranjan-tv-576p-43bbf7550e.png",
     "logos/unused/masala-tv-0018c2a32b.png",
-    "logos/unused/maverick-black-cinema-1080p-8369c6f55f.png",
-    "logos/unused/mbc-3-usa.png",
     "logos/unused/mbc-drama-south-korea-480p-geo-blocked-ae3b25e82b.png",
     "logos/unused/mbc-masr-drama-1080p-239d80d440.png",
-    "logos/unused/mcn6-music-channel-1080p-b16c4717c3.png",
     "logos/unused/mega-tv-1080p-84585731c6.png",
     "logos/unused/mega-tv-jaen-1080p-2bb91505af.png",
     "logos/unused/mei-ah-movie-channel-1080p-427874b362.png",
@@ -32540,18 +32278,14 @@
     "logos/unused/mntv-075accb781.png",
     "logos/unused/mnx.png",
     "logos/unused/moldova-tv-1080p-4da3ee2f75.png",
-    "logos/unused/mon-bangla-4a53249503.png",
-    "logos/unused/more-than-sports-tv.png",
     "logos/unused/more-tv-drama-061fbc9550.png",
     "logos/unused/movie-music-by-stingray-1080p-cf132e65b8-converted-8b72a9d28e.png",
-    "logos/unused/movie-music-by-stingray-1080p-cf132e65b8.png",
     "logos/unused/moviedome-720p-96c8b044c7.png",
     "logos/unused/movies-480p-741fd393f0.png",
     "logos/unused/movies-now-a2de1f12.png",
     "logos/unused/movies-now-hd.png",
     "logos/unused/movies-thriller.png",
     "logos/unused/moviesphere-uk-df69e7c9.png",
-    "logos/unused/moviesphere.png",
     "logos/unused/movistar-plus-576p-06a78a1b00.png",
     "logos/unused/mtv-are-you-the-one-8719394a7c.png",
     "logos/unused/mtv-biggest-pop-1080p-4508e1a99c.png",
@@ -32648,7 +32382,6 @@
     "logos/unused/onda-tv-720p-b2a1a7d6a4.png",
     "logos/unused/open-rotterdam-tv-720p-7bdaf66a15.png",
     "logos/unused/oxygen-music.png",
-    "logos/unused/p2m-tv.png",
     "logos/unused/paighan-tv-00a9e59079.png",
     "logos/unused/panamericana-tv-1080p-2219e05e40.png",
     "logos/unused/paramount-movie-channel-d46b22ff12.png",
@@ -32658,7 +32391,6 @@
     "logos/unused/payam-e-afghan-tv-1080p-8d84ddad34.png",
     "logos/unused/payam-javan-tv-720p-2c2a75d317.png",
     "logos/unused/persiana-kore.png",
-    "logos/unused/persiana-korea-50841eae46.png",
     "logos/unused/pictures.png",
     "logos/unused/pitaara-720p-b8ea7f3162.png",
     "logos/unused/planea-tv-1080p-479f375d17.png",
@@ -32701,11 +32433,8 @@
     "logos/unused/pluto-tv-series-drama-632e398047.png",
     "logos/unused/podium-tv-1080p-35fa3fb508.png",
     "logos/unused/podium-tv-3-1080p-35fa3fb508.png",
-    "logos/unused/polsat-viasat-history-1080p-62666051f6.png",
     "logos/unused/pooya-tv-plus-576p-5bf2ade748.png",
-    "logos/unused/pop-world-tv-720p-3faede8b6c.png",
     "logos/unused/powert-rk-tv.png",
-    "logos/unused/powerturk-slow-1080p-6b191586ae.png",
     "logos/unused/prarthana-tv-720p-73b081419a.png",
     "logos/unused/productiva-tv-720p-097f936a86.png",
     "logos/unused/ptv-sports.png",
@@ -32730,7 +32459,6 @@
     "logos/unused/red-cctv-480p-d14b9d5056.png",
     "logos/unused/regio-tv-bodensee-1080p-7a5c6d98bb.png",
     "logos/unused/rete-biella-tv-720p-80dc972edd.png",
-    "logos/unused/retro-music-tv.png",
     "logos/unused/rhema-tv-1080p-f33e9de4fc.png",
     "logos/unused/rika-tv-480p-83dc048cf0.png",
     "logos/unused/romedy-now.png",
@@ -32738,8 +32466,6 @@
     "logos/unused/rongeen.png",
     "logos/unused/rouge-tv-switzerland.png",
     "logos/unused/rtv-1080p-4933b9ab9a.png",
-    "logos/unused/rumba-tv-3182ea7301.png",
-    "logos/unused/rupasi-bangla-576p-e677fd1858.png",
     "logos/unused/rwanda-tv-1080p-87fde20471.png",
     "logos/unused/ryongnamsan-tv-a7ec53a9ce.png",
     "logos/unused/s-6fc75074e1-converted-4559aea6a9.png",
@@ -32754,7 +32480,6 @@
     "logos/unused/sangeet-bangla-576p-695b56b52a.png",
     "logos/unused/sankara-tv-576p-ce7dd46996.png",
     "logos/unused/sathiyam-tv-360p-4540db972e.png",
-    "logos/unused/saudi-quran.png",
     "logos/unused/saudi-sunnah-facca1d2.png",
     "logos/unused/sctv11-720p-ebc543ef40.png",
     "logos/unused/sctv12-720p-74d0779866.png",
@@ -32769,7 +32494,6 @@
     "logos/unused/sesc-tv-720p-cdc398da08.png",
     "logos/unused/sfera-tv-480p-8135fc2a44.png",
     "logos/unused/shalom-tv-360p-3b8fac38d6.png",
-    "logos/unused/shanson-tv.png",
     "logos/unused/sharnam-tv-720p-468591aaaa.png",
     "logos/unused/shemaroo-josh-360p-28e43c141a.png",
     "logos/unused/sigma-tv-576p-fb353e1563.png",
@@ -32794,12 +32518,9 @@
     "logos/unused/speed-sports-1.png",
     "logos/unused/spektratv-720p-24da903cfa.png",
     "logos/unused/sperantatv-1080p-39e54fca3d.png",
-    "logos/unused/sports-first-tv.png",
-    "logos/unused/sqala-tv-1080p-d174c17569.png",
     "logos/unused/sriwijaya-tv-720p-47872eb670.png",
     "logos/unused/star-movies-2087bb49.png",
     "logos/unused/star-movies-select-37627406.png",
-    "logos/unused/star-news-722ad595.png",
     "logos/unused/star-sports-1.png",
     "logos/unused/star-sports-2-hindi-720p.png",
     "logos/unused/star-sports-select-2-720p-e06b4cd63c.png",
@@ -32814,9 +32535,6 @@
     "logos/unused/stingray-karaoke-720p-8ac71874a5.png",
     "logos/unused/stingray-pop-adult-1080p-1a61a12a4a.png",
     "logos/unused/stingray-remember-the-80s-1080p-71de3ea13b.png",
-    "logos/unused/stingray-remember-the-80s.png",
-    "logos/unused/stingray-today-s-k-pop-1080p-ca046c288b.png",
-    "logos/unused/stingray-today-s-kpop.png",
     "logos/unused/subhavaartha-tv-720p-bf55ec89c1.png",
     "logos/unused/sultra-tv-720p-e7e363312a.png",
     "logos/unused/sumtv-english-05e63127.png",
@@ -32824,7 +32542,6 @@
     "logos/unused/sumtv-latino-1080p-6856a86955.png",
     "logos/unused/sundom-tv-y-6d1f6fab19.png",
     "logos/unused/super-pop-c649c39b89.png",
-    "logos/unused/super-simple-songs-1080p-f39abf3ffc.png",
     "logos/unused/supernatural-drama-be9e7e4621.png",
     "logos/unused/suram-tv-720p-946d6a71df.png",
     "logos/unused/surena-tv-063c25a727.png",
@@ -32833,21 +32550,11 @@
     "logos/unused/tbmm-tv-720p-61b1b0801b.png",
     "logos/unused/tehran-tv-1080p-114b024b2a.png",
     "logos/unused/tele-ritmo-d55de812a0.png",
-    "logos/unused/teleritmo.png",
     "logos/unused/telesystem-tv-720p-85dcc0a903.png",
     "logos/unused/the-walking-dead-universe.png",
     "logos/unused/toffee-movies-674d6eeb.png",
-    "logos/unused/trace-africa-1080p-a177d91a65.png",
-    "logos/unused/trace-ayiti-1080p-62e392142b.png",
-    "logos/unused/trace-jama-1080p-290110fe8a.png",
-    "logos/unused/trace-kitoko-1080p-1f2a458d3f.png",
     "logos/unused/trace-latina-1080p-0961cf2b10.png",
     "logos/unused/trace-latino.png",
-    "logos/unused/trace-mboa-1080p-009457a7c6.png",
-    "logos/unused/trace-mziki-1080p-23c41b7a67.png",
-    "logos/unused/trace-sport-stars.png",
-    "logos/unused/trace-urban.png",
-    "logos/unused/trace-vanilla-islands-1080p-ebb8257bc8.png",
     "logos/unused/travel-xp-hd.png",
     "logos/unused/trt-music-aa395071-converted-fcf3ca9247.png",
     "logos/unused/trt-music-aa395071.png",
@@ -32861,9 +32568,7 @@
     "logos/unused/tv9-bharatvarsh-y-1effd3554d.png",
     "logos/unused/tvj-1080p-b941584536.png",
     "logos/unused/tvs-classic-movies-360p-c2d4549656.png",
-    "logos/unused/tvs-drive-in-movie-576p-d0b4166233.png",
     "logos/unused/tvs-film-noir-network-720p-8b0ec8dd60.png",
-    "logos/unused/tvs-nostalgia-movies-480p-1058c2772e.png",
     "logos/unused/tvs-western-movie-360p-23ea1ee704.png",
     "logos/unused/ua-music-1080p-5ea4b8d888.png",
     "logos/unused/uaa-tv-576p-41c12fce77.png",
@@ -32880,7 +32585,6 @@
     "logos/unused/vanitha-tv-576p-1c40863c9e.png",
     "logos/unused/vantage-music-720p-bf4096eec6.png",
     "logos/unused/vantage-music-uk-1080p-geo-blocked-bf4096eec6.png",
-    "logos/unused/vantage-rock-720p-65f9597043.png",
     "logos/unused/vasanth-tv-576p-e81c762aab.png",
     "logos/unused/velicham-tv-576p-b05cb0220b.png",
     "logos/unused/vendhar-tv-576p-a135b125f7.png",
@@ -32889,7 +32593,6 @@
     "logos/unused/vevo-90s-00s-5c368908.png",
     "logos/unused/vevo-pop-1080p-940c520880.png",
     "logos/unused/vevo-pop-4afdfff5.png",
-    "logos/unused/vevo-pop.png",
     "logos/unused/vevo-retro-rock-1080p-bc78e75ce0.png",
     "logos/unused/vh1-720p-dc47af6a4c.png",
     "logos/unused/vh1-queens-of-reality-5baa4a199e.png",
@@ -32900,7 +32603,6 @@
     "logos/unused/vychodoceska-tv-1080p-30d269e21e.png",
     "logos/unused/wairarapa-tv-1080p-1f9d4158bc.png",
     "logos/unused/watan-tv-1080p-167e06490a.png",
-    "logos/unused/watch-it-scream-720p-b8531f612b.png",
     "logos/unused/wattan-tv-720p-cc92229ed0.png",
     "logos/unused/weertfm-tv-720p-ddd45e23b0.png",
     "logos/unused/whiplash-cinema-480p-21f362770b.png",
@@ -32909,7 +32611,6 @@
     "logos/unused/xite-720p-577c1b0f3a.png",
     "logos/unused/xite-hits.png",
     "logos/unused/xite-reggae-vibes-1080p-157e5ece5e-converted-3f0cf066ac.png",
-    "logos/unused/xite-reggae-vibes-1080p-157e5ece5e.png",
     "logos/unused/xite-rock-x-metal-1080p-08222c2607.png",
     "logos/unused/xite-siempre-latino-1080p-ef6e87e703.png",
     "logos/unused/xtream-sports.png",
