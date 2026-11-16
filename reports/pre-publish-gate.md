@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-15T02:24:51+00:00**
-Source playlist SHA-256: **7a602ff4a6fe777cc812dcedb118b638ab62913c0987dff0a6ac7d674a974d65**
+Generated: **2026-11-16T02:50:59+00:00**
+Source playlist SHA-256: **910e85f0a79f101b8afe550c781126fb156b183e4c678472f2fe3f1699777d73**
 
 Status: **PASS**
 
-- Current entries: **1284**
+- Current entries: **1298**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -14,15 +14,15 @@ Status: **PASS**
 - Review entries promoted: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing channel numbers: **13**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **606**
-- Numbered review entries: **431**
-- Same-ID metadata name conflicts: **1**
-- Orphan Backup entries: **10**
+- Primary entries missing channel numbers: **22**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **651**
+- Numbered review entries: **424**
+- Same-ID metadata name conflicts: **2**
+- Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **60**
-- Raw resolution/geoblock name tags: **59**
+- Entries missing tvg-language: **59**
+- Raw resolution/geoblock name tags: **58**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -30,26 +30,25 @@ Status: **PASS**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
 - Entries removed this run: **0**
-- Entries modified this run: **0**
+- Entries modified this run: **1**
 
 ## Protected-queue policy
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **606**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **651**.
 
 ## Blocking Reasons
 No hard safety blockers detected.
 
 ## Warnings / Manual Review
 
-- orphan Backup entries awaiting owner review: 10
-- entries missing tvg-language: 60
-- primary entries missing tvg-chno: 13
-- Backup/Review/discovery entries still numbered: 431
-- same-ID metadata name conflicts: 1
-- raw resolution/geoblock tags in channel names: 59
-- New queue candidates pending owner review: 60
+- entries missing tvg-language: 59
+- primary entries missing tvg-chno: 22
+- Backup/Review/discovery entries still numbered: 424
+- same-ID metadata name conflicts: 2
+- raw resolution/geoblock tags in channel names: 58
+- New queue candidates pending owner review: 59
 
 ## Review-queue logo gaps
 
@@ -59,6 +58,7 @@ None.
 
 ## Metadata conflicts
 
+- **dangaltv.in@sd** — Dangal [Indian Entertainment]; Dangal [Backup]; Dangal [Backup]; Dangal [Backup]; Dangal TV [Backup]; Dangal TV [Backup]; Dangal TV [Backup]
 - **pitaara.in@sd** — Pitaara [Backup]; Pitaara [Indian Movies]; Pitaara [Backup]; Pitaara [Backup]; Pitaara [Backup]; Pitaara TV [Backup]; Pitaara TV [Backup]; Pitaara TV [Backup]
 
 ## Raw name tags
@@ -118,7 +118,6 @@ None.
 - **Mr Bean Animated (1080p)** — New Backups
 - **Pogo (576p)** — New Backups
 - **Travelxp 4K HDR (2160p) [Geo-blocked]** — New Backups
-- **Jaihind TV (576p)** — New Channels
 - **VTU (1080p)** — New Channels
 - **WeatherSpy (India) (720p)** — New Channels
 - **Zodiak TV (1080p)** — New Channels
@@ -181,7 +180,6 @@ None.
 - Mr Bean Animated (1080p) has provisional/unverified queue country missing
 - Pogo (576p) has provisional/unverified queue country missing
 - Travelxp 4K HDR (2160p) [Geo-blocked] has provisional/unverified queue country missing
-- Jaihind TV (576p) has provisional/unverified queue country missing
 - VTU (1080p) has provisional/unverified queue country missing
 - WeatherSpy (India) (720p) has provisional/unverified queue country missing
 - Zodiak TV (1080p) has provisional/unverified queue country missing

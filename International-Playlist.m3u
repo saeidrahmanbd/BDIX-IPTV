@@ -1168,7 +1168,7 @@ https://49d735318d6b4c30a24a7997ea594e1b.mediatailor.us-west-2.amazonaws.com/v1/
 https://5098a8b860504a3690fd2e7c0a18d68f.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-817-FR-SONYONEHITSACTION-LG_FR/playlist.m3u8
 #EXTINF:-1 tvg-id="SonyOneHitsComedie.fr@HD" tvg-language="fra" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-one-hits-comedie.png" tvg-country="FR" tvg-content="Movies" group-title="France" tvg-name="Sony One Hits Comedie",Sony One Hits Comedie
 https://7aa9671895264ec9a384dfed1b992171.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-818-FR-SONYONEHITSCOMDIE-LG_FR/playlist.m3u8
-#EXTINF:-1 tvg-id="TF1SeriesFilms.fr@SD" channel-id="TF1SeriesFilms.fr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/tf1-series-films-1080p.png" tvg-country="FR" tvg-content="Movies" group-title="France" tvg-name="TF1 Series Films",TF1 Series Films
+#EXTINF:-1 tvg-id="TF1SeriesFilms.fr@SD" channel-id="TF1SeriesFilms.fr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/tf1-series-films-1080p.png" tvg-country="FR" tvg-content="Movies" tvg-language="fra" group-title="France" tvg-name="TF1 Series Films",TF1 Series Films
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/tf1_series_films/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="TraceAfrica.fr@SD" tvg-language="eng;fra" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-africa-1080p-a177d91a65.png" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Trace Africa",Trace Africa
 https://channels.trace.plus/Traceprod/AFRICA_FR_hd/index.m3u8
@@ -1874,7 +1874,7 @@ http://202.150.165.66:8088/play/101-HBOSignature/index.m3u8
 http://103.151.60.162:2122/play/a01h/index.m3u8?hls
 #EXTINF:-1 tvg-id="ActivaTV.es@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/activa-tv-720p-0492c146e8.png" tvg-country="ES" tvg-content="Music" group-title="Spain" tvg-name="Activa TV",Activa TV
 https://streamtv.mediasector.es/hls/activatv/index.m3u8
-#EXTINF:-1 tvg-id="AXNMovies.es@SD" channel-id="AXNMovies.es@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-movies-spain.png" tvg-country="ES" tvg-content="Movies" group-title="Spain" tvg-name="AXN Movies (Spain)",AXN Movies (Spain)
+#EXTINF:-1 tvg-id="AXNMovies.es@SD" channel-id="AXNMovies.es@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-movies-spain.png" tvg-country="ES" tvg-content="Movies" tvg-language="und" group-title="Spain" tvg-name="AXN Movies (Spain)",AXN Movies (Spain)
 http://sultanios.alwaysdata.net/vavo.php?ID=2493319111
 #EXTINF:-1 tvg-id="CadenaElite.es@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cadena-elite-dae12812df.png" tvg-country="ES" tvg-content="Music" group-title="Spain" tvg-name="Cadena Elite",Cadena Elite
 https://cloudvideo.servers10.com:8081/8004/index.m3u8
@@ -2330,13 +2330,13 @@ https://connection3-ent-nz.samsung.wurl.tv/playlist.m3u8
 https://mmn1.b-cdn.net/hls/MMN-HLS.m3u8
 #EXTINF:-1 tvg-id="MaverickBlackCinema.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maverick-black-cinema-1080p-8369c6f55f.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Maverick Black Cinema",Maverick Black Cinema
 https://maverick-maverick-black-cinema-3-us.roku.wurl.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="Maxcine.us@HD" channel-id="Maxcine.us@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/maxcine-720p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Maxcine",Maxcine
+#EXTINF:-1 tvg-id="Maxcine.us@HD" channel-id="Maxcine.us@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/maxcine-720p.png" tvg-country="US" tvg-content="Movies" tvg-language="spa" group-title="United States" tvg-name="Maxcine",Maxcine
 https://183.giatvcdn.com/giatvplayout7/giatv-208138/playlist.m3u8
-#EXTINF:-1 tvg-id="Maxcine2.us@HD" channel-id="Maxcine2.us@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/maxcine-2-720p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Maxcine 2",Maxcine 2
+#EXTINF:-1 tvg-id="Maxcine2.us@HD" channel-id="Maxcine2.us@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/maxcine-2-720p.png" tvg-country="US" tvg-content="Movies" tvg-language="spa" group-title="United States" tvg-name="Maxcine 2",Maxcine 2
 https://183.giatvcdn.com/giatvplayout7/giatv-209163/playlist.m3u8
-#EXTINF:-1 tvg-id="MaxcineComedy.us@HD" channel-id="MaxcineComedy.us@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/maxcine-comedy-720p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Maxcine Comedy",Maxcine Comedy
+#EXTINF:-1 tvg-id="MaxcineComedy.us@HD" channel-id="MaxcineComedy.us@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/maxcine-comedy-720p.png" tvg-country="US" tvg-content="Movies" tvg-language="spa" group-title="United States" tvg-name="Maxcine Comedy",Maxcine Comedy
 https://183.giatvcdn.com/giatvplayout7/giatv-208730/playlist.m3u8
-#EXTINF:-1 tvg-id="MaxcineFamily.us@HD" channel-id="MaxcineFamily.us@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/maxcine-family-720p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Maxcine Family",Maxcine Family
+#EXTINF:-1 tvg-id="MaxcineFamily.us@HD" channel-id="MaxcineFamily.us@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/maxcine-family-720p.png" tvg-country="US" tvg-content="Movies" tvg-language="spa" group-title="United States" tvg-name="Maxcine Family",Maxcine Family
 https://183.giatvcdn.com/giatvplayout7/giatv-208817/playlist.m3u8
 #EXTINF:-1 tvg-id="MBCAmerica.us@SD" tvg-language="eng;kor" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-america-7d5b369cc4.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MBC America",MBC America
 https://cdn-us-east-prod-ingest-infra-dacast-com.akamaized.net/624ff8f9-db18-da92-4d42-896fa2ff3eb3/source/index.m3u8
@@ -2520,7 +2520,7 @@ http://15.204.246.24:8080/SonyMoviesHD/index.m3u8
 https://61fc4f1a40a342daa23f92141853b7b4.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-gb_SparkleMovies/playlist.m3u8
 #EXTINF:-1 tvg-id="SpiritTV.us@SD" channel-id="SpiritTV.us@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/spirit-tv-720p-not-24-7.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Spirit TV [ ]",Spirit TV [ ]
 https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8
-#EXTINF:-1 tvg-id="StarAction.us@SD" channel-id="StarAction.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/star-action-720p.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Star Action",Star Action
+#EXTINF:-1 tvg-id="StarAction.us@SD" channel-id="StarAction.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/star-action-720p.png" tvg-country="US" tvg-content="Movies" tvg-language="eng" group-title="United States" tvg-name="Star Action",Star Action
 http://85.237.89.159:3342/ar-s/STAR-Action-HD/index.m3u8
 #EXTINF:-1 tvg-id="StarzComedy.us@East" tvg-language="eng;spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/starz-comedy-b4f7a4d16e.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Starz Comedy",Starz Comedy
 http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
@@ -2692,7 +2692,7 @@ http://80.241.215.175:1935/isangostar/isangostar/playlist.m3u8
 https://stream.ishtartv.com/live/iShtarHD/playlist.m3u8
 #EXTINF:-1 tvg-id="IvoireChannel.ci@SD" tvg-language="fra" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ivoire-channel-3c9ebec26d.png" tvg-country="CI" tvg-content="Music" group-title="International" tvg-name="Ivoire Channel",Ivoire Channel
 https://video1.getstreamhosting.com:1936/8244/8244/playlist.m3u8
-#EXTINF:-1 tvg-id="JazzTV.mk@SD" channel-id="JazzTV.mk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/jazz-tv-1080p-not-24-7.png" tvg-country="MK" tvg-content="Music" group-title="International" tvg-name="Jazz TV [ ]",Jazz TV [ ]
+#EXTINF:-1 tvg-id="JazzTV.mk@SD" channel-id="JazzTV.mk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/jazz-tv-1080p-not-24-7.png" tvg-country="MK" tvg-content="Music" tvg-language="und" group-title="International" tvg-name="Jazz TV [ ]",Jazz TV [ ]
 https://stream.nasatv.com.mk/jazztv/hls/jazztv_live.m3u8
 #EXTINF:-1 tvg-id="JordanSongs.jo@SD" tvg-language="ara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jordan-songs-9cced85c3c.png" tvg-country="JO" tvg-content="Music" group-title="International" tvg-name="Jordan Songs",Jordan Songs
 https://playlist.fasttvcdn.com/pl/cc0blorawy1ibohhrupraa/Song/playlist.m3u8

@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-15T02:25:34+00:00**
+Generated: **2026-11-16T02:51:45+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **7a602ff4a6fe777cc812dcedb118b638ab62913c0987dff0a6ac7d674a974d65**
-- International-Playlist.m3u SHA-256: **8acb8898c683fa633d4a1a86dfef767a1fb68f0a516ff9055f06d9a2fac6c38d**
+- IPTV-Playlist.m3u SHA-256: **910e85f0a79f101b8afe550c781126fb156b183e4c678472f2fe3f1699777d73**
+- International-Playlist.m3u SHA-256: **38d1fd58e55765408fb8599d7bad532fc9711e27611fa1345dfd9e76775fe11c**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 24 | 2 | 1258 |
-| International-Playlist.m3u | 0 | 811 | 0 | 2318 |
+| IPTV-Playlist.m3u | 0 | 24 | 2 | 1272 |
+| International-Playlist.m3u | 0 | 811 | 0 | 2326 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3576**
+- Logos needing attribution review: **3598**
 - Unofficial fallback logos: **2**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3576 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3598 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
@@ -44,7 +44,6 @@ Showing up to 40 of 3576 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | 7X Punjabi | 7XPunjabi.in | 7x-punjabi.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 8XM | 8XM.pk@SD | 8xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 8XM | 8XM.pk@SD | 8xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
@@ -70,6 +69,7 @@ Showing up to 40 of 3576 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Aakaash Aath | AakaashAath.in@SD | aakaash-aath.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | Aaryaa TV | AaryaaTV.in | aaryaa-tv.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | ACCDN | custom.accdn | accdn.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 
 ## Shared logo assets across distinct channel identities
 
@@ -120,16 +120,10 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | star-jalsha.png | Star Jalsha | Star.Jalsha.in |
 | star-jalsha.png | Star Jalsha | StarJalsha.in@HD |
 | star-jalsha.png | Star Jalsha | StarJalsha.in@SD |
-| star-sports-2.png | Star Sports 2 | StarSports2.in |
-| star-sports-2.png | Star Sports 2 Telugu | StarSports2Telugu.in@HD |
-| thikana.png | Thikana TV | ThikanaTV.us |
-| thikana.png | Thikana TV | thikana.tv.bd |
 | tolly-tv.png | Tolly TV | TollyTV.in |
 | tolly-tv.png | Tolly TV (1080p) | TollyTV.in@HD |
 | vision.png | Eurovision Sport | EurovisionSport.uk@Europe |
 | vision.png | Vision 24 | vision.24.bd |
-| yrf-music.png | YRF Music | YRFMusic.in |
-| yrf-music.png | YRF Music | YRFMusic.in@Nepal |
 
 ## Review policy
 
