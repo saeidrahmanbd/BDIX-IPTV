@@ -164,6 +164,15 @@ Before production enablement, demonstrate:
 8. **Resilience tests:** perform outage simulations and verify email alerts.
 9. **Retirement:** only after sustained evidence, separately propose removal or reduction of redundant GitHub-only watchdog logic.
 
+
+### Phase 2 implementation status (shadow Worker)
+
+The shadow Worker source is under `automation/reliability/worker/`. It provides a one-minute Cron Trigger and a bearer-protected `POST /reconcile` endpoint that share the same idempotent reconciliation function. It creates expected obligation rows for the current Bangladesh date and the next two dates, using the registry's local schedule and UTC conversion. It emits an append-only `OBLIGATION_CREATED` event only when a new obligation row is inserted.
+
+This phase is deliberately shadow-only: it does not call GitHub APIs, dispatch Actions, write repository contents, or publish playlists. The Worker configuration contains a placeholder D1 database ID and is not deployable until the owner creates a dedicated database and configures secrets. The external cron, GitHub App, and Healthchecks integration are not activated by this PR. The initial endpoint uses a bearer secret; timestamp/nonce replay protection, rate limiting, production dispatch, run reconciliation, completion artifacts, and independent publication verification remain later reviewed steps. A heartbeat is sent only after successful ledger reconciliation when a Healthchecks ping URL is configured.
+
+The D1 migration is maintained alongside the Worker. Apply it only to the dedicated reliability database after reviewing the generated schema; do not point this Worker at any production playlist data store.
+
 ## Rollback
 
 - Disable external dispatch at the Worker configuration level.
