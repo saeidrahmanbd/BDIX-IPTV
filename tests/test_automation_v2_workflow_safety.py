@@ -41,6 +41,24 @@ class WorkflowSafetyTests(unittest.TestCase):
         self.assertNotIn("contents: write", source)
         self.assertIn("scripts/recover_automation_v2_candidate_run.py", source)
 
+    def test_legacy_watchdog_has_independent_recovery_signals_and_late_checkpoints(self):
+        source = workflow_text("discovery-schedule-watchdog.yml")
+        self.assertIn("workflow_run:", source)
+        for workflow in (
+            "IPTV Playlist Update",
+            "IPTV New Channel Discovery",
+            "International Channel Discovery",
+            "Playlist Logo Repair and Localization",
+            "International Stream Health",
+            "Refresh IPTV EPG",
+        ):
+            self.assertIn(f"- {workflow}", source)
+        for checkpoint in ("15 1", "15 2", "15 3", "15 4"):
+            self.assertIn(f"cron: '{checkpoint}", source)
+        self.assertIn("actions: write", source)
+        self.assertIn("contents: read", source)
+        self.assertNotIn("contents: write", source)
+
     def test_candidate_bundle_has_no_production_push_or_pull_request_authority(self):
         source = workflow_text("automation-v2-candidate-bundle.yml")
         runner = (ROOT / "scripts" / "run_automation_v2_candidate_bundle.py").read_text(encoding="utf-8")

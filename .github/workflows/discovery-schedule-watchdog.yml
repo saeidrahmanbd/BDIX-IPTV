@@ -1,13 +1,27 @@
 name: Discovery Schedule Watchdog
-# GitHub schedule events are best-effort. Staggered checkpoints recover missed
-# discovery, logo, International health, maintenance and EPG jobs before 07:00 BDT.
-# The guard inspects each workflow's real writer/check job, not wrapper conclusions.
+# GitHub schedule events are best-effort and may be delayed or dropped.
+# Independent checkpoints plus workflow-completion callbacks recover missed
+# production jobs throughout the Bangladesh morning. The guard checks each
+# workflow's actual writer/probe job, not wrapper conclusions.
 on:
   push:
     branches: [main]
     paths:
       - '.github/workflows/discovery-schedule-watchdog.yml'
       - 'scripts/discovery_schedule_guard.py'
+  # A completed production writer is a second recovery signal. The watchdog
+  # rechecks all due jobs and dispatches only missing/failed work for today's
+  # Bangladesh date; per-workflow guards and writer locks prevent duplicates.
+  workflow_run:
+    workflows:
+      - IPTV Playlist Update
+      - IPTV New Channel Discovery
+      - International Channel Discovery
+      - Playlist Logo Repair and Localization
+      - International Stream Health
+      - Refresh IPTV EPG
+    types: [completed]
+    branches: [main]
   schedule:
     - cron: '15 23 * * *'  # 05:15 early discovery checkpoint
     - cron: '30 23 * * *'  # 05:30 discovery recovery
@@ -16,13 +30,17 @@ on:
     - cron: '15 0 * * *'   # 06:15 maintenance recovery
     - cron: '30 0 * * *'   # 06:30 EPG recovery
     - cron: '45 0 * * *'   # 06:45 final recovery checkpoint
-    - cron: '55 0 * * *'   # 06:55 last checkpoint
+    - cron: '55 0 * * *'   # 06:55 last early checkpoint
+    - cron: '15 1 * * *'   # 07:15 independent morning recovery
+    - cron: '15 2 * * *'   # 08:15 independent morning recovery
+    - cron: '15 3 * * *'   # 09:15 independent morning recovery
+    - cron: '15 4 * * *'   # 10:15 final recovery checkpoint
 
 permissions:
   actions: write
   contents: read
 
-# Serialize checks; official discovery workflows also have a per-day guard.
+# Serialize checks; official workflows also have a per-day guard and writer lock.
 concurrency:
   group: discovery-schedule-watchdog
   cancel-in-progress: false
@@ -39,7 +57,7 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.12'
-      - name: Dispatch only workflows with no run for today's Bangladesh date
+      - name: Dispatch only workflows with no successful required job for today's Bangladesh date
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
