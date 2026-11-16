@@ -1757,7 +1757,7 @@ https://streams.sofast.tv/ptnr-yupptv/title-BANG-BANG-TV-ENG_yupptv/v1/master/61
 https://tvsen1.aynaott.com/shn6jGTk/index.m3u8
 #EXTINF:-1 tvg-id="custom.bluestv" tvg-name="Blues TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/blues-tv.png" channel-id="custom.bluestv" group-title="International",Blues TV
 https://2-fss-2.streamhoster.com/pl_138/205510-3094608-1/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.cinemaxmoremax" tvg-name="Cinemax MoreMax" channel-id="custom.cinemaxmoremax" group-title="International",Cinemax MoreMax
+#EXTINF:-1 tvg-id="custom.cinemaxmoremax" tvg-name="Cinemax MoreMax" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinemax-moremax.png" channel-id="custom.cinemaxmoremax" group-title="International",Cinemax MoreMax
 http://23.237.104.106:8080/USA_MOREMAX/index.m3u8
 #EXTINF:-1 tvg-id="CinevaultWesterns.us" tvg-name="Cinevault Westerns" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinevault-westerns.png" tvg-chno="392" channel-id="CinevaultWesterns.us" tvg-country="US" tvg-language="eng" group-title="International",Cinevault Westerns
 https://gsn-cinevault-westerns-2-us.roku.wurl.tv/playlist.m3u8
@@ -1801,7 +1801,7 @@ https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/playlist/a
 https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/playlist/amg01753-narrativeentert-greatchristmas-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-id="iFilmEnglish.ir" tvg-name="iFilm English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ifilm-english-s-e5f0438e73.png" tvg-chno="425" channel-id="iFilmEnglish.ir" tvg-country="IR" tvg-language="eng" group-title="International",iFilm English
 https://live.presstv.co.uk/hls/ifilmen.m3u8
-#EXTINF:-1 tvg-id="custom.kronehittv" tvg-name="Kronehit TV" channel-id="custom.kronehittv" group-title="International",Kronehit TV
+#EXTINF:-1 tvg-id="custom.kronehittv" tvg-name="Kronehit TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kronehit-tv.png" channel-id="custom.kronehittv" group-title="International",Kronehit TV
 https://bitcdn-kronehit.bitmovin.com/v2/hls/playlist.m3u8
 #EXTINF:-1 tvg-id="M20Music.us" tvg-name="M20 Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/m20-music.png" tvg-chno="426" channel-id="M20Music.us" tvg-country="US" tvg-language="eng" group-title="International",M20 Music
 https://streamcdne2-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S62628868/uhdWBlkC1AoO/chunklist_b1064000.m3u8
@@ -1841,7 +1841,7 @@ https://oxygenmusic.hu:2443/hls/oxygenmusic.m3u8
 https://korhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="POPWorldTV.es" tvg-name="POP World TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pop-world-tv-720p-3faede8b6c.png" tvg-chno="447" channel-id="POPWorldTV.es" tvg-country="ES" tvg-language="eng" group-title="International",POP World TV
 https://janus.xpbroadcasting.com:8443/hls/popworld.m3u8
-#EXTINF:-1 tvg-id="PowerTurkTV.tr" tvg-name="PowerTürk TV" channel-id="PowerTurkTV.tr" group-title="International",PowerTürk TV
+#EXTINF:-1 tvg-id="PowerTurkTV.tr" tvg-name="PowerTürk TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/powert-rk-tv.png" channel-id="PowerTurkTV.tr" group-title="International",PowerTürk TV
 https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="RadionorbaTV.it" tvg-name="Radio Norba TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-norba-tv.png" tvg-chno="448" channel-id="RadionorbaTV.it" tvg-country="IT" tvg-language="ita" group-title="International",Radio Norba TV
 https://router.xdevel.com/video0s975885-462/stream/playlist_dvr.m3u8
@@ -1853,7 +1853,7 @@ https://9be783d652cd4b099cf63e1dc134c4a3.mediatailor.eu-west-1.amazonaws.com/v1/
 https://e3207568b726401995c25670faaf32e4.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6203/master.m3u8
 #EXTINF:-1 tvg-id="RetroMusicTV.cz" tvg-name="Retro Music TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/retro-music-tv-1080p-610715c3c9.png" tvg-chno="454" channel-id="RetroMusicTV.cz" tvg-country="CZ" tvg-language="ces" group-title="International",Retro Music TV
 https://stream.mediawork.cz/retrotv/smil:retrotv2.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.rougetv" tvg-name="Rouge TV" channel-id="custom.rougetv" group-title="International",Rouge TV
+#EXTINF:-1 tvg-id="custom.rougetv" tvg-name="Rouge TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rouge-tv-switzerland.png" channel-id="custom.rougetv" group-title="International",Rouge TV
 https://edge18.vedge.infomaniak.com/livecast/rougetv/playlist.m3u8
 #EXTINF:-1 tvg-id="ShansonTV.ru" tvg-name="Shanson TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shanson-tv-576p-3c01614e19.png" tvg-chno="685" channel-id="ShansonTV.ru" tvg-country="RU" tvg-language="rus" group-title="International",Shanson TV
 https://streaming.thestream.cyou/live/7009.m3u8
@@ -1873,7 +1873,7 @@ https://lotus.stingray.com/manifest/ose-317ads-montreal/samsungtvplus/master.m3u
 https://lotus.stingray.com/manifest/ose-190ads-montreal/samsungtvplus/master.m3u8
 #EXTINF:-1 tvg-id="Teleritmo.us" tvg-name="Teleritmo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/teleritmo.png" tvg-chno="466" channel-id="Teleritmo.us" tvg-country="US" tvg-language="eng" group-title="International",Teleritmo
 http://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8
-#EXTINF:-1 tvg-id="custom.thewalkingdeaduniverse" tvg-name="The Walking Dead Universe" channel-id="custom.thewalkingdeaduniverse" group-title="International",The Walking Dead Universe
+#EXTINF:-1 tvg-id="custom.thewalkingdeaduniverse" tvg-name="The Walking Dead Universe" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-walking-dead-universe.png" channel-id="custom.thewalkingdeaduniverse" group-title="International",The Walking Dead Universe
 https://22985209144b4ff78289fbb19f55e93e.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Plex_TWDUniverseExperience/playlist.m3u8
 #EXTINF:-1 tvg-id="Totalmusic.uk" tvg-name="Totalmusic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/totalmusic-1080p-4921970701.png" tvg-chno="468" channel-id="Totalmusic.uk" tvg-country="GB" tvg-language="spa" group-title="International",Totalmusic
 https://cdn.global.elektamedia.com/live/c7eds/Totalmusic/SA_LIVE_hls_enc/master.m3u8
