@@ -13,7 +13,7 @@ BAD_ASSETS = frozenset({
     "star-plus.png", "zee-tv.png", "tom-and-jerry.png", "arirang-tv.png",
     "channel-52.png", "channel-52-converted-56518832e7.png",
     "jtv-bangla.png", "jtv-bangla-converted-91bd17c8e4.png",
-    "classic-movies-27994c39.png",
+    "classic-movies-27994c39.png", "wow-kidz-tamil.png",
 })
 GENERIC_PREFIXES = ("placeholder-", "generic-", "unknown-", "unidentified-", "generated-fallback-")
 
