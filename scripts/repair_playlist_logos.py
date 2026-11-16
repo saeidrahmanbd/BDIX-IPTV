@@ -57,7 +57,7 @@ BAD_ASSETS = {
     "zee-tv.png",
     "tom-and-jerry.png",
     "arirang-tv.png",  # KBS WORLD wordmark under an Arirang filename.
-    "channel-52.png", "channel-52-converted-56518832e7.png",  # Generic text-only artwork; exact historic Channel 52 mark is sourced below.
+    "channel-52-converted-56518832e7.png",  # Superseded contaminated conversion; channel-52.png is the authentic historic broadcaster mark.
     "jtv-bangla.png", "jtv-bangla-converted-91bd17c8e4.png",  # Generic text-only artwork, not a verified JTV Bangla broadcaster logo.
     "classic-movies-27994c39.png",  # Unofficial generated label artwork; clean local logo is in /logos/unused.
     "wow-kidz-tamil.png",  # Contains the Hindi-language suffix; not correct for the Tamil feed.
