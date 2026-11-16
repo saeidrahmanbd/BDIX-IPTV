@@ -1287,6 +1287,9 @@ http://ocko-live.ssl.cdn.cra.cz/channels/ocko_expres/playlist/cze/live_hq.m3u8
 #EXTINF:-1 tvg-id="OxygenMusic.us" tvg-name="Oxygen Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/oxygen-music.png" tvg-chno="442" channel-id="OxygenMusic.us" tvg-country="US" tvg-language="eng" group-title="International",Oxygen Music
 https://oxygenmusic.hu:2443/hls/oxygenmusic.m3u8
 
+#EXTINF:-1 tvg-id="POPWorldTV.es" tvg-name="POP World TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pop-world-tv-720p-3faede8b6c.png" tvg-chno="447" channel-id="POPWorldTV.es" tvg-country="ES" tvg-language="eng" group-title="International",POP World TV
+https://janus.xpbroadcasting.com:8443/hls/popworld.m3u8
+
 #EXTINF:-1 tvg-id="PowerTurkTV.tr" tvg-name="PowerTürk TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/powerturk-tv-1080p-7651888d90.png" channel-id="PowerTurkTV.tr" tvg-chno="632" tvg-country="TR" tvg-language="tur" group-title="International",PowerTürk TV
 https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
 
@@ -1427,9 +1430,6 @@ https://pubgfc.teleosmedia.com/linear/globalfashionchannel/globalfashionchannel/
 
 #EXTINF:-1 tvg-id="custom.persianakorea" tvg-name="Persiana Korea" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/persiana-korea-50841eae46.png" channel-id="custom.persianakorea" tvg-chno="628" tvg-country="IR" tvg-language="kor" group-title="International Entertainment",Persiana Korea
 https://korhls.persiana.live/hls/stream.m3u8
-
-#EXTINF:-1 tvg-id="POPWorldTV.es" tvg-name="POP World TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pop-world-tv-720p-3faede8b6c.png" tvg-chno="447" channel-id="POPWorldTV.es" tvg-country="ES" tvg-language="eng" group-title="International Entertainment",POP World TV
-https://janus.xpbroadcasting.com:8443/hls/popworld.m3u8
 
 #EXTINF:-1 tvg-id="custom.rougetv" tvg-name="Rouge TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rouge-tv-5bb327e21c.png" channel-id="custom.rougetv" tvg-chno="637" tvg-country="CH" tvg-language="fra" group-title="International Entertainment",Rouge TV
 https://edge18.vedge.infomaniak.com/livecast/rougetv/playlist.m3u8
