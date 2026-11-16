@@ -219,7 +219,7 @@ https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_360p/chunks.m3
 #EXTINF:-1 tvg-id="Enterr10Bangla.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png" tvg-name="Enterr10 Bangla" channel-id="Enterr10Bangla.in@SD" tvg-country="IN" tvg-language="ben" tvg-chno="73" group-title="Indian Bangla",Enterr10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
 
-#EXTINF:-1 tvg-id="JTVBangla.in@SD" tvg-name="JTV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jtv-bangla.jpg" channel-id="JTVBangla.in@SD" tvg-country="IN" tvg-language="ben" tvg-chno="74" group-title="Indian Bangla",JTV Bangla
+#EXTINF:-1 tvg-id="JTVBangla.in@SD" tvg-name="JTV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jtv-bangla-converted-badc0be693.png" channel-id="JTVBangla.in@SD" tvg-country="IN" tvg-language="ben" tvg-chno="74" group-title="Indian Bangla",JTV Bangla
 http://103.67.97.45:81/0.ts
 
 #EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" channel-id="KhushbooBangla.in@SD" tvg-country="IN" tvg-language="ben" tvg-chno="75" group-title="Indian Bangla",Khushboo Bangla
@@ -1602,7 +1602,7 @@ https://d3i6upqaqzosi1.cloudfront.net/tg/jr_us/tg_jr_us.m3u8
 #EXTINF:-1 tvg-id="WOWKidz.in@Hindi" tvg-name="WOW Kidz Hindi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png" channel-id="WOWKidz.in@Hindi" tvg-country="IN" tvg-language="hin" tvg-chno="534" group-title="Kids",WOW Kidz Hindi
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 
-#EXTINF:-1 tvg-id="WOWKidzTamil.in" tvg-name="WOW Kidz Tamil" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz-tamil.jpg" channel-id="WOWKidzTamil.in" tvg-country="IN" tvg-language="tam" tvg-chno="535" group-title="Kids",WOW Kidz Tamil
+#EXTINF:-1 tvg-id="WOWKidzTamil.in" tvg-name="WOW Kidz Tamil" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz-tamil-converted-ff1aeb7aa9.png" channel-id="WOWKidzTamil.in" tvg-country="IN" tvg-language="tam" tvg-chno="535" group-title="Kids",WOW Kidz Tamil
 
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 

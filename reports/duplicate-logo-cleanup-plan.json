@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
-  "exact_duplicate_groups": 683,
-  "exact_duplicate_files": 1014,
+  "exact_duplicate_groups": 684,
+  "exact_duplicate_files": 1015,
   "low_risk_review_candidates": [
     {
       "candidate": "logos/unused/now-70s.png",
@@ -751,6 +751,17 @@
       ]
     },
     {
+      "candidate": "logos/unused/cinemax-moremax.png",
+      "sha256": "5a4e66571c8c674e11666e16a01f2ebeba8da620616cce962cbbade0284a2842",
+      "duplicate_group": [
+        "logos/cinemax-moremax.png",
+        "logos/unused/cinemax-moremax.png"
+      ],
+      "reasons": [
+        "runtime basename/path mention in reports/logo-authenticity-manifest.json"
+      ]
+    },
+    {
       "candidate": "logos/unused/2-2-1080p-1547852552.png",
       "sha256": "5acc563c6b874e6a7c884aa607721af5525f3f69a435a0179573fbffb87747a1",
       "duplicate_group": [
@@ -1363,7 +1374,7 @@
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart",
-        "runtime basename/path mention in IPTV-Playlist.m3u",
+        "runtime basename/path mention in reports/logo-authenticity-manifest.json",
         "runtime basename/path mention in scripts/repair_playlist_logos.py"
       ]
     },
