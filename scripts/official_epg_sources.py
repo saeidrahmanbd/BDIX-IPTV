@@ -2,6 +2,7 @@
 """Adapters for official schedule pages that do not publish XMLTV directly."""
 import re
 from time import sleep
+import urllib.error
 import urllib.request
 from datetime import datetime, time, timedelta, timezone
 from html.parser import HTMLParser
@@ -959,6 +960,32 @@ def _maasranga_time_range(value):
     return start, end
 
 
+TRANSIENT_HTTP_STATUS_CODES = {403, 408, 425, 429, 500, 502, 503, 504}
+
+
+def _read_with_retry(request, timeout=30, attempts=3, delays=(5, 15)):
+    """Read a public schedule page, retrying only transient HTTP/network failures.
+
+    The same request (same headers) is reused for every attempt. Permanent
+    errors such as 404 are raised immediately; after the last attempt the final
+    error is re-raised so callers still see the real failure class.
+    """
+    last_error = None
+    for attempt in range(attempts):
+        if attempt:
+            sleep(delays[min(attempt - 1, len(delays) - 1)])
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return response.read()
+        except urllib.error.HTTPError as exc:
+            if exc.code not in TRANSIENT_HTTP_STATUS_CODES:
+                raise
+            last_error = exc
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
+            last_error = exc
+    raise last_error
+
+
 def fetch_maasranga_programmes(now=None):
     """Fetch Maasranga's official weekly grid and expand explicit slots for 8 days."""
     now = now or datetime.now(timezone.utc)
@@ -972,8 +999,7 @@ def fetch_maasranga_programmes(now=None):
             "Accept": "text/html,application/xhtml+xml,*/*",
         },
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        html = response.read().decode("utf-8-sig", errors="replace")
+    html = _read_with_retry(request).decode("utf-8-sig", errors="replace")
 
     parser = _MaasrangaScheduleParser()
     parser.feed(html)

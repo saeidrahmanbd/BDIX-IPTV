@@ -1138,8 +1138,11 @@ def main():
                     source_path.unlink(missing_ok=True)
         except Exception as exc:
             # Exception messages from HTTP clients can contain request URLs or
-            # query parameters. Record only the exception class in public logs.
-            source_stats[src] = f"FAILED ({type(exc).__name__})"
+            # query parameters. Record only the exception class (plus the numeric
+            # HTTP status for HTTPError, which carries no URL) in public logs.
+            status_code = getattr(exc, "code", None) if type(exc).__name__ == "HTTPError" else None
+            code_suffix = f" {status_code}" if isinstance(status_code, int) else ""
+            source_stats[src] = f"FAILED ({type(exc).__name__}{code_suffix})"
     for src in source_urls:
         print(source_status_line(src, source_stats.get(src, "NO_STATUS")), flush=True)
     by_target = {}

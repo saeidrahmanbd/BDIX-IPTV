@@ -376,6 +376,83 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(midnight["start_dt"], datetime(2026, 11, 4, 17, 30, tzinfo=timezone.utc))
         self.assertEqual(midnight["stop_dt"], datetime(2026, 11, 4, 18, 0, tzinfo=timezone.utc))
 
+    def _maasranga_weekly_html(self):
+        days = ["রবিবার", "সোমবার", "মঙ্গলবার", "বুধবার", "বৃহস্পতিবার", "শুক্রবার", "শনিবার"]
+        rows = [
+            ("07:00am – 09:00", "রাঙা সকাল"),
+            ("09:00am – 12:00pm", "বাংলা চলচ্চিত্র"),
+            ("12:00pm – 12:10pm", "মাছরাঙা সংবাদ"),
+            ("04:30pm – 05:00", "নিনজা হাতোরি"),
+            ("11:30pm – 12.00", "বিজনেস রিপোর্ট"),
+        ]
+        table = ["<table><tr><th>সময়</th>" + "".join(f"<th>{day}</th>" for day in days) + "</tr>"]
+        for time_range, title in rows:
+            table.append(
+                "<tr><td>" + time_range + "</td>"
+                + "".join(f"<td>{title}</td>" for _ in days)
+                + "</tr>"
+            )
+        table.append("</table>")
+        return "".join(table).encode("utf-8")
+
+    def test_maasranga_fetch_retries_transient_http_errors_then_succeeds(self):
+        import urllib.error
+        forbidden = urllib.error.HTTPError(
+            official_epg_sources.MAASRANGA_SOURCE, 403, "Forbidden", {}, None
+        )
+        calls = []
+
+        def flaky_urlopen(request, timeout=30):
+            calls.append(request.full_url)
+            if len(calls) < 3:
+                raise forbidden
+            return io.BytesIO(self._maasranga_weekly_html())
+
+        with patch.object(official_epg_sources, "sleep") as fake_sleep, patch.object(
+            official_epg_sources.urllib.request, "urlopen", side_effect=flaky_urlopen
+        ):
+            programmes = official_epg_sources.fetch_maasranga_programmes(
+                datetime(2026, 11, 4, 0, 0, tzinfo=timezone.utc)
+            )
+        self.assertEqual(len(calls), 3)
+        self.assertEqual([c.args[0] for c in fake_sleep.call_args_list], [5, 15])
+        self.assertGreaterEqual(len(programmes), 30)
+        self.assertTrue(all(p["channel_id"] == "MaasrangaTV.bd" for p in programmes))
+
+    def test_maasranga_fetch_reraises_last_error_after_all_attempts(self):
+        import urllib.error
+        forbidden = urllib.error.HTTPError(
+            official_epg_sources.MAASRANGA_SOURCE, 403, "Forbidden", {}, None
+        )
+        with patch.object(official_epg_sources, "sleep"), patch.object(
+            official_epg_sources.urllib.request, "urlopen", side_effect=forbidden
+        ) as urlopen:
+            with self.assertRaises(urllib.error.HTTPError) as caught:
+                official_epg_sources.fetch_maasranga_programmes(
+                    datetime(2026, 11, 4, 0, 0, tzinfo=timezone.utc)
+                )
+        self.assertEqual(urlopen.call_count, 3)
+        self.assertEqual(caught.exception.code, 403)
+
+    def test_maasranga_fetch_does_not_retry_permanent_http_errors(self):
+        import urllib.error
+        missing = urllib.error.HTTPError(
+            official_epg_sources.MAASRANGA_SOURCE, 404, "Not Found", {}, None
+        )
+        with patch.object(official_epg_sources, "sleep") as fake_sleep, patch.object(
+            official_epg_sources.urllib.request, "urlopen", side_effect=missing
+        ) as urlopen:
+            with self.assertRaises(urllib.error.HTTPError):
+                official_epg_sources.fetch_maasranga_programmes(
+                    datetime(2026, 11, 4, 0, 0, tzinfo=timezone.utc)
+                )
+        self.assertEqual(urlopen.call_count, 1)
+        fake_sleep.assert_not_called()
+
+    def test_generator_logs_http_status_code_for_failed_official_sources(self):
+        self.assertIn('code_suffix = f" {status_code}"', GEN)
+        self.assertIn('f"FAILED ({type(exc).__name__}{code_suffix})"', GEN)
+
     def test_source_audit_is_staged_by_refresh_workflow(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("reports/epg-source-audit.md", workflow)
