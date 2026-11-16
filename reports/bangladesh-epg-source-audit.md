@@ -1,10 +1,10 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-16T03:33:33+00:00**
+Generated: **2026-11-16T07:05:29+00:00**
 
 - Active Bangladesh playlist identities: **83**
 - Identities with a retained source mapping: **5**
-- Identities with usable current/future schedules: **3**
+- Identities with usable current/future schedules: **4**
 - Identities without a source mapping: **78**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
@@ -16,6 +16,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 |---|---:|---:|---|---|
 | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | OK | - |
 | iptv-org/epg (targeted build-time guide) | 2 | 2 | OK | - |
+| Maasranga official weekly grid (undated) | 1 | 1 | OK | - |
 
 ## Bangladesh-relevant source health
 
