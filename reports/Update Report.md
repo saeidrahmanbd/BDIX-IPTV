@@ -1,17 +1,17 @@
 # Update Report
 
-_Last generated: **2026-11-16 12:35 UTC**_
+_Last generated: **2026-11-16 13:52 UTC**_
 
-Source playlist SHA-256: **d09bebe6dbfe0e19fdb72d62f4fcde24811c66a63a49a100c83f7a7b490aefc6**
+Source playlist SHA-256: **237a3ec88ca0fe3a7cfdb7016309e9fd1f870afd3d8bfd802432901b09ea9dff**
 
 | Metric | Current |
 |---|---:|
 | Streams | **1287** |
-| Active Channel Identities | **649** |
-| Active Primary Streams | **649** |
-| Bangladesh | **63** |
-| India | **293** |
-| Backup Stream Entries | **460** |
+| Active Channel Identities | **660** |
+| Active Primary Streams | **660** |
+| Bangladesh | **64** |
+| India | **300** |
+| Backup Stream Entries | **462** |
 | IPTV Local Logos | **STALE** |
 | IPTV EPG Programme Coverage | **55%** |
 | IPTV EPG Mapping | **62.1%** |
@@ -52,10 +52,10 @@ Source playlist SHA-256: **d09bebe6dbfe0e19fdb72d62f4fcde24811c66a63a49a100c83f7
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
 ## EPG
-- EPG IDs audited: **649**
-- Mapped: **403 (62.1%)**
-- Current/future programme coverage: **358/649 (55.2%)**
-- No mapping: **246**
+- EPG IDs audited: **660**
+- Mapped: **410 (62.1%)**
+- Current/future programme coverage: **365/660 (55.3%)**
+- No mapping: **250**
 - EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against both current playlist inventories)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
 
@@ -63,7 +63,7 @@ Source playlist SHA-256: **d09bebe6dbfe0e19fdb72d62f4fcde24811c66a63a49a100c83f7
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-16T02:50:59.144515+00:00** | **STALE** |
-| EPG coverage / two-playlist inventory | **2026-11-16T12:35:08+00:00** | **CURRENT** |
+| EPG coverage / two-playlist inventory | **2026-11-16T13:52:49+00:00** | **CURRENT** |
 | Stream health | **2026-11-16T02:51:42+00:00** | **STALE** |
 | Pre-publish gate | **2026-11-16T02:50:59+00:00** | **STALE** |
 
