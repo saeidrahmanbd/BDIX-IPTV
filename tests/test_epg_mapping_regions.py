@@ -58,6 +58,47 @@ class EpgMappingRegionTests(unittest.TestCase):
             "WorldWarTV.us", "WorldWarTV.uk", uk_feed, countries
         ))
 
+    def test_m3u_edit_targeted_feeds_have_explicit_regions(self):
+        cases = {
+            "BG1.xml.gz": "BG",
+            "FR1.xml.gz": "FR",
+            "HU1.xml.gz": "HU",
+            "ID1.xml.gz": "ID",
+            "LT1.xml.gz": "LT",
+            "UA1.xml.gz": "UA",
+            "US2.xml.gz": "US",
+        }
+        for filename, country in cases.items():
+            with self.subTest(filename=filename):
+                url = f"https://m3u-edit.com/epg-source.php?file={filename}"
+                self.assertEqual(generate_epg.source_country_codes(url), {country})
+
+    def test_global_provider_feeds_are_not_assigned_a_country(self):
+        for filename in ("BEIN1.xml.gz", "PLEX1.xml.gz"):
+            with self.subTest(filename=filename):
+                url = f"https://m3u-edit.com/epg-source.php?file={filename}"
+                self.assertEqual(generate_epg.source_country_codes(url), set())
+
+    def test_targeted_discovery_feeds_are_retained_for_custom_playlist_ids(self):
+        self.assertIn(
+            "https://m3u-edit.com/epg-source.php?file=UA1.xml.gz",
+            generate_epg.TARGETED_DISCOVERY_SOURCES,
+        )
+        self.assertIn(
+            "https://m3u-edit.com/epg-source.php?file=PLEX1.xml.gz",
+            generate_epg.TARGETED_DISCOVERY_SOURCES,
+        )
+
+    def test_new_channel_aliases_point_to_catalogued_source_ids(self):
+        self.assertEqual(
+            epg_coverage.EPG_ALIASES["custom.mggtv"],
+            ["MGG.TV.fr"],
+        )
+        self.assertEqual(
+            epg_coverage.EPG_ALIASES["custom.sport2ukraine"],
+            ["Sport.2.[UA-RU].ua", "Sport.2.[UA-UA].ua"],
+        )
+
     def test_coverage_and_generator_share_the_same_region_policy(self):
         self.assertIs(epg_coverage.mapping_id_region_compatible, mapping_id_region_compatible)
         self.assertIs(generate_epg.mapping_id_region_compatible, mapping_id_region_compatible)
