@@ -29,6 +29,7 @@ PLAYLISTS = ["IPTV-Playlist.m3u", "International-Playlist.m3u"]
 REPORT = Path("reports/playlist-logo-repair-results.md")
 REGISTRY_PATH = Path("reports/logo-source-registry.json")
 
+# Manual rerun requested after correcting the verified Channel 52 allowlist and regression tests.
 # The following files were visually inspected and found contaminated, generic,
 # or mismatched. A bad file is never reused, even if its filename is an exact
 # channel-name match.
