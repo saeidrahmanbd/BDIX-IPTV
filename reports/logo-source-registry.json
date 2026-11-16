@@ -6003,5 +6003,20 @@
     "status": "third_party_verified",
     "source_url": "https://images.weserv.nl/?url=babaktv.com/wp-content/uploads/2023/09/30A-Classi-Movies.jpeg",
     "notes": "Exact 30A TV Classic Movies logo from a published channel listing Broadcaster logo served by a channel listing through an image proxy; reuse rights not specified Source page: https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8"
+  },
+  "IPTV-Playlist.m3u|custom.eurosportfrance|Eurosport (France)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eurosport-france.png": {
+    "status": "third_party_verified",
+    "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/france/eurosport-1-fr.png",
+    "notes": "Local PNG copied from the matching country/channel asset in tv-logo/tv-logos. See that repository's README for its stated reuse and attribution terms; broadcaster trademarks remain with their owners."
+  },
+  "IPTV-Playlist.m3u|custom.eurosport2germany|Eurosport 2 Germany|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eurosport-2-germany.png": {
+    "status": "third_party_verified",
+    "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/germany/eurosport-2-de.png",
+    "notes": "Local PNG copied from the matching country/channel asset in tv-logo/tv-logos. See that repository's README for its stated reuse and attribution terms; broadcaster trademarks remain with their owners."
+  },
+  "IPTV-Playlist.m3u|custom.mggtv|MGG TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mgg-tv.png": {
+    "status": "third_party_verified",
+    "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/france/mgg-tv-fr.png",
+    "notes": "Local PNG copied from the matching country/channel asset in tv-logo/tv-logos. See that repository's README for its stated reuse and attribution terms; broadcaster trademarks remain with their owners."
   }
 }
