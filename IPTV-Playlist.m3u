@@ -1978,7 +1978,7 @@ https://tvsen5.aynaott.com/willowhd/index.m3u8
 #EXTINF:-1 tvg-id="WomensSportsNetwork.us@SD" tvg-name="Women's Sports Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/women-s-sports-network-d2bc35e249.png" tvg-chno="658" channel-id="WomensSportsNetwork.us@SD" tvg-country="US" tvg-language="eng" group-title="Sports",Women's Sports Network
 https://d39accvx65hq9o.cloudfront.net/Womens_Sports_Network.m3u8
 
-#EXTINF:-1 tvg-id="wwe.superstar.central.com" tvg-name="WWE Superstar Central" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wwe-superstar-central-2c9ca1325e.png" tvg-chno="659" channel-id="wwe.superstar.central.com" tvg-country="US" tvg-language="und" group-title="Sports",WWE Superstar Central
+#EXTINF:-1 tvg-id="wwe.superstar.central.com" tvg-name="WWE Superstar Central" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wwe-superstar-central-2c9ca1325e.png" tvg-chno="659" channel-id="wwe.superstar.central.com" tvg-country="US" tvg-language="eng" group-title="Sports",WWE Superstar Central
 https://dpv6ceilvhyrw.cloudfront.net/playlist.m3u8
 
 #EXTINF:-1 tvg-id="custom.xsport" tvg-name="X SPORT" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/x-sport.png" channel-id="custom.xsport" tvg-chno="660" tvg-country="UA" tvg-language="ukr" group-title="Sports",X SPORT
