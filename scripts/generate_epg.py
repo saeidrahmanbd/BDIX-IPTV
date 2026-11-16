@@ -95,6 +95,15 @@ SOURCES = [
     "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
     "https://m3u-edit.com/epg-source.php?file=IN1.xml.gz",
     "https://m3u-edit.com/epg-source.php?file=IN4.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=BG1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=BEIN1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=FR1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=HU1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=ID1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=LT1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=PLEX1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=UA1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=US2.xml.gz",
     "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
@@ -301,7 +310,18 @@ def source_country_codes(source):
         match = re.search(r"/([a-z]{2})\.xml$", path)
     elif host.endswith("m3u-edit.com"):
         filename = parse_qs(parsed.query).get("file", [""])[0].casefold()
-        if filename.startswith("in") or "india" in filename:
+        # M3U Edit publishes separate country/provider XMLTV packs. Treat only
+        # known country-prefixed packs as regional; BEIN1 and PLEX1 are global
+        # provider feeds and intentionally carry no country restriction.
+        feed_regions = {
+            "bg": "BG", "fr": "FR", "hu": "HU", "id": "ID",
+            "in": "IN", "lt": "LT", "ua": "UA", "us2": "US",
+        }
+        for prefix, country in feed_regions.items():
+            if re.match(rf"^{re.escape(prefix)}\\d", filename):
+                code = country
+                break
+        if not code and "india" in filename:
             code = "IN"
     elif host.endswith("open-epg.com"):
         filename = Path(path).name
@@ -318,6 +338,19 @@ def source_country_codes(source):
         code = match.group(1).upper()
     normalized = normalize_country_code(code)
     return {normalized} if normalized else set()
+
+
+TARGETED_DISCOVERY_SOURCES = {
+    "https://m3u-edit.com/epg-source.php?file=BG1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=BEIN1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=FR1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=HU1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=ID1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=LT1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=PLEX1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=UA1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=US2.xml.gz",
+}
 
 
 def sources_with_mapped_channels(source_urls):
@@ -349,6 +382,7 @@ def sources_with_mapped_channels(source_urls):
         or source.startswith("file://")
         or (private_url and source == private_url)
         or source in discovery_sources
+        or source in TARGETED_DISCOVERY_SOURCES
     ]
     if not selected:
         print("EPG source pruning skipped: no mapped or region-relevant source URLs found.")
