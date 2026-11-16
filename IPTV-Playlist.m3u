@@ -519,9 +519,6 @@ https://yuppnimrestreammum.akamaized.net/181224/smil:bogglebollywood.smil/playli
 #EXTINF:-1 tvg-id="DhoolTV.in@SD" tvg-name="Dhool TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhool-tv.png" tvg-chno="159" channel-id="DhoolTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Music",Dhool TV
 https://d1msejlow1t3l4.cloudfront.net/fta/subhartitv/playlist.m3u8
 
-#EXTINF:-1 tvg-id="E24.in" tvg-name="E24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/e24.png" tvg-chno="162" channel-id="E24.in" tvg-country="IN" tvg-language="hin" group-title="Indian Music",E24
-https://amg13643-amg13643c2-amgplt0016.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg13643-amg13643c2-amgplt0016/playlist.m3u8
-
 #EXTINF:-1 tvg-id="EkamraMusiq.in" tvg-name="Ekamra Musiq" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekamra-musiq.png" tvg-chno="163" channel-id="EkamraMusiq.in" tvg-country="IN" tvg-language="ori" group-title="Indian Music",Ekamra Musiq
 https://live.ekamraott.com/musiq/musiq/index.m3u8
 
@@ -753,6 +750,9 @@ https://d2lk5u59tns74c.cloudfront.net/out/v1/950fc69666474351bde0a32b9600c804/in
 #EXTINF:-1 tvg-id="DDHimachalPradesh.in@SD" tvg-name="DD Himachal Pradesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-himachal-pradesh.png" tvg-chno="246" channel-id="DDHimachalPradesh.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",DD Himachal Pradesh
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/afd2e335b0ba40eb9bdf1096118c6ede/index.m3u8
 
+#EXTINF:-1 tvg-id="DDIndia.in@SD" tvg-name="DD India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-india.png" channel-id="DDIndia.in@SD" tvg-country="IN" tvg-language="eng" tvg-chno="93" group-title="Indian Entertainment",DD India
+https://d2gvyg6lvauoko.cloudfront.net/230226/ddindia/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+
 #EXTINF:-1 tvg-id="DDJharkhand.in@SD" tvg-name="DD Jharkhand" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-jharkhand.png" tvg-chno="247" channel-id="DDJharkhand.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",DD Jharkhand
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/e8c3741f8c154d3185831f4e31777fb2/index.m3u8
 
@@ -812,6 +812,9 @@ https://cdn.pishow.tv/ott/live/21/master.m3u8
 
 #EXTINF:-1 tvg-id="DesiChannel.in" tvg-name="Desi Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desi-channel.png" tvg-chno="266" channel-id="DesiChannel.in" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Desi Channel
 https://livestream.unlimitedcdn.com/agm-dc/desi-channel/index.m3u8
+
+#EXTINF:-1 tvg-id="E24.in" tvg-name="E24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/e24.png" tvg-chno="162" channel-id="E24.in" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",E24
+https://amg13643-amg13643c2-amgplt0016.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg13643-amg13643c2-amgplt0016/playlist.m3u8
 
 #EXTINF:-1 tvg-id="EkamraBharatOdia.in@SD" tvg-name="Ekamra Bharat Odia" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekamra-bharat-odia.png" tvg-chno="267" channel-id="EkamraBharatOdia.in@SD" tvg-country="IN" tvg-language="ori" group-title="Indian Entertainment",Ekamra Bharat Odia
 https://live.ekamraott.com/bharat/bharat/index.m3u8
@@ -1335,9 +1338,6 @@ https://lotus.stingray.com/manifest/ose-190ads-montreal/samsungtvplus/master.m3u
 #EXTINF:-1 tvg-id="Teleritmo.us" tvg-name="Teleritmo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/teleritmo.png" tvg-chno="466" channel-id="Teleritmo.us" tvg-country="US" tvg-language="eng" group-title="International",Teleritmo
 http://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8
 
-#EXTINF:-1 tvg-id="custom.thewalkingdeaduniverse" tvg-name="The Walking Dead Universe" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-walking-dead-universe-1080p-5755c61da2.png" channel-id="custom.thewalkingdeaduniverse" tvg-chno="647" tvg-country="US" tvg-language="eng" group-title="International",The Walking Dead Universe
-https://22985209144b4ff78289fbb19f55e93e.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Plex_TWDUniverseExperience/playlist.m3u8
-
 #EXTINF:-1 tvg-id="Totalmusic.uk" tvg-name="Totalmusic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/totalmusic-1080p-4921970701.png" tvg-chno="468" channel-id="Totalmusic.uk" tvg-country="GB" tvg-language="spa" group-title="International",Totalmusic
 https://cdn.global.elektamedia.com/live/c7eds/Totalmusic/SA_LIVE_hls_enc/master.m3u8
 
@@ -1355,9 +1355,6 @@ https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TRTMuzik.tr" tvg-name="TRT Müzik" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trt-muzik.png" tvg-chno="473" channel-id="TRTMuzik.tr" tvg-country="TR" tvg-language="tur" group-title="International",TRT Müzik
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
-
-#EXTINF:-1 tvg-id="TVBRICSEnglish.in" tvg-name="TV BRICS English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-brics-english.png" channel-id="TVBRICSEnglish.in" tvg-country="IN" tvg-language="eng" tvg-chno="654" group-title="International",TV BRICS English
-https://engbrics.mediacdn.ru/cdn/brics/english/playlist.m3u8
 
 #EXTINF:-1 tvg-id="custom.v2beat" tvg-name="V2 Beat" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/v2beat.png" tvg-chno="477" channel-id="custom.v2beat" tvg-country="IT" tvg-language="ita" group-title="International",V2 Beat
 https://de1se01.v2beat.live/playlist.m3u8
@@ -1389,9 +1386,6 @@ https://dvnftgdlbnemm.cloudfront.net/XITE_Just_Chill.m3u8
 #EXTINF:-1 tvg-id="custom.xitesummer" tvg-name="XITE Summer" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xite-celebrates-0178ee79a4.png" tvg-chno="485" channel-id="custom.xitesummer" tvg-country="US" tvg-language="eng" group-title="International",XITE Summer
 https://d33m2dcwuwzaia.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4g0r3vai0va2v/XITE_Celebrates.m3u8?ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.ssai_vendor=SSSLIVE&ads.afsdk_params=%7BAFSDK_VALUE%7D&ads.service_id=CABD17000043J
 
-#EXTINF:-1 tvg-id="custom.accdn" tvg-name="ACCDN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/accdn.png" tvg-chno="381" channel-id="custom.accdn" tvg-country="US" tvg-language="eng" group-title="International Entertainment",ACCDN
-https://raycom-accdn-firetv.amagi.tv/playlist.m3u8
-
 #EXTINF:-1 tvg-id="custom.arabica-tv" tvg-name="Arabica TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/arabica-tv.png" channel-id="custom.arabica-tv" tvg-chno="414" tvg-country="LB" tvg-language="ara" group-title="International Entertainment",Arabica TV
 http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8
 
@@ -1409,9 +1403,6 @@ https://streams.sofast.tv/ptnr-yupptv/title-BANG-BANG-TV-ENG_yupptv/v1/master/61
 
 #EXTINF:-1 tvg-id="BTLTV.nl@SD" tvg-name="BTL TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btl-tv-netherlands-1080p.png" channel-id="BTLTV.nl@SD" tvg-country="NL" tvg-language="und" tvg-chno="366" group-title="International Entertainment",BTL TV
 https://cdn.liveplustv.com/v1/live/btl-tv/master.m3u8
-
-#EXTINF:-1 tvg-id="DDIndia.in@SD" tvg-name="DD India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-india.png" channel-id="DDIndia.in@SD" tvg-country="IN" tvg-language="eng" tvg-chno="93" group-title="International Entertainment",DD India
-https://d2gvyg6lvauoko.cloudfront.net/230226/ddindia/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 
 #EXTINF:-1 tvg-id="FashionLifeStyle.ru@SD" tvg-name="Fashion&LifeStyle" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashion-and-lifestyle-7b3ff05313.png" tvg-chno="407" channel-id="FashionLifeStyle.ru@SD" tvg-country="RU" tvg-language="und" group-title="International Entertainment",Fashion&LifeStyle
 http://stream.mcquack.net/119/index.m3u8
@@ -1445,6 +1436,12 @@ https://edge18.vedge.infomaniak.com/livecast/rougetv/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TamilVisionTV.ca@SD" tvg-name="TamilVision TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tamilvision-tv-1080p.png" channel-id="TamilVisionTV.ca@SD" tvg-country="CA" tvg-language="tam" tvg-chno="715" group-title="International Entertainment",TamilVision TV
 https://live.cmr24.fm/TVI/HD/chunks.m3u8
+
+#EXTINF:-1 tvg-id="custom.thewalkingdeaduniverse" tvg-name="The Walking Dead Universe" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-walking-dead-universe-1080p-5755c61da2.png" channel-id="custom.thewalkingdeaduniverse" tvg-chno="647" tvg-country="US" tvg-language="eng" group-title="International Entertainment",The Walking Dead Universe
+https://22985209144b4ff78289fbb19f55e93e.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Plex_TWDUniverseExperience/playlist.m3u8
+
+#EXTINF:-1 tvg-id="TVBRICSEnglish.in" tvg-name="TV BRICS English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-brics-english.png" channel-id="TVBRICSEnglish.in" tvg-country="IN" tvg-language="eng" tvg-chno="654" group-title="International Entertainment",TV BRICS English
+https://engbrics.mediacdn.ru/cdn/brics/english/playlist.m3u8
 
 #EXTINF:-1 tvg-id="Travel.us" tvg-name="4K Travel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4k-travel.png" tvg-chno="486" channel-id="Travel.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",4K Travel
 https://streams2.sofast.tv/sofastplayout/33c31ac4-51fa-46ae-afd0-0d1fe5e60a80_0_HLS/master.m3u8
@@ -1781,6 +1778,9 @@ https://zainabia.livebox.co.in/ZainabiaChannelhls/channel.m3u8
 
 #EXTINF:-1 tvg-id="ASports.pk" tvg-name="A Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-sports-65a3e1d8fd.png" tvg-chno="590" channel-id="ASports.pk" tvg-country="PK" tvg-language="urd" group-title="Sports",A Sports
 https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/tracks-v1a1/mono.ts.m3u8
+
+#EXTINF:-1 tvg-id="custom.accdn" tvg-name="ACCDN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/accdn.png" tvg-chno="381" channel-id="custom.accdn" tvg-country="US" tvg-language="eng" group-title="Sports",ACCDN
+https://raycom-accdn-firetv.amagi.tv/playlist.m3u8
 
 #EXTINF:-1 tvg-id="custom.acisporttv" tvg-name="ACI Sport TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aci-sport-tv.png" tvg-chno="591" channel-id="custom.acisporttv" tvg-country="IT" tvg-language="ita" group-title="Sports",ACI Sport TV
 https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8
