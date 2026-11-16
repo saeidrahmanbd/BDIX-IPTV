@@ -14,6 +14,7 @@ class LogoAssetNamingTests(unittest.TestCase):
         self.assertTrue(is_blocked_logo_basename("channel-52.png"))
         self.assertTrue(is_blocked_logo_basename("jtv-bangla.png"))
         self.assertTrue(is_blocked_logo_basename("classic-movies-27994c39.png"))
+        self.assertTrue(is_blocked_logo_basename("wow-kidz-tamil.png"))
         self.assertFalse(is_blocked_logo_basename("ananda-tv.png"))
 
     def test_sanitized_filename_avoids_blocked_assets_and_prefixes(self):
