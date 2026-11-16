@@ -51,7 +51,7 @@ http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92
 #EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" tvg-chno="16" channel-id="Channel24.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 24
 https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8
 
-#EXTINF:-1 tvg-id="Channel52.bd" tvg-name="Channel 52" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" tvg-chno="17" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 52
+#EXTINF:-1 tvg-id="Channel52.bd" tvg-name="Channel 52" tvg-chno="17" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 52
 http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" tvg-chno="15" channel-id="Channel9.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 9
@@ -225,7 +225,7 @@ https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_360p/chunks.m3
 #EXTINF:-1 tvg-id="Enterr10Bangla.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png" tvg-name="Enterr10 Bangla" channel-id="Enterr10Bangla.in@SD" tvg-country="IN" tvg-language="ben" tvg-chno="131" group-title="Indian Bangla",Enterr10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
 
-#EXTINF:-1 tvg-id="JTVBangla.in@SD" tvg-name="JTV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jtv-bangla.png" tvg-chno="36" channel-id="JTVBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",JTV Bangla
+#EXTINF:-1 tvg-id="JTVBangla.in@SD" tvg-name="JTV Bangla" tvg-chno="36" channel-id="JTVBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",JTV Bangla
 http://103.67.97.45:81/0.ts
 
 #EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" tvg-chno="67" channel-id="KhushbooBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Khushboo Bangla
@@ -1194,7 +1194,7 @@ https://gsn-cinevault-westerns-2-us.roku.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.circle" tvg-name="Circle" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/circle.png" channel-id="custom.circle" tvg-chno="601" tvg-country="US" tvg-language="eng" group-title="International",Circle
 https://circle-roku.amagi.tv/playlist.m3u8
 
-#EXTINF:-1 channel-id="ClassicMovies.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/classic-movies-27994c39.png" tvg-id="ClassicMovies.us" tvg-name="Classic Movies" tvg-language="eng" tvg-country="US" tvg-chno="57" group-title="International",Classic Movies
+#EXTINF:-1 channel-id="ClassicMovies.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/classic-movies-channel-1d5f82d98a.png" tvg-id="ClassicMovies.us" tvg-name="Classic Movies" tvg-language="eng" tvg-country="US" tvg-chno="57" group-title="International",Classic Movies
 https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8
 
 #EXTINF:-1 tvg-id="custom.cmctv" tvg-name="CMC TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cmc-tv.png" tvg-chno="393" channel-id="custom.cmctv" tvg-country="HR" tvg-language="hrv" group-title="International",CMC TV
@@ -2298,7 +2298,7 @@ https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF9
 #EXTINF:-1 tvg-id="Channel16.bd" tvg-name="Channel 16" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-16.png" channel-id="Channel16.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Channel 16
 https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
 
-#EXTINF:-1 tvg-id="Channel52.bd" tvg-name="Channel 52" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Channel 52
+#EXTINF:-1 tvg-id="Channel52.bd" tvg-name="Channel 52" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Channel 52
 https://tvsen6.aynaott.com/channel52/index.m3u8
 
 #EXTINF:-1 tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" channel-id="Channel9.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Channel 9
