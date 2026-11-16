@@ -17,7 +17,9 @@ class ReliabilityWorkerContractTests(unittest.TestCase):
         config = (WORKER / "wrangler.toml").read_text(encoding="utf-8")
         self.assertIn('crons = ["* * * * *"]', config)
         self.assertIn('binding = "RELIABILITY_DB"', config)
-        self.assertIn("REPLACE_WITH_YOUR_CLOUDFLARE_D1_DATABASE_ID", config)
+        self.assertNotIn("REPLACE_WITH_YOUR_CLOUDFLARE_D1_DATABASE_ID", config)
+        database_id = next(line.split("=", 1)[1].strip().strip("\\\"") for line in config.splitlines() if line.startswith("database_id"))
+        self.assertRegex(database_id, r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$")
 
     def test_registry_and_worker_share_schedule_field(self):
         registry = json.loads((ROOT / "automation/reliability/workflow_registry.json").read_text(encoding="utf-8"))
