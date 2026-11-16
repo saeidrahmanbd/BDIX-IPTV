@@ -1,16 +1,16 @@
 # International Playlist Organization Audit
 
-- Entries before: 3129
-- Entries after: 3129
+- Entries before: 3135
+- Entries after: 3135
 - Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1376
+- Original Backup/Backups and protected queue rows examined: 1371
 - Matching alternate streams retained in Backup: 371
-- True orphan Backup rows evaluated: 651
-- Eligible orphan Backup rows promoted to primary: 0
+- True orphan Backup rows evaluated: 652
+- Eligible orphan Backup rows promoted to primary: 1
 - Clearly identified Adult orphans restored to Adult: 0
 - Ineligible/unclassified orphan Backup rows retained: 651
 - Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational/Knowledge, Business/Finance and Farming/Agriculture are excluded; Indian Kids and Sports remain eligible.
@@ -31,11 +31,11 @@
 
 ## Category counts
 
-- Bangladesh: 65
-- Indian Bangla: 28
+- Bangladesh: 63
+- Indian Bangla: 30
 - Indian Movies: 68
-- Indian Music: 53
-- Indian Entertainment: 169
+- Indian Music: 54
+- Indian Entertainment: 168
 - Pakistani: 23
 - Argentina: 14
 - Brazil: 14
@@ -48,7 +48,7 @@
 - Czech Republic: 22
 - DO: 10
 - Estonia: 6
-- France: 40
+- France: 41
 - Germany: 72
 - Greece: 8
 - Hungary: 15
@@ -57,25 +57,25 @@
 - Lebanon: 6
 - Mexico: 17
 - Netherlands: 17
+- North Macedonia: 5
 - Panama: 5
 - Paraguay: 6
-- Peru: 6
+- Peru: 7
 - Poland: 24
 - Romania: 28
-- Russia: 71
+- Russia: 74
 - Saudi Arabia: 9
 - Singapore: 5
 - Spain: 20
 - Sweden: 49
 - Turkey: 14
-- Ukraine: 25
+- Ukraine: 27
 - United Kingdom: 24
-- United States: 222
-- Uzbekistan: 5
+- United States: 227
 - Vietnam: 6
-- International: 99
-- Kids: 7
-- Sports: 4
-- Adult: 346
-- Review: 354
+- International: 100
+- Kids: 8
+- Sports: 5
+- Adult: 343
+- Review: 348
 - Backup: 1022
