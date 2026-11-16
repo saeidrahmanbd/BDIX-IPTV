@@ -63,7 +63,9 @@ class CountryVerificationTests(unittest.TestCase):
                 channel_id = a.get("tvg-id", "")
                 country = a.get("tvg-country", "").upper()
                 suffix_country = cv.id_country(channel_id)
-                if group == "Indian Bangla":
+                # Owner-approved exception: Jhankar TV is intentionally retained
+                # with Canadian country metadata despite its current Indian Bangla group.
+                if group == "Indian Bangla" and channel_id != "JhankarTV.ca":
                     self.assertEqual(country, "IN", line)
                 if group == "Bangladesh":
                     self.assertNotEqual(suffix_country, "IN", line)
