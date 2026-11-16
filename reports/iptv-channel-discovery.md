@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-15T02:23:28.974940+00:00**
+Generated: **2026-11-16T02:32:48.535256+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**
@@ -55,7 +55,7 @@ Generated: **2026-11-15T02:23:28.974940+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-11-15T02:23:30+00:00
+- Run timestamp: 2026-11-16T02:32:50+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 19
 - Verified live media responses: 0
@@ -92,7 +92,7 @@ Generated: **2026-11-15T02:23:28.974940+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-11-15T02:23:30+00:00
+- Run timestamp: 2026-11-16T02:32:50+00:00
 - Validation status: PASS
 - New manual-review candidates retained: 0
 - New malformed EXTINF/URL pairs: 0
