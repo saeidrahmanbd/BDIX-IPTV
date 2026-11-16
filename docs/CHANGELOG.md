@@ -16,29 +16,24 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 - Duplicate URL occurrences removed: **0**
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-15 — `International-Playlist.m3u`
+### 2026-11-16 — `International-Playlist.m3u`
 
-- New channel identities: **8**
+- New channel identities: **3**
 - Channel identities removed: **2**
-- Stream URLs added / removed: **8 / 3**
+- Stream URLs added / removed: **8 / 2**
 - Backup URL updates: **0**
-- Logo reference changes: **1**
+- Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- GO TV
-- CEACOM TV [ ]
-- Ishtar TV
-- BRIDGE Hits
-- Galactica TV
-- Galaxy TV [ ]
-- H!t Music Channel
-- Hits 360 TV [ ]
+- Jazz TV [ ]
+- AXN Movies (Spain)
+- Star Action
 
 Removed channel identities (up to 10):
-- 4 Fun TV
-- Taha TV
+- Farra Play
+- La Top 102.9
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
