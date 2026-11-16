@@ -1,20 +1,20 @@
 # Update Report
 
-_Last generated: **2026-11-16 07:05 UTC**_
+_Last generated: **2026-11-16 09:54 UTC**_
 
-Source playlist SHA-256: **14620d0edd4971c15ff9b314789a11f7853374d0eb5dfb1dcf82e22387078a47**
+Source playlist SHA-256: **9ca47f4a45ea83065516c4926ca22f771140f2d92005812e251417d5ca0843b0**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1388** |
-| Active Channel Identities | **712** |
-| Active Primary Streams | **712** |
-| Bangladesh | **66** |
-| India | **302** |
-| Backup Stream Entries | **473** |
+| Streams | **1307** |
+| Active Channel Identities | **673** |
+| Active Primary Streams | **673** |
+| Bangladesh | **64** |
+| India | **308** |
+| Backup Stream Entries | **469** |
 | IPTV Local Logos | **STALE** |
-| IPTV EPG Programme Coverage | **52%** |
-| IPTV EPG Mapping | **59.3%** |
+| IPTV EPG Programme Coverage | **55%** |
+| IPTV EPG Mapping | **61.8%** |
 | Stream Health Tested | **STALE** |
 | Stream Health Failures | **STALE** |
 | Persistent Failures | **STALE** |
@@ -28,7 +28,7 @@ Source playlist SHA-256: **14620d0edd4971c15ff9b314789a11f7853374d0eb5dfb1dcf82e
 - Metadata conflicts (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
 - Same-name / different-ID collisions (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
 - Cross-queue metadata identity variants: **2**
-- Cross-queue same-name / different-ID collisions: **12**
+- Cross-queue same-name / different-ID collisions: **7**
 - Duplicate primary identities: **STALE / UNKNOWN (last saved: 0)**
 - Primary channel-number collisions: **STALE / UNKNOWN (last saved: 0)**
 - Primary entries missing channel numbers: **STALE / UNKNOWN (last saved: 22)**
@@ -52,10 +52,10 @@ Source playlist SHA-256: **14620d0edd4971c15ff9b314789a11f7853374d0eb5dfb1dcf82e
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
 ## EPG
-- EPG IDs audited: **712**
-- Mapped: **422 (59.3%)**
-- Current/future programme coverage: **374/712 (52.5%)**
-- No mapping: **290**
+- EPG IDs audited: **673**
+- Mapped: **416 (61.8%)**
+- Current/future programme coverage: **371/673 (55.1%)**
+- No mapping: **257**
 - EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against both current playlist inventories)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
 
@@ -63,7 +63,7 @@ Source playlist SHA-256: **14620d0edd4971c15ff9b314789a11f7853374d0eb5dfb1dcf82e
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-16T02:50:59.144515+00:00** | **STALE** |
-| EPG coverage / two-playlist inventory | **2026-11-16T07:05:29+00:00** | **CURRENT** |
+| EPG coverage / two-playlist inventory | **2026-11-16T09:54:07+00:00** | **CURRENT** |
 | Stream health | **2026-11-16T02:51:42+00:00** | **STALE** |
 | Pre-publish gate | **2026-11-16T02:50:59+00:00** | **STALE** |
 
