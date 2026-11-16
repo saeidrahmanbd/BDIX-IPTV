@@ -1359,56 +1359,56 @@ https://dvnftgdlbnemm.cloudfront.net/XITE_Just_Chill.m3u8
 #EXTINF:-1 tvg-id="custom.xitesummer" tvg-name="XITE Summer" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xite-celebrates-0178ee79a4.png" tvg-chno="452" channel-id="custom.xitesummer" tvg-country="US" tvg-language="eng" group-title="International",XITE Summer
 https://d33m2dcwuwzaia.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4g0r3vai0va2v/XITE_Celebrates.m3u8?ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.ssai_vendor=SSSLIVE&ads.afsdk_params=%7BAFSDK_VALUE%7D&ads.service_id=CABD17000043J
 
-#EXTINF:-1 tvg-id="EpicTV.in@Digital" tvg-name="Epic TV Digital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-tv-digital.png" tvg-chno="453" channel-id="EpicTV.in@Digital" tvg-country="IN" tvg-language="hin;eng" group-title="Documentary & Wildlife",Epic TV Digital
-https://d1fodel5fjpe8b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-68r9vf9490xt2/master.m3u8?ads.ads_cdn=cf&ads.cdn=cf
-
-#EXTINF:-1 tvg-id="Travel.us" tvg-name="4K Travel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4k-travel.png" tvg-chno="454" channel-id="Travel.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",4K Travel
+#EXTINF:-1 tvg-id="Travel.us" tvg-name="4K Travel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4k-travel.png" tvg-chno="453" channel-id="Travel.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",4K Travel
 https://streams2.sofast.tv/sofastplayout/33c31ac4-51fa-46ae-afd0-0d1fe5e60a80_0_HLS/master.m3u8
 
-#EXTINF:-1 tvg-id="AdventureEarth.us" tvg-name="Adventure Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/adventure-earth.png" tvg-chno="455" channel-id="AdventureEarth.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Adventure Earth
+#EXTINF:-1 tvg-id="AdventureEarth.us" tvg-name="Adventure Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/adventure-earth.png" tvg-chno="454" channel-id="AdventureEarth.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Adventure Earth
 https://autentic-adventure-earth-1-eu.rakuten.wurl.tv/playlist.m3u8
 
-#EXTINF:-1 tvg-id="Alone.us" tvg-name="Alone" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alone.png" tvg-chno="456" channel-id="Alone.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Alone
+#EXTINF:-1 tvg-id="Alone.us" tvg-name="Alone" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alone.png" tvg-chno="455" channel-id="Alone.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Alone
 https://d3181anftsyl2u.cloudfront.net/v1/aenetworks_alone_1/samsungheadend_us/latest/main/hls/playlist.m3u8
 
-#EXTINF:-1 tvg-id="AutenticAdventureEarth.us" tvg-name="Autentic Adventure Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/autentic-adventure-earth-english-german.png" tvg-chno="457" channel-id="AutenticAdventureEarth.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Autentic Adventure Earth
+#EXTINF:-1 tvg-id="AutenticAdventureEarth.us" tvg-name="Autentic Adventure Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/autentic-adventure-earth-english-german.png" tvg-chno="456" channel-id="AutenticAdventureEarth.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Autentic Adventure Earth
 https://a57e9c69976649b582a8d7604c00e69a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AdventureEarth/playlist.m3u8
 
-#EXTINF:-1 tvg-id="AutenticHistory.de" tvg-name="Autentic History" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/autentic-history.png" tvg-chno="458" channel-id="AutenticHistory.de" tvg-country="DE" tvg-language="eng" group-title="Documentary & Wildlife",Autentic History
+#EXTINF:-1 tvg-id="AutenticHistory.de" tvg-name="Autentic History" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/autentic-history.png" tvg-chno="457" channel-id="AutenticHistory.de" tvg-country="DE" tvg-language="eng" group-title="Documentary & Wildlife",Autentic History
 https://9e754fa707344ccca6d84955c8fcaf36.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AutenticHistory/playlist.m3u8
 
-#EXTINF:-1 tvg-id="AxMen.us" tvg-name="Ax Men" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ax-men.png" tvg-chno="459" channel-id="AxMen.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Ax Men
+#EXTINF:-1 tvg-id="AxMen.us" tvg-name="Ax Men" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ax-men.png" tvg-chno="458" channel-id="AxMen.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Ax Men
 https://bcadcc64.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BeE1lbl9ITFM/playlist.m3u8?ads.wurl_channel=1634&ads.wurl_name=AxMen&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D
 
-#EXTINF:-1 tvg-id="BBCEarth.ca" tvg-name="BBC Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth.png" tvg-chno="460" channel-id="BBCEarth.ca" tvg-country="CA" tvg-language="eng" group-title="Documentary & Wildlife",BBC Earth
+#EXTINF:-1 tvg-id="BBCEarth.ca" tvg-name="BBC Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth.png" tvg-chno="459" channel-id="BBCEarth.ca" tvg-country="CA" tvg-language="eng" group-title="Documentary & Wildlife",BBC Earth
 https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
 
-#EXTINF:-1 tvg-id="BVG.in@SD" tvg-name="BVG" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bvg.png" tvg-chno="461" channel-id="BVG.in@SD" tvg-country="IN" tvg-language="hin" group-title="Documentary & Wildlife",BVG
+#EXTINF:-1 tvg-id="BVG.in@SD" tvg-name="BVG" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bvg.png" tvg-chno="460" channel-id="BVG.in@SD" tvg-country="IN" tvg-language="hin" group-title="Documentary & Wildlife",BVG
 https://mumt05.tangotv.in/87NeALx2BVG/index.m3u8
 
-#EXTINF:-1 tvg-id="CGTNDocumentary.cn" tvg-name="CGTN Documentary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cgtn-documentary.png" tvg-chno="462" channel-id="CGTNDocumentary.cn" tvg-country="CN" tvg-language="eng" group-title="Documentary & Wildlife",CGTN Documentary
+#EXTINF:-1 tvg-id="CGTNDocumentary.cn" tvg-name="CGTN Documentary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cgtn-documentary.png" tvg-chno="461" channel-id="CGTNDocumentary.cn" tvg-country="CN" tvg-language="eng" group-title="Documentary & Wildlife",CGTN Documentary
 https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8
 
-#EXTINF:-1 tvg-id="Choppertown.us" tvg-name="Choppertown" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/choppertown.png" tvg-chno="463" channel-id="Choppertown.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Choppertown
+#EXTINF:-1 tvg-id="Choppertown.us" tvg-name="Choppertown" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/choppertown.png" tvg-chno="462" channel-id="Choppertown.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Choppertown
 https://7d8dc76d676946ec8d372d4ed7b22333.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-11-CHOPPERTOWN-SPORTSTRIBAL/mt/sportstribaltv/11/hls/master/playlist.m3u8
 
-#EXTINF:-1 tvg-id="CrimeJustice.us" tvg-name="Crime & Justice" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/crime-and-justice.png" tvg-chno="464" channel-id="CrimeJustice.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Crime & Justice
+#EXTINF:-1 tvg-id="CrimeJustice.us" tvg-name="Crime & Justice" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/crime-and-justice.png" tvg-chno="463" channel-id="CrimeJustice.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Crime & Justice
 https://d1vsdt3c2xcxl2.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-h309rib7av3rk/playlist.m3u8
 
-#EXTINF:-1 tvg-id="CrimeSceneTV.us" tvg-name="Crime Scene TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/crime-scene-tv.png" tvg-chno="465" channel-id="CrimeSceneTV.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Crime Scene TV
+#EXTINF:-1 tvg-id="CrimeSceneTV.us" tvg-name="Crime Scene TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/crime-scene-tv.png" tvg-chno="464" channel-id="CrimeSceneTV.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Crime Scene TV
 https://d1si3n1st4nkgb.cloudfront.net/10502/89001003/hls/master.m3u8?ads.xumo_channelId=89001003&ads.xumo_streamId=89001003&ads.caid=Indigenius&ads.csid=samsungtvplus_in_indigeniuscrimescenetv_ssai&ads.sfid=&ads.afid=Indigenius&ads.xumo_platform=samsung&ads._fw_is_lat=%7BTARGETOPT%7D&ads._fw_us_privacy=1---&ads._fw_coppa=0&ads._fw_did=%7BPSID%7D&ads._fw_content_category=IAB1-7&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-14&ads._fw_deviceMake=samsung&ads._fw_gdpr=1&ads._fw_gdpr_consent=%7BTC_STRING%7D&ads._fw_h_x_country=IN&ads.appVersion=&ads.appName=%7BAPP_NAME%7D&ads.xumo_contentId=1101&ads.xumo_contentName=Indigenius&ads.xumo_providerId=1101&ads.xumo_providerName=Indigenius&ads.xumo_adsystem=mediatailor&ads.xumo_channelName=indigeniuscrimescenetv_in&ads.tpcl=MIDROLL&ads._fw_app_store_url=%7BAPP_DOMAIN%7D
 
-#EXTINF:-1 tvg-id="custom.deadlywomen" tvg-name="Deadly Women" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deadly-women.png" channel-id="custom.deadlywomen" tvg-chno="466" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Deadly Women
+#EXTINF:-1 tvg-id="custom.deadlywomen" tvg-name="Deadly Women" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deadly-women.png" channel-id="custom.deadlywomen" tvg-chno="465" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Deadly Women
 https://d1mgh147xpmgs8.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-c1w8i9yzp8w93/DeadlyWomen_GB.m3u8
 
-#EXTINF:-1 tvg-id="DocuBayTV.in" tvg-name="DocuBay TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/docubay-tv.png" tvg-chno="467" channel-id="DocuBayTV.in" tvg-country="IN" tvg-language="eng" group-title="Documentary & Wildlife",DocuBay TV
+#EXTINF:-1 tvg-id="DocuBayTV.in" tvg-name="DocuBay TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/docubay-tv.png" tvg-chno="466" channel-id="DocuBayTV.in" tvg-country="IN" tvg-language="eng" group-title="Documentary & Wildlife",DocuBay TV
 https://cc-mgr91yrk4pehy.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-mgr91yrk4pehy/playlist.m3u8
 
-#EXTINF:-1 tvg-id="Documentary.us" tvg-name="Documentary+ USA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/documentary-usa.png" tvg-chno="468" channel-id="Documentary.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Documentary+ USA
+#EXTINF:-1 tvg-id="Documentary.us" tvg-name="Documentary+ USA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/documentary-usa.png" tvg-chno="467" channel-id="Documentary.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Documentary+ USA
 https://ef79b15c8c7c46c7a9de9d33001dbd07.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-859-DOCUMENTARYPLUS-DOCUMENTARYPLUS/mt/documentaryplus/859/hls/master/playlist.m3u8
 
-#EXTINF:-1 tvg-id="EpicCrimes.in" tvg-name="Epic Crimes" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-crimes.png" tvg-chno="469" channel-id="EpicCrimes.in" tvg-country="IN" tvg-language="eng" group-title="Documentary & Wildlife",Epic Crimes
+#EXTINF:-1 tvg-id="EpicCrimes.in" tvg-name="Epic Crimes" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-crimes.png" tvg-chno="468" channel-id="EpicCrimes.in" tvg-country="IN" tvg-language="eng" group-title="Documentary & Wildlife",Epic Crimes
 https://cc-wsuyg2uxeak04.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-wsuyg2uxeak04/master.m3u8
+
+#EXTINF:-1 tvg-id="EpicTV.in@Digital" tvg-name="Epic TV Digital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-tv-digital.png" tvg-chno="469" channel-id="EpicTV.in@Digital" tvg-country="IN" tvg-language="hin;eng" group-title="Documentary & Wildlife",Epic TV Digital
+https://d1fodel5fjpe8b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-68r9vf9490xt2/master.m3u8?ads.ads_cdn=cf&ads.cdn=cf
 
 #EXTINF:-1 tvg-id="Getfactual.us" tvg-name="Get Factual" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/get-factual.png" tvg-chno="470" channel-id="Getfactual.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Get Factual
 https://d1nhni5l2n8hjt.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rzh07me7cf8x7/gf.m3u8
@@ -1891,20 +1891,20 @@ http://88.212.7.14/live/spiler1/index.m3u8
 #EXTINF:-1 tvg-id="custom.spiler2" tvg-name="Spiler 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/spiler-2-7c5f34cf1e.png" channel-id="custom.spiler2" tvg-chno="629" tvg-country="HU" tvg-language="hun" group-title="Sports",Spiler 2
 http://88.212.7.14/live/spiler2/index.m3u8
 
-#EXTINF:-1 tvg-id="custom.sport5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport5-israel.png" tvg-name="Sport5" channel-id="custom.sport5" tvg-chno="630" tvg-country="UA" tvg-language="ukr" group-title="Sports",Sport5
-https://rgelive.akamaized.net/hls/live/2043095/live3/playlist.m3u8
-
-#EXTINF:-1 tvg-id="custom.sport1hungary" tvg-name="Sport 1 (Hungary)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport-1-hungary-d42479c518.png" channel-id="custom.sport1hungary" tvg-chno="631" tvg-country="HU" tvg-language="hun" group-title="Sports",Sport 1 (Hungary)
+#EXTINF:-1 tvg-id="custom.sport1hungary" tvg-name="Sport 1 (Hungary)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport-1-hungary-d42479c518.png" channel-id="custom.sport1hungary" tvg-chno="630" tvg-country="HU" tvg-language="hun" group-title="Sports",Sport 1 (Hungary)
 http://88.212.7.14/live/sport1_hun/index.m3u8
 
-#EXTINF:-1 tvg-id="custom.sport2hungary" tvg-name="Sport 2 (Hungary)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport-2-hungary-620b031a4a.png" channel-id="custom.sport2hungary" tvg-chno="632" tvg-country="HU" tvg-language="hun" group-title="Sports",Sport 2 (Hungary)
+#EXTINF:-1 tvg-id="custom.sport2hungary" tvg-name="Sport 2 (Hungary)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport-2-hungary-620b031a4a.png" channel-id="custom.sport2hungary" tvg-chno="631" tvg-country="HU" tvg-language="hun" group-title="Sports",Sport 2 (Hungary)
 http://88.212.7.14/live/sport2_hun/index.m3u8
 
-#EXTINF:-1 tvg-id="custom.sport2ukraine" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport-2-ukraine.png" tvg-name="Sport 2 (Ukraine)" channel-id="custom.sport2ukraine" tvg-chno="633" tvg-country="UA" tvg-language="ukr" group-title="Sports",Sport 2 (Ukraine)
+#EXTINF:-1 tvg-id="custom.sport2ukraine" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport-2-ukraine.png" tvg-name="Sport 2 (Ukraine)" channel-id="custom.sport2ukraine" tvg-chno="632" tvg-country="UA" tvg-language="ukr" group-title="Sports",Sport 2 (Ukraine)
 http://stream.mcquack.net/392/index.m3u8
 
-#EXTINF:-1 tvg-id="custom.sport4" tvg-name="Sport 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport-4-19a83fa7a4.png" channel-id="custom.sport4" tvg-chno="634" tvg-country="UA" tvg-language="ukr" group-title="Sports",Sport 4
+#EXTINF:-1 tvg-id="custom.sport4" tvg-name="Sport 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport-4-19a83fa7a4.png" channel-id="custom.sport4" tvg-chno="633" tvg-country="UA" tvg-language="ukr" group-title="Sports",Sport 4
 http://stream.mcquack.net/394/index.m3u8
+
+#EXTINF:-1 tvg-id="custom.sport5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport5-israel.png" tvg-name="Sport5" channel-id="custom.sport5" tvg-chno="634" tvg-country="UA" tvg-language="ukr" group-title="Sports",Sport5
+https://rgelive.akamaized.net/hls/live/2043095/live3/playlist.m3u8
 
 #EXTINF:-1 tvg-id="SportsFirstTV.us" tvg-name="Sports First TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sports-first-tv.png" tvg-chno="635" channel-id="SportsFirstTV.us" tvg-country="US" tvg-language="eng" group-title="Sports",Sports First TV
 https://d4ddgdmj1cvnm.cloudfront.net/scheduler/scheduleMaster/409.m3u8
