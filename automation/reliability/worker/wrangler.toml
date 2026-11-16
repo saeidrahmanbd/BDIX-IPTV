@@ -12,4 +12,4 @@ MODE = "shadow"
 [[d1_databases]]
 binding = "RELIABILITY_DB"
 database_name = "bdix-iptv-reliability-shadow"
-database_id = "REPLACE_WITH_YOUR_CLOUDFLARE_D1_DATABASE_ID"
+database_id = "8d5ff1cc-6f96-4cc2-b514-f7a2767bf410"
