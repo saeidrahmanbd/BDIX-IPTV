@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Repair missing, generic and known-contaminated logos across the three core maintained playlists.
 
+# [manual-logo-localization] Explicit owner-requested retry after a guard-only run.
+
 Policy: search this repository's /logos tree first (including /logos/unused),
 then use exact channel/ID matches from curated sources, IPTV-org, or Wikimedia
 Commons. Never invent a broadcaster logo or use an unrelated lookalike.\nActive groups require verified local logo assets; Review queues may retain missing\nlogo metadata while awaiting manual identity/source verification.
@@ -98,7 +100,7 @@ EXTRA_DIRECT_HINTS = {
     "Channel 52": {
         "url": "https://cdn.risingbd.com/media/imgAll/2013December/4420131228144155.jpg",
         "format": "JPEG",
-        "page": "https://www.risingbd.com/\u099a\u09cd\u09af\u09be\u09a8\u09c7\u09b2-%\u09eb\u09e8-%\u098f\u09b0-%\u09b2\u09cb\u0997\u09cb-%\u0989\u09a8\u09cd\u09ae\u09cb\u099a\u09a8/30677",
+        "page": "https://www.risingbd.com/চ্যানেল-৫২-এর-লোগো-উন্মোচন/30677",
         "license": "Exact Channel 52 logo image published with RisingBD\u2019s 28 December 2013 report on the broadcaster\u2019s logo unveiling; source attribution only, no separate copyright licence asserted.",
         "license_url": "",
     },
