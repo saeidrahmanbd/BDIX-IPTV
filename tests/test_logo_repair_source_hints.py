@@ -50,6 +50,12 @@ class LogoRepairSourceTests(unittest.TestCase):
             self.assertEqual(strip_logo(updated), strip_logo(original))
             self.assertEqual(len(updated) - len(updated.rstrip("\n")), len(original) - len(original.rstrip("\n")))
 
+    def test_wow_kidz_tamil_uses_official_brand_wordmark_without_hindi_suffix(self):
+        hint = logo_repair.EXTRA_DIRECT_HINTS["WOW Kidz Tamil"]
+        self.assertIn("yt3.ggpht.com", hint["url"])
+        self.assertIn("youtube.com/channel/", hint["page"])
+        self.assertIn("without the incorrect Hindi-language suffix", hint["license"])
+
     def test_channel_52_uses_published_original_logo_source(self):
         hint = logo_repair.EXTRA_DIRECT_HINTS["Channel 52"]
         self.assertEqual(hint["url"], "https://cdn.risingbd.com/media/imgAll/2013December/4420131228144155.jpg")
@@ -57,7 +63,7 @@ class LogoRepairSourceTests(unittest.TestCase):
         self.assertIn("logo", hint["license"].casefold())
 
     def test_placeholder_assets_are_quarantined(self):
-        for name in ("channel-52.png", "jtv-bangla.png", "classic-movies-27994c39.png"):
+        for name in ("channel-52.png", "jtv-bangla.png", "classic-movies-27994c39.png", "wow-kidz-tamil.png"):
             with self.subTest(asset=name):
                 self.assertIn(name, logo_repair.BAD_ASSETS)
 
