@@ -8,12 +8,24 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 ### 2026-11-16 — `IPTV-Playlist.m3u`
 
 - New channel identities: **0**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **0 / 0**
+- Channel identities removed: **15**
+- Stream URLs added / removed: **0 / 25**
 - Backup URL updates: **0**
-- Logo reference changes: **10**
+- Logo reference changes: **6**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
+
+Removed channel identities (up to 10):
+- Network 10
+- Zee 24 Ghanta
+- DD India
+- Jeevan TV
+- Kaumudy TV
+- Makkal TV
+- MBC TV
+- Ary News
+- ARY Q TV
+- Peace TV Urdu
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-16 — `International-Playlist.m3u`
