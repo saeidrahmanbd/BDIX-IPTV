@@ -80,7 +80,7 @@ The initial D1 schema is `automation/reliability/schema.sql`.
 - Main IPTV discovery: do not replay an old date automatically; reconcile current inputs and require the existing manual-queue and owner-protection checks.
 - International discovery and maintenance: replay only as a current-state reconciliation, never as an instruction to restore an old playlist snapshot.
 - Logo localization: safe latest-state reconciliation after verifying authentic local assets.
-- International stream health: never fabricate or backfill a missed day's probe result. A missed Bangladesh calendar day resets the existing consecutive-definitive-failure streak.
+- International stream health: never fabricate or backfill a missed day's probe result. A missed day resets the existing consecutive-definitive-failure streak in accordance with the current Bangladesh-calendar-day policy.
 - EPG: regenerate from current inputs and publish only if the existing last-known-good quality gate passes.
 
 ## Completion contract
