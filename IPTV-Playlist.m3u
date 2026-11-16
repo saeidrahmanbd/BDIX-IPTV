@@ -581,9 +581,9 @@ http://212.5.144.156:8080/espn/index.m3u8
 http://85.237.89.160:9590/usa-s/ESPN-HD/index.m3u8
 #EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png" channel-id="ESPN.us" group-title="Backup",ESPN
 https://tvsen5.aynaott.com/espn/index.m3u8
-#EXTINF:-1 tvg-id="custom.eurosportfrance" tvg-name="Eurosport (France)" channel-id="custom.eurosportfrance" group-title="Backup",Eurosport (France)
+#EXTINF:-1 tvg-id="custom.eurosportfrance" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eurosport-france.png" tvg-name="Eurosport (France)" channel-id="custom.eurosportfrance" group-title="Backup",Eurosport (France)
 http://103.253.74.210:7070/cloud/stream/122/index.m3u8
-#EXTINF:-1 tvg-id="custom.eurosport2germany" tvg-name="Eurosport 2 Germany" channel-id="custom.eurosport2germany" group-title="Backup",Eurosport 2 Germany
+#EXTINF:-1 tvg-id="custom.eurosport2germany" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eurosport-2-germany.png" tvg-name="Eurosport 2 Germany" channel-id="custom.eurosport2germany" group-title="Backup",Eurosport 2 Germany
 http://46.244.99.71:8181/stream/74/index.m3u8
 #EXTINF:-1 tvg-id="FaktMarathi.in@SD" tvg-name="Fakt Marathi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fakt-marathi.png" tvg-chno="273" channel-id="FaktMarathi.in@SD" tvg-country="IN" tvg-language="mar" group-title="Backup",Fakt Marathi
 https://cdn.pishow.tv/ott/live/10002/master.m3u8
@@ -2243,7 +2243,7 @@ http://213.91.179.28:8000/play/a0at
 http://213.91.179.28:8000/play/a0ar
 #EXTINF:-1 tvg-id="custom.maxsport4" tvg-name="Max Sport 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-max-sport-4.png" channel-id="custom.maxsport4" group-title="Sports",Max Sport 4
 http://213.91.179.28:8000/play/a05n
-#EXTINF:-1 tvg-id="custom.mggtv" tvg-name="MGG TV" channel-id="custom.mggtv" group-title="Sports",MGG TV
+#EXTINF:-1 tvg-id="custom.mggtv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mgg-tv.png" tvg-name="MGG TV" channel-id="custom.mggtv" group-title="Sports",MGG TV
 https://d1mdvi698umja9.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-kuib43fy5umqi-ssai-prd/mgg.m3u8
 #EXTINF:-1 tvg-id="MLB.us@SD" tvg-name="MLB" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mlb-strike-zone-4930a654ce.png" tvg-chno="623" channel-id="MLB.us@SD" tvg-country="US" tvg-language="und" group-title="Sports",MLB
 https://aegis-cloudfront-1.tubi.video/36ef2f9d-7100-4c4d-b41a-dbf41ab7e461/playlist.m3u8
