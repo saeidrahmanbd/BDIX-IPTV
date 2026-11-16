@@ -89,6 +89,15 @@ class EpgMappingRegionTests(unittest.TestCase):
             generate_epg.TARGETED_DISCOVERY_SOURCES,
         )
 
+    def test_bhi_channel_has_explicit_indian_country_metadata(self):
+        playlist = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        entries = [
+            line for line in playlist.splitlines()
+            if line.startswith("#EXTINF:") and 'tvg-id="BHI.Channel.in"' in line
+        ]
+        self.assertEqual(len(entries), 1)
+        self.assertIn('tvg-country="IN"', entries[0])
+
     def test_new_channel_aliases_point_to_catalogued_source_ids(self):
         self.assertEqual(
             epg_coverage.EPG_ALIASES["custom.mggtv"],
