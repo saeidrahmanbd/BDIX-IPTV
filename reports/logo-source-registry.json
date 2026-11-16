@@ -6018,5 +6018,15 @@
     "status": "third_party_verified",
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/france/mgg-tv-fr.png",
     "notes": "Local PNG copied from the matching country/channel asset in tv-logo/tv-logos. See that repository's README for its stated reuse and attribution terms; broadcaster trademarks remain with their owners."
+  },
+  "IPTV-Playlist.m3u|custom.tsportshd|T Sports HD|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png": {
+    "status": "third_party_verified",
+    "source_url": "https://github.com/abusaeeidx/Tv-Channel-Logo/blob/main/New/Update-Assets/tsports.png",
+    "notes": "Local PNG copied from a matching channel asset in the public abusaeeidx/Tv-Channel-Logo repository. Channel/country identity checked against the playlist stream context; broadcaster trademarks remain with their owners."
+  },
+  "IPTV-Playlist.m3u|custom.sport5|Sport5|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sport5-israel.png": {
+    "status": "third_party_verified",
+    "source_url": "https://github.com/abusaeeidx/Tv-Channel-Logo/blob/main/countries/israel/5sport-il.png",
+    "notes": "Local PNG copied from a matching channel asset in the public abusaeeidx/Tv-Channel-Logo repository. Channel/country identity checked against the playlist stream context; broadcaster trademarks remain with their owners."
   }
 }
