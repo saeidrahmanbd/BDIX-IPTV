@@ -60,6 +60,7 @@ BAD_ASSETS = {
     "channel-52.png", "channel-52-converted-56518832e7.png",  # Generic text-only artwork; exact historic Channel 52 mark is sourced below.
     "jtv-bangla.png", "jtv-bangla-converted-91bd17c8e4.png",  # Generic text-only artwork, not a verified JTV Bangla broadcaster logo.
     "classic-movies-27994c39.png",  # Unofficial generated label artwork; clean local logo is in /logos/unused.
+    "wow-kidz-tamil.png",  # Contains the Hindi-language suffix; not correct for the Tamil feed.
     "16-a308b78988.png",  # Provenance maps this image to Channel16.ru; it was reused on unrelated channels.
     # Same 160x60 placeholder artwork was reused for three unrelated stations.
     "shikor-tv-canada-ac43f0fa9e.png",
@@ -97,6 +98,13 @@ FORCED_CHANNEL_LOGOS = {
 # only consulted after the repository-wide local logo search. Keep them here
 # so all playlist variants reuse the same locally stored image.
 EXTRA_DIRECT_HINTS = {
+    "WOW Kidz Tamil": {
+        "url": "https://yt3.ggpht.com/a/AATXAJytH39NO3s4QEpDhzrKSGGEg0tf1c6c29ZzsQ%3Ds900-c-k-c0xffffffff-no-rj-mo",
+        "format": "",
+        "page": "https://www.youtube.com/channel/UCN8S4CqMRy6tVKVXvs7Bzeg",
+        "license": "Official WowKidz channel avatar from the broadcaster\u2019s YouTube channel; shared brand wordmark without the incorrect Hindi-language suffix, used for the Tamil feed. Source attribution only; no separate copyright licence asserted.",
+        "license_url": "",
+    },
     "Channel 52": {
         "url": "https://cdn.risingbd.com/media/imgAll/2013December/4420131228144155.jpg",
         "format": "JPEG",
