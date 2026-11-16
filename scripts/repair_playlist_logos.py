@@ -55,6 +55,9 @@ BAD_ASSETS = {
     "zee-tv.png",
     "tom-and-jerry.png",
     "arirang-tv.png",  # KBS WORLD wordmark under an Arirang filename.
+    "channel-52.png", "channel-52-converted-56518832e7.png",  # Generic text-only artwork; exact historic Channel 52 mark is sourced below.
+    "jtv-bangla.png", "jtv-bangla-converted-91bd17c8e4.png",  # Generic text-only artwork, not a verified JTV Bangla broadcaster logo.
+    "classic-movies-27994c39.png",  # Unofficial generated label artwork; clean local logo is in /logos/unused.
     "16-a308b78988.png",  # Provenance maps this image to Channel16.ru; it was reused on unrelated channels.
     # Same 160x60 placeholder artwork was reused for three unrelated stations.
     "shikor-tv-canada-ac43f0fa9e.png",
@@ -92,6 +95,13 @@ FORCED_CHANNEL_LOGOS = {
 # only consulted after the repository-wide local logo search. Keep them here
 # so all playlist variants reuse the same locally stored image.
 EXTRA_DIRECT_HINTS = {
+    "Channel 52": {
+        "url": "https://cdn.risingbd.com/media/imgAll/2013December/4420131228144155.jpg",
+        "format": "JPEG",
+        "page": "https://www.risingbd.com/\u099a\u09cd\u09af\u09be\u09a8\u09c7\u09b2-%\u09eb\u09e8-%\u098f\u09b0-%\u09b2\u09cb\u0997\u09cb-%\u0989\u09a8\u09cd\u09ae\u09cb\u099a\u09a8/30677",
+        "license": "Exact Channel 52 logo image published with RisingBD\u2019s 28 December 2013 report on the broadcaster\u2019s logo unveiling; source attribution only, no separate copyright licence asserted.",
+        "license_url": "",
+    },
     "FIGHT | MVMT Culture": {
         "url": "https://media.unreel.me/prod/freelivesports/logo/98403785-3bba-4f7d-bee8-0eada4d790c8",
         "format": "",
