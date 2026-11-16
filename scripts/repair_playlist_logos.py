@@ -105,6 +105,7 @@ EXTRA_DIRECT_HINTS = {
         "license": "Official WowKidz channel avatar from the broadcaster\u2019s YouTube channel; shared brand wordmark without the incorrect Hindi-language suffix, used for the Tamil feed. Source attribution only; no separate copyright licence asserted.",
         "license_url": "",
     },
+    # Owner-requested correction: exact historic logo shown in RisingBD's unveiling report.
     "Channel 52": {
         "url": "https://cdn.risingbd.com/media/imgAll/2013December/4420131228144155.jpg",
         "format": "JPEG",
