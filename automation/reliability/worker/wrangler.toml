@@ -8,8 +8,24 @@ crons = ["* * * * *"]
 
 [vars]
 MODE = "shadow"
+REGISTRY_JSON = '''
+{
+  "schema_version": 1,
+  "timezone": "Asia/Dhaka",
+  "registry_version": "2026-11-16.1",
+  "workflows": [
+    {"id":"iptv_new_channel_discovery","name":"IPTV New Channel Discovery","workflow_file":"new-channel-discovery.yml","expected_local_time":"05:00","expected_utc_cron":"0 23 * * *","required_job_id":"discover","writer_concurrency_group":"iptv-playlist-main-writer-v5","publication_target":"IPTV-Playlist.m3u","completion_contract":"bdix-automation-completion-v1","replay_policy":"manual_review_for_missed_business_date"},
+    {"id":"international_channel_discovery","name":"International Channel Discovery","workflow_file":"international-channel-discovery.yml","expected_local_time":"05:10","expected_utc_cron":"10 23 * * *","required_job_id":"discover","writer_concurrency_group":"iptv-playlist-main-writer-v5","publication_target":"International-Playlist.m3u","completion_contract":"bdix-automation-completion-v1","replay_policy":"policy_aware_reconciliation"},
+    {"id":"playlist_logo_localization","name":"Playlist Logo Repair and Localization","workflow_file":"playlist-logo-localization.yml","expected_local_time":"05:25","expected_utc_cron":"25 23 * * *","required_job_id":"localize","writer_concurrency_group":"iptv-playlist-main-writer-v5","publication_target":"repository_local_logo_assets","completion_contract":"bdix-automation-completion-v1","replay_policy":"safe_latest_state_reconciliation"},
+    {"id":"international_stream_health","name":"International Stream Health","workflow_file":"international-stream-health.yml","expected_local_time":"05:35","expected_utc_cron":"35 23 * * *","required_job_id":"check","writer_concurrency_group":"iptv-playlist-main-writer-v5","publication_target":"International-Playlist.m3u","completion_contract":"bdix-automation-completion-v1","replay_policy":"never_backfill_health_failures; missed_day_resets_streak"},
+    {"id":"iptv_playlist_maintenance","name":"IPTV Playlist Update","workflow_file":"iptv-maintenance.yml","expected_local_time":"05:50","expected_utc_cron":"50 23 * * *","required_job_id":"maintain","writer_concurrency_group":"iptv-playlist-main-writer-v5","publication_target":"IPTV-Playlist.m3u","completion_contract":"bdix-automation-completion-v1","replay_policy":"safe_latest_state_reconciliation"},
+    {"id":"epg_refresh","name":"Refresh IPTV EPG","workflow_file":"epg-refresh.yml","expected_local_time":"06:10","expected_utc_cron":"10 0 * * *","required_job_id":"refresh","writer_concurrency_group":"iptv-playlist-main-writer-v5","publication_target":"epg/epg.xml","completion_contract":"bdix-automation-completion-v1","replay_policy":"publish_only_after_last_known_good_validation"}
+  ]
+}
+'''
 
 [[d1_databases]]
 binding = "RELIABILITY_DB"
 database_name = "bdix-iptv-reliability-shadow"
 database_id = "8d5ff1cc-6f96-4cc2-b514-f7a2767bf410"
+migrations_dir = "migrations"
