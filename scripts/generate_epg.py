@@ -318,7 +318,7 @@ def source_country_codes(source):
             "in": "IN", "lt": "LT", "ua": "UA", "us2": "US",
         }
         for prefix, country in feed_regions.items():
-            if re.match(rf"^{re.escape(prefix)}\\d", filename):
+            if re.match(rf"^{re.escape(prefix)}\d", filename):
                 code = country
                 break
         if not code and "india" in filename:
