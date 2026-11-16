@@ -6033,5 +6033,10 @@
     "status": "third_party_verified",
     "source_url": "https://github.com/Karnei4/Karnei4.github.io/blob/master/convert/index_files/sport2ua.png",
     "notes": "Local PNG from a Ukrainian Sport 2 logo asset. Channel identity corroborated by the matching Sport 2 UA entry and stream URL in a separate Ukrainian playlist; original channel identity also documented by Wikimedia Commons."
+  },
+  "IPTV-Playlist.m3u|custom.bbcworld|BBC World|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-world-news.png": {
+    "status": "third_party_verified",
+    "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/international/bbc-world-news-int.png",
+    "notes": "Local PNG copied from the international BBC World News logo asset in the public TV Logos catalogue; replaces the mismatched BBC News logo."
   }
 }
