@@ -1739,7 +1739,7 @@ https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionholly
 https://stream.ecable.tv/afrobeats/index.m3u8
 #EXTINF:-1 tvg-id="AlJazeera.qa" tvg-name="Al Jazeera" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-jazeera.png" tvg-chno="384" channel-id="AlJazeera.qa" tvg-country="QA" tvg-language="eng" group-title="International",Al Jazeera
 https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8
-#EXTINF:-1 tvg-id="custom.amcpresents" tvg-name="AMC Presents" channel-id="custom.amcpresents" group-title="International",AMC Presents
+#EXTINF:-1 tvg-id="custom.amcpresents" tvg-name="AMC Presents" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amc-presents.png" channel-id="custom.amcpresents" group-title="International",AMC Presents
 https://5def33c73f084e11a19ca77697d6b413.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Plex_AMCPresents/playlist.m3u8
 #EXTINF:-1 tvg-id="plex.tv.AMC.Thrillers.plex" tvg-name="AMC Thrillers" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amc-triller.png" tvg-chno="385" channel-id="plex.tv.AMC.Thrillers.plex" tvg-country="US" tvg-language="eng" group-title="International",AMC Thrillers
 https://436f59579436473e8168284cac5d725f.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Plex_RushByAMC/playlist.m3u8
@@ -2139,11 +2139,11 @@ https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/tracks-v1a1/mono.ts.m3u8
 https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8
 #EXTINF:-1 tvg-id="BahrainSports2.bh@SD" tvg-name="Bahrain Sports 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bahrain-sports-2.png" tvg-chno="387" channel-id="BahrainSports2.bh@SD" tvg-country="BH" tvg-language="eng" group-title="Sports",Bahrain Sports 2
 https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.beinsports" tvg-name="beIN SPORTS" channel-id="custom.beinsports" group-title="Sports",beIN SPORTS
+#EXTINF:-1 tvg-id="custom.beinsports" tvg-name="beIN SPORTS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports.png" channel-id="custom.beinsports" group-title="Sports",beIN SPORTS
 https://tvsen6.aynaott.com/beinsports/index.m3u8
 #EXTINF:-1 tvg-id="custom.beinsports1" tvg-name="beIN SPORTS 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-1.png" channel-id="custom.beinsports1" group-title="Sports",beIN SPORTS 1
 http://27.124.71.27/beIN_Sports_1/index.m3u8
-#EXTINF:-1 tvg-id="custom.beinsports2" tvg-name="beIN SPORTS 2" channel-id="custom.beinsports2" group-title="Sports",beIN SPORTS 2
+#EXTINF:-1 tvg-id="custom.beinsports2" tvg-name="beIN SPORTS 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-2.png" channel-id="custom.beinsports2" group-title="Sports",beIN SPORTS 2
 http://27.124.71.27/beIN_Sports_2/index.m3u8
 #EXTINF:-1 tvg-id="custom.beinsports3" tvg-name="beIN SPORTS 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-3.png" channel-id="custom.beinsports3" group-title="Sports",beIN SPORTS 3
 http://27.124.71.27/beIN_Sports_3/index.m3u8
@@ -2293,7 +2293,7 @@ https://886bd3fbc782459f8de7555d32d7e9ce.mediatailor.us-west-2.amazonaws.com/v1/
 https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
 #EXTINF:-1 tvg-id="RedBullTV.at@US" tvg-name="Red Bull TV US" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/red-bull-tv-us-4ec4c704c2.png" tvg-chno="638" channel-id="RedBullTV.at@US" tvg-country="AT" tvg-language="und" group-title="Sports",Red Bull TV US
 https://0b73ace69ebb45eaa249bb87837cb958.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-644-WORBUSENFAST-LG_US/644/lgtv/hls/master/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.setantasports1eurasia" tvg-name="Setanta Sports 1 Eurasia" channel-id="custom.setantasports1eurasia" group-title="Sports",Setanta Sports 1 Eurasia
+#EXTINF:-1 tvg-id="custom.setantasports1eurasia" tvg-name="Setanta Sports 1 Eurasia" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/setanta-sports-1-eurasia.png" channel-id="custom.setantasports1eurasia" group-title="Sports",Setanta Sports 1 Eurasia
 http://stream.mcquack.net/234/index.m3u8
 #EXTINF:-1 tvg-id="SetantaSports2Eurasia.ie@SD" tvg-name="Setanta Sports 2 Eurasia" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/setanta-sports-2-eurasia.png" tvg-chno="639" channel-id="SetantaSports2Eurasia.ie@SD" tvg-country="IE" tvg-language="und" group-title="Sports",Setanta Sports 2 Eurasia
 http://stream.mcquack.net/235/index.m3u8
@@ -2353,7 +2353,7 @@ https://trace-sportstars-samsungnz.amagi.tv/playlist.m3u8
 https://d3pnbvng3bx2nj.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rds8g35qfqrnv/TSN_The_Ocho.m3u8
 #EXTINF:-1 tvg-id="TurkmenistanSport.tm@SD" tvg-name="Türkmenistan Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/turkmenistan-sport-714745951c.png" tvg-chno="648" channel-id="TurkmenistanSport.tm@SD" tvg-country="TM" tvg-language="und" group-title="Sports",Türkmenistan Sport
 https://alpha.tv.online.tm/hls/ch004.m3u8
-#EXTINF:-1 tvg-id="custom.tvrisport" tvg-name="TVRI Sport" channel-id="custom.tvrisport" group-title="Sports",TVRI Sport
+#EXTINF:-1 tvg-id="custom.tvrisport" tvg-name="TVRI Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvri-sport.png" channel-id="custom.tvrisport" group-title="Sports",TVRI Sport
 https://ott-balancer.tvri.go.id/live/eds/SportHD/hls/SportHD.m3u8
 #EXTINF:-1 tvg-id="TVSSports.us@SD" tvg-name="TVS Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvs-sports-1a961bba94.png" tvg-chno="650" channel-id="TVSSports.us@SD" tvg-country="US" tvg-language="und" group-title="Sports",TVS Sports
 https://rpn.bozztv.com/gusa/gusa-tvssports/index.m3u8
@@ -2369,7 +2369,7 @@ https://linear-893.frequency.stream/dist/plex/893/hls/master/playlist.m3u8
 https://d1t5afz6qed3xk.cloudfront.net/Unbeaten.m3u8
 #EXTINF:-1 tvg-id="custom.vijusport" tvg-name="viju+ Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viju-plus-sport-14b136d70c.png" channel-id="custom.vijusport" group-title="Sports",viju+ Sport
 http://stream.mcquack.net/333/index.m3u8
-#EXTINF:-1 tvg-id="custom.willowextra" tvg-name="Willow Extra" channel-id="custom.willowextra" group-title="Sports",Willow Extra
+#EXTINF:-1 tvg-id="custom.willowextra" tvg-name="Willow Extra" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/willow-extra.png" channel-id="custom.willowextra" group-title="Sports",Willow Extra
 http://27.124.71.27/Willow_Extra/index.m3u8
 #EXTINF:-1 tvg-id="custom.willowsports" tvg-name="Willow Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/us-willow-sports-hd.png" channel-id="custom.willowsports" tvg-country="US" tvg-language="eng" group-title="Sports",Willow Sports
 https://tvsen5.aynaott.com/willowhd/index.m3u8
@@ -2379,7 +2379,7 @@ https://d39accvx65hq9o.cloudfront.net/Womens_Sports_Network.m3u8
 https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="wwe.superstar.central.com" tvg-name="WWE Superstar Central" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wwe-superstar-central-2c9ca1325e.png" tvg-chno="682" channel-id="wwe.superstar.central.com" tvg-country="US" tvg-language="und" group-title="Sports",WWE Superstar Central
 https://dpv6ceilvhyrw.cloudfront.net/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.xsport" tvg-name="X SPORT" channel-id="custom.xsport" group-title="Sports",X SPORT
+#EXTINF:-1 tvg-id="custom.xsport" tvg-name="X SPORT" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/x-sport.png" channel-id="custom.xsport" group-title="Sports",X SPORT
 http://iptv.prosto.tv:7000/ch109/video.m3u8
 #EXTINF:-1 tvg-id="AndPictures.in@SD" tvg-name="&pictures" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pictures.png" channel-id="AndPictures.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",&pictures
 http://103.135.253.32:8080/PICTURE-HD/index.m3u8
