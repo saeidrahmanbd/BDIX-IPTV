@@ -15,6 +15,10 @@
 
 No third-party scheduler can guarantee zero downtime. The design aims to make failures observable and recoverable rather than promise uninterrupted service.
 
+### Playlist ownership boundary
+
+The reliability layer does not authorize content changes to either `IPTV-Playlist.m3u` or `International-Playlist.m3u`. In particular, the main IPTV playlist remains owner-curated: existing stream URLs, group assignments, channel numbers, row order and primary/Backup/Review placement must not be changed by scheduler or recovery logic. Only the existing workflow-specific validation and explicitly approved discovery-queue behavior may run. The International playlist continues to follow its separately defined automation policy; this reliability project does not broaden or replace that policy.
+
 ## Current production workflow registry
 
 The machine-readable source of expected schedules and stable identifiers is `automation/reliability/workflow_registry.json`.
