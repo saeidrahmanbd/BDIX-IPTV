@@ -50,6 +50,17 @@ class LogoRepairSourceTests(unittest.TestCase):
             self.assertEqual(strip_logo(updated), strip_logo(original))
             self.assertEqual(len(updated) - len(updated.rstrip("\n")), len(original) - len(original.rstrip("\n")))
 
+    def test_channel_52_uses_published_original_logo_source(self):
+        hint = logo_repair.EXTRA_DIRECT_HINTS["Channel 52"]
+        self.assertEqual(hint["url"], "https://cdn.risingbd.com/media/imgAll/2013December/4420131228144155.jpg")
+        self.assertIn("risingbd.com", hint["page"])
+        self.assertIn("logo", hint["license"].casefold())
+
+    def test_placeholder_assets_are_quarantined(self):
+        for name in ("channel-52.png", "jtv-bangla.png", "classic-movies-27994c39.png"):
+            with self.subTest(asset=name):
+                self.assertIn(name, logo_repair.BAD_ASSETS)
+
     def test_alone_uses_a_direct_validated_commons_asset_url(self):
         hint = logo_repair.EXTRA_DIRECT_HINTS["Alone"]
         self.assertTrue(hint["url"].startswith("https://upload.wikimedia.org/wikipedia/commons/"))
