@@ -149,6 +149,13 @@ EXTRA_DIRECT_HINTS = {
         "license": "Official MBC Mood CDN logo URL cited by the approved iptv-org/database Tarab channel record; source attribution only, no separate copyright licence asserted",
         "license_url": "",
     },
+    "Stingray Greatest Hits": {
+        "url": "https://provider-static.plex.tv/epg/cms/production/b91ee9d9-43db-4505-bd6b-d76e6544156c/Greatest_hits_RDX_VERT.jpg",
+        "format": "JPEG",
+        "page": "https://watch.plex.tv/live-tv/channel/stingray-greatest-hits",
+        "license": "Exact Stingray Greatest Hits channel artwork displayed on Plex's channel page; third-party source attribution only, no separate copyright licence asserted.",
+        "license_url": "",
+    },
     "Cinecanal Panregional": {
         "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/CinecanalLA.png",
         "format": "PNG",
