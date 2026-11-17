@@ -7,6 +7,7 @@ concurrency:
   group: international-channel-discovery-run-v1
   cancel-in-progress: false
   queue: max
+# [manual-international-discovery] One-time explicit reorganization after genre-policy merge.
 # Dedicated International discovery and country/genre grouping owner.
 # Candidates and reorganization are validated before the playlist is published.
 on:
