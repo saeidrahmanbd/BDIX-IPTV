@@ -109,6 +109,7 @@ jobs:
                       info = re.sub(r'[ \\t]+tvg-chno="[^"]*"', "", info)
                   else:
                       info = set_attr(info, "group-title", "International")
+                  info = info.rsplit(",", 1)[0] + ",MyTime Movie Network"
                   info_lines[info_index] = info
                   entry = nl.join(info_lines)
                   if url == mytime_other_url:
