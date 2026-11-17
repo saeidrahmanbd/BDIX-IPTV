@@ -55,3 +55,15 @@ test("run events are assigned by Bangladesh business date",()=>{
     {"10":[{name:"refresh",conclusion:"success"}]},new Date("2026-11-16T00:30:00Z"));
   assert.equal(r.state,"VERIFIED");
 });
+
+test("policy-aware discovery may catch up only when no workflow run exists",()=>{
+  const w={...base,replay_policy:"policy_aware_reconciliation"};
+  assert.equal(recoveryPlan(w,"workflow_run_not_found").state,"RETRY_WAIT");
+  assert.equal(recoveryPlan(w,"workflow_failed").state,"MANUAL_REVIEW");
+  assert.equal(recoveryPlan(w,"required_job_skipped").state,"MANUAL_REVIEW");
+});
+test("EPG catch-up candidate must pass the existing last-known-good gate",()=>{
+  const w={...base,replay_policy:"publish_only_after_last_known_good_validation"};
+  assert.equal(recoveryPlan(w,"workflow_run_not_found").state,"RETRY_WAIT");
+  assert.equal(recoveryPlan(w,"workflow_failed").state,"MANUAL_REVIEW");
+});
