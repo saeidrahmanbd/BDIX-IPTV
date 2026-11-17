@@ -94,6 +94,11 @@ TV_LOGO_REPO = "https://github.com/tv-logo/tv-logos"
 # accepts explicit logo-marked <img> elements; OG images are allowed only for
 # station profile pages where they are commonly the station avatar.
 DIRECT_PAGE_HINTS = {
+    "Persiana Vibe": ("https://persiantelebox.com/live/persiana-vibe", False),
+    "Persiana Folk": ("https://persiantelebox.com/live/persiana-folk", False),
+    "Persiana SetMix": ("https://www.archytele.com/live/france/persiana-setmix", True),
+    "Vox Kongo TV": ("https://api.innovasat-ott.com/channel/vox-kongo-tv", True),
+
     "Global Panjab": ("https://globalpunjabtv.com/", True),
     "Bangla Hits": ("https://zeno.fm/radio/bangla-hits/", True),
     "Doyel Radio": ("https://zeno.fm/radio/doyel-radio/", True),
@@ -169,6 +174,15 @@ def find_page_logo(page_url, allow_og_image=False):
 
 # Exact station assets discovered on broadcaster/streaming-service pages.
 DIRECT_LOGO_HINTS = {
+    "Totalmusic 2000s": {
+        "url": "https://www.40mediagroup.com/channels/sm/totalmusic-00s.webp",
+        "format": "WEBP",
+        "page": "https://www.40mediagroup.com/",
+        "source": "Official 40media Group channel artwork",
+        "license": "Exact Totalmusic 00s channel artwork displayed on the official 40media Group website; source attribution only, no separate copyright licence asserted.",
+        "license_url": "",
+    },
+
     "BTV Sangsad": {
         "url": "https://i.imgur.com/jkouxLg.png",
         "format": "PNG",
