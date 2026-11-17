@@ -9,10 +9,10 @@ Keep Cloudflare \`MODE=shadow\`. Shadow mode creates idempotent obligations for 
 ## Recovery policies
 
 - New Channel Discovery: missed business dates require manual review.
-- International Discovery: same-day catch-up only, subject to the workflow's own policy filters.
+- International Discovery: same-day catch-up only when no run exists for that Bangladesh date; the existing workflow policy and daily guard still decide whether the job may execute.
 - Stream Health: never backfill; missed days reset the streak.
-- Logo repair and playlist maintenance: same-day latest-state reconciliation only.
-- EPG: same-day catch-up only; its existing last-known-good validation and publication gates remain mandatory.
+- Logo repair and playlist maintenance: one same-day retry after a missing or failed run; workflow validations remain authoritative.
+- EPG: same-day catch-up only when no run exists; the existing last-known-good validation and publication gates remain mandatory. Failed or guard-skipped EPG runs are sent to manual review.
 - Historical dates that the existing workflows cannot replay safely are marked for manual review.
 
 A successful date is verified only when the workflow run and the required job named in the registry both conclude successfully. A skipped required job is never treated as a successful execution.
