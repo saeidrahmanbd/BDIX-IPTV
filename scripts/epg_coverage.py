@@ -141,6 +141,7 @@ EPG_ALIASES = {
     # identifies its canonical XMLTV ID as TraceUrban.fr (broadcast area includes EU/Africa).
     "TraceUrban.fr@InternationalHD": ["Trace.Urban.fr", "TraceUrban.fr"],
     # Exact, region-compatible Samsung TV Plus US identity from the strict unmapped audit.
+    "MyTimeMovieNetwork.us@SD": ["plex.tv.MyTime.Movie.Network.plex"],
     "MyTimeMovieNetworkEast.us": ["USBC3900018K6"],
     # Exact, region-compatible matches from the latest strict unmapped audit.
     "Vision.in@SD": ["Channel.Vision.in", "jtv1762"],
