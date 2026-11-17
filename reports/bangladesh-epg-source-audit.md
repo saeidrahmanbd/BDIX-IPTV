@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-16T13:52:49+00:00**
+Generated: **2026-11-17T08:07:50+00:00**
 
-- Active Bangladesh playlist identities: **84**
+- Active Bangladesh playlist identities: **92**
 - Identities with a retained source mapping: **5**
 - Identities with usable current/future schedules: **4**
-- Identities without a source mapping: **79**
+- Identities without a source mapping: **87**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -23,7 +23,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; rtvbd.tv/live.php: URLError; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 51 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 57 | - |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
@@ -34,13 +34,17 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Asian TV | AsianTV.bd | NO_GUIDE_HIT |
 | ATN Bangla | ATNBangla.bd | NO_GUIDE_HIT |
 | ATN News | ATNNews.bd | NO_GUIDE_HIT |
+| ATV USA | ATVUSA.us@SD | NO_GUIDE_HIT |
 | Ayna TV | custom.bdix.ayna-tv | NO_GUIDE_HIT |
 | Bangla TV | BanglaTV.bd | NO_GUIDE_HIT |
 | Bangla Vision | BanglaVision.bd | NO_GUIDE_HIT |
+| Banglar Kontho 24 | BanglarKontho24.bd@SD | NO_GUIDE_HIT |
 | Bijoy TV | BijoyTV.bd | NO_GUIDE_HIT |
+| BiswaBangla 24 TV | BiswaBangla24.us@SD | NO_GUIDE_HIT |
 | Boishakhi TV | BoishakhiTV.bd | NO_GUIDE_HIT |
 | BTV Chattogram | BTVChattogram.bd | NO_GUIDE_HIT |
 | BTV News | BTVNews.bd | NO_GUIDE_HIT |
+| CB24 TV | CB24TV.ca@SD | NO_GUIDE_HIT |
 | Channel 1 | Channel1.bd | NO_GUIDE_HIT |
 | Channel 16 | Channel16.bd | NO_GUIDE_HIT |
 | Channel 24 | Channel24.bd | NO_GUIDE_HIT |
@@ -52,12 +56,15 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Channel S | ChannelS.bd@SD | NO_GUIDE_HIT |
 | Channel S | ChannelS.uk | NO_GUIDE_HIT |
 | Channel S UK | ChannelS.uk@679aa9 | NO_GUIDE_HIT |
+| Community TV | CommunityTV.us@SD | NO_GUIDE_HIT |
 | DBC News | DBCNews.bd | NO_GUIDE_HIT |
 | Deepto TV | DeeptoTV.bd | NO_GUIDE_HIT |
+| Desh Bangla TV | DeshBanglaTV.bd@SD | NO_GUIDE_HIT |
 | Desh TV | DeshTV.bd | NO_GUIDE_HIT |
 | Deshe Bideshe | DesheBideshe.ca | NO_GUIDE_HIT |
 | Deshi TV | DeshiTV.ca@SD | NO_GUIDE_HIT |
 | Doyel TV | DoyelTV.ca@SD | NO_GUIDE_HIT |
+| DTV USA | DTVUSA.us@SD | NO_GUIDE_HIT |
 | Duronto TV | DurontoTV.bd | NO_GUIDE_HIT |
 | Duronto TV | DurontoTV.bd@SD | NO_GUIDE_HIT |
 | Ekattor TV | EkattorTV.bd | NO_GUIDE_HIT |
@@ -69,20 +76,21 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | GAZI TV | GaziTV.bd@SD | NO_GUIDE_HIT |
 | Global TV | GlobalTV.bd | NO_GUIDE_HIT |
 | Independent TV | IndependentTV.bd | NO_GUIDE_HIT |
+| iON TV UK | IONTV.uk@SD | NO_GUIDE_HIT |
 | Islamic TV | IslamicTV.bd | NO_GUIDE_HIT |
 | JA TV | JATV.bd | NO_GUIDE_HIT |
 | Jago News 24 | JagoNews24.bd | NO_GUIDE_HIT |
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
 | Jhankar TV | JhankarTV.ca | NO_GUIDE_HIT |
-| JonmoBhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd@HD | NO_GUIDE_HIT |
 | ME TV | METV.bd | NO_GUIDE_HIT |
 | Medina Live | MedinaLive.bd | NO_GUIDE_HIT |
 | Mohona TV | MohonaTV.bd | NO_GUIDE_HIT |
 | Movie Bangla | MovieBangla.bd | NO_GUIDE_HIT |
-| Movie Bangla | MovieBangla.bd@SD | NO_GUIDE_HIT |
+| MUSIC BANGLA | MUSICBANGLA | NO_GUIDE_HIT |
+| Music Bangla | MusicBangla.bd@SD | NO_GUIDE_HIT |
 | My TV | MyTV.bd | NO_GUIDE_HIT |
 | Nagorik TV | NagorikTV.bd | NO_GUIDE_HIT |
 | NAN TV | NANTV.bd@SD | NO_GUIDE_HIT |
