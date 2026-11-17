@@ -12,7 +12,7 @@ LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
+TAIL = ["News", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
 FORBIDDEN = {"international movies", "international music", "backups", "not playing", "test"}
 ATTRIBUTION = [
     "#=================================",
@@ -146,10 +146,10 @@ def main():
             target, reason, code = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
             if target is None:
                 raise SystemExit(f"Channel violates country/content policy in {group}: {name!r} ({reason or 'not eligible'}).")
-            if code not in {"BD", "IN", "PK"}:
+            if code not in {"BD", "IN", "PK"} and group_key not in {"news", "sports", "kids", "religious", "documentary & wildlife", "fashion tv"}:
                 content = (a.get("tvg-content") or "").strip().casefold()
                 if content not in {"movies", "movie", "music", "musics"}:
-                    raise SystemExit(f"Non-Bangladesh/India/Pakistan review entry is not tagged Movies/Music: {name!r} in {group!r}.")
+                    raise SystemExit(f"Non-Bangladesh/India/Pakistan entry is not tagged Movies/Music: {name!r} in {group!r}.")
         genre_issue = genre_group_policy_error(a, name, group)
         if genre_issue:
             raise SystemExit(
