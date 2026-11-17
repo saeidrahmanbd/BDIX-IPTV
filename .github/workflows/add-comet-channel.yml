@@ -33,6 +33,7 @@ jobs:
           from PIL import Image
           import io, re
 
+          nl = chr(10)
           repo = Path(".")
           logo_url = "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/comet.webp"
           request = Request(logo_url, headers={"User-Agent": "BDIX-IPTV-Logo-Localizer/1.0"})
@@ -45,24 +46,23 @@ jobs:
           out = repo / "logos" / "comet.png"
           out.parent.mkdir(parents=True, exist_ok=True)
           image.convert("RGBA").save(out, format="PNG", optimize=True)
-          if out.read_bytes()[:8] != b"\\x89PNG\\r\\n\\x1a\\n":
+          if out.read_bytes()[:8] != bytes([137, 80, 78, 71, 13, 10, 26, 10]):
               raise SystemExit("Comet logo failed PNG validation")
 
           playlist_path = repo / "IPTV-Playlist.m3u"
           source = playlist_path.read_text(encoding="utf-8")
-          lines = source.splitlines()
           prefix, entries, current = [], [], []
-          for line in lines:
+          for line in source.splitlines():
               if line.startswith("#EXTINF:"):
                   if current:
-                      entries.append("\\n".join(current).strip("\\n"))
+                      entries.append(nl.join(current).strip(nl))
                   current = [line]
               elif current:
                   current.append(line)
               else:
                   prefix.append(line)
           if current:
-              entries.append("\\n".join(current).strip("\\n"))
+              entries.append(nl.join(current).strip(nl))
 
           def get_name(entry):
               info = next((x for x in entry.splitlines() if x.startswith("#EXTINF:")), "")
@@ -72,7 +72,7 @@ jobs:
               return next((x.strip() for x in entry.splitlines() if x.strip() and not x.lstrip().startswith("#")), "")
 
           def set_attr(info, key, value):
-              pattern = rf'(?<![\\w-]){re.escape(key)}="[^"]*"'
+              pattern = r'(?<![A-Za-z0-9_-])' + re.escape(key) + '="[^"]*"'
               replacement = f'{key}="{value}"'
               if re.search(pattern, info):
                   return re.sub(pattern, lambda _: replacement, info, count=1)
@@ -89,7 +89,7 @@ jobs:
           comet_logo = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/comet.png"
 
           comet_exists = False
-          updated = []
+          updated, mytime_backup = [], []
           for entry in entries:
               url = get_url(entry)
               if url == comet_url or get_name(entry).casefold() == "comet":
@@ -106,18 +106,21 @@ jobs:
                   info = set_attr(info, "tvg-language", "eng")
                   if url == mytime_other_url:
                       info = set_attr(info, "group-title", "Backup")
-                      info = re.sub(r'\\s+tvg-chno="[^"]*"', "", info)
+                      info = re.sub(r'[ \\t]+tvg-chno="[^"]*"', "", info)
                   else:
                       info = set_attr(info, "group-title", "International")
                   info_lines[info_index] = info
-                  entry = "\\n".join(info_lines)
+                  entry = nl.join(info_lines)
+                  if url == mytime_other_url:
+                      mytime_backup.append(entry)
+                      continue
               updated.append(entry)
 
           if not comet_exists:
               comet_entry = (
                   f'#EXTINF:-1 tvg-id="Comet.us" tvg-name="Comet" tvg-logo="{comet_logo}" '
                   f'channel-id="Comet.us" tvg-country="US" tvg-language="eng" '
-                  f'group-title="International",Comet\\n{comet_url}'
+                  f'group-title="International",Comet{nl}{comet_url}'
               )
               insert_at = None
               for i, entry in enumerate(updated):
@@ -130,9 +133,20 @@ jobs:
                   insert_at = (intl_indices[-1] + 1) if intl_indices else len(updated)
               updated.insert(insert_at, comet_entry)
 
-          # The MyTime TCL master URL and its 1080p path are the same service.
-          # Keep one primary and classify the second URL as its Backup.
-          # Rebuild active tvg-chno values continuously; queue/backup groups are unnumbered.
+          # Place the alternate MyTime TCL URL in the alphabetized Backup section.
+          for backup_entry in mytime_backup:
+              insert_at = None
+              for i, entry in enumerate(updated):
+                  info = next((x for x in entry.splitlines() if x.startswith("#EXTINF:")), "")
+                  if 'group-title="Backup"' in info and get_name(entry).casefold() > get_name(backup_entry).casefold():
+                      insert_at = i
+                      break
+              if insert_at is None:
+                  backup_indices = [i for i, entry in enumerate(updated) if 'group-title="Backup"' in entry]
+                  insert_at = (backup_indices[-1] + 1) if backup_indices else len(updated)
+              updated.insert(insert_at, backup_entry)
+
+          # Rebuild continuous primary numbering; backups/review/queues remain unnumbered.
           inactive = {"Backup", "Review", "New Channels", "New Backups", "New Backup", "Not Playing"}
           channel_number = 0
           normalized = []
@@ -144,43 +158,42 @@ jobs:
                   match = re.search(r'group-title="([^"]+)"', info)
                   group = match.group(1) if match else ""
                   if group in inactive:
-                      info = re.sub(r'\\s+tvg-chno="[^"]*"', "", info)
+                      info = re.sub(r'[ \\t]+tvg-chno="[^"]*"', "", info)
                   else:
                       channel_number += 1
                       info = set_attr(info, "tvg-chno", str(channel_number))
                   info_lines[info_index] = info
-                  entry = "\\n".join(info_lines)
+                  entry = nl.join(info_lines)
               normalized.append(entry)
 
-          result = "\\n\\n".join([x for x in prefix if x is not None] + normalized).rstrip() + "\\n"
+          result = nl.join([x for x in prefix if x is not None] + [nl.join(["", x]) for x in normalized]).rstrip() + nl
           playlist_path.write_text(result, encoding="utf-8")
 
-          # Add the verified Plex XMLTV identity for the US MyTime Movie Network feed.
+          # Reuse the verified Plex XMLTV identity already mapped to MyTime Movie Network.
           epg_path = repo / "scripts" / "epg_coverage.py"
           epg = epg_path.read_text(encoding="utf-8")
-          alias = '"MyTimeMovieNetwork.us@SD": ["plex.tv.MyTime.Movie.Network.plex"],'
+          alias = '    "MyTimeMovieNetwork.us@SD": ["plex.tv.MyTime.Movie.Network.plex"],'
           if alias not in epg:
               anchor = '    "MyTimeMovieNetworkEast.us": ["USBC3900018K6"],'
               if anchor not in epg:
                   raise SystemExit("Could not find EPG alias insertion anchor")
-              epg = epg.replace(anchor, alias + "\\n" + anchor, 1)
+              epg = epg.replace(anchor, alias + nl + anchor, 1)
               epg_path.write_text(epg, encoding="utf-8")
 
-          # Basic invariants before committing.
           final = playlist_path.read_text(encoding="utf-8")
           if final.count(comet_url) != 1:
               raise SystemExit("Comet stream URL is not unique")
           if final.count(mytime_primary_url) != 1 or final.count(mytime_other_url) != 1:
               raise SystemExit("MyTime primary/backup streams are not both present exactly once")
-          if "group-title=\"International\",Comet" not in final:
+          if 'group-title="International",Comet' not in final:
               raise SystemExit("Comet was not placed in International")
-          if "group-title=\"Backup\",MyTime Movie Network" not in final:
+          if 'group-title="Backup",MyTime Movie Network' not in final:
               raise SystemExit("MyTime alternate feed was not classified as Backup")
-          if re.search(r'(?m)^#EXTINF:[^\\n]*group-title="(?:Backup|Review|New Channels|New Backups|New Backup)"[^\\n]*tvg-chno=', final):
-              raise SystemExit("Inactive entry still has tvg-chno")
-          numbers = [int(x) for x in re.findall(r'tvg-chno="(\\d+)"', final)]
+          numbers = [int(re.search(r'tvg-chno="([0-9]+)"', line).group(1)) for line in final.splitlines() if line.startswith("#EXTINF:") and re.search(r'tvg-chno="([0-9]+)"', line)]
           if numbers != list(range(1, len(numbers) + 1)):
               raise SystemExit("Primary tvg-chno sequence is not continuous")
+          if any('group-title="' + group + '"' in line and 'tvg-chno=' in line for line in final.splitlines() if line.startswith("#EXTINF:") for group in inactive):
+              raise SystemExit("Inactive entry still has tvg-chno")
           print(f"Comet localized; MyTime normalized; {channel_number} active channels numbered.")
           PY
       - name: Validate and publish
