@@ -25,3 +25,50 @@ test("creates a verifiable short-lived RS256 App JWT",async()=>{
 test("rejects non-numeric App ID",async()=>{
  await assert.rejects(createAppJwt({appId:"bad",privateKeyPem:"bad"}),/GITHUB_APP_ID/);
 });
+
+import { verifyGitHubAppAccess } from "./github-app.js";
+
+test("checks only the installed repository and never exposes its token", async () => {
+  const { privateKey } = generateKeyPairSync("rsa", {
+    modulusLength: 2048,
+    privateKeyEncoding: { type: "pkcs1", format: "pem" },
+    publicKeyEncoding: { type: "spki", format: "pem" }
+  });
+  const calls = [];
+  const fakeFetch = async (url, options) => {
+    calls.push({ url, options });
+    if (calls.length === 1) {
+      return Response.json({ token: "temporary-installation-token", permissions: { actions: "write" } });
+    }
+    return Response.json({ full_name: "saeidrahmanbd/BDIX-IPTV" });
+  };
+  const result = await verifyGitHubAppAccess({
+    GITHUB_APP_ID: "5794332",
+    GITHUB_INSTALLATION_ID: "182792735",
+    GITHUB_APP_PRIVATE_KEY: privateKey
+  }, fakeFetch);
+  assert.equal(calls.length, 2);
+  assert.equal(calls[0].options.method, "POST");
+  assert.match(calls[0].url, /app\/installations\/182792735\/access_tokens$/);
+  assert.equal(calls[1].url, "https://api.github.com/repos/saeidrahmanbd/BDIX-IPTV");
+  assert.equal(calls[1].options.headers.Authorization, "Bearer temporary-installation-token");
+  assert.deepEqual(result, {
+    ok: true, app_id: "5794332", installation_id: "182792735",
+    repository: "saeidrahmanbd/BDIX-IPTV", actions_permission: "write"
+  });
+  assert.equal(JSON.stringify(result).includes("temporary-installation-token"), false);
+});
+
+test("rejects an installation token without Actions write permission", async () => {
+  const { privateKey } = generateKeyPairSync("rsa", {
+    modulusLength: 2048,
+    privateKeyEncoding: { type: "pkcs1", format: "pem" },
+    publicKeyEncoding: { type: "spki", format: "pem" }
+  });
+  const fakeFetch = async () => Response.json({ token: "temporary-token", permissions: { actions: "read" } });
+  await assert.rejects(verifyGitHubAppAccess({
+    GITHUB_APP_ID: "5794332",
+    GITHUB_INSTALLATION_ID: "182792735",
+    GITHUB_APP_PRIVATE_KEY: privateKey
+  }, fakeFetch), /Actions write permission/);
+});
