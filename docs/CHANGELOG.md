@@ -5,38 +5,54 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-16 — `IPTV-Playlist.m3u`
+### 2026-11-17 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **15**
-- Stream URLs added / removed: **0 / 25**
+- New channel identities: **79**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **117 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **6**
+- Logo reference changes: **3**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Removed channel identities (up to 10):
-- Network 10
-- Zee 24 Ghanta
-- DD India
-- Jeevan TV
-- Kaumudy TV
-- Makkal TV
-- MBC TV
-- Ary News
-- ARY Q TV
-- Peace TV Urdu
+Added channel identities (up to 10):
+- ATV USA
+- Banglar Kontho 24
+- BiswaBangla 24 TV
+- CB24 TV
+- Community TV
+- Desh Bangla TV
+- DTV USA
+- iON TV UK
+- Music Bangla
+- NAN TV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-16 — `International-Playlist.m3u`
+### 2026-11-17 — `International-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **0 / 0**
+- New channel identities: **7**
+- Channel identities removed: **5**
+- Stream URLs added / removed: **8 / 5**
 - Backup URL updates: **0**
-- Logo reference changes: **5**
+- Logo reference changes: **3**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- Action
+- Bom Cine
+- Squirrel
+- Kral Pop TV
+- KandelaTV
+- Juice TV [ ]
+- La 98.1 TV [ ]
+
+Removed channel identities (up to 10):
+- BRIDGE Hits
+- Galactica TV
+- Green TV
+- Meridiano TV
+- Starnet
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
