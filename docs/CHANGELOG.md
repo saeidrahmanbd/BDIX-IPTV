@@ -7,52 +7,51 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-17 — `IPTV-Playlist.m3u`
 
-- New channel identities: **79**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **117 / 0**
+- New channel identities: **1**
+- Channel identities removed: **18**
+- Stream URLs added / removed: **1 / 53**
 - Backup URL updates: **0**
-- Logo reference changes: **3**
+- Logo reference changes: **6**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- Comet
+
+Removed channel identities (up to 10):
+- My Cinema
+- BTL TV (Netherlands) (1080p)
+- Cartoon Network (Pakistan)
+- CVR Health (576p)
+- Disha TV (396p)
+- Gaunda Punjab TV (720p)
+- Kabaddi 24x7 (720p)
+- NDTV Good Times (1080p)
+- Punjab Plus (1080p)
+- Qello Concerts by Stingray (1080p)
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-17 — `International-Playlist.m3u`
+
+- New channel identities: **113**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **113 / 0**
+- Backup URL updates: **0**
+- Logo reference changes: **4**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
 - ATV USA
 - Banglar Kontho 24
-- BiswaBangla 24 TV
 - CB24 TV
+- Channel 9
+- Channel 16
 - Community TV
 - Desh Bangla TV
 - DTV USA
-- iON TV UK
-- Music Bangla
-- NAN TV
-
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-17 — `International-Playlist.m3u`
-
-- New channel identities: **7**
-- Channel identities removed: **5**
-- Stream URLs added / removed: **8 / 5**
-- Backup URL updates: **0**
-- Logo reference changes: **3**
-- Replaced channel identities: **0**
-- Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- Action
-- Bom Cine
-- Squirrel
-- Kral Pop TV
-- KandelaTV
-- Juice TV [ ]
-- La 98.1 TV [ ]
-
-Removed channel identities (up to 10):
-- BRIDGE Hits
-- Galactica TV
-- Green TV
-- Meridiano TV
-- Starnet
+- JA TV
+- Shikor TV Canada
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
