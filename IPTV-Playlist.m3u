@@ -847,7 +847,7 @@ https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/playlis
 https://tvsen7.aynaott.com/hbo/index.m3u8
 #EXTINF:-1 tvg-id="custom.hbo2" tvg-name="HBO 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo-2.png" channel-id="custom.hbo2" tvg-language="und" tvg-chno="420" group-title="International",HBO 2
 http://190.108.91.206:9050/play/a035/index.m3u8
-#EXTINF:-1 tvg-id="custom.hollywoodhd" tvg-name="Hollywood HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hollywood-hd.png" channel-id="custom.hollywoodhd" tvg-language="und" tvg-chno="421" group-title="International",Hollywood HD
+#EXTINF:-1 tvg-id="custom.hollywoodhd" tvg-name="Hollywood HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hollywood-hd.png" channel-id="custom.hollywoodhd" tvg-country="PT" tvg-language="por" tvg-chno="421" group-title="International",Hollywood HD
 http://iptv.prosto.tv:7000/ch50/video.m3u8
 #EXTINF:-1 tvg-id="iFilmEnglish.ir" tvg-name="iFilm English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ifilm-english-s-e5f0438e73.png" tvg-chno="422" channel-id="iFilmEnglish.ir" tvg-country="IR" tvg-language="eng" group-title="International",iFilm English
 https://live.presstv.co.uk/hls/ifilmen.m3u8
@@ -903,7 +903,7 @@ https://e3207568b726401995c25670faaf32e4.mediatailor.eu-west-1.amazonaws.com/v1/
 https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index.m3u8
 #EXTINF:-1 tvg-id="RetroMusicTV.cz" tvg-name="Retro Music TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/retro-music-tv-1080p-610715c3c9.png" tvg-chno="448" channel-id="RetroMusicTV.cz" tvg-country="CZ" tvg-language="ces" group-title="International",Retro Music TV
 https://stream.mediawork.cz/retrotv/smil:retrotv2.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.sgcnmusic" tvg-name="SGCN Music" channel-id="custom.sgcnmusic" tvg-language="und" tvg-chno="449" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sgcn-music.png" group-title="International",SGCN Music
+#EXTINF:-1 tvg-id="custom.sgcnmusic" tvg-name="SGCN Music" channel-id="custom.sgcnmusic" tvg-country="IN" tvg-language="und" tvg-chno="449" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sgcn-music.png" group-title="International",SGCN Music
 https://ethersoftwaresolution.com/live/sgcnmusic/index.m3u8
 #EXTINF:-1 tvg-id="ShansonTV.ru" tvg-name="Shanson TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shanson-tv-576p-3c01614e19.png" tvg-chno="450" channel-id="ShansonTV.ru" tvg-country="RU" tvg-language="rus" group-title="International",Shanson TV
 https://streaming.thestream.cyou/live/7009.m3u8
