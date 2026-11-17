@@ -4,7 +4,7 @@ The Worker reconciles expected schedule obligations with real GitHub Actions run
 
 ## Current safety setting
 
-Keep Cloudflare \`MODE=shadow\`. Shadow mode creates idempotent obligations for the previous three, current, and next two Bangladesh dates; reads workflow run/job history; and records verified, running, failed, skipped, missing, or missed executions with policy-based recommendations. It does not dispatch workflows or modify playlists, stream URLs, logos, metadata, or EPG files.
+Keep Cloudflare `MODE=shadow`. Shadow mode creates idempotent obligations for the previous three, current, and next two Bangladesh dates; reads workflow run/job history; and records verified, running, failed, skipped, missing, or missed executions with policy-based recommendations. It does not dispatch workflows or modify playlists, stream URLs, logos, metadata, or EPG files.
 
 ## Recovery policies
 
@@ -19,25 +19,25 @@ A successful date is verified only when the workflow run and the required job na
 
 ## Dispatch safety
 
-Dispatch is hard-gated by \`MODE === "active"\`, today's Bangladesh date, an eligible registry policy, no observed run for that date, and a conditional D1 transition with zero previous dispatch attempts. The attempt is recorded before the GitHub dispatch request. Failures move to manual review; uncertain dispatches are not blindly retried.
+Dispatch is hard-gated by `MODE === "active"`, today's Bangladesh date, an eligible registry policy, a `RETRY_WAIT` result, and a conditional D1 transition with zero previous Worker dispatch attempts. Safe latest-state workflows may retry one missing or failed run. International Discovery and EPG may catch up only when no run exists for that date; existing policy, daily-guard, and last-known-good publication gates remain authoritative. A skipped required job is never automatically retried. Dispatch attempts are recorded before the GitHub request and linked to the resulting run when it appears. Dispatch failures move to manual review; uncertain requests are not retried blindly.
 
 **Do not change Cloudflare MODE to active yet.** First deploy this reviewed source while remaining in shadow mode and inspect its reconciliation output. Do not enable automatic dispatch until several real shadow cycles have been checked.
 
 ## Cloudflare configuration
 
-- D1 binding: \`RELIABILITY_DB\`
-- Variables: \`REGISTRY_JSON\`, \`MODE=shadow\`, \`GITHUB_APP_ID\`, \`GITHUB_INSTALLATION_ID\`
-- Secrets: \`GITHUB_APP_PRIVATE_KEY\`, \`RECONCILE_BEARER_TOKEN\`
+- D1 binding: `RELIABILITY_DB`
+- Variables: `REGISTRY_JSON`, `MODE=shadow`, `GITHUB_APP_ID`, `GITHUB_INSTALLATION_ID`
+- Secrets: `GITHUB_APP_PRIVATE_KEY`, `RECONCILE_BEARER_TOKEN`
 - Cron: every minute
 
 The GitHub App needs repository Actions: write and Metadata: read-only. It does not need Contents: write. The installation token is short-lived, kept only in memory, and never returned by the Worker.
 
 ## Endpoints
 
-- \`GET /healthz\`: health and current mode.
-- \`POST /github-check\`: validates App installation and Actions permission.
-- \`POST /reconcile\`: writes obligations and evaluates run/job history.
+- `GET /healthz`: health and current mode.
+- `POST /github-check`: validates App installation and Actions permission.
+- `POST /reconcile`: writes obligations and evaluates run/job history.
 
 The POST endpoints require the existing bearer token in the Authorization header. Never expose the bearer token, App private key, JWT, or installation token.
 
-Run \`npm test\` in this directory. Tests cover Dhaka dates, registry recovery policy, required-job verification, dispatch gating, App JWT signing, repository scope, Actions history reads, and dispatch request shape.
+Run `npm test` in this directory. Tests cover Dhaka dates, registry recovery policy, required-job verification, dispatch gating, App JWT signing, repository scope, Actions history reads, and dispatch request shape.
