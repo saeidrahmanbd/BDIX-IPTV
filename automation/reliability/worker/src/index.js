@@ -1,3 +1,5 @@
+import { verifyGitHubAppAccess } from "./github-app.js";
+
 const TIME_ZONE = "Asia/Dhaka";
 const LOOKAHEAD_DAYS = 2;
 
@@ -92,28 +94,40 @@ function constantTimeEqual(a, b) {
   return diff === 0;
 }
 
+function authorized(request, env) {
+  if (!env.RECONCILE_BEARER_TOKEN) return false;
+  const authorization = request.headers.get("Authorization") || "";
+  const supplied = authorization.startsWith("Bearer ") ? authorization.slice(7) : "";
+  return constantTimeEqual(supplied, env.RECONCILE_BEARER_TOKEN);
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (request.method === "GET" && url.pathname === "/healthz") {
       return Response.json({ ok: true, mode: "shadow" });
     }
-    if (request.method !== "POST" || url.pathname !== "/reconcile") {
+    if (request.method !== "POST" || !["/reconcile", "/github-check"].includes(url.pathname)) {
       return new Response("Not found", { status: 404 });
     }
     if (!env.RECONCILE_BEARER_TOKEN) {
-      return new Response("Reconciliation endpoint is not configured", { status: 503 });
+      return new Response("Protected endpoint is not configured", { status: 503 });
     }
-    const authorization = request.headers.get("Authorization") || "";
-    const supplied = authorization.startsWith("Bearer ") ? authorization.slice(7) : "";
-    if (!constantTimeEqual(supplied, env.RECONCILE_BEARER_TOKEN)) {
-      return new Response("Unauthorized", { status: 401 });
-    }
+    if (!authorized(request, env)) return new Response("Unauthorized", { status: 401 });
+
     try {
+      if (url.pathname === "/github-check") {
+        const result = await verifyGitHubAppAccess(env);
+        return Response.json({ ...result, mode: "shadow", dispatched: 0 });
+      }
       const result = await reconcile(env);
       return Response.json(result);
     } catch (error) {
-      return Response.json({ error: "reconciliation_failed", message: String(error.message || error) }, { status: 503 });
+      // Do not return upstream response bodies, tokens, or credential material.
+      return Response.json({
+        error: url.pathname === "/github-check" ? "github_authentication_failed" : "reconciliation_failed",
+        message: String(error.message || error)
+      }, { status: 503 });
     }
   },
 

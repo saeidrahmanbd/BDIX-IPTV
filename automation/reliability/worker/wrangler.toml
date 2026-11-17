@@ -8,6 +8,8 @@ crons = ["* * * * *"]
 
 [vars]
 MODE = "shadow"
+GITHUB_APP_ID = "5794332"
+GITHUB_INSTALLATION_ID = "182792735"
 REGISTRY_JSON = '''
 {
   "schema_version": 1,
