@@ -246,7 +246,7 @@ def classify(a, name, group, country, promote_backup=False):
         if target is None:
             return None, None, reason or "outside discovery policy"
         kind = infer_kind(name, group, a)
-        if code not in {"BD", "IN", "PK"} and not kind and target not in {"News", "Sports", "Kids", "Religious", "Documentary & Wildlife", "Fashion TV"}:
+        if code not in {"BD", "IN", "PK"} and not kind:
             return None, None, "foreign candidate is not clearly Movies/Music"
         return ("New Backups" if group_key in {"new backup", "new backups"} else "New Channels"), kind, None
 
@@ -623,7 +623,7 @@ def main():
                 raise SystemExit(f"Review queue entry violates regional policy: {name} ({reason or 'not eligible'})")
             if not a.get("tvg-logo", "").strip():
                 raise SystemExit(f"Review queue entry lacks a local logo: {name}")
-            if code not in {"BD", "IN", "PK"} and target not in {"News", "Sports", "Kids", "Religious", "Documentary & Wildlife", "Fashion TV"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
+            if code not in {"BD", "IN", "PK"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
                 raise SystemExit(f"Foreign review queue entry lacks Movie/Music classification: {name}")
         final_urls.append(stream_url_key(url))
         group_counts[group] += 1
