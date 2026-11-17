@@ -94,7 +94,7 @@ https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
 https://dish.porosh.com.bd/hls/jalshabangla.m3u8
 #EXTINF:-1 tvg-id="JamunaTV.bd" tvg-name="Jamuna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jamuna-tv.png" tvg-chno="47" channel-id="JamunaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Jamuna TV
 https://tvsen6.aynaott.com/KGdZEdA7qQ43dmPkgk1j/index.m3u8
-#EXTINF:-1 channel-id="JhankarTV.ca" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jhankar-tv.png" tvg-id="JhankarTV.ca" tvg-name="Jhankar TV" tvg-chno="48" tvg-language="ben" tvg-country="CA" group-title="Bangladesh",Jhankar TV
+#EXTINF:-1 channel-id="JhankarTV.ca" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jhankar-tv.png" tvg-id="JhankarTV.ca" tvg-name="Jhankar TV" tvg-chno="48" tvg-language="ben" tvg-country="CA" group-title="Indian Bangla",Jhankar TV
 https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8
 #EXTINF:-1 tvg-id="MaasrangaTV.bd" tvg-name="Maasranga TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maasranga-tv.png" tvg-chno="49" channel-id="MaasrangaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Maasranga TV
 https://mtv.sunplex.live/MAASRANGA/index.m3u8
