@@ -122,22 +122,29 @@ def policy(a,name,allow_legacy_group=False):
   return None,"non-real/test channel",code
  if code=="ZZ": return None,"country not verified",code
 
- # Bangladesh and Pakistan remain unrestricted by genre.
+ # Genre classification is deliberately independent of discovery eligibility.
+ # This supports consistent placement of already-curated/imported channels.
+ if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
+  return "News",None,code
+ if RELIGIOUS_RE.search(text) or ISLAMIC_RE.search(text) or any(x in group_parts for x in {"religious","religion","faith","devotional"}):
+  return "Religious",None,code
+ if KIDS_NAME_RE.search(text) or any(x in group_parts for x in {"kid","kids","children","childrens","child"}):
+  return "Kids",None,code
+ if SPORTS_NAME_RE.search(text) or any(x in group_parts for x in {"sport","sports"}):
+  return "Sports",None,code
+ if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
+  return "Documentary & Wildlife",None,code
+ if FASHION_RE.search(text):
+  return "Fashion TV",None,code
+
  if code=="BD":
   return "Bangladesh",None,code
  if code=="PK":
   return "Pakistani",None,code
 
- # India uses the same exclusions as IPTV discovery. Kids and Sports remain
- # eligible and retain their dedicated groups; other allowed channels are
- # routed into the established Indian Movies/Music/Entertainment groups.
  if code=="IN":
   indian_reason=bd_discovery.prohibited_channel(a,name,"IN",discovery=True)
   if indian_reason: return None,indian_reason,code
-  if KIDS_NAME_RE.search(text) or any(x in group_parts for x in {"kid","kids","children","childrens","child"}):
-   return "Kids",None,code
-  if SPORTS_NAME_RE.search(text) or any(x in group_parts for x in {"sport","sports"}):
-   return "Sports",None,code
   content_hint=norm(str(a.get("tvg-content","")))
   movie=any(part in MOVIE_CATEGORY_PARTS for part in group_parts) or bool(MOVIE_NAME_RE.search(text)) or content_hint in {"movie","movies","film","films"}
   music=any(part in MUSIC_CATEGORY_PARTS for part in group_parts) or bool(MUSIC_NAME_RE.search(text)) or content_hint in {"music","musics"}
@@ -149,7 +156,6 @@ def policy(a,name,allow_legacy_group=False):
    return "Indian Bangla",None,code
   return "Indian Entertainment",None,code
 
- # Only verified countries other than Bangladesh, India and Pakistan are Movies/Music only.
  if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
   return None,"news is outside the Movie/Music-only policy",code
  if RELIGIOUS_RE.search(text) or ISLAMIC_RE.search(text) or any(x in group_parts for x in {"religious","religion","faith","devotional"}):
@@ -174,6 +180,37 @@ def policy(a,name,allow_legacy_group=False):
  if not movie and not music: return None,"channel is not clearly Movies or Music",code
  if code=="PK": return "Pakistani",None,code
  return ("International Movies" if movie else "International Music"),None,code
+
+def discovery_eligibility(a,name,allow_legacy_group=False):
+ """Apply the standing new-channel discovery restrictions, separately from placement."""
+ target, reason, code = policy(a,name,allow_legacy_group=allow_legacy_group)
+ group_text=(a.get("group-title") or "").strip().casefold()
+ group_parts=[re.sub(r"[^a-z0-9]+","",part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
+ text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
+ if code in {"BD","PK"}:
+  return target,reason,code
+ if code=="IN":
+  prohibited=bd_discovery.prohibited_channel(a,name,"IN",discovery=True)
+  if prohibited: return None,prohibited,code
+  return target,reason,code
+ if code=="ZZ":
+  return None,reason or "country not verified",code
+ # Foreign discovery remains Movies/Music only; never discover foreign genres.
+ if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
+  return None,"news is outside the Movie/Music-only policy",code
+ if RELIGIOUS_RE.search(text) or ISLAMIC_RE.search(text) or any(x in group_parts for x in {"religious","religion","faith","devotional"}):
+  return None,"religious is outside the Movie/Music-only policy",code
+ if KIDS_NAME_RE.search(text) or any(x in group_parts for x in {"kid","kids","children","childrens","child"}):
+  return None,"kids is outside the Movie/Music-only policy",code
+ if SPORTS_NAME_RE.search(text) or any(x in group_parts for x in {"sport","sports"}):
+  return None,"sports is outside the Movie/Music-only policy",code
+ if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
+  return None,"documentary/wildlife is outside the Movie/Music-only policy",code
+ if FASHION_RE.search(text):
+  return None,"fashion is outside the Movie/Music-only policy",code
+ if target not in {"International Movies","International Music","Pakistani"}:
+  return None,reason or "channel is not clearly Movies/Music",code
+ return target,None,code
 
 def safe_url(url):
  try:
@@ -281,7 +318,7 @@ def infer_genre(a,name):
  if movie==music:return ""
  return "Movies" if movie else "Music"
 def queue_policy(a,name):
- base,reason,code=policy(a,name)
+ base,reason,code=discovery_eligibility(a,name)
  genre=infer_genre(a,name)
  if base is None:
   return None,reason,code,genre
