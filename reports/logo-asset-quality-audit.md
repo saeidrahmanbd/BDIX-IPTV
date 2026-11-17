@@ -1,23 +1,23 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-17T04:59:10+00:00**
+Generated: **2026-11-17T05:02:02+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **037d30711009a5d40bb284fd4e55a73f8669cc19e5fb36f8d85f86181f377561**
-- International-Playlist.m3u SHA-256: **02fa0e014d1b14e61df1acc8684e5b925123a2ae7fac1b6152c3264b384f7faf**
+- IPTV-Playlist.m3u SHA-256: **489dde299f161933e21ddd34a2dfcfc55fe4dd00b700868662c974bcff2f986e**
+- International-Playlist.m3u SHA-256: **589b57509649195719fcd68475921f409ce67c9813ec341f0a02dfe4ee1e296f**
 
 ## Summary
 
-- Safe repairs applied this run: **2**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **1**
 - Raster/SVG assets with short side under 64 px: **152**
 - Exact-byte duplicate asset clusters: **699**
-- Playlist references whose asset stem differs from the normalized channel name: **1495**
+- Playlist references whose asset stem differs from the normalized channel name: **1500**
 - Unreferenced image assets immediately inside logos/: **1494** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -25,8 +25,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| mbc-tv-576p.png | PNG | PNG | 720×540 | 476×357 | downscaled, re-encoded/compressed |
-| shin-chan-720p.png | PNG | PNG | 1068×293 | 656×180 | downscaled, re-encoded/compressed |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 
@@ -925,6 +924,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Bangladesh |
+| IPTV-Playlist.m3u | Channel 52 | channel-52.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 9 | channel-9.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel Europe | channel-europe-c8db0338dc.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Bangladesh |
@@ -1165,6 +1165,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Backup |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Backup |
+| IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
 | IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
 | IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
@@ -1820,6 +1821,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Wild West | pluto-tv-wild-west.png | Sweden |
 | International-Playlist.m3u | Pluto TV Wild West DK | pluto-tv-wild-west-dk.png | Sweden |
 | International-Playlist.m3u | Pluto TV Wild West NO | pluto-tv-wild-west-no.png | Sweden |
+| International-Playlist.m3u | Kral Pop TV | kral-pop-tv-720p.png | Turkey |
 | International-Playlist.m3u | Number 1 TV | number-1-tv-757229b80e.png | Turkey |
 | International-Playlist.m3u | PowerTürk TV | powerturk-tv-1080p-7651888d90.png | Turkey |
 | International-Playlist.m3u | TRT Muzik | trt-muzik-converted-cd34011c94.png | Turkey |
@@ -2049,8 +2051,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Id Investigation Discovery | investigation-discovery.png | Review |
 | International-Playlist.m3u | Jiangsu Movie Channel | jiangsu-movie-channel-576p.png | Review |
 | International-Playlist.m3u | Jilin Movie Channel | jilin-movie-channel.png | Review |
+| International-Playlist.m3u | Juice TV [ ] | juice-tv-1080p-not-24-7.png | Review |
 | International-Playlist.m3u | Kino TV | kino-tv-hd.png | Review |
 | International-Playlist.m3u | Klasik [ ] | klasik-576p-not-24-7.png | Review |
+| International-Playlist.m3u | La 98.1 TV [ ] | la-98-1-tv-720p-not-24-7.png | Review |
 | International-Playlist.m3u | Law & Crime | lawcrime.png | Review |
 | International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
 | International-Playlist.m3u | Madani TV | madani-tv.png | Review |
