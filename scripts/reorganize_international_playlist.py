@@ -14,7 +14,7 @@ PLAYLIST = Path("International-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
+TAIL = ["News", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
 BACKUP_GROUPS = {"backup", "backups", "new backup", "new backups"}
 # Review queues the maintenance pipeline must never delete from: policy may re-classify or
 # tag these entries but their streams are preserved unless a removal is explicitly authorized.
@@ -246,7 +246,7 @@ def classify(a, name, group, country, promote_backup=False):
         if target is None:
             return None, None, reason or "outside discovery policy"
         kind = infer_kind(name, group, a)
-        if code not in {"BD", "IN", "PK"} and not kind:
+        if code not in {"BD", "IN", "PK"} and not kind and target not in {"News", "Sports", "Kids", "Religious", "Documentary & Wildlife", "Fashion TV"}:
             return None, None, "foreign candidate is not clearly Movies/Music"
         return ("New Backups" if group_key in {"new backup", "new backups"} else "New Channels"), kind, None
 
@@ -255,12 +255,28 @@ def classify(a, name, group, country, promote_backup=False):
     if (group_key in BACKUP_GROUPS or group_key == "not playing") and not promote_backup:
         return "Backup", infer_kind(name, group, a), None
 
-    # Bangladesh and Pakistan are unrestricted by genre (apart from fake/VOD/non-TV entries).
+    # Thematic genres take precedence over country buckets. A channel's
+    # country never overrides an explicitly identifiable genre in this playlist.
+    # Keep these categories consistent for BD, IN, PK and every other country.
+    explicit_group = re.sub(r"[^a-z0-9]+", " ", group_key).strip()
+    if explicit_group in {"news", "news channel", "news channels"} or NEWS_RE.search(joined):
+        return "News", None, None
+    if explicit_group in {"sports", "sport"} or SPORTS_RE.search(joined):
+        return "Sports", None, None
+    if explicit_group in {"kids", "kid", "children", "childrens"} or KIDS_RE.search(joined):
+        return "Kids", None, None
+    if explicit_group in {"documentary", "documentaries", "wildlife", "nature", "documentary wildlife"} or DOC_RE.search(joined):
+        return "Documentary & Wildlife", None, None
+    if explicit_group in {"religious", "religion", "faith", "devotional"} or NON_ISLAM_RE.search(joined) or ISLAM_RE.search(joined) or discovery.RELIGIOUS_RE.search(joined):
+        return "Religious", None, None
+    if explicit_group == "fashion tv" or FASHION_RE.search(joined):
+        return "Fashion TV", None, None
+
+    # Bangladesh and Pakistan are unrestricted for non-genre channels.
     if country == "BD" or group == "Bangladesh":
         return "Bangladesh", None, None
 
-    # India follows the approved regional policy: News, all Religious and
-    # Educational/Business-Finance are excluded; Kids and Sports remain eligible.
+    # India follows the approved regional policy for non-genre channels.
     if country == "IN" or group in INDIAN_GROUPS:
         reason = bd_policy.prohibited_channel(a, name, "IN", discovery=True)
         if reason:
@@ -607,7 +623,7 @@ def main():
                 raise SystemExit(f"Review queue entry violates regional policy: {name} ({reason or 'not eligible'})")
             if not a.get("tvg-logo", "").strip():
                 raise SystemExit(f"Review queue entry lacks a local logo: {name}")
-            if code not in {"BD", "IN", "PK"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
+            if code not in {"BD", "IN", "PK"} and target not in {"News", "Sports", "Kids", "Religious", "Documentary & Wildlife", "Fashion TV"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
                 raise SystemExit(f"Foreign review queue entry lacks Movie/Music classification: {name}")
         final_urls.append(stream_url_key(url))
         group_counts[group] += 1
@@ -631,8 +647,8 @@ def main():
         f"- Eligible orphan Backup rows promoted to primary: {promoted_orphans}",
         f"- Clearly identified Adult orphans restored to Adult: {adult_orphans_restored}",
         f"- Ineligible/unclassified orphan Backup rows retained: {unresolved_orphans_retained}",
-        "- Bangladesh and Pakistan channels of all genres are eligible; Indian News, all Religious (including Islamic), Educational/Knowledge, Business/Finance and Farming/Agriculture are excluded; Indian Kids and Sports remain eligible.",
-        "- For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.",
+        "- Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.",
+        "- Outside the dedicated genre groups, countries other than Bangladesh, India and Pakistan use Movies/Music-only country groups.",
         "- Every country except Bangladesh and India, including Pakistan, requires five unique primary channel identities before a dedicated country group is used.",
         "- Eligible orphan Backup rows without a matching primary identity are migrated to their country/genre primary group; matching alternates remain in Backup. Unclassifiable orphans are retained for manual review.",
         "- Adult rows are preserved in Adult; clearly identified Adult orphans are restored to Adult rather than filtered by foreign genre rules.",

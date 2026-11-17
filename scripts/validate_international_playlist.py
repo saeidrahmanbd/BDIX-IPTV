@@ -12,7 +12,7 @@ LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
+TAIL = ["News", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
 FORBIDDEN = {"international movies", "international music", "backups", "not playing", "test"}
 ATTRIBUTION = [
     "#=================================",
@@ -70,28 +70,11 @@ def foreign_movie_music_error(a, name, country_code):
     return ""
 
 
-GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS = {
-    "documentary & wildlife", "kids", "religious", "sports",
-}
+GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS = set()
 
 
 def genre_group_policy_error(a, name, group):
-    """Restrict generic genre groups only for countries outside BD/IN/PK, with Indian exceptions."""
-    group_key = str(group or "").strip().casefold()
-    if group_key not in GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS:
-        return ""
-
-    code = discovery.country_code(a)
-    if code not in discovery.ISO_CODES:
-        # Unknown country metadata is reported by the metadata audit; do not
-        # guess a territory or reject an otherwise protected legacy row here.
-        return ""
-    if code not in {"BD", "IN", "PK"}:
-        return f"foreign channels are not permitted in the {group} genre group"
-    if code == "IN" and group_key == "religious":
-        _target, reason, _verified = discovery.policy(a, name)
-        return reason or "Indian religious channels are prohibited"
-    # Bangladesh is unrestricted. Indian Kids and Sports are explicitly allowed.
+    """Genre groups are country-independent; validate classification, not nationality."""
     return ""
 
 
@@ -163,10 +146,10 @@ def main():
             target, reason, code = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
             if target is None:
                 raise SystemExit(f"Channel violates country/content policy in {group}: {name!r} ({reason or 'not eligible'}).")
-            if code not in {"BD", "IN", "PK"}:
+            if code not in {"BD", "IN", "PK"} and target not in {"News", "Sports", "Kids", "Religious", "Documentary & Wildlife", "Fashion TV"}:
                 content = (a.get("tvg-content") or "").strip().casefold()
                 if content not in {"movies", "movie", "music", "musics"}:
-                    raise SystemExit(f"Non-Bangladesh/India/Pakistan review entry is not tagged Movies/Music: {name!r} in {group!r}.")
+                    raise SystemExit(f"Non-Bangladesh/India/Pakistan entry is not tagged Movies/Music: {name!r} in {group!r}.")
         genre_issue = genre_group_policy_error(a, name, group)
         if genre_issue:
             raise SystemExit(
