@@ -3,6 +3,9 @@
 
 An explicit same-day push retry uses [manual-epg-refresh] in the commit title;
 the shared schedule guard recognizes the marker for this workflow only.
+
+# Keep this file in the EPG workflow's push-path filter so a marker commit can
+# request a real same-day rebuild after playlist inputs have settled.
 """
 from __future__ import annotations
 
