@@ -1,0 +1,84 @@
+name: Localize uploaded source logos
+on:
+  push:
+    paths:
+      - ".github/workflows/localize-uploaded-source-logos.yml"
+permissions:
+  contents: write
+concurrency:
+  group: localize-uploaded-source-logos
+  cancel-in-progress: false
+jobs:
+  localize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download, convert and attach authentic source logos
+        run: |
+          python -m pip install --quiet Pillow
+          python - <<'PY'
+          import io, re, urllib.request
+          from pathlib import Path
+          from PIL import Image
+
+          assets = {
+              "community-tv.png": ("Community TV", "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/community-tv.webp"),
+              "b-prime-bangla.png": ("B Prime Bangla", "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/b-prime-bangla.webp"),
+              "dtv.png": ("DTV USA", "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/dtv.webp"),
+              "biswabangla-24-tv.png": ("BiswaBangla 24 TV", "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/biswabangla-24-tv.webp"),
+              "banglar-kontho.png": ("Banglar Kontho 24", "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/banglar-kontho.webp"),
+              "cb24-tv.png": ("CB24 TV", "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/cb24-tv.webp"),
+              "tsn-1.png": ("TSN 1", "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/tsn-1.webp"),
+              "sgcn-music.png": ("SGCN Music", "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/sggn-music.webp"),
+              "discovery-hd.png": ("Discovery HD", "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/discovery-hd.webp"),
+              "tnt-sports-1.png": ("TNT Sports 1", "https://pub-dbd59bcc344f405ab5a1f9697b81831f.r2.dev/tnt-sports-1.webp"),
+          }
+          root = Path("logos")
+          root.mkdir(exist_ok=True)
+          playlist = Path("IPTV-Playlist.m3u")
+          text = playlist.read_text(encoding="utf-8")
+          changed = []
+          for filename, (channel, url) in assets.items():
+              request = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-logo-localizer/1.0"})
+              with urllib.request.urlopen(request, timeout=40) as response:
+                  raw = response.read()
+              image = Image.open(io.BytesIO(raw))
+              image.load()
+              if image.width < 32 or image.height < 32:
+                  raise RuntimeError(f"Logo too small for {channel}: {image.size}")
+              out = io.BytesIO()
+              image.convert("RGBA").save(out, format="PNG", optimize=True)
+              data = out.getvalue()
+              if not data.startswith(b"\x89PNG\r\n\x1a\n"):
+                  raise RuntimeError(f"PNG conversion failed: {channel}")
+              (root / filename).write_bytes(data)
+              logo_url = f"https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/{filename}"
+              pattern = re.compile(r'(?m)^(#EXTINF:[^\n]*\btvg-name="' + re.escape(channel) + r'"[^\n]*)(\n)(https?://[^\n]+)$')
+              def replace(match):
+                  line = match.group(1)
+                  if re.search(r'\btvg-logo="[^"]*"', line):
+                      line = re.sub(r'\btvg-logo="[^"]*"', f'tvg-logo="{logo_url}"', line)
+                  else:
+                      line = line.replace(" group-title=", f' tvg-logo="{logo_url}" group-title=', 1)
+                  changed.append(channel)
+                  return line + match.group(2) + match.group(3)
+              text, count = pattern.subn(replace, text)
+              if count != 1:
+                  raise RuntimeError(f"Expected one playlist entry for {channel}; found {count}")
+              print(f"Localized {channel}: {filename}, {len(data)} bytes, {image.width}x{image.height}")
+          playlist.write_text(text, encoding="utf-8")
+          print("Updated playlist logo references:", ", ".join(changed))
+          PY
+      - name: Commit localized logos and playlist references
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add logos/*.png IPTV-Playlist.m3u
+          git rm .github/workflows/localize-uploaded-source-logos.yml
+          git commit -m "Localize authentic uploaded playlist logos"
+          git push origin HEAD:main
