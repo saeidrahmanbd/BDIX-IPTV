@@ -1,0 +1,75 @@
+name: One-time IPTV to International Import
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/import_iptv_into_international.py'
+      - '.github/workflows/one-time-international-import.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: iptv-playlist-main-writer-v5
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          fetch-depth: 20
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Snapshot both playlists
+        run: |
+          cp IPTV-Playlist.m3u /tmp/IPTV-Playlist.before.m3u
+          cp International-Playlist.m3u /tmp/International-Playlist.before.m3u
+      - name: Compile import and organizer
+        run: python -m py_compile scripts/import_iptv_into_international.py scripts/reorganize_international_playlist.py scripts/discover_international_channels.py scripts/validate_international_playlist.py
+      - name: Run one-time import and genre-first organization
+        run: python scripts/import_iptv_into_international.py
+      - name: Validate final International playlist
+        run: python scripts/validate_international_playlist.py
+      - name: Verify source playlist was not modified
+        run: cmp -s IPTV-Playlist.m3u /tmp/IPTV-Playlist.before.m3u
+      - name: Verify no Review group and unique URLs
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, "scripts")
+          import reorganize_international_playlist as p
+          _, blocks = p.parse_playlist(open("International-Playlist.m3u", encoding="utf-8").read())
+          groups = [p.attrs(p.split_info(b[0])[0]).get("group-title", "") for b in blocks]
+          urls = [p.stream_url_key(p.url_of(b)) for b in blocks]
+          assert "Review" not in groups
+          assert len(urls) == len(set(urls))
+          print(f"PASS: {len(blocks)} entries; no Review group; no duplicate URLs.")
+          PY
+      - name: Publish import result
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add International-Playlist.m3u reports/international-import-report.md reports/international-playlist-audit.md
+          if git diff --cached --quiet; then
+            echo 'No import changes to publish.'
+            exit 0
+          fi
+          git commit -m 'Import IPTV channels into International playlist'
+          git push origin HEAD:main
+      - name: Upload import audit
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: one-time-international-import-audit
+          path: reports/international-import-report.md
+          if-no-files-found: warn
+          retention-days: 30
