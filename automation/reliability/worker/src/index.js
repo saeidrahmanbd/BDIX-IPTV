@@ -30,15 +30,25 @@ function keyFor(workflowId, date) { return workflowId + ":" + date; }
 
 export function recoveryPlan(workflow, reason) {
   const policy = workflow.replay_policy || "manual_review";
+  const cause = reason || "workflow_run_not_found";
   let recommendation = "manual_review";
-  if (policy === "safe_latest_state_reconciliation") recommendation = "safe_latest_state_reconciliation";
-  else if (policy === "policy_aware_reconciliation") recommendation = "policy_evaluation_required";
-  else if (policy === "publish_only_after_last_known_good_validation") recommendation = "last_known_good_validation_required";
-  else if (policy.startsWith("never_backfill")) recommendation = "never_backfill";
+  let retryEligible = false;
+  if (policy === "safe_latest_state_reconciliation") {
+    recommendation = "safe_latest_state_reconciliation";
+    retryEligible = cause === "workflow_run_not_found" || cause === "workflow_failed";
+  } else if (policy === "policy_aware_reconciliation") {
+    recommendation = "policy_evaluation_required";
+    retryEligible = cause === "workflow_run_not_found";
+  } else if (policy === "publish_only_after_last_known_good_validation") {
+    recommendation = "last_known_good_validation_required";
+    retryEligible = cause === "workflow_run_not_found";
+  } else if (policy.startsWith("never_backfill")) {
+    recommendation = "never_backfill";
+  }
   return {
-    state: recommendation === "safe_latest_state_reconciliation" ? "RETRY_WAIT" : "MANUAL_REVIEW",
+    state: retryEligible ? "RETRY_WAIT" : "MANUAL_REVIEW",
     verification_status: "PENDING",
-    last_error_code: reason || "workflow_run_not_found",
+    last_error_code: cause,
     last_error_summary: "No successful required job was confirmed. Recovery recommendation: " + recommendation + ".",
     recovery_recommendation: recommendation
   };
@@ -113,7 +123,25 @@ async function saveEvaluation(db,row,result,nowIso) {
       run ? (run.run_started_at || run.created_at || null) : null,
       run && run.status === "completed" ? (run.updated_at || null) : null,
       result.verification_status,result.last_error_code,result.last_error_summary,nowIso,row.execution_key).run();
-  if (run) await recordRun(db,row.execution_key,run,job,nowIso);
+  if (run) {
+    await recordRun(db,row.execution_key,run,job,nowIso);
+    const pendingAttempt = await db.prepare("SELECT attempt_number FROM reliability_attempts " +
+      "WHERE workflow_id=? AND business_date=? AND run_status='REQUESTED' AND github_run_id IS NULL " +
+      "ORDER BY attempt_number DESC LIMIT 1").bind(row.workflow_id,row.business_date).first();
+    if (pendingAttempt) {
+      const runStatus = run.status === "completed" ? "COMPLETED" :
+        run.status === "in_progress" ? "IN_PROGRESS" :
+        ["queued","waiting","pending"].includes(run.status) ? "QUEUED" : "UNKNOWN";
+      const verification = result.verification_status === "PASS" ? "PASS" :
+        run.status === "completed" ? "FAIL" : "PENDING";
+      await db.prepare("UPDATE reliability_attempts SET github_run_id=?,github_run_attempt=?,run_status=?," +
+        "run_conclusion=?,critical_job_conclusion=?,verification_status=?,error_code=?,error_summary=?,updated_at_utc=? " +
+        "WHERE workflow_id=? AND business_date=? AND attempt_number=?")
+        .bind(String(run.id),run.run_attempt || 1,runStatus,run.conclusion || null,
+          job ? job.conclusion || null : null,verification,result.last_error_code,
+          result.last_error_summary,nowIso,row.workflow_id,row.business_date,pendingAttempt.attempt_number).run();
+    }
+  }
   await event(db,row.execution_key,"HISTORY_EVALUATED",nowIso,{
     state:result.state,recovery_recommendation:result.recovery_recommendation,
     run_id:run ? String(run.id) : null,required_job:job ? job.name : null,
@@ -193,7 +221,7 @@ export async function reconcile(env, now = new Date()) {
       const dayRuns = runs.filter(run => run.created_at && dhakaDate(new Date(run.created_at)) === row.business_date);
       const jobs = {};
       for (const run of dayRuns.slice(0,12)) {
-        if (run.status === "completed" && run.conclusion === "success") {
+        if (run.status === "completed") {
           jobs[String(run.id)] = await github.listWorkflowJobs(run.id);
         }
       }
@@ -207,7 +235,7 @@ export async function reconcile(env, now = new Date()) {
       if (result.state === "VERIFIED") verified++;
       else if (result.state === "RUNNING") running++;
       else if (result.state === "MANUAL_REVIEW" || result.state === "RETRY_WAIT") needsReview++;
-      if (dayRuns.length === 0 && row.business_date === today &&
+      if (result.state === "RETRY_WAIT" && row.business_date === today &&
           await dispatchOnce(env,db,github,row,workflow,nowIso)) dispatched++;
     }
   }
