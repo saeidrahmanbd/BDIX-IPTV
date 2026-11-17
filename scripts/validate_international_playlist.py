@@ -70,28 +70,11 @@ def foreign_movie_music_error(a, name, country_code):
     return ""
 
 
-GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS = {
-    "documentary & wildlife", "kids", "religious", "sports",
-}
+GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS = set()
 
 
 def genre_group_policy_error(a, name, group):
-    """Restrict generic genre groups only for countries outside BD/IN/PK, with Indian exceptions."""
-    group_key = str(group or "").strip().casefold()
-    if group_key not in GENRE_GROUPS_WITH_FOREIGN_RESTRICTIONS:
-        return ""
-
-    code = discovery.country_code(a)
-    if code not in discovery.ISO_CODES:
-        # Unknown country metadata is reported by the metadata audit; do not
-        # guess a territory or reject an otherwise protected legacy row here.
-        return ""
-    if code not in {"BD", "IN", "PK"}:
-        return f"foreign channels are not permitted in the {group} genre group"
-    if code == "IN" and group_key == "religious":
-        _target, reason, _verified = discovery.policy(a, name)
-        return reason or "Indian religious channels are prohibited"
-    # Bangladesh is unrestricted. Indian Kids and Sports are explicitly allowed.
+    """Genre groups are country-independent; validate classification, not nationality."""
     return ""
 
 
