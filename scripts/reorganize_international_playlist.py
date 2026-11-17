@@ -267,7 +267,7 @@ def classify(a, name, group, country, promote_backup=False):
         return "Kids", None, None
     if explicit_group in {"documentary", "documentaries", "wildlife", "nature", "documentary wildlife"} or DOC_RE.search(joined):
         return "Documentary & Wildlife", None, None
-    if explicit_group in {"religious", "religion", "faith", "devotional"} or NON_ISLAM_RE.search(joined) or ISLAM_RE.search(joined):
+    if explicit_group in {"religious", "religion", "faith", "devotional"} or NON_ISLAM_RE.search(joined) or ISLAM_RE.search(joined) or discovery.RELIGIOUS_RE.search(joined):
         return "Religious", None, None
     if explicit_group == "fashion tv" or FASHION_RE.search(joined):
         return "Fashion TV", None, None
