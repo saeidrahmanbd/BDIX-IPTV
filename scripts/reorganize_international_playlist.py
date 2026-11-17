@@ -246,7 +246,7 @@ def classify(a, name, group, country, promote_backup=False):
         if target is None:
             return None, None, reason or "outside discovery policy"
         kind = infer_kind(name, group, a)
-        if code not in {"BD", "IN", "PK"} and not kind:
+        if code not in {"BD", "IN", "PK"} and not kind and target not in {"News", "Sports", "Kids", "Religious", "Documentary & Wildlife", "Fashion TV"}:
             return None, None, "foreign candidate is not clearly Movies/Music"
         return ("New Backups" if group_key in {"new backup", "new backups"} else "New Channels"), kind, None
 
@@ -623,7 +623,7 @@ def main():
                 raise SystemExit(f"Review queue entry violates regional policy: {name} ({reason or 'not eligible'})")
             if not a.get("tvg-logo", "").strip():
                 raise SystemExit(f"Review queue entry lacks a local logo: {name}")
-            if code not in {"BD", "IN", "PK"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
+            if code not in {"BD", "IN", "PK"} and target not in {"News", "Sports", "Kids", "Religious", "Documentary & Wildlife", "Fashion TV"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
                 raise SystemExit(f"Foreign review queue entry lacks Movie/Music classification: {name}")
         final_urls.append(stream_url_key(url))
         group_counts[group] += 1
@@ -648,7 +648,7 @@ def main():
         f"- Clearly identified Adult orphans restored to Adult: {adult_orphans_restored}",
         f"- Ineligible/unclassified orphan Backup rows retained: {unresolved_orphans_retained}",
         "- Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.",
-        "- For countries other than Bangladesh, India and Pakistan, only dedicated Movies and Music channels are eligible.",
+        "- Outside the dedicated genre groups, countries other than Bangladesh, India and Pakistan use Movies/Music-only country groups.",
         "- Every country except Bangladesh and India, including Pakistan, requires five unique primary channel identities before a dedicated country group is used.",
         "- Eligible orphan Backup rows without a matching primary identity are migrated to their country/genre primary group; matching alternates remain in Backup. Unclassifiable orphans are retained for manual review.",
         "- Adult rows are preserved in Adult; clearly identified Adult orphans are restored to Adult rather than filtered by foreign genre rules.",
