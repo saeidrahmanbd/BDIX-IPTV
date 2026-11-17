@@ -19,7 +19,7 @@ PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
 FIXED_GROUPS=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani"]
-TAIL_GROUPS=["News","Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","Review","New Channels","New Backups","Backup"]
+TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","Review","New Channels","New Backups","Backup"]
 STAGING_GROUPS=set(); LEGACY_GROUPS={"new channels","new backup","new backups","not playing","review","international","backup","international movies","international music","test"}
 COUNTRY_NAMES={"BD":"Bangladesh","IN":"India","PK":"Pakistan","NP":"Nepal","TH":"Thailand","JP":"Japan","KR":"South Korea","ID":"Indonesia","MY":"Malaysia","PH":"Philippines","VN":"Vietnam","CN":"China","TW":"Taiwan","HK":"Hong Kong","SG":"Singapore","AU":"Australia","NZ":"New Zealand","GB":"United Kingdom","US":"United States","CA":"Canada","MX":"Mexico","BR":"Brazil","AR":"Argentina","CL":"Chile","CO":"Colombia","PE":"Peru","ES":"Spain","PT":"Portugal","FR":"France","DE":"Germany","IT":"Italy","NL":"Netherlands","BE":"Belgium","CH":"Switzerland","AT":"Austria","SE":"Sweden","NO":"Norway","DK":"Denmark","FI":"Finland","IS":"Iceland","IE":"Ireland","PL":"Poland","CZ":"Czech Republic","SK":"Slovakia","HU":"Hungary","RO":"Romania","BG":"Bulgaria","GR":"Greece","TR":"Turkey","RU":"Russia","UA":"Ukraine","IL":"Israel","AE":"United Arab Emirates","SA":"Saudi Arabia","QA":"Qatar","KW":"Kuwait","OM":"Oman","BH":"Bahrain","JO":"Jordan","LB":"Lebanon","EG":"Egypt","MA":"Morocco","DZ":"Algeria","TN":"Tunisia","ZA":"South Africa","NG":"Nigeria","KE":"Kenya","GH":"Ghana","TZ":"Tanzania","UG":"Uganda","ZW":"Zimbabwe","ET":"Ethiopia","LK":"Sri Lanka","MM":"Myanmar","KH":"Cambodia","LA":"Laos","MN":"Mongolia","KZ":"Kazakhstan","UZ":"Uzbekistan","AZ":"Azerbaijan","GE":"Georgia","AM":"Armenia","AL":"Albania","RS":"Serbia","HR":"Croatia","SI":"Slovenia","BA":"Bosnia and Herzegovina","ME":"Montenegro","MK":"North Macedonia","LT":"Lithuania","LV":"Latvia","EE":"Estonia","IR":"Iran","IQ":"Iraq","SY":"Syria","PS":"Palestine","FJ":"Fiji","WS":"Samoa","PG":"Papua New Guinea","BT":"Bhutan","MV":"Maldives","AW":"Aruba","BQ":"Bonaire","BO":"Bolivia","CD":"Congo - Kinshasa","CR":"Costa Rica","CV":"Cabo Verde","CW":"Curaçao","GU":"Guam","GP":"Guadeloupe","GT":"Guatemala","HT":"Haiti","HN":"Honduras","MQ":"Martinique","NA":"Namibia","PA":"Panama","PY":"Paraguay","PR":"Puerto Rico","SX":"Sint Maarten","VE":"Venezuela","CI":"Ivory Coast","TT":"Trinidad and Tobago","UY":"Uruguay","SN":"Senegal","RW":"Rwanda","AO":"Angola","BY":"Belarus","CM":"Cameroon","NI":"Nicaragua","AF":"Afghanistan","LV":"Latvia"}
 ISO_CODES={code.upper() for code in ALL_ISO_CODES}; ALIASES={"UK":"GB","EL":"GR"}; ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -122,28 +122,15 @@ def policy(a,name,allow_legacy_group=False):
   return None,"non-real/test channel",code
  if code=="ZZ": return None,"country not verified",code
 
- # Thematic genre groups take precedence over country buckets for every
- # verified country. This must run before regional country handling.
- if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
-  return "News",None,code
- if RELIGIOUS_RE.search(text) or ISLAMIC_RE.search(text) or any(x in group_parts for x in {"religious","religion","faith","devotional"}):
-  return "Religious",None,code
- if KIDS_NAME_RE.search(text) or any(x in group_parts for x in {"kid","kids","children","childrens","child"}):
-  return "Kids",None,code
- if SPORTS_NAME_RE.search(text) or any(x in group_parts for x in {"sport","sports"}):
-  return "Sports",None,code
- if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
-  return "Documentary & Wildlife",None,code
- if FASHION_RE.search(text):
-  return "Fashion TV",None,code
-
- # Bangladesh and Pakistan remain unrestricted for non-genre channels.
+ # Bangladesh and Pakistan remain unrestricted by genre.
  if code=="BD":
   return "Bangladesh",None,code
  if code=="PK":
   return "Pakistani",None,code
 
- # India applies regional exclusions only to non-genre channels.
+ # India uses the same exclusions as IPTV discovery. Kids and Sports remain
+ # eligible and retain their dedicated groups; other allowed channels are
+ # routed into the established Indian Movies/Music/Entertainment groups.
  if code=="IN":
   indian_reason=bd_discovery.prohibited_channel(a,name,"IN",discovery=True)
   if indian_reason: return None,indian_reason,code
@@ -298,7 +285,7 @@ def queue_policy(a,name):
  genre=infer_genre(a,name)
  if base is None:
   return None,reason,code,genre
- if code not in {"BD","IN","PK"} and not genre and base not in {"News","Sports","Kids","Religious","Documentary & Wildlife","Fashion TV"}:
+ if code not in {"BD","IN","PK"} and not genre:
   return None,"channel is not clearly Movies or Music",code,genre
  return base,None,code,genre
 def special_group(a,name):
@@ -306,7 +293,6 @@ def special_group(a,name):
  content=norm(str(a.get("tvg-content","")))
  group=norm(str(a.get("group-title","")))
  if content in {"adult","xxx","porn","adultentertainment"} or group=="adult":return "Adult"
- if content in {"news","headlines"} or NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text):return "News"
  if content in {"kids","kid","children","childrens","cartoon"} or KIDS_NAME_RE.search(text):return "Kids"
  if content in {"sport","sports"} or SPORTS_NAME_RE.search(text):return "Sports"
  if content in {"documentary","documentaries","wildlife","nature"} or DOC_NAME_RE.search(text):return "Documentary & Wildlife"
