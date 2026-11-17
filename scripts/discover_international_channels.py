@@ -298,7 +298,7 @@ def queue_policy(a,name):
  genre=infer_genre(a,name)
  if base is None:
   return None,reason,code,genre
- if code not in {"BD","IN","PK"} and not genre:
+ if code not in {"BD","IN","PK"} and not genre and base not in {"News","Sports","Kids","Religious","Documentary & Wildlife","Fashion TV"}:
   return None,"channel is not clearly Movies or Music",code,genre
  return base,None,code,genre
 def special_group(a,name):
@@ -306,6 +306,7 @@ def special_group(a,name):
  content=norm(str(a.get("tvg-content","")))
  group=norm(str(a.get("group-title","")))
  if content in {"adult","xxx","porn","adultentertainment"} or group=="adult":return "Adult"
+ if content in {"news","headlines"} or NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text):return "News"
  if content in {"kids","kid","children","childrens","cartoon"} or KIDS_NAME_RE.search(text):return "Kids"
  if content in {"sport","sports"} or SPORTS_NAME_RE.search(text):return "Sports"
  if content in {"documentary","documentaries","wildlife","nature"} or DOC_NAME_RE.search(text):return "Documentary & Wildlife"
