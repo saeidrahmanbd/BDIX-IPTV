@@ -242,11 +242,11 @@ def classify(a, name, group, country, promote_backup=False):
     if group_key in QUEUE_GROUPS:
         queue_attrs = dict(a)
         queue_attrs["group-title"] = "New Backups" if group_key in {"new backup", "new backups"} else "New Channels"
-        target, reason, code = discovery.policy(queue_attrs, name)
+        target, reason, code = discovery.discovery_eligibility(queue_attrs, name)
         if target is None:
             return None, None, reason or "outside discovery policy"
         kind = infer_kind(name, group, a)
-        if code not in {"BD", "IN", "PK"} and not kind and target not in {"News", "Sports", "Kids", "Religious", "Documentary & Wildlife", "Fashion TV"}:
+        if code not in {"BD", "IN", "PK"} and not kind:
             return None, None, "foreign candidate is not clearly Movies/Music"
         return ("New Backups" if group_key in {"new backup", "new backups"} else "New Channels"), kind, None
 
@@ -306,7 +306,7 @@ def classify(a, name, group, country, promote_backup=False):
     policy_attrs["group-title"] = "International"
     if country in discovery.ISO_CODES:
         policy_attrs["tvg-country"] = country
-    target, reason, verified_country = discovery.policy(
+    target, reason, verified_country = discovery.discovery_eligibility(
         policy_attrs, name, allow_legacy_group=True
     )
     if target is None:
@@ -618,12 +618,12 @@ def main():
         if a.get("tvg-logo") and local_logo_path(a["tvg-logo"]) is None:
             raise SystemExit(f"Invalid or external logo reference: {name}")
         if group.casefold() in {"new channels", "new backup", "new backups"}:
-            target, reason, code = discovery.policy(a, name)
+            target, reason, code = discovery.discovery_eligibility(a, name)
             if target is None:
                 raise SystemExit(f"Review queue entry violates regional policy: {name} ({reason or 'not eligible'})")
             if not a.get("tvg-logo", "").strip():
                 raise SystemExit(f"Review queue entry lacks a local logo: {name}")
-            if code not in {"BD", "IN", "PK"} and target not in {"News", "Sports", "Kids", "Religious", "Documentary & Wildlife", "Fashion TV"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
+            if code not in {"BD", "IN", "PK"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music", "musics"}:
                 raise SystemExit(f"Foreign review queue entry lacks Movie/Music classification: {name}")
         final_urls.append(stream_url_key(url))
         group_counts[group] += 1
