@@ -144,7 +144,11 @@ def main():
                 )
         if group_key in {"international", "new channels", "new backup", "new backups"}:
             target, reason, code = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
-            if target is None:
+            genre_primary = group_key in {"news", "sports", "kids", "religious", "documentary & wildlife", "fashion tv"}
+            # Existing curated genre groups may contain foreign channels imported
+            # from IPTV-Playlist.m3u. This validator exception does not alter the
+            # separate new-channel discovery policy.
+            if target is None and not genre_primary:
                 raise SystemExit(f"Channel violates country/content policy in {group}: {name!r} ({reason or 'not eligible'}).")
             if code not in {"BD", "IN", "PK"} and target not in {"News", "Sports", "Kids", "Religious", "Documentary & Wildlife", "Fashion TV"}:
                 content = (a.get("tvg-content") or "").strip().casefold()
