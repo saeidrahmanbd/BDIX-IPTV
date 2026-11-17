@@ -1136,7 +1136,7 @@ https://hls.vantagetv.ee/vrock_stream/index.m3u8
 https://musichls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="4Kurd.fr@SD" tvg-language="fas;kur" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4kurd-fc0383f503.png" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="4Kurd",4Kurd
 https://4kuhls.persiana.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="Action.fr@SD" channel-id="Action.fr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/action-540p.png" tvg-country="FR" tvg-content="Movies" group-title="France" tvg-name="Action",Action
+#EXTINF:-1 tvg-language="fra" tvg-id="Action.fr@SD" channel-id="Action.fr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/action-540p.png" tvg-country="FR" tvg-content="Movies" group-title="France" tvg-name="Action",Action
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/action/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="CineNanar.fr@SD" tvg-language="fra" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cine-nanar-1080p.png" tvg-country="FR" tvg-content="Movies" group-title="France" tvg-name="Cine Nanar",Cine Nanar
 https://zylo-cinenanar-rakuten.amagi.tv/playlist.m3u8
@@ -1900,7 +1900,7 @@ http://103.151.60.162:2122/play/a01h/index.m3u8?hls
 https://streamtv.mediasector.es/hls/activatv/index.m3u8
 #EXTINF:-1 tvg-id="AXNMovies.es@SD" channel-id="AXNMovies.es@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-movies-spain.png" tvg-country="ES" tvg-content="Movies" group-title="Spain" tvg-name="AXN Movies (Spain)",AXN Movies (Spain)
 http://sultanios.alwaysdata.net/vavo.php?ID=2493319111
-#EXTINF:-1 tvg-id="BomCine.es@SD" channel-id="BomCine.es@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bom-cine-576p.png" tvg-country="ES" tvg-content="Movies" group-title="Spain" tvg-name="Bom Cine",Bom Cine
+#EXTINF:-1 tvg-language="spa" tvg-id="BomCine.es@SD" channel-id="BomCine.es@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bom-cine-576p.png" tvg-country="ES" tvg-content="Movies" group-title="Spain" tvg-name="Bom Cine",Bom Cine
 https://cdn78-at.azotosolutions.com/cdnedge39/Canale3/master.m3u8
 #EXTINF:-1 tvg-id="CadenaElite.es@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cadena-elite-dae12812df.png" tvg-country="ES" tvg-content="Music" group-title="Spain" tvg-name="Cadena Elite",Cadena Elite
 https://cloudvideo.servers10.com:8081/8004/index.m3u8
@@ -1936,7 +1936,7 @@ https://vidartv2.todostreaming.es/live/radiovida-emisiontvhd.m3u8
 https://d2glyu450vvghm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-21u4g5cjglv02/sm.m3u8
 #EXTINF:-1 tvg-id="SpektraTV.es@SD" tvg-language="eng;spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/spektratv.png" tvg-country="ES" tvg-content="Music" group-title="Spain" tvg-name="SpektraTV",SpektraTV
 https://cloudvideo.servers10.com:8081/8026/tracks-v1a1/index.m3u8
-#EXTINF:-1 tvg-id="Squirrel.es@SD" channel-id="Squirrel.es@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/squirrel-576p.png" tvg-country="ES" tvg-content="Movies" group-title="Spain" tvg-name="Squirrel",Squirrel
+#EXTINF:-1 tvg-language="spa" tvg-id="Squirrel.es@SD" channel-id="Squirrel.es@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/squirrel-576p.png" tvg-country="ES" tvg-content="Movies" group-title="Spain" tvg-name="Squirrel",Squirrel
 https://cdn78-at.azotosolutions.com/cdnedge39/Canale1/master.m3u8
 #EXTINF:-1 tvg-id="TVOMIX.es@HD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvomix-0e7d164b9c.png" tvg-country="ES" tvg-content="Music" group-title="Spain" tvg-name="TVOMIX",TVOMIX
 https://cloud.tvomix.com/TVOMIX/index.m3u8
@@ -2044,7 +2044,7 @@ https://jmp2.uk/plu-62beb44e3afd120007915d1b.m3u8
 https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
 #EXTINF:-1 tvg-id="GrandCinema.tr@SD" tvg-language="fas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/grand-cinema.png" tvg-country="TR" tvg-content="Movies" group-title="Turkey" tvg-name="Grand Cinema",Grand Cinema
 https://gcinemahls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="KralPopTV.tr@SD" channel-id="KralPopTV.tr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kral-pop-tv-720p.png" tvg-country="TR" tvg-content="Music" group-title="Turkey" tvg-name="Kral Pop TV",Kral Pop TV
+#EXTINF:-1 tvg-language="tur" tvg-id="KralPopTV.tr@SD" channel-id="KralPopTV.tr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kral-pop-tv-720p.png" tvg-country="TR" tvg-content="Music" group-title="Turkey" tvg-name="Kral Pop TV",Kral Pop TV
 https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
 #EXTINF:-1 tvg-id="MedMuzik.tr@SD" tvg-language="kur" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/med-muzik-96f4729fe0.png" tvg-country="TR" tvg-content="Music" group-title="Turkey" tvg-name="Med Muzik",Med Muzik
 http://54.36.110.140/live3/live3.m3u8
@@ -2290,7 +2290,7 @@ https://hwlive.streamingmediahosting.com/14215-live/0_obd393sh/playlist.m3u8
 http://23.237.104.106:8080/USA_CMT/index.m3u8
 #EXTINF:-1 tvg-id="CMTEqualPlay.us@SD" channel-id="CMTEqualPlay.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cmt-equal-play-720p.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="CMT Equal Play",CMT Equal Play
 https://jmp2.uk/plu-5f68f53eb1e5800007390bf8.m3u8
-#EXTINF:-1 tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cowboy-movie-channel.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cowboy Movie Channel",Cowboy Movie Channel
+#EXTINF:-1 tvg-id="custom.cowboy-movie-channel" channel-id="custom.cowboy-movie-channel" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cowboy-movie-channel.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Cowboy Movie Channel",Cowboy Movie Channel
 https://streams2.sofast.tv/sofastplayout/32eb332e-f644-46e5-ad91-e55ad80d14f7_0_HLS/master.m3u8
 #EXTINF:-1 tvg-id="DePeliculaUS.us@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/de-pelicula-us-76b7888d34.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="De Pelicula US",De Pelicula US
 http://138.121.15.230:9002/DEPELICULA/index.m3u8
@@ -2734,7 +2734,7 @@ https://playlist.fasttvcdn.com/pl/cc0blorawy1ibohhrupraa/Song/playlist.m3u8
 https://streamer.radiotaajuus.fi/memfs/47f113bf-04ea-493b-a9d4-52945fd9db31.m3u8
 #EXTINF:-1 tvg-id="K100.is@SD" tvg-language="isl" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/k100-10dd3a8482.png" tvg-country="IS" tvg-content="Music" group-title="International" tvg-name="K100",K100
 https://k100streymi.mbl.is/beint/k100/index.m3u8
-#EXTINF:-1 tvg-id="KandelaTV.ve@SD" channel-id="KandelaTV.ve@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kandelatv-480p.png" tvg-country="VE" tvg-content="Music" group-title="International" tvg-name="KandelaTV",KandelaTV
+#EXTINF:-1 tvg-language="spa" tvg-id="KandelaTV.ve@SD" channel-id="KandelaTV.ve@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kandelatv-480p.png" tvg-country="VE" tvg-content="Music" group-title="International" tvg-name="KandelaTV",KandelaTV
 https://streamtv.intervenhosting.net:3718/live/kandelamedioslive.m3u8
 #EXTINF:-1 tvg-id="KantipurMax.np@SD" channel-id="KantipurMax.np@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kantipur-max-geo-blocked.png" tvg-country="NP" tvg-content="Movies" group-title="International" tvg-name="Kantipur Max [ ]",Kantipur Max [ ]
 https://ktvhdsg.ekantipur.com:8443/ktvmax2025/match2/playlist.m3u8
@@ -3058,7 +3058,7 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791530.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791438.ts
 #EXTINF:-1 tvg-id="custom.24-7-xxx-mom-lovers" channel-id="custom.24-7-xxx-mom-lovers" tvg-language="und" group-title="Adult" tvg-name="Mom Lovers",Mom Lovers
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791531.ts
-#EXTINF:-1 tvg-id="MusicBoxSexy.cz@SD" tvg-country="CZ" tvg-content="Music" group-title="Adult" tvg-name="Music Box Sexy",Music Box Sexy
+#EXTINF:-1 tvg-language="eng" tvg-id="MusicBoxSexy.cz@SD" tvg-country="CZ" tvg-content="Music" group-title="Adult" tvg-name="Music Box Sexy",Music Box Sexy
 http://88.212.15.50/live/mb_sexy/index.m3u8
 #EXTINF:-1 tvg-id="custom.xxx-my-daughter-s-hot-friend" channel-id="custom.xxx-my-daughter-s-hot-friend" tvg-language="und" group-title="Adult" tvg-name="My Daughter's Hot Friend",My Daughter's Hot Friend
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791782.ts
@@ -3396,7 +3396,7 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791716.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791717.ts
 #EXTINF:-1 tvg-id="custom.stars-exclusive-valentina-nappi" channel-id="custom.stars-exclusive-valentina-nappi" tvg-language="und" group-title="Adult" tvg-name="STARS EXCLUSIVE: VALENTINA NAPPI",STARS EXCLUSIVE: VALENTINA NAPPI
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791718.ts
-#EXTINF:-1 tvg-id="StingrayPopAdult.ca@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-pop-adult.png" tvg-country="CA" group-title="Adult" tvg-name="Stingray Pop Adult",Stingray Pop Adult
+#EXTINF:-1 tvg-language="eng" tvg-id="StingrayPopAdult.ca@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-pop-adult.png" tvg-country="CA" group-title="Adult" tvg-name="Stingray Pop Adult",Stingray Pop Adult
 https://lotus.stingray.com/manifest/ose-104ads-montreal/samsungtvplus/master.m3u8
 #EXTINF:-1 tvg-id="custom.24-7-xxx-strap-on" channel-id="custom.24-7-xxx-strap-on" tvg-language="und" group-title="Adult" tvg-name="Strap on",Strap on
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791554.ts
@@ -5608,7 +5608,7 @@ https://lightningnow70-samsungau.amagi.tv/playlist.m3u8
 https://lightningnow80-samsungau.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="NOWRock.uk@SD" channel-id="NOWRock.uk@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/now-rock-1080p-033d8aedc8.png" tvg-country="GB" group-title="Backup" tvg-name="NOW Rock",NOW Rock
 https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/18-028b925b47.png" tvg-country="GB" group-title="Backup" tvg-name="NOW Rock",NOW Rock
+#EXTINF:-1 tvg-id="NOWRock.uk@SD" channel-id="NOWRock.uk@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/18-028b925b47.png" tvg-country="GB" group-title="Backup" tvg-name="NOW Rock",NOW Rock
 https://rakutenaa-lightning-now90s-rakuten-2968n.amagi.tv/playlist/rakutenAA-lightning-now90s-rakuten/playlist.m3u8
 #EXTINF:-1 tvg-id="NTV-IN" tvg-language="ben" channel-id="NTV-IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" tvg-country="BD" group-title="Backup" tvg-name="NTV",NTV
 https://dash4.antik.sk/live/test_ntv_tizen/playlist.m3u8
