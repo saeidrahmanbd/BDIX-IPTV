@@ -6063,5 +6063,25 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/7IxXX6f.png",
     "notes": "IPTV-org exact unique channel name: MaxSport4.bg IPTV-org public logo dataset Source page: https://i.imgur.com/7IxXX6f.png"
+  },
+  "International-Playlist.m3u|custom.persiana-setmix-fr-music|Persiana SetMix|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/persiana-setmix-b30c1117a9.webp": {
+    "status": "third_party_verified",
+    "source_url": "https://www.archytele.com/assets/logos/fr/persiana-setmix-badge.webp",
+    "notes": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://www.archytele.com/live/france/persiana-setmix"
+  },
+  "International-Playlist.m3u|custom.stingray-greatest-hits-pl-music|Stingray Greatest Hits|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-greatest-hits-c8bdd84a88.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://provider-static.plex.tv/epg/cms/production/b91ee9d9-43db-4505-bd6b-d76e6544156c/Greatest_hits_RDX_VERT.jpg",
+    "notes": "Exact external logo asset Exact Stingray Greatest Hits channel artwork displayed on Plex's channel page; third-party source attribution only, no separate copyright licence asserted. Source page: https://watch.plex.tv/live-tv/channel/stingray-greatest-hits"
+  },
+  "International-Playlist.m3u|Totalmusic2000s.uk@HD|Totalmusic 2000s|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/totalmusic-2000s-88a31d48db.webp": {
+    "status": "third_party_verified",
+    "source_url": "https://www.40mediagroup.com/channels/sm/totalmusic-00s.webp",
+    "notes": "Official 40media Group channel artwork Exact Totalmusic 00s channel artwork displayed on the official 40media Group website; source attribution only, no separate copyright licence asserted. Source page: https://www.40mediagroup.com/"
+  },
+  "International-Playlist.m3u|custom.vox-kongo-tv-cd-music|Vox Kongo TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vox-kongo-tv-0cfd390c7b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://api.innovasat-ott.com/logo.png",
+    "notes": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://api.innovasat-ott.com/channel/vox-kongo-tv"
   }
 }

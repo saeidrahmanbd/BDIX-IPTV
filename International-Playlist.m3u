@@ -1156,7 +1156,7 @@ https://cinehls.persiana.live/hls/stream.m3u8
 https://sonhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaNostalgia.fr@SD" tvg-language="fas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/persiana-nostalgia-66d519d28e.png" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Persiana Nostalgia",Persiana Nostalgia
 https://noshls.persiana.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="custom.persiana-setmix-fr-music" channel-id="custom.persiana-setmix-fr-music" tvg-language="fas" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Persiana SetMix",Persiana SetMix
+#EXTINF:-1 tvg-id="custom.persiana-setmix-fr-music" channel-id="custom.persiana-setmix-fr-music" tvg-language="fas" tvg-country="FR" tvg-content="Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/persiana-setmix-b30c1117a9.png" group-title="France" tvg-name="Persiana SetMix",Persiana SetMix
 https://setmixhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaVibe.fr@HD" tvg-language="fas" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Persiana Vibe",Persiana Vibe
 https://raphls.persiana.live/hls/stream.m3u8
@@ -1658,7 +1658,7 @@ http://185.227.34.179:8080/hbo-2-hd/index.m3u8
 https://amg01076-amg01076c19-rakuten-gb-8653.playouts.now.amagi.tv/playlist/amg01076-lightning-now90s00s-rakutengb/playlist.m3u8
 #EXTINF:-1 tvg-id="PolsatMusic.pl@SD" tvg-language="pol" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/polsat-music-5ddfac4f70.png" tvg-country="PL" tvg-content="Music" group-title="Poland" tvg-name="Polsat Music",Polsat Music
 http://92.114.85.87:8001/play/a00z/index.m3u8
-#EXTINF:-1 tvg-id="custom.stingray-greatest-hits-pl-music" channel-id="custom.stingray-greatest-hits-pl-music" tvg-language="eng" tvg-country="PL" tvg-content="Music" group-title="Poland" tvg-name="Stingray Greatest Hits",Stingray Greatest Hits
+#EXTINF:-1 tvg-id="custom.stingray-greatest-hits-pl-music" channel-id="custom.stingray-greatest-hits-pl-music" tvg-language="eng" tvg-country="PL" tvg-content="Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-greatest-hits-c8bdd84a88.png" group-title="Poland" tvg-name="Stingray Greatest Hits",Stingray Greatest Hits
 https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883053
 #EXTINF:-1 tvg-id="SundanceTV.pl@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sundance-tv-poland-c763acfc1a.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="Sundance TV (Poland)",Sundance TV (Poland)
 http://92.114.85.87:8003/play/a004/index.m3u8
@@ -2158,7 +2158,7 @@ https://e3207568b726401995c25670faaf32e4.mediatailor.eu-west-1.amazonaws.com/v1/
 https://cdn.global.elektamedia.com/live/c7eds/Totalmusic/SA_LIVE_hls_enc/master.m3u8
 #EXTINF:-1 tvg-id="Totalmusic80s.uk" tvg-language="spa" channel-id="Totalmusic80s.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/totalmusic-80s-1080p-4c7ec66995.png" tvg-country="GB" tvg-content="Music" group-title="United Kingdom" tvg-name="Totalmusic 80s",Totalmusic 80s
 https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_80s/SA_LIVE_hls_enc/master.m3u8
-#EXTINF:-1 tvg-id="Totalmusic2000s.uk@HD" tvg-language="spa" tvg-country="GB" tvg-content="Music" group-title="United Kingdom" tvg-name="Totalmusic 2000s",Totalmusic 2000s
+#EXTINF:-1 tvg-id="Totalmusic2000s.uk@HD" tvg-language="spa" tvg-country="GB" tvg-content="Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/totalmusic-2000s-88a31d48db.png" group-title="United Kingdom" tvg-name="Totalmusic 2000s",Totalmusic 2000s
 https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_00s/SA_LIVE_hls_enc/master.m3u8
 #EXTINF:-1 tvg-id="TotalmusicConcerts.uk" tvg-language="spa" channel-id="TotalmusicConcerts.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/totalmusic-concerts-1080p-6f4082ca94.png" tvg-country="GB" tvg-content="Music" group-title="United Kingdom" tvg-name="Totalmusic Concerts",Totalmusic Concerts
 https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_Concerts/SA_LIVE_hls_enc/master.m3u8
@@ -2838,7 +2838,7 @@ https://hdbox.chunklistv.com/live?stream=tvone
 https://sincerecloud.stream/loadbalancer/public/J9EmQQGf.m3u8
 #EXTINF:-1 tvg-id="custom.vip-tv-aw-music" channel-id="custom.vip-tv-aw-music" tvg-language="eng;nld;pap" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vip-tv-720p.png" tvg-country="AW" tvg-content="Music" group-title="International" tvg-name="VIP TV",VIP TV
 https://vs20.live.opencaster.com/viptvaruba_01e417ae/index.m3u8
-#EXTINF:-1 tvg-id="custom.vox-kongo-tv-cd-music" channel-id="custom.vox-kongo-tv-cd-music" tvg-language="fra" tvg-country="CD" tvg-content="Music" group-title="International" tvg-name="Vox Kongo TV",Vox Kongo TV
+#EXTINF:-1 tvg-id="custom.vox-kongo-tv-cd-music" channel-id="custom.vox-kongo-tv-cd-music" tvg-language="fra" tvg-country="CD" tvg-content="Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vox-kongo-tv-0cfd390c7b.png" group-title="International" tvg-name="Vox Kongo TV",Vox Kongo TV
 https://5caf24a595d94.streamlock.net:1937/8028/8028/playlist.m3u8
 #EXTINF:-1 tvg-id="YesMoviesAction.il@SD" channel-id="YesMoviesAction.il@SD" tvg-language="heb" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/yes-movies-action-1080p.png" tvg-country="IL" tvg-content="Movies" group-title="International" tvg-name="Yes Movies Action",Yes Movies Action
 http://stream.mcquack.net/380/index.m3u8
