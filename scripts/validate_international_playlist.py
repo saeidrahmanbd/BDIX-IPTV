@@ -49,7 +49,7 @@ def foreign_movie_music_error(a, name, country_code):
     # canonical discovery policy used by International candidates and legacy rows.
     policy_attrs["group-title"] = "International"
     policy_attrs["tvg-country"] = code
-    target, reason, verified_code = discovery.policy(
+    target, reason, verified_code = discovery.discovery_eligibility(
         policy_attrs, name, allow_legacy_group=True
     )
     if target is None:
@@ -143,7 +143,7 @@ def main():
                     f"Foreign country group violates Movies/Music policy: {name!r} in {group!r} ({reason})."
                 )
         if group_key in {"international", "new channels", "new backup", "new backups"}:
-            target, reason, code = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
+            target, reason, code = discovery.discovery_eligibility(a, name, allow_legacy_group=(group_key == "international"))
             genre_primary = group_key in {"news", "sports", "kids", "religious", "documentary & wildlife", "fashion tv"}
             # Existing curated genre groups may contain foreign channels imported
             # from IPTV-Playlist.m3u. This validator exception does not alter the
