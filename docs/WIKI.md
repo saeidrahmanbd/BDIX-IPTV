@@ -67,20 +67,29 @@ The main playlist's source scope for new discovery is Bangladesh and India. Its 
 
 Keep channel IDs, names, logo paths, country, language, group, channel number and displayed name consistent. Do not invent channel IDs or assign a logo merely because a filename looks similar. Published playlists use repository-local logo files under `/logos/`; only verified identity matches are accepted.
 
-The all-playlist EPG mapping registry is `reports/epg-channel-mapping.csv`. The EPG refresh workflow audits both maintained playlists and publishes the public guide to `epg/epg.xml) only after source, freshness and quality checks pass. The last-known-good guide is protected from empty, stale or degraded publication. Adult-group rows are excluded from the public mapping report.
+The all-playlist EPG mapping registry is `reports/epg-channel-mapping.csv`. The EPG refresh workflow audits both maintained playlists and publishes the public guide to `epg/epg.xml` only after source, freshness and quality checks pass. The last-known-good guide is protected from empty, stale or degraded publication. Adult-group rows are excluded from the public mapping report.
 
 ## Daily automation schedule
 
-All times below are Bangladesh time (`Asia/Dhaka`):
+All times below are Bangladesh time (`Asia/Dhaka`). GitHub Actions cron expressions are stored in UTC (Bangladesh is UTC+6).
 
-| Workflow | Schedule | Scope |
-|---|---:|---|
-| IPTV Playlist Update / maintenance | 07:00 | IPTV: metadata/logo repair only, preserving existing rows; International: full policy-based maintenance and reorganization |
-| Playlist Logo Repair and Localization | 08:00 | Authentic local logos for both playlists |
-| International Stream Health | 08:45 | Stream probes, Review recovery and three-day retirement for International only |
-| Refresh IPTV EPG | 09:00 | EPG mapping audit and XMLTV publication for both playlists |
+| Bangladesh time | Workflow | UTC cron | Scope |
+|---|---|---|---|
+| 05:00 | IPTV New Channel Discovery | `0 23 * * *` (previous UTC day) | Discover eligible Bangladesh/India candidates into the owner-review queues |
+| 05:10 | International Channel Discovery | `10 23 * * *` (previous UTC day) | Discover and organize eligible International playlist channels |
+| 05:25 | Playlist Logo Repair and Localization | `25 23 * * *` (previous UTC day) | Repair authentic repository-local logos for both playlists |
+| 05:35 | International Stream Health | `35 23 * * *` (previous UTC day) | Probe International streams, recover Review entries and enforce the three-day failure policy |
+| 05:50 | IPTV Playlist Update | `50 23 * * *` (previous UTC day) | Owner-safe IPTV metadata/report maintenance and policy-based International maintenance |
+| 06:10 | Refresh IPTV EPG | `10 0 * * *` | Audit EPG mappings and regenerate, validate and publish XMLTV for both playlists |
+| 06:30 | Xtream health check | `30 0 * * *` | Check the configured Xtream gateway and related deployment health |
 
-GitHub may delay scheduled Actions. A workflow's configured schedule is not proof that a run completed; verify the run status and freshness of its output reports.
+### Recovery checkpoints
+
+The Discovery Schedule Watchdog checks for missing or failed daily work at 05:15, 05:30, 05:45, 06:00, 06:15, 06:30, 06:45, 06:55, 07:15, 08:15, 09:15 and 10:15 Bangladesh time. It dispatches only work that its daily guard identifies as missing or failed. It also rechecks after completion events from the production workflows. These are recovery checks, not extra scheduled full maintenance runs when the required work has already succeeded.
+
+The International Stream Health workflow also listens for completion of `IPTV Playlist Update` as a secondary recovery trigger. The EPG workflow listens for maintenance completion and relevant playlist, mapping or EPG-code changes so that it can rebuild after upstream changes. Per-day guards and concurrency controls prevent duplicate daily work.
+
+GitHub scheduled Actions are best-effort and may start late. A configured cron time or a successful wrapper/guard job is not proof that the substantive job completed. Verify the actual production job, its conclusion, and the freshness/source fingerprints of its output reports.
 
 ## Operations and reports
 
