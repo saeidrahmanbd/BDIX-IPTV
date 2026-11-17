@@ -1798,9 +1798,9 @@ https://live-maidantv.cdnvideo.ru/maidantv/maidantv.smil/playlist.m3u8
 http://hls.volgograd1vtv.cdnvideo.ru/volgograd1vtv/volgograd1vtv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="MuzSoyuz.ru@SD" channel-id="MuzSoyuz.ru@SD" tvg-language="rus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/muz-soyuz-576p.png" tvg-country="RU" tvg-content="Music" group-title="Russia" tvg-name="Muz Soyuz",Muz Soyuz
 https://hls-tvsoyuz.cdnvideo.ru/tvsoyuz2/muzsoyuz.6fw0-58xp-acts-esy0/playlist.m3u8
-#EXTINF:-1 tvg-id="Muzhskoekino.ru@SD" channel-id="Muzhskoekino.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/muzhskoe-kino-576p.png" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="Muzhskoe kino",Muzhskoe kino
+#EXTINF:-1 tvg-id="Muzhskoekino.ru@SD" channel-id="Muzhskoekino.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/muzhskoe-kino-576p.png" tvg-country="RU" tvg-content="Movies" tvg-language="rus" group-title="Russia" tvg-name="Muzhskoe kino",Muzhskoe kino
 http://stream.mcquack.net/107/index.m3u8
-#EXTINF:-1 tvg-id="Muzhskoy.ru@HD" channel-id="Muzhskoy.ru@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/muzhskoy-hd-1080p.png" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="Muzhskoy",Muzhskoy
+#EXTINF:-1 tvg-id="Muzhskoy.ru@HD" channel-id="Muzhskoy.ru@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/muzhskoy-hd-1080p.png" tvg-country="RU" tvg-content="Movies" tvg-language="rus" group-title="Russia" tvg-name="Muzhskoy",Muzhskoy
 https://fonbet.mediacdn.ru/live/muzhskoi/playlist.m3u8
 #EXTINF:-1 tvg-id="Muzyka1.ru@International" tvg-language="rus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/muzyka-1-b63e805098.png" tvg-country="RU" tvg-content="Music" group-title="Russia" tvg-name="Muzyka 1",Muzyka 1
 https://kino-1.catcast.tv/content/37745/index.m3u8
@@ -1816,7 +1816,7 @@ http://stream.mcquack.net/217/index.m3u8
 http://stream.mcquack.net/362/index.m3u8
 #EXTINF:-1 tvg-id="NasheNovoeKino.ru@SD" tvg-language="rus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nashe-novoe-kino-1486528d18.png" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="Nashe Novoe Kino",Nashe Novoe Kino
 https://stream8.cinerama.uz/1051/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="Ostrosyuzhetnoye.ru@HD" channel-id="Ostrosyuzhetnoye.ru@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/ostrosyuzhetnoye-hd-1080p.png" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="Ostrosyuzhetnoye",Ostrosyuzhetnoye
+#EXTINF:-1 tvg-id="Ostrosyuzhetnoye.ru@HD" channel-id="Ostrosyuzhetnoye.ru@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/ostrosyuzhetnoye-hd-1080p.png" tvg-country="RU" tvg-content="Movies" tvg-language="rus" group-title="Russia" tvg-name="Ostrosyuzhetnoye",Ostrosyuzhetnoye
 http://stream.mcquack.net/214/index.m3u8
 #EXTINF:-1 tvg-id="Premialnoe.ru@HD" channel-id="Premialnoe.ru@HD" tvg-language="rus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/premialnoe-hd-1080p.png" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="Premialnoe",Premialnoe
 http://stream.mcquack.net/421/index.m3u8
@@ -2056,13 +2056,13 @@ https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
 #EXTINF:-1 tvg-id="TRTMuzik.tr@SD" tvg-language="tur" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trt-muzik-converted-cd34011c94.png" tvg-country="TR" tvg-content="Music" group-title="Turkey" tvg-name="TRT Muzik",TRT Muzik
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="4everCinema.ua@SD" channel-id="4everCinema.ua@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/4ever-cinema-1080p.png" tvg-country="UA" tvg-content="Movies" group-title="Ukraine" tvg-name="4ever Cinema",4ever Cinema
+#EXTINF:-1 tvg-id="4everCinema.ua@SD" channel-id="4everCinema.ua@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/4ever-cinema-1080p.png" tvg-country="UA" tvg-content="Movies" tvg-language="ukr" group-title="Ukraine" tvg-name="4ever Cinema",4ever Cinema
 http://stream.mcquack.net/258/index.m3u8
 #EXTINF:-1 tvg-id="4everMusic.ua" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4ever-music-1080p-0f54facdb8.png" tvg-country="UA" tvg-content="Music" group-title="Ukraine" tvg-name="4ever Music",4ever Music
 http://stream.mcquack.net/257/index.m3u8
 #EXTINF:-1 tvg-id="Black.ua@SD" channel-id="Black.ua@SD" tvg-language="ukr" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/black-1080p.png" tvg-country="UA" tvg-content="Music" group-title="Ukraine" tvg-name="Black",Black
 http://stream.mcquack.net/283/index.m3u8
-#EXTINF:-1 tvg-id="Bolt.ua@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bolt-ukraine-1080p.png" tvg-country="UA" tvg-content="Movies" group-title="Ukraine" tvg-name="Bolt (Ukraine)",Bolt (Ukraine)
+#EXTINF:-1 tvg-id="Bolt.ua@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bolt-ukraine-1080p.png" tvg-country="UA" tvg-content="Movies" tvg-language="und" group-title="Ukraine" tvg-name="Bolt (Ukraine)",Bolt (Ukraine)
 http://stream.mcquack.net/73/index.m3u8
 #EXTINF:-1 tvg-id="CinePlus.ua@SD" tvg-language="ukr" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cine-plus-54bc891b49.png" tvg-country="UA" tvg-content="Movies" group-title="Ukraine" tvg-name="Cine+",Cine+
 http://777905.live.tvstitch.com/playlist.m3u8?source=aHR0cDovLzE3Ni4xMjIuMTAzLjUxOjcwMDAvY2gzMy90cmFja3MtdjJhMS9tb25vLm0zdTg%2FbGl2ZT0xJmlwPTE3OC4xMzYuNDIuMjIwJmlkPTk0ODg2NSZzZWNyZXQ9bjF1N3VpMDYmc3NsPTEmMjF5bz0wJmU9MTc5MDc1MjM2MiZzdD12bmp2elZKY2JtUndKMkFzY1l0UWpR&master=567
@@ -2202,7 +2202,7 @@ https://hls.avang.live/hls/stream.m3u8
 http://45.70.201.81:8000/play/a010/index.m3u8
 #EXTINF:-1 tvg-id="AXS.us" channel-id="AXS.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axs.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="AXS",AXS
 https://tvsen6.aynaott.com/axs/index.m3u8
-#EXTINF:-1 tvg-id="AXSTV.us@SD" channel-id="AXSTV.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axs-tv-576p.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="AXS TV",AXS TV
+#EXTINF:-1 tvg-id="AXSTV.us@SD" channel-id="AXSTV.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axs-tv-576p.png" tvg-country="US" tvg-content="Music" tvg-language="eng" group-title="United States" tvg-name="AXS TV",AXS TV
 https://tvsen3.aynaott.com/P2fJzfsg/index.m3u8
 #EXTINF:-1 tvg-id="BattlestarGalactica.us@SD" channel-id="BattlestarGalactica.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/battlestar-galactica.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Battlestar Galactica",Battlestar Galactica
 https://jmp2.uk/plu-69d7ebff029c431826bd328e.m3u8
@@ -2736,9 +2736,9 @@ https://media.streambrothers.com:1936/8014/8014/playlist.m3u8
 https://stream.berosat.live/hls/lollywood-hd/lollywood-hd.m3u8
 #EXTINF:-1 tvg-id="LookThoongTV.la@SD" tvg-language="lao" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/look-thoong-tv-2c41090ebc.png" tvg-country="LA" tvg-content="Music" group-title="International" tvg-name="Look Thoong TV",Look Thoong TV
 https://livefta.malimarcdn.com/ftaedge00/lookthoongtv.sdp/playlist.m3u8
-#EXTINF:-1 tvg-id="LRTKlasika.lt@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lrt-klasika-b5a707eccf.png" tvg-country="LT" tvg-content="Music" group-title="International" tvg-name="LRT Klasika",LRT Klasika
+#EXTINF:-1 tvg-id="LRTKlasika.lt@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lrt-klasika-b5a707eccf.png" tvg-country="LT" tvg-content="Music" tvg-language="lit" group-title="International" tvg-name="LRT Klasika",LRT Klasika
 https://stream-live.lrt.lt/klasika/master.m3u8
-#EXTINF:-1 tvg-id="LRTOpus.lt@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lrt-opus-c4dc549e92.png" tvg-country="LT" tvg-content="Music" group-title="International" tvg-name="LRT Opus",LRT Opus
+#EXTINF:-1 tvg-id="LRTOpus.lt@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lrt-opus-c4dc549e92.png" tvg-country="LT" tvg-content="Music" tvg-language="lit" group-title="International" tvg-name="LRT Opus",LRT Opus
 https://stream-live.lrt.lt/opus/master.m3u8
 #EXTINF:-1 tvg-id="M1.lt@SD" tvg-language="lit" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/m-1-293aae8997.png" tvg-country="LT" tvg-content="Music" group-title="International" tvg-name="M-1",M-1
 https://m-1.data.lt/m-1/smil:m-1.smil/playlist.m3u8

@@ -1,31 +1,32 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-16T17:19:22+00:00**
+Generated: **2026-11-17T04:59:10+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **5226eef8adfb2c840ca4d9327378374953d12c2d4043873d87e91ec2ae047829**
-- International-Playlist.m3u SHA-256: **08817bb46a42b524ee50302aaa45265b21d4fcffce6ac5f3fc1efdd0bc48f552**
+- IPTV-Playlist.m3u SHA-256: **037d30711009a5d40bb284fd4e55a73f8669cc19e5fb36f8d85f86181f377561**
+- International-Playlist.m3u SHA-256: **02fa0e014d1b14e61df1acc8684e5b925123a2ae7fac1b6152c3264b384f7faf**
 
 ## Summary
 
-- Safe repairs applied this run: **0**
+- Safe repairs applied this run: **2**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **1**
 - Raster/SVG assets with short side under 64 px: **152**
-- Exact-byte duplicate asset clusters: **684**
-- Playlist references whose asset stem differs from the normalized channel name: **1469**
-- Unreferenced image assets immediately inside logos/: **1501** (not deleted; other tooling or playlists may use them)
+- Exact-byte duplicate asset clusters: **699**
+- Playlist references whose asset stem differs from the normalized channel name: **1495**
+- Unreferenced image assets immediately inside logos/: **1494** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| mbc-tv-576p.png | PNG | PNG | 720×540 | 476×357 | downscaled, re-encoded/compressed |
+| shin-chan-720p.png | PNG | PNG | 1068×293 | 656×180 | downscaled, re-encoded/compressed |
 
 ## Remaining extension mismatches
 
@@ -381,6 +382,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/cool-fm-98-9-720p.png, logos/international/cool-fm-98-9-720p.png
 - logos/corazon-tv.png, logos/international/corazon-tv.png
 - logos/cowboy-movie-channel.png, logos/unused/cowboy-movie-channel.png
+- logos/cvr-health-576p.png, logos/cvr-health.png
 - logos/dance-television-1080p.png, logos/international/dance-television-1080p.png
 - logos/dancetv-deep-house-district-1080p.png, logos/international/dancetv-deep-house-district-1080p.png
 - logos/dancetv-house-floor-1080p.png, logos/international/dancetv-house-floor-1080p.png
@@ -401,6 +403,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/discover-pakistan.png, logos/discovery-pakistan-b91039be.png
 - logos/discovery-channel-hungary-bf08bd4c8d.png, logos/discovery-channel-italy-bf08bd4c8d.png, logos/discovery-channel-latin-america-bf08bd4c8d.png, logos/discovery-channel-united-states-bf08bd4c8d.png
 - logos/discovery-kids-latin-america-387f33e092.png, logos/discovery-kids-latin-america-chile-387f33e092.png, logos/discovery-kids-latin-america-colombia-387f33e092.png, logos/discovery-kids-latin-america-mexico-387f33e092.png
+- logos/disha-tv-396p.png, logos/disha-tv.png
 - logos/disney-channel-czech-republic-9b9957f643.png, logos/disney-channel-germany-9b9957f643.png, logos/disney-channel-poland-9b9957f643.png
 - logos/disney-channel-latin-america-center-1b160711f2.png, logos/disney-channel-latin-america-mexico-1b160711f2.png, logos/disney-channel-latin-america-north-1b160711f2.png, logos/disney-channel-latin-america-panregional-1b160711f2.png, logos/international/disneychannellatinamerica.png
 - logos/disney-jr-latin-america-north-044dc1f366.png, logos/disney-junior-czech-republic-044dc1f366.png, logos/international/disney-jr-latin-america-1080p.png, logos/nvisionbd-verified-disney-junior-india-044dc1f366.png, logos/unused/disney-jr-044dc1f3.png
@@ -697,6 +700,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/jaihind-tv-576p.png, logos/jaihind-tv.png
 - logos/jimjam-6eb2a52d5d.png, logos/jimjam-europe-6eb2a52d5d.png
 - logos/jordan-sport-7fe0dba677.png, logos/nvisionbd-official-jordan-sport.png
+- logos/kabaddi-24x7-720p.png, logos/kabaddi-24x7.png
 - logos/kcl-tv-720p.png, logos/kcl-tv.png
 - logos/kerala-vision-576p.png, logos/kerala-vision.png
 - logos/kite-victers-720p-not-24-7.png, logos/kite-victers.png
@@ -715,6 +719,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/max-sport-2-c89d29749e.png, logos/nvisionbd-official-max-sport-2.png
 - logos/max-sport-3-2ea6ca4d8c.png, logos/nvisionbd-official-max-sport-3.png
 - logos/max-sport-4-0ee3a4fef1.png, logos/nvisionbd-official-max-sport-4.png
+- logos/mbc-tv-576p.png, logos/mbc-tv.png
 - logos/mei-ah-movie-channel-1080p.png, logos/mei-ah-movie-channel.png, logos/unused/mei-ah-movie-channel-b6a14207.png
 - logos/metro-tv-india-0625d4e893.png, logos/nvisionbd-verified-metro-tv-india-0625d4e893.png, logos/unused/metro-tv.png
 - logos/minimax-cee-c3c7e32bdc.png, logos/minimax-hungary-c3c7e32bdc.png
@@ -730,19 +735,23 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/mytime-movie-network-mexico-5d68663811.png, logos/mytime-movie-network-spain-5d68663811.png, logos/unused/mytime-movie-network-1080p-79e6ec3226.png
 - logos/nagorik-tv-90b5d16aaf.png, logos/nvisionbd-verified-nagorik-tv-90b5d16aaf.png
 - logos/nagorik-tv.png, logos/nagorik.png
+- logos/nan-tv-720p.png, logos/nan-tv.png
 - logos/national-geographic-croatia-9787c82827.png, logos/national-geographic-czech-republic-9787c82827.png, logos/national-geographic-hungary-9787c82827.png, logos/national-geographic-mexico-9787c82827.png, logos/national-geographic-poland-9787c82827.png, logos/national-geographic-united-states-9787c82827.png, logos/national-geographic-united-states-hd-east-9787c82827.png
 - logos/national-geographic-wild-czech-republic-82df6a8299.png, logos/national-geographic-wild-hungary-82df6a8299.png, logos/national-geographic-wild-poland-82df6a8299.png, logos/national-geographic-wild-romania-82df6a8299.png, logos/national-geographic-wild-united-states-hd-east-82df6a8299.png
 - logos/naturetime-au-89beb43c58.png, logos/naturetime-france-89beb43c58.png
 - logos/nbc-sports-now-48667e2ba4.png, logos/nbc-sports.png, logos/nvisionbd-official-nbc-sports.png, logos/unused/nbc-sports.png
+- logos/ndtv-good-times-1080p.png, logos/ndtv-good-times.png
 - logos/nepal-1-576p.png, logos/nepal-1.png
 - logos/nh-bollygold-dbedeff9.png, logos/nh-bollygold.png
 - logos/nick-bangla-26fef2ac19.png, logos/nvisionbd-verified-nick-bangla-26fef2ac19.png
 - logos/nick-jr-croatia-a865fd62c7.png, logos/nick-jr-hungary-a865fd62c7.png, logos/nick-jr-poland-a865fd62c7.png, logos/nick-jr-russia-a865fd62c7.png
 - logos/nick-jr-czech-republic-88856e732a.png, logos/nick-jr-latin-america-88856e732a.png, logos/nick-jr-united-states-88856e732a.png
+- logos/nick-jr-india-576p.png, logos/nick-jr-india.png
 - logos/nickelodeon-brazil-7ca6654cc0-converted-2390ea4732.png, logos/unused/nickelodeon-480p-b7ae374df0-converted-2390ea4732.png
 - logos/nickelodeon-cis-9bff2e9298.png, logos/nickelodeon-czech-republic-9bff2e9298.png, logos/nickelodeon-germany-9bff2e9298.png, logos/nickelodeon-poland-9bff2e9298.png, logos/nickelodeon-united-states-9bff2e9298.png, logos/unused/nickelodeon-73ebd264b3.png
 - logos/nickelodeon-croatia-f61cbaf1ed.png, logos/nickelodeon-global-f61cbaf1ed.png
 - logos/nickelodeon-hungary-034dfb11a2.png, logos/unused/nickelodeon-312f4b9648.png
+- logos/nickelodeon-india-576p.png, logos/nickelodeon-india.png
 - logos/nickelodeon-russia-3e9e7c9dcf.png, logos/unused/nickelodeon-1080p-3c1761ecf9.png
 - logos/nicktoons-cis-8af9304b51.png, logos/nicktoons-czech-republic-8af9304b51.png, logos/nicktoons-hungary-8af9304b51.png
 - logos/normalized/tehzeeb-tv.png, logos/tehzeeb-tv.png
@@ -801,6 +810,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/pishow-stream-10007-converted-a49a0ada83.png, logos/pishow.png
 - logos/pooya-tv-6fbf1da8c1.png, logos/unused/pooya-tv-plus-576p-5bf2ade748.png
 - logos/public-music.png, logos/unused/public-music-576p-278a70b9ab.png
+- logos/qello-concerts-by-stingray-1080p.png, logos/qello-concerts-by-stingray.png
+- logos/r-plus-1080p.png, logos/r-plus.png
 - logos/raj-digital-plus.png, logos/raj-music-telugu.png
 - logos/rajdhani-tv-backup-1.png, logos/unused/rajdhani-alt.png
 - logos/rakuten-tv-action-movies-finland-1080p.png, logos/rakuten-tv-action-movies.png, logos/rakuten-tv-comedy-movies-finland-1080p.png, logos/rakuten-tv-comedy-movies.png, logos/rakuten-tv-drama-movies-finland-1080p.png, logos/rakuten-tv-drama-movies.png, logos/rakuten-tv-family-movies-finland-1080p.png, logos/rakuten-tv-family-movies.png, logos/rakuten-tv-top-movies-finland-1080p.png, logos/rakuten-tv-top-movies.png
@@ -817,7 +828,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/shemaroo-josh.png, logos/unused/shemaroo-josh-360p-28e43c141a.png
 - logos/shemaroo-umang-720p.png, logos/shemaroo-umang.png
 - logos/shikor-tv-canada-ac43f0fa9e.png, logos/ten-tv-prime-ac43f0fa9e.png, logos/tv-one-uk-ac43f0fa9e.png
+- logos/shin-chan-720p.png, logos/shin-chan-a008e6d285.png
 - logos/solo-calcio-italia.png, logos/solocalcio-italia.png
+- logos/sonic-576p.png, logos/sonic-bangla.png
 - logos/sony-pal-1080p-f991ee016e.png, logos/sony-pal.png
 - logos/sony-yay-1080p.png, logos/sony-yay.png
 - logos/sooriyan-tv-1080p.png, logos/sooriyan-tv.png
@@ -852,6 +865,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/trace-urban-1080p-52524ff192.png, logos/trace-urban-africa-franco-c4541d5301.png, logos/trace-urban-caribbean-and-indian-ocean-c4541d5301.png, logos/trace-urban-southern-africa-c4541d5301.png
 - logos/travel-xp.png, logos/travelxp-bangla.png, logos/travelxp-english.png
 - logos/travelxp-4k-hdr-2160p-geo-blocked.png, logos/travelxp.png
+- logos/tv-100-india-576p.png, logos/tv-100-india.png
 - logos/tvcarib-cinema-00d1d6c83c.png, logos/tvcarib-kids-and-teens-00d1d6c83c.png
 - logos/tyc-sports-afc1096aad.png, logos/tyc-sports-usa-afc1096aad.png
 - logos/ua-music.png, logos/unused/ua-music-1080p-5ea4b8d888.png
@@ -881,7 +895,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/viasat-kino-balkan-24c3a8c6c2.png, logos/viasat-kino-romania-24c3a8c6c2.png
 - logos/vision-india.png, logos/vision.png
 - logos/vokta-tv-720p.png, logos/vokta-tv.png
+- logos/vtu-1080p.png, logos/vtu.png
 - logos/wah-punjabi-576p.png, logos/wah-punjabi.png
+- logos/weatherspy-india-720p.png, logos/weatherspy-india.png
 - logos/willow-tv.png, logos/willow.png
 - logos/world-of-freesports-45c7da464f.png, logos/world-of-freesports.png
 - logos/world-poker-tour-76e16779ab.png, logos/world-poker-tour-poland-76e16779ab.png, logos/world-poker-tour-uk-76e16779ab.png
@@ -909,7 +925,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Bangladesh |
-| IPTV-Playlist.m3u | Channel 52 | channel-52.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 9 | channel-9.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel Europe | channel-europe-c8db0338dc.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Bangladesh |
@@ -957,7 +972,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Goldmines 2 | goldmines.png | Indian Movies |
 | IPTV-Playlist.m3u | Goldmines Movies 2 | goldmines-movies.png | Indian Movies |
 | IPTV-Playlist.m3u | Indywood TV | indywood-tv.png | Indian Movies |
-| IPTV-Playlist.m3u | Movies Now HD | movies-now-hd-576p.png | Indian Movies |
 | IPTV-Playlist.m3u | Pitaara | pitaara-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Thalaa TV | thalaa-tv.png | Indian Movies |
@@ -1151,7 +1165,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Backup |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Backup |
-| IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
 | IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
 | IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
@@ -1284,6 +1297,35 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
+| IPTV-Playlist.m3u | BTL TV (Netherlands) (1080p) | btl-tv-netherlands-1080p.png | New Channels |
+| IPTV-Playlist.m3u | NAN TV (720p) | nan-tv-720p.png | New Channels |
+| IPTV-Playlist.m3u | Nickelodeon (India) (576p) | nickelodeon-india-576p.png | New Channels |
+| IPTV-Playlist.m3u | Nick Jr. (India) (576p) | nick-jr-india-576p.png | New Channels |
+| IPTV-Playlist.m3u | Sonic (576p) | sonic-576p.png | New Channels |
+| IPTV-Playlist.m3u | Vokta TV (720p) | vokta-tv-720p.png | New Channels |
+| IPTV-Playlist.m3u | Cartoon Network HD+ (1080p) | cartoon-network-pakistan.png | New Channels |
+| IPTV-Playlist.m3u | CVR Health (576p) | cvr-health-576p.png | New Channels |
+| IPTV-Playlist.m3u | Disha TV (396p) | disha-tv-396p.png | New Channels |
+| IPTV-Playlist.m3u | Doraemon (720p) | doraemon-720p.png | New Channels |
+| IPTV-Playlist.m3u | Gaunda Punjab TV (720p) | gaunda-punjab-tv-720p.png | New Channels |
+| IPTV-Playlist.m3u | Kabaddi 24x7 (720p) | kabaddi-24x7-720p.png | New Channels |
+| IPTV-Playlist.m3u | MBC TV (576p) | mbc-tv-576p.png | New Channels |
+| IPTV-Playlist.m3u | NDTV Good Times (1080p) | ndtv-good-times-1080p.png | New Channels |
+| IPTV-Playlist.m3u | Pogo (576p) | pogo-576p.png | New Channels |
+| IPTV-Playlist.m3u | Punjab Plus (1080p) | punjab-plus-1080p.png | New Channels |
+| IPTV-Playlist.m3u | Qello Concerts by Stingray (1080p) | qello-concerts-by-stingray-1080p.png | New Channels |
+| IPTV-Playlist.m3u | R Plus (1080p) | r-plus-1080p.png | New Channels |
+| IPTV-Playlist.m3u | Shekinah TV (1080p) | shekinah-tv-1080p.png | New Channels |
+| IPTV-Playlist.m3u | Shin-chan (720p) | shin-chan-720p.png | New Channels |
+| IPTV-Playlist.m3u | TamilVision-TV (1080p) | tamilvision-tv-1080p.png | New Channels |
+| IPTV-Playlist.m3u | Travelxp HD (1080p) [Geo-blocked] | travelxp-hd-1080p-geo-blocked.png | New Channels |
+| IPTV-Playlist.m3u | TV 100 (India) (576p) | tv-100-india-576p.png | New Channels |
+| IPTV-Playlist.m3u | VTU (1080p) | vtu-1080p.png | New Channels |
+| IPTV-Playlist.m3u | WeatherSpy (India) (720p) | weatherspy-india-720p.png | New Channels |
+| IPTV-Playlist.m3u | Zodiak TV (1080p) | zodiak-tv-1080p.png | New Channels |
+| IPTV-Playlist.m3u | Eurosport (India) HD (1080p) | eurosport.png | New Backups |
+| IPTV-Playlist.m3u | Mr Bean Animated (1080p) | mr-bean-animated.png | New Backups |
+| IPTV-Playlist.m3u | Travelxp 4K HDR (2160p) [Geo-blocked] | travelxp-4k-hdr-2160p-geo-blocked.png | New Backups |
 | IPTV-Playlist.m3u | &TV | tv.png | Review |
 | IPTV-Playlist.m3u | AMN TV | amn-tv.png | Review |
 | IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Review |
