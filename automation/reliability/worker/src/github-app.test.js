@@ -65,7 +65,12 @@ test("rejects an installation token without Actions write permission", async () 
     privateKeyEncoding: { type: "pkcs1", format: "pem" },
     publicKeyEncoding: { type: "spki", format: "pem" }
   });
-  const fakeFetch = async () => Response.json({ token: "temporary-token", permissions: { actions: "read" } });
+  let calls = 0;
+  const fakeFetch = async () => {
+    calls += 1;
+    if (calls === 1) return Response.json({ token: "temporary-token", permissions: { actions: "read" } });
+    return Response.json({ full_name: "saeidrahmanbd/BDIX-IPTV" });
+  };
   await assert.rejects(verifyGitHubAppAccess({
     GITHUB_APP_ID: "5794332",
     GITHUB_INSTALLATION_ID: "182792735",
