@@ -95,8 +95,12 @@ class EpgMappingRegionTests(unittest.TestCase):
             line for line in playlist.splitlines()
             if line.startswith("#EXTINF:") and 'tvg-id="BHI.Channel.in"' in line
         ]
-        self.assertEqual(len(entries), 1)
-        self.assertIn('tvg-country="IN"', entries[0])
+        primary = [line for line in entries if 'group-title="Indian Bangla"' in line]
+        backups = [line for line in entries if 'group-title="Backup"' in line]
+        self.assertEqual(len(primary), 1)
+        self.assertEqual(len(backups), 1)
+        self.assertIn('tvg-country="IN"', primary[0])
+        self.assertIn('tvg-country="IN"', backups[0])
 
     def test_new_channel_aliases_point_to_catalogued_source_ids(self):
         self.assertEqual(
