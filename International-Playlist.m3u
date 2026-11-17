@@ -1254,7 +1254,7 @@ https://sdn-global-live-streaming-packager-cache.3qsdn.com/13456/13456_264_live.
 https://sdn-global-live-streaming-packager-cache.3qsdn.com/65183/65183_264_live.m3u8
 #EXTINF:-1 tvg-id="DMF.de@SD" tvg-language="deu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dmf-99a7cc8162.png" tvg-country="DE" tvg-content="Music" group-title="Germany" tvg-name="DMF",DMF
 https://d-m-f.iptv-playoutcenter.de/dmf/dmf1/playlist.m3u8
-#EXTINF:-1 tvg-id="FinestTV.de@SD" channel-id="FinestTV.de@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/finest-tv-288p-not-24-7.png" tvg-country="DE" tvg-content="Music" group-title="Germany" tvg-name="Finest TV [ ]",Finest TV [ ]
+#EXTINF:-1 tvg-language="deu" tvg-id="FinestTV.de@SD" channel-id="FinestTV.de@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/finest-tv-288p-not-24-7.png" tvg-country="DE" tvg-content="Music" group-title="Germany" tvg-name="Finest TV [ ]",Finest TV [ ]
 https://media.finest.tv/hls/live.m3u8
 #EXTINF:-1 tvg-id="FolxMusicTelevision.de@SD" channel-id="FolxMusicTelevision.de@SD" tvg-language="deu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/folx-music-television.png" tvg-country="DE" tvg-content="Music" group-title="Germany" tvg-name="Folx Music Television",Folx Music Television
 https://folxapp.b-cdn.net/1080p/index.m3u8
