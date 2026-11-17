@@ -97,10 +97,11 @@ class EpgMappingRegionTests(unittest.TestCase):
         ]
         primary = [line for line in entries if 'group-title="Indian Bangla"' in line]
         backups = [line for line in entries if 'group-title="Backup"' in line]
+        # BHI Channel currently has one curated primary stream only. Do not
+        # require a Backup alternative unless one is actually maintained.
         self.assertEqual(len(primary), 1)
-        self.assertEqual(len(backups), 1)
+        self.assertEqual(len(backups), 0)
         self.assertIn('tvg-country="IN"', primary[0])
-        self.assertIn('tvg-country="IN"', backups[0])
 
     def test_new_channel_aliases_point_to_catalogued_source_ids(self):
         self.assertEqual(
