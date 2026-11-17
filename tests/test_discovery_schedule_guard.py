@@ -62,6 +62,19 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "Routine logo maintenance commit",
         ))
 
+        self.assertTrue(guard.is_manual_retry(
+            "push", 1, "epg-refresh.yml",
+            "Refresh published XMLTV [manual-epg-refresh]",
+        ))
+        self.assertFalse(guard.is_manual_retry(
+            "push", 1, "epg-refresh.yml",
+            "Routine EPG maintenance commit",
+        ))
+        self.assertFalse(guard.is_manual_retry(
+            "push", 1, "playlist-logo-localization.yml",
+            "Refresh published XMLTV [manual-epg-refresh]",
+        ))
+
     def test_any_existing_run_prevents_watchdog_redispatch(self):
         runs = [
             {

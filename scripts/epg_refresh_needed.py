@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Skip a scheduled EPG rebuild only when the published guide is fresh and matches current playlists."""
+"""Skip a scheduled EPG rebuild only when the published guide is fresh and matches current playlists.
+
+An explicit same-day push retry uses [manual-epg-refresh] in the commit title;
+the shared schedule guard recognizes the marker for this workflow only.
+"""
 from __future__ import annotations
 
 import argparse
