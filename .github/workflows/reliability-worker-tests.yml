@@ -1,0 +1,33 @@
+name: Reliability Worker Tests
+
+on:
+  pull_request:
+    paths:
+      - "automation/reliability/worker/**"
+      - "tests/test_reliability_worker_contract.py"
+      - ".github/workflows/reliability-worker-tests.yml"
+  push:
+    branches: [main]
+    paths:
+      - "automation/reliability/worker/**"
+      - "tests/test_reliability_worker_contract.py"
+      - ".github/workflows/reliability-worker-tests.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  worker-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run Worker unit tests
+        working-directory: automation/reliability/worker
+        run: npm test
+      - name: Run repository Worker contract tests
+        run: python -m unittest tests.test_reliability_worker_contract -v
