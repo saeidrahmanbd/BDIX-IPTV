@@ -163,13 +163,13 @@ def check_page(filename: str, page_config: dict[str, object]) -> None:
 
     if not title:
         fail(f"docs/{filename} has no title.")
-    elif len(title) > 75:
-        fail(f"docs/{filename} title is too long ({len(title)} characters).")
+    elif len(title) > 60:
+        fail(f"docs/{filename} title exceeds the 60-character target ({len(title)} characters).")
 
     if not description:
         fail(f"docs/{filename} has no meta description.")
-    elif len(description) > 200:
-        fail(f"docs/{filename} meta description is too long ({len(description)} characters).")
+    elif len(description) > 160:
+        fail(f"docs/{filename} meta description exceeds the 160-character target ({len(description)} characters).")
 
     page_summaries.append((filename, title, description))
 
