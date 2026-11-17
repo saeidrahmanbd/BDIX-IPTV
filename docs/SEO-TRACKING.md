@@ -13,22 +13,23 @@ This document records the repository's search-engine setup, the public pages int
 
 ## Public pages
 
-The canonical English and Bengali landing pages are:
+The canonical English and Bengali landing pages, including the dedicated Playlist Studio product page, are:
 
 - [English homepage](https://saeidrahmanbd.github.io/BDIX-IPTV/)
 - [Multi-country IPTV M3U playlist guide](https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html)
 - [বাংলা IPTV পৃষ্ঠা](https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html)
+- [Playlist Studio for Windows](https://saeidrahmanbd.github.io/BDIX-IPTV/playlist-studio.html)
 
 The public sitemap files are:
 
 - [XML sitemap](https://saeidrahmanbd.github.io/BDIX-IPTV/sitemap.xml)
 - [Text sitemap](https://saeidrahmanbd.github.io/BDIX-IPTV/sitemap.txt)
 
-Only the three canonical HTML landing pages are listed. Playlist files, generated reports, internal documentation, logos and workflow files are not standalone search landing pages and are not included in the sitemap.
+All four canonical HTML pages (homepage, playlist guide, Bengali page and Playlist Studio page) are listed. Playlist files, generated reports, internal documentation, logos and workflow files are not standalone search landing pages and are not included in the sitemap.
 
 ## Implemented on the website and in the repository
 
-- Distinct page titles and meta descriptions for the English homepage, English playlist guide and Bengali landing page.
+- Distinct page titles and meta descriptions for the English homepage, English playlist guide, Bengali landing page and Playlist Studio product page.
 - Self-referencing canonical URLs and matching Open Graph URLs.
 - Reciprocal English/Bengali language alternates on the English homepage and Bengali page.
 - Open Graph and Twitter sharing metadata with descriptive image alternatives.
@@ -38,7 +39,7 @@ Only the three canonical HTML landing pages are listed. Playlist files, generate
 - An IndexNow key file and GitHub Actions notification workflow for participating search engines when public landing pages change.
 - A GitHub Actions SEO validation workflow that checks titles, descriptions, canonical URLs, indexability, H1 headings, image alt text, local links and sitemap consistency.
 
-The project homepage uses a GitHub Pages project URL under the saeidrahmanbd.github.io host and the BDIX-IPTV path. A robots.txt file must be served from the origin's root (https://saeidrahmanbd.github.io/robots.txt), not merely from the repository subdirectory. The repository does not control that origin-root file, so this project does not add a misleading docs/robots.txt. The sitemap can be submitted directly in Search Console and Bing Webmaster Tools.
+The project homepage uses a GitHub Pages project URL under the saeidrahmanbd.github.io host and the BDIX-IPTV path. Search engines look for robots.txt at the host root (https://saeidrahmanbd.github.io/robots.txt), not at /BDIX-IPTV/robots.txt. This project repository's docs/ directory cannot publish that host-root file; do not add docs/robots.txt as a substitute. Submit the project's sitemap directly in Search Console and Bing Webmaster Tools. If host-root robots directives are needed, manage them in the user-site Pages repository that publishes the host root, after checking its existing rules.
 
 ## Google Search Console
 
