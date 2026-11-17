@@ -1,0 +1,49 @@
+name: Export Playlists and Organizer for Local Reconciliation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/export-playlists-and-organizer.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+      - name: Package playlists, scripts, and referenced logos
+        run: |
+          set -euo pipefail
+          test -s IPTV-Playlist.m3u
+          test -f International-Playlist.m3u
+          mkdir -p /tmp/export/scripts /tmp/export/logos
+          cp IPTV-Playlist.m3u International-Playlist.m3u /tmp/export/
+          cp scripts/*.py /tmp/export/scripts/
+          python - <<'PY'
+          import re, shutil
+          from pathlib import Path
+          root=Path.cwd(); out=Path('/tmp/export/logos'); names=set()
+          for playlist in (root/'IPTV-Playlist.m3u',root/'International-Playlist.m3u'):
+              for line in playlist.read_text(encoding='utf-8-sig').splitlines():
+                  m=re.search(r'tvg-logo="([^"]*)"',line)
+                  if m:
+                      value=m.group(1).split('?',1)[0].split('#',1)[0]
+                      if value: names.add(Path(value).name)
+          copied=0
+          for name in names:
+              src=root/'logos'/name
+              if src.is_file(): shutil.copy2(src,out/name); copied+=1
+          print(f'Copied {copied} logo files for {len(names)} referenced names.')
+          PY
+          sha256sum /tmp/export/*.m3u > /tmp/export/SHA256SUMS.txt
+      - name: Upload local working set
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: playlist-local-working-set
+          path: /tmp/export/
+          retention-days: 3
