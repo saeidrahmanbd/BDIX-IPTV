@@ -2779,7 +2779,7 @@ https://d2px1d6ssc60fw.cloudfront.net/SunTV/SunTV-HDR10-IN-index.m3u8
 http://103.135.253.32:8080/T-SPORTS-FULL-HD/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="ThanthiOne.in" tvg-name="Thanthi One" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thanthi-one.png" channel-id="ThanthiOne.in" tvg-country="IN" tvg-language="tam" group-title="Review",Thanthi One
 https://mumbai-edge.smartplaytv.in/thanthione/index.m3u8
-#EXTINF:-1 tvg-id="ThikanaTV.us" tvg-name="Thikana TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thikana.png" channel-id="ThikanaTV.us" tvg-country="BD" tvg-language="ben" group-title="Review",Thikana TV
+#EXTINF:-1 tvg-id="ThikanaTV.us" tvg-name="Thikana TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thikana.png" channel-id="ThikanaTV.us" tvg-country="US" tvg-language="ben" group-title="Review",Thikana TV
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/thikanatv.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="ThikanaTV.us" tvg-name="Thikana TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thikana.png" channel-id="ThikanaTV.us" tvg-country="BD" tvg-language="ben" group-title="Review",Thikana TV
 https://5dd3981940faa.streamlock.net/thikanatv/thikanatv/playlist.m3u8
