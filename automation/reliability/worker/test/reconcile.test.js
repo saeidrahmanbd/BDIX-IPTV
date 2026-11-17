@@ -67,3 +67,22 @@ test("EPG catch-up candidate must pass the existing last-known-good gate",()=>{
   assert.equal(recoveryPlan(w,"workflow_run_not_found").state,"RETRY_WAIT");
   assert.equal(recoveryPlan(w,"workflow_failed").state,"MANUAL_REVIEW");
 });
+
+test("newer skipped run blocks retry despite an older failed run",()=>{
+  const older={id:20,event:"schedule",created_at:"2026-11-16T00:10:00Z",status:"completed",conclusion:"failure"};
+  const newer={id:21,event:"workflow_dispatch",created_at:"2026-11-16T00:20:00Z",status:"completed",conclusion:"success"};
+  const r=evaluateWorkflowDay({...base,replay_policy:"safe_latest_state_reconciliation"},"2026-11-16",
+    [older,newer],{"21":[{name:"refresh",conclusion:"skipped"}]},new Date("2026-11-16T02:00:00Z"));
+  assert.equal(r.state,"MANUAL_REVIEW");
+  assert.equal(r.last_error_code,"required_job_skipped");
+  assert.equal(r.run.id,21);
+});
+test("newer failed run cannot be masked by an older successful run",()=>{
+  const older={id:22,event:"schedule",created_at:"2026-11-16T00:10:00Z",status:"completed",conclusion:"success"};
+  const newer={id:23,event:"workflow_dispatch",created_at:"2026-11-16T00:20:00Z",status:"completed",conclusion:"failure"};
+  const r=evaluateWorkflowDay(base,"2026-11-16",[older,newer],
+    {"22":[{name:"refresh",conclusion:"success"}]},new Date("2026-11-16T02:00:00Z"));
+  assert.equal(r.state,"MANUAL_REVIEW");
+  assert.equal(r.last_error_code,"workflow_failed");
+  assert.equal(r.run.id,23);
+});
