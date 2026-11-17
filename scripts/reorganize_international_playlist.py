@@ -242,7 +242,7 @@ def classify(a, name, group, country, promote_backup=False):
     if group_key in QUEUE_GROUPS:
         queue_attrs = dict(a)
         queue_attrs["group-title"] = "New Backups" if group_key in {"new backup", "new backups"} else "New Channels"
-        target, reason, code = discovery.policy(queue_attrs, name)
+        target, reason, code = discovery.discovery_eligibility(queue_attrs, name)
         if target is None:
             return None, None, reason or "outside discovery policy"
         kind = infer_kind(name, group, a)
@@ -306,7 +306,7 @@ def classify(a, name, group, country, promote_backup=False):
     policy_attrs["group-title"] = "International"
     if country in discovery.ISO_CODES:
         policy_attrs["tvg-country"] = country
-    target, reason, verified_country = discovery.policy(
+    target, reason, verified_country = discovery.discovery_eligibility(
         policy_attrs, name, allow_legacy_group=True
     )
     if target is None:
@@ -618,7 +618,7 @@ def main():
         if a.get("tvg-logo") and local_logo_path(a["tvg-logo"]) is None:
             raise SystemExit(f"Invalid or external logo reference: {name}")
         if group.casefold() in {"new channels", "new backup", "new backups"}:
-            target, reason, code = discovery.policy(a, name)
+            target, reason, code = discovery.discovery_eligibility(a, name)
             if target is None:
                 raise SystemExit(f"Review queue entry violates regional policy: {name} ({reason or 'not eligible'})")
             if not a.get("tvg-logo", "").strip():
