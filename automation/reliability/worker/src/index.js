@@ -59,26 +59,21 @@ export function evaluateWorkflowDay(workflow, date, runs, jobsByRun, now = new D
   const sameDay = (runs || []).filter(run => VALID_EVENTS.has(run.event) && run.created_at &&
     dhakaDate(new Date(run.created_at)) === date)
     .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at));
-  let active = null, failed = null, skipped = null;
-  for (const run of sameDay) {
-    if (run.status !== "completed") { if (!active) active = run; continue; }
-    if (run.conclusion !== "success") { if (!failed) failed = {run, job:null}; continue; }
-    const jobs = jobsByRun[String(run.id)] || [];
-    const job = jobs.find(item => item.name === workflow.required_job_id);
-    if (job && job.conclusion === "success") {
-      return {state:"VERIFIED",verification_status:"PASS",run,job,
-        recovery_recommendation:"none",last_error_code:null,last_error_summary:null};
-    }
-    if (!skipped) skipped = {run,job};
-  }
-  if (active) return {state:"RUNNING",verification_status:"PENDING",run:active,
-    job:null,recovery_recommendation:"monitor",last_error_code:null,last_error_summary:null};
+  const latest = sameDay[0] || null;
   const dueAt = Date.parse(expectedUtc(date, workflow.expected_local_time)) + FAILURE_GRACE_MS;
-  if (Date.parse(now) < dueAt) return {state:"EXPECTED",verification_status:"PENDING",run:null,job:null,
-    recovery_recommendation:"wait_for_schedule",last_error_code:null,last_error_summary:null};
-  const result = recoveryPlan(workflow, failed ? "workflow_failed" : skipped ? "required_job_skipped" : "workflow_run_not_found");
-  return {...result,run:failed ? failed.run : skipped ? skipped.run : null,
-    job:failed ? failed.job : skipped ? skipped.job : null};
+  if (!latest) {
+    if (Date.parse(now) < dueAt) return {state:"EXPECTED",verification_status:"PENDING",run:null,job:null,
+      recovery_recommendation:"wait_for_schedule",last_error_code:null,last_error_summary:null};
+    return {...recoveryPlan(workflow,"workflow_run_not_found"),run:null,job:null};
+  }
+  if (latest.status !== "completed") return {state:"RUNNING",verification_status:"PENDING",run:latest,
+    job:null,recovery_recommendation:"monitor",last_error_code:null,last_error_summary:null};
+  if (latest.conclusion !== "success") return {...recoveryPlan(workflow,"workflow_failed"),run:latest,job:null};
+  const jobs = jobsByRun[String(latest.id)] || [];
+  const job = jobs.find(item => item.name === workflow.required_job_id) || null;
+  if (job && job.conclusion === "success") return {state:"VERIFIED",verification_status:"PASS",run:latest,job,
+    recovery_recommendation:"none",last_error_code:null,last_error_summary:null};
+  return {...recoveryPlan(workflow,"required_job_skipped"),run:latest,job};
 }
 
 async function ensureObligation(db, workflow, date, nowIso, version) {
