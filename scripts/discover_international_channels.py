@@ -122,15 +122,28 @@ def policy(a,name,allow_legacy_group=False):
   return None,"non-real/test channel",code
  if code=="ZZ": return None,"country not verified",code
 
- # Bangladesh and Pakistan remain unrestricted by genre.
+ # Thematic genre groups take precedence over country buckets for every
+ # verified country. This must run before regional country handling.
+ if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
+  return "News",None,code
+ if RELIGIOUS_RE.search(text) or ISLAMIC_RE.search(text) or any(x in group_parts for x in {"religious","religion","faith","devotional"}):
+  return "Religious",None,code
+ if KIDS_NAME_RE.search(text) or any(x in group_parts for x in {"kid","kids","children","childrens","child"}):
+  return "Kids",None,code
+ if SPORTS_NAME_RE.search(text) or any(x in group_parts for x in {"sport","sports"}):
+  return "Sports",None,code
+ if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
+  return "Documentary & Wildlife",None,code
+ if FASHION_RE.search(text):
+  return "Fashion TV",None,code
+
+ # Bangladesh and Pakistan remain unrestricted for non-genre channels.
  if code=="BD":
   return "Bangladesh",None,code
  if code=="PK":
   return "Pakistani",None,code
 
- # India uses the same exclusions as IPTV discovery. Kids and Sports remain
- # eligible and retain their dedicated groups; other allowed channels are
- # routed into the established Indian Movies/Music/Entertainment groups.
+ # India applies regional exclusions only to non-genre channels.
  if code=="IN":
   indian_reason=bd_discovery.prohibited_channel(a,name,"IN",discovery=True)
   if indian_reason: return None,indian_reason,code
