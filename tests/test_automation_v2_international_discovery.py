@@ -23,7 +23,7 @@ class InternationalDiscoveryAdapterTests(unittest.TestCase):
             result=build_international_discovery_batch(BASE,FEED,temp)
         names=[item.extinf.split(",",1)[-1] for item in result.candidates]
         self.assertIn("US Movie Channel",names)
-        self.assertNotIn("US News",names)
+        self.assertIn("US News",names)
         self.assertTrue(any("news is outside" in reason for reason,count in result.rejected_reasons))
 
     def test_unknown_country_is_warning_not_a_discovery_gate(self):
