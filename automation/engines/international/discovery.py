@@ -128,7 +128,7 @@ def build_international_discovery_batch(playlist_text: str, source_text: str,
         country_conflict=declared_country!="ZZ" and id_country!="ZZ" and declared_country!=id_country
         code="ZZ" if country_conflict else policy.country_code(attrs)
         if code not in UNRESTRICTED_COUNTRIES and code != "ZZ":
-            _,reason,_=policy.policy(attrs,name)
+            _,reason,_=policy.discovery_eligibility(attrs,name)
             if reason:
                 rejected[reason]=rejected.get(reason,0)+1
                 continue
