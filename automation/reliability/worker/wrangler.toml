@@ -54,5 +54,5 @@ REGISTRY_JSON = '''
 
 [[previews.d1_databases]]
 binding = "RELIABILITY_DB"
-database_name = "bdix-iptv-reliability-preview"
+database_name = "bdix-iptv-shadow-preview-saeid"
 database_id = "72de703f-7251-4ba0-af0e-0df78315af56"
