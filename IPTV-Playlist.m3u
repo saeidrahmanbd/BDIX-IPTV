@@ -2430,7 +2430,7 @@ https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
 #EXTINF:-1 tvg-id="Channel52.bd" tvg-name="Channel 52" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" group-title="Backup",Channel 52
 https://tvsen6.aynaott.com/channel52/index.m3u8
 
-#EXTINF:-1 tvg-id="Channel52.bd" tvg-name="Channel 52" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Channel 52
+#EXTINF:-1 tvg-id="Channel52.bd" tvg-name="Channel 52" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben" group-title="Review",Channel 52
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel25usa.stream/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" channel-id="Channel9.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Channel 9
