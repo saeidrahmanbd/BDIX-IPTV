@@ -6,11 +6,13 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 WORKER = ROOT / "automation/reliability/worker"
 
 class ReliabilityWorkerContractTests(unittest.TestCase):
-    def test_worker_is_shadow_only_and_never_dispatches(self):
+    def test_worker_keeps_shadow_default_and_guards_dispatch(self):
         source = (WORKER / "src/index.js").read_text(encoding="utf-8")
-        self.assertIn('mode: "shadow"', source)
-        self.assertIn('dispatched: 0', source)
-        self.assertNotIn("workflow_dispatch", source)
+        config = (WORKER / "wrangler.toml").read_text(encoding="utf-8")
+        self.assertIn('env.MODE !== "active"', source)
+        self.assertIn("canDispatchSameDay", source)
+        self.assertIn('MODE = "shadow"', config)
+        self.assertIn("workflow_dispatch", source)
         self.assertNotIn("api.github.com", source)
 
     def test_cron_and_d1_binding_are_declared(self):
