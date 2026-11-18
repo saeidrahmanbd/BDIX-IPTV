@@ -1,327 +1,240 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-17 10:29 UTC
+- Last scan: 2026-11-18 04:32 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
-- Source records parsed: 12269
-- Existing playlist records: 3251
+- Source records parsed: 12268
+- Existing playlist records: 3246
 - Existing logo references localized/repaired: 0
-- Existing logo references removed because no safe local asset was available: 2
-- Exact source URLs already in playlist: 2212
-- Duplicate URLs within source feed: 96
-- New eligible source records after URL/policy filtering: 2810
+- Existing logo references removed because no safe local asset was available: 0
+- Exact source URLs already in playlist: 2196
+- Duplicate URLs within source feed: 5
+- New eligible source records after URL/policy filtering: 167
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
-- Bangladesh and Pakistan channels of all genres are eligible. Indian News, all Religious, Educational and Business/Finance channels are excluded; Indian Kids and Sports remain eligible. Only countries other than Bangladesh, India and Pakistan are limited to dedicated Movie/Music channels.
+- New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
 - New discoveries are staged in New Channels/New Backups before probing. Verified unique primary channels are automatically promoted into policy-eligible groups, verified alternate streams move to Backup, and inconclusive or untrusted-logo candidates remain in Review.
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
-- New Backups staged for manual review: 35
-- Category migrations: 23
-- Existing discovery-queue entries removed: 14
+- New Backups staged for manual review: 13
+- Category migrations: 0
+- Existing discovery-queue entries removed: 0
 
 ## New primary channels
 
-- **3ABN Kids (720p)** — New Channels — US — https://3abn.bozztv.com/3abn2/Kids_live/smil:Kids_live.smil/playlist.m3u8
-- **Cartoon Classics (Poland)** — New Channels — PL — https://daiconnect.com/live/hls/tvup/rk-cartoonclassics/578f4b7eb725168349ec0af81b21d388/index.m3u8
-- **Cartoon Network (Italy)** — New Channels — IT — http://185.227.34.104/stream/122/index.m3u8
-- **Cartoon Network (Turkiye)** — New Channels — TR — http://176.65.153.40:6002/play/a013/index.m3u8
-- **Cartoon Network (United States) [Not 24/7;Geo-blocked]** — New Channels — US — https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8
-- **Cartoon Network (United States) West (1080p) [Geo-blocked]** — New Channels — US — http://212.5.144.156:8080/cartoon/index.m3u8
-- **Cartoon Network Latin America** — New Channels — US — https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/cartoonnetwork.stream/chunks.m3u8
-- **Disney Channel Latin America (1080p)** — New Channels — AR — http://15.204.246.24:8080/DisneyHD/index.m3u8
-- **Golden Eagle Cartoon (576p)** — New Channels — CN — http://223.110.245.145/ott.js.chinamobile.com/PLTV/3/224/3221226303/index.m3u8
-- **Jiangxi Children's Channel** — New Channels — CN — https://play-live-hls.jxtvcn.com.cn/live-city/tv_jxtv6.m3u8
-- **Mr Bean Animated (1080p)** — Backup — GB — https://amg00627-amg00627c23-samsung-au-4110.playouts.now.amagi.tv/playlist.m3u8
-- **Nickelodeon Pluto TV (720p)** — New Channels — US — https://jmp2.uk/plu-5ca673e0d0bd6c2689c94ce3.m3u8
-- **You Man Cartoon Channel (576p)** — New Channels — CN — http://183.207.249.15/PLTV/4/224/3221225933/index.m3u8
-- **Discovery Turbo (United Kingdom)** — New Channels — GB — http://37.49.224.5/stream/13/index.m3u8
-- **100% NEWS (576p)** — New Channels — UA — http://85.238.112.40:8810/hls_sec/239.33.16.32-.m3u8
-- **Asharq News (1080p)** — New Channels — SA — https://live-news.asharq.com/asharq.m3u8
-- **Bloomberg HT (720p)** — New Channels — TR — https://mumbai-edge.smartplaytv.in/BloombergHT/index.m3u8
-- **Bloomberg Originals (1080p)** — New Backups — US — https://bloomberg.com/media-manifest/streams/qt.m3u8
-- **Bloomberg TV (1080p)** — New Channels — US — http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
-- **Bloomberg TV + (2160p)** — New Channels — US — https://d8975dc3.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9CbG9vbWJlcmdUVlBsdXNfSExT/playlist.m3u8
-- **Bloomberg TV Asia (720p)** — New Channels — US — https://bloomberg.com/media-manifest/streams/asia.m3u8
-- **Bloomberg TV Asia Live Event (720p)** — New Channels — US — https://bloomberg.com/media-manifest/streams/asia-event.m3u8
-- **Bloomberg TV Australia (270p)** — New Channels — US — https://bloomberg.com/media-manifest/streams/aus.m3u8
-- **Bloomberg TV EMEA Live Event (720p)** — New Channels — US — https://bloomberg.com/media-manifest/streams/eu-event.m3u8
-- **Bloomberg TV Europe (720p)** — New Channels — US — https://bloomberg.com/media-manifest/streams/eu.m3u8
-- **Bloomberg TV Live Event (720p)** — New Channels — US — https://bloomberg.com/media-manifest/streams/us-event.m3u8
-- **Bloomberg TV Politics Live Event (720p)** — New Channels — US — https://bloomberg.com/media-manifest/streams/politics.m3u8
-- **Bloomberg TV Bulgaria** — New Channels — BG — http://213.91.179.28:8000/play/a04m
-- **Bloomberg TV Mongolia (1080p)** — New Channels — MN — https://cdn4.skygo.mn/live/disk1/BloombergMon/DASH-FTA/BloombergMon.mpd
-- **BNN Bloomberg** — New Channels — CA — https://pe-ak-lp01a-9c9media.akamaized.net/live/News1BNNDigi/p/dash/00000001/1bba52dc66e4c68e/manifest.mpd
-- **Class CNBC (1080p)** — New Channels — IT — https://www.dailymotion.com/cdn/live/video/x91c8ww.m3u8?sec=D9OwEfHs-e7O6pQ-qlnROg
-- **CNBC Awaaz (1080p)** — New Channels — IN — https://n18syndication.akamaized.net/bpk-tv/CNBC_Awaaz_NW18_MOB/output01/master.m3u8
-- **CNBC Bajar (1080p)** — New Channels — IN — https://n18syndication.akamaized.net/bpk-tv/CNBC_Bazaar_NW18_MOB/output01/master.m3u8
-- **CNBC TV18 (1080p)** — New Channels — IN — https://n18syndication.akamaized.net/bpk-tv/CNBC_TV18_NW18_MOB/output01/index.m3u8
-- **CNBC TV18 Prime HD (1080p)** — New Channels — IN — https://n18syndication.akamaized.net/bpk-tv/CNBC_Tv18_Prime_HD_NW18_MOB/output01/index.m3u8
-- **CNBC-e** — New Channels — TR — https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
-- **NDTV Profit (1080p)** — New Channels — IN — https://ndtvprofit.akamaized.net/hls/live/2107404/ndtvprofit/chunklist_5.m3u8
-- **ZillarBarta News** — New Channels — IN — https://server.zillarbarta.com/zillarbarta/index.m3u8
-- **Nick/Comedy Central +1** — New Channels — DE — http://90.183.52.46:4000/play/a046/index.m3u8
-- **HarPal Geo (360p)** — New Channels — PK — https://jk3lz82elw79-hls-live.5centscdn.com/harPalGeo/955ad3298db330b5ee880c2c9e6f23a0.sdp/playlist.m3u8
-- **Jaya Plus (576p)** — New Channels — IN — https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8
-- **30A Loomered TV** — New Channels — US — https://30a-tv.com/loomer.m3u8
-- **365 days TV (576p)** — New Channels — RU — http://stream.mcquack.net/70/index.m3u8
-- **Al Arabiya Programs (1280p)** — New Channels — AE — https://live.alarabiya.net/alarabiapublish/aaprograms.smil/playlist.m3u8
-- **Al Jazeera Documentary (1080p) [Geo-blocked]** — New Channels — QA — https://live-hls-apps-ajd-fa.getaj.net/AJD/index.m3u8
-- **Animal Planet (Russia) (1080p)** — New Channels — RU — http://stream.mcquack.net/114/index.m3u8
-- **Archivos Forenses** — New Channels — US — https://jmp2.uk/plu-5f984f4a09e92d0007d74647.m3u8
-- **Backstage (1080p)** — New Channels — US — https://d2ah48mnofquik.cloudfront.net/Backstage.m3u8
-- **BBC Earth Turkiye** — New Channels — GB — https://nord.ayakkabiparti.lol/bbc/index.m3u8
-- **BTB Info (1080p)** — New Channels — PL — https://emisja2.btb.j00r.us/iptv/session/4/hls.m3u8
+- **AMC (United States) (1080p) [Geo-blocked]** — New Channels — US — http://41.205.93.154/AMC/index.m3u8
+- **Cinevault 80s (720p)** — New Channels — US — https://aegis-cloudfront-1.tubi.video/ea1ab5d1-f554-4f6b-b03f-2611fcd94257/playlist.m3u8
+- **Film & Arts (1080p)** — New Channels — AR — http://15.204.246.24:8080/FilmArtsHD/index.m3u8
+- **Hollywood Ukraine (576p)** — New Channels — UA — http://dtv.vol.net.ua/Hollywood-HD/index.m3u8
+- **HomePlus** — New Channels — IR — https://homeplushls.wns.live/hls/stream.m3u8
+- **ICC plus (1080p)** — New Channels — US — https://icchls.wns.live/hls/stream.m3u8
+- **Kinosvidanie (576p)** — New Channels — RU — http://5.188.159.128:8070/kinosvidanie/index.m3u8
+- **Komsan TV [Not 24/7]** — New Channels — KH — http://tv.cootel.com.kh:8077/streams/d/Komsan/playlist.m3u8
+- **More TV Sci-fi** — New Channels — DE — https://jmp2.uk/plu-645e00d5d3fdde000829463a.m3u8
+- **Mosfilm Gold Collection (576p)** — New Channels — RU — http://31.222.235.15/mosfilm/index.m3u8
+- **NewFlix** — New Channels — IR — https://newfhls.wns.live/hls/stream.m3u8
+- **Patriot (720p)** — New Channels — RU — https://stream.smotrim.ru/hls2/static/playlist_4.m3u8
+- **Persiana Latino** — New Channels — FR — https://latinohls.persiana.live/hls/stream.m3u8
+- **Pluto TV Ferne Galaxien** — New Channels — DE — https://jmp2.uk/plu-68ada46d5190a45dc9c45af1.m3u8
+- **Pluto TV Film Ancora Piu Romantici** — New Channels — DE — https://jmp2.uk/plu-699d87093d5dba980705cca8.m3u8
+- **Pluto TV Notti di Sangue** — New Channels — DE — https://jmp2.uk/plu-6911c92b4316999535eb1e08.m3u8
+- **Pluto TV Notti di Terrore** — New Channels — DE — https://jmp2.uk/plu-6911c8dd8caba6f046c5c5d5.m3u8
+- **Pluto TV Weihnachten im Sommer** — New Channels — DE — https://jmp2.uk/plu-642ad072283aa4000806148c.m3u8
+- **Prokino (360p)** — New Channels — UA — http://dtv.vol.net.ua/ProKino/index.m3u8
+- **Rakuten TV Action Movies Finland (1080p)** — New Channels — ES — https://bca5a421a70c46ad911efd0a4767c4bf.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6075/master.m3u8
+- **Rakuten TV Comedy Movies Finland (1080p)** — New Channels — ES — https://a300af98e00746e2acf2346f43e47bd1.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6191/master.m3u8
+- **Rakuten TV Drama Movies Finland (1080p)** — New Channels — ES — https://d7e8ee3c924d4305a0c1840fe94c5d36.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6102/master.m3u8
+- **Rakuten TV Family Movies Finland (1080p)** — New Channels — ES — https://758ee983d61e400381dea6fa8154f4e0.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6227/master.m3u8
+- **Rakuten TV Nordic Films (1080p)** — New Channels — ES — https://4aa9ef08b70d4b0c8f3519c5950b1930.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6303/master.m3u8
+- **Rakuten TV Top Movies Finland (1080p)** — New Channels — ES — https://1d1b0d4cb6ae4c31985d13221795695b.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6057/master.m3u8
+- **Sky Cinema Action** — New Channels — IT — http://109.169.87.42:8080/stream/26/index.m3u8
+- **Sky Cinema Collection** — New Channels — IT — http://109.169.87.42:8080/stream/18/index.m3u8
+- **Sky Cinema Family** — New Channels — IT — http://109.169.87.42:8080/stream/22/index.m3u8
+- **Sky Cinema Suspense** — New Channels — IT — http://109.169.87.42:8080/stream/30/index.m3u8
+- **Sky Cinema Uno** — New Channels — IT — http://109.169.87.42:8080/stream/2/index.m3u8
+- **Sony Movies (Brazil) (720p)** — New Channels — BR — http://45.177.114.115/SONY_MOVIES/index.m3u8
+- **Starz Cinema (720p)** — New Channels — US — http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8
+- **Summer of Movies** — New Channels — US — https://jmp2.uk/plu-6654adb1f99922000854388c.m3u8
+- **Sundance TV (Spain)** — New Channels — ES — https://cdn.stmify.com/zapitv/stream/SUNDANCE_TV/sundance_hd.mpd
+- **TV 21 International (576p)** — New Channels — RU — http://46.53.200.153:7777/play/TV-21M/index.m3u8
+- **TVS Film Noir Network (720p)** — New Channels — US — https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
+- **Viasat Kino Romania** — New Channels — UA — https://flash1.bogulus1.cfd/tivi10/usergenrxs4f7zc.m3u8
+- **4 Fun TV** — New Channels — PL — https://stream.4fun.tv:8888/sd/4fun_sd_high.m3u8
+- **7 RadioVisione (720p)** — New Channels — IT — https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8
+- **Abdulmajeed Abdullah (1080p)** — New Channels — SA — https://d2hng5r56zpsbw.cloudfront.net/out/v1/9c4c990f44bb4767bb46271f326dd574/index.m3u8
+- **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
+- **ATN Music (360p)** — New Channels — BD — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
+- **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
+- **BRIDGE Hits (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
+- **Concert Channel (720p)** — New Channels — US — https://jmp2.uk/plu-6868152657543d1f8be4ece3.m3u8
+- **D Music (1280p) [Not 24/7]** — New Channels — KH — http://43.252.18.195:5080/live/streams/WCVNews.playlist.m3u8
+- **DanceTV EDM Mainstage (1080p)** — New Channels — EE — https://mbit1.worldcast.tv/dancetelevisionseven/multibit.m3u8
+- **DanceTV Minimal Tech (1080p)** — New Channels — EE — https://mbit1.worldcast.tv/dancetelevisionsix/multibit.m3u8
+- **Farra Play (576p)** — New Channels — PY — https://stream.farra.com.py/live/farra_low.m3u8
+- **Galactica TV** — New Channels — PE — https://stream.neux.site/memfs/e3f59eec-6b93-45e1-a2ab-c82381c2a9ec.m3u8
 
 ## Backup alternates
 
-- **Bloomberg Originals (1080p)** — US — https://86fdc85a.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfQmxvb21iZXJnT3JpZ2luYWxzX0hMUw/playlist.m3u8
-- **DD Punjabi** — IN — https://fta.ektv.in/live/177/master.m3u8
-- **Vanitha TV** — IN — https://mumbai-edge.smartplaytv.in/VanithaTV/index.m3u8
-- **DD Assam** — IN — https://fta.ektv.in/live/672/master.m3u8
-- **DD Manipur** — IN — https://fta.ektv.in/live/671/master.m3u8
-- **DD Nagaland** — IN — https://fta.ektv.in/live/670/master.m3u8
-- **DD Tripura** — IN — https://fta.ektv.in/live/661/master.m3u8
-- **Duronto TV** — BD — https://livetv.shamon-cable.net:8443/Duronto/index.m3u8
+- **Goldmines** — IN — http://163.61.226.31:9981/stream/channelid/863672695?profile=pass
+- **Goldmines Bollywood** — IN — http://163.61.226.31:9981/stream/channelid/1436412639?profile=pass
+- **Goldmines Movies** — IN — http://163.61.226.31:9981/stream/channelid/1393052638?profile=pass
 - **Kinouzhas** — RU — http://s1.merlive.am/Kinoujas/index.m3u8
 - **Lifetime Movies** — US — http://23.237.104.106:8080/USA_LMN/index.m3u8
+- **Manoranjan Movies** — IN — http://163.61.226.31:9981/stream/channelid/509213855?profile=pass
+- **Scares by Shudder** — US — https://aka-live1050.delivery.roku.com/bf4fff9b-e81f-4dcb-baaf-71b75e091599/t2-origin/out/v1/live.m3u8
 - **Viasat Kino** — UA — http://dtv.vol.net.ua/Viasat_Kino/index.m3u8
 - **Viasat Kino Action** — UA — http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
 - **ETV Music** — IN — https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
 - **FON Music** — US — https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
 - **M1 (Ukraine)** — UA — http://dtv.vol.net.ua/M1-HD/index.m3u8
-- **Al Jazeera** — QA — https://live-hls-apps-aja-fa.getaj.net/AJA/01.m3u8
-- **BIG TV** — IN — https://stream.ottlive.co.in/bigtv/index.m3u8
-- **BTV News** — BD — https://live-evg2.tv360.metfone.com.kh/livetest/bayontest.stream/playlist.m3u8
-- **Fuego TV** — DO — http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/fuegotv.stream/playlist.m3u8
-- **LiraTV** — ES — https://a928c0678d284da5b383f29ecc5dfeec.msvdn.net/live/S57315730/8kTBWibNteJA/playlist.m3u8
-- **News 24** — BD — https://skynewsau-live-premium.akamaized.net/hls/live/2105299/skynews/live.m3u8
-- **NTV** — BD — https://protokolldns.xyz/ntv.l.i.v.e5547892023/index.m3u8
-- **Azan TV** — BD — https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8
-- **Eman Channel** — GB — https://ap02.iqplay.tv:8082/iqb8002/3m9n/playlist.m3u8
-- **beIN SPORTS 1** — QA — https://vg162.adcdsd123321.shop/7.m3u8
-- **Fight Network** — CA — https://d12a2vxqkkh1bo.cloudfront.net/hls/main.m3u8
-- **MLB** — US — https://jmp2.uk/plu-5e66968a70f34c0007d050be.m3u8
-- **NFL Network** — US — http://198.58.104.90:8989/nfl/index.m3u8
-- **Sport5** — IL — http://stream.mcquack.net/212/index.m3u8
-- **Stadium** — US — https://wurl120sports.global.transmit.live/hls/679a907dce42a042c23ace37/v1/stadium_gracenote/samsung_us/latest/main/hls/playlist.m3u8
-- **T Sports** — BD — https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
-- **TNT Sports 1** — GB — http://37.49.224.5/stream/1/index.m3u8
-- **TVRI Sport** — ID — http://202.150.172.59/TVRISport/index.m3u8
-- **Willow Sports** — US — https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8
-- **Waseb TV** — PK — http://103.250.28.74:8000/play/a04k/index.m3u8
+- **Mi Musica Salsa** — US — http://38.134.250.110:8000/play/a02m/index.m3u8
 
 ## Country Migrations
 
-- **Al Jazeera**: `International` → `Backup`
-- **Al Jazeera**: `International` → `Backup`
-- **BBC World**: `International` → `Backup`
-- **BBC World**: `International` → `Backup`
-- **Blues TV**: `International` → `Backup`
-- **Blues TV**: `International` → `Backup`
-- **Circle**: `International` → `Backup`
-- **Circle**: `International` → `Backup`
-- **CNN**: `International` → `Backup`
-- **CNN**: `International` → `Backup`
-- **Comet**: `International` → `Backup`
-- **Comet**: `International` → `Backup`
-- **DW News**: `International` → `Backup`
-- **DW News**: `International` → `Backup`
-- **Hollywood HD**: `International` → `Backup`
-- **Hollywood HD**: `International` → `Backup`
-- **Kronehit TV**: `International` → `Backup`
-- **Kronehit TV**: `International` → `Backup`
-- **MyTime Movie Network (US)**: `International` → `United States`
-- **Radio Norba TV**: `International` → `Backup`
-- **Radio Norba TV**: `International` → `Backup`
-- **SGCN Music**: `International` → `Indian Music`
-- **XITE Summer**: `International` → `United States`
 
 ## Existing discovery-queue entries removed
 
-- **30A Loomered TV** — `New Channels` — channel is not clearly Movies or Music
-- **365 days TV (576p)** — `New Channels` — channel is not clearly Movies or Music
-- **Al Arabiya Programs (1280p)** — `New Channels` — channel is not clearly Movies or Music
-- **Archivos Forenses** — `New Channels` — channel is not clearly Movies or Music
-- **Backstage (1080p)** — `New Channels` — channel is not clearly Movies or Music
-- **BTB Info (1080p)** — `New Channels` — channel is not clearly Movies or Music
-- **Eman Channel** — `New Backups` — channel is not clearly Movies or Music
-- **Fight Network** — `New Backups` — channel is not clearly Movies or Music
-- **MLB** — `New Backups` — channel is not clearly Movies or Music
-- **NFL Network** — `New Backups` — channel is not clearly Movies or Music
-- **Sport5** — `New Backups` — channel is not clearly Movies or Music
-- **Stadium** — `New Backups` — channel is not clearly Movies or Music
-- **Duronto TV** — `New Backups` — no authentic local repository logo after localization
-- **BTV News** — `New Backups` — no authentic local repository logo after localization
 
 ## Rejections
 
+- Fashion TV is a preserved legacy exception, not a discovery genre: 7
 - Indian business/finance channel is prohibited: 3
 - Indian educational channel is prohibited: 6
 - Indian farming/agriculture channel is prohibited: 1
+- Indian knowledge channel is prohibited: 1
 - Indian religious channel is prohibited: 1
 - TV series is not a dedicated Movie/Music channel: 36
 - ambiguous Movie/Music classification: 1
+- channel is not clearly Movies or Music: 39
 - country not verified: 11
+- documentary & wildlife is outside the worldwide Movie/Music-only discovery policy: 196
 - general entertainment is not a dedicated Movie/Music channel: 70
+- kids is outside the worldwide Movie/Music-only discovery policy: 309
 - known Indian prohibited brand/category is prohibited: 13
-- no authentic local repository logo: 21
+- news is outside the worldwide Movie/Music-only discovery policy: 1077
 - non-real/test channel: 1
-- permanently banned channel: 8
-- source category is not Movies or Music: 6580
+- permanently banned channel: 9
+- religious is outside the worldwide Movie/Music-only discovery policy: 772
+- source category is not Movies or Music: 6613
+- sports is outside the worldwide Movie/Music-only discovery policy: 315
 - test/VOD/non-TV name: 296
-- unsafe or tokenized URL: 124
+- unsafe or tokenized URL: 123
 
 ## Stream verification
 
-- Run timestamp: 2026-11-17T10:29:25+00:00
+- Run timestamp: 2026-11-18T04:32:35+00:00
 - Mode: international
-- New entries and discovery queues probed: 71
-- Verified live media responses: 41
-- Verified new primary channels automatically promoted: 32
-- Verified alternate streams moved to Backup: 9
+- New entries and discovery queues probed: 63
+- Verified live media responses: 8
+- Verified new primary channels automatically promoted: 0
+- Verified alternate streams moved to Backup: 5
 - Inconclusive candidates retained for manual review: 0
-- Definitively dead new candidates removed: 19
+- Definitively dead new candidates removed: 44
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
 - IPTV manual-review candidates needing later local-logo repair (warning only): 0
-- International candidates held for missing local logos: 0
+- International candidates held for missing local logos: 14
 
 ### Stream probe details
-- Retained Al Jazeera Documentary [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
-- Retained BBC Earth Turkiye in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Retained BNN Bloomberg in New Channels for manual review — stream probe was inconclusive (HTTP 400; not conclusive).
-- Removed newly discovered Cartoon Classics (Poland) from New Channels — HTTP 404.
-- Retained Cartoon Network Latin America in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
-- Removed newly discovered Discovery Turbo (United Kingdom) from New Channels — HTTP 404.
-- Retained Golden Eagle Cartoon in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Removed newly discovered HarPal Geo from New Channels — HTTP 404.
-- Removed newly discovered Jaya Plus from New Channels — HTTP 404.
-- Retained Jiangxi Children's Channel in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
-- Retained You Man Cartoon Channel in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Retained beIN SPORTS 1 in New Backups for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
-- Removed newly discovered DD Assam from New Backups — HTTP 404.
-- Removed newly discovered DD Manipur from New Backups — HTTP 404.
-- Removed newly discovered DD Nagaland from New Backups — HTTP 404.
-- Removed newly discovered DD Punjabi from New Backups — HTTP 404.
-- Removed newly discovered DD Tripura from New Backups — HTTP 404.
+- Removed newly discovered 4 Fun TV from New Channels — HTTP 404.
+- Removed newly discovered 7 RadioVisione (720p) from New Channels — HTTP 404.
+- Moved Abdulmajeed Abdullah (1080p) to Review — no authentic local logo asset is available.
+- Removed newly discovered AMC (United States) (1080p) [Geo-blocked] from New Channels — HTTP 404.
+- Removed newly discovered Andina RTV (720p) from New Channels — HTTP 404.
+- Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
+- Removed newly discovered BRIDGE Classic (576p) from New Channels — HTTP 404.
+- Removed newly discovered BRIDGE Hits (576p) from New Channels — HTTP 404.
+- Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
+- Removed newly discovered Concert Channel (720p) from New Channels — HTTP 404.
+- Retained D Music (1280p) [Not 24/7] in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Moved D Music (1280p) [Not 24/7] to Review — no authentic local logo asset is available.
+- Retained DanceTV EDM Mainstage (1080p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Moved DanceTV EDM Mainstage (1080p) to Review — no authentic local logo asset is available.
+- Retained DanceTV Minimal Tech (1080p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Moved DanceTV Minimal Tech (1080p) to Review — no authentic local logo asset is available.
+- Removed newly discovered Farra Play (576p) from New Channels — HTTP 404.
+- Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Galactica TV from New Channels — HTTP 404.
+- Removed newly discovered Hollywood Ukraine (576p) from New Channels — HTTP 404.
+- Removed newly discovered HomePlus from New Channels — HTTP 404.
+- Removed newly discovered ICC plus (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Kinosvidanie (576p) from New Channels — HTTP 404.
+- Removed newly discovered Komsan TV [Not 24/7] from New Channels — HTTP 404.
+- Removed newly discovered More TV Sci-fi from New Channels — HTTP 404.
+- Removed newly discovered Mosfilm Gold Collection (576p) from New Channels — HTTP 404.
+- Retained NewFlix in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Moved NewFlix to Review — no authentic local logo asset is available.
+- Removed newly discovered Patriot (720p) from New Channels — HTTP 404.
+- Retained Persiana Latino in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Moved Persiana Latino to Review — no authentic local logo asset is available.
+- Removed newly discovered Pluto TV Ferne Galaxien from New Channels — HTTP 404.
+- Removed newly discovered Pluto TV Film Ancora Piu Romantici from New Channels — HTTP 404.
+- Removed newly discovered Pluto TV Notti di Sangue from New Channels — HTTP 404.
+- Removed newly discovered Pluto TV Notti di Terrore from New Channels — HTTP 404.
+- Removed newly discovered Pluto TV Weihnachten im Sommer from New Channels — HTTP 404.
+- Removed newly discovered Prokino (360p) from New Channels — HTTP 404.
+- Removed newly discovered Rakuten TV Action Movies Finland (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Rakuten TV Comedy Movies Finland (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Rakuten TV Drama Movies Finland (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Rakuten TV Family Movies Finland (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Rakuten TV Nordic Films (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Rakuten TV Top Movies Finland (1080p) from New Channels — HTTP 404.
+- Retained Sky Cinema Action in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Moved Sky Cinema Action to Review — no authentic local logo asset is available.
+- Retained Sky Cinema Collection in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Moved Sky Cinema Collection to Review — no authentic local logo asset is available.
+- Retained Sky Cinema Family in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Moved Sky Cinema Family to Review — no authentic local logo asset is available.
+- Retained Sky Cinema Suspense in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Moved Sky Cinema Suspense to Review — no authentic local logo asset is available.
+- Retained Sky Cinema Uno in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Moved Sky Cinema Uno to Review — no authentic local logo asset is available.
+- Retained Sony Movies (Brazil) (720p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Moved Sony Movies (Brazil) (720p) to Review — no authentic local logo asset is available.
+- Removed newly discovered Starz Cinema (720p) from New Channels — HTTP 404.
+- Removed newly discovered Summer of Movies from New Channels — HTTP 404.
+- Removed newly discovered Sundance TV (Spain) from New Channels — HTTP 404.
+- Moved TV 21 International (576p) to Review — no authentic local logo asset is available.
+- Removed newly discovered TVS Film Noir Network (720p) from New Channels — HTTP success returned an HTML/error page, not a TV stream.
+- Removed newly discovered Viasat Kino Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Removed newly discovered ETV Music from New Backups — HTTP 404.
 - Removed newly discovered FON Music from New Backups — HTTP 404.
-- Retained Fuego TV in New Backups for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
 - Removed newly discovered Lifetime Movies from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
-- Removed newly discovered T Sports from New Backups — HTTP 404.
-- Removed newly discovered TNT Sports 1 from New Backups — HTTP 404.
-- Retained TVRI Sport in New Backups for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Removed newly discovered Vanitha TV from New Backups — HTTP 404.
+- Moved Mi Musica Salsa to Review — no authentic local logo asset is available.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
-- Retained Waseb TV in New Backups for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Promoted 3ABN Kids from New Channels to Kids — verified primary candidate.
-- Promoted 100% NEWS from New Channels to News — verified primary candidate.
-- Promoted Al Jazeera Documentary [ ] from New Channels to Review — inconclusive stream check.
-- Promoted Animal Planet (Russia) from New Channels to Documentary & Wildlife — verified primary candidate.
-- Promoted Asharq News from New Channels to News — verified primary candidate.
-- Promoted BBC Earth Turkiye from New Channels to Review — inconclusive stream check.
-- Promoted Bloomberg HT from New Channels to News — verified primary candidate.
-- Promoted Bloomberg Originals from New Channels to News — verified primary candidate.
-- Promoted Bloomberg TV from New Channels to News — verified primary candidate.
-- Promoted Bloomberg TV Asia from New Channels to News — verified primary candidate.
-- Promoted Bloomberg TV Asia Live Event from New Channels to News — verified primary candidate.
-- Promoted Bloomberg TV Australia from New Channels to News — verified primary candidate.
-- Promoted Bloomberg TV Bulgaria from New Channels to News — verified primary candidate.
-- Promoted Bloomberg TV EMEA Live Event from New Channels to News — verified primary candidate.
-- Promoted Bloomberg TV Europe from New Channels to News — verified primary candidate.
-- Promoted Bloomberg TV Live Event from New Channels to News — verified primary candidate.
-- Promoted Bloomberg TV Mongolia from New Channels to News — verified primary candidate.
-- Promoted Bloomberg TV Politics Live Event from New Channels to News — verified primary candidate.
-- Promoted BNN Bloomberg from New Channels to Review — inconclusive stream check.
-- Promoted Cartoon Network (Italy) from New Channels to Kids — verified primary candidate.
-- Promoted Cartoon Network (Turkiye) from New Channels to Kids — verified primary candidate.
-- Promoted Cartoon Network (United States) [ ; ] from New Channels to Kids — verified primary candidate.
-- Promoted Cartoon Network (United States) West [ ] from New Channels to Kids — verified primary candidate.
-- Promoted Cartoon Network Latin America from New Channels to Review — inconclusive stream check.
-- Promoted Class CNBC from New Channels to News — verified primary candidate.
-- Promoted CNBC Awaaz from New Channels to News — verified primary candidate.
-- Promoted CNBC Bajar from New Channels to News — verified primary candidate.
-- Promoted CNBC TV18 from New Channels to News — verified primary candidate.
-- Promoted CNBC TV18 Prime from New Channels to News — verified primary candidate.
-- Promoted CNBC-e from New Channels to News — verified primary candidate.
-- Promoted Disney Channel Latin America from New Channels to Kids — verified primary candidate.
-- Promoted Golden Eagle Cartoon from New Channels to Review — inconclusive stream check.
-- Promoted Jiangxi Children's Channel from New Channels to Review — inconclusive stream check.
-- Promoted Mr Bean Animated from New Channels to Kids — verified primary candidate.
-- Promoted NDTV Profit from New Channels to News — verified primary candidate.
-- Promoted Nick/Comedy Central +1 from New Channels to Kids — verified primary candidate.
-- Promoted Nickelodeon Pluto TV from New Channels to Kids — verified primary candidate.
-- Promoted You Man Cartoon Channel from New Channels to Review — inconclusive stream check.
-- Promoted ZillarBarta News from New Channels to News — verified primary candidate.
-- Promoted Al Jazeera from New Backups to Backup — verified alternate stream.
-- Promoted Azan TV from New Backups to Backup — verified alternate stream.
-- Promoted beIN SPORTS 1 from New Backups to Review — inconclusive stream check.
-- Promoted BIG TV from New Backups to Backup — verified alternate stream.
-- Promoted Bloomberg Originals from New Backups to Backup — verified alternate stream.
-- Promoted Bloomberg TV + from New Backups to Backup — verified alternate stream.
-- Promoted Fuego TV from New Backups to Review — inconclusive stream check.
-- Promoted LiraTV from New Backups to Backup — verified alternate stream.
-- Promoted News 24 from New Backups to Backup — verified alternate stream.
-- Promoted NTV from New Backups to Backup — verified alternate stream.
-- Promoted TVRI Sport from New Backups to Review — inconclusive stream check.
-- Promoted Waseb TV from New Backups to Review — inconclusive stream check.
-- Promoted Willow Sports from New Backups to Backup — verified alternate stream.
+- Promoted Abdulmajeed Abdullah (1080p) from New Channels to Review — inconclusive stream check.
+- Promoted D Music (1280p) [Not 24/7] from New Channels to Review — inconclusive stream check.
+- Promoted DanceTV EDM Mainstage (1080p) from New Channels to Review — inconclusive stream check.
+- Promoted DanceTV Minimal Tech (1080p) from New Channels to Review — inconclusive stream check.
+- Promoted NewFlix from New Channels to Review — inconclusive stream check.
+- Promoted Persiana Latino from New Channels to Review — inconclusive stream check.
+- Promoted Sky Cinema Action from New Channels to Review — inconclusive stream check.
+- Promoted Sky Cinema Collection from New Channels to Review — inconclusive stream check.
+- Promoted Sky Cinema Family from New Channels to Review — inconclusive stream check.
+- Promoted Sky Cinema Suspense from New Channels to Review — inconclusive stream check.
+- Promoted Sky Cinema Uno from New Channels to Review — inconclusive stream check.
+- Promoted Sony Movies (Brazil) (720p) from New Channels to Review — inconclusive stream check.
+- Promoted TV 21 International (576p) from New Channels to Review — inconclusive stream check.
+- Promoted Goldmines from New Backups to Backup — verified alternate stream.
+- Promoted Goldmines Bollywood from New Backups to Backup — verified alternate stream.
+- Promoted Goldmines Movies from New Backups to Backup — verified alternate stream.
+- Promoted Manoranjan Movies from New Backups to Backup — verified alternate stream.
+- Promoted Mi Musica Salsa from New Backups to Review — inconclusive stream check.
+- Promoted Scares by Shudder from New Backups to Backup — verified alternate stream.
 
 ## Final validation
 
-- Run timestamp: 2026-11-17T10:29:26+00:00
-- Validation status: FAIL
-- M3U entries parsed: 3303
+- Run timestamp: 2026-11-18T04:32:36+00:00
+- Validation status: PASS
+- M3U entries parsed: 3265
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 0
+- Discovery entries missing a logo (left blank rather than using a placeholder): 14
 - Non-local discovery logo references: 0
-- Geography/content policy issues: 39
+- Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
-
-### Blockers
-- non-Bangladesh/India entry lacks Movie/Music tag: 100% NEWS
-- non-Bangladesh/India entry lacks Movie/Music tag: Asharq News
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg HT
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg Originals
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV Asia
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV Asia Live Event
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV Australia
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV Bulgaria
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV EMEA Live Event
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV Europe
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV Live Event
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV Mongolia
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV Politics Live Event
-- non-Bangladesh/India entry lacks Movie/Music tag: Class CNBC
-- non-Bangladesh/India entry lacks Movie/Music tag: CNBC-e
-- non-Bangladesh/India entry lacks Movie/Music tag: Animal Planet (Russia)
-- non-Bangladesh/India entry lacks Movie/Music tag: 3ABN Kids
-- non-Bangladesh/India entry lacks Movie/Music tag: Cartoon Network (Italy)
-- non-Bangladesh/India entry lacks Movie/Music tag: Cartoon Network (Turkiye)
-- non-Bangladesh/India entry lacks Movie/Music tag: Cartoon Network (United States) [ ; ]
-- non-Bangladesh/India entry lacks Movie/Music tag: Cartoon Network (United States) West [ ]
-- non-Bangladesh/India entry lacks Movie/Music tag: Disney Channel Latin America
-- non-Bangladesh/India entry lacks Movie/Music tag: Mr Bean Animated
-- non-Bangladesh/India entry lacks Movie/Music tag: Nick/Comedy Central +1
-- non-Bangladesh/India entry lacks Movie/Music tag: Nickelodeon Pluto TV
-- non-Bangladesh/India entry lacks Movie/Music tag: Al Jazeera Documentary [ ]
-- non-Bangladesh/India entry lacks Movie/Music tag: BBC Earth Turkiye
-- non-Bangladesh/India entry lacks Movie/Music tag: beIN SPORTS 1
-- non-Bangladesh/India entry lacks Movie/Music tag: BNN Bloomberg
-- non-Bangladesh/India entry lacks Movie/Music tag: Cartoon Network Latin America
-- non-Bangladesh/India entry lacks Movie/Music tag: Golden Eagle Cartoon
-- non-Bangladesh/India entry lacks Movie/Music tag: Jiangxi Children's Channel
-- non-Bangladesh/India entry lacks Movie/Music tag: TVRI Sport
-- non-Bangladesh/India entry lacks Movie/Music tag: You Man Cartoon Channel
-- non-Bangladesh/India entry lacks Movie/Music tag: Al Jazeera
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg Originals
-- non-Bangladesh/India entry lacks Movie/Music tag: Bloomberg TV +
-- non-Bangladesh/India entry lacks Movie/Music tag: Willow Sports

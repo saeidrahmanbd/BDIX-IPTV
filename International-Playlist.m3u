@@ -4,8 +4,8 @@
 # Facebook: https://www.facebook.com/saeid.rahman.sr
 # Email: saeidrahman.mkt@gmail.com
 #=================================
-#PLAYLIST-STUDIO-NAME:"International Playlist"
 #PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "Argentina", "Brazil", "Bulgaria", "Canada", "Chile", "China", "Colombia", "Costa Rica", "Czech Republic", "DO", "Estonia", "France", "Germany", "Greece", "Hungary", "Iran", "Italy", "Lebanon", "Mexico", "Netherlands", "North Macedonia", "Panama", "Paraguay", "Peru", "Poland", "Romania", "Russia", "Saudi Arabia", "Singapore", "Spain", "Sweden", "Turkey", "Ukraine", "United Kingdom", "United States", "Uzbekistan", "Vietnam", "International", "News", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
+#PLAYLIST-STUDIO-NAME:"International Playlist"
 #EXTINF:-1 tvg-id="AnandaTV.bd" channel-id="AnandaTV.bd" tvg-language="ben" tvg-country="BD" group-title="Bangladesh" tvg-name="Ananda TV",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" channel-id="AsianTV.bd" tvg-language="ben" tvg-country="BD" group-title="Bangladesh" tvg-name="Asian TV",Asian TV
@@ -3660,6 +3660,8 @@ http://115.42.65.142:9981/stream/channelid/113328724
 https://ml-pull-dvc-myco.io:2096/AAJ_ENTERTAINMENT/index.m3u8
 #EXTINF:-1 tvg-id="AakaashAath.in@SD" tvg-language="ben" channel-id="AakaashAath.in@SD" tvg-country="IN" group-title="Review" tvg-name="Aakaash Aath",Aakaash Aath
 http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
+#EXTINF:-1 tvg-id="AbdulmajeedAbdullah.sa@SD" tvg-name="Abdulmajeed Abdullah (1080p)" tvg-country="SA" channel-id="AbdulmajeedAbdullah.sa@SD" group-title="Review" tvg-content="Music",Abdulmajeed Abdullah (1080p)
+https://d2hng5r56zpsbw.cloudfront.net/out/v1/9c4c990f44bb4767bb46271f326dd574/index.m3u8
 #EXTINF:-1 tvg-id="custom.abn-bible-movies-channel-us-movie" channel-id="custom.abn-bible-movies-channel-us-movie" tvg-language="eng" tvg-country="US" group-title="Review" tvg-name="ABN Bible Movies Channel",ABN Bible Movies Channel
 https://mediaserver.abnvideos.com/streams/abnbiblemovies.m3u8
 #EXTINF:-1 tvg-id="ACCDigitalNetwork.us@SD" tvg-country="US" group-title="Review" tvg-name="ACC Digital Network",ACC Digital Network
@@ -4096,8 +4098,14 @@ http://88.212.15.50/live/ct_art_avc_25p/playlist.m3u8
 http://88.212.15.50/live/test_ctsport_25p/playlist.m3u8
 #EXTINF:-1 tvg-id="CTBPerthMoviesChannel.au@SD" channel-id="CTBPerthMoviesChannel.au@SD" tvg-country="AU" tvg-content="Movies" group-title="Review" tvg-name="CTB Perth Movies Channel",CTB Perth Movies Channel
 https://movies.ctbperth.net.au/hls/stream.m3u8
+#EXTINF:-1 tvg-id="DMusic.kh@SD" tvg-name="D Music (1280p) [Not 24/7]" tvg-country="KH" channel-id="DMusic.kh@SD" group-title="Review" tvg-content="Music",D Music (1280p) [Not 24/7]
+http://43.252.18.195:5080/live/streams/WCVNews.playlist.m3u8
 #EXTINF:-1 tvg-id="DanceTV.ar@SD" channel-id="DanceTV.ar@SD" tvg-country="AR" tvg-content="Music" group-title="Review" tvg-name="Dance TV [ ]",Dance TV [ ]
 https://op-group1-swiftservehd-1.dens.tv/h/h250/index.m3u8
+#EXTINF:-1 tvg-id="DanceTVEDMMainstage.ee@SD" tvg-name="DanceTV EDM Mainstage (1080p)" tvg-country="EE" channel-id="DanceTVEDMMainstage.ee@SD" group-title="Review" tvg-content="Music",DanceTV EDM Mainstage (1080p)
+https://mbit1.worldcast.tv/dancetelevisionseven/multibit.m3u8
+#EXTINF:-1 tvg-id="DanceTVMinimalTech.ee@SD" tvg-name="DanceTV Minimal Tech (1080p)" tvg-country="EE" channel-id="DanceTVMinimalTech.ee@SD" group-title="Review" tvg-content="Music",DanceTV Minimal Tech (1080p)
+https://mbit1.worldcast.tv/dancetelevisionsix/multibit.m3u8
 #EXTINF:-1 tvg-id="DarshanaTV.in@SD" tvg-language="mal" tvg-country="IN" group-title="Review" tvg-name="Darshana TV",Darshana TV
 https://mumt04.tangotv.in/m18aqlK4DARSHANATV/index.m3u8
 #EXTINF:-1 tvg-id="Dateline247.us@SD" tvg-country="US" group-title="Review" tvg-name="Dateline 24/7",Dateline 24/7
@@ -4776,6 +4784,8 @@ https://mumt04.tangotv.in/m18aqlK4MHONE/index.m3u8
 http://38.188.186.47:4000/play/a04n/index.m3u8
 #EXTINF:-1 tvg-id="MiMusicaRomantica.us@SD" channel-id="MiMusicaRomantica.us@SD" tvg-country="US" tvg-content="Music" group-title="Review" tvg-name="Mi Musica Romantica",Mi Musica Romantica
 http://168.228.44.241:9999/play/a054/index.m3u8
+#EXTINF:-1 tvg-id="MiMusicaSalsa.us@SD" tvg-name="Mi Musica Salsa" tvg-country="US" tvg-language="spa" channel-id="MiMusicaSalsa.us@SD" group-title="Review" tvg-content="Music",Mi Musica Salsa
+http://38.134.250.110:8000/play/a02m/index.m3u8
 #EXTINF:-1 tvg-id="MilanTV.it@SD" tvg-country="IT" group-title="Review" tvg-name="Milan TV",Milan TV
 http://team-tv.co:81/milan/index.m3u8
 #EXTINF:-1 tvg-id="militaryhistory.us" channel-id="militaryhistory.us" tvg-language="eng" tvg-country="US" group-title="Review" tvg-name="Military History",Military History
@@ -4898,6 +4908,8 @@ https://d4whmvwm0rdvi.cloudfront.net/10007/99993008/hls/master.m3u8?ads.xumo_cha
 https://mumbai-edge.smartplaytv.in/Network10/index.m3u8
 #EXTINF:-1 tvg-id="NEWKMOVIES.us@SD" channel-id="NEWKMOVIES.us@SD" tvg-country="US" tvg-content="Movies" group-title="Review" tvg-name="NEW K.MOVIES",NEW K.MOVIES
 https://ads.its-newid.net/api/manifest.m3u8?ads.service_id=GB1700007PK&channel_id=newid_343&tp=samsung_tvplus
+#EXTINF:-1 tvg-id="NewFlix.ir@SD" tvg-name="NewFlix" tvg-country="IR" channel-id="NewFlix.ir@SD" group-title="Review" tvg-content="Movies",NewFlix
+https://newfhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="NFLNetwork.us@SD" channel-id="NFLNetwork.us@SD" tvg-language="eng" tvg-country="US" group-title="Review" tvg-name="NFL Network",NFL Network
 https://tvsen6.aynaott.com/nfl/index.m3u8
 #EXTINF:-1 tvg-id="NHLAntenaPlay.ro@SD" tvg-country="RO" group-title="Review" tvg-name="NHL AntenaPlay",NHL AntenaPlay
@@ -5006,6 +5018,8 @@ https://fighthls.persiana.live/hls/stream.m3u8
 https://irhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="custom.persiana-korea-ir-movie" channel-id="custom.persiana-korea-ir-movie" tvg-language="fas;kor" tvg-country="IR" group-title="Review" tvg-name="Persiana Korea",Persiana Korea
 https://korhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaLatino.fr@SD" tvg-name="Persiana Latino" tvg-country="FR" channel-id="PersianaLatino.fr@SD" group-title="Review" tvg-content="Movies",Persiana Latino
+https://latinohls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="custom.persiana-plus-ir-movie" channel-id="custom.persiana-plus-ir-movie" tvg-language="fas" tvg-country="IR" group-title="Review" tvg-name="Persiana Plus",Persiana Plus
 https://euhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaTravel.fr@SD" tvg-country="FR" group-title="Review" tvg-name="Persiana Travel",Persiana Travel
@@ -5204,6 +5218,16 @@ https://d2g1vdc6ozl2o8.cloudfront.net/out/v1/0a0dc7d7911b4fddbb4dfc963fdd4b9e/in
 https://mumt07.tangotv.in/zHjX9OFlSIRIKANNADAALLTIME/index.m3u8
 #EXTINF:-1 tvg-id="SkwadPlay.us@SD" tvg-country="US" group-title="Review" tvg-name="Skwad Play",Skwad Play
 https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=71
+#EXTINF:-1 tvg-id="SkyCinemaAction.it@SD" tvg-name="Sky Cinema Action" tvg-country="IT" channel-id="SkyCinemaAction.it@SD" group-title="Review" tvg-content="Movies",Sky Cinema Action
+http://109.169.87.42:8080/stream/26/index.m3u8
+#EXTINF:-1 tvg-id="SkyCinemaCollection.it@SD" tvg-name="Sky Cinema Collection" tvg-country="IT" channel-id="SkyCinemaCollection.it@SD" group-title="Review" tvg-content="Movies",Sky Cinema Collection
+http://109.169.87.42:8080/stream/18/index.m3u8
+#EXTINF:-1 tvg-id="SkyCinemaFamily.it@SD" tvg-name="Sky Cinema Family" tvg-country="IT" channel-id="SkyCinemaFamily.it@SD" group-title="Review" tvg-content="Movies",Sky Cinema Family
+http://109.169.87.42:8080/stream/22/index.m3u8
+#EXTINF:-1 tvg-id="SkyCinemaSuspense.it@SD" tvg-name="Sky Cinema Suspense" tvg-country="IT" channel-id="SkyCinemaSuspense.it@SD" group-title="Review" tvg-content="Movies",Sky Cinema Suspense
+http://109.169.87.42:8080/stream/30/index.m3u8
+#EXTINF:-1 tvg-id="SkyCinemaUno.it@SD" tvg-name="Sky Cinema Uno" tvg-country="IT" channel-id="SkyCinemaUno.it@SD" group-title="Review" tvg-content="Movies",Sky Cinema Uno
+http://109.169.87.42:8080/stream/2/index.m3u8
 #EXTINF:-1 tvg-id="SkyRacing1.au@SD" tvg-country="AU" group-title="Review" tvg-name="Sky Racing 1",Sky Racing 1
 https://636ffd31f0e12.streamlock.net/RacingStream1/RacingStream1/playlist.m3u8
 #EXTINF:-1 tvg-id="smithsonianchannel.us" channel-id="smithsonianchannel.us" tvg-language="eng" tvg-country="US" group-title="Review" tvg-name="Smithsonian Channel",Smithsonian Channel
@@ -5240,6 +5264,8 @@ http://103.135.253.32:8080/Sony-Max-HD/index.m3u8
 http://103.151.60.162:2122/play/a014/index.m3u8?hls
 #EXTINF:-1 tvg-id="sony.us" tvg-language="eng" channel-id="sony.us" tvg-country="US" tvg-content="Movies" group-title="Review" tvg-name="Sony Movies",Sony Movies
 http://45.162.64.114/SONY_MOVIES/index.m3u8
+#EXTINF:-1 tvg-id="SonyMovies.br@SD" tvg-name="Sony Movies (Brazil) (720p)" tvg-country="BR" channel-id="SonyMovies.br@SD" group-title="Review" tvg-content="Movies",Sony Movies (Brazil) (720p)
+http://45.177.114.115/SONY_MOVIES/index.m3u8
 #EXTINF:-1 tvg-id="SonyMoviesLatinAmerica.us@SD" channel-id="SonyMoviesLatinAmerica.us@SD" tvg-country="US" tvg-content="Movies" group-title="Review" tvg-name="Sony Movies Latin America",Sony Movies Latin America
 http://38.252.238.18:8000/play/a01e/index.m3u8
 #EXTINF:-1 tvg-id="SonyPal.in@SD" channel-id="SonyPal.in@SD" tvg-language="hin" tvg-country="IN" group-title="Review" tvg-name="Sony Pal",Sony Pal
@@ -5486,6 +5512,8 @@ https://alpha.tv.online.tm/hls/ch004.m3u8
 http://88.212.7.14/live/tv2_kids/index.m3u8
 #EXTINF:-1 tvg-id="TV9Bangla.in" channel-id="TV9Bangla.in" tvg-language="ben" tvg-country="IN" group-title="Review" tvg-name="TV9 Bangla",TV9 Bangla
 https://amg01448-samsungin-tv9bangla-samsungin-9lgnh.amagi.tv/playlist/amg01448-samsungin-tv9bangla-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="TV21International.ru@SD" tvg-name="TV 21 International (576p)" tvg-country="RU" channel-id="TV21International.ru@SD" group-title="Review" tvg-content="Movies",TV 21 International (576p)
+http://46.53.200.153:7777/play/TV-21M/index.m3u8
 #EXTINF:-1 tvg-id="TVBRICSEnglish.in@SD" tvg-language="und" tvg-country="IN" group-title="Review" tvg-name="TV BRICS English",TV BRICS English
 https://engbrics.mediacdn.ru/cdn/brics/english/playlist.m3u8
 #EXTINF:-1 tvg-id="TVOne.uk" channel-id="TVOne.uk" tvg-language="eng" tvg-country="GB" group-title="Review" tvg-name="TV One UK",TV One UK
@@ -6022,6 +6050,8 @@ http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92
 http://200.57.28.141:8540/play/a0ln
 #EXTINF:-1 tvg-id="GoldenPremier2.mx@SD" channel-id="GoldenPremier2.mx@SD" tvg-country="MX" group-title="Backup" tvg-name="Golden Premier 2",Golden Premier 2
 http://200.57.28.141:8540/play/a0lo
+#EXTINF:-1 tvg-id="Goldmines.in@SD" tvg-name="Goldmines" tvg-logo="logos/goldmines.png" tvg-country="IN" tvg-language="hin" channel-id="Goldmines.in@SD" group-title="Backup" tvg-content="Movies",Goldmines
+http://163.61.226.31:9981/stream/channelid/863672695?profile=pass
 #EXTINF:-1 tvg-id="Goldmines.in@SD" channel-id="Goldmines.in@SD" tvg-language="hin" tvg-country="IN" group-title="Backup" tvg-name="Goldmines",Goldmines
 https://cdn.pishow.tv/ott/live/1459/master.m3u8
 #EXTINF:-1 tvg-id="Goldmines.in@SD" tvg-language="hin" channel-id="Goldmines.in@SD" tvg-country="IN" group-title="Backup" tvg-name="Goldmines",Goldmines
@@ -6038,6 +6068,8 @@ https://mumt03.tangotv.in/Dsly5z3HGOLDMINES2/tracks-v1a1/mono.m3u8
 https://fta.ektv.in/live/584/master.m3u8
 #EXTINF:-1 tvg-id="GoldminesAction.in" channel-id="GoldminesAction.in" tvg-language="hin" tvg-country="IN" group-title="Backup" tvg-name="Goldmines Action",Goldmines Action
 https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="GoldminesBollywood.in@SD" tvg-name="Goldmines Bollywood" tvg-logo="logos/goldmines-bollywood.png" tvg-country="IN" tvg-language="hin" channel-id="GoldminesBollywood.in@SD" group-title="Backup" tvg-content="Movies",Goldmines Bollywood
+http://163.61.226.31:9981/stream/channelid/1436412639?profile=pass
 #EXTINF:-1 tvg-id="GoldminesBollywood.in@SD" tvg-language="hin" channel-id="GoldminesBollywood.in@SD" tvg-country="IN" group-title="Backup" tvg-name="Goldmines Bollywood",Goldmines Bollywood
 https://fta.ektv.in/live/52/52_0.m3u8
 #EXTINF:-1 tvg-id="GoldminesBollywood.in@SD" channel-id="GoldminesBollywood.in@SD" tvg-language="hin" tvg-country="IN" group-title="Backup" tvg-name="Goldmines Bollywood",Goldmines Bollywood
@@ -6046,6 +6078,8 @@ https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8
 https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="GoldminesMovies.in@SD" tvg-language="hin" channel-id="GoldminesMovies.in@SD" tvg-country="IN" group-title="Backup" tvg-name="Goldmines Movies",Goldmines Movies
 http://103.175.73.12:8080/live/51/51_0.m3u8
+#EXTINF:-1 tvg-id="GoldminesMovies.in@SD" tvg-name="Goldmines Movies" tvg-logo="logos/goldmines-movies.png" tvg-country="IN" tvg-language="hin" channel-id="GoldminesMovies.in@SD" group-title="Backup" tvg-content="Movies",Goldmines Movies
+http://163.61.226.31:9981/stream/channelid/1393052638?profile=pass
 #EXTINF:-1 tvg-id="GoldminesMovies.in@SD" tvg-language="hin" channel-id="GoldminesMovies.in@SD" tvg-country="IN" group-title="Backup" tvg-name="Goldmines Movies",Goldmines Movies
 https://mumt04.tangotv.in/m18aqlK4GOLDMINEMOVIES/index.m3u8
 #EXTINF:-1 tvg-id="GoldminesMovies.in@SD" channel-id="GoldminesMovies.in@SD" tvg-language="hin" tvg-country="IN" group-title="Backup" tvg-name="Goldmines Movies",Goldmines Movies
@@ -6134,6 +6168,8 @@ https://fta.ektv.in/live/640/master.m3u8
 https://mumt03.tangotv.in/Dsly5z3HMAHAAMAX/index.m3u8
 #EXTINF:-1 tvg-id="MakkahTV.sa" channel-id="MakkahTV.sa" tvg-language="ara" tvg-country="SA" group-title="Backup" tvg-name="Makkah TV",Makkah TV
 https://media2.streambrothers.com:1936/8122/8122/playlist.m3u8
+#EXTINF:-1 tvg-id="ManoranjanMovies.in@SD" tvg-name="Manoranjan Movies" tvg-logo="logos/international/manoranjan-movies-576p.png" tvg-country="IN" tvg-language="hin" channel-id="ManoranjanMovies.in@SD" group-title="Backup" tvg-content="Movies",Manoranjan Movies
+http://163.61.226.31:9981/stream/channelid/509213855?profile=pass
 #EXTINF:-1 tvg-id="ManoranjanMovies.in@SD" tvg-language="hin" channel-id="ManoranjanMovies.in@SD" tvg-country="IN" group-title="Backup" tvg-name="Manoranjan Movies",Manoranjan Movies
 https://fta.ektv.in/live/47/47_0.m3u8
 #EXTINF:-1 tvg-id="ManoranjanMovies.in@SD" channel-id="ManoranjanMovies.in@SD" tvg-language="hin" tvg-country="IN" group-title="Backup" tvg-name="Manoranjan Movies",Manoranjan Movies
@@ -6358,6 +6394,8 @@ https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/tracks-v1a1/mono.m3u8
 https://fta.ektv.in/live/349/master.m3u8
 #EXTINF:-1 tvg-id="SansadTV2.in@HD" tvg-country="IN" group-title="Backup" tvg-name="Sansad TV 2",Sansad TV 2
 https://d2lk5u59tns74c.cloudfront.net/out/v1/e4182054dce340da9e0ff38b6b3658a4/index.m3u8
+#EXTINF:-1 tvg-id="ScaresbyShudder.us@SD" tvg-name="Scares by Shudder" tvg-logo="logos/international/scares-by-shudder-1080p.png" tvg-country="US" tvg-language="eng" channel-id="ScaresbyShudder.us@SD" group-title="Backup" tvg-content="Movies",Scares by Shudder
+https://aka-live1050.delivery.roku.com/bf4fff9b-e81f-4dcb-baaf-71b75e091599/t2-origin/out/v1/live.m3u8
 #EXTINF:-1 tvg-id="ShansonTV.ru@SD" channel-id="ShansonTV.ru@SD" tvg-country="RU" group-title="Backup" tvg-name="Shanson TV",Shanson TV
 http://46.53.200.153:7777/play/Shanson_TV/index.m3u8
 #EXTINF:-1 tvg-id="ShansonTV.ru" channel-id="ShansonTV.ru" tvg-language="rus" tvg-country="RU" group-title="Backup" tvg-name="Shanson TV",Shanson TV
