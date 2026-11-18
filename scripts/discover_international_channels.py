@@ -235,7 +235,7 @@ def local_logo(a,name):
   if not data or len(data)>MAX_LOGO_BYTES or not ext:return ""
   d=LOGOS/"international"; d.mkdir(parents=True,exist_ok=True); p=d/(slug(name)+ext)
   if not p.exists():p.write_bytes(data)
-  return RAW_BASE+str(p.relative_to(LOGOS)).replace("\\","/")
+  return "logos/"+str(p.relative_to(LOGOS)).replace("\\","/")
  except Exception:return ""
 
 def localize_existing_logo(a,name):
@@ -244,12 +244,6 @@ def localize_existing_logo(a,name):
  # This legacy entry used a G-Series logo for a differently named stream; do not
  # relabel the mismatched asset as an authentic Drama 24 logo.
  if norm(name)=="drama24":return ""
- if raw.startswith(RAW_BASE):
-  rel=urllib.parse.unquote(urllib.parse.urlsplit(raw).path.split("/main/logos/",1)[-1]).lstrip("/")
-  path=LOGOS/rel
-  if path.is_file() and "unused" not in path.parts and not is_blocked_logo_basename(path.name):return raw
-  clean=dict(a);clean.pop("tvg-logo",None)
-  return local_logo(clean,name)
  if raw.startswith("logos/"):
   rel=urllib.parse.unquote(raw.split("?",1)[0].split("#",1)[0])
   path=Path(rel)
@@ -289,7 +283,7 @@ def localize_discovery_queue_logos(blocks, discovery_urls, rejected_rows):
  return kept,repaired,removed
 def make_extinf(a,name,group,code,logo,content_kind=""):
  clean=" ".join(name.replace('"',"").split()); ident=(a.get("tvg-id") or a.get("channel-id") or "custom.intl."+slug(clean).replace("-",".")).strip(); fields=[f'tvg-id="{ident}"',f'tvg-name="{clean}"']
- if logo.startswith(RAW_BASE):fields.append(f'tvg-logo="{logo}"')
+ if logo.startswith("logos/"):fields.append(f'tvg-logo="{logo}"')
  if code and code!="ZZ":fields.append(f'tvg-country="{code}"')
  if a.get("tvg-language"):fields.append(f'tvg-language="{a["tvg-language"].replace(chr(34),"")}"')
  fields.append(f'channel-id="{(a.get("channel-id") or ident).replace(chr(34),"")}"'); fields.append(f'group-title="{group}"')
