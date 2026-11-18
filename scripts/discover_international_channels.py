@@ -191,7 +191,8 @@ def discovery_eligibility(a,name,allow_legacy_group=False):
  if FASHION_RE.search(f"{name} {a.get('tvg-name','')}"):
   return None,"Fashion TV is a preserved legacy exception, not a discovery genre",code
  if target in {"News","Religious","Kids","Sports","Documentary & Wildlife","Fashion TV"}:
-  return None,f"{target} is outside the worldwide Movie/Music-only discovery policy",code
+  label = "news" if target == "News" else target.casefold()
+  return None,f"{label} is outside the worldwide Movie/Music-only discovery policy",code
  genre=infer_genre(a,name)
  if genre not in {"Movies","Music"}:
   return None,"channel is not clearly Movies or Music",code
