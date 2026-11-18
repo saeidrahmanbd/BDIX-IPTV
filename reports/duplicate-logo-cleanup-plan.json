@@ -1,9 +1,16 @@
 {
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
-  "exact_duplicate_groups": 967,
-  "exact_duplicate_files": 1521,
+  "exact_duplicate_groups": 971,
+  "exact_duplicate_files": 1526,
   "low_risk_review_candidates": [
+    {
+      "candidate": "logos/unused/euro-sports-hd.png",
+      "retain": "logos/euro-sports-hd.png",
+      "sha256": "02d292bdf1ddbe90cdf4944d6ba3bb205a3a0963ca59c114aec555ec68d4a92a",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
     {
       "candidate": "logos/unused/metro-tv.png",
       "retain": "logos/metro-tv.png",
@@ -22,6 +29,13 @@
       "candidate": "logos/unused/sony-movies-latin-america-576p-bf6439568c.png",
       "retain": "logos/sony-movies-latin-america-576p-bf6439568c.png",
       "sha256": "13df605cda399a829cdf28a5bafedd0704128f74a757f99bc61868d48bee3769",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/t-sports-hd.png",
+      "retain": "logos/t-sports-hd.png",
+      "sha256": "2277b747a43edb8fa432cd9c89dc432965ae2d77d151d83d9f2273b9a4673ddd",
       "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
       "requires_review": true
     },
