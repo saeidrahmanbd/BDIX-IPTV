@@ -213,7 +213,7 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
         self.assertIn('tvg-content="Adult"', output)
         self.assertNotIn('group-title="Backup"', output)
 
-    def test_review_queues_remain_manual_and_follow_regional_policy(self):
+    def test_review_queues_remain_manual_and_follow_worldwide_movie_music_policy(self):
         header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
         rows = (
             entry("Bangladesh News", "New Channels", "http://bd.example/news.m3u8", 'tvg-logo="logos/bangladesh-news.png" tvg-country="BD" ')
@@ -239,12 +239,9 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
             )
             self.assertEqual(r.returncode, 0, r.stderr)
             out = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
-        self.assertIn('group-title="New Channels" tvg-name="Bangladesh News",Bangladesh News', out)
-        self.assertIn('group-title="New Channels" tvg-name="Indian Sports",Indian Sports', out)
         self.assertIn('group-title="New Channels" tvg-name="Foreign Movie",Foreign Movie', out)
-        self.assertIn('group-title="New Backups" tvg-name="Bangladesh Religious Alternate",Bangladesh Religious Alternate', out)
-        self.assertNotIn("Indian Education TV", out)
-        self.assertIn('group-title="New Channels" tvg-name="Indian Cartoon Kids",Indian Cartoon Kids', out)
+        for excluded in ("Bangladesh News", "Indian Sports", "Indian Education TV", "Indian Cartoon Kids", "Bangladesh Religious Alternate"):
+            self.assertNotIn(excluded, out)
         self.assertIn('"New Backups"', out)
 
     def test_adult_backup_orphan_is_restored_even_with_same_name_non_adult_primary(self):
