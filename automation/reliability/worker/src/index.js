@@ -256,7 +256,7 @@ export async function sendHealthchecksPing(env,status="success",fetchImpl=fetch)
   const target=new URL(env.HEALTHCHECKS_PING_URL);
   if (target.protocol !== "https:" || !(target.hostname === "hc-ping.com" || target.hostname.endsWith(".hc-ping.com")))
     throw new Error("HEALTHCHECKS_PING_URL must be a private HTTPS hc-ping.com URL");
-  if (status === "fail") target.pathname=target.pathname.replace(/\\/$/,"")+"/fail";
+  if (status === "fail") target.pathname=(target.pathname.endsWith("/") ? target.pathname.slice(0,-1) : target.pathname)+"/fail";
   else if (status !== "success") throw new Error("Unsupported Healthchecks ping status");
   const response=await fetchImpl(target.toString(),{method:"GET",redirect:"manual"});
   if (!response.ok) throw new Error("Healthchecks ping failed (HTTP "+response.status+")");
