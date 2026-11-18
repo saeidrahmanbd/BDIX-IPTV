@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-18 04:58 UTC**  
+Run time: **2026-11-18 07:59 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,7 +10,7 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1378 | 0 | 0 | 34 | 0 | 0 | 34 |
-| International-Playlist.m3u | 3281 | 5 | 0 | 80 | 372 | 0 | 80 |
+| International-Playlist.m3u | 3281 | 1 | 0 | 79 | 372 | 0 | 79 |
 
 ## Repair log
 
@@ -67,7 +67,7 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 873 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1029 | Cedros TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1111 | DanceTV Algorhythm | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 1135 | M6 Music | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 1135 | M6 Music | (missing) | m6-music-20701275e5.svg | [IPTV-org exact ID: M6Music.fr](https://static.wikia.nocookie.net/logopedia/images/6/68/M6music-95cde0867d.svg/revision/latest?cb=20200412210630) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 | International-Playlist.m3u | 1145 | Persiana Folk | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1151 | Persiana Vibe | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1623 | FILMBOX+ Emotion Adria | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
@@ -115,14 +115,9 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 4539 | History & Warfare Now | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 4583 | Id Investigation Discovery | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 4627 | Islam TV Urdu | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4831 | MCM Top (France) | (missing) | mcm-top-france-821b5da224.png | [IPTV-org exact ID: MCMTop.fr](https://i.imgur.com/EVtWQLd.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 4833 | MCM Top (Russia) (576p) | (missing) | mcm-top-russia-821b5da224.png | [IPTV-org exact ID: MCMTop.ru](https://i.imgur.com/EVtWQLd.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 4841 | Melody (720p) | (missing) | melody-1fa108e209.png | [IPTV-org exact ID: Melody.fr](https://i.imgur.com/9GVyQ6x.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 | International-Playlist.m3u | 4847 | Mh 1 Prime | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4863 | Mi Musica Popular (1080p) | (missing) | mi-musica-popular-20cac05b9e.png | [IPTV-org exact ID: MiMusicaPopular.us](https://i.imgur.com/auW6Ve1.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 | International-Playlist.m3u | 4887 | Mohammed Abdo (1080p) | (missing) | (none) | IPTV-org exact ID: MohammedAbdo.sa |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 4887 | Mohammed Abdo (1080p) | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4895 | Montones TV (720p) [Not 24/7] | (missing) | montones-tv-af126eccd7.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | International-Playlist.m3u | 4995 | NewFlix | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 5005 | Nick Jr East | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 5089 | Peace TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |

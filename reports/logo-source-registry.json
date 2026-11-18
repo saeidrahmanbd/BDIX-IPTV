@@ -6643,5 +6643,10 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/auW6Ve1.png",
     "notes": "IPTV-org exact ID: MiMusicaPopular.us IPTV-org public logo dataset Source page: https://i.imgur.com/auW6Ve1.png"
+  },
+  "International-Playlist.m3u|M6Music.fr@SD|M6 Music|logos/m6-music-20701275e5.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://static.wikia.nocookie.net/logopedia/images/6/68/M6music-95cde0867d.svg/revision/latest?cb=20200412210630",
+    "notes": "IPTV-org exact ID: M6Music.fr IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/6/68/M6music-95cde0867d.svg/revision/latest?cb=20200412210630"
   }
 }

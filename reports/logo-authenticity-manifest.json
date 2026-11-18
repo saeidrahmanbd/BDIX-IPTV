@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-18T04:59:25.815136+00:00",
+  "generated_at_utc": "2026-11-18T08:00:32.127501+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -12,11 +12,11 @@
   },
   "source_sha256_by_playlist": {
     "IPTV-Playlist.m3u": "a43b9174e373427cdfb91993bb9814e7ce7f3a1f12a95189d62e964e6ee5ad44",
-    "International-Playlist.m3u": "56a7071183c125fe3b7f96ce8326a4065d314e6a499490194d56d08ef74cf516"
+    "International-Playlist.m3u": "49f02ae9312677b12a6fc45cf4686cad941c940d246908661f282f4999de3e31"
   },
   "status_counts": {
-    "needs_review": 3719,
-    "third_party_verified": 938,
+    "needs_review": 3718,
+    "third_party_verified": 939,
     "generated_fallback": 2
   },
   "status_counts_by_playlist": {
@@ -26,8 +26,8 @@
       "generated_fallback": 2
     },
     "International-Playlist.m3u": {
-      "needs_review": 2399,
-      "third_party_verified": 882
+      "needs_review": 2398,
+      "third_party_verified": 883
     }
   },
   "entry_count": 4659,
@@ -23330,11 +23330,11 @@
       "channel_name": "M6 Music",
       "tvg_id": "M6Music.fr@SD",
       "channel_id": "M6Music.fr@SD",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+      "logo": "logos/m6-music-20701275e5.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://static.wikia.nocookie.net/logopedia/images/6/68/M6music-95cde0867d.svg/revision/latest?cb=20200412210630",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: M6Music.fr IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/6/68/M6music-95cde0867d.svg/revision/latest?cb=20200412210630"
     },
     {
       "playlist": "International-Playlist.m3u",

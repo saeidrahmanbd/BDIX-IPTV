@@ -1,13 +1,13 @@
 # Logo Format Conversion
 
-Generated: **2026-11-18T04:47:34.387543+00:00**
+Generated: **2026-11-18T07:59:56.741681+00:00**
 
 - Playlists checked: **IPTV-Playlist.m3u, International-Playlist.m3u**
-- Unique non-PNG assets converted: **17**
-- Playlist logo references updated: **25**
-- New PNG assets created: **17**
-- Supported non-PNG image assets found in logos/: **17**
-- Non-PNG source files removed after successful validation: **17**
+- Unique non-PNG assets converted: **1**
+- Playlist logo references updated: **1**
+- New PNG assets created: **1**
+- Supported non-PNG image assets found in logos/: **1**
+- Non-PNG source files removed after successful validation: **1**
 - Damaged source wrappers safely superseded by a fully validated same-stem PNG: **0**
 - Rollback/provenance: **Original bytes remain recoverable from Git history**
 - Non-PNG active playlist references remaining: **0**
@@ -16,5 +16,4 @@ Every supported image asset under logos/ was converted to a validated PNG. Activ
 
 ## Source formats
 
-- JPG: **10**
-- SVG: **7**
+- SVG: **1**

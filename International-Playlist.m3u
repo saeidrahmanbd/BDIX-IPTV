@@ -1132,7 +1132,7 @@ https://amg00711-zylo-amg00711c8-rakuten-uk-2686.playouts.now.amagi.tv/playlist/
 https://dbmtv.vedge.infomaniak.com/livecast/dbmtv/playlist.m3u8
 #EXTINF:-1 tvg-id="EmotionL.fr@SD" tvg-language="fra" tvg-logo="logos/emotion-l-3d6469af53.png" tvg-country="FR" tvg-content="Movies" group-title="France" tvg-name="Emotion L",Emotion L
 https://rakutenaa-zylo-emotional-rakuten-r1zkm.amagi.tv/playlist/rakutenAA-zylo-emotional-rakuten/playlist.m3u8
-#EXTINF:-1 tvg-id="M6Music.fr@SD" channel-id="M6Music.fr@SD" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="M6 Music",M6 Music
+#EXTINF:-1 tvg-id="M6Music.fr@SD" channel-id="M6Music.fr@SD" tvg-country="FR" tvg-content="Music" tvg-logo="logos/m6-music-20701275e5.png" group-title="France" tvg-name="M6 Music",M6 Music
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/m6_music_hits/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="MCMPop.fr@SD" channel-id="MCMPop.fr@SD" tvg-country="FR" tvg-content="Music" tvg-logo="logos/mcm-pop-580p.png" group-title="France" tvg-name="MCM Pop",MCM Pop
 http://176.65.153.78:8201/play/a070/index.m3u8
