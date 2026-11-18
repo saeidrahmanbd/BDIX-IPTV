@@ -52,10 +52,10 @@ class ProtectedGuardTests(unittest.TestCase):
 class ReorganizePreservesProtectedTests(unittest.TestCase):
     def test_ndtv_good_times_is_classified_as_indian_entertainment_not_news(self):
         playlist = (
-            "#EXTM3U\\n#PLAYLIST-STUDIO-NAME: Test\\n"
+            "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
             '#EXTINF:-1 tvg-id="NDTVGoodTimes.in@SD" tvg-name="NDTV Good Times" '
-            'tvg-country="IN" group-title="News",NDTV Good Times\\n'
-            "https://example.org/ndtv-good-times.m3u8\\n"
+            'tvg-country="IN" group-title="News",NDTV Good Times\n'
+            "https://example.org/ndtv-good-times.m3u8\n"
         )
         with tempfile.TemporaryDirectory() as tmp:
             Path(tmp, "International-Playlist.m3u").write_text(playlist, encoding="utf-8")
