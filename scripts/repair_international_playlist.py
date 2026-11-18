@@ -177,6 +177,15 @@ def repair_logo(info,org):
  a=attrs(info); name=name_of(info); old=a.get('tvg-logo','').strip()
  group=a.get('group-title','').strip().casefold()
  p=safe_local(name)
+ # Published playlists must use absolute raw.githubusercontent.com URLs.
+ # Convert verified legacy repository-relative paths before any name-based lookup.
+ if old.startswith('logos/'):
+  rel=urllib.parse.unquote(old[len('logos/'):].split('?',1)[0].split('#',1)[0]).lstrip('/')
+  candidate=LOGOS/rel
+  if candidate.is_file() and 'unused' not in {x.casefold() for x in Path(rel).parts} and not candidate.name.casefold().startswith('generated-fallback-'):
+   desired=RAW_BASE+rel
+   return set_attr(info,'tvg-logo',desired),old!=desired
+  return remove_attr(info,'tvg-logo'),True
  # Adult and Backup entries may use only existing, exact-identity local artwork.
  # Do not fetch new artwork for these protected queues, but don't skip safe local
  # matches and never leave an external logo reference in the published playlist.
