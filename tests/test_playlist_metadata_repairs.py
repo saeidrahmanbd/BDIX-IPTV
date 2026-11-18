@@ -2,6 +2,9 @@ from pathlib import Path
 import re
 import sys
 import unittest
+import os
+import subprocess
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -31,6 +34,33 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
                 header = (ROOT / name).read_text(encoding="utf-8-sig").splitlines()[0]
                 self.assertIn(f'url-tvg="{expected}"', header)
                 self.assertIn(f'x-tvg-url="{expected}"', header)
+
+    def test_metadata_normalizer_only_writes_existing_local_unblocked_logos(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "logos").mkdir()
+            (root / "reports").mkdir()
+            (root / "logos" / "desh-tv.png").write_bytes(b"test asset")
+            (root / "logos" / "a-sports-5485adff.png").write_bytes(b"blocked asset")
+            (root / "IPTV-Playlist.m3u").write_text(
+                '#EXTM3U\n'
+                '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Sports","Backup","Review"]\n'
+                '#EXTINF:-1 tvg-name="Desh TV" group-title="Bangladesh",Desh TV\n'
+                'https://example.test/desh.m3u8\n'
+                '#EXTINF:-1 tvg-name="A.SPORTS." group-title="Sports",A.SPORTS.\n'
+                'https://example.test/asports.m3u8\n',
+                encoding="utf-8",
+            )
+            env = dict(os.environ, PYTHONPATH=str(ROOT / "scripts"))
+            result = subprocess.run(
+                [sys.executable, str(ROOT / "scripts" / "normalize_metadata.py")],
+                cwd=root, env=env, capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            output = (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        self.assertIn('tvg-logo="logos/desh-tv.png"', output)
+        self.assertNotIn('tvg-logo="https://raw.githubusercontent.com/', output)
+        self.assertNotIn('tvg-logo="logos/a-sports-5485adff.png"', output)
 
     def test_main_playlist_has_no_empty_logo_attributes(self):
         rows = playlist_rows(ROOT / "IPTV-Playlist.m3u")
@@ -94,6 +124,10 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         self.assertNotIn('suspicious_urls.append((display_name(info), "", url))', audit)
         self.assertIn(r"dvltv\.cc", audit)
         self.assertIn("[REDACTED]", audit)
+
+    def test_iptv_maintenance_does_not_run_unverified_external_logo_migrator(self):
+        workflow = (ROOT / ".github" / "workflows" / "iptv-maintenance.yml").read_text(encoding="utf-8")
+        self.assertNotIn("python scripts/migrate_external_logos_fixed.py", workflow)
 
     def test_adult_entries_are_explicitly_protected_from_maintenance(self):
         normalizer = (ROOT / "scripts/normalize_metadata.py").read_text(encoding="utf-8")

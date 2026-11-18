@@ -4,7 +4,7 @@ import io, json, re, urllib.request, hashlib, csv
 from pathlib import Path
 from logo_asset_naming import is_blocked_logo_basename, safe_logo_filename
 from logo_embedded_png import recover_embedded_png_from_svg
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, unquote
 from PIL import Image
 try:
     import cairosvg
@@ -13,7 +13,8 @@ except ImportError:
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 LOGOS = Path("logos")
-RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+LEGACY_RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+RAW_BASE = "logos/"
 CHANNELS_API = "https://iptv-org.github.io/api/channels.json"
 LOGOS_API = "https://iptv-org.github.io/api/logos.json"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
@@ -174,7 +175,15 @@ def clean_name(value):
     value = re.sub(r"\b(?:hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", value, flags=re.I)
     return re.sub(r"[^a-z0-9]+", "", value.lower())
 def safe_name(value): return (re.sub(r"[^A-Za-z0-9]+", "-", value).strip("-").lower()[:90] or "channel")
-def is_local(value): return value.startswith(RAW_BASE) or value.startswith("logos/") or "raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV" in value
+def is_local(value): return value.startswith(RAW_BASE) or value.startswith(LEGACY_RAW_BASE)
+def to_local_ref(value):
+    value = str(value or "").strip()
+    if value.startswith(RAW_BASE):
+        return value
+    if value.startswith(LEGACY_RAW_BASE):
+        relative = unquote(urlsplit(value).path.split("/main/logos/", 1)[-1]).lstrip("/")
+        return RAW_BASE + relative if relative else ""
+    return ""
 def is_generic_logo(value):
     raw = str(value or "").strip().split("#",1)[0].split("?",1)[0].lower().rstrip("/")
     return bool(re.search(r"^https?://(?:www\.)?(?:i\.)?imgur\.com/79g2kma\.png$", raw, re.I))
@@ -235,11 +244,11 @@ local_by_name = {}
 for line in lines:
     if not line.startswith("#EXTINF"): continue
     metadata = attrs(line)
-    logo = metadata.get("tvg-logo", "").strip()
+    logo = to_local_ref(metadata.get("tvg-logo", ""))
     if logo and not is_generic_logo(logo) and not is_generated_placeholder(logo) and not is_blocked_logo_basename(Path(urlsplit(logo).path).name) and is_local(logo) and logo.lower().endswith(".png"):
         channel_id = exact_id(metadata)
         title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
-        filename = logo[len(RAW_BASE):].split("?", 1)[0] if logo.startswith(RAW_BASE) else Path(logo).name
+        filename = logo[len(RAW_BASE):].split("?", 1)[0] if logo.startswith(RAW_BASE) else Path(urlsplit(logo).path).name
         if not (LOGOS / filename).is_file():
             continue
         if channel_id:
@@ -282,6 +291,10 @@ for line in lines:
         output.append(line)
         continue
     logo = metadata.get("tvg-logo", "").strip()
+    local_ref = to_local_ref(logo)
+    if local_ref and local_ref != logo:
+        line = force_local(line, local_ref)
+        logo = local_ref
     title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
     base_title = clean_name(title)
     channel_id = exact_id(metadata)

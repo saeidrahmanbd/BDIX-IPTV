@@ -8,7 +8,7 @@ from urllib.parse import unquote
 from PIL import Image
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
-RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+LOCAL_BASE = "logos/"
 
 
 def attrs(line):
@@ -20,10 +20,8 @@ def strip_logo(line):
 
 
 def local_path(value):
-    if value.startswith(RAW_BASE):
-        relative = unquote(value[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])
-    elif value.startswith("logos/"):
-        relative = unquote(value[len("logos/"):])
+    if value.startswith(LOCAL_BASE):
+        relative = unquote(value[len(LOCAL_BASE):].split("?", 1)[0].split("#", 1)[0])
     else:
         raise ValueError(f"Non-local logo reference: {value}")
     path = Path(relative)

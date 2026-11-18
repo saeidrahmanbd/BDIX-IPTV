@@ -27,7 +27,7 @@ def main():
         logo = meta.get("tvg-logo", "").strip()
         if not logo:
             missing += 1
-        elif logo.startswith(("http://", "https://")) and "/raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/" not in logo:
+        elif not logo.startswith("logos/"):
             external += 1
 
     generated = datetime.now(timezone.utc).isoformat(timespec="seconds")

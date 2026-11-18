@@ -6,8 +6,26 @@ from datetime import datetime, timezone
 import re
 import json
 import unicodedata
+from urllib.parse import unquote
+from logo_asset_naming import is_blocked_logo_basename
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/metadata-normalization.md")
-RAW="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+
+def local_logo_ref(value):
+ value=str(value or "").strip()
+ if value.startswith(RAW_BASE):
+  relative=unquote(value[len(RAW_BASE):].split("?",1)[0].split("#",1)[0])
+ elif value.startswith("logos/"):
+  relative=unquote(value[len("logos/"):].split("?",1)[0].split("#",1)[0])
+ else:
+  relative=value
+ candidate=Path(relative)
+ if not relative or candidate.is_absolute() or ".." in candidate.parts:
+  return ""
+ path=Path("logos")/candidate
+ if not path.is_file() or is_blocked_logo_basename(path.name):
+  return ""
+ return "logos/"+candidate.as_posix()
 # All four groups below are review queues. They must not receive primary IDs,
 # numbers or primary-only metadata normalization.
 EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups","Adult"}
@@ -334,9 +352,11 @@ for r in rows:
   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name)
   forced_logo=FORCED_LOGOS.get(name)
   if forced_logo:
-   desired=RAW+forced_logo
-   if a.get("tvg-logo") != desired: m=set_attr(m,"tvg-logo",desired); stats["logos"]+=1
-  elif not a.get("tvg-logo") and LOGOS.get(name): m=set_attr(m,"tvg-logo",RAW+LOGOS[name]); stats["logos"]+=1
+   desired=local_logo_ref(forced_logo)
+   if desired and a.get("tvg-logo") != desired: m=set_attr(m,"tvg-logo",desired); stats["logos"]+=1
+  elif not a.get("tvg-logo") and LOGOS.get(name):
+   desired=local_logo_ref(LOGOS[name])
+   if desired: m=set_attr(m,"tvg-logo",desired); stats["logos"]+=1
  else:
   key=norm(a.get("tvg-name") or r["name"]); pr=byname.get(key)
   # Same-name channels in different broadcast countries are distinct identities.
@@ -355,9 +375,9 @@ for r in rows:
   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name); display=name
   logo=FORCED_LOGOS.get(name) or (pr["a"].get("tvg-logo") if pr else None) or LOGOS.get(r["name"]) or LOGOS.get(name)
   if logo:
-   logo_url=logo if logo.startswith("http") else RAW+logo
+   logo_url=local_logo_ref(logo)
    current_logo=(a.get("tvg-logo") or "").strip()
-   if not current_logo or (pr and current_logo != logo_url):
+   if logo_url and (not current_logo or (pr and current_logo != logo_url)):
     m=set_attr(m,"tvg-logo",logo_url); stats["logos"]+=1
   stats["backups"]+=1
  # Do not publish empty logo attributes when no verified local asset is available.
