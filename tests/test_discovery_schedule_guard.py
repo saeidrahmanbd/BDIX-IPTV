@@ -33,6 +33,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         self.assertTrue(guard.is_manual_retry("schedule", "3"))
         self.assertFalse(guard.is_manual_retry("push", 1))
         self.assertFalse(guard.is_manual_retry("schedule", None))
+        self.assertTrue(guard.is_manual_retry("push", 1, "international-stream-health.yml", "[manual-international-health] Correct NDTV Good Times classification"))
         self.assertTrue(guard.is_manual_retry(
             "push", 1, "international-channel-discovery.yml",
             "Manual International maintenance [manual-international-discovery]",

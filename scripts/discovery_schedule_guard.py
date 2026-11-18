@@ -103,6 +103,7 @@ def is_manual_retry(
         "new-channel-discovery.yml": "[manual-new-channel-discovery]",
         "playlist-logo-localization.yml": "[manual-logo-localization]",
         "epg-refresh.yml": "[manual-epg-refresh]",
+        "international-stream-health.yml": "[manual-international-health]",
     }
     marker = markers.get(str(workflow_file or "").strip())
     return (
