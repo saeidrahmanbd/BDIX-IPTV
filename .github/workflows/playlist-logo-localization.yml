@@ -49,6 +49,7 @@ permissions:
 
 jobs:
   daily_guard:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -76,7 +77,7 @@ jobs:
     needs: daily_guard
     # Explicit source/tooling pushes should run immediately even if the daily guard
     # already saw a manual run today; playlist/logo-only commits do not match push paths.
-    if: github.event_name == 'push' || needs.daily_guard.outputs.should_run == 'true'
+    if: always() && (github.event_name == 'push' || needs.daily_guard.outputs.should_run == 'true')
     permissions:
       contents: write
     # Shared main-branch writer queue. Set on the writing job, not the workflow,
