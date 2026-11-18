@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5745,
-  "all_explicitly_referenced_logo_files": 2696,
-  "runtime_referenced_logo_files": 2693,
+  "all_explicitly_referenced_logo_files": 2694,
+  "runtime_referenced_logo_files": 2691,
   "playlist_referenced_logo_files": 2412,
-  "apparently_unreferenced_by_any_text_file": 3049,
-  "apparently_unreferenced_by_runtime_sources": 3052,
+  "apparently_unreferenced_by_any_text_file": 3051,
+  "apparently_unreferenced_by_runtime_sources": 3054,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -476,6 +476,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/PersianaFolk.fr.png": [
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json",
       "scripts/logo_source_catalog.py"
     ],
@@ -525,6 +526,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/az/konul-music-tv-badge.webp": [
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/babyfirst-9844e5635e.webp": [
@@ -596,6 +598,7 @@
       "scripts/repair_playlist_logos.py"
     ],
     "logos/blob/main/countries/united-kingdom/mtv-classic-uk.png": [
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/blob/main/countries/united-states/accuweather-us.png": [
@@ -624,6 +627,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/blob/main/countries/united-states/epix-us.png": [
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/blob/main/countries/united-states/fox-news-us.png": [
@@ -1252,6 +1256,7 @@
       "scripts/repair_playlist_logos.py"
     ],
     "logos/main/countries/united-kingdom/mtv-classic-uk.png": [
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/main/countries/united-states/boomerang-us.png": [
@@ -1259,6 +1264,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/main/countries/united-states/epix-us.png": [
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/main/countries/united-states/nbc-golf-channel-us.png": [
@@ -12762,6 +12768,7 @@
     ],
     "logos/epix-f183496b969b0cd2e9fb.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/epix-hits-2a277450b6.png": [
@@ -14212,7 +14219,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/international/colors-gujarati-396p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/famatv-1080p-not-24-7.png": [
       "reports/logo-source-registry.json"
@@ -14759,7 +14767,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/konul-music-tv-40b05f1d627fd4ad7bd9.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kozoom-tv-43858e0b25.png": [
       "International-Playlist.m3u",
@@ -14929,9 +14938,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/local-logo-cooking-channel.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/lol-tv.png": [
       "scripts/migrate_external_logos_fixed.py"
@@ -15275,6 +15281,7 @@
     ],
     "logos/max-tv-a516dc8e242f6bcb5f47.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/max4-000468aee1.png": [
@@ -15822,6 +15829,7 @@
     ],
     "logos/mtv-classic-df8c74caae1081a4a8f3.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/mtv-germany-bafd7b214a.png": [
@@ -16839,6 +16847,7 @@
     ],
     "logos/persiana-folk-71f4eb5b1332a70639fb.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/persiana-iranian-5ed4bf6c4e.png": [
@@ -17865,6 +17874,7 @@
     ],
     "logos/radio-temas-de-novelas-52562d10f48bddf24188.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/radio-tropical-860412a770.png": [
@@ -20181,9 +20191,6 @@
     "logos/travelxp-4k-hdr-2160p-geo-blocked-d2beea8758.png": [
       "reports/logo-source-registry.json"
     ],
-    "logos/travelxp-bangla.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/travelxp-english.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -20422,6 +20429,7 @@
     ],
     "logos/tvs-music-network-9b5936f4006146e4e1e9.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/tvs-nostalgia-movies-480p-1058c2772e.png": [
@@ -24855,6 +24863,7 @@
     ],
     "logos/epix-f183496b969b0cd2e9fb.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/epix-hits-2a277450b6.png": [
@@ -26306,7 +26315,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/international/colors-gujarati-396p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/famatv-1080p-not-24-7.png": [
       "reports/logo-source-registry.json"
@@ -26853,7 +26863,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/konul-music-tv-40b05f1d627fd4ad7bd9.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kozoom-tv-43858e0b25.png": [
       "International-Playlist.m3u",
@@ -27023,9 +27034,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/local-logo-cooking-channel.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/lol-tv.png": [
       "scripts/migrate_external_logos_fixed.py"
@@ -27369,6 +27377,7 @@
     ],
     "logos/max-tv-a516dc8e242f6bcb5f47.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/max4-000468aee1.png": [
@@ -27916,6 +27925,7 @@
     ],
     "logos/mtv-classic-df8c74caae1081a4a8f3.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/mtv-germany-bafd7b214a.png": [
@@ -28933,6 +28943,7 @@
     ],
     "logos/persiana-folk-71f4eb5b1332a70639fb.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/persiana-iranian-5ed4bf6c4e.png": [
@@ -29962,6 +29973,7 @@
     ],
     "logos/radio-temas-de-novelas-52562d10f48bddf24188.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/radio-tropical-860412a770.png": [
@@ -32280,9 +32292,6 @@
     "logos/travelxp-4k-hdr-2160p-geo-blocked-d2beea8758.png": [
       "reports/logo-source-registry.json"
     ],
-    "logos/travelxp-bangla.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/travelxp-english.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -32521,6 +32530,7 @@
     ],
     "logos/tvs-music-network-9b5936f4006146e4e1e9.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/tvs-nostalgia-movies-480p-1058c2772e.png": [
@@ -34935,6 +34945,7 @@
     "logos/local-logo-cnn.png",
     "logos/local-logo-comedy-central.png",
     "logos/local-logo-cooking-channel-converted-1443e65ebf.png",
+    "logos/local-logo-cooking-channel.png",
     "logos/local-logo-cp24.png",
     "logos/local-logo-fox-news-converted-0b6670dc26.png",
     "logos/local-logo-fox-news.png",
@@ -35755,6 +35766,7 @@
     "logos/travel-xp-english-eu.png",
     "logos/travel-xp.png",
     "logos/travelxp-4k-hdr-2160p-geo-blocked.png",
+    "logos/travelxp-bangla.png",
     "logos/travelxp-hd-1080p-geo-blocked.png",
     "logos/trt-m-zik.png",
     "logos/trt-muzik-converted-cd34011c94.png",

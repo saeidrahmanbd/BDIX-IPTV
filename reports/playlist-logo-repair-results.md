@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-18 14:19 UTC**  
+Run time: **2026-11-18 14:21 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,30 +10,23 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1378 | 0 | 0 | 0 | 0 | 0 | 0 |
-| International-Playlist.m3u | 3281 | 7 | 0 | 54 | 372 | 0 | 54 |
+| International-Playlist.m3u | 3281 | 0 | 0 | 54 | 372 | 0 | 54 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
 | International-Playlist.m3u | 125 | JTV Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 853 | Rádio Temas de Novelas | (missing) | radio-temas-de-novelas-52562d10f48bddf24188.png | [Broadcaster/station page](https://www.radiotemasdenovelas.com/) | Logo image served on the broadcaster/station page | replaced |
 | International-Playlist.m3u | 873 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1029 | Cedros TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1111 | DanceTV Algorhythm | (missing) | (none) | Official DanceTV channel artwork URL, corroborated by the broadcaster's public stream listing |  | Download/validation failed: HTTP Error 404: Not Found |
 | International-Playlist.m3u | 1111 | DanceTV Algorhythm | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 1145 | Persiana Folk | (missing) | persiana-folk-71f4eb5b1332a70639fb.png | [Exact Persiana Folk channel asset in a public channel-logo repository; independently matched to the Persiana Folk stream identity](https://github.com/shayanline/iptv-iran/blob/main/assets/logos/PersianaFolk.fr.png) | Public repository reference; original logo rights belong to Persiana Media Group — https://github.com/shayanline/iptv-iran | replaced |
 | International-Playlist.m3u | 1151 | Persiana Vibe | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1843 | TV 21 International | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1875 | Tarab | (missing) | (none) | Exact external logo asset |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 1875 | Tarab | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 2125 | MTV Classic | (missing) | mtv-classic-df8c74caae1081a4a8f3.png | [Curated exact channel/region asset](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/mtv-classic-uk.png) | Source repository; license must be checked at source | replaced |
-| International-Playlist.m3u | 2289 | Epix | (missing) | epix-f183496b969b0cd2e9fb.png | [Curated exact channel/region asset](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/epix-us.png) | Source repository; license must be checked at source | replaced |
-| International-Playlist.m3u | 2573 | TVS Music Network | (missing) | tvs-music-network-9b5936f4006146e4e1e9.png | [Exact TVSMusicNetwork.us entry and matching logo reference in a public channel playlist](https://github.com/vbelevcev/SkyTV/blob/main/UzbaTVFull.m3u8) | Community playlist source attribution; original TVS branding rights retained by the broadcaster | replaced |
 | International-Playlist.m3u | 2655 | Asia Flix TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2663 | Bigscreen TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 2733 | Konul Music TV | (missing) | konul-music-tv-40b05f1d627fd4ad7bd9.webp | [Broadcaster/station page](https://www.archytele.com/live/azerbaijan/konul-music-tv) | Logo image served on the broadcaster/station page | replaced |
-| International-Playlist.m3u | 2755 | MAX TV | (missing) | max-tv-a516dc8e242f6bcb5f47.png | [Broadcaster/station page](https://maxmusicmedia.com/live/) | Logo image served on the broadcaster/station page | replaced |
 | International-Playlist.m3u | 2805 | Sine Plus | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 3673 | Abdulmajeed Abdullah | (missing) | (none) | IPTV-org exact ID: AbdulmajeedAbdullah.sa |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 3673 | Abdulmajeed Abdullah | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
