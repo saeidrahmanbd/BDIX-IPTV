@@ -15,7 +15,7 @@ class PlaylistPublicationGuardTests(unittest.TestCase):
                 content = path.read_text(encoding="utf-8-sig")
                 lines = [line.strip() for line in content.splitlines() if line.strip()]
                 self.assertTrue(lines, f"{filename} is empty")
-                self.assertEqual(lines[0], "#EXTM3U", f"{filename} has no M3U header")
+                self.assertTrue(lines[0].startswith("#EXTM3U"), f"{filename} has no M3U header")
                 extinf_count = sum(line.startswith("#EXTINF:") for line in lines)
                 stream_count = sum(line.startswith(("http://", "https://")) for line in lines)
                 self.assertGreater(extinf_count, 0, f"{filename} has no channel entries")
