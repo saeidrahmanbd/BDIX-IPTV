@@ -695,7 +695,7 @@ def download_exact_asset(channel, candidate, canonical_name=False):
 
 
 def raw_url(filename):
-    return RAW_BASE + urllib.parse.quote(filename)
+    return "logos/" + urllib.parse.quote(filename, safe="/")
 
 
 def is_valid_local_logo_reference(value):
@@ -706,10 +706,7 @@ def is_valid_local_logo_reference(value):
     blocked_prefixes = ("nvisionbd-", "placeholder-", "generated-fallback-", "generic-", "unknown-", "unidentified-")
     if basename.startswith(blocked_prefixes) or re.search(r"(?:placeholder|generic-logo)", basename) or basename in BAD_ASSETS or basename in GENERIC_ASSETS:
         return False
-    if value.startswith(RAW_BASE):
-        rel = urllib.parse.unquote(value[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
-        candidate = LOGOS / rel
-    elif value.startswith("logos/"):
+    if value.startswith("logos/"):
         candidate = Path(urllib.parse.unquote(value))
     else:
         return False
