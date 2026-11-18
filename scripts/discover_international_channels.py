@@ -182,35 +182,26 @@ def policy(a,name,allow_legacy_group=False):
  return ("International Movies" if movie else "International Music"),None,code
 
 def discovery_eligibility(a,name,allow_legacy_group=False):
- """Apply the standing new-channel discovery restrictions, separately from placement."""
+ """Strict eligibility for new International discoveries: Movies/Music worldwide."""
  target, reason, code = policy(a,name,allow_legacy_group=allow_legacy_group)
- group_text=(a.get("group-title") or "").strip().casefold()
- group_parts=[re.sub(r"[^a-z0-9]+","",part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
- text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
- if code in {"BD","PK"}:
-  return target,reason,code
- if code=="IN":
-  prohibited=bd_discovery.prohibited_channel(a,name,"IN",discovery=True)
-  if prohibited: return None,prohibited,code
-  return target,reason,code
+ if target is None:
+  return None,reason,code
  if code=="ZZ":
-  return None,reason or "country not verified",code
- # Foreign discovery remains Movies/Music only; never discover foreign genres.
- if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
-  return None,"news is outside the Movie/Music-only policy",code
- if RELIGIOUS_RE.search(text) or ISLAMIC_RE.search(text) or any(x in group_parts for x in {"religious","religion","faith","devotional"}):
-  return None,"religious is outside the Movie/Music-only policy",code
- if KIDS_NAME_RE.search(text) or any(x in group_parts for x in {"kid","kids","children","childrens","child"}):
-  return None,"kids is outside the Movie/Music-only policy",code
- if SPORTS_NAME_RE.search(text) or any(x in group_parts for x in {"sport","sports"}):
-  return None,"sports is outside the Movie/Music-only policy",code
- if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
-  return None,"documentary/wildlife is outside the Movie/Music-only policy",code
- if FASHION_RE.search(text):
-  return None,"fashion is outside the Movie/Music-only policy",code
- if target not in {"International Movies","International Music","Pakistani"}:
-  return None,reason or "channel is not clearly Movies/Music",code
- return target,None,code
+  return None,"country not verified",code
+ if FASHION_RE.search(f"{name} {a.get('tvg-name','')}"):
+  return None,"Fashion TV is a preserved legacy exception, not a discovery genre",code
+ if target in {"News","Religious","Kids","Sports","Documentary & Wildlife","Fashion TV"}:
+  return None,f"{target} is outside the worldwide Movie/Music-only discovery policy",code
+ genre=infer_genre(a,name)
+ if genre not in {"Movies","Music"}:
+  return None,"channel is not clearly Movies or Music",code
+ if code=="BD":
+  return "Bangladesh",None,code
+ if code=="PK":
+  return "Pakistani",None,code
+ if code=="IN":
+  return ("Indian Movies" if genre=="Movies" else "Indian Music"),None,code
+ return ("International Movies" if genre=="Movies" else "International Music"),None,code
 
 def safe_url(url):
  try:
@@ -275,12 +266,6 @@ def localize_discovery_queue_logos(blocks, discovery_urls, rejected_rows):
   a=attrs(block[0]); name=name_of(block); group=(a.get("group-title") or "").strip()
   old_logo=(a.get("tvg-logo") or "").strip()
   new_logo=localize_existing_logo(a,name) if old_logo else local_logo(a,name)
-  if not new_logo and group.casefold() in {"new channels","new backup","new backups"}:
-   # A review candidate without a genuine local asset is rejected from staging;
-   # never leave a blank-logo row for the final validator and never fabricate art.
-   rejected_rows.append((name,group,"no authentic local repository logo after localization"))
-   removed+=1
-   continue
   if new_logo!=old_logo:
    block[0]=set_logo_attr(block[0],new_logo)
    if new_logo: repaired+=1
@@ -434,7 +419,7 @@ def main():
    exact_existing+=1; continue
   if stream_url_key(url) in seen:
    exact_source_duplicates+=1; continue
-  base,reason,code=policy(a,name)
+  base,reason,code=discovery_eligibility(a,name)
   if base is None:rejected[reason]+=1; continue
   seen.add(stream_url_key(url)); candidates.append((a,name,url,norm(name),base,code))
  country_groups=qualified_country_groups(country_primary_ids)
@@ -590,7 +575,7 @@ def main():
  new_rows=[(n,final_group_by_identity.get((norm(n),c or ""),final_group_by_name.get(norm(n),g)),c,u) for n,g,c,u in new_rows]
  REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
   f"- Existing logo references localized/repaired: {logo_refs_repaired}",
-  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for every country except Bangladesh and India, including Pakistan.","- Bangladesh and Pakistan channels of all genres are eligible. Indian News, all Religious, Educational and Business/Finance channels are excluded; Indian Kids and Sports remain eligible. Only countries other than Bangladesh, India and Pakistan are limited to dedicated Movie/Music channels.","- Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.","- New discoveries are staged in New Channels/New Backups before probing. Verified unique primary channels are automatically promoted into policy-eligible groups, verified alternate streams move to Backup, and inconclusive or untrusted-logo candidates remain in Review.","- Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
+  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for every country except Bangladesh and India, including Pakistan.","- New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.","- Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.","- New discoveries are staged in New Channels/New Backups before probing. Verified unique primary channels are automatically promoted into policy-eligible groups, verified alternate streams move to Backup, and inconclusive or untrusted-logo candidates remain in Review.","- Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
  report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Existing discovery-queue entries removed",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  print(f"International discovery complete: new={len(new_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} qualifying_country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())
