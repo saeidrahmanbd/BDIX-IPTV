@@ -1,6 +1,7 @@
 name: Playlist Logo Repair and Localization
 # [logo-diagnostic] Emit exact invalid logo references and provenance mismatch reasons.
 # [manual-logo-localization] Owner-requested retry after correcting post-conversion provenance lookup.
+# [manual-logo-localization] Force one full run after the daily guard incorrectly skipped the logo repair.
 # Localize authentic repository-local logos after discovery; playlist stream URLs remain protected.
 
 on:
