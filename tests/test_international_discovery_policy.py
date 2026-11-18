@@ -85,11 +85,10 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         reorg.register_primary_id(seen, second)
         self.assertIs(seen["gazitv.bd"], first)
 
-    def test_discovery_workflow_reorganizes_before_final_validation(self):
+    def test_discovery_workflow_does_not_run_broad_playlist_reorganization(self):
         workflow = Path(".github/workflows/international-channel-discovery.yml").read_text(encoding="utf-8")
-        reorganize = workflow.index("python scripts/reorganize_international_playlist.py")
-        validate = workflow.index("python scripts/validate_international_playlist.py")
-        self.assertLess(reorganize, validate)
+        self.assertNotIn("python scripts/reorganize_international_playlist.py", workflow)
+        self.assertIn("python scripts/validate_international_playlist.py", workflow)
 
     def test_movies_and_music_are_allowed_for_international_countries(self):
         self.assertEqual(self.classify("Cinema World", "Movies", "NP", "CinemaWorld.np"),
@@ -273,20 +272,21 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(country=country, name=name):
                 self.assertEqual(self.classify(name, group, country, tvg_id)[0], expected)
 
-    def test_backup_queue_policy_uses_genre_groups_for_every_country(self):
+    def test_backup_queue_policy_rejects_non_movie_music_genres_worldwide(self):
         cases = [
-            ("Colors Rishtey", "General", "IN", "ColorsRishtey.in", "Indian Entertainment"),
-            ("DD Sports", "Sports", "IN", "DDSports.in", "Sports"),
-            ("Madani TV", "Religious", "BD", "MadaniTV.bd", "Religious"),
-            ("Hum TV", "General", "PK", "HumTV.pk", "Pakistani"),
-            ("ARY News", "News", "PK", "ARYNews.pk", "News"),
+            ("Colors Rishtey", "General", "IN", "ColorsRishtey.in"),
+            ("DD Sports", "Sports", "IN", "DDSports.in"),
+            ("Madani TV", "Religious", "BD", "MadaniTV.bd"),
+            ("Hum TV", "General", "PK", "HumTV.pk"),
+            ("ARY News", "News", "PK", "ARYNews.pk"),
         ]
-        for name, group, country, tvg_id, expected in cases:
+        for name, group, country, tvg_id in cases:
             attrs = {"group-title": "New Backups", "tvg-country": country, "tvg-id": tvg_id}
             target, reason, verified, genre = discovery.queue_policy(attrs, name)
             with self.subTest(name=name, country=country):
-                self.assertEqual((target, reason, verified), (expected, None, country))
-                self.assertEqual(genre, "")
+                self.assertIsNone(target)
+                self.assertTrue(reason)
+                self.assertEqual(verified, country)
 
     def test_five_channel_country_threshold_is_retained(self):
         self.assertEqual(discovery.COUNTRY_THRESHOLD, 5)
@@ -392,7 +392,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertIsNone(discovery.known_non_tv_discovery_reason("YleX (720p)", "New Channels"))
         self.assertIsNone(discovery.known_non_tv_discovery_reason("YleX (720p)", "Backup"))
 
-    def test_review_candidate_without_authentic_logo_is_rejected_from_queue(self):
+    def test_review_candidate_without_authentic_logo_remains_in_queue(self):
         block = [
             '#EXTINF:-1 tvg-id="Colors.us" tvg-country="US" group-title="New Backups" tvg-content="Movies",Colors',
             "https://example.org/colors.m3u8",
@@ -402,13 +402,10 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             kept, repaired, removed = discovery.localize_discovery_queue_logos(
                 [block], {block[1]}, rejected
             )
-        self.assertEqual(kept, [])
+        self.assertEqual(kept, [block])
         self.assertEqual(repaired, 0)
-        self.assertEqual(removed, 1)
-        self.assertEqual(
-            rejected,
-            [("Colors", "New Backups", "no authentic local repository logo after localization")],
-        )
+        self.assertEqual(removed, 0)
+        self.assertEqual(rejected, [])
 
     def test_tokenized_urls_are_rejected_without_playback_testing(self):
         self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?token=abc"))
@@ -545,6 +542,53 @@ class LegacyInternationalRepairPolicyTests(unittest.TestCase):
             "Adult",
         )
 
+
+
+class StrictWorldwideDiscoveryTests(unittest.TestCase):
+    def eligible(self, name, genre, country, tvg_id):
+        attrs = {"group-title": genre, "tvg-country": country, "tvg-id": tvg_id}
+        return discovery.discovery_eligibility(attrs, name)
+
+    def test_movie_and_music_discovery_is_allowed_for_all_countries(self):
+        for country, tvg_id in (("BD", "Cinema.bd"), ("IN", "Cinema.in"), ("PK", "Cinema.pk"), ("US", "Cinema.us")):
+            with self.subTest(country=country):
+                target, reason, verified = self.eligible("Cinema World", "Movies", country, tvg_id)
+                self.assertIsNone(reason)
+                self.assertEqual(verified, country)
+                self.assertIsNotNone(target)
+        for country, tvg_id in (("BD", "Music.bd"), ("IN", "Music.in"), ("PK", "Music.pk"), ("GB", "Music.uk")):
+            with self.subTest(country=country):
+                target, reason, verified = self.eligible("World Music", "Music", country, tvg_id)
+                self.assertIsNone(reason)
+                self.assertEqual(verified, country)
+                self.assertIsNotNone(target)
+
+    def test_non_movie_music_genres_are_rejected_worldwide(self):
+        cases = [
+            ("World News", "News", "BD", "WorldNews.bd"),
+            ("Madani TV", "Religious", "PK", "MadaniTV.pk"),
+            ("Pogo", "Kids", "IN", "Pogo.in"),
+            ("DD Sports", "Sports", "IN", "DDSports.in"),
+            ("Discovery Channel", "Documentary", "US", "Discovery.us"),
+            ("General Entertainment", "Entertainment", "BD", "General.bd"),
+        ]
+        for name, genre, country, tvg_id in cases:
+            with self.subTest(name=name, country=country):
+                target, reason, _ = self.eligible(name, genre, country, tvg_id)
+                self.assertIsNone(target)
+                self.assertTrue(reason)
+
+    def test_fashion_tv_is_not_new_discovery(self):
+        target, reason, _ = self.eligible("Fashion TV", "Fashion", "FR", "FashionTV.fr")
+        self.assertIsNone(target)
+        self.assertIn("Fashion TV", reason)
+
+    def test_missing_local_logo_does_not_remove_review_candidate(self):
+        block = ['#EXTINF:-1 tvg-name="Cinema World" group-title="New Channels",Cinema World', "https://example.org/cinema.m3u8"]
+        with tempfile.TemporaryDirectory() as tmp, patch.object(discovery, "LOGOS", Path(tmp) / "logos"):
+            kept, repaired, removed = discovery.localize_discovery_queue_logos([block], {block[1]}, [])
+        self.assertEqual(len(kept), 1)
+        self.assertEqual((repaired, removed), (0, 0))
 
 if __name__ == "__main__":
     unittest.main()

@@ -178,8 +178,8 @@ def main():
         logo = a.get("tvg-logo", "").strip()
         if not logo:
             missing_logos += 1
-            if group_key in {"new channels", "new backup", "new backups"}:
-                raise SystemExit(f"Manual-review candidate lacks a local logo: {name!r} in {group!r}.")
+            # Missing authentic art is not a reason to discard a valid review candidate.
+            # External or broken logo references remain prohibited below.
             continue
         if logo.startswith("logos/"):
             rel = unquote(logo.split("?", 1)[0].split("#", 1)[0])
