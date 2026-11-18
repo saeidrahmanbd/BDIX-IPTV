@@ -429,10 +429,10 @@ ADULT_BACKUP_CHANNEL_NAMES = (
 )
 ADULT_BACKUP_CHANNEL_KEYS = {norm_key(name) for name in ADULT_BACKUP_CHANNEL_NAMES}
 
-# Do not assign generated artwork as a playlist logo by default. The user prefers
-# genuine broadcaster logos; when no verified logo is found, leave it unresolved
-# and report it rather than making an unofficial image look like broadcaster art.
-ALLOW_GENERATED_FALLBACKS = False
+# Use authentic broadcaster artwork first. As explicitly approved, create a clearly
+# labelled unofficial fallback only when every exact/local/attributable source fails.
+# Review/Backup/discovery queues remain untouched by fallback generation.
+ALLOW_GENERATED_FALLBACKS = True
 
 
 def is_adult_playlist_entry(playlist, group_name, channel_id, channel_key):
@@ -680,7 +680,7 @@ def download_exact_asset(channel, candidate, canonical_name=False):
         raise ValueError("source response is not a valid supported image")
     ext = detected_image_extension(raw, mime, fmt, url)
     slug = source.slug(channel)
-    digest = hashlib.sha256(raw).hexdigest()[:10]
+    digest = hashlib.sha256(raw).hexdigest()[:20]
     # Keep channel logos repository-local without adding the prohibited
     # Nvision prefix. The digest prevents collisions between regional variants.
     filename = f"{slug}{ext}" if canonical_name else f"{slug}-{digest}{ext}"
@@ -985,10 +985,10 @@ def main():
                     report_rows.append((playlist, line_number, channel, basename, "", source_name or "external lookup", "", "", "Download/validation failed: " + str(exc)[:150]))
                     new_file = None
 
-            # Only for International entries, use explicitly labelled, channel-specific
-            # fallback art after exact/local/attributable source lookup fails. Adult
-            # rows were excluded above; fallback art is not represented as official.
-            if ALLOW_GENERATED_FALLBACKS and not new_file and playlist == "International-Playlist.m3u" and not is_adult_entry:
+            # Use explicitly labelled, channel-specific fallback art for active entries
+            # only after exact/local/attributable source lookup fails. Adult rows were
+            # excluded above; review queues remain available for manual verification.
+            if ALLOW_GENERATED_FALLBACKS and not new_file and not is_adult_entry and not is_review_entry:
                 fallback_file = make_generated_fallback(channel, attrs.get("group-title", ""))
                 if fallback_file:
                     new_file = fallback_file
@@ -1111,7 +1111,7 @@ def main():
         )
     report += ["", "## Quality rule", "",
                "- Exact, clean local assets are searched first; then curated, source-attributed external logo URLs are downloaded and validated.",
-               "- If no exact authentic asset is available, leave the logo missing and flag the entry for manual review; generated artwork is disabled by default.",
+               "- If no exact authentic asset is available, active entries receive clearly labelled unofficial fallback artwork; Review/Backup/New Channels/New Backups queues remain available for manual verification.",
                "- Contaminated, mismatched, placeholder, generic, and generated-fallback assets are never assigned to tvg-logo.",
                "- Nvision-branded filenames are prohibited in all maintained playlists.",
                "- Original playlist entries, channel metadata, categories, and stream URLs are preserved.", ""]
