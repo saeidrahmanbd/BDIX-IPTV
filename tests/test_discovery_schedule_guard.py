@@ -176,6 +176,25 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         todays = guard.runs_for_date(list(merged.values()), self.today)
         self.assertEqual(guard.first_run_id(todays), 79)
 
+    def test_watchdog_dispatch_count_ignores_user_manual_retries(self):
+        runs = [
+            {"event": "workflow_dispatch", "actor": {"login": "github-actions[bot]"}},
+            {"event": "workflow_dispatch", "actor": {"login": "saeidrahmanbd"}},
+            {"event": "schedule", "actor": {"login": "github-actions[bot]"}},
+            {"event": "workflow_dispatch", "actor": {"login": "github-actions[bot]"}},
+        ]
+        self.assertEqual(guard.watchdog_dispatch_count(runs), 2)
+
+    def test_watchdog_dispatch_limit_is_two_per_day(self):
+        self.assertEqual(guard.MAX_WATCHDOG_DISPATCHES_PER_DAY, 2)
+        runs = [
+            {"event": "workflow_dispatch", "actor": {"login": "github-actions[bot]"}},
+            {"event": "workflow_dispatch", "actor": {"login": "github-actions[bot]"}},
+        ]
+        self.assertGreaterEqual(
+            guard.watchdog_dispatch_count(runs), guard.MAX_WATCHDOG_DISPATCHES_PER_DAY
+        )
+
     def test_watchdog_can_retry_when_all_daily_attempts_failed(self):
         runs = [
             {
