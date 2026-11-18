@@ -584,7 +584,8 @@ class StrictWorldwideDiscoveryTests(unittest.TestCase):
 
     def test_missing_local_logo_does_not_remove_review_candidate(self):
         block = ['#EXTINF:-1 tvg-name="Cinema World" group-title="New Channels",Cinema World', "https://example.org/cinema.m3u8"]
-        kept, repaired, removed = discovery.localize_discovery_queue_logos([block], {block[1]}, [])
+        with tempfile.TemporaryDirectory() as tmp, patch.object(discovery, "LOGOS", Path(tmp) / "logos"):
+            kept, repaired, removed = discovery.localize_discovery_queue_logos([block], {block[1]}, [])
         self.assertEqual(len(kept), 1)
         self.assertEqual((repaired, removed), (0, 0))
 
