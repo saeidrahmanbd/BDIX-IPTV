@@ -721,6 +721,8 @@ def is_valid_local_logo_reference(value, allow_generated_fallback=False):
         return False
     if value.startswith("logos/"):
         candidate = Path(urllib.parse.unquote(value))
+    elif value.startswith(RAW_BASE):
+        candidate = Path("logos") / urllib.parse.unquote(value[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])
     else:
         return False
     try:
@@ -732,7 +734,6 @@ def is_valid_local_logo_reference(value, allow_generated_fallback=False):
 
 
 def find_registered_logo(playlist_name, meta, channel):
-    retired_fallback_assets = replace_orphaned_generated_fallback_assets(iptv_indexes, history_index)
     try:
         registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
     except (OSError, UnicodeError, json.JSONDecodeError):
@@ -879,6 +880,8 @@ def replace_orphaned_generated_fallback_assets(iptv_indexes, history_index):
                 logo = (attrs.get("tvg-logo") or "").strip()
                 if logo.startswith("logos/"):
                     active_paths.add(Path(urllib.parse.unquote(logo)).as_posix())
+                elif logo.startswith(RAW_BASE):
+                    active_paths.add((Path("logos") / urllib.parse.unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])).as_posix())
     report = [
         "# Generated Fallback Asset Replacement", "",
         "Orphaned fabricated logos were checked against exact local assets and source-attributed sources.",
@@ -1152,6 +1155,7 @@ def main():
         registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
     except (OSError, UnicodeError, json.JSONDecodeError):
         registry = {}
+    retired_fallback_assets = replace_orphaned_generated_fallback_assets(iptv_indexes, history_index)
     registry_before = json.dumps(registry, ensure_ascii=False, indent=2) + "\n"
     registry.update(registry_updates)
     # Heal any stale fallback record (wrong status, a source URL, or missing
