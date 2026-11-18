@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-11-18 07:38 UTC**_
+_Last generated: **2026-11-18 10:04 UTC**_
 
 Source playlist SHA-256: **a43b9174e373427cdfb91993bb9814e7ce7f3a1f12a95189d62e964e6ee5ad44**
 
@@ -54,7 +54,7 @@ Source playlist SHA-256: **a43b9174e373427cdfb91993bb9814e7ce7f3a1f12a95189d62e9
 ## EPG
 - EPG IDs audited: **714**
 - Mapped: **434 (60.8%)**
-- Current/future programme coverage: **384/714 (53.8%)**
+- Current/future programme coverage: **386/714 (54.1%)**
 - No mapping: **280**
 - EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against both current playlist inventories)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
@@ -63,7 +63,7 @@ Source playlist SHA-256: **a43b9174e373427cdfb91993bb9814e7ce7f3a1f12a95189d62e9
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-18T03:24:09.019889+00:00** | **STALE** |
-| EPG coverage / two-playlist inventory | **2026-11-18T07:38:15+00:00** | **CURRENT** |
+| EPG coverage / two-playlist inventory | **2026-11-18T10:04:12+00:00** | **CURRENT** |
 | Stream health | **2026-11-18T03:25:29+00:00** | **CURRENT** |
 | Pre-publish gate | **2026-11-18T03:24:09+00:00** | **STALE** |
 
