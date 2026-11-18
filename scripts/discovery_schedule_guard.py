@@ -246,6 +246,12 @@ def should_current_run_execute(
         if str(run.get("status") or "").casefold() != "completed"
     ]
     if manual:
+        # Logo localization has its own shared main-branch writer concurrency
+        # queue. A stale/guard-only workflow_run can remain pending indefinitely;
+        # it must not suppress an explicit owner-requested logo repair. The
+        # writer queue still serializes the actual playlist mutation.
+        if workflow_file == "playlist-logo-localization.yml":
+            return True
         return not active_others
 
     # EPG has a fixed 06:10 Asia/Dhaka daily refresh. Push/workflow_run events
