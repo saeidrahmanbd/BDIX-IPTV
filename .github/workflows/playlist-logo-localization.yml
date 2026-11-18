@@ -1,4 +1,5 @@
 name: Playlist Logo Repair and Localization
+# [manual-logo-localization] Owner-requested retry after correcting post-conversion provenance lookup.
 # Localize authentic repository-local logos after discovery; playlist stream URLs remain protected.
 
 on:
