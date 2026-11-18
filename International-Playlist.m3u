@@ -18,7 +18,7 @@ https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF9
 https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8
 #EXTINF:-1 tvg-id="BanglaVision.bd" tvg-language="ben" channel-id="BanglaVision.bd" tvg-logo="logos/bangla-vision-b1aa5e5d03.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Bangla Vision",Bangla Vision
 https://tvsen5.aynaott.com/banglavision/index.m3u8
-#EXTINF:-1 tvg-id="BanglarKontho24.bd@SD" channel-id="BanglarKontho24.bd@SD" tvg-language="ben" tvg-country="BD" group-title="Bangladesh" tvg-name="Banglar Kontho 24",Banglar Kontho 24
+#EXTINF:-1 tvg-logo="logos/banglar-kontho.png" tvg-id="BanglarKontho24.bd@SD" channel-id="BanglarKontho24.bd@SD" tvg-language="ben" tvg-country="BD" group-title="Bangladesh" tvg-name="Banglar Kontho 24",Banglar Kontho 24
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/banglarkontho.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="BijoyTV.bd" channel-id="BijoyTV.bd" tvg-language="ben" tvg-logo="logos/bijoy-tv.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Bijoy TV",Bijoy TV
 https://tvsen6.aynaott.com/N8Xbo5vdwVU6sF43RsW0/index.m3u8
@@ -98,7 +98,7 @@ https://tvsen5.aynaott.com/ba47dHpDk3Se/index.m3u8
 http://116.204.149.16/satv/index.m3u8
 #EXTINF:-1 tvg-id="SRK.bd" channel-id="SRK.bd" tvg-language="ben" tvg-logo="logos/srk.png" tvg-country="BD" group-title="Bangladesh" tvg-name="SRK",SRK
 https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="vision.24.bd" channel-id="vision.24.bd" tvg-language="ben" tvg-country="BD" group-title="Bangladesh" tvg-name="Vision 24",Vision 24
+#EXTINF:-1 tvg-logo="logos/vision.png" tvg-id="vision.24.bd" channel-id="vision.24.bd" tvg-language="ben" tvg-country="BD" group-title="Bangladesh" tvg-name="Vision 24",Vision 24
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/vision24.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="AamarBangla.in" channel-id="AamarBangla.in" tvg-language="ben" tvg-logo="logos/aamar-bangla.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="Aamar Bangla",Aamar Bangla
 http://115.187.41.216:8080/hls/amarbangla/index.m3u8
@@ -170,7 +170,7 @@ https://amg01117-amg01117c1-amgplt0029.playout.now3.amagi.tv/playlist/amg01117-a
 https://livetv.tarangplus.in/alankar-origin/live/playlist.m3u8
 #EXTINF:-1 tvg-id="AllTimeMovies.in@SD" tvg-language="und" channel-id="AllTimeMovies.in@SD" tvg-logo="logos/all-time-movies.png" tvg-country="IN" group-title="Indian Movies" tvg-name="All Time Movies",All Time Movies
 https://fta.ektv.in/live/54/54_0.m3u8
-#EXTINF:-1 tvg-id="custom.asian-sony-max-2" channel-id="custom.asian-sony-max-2" tvg-language="und" tvg-country="IN" group-title="Indian Movies" tvg-name="Asian Sony Max 2",Asian Sony Max 2
+#EXTINF:-1 tvg-logo="logos/sony-max-2.png" tvg-id="custom.asian-sony-max-2" channel-id="custom.asian-sony-max-2" tvg-language="und" tvg-country="IN" group-title="Indian Movies" tvg-name="Asian Sony Max 2",Asian Sony Max 2
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125795.ts
 #EXTINF:-1 tvg-id="AsianetMovies.in@SD" tvg-language="und" tvg-logo="logos/asianet-movies.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Asianet Movies",Asianet Movies
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies.smil/chunklist_b1928000.m3u8
@@ -218,7 +218,7 @@ https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8
 https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8
 #EXTINF:-1 tvg-id="GoldminesMovies.in@SD" channel-id="GoldminesMovies.in@SD" tvg-language="hin" tvg-logo="logos/goldmines-movies.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Goldmines Movies",Goldmines Movies
 https://cdn.pishow.tv/ott/live/1461/master.m3u8
-#EXTINF:-1 tvg-id="goldmines.movies.2.in" channel-id="goldmines.movies.2.in" tvg-language="hin" tvg-country="IN" group-title="Indian Movies" tvg-name="Goldmines Movies 2",Goldmines Movies 2
+#EXTINF:-1 tvg-logo="logos/goldmines-movies.png" tvg-id="goldmines.movies.2.in" channel-id="goldmines.movies.2.in" tvg-language="hin" tvg-country="IN" group-title="Indian Movies" tvg-name="Goldmines Movies 2",Goldmines Movies 2
 https://cdn.pishow.tv/ott/live/1460/master.m3u8
 #EXTINF:-1 tvg-id="new.hindi.movie.classic.24" channel-id="new.hindi.movie.classic.24" tvg-language="hin" tvg-logo="logos/hindi-movie-classic-24.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Hindi Movie Classic 24",Hindi Movie Classic 24
 https://vods2.aynaott.com/hindimovies/index.m3u8
@@ -296,7 +296,7 @@ https://live.cmr24.fm/TVI/HD/chunks.m3u8
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2069c593-3c07-4d62-9d44-746be5c3a5d6/manifest.m3u8
 #EXTINF:-1 tvg-id="TheMovieClub.in@HD" channel-id="TheMovieClub.in@HD" tvg-language="hin" tvg-logo="logos/the-movie-club.png" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club",The Movie Club
 https://d2tiq0lnb179mp.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/TMC_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf&pb_type=pb-gp7rpz72nscfl_cloudfront
-#EXTINF:-1 tvg-id="TheMovieClub.in@Plus2" tvg-language="hin" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club +2",The Movie Club +2
+#EXTINF:-1 tvg-logo="logos/the-movie-club-2.png" tvg-id="TheMovieClub.in@Plus2" tvg-language="hin" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club +2",The Movie Club +2
 https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ytipwjqub3kf8/TMC2_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf
 #EXTINF:-1 tvg-id="TollyTV.in@HD" tvg-language="tel" tvg-logo="logos/tolly-tv.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Tolly TV",Tolly TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8
@@ -388,7 +388,7 @@ https://mumt01.tangotv.in/O5aw8Zn3RAJMUSIXKANDA/index.m3u8
 https://cdn.pishow.tv/ott/live/1073/master.m3u8
 #EXTINF:-1 tvg-id="RajMusixTelugu.in@SD" tvg-language="tel" tvg-logo="logos/raj-musix-telugu-720p-e8fd0fb178.png" tvg-country="IN" group-title="Indian Music" tvg-name="Raj Musix Telugu",Raj Musix Telugu
 https://cdn.pishow.tv/ott/live/1213/master.m3u8
-#EXTINF:-1 tvg-id="RangRangoli.in" channel-id="RangRangoli.in" tvg-language="hin" tvg-country="IN" group-title="Indian Music" tvg-name="Rang Rangoli",Rang Rangoli
+#EXTINF:-1 tvg-logo="logos/rang-rangoli-custom.png" tvg-id="RangRangoli.in" channel-id="RangRangoli.in" tvg-language="hin" tvg-country="IN" group-title="Indian Music" tvg-name="Rang Rangoli",Rang Rangoli
 https://live.ekamraott.com/rr/rr/video.m3u8
 #EXTINF:-1 tvg-id="SagaMusic.in" channel-id="SagaMusic.in" tvg-language="hin" tvg-logo="logos/saga-music.png" tvg-country="IN" group-title="Indian Music" tvg-name="Saga Music",Saga Music
 https://amg01412-xiaomiasia-sagamusic-xiaomi-h54ye.amagi.tv/playlist/amg01412-xiaomiasia-sagamusic-xiaomi/playlist.m3u8
@@ -462,7 +462,7 @@ https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
 https://cdn.pishow.tv/ott/live/229/master.m3u8
 #EXTINF:-1 tvg-id="Colors.in@SD" tvg-language="und" tvg-logo="logos/colors-3cfc323d7c.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Colors",Colors
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ColorsAPAC.m3u8
-#EXTINF:-1 tvg-id="ColorsGujarati.in@SD" tvg-language="guj" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Colors Gujarati",Colors Gujarati
+#EXTINF:-1 tvg-logo="logos/international/colors-gujarati-396p.png" tvg-id="ColorsGujarati.in@SD" tvg-language="guj" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Colors Gujarati",Colors Gujarati
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ColorsGujarati.m3u8
 #EXTINF:-1 tvg-id="ColorsKannada.in@HD" tvg-language="kan" tvg-logo="logos/colors-kannada.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Colors Kannada",Colors Kannada
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorskannadahd1.smil/playlist.m3u8
@@ -668,7 +668,7 @@ https://mumt01.tangotv.in/O5aw8Zn3RAMDHENU/index.m3u8
 https://cdn.pishow.tv/ott/live/10017/master.m3u8
 #EXTINF:-1 tvg-id="Rengoni.in@SD" tvg-language="asm" tvg-logo="logos/rengoni.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Rengoni",Rengoni
 https://streams.tangotv.in/RENGONI/ORIGIN/index.m3u8
-#EXTINF:-1 tvg-id="custom.rengoni-tv" channel-id="custom.rengoni-tv" tvg-language="asm" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Rengoni TV",Rengoni TV
+#EXTINF:-1 tvg-logo="logos/rengoni.png" tvg-id="custom.rengoni-tv" channel-id="custom.rengoni-tv" tvg-language="asm" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Rengoni TV",Rengoni TV
 https://d1msejlow1t3l4.cloudfront.net/fta/rengonitv/playlist.m3u8?ads.channel=6649&ads.content_custom_1_param=FAST&ads.user=2&ads.content_custom_3_param=YuppFastIndia&ads.network_name=yuppfast&ads.app_store_url=&ads.app_bundle=&ads.content_livestream=1&ads.content_genre=ENTERTAINMENT&ads.channel_name=RengoniTV&ads.language=ASS&ads.user=0
 #EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-language="hin" channel-id="RongeenTV.in@SD" tvg-logo="logos/rongeen-tv.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Rongeen TV",Rongeen TV
 https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8
@@ -1620,7 +1620,7 @@ http://92.114.85.87:8008/play/a009/index.m3u8
 http://88.212.15.50/live/test_filmbox_family_hun_atk_1200/playlist.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusEmotion.pl@Poland" tvg-language="bul;cze;eng;hun;pol;ron" tvg-logo="logos/filmbox-plus-emotion-f7ccc464ab.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Emotion",FILMBOX+ Emotion
 http://92.114.85.87:8008/play/a008/index.m3u8
-#EXTINF:-1 tvg-id="custom.filmbox-emotion-adria-pl-movie" channel-id="custom.filmbox-emotion-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Emotion Adria",FILMBOX+ Emotion Adria
+#EXTINF:-1 tvg-logo="logos/international/filmbox-emotion-adria.png" tvg-id="custom.filmbox-emotion-adria-pl-movie" channel-id="custom.filmbox-emotion-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Emotion Adria",FILMBOX+ Emotion Adria
 https://webtvstream.bhtelecom.ba/filmbox_extra.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusFestival.pl@SD" tvg-language="eng;pol;rus" tvg-logo="logos/filmbox-plus-festival-ad4ed8d509.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Festival",FILMBOX+ Festival
 https://dash3.antik.sk/live/test_filmbox_arthouse_atk_1200/playlist.m3u8
@@ -1628,9 +1628,9 @@ https://dash3.antik.sk/live/test_filmbox_arthouse_atk_1200/playlist.m3u8
 http://92.114.85.87:8018/play/a009/index.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusHits.pl@Poland" tvg-language="cze;eng;pol;ron" tvg-logo="logos/filmbox-plus-hits-9c634ae1fd.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Hits",FILMBOX+ Hits
 http://92.114.85.87:8008/play/a00a/index.m3u8
-#EXTINF:-1 tvg-id="custom.filmbox-hits-adria-pl-movie" channel-id="custom.filmbox-hits-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Hits Adria",FILMBOX+ Hits Adria
+#EXTINF:-1 tvg-logo="logos/international/filmbox-hits-adria.png" tvg-id="custom.filmbox-hits-adria-pl-movie" channel-id="custom.filmbox-hits-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Hits Adria",FILMBOX+ Hits Adria
 https://webtvstream.bhtelecom.ba/filmbox_premium.m3u8
-#EXTINF:-1 tvg-id="custom.filmbox-love-crime-adria-pl-movie" channel-id="custom.filmbox-love-crime-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Love & Crime Adria",FILMBOX+ Love & Crime Adria
+#EXTINF:-1 tvg-logo="logos/international/filmbox-love-crime-adria.png" tvg-id="custom.filmbox-love-crime-adria-pl-movie" channel-id="custom.filmbox-love-crime-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Love & Crime Adria",FILMBOX+ Love & Crime Adria
 https://webtvstream.bhtelecom.ba/filmbox_stars.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusLoveCrime.pl@Magyar" tvg-language="und" tvg-logo="logos/filmbox-plus-love-and-crime-magyar-a83544bb95.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Love & Crime Magyar",FILMBOX+ Love & Crime Magyar
 http://88.212.7.14/live/test_filmbox_plus_hun_atk_1200/playlist.m3u8
@@ -2386,7 +2386,7 @@ http://23.237.104.106:8080/USA_MTV/index.m3u8
 http://23.237.104.106:8080/USA_MTV_LIVE/index.m3u8
 #EXTINF:-1 tvg-id="MyCinema.us" channel-id="MyCinema.us" tvg-language="eng" tvg-logo="logos/my-cinema.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="My Cinema",My Cinema
 https://mytime-tcl.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="MyTimeMovieNetwork.us@SD" channel-id="MyTimeMovieNetwork.us@SD" tvg-language="eng" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="MyTime Movie Network (US)",MyTime Movie Network (US)
+#EXTINF:-1 tvg-logo="logos/mytime-movie-network.png" tvg-id="MyTimeMovieNetwork.us@SD" channel-id="MyTimeMovieNetwork.us@SD" tvg-language="eng" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="MyTime Movie Network (US)",MyTime Movie Network (US)
 https://mytime-tcl.amagi.tv/1080p-en-cc/index.m3u8
 #EXTINF:-1 tvg-id="NOST.us@SD" tvg-language="eng" tvg-logo="logos/nost-5d9e212ea1.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="NOST",NOST
 https://a-cdn.klowdtv.com/live2/nost_720p/playlist.m3u8
@@ -2582,7 +2582,7 @@ http://45.167.1.138:8000/play/a06m
 https://d38e11bvtr8xdq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-jlzlygsoesvmj/Vevo70sand80s_GB.m3u8
 #EXTINF:-1 tvg-id="Vevo90s00s.us" channel-id="Vevo90s00s.us" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo '90s & '00s",Vevo '90s & '00s
 https://amg00056-amg00056c12-rakuten-it-3240.playouts.now.amagi.tv/playlist/amg00056-vevotvfast-vevo90sand00sit-rakutenit/playlist.m3u8
-#EXTINF:-1 tvg-id="GBBD2300001C0" channel-id="GBBD2300001C0" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo Hip Hop & R&B",Vevo Hip Hop & R&B
+#EXTINF:-1 tvg-logo="logos/vevo-hip-hop-r-b.png" tvg-id="GBBD2300001C0" channel-id="GBBD2300001C0" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo Hip Hop & R&B",Vevo Hip Hop & R&B
 https://d7i20u8nlyf1b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lymqk2na77cwn/VevoHipHopRB_GB.m3u8
 #EXTINF:-1 tvg-id="VevoLatino.us@SD" tvg-language="eng" tvg-logo="logos/vevo-latino-3e213deca7.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo Latino",Vevo Latino
 https://amg00056-amg00056c13-rakuten-es-3246.playouts.now.amagi.tv/playlist.m3u8
@@ -2642,7 +2642,7 @@ http://176.126.166.43:1935/live/312kino/playlist.m3u8
 https://stream.sen-gt.com/A2iMusic/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="AlbKanaleMusicTV.al@HD" tvg-language="sqi" tvg-logo="logos/albkanale-music-tv-hd-1080p.png" tvg-country="AL" tvg-content="Music" group-title="International" tvg-name="AlbKanale Music TV",AlbKanale Music TV
 https://albportal.net/albkanalemusic.m3u8
-#EXTINF:-1 tvg-id="AlloCine.cm@SD" tvg-language="eng;fre" tvg-country="CM" tvg-content="Movies" group-title="International" tvg-name="Allo Cine",Allo Cine
+#EXTINF:-1 tvg-logo="logos/allo-cine-1080p.png" tvg-id="AlloCine.cm@SD" tvg-language="eng;fre" tvg-country="CM" tvg-content="Movies" group-title="International" tvg-name="Allo Cine",Allo Cine
 https://d1yl6bf4hrzbr0.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-5km3zs4zs9sp0/allo.m3u8
 #EXTINF:-1 tvg-id="custom.amusic-channel-ng-music" channel-id="custom.amusic-channel-ng-music" tvg-language="eng" tvg-logo="logos/amusic-channel-480p-59acbdb4c0.png" tvg-country="NG" tvg-content="Music" group-title="International" tvg-name="AMusic Channel",AMusic Channel
 https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_021/Stream/playlist.m3u8
@@ -2850,7 +2850,7 @@ https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8
 https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="JamunaTV.bd" channel-id="JamunaTV.bd" tvg-language="ben" tvg-logo="logos/jamuna-tv.png" tvg-country="BD" group-title="News" tvg-name="Jamuna TV",Jamuna TV
 https://tvsen6.aynaott.com/KGdZEdA7qQ43dmPkgk1j/index.m3u8
-#EXTINF:-1 tvg-id="custom.bdix.news21-bangla" tvg-language="und" tvg-country="BD" group-title="News" tvg-name="NEWS 21 BANGLA",NEWS 21 BANGLA
+#EXTINF:-1 tvg-logo="logos/news-21-bangla-tv.png" tvg-id="custom.bdix.news21-bangla" tvg-language="und" tvg-country="BD" group-title="News" tvg-name="NEWS 21 BANGLA",NEWS 21 BANGLA
 http://103.190.133.68:1935/news21live/live/playlist.m3u8
 #EXTINF:-1 tvg-id="News24.bd" channel-id="News24.bd" tvg-language="ben" tvg-logo="logos/news-24.png" tvg-country="BD" group-title="News" tvg-name="News 24",News 24
 https://tvsen6.aynaott.com/cdgr3tw6WoG7JyRnLbi0/index.m3u8
