@@ -39,7 +39,7 @@ def main():
     local_refs = broken_local = 0
     for row in rows:
         logo = row["meta"].get("tvg-logo", "").strip()
-        if not logo.startswith(RAW_BASE):
+        if not logo.startswith("logos/"):
             continue
         local_refs += 1
         rel = urlsplit(logo).path.split("/logos/", 1)[-1]
