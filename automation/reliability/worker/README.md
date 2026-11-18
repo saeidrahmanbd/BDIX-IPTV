@@ -27,7 +27,7 @@ Dispatch is hard-gated by `MODE === "active"`, today's Bangladesh date, an eligi
 
 - D1 binding: `RELIABILITY_DB`
 - Variables: `REGISTRY_JSON`, `MODE=shadow`, `GITHUB_APP_ID`, `GITHUB_INSTALLATION_ID`
-- Secrets: `GITHUB_APP_PRIVATE_KEY`, `RECONCILE_BEARER_TOKEN`
+- Secrets: `GITHUB_APP_PRIVATE_KEY`, `RECONCILE_BEARER_TOKEN`, `HEALTHCHECKS_PING_URL` (the private HTTPS ping URL from the dedicated Healthchecks.io check).
 - Cron: every minute
 
 The GitHub App needs repository Actions: write and Metadata: read-only. It does not need Contents: write. The installation token is short-lived, kept only in memory, and never returned by the Worker.
@@ -36,7 +36,9 @@ The GitHub App needs repository Actions: write and Metadata: read-only. It does 
 
 - `GET /healthz`: health and current mode.
 - `POST /github-check`: validates App installation and Actions permission.
-- `POST /reconcile`: writes obligations and evaluates run/job history.
+- `POST /reconcile`: writes obligations and evaluates run/job history. A successful reconciliation sends a Healthchecks.io success ping; a reconciliation failure sends a `/fail` ping before returning HTTP 503.
+- The one-minute scheduled handler uses the same heartbeat wrapper. Heartbeats are sent only after reconciliation completes; `/healthz` and `/github-check` do not count as successful reconciliation heartbeats.
+- Configure `HEALTHCHECKS_PING_URL` as a Cloudflare Worker secret. Never commit or share the private URL. If the secret is absent, reconciliation remains functional but Healthchecks receives no heartbeat.
 
 The POST endpoints require the existing bearer token in the Authorization header. Never expose the bearer token, App private key, JWT, or installation token.
 
