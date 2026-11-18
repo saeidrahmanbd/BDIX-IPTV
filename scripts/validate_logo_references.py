@@ -1,246 +1,195 @@
-"""Tests for the final logo validation, using the production validation module on both playlists."""
-import contextlib
-import io
+#!/usr/bin/env python3
+"""Final logo-reference validation for both playlists.
+
+This is the exact logic the logo localization workflow runs after repair,
+conversion and manifest generation. It lives in a module (not workflow YAML) so
+the regression tests exercise the same code that gates publication.
+
+Both playlists are always validated and reported before the run fails, so one
+playlist's failure cannot hide problems in the other.
+"""
+import argparse
 import json
+import re
 import sys
-import tempfile
-import unittest
 from pathlib import Path
+from urllib.parse import unquote
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+import logo_provenance
+import repair_playlist_logos as logo_repair
 
-import validate_logo_references as validator  # noqa: E402
-import repair_playlist_logos as repair  # noqa: E402
-from logo_test_support import (  # noqa: E402
-    FALLBACK_NOTE, INTL, IPTV, SAMSUNG_URL, extinf, fallback_record, playlist, verified_record, write_png,
-)
+PLAYLISTS = ["IPTV-Playlist.m3u", "International-Playlist.m3u"]
+BASE = "logos/"
+RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+REGISTRY_PATH = "reports/logo-source-registry.json"
+REVIEW_GROUPS = {"review", "new channels", "new backups", "not playing"}
+PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
+BLOCKED_PREFIXES = ("placeholder-", "generic-", "unknown-", "unidentified-")
 
-MC, MC_ID = "The Movie Club +2", "TheMovieClub.in@Plus2"
-FB_PNG = "logos/generated-fallback-the-movie-club-plus-2-c82c401f.png"
-FB_SVG = FB_PNG[:-4] + ".svg"
-
-
-def reg_key(playlist_name, tvg_id, name, logo):
-    return f"{playlist_name}|{tvg_id}|{name}|{logo}"
-
-
-class Tree:
-    """A throwaway repository tree with both playlists, assets and a registry."""
-
-    def __init__(self, iptv_entries=(), intl_entries=(), registry=None, assets=()):
-        self.tmp = tempfile.TemporaryDirectory()
-        self.root = Path(self.tmp.name)
-        (self.root / IPTV).write_text(playlist(*iptv_entries), encoding="utf-8")
-        (self.root / INTL).write_text(playlist(*intl_entries), encoding="utf-8")
-        (self.root / "reports").mkdir()
-        (self.root / "reports/logo-source-registry.json").write_text(json.dumps(registry or {}), encoding="utf-8")
-        for asset in assets:
-            write_png(self.root / asset)
-
-    def run(self, **kwargs):
-        out = io.StringIO()
-        try:
-            with contextlib.redirect_stdout(out):
-                summaries = validator.main(["--root", str(self.root)] + kwargs.get("argv", []))
-            return summaries, None, out.getvalue()
-        except SystemExit as exc:
-            return None, str(exc), out.getvalue()
-
-    def close(self):
-        self.tmp.cleanup()
+EXPLICIT_BLOCKLIST = frozenset({
+    "atn-news.png", "a-sports-5485adff.png", "a-sports-hd.png", "bein-sports-3.png",
+    "bangla-tv.png", "btv-news.png", "colors.png", "duronto-tv.png",
+    "duronto-tv-1ad55c95.png", "ekushey-tv.png", "global-tv.png", "green-tv.png",
+    "mohona-tv.png", "nagorik-tv.png", "nagorik.png", "nick-bangla.png",
+    "sananda-tv.png", "sananda.png", "star-gold-select.png", "star-gold.png",
+    "star-plus.png", "zee-tv.png", "tom-and-jerry.png", "arirang-tv.png",
+})
 
 
-class FinalValidationTests(unittest.TestCase):
-    def make(self, **kwargs):
-        tree = Tree(**kwargs)
-        self.addCleanup(tree.close)
-        return tree
-
-    def invalid_lines(self, output):
-        return [json.loads(line.split(" ", 1)[1]) for line in output.splitlines()
-                if line.startswith("INVALID_LOGO_REFERENCE ")]
-
-    def test_exact_the_movie_club_plus_2_failure_is_rejected_with_precise_reason(self):
-        stale = {"status": "third_party_verified", "source_url": SAMSUNG_URL,
-                 "notes": "Generated fallback artwork (unofficial; no exact logo source found) "
-                          "IPTV-org public logo dataset Source page: " + SAMSUNG_URL}
-        tree = self.make(
-            iptv_entries=[extinf(MC, MC_ID, logo=FB_PNG)],
-            registry={reg_key(IPTV, MC_ID, MC, FB_SVG): stale}, assets=[FB_PNG])
-        _, error, output = tree.run()
-        self.assertIn("Logo validation failed", error)
-        (item,) = self.invalid_lines(output)
-        self.assertEqual(item["reasons"], ["fallback_registry_status_conflict"])
-        self.assertEqual(item["provenance_match"], "same-asset-stem-format-conversion")
-        self.assertEqual(item["provenance_status"], "third_party_verified")
-        self.assertFalse(item["fallback_is_disclosed"])
-
-    def test_same_channel_with_correct_fallback_record_passes(self):
-        tree = self.make(
-            iptv_entries=[extinf(MC, MC_ID, logo=FB_PNG)],
-            registry={reg_key(IPTV, MC_ID, MC, FB_SVG): fallback_record()}, assets=[FB_PNG])
-        summaries, error, _ = tree.run()
-        self.assertIsNone(error)
-        self.assertEqual(summaries[IPTV]["invalid_or_blocked_refs"], 0)
-
-    def test_valid_third_party_verified_logo_passes(self):
-        tree = self.make(
-            iptv_entries=[extinf("Real Channel", "real.in", logo="logos/real-channel.png")],
-            registry={reg_key(IPTV, "real.in", "Real Channel", "logos/real-channel.png"): verified_record()},
-            assets=["logos/real-channel.png"])
-        summaries, error, _ = tree.run()
-        self.assertIsNone(error)
-        self.assertEqual(summaries[IPTV]["entries"], 1)
-
-    def test_undisclosed_or_unmatched_fallbacks_are_rejected(self):
-        cases = {
-            "no record": {},
-            "missing phrase": {reg_key(IPTV, MC_ID, MC, FB_SVG): fallback_record("Unofficial fallback only.")},
-            "source url": {reg_key(IPTV, MC_ID, MC, FB_SVG): fallback_record(source_url=SAMSUNG_URL)},
-        }
-        for label, registry in cases.items():
-            with self.subTest(label):
-                tree = self.make(iptv_entries=[extinf(MC, MC_ID, logo=FB_PNG)], registry=registry, assets=[FB_PNG])
-                _, error, output = tree.run()
-                self.assertIsNotNone(error)
-                self.assertEqual(len(self.invalid_lines(output)), 1)
-
-    def test_ambiguous_conflicting_records_reject_the_fallback(self):
-        registry = {
-            reg_key(IPTV, MC_ID, MC, FB_SVG): fallback_record(),
-            reg_key(IPTV, MC_ID, MC, FB_PNG[:-4] + ".jpg"): fallback_record(FALLBACK_NOTE + " Different record."),
-        }
-        tree = self.make(iptv_entries=[extinf(MC, MC_ID, logo=FB_PNG)], registry=registry, assets=[FB_PNG])
-        _, error, output = tree.run()
-        self.assertIsNotNone(error)
-        self.assertEqual(self.invalid_lines(output)[0]["provenance_match"], "ambiguous")
-
-    def test_duplicate_identical_records_do_not_break_a_valid_fallback(self):
-        registry = {
-            reg_key(IPTV, MC_ID, MC, FB_SVG): fallback_record(),
-            reg_key(IPTV, MC_ID, MC, FB_PNG[:-4] + ".jpg"): fallback_record(),
-        }
-        tree = self.make(iptv_entries=[extinf(MC, MC_ID, logo=FB_PNG)], registry=registry, assets=[FB_PNG])
-        self.assertIsNone(tree.run()[1])
-
-    def test_placeholder_generic_and_blocklisted_assets_are_rejected(self):
-        for logo, reason in (
-            ("logos/placeholder-btv-news.png", "blocked_filename_prefix"),
-            ("logos/generic-news.png", "blocked_filename_prefix"),
-            ("logos/unknown-chan.png", "blocked_filename_prefix"),
-            ("logos/zee-tv.png", "explicit_blocklist"),
-            ("logos/chan-generic-logo.png", "placeholder_or_generic_filename"),
-        ):
-            with self.subTest(logo=logo):
-                tree = self.make(iptv_entries=[extinf("Chan", "c.1", logo=logo)], assets=[logo])
-                _, error, output = tree.run()
-                self.assertIsNotNone(error)
-                self.assertIn(reason, self.invalid_lines(output)[0]["reasons"])
-
-    def test_every_repository_generic_asset_is_rejected(self):
-        name = sorted(repair.GENERIC_ASSETS)[0]
-        logo = "logos/" + name
-        tree = self.make(iptv_entries=[extinf("Chan", "c.1", logo=logo)], assets=[logo])
-        self.assertIn("explicit_blocklist", self.invalid_lines(tree.run()[2])[0]["reasons"])
-
-    def test_missing_asset_file_is_rejected(self):
-        tree = self.make(iptv_entries=[extinf("Chan", "c.1", logo="logos/gone.png")])
-        _, error, output = tree.run()
-        self.assertIsNotNone(error)
-        self.assertEqual(self.invalid_lines(output)[0]["reasons"], ["missing_asset_file"])
-
-    def test_non_png_external_nvision_and_corrupt_png_are_rejected(self):
-        tree = self.make(iptv_entries=[extinf("Chan", "c.1", logo="logos/chan.svg")], assets=["logos/chan.svg"])
-        self.assertEqual(tree.run()[1].count("non_png_refs\": 1"), 1)
-        tree = self.make(iptv_entries=[extinf("Chan", "c.1", logo="https://example.com/chan.png")])
-        self.assertIn("\"nonrepository_logo_refs\": 1", tree.run()[1])
-        tree = self.make(iptv_entries=[extinf("Chan", "c.1", logo="logos/nvisionbd-chan.png")],
-                         assets=["logos/nvisionbd-chan.png"])
-        self.assertIn("\"nvision_refs\": 1", tree.run()[1])
-        tree = self.make(iptv_entries=[extinf("Chan", "c.1", logo="logos/fake.png")])
-        (tree.root / "logos").mkdir()
-        (tree.root / "logos/fake.png").write_bytes(b"<html>not a png</html>" * 10)
-        self.assertIn("invalid_png_signature", self.invalid_lines(tree.run()[2])[0]["reasons"])
-
-    def test_review_and_missing_logos_are_counted_not_failed(self):
-        tree = self.make(iptv_entries=[
-            extinf("Active", "a.1"), extinf("Queued", "q.1", group="Review")])
-        summaries, error, _ = tree.run()
-        self.assertIsNone(error)
-        self.assertEqual(summaries[IPTV]["missing_logo_metadata"], 1)
-        self.assertEqual(summaries[IPTV]["review_missing_logo_metadata"], 1)
-
-    def test_both_playlists_are_validated_even_when_the_first_fails(self):
-        tree = self.make(
-            iptv_entries=[extinf("Chan", "c.1", logo="logos/gone.png")],
-            intl_entries=[extinf("Intl", "i.1", logo="logos/also-gone.png")])
-        _, error, output = tree.run()
-        self.assertIn(IPTV, error)
-        self.assertIn(INTL, error)
-        self.assertEqual({item["playlist"] for item in self.invalid_lines(output)}, {IPTV, INTL})
-
-    def test_international_playlist_fallback_is_validated_with_its_own_record(self):
-        intl_entry = extinf(MC, MC_ID, logo=FB_PNG)
-        good = self.make(intl_entries=[intl_entry], assets=[FB_PNG],
-                         registry={reg_key(INTL, MC_ID, MC, FB_SVG): fallback_record()})
-        self.assertIsNone(good.run()[1])
-        # A record belonging to the other playlist must not satisfy this playlist.
-        wrong = self.make(intl_entries=[intl_entry], assets=[FB_PNG],
-                          registry={reg_key(IPTV, MC_ID, MC, FB_SVG): fallback_record()})
-        self.assertIsNotNone(wrong.run()[1])
+def normalize_newlines(text):
+    return text.replace("\r\n", "\n").replace("\r", "\n")
 
 
-class NonLogoContentProtectionTests(unittest.TestCase):
-    def test_non_logo_content_must_be_byte_for_byte_identical(self):
-        entries = [extinf("Chan", "c.1", logo="logos/chan.png")]
-        tree = Tree(iptv_entries=entries, intl_entries=[extinf("Intl", "i.1")],
-                    registry={reg_key(IPTV, "c.1", "Chan", "logos/chan.png"): verified_record()},
-                    assets=["logos/chan.png"])
-        self.addCleanup(tree.close)
-        baselines = tree.root / "baseline"
-        baselines.mkdir()
-        for name in (IPTV, INTL):
-            (baselines / (name + ".nonlogo")).write_text(
-                validator.strip_logo_attributes((tree.root / name).read_text(encoding="utf-8")), encoding="utf-8")
-
-        _, error, _ = tree.run(argv=["--baseline-dir", str(baselines)])
-        self.assertIsNone(error)
-
-        # Changing only a logo attribute is allowed; changing a stream URL is not.
-        text = (tree.root / IPTV).read_text(encoding="utf-8")
-        (tree.root / IPTV).write_text(text.replace("logos/chan.png", "logos/chan2.png"), encoding="utf-8")
-        write_png(tree.root / "logos/chan2.png")
-        self.assertIsNone(tree.run(argv=["--baseline-dir", str(baselines)])[1])
-
-        (tree.root / IPTV).write_text(text.replace("example.invalid/live.m3u8", "example.invalid/other.m3u8"),
-                                      encoding="utf-8")
-        _, error, _ = tree.run(argv=["--baseline-dir", str(baselines)])
-        self.assertEqual(error, "Non-logo playlist content changed: " + IPTV)
-
-    def test_strip_logo_attributes_changes_nothing_but_logos(self):
-        original = playlist(extinf("Chan", "c.1", logo="logos/a.png"))
-        stripped = validator.strip_logo_attributes(original)
-        self.assertNotIn("tvg-logo", stripped)
-        self.assertEqual(stripped, validator.strip_logo_attributes(stripped))
-        self.assertIn("https://example.invalid/live.m3u8", stripped)
+def strip_logo_attributes(text):
+    """Playlist text with every tvg-logo attribute removed (protected-content view)."""
+    return re.sub(r'\s+tvg-logo="[^"]*"', "", normalize_newlines(text))
 
 
-class RepositoryPlaylistInvariantTests(unittest.TestCase):
-    """Run the real final validation against the committed playlists."""
+def blocked_filenames():
+    return set(EXPLICIT_BLOCKLIST) | set(logo_repair.BAD_ASSETS) | set(logo_repair.GENERIC_ASSETS)
 
-    def test_committed_playlists_have_no_external_nvision_or_non_png_references(self):
-        registry = validator.load_registry(ROOT / validator.REGISTRY_PATH)
-        for name in validator.PLAYLISTS:
-            with self.subTest(playlist=name):
-                text = (ROOT / name).read_text(encoding="utf-8-sig")
-                summary = validator.validate_playlist(name, text, registry, root=ROOT)["summary"]
-                self.assertEqual(summary["nonrepository_logo_refs"], 0)
-                self.assertEqual(summary["nvision_refs"], 0)
-                self.assertEqual(summary["non_png_refs"], 0)
-                self.assertEqual(summary["invalid_or_blocked_refs"], 0)
+
+def has_png_signature(path):
+    try:
+        with open(path, "rb") as stream:
+            return stream.read(len(PNG_SIGNATURE)) == PNG_SIGNATURE
+    except OSError:
+        return False
+
+
+def validate_playlist(name, text, registry, root=Path("."), blocked=None):
+    """Validate one playlist's logo references.
+
+    Returns ``{"summary": {...}, "invalid": [diagnostic, ...]}``.
+    """
+    root = Path(root)
+    blocked = blocked_filenames() if blocked is None else blocked
+    current = normalize_newlines(text)
+    entries = [line for line in current.splitlines() if line.startswith("#EXTINF:")]
+    missing = review_missing = external = nvision = broken = adult_ignored = non_png = 0
+    invalid = []
+
+    for line in entries:
+        meta = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
+        group = (meta.get("group-title") or "").strip().casefold()
+        channel_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
+        label = line.rsplit(",", 1)[-1].strip() if "," in line else (meta.get("tvg-name") or "").strip()
+        if logo_repair.is_adult_playlist_entry(name, group, channel_id, logo_repair.norm_key(label)):
+            adult_ignored += 1
+            continue
+
+        found = re.search(r'tvg-logo="([^"]*)"', line)
+        logo = found.group(1).strip() if found else ""
+        if not logo:
+            if group in REVIEW_GROUPS:
+                review_missing += 1
+            else:
+                missing += 1
+            continue
+        if logo.startswith(BASE):
+            rel = unquote(logo[len(BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
+        elif logo.startswith(RAW_BASE):
+            rel = unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
+        else:
+            external += 1
+            continue
+        asset = root / "logos" / rel
+        if asset.suffix.casefold() != ".png":
+            non_png += 1
+        filename = asset.name.casefold()
+        if filename.startswith("nvisionbd-"):
+            nvision += 1
+
+        channel_name = line.rsplit(",", 1)[-1].strip()
+        record, match = logo_provenance.resolve_provenance(
+            registry, name, logo_provenance.entry_identity(meta), channel_name, logo
+        )
+        verdict = logo_provenance.classify_logo(record, match, logo)
+
+        reasons = []
+        if not asset.is_file():
+            reasons.append("missing_asset_file")
+        elif asset.suffix.casefold() == ".png" and not has_png_signature(asset):
+            reasons.append("invalid_png_signature")
+        if filename in blocked:
+            reasons.append("explicit_blocklist")
+        if filename.startswith(BLOCKED_PREFIXES):
+            reasons.append("blocked_filename_prefix")
+        if verdict["is_generated_fallback"]:
+            reasons.extend(verdict["problems"])
+        if re.search(r"(?:placeholder|generic-logo)", filename, re.I):
+            reasons.append("placeholder_or_generic_filename")
+        if reasons:
+            broken += 1
+            invalid.append({
+                "playlist": name, "channel": channel_name,
+                "tvg_id": (meta.get("tvg-id") or meta.get("channel-id") or "").strip(),
+                "logo": logo, "filename": filename, "reasons": reasons,
+                "asset_exists": asset.is_file(),
+                "provenance_match": match,
+                "provenance_status": record.get("status", ""),
+                "provenance_notes": record.get("notes", ""),
+                "is_generated_fallback": verdict["is_generated_fallback"],
+                "fallback_is_disclosed": verdict["fallback_is_disclosed"],
+            })
+
+    summary = {
+        "entries": len(entries), "missing_logo_metadata": missing,
+        "review_missing_logo_metadata": review_missing,
+        "adult_entries_ignored": adult_ignored,
+        "nonrepository_logo_refs": external, "nvision_refs": nvision,
+        "invalid_or_blocked_refs": broken, "non_png_refs": non_png,
+    }
+    return {"summary": summary, "invalid": invalid}
+
+
+def summary_failed(summary):
+    return bool(
+        summary["nonrepository_logo_refs"] or summary["nvision_refs"]
+        or summary["invalid_or_blocked_refs"] or summary["non_png_refs"]
+    )
+
+
+def load_registry(path):
+    path = Path(path)
+    return json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", default=".", help="repository root (default: current directory)")
+    parser.add_argument("--registry", default=None, help="provenance registry (default: reports/logo-source-registry.json)")
+    parser.add_argument(
+        "--baseline-dir", default=None,
+        help="directory holding <playlist>.nonlogo baselines; non-logo content must match them exactly",
+    )
+    args = parser.parse_args(argv)
+    root = Path(args.root)
+    registry = load_registry(args.registry or root / REGISTRY_PATH)
+    blocked = blocked_filenames()
+
+    summaries, failures = {}, []
+    for name in PLAYLISTS:
+        text = normalize_newlines((root / name).read_text(encoding="utf-8-sig"))
+        if args.baseline_dir:
+            baseline = (Path(args.baseline_dir) / (name + ".nonlogo")).read_text(encoding="utf-8")
+            if strip_logo_attributes(text) != baseline:
+                raise SystemExit("Non-logo playlist content changed: " + name)
+        result = validate_playlist(name, text, registry, root=root, blocked=blocked)
+        for item in result["invalid"]:
+            print("INVALID_LOGO_REFERENCE " + json.dumps(item, ensure_ascii=False))
+        summaries[name] = result["summary"]
+        if name == PLAYLISTS[0] and result["summary"]["missing_logo_metadata"]:
+            print("::warning::Authentic local logo unavailable for some main-playlist rows; "
+                  "leaving those logo fields empty for manual review: " + json.dumps(result["summary"]))
+        if summary_failed(result["summary"]):
+            failures.append(name + " " + json.dumps(result["summary"]))
+
+    print(json.dumps(summaries, indent=2))
+    if failures:
+        raise SystemExit("Logo validation failed: " + "; ".join(failures))
+    return summaries
 
 
 if __name__ == "__main__":
-    unittest.main()
+    main()
