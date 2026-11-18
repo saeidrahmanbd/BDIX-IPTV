@@ -490,6 +490,18 @@ def wait_for_epg_runs_to_settle(
     return runs
 
 
+MAX_WATCHDOG_DISPATCHES_PER_DAY = 2
+
+
+def watchdog_dispatch_count(runs: list[dict[str, Any]]) -> int:
+    """Count only automatic watchdog dispatches, not owner-requested manual retries."""
+    return sum(
+        1 for run in runs
+        if str(run.get("event") or "").casefold() == "workflow_dispatch"
+        and str((run.get("actor") or {}).get("login") or "").casefold() == "github-actions[bot]"
+    )
+
+
 def watchdog(workflow_files: list[str]) -> int:
     if os.environ.get("GITHUB_EVENT_NAME", "").casefold() == "push":
         print("Push-triggered workflows own this commit; watchdog will not dispatch duplicates.")
@@ -527,14 +539,25 @@ def watchdog(workflow_files: list[str]) -> int:
                 f"conclusion={newest.get('conclusion')}."
             )
             continue
+        automatic_dispatches = watchdog_dispatch_count(todays)
+        if automatic_dispatches >= MAX_WATCHDOG_DISPATCHES_PER_DAY:
+            print(
+                f"Recovery circuit breaker OPEN for {workflow_file} on {target_date}: "
+                f"{automatic_dispatches} automatic watchdog dispatches already ran "
+                f"(limit {MAX_WATCHDOG_DISPATCHES_PER_DAY}). No further dispatch will be sent today; "
+                "the next scheduled Bangladesh-day cycle may retry after investigation."
+            )
+            continue
         if todays:
             print(
                 f"Retrying {workflow_file}: today's prior attempts all ended unsuccessfully "
-                f"({len(todays)} run(s)); dispatching recovery run."
+                f"({len(todays)} run(s)); automatic recovery dispatch "
+                f"{automatic_dispatches + 1}/{MAX_WATCHDOG_DISPATCHES_PER_DAY}."
             )
         print(
             f"No active or successful required job exists for {workflow_file} on Bangladesh date {target_date}; "
-            f"dispatching the repository's official workflow on {DEFAULT_BRANCH}."
+            f"dispatching recovery attempt {automatic_dispatches + 1}/{MAX_WATCHDOG_DISPATCHES_PER_DAY} "
+            f"on {DEFAULT_BRANCH}."
         )
         client.dispatch(workflow_file)
         print(f"Dispatch accepted for {workflow_file}.")
