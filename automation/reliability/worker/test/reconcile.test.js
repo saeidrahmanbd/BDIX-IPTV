@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {dhakaDate,addCalendarDays,expectedUtc,evaluateWorkflowDay,recoveryPlan,canDispatchSameDay} from "../src/index.js";
+import {dhakaDate,addCalendarDays,expectedUtc,evaluateWorkflowDay,recoveryPlan,canDispatchSameDay,sendHealthchecksPing} from "../src/index.js";
 test("Dhaka local date is stable across UTC midnight",()=>{
   assert.equal(dhakaDate(new Date("2026-11-15T18:30:00Z")),"2026-11-16");
 });
@@ -85,4 +85,30 @@ test("newer failed run cannot be masked by an older successful run",()=>{
   assert.equal(r.state,"MANUAL_REVIEW");
   assert.equal(r.last_error_code,"workflow_failed");
   assert.equal(r.run.id,23);
+});
+
+
+test("Healthchecks heartbeat is optional when no private ping URL is configured",async()=>{
+  assert.deepEqual(await sendHealthchecksPing({}),{configured:false,pinged:false});
+});
+test("Healthchecks heartbeat sends HTTPS success ping without exposing the URL",async()=>{
+  let requested="";
+  const result=await sendHealthchecksPing({HEALTHCHECKS_PING_URL:"https://hc-ping.com/private-check-id"},
+    "success",async url=>{requested=url;return {ok:true};});
+  assert.deepEqual(result,{configured:true,pinged:true});
+  assert.equal(requested,"https://hc-ping.com/private-check-id");
+});
+test("Healthchecks failure ping uses the provider fail endpoint",async()=>{
+  let requested="";
+  await sendHealthchecksPing({HEALTHCHECKS_PING_URL:"https://hc-ping.com/private-check-id"},
+    "fail",async url=>{requested=url;return {ok:true};});
+  assert.equal(requested,"https://hc-ping.com/private-check-id/fail");
+});
+test("Healthchecks rejects non-provider URLs",async()=>{
+  await assert.rejects(()=>sendHealthchecksPing({HEALTHCHECKS_PING_URL:"https://example.com/ping"}),
+    /private HTTPS hc-ping.com URL/);
+});
+test("Healthchecks non-2xx responses fail the heartbeat operation",async()=>{
+  await assert.rejects(()=>sendHealthchecksPing({HEALTHCHECKS_PING_URL:"https://hc-ping.com/private-check-id"},
+    "success",async()=>({ok:false,status:503})),/Healthchecks ping failed/);
 });

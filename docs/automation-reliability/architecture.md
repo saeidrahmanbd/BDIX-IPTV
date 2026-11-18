@@ -167,11 +167,13 @@ Before production enablement, demonstrate:
 
 ### Phase 2 implementation status (shadow Worker)
 
-The shadow Worker source is under `automation/reliability/worker/`. It provides a one-minute Cron Trigger and a bearer-protected `POST /reconcile` endpoint that share the same idempotent reconciliation function. It creates expected obligation rows for the current Bangladesh date and the next two dates, using the registry's local schedule and UTC conversion. It emits an append-only `OBLIGATION_CREATED` event only when a new obligation row is inserted.
+The deployed shadow Worker is under `automation/reliability/worker/`. It has a one-minute Cloudflare Cron Trigger and a bearer-protected `POST /reconcile` endpoint. Both call the same idempotent reconciliation function and use the dedicated D1 ledger. The Worker authenticates as the repository-scoped GitHub App, reads workflow runs and required-job results, and records expected obligations and reconciliation events. Dispatch remains hard-gated by `MODE=active`; production must remain in `MODE=shadow` until the acceptance tests below pass.
 
-This phase is deliberately shadow-only: it does not call GitHub APIs, dispatch Actions, write repository contents, or publish playlists. The Worker configuration contains a placeholder D1 database ID and is not deployable until the owner creates a dedicated database and configures secrets. The external cron, GitHub App, and Healthchecks integration are not activated by this PR. The initial endpoint uses a bearer secret; timestamp/nonce replay protection, rate limiting, production dispatch, run reconciliation, completion artifacts, and independent publication verification remain later reviewed steps. A heartbeat is sent only after successful ledger reconciliation when a Healthchecks ping URL is configured.
+The secondary cron-job.org monitor calls the protected reconciliation endpoint. A successful reconciliation now sends a Healthchecks.io success ping; a failed reconciliation sends the check's `/fail` ping and returns HTTP 503 to the caller. The Cloudflare scheduled handler uses the same heartbeat behavior. Configure `HEALTHCHECKS_PING_URL` as a Cloudflare Worker secret containing the private HTTPS ping URL. The URL must never be committed or exposed. `/healthz` and `/github-check` do not count as reconciliation heartbeats.
 
-The D1 migration is maintained alongside the Worker. Apply it only to the dedicated reliability database after reviewing the generated schema; do not point this Worker at any production playlist data store.
+The repository's Wrangler production D1 name and the Cloudflare dashboard's displayed D1 name must be reconciled against the actual Cloudflare database ID before another deployment. Do not change the database binding based on a display-name comparison alone. The Worker must continue to fail closed if D1 is unavailable. The D1 ledger is operational state and must not be reset or replaced during this correction.
+
+The current implementation does not yet provide versioned completion artifacts or independent publication verification. Workflow run/job verification is not equivalent to proof that the expected playlist or EPG publication was produced. Those controls remain required before controlled dispatch can be considered.
 
 ## Rollback
 
