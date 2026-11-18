@@ -126,6 +126,9 @@ def logo_issue(info):
         return ""
     if logo.startswith("logos/"):
         return check_local(Path(unquote(logo)))
+    if logo.startswith(RAW_BASE):
+        relative = unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])
+        return check_local(LOGOS / relative)
     if logo.startswith(("http://", "https://")):
         return "external"
     return "other"
@@ -578,7 +581,8 @@ for issue in ["missing","broken-local","unsupported-format","invalid-dimensions"
     lines.append(f"- {issue}: **{logo_counts[issue]}**")
 lines += ["", "## External Logo Review", ""]
 if logo_warnings:
-    for name, cid, issue, logo in logo_warnings[:200]: lines.append(f"- {name} [{cid}] — {logo}")
+    for name, cid, group, issue, logo in logo_warnings[:200]:
+        lines.append(f"- {name} [{cid}] ({group or 'Uncategorized'}) — {logo}")
     if len(logo_warnings) > 200: lines.append(f"- ... {len(logo_warnings)-200} additional external logo references omitted from report.")
 else: lines.append("None.")
 lines += ["", "## Protected Primary Entries", ""]

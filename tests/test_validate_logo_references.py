@@ -94,6 +94,16 @@ class FinalValidationTests(unittest.TestCase):
         self.assertIsNone(error)
         self.assertEqual(summaries[IPTV]["entries"], 1)
 
+    def test_canonical_github_raw_logo_url_is_repository_local(self):
+        logo = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/real-channel.png"
+        tree = self.make(
+            iptv_entries=[extinf("Real Channel", "real.in", logo=logo)],
+            registry={reg_key(IPTV, "real.in", "Real Channel", logo): verified_record()},
+            assets=["logos/real-channel.png"])
+        summaries, error, _ = tree.run()
+        self.assertIsNone(error)
+        self.assertEqual(summaries[IPTV]["nonrepository_logo_refs"], 0)
+
     def test_undisclosed_or_unmatched_fallbacks_are_rejected(self):
         cases = {
             "no record": {},

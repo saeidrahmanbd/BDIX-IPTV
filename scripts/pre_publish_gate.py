@@ -12,7 +12,7 @@ from logo_asset_naming import is_blocked_logo_basename
 from restore_protected_review import is_authorized_removal
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
 EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups"}; REVIEW_QUEUES={"New Channels","New Backups"}
-LOCAL_BASE="logos/"; ATTR=re.compile(r'([\w-]+)="([^"]*)"')
+LOCAL_BASE="logos/"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"; ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 RAW_NAME_TAG=re.compile(r"\s*(?:\[[^]]*(?:geo-blocked|geo blocked)[^]]*\]|\((?:\d{3,4}p|\d{3,4}i|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}p|\d{3,4}i))\s*$",re.I)
 def attrs(s): return dict(ATTR.findall(s))
 def identity_key(value):
@@ -29,9 +29,12 @@ def parse(text):
     return out
 def referenced_logo_relative_path(logo):
     """Return a safe path beneath logos/; remote URL references are not local."""
-    if not logo.startswith("logos/"):
+    if logo.startswith(RAW_BASE):
+        relative = unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
+    elif logo.startswith(LOCAL_BASE):
+        relative = unquote(logo[len(LOCAL_BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
+    else:
         return None
-    relative = unquote(logo[len("logos/"):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
     if not relative:
         return None
     candidate = Path(relative)
@@ -61,7 +64,7 @@ def logo_audit(entries):
         if not logo:
             (review_missing if group in {"Review","New Channels","New Backups","Not Playing"} else missing).append(name)
             continue
-        if not logo.startswith("logos/"): external.append(name)
+        if referenced_logo_relative_path(logo) is None: external.append(name)
         filename=Path(logo.split("?",1)[0]).name.casefold()
         if group not in EXCLUDE and filename.startswith("generated-fallback-"): bad.append((name,group,filename))
         elif is_blocked_logo_basename(filename): bad.append((name,group,filename))

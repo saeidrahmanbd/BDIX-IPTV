@@ -58,6 +58,14 @@ class PrePublishLogoPathTests(unittest.TestCase):
         self.assertEqual(referenced_logo_relative_path(url), Path("international/music/channel.png"))
         self.assertEqual(referenced_logo_file(url, self.root), path.resolve())
 
+    def test_canonical_github_raw_url_resolves_to_local_logo(self):
+        path = self.root / "channel.png"
+        path.write_bytes(b"png")
+        url = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel.png"
+        self.assertEqual(referenced_logo_relative_path(url), Path("channel.png"))
+        self.assertEqual(referenced_logo_file(url, self.root), path.resolve())
+        self.assertEqual(logo_audit([("", {"tvg-name": "Channel", "group-title": "Bangladesh", "tvg-logo": url}, "")])[2], [])
+
     def test_identity_key_ignores_hd_sd_quality_suffix(self):
         self.assertEqual(identity_key("AnandaTV.bd@HD"), identity_key("AnandaTV.bd@SD"))
         self.assertEqual(identity_key("DangalTV.in@SD@dangal.tv"), identity_key("DangalTV.in@HD"))

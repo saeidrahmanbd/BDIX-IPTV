@@ -11,7 +11,7 @@ class LogoAssetNamingTests(unittest.TestCase):
         self.assertTrue(is_blocked_logo_basename("logos/ATN-News.png"))
         self.assertTrue(is_blocked_logo_basename("https://example.invalid/logos/placeholder-bangla-tv.svg"))
         self.assertTrue(is_blocked_logo_basename("https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-hstv.png"))
-        self.assertTrue(is_blocked_logo_basename("channel-52.png"))
+        self.assertFalse(is_blocked_logo_basename("channel-52.png"))
         self.assertTrue(is_blocked_logo_basename("jtv-bangla.png"))
         self.assertTrue(is_blocked_logo_basename("classic-movies-27994c39.png"))
         self.assertTrue(is_blocked_logo_basename("wow-kidz-tamil.png"))

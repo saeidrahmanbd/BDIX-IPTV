@@ -181,7 +181,10 @@ def main():
             # Missing authentic art is not a reason to discard a valid review candidate.
             # External or broken logo references remain prohibited below.
             continue
-        if logo.startswith("logos/"):
+        if logo.startswith(RAW_BASE):
+            rel = unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])
+            target = (LOGOS / rel).resolve()
+        elif logo.startswith("logos/"):
             rel = unquote(logo.split("?", 1)[0].split("#", 1)[0])
             target = Path(rel).resolve()
         else:
