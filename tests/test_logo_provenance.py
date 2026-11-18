@@ -45,6 +45,7 @@ class RunRepairInTempTree:
         os.chdir(self.tmp.name)
         Path("logos").mkdir()
         Path("reports").mkdir()
+        Path("reports/logo-source-registry.json").write_text("{}", encoding="utf-8")
         Path(IPTV).write_text(playlist(extinf(MOVIE_CLUB, MOVIE_CLUB_ID)), encoding="utf-8")
         return self
 
@@ -81,12 +82,9 @@ class ExactMovieClubFailureTests(unittest.TestCase):
             {"side_effect": ValueError("source response is not a valid supported image")},
         ) as ctx:
             registry = ctx.run()
-        self.assertEqual(list(registry), [key(FB_SVG)])
-        record = registry[key(FB_SVG)]
-        self.assertEqual(record["status"], "generated_fallback")
-        self.assertEqual(record["source_url"], "")
-        self.assertNotIn("samsungcloud", record["notes"].casefold())
-        self.assertTrue(prov.notes_disclose_fallback(record["notes"]))
+        # Production policy forbids fabricated artwork when an exact source fails.
+        self.assertEqual(registry, {})
+        self.assertFalse(any(Path("logos").glob("generated-fallback-*")))
 
     def test_provenance_survives_svg_to_png_conversion_and_classifies_as_fallback(self):
         registry = {key(FB_SVG): prov.canonical_fallback_record()}

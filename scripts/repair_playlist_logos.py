@@ -732,6 +732,7 @@ def is_valid_local_logo_reference(value, allow_generated_fallback=False):
 
 
 def find_registered_logo(playlist_name, meta, channel):
+    retired_fallback_assets = replace_orphaned_generated_fallback_assets(iptv_indexes, history_index)
     try:
         registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
     except (OSError, UnicodeError, json.JSONDecodeError):
@@ -864,6 +865,76 @@ def make_generated_fallback(channel, category):
     destination.write_text(svg, encoding="utf-8")
     return filename if file_is_valid(destination) else None
 
+
+def replace_orphaned_generated_fallback_assets(iptv_indexes, history_index):
+    """Replace orphaned generated artwork with exact originals; retire unresolved fakes."""
+    active_paths = set()
+    for playlist in PLAYLISTS:
+        path = Path(playlist)
+        if not path.is_file():
+            continue
+        for line in path.read_text(encoding="utf-8-sig").splitlines():
+            if line.startswith("#EXTINF:"):
+                attrs, _ = parse_extinf(line)
+                logo = (attrs.get("tvg-logo") or "").strip()
+                if logo.startswith("logos/"):
+                    active_paths.add(Path(urllib.parse.unquote(logo)).as_posix())
+    report = [
+        "# Generated Fallback Asset Replacement", "",
+        "Orphaned fabricated logos were checked against exact local assets and source-attributed sources.",
+        "Unresolved fabricated artwork was retired rather than relabelled as an original.", "",
+        "| Former fallback | Action | Original asset / reason |",
+        "|---|---|---|",
+    ]
+    files = sorted((p for p in LOGOS.rglob("*") if p.is_file() and p.name.casefold().startswith("generated-fallback-")), key=lambda p:p.as_posix().casefold())
+    replaced = unresolved = retained = 0
+    retired = set()
+    for path in files:
+        rel = path.as_posix()
+        if rel in active_paths:
+            retained += 1
+            report.append("| " + rel + " | Retained | Still referenced by playlist |")
+            continue
+        slug = path.stem[len("generated-fallback-"): ]
+        slug = re.sub(r"-[a-f0-9]{8,}$", "", slug, flags=re.I)
+        slug = re.sub(r"-converted$", "", slug, flags=re.I)
+        channel = re.sub(r"[-_]+", " ", slug).strip()
+        original = None
+        reason = ""
+        try:
+            original = find_local_logo(channel)
+            if original:
+                reason = "Exact channel-name match in repository"
+        except Exception as exc:
+            reason = "Local lookup failed: " + str(exc)[:120]
+        if not original:
+            try:
+                candidate, source_name = candidate_for(channel, {}, iptv_indexes, history_index)
+                if candidate:
+                    original = download_exact_asset(channel, candidate, canonical_name=True)
+                    reason = source_name + ": " + candidate.get("page", candidate.get("url", ""))
+            except Exception as exc:
+                reason = "Source unavailable or invalid: " + str(exc)[:140]
+        if original and file_is_valid(LOGOS / original):
+            path.unlink()
+            replaced += 1
+            retired.add(rel)
+            report.append("| " + rel + " | Replaced | logos/" + original + " — " + reason.replace("|", "/") + " |")
+        else:
+            path.unlink()
+            unresolved += 1
+            retired.add(rel)
+            report.append("| " + rel + " | Fabricated artwork removed | No exact authentic original verified; " + (reason or "no matching source") + " |")
+    report += ["", "## Summary", "",
+        "- Fallback files found: **" + str(len(files)) + "**",
+        "- Replaced with original assets: **" + str(replaced) + "**",
+        "- Removed because no authentic original was verified: **" + str(unresolved) + "**",
+        "- Retained because still referenced: **" + str(retained) + "**", "",
+        "Playlist stream URLs and channel metadata are not changed by this asset-only cleanup.", ""]
+    Path("reports").mkdir(parents=True, exist_ok=True)
+    Path("reports/generated-fallback-replacement.md").write_text("\n".join(report), encoding="utf-8")
+    print(json.dumps({"fallback_files":len(files),"replaced":replaced,"removed_unverified":unresolved,"retained_active":retained}))
+    return retired
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -1087,6 +1158,11 @@ def main():
     # disclosure wording) so it cannot contradict the asset it describes. This runs
     # on every execution, so a legacy record is repaired even when nothing else changed.
     registry, healed_fallback_keys = logo_provenance.normalize_registry(registry)
+    if retired_fallback_assets:
+        registry = {key: value for key, value in registry.items() if not (
+            value.get("status") == "generated_fallback"
+            and Path(urllib.parse.urlparse(key.split("|", 3)[-1]).path).name in {Path(p).name for p in retired_fallback_assets}
+        )}
     if healed_fallback_keys:
         print(f"Normalized {len(healed_fallback_keys)} generated-fallback registry record(s).")
     registry_after = json.dumps(registry, ensure_ascii=False, indent=2) + "\n"

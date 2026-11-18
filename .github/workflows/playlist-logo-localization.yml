@@ -21,6 +21,7 @@ on:
       - scripts/convert_referenced_logos_to_png.py
       - scripts/logo_embedded_png.py
       - tests/test_logo_format_conversion.py
+      - tests/test_logo_provenance.py
       - tests/test_logo_embedded_png_recovery.py
       - tests/test_logo_asset_technical_quality.py
       - tests/test_logo_reference_audit.py
@@ -155,7 +156,7 @@ jobs:
           python scripts/convert_referenced_logos_to_png.py
           python scripts/repair_logo_asset_technical_quality.py --fix --max-dimension 1024 --max-bytes 153600
           python scripts/audit_logo_references.py --output reports/logo-reference-audit.json
-          python scripts/plan_duplicate_logo_cleanup.py --output reports/duplicate-logo-cleanup-plan.json
+          python scripts/plan_duplicate_logo_cleanup.py --output reports/duplicate-logo-cleanup-plan.json reports/generated-fallback-replacement.md
           python scripts/generate_logo_authenticity_manifest.py
           python scripts/validate_logo_references.py --baseline-dir /tmp
           git add IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json reports/logo-format-conversion.md reports/logo-asset-quality-audit.md reports/logo-reference-audit.json reports/duplicate-logo-cleanup-plan.json
