@@ -197,6 +197,12 @@ class InternationalStreamHealthTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "metadata/logo"):
             health.validate_metadata_preservation(source, damaged, set())
 
+    def test_blank_lines_do_not_count_as_stream_directive_changes(self):
+        info = row()
+        source = self.playlist(info) + "\n"
+        normalized = self.playlist(info)
+        health.validate_metadata_preservation(source, normalized, set())
+
     def test_structural_validator_rejects_duplicate_stream_urls(self):
         source = (
             "#EXTM3U\n"
