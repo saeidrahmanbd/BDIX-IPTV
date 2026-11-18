@@ -124,6 +124,10 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         self.assertIn(r"dvltv\.cc", audit)
         self.assertIn("[REDACTED]", audit)
 
+    def test_iptv_maintenance_does_not_run_unverified_external_logo_migrator(self):
+        workflow = (ROOT / ".github" / "workflows" / "iptv-maintenance.yml").read_text(encoding="utf-8")
+        self.assertNotIn("python scripts/migrate_external_logos_fixed.py", workflow)
+
     def test_adult_entries_are_explicitly_protected_from_maintenance(self):
         normalizer = (ROOT / "scripts/normalize_metadata.py").read_text(encoding="utf-8")
         logo_migration = (ROOT / "scripts/migrate_external_logos_fixed.py").read_text(encoding="utf-8")
