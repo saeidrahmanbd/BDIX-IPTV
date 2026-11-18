@@ -150,7 +150,7 @@ jobs:
 
           registry_path = Path("reports/logo-source-registry.json")
           registry = json.loads(registry_path.read_text(encoding="utf-8")) if registry_path.is_file() else {}
-          base = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+          base = "logos/"
           names = ["IPTV-Playlist.m3u", "International-Playlist.m3u"]
           blocked = {
               "atn-news.png", "a-sports-5485adff.png", "a-sports-hd.png", "bein-sports-3.png",
@@ -191,7 +191,7 @@ jobs:
                   if not logo.startswith(base):
                       external += 1
                       continue
-                  rel = unquote(urlparse(logo).path.split("/logos/", 1)[-1]).lstrip("/")
+                  rel = unquote(logo[len(base):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
                   asset = Path("logos") / rel
                   if asset.suffix.casefold() != ".png":
                       non_png += 1
