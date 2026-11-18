@@ -70,11 +70,9 @@ BAD_ASSETS = {
     "ten-tv-prime-ac43f0fa9e.png",
     "tv-one-uk-ac43f0fa9e.png",
 }
-# Generated fallback files are intentionally NOT generic/blocked assets.
-# They are accepted only by the workflow's separate provenance + disclosure
-# validation (generated_fallback status and explicit unofficial-logo notes).
-# The repair search still excludes the generated-fallback-* prefix, so these
-# files cannot be mistaken for authentic broadcaster artwork.
+# Generated fallback artwork is disabled: never invent channel logos.
+# If an authentic local or source-attributed logo cannot be verified, leave
+# the logo unresolved for manual review rather than assigning a fake mark.
 GENERIC_ASSETS = {
     "placeholder-btv-news.png",
     "placeholder-channel-1.png",
@@ -434,7 +432,7 @@ ADULT_BACKUP_CHANNEL_KEYS = {norm_key(name) for name in ADULT_BACKUP_CHANNEL_NAM
 # Use authentic broadcaster artwork first. As explicitly approved, create a clearly
 # labelled unofficial fallback only when every exact/local/attributable source fails.
 # Review/Backup/discovery queues remain untouched by fallback generation.
-ALLOW_GENERATED_FALLBACKS = True
+ALLOW_GENERATED_FALLBACKS = False
 
 
 def is_adult_playlist_entry(playlist, group_name, channel_id, channel_key):
@@ -994,9 +992,8 @@ def main():
                     report_rows.append((playlist, line_number, channel, basename, "", source_name or "external lookup", "", "", "Download/validation failed: " + str(exc)[:150]))
                     new_file = None
 
-            # Use explicitly labelled, channel-specific fallback art for active entries
-            # only after exact/local/attributable source lookup fails. Adult rows were
-            # excluded above; review queues remain available for manual verification.
+            # Do not fabricate artwork when authentic source lookup fails. Unresolved
+            # entries remain without a logo and are listed for manual verification.
             if ALLOW_GENERATED_FALLBACKS and not new_file and not is_adult_entry and not is_review_entry:
                 fallback_file = make_generated_fallback(channel, attrs.get("group-title", ""))
                 if fallback_file:
@@ -1122,7 +1119,7 @@ def main():
         )
     report += ["", "## Quality rule", "",
                "- Exact, clean local assets are searched first; then curated, source-attributed external logo URLs are downloaded and validated.",
-               "- If no exact authentic asset is available, active entries receive clearly labelled unofficial fallback artwork; Review/Backup/New Channels/New Backups queues remain available for manual verification.",
+               "- If no exact authentic asset is available, leave the logo unresolved for manual verification; never generate substitute artwork.",
                "- Contaminated, mismatched, placeholder, generic, and generated-fallback assets are never assigned to tvg-logo.",
                "- Nvision-branded filenames are prohibited in all maintained playlists.",
                "- Original playlist entries, channel metadata, categories, and stream URLs are preserved.", ""]
