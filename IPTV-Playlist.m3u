@@ -16,7 +16,7 @@ https://tvsen5.aynaott.com/atnbangla/index.m3u8
 https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="ATNNews.bd" tvg-name="ATN News" tvg-logo="logos/atn-news-e0442addb4.png" tvg-chno="5" channel-id="ATNNews.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",ATN News
 https://tvsen6.aynaott.com/da6WMXAk/index.m3u8
-#EXTINF:-1 tvg-id="ATVUSA.us@SD" tvg-name="ATV USA" channel-id="ATVUSA.us@SD" tvg-country="US" tvg-language="ben" tvg-chno="6" tvg-logo="logos/generated-fallback-atv-usa-a1c995c8.png" group-title="Bangladesh",ATV USA
+#EXTINF:-1 tvg-id="ATVUSA.us@SD" tvg-name="ATV USA" channel-id="ATVUSA.us@SD" tvg-country="US" tvg-language="ben" tvg-chno="6" group-title="Bangladesh",ATV USA
 http://cdn.live247stream.com/atvusa/tv/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.bdix.ayna-tv" tvg-name="Ayna TV" tvg-logo="logos/ayna-tv.png" tvg-chno="7" channel-id="custom.bdix.ayna-tv" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Ayna TV
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ayna.stream/tracks-v1a1/mono.m3u8
@@ -24,7 +24,7 @@ https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF9
 https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8
 #EXTINF:-1 tvg-id="BanglaVision.bd" tvg-name="Bangla Vision" tvg-logo="logos/bangla-vision-b1aa5e5d03.png" tvg-chno="9" channel-id="BanglaVision.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Bangla Vision
 https://tvsen5.aynaott.com/banglavision/index.m3u8
-#EXTINF:-1 tvg-id="BanglarKontho24.bd@SD" tvg-name="Banglar Kontho 24" channel-id="BanglarKontho24.bd@SD" tvg-country="BD" tvg-language="ben" tvg-chno="10" tvg-logo="logos/generated-fallback-banglar-kontho-24-c15b22e2.png" group-title="Bangladesh",Banglar Kontho 24
+#EXTINF:-1 tvg-id="BanglarKontho24.bd@SD" tvg-name="Banglar Kontho 24" channel-id="BanglarKontho24.bd@SD" tvg-country="BD" tvg-language="ben" tvg-chno="10" group-title="Bangladesh",Banglar Kontho 24
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/banglarkontho.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="BijoyTV.bd" tvg-name="Bijoy TV" tvg-logo="logos/bijoy-tv.png" tvg-chno="11" channel-id="BijoyTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Bijoy TV
 https://tvsen6.aynaott.com/N8Xbo5vdwVU6sF43RsW0/index.m3u8
@@ -68,7 +68,7 @@ https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF9
 https://deshitv.deshitv24.net/live/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="DoyelTV.ca@SD" tvg-name="Doyel TV" tvg-logo="logos/doyel-tv.png" tvg-chno="33" channel-id="DoyelTV.ca@SD" tvg-country="CA" tvg-language="ben" group-title="Bangladesh",Doyel TV
 https://3d46w.doyeltv.com/memfs/aa3aa6f7-ec12-41a2-8183-a891e157bbf8.m3u8
-#EXTINF:-1 tvg-id="DTVUSA.us@SD" tvg-name="DTV USA" channel-id="DTVUSA.us@SD" tvg-country="US" tvg-language="ben" tvg-chno="34" tvg-logo="logos/generated-fallback-dtv-usa-14ed8fdf.png" group-title="Bangladesh",DTV USA
+#EXTINF:-1 tvg-id="DTVUSA.us@SD" tvg-name="DTV USA" channel-id="DTVUSA.us@SD" tvg-country="US" tvg-language="ben" tvg-chno="34" group-title="Bangladesh",DTV USA
 https://cdn.dtvusa.com/dtv/index.m3u8
 #EXTINF:-1 tvg-id="EkattorTV.bd" tvg-name="Ekattor TV" tvg-logo="logos/ekattor-tv.png" tvg-chno="35" channel-id="EkattorTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Ekattor TV
 https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8
@@ -138,13 +138,13 @@ https://tvsen6.aynaott.com/4XcqdovJzbbC9WdJA9gk/index.m3u8
 https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="StarNews.bd" tvg-name="Star News" tvg-logo="logos/star-news-722ad595.png" tvg-chno="71" channel-id="StarNews.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Star News
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="bd.tbn.24.usa.bd" tvg-name="TBN 24 USA" tvg-chno="72" channel-id="bd.tbn.24.usa.bd" tvg-country="BD" tvg-language="ben" tvg-logo="logos/generated-fallback-tbn-24-usa-faca4a5d.png" group-title="Bangladesh",TBN 24 USA
+#EXTINF:-1 tvg-id="bd.tbn.24.usa.bd" tvg-name="TBN 24 USA" tvg-chno="72" channel-id="bd.tbn.24.usa.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",TBN 24 USA
 http://cdn01.palki.tv/live/TBN24-M/index.m3u8
-#EXTINF:-1 channel-id="ThikanaTV.us" tvg-id="ThikanaTV.us" tvg-name="Thikana TV" tvg-language="ben" tvg-country="US" tvg-logo="logos/generated-fallback-thikana-tv-04b6a60d.png" group-title="Bangladesh",Thikana TV
+#EXTINF:-1 channel-id="ThikanaTV.us" tvg-id="ThikanaTV.us" tvg-name="Thikana TV" tvg-language="ben" tvg-country="US" group-title="Bangladesh",Thikana TV
 https://5dd3981940faa.streamlock.net/thikanatv/thikanatv/playlist.m3u8
 #EXTINF:-1 tvg-id="TimeTelevision.us" tvg-name="Time Television" tvg-logo="logos/time-television.png" tvg-chno="73" channel-id="TimeTelevision.us" tvg-country="US" tvg-language="ben" group-title="Bangladesh",Time Television
 https://app.ncare.live/live-orgin/timetvusa.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="vision.24.bd" tvg-name="Vision 24" tvg-chno="74" channel-id="vision.24.bd" tvg-country="BD" tvg-language="ben" tvg-logo="logos/generated-fallback-vision-24-e6d5b090.png" group-title="Bangladesh",Vision 24
+#EXTINF:-1 tvg-id="vision.24.bd" tvg-name="Vision 24" tvg-chno="74" channel-id="vision.24.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Vision 24
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/vision24.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="AakaashAath.in@SD" tvg-name="Aakaash Aath" tvg-logo="logos/aakaash-aath.png" tvg-chno="75" channel-id="AakaashAath.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Aakaash Aath
 https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/index.m3u8
@@ -172,7 +172,7 @@ https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_360p/chunks.m3
 https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
 #EXTINF:-1 channel-id="JhankarTV.ca" tvg-logo="logos/jhankar-tv.png" tvg-id="JhankarTV.ca" tvg-name="Jhankar TV" tvg-chno="48" tvg-language="ben" tvg-country="CA" group-title="Indian Bangla",Jhankar TV
 https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8
-#EXTINF:-1 tvg-id="JTVBangla.in@SD" tvg-name="JTV Bangla" tvg-chno="86" channel-id="JTVBangla.in@SD" tvg-country="IN" tvg-language="ben" tvg-logo="logos/generated-fallback-jtv-bangla-4b30bfd9.png" group-title="Indian Bangla",JTV Bangla
+#EXTINF:-1 tvg-id="JTVBangla.in@SD" tvg-name="JTV Bangla" tvg-chno="86" channel-id="JTVBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",JTV Bangla
 http://103.67.97.45:81/0.ts
 #EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-logo="logos/khushboo-bangla.png" tvg-chno="87" channel-id="KhushbooBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Khushboo Bangla
 https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
@@ -262,7 +262,7 @@ https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8
 https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="GoldminesMovies.in@SD" tvg-name="Goldmines Movies" tvg-logo="logos/goldmines-movies.png" tvg-chno="130" channel-id="GoldminesMovies.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",Goldmines Movies
 https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8
-#EXTINF:-1 tvg-id="goldmines.movies.2.in" tvg-name="Goldmines Movies 2" tvg-chno="131" channel-id="goldmines.movies.2.in" tvg-country="IN" tvg-language="hin" tvg-logo="logos/generated-fallback-goldmines-movies-2-72e8603d.png" group-title="Indian Movies",Goldmines Movies 2
+#EXTINF:-1 tvg-id="goldmines.movies.2.in" tvg-name="Goldmines Movies 2" tvg-chno="131" channel-id="goldmines.movies.2.in" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",Goldmines Movies 2
 https://cdn.pishow.tv/ott/live/1460/master.m3u8
 #EXTINF:-1 tvg-id="new.hindi.movie.classic.24" tvg-name="Hindi Movie Classic 24" tvg-logo="logos/hindi-movie-classic-24.png" tvg-chno="132" channel-id="new.hindi.movie.classic.24" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",Hindi Movie Classic 24
 https://vods2.aynaott.com/hindimovies/index.m3u8
@@ -328,7 +328,7 @@ https://live.cmr24.fm/TVI/HD/chunks.m3u8
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2069c593-3c07-4d62-9d44-746be5c3a5d6/manifest.m3u8
 #EXTINF:-1 tvg-id="TheMovieClub.in@HD" tvg-name="The Movie Club" tvg-logo="logos/the-movie-club.png" tvg-chno="164" channel-id="TheMovieClub.in@HD" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",The Movie Club
 https://sis-global.prod.samsungtv.plus/v1/tvpprd/sc-mp2ar4ca425xo.m3u8
-#EXTINF:-1 tvg-id="TheMovieClub.in@Plus2" tvg-name="The Movie Club +2" tvg-chno="165" channel-id="TheMovieClub.in@Plus2" tvg-country="IN" tvg-language="hin" tvg-logo="logos/generated-fallback-the-movie-club-plus-2-c82c401f.png" group-title="Indian Movies",The Movie Club +2
+#EXTINF:-1 tvg-id="TheMovieClub.in@Plus2" tvg-name="The Movie Club +2" tvg-chno="165" channel-id="TheMovieClub.in@Plus2" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",The Movie Club +2
 https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ytipwjqub3kf8/TMC2_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf
 #EXTINF:-1 tvg-id="TollyTV.in" tvg-name="Tolly TV" tvg-logo="logos/tolly-tv.png" tvg-chno="166" channel-id="TollyTV.in" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",Tolly TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8
@@ -414,7 +414,7 @@ https://cdn.pishow.tv/ott/live/1073/master.m3u8
 https://cdn.pishow.tv/ott/live/1213/master.m3u8
 #EXTINF:-1 tvg-id="Ramdhenu.in@SD" tvg-name="Ramdhenu" tvg-logo="logos/ramdhenu.png" tvg-chno="209" channel-id="Ramdhenu.in@SD" tvg-country="IN" tvg-language="asm" group-title="Indian Music",Ramdhenu
 https://mumt01.tangotv.in/O5aw8Zn3RAMDHENU/mpegts
-#EXTINF:-1 tvg-id="RangRangoli.in" tvg-name="Rang Rangoli" tvg-chno="210" channel-id="RangRangoli.in" tvg-country="IN" tvg-language="hin" tvg-logo="logos/generated-fallback-rang-rangoli-876a5ca8.png" group-title="Indian Music",Rang Rangoli
+#EXTINF:-1 tvg-id="RangRangoli.in" tvg-name="Rang Rangoli" tvg-chno="210" channel-id="RangRangoli.in" tvg-country="IN" tvg-language="hin" group-title="Indian Music",Rang Rangoli
 https://live.ekamraott.com/rr/rr/video.m3u8
 #EXTINF:-1 tvg-id="SagaMusic.in" tvg-name="Saga Music" tvg-logo="logos/saga-music.png" tvg-chno="211" channel-id="SagaMusic.in" tvg-country="IN" tvg-language="hin" group-title="Indian Music",Saga Music
 https://amg01412-xiaomiasia-sagamusic-xiaomi-h54ye.amagi.tv/playlist/amg01412-xiaomiasia-sagamusic-xiaomi/playlist.m3u8
@@ -470,7 +470,7 @@ https://2-fss-2.streamhoster.com/pl_120/206508-3261972-1/playlist.m3u8
 https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
 #EXTINF:-1 tvg-id="Colors.in@HD" tvg-name="Colors" tvg-logo="logos/colors-3cfc323d7c.png" tvg-chno="238" channel-id="Colors.in@HD" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Colors
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ColorsAPAC.m3u8
-#EXTINF:-1 tvg-id="ColorsGujarati.in@SD" tvg-name="Colors Gujarati" tvg-chno="239" channel-id="ColorsGujarati.in@SD" tvg-country="IN" tvg-language="guj" tvg-logo="logos/colors-gujarati-9c6989199ef5b1e2c96d.png" group-title="Indian Entertainment",Colors Gujarati
+#EXTINF:-1 tvg-id="ColorsGujarati.in@SD" tvg-name="Colors Gujarati" tvg-chno="239" channel-id="ColorsGujarati.in@SD" tvg-country="IN" tvg-language="guj" group-title="Indian Entertainment",Colors Gujarati
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ColorsGujarati.m3u8
 #EXTINF:-1 tvg-id="ColorsKannada.in@SD" tvg-name="Colors Kannada" tvg-logo="logos/colors-kannada.png" tvg-chno="240" channel-id="ColorsKannada.in@SD" tvg-country="IN" tvg-language="kan" group-title="Indian Entertainment",Colors Kannada
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorskannadahd1.smil/playlist.m3u8
@@ -612,7 +612,7 @@ https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccda
 https://cdn.pishow.tv/ott/live/1017/master.m3u8
 #EXTINF:-1 tvg-id="MetroTV.in@SD" tvg-name="Metro TV" tvg-logo="logos/metro-tv.png" tvg-chno="309" channel-id="MetroTV.in@SD" tvg-country="IN" tvg-language="tel" group-title="Indian Entertainment",Metro TV
 https://mercury.streambridge.link:8042/telugu/metrotv/index.m3u8
-#EXTINF:-1 tvg-id="Mh1Prime.in@SD" tvg-name="MH 1 Prime" tvg-chno="310" channel-id="Mh1Prime.in@SD" tvg-country="IN" tvg-language="pan" tvg-logo="logos/generated-fallback-mh-1-prime-4ce6fcd0.png" group-title="Indian Entertainment",MH 1 Prime
+#EXTINF:-1 tvg-id="Mh1Prime.in@SD" tvg-name="MH 1 Prime" tvg-chno="310" channel-id="Mh1Prime.in@SD" tvg-country="IN" tvg-language="pan" group-title="Indian Entertainment",MH 1 Prime
 https://streams.tangotv.in/MHONE/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="MKSix.in" tvg-name="MK Six" tvg-logo="logos/mk-six.png" tvg-chno="311" channel-id="MKSix.in" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",MK Six
 https://mumt06.tangotv.in/qYyB8fXVMKSIX/index.m3u8
@@ -804,7 +804,7 @@ https://5def33c73f084e11a19ca77697d6b413.mediatailor.us-east-1.amazonaws.com/v1/
 https://436f59579436473e8168284cac5d725f.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Plex_RushByAMC/playlist.m3u8
 #EXTINF:-1 tvg-id="AXS.us" tvg-name="AXS TV" tvg-logo="logos/axs-tv-576p.png" channel-id="AXS.us" tvg-country="US" tvg-language="eng" tvg-chno="399" group-title="International",AXS TV
 https://tvsen3.aynaott.com/P2fJzfsg/index.m3u8
-#EXTINF:-1 tvg-id="custom.bbcworld" tvg-name="BBC World" tvg-chno="400" channel-id="custom.bbcworld" tvg-country="GB" tvg-language="eng" tvg-logo="logos/generated-fallback-bbc-world-4fe3c6c8.png" group-title="International",BBC World
+#EXTINF:-1 tvg-id="custom.bbcworld" tvg-name="BBC World" tvg-chno="400" channel-id="custom.bbcworld" tvg-country="GB" tvg-language="eng" group-title="International",BBC World
 https://tvsen1.aynaott.com/shn6jGTk/index.m3u8
 #EXTINF:-1 tvg-id="custom.bluestv" tvg-name="Blues TV" tvg-logo="logos/blues-tv.png" tvg-chno="401" channel-id="custom.bluestv" tvg-country="US" tvg-language="eng" group-title="International",Blues TV
 https://2-fss-2.streamhoster.com/pl_138/205510-3094608-1/playlist.m3u8
@@ -828,7 +828,7 @@ https://streams2.sofast.tv/sofastplayout/32eb332e-f644-46e5-ad91-e55ad80d14f7_0_
 https://m1b2.worldcast.tv/dancetelevisionone/2/dancetelevisionone.m3u8
 #EXTINF:-1 tvg-id="DWNews.de" tvg-name="DW News" tvg-logo="logos/dw-news.png" tvg-chno="411" channel-id="DWNews.de" tvg-country="DE" tvg-language="eng" group-title="International",DW News
 https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream02/streamPlaylist.m3u8
-#EXTINF:-1 tvg-id="EPIX.us@SD" tvg-name="EPIX" channel-id="EPIX.us@SD" tvg-country="US" tvg-language="eng" tvg-chno="412" tvg-logo="logos/generated-fallback-epix-f17e4bb1.png" group-title="International",EPIX
+#EXTINF:-1 tvg-id="EPIX.us@SD" tvg-name="EPIX" channel-id="EPIX.us@SD" tvg-country="US" tvg-language="eng" tvg-chno="412" group-title="International",EPIX
 https://tvsen3.aynaott.com/Ah3tLAfA/index.m3u8
 #EXTINF:-1 tvg-id="custom.eumusic" tvg-name="EU Music" tvg-logo="logos/eu-music-1080p-bd9e22bbe8.png" tvg-chno="413" channel-id="custom.eumusic" tvg-country="UA" tvg-language="ukr" group-title="International",EU Music
 http://stream.mcquack.net/261/index.m3u8
@@ -872,7 +872,7 @@ https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8
 https://mytimeuk-rakuten-samsung.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="MyTimeMovieNetwork.br" tvg-name="MyTime Movie Network (Brazil)" tvg-logo="logos/mytime-movie-network-brazil-0641ac6cd5.png" tvg-chno="433" channel-id="MyTimeMovieNetwork.br" tvg-country="BR" tvg-language="por" group-title="International",MyTime Movie Network (Brazil)
 https://appletree-mytime-samsungbrazil.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="MyTimeMovieNetwork.us@SD" tvg-name="MyTime Movie Network (US)" channel-id="MyTimeMovieNetwork.us@SD" tvg-country="US" tvg-language="eng" tvg-chno="434" tvg-logo="logos/generated-fallback-mytime-movie-network-us-963b964b.png" group-title="International",MyTime Movie Network (US)
+#EXTINF:-1 tvg-id="MyTimeMovieNetwork.us@SD" tvg-name="MyTime Movie Network (US)" channel-id="MyTimeMovieNetwork.us@SD" tvg-country="US" tvg-language="eng" tvg-chno="434" group-title="International",MyTime Movie Network (US)
 https://mytime-tcl.amagi.tv/1080p-en-cc/index.m3u8
 #EXTINF:-1 tvg-id="MyTimeMovieNetworkEast.us" tvg-name="MyTime Movie Network East (US)" tvg-logo="logos/mytime-movie-network-east-us-0641ac6cd5.png" tvg-chno="435" channel-id="MyTimeMovieNetworkEast.us" tvg-country="US" tvg-language="eng" group-title="International",MyTime Movie Network East (US)
 https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8
@@ -938,13 +938,13 @@ https://d2l4tng0wskzvn.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TRTMuzik.tr" tvg-name="TRT Müzik" tvg-logo="logos/trt-muzik.png" tvg-chno="466" channel-id="TRTMuzik.tr" tvg-country="TR" tvg-language="tur" group-title="International",TRT Müzik
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="custom.v2beat" tvg-name="V2 Beat" tvg-chno="467" channel-id="custom.v2beat" tvg-country="IT" tvg-language="ita" tvg-logo="logos/generated-fallback-v2-beat-4536e076.png" group-title="International",V2 Beat
+#EXTINF:-1 tvg-id="custom.v2beat" tvg-name="V2 Beat" tvg-chno="467" channel-id="custom.v2beat" tvg-country="IT" tvg-language="ita" group-title="International",V2 Beat
 https://de1se01.v2beat.live/playlist.m3u8
-#EXTINF:-1 tvg-id="Vevo70s80s.us" tvg-name="Vevo 70s & 80s" tvg-chno="468" channel-id="Vevo70s80s.us" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-vevo-70s-and-80s-84f70761.png" group-title="International",Vevo 70s & 80s
+#EXTINF:-1 tvg-id="Vevo70s80s.us" tvg-name="Vevo 70s & 80s" tvg-chno="468" channel-id="Vevo70s80s.us" tvg-country="US" tvg-language="eng" group-title="International",Vevo 70s & 80s
 https://d38e11bvtr8xdq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-jlzlygsoesvmj/Vevo70sand80s_GB.m3u8
-#EXTINF:-1 tvg-id="Vevo90s00s.us" tvg-name="Vevo 90s & 00s" tvg-chno="469" channel-id="Vevo90s00s.us" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-vevo-90s-and-00s-1826f5b4.png" group-title="International",Vevo 90s & 00s
+#EXTINF:-1 tvg-id="Vevo90s00s.us" tvg-name="Vevo 90s & 00s" tvg-chno="469" channel-id="Vevo90s00s.us" tvg-country="US" tvg-language="eng" group-title="International",Vevo 90s & 00s
 https://amg00056-amg00056c12-rakuten-it-3240.playouts.now.amagi.tv/playlist/amg00056-vevotvfast-vevo90sand00sit-rakutenit/playlist.m3u8
-#EXTINF:-1 tvg-id="GBBD2300001C0" tvg-name="Vevo Hip Hop & R&B" tvg-chno="470" channel-id="GBBD2300001C0" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-vevo-hip-hop-and-r-and-b-067f2101.png" group-title="International",Vevo Hip Hop & R&B
+#EXTINF:-1 tvg-id="GBBD2300001C0" tvg-name="Vevo Hip Hop & R&B" tvg-chno="470" channel-id="GBBD2300001C0" tvg-country="US" tvg-language="eng" group-title="International",Vevo Hip Hop & R&B
 https://d7i20u8nlyf1b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lymqk2na77cwn/VevoHipHopRB_GB.m3u8
 #EXTINF:-1 tvg-id="VevoPop.us" tvg-name="Vevo Pop" tvg-logo="logos/vevo-pop.png" tvg-chno="471" channel-id="VevoPop.us" tvg-country="US" tvg-language="eng" group-title="International",Vevo Pop
 https://d2n3779oy6efpi.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-5rxuagztow0k3/playlist.m3u8
@@ -956,7 +956,7 @@ https://d726x48n2pd5h.cloudfront.net/XITE_Hits.m3u8
 https://amg01243-xitenetworksint-hitsuk-samsunguk-mvovq.amagi.tv/playlist/amg01243-xitenetworksint-hitsuk-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.xitejustchill" tvg-name="XITE Just Chill" tvg-logo="logos/xite-just-chill-be79594b42.png" tvg-chno="475" channel-id="custom.xitejustchill" tvg-country="US" tvg-language="eng" group-title="International",XITE Just Chill
 https://dvnftgdlbnemm.cloudfront.net/XITE_Just_Chill.m3u8
-#EXTINF:-1 tvg-id="custom.xitesummer" tvg-name="XITE Summer" tvg-chno="476" channel-id="custom.xitesummer" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-xite-summer-05edc806.png" group-title="International",XITE Summer
+#EXTINF:-1 tvg-id="custom.xitesummer" tvg-name="XITE Summer" tvg-chno="476" channel-id="custom.xitesummer" tvg-country="US" tvg-language="eng" group-title="International",XITE Summer
 https://d33m2dcwuwzaia.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4g0r3vai0va2v/XITE_Celebrates.m3u8?ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.ssai_vendor=SSSLIVE&ads.afsdk_params=%7BAFSDK_VALUE%7D&ads.service_id=CABD17000043J
 #EXTINF:-1 tvg-id="Travel.us" tvg-name="4K Travel" tvg-logo="logos/4k-travel.png" tvg-chno="477" channel-id="Travel.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",4K Travel
 https://streams2.sofast.tv/sofastplayout/33c31ac4-51fa-46ae-afd0-0d1fe5e60a80_0_HLS/master.m3u8
@@ -966,7 +966,7 @@ https://autentic-adventure-earth-1-eu.rakuten.wurl.tv/playlist.m3u8
 https://d3181anftsyl2u.cloudfront.net/v1/aenetworks_alone_1/samsungheadend_us/latest/main/hls/playlist.m3u8
 #EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet HD" tvg-logo="logos/animal-planet.png" channel-id="AnimalPlanet.in@SD" tvg-country="IN" tvg-language="eng;hin;tam" tvg-chno="480" group-title="Documentary & Wildlife",Animal Planet HD
 https://tvsen3.aynaott.com/wpa56Uk3/index.m3u8
-#EXTINF:-1 tvg-id="AutenticAdventureEarth.us" tvg-name="Autentic Adventure Earth" tvg-chno="481" channel-id="AutenticAdventureEarth.us" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-autentic-adventure-earth-3ee4a1aa.png" group-title="Documentary & Wildlife",Autentic Adventure Earth
+#EXTINF:-1 tvg-id="AutenticAdventureEarth.us" tvg-name="Autentic Adventure Earth" tvg-chno="481" channel-id="AutenticAdventureEarth.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Autentic Adventure Earth
 https://a57e9c69976649b582a8d7604c00e69a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AdventureEarth/playlist.m3u8
 #EXTINF:-1 tvg-id="AutenticHistory.de" tvg-name="Autentic History" tvg-logo="logos/autentic-history.png" tvg-chno="482" channel-id="AutenticHistory.de" tvg-country="DE" tvg-language="eng" group-title="Documentary & Wildlife",Autentic History
 https://9e754fa707344ccca6d84955c8fcaf36.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AutenticHistory/playlist.m3u8
@@ -992,7 +992,7 @@ https://tvsen3.aynaott.com/Zht5VqBb/index.m3u8
 https://tvsen3.aynaott.com/9tYGMmMS/index.m3u8
 #EXTINF:-1 tvg-id="DocuBayTV.in" tvg-name="DocuBay TV" tvg-logo="logos/docubay-tv.png" tvg-chno="492" channel-id="DocuBayTV.in" tvg-country="IN" tvg-language="eng" group-title="Documentary & Wildlife",DocuBay TV
 https://cc-mgr91yrk4pehy.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-mgr91yrk4pehy/playlist.m3u8
-#EXTINF:-1 tvg-id="Documentary.us" tvg-name="Documentary+ USA" tvg-chno="493" channel-id="Documentary.us" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-documentary-plus-usa-c908f568.png" group-title="Documentary & Wildlife",Documentary+ USA
+#EXTINF:-1 tvg-id="Documentary.us" tvg-name="Documentary+ USA" tvg-chno="493" channel-id="Documentary.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Documentary+ USA
 https://ef79b15c8c7c46c7a9de9d33001dbd07.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-859-DOCUMENTARYPLUS-DOCUMENTARYPLUS/mt/documentaryplus/859/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="EpicCrimes.in" tvg-name="Epic Crimes" tvg-logo="logos/epic-crimes.png" tvg-chno="494" channel-id="EpicCrimes.in" tvg-country="IN" tvg-language="eng" group-title="Documentary & Wildlife",Epic Crimes
 https://cc-wsuyg2uxeak04.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-wsuyg2uxeak04/master.m3u8
@@ -1000,13 +1000,13 @@ https://cc-wsuyg2uxeak04.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 https://d1fodel5fjpe8b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-68r9vf9490xt2/master.m3u8?ads.ads_cdn=cf&ads.cdn=cf
 #EXTINF:-1 tvg-id="Getfactual.us" tvg-name="Get Factual" tvg-logo="logos/get-factual.png" tvg-chno="496" channel-id="Getfactual.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Get Factual
 https://d1nhni5l2n8hjt.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rzh07me7cf8x7/gf.m3u8
-#EXTINF:-1 tvg-id="custom.historywarfarenow" tvg-name="History & Warfare Now" tvg-chno="497" channel-id="custom.historywarfarenow" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-history-and-warfare-now-fed6f44b.png" group-title="Documentary & Wildlife",History & Warfare Now
+#EXTINF:-1 tvg-id="custom.historywarfarenow" tvg-name="History & Warfare Now" tvg-chno="497" channel-id="custom.historywarfarenow" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",History & Warfare Now
 https://d1nzda2a2b3swt.cloudfront.net/History_Warfare_Now.m3u8
 #EXTINF:-1 tvg-id="HistoryHit.uk" tvg-name="History Hit" tvg-logo="logos/history-hit.png" tvg-chno="498" channel-id="HistoryHit.uk" tvg-country="GB" tvg-language="eng" group-title="Documentary & Wildlife",History Hit
 https://ldsaaaaaa-timeline-samsung-uk-azlgu.amagi.tv/ts-eu-w1-n2/playlist/ldsAAAAAA-timeline-samsung-uk/playlist.m3u8
 #EXTINF:-1 tvg-id="HistoryTV18.in@SD" tvg-name="History TV" tvg-logo="logos/history-tv-ce36a299ec.png" channel-id="HistoryTV18.in@SD" tvg-country="IN" tvg-language="eng" tvg-chno="499" group-title="Documentary & Wildlife",History TV
 https://tvsen3.aynaott.com/np3JstRE/index.m3u8
-#EXTINF:-1 tvg-id="custom.historytv18hindi" tvg-name="History TV18 Hindi" tvg-chno="500" channel-id="custom.historytv18hindi" tvg-country="IN" tvg-language="hin" tvg-logo="logos/generated-fallback-history-tv18-hindi-cd03d31b.png" group-title="Documentary & Wildlife",History TV18 Hindi
+#EXTINF:-1 tvg-id="custom.historytv18hindi" tvg-name="History TV18 Hindi" tvg-chno="500" channel-id="custom.historytv18hindi" tvg-country="IN" tvg-language="hin" group-title="Documentary & Wildlife",History TV18 Hindi
 https://n18syndication.akamaized.net/bpk-tv/History_TV18_Hindi_NW18_MOB/output01/master.m3u8
 #EXTINF:-1 tvg-id="HouseOfCrime.us" tvg-name="House of Crime" tvg-logo="logos/house-of-crime.png" tvg-chno="501" channel-id="HouseOfCrime.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",House of Crime
 https://cc-y2z89muounal4.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-y2z89muounal4/IQJW/WBD/HouseOfCrime_IN/HouseOfCrime_IN.m3u8
@@ -1044,7 +1044,7 @@ https://d3o593mz1glx8d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 https://d3v8uchko88gmi.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-9435fptcvdedz/PBSART_GB.m3u8
 #EXTINF:-1 tvg-id="RealWild.uk" tvg-name="Real Wild" tvg-logo="logos/real-wild.png" tvg-chno="518" channel-id="RealWild.uk" tvg-country="GB" tvg-language="eng" group-title="Documentary & Wildlife",Real Wild
 https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwild-tcl/playlist.m3u8
-#EXTINF:-1 tvg-id="RobotWarsByMech.us" tvg-name="Robot Wars by Mech+" tvg-chno="519" channel-id="RobotWarsByMech.us" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-robot-wars-by-mech-plus-8df56b79.png" group-title="Documentary & Wildlife",Robot Wars by Mech+
+#EXTINF:-1 tvg-id="RobotWarsByMech.us" tvg-name="Robot Wars by Mech+" tvg-chno="519" channel-id="RobotWarsByMech.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Robot Wars by Mech+
 https://0a644b20819046a0935afa1cf6debf23.mediatailor.us-east-1.amazonaws.com/v1/master/0fb304b2320b25f067414d481a779b77db81760d/Samsung-gb_MechPlus/playlist.m3u8?ads.wurl_channel=1413&ads.wurl_name=MechPlus&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D
 #EXTINF:-1 tvg-id="SafariTV.in@SD" tvg-name="Safari TV" tvg-logo="logos/safari-tv.png" tvg-chno="520" channel-id="SafariTV.in@SD" tvg-country="IN" tvg-language="eng" group-title="Documentary & Wildlife",Safari TV
 https://mumt04.tangotv.in/m18aqlK4SAFARITV/index.m3u8
@@ -1060,7 +1060,7 @@ https://tvsen3.aynaott.com/sFwCR6Fu/index.m3u8
 https://travelxp-travelxp-1-eu.rakuten.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TrueCrime.uk" tvg-name="True Crime UK" tvg-logo="logos/true-crime-uk.png" tvg-chno="526" channel-id="TrueCrime.uk" tvg-country="GB" tvg-language="eng" group-title="Documentary & Wildlife",True Crime UK
 https://b6cca454.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9UcnVlQ3JpbWVVS2Zyb21DQlNSZWFsaXR5X0hMUw/playlist.m3u8?ads.wurl_channel=1151&ads.wurl_name=TrueCrimeUKfromCBSReality&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D
-#EXTINF:-1 tvg-id="WatchMojo.us" tvg-name="Watch Mojo" tvg-chno="527" channel-id="WatchMojo.us" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-watch-mojo-6a01c723.png" group-title="Documentary & Wildlife",Watch Mojo
+#EXTINF:-1 tvg-id="WatchMojo.us" tvg-name="Watch Mojo" tvg-chno="527" channel-id="WatchMojo.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Watch Mojo
 https://watchmojo-1-eu.xiaomi.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="WheelWorld.us" tvg-name="Wheel World" tvg-logo="logos/wheel-world.png" tvg-chno="528" channel-id="WheelWorld.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Wheel World
 https://cc-ii7599ywyixac.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ii7599ywyixac/IQJW/WBD/WheelWorld_IN/WheelWorld_IN.m3u8
@@ -1124,7 +1124,7 @@ https://cc-j2qrmdlg5y7lg.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 https://linear-899.frequency.stream/dist/cineverse/899/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="SmurfTV.us" tvg-name="Smurf TV" tvg-logo="logos/smurf-tv.png" tvg-chno="558" channel-id="SmurfTV.us" tvg-country="US" tvg-language="eng" group-title="Kids",Smurf TV
 https://d144py1prrd7ns.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-affg2ev32s0dq/smrfe.m3u8
-#EXTINF:-1 tvg-id="custom.sonicthehedgehog" tvg-name="Sonic The Hedgehog" tvg-chno="559" channel-id="custom.sonicthehedgehog" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-sonic-the-hedgehog-4292b202.png" group-title="Kids",Sonic The Hedgehog
+#EXTINF:-1 tvg-id="custom.sonicthehedgehog" tvg-name="Sonic The Hedgehog" tvg-chno="559" channel-id="custom.sonicthehedgehog" tvg-country="US" tvg-language="eng" group-title="Kids",Sonic The Hedgehog
 https://dtwdcugadwtnw.cloudfront.net/master.m3u8
 #EXTINF:-1 tvg-id="StrawberryShortcake.us" tvg-name="Strawberry Shortcake" tvg-logo="logos/strawberry-shortcake.png" tvg-chno="560" channel-id="StrawberryShortcake.us" tvg-country="US" tvg-language="eng" group-title="Kids",Strawberry Shortcake
 https://d10c3fwb9yju0h.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-r5zgefp9c8p0b/master.m3u8
@@ -1162,7 +1162,7 @@ https://jmc-live.ercdn.net/alistiqama/alistiqama.m3u8
 https://streamer3.premio.link/alqamar/playlist.m3u8
 #EXTINF:-1 tvg-id="AlQuranAlKareemTV.sa" tvg-name="Al Quran Al Kareem TV" tvg-logo="logos/al-quran-al-kareem-tv.png" tvg-chno="577" channel-id="AlQuranAlKareemTV.sa" tvg-country="SA" tvg-language="ara" group-title="Religious",Al Quran Al Kareem TV
 https://cdn-globecast.akamaized.net/live/eds/saudi_quran/hls_roku/index.m3u8
-#EXTINF:-1 tvg-id="custom.alsunnahalnabawiyah" tvg-name="Al Sunnah Al Nabawiyah" channel-id="custom.alsunnahalnabawiyah" tvg-country="SA" tvg-language="ara" tvg-chno="578" tvg-logo="logos/generated-fallback-al-sunnah-al-nabawiyah-33d57407.png" group-title="Religious",Al Sunnah Al Nabawiyah
+#EXTINF:-1 tvg-id="custom.alsunnahalnabawiyah" tvg-name="Al Sunnah Al Nabawiyah" channel-id="custom.alsunnahalnabawiyah" tvg-country="SA" tvg-language="ara" tvg-chno="578" group-title="Religious",Al Sunnah Al Nabawiyah
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/madina.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="AlZahraTVTurkic.sa" tvg-name="Al-Zahra TV Turkic" tvg-logo="logos/al-zahra-tv-turkic.png" tvg-chno="579" channel-id="AlZahraTVTurkic.sa" tvg-country="SA" tvg-language="ara" group-title="Religious",Al-Zahra TV Turkic
 https://live.al-zahratv.com/live/playlist.m3u8
@@ -1364,7 +1364,7 @@ http://88.212.7.14/live/sport2_hun/index.m3u8
 http://stream.mcquack.net/392/index.m3u8
 #EXTINF:-1 tvg-id="custom.sport4" tvg-name="Sport 4" tvg-logo="logos/sport-4-19a83fa7a4.png" tvg-chno="676" channel-id="custom.sport4" tvg-country="UA" tvg-language="ukr" group-title="Sports",Sport 4
 http://stream.mcquack.net/394/index.m3u8
-#EXTINF:-1 tvg-id="custom.sport5" tvg-name="Sport5" tvg-chno="677" channel-id="custom.sport5" tvg-country="IL" tvg-language="ukr" tvg-logo="logos/generated-fallback-sport5-2b040211.png" group-title="Sports",Sport5
+#EXTINF:-1 tvg-id="custom.sport5" tvg-name="Sport5" tvg-chno="677" channel-id="custom.sport5" tvg-country="IL" tvg-language="ukr" group-title="Sports",Sport5
 https://rgelive.akamaized.net/hls/live/2043095/live3/playlist.m3u8
 #EXTINF:-1 tvg-id="SportsFirstTV.us" tvg-name="Sports First TV" tvg-logo="logos/sports-first-tv.png" tvg-chno="678" channel-id="SportsFirstTV.us" tvg-country="US" tvg-language="eng" group-title="Sports",Sports First TV
 https://d4ddgdmj1cvnm.cloudfront.net/scheduler/scheduleMaster/409.m3u8
@@ -1394,11 +1394,11 @@ https://tvsen6.aynaott.com/talkSPORT/index.m3u8
 http://23.237.104.106:8080/USA_TENNIS/index.m3u8
 #EXTINF:-1 tvg-id="TennisChannel2.us@SD" tvg-name="Tennis Channel 2" tvg-logo="logos/tennis-channel-2.png" tvg-chno="691" channel-id="TennisChannel2.us@SD" tvg-country="US" tvg-language="eng" group-title="Sports",Tennis Channel 2
 https://mumbai-edge.smartplaytv.in/Tennis2/index.m3u8
-#EXTINF:-1 tvg-id="tennis.com" tvg-name="Tennis+" tvg-chno="692" channel-id="tennis.com" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-tennis-plus-b2040804.png" group-title="Sports",Tennis+
+#EXTINF:-1 tvg-id="tennis.com" tvg-name="Tennis+" tvg-chno="692" channel-id="tennis.com" tvg-country="US" tvg-language="eng" group-title="Sports",Tennis+
 https://amg01935-amg01935c1-amgplt0165.playout.now3.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TNTSports1.uk@SD" tvg-name="TNT Sports 1" channel-id="TNTSports1.uk@SD" tvg-country="GB" tvg-language="eng" tvg-chno="693" tvg-logo="logos/tnt-sports-1.png" group-title="Sports",TNT Sports 1
 https://tvsen5.aynaott.com/asdfadsf/index.m3u8
-#EXTINF:-1 tvg-id="mixer.trace.sports.stars.com" tvg-name="Trace Sports Stars" tvg-chno="694" channel-id="mixer.trace.sports.stars.com" tvg-country="FR" tvg-language="eng" tvg-logo="logos/generated-fallback-trace-sports-stars-028a07b8.png" group-title="Sports",Trace Sports Stars
+#EXTINF:-1 tvg-id="mixer.trace.sports.stars.com" tvg-name="Trace Sports Stars" tvg-chno="694" channel-id="mixer.trace.sports.stars.com" tvg-country="FR" tvg-language="eng" group-title="Sports",Trace Sports Stars
 https://trace-sportstars-samsungnz.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TSN1.ca@SD" tvg-name="TSN 1" channel-id="TSN1.ca@SD" tvg-country="CA" tvg-language="eng" tvg-chno="695" tvg-logo="logos/tsn-1.png" group-title="Sports",TSN 1
 https://tvsen7.aynaott.com/tsn1/index.m3u8
@@ -1414,7 +1414,7 @@ https://ott-balancer.tvri.go.id/live/eds/SportHD/hls/SportHD.m3u8
 https://rpn.bozztv.com/gusa/gusa-tvssports/index.m3u8
 #EXTINF:-1 tvg-id="custom.tycsports" tvg-name="TYC Sports" tvg-logo="logos/tyc-sports.png" tvg-chno="701" channel-id="custom.tycsports" tvg-country="AR" tvg-language="spa" group-title="Sports",TYC Sports
 https://amg26268-amg26268c14-freelivesports-emea-10267.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg26268-sportsstudio-tycsports-freelivesportsemea/playlist.m3u8
-#EXTINF:-1 tvg-id="ufc.com" tvg-name="UFC" tvg-chno="702" channel-id="ufc.com" tvg-country="US" tvg-language="eng" tvg-logo="logos/generated-fallback-ufc-5b8d0e90.png" group-title="Sports",UFC
+#EXTINF:-1 tvg-id="ufc.com" tvg-name="UFC" tvg-chno="702" channel-id="ufc.com" tvg-country="US" tvg-language="eng" group-title="Sports",UFC
 https://linear-893.frequency.stream/dist/plex/893/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.unbeaten" tvg-name="Unbeaten" tvg-logo="logos/unbeaten.png" tvg-chno="703" channel-id="custom.unbeaten" tvg-country="US" tvg-language="eng" group-title="Sports",Unbeaten
 https://d1t5afz6qed3xk.cloudfront.net/Unbeaten.m3u8
@@ -1424,7 +1424,7 @@ http://stream.mcquack.net/333/index.m3u8
 http://27.124.71.27/Willow_Extra/index.m3u8
 #EXTINF:-1 tvg-id="custom.willowsports" tvg-name="Willow Sports" tvg-logo="logos/willow-sports.png" tvg-chno="706" channel-id="custom.willowsports" tvg-country="US" tvg-language="eng" group-title="Sports",Willow Sports
 https://tvsen5.aynaott.com/willowhd/index.m3u8
-#EXTINF:-1 tvg-id="custom.willowsports2" tvg-name="Willow Sports 2" channel-id="custom.willowsports2" tvg-country="US" tvg-language="eng" tvg-chno="707" tvg-logo="logos/generated-fallback-willow-sports-2-9db65ac9.png" group-title="Sports",Willow Sports 2
+#EXTINF:-1 tvg-id="custom.willowsports2" tvg-name="Willow Sports 2" channel-id="custom.willowsports2" tvg-country="US" tvg-language="eng" tvg-chno="707" group-title="Sports",Willow Sports 2
 https://tvsen7.aynaott.com/Sports1/index.m3u8
 #EXTINF:-1 tvg-id="WomensSportsNetwork.us@SD" tvg-name="Women's Sports Network" tvg-logo="logos/women-s-sports-network-d2bc35e249.png" tvg-chno="708" channel-id="WomensSportsNetwork.us@SD" tvg-country="US" tvg-language="eng" group-title="Sports",Women's Sports Network
 https://d39accvx65hq9o.cloudfront.net/Womens_Sports_Network.m3u8
