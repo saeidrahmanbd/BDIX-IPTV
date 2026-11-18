@@ -269,6 +269,15 @@ def promote_verified_candidates(entries, verified_starts, inconclusive_starts, u
         if old_group not in queue_groups:
             continue
         start = entry["start"]
+        # Logo localization runs immediately before promotion. Respect its
+        # updated EXTINF line: a candidate whose authentic local logo could
+        # not be found must remain in Review even when its stream is reachable.
+        current_extinf = update_lines.get(start, entry["extinf"])
+        current_attrs = discovery.attrs(current_extinf)
+        current_logo = (current_attrs.get("tvg-logo") or "").strip()
+        if not current_logo.startswith("logos/"):
+            decisions.append((entry, "Review", "no authentic local repository logo"))
+            continue
         if start in inconclusive_starts:
             decisions.append((entry, "Review", "inconclusive stream check"))
             continue

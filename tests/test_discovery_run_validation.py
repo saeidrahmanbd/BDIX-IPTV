@@ -339,9 +339,9 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 f'https://example.org/pk{i}.m3u8'
             )
         rows.extend([
-            '#EXTINF:-1 tvg-id="PK5.pk" tvg-name="Pakistan Primary 5" tvg-country="PK" group-title="New Channels",Pakistan Primary 5\nhttps://example.org/pk5.m3u8',
-            '#EXTINF:-1 tvg-id="PK1.pk" tvg-name="Pakistan Primary 1" tvg-country="PK" group-title="New Backups",Pakistan Primary 1 alternate\nhttps://example.org/pk1-alt.m3u8',
-            '#EXTINF:-1 tvg-id="IN-Kids.in" tvg-name="Indian Kids Example" tvg-country="IN" tvg-content="Kids" group-title="New Channels",Indian Kids Example\nhttps://example.org/indian-kids.m3u8',
+            '#EXTINF:-1 tvg-id="PK5.pk" tvg-name="Pakistan Primary 5" tvg-country="PK" tvg-logo="logos/pk5.svg" group-title="New Channels",Pakistan Primary 5\nhttps://example.org/pk5.m3u8',
+            '#EXTINF:-1 tvg-id="PK1.pk" tvg-name="Pakistan Primary 1" tvg-country="PK" tvg-logo="logos/pk1-alt.svg" group-title="New Backups",Pakistan Primary 1 alternate\nhttps://example.org/pk1-alt.m3u8',
+            '#EXTINF:-1 tvg-id="IN-Kids.in" tvg-name="Indian Kids Example" tvg-country="IN" tvg-logo="logos/indian-kids.svg" tvg-content="Kids" group-title="New Channels",Indian Kids Example\nhttps://example.org/indian-kids.m3u8',
         ])
         _, entries, malformed = parse_playlist("\n".join(rows) + "\n")
         self.assertFalse(malformed)
@@ -367,6 +367,22 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         self.assertNotIn('group-title="International"', output)
         self.assertIn('group-title="Backup"', output)
         self.assertIn('group-title="Review"', output)
+
+    def test_verified_candidate_without_local_logo_cannot_be_promoted(self):
+        import validate_discovery_run as validation
+        row = (
+            '#EXTINF:-1 tvg-id="MCMPop.fr" tvg-name="MCM Pop" tvg-country="FR" '
+            'group-title="New Channels",MCM Pop\nhttps://example.org/mcm-pop.m3u8'
+        )
+        _, entries, malformed = parse_playlist(row)
+        self.assertFalse(malformed)
+        updates = {}
+        decisions = validation.promote_verified_candidates(
+            entries, {entries[0]["start"]}, set(), updates
+        )
+        self.assertEqual(decisions[0][2], "Review")
+        self.assertEqual(decisions[0][3], "no authentic local repository logo")
+        self.assertIn('group-title="Review"', updates[entries[0]["start"]])
 
     def test_inconclusive_candidate_without_local_logo_is_preserved_in_review(self):
         import os
