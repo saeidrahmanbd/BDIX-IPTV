@@ -30,6 +30,7 @@ REPORT = Path("reports/playlist-logo-repair-results.md")
 REGISTRY_PATH = Path("reports/logo-source-registry.json")
 
 # Manual rerun requested after correcting the verified Channel 52 allowlist and regression tests.
+# [manual-logo-localization] Retry once with the collision-safe canonical asset fallback.
 # The following files were visually inspected and found contaminated, generic,
 # or mismatched. A bad file is never reused, even if its filename is an exact
 # channel-name match.
