@@ -251,6 +251,42 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         self.assertTrue(guard.run_blocks_retry(successful_run))
         self.assertEqual(guard.first_run_id([later_no_op, successful_run]), 91)
 
+
+    def test_international_discovery_uses_actual_successful_discovery_step(self):
+        successful_run = {
+            "id": 170,
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-18T04:00:00Z",
+            "jobs": [{
+                "name": "discover",
+                "status": "completed",
+                "conclusion": "success",
+                "steps": [{
+                    "name": "Discover only Movies/Music channels and eligible backup streams",
+                    "conclusion": "success",
+                }],
+            }],
+        }
+        skipped_run = {
+            "id": 171,
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-18T04:10:00Z",
+            "jobs": [{
+                "name": "discover",
+                "status": "completed",
+                "conclusion": "skipped",
+                "steps": [],
+            }],
+        }
+        self.assertTrue(guard.run_blocks_retry(
+            successful_run, workflow_file="international-channel-discovery.yml"
+        ))
+        self.assertFalse(guard.run_blocks_retry(
+            skipped_run, workflow_file="international-channel-discovery.yml"
+        ))
+
     def test_stream_health_only_blocks_retry_when_check_job_succeeds(self):
         successful_health = {
             "id": 94, "status": "completed", "conclusion": "success",
