@@ -271,20 +271,21 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(country=country, name=name):
                 self.assertEqual(self.classify(name, group, country, tvg_id)[0], expected)
 
-    def test_backup_queue_policy_uses_genre_groups_for_every_country(self):
+    def test_backup_queue_policy_rejects_non_movie_music_genres_worldwide(self):
         cases = [
-            ("Colors Rishtey", "General", "IN", "ColorsRishtey.in", "Indian Entertainment"),
-            ("DD Sports", "Sports", "IN", "DDSports.in", "Sports"),
-            ("Madani TV", "Religious", "BD", "MadaniTV.bd", "Religious"),
-            ("Hum TV", "General", "PK", "HumTV.pk", "Pakistani"),
-            ("ARY News", "News", "PK", "ARYNews.pk", "News"),
+            ("Colors Rishtey", "General", "IN", "ColorsRishtey.in"),
+            ("DD Sports", "Sports", "IN", "DDSports.in"),
+            ("Madani TV", "Religious", "BD", "MadaniTV.bd"),
+            ("Hum TV", "General", "PK", "HumTV.pk"),
+            ("ARY News", "News", "PK", "ARYNews.pk"),
         ]
-        for name, group, country, tvg_id, expected in cases:
+        for name, group, country, tvg_id in cases:
             attrs = {"group-title": "New Backups", "tvg-country": country, "tvg-id": tvg_id}
             target, reason, verified, genre = discovery.queue_policy(attrs, name)
             with self.subTest(name=name, country=country):
-                self.assertEqual((target, reason, verified), (expected, None, country))
-                self.assertEqual(genre, "")
+                self.assertIsNone(target)
+                self.assertTrue(reason)
+                self.assertEqual(verified, country)
 
     def test_five_channel_country_threshold_is_retained(self):
         self.assertEqual(discovery.COUNTRY_THRESHOLD, 5)
@@ -390,7 +391,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertIsNone(discovery.known_non_tv_discovery_reason("YleX (720p)", "New Channels"))
         self.assertIsNone(discovery.known_non_tv_discovery_reason("YleX (720p)", "Backup"))
 
-    def test_review_candidate_without_authentic_logo_is_rejected_from_queue(self):
+    def test_review_candidate_without_authentic_logo_remains_in_queue(self):
         block = [
             '#EXTINF:-1 tvg-id="Colors.us" tvg-country="US" group-title="New Backups" tvg-content="Movies",Colors',
             "https://example.org/colors.m3u8",
@@ -400,13 +401,10 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             kept, repaired, removed = discovery.localize_discovery_queue_logos(
                 [block], {block[1]}, rejected
             )
-        self.assertEqual(kept, [])
+        self.assertEqual(kept, [block])
         self.assertEqual(repaired, 0)
-        self.assertEqual(removed, 1)
-        self.assertEqual(
-            rejected,
-            [("Colors", "New Backups", "no authentic local repository logo after localization")],
-        )
+        self.assertEqual(removed, 0)
+        self.assertEqual(rejected, [])
 
     def test_tokenized_urls_are_rejected_without_playback_testing(self):
         self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?token=abc"))
