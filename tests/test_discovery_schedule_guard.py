@@ -372,6 +372,29 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             )
         )
 
+    def test_manual_logo_localization_retry_ignores_stale_active_guard_run(self):
+        stale_run = {
+            "id": 109,
+            "event": "workflow_run",
+            "status": "in_progress",
+            "conclusion": None,
+            "created_at": "2026-11-07T00:50:00Z",
+        }
+        manual_run = {
+            "id": 111,
+            "event": "push",
+            "status": "in_progress",
+            "conclusion": None,
+            "created_at": "2026-11-07T01:10:00Z",
+        }
+        self.assertTrue(
+            guard.should_current_run_execute(
+                [stale_run, manual_run], 111, self.today,
+                event="workflow_dispatch",
+                workflow_file="playlist-logo-localization.yml",
+            )
+        )
+
     def test_manual_dispatch_does_not_overlap_an_active_discovery_run(self):
         active_run = {
             "id": 110,
