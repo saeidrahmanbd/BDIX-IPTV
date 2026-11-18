@@ -43,12 +43,12 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
             (root / "logos" / "desh-tv.png").write_bytes(b"test asset")
             (root / "logos" / "a-sports-5485adff.png").write_bytes(b"blocked asset")
             (root / "IPTV-Playlist.m3u").write_text(
-                '#EXTM3U\\n'
-                '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Sports","Backup","Review"]\\n'
-                '#EXTINF:-1 tvg-name="Desh TV" group-title="Bangladesh",Desh TV\\n'
-                'https://example.test/desh.m3u8\\n'
-                '#EXTINF:-1 tvg-name="A.SPORTS." group-title="Sports",A.SPORTS.\\n'
-                'https://example.test/asports.m3u8\\n',
+                '#EXTM3U\n'
+                '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Sports","Backup","Review"]\n'
+                '#EXTINF:-1 tvg-name="Desh TV" group-title="Bangladesh",Desh TV\n'
+                'https://example.test/desh.m3u8\n'
+                '#EXTINF:-1 tvg-name="A.SPORTS." group-title="Sports",A.SPORTS.\n'
+                'https://example.test/asports.m3u8\n',
                 encoding="utf-8",
             )
             env = dict(os.environ, PYTHONPATH=str(ROOT / "scripts"))
