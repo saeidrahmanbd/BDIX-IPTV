@@ -184,11 +184,8 @@ def main():
         if logo.startswith(RAW_BASE):
             rel = unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])
             target = (LOGOS / rel).resolve()
-        elif logo.startswith("logos/"):
-            rel = unquote(logo.split("?", 1)[0].split("#", 1)[0])
-            target = Path(rel).resolve()
         else:
-            raise SystemExit(f"External or unsupported logo reference for {name!r}: {logo}")
+            raise SystemExit(f"Logo reference must be an absolute repository Raw URL for {name!r}: {logo}")
         root = LOGOS.resolve()
         if root not in target.parents or not target.is_file():
             broken_logos.append((name, logo))
