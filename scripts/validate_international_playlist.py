@@ -181,10 +181,7 @@ def main():
             if group_key in {"new channels", "new backup", "new backups"}:
                 raise SystemExit(f"Manual-review candidate lacks a local logo: {name!r} in {group!r}.")
             continue
-        if logo.startswith(RAW_BASE):
-            rel = unquote(urlsplit(logo).path.split("/main/logos/", 1)[-1]).lstrip("/")
-            target = (LOGOS / rel).resolve()
-        elif logo.startswith("logos/"):
+        if logo.startswith("logos/"):
             rel = unquote(logo.split("?", 1)[0].split("#", 1)[0])
             target = Path(rel).resolve()
         else:

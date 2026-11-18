@@ -222,3 +222,41 @@ class InternationalStreamHealthTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_adult_entries_are_never_moved_to_review_or_removed(self):
+        source = (
+            "#EXTM3U\\n"
+            '#PLAYLIST-STUDIO-CATEGORIES:["Adult","Review","New Channels","New Backups","Backup"]\\n'
+            + row(name="Protected Adult", group="Adult", url="https://example.test/adult/live.m3u8")
+        )
+        output, history = source, {}
+        for day in range(7, 11):
+            output, history, events = apply(output, "fail", history, f"2026-11-{day:02d}")
+            self.assertIn('group-title="Adult"', output)
+            self.assertNotIn('group-title="Review"', output)
+            self.assertIn("https://example.test/adult/live.m3u8", output)
+            self.assertFalse(next(iter(history["entries"].values()))["removed"])
+            self.assertEqual(events[0]["action"], "protected-adult-diagnostic")
+            self.assertEqual(events[0]["streak"], 0)
+
+    def test_adult_origin_already_in_review_is_restored_and_protected(self):
+        source = (
+            "#EXTM3U\\n"
+            '#PLAYLIST-STUDIO-CATEGORIES:["Adult","Review","New Channels","New Backups","Backup"]\\n'
+            + row(name="Legacy Adult", group="Review", url="https://example.test/adult/legacy.m3u8")
+        )
+        key = health.stream_key(
+            health.parse(source)[1][0][0],
+            "https://example.test/adult/legacy.m3u8",
+        )
+        history = {"entries": {key: {
+            "name": "Legacy Adult", "tvg_id": "testmovie.us", "country": "US",
+            "original_group": "Adult", "auto_review": True,
+            "consecutive_failures": 2, "last_checked_date": "2026-11-06",
+            "last_status": "fail", "removed": False,
+        }}, "removed": []}
+        output, history, events = apply(source, "fail", history, "2026-11-07")
+        self.assertIn('group-title="Adult"', output)
+        self.assertIn("https://example.test/adult/legacy.m3u8", output)
+        self.assertEqual(events[0]["action"], "restored-protected-adult")
+        self.assertFalse(history["entries"][key]["removed"])

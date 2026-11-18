@@ -225,18 +225,11 @@ def slug(value):
 def local_logo(a,name):
  target=norm(name)
  for p in LOGOS.rglob("*") if LOGOS.exists() else []:
-  if p.is_file() and p.suffix.lower() in {".png",".jpg",".jpeg",".webp",".svg"} and "unused" not in p.parts and not is_blocked_logo_basename(p.name) and norm(p.stem)==target:return RAW_BASE+str(p.relative_to(LOGOS)).replace("\\","/")
- source=(a.get("tvg-logo") or "").strip()
- if not source.startswith(("http://","https://")):return ""
- try:
-  req=urllib.request.Request(source,headers={"User-Agent":"BDIX-IPTV-International-Discovery/1.0"})
-  with urllib.request.urlopen(req,timeout=15) as r:data=r.read(MAX_LOGO_BYTES+1); typ=(r.headers.get("Content-Type") or "").split(";")[0].lower()
-  ext={"image/png":".png","image/jpeg":".jpg","image/webp":".webp","image/svg+xml":".svg"}.get(typ)
-  if not data or len(data)>MAX_LOGO_BYTES or not ext:return ""
-  d=LOGOS/"international"; d.mkdir(parents=True,exist_ok=True); p=d/(slug(name)+ext)
-  if not p.exists():p.write_bytes(data)
-  return RAW_BASE+str(p.relative_to(LOGOS)).replace("\\","/")
- except Exception:return ""
+  if p.is_file() and p.suffix.lower() in {".png",".jpg",".jpeg",".webp",".svg"} and "unused" not in p.parts and not is_blocked_logo_basename(p.name) and norm(p.stem)==target:
+   return "logos/"+str(p.relative_to(LOGOS)).replace("\\","/")
+ # Discovery may only reuse an authentic, already-local repository asset.
+ # Do not download arbitrary source tvg-logo URLs or relabel them as verified.
+ return ""
 
 def localize_existing_logo(a,name):
  raw=(a.get("tvg-logo") or "").strip()
@@ -244,24 +237,18 @@ def localize_existing_logo(a,name):
  # This legacy entry used a G-Series logo for a differently named stream; do not
  # relabel the mismatched asset as an authentic Drama 24 logo.
  if norm(name)=="drama24":return ""
- if raw.startswith(RAW_BASE):
-  rel=urllib.parse.unquote(urllib.parse.urlsplit(raw).path.split("/main/logos/",1)[-1]).lstrip("/")
-  path=LOGOS/rel
-  if path.is_file() and "unused" not in path.parts and not is_blocked_logo_basename(path.name):return raw
-  clean=dict(a);clean.pop("tvg-logo",None)
-  return local_logo(clean,name)
  if raw.startswith("logos/"):
   rel=urllib.parse.unquote(raw.split("?",1)[0].split("#",1)[0])
   path=Path(rel)
   if path.is_file() and "unused" not in path.parts and not is_blocked_logo_basename(path.name):
-   return RAW_BASE+rel[len("logos/"):].replace("\\","/")
+   return "logos/"+rel[len("logos/"):].replace("\\","/")
   clean=dict(a);clean.pop("tvg-logo",None)
   return local_logo(clean,name)
  if raw.startswith(("http://","https://")):return local_logo(a,name)
  return ""
 def set_logo_attr(line,logo):
  line=re.sub(r'\s+tvg-logo="[^"]*"',"",line)
- if not logo or not logo.startswith(RAW_BASE):return line
+ if not logo or not logo.startswith("logos/"):return line
  m=re.match(r"^(#EXTINF:-?\d+)(.*)$",line)
  if not m:return line
  return m.group(1)+f' tvg-logo="{logo}"'+m.group(2)
@@ -289,7 +276,7 @@ def localize_discovery_queue_logos(blocks, discovery_urls, rejected_rows):
  return kept,repaired,removed
 def make_extinf(a,name,group,code,logo,content_kind=""):
  clean=" ".join(name.replace('"',"").split()); ident=(a.get("tvg-id") or a.get("channel-id") or "custom.intl."+slug(clean).replace("-",".")).strip(); fields=[f'tvg-id="{ident}"',f'tvg-name="{clean}"']
- if logo.startswith(RAW_BASE):fields.append(f'tvg-logo="{logo}"')
+ if logo.startswith("logos/"):fields.append(f'tvg-logo="{logo}"')
  if code and code!="ZZ":fields.append(f'tvg-country="{code}"')
  if a.get("tvg-language"):fields.append(f'tvg-language="{a["tvg-language"].replace(chr(34),"")}"')
  fields.append(f'channel-id="{(a.get("channel-id") or ident).replace(chr(34),"")}"'); fields.append(f'group-title="{group}"')
