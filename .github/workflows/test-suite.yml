@@ -11,6 +11,9 @@ on:
       - "xtream-main/**"
       - "analytics/**"
       - "docs/requirements.txt"
+      - "IPTV-Playlist.m3u"
+      - "International-Playlist.m3u"
+      - "tests/test_playlist_files_not_empty.py"
       - ".github/workflows/**"
   workflow_dispatch:
 
