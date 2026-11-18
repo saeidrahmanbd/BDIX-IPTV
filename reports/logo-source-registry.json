@@ -6618,5 +6618,10 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/eP2OW5S.png",
     "notes": "IPTV-org exact ID: ARYQTV.pk IPTV-org public logo dataset Source page: https://i.imgur.com/eP2OW5S.png"
+  },
+  "International-Playlist.m3u|DMusic.kh@SD|D Music [ ]|logos/d-music-e61046bc15.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/D_music-Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "notes": "Wikimedia Commons exact-logo search CC BY-SA 4.0 Source page: https://commons.wikimedia.org/wiki/File:D_music-Logo.png"
   }
 }

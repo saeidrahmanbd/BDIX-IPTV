@@ -34,7 +34,7 @@ http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92
 https://nkafmbewiff.gpcdn.net/tile_7/1080p.m3u8
 #EXTINF:-1 tvg-id="Channel16.bd" channel-id="Channel16.bd" tvg-language="ben" tvg-logo="logos/channel-16.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Channel 16",Channel 16
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="Channel52.bd" channel-id="Channel52.bd" tvg-language="ben" tvg-country="BD" group-title="Bangladesh" tvg-name="Channel 52",Channel 52
+#EXTINF:-1 tvg-id="Channel52.bd" channel-id="Channel52.bd" tvg-language="ben" tvg-country="BD" tvg-logo="logos/channel-52.png" group-title="Bangladesh" tvg-name="Channel 52",Channel 52
 http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="ChannelI.bd" channel-id="ChannelI.bd" tvg-language="ben" tvg-logo="logos/channel-i.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Channel I",Channel I
 https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8
@@ -1134,7 +1134,7 @@ https://dbmtv.vedge.infomaniak.com/livecast/dbmtv/playlist.m3u8
 https://rakutenaa-zylo-emotional-rakuten-r1zkm.amagi.tv/playlist/rakutenAA-zylo-emotional-rakuten/playlist.m3u8
 #EXTINF:-1 tvg-id="M6Music.fr@SD" channel-id="M6Music.fr@SD" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="M6 Music",M6 Music
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/m6_music_hits/live.livx/playlist.m3u8
-#EXTINF:-1 tvg-id="MCMPop.fr@SD" channel-id="MCMPop.fr@SD" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="MCM Pop",MCM Pop
+#EXTINF:-1 tvg-id="MCMPop.fr@SD" channel-id="MCMPop.fr@SD" tvg-country="FR" tvg-content="Music" tvg-logo="logos/mcm-pop-580p.png" group-title="France" tvg-name="MCM Pop",MCM Pop
 http://176.65.153.78:8201/play/a070/index.m3u8
 #EXTINF:-1 tvg-id="MezzoLive.fr@SD" tvg-language="eng" tvg-logo="logos/mezzo-live-a73f9b365c.png" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Mezzo Live",Mezzo Live
 http://stream.mcquack.net/276/index.m3u8
@@ -2736,7 +2736,7 @@ https://cdn4.yayin.com.tr/bakixebertv/video.m3u8
 http://195.23.211.179:1935/kmusic/smil:kmusic.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="LaElegidaTelevision.uy@SD" tvg-language="spa" tvg-logo="logos/la-elegida-television-1e044baf68.png" tvg-country="UY" tvg-content="Music" group-title="International" tvg-name="La Elegida Television",La Elegida Television
 https://stmv.gmpro.top/laelegidatv/laelegidatv/playlist.m3u8
-#EXTINF:-1 tvg-id="LaTop1029.hn@SD" channel-id="LaTop1029.hn@SD" tvg-country="HN" tvg-content="Music" group-title="International" tvg-name="La Top 102.9",La Top 102.9
+#EXTINF:-1 tvg-id="LaTop1029.hn@SD" channel-id="LaTop1029.hn@SD" tvg-country="HN" tvg-content="Music" tvg-logo="logos/la-top-102-9-d8535e9176.png" group-title="International" tvg-name="La Top 102.9",La Top 102.9
 https://59d39900ebfb8.streamlock.net/top102/top102/playlist.m3u8
 #EXTINF:-1 tvg-id="LaTop1077.hn@SD" tvg-language="spa" tvg-logo="logos/la-top-107-7-c9b97b2bd3.png" tvg-country="HN" tvg-content="Music" group-title="International" tvg-name="La Top 107.7",La Top 107.7
 https://59d39900ebfb8.streamlock.net/top107/top107/playlist.m3u8
@@ -4126,7 +4126,7 @@ http://88.212.15.50/live/ct_art_avc_25p/playlist.m3u8
 http://88.212.15.50/live/test_ctsport_25p/playlist.m3u8
 #EXTINF:-1 tvg-id="CTBPerthMoviesChannel.au@SD" channel-id="CTBPerthMoviesChannel.au@SD" tvg-logo="logos/ctb-perth-movies-channel-720p.png" tvg-country="AU" tvg-content="Movies" group-title="Review" tvg-name="CTB Perth Movies Channel",CTB Perth Movies Channel
 https://movies.ctbperth.net.au/hls/stream.m3u8
-#EXTINF:-1 tvg-id="DMusic.kh@SD" channel-id="DMusic.kh@SD" tvg-country="KH" tvg-content="Music" group-title="Review" tvg-name="D Music [ ]",D Music [ ]
+#EXTINF:-1 tvg-id="DMusic.kh@SD" channel-id="DMusic.kh@SD" tvg-country="KH" tvg-content="Music" tvg-logo="logos/d-music-e61046bc15.png" group-title="Review" tvg-name="D Music [ ]",D Music [ ]
 http://43.252.18.195:5080/live/streams/WCVNews.playlist.m3u8
 #EXTINF:-1 tvg-id="DanceTV.ar@SD" channel-id="DanceTV.ar@SD" tvg-logo="logos/dance-tv.png" tvg-country="AR" tvg-content="Music" group-title="Review" tvg-name="Dance TV [ ]",Dance TV [ ]
 https://op-group1-swiftservehd-1.dens.tv/h/h250/index.m3u8
@@ -5906,7 +5906,7 @@ https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/tracks-v1a1/mono.ts.m3u8
 http://178.134.1.158:8081/BRIDGE/index.m3u8
 #EXTINF:-1 tvg-id="BTVChattogram.bd" channel-id="BTVChattogram.bd" tvg-language="ben" tvg-logo="logos/btv-chattogram.png" tvg-country="BD" group-title="Backup" tvg-name="BTV Chattogram",BTV Chattogram
 https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="Channel52.bd" channel-id="Channel52.bd" tvg-language="ben" tvg-country="BD" group-title="Backup" tvg-name="Channel 52",Channel 52
+#EXTINF:-1 tvg-id="Channel52.bd" channel-id="Channel52.bd" tvg-language="ben" tvg-country="BD" tvg-logo="logos/channel-52.png" group-title="Backup" tvg-name="Channel 52",Channel 52
 https://tvsen6.aynaott.com/channel52/index.m3u8
 #EXTINF:-1 tvg-id="ChannelI.bd" channel-id="ChannelI.bd" tvg-language="ben" tvg-logo="logos/channel-i.png" tvg-country="BD" group-title="Backup" tvg-name="Channel I",Channel I
 https://iptv-proxy.ahmed-bd-org.workers.dev/channel-i/index.m3u8
