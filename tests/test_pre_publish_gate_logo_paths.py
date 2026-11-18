@@ -65,18 +65,18 @@ class PrePublishLogoPathTests(unittest.TestCase):
     def test_root_level_logo_still_resolves(self):
         path = self.root / "channel.png"
         path.write_bytes(b"png")
-        url = RAW_BASE + "channel.png"
+        url = LOCAL_BASE + "channel.png"
         self.assertEqual(referenced_logo_file(url, self.root), path.resolve())
 
     def test_encoded_filename_is_decoded(self):
         path = self.root / "channel logo.png"
         path.write_bytes(b"png")
-        url = RAW_BASE + "channel%20logo.png"
+        url = LOCAL_BASE + "channel%20logo.png"
         self.assertEqual(referenced_logo_file(url, self.root), path.resolve())
 
     def test_path_traversal_is_rejected(self):
-        self.assertIsNone(referenced_logo_relative_path(RAW_BASE + "../secrets.txt"))
-        self.assertIsNone(referenced_logo_file(RAW_BASE + "../secrets.txt", self.root))
+        self.assertIsNone(referenced_logo_relative_path(LOCAL_BASE + "../secrets.txt"))
+        self.assertIsNone(referenced_logo_file(LOCAL_BASE + "../secrets.txt", self.root))
 
     def test_non_repository_logo_is_not_resolved_as_local(self):
         self.assertIsNone(referenced_logo_file("https://example.invalid/logos/channel.png", self.root))
