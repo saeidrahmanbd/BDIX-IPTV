@@ -70,6 +70,8 @@ TV_LOGO_HINTS = {
     "Golf Channel": "countries/united-states/nbc-golf-channel-us.png",
     "Laff TV": "countries/united-states/laff-us.png",
     "Laligatv": "countries/nordic/norway/laliga-tv-no.png",
+    "Mtv Classic": "countries/united-kingdom/mtv-classic-uk.png",
+    "Epix": "countries/united-states/epix-us.png",
     "Magenta Sports 2": "countries/austria/magenta-sport-2-at.png",
     "Movie Sphere": "countries/united-states/movie-sphere-us.png",
     "Movie Sphere Au": "countries/united-states/movie-sphere-us.png",
@@ -95,6 +97,8 @@ TV_LOGO_REPO = "https://github.com/tv-logo/tv-logos"
 # station profile pages where they are commonly the station avatar.
 DIRECT_PAGE_HINTS = {
     "Persiana Vibe": ("https://persiantelebox.com/live/persiana-vibe", False),
+    "Rádio Temas de Novelas": ("https://www.radiotemasdenovelas.com/", True),
+    "MAX TV": ("https://maxmusicmedia.com/live/", True),
     "Persiana Folk": ("https://persiantelebox.com/live/persiana-folk", False),
     "Persiana SetMix": ("https://www.archytele.com/live/france/persiana-setmix", True),
     "Vox Kongo TV": ("https://api.innovasat-ott.com/channel/vox-kongo-tv", True),
@@ -174,6 +178,22 @@ def find_page_logo(page_url, allow_og_image=False):
 
 # Exact station assets discovered on broadcaster/streaming-service pages.
 DIRECT_LOGO_HINTS = {
+    "DanceTV Algorhythm": {
+        "url": "https://www.dancetv.net/img/icons/channels/algorhythm.jpg",
+        "format": "JPEG",
+        "page": "https://www.dancetv.net/tech-house/",
+        "source": "Official DanceTV channel artwork URL, corroborated by the broadcaster's public stream listing",
+        "license": "Official channel artwork; broadcaster retains rights",
+        "license_url": "",
+    },
+    "Persiana Folk": {
+        "url": "https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/PersianaFolk.fr.png",
+        "format": "PNG",
+        "page": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/PersianaFolk.fr.png",
+        "source": "Exact Persiana Folk channel asset in a public channel-logo repository; independently matched to the Persiana Folk stream identity",
+        "license": "Public repository reference; original logo rights belong to Persiana Media Group",
+        "license_url": "https://github.com/shayanline/iptv-iran",
+    },
     "Totalmusic 2000s": {
         "url": "https://www.40mediagroup.com/channels/sm/totalmusic-00s.webp",
         "format": "WEBP",
