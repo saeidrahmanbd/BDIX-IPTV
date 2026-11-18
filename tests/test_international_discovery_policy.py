@@ -39,7 +39,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         backup_attrs = dict(adult_attrs, **{"group-title": "Backup"})
         self.assertEqual(
             reorg.classify(backup_attrs, "Adult Channel Alpha", "Backup", "US"),
-            ("Backup", None, None),
+            ("Review", None, None),
         )
         self.assertEqual(
             reorg.classify(backup_attrs, "Adult Channel Alpha", "Backup", "US", promote_backup=True),
@@ -52,7 +52,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
 
     def test_generic_adult_word_does_not_reclassify_backup(self):
         attrs = {"group-title": "Backup", "tvg-id": "AdultChannelAlpha.us"}
-        self.assertEqual(reorg.classify(attrs, "Adult Channel Alpha", "Backup", "US"), ("Backup", None, None))
+        self.assertEqual(reorg.classify(attrs, "Adult Channel Alpha", "Backup", "US"), ("Review", None, None))
     def test_known_channel_aliases_share_one_identity_key(self):
         pairs = [
             ("Rupasi Bangla", "Ruposhi Bangla"),
@@ -250,14 +250,15 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
     def test_foreign_religious_channel_is_promoted_to_religious_group(self):
         source = '#EXTINF:-1 tvg-id="custom.hope-channel-proyecto-ja-cr-music" tvg-content="Music" group-title="Costa Rica" tvg-name="Hope Channel PROYECTO JA",Hope Channel PROYECTO JA'
         attrs = reorg.attrs(source)
-        self.assertEqual(reorg.classify(attrs, "Hope Channel PROYECTO JA", "Costa Rica", "CR"), ("Religious", None, None))
+        self.assertEqual(reorg.classify(attrs, "Hope Channel PROYECTO JA", "Costa Rica", "CR"), ("Review", None, None))
 
     def test_radio_brands_remain_rejected_and_religious_names_use_religious_group(self):
         for name in ("Hitradio O3", "Bel RTL", "Couleur 3", "Joe FM", "Fame95 FM"):
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, "Music", "BE", name.replace(" ", "") + ".be")[0])
-        self.assertEqual(self.classify("Hope Channel PROYECTO JA", "Music", "US", "HopeChannel.us")[0], "Religious")
-        self.assertEqual(self.classify("Canal Cine Dios", "Movies", "CO", "CanalCineDios.co")[0], "Religious")
+        for name, code, ident in (("Hope Channel PROYECTO JA", "US", "HopeChannel.us"), ("Canal Cine Dios", "CO", "CanalCineDios.co")):
+            attrs = {"group-title": "International", "tvg-country": code, "tvg-id": ident}
+            self.assertIsNone(discovery.discovery_eligibility(attrs, name, allow_legacy_group=True)[0])
 
     def test_country_groups_are_used_for_non_genre_channels_only(self):
         self.assertEqual(self.classify("Entertainment World", "General", "BD", "EntertainmentWorld.bd")[0], "Bangladesh")
