@@ -99,6 +99,7 @@ DIRECT_PAGE_HINTS = {
     "Persiana Vibe": ("https://persiantelebox.com/live/persiana-vibe", False),
     "Rádio Temas de Novelas": ("https://www.radiotemasdenovelas.com/", True),
     "MAX TV": ("https://maxmusicmedia.com/live/", True),
+    "Konul Music TV": ("https://www.archytele.com/live/azerbaijan/konul-music-tv", True),
     "Persiana Folk": ("https://persiantelebox.com/live/persiana-folk", False),
     "Persiana SetMix": ("https://www.archytele.com/live/france/persiana-setmix", True),
     "Vox Kongo TV": ("https://api.innovasat-ott.com/channel/vox-kongo-tv", True),
@@ -178,6 +179,14 @@ def find_page_logo(page_url, allow_og_image=False):
 
 # Exact station assets discovered on broadcaster/streaming-service pages.
 DIRECT_LOGO_HINTS = {
+    "TVS Music Network": {
+        "url": "https://i.imgur.com/pXOyNEy.png",
+        "format": "PNG",
+        "page": "https://github.com/vbelevcev/SkyTV/blob/main/UzbaTVFull.m3u8",
+        "source": "Exact TVSMusicNetwork.us entry and matching logo reference in a public channel playlist",
+        "license": "Community playlist source attribution; original TVS branding rights retained by the broadcaster",
+        "license_url": "",
+    },
     "DanceTV Algorhythm": {
         "url": "https://www.dancetv.net/img/icons/channels/algorhythm.jpg",
         "format": "JPEG",
