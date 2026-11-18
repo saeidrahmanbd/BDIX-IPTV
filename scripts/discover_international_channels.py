@@ -225,18 +225,11 @@ def slug(value):
 def local_logo(a,name):
  target=norm(name)
  for p in LOGOS.rglob("*") if LOGOS.exists() else []:
-  if p.is_file() and p.suffix.lower() in {".png",".jpg",".jpeg",".webp",".svg"} and "unused" not in p.parts and not is_blocked_logo_basename(p.name) and norm(p.stem)==target:return "logos/"+str(p.relative_to(LOGOS)).replace("\\","/")
- source=(a.get("tvg-logo") or "").strip()
- if not source.startswith(("http://","https://")):return ""
- try:
-  req=urllib.request.Request(source,headers={"User-Agent":"BDIX-IPTV-International-Discovery/1.0"})
-  with urllib.request.urlopen(req,timeout=15) as r:data=r.read(MAX_LOGO_BYTES+1); typ=(r.headers.get("Content-Type") or "").split(";")[0].lower()
-  ext={"image/png":".png","image/jpeg":".jpg","image/webp":".webp","image/svg+xml":".svg"}.get(typ)
-  if not data or len(data)>MAX_LOGO_BYTES or not ext:return ""
-  d=LOGOS/"international"; d.mkdir(parents=True,exist_ok=True); p=d/(slug(name)+ext)
-  if not p.exists():p.write_bytes(data)
-  return "logos/"+str(p.relative_to(LOGOS)).replace("\\","/")
- except Exception:return ""
+  if p.is_file() and p.suffix.lower() in {".png",".jpg",".jpeg",".webp",".svg"} and "unused" not in p.parts and not is_blocked_logo_basename(p.name) and norm(p.stem)==target:
+   return "logos/"+str(p.relative_to(LOGOS)).replace("\\","/")
+ # Discovery may only reuse an authentic, already-local repository asset.
+ # Do not download arbitrary source tvg-logo URLs or relabel them as verified.
+ return ""
 
 def localize_existing_logo(a,name):
  raw=(a.get("tvg-logo") or "").strip()
