@@ -86,9 +86,7 @@ def validate_playlist(name, text, registry, root=Path("."), blocked=None):
             else:
                 missing += 1
             continue
-        if logo.startswith(BASE):
-            rel = unquote(logo[len(BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
-        elif logo.startswith(RAW_BASE):
+        if logo.startswith(RAW_BASE):
             rel = unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
         else:
             external += 1
