@@ -5,30 +5,27 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-17 — `IPTV-Playlist.m3u`
+### 2026-11-18 — `IPTV-Playlist.m3u`
 
-- New channel identities: **1**
-- Channel identities removed: **18**
-- Stream URLs added / removed: **1 / 53**
+- New channel identities: **20**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **26 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **6**
+- Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Comet
-
-Removed channel identities (up to 10):
-- My Cinema
 - BTL TV (Netherlands) (1080p)
 - Cartoon Network (Pakistan)
+- Vokta TV (720p)
 - CVR Health (576p)
 - Disha TV (396p)
 - Gaunda Punjab TV (720p)
 - Kabaddi 24x7 (720p)
 - NDTV Good Times (1080p)
+- Punjabi Beats HD (576p)
 - Punjab Plus (1080p)
-- Qello Concerts by Stingray (1080p)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-17 — `International-Playlist.m3u`
