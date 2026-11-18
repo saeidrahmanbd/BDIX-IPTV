@@ -225,7 +225,7 @@ def slug(value):
 def local_logo(a,name):
  target=norm(name)
  for p in LOGOS.rglob("*") if LOGOS.exists() else []:
-  if p.is_file() and p.suffix.lower() in {".png",".jpg",".jpeg",".webp",".svg"} and "unused" not in p.parts and not is_blocked_logo_basename(p.name) and norm(p.stem)==target:return RAW_BASE+str(p.relative_to(LOGOS)).replace("\\","/")
+  if p.is_file() and p.suffix.lower() in {".png",".jpg",".jpeg",".webp",".svg"} and "unused" not in p.parts and not is_blocked_logo_basename(p.name) and norm(p.stem)==target:return "logos/"+str(p.relative_to(LOGOS)).replace("\\","/")
  source=(a.get("tvg-logo") or "").strip()
  if not source.startswith(("http://","https://")):return ""
  try:
@@ -254,14 +254,14 @@ def localize_existing_logo(a,name):
   rel=urllib.parse.unquote(raw.split("?",1)[0].split("#",1)[0])
   path=Path(rel)
   if path.is_file() and "unused" not in path.parts and not is_blocked_logo_basename(path.name):
-   return RAW_BASE+rel[len("logos/"):].replace("\\","/")
+   return "logos/"+rel[len("logos/"):].replace("\\","/")
   clean=dict(a);clean.pop("tvg-logo",None)
   return local_logo(clean,name)
  if raw.startswith(("http://","https://")):return local_logo(a,name)
  return ""
 def set_logo_attr(line,logo):
  line=re.sub(r'\s+tvg-logo="[^"]*"',"",line)
- if not logo or not logo.startswith(RAW_BASE):return line
+ if not logo or not logo.startswith("logos/"):return line
  m=re.match(r"^(#EXTINF:-?\d+)(.*)$",line)
  if not m:return line
  return m.group(1)+f' tvg-logo="{logo}"'+m.group(2)
