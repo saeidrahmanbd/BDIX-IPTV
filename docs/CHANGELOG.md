@@ -18,22 +18,13 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-18 — `International-Playlist.m3u`
 
-- New channel identities: **7**
+- New channel identities: **0**
 - Channel identities removed: **0**
-- Stream URLs added / removed: **8 / 0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **6**
+- Logo reference changes: **2876**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- MCM Top (France)
-- MCM Top (Russia) (576p)
-- Melody (720p)
-- Metropolitana del Cuzco
-- Mezzo
-- Mi Musica Popular (1080p)
-- Mohammed Abdo (1080p)
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
