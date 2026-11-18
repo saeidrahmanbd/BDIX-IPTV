@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-18 04:33 UTC
+- Last scan: 2026-11-18 04:36 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12268
 - Existing playlist records: 3265
@@ -116,14 +116,14 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-11-18T04:34:03+00:00
+- Run timestamp: 2026-11-18T04:36:42+00:00
 - Mode: international
 - New entries and discovery queues probed: 57
-- Verified live media responses: 5
-- Verified new primary channels automatically promoted: 3
+- Verified live media responses: 4
+- Verified new primary channels automatically promoted: 2
 - Verified alternate streams moved to Backup: 0
 - Inconclusive candidates retained for manual review: 0
-- Definitively dead new candidates removed: 48
+- Definitively dead new candidates removed: 49
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 1
@@ -137,6 +137,7 @@
 - Removed newly discovered Andina RTV (720p) from New Channels — HTTP 404.
 - Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
 - Removed newly discovered BRIDGE Classic (576p) from New Channels — HTTP 404.
+- Removed newly discovered BRIDGE Hits (576p) from New Channels — HTTP 404.
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Concert Channel (720p) from New Channels — HTTP 404.
 - Removed newly discovered Farra Play (576p) from New Channels — HTTP 404.
@@ -185,7 +186,6 @@
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
-- Promoted BRIDGE Hits (576p) from New Channels to Russia — verified primary candidate.
 - Promoted La Top 102.9 (720p) from New Channels to Review — inconclusive stream check.
 - Promoted La Urban TV (1080p) [Not 24/7] from New Channels to Review — inconclusive stream check.
 - Promoted LaXitosa Panama (360p) [Not 24/7] from New Channels to Review — inconclusive stream check.
@@ -197,9 +197,9 @@
 
 ## Final validation
 
-- Run timestamp: 2026-11-18T04:34:04+00:00
+- Run timestamp: 2026-11-18T04:36:42+00:00
 - Validation status: FAIL
-- M3U entries parsed: 3274
+- M3U entries parsed: 3273
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
