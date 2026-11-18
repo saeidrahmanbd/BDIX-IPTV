@@ -707,12 +707,16 @@ def raw_url(filename):
     return "logos/" + urllib.parse.quote(filename, safe="/")
 
 
-def is_valid_local_logo_reference(value):
+def is_valid_local_logo_reference(value, allow_generated_fallback=False):
     value = (value or "").strip()
     if not value:
         return False
     basename = Path(urllib.parse.urlparse(value).path).name.casefold()
-    blocked_prefixes = ("nvisionbd-", "placeholder-", "generated-fallback-", "generic-", "unknown-", "unidentified-")
+    blocked_prefixes = ("nvisionbd-", "placeholder-", "generic-", "unknown-", "unidentified-")
+    if not allow_generated_fallback:
+        blocked_prefixes = blocked_prefixes + ("generated-fallback-",)
+    elif basename.startswith("generated-fallback-") and not basename.endswith(".svg"):
+        return False
     if basename.startswith(blocked_prefixes) or re.search(r"(?:placeholder|generic-logo)", basename) or basename in BAD_ASSETS or basename in GENERIC_ASSETS:
         return False
     if value.startswith("logos/"):
@@ -1003,7 +1007,7 @@ def main():
             # a fresh download. Validate the final repository-local reference,
             # not only its HTTP source metadata; if it is still quarantined,
             # discard it and remove the unsafe old reference below.
-            if new_file and not is_valid_local_logo_reference(raw_url(new_file)):
+            if new_file and not is_valid_local_logo_reference(raw_url(new_file), allow_generated_fallback=generated_fallback):
                 new_file = None
 
             if new_file:
@@ -1063,7 +1067,8 @@ def main():
                 continue
             logo = (meta.get("tvg-logo") or "").strip()
             name = Path(urllib.parse.urlparse(logo).path).name.casefold() if logo else ""
-            if not logo or not is_valid_local_logo_reference(logo):
+            allow_fallback = bool(name.startswith("generated-fallback-") and (LOGOS / urllib.parse.unquote(name)).is_file())
+            if not logo or not is_valid_local_logo_reference(logo, allow_generated_fallback=allow_fallback):
                 missing_after += 1
             if (
                 name in BAD_ASSETS or name in GENERIC_ASSETS
