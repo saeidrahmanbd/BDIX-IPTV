@@ -20,6 +20,7 @@ import unicodedata
 import urllib.error
 import urllib.parse
 
+import logo_provenance
 import logo_source_catalog as source
 
 ROOT = Path(".")
@@ -981,11 +982,14 @@ def main():
                 try:
                     candidate, source_name = candidate_for(channel, attrs, iptv_indexes, history_index)
                     if candidate:
-                        candidate_metadata = dict(candidate)
                         source_page = candidate.get("page", "")
                         license_name = candidate.get("license", "")
                         license_url = candidate.get("license_url", "")
                         new_file = download_exact_asset(channel, candidate, canonical_name=args.fallback_only)
+                        # Provenance metadata is attached only once these exact bytes
+                        # were downloaded and validated. If the download raises, the
+                        # candidate must not survive to describe a fallback asset.
+                        candidate_metadata = dict(candidate)
                 except Exception as exc:
                     report_rows.append((playlist, line_number, channel, basename, "", source_name or "external lookup", "", "", "Download/validation failed: " + str(exc)[:150]))
                     new_file = None
@@ -1016,22 +1020,15 @@ def main():
                 logo_reference = raw_url(new_file)
                 line = set_logo(line, logo_reference)
                 channel_id = (attrs.get("tvg-id") or attrs.get("channel-id") or "").strip()
-                if candidate_metadata:
-                    attribution = candidate_metadata.get("license", "").strip()
-                    source_page = candidate_metadata.get("page", "").strip()
-                    source_asset = candidate_metadata.get("url", "").strip() or source_page
-                    note_parts = [part for part in (source_name, attribution, ("Source page: " + source_page) if source_page else "") if part]
-                    registry_updates[f"{playlist}|{channel_id}|{channel}|{logo_reference}"] = {
-                        "status": "third_party_verified",
-                        "source_url": source_asset,
-                        "notes": " ".join(note_parts),
-                    }
-                elif generated_fallback:
-                    registry_updates[f"{playlist}|{channel_id}|{channel}|{logo_reference}"] = {
-                        "status": "generated_fallback",
-                        "source_url": "",
-                        "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo.",
-                    }
+                # Fallback status always wins over candidate metadata, and candidate
+                # metadata only exists for a successfully downloaded asset.
+                registry_record = logo_provenance.build_registry_record(
+                    generated_fallback=generated_fallback,
+                    candidate=candidate_metadata,
+                    source_name=source_name,
+                )
+                if registry_record:
+                    registry_updates[f"{playlist}|{channel_id}|{channel}|{logo_reference}"] = registry_record
                 changed += 1
                 report_rows.append((playlist, line_number, channel, basename, new_file, source_name, source_page, license_name + ((" — " + license_url) if license_url else ""), "replaced"))
             else:
@@ -1083,14 +1080,22 @@ def main():
             "unresolved": unresolved, "adult_entries_skipped": adult_ignored,
         }
 
-    if registry_updates:
-        try:
-            registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
-        except (OSError, UnicodeError, json.JSONDecodeError):
-            registry = {}
-        registry.update(registry_updates)
+    try:
+        registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        registry = {}
+    registry_before = json.dumps(registry, ensure_ascii=False, indent=2) + "\n"
+    registry.update(registry_updates)
+    # Heal any stale fallback record (wrong status, a source URL, or missing
+    # disclosure wording) so it cannot contradict the asset it describes. This runs
+    # on every execution, so a legacy record is repaired even when nothing else changed.
+    registry, healed_fallback_keys = logo_provenance.normalize_registry(registry)
+    if healed_fallback_keys:
+        print(f"Normalized {len(healed_fallback_keys)} generated-fallback registry record(s).")
+    registry_after = json.dumps(registry, ensure_ascii=False, indent=2) + "\n"
+    if (registry_updates or healed_fallback_keys) and registry_after != registry_before:
         REGISTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
-        REGISTRY_PATH.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        REGISTRY_PATH.write_text(registry_after, encoding="utf-8")
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")

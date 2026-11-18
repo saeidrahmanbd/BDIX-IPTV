@@ -7,6 +7,8 @@ import subprocess
 from pathlib import Path
 from datetime import datetime, timezone
 
+import logo_provenance
+
 PLAYLISTS = ["IPTV-Playlist.m3u", "International-Playlist.m3u"]
 OUT = Path("reports/logo-authenticity-manifest.json")
 REGISTRY_PATH = Path("reports/logo-source-registry.json")
@@ -17,49 +19,19 @@ def attrs(line):
     return dict(ATTR_RE.findall(line))
 
 
-def asset_stem(logo):
-    """Return only the local-looking final filename stem, case-insensitively."""
-    filename = Path(str(logo or "").split("?", 1)[0].split("#", 1)[0]).name
-    stem = Path(filename).stem.casefold()
-    # The converter adds this deterministic suffix only when a same-stem PNG
-    # already exists with different pixels; provenance still belongs to the
-    # same original source asset after format conversion.
-    return re.sub(r"-converted-[0-9a-f]{10}$", "", stem)
+asset_stem = logo_provenance.asset_stem
 
 
 def provenance_for(registry, playlist, meta, name, logo):
-    """Use an exact registry key, or a strictly identical asset stem after format conversion.
+    """Return ``(record, match)`` using the shared deterministic resolver.
 
-    A name-only match is intentionally forbidden: a different image for the same
-    channel must not inherit provenance from a previously verified logo.
+    An exact registry key wins; otherwise exactly one distinct record with the same
+    playlist, tvg-id, channel name and asset stem. A name-only match is forbidden,
+    and ambiguity resolves to no provenance (match ``ambiguous``).
     """
-    key = f"{playlist}|{meta.get('tvg-id', '')}|{name}|{logo}"
-    if key in registry:
-        return registry[key], "exact-key"
-
-    wanted_stem = asset_stem(logo)
-    if not wanted_stem:
-        return {}, "none"
-
-    candidates = []
-    for reg_key, source in registry.items():
-        parts = reg_key.split("|", 3)
-        if len(parts) != 4:
-            continue
-        reg_playlist, reg_id, reg_name, reg_logo = parts
-        if (
-            reg_playlist == playlist
-            and reg_id == meta.get("tvg-id", "")
-            and reg_name == name
-            and asset_stem(reg_logo) == wanted_stem
-            and source.get("status") in {"official_verified", "third_party_verified", "generated_fallback"}
-        ):
-            candidates.append(source)
-
-    # Ambiguous provenance is not enough to mark an asset verified.
-    if len(candidates) == 1:
-        return candidates[0], "same-asset-stem-format-conversion"
-    return {}, "none"
+    return logo_provenance.resolve_provenance(
+        registry, playlist, logo_provenance.entry_identity(meta), name, logo
+    )
 
 
 def main():
@@ -82,23 +54,11 @@ def main():
             logo = meta.get("tvg-logo", "").strip()
             source, registry_match = provenance_for(registry, playlist, meta, name, logo)
 
-            filename = Path(logo.split("?", 1)[0].split("#", 1)[0]).name.casefold()
-            if source.get("status") == "generated_fallback" or filename.startswith("generated-fallback-"):
-                status = "generated_fallback"
-                reason = source.get(
-                    "notes",
-                    "Explicitly labelled local fallback artwork; it is not an official broadcaster logo.",
-                )
-            elif source.get("status") in {"official_verified", "third_party_verified"} and source.get("source_url"):
-                status = source["status"]
-                note = source.get("notes", "Source recorded in provenance registry.")
-                if registry_match == "same-asset-stem-format-conversion":
-                    reason = "Verified source attribution retained for the same local asset stem after file-format conversion. " + note
-                else:
-                    reason = note
-            else:
-                status = "needs_review"
-                reason = "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+            # The asset decides its class; a registry record can never promote a
+            # generated fallback, and a conflicting record is surfaced, not trusted.
+            verdict = logo_provenance.classify_logo(source, registry_match, logo)
+            status = verdict["status"]
+            reason = verdict["reason"]
 
             records.append({
                 "playlist": playlist,
@@ -109,8 +69,9 @@ def main():
                 "logo": logo,
                 "status": status,
                 "registry_match": registry_match,
-                "source_url": source.get("source_url", ""),
+                "source_url": verdict["source_url"],
                 "reason": reason,
+                "registry_conflict": ", ".join(verdict["problems"]),
             })
             total += 1
         counts[playlist] = total
