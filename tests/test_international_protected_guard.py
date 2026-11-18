@@ -50,6 +50,27 @@ class ProtectedGuardTests(unittest.TestCase):
 
 
 class ReorganizePreservesProtectedTests(unittest.TestCase):
+    def test_ndtv_good_times_is_classified_as_indian_entertainment_not_news(self):
+        playlist = (
+            "#EXTM3U\\n#PLAYLIST-STUDIO-NAME: Test\\n"
+            '#EXTINF:-1 tvg-id="NDTVGoodTimes.in@SD" tvg-name="NDTV Good Times" '
+            'tvg-country="IN" group-title="News",NDTV Good Times\\n'
+            "https://example.org/ndtv-good-times.m3u8\\n"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            Path(tmp, "International-Playlist.m3u").write_text(playlist, encoding="utf-8")
+            Path(tmp, "reports").mkdir()
+            result = subprocess.run(
+                [sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
+                cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)),
+                capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            output = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+        self.assertIn('group-title="Indian Entertainment"', output)
+        self.assertNotIn('group-title="News"', output)
+        self.assertIn("https://example.org/ndtv-good-times.m3u8", output)
+
     def test_policy_does_not_delete_backup_entries(self):
         playlist = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n" + entry("CNN", "Backup", "http://news.example/cnn.m3u8", 'tvg-country="US" ') \
             + entry("Hum TV Extra", "Backup", "http://orphan.example/hum.m3u8", 'tvg-country="PK" ') \
