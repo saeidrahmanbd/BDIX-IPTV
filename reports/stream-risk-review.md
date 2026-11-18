@@ -1,6 +1,6 @@
 # Stream Risk Review
 
-Generated: **2026-11-18T03:11:45+00:00**
+Generated: **2026-11-18T03:25:29+00:00**
 IPTV-Playlist.m3u SHA-256: **939b956ecb9712790c70bc6b900d94a994112871cbfc7376d86b5cd3cb87373e**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
@@ -22,8 +22,8 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1378 |
-| Reachable | 1163 |
-| Failed this check | 215 |
+| Reachable | 1114 |
+| Failed this check | 264 |
 | Persistent failures (3+ consecutive) | 49 |
 
 ### Persistent failures
@@ -64,7 +64,7 @@ Generated from the current playlist and latest available stream-health report. T
 - **Nexus TV** — Review — consecutive failed days: **4** — HTTP 404
 - **Rajdhani TV** — Review — consecutive failed days: **4** — HTTP 404
 - **Sananda** — Review — consecutive failed days: **4** — HTTP 404
-- **Sangeet Bangla** — Review — consecutive failed days: **3** — HTTP 404
+- **Sangeet Bangla** — Review — consecutive failed days: **3** — 206
 - **Somoy TV** — Review — consecutive failed days: **4** — HTTP 404
 - **Sony Aath** — Review — consecutive failed days: **4** — HTTP 404
 - **Sony Aath** — Review — consecutive failed days: **4** — HTTP 404
