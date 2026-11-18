@@ -1,16 +1,16 @@
 # International Playlist Organization Audit
 
-- Entries before: 3248
-- Entries after: 3246
-- Channel names normalized: 2
+- Entries before: 3273
+- Entries after: 3273
+- Channel names normalized: 12
 - Malformed HTTP options moved into VLC directives: 0
-- Invalid/external logo references removed: 2882
+- Invalid/external logo references removed: 2
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1348
-- Matching alternate streams retained in Backup: 416
-- True orphan Backup rows evaluated: 597
-- Eligible orphan Backup rows promoted to primary: 596
+- Original Backup/Backups and protected queue rows examined: 1456
+- Matching alternate streams retained in Backup: 377
+- True orphan Backup rows evaluated: 46
+- Eligible orphan Backup rows promoted to primary: 45
 - Clearly identified Adult orphans restored to Adult: 0
 - Ineligible/unclassified orphan Backup rows retained: 1
 - Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.
@@ -23,7 +23,6 @@
 
 ## Removal summary
 
-- test/VOD/non-TV name: 2
 
 ## Protected Backup/Review/Not Playing entries preserved (policy would have removed them)
 
@@ -35,7 +34,7 @@
 - Indian Bangla: 32
 - Indian Movies: 71
 - Indian Music: 58
-- Indian Entertainment: 171
+- Indian Entertainment: 172
 - Pakistani: 20
 - Argentina: 14
 - Brazil: 14
@@ -48,7 +47,7 @@
 - Czech Republic: 22
 - DO: 10
 - Estonia: 6
-- France: 42
+- France: 44
 - Germany: 74
 - Greece: 7
 - Hungary: 15
@@ -63,7 +62,7 @@
 - Peru: 7
 - Poland: 24
 - Romania: 28
-- Russia: 74
+- Russia: 75
 - Saudi Arabia: 9
 - Singapore: 5
 - Spain: 20
@@ -74,11 +73,11 @@
 - United States: 229
 - Uzbekistan: 5
 - Vietnam: 6
-- International: 98
-- News: 12
+- International: 100
+- News: 11
 - Kids: 14
 - Religious: 3
 - Sports: 9
 - Adult: 366
-- Review: 1017
-- Backup: 417
+- Review: 1078
+- Backup: 378
