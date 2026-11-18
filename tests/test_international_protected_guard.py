@@ -244,6 +244,27 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
             self.assertNotIn(excluded, out)
         self.assertIn('"New Backups"', out)
 
+    def test_policy_eligible_queue_without_local_logo_is_kept_in_review(self):
+        row = entry(
+            "Foreign Movie", "New Channels", "http://movie.example/foreign.m3u8",
+            'tvg-country="US" tvg-content="Movies" '
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            Path(tmp, "International-Playlist.m3u").write_text(
+                "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n" + row, encoding="utf-8"
+            )
+            Path(tmp, "reports").mkdir()
+            result = subprocess.run(
+                [sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
+                cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)),
+                capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            output = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+        self.assertIn("http://movie.example/foreign.m3u8", output)
+        self.assertIn('group-title="Review"', output)
+        self.assertNotIn('group-title="New Channels"', output)
+
     def test_adult_backup_orphan_is_restored_even_with_same_name_non_adult_primary(self):
         primary = entry(
             "Cine One", "International Movies", "http://movies.example/cine-one.m3u8",
