@@ -104,9 +104,6 @@ def norm_key(value):
     return re.sub(r"[^a-z0-9]+", "", value.casefold())
 
 def local_logo_path(logo):
-    if logo.startswith(RAW_BASE):
-        rel = urllib.parse.unquote(logo[len(RAW_BASE):])
-        return Path("logos") / rel
     if logo.startswith("logos/"):
         return Path(logo)
     return None
@@ -118,7 +115,7 @@ def find_logo(name):
     for path in LOGOS.rglob("*"):
         if path.is_file() and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg"}:
             if norm_key(path.stem) == key:
-                return RAW_BASE + str(path.relative_to(LOGOS)).replace("\\", "/")
+                return "logos/" + str(path.relative_to(LOGOS)).replace("\\", "/")
     return None
 
 def set_logo(extinf, logo):
