@@ -233,6 +233,34 @@ def classify(a, name, group, country, promote_backup=False):
     if group_key == "review":
         return "Review", infer_kind(name, group, a), None
 
+    # Enforce the current regional policy before thematic grouping or Backup
+    # preservation. Policy-ineligible and country-ambiguous existing rows are
+    # quarantined in Review; they are never silently promoted to another genre.
+    if country == "IN" or group in INDIAN_GROUPS:
+        prohibited = bd_policy.prohibited_channel(a, name, "IN", discovery=True)
+        if prohibited:
+            return "Review", None, None
+    elif country not in {"BD", "PK"}:
+        if country not in discovery.ISO_CODES:
+            if group_key not in QUEUE_GROUPS:
+                return "Review", None, None
+        else:
+            policy_attrs = dict(a)
+            policy_attrs["group-title"] = "International"
+            policy_attrs["tvg-country"] = country
+            eligible, policy_reason, verified_country = discovery.discovery_eligibility(
+                policy_attrs, name, allow_legacy_group=True
+            )
+            original_genre = re.sub(r"[^a-z0-9]+", " ", group_key).strip()
+            prohibited_group = original_genre in {
+                "news", "news channel", "news channels", "sport", "sports",
+                "kid", "kids", "children", "childrens", "religious", "religion",
+                "faith", "devotional", "documentary", "documentaries",
+                "wildlife", "nature", "documentary wildlife", "fashion tv",
+            }
+            if prohibited_group or eligible is None or verified_country != country:
+                return "Review", None, None
+
     if not name or re.fullmatch(r"(?:\d+|n/?a|unknown|test|demo|sample|placeholder|new channel|unnamed|no name|not available)", name, re.I):
         return None, None, "non-real/test channel"
     if discovery.BAD_NAME_RE.search(name):
