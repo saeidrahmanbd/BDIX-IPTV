@@ -419,7 +419,7 @@ def main() -> int:
             "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
             "Indian Entertainment", "Pakistani", "International",
             "Documentary & Wildlife", "Kids", "Religious", "Sports",
-            "Backup", "New Channels", "New Backups", "Review",
+            "New Channels", "New Backups", "Backup", "Review",
         ]
         rank = {value: index for index, value in enumerate(category_order)}
         matching = [
@@ -453,8 +453,25 @@ def main() -> int:
     # Modify only the two discovery queues; do not sort or normalize old records.
     lines = insert_queue_rows(lines, "New Channels", new_channel_rows)
     lines = insert_queue_rows(lines, "New Backups", new_backup_rows)
-    if new_channel_rows or new_backup_rows:
-        PLAYLIST.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+
+    # Reserve the two manual queues in the Playlist Studio registry immediately
+    # before Backup. This changes no existing row, group, channel number or order.
+    registry_indexes = [i for i, line in enumerate(lines)
+                        if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
+    if len(registry_indexes) != 1:
+        raise SystemExit("Expected exactly one Playlist Studio category registry; refusing discovery write.")
+    registry_index = registry_indexes[0]
+    try:
+        registry = json.loads(lines[registry_index].split(":", 1)[1])
+    except (IndexError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"Invalid Playlist Studio category registry; refusing discovery write: {exc}")
+    if not isinstance(registry, list) or "Backup" not in registry:
+        raise SystemExit("Playlist Studio registry has no Backup category; refusing discovery write.")
+    for queue in ("New Channels", "New Backups"):
+        if queue not in registry:
+            registry.insert(registry.index("Backup"), queue)
+    lines[registry_index] = "#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry, ensure_ascii=False)
+    PLAYLIST.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     report = [
