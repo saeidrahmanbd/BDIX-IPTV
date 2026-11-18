@@ -124,9 +124,6 @@ def logo_issue(info):
         except (OSError, ValueError, Image.DecompressionBombError):
             return "corrupt-image"
         return ""
-    if logo.startswith(RAW_BASE):
-        fn = unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
-        return check_local(LOGOS / fn)
     if logo.startswith("logos/"):
         return check_local(Path(unquote(logo)))
     if logo.startswith(("http://", "https://")):
