@@ -7,6 +7,11 @@ from pathlib import Path
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
 TEXT_SUFFIXES = {".py", ".yml", ".yaml", ".json", ".md", ".txt", ".m3u", ".xml", ".html", ".js", ".css", ".toml", ".ini", ".sh"}
 PLAYLIST_FILES = {"IPTV-Playlist.m3u", "International-Playlist.m3u"}
+# Exact image hashes for known Imgur "image does not exist" placeholder artwork.
+KNOWN_PLACEHOLDER_SHA256 = {
+    "9b5936f4006146e4e1e9025b474c02863c0b5614132ad40db4b925a10e8bfbb9": "Imgur missing-image placeholder",
+    "f2cd5de2436f5aae2280c8fbd5499b5150f8cbac818639746827593f58d35ac4": "Imgur missing-image placeholder",
+}
 RUNTIME_REPORTS = {"reports/logo-source-registry.json", "reports/logo-authenticity-manifest.json"}
 EXCLUDED_REFERENCE_FILES = {"docs/automation-v2/baseline-tree-manifest.json", "docs/automation-v2/logo-reference-baseline.json"}
 LOGO_REF = re.compile(r'(?:https?://[^\s"\']+?/)?(logos/[A-Za-z0-9_./@+-]+\.(?:png|jpe?g|webp|gif|svg))', re.I)
@@ -76,6 +81,12 @@ def scan(root: Path) -> dict:
         {"sha256": digest, "files": sorted(paths)}
         for digest, paths in sorted(hashes.items()) if len(paths) > 1
     ]
+    placeholder_groups = [
+        {"sha256": digest, "reason": KNOWN_PLACEHOLDER_SHA256[digest], "files": sorted(paths)}
+        for digest, paths in sorted(hashes.items()) if digest in KNOWN_PLACEHOLDER_SHA256
+    ]
+    placeholder_files = {path for group in placeholder_groups for path in group["files"]}
+    playlist_placeholder_assets = sorted(playlist_referenced.intersection(placeholder_files))
     return {
         "schema_version": 3,
         "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
@@ -91,6 +102,9 @@ def scan(root: Path) -> dict:
         "exact_duplicate_groups": len(duplicate_groups),
         "exact_duplicate_files": sum(len(group["files"]) - 1 for group in duplicate_groups),
         "exact_duplicates": duplicate_groups,
+        "known_placeholder_asset_groups": placeholder_groups,
+        "known_placeholder_asset_files": sorted(placeholder_files),
+        "playlist_referenced_placeholder_assets": playlist_placeholder_assets,
         "runtime_references": {key: sorted(runtime_references[key]) for key in sorted(runtime_references) if key in asset_set},
         "all_references": {key: sorted(references[key]) for key in sorted(references) if key in asset_set},
         "apparently_unreferenced_by_runtime": sorted(asset_set - runtime_referenced),
@@ -110,7 +124,7 @@ def main() -> int:
         args.output.write_text(rendered, encoding="utf-8")
     else:
         print(rendered, end="")
-    print(f"Logo audit: {result['logo_image_files']} assets; {result['playlist_referenced_logo_files']} playlist refs; {result['runtime_referenced_logo_files']} runtime refs; {len(result['apparently_unreferenced_by_runtime'])} apparent runtime non-refs; {len(result['missing_runtime_logo_targets'])} missing runtime targets; {result['exact_duplicate_groups']} exact duplicate groups; no deletion or quarantine", flush=True)
+    print(f"Logo audit: {result['logo_image_files']} assets; {result['playlist_referenced_logo_files']} playlist refs; {result['runtime_referenced_logo_files']} runtime refs; {len(result['apparently_unreferenced_by_runtime'])} apparent runtime non-refs; {len(result['missing_runtime_logo_targets'])} missing runtime targets; {result['exact_duplicate_groups']} exact duplicate groups; {len(result['known_placeholder_asset_files'])} known placeholder files; {len(result['playlist_referenced_placeholder_assets'])} playlist-referenced placeholders; no deletion or quarantine", flush=True)
     return 0
 
 if __name__ == "__main__":
