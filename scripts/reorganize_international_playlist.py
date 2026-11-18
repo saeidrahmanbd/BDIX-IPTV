@@ -159,15 +159,18 @@ def url_of(block):
 
 def local_logo_path(logo):
     logo = str(logo or "").strip()
-    if logo.startswith(RAW_BASE):
-        rel = logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0]
-    elif logo.startswith("logos/"):
-        rel = logo[len("logos/"):].split("?", 1)[0].split("#", 1)[0]
-    else:
+    if not logo.startswith("logos/"):
         return None
+    rel = logo[len("logos/"):].split("?", 1)[0].split("#", 1)[0]
     rel = rel.replace("%20", " ")
+    if not rel or "unused" in {p.casefold() for p in Path(rel).parts}:
+        return None
     path = LOGOS / rel
-    if not rel or "unused" in {p.casefold() for p in Path(rel).parts} or not path.is_file():
+    try:
+        path.resolve().relative_to(LOGOS.resolve())
+    except (OSError, RuntimeError, ValueError):
+        return None
+    if not path.is_file() or discovery.is_blocked_logo_basename(path.name):
         return None
     return path
 
@@ -278,6 +281,11 @@ def classify(a, name, group, country, promote_backup=False):
         kind = infer_kind(name, group, a)
         if code not in {"BD", "IN", "PK"} and not kind:
             return None, None, "foreign candidate is not clearly Movies/Music"
+        logo_path = local_logo_path(a.get("tvg-logo", ""))
+        if logo_path is None:
+            # A policy-eligible but unverified-logo candidate is retained for
+            # manual review, never published as a queue entry with remote art.
+            return "Review", kind, None
         return ("New Backups" if group_key in {"new backup", "new backups"} else "New Channels"), kind, None
 
     # Keep alternates in Backup during ordinary classification. The organizer
