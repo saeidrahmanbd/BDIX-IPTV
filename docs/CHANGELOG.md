@@ -28,27 +28,32 @@ Added channel identities (up to 10):
 - Punjab Plus (1080p)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-17 — `International-Playlist.m3u`
+### 2026-11-18 — `International-Playlist.m3u`
 
-- New channel identities: **113**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **113 / 0**
+- New channel identities: **13**
+- Channel identities removed: **3**
+- Stream URLs added / removed: **19 / 5**
 - Backup URL updates: **0**
-- Logo reference changes: **4**
+- Logo reference changes: **2882**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- ATV USA
-- Banglar Kontho 24
-- CB24 TV
-- Channel 9
-- Channel 16
-- Community TV
-- Desh Bangla TV
-- DTV USA
-- JA TV
-- Shikor TV Canada
+- Abdulmajeed Abdullah (1080p)
+- D Music (1280p) [Not 24/7]
+- DanceTV EDM Mainstage (1080p)
+- DanceTV Minimal Tech (1080p)
+- NewFlix
+- Persiana Latino
+- Sky Cinema Action
+- Sky Cinema Collection
+- Sky Cinema Family
+- Sky Cinema Suspense
+
+Removed channel identities (up to 10):
+- Kronehit TV
+- Radio Norba TV
+- Thikana
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
