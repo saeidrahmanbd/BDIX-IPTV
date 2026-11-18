@@ -284,7 +284,7 @@ def should_current_run_execute(
         if str(run.get("status") or "").casefold() == "completed"
         and owner_check(run, client, workflow_file)
         and (
-            workflow_file != "epg-refresh.yml"
+            workflow_file not in {"epg-refresh.yml", "playlist-logo-localization.yml"}
             or same_epg_input_revision(run, current)
         )
     ]
