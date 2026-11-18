@@ -372,7 +372,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         import validate_discovery_run as validation
         row = (
             '#EXTINF:-1 tvg-id="MCMPop.fr" tvg-name="MCM Pop" tvg-country="FR" '
-            'group-title="New Channels",MCM Pop\\nhttps://example.org/mcm-pop.m3u8'
+            'group-title="New Channels",MCM Pop\nhttps://example.org/mcm-pop.m3u8'
         )
         _, entries, malformed = parse_playlist(row)
         self.assertFalse(malformed)
