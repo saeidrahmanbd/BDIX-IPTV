@@ -6083,5 +6083,540 @@
     "status": "third_party_verified",
     "source_url": "https://api.innovasat-ott.com/logo.png",
     "notes": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://api.innovasat-ott.com/channel/vox-kongo-tv"
+  },
+  "IPTV-Playlist.m3u|News21BanglaTV.bd@SD|News 21|logos/news-21-9b926f453c.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/ijuJfmd.png",
+    "notes": "IPTV-org exact ID: News21BanglaTV.bd IPTV-org public logo dataset Source page: https://i.imgur.com/ijuJfmd.png"
+  },
+  "IPTV-Playlist.m3u|KappaTV.in@ALT1|Kappa TV (Music)|logos/kappa-tv-music-53d014bd88.png": {
+    "status": "third_party_verified",
+    "source_url": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Kappa%20TV.png",
+    "notes": "IPTV-org exact ID: KappaTV.in IPTV-org public logo dataset Source page: https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Kappa%20TV.png"
+  },
+  "IPTV-Playlist.m3u|Mh1Music.in@SD|MH One Music|logos/mh-one-music-760b242ecd.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s143539_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: Mh1Music.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s143539_ld_h15_aa.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|BIGTV.in@SD|BIG TV|logos/big-tv-e8a3c69872.png": {
+    "status": "third_party_verified",
+    "source_url": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/BIGTV%20Logo_2000_X_1125_Transpharent.png",
+    "notes": "IPTV-org exact ID: BIGTV.in IPTV-org public logo dataset Source page: https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/BIGTV%20Logo_2000_X_1125_Transpharent.png"
+  },
+  "IPTV-Playlist.m3u|ColorsSuper.in|Colors Super|logos/colors-super-7ff1b18f5f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_SUPER/images/LOGO_HD/image.png",
+    "notes": "IPTV-org exact ID: ColorsSuper.in IPTV-org public logo dataset Source page: https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_SUPER/images/LOGO_HD/image.png"
+  },
+  "IPTV-Playlist.m3u|ary.digital.pk|Ary Digital|logos/ary-digital-a504a6f19a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/TVP7g03.png",
+    "notes": "IPTV-org exact unique channel name: ARYDigital.pk IPTV-org public logo dataset Source page: https://i.imgur.com/TVP7g03.png"
+  },
+  "IPTV-Playlist.m3u|aurLIFE.pk|aur LIFE|logos/aur-life-d7f877a658.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/GfWLn3O.jpg",
+    "notes": "IPTV-org exact unique channel name: aurLifeHD.pk IPTV-org public logo dataset Source page: https://i.imgur.com/GfWLn3O.jpg"
+  },
+  "IPTV-Playlist.m3u|green.entertainment.pk|Green Entertainment|logos/green-entertainment-d659ccd3fc.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/yCsAX7R.png",
+    "notes": "IPTV-org exact unique channel name: GreenEntertainment.pk IPTV-org public logo dataset Source page: https://i.imgur.com/yCsAX7R.png"
+  },
+  "IPTV-Playlist.m3u|plex.tv.AMC.Thrillers.plex|AMC Thrillers|logos/amc-thrillers-d0a59f9bc2.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/EVD0aIt.png",
+    "notes": "IPTV-org exact unique channel name: AMCThrillers.us IPTV-org public logo dataset Source page: https://i.imgur.com/EVD0aIt.png"
+  },
+  "IPTV-Playlist.m3u|CNN.us|CNN|logos/cnn-e3b37e3419.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/960px-CNN.svg.png",
+    "notes": "IPTV-org exact ID: CNN.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/960px-CNN.svg.png"
+  },
+  "IPTV-Playlist.m3u|MyTimeMovieNetwork.uk@SD|MyTime Movie (UK)|logos/mytime-movie-uk-5d68663811.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/pw4NZK1.png",
+    "notes": "IPTV-org exact ID: MyTimeMovieNetwork.uk IPTV-org public logo dataset Source page: https://i.imgur.com/pw4NZK1.png"
+  },
+  "IPTV-Playlist.m3u|MyTimeMovieNetworkEast.us|MyTime Movie Network East (US)|logos/mytime-movie-network-east-us-0641ac6cd5.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/HYgxPVQ.png",
+    "notes": "IPTV-org exact ID: MyTimeMovieNetworkEast.us IPTV-org public logo dataset Source page: https://i.imgur.com/HYgxPVQ.png"
+  },
+  "IPTV-Playlist.m3u|Now90s00s.uk@Poland|NOW 90s & 00s|logos/now-90s-and-00s-1d733d9115.png": {
+    "status": "third_party_verified",
+    "source_url": "https://images.pluto.tv/channels/660c209e19ca71000846cf38/colorLogoPNG.png",
+    "notes": "IPTV-org exact ID: Now90s00s.uk IPTV-org public logo dataset Source page: https://images.pluto.tv/channels/660c209e19ca71000846cf38/colorLogoPNG.png"
+  },
+  "IPTV-Playlist.m3u|HistoryTV18.in@SD|History TV|logos/history-tv-ce36a299ec.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s143132_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: HistoryTV18.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s143132_ld_h15_aa.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|LifeStyle.us|Life+Style|logos/life-plus-style-259a601564.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/msQsW9M.png",
+    "notes": "IPTV-org exact ID: LifeStyle.us IPTV-org public logo dataset Source page: https://i.imgur.com/msQsW9M.png"
+  },
+  "IPTV-Playlist.m3u|NatGeoTV.us|Nat Geo TV|logos/nat-geo-tv-3ec65d6036.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://s3.aynaott.com/storage/2dce8297266bbc9c235c27119f914e1b",
+    "notes": "Exact original tvg-logo URL from playlist history Historical source URL; reuse rights not specified Source page: https://github.com/saeidrahmanbd/BDIX-IPTV/blob/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u"
+  },
+  "IPTV-Playlist.m3u|NatureTime.us|Nature Time|logos/nature-time-89beb43c58.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/72JmyjM.png",
+    "notes": "IPTV-org exact unique channel name: NatureTime.ca IPTV-org public logo dataset Source page: https://i.imgur.com/72JmyjM.png"
+  },
+  "IPTV-Playlist.m3u|ADNTVPlus.fr|ADN TV+|logos/adn-tv-plus-eb66676d39.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/HQZQyWt.png",
+    "notes": "IPTV-org exact ID: ADNTVPlus.fr IPTV-org public logo dataset Source page: https://i.imgur.com/HQZQyWt.png"
+  },
+  "IPTV-Playlist.m3u|DisneyChannel.in@HD|Disney Channel|logos/disney-channel-1b160711f2.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
+    "notes": "IPTV-org exact ID: DisneyChannel.in IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg"
+  },
+  "IPTV-Playlist.m3u|Nickelodeon.us@SD|Nickelodeon|logos/nickelodeon-9bff2e9298.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/E84jnP8.png",
+    "notes": "IPTV-org exact ID: Nickelodeon.us IPTV-org public logo dataset Source page: https://i.imgur.com/E84jnP8.png"
+  },
+  "IPTV-Playlist.m3u|WOWKidz.in@Hindi|WOW Kidz Hindi|logos/wow-kidz-hindi-443b90375c.png": {
+    "status": "third_party_verified",
+    "source_url": "https://d229kpbsb5jevy.cloudfront.net/yupptvnew/content/common/channel/logos/mjvezt.png",
+    "notes": "IPTV-org exact ID: WOWKidz.in IPTV-org public logo dataset Source page: https://d229kpbsb5jevy.cloudfront.net/yupptvnew/content/common/channel/logos/mjvezt.png"
+  },
+  "IPTV-Playlist.m3u|ZooMoo.sg|Zoo Moo|logos/zoo-moo-b735c650d5.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/ciTJrnl.png",
+    "notes": "IPTV-org exact ID: ZooMoo.sg IPTV-org public logo dataset Source page: https://i.imgur.com/ciTJrnl.png"
+  },
+  "IPTV-Playlist.m3u|EmanChannel|Eman Channel|logos/eman-channel-e0ed1458f2.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/ugn0DWe.png",
+    "notes": "IPTV-org exact unique channel name: EmanChannel.uk IPTV-org public logo dataset Source page: https://i.imgur.com/ugn0DWe.png"
+  },
+  "IPTV-Playlist.m3u|ESPN2.us@HD|ESPN2|logos/espn2-7a4d2daafc.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/00tsvjE.png",
+    "notes": "IPTV-org exact ID: ESPN2.us IPTV-org public logo dataset Source page: https://i.imgur.com/00tsvjE.png"
+  },
+  "IPTV-Playlist.m3u|FITE247.us|FITE 24|logos/fite-24-35bf19d769.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/ESV6qgH.png",
+    "notes": "IPTV-org exact ID: FITE247.us IPTV-org public logo dataset Source page: https://i.imgur.com/ESV6qgH.png"
+  },
+  "IPTV-Playlist.m3u|Futbol.tj@SD|Futbol|logos/futbol-fe33fdb436.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/RngmCDn.png",
+    "notes": "IPTV-org exact ID: Futbol.tj IPTV-org public logo dataset Source page: https://i.imgur.com/RngmCDn.png"
+  },
+  "IPTV-Playlist.m3u|MLB.us@SD|MLB|logos/mlb-1aed6c80c3.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/ym3su2J.png",
+    "notes": "IPTV-org exact ID: MLB.us IPTV-org public logo dataset Source page: https://i.imgur.com/ym3su2J.png"
+  },
+  "IPTV-Playlist.m3u|TSN2.ca@SD|TSN 2|logos/tsn-2-a6b01504fc.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/TSN2.svg/960px-TSN2.svg.png",
+    "notes": "IPTV-org exact ID: TSN2.ca IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/TSN2.svg/960px-TSN2.svg.png"
+  },
+  "IPTV-Playlist.m3u|TSN3.ca@SD|TSN 3|logos/tsn-3-3e12a7cd51.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/AYza8KO.png",
+    "notes": "IPTV-org exact ID: TSN3.ca IPTV-org public logo dataset Source page: https://i.imgur.com/AYza8KO.png"
+  },
+  "IPTV-Playlist.m3u|Travelxp.in@4KHDR|Travelxp 4K HDR (2160p) [Geo-blocked]|logos/travelxp-4k-hdr-2160p-geo-blocked-ce9f4d3118.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: Travelxp.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|AnimaxAsia.sg@India|Animax Asia India|logos/animax-asia-india-dc2259f958.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Animax.png/960px-Animax.png",
+    "notes": "IPTV-org exact ID: AnimaxAsia.sg IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Animax.png/960px-Animax.png"
+  },
+  "International-Playlist.m3u|custom.bdix.nrb-hd|NRB|logos/nrb-68691f4727.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/NRB-logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "notes": "Wikimedia Commons exact-logo search CC0 Source page: https://commons.wikimedia.org/wiki/File:NRB-logo.png"
+  },
+  "International-Playlist.m3u|AndTV.in@International|&TV International|logos/and-tv-international-af1a6839d3.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/%26TV_Transparent_c5cc189b-8493-48d2-b07c-3fa4f92d754a.png",
+    "notes": "IPTV-org exact ID: AndTV.in IPTV-org public logo dataset Source page: https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/%26TV_Transparent_c5cc189b-8493-48d2-b07c-3fa4f92d754a.png"
+  },
+  "International-Playlist.m3u|AnmolTV.in@SD|Zee Anmol TV|logos/zee-anmol-tv-8dee2e0662.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/AnmolTV_Transparent_6e1b4782-0685-4ccd-bac0-436a0c0ea947.png",
+    "notes": "IPTV-org exact ID: AnmolTV.in IPTV-org public logo dataset Source page: https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/AnmolTV_Transparent_6e1b4782-0685-4ccd-bac0-436a0c0ea947.png"
+  },
+  "International-Playlist.m3u|Travelxp.in@HD|Travel XP English|logos/travel-xp-english-ce9f4d3118.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: Travelxp.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540"
+  },
+  "International-Playlist.m3u|PlusMaisUm.br@HD|+MaisUm|logos/plus-maisum-44a49d02ed.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.ibb.co/ZRDvqJcf/Logo-Mais-Um-original-sem-fundo.png",
+    "notes": "IPTV-org exact ID: PlusMaisUm.br IPTV-org public logo dataset Source page: https://i.ibb.co/ZRDvqJcf/Logo-Mais-Um-original-sem-fundo.png"
+  },
+  "International-Playlist.m3u|FILMBOXPlusEmotion.pl@Bulgaria|FILMBOX+ Emotion Bulgaria|logos/filmbox-plus-emotion-bulgaria-f7ccc464ab.png": {
+    "status": "third_party_verified",
+    "source_url": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bemotion.png",
+    "notes": "IPTV-org exact ID: FILMBOXPlusEmotion.pl IPTV-org public logo dataset Source page: https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bemotion.png"
+  },
+  "International-Playlist.m3u|FILMBOXPlusLoveCrime.pl@Bulgaria|FILMBOX+ Love & Crime Bulgaria|logos/filmbox-plus-love-and-crime-bulgaria-a83544bb95.png": {
+    "status": "third_party_verified",
+    "source_url": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Blove-and-crime.png",
+    "notes": "IPTV-org exact ID: FILMBOXPlusLoveCrime.pl IPTV-org public logo dataset Source page: https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Blove-and-crime.png"
+  },
+  "International-Playlist.m3u|FILMBOXPlusOne.pl@Bulgaria|FILMBOX+ One Bulgaria|logos/filmbox-plus-one-bulgaria-98de98aaef.png": {
+    "status": "third_party_verified",
+    "source_url": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bone.png",
+    "notes": "IPTV-org exact ID: FILMBOXPlusOne.pl IPTV-org public logo dataset Source page: https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bone.png"
+  },
+  "International-Playlist.m3u|HBO1.ca|HBO East|logos/hbo-east-aa2acd5330.png": {
+    "status": "third_party_verified",
+    "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/HBO_Canada_Logo.png/960px-HBO_Canada_Logo.png",
+    "notes": "IPTV-org exact ID: HBO1.ca IPTV-org public logo dataset Source page: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/HBO_Canada_Logo.png/960px-HBO_Canada_Logo.png"
+  },
+  "International-Playlist.m3u|PlutoTVBudTerence.de@DACH|Pluto TV Bud & Terence (Germany)|logos/pluto-tv-bud-and-terence-germany-92919e25e1.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://images.pluto.tv/channels/64be7398e4391c0008cdedfe/colorLogoSVG_1776936976930.svg",
+    "notes": "IPTV-org exact ID: PlutoTVBudTerence.de IPTV-org public logo dataset Source page: https://images.pluto.tv/channels/64be7398e4391c0008cdedfe/colorLogoSVG_1776936976930.svg"
+  },
+  "International-Playlist.m3u|PlutoTVFantasyHorror.de@GB|Pluto TV Fantasy & Horror|logos/pluto-tv-fantasy-and-horror-456f4e1235.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://images.pluto.tv/channels/685041d936c9361b1921c26c/colorLogoSVG_1753696742028.svg",
+    "notes": "IPTV-org exact ID: PlutoTVFantasyHorror.de IPTV-org public logo dataset Source page: https://images.pluto.tv/channels/685041d936c9361b1921c26c/colorLogoSVG_1753696742028.svg"
+  },
+  "International-Playlist.m3u|RTL1025TV.it|RTL 102.5|logos/rtl-102-5-6840fce10f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/75qUdR7.png",
+    "notes": "IPTV-org exact ID: RTL1025TV.it IPTV-org public logo dataset Source page: https://i.imgur.com/75qUdR7.png"
+  },
+  "International-Playlist.m3u|Filmex.mx@SD|Filmex [ ]|logos/filmex-517bec3e44.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/Hiz2OyC.png",
+    "notes": "IPTV-org exact ID: Filmex.mx IPTV-org public logo dataset Source page: https://i.imgur.com/Hiz2OyC.png"
+  },
+  "International-Playlist.m3u|FilmexClasico.mx@SD|Filmex Clasico [ ]|logos/filmex-clasico-0d11a8a4ec.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/D3dj4mv.png",
+    "notes": "IPTV-org exact ID: FilmexClasico.mx IPTV-org public logo dataset Source page: https://i.imgur.com/D3dj4mv.png"
+  },
+  "International-Playlist.m3u|CanalPlusActionEurope.nl@Magyar|Canal+ Action Europe Magyar|logos/canal-plus-action-europe-magyar-f9ffc6ff7a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png",
+    "notes": "IPTV-org exact ID: CanalPlusActionEurope.nl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png"
+  },
+  "International-Playlist.m3u|JazzTV.mk@SD|Jazz TV [ ]|logos/jazz-tv-c92d659066.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/CbQlSFX.png",
+    "notes": "IPTV-org exact ID: JazzTV.mk IPTV-org public logo dataset Source page: https://i.imgur.com/CbQlSFX.png"
+  },
+  "International-Playlist.m3u|FILMBOXPlusOne.pl@UkraineBaltics|FILMBOX+ One Ukraine & Baltics [ ]|logos/filmbox-plus-one-ukraine-and-baltics-98de98aaef.png": {
+    "status": "third_party_verified",
+    "source_url": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bone.png",
+    "notes": "IPTV-org exact ID: FILMBOXPlusOne.pl IPTV-org public logo dataset Source page: https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bone.png"
+  },
+  "International-Playlist.m3u|CityEdenKinoAction.ru@HD|City Eden KinoAction [ ]|logos/city-eden-kinoaction-bb30b4455e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/uuzuvD0.png",
+    "notes": "IPTV-org exact ID: CityEdenKinoAction.ru IPTV-org public logo dataset Source page: https://i.imgur.com/uuzuvD0.png"
+  },
+  "International-Playlist.m3u|CityEdenKinoAsia.ru@HD|City Eden KinoAsia [ ]|logos/city-eden-kinoasia-45616170d3.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/gaket4B.png",
+    "notes": "IPTV-org exact ID: CityEdenKinoAsia.ru IPTV-org public logo dataset Source page: https://i.imgur.com/gaket4B.png"
+  },
+  "International-Playlist.m3u|vijuPlusPremiere.ru@HD|viju+ Premiere|logos/viju-plus-premiere-3c34be1aa9.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/klRvhR5.png",
+    "notes": "IPTV-org exact ID: vijuPlusPremiere.ru IPTV-org public logo dataset Source page: https://i.imgur.com/klRvhR5.png"
+  },
+  "International-Playlist.m3u|PlutoTVBudTerence.se@SE|Pluto TV Bud & Terence (Sweden)|logos/pluto-tv-bud-and-terence-sweden-92919e25e1.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://images.pluto.tv/channels/64be7398e4391c0008cdedfe/colorLogoSVG_1776936976930.svg",
+    "notes": "IPTV-org exact ID: PlutoTVBudTerence.se IPTV-org public logo dataset Source page: https://images.pluto.tv/channels/64be7398e4391c0008cdedfe/colorLogoSVG_1776936976930.svg"
+  },
+  "International-Playlist.m3u|PlutoTVBudTerence.se@DK|Pluto TV Bud & Terence (Sweden) DK|logos/pluto-tv-bud-and-terence-sweden-dk-92919e25e1.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://images.pluto.tv/channels/64be7398e4391c0008cdedfe/colorLogoSVG_1776936976930.svg",
+    "notes": "IPTV-org exact ID: PlutoTVBudTerence.se IPTV-org public logo dataset Source page: https://images.pluto.tv/channels/64be7398e4391c0008cdedfe/colorLogoSVG_1776936976930.svg"
+  },
+  "International-Playlist.m3u|PlutoTVBudTerence.se@NO|Pluto TV Bud & Terence (Sweden) NO|logos/pluto-tv-bud-and-terence-sweden-no-92919e25e1.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://images.pluto.tv/channels/64be7398e4391c0008cdedfe/colorLogoSVG_1776936976930.svg",
+    "notes": "IPTV-org exact ID: PlutoTVBudTerence.se IPTV-org public logo dataset Source page: https://images.pluto.tv/channels/64be7398e4391c0008cdedfe/colorLogoSVG_1776936976930.svg"
+  },
+  "International-Playlist.m3u|film4.uk|Film 4|logos/film-4-0f821d9e48.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/MTSgoGI.png",
+    "notes": "IPTV-org exact ID: film4.uk IPTV-org public logo dataset Source page: https://i.imgur.com/MTSgoGI.png"
+  },
+  "International-Playlist.m3u|epixhits.us|Epix Hits|logos/epix-hits-2a277450b6.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/MGM%2B_Marquee_2023.svg/960px-MGM%2B_Marquee_2023.svg.png",
+    "notes": "IPTV-org exact unique channel name: MGMPlusMarquee.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/MGM%2B_Marquee_2023.svg/960px-MGM%2B_Marquee_2023.svg.png"
+  },
+  "International-Playlist.m3u|HallmarkMoviesMore.us|Hallmark Movies & More|logos/hallmark-movies-and-more-b779fed878.png": {
+    "status": "third_party_verified",
+    "source_url": "https://provider-static.plex.tv/epg/cms/production/29af70d1-d3ba-4a16-bc4d-bd99e7e7def4/hallmark-movies-and-more_color.png",
+    "notes": "IPTV-org exact ID: HallmarkMoviesMore.us IPTV-org public logo dataset Source page: https://provider-static.plex.tv/epg/cms/production/29af70d1-d3ba-4a16-bc4d-bd99e7e7def4/hallmark-movies-and-more_color.png"
+  },
+  "International-Playlist.m3u|HallmarkMystery.us@East|Hallmark Mystery [ ]|logos/hallmark-mystery-bdb1e4a1f0.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Hallmark_Mystery_2024.svg",
+    "notes": "IPTV-org exact ID: HallmarkMystery.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/3/32/Hallmark_Mystery_2024.svg"
+  },
+  "International-Playlist.m3u|hbosignature.us|HBO Signature|logos/hbo-signature-be5b59ae93.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/HBO_Signature_%282014%29.svg/960px-HBO_Signature_%282014%29.svg.png",
+    "notes": "IPTV-org exact ID: hbosignature.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/HBO_Signature_%282014%29.svg/960px-HBO_Signature_%282014%29.svg.png"
+  },
+  "International-Playlist.m3u|hbozone.us|HBO Zone|logos/hbo-zone-c20f9bcf48.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/HBO_Zone_%282014%29.svg/960px-HBO_Zone_%282014%29.svg.png",
+    "notes": "IPTV-org exact ID: hbozone.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/HBO_Zone_%282014%29.svg/960px-HBO_Zone_%282014%29.svg.png"
+  },
+  "International-Playlist.m3u|lifetimemovies.us|Lifetime Movies|logos/lifetime-movies-e7bc3ff959.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/BWmqYTO.png",
+    "notes": "IPTV-org exact ID: lifetimemovies.us IPTV-org public logo dataset Source page: https://i.imgur.com/BWmqYTO.png"
+  },
+  "International-Playlist.m3u|movieplex.us|Movieplex|logos/movieplex-4a3a9fe9db.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Movieplex_logo.svg/960px-Movieplex_logo.svg.png",
+    "notes": "IPTV-org exact ID: movieplex.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Movieplex_logo.svg/960px-Movieplex_logo.svg.png"
+  },
+  "International-Playlist.m3u|ParamountPlusPicks.us@SD|Paramount+ Picks|logos/paramount-plus-picks-1f9a19406d.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg",
+    "notes": "IPTV-org exact ID: ParamountPlusPicks.us IPTV-org public logo dataset Source page: https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg"
+  },
+  "International-Playlist.m3u|SpiritTV.us@SD|Spirit TV [ ]|logos/spirit-tv-d31d5ceac4.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/yCp6vXz.png",
+    "notes": "IPTV-org exact ID: SpiritTV.us IPTV-org public logo dataset Source page: https://i.imgur.com/yCp6vXz.png"
+  },
+  "International-Playlist.m3u|TCM.us@East|TCM [ ]|logos/tcm-bee455e5bd.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/TCM_2021.svg/960px-TCM_2021.svg.png",
+    "notes": "IPTV-org exact ID: TCM.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/TCM_2021.svg/960px-TCM_2021.svg.png"
+  },
+  "International-Playlist.m3u|TCM.us@West|TCM West [ ]|logos/tcm-west-bee455e5bd.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/TCM_2021.svg/960px-TCM_2021.svg.png",
+    "notes": "IPTV-org exact ID: TCM.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/TCM_2021.svg/960px-TCM_2021.svg.png"
+  },
+  "International-Playlist.m3u|turnerclassicmovies.us|Turner Classic Movies|logos/turner-classic-movies-5145286d28.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/4MYjMsD.png",
+    "notes": "IPTV-org exact unique channel name: TNTAfrica.uk IPTV-org public logo dataset Source page: https://i.imgur.com/4MYjMsD.png"
+  },
+  "International-Playlist.m3u|XITE90sThrowback.us|XITE 90's Throwback|logos/xite-90-s-throwback-f9486164ad.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/vwpOzuz.png",
+    "notes": "IPTV-org exact ID: XITE90sThrowback.us IPTV-org public logo dataset Source page: https://i.imgur.com/vwpOzuz.png"
+  },
+  "International-Playlist.m3u|CelestialMovies.hk@SD|Celestial Movies|logos/celestial-movies-ed30baf6b6.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/Mb5ssnu.png",
+    "notes": "IPTV-org exact ID: CelestialMovies.hk IPTV-org public logo dataset Source page: https://i.imgur.com/Mb5ssnu.png"
+  },
+  "International-Playlist.m3u|KantipurMax.np@SD|Kantipur Max [ ]|logos/kantipur-max-aa9dcce37b.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/EZUyzhG.jpg",
+    "notes": "IPTV-org exact ID: KantipurMax.np IPTV-org public logo dataset Source page: https://i.imgur.com/EZUyzhG.jpg"
+  },
+  "International-Playlist.m3u|15PlusMusic.ru@HD|15+ Music|logos/15-plus-music-7d60391fa1.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/kj21hwd.png",
+    "notes": "IPTV-org exact ID: 15PlusMusic.ru IPTV-org public logo dataset Source page: https://i.imgur.com/kj21hwd.png"
+  },
+  "International-Playlist.m3u|americanheroeschannel.us|American Heroes Channel|logos/american-heroes-channel-3bf071dd67.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/American_Heroes_Channel_logo.svg/960px-American_Heroes_Channel_logo.svg.png",
+    "notes": "IPTV-org exact ID: americanheroeschannel.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/American_Heroes_Channel_logo.svg/960px-American_Heroes_Channel_logo.svg.png"
+  },
+  "International-Playlist.m3u|AntenneVorarlberg.at@SD|Antenne Vorarlberg [ ]|logos/antenne-vorarlberg-cf1a891bb6.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/GW750Zc.png",
+    "notes": "IPTV-org exact ID: AntenneVorarlberg.at IPTV-org public logo dataset Source page: https://i.imgur.com/GW750Zc.png"
+  },
+  "International-Playlist.m3u|CanalPlusActionEurope.nl@Netherlands|Canal+ Action Europe|logos/canal-plus-action-europe-f9ffc6ff7a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png",
+    "notes": "IPTV-org exact ID: CanalPlusActionEurope.nl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png"
+  },
+  "International-Playlist.m3u|CanalPlusActionEurope.nl@Czechia|Canal+ Action Europe Czechia|logos/canal-plus-action-europe-czechia-f9ffc6ff7a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png",
+    "notes": "IPTV-org exact ID: CanalPlusActionEurope.nl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png"
+  },
+  "International-Playlist.m3u|CanalPlusActionEurope.nl@Slovakia|Canal+ Action Europe Slovakia|logos/canal-plus-action-europe-slovakia-f9ffc6ff7a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png",
+    "notes": "IPTV-org exact ID: CanalPlusActionEurope.nl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png"
+  },
+  "International-Playlist.m3u|CinePlusClassic.fr@SD|Cine+ Classic|logos/cine-plus-classic-bc41b278d8.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/y2zeLS3.jpeg",
+    "notes": "IPTV-org exact ID: CinePlusClassic.fr IPTV-org public logo dataset Source page: https://i.imgur.com/y2zeLS3.jpeg"
+  },
+  "International-Playlist.m3u|CinePlusFrisson.fr@SD|Cine+ Frisson|logos/cine-plus-frisson-8ed92ebd85.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/MwFtbnR.jpeg",
+    "notes": "IPTV-org exact ID: CinePlusFrisson.fr IPTV-org public logo dataset Source page: https://i.imgur.com/MwFtbnR.jpeg"
+  },
+  "International-Playlist.m3u|CityEdenKinoSemya.ru@HD|City Eden KinoSemya [ ]|logos/city-eden-kinosemya-7d6b349e53.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/YoWOZMx.png",
+    "notes": "IPTV-org exact ID: CityEdenKinoSemya.ru IPTV-org public logo dataset Source page: https://i.imgur.com/YoWOZMx.png"
+  },
+  "International-Playlist.m3u|destinationamerica.us|Destination America|logos/destination-america-9cbcd1bc0c.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Destination_America_logo.svg/960px-Destination_America_logo.svg.png",
+    "notes": "IPTV-org exact ID: destinationamerica.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Destination_America_logo.svg/960px-Destination_America_logo.svg.png"
+  },
+  "International-Playlist.m3u|Detskoekino.ru@International|Detskoe kino [ ]|logos/detskoe-kino-ab814c82bb.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/dJqFRhQ.png",
+    "notes": "IPTV-org exact ID: Detskoekino.ru IPTV-org public logo dataset Source page: https://i.imgur.com/dJqFRhQ.png"
+  },
+  "International-Playlist.m3u|DiscoveryChannel.us|Discovery Channel East|logos/discovery-channel-east-6d42cd6779.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png",
+    "notes": "IPTV-org exact ID: DiscoveryChannel.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png"
+  },
+  "International-Playlist.m3u|discoverylife.us|Discovery Life|logos/discovery-life-51f154d991.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/ObPFgT8.png",
+    "notes": "IPTV-org exact ID: discoverylife.us IPTV-org public logo dataset Source page: https://i.imgur.com/ObPFgT8.png"
+  },
+  "International-Playlist.m3u|discoveryvelocity.us|Discovery Velocity|logos/discovery-velocity-4f9e4ac296.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/Q3rtPbl.png",
+    "notes": "IPTV-org exact unique channel name: DiscoveryVelocity.ca IPTV-org public logo dataset Source page: https://i.imgur.com/Q3rtPbl.png"
+  },
+  "International-Playlist.m3u|ExtremaKidsTV.cr@HD|Extrema Kids TV|logos/extrema-kids-tv-0108df4648.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.vivalivetv.com/public/files/shows/0/1/3027-294x165-FFFFFF.jpg",
+    "notes": "IPTV-org exact ID: ExtremaKidsTV.cr IPTV-org public logo dataset Source page: https://www.vivalivetv.com/public/files/shows/0/1/3027-294x165-FFFFFF.jpg"
+  },
+  "International-Playlist.m3u|Famatv.pt@SD|Famatv [ ]|logos/famatv-9f148af63b.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://i.ibb.co/tMmRp18/Fama-TV-cor-whitebg-hotizontal.jpg",
+    "notes": "IPTV-org exact ID: Famatv.pt IPTV-org public logo dataset Source page: https://i.ibb.co/tMmRp18/Fama-TV-cor-whitebg-hotizontal.jpg"
+  },
+  "International-Playlist.m3u|FILMBOXPlusEmotion.pl@Romania|FILMBOX+ Emotion Romania|logos/filmbox-plus-emotion-romania-f7ccc464ab.png": {
+    "status": "third_party_verified",
+    "source_url": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bemotion.png",
+    "notes": "IPTV-org exact ID: FILMBOXPlusEmotion.pl IPTV-org public logo dataset Source page: https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bemotion.png"
+  },
+  "International-Playlist.m3u|FILMBOXPlusOne.pl@Nederland|FILMBOX+ One Nederland|logos/filmbox-plus-one-nederland-98de98aaef.png": {
+    "status": "third_party_verified",
+    "source_url": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bone.png",
+    "notes": "IPTV-org exact ID: FILMBOXPlusOne.pl IPTV-org public logo dataset Source page: https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bone.png"
+  },
+  "International-Playlist.m3u|GalaxyTV.ug@SD|Galaxy TV [ ]|logos/galaxy-tv-de6e9f1020.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/P5OABe5.png",
+    "notes": "IPTV-org exact ID: GalaxyTV.ug IPTV-org public logo dataset Source page: https://i.imgur.com/P5OABe5.png"
+  },
+  "International-Playlist.m3u|GhostTV.br@SD|Ghost TV [ ]|logos/ghost-tv-232701c519.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/ZVO8GVI.png",
+    "notes": "IPTV-org exact ID: GhostTV.br IPTV-org public logo dataset Source page: https://i.imgur.com/ZVO8GVI.png"
+  },
+  "International-Playlist.m3u|GNT.in|GNT|logos/gnt-ae93ca21ea.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/LOGO_GNT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "notes": "Wikimedia Commons exact-logo search CC BY-SA 4.0 Source page: https://commons.wikimedia.org/wiki/File:LOGO_GNT.jpg"
+  },
+  "International-Playlist.m3u|History.hu|History Channel|logos/history-channel-fbda2cde53.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/OWIK7FJ.png",
+    "notes": "IPTV-org exact ID: History.hu IPTV-org public logo dataset Source page: https://i.imgur.com/OWIK7FJ.png"
+  },
+  "International-Playlist.m3u|Hits360TV.do@SD|Hits 360 TV [ ]|logos/hits-360-tv-8c164fc95c.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/Cx5V233.jpg",
+    "notes": "IPTV-org exact ID: Hits360TV.do IPTV-org public logo dataset Source page: https://i.imgur.com/Cx5V233.jpg"
+  },
+  "International-Playlist.m3u|JuiceTV.nz@SD|Juice TV [ ]|logos/juice-tv-830eccfd5c.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/WaaaW0w.png",
+    "notes": "IPTV-org exact ID: JuiceTV.nz IPTV-org public logo dataset Source page: https://i.imgur.com/WaaaW0w.png"
+  },
+  "International-Playlist.m3u|Klasik.hr@SD|Klasik [ ]|logos/klasik-b928ced42a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/C90BYlb.png",
+    "notes": "IPTV-org exact ID: Klasik.hr IPTV-org public logo dataset Source page: https://i.imgur.com/C90BYlb.png"
+  },
+  "International-Playlist.m3u|La981TV.hn@SD|La 98.1 TV [ ]|logos/la-98-1-tv-fe804f2156.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/7380kTN.png",
+    "notes": "IPTV-org exact ID: La981TV.hn IPTV-org public logo dataset Source page: https://i.imgur.com/7380kTN.png"
+  },
+  "International-Playlist.m3u|Mastiii.in@SD|Music Mastii|logos/music-mastii-fb046345ca.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/lxgXHx4.png",
+    "notes": "IPTV-org exact ID: Mastiii.in IPTV-org public logo dataset Source page: https://i.imgur.com/lxgXHx4.png"
+  },
+  "International-Playlist.m3u|PantallaClasicaEC.ec@SD|Pantalla Clasica EC [ ]|logos/pantalla-clasica-ec-0ebb35a01d.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/mhbERF9.jpg",
+    "notes": "IPTV-org exact ID: PantallaClasicaEC.ec IPTV-org public logo dataset Source page: https://i.imgur.com/mhbERF9.jpg"
+  },
+  "International-Playlist.m3u|custom.bdix.satv|SATV|logos/satv-817fa04ef5.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/tL9kxxB.png",
+    "notes": "IPTV-org exact unique channel name: SATV.bd IPTV-org public logo dataset Source page: https://i.imgur.com/tL9kxxB.png"
+  },
+  "International-Playlist.m3u|smithsonianchannel.us|Smithsonian Channel|logos/smithsonian-channel-e41164cabf.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/SmithsonianChannellogo.png/960px-SmithsonianChannellogo.png",
+    "notes": "IPTV-org exact ID: smithsonianchannel.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/SmithsonianChannellogo.png/960px-SmithsonianChannellogo.png"
+  },
+  "International-Playlist.m3u|SonyAath.in@SD|SONY AATH kids|logos/sony-aath-kids-1d50538baa.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/GNLZZGG002YP08L.png?lock=720x540",
+    "notes": "IPTV-org exact ID: SonyAath.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/GNLZZGG002YP08L.png?lock=720x540"
+  },
+  "International-Playlist.m3u|SonyMovies.br@SD|Sony Movies (Brazil) (720p)|logos/sony-movies-brazil-76e902c6d4.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sony_Movies_Logo.svg/500px-Sony_Movies_Logo.svg.png",
+    "notes": "IPTV-org exact ID: SonyMovies.br IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sony_Movies_Logo.svg/500px-Sony_Movies_Logo.svg.png"
+  },
+  "International-Playlist.m3u|TBN24.us|TBN24|logos/tbn24-3b1ea93e1c.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/m5naptG.png",
+    "notes": "IPTV-org exact ID: TBN24.us IPTV-org public logo dataset Source page: https://i.imgur.com/m5naptG.png"
+  },
+  "International-Playlist.m3u|Tochkarf.ru|Tochka.rf|logos/tochka-rf-4548ea0843.png": {
+    "status": "third_party_verified",
+    "source_url": "https://cdn2.red-media.ru/wp-content/uploads/2016/08/TochkaRF-Logo.png",
+    "notes": "IPTV-org exact ID: Tochkarf.ru IPTV-org public logo dataset Source page: https://cdn2.red-media.ru/wp-content/uploads/2016/08/TochkaRF-Logo.png"
+  },
+  "International-Playlist.m3u|TV9Bangla.in|TV9 Bangla|logos/tv9-bangla-4c591a017a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/TV9-Bangla1.png",
+    "notes": "IPTV-org exact ID: TV9Bangla.in IPTV-org public logo dataset Source page: https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/TV9-Bangla1.png"
+  },
+  "International-Playlist.m3u|worldfishingnetwork.us|World Fishing Network|logos/world-fishing-network-49845d1dba.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/2llPsSV.png",
+    "notes": "IPTV-org exact ID: worldfishingnetwork.us IPTV-org public logo dataset Source page: https://i.imgur.com/2llPsSV.png"
+  },
+  "International-Playlist.m3u|ARYQTV.pk|ARY Qtv|logos/ary-qtv-0c58bdebd2.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/eP2OW5S.png",
+    "notes": "IPTV-org exact ID: ARYQTV.pk IPTV-org public logo dataset Source page: https://i.imgur.com/eP2OW5S.png"
   }
 }

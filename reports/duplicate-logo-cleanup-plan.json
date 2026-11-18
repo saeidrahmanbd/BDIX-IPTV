@@ -1,13 +1,69 @@
 {
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
-  "exact_duplicate_groups": 699,
-  "exact_duplicate_files": 1031,
+  "exact_duplicate_groups": 965,
+  "exact_duplicate_files": 1518,
   "low_risk_review_candidates": [
+    {
+      "candidate": "logos/unused/metro-tv.png",
+      "retain": "logos/metro-tv.png",
+      "sha256": "0625d4e893b3f063637ece49e300c1a97b29a52a6f08ee52fd131281c9c1af15",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/filmrise-forensic-files-720p-56ce9d346d.png",
+      "retain": "logos/filmrise-forensic-files-720p-56ce9d346d.png",
+      "sha256": "0db219325857b94eac1bf43feb7c60c44a4bbd0a7f203a05b4b7b7cb5ced9522",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/sony-movies-latin-america-576p-bf6439568c.png",
+      "retain": "logos/sony-movies-latin-america-576p-bf6439568c.png",
+      "sha256": "13df605cda399a829cdf28a5bafedd0704128f74a757f99bc61868d48bee3769",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/moviedome-720p-96c8b044c7.png",
+      "retain": "logos/moviedome-720p-96c8b044c7.png",
+      "sha256": "2acfb4fe384071fba0dfb0855554663f3e434bcfaa40c24f1c087980b4271953",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/kral-pop-tv-720p-bd49bfe47b.png",
+      "retain": "logos/kral-pop-tv-720p-bd49bfe47b.png",
+      "sha256": "2cfae868dc567b9b93b5e43490705897cb3c1de5a27a739c306dc7760281cbae",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/willow-sports.png",
+      "retain": "logos/willow-sports.png",
+      "sha256": "4009945a971204416c308497446878ce67e1acb708bc6222ab175a86463aa1a4",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/50-cent-action-720p-2a1be4355a.png",
+      "retain": "logos/50-cent-action-720p-2a1be4355a.png",
+      "sha256": "438ba5f062f314e6c3a5dcabf16566bdd5a90e00b2c7a6d764b87e532e525bc7",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
     {
       "candidate": "logos/unused/now-70s.png",
       "retain": "logos/now-70s.png",
       "sha256": "5639924be5cc6ad76bae87d58fd370cc9f394566583daec23677f997212d500f",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/mtv-live-1080p-40e9c3993c.png",
+      "retain": "logos/mtv-live-1080p-40e9c3993c.png",
+      "sha256": "58fe677e299ba35074356f700f7dbc0750ffa34bda4433578ef527088f472df7",
       "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
       "requires_review": true
     },
@@ -19,9 +75,128 @@
       "requires_review": true
     },
     {
+      "candidate": "logos/unused/xite-hits.png",
+      "retain": "logos/xite-hits.png",
+      "sha256": "5c21087e3187b0407ec172d63e8181ad94640f84df9fdefab211521a9fe78e73",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/gravitas-movies.png",
+      "retain": "logos/gravitas-movies.png",
+      "sha256": "84c07d311870d43ebaa638543f1e6adf721175f8415ac292ee183ab906558986",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/movies-480p-741fd393f0.png",
+      "retain": "logos/movies-480p-741fd393f0.png",
+      "sha256": "891bfd1cb57ec056124413ecf8e8d464b32b4d9c8da3461aed5ccae8cb221ef6",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/zoom.png",
+      "retain": "logos/zoom.png",
+      "sha256": "95e5eca00d2c17470b61a4ad0f6165e4e6fa3ecb5efe58e70442d21f717b1c15",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/30a-music.png",
+      "retain": "logos/30a-music.png",
+      "sha256": "963c30f08f2591bfcdb7da16db84f45bc8d7c646b86a781dd91eee6131bfdbde",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/mh-one-prime.png",
+      "retain": "logos/mh-one-prime.png",
+      "sha256": "988deb6c4a5dc450d73f0a2f41d016659f430cfb32ec21e5d66d387a0d51561e",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/pitaara-720p-b8ea7f3162.png",
+      "retain": "logos/pitaara-720p-b8ea7f3162.png",
+      "sha256": "9a9966ca2d08881e0fd6a134bb4a9194115e9337073881c287cdb8cb0411b935",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/amc-latin-america-1080p-95485d9836.png",
+      "retain": "logos/amc-latin-america-1080p-95485d9836.png",
+      "sha256": "ac1868f03c710541ecb621733e10d7f89055633a7d72a6b7810861417dce282a",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/adrenalina-pura-tv-720p-85f6a8f4d8.png",
+      "retain": "logos/adrenalina-pura-tv-720p-85f6a8f4d8.png",
+      "sha256": "ac1894ce96fe46b19f202e4c6697e5d7e2238a5215847a0bc9ad8a41ebf46dfe",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/hbo-hits-1080p-27da015c1f.png",
+      "retain": "logos/hbo-hits-1080p-27da015c1f.png",
+      "sha256": "ac9f7338ded899cec1d72e605425dc03ea19b74bb7324a223577719ffcd9c689",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/artflix-movie-classics-720p-1888c5698d.png",
+      "retain": "logos/artflix-movie-classics-720p-1888c5698d.png",
+      "sha256": "b951fa934f607173bf16c67bd65922fba591ba520f8ea468e2cc959a34f96e4d",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
       "candidate": "logos/unused/now-80-s.png",
       "retain": "logos/now-80-s.png",
       "sha256": "c34bf8960f7f1385a0cd93be9e85cd37668cc836121493a5d1b37d26b1d4eefb",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/kronehit-tv.png",
+      "retain": "logos/kronehit-tv.png",
+      "sha256": "c898e3f719820f283b0b1f7a0054c96cb639f4453ca0922ff8794885ce3112af",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/now-rock.png",
+      "retain": "logos/now-rock.png",
+      "sha256": "d9940ae439619bcf66f2e6b9a617657cf3bfcbc8b4159d9ae5fcd366d0986076",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/discovery-channel-82927394a8.png",
+      "retain": "logos/discovery-channel-82927394a8.png",
+      "sha256": "df6c76ba9c2ddd4316c62bec4c6ccf83eed98f85ab8502c126a5cc85ae557426",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/now-80s-1080p-90e990d562.png",
+      "retain": "logos/now-80s-1080p-90e990d562.png",
+      "sha256": "e3740f116bd76127137df5b75abd5dcedd8f5b47afb0f23cb30da348476c1283",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/alegria-tv-720p-d83a7253e3.png",
+      "retain": "logos/alegria-tv-720p-d83a7253e3.png",
+      "sha256": "ec943525812f25f7c32b532a6348d74eb85ac35cb49f86fde199c4888bc543dc",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/disney-jr-latin-america-1080p-d4a5b563e8.png",
+      "retain": "logos/disney-jr-latin-america-1080p-d4a5b563e8.png",
+      "sha256": "fb2559f246f25657912f1993b0d0b707e49b3045498f4e56690e322af751cba0",
       "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
       "requires_review": true
     }
@@ -61,22 +236,11 @@
       ]
     },
     {
-      "candidate": "logos/unused/metro-tv.png",
-      "sha256": "0625d4e893b3f063637ece49e300c1a97b29a52a6f08ee52fd131281c9c1af15",
-      "duplicate_group": [
-        "logos/metro-tv-india-0625d4e893.png",
-        "logos/nvisionbd-verified-metro-tv-india-0625d4e893.png",
-        "logos/unused/metro-tv.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
       "candidate": "logos/unused/mytime-movie-network-720p-cc34ff46f5.png",
       "sha256": "0641ac6cd5077e442115ecc0110a5b5d13b7e16d80bdaebab69e9b184f429c5f",
       "duplicate_group": [
         "logos/mytime-movie-network-brazil-0641ac6cd5.png",
+        "logos/mytime-movie-network-east-us-0641ac6cd5.png",
         "logos/unused/mytime-movie-network-720p-cc34ff46f5.png"
       ],
       "reasons": [
@@ -114,6 +278,7 @@
       "sha256": "0a2f9d3d40c4c4dcd5adad6238f701a057fd1ef2abb2b5b78a1251436e40b602",
       "duplicate_group": [
         "logos/international/pluto-tv-notti-di-passione.png",
+        "logos/pluto-tv-notti-di-passione.png",
         "logos/unused/pluto-tv-notti-di-passione-68e82f5481.png"
       ],
       "reasons": [
@@ -146,23 +311,13 @@
       ]
     },
     {
-      "candidate": "logos/unused/filmrise-forensic-files-720p-56ce9d346d.png",
-      "sha256": "0db219325857b94eac1bf43feb7c60c44a4bbd0a7f203a05b4b7b7cb5ced9522",
-      "duplicate_group": [
-        "logos/international/filmrise-forensic-files-720p-geo-blocked.png",
-        "logos/unused/filmrise-forensic-files-720p-56ce9d346d.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
       "candidate": "logos/unused/tvs-classic-movies-360p-c2d4549656.png",
       "sha256": "0e8c5bec9e75cd7dd1f9b06f7da53c91499d7eeb35ada392b304dee6184e45e3",
       "duplicate_group": [
         "logos/international/tvs-classic-movies-288p.png",
         "logos/tvs-classic-movies-288p.png",
-        "logos/unused/tvs-classic-movies-360p-c2d4549656.png"
+        "logos/unused/tvs-classic-movies-360p-c2d4549656.png",
+        "logos/verified-tvs-classic-movies-288p-0e8c5bec9e.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -219,6 +374,7 @@
       "sha256": "17e86901258df83db1a5137e52bb3afb432b05747a704aa1ed50f05de0b83bd5",
       "duplicate_group": [
         "logos/international/paramount-movie-channel.png",
+        "logos/paramount-movie-channel.png",
         "logos/unused/paramount-movie-channel-d46b22ff12.png"
       ],
       "reasons": [
@@ -230,6 +386,7 @@
       "sha256": "18198128f3f043e957fe9d68e304df91ac7031fe21a062dab4d0077d49cf6ebb",
       "duplicate_group": [
         "logos/international/pluto-tv-retro-action-movies.png",
+        "logos/pluto-tv-retro-action-movies.png",
         "logos/unused/pluto-tv-retro-action-movies-2c93a6f50d.png"
       ],
       "reasons": [
@@ -263,6 +420,7 @@
       "sha256": "187f195ad712602e9b8addbc2f656dae6732bfeae27940b62e2e022d0c1c6d6c",
       "duplicate_group": [
         "logos/international/pluto-tv-drama.png",
+        "logos/pluto-tv-drama.png",
         "logos/unused/pluto-tv-drama-1916ac022e.png"
       ],
       "reasons": [
@@ -319,6 +477,7 @@
       "sha256": "227c06af7f04c8dfdee61cd7b7996979792e15219bb00fb87325c4e28411e2c7",
       "duplicate_group": [
         "logos/international/pluto-classic-movie-westerns.png",
+        "logos/pluto-classic-movie-westerns.png",
         "logos/unused/pluto-classic-movie-westerns-70b09a6535.png"
       ],
       "reasons": [
@@ -374,18 +533,8 @@
       "sha256": "2a39846fdb3ef33047c93bd63b4784bfc43e61e4a442ead3c7f46b5ed5afa0f5",
       "duplicate_group": [
         "logos/international/pluto-tv-drama-movies.png",
+        "logos/pluto-tv-drama-movies.png",
         "logos/unused/pluto-tv-drama-movies-7a242cb4f6.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
-      "candidate": "logos/unused/moviedome-720p-96c8b044c7.png",
-      "sha256": "2acfb4fe384071fba0dfb0855554663f3e434bcfaa40c24f1c087980b4271953",
-      "duplicate_group": [
-        "logos/international/moviedome-720p.png",
-        "logos/unused/moviedome-720p-96c8b044c7.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -420,17 +569,6 @@
       "duplicate_group": [
         "logos/dangal-2.png",
         "logos/unused/dangal-2-720p-18d63673a7.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
-      "candidate": "logos/unused/kral-pop-tv-720p-bd49bfe47b.png",
-      "sha256": "2cfae868dc567b9b93b5e43490705897cb3c1de5a27a739c306dc7760281cbae",
-      "duplicate_group": [
-        "logos/international/kral-pop-tv-720p.png",
-        "logos/unused/kral-pop-tv-720p-bd49bfe47b.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -485,6 +623,7 @@
       "candidate": "logos/unused/classic-movie-westerns-f7feb1b7dc.png",
       "sha256": "397da8e69afb976e4ea5e54c3ecbaa79fac7928efbc25ba8cf6cd8a42acaffe1",
       "duplicate_group": [
+        "logos/classic-movie-westerns.png",
         "logos/international/classic-movie-westerns.png",
         "logos/unused/classic-movie-westerns-f7feb1b7dc.png"
       ],
@@ -564,6 +703,7 @@
       "sha256": "408a6895cff0ca45f6245b04888ca8311dc19be562f620fdfc98d7e019c76be4",
       "duplicate_group": [
         "logos/international/pluto-tv-action-movies.png",
+        "logos/pluto-tv-action-movies.png",
         "logos/unused/pluto-tv-action-movies-13022100eb.png"
       ],
       "reasons": [
@@ -574,18 +714,7 @@
       "candidate": "logos/unused/50-cent-action-720p-2a1be4355a-converted-438ba5f062.png",
       "sha256": "438ba5f062f314e6c3a5dcabf16566bdd5a90e00b2c7a6d764b87e532e525bc7",
       "duplicate_group": [
-        "logos/international/50-cent-action-720p.png",
-        "logos/unused/50-cent-action-720p-2a1be4355a-converted-438ba5f062.png",
-        "logos/unused/50-cent-action-720p-2a1be4355a.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
-      "candidate": "logos/unused/50-cent-action-720p-2a1be4355a.png",
-      "sha256": "438ba5f062f314e6c3a5dcabf16566bdd5a90e00b2c7a6d764b87e532e525bc7",
-      "duplicate_group": [
+        "logos/50-cent-action-720p-2a1be4355a.png",
         "logos/international/50-cent-action-720p.png",
         "logos/unused/50-cent-action-720p-2a1be4355a-converted-438ba5f062.png",
         "logos/unused/50-cent-action-720p-2a1be4355a.png"
@@ -769,24 +898,12 @@
       ]
     },
     {
-      "candidate": "logos/unused/xite-hits.png",
-      "sha256": "5c21087e3187b0407ec172d63e8181ad94640f84df9fdefab211521a9fe78e73",
-      "duplicate_group": [
-        "logos/unused/xite-hits.png",
-        "logos/xite-hits-1080p-bf41ee4788.png",
-        "logos/xite-hits-germany-1080p.png",
-        "logos/xite-hits-uk-1080p-bf41ee4788.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
       "candidate": "logos/unused/mytime-movie-network-1080p-79e6ec3226.png",
       "sha256": "5d68663811df48e787a437096ca1397a0d7296cb0af85f8b9feae090dbb204d6",
       "duplicate_group": [
         "logos/mytime-movie-network-mexico-5d68663811.png",
         "logos/mytime-movie-network-spain-5d68663811.png",
+        "logos/mytime-movie-uk-5d68663811.png",
         "logos/unused/mytime-movie-network-1080p-79e6ec3226.png"
       ],
       "reasons": [
@@ -798,6 +915,7 @@
       "candidate": "logos/unused/axn-black-576p-08cff274cc.png",
       "sha256": "5dd5d2539aab890ab087e6137937c2f4b4d572a6101ebfb1bb1635588f112dce",
       "duplicate_group": [
+        "logos/axn-black-united-states-576p.png",
         "logos/axn-black-united-states-czech-republic.png",
         "logos/axn-black-united-states-hungary-576p.png",
         "logos/axn-black-united-states-poland-5dd5d2539a.png",
@@ -936,6 +1054,7 @@
       "sha256": "695dfca6b565c0f3d2eb296b7d30941a95c8c0c2e203335bbde8135a42fdeeb6",
       "duplicate_group": [
         "logos/international/pluto-tv-family-movie-club.png",
+        "logos/pluto-tv-family-movie-club.png",
         "logos/unused/pluto-tv-family-movie-club-4f5c0b8625.png"
       ],
       "reasons": [
@@ -957,6 +1076,7 @@
       "candidate": "logos/unused/bet-comedy-movies-b72988086f.png",
       "sha256": "6a87f177de47df89d9098ddf8bb426c5624c6e6454782ff8ca947f36e7b69adc",
       "duplicate_group": [
+        "logos/bet-comedy-movies.png",
         "logos/international/bet-comedy-movies.png",
         "logos/unused/bet-comedy-movies-b72988086f.png"
       ],
@@ -993,6 +1113,7 @@
       "sha256": "712ff1dc001e38bd91f6fda982a1d22ef25abf00a8db8840a27becfb284ccb53",
       "duplicate_group": [
         "logos/international/pluto-tv-comedy-movies.png",
+        "logos/pluto-tv-comedy-movies.png",
         "logos/unused/pluto-tv-comedy-movies-989176a87d.png"
       ],
       "reasons": [
@@ -1003,6 +1124,7 @@
       "candidate": "logos/unused/70s-cinema-b7f73be9be.png",
       "sha256": "71fbe3893638fcf0da70eb5b4fb47e7aa694a43415b8c36628c036abd9a13753",
       "duplicate_group": [
+        "logos/70s-cinema.png",
         "logos/international/70s-cinema.png",
         "logos/unused/70s-cinema-b7f73be9be.png"
       ],
@@ -1026,6 +1148,7 @@
       "sha256": "747147a15ab1348f3efca359676e76d43df3ff56b34aaea803c0a7cf0e658267",
       "duplicate_group": [
         "logos/international/paramount-picks.png",
+        "logos/paramount-plus-picks-1f9a19406d.png",
         "logos/unused/paramount-picks-26e6b381c6-converted-747147a15a.png",
         "logos/unused/paramount-picks-26e6b381c6.png"
       ],
@@ -1038,6 +1161,7 @@
       "sha256": "747147a15ab1348f3efca359676e76d43df3ff56b34aaea803c0a7cf0e658267",
       "duplicate_group": [
         "logos/international/paramount-picks.png",
+        "logos/paramount-plus-picks-1f9a19406d.png",
         "logos/unused/paramount-picks-26e6b381c6-converted-747147a15a.png",
         "logos/unused/paramount-picks-26e6b381c6.png"
       ],
@@ -1060,6 +1184,7 @@
       "candidate": "logos/unused/00s-replay-c8a4b8109d.png",
       "sha256": "763e748aab8279305846458692d6d6c9e7b2c6fb199f7dc80d0e31ce9472388c",
       "duplicate_group": [
+        "logos/00s-replay.png",
         "logos/international/00s-replay.png",
         "logos/unused/00s-replay-c8a4b8109d.png"
       ],
@@ -1094,6 +1219,7 @@
       "sha256": "7967d93886e20a5bbed14620149598faea7764d4d719c07a6bed53c0ba4fb27d",
       "duplicate_group": [
         "logos/international/pluto-tv-filmes-de-luta.png",
+        "logos/pluto-tv-filmes-de-luta.png",
         "logos/unused/pluto-tv-filmes-de-luta-a1f77c3d14.png"
       ],
       "reasons": [
@@ -1159,6 +1285,7 @@
       "candidate": "logos/unused/goldmines-576p-99e087b760.png",
       "sha256": "81a4db9d7e3446d00696f4b64721759d9e911de35a3f0bb1acaed13a3c869b82",
       "duplicate_group": [
+        "logos/goldmines-2.png",
         "logos/goldmines.png",
         "logos/international/goldmines-2.png",
         "logos/unused/goldmines-576p-99e087b760.png"
@@ -1172,6 +1299,7 @@
       "sha256": "83a85815371bfb0d34d8d46080b6b2ed13a6af18d8b4f3aac62e4eaec5646a94",
       "duplicate_group": [
         "logos/international/pluto-tv-cult-films-germany.png",
+        "logos/pluto-tv-cult-films-germany.png",
         "logos/unused/pluto-tv-cult-films-4c48109dbb.png"
       ],
       "reasons": [
@@ -1297,6 +1425,7 @@
       "sha256": "8f6a2afeb9badc37e1990656211ab0c61323b843c7a0b979376f3131303d4101",
       "duplicate_group": [
         "logos/international/pluto-tv-netmovies.png",
+        "logos/pluto-tv-netmovies.png",
         "logos/unused/pluto-tv-netmovies-ca2ac0cd70.png"
       ],
       "reasons": [
@@ -1331,6 +1460,7 @@
       "sha256": "98c5047f010b082cee9f39548a19cd7eeec92658207709603fedc647e5bbe21c",
       "duplicate_group": [
         "logos/international/pluto-tv-cult-films-united-states.png",
+        "logos/pluto-tv-cult-films-united-states.png",
         "logos/unused/pluto-tv-cult-films-united-states-9e595d60f3.png"
       ],
       "reasons": [
@@ -1365,11 +1495,12 @@
       "candidate": "logos/unused/classic-movies-channel-1d5f82d98a.png",
       "sha256": "9aa6b1985741217cb6e215166bcc3630388e500c9bf8b63a0fd66ffe39e32856",
       "duplicate_group": [
+        "logos/classic-movies-channel-1d5f82d98a.png",
+        "logos/classic-movies-channel.png",
         "logos/international/classic-movies-channel.png",
         "logos/unused/classic-movies-channel-1d5f82d98a.png"
       ],
       "reasons": [
-        "no same-named root-level byte-identical counterpart",
         "runtime basename/path mention in scripts/repair_playlist_logos.py"
       ]
     },
@@ -1378,6 +1509,7 @@
       "sha256": "9aed1556496668296b356163f64c6410d9aeadb90922062c0b8289b7da1b804d",
       "duplicate_group": [
         "logos/international/pluto-tv-filmes-aventura.png",
+        "logos/pluto-tv-filmes-aventura.png",
         "logos/unused/pluto-tv-filmes-aventura-83d1bd4033.png"
       ],
       "reasons": [
@@ -1388,6 +1520,7 @@
       "candidate": "logos/unused/girlfriends-films-4990caa383.png",
       "sha256": "9bdce01179b58bc271683d40d875b8d82f8ab79291d2b2f0d6c3cd6a9a7e719d",
       "duplicate_group": [
+        "logos/girlfriends-films.png",
         "logos/international/girlfriends-films.png",
         "logos/unused/girlfriends-films-4990caa383.png"
       ],
@@ -1399,6 +1532,7 @@
       "candidate": "logos/unused/nickelodeon-73ebd264b3.png",
       "sha256": "9bff2e9298cee7d7f2d62ebc5a56e27edc1e3aafc7eddf4b5a35aaf46293a8df",
       "duplicate_group": [
+        "logos/nickelodeon-9bff2e9298.png",
         "logos/nickelodeon-cis-9bff2e9298.png",
         "logos/nickelodeon-czech-republic-9bff2e9298.png",
         "logos/nickelodeon-germany-9bff2e9298.png",
@@ -1416,6 +1550,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-cine-drama-latam.png",
         "logos/international/pluto-tv-cine-drama.png",
+        "logos/pluto-tv-cine-drama-latam.png",
+        "logos/pluto-tv-cine-drama.png",
         "logos/unused/pluto-tv-cine-drama-21c0c9e9dc.png"
       ],
       "reasons": [
@@ -1460,6 +1596,7 @@
       "sha256": "a283883c60e4be95d7dd7df30b9ed1104a646ba255acd12ec53913b60065cb12",
       "duplicate_group": [
         "logos/international/pluto-tv-nuestro-cine.png",
+        "logos/pluto-tv-nuestro-cine.png",
         "logos/unused/pluto-tv-nuestro-cine-479a85b751.png"
       ],
       "reasons": [
@@ -1562,31 +1699,9 @@
       "candidate": "logos/unused/amc-europe-95485d9836.png",
       "sha256": "ac1868f03c710541ecb621733e10d7f89055633a7d72a6b7810861417dce282a",
       "duplicate_group": [
+        "logos/amc-latin-america-1080p-95485d9836.png",
         "logos/unused/amc-europe-95485d9836.png",
         "logos/unused/amc-latin-america-1080p-95485d9836.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
-      "candidate": "logos/unused/amc-latin-america-1080p-95485d9836.png",
-      "sha256": "ac1868f03c710541ecb621733e10d7f89055633a7d72a6b7810861417dce282a",
-      "duplicate_group": [
-        "logos/unused/amc-europe-95485d9836.png",
-        "logos/unused/amc-latin-america-1080p-95485d9836.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
-      "candidate": "logos/unused/adrenalina-pura-tv-720p-85f6a8f4d8.png",
-      "sha256": "ac1894ce96fe46b19f202e4c6697e5d7e2238a5215847a0bc9ad8a41ebf46dfe",
-      "duplicate_group": [
-        "logos/international/adrenalina-pura-tv-720p.png",
-        "logos/international/adrenalina-pura-tv-brazil.png",
-        "logos/unused/adrenalina-pura-tv-720p-85f6a8f4d8.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1597,6 +1712,7 @@
       "sha256": "aca76dfc4a092d57e1a5719d979f301e44ff181796d24ffe990b8c2ad5a0e2fd",
       "duplicate_group": [
         "logos/international/pluto-tv-filmes-acao.png",
+        "logos/pluto-tv-filmes-acao.png",
         "logos/unused/pluto-tv-filmes-acao-5746c4a408.png"
       ],
       "reasons": [
@@ -1607,6 +1723,7 @@
       "candidate": "logos/unused/filmes-suspense-19ef6540fd.png",
       "sha256": "afbe36dd7400272338af7078f1c6caeeef26cb4ee1adcfd820b8f1365ea089a1",
       "duplicate_group": [
+        "logos/filmes-suspense.png",
         "logos/international/filmes-suspense.png",
         "logos/unused/filmes-suspense-19ef6540fd.png"
       ],
@@ -1619,6 +1736,7 @@
       "sha256": "b2abfef6c83e1685b9631afdafa17f9bc2527b3187e0d50c493afc9d0aba1643",
       "duplicate_group": [
         "logos/international/pluto-tv-filmes-nacionais.png",
+        "logos/pluto-tv-filmes-nacionais.png",
         "logos/unused/pluto-tv-filmes-nacionais-df442c82f4.png"
       ],
       "reasons": [
@@ -1664,6 +1782,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-crime-drama-ca.png",
         "logos/international/pluto-tv-crime-drama.png",
+        "logos/pluto-tv-crime-drama-ca.png",
+        "logos/pluto-tv-crime-drama.png",
         "logos/unused/pluto-tv-crime-drama-48c6faa6dc.png"
       ],
       "reasons": [
@@ -1704,17 +1824,6 @@
       ]
     },
     {
-      "candidate": "logos/unused/artflix-movie-classics-720p-1888c5698d.png",
-      "sha256": "b951fa934f607173bf16c67bd65922fba591ba520f8ea468e2cc959a34f96e4d",
-      "duplicate_group": [
-        "logos/international/artflix-movie-classics-720p.png",
-        "logos/unused/artflix-movie-classics-720p-1888c5698d.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
       "candidate": "logos/unused/paramount-network-409048c42b.png",
       "sha256": "bab9b8924a4c18918849ac707eaa72a2f9993a152bb753bd83f7d23cefcec059",
       "duplicate_group": [
@@ -1742,7 +1851,8 @@
       "duplicate_group": [
         "logos/international/tvs-western-movie-270p.png",
         "logos/tvs-western-movie-270p.png",
-        "logos/unused/tvs-western-movie-360p-23ea1ee704.png"
+        "logos/unused/tvs-western-movie-360p-23ea1ee704.png",
+        "logos/verified-tvs-western-movie-270p-bf23cd0076.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1825,6 +1935,7 @@
       "sha256": "d0368b0d5118437b4fc5ef80edd538ff29c64a91fecbae20b61d086123464873",
       "duplicate_group": [
         "logos/international/pluto-tv-bang-bang.png",
+        "logos/pluto-tv-bang-bang.png",
         "logos/unused/pluto-tv-bang-bang-2cae61babe.png"
       ],
       "reasons": [
@@ -1859,6 +1970,7 @@
       "candidate": "logos/unused/bet-cinema-98dee862af.png",
       "sha256": "d08fbeab975a5fabf4fe7292bcdff8273c9e289bd778beb323188df18401a968",
       "duplicate_group": [
+        "logos/bet-cinema.png",
         "logos/international/bet-cinema.png",
         "logos/unused/bet-cinema-98dee862af.png"
       ],
@@ -1960,17 +2072,6 @@
       ]
     },
     {
-      "candidate": "logos/unused/now-rock.png",
-      "sha256": "d9940ae439619bcf66f2e6b9a617657cf3bfcbc8b4159d9ae5fcd366d0986076",
-      "duplicate_group": [
-        "logos/now-rock-1080p-033d8aedc8.png",
-        "logos/unused/now-rock.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
       "candidate": "logos/unused/v2beat.png",
       "sha256": "db8b7ddc16a4879f31c66d477a03a1a5c2856227fc215a0e094ec5fb1edf3fe9",
       "duplicate_group": [
@@ -2042,17 +2143,6 @@
       ]
     },
     {
-      "candidate": "logos/unused/alegria-tv-720p-d83a7253e3.png",
-      "sha256": "ec943525812f25f7c32b532a6348d74eb85ac35cb49f86fde199c4888bc543dc",
-      "duplicate_group": [
-        "logos/international/alegria-tv-720p.png",
-        "logos/unused/alegria-tv-720p-d83a7253e3.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
       "candidate": "logos/unused/pictures.png",
       "sha256": "ed78beca853136b36de5801c91afd4ab12eba52c614e5a4827182fbaf9992bd5",
       "duplicate_group": [
@@ -2093,6 +2183,7 @@
       "sha256": "f6e317e18f2aba909b92a9d1e9dcb567f0689bfa8cd2811e10d867bb73334d6e",
       "duplicate_group": [
         "logos/international/pluto-tv-crime-movies.png",
+        "logos/pluto-tv-crime-movies.png",
         "logos/unused/pluto-tv-crime-movies-49dbd2e117.png"
       ],
       "reasons": [
@@ -2136,21 +2227,10 @@
       ]
     },
     {
-      "candidate": "logos/unused/disney-jr-latin-america-1080p-d4a5b563e8.png",
-      "sha256": "fb2559f246f25657912f1993b0d0b707e49b3045498f4e56690e322af751cba0",
-      "duplicate_group": [
-        "logos/disney-junior-360p-943f21478f.png",
-        "logos/unused/disney-jr-latin-america-1080p-d4a5b563e8.png",
-        "logos/unused/disney-junior-d4a5b563e8.png"
-      ],
-      "reasons": [
-        "no same-named root-level byte-identical counterpart"
-      ]
-    },
-    {
       "candidate": "logos/unused/disney-junior-d4a5b563e8.png",
       "sha256": "fb2559f246f25657912f1993b0d0b707e49b3045498f4e56690e322af751cba0",
       "duplicate_group": [
+        "logos/disney-jr-latin-america-1080p-d4a5b563e8.png",
         "logos/disney-junior-360p-943f21478f.png",
         "logos/unused/disney-jr-latin-america-1080p-d4a5b563e8.png",
         "logos/unused/disney-junior-d4a5b563e8.png"
