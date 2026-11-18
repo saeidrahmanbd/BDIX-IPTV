@@ -74,7 +74,9 @@ jobs:
         run: python scripts/discovery_schedule_guard.py guard playlist-logo-localization.yml
   localize:
     needs: daily_guard
-    if: needs.daily_guard.outputs.should_run == 'true'
+    # Explicit source/tooling pushes should run immediately even if the daily guard
+    # already saw a manual run today; playlist/logo-only commits do not match push paths.
+    if: github.event_name == 'push' || needs.daily_guard.outputs.should_run == 'true'
     permissions:
       contents: write
     # Shared main-branch writer queue. Set on the writing job, not the workflow,
