@@ -40,7 +40,7 @@ REQUIRED_JOB_BY_WORKFLOW = {
 REQUIRED_STEP_BY_WORKFLOW = {
     "iptv-maintenance.yml": "Run maintenance",
     "new-channel-discovery.yml": "Discover Bangladesh and India candidates into manual-review queues",
-    "international-channel-discovery.yml": "Reorganize International playlist and enforce unique primary IDs",
+    "international-channel-discovery.yml": "Discover only Movies/Music channels and eligible backup streams",
     "playlist-logo-localization.yml": "Localize and commit logos",
     "international-stream-health.yml": "Probe all International streams and apply three-day policy",
     "epg-refresh.yml": "Regenerate, validate and publish XMLTV",
