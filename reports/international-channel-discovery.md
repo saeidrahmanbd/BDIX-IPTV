@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-18 04:48 UTC
+- Last scan: 2026-11-18 04:56 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12268
-- Existing playlist records: 3265
+- Existing playlist records: 3273
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2215
-- Duplicate URLs within source feed: 5
-- New eligible source records after URL/policy filtering: 148
+- Exact source URLs already in playlist: 2225
+- Duplicate URLs within source feed: 3
+- New eligible source records after URL/policy filtering: 140
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
 - New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
@@ -62,16 +62,16 @@
 - **GMTV (1080p)** — New Channels — US — https://livechannel.mdc.akamaized.net/stitch/livechannel/1341/master1400000.m3u8;session=live_stream_1341
 - **Italianissimo (360p) [Not 24/7]** — New Channels — VE — https://vcp.myplaytv.com/italianissimo/italianissimo/playlist.m3u8
 - **La Hermandad Salsera (1080p) [Not 24/7]** — New Channels — CO — https://streamlov.alsolnet.com/hermandadsalsera/live/playlist.m3u8
-- **La Top 102.9 (720p)** — New Channels — HN — https://59d39900ebfb8.streamlock.net/top102/top102/playlist.m3u8
-- **La Urban TV (1080p) [Not 24/7]** — New Channels — ES — https://urbanrevolution.es:8443/live/TV/playlist.m3u8
 - **La Voz del Tropico (480p) [Geo-blocked]** — New Channels — DO — https://ss2.tvrdomi.com:1936/lavozdeltropico/lavozdeltropico/playlist.m3u8
 - **LaPuraCrema Television** — New Channels — VE — https://streamlov.alsolnet.com/lapuracrema/live/playlist.m3u8
-- **LaXitosa Panama (360p) [Not 24/7]** — New Channels — PA — https://stmvideo2.livecastv.com/lax953/lax953/playlist.m3u8
-- **Lingkar TV** — New Channels — ID — https://lingkartv.my.id/hls/lingkartv.m3u8
-- **M6 Music (1080p)** — New Channels — FR — https://r.eu.cdn-redge.media/livehls/oeu/mt/live/m6_music_hits/live.livx/playlist.m3u8
-- **MagentaMusik 360 (1080p)** — New Channels — DE — https://streaming.magentamusik.de/csm/573870/magentamusik1/index.m3u8
-- **Marina TV (1080p)** — New Channels — KW — https://ffs.gulfsat.com/Marina-TV-HD/index.m3u8
-- **MCM Pop** — New Channels — FR — http://176.65.153.78:8201/play/a070/index.m3u8
+- **MCM Top (France)** — New Channels — FR — http://185.228.163.146:8000/play/a00g/index.m3u8
+- **MCM Top (Russia) (576p)** — New Channels — RU — http://46.32.176.50/mcmtop/index.m3u8
+- **Melody (720p)** — New Channels — FR — https://r.eu.cdn-redge.media/livehls/oeu/mt/live/melody/live.livx/playlist.m3u8
+- **Metropolitana del Cuzco** — New Channels — PE — https://video1.earthcam.com/myearthcam/075ff02f78c35af55564cf3af3b3f750.flv/playlist.m3u8
+- **Mezzo** — New Channels — FR — http://92.180.26.103/stream/62/index.m3u8
+- **Mi Musica Popular (1080p)** — New Channels — US — http://45.226.205.96:48000/play/a0f8/index.m3u8
+- **Mohammed Abdo (1080p)** — New Channels — SA — https://d2ow8h651gs7dx.cloudfront.net/out/v1/371fb663da604e659a2fb99bf89d92d4/index.m3u8
+- **Montones TV (720p) [Not 24/7]** — New Channels — DO — https://183.giatvcdn.com/ssh101/ssh101/montonestv1/playlist.m3u8
 
 ## Backup alternates
 
@@ -116,19 +116,19 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-11-18T04:48:54+00:00
+- Run timestamp: 2026-11-18T04:56:36+00:00
 - Mode: international
 - New entries and discovery queues probed: 57
 - Verified live media responses: 4
-- Verified new primary channels automatically promoted: 1
+- Verified new primary channels automatically promoted: 0
 - Verified alternate streams moved to Backup: 0
 - Inconclusive candidates retained for manual review: 0
 - Definitively dead new candidates removed: 49
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
-- Logo references localized to authentic repository assets: 1
+- Logo references localized to authentic repository assets: 0
 - IPTV manual-review candidates needing later local-logo repair (warning only): 0
-- International candidates held for missing local logos: 2
+- International candidates held for missing local logos: 6
 
 ### Stream probe details
 - Removed newly discovered 4 Fun TV from New Channels — HTTP 404.
@@ -151,14 +151,18 @@
 - Removed newly discovered Kinosvidanie (576p) from New Channels — HTTP 404.
 - Removed newly discovered Komsan TV [Not 24/7] from New Channels — HTTP 404.
 - Removed newly discovered La Hermandad Salsera (1080p) [Not 24/7] from New Channels — HTTP 404.
-- Moved La Top 102.9 (720p) to Review — no authentic local logo asset is available.
-- Retained La Urban TV (1080p) [Not 24/7] in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Removed newly discovered La Voz del Tropico (480p) [Geo-blocked] from New Channels — HTTP 404.
 - Removed newly discovered LaPuraCrema Television from New Channels — HTTP 404.
-- Retained LaXitosa Panama (360p) [Not 24/7] in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Moved M6 Music (1080p) to Review — no authentic local logo asset is available.
-- Retained MagentaMusik 360 (1080p) in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
-- Retained Marina TV (1080p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Retained MCM Top (France) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Moved MCM Top (France) to Review — no authentic local logo asset is available.
+- Retained MCM Top (Russia) (576p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Moved MCM Top (Russia) (576p) to Review — no authentic local logo asset is available.
+- Moved Melody (720p) to Review — no authentic local logo asset is available.
+- Retained Metropolitana del Cuzco in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Retained Mezzo in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Moved Mi Musica Popular (1080p) to Review — no authentic local logo asset is available.
+- Moved Mohammed Abdo (1080p) to Review — no authentic local logo asset is available.
+- Moved Montones TV (720p) [Not 24/7] to Review — no authentic local logo asset is available.
 - Removed newly discovered More TV Sci-fi from New Channels — HTTP 404.
 - Removed newly discovered Mosfilm Gold Collection (576p) from New Channels — HTTP 404.
 - Removed newly discovered Patriot (720p) from New Channels — HTTP 404.
@@ -187,24 +191,24 @@
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
 - Promoted 7 RadioVisione (720p) from New Channels to Review — no authentic local repository logo.
-- Promoted La Top 102.9 (720p) from New Channels to Review — no authentic local repository logo.
-- Promoted La Urban TV (1080p) [Not 24/7] from New Channels to Review — inconclusive stream check.
-- Promoted LaXitosa Panama (360p) [Not 24/7] from New Channels to Review — inconclusive stream check.
-- Promoted Lingkar TV from New Channels to International — verified primary candidate.
-- Promoted M6 Music (1080p) from New Channels to Review — no authentic local repository logo.
-- Promoted MagentaMusik 360 (1080p) from New Channels to Review — inconclusive stream check.
-- Promoted Marina TV (1080p) from New Channels to Review — inconclusive stream check.
-- Promoted MCM Pop from New Channels to Review — no authentic local repository logo.
+- Promoted MCM Top (France) from New Channels to Review — no authentic local repository logo.
+- Promoted MCM Top (Russia) (576p) from New Channels to Review — no authentic local repository logo.
+- Promoted Melody (720p) from New Channels to Review — no authentic local repository logo.
+- Promoted Metropolitana del Cuzco from New Channels to Review — inconclusive stream check.
+- Promoted Mezzo from New Channels to Review — inconclusive stream check.
+- Promoted Mi Musica Popular (1080p) from New Channels to Review — no authentic local repository logo.
+- Promoted Mohammed Abdo (1080p) from New Channels to Review — no authentic local repository logo.
+- Promoted Montones TV (720p) [Not 24/7] from New Channels to Review — no authentic local repository logo.
 
 ## Final validation
 
-- Run timestamp: 2026-11-18T04:48:55+00:00
+- Run timestamp: 2026-11-18T04:56:36+00:00
 - Validation status: PASS
-- M3U entries parsed: 3273
+- M3U entries parsed: 3281
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 3
+- Discovery entries missing a logo (left blank rather than using a placeholder): 6
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
