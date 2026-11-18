@@ -250,6 +250,30 @@ function authorized(request,env) {
   const header=request.headers.get("Authorization") || "";
   return constantTimeEqual(header.startsWith("Bearer ") ? header.slice(7) : "",env.RECONCILE_BEARER_TOKEN);
 }
+
+export async function sendHealthchecksPing(env,status="success",fetchImpl=fetch) {
+  if (!env.HEALTHCHECKS_PING_URL) return {configured:false,pinged:false};
+  const target=new URL(env.HEALTHCHECKS_PING_URL);
+  if (target.protocol !== "https:" || !(target.hostname === "hc-ping.com" || target.hostname.endsWith(".hc-ping.com")))
+    throw new Error("HEALTHCHECKS_PING_URL must be a private HTTPS hc-ping.com URL");
+  if (status === "fail") target.pathname=target.pathname.replace(/\\/$/,"")+"/fail";
+  else if (status !== "success") throw new Error("Unsupported Healthchecks ping status");
+  const response=await fetchImpl(target.toString(),{method:"GET",redirect:"manual"});
+  if (!response.ok) throw new Error("Healthchecks ping failed (HTTP "+response.status+")");
+  return {configured:true,pinged:true};
+}
+
+async function runReconciliationWithHeartbeat(env) {
+  try {
+    const result=await reconcile(env);
+    await sendHealthchecksPing(env,"success");
+    return result;
+  } catch (error) {
+    try { await sendHealthchecksPing(env,"fail"); } catch (_) { /* preserve the original failure */ }
+    throw error;
+  }
+}
+
 export default {
   async fetch(request,env) {
     const url=new URL(request.url);
@@ -264,11 +288,11 @@ export default {
         const result=await verifyGitHubAppAccess(env);
         return Response.json({...result,mode:env.MODE === "active" ? "active" : "shadow",dispatched:0});
       }
-      return Response.json(await reconcile(env));
+      return Response.json(await runReconciliationWithHeartbeat(env));
     } catch (error) {
       return Response.json({error:url.pathname === "/github-check" ? "github_authentication_failed" : "reconciliation_failed",
         message:String(error.message || error).slice(0,240)},{status:503});
     }
   },
-  async scheduled(_controller,env,ctx) { ctx.waitUntil(reconcile(env)); }
+  async scheduled(_controller,env,ctx) { ctx.waitUntil(runReconciliationWithHeartbeat(env)); }
 };
