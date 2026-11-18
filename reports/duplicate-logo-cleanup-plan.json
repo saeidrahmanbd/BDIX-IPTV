@@ -2,7 +2,7 @@
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
   "exact_duplicate_groups": 971,
-  "exact_duplicate_files": 1526,
+  "exact_duplicate_files": 1527,
   "low_risk_review_candidates": [
     {
       "candidate": "logos/unused/euro-sports-hd.png",

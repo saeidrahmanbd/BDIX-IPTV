@@ -6923,5 +6923,40 @@
     "status": "generated_fallback",
     "source_url": "",
     "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.radio-temas-de-novelas-br-music|Rádio Temas de Novelas|logos/radio-temas-de-novelas-52562d10f48bddf24188.png": {
+    "status": "third_party_verified",
+    "source_url": "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/01b3887b-72aa-4fc4-a5b6-9060cb6921e1",
+    "notes": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://www.radiotemasdenovelas.com/"
+  },
+  "International-Playlist.m3u|PersianaFolk.fr@HD|Persiana Folk|logos/persiana-folk-71f4eb5b1332a70639fb.png": {
+    "status": "third_party_verified",
+    "source_url": "https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/PersianaFolk.fr.png",
+    "notes": "Exact Persiana Folk channel asset in a public channel-logo repository; independently matched to the Persiana Folk stream identity Public repository reference; original logo rights belong to Persiana Media Group Source page: https://github.com/shayanline/iptv-iran/blob/main/assets/logos/PersianaFolk.fr.png"
+  },
+  "International-Playlist.m3u|mtv.classic.gb|MTV Classic|logos/mtv-classic-df8c74caae1081a4a8f3.png": {
+    "status": "third_party_verified",
+    "source_url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/mtv-classic-uk.png",
+    "notes": "Curated exact channel/region asset Source repository; license must be checked at source Source page: https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/mtv-classic-uk.png"
+  },
+  "International-Playlist.m3u|epix.us|Epix|logos/epix-f183496b969b0cd2e9fb.png": {
+    "status": "third_party_verified",
+    "source_url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/epix-us.png",
+    "notes": "Curated exact channel/region asset Source repository; license must be checked at source Source page: https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/epix-us.png"
+  },
+  "International-Playlist.m3u|TVSMusicNetwork.us@SD|TVS Music Network|logos/tvs-music-network-9b5936f4006146e4e1e9.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/pXOyNEy.png",
+    "notes": "Exact TVSMusicNetwork.us entry and matching logo reference in a public channel playlist Community playlist source attribution; original TVS branding rights retained by the broadcaster Source page: https://github.com/vbelevcev/SkyTV/blob/main/UzbaTVFull.m3u8"
+  },
+  "International-Playlist.m3u|custom.konul-music-tv-az-music|Konul Music TV|logos/konul-music-tv-40b05f1d627fd4ad7bd9.webp": {
+    "status": "third_party_verified",
+    "source_url": "https://www.archytele.com/assets/logos/az/konul-music-tv-badge.webp",
+    "notes": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://www.archytele.com/live/azerbaijan/konul-music-tv"
+  },
+  "International-Playlist.m3u|custom.max-tv-az-music|MAX TV|logos/max-tv-a516dc8e242f6bcb5f47.png": {
+    "status": "third_party_verified",
+    "source_url": "https://maxmusicmedia.com/wp-content/themes/maxmedia/assets/images/logo.png",
+    "notes": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://maxmusicmedia.com/live/"
   }
 }

@@ -850,7 +850,7 @@ https://a.cdni.live/rodrigo2364/rodrigo2364/playlist.m3u8
 https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="MyTimeMovieNetwork.br@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-brazil-0641ac6cd5.png" tvg-country="BR" tvg-content="Movies" group-title="Brazil" tvg-name="MyTime Movie Network (Brazil)",MyTime Movie Network (Brazil)
 https://appletree-mytime-samsungbrazil.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.radio-temas-de-novelas-br-music" channel-id="custom.radio-temas-de-novelas-br-music" tvg-language="por" tvg-country="BR" tvg-content="Music" group-title="Brazil" tvg-name="Rádio Temas de Novelas",Rádio Temas de Novelas
+#EXTINF:-1 tvg-id="custom.radio-temas-de-novelas-br-music" channel-id="custom.radio-temas-de-novelas-br-music" tvg-language="por" tvg-country="BR" tvg-content="Music" tvg-logo="logos/radio-temas-de-novelas-52562d10f48bddf24188.png" group-title="Brazil" tvg-name="Rádio Temas de Novelas",Rádio Temas de Novelas
 https://eu1.servers10.com:8081/8126/index.m3u8
 #EXTINF:-1 tvg-id="TelecineAction.br@SD" tvg-language="por" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/telecine-action.png" tvg-country="BR" tvg-content="Movies" group-title="Brazil" tvg-name="Telecine Action",Telecine Action
 http://46.151.196.223:14326/
@@ -1142,7 +1142,7 @@ http://stream.mcquack.net/276/index.m3u8
 https://vdo2.pro-fhi.net:3207/stream/play.m3u8
 #EXTINF:-1 tvg-id="PersianaCinema.fr@SD" tvg-language="fas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/persiana-cinema-59e95e186a.png" tvg-country="FR" tvg-content="Movies" group-title="France" tvg-name="Persiana Cinema",Persiana Cinema
 https://cinehls.persiana.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="PersianaFolk.fr@HD" tvg-language="fas" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Persiana Folk",Persiana Folk
+#EXTINF:-1 tvg-id="PersianaFolk.fr@HD" tvg-language="fas" tvg-country="FR" tvg-content="Music" tvg-logo="logos/persiana-folk-71f4eb5b1332a70639fb.png" group-title="France" tvg-name="Persiana Folk",Persiana Folk
 https://sonhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaNostalgia.fr@SD" tvg-language="fas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/persiana-nostalgia-66d519d28e.png" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Persiana Nostalgia",Persiana Nostalgia
 https://noshls.persiana.live/hls/stream.m3u8
@@ -2122,7 +2122,7 @@ https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/playlist/a
 https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/playlist/amg01753-narrativeentert-greatchristmas-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.moviesphere-uk" tvg-language="eng" channel-id="custom.moviesphere-uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moviesphere-uk.png" tvg-country="GB" tvg-content="Movies" group-title="United Kingdom" tvg-name="MovieSphere UK",MovieSphere UK
 https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="mtv.classic.gb" tvg-language="eng" channel-id="mtv.classic.gb" tvg-country="GB" tvg-content="Music" group-title="United Kingdom" tvg-name="MTV Classic",MTV Classic
+#EXTINF:-1 tvg-id="mtv.classic.gb" tvg-language="eng" channel-id="mtv.classic.gb" tvg-country="GB" tvg-content="Music" tvg-logo="logos/mtv-classic-df8c74caae1081a4a8f3.png" group-title="United Kingdom" tvg-name="MTV Classic",MTV Classic
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53734.ts
 #EXTINF:-1 tvg-id="MyTimeMovieNetwork.uk@SD" channel-id="MyTimeMovieNetwork.uk@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie.png" tvg-country="GB" tvg-content="Movies" group-title="United Kingdom" tvg-name="MyTime Movie",MyTime Movie
 https://mytimeuk-rakuten-samsung.amagi.tv/playlist.m3u8
@@ -2286,7 +2286,7 @@ https://aegis-cloudfront-1.tubi.video/a0ad4b53-ab3a-48dd-be12-bc7f533c372c/playl
 https://rpn.bozztv.com/ebstv/ebscinema/index.m3u8
 #EXTINF:-1 tvg-id="EBSMusika.us@SD" tvg-language="amh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ebs-musika-720p-cb7d702a48.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="EBS Musika",EBS Musika
 https://rpn.bozztv.com/ebstv/ebsmusika/index.m3u8
-#EXTINF:-1 tvg-id="epix.us" tvg-language="eng" channel-id="epix.us" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Epix",Epix
+#EXTINF:-1 tvg-id="epix.us" tvg-language="eng" channel-id="epix.us" tvg-country="US" tvg-content="Movies" tvg-logo="logos/epix-f183496b969b0cd2e9fb.png" group-title="United States" tvg-name="Epix",Epix
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/13214.ts
 #EXTINF:-1 tvg-id="epixhits.us" tvg-language="eng;spa" channel-id="epixhits.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epix-hits-2a277450b6.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Epix Hits",Epix Hits
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/12744.ts
@@ -2570,7 +2570,7 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/66242.ts
 https://rpn.bozztv.com/gusa/gusa-tvsclassicmovies/index.m3u8
 #EXTINF:-1 tvg-id="TVSDriveInMovie.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvs-drive-in-movie-576p-d0b4166233.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="TVS Drive In Movie",TVS Drive In Movie
 https://rpn.bozztv.com/gusa/gusa-tvsdriveinmovie/index.m3u8
-#EXTINF:-1 tvg-id="TVSMusicNetwork.us@SD" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="TVS Music Network",TVS Music Network
+#EXTINF:-1 tvg-id="TVSMusicNetwork.us@SD" tvg-language="eng" tvg-country="US" tvg-content="Music" tvg-logo="logos/tvs-music-network-9b5936f4006146e4e1e9.png" group-title="United States" tvg-name="TVS Music Network",TVS Music Network
 https://rpn.bozztv.com/gusa/gusa-tvsmusic/index.m3u8
 #EXTINF:-1 tvg-id="TVSNostalgiaMovies.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvs-nostalgia-movies-480p-1058c2772e.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="TVS Nostalgia Movies",TVS Nostalgia Movies
 https://rpn.bozztv.com/gusa/gusa-tvsNostalgiaMovies/index.m3u8
@@ -2730,7 +2730,7 @@ https://stream.cmctv.hr:49998/kit/live.m3u8
 https://live.vrtcdn.be/groupb/live/9c429b62-e160-417a-b438-cdf985bcd352/live.isml/.m3u8
 #EXTINF:-1 tvg-id="KNMusicTV.az@SD" tvg-language="aze" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kn-music-tv-ad8cb6ea77.png" tvg-country="AZ" tvg-content="Music" group-title="International" tvg-name="KN Music TV",KN Music TV
 https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="custom.konul-music-tv-az-music" channel-id="custom.konul-music-tv-az-music" tvg-language="eng;rus" tvg-country="AZ" tvg-content="Music" group-title="International" tvg-name="Konul Music TV",Konul Music TV
+#EXTINF:-1 tvg-id="custom.konul-music-tv-az-music" channel-id="custom.konul-music-tv-az-music" tvg-language="eng;rus" tvg-country="AZ" tvg-content="Music" tvg-logo="logos/konul-music-tv-40b05f1d627fd4ad7bd9.png" group-title="International" tvg-name="Konul Music TV",Konul Music TV
 https://cdn4.yayin.com.tr/bakixebertv/video.m3u8
 #EXTINF:-1 tvg-id="KuriakosMusic.pt@SD" tvg-language="por" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kuriakos-music-c86ebafd5c.png" tvg-country="PT" tvg-content="Music" group-title="International" tvg-name="Kuriakos Music",Kuriakos Music
 http://195.23.211.179:1935/kmusic/smil:kmusic.smil/playlist.m3u8
@@ -2752,7 +2752,7 @@ https://stream.berosat.live/hls/lollywood-hd/lollywood-hd.m3u8
 https://m-1.data.lt/m-1/smil:m-1.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="MaahTV.my@SD" tvg-language="fas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maah-tv-8ab855a0a8.png" tvg-country="MY" tvg-content="Movies" group-title="International" tvg-name="Maah TV",Maah TV
 https://hls.maahtv.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="custom.max-tv-az-music" channel-id="custom.max-tv-az-music" tvg-language="aze" tvg-country="AZ" tvg-content="Music" group-title="International" tvg-name="MAX TV",MAX TV
+#EXTINF:-1 tvg-id="custom.max-tv-az-music" channel-id="custom.max-tv-az-music" tvg-language="aze" tvg-country="AZ" tvg-content="Music" tvg-logo="logos/max-tv-a516dc8e242f6bcb5f47.png" group-title="International" tvg-name="MAX TV",MAX TV
 https://cdn4.yayin.com.tr/maxtv/video.m3u8
 #EXTINF:-1 tvg-id="Mazzika.eg@SD" tvg-language="ara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mazzika-d63e62d227.png" tvg-country="EG" tvg-content="Music" group-title="International" tvg-name="Mazzika",Mazzika
 http://149.100.11.235:8080/Mazzika/index.m3u8
