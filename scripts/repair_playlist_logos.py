@@ -89,6 +89,11 @@ LOCAL_OVERRIDES = {
     "channel 1": "channel-1.png",
     "classic movies": "unused/classic-movies-channel-1d5f82d98a.png",
     "allo cine": "allo-cine-1080p.webp",
+    # Exact channel-name matches already present in the repository logo library.
+    "vevo 70s 80s": "vevo-70s-80s.png",
+    "vevo 90s 00s": "vevo-90s-00s.png",
+    # The stream is the XITE Celebrates feed; this is its existing local artwork.
+    "xite summer": "xite-celebrates-0178ee79a4.png",
 }
 FORCED_CHANNEL_LOGOS = {
     "bollygold": "nh-bollygold-dbedeff9.png",
