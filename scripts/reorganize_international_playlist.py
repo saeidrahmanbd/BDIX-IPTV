@@ -233,6 +233,11 @@ def classify(a, name, group, country, promote_backup=False):
     if group_key == "review":
         return "Review", infer_kind(name, group, a), None
 
+    if not name or re.fullmatch(r"(?:\d+|n/?a|unknown|test|demo|sample|placeholder|new channel|unnamed|no name|not available)", name, re.I):
+        return None, None, "non-real/test channel"
+    if discovery.BAD_NAME_RE.search(name):
+        return None, None, "test/VOD/non-TV name"
+
     # Enforce the current regional policy before thematic grouping or Backup
     # preservation. Policy-ineligible and country-ambiguous existing rows are
     # quarantined in Review; they are never silently promoted to another genre.
@@ -260,11 +265,6 @@ def classify(a, name, group, country, promote_backup=False):
             }
             if prohibited_group or eligible is None or verified_country != country:
                 return "Review", None, None
-
-    if not name or re.fullmatch(r"(?:\d+|n/?a|unknown|test|demo|sample|placeholder|new channel|unnamed|no name|not available)", name, re.I):
-        return None, None, "non-real/test channel"
-    if discovery.BAD_NAME_RE.search(name):
-        return None, None, "test/VOD/non-TV name"
 
     # New discoveries and alternate streams are always held for manual checking.
     if group_key in QUEUE_GROUPS:
