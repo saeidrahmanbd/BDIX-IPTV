@@ -39,6 +39,7 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "logos").mkdir()
+            (root / "reports").mkdir()
             (root / "logos" / "desh-tv.png").write_bytes(b"test asset")
             (root / "logos" / "a-sports-5485adff.png").write_bytes(b"blocked asset")
             (root / "IPTV-Playlist.m3u").write_text(
