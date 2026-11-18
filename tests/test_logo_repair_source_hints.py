@@ -2,6 +2,8 @@
 import re
 import sys
 import unittest
+import tempfile
+import hashlib
 from pathlib import Path
 from unittest.mock import patch
 
@@ -80,6 +82,27 @@ class LogoRepairSourceTests(unittest.TestCase):
         self.assertIn("ZAINABIA", hint["license"].upper())
         self.assertIn("zainabiachannel.co.in", hint["license_url"])
         self.assertIn("shialivetv.com", hint["url"])
+
+    @patch("repair_playlist_logos.file_is_valid", return_value=True)
+    @patch("logo_source_catalog.valid_image", return_value=True)
+    @patch("logo_source_catalog.fetch_bytes")
+    def test_canonical_name_collision_preserves_existing_asset_and_uses_digest_name(
+        self, fetch_bytes, valid_image, file_is_valid
+    ):
+        raw = b"\\x89PNG\\r\\n\\x1a\\nverified-new-logo-bytes"
+        fetch_bytes.return_value = (raw, "image/png")
+        with tempfile.TemporaryDirectory() as directory:
+            logo_repair.LOGOS = Path(directory)
+            canonical = Path(directory) / "colors-gujarati.png"
+            canonical.write_bytes(b"existing-different-logo")
+            result = logo_repair.download_exact_asset(
+                "Colors Gujarati", {"url": "https://example.org/logo.png", "format": "PNG"},
+                canonical_name=True,
+            )
+            self.assertNotEqual(result, canonical.name)
+            self.assertTrue(result.startswith("colors-gujarati-"))
+            self.assertEqual(canonical.read_bytes(), b"existing-different-logo")
+            self.assertEqual((Path(directory) / result).read_bytes(), raw)
 
     def test_image_extension_is_sniffed_when_source_uses_octet_stream(self):
         self.assertEqual(
