@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-18T03:50:28+00:00**
+Generated: **2026-11-18T07:38:15+00:00**
 
-- Active Bangladesh playlist identities: **89**
+- Active Bangladesh playlist identities: **86**
 - Identities with a retained source mapping: **5**
 - Identities with usable current/future schedules: **4**
-- Identities without a source mapping: **84**
+- Identities without a source mapping: **81**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -23,7 +23,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; rtvbd.tv/live.php: URLError; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 53 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 52 | - |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
@@ -52,7 +52,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Channel I | ChannelI.bd | NO_GUIDE_HIT |
 | Channel S | ChannelS.bd | NO_GUIDE_HIT |
 | Channel S | ChannelS.bd@SD | NO_GUIDE_HIT |
-| Channel S | ChannelS.uk | NO_GUIDE_HIT |
 | Channel S UK | ChannelS.uk@679aa9 | NO_GUIDE_HIT |
 | Community TV | CommunityTV.us@SD | NO_GUIDE_HIT |
 | DBC News | DBCNews.bd | NO_GUIDE_HIT |
@@ -91,7 +90,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Nagorik TV | NagorikTV.bd | NO_GUIDE_HIT |
 | NAN TV | NANTV.bd@SD | NO_GUIDE_HIT |
 | News 21 | News21BanglaTV.bd@SD | NO_GUIDE_HIT |
-| NEWS 21 BANGLA | custom.bdix.news21-bangla | NO_GUIDE_HIT |
 | News 24 | News24.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd@SD | NO_GUIDE_HIT |
@@ -110,7 +108,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Star News | StarNews.bd | NO_GUIDE_HIT |
 | T Sports | TSports.bd | NO_GUIDE_HIT |
 | TBN 24 USA | bd.tbn.24.usa.bd | NO_GUIDE_HIT |
-| TBN24 | TBN24.us | NO_GUIDE_HIT |
 | Thikana TV | ThikanaTV.us | NO_GUIDE_HIT |
 | Time Television | TimeTelevision.us | NO_GUIDE_HIT |
 | Vision 24 | vision.24.bd | NO_GUIDE_HIT |
