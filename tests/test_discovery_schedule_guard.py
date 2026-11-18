@@ -410,6 +410,42 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             guard.first_run_id(runs, workflow_file="new-channel-discovery.yml")
         )
 
+    def test_logo_localization_retries_after_a_new_playlist_writer_revision(self):
+        previous = {
+            "id": 150, "event": "schedule", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T00:25:00Z", "head_sha": "before-playlist-update",
+            "jobs": [{
+                "name": "localize", "status": "completed", "conclusion": "success",
+                "steps": [{"name": "Localize and commit logos", "conclusion": "success"}],
+            }],
+        }
+        current = {
+            "id": 151, "event": "workflow_run", "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T01:10:00Z", "head_sha": "after-playlist-update",
+        }
+        self.assertTrue(guard.should_current_run_execute(
+            [previous, current], 151, self.today, event="workflow_run",
+            workflow_file="playlist-logo-localization.yml",
+        ))
+
+    def test_logo_localization_same_revision_still_suppresses_duplicate(self):
+        previous = {
+            "id": 152, "event": "schedule", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T00:25:00Z", "head_sha": "same-main-sha",
+            "jobs": [{
+                "name": "localize", "status": "completed", "conclusion": "success",
+                "steps": [{"name": "Localize and commit logos", "conclusion": "success"}],
+            }],
+        }
+        current = {
+            "id": 153, "event": "workflow_run", "status": "in_progress", "conclusion": None,
+            "created_at": "2026-11-07T01:10:00Z", "head_sha": "same-main-sha",
+        }
+        self.assertFalse(guard.should_current_run_execute(
+            [previous, current], 153, self.today, event="workflow_run",
+            workflow_file="playlist-logo-localization.yml",
+        ))
+
     def test_epg_watchdog_waits_for_active_guard_only_run_then_recovers(self):
         active = {
             "id": 180, "event": "workflow_run", "status": "in_progress", "conclusion": None,
