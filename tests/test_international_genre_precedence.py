@@ -14,24 +14,24 @@ def classify(name, country, group="International"):
     return organizer.classify(attrs, name, group, country)
 
 
-def test_foreign_sports_stays_in_sports():
-    assert classify("ESPN", "US")[0] == "Sports"
+def test_foreign_sports_is_quarantined_to_review():
+    assert classify("ESPN", "US")[0] == "Review"
 
 
-def test_foreign_kids_stays_in_kids():
-    assert classify("Cartoon Network", "US")[0] == "Kids"
+def test_foreign_kids_is_quarantined_to_review():
+    assert classify("Cartoon Network", "US")[0] == "Review"
 
 
-def test_foreign_documentary_stays_in_documentary_group():
-    assert classify("National Geographic", "US")[0] == "Documentary & Wildlife"
+def test_foreign_documentary_is_quarantined_to_review():
+    assert classify("National Geographic", "US")[0] == "Review"
 
 
-def test_foreign_religious_stays_in_religious_group():
-    assert classify("Quran TV", "SA")[0] == "Religious"
+def test_foreign_religious_is_quarantined_to_review():
+    assert classify("Quran TV", "SA")[0] == "Review"
 
 
-def test_foreign_news_stays_in_news_group():
-    assert classify("BBC News", "GB")[0] == "News"
+def test_foreign_news_is_quarantined_to_review():
+    assert classify("BBC News", "GB")[0] == "Review"
 
 
 def test_indian_sports_is_not_demoted_to_indian_country_group():
@@ -41,3 +41,13 @@ def test_indian_sports_is_not_demoted_to_indian_country_group():
 def test_music_and_movie_remain_in_country_groups():
     assert classify("Classic Movies", "US")[0] == "__FOREIGN__"
     assert classify("Music Channel", "US")[0] == "__FOREIGN__"
+
+
+def test_indian_news_and_religious_are_quarantined():
+    assert classify("India Today", "IN", "Indian Entertainment")[0] == "Review"
+    assert classify("Islamic TV", "IN", "Religious")[0] == "Review"
+
+
+def test_bangladesh_and_pakistan_keep_genre_freedom():
+    assert classify("Somoy TV", "BD", "News")[0] == "News"
+    assert classify("PTV Sports", "PK", "Sports")[0] == "Sports"
