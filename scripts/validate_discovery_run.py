@@ -113,7 +113,7 @@ def find_logo(name):
     if not key or not LOGOS.exists():
         return None
     for path in LOGOS.rglob("*"):
-        if path.is_file() and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg"}:
+        if path.is_file() and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg"} and "unused" not in path.parts and not discovery.is_blocked_logo_basename(path.name):
             if norm_key(path.stem) == key:
                 return "logos/" + str(path.relative_to(LOGOS)).replace("\\", "/")
     return None
