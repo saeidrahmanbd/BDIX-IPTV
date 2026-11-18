@@ -42,7 +42,7 @@ MANUAL_COUNTRY = {"rajdhanitv": "BD", "sonimax": "IN", "sonimax2": "IN", "asians
 MANUAL_GROUP = {"sonimax": "Indian Movies", "sonimax2": "Indian Movies", "asiansonimax2": "Indian Movies", "shemaroobollywood": "Indian Movies"}
 # Exact channel identity verified by TRAI/Tata Play as Lifestyle/Knowledge & Lifestyle,
 # not a news service despite the NDTV brand prefix.
-MANUAL_LIFESTYLE_GROUP = {"ndtvgoodtimes": "Indian Entertainment"}
+MANUAL_LIFESTYLE_GROUP = {"ndtvgoodtimes.in@sd": "Indian Entertainment"}
 # Exact known religious branding that must never be relabelled as Music by source metadata.
 NON_ISLAMIC_RELIGIOUS_EXACT = {"hopechannelproyectoja"}
 COUNTRY_NAME_BY_NORMALIZED = {
@@ -225,8 +225,9 @@ def classify(a, name, group, country, promote_backup=False):
 
     # NDTV Good Times is a lifestyle channel, not an NDTV news service.
     # Its inherited "News" group and the broad NDTV regex are both misleading.
-    if country == "IN" and key in MANUAL_LIFESTYLE_GROUP:
-        return MANUAL_LIFESTYLE_GROUP[key], None, None
+    channel_identity = (a.get("tvg-id") or a.get("channel-id") or "").strip().casefold()
+    if country == "IN" and key == "ndtvgoodtimes" and channel_identity in MANUAL_LIFESTYLE_GROUP:
+        return MANUAL_LIFESTYLE_GROUP[channel_identity], None, None
 
     # Adult is a protected curated category. Clearly identified Adult orphans
     # are recovered only in the explicit orphan-promotion pass.
