@@ -301,7 +301,9 @@ def validate_metadata_preservation(before_text, after_text, removed_urls):
         new_attrs.pop("group-title", None)
         if old_attrs != new_attrs:
             raise ValueError(f"Health automation changed channel metadata/logo for {name_of(old_block[0])!r}")
-        if old_block[1:] != new_block[1:]:
+        old_payload = [line.strip() for line in old_block[1:] if line.strip()]
+        new_payload = [line.strip() for line in new_block[1:] if line.strip()]
+        if old_payload != new_payload:
             raise ValueError(f"Health automation changed stream directives/URL for {name_of(old_block[0])!r}")
 
 
