@@ -507,11 +507,36 @@ def apply_results(text, results, history, check_date):
             entries[key] = rec
 
         action = "unchanged"
+        # Adult is a protected collection, not a health-retirement queue. Also
+        # recognize rows previously moved from Adult to Review by older code.
+        protected_adult = (
+            current.casefold() == "adult"
+            or (
+                current.casefold() == REVIEW.casefold()
+                and str(rec.get("original_group", "")).casefold() == "adult"
+            )
+        )
         if rec.get("last_checked_date") == check_date:
             action = "already-checked-today"
         else:
             previous_date, previous_status = rec.get("last_checked_date", ""), rec.get("last_status", "")
-            if state == "ok":
+            if protected_adult:
+                # Keep Adult-origin rows present and out of Review regardless of
+                # probe outcome. Health results remain diagnostic only.
+                if current.casefold() == REVIEW.casefold():
+                    info = set_group(info, "Adult")
+                    current = "Adult"
+                    action = "restored-protected-adult"
+                rec["original_group"] = "Adult"
+                rec["consecutive_failures"] = 0
+                rec["auto_review"] = False
+                rec["last_status"] = state
+                if state == "ok":
+                    rec["last_ok_date"] = check_date
+                elif state == "fail":
+                    rec["last_failure_date"] = check_date
+                action = action if action == "restored-protected-adult" else "protected-adult-diagnostic"
+            elif state == "ok":
                 if current.casefold() == REVIEW.casefold():
                     original = rec.get("original_group", "")
                     target = _review_recovery_target(info, original, primary_keys, country_ids)
