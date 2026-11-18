@@ -50,6 +50,23 @@ class MainPlaylistProtectionTests(unittest.TestCase):
              ("New Backups", "Alternate discovery", "https://alternate", "", "alternate.in")],
         )
 
+    def test_reserved_manual_queue_registry_additions_are_allowed(self):
+        before_categories = [group for group in guard.CATEGORY_ORDER
+                             if group not in {"New Channels", "New Backups"}]
+        after_categories = list(guard.CATEGORY_ORDER)
+        before_rows = [("Bangladesh", "A", "https://a", "1", "a.bd")]
+        after_rows = before_rows + [
+            ("New Channels", "New discovery", "https://new", "", "new.in"),
+            ("New Backups", "Alternate discovery", "https://alternate", "", "alternate.in"),
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "IPTV-Playlist.m3u"
+            state = Path(directory) / "state.json"
+            self.write(playlist, before_rows, before_categories)
+            guard.snapshot(playlist, state)
+            self.write(playlist, after_rows, after_categories)
+            guard.verify(playlist, state)
+
     def test_unapproved_existing_group_change_is_blocked(self):
         self.assert_guard_blocks(
             [("International", "A", "https://a", "1", "a.us")],
