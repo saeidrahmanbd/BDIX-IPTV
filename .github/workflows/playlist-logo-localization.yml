@@ -122,12 +122,15 @@ jobs:
         run: python -m pip install --disable-pip-version-check pillow cairosvg
       - name: Run logo conversion and asset-quality regression tests
         run: |
-          python -m py_compile scripts/convert_referenced_logos_to_png.py scripts/repair_logo_asset_technical_quality.py scripts/audit_logo_references.py scripts/plan_duplicate_logo_cleanup.py
+          python -m py_compile scripts/convert_referenced_logos_to_png.py scripts/repair_logo_asset_technical_quality.py scripts/audit_logo_references.py scripts/plan_duplicate_logo_cleanup.py scripts/logo_provenance.py scripts/validate_logo_references.py scripts/generate_logo_authenticity_manifest.py scripts/repair_playlist_logos.py
           python -m unittest discover -s tests -p 'test_logo_format_conversion.py'
           python -m unittest discover -s tests -p 'test_logo_embedded_png_recovery.py'
           python -m unittest discover -s tests -p 'test_logo_asset_technical_quality.py'
           python -m unittest discover -s tests -p 'test_logo_reference_audit.py'
           python -m unittest discover -s tests -p 'test_duplicate_logo_cleanup_plan.py'
+          python -m unittest discover -s tests -p 'test_logo_provenance.py'
+          python -m unittest discover -s tests -p 'test_validate_logo_references.py'
+          python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
       - name: Capture protected playlist metadata
         shell: bash
         run: |
@@ -151,114 +154,7 @@ jobs:
           python scripts/audit_logo_references.py --output reports/logo-reference-audit.json
           python scripts/plan_duplicate_logo_cleanup.py --output reports/duplicate-logo-cleanup-plan.json
           python scripts/generate_logo_authenticity_manifest.py
-          python - <<'PY'
-          import json
-          import re
-          import sys
-          from pathlib import Path
-          sys.path.insert(0, "scripts")
-          import repair_playlist_logos as logo_repair
-          import generate_logo_authenticity_manifest as logo_authenticity
-          from urllib.parse import unquote, urlparse
-
-          registry_path = Path("reports/logo-source-registry.json")
-          registry = json.loads(registry_path.read_text(encoding="utf-8")) if registry_path.is_file() else {}
-          base = "logos/"
-          names = ["IPTV-Playlist.m3u", "International-Playlist.m3u"]
-          blocked = {
-              "atn-news.png", "a-sports-5485adff.png", "a-sports-hd.png", "bein-sports-3.png",
-              "bangla-tv.png", "btv-news.png", "colors.png", "duronto-tv.png",
-              "duronto-tv-1ad55c95.png", "ekushey-tv.png", "global-tv.png", "green-tv.png",
-              "mohona-tv.png", "nagorik-tv.png", "nagorik.png", "nick-bangla.png",
-              "sananda-tv.png", "sananda.png", "star-gold-select.png", "star-gold.png",
-              "star-plus.png", "zee-tv.png", "tom-and-jerry.png", "arirang-tv.png",
-          }
-          blocked.update(logo_repair.BAD_ASSETS | logo_repair.GENERIC_ASSETS)
-          summaries = {}
-          for name in names:
-              current = Path(name).read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
-              normalized = re.sub(r'\s+tvg-logo="[^"]*"', "", current)
-              baseline = Path("/tmp/" + name + ".nonlogo").read_text(encoding="utf-8")
-              if normalized != baseline:
-                  raise SystemExit("Non-logo playlist content changed: " + name)
-              entries = [line for line in current.splitlines() if line.startswith("#EXTINF:")]
-              missing = review_missing = external = nvision = broken = adult_ignored = non_png = 0
-              review_groups = {"review", "new channels", "new backups", "not playing"}
-              for line in entries:
-                  meta = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
-                  group = (meta.get("group-title") or "").strip().casefold()
-                  channel_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
-                  label = line.rsplit(",", 1)[-1].strip() if "," in line else (meta.get("tvg-name") or "").strip()
-                  channel_key = logo_repair.norm_key(label)
-                  if logo_repair.is_adult_playlist_entry(name, group, channel_id, channel_key):
-                      adult_ignored += 1
-                      continue
-                  m = re.search(r'tvg-logo="([^"]*)"', line)
-                  logo = m.group(1).strip() if m else ""
-                  if not logo:
-                      if group in review_groups:
-                          review_missing += 1
-                      else:
-                          missing += 1
-                      continue
-                  if not logo.startswith(base):
-                      external += 1
-                      continue
-                  rel = unquote(logo[len(base):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
-                  asset = Path("logos") / rel
-                  if asset.suffix.casefold() != ".png":
-                      non_png += 1
-                  filename = asset.name.casefold()
-                  if filename.startswith("nvisionbd-"):
-                      nvision += 1
-                  channel_id_original = (meta.get("tvg-id") or meta.get("channel-id") or "").strip()
-                  channel_name = line.rsplit(",", 1)[-1].strip()
-                  registry_key = f"{name}|{channel_id_original}|{channel_name}|{logo}"
-                  provenance, provenance_match = logo_authenticity.provenance_for(registry, name, meta, channel_name, logo)
-                  is_generated_fallback = filename.startswith("generated-fallback-")
-                  fallback_is_disclosed = (
-                      is_generated_fallback
-                      and provenance.get("status") == "generated_fallback"
-                      and "unofficial fallback" in provenance.get("notes", "").casefold()
-                      and "not an official broadcaster logo" in provenance.get("notes", "").casefold()
-                  )
-                  invalid_reasons = []
-                  if not asset.is_file():
-                      invalid_reasons.append("missing_asset_file")
-                  if filename in blocked:
-                      invalid_reasons.append("explicit_blocklist")
-                  if filename.startswith(("placeholder-", "generic-", "unknown-", "unidentified-")):
-                      invalid_reasons.append("blocked_filename_prefix")
-                  if is_generated_fallback and not fallback_is_disclosed:
-                      invalid_reasons.append("fallback_not_disclosed_or_provenance_unmatched")
-                  if re.search(r"(?:placeholder|generic-logo)", filename, re.I):
-                      invalid_reasons.append("placeholder_or_generic_filename")
-                  if invalid_reasons:
-                      print("INVALID_LOGO_REFERENCE " + json.dumps({
-                          "playlist": name, "channel": channel_name,
-                          "tvg_id": channel_id_original, "logo": logo,
-                          "filename": filename, "reasons": invalid_reasons,
-                          "asset_exists": asset.is_file(),
-                          "provenance_match": provenance_match,
-                          "provenance_status": provenance.get("status", ""),
-                          "provenance_notes": provenance.get("notes", ""),
-                          "is_generated_fallback": is_generated_fallback,
-                          "fallback_is_disclosed": fallback_is_disclosed,
-                      }, ensure_ascii=False))
-                      broken += 1
-              summaries[name] = {
-                  "entries": len(entries), "missing_logo_metadata": missing,
-                  "review_missing_logo_metadata": review_missing,
-                  "adult_entries_ignored": adult_ignored,
-                  "nonrepository_logo_refs": external, "nvision_refs": nvision,
-                  "invalid_or_blocked_refs": broken, "non_png_refs": non_png,
-              }
-              if name == "IPTV-Playlist.m3u" and missing:
-                  print("::warning::Authentic local logo unavailable for some main-playlist rows; leaving those logo fields empty for manual review: " + json.dumps(summaries[name]))
-              if external or nvision or broken or non_png:
-                  raise SystemExit("Logo validation failed: " + name + " " + json.dumps(summaries[name]))
-          print(json.dumps(summaries, indent=2))
-          PY
+          python scripts/validate_logo_references.py --baseline-dir /tmp
           git add IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json reports/logo-format-conversion.md reports/logo-asset-quality-audit.md reports/logo-reference-audit.json reports/duplicate-logo-cleanup-plan.json
           if git diff --cached --quiet; then
             echo "No additional local logo changes."
