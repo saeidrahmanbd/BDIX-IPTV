@@ -156,6 +156,7 @@ jobs:
           from pathlib import Path
           sys.path.insert(0, "scripts")
           import repair_playlist_logos as logo_repair
+          import generate_logo_authenticity_manifest as logo_authenticity
           from urllib.parse import unquote, urlparse
 
           registry_path = Path("reports/logo-source-registry.json")
@@ -211,7 +212,7 @@ jobs:
                   channel_id_original = (meta.get("tvg-id") or meta.get("channel-id") or "").strip()
                   channel_name = line.rsplit(",", 1)[-1].strip()
                   registry_key = f"{name}|{channel_id_original}|{channel_name}|{logo}"
-                  provenance = registry.get(registry_key, {})
+                  provenance, provenance_match = logo_authenticity.provenance_for(registry, name, meta, channel_name, logo)
                   is_generated_fallback = filename.startswith("generated-fallback-")
                   fallback_is_disclosed = (
                       is_generated_fallback
