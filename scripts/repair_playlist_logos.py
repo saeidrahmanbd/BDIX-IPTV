@@ -69,11 +69,12 @@ BAD_ASSETS = {
     "ten-tv-prime-ac43f0fa9e.png",
     "tv-one-uk-ac43f0fa9e.png",
 }
+# Generated fallback files are intentionally NOT generic/blocked assets.
+# They are accepted only by the workflow's separate provenance + disclosure
+# validation (generated_fallback status and explicit unofficial-logo notes).
+# The repair search still excludes the generated-fallback-* prefix, so these
+# files cannot be mistaken for authentic broadcaster artwork.
 GENERIC_ASSETS = {
-    "generated-fallback-btv-news.png",
-    "generated-fallback-channel-1.png",
-    "generated-fallback-channel-16.png",
-    "generated-fallback-channel-52.png",
     "placeholder-btv-news.png",
     "placeholder-channel-1.png",
     "placeholder-channel-16.png",
