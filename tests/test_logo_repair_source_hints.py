@@ -158,8 +158,8 @@ class LogoRepairSourceTests(unittest.TestCase):
     def test_channel16_ru_asset_is_quarantined_from_general_reuse(self):
         self.assertIn("16-a308b78988.png", logo_repair.BAD_ASSETS)
 
-    def test_generated_fallback_art_is_enabled_as_disclosed_last_resort(self):
-        self.assertTrue(logo_repair.ALLOW_GENERATED_FALLBACKS)
+    def test_generated_fallback_art_is_disabled(self):
+        self.assertFalse(logo_repair.ALLOW_GENERATED_FALLBACKS)
         self.assertTrue(callable(logo_repair.make_generated_fallback))
 
     def test_adult_backup_channels_are_exempt_from_logo_repair(self):
