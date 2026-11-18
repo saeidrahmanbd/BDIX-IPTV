@@ -238,7 +238,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             playlist = root / "IPTV-Playlist.m3u"
             baseline = root / "baseline.m3u"
             report = root / "report.md"
-            registry = ["Bangladesh", "Backup", "New Channels", "New Backups", "Review"]
+            registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
             duplicate_existing = (
                 '#EXTINF:-1 tvg-name="Old duplicate A" group-title="Bangladesh",Old duplicate A\n'
                 'https://example.org/old-duplicate.m3u8\n'

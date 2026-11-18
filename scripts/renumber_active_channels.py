@@ -16,7 +16,7 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Backup", "New Channels", "New Backups", "Review",
+    "New Channels", "New Backups", "Backup", "Review",
 ]
 CATEGORY_RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
 REVIEW_GROUPS = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}

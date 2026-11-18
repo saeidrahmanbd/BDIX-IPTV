@@ -27,8 +27,8 @@ PROTECTED = {"Backup", "Review", "Not Playing"}
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
-    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup",
-    "New Channels", "New Backups", "Review",
+    "Documentary & Wildlife", "Kids", "Religious", "Sports",
+    "New Channels", "New Backups", "Backup", "Review",
 ]
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 

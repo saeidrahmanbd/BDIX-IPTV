@@ -624,7 +624,7 @@ def final_mode(playlist, report, baseline, mode):
         errors.append(f"{duplicate_count} duplicate stream URLs remain")
     # Match the canonical 15-group IPTV registry enforced by
     # normalize_metadata.py and other retired structural repair tools.
-    required = (["Backup", "Review", "New Channels", "New Backups"]
+    required = (["New Channels", "New Backups", "Backup", "Review"]
                 if mode == "iptv" else ["Review", "New Channels", "New Backups", "Backup"])
     registry_line = next((line for line in lines if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")), "")
     try:
