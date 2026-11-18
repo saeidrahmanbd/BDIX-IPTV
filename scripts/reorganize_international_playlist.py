@@ -241,7 +241,9 @@ def classify(a, name, group, country, promote_backup=False):
     # Enforce the current regional policy before thematic grouping or Backup
     # preservation. Policy-ineligible and country-ambiguous existing rows are
     # quarantined in Review; they are never silently promoted to another genre.
-    if country == "IN" or group in INDIAN_GROUPS:
+    if group_key in QUEUE_GROUPS:
+        pass  # Discovery queues are filtered by the dedicated queue policy below.
+    elif country == "IN" or group in INDIAN_GROUPS:
         prohibited = bd_policy.prohibited_channel(a, name, "IN", discovery=True)
         if prohibited:
             return "Review", None, None
