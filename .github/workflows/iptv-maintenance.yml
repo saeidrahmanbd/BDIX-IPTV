@@ -17,7 +17,6 @@ on:
       - scripts/reconcile_backup_metadata_exact_id.py
       - scripts/permanent_removals.py
       - scripts/country_verification.py
-      - scripts/migrate_external_logos_fixed.py
       - scripts/restore_protected_review.py
       - scripts/generate_logo_authenticity_manifest.py
       - scripts/generate_logo_repair_summary.py
@@ -214,7 +213,6 @@ jobs:
             if grep -Eiq 'group-title="New"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
             python scripts/country_verification.py validate IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py invalidate-bad-logos
-            python scripts/migrate_external_logos_fixed.py
             # International metadata/reorganization is maintained under its own
             # country/genre policy. IPTV receives metadata/logo-only repairs.
             # International country/genre reorganization belongs to its dedicated
