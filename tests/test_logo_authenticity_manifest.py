@@ -6,9 +6,23 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from generate_logo_authenticity_manifest import asset_stem, provenance_for
+from repair_playlist_logos import GENERIC_ASSETS
 
 
 class LogoAuthenticityManifestTests(unittest.TestCase):
+
+    def test_approved_generated_fallbacks_are_not_in_generic_blocklist(self):
+        # Their acceptance is separately gated by exact provenance and
+        # explicit unofficial-fallback disclosure in the workflow validator.
+        for filename in (
+            "generated-fallback-btv-news.png",
+            "generated-fallback-channel-1.png",
+            "generated-fallback-channel-16.png",
+            "generated-fallback-channel-52.png",
+        ):
+            with self.subTest(filename=filename):
+                self.assertNotIn(filename, GENERIC_ASSETS)
+        self.assertIn("placeholder-btv-news.png", GENERIC_ASSETS)
 
     def test_converted_digest_suffix_retains_exact_asset_provenance(self):
         registry = {
