@@ -2732,6 +2732,8 @@ https://stmv.gmpro.top/laelegidatv/laelegidatv/playlist.m3u8
 https://59d39900ebfb8.streamlock.net/top107/top107/playlist.m3u8
 #EXTINF:-1 tvg-id="LaX.pr@SD" tvg-language="spa" tvg-country="PR" tvg-content="Music" tvg-logo="logos/la-x-c7b858dc99.png" group-title="International" tvg-name="La-X",La-X
 https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8
+#EXTINF:-1 tvg-id="LingkarTV.id@SD" tvg-name="Lingkar TV" tvg-logo="logos/international/lingkar-tv.png" tvg-country="ID" channel-id="LingkarTV.id@SD" group-title="International" tvg-content="Music",Lingkar TV
+https://lingkartv.my.id/hls/lingkartv.m3u8
 #EXTINF:-1 tvg-id="Live99FM.bq@SD" tvg-language="eng;nld;pap" tvg-country="BQ" tvg-content="Music" tvg-logo="logos/live99fm-aba3b9961f.png" group-title="International" tvg-name="Live99FM",Live99FM
 https://media.streambrothers.com:1936/8014/8014/playlist.m3u8
 #EXTINF:-1 tvg-id="LollywoodHDTV.cd@SD" channel-id="LollywoodHDTV.cd@SD" tvg-language="fra" tvg-country="CD" tvg-content="Movies" tvg-logo="logos/lollywood-hd-tv.png" group-title="International" tvg-name="Lollywood HD TV",Lollywood HD TV
@@ -4668,12 +4670,18 @@ https://dq37unyetkpcz.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a
 https://6019dcac4147f.streamlock.net:9443/la98/Invosa/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.la-kalle-co-music" tvg-language="spa" channel-id="custom.la-kalle-co-music" tvg-country="CO" tvg-content="Music" tvg-logo="logos/verified-la-kalle-1080p-f69c4ca5ea.png" group-title="Review" tvg-name="La Kalle",La Kalle
 http://200.122.223.13:55000/play/la-kalle-tdt/index.m3u8
+#EXTINF:-1 tvg-id="LaTop1029.hn@SD" tvg-name="La Top 102.9 (720p)" tvg-country="HN" channel-id="LaTop1029.hn@SD" group-title="Review" tvg-content="Music",La Top 102.9 (720p)
+https://59d39900ebfb8.streamlock.net/top102/top102/playlist.m3u8
+#EXTINF:-1 tvg-id="LaUrbanTV.es@SD" tvg-name="La Urban TV (1080p) [Not 24/7]" tvg-logo="logos/international/la-urban-tv-1080p-not-24-7.png" tvg-country="ES" channel-id="LaUrbanTV.es@SD" group-title="Review" tvg-content="Music",La Urban TV (1080p) [Not 24/7]
+https://urbanrevolution.es:8443/live/TV/playlist.m3u8
 #EXTINF:-1 tvg-id="Lale.ua@SD" tvg-country="UA" tvg-logo="logos/lale-f09c1511aa.png" group-title="Review" tvg-name="Lale",Lale
 https://ext.cdn.nashnet.tv/228.0.0.50/index.m3u8
 #EXTINF:-1 tvg-id="lawandcrime.us" channel-id="lawandcrime.us" tvg-language="eng" tvg-country="US" tvg-logo="logos/law-and-crime-f698aa08fe.png" group-title="Review" tvg-name="Law & Crime",Law & Crime
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/328196.ts
 #EXTINF:-1 tvg-id="LawCrime.us@SD" tvg-country="US" tvg-logo="logos/law-and-crime-f698aa08fe.png" group-title="Review" tvg-name="Law & Crime",Law & Crime
 https://a-cdn.klowdtv.com/live3/law_720p/playlist.m3u8
+#EXTINF:-1 tvg-id="LaXitosaPanama.pa@SD" tvg-name="LaXitosa Panama (360p) [Not 24/7]" tvg-logo="logos/international/laxitosa-panama-360p-not-24-7.png" tvg-country="PA" channel-id="LaXitosaPanama.pa@SD" group-title="Review" tvg-content="Music",LaXitosa Panama (360p) [Not 24/7]
+https://stmvideo2.livecastv.com/lax953/lax953/playlist.m3u8
 #EXTINF:-1 tvg-id="LegoChannel.us@SD" channel-id="LegoChannel.us@SD" tvg-language="eng" tvg-country="US" tvg-logo="logos/lego-channel-1080p.png" group-title="Review" tvg-name="Lego Channel",Lego Channel
 https://dltiqboxjw21d.cloudfront.net/index.m3u8
 #EXTINF:-1 tvg-id="LifeStyle.us" channel-id="LifeStyle.us" tvg-language="eng" tvg-country="US" tvg-logo="logos/life-plus-style-259a601564.png" group-title="Review" tvg-name="Life+Style",Life+Style
@@ -4704,6 +4712,8 @@ http://stream.mcquack.net/353/index.m3u8
 http://103.250.28.74:8000/play/a02j/index.m3u8
 #EXTINF:-1 tvg-id="M4Sport.hu@SD" tvg-country="HU" tvg-logo="logos/m4-sport-0c44a899ae.png" group-title="Review" tvg-name="M4 Sport",M4 Sport
 http://88.212.7.14/live/uatlmvixrr/index.m3u8
+#EXTINF:-1 tvg-id="M6Music.fr@SD" tvg-name="M6 Music (1080p)" tvg-country="FR" channel-id="M6Music.fr@SD" group-title="Review" tvg-content="Music",M6 Music (1080p)
+https://r.eu.cdn-redge.media/livehls/oeu/mt/live/m6_music_hits/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="229000" tvg-logo="logos/maasranga-tv.png" group-title="Review" tvg-name="Maasranga TV",Maasranga TV
 http://116.204.149.16/maasranga/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="MaasrangaTV.bd" tvg-language="ben" channel-id="MaasrangaTV.bd" tvg-country="BD" tvg-logo="logos/maasranga-tv.png" group-title="Review" tvg-name="Maasranga TV",Maasranga TV
@@ -4718,6 +4728,8 @@ https://srvx1.selftv.video/dmchannel/live/playlist.m3u8
 https://cdn.pishow.tv/ott/live/1476/master.m3u8
 #EXTINF:-1 tvg-id="custom.bdix.madinalive" channel-id="custom.bdix.madinalive" tvg-language="ara" tvg-country="SA" tvg-logo="logos/madina-live-f1fa36621a.png" group-title="Review" tvg-name="Madina Live",Madina Live
 https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8
+#EXTINF:-1 tvg-id="MagentaMusik360.de@SD" tvg-name="MagentaMusik 360 (1080p)" tvg-logo="logos/international/magentamusik-360-1080p.png" tvg-country="DE" channel-id="MagentaMusik360.de@SD" group-title="Review" tvg-content="Music",MagentaMusik 360 (1080p)
+https://streaming.magentamusik.de/csm/573870/magentamusik1/index.m3u8
 #EXTINF:-1 tvg-id="MaincastCybersport.ua@SD" tvg-country="UA" tvg-logo="logos/maincast-cybersport-0b6e1be6a1.png" group-title="Review" tvg-name="Maincast Cybersport",Maincast Cybersport
 http://stream.mcquack.net/487/index.m3u8
 #EXTINF:-1 tvg-id="MaincastSport.ua@SD" tvg-country="UA" tvg-logo="logos/maincast-sport-0b6e1be6a1.png" group-title="Review" tvg-name="Maincast Sport",Maincast Sport
@@ -4728,6 +4740,8 @@ https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=ui
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/makkah.stream/index.m3u8
 #EXTINF:-1 tvg-id="MakkahTV.sa" channel-id="MakkahTV.sa" tvg-language="ara" tvg-country="SA" tvg-logo="logos/makkah-tv.png" group-title="Review" tvg-name="Makkah TV",Makkah TV
 https://media2.streambrothers.com:1936/8122/8122/chunklist_w1247854077.m3u8
+#EXTINF:-1 tvg-id="MarinaTV.kw@SD" tvg-name="Marina TV (1080p)" tvg-logo="logos/marina-tv-1080p.png" tvg-country="KW" channel-id="MarinaTV.kw@SD" group-title="Review" tvg-content="Music",Marina TV (1080p)
+https://ffs.gulfsat.com/Marina-TV-HD/index.m3u8
 #EXTINF:-1 tvg-id="MarqueeSportsNetwork.us" channel-id="MarqueeSportsNetwork.us" tvg-language="eng" tvg-country="US" tvg-logo="logos/marquee-sports-network.png" group-title="Review" tvg-name="Marquee Sports Network",Marquee Sports Network
 https://tvsen6.aynaott.com/MarqueeSportsNetwork/index.m3u8
 #EXTINF:-1 tvg-id="MasalaTV.pk@SD" channel-id="MasalaTV.pk@SD" tvg-country="PK" tvg-logo="logos/masala-tv.png" group-title="Review" tvg-name="Masala TV",Masala TV
@@ -4764,6 +4778,8 @@ http://93.184.10.248/MBCBollywood/index.m3u8
 https://mumbai-edge.smartplaytv.in/MBCTV/index.m3u8
 #EXTINF:-1 tvg-id="custom.mci-television-co-movie" channel-id="custom.mci-television-co-movie" tvg-language="eng;spa" tvg-country="CO" tvg-logo="logos/mci-television-66d4f17df6.png" group-title="Review" tvg-name="MCI Television",MCI Television
 https://video.ejeserver.com/live/mcitelevision.m3u8
+#EXTINF:-1 tvg-id="MCMPop.fr@SD" tvg-name="MCM Pop" tvg-country="FR" channel-id="MCMPop.fr@SD" group-title="Review" tvg-content="Music",MCM Pop
+http://176.65.153.78:8201/play/a070/index.m3u8
 #EXTINF:-1 tvg-id="MegaExtrenoHD.us@HD" channel-id="MegaExtrenoHD.us@HD" tvg-country="US" tvg-content="Movies" tvg-logo="logos/mega-extreno-8b471bc27e.png" group-title="Review" tvg-name="Mega Extreno",Mega Extreno
 https://stream-cdn-iad3.vaughnsoft.net/play/live_mega_extremo.flv
 #EXTINF:-1 tvg-id="MehranTV.pk@SD" channel-id="MehranTV.pk@SD" tvg-country="PK" tvg-logo="logos/mehran-tv.png" group-title="Review" tvg-name="Mehran TV",Mehran TV

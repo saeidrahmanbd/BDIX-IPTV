@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-18 04:39 UTC
+- Last scan: 2026-11-18 04:48 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12268
 - Existing playlist records: 3265
@@ -116,11 +116,11 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-11-18T04:39:37+00:00
+- Run timestamp: 2026-11-18T04:48:54+00:00
 - Mode: international
 - New entries and discovery queues probed: 57
 - Verified live media responses: 4
-- Verified new primary channels automatically promoted: 2
+- Verified new primary channels automatically promoted: 1
 - Verified alternate streams moved to Backup: 0
 - Inconclusive candidates retained for manual review: 0
 - Definitively dead new candidates removed: 49
@@ -186,19 +186,20 @@
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
-- Promoted La Top 102.9 (720p) from New Channels to Review — inconclusive stream check.
+- Promoted 7 RadioVisione (720p) from New Channels to Review — no authentic local repository logo.
+- Promoted La Top 102.9 (720p) from New Channels to Review — no authentic local repository logo.
 - Promoted La Urban TV (1080p) [Not 24/7] from New Channels to Review — inconclusive stream check.
 - Promoted LaXitosa Panama (360p) [Not 24/7] from New Channels to Review — inconclusive stream check.
 - Promoted Lingkar TV from New Channels to International — verified primary candidate.
-- Promoted M6 Music (1080p) from New Channels to Review — inconclusive stream check.
+- Promoted M6 Music (1080p) from New Channels to Review — no authentic local repository logo.
 - Promoted MagentaMusik 360 (1080p) from New Channels to Review — inconclusive stream check.
 - Promoted Marina TV (1080p) from New Channels to Review — inconclusive stream check.
-- Promoted MCM Pop from New Channels to France — verified primary candidate.
+- Promoted MCM Pop from New Channels to Review — no authentic local repository logo.
 
 ## Final validation
 
-- Run timestamp: 2026-11-18T04:39:38+00:00
-- Validation status: FAIL
+- Run timestamp: 2026-11-18T04:48:55+00:00
+- Validation status: PASS
 - M3U entries parsed: 3273
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
@@ -207,6 +208,3 @@
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
-
-### Blockers
-- missing local logo for discovery candidate MCM Pop
