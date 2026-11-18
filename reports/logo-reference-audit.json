@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5832,
-  "all_explicitly_referenced_logo_files": 2656,
-  "runtime_referenced_logo_files": 2654,
-  "playlist_referenced_logo_files": 2374,
-  "apparently_unreferenced_by_any_text_file": 3176,
-  "apparently_unreferenced_by_runtime_sources": 3178,
+  "logo_image_files": 5886,
+  "all_explicitly_referenced_logo_files": 2713,
+  "runtime_referenced_logo_files": 2709,
+  "playlist_referenced_logo_files": 2429,
+  "apparently_unreferenced_by_any_text_file": 3173,
+  "apparently_unreferenced_by_runtime_sources": 3177,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -37,6 +37,7 @@
     "logos/a2i-music-b2b7a2a426.jpg",
     "logos/ae-radio-tv-21a10aa91b.jpg",
     "logos/albania.png",
+    "logos/also-gone.png",
     "logos/animal-planet-czech-republic-9d9539fb66.svg",
     "logos/animal-planet-hungary-e8be83885f.svg",
     "logos/as3-sport-tv-9b8dc8f78a.jpg",
@@ -96,6 +97,12 @@
     "logos/canal-plus-sport-7-sk-177b54a908.svg",
     "logos/canal-plus-sport-8-sk-1d0abb2873.svg",
     "logos/canal-plus-sport-sk-0d5ef8dd23.svg",
+    "logos/chan-converted-0123456789.png",
+    "logos/chan-generic-logo.png",
+    "logos/chan.jpg",
+    "logos/chan.png",
+    "logos/chan.svg",
+    "logos/chan2.png",
     "logos/channel.png",
     "logos/channel/logos/zingabad.png",
     "logos/cine-plus-classic-bc41b278d8.jpg",
@@ -106,6 +113,7 @@
     "logos/cosmos-tv-7521381461.webp",
     "logos/diema-3c3f67264b.svg",
     "logos/diema.png",
+    "logos/different-image.png",
     "logos/discovery-channel-czech-republic-1c5cac427a.svg",
     "logos/disney-channel-1b160711f2.svg",
     "logos/disney-channel-czech-republic-9b9957f643.svg",
@@ -123,6 +131,7 @@
     "logos/doraemon-cf58b50f0c.svg",
     "logos/dumdum-8be5079872.svg",
     "logos/external.png",
+    "logos/fake.png",
     "logos/famatv-9f148af63b.jpg",
     "logos/fifa-plus-french-68fe723cf8.svg",
     "logos/fifa-plus-german-68fe723cf8.svg",
@@ -136,22 +145,80 @@
     "logos/fr/persiana-setmix-badge.webp",
     "logos/ftv-uzbekistan-eaff76a41d.jpg",
     "logos/generated-fallback-a-sports-hd.svg",
+    "logos/generated-fallback-al-sunnah-al-nabawiyah-33d57407.svg",
+    "logos/generated-fallback-allo-cine-5efbbc3a.svg",
     "logos/generated-fallback-alone.svg",
+    "logos/generated-fallback-asia-flix-tv-0725f354.svg",
+    "logos/generated-fallback-asian-sony-max-2-fa34314f.svg",
+    "logos/generated-fallback-atv-usa-a1c995c8.svg",
+    "logos/generated-fallback-autentic-adventure-earth-3ee4a1aa.svg",
+    "logos/generated-fallback-banglar-kontho-24-c15b22e2.svg",
+    "logos/generated-fallback-bbc-world-4fe3c6c8.svg",
+    "logos/generated-fallback-bigscreen-tv-ae57495a.svg",
+    "logos/generated-fallback-cedros-tv-5a1c8976.svg",
+    "logos/generated-fallback-chan-1.png",
+    "logos/generated-fallback-cine-box-c91cbe2a.svg",
+    "logos/generated-fallback-dancetv-algorhythm-e7026f86.svg",
     "logos/generated-fallback-dd-mizoram.svg",
+    "logos/generated-fallback-documentary-plus-usa-c908f568.svg",
+    "logos/generated-fallback-dtv-usa-14ed8fdf.svg",
+    "logos/generated-fallback-epix-f17e4bb1.svg",
     "logos/generated-fallback-euro-sports-hd.svg",
+    "logos/generated-fallback-filmbox-plus-emotion-adria-ea2be793.svg",
+    "logos/generated-fallback-filmbox-plus-hits-adria-8758b99f.svg",
+    "logos/generated-fallback-filmbox-plus-love-and-crime-adria-7faabaa5.svg",
+    "logos/generated-fallback-goldmines-movies-2-72e8603d.svg",
+    "logos/generated-fallback-history-and-warfare-now-fed6f44b.svg",
+    "logos/generated-fallback-history-tv18-hindi-cd03d31b.svg",
     "logos/generated-fallback-hooray-kids.svg",
     "logos/generated-fallback-horse-and-country.svg",
     "logos/generated-fallback-islam-channel-bangla.svg",
+    "logos/generated-fallback-jtv-bangla-4b30bfd9.svg",
+    "logos/generated-fallback-konul-music-tv-025b39c1.svg",
+    "logos/generated-fallback-max-tv-4d4c0851.svg",
+    "logos/generated-fallback-mh-1-prime-4ce6fcd0.svg",
     "logos/generated-fallback-mtrspt.svg",
+    "logos/generated-fallback-mtv-classic-1c9dbe7a.svg",
+    "logos/generated-fallback-mytime-movie-network-us-963b964b.svg",
+    "logos/generated-fallback-news-21-bangla-a8880338.svg",
     "logos/generated-fallback-ntv-malayalam.svg",
+    "logos/generated-fallback-persiana-folk-8a3c2b52.svg",
+    "logos/generated-fallback-persiana-vibe-7490d902.svg",
     "logos/generated-fallback-pix-11.svg",
+    "logos/generated-fallback-radio-temas-de-novelas-877f17b1.svg",
+    "logos/generated-fallback-rang-rangoli-876a5ca8.svg",
+    "logos/generated-fallback-rengoni-tv-cab438ee.svg",
+    "logos/generated-fallback-robot-wars-by-mech-plus-8df56b79.svg",
+    "logos/generated-fallback-sine-plus-edeb878d.svg",
+    "logos/generated-fallback-sonic-the-hedgehog-4292b202.svg",
+    "logos/generated-fallback-sport5-2b040211.svg",
     "logos/generated-fallback-t-sports-hd.svg",
+    "logos/generated-fallback-tarab-818e4a29.svg",
+    "logos/generated-fallback-tbn-24-usa-faca4a5d.svg",
+    "logos/generated-fallback-tennis-plus-b2040804.svg",
+    "logos/generated-fallback-the-movie-club-plus-2-c82c401f.svg",
+    "logos/generated-fallback-thikana-tv-04b6a60d.svg",
     "logos/generated-fallback-trace-sport.svg",
+    "logos/generated-fallback-trace-sports-stars-028a07b8.svg",
+    "logos/generated-fallback-tv-21-international-e3754464.svg",
     "logos/generated-fallback-tv9-bangla.svg",
     "logos/generated-fallback-tvc-arabic-kids.svg",
+    "logos/generated-fallback-tvs-music-network-13ed8e8b.svg",
+    "logos/generated-fallback-ufc-5b8d0e90.svg",
+    "logos/generated-fallback-v2-beat-4536e076.svg",
+    "logos/generated-fallback-vevo-70s-and-80s-84f70761.svg",
+    "logos/generated-fallback-vevo-90s-and-00s-1826f5b4.svg",
+    "logos/generated-fallback-vevo-hip-hop-and-r-and-b-067f2101.svg",
+    "logos/generated-fallback-vision-24-e6d5b090.svg",
+    "logos/generated-fallback-watch-mojo-6a01c723.svg",
+    "logos/generated-fallback-willow-sports-2-9db65ac9.svg",
+    "logos/generated-fallback-x.svg",
+    "logos/generated-fallback-xite-summer-05edc806.svg",
     "logos/generated-fallback.png",
+    "logos/generic-news.png",
     "logos/ghost.png",
     "logos/gnt-ae93ca21ea.jpg",
+    "logos/gone.png",
     "logos/green-tv-fa848f9d71.jpg",
     "logos/hallmark-mystery-bdb1e4a1f0.svg",
     "logos/hbo-3-13a578a1a8.webp",
@@ -231,7 +298,9 @@
     "logos/nicktoons-poland-e9e40cdf81.svg",
     "logos/nicktoons-united-states-2da2648c2b.svg",
     "logos/nost-5d9e212ea1.jpg",
+    "logos/nvisionbd-chan.png",
     "logos/ocko-gold-14752c70a2.jpg",
+    "logos/old-image.png",
     "logos/old.png",
     "logos/on-dark/flohockey-white.png",
     "logos/on-kids-1d65f54b99.webp",
@@ -272,6 +341,7 @@
     "logos/radio-romania-targu-mures-5f7ccf5d69.jpg",
     "logos/radiola-tv-85f3f1c401.jpg",
     "logos/rajdhani-alt.png",
+    "logos/real-channel.png",
     "logos/registry-only.png",
     "logos/report.png",
     "logos/ru-tv-1e1acce47e.svg",
@@ -297,6 +367,7 @@
     "logos/ten-tv-prime.svg",
     "logos/test-movie.png",
     "logos/test.png",
+    "logos/the-movie-club-plus-2-abc123.png",
     "logos/the-retro-channel-1a8ccc02f4.jpg",
     "logos/tiguerito-tv-464395cdf0.jpg",
     "logos/tiktok-radio-brasil-673c420aa2.svg",
@@ -306,6 +377,7 @@
     "logos/tv-cidade-0e0b8f944f.jpg",
     "logos/tvs-bowling-network-cf222fc786.jpg",
     "logos/two.png",
+    "logos/unknown-chan.png",
     "logos/unrelated.png",
     "logos/unused/channel-alt.png",
     "logos/unused/channel.png",
@@ -405,7 +477,8 @@
       "scripts/repair_playlist_logos.py"
     ],
     "logos/a.png": [
-      "tests/test_migrate_logo_unset.py"
+      "tests/test_migrate_logo_unset.py",
+      "tests/test_validate_logo_references.py"
     ],
     "logos/a/74/animal-planet.png": [
       "scripts/repair_approved_logos_20261107.py"
@@ -418,6 +491,9 @@
     ],
     "logos/albania.png": [
       "tests/test_international_stream_health.py"
+    ],
+    "logos/also-gone.png": [
+      "tests/test_validate_logo_references.py"
     ],
     "logos/animal-planet-czech-republic-9d9539fb66.svg": [
       "reports/logo-source-registry.json"
@@ -599,6 +675,26 @@
     "logos/canal-plus-sport-sk-0d5ef8dd23.svg": [
       "reports/logo-source-registry.json"
     ],
+    "logos/chan-converted-0123456789.png": [
+      "tests/test_logo_provenance.py"
+    ],
+    "logos/chan-generic-logo.png": [
+      "tests/test_validate_logo_references.py"
+    ],
+    "logos/chan.jpg": [
+      "tests/test_logo_provenance.py"
+    ],
+    "logos/chan.png": [
+      "tests/test_logo_provenance.py",
+      "tests/test_validate_logo_references.py"
+    ],
+    "logos/chan.svg": [
+      "tests/test_logo_provenance.py",
+      "tests/test_validate_logo_references.py"
+    ],
+    "logos/chan2.png": [
+      "tests/test_validate_logo_references.py"
+    ],
     "logos/channel.png": [
       "tests/test_duplicate_logo_cleanup_plan.py",
       "tests/test_logo_repair_source_hints.py",
@@ -631,6 +727,9 @@
     ],
     "logos/diema.png": [
       "tests/test_logo_repair_source_hints.py"
+    ],
+    "logos/different-image.png": [
+      "tests/test_logo_provenance.py"
     ],
     "logos/discovery-channel-czech-republic-1c5cac427a.svg": [
       "reports/logo-source-registry.json"
@@ -683,6 +782,9 @@
     "logos/external.png": [
       "tests/test_automation_v2_logo_audit.py"
     ],
+    "logos/fake.png": [
+      "tests/test_validate_logo_references.py"
+    ],
     "logos/famatv-9f148af63b.jpg": [
       "reports/logo-source-registry.json"
     ],
@@ -723,13 +825,79 @@
     "logos/generated-fallback-a-sports-hd.svg": [
       "reports/logo-source-registry.json"
     ],
+    "logos/generated-fallback-al-sunnah-al-nabawiyah-33d57407.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-allo-cine-5efbbc3a.svg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/generated-fallback-alone.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-asia-flix-tv-0725f354.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-asian-sony-max-2-fa34314f.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-atv-usa-a1c995c8.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-autentic-adventure-earth-3ee4a1aa.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-banglar-kontho-24-c15b22e2.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-bbc-world-4fe3c6c8.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-bigscreen-tv-ae57495a.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-cedros-tv-5a1c8976.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-chan-1.png": [
+      "tests/test_logo_provenance.py"
+    ],
+    "logos/generated-fallback-cine-box-c91cbe2a.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-dancetv-algorhythm-e7026f86.svg": [
       "reports/logo-source-registry.json"
     ],
     "logos/generated-fallback-dd-mizoram.svg": [
       "reports/logo-source-registry.json"
     ],
+    "logos/generated-fallback-documentary-plus-usa-c908f568.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-dtv-usa-14ed8fdf.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-epix-f17e4bb1.svg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/generated-fallback-euro-sports-hd.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-filmbox-plus-emotion-adria-ea2be793.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-filmbox-plus-hits-adria-8758b99f.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-filmbox-plus-love-and-crime-adria-7faabaa5.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-goldmines-movies-2-72e8603d.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-history-and-warfare-now-fed6f44b.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-history-tv18-hindi-cd03d31b.svg": [
       "reports/logo-source-registry.json"
     ],
     "logos/generated-fallback-hooray-kids.svg": [
@@ -741,19 +909,89 @@
     "logos/generated-fallback-islam-channel-bangla.svg": [
       "reports/logo-source-registry.json"
     ],
+    "logos/generated-fallback-jtv-bangla-4b30bfd9.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-konul-music-tv-025b39c1.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-max-tv-4d4c0851.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-mh-1-prime-4ce6fcd0.svg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/generated-fallback-mtrspt.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-mtv-classic-1c9dbe7a.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-mytime-movie-network-us-963b964b.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-news-21-bangla-a8880338.svg": [
       "reports/logo-source-registry.json"
     ],
     "logos/generated-fallback-ntv-malayalam.svg": [
       "reports/logo-source-registry.json"
     ],
+    "logos/generated-fallback-persiana-folk-8a3c2b52.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-persiana-vibe-7490d902.svg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/generated-fallback-pix-11.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-radio-temas-de-novelas-877f17b1.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-rang-rangoli-876a5ca8.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-rengoni-tv-cab438ee.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-robot-wars-by-mech-plus-8df56b79.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-sine-plus-edeb878d.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-sonic-the-hedgehog-4292b202.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-sport5-2b040211.svg": [
       "reports/logo-source-registry.json"
     ],
     "logos/generated-fallback-t-sports-hd.svg": [
       "reports/logo-source-registry.json"
     ],
+    "logos/generated-fallback-tarab-818e4a29.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-tbn-24-usa-faca4a5d.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-tennis-plus-b2040804.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-the-movie-club-plus-2-c82c401f.svg": [
+      "reports/logo-source-registry.json",
+      "tests/test_logo_provenance.py"
+    ],
+    "logos/generated-fallback-thikana-tv-04b6a60d.svg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/generated-fallback-trace-sport.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-trace-sports-stars-028a07b8.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-tv-21-international-e3754464.svg": [
       "reports/logo-source-registry.json"
     ],
     "logos/generated-fallback-tv9-bangla.svg": [
@@ -762,14 +1000,53 @@
     "logos/generated-fallback-tvc-arabic-kids.svg": [
       "reports/logo-source-registry.json"
     ],
+    "logos/generated-fallback-tvs-music-network-13ed8e8b.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-ufc-5b8d0e90.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-v2-beat-4536e076.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-vevo-70s-and-80s-84f70761.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-vevo-90s-and-00s-1826f5b4.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-vevo-hip-hop-and-r-and-b-067f2101.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-vision-24-e6d5b090.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-watch-mojo-6a01c723.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-willow-sports-2-9db65ac9.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-x.svg": [
+      "tests/test_logo_provenance.py"
+    ],
+    "logos/generated-fallback-xite-summer-05edc806.svg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/generated-fallback.png": [
       "tests/test_logo_provenance_review.py"
+    ],
+    "logos/generic-news.png": [
+      "tests/test_validate_logo_references.py"
     ],
     "logos/ghost.png": [
       "tests/test_logo_reference_audit.py"
     ],
     "logos/gnt-ae93ca21ea.jpg": [
       "reports/logo-source-registry.json"
+    ],
+    "logos/gone.png": [
+      "tests/test_validate_logo_references.py"
     ],
     "logos/green-tv-fa848f9d71.jpg": [
       "reports/logo-source-registry.json"
@@ -1018,8 +1295,14 @@
     "logos/nost-5d9e212ea1.jpg": [
       "reports/logo-source-registry.json"
     ],
+    "logos/nvisionbd-chan.png": [
+      "tests/test_validate_logo_references.py"
+    ],
     "logos/ocko-gold-14752c70a2.jpg": [
       "reports/logo-source-registry.json"
+    ],
+    "logos/old-image.png": [
+      "tests/test_logo_provenance.py"
     ],
     "logos/old.png": [
       "tests/test_automation_v2_iptv_metadata_repair.py"
@@ -1142,6 +1425,9 @@
     "logos/rajdhani-alt.png": [
       "scripts/migrate_external_logos_fixed.py"
     ],
+    "logos/real-channel.png": [
+      "tests/test_validate_logo_references.py"
+    ],
     "logos/registry-only.png": [
       "tests/test_logo_reference_audit.py"
     ],
@@ -1221,6 +1507,9 @@
     "logos/test.png": [
       "tests/test_automation_v2_contract.py"
     ],
+    "logos/the-movie-club-plus-2-abc123.png": [
+      "tests/test_logo_provenance.py"
+    ],
     "logos/the-retro-channel-1a8ccc02f4.jpg": [
       "reports/logo-source-registry.json"
     ],
@@ -1247,6 +1536,9 @@
     ],
     "logos/two.png": [
       "tests/test_maintenance_extinf_canonicalization.py"
+    ],
+    "logos/unknown-chan.png": [
+      "tests/test_validate_logo_references.py"
     ],
     "logos/unrelated.png": [
       "tests/test_automation_v2_rollback_policy.py"
@@ -1419,19 +1711,73 @@
     "logos/fr/persiana-setmix-badge.webp",
     "logos/ftv-uzbekistan-eaff76a41d.jpg",
     "logos/generated-fallback-a-sports-hd.svg",
+    "logos/generated-fallback-al-sunnah-al-nabawiyah-33d57407.svg",
+    "logos/generated-fallback-allo-cine-5efbbc3a.svg",
     "logos/generated-fallback-alone.svg",
+    "logos/generated-fallback-asia-flix-tv-0725f354.svg",
+    "logos/generated-fallback-asian-sony-max-2-fa34314f.svg",
+    "logos/generated-fallback-atv-usa-a1c995c8.svg",
+    "logos/generated-fallback-autentic-adventure-earth-3ee4a1aa.svg",
+    "logos/generated-fallback-banglar-kontho-24-c15b22e2.svg",
+    "logos/generated-fallback-bbc-world-4fe3c6c8.svg",
+    "logos/generated-fallback-bigscreen-tv-ae57495a.svg",
+    "logos/generated-fallback-cedros-tv-5a1c8976.svg",
+    "logos/generated-fallback-cine-box-c91cbe2a.svg",
+    "logos/generated-fallback-dancetv-algorhythm-e7026f86.svg",
     "logos/generated-fallback-dd-mizoram.svg",
+    "logos/generated-fallback-documentary-plus-usa-c908f568.svg",
+    "logos/generated-fallback-dtv-usa-14ed8fdf.svg",
+    "logos/generated-fallback-epix-f17e4bb1.svg",
     "logos/generated-fallback-euro-sports-hd.svg",
+    "logos/generated-fallback-filmbox-plus-emotion-adria-ea2be793.svg",
+    "logos/generated-fallback-filmbox-plus-hits-adria-8758b99f.svg",
+    "logos/generated-fallback-filmbox-plus-love-and-crime-adria-7faabaa5.svg",
+    "logos/generated-fallback-goldmines-movies-2-72e8603d.svg",
+    "logos/generated-fallback-history-and-warfare-now-fed6f44b.svg",
+    "logos/generated-fallback-history-tv18-hindi-cd03d31b.svg",
     "logos/generated-fallback-hooray-kids.svg",
     "logos/generated-fallback-horse-and-country.svg",
     "logos/generated-fallback-islam-channel-bangla.svg",
+    "logos/generated-fallback-jtv-bangla-4b30bfd9.svg",
+    "logos/generated-fallback-konul-music-tv-025b39c1.svg",
+    "logos/generated-fallback-max-tv-4d4c0851.svg",
+    "logos/generated-fallback-mh-1-prime-4ce6fcd0.svg",
     "logos/generated-fallback-mtrspt.svg",
+    "logos/generated-fallback-mtv-classic-1c9dbe7a.svg",
+    "logos/generated-fallback-mytime-movie-network-us-963b964b.svg",
+    "logos/generated-fallback-news-21-bangla-a8880338.svg",
     "logos/generated-fallback-ntv-malayalam.svg",
+    "logos/generated-fallback-persiana-folk-8a3c2b52.svg",
+    "logos/generated-fallback-persiana-vibe-7490d902.svg",
     "logos/generated-fallback-pix-11.svg",
+    "logos/generated-fallback-radio-temas-de-novelas-877f17b1.svg",
+    "logos/generated-fallback-rang-rangoli-876a5ca8.svg",
+    "logos/generated-fallback-rengoni-tv-cab438ee.svg",
+    "logos/generated-fallback-robot-wars-by-mech-plus-8df56b79.svg",
+    "logos/generated-fallback-sine-plus-edeb878d.svg",
+    "logos/generated-fallback-sonic-the-hedgehog-4292b202.svg",
+    "logos/generated-fallback-sport5-2b040211.svg",
     "logos/generated-fallback-t-sports-hd.svg",
+    "logos/generated-fallback-tarab-818e4a29.svg",
+    "logos/generated-fallback-tbn-24-usa-faca4a5d.svg",
+    "logos/generated-fallback-tennis-plus-b2040804.svg",
+    "logos/generated-fallback-the-movie-club-plus-2-c82c401f.svg",
+    "logos/generated-fallback-thikana-tv-04b6a60d.svg",
     "logos/generated-fallback-trace-sport.svg",
+    "logos/generated-fallback-trace-sports-stars-028a07b8.svg",
+    "logos/generated-fallback-tv-21-international-e3754464.svg",
     "logos/generated-fallback-tv9-bangla.svg",
     "logos/generated-fallback-tvc-arabic-kids.svg",
+    "logos/generated-fallback-tvs-music-network-13ed8e8b.svg",
+    "logos/generated-fallback-ufc-5b8d0e90.svg",
+    "logos/generated-fallback-v2-beat-4536e076.svg",
+    "logos/generated-fallback-vevo-70s-and-80s-84f70761.svg",
+    "logos/generated-fallback-vevo-90s-and-00s-1826f5b4.svg",
+    "logos/generated-fallback-vevo-hip-hop-and-r-and-b-067f2101.svg",
+    "logos/generated-fallback-vision-24-e6d5b090.svg",
+    "logos/generated-fallback-watch-mojo-6a01c723.svg",
+    "logos/generated-fallback-willow-sports-2-9db65ac9.svg",
+    "logos/generated-fallback-xite-summer-05edc806.svg",
     "logos/gnt-ae93ca21ea.jpg",
     "logos/green-tv-fa848f9d71.jpg",
     "logos/hallmark-mystery-bdb1e4a1f0.svg",
@@ -11189,6 +11535,11 @@
     "logos/colors-gujarati-9c6989199e.png": [
       "reports/logo-source-registry.json"
     ],
+    "logos/colors-gujarati-9c6989199ef5b1e2c96d.png": [
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/colors-infinity.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -13055,6 +13406,168 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/generated-fallback-al-sunnah-al-nabawiyah-33d57407.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-allo-cine-5efbbc3a.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-asia-flix-tv-0725f354.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-asian-sony-max-2-fa34314f.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-atv-usa-a1c995c8.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-autentic-adventure-earth-3ee4a1aa.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-banglar-kontho-24-c15b22e2.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-bbc-world-4fe3c6c8.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-bigscreen-tv-ae57495a.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-cedros-tv-5a1c8976.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-cine-box-c91cbe2a.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-dancetv-algorhythm-e7026f86.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-documentary-plus-usa-c908f568.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-dtv-usa-14ed8fdf.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-epix-f17e4bb1.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-filmbox-plus-emotion-adria-ea2be793.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-filmbox-plus-hits-adria-8758b99f.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-filmbox-plus-love-and-crime-adria-7faabaa5.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-goldmines-movies-2-72e8603d.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-history-and-warfare-now-fed6f44b.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-history-tv18-hindi-cd03d31b.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-jtv-bangla-4b30bfd9.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-konul-music-tv-025b39c1.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-max-tv-4d4c0851.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-mh-1-prime-4ce6fcd0.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-mtv-classic-1c9dbe7a.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-mytime-movie-network-us-963b964b.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-news-21-bangla-a8880338.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-persiana-folk-8a3c2b52.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-persiana-vibe-7490d902.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-radio-temas-de-novelas-877f17b1.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-rang-rangoli-876a5ca8.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-rengoni-tv-cab438ee.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-robot-wars-by-mech-plus-8df56b79.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-sine-plus-edeb878d.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-sonic-the-hedgehog-4292b202.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-sport5-2b040211.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-tarab-818e4a29.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-tbn-24-usa-faca4a5d.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-tennis-plus-b2040804.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-the-movie-club-plus-2-c82c401f.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-thikana-tv-04b6a60d.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-trace-sports-stars-028a07b8.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-tv-21-international-e3754464.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-tvs-music-network-13ed8e8b.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-ufc-5b8d0e90.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-v2-beat-4536e076.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-vevo-70s-and-80s-84f70761.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-vevo-90s-and-00s-1826f5b4.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-vevo-hip-hop-and-r-and-b-067f2101.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-vision-24-e6d5b090.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-watch-mojo-6a01c723.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-willow-sports-2-9db65ac9.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-xite-summer-05edc806.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/genial-tv-a8f68f2a3f.png": [
       "International-Playlist.m3u",
@@ -23000,7 +23513,8 @@
     ],
     "logos/classic-movies-27994c39.png": [
       "reports/logo-source-registry.json",
-      "tests/test_logo_authenticity_manifest.py"
+      "tests/test_logo_authenticity_manifest.py",
+      "tests/test_logo_provenance.py"
     ],
     "logos/classic-movies-channel-1d5f82d98a.png": [
       "IPTV-Playlist.m3u",
@@ -23109,6 +23623,11 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/colors-gujarati-9c6989199e.png": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/colors-gujarati-9c6989199ef5b1e2c96d.png": [
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/colors-infinity.png": [
@@ -24979,8 +25498,172 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/generated-fallback-al-sunnah-al-nabawiyah-33d57407.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-allo-cine-5efbbc3a.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-asia-flix-tv-0725f354.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-asian-sony-max-2-fa34314f.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-atv-usa-a1c995c8.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-autentic-adventure-earth-3ee4a1aa.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-banglar-kontho-24-c15b22e2.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-bbc-world-4fe3c6c8.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-bigscreen-tv-ae57495a.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-cedros-tv-5a1c8976.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-cine-box-c91cbe2a.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-dancetv-algorhythm-e7026f86.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-documentary-plus-usa-c908f568.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-dtv-usa-14ed8fdf.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-epix-f17e4bb1.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-filmbox-plus-emotion-adria-ea2be793.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-filmbox-plus-hits-adria-8758b99f.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-filmbox-plus-love-and-crime-adria-7faabaa5.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-goldmines-movies-2-72e8603d.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-history-and-warfare-now-fed6f44b.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-history-tv18-hindi-cd03d31b.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/generated-fallback-hstv.png": [
       "tests/test_logo_asset_naming.py"
+    ],
+    "logos/generated-fallback-jtv-bangla-4b30bfd9.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-konul-music-tv-025b39c1.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-max-tv-4d4c0851.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-mh-1-prime-4ce6fcd0.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-mtv-classic-1c9dbe7a.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-mytime-movie-network-us-963b964b.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-news-21-bangla-a8880338.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-persiana-folk-8a3c2b52.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-persiana-vibe-7490d902.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-radio-temas-de-novelas-877f17b1.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-rang-rangoli-876a5ca8.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-rengoni-tv-cab438ee.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-robot-wars-by-mech-plus-8df56b79.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-sine-plus-edeb878d.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-sonic-the-hedgehog-4292b202.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-sport5-2b040211.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-tarab-818e4a29.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-tbn-24-usa-faca4a5d.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-tennis-plus-b2040804.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-the-movie-club-plus-2-c82c401f.png": [
+      "IPTV-Playlist.m3u",
+      "tests/test_logo_provenance.py",
+      "tests/test_validate_logo_references.py"
+    ],
+    "logos/generated-fallback-thikana-tv-04b6a60d.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-trace-sports-stars-028a07b8.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-tv-21-international-e3754464.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-tvs-music-network-13ed8e8b.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/generated-fallback-ufc-5b8d0e90.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-v2-beat-4536e076.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-vevo-70s-and-80s-84f70761.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-vevo-90s-and-00s-1826f5b4.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-vevo-hip-hop-and-r-and-b-067f2101.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-vision-24-e6d5b090.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-watch-mojo-6a01c723.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-willow-sports-2-9db65ac9.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/generated-fallback-xite-summer-05edc806.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/genial-tv-a8f68f2a3f.png": [
       "International-Playlist.m3u",
@@ -28275,6 +28958,9 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/placeholder-btv-news.png": [
+      "tests/test_validate_logo_references.py"
     ],
     "logos/planet-100-9-fm-c3ca2bc02d.png": [
       "reports/logo-source-registry.json"
@@ -32703,6 +33389,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/zee-tv.png": [
+      "tests/test_validate_logo_references.py"
+    ],
     "logos/zenlife-by-stingray-7d01288f39.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -32982,7 +33671,6 @@
     "logos/generated-fallback-adventure-216a45b8.png",
     "logos/generated-fallback-alone-converted-3111652a16.png",
     "logos/generated-fallback-alone.png",
-    "logos/generated-fallback-asia-flix-tv-0725f354.png",
     "logos/generated-fallback-bangla-cinema-ce3797ef.png",
     "logos/generated-fallback-bangla-cinema.png",
     "logos/generated-fallback-bangla-hits-4938e078.png",

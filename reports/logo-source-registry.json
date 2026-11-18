@@ -2,7 +2,7 @@
   "IPTV-Playlist.m3u|custom.tv9.bangla|TV9 Bangla|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tv9-bangla.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.picture.hd|& Picture HD|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-picture-hd.svg": {
     "status": "third_party_verified",
@@ -12,7 +12,7 @@
   "IPTV-Playlist.m3u|custom.dd.mizoram|DD Mizoram|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-dd-mizoram.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.gnt|GNT|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-gnt.svg": {
     "status": "third_party_verified",
@@ -82,7 +82,7 @@
   "IPTV-Playlist.m3u|custom.pix.11|Pix 11|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-pix-11.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.tbs|TBS|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-tbs.svg": {
     "status": "third_party_verified",
@@ -97,7 +97,7 @@
   "IPTV-Playlist.m3u|custom.alone|Alone|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-alone.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.cooking.channel|Cooking Channel|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-cooking-channel.svg": {
     "status": "third_party_verified",
@@ -112,12 +112,12 @@
   "IPTV-Playlist.m3u|custom.a.sports.hd|A Sports HD|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-a-sports-hd.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.euro.sports.hd|Euro Sports HD|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-euro-sports-hd.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.nfl.network|NFL Network|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-nfl-network.svg": {
     "status": "third_party_verified",
@@ -127,7 +127,7 @@
   "IPTV-Playlist.m3u|custom.t.sports.hd|T Sports HD|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-t-sports-hd.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.willow.hd|Willow HD|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-willow.svg": {
     "status": "third_party_verified",
@@ -147,7 +147,7 @@
   "IPTV-Playlist.m3u|custom.euro.sports.hd|Euro Sports|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-euro-sports-hd.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.willow.hd|Willow|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-willow.svg": {
     "status": "third_party_verified",
@@ -157,7 +157,7 @@
   "IPTV-Playlist.m3u|custom.classic.movies|Classic Movies|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/classic-movies-27994c39.png": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Explicitly marked unofficial fallback artwork; no exact official broadcaster logo has been verified. The original local filename is retained for playlist-reference compatibility."
+    "notes": "Explicitly marked unofficial fallback artwork; no exact official broadcaster logo has been verified. The original local filename is retained for playlist-reference compatibility. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|ChhayaChitramTelugu.in@SD|Chhaya Chitram Telugu|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/chhaya-chitram-telugu-7e1e93e465.png": {
     "status": "third_party_verified",
@@ -5747,37 +5747,37 @@
   "IPTV-Playlist.m3u|NTV.in|NTV Malayalam|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-ntv-malayalam.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.hooraykids|Hooray Kids|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-hooray-kids.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.tvcarabickids|TVC Arabic Kids|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tvc-arabic-kids.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.islamchannelbangla|Islam Channel Bangla|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-islam-channel-bangla.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.horseandcountry|Horse & Country|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-horse-and-country.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.mtrspt|MTRSPT|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-mtrspt.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "IPTV-Playlist.m3u|custom.tracesport|Trace Sport|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-trace-sport.svg": {
     "status": "generated_fallback",
     "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified. Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   },
   "International-Playlist.m3u|TV1000RussianKinoGlobal.ru@SD|TV1000 Russian Kino Global|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv1000-russian-kino-global-d157f2dc5b.png": {
     "status": "third_party_verified",
@@ -6648,5 +6648,280 @@
     "status": "third_party_verified",
     "source_url": "https://static.wikia.nocookie.net/logopedia/images/6/68/M6music-95cde0867d.svg/revision/latest?cb=20200412210630",
     "notes": "IPTV-org exact ID: M6Music.fr IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/6/68/M6music-95cde0867d.svg/revision/latest?cb=20200412210630"
+  },
+  "IPTV-Playlist.m3u|ATVUSA.us@SD|ATV USA|logos/generated-fallback-atv-usa-a1c995c8.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|BanglarKontho24.bd@SD|Banglar Kontho 24|logos/generated-fallback-banglar-kontho-24-c15b22e2.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|DTVUSA.us@SD|DTV USA|logos/generated-fallback-dtv-usa-14ed8fdf.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|bd.tbn.24.usa.bd|TBN 24 USA|logos/generated-fallback-tbn-24-usa-faca4a5d.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|ThikanaTV.us|Thikana TV|logos/generated-fallback-thikana-tv-04b6a60d.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|vision.24.bd|Vision 24|logos/generated-fallback-vision-24-e6d5b090.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|JTVBangla.in@SD|JTV Bangla|logos/generated-fallback-jtv-bangla-4b30bfd9.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|goldmines.movies.2.in|Goldmines Movies 2|logos/generated-fallback-goldmines-movies-2-72e8603d.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|TheMovieClub.in@Plus2|The Movie Club +2|logos/generated-fallback-the-movie-club-plus-2-c82c401f.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|RangRangoli.in|Rang Rangoli|logos/generated-fallback-rang-rangoli-876a5ca8.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|ColorsGujarati.in@SD|Colors Gujarati|logos/colors-gujarati-9c6989199ef5b1e2c96d.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/ColorsGujarati_Transparent_be98c08f-59cb-44a4-a08c-db34390b8dae.png",
+    "notes": "IPTV-org exact ID: ColorsGujarati.in IPTV-org public logo dataset Source page: https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/ColorsGujarati_Transparent_be98c08f-59cb-44a4-a08c-db34390b8dae.png"
+  },
+  "IPTV-Playlist.m3u|Mh1Prime.in@SD|MH 1 Prime|logos/generated-fallback-mh-1-prime-4ce6fcd0.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|custom.bbcworld|BBC World|logos/generated-fallback-bbc-world-4fe3c6c8.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|EPIX.us@SD|EPIX|logos/generated-fallback-epix-f17e4bb1.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|MyTimeMovieNetwork.us@SD|MyTime Movie Network (US)|logos/generated-fallback-mytime-movie-network-us-963b964b.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|custom.v2beat|V2 Beat|logos/generated-fallback-v2-beat-4536e076.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|Vevo70s80s.us|Vevo 70s & 80s|logos/generated-fallback-vevo-70s-and-80s-84f70761.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|Vevo90s00s.us|Vevo 90s & 00s|logos/generated-fallback-vevo-90s-and-00s-1826f5b4.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|GBBD2300001C0|Vevo Hip Hop & R&B|logos/generated-fallback-vevo-hip-hop-and-r-and-b-067f2101.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|custom.xitesummer|XITE Summer|logos/generated-fallback-xite-summer-05edc806.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|AutenticAdventureEarth.us|Autentic Adventure Earth|logos/generated-fallback-autentic-adventure-earth-3ee4a1aa.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|Documentary.us|Documentary+ USA|logos/generated-fallback-documentary-plus-usa-c908f568.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|custom.historywarfarenow|History & Warfare Now|logos/generated-fallback-history-and-warfare-now-fed6f44b.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|custom.historytv18hindi|History TV18 Hindi|logos/generated-fallback-history-tv18-hindi-cd03d31b.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|RobotWarsByMech.us|Robot Wars by Mech+|logos/generated-fallback-robot-wars-by-mech-plus-8df56b79.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|WatchMojo.us|Watch Mojo|logos/generated-fallback-watch-mojo-6a01c723.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|custom.sonicthehedgehog|Sonic The Hedgehog|logos/generated-fallback-sonic-the-hedgehog-4292b202.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|custom.alsunnahalnabawiyah|Al Sunnah Al Nabawiyah|logos/generated-fallback-al-sunnah-al-nabawiyah-33d57407.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|custom.sport5|Sport5|logos/generated-fallback-sport5-2b040211.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|tennis.com|Tennis+|logos/generated-fallback-tennis-plus-b2040804.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|mixer.trace.sports.stars.com|Trace Sports Stars|logos/generated-fallback-trace-sports-stars-028a07b8.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|ufc.com|UFC|logos/generated-fallback-ufc-5b8d0e90.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "IPTV-Playlist.m3u|custom.willowsports2|Willow Sports 2|logos/generated-fallback-willow-sports-2-9db65ac9.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.asian-sony-max-2|Asian Sony Max 2|logos/generated-fallback-asian-sony-max-2-fa34314f.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.rengoni-tv|Rengoni TV|logos/generated-fallback-rengoni-tv-cab438ee.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.radio-temas-de-novelas-br-music|Rádio Temas de Novelas|logos/generated-fallback-radio-temas-de-novelas-877f17b1.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|cinebox.bg@SD|cine.box|logos/generated-fallback-cine-box-c91cbe2a.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.cedros-tv-cr-music|Cedros TV|logos/generated-fallback-cedros-tv-5a1c8976.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|DanceTVAlgorhythm.ee@SD|DanceTV Algorhythm|logos/generated-fallback-dancetv-algorhythm-e7026f86.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|PersianaFolk.fr@HD|Persiana Folk|logos/generated-fallback-persiana-folk-8a3c2b52.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|PersianaVibe.fr@HD|Persiana Vibe|logos/generated-fallback-persiana-vibe-7490d902.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.filmbox-emotion-adria-pl-movie|FILMBOX+ Emotion Adria|logos/generated-fallback-filmbox-plus-emotion-adria-ea2be793.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.filmbox-hits-adria-pl-movie|FILMBOX+ Hits Adria|logos/generated-fallback-filmbox-plus-hits-adria-8758b99f.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.filmbox-love-crime-adria-pl-movie|FILMBOX+ Love & Crime Adria|logos/generated-fallback-filmbox-plus-love-and-crime-adria-7faabaa5.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|TV21International.ru@SD|TV 21 International|logos/generated-fallback-tv-21-international-e3754464.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|Tarab.sa@SD|Tarab|logos/generated-fallback-tarab-818e4a29.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|mtv.classic.gb|MTV Classic|logos/generated-fallback-mtv-classic-1c9dbe7a.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|TVSMusicNetwork.us@SD|TVS Music Network|logos/generated-fallback-tvs-music-network-13ed8e8b.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|AlloCine.cm@SD|Allo Cine|logos/generated-fallback-allo-cine-5efbbc3a.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.asia-flix-tv-ph-movie|Asia Flix TV|logos/generated-fallback-asia-flix-tv-0725f354.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.bigscreen-tv-ph-movie|Bigscreen TV|logos/generated-fallback-bigscreen-tv-ae57495a.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.konul-music-tv-az-music|Konul Music TV|logos/generated-fallback-konul-music-tv-025b39c1.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.max-tv-az-music|MAX TV|logos/generated-fallback-max-tv-4d4c0851.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.sine-plus-ph-movie|Sine Plus|logos/generated-fallback-sine-plus-edeb878d.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
+  },
+  "International-Playlist.m3u|custom.bdix.news21-bangla|NEWS 21 BANGLA|logos/generated-fallback-news-21-bangla-a8880338.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo."
   }
 }

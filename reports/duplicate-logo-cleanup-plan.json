@@ -1008,10 +1008,10 @@
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart",
-        "runtime basename/path mention in .github/workflows/playlist-logo-localization.yml",
         "runtime basename/path mention in scripts/convert_referenced_logos_to_png.py",
         "runtime basename/path mention in scripts/logo_asset_naming.py",
-        "runtime basename/path mention in scripts/repair_playlist_logos.py"
+        "runtime basename/path mention in scripts/repair_playlist_logos.py",
+        "runtime basename/path mention in scripts/validate_logo_references.py"
       ]
     },
     {
