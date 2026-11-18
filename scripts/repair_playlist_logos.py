@@ -686,8 +686,16 @@ def download_exact_asset(channel, candidate, canonical_name=False):
     dest = LOGOS / filename
     if dest.exists():
         if hashlib.sha256(dest.read_bytes()).digest() != hashlib.sha256(raw).digest():
-            raise ValueError(f"canonical logo filename already exists with different bytes: {filename}")
-    else:
+            if canonical_name:
+                # A canonical filename may already belong to a different regional
+                # variant or an older source. Preserve that asset and store the
+                # verified new bytes under a content-addressed filename instead
+                # of abandoning an otherwise valid exact channel match.
+                filename = f"{slug}-{digest}{ext}"
+                dest = LOGOS / filename
+            else:
+                raise ValueError(f"content-addressed logo filename collision: {filename}")
+    if not dest.exists():
         dest.write_bytes(raw)
     if not file_is_valid(dest):
         raise ValueError("downloaded image failed local validation")
