@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5286,
-  "all_explicitly_referenced_logo_files": 2724,
-  "runtime_referenced_logo_files": 2723,
-  "playlist_referenced_logo_files": 2470,
+  "logo_image_files": 5287,
+  "all_explicitly_referenced_logo_files": 2725,
+  "runtime_referenced_logo_files": 2724,
+  "playlist_referenced_logo_files": 2475,
   "apparently_unreferenced_by_any_text_file": 2562,
   "apparently_unreferenced_by_runtime_sources": 2563,
   "missing_explicit_logo_targets": [
@@ -684,6 +684,7 @@
       "tests/test_international_protected_guard.py"
     ],
     "logos/fr/persiana-setmix-badge.webp": [
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/ftv-uzbekistan-eaff76a41d.jpg": [
@@ -1475,7 +1476,7 @@
     "logos/zenlife-by-stingray-7d01288f39.svg"
   ],
   "exact_duplicate_groups": 699,
-  "exact_duplicate_files": 1030,
+  "exact_duplicate_files": 1031,
   "exact_duplicates": [
     {
       "sha256": "0086e2b83c7cbc4157e4ac70f938996c35824331c9424e32dbaad4e4ccb80b24",
@@ -4187,7 +4188,8 @@
       "sha256": "8d4d950f369d516d86fd3c8a0158f9d5114c8f904aa7a89ddaf8997c40cd7159",
       "files": [
         "logos/international/punjab-plus-1080p.png",
-        "logos/punjab-plus-1080p.png"
+        "logos/punjab-plus-1080p.png",
+        "logos/verified-punjab-plus-1080p-8d4d950f36.png"
       ]
     },
     {
@@ -7008,6 +7010,7 @@
     ],
     "logos/al-jazeera.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/al-qamar.png": [
@@ -7129,7 +7132,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/amc.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/amedia-hit-1080p.png": [
       "International-Playlist.m3u",
@@ -7251,6 +7255,7 @@
     ],
     "logos/apna-punjab-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/aqlvoy-0f671d98cf.png": [
@@ -7413,7 +7418,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/atv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/audiokiss-1080p.png": [
       "International-Playlist.m3u",
@@ -7543,10 +7550,13 @@
     ],
     "logos/azan-tv-15e8ac79.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/b-prime-bangla.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/b4u-bhojpuri-1080p.png": [
       "International-Playlist.m3u",
@@ -7656,6 +7666,7 @@
     ],
     "logos/bangla-plus.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bangla-tv-9e5f3366c8.png": [
@@ -7670,7 +7681,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/banglar-kontho.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/banglavision.png": [
       "IPTV-Playlist.m3u",
@@ -7711,6 +7724,7 @@
     ],
     "logos/bbc-world-news.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -7723,18 +7737,22 @@
     ],
     "logos/bein-sports-1.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-2.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-3-517e8a74a2.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-xtra-en-espanol.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-xtra.png": [
@@ -7744,6 +7762,7 @@
     ],
     "logos/bein-sports.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bejoy-kids-823648ad26.png": [
@@ -7806,7 +7825,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/biswabangla-24-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/biz-cinema-1080p.png": [
       "International-Playlist.m3u",
@@ -7825,6 +7845,7 @@
     ],
     "logos/blues-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/boing-italy-23dc379cd8.png": [
@@ -7863,6 +7884,7 @@
     ],
     "logos/bollywood-old.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bolt-ukraine-1080p.png": [
@@ -8059,6 +8081,7 @@
     ],
     "logos/cartoon-network-hd-plus-0af84f2a76.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cartoon-network-hd.png": [
@@ -8119,7 +8142,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/cb24-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/cbeebies-poland-3a85199033.png": [
       "International-Playlist.m3u",
@@ -8215,6 +8240,7 @@
     ],
     "logos/channel-16.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -8230,6 +8256,7 @@
     ],
     "logos/channel-9.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/channel-europe-c8db0338dc.png": [
@@ -8238,6 +8265,7 @@
     ],
     "logos/channel-fight.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/channel-i.png": [
@@ -8394,6 +8422,7 @@
     ],
     "logos/circle.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/city-eden-birma-play-c04db7f6ee.png": [
@@ -8621,10 +8650,14 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/comet.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/community-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/company-tv-720p.png": [
       "International-Playlist.m3u",
@@ -8763,6 +8796,7 @@
     ],
     "logos/dazn-ringside.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/dbc-news.png": [
@@ -9006,7 +9040,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/desh-bangla-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/desh-tv.png": [
       "IPTV-Playlist.m3u",
@@ -9121,7 +9157,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/discovery-hd.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/discovery-kids-latin-america-387f33e092.png": [
       "International-Playlist.m3u",
@@ -9156,7 +9194,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/discovery-turbo.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/discovery-world-c9020603b3.png": [
       "International-Playlist.m3u",
@@ -9331,7 +9371,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/dtv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/dua-channel.png": [
       "IPTV-Playlist.m3u",
@@ -9373,6 +9415,7 @@
     ],
     "logos/dw-news.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/e-24-cefaa5c6b8.png": [
@@ -9488,6 +9531,7 @@
     ],
     "logos/eman-tv-482a6c2567.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -9771,6 +9815,7 @@
     ],
     "logos/eurosport.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/express-entertainment.png": [
@@ -9875,10 +9920,12 @@
     ],
     "logos/fight-network.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/fight-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/fightbox-45d2349fcb.png": [
@@ -10045,6 +10092,7 @@
     ],
     "logos/five-stars-sports.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/flohockey-431fbc623f.png": [
@@ -10054,6 +10102,7 @@
     ],
     "logos/flowers-us.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/fm-italia-c3e3f2c337.png": [
@@ -10210,10 +10259,10 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gaunda-punjab-tv-001fec37aa.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/gaunda-punjab-tv-720p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gazi-tv-1080p.png": [
@@ -10267,11 +10316,13 @@
     ],
     "logos/go3-sport-1-67d7ab5ff2.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/goal-tv-237cfbed.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/god-stands-kids-club-tv-urdu.png": [
@@ -10554,6 +10605,7 @@
     ],
     "logos/hooray-kids.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/horoshee-kino-ed2794f149.png": [
@@ -10621,6 +10673,7 @@
     ],
     "logos/hyder-tv-ab08d4568b.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -10862,6 +10915,7 @@
     ],
     "logos/international/arydigital.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/atv-pakistan-1080p.png": [
@@ -10938,9 +10992,6 @@
     ],
     "logos/international/bridge-deluxe-1080p.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/international/bridge-hits-576p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/bridge.png": [
@@ -11408,9 +11459,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/international/galactica-tv.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/international/galaxy-tv-720p-not-24-7.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -11460,11 +11508,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/international/green-tv-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/international/greenentertainment.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/h-t-music-channel-480p.png": [
@@ -12782,7 +12828,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ion-tv-uk.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/iq-channel-df4804e706.png": [
       "International-Playlist.m3u",
@@ -12809,6 +12857,7 @@
     ],
     "logos/islam-channel-bangla.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/islam-tv.png": [
@@ -12846,6 +12895,7 @@
     ],
     "logos/ja-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jago-news-24.png": [
@@ -13053,6 +13103,7 @@
     ],
     "logos/kcl-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/kcm-india-14b4e9cf80.png": [
@@ -13328,6 +13379,7 @@
     ],
     "logos/local-logo-cnn.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/local-logo-cooking-channel.png": [
@@ -13340,6 +13392,7 @@
     ],
     "logos/local-logo-nfl-network.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/lol-tv.png": [
@@ -13529,6 +13582,7 @@
     ],
     "logos/major-league-cricket.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/makao-tv-0781b48dfa.png": [
@@ -13587,7 +13641,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/marquee-sports-network.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/marutam-tv-5f5ac641e3.png": [
       "International-Playlist.m3u",
@@ -13641,21 +13697,25 @@
     ],
     "logos/max-sport-1-6af9f2635c.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/max-sport-2-c89d29749e.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/max-sport-3-2ea6ca4d8c.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/max-sport-4-0ee3a4fef1.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -13805,7 +13865,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/meridiano-tv-68df142d43.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/messatida-tv-a5ca95c15e.png": [
@@ -13947,6 +14006,7 @@
     ],
     "logos/mlb-strike-zone-4930a654ce.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -14101,15 +14161,18 @@
     ],
     "logos/mrtv-sports-d111012fdd.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/msg-sportszone.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mtrspt1.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mtv-germany-bafd7b214a.png": [
@@ -14151,7 +14214,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/music-bangla.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/music-box-classic-b1ce784de6.png": [
       "International-Playlist.m3u",
@@ -14293,7 +14357,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/nan-tv-720p.png": [
-      "reports/logo-authenticity-manifest.json"
+      "IPTV-Playlist.m3u"
     ],
     "logos/nan-tv.png": [
       "IPTV-Playlist.m3u",
@@ -14429,6 +14493,9 @@
     "logos/ndtv-good-times.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/nepal-1-576p.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/nepal-1.png": [
       "IPTV-Playlist.m3u",
@@ -14786,6 +14853,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/oli-tv-india-b4a7917c53.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/oli-tv.png": [
@@ -15042,7 +15110,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/persiana-setmix-b30c1117a9.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/persiana-travel-2d893462f6.png": [
       "International-Playlist.m3u",
@@ -15051,6 +15120,7 @@
     ],
     "logos/pfl.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pga-tour.png": [
@@ -15300,8 +15370,10 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/punjab-plus-1080p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/punjabi-beats.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/punjabi-hits.png": [
       "IPTV-Playlist.m3u",
@@ -15400,6 +15472,7 @@
     ],
     "logos/racing-hagerty.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/radio-bonita-106-7-682841902c.png": [
@@ -15464,6 +15537,7 @@
     ],
     "logos/radio-norba-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/radio-onda-digital-f8be73bce9.png": [
@@ -15651,7 +15725,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/rds-social-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/real-madrid-tv-a93e7915a6.png": [
       "International-Playlist.m3u",
@@ -16105,6 +16180,7 @@
     ],
     "logos/see-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sensacion-costa-e86f9253eb.png": [
@@ -16117,10 +16193,12 @@
     ],
     "logos/setanta-sports-1-eurasia.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/setanta-sports-2-eurasia.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sexto-senso-3212528a94.png": [
@@ -16133,7 +16211,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/sgcn-music.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/shanson-tv-576p-3c01614e19.png": [
       "IPTV-Playlist.m3u",
@@ -16187,6 +16267,7 @@
     ],
     "logos/shikor-tv-canada.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shiksha-tv.png": [
@@ -16226,6 +16307,7 @@
     ],
     "logos/sindh-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/siri-kannada-all-time.png": [
@@ -16312,6 +16394,7 @@
     ],
     "logos/sn-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/snb-cinema.png": [
@@ -16331,6 +16414,7 @@
     ],
     "logos/solo-calcio-italia.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/somoy-tv.png": [
@@ -16391,6 +16475,7 @@
     ],
     "logos/sony-kal.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-max-2.png": [
@@ -16430,12 +16515,16 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/sony-sports-ten-3-hindi.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/sony-wah.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-yay-1080p.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -16522,6 +16611,7 @@
     ],
     "logos/sport-2-ukraine.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -16532,6 +16622,7 @@
     ],
     "logos/sport-4-19a83fa7a4.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -16557,6 +16648,7 @@
     ],
     "logos/sport5-israel.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -16574,10 +16666,13 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sports-fishing-tv-50d0f501d6.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/sports-grid.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sports-television-f26dbc030c.png": [
@@ -16601,6 +16696,7 @@
     ],
     "logos/stadium-164c0cfda7.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -16795,7 +16891,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/stingray-greatest-hits-c8bdd84a88.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/stingray-greatest-holiday-hits-ac6f3e0962.png": [
       "International-Playlist.m3u",
@@ -17080,6 +17177,7 @@
     ],
     "logos/t-sports.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -17121,6 +17219,7 @@
     ],
     "logos/tamilvision-tv-1080p.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tamyr-79b31e50d0.png": [
@@ -17167,7 +17266,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/teen-nick.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/teennick-poland-23737357dc.png": [
       "reports/logo-source-registry.json"
@@ -17234,6 +17335,7 @@
     ],
     "logos/ten-tv-prime.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tennis-channel-2-e549657b98.png": [
@@ -17310,11 +17412,13 @@
     ],
     "logos/the-pet-collective-india-460b4e0e70.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/the-q-india-576p.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/the-retro-channel-1a8ccc02f4.png": [
@@ -17399,7 +17503,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tnt-sports-1.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/today-radio-1870b5f533.png": [
       "reports/logo-source-registry.json"
@@ -17466,7 +17572,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/totalmusic-2000s-88a31d48db.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/totalmusic-80s-1080p-4c7ec66995.png": [
       "International-Playlist.m3u",
@@ -17565,6 +17672,7 @@
     ],
     "logos/trace-sport.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/trace-toca-944ff3d741.png": [
@@ -17625,10 +17733,10 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/travelxp-4k-hdr-2160p-geo-blocked-d2beea8758.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/travelxp-4k-hdr-2160p-geo-blocked.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/travelxp-bangla.png": [
@@ -17679,13 +17787,19 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tsn-1.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tsn-2-ca.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tsn-3-ca.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tsn-the-ocho-cb1eed5fa3.png": [
       "International-Playlist.m3u",
@@ -17761,6 +17875,7 @@
     ],
     "logos/tv-one-uk.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tv-peruanisima-29248f0b01.png": [
@@ -17789,7 +17904,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tvc-arabic-kids.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tvcarib-cinema-00d1d6c83c.png": [
       "International-Playlist.m3u",
@@ -17800,7 +17917,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tvcarib-kids-teens.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tvokids-5a066a4797.png": [
       "International-Playlist.m3u",
@@ -17834,6 +17953,7 @@
     ],
     "logos/tvri-sport.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tvs-bowling-network-cf222fc786.png": [
@@ -17922,6 +18042,7 @@
     ],
     "logos/ufc-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ultimate-tv.png": [
@@ -17965,6 +18086,7 @@
     ],
     "logos/us-willow-sports-hd.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/utv-palakkad.png": [
@@ -18043,6 +18165,9 @@
     "logos/verified-kinopokaz-ad1d4126d2.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/verified-punjab-plus-1080p-8d4d950f36.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/vevo-70s-80s.png": [
       "IPTV-Playlist.m3u",
@@ -18173,6 +18298,7 @@
     ],
     "logos/vision-beats.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vision-india.png": [
@@ -18187,6 +18313,7 @@
     ],
     "logos/vision.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vissa-tv.png": [
@@ -18241,6 +18368,7 @@
     ],
     "logos/vox-kongo-tv-0cfd390c7b.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/vox-music-tv-9c1f881233.png": [
@@ -18272,6 +18400,7 @@
     ],
     "logos/waseb-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/watch-it-scream-720p-b8531f612b.png": [
@@ -18335,6 +18464,7 @@
     ],
     "logos/willow-extra.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/win-plus-futbol-f1e6574f7e.png": [
@@ -18424,6 +18554,7 @@
     ],
     "logos/wwe-superstar-central-2c9ca1325e.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -18436,6 +18567,7 @@
     ],
     "logos/x-sport.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/xite-celebrates-0178ee79a4.png": [
@@ -18492,7 +18624,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/xtrem-sports-1d0aff4f7e.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/xtrema-accion-51fd00bb6d.png": [
       "International-Playlist.m3u",
@@ -18543,7 +18677,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ytv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/yu-gi-oh-en-espanol-71af52bc29.png": [
       "International-Playlist.m3u",
@@ -18699,6 +18835,7 @@
     ],
     "logos/zoom-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/zoomoo.png": [
@@ -19018,6 +19155,7 @@
     ],
     "logos/al-jazeera.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/al-qamar.png": [
@@ -19139,7 +19277,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/amc.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/amedia-hit-1080p.png": [
       "International-Playlist.m3u",
@@ -19261,6 +19400,7 @@
     ],
     "logos/apna-punjab-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/aqlvoy-0f671d98cf.png": [
@@ -19423,7 +19563,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/atv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/audiokiss-1080p.png": [
       "International-Playlist.m3u",
@@ -19553,10 +19695,13 @@
     ],
     "logos/azan-tv-15e8ac79.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/b-prime-bangla.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/b4u-bhojpuri-1080p.png": [
       "International-Playlist.m3u",
@@ -19666,6 +19811,7 @@
     ],
     "logos/bangla-plus.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bangla-tv-9e5f3366c8.png": [
@@ -19680,7 +19826,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/banglar-kontho.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/banglavision.png": [
       "IPTV-Playlist.m3u",
@@ -19721,6 +19869,7 @@
     ],
     "logos/bbc-world-news.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -19733,18 +19882,22 @@
     ],
     "logos/bein-sports-1.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-2.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-3-517e8a74a2.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-xtra-en-espanol.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-xtra.png": [
@@ -19754,6 +19907,7 @@
     ],
     "logos/bein-sports.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bejoy-kids-823648ad26.png": [
@@ -19816,7 +19970,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/biswabangla-24-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/biz-cinema-1080p.png": [
       "International-Playlist.m3u",
@@ -19835,6 +19990,7 @@
     ],
     "logos/blues-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/boing-italy-23dc379cd8.png": [
@@ -19873,6 +20029,7 @@
     ],
     "logos/bollywood-old.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bolt-ukraine-1080p.png": [
@@ -20069,6 +20226,7 @@
     ],
     "logos/cartoon-network-hd-plus-0af84f2a76.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cartoon-network-hd.png": [
@@ -20129,7 +20287,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/cb24-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/cbeebies-poland-3a85199033.png": [
       "International-Playlist.m3u",
@@ -20225,6 +20385,7 @@
     ],
     "logos/channel-16.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -20240,6 +20401,7 @@
     ],
     "logos/channel-9.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/channel-europe-c8db0338dc.png": [
@@ -20248,6 +20410,7 @@
     ],
     "logos/channel-fight.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/channel-i.png": [
@@ -20404,6 +20567,7 @@
     ],
     "logos/circle.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/city-eden-birma-play-c04db7f6ee.png": [
@@ -20632,10 +20796,14 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/comet.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/community-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/company-tv-720p.png": [
       "International-Playlist.m3u",
@@ -20774,6 +20942,7 @@
     ],
     "logos/dazn-ringside.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/dbc-news.png": [
@@ -21017,7 +21186,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/desh-bangla-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/desh-tv.png": [
       "IPTV-Playlist.m3u",
@@ -21132,7 +21303,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/discovery-hd.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/discovery-kids-latin-america-387f33e092.png": [
       "International-Playlist.m3u",
@@ -21167,7 +21340,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/discovery-turbo.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/discovery-world-c9020603b3.png": [
       "International-Playlist.m3u",
@@ -21342,7 +21517,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/dtv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/dua-channel.png": [
       "IPTV-Playlist.m3u",
@@ -21384,6 +21561,7 @@
     ],
     "logos/dw-news.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/e-24-cefaa5c6b8.png": [
@@ -21499,6 +21677,7 @@
     ],
     "logos/eman-tv-482a6c2567.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -21782,6 +21961,7 @@
     ],
     "logos/eurosport.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/express-entertainment.png": [
@@ -21886,10 +22066,12 @@
     ],
     "logos/fight-network.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/fight-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/fightbox-45d2349fcb.png": [
@@ -22056,6 +22238,7 @@
     ],
     "logos/five-stars-sports.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/flohockey-431fbc623f.png": [
@@ -22065,6 +22248,7 @@
     ],
     "logos/flowers-us.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/fm-italia-c3e3f2c337.png": [
@@ -22221,10 +22405,10 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gaunda-punjab-tv-001fec37aa.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/gaunda-punjab-tv-720p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gazi-tv-1080p.png": [
@@ -22281,11 +22465,13 @@
     ],
     "logos/go3-sport-1-67d7ab5ff2.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/goal-tv-237cfbed.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/god-stands-kids-club-tv-urdu.png": [
@@ -22569,6 +22755,7 @@
     ],
     "logos/hooray-kids.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/horoshee-kino-ed2794f149.png": [
@@ -22636,6 +22823,7 @@
     ],
     "logos/hyder-tv-ab08d4568b.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -22877,6 +23065,7 @@
     ],
     "logos/international/arydigital.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/atv-pakistan-1080p.png": [
@@ -22953,9 +23142,6 @@
     ],
     "logos/international/bridge-deluxe-1080p.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/international/bridge-hits-576p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/bridge.png": [
@@ -23423,9 +23609,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/international/galactica-tv.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/international/galaxy-tv-720p-not-24-7.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -23475,11 +23658,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/international/green-tv-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/international/greenentertainment.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/h-t-music-channel-480p.png": [
@@ -24797,7 +24978,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ion-tv-uk.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/iq-channel-df4804e706.png": [
       "International-Playlist.m3u",
@@ -24824,6 +25007,7 @@
     ],
     "logos/islam-channel-bangla.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/islam-tv.png": [
@@ -24861,6 +25045,7 @@
     ],
     "logos/ja-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jago-news-24.png": [
@@ -25068,6 +25253,7 @@
     ],
     "logos/kcl-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/kcm-india-14b4e9cf80.png": [
@@ -25343,6 +25529,7 @@
     ],
     "logos/local-logo-cnn.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/local-logo-cooking-channel.png": [
@@ -25355,6 +25542,7 @@
     ],
     "logos/local-logo-nfl-network.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/lol-tv.png": [
@@ -25544,6 +25732,7 @@
     ],
     "logos/major-league-cricket.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/makao-tv-0781b48dfa.png": [
@@ -25602,7 +25791,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/marquee-sports-network.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/marutam-tv-5f5ac641e3.png": [
       "International-Playlist.m3u",
@@ -25656,21 +25847,25 @@
     ],
     "logos/max-sport-1-6af9f2635c.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/max-sport-2-c89d29749e.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/max-sport-3-2ea6ca4d8c.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/max-sport-4-0ee3a4fef1.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -25820,7 +26015,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/meridiano-tv-68df142d43.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/messatida-tv-a5ca95c15e.png": [
@@ -25962,6 +26156,7 @@
     ],
     "logos/mlb-strike-zone-4930a654ce.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -26116,15 +26311,18 @@
     ],
     "logos/mrtv-sports-d111012fdd.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/msg-sportszone.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mtrspt1.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mtv-germany-bafd7b214a.png": [
@@ -26166,7 +26364,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/music-bangla.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/music-box-classic-b1ce784de6.png": [
       "International-Playlist.m3u",
@@ -26308,7 +26507,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/nan-tv-720p.png": [
-      "reports/logo-authenticity-manifest.json"
+      "IPTV-Playlist.m3u"
     ],
     "logos/nan-tv.png": [
       "IPTV-Playlist.m3u",
@@ -26444,6 +26643,9 @@
     "logos/ndtv-good-times.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/nepal-1-576p.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/nepal-1.png": [
       "IPTV-Playlist.m3u",
@@ -26801,6 +27003,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/oli-tv-india-b4a7917c53.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/oli-tv.png": [
@@ -27057,7 +27260,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/persiana-setmix-b30c1117a9.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/persiana-travel-2d893462f6.png": [
       "International-Playlist.m3u",
@@ -27066,6 +27270,7 @@
     ],
     "logos/pfl.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pga-tour.png": [
@@ -27315,8 +27520,10 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/punjab-plus-1080p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/punjabi-beats.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/punjabi-hits.png": [
       "IPTV-Playlist.m3u",
@@ -27415,6 +27622,7 @@
     ],
     "logos/racing-hagerty.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/radio-bonita-106-7-682841902c.png": [
@@ -27479,6 +27687,7 @@
     ],
     "logos/radio-norba-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/radio-onda-digital-f8be73bce9.png": [
@@ -27666,7 +27875,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/rds-social-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/real-madrid-tv-a93e7915a6.png": [
       "International-Playlist.m3u",
@@ -28120,6 +28330,7 @@
     ],
     "logos/see-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sensacion-costa-e86f9253eb.png": [
@@ -28132,10 +28343,12 @@
     ],
     "logos/setanta-sports-1-eurasia.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/setanta-sports-2-eurasia.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sexto-senso-3212528a94.png": [
@@ -28148,7 +28361,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/sgcn-music.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/shanson-tv-576p-3c01614e19.png": [
       "IPTV-Playlist.m3u",
@@ -28202,6 +28417,7 @@
     ],
     "logos/shikor-tv-canada.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "tests/test_logo_format_conversion.py"
     ],
@@ -28242,6 +28458,7 @@
     ],
     "logos/sindh-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/siri-kannada-all-time.png": [
@@ -28328,6 +28545,7 @@
     ],
     "logos/sn-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/snb-cinema.png": [
@@ -28347,6 +28565,7 @@
     ],
     "logos/solo-calcio-italia.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/somoy-tv.png": [
@@ -28407,6 +28626,7 @@
     ],
     "logos/sony-kal.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-max-2.png": [
@@ -28446,12 +28666,16 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/sony-sports-ten-3-hindi.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/sony-wah.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-yay-1080p.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -28538,6 +28762,7 @@
     ],
     "logos/sport-2-ukraine.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -28548,6 +28773,7 @@
     ],
     "logos/sport-4-19a83fa7a4.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -28573,6 +28799,7 @@
     ],
     "logos/sport5-israel.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -28590,10 +28817,13 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sports-fishing-tv-50d0f501d6.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/sports-grid.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sports-television-f26dbc030c.png": [
@@ -28617,6 +28847,7 @@
     ],
     "logos/stadium-164c0cfda7.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -28811,7 +29042,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/stingray-greatest-hits-c8bdd84a88.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/stingray-greatest-holiday-hits-ac6f3e0962.png": [
       "International-Playlist.m3u",
@@ -29096,6 +29328,7 @@
     ],
     "logos/t-sports.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -29137,6 +29370,7 @@
     ],
     "logos/tamilvision-tv-1080p.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tamyr-79b31e50d0.png": [
@@ -29183,7 +29417,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/teen-nick.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/teennick-poland-23737357dc.png": [
       "reports/logo-source-registry.json"
@@ -29250,6 +29486,7 @@
     ],
     "logos/ten-tv-prime.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "tests/test_logo_format_conversion.py"
     ],
@@ -29327,11 +29564,13 @@
     ],
     "logos/the-pet-collective-india-460b4e0e70.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/the-q-india-576p.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/the-retro-channel-1a8ccc02f4.png": [
@@ -29416,7 +29655,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tnt-sports-1.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/today-radio-1870b5f533.png": [
       "reports/logo-source-registry.json"
@@ -29483,7 +29724,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/totalmusic-2000s-88a31d48db.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/totalmusic-80s-1080p-4c7ec66995.png": [
       "International-Playlist.m3u",
@@ -29582,6 +29824,7 @@
     ],
     "logos/trace-sport.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/trace-toca-944ff3d741.png": [
@@ -29642,10 +29885,10 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/travelxp-4k-hdr-2160p-geo-blocked-d2beea8758.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/travelxp-4k-hdr-2160p-geo-blocked.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/travelxp-bangla.png": [
@@ -29696,13 +29939,19 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tsn-1.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tsn-2-ca.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tsn-3-ca.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tsn-the-ocho-cb1eed5fa3.png": [
       "International-Playlist.m3u",
@@ -29778,6 +30027,7 @@
     ],
     "logos/tv-one-uk.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tv-peruanisima-29248f0b01.png": [
@@ -29806,7 +30056,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tvc-arabic-kids.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tvcarib-cinema-00d1d6c83c.png": [
       "International-Playlist.m3u",
@@ -29817,7 +30069,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tvcarib-kids-teens.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tvokids-5a066a4797.png": [
       "International-Playlist.m3u",
@@ -29851,6 +30105,7 @@
     ],
     "logos/tvri-sport.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tvs-bowling-network-cf222fc786.png": [
@@ -29939,6 +30194,7 @@
     ],
     "logos/ufc-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ultimate-tv.png": [
@@ -29982,6 +30238,7 @@
     ],
     "logos/us-willow-sports-hd.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/utv-palakkad.png": [
@@ -30060,6 +30317,9 @@
     "logos/verified-kinopokaz-ad1d4126d2.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/verified-punjab-plus-1080p-8d4d950f36.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/vevo-70s-80s.png": [
       "IPTV-Playlist.m3u",
@@ -30190,6 +30450,7 @@
     ],
     "logos/vision-beats.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vision-india.png": [
@@ -30204,6 +30465,7 @@
     ],
     "logos/vision.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vissa-tv.png": [
@@ -30258,6 +30520,7 @@
     ],
     "logos/vox-kongo-tv-0cfd390c7b.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/vox-music-tv-9c1f881233.png": [
@@ -30289,6 +30552,7 @@
     ],
     "logos/waseb-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/watch-it-scream-720p-b8531f612b.png": [
@@ -30352,6 +30616,7 @@
     ],
     "logos/willow-extra.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/win-plus-futbol-f1e6574f7e.png": [
@@ -30441,6 +30706,7 @@
     ],
     "logos/wwe-superstar-central-2c9ca1325e.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -30453,6 +30719,7 @@
     ],
     "logos/x-sport.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/xite-celebrates-0178ee79a4.png": [
@@ -30509,7 +30776,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/xtrem-sports-1d0aff4f7e.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/xtrema-accion-51fd00bb6d.png": [
       "International-Playlist.m3u",
@@ -30560,7 +30829,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ytv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/yu-gi-oh-en-espanol-71af52bc29.png": [
       "International-Playlist.m3u",
@@ -30716,6 +30987,7 @@
     ],
     "logos/zoom-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/zoomoo.png": [
@@ -31185,6 +31457,7 @@
     "logos/international/boreal-720p-not-24-7.png",
     "logos/international/botflix-tv-1080p.png",
     "logos/international/bridge-classic-576p.png",
+    "logos/international/bridge-hits-576p.png",
     "logos/international/bstv-pakistan-576p.png",
     "logos/international/bta-tv-720p.png",
     "logos/international/business-rockstars-720p.png",
@@ -31318,12 +31591,14 @@
     "logos/international/fox-business-network-576p.png",
     "logos/international/frightflix-720p.png",
     "logos/international/fun-roads-720p.png",
+    "logos/international/galactica-tv.png",
     "logos/international/garage-tv-latin-america.png",
     "logos/international/geekdot-720p.png",
     "logos/international/giktvmx-720p.png",
     "logos/international/gmtv-1080p.png",
     "logos/international/golden-eagle-cartoon-576p.png",
     "logos/international/gong-1080p.png",
+    "logos/international/green-tv-1080p.png",
     "logos/international/harpal-geo-360p.png",
     "logos/international/hasbro-legends-1080p-geo-blocked.png",
     "logos/international/hero-720p-not-24-7.png",
@@ -31746,7 +32021,6 @@
     "logos/ndtv-24x7.png",
     "logos/ndtv-profit.png",
     "logos/ndtv.png",
-    "logos/nepal-1-576p.png",
     "logos/new-k-movies-1080p-fdc6c325b6.png",
     "logos/new-k-pop-1080p-02d85a425b.png",
     "logos/news-11.png",
@@ -32294,7 +32568,6 @@
     "logos/ptv-home.png",
     "logos/ptv-world.png",
     "logos/ptv.png",
-    "logos/punjabi-beats.png",
     "logos/qazsport.png",
     "logos/quran-tv-converted-f172e40801.png",
     "logos/qvc-uk.png",
@@ -32373,7 +32646,6 @@
     "logos/sony-sports-ten-1.png",
     "logos/sony-sports-ten-2.png",
     "logos/sony-sports-ten-3-8653ef22.png",
-    "logos/sony-sports-ten-3-hindi.png",
     "logos/sony-sports-ten-4-kannada.png",
     "logos/sony-sports-ten-4.png",
     "logos/sony-sports-ten-5.png",
