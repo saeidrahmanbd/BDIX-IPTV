@@ -427,10 +427,12 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn("MK", discovery.qualified_country_groups({"MK": set(names)}))
 
     def test_category_registry_places_international_after_country_groups(self):
-        registry = discovery.category_registry(["Belarus", "International", "Albania", "Sports"])
+        registry = discovery.category_registry(["Belarus", "International", "Albania", "Sports", "News"])
         self.assertLess(registry.index("Albania"), registry.index("Belarus"))
         self.assertLess(registry.index("Belarus"), registry.index("International"))
-        self.assertLess(registry.index("International"), registry.index("Sports"))
+        self.assertLess(registry.index("International"), registry.index("News"))
+        self.assertLess(registry.index("News"), registry.index("Fashion TV"))
+        self.assertLess(registry.index("Fashion TV"), registry.index("Sports"))
 
 
     def test_foreign_primary_country_groups_require_explicit_movie_music_content(self):
