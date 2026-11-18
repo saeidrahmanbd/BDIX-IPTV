@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Discover eligible channels into New Channels/New Backups for manual review.
+"""Discover worldwide Movies/Music channels into New Channels/New Backups for review.
 
-Bangladesh and Pakistan remain unrestricted by genre. India follows the IPTV regional policy: Kids and Sports are allowed, while News, Religious, Educational/Knowledge and Business/Finance are prohibited.
-Only countries other than Bangladesh, India and Pakistan are Movie/Music only. New candidates are never promoted
-automatically. Foreign country groups require five unique primary channels.
+All countries follow the same Movies/Music-only discovery policy. Existing curated playlist
+content, including the legacy Fashion TV section, is preserved. Candidates are never
+promoted automatically; dynamic country groups require five unique primary channels.
 Playback is checked by the downstream validation step.
 """
 from __future__ import annotations
@@ -441,9 +441,6 @@ def main():
   logo=local_logo(a,cname)
   if is_backup and not logo:
    logo=local_logo(canonical,cname)
-  if not logo:
-   rejected["no authentic local repository logo"]+=1
-   continue
   additions.append([make_extinf(canonical,cname,target,ccode,logo,base),url])
   if is_backup:backup_rows.append((cname,ccode,url))
   else:
