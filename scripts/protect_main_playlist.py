@@ -12,7 +12,7 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "Backup", "New Channels", "New Backups", "Review",
+    "New Channels", "New Backups", "Backup", "Review",
 ]
 PRIMARY_GROUPS = set(CATEGORY_ORDER[:11])
 DISCOVERY_GROUPS = {"New Channels", "New Backups"}
@@ -101,8 +101,18 @@ def verify(playlist: Path, state: Path):
     failures = []
 
     current_registry = category_registry(playlist)
-    if current_registry != saved.get("category_registry"):
-        failures.append("The owner's Playlist Studio category registry changed.")
+    expected_registry = list(saved.get("category_registry") or [])
+    # The only permitted registry extension is to add the two owner-requested
+    # manual discovery queues immediately before Backup. Existing category
+    # names and their relative order remain immutable.
+    for queue in ("New Channels", "New Backups"):
+        if queue not in expected_registry:
+            if "Backup" not in expected_registry:
+                failures.append("Cannot add discovery queues because the owner's Backup category is missing.")
+                break
+            expected_registry.insert(expected_registry.index("Backup"), queue)
+    if current_registry != expected_registry:
+        failures.append("The Playlist Studio category registry changed beyond the two reserved manual discovery queues.")
 
     expected = Counter(str(row["url"]) for row in before)
     actual = Counter(str(row["url"]) for row in after)
