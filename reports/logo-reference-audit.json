@@ -14485,7 +14485,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/m6-music-20701275e5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/maah-tv-8ab855a0a8.png": [
       "International-Playlist.m3u",
@@ -26411,7 +26412,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/m6-music-20701275e5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/maah-tv-8ab855a0a8.png": [
       "International-Playlist.m3u",

@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-18 07:59 UTC**  
+Run time: **2026-11-18 08:03 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,7 +10,7 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1378 | 0 | 0 | 34 | 0 | 0 | 34 |
-| International-Playlist.m3u | 3281 | 1 | 0 | 79 | 372 | 0 | 79 |
+| International-Playlist.m3u | 3281 | 0 | 0 | 79 | 372 | 0 | 79 |
 
 ## Repair log
 
@@ -27,7 +27,7 @@ Historical mapping index: loaded 336 historical name mappings
 | IPTV-Playlist.m3u | 331 | The Movie Club +2 | (missing) | (none) | IPTV-org exact ID: TheMovieClub.in |  | Download/validation failed: source response is not a valid supported image |
 | IPTV-Playlist.m3u | 331 | The Movie Club +2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 417 | Rang Rangoli | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 473 | Colors Gujarati | (missing) | (none) | IPTV-org exact ID: ColorsGujarati.in |  | Download/validation failed: canonical logo filename already exists with different bytes: colors-gujarati-9c6989199e.png |
+| IPTV-Playlist.m3u | 473 | Colors Gujarati | (missing) | (none) | IPTV-org exact ID: ColorsGujarati.in |  | Download/validation failed: content-addressed logo filename collision: colors-gujarati-9c6989199e.png |
 | IPTV-Playlist.m3u | 473 | Colors Gujarati | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 615 | MH 1 Prime | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 807 | BBC World | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
@@ -60,14 +60,13 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 299 | The Movie Club +2 | (missing) | (none) | IPTV-org exact ID: TheMovieClub.in |  | Download/validation failed: source response is not a valid supported image |
 | International-Playlist.m3u | 299 | The Movie Club +2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 391 | Rang Rangoli | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 465 | Colors Gujarati | (missing) | (none) | IPTV-org exact ID: ColorsGujarati.in |  | Download/validation failed: canonical logo filename already exists with different bytes: colors-gujarati-9c6989199e.png |
+| International-Playlist.m3u | 465 | Colors Gujarati | (missing) | (none) | IPTV-org exact ID: ColorsGujarati.in |  | Download/validation failed: content-addressed logo filename collision: colors-gujarati-9c6989199e.png |
 | International-Playlist.m3u | 465 | Colors Gujarati | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 671 | Rengoni TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 853 | Rádio Temas de Novelas | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 873 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1029 | Cedros TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1111 | DanceTV Algorhythm | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 1135 | M6 Music | (missing) | m6-music-20701275e5.svg | [IPTV-org exact ID: M6Music.fr](https://static.wikia.nocookie.net/logopedia/images/6/68/M6music-95cde0867d.svg/revision/latest?cb=20200412210630) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 | International-Playlist.m3u | 1145 | Persiana Folk | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1151 | Persiana Vibe | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1623 | FILMBOX+ Emotion Adria | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
