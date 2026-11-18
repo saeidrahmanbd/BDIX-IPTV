@@ -2578,9 +2578,9 @@ https://rpn.bozztv.com/gusa/gusa-tvsNostalgiaMovies/index.m3u8
 https://rpn.bozztv.com/gusa/gusa-tvswesternmovies/index.m3u8
 #EXTINF:-1 tvg-id="UniversalCinema.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/universal-cinema-414d1fc054.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Universal Cinema",Universal Cinema
 http://45.167.1.138:8000/play/a06m
-#EXTINF:-1 tvg-id="Vevo70s80s.us" channel-id="Vevo70s80s.us" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo '70s & '80s",Vevo '70s & '80s
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-70s-80s.png" tvg-id="Vevo70s80s.us" channel-id="Vevo70s80s.us" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo '70s & '80s",Vevo '70s & '80s
 https://d38e11bvtr8xdq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-jlzlygsoesvmj/Vevo70sand80s_GB.m3u8
-#EXTINF:-1 tvg-id="Vevo90s00s.us" channel-id="Vevo90s00s.us" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo '90s & '00s",Vevo '90s & '00s
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-90s-00s.png" tvg-id="Vevo90s00s.us" channel-id="Vevo90s00s.us" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo '90s & '00s",Vevo '90s & '00s
 https://amg00056-amg00056c12-rakuten-it-3240.playouts.now.amagi.tv/playlist/amg00056-vevotvfast-vevo90sand00sit-rakutenit/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-hip-hop-r-b.png" tvg-id="GBBD2300001C0" channel-id="GBBD2300001C0" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo Hip Hop & R&B",Vevo Hip Hop & R&B
 https://d7i20u8nlyf1b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lymqk2na77cwn/VevoHipHopRB_GB.m3u8
@@ -2608,7 +2608,7 @@ https://dt1s4l2cmiyit.cloudfront.net/XITE_Celebrates.m3u8
 https://d3bsgqzbpkrvbb.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-w288eaw03izg1/XITE_Nuevo_Latino.m3u8
 #EXTINF:-1 tvg-id="XITESiempreLatino.us@SD" tvg-language="por;spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xite-siempre-latino.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="XITE Siempre Latino",XITE Siempre Latino
 https://d1xc25jm9e0l4b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-xplkt8i7m24dc/XITE_Siempre_Latino.m3u8
-#EXTINF:-1 tvg-id="custom.xitesummer" channel-id="custom.xitesummer" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="XITE Summer",XITE Summer
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xite-celebrates-0178ee79a4.png" tvg-id="custom.xitesummer" channel-id="custom.xitesummer" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="XITE Summer",XITE Summer
 https://d33m2dcwuwzaia.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4g0r3vai0va2v/XITE_Celebrates.m3u8?ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.ssai_vendor=SSSLIVE&ads.afsdk_params=%7BAFSDK_VALUE%7D&ads.service_id=CABD17000043J
 #EXTINF:-1 tvg-id="YoungHollywood.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/young-hollywood.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Young Hollywood",Young Hollywood
 https://younghollywood-rakuten-samsung.amagi.tv/playlist.m3u8
