@@ -28,14 +28,10 @@ def parse(text):
         elif cur and line.strip().startswith(("http://","https://")): out.append((cur[0],cur[1],line.strip())); cur=None
     return out
 def referenced_logo_relative_path(logo):
-    """Return a safe repository-relative asset path, preserving nested logo folders."""
-    if not logo.startswith(RAW_BASE):
+    """Return a safe path beneath logos/; remote URL references are not local."""
+    if not logo.startswith("logos/"):
         return None
-    raw_path = urlsplit(logo).path
-    marker = "/main/logos/"
-    if marker not in raw_path:
-        return None
-    relative = unquote(raw_path.split(marker, 1)[1]).lstrip("/")
+    relative = unquote(logo[len("logos/"):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
     if not relative:
         return None
     candidate = Path(relative)
@@ -65,7 +61,7 @@ def logo_audit(entries):
         if not logo:
             (review_missing if group in {"Review","New Channels","New Backups","Not Playing"} else missing).append(name)
             continue
-        if not logo.startswith(RAW_BASE): external.append(name)
+        if not logo.startswith("logos/"): external.append(name)
         filename=Path(logo.split("?",1)[0]).name.casefold()
         if group not in EXCLUDE and filename.startswith("generated-fallback-"): bad.append((name,group,filename))
         elif is_blocked_logo_basename(filename): bad.append((name,group,filename))
@@ -140,9 +136,9 @@ def main():
     logo_missing,logo_missing_review,logo_external,logo_bad=logo_audit(current); logo_missing_files=[]; logo_missing_file_details=[]
     for _,a,_ in current:
         logo=a.get("tvg-logo","").strip()
-        if logo.startswith(RAW_BASE):
+        if logo:
             relative=referenced_logo_relative_path(logo)
-            logo_file=referenced_logo_file(logo)
+            logo_file=referenced_logo_file(logo) if relative is not None else None
             if relative is None or logo_file is None or not logo_file.is_file():
                 name=a.get("tvg-name","")
                 group=a.get("group-title","")
