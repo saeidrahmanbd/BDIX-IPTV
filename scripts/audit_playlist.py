@@ -433,6 +433,8 @@ for group in category_transitions:
 alphabetical_order_issues = []
 def natural_sort_key(value):
     value = unicodedata.normalize("NFKD", value).casefold().strip()
+    # Treat spaced and unspaced numeric suffixes consistently (e.g. Sport 4 / Sport5).
+    value = re.sub(r"\s+(?=\d)", "", value)
     return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", value)]
 for group in category_transitions:
     # Backup, Review and discovery queues are manually maintained review groups.
