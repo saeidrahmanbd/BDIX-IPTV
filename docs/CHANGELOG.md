@@ -7,53 +7,34 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-18 — `IPTV-Playlist.m3u`
 
-- New channel identities: **20**
+- New channel identities: **0**
 - Channel identities removed: **0**
-- Stream URLs added / removed: **26 / 0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **1378**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- BTL TV (Netherlands) (1080p)
-- Cartoon Network (Pakistan)
-- Vokta TV (720p)
-- CVR Health (576p)
-- Disha TV (396p)
-- Gaunda Punjab TV (720p)
-- Kabaddi 24x7 (720p)
-- NDTV Good Times (1080p)
-- Punjabi Beats HD (576p)
-- Punjab Plus (1080p)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-18 — `International-Playlist.m3u`
 
-- New channel identities: **13**
-- Channel identities removed: **3**
-- Stream URLs added / removed: **19 / 5**
+- New channel identities: **8**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **8 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **2882**
+- Logo reference changes: **2807**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Abdulmajeed Abdullah (1080p)
-- D Music (1280p) [Not 24/7]
-- DanceTV EDM Mainstage (1080p)
-- DanceTV Minimal Tech (1080p)
-- NewFlix
-- Persiana Latino
-- Sky Cinema Action
-- Sky Cinema Collection
-- Sky Cinema Family
-- Sky Cinema Suspense
-
-Removed channel identities (up to 10):
-- Kronehit TV
-- Radio Norba TV
-- Thikana
+- M6 Music
+- MCM Pop
+- La Top 102.9
+- Lingkar TV
+- La Urban TV [ ]
+- LaXitosa Panama [ ]
+- MagentaMusik 360
+- Marina TV
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
