@@ -6623,5 +6623,25 @@
     "status": "third_party_verified",
     "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/D_music-Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "notes": "Wikimedia Commons exact-logo search CC BY-SA 4.0 Source page: https://commons.wikimedia.org/wiki/File:D_music-Logo.png"
+  },
+  "International-Playlist.m3u|MCMTop.fr@SD|MCM Top (France)|logos/mcm-top-france-821b5da224.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/EVtWQLd.png",
+    "notes": "IPTV-org exact ID: MCMTop.fr IPTV-org public logo dataset Source page: https://i.imgur.com/EVtWQLd.png"
+  },
+  "International-Playlist.m3u|MCMTop.ru@SD|MCM Top (Russia) (576p)|logos/mcm-top-russia-821b5da224.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/EVtWQLd.png",
+    "notes": "IPTV-org exact ID: MCMTop.ru IPTV-org public logo dataset Source page: https://i.imgur.com/EVtWQLd.png"
+  },
+  "International-Playlist.m3u|Melody.fr@SD|Melody (720p)|logos/melody-1fa108e209.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/9GVyQ6x.png",
+    "notes": "IPTV-org exact ID: Melody.fr IPTV-org public logo dataset Source page: https://i.imgur.com/9GVyQ6x.png"
+  },
+  "International-Playlist.m3u|MiMusicaPopular.us@SD|Mi Musica Popular (1080p)|logos/mi-musica-popular-20cac05b9e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/auW6Ve1.png",
+    "notes": "IPTV-org exact ID: MiMusicaPopular.us IPTV-org public logo dataset Source page: https://i.imgur.com/auW6Ve1.png"
   }
 }

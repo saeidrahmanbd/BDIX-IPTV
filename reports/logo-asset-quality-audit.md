@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-18T04:55:44+00:00**
+Generated: **2026-11-18T04:59:18+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **a43b9174e373427cdfb91993bb9814e7ce7f3a1f12a95189d62e964e6ee5ad44**
-- International-Playlist.m3u SHA-256: **7141919ac7d33b04d5412081f865ca3d89bfc26023431277b614f862c9ce7951**
+- International-Playlist.m3u SHA-256: **56a7071183c125fe3b7f96ce8326a4065d314e6a499490194d56d08ef74cf516**
 
 ## Summary
 
@@ -16,9 +16,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **169**
-- Exact-byte duplicate asset clusters: **966**
-- Playlist references whose asset stem differs from the normalized channel name: **1434**
-- Unreferenced image assets immediately inside logos/: **1634** (not deleted; other tooling or playlists may use them)
+- Exact-byte duplicate asset clusters: **967**
+- Playlist references whose asset stem differs from the normalized channel name: **1438**
+- Unreferenced image assets immediately inside logos/: **1633** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **1**
 
 ## Safe repairs applied
@@ -699,6 +699,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/maxcine-comedy-720p.png, logos/maxcine-comedy-4298572e37.png
 - logos/international/maxcine-family-720p.png, logos/maxcine-family-76640ece61.png
 - logos/international/mcm-pop-580p.png, logos/mcm-pop-580p.png
+- logos/international/mcm-top-576p.png, logos/mcm-top-france-821b5da224.png, logos/mcm-top-russia-821b5da224.png
 - logos/international/mcn6-music-channel-1080p-not-24-7.png, logos/mcn6-music-channel-1080p-b16c4717c3.png
 - logos/international/medium-germany.png, logos/medium-germany.png
 - logos/international/melody-fm-720p-not-24-7.png, logos/melody-fm-e501245773.png
@@ -2402,13 +2403,17 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Marina TV | marina-tv-1080p.png | Review |
 | International-Playlist.m3u | Masala TV | masala-tv.png | Review |
 | International-Playlist.m3u | MBC TV | mbc-tv.png | Review |
+| International-Playlist.m3u | MCM Top (Russia) (576p) | mcm-top-russia-821b5da224.png | Review |
 | International-Playlist.m3u | Mehran TV | mehran-tv.png | Review |
 | International-Playlist.m3u | Mei Alai TV | mei-alai-tv.png | Review |
+| International-Playlist.m3u | Melody (720p) | melody-1fa108e209.png | Review |
+| International-Playlist.m3u | Mi Musica Popular (1080p) | mi-musica-popular-20cac05b9e.png | Review |
 | International-Playlist.m3u | Milan TV | milan-tv-4eb09f758d.png | Review |
 | International-Playlist.m3u | MMA-TV.com | mma-tv-com-85ca206b32.png | Review |
 | International-Playlist.m3u | Molahits TV | verified-molahits-tv-720p-ab91e83f1b.png | Review |
 | International-Playlist.m3u | Monterrico TV | monterrico-tv-872574f770.png | Review |
 | International-Playlist.m3u | Montones TV | montones-tv-af126eccd7.png | Review |
+| International-Playlist.m3u | Montones TV (720p) [Not 24/7] | montones-tv-af126eccd7.png | Review |
 | International-Playlist.m3u | More Than Sports TV | more-than-sports-tv.png | Review |
 | International-Playlist.m3u | Mystery TV | mystery-tv.png | Review |
 | International-Playlist.m3u | Nande Portetepe TV | nande-portetepe-tv.png | Review |

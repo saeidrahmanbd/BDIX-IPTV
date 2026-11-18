@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
-  "exact_duplicate_groups": 966,
-  "exact_duplicate_files": 1519,
+  "exact_duplicate_groups": 967,
+  "exact_duplicate_files": 1521,
   "low_risk_review_candidates": [
     {
       "candidate": "logos/unused/metro-tv.png",

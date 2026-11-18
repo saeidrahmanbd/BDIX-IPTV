@@ -4828,9 +4828,9 @@ http://93.184.10.248/MBCBollywood/index.m3u8
 https://mumbai-edge.smartplaytv.in/MBCTV/index.m3u8
 #EXTINF:-1 tvg-id="custom.mci-television-co-movie" channel-id="custom.mci-television-co-movie" tvg-language="eng;spa" tvg-logo="logos/mci-television-66d4f17df6.png" tvg-country="CO" group-title="Review" tvg-name="MCI Television",MCI Television
 https://video.ejeserver.com/live/mcitelevision.m3u8
-#EXTINF:-1 tvg-id="MCMTop.fr@SD" tvg-name="MCM Top (France)" tvg-country="FR" channel-id="MCMTop.fr@SD" group-title="Review" tvg-content="Music",MCM Top (France)
+#EXTINF:-1 tvg-id="MCMTop.fr@SD" tvg-name="MCM Top (France)" tvg-country="FR" channel-id="MCMTop.fr@SD" tvg-logo="logos/mcm-top-france-821b5da224.png" group-title="Review" tvg-content="Music",MCM Top (France)
 http://185.228.163.146:8000/play/a00g/index.m3u8
-#EXTINF:-1 tvg-id="MCMTop.ru@SD" tvg-name="MCM Top (Russia) (576p)" tvg-country="RU" channel-id="MCMTop.ru@SD" group-title="Review" tvg-content="Music",MCM Top (Russia) (576p)
+#EXTINF:-1 tvg-id="MCMTop.ru@SD" tvg-name="MCM Top (Russia) (576p)" tvg-country="RU" channel-id="MCMTop.ru@SD" tvg-logo="logos/mcm-top-russia-821b5da224.png" group-title="Review" tvg-content="Music",MCM Top (Russia) (576p)
 http://46.32.176.50/mcmtop/index.m3u8
 #EXTINF:-1 tvg-id="MegaExtrenoHD.us@HD" channel-id="MegaExtrenoHD.us@HD" tvg-logo="logos/mega-extreno-8b471bc27e.png" tvg-country="US" tvg-content="Movies" group-title="Review" tvg-name="Mega Extreno",Mega Extreno
 https://stream-cdn-iad3.vaughnsoft.net/play/live_mega_extremo.flv
@@ -4838,7 +4838,7 @@ https://stream-cdn-iad3.vaughnsoft.net/play/live_mega_extremo.flv
 http://103.250.28.74:8000/play/a00m/index.m3u8
 #EXTINF:-1 channel-id="MeiAlaiTV.in" tvg-id="MeiAlaiTV.in" tvg-language="hin" tvg-logo="logos/mei-alai-tv.png" tvg-country="IN" group-title="Review" tvg-name="Mei Alai TV",Mei Alai TV
 https://meialai.iptelevishion.com/meialai/2/index.m3u8
-#EXTINF:-1 tvg-id="Melody.fr@SD" tvg-name="Melody (720p)" tvg-country="FR" channel-id="Melody.fr@SD" group-title="Review" tvg-content="Music",Melody (720p)
+#EXTINF:-1 tvg-id="Melody.fr@SD" tvg-name="Melody (720p)" tvg-country="FR" channel-id="Melody.fr@SD" tvg-logo="logos/melody-1fa108e209.png" group-title="Review" tvg-content="Music",Melody (720p)
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/melody/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="MetropolitanadelCuzco.pe@SD" tvg-name="Metropolitana del Cuzco" tvg-logo="logos/metropolitana-del-cuzco.png" tvg-country="PE" channel-id="MetropolitanadelCuzco.pe@SD" group-title="Review" tvg-content="Music",Metropolitana del Cuzco
 https://video1.earthcam.com/myearthcam/075ff02f78c35af55564cf3af3b3f750.flv/playlist.m3u8
@@ -4860,7 +4860,7 @@ https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/tracks-v1a1/mono.m3u8
 https://mumt04.tangotv.in/m18aqlK4MHONE/index.m3u8
 #EXTINF:-1 tvg-id="MiMusicaHits.us@SD" channel-id="MiMusicaHits.us@SD" tvg-language="spa" tvg-logo="logos/mi-musica-hits-720p.png" tvg-country="US" tvg-content="Music" group-title="Review" tvg-name="Mi Musica Hits",Mi Musica Hits
 http://38.188.186.47:4000/play/a04n/index.m3u8
-#EXTINF:-1 tvg-id="MiMusicaPopular.us@SD" tvg-name="Mi Musica Popular (1080p)" tvg-country="US" channel-id="MiMusicaPopular.us@SD" group-title="Review" tvg-content="Music",Mi Musica Popular (1080p)
+#EXTINF:-1 tvg-id="MiMusicaPopular.us@SD" tvg-name="Mi Musica Popular (1080p)" tvg-country="US" channel-id="MiMusicaPopular.us@SD" tvg-logo="logos/mi-musica-popular-20cac05b9e.png" group-title="Review" tvg-content="Music",Mi Musica Popular (1080p)
 http://45.226.205.96:48000/play/a0f8/index.m3u8
 #EXTINF:-1 tvg-id="MiMusicaRomantica.us@SD" channel-id="MiMusicaRomantica.us@SD" tvg-logo="logos/mi-musica-romantica.png" tvg-country="US" tvg-content="Music" group-title="Review" tvg-name="Mi Musica Romantica",Mi Musica Romantica
 http://168.228.44.241:9999/play/a054/index.m3u8
@@ -4892,7 +4892,7 @@ http://ventdelnord.tv:8080/mola/directe.m3u8
 https://h.jcp.live.opencaster.com/play_src/index.m3u8
 #EXTINF:-1 tvg-id="MontonesTV.do@HD" tvg-logo="logos/montones-tv-af126eccd7.png" tvg-country="DO" tvg-content="Music" group-title="Review" tvg-name="Montones TV",Montones TV
 https://lbgo.bozztv.com/ssh101/ssh101/montonestv1/playlist.m3u8
-#EXTINF:-1 tvg-id="MontonesTV.do@HD" tvg-name="Montones TV (720p) [Not 24/7]" tvg-country="DO" channel-id="MontonesTV.do@HD" group-title="Review" tvg-content="Music",Montones TV (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="MontonesTV.do@HD" tvg-name="Montones TV (720p) [Not 24/7]" tvg-country="DO" channel-id="MontonesTV.do@HD" tvg-logo="logos/montones-tv-af126eccd7.png" group-title="Review" tvg-content="Music",Montones TV (720p) [Not 24/7]
 https://183.giatvcdn.com/ssh101/ssh101/montonestv1/playlist.m3u8
 #EXTINF:-1 tvg-id="MoonbugKids.uk" channel-id="MoonbugKids.uk" tvg-language="eng" tvg-logo="logos/moonbug-kids.png" tvg-country="GB" group-title="Review" tvg-name="Moonbug Kids",Moonbug Kids
 https://moonbug-rokuus.amagi.tv/playlist.m3u8

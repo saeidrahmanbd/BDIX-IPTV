@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5827,
-  "all_explicitly_referenced_logo_files": 2649,
-  "runtime_referenced_logo_files": 2647,
-  "playlist_referenced_logo_files": 2367,
-  "apparently_unreferenced_by_any_text_file": 3178,
-  "apparently_unreferenced_by_runtime_sources": 3180,
+  "logo_image_files": 5831,
+  "all_explicitly_referenced_logo_files": 2655,
+  "runtime_referenced_logo_files": 2653,
+  "playlist_referenced_logo_files": 2373,
+  "apparently_unreferenced_by_any_text_file": 3176,
+  "apparently_unreferenced_by_runtime_sources": 3178,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -1571,8 +1571,8 @@
     "logos/zee-cinema-apac-efd7650d72.svg",
     "logos/zenlife-by-stingray-7d01288f39.svg"
   ],
-  "exact_duplicate_groups": 966,
-  "exact_duplicate_files": 1519,
+  "exact_duplicate_groups": 967,
+  "exact_duplicate_files": 1521,
   "exact_duplicates": [
     {
       "sha256": "0086e2b83c7cbc4157e4ac70f938996c35824331c9424e32dbaad4e4ccb80b24",
@@ -5036,6 +5036,14 @@
       "files": [
         "logos/qello-concerts-by-stingray-1080p.png",
         "logos/qello-concerts-by-stingray.png"
+      ]
+    },
+    {
+      "sha256": "821b5da22478bf89ef9237519a18367d8118dad996e83ad43867c1c093999c28",
+      "files": [
+        "logos/international/mcm-top-576p.png",
+        "logos/mcm-top-france-821b5da224.png",
+        "logos/mcm-top-russia-821b5da224.png"
       ]
     },
     {
@@ -11312,6 +11320,7 @@
     ],
     "logos/d-music-e61046bc15.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/dance-television-1080p.png": [
@@ -13684,20 +13693,27 @@
       "reports/logo-source-registry.json"
     ],
     "logos/international/la-urban-tv-1080p-not-24-7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/laxitosa-panama-360p-not-24-7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/lingkar-tv.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/magentamusik-360-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/manoranjan-movies-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/mezzo-576p.png": [
+      "International-Playlist.m3u"
     ],
     "logos/international/scares-by-shudder-1080p.png": [
       "International-Playlist.m3u",
@@ -14287,7 +14303,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/la-top-102-9-d8535e9176.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/la-top-107-7-c9b97b2bd3.png": [
       "International-Playlist.m3u",
@@ -14623,7 +14640,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/marina-tv-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/marquee-sports-network.png": [
       "IPTV-Playlist.m3u",
@@ -14789,7 +14807,16 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mcm-pop-580p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/mcm-top-france-821b5da224.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/mcm-top-russia-821b5da224.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/mcn6-music-channel-1080p-b16c4717c3.png": [
       "International-Playlist.m3u",
@@ -14853,6 +14880,10 @@
     "logos/melodie-tv-81420156d3.png": [
       "reports/logo-source-registry.json"
     ],
+    "logos/melody-1fa108e209.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/melody-fm-e501245773.png": [
       "reports/logo-source-registry.json"
     ],
@@ -14899,6 +14930,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/metropolitana-del-cuzco.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/mezzo-live-a73f9b365c.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -14942,6 +14976,10 @@
     "logos/mi-musica-hits-720p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/mi-musica-popular-20cac05b9e.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/mi-musica-reggaeton-d3c433c52d.png": [
       "International-Playlist.m3u",
@@ -23194,6 +23232,7 @@
     ],
     "logos/d-music-e61046bc15.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/dance-television-1080p.png": [
@@ -25571,20 +25610,27 @@
       "reports/logo-source-registry.json"
     ],
     "logos/international/la-urban-tv-1080p-not-24-7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/laxitosa-panama-360p-not-24-7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/lingkar-tv.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/magentamusik-360-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/manoranjan-movies-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/mezzo-576p.png": [
+      "International-Playlist.m3u"
     ],
     "logos/international/scares-by-shudder-1080p.png": [
       "International-Playlist.m3u",
@@ -26174,7 +26220,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/la-top-102-9-d8535e9176.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/la-top-107-7-c9b97b2bd3.png": [
       "International-Playlist.m3u",
@@ -26510,7 +26557,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/marina-tv-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/marquee-sports-network.png": [
       "IPTV-Playlist.m3u",
@@ -26676,7 +26724,16 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mcm-pop-580p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/mcm-top-france-821b5da224.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/mcm-top-russia-821b5da224.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/mcn6-music-channel-1080p-b16c4717c3.png": [
       "International-Playlist.m3u",
@@ -26740,6 +26797,10 @@
     "logos/melodie-tv-81420156d3.png": [
       "reports/logo-source-registry.json"
     ],
+    "logos/melody-1fa108e209.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/melody-fm-e501245773.png": [
       "reports/logo-source-registry.json"
     ],
@@ -26786,6 +26847,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/metropolitana-del-cuzco.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/mezzo-live-a73f9b365c.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -26829,6 +26893,10 @@
     "logos/mi-musica-hits-720p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/mi-musica-popular-20cac05b9e.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/mi-musica-reggaeton-d3c433c52d.png": [
       "International-Playlist.m3u",
@@ -33568,7 +33636,6 @@
     "logos/international/merry-christmas-from-viafree-no.png",
     "logos/international/merry-christmas-from-viafree.png",
     "logos/international/metropolitana-del-cuzco.png",
-    "logos/international/mezzo-576p.png",
     "logos/international/mi-musica-hits-720p.png",
     "logos/international/mi-musica-romantica.png",
     "logos/international/minimax-romania.png",
@@ -34184,7 +34251,6 @@
     "logos/metro-tv-1080p-ee3f23e15b.png",
     "logos/metro-tv-honduras-converted-3ee9f1b0ca.png",
     "logos/metro-tv-honduras.png",
-    "logos/metropolitana-del-cuzco.png",
     "logos/mh-one-dil-se-converted-3be08da6a3.png",
     "logos/mh-one-movies-converted-815eec58d8.png",
     "logos/mh1-prime.png",
