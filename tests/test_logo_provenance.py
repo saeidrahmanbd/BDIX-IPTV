@@ -84,7 +84,7 @@ class ExactMovieClubFailureTests(unittest.TestCase):
             registry = ctx.run()
         # Production policy forbids fabricated artwork when an exact source fails.
         self.assertEqual(registry, {})
-        self.assertFalse(any(Path("logos").glob("generated-fallback-*")))
+        self.assertNotIn("generated-fallback-", Path(IPTV).read_text(encoding="utf-8"))
 
     def test_provenance_survives_svg_to_png_conversion_and_classifies_as_fallback(self):
         registry = {key(FB_SVG): prov.canonical_fallback_record()}
