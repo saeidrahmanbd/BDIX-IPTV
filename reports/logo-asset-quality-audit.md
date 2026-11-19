@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-19T08:12:43+00:00**
+Generated: **2026-11-19T08:35:23+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **ace887c44d3410b4ea38dcabc5ab44f3acfa4294585ee5cd94f1f9fb855f2cea**
+- IPTV-Playlist.m3u SHA-256: **8d12d8dcbca54e61e1834b12fd6a4e2d0cfb255be6f085d06dd6c2c2a0791983**
 - International-Playlist.m3u SHA-256: **4c283c9a61fb02f85335597e47c961077b99dd9155594a84ef1dc2fbd453fadd**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **1**
 - Raster/SVG assets with short side under 64 px: **134**
 - Exact-byte duplicate asset clusters: **626**
-- Playlist references whose asset stem differs from the normalized channel name: **1694**
-- Unreferenced image assets immediately inside logos/: **654** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1680**
+- Unreferenced image assets immediately inside logos/: **660** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1093,39 +1093,25 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | BTL TV (Netherlands) (1080p) | btl-tv-netherlands-1080p.png | New Channels |
 | IPTV-Playlist.m3u | Vokta TV (720p) | vokta-tv.png | New Channels |
 | IPTV-Playlist.m3u | CVR Health (576p) | cvr-health.png | New Channels |
-| IPTV-Playlist.m3u | Disha TV (396p) | disha-tv-396p.png | New Channels |
 | IPTV-Playlist.m3u | Gaunda Punjab TV (720p) | gaunda-punjab-tv-720p.png | New Channels |
 | IPTV-Playlist.m3u | Kabaddi 24x7 (720p) | kabaddi-24x7.png | New Channels |
 | IPTV-Playlist.m3u | NDTV Good Times (1080p) | ndtv-good-times.png | New Channels |
 | IPTV-Playlist.m3u | Punjabi Beats HD (576p) | punjabi-beats.png | New Channels |
 | IPTV-Playlist.m3u | Punjab Plus (1080p) | verified-punjab-plus-1080p-8d4d950f36.png | New Channels |
 | IPTV-Playlist.m3u | Qello Concerts by Stingray (1080p) | qello-concerts-by-stingray.png | New Channels |
-| IPTV-Playlist.m3u | R Plus (1080p) | r-plus-1080p.png | New Channels |
 | IPTV-Playlist.m3u | Sony Sports Ten 3 Hindi (1080p) | sony-sports-ten-3-hindi.png | New Channels |
-| IPTV-Playlist.m3u | TV 100 (India) (576p) | tv-100-india-576p.png | New Channels |
-| IPTV-Playlist.m3u | VTU (1080p) | vtu.png | New Channels |
 | IPTV-Playlist.m3u | WeatherSpy (India) (720p) | weatherspy-india.png | New Channels |
 | IPTV-Playlist.m3u | Zodiak TV (1080p) | zodiak-tv.png | New Channels |
-| IPTV-Playlist.m3u | DD Kisan (1080p) | dd-kisan.png | New Channels |
-| IPTV-Playlist.m3u | Gyandarshan (720p) | gyandarshan.png | New Channels |
-| IPTV-Playlist.m3u | Kite Victers (720p) [Not 24/7] | kite-victers.png | New Channels |
 | IPTV-Playlist.m3u | Peace TV Urdu (1080p) | peace-tv-urdu.png | New Channels |
-| IPTV-Playlist.m3u | Shiksha TV (720p) | shiksha-tv.png | New Channels |
 | IPTV-Playlist.m3u | NAN TV (720p) | nan-tv.png | New Backups |
-| IPTV-Playlist.m3u | Nick Jr. (India) (576p) | nick-jr-india.png | New Backups |
 | IPTV-Playlist.m3u | Colors Bangla HD (1080p) | colors-bangla.png | New Backups |
 | IPTV-Playlist.m3u | DD National HD (1080p) | dd-national.png | New Backups |
 | IPTV-Playlist.m3u | Mr Bean Animated (1080p) | mr-bean-animated.png | New Backups |
 | IPTV-Playlist.m3u | Nepal 1 (576p) | nepal-1.png | New Backups |
 | IPTV-Playlist.m3u | Oli TV (India) (1080p) | oli-tv-india-b4a7917c53.png | New Backups |
-| IPTV-Playlist.m3u | Sony Yay! (1080p) | sony-yay.png | New Backups |
 | IPTV-Playlist.m3u | Travelxp 4K HDR (2160p) [Geo-blocked] | travelxp-4k-hdr-2160p-geo-blocked-ce9f4d3118.png | New Backups |
 | IPTV-Playlist.m3u | Peace TV Bangla (1080p) | peace-tv-bangla.png | New Backups |
-| IPTV-Playlist.m3u | Discovery Channel (India) HD (1080p) | discovery-channel-india.png | New Backups |
-| IPTV-Playlist.m3u | Gyandarshan HD (576p) | gyandarshan.png | New Backups |
-| IPTV-Playlist.m3u | History TV18 HD (1080p) [Geo-blocked] | history-tv18.png | New Backups |
 | IPTV-Playlist.m3u | INWILD (1080p) | inwild.png | New Backups |
-| IPTV-Playlist.m3u | Safari TV (576p) | safari-tv.png | New Backups |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
