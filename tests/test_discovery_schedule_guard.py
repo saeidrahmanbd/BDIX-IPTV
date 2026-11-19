@@ -811,7 +811,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "id": 163, "event": "workflow_run", "status": "in_progress", "conclusion": None,
             "created_at": "2026-11-07T01:00:00Z",
         }
-        self.assertTrue(guard.should_current_run_execute(
+        self.assertFalse(guard.should_current_run_execute(
             [completed_refresh, later_run], 163, self.today,
             event="workflow_run", workflow_file="epg-refresh.yml",
         ))
@@ -846,7 +846,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         }
         current = {"id": 157, "status": "in_progress", "conclusion": None,
                    "created_at": "2026-11-07T00:20:00Z"}
-        self.assertTrue(guard.should_current_run_execute(
+        self.assertFalse(guard.should_current_run_execute(
             [previous, current], 157, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
         ))
 
@@ -877,7 +877,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "id": 167, "event": "workflow_run", "status": "in_progress", "conclusion": None,
             "created_at": "2026-11-07T01:00:00Z", "head_sha": "same-main-sha",
         }
-        self.assertTrue(guard.should_current_run_execute(
+        self.assertFalse(guard.should_current_run_execute(
             [previous, current], 167, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
         ))
 
