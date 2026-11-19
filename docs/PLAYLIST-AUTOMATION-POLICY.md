@@ -34,7 +34,8 @@ Daily automation must:
 - Move a first-day definitive failure to `Review`; remove a stream only after three consecutive definitive failed days. A missed day restarts the streak; an inconclusive/authentication/rate-limit/geo-block result is not a definitive failure and cannot authorize deletion.
 - Re-test `Review` entries. When a row is confirmed working and still satisfies the country/genre policy, migrate it to its correct primary group; if the channel identity already has a primary stream, place the working alternate in `Backup`. Keep invalid or policy-ineligible entries in `Review`.
 - Create a dedicated country group only when there are at least five unique primary channel identities for that country. Backup/alternate streams and Review rows do not count. Bangladesh and India retain their established fixed groups; Pakistan and all other country-specific groups follow the five-identity threshold.
-- Reorganize and deduplicate the International playlist under the established regional policy, preserving protected Adult and discovery queues.
+- Discover only dedicated Movies/Music channels worldwide, including Bangladesh, India and Pakistan; preserve existing Fashion TV entries as a legacy exception.
+- Discovery must not broadly reclassify, reorder or delete unrelated existing entries. Commit only validated, targeted queue additions and their fresh report.
 
 A stream URL must not be deleted because of a single failure, an inconclusive probe, or a runner-wide connectivity incident. The batch safety gate must stop publication when the probe results indicate a global network/reachability anomaly.
 

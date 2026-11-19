@@ -7,9 +7,9 @@ after owner review. Definite policy/URL exclusions and duplicate stream URLs
 prevent queueing. Dead streams are removed by the subsequent probe; inconclusive
 streams remain for manual review.
 
-Bangladesh channels of all genres are eligible. Indian Kids and Sports (including
-cricket and football) are eligible; Indian News, Religious, Educational,
-Knowledge, Business/Finance and Farming/Agriculture channels remain excluded.
+Bangladesh channels of all genres are eligible. Indian News and non-Islamic
+religious channels are excluded. Islamic religious channels, Kids, Sports and
+other legitimate live-TV genres remain eligible unless individually denylisted.
 """
 from __future__ import annotations
 import json, re, unicodedata, urllib.request
@@ -35,15 +35,9 @@ BAD_WORDS = {
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
     "religious": re.compile(r"\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
-    "educational": re.compile(r"\b(?:education(?:al)?|learning|school|university|college|academy|e-?vidya|vidya|gyan\s*darshan|knowledge\s*channel)\b", re.IGNORECASE),
-    "farming/agriculture": re.compile(r"\b(?:farming|farm(?:ing)?|agriculture|agricultural|agri(?:culture)?|krishi|kisan|crop\s+science|agronomy|horticulture)\b", re.IGNORECASE),
 }
-# These additional genre exclusions apply only to IPTV New Channels/New Backup intake.
-DISCOVERY_EXTRA_CATEGORY_PATTERNS = {
-    "knowledge": re.compile(r"\b(?:knowledge|documentary|wildlife|history|science|discovery|animal\s*planet|national\s*geographic|nat\s*geo|infotainment)\b", re.IGNORECASE),
-    "business/finance": re.compile(r"\b(?:business|finance|financial|stock\s*market|market\s*news|econom(?:y|ic)|cnbc|bloomberg|zee\s*business|et\s*now)\b", re.IGNORECASE),
-    "farming/agriculture": re.compile(r"\b(?:farm(?:s|ing)?|agricultur(?:e|al)|agronomy|kisan|kisaan|krishi|krush[iy]|agri(?:culture)?\s*(?:tv|channel)?|rural\s+agriculture)\b", re.IGNORECASE),
-}
+# No additional generic genre exclusions apply to Indian live-TV discovery.
+DISCOVERY_EXTRA_CATEGORY_PATTERNS = {}
 
 def canonical_channel_name(value: str) -> str:
     value = re.sub(r"\([^)]*\)|\[[^]]*\]", " ", str(value or ""))
@@ -140,7 +134,15 @@ NON_CHANNEL_PROGRAM_NAMES = {canonical_channel_name("Gopal Bhar")}
 FORBIDDEN_WORDS = {"news"}
 ISLAMIC_ALLOWED_MARKERS = re.compile(
     r"\b(?:islamic|islam|muslim|qur['’]?an|madani|peace\s*tv|huda|noor|deen|ummah|"
-    r"makkah|mecca|madina|al\s*furqan|sunnah)\b",
+    r"makkah|mecca|madina|al\s*furqan|sunnah|mta|qtv|iqra|hadith|ramadan|hajj|umrah|masjid|mosque|azan|adhan|kaaba|sharia)\b",
+    re.IGNORECASE,
+)
+NON_ISLAMIC_RELIGIOUS_MARKERS = re.compile(
+    r"\b(?:angel|hosanna|gospel|christian|christ|hindu|hinduism|sanatan|sikh|"
+    r"gurbani|gurubani|church|temple|calvary|santvani|sharnam|sharanam|aastha|"
+    r"sadhna|sanskar|jinvani|satsang|jagran|bhagwat|aradhana|prarthana|divya|"
+    r"shubh|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|"
+    r"deity|holy\s*mass|orthodox|shrine)\b",
     re.IGNORECASE,
 )
 FORBIDDEN_BRANDS = re.compile(
@@ -261,14 +263,16 @@ def prohibited_channel(
     values = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""), a.get("channel-id", "")))
     if resolved_country == "IN" and re.search(r"\bmh\s*1\s*prime\b|\bmh1prime\b", values, re.IGNORECASE):
         return "known Indian prohibited MH One Prime channel is prohibited"
-    # Bangladesh is intentionally unrestricted by genre. The exclusions below
-    # are India-only and cover all religious subtypes plus the requested genres.
+    # Bangladesh is unrestricted by genre. India excludes News and non-Islamic
+    # religious channels only; Islamic religious and other legitimate live-TV genres remain eligible.
     if resolved_country != "IN":
         return None
 
     group = a.get("group-title", "").strip()
     values = " ".join((name, a.get("tvg-name", ""), group, a.get("tvg-id", ""), a.get("channel-id", "")))
     for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
+        if category == "religious" and ISLAMIC_ALLOWED_MARKERS.search(values) and not NON_ISLAMIC_RELIGIOUS_MARKERS.search(values):
+            continue
         if pattern.search(group) or pattern.search(values):
             return f"Indian {category} channel is prohibited"
     if discovery:

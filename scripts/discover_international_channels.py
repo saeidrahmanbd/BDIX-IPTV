@@ -114,13 +114,12 @@ def is_verified_aruba_vip_music(a, code):
 def policy(a,name,allow_legacy_group=False):
  code=country_code(a)
  group_text=(a.get("group-title") or "").strip().casefold()
- group_parts=[re.sub(r"[^a-z0-9]+","",part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
+ group_parts=[norm(part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
  text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
  if BAD_NAME_RE.search(name): return None,"test/VOD/non-TV name",code
  name_key=norm(name)
  if not name or name_key in {"","na","unknown","test","demo","sample","placeholder","newchannel","unnamed","noname","notavailable","channel","tv"}:
   return None,"non-real/test channel",code
- if code=="ZZ": return None,"country not verified",code
 
  # Genre classification is deliberately independent of discovery eligibility.
  # This supports consistent placement of already-curated/imported channels.
@@ -186,13 +185,20 @@ def discovery_eligibility(a,name,allow_legacy_group=False):
  target, reason, code = policy(a,name,allow_legacy_group=allow_legacy_group)
  if target is None:
   return None,reason,code
- if code=="ZZ":
-  return None,"country not verified",code
  if FASHION_RE.search(f"{name} {a.get('tvg-name','')}"):
   return None,"Fashion TV is a preserved legacy exception, not a discovery genre",code
  if target in {"News","Religious","Kids","Sports","Documentary & Wildlife","Fashion TV"}:
   label = "news" if target == "News" else target.casefold()
   return None,f"{label} is outside the worldwide Movie/Music-only discovery policy",code
+ candidate_text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
+ if re.search(r"\b(?:adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel)\b",candidate_text,re.I):
+  return None,"adult is outside the worldwide Movie/Music-only discovery policy",code
+ group_text=(a.get("group-title") or "").strip()
+ group_key=norm(group_text)
+ if group_text and group_key not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_key=="international"):
+  group_parts=[norm(part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
+  if any(part not in MOVIE_CATEGORY_PARTS and part not in MUSIC_CATEGORY_PARTS for part in group_parts):
+   return None,"source category is not Movies or Music",code
  genre=infer_genre(a,name)
  if genre not in {"Movies","Music"}:
   return None,"channel is not clearly Movies or Music",code

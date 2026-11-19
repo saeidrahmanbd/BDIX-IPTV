@@ -5,7 +5,7 @@ The root [README](../README.md) is the project overview. This page records the c
 ## Maintained playlists
 
 - [IPTV-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) — the owner-curated main collection, including Bangladesh, Indian categories, Pakistani, International and other genre/country groups.
-- [International-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) — the automation-managed companion collection, including Bangladesh and India under their applicable rules, plus eligible movie and music channels from Pakistan and other countries.
+- [International-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) — the automation-managed companion collection for dedicated Movies/Music channels worldwide, including Bangladesh, India and Pakistan; existing Fashion TV entries are preserved as a legacy exception.
 
 ## Automation permissions
 
@@ -48,12 +48,12 @@ A single failed probe, an inconclusive response or a runner-wide reachability in
 
 | Origin / collection | IPTV-Playlist.m3u | International-Playlist.m3u |
 |---|---|---|
-| Bangladesh | Eligible; owner-curated | All genres are eligible |
-| India | News, religious (including Islamic), educational, business/finance and farming are prohibited. Kids and sports—including cricket and football—are allowed. | Same Indian exclusions; kids and sports are allowed |
-| Pakistan | Supported only where explicitly accepted by the main playlist's manual curation | Eligible under Pakistan's unrestricted country policy |
+| Bangladesh | Eligible; owner-curated | Only dedicated Movies/Music channels are eligible for new discoveries; existing curated entries are preserved |
+| India | News and non-Islamic religious channels are prohibited. Islamic religious channels, kids and sports—including cricket and football—are allowed. Other legitimate live-TV genres remain eligible unless specifically denylisted. | Only dedicated Movies/Music channels are eligible for new discoveries, like every other country; existing curated entries are preserved |
+| Pakistan | Supported only where explicitly accepted by the main playlist's manual curation | Only dedicated Movies/Music channels are eligible, like every other country |
 | Other countries | Existing owner-curated entries remain subject to manual selection | Only dedicated Movie and Music channels are eligible |
 
-The main playlist's source scope for new discovery is Bangladesh and India. Its New Channels/New Backups queues exist for manual owner review. The International discovery workflow accepts Bangladesh and Pakistan under their unrestricted country rules, India under its regional exclusions, and Movie/Music-only candidates from other countries.
+The main playlist's source scope for new discovery is Bangladesh and India. Its New Channels/New Backups queues exist for manual owner review. The International discovery workflow accepts only dedicated Movie/Music channels worldwide, including Bangladesh, India and Pakistan. Existing Fashion TV entries are preserved as a legacy exception, not accepted as a new discovery genre.
 
 ## Grouping and Review rules
 

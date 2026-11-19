@@ -425,7 +425,8 @@ def _review_recovery_target(info: str, original_group: str,
     country = international_policy.country_code(a, context_group, name)
     if not country or country == "ZZ":
         return None
-    if country == "IN" and international_policy.bd_policy.prohibited_channel(a, name, "IN"):
+    eligible_target, eligibility_reason, _ = international_policy.discovery.discovery_eligibility(a, name)
+    if not eligible_target or eligibility_reason:
         return None
     target, kind, reason = international_policy.classify(
         a, name, context_group, country, promote_backup=True
