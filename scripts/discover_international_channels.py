@@ -120,7 +120,6 @@ def policy(a,name,allow_legacy_group=False):
  name_key=norm(name)
  if not name or name_key in {"","na","unknown","test","demo","sample","placeholder","newchannel","unnamed","noname","notavailable","channel","tv"}:
   return None,"non-real/test channel",code
- if code=="ZZ": return None,"country not verified",code
 
  # Genre classification is deliberately independent of discovery eligibility.
  # This supports consistent placement of already-curated/imported channels.
@@ -186,8 +185,6 @@ def discovery_eligibility(a,name,allow_legacy_group=False):
  target, reason, code = policy(a,name,allow_legacy_group=allow_legacy_group)
  if target is None:
   return None,reason,code
- if code=="ZZ":
-  return None,"country not verified",code
  if FASHION_RE.search(f"{name} {a.get('tvg-name','')}"):
   return None,"Fashion TV is a preserved legacy exception, not a discovery genre",code
  if target in {"News","Religious","Kids","Sports","Documentary & Wildlife","Fashion TV"}:
