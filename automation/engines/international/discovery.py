@@ -149,6 +149,9 @@ def build_international_discovery_batch(playlist_text: str, source_text: str,
         safe_attrs=dict(attrs)
         if country_conflict:
             safe_attrs.pop("tvg-country",None)
+        inferred_genre=policy.infer_genre(eligibility_attrs,name)
+        if inferred_genre:
+            safe_attrs["tvg-content"]=inferred_genre
         original_logo=(safe_attrs.get("tvg-logo") or "").strip()
         logo=_local_logo(root,original_logo)
         if original_logo and not logo:
