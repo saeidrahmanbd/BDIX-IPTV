@@ -151,8 +151,8 @@ class DiscoveryTests(unittest.TestCase):
     def test_country_metadata_is_preserved_without_verification_or_rewriting(self):
         url = "https://cdn.example.com/live/index.m3u8"
         cases = [
-            ({"tvg-id": "CartoonNetwork.us", "channel-id": "CartoonNetwork.us",
-              "tvg-country": "US"}, "Cartoon Network"),
+            ({"tvg-id": "StarUtsav.us", "channel-id": "StarUtsav.us",
+              "tvg-country": "US"}, "Star Utsav"),
             ({"tvg-id": "ColorsCineplex.uk", "channel-id": "ColorsCineplex.uk",
               "tvg-country": "GB"}, "Colors Cineplex [UK]"),
         ]
