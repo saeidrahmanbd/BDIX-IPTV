@@ -42,9 +42,9 @@ jobs:
         run: python scripts/discovery_schedule_guard.py guard epg-refresh.yml
   refresh:
     needs: daily_guard
-    # Refresh against the latest committed playlists even when a playlist-maintenance
-    # workflow is blocked, but run at most once per Bangladesh calendar date.
-    if: ${{ needs.daily_guard.outputs.should_run == 'true' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion != 'cancelled') && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
+    # The scheduled run follows the daily discovery job; manual dispatch is
+    # available for an owner-requested immediate refresh.
+    if: ${{ needs.daily_guard.outputs.should_run == 'true' }}
     concurrency:
       group: iptv-playlist-main-writer-v5
       queue: max
