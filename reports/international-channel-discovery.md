@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-19 01:55 UTC
+- Last scan: 2026-11-19 02:29 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12268
-- Existing playlist records: 3281
+- Existing playlist records: 3284
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2233
+- Exact source URLs already in playlist: 2238
 - Duplicate URLs within source feed: 3
-- New eligible source records after URL/policy filtering: 132
+- New eligible source records after URL/policy filtering: 128
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
 - New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
@@ -64,14 +64,14 @@
 - **La Hermandad Salsera (1080p) [Not 24/7]** — New Channels — CO — https://streamlov.alsolnet.com/hermandadsalsera/live/playlist.m3u8
 - **La Voz del Tropico (480p) [Geo-blocked]** — New Channels — DO — https://ss2.tvrdomi.com:1936/lavozdeltropico/lavozdeltropico/playlist.m3u8
 - **LaPuraCrema Television** — New Channels — VE — https://streamlov.alsolnet.com/lapuracrema/live/playlist.m3u8
-- **Mooz Dance HD (1080i) [Geo-blocked]** — New Channels — RO — https://meta.vcdn.biz/bb45aeed3156b62f01b6ca222920d46b_megogo/live/hls/b/700_2500/u_sid/0/o/183161921/rsid/20877e0c-fb47-4c47-a29d-19fadadbccb7/u_uid/2260062697/u_vod/0/u_device/cms_html5/u_devicekey/_site/lip/81.196.174.41*asn/u_srvc/109126/u_did/web_c02d0d195494991ada83b5ae2a2f87d6041c11b1b8f79fc86ae5b7b557894fa0/type.live/playlist.m3u8
-- **MTV Biggest Pop (1080p)** — New Channels — US — https://jmp2.uk/plu-5d14fd1a252d35decbc4080c.m3u8
-- **MTV Biggest Pop BR (1080p)** — New Channels — US — https://jmp2.uk/plu-6047fbdbbb776a0007e7f2ff.m3u8
-- **MTV Biggest Pop CA (1080p)** — New Channels — US — https://jmp2.uk/plu-65410176770cf1000866bf31.m3u8
-- **MTV Biggest Pop LatAm (1080p)** — New Channels — US — https://jmp2.uk/plu-6047fabfce6e8e00070bcc9f.m3u8
-- **MTV Classic BR (720p)** — New Channels — US — https://jmp2.uk/plu-66a01dcb8561260008b0a41d.m3u8
-- **MTV Classic CA (720p)** — New Channels — US — https://jmp2.uk/plu-654100b4bdf3cf0008aa49c7.m3u8
-- **MTV Classic LatAm (720p)** — New Channels — US — https://jmp2.uk/plu-66a11a21a79dea0008aa90ca.m3u8
+- **Look Thoong TV (720p) [Not 24/7]** — New Channels — LA — https://livefta.malimarcdn.com/ftaedge00/lookthoongtv.sdp/playlist.m3u8
+- **Mi Musica Hits (720p)** — New Channels — US — http://38.188.186.47:4000/play/a04n/index.m3u8
+- **MTV Flow Latino (720p)** — New Channels — US — https://jmp2.uk/plu-5d3609cd6a6c78d7672f2a81.m3u8
+- **MTV Flow Latino LatAm (720p)** — New Channels — US — https://jmp2.uk/plu-62b218fc511d4b00070ddc0c.m3u8
+- **MTV Spankin' New (1080p)** — New Channels — US — https://jmp2.uk/plu-5d14fdb8ca91eedee1633117.m3u8
+- **MTV Spankin' New CA (1080p)** — New Channels — US — https://jmp2.uk/plu-6541010f770cf1000866be98.m3u8
+- **Music (480p) [Not 24/7]** — New Channels — KG — https://st2.mediabay.tv/KG_KTRK-Muzika/index.m3u8
+- **Music Box Brazil (720p)** — New Channels — BR — http://170.83.49.66:8083/MUSICBOXBRASILHD/index.m3u8
 
 ## Backup alternates
 
@@ -92,38 +92,31 @@
 ## Rejections
 
 - Fashion TV is a preserved legacy exception, not a discovery genre: 7
-- Indian business/finance channel is prohibited: 3
-- Indian educational channel is prohibited: 6
-- Indian farming/agriculture channel is prohibited: 1
-- Indian knowledge channel is prohibited: 1
-- Indian religious channel is prohibited: 1
 - TV series is not a dedicated Movie/Music channel: 36
 - ambiguous Movie/Music classification: 1
-- channel is not clearly Movies or Music: 39
-- country not verified: 11
 - documentary & wildlife is outside the worldwide Movie/Music-only discovery policy: 196
 - general entertainment is not a dedicated Movie/Music channel: 70
-- kids is outside the worldwide Movie/Music-only discovery policy: 309
-- known Indian prohibited brand/category is prohibited: 13
-- news is outside the worldwide Movie/Music-only discovery policy: 1077
+- kids is outside the worldwide Movie/Music-only discovery policy: 310
+- known Indian prohibited brand/category is prohibited: 16
+- news is outside the worldwide Movie/Music-only discovery policy: 1079
 - non-real/test channel: 1
 - permanently banned channel: 9
 - religious is outside the worldwide Movie/Music-only discovery policy: 772
-- source category is not Movies or Music: 6613
+- source category is not Movies or Music: 6668
 - sports is outside the worldwide Movie/Music-only discovery policy: 315
 - test/VOD/non-TV name: 296
 - unsafe or tokenized URL: 123
 
 ## Stream verification
 
-- Run timestamp: 2026-11-19T01:55:58+00:00
+- Run timestamp: 2026-11-19T02:29:11+00:00
 - Mode: international
 - New entries and discovery queues probed: 57
-- Verified live media responses: 7
-- Verified new primary channels automatically promoted: 7
+- Verified live media responses: 5
+- Verified new primary channels automatically promoted: 5
 - Verified alternate streams moved to Backup: 0
 - Inconclusive candidates retained for manual review: 0
-- Definitively dead new candidates removed: 49
+- Definitively dead new candidates removed: 51
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
@@ -153,9 +146,11 @@
 - Removed newly discovered La Hermandad Salsera (1080p) [Not 24/7] from New Channels — HTTP 404.
 - Removed newly discovered La Voz del Tropico (480p) [Geo-blocked] from New Channels — HTTP 404.
 - Removed newly discovered LaPuraCrema Television from New Channels — HTTP 404.
-- Retained Mooz Dance HD (1080i) [Geo-blocked] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Removed newly discovered Look Thoong TV (720p) [Not 24/7] from New Channels — HTTP 404.
+- Removed newly discovered Mi Musica Hits (720p) from New Channels — HTTP 404.
 - Removed newly discovered More TV Sci-fi from New Channels — HTTP 404.
 - Removed newly discovered Mosfilm Gold Collection (576p) from New Channels — HTTP 404.
+- Retained Music (480p) [Not 24/7] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Removed newly discovered Patriot (720p) from New Channels — HTTP 404.
 - Removed newly discovered Pluto TV Ferne Galaxien from New Channels — HTTP 404.
 - Removed newly discovered Pluto TV Film Ancora Piu Romantici from New Channels — HTTP 404.
@@ -181,20 +176,18 @@
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
-- Promoted Mooz Dance HD (1080i) [Geo-blocked] from New Channels to Review — inconclusive stream check.
-- Promoted MTV Biggest Pop (1080p) from New Channels to United States — verified primary candidate.
-- Promoted MTV Biggest Pop BR (1080p) from New Channels to United States — verified primary candidate.
-- Promoted MTV Biggest Pop CA (1080p) from New Channels to United States — verified primary candidate.
-- Promoted MTV Biggest Pop LatAm (1080p) from New Channels to United States — verified primary candidate.
-- Promoted MTV Classic BR (720p) from New Channels to United States — verified primary candidate.
-- Promoted MTV Classic CA (720p) from New Channels to United States — verified primary candidate.
-- Promoted MTV Classic LatAm (720p) from New Channels to United States — verified primary candidate.
+- Promoted MTV Flow Latino (720p) from New Channels to United States — verified primary candidate.
+- Promoted MTV Flow Latino LatAm (720p) from New Channels to United States — verified primary candidate.
+- Promoted MTV Spankin' New (1080p) from New Channels to United States — verified primary candidate.
+- Promoted MTV Spankin' New CA (1080p) from New Channels to United States — verified primary candidate.
+- Promoted Music (480p) [Not 24/7] from New Channels to Review — inconclusive stream check.
+- Promoted Music Box Brazil (720p) from New Channels to Brazil — verified primary candidate.
 
 ## Final validation
 
-- Run timestamp: 2026-11-19T01:55:59+00:00
+- Run timestamp: 2026-11-19T02:29:11+00:00
 - Validation status: PASS
-- M3U entries parsed: 3289
+- M3U entries parsed: 3290
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
