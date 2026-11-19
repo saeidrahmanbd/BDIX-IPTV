@@ -4,12 +4,12 @@ from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 import sys
+import re
 from urllib.request import Request, urlopen
 from automation.engines.iptv.candidate_engine import DiscoveryCandidate
 
 MAX_SOURCE_BYTES=50*1024*1024
 DEFAULT_TIMEOUT=90
-UNRESTRICTED_COUNTRIES={"BD","IN","PK"}
 
 @dataclass(frozen=True)
 class InternationalDiscoveryBatch:
@@ -92,7 +92,7 @@ def build_international_discovery_batch(playlist_text: str, source_text: str,
                                         repository_root: str | Path,
                                         max_new_channels: int = 50,
                                         max_new_backups: int = 50) -> InternationalDiscoveryBatch:
-    """Build manual-review candidates; BD/IN/PK are unrestricted and other verified countries are Movie/Music-only."""
+    """Build manual-review candidates under the worldwide Movies/Music-only policy."""
     policy=_policy_module()
     root=Path(repository_root).resolve()
     _,existing=policy.parse(playlist_text)
@@ -127,11 +127,15 @@ def build_international_discovery_batch(playlist_text: str, source_text: str,
         id_country=policy.country_code({"tvg-id":attrs.get("tvg-id",""),"channel-id":attrs.get("channel-id","")})
         country_conflict=declared_country!="ZZ" and id_country!="ZZ" and declared_country!=id_country
         code="ZZ" if country_conflict else policy.country_code(attrs)
-        if code not in UNRESTRICTED_COUNTRIES and code != "ZZ":
-            _,reason,_=policy.discovery_eligibility(attrs,name)
-            if reason:
-                rejected[reason]=rejected.get(reason,0)+1
-                continue
+        eligibility_attrs=dict(attrs)
+        if country_conflict:
+            eligibility_attrs.pop("tvg-country",None)
+            for field in ("tvg-id","channel-id"):
+                eligibility_attrs[field]=re.sub(r"\.[a-z]{2}(?=@|$)","",eligibility_attrs.get(field,""),flags=re.I)
+        _,reason,_=policy.discovery_eligibility(eligibility_attrs,name)
+        if reason:
+            rejected[reason]=rejected.get(reason,0)+1
+            continue
         elif code=="ZZ":
             warnings.append(f"{name}: country could not be verified; retained in manual-review queue")
 
@@ -143,6 +147,8 @@ def build_international_discovery_batch(playlist_text: str, source_text: str,
             warnings.append(f"{name}: tvg-country missing or unverified; source ID retained for owner review")
 
         safe_attrs=dict(attrs)
+        if country_conflict:
+            safe_attrs.pop("tvg-country",None)
         original_logo=(safe_attrs.get("tvg-logo") or "").strip()
         logo=_local_logo(root,original_logo)
         if original_logo and not logo:
