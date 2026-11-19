@@ -289,8 +289,13 @@ def promote_verified_candidates(entries, verified_starts, inconclusive_starts, u
         attrs = dict(entry["attrs"])
         code = discovery.country_code(attrs)
         identity = discovery.primary_identity(attrs, entry["name"])
-        if code not in discovery.ISO_CODES or not identity:
-            decisions.append((entry, "Review", "country or channel identity is not verified"))
+        if not identity:
+            decisions.append((entry, "Review", "channel identity is not verified"))
+            continue
+        if code not in discovery.ISO_CODES:
+            # Country is optional metadata for a valid Movies/Music candidate.
+            # Keep it in its existing manual-review queue; do not promote it to a country group.
+            decisions.append((entry, entry["group"], "country metadata incomplete; retained in discovery queue"))
             continue
         identity_key = (code, identity)
         if identity_key in reserved:
