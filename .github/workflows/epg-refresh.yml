@@ -1,5 +1,5 @@
 name: Refresh IPTV EPG
-# Publish one validated XMLTV guide daily, after the 07:00 Bangladesh discovery run.
+# Publish one validated XMLTV guide daily, after the 05:50 Bangladesh playlist-maintenance run.
 # Manual dispatch remains available for an owner-requested immediate rebuild.
 # Do not trigger XMLTV generation for every playlist/report/logo push.
 
@@ -12,7 +12,7 @@ concurrency:
 
 on:
   schedule:
-    - cron: '30 1 * * *' # 07:30 Asia/Dhaka, after the 07:00 channel discovery run
+    - cron: '10 0 * * *' # 06:10 Asia/Dhaka, after the daily playlist writers
   workflow_dispatch:
 
 # EPG generation is a main-branch writer. Keep it in the shared writer queue so it
