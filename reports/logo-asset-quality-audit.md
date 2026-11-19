@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-19T06:03:09+00:00**
+Generated: **2026-11-19T08:02:46+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **ace887c44d3410b4ea38dcabc5ab44f3acfa4294585ee5cd94f1f9fb855f2cea**
-- International-Playlist.m3u SHA-256: **ce5ce920b63dd9cc3f5b349beec3b94c3f930d39c8972824d4fa944130f611eb**
+- International-Playlist.m3u SHA-256: **a4209b19669ea9471b38666146408739bb5e21bf3f9c064cc4fd46886c242b98**
 
 ## Summary
 
@@ -15,11 +15,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **1**
-- Raster/SVG assets with short side under 64 px: **135**
-- Exact-byte duplicate asset clusters: **648**
-- Playlist references whose asset stem differs from the normalized channel name: **1657**
-- Unreferenced image assets immediately inside logos/: **659** (not deleted; other tooling or playlists may use them)
-- Technical read/repair errors: **1**
+- Raster/SVG assets with short side under 64 px: **134**
+- Exact-byte duplicate asset clusters: **626**
+- Playlist references whose asset stem differs from the normalized channel name: **1693**
+- Unreferenced image assets immediately inside logos/: **654** (not deleted; other tooling or playlists may use them)
+- Technical read/repair errors: **0**
 
 ## Safe repairs applied
 
@@ -49,7 +49,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Detected format | Error |
 |---|---|---|
-| logos/desh-bangla-tv.png |  | unrecognized data stream contents when reading image file |
+| — | — | — |
 
 ## Small assets requiring visual review
 
@@ -171,7 +171,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | extra-tv-42-720p-07d6d24401.png | 158×39 | no |
 | gazi-tv-6df71ae4.png | 128×53 | no |
 | girlfriends-films-4990caa383.png | 130×20 | no |
-| gravitas-movies.png | 107×50 | no |
 | i-am-channel-576p-fdc8693f06.png | 128×59 | no |
 | jalwa-tv-dfcf679014.png | 208×60 | no |
 | madaniyat-va-ma-rifat-576p-0951caf282.png | 132×35 | no |
@@ -198,7 +197,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/13-festival-1080p-c89c0ee60b.png, logos/international/13-festival-1080p.png
 - logos/2tv-1080p.png, logos/international/2tv-1080p.png
 - logos/30a-music-720p-950f250b00.png, logos/international/30a-music-720p.png
-- logos/30a-music.png, logos/unused/30a-music.png
 - logos/312-kino-406p.png, logos/international/312-kino-406p.png
 - logos/360tunebox-1080p-c81dfec860.png, logos/international/360tunebox-1080p.png
 - logos/4-fun-kids-b7ce951979.png, logos/unused/4-fun-kids-576i-64da9e594d.png
@@ -342,7 +340,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/cinemax-asia-hd-1080p.png, logos/international/cinemax-asia-720p-geo-blocked.png, logos/international/cinemax-asia-hd-1080p.png
 - logos/cinemax-czech-republic.png, logos/international/cinemax-central-europe.png, logos/international/cinemax-czech-republic.png, logos/international/cinemax-united-states-west-720p.png
 - logos/cinemax-latin-america-720p.png, logos/international/cinemax-latin-america-720p.png
-- logos/cinemax-moremax.png, logos/unused/cinemax-moremax.png
 - logos/cinestar-1-bulgaria.png, logos/international/cinestar-1-bulgaria.png
 - logos/cinestar-action-bulgaria.png, logos/international/cinestar-action-bulgaria.png
 - logos/cinevault-westerns.png, logos/international/cinevault-westerns-540p-geo-blocked.png
@@ -381,9 +378,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/darshana-tv.png, logos/unused/darshana-tv-360p-172e185e63.png
 - logos/dbm-tv-1080p-002259b21f.png, logos/international/dbm-tv-1080p.png
 - logos/dd-arun-prabha.png, logos/unused/dd-arun-prabha-576p-5fb9868af8.png
-- logos/dd-bharati.png, logos/unused/dd-bharati-576p-0dd8dfb333.png
 - logos/dd-jharkhand.png, logos/unused/dd-jharkhand-576p-c8bfe17763.png
-- logos/dd-urdu.png, logos/unused/dd-urdu-576p-51b76262e4.png
 - logos/de-pelicula-latin-america-9ce9ae4238.png, logos/international/de-pelicula-latin-america.png
 - logos/deep-house-district-1080p.png, logos/international/deep-house-district-1080p.png
 - logos/deewana-hd.png, logos/international/deewana-hd-540p.png
@@ -406,7 +401,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/dust-1080p.png, logos/international/dust-1080p.png
 - logos/e40-1080p.png, logos/international/e40-1080p.png
 - logos/ebc-foreign-movie.png, logos/international/ebc-foreign-movie.png
-- logos/ebony-tv-by-lionsgate-1080p-f90858c31e.png, logos/unused/ebony-tv-by-lionsgate-1080p-f90858c31e-converted-47a8581d6a.png
 - logos/el-sol-network-tv-1080p.png, logos/international/el-sol-network-tv-1080p.png
 - logos/ellinikos-fm-720p.png, logos/international/ellinikos-fm-720p.png
 - logos/eman-tv-482a6c2567.png, logos/unused/emantv-1080p-b465ae9d98.png
@@ -415,7 +409,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/etv-beats-1080p-aa1d38c3fd.png, logos/international/etv-beats-1080p.png
 - logos/etv-plus.png, logos/international/etv-plus-396p.png
 - logos/euro-indie-music-chart-tv-360p.png, logos/international/euro-indie-music-chart-tv-360p.png
-- logos/euro-sports-hd.png, logos/unused/euro-sports-hd.png
 - logos/europa-plus-tv-belarus-aff73dda11.png, logos/international/europa-plus-tv-1080p.png
 - logos/evrokino-hd-1080p.png, logos/international/evrokino-hd-1080p.png
 - logos/exa-tv.png, logos/international/exa-tv.png
@@ -433,7 +426,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/filmbox-plus-love-and-crime-a83544bb95.png, logos/international/filmbox-love-crime-adria.png, logos/international/filmbox-love-crime-bulgaria-720p.png
 - logos/filmbox-plus-one-magyar-98de98aaef.png, logos/international/filmbox-one-bulgaria-576p.png, logos/international/filmbox-one-nederland.png, logos/international/filmbox-one-ukraine-baltics-450p-geo-blocked.png
 - logos/filmes-suspense.png, logos/international/filmes-suspense.png, logos/unused/filmes-suspense-19ef6540fd.png
-- logos/filmrise-western-720p-7d3f145be0.png, logos/unused/filmrise-western-720p-7d3f145be0-converted-d85c0623ef.png
 - logos/filmuadrama-1080p.png, logos/international/filmuadrama-1080p.png
 - logos/first-music-channel-fcfb3caf85.png, logos/international/first-music-channel-russia-1080p.png
 - logos/flicks-of-fury.png, logos/international/flicks-of-fury.png
@@ -450,11 +442,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/god-stands-kids-club-tv.png, logos/international/god-stands-kids-club-tv-arabic.png, logos/international/god-stands-kids-club-tv-chinese.png, logos/international/god-stands-kids-club-tv.png
 - logos/golden-premier-1080p.png, logos/international/golden-premier-1080p.png, logos/international/golden-premier-2-1080p.png
 - logos/goldmines.png, logos/international/goldmines-2.png, logos/unused/goldmines-576p-99e087b760.png
-- logos/gravitas-movies.png, logos/unused/gravitas-movies.png
 - logos/great-movies-1080p-9cc0399e3e.png, logos/international/great-movies.png
 - logos/great-romance-1080p-7315cca1df.png, logos/international/great-romance.png
 - logos/h-t-music-channel-480p.png, logos/international/h-t-music-channel-480p.png
-- logos/hallmark-movies-more.png, logos/unused/hallmark-movies-more-1080p-9526bb5c86-converted-98d1f5941d.png, logos/unused/hallmark-movies-more-1080p-9526bb5c86.png
+- logos/hallmark-movies-more.png, logos/unused/hallmark-movies-more-1080p-9526bb5c86.png
 - logos/hbo-2-poland-1080p.png, logos/international/hbo-2-poland-1080p.png
 - logos/hbo-asia-sd.png, logos/international/hbo-asia-sd.png
 - logos/hbo-hits-asia-hd-1080p.png, logos/international/hbo-hits-asia-hd-1080p.png
@@ -472,7 +463,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/30a-we-love-cars-720p.png, logos/unused/30a-television-channel-720p-c57fcbf822.png, logos/unused/30a-we-love-cars-720p-e13fa67ae0.png
 - logos/international/3abn-kids.png, logos/unused/3abn-kids-720p-d71b6bf537.png
 - logos/international/3cat-plats-bruts-1080p.png, logos/unused/3cat-plats-bruts-1080p-f4ca65b6d9.png
-- logos/international/50-cent-action-720p.png, logos/unused/50-cent-action-720p-2a1be4355a-converted-438ba5f062.png, logos/unused/50-cent-action-720p-2a1be4355a.png
+- logos/international/50-cent-action-720p.png, logos/unused/50-cent-action-720p-2a1be4355a.png
 - logos/international/alegria-tv-720p.png, logos/unused/alegria-tv-720p-d83a7253e3.png
 - logos/international/artflix-movie-classics-720p.png, logos/unused/artflix-movie-classics-720p-1888c5698d.png
 - logos/international/avatar-germany.png, logos/international/avatar-sweden.png
@@ -573,7 +564,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/osn-movies-action-1080p.png, logos/osn-movies-action-1080p.png
 - logos/international/ostrosyuzhetnoye-hd-1080p.png, logos/ostrosyuzhetnoye-hd-1080p.png
 - logos/international/paramount-movie-channel.png, logos/paramount-movie-channel.png, logos/unused/paramount-movie-channel-d46b22ff12.png
-- logos/international/paramount-picks.png, logos/unused/paramount-picks-26e6b381c6-converted-747147a15a.png, logos/unused/paramount-picks-26e6b381c6.png
+- logos/international/paramount-picks.png, logos/unused/paramount-picks-26e6b381c6.png
 - logos/international/plim-plim-1080p.png, logos/plim-plim-1080p.png
 - logos/international/pluto-classic-movie-westerns.png, logos/pluto-classic-movie-westerns.png, logos/unused/pluto-classic-movie-westerns-70b09a6535.png
 - logos/international/pluto-tv-90-s-classics.png, logos/pluto-tv-90-s-classics.png
@@ -779,13 +770,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/yo-mtv-1080p.png, logos/international/yo-mtv-ca-1080p.png, logos/unused/yo-mtv-1080p-481061433b.png
 - logos/international/yu-gi-oh-1080p.png, logos/yu-gi-oh-1080p.png
 - logos/international/zee-tv-converted-4946c72750.png, logos/zee-tv-2fb6673cf7.png
-- logos/kronehit-tv.png, logos/unused/kronehit-tv.png
 - logos/ktv-sport-plus.png, logos/unused/ktv-sport-plus.png
 - logos/mad.png, logos/unused/mad.png
 - logos/mei-ah-movie-channel.png, logos/unused/mei-ah-movie-channel-b6a14207.png
 - logos/metro-tv-india-0625d4e893.png, logos/unused/metro-tv.png
-- logos/mh-one-prime.png, logos/unused/mh-one-prime.png
-- logos/movie-music-by-stingray-1080p-cf132e65b8.png, logos/unused/movie-music-by-stingray-1080p-cf132e65b8-converted-8b72a9d28e.png
 - logos/music-box-hits.png, logos/unused/music-box-hits-7f2dd7fb76.png
 - logos/mytime-movie-network-brazil-0641ac6cd5.png, logos/unused/mytime-movie-network-720p-cc34ff46f5.png
 - logos/mytime-movie-network-spain-5d68663811.png, logos/unused/mytime-movie-network-1080p-79e6ec3226.png
@@ -793,8 +781,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/nickelodeon-cis-9bff2e9298.png, logos/unused/nickelodeon-73ebd264b3.png
 - logos/nickelodeon-hungary-034dfb11a2.png, logos/unused/nickelodeon-312f4b9648.png
 - logos/normalized/tehzeeb-tv.png, logos/tehzeeb-tv.png
-- logos/now-70s.png, logos/unused/now-70s-720p-bc6643964d.png, logos/unused/now-70s.png
-- logos/now-80-s.png, logos/unused/now-80-s.png
+- logos/now-70s.png, logos/unused/now-70s-720p-bc6643964d.png
 - logos/now-rock-1080p-033d8aedc8.png, logos/unused/now-rock.png
 - logos/oman-sports-tv.png, logos/unused/oman-sports-tv.png
 - logos/paighan-tv.png, logos/unused/paighan-tv-00a9e59079.png
@@ -803,44 +790,34 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/public-music.png, logos/unused/public-music-576p-278a70b9ab.png
 - logos/rajdhani-tv-backup-1.png, logos/unused/rajdhani-alt.png
 - logos/ramdhenu.png, logos/unused/ramdhenu-360p-5f64a8de13.png
-- logos/rds-social-tv.png, logos/unused/rds-social-tv-1080p-58e6544dfa.png
 - logos/repaired-star-plus-166000bdde.png, logos/unused/starplus-1080p-a57bfc74af.png
 - logos/shemaroo-josh.png, logos/unused/shemaroo-josh-360p-28e43c141a.png
 - logos/spektratv.png, logos/unused/spektratv-720p-24da903cfa.png
 - logos/star-movies-2087bb49.png, logos/unused/star-movies-2087bb49.png
 - logos/star-movies-select-37627406.png, logos/unused/star-movies-select-37627406.png
 - logos/stingray-holiday-hits.png, logos/unused/stingray-holiday-hits-1080p-764177135c.png
-- logos/stingray-karaoke.png, logos/unused/stingray-karaoke-720p-8ac71874a5.png
 - logos/stingray-pop-adult.png, logos/unused/stingray-pop-adult-1080p-1a61a12a4a.png
 - logos/sun-bangla.png, logos/unused/sananda.png
-- logos/t-sports-hd.png, logos/unused/t-sports-hd.png
 - logos/tv.png, logos/unused/tv-1080p-0e5df2c3c4.png
 - logos/ua-music.png, logos/unused/ua-music-1080p-5ea4b8d888.png
 - logos/unused/amc-europe-95485d9836.png, logos/unused/amc-latin-america-1080p-95485d9836.png
 - logos/unused/axn-1080p-e8caac66d8.png, logos/unused/axn-adria-e8caac66d8.png, logos/unused/axn-cee-e8caac66d8.png
-- logos/unused/channel-9-720p-4976239118-converted-7812e75ea9.png, logos/unused/channel-9-720p-4976239118.png
 - logos/unused/disney-channel-720p-4686c26017.png, logos/unused/disney-channel-latin-america-1080p-94455ff877.png
 - logos/unused/disney-jr-latin-america-1080p-d4a5b563e8.png, logos/unused/disney-junior-d4a5b563e8.png
-- logos/unused/filmrise-classic-tv-720p-0e9327c5d8-converted-d58c70a16e.png, logos/unused/filmrise-classic-tv-720p-0e9327c5d8.png
 - logos/unused/mtv-dating-720p-56cc45bb19.png, logos/unused/mtv-dating-720p-bd51446108.png, logos/unused/mtv-dating-united-states-ca-56cc45bb19.png
 - logos/unused/mtv-reality-720p-f58631e3a4.png, logos/unused/mtv-reality-united-states-ca-f58631e3a4.png
 - logos/unused/mtv-ridiculousness-720p-c68daed535.png, logos/unused/mtv-ridiculousness-united-states-ca-c68daed535.png
 - logos/unused/om-tv-360p-e64336c928.png, logos/unused/om-tv-576p-e64336c928.png
 - logos/unused/podium-tv-1080p-35fa3fb508.png, logos/unused/podium-tv-3-1080p-35fa3fb508.png
-- logos/unused/sercem-tv-1080p-228c9eac0e-converted-9f818e959e.png, logos/unused/sercem-tv-1080p-228c9eac0e.png
 - logos/unused/sl1.png, logos/unused/trace-latino.png
 - logos/unused/tv-brics-chinese-1080p-48fd528d2a.png, logos/unused/tv-brics-english-1080p-21061d9af7.png
 - logos/unused/v2beat.png, logos/v2beat.png
 - logos/unused/whiplash-cinema-480p-21f362770b.png, logos/whiplash-cinema.png
-- logos/unused/willow-sports.png, logos/willow-sports.png
 - logos/unused/xite-720p-577c1b0f3a.png, logos/xite.png
 - logos/unused/xite-hits.png, logos/xite-hits-germany-1080p.png
-- logos/unused/xite-reggae-vibes-1080p-157e5ece5e-converted-3f0cf066ac.png, logos/xite-reggae-vibes-1080p-157e5ece5e.png
-- logos/unused/xite-rock-x-metal-1080p-08222c2607.png, logos/xite-rock-x-metal.png
 - logos/unused/xite-siempre-latino-1080p-ef6e87e703.png, logos/xite-siempre-latino.png
 - logos/unused/zee-bangla-sonar-576p-292f68c192.png, logos/zee-bangla-sonar.png
 - logos/unused/zee-talkies.png, logos/zee-talkies.png
-- logos/unused/zoom.png, logos/zoom.png
 
 ## Potential filename/name mismatches
 
@@ -1400,6 +1377,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ayna TV | ayna-tv.png | Bangladesh |
 | International-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Bangladesh |
 | International-Playlist.m3u | Bangla Vision | banglavision.png | Bangladesh |
+| International-Playlist.m3u | Banglar Kontho 24 | banglar-kontho.png | Bangladesh |
 | International-Playlist.m3u | Bijoy TV | bijoy-tv.png | Bangladesh |
 | International-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Bangladesh |
 | International-Playlist.m3u | Channel 1 | channel-1.png | Bangladesh |
@@ -1431,6 +1409,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Probashi TV | probashi-tv.png | Bangladesh |
 | International-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Bangladesh |
 | International-Playlist.m3u | SA TV | sa-tv.png | Bangladesh |
+| International-Playlist.m3u | Vision 24 | vision.png | Bangladesh |
 | International-Playlist.m3u | Aamar Bangla | amar-bangla.png | Indian Bangla |
 | International-Playlist.m3u | BHI Channel | bhi-channel.png | Indian Bangla |
 | International-Playlist.m3u | Jhankar TV | jhankar-tv.png | Indian Bangla |
@@ -1440,11 +1419,13 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ten TV Prime | ten-tv-prime.png | Indian Bangla |
 | International-Playlist.m3u | &TV International | tv.png | Indian Movies |
 | International-Playlist.m3u | Alankar TV | alankar-tv.png | Indian Movies |
+| International-Playlist.m3u | Asian Sony Max 2 | sony-max-2.png | Indian Movies |
 | International-Playlist.m3u | B4U Bhojpuri Plus | b4u-bhojpuri.png | Indian Movies |
 | International-Playlist.m3u | Bollygold | nh-bollygold-dbedeff9.png | Indian Movies |
 | International-Playlist.m3u | Colors Cineplex [UK] | colors-cineplex.png | Indian Movies |
 | International-Playlist.m3u | Epic Bhojpuri Digital | epic-bhojpuri.png | Indian Movies |
 | International-Playlist.m3u | Goldmines 2 | goldmines.png | Indian Movies |
+| International-Playlist.m3u | Goldmines Movies 2 | goldmines-movies.png | Indian Movies |
 | International-Playlist.m3u | Indywood TV | indywood-tv.png | Indian Movies |
 | International-Playlist.m3u | Pitaara | pitaara-tv.png | Indian Movies |
 | International-Playlist.m3u | Pitaara TV | pitaara-tv.png | Indian Movies |
@@ -1584,6 +1565,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Tarima TV | tarima-tv-23e152e9ee.png | DO |
 | International-Playlist.m3u | Tele Dominicana TV | tele-dominicana-tv-db3d804f55.png | DO |
 | International-Playlist.m3u | Best of Dance TV | best-of-dance-tv-1080p.png | Estonia |
+| International-Playlist.m3u | DanceTV Algorhythm | dance-tv.png | Estonia |
 | International-Playlist.m3u | DBM TV | dbm-tv-1080p-002259b21f.png | France |
 | International-Playlist.m3u | MCM Pop | verified-mcm-pop-580p-1f74592475.png | France |
 | International-Playlist.m3u | P2M TV | p2m-tv.png | France |
@@ -1861,6 +1843,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | MovieSphere CA | moviesphere.png | United States |
 | International-Playlist.m3u | MTV (United States) | mtv-germany-bafd7b214a.png | United States |
 | International-Playlist.m3u | MTV Live | mtv.png | United States |
+| International-Playlist.m3u | MyTime Movie Network (US) | mytime-movie-network.png | United States |
 | International-Playlist.m3u | Now 80s | now-80-s.png | United States |
 | International-Playlist.m3u | Paramount Movie Channel | paramount-movie-channel.png | United States |
 | International-Playlist.m3u | Pluto TV A La Mexicana | pluto-tv-a-la-mexicana.png | United States |
@@ -1984,6 +1967,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ekhon TV | ekhon-tv.png | News |
 | International-Playlist.m3u | Independent TV | independent-tv.png | News |
 | International-Playlist.m3u | Jamuna TV | jamuna-tv.png | News |
+| International-Playlist.m3u | NEWS 21 BANGLA | news-21-bangla-tv.png | News |
 | International-Playlist.m3u | Somoy TV | somoy-tv.png | News |
 | International-Playlist.m3u | Disney Channel India | disney-channel-india.png | Kids |
 | International-Playlist.m3u | God Stands Kids Club TV | god-stands-kids-club-tv.png | Kids |
@@ -2006,6 +1990,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | ADO TV | ado-tv-0c333878cc.png | Review |
 | International-Playlist.m3u | Adventure Earth | adventure-earth-converted-36c5bd675d.png | Review |
 | International-Playlist.m3u | Afarin TV | afarin-tv.png | Review |
+| International-Playlist.m3u | Al Sunnah Al Nabawiyah | sunnah-tv.png | Review |
 | International-Playlist.m3u | Al Sunnah TV | sunnah-tv.png | Review |
 | International-Playlist.m3u | Al-Zahra TV Turkic | al-zahra-tv-turkic.png | Review |
 | International-Playlist.m3u | Alegria TV | alegria-tv-720p.png | Review |
@@ -2021,6 +2006,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Arena Sport 1 Premium (Slovenia) | arena-sport-1-premium-serbia-e0c0ac701c.png | Review |
 | International-Playlist.m3u | AS3 Sport TV | as3-sport-tv-9b8dc8f78a.png | Review |
 | International-Playlist.m3u | Atfal & Mawaheb TV | atfal-and-mawaheb-tv-a4a991b463.png | Review |
+| International-Playlist.m3u | ATV USA | atv.png | Review |
 | International-Playlist.m3u | AXN Black (United States) Czech Republic | axn-black-united-states-hungary-576p.png | Review |
 | International-Playlist.m3u | AXN Black (United States) Poland | axn-black-united-states-hungary-576p.png | Review |
 | International-Playlist.m3u | AXN Latin America | axn-cee.png | Review |
@@ -2032,6 +2018,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Bang Bang TV | bang-bang-tv.png | Review |
 | International-Playlist.m3u | BBC Earth Czechia | bbc-earth-us-9e87fe37a1.png | Review |
 | International-Playlist.m3u | BBC Earth Hungary | bbc-earth-us-9e87fe37a1.png | Review |
+| International-Playlist.m3u | BBC World | bbc-world-news.png | Review |
 | International-Playlist.m3u | Better Life Nature Channel | better-life-nature-channel-296e05e978.png | Review |
 | International-Playlist.m3u | Blues TV | blues-tv.png | Review |
 | International-Playlist.m3u | Box Kids TV | box-kids-tv-0afc6e1914.png | Review |
@@ -2068,17 +2055,23 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Channel S UK | channel-s-uk.png | Review |
 | International-Playlist.m3u | Chinola TV | chinola-tv-73b6331ca0.png | Review |
 | International-Playlist.m3u | Cine34 [ ] | cine34-geo-blocked.png | Review |
+| International-Playlist.m3u | Cinema | cinema-russia-576p.png | Review |
 | International-Playlist.m3u | City Eden KinoSemya [ ] | city-eden-kinosemya-not-24-7.png | Review |
 | International-Playlist.m3u | Clubbing TV France | clubbing-tv-france.png | Review |
 | International-Playlist.m3u | Colimdo TV | colimdo-tv-e106271533.png | Review |
 | International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | Review |
 | International-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | Review |
 | International-Playlist.m3u | Community TV | community-tv.png | Review |
+| International-Playlist.m3u | Cooking Channel | local-logo-cooking-channel.png | Review |
+| International-Playlist.m3u | Cooking Channel | local-logo-cooking-channel.png | Review |
 | International-Playlist.m3u | Court TV | court-tv-f02bea9403.png | Review |
 | International-Playlist.m3u | Crime & Justice | crime-and-justice.png | Review |
 | International-Playlist.m3u | Crime Scene TV | crime-scene-tv.png | Review |
+| International-Playlist.m3u | CRTV (Chile) | crtv-sports-and-entertainment-395b13f9b2.png | Review |
 | International-Playlist.m3u | CTB Perth Movies Channel | ctb-perth-movies-channel-720p.png | Review |
 | International-Playlist.m3u | Dance TV [ ] | dance-tv-geo-blocked.png | Review |
+| International-Playlist.m3u | DanceTV EDM Mainstage | dance-tv.png | Review |
+| International-Playlist.m3u | DanceTV Minimal Tech | dance-tv.png | Review |
 | International-Playlist.m3u | Darshana TV | darshana-tv.png | Review |
 | International-Playlist.m3u | Darshana TV | darshana-tv.png | Review |
 | International-Playlist.m3u | Deen TV | deen-tv-576p.png | Review |
@@ -2119,6 +2112,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Dom kino Premium | dom-kino-premium-hd.png | Review |
 | International-Playlist.m3u | Doraemon TV | doraemon-tv.png | Review |
 | International-Playlist.m3u | Doyel TV | doyel-tv.png | Review |
+| International-Playlist.m3u | DTV USA | dtv.png | Review |
 | International-Playlist.m3u | Dua Channel | dua-channel.png | Review |
 | International-Playlist.m3u | Duck TV | duck-tv.png | Review |
 | International-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Review |
@@ -2153,6 +2147,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Fight TV | fight-tv.png | Review |
 | International-Playlist.m3u | FightBox Poland | fightbox-45d2349fcb.png | Review |
 | International-Playlist.m3u | FITE 24 | fite-24-7.png | Review |
+| International-Playlist.m3u | FloRacing | floracing-24-7.png | Review |
 | International-Playlist.m3u | Folklore TV | folklore-tv-720p.png | Review |
 | International-Playlist.m3u | Friends TV | friends-tv.png | Review |
 | International-Playlist.m3u | FUEL TV | fuel-tv-4ce4ea61f5.png | Review |
@@ -2180,6 +2175,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Hosanna TV | hosanna-tv-016e291e22.png | Review |
 | International-Playlist.m3u | HTSpor TV | htspor-tv-57784e12bd.png | Review |
 | International-Playlist.m3u | Hyder TV | hyder-tv-ab08d4568b.png | Review |
+| International-Playlist.m3u | Id Investigation Discovery | investigation-discovery.png | Review |
 | International-Playlist.m3u | iFilm English | ifilm-arabic-ec5dbb3a2a.png | Review |
 | International-Playlist.m3u | iFilm Persian | ifilm-arabic-ec5dbb3a2a.png | Review |
 | International-Playlist.m3u | Inter TV (Italy) | inter-tv-italy-014d12b302.png | Review |
@@ -2188,6 +2184,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Iqraa TV | iqraa-tv.png | Review |
 | International-Playlist.m3u | Islam Channel Bangla | islam-channel-bangla.png | Review |
 | International-Playlist.m3u | Islam TV | islam-tv.png | Review |
+| International-Playlist.m3u | Islam TV Urdu | islam-tv.png | Review |
 | International-Playlist.m3u | Islamic TV | islamic-tv.png | Review |
 | International-Playlist.m3u | Iunior TV | iunior-tv-84b41aacae.png | Review |
 | International-Playlist.m3u | Jan TV | jan-tv.png | Review |
@@ -2227,6 +2224,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Mega Extreno | mega-extreno-hd-720p.png | Review |
 | International-Playlist.m3u | Mehran TV | mehran-tv.png | Review |
 | International-Playlist.m3u | Mei Alai TV | mei-alai-tv.png | Review |
+| International-Playlist.m3u | Mh 1 Prime | mh1-prime.png | Review |
 | International-Playlist.m3u | MH One Prime | mh1-prime.png | Review |
 | International-Playlist.m3u | Milan TV | milan-tv-4eb09f758d.png | Review |
 | International-Playlist.m3u | Military History | history.png | Review |
@@ -2253,6 +2251,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | NatureTime France | naturetime-au-89beb43c58.png | Review |
 | International-Playlist.m3u | Nautical Channel | nautical-channel-e60e83b7d0.png | Review |
 | International-Playlist.m3u | NBA TV | nba-tv.png | Review |
+| International-Playlist.m3u | Nick Jr East | nick-jr.png | Review |
 | International-Playlist.m3u | Nick Jr. (Czech Republic) | nick-jr-latin-america-88856e732a.png | Review |
 | International-Playlist.m3u | Nick Jr. (Hungary) | nick-jr-poland-a865fd62c7.png | Review |
 | International-Playlist.m3u | Nick Jr. (United States) | nick-jr-latin-america-88856e732a.png | Review |
@@ -2270,6 +2269,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ovacion TV | ovacion-tv-241aab8b49.png | Review |
 | International-Playlist.m3u | Paighan TV | paighan-tv.png | Review |
 | International-Playlist.m3u | Pantalla Clasica EC [ ] | pantalla-clasica-ec-512p-not-24-7.png | Review |
+| International-Playlist.m3u | Peace TV | peace-tv-english.png | Review |
 | International-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Review |
 | International-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Review |
 | International-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Review |
@@ -2332,9 +2332,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Smurf TV | smurf-tv.png | Review |
 | International-Playlist.m3u | Smurf TV | smurf-tv.png | Review |
 | International-Playlist.m3u | SN TV | sn-tv.png | Review |
+| International-Playlist.m3u | Sonic The Hedgehog | sonic.png | Review |
 | International-Playlist.m3u | SONY AATH kids | sony-aath.png | Review |
 | International-Playlist.m3u | Sooriyan TV | sooriyan-tv.png | Review |
 | International-Playlist.m3u | Spektrum (Czech Republic) | spektrum-hungary-0eaf56bb6e.png | Review |
+| International-Playlist.m3u | Sport5 | sport5-israel.png | Review |
 | International-Playlist.m3u | Sport 1 (Hungary) | sport1-d42479c518.png | Review |
 | International-Playlist.m3u | Sport 2 (Hungary) | sport2-620b031a4a.png | Review |
 | International-Playlist.m3u | Sport TV | sport-tv-c190ab4c27.png | Review |
@@ -2356,13 +2358,19 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Teletoon+ | teletoon-plus-5964656136.png | Review |
 | International-Playlist.m3u | Tennis Channel | tennis-channel-33d8a8afe2.png | Review |
 | International-Playlist.m3u | Tennis Channel 2 | tennis-channel-2-e549657b98.png | Review |
+| International-Playlist.m3u | Tennis+ | cctv-golf-and-tennis-68e8bff175.png | Review |
 | International-Playlist.m3u | Tiguerito TV | tiguerito-tv-464395cdf0.png | Review |
 | International-Playlist.m3u | TJK TV | tjk-tv-1dac3e1586.png | Review |
 | International-Playlist.m3u | Tochka.rf | tochkarf.png | Review |
 | International-Playlist.m3u | ToonGoggles | toon-goggles.png | Review |
 | International-Playlist.m3u | Total TV Haryana | total-tv-haryana.png | Review |
+| International-Playlist.m3u | Trace Gospel Nigeria and East Africa | trace-gospel-16d9639934.png | Review |
+| International-Playlist.m3u | Trace Gospel Southern Africa | trace-gospel-16d9639934.png | Review |
+| International-Playlist.m3u | Trace Sports Stars | trace-sport.png | Review |
 | International-Playlist.m3u | TraLaLa TV | tralala-tv-2f2b3be533.png | Review |
 | International-Playlist.m3u | Travel Channel | travel-channel.png | Review |
+| International-Playlist.m3u | Travel Channel East | travel-channel.png | Review |
+| International-Playlist.m3u | Travel XP Bangla | travel-xp.png | Review |
 | International-Playlist.m3u | TSN 2 | tsn-2-ca.png | Review |
 | International-Playlist.m3u | TSN 3 | tsn-3-ca.png | Review |
 | International-Playlist.m3u | TV9 Bangla | tv-9-bangla.png | Review |
@@ -2370,6 +2378,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | TV Exitos | tv-exitos-a7aac8d99c.png | Review |
 | International-Playlist.m3u | TV One UK | tv-one-uk.png | Review |
 | International-Playlist.m3u | TyC Sports USA | tyc-sports-afc1096aad.png | Review |
+| International-Playlist.m3u | UFC | ufc-tv.png | Review |
 | International-Playlist.m3u | Unique TV | unique-tv-c64872bc2a.png | Review |
 | International-Playlist.m3u | Video Tour Channel | video-tour-channel-6285619dfa.png | Review |
 | International-Playlist.m3u | viju+ Sport | viju-plus-sport-14b136d70c.png | Review |
@@ -2377,8 +2386,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Vision (India) | vision.png | Review |
 | International-Playlist.m3u | Vokta TV | vokta-tv.png | Review |
 | International-Playlist.m3u | Vos y TV | vos-y-tv-d82c272b3d.png | Review |
+| International-Playlist.m3u | Watch Mojo | watch-mojo-eu.png | Review |
 | International-Playlist.m3u | Wild TV | wild-tv.png | Review |
 | International-Playlist.m3u | Willow Sports | us-willow-sports-hd.png | Review |
+| International-Playlist.m3u | Willow Sports 2 | us-willow-sports-hd.png | Review |
 | International-Playlist.m3u | Win+ Futbol | win-plus-futbol-f1e6574f7e.png | Review |
 | International-Playlist.m3u | World Fishing Network | worldfishingnetwork.png | Review |
 | International-Playlist.m3u | World Poker Tour Poland | world-poker-tour-76e16779ab.png | Review |
@@ -2432,6 +2443,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | International-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | International-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
+| International-Playlist.m3u | Enter 10 Bangla | enter10-bangla.png | Backup |
+| International-Playlist.m3u | Enter 10 Bangla | enter10-bangla.png | Backup |
 | International-Playlist.m3u | Enter TV | enter-tv.png | Backup |
 | International-Playlist.m3u | Enter TV | enter-tv.png | Backup |
 | International-Playlist.m3u | Epic Bhojpuri Digital | epic-bhojpuri.png | Backup |
