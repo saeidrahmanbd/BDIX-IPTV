@@ -663,7 +663,7 @@ def final_mode(playlist, report, baseline, mode):
                     country = m.group(1).upper()
                     break
         indian_identity = country == "IN" or (attrs.get("x-discovery-source-country", "").strip().upper() == "IN") or any(
-            re.search(r"\\.in(?:@|$)", str(attrs.get(key, "")).strip(), re.I)
+            re.search(r"\.in(?:@|$)", str(attrs.get(key, "")).strip(), re.I)
             for key in ("tvg-id", "channel-id")
         ) or bd_discovery.canonical_channel_name(e["name"]) in bd_discovery.IPTV_KNOWN_INDIAN_EDUCATION_NAMES
         if mode == "iptv" and indian_identity:
