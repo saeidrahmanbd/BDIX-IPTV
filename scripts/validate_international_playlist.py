@@ -181,11 +181,13 @@ def main():
             # Missing authentic art is not a reason to discard a valid review candidate.
             # External or broken logo references remain prohibited below.
             continue
-        if logo.startswith(RAW_BASE):
+        if logo.startswith("logos/"):
+            rel = unquote(logo[len("logos/"):].split("?", 1)[0].split("#", 1)[0])
+        elif logo.startswith(RAW_BASE):
             rel = unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])
-            target = (LOGOS / rel).resolve()
         else:
-            raise SystemExit(f"Logo reference must be an absolute repository Raw URL for {name!r}: {logo}")
+            raise SystemExit(f"Logo reference must point to a local /logos asset for {name!r}: {logo}")
+        target = (LOGOS / rel).resolve()
         root = LOGOS.resolve()
         if root not in target.parents or not target.is_file():
             broken_logos.append((name, logo))

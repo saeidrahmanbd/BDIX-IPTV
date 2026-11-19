@@ -98,3 +98,7 @@ Generated: **2026-11-19T01:11:03.476105+00:00**
 - New candidates outside New Channels/New Backups: 0
 - Existing playlist defects, country metadata and logo completeness do not block discovery.
 - New candidates remain in New Channels/New Backups for owner review; only definitively dead streams are removed.
+
+## Post-run targeted correction
+
+- 2026-11-19T01:18:00+00:00 — Reused the existing authentic repository asset `logos/peace-tv-bangla.png` for **Peace TV Bangla (1080p)** in New Backups. The new candidate no longer uses an external logo URL. Its stream probe remained inconclusive, so it stays in New Backups for manual review.

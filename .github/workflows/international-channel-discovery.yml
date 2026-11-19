@@ -110,6 +110,7 @@ jobs:
           OFFICIAL_VALIDATOR_OUTCOME: ${{ steps.validate_international_playlist.outcome }}
         run: python scripts/validate_discovery_run.py finalize International-Playlist.m3u reports/international-channel-discovery.md /tmp/International-Playlist.before.m3u international
       - name: Commit discovery changes
+        if: always() && steps.validate_international_playlist.outcome != 'skipped'
         shell: bash
         run: |
           set -euo pipefail

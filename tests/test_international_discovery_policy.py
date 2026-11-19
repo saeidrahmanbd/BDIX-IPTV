@@ -89,6 +89,52 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         workflow = Path(".github/workflows/international-channel-discovery.yml").read_text(encoding="utf-8")
         self.assertNotIn("python scripts/reorganize_international_playlist.py", workflow)
         self.assertIn("python scripts/validate_international_playlist.py", workflow)
+        lines = workflow.splitlines()
+        commit_index = next(i for i, line in enumerate(lines) if line.strip() == "- name: Commit discovery changes")
+        self.assertEqual(lines[commit_index + 1].strip(), "if: always() && steps.validate_international_playlist.outcome != 'skipped'")
+
+    def test_international_validator_accepts_repository_relative_local_logo(self):
+        import json
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            logos = root / "logos"
+            logos.mkdir()
+            (logos / "test.svg").write_text("<svg/>", encoding="utf-8")
+            playlist = root / "International-Playlist.m3u"
+            registry = intl_validator.FIXED + intl_validator.TAIL
+            content = (
+                "#EXTM3U\n"
+                + "\n".join(intl_validator.ATTRIBUTION)
+                + "\n#PLAYLIST-STUDIO-CATEGORIES:"
+                + json.dumps(registry)
+                + '\n#EXTINF:-1 tvg-id="LocalLogo.bd" tvg-name="Local Logo Test" tvg-country="BD" tvg-logo="logos/test.svg" group-title="Bangladesh",Local Logo Test'
+                + "\nhttps://example.org/test.m3u8\n"
+            )
+            playlist.write_text(content, encoding="utf-8")
+            with patch.object(intl_validator, "PLAYLIST", playlist), patch.object(intl_validator, "LOGOS", logos):
+                intl_validator.main()
+
+    def test_international_validator_rejects_external_logo_url(self):
+        import json
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            logos = root / "logos"
+            logos.mkdir()
+            (logos / "test.svg").write_text("<svg/>", encoding="utf-8")
+            playlist = root / "International-Playlist.m3u"
+            registry = intl_validator.FIXED + intl_validator.TAIL
+            content = (
+                "#EXTM3U\n"
+                + "\n".join(intl_validator.ATTRIBUTION)
+                + "\n#PLAYLIST-STUDIO-CATEGORIES:"
+                + json.dumps(registry)
+                + '\n#EXTINF:-1 tvg-id="LocalLogo.bd" tvg-name="Local Logo Test" tvg-country="BD" tvg-logo="https://example.org/test.svg" group-title="Bangladesh",Local Logo Test'
+                + "\nhttps://example.org/test.m3u8\n"
+            )
+            playlist.write_text(content, encoding="utf-8")
+            with patch.object(intl_validator, "PLAYLIST", playlist), patch.object(intl_validator, "LOGOS", logos):
+                with self.assertRaisesRegex(SystemExit, "local /logos asset"):
+                    intl_validator.main()
 
     def test_movies_and_music_are_allowed_for_international_countries(self):
         self.assertEqual(self.classify("Cinema World", "Movies", "NP", "CinemaWorld.np"),
