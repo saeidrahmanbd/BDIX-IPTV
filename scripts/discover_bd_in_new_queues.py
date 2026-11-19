@@ -385,7 +385,8 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
         name = (a.get("tvg-name") or display).strip()
         if group in queue_groups:
             queue_country = "IN" if (
-                a.get("tvg-country", "").strip().upper() == "IN"
+                a.get("x-discovery-source-country", "").strip().upper() == "IN"
+                or a.get("tvg-country", "").strip().upper() == "IN"
                 or any(re.search(r"\.in(?:@|$)", str(a.get(key, "")).strip(), re.I)
                        for key in ("tvg-id", "channel-id"))
             ) else None
@@ -418,6 +419,7 @@ def extinf(a: dict[str, str], name: str, group: str, country: str) -> str:
             fields.append(f'{key}="{name if key == "tvg-name" else value}"')
     if not a.get("tvg-name", "").strip():
         fields.append(f'tvg-name="{name}"')
+    fields.append(f'x-discovery-source-country="{COUNTRY_CODE.get(country, "").upper()}"')
     fields.append(f'group-title="{group}"')
     return "#EXTINF:-1 " + " ".join(fields) + "," + name
 
