@@ -172,24 +172,33 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNone(prohibited_channel(attrs, name))
                 self.assertIsNone(prohibited_channel(attrs, name, discovery=True))
 
-    def test_cricket_and_football_are_eligible_from_india_feed_even_with_country_metadata_mismatch(self):
-        for name, genre in [
-            ("Cricket 24", "Cricket"),
-            ("Test Cricket HD", "Cricket"),
-            ("Football Live", "Football"),
-        ]:
-            with self.subTest(name=name):
+    def test_explicit_foreign_country_is_rejected_even_when_source_feed_is_india(self):
+        for code in ("US", "AE", "NL", "PK"):
+            with self.subTest(country=code):
                 source_metadata = {
-                    "tvg-id": "Candidate.us",
-                    "channel-id": "Candidate.us",
-                    "tvg-country": "US",
-                    "group-title": genre,
+                    "tvg-id": f"Candidate.{code.lower()}",
+                    "channel-id": f"Candidate.{code.lower()}",
+                    "tvg-country": code,
+                    "group-title": "Sports",
                 }
                 candidate, reason = evaluate(
-                    "India", source_metadata, name, "https://example.org/live/index.m3u8"
+                    "India", source_metadata, "Cricket 24", "https://example.org/live/index.m3u8"
                 )
-                self.assertEqual(reason, "")
-                self.assertEqual(candidate, source_metadata)
+                self.assertIsNone(candidate)
+                self.assertIn("explicit channel country outside Bangladesh/India", reason)
+
+    def test_explicit_indian_metadata_applies_indian_exclusions_even_from_bangladesh_feed(self):
+        source_metadata = {
+            "tvg-id": "AajTak.in",
+            "channel-id": "AajTak.in",
+            "tvg-country": "IN",
+            "group-title": "News",
+        }
+        candidate, reason = evaluate(
+            "Bangladesh", source_metadata, "Aaj Tak", "https://example.org/aajtak.m3u8"
+        )
+        self.assertIsNone(candidate)
+        self.assertIn("Indian news channel is prohibited", reason)
 
     def test_indian_cricket_and_football_sports_channels_are_discovery_eligible(self):
         for name in ("Cricket 24", "Test Cricket HD", "Football Live", "Football Sports"):
