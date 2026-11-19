@@ -61,6 +61,7 @@ class InternationalDiscoveryOrchestratorTests(unittest.TestCase):
         self.assertEqual(len(batch.candidates),1)
         self.assertIn('group-title="New Channels"',batch.candidates[0].extinf)
         self.assertNotIn('tvg-country=',batch.candidates[0].extinf)
+        self.assertIn('tvg-content="Movies"',batch.candidates[0].extinf)
 
 if __name__=="__main__":
     unittest.main()
