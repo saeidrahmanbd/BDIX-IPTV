@@ -182,6 +182,28 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         self.assertNotIn('tvg-logo=""', updated)
         self.assertTrue(cleared)
 
+    def test_local_logo_is_selected_for_iptv_candidate_when_matching_asset_exists(self):
+        import tempfile
+        old_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "logos").mkdir()
+            (root / "logos" / "dd-kisan.png").write_bytes(b"local asset")
+            entry = {
+                "extinf": '#EXTINF:-1 tvg-name="DD Kisan" tvg-logo="https://i.imgur.com/external.png",DD Kisan',
+                "logo": "https://i.imgur.com/external.png",
+                "name": "DD Kisan",
+            }
+            import os
+            os.chdir(root)
+            try:
+                updated, localized, unavailable = ensure_local_logo(entry)
+            finally:
+                os.chdir(old_cwd)
+        self.assertIn('tvg-logo="logos/dd-kisan.png"', updated)
+        self.assertTrue(localized)
+        self.assertFalse(unavailable)
+
     def test_candidate_without_logo_is_marked_unavailable_but_not_rewritten(self):
         extinf = '#EXTINF:-1 tvg-name="No Authentic Asset Candidate",No Authentic Asset Candidate'
         entry = {"extinf": extinf, "logo": "", "name": "No Authentic Asset Candidate"}
@@ -190,7 +212,8 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         self.assertFalse(localized)
         self.assertTrue(unavailable)
 
-    def test_iptv_discovery_keeps_new_manual_review_candidate_with_wrong_country_and_no_logo(self):
+    def test_iptv_discovery_keeps_incomplete_country_candidate_and_clears_external_logo(self):
+        import os
         import tempfile
         from unittest.mock import patch
         import validate_discovery_run as validation
@@ -201,34 +224,34 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             baseline = root / "baseline.m3u"
             report = root / "report.md"
             existing = (
-                '#EXTINF:-1 tvg-id="Old.us" tvg-country="US" group-title="New Channels" tvg-name="Old Queue Row",Old Queue Row\n'
+                '#EXTINF:-1 tvg-id="Old" group-title="New Channels" tvg-name="Old Queue Row",Old Queue Row\n'
                 'https://example.org/old-queue.m3u8\n'
             )
             fresh = (
-                '#EXTINF:-1 tvg-id="Fresh.us" tvg-country="US" group-title="New Channels" tvg-name="Fresh Candidate",Fresh Candidate\n'
+                '#EXTINF:-1 tvg-id="Fresh" tvg-logo="https://cdn.example/logo.png" group-title="New Channels" tvg-name="Fresh Candidate",Fresh Candidate\n'
                 'https://example.org/fresh-candidate.m3u8\n'
             )
             playlist.write_text("#EXTM3U\n" + existing + fresh, encoding="utf-8")
             baseline.write_text("#EXTM3U\n" + existing, encoding="utf-8")
             report.write_text("# Report\n", encoding="utf-8")
-            with patch.object(validation, "probe_url", return_value=("unknown", "HTTP 403")) as probe:
-                with patch.object(
-                    validation,
-                    "ensure_local_logo",
-                    side_effect=lambda entry: (entry["extinf"], False, True),
-                ) as logo_repair:
+            old_cwd = Path.cwd()
+            os.chdir(root)
+            try:
+                with patch.object(validation, "probe_url", return_value=("unknown", "HTTP 403")) as probe:
                     validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
+            finally:
+                os.chdir(old_cwd)
             output = playlist.read_text(encoding="utf-8")
             self.assertIn('group-title="New Channels"', output)
             self.assertIn('tvg-name="Fresh Candidate"', output)
             self.assertIn('tvg-name="Old Queue Row"', output)
-            self.assertIn('tvg-id="Fresh.us"', output)
-            self.assertIn('tvg-country="US"', output)
+            self.assertIn('tvg-id="Fresh"', output)
+            self.assertNotIn("https://cdn.example/logo.png", output)
+            self.assertNotIn('tvg-logo=""', output)
             self.assertEqual(probe.call_count, 1)
-            logo_repair.assert_not_called()
-            self.assertIn("manual review", report.read_text(encoding="utf-8").casefold())
+            self.assertIn("external logo removed", report.read_text(encoding="utf-8").casefold())
 
-    def test_final_iptv_validation_ignores_country_logo_and_preexisting_playlist_duplicates(self):
+    def test_final_iptv_validation_allows_incomplete_metadata_and_blank_logo(self):
         import os
         import tempfile
         import validate_discovery_run as validation
@@ -246,7 +269,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 'https://example.org/old-duplicate.m3u8\n'
             )
             fresh = (
-                '#EXTINF:-1 tvg-id="Fresh.us" tvg-country="US" group-title="New Channels" tvg-name="Fresh Candidate",Fresh Candidate\n'
+                '#EXTINF:-1 tvg-id="Fresh" group-title="New Channels" tvg-name="Fresh Candidate",Fresh Candidate\n'
                 'https://example.org/fresh-candidate.m3u8\n'
             )
             prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
@@ -266,6 +289,74 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("- Validation status: PASS", final_report)
             self.assertIn("missing an authentic local logo: 1", final_report)
             self.assertIn("New duplicate stream URL occurrences: 0", final_report)
+
+    def test_final_iptv_validation_rejects_external_logo_and_foreign_country(self):
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["New Channels", "New Backups", "Backup", "Review"]
+            fresh = (
+                '#EXTINF:-1 tvg-id="Foreign.nl" tvg-country="NL" tvg-logo="https://cdn.example/logo.png" group-title="New Channels" tvg-name="Foreign Channel",Foreign Channel\n'
+                'https://example.org/foreign.m3u8\n'
+            )
+            prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
+            playlist.write_text(prefix + fresh, encoding="utf-8")
+            baseline.write_text(prefix, encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "iptv")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            final_report = report.read_text(encoding="utf-8")
+            self.assertIn("- Validation status: FAIL", final_report)
+            self.assertIn("non-local logo reference", final_report)
+            self.assertIn("out-of-scope channel country", final_report)
+
+    def test_probe_moves_inconclusive_backup_to_review(self):
+        import os
+        import tempfile
+        from unittest.mock import patch
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "logos").mkdir()
+            (root / "logos" / "existing.svg").write_text("<svg/>", encoding="utf-8")
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            primary = (
+                '#EXTINF:-1 tvg-id="Existing.in" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Existing",Existing\n'
+                'https://example.org/primary.m3u8\n'
+            )
+            backup = (
+                '#EXTINF:-1 tvg-id="Existing.in" tvg-country="IN" tvg-logo="logos/existing.svg" group-title="New Backups" tvg-name="Existing",Existing alternate\n'
+                'https://example.org/backup.m3u8\n'
+            )
+            playlist.write_text("#EXTM3U\n" + primary + backup, encoding="utf-8")
+            baseline.write_text("#EXTM3U\n" + primary, encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            old_cwd = Path.cwd()
+            os.chdir(root)
+            try:
+                with patch.object(validation, "probe_url", return_value=("unknown", "HTTP 403")):
+                    validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
+            finally:
+                os.chdir(old_cwd)
+            output = playlist.read_text(encoding="utf-8")
+            self.assertIn('group-title="Review" tvg-name="Existing"', output)
+            self.assertNotIn('group-title="New Backups" tvg-name="Existing"', output)
 
     def test_parser_skips_vlc_and_kodi_directives_before_media_url(self):
         text = (
