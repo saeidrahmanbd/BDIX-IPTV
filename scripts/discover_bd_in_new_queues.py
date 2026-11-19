@@ -7,9 +7,9 @@ after owner review. Definite policy/URL exclusions and duplicate stream URLs
 prevent queueing. Dead streams are removed by the subsequent probe; inconclusive
 streams remain for manual review.
 
-Bangladesh channels of all genres are eligible. Indian News and non-Islamic
-religious channels are excluded. Islamic religious channels, Kids, Sports and
-other legitimate live-TV genres remain eligible unless individually denylisted.
+Bangladesh channels of all genres are eligible. Indian News, Kids, Education,
+Knowledge, Business/Finance and all Religious channels are excluded from this
+IPTV playlist discovery policy. International retains its separate policy.
 """
 # Owner-authorized policy-alignment retry marker (2026-11-19).
 
@@ -33,12 +33,21 @@ BAD_WORDS = {
     "vod", "catchup", "catch-up", "test", "demo", "proxy", "proxied",
     "cors", "webcam", "radio", "podcast", "event", "ppv", "timeshift",
 }
-# India-only exclusions. Bangladesh channels remain unrestricted by genre.
+# Legacy India exclusions are retained for the International playlist's distinct policy.
 FORBIDDEN_CATEGORY_PATTERNS = {
-    "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
-    "religious": re.compile(r"\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
+    "news": re.compile(r"\\b(?:news|headlines?|current affairs|newsroom|gnt)\\b", re.IGNORECASE),
+    "religious": re.compile(r"\\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\\s*tv)\\b", re.IGNORECASE),
 }
-# No additional generic genre exclusions apply to Indian live-TV discovery.
+# Strict India-only exclusions for IPTV-Playlist.m3u. Bangladesh remains
+# unrestricted; International does not opt into this additional policy.
+IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
+    "news": re.compile(r"\\b(?:news|headlines?|current affairs|newsroom|bulletin|breaking news|gnt)\\b", re.I),
+    "kids": re.compile(r"\\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|baby tv|pogo|hungama|sonic|discovery kids|green gold)\\b", re.I),
+    "education": re.compile(r"\\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television)\\b", re.I),
+    "knowledge": re.compile(r"\\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv)\\b", re.I),
+    "business": re.compile(r"\\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\\b", re.I),
+    "religious": re.compile(r"\\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\\s*tv|angel|hosanna|madani|iqra|huda|noor|deen|mta|qtv|aastha|sadhna|sanskar|jinvani|satsang|jagran|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|calvary|santvani|sharnam)\\b", re.I),
+}
 DISCOVERY_EXTRA_CATEGORY_PATTERNS = {}
 
 def canonical_channel_name(value: str) -> str:
@@ -248,6 +257,7 @@ def prohibited_channel(
     country: str | None = None,
     *,
     discovery: bool = False,
+    iptv_discovery: bool = False,
 ) -> str | None:
     """Apply legacy active-channel exclusions, plus optional IPTV discovery-only genres."""
     ids = {
@@ -265,22 +275,35 @@ def prohibited_channel(
     values = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""), a.get("channel-id", "")))
     if resolved_country == "IN" and re.search(r"\bmh\s*1\s*prime\b|\bmh1prime\b", values, re.IGNORECASE):
         return "known Indian prohibited MH One Prime channel is prohibited"
-    # Bangladesh is unrestricted by genre. India excludes News and non-Islamic
-    # religious channels only; Islamic religious and other legitimate live-TV genres remain eligible.
+    # Bangladesh is unrestricted by these India-only genre rules.
     if resolved_country != "IN":
         return None
 
+    # Inspect descriptive and classification metadata in addition to display
+    # names and group-title. Source feed country takes precedence in evaluate(),
+    # so misleading tvg-country/ID metadata cannot bypass this policy.
+    metadata_keys = (
+        "tvg-id", "channel-id", "tvg-name", "tvg-description", "description",
+        "tvg-content", "tvg-genre", "tvg-category", "tvg-categories",
+        "genre", "genres", "category", "categories", "group-title",
+        "tvg-network", "network", "provider",
+    )
+    values = " ".join([name] + [str(a.get(key, "")) for key in metadata_keys])
     group = a.get("group-title", "").strip()
-    values = " ".join((name, a.get("tvg-name", ""), group, a.get("tvg-id", ""), a.get("channel-id", "")))
-    for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
-        if category == "religious" and ISLAMIC_ALLOWED_MARKERS.search(values) and not NON_ISLAMIC_RELIGIOUS_MARKERS.search(values):
-            continue
-        if pattern.search(group) or pattern.search(values):
-            return f"Indian {category} channel is prohibited"
-    if discovery:
-        for category, pattern in DISCOVERY_EXTRA_CATEGORY_PATTERNS.items():
+    if iptv_discovery:
+        for category, pattern in IPTV_FORBIDDEN_CATEGORY_PATTERNS.items():
+            if pattern.search(values):
+                return f"Indian {category} channel is prohibited"
+    else:
+        for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
+            if category == "religious" and ISLAMIC_ALLOWED_MARKERS.search(values) and not NON_ISLAMIC_RELIGIOUS_MARKERS.search(values):
+                continue
             if pattern.search(group) or pattern.search(values):
                 return f"Indian {category} channel is prohibited"
+        if discovery:
+            for category, pattern in DISCOVERY_EXTRA_CATEGORY_PATTERNS.items():
+                if pattern.search(group) or pattern.search(values):
+                    return f"Indian {category} channel is prohibited"
     if FORBIDDEN_BRANDS.search(values):
         return "known Indian prohibited brand/category is prohibited"
     for word in FORBIDDEN_WORDS:
@@ -297,7 +320,7 @@ def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=Non
     """
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
-    forbidden = prohibited_channel(a, name, country, discovery=True)
+    forbidden = prohibited_channel(a, name, country, discovery=True, iptv_discovery=True)
     if forbidden:
         return None, forbidden
     p = urlparse(url)
@@ -346,7 +369,20 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
         _, display = split_extinf(extinf_line)
         name = (a.get("tvg-name") or display).strip()
         if group in queue_groups:
-            reason = prohibited_channel(a, name, discovery=True)
+            queue_country = "IN" if (
+                a.get("tvg-country", "").strip().upper() == "IN"
+                or any(re.search(r"\\.in(?:@|$)", str(a.get(key, "")).strip(), re.I)
+                       for key in ("tvg-id", "channel-id"))
+            ) else None
+            known_indian_education = canonical_channel_name(name) in {
+                "vyas channel", "shiksha tv", "gyandarshan", "gyandarshan hd",
+                "dd gyan darshan", "kite victers", "victers", "swayam prabha",
+            }
+            reason = (
+                "Indian education channel is prohibited"
+                if known_indian_education
+                else prohibited_channel(a, name, queue_country, discovery=True, iptv_discovery=True)
+            )
             if not reason and canonical_channel_name(name) in NON_CHANNEL_PROGRAM_NAMES:
                 reason = "programme title, not a standalone live TV channel"
             if reason:
@@ -374,6 +410,7 @@ def main() -> int:
     # Existing playlist rows and manual-review queues are owner-controlled.
     # Discovery may append new candidates but never purges or rewrites old rows.
     original = PLAYLIST.read_text(encoding="utf-8-sig")
+    original, purged_existing = purge_forbidden_existing_queue_rows(original)
     entries = parse(original)
     existing_urls = {stream_url_key(u) for _, _, u in entries}
     existing_names = {norm(n) for _, n, _ in entries}
