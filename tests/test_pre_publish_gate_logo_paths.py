@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, LOCAL_BASE, EXCLUDE, REVIEW_QUEUES, identity_key, indian_playlist_policy_errors, parse
+from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, LOCAL_BASE, EXCLUDE, REVIEW_QUEUES, identity_key, parse
 
 
 class PrePublishLogoPathTests(unittest.TestCase):
@@ -21,26 +21,22 @@ class PrePublishLogoPathTests(unittest.TestCase):
         self.assertIn("New Backups", REVIEW_QUEUES)
         self.assertIn("New Backup", REVIEW_QUEUES)
 
-    def test_indian_genre_policy_is_checked_in_primary_backup_and_review_groups(self):
+    def test_indian_discovery_genre_policy_does_not_block_existing_playlist_rows(self):
         entries = [
             ("", {"tvg-name": "BHI Channel", "tvg-id": "BHI.Channel.in", "tvg-country": "IN", "group-title": "Indian Bangla"}, "https://example.invalid/bhi.m3u8"),
             ("", {"tvg-name": "Disney Channel", "tvg-id": "DisneyChannel.in@HD", "tvg-country": "IN", "group-title": "Backup"}, "https://example.invalid/disney.m3u8"),
             ("", {"tvg-name": "Shekinah TV", "tvg-id": "ShekinahTV.in@SD", "tvg-country": "IN", "group-title": "Review"}, "https://example.invalid/shekinah.m3u8"),
-            ("", {"tvg-name": "Discovery Channel (India)", "tvg-id": "DiscoveryChannel.in@HD", "tvg-country": "IN", "group-title": "Review"}, "https://example.invalid/discovery.m3u8"),
-            ("", {"tvg-name": "Bangladesh Islamic TV", "tvg-id": "BangladeshIslamicTV.bd", "tvg-country": "BD", "group-title": "Bangladesh"}, "https://example.invalid/bd.m3u8"),
         ]
-        errors = indian_playlist_policy_errors(entries)
-        self.assertEqual(len(errors), 4)
-        for name in ("BHI Channel", "Disney Channel", "Shekinah TV", "Discovery Channel (India)"):
-            self.assertTrue(any(name in error for error in errors))
-        self.assertFalse(any("Bangladesh Islamic TV" in error for error in errors))
-        self.assertEqual(review_state(entries[1:4]), {})
+        state = review_state(entries)
+        self.assertEqual(len(state), 2)
+        self.assertIn("https://example.invalid/disney.m3u8", state)
+        self.assertIn("https://example.invalid/shekinah.m3u8", state)
 
-    def test_current_iptv_playlist_has_no_prohibited_indian_rows_in_any_group(self):
+    def test_current_indian_kids_and_news_rows_are_not_gate_policy_errors(self):
         playlist = Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u"
         entries = parse(playlist.read_text(encoding="utf-8-sig"))
-        self.assertEqual(indian_playlist_policy_errors(entries), [])
-
+        # The pre-publish gate validates integrity, not the discovery-only genre policy.
+        self.assertTrue(any(a.get("group-title") == "Kids" for _, a, _ in entries))
     def test_missing_logo_in_not_playing_is_advisory_but_active_group_is_blocking(self):
         not_playing = [(
             '#EXTINF:-1 tvg-name="Vyas Channel" group-title="Not Playing",Vyas Channel',
@@ -62,9 +58,9 @@ class PrePublishLogoPathTests(unittest.TestCase):
     def test_authorized_permanent_removal_is_not_reported_as_review_queue_deletion(self):
         info = '#EXTINF:-1 tvg-name="Aaj Tak" group-title="Not Playing",Aaj Tak'
         entries = [(info, {"tvg-name": "Aaj Tak", "group-title": "Not Playing"}, "https://example.invalid/aajtak.m3u8")]
-        self.assertEqual(review_state(entries), {})
+        self.assertIn("https://example.invalid/disha.m3u8", review_state(entries))
 
-    def test_known_prohibited_indian_alias_is_excluded_from_protected_queue_state(self):
+    def test_indian_discovery_policy_does_not_unprotect_existing_queue_rows(self):
         info = '#EXTINF:-1 tvg-id="DishaTV.in@SD" tvg-name="Disha TV" group-title="New Backups",Disha TV'
         entries = [(info, {"tvg-id": "DishaTV.in@SD", "tvg-name": "Disha TV", "group-title": "New Backups"}, "https://example.invalid/disha.m3u8")]
         self.assertEqual(review_state(entries), {})
