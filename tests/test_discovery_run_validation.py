@@ -388,7 +388,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         import validate_discovery_run as validation
         row = (
             '#EXTINF:-1 tvg-id="DeadMovie.us" tvg-name="Dead Movie" tvg-country="US" '
-            'group-title="New Channels",Dead Movie\\nhttps://example.org/dead.m3u8'
+            'group-title="New Channels",Dead Movie\nhttps://example.org/dead.m3u8'
         )
         _, entries, malformed = parse_playlist(row)
         self.assertFalse(malformed)
