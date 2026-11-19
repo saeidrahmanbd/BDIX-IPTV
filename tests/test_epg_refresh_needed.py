@@ -40,14 +40,13 @@ class EPGRefreshNeededTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
-    def test_epg_workflow_listens_only_to_final_playlist_writer(self):
+    def test_epg_workflow_runs_once_daily_after_discovery_or_manual_dispatch(self):
         workflow = (Path(__file__).resolve().parents[1] / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
-        self.assertIn('workflows: ["IPTV Playlist Update"]', workflow)
-        self.assertNotIn('"IPTV New Channel Discovery"', workflow)
-        self.assertNotIn('"International Channel Discovery"', workflow)
-        self.assertNotIn('"Playlist Logo Repair and Localization"', workflow)
-        self.assertNotIn('"International Stream Health"', workflow)
-        self.assertIn("cron: '10 0 * * *'", workflow)
+        self.assertNotIn("workflow_run:", workflow)
+        self.assertNotIn("push:", workflow)
+        self.assertIn("cron: '30 1 * * *'", workflow)
+        self.assertIn("workflow_dispatch:", workflow)
+        self.assertIn("--max-age-hours 24", workflow)
 
     def test_fresh_current_guide_skips_duplicate_refresh(self):
         skip, reasons = assess_freshness(self.root, now=self.now, max_age_hours=8)
