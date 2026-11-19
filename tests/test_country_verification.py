@@ -79,7 +79,9 @@ class CountryVerificationTests(unittest.TestCase):
         q_tv_rows = [line for line in main if line.startswith("#EXTINF:") and 'tvg-id="QTV.in"' in line]
         sindh = [line for line in main if line.startswith("#EXTINF:") and 'tvg-name="Sindh TV"' in line and 'group-title="Pakistani"' in line]
         yrf = [line for line in international if line.startswith("#EXTINF:") and 'tvg-id="YRFMusic.in@Nepal"' in line]
-        self.assertEqual(q_tv_rows, [], "Indian religious Q TV must be excluded from IPTV-Playlist.m3u")
+        self.assertGreaterEqual(len(q_tv_rows), 1, "Existing Indian Q TV rows must be preserved; discovery exclusions must not delete existing records")
+        self.assertTrue(all('tvg-country="IN"' in line for line in q_tv_rows))
+        self.assertTrue(all('group-title="Backup"' in line or 'group-title="Indian Entertainment"' in line for line in q_tv_rows))
         self.assertEqual(len(sindh), 1)
         self.assertIn('tvg-id="SindhTV.pk@SD"', sindh[0])
         self.assertIn('channel-id="SindhTV.pk@SD"', sindh[0])
