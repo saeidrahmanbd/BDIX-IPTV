@@ -35,8 +35,8 @@ BAD_WORDS = {
 }
 # Legacy India exclusions are retained for the International playlist's distinct policy.
 FORBIDDEN_CATEGORY_PATTERNS = {
-    "news": re.compile(r"\\b(?:news|headlines?|current affairs|newsroom|gnt)\\b", re.IGNORECASE),
-    "religious": re.compile(r"\\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\\s*tv)\\b", re.IGNORECASE),
+    "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
+    "religious": re.compile(r"\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
 }
 # Strict India-only exclusions for IPTV-Playlist.m3u. Bangladesh remains
 # unrestricted; International does not opt into this additional policy.
@@ -306,8 +306,9 @@ def prohibited_channel(
         }
         if canonical_channel_name(name) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES or normalized_ids & IPTV_KNOWN_INDIAN_EDUCATION_IDS:
             return "Indian education channel is prohibited"
+        expanded_values = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", values)
         for category, pattern in IPTV_FORBIDDEN_CATEGORY_PATTERNS.items():
-            if pattern.search(values):
+            if pattern.search(expanded_values):
                 return f"Indian {category} channel is prohibited"
     else:
         for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
