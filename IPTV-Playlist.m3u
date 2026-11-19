@@ -496,8 +496,6 @@ https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorstamilhd11.smil/playlist
 https://live-dangal.akamaized.net/liveabr/playlist.m3u8
 #EXTINF:-1 tvg-id="Dangal2.in@SD" tvg-name="Dangal 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal-2.png" tvg-chno="247" channel-id="Dangal2.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Dangal 2
 https://live-dangal2.akamaized.net/liveabr/playlist.m3u8
-#EXTINF:-1 tvg-id="DarshanaTV.in@SD" tvg-name="Darshana TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/darshana-tv.png" tvg-chno="248" channel-id="DarshanaTV.in@SD" tvg-country="IN" tvg-language="mal" group-title="Indian Entertainment",Darshana TV
-https://cdn.pishow.tv/ott/live/1453/master.m3u8
 #EXTINF:-1 tvg-id="DDArunPrabha.in@SD" tvg-name="DD Arun Prabha" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-arun-prabha.png" tvg-chno="249" channel-id="DDArunPrabha.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",DD Arun Prabha
 https://d2lk5u59tns74c.cloudfront.net/out/v1/308556d9fd1246adb479ef012a39bbfe/index.m3u8
 #EXTINF:-1 tvg-id="DDAssam.in@SD" tvg-name="DD Assam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-assam.png" tvg-chno="250" channel-id="DDAssam.in@SD" tvg-country="IN" tvg-language="asm" group-title="Indian Entertainment",DD Assam
