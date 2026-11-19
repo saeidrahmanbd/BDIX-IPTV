@@ -284,3 +284,28 @@ class NormalizeRegistryTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CanonicalLogoReferenceTests(unittest.TestCase):
+    """Absolute raw URLs and relative logos/ paths name the same asset."""
+
+    ABS = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/real-channel.png"
+    REL = "logos/real-channel.png"
+
+    def test_canonical_logo_maps_absolute_and_relative_to_one_form(self):
+        self.assertEqual(prov.canonical_logo(self.ABS), self.REL)
+        self.assertEqual(prov.canonical_logo(self.REL), self.REL)
+        self.assertEqual(prov.canonical_logo("https://example.com/x.png"), "https://example.com/x.png")
+
+    def test_absolute_playlist_reference_finds_record_stored_under_relative_key(self):
+        record = verified_record()
+        registry = {f"{IPTV}|real.in|Real Channel|{self.REL}": record}
+        found, match = prov.resolve_provenance(registry, IPTV, "real.in", "Real Channel", self.ABS)
+        self.assertEqual(found, record)
+        self.assertEqual(match, prov.MATCH_EXACT)
+
+    def test_repair_writes_absolute_urls_and_canonical_registry_keys(self):
+        self.assertEqual(repair.raw_url("real channel.png"),
+                         "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/real%20channel.png")
+        key = prov.canonical_key(f"{IPTV}|real.in|Real Channel|{repair.raw_url('real-channel.png')}")
+        self.assertEqual(key, f"{IPTV}|real.in|Real Channel|{self.REL}")

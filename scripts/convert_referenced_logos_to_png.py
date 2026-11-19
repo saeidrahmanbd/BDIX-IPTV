@@ -277,7 +277,8 @@ def convert_referenced_logos(
             if converted_relative == relative:
                 return match.group(0)
             encoded = quote(converted_relative, safe="/-._~")
-            new_logo = raw_base + encoded if style == "raw" else "logos/" + encoded
+            # Always write the absolute raw URL, whatever form the reference had before.
+            new_logo = raw_base + encoded
             references_changed += 1
             return f'tvg-logo="{new_logo}"'
 

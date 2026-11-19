@@ -52,6 +52,35 @@ def logo_filename(logo):
     return urllib.parse.unquote(Path(path).name).casefold()
 
 
+RAW_LOGO_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+
+
+def canonical_logo(logo):
+    """Return the repository-relative form ``logos/<name>`` of a logo reference.
+
+    Playlists carry absolute raw URLs, while older registry keys hold relative
+    paths. Both name the same file, so provenance lookups must treat them alike.
+    External references are returned unchanged.
+    """
+    value = str(logo or "").strip()
+    if value.startswith(RAW_LOGO_BASE):
+        rest = value[len(RAW_LOGO_BASE):]
+    elif value.startswith("logos/"):
+        rest = value[len("logos/"):]
+    else:
+        return value
+    rest = urllib.parse.unquote(rest.split("?", 1)[0].split("#", 1)[0]).lstrip("/")
+    return "logos/" + rest
+
+
+def canonical_key(key):
+    """Canonical registry key: the logo (the final ``|`` field) is canonicalised."""
+    head, sep, logo = str(key).rpartition("|")
+    if not sep:
+        return key
+    return head + sep + canonical_logo(logo)
+
+
 def asset_stem(logo):
     """Return the case-folded filename stem without the converter's digest suffix."""
     return _CONVERTED_SUFFIX.sub("", Path(logo_filename(logo)).stem)
@@ -136,10 +165,10 @@ def resolve_provenance(registry, playlist, tvg_id, name, logo):
     a different image for the same channel must not inherit provenance. Several
     distinct candidates are ambiguous and resolve to nothing.
     """
-    key = f"{playlist}|{tvg_id}|{name}|{logo}"
-    exact = registry.get(key)
-    if isinstance(exact, dict):
-        return exact, MATCH_EXACT
+    key = canonical_key(f"{playlist}|{tvg_id}|{name}|{logo}")
+    for reg_key in sorted(registry):
+        if canonical_key(reg_key) == key and isinstance(registry[reg_key], dict):
+            return registry[reg_key], MATCH_EXACT
 
     wanted = asset_stem(logo)
     if not wanted:

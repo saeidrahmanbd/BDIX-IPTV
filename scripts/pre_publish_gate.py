@@ -149,6 +149,8 @@ def main():
                 logo_missing_files.append(name)
                 logo_missing_file_details.append((name,group,report_path))
     issues=[]
+    relative_logo_refs=[a.get("tvg-name","") for _,a,_ in current if a.get("tvg-logo","").strip().startswith("logos/")]
+    if relative_logo_refs: issues.append(f"relative tvg-logo paths must be absolute raw URLs (count {len(relative_logo_refs)})")
     warnings=[]
     # Hard blockers are integrity/safety violations, not unresolved owner-review
     # metadata. Discovery queues are intentionally provisional and must never

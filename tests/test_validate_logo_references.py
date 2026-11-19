@@ -29,11 +29,16 @@ def reg_key(playlist_name, tvg_id, name, logo):
 class Tree:
     """A throwaway repository tree with both playlists, assets and a registry."""
 
-    def __init__(self, iptv_entries=(), intl_entries=(), registry=None, assets=()):
+    def __init__(self, iptv_entries=(), intl_entries=(), registry=None, assets=(), absolute_logos=True):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name)
-        (self.root / IPTV).write_text(playlist(*iptv_entries), encoding="utf-8")
-        (self.root / INTL).write_text(playlist(*intl_entries), encoding="utf-8")
+        # Real playlists carry absolute raw URLs; fixtures are written that way unless a
+        # test deliberately exercises the rejected relative form.
+        def render(entries):
+            text = playlist(*entries)
+            return text.replace('tvg-logo="logos/', f'tvg-logo="{repair.RAW_BASE}') if absolute_logos else text
+        (self.root / IPTV).write_text(render(iptv_entries), encoding="utf-8")
+        (self.root / INTL).write_text(render(intl_entries), encoding="utf-8")
         (self.root / "reports").mkdir()
         (self.root / "reports/logo-source-registry.json").write_text(json.dumps(registry or {}), encoding="utf-8")
         for asset in assets:
@@ -154,6 +159,13 @@ class FinalValidationTests(unittest.TestCase):
         logo = "logos/" + name
         tree = self.make(iptv_entries=[extinf("Chan", "c.1", logo=logo)], assets=[logo])
         self.assertIn("explicit_blocklist", self.invalid_lines(tree.run()[2])[0]["reasons"])
+
+    def test_relative_logo_path_is_rejected_even_when_the_file_exists(self):
+        tree = self.make(iptv_entries=[extinf("Chan", "c.1", logo="logos/chan.png")],
+                         assets=["logos/chan.png"], absolute_logos=False)
+        error = tree.run()[1]
+        self.assertIsNotNone(error)
+        self.assertIn("relative_logo_refs\": 1", tree.run()[2] + (error or ""))
 
     def test_missing_asset_file_is_rejected(self):
         tree = self.make(iptv_entries=[extinf("Chan", "c.1", logo="logos/gone.png")])

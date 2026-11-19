@@ -66,7 +66,7 @@ def validate_playlist(name, text, registry, root=Path("."), blocked=None):
     blocked = blocked_filenames() if blocked is None else blocked
     current = normalize_newlines(text)
     entries = [line for line in current.splitlines() if line.startswith("#EXTINF:")]
-    missing = review_missing = external = nvision = broken = adult_ignored = non_png = 0
+    missing = review_missing = external = nvision = broken = adult_ignored = non_png = relative_refs = 0
     invalid = []
 
     for line in entries:
@@ -87,7 +87,10 @@ def validate_playlist(name, text, registry, root=Path("."), blocked=None):
                 missing += 1
             continue
         if logo.startswith(BASE):
-            rel = unquote(logo[len(BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
+            # Relative logos/ references are not allowed in playlists: they break
+            # when the playlist is served outside the repository root.
+            relative_refs += 1
+            continue
         elif logo.startswith(RAW_BASE):
             rel = unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
         else:
@@ -137,7 +140,7 @@ def validate_playlist(name, text, registry, root=Path("."), blocked=None):
         "entries": len(entries), "missing_logo_metadata": missing,
         "review_missing_logo_metadata": review_missing,
         "adult_entries_ignored": adult_ignored,
-        "nonrepository_logo_refs": external, "nvision_refs": nvision,
+        "nonrepository_logo_refs": external, "relative_logo_refs": relative_refs, "nvision_refs": nvision,
         "invalid_or_blocked_refs": broken, "non_png_refs": non_png,
     }
     return {"summary": summary, "invalid": invalid}
@@ -145,7 +148,7 @@ def validate_playlist(name, text, registry, root=Path("."), blocked=None):
 
 def summary_failed(summary):
     return bool(
-        summary["nonrepository_logo_refs"] or summary["nvision_refs"]
+        summary["nonrepository_logo_refs"] or summary["relative_logo_refs"] or summary["nvision_refs"]
         or summary["invalid_or_blocked_refs"] or summary["non_png_refs"]
     )
 

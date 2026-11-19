@@ -709,7 +709,15 @@ def download_exact_asset(channel, candidate, canonical_name=False):
 
 
 def raw_url(filename):
-    return "logos/" + urllib.parse.quote(filename, safe="/")
+    """Absolute raw URL written into playlists. Relative logos/ paths are never written."""
+    return RAW_BASE + urllib.parse.quote(filename, safe="/")
+
+
+def absolute_logo_reference(value):
+    """Upgrade a repository-relative logos/ reference to the canonical absolute raw URL."""
+    if value.startswith("logos/"):
+        return raw_url(urllib.parse.unquote(value[len("logos/"):]))
+    return value
 
 
 def is_valid_local_logo_reference(value, allow_generated_fallback=False):
@@ -1009,6 +1017,11 @@ def main():
                 adult_ignored += 1
                 output.append(line)
                 continue
+            # Existing repository-relative references are upgraded in place to the
+            # absolute raw URL when the asset they name is still valid.
+            if current.startswith("logos/") and is_valid_local_logo_reference(current):
+                output.append(set_logo(line, absolute_logo_reference(current)))
+                continue
             missing = not current
             broken = not is_valid_local_logo_reference(current)
             is_review_entry = group_name in {"backup", "review", "not playing", "not playing...", "not playing…", "new channels", "new backups", "new backup"}
@@ -1104,7 +1117,7 @@ def main():
                     source_name=source_name,
                 )
                 if registry_record:
-                    registry_updates[f"{playlist}|{channel_id}|{channel}|{logo_reference}"] = registry_record
+                    registry_updates[logo_provenance.canonical_key(f"{playlist}|{channel_id}|{channel}|{logo_reference}")] = registry_record
                 changed += 1
                 report_rows.append((playlist, line_number, channel, basename, new_file, source_name, source_page, license_name + ((" — " + license_url) if license_url else ""), "replaced"))
             else:
