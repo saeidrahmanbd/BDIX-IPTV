@@ -662,10 +662,7 @@ def final_mode(playlist, report, baseline, mode):
                 if m:
                     country = m.group(1).upper()
                     break
-        indian_identity = country == "IN" or (attrs.get("x-discovery-source-country", "").strip().upper() == "IN") or any(
-            re.search(r"\.in(?:@|$)", str(attrs.get(key, "")).strip(), re.I)
-            for key in ("tvg-id", "channel-id")
-        ) or bd_discovery.canonical_channel_name(e["name"]) in bd_discovery.IPTV_KNOWN_INDIAN_EDUCATION_NAMES
+        indian_identity = bd_discovery.is_indian_discovery_candidate(attrs, e["name"])
         if mode == "iptv" and indian_identity:
             reason = bd_discovery.prohibited_channel(attrs, e["name"], "IN", discovery=True, iptv_discovery=True)
             if reason:
@@ -685,6 +682,25 @@ def final_mode(playlist, report, baseline, mode):
                 content = attrs.get("tvg-content", "").strip().casefold()
                 if content not in {"movie", "movies", "film", "films", "music", "musics"}:
                     policy_issues.append(f"non-Bangladesh/India entry lacks Movie/Music tag: {e['name']}")
+    existing_queue_policy_issues = []
+    if mode == "iptv":
+        new_signatures = {(e["extinf"], e["url"]) for e in candidates}
+        queue_groups = {"new channels", "new backup", "new backups"}
+        for entry in entries:
+            if entry["group"].casefold() not in queue_groups:
+                continue
+            if (entry["extinf"], entry["url"]) in new_signatures:
+                continue
+            if not bd_discovery.is_indian_discovery_candidate(entry["attrs"], entry["name"]):
+                continue
+            reason = bd_discovery.prohibited_channel(
+                entry["attrs"], entry["name"], "IN", discovery=True, iptv_discovery=True
+            )
+            if reason:
+                existing_queue_policy_issues.append(
+                    f"Existing prohibited Indian queue row: {entry['name']} ({reason}) in {entry['group']}"
+                )
+        policy_issues.extend(existing_queue_policy_issues)
     if mode == "international":
         _, threshold_blocks = discovery.parse(text)
         policy_issues.extend(discovery.country_group_threshold_issues(threshold_blocks))
@@ -701,6 +717,7 @@ def final_mode(playlist, report, baseline, mode):
         f"- Discovery entries missing a logo (left blank rather than using a placeholder): {missing_logo}",
         f"- Non-local discovery logo references: {external_logo}",
         f"- Geography/content policy issues: {len(policy_issues)}",
+        f"- Prohibited Indian rows remaining in existing discovery queues: {len(existing_queue_policy_issues)}",
         "- Existing non-discovery entries were not removed by the stream-validation step.",
     ]
     if errors:
