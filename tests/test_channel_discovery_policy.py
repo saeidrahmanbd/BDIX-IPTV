@@ -114,6 +114,10 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIsNone(prohibited_channel(music, "MH One Music", iptv_discovery=True))
         self.assertIn("MH One Prime", prohibited_channel(prime, "MH One Prime", iptv_discovery=True))
 
+    def test_explicit_non_indian_country_is_not_overridden_by_indian_alias(self):
+        attrs = {"tvg-country": "US", "tvg-id": "Doraemon.us@SD", "group-title": "Review"}
+        self.assertIsNone(prohibited_channel(attrs, "Doraemon", iptv_discovery=True))
+
     def test_indian_islamic_religious_channels_are_rejected_for_iptv_policy(self):
         attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
         self.assertIsNotNone(prohibited_channel(attrs, "Islamic TV", iptv_discovery=True))
