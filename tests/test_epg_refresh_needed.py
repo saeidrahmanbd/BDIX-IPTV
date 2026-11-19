@@ -44,7 +44,7 @@ class EPGRefreshNeededTests(unittest.TestCase):
         workflow = (Path(__file__).resolve().parents[1] / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertNotIn("workflow_run:", workflow)
         self.assertNotIn("push:", workflow)
-        self.assertIn("cron: '30 1 * * *'", workflow)
+        self.assertIn("cron: '10 0 * * *'", workflow)
         self.assertIn("workflow_dispatch:", workflow)
         self.assertIn("--max-age-hours 8", workflow)
 
