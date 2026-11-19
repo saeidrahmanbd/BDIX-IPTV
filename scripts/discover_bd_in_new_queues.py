@@ -344,7 +344,7 @@ def prohibited_channel(
         known_category = known_indian_forbidden_category(a, name)
         if known_category:
             return f"Indian {known_category} channel is prohibited"
-    if resolved_country == "IN" and re.search(r"\bmh\s*1\s*prime\b|\bmh1prime\b", values, re.IGNORECASE):
+    if resolved_country == "IN" and re.search(r"\bmh\s*(?:1|one)\s*prime\b|\bmh(?:1|one)prime\b", values, re.IGNORECASE):
         return "known Indian prohibited MH One Prime channel is prohibited"
     # Bangladesh is unrestricted by these India-only genre rules.
     if resolved_country != "IN":
