@@ -50,7 +50,7 @@ IPTV_KNOWN_INDIAN_EDUCATION_IDS = {
 }
 IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news(?:\s*\d+)?|headlines?|current affairs|newsroom|bulletin|breaking news|gnt|aaj tak|india today|times now|republic(?:\s+(?:bharat|bangla))?|abp(?:\s+ananda)?|zee news|wion|tv\s*9)\b", re.I),
-    "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|baby tv|pogo|hungama|sonic|discovery kids|green gold|sony yay)\b", re.I),
+    "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|disney channel|baby tv|pogo|hungama|sonic|discovery kids|green gold|sony yay)\b", re.I),
     "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|vyas channel|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television|vtu)\b", re.I),
     "knowledge": re.compile(r"\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv|inwild|safari tv|dd kisan|krishi darshan|agriculture|agricultural|farming|farmer)\b", re.I),
     "business": re.compile(r"\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\b", re.I),
@@ -66,7 +66,7 @@ def canonical_channel_name(value: str) -> str:
 
 IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
     "news": {"r plus", "r plus gold", "bhi channel", "tv 100", "tv 100 national"},
-    "kids": {"sony yay"},
+    "kids": {"sony yay", "disney channel", "jungle book", "doraemon"},
     "education": {"vtu"},
     "knowledge": {"dd kisan", "krishi darshan"},
     "religious": {"disha tv", "q tv", "shekinah tv"},
