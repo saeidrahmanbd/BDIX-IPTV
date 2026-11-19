@@ -10,6 +10,7 @@ from country_verification import reference_from_playlists,verify_country
 from stream_url_identity import stream_url_key
 from logo_asset_naming import is_blocked_logo_basename
 from restore_protected_review import is_authorized_removal
+from discover_bd_in_new_queues import prohibited_channel, canonical_channel_name, IPTV_KNOWN_INDIAN_EDUCATION_NAMES
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
 EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups"}; REVIEW_QUEUES={"New Channels","New Backups"}
 LOCAL_BASE="logos/"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"; ATTR=re.compile(r'([\w-]+)="([^"]*)"')
@@ -178,11 +179,18 @@ def main():
     if logo_bad: warnings.append(f"incorrect/placeholder/generic logos: {len(logo_bad)}")
     if logo_missing_files: warnings.append(f"referenced local logo files missing from repository: {len(logo_missing_files)}")
 
-    queue_errors=[]; country_reference=reference_from_playlists([P,Path("International-Playlist.m3u")])
+    queue_errors=[]; queue_policy_errors=[]; country_reference=reference_from_playlists([P,Path("International-Playlist.m3u")])
     for _,a,u in current:
         group=a.get("group-title","").strip()
         if group not in REVIEW_QUEUES: continue
         country=a.get("tvg-country","").strip().upper()
+        id_values=[str(a.get(key,"")).strip() for key in ("tvg-id","channel-id")]
+        india_id=any(re.search(r"\\.in(?:@|$)", value, re.I) for value in id_values)
+        known_indian_alias=canonical_channel_name(a.get("tvg-name","")) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES
+        if country == "IN" or india_id or known_indian_alias:
+            reason=prohibited_channel(a,a.get("tvg-name",""),"IN",discovery=True,iptv_discovery=True)
+            if reason:
+                queue_policy_errors.append(f"{a.get('tvg-name','')} ({reason}) in {group}")
         if country not in {"BD","IN"}: queue_errors.append(f"{a.get('tvg-name','')} has provisional/unverified queue country {country or 'missing'}")
         else:
             verdict=verify_country(a,a.get("tvg-name",""),country_reference)
@@ -190,6 +198,7 @@ def main():
             elif verdict.country!=country: queue_errors.append(f"{a.get('tvg-name','')} tvg-country {country} conflicts with verified {verdict.country}")
         if not u.lower().startswith(("http://","https://")): queue_errors.append(f"{a.get('tvg-name','')} has invalid stream URL")
     if queue_errors: warnings.append(f"New queue candidates pending owner review: {len(queue_errors)}")
+    if queue_policy_errors: issues.append(f"prohibited Indian genre entries in New Channels/New Backups: {len(queue_policy_errors)}")
     status="PASS" if not issues else "BLOCK"
     old_by_url={stream_url_key(u):(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in old}; cur_by_url_all={stream_url_key(u):(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in current}
     added=[u for u in cur_by_url_all if u not in old_by_url]; removed_all=[u for u in old_by_url if u not in cur_by_url_all]; modified=[u for u in cur_by_url_all if u in old_by_url and cur_by_url_all[u]!=old_by_url[u]]
@@ -205,7 +214,8 @@ def main():
     else: lines.append("None.")
     lines += ["","## Raw name tags",""]
     lines.extend(f"- **{n}** — {g}" for n,g in raw_name_issues) if raw_name_issues else lines.append("None.")
-    lines += ["","## Queue validation",""]; lines.extend("- "+x for x in queue_errors) if queue_errors else lines.append("New Channels/New Backups contain only validated BD/IN entries.")
+    lines += ["","## Queue validation",""]; lines.extend("- "+x for x in queue_errors) if queue_errors else lines.append("Queue country checks completed.")
+    lines += ["","## Indian IPTV genre-policy blockers",""]; lines.extend("- "+x for x in queue_policy_errors) if queue_policy_errors else lines.append("No prohibited Indian News, Kids, Education, Knowledge, Business or Religious entries in either discovery queue.")
     lines += ["","## Missing local logo files","","| Channel | Group | Referenced filename |","|---|---|---|"]
     if logo_missing_file_details:
         clean=lambda value:str(value).replace("|","\\|").replace("\\n"," ")
