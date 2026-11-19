@@ -54,10 +54,11 @@ for p in ROOT.rglob("*"):
  try:t=p.read_text(encoding="utf-8")
  except Exception:continue
  for m in EXPLICIT.finditer(t):explicit[m.group(1)].add(rel)
- if rel.startswith(runtime_roots) or rel in ("reports/logo-source-registry.json","reports/logo-authenticity-manifest.json"):
+ if rel in PLAYLISTS or rel.startswith(runtime_roots) or rel in ("reports/logo-source-registry.json","reports/logo-authenticity-manifest.json"):
   for name in paths:
    if Path(name).name in t:basename[name].add(rel)
-  if DYNAMIC.search(t):dynamic.append({"source":rel,"matches":DYNAMIC.findall(t)[:20]})
+  if rel.startswith(runtime_roots) or rel in ("reports/logo-source-registry.json","reports/logo-authenticity-manifest.json"):
+   if DYNAMIC.search(t):dynamic.append({"source":rel,"matches":DYNAMIC.findall(t)[:20]})
 playlist=defaultdict(set)
 for pl in PLAYLISTS:
  p=ROOT/pl
@@ -104,7 +105,7 @@ for group in exact:
   manifest.append({"delete_candidate":candidate,"retain_candidates":referenced,"sha256":r["sha256"],"git_blob":r["git_blob"],"bytes":r["bytes"],"checks":{"exact_bytes_identical_to_retained_candidate":True,"playlist_reference_absent":True,"runtime_reference_absent_in_scanned_sources":True,"stored_under_unused_directory":True},"review_status":"manual review required","deletion_authorized":False})
 
 head=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip()
-summary={"assets":len(assets),"decode_failures":sum(bool(x["decode_error"]) for x in records.values()),"explicit_reference_targets":len(explicit),"assets_with_playlist_refs":sum(bool(x["playlist_references"]) for x in records.values()),"assets_with_runtime_refs":sum(bool(x["runtime_references"]) for x in records.values()),"assets_without_scanned_playlist_or_runtime_refs":sum(not x["playlist_references"] and not x["runtime_references"] for x in records.values()),"exact_duplicate_groups":len(exact),"exact_duplicate_extra_copies":sum(len(x["files"])-1 for x in exact),"nonidentical_perceptual_pairs_hamming_le_8":len(pairs),"dynamic_reference_sources_flagged":len(dynamic),"strict_exact_duplicate_manifest_candidates":len(manifest)}
+summary={"assets":len(assets),"decode_failures":sum(bool(x["decode_error"]) for x in records.values()),"explicit_reference_targets":len(explicit),"assets_with_playlist_refs":sum(bool(x["playlist_references"]) for x in records.values()),"assets_with_runtime_refs":sum(bool(x["runtime_references"]) for x in records.values()),"assets_without_scanned_playlist_or_runtime_refs":sum(not x["playlist_references"] and not x["runtime_references"] for x in records.values()),"exact_duplicate_groups":len(exact),"exact_duplicate_extra_copies":sum(len(x["files"])-1 for x in exact),"nonidentical_perceptual_pairs_hamming_le_8":len(pairs),"dynamic_reference_sources_flagged":len(dynamic),"unused_exact_duplicate_review_candidates":len(manifest)}
 report={"schema_version":1,"repository_head":head,"summary":summary,"dynamic_reference_sources":dynamic,"exact_duplicate_groups":exact,"perceptual_pairs":pairs,"deletion_manifest":manifest,"assets":records,"safety":{"playlists_modified":False,"assets_deleted":False,"deletion_performed":False,"limitations":["Dynamic runtime construction is flagged but cannot be proven safe by static scanning alone.","Perceptual hash matches are candidates, not proof of same channel identity.","Manifest candidates are not deletion authorization."]}}
 out=ROOT/"reports";out.mkdir(exist_ok=True)
 (out/"logo-deep-audit.json").write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
