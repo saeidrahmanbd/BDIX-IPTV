@@ -48,9 +48,9 @@ A single failed probe, an inconclusive response or a runner-wide reachability in
 
 | Origin / collection | IPTV-Playlist.m3u | International-Playlist.m3u |
 |---|---|---|
-| Bangladesh | Eligible; owner-curated | All genres are eligible |
+| Bangladesh | Eligible; owner-curated | Only dedicated Movies/Music channels are eligible for new discoveries; existing curated entries are preserved |
 | India | News and non-Islamic religious channels are prohibited. Islamic religious channels, kids and sports—including cricket and football—are allowed. Other legitimate live-TV genres remain eligible unless specifically denylisted. | Only dedicated Movies/Music channels are eligible for new discoveries, like every other country; existing curated entries are preserved |
-| Pakistan | Supported only where explicitly accepted by the main playlist's manual curation | Eligible under Pakistan's unrestricted country policy |
+| Pakistan | Supported only where explicitly accepted by the main playlist's manual curation | Only dedicated Movies/Music channels are eligible, like every other country |
 | Other countries | Existing owner-curated entries remain subject to manual selection | Only dedicated Movie and Music channels are eligible |
 
 The main playlist's source scope for new discovery is Bangladesh and India. Its New Channels/New Backups queues exist for manual owner review. The International discovery workflow accepts only dedicated Movie/Music channels worldwide, including Bangladesh, India and Pakistan. Existing Fashion TV entries are preserved as a legacy exception, not accepted as a new discovery genre.
