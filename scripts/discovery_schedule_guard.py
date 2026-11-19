@@ -51,7 +51,7 @@ RECOVERY_AFTER_LOCAL = {
     "international-channel-discovery.yml": (5, 30),
     "playlist-logo-localization.yml": (5, 45),
     "international-stream-health.yml": (5, 55),
-    "epg-refresh.yml": (7, 45),
+    "epg-refresh.yml": (6, 45),
 }
 
 
@@ -186,9 +186,9 @@ def watchdog_run_blocks_retry(
 ) -> bool:
     """Decide whether a completed run satisfies the watchdog's daily obligation.
 
-    EPG's canonical daily refresh is scheduled for 07:30 Asia/Dhaka, after
-    the 07:00 channel discovery run. Active runs still block overlapping
-    dispatches; successful EPG runs created at/after 07:30 satisfy the
+    EPG's canonical daily refresh is scheduled for 06:10 Asia/Dhaka, after
+    the 05:50 playlist-maintenance run. Active runs still block overlapping
+    dispatches; successful EPG runs created at/after 06:10 satisfy the
     daily obligation.
     """
     if workflow_file == "epg-refresh.yml":
@@ -198,7 +198,7 @@ def watchdog_run_blocks_retry(
             if not created_at:
                 return False
             local_created = parse_github_timestamp(created_at).astimezone(BD_TZ)
-            if (local_created.hour, local_created.minute) < (7, 30):
+            if (local_created.hour, local_created.minute) < (6, 10):
                 return False
     return run_blocks_retry(run, client, workflow_file)
 
@@ -269,7 +269,7 @@ def should_current_run_execute(
         ]
         return not prior_scheduled
 
-    # EPG has a fixed 07:30 Asia/Dhaka daily refresh, after channel discovery.
+    # EPG has a fixed 06:10 Asia/Dhaka daily refresh, after playlist maintenance.
     # Same-day runs are deduplicated by their input revision.
     if workflow_file == "epg-refresh.yml":
         successful_scheduled = [
