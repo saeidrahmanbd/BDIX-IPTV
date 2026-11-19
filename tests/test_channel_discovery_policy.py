@@ -213,19 +213,19 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
 
     def test_legacy_queue_purge_removes_known_indian_categories_without_country_metadata(self):
         text = (
-            "#EXTM3U\\n"
-            '#EXTINF:-1 tvg-id="TV100.in@SD" group-title="New Channels",TV 100\\n'
-            "https://example.invalid/tv100.m3u8\\n"
-            '#EXTINF:-1 tvg-id="RPlus.in@SD" group-title="New Channels",R Plus\\n'
-            "https://example.invalid/rplus.m3u8\\n"
-            '#EXTINF:-1 tvg-id="SonyYay.in@SD" group-title="New Backups",Sony Yay!\\n'
-            "https://example.invalid/sonyyay.m3u8\\n"
-            '#EXTINF:-1 tvg-id="DishaTV.in@SD" group-title="New Backups",Disha TV\\n'
-            "https://example.invalid/disha.m3u8\\n"
-            '#EXTINF:-1 tvg-id="VTU.in@SD" group-title="New Backups",VTU\\n'
-            "https://example.invalid/vtu.m3u8\\n"
-            '#EXTINF:-1 tvg-country="BD" tvg-id="Channel24.bd" group-title="New Channels",Channel 24\\n'
-            "https://example.invalid/channel24.m3u8\\n"
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-id="TV100.in@SD" group-title="New Channels",TV 100\n'
+            "https://example.invalid/tv100.m3u8\n"
+            '#EXTINF:-1 tvg-id="RPlus.in@SD" group-title="New Channels",R Plus\n'
+            "https://example.invalid/rplus.m3u8\n"
+            '#EXTINF:-1 tvg-id="SonyYay.in@SD" group-title="New Backups",Sony Yay!\n'
+            "https://example.invalid/sonyyay.m3u8\n"
+            '#EXTINF:-1 tvg-id="DishaTV.in@SD" group-title="New Backups",Disha TV\n'
+            "https://example.invalid/disha.m3u8\n"
+            '#EXTINF:-1 tvg-id="VTU.in@SD" group-title="New Backups",VTU\n'
+            "https://example.invalid/vtu.m3u8\n"
+            '#EXTINF:-1 tvg-country="BD" tvg-id="Channel24.bd" group-title="New Channels",Channel 24\n'
+            "https://example.invalid/channel24.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
         self.assertEqual(set(removed), {"TV 100", "R Plus", "Sony Yay!", "Disha TV", "VTU"})
