@@ -89,13 +89,15 @@ class EpgMappingRegionTests(unittest.TestCase):
             generate_epg.TARGETED_DISCOVERY_SOURCES,
         )
 
-    def test_bhi_channel_news_is_excluded_from_iptv_playlist(self):
+    def test_existing_bhi_channel_row_is_preserved_despite_discovery_exclusion(self):
         playlist = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
         entries = [
             line for line in playlist.splitlines()
             if line.startswith("#EXTINF:") and 'tvg-id="BHI.Channel.in"' in line
         ]
-        self.assertEqual(entries, [], "Indian News BHI Channel must not remain in the IPTV playlist")
+        self.assertEqual(len(entries), 1, "Existing BHI Channel must be retained; genre exclusions apply only to discovery")
+        self.assertIn('tvg-country="IN"', entries[0])
+        self.assertIn('group-title="Indian Bangla"', entries[0])
     def test_new_channel_aliases_point_to_catalogued_source_ids(self):
         self.assertEqual(
             epg_coverage.EPG_ALIASES["custom.mggtv"],
