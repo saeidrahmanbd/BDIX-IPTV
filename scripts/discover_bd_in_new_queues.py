@@ -339,9 +339,11 @@ def prohibited_channel(
         if canonical_channel_name(candidate) in PERMANENTLY_BANNED_CHANNEL_NAMES:
             return "permanently banned channel"
 
-    if iptv_discovery and not country:
+    if iptv_discovery:
         source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
-        if source_country in {"BD", "IN"}:
+        if source_country:
+            if source_country not in {"BD", "IN"}:
+                return None
             country = source_country
     resolved_country = channel_country(a, country)
     values = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""), a.get("channel-id", "")))
