@@ -579,6 +579,22 @@ def final_mode(playlist, report, baseline, mode):
             )):
                 country_warning += 1
 
+        queue_policy_issues = []
+        queue_groups = {"new channels", "new backup", "new backups"}
+        for entry in entries:
+            if entry["group"].casefold() not in queue_groups:
+                continue
+            if not bd_discovery.is_indian_discovery_candidate(entry["attrs"], entry["name"]):
+                continue
+            reason = bd_discovery.prohibited_channel(
+                entry["attrs"], entry["name"], "IN", discovery=True, iptv_discovery=True
+            )
+            if reason:
+                queue_policy_issues.append(
+                    f"Prohibited Indian queue row: {entry['name']} ({reason}) in {entry['group']}"
+                )
+        errors.extend(queue_policy_issues)
+
         status = "PASS" if not errors else "FAIL"
         body = [
             f"- Run timestamp: {now()}",
@@ -590,7 +606,8 @@ def final_mode(playlist, report, baseline, mode):
             f"- New candidates with non-local logo references: {nonlocal_logo} (warning only)",
             f"- New candidates with country metadata requiring manual review: {country_warning} (warning only)",
             f"- New candidates outside New Channels/New Backups: {len(wrong_queue)}",
-            "- Existing playlist defects, country metadata and logo completeness do not block discovery.",
+            f"- Prohibited Indian rows remaining in New Channels/New Backups: {len(queue_policy_issues)}",
+            "- Existing unrelated playlist defects and incomplete logo/country metadata do not block discovery.",
             "- New candidates remain in New Channels/New Backups for owner review; only definitively dead streams are removed.",
         ]
         if errors:
@@ -682,25 +699,6 @@ def final_mode(playlist, report, baseline, mode):
                 content = attrs.get("tvg-content", "").strip().casefold()
                 if content not in {"movie", "movies", "film", "films", "music", "musics"}:
                     policy_issues.append(f"non-Bangladesh/India entry lacks Movie/Music tag: {e['name']}")
-    existing_queue_policy_issues = []
-    if mode == "iptv":
-        new_signatures = {(e["extinf"], e["url"]) for e in candidates}
-        queue_groups = {"new channels", "new backup", "new backups"}
-        for entry in entries:
-            if entry["group"].casefold() not in queue_groups:
-                continue
-            if (entry["extinf"], entry["url"]) in new_signatures:
-                continue
-            if not bd_discovery.is_indian_discovery_candidate(entry["attrs"], entry["name"]):
-                continue
-            reason = bd_discovery.prohibited_channel(
-                entry["attrs"], entry["name"], "IN", discovery=True, iptv_discovery=True
-            )
-            if reason:
-                existing_queue_policy_issues.append(
-                    f"Existing prohibited Indian queue row: {entry['name']} ({reason}) in {entry['group']}"
-                )
-        policy_issues.extend(existing_queue_policy_issues)
     if mode == "international":
         _, threshold_blocks = discovery.parse(text)
         policy_issues.extend(discovery.country_group_threshold_issues(threshold_blocks))
@@ -717,7 +715,6 @@ def final_mode(playlist, report, baseline, mode):
         f"- Discovery entries missing a logo (left blank rather than using a placeholder): {missing_logo}",
         f"- Non-local discovery logo references: {external_logo}",
         f"- Geography/content policy issues: {len(policy_issues)}",
-        f"- Prohibited Indian rows remaining in existing discovery queues: {len(existing_queue_policy_issues)}",
         "- Existing non-discovery entries were not removed by the stream-validation step.",
     ]
     if errors:
