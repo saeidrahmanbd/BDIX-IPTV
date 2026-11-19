@@ -1,6 +1,7 @@
 name: Refresh IPTV EPG
-# Publish the validated XMLTV guide after the scheduled playlist writers.
-# Push and workflow-completion triggers cover later source changes and delayed writers.
+# Publish one validated XMLTV guide daily, after the 07:00 Bangladesh discovery run.
+# Manual dispatch remains available for an owner-requested immediate rebuild.
+# Do not trigger XMLTV generation for every playlist/report/logo push.
 
 # Serialize the full run, including the daily guard, so simultaneous manual
 # refreshes cannot mutually skip before reaching the shared playlist writer queue.
@@ -10,38 +11,8 @@ concurrency:
   queue: max
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'IPTV-Playlist.m3u'
-      - 'International-Playlist.m3u'
-      - '.github/workflows/epg-refresh.yml'
-      - 'reports/epg-channel-mapping.csv'
-      - 'scripts/*epg*.py'
-      - 'scripts/official_epg_sources.py'
-      - 'scripts/validate_report_freshness.py'
-      - 'tests/test_epg_source_rights.py'
-      - 'tests/test_official_epg_sources.py'
-      - 'tests/test_epg_config.py'
-      - 'tests/test_epg_mapping_regions.py'
-      - 'tests/test_epg_timing_offsets.py'
-      - 'tests/test_iptv_org_epg_targeting.py'
-      - 'tests/test_epg_refresh_needed.py'
-      - 'tests/test_report_freshness.py'
-      - 'tests/test_dashboard_freshness.py'
-      - 'scripts/generate_dashboard.py'
-      - 'tests/test_epg_publication_safety.py'
-      - 'docs/requirements.txt'
-  # The scheduled EPG job is queued after the daily discovery, logo and health
-  # writers. Keep only the final maintenance completion hook as a delayed-run
-  # fallback; listening to every writer creates several serialized no-op EPG runs.
-  workflow_run:
-    workflows: ["IPTV Playlist Update"]
-    types: [completed]
-    branches: [main]
   schedule:
-    - cron: '10 0 * * *' # 06:10 Asia/Dhaka (UTC+6), after all scheduled playlist writers
-  # Keep manual dispatch available for post-change EPG quality verification.
+    - cron: '30 1 * * *' # 07:30 Asia/Dhaka, after the 07:00 channel discovery run
   workflow_dispatch:
 
 # EPG generation is a main-branch writer. Keep it in the shared writer queue so it
@@ -156,10 +127,10 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           mkdir -p reports epg
 
-          # Scheduled and workflow_run events may reuse a fresh guide when it
-          # already matches the current playlists. Pushes and manual dispatches
-          # still exercise the updated mapping/generator/validation pipeline.
-          if [[ "${GITHUB_EVENT_NAME}" == "schedule" || "${GITHUB_EVENT_NAME}" == "workflow_run" ]] && python scripts/epg_refresh_needed.py --max-age-hours 8; then
+          # The daily schedule reuses a fresh, validated guide if a manual
+          # refresh has already completed for today's unchanged playlist inputs.
+          # Manual dispatch intentionally forces a full rebuild.
+          if [[ "${GITHUB_EVENT_NAME}" == "schedule" ]] && python scripts/epg_refresh_needed.py --max-age-hours 24; then
             echo '::notice::A fresh EPG already exists for the current playlists; refreshing dashboard and maintenance snapshots without rebuilding XMLTV.'
             # Dashboard files are derived outputs and frequently overlap with
             # playlist-maintenance commits. Never rebase a stale snapshot commit:
