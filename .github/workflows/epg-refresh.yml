@@ -130,7 +130,7 @@ jobs:
           # The daily schedule reuses a fresh, validated guide if a manual
           # refresh has already completed for today's unchanged playlist inputs.
           # Manual dispatch intentionally forces a full rebuild.
-          if [[ "${GITHUB_EVENT_NAME}" == "schedule" ]] && python scripts/epg_refresh_needed.py --max-age-hours 24; then
+          if [[ "${GITHUB_EVENT_NAME}" == "schedule" ]] && python scripts/epg_refresh_needed.py --max-age-hours 8; then
             echo '::notice::A fresh EPG already exists for the current playlists; refreshing dashboard and maintenance snapshots without rebuilding XMLTV.'
             # Dashboard files are derived outputs and frequently overlap with
             # playlist-maintenance commits. Never rebase a stale snapshot commit:
