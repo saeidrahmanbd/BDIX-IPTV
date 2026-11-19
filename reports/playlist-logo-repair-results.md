@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-19 08:02 UTC**  
+Run time: **2026-11-19 08:12 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,7 +10,7 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1390 | 0 | 0 | 1 | 0 | 0 | 1 |
-| International-Playlist.m3u | 3290 | 1 | 0 | 21 | 372 | 0 | 21 |
+| International-Playlist.m3u | 3290 | 0 | 0 | 20 | 372 | 0 | 20 |
 
 ## Repair log
 
@@ -18,11 +18,10 @@ Historical mapping index: loaded 336 historical name mappings
 |---|---:|---|---|---|---|---|---|
 | IPTV-Playlist.m3u | 1480 | Vyas Channel (576p) | (missing) | (none) | Government of India Presentation Gov catalogue: official CEC SVG brandmark. Used as the operator mark because a dedicated Vyas logo asset could not be validated. |  | Download/validation failed: <urlopen error timed out> |
 | IPTV-Playlist.m3u | 1480 | Vyas Channel (576p) | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 127 | JTV Bangla | jtv-bangla.png | (none) | none |  | Unsafe logo reference removed |
+| International-Playlist.m3u | 127 | JTV Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 863 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1017 | Cedros TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1141 | Persiana Vibe | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 1825 | TV 21 International | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1857 | Tarab | (missing) | (none) | Exact external logo asset |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 1857 | Tarab | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2653 | Asia Flix TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |

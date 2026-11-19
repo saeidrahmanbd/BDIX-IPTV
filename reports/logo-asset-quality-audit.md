@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-19T08:02:46+00:00**
+Generated: **2026-11-19T08:12:43+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **ace887c44d3410b4ea38dcabc5ab44f3acfa4294585ee5cd94f1f9fb855f2cea**
-- International-Playlist.m3u SHA-256: **a4209b19669ea9471b38666146408739bb5e21bf3f9c064cc4fd46886c242b98**
+- International-Playlist.m3u SHA-256: **4c283c9a61fb02f85335597e47c961077b99dd9155594a84ef1dc2fbd453fadd**
 
 ## Summary
 
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **1**
 - Raster/SVG assets with short side under 64 px: **134**
 - Exact-byte duplicate asset clusters: **626**
-- Playlist references whose asset stem differs from the normalized channel name: **1693**
+- Playlist references whose asset stem differs from the normalized channel name: **1694**
 - Unreferenced image assets immediately inside logos/: **654** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1750,6 +1750,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Shanson TV | shanson-tv.png | Russia |
 | International-Playlist.m3u | Shokiruyushchee | shokiruyushchee-hd-1080p.png | Russia |
 | International-Playlist.m3u | TV 21 | tv-21-f7fc662314.png | Russia |
+| International-Playlist.m3u | TV 21 International | tv-21-f7fc662314.png | Russia |
 | International-Playlist.m3u | viju+ Megahit | viju-megahit-hd-1080p.png | Russia |
 | International-Playlist.m3u | viju+ Premiere | viju-premiere-hd-1080p.png | Russia |
 | International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | Singapore |

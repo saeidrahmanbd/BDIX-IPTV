@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-19T08:03:00.025316+00:00",
+  "generated_at_utc": "2026-11-19T08:12:58.551747+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -12,7 +12,7 @@
   },
   "source_sha256_by_playlist": {
     "IPTV-Playlist.m3u": "ace887c44d3410b4ea38dcabc5ab44f3acfa4294585ee5cd94f1f9fb855f2cea",
-    "International-Playlist.m3u": "a4209b19669ea9471b38666146408739bb5e21bf3f9c064cc4fd46886c242b98"
+    "International-Playlist.m3u": "4c283c9a61fb02f85335597e47c961077b99dd9155594a84ef1dc2fbd453fadd"
   },
   "status_counts": {
     "needs_review": 3931,
@@ -29912,7 +29912,7 @@
       "channel_name": "TV 21 International",
       "tvg_id": "TV21International.ru@SD",
       "channel_id": "TV21International.ru@SD",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-21-f7fc662314.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
