@@ -190,6 +190,12 @@ def discovery_eligibility(a,name,allow_legacy_group=False):
  if target in {"News","Religious","Kids","Sports","Documentary & Wildlife","Fashion TV"}:
   label = "news" if target == "News" else target.casefold()
   return None,f"{label} is outside the worldwide Movie/Music-only discovery policy",code
+ group_text=(a.get("group-title") or "").strip()
+ group_key=norm(group_text)
+ if group_text and group_key not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_key=="international"):
+  group_parts=[re.sub(r"[^a-z0-9]+","",part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
+  if any(part not in MOVIE_CATEGORY_PARTS and part not in MUSIC_CATEGORY_PARTS for part in group_parts):
+   return None,"source category is not Movies or Music",code
  genre=infer_genre(a,name)
  if genre not in {"Movies","Music"}:
   return None,"channel is not clearly Movies or Music",code
