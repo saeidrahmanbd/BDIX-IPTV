@@ -186,6 +186,7 @@ def main():
     for _,a,u in current:
         group=a.get("group-title","").strip()
         if group not in REVIEW_QUEUES: continue
+        country=a.get("tvg-country","").strip().upper()
         if is_indian_discovery_candidate(a, a.get("tvg-name", "")):
             reason=prohibited_channel(a,a.get("tvg-name",""),"IN",discovery=True,iptv_discovery=True)
             if reason:
