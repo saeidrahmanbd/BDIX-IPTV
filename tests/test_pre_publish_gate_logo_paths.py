@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, LOCAL_BASE, EXCLUDE, REVIEW_QUEUES, identity_key, parse
+from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, LOCAL_BASE, EXCLUDE, REVIEW_QUEUES, identity_key, parse, permanently_banned_playlist_errors
 
 
 class PrePublishLogoPathTests(unittest.TestCase):
@@ -115,6 +115,24 @@ class PrePublishLogoPathTests(unittest.TestCase):
 
     def test_non_repository_logo_is_not_resolved_as_local(self):
         self.assertIsNone(referenced_logo_file("https://example.invalid/logos/channel.png", self.root))
+
+
+    def test_permanent_bans_are_detected_across_country_and_group_boundaries(self):
+        entries = [
+            ("", {"tvg-name": "Starnet", "tvg-id": "Starnet.in@SD", "tvg-country": "IN", "group-title": "Review"}, "https://example.invalid/starnet.m3u8"),
+            ("", {"tvg-name": "PowerTürk TV", "tvg-id": "PowerTurkTV.tr", "tvg-country": "TR", "group-title": "International"}, "https://example.invalid/powerturk.m3u8"),
+            ("", {"tvg-name": "Disney Channel", "tvg-id": "DisneyChannel.in@HD", "tvg-country": "IN", "group-title": "Backup"}, "https://example.invalid/disney.m3u8"),
+        ]
+        errors = permanently_banned_playlist_errors(entries)
+        self.assertEqual(len(errors), 2)
+        self.assertTrue(any("Starnet" in error for error in errors))
+        self.assertTrue(any("PowerTürk TV" in error for error in errors))
+        self.assertFalse(any("Disney Channel" in error for error in errors))
+
+    def test_current_iptv_playlist_has_no_permanently_banned_rows(self):
+        root = Path(__file__).resolve().parents[1]
+        entries = parse((root / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig"))
+        self.assertEqual(permanently_banned_playlist_errors(entries), [])
 
 
 if __name__ == "__main__":
