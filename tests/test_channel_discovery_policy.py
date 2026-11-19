@@ -109,10 +109,22 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn("religious", reason)
 
     def test_mh_one_music_is_allowed_but_mh_one_prime_remains_blocked(self):
-        music = {"tvg-country": "IN", "tvg-id": "MHOneMusic.in@SD", "group-title": "Indian Music"}
-        prime = {"tvg-country": "IN", "tvg-id": "MHOnePrime.in@SD", "group-title": "Indian Entertainment"}
+        music = {"tvg-country": "IN", "tvg-id": "Mh1Music.in@SD", "group-title": "Indian Music"}
+        prime = {"tvg-country": "IN", "tvg-id": "MH1Prime.in@SD", "group-title": "Indian Entertainment"}
         self.assertIsNone(prohibited_channel(music, "MH One Music", iptv_discovery=True))
         self.assertIn("MH One Prime", prohibited_channel(prime, "MH One Prime", iptv_discovery=True))
+
+    def test_explicit_non_indian_country_is_not_overridden_by_indian_alias(self):
+        attrs = {"tvg-country": "US", "tvg-id": "Doraemon.us@SD", "group-title": "Review"}
+        self.assertIsNone(prohibited_channel(attrs, "Doraemon", iptv_discovery=True))
+
+    def test_indian_id_suffix_catches_conflict_with_stale_foreign_country(self):
+        attrs = {"tvg-country": "US", "tvg-id": "DisneyChannel.in@HD", "group-title": "Backup"}
+        self.assertIsNotNone(prohibited_channel(attrs, "Disney Channel", iptv_discovery=True))
+
+    def test_explicit_foreign_source_country_overrides_indian_id_and_country_field(self):
+        attrs = {"x-discovery-source-country": "US", "tvg-country": "IN", "tvg-id": "DisneyChannel.in@HD"}
+        self.assertIsNone(prohibited_channel(attrs, "Disney Channel", "IN", iptv_discovery=True))
 
     def test_indian_islamic_religious_channels_are_rejected_for_iptv_policy(self):
         attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}

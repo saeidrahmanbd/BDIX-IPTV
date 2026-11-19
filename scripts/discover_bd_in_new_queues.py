@@ -102,20 +102,25 @@ def known_indian_forbidden_category(a: dict[str, str], name: str) -> str | None:
 
 
 def is_indian_discovery_candidate(a: dict[str, str], name: str) -> bool:
-    """Infer India using source-country first, then explicit country, ID or known alias.
+    """Infer India from source country, country metadata, ID suffix, then alias.
 
-    An explicit BD source/country must remain unrestricted even if a stale ID or
-    display name resembles an Indian channel. A known Indian alias fills missing
-    country metadata, but never overrides an explicit Bangladesh declaration.
+    Explicit source-country metadata wins. If tvg-country conflicts with a
+    recognized BD/IN ID suffix, retain the country-code evidence; otherwise an
+    explicit non-BD/IN country prevents a name-only Indian alias from overriding it.
     """
     source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
-    if source_country in {"BD", "IN"}:
+    if source_country:
         return source_country == "IN"
     declared_country = str(a.get("tvg-country", "")).strip().upper()
     if declared_country in {"BD", "IN"}:
         return declared_country == "IN"
+    if declared_country:
+        id_only = dict(a)
+        id_only["tvg-country"] = ""
+        id_country = channel_country(id_only)
+        return id_country == "IN"
     resolved = channel_country(a)
-    if resolved in {"BD", "IN"}:
+    if resolved:
         return resolved == "IN"
     return known_indian_forbidden_category(a, name) is not None
 
@@ -334,17 +339,19 @@ def prohibited_channel(
         if canonical_channel_name(candidate) in PERMANENTLY_BANNED_CHANNEL_NAMES:
             return "permanently banned channel"
 
-    if iptv_discovery and not country:
+    if iptv_discovery:
         source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
-        if source_country in {"BD", "IN"}:
+        if source_country:
+            if source_country not in {"BD", "IN"}:
+                return None
             country = source_country
     resolved_country = channel_country(a, country)
     values = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""), a.get("channel-id", "")))
-    if iptv_discovery and resolved_country in {None, "IN"}:
+    if iptv_discovery and resolved_country in {None, "IN"} and is_indian_discovery_candidate(a, name):
         known_category = known_indian_forbidden_category(a, name)
         if known_category:
             return f"Indian {known_category} channel is prohibited"
-    if resolved_country == "IN" and re.search(r"\bmh\s*(?:1|one)\s*prime\b|\bmh(?:1|one)prime\b", values, re.IGNORECASE):
+    if resolved_country == "IN" and re.search(r"\bmh\s*1\s*prime\b|\bmh1prime\b", values, re.IGNORECASE):
         return "known Indian prohibited MH One Prime channel is prohibited"
     # Bangladesh is unrestricted by these India-only genre rules.
     if resolved_country != "IN":
