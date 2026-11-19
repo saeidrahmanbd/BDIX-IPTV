@@ -65,6 +65,59 @@ def canonical_channel_name(value: str) -> str:
     value = unicodedata.normalize("NFKD", value).casefold()
     return re.sub(r"[^a-z0-9]+", " ", value).strip()
 
+IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
+    "news": {"r plus", "tv 100", "tv 100 national"},
+    "kids": {"sony yay"},
+    "education": {"vtu"},
+    "religious": {"disha tv"},
+}
+IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
+    "rplus.in": "news", "tv100.in": "news", "tv100national.in": "news",
+    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious",
+}
+
+
+def known_indian_forbidden_category(a: dict[str, str], name: str) -> str | None:
+    """Resolve known Indian channels whose names alone do not reveal their genre."""
+    names = {
+        canonical_channel_name(value)
+        for value in (name, a.get("tvg-name", ""))
+        if str(value or "").strip()
+    }
+    ids = {
+        str(a.get(key, "")).strip().casefold().split("@", 1)[0]
+        for key in ("tvg-id", "channel-id") if a.get(key)
+    }
+    if names & IPTV_KNOWN_INDIAN_EDUCATION_NAMES or ids & IPTV_KNOWN_INDIAN_EDUCATION_IDS:
+        return "education"
+    for category, aliases in IPTV_KNOWN_INDIAN_CATEGORY_NAMES.items():
+        if names & aliases:
+            return category
+    for channel_id in ids:
+        category = IPTV_KNOWN_INDIAN_CATEGORY_IDS.get(channel_id)
+        if category:
+            return category
+    return None
+
+
+def is_indian_discovery_candidate(a: dict[str, str], name: str) -> bool:
+    """Infer India using source-country first, then explicit country, ID or known alias.
+
+    An explicit BD source/country must remain unrestricted even if a stale ID or
+    display name resembles an Indian channel. A known Indian alias fills missing
+    country metadata, but never overrides an explicit Bangladesh declaration.
+    """
+    source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
+    if source_country in {"BD", "IN"}:
+        return source_country == "IN"
+    declared_country = str(a.get("tvg-country", "")).strip().upper()
+    if declared_country in {"BD", "IN"}:
+        return declared_country == "IN"
+    resolved = channel_country(a)
+    if resolved in {"BD", "IN"}:
+        return resolved == "IN"
+    return known_indian_forbidden_category(a, name) is not None
+
 PERMANENTLY_BANNED_CHANNEL_NAMES = {
     canonical_channel_name(name) for name in (
         "E-Vidya 10",
@@ -282,6 +335,10 @@ def prohibited_channel(
 
     resolved_country = channel_country(a, country)
     values = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""), a.get("channel-id", "")))
+    if iptv_discovery and resolved_country in {None, "IN"}:
+        known_category = known_indian_forbidden_category(a, name)
+        if known_category:
+            return f"Indian {known_category} channel is prohibited"
     if resolved_country == "IN" and re.search(r"\bmh\s*1\s*prime\b|\bmh1prime\b", values, re.IGNORECASE):
         return "known Indian prohibited MH One Prime channel is prohibited"
     # Bangladesh is unrestricted by these India-only genre rules.
@@ -304,8 +361,9 @@ def prohibited_channel(
             re.sub(r"@.*$", "", str(a.get(key, "")).strip().casefold())
             for key in ("tvg-id", "channel-id") if a.get(key)
         }
-        if canonical_channel_name(name) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES or normalized_ids & IPTV_KNOWN_INDIAN_EDUCATION_IDS:
-            return "Indian education channel is prohibited"
+        known_category = known_indian_forbidden_category(a, name)
+        if known_category:
+            return f"Indian {known_category} channel is prohibited"
         expanded_values = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", values)
         for category, pattern in IPTV_FORBIDDEN_CATEGORY_PATTERNS.items():
             if pattern.search(expanded_values):
@@ -389,22 +447,8 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
             or bool(re.search(r'group-title="(?:New Channels|New Backups|New Backup)"', extinf_line, re.I))
         )
         if is_discovery_queue:
-            queue_country = "IN" if (
-                a.get("x-discovery-source-country", "").strip().upper() == "IN"
-                or a.get("tvg-country", "").strip().upper() == "IN"
-                or any(re.search(r"\.in(?:@|$)", str(a.get(key, "")).strip(), re.I)
-                       for key in ("tvg-id", "channel-id"))
-            ) else None
-            known_indian_education = (
-                canonical_channel_name(name) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES
-                or any(str(a.get(key, "")).strip().casefold().split("@", 1)[0] in IPTV_KNOWN_INDIAN_EDUCATION_IDS
-                       for key in ("tvg-id", "channel-id"))
-            )
-            reason = (
-                "Indian education channel is prohibited"
-                if known_indian_education
-                else prohibited_channel(a, name, queue_country, discovery=True, iptv_discovery=True)
-            )
+            queue_country = "IN" if is_indian_discovery_candidate(a, name) else None
+            reason = prohibited_channel(a, name, queue_country, discovery=True, iptv_discovery=True)
             if not reason and canonical_channel_name(name) in NON_CHANNEL_PROGRAM_NAMES:
                 reason = "programme title, not a standalone live TV channel"
             if reason:
