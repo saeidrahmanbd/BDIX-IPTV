@@ -185,7 +185,7 @@ def main():
         if group not in REVIEW_QUEUES: continue
         country=a.get("tvg-country","").strip().upper()
         id_values=[str(a.get(key,"")).strip() for key in ("tvg-id","channel-id")]
-        india_id=any(re.search(r"\\.in(?:@|$)", value, re.I) for value in id_values)
+        india_id=any(re.search(r"\.in(?:@|$)", value, re.I) for value in id_values)
         known_indian_alias=canonical_channel_name(a.get("tvg-name","")) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES
         if country == "IN" or india_id or known_indian_alias:
             reason=prohibited_channel(a,a.get("tvg-name",""),"IN",discovery=True,iptv_discovery=True)
