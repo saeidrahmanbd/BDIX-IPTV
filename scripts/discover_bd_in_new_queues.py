@@ -371,12 +371,12 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
         if group in queue_groups:
             queue_country = "IN" if (
                 a.get("tvg-country", "").strip().upper() == "IN"
-                or any(re.search(r"\\.in(?:@|$)", str(a.get(key, "")).strip(), re.I)
+                or any(re.search(r"\.in(?:@|$)", str(a.get(key, "")).strip(), re.I)
                        for key in ("tvg-id", "channel-id"))
             ) else None
             known_indian_education = canonical_channel_name(name) in {
                 "vyas channel", "shiksha tv", "gyandarshan", "gyandarshan hd",
-                "dd gyan darshan", "kite victers", "victers", "swayam prabha",
+                "dd gyan darshan", "kite victers", "victers", "swayam prabha", "dd kisan", "krishi darshan",
             }
             reason = (
                 "Indian education channel is prohibited"
@@ -522,10 +522,10 @@ def main() -> int:
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**",
-        "- Bangladesh channels of all genres are eligible. Indian Kids and Sports channels are eligible, explicitly including cricket and football; Indian News, Religious (including Islamic), Educational, Knowledge and Business/Finance channels remain prohibited.",
+        "- Bangladesh channels of all genres are eligible. Indian News, Kids, Education, Knowledge, Business/Finance and all Religious channels are prohibited in this IPTV playlist.",\n        f"- Previously admitted prohibited Indian queue rows purged: **{len(purged_existing)}**",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
-        "- Existing manual-review queue rows changed by discovery: **0**",
+        "- Existing manual-review queue rows changed only where they violated the owner-authorized Indian exclusion policy.",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected/held candidates: **{rejected}**",
@@ -538,7 +538,7 @@ def main() -> int:
     report += ["", "## New Backups", ""]
     report.extend(f"- {name} (source feed: {country}) — {url}" for country, _, name, url in new_backups)
     REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
-    print(f"Discovery: {len(new_channels)} new channels, {len(new_backups)} new backups, {rejected} rejected; existing review queues preserved.")
+    print(f"Discovery: {len(new_channels)} new channels, {len(new_backups)} new backups, {rejected} rejected; {len(purged_existing)} prohibited Indian queue rows purged.")
     return 0
 
 
