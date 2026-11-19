@@ -40,11 +40,20 @@ FORBIDDEN_CATEGORY_PATTERNS = {
 }
 # Strict India-only exclusions for IPTV-Playlist.m3u. Bangladesh remains
 # unrestricted; International does not opt into this additional policy.
+IPTV_KNOWN_INDIAN_EDUCATION_NAMES = {
+    "vyas channel", "shiksha tv", "gyandarshan", "gyandarshan hd",
+    "dd gyan darshan", "kite victers", "victers", "swayam prabha",
+    "dd kisan", "krishi darshan",
+}
+IPTV_KNOWN_INDIAN_EDUCATION_IDS = {
+    "vyaschannel.in", "shikshatv.in", "gyandarshan.in", "gyandarshanhd.in",
+    "ddgyandarshan.in", "kitevicters.in", "victers.in", "swayamprabha.in",
+}
 IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\\b(?:news|headlines?|current affairs|newsroom|bulletin|breaking news|gnt)\\b", re.I),
     "kids": re.compile(r"\\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|baby tv|pogo|hungama|sonic|discovery kids|green gold)\\b", re.I),
     "education": re.compile(r"\\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television)\\b", re.I),
-    "knowledge": re.compile(r"\\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv)\\b", re.I),
+    "knowledge": re.compile(r"\\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv|inwild|safari tv|dd kisan|krishi darshan|agriculture|agricultural|farming|farmer)\\b", re.I),
     "business": re.compile(r"\\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\\b", re.I),
     "religious": re.compile(r"\\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\\s*tv|angel|hosanna|madani|iqra|huda|noor|deen|mta|qtv|aastha|sadhna|sanskar|jinvani|satsang|jagran|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|calvary|santvani|sharnam)\\b", re.I),
 }
@@ -291,6 +300,12 @@ def prohibited_channel(
     values = " ".join([name] + [str(a.get(key, "")) for key in metadata_keys])
     group = a.get("group-title", "").strip()
     if iptv_discovery:
+        normalized_ids = {
+            re.sub(r"@.*$", "", str(a.get(key, "")).strip().casefold())
+            for key in ("tvg-id", "channel-id") if a.get(key)
+        }
+        if canonical_channel_name(name) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES or normalized_ids & IPTV_KNOWN_INDIAN_EDUCATION_IDS:
+            return "Indian education channel is prohibited"
         for category, pattern in IPTV_FORBIDDEN_CATEGORY_PATTERNS.items():
             if pattern.search(values):
                 return f"Indian {category} channel is prohibited"
@@ -374,10 +389,11 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
                 or any(re.search(r"\.in(?:@|$)", str(a.get(key, "")).strip(), re.I)
                        for key in ("tvg-id", "channel-id"))
             ) else None
-            known_indian_education = canonical_channel_name(name) in {
-                "vyas channel", "shiksha tv", "gyandarshan", "gyandarshan hd",
-                "dd gyan darshan", "kite victers", "victers", "swayam prabha", "dd kisan", "krishi darshan",
-            }
+            known_indian_education = (
+                canonical_channel_name(name) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES
+                or any(str(a.get(key, "")).strip().casefold().split("@", 1)[0] in IPTV_KNOWN_INDIAN_EDUCATION_IDS
+                       for key in ("tvg-id", "channel-id"))
+            )
             reason = (
                 "Indian education channel is prohibited"
                 if known_indian_education
