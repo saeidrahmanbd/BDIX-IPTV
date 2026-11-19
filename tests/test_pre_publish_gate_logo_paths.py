@@ -58,12 +58,12 @@ class PrePublishLogoPathTests(unittest.TestCase):
     def test_authorized_permanent_removal_is_not_reported_as_review_queue_deletion(self):
         info = '#EXTINF:-1 tvg-name="Aaj Tak" group-title="Not Playing",Aaj Tak'
         entries = [(info, {"tvg-name": "Aaj Tak", "group-title": "Not Playing"}, "https://example.invalid/aajtak.m3u8")]
-        self.assertIn("https://example.invalid/disha.m3u8", review_state(entries))
+        self.assertEqual(review_state(entries), {})
 
     def test_indian_discovery_policy_does_not_unprotect_existing_queue_rows(self):
         info = '#EXTINF:-1 tvg-id="DishaTV.in@SD" tvg-name="Disha TV" group-title="New Backups",Disha TV'
         entries = [(info, {"tvg-id": "DishaTV.in@SD", "tvg-name": "Disha TV", "group-title": "New Backups"}, "https://example.invalid/disha.m3u8")]
-        self.assertEqual(review_state(entries), {})
+        self.assertIn("https://example.invalid/disha.m3u8", review_state(entries))
 
     def test_explicit_bangladesh_queue_country_is_not_overridden_by_indian_alias(self):
         info = '#EXTINF:-1 tvg-country="BD" tvg-id="DishaTV.in@SD" tvg-name="Disha TV" group-title="New Backups",Disha TV'
