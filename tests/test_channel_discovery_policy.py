@@ -102,6 +102,10 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 attrs = {"group-title": group, "tvg-country": "IN"}
                 self.assertIsNotNone(prohibited_channel(attrs, name))
 
+    def test_indian_islamic_religious_channels_are_rejected_for_iptv_policy(self):
+        attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
+        self.assertIsNotNone(prohibited_channel(attrs, "Islamic TV", iptv_discovery=True))
+
     def test_indian_kids_are_rejected_for_active_and_discovery_policy(self):
         for name, group in [
             ("Kids TV", "Kids"), ("Cartoon Network", "Entertainment"),
@@ -202,6 +206,10 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("Disha TV", {"tvg-id": "DishaTV.in@SD"}, "religious"),
             ("VTU", {"tvg-id": "VTU.in@SD"}, "education"),
             ("Disha TV", {}, "religious"),
+            ("R Plus Gold", {"tvg-id": "RPlusGold.in@SD"}, "news"),
+            ("BHI Channel", {"tvg-id": "BHI.Channel.in"}, "news"),
+            ("Q TV", {"tvg-id": "QTV.in"}, "religious"),
+            ("Shekinah TV", {"tvg-id": "ShekinahTV.in@SD"}, "religious"),
         ]
         for name, extra, category in examples:
             attrs = {"group-title": "General", **extra}
