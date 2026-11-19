@@ -11,37 +11,20 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 - Channel identities removed: **0**
 - Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **475**
+- Logo reference changes: **579**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-19 — `International-Playlist.m3u`
 
-- New channel identities: **14**
-- Channel identities removed: **4**
-- Stream URLs added / removed: **14 / 5**
+- New channel identities: **0**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
 - Logo reference changes: **2848**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- Music Box Brazil (720p)
-- MTV Biggest Pop
-- MTV Biggest Pop BR
-- MTV Biggest Pop CA
-- MTV Biggest Pop LatAm
-- MTV Classic BR
-- MTV Classic CA
-- MTV Classic LatAm
-- MTV Flow Latino (720p)
-- MTV Flow Latino LatAm (720p)
-
-Removed channel identities (up to 10):
-- JonmoBhumi TV
-- Look Thoong TV
-- Mi Musica Hits
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
