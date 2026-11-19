@@ -2382,6 +2382,20 @@ https://jmp2.uk/plu-64a3d96f060e830008af6745.m3u8
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-ionmystery-tablo/playlist.m3u8
 #EXTINF:-1 tvg-id="MTV.us@East" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv-united-states-bafd7b214a.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV (United States)",MTV (United States)
 http://23.237.104.106:8080/USA_MTV/index.m3u8
+#EXTINF:-1 tvg-id="MTVBiggestPop.us@US" tvg-name="MTV Biggest Pop (1080p)" tvg-logo="logos/international/mtv-biggest-pop-1080p.png" tvg-country="US" channel-id="MTVBiggestPop.us@US" group-title="United States" tvg-content="Music",MTV Biggest Pop (1080p)
+https://jmp2.uk/plu-5d14fd1a252d35decbc4080c.m3u8
+#EXTINF:-1 tvg-id="MTVBiggestPop.us@BR" tvg-name="MTV Biggest Pop BR (1080p)" tvg-logo="logos/international/mtv-biggest-pop-br-1080p.png" tvg-country="US" channel-id="MTVBiggestPop.us@BR" group-title="United States" tvg-content="Music",MTV Biggest Pop BR (1080p)
+https://jmp2.uk/plu-6047fbdbbb776a0007e7f2ff.m3u8
+#EXTINF:-1 tvg-id="MTVBiggestPop.us@CA" tvg-name="MTV Biggest Pop CA (1080p)" tvg-logo="logos/international/mtv-biggest-pop-ca-1080p.png" tvg-country="US" channel-id="MTVBiggestPop.us@CA" group-title="United States" tvg-content="Music",MTV Biggest Pop CA (1080p)
+https://jmp2.uk/plu-65410176770cf1000866bf31.m3u8
+#EXTINF:-1 tvg-id="MTVBiggestPop.us@LatAm" tvg-name="MTV Biggest Pop LatAm (1080p)" tvg-logo="logos/international/mtv-biggest-pop-latam-1080p.png" tvg-country="US" channel-id="MTVBiggestPop.us@LatAm" group-title="United States" tvg-content="Music",MTV Biggest Pop LatAm (1080p)
+https://jmp2.uk/plu-6047fabfce6e8e00070bcc9f.m3u8
+#EXTINF:-1 tvg-id="MTVClassic.us@BR" tvg-name="MTV Classic BR (720p)" tvg-logo="logos/international/mtv-classic-br-720p.png" tvg-country="US" channel-id="MTVClassic.us@BR" group-title="United States" tvg-content="Music",MTV Classic BR (720p)
+https://jmp2.uk/plu-66a01dcb8561260008b0a41d.m3u8
+#EXTINF:-1 tvg-id="MTVClassic.us@CA" tvg-name="MTV Classic CA (720p)" tvg-logo="logos/international/mtv-classic-ca-720p.png" tvg-country="US" channel-id="MTVClassic.us@CA" group-title="United States" tvg-content="Music",MTV Classic CA (720p)
+https://jmp2.uk/plu-654100b4bdf3cf0008aa49c7.m3u8
+#EXTINF:-1 tvg-id="MTVClassic.us@LatAm" tvg-name="MTV Classic LatAm (720p)" tvg-logo="logos/international/mtv-classic-latam-720p.png" tvg-country="US" channel-id="MTVClassic.us@LatAm" group-title="United States" tvg-content="Music",MTV Classic LatAm (720p)
+https://jmp2.uk/plu-66a11a21a79dea0008aa90ca.m3u8
 #EXTINF:-1 tvg-id="custom.mtv-live" tvg-language="eng" channel-id="custom.mtv-live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv-live-1080p-40e9c3993c.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV Live",MTV Live
 http://23.237.104.106:8080/USA_MTV_LIVE/index.m3u8
 #EXTINF:-1 tvg-id="MyCinema.us" channel-id="MyCinema.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/my-cinema.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="My Cinema",My Cinema
@@ -4896,6 +4910,8 @@ https://lbgo.bozztv.com/ssh101/ssh101/montonestv1/playlist.m3u8
 https://183.giatvcdn.com/ssh101/ssh101/montonestv1/playlist.m3u8
 #EXTINF:-1 tvg-id="MoonbugKids.uk" channel-id="MoonbugKids.uk" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moonbug-kids.png" tvg-country="GB" group-title="Review" tvg-name="Moonbug Kids",Moonbug Kids
 https://moonbug-rokuus.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="MoozDance.ro@HD" tvg-name="Mooz Dance HD (1080i) [Geo-blocked]" tvg-logo="logos/international/mooz-dance-hd-1080i-geo-blocked.png" tvg-country="RO" channel-id="MoozDance.ro@HD" group-title="Review" tvg-content="Music",Mooz Dance HD (1080i) [Geo-blocked]
+https://meta.vcdn.biz/bb45aeed3156b62f01b6ca222920d46b_megogo/live/hls/b/700_2500/u_sid/0/o/183161921/rsid/20877e0c-fb47-4c47-a29d-19fadadbccb7/u_uid/2260062697/u_vod/0/u_device/cms_html5/u_devicekey/_site/lip/81.196.174.41*asn/u_srvc/109126/u_did/web_c02d0d195494991ada83b5ae2a2f87d6041c11b1b8f79fc86ae5b7b557894fa0/type.live/playlist.m3u8
 #EXTINF:-1 tvg-id="MoreThanSportsTV.de@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/more-than-sports-tv.png" tvg-country="DE" group-title="Review" tvg-name="More Than Sports TV",More Than Sports TV
 https://mts1.iptv-playoutcenter.de/mts/mts-web/playlist.m3u8
 #EXTINF:-1 tvg-id="motortrend.us" channel-id="motortrend.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/motortrend.png" tvg-country="US" group-title="Review" tvg-name="Motortrend",Motortrend
