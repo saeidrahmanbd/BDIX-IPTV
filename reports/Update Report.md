@@ -1,12 +1,12 @@
 # Update Report
 
-_Last generated: **2026-11-19 01:55 UTC**_
+_Last generated: **2026-11-19 03:41 UTC**_
 
-Source playlist SHA-256: **3f14163d10c3403b8c40322b8618c5a67c127bad1f92a2d94a1aae75bba5f24f**
+Source playlist SHA-256: **c838560b0bff3fc20da2c17b70a32946a0ee4939b817afba626d0386a57efd3a**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1379** |
+| Streams | **1390** |
 | Active Channel Identities | **714** |
 | Active Primary Streams | **714** |
 | Bangladesh | **70** |
@@ -27,8 +27,8 @@ Source playlist SHA-256: **3f14163d10c3403b8c40322b8618c5a67c127bad1f92a2d94a1aa
 - Duplicate stream URLs: **STALE / UNKNOWN (last saved: 0)**
 - Metadata conflicts (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
 - Same-name / different-ID collisions (canonical primary scope): **STALE / UNKNOWN (last saved: 1)**
-- Cross-queue metadata identity variants: **2**
-- Cross-queue same-name / different-ID collisions: **7**
+- Cross-queue metadata identity variants: **3**
+- Cross-queue same-name / different-ID collisions: **8**
 - Duplicate primary identities: **STALE / UNKNOWN (last saved: 0)**
 - Primary channel-number collisions: **STALE / UNKNOWN (last saved: 0)**
 - Primary entries missing channel numbers: **STALE / UNKNOWN (last saved: 15)**
@@ -54,7 +54,7 @@ Source playlist SHA-256: **3f14163d10c3403b8c40322b8618c5a67c127bad1f92a2d94a1aa
 ## EPG
 - EPG IDs audited: **714**
 - Mapped: **434 (60.8%)**
-- Current/future programme coverage: **384/714 (53.8%)**
+- Current/future programme coverage: **385/714 (53.9%)**
 - No mapping: **280**
 - EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against both current playlist inventories)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
@@ -63,7 +63,7 @@ Source playlist SHA-256: **3f14163d10c3403b8c40322b8618c5a67c127bad1f92a2d94a1aa
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-18T03:24:09.019889+00:00** | **STALE** |
-| EPG coverage / two-playlist inventory | **2026-11-19T01:55:11+00:00** | **CURRENT** |
+| EPG coverage / two-playlist inventory | **2026-11-19T03:41:50+00:00** | **CURRENT** |
 | Stream health | **2026-11-18T03:25:29+00:00** | **STALE** |
 | Pre-publish gate | **2026-11-18T03:24:09+00:00** | **STALE** |
 
