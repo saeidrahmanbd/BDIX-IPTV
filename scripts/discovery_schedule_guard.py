@@ -269,8 +269,8 @@ def should_current_run_execute(
         ]
         return not prior_scheduled
 
-    # EPG has a fixed 06:10 Asia/Dhaka daily refresh. It also tracks input
-    # revisions so a later playlist writer can legitimately require a rebuild.
+    # EPG has a fixed 07:30 Asia/Dhaka daily refresh, after channel discovery.
+    # Same-day runs are deduplicated by their input revision.
     if workflow_file == "epg-refresh.yml":
         successful_scheduled = [
             run for run in others
