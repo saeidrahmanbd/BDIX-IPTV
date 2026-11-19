@@ -6,7 +6,9 @@ on:
     paths:
       - "docs/index.html"
       - "docs/playlists.html"
+      - "docs/playlist-studio.html"
       - "docs/bangla-iptv.html"
+      - "docs/robots.txt"
       - "docs/sitemap.xml"
       - "docs/4e1c93ab76d25f0881a4b7c3e9d6205f.txt"
       - ".github/workflows/indexnow.yml"
@@ -41,7 +43,7 @@ jobs:
           echo "The IndexNow key file was not found at $KEY_LOCATION" >&2
           exit 1
 
-      - name: Submit the public landing pages to IndexNow
+      - name: Submit all public landing pages to IndexNow
         shell: bash
         run: |
           set -euo pipefail
@@ -52,6 +54,7 @@ jobs:
             --argjson urlList '[
               "https://saeidrahmanbd.github.io/BDIX-IPTV/",
               "https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html",
+              "https://saeidrahmanbd.github.io/BDIX-IPTV/playlist-studio.html",
               "https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html"
             ]' \
             '{host:$host,key:$key,keyLocation:$keyLocation,urlList:$urlList}')"
