@@ -368,6 +368,24 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         self.assertIn('group-title="Backup"', output)
         self.assertIn('group-title="Review"', output)
 
+    def test_verified_movie_with_missing_country_stays_in_new_channels(self):
+        import validate_discovery_run as validation
+
+        row = (
+            '#EXTINF:-1 tvg-id="MysteryCinema" tvg-name="Mystery Cinema" '
+            'tvg-logo="logos/mystery-cinema.svg" tvg-content="Movies" '
+            'group-title="New Channels",Mystery Cinema\nhttps://example.org/mystery.m3u8'
+        )
+        _, entries, malformed = parse_playlist(row + "\n")
+        self.assertFalse(malformed)
+        updates = {}
+        decisions = validation.promote_verified_candidates(
+            entries, {entries[0]["start"]}, set(), updates
+        )
+        self.assertEqual(decisions[0][2], "New Channels")
+        self.assertIn("country metadata incomplete", decisions[0][3])
+        self.assertIn('group-title="New Channels"', updates[entries[0]["start"]])
+
     def test_verified_candidate_without_local_logo_cannot_be_promoted(self):
         import validate_discovery_run as validation
         row = (
