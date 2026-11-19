@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
-  "exact_duplicate_groups": 971,
-  "exact_duplicate_files": 1527,
+  "exact_duplicate_groups": 976,
+  "exact_duplicate_files": 1772,
   "low_risk_review_candidates": [
     {
       "candidate": "logos/unused/euro-sports-hd.png",
@@ -293,7 +293,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-notti-di-passione.png",
         "logos/pluto-tv-notti-di-passione.png",
-        "logos/unused/pluto-tv-notti-di-passione-68e82f5481.png"
+        "logos/unused/pluto-tv-notti-di-passione-68e82f5481.png",
+        "logos/verified-pluto-tv-notti-di-passione-0a2f9d3d40.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -389,7 +390,8 @@
       "duplicate_group": [
         "logos/international/paramount-movie-channel.png",
         "logos/paramount-movie-channel.png",
-        "logos/unused/paramount-movie-channel-d46b22ff12.png"
+        "logos/unused/paramount-movie-channel-d46b22ff12.png",
+        "logos/verified-paramount-movie-channel-17e8690125.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -401,7 +403,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-retro-action-movies.png",
         "logos/pluto-tv-retro-action-movies.png",
-        "logos/unused/pluto-tv-retro-action-movies-2c93a6f50d.png"
+        "logos/unused/pluto-tv-retro-action-movies-2c93a6f50d.png",
+        "logos/verified-pluto-tv-retro-action-movies-18198128f3.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -435,7 +438,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-drama.png",
         "logos/pluto-tv-drama.png",
-        "logos/unused/pluto-tv-drama-1916ac022e.png"
+        "logos/unused/pluto-tv-drama-1916ac022e.png",
+        "logos/verified-pluto-tv-drama-187f195ad7.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -492,7 +496,8 @@
       "duplicate_group": [
         "logos/international/pluto-classic-movie-westerns.png",
         "logos/pluto-classic-movie-westerns.png",
-        "logos/unused/pluto-classic-movie-westerns-70b09a6535.png"
+        "logos/unused/pluto-classic-movie-westerns-70b09a6535.png",
+        "logos/verified-pluto-classic-movie-westerns-227c06af7f.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -548,7 +553,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-drama-movies.png",
         "logos/pluto-tv-drama-movies.png",
-        "logos/unused/pluto-tv-drama-movies-7a242cb4f6.png"
+        "logos/unused/pluto-tv-drama-movies-7a242cb4f6.png",
+        "logos/verified-pluto-tv-drama-movies-2a39846fdb.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -718,7 +724,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-action-movies.png",
         "logos/pluto-tv-action-movies.png",
-        "logos/unused/pluto-tv-action-movies-13022100eb.png"
+        "logos/unused/pluto-tv-action-movies-13022100eb.png",
+        "logos/verified-pluto-tv-action-movies-408a6895cf.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1069,7 +1076,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-family-movie-club.png",
         "logos/pluto-tv-family-movie-club.png",
-        "logos/unused/pluto-tv-family-movie-club-4f5c0b8625.png"
+        "logos/unused/pluto-tv-family-movie-club-4f5c0b8625.png",
+        "logos/verified-pluto-tv-family-movie-club-695dfca6b5.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1128,7 +1136,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-comedy-movies.png",
         "logos/pluto-tv-comedy-movies.png",
-        "logos/unused/pluto-tv-comedy-movies-989176a87d.png"
+        "logos/unused/pluto-tv-comedy-movies-989176a87d.png",
+        "logos/verified-pluto-tv-comedy-movies-712ff1dc00.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1234,7 +1243,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-filmes-de-luta.png",
         "logos/pluto-tv-filmes-de-luta.png",
-        "logos/unused/pluto-tv-filmes-de-luta-a1f77c3d14.png"
+        "logos/unused/pluto-tv-filmes-de-luta-a1f77c3d14.png",
+        "logos/verified-pluto-tv-filmes-de-luta-7967d93886.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1314,7 +1324,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-cult-films-germany.png",
         "logos/pluto-tv-cult-films-germany.png",
-        "logos/unused/pluto-tv-cult-films-4c48109dbb.png"
+        "logos/unused/pluto-tv-cult-films-4c48109dbb.png",
+        "logos/verified-pluto-tv-cult-films-germany-83a8581537.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1440,7 +1451,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-netmovies.png",
         "logos/pluto-tv-netmovies.png",
-        "logos/unused/pluto-tv-netmovies-ca2ac0cd70.png"
+        "logos/unused/pluto-tv-netmovies-ca2ac0cd70.png",
+        "logos/verified-pluto-tv-netmovies-8f6a2afeb9.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1475,7 +1487,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-cult-films-united-states.png",
         "logos/pluto-tv-cult-films-united-states.png",
-        "logos/unused/pluto-tv-cult-films-united-states-9e595d60f3.png"
+        "logos/unused/pluto-tv-cult-films-united-states-9e595d60f3.png",
+        "logos/verified-pluto-tv-cult-films-united-states-98c5047f01.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1524,7 +1537,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-filmes-aventura.png",
         "logos/pluto-tv-filmes-aventura.png",
-        "logos/unused/pluto-tv-filmes-aventura-83d1bd4033.png"
+        "logos/unused/pluto-tv-filmes-aventura-83d1bd4033.png",
+        "logos/verified-pluto-tv-filmes-aventura-9aed155649.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1566,7 +1580,9 @@
         "logos/international/pluto-tv-cine-drama.png",
         "logos/pluto-tv-cine-drama-latam.png",
         "logos/pluto-tv-cine-drama.png",
-        "logos/unused/pluto-tv-cine-drama-21c0c9e9dc.png"
+        "logos/unused/pluto-tv-cine-drama-21c0c9e9dc.png",
+        "logos/verified-pluto-tv-cine-drama-9f10c4aaa8.png",
+        "logos/verified-pluto-tv-cine-drama-latam-9f10c4aaa8.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1611,7 +1627,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-nuestro-cine.png",
         "logos/pluto-tv-nuestro-cine.png",
-        "logos/unused/pluto-tv-nuestro-cine-479a85b751.png"
+        "logos/unused/pluto-tv-nuestro-cine-479a85b751.png",
+        "logos/verified-pluto-tv-nuestro-cine-a283883c60.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1727,7 +1744,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-filmes-acao.png",
         "logos/pluto-tv-filmes-acao.png",
-        "logos/unused/pluto-tv-filmes-acao-5746c4a408.png"
+        "logos/unused/pluto-tv-filmes-acao-5746c4a408.png",
+        "logos/verified-pluto-tv-filmes-acao-aca76dfc4a.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1751,7 +1769,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-filmes-nacionais.png",
         "logos/pluto-tv-filmes-nacionais.png",
-        "logos/unused/pluto-tv-filmes-nacionais-df442c82f4.png"
+        "logos/unused/pluto-tv-filmes-nacionais-df442c82f4.png",
+        "logos/verified-pluto-tv-filmes-nacionais-b2abfef6c8.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1798,7 +1817,9 @@
         "logos/international/pluto-tv-crime-drama.png",
         "logos/pluto-tv-crime-drama-ca.png",
         "logos/pluto-tv-crime-drama.png",
-        "logos/unused/pluto-tv-crime-drama-48c6faa6dc.png"
+        "logos/unused/pluto-tv-crime-drama-48c6faa6dc.png",
+        "logos/verified-pluto-tv-crime-drama-b7b06003fc.png",
+        "logos/verified-pluto-tv-crime-drama-ca-b7b06003fc.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1950,7 +1971,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-bang-bang.png",
         "logos/pluto-tv-bang-bang.png",
-        "logos/unused/pluto-tv-bang-bang-2cae61babe.png"
+        "logos/unused/pluto-tv-bang-bang-2cae61babe.png",
+        "logos/verified-pluto-tv-bang-bang-d0368b0d51.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -2198,7 +2220,8 @@
       "duplicate_group": [
         "logos/international/pluto-tv-crime-movies.png",
         "logos/pluto-tv-crime-movies.png",
-        "logos/unused/pluto-tv-crime-movies-49dbd2e117.png"
+        "logos/unused/pluto-tv-crime-movies-49dbd2e117.png",
+        "logos/verified-pluto-tv-crime-movies-f6e317e18f.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"

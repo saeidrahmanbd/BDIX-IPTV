@@ -6958,5 +6958,15 @@
     "status": "third_party_verified",
     "source_url": "https://maxmusicmedia.com/wp-content/themes/maxmedia/assets/images/logo.png",
     "notes": "Broadcaster/station page Logo image served on the broadcaster/station page Source page: https://maxmusicmedia.com/live/"
+  },
+  "International-Playlist.m3u|LaUrbanTV.es@SD|La Urban TV [ ]|logos/la-urban-tv-15ef41e1b04da724cd06.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/hythjEn.png",
+    "notes": "IPTV-org exact ID: LaUrbanTV.es IPTV-org public logo dataset Source page: https://i.imgur.com/hythjEn.png"
+  },
+  "International-Playlist.m3u|LaXitosaPanama.pa@SD|LaXitosa Panama [ ]|logos/laxitosa-panama-a860b4d28106add5e92b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/Pt4F9Xz.png",
+    "notes": "IPTV-org exact ID: LaXitosaPanama.pa IPTV-org public logo dataset Source page: https://i.imgur.com/Pt4F9Xz.png"
   }
 }
