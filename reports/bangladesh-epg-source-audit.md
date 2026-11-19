@@ -1,6 +1,6 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-19T03:41:50+00:00**
+Generated: **2026-11-19T04:15:52+00:00**
 
 - Active Bangladesh playlist identities: **86**
 - Identities with a retained source mapping: **5**
