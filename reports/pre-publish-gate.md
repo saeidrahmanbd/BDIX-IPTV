@@ -1,6 +1,6 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-19T03:49:29+00:00**
+Generated: **2026-11-19T04:36:21+00:00**
 Source playlist SHA-256: **8611340c6b07807062028b490d6f6cd925bf5fb18ac79bb174f637872523e81e**
 
 Status: **PASS**
@@ -30,7 +30,7 @@ Status: **PASS**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
 - Entries removed this run: **0**
-- Entries modified this run: **5**
+- Entries modified this run: **0**
 
 ## Protected-queue policy
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
