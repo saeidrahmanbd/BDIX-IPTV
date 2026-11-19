@@ -578,7 +578,7 @@ else:
     lines.append("None.")
 lines += ["", "## Missing Logos in Discovery Queues", "", "These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.", ""]
 if review_logo_exceptions:
-    lines.extend(f"- **{name}** [{cid}]" for name, cid, issue, logo in review_logo_exceptions)
+    lines.extend(f"- **{name}** [{cid}]" for name, cid, group, issue, logo in review_logo_exceptions)
 else:
     lines.append("None.")
 for issue in ["missing","broken-local","unsupported-format","invalid-dimensions","corrupt-image","unvalidated-image","other"]:
