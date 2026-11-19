@@ -200,7 +200,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             ("Aaj Tak", "News", "AajTak.in", "News"),
             ("Madani TV", "Religious", "MadaniTV.in", "Religious"),
             ("Peace TV", "Religious", "PeaceTV.in", "Religious"),
-            ("Education TV", "Education", "EducationTV.in", None),
+            ("Education TV", "Education", "EducationTV.in", "Indian Entertainment"),
             ("DD Gyan Darshan", "General", "GyanDarshan.in", "Religious"),
             ("Cartoon Network", "Kids", "CartoonNetwork.in", "Kids"),
             ("Pogo", "Kids", "Pogo.in", "Kids"),
