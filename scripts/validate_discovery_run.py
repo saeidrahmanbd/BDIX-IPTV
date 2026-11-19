@@ -100,20 +100,29 @@ def probe_url(url):
         return "unknown", f"probe error: {type(exc).__name__}"
 
 def norm_key(value):
-    value = re.sub(r"\b(?:\d{3,4}p|uhd|fhd|hd|sd|4k)\b", " ", str(value or ""), flags=re.I)
+    value = re.sub(r"\b(?:geo[\s-]?blocked|not\s*24\s*/?\s*7|not\s*24h|not\s*24/7|\d{3,4}p|uhd|fhd|hd|sd|4k)\b", " ", str(value or ""), flags=re.I)
     return re.sub(r"[^a-z0-9]+", "", value.casefold())
 
 def local_logo_path(logo):
-    if logo.startswith("logos/"):
-        return Path(logo)
-    return None
+    value = str(logo or "").strip()
+    if not value.startswith("logos/"):
+        return None
+    path = Path(value)
+    if path.is_absolute() or ".." in path.parts or not path.parts or path.parts[0] != "logos":
+        return None
+    return path
 
 def find_logo(name):
     key = norm_key(name)
     if not key or not LOGOS.exists():
         return None
     for path in LOGOS.rglob("*"):
-        if path.is_file() and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg"} and "unused" not in path.parts and not discovery.is_blocked_logo_basename(path.name):
+        if path.is_file() and not path.is_symlink() and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg"} and "unused" not in path.parts and not discovery.is_blocked_logo_basename(path.name):
+            try:
+                if not path.resolve().is_relative_to(LOGOS.resolve()):
+                    continue
+            except (OSError, RuntimeError):
+                continue
             if norm_key(path.stem) == key:
                 return "logos/" + str(path.relative_to(LOGOS)).replace("\\", "/")
     return None
@@ -128,8 +137,12 @@ def set_logo(extinf, logo):
 def ensure_local_logo(entry):
     logo = entry["logo"]
     path = local_logo_path(logo)
-    if path is not None and path.is_file():
-        return entry["extinf"], False, False
+    if path is not None and path.is_file() and not path.is_symlink():
+        try:
+            if path.resolve().is_relative_to(LOGOS.resolve()):
+                return entry["extinf"], False, False
+        except (OSError, RuntimeError):
+            pass
     found = find_logo(entry["name"])
     if found:
         return set_logo(entry["extinf"], found), True, False
@@ -433,14 +446,22 @@ def probe_mode(playlist, report, baseline, mode):
             )
 
         if mode == "iptv":
-            # New Channels/New Backups are private manual-review queues. Do not
-            # rewrite source metadata, move groups, or require a local logo here.
-            logo_path = local_logo_path(e["logo"])
-            if logo_path is None or not logo_path.is_file():
+            # Keep valid candidates even when a logo is unavailable, but never
+            # publish an external/placeholder logo. Blank is safer than a fake.
+            new_extinf, localized, unavailable = ensure_local_logo(e)
+            if new_extinf != e["extinf"]:
+                update_lines[e["start"]] = new_extinf
+            if localized:
+                counts["logos localized to repository assets"] += 1
+                details.append(f"- Localized {e['name']} to an authentic /logos/ asset.")
+            if unavailable:
                 counts["candidates needing local logo repair"] += 1
-                details.append(
-                    f"- {e['name']} has no verified local logo; kept in {e['group']} for later repair."
-                )
+                details.append(f"- {e['name']} has no authentic local logo; external logo removed and field left blank.")
+            if status == "unknown" and e["group"].casefold() in {"new backup", "new backups"}:
+                current = update_lines.get(e["start"], e["extinf"])
+                update_lines[e["start"]] = discovery.set_attr(current, "group-title", "Review")
+                counts["unverified backup candidates moved to Review"] += 1
+                details.append(f"- Moved {e['name']} from New Backups to Review — alternate stream was not verified.")
             continue
 
         # International discovery retains its stricter promotion/local-logo
@@ -490,7 +511,8 @@ def probe_mode(playlist, report, baseline, mode):
         f"- Duplicate newly discovered stream entries removed: {counts['duplicate discovery entries removed']}",
         f"- Country-group rows consolidated after stream probing: {counts['country-group rows consolidated after stream probing']}",
         f"- Logo references localized to authentic repository assets: {counts['logos localized to repository assets']}",
-        f"- IPTV manual-review candidates needing later local-logo repair (warning only): {counts['candidates needing local logo repair']}",
+        f"- IPTV manual-review candidates with no authentic local logo (left blank): {counts['candidates needing local logo repair']}",
+        f"- Unverified IPTV backup candidates moved to Review: {counts['unverified backup candidates moved to Review']}",
         f"- International candidates held for missing local logos: {counts['candidates held for missing local logo']}",
         "",
         "### Stream probe details",
@@ -547,9 +569,10 @@ def final_mode(playlist, report, baseline, mode):
         if new_duplicate_count:
             errors.append(f"{new_duplicate_count} newly introduced duplicate stream URL occurrence(s)")
 
+        allowed_new_groups = {"new channels", "new backup", "new backups", "review"}
         wrong_queue = [
             entry["name"] for entry in new_entries
-            if entry["group"].casefold() not in {"new channels", "new backup", "new backups"}
+            if entry["group"].casefold() not in allowed_new_groups
         ]
         if wrong_queue:
             errors.append(
@@ -560,24 +583,28 @@ def final_mode(playlist, report, baseline, mode):
         missing_logo = 0
         nonlocal_logo = 0
         country_warning = 0
+        moved_to_review = 0
+        queue_groups = {"new channels", "new backup", "new backups"}
         for entry in new_entries:
             logo_path = local_logo_path(entry["logo"])
-            if logo_path is None or not logo_path.is_file():
+            if logo_path is None or not logo_path.is_file() or logo_path.is_symlink():
                 missing_logo += 1
                 if entry["logo"]:
                     nonlocal_logo += 1
-
-            declared = (entry["attrs"].get("tvg-country") or "").strip().upper()
-            id_countries = {
-                match.group(1).upper()
-                for value in (entry["attrs"].get("tvg-id", ""), entry["attrs"].get("channel-id", ""))
-                if (match := re.search(r"\.([a-z]{2})(?:@|$)", value.strip(), re.I))
-            }
-            if declared not in {"BD", "IN"} or (id_countries and (
-                len(id_countries) != 1 or not id_countries.issubset({"BD", "IN"})
-                or (declared and declared not in id_countries)
-            )):
+                    errors.append(f"non-local logo reference for {entry['name']}")
+            codes = bd_discovery.explicit_country_codes(entry["attrs"])
+            outside = sorted(codes - {"BD", "IN"})
+            if not codes or len(codes) > 1:
                 country_warning += 1
+            if entry["group"].casefold() in queue_groups:
+                if outside:
+                    errors.append(f"out-of-scope channel country for {entry['name']}: {', '.join(outside)}")
+                if "IN" in codes:
+                    reason = bd_discovery.prohibited_channel(entry["attrs"], entry["name"], "IN", discovery=True)
+                    if reason:
+                        errors.append(f"Indian prohibited category for {entry['name']}: {reason}")
+            elif entry["group"].casefold() == "review":
+                moved_to_review += 1
 
         status = "PASS" if not errors else "FAIL"
         body = [
@@ -586,12 +613,13 @@ def final_mode(playlist, report, baseline, mode):
             f"- New manual-review candidates retained: {len(new_entries)}",
             f"- New malformed EXTINF/URL pairs: {len(new_malformed)}",
             f"- New duplicate stream URL occurrences: {new_duplicate_count}",
-            f"- New candidates missing an authentic local logo: {missing_logo} (warning only)",
-            f"- New candidates with non-local logo references: {nonlocal_logo} (warning only)",
+            f"- New candidates missing an authentic local logo: {missing_logo} (left blank; warning only)",
+            f"- New candidates with non-local logo references: {nonlocal_logo}",
             f"- New candidates with country metadata requiring manual review: {country_warning} (warning only)",
-            f"- New candidates outside New Channels/New Backups: {len(wrong_queue)}",
-            "- Existing playlist defects, country metadata and logo completeness do not block discovery.",
-            "- New candidates remain in New Channels/New Backups for owner review; only definitively dead streams are removed.",
+            f"- New candidates moved to Review for country/probe uncertainty: {moved_to_review}",
+            f"- New candidates outside permitted discovery/Review groups: {len(wrong_queue)}",
+            "- Missing optional metadata and missing authentic logos do not block valid candidates; external logos and explicit out-of-scope countries do.",
+            "- New Backups contains only verified alternate streams; inconclusive backup candidates are moved to Review.",
         ]
         if errors:
             body += ["", "### Blockers", *(f"- {error}" for error in errors[:100])]
