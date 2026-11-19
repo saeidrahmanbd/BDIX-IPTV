@@ -1,8 +1,8 @@
 # Update Report
 
-_Last generated: **2026-11-19 05:04 UTC**_
+_Last generated: **2026-11-19 06:41 UTC**_
 
-Source playlist SHA-256: **8611340c6b07807062028b490d6f6cd925bf5fb18ac79bb174f637872523e81e**
+Source playlist SHA-256: **ace887c44d3410b4ea38dcabc5ab44f3acfa4294585ee5cd94f1f9fb855f2cea**
 
 | Metric | Current |
 |---|---:|
@@ -12,37 +12,37 @@ Source playlist SHA-256: **8611340c6b07807062028b490d6f6cd925bf5fb18ac79bb174f63
 | Bangladesh | **70** |
 | India | **302** |
 | Backup Stream Entries | **463** |
-| IPTV Local Logos | **99.9%** |
+| IPTV Local Logos | **STALE** |
 | IPTV EPG Programme Coverage | **54%** |
 | IPTV EPG Mapping | **60.8%** |
 | Stream Health Tested | **1390** |
 | Stream Health Failures | **240** |
 | Persistent Failures | **50** |
 | Near-Duplicate URL Families | **1** |
-| Audit findings (review warnings included) | **1** |
-| Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-11-19T04:36:21+00:00** |
+| Audit findings (review warnings included) | **STALE / UNKNOWN** |
+| Pre-Publish Gate | **STALE / UNKNOWN** |
+| Pre-Publish Gate Generated | **2026-11-19T05:34:44+00:00** |
 
-## Quality Controls 
-- Duplicate stream URLs: **0**
-- Metadata conflicts (canonical primary scope): **0**
-- Same-name / different-ID collisions (canonical primary scope): **0**
+## Quality Controls (STALE / UNKNOWN — saved audit values shown for reference)
+- Duplicate stream URLs: **STALE / UNKNOWN (last saved: 0)**
+- Metadata conflicts (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
+- Same-name / different-ID collisions (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
 - Cross-queue metadata identity variants: **4**
 - Cross-queue same-name / different-ID collisions: **8**
-- Duplicate primary identities: **0**
-- Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
-- Logo exceptions: **1**
-- Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
-- Alphabetical ordering issues: **0**
-- Signed/tokenized URLs: **11**
+- Duplicate primary identities: **STALE / UNKNOWN (last saved: 0)**
+- Primary channel-number collisions: **STALE / UNKNOWN (last saved: 0)**
+- Primary entries missing channel numbers: **STALE / UNKNOWN (last saved: 0)**
+- Logo exceptions: **STALE / UNKNOWN (last saved: 1)**
+- Malformed EXTINF entries: **STALE / UNKNOWN (last saved: 0)**
+- Category block-order issues: **STALE / UNKNOWN (last saved: 0)**
+- Alphabetical ordering issues: **STALE / UNKNOWN (last saved: 0)**
+- Signed/tokenized URLs: **STALE / UNKNOWN (last saved: 11)**
 
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
 - `Backup` stores alternate streams; `Review`, `New Channels`, and `New Backups` are review-only queues and are excluded from Xtream.
-- Pre-publish gate status: **PASS**
+- Pre-publish gate status: **STALE / UNKNOWN**
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## Counting Scope
@@ -62,10 +62,10 @@ Source playlist SHA-256: **8611340c6b07807062028b490d6f6cd925bf5fb18ac79bb174f63
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-19T04:36:20.996655+00:00** | **CURRENT** |
-| EPG coverage / two-playlist inventory | **2026-11-19T05:03:57+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-19T04:36:20.996655+00:00** | **STALE** |
+| EPG coverage / two-playlist inventory | **2026-11-19T06:41:18+00:00** | **CURRENT** |
 | Stream health | **2026-11-19T04:37:16+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-19T04:36:21+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-19T05:34:44+00:00** | **STALE** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
