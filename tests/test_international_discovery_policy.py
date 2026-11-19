@@ -91,7 +91,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn("python scripts/validate_international_playlist.py", workflow)
         lines = workflow.splitlines()
         commit_index = next(i for i, line in enumerate(lines) if line.strip() == "- name: Commit discovery changes")
-        self.assertIn("if: always() && steps.validate_international_playlist.outcome != 'skipped'", lines[commit_index + 1:commit_index + 3])
+        self.assertEqual(lines[commit_index + 1].strip(), "if: always() && steps.validate_international_playlist.outcome != 'skipped'")
 
     def test_international_validator_accepts_repository_relative_local_logo(self):
         import json
