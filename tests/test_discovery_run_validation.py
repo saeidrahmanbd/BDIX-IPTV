@@ -297,7 +297,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
             final_report = report.read_text(encoding="utf-8")
             self.assertIn("- Validation status: FAIL", final_report)
-            self.assertIn("Existing prohibited Indian queue row: Sony Yay!", final_report)
+            self.assertIn("Prohibited Indian queue row: Sony Yay!", final_report)
             self.assertIn("Prohibited Indian rows remaining in existing discovery queues: 1", final_report)
 
     def test_parser_skips_vlc_and_kodi_directives_before_media_url(self):
