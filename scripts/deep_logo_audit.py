@@ -16,17 +16,32 @@ def sha(p):
  with p.open("rb") as f:
   for b in iter(lambda:f.read(1<<20),b""):h.update(b)
  return h.hexdigest()
+def normalized_thumb(p):
+ with Image.open(p) as source:
+  im=ImageOps.exif_transpose(source).convert("RGBA")
+  bg=Image.new("RGBA",im.size,(255,255,255,255));bg.alpha_composite(im)
+  im=bg.convert("RGB")
+  im.thumbnail((60,60),Image.Resampling.LANCZOS)
+  canvas=Image.new("RGB",(64,64),"white")
+  canvas.paste(im,((64-im.width)//2,(64-im.height)//2))
+  return np.asarray(canvas,dtype=np.float32)/255.0
 def phash(p):
- with Image.open(p) as im:
-  im=ImageOps.exif_transpose(im).convert("RGB")
-  im.thumbnail((256,256))
-  a=np.asarray(im.convert("L").resize((32,32),Image.Resampling.LANCZOS),dtype=np.float32)
+ a=normalized_thumb(p)
+ gray=(0.299*a[:,:,0]+0.587*a[:,:,1]+0.114*a[:,:,2])*255.0
+ if float(gray.std())<3.5:return None
+ gray=np.asarray(Image.fromarray(gray.astype("uint8")).resize((32,32),Image.Resampling.LANCZOS),dtype=np.float32)
  n=32
  c=np.cos((np.pi/n)*(np.arange(n)[:,None]+.5)*np.arange(n)[None,:]).astype(np.float32)
  c[:,0]*=1/np.sqrt(2);c*=np.sqrt(2/n)
- d=c.T@a@c;low=d[:8,:8].flatten();med=np.median(low[1:]);v=0
+ d=c.T@gray@c;low=d[:8,:8].flatten();med=np.median(low[1:]);v=0
  for bit in (low>med):v=(v<<1)|int(bit)
  return v
+def ssim(a,b):
+ mu_a=float(a.mean());mu_b=float(b.mean())
+ va=float(((a-mu_a)**2).mean());vb=float(((b-mu_b)**2).mean())
+ cov=float(((a-mu_a)*(b-mu_b)).mean())
+ c1=0.01**2;c2=0.03**2
+ return ((2*mu_a*mu_b+c1)*(2*cov+c2))/((mu_a**2+mu_b**2+c1)*(va+vb+c2))
 def ham(a,b):return (a^b).bit_count()
 assets=sorted(p for p in LOGO.rglob("*") if p.is_file() and not p.is_symlink() and p.suffix.lower() in IMAGE_EXT)
 paths={p.relative_to(ROOT).as_posix():p for p in assets}
@@ -64,13 +79,20 @@ for rel,p in paths.items():
  records[rel]={"sha256":digest,"git_blob":blob,"bytes":p.stat().st_size,"phash64":None if h is None else f"{h:016x}","decode_error":err,"playlist_references":sorted(playlist[rel]),"runtime_references":sorted(runtime[rel])}
  bysha[digest].append(rel)
 exact=[{"sha256":d,"files":sorted(v)} for d,v in sorted(bysha.items()) if len(v)>1]
+thumbs={}
+for rel in records:
+ try:thumbs[rel]=normalized_thumb(paths[rel])
+ except Exception:pass
 valid=[(p,int(r["phash64"],16)) for p,r in records.items() if r["phash64"]]
 pairs=[]
 for i,(pa,ha) in enumerate(valid):
  for pb,hb in valid[i+1:]:
   if records[pa]["sha256"]==records[pb]["sha256"]:continue
   dist=ham(ha,hb)
-  if dist<=5:pairs.append({"file_a":pa,"file_b":pb,"hamming_distance":dist,"similarity":round(1-dist/64,4),"referenced_a":bool(records[pa]["playlist_references"] or records[pa]["runtime_references"]),"referenced_b":bool(records[pb]["playlist_references"] or records[pb]["runtime_references"])})
+  if dist<=8 and pa in thumbs and pb in thumbs:
+   score=ssim(thumbs[pa],thumbs[pb])
+   if score>=0.90:
+    pairs.append({"file_a":pa,"file_b":pb,"hamming_distance":dist,"phash_similarity":round(1-dist/64,4),"ssim":round(score,5),"referenced_a":bool(records[pa]["playlist_references"] or records[pa]["runtime_references"]),"referenced_b":bool(records[pb]["playlist_references"] or records[pb]["runtime_references"])})
 manifest=[]
 for group in exact:
  for candidate in group["files"]:
