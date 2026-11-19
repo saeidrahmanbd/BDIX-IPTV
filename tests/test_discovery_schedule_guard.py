@@ -642,10 +642,10 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             scheduled, workflow_file="epg-refresh.yml"
         ))
 
-    def test_epg_watchdog_accepts_post_schedule_push_recovery(self):
+    def test_epg_watchdog_accepts_post_schedule_manual_recovery(self):
         recovery = {
-            "id": 172, "event": "push", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T00:15:00Z",
+            "id": 172, "event": "workflow_dispatch", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T01:35:00Z",
             "jobs": [{
                 "name": "refresh", "status": "completed", "conclusion": "success",
                 "steps": [{
