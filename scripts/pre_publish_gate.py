@@ -90,7 +90,7 @@ def permanently_banned_playlist_errors(entries):
     for info, a, _ in entries:
         name = a.get("tvg-name", "").strip()
         reason = prohibited_channel(a, name, discovery=True, iptv_discovery=True)
-        if reason == "permanently banned channel":
+        if reason in {"permanently banned channel", "known Indian prohibited MH One Prime channel is prohibited"}:
             errors.append(name + " (permanently banned) in " + (a.get("group-title", "").strip() or "(missing group)"))
     return errors
 
@@ -166,7 +166,7 @@ def main():
                 logo_missing_file_details.append((name,group,report_path))
     issues=[]
     permanent_ban_errors = permanently_banned_playlist_errors(current)
-    if permanent_ban_errors: issues.append(f"permanently banned channel entries anywhere in IPTV playlist: {len(permanent_ban_errors)}")
+    if permanent_ban_errors: issues.append(f"permanently banned/legacy-prohibited channel entries anywhere in IPTV playlist: {len(permanent_ban_errors)}")
     relative_logo_refs=[a.get("tvg-name","") for _,a,_ in current if a.get("tvg-logo","").strip().startswith("logos/")]
     if relative_logo_refs: issues.append(f"relative tvg-logo paths must be absolute raw URLs (count {len(relative_logo_refs)})")
     warnings=[]
@@ -214,7 +214,7 @@ def main():
     lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Primary streams intentionally removed by known-bad or Indian genre policy: **{len(approved_removed)}**",f"- Primary streams quarantined: **{len(quarantined)}**",f"- Review entries reclassified: **{len(review_reclassified)}**",f"- Review entries promoted: **{len(review_promoted)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",f"- Permanently banned channel entries across all IPTV groups: **{len(permanent_ban_errors)}**",f"- Primary entries missing channel numbers: **{len(missing)}**",f"- Primary channel-number sequence issues (non-blocking; existing row order is protected): **{len(chno_sequence_issues)}**",f"- Numbered review entries: **{len(review_numbered)}**",f"- Same-ID metadata name conflicts: **{len(metadata_conflicts)}**",f"- Orphan Backup entries: **{len(orphan_backups)}**",f"- Active rows with incomplete required metadata: **{len(incomplete_metadata)}**",f"- tvg-id/channel-id inconsistencies: **{len(id_pair_conflicts)}**",f"- Entries missing tvg-language: **{len(missing_languages)}**",f"- Raw resolution/geoblock name tags: **{len(raw_name_issues)}**",f"- Missing logos in active groups: **{len(logo_missing)}**",f"- Missing logos deferred in review groups (Review/New Channels/New Backups): **{len(logo_missing_review)}**",f"- External logo URLs: **{len(logo_external)}**",f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",f"- Missing referenced local logo files: **{len(logo_missing_files)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Protected-queue policy","New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.","","## Channel-Number Sequence Review",f"Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **{len(chno_sequence_issues)}**.","","## Blocking Reasons"]
     lines.extend("- "+x for x in issues) if issues else lines.append("No hard safety blockers detected.")
     lines += ["", "## Permanent channel-ban blockers", ""]
-    lines.extend("- " + x for x in permanent_ban_errors) if permanent_ban_errors else lines.append("No permanently banned channel IDs or names remain in the IPTV playlist.")
+    lines.extend("- " + x for x in permanent_ban_errors) if permanent_ban_errors else lines.append("No permanently banned channel IDs/names or MH One Prime legacy entries remain in the IPTV playlist.")
     lines += ["","## Warnings / Manual Review",""]
     lines.extend("- "+x for x in warnings) if warnings else lines.append("No outstanding metadata or discovery warnings.")
     lines += ["","## Review-queue logo gaps","","These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.",""]
