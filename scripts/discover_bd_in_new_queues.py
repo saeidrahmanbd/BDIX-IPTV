@@ -65,15 +65,15 @@ def canonical_channel_name(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value).strip()
 
 IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
-    "news": {"r plus", "tv 100", "tv 100 national"},
+    "news": {"r plus", "r plus gold", "bhi channel", "tv 100", "tv 100 national"},
     "kids": {"sony yay"},
     "education": {"vtu"},
     "knowledge": {"dd kisan", "krishi darshan"},
-    "religious": {"disha tv"},
+    "religious": {"disha tv", "q tv", "shekinah tv"},
 }
 IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
-    "rplus.in": "news", "tv100.in": "news", "tv100national.in": "news",
-    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious",
+    "rplus.in": "news", "rplusgold.in": "news", "bhi.channel.in": "news", "tv100.in": "news", "tv100national.in": "news",
+    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "qtv.in": "religious", "shekinahtv.in": "religious",
     "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge",
 }
 
