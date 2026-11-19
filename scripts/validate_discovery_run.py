@@ -660,7 +660,11 @@ def final_mode(playlist, report, baseline, mode):
                 if m:
                     country = m.group(1).upper()
                     break
-        if mode == "iptv" and country == "IN":
+        indian_identity = country == "IN" or any(
+            re.search(r"\\.in(?:@|$)", str(attrs.get(key, "")).strip(), re.I)
+            for key in ("tvg-id", "channel-id")
+        ) or bd_discovery.canonical_channel_name(e["name"]) in bd_discovery.IPTV_KNOWN_INDIAN_EDUCATION_NAMES
+        if mode == "iptv" and indian_identity:
             reason = bd_discovery.prohibited_channel(attrs, e["name"], "IN", discovery=True, iptv_discovery=True)
             if reason:
                 policy_issues.append(f"Indian prohibited category: {e['name']} ({reason})")
