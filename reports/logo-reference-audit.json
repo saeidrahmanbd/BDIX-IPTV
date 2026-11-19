@@ -4,7 +4,7 @@
   "logo_image_files": 4569,
   "all_explicitly_referenced_logo_files": 2350,
   "runtime_referenced_logo_files": 2348,
-  "playlist_referenced_logo_files": 2335,
+  "playlist_referenced_logo_files": 2322,
   "apparently_unreferenced_by_any_text_file": 2219,
   "apparently_unreferenced_by_runtime_sources": 2221,
   "missing_explicit_logo_targets": [
@@ -9108,7 +9108,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/animal-planet.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "scripts/repair_approved_logos_20261107.py"
@@ -9586,7 +9585,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/bhi-channel.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -9745,7 +9743,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/btl-tv-netherlands-1080p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/btv-chattogram.png": [
@@ -9759,7 +9756,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bvg.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -9841,7 +9837,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/cartoon-network-hd-plus-0af84f2a76.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -9849,7 +9844,6 @@
       "scripts/migrate_external_logos_fixed.py"
     ],
     "logos/cartoon-network-pakistan.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -10431,7 +10425,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/cvr-health.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -10477,7 +10470,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/darshana-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -10818,7 +10810,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/discovery-channel-india.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -10856,7 +10847,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/discovery-turbo.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -10922,7 +10912,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/docubay-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -11186,7 +11175,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/epic-crimes.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -11683,7 +11671,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gaunda-punjab-tv-720p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gazi-tv.png": [
@@ -11792,7 +11779,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/green-gold-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -11932,7 +11918,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/history-tv18.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -11963,7 +11948,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/hooray-kids.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -12050,7 +12034,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/ifilm-english-s-e5f0438e73.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/illusion-plus-8d8f90fef7.png": [
@@ -14167,7 +14150,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/intravel.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -14373,7 +14355,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jungle-book.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/k-cine.png": [
@@ -14387,7 +14368,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -15726,7 +15706,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/ndtv-good-times.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -15792,7 +15771,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/nick-jr-india.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -15836,7 +15814,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/nickelodeon-india.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -16330,7 +16307,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pogo-576p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pogo.png": [
@@ -16520,12 +16496,10 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/q-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/qello-concerts-by-stingray.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -16558,7 +16532,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/r-plus-gold.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -16992,7 +16965,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/safari-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17114,7 +17086,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shekinah-tv-1080p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-bollywood.png": [
@@ -17157,7 +17128,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shin-chan-720p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/showven-tv-af7e6903a5.png": [
@@ -17307,7 +17277,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/sonic-576p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sonic.png": [
@@ -17394,7 +17363,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-yay.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "scripts/migrate_external_logos_fixed.py"
@@ -18134,7 +18102,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tennis-channel.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tequila-music-tv-f31787c376.png": [
@@ -18192,7 +18159,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/the-pet-collective-india-460b4e0e70.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -18498,7 +18464,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/travelxp-4k-hdr-2160p-geo-blocked-ce9f4d3118.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -18642,7 +18607,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tvc-arabic-kids.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -18903,7 +18867,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-punjab-plus-1080p-8d4d950f36.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-scares-by-shudder-1080p-87e2403895.png": [
@@ -19064,7 +19027,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/vokta-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -19120,7 +19082,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/weatherspy-india.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -19139,7 +19100,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/wild-flix-hindi.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -19209,16 +19169,13 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/wow-kidz-tamil-converted-ff1aeb7aa9.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/wow-kidz-telugu.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/wow-kidz.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -19348,7 +19305,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/zb-cartoon.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -19473,7 +19429,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/zodiak-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -19929,7 +19884,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/animal-planet.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "scripts/repair_approved_logos_20261107.py"
@@ -20407,7 +20361,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/bhi-channel.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -20566,7 +20519,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/btl-tv-netherlands-1080p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/btv-chattogram.png": [
@@ -20580,7 +20532,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bvg.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -20662,7 +20613,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/cartoon-network-hd-plus-0af84f2a76.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -20670,7 +20620,6 @@
       "scripts/migrate_external_logos_fixed.py"
     ],
     "logos/cartoon-network-pakistan.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21252,7 +21201,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/cvr-health.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21298,7 +21246,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/darshana-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21640,7 +21587,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/discovery-channel-india.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21678,7 +21624,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/discovery-turbo.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21744,7 +21689,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/docubay-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22008,7 +21952,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/epic-crimes.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22505,7 +22448,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gaunda-punjab-tv-720p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gazi-tv.png": [
@@ -22615,7 +22557,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/green-gold-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22755,7 +22696,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/history-tv18.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22786,7 +22726,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/hooray-kids.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22873,7 +22812,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/ifilm-english-s-e5f0438e73.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/illusion-plus-8d8f90fef7.png": [
@@ -24990,7 +24928,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/intravel.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -25196,7 +25133,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jungle-book.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/k-cine.png": [
@@ -25210,7 +25146,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26549,7 +26484,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/ndtv-good-times.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26615,7 +26549,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/nick-jr-india.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26659,7 +26592,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/nickelodeon-india.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -27156,7 +27088,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pogo-576p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pogo.png": [
@@ -27346,12 +27277,10 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/q-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/qello-concerts-by-stingray.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -27384,7 +27313,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/r-plus-gold.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -27818,7 +27746,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/safari-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -27940,7 +27867,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shekinah-tv-1080p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-bollywood.png": [
@@ -27984,7 +27910,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shin-chan-720p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/showven-tv-af7e6903a5.png": [
@@ -28134,7 +28059,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/sonic-576p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sonic.png": [
@@ -28221,7 +28145,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-yay.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "scripts/migrate_external_logos_fixed.py"
@@ -28962,7 +28885,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tennis-channel.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tequila-music-tv-f31787c376.png": [
@@ -29020,7 +28942,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/the-pet-collective-india-460b4e0e70.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -29326,7 +29247,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/travelxp-4k-hdr-2160p-geo-blocked-ce9f4d3118.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -29470,7 +29390,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tvc-arabic-kids.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29731,7 +29650,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-punjab-plus-1080p-8d4d950f36.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-scares-by-shudder-1080p-87e2403895.png": [
@@ -29892,7 +29810,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/vokta-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29948,7 +29865,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/weatherspy-india.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29967,7 +29883,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/wild-flix-hindi.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -30037,16 +29952,13 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/wow-kidz-tamil-converted-ff1aeb7aa9.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/wow-kidz-telugu.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/wow-kidz.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -30176,7 +30088,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/zb-cartoon.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -30304,7 +30215,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/zodiak-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
