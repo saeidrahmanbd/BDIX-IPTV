@@ -370,7 +370,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_active_stream_health_run_prevents_duplicate_watchdog_dispatch(self):
         active_health = {
             "id": 96, "status": "in_progress", "conclusion": None,
-            "created_at": "2026-11-07T01:35:00Z",
+            "created_at": "2026-11-07T00:15:00Z",
         }
         self.assertTrue(
             guard.run_blocks_retry(
