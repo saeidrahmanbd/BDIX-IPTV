@@ -1468,17 +1468,17 @@ https://lbgo.bozztv.com/ssh101/ssh101/afghantheatretv/playlist.m3u8
 https://jukin-weatherspy-2-in.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="ZodiakTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zodiak-tv-1080p.png" tvg-name="Zodiak TV (1080p)" tvg-language="ben" group-title="New Channels",Zodiak TV (1080p)
 https://ranacable.duckdns.org/ZodiakTv/index.m3u8
-#EXTINF:-1 tvg-id="DDKisan.in@SD" tvg-logo="https://i.imgur.com/x56WJEa.png" tvg-name="DD Kisan (1080p)" group-title="New Channels",DD Kisan (1080p)
+#EXTINF:-1 tvg-id="DDKisan.in@SD" tvg-logo="logos/dd-kisan.png" tvg-name="DD Kisan (1080p)" group-title="New Channels",DD Kisan (1080p)
 https://mumbai-edge.smartplaytv.in/DDKisan/index.m3u8
-#EXTINF:-1 tvg-id="Gyandarshan.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GYANDARSHAN/images/LOGO_HD/image.png" tvg-name="Gyandarshan (720p)" group-title="New Channels",Gyandarshan (720p)
+#EXTINF:-1 tvg-id="Gyandarshan.in@SD" tvg-logo="logos/gyandarshan.png" tvg-name="Gyandarshan (720p)" group-title="New Channels",Gyandarshan (720p)
 https://cdn.pishow.tv/ott/live/14/master.m3u8
-#EXTINF:-1 tvg-id="KiteVicters.in@SD" tvg-logo="https://i.imgur.com/kj4OEsb.png" tvg-name="Kite Victers (720p) [Not 24/7]" group-title="New Channels",Kite Victers (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="KiteVicters.in@SD" tvg-logo="logos/kite-victers.png" tvg-name="Kite Victers (720p) [Not 24/7]" group-title="New Channels",Kite Victers (720p) [Not 24/7]
 https://932y4x26ljv8-hls-live.5centscdn.com/victers/tv.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="PeaceTVUrdu.ae@SD" tvg-logo="https://github.com/fawazahmed0/tiger/raw/master/peace/urdu.jpg" tvg-name="Peace TV Urdu (1080p)" group-title="New Channels",Peace TV Urdu (1080p)
+#EXTINF:-1 tvg-id="PeaceTVUrdu.ae@SD" tvg-logo="logos/peace-tv-urdu.png" tvg-name="Peace TV Urdu (1080p)" group-title="New Channels",Peace TV Urdu (1080p)
 https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8
-#EXTINF:-1 tvg-id="ShikshaTV.in@SD" tvg-logo="https://play-lh.googleusercontent.com/1ibQhkMCsnXaI9LOiZH-Iyw8rM8CMVJEZAlbFphWuZApSPIp-eZsjltDlN6rqJzIonQ" tvg-name="Shiksha TV (720p)" group-title="New Channels",Shiksha TV (720p)
+#EXTINF:-1 tvg-id="ShikshaTV.in@SD" tvg-logo="logos/shiksha-tv.png" tvg-name="Shiksha TV (720p)" group-title="New Channels",Shiksha TV (720p)
 http://103.89.46.106:8080/hls/shikshatvhd/index.m3u8
-#EXTINF:-1 tvg-id="VyasChannel.in@SD" tvg-logo="https://www.yupptv.com/seo_img/UGC_GEC_big.jpg" tvg-name="Vyas Channel (576p)" group-title="New Channels",Vyas Channel (576p)
+#EXTINF:-1 tvg-id="VyasChannel.in@SD" tvg-name="Vyas Channel (576p)" group-title="New Channels",Vyas Channel (576p)
 https://playhls.media.nic.in/hls/live/vyas/vyas.m3u8
 #EXTINF:-1 tvg-id="NANTV.bd@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nan-tv-720p.png" tvg-name="NAN TV (720p)" tvg-language="ben" group-title="New Backups",NAN TV (720p)
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
@@ -1500,15 +1500,15 @@ https://r2.amml.in/sony-yay/live.m3u8
 https://deltatesttatasky.akamaized.net/out/i/968284.m3u8
 #EXTINF:-1 tvg-id="PeaceTVBangla.ae@SD" tvg-logo="logos/peace-tv-bangla.png" tvg-name="Peace TV Bangla (1080p)" group-title="New Backups",Peace TV Bangla (1080p)
 http://103.135.253.32:8080/Pace-TV-Bangla/index.m3u8
-#EXTINF:-1 tvg-id="DiscoveryChannel.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s159106_ld_h15_aa.png?lock=720x540" tvg-name="Discovery Channel (India) HD (1080p)" group-title="New Backups",Discovery Channel (India) HD (1080p)
+#EXTINF:-1 tvg-id="DiscoveryChannel.in@HD" tvg-logo="logos/discovery-channel-india.png" tvg-name="Discovery Channel (India) HD (1080p)" group-title="New Backups",Discovery Channel (India) HD (1080p)
 http://103.135.253.32:8080/DISCOVERY/index.m3u8
-#EXTINF:-1 tvg-id="Gyandarshan.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GYANDARSHAN/images/LOGO_HD/image.png" tvg-name="Gyandarshan HD (576p)" group-title="New Backups",Gyandarshan HD (576p)
+#EXTINF:-1 tvg-id="Gyandarshan.in@HD" tvg-logo="logos/gyandarshan.png" tvg-name="Gyandarshan HD (576p)" group-title="New Backups",Gyandarshan HD (576p)
 https://mumt05.tangotv.in/87NeALx2GYANDARSHAN/index.m3u8
-#EXTINF:-1 tvg-id="HistoryTV18.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s143133_ld_h15_aa.png?lock=720x540" tvg-name="History TV18 HD (1080p) [Geo-blocked]" group-title="New Backups",History TV18 HD (1080p) [Geo-blocked]
+#EXTINF:-1 tvg-id="HistoryTV18.in@HD" tvg-logo="logos/history-tv18.png" tvg-name="History TV18 HD (1080p) [Geo-blocked]" group-title="New Backups",History TV18 HD (1080p) [Geo-blocked]
 https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
-#EXTINF:-1 tvg-id="INWILD.nl@SD" tvg-logo="https://cdn.uc.assets.prezly.com/92770c71-9d6f-400f-8311-38e9cfec52c2/InWild_landscape-green.png" tvg-name="INWILD (1080p)" group-title="New Backups",INWILD (1080p)
+#EXTINF:-1 tvg-id="INWILD.nl@SD" tvg-logo="logos/inwild.png" tvg-name="INWILD (1080p)" group-title="New Backups",INWILD (1080p)
 https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
-#EXTINF:-1 tvg-id="SafariTV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAFARI_TV/images/LOGO_HD/image.png" tvg-name="Safari TV (576p)" group-title="New Backups",Safari TV (576p)
+#EXTINF:-1 tvg-id="SafariTV.in@SD" tvg-logo="logos/safari-tv.png" tvg-name="Safari TV (576p)" group-title="New Backups",Safari TV (576p)
 https://fta.ektv.in/live/410/master.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" tvg-name="7S Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" channel-id="7SMusic.in@SD" tvg-country="IN" tvg-language="tam" group-title="Backup",7S Music
 https://fta.ektv.in/live/771/master.m3u8

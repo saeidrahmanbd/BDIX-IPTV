@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5990,
-  "all_explicitly_referenced_logo_files": 2682,
-  "runtime_referenced_logo_files": 2679,
-  "playlist_referenced_logo_files": 2435,
-  "apparently_unreferenced_by_any_text_file": 3308,
-  "apparently_unreferenced_by_runtime_sources": 3311,
+  "all_explicitly_referenced_logo_files": 2691,
+  "runtime_referenced_logo_files": 2688,
+  "playlist_referenced_logo_files": 2444,
+  "apparently_unreferenced_by_any_text_file": 3299,
+  "apparently_unreferenced_by_runtime_sources": 3302,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -12247,6 +12247,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/dd-kisan.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/dd-madhya-pradesh.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -14048,6 +14051,9 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/gyandarshan.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/h-t-music-channel-480p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -14531,6 +14537,24 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/mtv-flow-latino-720p.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/mtv-flow-latino-latam-720p.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/mtv-spankin-new-1080p.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/mtv-spankin-new-ca-1080p.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/music-480p-not-24-7.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/music-box-brazil-720p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -14948,6 +14972,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/kite-victers.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/klape-i-tambure-tv-302ab07bf9.png": [
       "International-Playlist.m3u",
@@ -16876,6 +16903,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/peace-tv-urdu.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -18095,6 +18123,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shiksha-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -24330,6 +24359,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/dd-kisan.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/dd-madhya-pradesh.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -26133,6 +26165,9 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/gyandarshan.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/h-t-music-channel-480p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -26616,6 +26651,24 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/mtv-flow-latino-720p.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/mtv-flow-latino-latam-720p.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/mtv-spankin-new-1080p.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/mtv-spankin-new-ca-1080p.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/music-480p-not-24-7.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/music-box-brazil-720p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -27033,6 +27086,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/kite-victers.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/klape-i-tambure-tv-302ab07bf9.png": [
       "International-Playlist.m3u",
@@ -28961,6 +29017,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/peace-tv-urdu.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -30184,6 +30241,7 @@
       "tests/test_logo_format_conversion.py"
     ],
     "logos/shiksha-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -33975,7 +34033,6 @@
     "logos/cowboy-channel.png",
     "logos/cp24.png",
     "logos/dabangg.png",
-    "logos/dd-kisan.png",
     "logos/dd-news.png",
     "logos/de-pelicula-latin-america.png",
     "logos/deewana-hd.png",
@@ -34074,7 +34131,6 @@
     "logos/green-tv.png",
     "logos/groove.png",
     "logos/gtc-punjabi-1080p.png",
-    "logos/gyandarshan.png",
     "logos/hallmark-movies-more.png",
     "logos/harpal-geo.png",
     "logos/hgtv.png",
@@ -34669,12 +34725,6 @@
     "logos/international/mr-bean-animated-es-1080p.png",
     "logos/international/mr-bean-animated-fr-1080p-converted-3d6f10f486.png",
     "logos/international/mr-bean-animated-fr-1080p.png",
-    "logos/international/mtv-flow-latino-720p.png",
-    "logos/international/mtv-flow-latino-latam-720p.png",
-    "logos/international/mtv-spankin-new-1080p.png",
-    "logos/international/mtv-spankin-new-ca-1080p.png",
-    "logos/international/music-480p-not-24-7.png",
-    "logos/international/music-box-brazil-720p.png",
     "logos/international/music-information-channel-720p.png",
     "logos/international/musictop-1080p.png",
     "logos/international/muz-soyuz-576p.png",
@@ -35205,7 +35255,6 @@
     "logos/kinouzhas-576p.png",
     "logos/kinowood-1080p.png",
     "logos/kite-victers-720p-not-24-7.png",
-    "logos/kite-victers.png",
     "logos/kolkata-tv-converted-590b101612.png",
     "logos/kolkata-tv.png",
     "logos/kuriakos-cine-3ce366cd5a.png",

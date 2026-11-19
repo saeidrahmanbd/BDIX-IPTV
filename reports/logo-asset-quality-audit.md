@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-19T02:27:37+00:00**
+Generated: **2026-11-19T03:07:33+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **3f14163d10c3403b8c40322b8618c5a67c127bad1f92a2d94a1aae75bba5f24f**
-- International-Playlist.m3u SHA-256: **940245e9709fbf5582be8e8c1640a77ac66df8f44e7d317cb079eacc580cdb87**
+- IPTV-Playlist.m3u SHA-256: **c838560b0bff3fc20da2c17b70a32946a0ee4939b817afba626d0386a57efd3a**
+- International-Playlist.m3u SHA-256: **c4870f1498aa18055ee8871fa905d1e325dcb20cbf17ed6f07f1b7bba85e257f**
 
 ## Summary
 
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **176**
 - Exact-byte duplicate asset clusters: **976**
-- Playlist references whose asset stem differs from the normalized channel name: **1544**
-- Unreferenced image assets immediately inside logos/: **1731** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1559**
+- Unreferenced image assets immediately inside logos/: **1728** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **1**
 
 ## Safe repairs applied
@@ -1470,6 +1470,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | VTU (1080p) | vtu-1080p.png | New Channels |
 | IPTV-Playlist.m3u | WeatherSpy (India) (720p) | weatherspy-india-720p.png | New Channels |
 | IPTV-Playlist.m3u | Zodiak TV (1080p) | zodiak-tv-1080p.png | New Channels |
+| IPTV-Playlist.m3u | DD Kisan (1080p) | dd-kisan.png | New Channels |
+| IPTV-Playlist.m3u | Gyandarshan (720p) | gyandarshan.png | New Channels |
+| IPTV-Playlist.m3u | Kite Victers (720p) [Not 24/7] | kite-victers.png | New Channels |
+| IPTV-Playlist.m3u | Peace TV Urdu (1080p) | peace-tv-urdu.png | New Channels |
+| IPTV-Playlist.m3u | Shiksha TV (720p) | shiksha-tv.png | New Channels |
 | IPTV-Playlist.m3u | NAN TV (720p) | nan-tv-720p.png | New Backups |
 | IPTV-Playlist.m3u | Nick Jr. (India) (576p) | nick-jr-india-576p.png | New Backups |
 | IPTV-Playlist.m3u | Colors Bangla HD (1080p) | colors-bangla.png | New Backups |
@@ -1480,6 +1485,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Sony Yay! (1080p) | sony-yay-1080p.png | New Backups |
 | IPTV-Playlist.m3u | Travelxp 4K HDR (2160p) [Geo-blocked] | travelxp-4k-hdr-2160p-geo-blocked-ce9f4d3118.png | New Backups |
 | IPTV-Playlist.m3u | Peace TV Bangla (1080p) | peace-tv-bangla.png | New Backups |
+| IPTV-Playlist.m3u | Discovery Channel (India) HD (1080p) | discovery-channel-india.png | New Backups |
+| IPTV-Playlist.m3u | Gyandarshan HD (576p) | gyandarshan.png | New Backups |
+| IPTV-Playlist.m3u | History TV18 HD (1080p) [Geo-blocked] | history-tv18.png | New Backups |
+| IPTV-Playlist.m3u | INWILD (1080p) | inwild.png | New Backups |
+| IPTV-Playlist.m3u | Safari TV (576p) | safari-tv.png | New Backups |
 | IPTV-Playlist.m3u | Al Quran Al Kareem TV | al-quran-al-kareem-tv.png | Backup |
 | IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
@@ -1832,6 +1842,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Adrenalina Pura TV Brazil | adrenalina-pura-tv-brazil.png | Brazil |
 | International-Playlist.m3u | CINDIE TV | cindie-tv-73d1d00274.png | Brazil |
 | International-Playlist.m3u | Classique TV | classique-tv-360p-6f1c2ec605.png | Brazil |
+| International-Playlist.m3u | Music Box Brazil (720p) | music-box-brazil-720p.png | Brazil |
 | International-Playlist.m3u | Rádio Temas de Novelas | radio-temas-de-novelas-52562d10f48bddf24188.png | Brazil |
 | International-Playlist.m3u | Telecine Cult | verified-telecine-cult-9dd1e5a93a.png | Brazil |
 | International-Playlist.m3u | Telecine Fun | verified-telecine-fun-672730ce67.png | Brazil |
@@ -2166,6 +2177,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Magnificent Movies Network | verified-magnificent-movies-network-867c631f92.png | United States |
 | International-Playlist.m3u | MCN6 Music Channel | mcn6-music-channel-1080p-b16c4717c3.png | United States |
 | International-Playlist.m3u | Metaleitor TV | metaleitor-tv-c73eb9b874.png | United States |
+| International-Playlist.m3u | MTV Flow Latino (720p) | mtv-flow-latino-720p.png | United States |
+| International-Playlist.m3u | MTV Flow Latino LatAm (720p) | mtv-flow-latino-latam-720p.png | United States |
+| International-Playlist.m3u | MTV Spankin' New (1080p) | mtv-spankin-new-1080p.png | United States |
+| International-Playlist.m3u | MTV Spankin' New CA (1080p) | mtv-spankin-new-ca-1080p.png | United States |
 | International-Playlist.m3u | Paramount Movie Channel | verified-paramount-movie-channel-17e8690125.png | United States |
 | International-Playlist.m3u | Paramount+ Picks | paramount-plus-picks-1f9a19406d.png | United States |
 | International-Playlist.m3u | Pluto Classic Movie Westerns | verified-pluto-classic-movie-westerns-227c06af7f.png | United States |
