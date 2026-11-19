@@ -1,38 +1,38 @@
 # IPTV Playlist Audit
-Generated: **2026-11-18T03:24:09.019889+00:00**
-Source playlist SHA-256: **939b956ecb9712790c70bc6b900d94a994112871cbfc7376d86b5cd3cb87373e**
+Generated: **2026-11-19T03:49:29.060900+00:00**
+Source playlist SHA-256: **8611340c6b07807062028b490d6f6cd925bf5fb18ac79bb174f637872523e81e**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1378**
-- Unique channel IDs: **809**
-- IDs with multiple streams: **262**
+- Playlist entries: **1390**
+- Unique channel IDs: **818**
+- IDs with multiple streams: **264**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **1**
-- Cross-queue same-ID name variants (review): **2**
-- Cross-queue normalized-name/different-ID groups (review): **7**
+- Same-name / different-ID collisions: **0**
+- Cross-queue same-ID name variants (review): **4**
+- Cross-queue normalized-name/different-ID groups (review): **8**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **5**
+- IDs with multiple logo references: **224**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **1**
-- Missing logos in review queues (review only): **0**
+- Missing logos in review queues (review only): **1**
 - External logo references (review only): **0**
-- Logo references checked: **1378**
+- Logo references checked: **1390**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **6**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues (review only): **602**
-- Primary entries missing channel numbers: **15**
-- Primary entries missing tvg-country: **3**
+- Primary channel-number sequence issues (review only): **595**
+- Primary entries missing channel numbers: **0**
+- Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Category registry issues: **1**
-- Alphabetical ordering issues: **2**
+- Category registry issues: **0**
+- Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Unverified provider playback routes (review only): **0**
 - Signed/tokenized stream URLs: **11**
@@ -42,14 +42,11 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 ## Primary Metadata Completeness
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
-- Active primary entries missing tvg-country: **3**
+- Active primary entries missing tvg-country: **0**
 - Active primary entries missing tvg-language: **0**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
-| Documentary & Wildlife | 1 | 0 |
-| International | 1 | 0 |
-| Kids | 1 | 0 |
 
 ## Review Queue Country Verification
 
@@ -57,21 +54,24 @@ New Channels/New Backups contain only entries verified as BD/IN.
 
 ## Category Registry
 
-- registry does not match canonical category order
+Canonical registry matches the permanent IPTV category order.
 
 ## Cross-Queue Identity Variants
 
 These diagnostics include canonical and review groups. Name/ID differences can be legitimate; this section does not merge identities, remove entries, or print stream URLs.
 
+- Same ID animalplanet.in@sd: Animal Planet [Backup]; Animal Planet [Documentary & Wildlife]; Animal Planet HD [Review]
 - Same ID colorsbangla.in@hd: Colors Bangla [Review]; Colors Bangla HD (1080p) [New Backups]
+- Same ID discoverychannel.in@hd: Discovery Channel (India) [Review]; Discovery Channel (India) HD (1080p) [New Backups]
 - Same ID olitv.in@sd: Oli TV [Indian Entertainment]; Oli TV (India) (1080p) [New Backups]
 
 - Same normalized name: Colors [colors.in] (Review); Colors [colors.in@hd] (Indian Entertainment); Colors [colors.in@hd] (Review)
 - Same normalized name: Colors Bangla [colors.bangla.in] (Review); Colors Bangla [colorsbangla.in@hd] (Review)
-- Same normalized name: Enterr10 Bangla [enter10bangla.in] (Backup); Enterr10 Bangla [enter10bangla.in] (Indian Bangla); Enterr10 Bangla [enterr10bangla.in@sd] (Backup)
 - Same normalized name: Eurosport [eurosport.fr@asia] (Backup); Eurosport [eurosport.fr@asia] (Sports); Eurosport [eurosport.in@sd] (Review)
+- Same normalized name: InWild [inwild.nl] (Documentary & Wildlife); INWILD (1080p) [inwild.nl@sd] (New Backups)
 - Same normalized name: Jalsha Movies [jalshamovies.in@sd] (Indian Bangla); Jalsha Movies [jalshamovies.in@sd] (Review); Jalsha Movies [star.jalsha.movies.in] (Review)
 - Same normalized name: Mr Bean Animated [mrbeananimated.uk] (Kids); Mr Bean Animated (1080p) [mrbeananimated.uk@english] (New Backups)
+- Same normalized name: Peace TV Bangla [peacetvbangla.ae] (Backup); Peace TV Bangla [peacetvbangla.ae] (Religious); Peace TV Bangla (1080p) [peacetvbangla.ae@sd] (New Backups)
 - Same normalized name: Star Jalsha [star.jalsha.in] (Review); Star Jalsha [starjalsha.in@hd] (Indian Bangla); Star Jalsha [starjalsha.in@hd] (Review); Star Jalsha [starjalsha.in@sd] (Review)
 
 ## Duplicate IDs
@@ -147,8 +147,8 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - &TV — Indian Entertainment — https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8
 - &TV — Review — https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8
 ### animalplanet.in@sd (3 streams)
-- Animal Planet HD — Documentary & Wildlife — https://tvsen3.aynaott.com/wpa56Uk3/index.m3u8
-- Animal Planet HD — Backup — https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8
+- Animal Planet — Documentary & Wildlife — https://tvsen3.aynaott.com/wpa56Uk3/index.m3u8
+- Animal Planet — Backup — https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8
 - Animal Planet HD — Review — https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8
 ### anjantv.in@sd (3 streams)
 - Anjan TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/993/master.m3u8
@@ -466,6 +466,9 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 ### discoverpakistan.pk@sd (2 streams)
 - Discover Pakistan — Pakistani — https://livecdn.live247stream.com/discoverpakistan/web/playlist.m3u8
 - Discover Pakistan — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/discoverpakistan.stream/playlist.m3u8
+### discoverychannel.in@hd (2 streams)
+- Discovery Channel (India) HD (1080p) — New Backups — http://103.135.253.32:8080/DISCOVERY/index.m3u8
+- Discovery Channel (India) — Review — https://drk6xq0vhn.gpcdn.net/live/discovery_hd_abr/index.m3u8
 ### disneychannel.in@hd (3 streams)
 - Disney Channel — Kids — https://tvsen7.aynaott.com/disney/index.m3u8
 - Disney Channel — Backup — http://rgkkw.live/live/[REDACTED]/[REDACTED]/19741.ts
@@ -494,12 +497,13 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Ekushey TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ekusheytv-8-org.stream/index.m3u8
 - Ekushey TV — Backup — https://ekusheyserver.com/etvlivesn.m3u8
 - Ekushey TV — Backup — https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8
-### enter10bangla.in (5 streams)
+### enter10bangla.in (6 streams)
 - Enterr10 Bangla — Indian Bangla — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_360p/chunks.m3u8
 - Enterr10 Bangla — Backup — https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
 - Enterr10 Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8
 - Enterr10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/playlist.m3u8
 - Enterr10 Bangla — Backup — https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
+- Enterr10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
 ### entertv.bd (3 streams)
 - Enter TV — Bangladesh — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8
 - Enter TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8
@@ -969,6 +973,9 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Ruposhi Bangla — Backup — https://cdn.pishow.tv/ott/live/1039/master.m3u8
 - Ruposhi Bangla — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:rupashibangla.smil/playlist.m3u8
 - Ruposhi Bangla — Backup — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/tracks-v1a1/mono.m3u8
+### safaritv.in@sd (2 streams)
+- Safari TV — Documentary & Wildlife — https://mumt04.tangotv.in/m18aqlK4SAFARITV/index.m3u8
+- Safari TV (576p) — New Backups — https://fta.ektv.in/live/410/master.m3u8
 ### sanandatv.in (4 streams)
 - Sananda — Indian Bangla — http://27.124.71.27/Sun_Bangla/index.m3u8
 - Sananda — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8
@@ -1191,56 +1198,56 @@ None.
 
 ## Primary Channel-Number Sequence (Review Only)
 
-- **Boishakhi TV** — expected channel number 12, found 13
-- **BTV Chattogram** — expected channel number 13, found 14
-- **BTV National** — expected channel number 14, found 15
-- **CB24 TV** — expected channel number 15, found 16
-- **Channel 1** — expected channel number 16, found 17
-- **Channel 9** — expected channel number 17, found 21
-- **Channel I** — expected channel number 21, found 23
-- **Channel S** — expected channel number 22, found 24
-- **Channel S UK** — expected channel number 23, found 25
-- **Community TV** — expected channel number 24, found 26
-- **DBC News** — expected channel number 25, found 27
-- **Deepto TV** — expected channel number 26, found 28
-- **Desh Bangla TV** — expected channel number 27, found 29
-- **Desh TV** — expected channel number 28, found 30
-- **Deshe Bideshe** — expected channel number 29, found 31
-- **Deshi TV** — expected channel number 30, found 32
-- **Doyel TV** — expected channel number 31, found 33
-- **DTV USA** — expected channel number 32, found 34
-- **Ekattor TV** — expected channel number 33, found 35
-- **Ekhon TV** — expected channel number 34, found 36
-- **Ekushey TV** — expected channel number 35, found 37
-- **Enter TV** — expected channel number 36, found 38
-- **G Series Drama** — expected channel number 37, found 39
-- **G TV** — expected channel number 38, found 40
-- **Global TV** — expected channel number 39, found 41
-- **Independent TV** — expected channel number 40, found 42
-- **JA TV** — expected channel number 41, found 44
-- **Jago News 24** — expected channel number 42, found 45
-- **Jalsha Bangla BD** — expected channel number 43, found 46
-- **Jamuna TV** — expected channel number 44, found 47
-- **Maasranga TV** — expected channel number 45, found 49
-- **Matribhumi TV** — expected channel number 46, found 50
-- **Mohona TV** — expected channel number 47, found 51
-- **Movie Bangla** — expected channel number 48, found 52
-- **Music Bangla** — expected channel number 49, found 53
-- **My TV** — expected channel number 50, found 54
-- **Nagorik TV** — expected channel number 51, found 55
-- **News 21** — expected channel number 52, found 57
-- **News 24** — expected channel number 53, found 58
-- **Nexus TV** — expected channel number 54, found 59
-- **NRB TV** — expected channel number 55, found 60
-- **NTV** — expected channel number 56, found 61
-- **NTV Europe** — expected channel number 57, found 62
-- **Probashi TV** — expected channel number 58, found 63
-- **Rajdhani TV** — expected channel number 59, found 64
-- **RTV** — expected channel number 60, found 65
-- **Rupashi Bangla TV** — expected channel number 61, found 66
-- **SA TV** — expected channel number 62, found 67
-- **Shikor TV Canada** — expected channel number 63, found 68
-- **Somoy TV** — expected channel number 64, found 69
+- **Channel I** — expected channel number 22, found 23
+- **Channel S** — expected channel number 23, found 24
+- **Channel S UK** — expected channel number 24, found 25
+- **Community TV** — expected channel number 25, found 26
+- **DBC News** — expected channel number 26, found 27
+- **Deepto TV** — expected channel number 27, found 28
+- **Desh Bangla TV** — expected channel number 28, found 29
+- **Desh TV** — expected channel number 29, found 30
+- **Deshe Bideshe** — expected channel number 30, found 31
+- **Deshi TV** — expected channel number 31, found 32
+- **Doyel TV** — expected channel number 32, found 33
+- **DTV USA** — expected channel number 33, found 34
+- **Ekattor TV** — expected channel number 34, found 35
+- **Ekhon TV** — expected channel number 35, found 36
+- **Ekushey TV** — expected channel number 36, found 37
+- **Enter TV** — expected channel number 37, found 38
+- **G Series Drama** — expected channel number 38, found 39
+- **G TV** — expected channel number 39, found 40
+- **Global TV** — expected channel number 40, found 41
+- **Independent TV** — expected channel number 41, found 42
+- **JA TV** — expected channel number 42, found 44
+- **Jago News 24** — expected channel number 43, found 45
+- **Jalsha Bangla BD** — expected channel number 44, found 46
+- **Jamuna TV** — expected channel number 45, found 47
+- **Maasranga TV** — expected channel number 46, found 49
+- **Matribhumi TV** — expected channel number 47, found 50
+- **Mohona TV** — expected channel number 48, found 51
+- **Movie Bangla** — expected channel number 49, found 52
+- **Music Bangla** — expected channel number 50, found 53
+- **My TV** — expected channel number 51, found 54
+- **Nagorik TV** — expected channel number 52, found 55
+- **News 21** — expected channel number 53, found 57
+- **News 24** — expected channel number 54, found 58
+- **Nexus TV** — expected channel number 55, found 59
+- **NRB TV** — expected channel number 56, found 60
+- **NTV** — expected channel number 57, found 61
+- **NTV Europe** — expected channel number 58, found 62
+- **Probashi TV** — expected channel number 59, found 63
+- **Rajdhani TV** — expected channel number 60, found 64
+- **RTV** — expected channel number 61, found 65
+- **Rupashi Bangla TV** — expected channel number 62, found 66
+- **SA TV** — expected channel number 63, found 67
+- **Shikor TV Canada** — expected channel number 64, found 68
+- **Somoy TV** — expected channel number 65, found 69
+- **SRK** — expected channel number 66, found 70
+- **Star News** — expected channel number 67, found 71
+- **TBN 24 USA** — expected channel number 68, found 72
+- **Time Television** — expected channel number 69, found 73
+- **Vision 24** — expected channel number 70, found 74
+- **Aakaash Aath** — expected channel number 71, found 75
 
 ## Malformed EXTINF Entries
 
@@ -1249,8 +1256,7 @@ None.
 ## Ordering
 
 Category block order: OK.
-- **Bangladesh** — **18 — Channel 16** appears after **21 — Channel 9**
-- **Sports** — **Sport5** appears after **Sport 4**
+Primary-category alphabetical/channel-number order: OK.
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
 ## Suspicious URLs
@@ -1285,7 +1291,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1377**
+- Healthy/local references: **1388**
 - External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair
@@ -1298,8 +1304,8 @@ Active playlist entries with missing or invalid logo references. These rows are 
 
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
-None.
-- missing: **0**
+- **Vyas Channel (576p)** [vyaschannel.in@sd]
+- missing: **1**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**

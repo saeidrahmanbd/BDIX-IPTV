@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-19T03:16:11+00:00**
+Generated: **2026-11-19T03:49:27+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **c838560b0bff3fc20da2c17b70a32946a0ee4939b817afba626d0386a57efd3a**
-- International-Playlist.m3u SHA-256: **c4870f1498aa18055ee8871fa905d1e325dcb20cbf17ed6f07f1b7bba85e257f**
+- IPTV-Playlist.m3u SHA-256: **8611340c6b07807062028b490d6f6cd925bf5fb18ac79bb174f637872523e81e**
+- International-Playlist.m3u SHA-256: **1b9c33053a2fea019d939811e2d0061979dc81026b71d1308fa4f5c704940773**
 
 ## Summary
 
@@ -1358,7 +1358,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Cowboy Movie Channel | cowboy-movie-channel.png | International |
 | IPTV-Playlist.m3u | Dance TV | dance-tv.png | International |
 | IPTV-Playlist.m3u | EPIX | epix-tv.png | International |
-| IPTV-Playlist.m3u | Hollywood HD | hollywood-hd.png | International |
+| IPTV-Playlist.m3u | Hollywood | hollywood-hd.png | International |
 | IPTV-Playlist.m3u | Kronehit TV | kronehit-tv.png | International |
 | IPTV-Playlist.m3u | MyTime Movie Network (US) | mytime-movie-network.png | International |
 | IPTV-Playlist.m3u | NOW 90s & 00s | now-90s-and-00s-1d733d9115.png | International |
@@ -1378,7 +1378,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Autentic Adventure Earth | autentic-adventure-earth-english-german.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Crime & Justice | crime-and-justice.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Crime Scene TV | crime-scene-tv.png | Documentary & Wildlife |
-| IPTV-Playlist.m3u | Discovery HD | discovery-hd.png | Documentary & Wildlife |
+| IPTV-Playlist.m3u | Discovery | discovery-hd.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | DocuBay TV | docubay-tv.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Epic TV Digital | epic-tv-digital.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | History TV | history-tv-ce36a299ec.png | Documentary & Wildlife |
@@ -1438,7 +1438,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | InTrouble | verified-introuble-1080p-a10859438e.png | Sports |
 | IPTV-Playlist.m3u | MMA TV com 格斗 | mma-tv-com-85ca206b32.png | Sports |
 | IPTV-Playlist.m3u | NBA TV | nba-tv.png | Sports |
-| IPTV-Playlist.m3u | Oman Sports TV HD | oman-sports-tv.png | Sports |
+| IPTV-Playlist.m3u | Oman Sports TV | oman-sports-tv.png | Sports |
 | IPTV-Playlist.m3u | Rally TV | rally-tv.png | Sports |
 | IPTV-Playlist.m3u | Real Madrid TV | real-madrid-tv.png | Sports |
 | IPTV-Playlist.m3u | Red Bull TV | red-bull-tv.png | Sports |

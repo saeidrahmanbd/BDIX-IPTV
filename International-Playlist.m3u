@@ -834,7 +834,7 @@ https://cc-hqw8u5r1nshjc.akamaized.net/scheduler/scheduleMaster/352.m3u8
 https://stmv1.srvif.com/classique/classique/playlist.m3u8
 #EXTINF:-1 tvg-id="LamoreRockShowWebTV.br@SD" tvg-language="por" tvg-country="BR" tvg-content="Music" tvg-logo="logos/lamore-rock-show-webtv-720p-23e63ad29f.png" group-title="Brazil" tvg-name="Lamore Rock Show WebTV",Lamore Rock Show WebTV
 https://a.cdni.live/rodrigo2364/rodrigo2364/playlist.m3u8
-#EXTINF:-1 tvg-id="MusicBoxBrazil.br@SD" tvg-name="Music Box Brazil (720p)" tvg-logo="logos/international/music-box-brazil-720p.png" tvg-country="BR" channel-id="MusicBoxBrazil.br@SD" group-title="Brazil" tvg-content="Music",Music Box Brazil (720p)
+#EXTINF:-1 tvg-id="MusicBoxBrazil.br@SD" tvg-name="Music Box Brazil (720p)" tvg-logo="logos/international/music-box-brazil-720p.png" tvg-country="BR" channel-id="MusicBoxBrazil.br@SD" tvg-language="und" group-title="Brazil" tvg-content="Music",Music Box Brazil (720p)
 http://170.83.49.66:8083/MUSICBOXBRASILHD/index.m3u8
 #EXTINF:-1 tvg-id="MyTimeMovieNetwork.br" tvg-language="por" channel-id="MyTimeMovieNetwork.br" tvg-country="BR" tvg-content="Movies" tvg-logo="logos/mytime-movie-network.png" group-title="Brazil" tvg-name="MyTime Movie Network",MyTime Movie Network
 https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8
@@ -1084,7 +1084,7 @@ https://tele-stream.telecasa.net/live/st3/maimontv-hd/index.m3u8
 https://live.obslivestream.com/makaomux/index.m3u8
 #EXTINF:-1 tvg-id="MegaCineTV.do@HD" tvg-language="spa" tvg-country="DO" tvg-content="Movies" tvg-logo="logos/mega-cine-tv-bafa760f60.png" group-title="DO" tvg-name="Mega Cine TV",Mega Cine TV
 https://cnn.hostlagarto.com/megacinetv/playlist.m3u8
-#EXTINF:-1 tvg-id="MontonesTV.do@HD" channel-id="MontonesTV.do@HD" tvg-country="DO" tvg-content="Music" tvg-logo="logos/montones-tv-af126eccd7.png" group-title="DO" tvg-name="Montones TV [ ]",Montones TV [ ]
+#EXTINF:-1 tvg-id="MontonesTV.do@HD" channel-id="MontonesTV.do@HD" tvg-country="DO" tvg-content="Music" tvg-logo="logos/montones-tv-af126eccd7.png" tvg-language="und" group-title="DO" tvg-name="Montones TV [ ]",Montones TV [ ]
 https://183.giatvcdn.com/ssh101/ssh101/montonestv1/playlist.m3u8
 #EXTINF:-1 tvg-id="SiembraTV.do@SD" tvg-language="und" tvg-country="DO" tvg-content="Music" tvg-logo="logos/siembra-tv-dominican-republic-d39394bc42.png" group-title="DO" tvg-name="Siembra TV (Dominican Republic)",Siembra TV (Dominican Republic)
 https://streamunoapp.com:3809/live/siembratvlive.m3u8
@@ -1120,11 +1120,11 @@ https://amg00711-zylo-amg00711c8-rakuten-uk-2686.playouts.now.amagi.tv/playlist/
 https://dbmtv.vedge.infomaniak.com/livecast/dbmtv/playlist.m3u8
 #EXTINF:-1 tvg-id="EmotionL.fr@SD" tvg-language="fra" tvg-country="FR" tvg-content="Movies" tvg-logo="logos/emotion-l-3d6469af53.png" group-title="France" tvg-name="Emotion L",Emotion L
 https://rakutenaa-zylo-emotional-rakuten-r1zkm.amagi.tv/playlist/rakutenAA-zylo-emotional-rakuten/playlist.m3u8
-#EXTINF:-1 tvg-id="M6Music.fr@SD" channel-id="M6Music.fr@SD" tvg-country="FR" tvg-content="Music" tvg-logo="logos/m6-music-20701275e5.png" group-title="France" tvg-name="M6 Music",M6 Music
+#EXTINF:-1 tvg-id="M6Music.fr@SD" channel-id="M6Music.fr@SD" tvg-country="FR" tvg-content="Music" tvg-logo="logos/m6-music-20701275e5.png" tvg-language="fra" group-title="France" tvg-name="M6 Music",M6 Music
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/m6_music_hits/live.livx/playlist.m3u8
-#EXTINF:-1 tvg-id="MCMPop.fr@SD" channel-id="MCMPop.fr@SD" tvg-country="FR" tvg-content="Music" tvg-logo="logos/verified-mcm-pop-580p-1f74592475.png" group-title="France" tvg-name="MCM Pop",MCM Pop
+#EXTINF:-1 tvg-id="MCMPop.fr@SD" channel-id="MCMPop.fr@SD" tvg-country="FR" tvg-content="Music" tvg-logo="logos/verified-mcm-pop-580p-1f74592475.png" tvg-language="fra" group-title="France" tvg-name="MCM Pop",MCM Pop
 http://176.65.153.78:8201/play/a070/index.m3u8
-#EXTINF:-1 tvg-id="Melody.fr@SD" channel-id="Melody.fr@SD" tvg-country="FR" tvg-content="Music" tvg-logo="logos/melody-1fa108e209.png" group-title="France" tvg-name="Melody",Melody
+#EXTINF:-1 tvg-id="Melody.fr@SD" channel-id="Melody.fr@SD" tvg-country="FR" tvg-content="Music" tvg-logo="logos/melody-1fa108e209.png" tvg-language="fra" group-title="France" tvg-name="Melody",Melody
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/melody/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="MezzoLive.fr@SD" tvg-language="eng" tvg-country="FR" tvg-content="Music" tvg-logo="logos/mezzo-live-a73f9b365c.png" group-title="France" tvg-name="Mezzo Live",Mezzo Live
 http://stream.mcquack.net/276/index.m3u8
@@ -1572,7 +1572,7 @@ https://tigocloud.desdeparaguay.net/venusmedia/venusmedia/playlist.m3u8
 http://187.102.210.46/KARIBENA/index.m3u8
 #EXTINF:-1 tvg-id="LaFabulosaTV.pe@SD" tvg-language="spa" tvg-country="PE" tvg-content="Music" tvg-logo="logos/la-fabulosa-tv-5b68a4aa4f.png" group-title="Peru" tvg-name="La Fabulosa TV",La Fabulosa TV
 https://eu1.servers10.com:8081/8004/index.m3u8
-#EXTINF:-1 tvg-id="MetropolitanadelCuzco.pe@SD" channel-id="MetropolitanadelCuzco.pe@SD" tvg-country="PE" tvg-content="Music" tvg-logo="logos/verified-metropolitana-del-cuzco-178dc363d4.png" group-title="Peru" tvg-name="Metropolitana del Cuzco",Metropolitana del Cuzco
+#EXTINF:-1 tvg-id="MetropolitanadelCuzco.pe@SD" channel-id="MetropolitanadelCuzco.pe@SD" tvg-country="PE" tvg-content="Music" tvg-logo="logos/verified-metropolitana-del-cuzco-178dc363d4.png" tvg-language="spa" group-title="Peru" tvg-name="Metropolitana del Cuzco",Metropolitana del Cuzco
 https://video1.earthcam.com/myearthcam/075ff02f78c35af55564cf3af3b3f750.flv/playlist.m3u8
 #EXTINF:-1 tvg-id="MielTV.pe@SD" tvg-language="und" tvg-country="PE" tvg-content="Music" tvg-logo="logos/miel-tv-f7dc000ca4.png" group-title="Peru" tvg-name="Miel TV",Miel TV
 https://live-evg5.tv360.bitel.com.pe/bitel/mieltvSRT/playlist.m3u8
@@ -1822,7 +1822,7 @@ http://176.118.197.101/START_AIR/index.m3u8
 http://213.91.179.28:8000/play/a0bx
 #EXTINF:-1 tvg-id="TV21.ru@SD" tvg-language="rus" tvg-country="RU" tvg-content="Movies" tvg-logo="logos/tv-21-f7fc662314.png" group-title="Russia" tvg-name="TV 21",TV 21
 http://178.134.1.158:8081/TVXXI/index.m3u8
-#EXTINF:-1 tvg-id="TV21International.ru@SD" channel-id="TV21International.ru@SD" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="TV 21 International",TV 21 International
+#EXTINF:-1 tvg-id="TV21International.ru@SD" channel-id="TV21International.ru@SD" tvg-country="RU" tvg-content="Movies" tvg-language="rus" group-title="Russia" tvg-name="TV 21 International",TV 21 International
 http://46.53.200.153:7777/play/TV-21M/index.m3u8
 #EXTINF:-1 tvg-id="vijuTV1000.ru@SD" channel-id="vijuTV1000.ru@SD" tvg-language="rus" tvg-country="RU" tvg-content="Movies" tvg-logo="logos/verified-viju-tv1000-576p-95f56e2316.png" group-title="Russia" tvg-name="viju TV1000",viju TV1000
 http://46.53.200.153:7777/play/TV_1000/index.m3u8
@@ -2062,7 +2062,7 @@ http://stream.mcquack.net/395/index.m3u8
 http://stream.mcquack.net/465/index.m3u8
 #EXTINF:-1 tvg-id="Kinoliving.ua@SD" channel-id="Kinoliving.ua@SD" tvg-language="und" tvg-country="UA" tvg-content="Movies" tvg-logo="logos/verified-kinoliving-1080p-598c112026.png" group-title="Ukraine" tvg-name="Kinoliving",Kinoliving
 http://stream.mcquack.net/445/index.m3u8
-#EXTINF:-1 tvg-id="Kinowood.ua@SD" channel-id="Kinowood.ua@SD" tvg-country="UA" tvg-content="Movies" tvg-logo="logos/verified-kinowood-1080p-0e8cd8d071.png" group-title="Ukraine" tvg-name="Kinowood",Kinowood
+#EXTINF:-1 tvg-id="Kinowood.ua@SD" channel-id="Kinowood.ua@SD" tvg-country="UA" tvg-content="Movies" tvg-logo="logos/verified-kinowood-1080p-0e8cd8d071.png" tvg-language="ukr" group-title="Ukraine" tvg-name="Kinowood",Kinowood
 http://stream.mcquack.net/446/index.m3u8
 #EXTINF:-1 tvg-id="M1.ua@SD" channel-id="M1.ua@SD" tvg-language="und" tvg-country="UA" tvg-content="Music" tvg-logo="logos/verified-m1-ukraine-1080p-ba792a5bcf.png" group-title="Ukraine" tvg-name="M1 (Ukraine)",M1 (Ukraine)
 http://stream.mcquack.net/218/index.m3u8
@@ -2336,7 +2336,7 @@ https://cdn-us-east-prod-ingest-infra-dacast-com.akamaized.net/624ff8f9-db18-da9
 https://d18fcxaqfnwjhj.cloudfront.net/CDN_Ingest/MCN6_MUSIC.smil/Playlist.m3u8
 #EXTINF:-1 tvg-id="MetaleitorTV.us@SD" tvg-language="spa" tvg-country="US" tvg-content="Music" tvg-logo="logos/metaleitor-tv-c73eb9b874.png" group-title="United States" tvg-name="Metaleitor TV",Metaleitor TV
 https://vs20.live.opencaster.com/metaleitortv_423d3342/index.m3u8
-#EXTINF:-1 tvg-id="MiMusicaPopular.us@SD" channel-id="MiMusicaPopular.us@SD" tvg-country="US" tvg-content="Music" tvg-logo="logos/mi-musica-popular-20cac05b9e.png" group-title="United States" tvg-name="Mi Musica Popular",Mi Musica Popular
+#EXTINF:-1 tvg-id="MiMusicaPopular.us@SD" channel-id="MiMusicaPopular.us@SD" tvg-country="US" tvg-content="Music" tvg-logo="logos/mi-musica-popular-20cac05b9e.png" tvg-language="spa" group-title="United States" tvg-name="Mi Musica Popular",Mi Musica Popular
 http://45.226.205.96:48000/play/a0f8/index.m3u8
 #EXTINF:-1 tvg-id="MiMusicaReggaeton.us@SD" tvg-language="spa" tvg-country="US" tvg-content="Music" tvg-logo="logos/mi-musica-reggaeton-d3c433c52d.png" group-title="United States" tvg-name="Mi Musica Reggaeton",Mi Musica Reggaeton
 http://181.78.12.119:16123/play/ch53/index.m3u8
@@ -2358,29 +2358,29 @@ https://jmp2.uk/plu-64a3d96f060e830008af6745.m3u8
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-ionmystery-tablo/playlist.m3u8
 #EXTINF:-1 tvg-id="MTV.us@East" tvg-language="und" tvg-country="US" tvg-content="Music" tvg-logo="logos/mtv-united-states-bafd7b214a.png" group-title="United States" tvg-name="MTV (United States)",MTV (United States)
 http://23.237.104.106:8080/USA_MTV/index.m3u8
-#EXTINF:-1 tvg-id="MTVBiggestPop.us@US" channel-id="MTVBiggestPop.us@US" tvg-logo="logos/international/mtv-biggest-pop-1080p.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV Biggest Pop",MTV Biggest Pop
+#EXTINF:-1 tvg-id="MTVBiggestPop.us@US" channel-id="MTVBiggestPop.us@US" tvg-logo="logos/international/mtv-biggest-pop-1080p.png" tvg-country="US" tvg-content="Music" tvg-language="eng;por;spa" group-title="United States" tvg-name="MTV Biggest Pop",MTV Biggest Pop
 https://jmp2.uk/plu-5d14fd1a252d35decbc4080c.m3u8
-#EXTINF:-1 tvg-id="MTVBiggestPop.us@BR" channel-id="MTVBiggestPop.us@BR" tvg-logo="logos/international/mtv-biggest-pop-br-1080p.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV Biggest Pop BR",MTV Biggest Pop BR
+#EXTINF:-1 tvg-id="MTVBiggestPop.us@BR" channel-id="MTVBiggestPop.us@BR" tvg-logo="logos/international/mtv-biggest-pop-br-1080p.png" tvg-country="US" tvg-content="Music" tvg-language="und" group-title="United States" tvg-name="MTV Biggest Pop BR",MTV Biggest Pop BR
 https://jmp2.uk/plu-6047fbdbbb776a0007e7f2ff.m3u8
-#EXTINF:-1 tvg-id="MTVBiggestPop.us@CA" channel-id="MTVBiggestPop.us@CA" tvg-logo="logos/international/mtv-biggest-pop-ca-1080p.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV Biggest Pop CA",MTV Biggest Pop CA
+#EXTINF:-1 tvg-id="MTVBiggestPop.us@CA" channel-id="MTVBiggestPop.us@CA" tvg-logo="logos/international/mtv-biggest-pop-ca-1080p.png" tvg-country="US" tvg-content="Music" tvg-language="und" group-title="United States" tvg-name="MTV Biggest Pop CA",MTV Biggest Pop CA
 https://jmp2.uk/plu-65410176770cf1000866bf31.m3u8
-#EXTINF:-1 tvg-id="MTVBiggestPop.us@LatAm" channel-id="MTVBiggestPop.us@LatAm" tvg-logo="logos/international/mtv-biggest-pop-latam-1080p.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV Biggest Pop LatAm",MTV Biggest Pop LatAm
+#EXTINF:-1 tvg-id="MTVBiggestPop.us@LatAm" channel-id="MTVBiggestPop.us@LatAm" tvg-logo="logos/international/mtv-biggest-pop-latam-1080p.png" tvg-country="US" tvg-content="Music" tvg-language="und" group-title="United States" tvg-name="MTV Biggest Pop LatAm",MTV Biggest Pop LatAm
 https://jmp2.uk/plu-6047fabfce6e8e00070bcc9f.m3u8
-#EXTINF:-1 tvg-id="MTVClassic.us@BR" channel-id="MTVClassic.us@BR" tvg-logo="logos/international/mtv-classic-br-720p.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV Classic BR",MTV Classic BR
+#EXTINF:-1 tvg-id="MTVClassic.us@BR" channel-id="MTVClassic.us@BR" tvg-logo="logos/international/mtv-classic-br-720p.png" tvg-country="US" tvg-content="Music" tvg-language="und" group-title="United States" tvg-name="MTV Classic BR",MTV Classic BR
 https://jmp2.uk/plu-66a01dcb8561260008b0a41d.m3u8
-#EXTINF:-1 tvg-id="MTVClassic.us@CA" channel-id="MTVClassic.us@CA" tvg-logo="logos/international/mtv-classic-ca-720p.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV Classic CA",MTV Classic CA
+#EXTINF:-1 tvg-id="MTVClassic.us@CA" channel-id="MTVClassic.us@CA" tvg-logo="logos/international/mtv-classic-ca-720p.png" tvg-country="US" tvg-content="Music" tvg-language="und" group-title="United States" tvg-name="MTV Classic CA",MTV Classic CA
 https://jmp2.uk/plu-654100b4bdf3cf0008aa49c7.m3u8
-#EXTINF:-1 tvg-id="MTVClassic.us@LatAm" channel-id="MTVClassic.us@LatAm" tvg-logo="logos/international/mtv-classic-latam-720p.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="MTV Classic LatAm",MTV Classic LatAm
+#EXTINF:-1 tvg-id="MTVClassic.us@LatAm" channel-id="MTVClassic.us@LatAm" tvg-logo="logos/international/mtv-classic-latam-720p.png" tvg-country="US" tvg-content="Music" tvg-language="und" group-title="United States" tvg-name="MTV Classic LatAm",MTV Classic LatAm
 https://jmp2.uk/plu-66a11a21a79dea0008aa90ca.m3u8
-#EXTINF:-1 tvg-id="MTVFlowLatino.us@SD" tvg-name="MTV Flow Latino (720p)" tvg-logo="logos/international/mtv-flow-latino-720p.png" tvg-country="US" channel-id="MTVFlowLatino.us@SD" group-title="United States" tvg-content="Music",MTV Flow Latino (720p)
+#EXTINF:-1 tvg-id="MTVFlowLatino.us@SD" tvg-name="MTV Flow Latino (720p)" tvg-logo="logos/international/mtv-flow-latino-720p.png" tvg-country="US" channel-id="MTVFlowLatino.us@SD" tvg-language="und" group-title="United States" tvg-content="Music",MTV Flow Latino (720p)
 https://jmp2.uk/plu-5d3609cd6a6c78d7672f2a81.m3u8
-#EXTINF:-1 tvg-id="MTVFlowLatino.us@LatAm" tvg-name="MTV Flow Latino LatAm (720p)" tvg-logo="logos/international/mtv-flow-latino-latam-720p.png" tvg-country="US" channel-id="MTVFlowLatino.us@LatAm" group-title="United States" tvg-content="Music",MTV Flow Latino LatAm (720p)
+#EXTINF:-1 tvg-id="MTVFlowLatino.us@LatAm" tvg-name="MTV Flow Latino LatAm (720p)" tvg-logo="logos/international/mtv-flow-latino-latam-720p.png" tvg-country="US" channel-id="MTVFlowLatino.us@LatAm" tvg-language="und" group-title="United States" tvg-content="Music",MTV Flow Latino LatAm (720p)
 https://jmp2.uk/plu-62b218fc511d4b00070ddc0c.m3u8
 #EXTINF:-1 tvg-id="custom.mtv-live" tvg-language="eng" channel-id="custom.mtv-live" tvg-country="US" tvg-content="Music" tvg-logo="logos/mtv-live-1080p-40e9c3993c.png" group-title="United States" tvg-name="MTV Live",MTV Live
 http://23.237.104.106:8080/USA_MTV_LIVE/index.m3u8
-#EXTINF:-1 tvg-id="MTVSpankinNew.us@US" tvg-name="MTV Spankin' New (1080p)" tvg-logo="logos/international/mtv-spankin-new-1080p.png" tvg-country="US" channel-id="MTVSpankinNew.us@US" group-title="United States" tvg-content="Music",MTV Spankin' New (1080p)
+#EXTINF:-1 tvg-id="MTVSpankinNew.us@US" tvg-name="MTV Spankin' New (1080p)" tvg-logo="logos/international/mtv-spankin-new-1080p.png" tvg-country="US" channel-id="MTVSpankinNew.us@US" tvg-language="und" group-title="United States" tvg-content="Music",MTV Spankin' New (1080p)
 https://jmp2.uk/plu-5d14fdb8ca91eedee1633117.m3u8
-#EXTINF:-1 tvg-id="MTVSpankinNew.us@CA" tvg-name="MTV Spankin' New CA (1080p)" tvg-logo="logos/international/mtv-spankin-new-ca-1080p.png" tvg-country="US" channel-id="MTVSpankinNew.us@CA" group-title="United States" tvg-content="Music",MTV Spankin' New CA (1080p)
+#EXTINF:-1 tvg-id="MTVSpankinNew.us@CA" tvg-name="MTV Spankin' New CA (1080p)" tvg-logo="logos/international/mtv-spankin-new-ca-1080p.png" tvg-country="US" channel-id="MTVSpankinNew.us@CA" tvg-language="und" group-title="United States" tvg-content="Music",MTV Spankin' New CA (1080p)
 https://jmp2.uk/plu-6541010f770cf1000866be98.m3u8
 #EXTINF:-1 tvg-id="MyCinema.us" channel-id="MyCinema.us" tvg-language="eng" tvg-country="US" tvg-content="Movies" tvg-logo="logos/my-cinema.png" group-title="United States" tvg-name="My Cinema",My Cinema
 https://mytime-tcl.amagi.tv/playlist.m3u8
@@ -2738,13 +2738,13 @@ https://cdn4.yayin.com.tr/bakixebertv/video.m3u8
 http://195.23.211.179:1935/kmusic/smil:kmusic.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="LaElegidaTelevision.uy@SD" tvg-language="spa" tvg-country="UY" tvg-content="Music" tvg-logo="logos/la-elegida-television-1e044baf68.png" group-title="International" tvg-name="La Elegida Television",La Elegida Television
 https://stmv.gmpro.top/laelegidatv/laelegidatv/playlist.m3u8
-#EXTINF:-1 tvg-id="LaTop1029.hn@SD" channel-id="LaTop1029.hn@SD" tvg-country="HN" tvg-content="Music" tvg-logo="logos/la-top-102-9-d8535e9176.png" group-title="International" tvg-name="La Top 102.9",La Top 102.9
+#EXTINF:-1 tvg-id="LaTop1029.hn@SD" channel-id="LaTop1029.hn@SD" tvg-country="HN" tvg-content="Music" tvg-logo="logos/la-top-102-9-d8535e9176.png" tvg-language="spa" group-title="International" tvg-name="La Top 102.9",La Top 102.9
 https://59d39900ebfb8.streamlock.net/top102/top102/playlist.m3u8
 #EXTINF:-1 tvg-id="LaTop1077.hn@SD" tvg-language="spa" tvg-country="HN" tvg-content="Music" tvg-logo="logos/la-top-107-7-c9b97b2bd3.png" group-title="International" tvg-name="La Top 107.7",La Top 107.7
 https://59d39900ebfb8.streamlock.net/top107/top107/playlist.m3u8
 #EXTINF:-1 tvg-id="LaX.pr@SD" tvg-language="spa" tvg-country="PR" tvg-content="Music" tvg-logo="logos/la-x-c7b858dc99.png" group-title="International" tvg-name="La-X",La-X
 https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8
-#EXTINF:-1 tvg-id="LingkarTV.id@SD" channel-id="LingkarTV.id@SD" tvg-country="ID" tvg-content="Music" tvg-logo="logos/lingkar-tv.png" group-title="International" tvg-name="Lingkar TV",Lingkar TV
+#EXTINF:-1 tvg-id="LingkarTV.id@SD" channel-id="LingkarTV.id@SD" tvg-country="ID" tvg-content="Music" tvg-logo="logos/lingkar-tv.png" tvg-language="ind;jav" group-title="International" tvg-name="Lingkar TV",Lingkar TV
 https://lingkartv.my.id/hls/lingkartv.m3u8
 #EXTINF:-1 tvg-id="Live99FM.bq@SD" tvg-language="eng;nld;pap" tvg-country="BQ" tvg-content="Music" tvg-logo="logos/live99fm-aba3b9961f.png" group-title="International" tvg-name="Live99FM",Live99FM
 https://media.streambrothers.com:1936/8014/8014/playlist.m3u8

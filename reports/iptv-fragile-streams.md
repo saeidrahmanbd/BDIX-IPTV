@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-18T03:25:29+00:00**
-IPTV-Playlist.m3u SHA-256: **939b956ecb9712790c70bc6b900d94a994112871cbfc7376d86b5cd3cb87373e**
+Generated: **2026-11-19T03:50:24+00:00**
+IPTV-Playlist.m3u SHA-256: **8611340c6b07807062028b490d6f6cd925bf5fb18ac79bb174f637872523e81e**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **279**
+- Flagged streams: **282**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -95,6 +95,15 @@ These streams are not automatically removed. URL credentials, user information a
 | Sport 2 (Hungary) | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/sport2_hun/index.m3u8` |
 | Sport5 | Sports | credential-bearing route pattern (values redacted) | `https://rgelive.akamaized.net/hls/live/REDACTED/REDACTED/playlist.m3u8` |
 | TVRI Sport | Sports | credential-bearing route pattern (values redacted) | `https://ott-balancer.tvri.go.id/live/REDACTED/REDACTED/hls/SportHD.m3u8` |
+| BTL TV (Netherlands) (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.liveplustv.com/v1/live/btl-tv/master.m3u8` |
+| Cartoon Network (Pakistan) | New Channels | credential-bearing route pattern (values redacted) | `https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8` |
+| Vokta TV (720p) | New Channels | credential-bearing route pattern (values redacted) | `https://vokta.raytahost.com/live/voktatv/index.m3u8` |
+| TV 100 (India) (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/310/master.m3u8` |
+| Gyandarshan (720p) | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/14/master.m3u8` |
+| Vyas Channel (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://playhls.media.nic.in/hls/live/vyas/vyas.m3u8` |
+| DD National HD (1080p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/15/master.m3u8` |
+| Nepal 1 (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1490/master.m3u8` |
+| Safari TV (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/410/master.m3u8` |
 | 7S Music | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/771/master.m3u8` |
 | 9X Jalwa | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/161/master.m3u8` |
 | 9X Jhakaas | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/6/master.m3u8` |
@@ -228,12 +237,6 @@ These streams are not automatically removed. URL credentials, user information a
 | YRF Music | Backup | credential-bearing route pattern (values redacted) | `https://vidaa.kableone.com/hls/live/REDACTED/REDACTED/1.m3u8` |
 | Zee Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8` |
 | Zee Bangla | Backup | credential-bearing route pattern (values redacted) | `http://rgkkw.live:80/live/REDACTED/REDACTED/98881.ts` |
-| BTL TV (Netherlands) (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.liveplustv.com/v1/live/btl-tv/master.m3u8` |
-| Cartoon Network (Pakistan) | New Channels | credential-bearing route pattern (values redacted) | `https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8` |
-| Vokta TV (720p) | New Channels | credential-bearing route pattern (values redacted) | `https://vokta.raytahost.com/live/voktatv/index.m3u8` |
-| TV 100 (India) (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/310/master.m3u8` |
-| DD National HD (1080p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/15/master.m3u8` |
-| Nepal 1 (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1490/master.m3u8` |
 | &TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8` |
 | Animal Planet HD | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8` |
 | Asian TV | Review | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/asian_tv_abr/index.m3u8` |

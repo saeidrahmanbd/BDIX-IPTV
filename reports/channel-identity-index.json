@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T03:25:29+00:00",
+  "generated": "2026-11-19T03:50:24+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -501,6 +501,7 @@
     },
     "animalplanet": {
       "names": [
+        "Animal Planet",
         "Animal Planet HD"
       ],
       "ids": [
@@ -2205,7 +2206,7 @@
     },
     "custom.discoveryhd": {
       "names": [
-        "Discovery HD"
+        "Discovery"
       ],
       "ids": [
         "custom.discoveryhd"
@@ -2359,7 +2360,7 @@
     },
     "custom.hollywoodhd": {
       "names": [
-        "Hollywood HD"
+        "Hollywood"
       ],
       "ids": [
         "custom.hollywoodhd"
@@ -3299,6 +3300,20 @@
       "primary": 1,
       "backup": 1
     },
+    "ddkisan": {
+      "names": [
+        "DD Kisan (1080p)"
+      ],
+      "ids": [
+        "ddkisan.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "ddmadhyapradesh": {
       "names": [
         "DD Madhya Pradesh"
@@ -3760,16 +3775,18 @@
     },
     "discoverychannel": {
       "names": [
-        "Discovery Channel (India)"
+        "Discovery Channel (India)",
+        "Discovery Channel (India) HD (1080p)"
       ],
       "ids": [
         "discoverychannel.in@hd"
       ],
       "groups": [
+        "New Backups",
         "Review"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "discoveryfamily": {
@@ -4169,23 +4186,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
-      "backup": 4
-    },
-    "enterr10bangla": {
-      "names": [
-        "Enterr10 Bangla"
-      ],
-      "ids": [
-        "enterr10bangla.in@sd"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "backup": 5
     },
     "entertv": {
       "names": [
@@ -5007,6 +5010,23 @@
       "primary": 3,
       "backup": 1
     },
+    "gyandarshan": {
+      "names": [
+        "Gyandarshan (720p)",
+        "Gyandarshan HD (576p)"
+      ],
+      "ids": [
+        "gyandarshan.in@hd",
+        "gyandarshan.in@sd"
+      ],
+      "groups": [
+        "New Backups",
+        "New Channels"
+      ],
+      "streams": 2,
+      "primary": 2,
+      "backup": 0
+    },
     "hidost": {
       "names": [
         "Hi Dost!"
@@ -5052,16 +5072,19 @@
     },
     "historytv18": {
       "names": [
-        "History TV"
+        "History TV",
+        "History TV18 HD (1080p) [Geo-blocked]"
       ],
       "ids": [
+        "historytv18.in@hd",
         "historytv18.in@sd"
       ],
       "groups": [
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "houseofcrime": {
@@ -5266,16 +5289,19 @@
     },
     "inwild": {
       "names": [
+        "INWILD (1080p)",
         "InWild"
       ],
       "ids": [
-        "inwild.nl"
+        "inwild.nl",
+        "inwild.nl@sd"
       ],
       "groups": [
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "inwonder": {
@@ -5757,6 +5783,20 @@
       "streams": 4,
       "primary": 2,
       "backup": 2
+    },
+    "kitevicters": {
+      "names": [
+        "Kite Victers (720p) [Not 24/7]"
+      ],
+      "ids": [
+        "kitevicters.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "ktvbangla": {
       "names": [
@@ -7180,7 +7220,7 @@
     },
     "omansportstv": {
       "names": [
-        "Oman Sports TV HD"
+        "Oman Sports TV"
       ],
       "ids": [
         "omansportstv.om"
@@ -7365,17 +7405,20 @@
     },
     "peacetvbangla": {
       "names": [
-        "Peace TV Bangla"
+        "Peace TV Bangla",
+        "Peace TV Bangla (1080p)"
       ],
       "ids": [
-        "peacetvbangla.ae"
+        "peacetvbangla.ae",
+        "peacetvbangla.ae@sd"
       ],
       "groups": [
         "Backup",
+        "New Backups",
         "Religious"
       ],
-      "streams": 4,
-      "primary": 1,
+      "streams": 5,
+      "primary": 2,
       "backup": 3
     },
     "peacetvenglish": {
@@ -7387,6 +7430,20 @@
       ],
       "groups": [
         "Religious"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "peacetvurdu": {
+      "names": [
+        "Peace TV Urdu (1080p)"
+      ],
+      "ids": [
+        "peacetvurdu.ae@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -8350,16 +8407,18 @@
     },
     "safaritv": {
       "names": [
-        "Safari TV"
+        "Safari TV",
+        "Safari TV (576p)"
       ],
       "ids": [
         "safaritv.in@sd"
       ],
       "groups": [
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "sagamusic": {
@@ -8640,6 +8699,20 @@
       "streams": 4,
       "primary": 1,
       "backup": 3
+    },
+    "shikshatv": {
+      "names": [
+        "Shiksha TV (720p)"
+      ],
+      "ids": [
+        "shikshatv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "shinchan": {
       "names": [
@@ -10746,6 +10819,20 @@
       ],
       "ids": [
         "vtu.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "vyaschannel": {
+      "names": [
+        "Vyas Channel (576p)"
+      ],
+      "ids": [
+        "vyaschannel.in@sd"
       ],
       "groups": [
         "New Channels"

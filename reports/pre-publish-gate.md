@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-18T03:24:09+00:00**
-Source playlist SHA-256: **939b956ecb9712790c70bc6b900d94a994112871cbfc7376d86b5cd3cb87373e**
+Generated: **2026-11-19T03:49:29+00:00**
+Source playlist SHA-256: **8611340c6b07807062028b490d6f6cd925bf5fb18ac79bb174f637872523e81e**
 
 Status: **PASS**
 
-- Current entries: **1378**
+- Current entries: **1390**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -14,49 +14,44 @@ Status: **PASS**
 - Review entries promoted: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing channel numbers: **15**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **602**
-- Numbered review entries: **12**
+- Primary entries missing channel numbers: **0**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **595**
+- Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
-- Orphan Backup entries: **1**
-- Active rows with incomplete required metadata: **3**
+- Orphan Backup entries: **0**
+- Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **26**
-- Raw resolution/geoblock name tags: **25**
+- Entries missing tvg-language: **12**
+- Raw resolution/geoblock name tags: **36**
 - Missing logos in active groups: **0**
-- Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
+- Missing logos deferred in review groups (Review/New Channels/New Backups): **1**
 - External logo URLs: **0**
-- Incorrect/placeholder/generic logos: **3**
+- Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
 - Entries removed this run: **0**
-- Entries modified this run: **0**
+- Entries modified this run: **5**
 
 ## Protected-queue policy
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **602**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **595**.
 
 ## Blocking Reasons
 No hard safety blockers detected.
 
 ## Warnings / Manual Review
 
-- orphan Backup entries awaiting owner review: 1
-- active entries with incomplete identity/country/logo metadata: 3
-- entries missing tvg-language: 26
-- primary entries missing tvg-chno: 15
-- Backup/Review/discovery entries still numbered: 12
-- raw resolution/geoblock tags in channel names: 25
-- incorrect/placeholder/generic logos: 3
-- New queue candidates pending owner review: 26
+- entries missing tvg-language: 12
+- raw resolution/geoblock tags in channel names: 36
+- New queue candidates pending owner review: 38
 
 ## Review-queue logo gaps
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
-None.
+- **Vyas Channel (576p)**
 
 ## Metadata conflicts
 
@@ -80,6 +75,11 @@ None.
 - **VTU (1080p)** — New Channels
 - **WeatherSpy (India) (720p)** — New Channels
 - **Zodiak TV (1080p)** — New Channels
+- **DD Kisan (1080p)** — New Channels
+- **Gyandarshan (720p)** — New Channels
+- **Peace TV Urdu (1080p)** — New Channels
+- **Shiksha TV (720p)** — New Channels
+- **Vyas Channel (576p)** — New Channels
 - **NAN TV (720p)** — New Backups
 - **Nick Jr. (India) (576p)** — New Backups
 - **Colors Bangla HD (1080p)** — New Backups
@@ -89,6 +89,12 @@ None.
 - **Oli TV (India) (1080p)** — New Backups
 - **Sony Yay! (1080p)** — New Backups
 - **Travelxp 4K HDR (2160p) [Geo-blocked]** — New Backups
+- **Peace TV Bangla (1080p)** — New Backups
+- **Discovery Channel (India) HD (1080p)** — New Backups
+- **Gyandarshan HD (576p)** — New Backups
+- **History TV18 HD (1080p) [Geo-blocked]** — New Backups
+- **INWILD (1080p)** — New Backups
+- **Safari TV (576p)** — New Backups
 
 ## Queue validation
 
@@ -109,6 +115,12 @@ None.
 - VTU (1080p) has provisional/unverified queue country missing
 - WeatherSpy (India) (720p) has provisional/unverified queue country missing
 - Zodiak TV (1080p) has provisional/unverified queue country missing
+- DD Kisan (1080p) has provisional/unverified queue country missing
+- Gyandarshan (720p) has provisional/unverified queue country missing
+- Kite Victers (720p) [Not 24/7] has provisional/unverified queue country missing
+- Peace TV Urdu (1080p) has provisional/unverified queue country missing
+- Shiksha TV (720p) has provisional/unverified queue country missing
+- Vyas Channel (576p) has provisional/unverified queue country missing
 - NAN TV (720p) has provisional/unverified queue country missing
 - Nick Jr. (India) (576p) has provisional/unverified queue country missing
 - Colors Bangla HD (1080p) has provisional/unverified queue country missing
@@ -118,6 +130,12 @@ None.
 - Oli TV (India) (1080p) has provisional/unverified queue country missing
 - Sony Yay! (1080p) has provisional/unverified queue country missing
 - Travelxp 4K HDR (2160p) [Geo-blocked] has provisional/unverified queue country missing
+- Peace TV Bangla (1080p) has provisional/unverified queue country missing
+- Discovery Channel (India) HD (1080p) has provisional/unverified queue country missing
+- Gyandarshan HD (576p) has provisional/unverified queue country missing
+- History TV18 HD (1080p) [Geo-blocked] has provisional/unverified queue country missing
+- INWILD (1080p) has provisional/unverified queue country missing
+- Safari TV (576p) has provisional/unverified queue country missing
 
 ## Missing local logo files
 
@@ -129,6 +147,4 @@ None.
 
 | Channel | Group | Blocked filename |
 |---|---|---|
-| Channel 52 | Bangladesh | channel-52.png |
-| Channel 52 | Backup | channel-52.png |
-| Channel 52 | Backup | channel-52.png |
+| — | — | none |

@@ -1,7 +1,7 @@
 # Stream Risk Review
 
-Generated: **2026-11-18T03:25:29+00:00**
-IPTV-Playlist.m3u SHA-256: **939b956ecb9712790c70bc6b900d94a994112871cbfc7376d86b5cd3cb87373e**
+Generated: **2026-11-19T03:50:24+00:00**
+IPTV-Playlist.m3u SHA-256: **8611340c6b07807062028b490d6f6cd925bf5fb18ac79bb174f637872523e81e**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
 
@@ -21,62 +21,63 @@ Generated from the current playlist and latest available stream-health report. T
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1378 |
-| Reachable | 1114 |
-| Failed this check | 264 |
-| Persistent failures (3+ consecutive) | 49 |
+| Streams tested | 1390 |
+| Reachable | 1156 |
+| Failed this check | 234 |
+| Persistent failures (3+ consecutive) | 50 |
 
 ### Persistent failures
 
-- **Bangla TV** — Backup — consecutive failed days: **4** — HTTP 404
-- **Thikana TV** — Bangladesh — consecutive failed days: **3** — HTTP 404
-- **&TV** — Review — consecutive failed days: **4** — HTTP 404
-- **AMN TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Amar Bangla** — Review — consecutive failed days: **4** — HTTP 404
-- **Animal Planet HD** — Review — consecutive failed days: **4** — HTTP 404
-- **Asian TV** — Review — consecutive failed days: **4** — HTTP 404
-- **B4U Movies** — Review — consecutive failed days: **4** — HTTP 404
-- **B4U Music** — Review — consecutive failed days: **4** — HTTP 404
-- **Bijoy TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Bijoy TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Channel 1** — Review — consecutive failed days: **4** — HTTP 404
-- **Channel 1** — Review — consecutive failed days: **4** — HTTP 404
-- **Channel 24** — Review — consecutive failed days: **4** — HTTP 404
-- **Channel 24** — Review — consecutive failed days: **4** — HTTP 404
-- **Channel 24** — Review — consecutive failed days: **4** — HTTP 404
-- **Dangal** — Review — consecutive failed days: **3** — HTTP 404
-- **Desh TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Dhamaal** — Review — consecutive failed days: **4** — HTTP 404
-- **Discovery Channel (India)** — Review — consecutive failed days: **4** — HTTP 404
-- **Ekattor TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Ekhon TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Ekhon TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Eurosport** — Review — consecutive failed days: **4** — HTTP 404
-- **Global TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Green TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Hum TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Hum TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Islamic TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Jamuna TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Khushboo Bangla** — Review — consecutive failed days: **3** — HTTP 404
-- **Mohona TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Movie Bangla** — Review — consecutive failed days: **4** — HTTP 404
-- **Nexus TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Rajdhani TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Sananda** — Review — consecutive failed days: **4** — HTTP 404
-- **Sangeet Bangla** — Review — consecutive failed days: **3** — 206
-- **Somoy TV** — Review — consecutive failed days: **4** — HTTP 404
-- **Sony Aath** — Review — consecutive failed days: **4** — HTTP 404
-- **Sony Aath** — Review — consecutive failed days: **4** — HTTP 404
-- **Sony Max 2** — Review — consecutive failed days: **4** — HTTP 404
-- **Sony SAB** — Review — consecutive failed days: **4** — HTTP 404
-- **Starnet** — Review — consecutive failed days: **4** — HTTP 404
-- **Thanthi One** — Review — consecutive failed days: **4** — HTTP 404
-- **Zee Bangla** — Review — consecutive failed days: **4** — HTTP 404
-- **Zee Bangla Cinema** — Review — consecutive failed days: **4** — HTTP 404
-- **Zee Bollywood** — Review — consecutive failed days: **4** — HTTP 404
-- **Zee Cinema** — Review — consecutive failed days: **4** — HTTP 404
-- **Zee TV** — Review — consecutive failed days: **4** — HTTP 404
+- **Bangla TV** — Backup — consecutive failed days: **5** — HTTP 404
+- **&TV** — Review — consecutive failed days: **5** — HTTP 404
+- **AMN TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Amar Bangla** — Review — consecutive failed days: **5** — HTTP 404
+- **Animal Planet HD** — Review — consecutive failed days: **5** — HTTP 404
+- **Asian TV** — Review — consecutive failed days: **5** — HTTP 404
+- **B4U Movies** — Review — consecutive failed days: **5** — HTTP 404
+- **B4U Music** — Review — consecutive failed days: **5** — HTTP 404
+- **Bijoy TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Bijoy TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Channel 1** — Review — consecutive failed days: **5** — HTTP 404
+- **Channel 1** — Review — consecutive failed days: **5** — HTTP 404
+- **Channel 24** — Review — consecutive failed days: **5** — HTTP 404
+- **Channel 24** — Review — consecutive failed days: **5** — HTTP 404
+- **Channel 24** — Review — consecutive failed days: **5** — HTTP 404
+- **Dangal** — Review — consecutive failed days: **4** — HTTP 404
+- **Desh TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Dhamaal** — Review — consecutive failed days: **5** — HTTP 404
+- **Discovery Channel (India)** — Review — consecutive failed days: **5** — HTTP 404
+- **Ekattor TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Ekhon TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Ekhon TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Eurosport** — Review — consecutive failed days: **5** — HTTP 404
+- **Global TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Green TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Hum TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Hum TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Islamic TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Jamuna TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Jonmobhumi TV** — Review — consecutive failed days: **3** — HTTP 404
+- **Jonmobhumi TV** — Review — consecutive failed days: **3** — HTTP 404
+- **Khushboo Bangla** — Review — consecutive failed days: **4** — HTTP 404
+- **MBC Bollywood** — Review — consecutive failed days: **3** — HTTP 404
+- **Mohona TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Movie Bangla** — Review — consecutive failed days: **5** — HTTP 404
+- **Nexus TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Rajdhani TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Sananda** — Review — consecutive failed days: **5** — HTTP 404
+- **Somoy TV** — Review — consecutive failed days: **5** — HTTP 404
+- **Sony Aath** — Review — consecutive failed days: **5** — HTTP 404
+- **Sony Aath** — Review — consecutive failed days: **5** — HTTP 404
+- **Sony Max 2** — Review — consecutive failed days: **5** — HTTP 404
+- **Sony SAB** — Review — consecutive failed days: **5** — HTTP 404
+- **Starnet** — Review — consecutive failed days: **5** — HTTP 404
+- **Thanthi One** — Review — consecutive failed days: **5** — HTTP 404
+- **Zee Bangla** — Review — consecutive failed days: **5** — HTTP 404
+- **Zee Bangla Cinema** — Review — consecutive failed days: **5** — HTTP 404
+- **Zee Bollywood** — Review — consecutive failed days: **5** — HTTP 404
+- **Zee Cinema** — Review — consecutive failed days: **5** — HTTP 404
+- **Zee TV** — Review — consecutive failed days: **5** — HTTP 404
 
 ## /streamtest/ Endpoints
 
@@ -90,11 +91,11 @@ Generated from the current playlist and latest available stream-health report. T
 | See TV | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/SeeTV-156/playlist.m3u8 |
 | Waseb TV | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/WASEB-130/playlist.m3u8 |
 | Paighan TV | Religious | cdn4.mjunoon.tv:8087 | /streamtest/107M/chunks.m3u8 |
+| Cartoon Network (Pakistan) | New Channels | vodzong.mjunoon.tv:8087 | /streamtest/cartoon-network-87/live/87H/chunks.m3u8 |
 | 8XM | Backup | vodzong.mjunoon.tv:8087 | /streamtest/8XM-131/playlist.m3u8 |
-| Animal Planet HD | Backup | vodzong.mjunoon.tv:8087 | /streamtest/Animal-Planet-158-3/playlist.m3u8 |
+| Animal Planet | Backup | vodzong.mjunoon.tv:8087 | /streamtest/Animal-Planet-158-3/playlist.m3u8 |
 | Hum TV | Backup | cdn4.mjunoon.tv:8087 | /streamtest/82M/chunks.m3u8 |
 | Jalwa TV | Backup | vodzong.mjunoon.tv:8087 | /streamtest/JalwaTV-135/live/135M/chunks.m3u8 |
-| Cartoon Network (Pakistan) | New Channels | vodzong.mjunoon.tv:8087 | /streamtest/cartoon-network-87/live/87H/chunks.m3u8 |
 
 ## Signed / Token-Query Endpoints
 
