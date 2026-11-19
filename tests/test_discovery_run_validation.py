@@ -384,6 +384,19 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         self.assertEqual(decisions[0][3], "no authentic local repository logo")
         self.assertIn('group-title="Review"', updates[entries[0]["start"]])
 
+    def test_definitively_dead_candidate_is_not_reported_as_promoted_to_review(self):
+        import validate_discovery_run as validation
+        row = (
+            '#EXTINF:-1 tvg-id="DeadMovie.us" tvg-name="Dead Movie" tvg-country="US" '
+            'group-title="New Channels",Dead Movie\\nhttps://example.org/dead.m3u8'
+        )
+        _, entries, malformed = parse_playlist(row)
+        self.assertFalse(malformed)
+        decisions = validation.promote_verified_candidates(
+            entries, set(), set(), {}, {entries[0]["start"]}
+        )
+        self.assertEqual(decisions, [])
+
     def test_inconclusive_candidate_without_local_logo_is_preserved_in_review(self):
         import os
         import tempfile
