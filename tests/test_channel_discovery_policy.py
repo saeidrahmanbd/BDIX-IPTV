@@ -137,15 +137,15 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
 
     def test_existing_prohibited_indian_education_queue_rows_are_purged(self):
         text = (
-            "#EXTM3U\\n"
-            '#EXTINF:-1 tvg-name="Vyas Channel" tvg-country="IN" group-title="New Channels",Vyas Channel\\n'
-            "https://example.invalid/vyas.m3u8\\n"
-            '#EXTINF:-1 tvg-name="Shiksha TV" tvg-id="ShikshaTV.in" group-title="New Backups",Shiksha TV\\n'
-            "https://example.invalid/shiksha.m3u8\\n"
-            '#EXTINF:-1 tvg-name="Gyandarshan HD" tvg-country="IN" group-title="New Backups",Gyandarshan HD\\n'
-            "https://example.invalid/gyandarshan.m3u8\\n"
-            '#EXTINF:-1 tvg-name="Channel 24" tvg-country="BD" group-title="New Channels",Channel 24\\n'
-            "https://example.invalid/channel24.m3u8\\n"
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-name="Vyas Channel" tvg-country="IN" group-title="New Channels",Vyas Channel\n'
+            "https://example.invalid/vyas.m3u8\n"
+            '#EXTINF:-1 tvg-name="Shiksha TV" tvg-id="ShikshaTV.in" group-title="New Backups",Shiksha TV\n'
+            "https://example.invalid/shiksha.m3u8\n"
+            '#EXTINF:-1 tvg-name="Gyandarshan HD" tvg-country="IN" group-title="New Backups",Gyandarshan HD\n'
+            "https://example.invalid/gyandarshan.m3u8\n"
+            '#EXTINF:-1 tvg-name="Channel 24" tvg-country="BD" group-title="New Channels",Channel 24\n'
+            "https://example.invalid/channel24.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
         self.assertEqual(set(removed), {"Vyas Channel", "Shiksha TV", "Gyandarshan HD"})
