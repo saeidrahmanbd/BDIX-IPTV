@@ -224,11 +224,34 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "https://example.invalid/disha.m3u8\n"
             '#EXTINF:-1 tvg-id="VTU.in@SD" group-title="New Backups",VTU\n'
             "https://example.invalid/vtu.m3u8\n"
+            '#EXTINF:-1 tvg-id="DDKisan.in@SD" group-title="New Channels",DD Kisan (1080p)\n'
+            "https://example.invalid/dd-kisan.m3u8\n"
+            '#EXTINF:-1 tvg-id="Gyandarshan.in@SD" group-title="New Channels",Gyandarshan (720p)\n'
+            "https://example.invalid/gyandarshan.m3u8\n"
+            '#EXTINF:-1 tvg-id="KiteVicters.in@SD" group-title="New Channels",Kite Victers (720p)\n'
+            "https://example.invalid/kite-victers.m3u8\n"
+            '#EXTINF:-1 tvg-id="ShikshaTV.in@SD" group-title="New Channels",Shiksha TV (720p)\n'
+            "https://example.invalid/shiksha.m3u8\n"
+            '#EXTINF:-1 tvg-id="VyasChannel.in@SD" group-title="New Channels",Vyas Channel (576p)\n'
+            "https://example.invalid/vyas.m3u8\n"
+            '#EXTINF:-1 tvg-id="NickJr.in@SD" group-title="New Backups",Nick Jr. (India) (576p)\n'
+            "https://example.invalid/nick-jr.m3u8\n"
+            '#EXTINF:-1 tvg-id="DiscoveryChannel.in@HD" group-title="New Backups",Discovery Channel (India) HD (1080p)\n'
+            "https://example.invalid/discovery.m3u8\n"
+            '#EXTINF:-1 tvg-id="HistoryTV18.in@HD" group-title="New Backups",History TV18 HD (1080p)\n'
+            "https://example.invalid/history.m3u8\n"
+            '#EXTINF:-1 tvg-id="SafariTV.in@SD" group-title="New Backups",Safari TV (576p)\n'
+            "https://example.invalid/safari.m3u8\n"
             '#EXTINF:-1 tvg-country="BD" tvg-id="Channel24.bd" group-title="New Channels",Channel 24\n'
             "https://example.invalid/channel24.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
-        self.assertEqual(set(removed), {"TV 100", "R Plus", "Sony Yay!", "Disha TV", "VTU"})
+        self.assertEqual(set(removed), {
+            "TV 100", "R Plus", "Sony Yay!", "Disha TV", "VTU",
+            "DD Kisan (1080p)", "Gyandarshan (720p)", "Kite Victers (720p)",
+            "Shiksha TV (720p)", "Vyas Channel (576p)", "Nick Jr. (India) (576p)",
+            "Discovery Channel (India) HD (1080p)", "History TV18 HD (1080p)", "Safari TV (576p)",
+        })
         self.assertIn("Channel 24", filtered)
 
     def test_iptv_evaluate_uses_india_source_country_despite_misleading_metadata(self):
