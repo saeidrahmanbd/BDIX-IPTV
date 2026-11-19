@@ -1822,7 +1822,7 @@ http://176.118.197.101/START_AIR/index.m3u8
 http://213.91.179.28:8000/play/a0bx
 #EXTINF:-1 tvg-id="TV21.ru@SD" tvg-language="rus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-21-f7fc662314.png" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="TV 21",TV 21
 http://178.134.1.158:8081/TVXXI/index.m3u8
-#EXTINF:-1 tvg-id="TV21International.ru@SD" channel-id="TV21International.ru@SD" tvg-language="rus" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="TV 21 International",TV 21 International
+#EXTINF:-1 tvg-id="TV21International.ru@SD" channel-id="TV21International.ru@SD" tvg-language="rus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-21-f7fc662314.png" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="TV 21 International",TV 21 International
 http://46.53.200.153:7777/play/TV-21M/index.m3u8
 #EXTINF:-1 tvg-id="vijuTV1000.ru@SD" channel-id="vijuTV1000.ru@SD" tvg-language="rus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/viju-tv1000-576p.png" tvg-country="RU" tvg-content="Movies" group-title="Russia" tvg-name="viju TV1000",viju TV1000
 http://46.53.200.153:7777/play/TV_1000/index.m3u8
