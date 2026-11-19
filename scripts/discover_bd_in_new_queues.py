@@ -11,6 +11,8 @@ Bangladesh channels of all genres are eligible. Indian News and non-Islamic
 religious channels are excluded. Islamic religious channels, Kids, Sports and
 other legitimate live-TV genres remain eligible unless individually denylisted.
 """
+# Owner-authorized policy-alignment retry marker (2026-11-19).
+
 from __future__ import annotations
 import json, re, unicodedata, urllib.request
 from collections import Counter
