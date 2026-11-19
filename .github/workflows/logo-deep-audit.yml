@@ -1,0 +1,39 @@
+name: Deep Logo Reference and Perceptual Audit
+on:
+  push:
+    branches:
+      - "audit/logo-deep-audit-*"
+    paths:
+      - "scripts/deep_logo_audit.py"
+      - ".github/workflows/logo-deep-audit.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: deep-logo-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    name: Runtime references and perceptual duplicate scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install image analysis dependencies
+        run: python -m pip install --disable-pip-version-check Pillow numpy
+      - name: Run read-only deep audit
+        run: python scripts/deep_logo_audit.py
+      - name: Upload audit results
+        uses: actions/upload-artifact@v4
+        with:
+          name: deep-logo-audit
+          path: |
+            reports/logo-deep-audit.json
+            reports/logo-deep-audit.md
+          if-no-files-found: error
+          retention-days: 30
