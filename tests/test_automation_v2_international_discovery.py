@@ -7,8 +7,8 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from automation.engines.international.discovery import build_international_discovery_batch, fetch_international_source
 
-BASE='#EXTM3U\n#EXTINF:-1 tvg-id="existing.bd" tvg-name="Existing",Existing\nhttps://existing.example/live.m3u8\n'
-FEED='#EXTM3U\\n#EXTINF:-1 tvg-id="bdmovie.bd" tvg-name="Bangladesh Movie" tvg-country="BD" group-title="Movies",Bangladesh Movie\\nhttps://bdmovie.example/live.m3u8\\n#EXTINF:-1 tvg-id="inmusic.in" tvg-name="India Music" tvg-country="IN" group-title="Music",India Music\\nhttps://inmusic.example/live.m3u8\\n#EXTINF:-1 tvg-id="insport.in" tvg-name="India Cricket Sports" tvg-country="IN" group-title="Sports",India Cricket Sports\\nhttps://insport.example/live.m3u8\\n#EXTINF:-1 tvg-id="foreignmovie.us" tvg-name="US Movie Channel" tvg-country="US" group-title="Movies",US Movie Channel\\nhttps://movie.example/live.m3u8\\n#EXTINF:-1 tvg-id="foreignnews.us" tvg-name="US News" tvg-country="US" group-title="News",US News\\nhttps://news.example/live.m3u8\\n#EXTINF:-1 tvg-id="unknown" tvg-name="Unknown Country Movie" group-title="Movies",Unknown Country Movie\\nhttps://unknown.example/live.m3u8\\n'
+BASE='#EXTM3U\n#EXTINF:-1 tvg-id="existing.bd" tvg-name="Existing" tvg-country="BD" group-title="Movies",Existing\nhttps://existing.example/live.m3u8\n'
+FEED='#EXTM3U\n#EXTINF:-1 tvg-id="bdmovie.bd" tvg-name="Bangladesh Movie" tvg-country="BD" group-title="Movies",Bangladesh Movie\nhttps://bdmovie.example/live.m3u8\n#EXTINF:-1 tvg-id="inmusic.in" tvg-name="India Music" tvg-country="IN" group-title="Music",India Music\nhttps://inmusic.example/live.m3u8\n#EXTINF:-1 tvg-id="insport.in" tvg-name="India Cricket Sports" tvg-country="IN" group-title="Sports",India Cricket Sports\nhttps://insport.example/live.m3u8\n#EXTINF:-1 tvg-id="foreignmovie.us" tvg-name="US Movie Channel" tvg-country="US" group-title="Movies",US Movie Channel\nhttps://movie.example/live.m3u8\n#EXTINF:-1 tvg-id="foreignnews.us" tvg-name="US News" tvg-country="US" group-title="News",US News\nhttps://news.example/live.m3u8\n#EXTINF:-1 tvg-id="unknown" tvg-name="Unknown Country Movie" group-title="Movies",Unknown Country Movie\nhttps://unknown.example/live.m3u8\n'
 
 class InternationalDiscoveryAdapterTests(unittest.TestCase):
     def test_bd_and_india_follow_worldwide_movie_music_policy(self):
@@ -35,7 +35,7 @@ class InternationalDiscoveryAdapterTests(unittest.TestCase):
         self.assertTrue(any("country could not be verified" in warning for warning in result.warnings))
 
     def test_conflicting_country_metadata_is_warning_only(self):
-        feed='#EXTM3U\n#EXTINF:-1 tvg-id="conflict.in" tvg-name="India News" tvg-country="US" group-title="News",India News\nhttps://conflict.example/live.m3u8\n'
+        feed='#EXTM3U\n#EXTINF:-1 tvg-id="conflict.in" tvg-name="India Movie" tvg-country="US" group-title="Movies",India Movie\nhttps://conflict.example/live.m3u8\n'
         with tempfile.TemporaryDirectory() as temp:
             result=build_international_discovery_batch(BASE,feed,temp)
         self.assertEqual(len(result.candidates),1)
@@ -50,9 +50,9 @@ class InternationalDiscoveryAdapterTests(unittest.TestCase):
             (root/"logos"/"valid.png").write_bytes(b"valid")
             (root/"logos"/"linked.png").symlink_to(root/"elsewhere"/"inside-repo.png")
             feed='#EXTM3U\n'
-            feed += '#EXTINF:-1 tvg-id="valid.in" tvg-name="Valid" tvg-logo="logos/valid.png",Valid\nhttps://valid.example/live.m3u8\n'
-            feed += '#EXTINF:-1 tvg-id="linked.in" tvg-name="Linked" tvg-logo="logos/linked.png",Linked\nhttps://linked.example/live.m3u8\n'
-            feed += '#EXTINF:-1 tvg-id="traversal.in" tvg-name="Traversal" tvg-logo="logos/../elsewhere/inside-repo.png",Traversal\nhttps://traversal.example/live.m3u8\n'
+            feed += '#EXTINF:-1 tvg-id="valid.in" tvg-name="Valid" tvg-logo="logos/valid.png" group-title="Movies",Valid\nhttps://valid.example/live.m3u8\n'
+            feed += '#EXTINF:-1 tvg-id="linked.in" tvg-name="Linked" tvg-logo="logos/linked.png" group-title="Movies",Linked\nhttps://linked.example/live.m3u8\n'
+            feed += '#EXTINF:-1 tvg-id="traversal.in" tvg-name="Traversal" tvg-logo="logos/../elsewhere/inside-repo.png" group-title="Movies",Traversal\nhttps://traversal.example/live.m3u8\n'
             result=build_international_discovery_batch(BASE,feed,root)
         rows={item.extinf.split(",",1)[-1]:item.extinf for item in result.candidates}
         self.assertIn("Valid",rows)
@@ -69,7 +69,7 @@ class InternationalDiscoveryAdapterTests(unittest.TestCase):
         self.assertNotIn("tvg-logo=",row.extinf)
 
     def test_duplicate_identity_becomes_new_backup(self):
-        feed='#EXTM3U\n#EXTINF:-1 tvg-id="existing.bd" tvg-name="Existing",Existing\nhttps://backup.example/live.m3u8\n'
+        feed='#EXTM3U\n#EXTINF:-1 tvg-id="existing.bd" tvg-name="Existing" group-title="Movies",Existing\nhttps://backup.example/live.m3u8\n'
         with tempfile.TemporaryDirectory() as temp:
             result=build_international_discovery_batch(BASE,feed,temp)
         self.assertEqual(len(result.candidates),1)
