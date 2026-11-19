@@ -598,7 +598,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         }
 
         class FakeClient:
-            def workflow_runs(self, workflow_file):
+            def workflow_runs(self, workflow_file, target_date=None):
                 return [active]
 
         settled = guard.wait_for_epg_runs_to_settle(
