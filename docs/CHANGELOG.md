@@ -7,25 +7,13 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-19 — `IPTV-Playlist.m3u`
 
-- New channel identities: **10**
+- New channel identities: **0**
 - Channel identities removed: **0**
-- Stream URLs added / removed: **12 / 0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **475**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- DD Kisan (1080p)
-- Gyandarshan (720p)
-- Kite Victers (720p) [Not 24/7]
-- Peace TV Urdu (1080p)
-- Shiksha TV (720p)
-- Vyas Channel (576p)
-- Peace TV Bangla (1080p)
-- Gyandarshan HD (576p)
-- History TV18 HD (1080p) [Geo-blocked]
-- INWILD (1080p)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-19 — `International-Playlist.m3u`
