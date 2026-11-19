@@ -36,7 +36,7 @@ BAD_WORDS = {
 # Legacy India exclusions are retained for the International playlist's distinct policy.
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
-    "religious": re.compile(r"\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
+    "religious": re.compile(r"\b(?:religious|religion|darshana tv|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
 }
 # Strict India-only exclusions for IPTV-Playlist.m3u. Bangladesh remains
 # unrestricted; International does not opt into this additional policy.
@@ -69,11 +69,11 @@ IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
     "kids": {"sony yay", "disney channel", "jungle book", "doraemon"},
     "education": {"vtu"},
     "knowledge": {"dd kisan", "krishi darshan"},
-    "religious": {"disha tv", "q tv", "shekinah tv"},
+    "religious": {"disha tv", "q tv", "shekinah tv", "darshana tv"},
 }
 IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
     "rplus.in": "news", "rplusgold.in": "news", "bhi.channel.in": "news", "tv100.in": "news", "tv100national.in": "news",
-    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "qtv.in": "religious", "shekinahtv.in": "religious",
+    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "qtv.in": "religious", "shekinahtv.in": "religious", "darshanatv.in": "religious",
     "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge",
 }
 
@@ -233,7 +233,7 @@ FORBIDDEN_BRANDS = re.compile(
     
     r""
     r""
-    r"mh\s*one|sai\s+tv|darshana\s+tv|sarv\s+dharm\s+sangam"
+    r"sai\s+tv|darshana\s+tv|sarv\s+dharm\s+sangam"
     r")\b",
     re.IGNORECASE,
 )
