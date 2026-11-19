@@ -12,7 +12,7 @@ from logo_asset_naming import is_blocked_logo_basename
 from restore_protected_review import is_authorized_removal
 from discover_bd_in_new_queues import prohibited_channel, is_indian_discovery_candidate
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
-EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups"}; REVIEW_QUEUES={"New Channels","New Backups","New Backup"}
+EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups","New Backup"}; REVIEW_QUEUES={"New Channels","New Backups","New Backup"}
 LOCAL_BASE="logos/"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"; ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 RAW_NAME_TAG=re.compile(r"\s*(?:\[[^]]*(?:geo-blocked|geo blocked)[^]]*\]|\((?:\d{3,4}p|\d{3,4}i|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}p|\d{3,4}i))\s*$",re.I)
 def attrs(s): return dict(ATTR.findall(s))
