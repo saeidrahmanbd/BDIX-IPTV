@@ -89,20 +89,13 @@ class EpgMappingRegionTests(unittest.TestCase):
             generate_epg.TARGETED_DISCOVERY_SOURCES,
         )
 
-    def test_bhi_channel_has_explicit_indian_country_metadata(self):
+    def test_bhi_channel_news_is_excluded_from_iptv_playlist(self):
         playlist = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
         entries = [
             line for line in playlist.splitlines()
             if line.startswith("#EXTINF:") and 'tvg-id="BHI.Channel.in"' in line
         ]
-        primary = [line for line in entries if 'group-title="Indian Bangla"' in line]
-        backups = [line for line in entries if 'group-title="Backup"' in line]
-        # BHI Channel currently has one curated primary stream only. Do not
-        # require a Backup alternative unless one is actually maintained.
-        self.assertEqual(len(primary), 1)
-        self.assertEqual(len(backups), 0)
-        self.assertIn('tvg-country="IN"', primary[0])
-
+        self.assertEqual(entries, [], "Indian News BHI Channel must not remain in the IPTV playlist")
     def test_new_channel_aliases_point_to_catalogued_source_ids(self):
         self.assertEqual(
             epg_coverage.EPG_ALIASES["custom.mggtv"],
