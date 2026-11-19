@@ -611,6 +611,21 @@ class StrictWorldwideDiscoveryTests(unittest.TestCase):
                 self.assertEqual(verified, country)
                 self.assertIsNotNone(target)
 
+    def test_missing_country_metadata_does_not_reject_clear_movie_music_candidate(self):
+        attrs = {"group-title": "Movies", "tvg-id": "CinemaChannel"}
+        target, reason, code = discovery.discovery_eligibility(attrs, "Cinema Channel")
+        self.assertIsNone(reason)
+        self.assertEqual(code, "ZZ")
+        self.assertEqual(target, "International Movies")
+
+    def test_general_source_category_is_rejected_even_if_name_suggests_movies(self):
+        for country, ident in (("BD", "Cinema.bd"), ("IN", "Cinema.in"), ("PK", "Cinema.pk")):
+            attrs = {"group-title": "Entertainment", "tvg-country": country, "tvg-id": ident}
+            target, reason, _ = discovery.discovery_eligibility(attrs, "Cinema World")
+            with self.subTest(country=country):
+                self.assertIsNone(target)
+                self.assertEqual(reason, "source category is not Movies or Music")
+
     def test_non_movie_music_genres_are_rejected_worldwide(self):
         cases = [
             ("World News", "News", "BD", "WorldNews.bd"),
