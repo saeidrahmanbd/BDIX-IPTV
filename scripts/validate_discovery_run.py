@@ -654,13 +654,15 @@ def final_mode(playlist, report, baseline, mode):
                 errors.append(f"non-local logo reference for {e['name']}")
         attrs = e["attrs"]
         country = (attrs.get("tvg-country") or "").upper()
+        if mode == "iptv" and not country:
+            country = (attrs.get("x-discovery-source-country") or "").strip().upper()
         if not country:
             for ident in (attrs.get("tvg-id", ""), attrs.get("channel-id", "")):
                 m = re.search(r"\.([a-z]{2})(?:@|$)", ident, re.I)
                 if m:
                     country = m.group(1).upper()
                     break
-        indian_identity = country == "IN" or any(
+        indian_identity = country == "IN" or (attrs.get("x-discovery-source-country", "").strip().upper() == "IN") or any(
             re.search(r"\\.in(?:@|$)", str(attrs.get(key, "")).strip(), re.I)
             for key in ("tvg-id", "channel-id")
         ) or bd_discovery.canonical_channel_name(e["name"]) in bd_discovery.IPTV_KNOWN_INDIAN_EDUCATION_NAMES
