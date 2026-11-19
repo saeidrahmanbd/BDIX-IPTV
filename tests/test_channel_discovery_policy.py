@@ -210,6 +210,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("BHI Channel", {"tvg-id": "BHI.Channel.in"}, "news"),
             ("Q TV", {"tvg-id": "QTV.in"}, "religious"),
             ("Shekinah TV", {"tvg-id": "ShekinahTV.in@SD"}, "religious"),
+            ("Disney Channel", {"tvg-id": "DisneyChannel.in@HD"}, "kids"),
         ]
         for name, extra, category in examples:
             attrs = {"group-title": "General", **extra}
