@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, LOCAL_BASE, EXCLUDE, REVIEW_QUEUES, identity_key, indian_playlist_policy_errors, parse
+from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, LOCAL_BASE, EXCLUDE, REVIEW_QUEUES, identity_key, indian_playlist_policy_errors, permanently_banned_playlist_errors, parse
 
 
 class PrePublishLogoPathTests(unittest.TestCase):
@@ -40,6 +40,16 @@ class PrePublishLogoPathTests(unittest.TestCase):
         playlist = Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u"
         entries = parse(playlist.read_text(encoding="utf-8-sig"))
         self.assertEqual(indian_playlist_policy_errors(entries), [])
+        self.assertEqual(permanently_banned_playlist_errors(entries), [])
+
+    def test_permanent_bans_are_detected_across_country_and_group_boundaries(self):
+        entries = [
+            ("", {"tvg-name": "Starnet", "tvg-id": "Starnet.in@SD", "tvg-country": "IN", "group-title": "Review"}, "https://example.invalid/starnet.m3u8"),
+            ("", {"tvg-name": "PowerTürk TV", "tvg-id": "PowerTurkTV.tr", "tvg-country": "TR", "group-title": "International"}, "https://example.invalid/powerturk.m3u8"),
+        ]
+        errors = permanently_banned_playlist_errors(entries)
+        self.assertEqual(len(errors), 2)
+        self.assertEqual(review_state(entries[:1]), {})
 
     def test_missing_logo_in_not_playing_is_advisory_but_active_group_is_blocking(self):
         not_playing = [(
