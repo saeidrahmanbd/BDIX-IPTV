@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 4569,
-  "all_explicitly_referenced_logo_files": 2344,
-  "runtime_referenced_logo_files": 2342,
+  "all_explicitly_referenced_logo_files": 2343,
+  "runtime_referenced_logo_files": 2341,
   "playlist_referenced_logo_files": 2327,
-  "apparently_unreferenced_by_any_text_file": 2225,
-  "apparently_unreferenced_by_runtime_sources": 2227,
+  "apparently_unreferenced_by_any_text_file": 2226,
+  "apparently_unreferenced_by_runtime_sources": 2228,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -17618,9 +17618,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/starnet.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/starplus-india.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -28397,9 +28394,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/starnet.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/starplus-india.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -31632,6 +31626,7 @@
     "logos/star-suvarna-plus-576p.png",
     "logos/star-tamil-television-360p.png",
     "logos/star-trek-movies.png",
+    "logos/starnet.png",
     "logos/stingray-music.png",
     "logos/stingray-stream-101.png",
     "logos/super-hungama.png",
