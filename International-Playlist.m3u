@@ -124,7 +124,7 @@ https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="JhankarTV.ca" channel-id="JhankarTV.ca" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jhankar-tv.png" tvg-country="CA" group-title="Indian Bangla" tvg-name="Jhankar TV",Jhankar TV
 https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8
-#EXTINF:-1 tvg-id="JTVBangla.in@SD" channel-id="JTVBangla.in@SD" tvg-language="ben" tvg-country="IN" group-title="Indian Bangla" tvg-name="JTV Bangla",JTV Bangla
+#EXTINF:-1 tvg-id="JTVBangla.in@SD" channel-id="JTVBangla.in@SD" tvg-language="ben" tvg-country="IN" group-title="Indian Bangla" tvg-name="JTV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jtv-bangla.png",JTV Bangla
 http://103.67.97.45:81/0.ts
 #EXTINF:-1 tvg-id="JTVClassic.in" channel-id="JTVClassic.in" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jtv-classic.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="JTV Classic",JTV Classic
 http://103.67.97.46/0.ts
@@ -298,7 +298,7 @@ https://live.cmr24.fm/TVI/HD/chunks.m3u8
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2069c593-3c07-4d62-9d44-746be5c3a5d6/manifest.m3u8
 #EXTINF:-1 tvg-id="TheMovieClub.in@HD" channel-id="TheMovieClub.in@HD" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club.png" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club",The Movie Club
 https://d2tiq0lnb179mp.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/TMC_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf&pb_type=pb-gp7rpz72nscfl_cloudfront
-#EXTINF:-1 tvg-id="TheMovieClub.in@Plus2" tvg-language="hin" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club +2",The Movie Club +2
+#EXTINF:-1 tvg-id="TheMovieClub.in@Plus2" tvg-language="hin" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club +2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club-2.png",The Movie Club +2
 https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ytipwjqub3kf8/TMC2_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf
 #EXTINF:-1 tvg-id="TollyTV.in@HD" tvg-language="tel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tolly-tv.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Tolly TV",Tolly TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8
@@ -1602,7 +1602,7 @@ http://92.114.85.87:8008/play/a009/index.m3u8
 http://88.212.15.50/live/test_filmbox_family_hun_atk_1200/playlist.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusEmotion.pl@Poland" tvg-language="bul;cze;eng;hun;pol;ron" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmbox-plus-emotion-f7ccc464ab.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Emotion",FILMBOX+ Emotion
 http://92.114.85.87:8008/play/a008/index.m3u8
-#EXTINF:-1 tvg-id="custom.filmbox-emotion-adria-pl-movie" channel-id="custom.filmbox-emotion-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Emotion Adria",FILMBOX+ Emotion Adria
+#EXTINF:-1 tvg-id="custom.filmbox-emotion-adria-pl-movie" channel-id="custom.filmbox-emotion-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Emotion Adria" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-emotion-adria.png",FILMBOX+ Emotion Adria
 https://webtvstream.bhtelecom.ba/filmbox_extra.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusFestival.pl@SD" tvg-language="eng;pol;rus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmbox-plus-festival-ad4ed8d509.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Festival",FILMBOX+ Festival
 https://dash3.antik.sk/live/test_filmbox_arthouse_atk_1200/playlist.m3u8
@@ -1610,9 +1610,9 @@ https://dash3.antik.sk/live/test_filmbox_arthouse_atk_1200/playlist.m3u8
 http://92.114.85.87:8018/play/a009/index.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusHits.pl@Poland" tvg-language="cze;eng;pol;ron" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmbox-plus-hits-9c634ae1fd.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Hits",FILMBOX+ Hits
 http://92.114.85.87:8008/play/a00a/index.m3u8
-#EXTINF:-1 tvg-id="custom.filmbox-hits-adria-pl-movie" channel-id="custom.filmbox-hits-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Hits Adria",FILMBOX+ Hits Adria
+#EXTINF:-1 tvg-id="custom.filmbox-hits-adria-pl-movie" channel-id="custom.filmbox-hits-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Hits Adria" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-hits-adria.png",FILMBOX+ Hits Adria
 https://webtvstream.bhtelecom.ba/filmbox_premium.m3u8
-#EXTINF:-1 tvg-id="custom.filmbox-love-crime-adria-pl-movie" channel-id="custom.filmbox-love-crime-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Love & Crime Adria",FILMBOX+ Love & Crime Adria
+#EXTINF:-1 tvg-id="custom.filmbox-love-crime-adria-pl-movie" channel-id="custom.filmbox-love-crime-adria-pl-movie" tvg-language="eng" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Love & Crime Adria" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/filmbox-love-crime-adria.png",FILMBOX+ Love & Crime Adria
 https://webtvstream.bhtelecom.ba/filmbox_stars.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusLoveCrime.pl@Magyar" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmbox-plus-love-and-crime-a83544bb95.png" tvg-country="PL" tvg-content="Movies" group-title="Poland" tvg-name="FILMBOX+ Love & Crime Magyar",FILMBOX+ Love & Crime Magyar
 http://88.212.7.14/live/test_filmbox_plus_hun_atk_1200/playlist.m3u8
@@ -2576,11 +2576,11 @@ https://rpn.bozztv.com/gusa/gusa-tvsNostalgiaMovies/index.m3u8
 https://rpn.bozztv.com/gusa/gusa-tvswesternmovies/index.m3u8
 #EXTINF:-1 tvg-id="UniversalCinema.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/universal-cinema-414d1fc054.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="Universal Cinema",Universal Cinema
 http://45.167.1.138:8000/play/a06m
-#EXTINF:-1 tvg-id="Vevo70s80s.us" channel-id="Vevo70s80s.us" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo '70s & '80s",Vevo '70s & '80s
+#EXTINF:-1 tvg-id="Vevo70s80s.us" channel-id="Vevo70s80s.us" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo '70s & '80s" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-70s-80s.png",Vevo '70s & '80s
 https://d38e11bvtr8xdq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-jlzlygsoesvmj/Vevo70sand80s_GB.m3u8
-#EXTINF:-1 tvg-id="Vevo90s00s.us" channel-id="Vevo90s00s.us" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo '90s & '00s",Vevo '90s & '00s
+#EXTINF:-1 tvg-id="Vevo90s00s.us" channel-id="Vevo90s00s.us" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo '90s & '00s" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-90s-00s.png",Vevo '90s & '00s
 https://amg00056-amg00056c12-rakuten-it-3240.playouts.now.amagi.tv/playlist/amg00056-vevotvfast-vevo90sand00sit-rakutenit/playlist.m3u8
-#EXTINF:-1 tvg-id="GBBD2300001C0" channel-id="GBBD2300001C0" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo Hip Hop & R&B",Vevo Hip Hop & R&B
+#EXTINF:-1 tvg-id="GBBD2300001C0" channel-id="GBBD2300001C0" tvg-language="eng" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo Hip Hop & R&B" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-hip-hop-r-b.png",Vevo Hip Hop & R&B
 https://d7i20u8nlyf1b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lymqk2na77cwn/VevoHipHopRB_GB.m3u8
 #EXTINF:-1 tvg-id="VevoLatino.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-latino-3e213deca7.png" tvg-country="US" tvg-content="Music" group-title="United States" tvg-name="Vevo Latino",Vevo Latino
 https://amg00056-amg00056c13-rakuten-es-3246.playouts.now.amagi.tv/playlist.m3u8
@@ -2970,9 +2970,9 @@ http://play.iptvxxx.net/bigdick.m3u8
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791483.ts
 #EXTINF:-1 tvg-id="custom.xxx-big-tits" channel-id="custom.xxx-big-tits" tvg-language="und" group-title="Adult" tvg-name="Big Tits",Big Tits
 http://play.iptvxxx.net/bigtits.m3u8
-#EXTINF:-1 tvg-id="custom.blonde" channel-id="custom.blonde" tvg-language="und" group-title="Adult" tvg-name="Blonde",Blonde
+#EXTINF:-1 tvg-id="custom.blonde" channel-id="custom.blonde" tvg-language="und" group-title="Adult" tvg-name="Blonde" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blonde.png",Blonde
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315862.ts
-#EXTINF:-1 tvg-id="custom.xxx-blonde" channel-id="custom.xxx-blonde" tvg-language="und" group-title="Adult" tvg-name="Blonde",Blonde
+#EXTINF:-1 tvg-id="custom.xxx-blonde" channel-id="custom.xxx-blonde" tvg-language="und" group-title="Adult" tvg-name="Blonde" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blonde.png",Blonde
 http://play.iptvxxx.net/blonde.m3u8
 #EXTINF:-1 tvg-id="custom.xxx-blowjob" channel-id="custom.xxx-blowjob" tvg-language="und" group-title="Adult" tvg-name="Blowjob",Blowjob
 http://play.iptvxxx.net/blowjob.m3u8
@@ -3006,9 +3006,9 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791491.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791492.ts
 #EXTINF:-1 tvg-id="custom.xxx-compilation" channel-id="custom.xxx-compilation" tvg-language="und" group-title="Adult" tvg-name="Compilation",Compilation
 http://play.iptvxxx.net/compilation.m3u8
-#EXTINF:-1 tvg-id="custom.cuckold" channel-id="custom.cuckold" tvg-language="und" group-title="Adult" tvg-name="Cuckold",Cuckold
+#EXTINF:-1 tvg-id="custom.cuckold" channel-id="custom.cuckold" tvg-language="und" group-title="Adult" tvg-name="Cuckold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cuckold.png",Cuckold
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315867.ts
-#EXTINF:-1 tvg-id="custom.xxx-cuckold" channel-id="custom.xxx-cuckold" tvg-language="und" group-title="Adult" tvg-name="Cuckold",Cuckold
+#EXTINF:-1 tvg-id="custom.xxx-cuckold" channel-id="custom.xxx-cuckold" tvg-language="und" group-title="Adult" tvg-name="Cuckold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cuckold.png",Cuckold
 http://play.iptvxxx.net/cuckold.m3u8
 #EXTINF:-1 tvg-id="custom.xxx-cum-perfection" channel-id="custom.xxx-cum-perfection" tvg-language="und" group-title="Adult" tvg-name="Cum Perfection",Cum Perfection
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791760.ts
@@ -3088,9 +3088,9 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791521.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791522.ts
 #EXTINF:-1 tvg-id="custom.24-7-xxx-kenzie-reeves" channel-id="custom.24-7-xxx-kenzie-reeves" tvg-language="und" group-title="Adult" tvg-name="Kenzie Reeves",Kenzie Reeves
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791523.ts
-#EXTINF:-1 tvg-id="Latina.pe" channel-id="Latina.pe" tvg-language="spa" tvg-country="PE" group-title="Adult" tvg-name="Latina",Latina
+#EXTINF:-1 tvg-id="Latina.pe" channel-id="Latina.pe" tvg-language="spa" tvg-country="PE" group-title="Adult" tvg-name="Latina" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/latina.png",Latina
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315884.ts
-#EXTINF:-1 tvg-id="custom.xxx-latina" channel-id="custom.xxx-latina" tvg-language="und" group-title="Adult" tvg-name="Latina",Latina
+#EXTINF:-1 tvg-id="custom.xxx-latina" channel-id="custom.xxx-latina" tvg-language="und" group-title="Adult" tvg-name="Latina" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/latina.png",Latina
 http://play.iptvxxx.net/latina.m3u8
 #EXTINF:-1 tvg-id="LEOTV.cz" channel-id="LEOTV.cz" tvg-language="ces" tvg-country="CZ" group-title="Adult" tvg-name="LEO TV",LEO TV
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315885.ts
@@ -3560,7 +3560,7 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791716.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791717.ts
 #EXTINF:-1 tvg-id="custom.stars-exclusive-valentina-nappi" channel-id="custom.stars-exclusive-valentina-nappi" tvg-language="und" group-title="Adult" tvg-name="STARS EXCLUSIVE: VALENTINA NAPPI",STARS EXCLUSIVE: VALENTINA NAPPI
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791718.ts
-#EXTINF:-1 tvg-language="eng" tvg-id="StingrayPopAdult.ca@SD" tvg-country="CA" group-title="Adult" tvg-name="Stingray Pop Adult",Stingray Pop Adult
+#EXTINF:-1 tvg-language="eng" tvg-id="StingrayPopAdult.ca@SD" tvg-country="CA" group-title="Adult" tvg-name="Stingray Pop Adult" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-pop-adult.png",Stingray Pop Adult
 https://lotus.stingray.com/manifest/ose-104ads-montreal/samsungtvplus/master.m3u8
 #EXTINF:-1 tvg-id="custom.24-7-xxx-strap-on" channel-id="custom.24-7-xxx-strap-on" tvg-language="und" group-title="Adult" tvg-name="Strap on",Strap on
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791554.ts
@@ -3638,7 +3638,7 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791560.ts
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73818
 #EXTINF:-1 tvg-id="VividTVEurope.uk" channel-id="VividTVEurope.uk" tvg-language="eng" tvg-country="GB" group-title="Adult" tvg-name="Vivid TV Europe",Vivid TV Europe
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315913.ts
-#EXTINF:-1 tvg-id="custom.vixen" channel-id="custom.vixen" tvg-language="und" group-title="Adult" tvg-name="Vixen",Vixen
+#EXTINF:-1 tvg-id="custom.vixen" channel-id="custom.vixen" tvg-language="und" group-title="Adult" tvg-name="Vixen" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vixen.png",Vixen
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315914.ts
 #EXTINF:-1 tvg-id="custom.xxx-wank-it-now" channel-id="custom.xxx-wank-it-now" tvg-language="und" group-title="Adult" tvg-name="Wank It Now",Wank It Now
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791812.ts
@@ -4566,7 +4566,7 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46724.ts
 https://n18syndication.akamaized.net/bpk-tv/History_TV18_Hindi_NW18_MOB/output01/master.m3u8
 #EXTINF:-1 tvg-id="History2LatinAmerica.us@Panregional" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-2-latin-america-c95e464122.png" tvg-country="US" group-title="Review" tvg-name="History 2 Latin America",History 2 Latin America
 http://138.121.15.230:9002/HISTORY-2/index.m3u8
-#EXTINF:-1 tvg-id="HistoryWarfareNow.us" channel-id="HistoryWarfareNow.us" tvg-language="eng" tvg-country="US" group-title="Review" tvg-name="History & Warfare Now",History & Warfare Now
+#EXTINF:-1 tvg-id="HistoryWarfareNow.us" channel-id="HistoryWarfareNow.us" tvg-language="eng" tvg-country="US" group-title="Review" tvg-name="History & Warfare Now" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-warfare-now.png",History & Warfare Now
 https://d1nzda2a2b3swt.cloudfront.net/History_Warfare_Now.m3u8
 #EXTINF:-1 tvg-id="History.cz@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-asia-aba33bdd2f.png" tvg-country="CZ" group-title="Review" tvg-name="History (Czech Republic)",History (Czech Republic)
 http://88.212.15.50/live/test_history/playlist.m3u8
@@ -4862,7 +4862,7 @@ http://103.250.28.74:8000/play/a00m/index.m3u8
 https://meialai.iptelevishion.com/meialai/2/index.m3u8
 #EXTINF:-1 tvg-id="Mezzo.fr@SD" channel-id="Mezzo.fr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mezzo-576p.png" tvg-country="FR" tvg-content="Music" group-title="Review" tvg-name="Mezzo",Mezzo
 http://92.180.26.103/stream/62/index.m3u8
-#EXTINF:-1 tvg-id="Mh1Prime.in@SD" tvg-country="IN" group-title="Review" tvg-name="Mh 1 Prime",Mh 1 Prime
+#EXTINF:-1 tvg-id="Mh1Prime.in@SD" tvg-country="IN" group-title="Review" tvg-name="Mh 1 Prime" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh1-prime.png",Mh 1 Prime
 https://streams.tangotv.in/MHONE/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="MHOne.in@SD" tvg-language="pan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one.png" tvg-country="IN" group-title="Review" tvg-name="MH One",MH One
 https://samitaorigin.tangotv.in/MHONE/SAMITAORIGIN/index.m3u8
@@ -5288,7 +5288,7 @@ https://linear-899.frequency.stream/dist/cineverse/899/hls/master/playlist.m3u8
 https://rictv.iptv-playoutcenter.de/rictv/rictv-web/playlist.m3u8
 #EXTINF:-1 tvg-id="RightNowTV.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/right-now-tv-cf8660a9fb.png" tvg-country="US" group-title="Review" tvg-name="Right Now TV",Right Now TV
 https://a-cdn.klowdtv.com/live2/rightnowtv_720p/playlist.m3u8
-#EXTINF:-1 tvg-id="RobotWarsByMech.us" channel-id="RobotWarsByMech.us" tvg-language="eng" tvg-country="US" group-title="Review" tvg-name="Robot Wars by Mech+",Robot Wars by Mech+
+#EXTINF:-1 tvg-id="RobotWarsByMech.us" channel-id="RobotWarsByMech.us" tvg-language="eng" tvg-country="US" group-title="Review" tvg-name="Robot Wars by Mech+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/robot-wars-by-mech.png",Robot Wars by Mech+
 https://0a644b20819046a0935afa1cf6debf23.mediatailor.us-east-1.amazonaws.com/v1/master/0fb304b2320b25f067414d481a779b77db81760d/Samsung-gb_MechPlus/playlist.m3u8?ads.wurl_channel=1413&ads.wurl_name=MechPlus&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D
 #EXTINF:-1 tvg-id="RotanaCinemaEgypt.eg@SD" channel-id="RotanaCinemaEgypt.eg@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/rotana-cinema-egypt-1080p-geo-blocked.png" tvg-country="EG" tvg-content="Movies" group-title="Review" tvg-name="Rotana Cinema Egypt [ ]",Rotana Cinema Egypt [ ]
 https://rotana.hibridcdn.net/rotananet/cinemamasr_net-7Y83PP5adWixDF93/playlist.m3u8
@@ -6126,9 +6126,9 @@ https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_360p/chunks.m3u8
 #EXTINF:-1 tvg-id="Enter10Bangla.in" channel-id="Enter10Bangla.in" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" tvg-country="IN" group-title="Backup" tvg-name="Enter10 Bangla",Enter10 Bangla
 https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
-#EXTINF:-1 tvg-id="Enter10Bangla.in" channel-id="Enter10Bangla.in" tvg-language="ben" tvg-country="IN" group-title="Backup" tvg-name="Enter 10 Bangla",Enter 10 Bangla
+#EXTINF:-1 tvg-id="Enter10Bangla.in" channel-id="Enter10Bangla.in" tvg-language="ben" tvg-country="IN" group-title="Backup" tvg-name="Enter 10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",Enter 10 Bangla
 https://live-bangla.akamaized.net/liveabr/playlist.m3u8
-#EXTINF:-1 tvg-id="Enter10Bangla.in" channel-id="Enter10Bangla.in" tvg-language="ben" tvg-country="IN" group-title="Backup" tvg-name="Enter 10 Bangla",Enter 10 Bangla
+#EXTINF:-1 tvg-id="Enter10Bangla.in" channel-id="Enter10Bangla.in" tvg-language="ben" tvg-country="IN" group-title="Backup" tvg-name="Enter 10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",Enter 10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
 #EXTINF:-1 tvg-id="EnterTV.bd" channel-id="EnterTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter-tv.png" tvg-country="BD" group-title="Backup" tvg-name="Enter TV",Enter TV
 https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8
