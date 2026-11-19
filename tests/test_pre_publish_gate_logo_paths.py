@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, LOCAL_BASE, EXCLUDE, REVIEW_QUEUES, identity_key
+from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, LOCAL_BASE, EXCLUDE, REVIEW_QUEUES, identity_key, indian_playlist_policy_errors
 
 
 class PrePublishLogoPathTests(unittest.TestCase):
@@ -20,6 +20,21 @@ class PrePublishLogoPathTests(unittest.TestCase):
         self.assertIn("New Backups", EXCLUDE)
         self.assertIn("New Backups", REVIEW_QUEUES)
         self.assertIn("New Backup", REVIEW_QUEUES)
+
+    def test_indian_genre_policy_is_checked_in_primary_backup_and_review_groups(self):
+        entries = [
+            ("", {"tvg-name": "BHI Channel", "tvg-id": "BHI.Channel.in", "tvg-country": "IN", "group-title": "Indian Bangla"}, "https://example.invalid/bhi.m3u8"),
+            ("", {"tvg-name": "Disney Channel", "tvg-id": "DisneyChannel.in@HD", "tvg-country": "IN", "group-title": "Backup"}, "https://example.invalid/disney.m3u8"),
+            ("", {"tvg-name": "Shekinah TV", "tvg-id": "ShekinahTV.in@SD", "tvg-country": "IN", "group-title": "Review"}, "https://example.invalid/shekinah.m3u8"),
+            ("", {"tvg-name": "Discovery Channel (India)", "tvg-id": "DiscoveryChannel.in@HD", "tvg-country": "IN", "group-title": "Review"}, "https://example.invalid/discovery.m3u8"),
+            ("", {"tvg-name": "Bangladesh Islamic TV", "tvg-id": "BangladeshIslamicTV.bd", "tvg-country": "BD", "group-title": "Bangladesh"}, "https://example.invalid/bd.m3u8"),
+        ]
+        errors = indian_playlist_policy_errors(entries)
+        self.assertEqual(len(errors), 4)
+        for name in ("BHI Channel", "Disney Channel", "Shekinah TV", "Discovery Channel (India)"):
+            self.assertTrue(any(name in error for error in errors))
+        self.assertFalse(any("Bangladesh Islamic TV" in error for error in errors))
+        self.assertEqual(review_state(entries[1:4]), {})
 
     def test_missing_logo_in_not_playing_is_advisory_but_active_group_is_blocking(self):
         not_playing = [(
