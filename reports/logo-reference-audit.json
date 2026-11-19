@@ -4,7 +4,7 @@
   "logo_image_files": 4569,
   "all_explicitly_referenced_logo_files": 2344,
   "runtime_referenced_logo_files": 2342,
-  "playlist_referenced_logo_files": 2328,
+  "playlist_referenced_logo_files": 2327,
   "apparently_unreferenced_by_any_text_file": 2225,
   "apparently_unreferenced_by_runtime_sources": 2227,
   "missing_explicit_logo_targets": [
@@ -9838,6 +9838,7 @@
     ],
     "logos/cartoon-network-hd-plus-0af84f2a76.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cartoon-network-hd.png": [
@@ -10514,7 +10515,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/dd-bharati.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -10849,7 +10849,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/discovery-turbo.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -14358,7 +14357,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jungle-book.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/k-cine.png": [
       "IPTV-Playlist.m3u",
@@ -14442,7 +14442,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/kcl-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -15161,7 +15160,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mei-alai-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -15235,7 +15233,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mh1-prime.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -15846,7 +15843,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/nkr-tv-kannada.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -16312,7 +16308,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pogo-576p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/pogo.png": [
       "International-Playlist.m3u",
@@ -16402,7 +16399,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/powerturk-tv-1080p-7651888d90.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17094,7 +17090,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shekinah-tv-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-bollywood.png": [
       "IPTV-Playlist.m3u",
@@ -17165,7 +17162,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/siri-kannada-all-time.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17282,7 +17278,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/sonic-576p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/sonic.png": [
       "IPTV-Playlist.m3u",
@@ -17622,7 +17619,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/starnet.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/starplus-india.png": [
@@ -17832,7 +17828,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/subin-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17991,7 +17986,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tamilan-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -18041,7 +18035,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tehzeeb-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -18843,7 +18836,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vcv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -19170,7 +19162,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/wow-kidz-tamil-converted-ff1aeb7aa9.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/wow-kidz-telugu.png": [
       "IPTV-Playlist.m3u",
@@ -20618,6 +20611,7 @@
     ],
     "logos/cartoon-network-hd-plus-0af84f2a76.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cartoon-network-hd.png": [
@@ -21294,7 +21288,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/dd-bharati.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21630,7 +21623,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/discovery-turbo.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -25140,7 +25132,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jungle-book.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/k-cine.png": [
       "IPTV-Playlist.m3u",
@@ -25224,7 +25217,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/kcl-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -25943,7 +25935,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mei-alai-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26017,7 +26008,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mh1-prime.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26628,7 +26618,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/nkr-tv-kannada.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -27097,7 +27086,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pogo-576p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/pogo.png": [
       "International-Playlist.m3u",
@@ -27187,7 +27177,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/powerturk-tv-1080p-7651888d90.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -27879,7 +27868,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shekinah-tv-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-bollywood.png": [
       "IPTV-Playlist.m3u",
@@ -27951,7 +27941,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/siri-kannada-all-time.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -28068,7 +28057,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/sonic-576p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/sonic.png": [
       "IPTV-Playlist.m3u",
@@ -28408,7 +28398,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/starnet.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/starplus-india.png": [
@@ -28618,7 +28607,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/subin-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -28777,7 +28765,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tamilan-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -28827,7 +28814,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tehzeeb-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29630,7 +29616,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vcv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29957,7 +29942,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/wow-kidz-tamil-converted-ff1aeb7aa9.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/wow-kidz-telugu.png": [
       "IPTV-Playlist.m3u",
