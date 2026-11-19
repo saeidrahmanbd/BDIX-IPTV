@@ -46,7 +46,7 @@ class EPGRefreshNeededTests(unittest.TestCase):
         self.assertNotIn("push:", workflow)
         self.assertIn("cron: '30 1 * * *'", workflow)
         self.assertIn("workflow_dispatch:", workflow)
-        self.assertIn("--max-age-hours 24", workflow)
+        self.assertIn("--max-age-hours 8", workflow)
 
     def test_fresh_current_guide_skips_duplicate_refresh(self):
         skip, reasons = assess_freshness(self.root, now=self.now, max_age_hours=8)
