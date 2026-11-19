@@ -254,11 +254,25 @@ def should_current_run_execute(
             return True
         return not active_others
 
-    # EPG has a fixed 06:10 Asia/Dhaka daily refresh. Push/workflow_run events
-    # can legitimately rebuild the guide before that time, but they must not
-    # consume the scheduled run's daily slot. The scheduled event therefore
-    # takes priority over earlier non-scheduled successes; once it succeeds,
-    # later automatic events are suppressed for the rest of the Bangladesh day.
+    # Scheduled owner runs must retain their daily slot even if an earlier
+    # push/workflow_run/manual event already completed the work. Those events
+    # are useful opportunistic refreshes, but they must not consume the scheduled
+    # obligation. The shared writer concurrency group serializes any still-active
+    # non-scheduled writer; only an earlier successful/active scheduled run owns
+    # the scheduled slot. This prevents a green guard-only duplicate from
+    # suppressing the actual daily scheduled job.
+    if str(event or "").casefold() == "schedule" and workflow_file != "epg-refresh.yml":
+        current_created = parse_github_timestamp(current["created_at"])
+        prior_scheduled = [
+            run for run in others
+            if str(run.get("event") or "").casefold() == "schedule"
+            and parse_github_timestamp(run.get("created_at") or current["created_at"]) <= current_created
+            and run_blocks_retry(run, client, workflow_file)
+        ]
+        return not prior_scheduled
+
+    # EPG has a fixed 06:10 Asia/Dhaka daily refresh. It also tracks input
+    # revisions so a later playlist writer can legitimately require a rebuild.
     if workflow_file == "epg-refresh.yml":
         successful_scheduled = [
             run for run in others
