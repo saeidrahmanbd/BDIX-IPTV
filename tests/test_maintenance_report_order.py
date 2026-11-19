@@ -226,7 +226,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertLess(maintenance.index("python scripts/backfill_cross_playlist_metadata.py"), maintenance.index("python scripts/validate_international_playlist.py"))
         self.assertLess(maintenance.index("python scripts/maintenance_helpers.py canonicalize-extinf"), maintenance.index("python scripts/validate_international_playlist.py"))
         epg = (root / "epg-refresh.yml").read_text(encoding="utf-8")
-        self.assertIn('workflows: ["IPTV Playlist Update"]', epg)
+        self.assertNotIn("workflow_run:", epg)
         self.assertNotIn('"International Stream Health"', epg)
 
     def test_international_health_reconciles_country_threshold_after_stream_actions(self):

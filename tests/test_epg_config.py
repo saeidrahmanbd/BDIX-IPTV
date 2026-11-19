@@ -382,7 +382,7 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("reports/bangladesh-epg-source-audit.md", workflow)
         self.assertIn('M3U4U_XMLTV_URL: ${{ secrets.M3U4U_XMLTV_URL }}', workflow)
         self.assertIn('BANGLADESH_SOURCE_AUDIT_REPORT = Path("reports/bangladesh-epg-source-audit.md")', COV)
-        self.assertIn("tests/test_epg_config.py", workflow)
+        self.assertIn("python -m unittest discover -s tests -p 'test_epg_config.py'", workflow)
 
     def test_generator_streams_cached_source_files_without_loading_all_feeds_into_memory(self):
         self.assertIn("source_path, source_is_cached = source_payloads[src]", GEN)
@@ -883,25 +883,15 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn('tvg-id="ZBMusic.in@HD"', iptv)
         self.assertNotIn('tvg-id="ZBBhakti.in@HD"', iptv)
 
-    def test_epg_refresh_uses_final_writer_hook_and_scheduled_fallback(self):
+    def test_epg_refresh_runs_once_daily_and_supports_manual_dispatch(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
-        self.assertIn("workflow_run:", workflow)
-        self.assertIn('workflows: ["IPTV Playlist Update"]', workflow)
-        for intermediate_writer in (
-            "IPTV New Channel Discovery",
-            "International Channel Discovery",
-            "Playlist Logo Repair and Localization",
-            "International Stream Health",
-        ):
-            self.assertNotIn(f'"{intermediate_writer}"', workflow)
-        self.assertIn("types: [completed]", workflow)
-        # The final scheduled writer is the delayed-run fallback; cancelled runs
-        # do not refresh, while successful and failed completions both can.
-        self.assertIn("github.event.workflow_run.conclusion != 'cancelled'", workflow)
-        self.assertNotIn("github.event.workflow_run.conclusion == 'success'", workflow)
-        self.assertNotIn("github.event.workflow_run.conclusion == 'failure'", workflow)
-        self.assertIn("final maintenance completion hook as a delayed-run", workflow)
-        self.assertIn("# 06:10 Asia/Dhaka (UTC+6)", workflow)
+        self.assertIn("schedule:", workflow)
+        self.assertIn("cron: '10 0 * * *'", workflow)
+        self.assertIn("workflow_dispatch:", workflow)
+        self.assertNotIn("workflow_run:", workflow)
+        self.assertNotIn("push:", workflow)
+        self.assertIn("# 06:10 Asia/Dhaka", workflow)
+        self.assertIn("epg_refresh_needed.py --max-age-hours 8", workflow)
 
 
     def test_bangladesh_epg_audit_explains_its_country_suffix_scope(self):

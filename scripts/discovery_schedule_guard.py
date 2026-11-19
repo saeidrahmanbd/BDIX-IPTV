@@ -51,7 +51,7 @@ RECOVERY_AFTER_LOCAL = {
     "international-channel-discovery.yml": (5, 30),
     "playlist-logo-localization.yml": (5, 45),
     "international-stream-health.yml": (5, 55),
-    "epg-refresh.yml": (6, 25),
+    "epg-refresh.yml": (6, 45),
 }
 
 
@@ -186,12 +186,10 @@ def watchdog_run_blocks_retry(
 ) -> bool:
     """Decide whether a completed run satisfies the watchdog's daily obligation.
 
-    EPG's canonical daily refresh is scheduled for 06:10 Asia/Dhaka. A
-    successful push/workflow_run before 06:10 may have built inputs before
-    the final scheduled playlist writers; it must not suppress the 06:30
-    recovery dispatch when the scheduled run was missed. Active runs still
-    block overlapping dispatches; successful EPG runs created at/after 06:10
-    satisfy the daily obligation.
+    EPG's canonical daily refresh is scheduled for 06:10 Asia/Dhaka, after
+    the 05:50 playlist-maintenance run. Active runs still block overlapping
+    dispatches; successful EPG runs created at/after 06:10 satisfy the
+    daily obligation.
     """
     if workflow_file == "epg-refresh.yml":
         status = str(run.get("status") or "").casefold()
@@ -271,8 +269,8 @@ def should_current_run_execute(
         ]
         return not prior_scheduled
 
-    # EPG has a fixed 06:10 Asia/Dhaka daily refresh. It also tracks input
-    # revisions so a later playlist writer can legitimately require a rebuild.
+    # EPG has a fixed 06:10 Asia/Dhaka daily refresh, after playlist maintenance.
+    # Same-day runs are deduplicated by their input revision.
     if workflow_file == "epg-refresh.yml":
         successful_scheduled = [
             run for run in others
@@ -521,9 +519,9 @@ def wait_for_epg_runs_to_settle(
 ) -> list[dict[str, Any]]:
     """Wait for same-day EPG runs to finish before deciding whether recovery is needed.
 
-    A workflow_run/push event may still be active at the 06:15 watchdog checkpoint
-    even though its daily guard will skip the actual refresh. Waiting lets the
-    watchdog distinguish a real post-06:10 publication from a guard-only no-op.
+    A prior manual or scheduled EPG run may still be active at a watchdog
+    checkpoint. Waiting lets the watchdog distinguish a real publication
+    from a guard-only no-op.
     """
     def active_today(items):
         return [
