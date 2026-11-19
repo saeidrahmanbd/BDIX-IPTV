@@ -82,7 +82,7 @@ footer a{color:#a9d5ff}
 .copy-button{border:1px solid #ccd8e7;background:#f7faff;color:#1a3558;border-radius:10px;padding:.61rem .9rem;font:inherit;font-size:.9rem;font-weight:750;cursor:pointer;transition:background .15s ease,border-color .15s ease}
 .copy-button:hover{background:#eaf2ff;border-color:#98b4d9}
 .url-display{display:flex;flex-direction:column;gap:.3rem;margin-top:1.1rem;padding:.75rem .85rem;background:#f5f8fc;border:1px solid #e7edf5;border-radius:11px}
-.url-label{font-size:.65rem;letter-spacing:.12em;font-weight:850;color:#71819a}
+.url-label{font-size:.65rem;letter-spacing:.12em;font-weight:850;color:#52627a}
 .url-display code{font: .76rem/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;color:#475771;overflow-wrap:anywhere}
 .copy-status{min-height:1.2rem;margin:.55rem 0 0;color:#087e76;font-size:.88rem;font-weight:650}
 .players-section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:1.5rem;align-items:center;padding:1.5rem 1.6rem;background:#fff;border:1px solid var(--line);border-radius:18px}
@@ -108,7 +108,7 @@ footer a{color:#a9d5ff}
 .email-icon{background:#df5148}
 .github-icon{background:#202b3b}
 .facebook-icon{background:#1877f2;font-family:Arial,sans-serif}
-.contact-label{font-size:.66rem;letter-spacing:.13em;font-weight:850;color:#74839a}
+.contact-label{font-size:.66rem;letter-spacing:.13em;font-weight:850;color:#52627a}
 .contact-card strong{font-size:.91rem;color:#17345b;overflow-wrap:anywhere}
 .support-links{margin:1rem 0 0;color:var(--muted);font-size:.92rem}
 .disclaimer{margin-top:2rem;padding:1rem 1.15rem;background:#eaf0f7;border-left:4px solid #879bb4;border-radius:10px;color:#53647b;font-size:.86rem}
@@ -118,7 +118,7 @@ footer a{color:#a9d5ff}
 .footer-main>div:first-child span{font-size:.88rem}
 .footer-links{display:flex;gap:.9rem;flex-wrap:wrap;font-size:.9rem}
 .footer-star{max-width:1080px;margin:1.5rem auto 0;padding-top:1.2rem;border-top:1px solid #ffffff20;display:flex;align-items:center;justify-content:center;gap:.85rem;flex-wrap:wrap;text-align:center}
-.footer-star img{vertical-align:middle}
+.footer-star-link{display:inline-flex;align-items:center;gap:.45rem;padding:.48rem .8rem;border-radius:8px;background:#f5c542;color:#17233b;font-size:.82rem;font-weight:850;text-decoration:none;letter-spacing:.02em}.footer-star-link:hover{background:#ffda67;color:#17233b}
 .footer-star span{font-size:.85rem;color:#c7d7ec}
 @media(max-width:760px){
   .playlist-grid,.contact-grid{grid-template-columns:1fr}
