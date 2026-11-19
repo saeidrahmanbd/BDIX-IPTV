@@ -847,5 +847,79 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             [scheduled, current], 169, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
         ))
 
+    def test_scheduled_playlist_jobs_take_priority_over_opportunistic_successes(self):
+        # A successful push/workflow_run may be useful, but it must not consume
+        # the scheduled daily obligation for any playlist owner workflow.
+        for workflow_file in (
+            "iptv-maintenance.yml",
+            "new-channel-discovery.yml",
+            "international-channel-discovery.yml",
+            "playlist-logo-localization.yml",
+            "international-stream-health.yml",
+        ):
+            with self.subTest(workflow_file=workflow_file):
+                job_name = guard.REQUIRED_JOB_BY_WORKFLOW[workflow_file]
+                step_name = guard.REQUIRED_STEP_BY_WORKFLOW[workflow_file]
+                earlier_push = {
+                    "id": 901,
+                    "event": "push",
+                    "status": "completed",
+                    "conclusion": "success",
+                    "created_at": "2026-11-07T00:09:00Z",
+                    "jobs": [{
+                        "name": job_name,
+                        "status": "completed",
+                        "conclusion": "success",
+                        "steps": [{"name": step_name, "conclusion": "success"}],
+                    }],
+                }
+                scheduled_run = {
+                    "id": 902,
+                    "event": "schedule",
+                    "status": "in_progress",
+                    "conclusion": None,
+                    "created_at": "2026-11-07T00:00:00Z",
+                }
+                self.assertTrue(guard.should_current_run_execute(
+                    [earlier_push, scheduled_run], 902, self.today,
+                    event="schedule", workflow_file=workflow_file,
+                ))
+
+    def test_prior_successful_scheduled_playlist_run_blocks_duplicate_schedule(self):
+        for workflow_file in (
+            "iptv-maintenance.yml",
+            "new-channel-discovery.yml",
+            "international-channel-discovery.yml",
+            "playlist-logo-localization.yml",
+            "international-stream-health.yml",
+        ):
+            with self.subTest(workflow_file=workflow_file):
+                job_name = guard.REQUIRED_JOB_BY_WORKFLOW[workflow_file]
+                step_name = guard.REQUIRED_STEP_BY_WORKFLOW[workflow_file]
+                successful_scheduled = {
+                    "id": 903,
+                    "event": "schedule",
+                    "status": "completed",
+                    "conclusion": "success",
+                    "created_at": "2026-11-07T00:00:00Z",
+                    "jobs": [{
+                        "name": job_name,
+                        "status": "completed",
+                        "conclusion": "success",
+                        "steps": [{"name": step_name, "conclusion": "success"}],
+                    }],
+                }
+                duplicate_scheduled = {
+                    "id": 904,
+                    "event": "schedule",
+                    "status": "in_progress",
+                    "conclusion": None,
+                    "created_at": "2026-11-07T00:05:00Z",
+                }
+                self.assertFalse(guard.should_current_run_execute(
+                    [successful_scheduled, duplicate_scheduled], 904, self.today,
+                    event="schedule", workflow_file=workflow_file,
+                ))
+
 if __name__ == "__main__":
     unittest.main()
