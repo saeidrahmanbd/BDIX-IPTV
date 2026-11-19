@@ -1,15 +1,15 @@
 # International Stream Health
 
-- Generated: **2026-11-18T04:53:19+00:00**
-- Bangladesh check date: **2026-11-18**
-- Playlist rows checked: **3273**
-- Reachable media streams: **2505**
-- Definitive failures today: **46**
-- Inconclusive checks: **722**
-- Newly moved to Review: **0**
-- Restored from Review to primary/Backup: **5**
-- Removed after three consecutive failed days: **0**
-- Automatically flagged rows still under Review: **181**
+- Generated: **2026-11-19T02:03:02+00:00**
+- Bangladesh check date: **2026-11-19**
+- Playlist rows checked: **3289**
+- Reachable media streams: **2429**
+- Definitive failures today: **77**
+- Inconclusive checks: **783**
+- Newly moved to Review: **32**
+- Restored from Review to primary/Backup: **19**
+- Removed after three consecutive failed days: **5**
+- Automatically flagged rows still under Review: **190**
 
 ## Rules
 
@@ -23,117 +23,199 @@
 
 ## Newly marked Review
 
-None.
+- **7X Punjabi** — prior group: Indian Music — HTTP 404
+- **Dhoom Music** — prior group: Indian Music — HTTP 404
+- **Punjabi Music** — prior group: Indian Music — HTTP 404
+- **Steelbird Music** — prior group: Indian Music — HTTP 404
+- **DD Rajasthan** — prior group: Indian Entertainment — HTTP 404
+- **DD Uttar Pradesh** — prior group: Indian Entertainment — HTTP 404
+- **MNTV (Tamil)** — prior group: Indian Entertainment — HTTP 404
+- **Punjabi TV** — prior group: Indian Entertainment — HTTP 404
+- **Vision (India)** — prior group: Indian Entertainment — HTTP 404
+- **AMC Latin America Brazil** — prior group: Brazil — HTTP 404
+- **Fiesta TV** — prior group: Colombia — HTTP 404
+- **TV Exitos** — prior group: DO — HTTP 404
+- **Rakuten TV Comedy Movies Germany** — prior group: Germany — HTTP 404
+- **iFilm 2** — prior group: Iran — HTTP 404
+- **iFilm Arabic** — prior group: Iran — HTTP 404
+- **iFilm English** — prior group: Iran — HTTP 404
+- **iFilm Persian** — prior group: Iran — HTTP 404
+- **70-80 TV** — prior group: Italy — HTTP 404
+- **Rakuten TV Comedy Movies Italy** — prior group: Italy — HTTP 404
+- **Rakuten TV Comedy Movies** — prior group: Spain — HTTP 404
+- **Rakuten TV Comedy Movies UK** — prior group: United Kingdom — HTTP 404
+- **AMC Latin America** — prior group: United States — HTTP 404
+- **Cinemax Classics** — prior group: United States — HTTP 404
+- **ZB Cartoon** — prior group: Kids — HTTP 404
+- **T Sports** — prior group: Sports — HTTP 404
+- **DD Haryana** — prior group: Backup — HTTP 404
+- **DD Jharkhand** — prior group: Backup — HTTP 404
+- **DD Kashir** — prior group: Backup — HTTP 404
+- **DD Kashir** — prior group: Backup — HTTP 404
+- **DD National** — prior group: Backup — HTTP 404
+- **DD Saptagiri** — prior group: Backup — HTTP 404
+- **NTV** — prior group: Backup — HTTP 404
 
 ## Failed streams still under Review
 
+- **7X Punjabi** — 1/3 consecutive days — HTTP 404
+- **Dhoom Music** — 1/3 consecutive days — HTTP 404
+- **Punjabi Music** — 1/3 consecutive days — HTTP 404
+- **Steelbird Music** — 1/3 consecutive days — HTTP 404
+- **DD Rajasthan** — 1/3 consecutive days — HTTP 404
+- **DD Uttar Pradesh** — 1/3 consecutive days — HTTP 404
+- **MNTV (Tamil)** — 1/3 consecutive days — HTTP 404
+- **Punjabi TV** — 1/3 consecutive days — HTTP 404
+- **Vision (India)** — 1/3 consecutive days — HTTP 404
+- **AMC Latin America Brazil** — 1/3 consecutive days — HTTP 404
+- **Fiesta TV** — 1/3 consecutive days — HTTP 404
+- **TV Exitos** — 1/3 consecutive days — HTTP 404
+- **Rakuten TV Comedy Movies Germany** — 1/3 consecutive days — HTTP 404
+- **iFilm 2** — 1/3 consecutive days — HTTP 404
+- **iFilm Arabic** — 1/3 consecutive days — HTTP 404
+- **iFilm English** — 1/3 consecutive days — HTTP 404
+- **iFilm Persian** — 1/3 consecutive days — HTTP 404
+- **70-80 TV** — 1/3 consecutive days — HTTP 404
+- **Rakuten TV Comedy Movies Italy** — 1/3 consecutive days — HTTP 404
+- **Rakuten TV Comedy Movies** — 1/3 consecutive days — HTTP 404
+- **Rakuten TV Comedy Movies UK** — 1/3 consecutive days — HTTP 404
+- **AMC Latin America** — 1/3 consecutive days — HTTP 404
+- **Cinemax Classics** — 1/3 consecutive days — HTTP 404
+- **ZB Cartoon** — 1/3 consecutive days — HTTP 404
+- **T Sports** — 1/3 consecutive days — HTTP 404
+- **Brazzers Europe** — 0/3 consecutive days — HTTP 404
 - **Day With A Pornstar** — 0/3 consecutive days — HTTP 404
 - **Ero Xxx** — 0/3 consecutive days — HTTP 404
-- **Gay 2** — 0/3 consecutive days — HTTP 404
+- **Euro Girls On Girls** — 0/3 consecutive days — HTTP 404
 - **Hustler** — 0/3 consecutive days — HTTP 404
 - **Mctv Big Dick** — 0/3 consecutive days — HTTP 404
 - **Mctv Big Tits** — 0/3 consecutive days — HTTP 404
 - **Mctv Pornstar** — 0/3 consecutive days — HTTP 404
 - **Mctv Rough** — 0/3 consecutive days — HTTP 404
-- **PORNBOX: SLIM** — 0/3 consecutive days — HTTP 404
+- **Pink Erotic 2** — 0/3 consecutive days — HTTP 404
 - **Russian Night** — 0/3 consecutive days — HTTP 404
 - **Super One** — 0/3 consecutive days — HTTP 404
 - **Vivid Red** — 0/3 consecutive days — HTTP 404
 - **Xy Max** — 0/3 consecutive days — HTTP 404
-- **13 Kids** — 1/3 consecutive days — HTTP 404
-- **&TV** — 1/3 consecutive days — HTTP 404
-- **Abdulmajeed Abdullah (1080p)** — 1/3 consecutive days — HTTP 404
-- **Action 24** — 1/3 consecutive days — HTTP 404
-- **Akili Kids!** — 1/3 consecutive days — HTTP 404
-- **AlternaTV** — 0/3 consecutive days — HTTP 404
-- **Amazing Discoveries TV** — 1/3 consecutive days — HTTP 404
-- **AXN Movies (Spain)** — 1/3 consecutive days — HTTP 404
-- **B4U Movies** — 1/3 consecutive days — HTTP 404
+- **&TV** — 2/3 consecutive days — HTTP 404
+- **Abdulmajeed Abdullah** — 1/3 consecutive days — HTTP 404
+- **Al Sunnah TV** — 1/3 consecutive days — HTTP 404
+- **AlternaTV** — 1/3 consecutive days — HTTP 404
+- **Amazing Discoveries TV** — 2/3 consecutive days — HTTP 404
+- **AXN Movies (Spain)** — 2/3 consecutive days — HTTP 404
+- **Bangla Plus** — 2/3 consecutive days — HTTP 404
+- **D Music [ ]** — 1/3 consecutive days — HTTP 404
+- **Discovery Kids Latin America Colombia** — 1/3 consecutive days — HTTP 404
+- **Islam TV Urdu** — 2/3 consecutive days — HTTP 404
+- **KCL TV** — 2/3 consecutive days — HTTP 404
+- **Love Nature** — 2/3 consecutive days — HTTP 404
+- **MLB** — 1/3 consecutive days — HTTP 404
+- **Mohammed Abdo (1080p)** — 1/3 consecutive days — HTTP 404
+- **Monterrico TV** — 2/3 consecutive days — HTTP 404
+- **Quran** — 1/3 consecutive days — HTTP 404
+- **Rakuten TV Action Movies** — 2/3 consecutive days — HTTP 404
+- **Rakuten TV Action Movies Germany** — 2/3 consecutive days — HTTP 404
+- **Rakuten TV Action Movies Italy** — 2/3 consecutive days — HTTP 404
+- **Rakuten TV Action Movies UK** — 2/3 consecutive days — HTTP 404
+- **Rakuten TV Top Movies** — 2/3 consecutive days — HTTP 404
+- **Rakuten TV Top Movies Germany** — 2/3 consecutive days — HTTP 404
+- **Rakuten TV Top Movies Italy** — 2/3 consecutive days — HTTP 404
+- **Rakuten TV Top Movies UK** — 2/3 consecutive days — HTTP 404
+- **Stadium** — 1/3 consecutive days — HTTP 404
+- **Sunnah TV** — 1/3 consecutive days — HTTP 404
+- **DD Haryana** — 1/3 consecutive days — HTTP 404
 - **DD Jharkhand** — 1/3 consecutive days — HTTP 404
-- **Isango TV [ ]** — 1/3 consecutive days — HTTP 404
-- **Islam TV Urdu** — 1/3 consecutive days — HTTP 404
-- **JonmoBhumi TV** — 2/3 consecutive days — HTTP 404
-- **JonmoBhumi TV** — 2/3 consecutive days — HTTP 404
-- **KTV Bangla** — 1/3 consecutive days — HTTP 404
-- **Look Thoong TV** — 2/3 consecutive days — HTTP 404
-- **MBC Bollywood** — 2/3 consecutive days — HTTP 404
-- **Mi Musica Hits** — 2/3 consecutive days — HTTP 404
-- **Monterrico TV** — 1/3 consecutive days — HTTP 404
-- **MWD Documentary** — 1/3 consecutive days — HTTP 404
-- **Nande Portetepe TV** — 1/3 consecutive days — HTTP 404
-- **Rakuten TV Action Movies** — 1/3 consecutive days — HTTP 404
-- **Rakuten TV Action Movies Germany** — 1/3 consecutive days — HTTP 404
-- **Rakuten TV Action Movies Italy** — 1/3 consecutive days — HTTP 404
-- **Rakuten TV Action Movies UK** — 1/3 consecutive days — HTTP 404
-- **Rakuten TV Top Movies** — 1/3 consecutive days — HTTP 404
-- **Rakuten TV Top Movies Germany** — 1/3 consecutive days — HTTP 404
-- **Rakuten TV Top Movies Italy** — 1/3 consecutive days — HTTP 404
-- **Rakuten TV Top Movies UK** — 1/3 consecutive days — HTTP 404
-- **Reino Infantil** — 0/3 consecutive days — HTTP 404
-- **Rupashi Bangla TV** — 1/3 consecutive days — HTTP 404
-- **Tigo Sports (Paraguay)** — 2/3 consecutive days — HTTP 404
-- **Vos y TV** — 2/3 consecutive days — HTTP 404
+- **DD Kashir** — 1/3 consecutive days — HTTP 404
+- **DD Kashir** — 1/3 consecutive days — HTTP 404
+- **DD National** — 1/3 consecutive days — HTTP 404
+- **DD Saptagiri** — 1/3 consecutive days — HTTP 404
+- **NTV** — 1/3 consecutive days — HTTP 404
 
 ## Recovered streams
 
-- **La Top 102.9 (720p)** — restored to **International**
-- **M6 Music (1080p)** — restored to **France**
-- **MCM Pop** — restored to **France**
-- **Mi Musica Salsa** — restored to **Backup**
-- **TV 21 International (576p)** — restored to **Russia**
+- **Action 24** — restored to **Greece**
+- **All Time Movies** — restored to **Backup**
+- **B4U Movies** — restored to **Backup**
+- **CEACOM TV [ ]** — restored to **International**
+- **DD Jharkhand** — restored to **Backup**
+- **Independent TV** — restored to **News**
+- **Isango TV [ ]** — restored to **International**
+- **JA TV** — restored to **Bangladesh**
+- **KTV Bangla** — restored to **Backup**
+- **LRT Klasika** — restored to **International**
+- **LRT Opus** — restored to **International**
+- **Melody (720p)** — restored to **France**
+- **Metropolitana del Cuzco** — restored to **Peru**
+- **Mi Musica Popular (1080p)** — restored to **United States**
+- **Montones TV (720p) [Not 24/7]** — restored to **International**
+- **Nande Portetepe TV** — restored to **Paraguay**
+- **Roja TV** — restored to **Indian Entertainment**
+- **The Pet Collective India** — restored to **Documentary & Wildlife**
+- **Tunes 6** — restored to **Indian Music**
 
 ## Removed after three consecutive failed days
 
-None.
+- **JonmoBhumi TV** — former group: **Bangladesh**
+- **JonmoBhumi TV** — former group: **Backup**
+- **Look Thoong TV** — former group: **International**
+- **MBC Bollywood** — former group: **Backup**
+- **Mi Musica Hits** — former group: **United States**
 
 ## Inconclusive reason summary
 
-- **HTTP 403** — 170
-- **Timeout** — 109
-- **HTTP 503** — 88
+- **HTTP 403** — 161
+- **Timeout** — 104
+- **HTTP 503** — 95
 - **HTTP 444** — 80
-- **HTTP 401** — 77
-- **Connection** — 66
-- **Other** — 51
+- **HTTP 401** — 74
+- **Connection** — 67
+- **HTTP 429** — 61
+- **Other** — 59
 - **TLS** — 24
-- **DNS** — 15
-- **HTTP 500** — 9
-- **HTTP 502** — 8
-- **HTTP 400** — 6
+- **DNS** — 21
+- **HTTP 400** — 10
+- **HTTP 500** — 7
 - **HTTP 504** — 6
-- **HTTP 429** — 3
+- **HTTP 530** — 3
+- **HTTP 502** — 2
 - **HTML/JSON response may be an access restriction, not media** — 2
-- **HTTP 416** — 2
 - **Empty response; not proof of a dead stream** — 2
 - **Network** — 2
+- **HTTP 416** — 1
 - **HTTP 451** — 1
-- **Access-restricted/provider-denial response** — 1
+- **HTTP 567** — 1
 
 ### HTTP status breakdown
 
 - **HTTP 200** — 1
 - **HTTP 204** — 1
-- **HTTP 206** — 3
-- **HTTP 400** — 6
-- **HTTP 401** — 77
-- **HTTP 403** — 170
-- **HTTP 416** — 2
-- **HTTP 429** — 3
+- **HTTP 206** — 2
+- **HTTP 400** — 10
+- **HTTP 401** — 74
+- **HTTP 403** — 161
+- **HTTP 416** — 1
+- **HTTP 429** — 61
 - **HTTP 444** — 80
 - **HTTP 451** — 1
-- **HTTP 500** — 9
-- **HTTP 502** — 8
-- **HTTP 503** — 88
+- **HTTP 500** — 7
+- **HTTP 502** — 2
+- **HTTP 503** — 95
 - **HTTP 504** — 6
+- **HTTP 530** — 3
+- **HTTP 567** — 1
 
 ## Inconclusive checks
 
 - **BTV National** — HTTP 502 — HTTP 502
 - **Channel 16** — Timeout
+- **Enter TV** — HTTP 530 — HTTP 530
+- **GAZI TV** — HTTP 500 — HTTP 500
 - **Maasranga TV** — Timeout
+- **Matribhumi TV** — Other
 - **ME TV** — TLS
+- **NAN TV** — HTTP 500 — HTTP 500
+- **NRB** — HTTP 500 — HTTP 500
 - **SA TV** — Timeout
-- **SRK** — Timeout
 - **Colors Bangla Cinema** — HTTP 403 — HTTP 403
 - **Zee Bangla** — HTTP 403 — HTTP 403
 - **&TV International** — Other
@@ -143,15 +225,13 @@ None.
 - **Goldmines Action** — HTTP 403 — HTTP 403
 - **Goldmines Bollywood** — HTTP 403 — HTTP 403
 - **Pocket Films** — Other
-- **Shemaroo Bollywood** — HTTP 500 — HTTP 500
-- **Star Movies Select** — HTTP 403 — HTTP 403
+- **Shemaroo Bollywood** — Other
+- **Star Movies Select** — Timeout
 - **Andy Haryana** — HTTP 403 — HTTP 403
 - **MTV (India)** — HTTP 403 — HTTP 403
 - **Zoom** — HTTP 206 — HTML/JSON response may be an access restriction, not media
 - **Aakaash Aath** — HTTP 403 — HTTP 403
 - **Asianet Middle East** — HTTP 403 — HTTP 403
-- **Colors Rishtey Americas** — Other
-- **Colors Super** — HTTP 416 — HTTP 416
 - **Epic Bharat Digital** — HTTP 403 — HTTP 403
 - **Epic TV Digital** — HTTP 403 — HTTP 403
 - **ETV Plus** — Other
@@ -163,18 +243,15 @@ None.
 - **Siri Kannada** — HTTP 403 — HTTP 403
 - **Sony KAL** — HTTP 416 — HTTP 416
 - **Sun Surya** — HTTP 403 — HTTP 403
+- **Suriyan TV** — Other
 - **Zee Tamil** — HTTP 403 — HTTP 403
-- **Bol Entertainment** — HTTP 403 — HTTP 403
 - **Filmax** — HTTP 403 — HTTP 403
-- **Minimax (Pakistan)** — HTTP 403 — HTTP 403
-- **See TV** — HTTP 403 — HTTP 403
-- **Waseb TV** — HTTP 403 — HTTP 403
+- **Cumbia Mix** — Other
 - **Rock & Pop** — HTTP 403 — HTTP 403
-- **TV1000** — HTTP 200 — Empty response; not proof of a dead stream
 - **HBO East** — HTTP 444 — HTTP 444
 - **CND Film Middle School Channel** — HTTP 403 — HTTP 403
-- **Jiangxi Movie Channel** — Timeout
-- **Ranchenato TV** — Timeout
+- **Jiangxi Movie Channel** — HTTP 403 — HTTP 403
+- **Mezzo Live** — Other
 - **Trace Africa** — HTTP 403 — HTTP 403
 - **Trace Afrikora** — HTTP 403 — HTTP 403
 - **Trace Ayiti** — HTTP 403 — HTTP 403
@@ -195,71 +272,59 @@ None.
 - **Trace Urban International** — HTTP 403 — HTTP 403
 - **Trace Urban Southern Africa** — HTTP 403 — HTTP 403
 - **Trace Vanilla Islands** — HTTP 403 — HTTP 403
-- **Bibel TV Musik** — HTTP 403 — HTTP 403
-- **DMF** — HTTP 403 — HTTP 403
 - **Finest TV [ ]** — Timeout
-- **Pluto TV 90's Classics** — HTTP 401 — HTTP 401
-- **Pluto TV Cine de autor** — HTTP 401 — HTTP 401
-- **Pluto TV Cinema Orientale** — HTTP 401 — HTTP 401
-- **Pluto TV Film (Germany)** — HTTP 401 — HTTP 401
-- **Pluto TV Film Thriller** — HTTP 401 — HTTP 401
-- **Pluto TV Serie Sci-Fi** — HTTP 401 — HTTP 401
-- **Rakuten TV Comedy Movies Germany** — HTTP 403 — HTTP 403
 - **Rakuten TV Drama Movies Germany** — HTTP 403 — HTTP 403
 - **Rakuten TV Family Movies Germany** — HTTP 403 — HTTP 403
 - **Cine34** — HTTP 403 — HTTP 403
 - **R101 TV** — HTTP 451 — HTTP 451
 - **Sky Cinema Due** — HTTP 403 — HTTP 403
 - **OneFM** — HTTP 500 — HTTP 500
-- **CineLatino** — Timeout
 - **Golden Premier** — HTTP 403 — HTTP 403
 - **Golden Premier 2** — HTTP 403 — HTTP 403
-- **MultiPremier** — Timeout
 - **Film1 Action** — HTTP 403 — HTTP 403
 - **Film1 Drama** — HTTP 403 — HTTP 403
 - **Film1 Family** — HTTP 403 — HTTP 403
 - **Film1 Premiere** — HTTP 403 — HTTP 403
-- **GO TV** — Timeout
 - **Karibena** — Timeout
 - **FILMBOX+ Emotion Adria** — HTTP 403 — HTTP 403
 - **FILMBOX+ Hits Adria** — HTTP 403 — HTTP 403
 - **FILMBOX+ Love & Crime Adria** — HTTP 403 — HTTP 403
 - **FILMBOX+ One Ukraine & Baltics [ ]** — HTTP 403 — HTTP 403
 - **Halloween Non Stop** — HTTP 403 — HTTP 403
-- **Amedia Hit** — Other
 - **Blokbaster** — Other
 - **BRIDGE** — Other
+- **BRIDGE Deluxe** — Other
+- **Classic Music** — Other
+- **Dom kino Premium** — Other
 - **KinoHit** — Other
+- **Kinosemja** — Other
 - **Kinouzhas** — Other
 - **Muzhskoe kino** — Other
 - **Muzhskoy** — Other
+- **Nashe muzhskoe** — Other
 - **Russkiy Bestseller** — Other
 - **Russkiy Detektiv** — Other
 - **Shokiruyushchee** — Other
 - **HBO Hits Asia** — Connection
 - **HBO Signature Asia** — Connection
 - **HITS Movies** — HTTP 403 — HTTP 403
-- **Rakuten TV Comedy Movies** — HTTP 403 — HTTP 403
 - **Rakuten TV Drama Movies** — HTTP 403 — HTTP 403
 - **Rakuten TV Family Movies** — HTTP 403 — HTTP 403
+- **TVOMIX** — Other
 - **Kral Pop TV** — HTTP 403 — HTTP 403
-- **Power Love** — HTTP 403 — HTTP 403
-- **PowerTurk Akustik** — HTTP 403 — HTTP 403
-- **PowerTurk Taptaze** — HTTP 403 — HTTP 403
-- **TRT Muzik** — Other
-- **4ever Cinema** — Other
-- **4ever Music** — Other
+- **Black** — Other
 - **Bolt (Ukraine)** — Other
-- **Enter-Film** — Other
-- **EU Music** — Other
-- **InRating TV** — Other
-- **Kino 2** — Other
+- **Kino 1 (Ukraine)** — Other
 - **Kinoliving** — Other
-- **M1 (Ukraine)** — Other
-- **M2 (Ukraine)** — Other
-- **¡Viva Latino!** — Other
+- **Kinowood** — HTTP 403 — HTTP 403
+- **Nashe Lubimoe Kino Ukraine** — Other
 - **Film 4** — HTTP 444 — HTTP 444
 - **MTV Classic** — HTTP 444 — HTTP 444
+- **Totalmusic** — Other
+- **Totalmusic 80s** — Other
+- **Totalmusic 2000s** — Other
+- **Totalmusic Concerts** — Other
+- **Totalmusic Dance** — Other
 - **Trace UK** — HTTP 403 — HTTP 403
 - **00s Replay** — HTTP 401 — HTTP 401
 - **50 Cent Action** — HTTP 401 — HTTP 401
@@ -272,22 +337,21 @@ None.
 - **BET Comedy Movies** — HTTP 401 — HTTP 401
 - **BET Visionaries** — HTTP 401 — HTTP 401
 - **Bonanza** — HTTP 401 — HTTP 401
+- **Bonanza CA** — HTTP 401 — HTTP 401
 - **Cine Adrenalina** — HTTP 401 — HTTP 401
 - **Cine Amor** — HTTP 401 — HTTP 401
 - **Cine Familiar** — HTTP 403 — HTTP 403
 - **Cine Hispano** — HTTP 403 — HTTP 403
 - **Cine Premiere** — HTTP 401 — HTTP 401
 - **Cine Premium** — HTTP 403 — HTTP 403
+- **Cine Sony** — Other
 - **Cine Terror** — HTTP 401 — HTTP 401
 - **Cine Terror LatAm** — HTTP 401 — HTTP 401
 - **Cinecanal Panregional** — HTTP 403 — HTTP 403
-- **Cinemax (United States) West** — HTTP 206 — Access-restricted/provider-denial response
 - **Classic Movie Westerns** — HTTP 401 — HTTP 401
 - **Classic Movies Channel** — HTTP 401 — HTTP 401
 - **Classica** — HTTP 401 — HTTP 401
 - **CMT Equal Play** — HTTP 401 — HTTP 401
-- **EBS Cinema** — HTTP 403 — HTTP 403
-- **EBS Musika** — HTTP 403 — HTTP 403
 - **Epix** — HTTP 444 — HTTP 444
 - **Epix Hits** — HTTP 444 — HTTP 444
 - **Flicks of Fury** — HTTP 401 — HTTP 401
@@ -299,7 +363,11 @@ None.
 - **HBO Zone** — HTTP 444 — HTTP 444
 - **Lifetime Movies** — HTTP 444 — HTTP 444
 - **Movieplex** — HTTP 444 — HTTP 444
-- **MovieSphere CA** — HTTP 401 — HTTP 401
+- **MTV Biggest Pop (1080p)** — HTTP 401 — HTTP 401
+- **MTV Biggest Pop CA (1080p)** — HTTP 401 — HTTP 401
+- **MTV Biggest Pop LatAm (1080p)** — HTTP 401 — HTTP 401
+- **MTV Classic CA (720p)** — HTTP 401 — HTTP 401
+- **MTV Classic LatAm (720p)** — HTTP 401 — HTTP 401
 - **Paramount Movie Channel** — HTTP 401 — HTTP 401
 - **Paramount+ Picks** — HTTP 401 — HTTP 401
 - **Pluto Classic Movie Westerns** — HTTP 401 — HTTP 401
@@ -313,11 +381,8 @@ None.
 - **Pluto TV Cine Crimen** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Drama LatAm** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Estelar** — HTTP 401 — HTTP 401
-- **Pluto TV Cine Familia** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Familia LatAm** — HTTP 401 — HTTP 401
-- **Pluto TV Cine Inspiracao** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Inspirador** — HTTP 401 — HTTP 401
-- **Pluto TV Cine Romance** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Romance LatAm** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Suspenso** — HTTP 401 — HTTP 401
 - **Pluto TV Comedy Movies** — HTTP 401 — HTTP 401
@@ -345,20 +410,25 @@ None.
 - **Pluto TV Thrillers** — HTTP 401 — HTTP 401
 - **Pluto TV Trending Now** — HTTP 401 — HTTP 401
 - **Pluto TV Westerns (United States)** — HTTP 401 — HTTP 401
+- **Pluto TV Westerns (United States) CA** — HTTP 401 — HTTP 401
 - **Rawhide (United States)** — HTTP 401 — HTTP 401
 - **Rawhide (United States) CA** — HTTP 401 — HTTP 401
 - **Sony Movies** — HTTP 444 — HTTP 444
+- **Sony Movies (United States)** — Other
 - **Teleritmo** — HTTP 403 — HTTP 403
 - **Turner Classic Movies** — HTTP 444 — HTTP 444
+- **Whiplash Cinema** — Other
+- **BIZ Music** — HTTP 403 — HTTP 403
 - **Armenia Premium** — Other
 - **Celestial Movies** — HTTP 401 — HTTP 401
 - **HMTV (Nigeria)** — HTTP 204 — Empty response; not proof of a dead stream
-- **K100** — Other
 - **Kantipur Max [ ]** — HTTP 403 — HTTP 403
 - **Mei Ah Movie Channel** — Timeout
 - **NogoumFMTV** — HTTP 403 — HTTP 403
+- **RHT Guadeloupe** — Timeout
+- **Tjil TV** — Other
+- **Yes Movies Action** — Other
 - **BTV News** — HTTP 502 — HTTP 502
-- **Medina Live** — HTTP 500 — HTTP 500
 - **Star Sports 2** — HTTP 403 — HTTP 403
 - **Alba 2** — HTTP 444 — HTTP 444
 - **Alba 3** — HTTP 444 — HTTP 444
@@ -368,14 +438,27 @@ None.
 - **Babes TV Russia** — HTTP 444 — HTTP 444
 - **Bang U** — HTTP 444 — HTTP 444
 - **Blonde** — HTTP 444 — HTTP 444
+- **Bridgette B** — HTTP 503 — HTTP 503
 - **Brunette** — HTTP 444 — HTTP 444
+- **Cherie Deville** — HTTP 503 — HTTP 503
 - **Cuckold** — HTTP 444 — HTTP 444
 - **Exxxotica TV** — HTTP 444 — HTTP 444
+- **Fake Taxi 1** — HTTP 503 — HTTP 503
+- **Fake Taxi 3** — HTTP 503 — HTTP 503
 - **Fap TV 6** — HTTP 444 — HTTP 444
+- **Gay 2** — HTTP 503 — HTTP 503
+- **Gay 3** — HTTP 503 — HTTP 503
+- **Gay Latin** — HTTP 503 — HTTP 503
+- **Gloryhole** — HTTP 503 — HTTP 503
+- **Hardcore** — HTTP 503 — HTTP 503
+- **Hilary Scott** — HTTP 503 — HTTP 503
+- **Hot Guys Fuck** — HTTP 503 — HTTP 503
+- **Kelly Divine** — HTTP 503 — HTTP 503
 - **Kelsie Monroe** — HTTP 503 — HTTP 503
 - **Latina** — HTTP 444 — HTTP 444
 - **LEO TV** — HTTP 444 — HTTP 444
 - **Live Cams** — HTTP 444 — HTTP 444
+- **London Keyes** — HTTP 503 — HTTP 503
 - **Penthouse After Midnight** — HTTP 444 — HTTP 444
 - **Penthouse Black** — HTTP 444 — HTTP 444
 - **Penthouse Naughty Nights** — HTTP 444 — HTTP 444
@@ -383,97 +466,148 @@ None.
 - **Penthouse Reality TV** — HTTP 444 — HTTP 444
 - **Penthouse TV** — HTTP 444 — HTTP 444
 - **Pink Erotic 1** — HTTP 444 — HTTP 444
+- **Pink Erotic 4** — HTTP 503 — HTTP 503
+- **Pink Erotic 6** — HTTP 503 — HTTP 503
+- **Pink Erotic 7** — HTTP 429 — HTTP 429
+- **Pink Erotic 8** — HTTP 503 — HTTP 503
 - **PORNBOX 4K: JAYS POV** — HTTP 503 — HTTP 503
+- **PORNBOX 4K: LUBED PORN** — HTTP 503 — HTTP 503
 - **PORNBOX 4K: NANNY SPY** — HTTP 503 — HTTP 503
 - **PORNBOX 4K: SPANK MONSTER** — HTTP 503 — HTTP 503
 - **PORNBOX 4K: SPY FAM** — HTTP 503 — HTTP 503
+- **PORNBOX 4K: TINY** — HTTP 503 — HTTP 503
 - **PORNBOX GAY: BEEFCAKE HUNTER** — HTTP 503 — HTTP 503
-- **PORNBOX GAY: BOY FUN** — HTTP 503 — HTTP 503
 - **PORNBOX GAY: MAN** — HTTP 503 — HTTP 503
 - **PORNBOX: 1111 CUSTOMS** — HTTP 503 — HTTP 503
 - **PORNBOX: ADULT TIME** — HTTP 503 — HTTP 503
-- **PORNBOX: ALEX LEGEND** — HTTP 503 — HTTP 503
-- **PORNBOX: ALL GROUP SEX** — HTTP 503 — HTTP 503
 - **PORNBOX: AMATEUR EURO** — HTTP 503 — HTTP 503
 - **PORNBOX: ASIAN FOOTJOB** — HTTP 503 — HTTP 503
 - **PORNBOX: AV TAXI** — HTTP 503 — HTTP 503
-- **PORNBOX: BANG BROS NETWORK** — HTTP 503 — HTTP 503
+- **PORNBOX: BABES** — HTTP 503 — HTTP 503
 - **PORNBOX: BLACKED** — HTTP 503 — HTTP 503
-- **PORNBOX: BOX OF PORN** — HTTP 503 — HTTP 503
+- **PORNBOX: BLOW ME POV** — HTTP 503 — HTTP 503
 - **PORNBOX: BRATTY SIS** — HTTP 503 — HTTP 503
+- **PORNBOX: BUMS BUS** — HTTP 503 — HTTP 503
+- **PORNBOX: CASTING COUCH** — HTTP 503 — HTTP 503
+- **PORNBOX: DAGFS** — HTTP 503 — HTTP 503
 - **PORNBOX: DDF BUSTY** — HTTP 503 — HTTP 503
+- **PORNBOX: DEEPER** — HTTP 503 — HTTP 503
+- **PORNBOX: DIGITAL PLAYGROUND** — HTTP 503 — HTTP 503
+- **PORNBOX: DOG HOUSE** — HTTP 503 — HTTP 503
+- **PORNBOX: DOGFART NETWORK** — HTTP 503 — HTTP 503
+- **PORNBOX: DORCEL CLUB** — HTTP 503 — HTTP 503
 - **PORNBOX: DREAMROOM** — HTTP 503 — HTTP 503
-- **PORNBOX: EXOTIC** — HTTP 503 — HTTP 503
+- **PORNBOX: FAKE HOSTEL** — HTTP 503 — HTTP 503
 - **PORNBOX: FAKE TAXI** — HTTP 503 — HTTP 503
+- **PORNBOX: FAMILY STROKES** — HTTP 503 — HTTP 503
+- **PORNBOX: FAMILY SWAP XXX** — HTTP 503 — HTTP 503
+- **PORNBOX: FAPADOO** — HTTP 503 — HTTP 503
 - **PORNBOX: FIT 18** — HTTP 503 — HTTP 503
-- **PORNBOX: GOTMYLF** — HTTP 503 — HTTP 503
+- **PORNBOX: GANGBANG CREAMPIE** — HTTP 429 — HTTP 429
 - **PORNBOX: HENTAINED** — HTTP 503 — HTTP 503
+- **PORNBOX: HORNY DREAM BABEZ** — HTTP 503 — HTTP 503
 - **PORNBOX: HORNY HOSTEL** — HTTP 503 — HTTP 503
-- **PORNBOX: JOI BABES** — HTTP 503 — HTTP 503
-- **PORNBOX: LETHAL TEENS** — HTTP 503 — HTTP 503
-- **PORNBOX: LETS DOE IT** — HTTP 503 — HTTP 503
-- **PORNBOX: LIFE SELECTOR** — HTTP 503 — HTTP 503
-- **PORNBOX: LOVE HER FEET** — HTTP 503 — HTTP 503
-- **PORNBOX: LW PRODUCTIONS** — HTTP 503 — HTTP 503
+- **PORNBOX: HOT WIFE XXX** — HTTP 503 — HTTP 503
+- **PORNBOX: HUSSIE PASS** — HTTP 503 — HTTP 503
+- **PORNBOX: INTERRACIAL PASS** — HTTP 503 — HTTP 503
+- **PORNBOX: KINKY FAMILY** — HTTP 429 — HTTP 429
+- **PORNBOX: KINKY INLAWS** — HTTP 503 — HTTP 503
+- **PORNBOX: KINKY SPA** — HTTP 429 — HTTP 429
+- **PORNBOX: LETHAL TEENS** — HTTP 429 — HTTP 429
+- **PORNBOX: LETS DOE IT** — HTTP 429 — HTTP 429
+- **PORNBOX: LIFE SELECTOR** — HTTP 429 — HTTP 429
+- **PORNBOX: LOVE HER FEET** — HTTP 429 — HTTP 429
+- **PORNBOX: LOVE HOME PORN** — HTTP 429 — HTTP 429
+- **PORNBOX: LUBED** — HTTP 503 — HTTP 503
+- **PORNBOX: MAMACITAZ** — HTTP 429 — HTTP 429
 - **PORNBOX: MANO JOB** — HTTP 503 — HTTP 503
-- **PORNBOX: MASSAGE ROOMS** — HTTP 503 — HTTP 503
+- **PORNBOX: MASSAGE ROOMS** — HTTP 429 — HTTP 429
 - **PORNBOX: MOFOS** — HTTP 503 — HTTP 503
-- **PORNBOX: MOM TEACH SEX** — HTTP 503 — HTTP 503
 - **PORNBOX: MOM XXX** — HTTP 503 — HTTP 503
 - **PORNBOX: MY 18 TEENS** — HTTP 503 — HTTP 503
-- **PORNBOX: MY PERVY FAMILY** — HTTP 503 — HTTP 503
-- **PORNBOX: MYLF** — HTTP 503 — HTTP 503
-- **PORNBOX: NUBILE FILMS** — HTTP 503 — HTTP 503
+- **PORNBOX: MY LIFE IN MIAMI** — HTTP 429 — HTTP 429
+- **PORNBOX: MY PERVY FAMILY** — HTTP 429 — HTTP 429
+- **PORNBOX: MYLF** — HTTP 429 — HTTP 429
+- **PORNBOX: NEW SENSATIONS** — HTTP 429 — HTTP 429
+- **PORNBOX: NUBILE FILMS** — HTTP 429 — HTTP 429
 - **PORNBOX: PASSION** — HTTP 503 — HTTP 503
 - **PORNBOX: PERV CITY** — HTTP 503 — HTTP 503
-- **PORNBOX: POOKSI** — HTTP 503 — HTTP 503
-- **PORNBOX: PORN WORLD HARDCORE** — HTTP 503 — HTTP 503
-- **PORNBOX: PORNHOCHIC** — HTTP 503 — HTTP 503
-- **PORNBOX: POV MASTERS** — HTTP 503 — HTTP 503
+- **PORNBOX: PERV MOM** — HTTP 429 — HTTP 429
+- **PORNBOX: PORN WORLD HARDCORE** — HTTP 429 — HTTP 429
+- **PORNBOX: PORNHOCHIC** — HTTP 429 — HTTP 429
+- **PORNBOX: POV MASTERS** — HTTP 429 — HTTP 429
 - **PORNBOX: PRIVATE** — HTTP 503 — HTTP 503
-- **PORNBOX: PRIVATE SOCIETY** — HTTP 503 — HTTP 503
-- **PORNBOX: PUBLIC AGENT** — HTTP 503 — HTTP 503
-- **PORNBOX: SUGAR BABES TV** — HTTP 429 — HTTP 429
+- **PORNBOX: PRIVATE SOCIETY** — HTTP 429 — HTTP 429
+- **PORNBOX: PUBA** — HTTP 429 — HTTP 429
+- **PORNBOX: PURE MATURE** — HTTP 503 — HTTP 503
+- **PORNBOX: RAW ATTACK** — HTTP 503 — HTTP 503
+- **PORNBOX: REALITY JUNKIES** — HTTP 503 — HTTP 503
+- **PORNBOX: SHAGGING MOMS** — HTTP 429 — HTTP 429
+- **PORNBOX: SHE IS NERDY** — HTTP 429 — HTTP 429
+- **PORNBOX: SLIM** — HTTP 429 — HTTP 429
+- **PORNBOX: SOFIE MARIE XXX** — HTTP 429 — HTTP 429
+- **PORNBOX: STROKIES** — HTTP 429 — HTTP 429
+- **PORNBOX: SUGAR BABES TV** — HTTP 503 — HTTP 503
+- **PORNBOX: SWEET SINNER** — HTTP 429 — HTTP 429
 - **PORNBOX: SWEETHEART PORN** — HTTP 429 — HTTP 429
+- **PORNBOX: TRUE AMATEURS** — HTTP 503 — HTTP 503
+- **PORNBOX: TWISTY** — HTTP 429 — HTTP 429
 - **Pure Babes** — HTTP 444 — HTTP 444
-- **Real Wife Stories** — HTTP 503 — HTTP 503
+- **Rated** — HTTP 503 — HTTP 503
+- **Rated 3** — HTTP 429 — HTTP 429
+- **Reality Kings** — HTTP 429 — HTTP 429
+- **Reality Kings** — HTTP 429 — HTTP 429
 - **Riley Reid** — HTTP 503 — HTTP 503
 - **Sexto Sento** — HTTP 503 — HTTP 503
 - **ShopLyfter** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: ADRIANA CHECHIK** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: AUGUST AMES** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: AUTUMN FALLS** — HTTP 503 — HTTP 503
+- **STARS EXCLUSIVE: ABELLA DANGER** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: ADRIANA CHECHIK** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: ALINA LOPEZ** — HTTP 503 — HTTP 503
+- **STARS EXCLUSIVE: ANGELA WHITE** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: ARIANA MARIE** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: AUTUMN FALLS** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: BLAKE BLOSSOM** — HTTP 503 — HTTP 503
+- **STARS EXCLUSIVE: BRANDI LOVE** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: DANI DANIELS** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: EMILY WILLIS** — HTTP 503 — HTTP 503
 - **STARS EXCLUSIVE: EVA LOVIA** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: GINA VALENTINA** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: LISA ANN** — HTTP 503 — HTTP 503
+- **STARS EXCLUSIVE: LANA RHOADES** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: LENA PAUL** — HTTP 429 — HTTP 429
 - **STARS EXCLUSIVE: MADISON IVY** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: MIA MALKOVA** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: NICOLE ANISTON** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: UMA JOLIE** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: VALENTINA NAPPI** — HTTP 503 — HTTP 503
-- **Tiny** — HTTP 503 — HTTP 503
-- **Trans** — HTTP 503 — HTTP 503
+- **STARS EXCLUSIVE: MIA MALKOVA** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: NICOLE ANISTON** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: RILEY REID** — HTTP 503 — HTTP 503
+- **STARS EXCLUSIVE: UMA JOLIE** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: VALENTINA NAPPI** — HTTP 429 — HTTP 429
+- **Swallowed** — HTTP 429 — HTTP 429
+- **Teen Red TV** — HTTP 503 — HTTP 503
 - **True Anal** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: BIGTITTYGOTHEGG** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: DIANA DANIELS** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: ELLA KOJIRO** — HTTP 503 — HTTP 503
+- **True Anal** — HTTP 503 — HTTP 503
+- **Uniform** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: CARLACUTE** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: CHERRY GRACE** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: CHESSIE RAE** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: DIANA DANIELS** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: ELLA KOJIRO** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: KRISS KISS** — HTTP 429 — HTTP 429
 - **VERIFIED AMATEURS: LEAH MEOW** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: LUXURYGIRL** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: MINI DIVA** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: MOLLYREDWOLF** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: LUXURYGIRL** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: MIKANIKA69** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: MINI DIVA** — HTTP 429 — HTTP 429
 - **VERIFIED AMATEURS: NOFACEGIRL** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: NOTSOAMATEUR** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: NOTSOAMATEUR** — HTTP 429 — HTTP 429
 - **VERIFIED AMATEURS: PAMSNUSNU** — HTTP 503 — HTTP 503
 - **VERIFIED AMATEURS: PURPLE BITCH** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: REISLIN** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: SECRETCRUSH** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: SOLAZOLA** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: TESSA WINTERS** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: REISLIN** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: SHAIDEN ROUGE** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: TESSA WINTERS** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: TINNA ANGEL** — HTTP 429 — HTTP 429
 - **VERIFIED AMATEURS: YINYLEON** — HTTP 429 — HTTP 429
 - **Veronica Avluv** — HTTP 503 — HTTP 503
 - **Violet Myers** — HTTP 503 — HTTP 503
 - **Vivid TV Europe** — HTTP 444 — HTTP 444
 - **Vixen** — HTTP 444 — HTTP 444
+- **Wank It Now** — HTTP 429 — HTTP 429
 - **9XM** — HTTP 403 — HTTP 403
 - **15+ Music** — DNS
 - **&pictures** — Connection
@@ -485,7 +619,7 @@ None.
 - **ADO TV** — HTTP 403 — HTTP 403
 - **Afarin Baxcha** — TLS
 - **Afghan Nobel Movies** — Timeout
-- **Alegria TV** — HTTP 502 — HTTP 502
+- **Alegria TV** — DNS
 - **alpha Cinema** — DNS
 - **AMC (Afghanistan)** — TLS
 - **AMC (United States)** — Timeout
@@ -506,20 +640,21 @@ None.
 - **Arena Sport Premium M3** — HTTP 403 — HTTP 403
 - **ARY Musik** — HTTP 403 — HTTP 403
 - **ARY News** — HTTP 403 — HTTP 403
+- **Atlas** — Other
 - **ATN Bangla** — Timeout
 - **ATV (Pakistan)** — HTTP 400 — HTTP 400
 - **AVT Khyber** — HTTP 400 — HTTP 400
 - **B4U Movies** — Connection
-- **BabyFirst Spanish** — Timeout
 - **Bantul the Great** — Connection
+- **Belarus-5** — HTTP 400 — HTTP 400
 - **Bengali Beats** — Connection
 - **BIZ Cinema** — TLS
 - **BIZ Music** — TLS
 - **Blaze** — HTTP 444 — HTTP 444
 - **Bravo Farsi TV** — TLS
 - **BRIDGE Deluxe** — Timeout
-- **BS Film** — HTTP 502 — HTTP 502
-- **BSTV (Pakistan)** — HTTP 502 — HTTP 502
+- **BS Film** — DNS
+- **BSTV (Pakistan)** — DNS
 - **Canal 3 KMK TV** — Connection
 - **Canal+ Action Europe** — DNS
 - **Canal+ Action Europe Czechia** — Timeout
@@ -529,7 +664,6 @@ None.
 - **Cartoon Network Latin America Brazil** — Connection
 - **CazeTV** — HTTP 403 — HTTP 403
 - **CCTV-6 [ ]** — HTTP 500 — HTTP 500
-- **CEACOM TV [ ]** — Timeout
 - **CHC Action** — Timeout
 - **Cine34 [ ]** — DNS
 - **Cine+ Classic** — Timeout
@@ -539,7 +673,6 @@ None.
 - **Cinema (Russia)** — Timeout
 - **CinemaWorld** — Connection
 - **City Eden KinoSemya [ ]** — HTTP 503 — HTTP 503
-- **Claro Sports** — Timeout
 - **Clubbing TV France** — HTTP 504 — HTTP 504
 - **Colors** — Connection
 - **Colors Bangla** — HTTP 403 — HTTP 403
@@ -550,10 +683,9 @@ None.
 - **Colors Infinity** — HTTP 403 — HTTP 403
 - **Cooking Channel** — HTTP 444 — HTTP 444
 - **CTB Perth Movies Channel** — Timeout
-- **D Music (1280p) [Not 24/7]** — Timeout
 - **Dance TV [ ]** — DNS
-- **DanceTV EDM Mainstage (1080p)** — TLS
-- **DanceTV Minimal Tech (1080p)** — TLS
+- **DanceTV EDM Mainstage** — TLS
+- **DanceTV Minimal Tech** — TLS
 - **DBC News** — Network
 - **Deep House District** — Timeout
 - **Deewana** — Connection
@@ -569,7 +701,7 @@ None.
 - **Discovery Life** — HTTP 444 — HTTP 444
 - **Discovery Science** — HTTP 444 — HTTP 444
 - **Discovery Velocity** — HTTP 444 — HTTP 444
-- **Discovery World** — Timeout
+- **Disney Channel (Bulgaria)** — Connection
 - **Disney Channel (India)** — Timeout
 - **Disney Channel East** — HTTP 444 — HTTP 444
 - **Disney Jr** — HTTP 444 — HTTP 444
@@ -613,30 +745,29 @@ None.
 - **Formula 1 AntenaPlay** — HTTP 403 — HTTP 403
 - **France 4** — Connection
 - **Fuse** — HTTP 444 — HTTP 444
+- **Futbol** — Timeout
 - **Galaxy TV [ ]** — HTTP 403 — HTTP 403
 - **GAZI TV** — Connection
 - **GAZI TV** — Network
 - **GEM Pixel** — Timeout
 - **Gex TV** — Connection
 - **Ghost TV [ ]** — TLS
-- **Go3 Sport 1** — Other
 - **Gopal Bhar TV** — Connection
 - **H!t Music Channel** — Timeout
 - **HBO (United States)** — Timeout
 - **HBO Hits** — Timeout
 - **History** — HTTP 444 — HTTP 444
 - **History Channel** — HTTP 444 — HTTP 444
+- **Hit** — Other
 - **Hits 360 TV [ ]** — Timeout
 - **Hollywood** — Timeout
 - **Hungama** — Connection
 - **Id Investigation Discovery** — HTTP 444 — HTTP 444
 - **Investigation Discovery** — HTTP 444 — HTTP 444
 - **Jalsha Movies** — Connection
-- **JapanimTV** — Timeout
 - **Jiangsu Movie Channel** — Timeout
-- **Jilin Movie Channel** — Timeout
+- **Jilin Movie Channel** — HTTP 567 — HTTP 567
 - **Juice TV [ ]** — DNS
-- **Kapitan Fantastika** — Other
 - **Kay2** — Timeout
 - **Kids Zone** — Timeout
 - **Kineko** — Timeout
@@ -647,17 +778,16 @@ None.
 - **KpopTV Play** — Connection
 - **La 98.1 TV [ ]** — Timeout
 - **La Kalle** — Timeout
-- **La Urban TV (1080p) [Not 24/7]** — TLS
+- **La Urban TV [ ]** — TLS
 - **Law & Crime** — HTTP 444 — HTTP 444
-- **Law & Crime** — Other
-- **LaXitosa Panama (360p) [Not 24/7]** — TLS
-- **LRT Plius** — Other
+- **LaXitosa Panama [ ]** — TLS
 - **LTN Family** — Timeout
 - **Maasranga TV** — Timeout
 - **Maasranga TV** — Timeout
-- **MagentaMusik 360 (1080p)** — HTTP 403 — HTTP 403
-- **Maincast Sport** — Other
-- **Marina TV (1080p)** — TLS
+- **MagentaMusik 360** — HTTP 403 — HTTP 403
+- **Maincast Cybersport** — Other
+- **Makkah Live** — HTTP 500 — HTTP 500
+- **Marina TV** — TLS
 - **Masala TV** — Timeout
 - **Maxcine** — Connection
 - **Maxcine 2** — Connection
@@ -665,14 +795,19 @@ None.
 - **Maxcine Family** — Connection
 - **Maxcine Kids** — Connection
 - **MBC TV** — Timeout
+- **MCM Top (France)** — Timeout
+- **MCM Top (Russia) (576p)** — Timeout
 - **Mega Extreno** — Other
 - **Mehran TV** — Timeout
+- **Mezzo** — HTTP 403 — HTTP 403
+- **MH One Movies** — HTTP 403 — HTTP 403
 - **MH One Movies** — HTTP 403 — HTTP 403
 - **Mi Musica Romantica** — Timeout
 - **Military History** — HTTP 444 — HTTP 444
 - **Military History** — HTTP 403 — HTTP 403
 - **Molahits TV** — Other
-- **Montones TV** — HTTP 502 — HTTP 502
+- **Montones TV** — DNS
+- **Mooz Dance HD (1080i) [Geo-blocked]** — HTTP 403 — HTTP 403
 - **Motortrend** — HTTP 444 — HTTP 444
 - **Motu Patlu** — Connection
 - **Movies Now** — Connection
@@ -681,13 +816,13 @@ None.
 - **Movies!** — HTTP 403 — HTTP 403
 - **MovieSmart Turk** — Other
 - **Movify Kino** — DNS
+- **MRTV Sports** — Timeout
 - **Music Mastii** — Connection
 - **My Cinema [ ]** — DNS
 - **Nat Geo TV** — Connection
 - **Nat Geo Wild** — HTTP 444 — HTTP 444
 - **National Geographic** — HTTP 444 — HTTP 444
 - **National Geographic** — HTTP 444 — HTTP 444
-- **Nautical Channel** — Other
 - **NEW K.MOVIES** — HTTP 400 — HTTP 400
 - **NewFlix** — TLS
 - **NHL AntenaPlay** — HTTP 403 — HTTP 403
@@ -696,6 +831,7 @@ None.
 - **Nick Jr. (India)** — Timeout
 - **Nickelodeon** — HTTP 444 — HTTP 444
 - **Nickelodeon (India)** — Timeout
+- **Okko Futbol** — HTTP 400 — HTTP 400
 - **Oman Sports TV** — Other
 - **OSN Movies Action** — Connection
 - **Paighan TV** — Connection
@@ -707,7 +843,7 @@ None.
 - **Pink Erotic 5** — HTTP 444 — HTTP 444
 - **Pink Erotic 7** — HTTP 444 — HTTP 444
 - **Pink Erotic 8** — HTTP 444 — HTTP 444
-- **PK Sports** — HTTP 502 — HTTP 502
+- **PK Sports** — DNS
 - **Play Entertainment** — Timeout
 - **Pogo** — Connection
 - **PTV Sports** — Connection
@@ -725,6 +861,7 @@ None.
 - **Rotana Cinema Egypt [ ]** — HTTP 403 — HTTP 403
 - **Rotana Cinema KSA [ ]** — HTTP 403 — HTTP 403
 - **RTV (Bangladesh)** — Timeout
+- **Rupashi Bangla TV** — Timeout
 - **Russkiy Illusion** — Timeout
 - **Russkiy roman** — Timeout
 - **SAB TV** — Timeout
@@ -746,14 +883,14 @@ None.
 - **Sony Max** — Connection
 - **Sony Max** — HTTP 403 — HTTP 403
 - **Sony Movies** — Connection
-- **Sony Movies (Brazil) (720p)** — Timeout
+- **Sony Movies (Brazil)** — Timeout
 - **Sony Movies Latin America** — Timeout
 - **Sony Pal** — HTTP 403 — HTTP 403
 - **Sony Yay!** — Timeout
 - **Sooriyan TV** — Connection
 - **South Movies** — Connection
 - **Spondon** — TLS
-- **Sport 4** — Other
+- **Sport TV** — HTTP 400 — HTTP 400
 - **Star Bharat** — Connection
 - **Star Gold** — Connection
 - **Star Jalsha** — Connection
@@ -771,8 +908,9 @@ None.
 - **StarPlus (India)** — Timeout
 - **Sun Bangla** — Connection
 - **Sun TV** — HTTP 403 — HTTP 403
-- **Suspilne. Sport** — Other
-- **Swerve Sports** — Other
+- **T Sports 7** — Timeout
+- **Taaza TV** — Other
+- **TBN24** — HTTP 503 — HTTP 503
 - **Teen Nick** — HTTP 403 — HTTP 403
 - **TF1 Series Films** — Connection
 - **Thanthi One** — Timeout
@@ -784,6 +922,7 @@ None.
 - **Trace Gospel Southern Africa** — HTTP 403 — HTTP 403
 - **Trace Sport Stars** — HTTP 403 — HTTP 403
 - **Travel Channel East** — HTTP 444 — HTTP 444
+- **Travel XP Bangla** — HTTP 200 — Empty response; not proof of a dead stream
 - **Travelxp** — HTTP 403 — HTTP 403
 - **TSN 1** — HTTP 403 — HTTP 403
 - **TSN 2** — HTTP 403 — HTTP 403
@@ -794,9 +933,10 @@ None.
 - **Velvet. Sovetskoe Kino** — Timeout
 - **Vevo Pop** — DNS
 - **Viasat Kino Balkan** — HTTP 403 — HTTP 403
+- **viju History** — HTTP 400 — HTTP 400
 - **VIVA Russia** — Connection
 - **Vokta TV** — HTTP 403 — HTTP 403
-- **VTU** — HTTP 502 — HTTP 502
+- **VTU** — DNS
 - **Willow Sports 2** — HTTP 403 — HTTP 403
 - **World Fishing Network** — HTTP 444 — HTTP 444
 - **Zee 24 Ghanta** — Timeout
@@ -817,13 +957,14 @@ None.
 - **9X Jalwa** — HTTP 403 — HTTP 403
 - **Aakaash Aath** — HTTP 403 — HTTP 403
 - **Bangla TV** — Timeout
-- **Channel S** — HTTP 500 — HTTP 500
-- **Channel S** — HTTP 500 — HTTP 500
 - **Cinemax Asia** — Connection
 - **Colors Rishtey** — HTTP 444 — HTTP 444
 - **Corazon TV** — Timeout
 - **Dangal 2** — HTTP 403 — HTTP 403
+- **Dom kino** — Other
 - **Dorama** — Other
+- **Enter TV** — HTTP 530 — HTTP 530
+- **Enter TV** — HTTP 530 — HTTP 530
 - **Evrokino** — Other
 - **Global TV** — Timeout
 - **Goldmines 2** — HTTP 403 — HTTP 403
@@ -831,22 +972,20 @@ None.
 - **HBO Asia SD [ ]** — Connection
 - **Kalaignar Murasu** — Other
 - **Kappa TV** — HTTP 403 — HTTP 403
-- **Kinopokaz** — Other
 - **Mahaa Max** — HTTP 403 — HTTP 403
 - **Mazhavil Manorama** — HTTP 403 — HTTP 403
 - **ME TV** — TLS
 - **ME TV** — TLS
 - **ME TV** — TLS
 - **Mei Ah Movie Channel** — Timeout
-- **MH One Movies** — HTTP 403 — HTTP 403
-- **Movie Bangla** — HTTP 500 — HTTP 500
 - **My TV** — Timeout
-- **Nano** — Other
 - **RTV** — Timeout
 - **Shanson TV** — HTTP 403 — HTTP 403
-- **Shemaroo Bollywood** — HTTP 500 — HTTP 500
+- **Shemaroo Bollywood** — Other
 - **Sony Max** — HTTP 444 — HTTP 444
 - **Star Cinema** — HTTP 403 — HTTP 403
+- **TV1000** — Other
 - **VH1** — HTTP 444 — HTTP 444
 - **VH1** — HTTP 444 — HTTP 444
+- **viju TV1000 action** — Other
 - **Zee Bangla** — Timeout
