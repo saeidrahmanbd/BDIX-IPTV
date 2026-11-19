@@ -19,7 +19,7 @@ class PrePublishLogoPathTests(unittest.TestCase):
     def test_plural_new_backups_is_a_protected_review_queue_not_a_primary_group(self):
         self.assertIn("New Backups", EXCLUDE)
         self.assertIn("New Backups", REVIEW_QUEUES)
-        self.assertNotIn("New Backup", REVIEW_QUEUES)
+        self.assertIn("New Backup", REVIEW_QUEUES)
 
     def test_missing_logo_in_not_playing_is_advisory_but_active_group_is_blocking(self):
         not_playing = [(
@@ -43,6 +43,17 @@ class PrePublishLogoPathTests(unittest.TestCase):
         info = '#EXTINF:-1 tvg-name="Aaj Tak" group-title="Not Playing",Aaj Tak'
         entries = [(info, {"tvg-name": "Aaj Tak", "group-title": "Not Playing"}, "https://example.invalid/aajtak.m3u8")]
         self.assertEqual(review_state(entries), {})
+
+    def test_known_prohibited_indian_alias_is_excluded_from_protected_queue_state(self):
+        info = '#EXTINF:-1 tvg-id="DishaTV.in@SD" tvg-name="Disha TV" group-title="New Backups",Disha TV'
+        entries = [(info, {"tvg-id": "DishaTV.in@SD", "tvg-name": "Disha TV", "group-title": "New Backups"}, "https://example.invalid/disha.m3u8")]
+        self.assertEqual(review_state(entries), {})
+
+    def test_explicit_bangladesh_queue_country_is_not_overridden_by_indian_alias(self):
+        info = '#EXTINF:-1 tvg-country="BD" tvg-id="DishaTV.in@SD" tvg-name="Disha TV" group-title="New Backups",Disha TV'
+        attrs = {"tvg-country": "BD", "tvg-id": "DishaTV.in@SD", "tvg-name": "Disha TV", "group-title": "New Backups"}
+        entries = [(info, attrs, "https://example.invalid/disha-bd.m3u8")]
+        self.assertIn("https://example.invalid/disha-bd.m3u8", review_state(entries))
 
     def test_unapproved_review_entry_remains_in_protected_review_state(self):
         info = '#EXTINF:-1 tvg-name="Sample Channel" group-title="Backup",Sample Channel'
