@@ -1,12 +1,12 @@
 # Update Report
 
-_Last generated: **2026-11-18 13:25 UTC**_
+_Last generated: **2026-11-19 01:55 UTC**_
 
-Source playlist SHA-256: **002e4acc43c2210fe25ceb35ed68582b869af2706f3754964d43a274d3618baf**
+Source playlist SHA-256: **3f14163d10c3403b8c40322b8618c5a67c127bad1f92a2d94a1aae75bba5f24f**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1378** |
+| Streams | **1379** |
 | Active Channel Identities | **714** |
 | Active Primary Streams | **714** |
 | Bangladesh | **70** |
@@ -15,10 +15,10 @@ Source playlist SHA-256: **002e4acc43c2210fe25ceb35ed68582b869af2706f3754964d43a
 | IPTV Local Logos | **STALE** |
 | IPTV EPG Programme Coverage | **54%** |
 | IPTV EPG Mapping | **60.8%** |
-| Stream Health Tested | **1378** |
-| Stream Health Failures | **264** |
-| Persistent Failures | **49** |
-| Near-Duplicate URL Families | **1** |
+| Stream Health Tested | **STALE** |
+| Stream Health Failures | **STALE** |
+| Persistent Failures | **STALE** |
+| Near-Duplicate URL Families | **STALE / UNKNOWN** |
 | Audit findings (review warnings included) | **STALE / UNKNOWN** |
 | Pre-Publish Gate | **STALE / UNKNOWN** |
 | Pre-Publish Gate Generated | **2026-11-18T03:24:09+00:00** |
@@ -63,8 +63,8 @@ Source playlist SHA-256: **002e4acc43c2210fe25ceb35ed68582b869af2706f3754964d43a
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-18T03:24:09.019889+00:00** | **STALE** |
-| EPG coverage / two-playlist inventory | **2026-11-18T12:49:22+00:00** | **CURRENT** |
-| Stream health | **2026-11-18T03:25:29+00:00** | **CURRENT** |
+| EPG coverage / two-playlist inventory | **2026-11-19T01:55:11+00:00** | **CURRENT** |
+| Stream health | **2026-11-18T03:25:29+00:00** | **STALE** |
 | Pre-publish gate | **2026-11-18T03:24:09+00:00** | **STALE** |
 
 ## Maintenance History
