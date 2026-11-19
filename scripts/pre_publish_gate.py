@@ -77,6 +77,13 @@ def review_state(entries):
         # Permanent-removal allowlist entries are intentionally removed by policy;
         # do not misreport them as accidental deletions from protected review queues.
         if group in EXCLUDE and not is_authorized_removal(info,u):
+            source_country=(a.get("x-discovery-source-country") or "").strip().upper()
+            country=(a.get("tvg-country") or "").strip().upper()
+            india_id=any(re.search(r"\\.in(?:@|$)",str(a.get(key,"")).strip(),re.I) for key in ("tvg-id","channel-id"))
+            known_alias=canonical_channel_name(a.get("tvg-name","")) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES
+            if group in REVIEW_QUEUES and (source_country=="IN" or country=="IN" or india_id or known_alias):
+                if prohibited_channel(a,a.get("tvg-name",""),"IN",discovery=True,iptv_discovery=True):
+                    continue
             out[stream_url_key(u)]={"group":group,"name":a.get("tvg-name","").strip(),"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower()}
     return out
 def main():
@@ -185,9 +192,10 @@ def main():
         if group not in REVIEW_QUEUES: continue
         country=a.get("tvg-country","").strip().upper()
         id_values=[str(a.get(key,"")).strip() for key in ("tvg-id","channel-id")]
+        source_country=(a.get("x-discovery-source-country") or "").strip().upper()
         india_id=any(re.search(r"\.in(?:@|$)", value, re.I) for value in id_values)
         known_indian_alias=canonical_channel_name(a.get("tvg-name","")) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES
-        if country == "IN" or india_id or known_indian_alias:
+        if source_country == "IN" or country == "IN" or india_id or known_indian_alias:
             reason=prohibited_channel(a,a.get("tvg-name",""),"IN",discovery=True,iptv_discovery=True)
             if reason:
                 queue_policy_errors.append(f"{a.get('tvg-name','')} ({reason}) in {group}")
