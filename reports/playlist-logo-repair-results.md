@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-19 03:07 UTC**  
+Run time: **2026-11-19 03:15 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,25 +9,15 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1390 | 11 | 0 | 1 | 0 | 0 | 1 |
+| IPTV-Playlist.m3u | 1390 | 0 | 0 | 1 | 0 | 0 | 1 |
 | International-Playlist.m3u | 3290 | 0 | 0 | 70 | 372 | 0 | 70 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| IPTV-Playlist.m3u | 1471 | DD Kisan (1080p) | x56wjea.png | dd-kisan.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1473 | Gyandarshan (720p) | image.png | gyandarshan.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1475 | Kite Victers (720p) [Not 24/7] | kj4oesb.png | kite-victers.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1477 | Peace TV Urdu (1080p) | urdu.jpg | peace-tv-urdu.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1479 | Shiksha TV (720p) | 1ibqhkmcsnxai9loizh-iyw8rm8cmvjezalbfphwuzapspip-ezsjltdln6rqjzionq | shiksha-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1481 | Vyas Channel (576p) | ugc_gec_big.jpg | (none) | Government of India Presentation Gov catalogue: official CEC SVG brandmark. Used as the operator mark because a dedicated Vyas logo asset could not be validated. |  | Download/validation failed: <urlopen error timed out> |
-| IPTV-Playlist.m3u | 1481 | Vyas Channel (576p) | ugc_gec_big.jpg | (none) | none |  | Unsafe logo reference removed |
-| IPTV-Playlist.m3u | 1503 | Discovery Channel (India) HD (1080p) | s159106_ld_h15_aa.png | discovery-channel-india.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1505 | Gyandarshan HD (576p) | image.png | gyandarshan.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1507 | History TV18 HD (1080p) [Geo-blocked] | s143133_ld_h15_aa.png | history-tv18.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1509 | INWILD (1080p) | inwild_landscape-green.png | inwild.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1511 | Safari TV (576p) | image.png | safari-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 1481 | Vyas Channel (576p) | (missing) | (none) | Government of India Presentation Gov catalogue: official CEC SVG brandmark. Used as the operator mark because a dedicated Vyas logo asset could not be validated. |  | Download/validation failed: <urlopen error timed out> |
+| IPTV-Playlist.m3u | 1481 | Vyas Channel (576p) | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 21 | Banglar Kontho 24 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 103 | Vision 24 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 127 | JTV Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
