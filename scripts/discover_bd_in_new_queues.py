@@ -43,19 +43,18 @@ FORBIDDEN_CATEGORY_PATTERNS = {
 IPTV_KNOWN_INDIAN_EDUCATION_NAMES = {
     "vyas channel", "shiksha tv", "gyandarshan", "gyandarshan hd",
     "dd gyan darshan", "kite victers", "victers", "swayam prabha",
-    "dd kisan", "krishi darshan",
 }
 IPTV_KNOWN_INDIAN_EDUCATION_IDS = {
     "vyaschannel.in", "shikshatv.in", "gyandarshan.in", "gyandarshanhd.in",
     "ddgyandarshan.in", "kitevicters.in", "victers.in", "swayamprabha.in",
 }
 IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
-    "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|bulletin|breaking news|gnt)\b", re.I),
-    "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|baby tv|pogo|hungama|sonic|discovery kids|green gold)\b", re.I),
-    "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|vyas channel|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television)\b", re.I),
+    "news": re.compile(r"\b(?:news(?:\s*\d+)?|headlines?|current affairs|newsroom|bulletin|breaking news|gnt|aaj tak|india today|times now|republic(?:\s+(?:bharat|bangla))?|abp(?:\s+ananda)?|zee news|wion|tv\s*9)\b", re.I),
+    "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|baby tv|pogo|hungama|sonic|discovery kids|green gold|sony yay)\b", re.I),
+    "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|vyas channel|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television|vtu)\b", re.I),
     "knowledge": re.compile(r"\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv|inwild|safari tv|dd kisan|krishi darshan|agriculture|agricultural|farming|farmer)\b", re.I),
     "business": re.compile(r"\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\b", re.I),
-    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv|angel|hosanna|madani|iqra|huda|noor|deen|mta|qtv|aastha|sadhna|sanskar|jinvani|satsang|jagran|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|calvary|santvani|sharnam)\b", re.I),
+    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv|angel|hosanna|madani|iqra|huda|noor|deen|mta|qtv|aastha|sadhna|sanskar|jinvani|satsang|jagran|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|calvary|santvani|sharnam|disha tv)\b", re.I),
 }
 DISCOVERY_EXTRA_CATEGORY_PATTERNS = {}
 
@@ -69,11 +68,13 @@ IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
     "news": {"r plus", "tv 100", "tv 100 national"},
     "kids": {"sony yay"},
     "education": {"vtu"},
+    "knowledge": {"dd kisan", "krishi darshan"},
     "religious": {"disha tv"},
 }
 IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
     "rplus.in": "news", "tv100.in": "news", "tv100national.in": "news",
     "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious",
+    "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge",
 }
 
 

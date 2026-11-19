@@ -13,6 +13,55 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def setUp(self):
         self.today = date(2026, 11, 7)
 
+    def test_workflow_run_listing_is_limited_to_the_bangladesh_date_window(self):
+        client = guard.GitHubActions("owner/repo", "token")
+        calls = []
+
+        def fake_request(method, path, payload=None):
+            calls.append((method, path))
+            return {"total_count": 1, "workflow_runs": []}
+
+        client.request = fake_request
+        client.workflow_runs("new-channel-discovery.yml", self.today)
+        self.assertEqual(len(calls), 1)
+        self.assertIn("created=2026-11-06..2026-11-07", calls[0][1])
+
+    def test_installation_rate_limit_is_recognized(self):
+        self.assertTrue(guard.is_rate_limit_error(RuntimeError(
+            "GitHub API GET actions/runs/1 failed: HTTP 403: API rate limit exceeded for installation"
+        )))
+        self.assertFalse(guard.is_rate_limit_error(RuntimeError(
+            "GitHub API GET actions/runs/1 failed: HTTP 404: Not Found"
+        )))
+
+    def test_guard_allows_serialized_writer_when_github_api_is_rate_limited(self):
+        import os
+        import tempfile
+        from unittest.mock import patch
+
+        class RateLimitedClient:
+            def __init__(self, repository, token):
+                pass
+
+            def request(self, method, path, payload=None):
+                raise RuntimeError(
+                    "GitHub API GET actions/runs/1 failed: HTTP 403: API rate limit exceeded for installation"
+                )
+
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "github-output.txt"
+            env = {
+                "GITHUB_REPOSITORY": "owner/repo",
+                "GH_TOKEN": "test-token",
+                "GITHUB_RUN_ID": "1",
+                "GITHUB_OUTPUT": str(output),
+            }
+            with patch.dict(os.environ, env, clear=False), patch.object(
+                guard, "GitHubActions", RateLimitedClient
+            ):
+                self.assertEqual(guard.guard("new-channel-discovery.yml"), 0)
+            self.assertIn("should_run=true", output.read_text(encoding="utf-8"))
+
     def test_bangladesh_day_boundary_is_applied_to_utc_timestamps(self):
         self.assertEqual(
             guard.bangladesh_date("2026-11-06T18:00:00Z"),
@@ -527,7 +576,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             def __init__(self):
                 self.calls = 0
 
-            def workflow_runs(self, workflow_file):
+            def workflow_runs(self, workflow_file, target_date=None):
                 self.calls += 1
                 self.assert_epg_workflow = workflow_file == "epg-refresh.yml"
                 return [completed_skip] if self.calls == 1 else [completed_skip]

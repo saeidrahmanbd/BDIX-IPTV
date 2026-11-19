@@ -157,6 +157,9 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("T Sports", "Sports"),
             ("Discovery Bangladesh", "Knowledge"),
             ("Business Bangladesh", "Business"),
+            ("News Bangladesh", "News"),
+            ("Kids Bangladesh", "Kids"),
+            ("Religious Bangladesh", "Religious"),
         ]
         for name, group in examples:
             with self.subTest(name=name, group=group):
@@ -164,6 +167,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                     {"group-title": group, "tvg-country": "BD", "tvg-id": "SampleChannel.bd"},
                     name,
                     discovery=True,
+                    iptv_discovery=True,
                 ))
 
     def test_indian_education_aliases_are_rejected_even_with_misleading_genre_metadata(self):
@@ -181,6 +185,14 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in", **extra}
             with self.subTest(name=name, extra=extra):
                 self.assertIsNotNone(prohibited_channel(attrs, name, iptv_discovery=True))
+
+    def test_compact_indian_news_brands_are_rejected(self):
+        for name in ("News18 Bangla", "TV9 Bangla", "Aaj Tak", "India Today", "Times Now", "Republic Bangla", "ABP Ananda", "Zee News", "WION"):
+            attrs = {"group-title": "General", "tvg-country": "IN", "tvg-id": "GenericChannel.in"}
+            with self.subTest(name=name):
+                reason = prohibited_channel(attrs, name, iptv_discovery=True)
+                self.assertIsNotNone(reason)
+                self.assertIn("news", reason)
 
     def test_known_indian_news_kids_religious_and_vtu_aliases_are_rejected(self):
         examples = [

@@ -14,7 +14,7 @@ import json
 import os
 import sys
 import time
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
@@ -328,6 +328,7 @@ class GitHubActions:
             raise ValueError("GITHUB_TOKEN is unavailable")
         self.repository = repository
         self.token = token
+        self._jobs_cache: dict[int, list[dict[str, Any]]] = {}
 
     def request(self, method: str, path: str, payload: dict[str, Any] | None = None) -> Any:
         body = json.dumps(payload).encode("utf-8") if payload is not None else None
@@ -355,24 +356,35 @@ class GitHubActions:
         except URLError as exc:
             raise RuntimeError(f"GitHub API {method} {path} failed: {exc}") from exc
 
-    def workflow_runs(self, workflow_file: str) -> list[dict[str, Any]]:
+    def workflow_runs(self, workflow_file: str, target_date: date | None = None) -> list[dict[str, Any]]:
+        """Fetch only the UTC dates that can overlap the requested Bangladesh day."""
         if workflow_file not in VALID_WORKFLOWS:
             raise ValueError(f"Unsupported discovery workflow: {workflow_file}")
+        target = target_date or today_in_bangladesh()
+        local_start = datetime.combine(target, datetime.min.time(), tzinfo=BD_TZ)
+        local_end = local_start + timedelta(days=1, seconds=-1)
+        utc_start = local_start.astimezone(timezone.utc).date()
+        utc_end = local_end.astimezone(timezone.utc).date()
+        created = f"{utc_start.isoformat()}..{utc_end.isoformat()}"
         path = f"actions/workflows/{quote(workflow_file)}/runs"
         all_runs: list[dict[str, Any]] = []
         for page in range(1, 6):
-            result = self.request("GET", f"{path}?per_page=100&page={page}")
+            result = self.request("GET", f"{path}?per_page=100&page={page}&created={quote(created)}")
             page_runs = result.get("workflow_runs", []) if isinstance(result, dict) else []
             all_runs.extend(page_runs)
-            if len(page_runs) < 100:
+            total_count = int(result.get("total_count", len(all_runs))) if isinstance(result, dict) else len(all_runs)
+            if len(page_runs) < 100 or page * 100 >= total_count:
                 break
         return all_runs
 
     def workflow_run_jobs(self, run_id: int) -> list[dict[str, Any]]:
-        """Return job-level outcomes so guard-only successes are not mistaken for discoveries."""
-        result = self.request("GET", f"actions/runs/{int(run_id)}/jobs?per_page=100")
-        jobs = result.get("jobs", []) if isinstance(result, dict) else []
-        return jobs if isinstance(jobs, list) else []
+        """Return cached job-level outcomes so repeated guard checks do not spend API calls."""
+        key = int(run_id)
+        if key not in self._jobs_cache:
+            result = self.request("GET", f"actions/runs/{key}/jobs?per_page=100")
+            jobs = result.get("jobs", []) if isinstance(result, dict) else []
+            self._jobs_cache[key] = jobs if isinstance(jobs, list) else []
+        return self._jobs_cache[key]
 
     def dispatch(self, workflow_file: str) -> None:
         if workflow_file not in VALID_WORKFLOWS:
@@ -391,6 +403,12 @@ def write_output(name: str, value: str) -> None:
             stream.write(f"{name}={value}\n")
 
 
+def is_rate_limit_error(error: BaseException) -> bool:
+    """Recognize GitHub App installation rate limits without masking other API failures."""
+    message = str(error).casefold()
+    return "api rate limit exceeded" in message or ("http 403" in message and "rate limit" in message)
+
+
 def guard(workflow_file: str) -> int:
     repository = os.environ["GITHUB_REPOSITORY"]
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
@@ -400,7 +418,18 @@ def guard(workflow_file: str) -> int:
     # Query the current run directly instead of relying on the eventually
     # consistent workflow-runs collection. This also anchors the Bangladesh
     # date to when GitHub created the run, not when a queued job finally starts.
-    current_run = client.request("GET", f"actions/runs/{current_run_id}")
+    try:
+        current_run = client.request("GET", f"actions/runs/{current_run_id}")
+    except RuntimeError as exc:
+        if not is_rate_limit_error(exc):
+            raise
+        print(
+            "::warning::GitHub Actions API rate limit prevented the duplicate-run lookup. "
+            "The workflow-level concurrency group serializes this writer, so this run is "
+            "allowed to proceed instead of being incorrectly skipped."
+        )
+        write_output("should_run", "true")
+        return 0
     if not isinstance(current_run, dict) or not current_run.get("created_at"):
         raise RuntimeError(f"Could not retrieve creation time for current run {current_run_id}.")
     expected_path = f".github/workflows/{workflow_file}"
@@ -413,7 +442,18 @@ def guard(workflow_file: str) -> int:
 
     # Merge the directly fetched run into the collection so it is always
     # considered, even if the list endpoint has not indexed it yet.
-    runs = client.workflow_runs(workflow_file)
+    try:
+        runs = client.workflow_runs(workflow_file, target_date)
+    except RuntimeError as exc:
+        if not is_rate_limit_error(exc):
+            raise
+        print(
+            "::warning::GitHub Actions API rate limit prevented the daily-run listing. "
+            "The workflow-level concurrency group serializes this writer, so this run is "
+            "allowed to proceed instead of being incorrectly skipped."
+        )
+        write_output("should_run", "true")
+        return 0
     by_id = {int(run["id"]): run for run in runs if run.get("id") is not None}
     by_id[int(current_run_id)] = current_run
     todays = runs_for_date(list(by_id.values()), target_date)
@@ -500,7 +540,7 @@ def wait_for_epg_runs_to_settle(
             f"before recovery decision ({poll + 1}/{max_polls})."
         )
         sleep_fn(poll_interval)
-        runs = client.workflow_runs("epg-refresh.yml")
+        runs = client.workflow_runs("epg-refresh.yml", target_date)
         active = active_today(runs)
 
     if active:
@@ -537,7 +577,7 @@ def watchdog(workflow_files: list[str]) -> int:
             hour, minute = RECOVERY_AFTER_LOCAL[workflow_file]
             print(f"Recovery deferred for {workflow_file} until {hour:02d}:{minute:02d} Asia/Dhaka.")
             continue
-        runs = client.workflow_runs(workflow_file)
+        runs = client.workflow_runs(workflow_file, target_date)
         if workflow_file == "epg-refresh.yml":
             runs = wait_for_epg_runs_to_settle(client, target_date, runs)
         todays = runs_for_date(runs, target_date)
