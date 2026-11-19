@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, LOCAL_BASE, EXCLUDE, REVIEW_QUEUES, identity_key, indian_playlist_policy_errors
+from pre_publish_gate import referenced_logo_file, referenced_logo_relative_path, review_state, logo_audit, LOCAL_BASE, EXCLUDE, REVIEW_QUEUES, identity_key, indian_playlist_policy_errors, parse
 
 
 class PrePublishLogoPathTests(unittest.TestCase):
@@ -35,6 +35,11 @@ class PrePublishLogoPathTests(unittest.TestCase):
             self.assertTrue(any(name in error for error in errors))
         self.assertFalse(any("Bangladesh Islamic TV" in error for error in errors))
         self.assertEqual(review_state(entries[1:4]), {})
+
+    def test_current_iptv_playlist_has_no_prohibited_indian_rows_in_any_group(self):
+        playlist = Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u"
+        entries = parse(playlist.read_text(encoding="utf-8-sig"))
+        self.assertEqual(indian_playlist_policy_errors(entries), [])
 
     def test_missing_logo_in_not_playing_is_advisory_but_active_group_is_blocking(self):
         not_playing = [(
