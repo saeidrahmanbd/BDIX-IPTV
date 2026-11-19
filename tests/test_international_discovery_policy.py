@@ -103,12 +103,12 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             playlist = root / "International-Playlist.m3u"
             registry = intl_validator.FIXED + intl_validator.TAIL
             content = (
-                "#EXTM3U\\n"
-                + "\\n".join(intl_validator.ATTRIBUTION)
-                + "\\n#PLAYLIST-STUDIO-CATEGORIES:"
+                "#EXTM3U\n"
+                + "\n".join(intl_validator.ATTRIBUTION)
+                + "\n#PLAYLIST-STUDIO-CATEGORIES:"
                 + json.dumps(registry)
-                + '\\n#EXTINF:-1 tvg-id="LocalLogo.bd" tvg-name="Local Logo Test" tvg-country="BD" tvg-logo="logos/test.svg" group-title="Bangladesh",Local Logo Test'
-                + "\\nhttps://example.org/test.m3u8\\n"
+                + '\n#EXTINF:-1 tvg-id="LocalLogo.bd" tvg-name="Local Logo Test" tvg-country="BD" tvg-logo="logos/test.svg" group-title="Bangladesh",Local Logo Test'
+                + "\nhttps://example.org/test.m3u8\n"
             )
             playlist.write_text(content, encoding="utf-8")
             with patch.object(intl_validator, "PLAYLIST", playlist), patch.object(intl_validator, "LOGOS", logos):
@@ -124,12 +124,12 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             playlist = root / "International-Playlist.m3u"
             registry = intl_validator.FIXED + intl_validator.TAIL
             content = (
-                "#EXTM3U\\n"
-                + "\\n".join(intl_validator.ATTRIBUTION)
-                + "\\n#PLAYLIST-STUDIO-CATEGORIES:"
+                "#EXTM3U\n"
+                + "\n".join(intl_validator.ATTRIBUTION)
+                + "\n#PLAYLIST-STUDIO-CATEGORIES:"
                 + json.dumps(registry)
-                + '\\n#EXTINF:-1 tvg-id="LocalLogo.bd" tvg-name="Local Logo Test" tvg-country="BD" tvg-logo="https://example.org/test.svg" group-title="Bangladesh",Local Logo Test'
-                + "\\nhttps://example.org/test.m3u8\\n"
+                + '\n#EXTINF:-1 tvg-id="LocalLogo.bd" tvg-name="Local Logo Test" tvg-country="BD" tvg-logo="https://example.org/test.svg" group-title="Bangladesh",Local Logo Test'
+                + "\nhttps://example.org/test.m3u8\n"
             )
             playlist.write_text(content, encoding="utf-8")
             with patch.object(intl_validator, "PLAYLIST", playlist), patch.object(intl_validator, "LOGOS", logos):
