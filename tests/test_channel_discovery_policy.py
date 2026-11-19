@@ -109,8 +109,8 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn("religious", reason)
 
     def test_mh_one_music_is_allowed_but_mh_one_prime_remains_blocked(self):
-        music = {"tvg-country": "IN", "tvg-id": "MHOneMusic.in@SD", "group-title": "Indian Music"}
-        prime = {"tvg-country": "IN", "tvg-id": "MHOnePrime.in@SD", "group-title": "Indian Entertainment"}
+        music = {"tvg-country": "IN", "tvg-id": "Mh1Music.in@SD", "group-title": "Indian Music"}
+        prime = {"tvg-country": "IN", "tvg-id": "MH1Prime.in@SD", "group-title": "Indian Entertainment"}
         self.assertIsNone(prohibited_channel(music, "MH One Music", iptv_discovery=True))
         self.assertIn("MH One Prime", prohibited_channel(prime, "MH One Prime", iptv_discovery=True))
 
