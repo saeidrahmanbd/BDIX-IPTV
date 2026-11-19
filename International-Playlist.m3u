@@ -1096,7 +1096,7 @@ https://vdopanel.jlahozconsulting.com/p/3417/hybrid/play.m3u8
 https://sistemastr.tropicalmoonmedia.com/live/56BE17DB16EB76C9F2DDB8346F4DFA4E/30.m3u8
 #EXTINF:-1 tvg-id="BestofDanceTV.ee@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/best-of-dance-tv-1080p.png" tvg-country="EE" tvg-content="Music" group-title="Estonia" tvg-name="Best of Dance TV",Best of Dance TV
 https://m1b2.worldcast.tv/dancetelevisionone/dancetelevisionone.m3u8
-#EXTINF:-1 tvg-id="DanceTVAlgorhythm.ee@SD" tvg-language="eng" tvg-country="EE" tvg-content="Music" group-title="Estonia" tvg-name="DanceTV Algorhythm",DanceTV Algorhythm
+#EXTINF:-1 tvg-id="DanceTVAlgorhythm.ee@SD" tvg-language="eng" tvg-country="EE" tvg-content="Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dance-tv.png" group-title="Estonia" tvg-name="DanceTV Algorhythm",DanceTV Algorhythm
 https://m2b2.worldcast.tv:7443/dancetelevisionfour/dancetelevisionfour.m3u8
 #EXTINF:-1 tvg-id="DanceTVDeepHouseDistrict.ee@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dancetv-deep-house-district-1080p.png" tvg-country="EE" tvg-content="Music" group-title="Estonia" tvg-name="DanceTV Deep House District",DanceTV Deep House District
 https://m1b2.worldcast.tv/dancetelevisiontwo/dancetelevisiontwo.m3u8
