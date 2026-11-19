@@ -257,11 +257,15 @@ class RepositoryPlaylistInvariantTests(unittest.TestCase):
         for name in validator.PLAYLISTS:
             with self.subTest(playlist=name):
                 text = (ROOT / name).read_text(encoding="utf-8-sig")
-                summary = validator.validate_playlist(name, text, registry, root=ROOT)["summary"]
+                result = validator.validate_playlist(name, text, registry, root=ROOT)
+                summary = result["summary"]
                 self.assertEqual(summary["nonrepository_logo_refs"], 0)
                 self.assertEqual(summary["nvision_refs"], 0)
                 self.assertEqual(summary["non_png_refs"], 0)
-                self.assertEqual(summary["invalid_or_blocked_refs"], 0)
+                self.assertEqual(
+                    summary["invalid_or_blocked_refs"], 0,
+                    msg=json.dumps(result["invalid"], ensure_ascii=False, sort_keys=True),
+                )
 
 
 if __name__ == "__main__":
