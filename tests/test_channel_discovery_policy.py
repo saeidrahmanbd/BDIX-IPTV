@@ -118,6 +118,10 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         attrs = {"tvg-country": "US", "tvg-id": "Doraemon.us@SD", "group-title": "Review"}
         self.assertIsNone(prohibited_channel(attrs, "Doraemon", iptv_discovery=True))
 
+    def test_indian_id_suffix_catches_conflict_with_stale_foreign_country(self):
+        attrs = {"tvg-country": "US", "tvg-id": "DisneyChannel.in@HD", "group-title": "Backup"}
+        self.assertIsNotNone(prohibited_channel(attrs, "Disney Channel", iptv_discovery=True))
+
     def test_indian_islamic_religious_channels_are_rejected_for_iptv_policy(self):
         attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
         self.assertIsNotNone(prohibited_channel(attrs, "Islamic TV", iptv_discovery=True))
