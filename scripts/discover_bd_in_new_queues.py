@@ -102,20 +102,20 @@ def known_indian_forbidden_category(a: dict[str, str], name: str) -> str | None:
 
 
 def is_indian_discovery_candidate(a: dict[str, str], name: str) -> bool:
-    """Infer India using source-country first, then explicit country, ID or known alias.
+    """Infer India from source/country metadata first, then ID or a known alias.
 
-    An explicit BD source/country must remain unrestricted even if a stale ID or
-    display name resembles an Indian channel. A known Indian alias fills missing
-    country metadata, but never overrides an explicit Bangladesh declaration.
+    Any explicit source-country or declared-country value takes precedence.
+    Known Indian aliases may fill missing country metadata, but never override
+    a channel explicitly identified as BD, US, UK or another country.
     """
     source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
-    if source_country in {"BD", "IN"}:
+    if source_country:
         return source_country == "IN"
     declared_country = str(a.get("tvg-country", "")).strip().upper()
-    if declared_country in {"BD", "IN"}:
+    if declared_country:
         return declared_country == "IN"
     resolved = channel_country(a)
-    if resolved in {"BD", "IN"}:
+    if resolved:
         return resolved == "IN"
     return known_indian_forbidden_category(a, name) is not None
 
