@@ -278,14 +278,14 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             baseline = root / "baseline.m3u"
             report = root / "report.md"
             registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
-            prefix = "#EXTM3U\\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\\n"
+            prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
             legacy = (
-                '#EXTINF:-1 tvg-id="SonyYay.in@SD" tvg-name="Sony Yay!" group-title="New Backups",Sony Yay!\\n'
-                "https://example.org/sony-yay.m3u8\\n"
+                '#EXTINF:-1 tvg-id="SonyYay.in@SD" tvg-name="Sony Yay!" group-title="New Backups",Sony Yay!\n'
+                "https://example.org/sony-yay.m3u8\n"
             )
             playlist.write_text(prefix + legacy, encoding="utf-8")
             baseline.write_text(prefix + legacy, encoding="utf-8")
-            report.write_text("# Report\\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
             previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
             os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
             try:
