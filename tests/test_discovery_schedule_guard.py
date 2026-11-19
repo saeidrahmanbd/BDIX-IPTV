@@ -416,8 +416,8 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             )
         )
 
-    def test_later_scheduled_run_remains_blocked_by_successful_discovery(self):
-        successful_run = {
+    def test_later_scheduled_run_takes_priority_over_successful_manual_discovery(self):
+        successful_manual_run = {
             "id": 120,
             "event": "workflow_dispatch",
             "status": "completed",
@@ -441,9 +441,9 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "conclusion": None,
             "created_at": "2026-11-07T01:20:00Z",
         }
-        self.assertFalse(
+        self.assertTrue(
             guard.should_current_run_execute(
-                [successful_run, scheduled_run], 121, self.today, event="schedule"
+                [successful_manual_run, scheduled_run], 121, self.today, event="schedule"
             )
         )
 
