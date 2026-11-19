@@ -661,7 +661,7 @@ def final_mode(playlist, report, baseline, mode):
                     country = m.group(1).upper()
                     break
         if mode == "iptv" and country == "IN":
-            reason = bd_discovery.prohibited_channel(attrs, e["name"], "IN", discovery=True)
+            reason = bd_discovery.prohibited_channel(attrs, e["name"], "IN", discovery=True, iptv_discovery=True)
             if reason:
                 policy_issues.append(f"Indian prohibited category: {e['name']} ({reason})")
         elif mode == "international":
