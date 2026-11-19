@@ -340,7 +340,7 @@ def prohibited_channel(
             country = source_country
     resolved_country = channel_country(a, country)
     values = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""), a.get("channel-id", "")))
-    if iptv_discovery and resolved_country in {None, "IN"}:
+    if iptv_discovery and resolved_country in {None, "IN"} and is_indian_discovery_candidate(a, name):
         known_category = known_indian_forbidden_category(a, name)
         if known_category:
             return f"Indian {known_category} channel is prohibited"
