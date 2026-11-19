@@ -6,6 +6,8 @@ content, including the legacy Fashion TV section, is preserved. Candidates are n
 promoted automatically; dynamic country groups require five unique primary channels.
 Playback is checked by the downstream validation step.
 """
+# Owner-authorized policy-alignment retry marker (2026-11-19).
+
 from __future__ import annotations
 import hashlib,re,unicodedata,urllib.parse,urllib.request
 from collections import Counter,defaultdict
