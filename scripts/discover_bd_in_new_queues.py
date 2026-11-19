@@ -52,7 +52,7 @@ IPTV_KNOWN_INDIAN_EDUCATION_IDS = {
 IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|bulletin|breaking news|gnt)\b", re.I),
     "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|baby tv|pogo|hungama|sonic|discovery kids|green gold)\b", re.I),
-    "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television)\b", re.I),
+    "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|vyas channel|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television)\b", re.I),
     "knowledge": re.compile(r"\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv|inwild|safari tv|dd kisan|krishi darshan|agriculture|agricultural|farming|farmer)\b", re.I),
     "business": re.compile(r"\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\b", re.I),
     "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv|angel|hosanna|madani|iqra|huda|noor|deen|mta|qtv|aastha|sadhna|sanskar|jinvani|satsang|jagran|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|calvary|santvani|sharnam)\b", re.I),
@@ -384,7 +384,11 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
         group = a.get("group-title", "").strip()
         _, display = split_extinf(extinf_line)
         name = (a.get("tvg-name") or display).strip()
-        if group in queue_groups:
+        is_discovery_queue = (
+            group in queue_groups
+            or bool(re.search(r'group-title="(?:New Channels|New Backups|New Backup)"', extinf_line, re.I))
+        )
+        if is_discovery_queue:
             queue_country = "IN" if (
                 a.get("x-discovery-source-country", "").strip().upper() == "IN"
                 or a.get("tvg-country", "").strip().upper() == "IN"
