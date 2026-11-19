@@ -267,6 +267,39 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("missing an authentic local logo: 1", final_report)
             self.assertIn("New duplicate stream URL occurrences: 0", final_report)
 
+    def test_final_iptv_validation_blocks_prohibited_legacy_indian_queue_rows(self):
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
+            prefix = "#EXTM3U\\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\\n"
+            legacy = (
+                '#EXTINF:-1 tvg-id="SonyYay.in@SD" tvg-name="Sony Yay!" group-title="New Backups",Sony Yay!\\n'
+                "https://example.org/sony-yay.m3u8\\n"
+            )
+            playlist.write_text(prefix + legacy, encoding="utf-8")
+            baseline.write_text(prefix + legacy, encoding="utf-8")
+            report.write_text("# Report\\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "iptv")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            final_report = report.read_text(encoding="utf-8")
+            self.assertIn("- Validation status: FAIL", final_report)
+            self.assertIn("Existing prohibited Indian queue row: Sony Yay!", final_report)
+            self.assertIn("Prohibited Indian rows remaining in existing discovery queues: 1", final_report)
+
     def test_parser_skips_vlc_and_kodi_directives_before_media_url(self):
         text = (
             '#EXTM3U\n'
