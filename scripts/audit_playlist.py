@@ -121,7 +121,9 @@ def logo_issue(info):
             with Image.open(resolved) as im:
                 if im.width < 16 or im.height < 16:
                     return "invalid-dimensions"
-        except (OSError, ValueError, Image.DecompressionBombError):
+        except (OSError, ValueError, SyntaxError, EOFError, Image.DecompressionBombError):
+            # Pillow can raise SyntaxError for malformed PNG chunk checksums;
+            # classify the asset instead of crashing the entire playlist audit.
             return "corrupt-image"
         return ""
     if logo.startswith("logos/"):
