@@ -219,15 +219,14 @@ jobs:
             # discovery and stream-health workflows; maintenance does not rewrite it.
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
+            # Canonicalize EXTINF before report-coupled tools so their fingerprints
+            # describe the final playlist bytes. This changes attribute order only.
+            python scripts/maintenance_helpers.py canonicalize-extinf
             # Report-coupled tools run last; no structural IPTV mutation, queue
             # promotion, category reassembly or renumbering is permitted.
             python scripts/iptv_metadata_backfill.py
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix --max-dimension 1024 --max-bytes 153600
-            # Metadata/logo backfills can append attributes after the initial normalizer.
-            # Canonicalize EXTINF once after every metadata mutator, without changing
-            # IPTV row order, group assignment, channel numbers or stream URLs.
-            python scripts/maintenance_helpers.py canonicalize-extinf
             python scripts/verify_international_protected.py verify
             # Validate International metadata only after all final mutations.
             python scripts/validate_international_playlist.py
