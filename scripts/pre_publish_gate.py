@@ -76,7 +76,7 @@ def review_state(entries):
         group=a.get("group-title","").strip()
         # Authorized removals and Indian IPTV six-genre exclusions are not protected rows.
         if group in EXCLUDE and not is_authorized_removal(info,u):
-            if is_prohibited_indian_policy_row(info, a):
+            if is_prohibited_indian_policy_row(info, a) or is_permanently_banned_row(info, a):
                 continue
             out[stream_url_key(u)]={"group":group,"name":a.get("tvg-name","").strip(),"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower()}
     return out
@@ -87,7 +87,8 @@ def is_prohibited_indian_policy_row(info, row_attrs=None):
     name = a.get("tvg-name", "").strip()
     if not is_indian_discovery_candidate(a, name):
         return False
-    return bool(prohibited_channel(a, name, "IN", discovery=True, iptv_discovery=True))
+    reason = prohibited_channel(a, name, "IN", discovery=True, iptv_discovery=True)
+    return bool(reason and reason != "permanently banned channel")
 
 
 def indian_playlist_policy_errors(entries):
@@ -98,6 +99,23 @@ def indian_playlist_policy_errors(entries):
             name = a.get("tvg-name", "").strip()
             reason = prohibited_channel(a, name, "IN", discovery=True, iptv_discovery=True)
             errors.append(f"{name} ({reason}) in {a.get('group-title', '').strip() or '(missing group)'}")
+    return errors
+
+
+def is_permanently_banned_row(info, row_attrs=None):
+    """Identify exact IDs/names on the repository permanent-ban list."""
+    a = row_attrs or attrs(info)
+    name = a.get("tvg-name", "").strip()
+    return prohibited_channel(a, name, discovery=True, iptv_discovery=True) == "permanently banned channel"
+
+
+def permanently_banned_playlist_errors(entries):
+    """Return permanently banned channels regardless of country or group."""
+    errors = []
+    for info, a, _ in entries:
+        if is_permanently_banned_row(info, a):
+            name = a.get("tvg-name", "").strip()
+            errors.append(name + " (permanently banned) in " + (a.get("group-title", "").strip() or "(missing group)"))
     return errors
 
 def main():
@@ -113,7 +131,7 @@ def main():
     for info,a,u in old_primary:
         groups=cur_all_groups.get(stream_url_key(u),set())
         if groups & {"Backup","Review","New Channels","New Backups"}: quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup","Review","New Channels","New Backups"}))))
-        elif not groups: (approved_removed if (approved_removal(u) or is_authorized_removal(info,u) or is_prohibited_indian_policy_row(info,a)) else removed).append((a.get("tvg-name",""),u))
+        elif not groups: (approved_removed if (approved_removal(u) or is_authorized_removal(info,u) or is_prohibited_indian_policy_row(info,a) or is_permanently_banned_row(info,a)) else removed).append((a.get("tvg-name",""),u))
     old_review=review_state(old); cur_review=review_state(current); current_by_url={stream_url_key(u):(a,u) for _,a,u in current}
     review_reclassified=[]; review_promoted=[]; review_removed=[]
     for url,state in old_review.items():
@@ -172,6 +190,9 @@ def main():
                 logo_missing_file_details.append((name,group,report_path))
     issues=[]
     playlist_policy_errors = indian_playlist_policy_errors(current)
+    permanent_ban_errors = permanently_banned_playlist_errors(current)
+    if permanent_ban_errors:
+        issues.append(f"permanently banned channel entries anywhere in IPTV playlist: {len(permanent_ban_errors)}")
     if playlist_policy_errors:
         issues.append(f"prohibited Indian genre entries anywhere in IPTV playlist: {len(playlist_policy_errors)}")
     relative_logo_refs=[a.get("tvg-name","") for _,a,_ in current if a.get("tvg-logo","").strip().startswith("logos/")]
@@ -218,7 +239,7 @@ def main():
     status="PASS" if not issues else "BLOCK"
     old_by_url={stream_url_key(u):(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in old}; cur_by_url_all={stream_url_key(u):(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in current}
     added=[u for u in cur_by_url_all if u not in old_by_url]; removed_all=[u for u in old_by_url if u not in cur_by_url_all]; modified=[u for u in cur_by_url_all if u in old_by_url and cur_by_url_all[u]!=old_by_url[u]]
-    lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Primary streams intentionally removed by known-bad or Indian genre policy: **{len(approved_removed)}**",f"- Primary streams quarantined: **{len(quarantined)}**",f"- Review entries reclassified: **{len(review_reclassified)}**",f"- Review entries promoted: **{len(review_promoted)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",f"- Prohibited Indian genre entries across all IPTV groups: **{len(playlist_policy_errors)}**",f"- Primary entries missing channel numbers: **{len(missing)}**",f"- Primary channel-number sequence issues (non-blocking; existing row order is protected): **{len(chno_sequence_issues)}**",f"- Numbered review entries: **{len(review_numbered)}**",f"- Same-ID metadata name conflicts: **{len(metadata_conflicts)}**",f"- Orphan Backup entries: **{len(orphan_backups)}**",f"- Active rows with incomplete required metadata: **{len(incomplete_metadata)}**",f"- tvg-id/channel-id inconsistencies: **{len(id_pair_conflicts)}**",f"- Entries missing tvg-language: **{len(missing_languages)}**",f"- Raw resolution/geoblock name tags: **{len(raw_name_issues)}**",f"- Missing logos in active groups: **{len(logo_missing)}**",f"- Missing logos deferred in review groups (Review/New Channels/New Backups): **{len(logo_missing_review)}**",f"- External logo URLs: **{len(logo_external)}**",f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",f"- Missing referenced local logo files: **{len(logo_missing_files)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Protected-queue policy","New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.","","## Channel-Number Sequence Review",f"Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **{len(chno_sequence_issues)}**.","","## Blocking Reasons"]
+    lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Primary streams intentionally removed by known-bad or Indian genre policy: **{len(approved_removed)}**",f"- Primary streams quarantined: **{len(quarantined)}**",f"- Review entries reclassified: **{len(review_reclassified)}**",f"- Review entries promoted: **{len(review_promoted)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",f"- Prohibited Indian genre entries across all IPTV groups: **{len(playlist_policy_errors)}**",f"- Permanently banned channel entries across all IPTV groups: **{len(permanent_ban_errors)}**",f"- Primary entries missing channel numbers: **{len(missing)}**",f"- Primary channel-number sequence issues (non-blocking; existing row order is protected): **{len(chno_sequence_issues)}**",f"- Numbered review entries: **{len(review_numbered)}**",f"- Same-ID metadata name conflicts: **{len(metadata_conflicts)}**",f"- Orphan Backup entries: **{len(orphan_backups)}**",f"- Active rows with incomplete required metadata: **{len(incomplete_metadata)}**",f"- tvg-id/channel-id inconsistencies: **{len(id_pair_conflicts)}**",f"- Entries missing tvg-language: **{len(missing_languages)}**",f"- Raw resolution/geoblock name tags: **{len(raw_name_issues)}**",f"- Missing logos in active groups: **{len(logo_missing)}**",f"- Missing logos deferred in review groups (Review/New Channels/New Backups): **{len(logo_missing_review)}**",f"- External logo URLs: **{len(logo_external)}**",f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",f"- Missing referenced local logo files: **{len(logo_missing_files)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Protected-queue policy","New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.","","## Channel-Number Sequence Review",f"Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **{len(chno_sequence_issues)}**.","","## Blocking Reasons"]
     lines.extend("- "+x for x in issues) if issues else lines.append("No hard safety blockers detected.")
     lines += ["","## Warnings / Manual Review",""]
     lines.extend("- "+x for x in warnings) if warnings else lines.append("No outstanding metadata or discovery warnings.")
@@ -232,6 +253,7 @@ def main():
     lines.extend(f"- **{n}** — {g}" for n,g in raw_name_issues) if raw_name_issues else lines.append("None.")
     lines += ["","## Queue validation",""]; lines.extend("- "+x for x in queue_errors) if queue_errors else lines.append("Queue country checks completed.")
     lines += ["","## Indian IPTV genre-policy blockers",""]; lines.extend("- "+x for x in playlist_policy_errors) if playlist_policy_errors else lines.append("No prohibited Indian News, Kids, Education, Knowledge, Business or Religious entries anywhere in the IPTV playlist.")
+    lines += ["","## Permanent channel-ban blockers",""]; lines.extend("- "+x for x in permanent_ban_errors) if permanent_ban_errors else lines.append("No permanently banned channel IDs or names remain in the IPTV playlist.")
     lines += ["","## Missing local logo files","","| Channel | Group | Referenced filename |","|---|---|---|"]
     if logo_missing_file_details:
         clean=lambda value:str(value).replace("|","\\|").replace("\\n"," ")
