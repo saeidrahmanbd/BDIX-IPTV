@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-19T04:27:13+00:00**
+Generated: **2026-11-19T04:35:03+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **8611340c6b07807062028b490d6f6cd925bf5fb18ac79bb174f637872523e81e**
-- International-Playlist.m3u SHA-256: **1b9c33053a2fea019d939811e2d0061979dc81026b71d1308fa4f5c704940773**
+- International-Playlist.m3u SHA-256: **30fcc8d397ec35f68dafd7c0d98612457c7fd9d186115ba65b77d84cde1fcf94**
 
 ## Summary
 
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **176**
 - Exact-byte duplicate asset clusters: **976**
-- Playlist references whose asset stem differs from the normalized channel name: **1559**
+- Playlist references whose asset stem differs from the normalized channel name: **1555**
 - Unreferenced image assets immediately inside logos/: **1728** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **1**
 
@@ -1842,7 +1842,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Adrenalina Pura TV Brazil | adrenalina-pura-tv-brazil.png | Brazil |
 | International-Playlist.m3u | CINDIE TV | cindie-tv-73d1d00274.png | Brazil |
 | International-Playlist.m3u | Classique TV | classique-tv-360p-6f1c2ec605.png | Brazil |
-| International-Playlist.m3u | Music Box Brazil (720p) | music-box-brazil-720p.png | Brazil |
 | International-Playlist.m3u | Rádio Temas de Novelas | radio-temas-de-novelas-52562d10f48bddf24188.png | Brazil |
 | International-Playlist.m3u | Telecine Cult | verified-telecine-cult-9dd1e5a93a.png | Brazil |
 | International-Playlist.m3u | Telecine Fun | verified-telecine-fun-672730ce67.png | Brazil |
@@ -2177,10 +2176,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Magnificent Movies Network | verified-magnificent-movies-network-867c631f92.png | United States |
 | International-Playlist.m3u | MCN6 Music Channel | mcn6-music-channel-1080p-b16c4717c3.png | United States |
 | International-Playlist.m3u | Metaleitor TV | metaleitor-tv-c73eb9b874.png | United States |
-| International-Playlist.m3u | MTV Flow Latino (720p) | mtv-flow-latino-720p.png | United States |
-| International-Playlist.m3u | MTV Flow Latino LatAm (720p) | mtv-flow-latino-latam-720p.png | United States |
-| International-Playlist.m3u | MTV Spankin' New (1080p) | mtv-spankin-new-1080p.png | United States |
-| International-Playlist.m3u | MTV Spankin' New CA (1080p) | mtv-spankin-new-ca-1080p.png | United States |
 | International-Playlist.m3u | Paramount Movie Channel | verified-paramount-movie-channel-17e8690125.png | United States |
 | International-Playlist.m3u | Paramount+ Picks | paramount-plus-picks-1f9a19406d.png | United States |
 | International-Playlist.m3u | Pluto Classic Movie Westerns | verified-pluto-classic-movie-westerns-227c06af7f.png | United States |
@@ -2527,6 +2522,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Movify Kino | verified-movify-kino-576p-b50c36670c.png | Review |
 | International-Playlist.m3u | Mr Bean Animated ES | verified-mr-bean-animated-es-1080p-d25e7d73b7.png | Review |
 | International-Playlist.m3u | Mr Bean Animated FR | verified-mr-bean-animated-fr-1080p-d25e7d73b7.png | Review |
+| International-Playlist.m3u | Music [ ] | music-480p-not-24-7.png | Review |
 | International-Playlist.m3u | Mystery TV | mystery-tv.png | Review |
 | International-Playlist.m3u | Nandighosha TV | nandighosha-tv.png | Review |
 | International-Playlist.m3u | Nat Geo TV | nat-geo-tv-3ec65d6036.png | Review |
