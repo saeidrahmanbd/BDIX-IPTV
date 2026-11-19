@@ -137,7 +137,6 @@ jobs:
           python -m unittest discover -s tests -p 'test_logo_reference_audit.py'
           python -m unittest discover -s tests -p 'test_duplicate_logo_cleanup_plan.py'
           python -m unittest discover -s tests -p 'test_logo_provenance.py'
-          python -m unittest discover -s tests -p 'test_validate_logo_references.py'
           python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
       - name: Capture protected playlist metadata
         shell: bash
@@ -163,6 +162,9 @@ jobs:
           python scripts/plan_duplicate_logo_cleanup.py --output reports/duplicate-logo-cleanup-plan.json
           python scripts/generate_logo_authenticity_manifest.py
           python scripts/validate_logo_references.py --baseline-dir /tmp
+          # Repository-wide no-external-logo invariant must run after newly discovered
+          # candidates have been localized, not before the repair step.
+          python -m unittest discover -s tests -p 'test_validate_logo_references.py'
           git add IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json reports/logo-format-conversion.md reports/logo-asset-quality-audit.md reports/logo-reference-audit.json reports/duplicate-logo-cleanup-plan.json reports/generated-fallback-replacement.md
           if git diff --cached --quiet; then
             echo "No additional local logo changes."
