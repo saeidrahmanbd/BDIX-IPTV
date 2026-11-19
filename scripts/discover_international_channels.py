@@ -114,7 +114,7 @@ def is_verified_aruba_vip_music(a, code):
 def policy(a,name,allow_legacy_group=False):
  code=country_code(a)
  group_text=(a.get("group-title") or "").strip().casefold()
- group_parts=[re.sub(r"[^a-z0-9]+","",part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
+ group_parts=[norm(part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
  text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
  if BAD_NAME_RE.search(name): return None,"test/VOD/non-TV name",code
  name_key=norm(name)
@@ -190,6 +190,9 @@ def discovery_eligibility(a,name,allow_legacy_group=False):
  if target in {"News","Religious","Kids","Sports","Documentary & Wildlife","Fashion TV"}:
   label = "news" if target == "News" else target.casefold()
   return None,f"{label} is outside the worldwide Movie/Music-only discovery policy",code
+ candidate_text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
+ if re.search(r"\b(?:adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel)\b",candidate_text,re.I):
+  return None,"adult is outside the worldwide Movie/Music-only discovery policy",code
  group_text=(a.get("group-title") or "").strip()
  group_key=norm(group_text)
  if group_text and group_key not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_key=="international"):
