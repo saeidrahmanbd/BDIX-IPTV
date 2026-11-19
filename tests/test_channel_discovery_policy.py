@@ -207,6 +207,11 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertFalse(is_indian_discovery_candidate(
             {"x-discovery-source-country": "BD", "tvg-id": "SonyYay.in@SD"}, "Sony Yay!"
         ))
+        self.assertIsNone(prohibited_channel(
+            {"x-discovery-source-country": "BD", "tvg-id": "SonyYay.in@SD", "group-title": "Kids"},
+            "Sony Yay!",
+            iptv_discovery=True,
+        ))
         self.assertTrue(is_indian_discovery_candidate(
             {"x-discovery-source-country": "IN", "tvg-country": "BD"}, "Sony Yay!"
         ))
