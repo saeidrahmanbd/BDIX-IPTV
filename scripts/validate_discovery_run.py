@@ -231,7 +231,7 @@ def append_section(report_path, heading, body):
     p.write_text(original + "\n\n## " + heading + "\n\n" + body.rstrip() + "\n", encoding="utf-8")
 
 
-def promote_verified_candidates(entries, verified_starts, inconclusive_starts, update_lines):
+def promote_verified_candidates(entries, verified_starts, inconclusive_starts, update_lines, removed_starts=None):
     """Graduate only verified, logo-backed International discovery rows.
 
     Unique new channel identities become primary rows. Alternate streams go to
@@ -240,6 +240,7 @@ def promote_verified_candidates(entries, verified_starts, inconclusive_starts, u
     """
     queue_groups = {"new channels", "new backup", "new backups"}
     excluded_groups = queue_groups | {"backup", "backups", "review", "not playing", "test"}
+    removed_starts = set(removed_starts or ())
     country_labels = {
         ("pakistani" if code == "PK" else discovery.country_group(code).casefold()): code
         for code in discovery.ISO_CODES if code not in {"BD", "IN"}
@@ -265,6 +266,8 @@ def promote_verified_candidates(entries, verified_starts, inconclusive_starts, u
     reserved = set(active_identity_keys)
     added_ids = defaultdict(set)
     for entry in entries:
+        if entry["start"] in removed_starts:
+            continue
         old_group = entry["group"].strip().casefold()
         if old_group not in queue_groups:
             continue
@@ -465,7 +468,7 @@ def probe_mode(playlist, report, baseline, mode):
         if localized:
             counts["logos localized to repository assets"] += 1
     if mode == "international":
-        promotions = promote_verified_candidates(entries, verified_starts, inconclusive_starts, update_lines)
+        promotions = promote_verified_candidates(entries, verified_starts, inconclusive_starts, update_lines, remove_starts)
         counts["verified primary channels promoted"] += sum(1 for _, _, target, _ in promotions if target not in {"Backup", "Review"})
         counts["verified alternate streams moved to Backup"] += sum(1 for _, _, target, _ in promotions if target == "Backup")
         counts["inconclusive candidates moved to Review"] += sum(1 for _, _, target, _ in promotions if target == "Review")
