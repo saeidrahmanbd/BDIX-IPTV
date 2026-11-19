@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlparse
 ROOT = Path(__file__).resolve().parents[1]
 PLAYLISTS = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
 CLEANUP = "48b402a1ebbf1239d8ecabf485c477e95d97d85c"
-ATTR = re.compile(r'\\btvg-logo="([^"]*)"')
+ATTR = re.compile(r'\btvg-logo="([^"]*)"')
 EXTS = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".bmp", ".avif"}
 
 def git(*args):
@@ -17,7 +17,7 @@ def git(*args):
 def norm(p):
     s = Path(p).stem.lower()
     s = re.sub(r"-[0-9a-f]{8,}$", "", s)
-    s = re.sub(r"-(?:\\d{3,4}p|\\d{3,4}x\\d{3,4})$", "", s)
+    s = re.sub(r"-(?:\d{3,4}p|\d{3,4}x\d{3,4})$", "", s)
     return re.sub(r"[^a-z0-9]+", "", s)
 
 def local_path(value):
@@ -87,7 +87,7 @@ def main():
         rows=git("ls-tree","-r",parent,"--","logos").splitlines()
         old={}
         for row in rows:
-            meta,path=row.split("\\t",1); mode,typ,sha=meta.split()
+            meta,path=row.split("\t",1); mode,typ,sha=meta.split()
             if typ=="blob": old[path]=sha
         current=sorted(referenced & set(info))
         preserved=[p for p in current if info[p]["blob"] in set(old.values())]
@@ -110,7 +110,7 @@ def main():
       "playlist_errors":playlist_errors,"safety":"Read-only: no playlist or logo files modified or deleted."}
     jp=ROOT/a.json; mp=ROOT/a.markdown
     jp.parent.mkdir(parents=True,exist_ok=True); mp.parent.mkdir(parents=True,exist_ok=True)
-    jp.write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\\n",encoding="utf-8")
+    jp.write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     lines=["# Binary Logo Audit","",f"- HEAD: {report['repository_head']}",
       f"- Assets scanned: {len(assets)} ({report['asset_bytes']:,} bytes)",
       f"- Byte-identical duplicate groups: {len(duplicates)}",
@@ -128,7 +128,7 @@ def main():
     lines += ["","## Invalid assets"]+[f"- {x['path']}: {x['validation']}" for x in invalid[:300]]
     lines += ["","## Filename collisions"]+[f"- {x['normalized_stem']}: "+", ".join(y["path"] for y in x["files"]) for x in collisions[:300]]
     lines += ["","## Safety",report["safety"],""]
-    mp.write_text("\\n".join(lines),encoding="utf-8")
+    mp.write_text("\n".join(lines),encoding="utf-8")
     print(json.dumps({k:report[k] for k in ("repository_head","asset_count","asset_bytes","playlists",
       "byte_identical_duplicate_groups","missing_referenced_files","corrupt_referenced_files","invalid_assets",
       "unreferenced_assets","different_content_same_normalized_filename","near_filename_candidates","historical_cleanup_impact")},indent=2))
