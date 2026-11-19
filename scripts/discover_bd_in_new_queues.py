@@ -224,21 +224,37 @@ def parse(text: str):
     return out
 
 
+def explicit_country_codes(a: dict[str, str]) -> set[str]:
+    """Return every country code explicitly present in country metadata or channel IDs."""
+    codes: set[str] = set()
+    for item in re.split(r"[;,|/\s]+", (a.get("tvg-country") or "").strip()):
+        value = item.strip().upper()
+        if value in {"BD", "BANGLADESH"}:
+            codes.add("BD")
+        elif value in {"IN", "INDIA"}:
+            codes.add("IN")
+        elif re.fullmatch(r"[A-Z]{2}", value):
+            codes.add(value)
+    for key in ("tvg-id", "channel-id"):
+        match = ID_CC_RE.search((a.get(key) or "").strip().casefold())
+        if match:
+            codes.add(match.group(1).upper())
+    return codes
+
+
 def channel_country(a: dict[str, str], fallback: str | None = None) -> str | None:
-    """Resolve BD/IN from source context, tvg-country, or a recognized channel-ID suffix."""
+    """Resolve BD/IN from explicit metadata first, then from the source-feed context."""
+    codes = explicit_country_codes(a)
+    if "IN" in codes:
+        return "IN"
+    if "BD" in codes:
+        return "BD"
     if fallback:
         value = fallback.strip().casefold()
         if value in {"bangladesh", "bd"}:
             return "BD"
         if value in {"india", "in"}:
             return "IN"
-    declared = (a.get("tvg-country") or "").strip().upper()
-    if declared in {"BD", "IN"}:
-        return declared
-    for key in ("tvg-id", "channel-id"):
-        match = ID_CC_RE.search((a.get(key) or "").strip().casefold())
-        if match and match.group(1) in {"bd", "in"}:
-            return match.group(1).upper()
     return None
 
 
@@ -297,7 +313,14 @@ def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=Non
     """
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
-    forbidden = prohibited_channel(a, name, country, discovery=True)
+    explicit_codes = explicit_country_codes(a)
+    out_of_scope = sorted(explicit_codes - {"BD", "IN"})
+    if out_of_scope:
+        return None, "explicit channel country outside Bangladesh/India: " + ", ".join(out_of_scope)
+    # Explicit BD/IN metadata takes precedence over the source feed. If both
+    # allowed codes conflict, apply India's narrower exclusions conservatively.
+    resolved_country = "India" if "IN" in explicit_codes else "Bangladesh" if "BD" in explicit_codes else country
+    forbidden = prohibited_channel(a, name, resolved_country, discovery=True)
     if forbidden:
         return None, forbidden
     p = urlparse(url)
@@ -485,14 +508,17 @@ def main() -> int:
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**",
-        "- Bangladesh channels of all genres are eligible. Indian Kids and Sports channels are eligible, explicitly including cricket and football; Indian News, Religious (including Islamic), Educational, Knowledge and Business/Finance channels remain prohibited.",
+        "- Bangladesh channels of all genres are eligible. Indian News and non-Islamic religious channels are excluded; Islamic religious, Kids, Sports, educational, knowledge, business and other legitimate live-TV genres remain eligible unless individually denylisted.",
+        "- Explicit country codes outside BD/IN are rejected even when a source feed is misclassified; missing country metadata may use the BD/IN source-feed context for manual review.",
+        "- Only authentic local logos under /logos/ are retained; if no matching local asset exists, the logo is left blank rather than using an external or placeholder image.",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
         "- Existing manual-review queue rows changed by discovery: **0**",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected/held candidates: **{rejected}**",
-        "- Country metadata, channel IDs, language and logos are advisory at this stage; retain uncertain values for owner review and repair later.", "",
+        "- Incomplete optional metadata does not by itself block a valid source-feed candidate; explicit non-BD/IN country metadata does.",
+        "- Missing authentic local logos are left blank for later repair; external logo URLs are not retained.", "",
         "## Rejection reasons", "",
         *(f"- {r}: {n}" for r, n in sorted(reasons.items())), "",
         "## New Channels", "",
