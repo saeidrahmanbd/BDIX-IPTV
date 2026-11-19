@@ -7,25 +7,25 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-19 — `IPTV-Playlist.m3u`
 
-- New channel identities: **31**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **39 / 0**
+- New channel identities: **0**
+- Channel identities removed: **13**
+- Stream URLs added / removed: **0 / 13**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Added channel identities (up to 10):
-- BHI Channel
-- R Plus Gold
-- Darshana TV
-- Q TV
-- Animal Planet
-- BVG
-- Discovery Turbo
-- DocuBay TV
-- Epic Crimes
-- History TV
+Removed channel identities (up to 10):
+- Mei Alai TV
+- DD Bharati
+- KCL TV
+- MH 1 Prime
+- NKR TV Kannada
+- Siri Kannada All Time
+- Subin TV
+- Tamilan TV
+- Tehzeeb TV
+- VCV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-19 — `International-Playlist.m3u`
