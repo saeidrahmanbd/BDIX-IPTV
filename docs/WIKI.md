@@ -49,7 +49,7 @@ A single failed probe, an inconclusive response or a runner-wide reachability in
 | Origin / collection | IPTV-Playlist.m3u | International-Playlist.m3u |
 |---|---|---|
 | Bangladesh | Eligible; owner-curated | Only dedicated Movies/Music channels are eligible for new discoveries; existing curated entries are preserved |
-| India | News and non-Islamic religious channels are prohibited. Islamic religious channels, kids and sports—including cricket and football—are allowed. Other legitimate live-TV genres remain eligible unless specifically denylisted. | Only dedicated Movies/Music channels are eligible for new discoveries, like every other country; existing curated entries are preserved |
+| India | In IPTV-Playlist.m3u, News, Kids, Education, Knowledge, Business/Finance and all Religious channels are prohibited. Sports remain eligible. | The six IPTV-specific Indian exclusions do not apply to International-Playlist.m3u; its separate rules govern India. |
 | Pakistan | Supported only where explicitly accepted by the main playlist's manual curation | Only dedicated Movies/Music channels are eligible, like every other country |
 | Other countries | Existing owner-curated entries remain subject to manual selection | Only dedicated Movie and Music channels are eligible |
 

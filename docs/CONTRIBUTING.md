@@ -10,7 +10,7 @@ Thanks for helping improve the project.
 - Do not remove Backup or review-queue entries from the main IPTV playlist solely because an automated health check failed.
 - Keep New Channels and New Backups populated by discovery workflows; apply each playlist's separate approval and promotion rules.
 - Use local repository logos only in published playlists.
-- Follow the regional discovery policy: Bangladesh and Pakistan allow all genres; India excludes News, all Religious (including Islamic), Educational/Knowledge, Business/Finance and Farming, while Kids and Sports (including cricket and football) are allowed; all other foreign countries in the International playlist are limited to Movies/Music.
+- Follow the regional discovery policy: Bangladesh and Pakistan retain their established country rules. In IPTV-Playlist.m3u, India excludes News, Kids, Education, Knowledge, Business/Finance and all Religious channels; Sports remain eligible. These six Indian exclusions are specific to IPTV-Playlist.m3u and must not be applied to International-Playlist.m3u. Preserve the International playlist’s separate country and genre rules.
 - Avoid duplicate stream URLs.
 - Keep channel identity, country, language, group, and display-name metadata consistent.
 - Treat signed, tokenized, session-specific, and rendition-only URLs as review items rather than proof of independent redundancy.

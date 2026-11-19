@@ -36,7 +36,7 @@ BAD_WORDS = {
 # Legacy India exclusions are retained for the International playlist's distinct policy.
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
-    "religious": re.compile(r"\b(?:religious|religion|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
+    "religious": re.compile(r"\b(?:religious|religion|darshana tv|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
 }
 # Strict India-only exclusions for IPTV-Playlist.m3u. Bangladesh remains
 # unrestricted; International does not opt into this additional policy.
@@ -50,7 +50,7 @@ IPTV_KNOWN_INDIAN_EDUCATION_IDS = {
 }
 IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news(?:\s*\d+)?|headlines?|current affairs|newsroom|bulletin|breaking news|gnt|aaj tak|india today|times now|republic(?:\s+(?:bharat|bangla))?|abp(?:\s+ananda)?|zee news|wion|tv\s*9)\b", re.I),
-    "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|baby tv|pogo|hungama|sonic|discovery kids|green gold|sony yay)\b", re.I),
+    "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|disney channel|baby tv|pogo|hungama|sonic|discovery kids|green gold|sony yay)\b", re.I),
     "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|vyas channel|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television|vtu)\b", re.I),
     "knowledge": re.compile(r"\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv|inwild|safari tv|dd kisan|krishi darshan|agriculture|agricultural|farming|farmer)\b", re.I),
     "business": re.compile(r"\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\b", re.I),
@@ -65,15 +65,15 @@ def canonical_channel_name(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value).strip()
 
 IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
-    "news": {"r plus", "tv 100", "tv 100 national"},
-    "kids": {"sony yay"},
+    "news": {"r plus", "r plus gold", "bhi channel", "tv 100", "tv 100 national"},
+    "kids": {"sony yay", "disney channel", "jungle book", "doraemon"},
     "education": {"vtu"},
     "knowledge": {"dd kisan", "krishi darshan"},
-    "religious": {"disha tv"},
+    "religious": {"disha tv", "q tv", "shekinah tv", "darshana tv"},
 }
 IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
-    "rplus.in": "news", "tv100.in": "news", "tv100national.in": "news",
-    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious",
+    "rplus.in": "news", "rplusgold.in": "news", "bhi.channel.in": "news", "tv100.in": "news", "tv100national.in": "news",
+    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "qtv.in": "religious", "shekinahtv.in": "religious", "darshanatv.in": "religious",
     "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge",
 }
 
@@ -233,7 +233,7 @@ FORBIDDEN_BRANDS = re.compile(
     
     r""
     r""
-    r"mh\s*one|sai\s+tv|darshana\s+tv|sarv\s+dharm\s+sangam"
+    r"sai\s+tv|darshana\s+tv|sarv\s+dharm\s+sangam"
     r")\b",
     re.IGNORECASE,
 )
