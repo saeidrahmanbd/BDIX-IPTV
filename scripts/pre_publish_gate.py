@@ -79,7 +79,7 @@ def review_state(entries):
         if group in EXCLUDE and not is_authorized_removal(info,u):
             source_country=(a.get("x-discovery-source-country") or "").strip().upper()
             country=(a.get("tvg-country") or "").strip().upper()
-            india_id=any(re.search(r"\\.in(?:@|$)",str(a.get(key,"")).strip(),re.I) for key in ("tvg-id","channel-id"))
+            india_id=any(re.search(r"\.in(?:@|$)",str(a.get(key,"")).strip(),re.I) for key in ("tvg-id","channel-id"))
             known_alias=canonical_channel_name(a.get("tvg-name","")) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES
             if group in REVIEW_QUEUES and (source_country=="IN" or country=="IN" or india_id or known_alias):
                 if prohibited_channel(a,a.get("tvg-name",""),"IN",discovery=True,iptv_discovery=True):
