@@ -1877,5 +1877,148 @@
     }
   ],
   "deletion_performed": false,
-  "quarantine_performed": false
+  "quarantine_performed": false,
+  "live_reconciliation": {
+    "checked_at": "2026-11-19",
+    "branch": "main",
+    "playlist_blob_shas": {
+      "IPTV-Playlist.m3u": "b15fbb6c9691ad982c5800a0eeba4ac301d767dd",
+      "International-Playlist.m3u": "c4a0d459f65e2a76fb8c6160ae463dcf1357fe1c"
+    },
+    "reference_scan_blob_shas": {
+      "reports/logo-source-registry.json": "b58378992d5a327ff59063fcfa8c89d87f576856",
+      "scripts/logo_source_catalog.py": "6e45fa6136ac6a0e43a0892fc8f217290aeb453c",
+      "scripts/repair_playlist_logos.py": "d0b436bced9e392567bf0a4cfd61293609dead1b"
+    },
+    "reconciled_stale_unused_paths": [
+      {
+        "stale_path": "logos/unused/euro-sports-hd.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/euro-sports-hd.png",
+        "retained_blob_sha": "6ba373e57a2ab29abba39c093a3d9bd2f4b3f38e",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      },
+      {
+        "stale_path": "logos/unused/t-sports-hd.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/t-sports-hd.png",
+        "retained_blob_sha": "9f9ea82b285a191293b77c6061f9764159546aa4",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      },
+      {
+        "stale_path": "logos/unused/willow-sports.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/willow-sports.png",
+        "retained_blob_sha": "8520948a6739d1af28e0b602c29c6abc1ff18a5f",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      },
+      {
+        "stale_path": "logos/unused/now-70s.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/now-70s.png",
+        "retained_blob_sha": "95d157916cd3a46cf8a735db99fa07cb7d316e5f",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      },
+      {
+        "stale_path": "logos/unused/cinemax-moremax.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/cinemax-moremax.png",
+        "retained_blob_sha": "76ab44929dee17eb16117ece4b92b96e7b78c4a8",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      },
+      {
+        "stale_path": "logos/unused/gravitas-movies.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/gravitas-movies.png",
+        "retained_blob_sha": "88a1ef3e0320726b8e4574fec6a2018132d26f47",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      },
+      {
+        "stale_path": "logos/unused/zoom.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/zoom.png",
+        "retained_blob_sha": "b0f4a1df7fb3599e8bbc6d28062fcb0d4f8299d2",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      },
+      {
+        "stale_path": "logos/unused/30a-music.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/30a-music.png",
+        "retained_blob_sha": "8b8aed5e5075f11a87c874b6682bd8af6cfe008d",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      },
+      {
+        "stale_path": "logos/unused/mh-one-prime.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/mh-one-prime.png",
+        "retained_blob_sha": "72274499b65c92f5c34d1b8f5dedf9609d26f52f",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      },
+      {
+        "stale_path": "logos/unused/now-80-s.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/now-80-s.png",
+        "retained_blob_sha": "5d7b7e5fa50fe40fe7678d66a3c871650e8d277f",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      },
+      {
+        "stale_path": "logos/unused/kronehit-tv.png",
+        "live_status": "absent_on_main",
+        "retained_path": "logos/kronehit-tv.png",
+        "retained_blob_sha": "e15b07a8d7570df16492808aeaee443007db58f7",
+        "exact_path_referenced_by_either_playlist": false,
+        "matching_runtime_reference_found": false,
+        "deletion_action": "none"
+      }
+    ],
+    "protected_dependency_groups": [
+      {
+        "asset": "cine-sony-720p-c27cf4bb09.png",
+        "unused_copy_present": true,
+        "root_copy_present": true,
+        "dependency": "scripts/logo_source_catalog.py",
+        "action": "preserve both"
+      },
+      {
+        "asset": "global-tv-1080p-5ffc043912.png",
+        "unused_copy_present": true,
+        "root_copy_present": true,
+        "dependencies": [
+          "reports/logo-source-registry.json",
+          "scripts/repair_playlist_logos.py"
+        ],
+        "action": "preserve both"
+      },
+      {
+        "asset": "bantul-the-great-35f9777f.png",
+        "unused_copy_present": true,
+        "root_copy_present": true,
+        "dependency": "scripts/logo_source_catalog.py",
+        "action": "preserve both"
+      }
+    ],
+    "scope_note": "This is a targeted reconciliation of the 11 stale paths from the prior cleanup discussion. The full 626-cluster inventory has not been recomputed from a complete checkout; existing group/file totals and held entries remain provisional and must not authorize deletion.",
+    "full_duplicate_inventory_recomputed": false,
+    "deletion_authorized": false
+  }
 }
