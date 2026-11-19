@@ -10,9 +10,9 @@ from country_verification import reference_from_playlists,verify_country
 from stream_url_identity import stream_url_key
 from logo_asset_naming import is_blocked_logo_basename
 from restore_protected_review import is_authorized_removal
-from discover_bd_in_new_queues import prohibited_channel, canonical_channel_name, IPTV_KNOWN_INDIAN_EDUCATION_NAMES
+from discover_bd_in_new_queues import prohibited_channel, is_indian_discovery_candidate
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
-EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups"}; REVIEW_QUEUES={"New Channels","New Backups"}
+EXCLUDE={"Backup","Review","Not Playing","New Channels","New Backups"}; REVIEW_QUEUES={"New Channels","New Backups","New Backup"}
 LOCAL_BASE="logos/"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"; ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 RAW_NAME_TAG=re.compile(r"\s*(?:\[[^]]*(?:geo-blocked|geo blocked)[^]]*\]|\((?:\d{3,4}p|\d{3,4}i|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}p|\d{3,4}i))\s*$",re.I)
 def attrs(s): return dict(ATTR.findall(s))
@@ -77,11 +77,7 @@ def review_state(entries):
         # Permanent-removal allowlist entries are intentionally removed by policy;
         # do not misreport them as accidental deletions from protected review queues.
         if group in EXCLUDE and not is_authorized_removal(info,u):
-            source_country=(a.get("x-discovery-source-country") or "").strip().upper()
-            country=(a.get("tvg-country") or "").strip().upper()
-            india_id=any(re.search(r"\.in(?:@|$)",str(a.get(key,"")).strip(),re.I) for key in ("tvg-id","channel-id"))
-            known_alias=canonical_channel_name(a.get("tvg-name","")) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES
-            if group in REVIEW_QUEUES and (source_country=="IN" or country=="IN" or india_id or known_alias):
+            if group in REVIEW_QUEUES and is_indian_discovery_candidate(a, a.get("tvg-name", "")):
                 if prohibited_channel(a,a.get("tvg-name",""),"IN",discovery=True,iptv_discovery=True):
                     continue
             out[stream_url_key(u)]={"group":group,"name":a.get("tvg-name","").strip(),"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower()}
@@ -190,12 +186,7 @@ def main():
     for _,a,u in current:
         group=a.get("group-title","").strip()
         if group not in REVIEW_QUEUES: continue
-        country=a.get("tvg-country","").strip().upper()
-        id_values=[str(a.get(key,"")).strip() for key in ("tvg-id","channel-id")]
-        source_country=(a.get("x-discovery-source-country") or "").strip().upper()
-        india_id=any(re.search(r"\.in(?:@|$)", value, re.I) for value in id_values)
-        known_indian_alias=canonical_channel_name(a.get("tvg-name","")) in IPTV_KNOWN_INDIAN_EDUCATION_NAMES
-        if source_country == "IN" or country == "IN" or india_id or known_indian_alias:
+        if is_indian_discovery_candidate(a, a.get("tvg-name", "")):
             reason=prohibited_channel(a,a.get("tvg-name",""),"IN",discovery=True,iptv_discovery=True)
             if reason:
                 queue_policy_errors.append(f"{a.get('tvg-name','')} ({reason}) in {group}")
