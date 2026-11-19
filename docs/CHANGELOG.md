@@ -7,25 +7,25 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-19 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **65**
-- Stream URLs added / removed: **0 / 83**
+- New channel identities: **31**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **39 / 0**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Removed channel identities (up to 10):
+Added channel identities (up to 10):
 - BHI Channel
 - R Plus Gold
 - Darshana TV
 - Q TV
-- iFilm English
 - Animal Planet
 - BVG
 - Discovery Turbo
 - DocuBay TV
 - Epic Crimes
+- History TV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-19 — `International-Playlist.m3u`
