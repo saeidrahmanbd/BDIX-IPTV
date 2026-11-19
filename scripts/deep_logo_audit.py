@@ -10,7 +10,7 @@ PLAYLISTS=("IPTV-Playlist.m3u","International-Playlist.m3u")
 IMAGE_EXT={".png",".jpg",".jpeg",".webp",".gif",".bmp",".avif",".tif",".tiff"}
 TEXT_EXT={".py",".yml",".yaml",".json",".md",".txt",".m3u",".xml",".html",".js",".css",".toml",".ini",".sh",".cfg",".conf",".properties"}
 EXPLICIT=re.compile(r'(?:https?://[^\s"\']+?/)?(logos/[A-Za-z0-9_./@+-]+\.(?:png|jpe?g|webp|gif|svg|bmp|avif|tiff?))',re.I)
-DYNAMIC=re.compile(r'(?:tvg-logo|logo[_-]?(?:path|file|url|dir)|(?:/|["\'])logos(?:/|["\'])|Path\([^\n]{0,100}logo|glob\([^\n]{0,100}logo|joinpath\([^\n]{0,100}logo)',re.I)
+DYNAMIC=re.compile(r'(?:Path\([^\n]{0,120}logo|glob\([^\n]{0,120}logo|joinpath\([^\n]{0,120}logo|os\.path\.join\([^\n]{0,120}logo|(?:LOGO_DIR|LOGO_ROOT)\s*=)',re.I)
 def sha(p):
  h=hashlib.sha256()
  with p.open("rb") as f:
@@ -54,7 +54,7 @@ for p in ROOT.rglob("*"):
  try:t=p.read_text(encoding="utf-8")
  except Exception:continue
  for m in EXPLICIT.finditer(t):explicit[m.group(1)].add(rel)
- if rel in PLAYLISTS or rel.startswith(runtime_roots) or rel in ("reports/logo-source-registry.json","reports/logo-authenticity-manifest.json"):
+ if rel.startswith(runtime_roots) or rel in ("reports/logo-source-registry.json","reports/logo-authenticity-manifest.json"):
   for name in paths:
    if Path(name).name in t:basename[name].add(rel)
   if DYNAMIC.search(t):dynamic.append({"source":rel,"matches":DYNAMIC.findall(t)[:20]})
@@ -95,22 +95,23 @@ for i,(pa,ha) in enumerate(valid):
     pairs.append({"file_a":pa,"file_b":pb,"hamming_distance":dist,"phash_similarity":round(1-dist/64,4),"ssim":round(score,5),"referenced_a":bool(records[pa]["playlist_references"] or records[pa]["runtime_references"]),"referenced_b":bool(records[pb]["playlist_references"] or records[pb]["runtime_references"])})
 manifest=[]
 for group in exact:
+ referenced=[name for name in group["files"] if records[name]["playlist_references"] or records[name]["runtime_references"]]
+ if not referenced:continue
  for candidate in group["files"]:
   if not candidate.startswith("logos/unused/"):continue
-  retained="logos/"+Path(candidate).name
-  if retained not in group["files"]:continue
   r=records[candidate]
   if r["playlist_references"] or r["runtime_references"]:continue
-  manifest.append({"delete_candidate":candidate,"retain":retained,"sha256":r["sha256"],"git_blob":r["git_blob"],"retained_sha256":records[retained]["sha256"],"retained_git_blob":records[retained]["git_blob"],"checks":{"exact_bytes_identical":True,"playlist_reference_absent":True,"runtime_reference_absent_in_scanned_sources":True,"same_basename_root_copy":True,"visual_identity":True},"deletion_authorized":False})
+  manifest.append({"delete_candidate":candidate,"retain_candidates":referenced,"sha256":r["sha256"],"git_blob":r["git_blob"],"bytes":r["bytes"],"checks":{"exact_bytes_identical_to_retained_candidate":True,"playlist_reference_absent":True,"runtime_reference_absent_in_scanned_sources":True,"stored_under_unused_directory":True},"review_status":"manual review required","deletion_authorized":False})
+
 head=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip()
-summary={"assets":len(assets),"decode_failures":sum(bool(x["decode_error"]) for x in records.values()),"explicit_reference_targets":len(explicit),"assets_with_playlist_refs":sum(bool(x["playlist_references"]) for x in records.values()),"assets_with_runtime_refs":sum(bool(x["runtime_references"]) for x in records.values()),"assets_without_scanned_playlist_or_runtime_refs":sum(not x["playlist_references"] and not x["runtime_references"] for x in records.values()),"exact_duplicate_groups":len(exact),"exact_duplicate_extra_copies":sum(len(x["files"])-1 for x in exact),"nonidentical_perceptual_pairs_le_5":len(pairs),"dynamic_reference_sources_flagged":len(dynamic),"strict_exact_duplicate_manifest_candidates":len(manifest)}
+summary={"assets":len(assets),"decode_failures":sum(bool(x["decode_error"]) for x in records.values()),"explicit_reference_targets":len(explicit),"assets_with_playlist_refs":sum(bool(x["playlist_references"]) for x in records.values()),"assets_with_runtime_refs":sum(bool(x["runtime_references"]) for x in records.values()),"assets_without_scanned_playlist_or_runtime_refs":sum(not x["playlist_references"] and not x["runtime_references"] for x in records.values()),"exact_duplicate_groups":len(exact),"exact_duplicate_extra_copies":sum(len(x["files"])-1 for x in exact),"nonidentical_perceptual_pairs_hamming_le_8":len(pairs),"dynamic_reference_sources_flagged":len(dynamic),"strict_exact_duplicate_manifest_candidates":len(manifest)}
 report={"schema_version":1,"repository_head":head,"summary":summary,"dynamic_reference_sources":dynamic,"exact_duplicate_groups":exact,"perceptual_pairs":pairs,"deletion_manifest":manifest,"assets":records,"safety":{"playlists_modified":False,"assets_deleted":False,"deletion_performed":False,"limitations":["Dynamic runtime construction is flagged but cannot be proven safe by static scanning alone.","Perceptual hash matches are candidates, not proof of same channel identity.","Manifest candidates are not deletion authorization."]}}
 out=ROOT/"reports";out.mkdir(exist_ok=True)
 (out/"logo-deep-audit.json").write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
 md=["# Deep Logo Audit","","Commit: "+head,"","## Summary"]+[f"- {k}: {v}" for k,v in summary.items()]
 md+=["","## Dynamic reference sources"]+[f"- {x['source']}: {', '.join(x['matches'])}" for x in dynamic]
 md+=["","## Perceptual candidates"]+[f"- Hamming {x['hamming_distance']}: {x['file_a']} <> {x['file_b']}" for x in pairs]
-md+=["","## Exact-copy manifest"]+[f"- DELETE REVIEW: {x['delete_candidate']}; RETAIN: {x['retain']}; SHA-256: {x['sha256']}; deletion authorized: false" for x in manifest]
+md+=["","## Exact-copy manifest"]+[f"- DELETE REVIEW: {x['delete_candidate']}; RETAIN CANDIDATES: {'; '.join(x['retain_candidates'])}; SHA-256: {x['sha256']}; deletion authorized: false" for x in manifest]
 md+=["","## Safety","- No playlist modified.","- No asset deleted."]
 (out/"logo-deep-audit.md").write_text("\n".join(md)+"\n",encoding="utf-8")
 print(json.dumps({"head":head,"summary":summary,"reports":["reports/logo-deep-audit.json","reports/logo-deep-audit.md"]},indent=2))
