@@ -43,9 +43,9 @@ def test_music_and_movie_remain_in_country_groups():
     assert classify("Music Channel", "US")[0] == "__FOREIGN__"
 
 
-def test_indian_news_and_religious_are_quarantined():
-    assert classify("India Today", "IN", "Indian Entertainment")[0] == "Review"
-    assert classify("Islamic TV", "IN", "Religious")[0] == "Review"
+def test_existing_indian_news_and_religious_legacy_groups_are_preserved():
+    assert classify("India Today", "IN", "Indian Entertainment")[0] == "News"
+    assert classify("Islamic TV", "IN", "Religious")[0] == "Religious"
 
 
 def test_bangladesh_and_pakistan_keep_genre_freedom():
