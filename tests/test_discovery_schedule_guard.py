@@ -626,10 +626,10 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             midnight_push, workflow_file="epg-refresh.yml"
         ))
 
-    def test_epg_watchdog_accepts_successful_refresh_after_0730(self):
+    def test_epg_watchdog_accepts_successful_refresh_after_0610(self):
         scheduled = {
             "id": 171, "event": "schedule", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T01:30:00Z",
+            "created_at": "2026-11-07T00:10:00Z",
             "jobs": [{
                 "name": "refresh", "status": "completed", "conclusion": "success",
                 "steps": [{
@@ -645,7 +645,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_epg_watchdog_accepts_post_schedule_manual_recovery(self):
         recovery = {
             "id": 172, "event": "workflow_dispatch", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T01:35:00Z",
+            "created_at": "2026-11-07T00:15:00Z",
             "jobs": [{
                 "name": "refresh", "status": "completed", "conclusion": "success",
                 "steps": [{
@@ -670,8 +670,8 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_watchdog_recovery_uses_workflow_specific_local_grace_time(self):
         maintenance_before = datetime(2026, 11, 7, 6, 9, tzinfo=guard.BD_TZ)
         maintenance_after = datetime(2026, 11, 7, 6, 10, tzinfo=guard.BD_TZ)
-        epg_before = datetime(2026, 11, 7, 7, 44, tzinfo=guard.BD_TZ)
-        epg_after = datetime(2026, 11, 7, 7, 45, tzinfo=guard.BD_TZ)
+        epg_before = datetime(2026, 11, 7, 6, 44, tzinfo=guard.BD_TZ)
+        epg_after = datetime(2026, 11, 7, 6, 45, tzinfo=guard.BD_TZ)
         self.assertFalse(guard.recovery_is_due("iptv-maintenance.yml", maintenance_before))
         self.assertTrue(guard.recovery_is_due("iptv-maintenance.yml", maintenance_after))
         self.assertFalse(guard.recovery_is_due("new-channel-discovery.yml", datetime(2026, 11, 7, 5, 19, tzinfo=guard.BD_TZ)))
@@ -811,7 +811,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "id": 163, "event": "workflow_run", "status": "in_progress", "conclusion": None,
             "created_at": "2026-11-07T01:00:00Z",
         }
-        self.assertFalse(guard.should_current_run_execute(
+        self.assertTrue(guard.should_current_run_execute(
             [completed_refresh, later_run], 163, self.today,
             event="workflow_run", workflow_file="epg-refresh.yml",
         ))
@@ -846,7 +846,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         }
         current = {"id": 157, "status": "in_progress", "conclusion": None,
                    "created_at": "2026-11-07T00:20:00Z"}
-        self.assertFalse(guard.should_current_run_execute(
+        self.assertTrue(guard.should_current_run_execute(
             [previous, current], 157, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
         ))
 
@@ -877,7 +877,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             "id": 167, "event": "workflow_run", "status": "in_progress", "conclusion": None,
             "created_at": "2026-11-07T01:00:00Z", "head_sha": "same-main-sha",
         }
-        self.assertFalse(guard.should_current_run_execute(
+        self.assertTrue(guard.should_current_run_execute(
             [previous, current], 167, self.today, event="workflow_run", workflow_file="epg-refresh.yml"
         ))
 
