@@ -527,7 +527,7 @@ def find_local_logo(name: str) -> str:
     if not key or not LOGOS.is_dir():
         return ""
     for path in LOGOS.rglob("*"):
-        if not path.is_file() or path.suffix.casefold() not in {".png", ".jpg", ".jpeg", ".webp", ".svg"}:
+        if path.is_symlink() or not path.is_file() or path.suffix.casefold() not in {".png", ".jpg", ".jpeg", ".webp", ".svg"}:
             continue
         if "unused" in {part.casefold() for part in path.parts} or is_blocked_logo_basename(path.name):
             continue
