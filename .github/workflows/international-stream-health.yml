@@ -15,7 +15,7 @@ on:
       - 'tests/test_international_discovery_policy.py'
   # Independent daily trigger: health checks must still run when playlist maintenance fails.
   schedule:
-    - cron: '37 23 * * *' # 05:35 Asia/Dhaka (UTC+6)
+    - cron: '37 23 * * *' # 05:37 Asia/Dhaka (UTC+6)
   # Keep the maintenance completion hook as a secondary trigger for manual recovery only.
   workflow_run:
     workflows: ["IPTV Playlist Update"]
