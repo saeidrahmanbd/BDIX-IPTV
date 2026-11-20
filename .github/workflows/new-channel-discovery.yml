@@ -1,6 +1,5 @@
 name: IPTV New Channel Discovery
 
-# Fresh paired discovery recovery run: 2026-11-20 (no policy change).
 
 # Serialize the full run, including the daily guard. GitHub keeps one active
 # run and one newest pending run, so rapid pushes cannot build a stale queue.
