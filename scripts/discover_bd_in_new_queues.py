@@ -101,25 +101,52 @@ def known_indian_forbidden_category(a: dict[str, str], name: str) -> str | None:
     return None
 
 
-def explicit_foreign_country(a: dict[str, str]) -> str | None:
-    """Return an explicit ISO country outside Bangladesh/India, if present."""
-    declared = str(a.get("tvg-country", "")).strip().upper()
-    if declared.casefold() in ISO_CODES and declared not in {"BD", "IN"}:
-        return declared
+def explicit_foreign_country(
+    a: dict[str, str], name: str = "", fallback: str | None = None
+) -> str | None:
+    """Reject corroborated foreign identities without over-trusting stale IDs.
+
+    The BD/IN source feed is valid country evidence for diaspora and regional
+    channels. A recognized .bd/.in ID is stronger still. Within a BD/IN feed,
+    known Pakistan/Netherlands/Canada-only rows are rejected by country ID plus
+    broadcaster identity; an isolated .ca/.us/.gb suffix is only a warning.
+    Without a BD/IN source context, explicit foreign country metadata is a gate.
+    """
+    scope = str(fallback or a.get("x-discovery-source-country", "")).strip().casefold()
+    if scope in {"bangladesh", "bd"}:
+        scope = "BD"
+    elif scope in {"india", "in"}:
+        scope = "IN"
+    else:
+        scope = scope.upper()
     id_countries = {
         code for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
         if (code := id_country(value))
     }
+    if {"BD", "IN"} & id_countries:
+        return None
+    identity = f"{name} {a.get('tvg-name', '')}".casefold()
+    if scope in {"BD", "IN"}:
+        if "PK" in id_countries:
+            return "PK"
+        if "NL" in id_countries and re.search(r"\bbtl\s*tv\b", identity):
+            return "NL"
+        if "CA" in id_countries and re.search(r"\bqello\s*concerts?\b", identity):
+            return "CA"
+        return None
+    declared = str(a.get("tvg-country", "")).strip().upper()
+    if declared.casefold() in ISO_CODES and declared not in {"BD", "IN"}:
+        return declared
     foreign = sorted(code for code in id_countries if code not in {"BD", "IN"})
     return foreign[0] if foreign else None
 
 
 def is_indian_discovery_candidate(a: dict[str, str], name: str) -> bool:
-    """Infer India from explicit channel identity before source-feed context.
+    """Infer India from .in IDs first, then the BD/IN source feed and metadata.
 
-    A recognized .in ID suffix is stronger than the feed that happened to list
-    the stream. Explicit foreign country evidence is never treated as BD/IN.
-    Source-feed country is only a fallback when channel metadata is absent.
+    A .in ID activates Indian genre exclusions even when the row was found in
+    the Bangladesh feed. Other regional suffixes alone do not override a BD/IN
+    source feed because legitimate diaspora channels may use those suffixes.
     """
     id_countries = {
         code for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
@@ -127,17 +154,15 @@ def is_indian_discovery_candidate(a: dict[str, str], name: str) -> bool:
     }
     if "IN" in id_countries:
         return True
-    if "BD" in id_countries or id_countries:
-        return False
-    declared_country = str(a.get("tvg-country", "")).strip().upper()
-    if declared_country == "IN":
-        return True
-    if declared_country == "BD" or declared_country.casefold() in ISO_CODES:
+    if "BD" in id_countries:
         return False
     source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
     if source_country in {"BD", "IN"}:
         return source_country == "IN"
-    if source_country and source_country.casefold() in ISO_CODES:
+    declared_country = str(a.get("tvg-country", "")).strip().upper()
+    if declared_country in {"BD", "IN"}:
+        return declared_country == "IN"
+    if id_countries or declared_country.casefold() in ISO_CODES:
         return False
     return known_indian_forbidden_category(a, name) is not None
 
@@ -319,7 +344,7 @@ def parse(text: str):
 
 
 def channel_country(a: dict[str, str], fallback: str | None = None) -> str | None:
-    """Resolve BD/IN from explicit channel IDs, tvg-country, then feed fallback."""
+    """Resolve BD/IN from .bd/.in IDs, then source feed, then tvg-country."""
     id_countries = {
         code for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
         if (code := id_country(value))
@@ -328,15 +353,14 @@ def channel_country(a: dict[str, str], fallback: str | None = None) -> str | Non
         return "IN"
     if "BD" in id_countries:
         return "BD"
+    source = str(a.get("x-discovery-source-country", "") or fallback or "").strip().casefold()
+    if source in {"bangladesh", "bd"}:
+        return "BD"
+    if source in {"india", "in"}:
+        return "IN"
     declared = (a.get("tvg-country") or "").strip().upper()
     if declared in {"BD", "IN"}:
         return declared
-    if fallback:
-        value = fallback.strip().casefold()
-        if value in {"bangladesh", "bd"}:
-            return "BD"
-        if value in {"india", "in"}:
-            return "IN"
     return None
 
 
@@ -361,7 +385,7 @@ def prohibited_channel(
             return "permanently banned channel"
 
     if iptv_discovery:
-        foreign_country = explicit_foreign_country(a)
+        foreign_country = explicit_foreign_country(a, name, country)
         if foreign_country:
             return f"channel country {foreign_country} is outside Bangladesh/India"
         source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
