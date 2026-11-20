@@ -235,6 +235,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("Q TV", {"tvg-id": "QTV.in"}, "religious"),
             ("Shekinah TV", {"tvg-id": "ShekinahTV.in@SD"}, "religious"),
             ("Disney Channel", {"tvg-id": "DisneyChannel.in@HD"}, "kids"),
+            ("CVR Health", {"tvg-id": "CVRHealth.in@SD"}, "knowledge"),
         ]
         for name, extra, category in examples:
             attrs = {"group-title": "General", **extra}
@@ -244,6 +245,22 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIn(category, reason)
                 self.assertEqual(known_indian_forbidden_category(attrs, name), category)
 
+    def test_cvr_health_is_rejected_as_indian_knowledge_and_purged_from_queue(self):
+        attrs = {"tvg-id": "CVRHealth.in@SD", "group-title": "New Channels"}
+        candidate, reason = evaluate(
+            "India", attrs, "CVR Health (576p)", "https://example.org/cvrhealth.m3u8"
+        )
+        self.assertIsNone(candidate)
+        self.assertIn("knowledge", reason)
+
+        queue = (
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-id="CVRHealth.in@SD" group-title="New Channels",CVR Health (576p)\n'
+            "https://example.org/cvrhealth.m3u8\n"
+        )
+        filtered, removed = purge_forbidden_existing_queue_rows(queue)
+        self.assertEqual(removed, ["CVR Health (576p)"])
+        self.assertNotIn("CVR Health", filtered)
     def test_indian_identity_uses_source_then_country_then_known_alias(self):
         self.assertTrue(is_indian_discovery_candidate({"tvg-id": "DishaTV.in@SD"}, "Disha TV"))
         self.assertFalse(is_indian_discovery_candidate(
