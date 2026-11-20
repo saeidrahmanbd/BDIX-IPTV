@@ -170,6 +170,8 @@ PERMANENTLY_BANNED_CHANNEL_NAMES = {
         "XXTreme Jobs Hindi",
         "Power Turk",
         "Safari TV Tamil",
+        "CVR Health",
+        "Vokta TV",
     )
 }
 # Stable base channel IDs (region/quality suffixes after "@" are ignored). This
@@ -206,6 +208,8 @@ PERMANENTLY_BANNED_CHANNEL_IDS = {
     "discoveryturbo.in",
     "xxtremejobshindi.in",
     "powerturktv.tr",
+    "cvrhealth.in",
+    "voktatv.bd",
 }
 # A programme title is not a standalone linear TV channel. Keep this exact
 # denylist narrow so incomplete optional metadata alone never blocks a channel.
