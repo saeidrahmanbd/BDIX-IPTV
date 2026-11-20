@@ -334,6 +334,67 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("Out-of-scope queue row: BTL TV", final_report)
             self.assertIn("explicit country NL is outside Bangladesh/India", final_report)
 
+    def test_iptv_inconclusive_backup_moves_to_review_not_new_backups(self):
+        import tempfile
+        from unittest.mock import patch
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
+            content = (
+                "#EXTM3U\\n"
+                "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\\n"
+                '#EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-country="IN" group-title="New Backups" tvg-name="Travelxp",Travelxp\\n'
+                "https://example.org/travelxp.m3u8\\n"
+            )
+            playlist.write_text(content, encoding="utf-8")
+            baseline.write_text("#EXTM3U\\n", encoding="utf-8")
+            report.write_text("# Report\\n", encoding="utf-8")
+            with patch.object(validation, "probe_url", return_value=("unknown", "HTTP 403")):
+                validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
+            output = playlist.read_text(encoding="utf-8")
+            self.assertIn('group-title="Review"', output)
+            self.assertIn('x-discovery-hold-reason="unverified-backup-stream"', output)
+            self.assertNotIn('group-title="New Backups"', output)
+            self.assertIn("Moved unverified alternate stream Travelxp", report.read_text(encoding="utf-8"))
+
+    def test_final_iptv_validation_allows_explicitly_tagged_unverified_backup_review_hold(self):
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
+            content = (
+                "#EXTM3U\\n"
+                "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\\n"
+                '#EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-country="IN" x-discovery-hold-reason="unverified-backup-stream" group-title="Review" tvg-name="Travelxp",Travelxp\\n'
+                "https://example.org/travelxp.m3u8\\n"
+            )
+            playlist.write_text(content, encoding="utf-8")
+            baseline.write_text("#EXTM3U\\n", encoding="utf-8")
+            report.write_text("# Report\\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "iptv")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            final_report = report.read_text(encoding="utf-8")
+            self.assertIn("- Validation status: PASS", final_report)
+            self.assertIn("New candidates outside New Channels/New Backups or approved Review holds: 0", final_report)
+
     def test_parser_skips_vlc_and_kodi_directives_before_media_url(self):
         text = (
             '#EXTM3U\n'
