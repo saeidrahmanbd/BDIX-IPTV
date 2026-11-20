@@ -201,7 +201,7 @@ Generated: **2026-11-20T00:59:50.948762+00:00**
 - Remaining external logo references in discovery queues: 0.
 - Queue rows with no verified local logo: 7; authentic local logo repair remains pending for: Ayush Next Communication Network (576p), Bollywood Masala (1080p), MNX (576p), Pickleball Now (720p) [Geo-blocked], Vii MEDIA (1080p), MNX HD (1080p), &TV HD (1080p).
 - Queue country metadata: filled from a valid BD/IN ID suffix or the originating BD/IN feed when no contradictory country evidence existed.
-- Duplicate stream URLs after cleanup: 1.
+- Duplicate stream URLs after cleanup: 0.
 - Queue country violations after cleanup: 0.
 - Existing non-queue playlist entries and their metadata were not rewritten.
 
