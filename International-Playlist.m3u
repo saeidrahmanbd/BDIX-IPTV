@@ -4,8 +4,8 @@
 # Facebook: https://www.facebook.com/saeid.rahman.sr
 # Email: saeidrahman.mkt@gmail.com
 #=================================
-#PLAYLIST-STUDIO-NAME:"International Playlist"
 #PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "Argentina", "Brazil", "Bulgaria", "Canada", "Chile", "China", "Colombia", "Costa Rica", "Czech Republic", "DO", "Estonia", "France", "Germany", "Greece", "Hungary", "Iran", "Italy", "Lebanon", "Mexico", "Netherlands", "North Macedonia", "Panama", "Paraguay", "Peru", "Poland", "Romania", "Russia", "Saudi Arabia", "Singapore", "Spain", "Sweden", "Turkey", "Ukraine", "United Kingdom", "United States", "Uzbekistan", "Vietnam", "International", "News", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
+#PLAYLIST-STUDIO-NAME:"International Playlist"
 #EXTINF:-1 tvg-id="AnandaTV.bd" channel-id="AnandaTV.bd" tvg-language="ben" tvg-country="BD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" group-title="Bangladesh" tvg-name="Ananda TV",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" channel-id="AsianTV.bd" tvg-language="ben" tvg-country="BD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" group-title="Bangladesh" tvg-name="Asian TV",Asian TV
@@ -4774,6 +4774,8 @@ https://stmvideo2.livecastv.com/lax953/lax953/playlist.m3u8
 https://dltiqboxjw21d.cloudfront.net/index.m3u8
 #EXTINF:-1 tvg-id="LifeStyle.us" channel-id="LifeStyle.us" tvg-language="eng" tvg-country="US" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/life-plus-style-259a601564e8bc147e54.png" group-title="Review" tvg-name="Life+Style",Life+Style
 https://d1si3n1st4nkgb.cloudfront.net/10502/89001001/hls/master.m3u8?ads.xumo_channelId=89001001&ads.xumo_streamId=89001001&ads.caid=Indigenius&ads.csid=samsungtvplus_in_lifeplusstyle_ssai&ads.sfid=&ads.afid=Indigenius&ads.xumo_platform=samsung&ads._fw_is_lat=%7BTARGETOPT%7D&ads._fw_us_privacy=1---&ads._fw_coppa=0&ads._fw_did=%7BPSID%7D&ads._fw_content_category=IAB1-7&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-pg&ads._fw_deviceMake=samsung&ads._fw_gdpr=1&ads._fw_gdpr_consent=%7BTC_STRING%7D&ads._fw_h_x_country=IN&ads.appVersion=&ads.appName=%7BAPP_NAME%7D&ads.xumo_contentId=1101&ads.xumo_contentName=Indigenius&ads.xumo_providerId=1101&ads.xumo_providerName=Indigenius&ads.xumo_adsystem=mediatailor&ads.xumo_channelName=lifeplusstyle_in&ads.tpcl=MIDROLL&ads._fw_app_store_url=%7BAPP_DOMAIN%7D
+#EXTINF:-1 tvg-id="LookThoongTV.la@SD" tvg-name="Look Thoong TV (720p) [Not 24/7]" tvg-country="LA" channel-id="LookThoongTV.la@SD" group-title="Review" tvg-content="Music",Look Thoong TV (720p) [Not 24/7]
+https://livefta.malimarcdn.com/ftaedge00/lookthoongtv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.love-natural" tvg-language="eng" channel-id="custom.love-natural" tvg-country="CA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-nature.png" group-title="Review" tvg-name="Love Nature",Love Nature
 https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.love-natural-xfim4" channel-id="custom.love-natural-xfim4" tvg-language="eng" tvg-country="CA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-nature.png" group-title="Review" tvg-name="Love Nature",Love Nature
