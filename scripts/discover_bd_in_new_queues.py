@@ -522,33 +522,36 @@ def logo_key(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", value)
 
 
-def find_local_logo(name: str) -> str:
+def find_local_logo(name: str, logo_root: str | Path | None = None) -> str:
     key = logo_key(name)
-    if not key or not LOGOS.is_dir():
+    logos_dir = Path(logo_root) if logo_root is not None else LOGOS
+    if not key or not logos_dir.is_dir():
         return ""
-    for path in LOGOS.rglob("*"):
+    for path in logos_dir.rglob("*"):
         if path.is_symlink() or not path.is_file() or path.suffix.casefold() not in {".png", ".jpg", ".jpeg", ".webp", ".svg"}:
             continue
         if "unused" in {part.casefold() for part in path.parts} or is_blocked_logo_basename(path.name):
             continue
         if logo_key(path.stem) == key:
-            return "logos/" + path.relative_to(LOGOS).as_posix()
+            return "logos/" + path.relative_to(logos_dir).as_posix()
     return ""
 
 
-def local_logo_for(name: str, current: str = "") -> str:
+def local_logo_for(name: str, current: str = "", logo_root: str | Path | None = None) -> str:
     current = str(current or "").strip()
-    root = LOGOS.resolve()
+    logos_dir = Path(logo_root) if logo_root is not None else LOGOS
+    root = logos_dir.resolve()
+    repo_root = root.parent
     if current.startswith("logos/"):
-        candidate = Path(current).resolve()
+        candidate = (repo_root / current).resolve()
         if root in candidate.parents and candidate.is_file() and not is_blocked_logo_basename(candidate.name):
             return current
     if current.startswith(RAW_LOGO_BASE):
         relative = unquote(current[len(RAW_LOGO_BASE):].split("?", 1)[0].split("#", 1)[0])
-        candidate = (LOGOS / relative).resolve()
+        candidate = (logos_dir / relative).resolve()
         if root in candidate.parents and candidate.is_file() and not is_blocked_logo_basename(candidate.name):
             return "logos/" + Path(relative).as_posix()
-    return find_local_logo(name)
+    return find_local_logo(name, logos_dir)
 
 
 def set_tvg_logo(extinf_line: str, logo: str) -> str:
@@ -605,14 +608,14 @@ def localize_existing_queue_logos(text: str) -> tuple[str, dict[str, int]]:
     return output, stats
 
 
-def extinf(a: dict[str, str], name: str, group: str, country: str) -> str:
+def extinf(a: dict[str, str], name: str, group: str, country: str, logo_root: str | Path | None = None) -> str:
     """Build a review row with verified country metadata and only authentic local logos."""
     fields = []
     for key in ("tvg-id", "tvg-name"):
         value = (a.get(key) or "").strip()
         if value:
             fields.append(f'{key}="{name if key == "tvg-name" else value}"')
-    logo = local_logo_for(name, a.get("tvg-logo", ""))
+    logo = local_logo_for(name, a.get("tvg-logo", ""), logo_root)
     if logo:
         fields.append(f'tvg-logo="{logo}"')
     verified_country = str(a.get("tvg-country") or COUNTRY_CODE.get(country, "")).strip().upper()
