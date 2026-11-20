@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5231,
-  "all_explicitly_referenced_logo_files": 2573,
-  "runtime_referenced_logo_files": 2571,
+  "all_explicitly_referenced_logo_files": 2495,
+  "runtime_referenced_logo_files": 2493,
   "playlist_referenced_logo_files": 2472,
-  "apparently_unreferenced_by_any_text_file": 2658,
-  "apparently_unreferenced_by_runtime_sources": 2660,
+  "apparently_unreferenced_by_any_text_file": 2736,
+  "apparently_unreferenced_by_runtime_sources": 2738,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -15125,9 +15125,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/kandelatv-480p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/kantipur-max-aa9dcce37bc9ecc63583.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -15219,9 +15216,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/kinosemja-576p.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kinoteatr-c903e540cd.png": [
       "International-Playlist.m3u",
@@ -15455,10 +15449,10 @@
     ],
     "logos/look-thoong-tv-2c41090ebcf122f4ded0.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/look-thoong-tv-720p-not-24-7-2c41090ebcf122f4ded0.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/love-nature-en-espanol-644d23ad51.png": [
@@ -15841,9 +15835,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/mcm-pop-580p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/mcm-top-france-821b5da224.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -15879,9 +15870,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/mega-extreno-hd-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/megabox-abc7abdfb8.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -15907,12 +15895,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/merry-christmas-from-viafree-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/merry-christmas-from-viafree-no.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/messatida-tv-a5ca95c15e.png": [
       "International-Playlist.m3u",
@@ -15940,9 +15922,6 @@
     ],
     "logos/metropoli-medios-tv-266701e2d9.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/metropolitana-del-cuzco.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mezzo-live-a73f9b365c.png": [
@@ -16113,9 +16092,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/mooz-dance.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/more-than-sports-tv.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -16211,9 +16187,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/mr-bean-animated-fr-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/mr-bean-animated.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -16239,34 +16212,13 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/mtv-biggest-pop-br-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/mtv-biggest-pop-ca-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/mtv-biggest-pop-latam-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/mtv-classic-br-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/mtv-classic-ca-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/mtv-classic-df8c74caae1081a4a8f3.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/mtv-classic-latam-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/mtv-flow-latino-157c95b47293e03d7de7.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/mtv-flow-latino-latam-720p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mtv-germany-bafd7b214a.png": [
@@ -16292,9 +16244,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/mtv-spankin-new-ca-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/mtv-united-states-c3238c081d29f1fe2272.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -16317,9 +16266,6 @@
     "logos/music-bangla.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/music-box-brazil-720p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/music-box-classic-b1ce784de6.png": [
@@ -16603,9 +16549,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/new-k-movies-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/news-21-bangla-tv.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -16784,12 +16727,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/nonstop-kung-fu-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/nonstop-kung-fu-no.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/noroc-tv-c5ab96fe0c.png": [
       "International-Playlist.m3u",
@@ -17251,12 +17188,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/pluto-tv-action-sweden-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-action-sweden-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/pluto-tv-bud-and-terence-germany-92919e25e140f71cc91a.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -17273,98 +17204,8 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/pluto-tv-cine-comedia-united-states-br.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-cine-comedia-united-states-latam.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-cine-drama-latam.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-cine-familia-latam.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-cine-romance-latam.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-crime-drama-ca.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/pluto-tv-fantasy-and-horror-456f4e1235890034f428.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-film-germany.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-film-sweden-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-film-sweden-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-harlequin-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-harlequin-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-horror-sweden-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-horror-sweden-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-horror-united-states-ca.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-john-wayne-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-john-wayne-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-kultfilmer-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-movies-gb.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-paranormal-sweden-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-romantik-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-sci-fi-sweden-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-sci-fi-sweden-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-sci-fi-united-states-ca.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-sci-fi-united-states-latam.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-star-trek-germany.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-western-es.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-western-it.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-westerns-united-states-ca.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-wild-west-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-wild-west-no.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pmc-1dac7c86df.png": [
@@ -17480,9 +17321,6 @@
     "logos/pravasi-channel.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/premialnoe-hd-1080p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/prima-sport-czechia-dbfebefa13.png": [
@@ -17720,56 +17558,20 @@
       "reports/logo-authenticity-manifest.json",
       "scripts/migrate_external_logos_fixed.py"
     ],
-    "logos/rakuten-tv-action-movies-austria-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/rakuten-tv-comedy-movies-166043b571489b238b1f.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/rakuten-tv-comedy-movies-austria-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-comedy-movies-germany-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-comedy-movies-italy-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-comedy-movies-uk-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/rakuten-tv-drama-movies-166043b571489b238b1f.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/rakuten-tv-drama-movies-austria-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-drama-movies-germany-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-drama-movies-uk-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/rakuten-tv-family-movies-166043b571489b238b1f.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/rakuten-tv-family-movies-austria-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-family-movies-germany-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-family-movies-italy-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-family-movies-switzerland-720p.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/rakuten-tv-family-movies-uk-1080p.png": [
       "IPTV-Playlist.m3u",
@@ -17805,9 +17607,6 @@
     "logos/rang.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rawhide-united-states-ca.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/rds-social-tv.png": [
@@ -18072,9 +17871,6 @@
     ],
     "logos/ru-tv-1e1acce47e.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rumba-tv.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/rumbamix-tv-732689360a.png": [
@@ -18490,9 +18286,6 @@
     "logos/sony-entertainment-television-10c5801e3c.png": [
       "reports/logo-source-registry.json"
     ],
-    "logos/sony-entertainment-television.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/sony-entertainment-tv.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -18753,9 +18546,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/star-gold-hd-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/star-gold-select-fa81030f74.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -18822,12 +18612,6 @@
     ],
     "logos/star-sports-select-2.png": [
       "IPTV-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/star-trek-movies-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/star-trek-movies-no.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-utsav-movies.png": [
@@ -19523,9 +19307,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/toonami-aftermath-west-480p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/toongoggles-86ecc96f04.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -20150,7 +19931,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-kandelatv-480p-90ac12180c.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-kids-zone-720p-7bb8e15fad.png": [
       "International-Playlist.m3u",
@@ -20189,7 +19971,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-kinosemja-576p-19c5905acc.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-kinoseriya-1080p-d0c120abfd.png": [
       "International-Playlist.m3u",
@@ -20236,27 +20019,32 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mcm-pop-580p-1f74592475.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-medium-germany-cb25255168.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mega-extreno-hd-720p-7a93da786a.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-merry-christmas-from-viafree-b2836c29c7.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-merry-christmas-from-viafree-dk-b2836c29c7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-merry-christmas-from-viafree-no-b2836c29c7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-metropolitana-del-cuzco-178dc363d4.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mezzo-576p-cd14529869.png": [
       "International-Playlist.m3u",
@@ -20267,7 +20055,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mooz-dance-48b14945f4.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-motortrend-e8406af26b.png": [
       "International-Playlist.m3u",
@@ -20302,34 +20091,44 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mr-bean-animated-fr-1080p-d25e7d73b7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-biggest-pop-br-1080p-61995cdf8b.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-biggest-pop-ca-1080p-61995cdf8b.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-biggest-pop-latam-1080p-61995cdf8b.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-classic-br-720p-a32712dea1.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-classic-ca-720p-a32712dea1.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-classic-latam-720p-a32712dea1.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-flow-latino-latam-720p-55b8877f51.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-spankin-new-ca-1080p-1b2737bd34.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-music-box-brazil-720p-7048d9d406.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-muz-soyuz-576p-aee2903b69.png": [
       "International-Playlist.m3u",
@@ -20364,7 +20163,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-new-k-movies-1080p-6bb161f67a.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-next-hd-480p-9c47e33564.png": [
       "International-Playlist.m3u",
@@ -20379,10 +20179,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-nonstop-kung-fu-dk-c70bef501e.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-nonstop-kung-fu-no-c70bef501e.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-onda-valencia-tv-720p-1c609dafea.png": [
       "International-Playlist.m3u",
@@ -20429,10 +20231,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-action-sweden-dk-c9e183eb9d.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-action-sweden-no-c9e183eb9d.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-action-united-states-96b09994af.png": [
       "International-Playlist.m3u",
@@ -20479,10 +20283,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-comedia-united-states-br-43f75938d8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-comedia-united-states-latam-43f75938d8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-crime-c0d629fd5e.png": [
       "International-Playlist.m3u",
@@ -20501,7 +20307,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-drama-latam-9f10c4aaa8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-estelar-cf8ea3b97f.png": [
       "International-Playlist.m3u",
@@ -20512,7 +20319,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-familia-latam-c5868c98e3.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-inspiracao-a1a48676fd.png": [
       "International-Playlist.m3u",
@@ -20527,7 +20335,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-romance-latam-c06ece8287.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-romantico-2f0321ab93.png": [
       "International-Playlist.m3u",
@@ -20566,7 +20375,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-crime-drama-ca-b7b06003fc.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-crime-movies-f6e317e18f.png": [
       "International-Playlist.m3u",
@@ -20613,7 +20423,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-film-germany-abdfe2e022.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-film-romantici-a1c1955035.png": [
       "International-Playlist.m3u",
@@ -20628,10 +20439,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-film-sweden-dk-abdfe2e022.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-film-sweden-no-abdfe2e022.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-film-thriller-c8fa3d89d4.png": [
       "International-Playlist.m3u",
@@ -20666,27 +20479,32 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-harlequin-dk-4748bc9377.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-harlequin-no-4748bc9377.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-horror-sweden-cb7184b6c8.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-horror-sweden-dk-cb7184b6c8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-horror-sweden-no-cb7184b6c8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-horror-united-states-249ed5b4bd.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-horror-united-states-ca-249ed5b4bd.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-humor-sweden-2fca211fad.png": [
       "International-Playlist.m3u",
@@ -20705,10 +20523,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-john-wayne-dk-163e30c8db.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-john-wayne-no-163e30c8db.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-komedi-32b1783b25.png": [
       "International-Playlist.m3u",
@@ -20735,7 +20555,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-kultfilmer-no-992e51539d.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-legami-letali-518c40f152.png": [
       "International-Playlist.m3u",
@@ -20746,7 +20567,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-movies-gb-583199a9f8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-netmovies-8f6a2afeb9.png": [
       "International-Playlist.m3u",
@@ -20765,7 +20587,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-paranormal-sweden-dk-0249ff1ade.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-psycho-14b368ee64.png": [
       "International-Playlist.m3u",
@@ -20788,7 +20611,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-romantik-dk-def8423bda.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-romantikk-95c6a6f3bf.png": [
       "International-Playlist.m3u",
@@ -20799,20 +20623,24 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-sci-fi-sweden-dk-ad96d70913.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-sci-fi-sweden-no-ad96d70913.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-sci-fi-united-states-b51ab784b5.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-sci-fi-united-states-ca-b51ab784b5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-sci-fi-united-states-latam-b51ab784b5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-serie-sci-fi-8c73fd3f2c.png": [
       "International-Playlist.m3u",
@@ -20827,7 +20655,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-star-trek-germany-c46a80fd02.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-star-trek-sweden-c46a80fd02.png": [
       "International-Playlist.m3u",
@@ -20858,17 +20687,20 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-western-es-ea815a1df6.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-western-it-ea815a1df6.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-westerns-germany-aba58a257d.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-westerns-united-states-ca-fd9f5ab997.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-westerns-united-states-fd9f5ab997.png": [
       "International-Playlist.m3u",
@@ -20879,10 +20711,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-wild-west-dk-5c98988dfa.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-wild-west-no-5c98988dfa.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-zombies-936b2b64b6.png": [
       "International-Playlist.m3u",
@@ -20893,7 +20727,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-premialnoe-hd-1080p-8c61801efd.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-punjab-plus-1080p-8d4d950f36.png": [
       "International-Playlist.m3u",
@@ -20908,40 +20743,52 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-action-movies-austria-720p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-comedy-movies-austria-720p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-comedy-movies-germany-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-comedy-movies-italy-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-comedy-movies-uk-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-drama-movies-austria-720p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-drama-movies-germany-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-drama-movies-uk-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-austria-720p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-germany-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-italy-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-switzerland-720p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-uk-1080p-166043b571.png": [
       "International-Playlist.m3u",
@@ -20952,7 +20799,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rawhide-united-states-ca-c7f9b8faf5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rodnoe-kino-576p-31ab024ee6.png": [
       "International-Playlist.m3u",
@@ -20963,7 +20811,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rumba-tv-856b329a39.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-runtime-720p-39cd2ffb76.png": [
       "International-Playlist.m3u",
@@ -21002,7 +20851,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-sony-entertainment-television-fe9e40a5a2.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-sony-movies-united-states-720p-328b3d63ae.png": [
       "International-Playlist.m3u",
@@ -21021,7 +20871,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-gold-hd-1080p-f2178a885b.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-movies-portugal-117de92eba.png": [
       "International-Playlist.m3u",
@@ -21040,14 +20891,16 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-trek-movies-dk-f0b61eeff9.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-trek-movies-f0b61eeff9.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-trek-movies-no-f0b61eeff9.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-stingray-cityscapes-1080p-9b37cf47a2.png": [
       "International-Playlist.m3u",
@@ -21098,7 +20951,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-toonami-aftermath-west-480p-e4688cd178.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-tooncast-southamerica-480p-058755936b.png": [
       "International-Playlist.m3u",
@@ -21149,10 +21003,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viafree-movies-dk-b8132a8c29.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viafree-movies-no-b8132a8c29.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viasat-kino-576p-2637d9d888.png": [
       "International-Playlist.m3u",
@@ -21163,10 +21019,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viasat-kino-balkan-1080p-2637d9d888.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viasat-serial-f54ca1d451.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viju-tv1000-576p-95f56e2316.png": [
       "International-Playlist.m3u",
@@ -21177,7 +21035,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-vintage-music-720p-acd818d0be.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-vip-tv-720p-7d6305f8d2.png": [
       "International-Playlist.m3u",
@@ -21225,12 +21084,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/viafree-movies-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/viafree-movies-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/viasat-explore-czech-republic-0918f68d7b.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -21240,9 +21093,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/viasat-kino-balkan-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/viasat-kino-comedy-934854e2dd.png": [
       "International-Playlist.m3u",
@@ -21263,9 +21113,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/viasat-serial.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/video-mix-tv-acff40c098.png": [
       "International-Playlist.m3u",
@@ -21316,9 +21163,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/vintage-music-720p.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/vision-beats.png": [
       "IPTV-Playlist.m3u",
@@ -26801,9 +26645,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/kandelatv-480p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/kantipur-max-aa9dcce37bc9ecc63583.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -26895,9 +26736,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/kinosemja-576p.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kinoteatr-c903e540cd.png": [
       "International-Playlist.m3u",
@@ -27131,10 +26969,10 @@
     ],
     "logos/look-thoong-tv-2c41090ebcf122f4ded0.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/look-thoong-tv-720p-not-24-7-2c41090ebcf122f4ded0.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/love-nature-en-espanol-644d23ad51.png": [
@@ -27517,9 +27355,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/mcm-pop-580p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/mcm-top-france-821b5da224.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -27555,9 +27390,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/mega-extreno-hd-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/megabox-abc7abdfb8.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -27583,12 +27415,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/merry-christmas-from-viafree-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/merry-christmas-from-viafree-no.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/messatida-tv-a5ca95c15e.png": [
       "International-Playlist.m3u",
@@ -27616,9 +27442,6 @@
     ],
     "logos/metropoli-medios-tv-266701e2d9.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/metropolitana-del-cuzco.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mezzo-live-a73f9b365c.png": [
@@ -27789,9 +27612,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/mooz-dance.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/more-than-sports-tv.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -27887,9 +27707,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/mr-bean-animated-fr-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/mr-bean-animated.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -27915,34 +27732,13 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/mtv-biggest-pop-br-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/mtv-biggest-pop-ca-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/mtv-biggest-pop-latam-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/mtv-classic-br-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/mtv-classic-ca-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/mtv-classic-df8c74caae1081a4a8f3.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/mtv-classic-latam-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/mtv-flow-latino-157c95b47293e03d7de7.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/mtv-flow-latino-latam-720p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mtv-germany-bafd7b214a.png": [
@@ -27968,9 +27764,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/mtv-spankin-new-ca-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/mtv-united-states-c3238c081d29f1fe2272.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -27993,9 +27786,6 @@
     "logos/music-bangla.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/music-box-brazil-720p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/music-box-classic-b1ce784de6.png": [
@@ -28279,9 +28069,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/new-k-movies-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/news-21-bangla-tv.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -28460,12 +28247,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/nonstop-kung-fu-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/nonstop-kung-fu-no.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/noroc-tv-c5ab96fe0c.png": [
       "International-Playlist.m3u",
@@ -28930,12 +28711,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/pluto-tv-action-sweden-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-action-sweden-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/pluto-tv-bud-and-terence-germany-92919e25e140f71cc91a.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -28952,98 +28727,8 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/pluto-tv-cine-comedia-united-states-br.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-cine-comedia-united-states-latam.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-cine-drama-latam.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-cine-familia-latam.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-cine-romance-latam.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-crime-drama-ca.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/pluto-tv-fantasy-and-horror-456f4e1235890034f428.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-film-germany.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-film-sweden-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-film-sweden-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-harlequin-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-harlequin-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-horror-sweden-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-horror-sweden-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-horror-united-states-ca.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-john-wayne-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-john-wayne-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-kultfilmer-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-movies-gb.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-paranormal-sweden-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-romantik-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-sci-fi-sweden-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-sci-fi-sweden-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-sci-fi-united-states-ca.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-sci-fi-united-states-latam.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-star-trek-germany.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-western-es.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-western-it.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-westerns-united-states-ca.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-wild-west-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/pluto-tv-wild-west-no.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pmc-1dac7c86df.png": [
@@ -29159,9 +28844,6 @@
     "logos/pravasi-channel.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/premialnoe-hd-1080p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/prima-sport-czechia-dbfebefa13.png": [
@@ -29399,56 +29081,20 @@
       "reports/logo-authenticity-manifest.json",
       "scripts/migrate_external_logos_fixed.py"
     ],
-    "logos/rakuten-tv-action-movies-austria-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/rakuten-tv-comedy-movies-166043b571489b238b1f.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/rakuten-tv-comedy-movies-austria-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-comedy-movies-germany-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-comedy-movies-italy-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-comedy-movies-uk-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/rakuten-tv-drama-movies-166043b571489b238b1f.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/rakuten-tv-drama-movies-austria-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-drama-movies-germany-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-drama-movies-uk-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/rakuten-tv-family-movies-166043b571489b238b1f.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/rakuten-tv-family-movies-austria-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-family-movies-germany-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-family-movies-italy-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rakuten-tv-family-movies-switzerland-720p.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/rakuten-tv-family-movies-uk-1080p.png": [
       "IPTV-Playlist.m3u",
@@ -29484,9 +29130,6 @@
     "logos/rang.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rawhide-united-states-ca.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/rds-social-tv.png": [
@@ -29751,9 +29394,6 @@
     ],
     "logos/ru-tv-1e1acce47e.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/rumba-tv.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/rumbamix-tv-732689360a.png": [
@@ -30170,9 +29810,6 @@
     "logos/sony-entertainment-television-10c5801e3c.png": [
       "reports/logo-source-registry.json"
     ],
-    "logos/sony-entertainment-television.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/sony-entertainment-tv.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -30433,9 +30070,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/star-gold-hd-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/star-gold-select-fa81030f74.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -30502,12 +30136,6 @@
     ],
     "logos/star-sports-select-2.png": [
       "IPTV-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/star-trek-movies-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/star-trek-movies-no.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-utsav-movies.png": [
@@ -31204,9 +30832,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/toonami-aftermath-west-480p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/toongoggles-86ecc96f04.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -31831,7 +31456,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-kandelatv-480p-90ac12180c.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-kids-zone-720p-7bb8e15fad.png": [
       "International-Playlist.m3u",
@@ -31870,7 +31496,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-kinosemja-576p-19c5905acc.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-kinoseriya-1080p-d0c120abfd.png": [
       "International-Playlist.m3u",
@@ -31917,27 +31544,32 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mcm-pop-580p-1f74592475.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-medium-germany-cb25255168.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mega-extreno-hd-720p-7a93da786a.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-merry-christmas-from-viafree-b2836c29c7.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-merry-christmas-from-viafree-dk-b2836c29c7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-merry-christmas-from-viafree-no-b2836c29c7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-metropolitana-del-cuzco-178dc363d4.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mezzo-576p-cd14529869.png": [
       "International-Playlist.m3u",
@@ -31948,7 +31580,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mooz-dance-48b14945f4.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-motortrend-e8406af26b.png": [
       "International-Playlist.m3u",
@@ -31983,34 +31616,44 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mr-bean-animated-fr-1080p-d25e7d73b7.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-biggest-pop-br-1080p-61995cdf8b.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-biggest-pop-ca-1080p-61995cdf8b.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-biggest-pop-latam-1080p-61995cdf8b.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-classic-br-720p-a32712dea1.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-classic-ca-720p-a32712dea1.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-classic-latam-720p-a32712dea1.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-flow-latino-latam-720p-55b8877f51.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-mtv-spankin-new-ca-1080p-1b2737bd34.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-music-box-brazil-720p-7048d9d406.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-muz-soyuz-576p-aee2903b69.png": [
       "International-Playlist.m3u",
@@ -32045,7 +31688,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-new-k-movies-1080p-6bb161f67a.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-next-hd-480p-9c47e33564.png": [
       "International-Playlist.m3u",
@@ -32060,10 +31704,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-nonstop-kung-fu-dk-c70bef501e.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-nonstop-kung-fu-no-c70bef501e.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-onda-valencia-tv-720p-1c609dafea.png": [
       "International-Playlist.m3u",
@@ -32110,10 +31756,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-action-sweden-dk-c9e183eb9d.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-action-sweden-no-c9e183eb9d.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-action-united-states-96b09994af.png": [
       "International-Playlist.m3u",
@@ -32160,10 +31808,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-comedia-united-states-br-43f75938d8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-comedia-united-states-latam-43f75938d8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-crime-c0d629fd5e.png": [
       "International-Playlist.m3u",
@@ -32182,7 +31832,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-drama-latam-9f10c4aaa8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-estelar-cf8ea3b97f.png": [
       "International-Playlist.m3u",
@@ -32193,7 +31844,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-familia-latam-c5868c98e3.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-inspiracao-a1a48676fd.png": [
       "International-Playlist.m3u",
@@ -32208,7 +31860,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-romance-latam-c06ece8287.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-cine-romantico-2f0321ab93.png": [
       "International-Playlist.m3u",
@@ -32247,7 +31900,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-crime-drama-ca-b7b06003fc.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-crime-movies-f6e317e18f.png": [
       "International-Playlist.m3u",
@@ -32294,7 +31948,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-film-germany-abdfe2e022.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-film-romantici-a1c1955035.png": [
       "International-Playlist.m3u",
@@ -32309,10 +31964,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-film-sweden-dk-abdfe2e022.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-film-sweden-no-abdfe2e022.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-film-thriller-c8fa3d89d4.png": [
       "International-Playlist.m3u",
@@ -32347,27 +32004,32 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-harlequin-dk-4748bc9377.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-harlequin-no-4748bc9377.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-horror-sweden-cb7184b6c8.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-horror-sweden-dk-cb7184b6c8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-horror-sweden-no-cb7184b6c8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-horror-united-states-249ed5b4bd.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-horror-united-states-ca-249ed5b4bd.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-humor-sweden-2fca211fad.png": [
       "International-Playlist.m3u",
@@ -32386,10 +32048,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-john-wayne-dk-163e30c8db.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-john-wayne-no-163e30c8db.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-komedi-32b1783b25.png": [
       "International-Playlist.m3u",
@@ -32416,7 +32080,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-kultfilmer-no-992e51539d.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-legami-letali-518c40f152.png": [
       "International-Playlist.m3u",
@@ -32427,7 +32092,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-movies-gb-583199a9f8.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-netmovies-8f6a2afeb9.png": [
       "International-Playlist.m3u",
@@ -32446,7 +32112,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-paranormal-sweden-dk-0249ff1ade.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-psycho-14b368ee64.png": [
       "International-Playlist.m3u",
@@ -32469,7 +32136,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-romantik-dk-def8423bda.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-romantikk-95c6a6f3bf.png": [
       "International-Playlist.m3u",
@@ -32480,20 +32148,24 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-sci-fi-sweden-dk-ad96d70913.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-sci-fi-sweden-no-ad96d70913.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-sci-fi-united-states-b51ab784b5.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-sci-fi-united-states-ca-b51ab784b5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-sci-fi-united-states-latam-b51ab784b5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-serie-sci-fi-8c73fd3f2c.png": [
       "International-Playlist.m3u",
@@ -32508,7 +32180,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-star-trek-germany-c46a80fd02.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-star-trek-sweden-c46a80fd02.png": [
       "International-Playlist.m3u",
@@ -32539,17 +32212,20 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-western-es-ea815a1df6.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-western-it-ea815a1df6.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-westerns-germany-aba58a257d.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-westerns-united-states-ca-fd9f5ab997.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-westerns-united-states-fd9f5ab997.png": [
       "International-Playlist.m3u",
@@ -32560,10 +32236,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-wild-west-dk-5c98988dfa.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-wild-west-no-5c98988dfa.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-pluto-tv-zombies-936b2b64b6.png": [
       "International-Playlist.m3u",
@@ -32574,7 +32252,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-premialnoe-hd-1080p-8c61801efd.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-punjab-plus-1080p-8d4d950f36.png": [
       "International-Playlist.m3u",
@@ -32589,40 +32268,52 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-action-movies-austria-720p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-comedy-movies-austria-720p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-comedy-movies-germany-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-comedy-movies-italy-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-comedy-movies-uk-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-drama-movies-austria-720p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-drama-movies-germany-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-drama-movies-uk-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-austria-720p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-germany-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-italy-1080p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-switzerland-720p-166043b571.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-uk-1080p-166043b571.png": [
       "International-Playlist.m3u",
@@ -32633,7 +32324,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rawhide-united-states-ca-c7f9b8faf5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rodnoe-kino-576p-31ab024ee6.png": [
       "International-Playlist.m3u",
@@ -32644,7 +32336,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rumba-tv-856b329a39.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-runtime-720p-39cd2ffb76.png": [
       "International-Playlist.m3u",
@@ -32683,7 +32376,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-sony-entertainment-television-fe9e40a5a2.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-sony-movies-united-states-720p-328b3d63ae.png": [
       "International-Playlist.m3u",
@@ -32702,7 +32396,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-gold-hd-1080p-f2178a885b.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-movies-portugal-117de92eba.png": [
       "International-Playlist.m3u",
@@ -32721,14 +32416,16 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-trek-movies-dk-f0b61eeff9.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-trek-movies-f0b61eeff9.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-trek-movies-no-f0b61eeff9.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-stingray-cityscapes-1080p-9b37cf47a2.png": [
       "International-Playlist.m3u",
@@ -32779,7 +32476,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-toonami-aftermath-west-480p-e4688cd178.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-tooncast-southamerica-480p-058755936b.png": [
       "International-Playlist.m3u",
@@ -32830,10 +32528,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viafree-movies-dk-b8132a8c29.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viafree-movies-no-b8132a8c29.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viasat-kino-576p-2637d9d888.png": [
       "International-Playlist.m3u",
@@ -32844,10 +32544,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viasat-kino-balkan-1080p-2637d9d888.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viasat-serial-f54ca1d451.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-viju-tv1000-576p-95f56e2316.png": [
       "International-Playlist.m3u",
@@ -32858,7 +32560,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-vintage-music-720p-acd818d0be.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-vip-tv-720p-7d6305f8d2.png": [
       "International-Playlist.m3u",
@@ -32906,12 +32609,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/viafree-movies-dk.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/viafree-movies-no.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/viasat-explore-czech-republic-0918f68d7b.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -32921,9 +32618,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/viasat-kino-balkan-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/viasat-kino-comedy-934854e2dd.png": [
       "International-Playlist.m3u",
@@ -32944,9 +32638,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/viasat-serial.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/video-mix-tv-acff40c098.png": [
       "International-Playlist.m3u",
@@ -32997,9 +32688,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/vintage-music-720p.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/vision-beats.png": [
       "IPTV-Playlist.m3u",
@@ -34737,6 +34425,7 @@
     "logos/joshua-tv.png",
     "logos/jtbs-classic.png",
     "logos/jtv-bangla.png",
+    "logos/kandelatv-480p.png",
     "logos/kcl-tv.png",
     "logos/kiddo-matix.png",
     "logos/kids-zone-720p.png",
@@ -34749,6 +34438,7 @@
     "logos/kinoliving-1080p.png",
     "logos/kinopokaz.png",
     "logos/kinosat-576p.png",
+    "logos/kinosemja-576p.png",
     "logos/kinoseriya-1080p.png",
     "logos/kinouzhas-576p.png",
     "logos/kinowood-1080p.png",
@@ -34788,9 +34478,14 @@
     "logos/makkal-tv.png",
     "logos/max4.png",
     "logos/mbc-drama.png",
+    "logos/mcm-pop-580p.png",
     "logos/medium-germany.png",
+    "logos/mega-extreno-hd-720p.png",
+    "logos/merry-christmas-from-viafree-dk.png",
+    "logos/merry-christmas-from-viafree-no.png",
     "logos/merry-christmas-from-viafree.png",
     "logos/metro-tv-honduras.png",
+    "logos/metropolitana-del-cuzco.png",
     "logos/mezzo-576p.png",
     "logos/mh1-prime.png",
     "logos/mi-musica-hits-720p.png",
@@ -34798,6 +34493,7 @@
     "logos/mn.png",
     "logos/mohona-tv.png",
     "logos/molahits-tv-720p.png",
+    "logos/mooz-dance.png",
     "logos/motortrend.png",
     "logos/motorvision-1080p.png",
     "logos/movie-punjab-720p.png",
@@ -34806,8 +34502,18 @@
     "logos/moviesmart-turk-576p.png",
     "logos/movify-kino-576p.png",
     "logos/mr-bean-animated-es-1080p.png",
+    "logos/mr-bean-animated-fr-1080p.png",
     "logos/msnbc.png",
+    "logos/mtv-biggest-pop-br-1080p.png",
+    "logos/mtv-biggest-pop-ca-1080p.png",
+    "logos/mtv-biggest-pop-latam-1080p.png",
+    "logos/mtv-classic-br-720p.png",
+    "logos/mtv-classic-ca-720p.png",
+    "logos/mtv-classic-latam-720p.png",
+    "logos/mtv-flow-latino-latam-720p.png",
+    "logos/mtv-spankin-new-ca-1080p.png",
     "logos/music-bangla-converted-95905400d9.png",
+    "logos/music-box-brazil-720p.png",
     "logos/muz-soyuz-576p.png",
     "logos/muzhskoe-kino-576p.png",
     "logos/muzhskoy-hd-1080p.png",
@@ -34825,6 +34531,7 @@
     "logos/ndtv-24x7.png",
     "logos/ndtv-profit.png",
     "logos/ndtv.png",
+    "logos/new-k-movies-1080p.png",
     "logos/news-11.png",
     "logos/news-18-bangla.png",
     "logos/next-hd-480p.png",
@@ -34833,6 +34540,8 @@
     "logos/nicktoons-us.png",
     "logos/nk-tv-bangla.png",
     "logos/nolly-africa-1080p.png",
+    "logos/nonstop-kung-fu-dk.png",
+    "logos/nonstop-kung-fu-no.png",
     "logos/nonstop-kung-fu.png",
     "logos/normalized/apn.png",
     "logos/normalized/channel-win.png",
@@ -35134,6 +34843,8 @@
     "logos/pluto-tv-90-s-classics.png",
     "logos/pluto-tv-a-la-mexicana.png",
     "logos/pluto-tv-action-movies.png",
+    "logos/pluto-tv-action-sweden-dk.png",
+    "logos/pluto-tv-action-sweden-no.png",
     "logos/pluto-tv-action-sweden.png",
     "logos/pluto-tv-action-united-states.png",
     "logos/pluto-tv-alberto-sordi.png",
@@ -35145,15 +34856,20 @@
     "logos/pluto-tv-cine-classicos.png",
     "logos/pluto-tv-cine-comedia-germany.png",
     "logos/pluto-tv-cine-comedia-romantica.png",
+    "logos/pluto-tv-cine-comedia-united-states-br.png",
+    "logos/pluto-tv-cine-comedia-united-states-latam.png",
     "logos/pluto-tv-cine-comedia-united-states.png",
     "logos/pluto-tv-cine-crime.png",
     "logos/pluto-tv-cine-crimen.png",
     "logos/pluto-tv-cine-de-autor.png",
+    "logos/pluto-tv-cine-drama-latam.png",
     "logos/pluto-tv-cine-drama.png",
     "logos/pluto-tv-cine-estelar.png",
+    "logos/pluto-tv-cine-familia-latam.png",
     "logos/pluto-tv-cine-familia.png",
     "logos/pluto-tv-cine-inspiracao.png",
     "logos/pluto-tv-cine-inspirador.png",
+    "logos/pluto-tv-cine-romance-latam.png",
     "logos/pluto-tv-cine-romance.png",
     "logos/pluto-tv-cine-romantico.png",
     "logos/pluto-tv-cine-sucessos.png",
@@ -35163,6 +34879,7 @@
     "logos/pluto-tv-comedias-romanticas.png",
     "logos/pluto-tv-comedies-cultes.png",
     "logos/pluto-tv-comedy-movies.png",
+    "logos/pluto-tv-crime-drama-ca.png",
     "logos/pluto-tv-crime-drama.png",
     "logos/pluto-tv-crime-movies.png",
     "logos/pluto-tv-cult-films-germany.png",
@@ -35175,8 +34892,11 @@
     "logos/pluto-tv-ficcao-cientifica.png",
     "logos/pluto-tv-film-azione.png",
     "logos/pluto-tv-film-commedia.png",
+    "logos/pluto-tv-film-germany.png",
     "logos/pluto-tv-film-romantici.png",
     "logos/pluto-tv-film-storici.png",
+    "logos/pluto-tv-film-sweden-dk.png",
+    "logos/pluto-tv-film-sweden-no.png",
     "logos/pluto-tv-film-sweden.png",
     "logos/pluto-tv-film-thriller.png",
     "logos/pluto-tv-filmes-acao.png",
@@ -35185,45 +34905,66 @@
     "logos/pluto-tv-filmes-nacionais.png",
     "logos/pluto-tv-franchise-favorites.png",
     "logos/pluto-tv-haialarm.png",
+    "logos/pluto-tv-harlequin-dk.png",
+    "logos/pluto-tv-harlequin-no.png",
     "logos/pluto-tv-harlequin.png",
+    "logos/pluto-tv-horror-sweden-dk.png",
+    "logos/pluto-tv-horror-sweden-no.png",
     "logos/pluto-tv-horror-sweden.png",
+    "logos/pluto-tv-horror-united-states-ca.png",
     "logos/pluto-tv-horror-united-states.png",
     "logos/pluto-tv-humor-sweden.png",
     "logos/pluto-tv-icons.png",
     "logos/pluto-tv-invasion-alien.png",
+    "logos/pluto-tv-john-wayne-dk.png",
+    "logos/pluto-tv-john-wayne-no.png",
     "logos/pluto-tv-john-wayne.png",
     "logos/pluto-tv-komedi.png",
     "logos/pluto-tv-komedie.png",
     "logos/pluto-tv-kult-comedies.png",
     "logos/pluto-tv-kultfilm.png",
     "logos/pluto-tv-kultfilme.png",
+    "logos/pluto-tv-kultfilmer-no.png",
     "logos/pluto-tv-kultfilmer.png",
     "logos/pluto-tv-legami-letali.png",
+    "logos/pluto-tv-movies-gb.png",
     "logos/pluto-tv-movies.png",
     "logos/pluto-tv-netmovies.png",
     "logos/pluto-tv-notti-di-passione.png",
     "logos/pluto-tv-nuestro-cine.png",
+    "logos/pluto-tv-paranormal-sweden-dk.png",
     "logos/pluto-tv-paranormal-sweden.png",
     "logos/pluto-tv-psycho.png",
     "logos/pluto-tv-reaction.png",
     "logos/pluto-tv-retro-action-movies.png",
     "logos/pluto-tv-romance.png",
+    "logos/pluto-tv-romantik-dk.png",
     "logos/pluto-tv-romantik.png",
     "logos/pluto-tv-romantikk.png",
+    "logos/pluto-tv-sci-fi-sweden-dk.png",
+    "logos/pluto-tv-sci-fi-sweden-no.png",
     "logos/pluto-tv-sci-fi-sweden.png",
+    "logos/pluto-tv-sci-fi-united-states-ca.png",
+    "logos/pluto-tv-sci-fi-united-states-latam.png",
     "logos/pluto-tv-sci-fi-united-states.png",
     "logos/pluto-tv-serie-sci-fi.png",
     "logos/pluto-tv-spotlight.png",
     "logos/pluto-tv-staff-picks.png",
+    "logos/pluto-tv-star-trek-germany.png",
     "logos/pluto-tv-star-trek-sweden.png",
     "logos/pluto-tv-terror-trash.png",
     "logos/pluto-tv-terror.png",
     "logos/pluto-tv-thrillers.png",
     "logos/pluto-tv-toto.png",
     "logos/pluto-tv-trending-now.png",
+    "logos/pluto-tv-western-es.png",
+    "logos/pluto-tv-western-it.png",
     "logos/pluto-tv-western.png",
     "logos/pluto-tv-westerns-germany.png",
+    "logos/pluto-tv-westerns-united-states-ca.png",
     "logos/pluto-tv-westerns-united-states.png",
+    "logos/pluto-tv-wild-west-dk.png",
+    "logos/pluto-tv-wild-west-no.png",
     "logos/pluto-tv-wild-west.png",
     "logos/pluto-tv-zombies.png",
     "logos/pmi-tv.png",
@@ -35232,6 +34973,7 @@
     "logos/praise-tv.png",
     "logos/prarthana-bhawan-tv.png",
     "logos/prarthana-tv.png",
+    "logos/premialnoe-hd-1080p.png",
     "logos/probashi-tv-news.png",
     "logos/ptv.png",
     "logos/qazsport.png",
@@ -35252,6 +34994,19 @@
     "logos/raj-tv-537c4d46.png",
     "logos/rajdhani-tv-backup-1.png",
     "logos/rakuten-movies.png",
+    "logos/rakuten-tv-action-movies-austria-720p.png",
+    "logos/rakuten-tv-comedy-movies-austria-720p.png",
+    "logos/rakuten-tv-comedy-movies-germany-1080p.png",
+    "logos/rakuten-tv-comedy-movies-italy-1080p.png",
+    "logos/rakuten-tv-comedy-movies-uk-1080p.png",
+    "logos/rakuten-tv-drama-movies-austria-720p.png",
+    "logos/rakuten-tv-drama-movies-germany-1080p.png",
+    "logos/rakuten-tv-drama-movies-uk-1080p.png",
+    "logos/rakuten-tv-family-movies-austria-720p.png",
+    "logos/rakuten-tv-family-movies-germany-1080p.png",
+    "logos/rakuten-tv-family-movies-italy-1080p.png",
+    "logos/rakuten-tv-family-movies-switzerland-720p.png",
+    "logos/rawhide-united-states-ca.png",
     "logos/rawhide-united-states.png",
     "logos/realitatea-sportiva.png",
     "logos/republic-bangla.png",
@@ -35261,6 +35016,7 @@
     "logos/rs-bharat.png",
     "logos/rtv-bangladesh-720p.png",
     "logos/rumba-tv-3182ea7301.png",
+    "logos/rumba-tv.png",
     "logos/runtime-720p.png",
     "logos/russkiy-detektiv-576p.png",
     "logos/russkiy-illusion-576p.png",
@@ -35287,6 +35043,7 @@
     "logos/solnce.png",
     "logos/soneri-cinema-360p.png",
     "logos/sony-8.png",
+    "logos/sony-entertainment-television.png",
     "logos/sony-entertainment-tv-backup-1.png",
     "logos/sony-max-2-us.png",
     "logos/sony-movies-united-states-720p.png",
@@ -35309,6 +35066,7 @@
     "logos/star-bangla.png",
     "logos/star-channel.png",
     "logos/star-gold-2.png",
+    "logos/star-gold-hd-1080p.png",
     "logos/star-gold-select.png",
     "logos/star-gold-thrills.png",
     "logos/star-gold.png",
@@ -35328,6 +35086,8 @@
     "logos/star-suvarna-hd.png",
     "logos/star-suvarna-plus-576p.png",
     "logos/star-tamil-television-360p.png",
+    "logos/star-trek-movies-dk.png",
+    "logos/star-trek-movies-no.png",
     "logos/star-trek-movies.png",
     "logos/starnet.png",
     "logos/stingray-cityscapes-1080p.png",
@@ -35361,6 +35121,7 @@
     "logos/tlc-india.png",
     "logos/tom-and-jerry.png",
     "logos/toonami-aftermath-east.png",
+    "logos/toonami-aftermath-west-480p.png",
     "logos/tooncast-southamerica-480p.png",
     "logos/top-barca.png",
     "logos/top-latino-tv.png",
@@ -36127,14 +35888,19 @@
     "logos/velvet-scary-1080p.png",
     "logos/velvet-sovetskoe-kino-1080p.png",
     "logos/venus.png",
+    "logos/viafree-movies-dk.png",
+    "logos/viafree-movies-no.png",
     "logos/viafree-movies.png",
     "logos/viasat-kino-576p.png",
     "logos/viasat-kino-action-576p.png",
+    "logos/viasat-kino-balkan-1080p.png",
     "logos/viasat-nature.png",
     "logos/viasat-serial-8e4a9c26e8.png",
+    "logos/viasat-serial.png",
     "logos/vijay-super-576p.png",
     "logos/viju-tv1000-576p.png",
     "logos/viju-tv1000-action-576p.png",
+    "logos/vintage-music-720p.png",
     "logos/vip-tv-720p.png",
     "logos/virgin-radio-tv.png",
     "logos/viva-latino-1080p.png",
