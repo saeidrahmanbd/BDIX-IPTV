@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-20T02:08:26+00:00**
+Generated: **2026-11-20T02:11:41+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -11,7 +11,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 ## Summary
 
-- Safe repairs applied this run: **24**
+- Safe repairs applied this run: **0 (read-only mode)**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
@@ -25,30 +25,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| and-tv-international-af1a6839d33bb0bcceb7.png | PNG | PNG | 2000×1125 | 1024×576 | downscaled, re-encoded/compressed |
-| b4u-bhojpuri-plus-452c9a587ea15489f8f2.png | PNG | PNG | 450×346 | 405×311 | downscaled, re-encoded/compressed |
-| big-tv-e8a3c6987279c2d2a0e4.png | PNG | PNG | 2000×1225 | 1024×627 | downscaled, re-encoded/compressed |
-| btv-news-ebbebf7ffd6cc8116fbe.png | PNG | PNG | 810×810 | 729×729 | downscaled, re-encoded/compressed |
-| canal-plus-action-europe-czechia-f9ffc6ff7ad51470b031.png | PNG | PNG | 1920×770 | 1024×411 | downscaled, re-encoded/compressed |
-| canal-plus-action-europe-f9ffc6ff7ad51470b031.png | PNG | PNG | 1920×770 | 1024×411 | downscaled, re-encoded/compressed |
-| canal-plus-action-europe-magyar-f9ffc6ff7ad51470b031.png | PNG | PNG | 1920×770 | 1024×411 | downscaled, re-encoded/compressed |
-| canal-plus-action-europe-slovakia-f9ffc6ff7ad51470b031.png | PNG | PNG | 1920×770 | 1024×411 | downscaled, re-encoded/compressed |
-| celestial-movies-ed30baf6b6d7f3161498.png | PNG | PNG | 465×512 | 465×512 | re-encoded/compressed |
-| dangal-tv-99b939175707c74c24b8.png | PNG | PNG | 720×540 | 475×356 | downscaled, re-encoded/compressed |
-| epic-bharat-digital-67aee5508b31a1940934.png | PNG | PNG | 720×540 | 648×486 | downscaled, re-encoded/compressed |
-| epic-bhojpuri-digital-8df5d7cd07a32d679196.png | PNG | PNG | 1396×999 | 1024×733 | downscaled, re-encoded/compressed |
-| hallmark-movies-and-more-b779fed878da243d7512.png | PNG | PNG | 1500×1000 | 1024×683 | downscaled |
-| hersphere-bfaee8d861d4a239eea1.png | PNG | PNG | 1500×1000 | 1024×683 | downscaled |
-| kappa-tv-music-53d014bd887255130e2c.png | PNG | PNG | 2000×1125 | 1024×576 | downscaled, re-encoded/compressed |
-| minimax-hungary-c3c7e32bdcb9ebd16431.png | PNG | PNG | 512×340 | 512×340 | re-encoded/compressed |
-| moviesphere-ca-dca4df10da50fd07391e.png | PNG | PNG | 1500×1000 | 1024×683 | downscaled, re-encoded/compressed |
-| nicktoons-czech-republic-8af9304b51464fc7a806.png | PNG | PNG | 2560×446 | 1024×178 | downscaled, re-encoded/compressed |
-| nicktoons-hungary-8af9304b51464fc7a806.png | PNG | PNG | 2560×446 | 1024×178 | downscaled, re-encoded/compressed |
-| studio-one-plus-f44320b0327b653063d3.png | PNG | PNG | 504×352 | 504×352 | re-encoded/compressed |
-| vision-india-66f24a5c85bc7afa92d4.png | PNG | PNG | 503×512 | 440×448 | downscaled, re-encoded/compressed |
-| xite-90-s-throwback-f9486164ad84bd8bd791.png | PNG | PNG | 1500×1000 | 1024×683 | downscaled, re-encoded/compressed |
-| xite-hits-uk-550435d99b1a874d104c.png | PNG | PNG | 1500×1000 | 1024×683 | downscaled, re-encoded/compressed |
-| zee-anmol-tv-8dee2e0662c005044da0.png | PNG | PNG | 2000×1125 | 1024×576 | downscaled, re-encoded/compressed |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 

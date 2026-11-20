@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-20T01:34:39.137756+00:00**
-Source playlist SHA-256: **046c235b4d1b57347bf03c7a8a29c35616b825dd2f5ee23a4c3674089ecbb8b9**
+Generated: **2026-11-20T02:11:41.655827+00:00**
+Source playlist SHA-256: **1bbd1d1cccf74d71906892f3beae8c6e47915493ba13caee24c36d161e2c297f**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -16,11 +16,11 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-queue same-ID name variants (review): **5**
 - Cross-queue normalized-name/different-ID groups (review): **10**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **14**
+- IDs with multiple logo references: **6**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
-- Missing logos in review queues (review only): **1**
-- External logo references (review only): **45**
+- Missing logos in review queues (review only): **0**
+- External logo references (review only): **0**
 - Logo references checked: **1379**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **5**
@@ -1291,8 +1291,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1333**
-- External references (review only): **45**
+- Healthy/local references: **1379**
+- External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair
 
@@ -1304,8 +1304,8 @@ None.
 
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
-- **MH One Movies (576p)** [mhonemovies.in@sd]
-- missing: **1**
+None.
+- missing: **0**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
@@ -1315,51 +1315,7 @@ These candidates have no verified local logo available yet; no external or place
 
 ## External Logo Review
 
-- BTL TV (Netherlands) (1080p) [btltv.nl@sd] (New Channels) — https://yt3.googleusercontent.com/ytc/APkrFKZYgQTsDhkbaqmPRCPZIf0UgZqF1wa6aG2eo8ti=s176-c-k-c0x00ffffff-no-rj-mo
-- Cartoon Network (Pakistan) [cartoonnetwork.pk@sd] (New Channels) — https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png
-- National Geographic (India) HD (1080p) [nationalgeographic.in@hd] (New Channels) — https://dtil.tmsimg.com/assets/s143574_ld_h15_aa.png?lock=720x540
-- National Geographic Wild (India) HD (1080p) [nationalgeographicwild.in@hd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAT_GEO_WILD/images/LOGO_HD/image.png
-- Vokta TV (720p) [voktatv.bd@sd] (New Channels) — https://i.imgur.com/szAGBCU.png
-- Ayush Next Communication Network (576p) [ayushnextcommunicationnetwork.in@sd] (New Channels) — https://i.imgur.com/g68oamL.jpeg
-- Bollywood Masala (1080p) [bollywoodmasala.in@sd] (New Channels) — https://jiotvimages.cdn.jio.com/dare_images/images/bollywoodmasala.png
-- CVR Health (576p) [cvrhealth.in@sd] (New Channels) — https://i.imgur.com/bCyW32I.png
-- ETV Life (1080p) [etvlife.in@sd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ETV_LIFE/images/LOGO_HD/image.png
-- ETV Telugu HD (1080p) [etvtelugu.in@hd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ETV_HD/images/LOGO_HD/image.png
-- Gaunda Punjab TV (720p) [gaundapunjabtv.ca@sd] (New Channels) — https://i.imgur.com/ArRZRM3.png
-- Kabaddi 24x7 (720p) [kabaddi24x7.in@sd] (New Channels) — https://papaji.freetvindia.com/media/kabaddi_24x7.png
-- MNX (576p) [mnx.in@sd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX/images/LOGO_HD/image.png
-- NDTV Good Times (1080p) [ndtvgoodtimes.in@sd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOOD_TIMES/images/LOGO_HD/image.png
-- Pickleball Now (720p) [Geo-blocked] [pickleballnow.in@sd] (New Channels) — https://jiotvimages.cdn.jio.com/dare_images/images/Pickleball_Now.png
-- Punjab Plus (1080p) [punjabplus.in@sd] (New Channels) — https://jiotvimages.cdn.jio.com/dare_images/images/Punjab_Plus.png
-- Qello Concerts by Stingray (1080p) [qelloconcertsbystingray.ca@sd] (New Channels) — https://i.imgur.com/IRyFTWq.png
-- Sony Pix HD (1080p) [sonypix.in@hd] (New Channels) — https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png
-- Vii MEDIA (1080p) [viimedia.in@sd] (New Channels) — https://yt3.googleusercontent.com/UYTVPDOHTs9b-v1h2pAUHC_e8I_QRTUITTutft_5hOGC2YLL2-jtgD0xaSWZGOfWjmXKjL3AexE=s1200
-- WeatherSpy (India) (720p) [weatherspy.in@sd] (New Channels) — https://i.imgur.com/KIEKOt1.png
-- &xplor HD (1080p) [andxplorhd.in@hd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDXPLOR_HD/images/LOGO_HD/LOGO_HD_image.png
-- Zodiak TV (1080p) [zodiaktv.in@sd] (New Channels) — https://i.imgur.com/gE166hZ.jpeg
-- Nick Jr. (India) (576p) [nickjr.in@sd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png
-- DD Kashir (576p) [ddkashir.in@sd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DD_KASHIR/images/LOGO_HD/image.png
-- DD National HD (1080p) [ddnational.in@hd] (New Backups) — https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20National.png
-- ETV Beats (1080p) [etvbeats.in@hd] (New Backups) — https://jiotvimages.cdn.jio.com/dare_images/images/ETVBeats1.png
-- ETV Cinema HD (1080p) [etvcinema.in@hd] (New Backups) — https://dtil.tmsimg.com/assets/s143026_ld_h15_aa.png?lock=720x540
-- ETV Comedy (1080p) [etvcomedy.in@hd] (New Backups) — https://jiotvimages.cdn.jio.com/dare_images/images/ETV_Comedy.png
-- ETV Josh (1080p) [etvjosh.in@hd] (New Backups) — https://jiotvimages.cdn.jio.com/dare_images/images/ETV_Josh.png
-- ETV Music (1080p) [etvmusic.in@sd] (New Backups) — https://jiotvimages.cdn.jio.com/dare_images/images/ETVMusic12.png
-- ETV Plus HD (1080p) [etvplus.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ETV_PLUS/images/LOGO_HD/image.png
-- Eurosport (India) HD (1080p) [eurosport.in@hd] (New Backups) — https://dtil.tmsimg.com/assets/GNLZZGG002E9LQS.png?lock=720x540
-- MH One (576p) [mhone.in@sd] (New Backups) — https://jiotvimages.cdn.jio.com/dare_images/images/mh1_Music.png
-- MH One Dil Se (576p) [mhonedilse.in@sd] (New Backups) — https://dilse.mhone.in/wp-content/uploads/2022/02/MH-ONE-dil-se-LOGO-white-copy.png
-- MNX HD (1080p) [mnx.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX_HD/images/LOGO_HD/image.png
-- Movies Now HD (1080p) [moviesnow.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png
-- Movies Now + (1080p) [moviesnowplus.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNSYMPLUS/images/LOGO_HD/image.png
-- MTV (India) HD (1080p) [mtv.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MTV/images/LOGO_HD/image.png
-- Nepal 1 (576p) [nepal1.in@sd] (New Backups) — https://i.ibb.co/bMZpdbYJ/Nepal-1.png
-- &pictures HD (1080p) [andpictures.in@hd] (New Backups) — https://dtil.tmsimg.com/assets/GNLZZGG0022J67R.png?lock=720x540
-- Sony Max HD (1080p) [sonymax.in@hd] (New Backups) — https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540
-- Sony Max (720p) [sonymax.in@sd] (New Backups) — https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540
-- Spondon (1080p) [spondon.in@sd] (New Backups) — https://www.spondontv.com/wp-content/uploads/2025/10/cropped-SPONDON_Blue-Violet_1-copy-300x100.png
-- Travelxp 4K HDR (2160p) [Geo-blocked] [travelxp.in@4khdr] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TRAVELXP/images/LOGO_HD/image.png
-- &TV HD (1080p) [andtv.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDTV/images/LOGO_HD/LOGO_HD_image.png
+None.
 
 ## Protected Primary Entries
 
