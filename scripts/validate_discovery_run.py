@@ -602,7 +602,7 @@ def final_mode(playlist, report, baseline, mode):
         for entry in entries:
             if entry["group"].casefold() not in queue_groups:
                 continue
-            foreign_country = bd_discovery.explicit_foreign_country(entry["attrs"])
+            foreign_country = bd_discovery.explicit_foreign_country(entry["attrs"], entry["name"])
             if foreign_country:
                 queue_policy_issues.append(
                     f"Out-of-scope queue row: {entry['name']} (explicit country {foreign_country} is outside Bangladesh/India)"
