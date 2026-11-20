@@ -404,8 +404,8 @@ def prohibited_channel(
         return None
 
     # Inspect descriptive and classification metadata in addition to display
-    # names and group-title. Explicit channel IDs/codes determine country;
-    # source-feed country is only a fallback when those fields are absent.
+    # names and group-title. .bd/.in IDs determine country first; other regional
+    # suffixes do not override BD/IN feed evidence for diaspora channels.
     metadata_keys = (
         "tvg-id", "channel-id", "tvg-name", "tvg-description", "description",
         "tvg-content", "tvg-genre", "tvg-category", "tvg-categories",
@@ -446,9 +446,9 @@ def prohibited_channel(
 def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=None):
     """Keep only BD/IN identities; explicit foreign IDs/countries are rejected.
 
-    Missing country metadata can fall back to the BD/IN source feed. A
-    recognized channel-ID suffix takes precedence over that feed, so Indian
-    exclusions still apply when an Indian channel appears in the BD source.
+    Missing country metadata can fall back to the BD/IN source feed. A .in ID
+    takes precedence over that feed, so Indian exclusions still apply when an
+    Indian channel appears in the BD source.
     """
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
