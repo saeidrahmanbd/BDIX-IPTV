@@ -40,7 +40,7 @@ on:
     types: [completed]
     branches: [main]
   schedule:
-    - cron: '25 23 * * *' # 05:25 Asia/Dhaka (UTC+6), after discovery
+    - cron: '27 23 * * *' # 05:25 Asia/Dhaka (UTC+6), after discovery
   workflow_dispatch:
 
 permissions:
