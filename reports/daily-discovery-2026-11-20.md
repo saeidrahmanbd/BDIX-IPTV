@@ -43,7 +43,7 @@ Travelxp 4K HDR was an inconclusive alternate stream (HTTP 403), so it was moved
 - **New Backups:** 22 candidates; all 22 had verified live media responses.
 - **Review hold:** 1 unverified alternate stream (Travelxp 4K HDR), moved out of New Backups after an inconclusive HTTP 403 probe.
 - All 40 retained queue/hold logo references point to repository assets under /logos/; all referenced files were checked.
-- tvg-country was normalized from recognized .bd/.in channel IDs on retained discovery rows.
+- tvg-country was normalized from recognized .bd/.in IDs or trusted BD/IN source-feed context for retained regional/diaspora candidates.
 - Discovery queue groups are adjacent in the required order: New Channels → New Backups → Backup. Both discovery queues are A–Z sorted.
 - Playlist entries: 1,373.
 - Malformed EXTINF/URL pairs: 0.
@@ -76,7 +76,7 @@ The subsequent logo-only repair commit [51d524c93016c89a6ec4d2ff5d7c576d16fd9474
 
 - Both independent GitHub discovery jobs completed successfully.
 - A duplicate same-day trigger was skipped by the Bangladesh-date guard because today's successful runs had already completed; no duplicate discovery was forced.
-- The IPTV country-identity and validator hardening, including the post-run playlist correction and tests, is being submitted separately so future runs reject explicit foreign channel IDs and do not leave inconclusive alternates in New Backups.
+- The IPTV country-identity and validator hardening, including the post-run playlist correction and tests, is being submitted separately so future runs reject corroborated foreign broadcaster identities, apply Indian exclusions from .in IDs, preserve legitimate diaspora channels, and keep inconclusive alternates out of New Backups.
 - Remaining manual-review items: Vokta TV (primary stream inconclusive in New Channels) and Travelxp 4K HDR (alternate stream inconclusive, held in Review). Playback probes establish HTTP/media-response status, not guaranteed playback in every country or player.
 
 ## Source reports
