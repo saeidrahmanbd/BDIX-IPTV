@@ -1,9 +1,17 @@
 {
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
-  "exact_duplicate_groups": 626,
-  "exact_duplicate_files": 825,
-  "low_risk_review_candidates": [],
+  "exact_duplicate_groups": 629,
+  "exact_duplicate_files": 830,
+  "low_risk_review_candidates": [
+    {
+      "candidate": "logos/unused/mnx.png",
+      "retain": "logos/mnx.png",
+      "sha256": "40960115cfa3582543b38a3d1cb8ae166607e4aab39b534affcd634b4c9b6342",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    }
+  ],
   "held_for_review": [
     {
       "candidate": "logos/unused/tv-brics-chinese-1080p-48fd528d2a.png",

@@ -6968,5 +6968,90 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/Pt4F9Xz.png",
     "notes": "IPTV-org exact ID: LaXitosaPanama.pa IPTV-org public logo dataset Source page: https://i.imgur.com/Pt4F9Xz.png"
+  },
+  "IPTV-Playlist.m3u|AyushNextCommunicationNetwork.in@SD|Ayush Next Communication Network (576p)|logos/ayush-next-communication-network-f7c7f33323dd3095ae15.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/g68oamL.jpeg",
+    "notes": "IPTV-org exact ID: AyushNextCommunicationNetwork.in IPTV-org public logo dataset Source page: https://i.imgur.com/g68oamL.jpeg"
+  },
+  "IPTV-Playlist.m3u|BollywoodMasala.in@SD|Bollywood Masala (1080p)|logos/bollywood-masala-a6b8705b09a523f7b504.png": {
+    "status": "third_party_verified",
+    "source_url": "https://jiotvimages.cdn.jio.com/dare_images/images/bollywoodmasala.png",
+    "notes": "IPTV-org exact ID: BollywoodMasala.in IPTV-org public logo dataset Source page: https://jiotvimages.cdn.jio.com/dare_images/images/bollywoodmasala.png"
+  },
+  "IPTV-Playlist.m3u|PickleballNow.in@SD|Pickleball Now (720p) [Geo-blocked]|logos/pickleball-now-720p-geo-blocked-0b59f9270029b91e10eb.png": {
+    "status": "third_party_verified",
+    "source_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Pickleball_Now.png",
+    "notes": "IPTV-org exact ID: PickleballNow.in IPTV-org public logo dataset Source page: https://jiotvimages.cdn.jio.com/dare_images/images/Pickleball_Now.png"
+  },
+  "IPTV-Playlist.m3u|ViiMEDIA.in@SD|Vii MEDIA (1080p)|logos/vii-media-f846eef4fa28daa1283a.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://yt3.googleusercontent.com/UYTVPDOHTs9b-v1h2pAUHC_e8I_QRTUITTutft_5hOGC2YLL2-jtgD0xaSWZGOfWjmXKjL3AexE=s1200",
+    "notes": "IPTV-org exact ID: ViiMEDIA.in IPTV-org public logo dataset Source page: https://yt3.googleusercontent.com/UYTVPDOHTs9b-v1h2pAUHC_e8I_QRTUITTutft_5hOGC2YLL2-jtgD0xaSWZGOfWjmXKjL3AexE=s1200"
+  },
+  "IPTV-Playlist.m3u|ETVCinema.in@HD|ETV Cinema HD (1080p)|logos/etv-cinema-8211c9a4643e7d2c26af.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s143026_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: ETVCinema.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s143026_ld_h15_aa.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|Eurosport.in@HD|Eurosport (India) HD (1080p)|logos/eurosport-india-993030c6b65b4961f751.png": {
+    "status": "third_party_verified",
+    "source_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_EUROSPORT_HD/images/LOGO_HD/image.png",
+    "notes": "IPTV-org exact ID: Eurosport.in IPTV-org public logo dataset Source page: https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_EUROSPORT_HD/images/LOGO_HD/image.png"
+  },
+  "IPTV-Playlist.m3u|MoviesNowPlus.in@HD|Movies Now + (1080p)|logos/movies-now-plus-0cafc6cc49572c25cbc8.png": {
+    "status": "third_party_verified",
+    "source_url": "https://xstreamcp-assets-msp.streamready.in/assets/TIMESPLAY/LIVECHANNEL/6904ba3339f3b175376a60dd/images/LOGO_HD/LOGO_HD_Mk0HHBB7d_MNplus1_1.png",
+    "notes": "IPTV-org exact ID: MoviesNowPlus.in IPTV-org public logo dataset Source page: https://xstreamcp-assets-msp.streamready.in/assets/TIMESPLAY/LIVECHANNEL/6904ba3339f3b175376a60dd/images/LOGO_HD/LOGO_HD_Mk0HHBB7d_MNplus1_1.png"
+  },
+  "IPTV-Playlist.m3u|Travelxp.in@4KHDR|Travelxp 4K HDR (2160p) [Geo-blocked]|logos/travelxp-4k-hdr-2160p-geo-blocked-b3aa521bb125b0495ef7.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: Travelxp.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|AndTV.in@HD|&TV HD (1080p)|logos/and-tv-af1a6839d33bb0bcceb7.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/%26TV_Transparent_c5cc189b-8493-48d2-b07c-3fa4f92d754a.png",
+    "notes": "IPTV-org exact ID: AndTV.in IPTV-org public logo dataset Source page: https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/%26TV_Transparent_c5cc189b-8493-48d2-b07c-3fa4f92d754a.png"
+  },
+  "International-Playlist.m3u|plex.tv.AMC.Thrillers.plex|AMC Thrillers|logos/amc-thrillers-d0a59f9bc2164b475434.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/EVD0aIt.png",
+    "notes": "IPTV-org exact unique channel name: AMCThrillers.us IPTV-org public logo dataset Source page: https://i.imgur.com/EVD0aIt.png"
+  },
+  "International-Playlist.m3u|HareKrsnaMusic.in@SD|Hare Krsna Music (1080p)|logos/hare-krsna-music-83e4fc2956816434150e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Hare_Krsna_music.png",
+    "notes": "IPTV-org exact ID: HareKrsnaMusic.in IPTV-org public logo dataset Source page: https://jiotvimages.cdn.jio.com/dare_images/images/Hare_Krsna_music.png"
+  },
+  "International-Playlist.m3u|HerSphere.us@SD|HerSphere (1080p) [Geo-blocked]|logos/hersphere-1080p-geo-blocked-bfaee8d861d4a239eea1.png": {
+    "status": "third_party_verified",
+    "source_url": "https://provider-static.plex.tv/epg/cms/production/3ed082aa-5659-4fd0-8775-22613a65f924/HerSphere_1500x1000_Logo_Dark.png",
+    "notes": "IPTV-org exact ID: HerSphere.us IPTV-org public logo dataset Source page: https://provider-static.plex.tv/epg/cms/production/3ed082aa-5659-4fd0-8775-22613a65f924/HerSphere_1500x1000_Logo_Dark.png"
+  },
+  "International-Playlist.m3u|IDJTV.rs@SD|IDJTV (576p)|logos/idjtv-ccff674ab1ff82bdffcf.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/btvyrzr.png",
+    "notes": "IPTV-org exact ID: IDJTV.rs IPTV-org public logo dataset Source page: https://i.imgur.com/btvyrzr.png"
+  },
+  "International-Playlist.m3u|PureFlixTV.us@SD|Pure Flix TV (1080p) [Geo-blocked]|logos/pure-flix-tv-1080p-geo-blocked-9faa41b4c022e0898b19.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.tablotv.com/wp-content/uploads/2025/05/PureFlixTV_black.png",
+    "notes": "IPTV-org exact ID: PureFlixTV.us IPTV-org public logo dataset Source page: https://www.tablotv.com/wp-content/uploads/2025/05/PureFlixTV_black.png"
+  },
+  "International-Playlist.m3u|SkyShowtime1.ro@HD|SkyShowtime 1|logos/skyshowtime-1-f3376493660540500c72.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://static.wikia.nocookie.net/logopedia/images/a/a0/SkyShowtime_1.svg/revision/latest?cb=20220920074626",
+    "notes": "IPTV-org exact ID: SkyShowtime1.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/a/a0/SkyShowtime_1.svg/revision/latest?cb=20220920074626"
+  },
+  "International-Playlist.m3u|SkyShowtime2.ro@HD|SkyShowtime 2|logos/skyshowtime-2-a6b2e424242748b15bb1.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://static.wikia.nocookie.net/logopedia/images/0/09/SkyShowtime_2.svg/revision/latest?cb=20220920074646",
+    "notes": "IPTV-org exact ID: SkyShowtime2.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/0/09/SkyShowtime_2.svg/revision/latest?cb=20220920074646"
+  },
+  "International-Playlist.m3u|Smotrim100Gorkogo.ru@SD|Smotrim 100% Gorkogo (1080p)|logos/smotrim-100-gorkogo-2df4dd74b4fc2daa0aec.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://cdn.smotrim.ru/photobank/prod/large/156/126/56.jpg",
+    "notes": "IPTV-org exact ID: Smotrim100Gorkogo.ru IPTV-org public logo dataset Source page: https://cdn.smotrim.ru/photobank/prod/large/156/126/56.jpg"
   }
 }
