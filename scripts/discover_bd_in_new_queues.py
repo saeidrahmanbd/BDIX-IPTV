@@ -19,6 +19,7 @@ import json, re, unicodedata, urllib.request
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from urllib.parse import parse_qsl, urlparse
 
 from country_verification import norm_name
@@ -487,8 +488,8 @@ def extinf(a: dict[str, str], name: str, group: str, country: str) -> str:
 
 
 def main() -> int:
-    # The owner authorized removal of prohibited Indian candidates from the two
-    # discovery queues. All other existing playlist rows remain untouched.
+    # Apply only current Indian News/non-Islamic Religious exclusions and
+    # verify country/local-logo metadata for discovery queues; preserve all other rows.
     original = PLAYLIST.read_text(encoding="utf-8-sig")
     original, purged_existing = purge_forbidden_existing_queue_rows(original)
     entries = parse(original)
@@ -599,18 +600,22 @@ def main() -> int:
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     report = [
         "# IPTV Channel Discovery", "",
-        f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
+        f"Generated: **{datetime.now(ZoneInfo('Asia/Dhaka')).isoformat(timespec='seconds')} (Asia/Dhaka)**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**",
-        "- Bangladesh channels of all genres are eligible. Indian News, Kids, Education, Knowledge, Business/Finance and all Religious channels are prohibited in this IPTV playlist.",
+        "- Bangladesh channels of all genres are eligible. Indian News and non-Islamic religious channels are prohibited; Islamic religious and other legitimate live-TV genres remain eligible.",
         f"- Previously admitted prohibited Indian queue rows purged: **{len(purged_existing)}**",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
-        "- Existing manual-review queue rows changed only where they violated the owner-authorized Indian exclusion policy.",
+        "- Existing discovery-queue rows changed only for current Indian News/non-Islamic Religious exclusions, country verification, or local-logo cleanup; unrelated playlist rows were preserved.",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected/held candidates: **{rejected}**",
-        "- Country metadata, channel IDs, language and logos are advisory at this stage; retain uncertain values for owner review and repair later.", "",
+        "- Country is verified from channel IDs/country metadata or the BD/IN source feed when no contradictory evidence exists. Optional language/genre fields do not block otherwise valid candidates; only authentic local logos are retained.",
+        f"- Existing queue logos localized: **{logo_stats['localized']}**",
+        f"- External/broken queue logo references removed: **{logo_stats['removed']}**",
+        f"- Queue rows without an authentic local logo: **{logo_stats['missing']}**",
+        f"- No justified additions: **{'yes' if not new_channels and not new_backups else 'no'}**", "",
         "## Rejection reasons", "",
         *(f"- {r}: {n}" for r, n in sorted(reasons.items())), "",
         "## New Channels", "",
