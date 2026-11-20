@@ -253,10 +253,10 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name):
                 attrs = {"tvg-id": channel_id, "group-title": "New Channels"}
                 self.assertEqual(prohibited_channel(attrs, name), "permanently banned channel")
-        queue = "#EXTM3U\\n"
+        queue = "#EXTM3U\n"
         for name, channel_id in examples:
-            queue += '#EXTINF:-1 tvg-id="' + channel_id + '" group-title="New Channels",' + name + '\\n'
-            queue += 'https://example.org/' + channel_id + '.m3u8\\n'
+            queue += '#EXTINF:-1 tvg-id="' + channel_id + '" group-title="New Channels",' + name + '\n'
+            queue += 'https://example.org/' + channel_id + '.m3u8\n'
         filtered, removed = purge_forbidden_existing_queue_rows(queue)
         self.assertEqual(removed, [name for name, _ in examples])
         self.assertNotIn("CVR Health", filtered)
