@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-20T05:31:29+00:00**
+Generated: **2026-11-20T05:51:55+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **8b14c8aaa57d139009b85b880a49c892e2bea7fd588ade3bbf8dbe21a1bddaff**
+- IPTV-Playlist.m3u SHA-256: **b93b391d096edef0890552c3bb3e7fe3d4a57e9386c72476d7a4949c6ba67d48**
 - International-Playlist.m3u SHA-256: **0731d79d35f8d9e3565f4f05f4e8512bdc8658b9b14d674cdb34d170cb5c0262**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **146**
 - Exact-byte duplicate asset clusters: **738**
-- Playlist references whose asset stem differs from the normalized channel name: **1625**
+- Playlist references whose asset stem differs from the normalized channel name: **1623**
 - Unreferenced image assets immediately inside logos/: **956** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1204,10 +1204,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | BTL TV (Netherlands) (1080p) | btl-tv-netherlands-1080p.png | New Channels |
 | IPTV-Playlist.m3u | National Geographic (India) HD (1080p) | national-geographic-india-hd-1080p.png | New Channels |
 | IPTV-Playlist.m3u | National Geographic Wild (India) HD (1080p) | national-geographic-wild-india-hd-1080p.png | New Channels |
-| IPTV-Playlist.m3u | Vokta TV (720p) | vokta-tv.png | New Channels |
 | IPTV-Playlist.m3u | Ayush Next Communication Network (576p) | ayush-next-communication-network-f7c7f33323dd3095ae15.png | New Channels |
 | IPTV-Playlist.m3u | Bollywood Masala (1080p) | bollywood-masala-a6b8705b09a523f7b504.png | New Channels |
-| IPTV-Playlist.m3u | CVR Health (576p) | cvr-health.png | New Channels |
 | IPTV-Playlist.m3u | ETV Life (1080p) | etv-life.png | New Channels |
 | IPTV-Playlist.m3u | ETV Telugu HD (1080p) | etv-telugu-hd-1080p.png | New Channels |
 | IPTV-Playlist.m3u | Gaunda Punjab TV (720p) | gaunda-punjab-tv-720p.png | New Channels |
