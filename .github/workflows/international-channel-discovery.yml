@@ -1,5 +1,7 @@
 name: International Channel Discovery
 
+# Fresh paired discovery recovery run: 2026-11-20 (no policy change).
+
 # Serialize complete workflow runs, including the daily guard. Without this,
 # two simultaneous manual dispatches can each see the other as active and both
 # skip the discover job (mutual-exclusion race).
