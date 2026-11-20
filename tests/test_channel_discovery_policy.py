@@ -340,7 +340,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name):
                 self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
-    def test_discovery_queue_logo_localization_never_keeps_external_logo_urls(self):
+    def test_playlist_logo_localization_never_keeps_external_logo_urls(self):
         import tempfile
         import discover_bd_in_new_queues as discovery
         from pathlib import Path
@@ -360,14 +360,14 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                     '#EXTINF:-1 tvg-name="Existing TV" tvg-logo="https://cdn.example/existing.png" group-title="Bangladesh",Existing TV\n'
                     'https://cdn.example/existing.m3u8\n'
                 )
-                updated, stats = discovery.localize_existing_queue_logos(playlist)
+                updated, stats = discovery.localize_playlist_logos(playlist)
             finally:
                 discovery.LOGOS = original_logos
         self.assertIn('tvg-logo="logos/sample-tv.png"', updated)
         self.assertNotIn("https://cdn.example/logo.png", updated)
         self.assertNotIn("https://cdn.example/no-logo.png", updated)
-        self.assertIn('tvg-logo="https://cdn.example/existing.png"', updated)
-        self.assertEqual(stats, {"localized": 1, "removed": 1, "missing": 1})
+        self.assertNotIn("https://cdn.example/existing.png", updated)
+        self.assertEqual(stats, {"localized": 1, "removed": 2, "missing": 2})
 
 
     def test_cricket_and_football_with_foreign_country_metadata_are_rejected(self):
