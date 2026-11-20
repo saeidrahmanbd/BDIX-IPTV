@@ -244,7 +244,10 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name, extra=extra):
                 reason = prohibited_channel(attrs, name, iptv_discovery=True)
                 self.assertIsNotNone(reason)
-                self.assertIn(category, reason)
+                if name == "CVR Health":
+                    self.assertEqual(reason, "permanently banned channel")
+                else:
+                    self.assertIn(category, reason)
                 self.assertEqual(known_indian_forbidden_category(attrs, name), category)
 
     def test_cvr_health_and_vokta_tv_are_permanently_rejected_and_purged(self):
@@ -267,7 +270,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "India", attrs, "CVR Health (576p)", "https://example.org/cvrhealth.m3u8"
         )
         self.assertIsNone(candidate)
-        self.assertIn("knowledge", reason)
+        self.assertEqual(reason, "permanently banned channel")
 
         queue = (
             "#EXTM3U\n"
