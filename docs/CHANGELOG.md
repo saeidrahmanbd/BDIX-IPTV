@@ -5,38 +5,62 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-19 — `IPTV-Playlist.m3u`
+### 2026-11-20 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **13**
-- Stream URLs added / removed: **0 / 13**
+- New channel identities: **34**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **46 / 0**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Removed channel identities (up to 10):
-- Mei Alai TV
-- DD Bharati
-- KCL TV
-- MH 1 Prime
-- NKR TV Kannada
-- Siri Kannada All Time
-- Subin TV
-- Tamilan TV
-- Tehzeeb TV
-- VCV
+Added channel identities (up to 10):
+- BTL TV (Netherlands) (1080p)
+- Cartoon Network (Pakistan)
+- National Geographic (India) HD (1080p)
+- National Geographic Wild (India) HD (1080p)
+- Vokta TV (720p)
+- Ayush Next Communication Network (576p)
+- Bollywood Masala (1080p)
+- CVR Health (576p)
+- ETV Life (1080p)
+- ETV Telugu HD (1080p)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-19 — `International-Playlist.m3u`
+### 2026-11-20 — `International-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **0 / 0**
+- New channel identities: **12**
+- Channel identities removed: **12**
+- Stream URLs added / removed: **28 / 14**
 - Backup URL updates: **0**
-- Logo reference changes: **23**
+- Logo reference changes: **862**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- &xplor
+- MNX
+- Sony Pix
+- Hare Krsna Music
+- Smotrim 100% Gorkogo
+- HerSphere [ ]
+- Pure Flix TV [ ]
+- IDJTV
+- Look Thoong TV [ ]
+- Galactica TV
+
+Removed channel identities (up to 10):
+- Amazing Discoveries TV
+- Bangla Plus
+- Islam TV Urdu
+- KCL TV
+- Rakuten TV Action Movies
+- Rakuten TV Action Movies Germany
+- Rakuten TV Action Movies Italy
+- Rakuten TV Action Movies UK
+- Rakuten TV Top Movies
+- Rakuten TV Top Movies Germany
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
