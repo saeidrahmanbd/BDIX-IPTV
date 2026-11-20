@@ -12,6 +12,7 @@ import urllib.parse
 import urllib.request
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import discover_international_channels as discovery
@@ -28,7 +29,19 @@ INTL_BAD_RE = re.compile(r"\b(?:news|sports?|kids?|children|documentary|wildlife
 FASHION_RE = re.compile(r"\bfashion\s*tv\b", re.I)
 
 def now():
-    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+    return datetime.now(ZoneInfo("Asia/Dhaka")).isoformat(timespec="seconds") + " (Asia/Dhaka)"
+
+
+def workflow_links():
+    repository = os.environ.get("GITHUB_REPOSITORY", "saeidrahmanbd/BDIX-IPTV")
+    run_id = os.environ.get("GITHUB_RUN_ID")
+    sha = os.environ.get("GITHUB_SHA")
+    links = []
+    if run_id:
+        links.append(f"- Workflow run: https://github.com/{repository}/actions/runs/{run_id}")
+    if sha:
+        links.append(f"- Workflow source commit: https://github.com/{repository}/commit/{sha}")
+    return links
 
 def attrs(line):
     return dict(ATTR_RE.findall(line))
@@ -509,9 +522,8 @@ def final_mode(playlist, report, baseline, mode):
     _, before_entries, before_malformed = parse_playlist(before)
 
     if mode == "iptv":
-        # Compare only this run's additions against the exact pre-run snapshot.
-        # Legacy malformed rows, duplicates, category order, country metadata,
-        # logos and other historical defects must not block manual-review intake.
+        # Compare this run's additions with the exact pre-run snapshot, then
+        # validate full-playlist structure, queue order and local-logo integrity.
         baseline_records = Counter((e["extinf"], e["url"]) for e in before_entries)
         consumed_records = Counter()
         new_entries = []
@@ -580,11 +592,18 @@ def final_mode(playlist, report, baseline, mode):
                 country_warning += 1
 
         queue_policy_issues = []
+        queue_country_issues = []
         queue_groups = {"new channels", "new backup", "new backups"}
         for entry in entries:
             if entry["group"].casefold() not in queue_groups:
                 continue
-            if not bd_discovery.is_indian_discovery_candidate(entry["attrs"], entry["name"]):
+            verified_country = (entry["attrs"].get("tvg-country") or "").strip().upper()
+            if verified_country not in {"BD", "IN"}:
+                queue_country_issues.append(
+                    f"Queue row lacks verified BD/IN country: {entry['name']} in {entry['group']}"
+                )
+                continue
+            if verified_country != "IN":
                 continue
             reason = bd_discovery.prohibited_channel(
                 entry["attrs"], entry["name"], "IN", discovery=True, iptv_discovery=True
@@ -594,21 +613,89 @@ def final_mode(playlist, report, baseline, mode):
                     f"Prohibited Indian queue row: {entry['name']} ({reason}) in {entry['group']}"
                 )
         errors.extend(queue_policy_issues)
+        errors.extend(queue_country_issues)
+
+        queue_counts = Counter(entry["group"] for entry in entries)
+        group_order = []
+        for entry in entries:
+            if entry["group"] and entry["group"] not in group_order:
+                group_order.append(entry["group"])
+        registry_line = next(
+            (line for line in lines if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")), ""
+        )
+        try:
+            category_registry = json.loads(registry_line.split(":", 1)[1]) if registry_line else []
+        except (IndexError, json.JSONDecodeError):
+            category_registry = []
+        required_tail = ["New Channels", "New Backups", "Backup", "Review"]
+        expected_present_order = [
+            group for group in category_registry if group in set(group_order)
+        ] if isinstance(category_registry, list) else []
+        queue_positions_ok = False
+        if isinstance(category_registry, list) and all(
+            group in category_registry for group in ("New Channels", "New Backups", "Backup")
+        ):
+            queue_positions_ok = (
+                category_registry.index("New Backups") == category_registry.index("New Channels") + 1
+                and category_registry.index("Backup") == category_registry.index("New Backups") + 1
+            )
+        ordering_ok = (
+            isinstance(category_registry, list)
+            and category_registry[-4:] == required_tail
+            and group_order == expected_present_order
+            and queue_positions_ok
+        )
+
+        full_url_counts = Counter(stream_url_key(entry["url"]) for entry in entries)
+        full_duplicate_count = sum(count - 1 for count in full_url_counts.values() if count > 1)
+        full_external_logo = 0
+        full_missing_logo = 0
+        for entry in entries:
+            if not entry["logo"]:
+                full_missing_logo += 1
+                continue
+            logo_path = local_logo_path(entry["logo"])
+            if logo_path is None or not logo_path.is_file():
+                full_external_logo += 1
+
+        if malformed:
+            errors.append(f"{len(malformed)} malformed EXTINF/URL pair(s) remain in the full playlist")
+        if full_duplicate_count:
+            errors.append(f"{full_duplicate_count} duplicate stream URL occurrence(s) remain in the full playlist")
+        if full_external_logo:
+            errors.append(f"{full_external_logo} external or broken logo reference(s) remain in the full playlist")
+        if not ordering_ok:
+            errors.append("category registry, playlist group order or New Channels/New Backups/Backup placement is invalid")
+        if country_warning:
+            errors.append(f"{country_warning} newly discovered candidate(s) lack consistent verified BD/IN country metadata")
 
         status = "PASS" if not errors else "FAIL"
         body = [
             f"- Run timestamp: {now()}",
             f"- Validation status: {status}",
             f"- New manual-review candidates retained: {len(new_entries)}",
+            f"- Final New Channels queue entries: {queue_counts['New Channels']}",
+            f"- Final New Backups queue entries: {queue_counts['New Backups'] + queue_counts['New Backup']}",
+            f"- Final Backup entries: {queue_counts['Backup']}",
+            f"- Final Review entries: {queue_counts['Review']}",
+            f"- No justified additions: {'yes' if not new_entries else 'no'}",
+            f"- Full playlist entries parsed: {len(entries)}",
+            f"- Full playlist malformed EXTINF/URL pairs: {len(malformed)}",
+            f"- Full playlist duplicate stream URLs: {full_duplicate_count}",
+            f"- Category registry and queue placement: {'passed' if ordering_ok else 'failed'}",
+            f"- Full playlist external/broken logo references: {full_external_logo}",
+            f"- Full playlist entries without authentic local logos: {full_missing_logo} (warning only)",
             f"- New malformed EXTINF/URL pairs: {len(new_malformed)}",
             f"- New duplicate stream URL occurrences: {new_duplicate_count}",
             f"- New candidates missing an authentic local logo: {missing_logo} (warning only)",
-            f"- New candidates with non-local logo references: {nonlocal_logo} (warning only)",
-            f"- New candidates with country metadata requiring manual review: {country_warning} (warning only)",
+            f"- New candidates with non-local logo references: {nonlocal_logo}",
+            f"- New candidates with country metadata requiring manual review: {country_warning}",
             f"- New candidates outside New Channels/New Backups: {len(wrong_queue)}",
+            f"- Queue rows with unverified country: {len(queue_country_issues)}",
             f"- Prohibited Indian rows remaining in New Channels/New Backups: {len(queue_policy_issues)}",
-            "- Existing unrelated playlist defects and incomplete logo/country metadata do not block discovery.",
+            "- Existing channel names, stream URLs and group assignments were preserved; only targeted discovery and logo metadata were changed.",
             "- New candidates remain in New Channels/New Backups for owner review; only definitively dead streams are removed.",
+            *workflow_links(),
         ]
         if errors:
             body += ["", "### Blockers", *(f"- {error}" for error in errors[:100])]
@@ -655,6 +742,17 @@ def final_mode(playlist, report, baseline, mode):
             "Category registry must end " + "/".join(required) + " and "
             "present playlist groups must follow that registry order"
         )
+    queue_counts = Counter(e["group"] for e in entries)
+    new_additions = sum(1 for e in entries if stream_url_key(e["url"]) not in baseline_urls)
+    full_missing_logo = sum(1 for e in entries if not e["logo"])
+    full_external_logo = sum(
+        1 for e in entries
+        if e["logo"] and (
+            local_logo_path(e["logo"]) is None or not local_logo_path(e["logo"]).is_file()
+        )
+    )
+    if full_external_logo:
+        errors.append(f"{full_external_logo} external or broken logo reference(s) remain in the full playlist")
     missing_logo = 0
     external_logo = 0
     policy_issues = []
@@ -712,10 +810,18 @@ def final_mode(playlist, report, baseline, mode):
         f"- Malformed EXTINF/URL pairs: {len(malformed)}",
         f"- Duplicate stream URLs: {duplicate_count}",
         f"- {'/'.join(required)} ordering: {'passed' if ordering_ok else 'failed'}",
+        f"- Final New Channels queue entries: {queue_counts['New Channels']}",
+        f"- Final New Backups queue entries: {queue_counts['New Backups'] + queue_counts['New Backup']}",
+        f"- Final Backup entries: {queue_counts['Backup']}",
+        f"- Final Review entries: {queue_counts['Review']}",
+        f"- No justified additions: {'yes' if new_additions == 0 else 'no'}",
+        f"- Full playlist entries without authentic local logos: {full_missing_logo} (warning only)",
+        f"- Full playlist external/broken logo references: {full_external_logo}",
         f"- Discovery entries missing a logo (left blank rather than using a placeholder): {missing_logo}",
         f"- Non-local discovery logo references: {external_logo}",
         f"- Geography/content policy issues: {len(policy_issues)}",
         "- Existing non-discovery entries were not removed by the stream-validation step.",
+        *workflow_links(),
     ]
     if errors:
         body += ["", "### Blockers", *(f"- {e}" for e in errors[:100])]
