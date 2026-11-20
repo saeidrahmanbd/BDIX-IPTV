@@ -119,18 +119,18 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIsNone(prohibited_channel(attrs, "Doraemon", iptv_discovery=True))
 
     def test_indian_id_suffix_catches_conflict_with_stale_foreign_country(self):
-        attrs = {"tvg-country": "US", "tvg-id": "DisneyChannel.in@HD", "group-title": "Backup"}
-        self.assertIsNotNone(prohibited_channel(attrs, "Disney Channel", iptv_discovery=True))
+        attrs = {"tvg-country": "US", "tvg-id": "RPlus.in@HD", "group-title": "Backup"}
+        self.assertIsNotNone(prohibited_channel(attrs, "R Plus", iptv_discovery=True))
 
     def test_explicit_foreign_source_country_overrides_indian_id_and_country_field(self):
         attrs = {"x-discovery-source-country": "US", "tvg-country": "IN", "tvg-id": "DisneyChannel.in@HD"}
         self.assertIsNone(prohibited_channel(attrs, "Disney Channel", "IN", iptv_discovery=True))
 
-    def test_indian_islamic_religious_channels_are_rejected_for_iptv_policy(self):
+    def test_indian_islamic_religious_channels_are_allowed_for_iptv_policy(self):
         attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
-        self.assertIsNotNone(prohibited_channel(attrs, "Islamic TV", iptv_discovery=True))
+        self.assertIsNone(prohibited_channel(attrs, "Islamic TV", iptv_discovery=True))
 
-    def test_indian_kids_are_rejected_for_active_and_discovery_policy(self):
+    def test_indian_kids_remain_eligible_for_iptv_discovery(self):
         for name, group in [
             ("Kids TV", "Kids"), ("Cartoon Network", "Entertainment"),
             ("Green Gold TV", "Entertainment"), ("Pogo", "Entertainment"),
@@ -138,13 +138,11 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         ]:
             with self.subTest(name=name, group=group):
                 attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
-                self.assertIsNotNone(prohibited_channel(attrs, name, iptv_discovery=True))
+                self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
-    def test_indian_sports_remain_allowed_but_knowledge_business_and_education_are_rejected(self):
-        for name, group in [("Star Sports", "Sports"), ("DD Sports", "Sports")]:
-            attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
-            self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
+    def test_indian_sports_knowledge_business_and_education_remain_eligible(self):
         for name, group in [
+            ("Star Sports", "Sports"), ("DD Sports", "Sports"),
             ("Discovery Channel", "Knowledge"), ("National Geographic", "Documentary"),
             ("Animal Planet", "Entertainment"), ("Corporate Channel", "Business"),
             ("Money TV", "Finance"), ("Education TV", "Education"),
@@ -152,9 +150,9 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         ]:
             attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
             with self.subTest(name=name, group=group):
-                self.assertIsNotNone(prohibited_channel(attrs, name, iptv_discovery=True))
+                self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
-    def test_bangladesh_channels_of_all_six_prohibited_indian_genres_remain_eligible(self):
+    def test_bangladesh_channels_of_all_genres_remain_eligible(self):
         for name, group in [
             ("Bangla News", "News"), ("Kids Bangla", "Kids"),
             ("Education Bangladesh", "Education"), ("Knowledge Bangla", "Knowledge"),
@@ -164,7 +162,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name):
                 self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
-    def test_existing_prohibited_indian_education_queue_rows_are_purged(self):
+    def test_existing_indian_education_queue_rows_are_preserved(self):
         text = (
             "#EXTM3U\n"
             '#EXTINF:-1 tvg-name="Vyas Channel" tvg-country="IN" group-title="New Channels",Vyas Channel\n'
@@ -177,8 +175,9 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "https://example.invalid/channel24.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
-        self.assertEqual(set(removed), {"Vyas Channel", "Shiksha TV", "Gyandarshan HD"})
-        self.assertIn("Channel 24", filtered)
+        self.assertEqual(removed, [])
+        for name in ("Vyas Channel", "Shiksha TV", "Gyandarshan HD", "Channel 24"):
+            self.assertIn(name, filtered)
 
     def test_bangladesh_discovery_channels_remain_unrestricted_by_genre(self):
         examples = [
@@ -198,7 +197,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                     iptv_discovery=True,
                 ))
 
-    def test_indian_education_aliases_are_rejected_even_with_misleading_genre_metadata(self):
+    def test_indian_education_aliases_remain_eligible_even_with_education_metadata(self):
         examples = [
             ("Vyas Channel", "General", {}),
             ("Shiksha TV", "Entertainment", {}),
@@ -212,7 +211,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         for name, group, extra in examples:
             attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in", **extra}
             with self.subTest(name=name, extra=extra):
-                self.assertIsNotNone(prohibited_channel(attrs, name, iptv_discovery=True))
+                self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
     def test_compact_indian_news_brands_are_rejected(self):
         for name in ("News18 Bangla", "TV9 Bangla", "Aaj Tak", "India Today", "Times Now", "Republic Bangla", "ABP Ananda", "Zee News", "WION"):
@@ -222,27 +221,35 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNotNone(reason)
                 self.assertIn("news", reason)
 
-    def test_known_indian_news_kids_religious_and_vtu_aliases_are_rejected(self):
-        examples = [
+    def test_known_indian_news_and_non_islamic_religious_aliases_are_rejected(self):
+        blocked = [
             ("TV 100", {"tvg-id": "TV100.in@SD"}, "news"),
             ("R Plus", {"tvg-id": "RPlus.in@SD"}, "news"),
-            ("Sony Yay!", {"tvg-id": "SonyYay.in@SD"}, "kids"),
             ("Disha TV", {"tvg-id": "DishaTV.in@SD"}, "religious"),
-            ("VTU", {"tvg-id": "VTU.in@SD"}, "education"),
             ("Disha TV", {}, "religious"),
             ("R Plus Gold", {"tvg-id": "RPlusGold.in@SD"}, "news"),
             ("BHI Channel", {"tvg-id": "BHI.Channel.in"}, "news"),
-            ("Q TV", {"tvg-id": "QTV.in"}, "religious"),
             ("Shekinah TV", {"tvg-id": "ShekinahTV.in@SD"}, "religious"),
-            ("Disney Channel", {"tvg-id": "DisneyChannel.in@HD"}, "kids"),
         ]
-        for name, extra, category in examples:
+        for name, extra, category in blocked:
             attrs = {"group-title": "General", **extra}
             with self.subTest(name=name, extra=extra):
                 reason = prohibited_channel(attrs, name, iptv_discovery=True)
                 self.assertIsNotNone(reason)
                 self.assertIn(category, reason)
                 self.assertEqual(known_indian_forbidden_category(attrs, name), category)
+
+        allowed = [
+            ("Sony Yay!", {"tvg-id": "SonyYay.in@SD"}),
+            ("VTU", {"tvg-id": "VTU.in@SD"}),
+            ("Q TV", {"tvg-id": "QTV.in"}),
+            ("Disney Channel", {"tvg-id": "DisneyChannel.in@HD"}),
+        ]
+        for name, extra in allowed:
+            attrs = {"group-title": "General", **extra}
+            with self.subTest(name=name, extra=extra):
+                self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
+                self.assertIsNone(known_indian_forbidden_category(attrs, name))
 
     def test_indian_identity_uses_source_then_country_then_known_alias(self):
         self.assertTrue(is_indian_discovery_candidate({"tvg-id": "DishaTV.in@SD"}, "Disha TV"))
@@ -261,7 +268,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             {"x-discovery-source-country": "IN", "tvg-country": "BD"}, "Sony Yay!"
         ))
 
-    def test_legacy_queue_purge_removes_known_indian_categories_without_country_metadata(self):
+    def test_legacy_queue_purge_removes_only_indian_news_and_non_islamic_religion(self):
         text = (
             "#EXTM3U\n"
             '#EXTINF:-1 tvg-id="TV100.in@SD" group-title="New Channels",TV 100\n'
@@ -296,28 +303,71 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "https://example.invalid/channel24.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
-        self.assertEqual(set(removed), {
-            "TV 100", "R Plus", "Sony Yay!", "Disha TV", "VTU",
-            "DD Kisan (1080p)", "Gyandarshan (720p)", "Kite Victers (720p)",
-            "Shiksha TV (720p)", "Vyas Channel (576p)", "Nick Jr. (India) (576p)",
-            "Discovery Channel (India) HD (1080p)", "History TV18 HD (1080p)", "Safari TV (576p)",
-        })
+        self.assertEqual(set(removed), {"TV 100", "R Plus", "Disha TV"})
         self.assertIn("Channel 24", filtered)
 
-    def test_iptv_evaluate_uses_india_source_country_despite_misleading_metadata(self):
-        attrs = {"tvg-country": "US", "tvg-id": "VyasChannel.us", "group-title": "General"}
+    def test_iptv_evaluate_rejects_foreign_country_id_from_india_feed(self):
+        attrs = {"tvg-id": "GaundaPunjab.ca", "group-title": "General"}
         candidate, reason = evaluate(
-            "India", attrs, "Vyas Channel", "https://example.org/vyas.m3u8"
+            "India", attrs, "Gaunda Punjab TV", "https://example.org/gaunda.m3u8"
         )
         self.assertIsNone(candidate)
-        self.assertIn("education", reason)
+        self.assertIn("non-BD/IN", reason)
 
+    def test_iptv_evaluate_uses_feed_country_when_optional_country_metadata_is_missing(self):
+        attrs = {"tvg-id": "GenericChannel", "tvg-name": "Generic Channel"}
+        candidate, reason = evaluate(
+            "India", attrs, "Generic Channel", "https://example.org/generic.m3u8"
+        )
+        self.assertEqual(reason, "")
+        self.assertEqual(candidate["tvg-country"], "IN")
 
-    def test_all_indian_religious_channels_are_rejected(self):
-        for name in ("Madani TV", "Peace TV", "Quran TV", "Islam Channel", "Al Huda", "Aastha"):
+    def test_iptv_evaluate_rejects_conflicting_foreign_country_metadata(self):
+        attrs = {"tvg-country": "US", "tvg-id": "GenericChannel"}
+        candidate, reason = evaluate(
+            "India", attrs, "Generic Channel", "https://example.org/generic.m3u8"
+        )
+        self.assertIsNone(candidate)
+        self.assertIn("not BD/IN", reason)
+
+    def test_only_non_islamic_indian_religious_channels_are_rejected(self):
+        for name in ("Aastha", "Calvary TV", "Disha TV", "Shekinah TV", "Santvani Channel"):
             attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
             with self.subTest(name=name):
                 self.assertIsNotNone(prohibited_channel(attrs, name, iptv_discovery=True))
+        for name in ("Madani TV", "Peace TV", "Quran TV", "Islam Channel", "Al Huda", "Q TV"):
+            attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
+            with self.subTest(name=name):
+                self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
+
+    def test_discovery_queue_logo_localization_never_keeps_external_logo_urls(self):
+        import tempfile
+        import discover_bd_in_new_queues as discovery
+        from pathlib import Path
+
+        with tempfile.TemporaryDirectory() as directory:
+            original_logos = discovery.LOGOS
+            discovery.LOGOS = Path(directory) / "logos"
+            discovery.LOGOS.mkdir()
+            (discovery.LOGOS / "sample-tv.png").write_bytes(b"logo")
+            try:
+                playlist = (
+                    '#EXTM3U\\n'
+                    '#EXTINF:-1 tvg-name="Sample TV" tvg-logo="https://cdn.example/logo.png" group-title="New Channels",Sample TV\\n'
+                    'https://cdn.example/sample.m3u8\\n'
+                    '#EXTINF:-1 tvg-name="No Logo TV" tvg-logo="https://cdn.example/no-logo.png" group-title="New Backups",No Logo TV\\n'
+                    'https://cdn.example/no-logo.m3u8\\n'
+                    '#EXTINF:-1 tvg-name="Existing TV" tvg-logo="https://cdn.example/existing.png" group-title="Bangladesh",Existing TV\\n'
+                    'https://cdn.example/existing.m3u8\\n'
+                )
+                updated, stats = discovery.localize_existing_queue_logos(playlist)
+            finally:
+                discovery.LOGOS = original_logos
+        self.assertIn('tvg-logo="logos/sample-tv.png"', updated)
+        self.assertNotIn("https://cdn.example/logo.png", updated)
+        self.assertNotIn("https://cdn.example/no-logo.png", updated)
+        self.assertIn('tvg-logo="https://cdn.example/existing.png"', updated)
+        self.assertEqual(stats, {"localized": 1, "removed": 1, "missing": 1})
 
 
     def test_cricket_and_football_are_eligible_from_india_feed_even_with_country_metadata_mismatch(self):
