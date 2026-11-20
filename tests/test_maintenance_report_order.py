@@ -202,12 +202,12 @@ class MaintenanceReportOrderTests(unittest.TestCase):
     def test_daily_pipeline_order_and_maintenance_ownership_are_consistent(self):
         root = ROOT / ".github" / "workflows"
         expected = {
-            "new-channel-discovery.yml": "0 23 * * *",
-            "international-channel-discovery.yml": "10 23 * * *",
-            "playlist-logo-localization.yml": "25 23 * * *",
-            "international-stream-health.yml": "35 23 * * *",
-            "iptv-maintenance.yml": "50 23 * * *",
-            "epg-refresh.yml": "10 0 * * *",
+            "new-channel-discovery.yml": "7 23 * * *",
+            "international-channel-discovery.yml": "17 23 * * *",
+            "playlist-logo-localization.yml": "27 23 * * *",
+            "international-stream-health.yml": "37 23 * * *",
+            "iptv-maintenance.yml": "47 23 * * *",
+            "epg-refresh.yml": "7 0 * * *",
             "check-xtream.yml": "30 0 * * *",
         }
         for filename, cron in expected.items():

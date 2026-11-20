@@ -12,7 +12,7 @@ concurrency:
 
 on:
   schedule:
-    - cron: '10 0 * * *' # 06:10 Asia/Dhaka, after the daily playlist writers
+    - cron: '7 0 * * *' # 06:07 Asia/Dhaka, after the daily playlist writers
   workflow_dispatch:
 
 # EPG generation is a main-branch writer. Keep it in the shared writer queue so it
