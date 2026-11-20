@@ -992,9 +992,9 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
                 return b'{"ok": true}'
 
         client = guard.GitHubActions("owner/repo", "token")
-        with patch.object(guard, "urlopen", side_effect=[limited, SuccessfulResponse()]) as mocked, \\
-             patch.object(guard.time, "sleep") as sleeper:
-            result = client.request("GET", "actions/runs/1")
+        with patch.object(guard, "urlopen", side_effect=[limited, SuccessfulResponse()]) as mocked:
+            with patch.object(guard.time, "sleep") as sleeper:
+                result = client.request("GET", "actions/runs/1")
         self.assertEqual(result, {"ok": True})
         self.assertEqual(mocked.call_count, 2)
         sleeper.assert_called_once_with(2)
