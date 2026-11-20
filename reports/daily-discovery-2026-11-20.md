@@ -42,7 +42,7 @@ Travelxp 4K HDR was an inconclusive alternate stream (HTTP 403), so it was moved
 
 - **New Channels:** 16 candidates, including 1 inconclusive primary candidate held for manual review.
 - **New Backups:** 22 candidates; all 22 had verified live media responses.
-- **Review hold:** 1 unverified alternate stream (Travelxp 4K HDR).
+- **Review hold:** 1 unverified alternate stream (Travelxp 4K HDR), moved out of New Backups after an inconclusive HTTP 403 probe.
 - All 39 retained queue/hold logo references point to repository assets under /logos/; all referenced files were checked.
 - tvg-country was normalized from recognized .bd/.in channel IDs on retained discovery rows.
 - Discovery queue groups are adjacent in the required order: New Channels → New Backups → Backup. Both discovery queues are A–Z sorted.
@@ -78,7 +78,7 @@ The subsequent logo-only repair commit [51d524c93016c89a6ec4d2ff5d7c576d16fd9474
 - Both independent GitHub discovery jobs completed successfully.
 - A duplicate same-day trigger was skipped by the Bangladesh-date guard because today's successful runs had already completed; no duplicate discovery was forced.
 - The IPTV country-identity and validator hardening, including the post-run playlist correction and tests, is being submitted separately so future runs reject explicit foreign channel IDs and do not leave inconclusive alternates in New Backups.
-- Remaining manual-review items: Vokta TV (primary stream inconclusive) and Travelxp 4K HDR (alternate stream inconclusive, held in Review). Playback probes establish HTTP/media-response status, not guaranteed playback in every country or player.
+- Remaining manual-review items: Vokta TV (primary stream inconclusive in New Channels) and Travelxp 4K HDR (alternate stream inconclusive, held in Review). Playback probes establish HTTP/media-response status, not guaranteed playback in every country or player.
 
 ## Source reports
 
