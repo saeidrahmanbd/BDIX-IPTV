@@ -9,7 +9,7 @@ Both daily discovery stages ran separately, used fresh source feeds, and complet
 
 | Stage | Run | Run-time result | Fresh report |
 |---|---|---|---|
-| IPTV Bangladesh + India | [#339](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/44650091117) | Workflow success; 7 invalid queue rows removed, 1 unverified backup moved to Review | [IPTV report](https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/reports/iptv-channel-discovery.md) |
+| IPTV Bangladesh + India | [#339](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/44650091117) | Workflow success; 6 invalid queue rows removed, 1 unverified backup moved to Review | [IPTV report](https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/reports/iptv-channel-discovery.md) |
 | International worldwide Movies/Music | [#323](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/44650091174) | Workflow success; 5 primary promotions, 11 verified backup promotions, 11 candidates held in Review | [International report](https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/reports/international-channel-discovery.md) |
 
 ## 1. IPTV-Playlist.m3u
@@ -26,11 +26,10 @@ Both daily discovery stages ran separately, used fresh source feeds, and complet
 
 ### Strict post-run corrections
 
-Removed these 7 newly staged rows:
+Removed these 6 newly staged rows:
 
 1. BTL TV — Netherlands (country ID .nl)
 2. Cartoon Network — Pakistan (country ID .pk)
-3. Gaunda Punjab TV — Canada (country ID .ca)
 4. Qello Concerts by Stingray — Canada (country ID .ca)
 5. National Geographic — India; prohibited Knowledge genre
 6. National Geographic Wild — India; prohibited Knowledge genre
@@ -40,13 +39,13 @@ Travelxp 4K HDR was an inconclusive alternate stream (HTTP 403), so it was moved
 
 ### Final queue and validation state in the correction branch
 
-- **New Channels:** 16 candidates, including 1 inconclusive primary candidate held for manual review.
+- **New Channels:** 17 candidates, including 1 inconclusive primary candidate held for manual review.
 - **New Backups:** 22 candidates; all 22 had verified live media responses.
 - **Review hold:** 1 unverified alternate stream (Travelxp 4K HDR), moved out of New Backups after an inconclusive HTTP 403 probe.
-- All 39 retained queue/hold logo references point to repository assets under /logos/; all referenced files were checked.
+- All 40 retained queue/hold logo references point to repository assets under /logos/; all referenced files were checked.
 - tvg-country was normalized from recognized .bd/.in channel IDs on retained discovery rows.
 - Discovery queue groups are adjacent in the required order: New Channels → New Backups → Backup. Both discovery queues are A–Z sorted.
-- Playlist entries: 1,371.
+- Playlist entries: 1,372.
 - Malformed EXTINF/URL pairs: 0.
 - Duplicate URL occurrences: 0.
 - Queue country, local-logo path and placement checks: PASS.
