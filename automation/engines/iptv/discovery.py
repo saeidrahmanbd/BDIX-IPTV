@@ -174,7 +174,7 @@ def build_discovery_batch(playlist_text: str, source_feeds: dict[str,str],
             warnings.append(
                 f"{name}: source country conflicts with tvg-country metadata; retained in {queue}"
             )
-        elif id_countries and expected_country not in id_countries and not ({"BD", "IN"} & id_countries):
+        elif id_countries and expected_country not in id_countries:
             warnings.append(
                 f"{name}: regional channel-ID country differs from source feed; retained in {queue}"
             )
