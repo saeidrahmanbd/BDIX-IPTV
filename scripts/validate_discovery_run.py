@@ -571,7 +571,7 @@ def final_mode(playlist, report, baseline, mode):
         ]
         if wrong_queue:
             errors.append(
-                "new candidates must remain in New Channels/New Backups: "
+                "new candidates must remain in New Channels/New Backups or use an approved Review hold: "
                 + ", ".join(wrong_queue[:20])
             )
 
@@ -632,7 +632,7 @@ def final_mode(playlist, report, baseline, mode):
             f"- New candidates outside New Channels/New Backups or approved Review holds: {len(wrong_queue)}",
             f"- Out-of-scope/prohibited Indian rows remaining in New Channels/New Backups: {len(queue_policy_issues)}",
             "- Existing unrelated playlist defects and incomplete logo/country metadata do not block discovery.",
-            "- New candidates remain in New Channels/New Backups for owner review; only definitively dead streams are removed.",
+            "- New Channels retains primary candidates for owner review; only verified alternates remain in New Backups, and inconclusive alternates are held in Review.",
         ]
         if errors:
             body += ["", "### Blockers", *(f"- {error}" for error in errors[:100])]
