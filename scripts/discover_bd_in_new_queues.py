@@ -566,8 +566,8 @@ def set_tvg_logo(extinf_line: str, logo: str) -> str:
     return head + "," + display
 
 
-def localize_existing_queue_logos(text: str) -> tuple[str, dict[str, int]]:
-    """Localize only discovery-queue logos; never alter unrelated playlist rows."""
+def localize_playlist_logos(text: str) -> tuple[str, dict[str, int]]:
+    """Localize every playlist logo to a real repository asset; preserve channel and stream rows."""
     lines = text.replace("\r", "").splitlines()
     prefix, blocks, current = [], [], None
     for line in lines:
@@ -583,13 +583,10 @@ def localize_existing_queue_logos(text: str) -> tuple[str, dict[str, int]]:
         blocks.append(current)
 
     stats = {"localized": 0, "removed": 0, "missing": 0}
-    queue_groups = {"new channels", "new backup", "new backups"}
     for block in blocks:
         if not block:
             continue
         a = attrs(block[0])
-        if a.get("group-title", "").strip().casefold() not in queue_groups:
-            continue
         _, display = split_extinf(block[0])
         name = (a.get("tvg-name") or display).strip()
         current_logo = a.get("tvg-logo", "").strip()
@@ -633,10 +630,10 @@ def extinf(a: dict[str, str], name: str, group: str, country: str, logo_root: st
 
 def main() -> int:
     # Apply only current Indian News/non-Islamic Religious exclusions and
-    # verify country/local-logo metadata for discovery queues; preserve all other rows.
+    # verify country metadata and localize logos across the playlist; preserve all channel/stream rows.
     original = PLAYLIST.read_text(encoding="utf-8-sig")
     original, purged_existing = purge_forbidden_existing_queue_rows(original)
-    original, logo_stats = localize_existing_queue_logos(original)
+    original, logo_stats = localize_playlist_logos(original)
     entries = parse(original)
     reference = build_reference((a, name) for a, name, _url in entries)
     existing_urls = {stream_url_key(u) for _, _, u in entries}
@@ -758,9 +755,9 @@ def main() -> int:
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected/held candidates: **{rejected}**",
         "- Country is verified from channel IDs/country metadata or the BD/IN source feed when no contradictory evidence exists. Optional language/genre fields do not block otherwise valid candidates; only authentic local logos are retained.",
-        f"- Existing queue logos localized: **{logo_stats['localized']}**",
-        f"- External/broken queue logo references removed: **{logo_stats['removed']}**",
-        f"- Queue rows without an authentic local logo: **{logo_stats['missing']}**",
+        f"- Existing playlist logos localized: **{logo_stats['localized']}**",
+        f"- External/broken playlist logo references removed: **{logo_stats['removed']}**",
+        f"- Playlist entries without an authentic local logo: **{logo_stats['missing']}**",
         f"- No justified additions: **{'yes' if not new_channels and not new_backups else 'no'}**", "",
         "## Rejection reasons", "",
         *(f"- {r}: {n}" for r, n in sorted(reasons.items())), "",
