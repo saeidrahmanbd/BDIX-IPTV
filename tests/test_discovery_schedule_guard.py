@@ -970,5 +970,51 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
                     event="schedule", workflow_file=workflow_file,
                 ))
 
+    def test_github_api_rate_limit_is_retried_before_success(self):
+        import io
+        from email.message import Message
+        from urllib.error import HTTPError
+        from unittest.mock import patch
+
+        headers = Message()
+        headers["Retry-After"] = "2"
+        limited = HTTPError(
+            "https://api.github.com/repos/owner/repo/actions/runs/1",
+            403, "Forbidden", headers,
+            io.BytesIO(b'{"message":"API rate limit exceeded for installation"}'),
+        )
+        class SuccessfulResponse:
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return b'{"ok": true}'
+
+        client = guard.GitHubActions("owner/repo", "token")
+        with patch.object(guard, "urlopen", side_effect=[limited, SuccessfulResponse()]) as mocked, \\
+             patch.object(guard.time, "sleep") as sleeper:
+            result = client.request("GET", "actions/runs/1")
+        self.assertEqual(result, {"ok": True})
+        self.assertEqual(mocked.call_count, 2)
+        sleeper.assert_called_once_with(2)
+
+    def test_github_api_non_retryable_403_fails_without_retry(self):
+        import io
+        from email.message import Message
+        from urllib.error import HTTPError
+        from unittest.mock import patch
+
+        forbidden = HTTPError(
+            "https://api.github.com/repos/owner/repo/actions/runs/1",
+            403, "Forbidden", Message(), io.BytesIO(b'{"message":"Resource not accessible"}'),
+        )
+        client = guard.GitHubActions("owner/repo", "token")
+        with patch.object(guard, "urlopen", side_effect=forbidden) as mocked:
+            with self.assertRaisesRegex(RuntimeError, "HTTP 403"):
+                client.request("GET", "actions/runs/1")
+        self.assertEqual(mocked.call_count, 1)
+
+
 if __name__ == "__main__":
     unittest.main()
