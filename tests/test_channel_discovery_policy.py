@@ -370,7 +370,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(stats, {"localized": 1, "removed": 1, "missing": 1})
 
 
-    def test_cricket_and_football_are_eligible_from_india_feed_even_with_country_metadata_mismatch(self):
+    def test_cricket_and_football_with_foreign_country_metadata_are_rejected(self):
         for name, genre in [
             ("Cricket 24", "Cricket"),
             ("Test Cricket HD", "Cricket"),
@@ -386,8 +386,8 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 candidate, reason = evaluate(
                     "India", source_metadata, name, "https://example.org/live/index.m3u8"
                 )
-                self.assertEqual(reason, "")
-                self.assertEqual(candidate, source_metadata)
+                self.assertIsNone(candidate)
+                self.assertIn("BD/IN", reason)
 
     def test_indian_cricket_and_football_sports_channels_are_discovery_eligible(self):
         for name in ("Cricket 24", "Test Cricket HD", "Football Live", "Football Sports"):
