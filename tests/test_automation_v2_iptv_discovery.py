@@ -18,7 +18,7 @@ class IptvDiscoveryAdapterTests(unittest.TestCase):
         self.assertEqual(len(result.candidates),1)
         self.assertIn('group-title="New Channels"',result.candidates[0].extinf)
         self.assertNotIn("tvg-logo=",result.candidates[0].extinf)
-        self.assertTrue(any("country conflicts" in warning for warning in result.warnings))
+        self.assertIn('tvg-country="BD"', result.candidates[0].extinf)
         self.assertTrue(any("no authentic local logo" in warning for warning in result.warnings))
 
     def test_indian_cricket_and_sports_allowed_but_news_rejected(self):
