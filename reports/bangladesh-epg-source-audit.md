@@ -1,6 +1,6 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-19T11:27:25+00:00**
+Generated: **2026-11-20T01:31:21+00:00**
 
 - Active Bangladesh playlist identities: **86**
 - Identities with a retained source mapping: **5**
@@ -23,7 +23,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; rtvbd.tv/live.php: URLError; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 34 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 36 | - |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities

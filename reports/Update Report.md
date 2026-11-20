@@ -1,19 +1,19 @@
 # Update Report
 
-_Last generated: **2026-11-19 11:27 UTC**_
+_Last generated: **2026-11-20 01:31 UTC**_
 
-Source playlist SHA-256: **04218b088615b9350bffc495ff7f758deb67a7f4a7fc10cc0bbcbefcdf532cf5**
+Source playlist SHA-256: **046c235b4d1b57347bf03c7a8a29c35616b825dd2f5ee23a4c3674089ecbb8b9**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1333** |
+| Streams | **1379** |
 | Active Channel Identities | **694** |
 | Active Primary Streams | **694** |
 | Bangladesh | **70** |
 | India | **299** |
 | Backup Stream Entries | **443** |
 | IPTV Local Logos | **STALE** |
-| IPTV EPG Programme Coverage | **56%** |
+| IPTV EPG Programme Coverage | **55%** |
 | IPTV EPG Mapping | **62.1%** |
 | Stream Health Tested | **STALE** |
 | Stream Health Failures | **STALE** |
@@ -27,8 +27,8 @@ Source playlist SHA-256: **04218b088615b9350bffc495ff7f758deb67a7f4a7fc10cc0bbcb
 - Duplicate stream URLs: **STALE / UNKNOWN (last saved: 0)**
 - Metadata conflicts (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
 - Same-name / different-ID collisions (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
-- Cross-queue metadata identity variants: **3**
-- Cross-queue same-name / different-ID collisions: **6**
+- Cross-queue metadata identity variants: **6**
+- Cross-queue same-name / different-ID collisions: **9**
 - Duplicate primary identities: **STALE / UNKNOWN (last saved: 0)**
 - Primary channel-number collisions: **STALE / UNKNOWN (last saved: 0)**
 - Primary entries missing channel numbers: **STALE / UNKNOWN (last saved: 0)**
@@ -54,7 +54,7 @@ Source playlist SHA-256: **04218b088615b9350bffc495ff7f758deb67a7f4a7fc10cc0bbcb
 ## EPG
 - EPG IDs audited: **694**
 - Mapped: **431 (62.1%)**
-- Current/future programme coverage: **388/694 (55.9%)**
+- Current/future programme coverage: **381/694 (54.9%)**
 - No mapping: **263**
 - EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against both current playlist inventories)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
@@ -63,7 +63,7 @@ Source playlist SHA-256: **04218b088615b9350bffc495ff7f758deb67a7f4a7fc10cc0bbcb
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-19T04:36:20.996655+00:00** | **STALE** |
-| EPG coverage / two-playlist inventory | **2026-11-19T11:27:25+00:00** | **CURRENT** |
+| EPG coverage / two-playlist inventory | **2026-11-20T01:31:21+00:00** | **CURRENT** |
 | Stream health | **2026-11-19T04:37:16+00:00** | **STALE** |
 | Pre-publish gate | **2026-11-19T05:34:44+00:00** | **STALE** |
 
