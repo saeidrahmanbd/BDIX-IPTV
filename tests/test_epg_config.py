@@ -886,11 +886,11 @@ class EpgConfigTests(unittest.TestCase):
     def test_epg_refresh_runs_once_daily_and_supports_manual_dispatch(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("schedule:", workflow)
-        self.assertIn("cron: '10 0 * * *'", workflow)
+        self.assertIn("cron: '7 0 * * *'", workflow)
         self.assertIn("workflow_dispatch:", workflow)
         self.assertNotIn("workflow_run:", workflow)
         self.assertNotIn("push:", workflow)
-        self.assertIn("# 06:10 Asia/Dhaka", workflow)
+        self.assertIn("# 06:07 Asia/Dhaka", workflow)
         self.assertIn("epg_refresh_needed.py --max-age-hours 8", workflow)
 
 
