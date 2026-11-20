@@ -123,19 +123,25 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
 
     def test_explicit_foreign_ids_are_rejected_even_when_listed_in_bd_feed(self):
         examples = [
-            ("BTLTV.nl@SD", "BTL TV", "NL"),
-            ("CartoonNetwork.pk@SD", "Cartoon Network", "PK"),
-            ("GaundaPunjabTV.ca@SD", "Gaunda Punjab TV", "CA"),
-            ("QelloConcertsbyStingray.ca@SD", "Qello Concerts by Stingray", "CA"),
+            ("BTLTV.nl@SD", "BTL TV", "NL", "BD"),
+            ("CartoonNetwork.pk@SD", "Cartoon Network", "PK", "BD"),
+            ("QelloConcertsbyStingray.ca@SD", "Qello Concerts by Stingray", "CA", "IN"),
         ]
-        for channel_id, name, country in examples:
+        for channel_id, name, country, source in examples:
             with self.subTest(channel_id=channel_id):
-                attrs = {"tvg-id": channel_id, "x-discovery-source-country": "BD"}
-                self.assertEqual(explicit_foreign_country(attrs), country)
-                self.assertFalse(is_indian_discovery_candidate(attrs, name))
+                attrs = {"tvg-id": channel_id, "x-discovery-source-country": source}
+                self.assertEqual(explicit_foreign_country(attrs, name), country)
                 self.assertIn("outside Bangladesh/India", prohibited_channel(
-                    attrs, name, "BD", discovery=True, iptv_discovery=True
+                    attrs, name, source, discovery=True, iptv_discovery=True
                 ))
+
+    def test_regional_diaspora_channel_with_ca_id_is_not_rejected_from_india_feed(self):
+        attrs = {"tvg-id": "GaundaPunjabTV.ca@SD", "x-discovery-source-country": "IN"}
+        self.assertIsNone(explicit_foreign_country(attrs, "Gaunda Punjab TV"))
+        self.assertTrue(is_indian_discovery_candidate(attrs, "Gaunda Punjab TV"))
+        self.assertIsNone(prohibited_channel(
+            attrs, "Gaunda Punjab TV", "IN", discovery=True, iptv_discovery=True
+        ))
 
     def test_indian_id_suffix_applies_indian_exclusions_even_in_bd_source_feed(self):
         examples = [
@@ -299,13 +305,13 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
 
     def test_indian_identity_uses_source_then_country_then_known_alias(self):
         self.assertTrue(is_indian_discovery_candidate({"tvg-id": "DishaTV.in@SD"}, "Disha TV"))
-        self.assertFalse(is_indian_discovery_candidate(
+        self.assertTrue(is_indian_discovery_candidate(
             {"tvg-country": "BD", "tvg-id": "DishaTV.in@SD"}, "Disha TV"
         ))
-        self.assertFalse(is_indian_discovery_candidate(
+        self.assertTrue(is_indian_discovery_candidate(
             {"x-discovery-source-country": "BD", "tvg-id": "SonyYay.in@SD"}, "Sony Yay!"
         ))
-        self.assertIsNone(prohibited_channel(
+        self.assertIn("kids", prohibited_channel(
             {"x-discovery-source-country": "BD", "tvg-id": "SonyYay.in@SD", "group-title": "Kids"},
             "Sony Yay!",
             iptv_discovery=True,
@@ -464,7 +470,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn('group-title="New Channels",Mahua Play', filtered)
         self.assertIn('group-title="Indian Entertainment",E-Vidya 4', filtered)
 
-    def test_foreign_country_metadata_does_not_purge_manual_review_candidates(self):
+    def test_explicit_pakistani_queue_rows_are_purged_from_iptv_discovery(self):
         text = (
             "#EXTM3U\n"
             '#EXTINF:-1 tvg-name="ARY Music" tvg-country="PK" tvg-id="ARYMusic.pk" group-title="New Channels",ARY Music\n'
@@ -477,9 +483,9 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "https://example.invalid/channel24.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
-        self.assertEqual(removed, ["Gopal Bhar"])
-        self.assertIn('group-title="New Channels",ARY Music', filtered)
-        self.assertIn('group-title="New Channels",Madani Channel', filtered)
+        self.assertEqual(removed, ["ARY Music", "Madani Channel", "Gopal Bhar"])
+        self.assertNotIn('group-title="New Channels",ARY Music', filtered)
+        self.assertNotIn('group-title="New Channels",Madani Channel', filtered)
         self.assertNotIn('group-title="New Channels",Gopal Bhar', filtered)
         self.assertIn('group-title="New Channels",Channel 24', filtered)
 
