@@ -69,13 +69,13 @@ IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
     "news": {"r plus", "r plus gold", "bhi channel", "tv 100", "tv 100 national"},
     "kids": {"sony yay", "disney channel", "jungle book", "doraemon"},
     "education": {"vtu"},
-    "knowledge": {"dd kisan", "krishi darshan"},
+    "knowledge": {"dd kisan", "krishi darshan", "cvr health"},
     "religious": {"disha tv", "q tv", "shekinah tv", "darshana tv"},
 }
 IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
     "rplus.in": "news", "rplusgold.in": "news", "bhi.channel.in": "news", "tv100.in": "news", "tv100national.in": "news",
     "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "qtv.in": "religious", "shekinahtv.in": "religious", "darshanatv.in": "religious",
-    "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge",
+    "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge", "cvrhealth.in": "knowledge",
 }
 
 
@@ -170,6 +170,8 @@ PERMANENTLY_BANNED_CHANNEL_NAMES = {
         "XXTreme Jobs Hindi",
         "Power Turk",
         "Safari TV Tamil",
+        "CVR Health",
+        "Vokta TV",
     )
 }
 # Stable base channel IDs (region/quality suffixes after "@" are ignored). This
@@ -206,6 +208,8 @@ PERMANENTLY_BANNED_CHANNEL_IDS = {
     "discoveryturbo.in",
     "xxtremejobshindi.in",
     "powerturktv.tr",
+    "cvrhealth.in",
+    "voktatv.bd",
 }
 # A programme title is not a standalone linear TV channel. Keep this exact
 # denylist narrow so incomplete optional metadata alone never blocks a channel.

@@ -1401,14 +1401,10 @@ https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3
 http://116.90.120.149:8000/play/a115/index.m3u8
 #EXTINF:-1 tvg-id="NationalGeographicWild.in@HD" tvg-name="National Geographic Wild (India) HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic-wild-india-hd-1080p.png" group-title="New Channels" x-discovery-source-country="BD",National Geographic Wild (India) HD (1080p)
 http://116.90.120.149:8000/play/a11h/index.m3u8
-#EXTINF:-1 tvg-id="VoktaTV.bd@SD" tvg-name="Vokta TV (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vokta-tv.png" group-title="New Channels" x-discovery-source-country="BD",Vokta TV (720p)
-https://vokta.raytahost.com/live/voktatv/index.m3u8
 #EXTINF:-1 tvg-id="AyushNextCommunicationNetwork.in@SD" tvg-name="Ayush Next Communication Network (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png" group-title="New Channels" x-discovery-source-country="IN",Ayush Next Communication Network (576p)
 https://d2lk5u59tns74c.cloudfront.net/out/v1/60ab07b02a2942498cdd81f045a625a1/index.m3u8
 #EXTINF:-1 tvg-id="BollywoodMasala.in@SD" tvg-name="Bollywood Masala (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bollywood-masala-a6b8705b09a523f7b504.png" group-title="New Channels" x-discovery-source-country="IN",Bollywood Masala (1080p)
 https://lamhas.net/bollywoodmasala/index.m3u8
-#EXTINF:-1 tvg-id="CVRHealth.in@SD" tvg-name="CVR Health (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cvr-health.png" group-title="New Channels" x-discovery-source-country="IN",CVR Health (576p)
-https://mumbai-edge.smartplaytv.in/CVRHealth/index.m3u8
 #EXTINF:-1 tvg-id="ETVLife.in@SD" tvg-name="ETV Life (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-life.png" group-title="New Channels" x-discovery-source-country="IN",ETV Life (1080p)
 https://d2dgecfolnmfcv.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_LIFE_H264-5_cloud_in/index.m3u8
 #EXTINF:-1 tvg-id="ETVTelugu.in@HD" tvg-name="ETV Telugu HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-telugu-hd-1080p.png" group-title="New Channels" x-discovery-source-country="IN",ETV Telugu HD (1080p)
