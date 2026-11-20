@@ -350,11 +350,14 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             discovery.LOGOS = Path(directory) / "logos"
             discovery.LOGOS.mkdir()
             (discovery.LOGOS / "sample-tv.png").write_bytes(b"logo")
+            (discovery.LOGOS / "raw-logo-tv.png").write_bytes(b"logo")
             try:
                 playlist = (
                     '#EXTM3U\n'
                     '#EXTINF:-1 tvg-name="Sample TV" tvg-logo="https://cdn.example/logo.png" group-title="New Channels",Sample TV\n'
                     'https://cdn.example/sample.m3u8\n'
+                    '#EXTINF:-1 tvg-name="Raw Logo TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raw-logo-tv.png" group-title="Bangladesh",Raw Logo TV\n'
+                    'https://cdn.example/raw-logo.m3u8\n'
                     '#EXTINF:-1 tvg-name="No Logo TV" tvg-logo="https://cdn.example/no-logo.png" group-title="New Backups",No Logo TV\n'
                     'https://cdn.example/no-logo.m3u8\n'
                     '#EXTINF:-1 tvg-name="Existing TV" tvg-logo="https://cdn.example/existing.png" group-title="Bangladesh",Existing TV\n'
@@ -364,10 +367,12 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             finally:
                 discovery.LOGOS = original_logos
         self.assertIn('tvg-logo="logos/sample-tv.png"', updated)
+        self.assertIn('tvg-logo="logos/raw-logo-tv.png"', updated)
         self.assertNotIn("https://cdn.example/logo.png", updated)
+        self.assertNotIn("https://raw.githubusercontent.com", updated)
         self.assertNotIn("https://cdn.example/no-logo.png", updated)
         self.assertNotIn("https://cdn.example/existing.png", updated)
-        self.assertEqual(stats, {"localized": 1, "removed": 2, "missing": 2})
+        self.assertEqual(stats, {"localized": 2, "removed": 2, "missing": 2})
 
 
     def test_cricket_and_football_with_foreign_country_metadata_are_rejected(self):
