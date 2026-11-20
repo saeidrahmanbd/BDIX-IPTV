@@ -12,6 +12,7 @@ Knowledge, Business/Finance and all Religious channels are excluded from this
 IPTV playlist discovery policy. International retains its separate policy.
 """
 # Owner-authorized policy-alignment retry marker (2026-11-19).
+# [manual-new-channel-discovery] Fresh daily discovery trigger for 2026-11-20.
 
 from __future__ import annotations
 import json, re, unicodedata, urllib.request
