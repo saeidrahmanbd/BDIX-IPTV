@@ -386,7 +386,7 @@ def prohibited_channel(
 
 def verify_iptv_country(a: dict[str, str], name: str, feed_country: str, reference=None):
     """Verify BD/IN identity; use the feed only when optional country metadata is absent."""
-    feed = COUNTRY_CODE.get(feed_country, str(feed_country or "").strip().upper())
+    feed = COUNTRY_CODE.get(feed_country, str(feed_country or "").strip().upper()).upper()
     if feed not in {"BD", "IN"}:
         return None, "unknown source feed"
 
