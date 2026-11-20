@@ -167,7 +167,7 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(candidate, original)
         self.assertNotIn("tvg-country", candidate)
         line = disc.extinf(candidate, "Star Utsav", "New Channels", "India")
-        self.assertNotIn("tvg-country=", line)
+        self.assertIn('tvg-country="IN"', line)
         foreign, why = disc.evaluate("India", {"tvg-id": "Star Utsav.us"}, "Star Utsav", url)
         self.assertEqual(why, "")
         self.assertEqual(foreign["tvg-id"], "Star Utsav.us")

@@ -190,7 +190,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         self.assertFalse(localized)
         self.assertTrue(unavailable)
 
-    def test_iptv_discovery_keeps_new_manual_review_candidate_with_wrong_country_and_no_logo(self):
+    def test_iptv_discovery_keeps_new_indian_candidate_with_missing_country_and_no_logo(self):
         import tempfile
         from unittest.mock import patch
         import validate_discovery_run as validation
@@ -205,7 +205,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 'https://example.org/old-queue.m3u8\n'
             )
             fresh = (
-                '#EXTINF:-1 tvg-id="Fresh.us" tvg-country="US" group-title="New Channels" tvg-name="Fresh Candidate",Fresh Candidate\n'
+                '#EXTINF:-1 tvg-id="Fresh.in" x-discovery-source-country="BD" group-title="New Channels" tvg-name="Fresh Candidate",Fresh Candidate\n'
                 'https://example.org/fresh-candidate.m3u8\n'
             )
             playlist.write_text("#EXTM3U\n" + existing + fresh, encoding="utf-8")
@@ -222,8 +222,8 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn('group-title="New Channels"', output)
             self.assertIn('tvg-name="Fresh Candidate"', output)
             self.assertIn('tvg-name="Old Queue Row"', output)
-            self.assertIn('tvg-id="Fresh.us"', output)
-            self.assertIn('tvg-country="US"', output)
+            self.assertIn('tvg-id="Fresh.in"', output)
+            self.assertIn('x-discovery-source-country="BD"', output)
             self.assertEqual(probe.call_count, 1)
             logo_repair.assert_not_called()
             self.assertIn("manual review", report.read_text(encoding="utf-8").casefold())
@@ -246,7 +246,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 'https://example.org/old-duplicate.m3u8\n'
             )
             fresh = (
-                '#EXTINF:-1 tvg-id="Fresh.us" tvg-country="US" group-title="New Channels" tvg-name="Fresh Candidate",Fresh Candidate\n'
+                '#EXTINF:-1 tvg-id="Fresh.in" group-title="New Channels" tvg-name="Fresh Candidate",Fresh Candidate\n'
                 'https://example.org/fresh-candidate.m3u8\n'
             )
             prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
@@ -298,7 +298,102 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             final_report = report.read_text(encoding="utf-8")
             self.assertIn("- Validation status: FAIL", final_report)
             self.assertIn("Prohibited Indian queue row: Sony Yay!", final_report)
-            self.assertIn("Prohibited Indian rows remaining in New Channels/New Backups: 1", final_report)
+            self.assertIn("Out-of-scope/prohibited Indian rows remaining in New Channels/New Backups: 1", final_report)
+
+    def test_final_iptv_validation_blocks_foreign_country_queue_rows(self):
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
+            prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
+            foreign = (
+                '#EXTINF:-1 tvg-id="BTLTV.nl@SD" x-discovery-source-country="BD" '
+                'group-title="New Channels" tvg-name="BTL TV",BTL TV\n'
+                "https://example.org/btl.m3u8\n"
+            )
+            playlist.write_text(prefix + foreign, encoding="utf-8")
+            baseline.write_text(prefix, encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "iptv")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            final_report = report.read_text(encoding="utf-8")
+            self.assertIn("- Validation status: FAIL", final_report)
+            self.assertIn("Out-of-scope queue row: BTL TV", final_report)
+            self.assertIn("explicit country NL is outside Bangladesh/India", final_report)
+
+    def test_iptv_inconclusive_backup_moves_to_review_not_new_backups(self):
+        import tempfile
+        from unittest.mock import patch
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
+            content = (
+                "#EXTM3U\n"
+                "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
+                '#EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-country="IN" group-title="New Backups" tvg-name="Travelxp",Travelxp\n'
+                "https://example.org/travelxp.m3u8\n"
+            )
+            playlist.write_text(content, encoding="utf-8")
+            baseline.write_text("#EXTM3U\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            with patch.object(validation, "probe_url", return_value=("unknown", "HTTP 403")):
+                validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
+            output = playlist.read_text(encoding="utf-8")
+            self.assertIn('group-title="Review"', output)
+            self.assertIn('x-discovery-hold-reason="unverified-backup-stream"', output)
+            self.assertNotIn('group-title="New Backups"', output)
+            self.assertIn("Moved unverified alternate stream Travelxp", report.read_text(encoding="utf-8"))
+
+    def test_final_iptv_validation_allows_explicitly_tagged_unverified_backup_review_hold(self):
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
+            content = (
+                "#EXTM3U\n"
+                "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
+                '#EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-country="IN" x-discovery-hold-reason="unverified-backup-stream" group-title="Review" tvg-name="Travelxp",Travelxp\n'
+                "https://example.org/travelxp.m3u8\n"
+            )
+            playlist.write_text(content, encoding="utf-8")
+            baseline.write_text("#EXTM3U\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "iptv")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            final_report = report.read_text(encoding="utf-8")
+            self.assertIn("- Validation status: PASS", final_report)
+            self.assertIn("New candidates outside New Channels/New Backups or approved Review holds: 0", final_report)
 
     def test_parser_skips_vlc_and_kodi_directives_before_media_url(self):
         text = (
