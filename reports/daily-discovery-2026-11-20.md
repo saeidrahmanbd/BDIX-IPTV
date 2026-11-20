@@ -22,7 +22,7 @@ Both daily discovery stages ran separately, used fresh source feeds, and complet
 - Discovery found 27 primary candidates and 31 alternate-stream candidates.
 - 836 candidates were rejected or held by the discovery filters.
 - 58 candidate streams were probed: 42 returned live media responses, 12 were definitively dead and removed, and 4 were inconclusive.
-- The initial run-time validator passed, but its country logic trusted source-feed placement even when the channel ID explicitly identified another country. A strict post-run audit corrected that defect.
+- The initial run-time validator passed, but its country logic did not distinguish known foreign broadcasters from legitimate diaspora channels with regional ID suffixes. A strict post-run audit corrected the known cases and retained regional candidates when the source-feed evidence supported them.
 
 ### Strict post-run corrections
 
@@ -30,10 +30,10 @@ Removed these 6 newly staged rows:
 
 1. BTL TV — Netherlands (country ID .nl)
 2. Cartoon Network — Pakistan (country ID .pk)
-4. Qello Concerts by Stingray — Canada (country ID .ca)
-5. National Geographic — India; prohibited Knowledge genre
-6. National Geographic Wild — India; prohibited Knowledge genre
-7. Nick Jr. — India; prohibited Kids genre
+3. Qello Concerts by Stingray — Canada (country ID .ca)
+4. National Geographic — India; prohibited Knowledge genre
+5. National Geographic Wild — India; prohibited Knowledge genre
+6. Nick Jr. — India; prohibited Kids genre
 
 Travelxp 4K HDR was an inconclusive alternate stream (HTTP 403), so it was moved from New Backups to Review with an explicit hold reason. It is not counted as a verified backup. Vokta TV remains in New Channels for manual review because its probe was inconclusive (HTTP 403).
 
