@@ -1,23 +1,23 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-20T02:11:41+00:00**
+Generated: **2026-11-20T03:59:55+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **1bbd1d1cccf74d71906892f3beae8c6e47915493ba13caee24c36d161e2c297f**
-- International-Playlist.m3u SHA-256: **33e1533b611ce5655a2870d2405d84e36d145fe7967dc200d167128d4ab26e66**
+- International-Playlist.m3u SHA-256: **4bed0d6d2da3c171e3486880fc357ec2818076b56629dc6bda7f4a5cfcea6e2f**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **146**
 - Exact-byte duplicate asset clusters: **737**
-- Playlist references whose asset stem differs from the normalized channel name: **1591**
+- Playlist references whose asset stem differs from the normalized channel name: **1592**
 - Unreferenced image assets immediately inside logos/: **879** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -2271,6 +2271,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Law & Crime | law-and-crime-f698aa08fe.png | Review |
 | International-Playlist.m3u | Lego Channel | lego-channel-1080p.png | Review |
 | International-Playlist.m3u | Life+Style | life-plus-style-259a601564e8bc147e54.png | Review |
+| International-Playlist.m3u | Look Thoong TV (720p) [Not 24/7] | look-thoong-tv-720p-not-24-7-2c41090ebcf122f4ded0.png | Review |
 | International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
 | International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
 | International-Playlist.m3u | Madani TV | madani-tv.png | Review |
