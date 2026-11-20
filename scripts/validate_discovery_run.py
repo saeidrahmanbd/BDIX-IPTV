@@ -426,15 +426,28 @@ def probe_mode(playlist, report, baseline, mode):
             counts["verified streams"] += 1
             verified_starts.add(e["start"])
         else:
-            counts["inconclusive streams retained for manual review"] += 1
             inconclusive_starts.add(e["start"])
-            details.append(
-                f"- Retained {e['name']} in {e['group']} for manual review — stream probe was inconclusive ({reason})."
-            )
+            if mode == "iptv" and e["group"].casefold() in {"new backup", "new backups"}:
+                # A New Backup is only valid after its alternate stream is verified.
+                # Keep an inconclusive candidate out of that queue, but preserve it
+                # in the quarantined Review group for a later manual check.
+                current = update_lines.get(e["start"], e["extinf"])
+                current = discovery.set_attr(current, "group-title", "Review")
+                current = discovery.set_attr(current, "x-discovery-hold-reason", "unverified-backup-stream")
+                update_lines[e["start"]] = current
+                counts["unverified backup streams moved to Review"] += 1
+                details.append(
+                    f"- Moved unverified alternate stream {e['name']} from {e['group']} to Review — probe was inconclusive ({reason})."
+                )
+            else:
+                counts["inconclusive streams retained for manual review"] += 1
+                details.append(
+                    f"- Retained {e['name']} in {e['group']} for manual review — stream probe was inconclusive ({reason})."
+                )
 
         if mode == "iptv":
             # New Channels/New Backups are private manual-review queues. Do not
-            # rewrite source metadata, move groups, or require a local logo here.
+            # rewrite source metadata or require a local logo here.
             logo_path = local_logo_path(e["logo"])
             if logo_path is None or not logo_path.is_file():
                 counts["candidates needing local logo repair"] += 1
@@ -486,6 +499,7 @@ def probe_mode(playlist, report, baseline, mode):
         f"- Verified new primary channels automatically promoted: {counts['verified primary channels promoted']}",
         f"- Verified alternate streams moved to Backup: {counts['verified alternate streams moved to Backup']}",
         f"- Inconclusive candidates retained for manual review: {counts['inconclusive streams retained for manual review'] if mode == 'iptv' else counts['primary streams retained as unverified']}",
+        f"- Unverified backup streams moved to Review: {counts['unverified backup streams moved to Review']}",
         f"- Definitively dead new candidates removed: {counts['definitively dead new candidates removed']}",
         f"- Duplicate newly discovered stream entries removed: {counts['duplicate discovery entries removed']}",
         f"- Country-group rows consolidated after stream probing: {counts['country-group rows consolidated after stream probing']}",
@@ -550,6 +564,10 @@ def final_mode(playlist, report, baseline, mode):
         wrong_queue = [
             entry["name"] for entry in new_entries
             if entry["group"].casefold() not in {"new channels", "new backup", "new backups"}
+            and not (
+                entry["group"].casefold() == "review"
+                and entry["attrs"].get("x-discovery-hold-reason") == "unverified-backup-stream"
+            )
         ]
         if wrong_queue:
             errors.append(
@@ -611,7 +629,7 @@ def final_mode(playlist, report, baseline, mode):
             f"- New candidates missing an authentic local logo: {missing_logo} (warning only)",
             f"- New candidates with non-local logo references: {nonlocal_logo} (warning only)",
             f"- New candidates with country metadata requiring manual review: {country_warning} (warning only)",
-            f"- New candidates outside New Channels/New Backups: {len(wrong_queue)}",
+            f"- New candidates outside New Channels/New Backups or approved Review holds: {len(wrong_queue)}",
             f"- Out-of-scope/prohibited Indian rows remaining in New Channels/New Backups: {len(queue_policy_issues)}",
             "- Existing unrelated playlist defects and incomplete logo/country metadata do not block discovery.",
             "- New candidates remain in New Channels/New Backups for owner review; only definitively dead streams are removed.",
