@@ -584,6 +584,12 @@ def final_mode(playlist, report, baseline, mode):
         for entry in entries:
             if entry["group"].casefold() not in queue_groups:
                 continue
+            foreign_country = bd_discovery.explicit_foreign_country(entry["attrs"])
+            if foreign_country:
+                queue_policy_issues.append(
+                    f"Out-of-scope queue row: {entry['name']} (explicit country {foreign_country} is outside Bangladesh/India)"
+                )
+                continue
             if not bd_discovery.is_indian_discovery_candidate(entry["attrs"], entry["name"]):
                 continue
             reason = bd_discovery.prohibited_channel(
@@ -606,7 +612,7 @@ def final_mode(playlist, report, baseline, mode):
             f"- New candidates with non-local logo references: {nonlocal_logo} (warning only)",
             f"- New candidates with country metadata requiring manual review: {country_warning} (warning only)",
             f"- New candidates outside New Channels/New Backups: {len(wrong_queue)}",
-            f"- Prohibited Indian rows remaining in New Channels/New Backups: {len(queue_policy_issues)}",
+            f"- Out-of-scope/prohibited Indian rows remaining in New Channels/New Backups: {len(queue_policy_issues)}",
             "- Existing unrelated playlist defects and incomplete logo/country metadata do not block discovery.",
             "- New candidates remain in New Channels/New Backups for owner review; only definitively dead streams are removed.",
         ]
