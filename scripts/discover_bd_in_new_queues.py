@@ -201,7 +201,7 @@ NON_CHANNEL_PROGRAM_NAMES = {canonical_channel_name("Gopal Bhar")}
 
 FORBIDDEN_WORDS = {"news"}
 ISLAMIC_ALLOWED_MARKERS = re.compile(
-    r"\b(?:islamic|islam|muslim|qur['’]?an|madani|peace\s*tv|huda|noor|deen|ummah|"
+    r"\b(?:islamic|islam|muslim|qur['’]?an|madani|peace\s*tv|q\s*tv|huda|noor|deen|ummah|"
     r"makkah|mecca|madina|al\s*furqan|sunnah|mta|qtv|iqra|hadith|ramadan|hajj|umrah|masjid|mosque|azan|adhan|kaaba|sharia)\b",
     re.IGNORECASE,
 )
