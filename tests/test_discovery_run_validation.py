@@ -228,7 +228,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             logo_repair.assert_not_called()
             self.assertIn("manual review", report.read_text(encoding="utf-8").casefold())
 
-    def test_final_iptv_validation_ignores_country_logo_and_preexisting_playlist_duplicates(self):
+    def test_final_iptv_validation_blocks_full_playlist_duplicates_and_foreign_country(self):
         import os
         import tempfile
         import validate_discovery_run as validation
@@ -263,9 +263,11 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 else:
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
             final_report = report.read_text(encoding="utf-8")
-            self.assertIn("- Validation status: PASS", final_report)
+            self.assertIn("- Validation status: FAIL", final_report)
             self.assertIn("missing an authentic local logo: 1", final_report)
-            self.assertIn("New duplicate stream URL occurrences: 0", final_report)
+            self.assertIn("Full playlist duplicate stream URLs: 1", final_report)
+            self.assertIn("Queue rows with unverified country: 1", final_report)
+            self.assertIn("No justified additions: no", final_report)
 
     def test_final_iptv_validation_blocks_prohibited_legacy_indian_queue_rows(self):
         import os
@@ -280,7 +282,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
             prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
             legacy = (
-                '#EXTINF:-1 tvg-id="RPlus.in@SD" tvg-name="R Plus" group-title="New Backups",R Plus\n'
+                '#EXTINF:-1 tvg-id="RPlus.in@SD" tvg-country="IN" tvg-name="R Plus" group-title="New Backups",R Plus\n'
                 "https://example.org/rplus.m3u8\n"
             )
             playlist.write_text(prefix + legacy, encoding="utf-8")
@@ -299,6 +301,46 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("- Validation status: FAIL", final_report)
             self.assertIn("Prohibited Indian queue row: R Plus", final_report)
             self.assertIn("Prohibited Indian rows remaining in New Channels/New Backups: 1", final_report)
+
+    def test_final_iptv_validation_passes_clean_playlist_and_allows_bangladesh_news(self):
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "IPTV-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
+            prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
+            existing = (
+                '#EXTINF:-1 tvg-id="Existing.bd" tvg-country="BD" group-title="Bangladesh" tvg-name="Existing TV",Existing TV\n'
+                "https://example.org/existing.m3u8\n"
+            )
+            new_bangladesh_news = (
+                '#EXTINF:-1 tvg-id="BanglaNews.bd" tvg-country="BD" x-discovery-source-country="IN" '
+                'tvg-name="Bangla News TV" group-title="New Channels",Bangla News TV\n'
+                "https://example.org/bangla-news.m3u8\n"
+            )
+            playlist.write_text(prefix + existing + new_bangladesh_news, encoding="utf-8")
+            baseline.write_text(prefix + existing, encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "iptv")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            final_report = report.read_text(encoding="utf-8")
+            self.assertIn("- Validation status: PASS", final_report)
+            self.assertIn("Final New Channels queue entries: 1", final_report)
+            self.assertIn("No justified additions: no", final_report)
+            self.assertIn("Category registry and queue placement: passed", final_report)
+            self.assertIn("Prohibited Indian rows remaining in New Channels/New Backups: 0", final_report)
 
     def test_parser_skips_vlc_and_kodi_directives_before_media_url(self):
         text = (
