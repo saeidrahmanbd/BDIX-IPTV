@@ -61,7 +61,7 @@ on:
       - tests/test_channel_numbering.py
       - tests/test_backup_metadata_reconcile.py
   schedule:
-    - cron: '50 23 * * *' # 05:50 Asia/Dhaka (UTC+6), after discovery, logo and International health
+    - cron: '47 23 * * *' # 05:50 Asia/Dhaka (UTC+6), after discovery, logo and International health
   workflow_dispatch:
 permissions:
   contents: write
