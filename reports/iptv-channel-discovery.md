@@ -208,3 +208,24 @@ The fresh IPTV discovery run completed as [GitHub Actions run #339](https://gith
 
 - [Fresh IPTV discovery commit](https://github.com/saeidrahmanbd/BDIX-IPTV/commit/301937915e698ca615391750e695c08da0cba60c)
 - [Local logo repair for today's IPTV/International candidates](https://github.com/saeidrahmanbd/BDIX-IPTV/commit/ce16a8ea16ad234697c35a4307fda9210467ac65)
+
+
+## Post-run strict policy audit — 2026-11-20 08:02:54 +06:00
+
+The fresh IPTV discovery run completed as [GitHub Actions run #339](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/44650091117). A post-run audit applied the established Indian discovery exclusions and checked explicit foreign identities against source-feed context, without rejecting legitimate regional/diaspora channels solely because of a nonessential regional ID suffix.
+
+- Removed 6 newly staged rows: BTL TV (Netherlands), Cartoon Network (Pakistan), Qello Concerts by Stingray (Canada), National Geographic (India), National Geographic Wild (India), and Nick Jr. (India).
+- Reasons: 3 corroborated foreign broadcaster identities (.nl/.pk/.ca); 2 Indian Knowledge channels; 1 Indian Kids channel. Gaunda Punjab TV was retained because its .ca ID alone does not override its India source-feed context.
+- Travelxp 4K HDR was an inconclusive alternate stream (HTTP 403); it was moved from New Backups to Review with an explicit hold reason, not published as a backup.
+- Remaining discovery queues: 39 candidates (17 New Channels; 22 New Backups). Vokta TV remains in New Channels for manual review because its probe was inconclusive; all New Backups rows are verified.
+- Review hold: 1 unverified alternate stream (Travelxp 4K HDR (2160p) [Geo-blocked]).
+- Country metadata: tvg-country normalized from recognized .bd/.in IDs or trusted BD/IN source-feed context for retained regional/diaspora candidates.
+- Local logos: all 40 retained queue/hold logo references point to repository assets under /logos/; the referenced files were checked.
+- Queue order: New Channels, New Backups, Backup; both discovery queues are A–Z sorted. Review remains after Backup and A–Z sorted.
+- M3U validation: 1371 entries; malformed EXTINF/URL pairs 0; duplicate URL occurrences 0; queue-country check passed; local-logo path check passed; queue placement passed; Review sort passed.
+- Only today's discovery additions were removed, reclassified or metadata-normalized; unrelated existing playlist entries and stream URLs were preserved.
+
+### Related commits
+
+- [Fresh IPTV discovery commit](https://github.com/saeidrahmanbd/BDIX-IPTV/commit/301937915e698ca615391750e695c08da0cba60c)
+- [Local logo repair for today's IPTV/International candidates](https://github.com/saeidrahmanbd/BDIX-IPTV/commit/ce16a8ea16ad234697c35a4307fda9210467ac65)
