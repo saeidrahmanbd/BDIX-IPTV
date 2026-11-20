@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Discover Bangladesh/India candidates into manual-review queues.
 
-The source feed sets policy scope, not a hard metadata-verification gate. Keep
-source metadata as supplied; country, IDs, language and logos can be corrected
-after owner review. Definite policy/URL exclusions and duplicate stream URLs
-prevent queueing. Dead streams are removed by the subsequent probe; inconclusive
-streams remain for manual review.
+The source feed is a fallback when channel-country metadata is absent. Explicit
+country IDs/codes must identify Bangladesh or India; a recognized .in ID also
+activates the Indian discovery exclusions even when listed in the BD feed.
+Definite policy/URL exclusions and duplicate streams prevent queueing.
 
 Bangladesh channels of all genres are eligible. Indian News, Kids, Education,
 Knowledge, Business/Finance and all Religious channels are excluded from this
