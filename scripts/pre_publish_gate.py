@@ -167,8 +167,9 @@ def main():
     issues=[]
     permanent_ban_errors = permanently_banned_playlist_errors(current)
     if permanent_ban_errors: issues.append(f"permanently banned/legacy-prohibited channel entries anywhere in IPTV playlist: {len(permanent_ban_errors)}")
-    relative_logo_refs=[a.get("tvg-name","") for _,a,_ in current if a.get("tvg-logo","").strip().startswith("logos/")]
-    if relative_logo_refs: issues.append(f"relative tvg-logo paths must be absolute raw URLs (count {len(relative_logo_refs)})")
+    # Repository-relative logos/ paths are intentional: they reference assets
+    # committed in this repository and are validated below for safe paths and
+    # file existence. Do not require raw.githubusercontent.com URLs here.
     warnings=[]
     # Hard blockers are integrity/safety violations, not unresolved owner-review
     # metadata. Discovery queues are intentionally provisional and must never
