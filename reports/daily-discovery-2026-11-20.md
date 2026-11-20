@@ -45,11 +45,11 @@ Travelxp 4K HDR was an inconclusive alternate stream (HTTP 403), so it was moved
 - All 40 retained queue/hold logo references point to repository assets under /logos/; all referenced files were checked.
 - tvg-country was normalized from recognized .bd/.in channel IDs on retained discovery rows.
 - Discovery queue groups are adjacent in the required order: New Channels → New Backups → Backup. Both discovery queues are A–Z sorted.
-- Playlist entries: 1,372.
+- Playlist entries: 1,373.
 - Malformed EXTINF/URL pairs: 0.
 - Duplicate URL occurrences: 0.
 - Queue country, local-logo path and placement checks: PASS.
-- Existing non-discovery channel rows and stream URLs were preserved.
+- Existing non-discovery channel rows and stream URLs were preserved, including both pre-existing Zee TV Review streams.
 
 The logo-only repair for today's IPTV candidates is recorded in [commit ce16a8ea16ad234697c35a4307fda9210467ac65](https://github.com/saeidrahmanbd/BDIX-IPTV/commit/ce16a8ea16ad234697c35a4307fda9210467ac65).
 
