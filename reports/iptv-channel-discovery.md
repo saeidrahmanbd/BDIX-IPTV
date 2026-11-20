@@ -195,7 +195,7 @@ Generated: **2026-11-20T00:59:50.948762+00:00**
 The fresh IPTV discovery run completed as [GitHub Actions run #339](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/44650091117). A post-run audit applied the established Indian discovery exclusions and checked corroborated foreign identities without rejecting legitimate regional/diaspora channels solely because of a nonessential regional ID suffix.
 
 - Removed 6 newly staged rows: BTL TV (Netherlands), Cartoon Network (Pakistan), Qello Concerts by Stingray (Canada), National Geographic (India), National Geographic Wild (India), and Nick Jr. (India).
-- Reasons: 3 corroborated foreign broadcaster identities (.nl/.pk/.ca); 2 Indian Knowledge channels; 1 Indian Kids channel. Gaunda Punjab TV was retained because its .ca ID alone does not override its India source-feed context.
+- Reasons: 3 corroborated foreign broadcaster identities (.nl/.pk/.ca); 2 Indian Knowledge channels; 1 Indian Kids channel. Gaunda Punjab TV was retained because its .ca ID alone does not override its India source-feed context; that ID mismatch remains a non-blocking metadata warning.
 - Travelxp 4K HDR was an inconclusive alternate stream (HTTP 403); it was moved from New Backups to Review with an explicit hold reason, not published as a backup.
 - Remaining discovery queues: 39 candidates (17 New Channels; 22 New Backups). Vokta TV remains in New Channels for manual review because its primary probe was inconclusive; all New Backups rows are verified.
 - Review hold: 1 unverified alternate stream (Travelxp 4K HDR).
