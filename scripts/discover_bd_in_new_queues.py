@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qsl, urlparse
 
-from country_verification import norm_name
+from country_verification import norm_name, id_country, ISO_CODES
 from stream_url_identity import stream_url_key
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
@@ -102,27 +102,44 @@ def known_indian_forbidden_category(a: dict[str, str], name: str) -> str | None:
     return None
 
 
-def is_indian_discovery_candidate(a: dict[str, str], name: str) -> bool:
-    """Infer India from source country, country metadata, ID suffix, then alias.
+def explicit_foreign_country(a: dict[str, str]) -> str | None:
+    """Return an explicit ISO country outside Bangladesh/India, if present."""
+    declared = str(a.get("tvg-country", "")).strip().upper()
+    if declared.casefold() in ISO_CODES and declared not in {"BD", "IN"}:
+        return declared
+    id_countries = {
+        code for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
+        if (code := id_country(value))
+    }
+    foreign = sorted(code for code in id_countries if code not in {"BD", "IN"})
+    return foreign[0] if foreign else None
 
-    Explicit source-country metadata wins. If tvg-country conflicts with a
-    recognized BD/IN ID suffix, retain the country-code evidence; otherwise an
-    explicit non-BD/IN country prevents a name-only Indian alias from overriding it.
+
+def is_indian_discovery_candidate(a: dict[str, str], name: str) -> bool:
+    """Infer India from explicit channel identity before source-feed context.
+
+    A recognized .in ID suffix is stronger than the feed that happened to list
+    the stream. Explicit foreign country evidence is never treated as BD/IN.
+    Source-feed country is only a fallback when channel metadata is absent.
     """
-    source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
-    if source_country:
-        return source_country == "IN"
+    id_countries = {
+        code for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
+        if (code := id_country(value))
+    }
+    if "IN" in id_countries:
+        return True
+    if "BD" in id_countries or id_countries:
+        return False
     declared_country = str(a.get("tvg-country", "")).strip().upper()
-    if declared_country in {"BD", "IN"}:
-        return declared_country == "IN"
-    if declared_country:
-        id_only = dict(a)
-        id_only["tvg-country"] = ""
-        id_country = channel_country(id_only)
-        return id_country == "IN"
-    resolved = channel_country(a)
-    if resolved:
-        return resolved == "IN"
+    if declared_country == "IN":
+        return True
+    if declared_country == "BD" or declared_country.casefold() in ISO_CODES:
+        return False
+    source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
+    if source_country in {"BD", "IN"}:
+        return source_country == "IN"
+    if source_country and source_country.casefold() in ISO_CODES:
+        return False
     return known_indian_forbidden_category(a, name) is not None
 
 PERMANENTLY_BANNED_CHANNEL_NAMES = {
@@ -303,20 +320,24 @@ def parse(text: str):
 
 
 def channel_country(a: dict[str, str], fallback: str | None = None) -> str | None:
-    """Resolve BD/IN from source context, tvg-country, or a recognized channel-ID suffix."""
+    """Resolve BD/IN from explicit channel IDs, tvg-country, then feed fallback."""
+    id_countries = {
+        code for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
+        if (code := id_country(value))
+    }
+    if "IN" in id_countries:
+        return "IN"
+    if "BD" in id_countries:
+        return "BD"
+    declared = (a.get("tvg-country") or "").strip().upper()
+    if declared in {"BD", "IN"}:
+        return declared
     if fallback:
         value = fallback.strip().casefold()
         if value in {"bangladesh", "bd"}:
             return "BD"
         if value in {"india", "in"}:
             return "IN"
-    declared = (a.get("tvg-country") or "").strip().upper()
-    if declared in {"BD", "IN"}:
-        return declared
-    for key in ("tvg-id", "channel-id"):
-        match = ID_CC_RE.search((a.get(key) or "").strip().casefold())
-        if match and match.group(1) in {"bd", "in"}:
-            return match.group(1).upper()
     return None
 
 
@@ -341,10 +362,11 @@ def prohibited_channel(
             return "permanently banned channel"
 
     if iptv_discovery:
+        foreign_country = explicit_foreign_country(a)
+        if foreign_country:
+            return f"channel country {foreign_country} is outside Bangladesh/India"
         source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
-        if source_country:
-            if source_country not in {"BD", "IN"}:
-                return None
+        if country is None and source_country in {"BD", "IN"}:
             country = source_country
     resolved_country = channel_country(a, country)
     values = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""), a.get("channel-id", "")))
@@ -399,11 +421,11 @@ def prohibited_channel(
     return None
 
 def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=None):
-    """Return source metadata unchanged when policy and URL checks pass.
+    """Keep only BD/IN identities; explicit foreign IDs/countries are rejected.
 
-    The source-feed country is used for country-specific content exclusions; it
-    is not proof that tvg-country or channel IDs are accurate. Missing,
-    conflicting or unverified metadata stays in the manual-review queue.
+    Missing country metadata can fall back to the BD/IN source feed. A
+    recognized channel-ID suffix takes precedence over that feed, so Indian
+    exclusions still apply when an Indian channel appears in the BD source.
     """
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
@@ -473,13 +495,17 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
 
 
 def extinf(a: dict[str, str], name: str, group: str, country: str) -> str:
-    """Build a review-queue row without guessing or repairing metadata."""
+    """Build a queue row and normalize country when channel identity is clear."""
+    metadata = dict(a)
+    resolved_country = channel_country(metadata, country)
+    if resolved_country in {"BD", "IN"}:
+        metadata["tvg-country"] = resolved_country
     fields = []
     for key in ("tvg-id", "tvg-name", "tvg-logo", "tvg-country", "tvg-language", "channel-id"):
-        value = (a.get(key) or "").strip()
+        value = (metadata.get(key) or "").strip()
         if value:
             fields.append(f'{key}="{name if key == "tvg-name" else value}"')
-    if not a.get("tvg-name", "").strip():
+    if not metadata.get("tvg-name", "").strip():
         fields.append(f'tvg-name="{name}"')
     fields.append(f'x-discovery-source-country="{COUNTRY_CODE.get(country, "").upper()}"')
     fields.append(f'group-title="{group}"')
