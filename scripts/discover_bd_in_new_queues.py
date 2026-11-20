@@ -380,8 +380,8 @@ def prohibited_channel(
         return None
 
     # Inspect descriptive and classification metadata in addition to display
-    # names and group-title. Source feed country takes precedence in evaluate(),
-    # so misleading tvg-country/ID metadata cannot bypass this policy.
+    # names and group-title. Explicit channel IDs/codes determine country;
+    # source-feed country is only a fallback when those fields are absent.
     metadata_keys = (
         "tvg-id", "channel-id", "tvg-name", "tvg-description", "description",
         "tvg-content", "tvg-genre", "tvg-category", "tvg-categories",
