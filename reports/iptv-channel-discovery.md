@@ -202,7 +202,7 @@ The fresh IPTV discovery run completed as [GitHub Actions run #339](https://gith
 - Local logos: all 39 retained queue/hold rows reference repository assets under /logos/; all files were verified in the repository.
 - Queue order: New Channels, New Backups, Backup; both discovery queues are A–Z sorted. Review remains after Backup and is A–Z sorted.
 - M3U validation: 1371 entries; malformed EXTINF/URL pairs 0; duplicate URL occurrences 0; queue-country check passed; local-logo path check passed; queue placement passed.
-- Only today's discovery additions were removed, reclassified or metadata-normalized; unrelated existing playlist entries and stream URLs were preserved.
+- Only today's discovery additions were removed, reclassified or metadata-normalized. Two pre-existing Zee TV Review streams were explicitly preserved; no other unrelated playlist entries or stream URLs were changed.
 
 ### Related commits
 
