@@ -188,3 +188,22 @@ Generated: **2026-11-20T00:59:50.948762+00:00**
 - Prohibited Indian rows remaining in New Channels/New Backups: 0
 - Existing unrelated playlist defects and incomplete logo/country metadata do not block discovery.
 - New candidates remain in New Channels/New Backups for owner review; only definitively dead streams are removed.
+
+
+## Post-discovery compliance audit — 2026-11-20 (Asia/Dhaka)
+
+- Audit time: 2026-11-20 07:02 +06:00 (Bangladesh time)
+- Scope: only this run's New Channels and New Backups rows; all unrelated playlist rows were preserved.
+- Removed out-of-scope candidates: 4 — BTL TV (Netherlands) (1080p) (non-BD/IN channel ID); Cartoon Network (Pakistan) (non-BD/IN channel ID); Gaunda Punjab TV (720p) (non-BD/IN channel ID); Qello Concerts by Stingray (1080p) (non-BD/IN channel ID).
+- Removed upstream/non-local `tvg-logo` URLs from discovery queue rows; no substitute or placeholder artwork was added.
+- Remaining queue rows: 42 (18 New Channels; 24 New Backups).
+- Remaining external logo references in discovery queues: 0.
+- Queue rows with no verified local logo: 42; authentic local logo repair remains pending.
+- Queue country metadata: filled from a valid BD/IN ID suffix or the originating BD/IN feed when no contradictory country evidence existed.
+- Duplicate stream URLs after cleanup: 1.
+- Queue country violations after cleanup: 0.
+- Existing non-queue playlist entries and their metadata were not rewritten.
+
+### Remaining manual blockers
+
+- The discovery script still needs a code-level country-verification and local-logo enforcement fix so future runs do not reintroduce foreign-ID candidates or upstream logo URLs. This audit corrects today's newly staged rows only.
