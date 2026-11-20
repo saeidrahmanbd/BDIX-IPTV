@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-20 03:59 UTC**  
+Run time: **2026-11-20 04:05 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,7 +10,7 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1379 | 0 | 0 | 0 | 0 | 0 | 0 |
-| International-Playlist.m3u | 3304 | 1 | 0 | 73 | 372 | 0 | 73 |
+| International-Playlist.m3u | 3304 | 0 | 0 | 73 | 372 | 0 | 73 |
 
 ## Repair log
 
@@ -70,7 +70,6 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 4561 | Gopal Bhar TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 4585 | History & Warfare Now | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 4629 | Id Investigation Discovery | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4777 | Look Thoong TV (720p) [Not 24/7] | (missing) | look-thoong-tv-720p-not-24-7-2c41090ebcf122f4ded0.png | [IPTV-org exact ID: LookThoongTV.la](https://i.imgur.com/eT7iE34.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 | International-Playlist.m3u | 4881 | Mh 1 Prime | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 4919 | Mohammed Abdo | (missing) | (none) | IPTV-org exact ID: MohammedAbdo.sa |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 4919 | Mohammed Abdo | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
