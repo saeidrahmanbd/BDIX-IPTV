@@ -77,7 +77,7 @@ jobs:
         run: cp IPTV-Playlist.m3u /tmp/IPTV-Playlist.before.m3u
       - name: Test channel discovery policy
         run: python -m unittest discover -s tests -p 'test_channel_discovery_policy.py'
-      - name: Test country metadata is advisory
+      - name: Test BD/IN country verification
         run: python -m unittest discover -s tests -p 'test_country_verification.py'
       - name: Test discovery stream validator
         run: python -m unittest discover -s tests -p 'test_discovery_run_validation.py'
@@ -94,7 +94,7 @@ jobs:
       - name: Record final discovery validation
         if: always()
         run: python scripts/validate_discovery_run.py finalize IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
-      - name: Commit discovery queue additions only
+      - name: Commit targeted discovery and local-logo updates
         shell: bash
         run: |
           set -euo pipefail
@@ -118,7 +118,7 @@ jobs:
             echo 'No new Bangladesh/India candidates to publish.'
             exit 0
           fi
-          git commit -m 'Add IPTV candidates to manual review queues'
+          git commit -m 'Publish verified IPTV discovery and local-logo updates'
           for attempt in 1 2 3; do
             git fetch origin main
             git pull --rebase origin main || { git rebase --abort || true; exit 1; }
