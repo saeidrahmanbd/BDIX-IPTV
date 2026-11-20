@@ -402,7 +402,8 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                     "India", attrs, name, "https://example.org/sports/live/index.m3u8"
                 )
                 self.assertEqual(reason, "")
-                self.assertEqual(candidate, attrs)
+                self.assertEqual(candidate["tvg-country"], "IN")
+                self.assertEqual(candidate["x-discovery-source-country"], "IN")
 
     def test_bangladeshi_news_is_allowed(self):
         attrs = {"group-title": "News", "tvg-country": "BD", "tvg-id": "Channel24.bd"}
