@@ -163,12 +163,23 @@ def build_discovery_batch(playlist_text: str, source_feeds: dict[str,str],
         if not is_backup and len(new_channels)>=max_new_channels:
             continue
 
-        declared_country=policy.channel_country(attrs)
         expected_country="BD" if country=="Bangladesh" else "IN"
-        if declared_country is None:
+        declared_country=policy.channel_country(attrs, country)
+        raw_country=str(attrs.get("tvg-country", "")).strip().upper()
+        id_countries={
+            code for value in (attrs.get("tvg-id", ""), attrs.get("channel-id", ""))
+            if (code := policy.id_country(value))
+        }
+        if raw_country and raw_country != expected_country:
+            warnings.append(
+                f"{name}: source country conflicts with tvg-country metadata; retained in {queue}"
+            )
+        elif id_countries and expected_country not in id_countries:
+            warnings.append(
+                f"{name}: regional channel-ID country differs from source feed; retained in {queue}"
+            )
+        elif not raw_country and not id_countries and declared_country is None:
             warnings.append(f"{name}: country metadata missing or unverified; retained in {queue}")
-        elif declared_country != expected_country:
-            warnings.append(f"{name}: source country conflicts with metadata; retained in {queue}")
 
         original_logo=(attrs.get("tvg-logo") or "").strip()
         local_logo=_local_logo(root,original_logo)

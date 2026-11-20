@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from discover_bd_in_new_queues import (
     PERMANENTLY_BANNED_CHANNEL_NAMES, PERMANENTLY_BANNED_CHANNEL_IDS, canonical_channel_name,
-    evaluate, prohibited_channel, purge_forbidden_existing_queue_rows,
+    evaluate, extinf, explicit_foreign_country, prohibited_channel, purge_forbidden_existing_queue_rows,
     is_indian_discovery_candidate, known_indian_forbidden_category,
 )
 
@@ -116,17 +116,76 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIsNone(prohibited_channel(music, "MH One Music", iptv_discovery=True))
         self.assertIn("MH One Prime", prohibited_channel(prime, "MH One Prime", iptv_discovery=True))
 
-    def test_explicit_non_indian_country_is_not_overridden_by_indian_alias(self):
-        attrs = {"tvg-country": "US", "tvg-id": "Doraemon.us@SD", "group-title": "Review"}
-        self.assertIsNone(prohibited_channel(attrs, "Doraemon", iptv_discovery=True))
+    def test_explicit_foreign_country_is_rejected_even_when_name_matches_indian_alias(self):
+        attrs = {"tvg-country": "US", "tvg-id": "Doraemon.us@SD", "group-title": "New Channels"}
+        self.assertEqual(
+            prohibited_channel(attrs, "Doraemon", iptv_discovery=True),
+            "channel country US is outside Bangladesh/India",
+        )
+
+    def test_explicit_foreign_ids_are_rejected_even_when_listed_in_bd_feed(self):
+        examples = [
+            ("BTLTV.nl@SD", "BTL TV", "NL", "BD"),
+            ("CartoonNetwork.pk@SD", "Cartoon Network", "PK", "BD"),
+            ("QelloConcertsbyStingray.ca@SD", "Qello Concerts by Stingray", "CA", "IN"),
+        ]
+        for channel_id, name, country, source in examples:
+            with self.subTest(channel_id=channel_id):
+                attrs = {"tvg-id": channel_id, "x-discovery-source-country": source}
+                self.assertEqual(explicit_foreign_country(attrs, name), country)
+                self.assertIn("outside Bangladesh/India", prohibited_channel(
+                    attrs, name, source, discovery=True, iptv_discovery=True
+                ))
+
+    def test_regional_diaspora_channel_with_ca_id_is_not_rejected_from_india_feed(self):
+        attrs = {"tvg-id": "GaundaPunjabTV.ca@SD", "x-discovery-source-country": "IN"}
+        self.assertIsNone(explicit_foreign_country(attrs, "Gaunda Punjab TV"))
+        self.assertTrue(is_indian_discovery_candidate(attrs, "Gaunda Punjab TV"))
+        self.assertIsNone(prohibited_channel(
+            attrs, "Gaunda Punjab TV", "IN", discovery=True, iptv_discovery=True
+        ))
+
+    def test_indian_id_suffix_applies_indian_exclusions_even_in_bd_source_feed(self):
+        examples = [
+            ("NationalGeographic.in@HD", "National Geographic", "knowledge"),
+            ("NationalGeographicWild.in@HD", "National Geographic Wild", "knowledge"),
+            ("NickJr.in@SD", "Nick Jr.", "kids"),
+        ]
+        for channel_id, name, category in examples:
+            with self.subTest(channel_id=channel_id):
+                attrs = {"tvg-id": channel_id, "x-discovery-source-country": "BD"}
+                self.assertTrue(is_indian_discovery_candidate(attrs, name))
+                reason = prohibited_channel(attrs, name, "BD", discovery=True, iptv_discovery=True)
+                self.assertIn(category, reason)
+
+    def test_queue_country_metadata_uses_explicit_id_before_source_feed(self):
+        line = extinf(
+            {"tvg-id": "NationalGeographic.in@HD", "tvg-name": "National Geographic"},
+            "National Geographic", "New Channels", "BD",
+        )
+        self.assertIn('tvg-country="IN"', line)
+
+    def test_foreign_country_queue_rows_are_purged(self):
+        text = (
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-id="BTLTV.nl@SD" x-discovery-source-country="BD" group-title="New Channels",BTL TV\n'
+            "https://example.org/btl.m3u8\n"
+            '#EXTINF:-1 tvg-id="ValidBD.bd@SD" x-discovery-source-country="BD" group-title="New Channels",Valid BD\n'
+            "https://example.org/valid-bd.m3u8\n"
+        )
+        filtered, removed = purge_forbidden_existing_queue_rows(text)
+        self.assertEqual(removed, ["BTL TV"])
+        self.assertNotIn("BTL TV", filtered)
+        self.assertIn("Valid BD", filtered)
 
     def test_indian_id_suffix_catches_conflict_with_stale_foreign_country(self):
         attrs = {"tvg-country": "US", "tvg-id": "DisneyChannel.in@HD", "group-title": "Backup"}
         self.assertIsNotNone(prohibited_channel(attrs, "Disney Channel", iptv_discovery=True))
 
-    def test_explicit_foreign_source_country_overrides_indian_id_and_country_field(self):
-        attrs = {"x-discovery-source-country": "US", "tvg-country": "IN", "tvg-id": "DisneyChannel.in@HD"}
-        self.assertIsNone(prohibited_channel(attrs, "Disney Channel", "IN", iptv_discovery=True))
+    def test_indian_channel_id_overrides_source_feed_for_indian_exclusion_policy(self):
+        attrs = {"x-discovery-source-country": "BD", "tvg-country": "IN", "tvg-id": "DisneyChannel.in@HD"}
+        reason = prohibited_channel(attrs, "Disney Channel", "BD", iptv_discovery=True)
+        self.assertIn("kids", reason)
 
     def test_indian_islamic_religious_channels_are_rejected_for_iptv_policy(self):
         attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
@@ -282,13 +341,13 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertNotIn("CVR Health", filtered)
     def test_indian_identity_uses_source_then_country_then_known_alias(self):
         self.assertTrue(is_indian_discovery_candidate({"tvg-id": "DishaTV.in@SD"}, "Disha TV"))
-        self.assertFalse(is_indian_discovery_candidate(
+        self.assertTrue(is_indian_discovery_candidate(
             {"tvg-country": "BD", "tvg-id": "DishaTV.in@SD"}, "Disha TV"
         ))
-        self.assertFalse(is_indian_discovery_candidate(
+        self.assertTrue(is_indian_discovery_candidate(
             {"x-discovery-source-country": "BD", "tvg-id": "SonyYay.in@SD"}, "Sony Yay!"
         ))
-        self.assertIsNone(prohibited_channel(
+        self.assertIn("kids", prohibited_channel(
             {"x-discovery-source-country": "BD", "tvg-id": "SonyYay.in@SD", "group-title": "Kids"},
             "Sony Yay!",
             iptv_discovery=True,
@@ -447,7 +506,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn('group-title="New Channels",Mahua Play', filtered)
         self.assertIn('group-title="Indian Entertainment",E-Vidya 4', filtered)
 
-    def test_foreign_country_metadata_does_not_purge_manual_review_candidates(self):
+    def test_explicit_pakistani_queue_rows_are_purged_from_iptv_discovery(self):
         text = (
             "#EXTM3U\n"
             '#EXTINF:-1 tvg-name="ARY Music" tvg-country="PK" tvg-id="ARYMusic.pk" group-title="New Channels",ARY Music\n'
@@ -460,9 +519,9 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "https://example.invalid/channel24.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
-        self.assertEqual(removed, ["Gopal Bhar"])
-        self.assertIn('group-title="New Channels",ARY Music', filtered)
-        self.assertIn('group-title="New Channels",Madani Channel', filtered)
+        self.assertEqual(removed, ["ARY Music", "Madani Channel", "Gopal Bhar"])
+        self.assertNotIn('group-title="New Channels",ARY Music', filtered)
+        self.assertNotIn('group-title="New Channels",Madani Channel', filtered)
         self.assertNotIn('group-title="New Channels",Gopal Bhar', filtered)
         self.assertIn('group-title="New Channels",Channel 24', filtered)
 
