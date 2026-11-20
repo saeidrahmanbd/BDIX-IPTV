@@ -143,40 +143,38 @@ class DiscoveryTests(unittest.TestCase):
         self.assertTrue(disc.norm("সংবাদ"))
         self.assertEqual(disc.norm("Somoy TV HD"), disc.norm("somoy_tv (SD)"))
 
-    def test_country_metadata_is_preserved_without_verification_or_rewriting(self):
+    def test_foreign_country_ids_are_rejected_but_curated_india_feed_override_is_allowed(self):
         url = "https://cdn.example.com/live/index.m3u8"
-        cases = [
-            ({"tvg-id": "StarUtsav.us", "channel-id": "StarUtsav.us",
-              "tvg-country": "US"}, "Star Utsav"),
-            ({"tvg-id": "ColorsCineplex.uk", "channel-id": "ColorsCineplex.uk",
-              "tvg-country": "GB"}, "Colors Cineplex [UK]"),
-        ]
-        for attrs, name in cases:
-            with self.subTest(name=name):
-                candidate, reason = disc.evaluate("India", attrs, name, url)
-                self.assertEqual(reason, "")
-                self.assertEqual(candidate, attrs)
-        self.assertEqual(disc.evaluate(
-            "Bangladesh", cases[0][0], cases[0][1], url)[0], cases[0][0])
+        foreign = {"tvg-id": "StarUtsav.us", "channel-id": "StarUtsav.us", "tvg-country": "US"}
+        candidate, reason = disc.evaluate("India", foreign, "Star Utsav", url)
+        self.assertIsNone(candidate)
+        self.assertIn("BD/IN", reason)
+        self.assertIsNone(disc.evaluate("Bangladesh", foreign, "Star Utsav", url)[0])
 
-    def test_evaluate_retains_country_and_identity_metadata_for_manual_review(self):
+        override = {"tvg-id": "ColorsCineplex.uk", "channel-id": "ColorsCineplex.uk", "tvg-country": "GB"}
+        candidate, reason = disc.evaluate("India", override, "Colors Cineplex [UK]", url)
+        self.assertEqual(reason, "")
+        self.assertEqual(candidate["tvg-country"], "IN")
+        self.assertEqual(candidate["tvg-id"], "ColorsCineplex.uk")
+
+    def test_evaluate_normalizes_country_and_uses_source_feed_when_optional_metadata_is_missing(self):
         url = "https://cdn.example.com/live/index.m3u8"
         original = {"tvg-id": "Star Utsav.in@SD"}
         candidate, why = disc.evaluate("India", original, "Star Utsav", url)
         self.assertEqual(why, "")
-        self.assertEqual(candidate, original)
-        self.assertNotIn("tvg-country", candidate)
+        self.assertEqual(candidate["tvg-country"], "IN")
+        self.assertEqual(candidate["tvg-id"], original["tvg-id"])
         line = disc.extinf(candidate, "Star Utsav", "New Channels", "India")
-        self.assertNotIn("tvg-country=", line)
+        self.assertIn('tvg-country="IN"', line)
+
         foreign, why = disc.evaluate("India", {"tvg-id": "Star Utsav.us"}, "Star Utsav", url)
-        self.assertEqual(why, "")
-        self.assertEqual(foreign["tvg-id"], "Star Utsav.us")
+        self.assertIsNone(foreign)
         no_ids, why = disc.evaluate("India", {}, "Unmapped Channel", url)
         self.assertEqual(why, "")
-        self.assertEqual(no_ids, {})
+        self.assertEqual(no_ids["tvg-country"], "IN")
         mismatch, why = disc.evaluate("Bangladesh", {"tvg-id": "X.in"}, "X", url)
         self.assertEqual(why, "")
-        self.assertEqual(mismatch["tvg-id"], "X.in")
+        self.assertEqual(mismatch["tvg-country"], "IN")
         self.assertIsNone(disc.evaluate("India", {"tvg-id": "Latest News.us"}, "Latest News", url)[0])
 
     def test_extinf_accepts_missing_identity_fields(self):
