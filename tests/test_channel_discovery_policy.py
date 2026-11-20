@@ -352,13 +352,13 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             (discovery.LOGOS / "sample-tv.png").write_bytes(b"logo")
             try:
                 playlist = (
-                    '#EXTM3U\\n'
-                    '#EXTINF:-1 tvg-name="Sample TV" tvg-logo="https://cdn.example/logo.png" group-title="New Channels",Sample TV\\n'
-                    'https://cdn.example/sample.m3u8\\n'
-                    '#EXTINF:-1 tvg-name="No Logo TV" tvg-logo="https://cdn.example/no-logo.png" group-title="New Backups",No Logo TV\\n'
-                    'https://cdn.example/no-logo.m3u8\\n'
-                    '#EXTINF:-1 tvg-name="Existing TV" tvg-logo="https://cdn.example/existing.png" group-title="Bangladesh",Existing TV\\n'
-                    'https://cdn.example/existing.m3u8\\n'
+                    '#EXTM3U\n'
+                    '#EXTINF:-1 tvg-name="Sample TV" tvg-logo="https://cdn.example/logo.png" group-title="New Channels",Sample TV\n'
+                    'https://cdn.example/sample.m3u8\n'
+                    '#EXTINF:-1 tvg-name="No Logo TV" tvg-logo="https://cdn.example/no-logo.png" group-title="New Backups",No Logo TV\n'
+                    'https://cdn.example/no-logo.m3u8\n'
+                    '#EXTINF:-1 tvg-name="Existing TV" tvg-logo="https://cdn.example/existing.png" group-title="Bangladesh",Existing TV\n'
+                    'https://cdn.example/existing.m3u8\n'
                 )
                 updated, stats = discovery.localize_existing_queue_logos(playlist)
             finally:
