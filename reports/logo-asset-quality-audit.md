@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-20T04:05:29+00:00**
+Generated: **2026-11-20T04:20:44+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **1bbd1d1cccf74d71906892f3beae8c6e47915493ba13caee24c36d161e2c297f**
-- International-Playlist.m3u SHA-256: **4bed0d6d2da3c171e3486880fc357ec2818076b56629dc6bda7f4a5cfcea6e2f**
+- International-Playlist.m3u SHA-256: **aff13a0f8e3971b056c797950075fa366916d718f563854fdc4fe1168ec13cd9**
 
 ## Summary
 
@@ -16,9 +16,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **146**
-- Exact-byte duplicate asset clusters: **737**
-- Playlist references whose asset stem differs from the normalized channel name: **1592**
-- Unreferenced image assets immediately inside logos/: **879** (not deleted; other tooling or playlists may use them)
+- Exact-byte duplicate asset clusters: **738**
+- Playlist references whose asset stem differs from the normalized channel name: **1625**
+- Unreferenced image assets immediately inside logos/: **956** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -558,7 +558,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/jilin-movie-channel.png, logos/jilin-movie-channel.png, logos/verified-jilin-movie-channel-ec13d25815.png
 - logos/international/jtbs-classic.png, logos/jtbs-classic.png, logos/verified-jtbs-classic-9feacbbf6a.png
 - logos/international/juice-tv-1080p-not-24-7.png, logos/juice-tv-830eccfd5c68004843df.png
-- logos/international/kandelatv-480p.png, logos/kandelatv-480p.png
+- logos/international/kandelatv-480p.png, logos/kandelatv-480p.png, logos/verified-kandelatv-480p-90ac12180c.png
 - logos/international/kantipur-max-geo-blocked.png, logos/kantipur-max-aa9dcce37bc9ecc63583.png
 - logos/international/kids-zone-720p.png, logos/kids-zone-720p.png, logos/verified-kids-zone-720p-7bb8e15fad.png
 - logos/international/kineko-1080p.png, logos/kineko-1080p.png, logos/verified-kineko-1080p-9b52409008.png
@@ -569,7 +569,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/kinoliving-1080p.png, logos/kinoliving-1080p.png, logos/verified-kinoliving-1080p-598c112026.png
 - logos/international/kinopokaz.png, logos/kinopokaz.png, logos/verified-kinopokaz-ad1d4126d2.png
 - logos/international/kinosat-576p.png, logos/kinosat-576p.png, logos/verified-kinosat-576p-1662ddad4c.png
-- logos/international/kinosemja-576p.png, logos/kinosemja-576p.png
+- logos/international/kinosemja-576p.png, logos/kinosemja-576p.png, logos/verified-kinosemja-576p-19c5905acc.png
 - logos/international/kinoseriya-1080p.png, logos/kinoseriya-1080p.png, logos/verified-kinoseriya-1080p-d0c120abfd.png
 - logos/international/kinouzhas-576p.png, logos/kinouzhas-576p.png, logos/verified-kinouzhas-576p-9428b415cc.png
 - logos/international/kinowood-1080p.png, logos/kinowood-1080p.png, logos/verified-kinowood-1080p-0e8cd8d071.png
@@ -598,15 +598,15 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/mcm-top-576p.png, logos/mcm-top-france-821b5da224.png, logos/mcm-top-russia-821b5da22478bf89ef92.png
 - logos/international/mcn6-music-channel-1080p-not-24-7.png, logos/mcn6-music-channel-1080p-b16c4717c3.png
 - logos/international/medium-germany.png, logos/medium-germany.png, logos/verified-medium-germany-cb25255168.png
-- logos/international/mega-extreno-hd-720p.png, logos/mega-extreno-hd-720p.png
-- logos/international/merry-christmas-from-viafree-dk.png, logos/international/merry-christmas-from-viafree-no.png, logos/international/merry-christmas-from-viafree.png, logos/merry-christmas-from-viafree-dk.png, logos/merry-christmas-from-viafree-no.png, logos/merry-christmas-from-viafree.png, logos/verified-merry-christmas-from-viafree-b2836c29c7.png
+- logos/international/mega-extreno-hd-720p.png, logos/mega-extreno-hd-720p.png, logos/verified-mega-extreno-hd-720p-7a93da786a.png
+- logos/international/merry-christmas-from-viafree-dk.png, logos/international/merry-christmas-from-viafree-no.png, logos/international/merry-christmas-from-viafree.png, logos/merry-christmas-from-viafree-dk.png, logos/merry-christmas-from-viafree-no.png, logos/merry-christmas-from-viafree.png, logos/verified-merry-christmas-from-viafree-b2836c29c7.png, logos/verified-merry-christmas-from-viafree-dk-b2836c29c7.png, logos/verified-merry-christmas-from-viafree-no-b2836c29c7.png
 - logos/international/metropolitana-del-cuzco.png, logos/metropolitana-del-cuzco.png, logos/verified-metropolitana-del-cuzco-178dc363d4.png
 - logos/international/mezzo-576p.png, logos/mezzo-576p.png, logos/verified-mezzo-576p-cd14529869.png
 - logos/international/mi-musica-hits-720p.png, logos/mi-musica-hits-720p.png
 - logos/international/mi-musica-romantica.png, logos/mi-musica-romantica-43d86eb9cc.png
 - logos/international/mntv.png, logos/unused/mntv-075accb781.png
 - logos/international/molahits-tv-720p.png, logos/molahits-tv-720p.png, logos/verified-molahits-tv-720p-ab91e83f1b.png
-- logos/international/mooz-dance-hd-1080i-geo-blocked.png, logos/international/mooz-dance.png, logos/mooz-dance.png
+- logos/international/mooz-dance-hd-1080i-geo-blocked.png, logos/international/mooz-dance.png, logos/mooz-dance.png, logos/verified-mooz-dance-48b14945f4.png
 - logos/international/motortrend.png, logos/motortrend.png, logos/verified-motortrend-e8406af26b.png
 - logos/international/motorvision-1080p.png, logos/motorvision-1080p.png, logos/verified-motorvision-1080p-98087182dd.png
 - logos/international/movie-punjab-720p.png, logos/movie-punjab-720p.png, logos/verified-movie-punjab-720p-82d197a4e5.png
@@ -616,13 +616,13 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/moviesmart-turk-576p.png, logos/moviesmart-turk-576p.png, logos/verified-moviesmart-turk-576p-1d087a031e.png
 - logos/international/movify-kino-576p.png, logos/movify-kino-576p.png, logos/verified-movify-kino-576p-b50c36670c.png
 - logos/international/mr-bean-animated-es-1080p-converted-3d6f10f486.png, logos/international/mr-bean-animated-fr-1080p-converted-3d6f10f486.png
-- logos/international/mr-bean-animated-es-1080p.png, logos/international/mr-bean-animated-fr-1080p.png, logos/mr-bean-animated-es-1080p.png, logos/mr-bean-animated-fr-1080p.png, logos/verified-mr-bean-animated-es-1080p-d25e7d73b7.png
-- logos/international/mtv-biggest-pop-1080p.png, logos/international/mtv-biggest-pop-br-1080p.png, logos/international/mtv-biggest-pop-ca-1080p.png, logos/international/mtv-biggest-pop-latam-1080p.png, logos/mtv-biggest-pop-br-1080p.png, logos/mtv-biggest-pop-ca-1080p.png, logos/mtv-biggest-pop-latam-1080p.png, logos/unused/mtv-biggest-pop-1080p-4508e1a99c.png
-- logos/international/mtv-classic-br-720p.png, logos/international/mtv-classic-ca-720p.png, logos/international/mtv-classic-latam-720p.png, logos/mtv-classic-br-720p.png, logos/mtv-classic-ca-720p.png, logos/mtv-classic-latam-720p.png
-- logos/international/mtv-flow-latino-720p.png, logos/international/mtv-flow-latino-latam-720p.png, logos/mtv-flow-latino-latam-720p.png, logos/unused/mtv-flow-latino-720p-a200c973ae.png
-- logos/international/mtv-spankin-new-1080p.png, logos/international/mtv-spankin-new-ca-1080p.png, logos/mtv-spankin-new-1080p-f62e001de6.png, logos/mtv-spankin-new-ca-1080p.png, logos/unused/mtv-spankin-new-1080p-f62e001de6.png
+- logos/international/mr-bean-animated-es-1080p.png, logos/international/mr-bean-animated-fr-1080p.png, logos/mr-bean-animated-es-1080p.png, logos/mr-bean-animated-fr-1080p.png, logos/verified-mr-bean-animated-es-1080p-d25e7d73b7.png, logos/verified-mr-bean-animated-fr-1080p-d25e7d73b7.png
+- logos/international/mtv-biggest-pop-1080p.png, logos/international/mtv-biggest-pop-br-1080p.png, logos/international/mtv-biggest-pop-ca-1080p.png, logos/international/mtv-biggest-pop-latam-1080p.png, logos/mtv-biggest-pop-br-1080p.png, logos/mtv-biggest-pop-ca-1080p.png, logos/mtv-biggest-pop-latam-1080p.png, logos/unused/mtv-biggest-pop-1080p-4508e1a99c.png, logos/verified-mtv-biggest-pop-br-1080p-61995cdf8b.png, logos/verified-mtv-biggest-pop-ca-1080p-61995cdf8b.png, logos/verified-mtv-biggest-pop-latam-1080p-61995cdf8b.png
+- logos/international/mtv-classic-br-720p.png, logos/international/mtv-classic-ca-720p.png, logos/international/mtv-classic-latam-720p.png, logos/mtv-classic-br-720p.png, logos/mtv-classic-ca-720p.png, logos/mtv-classic-latam-720p.png, logos/verified-mtv-classic-br-720p-a32712dea1.png, logos/verified-mtv-classic-ca-720p-a32712dea1.png, logos/verified-mtv-classic-latam-720p-a32712dea1.png
+- logos/international/mtv-flow-latino-720p.png, logos/international/mtv-flow-latino-latam-720p.png, logos/mtv-flow-latino-latam-720p.png, logos/unused/mtv-flow-latino-720p-a200c973ae.png, logos/verified-mtv-flow-latino-latam-720p-55b8877f51.png
+- logos/international/mtv-spankin-new-1080p.png, logos/international/mtv-spankin-new-ca-1080p.png, logos/mtv-spankin-new-1080p-f62e001de6.png, logos/mtv-spankin-new-ca-1080p.png, logos/unused/mtv-spankin-new-1080p-f62e001de6.png, logos/verified-mtv-spankin-new-ca-1080p-1b2737bd34.png
 - logos/international/music-480p-not-24-7.png, logos/music-d1c3c5c0df7404d1bb75.png
-- logos/international/music-box-brazil-720p.png, logos/music-box-brazil-720p.png
+- logos/international/music-box-brazil-720p.png, logos/music-box-brazil-720p.png, logos/verified-music-box-brazil-720p-7048d9d406.png
 - logos/international/music-information-channel-720p.png, logos/unused/music-information-channel-720p-052e9aeeaa.png
 - logos/international/muz-soyuz-576p.png, logos/muz-soyuz-576p.png, logos/verified-muz-soyuz-576p-aee2903b69.png
 - logos/international/muzhskoe-kino-576p.png, logos/muzhskoe-kino-576p.png, logos/verified-muzhskoe-kino-576p-df2e056d60.png
@@ -635,11 +635,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/nashe-lubimoe-kino-ukraine-1080p.png, logos/nashe-lubimoe-kino-ukraine-1080p.png, logos/verified-nashe-lubimoe-kino-ukraine-1080p-d62da12d94.png
 - logos/international/nashe-muzhskoe-hd-1080p.png, logos/nashe-muzhskoe-hd-1080p.png, logos/verified-nashe-muzhskoe-hd-1080p-bfa46f2b38.png
 - logos/international/national-geographic-india-hd-1080p.png, logos/national-geographic-india-hd-1080p.png
-- logos/international/new-k-movies-1080p.png, logos/new-k-movies-1080p.png
+- logos/international/new-k-movies-1080p.png, logos/new-k-movies-1080p.png, logos/verified-new-k-movies-1080p-6bb161f67a.png
 - logos/international/next-hd-480p.png, logos/next-hd-480p.png, logos/verified-next-hd-480p-9c47e33564.png
 - logos/international/nickelodeon-pluto-tv-720p.png, logos/unused/nickelodeon-pluto-tv-720p-99de7a9302.png
 - logos/international/nolly-africa-1080p.png, logos/nolly-africa-1080p.png, logos/verified-nolly-africa-1080p-3701600320.png
-- logos/international/nonstop-kung-fu-dk.png, logos/international/nonstop-kung-fu-no.png, logos/international/nonstop-kung-fu.png, logos/nonstop-kung-fu-dk.png, logos/nonstop-kung-fu-no.png, logos/nonstop-kung-fu.png, logos/verified-nonstop-kung-fu-c70bef501e.png
+- logos/international/nonstop-kung-fu-dk.png, logos/international/nonstop-kung-fu-no.png, logos/international/nonstop-kung-fu.png, logos/nonstop-kung-fu-dk.png, logos/nonstop-kung-fu-no.png, logos/nonstop-kung-fu.png, logos/verified-nonstop-kung-fu-c70bef501e.png, logos/verified-nonstop-kung-fu-dk-c70bef501e.png, logos/verified-nonstop-kung-fu-no-c70bef501e.png
 - logos/international/onda-valencia-tv-720p.png, logos/onda-valencia-tv-720p.png, logos/verified-onda-valencia-tv-720p-1c609dafea.png
 - logos/international/one-adria.png, logos/one-adria.png, logos/verified-one-adria-b7e904ffd5.png
 - logos/international/one-piece-br.png, logos/international/one-piece-ca.png, logos/international/one-piece-fr.png, logos/international/one-piece-latam.png, logos/international/one-piece-spain.png
@@ -653,7 +653,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/pluto-tv-90-s-classics.png, logos/pluto-tv-90-s-classics.png, logos/verified-pluto-tv-90-s-classics-8e429c8c3f.png
 - logos/international/pluto-tv-a-la-mexicana.png, logos/pluto-tv-a-la-mexicana.png, logos/verified-pluto-tv-a-la-mexicana-1e7336af75.png
 - logos/international/pluto-tv-action-movies.png, logos/pluto-tv-action-movies.png, logos/unused/pluto-tv-action-movies-13022100eb.png, logos/verified-pluto-tv-action-movies-408a6895cf.png
-- logos/international/pluto-tv-action-sweden-dk.png, logos/international/pluto-tv-action-sweden-no.png, logos/international/pluto-tv-action-sweden.png, logos/pluto-tv-action-sweden-dk.png, logos/pluto-tv-action-sweden-no.png, logos/pluto-tv-action-sweden.png, logos/verified-pluto-tv-action-sweden-c9e183eb9d.png
+- logos/international/pluto-tv-action-sweden-dk.png, logos/international/pluto-tv-action-sweden-no.png, logos/international/pluto-tv-action-sweden.png, logos/pluto-tv-action-sweden-dk.png, logos/pluto-tv-action-sweden-no.png, logos/pluto-tv-action-sweden.png, logos/verified-pluto-tv-action-sweden-c9e183eb9d.png, logos/verified-pluto-tv-action-sweden-dk-c9e183eb9d.png, logos/verified-pluto-tv-action-sweden-no-c9e183eb9d.png
 - logos/international/pluto-tv-action-united-states.png, logos/pluto-tv-action-united-states.png, logos/verified-pluto-tv-action-united-states-96b09994af.png
 - logos/international/pluto-tv-adult-animation.png, logos/unused/pluto-tv-adult-animation-e4fa325015.png
 - logos/international/pluto-tv-alberto-sordi.png, logos/pluto-tv-alberto-sordi.png, logos/verified-pluto-tv-alberto-sordi-c277e2bcf3.png
@@ -669,16 +669,16 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/pluto-tv-cine-classicos.png, logos/pluto-tv-cine-classicos.png, logos/verified-pluto-tv-cine-classicos-5cdf7516c8.png
 - logos/international/pluto-tv-cine-comedia-germany.png, logos/pluto-tv-cine-comedia-germany.png, logos/verified-pluto-tv-cine-comedia-germany-83a96eb0c7.png
 - logos/international/pluto-tv-cine-comedia-romantica.png, logos/pluto-tv-cine-comedia-romantica.png, logos/verified-pluto-tv-cine-comedia-romantica-a2ffff8447.png
-- logos/international/pluto-tv-cine-comedia-united-states-br.png, logos/international/pluto-tv-cine-comedia-united-states-latam.png, logos/international/pluto-tv-cine-comedia-united-states.png, logos/pluto-tv-cine-comedia-united-states-br.png, logos/pluto-tv-cine-comedia-united-states-latam.png, logos/pluto-tv-cine-comedia-united-states.png, logos/verified-pluto-tv-cine-comedia-united-states-43f75938d8.png
+- logos/international/pluto-tv-cine-comedia-united-states-br.png, logos/international/pluto-tv-cine-comedia-united-states-latam.png, logos/international/pluto-tv-cine-comedia-united-states.png, logos/pluto-tv-cine-comedia-united-states-br.png, logos/pluto-tv-cine-comedia-united-states-latam.png, logos/pluto-tv-cine-comedia-united-states.png, logos/verified-pluto-tv-cine-comedia-united-states-43f75938d8.png, logos/verified-pluto-tv-cine-comedia-united-states-br-43f75938d8.png, logos/verified-pluto-tv-cine-comedia-united-states-latam-43f75938d8.png
 - logos/international/pluto-tv-cine-crime.png, logos/pluto-tv-cine-crime.png, logos/verified-pluto-tv-cine-crime-c0d629fd5e.png
 - logos/international/pluto-tv-cine-crimen.png, logos/pluto-tv-cine-crimen.png, logos/verified-pluto-tv-cine-crimen-2f57556cbb.png
 - logos/international/pluto-tv-cine-de-autor.png, logos/pluto-tv-cine-de-autor.png, logos/verified-pluto-tv-cine-de-autor-ad510c72b0.png
-- logos/international/pluto-tv-cine-drama-latam.png, logos/international/pluto-tv-cine-drama.png, logos/pluto-tv-cine-drama-latam.png, logos/pluto-tv-cine-drama.png, logos/unused/pluto-tv-cine-drama-21c0c9e9dc.png, logos/verified-pluto-tv-cine-drama-9f10c4aaa8.png
+- logos/international/pluto-tv-cine-drama-latam.png, logos/international/pluto-tv-cine-drama.png, logos/pluto-tv-cine-drama-latam.png, logos/pluto-tv-cine-drama.png, logos/unused/pluto-tv-cine-drama-21c0c9e9dc.png, logos/verified-pluto-tv-cine-drama-9f10c4aaa8.png, logos/verified-pluto-tv-cine-drama-latam-9f10c4aaa8.png
 - logos/international/pluto-tv-cine-estelar.png, logos/pluto-tv-cine-estelar.png, logos/verified-pluto-tv-cine-estelar-cf8ea3b97f.png
-- logos/international/pluto-tv-cine-familia-latam.png, logos/international/pluto-tv-cine-familia.png, logos/pluto-tv-cine-familia-latam.png, logos/pluto-tv-cine-familia.png, logos/verified-pluto-tv-cine-familia-c5868c98e3.png
+- logos/international/pluto-tv-cine-familia-latam.png, logos/international/pluto-tv-cine-familia.png, logos/pluto-tv-cine-familia-latam.png, logos/pluto-tv-cine-familia.png, logos/verified-pluto-tv-cine-familia-c5868c98e3.png, logos/verified-pluto-tv-cine-familia-latam-c5868c98e3.png
 - logos/international/pluto-tv-cine-inspiracao.png, logos/pluto-tv-cine-inspiracao.png, logos/verified-pluto-tv-cine-inspiracao-a1a48676fd.png
 - logos/international/pluto-tv-cine-inspirador.png, logos/pluto-tv-cine-inspirador.png, logos/verified-pluto-tv-cine-inspirador-be4faedaeb.png
-- logos/international/pluto-tv-cine-romance-latam.png, logos/international/pluto-tv-cine-romance.png, logos/pluto-tv-cine-romance-latam.png, logos/pluto-tv-cine-romance.png, logos/verified-pluto-tv-cine-romance-c06ece8287.png
+- logos/international/pluto-tv-cine-romance-latam.png, logos/international/pluto-tv-cine-romance.png, logos/pluto-tv-cine-romance-latam.png, logos/pluto-tv-cine-romance.png, logos/verified-pluto-tv-cine-romance-c06ece8287.png, logos/verified-pluto-tv-cine-romance-latam-c06ece8287.png
 - logos/international/pluto-tv-cine-romantico.png, logos/pluto-tv-cine-romantico.png, logos/verified-pluto-tv-cine-romantico-2f0321ab93.png
 - logos/international/pluto-tv-cine-sucessos.png, logos/pluto-tv-cine-sucessos.png, logos/verified-pluto-tv-cine-sucessos-84e95fffad.png
 - logos/international/pluto-tv-cine-suspenso.png, logos/pluto-tv-cine-suspenso.png, logos/verified-pluto-tv-cine-suspenso-10b777c449.png
@@ -687,7 +687,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/pluto-tv-comedias-romanticas.png, logos/pluto-tv-comedias-romanticas.png, logos/verified-pluto-tv-comedias-romanticas-e08fb60661.png
 - logos/international/pluto-tv-comedies-cultes.png, logos/pluto-tv-comedies-cultes.png, logos/verified-pluto-tv-comedies-cultes-e6a9d4a209.png
 - logos/international/pluto-tv-comedy-movies.png, logos/pluto-tv-comedy-movies.png, logos/unused/pluto-tv-comedy-movies-989176a87d.png, logos/verified-pluto-tv-comedy-movies-712ff1dc00.png
-- logos/international/pluto-tv-crime-drama-ca.png, logos/international/pluto-tv-crime-drama.png, logos/pluto-tv-crime-drama-ca.png, logos/pluto-tv-crime-drama.png, logos/unused/pluto-tv-crime-drama-48c6faa6dc.png, logos/verified-pluto-tv-crime-drama-b7b06003fc.png
+- logos/international/pluto-tv-crime-drama-ca.png, logos/international/pluto-tv-crime-drama.png, logos/pluto-tv-crime-drama-ca.png, logos/pluto-tv-crime-drama.png, logos/unused/pluto-tv-crime-drama-48c6faa6dc.png, logos/verified-pluto-tv-crime-drama-b7b06003fc.png, logos/verified-pluto-tv-crime-drama-ca-b7b06003fc.png
 - logos/international/pluto-tv-crime-movies.png, logos/pluto-tv-crime-movies.png, logos/unused/pluto-tv-crime-movies-49dbd2e117.png, logos/verified-pluto-tv-crime-movies-f6e317e18f.png
 - logos/international/pluto-tv-cult-films-germany.png, logos/pluto-tv-cult-films-germany.png, logos/unused/pluto-tv-cult-films-4c48109dbb.png, logos/verified-pluto-tv-cult-films-germany-83a8581537.png
 - logos/international/pluto-tv-cult-films-united-states.png, logos/pluto-tv-cult-films-united-states.png, logos/unused/pluto-tv-cult-films-united-states-9e595d60f3.png, logos/verified-pluto-tv-cult-films-united-states-98c5047f01.png
@@ -699,7 +699,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/pluto-tv-ficcao-cientifica.png, logos/pluto-tv-ficcao-cientifica.png, logos/verified-pluto-tv-ficcao-cientifica-7e37c9c788.png
 - logos/international/pluto-tv-film-azione.png, logos/pluto-tv-film-azione.png, logos/verified-pluto-tv-film-azione-2f80aeee6d.png
 - logos/international/pluto-tv-film-commedia.png, logos/pluto-tv-film-commedia.png, logos/verified-pluto-tv-film-commedia-281db3a135.png
-- logos/international/pluto-tv-film-germany.png, logos/international/pluto-tv-film-sweden-dk.png, logos/international/pluto-tv-film-sweden-no.png, logos/international/pluto-tv-film-sweden.png, logos/pluto-tv-film-germany.png, logos/pluto-tv-film-sweden-dk.png, logos/pluto-tv-film-sweden-no.png, logos/pluto-tv-film-sweden.png, logos/verified-pluto-tv-film-sweden-abdfe2e022.png
+- logos/international/pluto-tv-film-germany.png, logos/international/pluto-tv-film-sweden-dk.png, logos/international/pluto-tv-film-sweden-no.png, logos/international/pluto-tv-film-sweden.png, logos/pluto-tv-film-germany.png, logos/pluto-tv-film-sweden-dk.png, logos/pluto-tv-film-sweden-no.png, logos/pluto-tv-film-sweden.png, logos/verified-pluto-tv-film-germany-abdfe2e022.png, logos/verified-pluto-tv-film-sweden-abdfe2e022.png, logos/verified-pluto-tv-film-sweden-dk-abdfe2e022.png, logos/verified-pluto-tv-film-sweden-no-abdfe2e022.png
 - logos/international/pluto-tv-film-romantici.png, logos/pluto-tv-film-romantici.png, logos/verified-pluto-tv-film-romantici-a1c1955035.png
 - logos/international/pluto-tv-film-storici.png, logos/pluto-tv-film-storici.png, logos/verified-pluto-tv-film-storici-25fb04bdd2.png
 - logos/international/pluto-tv-film-thriller.png, logos/pluto-tv-film-thriller.png, logos/verified-pluto-tv-film-thriller-c8fa3d89d4.png
@@ -709,64 +709,64 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/pluto-tv-filmes-nacionais.png, logos/pluto-tv-filmes-nacionais.png, logos/unused/pluto-tv-filmes-nacionais-df442c82f4.png, logos/verified-pluto-tv-filmes-nacionais-b2abfef6c8.png
 - logos/international/pluto-tv-franchise-favorites.png, logos/pluto-tv-franchise-favorites.png, logos/verified-pluto-tv-franchise-favorites-72322e1131.png
 - logos/international/pluto-tv-haialarm.png, logos/pluto-tv-haialarm.png, logos/verified-pluto-tv-haialarm-e0778cf9e3.png
-- logos/international/pluto-tv-harlequin-dk.png, logos/international/pluto-tv-harlequin-no.png, logos/international/pluto-tv-harlequin.png, logos/pluto-tv-harlequin-dk.png, logos/pluto-tv-harlequin-no.png, logos/pluto-tv-harlequin.png, logos/verified-pluto-tv-harlequin-4748bc9377.png
-- logos/international/pluto-tv-horror-sweden-dk.png, logos/international/pluto-tv-horror-sweden-no.png, logos/international/pluto-tv-horror-sweden.png, logos/pluto-tv-horror-sweden-dk.png, logos/pluto-tv-horror-sweden-no.png, logos/pluto-tv-horror-sweden.png, logos/verified-pluto-tv-horror-sweden-cb7184b6c8.png
-- logos/international/pluto-tv-horror-united-states-ca.png, logos/international/pluto-tv-horror-united-states.png, logos/pluto-tv-horror-united-states-ca.png, logos/pluto-tv-horror-united-states.png, logos/verified-pluto-tv-horror-united-states-249ed5b4bd.png
+- logos/international/pluto-tv-harlequin-dk.png, logos/international/pluto-tv-harlequin-no.png, logos/international/pluto-tv-harlequin.png, logos/pluto-tv-harlequin-dk.png, logos/pluto-tv-harlequin-no.png, logos/pluto-tv-harlequin.png, logos/verified-pluto-tv-harlequin-4748bc9377.png, logos/verified-pluto-tv-harlequin-dk-4748bc9377.png, logos/verified-pluto-tv-harlequin-no-4748bc9377.png
+- logos/international/pluto-tv-horror-sweden-dk.png, logos/international/pluto-tv-horror-sweden-no.png, logos/international/pluto-tv-horror-sweden.png, logos/pluto-tv-horror-sweden-dk.png, logos/pluto-tv-horror-sweden-no.png, logos/pluto-tv-horror-sweden.png, logos/verified-pluto-tv-horror-sweden-cb7184b6c8.png, logos/verified-pluto-tv-horror-sweden-dk-cb7184b6c8.png, logos/verified-pluto-tv-horror-sweden-no-cb7184b6c8.png
+- logos/international/pluto-tv-horror-united-states-ca.png, logos/international/pluto-tv-horror-united-states.png, logos/pluto-tv-horror-united-states-ca.png, logos/pluto-tv-horror-united-states.png, logos/verified-pluto-tv-horror-united-states-249ed5b4bd.png, logos/verified-pluto-tv-horror-united-states-ca-249ed5b4bd.png
 - logos/international/pluto-tv-humor-sweden.png, logos/pluto-tv-humor-sweden.png, logos/verified-pluto-tv-humor-sweden-2fca211fad.png
 - logos/international/pluto-tv-icons.png, logos/pluto-tv-icons.png, logos/verified-pluto-tv-icons-1f965703b4.png
 - logos/international/pluto-tv-invasion-alien.png, logos/pluto-tv-invasion-alien.png, logos/verified-pluto-tv-invasion-alien-fd26921076.png
-- logos/international/pluto-tv-john-wayne-dk.png, logos/international/pluto-tv-john-wayne-no.png, logos/international/pluto-tv-john-wayne.png, logos/pluto-tv-john-wayne-dk.png, logos/pluto-tv-john-wayne-no.png, logos/pluto-tv-john-wayne.png, logos/verified-pluto-tv-john-wayne-163e30c8db.png
+- logos/international/pluto-tv-john-wayne-dk.png, logos/international/pluto-tv-john-wayne-no.png, logos/international/pluto-tv-john-wayne.png, logos/pluto-tv-john-wayne-dk.png, logos/pluto-tv-john-wayne-no.png, logos/pluto-tv-john-wayne.png, logos/verified-pluto-tv-john-wayne-163e30c8db.png, logos/verified-pluto-tv-john-wayne-dk-163e30c8db.png, logos/verified-pluto-tv-john-wayne-no-163e30c8db.png
 - logos/international/pluto-tv-karaoke-por-stingray-720p.png, logos/international/pluto-tv-karaoke-por-stingray-latam-720p.png, logos/unused/pluto-tv-karaoke-por-stingray-720p-adb5cb99fb.png
 - logos/international/pluto-tv-komedi.png, logos/pluto-tv-komedi.png, logos/verified-pluto-tv-komedi-32b1783b25.png
 - logos/international/pluto-tv-komedie.png, logos/pluto-tv-komedie.png, logos/verified-pluto-tv-komedie-3759cb05cf.png
 - logos/international/pluto-tv-kult-comedies.png, logos/pluto-tv-kult-comedies.png, logos/verified-pluto-tv-kult-comedies-2154cfb496.png
 - logos/international/pluto-tv-kultfilm.png, logos/pluto-tv-kultfilm.png, logos/verified-pluto-tv-kultfilm-f5ab741909.png
 - logos/international/pluto-tv-kultfilme.png, logos/pluto-tv-kultfilme.png, logos/verified-pluto-tv-kultfilme-fecf304515.png
-- logos/international/pluto-tv-kultfilmer-no.png, logos/international/pluto-tv-kultfilmer.png, logos/pluto-tv-kultfilmer-no.png, logos/pluto-tv-kultfilmer.png, logos/verified-pluto-tv-kultfilmer-992e51539d.png
+- logos/international/pluto-tv-kultfilmer-no.png, logos/international/pluto-tv-kultfilmer.png, logos/pluto-tv-kultfilmer-no.png, logos/pluto-tv-kultfilmer.png, logos/verified-pluto-tv-kultfilmer-992e51539d.png, logos/verified-pluto-tv-kultfilmer-no-992e51539d.png
 - logos/international/pluto-tv-legami-letali.png, logos/pluto-tv-legami-letali.png, logos/verified-pluto-tv-legami-letali-518c40f152.png
 - logos/international/pluto-tv-motor-germany.png, logos/international/pluto-tv-motor-sweden-dk.png, logos/international/pluto-tv-motor-sweden-no.png, logos/international/pluto-tv-motor-sweden.png
-- logos/international/pluto-tv-movies-gb.png, logos/international/pluto-tv-movies.png, logos/pluto-tv-movies-gb.png, logos/pluto-tv-movies.png, logos/verified-pluto-tv-movies-583199a9f8.png
+- logos/international/pluto-tv-movies-gb.png, logos/international/pluto-tv-movies.png, logos/pluto-tv-movies-gb.png, logos/pluto-tv-movies.png, logos/verified-pluto-tv-movies-583199a9f8.png, logos/verified-pluto-tv-movies-gb-583199a9f8.png
 - logos/international/pluto-tv-netmovies.png, logos/pluto-tv-netmovies.png, logos/unused/pluto-tv-netmovies-ca2ac0cd70.png, logos/verified-pluto-tv-netmovies-8f6a2afeb9.png
 - logos/international/pluto-tv-notti-di-passione.png, logos/pluto-tv-notti-di-passione.png, logos/unused/pluto-tv-notti-di-passione-68e82f5481.png, logos/verified-pluto-tv-notti-di-passione-0a2f9d3d40.png
 - logos/international/pluto-tv-notti-di-sangue.png, logos/unused/pluto-tv-notti-di-sangue-4cd041c831.png
 - logos/international/pluto-tv-notti-di-terrore.png, logos/unused/pluto-tv-notti-di-terrore-df3127aa45.png
 - logos/international/pluto-tv-nuestro-cine.png, logos/pluto-tv-nuestro-cine.png, logos/unused/pluto-tv-nuestro-cine-479a85b751.png, logos/verified-pluto-tv-nuestro-cine-a283883c60.png
-- logos/international/pluto-tv-paranormal-sweden-dk.png, logos/international/pluto-tv-paranormal-sweden.png, logos/pluto-tv-paranormal-sweden-dk.png, logos/pluto-tv-paranormal-sweden.png, logos/verified-pluto-tv-paranormal-sweden-0249ff1ade.png
+- logos/international/pluto-tv-paranormal-sweden-dk.png, logos/international/pluto-tv-paranormal-sweden.png, logos/pluto-tv-paranormal-sweden-dk.png, logos/pluto-tv-paranormal-sweden.png, logos/verified-pluto-tv-paranormal-sweden-0249ff1ade.png, logos/verified-pluto-tv-paranormal-sweden-dk-0249ff1ade.png
 - logos/international/pluto-tv-psycho.png, logos/pluto-tv-psycho.png, logos/verified-pluto-tv-psycho-14b368ee64.png
 - logos/international/pluto-tv-reaction.png, logos/pluto-tv-reaction.png, logos/verified-pluto-tv-reaction-7797e2d6c2.png
 - logos/international/pluto-tv-retro-action-movies.png, logos/pluto-tv-retro-action-movies.png, logos/unused/pluto-tv-retro-action-movies-2c93a6f50d.png, logos/verified-pluto-tv-retro-action-movies-18198128f3.png
 - logos/international/pluto-tv-retro-toons-gb.png, logos/international/pluto-tv-retro-toons.png
 - logos/international/pluto-tv-romance.png, logos/pluto-tv-romance.png, logos/verified-pluto-tv-romance-132e7bf938.png
-- logos/international/pluto-tv-romantik-dk.png, logos/international/pluto-tv-romantik.png, logos/pluto-tv-romantik-dk.png, logos/pluto-tv-romantik.png, logos/verified-pluto-tv-romantik-def8423bda.png
+- logos/international/pluto-tv-romantik-dk.png, logos/international/pluto-tv-romantik.png, logos/pluto-tv-romantik-dk.png, logos/pluto-tv-romantik.png, logos/verified-pluto-tv-romantik-def8423bda.png, logos/verified-pluto-tv-romantik-dk-def8423bda.png
 - logos/international/pluto-tv-romantikk.png, logos/pluto-tv-romantikk.png, logos/verified-pluto-tv-romantikk-95c6a6f3bf.png
-- logos/international/pluto-tv-sci-fi-sweden-dk.png, logos/international/pluto-tv-sci-fi-sweden-no.png, logos/international/pluto-tv-sci-fi-sweden.png, logos/pluto-tv-sci-fi-sweden-dk.png, logos/pluto-tv-sci-fi-sweden-no.png, logos/pluto-tv-sci-fi-sweden.png, logos/verified-pluto-tv-sci-fi-sweden-ad96d70913.png
-- logos/international/pluto-tv-sci-fi-united-states-ca.png, logos/international/pluto-tv-sci-fi-united-states-latam.png, logos/international/pluto-tv-sci-fi-united-states.png, logos/pluto-tv-sci-fi-united-states-ca.png, logos/pluto-tv-sci-fi-united-states-latam.png, logos/pluto-tv-sci-fi-united-states.png, logos/verified-pluto-tv-sci-fi-united-states-b51ab784b5.png
+- logos/international/pluto-tv-sci-fi-sweden-dk.png, logos/international/pluto-tv-sci-fi-sweden-no.png, logos/international/pluto-tv-sci-fi-sweden.png, logos/pluto-tv-sci-fi-sweden-dk.png, logos/pluto-tv-sci-fi-sweden-no.png, logos/pluto-tv-sci-fi-sweden.png, logos/verified-pluto-tv-sci-fi-sweden-ad96d70913.png, logos/verified-pluto-tv-sci-fi-sweden-dk-ad96d70913.png, logos/verified-pluto-tv-sci-fi-sweden-no-ad96d70913.png
+- logos/international/pluto-tv-sci-fi-united-states-ca.png, logos/international/pluto-tv-sci-fi-united-states-latam.png, logos/international/pluto-tv-sci-fi-united-states.png, logos/pluto-tv-sci-fi-united-states-ca.png, logos/pluto-tv-sci-fi-united-states-latam.png, logos/pluto-tv-sci-fi-united-states.png, logos/verified-pluto-tv-sci-fi-united-states-b51ab784b5.png, logos/verified-pluto-tv-sci-fi-united-states-ca-b51ab784b5.png, logos/verified-pluto-tv-sci-fi-united-states-latam-b51ab784b5.png
 - logos/international/pluto-tv-serie-sci-fi.png, logos/pluto-tv-serie-sci-fi.png, logos/verified-pluto-tv-serie-sci-fi-8c73fd3f2c.png
 - logos/international/pluto-tv-spotlight.png, logos/pluto-tv-spotlight.png, logos/verified-pluto-tv-spotlight-48a7e05af3.png
 - logos/international/pluto-tv-staff-picks.png, logos/pluto-tv-staff-picks.png, logos/verified-pluto-tv-staff-picks-8e8d750bba.png
-- logos/international/pluto-tv-star-trek-germany.png, logos/international/pluto-tv-star-trek-sweden.png, logos/pluto-tv-star-trek-germany.png, logos/pluto-tv-star-trek-sweden.png, logos/verified-pluto-tv-star-trek-sweden-c46a80fd02.png
+- logos/international/pluto-tv-star-trek-germany.png, logos/international/pluto-tv-star-trek-sweden.png, logos/pluto-tv-star-trek-germany.png, logos/pluto-tv-star-trek-sweden.png, logos/verified-pluto-tv-star-trek-germany-c46a80fd02.png, logos/verified-pluto-tv-star-trek-sweden-c46a80fd02.png
 - logos/international/pluto-tv-terror-trash.png, logos/pluto-tv-terror-trash.png, logos/verified-pluto-tv-terror-trash-fab3e51373.png
 - logos/international/pluto-tv-terror.png, logos/pluto-tv-terror.png, logos/verified-pluto-tv-terror-4f0af4f064.png
 - logos/international/pluto-tv-thrillers.png, logos/pluto-tv-thrillers.png, logos/verified-pluto-tv-thrillers-ddf2a028f9.png
 - logos/international/pluto-tv-toto.png, logos/pluto-tv-toto.png, logos/verified-pluto-tv-toto-569215609f.png
 - logos/international/pluto-tv-trending-now.png, logos/pluto-tv-trending-now.png, logos/verified-pluto-tv-trending-now-38d115cf35.png
-- logos/international/pluto-tv-western-es.png, logos/international/pluto-tv-western-it.png, logos/international/pluto-tv-western.png, logos/pluto-tv-western-es.png, logos/pluto-tv-western-it.png, logos/pluto-tv-western.png, logos/verified-pluto-tv-western-ea815a1df6.png
+- logos/international/pluto-tv-western-es.png, logos/international/pluto-tv-western-it.png, logos/international/pluto-tv-western.png, logos/pluto-tv-western-es.png, logos/pluto-tv-western-it.png, logos/pluto-tv-western.png, logos/verified-pluto-tv-western-ea815a1df6.png, logos/verified-pluto-tv-western-es-ea815a1df6.png, logos/verified-pluto-tv-western-it-ea815a1df6.png
 - logos/international/pluto-tv-westerns-germany.png, logos/pluto-tv-westerns-germany.png, logos/verified-pluto-tv-westerns-germany-aba58a257d.png
-- logos/international/pluto-tv-westerns-united-states-ca.png, logos/international/pluto-tv-westerns-united-states.png, logos/pluto-tv-westerns-united-states-ca.png, logos/pluto-tv-westerns-united-states.png, logos/verified-pluto-tv-westerns-united-states-fd9f5ab997.png
-- logos/international/pluto-tv-wild-west-dk.png, logos/international/pluto-tv-wild-west-no.png, logos/international/pluto-tv-wild-west.png, logos/pluto-tv-wild-west-dk.png, logos/pluto-tv-wild-west-no.png, logos/pluto-tv-wild-west.png, logos/verified-pluto-tv-wild-west-5c98988dfa.png
+- logos/international/pluto-tv-westerns-united-states-ca.png, logos/international/pluto-tv-westerns-united-states.png, logos/pluto-tv-westerns-united-states-ca.png, logos/pluto-tv-westerns-united-states.png, logos/verified-pluto-tv-westerns-united-states-ca-fd9f5ab997.png, logos/verified-pluto-tv-westerns-united-states-fd9f5ab997.png
+- logos/international/pluto-tv-wild-west-dk.png, logos/international/pluto-tv-wild-west-no.png, logos/international/pluto-tv-wild-west.png, logos/pluto-tv-wild-west-dk.png, logos/pluto-tv-wild-west-no.png, logos/pluto-tv-wild-west.png, logos/verified-pluto-tv-wild-west-5c98988dfa.png, logos/verified-pluto-tv-wild-west-dk-5c98988dfa.png, logos/verified-pluto-tv-wild-west-no-5c98988dfa.png
 - logos/international/pluto-tv-zombies.png, logos/pluto-tv-zombies.png, logos/verified-pluto-tv-zombies-936b2b64b6.png
 - logos/international/powernation-tv-1080p.png, logos/powernation-tv-1080p.png, logos/verified-powernation-tv-1080p-f53c35e7fc.png
-- logos/international/premialnoe-hd-1080p.png, logos/premialnoe-hd-1080p.png
+- logos/international/premialnoe-hd-1080p.png, logos/premialnoe-hd-1080p.png, logos/verified-premialnoe-hd-1080p-8c61801efd.png
 - logos/international/punjab-plus-1080p.png, logos/punjab-plus-1080p.png, logos/verified-punjab-plus-1080p-8d4d950f36.png
 - logos/international/qmusic.png, logos/qmusic.png, logos/verified-qmusic-b62fda38fe.png
 - logos/international/qtv-3.png, logos/qtv-3.png, logos/verified-qtv-3-f79a28bb4f.png
-- logos/international/rakuten-tv-action-movies-austria-720p.png, logos/international/rakuten-tv-action-movies-germany-1080p.png, logos/international/rakuten-tv-action-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-austria-720p.png, logos/international/rakuten-tv-comedy-movies-germany-1080p.png, logos/international/rakuten-tv-comedy-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-uk-1080p.png, logos/international/rakuten-tv-drama-movies-austria-720p.png, logos/international/rakuten-tv-drama-movies-germany-1080p.png, logos/international/rakuten-tv-drama-movies-uk-1080p.png, logos/international/rakuten-tv-family-movies-austria-720p.png, logos/international/rakuten-tv-family-movies-germany-1080p.png, logos/international/rakuten-tv-family-movies-italy-1080p.png, logos/international/rakuten-tv-family-movies-switzerland-720p.png, logos/international/rakuten-tv-family-movies-uk-1080p.png, logos/international/rakuten-tv-top-movies-germany-1080p.png, logos/international/rakuten-tv-top-movies-italy-1080p.png, logos/international/rakuten-tv-top-movies-uk-1080p.png, logos/rakuten-tv-action-movies-austria-720p.png, logos/rakuten-tv-comedy-movies-166043b571489b238b1f.png, logos/rakuten-tv-comedy-movies-austria-720p.png, logos/rakuten-tv-comedy-movies-germany-1080p.png, logos/rakuten-tv-comedy-movies-italy-1080p.png, logos/rakuten-tv-comedy-movies-uk-1080p.png, logos/rakuten-tv-drama-movies-166043b571489b238b1f.png, logos/rakuten-tv-drama-movies-austria-720p.png, logos/rakuten-tv-drama-movies-germany-1080p.png, logos/rakuten-tv-drama-movies-uk-1080p.png, logos/rakuten-tv-family-movies-166043b571489b238b1f.png, logos/rakuten-tv-family-movies-austria-720p.png, logos/rakuten-tv-family-movies-germany-1080p.png, logos/rakuten-tv-family-movies-italy-1080p.png, logos/rakuten-tv-family-movies-switzerland-720p.png, logos/rakuten-tv-family-movies-uk-1080p.png, logos/verified-rakuten-tv-family-movies-uk-1080p-166043b571.png
-- logos/international/rawhide-united-states-ca.png, logos/international/rawhide-united-states.png, logos/rawhide-united-states-ca.png, logos/rawhide-united-states.png, logos/verified-rawhide-united-states-c7f9b8faf5.png
+- logos/international/rakuten-tv-action-movies-austria-720p.png, logos/international/rakuten-tv-action-movies-germany-1080p.png, logos/international/rakuten-tv-action-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-austria-720p.png, logos/international/rakuten-tv-comedy-movies-germany-1080p.png, logos/international/rakuten-tv-comedy-movies-italy-1080p.png, logos/international/rakuten-tv-comedy-movies-uk-1080p.png, logos/international/rakuten-tv-drama-movies-austria-720p.png, logos/international/rakuten-tv-drama-movies-germany-1080p.png, logos/international/rakuten-tv-drama-movies-uk-1080p.png, logos/international/rakuten-tv-family-movies-austria-720p.png, logos/international/rakuten-tv-family-movies-germany-1080p.png, logos/international/rakuten-tv-family-movies-italy-1080p.png, logos/international/rakuten-tv-family-movies-switzerland-720p.png, logos/international/rakuten-tv-family-movies-uk-1080p.png, logos/international/rakuten-tv-top-movies-germany-1080p.png, logos/international/rakuten-tv-top-movies-italy-1080p.png, logos/international/rakuten-tv-top-movies-uk-1080p.png, logos/rakuten-tv-action-movies-austria-720p.png, logos/rakuten-tv-comedy-movies-166043b571489b238b1f.png, logos/rakuten-tv-comedy-movies-austria-720p.png, logos/rakuten-tv-comedy-movies-germany-1080p.png, logos/rakuten-tv-comedy-movies-italy-1080p.png, logos/rakuten-tv-comedy-movies-uk-1080p.png, logos/rakuten-tv-drama-movies-166043b571489b238b1f.png, logos/rakuten-tv-drama-movies-austria-720p.png, logos/rakuten-tv-drama-movies-germany-1080p.png, logos/rakuten-tv-drama-movies-uk-1080p.png, logos/rakuten-tv-family-movies-166043b571489b238b1f.png, logos/rakuten-tv-family-movies-austria-720p.png, logos/rakuten-tv-family-movies-germany-1080p.png, logos/rakuten-tv-family-movies-italy-1080p.png, logos/rakuten-tv-family-movies-switzerland-720p.png, logos/rakuten-tv-family-movies-uk-1080p.png, logos/verified-rakuten-tv-action-movies-austria-720p-166043b571.png, logos/verified-rakuten-tv-comedy-movies-austria-720p-166043b571.png, logos/verified-rakuten-tv-comedy-movies-germany-1080p-166043b571.png, logos/verified-rakuten-tv-comedy-movies-italy-1080p-166043b571.png, logos/verified-rakuten-tv-comedy-movies-uk-1080p-166043b571.png, logos/verified-rakuten-tv-drama-movies-austria-720p-166043b571.png, logos/verified-rakuten-tv-drama-movies-germany-1080p-166043b571.png, logos/verified-rakuten-tv-drama-movies-uk-1080p-166043b571.png, logos/verified-rakuten-tv-family-movies-austria-720p-166043b571.png, logos/verified-rakuten-tv-family-movies-germany-1080p-166043b571.png, logos/verified-rakuten-tv-family-movies-italy-1080p-166043b571.png, logos/verified-rakuten-tv-family-movies-switzerland-720p-166043b571.png, logos/verified-rakuten-tv-family-movies-uk-1080p-166043b571.png
+- logos/international/rawhide-united-states-ca.png, logos/international/rawhide-united-states.png, logos/rawhide-united-states-ca.png, logos/rawhide-united-states.png, logos/verified-rawhide-united-states-c7f9b8faf5.png, logos/verified-rawhide-united-states-ca-c7f9b8faf5.png
 - logos/international/rodnoe-kino-576p.png, logos/rodnoe-kino-576p.png, logos/verified-rodnoe-kino-576p-31ab024ee6.png
 - logos/international/rotana-cinema-egypt-1080p-geo-blocked.png, logos/rotana-cinema-egypt-2f3fea24741b6067671e.png
 - logos/international/rotana-cinema-ksa-1080p-geo-blocked.png, logos/rotana-cinema-ksa-7d593b9f93819c244020.png
 - logos/international/rtv-bangladesh-720p.png, logos/rtv-bangladesh-720p.png, logos/verified-rtv-bangladesh-720p-6421f55b0f.png
-- logos/international/rumba-tv.png, logos/rumba-tv-3182ea7301.png, logos/rumba-tv.png
+- logos/international/rumba-tv.png, logos/rumba-tv-3182ea7301.png, logos/rumba-tv.png, logos/verified-rumba-tv-856b329a39.png
 - logos/international/runtime-720p.png, logos/runtime-720p.png, logos/verified-runtime-720p-39cd2ffb76.png
 - logos/international/russkiy-detektiv-576p.png, logos/russkiy-detektiv-576p.png, logos/verified-russkiy-detektiv-576p-b1bbbdcb93.png
 - logos/international/russkiy-illusion-576p.png, logos/russkiy-illusion-576p.png, logos/verified-russkiy-illusion-576p-931b454110.png
@@ -777,7 +777,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/sky-cinema-due.png, logos/sky-cinema-due.png, logos/verified-sky-cinema-due-47e86345bf.png
 - logos/international/smithsonianchannel.png, logos/smithsonian-channel-e41164cabff3cd779219.png
 - logos/international/soneri-cinema-360p.png, logos/soneri-cinema-360p.png, logos/verified-soneri-cinema-360p-0ba64f92f1.png
-- logos/international/sony-entertainment-television.png, logos/sony-entertainment-television-10c5801e3c.png, logos/sony-entertainment-television.png
+- logos/international/sony-entertainment-television.png, logos/sony-entertainment-television-10c5801e3c.png, logos/sony-entertainment-television.png, logos/verified-sony-entertainment-television-fe9e40a5a2.png
 - logos/international/sony-movies-latin-america-1080p.png, logos/international/sony-movies-united-states-720p.png, logos/sony-movies-united-states-720p.png, logos/verified-sony-movies-united-states-720p-328b3d63ae.png
 - logos/international/south-park-armageddon-dk.png, logos/international/south-park-armageddon-no.png, logos/international/south-park-armageddon.png
 - logos/international/south-park-butters-collection-germany.png, logos/international/south-park-butters-collection-sweden-dk.png, logos/international/south-park-butters-collection-sweden-no.png, logos/international/south-park-butters-collection-sweden.png
@@ -793,12 +793,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/squirrel-576p.png, logos/squirrel-576p.png, logos/verified-squirrel-576p-fb5faf833c.png
 - logos/international/star-action-720p.png, logos/star-action-720p.png, logos/verified-star-action-720p-092c301e31.png
 - logos/international/star-cinema.png, logos/star-cinema-5a96e69773.png
-- logos/international/star-gold-hd-1080p.png, logos/star-gold-hd-1080p.png
+- logos/international/star-gold-hd-1080p.png, logos/star-gold-hd-1080p.png, logos/verified-star-gold-hd-1080p-f2178a885b.png
 - logos/international/star-movies-portugal.png, logos/star-movies-portugal.png, logos/verified-star-movies-portugal-117de92eba.png
 - logos/international/star-movies-select.png, logos/star-movies-select.png, logos/verified-star-movies-select-2b1d079564.png
 - logos/international/star-movies-slovenia.png, logos/star-movies-slovenia.png, logos/verified-star-movies-slovenia-4e0111a47b.png
 - logos/international/star-tamil-television-360p.png, logos/star-tamil-television-360p.png, logos/verified-star-tamil-television-360p-eca1011501.png
-- logos/international/star-trek-movies-dk.png, logos/international/star-trek-movies-no.png, logos/international/star-trek-movies.png, logos/star-trek-movies-dk.png, logos/star-trek-movies-no.png, logos/star-trek-movies.png, logos/verified-star-trek-movies-f0b61eeff9.png
+- logos/international/star-trek-movies-dk.png, logos/international/star-trek-movies-no.png, logos/international/star-trek-movies.png, logos/star-trek-movies-dk.png, logos/star-trek-movies-no.png, logos/star-trek-movies.png, logos/verified-star-trek-movies-dk-f0b61eeff9.png, logos/verified-star-trek-movies-f0b61eeff9.png, logos/verified-star-trek-movies-no-f0b61eeff9.png
 - logos/international/star-trek-the-original-series-germany.png, logos/international/star-trek-the-original-series-sweden-dk.png, logos/international/star-trek-the-original-series-sweden-no.png, logos/international/star-trek-the-original-series-sweden.png
 - logos/international/star-trek-voyager-germany-it.png, logos/international/star-trek-voyager-germany.png
 - logos/international/stingray-cityscapes-1080p.png, logos/stingray-cityscapes-1080p.png, logos/verified-stingray-cityscapes-1080p-9b37cf47a2.png
@@ -822,7 +822,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/thrill-540p.png, logos/thrill-540p.png, logos/verified-thrill-540p-7464652cb0.png
 - logos/international/tiguerito-tv-720p-not-24-7.png, logos/tiguerito-tv-464395cdf0.png
 - logos/international/tochkarf.png, logos/tochka-rf-4548ea0843cc344460cf.png
-- logos/international/toonami-aftermath-west-480p.png, logos/toonami-aftermath-e4688cd178.png, logos/toonami-aftermath-west-480p.png
+- logos/international/toonami-aftermath-west-480p.png, logos/toonami-aftermath-e4688cd178.png, logos/toonami-aftermath-west-480p.png, logos/verified-toonami-aftermath-west-480p-e4688cd178.png
 - logos/international/tooncast-1080p.png, logos/international/tooncast-southamerica-480p.png, logos/tooncast-southamerica-480p.png, logos/verified-tooncast-southamerica-480p-058755936b.png
 - logos/international/top-latino-tv.png, logos/top-latino-tv.png, logos/verified-top-latino-tv-80297e4820.png
 - logos/international/tra-vinh-tv-1080p.png, logos/tra-vinh-tv-1080p.png, logos/verified-tra-vinh-tv-1080p-549e4e27d4.png
@@ -843,18 +843,18 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/velvet-scary-1080p.png, logos/velvet-scary-1080p.png, logos/verified-velvet-scary-1080p-b99f89331d.png
 - logos/international/velvet-sovetskoe-kino-1080p.png, logos/velvet-sovetskoe-kino-1080p.png, logos/verified-velvet-sovetskoe-kino-1080p-a41576b407.png
 - logos/international/vevo-retro-rock-1080p.png, logos/unused/vevo-retro-rock-1080p-bc78e75ce0.png
-- logos/international/viafree-movies-dk.png, logos/international/viafree-movies-no.png, logos/international/viafree-movies.png, logos/verified-viafree-movies-b8132a8c29.png, logos/viafree-movies-dk.png, logos/viafree-movies-no.png, logos/viafree-movies.png
-- logos/international/viasat-kino-576p.png, logos/international/viasat-kino-balkan-1080p.png, logos/international/viasat-kino-bulgaria-1080p.png, logos/international/viasat-kino-romania.png, logos/verified-viasat-kino-576p-2637d9d888.png, logos/viasat-kino-576p.png, logos/viasat-kino-balkan-1080p.png
+- logos/international/viafree-movies-dk.png, logos/international/viafree-movies-no.png, logos/international/viafree-movies.png, logos/verified-viafree-movies-b8132a8c29.png, logos/verified-viafree-movies-dk-b8132a8c29.png, logos/verified-viafree-movies-no-b8132a8c29.png, logos/viafree-movies-dk.png, logos/viafree-movies-no.png, logos/viafree-movies.png
+- logos/international/viasat-kino-576p.png, logos/international/viasat-kino-balkan-1080p.png, logos/international/viasat-kino-bulgaria-1080p.png, logos/international/viasat-kino-romania.png, logos/verified-viasat-kino-576p-2637d9d888.png, logos/verified-viasat-kino-balkan-1080p-2637d9d888.png, logos/viasat-kino-576p.png, logos/viasat-kino-balkan-1080p.png
 - logos/international/viasat-kino-action-576p.png, logos/verified-viasat-kino-action-576p-4e357b151a.png, logos/viasat-kino-action-576p.png
 - logos/international/viasat-kino-comedy.png, logos/viasat-kino-comedy-934854e2dd.png
 - logos/international/viasat-kino-world.png, logos/viasat-kino-world-a9fe5a3be0.png
-- logos/international/viasat-serial.png, logos/viasat-serial-8e4a9c26e8.png, logos/viasat-serial.png
+- logos/international/viasat-serial.png, logos/verified-viasat-serial-f54ca1d451.png, logos/viasat-serial-8e4a9c26e8.png, logos/viasat-serial.png
 - logos/international/viju-megahit-hd-1080p.png, logos/viju-plus-megahit-74d89fb170945fddfd1d.png
 - logos/international/viju-premiere-hd-1080p.png, logos/viju-plus-premiere-3c34be1aa9628ed932fd.png
 - logos/international/viju-tv1000-576p.png, logos/verified-viju-tv1000-576p-95f56e2316.png, logos/viju-tv1000-576p.png
 - logos/international/viju-tv1000-action-576p.png, logos/verified-viju-tv1000-action-576p-50e3ea4ac6.png, logos/viju-tv1000-action-576p.png
 - logos/international/viju-tv1000-russkoe.png, logos/viju-tv1000-russkoe-6a97e6b520.png
-- logos/international/vintage-music-720p.png, logos/vintage-music-720p.png
+- logos/international/vintage-music-720p.png, logos/verified-vintage-music-720p-acd818d0be.png, logos/vintage-music-720p.png
 - logos/international/vip-tv-720p.png, logos/verified-vip-tv-720p-7d6305f8d2.png, logos/vip-tv-720p.png
 - logos/international/viva-latino-1080p.png, logos/verified-viva-latino-1080p-6de6ba7d8f.png, logos/viva-latino-1080p.png
 - logos/international/watch-it-scream-720p.png, logos/watch-it-scream-720p-b8531f612b.png
@@ -866,6 +866,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/zee-tv-converted-4946c72750.png, logos/zee-tv-2fb6673cf7.png
 - logos/jimjam-6eb2a52d5d.png, logos/jimjam-europe-6eb2a52d5dbbd8da009c.png
 - logos/ktv-sport-plus.png, logos/unused/ktv-sport-plus.png
+- logos/look-thoong-tv-2c41090ebcf122f4ded0.png, logos/look-thoong-tv-720p-not-24-7-2c41090ebcf122f4ded0.png
 - logos/mad.png, logos/unused/mad.png
 - logos/maincast-cybersport-0b6e1be6a1932f909cbf.png, logos/maincast-sport-0b6e1be6a1.png
 - logos/mei-ah-movie-channel.png, logos/unused/mei-ah-movie-channel-b6a14207.png
@@ -1601,6 +1602,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Shemaroo TV | shemaroo-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Shiksha TV | shiksha-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Sirippoli TV | sirippoli-tv.png | Indian Entertainment |
+| International-Playlist.m3u | Sony Entertainment Television | verified-sony-entertainment-television-fe9e40a5a2.png | Indian Entertainment |
 | International-Playlist.m3u | Sony entertainment tv | sony-entertainment-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Suriya TV | suriya-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Suriyan TV | suriyan-tv.png | Indian Entertainment |
@@ -1630,6 +1632,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Adrenalina Pura TV Brazil | adrenalina-pura-tv-brazil.png | Brazil |
 | International-Playlist.m3u | CINDIE TV | cindie-tv-73d1d00274.png | Brazil |
 | International-Playlist.m3u | Classique TV | classique-tv-360p-6f1c2ec605.png | Brazil |
+| International-Playlist.m3u | Music Box Brazil | verified-music-box-brazil-720p-7048d9d406.png | Brazil |
 | International-Playlist.m3u | Rádio Temas de Novelas | radio-temas-de-novelas-52562d10f48bddf24188.png | Brazil |
 | International-Playlist.m3u | Telecine Cult | verified-telecine-cult-9dd1e5a93a.png | Brazil |
 | International-Playlist.m3u | Telecine Fun | verified-telecine-fun-672730ce67.png | Brazil |
@@ -1658,12 +1661,13 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | La Kalle | verified-la-kalle-1080p-f69c4ca5ea.png | Colombia |
 | International-Playlist.m3u | Radiola TV | radiola-tv-85f3f1c401.png | Colombia |
 | International-Playlist.m3u | Ranchenato TV | ranchenato-tv-fa3be7bb3c.png | Colombia |
-| International-Playlist.m3u | Rumba TV | rumba-tv.png | Colombia |
+| International-Playlist.m3u | Rumba TV | verified-rumba-tv-856b329a39.png | Colombia |
 | International-Playlist.m3u | Supermusica TV | supermusica-tv-52340ed26b.png | Colombia |
 | International-Playlist.m3u | Conexión Positiva Televisión | conexion-positiva-television-31b6b3a46b.png | Costa Rica |
 | International-Playlist.m3u | IQ Channel | iq-channel-df4804e706.png | Costa Rica |
 | International-Playlist.m3u | SOY Plancha TV | soy-plancha-tv-0a254093f8.png | Costa Rica |
 | International-Playlist.m3u | Urbano TV | urbano-tv-bc3c78e42d.png | Costa Rica |
+| International-Playlist.m3u | Vintage Music | verified-vintage-music-720p-acd818d0be.png | Costa Rica |
 | International-Playlist.m3u | Film+ (Czech Republic) | film-plus-czech-republic-823999f902.png | Czech Republic |
 | International-Playlist.m3u | FILMBOX+ Comedy Czechia | filmbox-plus-comedy-czechia-a21ffa318d104db4573a.png | Czech Republic |
 | International-Playlist.m3u | FILMBOX+ Emotion Czechia | filmbox-plus-emotion-czechia-f7ccc464ab0245322778.png | Czech Republic |
@@ -1682,6 +1686,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | TV Exitos | tv-exitos-a7aac8d99c.png | DO |
 | International-Playlist.m3u | Best of Dance TV | best-of-dance-tv-1080p.png | Estonia |
 | International-Playlist.m3u | DBM TV | dbm-tv-1080p-002259b21f.png | France |
+| International-Playlist.m3u | MCM Pop | verified-mcm-pop-580p-1f74592475.png | France |
 | International-Playlist.m3u | P2M TV | p2m-tv.png | France |
 | International-Playlist.m3u | Qwest TV | qwest-tv-3dfbb709b2.png | France |
 | International-Playlist.m3u | Qwest TV Jazz & Beyond | qwest-tv-jazz-and-beyond-0f7bec4642.png | France |
@@ -1717,7 +1722,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Cult Films (Germany) | verified-pluto-tv-cult-films-germany-83a8581537.png | Germany |
 | International-Playlist.m3u | Pluto TV Family Movie Club | verified-pluto-tv-family-movie-club-695dfca6b5.png | Germany |
 | International-Playlist.m3u | Pluto TV Fantasy & Horror | pluto-tv-fantasy-and-horror-456f4e1235890034f428.png | Germany |
-| International-Playlist.m3u | Pluto TV Film (Germany) | pluto-tv-film-germany.png | Germany |
+| International-Playlist.m3u | Pluto TV Film (Germany) | verified-pluto-tv-film-germany-abdfe2e022.png | Germany |
 | International-Playlist.m3u | Pluto TV Film Azione | verified-pluto-tv-film-azione-2f80aeee6d.png | Germany |
 | International-Playlist.m3u | Pluto TV Film Commedia | verified-pluto-tv-film-commedia-281db3a135.png | Germany |
 | International-Playlist.m3u | Pluto TV Film Romantici | verified-pluto-tv-film-romantici-a1c1955035.png | Germany |
@@ -1729,18 +1734,18 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Kultfilme | verified-pluto-tv-kultfilme-fecf304515.png | Germany |
 | International-Playlist.m3u | Pluto TV Legami Letali | verified-pluto-tv-legami-letali-518c40f152.png | Germany |
 | International-Playlist.m3u | Pluto TV Movies | verified-pluto-tv-movies-583199a9f8.png | Germany |
-| International-Playlist.m3u | Pluto TV Movies GB | pluto-tv-movies-gb.png | Germany |
+| International-Playlist.m3u | Pluto TV Movies GB | verified-pluto-tv-movies-gb-583199a9f8.png | Germany |
 | International-Playlist.m3u | Pluto TV Notti di Passione | verified-pluto-tv-notti-di-passione-0a2f9d3d40.png | Germany |
 | International-Playlist.m3u | Pluto TV Psycho | verified-pluto-tv-psycho-14b368ee64.png | Germany |
 | International-Playlist.m3u | Pluto TV Serie Sci-Fi | verified-pluto-tv-serie-sci-fi-8c73fd3f2c.png | Germany |
-| International-Playlist.m3u | Pluto TV Star Trek (Germany) | pluto-tv-star-trek-germany.png | Germany |
+| International-Playlist.m3u | Pluto TV Star Trek (Germany) | verified-pluto-tv-star-trek-germany-c46a80fd02.png | Germany |
 | International-Playlist.m3u | Pluto TV Toto | verified-pluto-tv-toto-569215609f.png | Germany |
 | International-Playlist.m3u | Pluto TV Western | verified-pluto-tv-western-ea815a1df6.png | Germany |
-| International-Playlist.m3u | Pluto TV Western ES | pluto-tv-western-es.png | Germany |
-| International-Playlist.m3u | Pluto TV Western IT | pluto-tv-western-it.png | Germany |
+| International-Playlist.m3u | Pluto TV Western ES | verified-pluto-tv-western-es-ea815a1df6.png | Germany |
+| International-Playlist.m3u | Pluto TV Western IT | verified-pluto-tv-western-it-ea815a1df6.png | Germany |
 | International-Playlist.m3u | Pluto TV Westerns (Germany) | verified-pluto-tv-westerns-germany-aba58a257d.png | Germany |
 | International-Playlist.m3u | Pluto TV Zombies | verified-pluto-tv-zombies-936b2b64b6.png | Germany |
-| International-Playlist.m3u | Rakuten TV Family Movies Germany | rakuten-tv-family-movies-germany-1080p.png | Germany |
+| International-Playlist.m3u | Rakuten TV Family Movies Germany | verified-rakuten-tv-family-movies-germany-1080p-166043b571.png | Germany |
 | International-Playlist.m3u | SensaCine TV x Pluto | verified-sensacine-tv-x-pluto-2ec2049147.png | Germany |
 | International-Playlist.m3u | TV Bozsike Hamburg | tv-bozsike-hamburg-aad2e10d17.png | Germany |
 | International-Playlist.m3u | Volksmusik TV | volksmusik-tv-7b239333b5.png | Germany |
@@ -1770,7 +1775,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Kiss Kiss TV | kiss-kiss-tv-bc8787d9bc.png | Italy |
 | International-Playlist.m3u | m2o TV | m2o-tv-b7f4f35984.png | Italy |
 | International-Playlist.m3u | R101 TV | r101-tv.png | Italy |
-| International-Playlist.m3u | Rakuten TV Family Movies Italy | rakuten-tv-family-movies-italy-1080p.png | Italy |
+| International-Playlist.m3u | Rakuten TV Family Movies Italy | verified-rakuten-tv-family-movies-italy-1080p-166043b571.png | Italy |
 | International-Playlist.m3u | RDS Social TV | rds-social-tv.png | Italy |
 | International-Playlist.m3u | RTL 102.5 Bro&Sis | rtl-102-5-bro-and-sis-dd72d1e17b.png | Italy |
 | International-Playlist.m3u | RTL 102.5 TV | rtl-102-5-tv-6840fce10f.png | Italy |
@@ -1795,6 +1800,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | GO TV | go-tv-720p.png | Paraguay |
 | International-Playlist.m3u | Next | verified-next-hd-480p-9c47e33564.png | Paraguay |
 | International-Playlist.m3u | La Fabulosa TV | la-fabulosa-tv-5b68a4aa4f.png | Peru |
+| International-Playlist.m3u | Metropolitana del Cuzco | verified-metropolitana-del-cuzco-178dc363d4.png | Peru |
 | International-Playlist.m3u | Miel TV | miel-tv-f7dc000ca4.png | Peru |
 | International-Playlist.m3u | RumbaMix TV | rumbamix-tv-732689360a.png | Peru |
 | International-Playlist.m3u | Top Latino TV | verified-top-latino-tv-80297e4820.png | Peru |
@@ -1844,6 +1850,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Illusion+ | illusion-plus-8d8f90fef7.png | Russia |
 | International-Playlist.m3u | Kino TV | verified-kino-tv-hd-7744ff13ad.png | Russia |
 | International-Playlist.m3u | Kinopokaz | verified-kinopokaz-ad1d4126d2.png | Russia |
+| International-Playlist.m3u | Kinosemja | verified-kinosemja-576p-19c5905acc.png | Russia |
 | International-Playlist.m3u | Kinoseriya | verified-kinoseriya-1080p-d0c120abfd.png | Russia |
 | International-Playlist.m3u | Kinouzhas | verified-kinouzhas-576p-9428b415cc.png | Russia |
 | International-Playlist.m3u | Live Music Channel | live-music-channel-f7ff6ec731.png | Russia |
@@ -1854,7 +1861,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Nashe | verified-nashe-hd-576p-c2e4bb60ea.png | Russia |
 | International-Playlist.m3u | Nashe muzhskoe | verified-nashe-muzhskoe-hd-1080p-bfa46f2b38.png | Russia |
 | International-Playlist.m3u | Ostrosyuzhetnoye | verified-ostrosyuzhetnoye-hd-1080p-92ef03eeca.png | Russia |
-| International-Playlist.m3u | Premialnoe | premialnoe-hd-1080p.png | Russia |
+| International-Playlist.m3u | Premialnoe | verified-premialnoe-hd-1080p-8c61801efd.png | Russia |
 | International-Playlist.m3u | Rodnoe Kino | verified-rodnoe-kino-576p-31ab024ee6.png | Russia |
 | International-Playlist.m3u | RU.TV | ru-tv-1e1acce47e.png | Russia |
 | International-Playlist.m3u | Russkiy Detektiv | verified-russkiy-detektiv-576p-b1bbbdcb93.png | Russia |
@@ -1878,46 +1885,54 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Rakuten TV Family Movies | rakuten-tv-family-movies-166043b571489b238b1f.png | Spain |
 | International-Playlist.m3u | Squirrel | verified-squirrel-576p-fb5faf833c.png | Spain |
 | International-Playlist.m3u | Merry Christmas from Viafree | verified-merry-christmas-from-viafree-b2836c29c7.png | Sweden |
+| International-Playlist.m3u | Merry Christmas from Viafree DK | verified-merry-christmas-from-viafree-dk-b2836c29c7.png | Sweden |
+| International-Playlist.m3u | Merry Christmas from Viafree NO | verified-merry-christmas-from-viafree-no-b2836c29c7.png | Sweden |
 | International-Playlist.m3u | NonStop Kung Fu | verified-nonstop-kung-fu-c70bef501e.png | Sweden |
+| International-Playlist.m3u | NonStop Kung Fu DK | verified-nonstop-kung-fu-dk-c70bef501e.png | Sweden |
+| International-Playlist.m3u | NonStop Kung Fu NO | verified-nonstop-kung-fu-no-c70bef501e.png | Sweden |
 | International-Playlist.m3u | Pluto TV Action (Sweden) | verified-pluto-tv-action-sweden-c9e183eb9d.png | Sweden |
-| International-Playlist.m3u | Pluto TV Action (Sweden) DK | pluto-tv-action-sweden-dk.png | Sweden |
-| International-Playlist.m3u | Pluto TV Action (Sweden) NO | pluto-tv-action-sweden-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Action (Sweden) DK | verified-pluto-tv-action-sweden-dk-c9e183eb9d.png | Sweden |
+| International-Playlist.m3u | Pluto TV Action (Sweden) NO | verified-pluto-tv-action-sweden-no-c9e183eb9d.png | Sweden |
 | International-Playlist.m3u | Pluto TV Bud & Terence (Sweden) | pluto-tv-bud-and-terence-sweden-92919e25e140f71cc91a.png | Sweden |
 | International-Playlist.m3u | Pluto TV Bud & Terence (Sweden) DK | pluto-tv-bud-and-terence-sweden-dk-92919e25e140f71cc91a.png | Sweden |
 | International-Playlist.m3u | Pluto TV Bud & Terence (Sweden) NO | pluto-tv-bud-and-terence-sweden-no-92919e25e140f71cc91a.png | Sweden |
 | International-Playlist.m3u | Pluto TV Danske klassikere | verified-pluto-tv-danske-klassikere-cd20e362ed.png | Sweden |
 | International-Playlist.m3u | Pluto TV Film (Sweden) | verified-pluto-tv-film-sweden-abdfe2e022.png | Sweden |
-| International-Playlist.m3u | Pluto TV Film (Sweden) DK | pluto-tv-film-sweden-dk.png | Sweden |
-| International-Playlist.m3u | Pluto TV Film (Sweden) NO | pluto-tv-film-sweden-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Film (Sweden) DK | verified-pluto-tv-film-sweden-dk-abdfe2e022.png | Sweden |
+| International-Playlist.m3u | Pluto TV Film (Sweden) NO | verified-pluto-tv-film-sweden-no-abdfe2e022.png | Sweden |
 | International-Playlist.m3u | Pluto TV Harlequin | verified-pluto-tv-harlequin-4748bc9377.png | Sweden |
-| International-Playlist.m3u | Pluto TV Harlequin DK | pluto-tv-harlequin-dk.png | Sweden |
-| International-Playlist.m3u | Pluto TV Harlequin NO | pluto-tv-harlequin-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Harlequin DK | verified-pluto-tv-harlequin-dk-4748bc9377.png | Sweden |
+| International-Playlist.m3u | Pluto TV Harlequin NO | verified-pluto-tv-harlequin-no-4748bc9377.png | Sweden |
 | International-Playlist.m3u | Pluto TV Horror (Sweden) | verified-pluto-tv-horror-sweden-cb7184b6c8.png | Sweden |
-| International-Playlist.m3u | Pluto TV Horror (Sweden) DK | pluto-tv-horror-sweden-dk.png | Sweden |
-| International-Playlist.m3u | Pluto TV Horror (Sweden) NO | pluto-tv-horror-sweden-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Horror (Sweden) DK | verified-pluto-tv-horror-sweden-dk-cb7184b6c8.png | Sweden |
+| International-Playlist.m3u | Pluto TV Horror (Sweden) NO | verified-pluto-tv-horror-sweden-no-cb7184b6c8.png | Sweden |
 | International-Playlist.m3u | Pluto TV Humor (Sweden) | verified-pluto-tv-humor-sweden-2fca211fad.png | Sweden |
 | International-Playlist.m3u | Pluto TV John Wayne | verified-pluto-tv-john-wayne-163e30c8db.png | Sweden |
-| International-Playlist.m3u | Pluto TV John Wayne DK | pluto-tv-john-wayne-dk.png | Sweden |
-| International-Playlist.m3u | Pluto TV John Wayne NO | pluto-tv-john-wayne-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV John Wayne DK | verified-pluto-tv-john-wayne-dk-163e30c8db.png | Sweden |
+| International-Playlist.m3u | Pluto TV John Wayne NO | verified-pluto-tv-john-wayne-no-163e30c8db.png | Sweden |
 | International-Playlist.m3u | Pluto TV Komedi | verified-pluto-tv-komedi-32b1783b25.png | Sweden |
 | International-Playlist.m3u | Pluto TV Komedie | verified-pluto-tv-komedie-3759cb05cf.png | Sweden |
 | International-Playlist.m3u | Pluto TV Kultfilm | verified-pluto-tv-kultfilm-f5ab741909.png | Sweden |
 | International-Playlist.m3u | Pluto TV Kultfilmer | verified-pluto-tv-kultfilmer-992e51539d.png | Sweden |
-| International-Playlist.m3u | Pluto TV Kultfilmer NO | pluto-tv-kultfilmer-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Kultfilmer NO | verified-pluto-tv-kultfilmer-no-992e51539d.png | Sweden |
 | International-Playlist.m3u | Pluto TV Paranormal (Sweden) | verified-pluto-tv-paranormal-sweden-0249ff1ade.png | Sweden |
-| International-Playlist.m3u | Pluto TV Paranormal (Sweden) DK | pluto-tv-paranormal-sweden-dk.png | Sweden |
+| International-Playlist.m3u | Pluto TV Paranormal (Sweden) DK | verified-pluto-tv-paranormal-sweden-dk-0249ff1ade.png | Sweden |
 | International-Playlist.m3u | Pluto TV Romantik | verified-pluto-tv-romantik-def8423bda.png | Sweden |
-| International-Playlist.m3u | Pluto TV Romantik DK | pluto-tv-romantik-dk.png | Sweden |
+| International-Playlist.m3u | Pluto TV Romantik DK | verified-pluto-tv-romantik-dk-def8423bda.png | Sweden |
 | International-Playlist.m3u | Pluto TV Romantikk | verified-pluto-tv-romantikk-95c6a6f3bf.png | Sweden |
 | International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) | verified-pluto-tv-sci-fi-sweden-ad96d70913.png | Sweden |
-| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) DK | pluto-tv-sci-fi-sweden-dk.png | Sweden |
-| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) NO | pluto-tv-sci-fi-sweden-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) DK | verified-pluto-tv-sci-fi-sweden-dk-ad96d70913.png | Sweden |
+| International-Playlist.m3u | Pluto TV Sci-Fi (Sweden) NO | verified-pluto-tv-sci-fi-sweden-no-ad96d70913.png | Sweden |
 | International-Playlist.m3u | Pluto TV Star Trek (Sweden) | verified-pluto-tv-star-trek-sweden-c46a80fd02.png | Sweden |
 | International-Playlist.m3u | Pluto TV Wild West | verified-pluto-tv-wild-west-5c98988dfa.png | Sweden |
-| International-Playlist.m3u | Pluto TV Wild West DK | pluto-tv-wild-west-dk.png | Sweden |
-| International-Playlist.m3u | Pluto TV Wild West NO | pluto-tv-wild-west-no.png | Sweden |
+| International-Playlist.m3u | Pluto TV Wild West DK | verified-pluto-tv-wild-west-dk-5c98988dfa.png | Sweden |
+| International-Playlist.m3u | Pluto TV Wild West NO | verified-pluto-tv-wild-west-no-5c98988dfa.png | Sweden |
 | International-Playlist.m3u | Star Trek Movies | verified-star-trek-movies-f0b61eeff9.png | Sweden |
+| International-Playlist.m3u | Star Trek Movies DK | verified-star-trek-movies-dk-f0b61eeff9.png | Sweden |
+| International-Playlist.m3u | Star Trek Movies NO | verified-star-trek-movies-no-f0b61eeff9.png | Sweden |
 | International-Playlist.m3u | Viafree Movies | verified-viafree-movies-b8132a8c29.png | Sweden |
+| International-Playlist.m3u | Viafree Movies DK | verified-viafree-movies-dk-b8132a8c29.png | Sweden |
+| International-Playlist.m3u | Viafree Movies NO | verified-viafree-movies-no-b8132a8c29.png | Sweden |
 | International-Playlist.m3u | Kral Pop TV | kral-pop-tv-720p-bd49bfe47b.png | Turkey |
 | International-Playlist.m3u | Number 1 TV | number-1-tv-757229b80e.png | Turkey |
 | International-Playlist.m3u | PowerTürk TV | powerturk-tv-1080p-7651888d90.png | Turkey |
@@ -1932,6 +1947,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Nashe Lubimoe Kino Ukraine | verified-nashe-lubimoe-kino-ukraine-1080p-d62da12d94.png | Ukraine |
 | International-Playlist.m3u | Viasat Kino | verified-viasat-kino-576p-2637d9d888.png | Ukraine |
 | International-Playlist.m3u | Viasat Kino Action | verified-viasat-kino-action-576p-4e357b151a.png | Ukraine |
+| International-Playlist.m3u | Viasat Serial | verified-viasat-serial-f54ca1d451.png | Ukraine |
 | International-Playlist.m3u | ¡Viva Latino! | verified-viva-latino-1080p-6de6ba7d8f.png | Ukraine |
 | International-Playlist.m3u | Clubbing TV UK | clubbing-tv-uk-0506d64f69.png | United Kingdom |
 | International-Playlist.m3u | Nolly Africa | verified-nolly-africa-1080p-3701600320.png | United Kingdom |
@@ -1952,6 +1968,14 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Magnificent Movies Network | verified-magnificent-movies-network-867c631f92.png | United States |
 | International-Playlist.m3u | MCN6 Music Channel | mcn6-music-channel-1080p-b16c4717c3.png | United States |
 | International-Playlist.m3u | Metaleitor TV | metaleitor-tv-c73eb9b874.png | United States |
+| International-Playlist.m3u | MTV Biggest Pop BR | verified-mtv-biggest-pop-br-1080p-61995cdf8b.png | United States |
+| International-Playlist.m3u | MTV Biggest Pop CA | verified-mtv-biggest-pop-ca-1080p-61995cdf8b.png | United States |
+| International-Playlist.m3u | MTV Biggest Pop LatAm | verified-mtv-biggest-pop-latam-1080p-61995cdf8b.png | United States |
+| International-Playlist.m3u | MTV Classic BR | verified-mtv-classic-br-720p-a32712dea1.png | United States |
+| International-Playlist.m3u | MTV Classic CA | verified-mtv-classic-ca-720p-a32712dea1.png | United States |
+| International-Playlist.m3u | MTV Classic LatAm | verified-mtv-classic-latam-720p-a32712dea1.png | United States |
+| International-Playlist.m3u | MTV Flow Latino LatAm | verified-mtv-flow-latino-latam-720p-55b8877f51.png | United States |
+| International-Playlist.m3u | MTV Spankin' New CA | verified-mtv-spankin-new-ca-1080p-1b2737bd34.png | United States |
 | International-Playlist.m3u | Paramount Movie Channel | verified-paramount-movie-channel-17e8690125.png | United States |
 | International-Playlist.m3u | Paramount+ Picks | paramount-plus-picks-1f9a19406d1a42d7d192.png | United States |
 | International-Playlist.m3u | Pluto Classic Movie Westerns | verified-pluto-classic-movie-westerns-227c06af7f.png | United States |
@@ -1963,25 +1987,25 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Cine Clasico | verified-pluto-tv-cine-clasico-a06dc7e268.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Classicos | verified-pluto-tv-cine-classicos-5cdf7516c8.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Comedia (United States) | verified-pluto-tv-cine-comedia-united-states-43f75938d8.png | United States |
-| International-Playlist.m3u | Pluto TV Cine Comedia (United States) BR | pluto-tv-cine-comedia-united-states-br.png | United States |
-| International-Playlist.m3u | Pluto TV Cine Comedia (United States) LatAm | pluto-tv-cine-comedia-united-states-latam.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Comedia (United States) BR | verified-pluto-tv-cine-comedia-united-states-br-43f75938d8.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Comedia (United States) LatAm | verified-pluto-tv-cine-comedia-united-states-latam-43f75938d8.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Comedia Romantica | verified-pluto-tv-cine-comedia-romantica-a2ffff8447.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Crime | verified-pluto-tv-cine-crime-c0d629fd5e.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Crimen | verified-pluto-tv-cine-crimen-2f57556cbb.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Drama | verified-pluto-tv-cine-drama-9f10c4aaa8.png | United States |
-| International-Playlist.m3u | Pluto TV Cine Drama LatAm | pluto-tv-cine-drama-latam.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Drama LatAm | verified-pluto-tv-cine-drama-latam-9f10c4aaa8.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Estelar | verified-pluto-tv-cine-estelar-cf8ea3b97f.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Familia | verified-pluto-tv-cine-familia-c5868c98e3.png | United States |
-| International-Playlist.m3u | Pluto TV Cine Familia LatAm | pluto-tv-cine-familia-latam.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Familia LatAm | verified-pluto-tv-cine-familia-latam-c5868c98e3.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Inspiracao | verified-pluto-tv-cine-inspiracao-a1a48676fd.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Inspirador | verified-pluto-tv-cine-inspirador-be4faedaeb.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Romance | verified-pluto-tv-cine-romance-c06ece8287.png | United States |
-| International-Playlist.m3u | Pluto TV Cine Romance LatAm | pluto-tv-cine-romance-latam.png | United States |
+| International-Playlist.m3u | Pluto TV Cine Romance LatAm | verified-pluto-tv-cine-romance-latam-c06ece8287.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Sucessos | verified-pluto-tv-cine-sucessos-84e95fffad.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Suspenso | verified-pluto-tv-cine-suspenso-10b777c449.png | United States |
 | International-Playlist.m3u | Pluto TV Comedy Movies | verified-pluto-tv-comedy-movies-712ff1dc00.png | United States |
 | International-Playlist.m3u | Pluto TV Crime Drama | verified-pluto-tv-crime-drama-b7b06003fc.png | United States |
-| International-Playlist.m3u | Pluto TV Crime Drama CA | pluto-tv-crime-drama-ca.png | United States |
+| International-Playlist.m3u | Pluto TV Crime Drama CA | verified-pluto-tv-crime-drama-ca-b7b06003fc.png | United States |
 | International-Playlist.m3u | Pluto TV Crime Movies | verified-pluto-tv-crime-movies-f6e317e18f.png | United States |
 | International-Playlist.m3u | Pluto TV Cult Films (United States) | verified-pluto-tv-cult-films-united-states-98c5047f01.png | United States |
 | International-Playlist.m3u | Pluto TV Drama | verified-pluto-tv-drama-187f195ad7.png | United States |
@@ -1994,7 +2018,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Filmes Nacionais | verified-pluto-tv-filmes-nacionais-b2abfef6c8.png | United States |
 | International-Playlist.m3u | Pluto TV Franchise Favorites | verified-pluto-tv-franchise-favorites-72322e1131.png | United States |
 | International-Playlist.m3u | Pluto TV Horror (United States) | verified-pluto-tv-horror-united-states-249ed5b4bd.png | United States |
-| International-Playlist.m3u | Pluto TV Horror (United States) CA | pluto-tv-horror-united-states-ca.png | United States |
+| International-Playlist.m3u | Pluto TV Horror (United States) CA | verified-pluto-tv-horror-united-states-ca-249ed5b4bd.png | United States |
 | International-Playlist.m3u | Pluto TV Icons | verified-pluto-tv-icons-1f965703b4.png | United States |
 | International-Playlist.m3u | Pluto TV Netmovies | verified-pluto-tv-netmovies-8f6a2afeb9.png | United States |
 | International-Playlist.m3u | Pluto TV Nuestro Cine | verified-pluto-tv-nuestro-cine-a283883c60.png | United States |
@@ -2002,8 +2026,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Retro Action Movies | verified-pluto-tv-retro-action-movies-18198128f3.png | United States |
 | International-Playlist.m3u | Pluto TV Romance | verified-pluto-tv-romance-132e7bf938.png | United States |
 | International-Playlist.m3u | Pluto TV Sci-Fi (United States) | verified-pluto-tv-sci-fi-united-states-b51ab784b5.png | United States |
-| International-Playlist.m3u | Pluto TV Sci-Fi (United States) CA | pluto-tv-sci-fi-united-states-ca.png | United States |
-| International-Playlist.m3u | Pluto TV Sci-Fi (United States) LatAm | pluto-tv-sci-fi-united-states-latam.png | United States |
+| International-Playlist.m3u | Pluto TV Sci-Fi (United States) CA | verified-pluto-tv-sci-fi-united-states-ca-b51ab784b5.png | United States |
+| International-Playlist.m3u | Pluto TV Sci-Fi (United States) LatAm | verified-pluto-tv-sci-fi-united-states-latam-b51ab784b5.png | United States |
 | International-Playlist.m3u | Pluto TV Spotlight | verified-pluto-tv-spotlight-48a7e05af3.png | United States |
 | International-Playlist.m3u | Pluto TV Staff Picks | verified-pluto-tv-staff-picks-8e8d750bba.png | United States |
 | International-Playlist.m3u | Pluto TV Terror | verified-pluto-tv-terror-4f0af4f064.png | United States |
@@ -2011,9 +2035,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pluto TV Thrillers | verified-pluto-tv-thrillers-ddf2a028f9.png | United States |
 | International-Playlist.m3u | Pluto TV Trending Now | verified-pluto-tv-trending-now-38d115cf35.png | United States |
 | International-Playlist.m3u | Pluto TV Westerns (United States) | verified-pluto-tv-westerns-united-states-fd9f5ab997.png | United States |
-| International-Playlist.m3u | Pluto TV Westerns (United States) CA | pluto-tv-westerns-united-states-ca.png | United States |
+| International-Playlist.m3u | Pluto TV Westerns (United States) CA | verified-pluto-tv-westerns-united-states-ca-fd9f5ab997.png | United States |
 | International-Playlist.m3u | Pure Flix TV [ ] | pure-flix-tv-9faa41b4c022e0898b19.png | United States |
 | International-Playlist.m3u | Rawhide (United States) | verified-rawhide-united-states-c7f9b8faf5.png | United States |
+| International-Playlist.m3u | Rawhide (United States) CA | verified-rawhide-united-states-ca-c7f9b8faf5.png | United States |
 | International-Playlist.m3u | Runtime | verified-runtime-720p-39cd2ffb76.png | United States |
 | International-Playlist.m3u | Scares by Shudder | verified-scares-by-shudder-1080p-87e2403895.png | United States |
 | International-Playlist.m3u | Sony Movies (United States) | verified-sony-movies-united-states-720p-328b3d63ae.png | United States |
@@ -2051,6 +2076,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Konul Music TV | konul-music-tv-40b05f1d627fd4ad7bd9.png | International |
 | International-Playlist.m3u | Lingkar TV | verified-lingkar-tv-4df413ebfc.png | International |
 | International-Playlist.m3u | Lollywood HD TV | verified-lollywood-hd-tv-d47e88603a.png | International |
+| International-Playlist.m3u | Look Thoong TV [ ] | look-thoong-tv-2c41090ebcf122f4ded0.png | International |
 | International-Playlist.m3u | Maah TV | maah-tv-8ab855a0a8.png | International |
 | International-Playlist.m3u | MAX TV | max-tv-a516dc8e242f6bcb5f47.png | International |
 | International-Playlist.m3u | Mei Ah Movie Channel | mei-ah-movie-channel.png | International |
@@ -2254,6 +2280,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Jiangsu Movie Channel | verified-jiangsu-movie-channel-576p-455ec43607.png | Review |
 | International-Playlist.m3u | Jilin Movie Channel | verified-jilin-movie-channel-ec13d25815.png | Review |
 | International-Playlist.m3u | Juice TV [ ] | juice-tv-830eccfd5c68004843df.png | Review |
+| International-Playlist.m3u | KandelaTV | verified-kandelatv-480p-90ac12180c.png | Review |
 | International-Playlist.m3u | Kartoon Channel! | kartoon-channel.png | Review |
 | International-Playlist.m3u | Kartoon Channel! | kartoon-channel.png | Review |
 | International-Playlist.m3u | Kaumudy TV | kaumudy-tv.png | Review |
@@ -2271,7 +2298,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Law & Crime | law-and-crime-f698aa08fe.png | Review |
 | International-Playlist.m3u | Lego Channel | lego-channel-1080p.png | Review |
 | International-Playlist.m3u | Life+Style | life-plus-style-259a601564e8bc147e54.png | Review |
-| International-Playlist.m3u | Look Thoong TV (720p) [Not 24/7] | look-thoong-tv-720p-not-24-7-2c41090ebcf122f4ded0.png | Review |
 | International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
 | International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
 | International-Playlist.m3u | Madani TV | madani-tv.png | Review |
@@ -2285,7 +2311,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Marina TV | verified-marina-tv-1080p-6a5c00c3bc.png | Review |
 | International-Playlist.m3u | Masala TV | masala-tv.png | Review |
 | International-Playlist.m3u | MBC TV | mbc-tv.png | Review |
-| International-Playlist.m3u | Mega Extreno | mega-extreno-hd-720p.png | Review |
+| International-Playlist.m3u | Mega Extreno | verified-mega-extreno-hd-720p-7a93da786a.png | Review |
 | International-Playlist.m3u | Mehran TV | mehran-tv.png | Review |
 | International-Playlist.m3u | Mei Alai TV | mei-alai-tv.png | Review |
 | International-Playlist.m3u | Mezzo | verified-mezzo-576p-cd14529869.png | Review |
@@ -2294,12 +2320,14 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Molahits TV | verified-molahits-tv-720p-ab91e83f1b.png | Review |
 | International-Playlist.m3u | Monterrico TV | monterrico-tv-872574f770.png | Review |
 | International-Playlist.m3u | Montones TV | montones-tv-af126eccd7.png | Review |
+| International-Playlist.m3u | Mooz Dance HD [ ] | verified-mooz-dance-48b14945f4.png | Review |
 | International-Playlist.m3u | More Than Sports TV | more-than-sports-tv.png | Review |
 | International-Playlist.m3u | Motortrend | verified-motortrend-e8406af26b.png | Review |
 | International-Playlist.m3u | Motorvision | verified-motorvision-1080p-98087182dd.png | Review |
 | International-Playlist.m3u | MovieSmart Turk | verified-moviesmart-turk-576p-1d087a031e.png | Review |
 | International-Playlist.m3u | Movify Kino | verified-movify-kino-576p-b50c36670c.png | Review |
 | International-Playlist.m3u | Mr Bean Animated ES | verified-mr-bean-animated-es-1080p-d25e7d73b7.png | Review |
+| International-Playlist.m3u | Mr Bean Animated FR | verified-mr-bean-animated-fr-1080p-d25e7d73b7.png | Review |
 | International-Playlist.m3u | My TV | my-tv.png | Review |
 | International-Playlist.m3u | Mystery TV | mystery-tv.png | Review |
 | International-Playlist.m3u | Nande Portetepe TV | verified-nande-portetepe-tv-adb30ee16d.png | Review |
@@ -2308,6 +2336,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Nat Geo TV | nat-geo-tv-3ec65d6036cedcccbd1a.png | Review |
 | International-Playlist.m3u | Nautical Channel | nautical-channel-e60e83b7d0.png | Review |
 | International-Playlist.m3u | NBA TV | nba-tv.png | Review |
+| International-Playlist.m3u | NEW K.MOVIES | verified-new-k-movies-1080p-6bb161f67a.png | Review |
 | International-Playlist.m3u | Ninja Kidz TV | ninja-kidz-tv-de42a39fa0.png | Review |
 | International-Playlist.m3u | NKR TV Kannada | nkr-tv-kannada.png | Review |
 | International-Playlist.m3u | Odisha TV | odisha-tv.png | Review |
@@ -2334,18 +2363,18 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Quran TV | quran-tv.png | Review |
 | International-Playlist.m3u | Raj TV | raj-tv.png | Review |
 | International-Playlist.m3u | Raj TV | raj-tv.png | Review |
-| International-Playlist.m3u | Rakuten TV Action Movies Austria | rakuten-tv-action-movies-austria-720p.png | Review |
+| International-Playlist.m3u | Rakuten TV Action Movies Austria | verified-rakuten-tv-action-movies-austria-720p-166043b571.png | Review |
 | International-Playlist.m3u | Rakuten TV Comedy Movies | rakuten-tv-comedy-movies-166043b571489b238b1f.png | Review |
-| International-Playlist.m3u | Rakuten TV Comedy Movies Austria | rakuten-tv-comedy-movies-austria-720p.png | Review |
-| International-Playlist.m3u | Rakuten TV Comedy Movies Germany | rakuten-tv-comedy-movies-germany-1080p.png | Review |
-| International-Playlist.m3u | Rakuten TV Comedy Movies Italy | rakuten-tv-comedy-movies-italy-1080p.png | Review |
-| International-Playlist.m3u | Rakuten TV Comedy Movies UK | rakuten-tv-comedy-movies-uk-1080p.png | Review |
+| International-Playlist.m3u | Rakuten TV Comedy Movies Austria | verified-rakuten-tv-comedy-movies-austria-720p-166043b571.png | Review |
+| International-Playlist.m3u | Rakuten TV Comedy Movies Germany | verified-rakuten-tv-comedy-movies-germany-1080p-166043b571.png | Review |
+| International-Playlist.m3u | Rakuten TV Comedy Movies Italy | verified-rakuten-tv-comedy-movies-italy-1080p-166043b571.png | Review |
+| International-Playlist.m3u | Rakuten TV Comedy Movies UK | verified-rakuten-tv-comedy-movies-uk-1080p-166043b571.png | Review |
 | International-Playlist.m3u | Rakuten TV Drama Movies | rakuten-tv-drama-movies-166043b571489b238b1f.png | Review |
-| International-Playlist.m3u | Rakuten TV Drama Movies Austria | rakuten-tv-drama-movies-austria-720p.png | Review |
-| International-Playlist.m3u | Rakuten TV Drama Movies Germany | rakuten-tv-drama-movies-germany-1080p.png | Review |
-| International-Playlist.m3u | Rakuten TV Drama Movies UK | rakuten-tv-drama-movies-uk-1080p.png | Review |
-| International-Playlist.m3u | Rakuten TV Family Movies Austria | rakuten-tv-family-movies-austria-720p.png | Review |
-| International-Playlist.m3u | Rakuten TV Family Movies Switzerland | rakuten-tv-family-movies-switzerland-720p.png | Review |
+| International-Playlist.m3u | Rakuten TV Drama Movies Austria | verified-rakuten-tv-drama-movies-austria-720p-166043b571.png | Review |
+| International-Playlist.m3u | Rakuten TV Drama Movies Germany | verified-rakuten-tv-drama-movies-germany-1080p-166043b571.png | Review |
+| International-Playlist.m3u | Rakuten TV Drama Movies UK | verified-rakuten-tv-drama-movies-uk-1080p-166043b571.png | Review |
+| International-Playlist.m3u | Rakuten TV Family Movies Austria | verified-rakuten-tv-family-movies-austria-720p-166043b571.png | Review |
+| International-Playlist.m3u | Rakuten TV Family Movies Switzerland | verified-rakuten-tv-family-movies-switzerland-720p-166043b571.png | Review |
 | International-Playlist.m3u | Rally TV | rally-tv-19891a8fa6.png | Review |
 | International-Playlist.m3u | Real Madrid TV | real-madrid-tv-a93e7915a6.png | Review |
 | International-Playlist.m3u | Real Madrid TV English | real-madrid-tv-english-a93e7915a6ac7c68b267.png | Review |
@@ -2376,13 +2405,15 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Smurf TV | smurf-tv.png | Review |
 | International-Playlist.m3u | Smurf TV | smurf-tv.png | Review |
 | International-Playlist.m3u | SN TV | sn-tv.png | Review |
+| International-Playlist.m3u | Sony Entertainment Television | verified-sony-entertainment-television-fe9e40a5a2.png | Review |
+| International-Playlist.m3u | Sony Entertainment Television | verified-sony-entertainment-television-fe9e40a5a2.png | Review |
 | International-Playlist.m3u | Sooriyan TV | sooriyan-tv.png | Review |
 | International-Playlist.m3u | Spacetoon Arabic | verified-spacetoon-arabic-576p-b1f9a1996f.png | Review |
 | International-Playlist.m3u | Sport TV | sport-tv-c190ab4c27.png | Review |
 | International-Playlist.m3u | Sports First TV | sports-first-tv.png | Review |
 | International-Playlist.m3u | Sports Fishing TV | sports-fishing-tv-50d0f501d6.png | Review |
 | International-Playlist.m3u | Sqala TV | sqala-tv-1080p-d174c17569.png | Review |
-| International-Playlist.m3u | Star Gold | star-gold-hd-1080p.png | Review |
+| International-Playlist.m3u | Star Gold | verified-star-gold-hd-1080p-f2178a885b.png | Review |
 | International-Playlist.m3u | Star Movies (Portugal) | verified-star-movies-portugal-117de92eba.png | Review |
 | International-Playlist.m3u | Star Movies (Slovenia) | verified-star-movies-slovenia-4e0111a47b.png | Review |
 | International-Playlist.m3u | Star Movies Select | verified-star-movies-select-2b1d079564.png | Review |
@@ -2402,6 +2433,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Thrill | verified-thrill-540p-7464652cb0.png | Review |
 | International-Playlist.m3u | Tiguerito TV | tiguerito-tv-464395cdf0.png | Review |
 | International-Playlist.m3u | TJK TV | tjk-tv-1dac3e1586.png | Review |
+| International-Playlist.m3u | Toonami Aftermath West | verified-toonami-aftermath-west-480p-e4688cd178.png | Review |
 | International-Playlist.m3u | Tooncast SouthAmerica | verified-tooncast-southamerica-480p-058755936b.png | Review |
 | International-Playlist.m3u | Total TV Haryana | total-tv-haryana.png | Review |
 | International-Playlist.m3u | TraLaLa TV | tralala-tv-2f2b3be533.png | Review |
@@ -2414,6 +2446,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Velvet. Golden Collection | verified-velvet-golden-collection-1080p-675e0e5a91.png | Review |
 | International-Playlist.m3u | Velvet. Scary | verified-velvet-scary-1080p-b99f89331d.png | Review |
 | International-Playlist.m3u | Velvet. Sovetskoe Kino | verified-velvet-sovetskoe-kino-1080p-a41576b407.png | Review |
+| International-Playlist.m3u | Viasat Kino Balkan | verified-viasat-kino-balkan-1080p-2637d9d888.png | Review |
 | International-Playlist.m3u | Video Tour Channel | video-tour-channel-6285619dfa.png | Review |
 | International-Playlist.m3u | viju+ Sport | viju-plus-sport-14b136d70c.png | Review |
 | International-Playlist.m3u | viju+ Sport | viju-plus-sport-14b136d70c.png | Review |
@@ -2514,7 +2547,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
 | International-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
 | International-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
-| International-Playlist.m3u | Rumba TV | rumba-tv.png | Backup |
+| International-Playlist.m3u | Rumba TV | verified-rumba-tv-856b329a39.png | Backup |
 | International-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | International-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | International-Playlist.m3u | SA TV | sa-tv.png | Backup |
@@ -2536,6 +2569,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Vasanth TV | vasanth-tv.png | Backup |
 | International-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
 | International-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
+| International-Playlist.m3u | Viasat Serial | verified-viasat-serial-f54ca1d451.png | Backup |
 | International-Playlist.m3u | viju TV1000 action | verified-viju-tv1000-action-576p-50e3ea4ac6.png | Backup |
 | International-Playlist.m3u | viju TV1000 action | verified-viju-tv1000-action-576p-50e3ea4ac6.png | Backup |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Backup |

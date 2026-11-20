@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
-  "exact_duplicate_groups": 737,
-  "exact_duplicate_files": 1324,
+  "exact_duplicate_groups": 738,
+  "exact_duplicate_files": 1401,
   "low_risk_review_candidates": [
     {
       "candidate": "logos/unused/filmrise-forensic-files-720p-56ce9d346d.png",
@@ -679,7 +679,8 @@
         "logos/international/mtv-flow-latino-720p.png",
         "logos/international/mtv-flow-latino-latam-720p.png",
         "logos/mtv-flow-latino-latam-720p.png",
-        "logos/unused/mtv-flow-latino-720p-a200c973ae.png"
+        "logos/unused/mtv-flow-latino-720p-a200c973ae.png",
+        "logos/verified-mtv-flow-latino-latam-720p-55b8877f51.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -771,7 +772,10 @@
         "logos/mtv-biggest-pop-br-1080p.png",
         "logos/mtv-biggest-pop-ca-1080p.png",
         "logos/mtv-biggest-pop-latam-1080p.png",
-        "logos/unused/mtv-biggest-pop-1080p-4508e1a99c.png"
+        "logos/unused/mtv-biggest-pop-1080p-4508e1a99c.png",
+        "logos/verified-mtv-biggest-pop-br-1080p-61995cdf8b.png",
+        "logos/verified-mtv-biggest-pop-ca-1080p-61995cdf8b.png",
+        "logos/verified-mtv-biggest-pop-latam-1080p-61995cdf8b.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1308,7 +1312,8 @@
         "logos/pluto-tv-cine-drama-latam.png",
         "logos/pluto-tv-cine-drama.png",
         "logos/unused/pluto-tv-cine-drama-21c0c9e9dc.png",
-        "logos/verified-pluto-tv-cine-drama-9f10c4aaa8.png"
+        "logos/verified-pluto-tv-cine-drama-9f10c4aaa8.png",
+        "logos/verified-pluto-tv-cine-drama-latam-9f10c4aaa8.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
@@ -1510,7 +1515,8 @@
         "logos/pluto-tv-crime-drama-ca.png",
         "logos/pluto-tv-crime-drama.png",
         "logos/unused/pluto-tv-crime-drama-48c6faa6dc.png",
-        "logos/verified-pluto-tv-crime-drama-b7b06003fc.png"
+        "logos/verified-pluto-tv-crime-drama-b7b06003fc.png",
+        "logos/verified-pluto-tv-crime-drama-ca-b7b06003fc.png"
       ],
       "reasons": [
         "no same-named root-level byte-identical counterpart"
