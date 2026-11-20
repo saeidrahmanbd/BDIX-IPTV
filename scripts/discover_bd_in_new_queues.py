@@ -7,9 +7,10 @@ after owner review. Definite policy/URL exclusions and duplicate stream URLs
 prevent queueing. Dead streams are removed by the subsequent probe; inconclusive
 streams remain for manual review.
 
-Bangladesh channels of all genres are eligible. Indian News, Kids, Education,
-Knowledge, Business/Finance and all Religious channels are excluded from this
-IPTV playlist discovery policy. International retains its separate policy.
+Bangladesh channels of all genres are eligible. For Indian channels, only News
+and non-Islamic religious services are excluded; Islamic religious channels and
+other legitimate live-TV genres remain eligible. International has a separate
+worldwide Movies/Music-only policy.
 """
 # Owner-authorized policy-alignment retry marker (2026-11-19).
 # [manual-new-channel-discovery] Fresh daily discovery trigger for 2026-11-20.
@@ -20,13 +21,16 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
-from urllib.parse import parse_qsl, urlparse
+from urllib.parse import parse_qsl, unquote, urlparse
 
-from country_verification import norm_name
+from country_verification import build_reference, id_country, norm_name, verify_country
+from logo_asset_naming import is_blocked_logo_basename
 from stream_url_identity import stream_url_key
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/iptv-channel-discovery.md")
+LOGOS = Path("logos")
+RAW_LOGO_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 SOURCES = (
     ("Bangladesh", "https://iptv-org.github.io/iptv/countries/bd.m3u"),
     ("India", "https://iptv-org.github.io/iptv/countries/in.m3u"),
@@ -40,23 +44,11 @@ FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
     "religious": re.compile(r"\b(?:religious|religion|darshana tv|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
 }
-# Strict India-only exclusions for IPTV-Playlist.m3u. Bangladesh remains
-# unrestricted; International does not opt into this additional policy.
-IPTV_KNOWN_INDIAN_EDUCATION_NAMES = {
-    "vyas channel", "shiksha tv", "gyandarshan", "gyandarshan hd",
-    "dd gyan darshan", "kite victers", "victers", "swayam prabha",
-}
-IPTV_KNOWN_INDIAN_EDUCATION_IDS = {
-    "vyaschannel.in", "shikshatv.in", "gyandarshan.in", "gyandarshanhd.in",
-    "ddgyandarshan.in", "kitevicters.in", "victers.in", "swayamprabha.in",
-}
+# IPTV discovery excludes only Indian news and non-Islamic religious channels.
+# Kids, sports, education, knowledge, business and other genuine linear-TV genres remain eligible.
 IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news(?:\s*\d+)?|headlines?|current affairs|newsroom|bulletin|breaking news|gnt|aaj tak|india today|times now|republic(?:\s+(?:bharat|bangla))?|abp(?:\s+ananda)?|zee news|wion|tv\s*9)\b", re.I),
-    "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|disney channel|baby tv|pogo|hungama|sonic|discovery kids|green gold|sony yay)\b", re.I),
-    "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|vyas channel|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television|vtu)\b", re.I),
-    "knowledge": re.compile(r"\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv|inwild|safari tv|dd kisan|krishi darshan|agriculture|agricultural|farming|farmer)\b", re.I),
-    "business": re.compile(r"\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\b", re.I),
-    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv|angel|hosanna|madani|iqra|huda|noor|deen|mta|qtv|aastha|sadhna|sanskar|jinvani|satsang|jagran|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|calvary|santvani|sharnam|disha tv)\b", re.I),
+    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|angel|hosanna|calvary|santvani|sharnam|sharanam|aastha|sadhna|sanskar|jinvani|satsang|jagran|bhagwat|aradhana|prarthana|divya|shubh|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|deity|holy\s*mass|orthodox|shrine)\b", re.I),
 }
 DISCOVERY_EXTRA_CATEGORY_PATTERNS = {}
 
@@ -67,21 +59,18 @@ def canonical_channel_name(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value).strip()
 
 IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
-    "news": {"r plus", "r plus gold", "bhi channel", "tv 100", "tv 100 national"},
-    "kids": {"sony yay", "disney channel", "jungle book", "doraemon"},
-    "education": {"vtu"},
-    "knowledge": {"dd kisan", "krishi darshan"},
-    "religious": {"disha tv", "q tv", "shekinah tv", "darshana tv"},
+    "news": {"tv 100", "tv 100 national", "r plus", "r plus gold", "bhi channel"},
+    "religious": {"disha tv", "shekinah tv", "darshana tv"},
 }
 IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
-    "rplus.in": "news", "rplusgold.in": "news", "bhi.channel.in": "news", "tv100.in": "news", "tv100national.in": "news",
-    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "qtv.in": "religious", "shekinahtv.in": "religious", "darshanatv.in": "religious",
-    "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge",
+    "tv100.in": "news", "tv100national.in": "news", "rplus.in": "news",
+    "rplusgold.in": "news", "bhi.channel.in": "news",
+    "dishatv.in": "religious", "shekinahtv.in": "religious", "darshanatv.in": "religious",
 }
 
 
 def known_indian_forbidden_category(a: dict[str, str], name: str) -> str | None:
-    """Resolve known Indian channels whose names alone do not reveal their genre."""
+    """Resolve known Indian news and non-Islamic religious aliases only."""
     names = {
         canonical_channel_name(value)
         for value in (name, a.get("tvg-name", ""))
@@ -91,8 +80,6 @@ def known_indian_forbidden_category(a: dict[str, str], name: str) -> str | None:
         str(a.get(key, "")).strip().casefold().split("@", 1)[0]
         for key in ("tvg-id", "channel-id") if a.get(key)
     }
-    if names & IPTV_KNOWN_INDIAN_EDUCATION_NAMES or ids & IPTV_KNOWN_INDIAN_EDUCATION_IDS:
-        return "education"
     for category, aliases in IPTV_KNOWN_INDIAN_CATEGORY_NAMES.items():
         if names & aliases:
             return category
@@ -343,7 +330,7 @@ def prohibited_channel(
 
     if iptv_discovery:
         source_country = str(a.get("x-discovery-source-country", "")).strip().upper()
-        if source_country:
+        if source_country and country is None:
             if source_country not in {"BD", "IN"}:
                 return None
             country = source_country
@@ -371,15 +358,13 @@ def prohibited_channel(
     values = " ".join([name] + [str(a.get(key, "")) for key in metadata_keys])
     group = a.get("group-title", "").strip()
     if iptv_discovery:
-        normalized_ids = {
-            re.sub(r"@.*$", "", str(a.get(key, "")).strip().casefold())
-            for key in ("tvg-id", "channel-id") if a.get(key)
-        }
         known_category = known_indian_forbidden_category(a, name)
         if known_category:
             return f"Indian {known_category} channel is prohibited"
         expanded_values = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", values)
         for category, pattern in IPTV_FORBIDDEN_CATEGORY_PATTERNS.items():
+            if category == "religious" and ISLAMIC_ALLOWED_MARKERS.search(expanded_values) and not NON_ISLAMIC_RELIGIOUS_MARKERS.search(expanded_values):
+                continue
             if pattern.search(expanded_values):
                 return f"Indian {category} channel is prohibited"
     else:
@@ -399,16 +384,75 @@ def prohibited_channel(
             return f"Indian {word} channel is prohibited"
     return None
 
-def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=None):
-    """Return source metadata unchanged when policy and URL checks pass.
+def verify_iptv_country(a: dict[str, str], name: str, feed_country: str, reference=None):
+    """Verify BD/IN identity; use the feed only when optional country metadata is absent."""
+    feed = COUNTRY_CODE.get(feed_country, str(feed_country or "").strip().upper())
+    if feed not in {"BD", "IN"}:
+        return None, "unknown source feed"
 
-    The source-feed country is used for country-specific content exclusions; it
-    is not proof that tvg-country or channel IDs are accurate. Missing,
-    conflicting or unverified metadata stays in the manual-review queue.
-    """
+    checked = dict(a)
+    declared_raw = str(checked.get("tvg-country", "")).strip()
+    if declared_raw:
+        declared = declared_raw.upper()
+        if declared == "BANGLADESH":
+            declared = "BD"
+        elif declared == "INDIA":
+            declared = "IN"
+        checked["tvg-country"] = declared
+
+    id_codes = {
+        id_country(checked.get(key, ""))
+        for key in ("tvg-id", "channel-id")
+        if checked.get(key)
+    }
+    id_codes.discard(None)
+    if len(id_codes) > 1:
+        return None, "tvg-id/channel-id disagree on country"
+
+    if id_codes:
+        code = next(iter(id_codes))
+        if code not in {"BD", "IN"}:
+            verdict = verify_country(checked, name, reference, feed_country=feed)
+            if verdict.ok:
+                return verdict.country, ""
+            return None, verdict.reason or f"ID country {code} is outside BD/IN"
+        if checked.get("tvg-country") and checked["tvg-country"] not in {"BD", "IN"}:
+            return None, f"declared country {checked['tvg-country']} is not BD/IN"
+        if checked.get("tvg-country") in {"BD", "IN"} and checked["tvg-country"] != code:
+            checked["tvg-country"] = code
+        verdict = verify_country(checked, name, reference, feed_country=None)
+        if verdict.ok:
+            return verdict.country, ""
+        return None, verdict.reason or "country ID could not be verified"
+
+    if checked.get("tvg-country") and checked["tvg-country"] not in {"BD", "IN"}:
+        return None, f"declared country {checked['tvg-country']} is not BD/IN"
+    verdict = verify_country(checked, name, reference, feed_country=None)
+    if verdict.ok:
+        return verdict.country, ""
+    if verdict.reason in {
+        "id missing/malformed and no unambiguous repository mapping",
+        "repository mapping is ambiguous between BD and IN",
+    }:
+        declared = checked.get("tvg-country", "")
+        return (declared if declared in {"BD", "IN"} else feed), ""
+    return None, verdict.reason or "country could not be verified as BD/IN"
+
+
+def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=None):
+    """Return a candidate only after source, country, content and URL checks."""
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
-    forbidden = prohibited_channel(a, name, country, discovery=True, iptv_discovery=True)
+    verified_country, country_reason = verify_iptv_country(a, name, country, reference)
+    if not verified_country:
+        return None, country_reason
+
+    candidate_attrs = dict(a)
+    candidate_attrs["tvg-country"] = verified_country
+    candidate_attrs["x-discovery-source-country"] = COUNTRY_CODE.get(country, "").upper()
+    forbidden = prohibited_channel(
+        candidate_attrs, name, verified_country, discovery=True, iptv_discovery=True
+    )
     if forbidden:
         return None, forbidden
     p = urlparse(url)
@@ -417,7 +461,7 @@ def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=Non
     bad_name = re.sub(r"\btest\b", " ", name, flags=re.IGNORECASE) if re.search(
         r"\btest\s+cricket\b", name, re.IGNORECASE
     ) else name
-    if BAD_RE.search(" ".join((bad_name, a.get("tvg-id", ""), a.get("group-title", ""))).casefold()):
+    if BAD_RE.search(" ".join((bad_name, candidate_attrs.get("tvg-id", ""), candidate_attrs.get("group-title", ""))).casefold()):
         return None, "bad word (vod/test/proxy/...)"
     if any(x in p.netloc.casefold() for x in BAD_HOSTS):
         return None, "proxy/worker host"
@@ -425,8 +469,7 @@ def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=Non
         return None, "tokenized URL"
     if not (p.path.casefold().endswith((".m3u8", ".m3u", ".ts")) and "vod" not in p.path.casefold() and "catchup" not in p.path.casefold()):
         return None, "unsupported stream path"
-    return dict(a), ""
-
+    return candidate_attrs, ""
 
 def acceptable(country: str, a: dict[str, str], name: str, url: str, reference=None) -> bool:
     return evaluate(country, a, name, url, reference)[0] is not None
@@ -473,26 +516,126 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
     return result, removed
 
 
+def logo_key(value: str) -> str:
+    value = re.sub(r"\b(?:\d{3,4}p|uhd|fhd|hd|sd|4k)\b", " ", value or "", flags=re.I)
+    value = unicodedata.normalize("NFKD", value).casefold()
+    return re.sub(r"[^a-z0-9]+", "", value)
+
+
+def find_local_logo(name: str) -> str:
+    key = logo_key(name)
+    if not key or not LOGOS.is_dir():
+        return ""
+    for path in LOGOS.rglob("*"):
+        if not path.is_file() or path.suffix.casefold() not in {".png", ".jpg", ".jpeg", ".webp", ".svg"}:
+            continue
+        if "unused" in {part.casefold() for part in path.parts} or is_blocked_logo_basename(path.name):
+            continue
+        if logo_key(path.stem) == key:
+            return "logos/" + path.relative_to(LOGOS).as_posix()
+    return ""
+
+
+def local_logo_for(name: str, current: str = "") -> str:
+    current = str(current or "").strip()
+    root = LOGOS.resolve()
+    if current.startswith("logos/"):
+        candidate = Path(current).resolve()
+        if root in candidate.parents and candidate.is_file() and not is_blocked_logo_basename(candidate.name):
+            return current
+    if current.startswith(RAW_LOGO_BASE):
+        relative = unquote(current[len(RAW_LOGO_BASE):].split("?", 1)[0].split("#", 1)[0])
+        candidate = (LOGOS / relative).resolve()
+        if root in candidate.parents and candidate.is_file() and not is_blocked_logo_basename(candidate.name):
+            return "logos/" + Path(relative).as_posix()
+    return find_local_logo(name)
+
+
+def set_tvg_logo(extinf_line: str, logo: str) -> str:
+    head, display = split_extinf(extinf_line)
+    if re.search(r'\btvg-logo="[^"]*"', head):
+        if logo:
+            head = re.sub(r'\btvg-logo="[^"]*"', f'tvg-logo="{logo}"', head, count=1)
+        else:
+            head = re.sub(r'\s+tvg-logo="[^"]*"', "", head, count=1)
+    elif logo:
+        head += f' tvg-logo="{logo}"'
+    return head + "," + display
+
+
+def localize_existing_queue_logos(text: str) -> tuple[str, dict[str, int]]:
+    """Localize only discovery-queue logos; never alter unrelated playlist rows."""
+    lines = text.replace("\r", "").splitlines()
+    prefix, blocks, current = [], [], None
+    for line in lines:
+        if line.startswith("#EXTINF:"):
+            if current is not None:
+                blocks.append(current)
+            current = [line]
+        elif current is None:
+            prefix.append(line)
+        else:
+            current.append(line)
+    if current is not None:
+        blocks.append(current)
+
+    stats = {"localized": 0, "removed": 0, "missing": 0}
+    queue_groups = {"new channels", "new backup", "new backups"}
+    for block in blocks:
+        if not block:
+            continue
+        a = attrs(block[0])
+        if a.get("group-title", "").strip().casefold() not in queue_groups:
+            continue
+        _, display = split_extinf(block[0])
+        name = (a.get("tvg-name") or display).strip()
+        current_logo = a.get("tvg-logo", "").strip()
+        local_logo = local_logo_for(name, current_logo)
+        if local_logo:
+            if local_logo != current_logo:
+                block[0] = set_tvg_logo(block[0], local_logo)
+                stats["localized"] += 1
+        else:
+            if current_logo:
+                block[0] = set_tvg_logo(block[0], "")
+                stats["removed"] += 1
+            stats["missing"] += 1
+
+    output = "\n".join(prefix + [line for block in blocks for line in block]).rstrip() + "\n"
+    return output, stats
+
+
 def extinf(a: dict[str, str], name: str, group: str, country: str) -> str:
-    """Build a review-queue row without guessing or repairing metadata."""
+    """Build a review row with verified country metadata and only authentic local logos."""
     fields = []
-    for key in ("tvg-id", "tvg-name", "tvg-logo", "tvg-country", "tvg-language", "channel-id"):
+    for key in ("tvg-id", "tvg-name"):
         value = (a.get(key) or "").strip()
         if value:
             fields.append(f'{key}="{name if key == "tvg-name" else value}"')
+    logo = local_logo_for(name, a.get("tvg-logo", ""))
+    if logo:
+        fields.append(f'tvg-logo="{logo}"')
+    verified_country = str(a.get("tvg-country") or COUNTRY_CODE.get(country, "")).strip().upper()
+    if verified_country in {"BD", "IN"}:
+        fields.append(f'tvg-country="{verified_country}"')
+    for key in ("tvg-language", "channel-id"):
+        value = (a.get(key) or "").strip()
+        if value:
+            fields.append(f'{key}="{value}"')
     if not a.get("tvg-name", "").strip():
         fields.append(f'tvg-name="{name}"')
     fields.append(f'x-discovery-source-country="{COUNTRY_CODE.get(country, "").upper()}"')
     fields.append(f'group-title="{group}"')
     return "#EXTINF:-1 " + " ".join(fields) + "," + name
 
-
 def main() -> int:
     # Apply only current Indian News/non-Islamic Religious exclusions and
     # verify country/local-logo metadata for discovery queues; preserve all other rows.
     original = PLAYLIST.read_text(encoding="utf-8-sig")
     original, purged_existing = purge_forbidden_existing_queue_rows(original)
+    original, logo_stats = localize_existing_queue_logos(original)
     entries = parse(original)
+    reference = build_reference((a, name) for a, name, _url in entries)
     existing_urls = {stream_url_key(u) for _, _, u in entries}
     existing_names = {norm(n) for _, n, _ in entries}
     existing_ids = {base_id(a.get("tvg-id") or a.get("channel-id")) for a, _, _ in entries if base_id(a.get("tvg-id") or a.get("channel-id"))}
@@ -510,7 +653,7 @@ def main() -> int:
             continue
         for a, name, url in parse(text):
             key = stream_url_key(url)
-            normalized, reason = evaluate(country, a, name, url)
+            normalized, reason = evaluate(country, a, name, url, reference)
             if normalized is not None and key not in seen_source_urls:
                 candidates.append((country, normalized, name, url))
                 seen_source_urls.add(key)
