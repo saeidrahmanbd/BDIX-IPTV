@@ -85,6 +85,14 @@ class PrePublishLogoPathTests(unittest.TestCase):
         self.assertEqual(referenced_logo_relative_path(url), Path("international/music/channel.png"))
         self.assertEqual(referenced_logo_file(url, self.root), path.resolve())
 
+    def test_repository_relative_logo_path_is_valid_and_not_external(self):
+        path = self.root / "channel.png"
+        path.write_bytes(b"png")
+        local_ref = "logos/channel.png"
+        self.assertEqual(referenced_logo_file(local_ref, self.root), path.resolve())
+        entries = [("", {"tvg-name": "Channel", "group-title": "Bangladesh", "tvg-logo": local_ref}, "")]
+        self.assertEqual(logo_audit(entries)[2], [])
+
     def test_canonical_github_raw_url_resolves_to_local_logo(self):
         path = self.root / "channel.png"
         path.write_bytes(b"png")
