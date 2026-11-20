@@ -10,12 +10,12 @@ SCHEMA_PATH = ROOT / "automation" / "reliability" / "schema.sql"
 WORKFLOWS = ROOT / ".github" / "workflows"
 
 EXPECTED = {
-    "iptv_new_channel_discovery": ("new-channel-discovery.yml", "05:00", "0 23 * * *", "discover"),
-    "international_channel_discovery": ("international-channel-discovery.yml", "05:10", "10 23 * * *", "discover"),
-    "playlist_logo_localization": ("playlist-logo-localization.yml", "05:25", "25 23 * * *", "localize"),
-    "international_stream_health": ("international-stream-health.yml", "05:35", "35 23 * * *", "check"),
-    "iptv_playlist_maintenance": ("iptv-maintenance.yml", "05:50", "50 23 * * *", "maintain"),
-    "epg_refresh": ("epg-refresh.yml", "06:10", "10 0 * * *", "refresh"),
+    "iptv_new_channel_discovery": ("new-channel-discovery.yml", "05:07", "7 23 * * *", "discover"),
+    "international_channel_discovery": ("international-channel-discovery.yml", "05:17", "17 23 * * *", "discover"),
+    "playlist_logo_localization": ("playlist-logo-localization.yml", "05:27", "27 23 * * *", "localize"),
+    "international_stream_health": ("international-stream-health.yml", "05:37", "37 23 * * *", "check"),
+    "iptv_playlist_maintenance": ("iptv-maintenance.yml", "05:47", "47 23 * * *", "maintain"),
+    "epg_refresh": ("epg-refresh.yml", "06:07", "7 0 * * *", "refresh"),
 }
 
 
