@@ -24,10 +24,10 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "E-Vidya 9 (576p) (India)", "Friends TV (1080p) (India)",
             "Bangla Jago TV", "DD Bharati", "Food Food",
             "Discovery Turbo India", "XXTreme Jobs Hindi", "Power Turk",
-            "Safari TV Tamil (Not 24/7)",
+            "Safari TV Tamil (Not 24/7)", "CVR Health", "Vokta TV (720p)",
         ]
-        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_NAMES), 43)
-        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_IDS), 31)
+        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_NAMES), 45)
+        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_IDS), 33)
         for name in names:
             with self.subTest(name=name):
                 self.assertIn(canonical_channel_name(name), PERMANENTLY_BANNED_CHANNEL_NAMES)
@@ -49,6 +49,8 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("DiscoveryTurbo.in@HD", "Discovery Turbo alternate"),
             ("XXTremeJobsHindi.in@SD", "XXTreme Jobs alternate"),
             ("PowerTurkTV.tr@HD", "Power Turk alternate"),
+            ("CVRHealth.in@SD", "Renamed CVR Health feed"),
+            ("VoktaTV.bd@SD", "Renamed Vokta TV feed"),
         ]
         for channel_id, alias in examples:
             with self.subTest(channel_id=channel_id):
@@ -245,6 +247,20 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIn(category, reason)
                 self.assertEqual(known_indian_forbidden_category(attrs, name), category)
 
+    def test_cvr_health_and_vokta_tv_are_permanently_rejected_and_purged(self):
+        examples = [("CVR Health (576p)", "CVRHealth.in@SD"), ("Vokta TV (720p)", "voktatv.bd@SD")]
+        for name, channel_id in examples:
+            with self.subTest(name=name):
+                attrs = {"tvg-id": channel_id, "group-title": "New Channels"}
+                self.assertEqual(prohibited_channel(attrs, name), "permanently banned channel")
+        queue = "#EXTM3U\\n"
+        for name, channel_id in examples:
+            queue += '#EXTINF:-1 tvg-id="' + channel_id + '" group-title="New Channels",' + name + '\\n'
+            queue += 'https://example.org/' + channel_id + '.m3u8\\n'
+        filtered, removed = purge_forbidden_existing_queue_rows(queue)
+        self.assertEqual(removed, [name for name, _ in examples])
+        self.assertNotIn("CVR Health", filtered)
+        self.assertNotIn("Vokta TV", filtered)
     def test_cvr_health_is_rejected_as_indian_knowledge_and_purged_from_queue(self):
         attrs = {"tvg-id": "CVRHealth.in@SD", "group-title": "New Channels"}
         candidate, reason = evaluate(
