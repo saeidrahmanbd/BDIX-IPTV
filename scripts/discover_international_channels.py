@@ -7,6 +7,7 @@ promoted automatically; dynamic country groups require five unique primary chann
 Playback is checked by the downstream validation step.
 """
 # Owner-authorized policy-alignment retry marker (2026-11-19).
+# [manual-international-discovery] Fresh daily discovery trigger for 2026-11-20.
 
 from __future__ import annotations
 import hashlib,re,unicodedata,urllib.parse,urllib.request
