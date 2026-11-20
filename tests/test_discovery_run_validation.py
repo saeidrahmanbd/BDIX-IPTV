@@ -311,15 +311,15 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             baseline = root / "baseline.m3u"
             report = root / "report.md"
             registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
-            prefix = "#EXTM3U\\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\\n"
+            prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
             foreign = (
                 '#EXTINF:-1 tvg-id="BTLTV.nl@SD" x-discovery-source-country="BD" '
-                'group-title="New Channels" tvg-name="BTL TV",BTL TV\\n'
-                "https://example.org/btl.m3u8\\n"
+                'group-title="New Channels" tvg-name="BTL TV",BTL TV\n'
+                "https://example.org/btl.m3u8\n"
             )
             playlist.write_text(prefix + foreign, encoding="utf-8")
             baseline.write_text(prefix, encoding="utf-8")
-            report.write_text("# Report\\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
             previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
             os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
             try:
@@ -346,14 +346,14 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             report = root / "report.md"
             registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
             content = (
-                "#EXTM3U\\n"
-                "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\\n"
-                '#EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-country="IN" group-title="New Backups" tvg-name="Travelxp",Travelxp\\n'
-                "https://example.org/travelxp.m3u8\\n"
+                "#EXTM3U\n"
+                "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
+                '#EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-country="IN" group-title="New Backups" tvg-name="Travelxp",Travelxp\n'
+                "https://example.org/travelxp.m3u8\n"
             )
             playlist.write_text(content, encoding="utf-8")
-            baseline.write_text("#EXTM3U\\n", encoding="utf-8")
-            report.write_text("# Report\\n", encoding="utf-8")
+            baseline.write_text("#EXTM3U\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
             with patch.object(validation, "probe_url", return_value=("unknown", "HTTP 403")):
                 validation.probe_mode(str(playlist), str(report), str(baseline), "iptv")
             output = playlist.read_text(encoding="utf-8")
@@ -374,14 +374,14 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             report = root / "report.md"
             registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
             content = (
-                "#EXTM3U\\n"
-                "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\\n"
-                '#EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-country="IN" x-discovery-hold-reason="unverified-backup-stream" group-title="Review" tvg-name="Travelxp",Travelxp\\n'
-                "https://example.org/travelxp.m3u8\\n"
+                "#EXTM3U\n"
+                "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
+                '#EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-country="IN" x-discovery-hold-reason="unverified-backup-stream" group-title="Review" tvg-name="Travelxp",Travelxp\n'
+                "https://example.org/travelxp.m3u8\n"
             )
             playlist.write_text(content, encoding="utf-8")
-            baseline.write_text("#EXTM3U\\n", encoding="utf-8")
-            report.write_text("# Report\\n", encoding="utf-8")
+            baseline.write_text("#EXTM3U\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
             previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
             os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
             try:
