@@ -342,17 +342,55 @@ class GitHubActions:
                 **({"Content-Type": "application/json"} if body is not None else {}),
             },
         )
-        try:
-            with urlopen(request, timeout=25) as response:
-                raw = response.read()
-                if not raw:
-                    return None
-                return json.loads(raw.decode("utf-8"))
-        except HTTPError as exc:
-            detail = exc.read().decode("utf-8", errors="replace")[:1000]
-            raise RuntimeError(f"GitHub API {method} {path} failed: HTTP {exc.code}: {detail}") from exc
-        except URLError as exc:
-            raise RuntimeError(f"GitHub API {method} {path} failed: {exc}") from exc
+        # GitHub App installation limits and transient API/network failures can
+        # briefly interrupt the daily guard. Retry them with bounded backoff
+        # before allowing the caller's existing recovery/fail-open policy to act.
+        max_attempts = 4
+        for attempt in range(max_attempts):
+            try:
+                with urlopen(request, timeout=25) as response:
+                    raw = response.read()
+                    if not raw:
+                        return None
+                    return json.loads(raw.decode("utf-8"))
+            except HTTPError as exc:
+                detail = exc.read().decode("utf-8", errors="replace")[:1000]
+                rate_limited = (
+                    exc.code == 429
+                    or (
+                        exc.code == 403
+                        and any(marker in detail.casefold() for marker in (
+                            "rate limit", "secondary rate limit", "abuse detection"
+                        ))
+                    )
+                )
+                retryable = rate_limited or exc.code >= 500
+                if retryable and attempt < max_attempts - 1:
+                    retry_after = exc.headers.get("Retry-After") if exc.headers else None
+                    try:
+                        delay = min(15, max(1, int(retry_after))) if retry_after else min(8, 2 ** attempt)
+                    except (TypeError, ValueError):
+                        delay = min(8, 2 ** attempt)
+                    print(
+                        f"::warning::GitHub API returned HTTP {exc.code}; "
+                        f"retrying {method} {path} in {delay}s "
+                        f"(attempt {attempt + 2}/{max_attempts})."
+                    )
+                    time.sleep(delay)
+                    continue
+                raise RuntimeError(
+                    f"GitHub API {method} {path} failed: HTTP {exc.code}: {detail}"
+                ) from exc
+            except URLError as exc:
+                if attempt < max_attempts - 1:
+                    delay = min(8, 2 ** attempt)
+                    print(
+                        f"::warning::GitHub API network error; retrying {method} {path} "
+                        f"in {delay}s (attempt {attempt + 2}/{max_attempts})."
+                    )
+                    time.sleep(delay)
+                    continue
+                raise RuntimeError(f"GitHub API {method} {path} failed: {exc}") from exc
 
     def workflow_runs(self, workflow_file: str, target_date: date | None = None) -> list[dict[str, Any]]:
         """Fetch only the UTC dates that can overlap the requested Bangladesh day."""
