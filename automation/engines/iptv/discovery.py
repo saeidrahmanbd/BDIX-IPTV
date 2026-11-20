@@ -181,7 +181,7 @@ def build_discovery_batch(playlist_text: str, source_feeds: dict[str,str],
         else:
             attrs.pop("tvg-logo",None)
 
-        extinf=policy.extinf(attrs,name,queue,country)
+        extinf=policy.extinf(attrs,name,queue,country,logo_root=root/"logos")
         discovery=DiscoveryCandidate(extinf,url,backup=is_backup)
         if is_backup:
             new_backups.append(discovery)
