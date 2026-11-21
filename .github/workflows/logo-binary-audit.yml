@@ -32,7 +32,7 @@ jobs:
       - name: Run read-only binary audit
         run: python scripts/logo_binary_audit.py
       - name: Upload audit reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: binary-logo-audit
           path: |
