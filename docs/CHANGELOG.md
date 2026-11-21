@@ -5,54 +5,66 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-20 — `IPTV-Playlist.m3u`
+### 2026-11-21 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **2**
-- Stream URLs added / removed: **0 / 2**
+- New channel identities: **16**
+- Channel identities removed: **6**
+- Stream URLs added / removed: **21 / 9**
 - Backup URL updates: **0**
 - Logo reference changes: **444**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
+Added channel identities (up to 10):
+- Star Gold 2 (576p)
+- Star Gold Romance (576p)
+- TLC (India) HD (1080p)
+- Zee Classic (576p)
+- Zee Power HD (1080p)
+- Zee Talkies HD (1080p)
+- Zee Thirai HD (1080p)
+- Apna Punjab TV (India) (576p)
+- Star Sports 2 HD (1080p)
+- Star Movies (India) HD (1080p)
+
 Removed channel identities (up to 10):
-- Vokta TV (720p)
-- CVR Health (576p)
+- BTL TV (Netherlands) (1080p)
+- Cartoon Network (Pakistan)
+- National Geographic (India) HD (1080p)
+- National Geographic Wild (India) HD (1080p)
+- Qello Concerts by Stingray (1080p)
+- MNX HD (1080p)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-20 — `International-Playlist.m3u`
+### 2026-11-21 — `International-Playlist.m3u`
 
-- New channel identities: **12**
-- Channel identities removed: **12**
-- Stream URLs added / removed: **28 / 14**
+- New channel identities: **6**
+- Channel identities removed: **10**
+- Stream URLs added / removed: **10 / 10**
 - Backup URL updates: **0**
-- Logo reference changes: **862**
+- Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- &xplor
-- MNX
-- Sony Pix
-- Hare Krsna Music
-- Smotrim 100% Gorkogo
-- HerSphere [ ]
-- Pure Flix TV [ ]
-- IDJTV
-- Look Thoong TV [ ]
-- Galactica TV
+- Star Gold 2
+- Star Gold Romance
+- Star Gold Select
+- Star Movies (India)
+- Zee Talkies
+- Zee Thirai
 
 Removed channel identities (up to 10):
-- Amazing Discoveries TV
-- Bangla Plus
-- Islam TV Urdu
-- KCL TV
-- Rakuten TV Action Movies
-- Rakuten TV Action Movies Germany
-- Rakuten TV Action Movies Italy
-- Rakuten TV Action Movies UK
-- Rakuten TV Top Movies
-- Rakuten TV Top Movies Germany
+- AMC Latin America
+- D Music [ ]
+- MLB
+- Mohammed Abdo
+- Rakuten TV Comedy Movies
+- Rakuten TV Comedy Movies Germany
+- Rakuten TV Comedy Movies Italy
+- Rakuten TV Comedy Movies UK
+- Stadium
+- T Sports
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
