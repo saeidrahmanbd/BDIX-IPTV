@@ -7,7 +7,7 @@ activates the Indian discovery exclusions even when listed in the BD feed.
 Definite policy/URL exclusions and duplicate streams prevent queueing.
 
 Bangladesh channels of all genres are eligible. Indian News, Sports, Kids, Education,
-Knowledge, Business/Finance and all Religious channels are excluded from this
+Knowledge, Business/Finance and non-Islamic Religious channels are excluded from this
 IPTV playlist discovery policy. International retains its separate policy.
 """
 # Owner-authorized policy-alignment retry marker (2026-11-19).
@@ -73,11 +73,11 @@ IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
     "kids": {"sony yay", "disney channel", "jungle book", "doraemon"},
     "education": {"vtu"},
     "knowledge": {"dd kisan", "krishi darshan", "cvr health"},
-    "religious": {"disha tv", "q tv", "shekinah tv", "darshana tv"},
+    "religious": {"disha tv", "shekinah tv", "darshana tv"},
 }
 IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
     "rplus.in": "news", "rplusgold.in": "news", "bhi.channel.in": "news", "tv100.in": "news", "tv100national.in": "news",
-    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "qtv.in": "religious", "shekinahtv.in": "religious", "darshanatv.in": "religious",
+    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "shekinahtv.in": "religious", "darshanatv.in": "religious",
     "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge", "cvrhealth.in": "knowledge",
 }
 
@@ -432,6 +432,8 @@ def prohibited_channel(
             return f"Indian {known_category} channel is prohibited"
         expanded_values = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", values)
         for category, pattern in IPTV_FORBIDDEN_CATEGORY_PATTERNS.items():
+            if category == "religious" and ISLAMIC_ALLOWED_MARKERS.search(expanded_values) and not NON_ISLAMIC_RELIGIOUS_MARKERS.search(expanded_values):
+                continue
             if pattern.search(expanded_values):
                 return f"Indian {category} channel is prohibited"
     else:
@@ -705,7 +707,7 @@ def main() -> int:
         f"Generated: **{datetime.now(BD_TZ).isoformat(timespec='seconds')}** (Asia/Dhaka)", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**",
-        "- Bangladesh channels of all genres are eligible. Indian News, Sports, Kids, Education, Knowledge, Business/Finance and all Religious channels are prohibited in this IPTV playlist.",
+        "- Bangladesh channels of all genres are eligible. Indian News, Sports, Kids, Education, Knowledge, Business/Finance and non-Islamic Religious channels are prohibited in this IPTV playlist; Islamic religious channels remain eligible.",
         f"- Previously admitted prohibited Indian queue rows purged: **{len(purged_existing)}**",
         "- Existing discovery-queue logo URLs were converted to verified local /logos/ paths or removed when no matching local asset existed; no placeholder art was used.",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
