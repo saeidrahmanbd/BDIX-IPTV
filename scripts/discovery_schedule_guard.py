@@ -600,9 +600,9 @@ def watchdog_dispatch_count(runs: list[dict[str, Any]]) -> int:
 
 
 def watchdog(workflow_files: list[str]) -> int:
-    if os.environ.get("GITHUB_EVENT_NAME", "").casefold() == "push":
-        print("Push-triggered workflows own this commit; watchdog will not dispatch duplicates.")
-        return 0
+    # Push-triggered watchdog runs must still recover workflows that were not
+    # triggered by the pushed paths. Existing active/successful-job checks and
+    # each target workflow's daily guard prevent duplicate writers.
     repository = os.environ["GITHUB_REPOSITORY"]
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
     target_date = today_in_bangladesh()
