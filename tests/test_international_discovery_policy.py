@@ -70,7 +70,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         backup_attrs = dict(adult_attrs, **{"group-title": "Backup"})
         self.assertEqual(
             reorg.classify(backup_attrs, "Adult Channel Alpha", "Backup", "US"),
-            ("Review", None, None),
+            ("Backup", None, None),
         )
         self.assertEqual(
             reorg.classify(backup_attrs, "Adult Channel Alpha", "Backup", "US", promote_backup=True),
@@ -83,7 +83,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
 
     def test_generic_adult_word_does_not_reclassify_backup(self):
         attrs = {"group-title": "Backup", "tvg-id": "AdultChannelAlpha.us"}
-        self.assertEqual(reorg.classify(attrs, "Adult Channel Alpha", "Backup", "US"), ("Review", None, None))
+        self.assertEqual(reorg.classify(attrs, "Adult Channel Alpha", "Backup", "US"), ("Backup", None, None))
     def test_known_channel_aliases_share_one_identity_key(self):
         pairs = [
             ("Rupasi Bangla", "Ruposhi Bangla"),
