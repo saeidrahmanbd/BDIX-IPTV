@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-21 01:16 UTC
+- Last scan: 2026-11-21T07:36:31+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12222
-- Existing playlist records: 3301
+- Existing playlist records: 3304
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2215
+- Exact source URLs already in playlist: 2218
 - Duplicate URLs within source feed: 3
-- New eligible source records after URL/policy filtering: 138
+- New eligible source records after URL/policy filtering: 135
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
 - New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
@@ -16,7 +16,7 @@
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
-- New Backups staged for manual review: 8
+- New Backups staged for manual review: 6
 - Category migrations: 0
 - Existing discovery-queue entries removed: 0
 
@@ -65,13 +65,13 @@
 - **Viasat Kino Romania** — New Channels — UA — https://flash1.bogulus1.cfd/tivi10/usergenrxs4f7zc.m3u8
 - **4 Fun TV** — New Channels — PL — https://stream.4fun.tv:8888/sd/4fun_sd_high.m3u8
 - **7 RadioVisione (720p)** — New Channels — IT — https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8
-- **Abdulmajeed Abdullah (1080p)** — New Channels — SA — https://d2hng5r56zpsbw.cloudfront.net/out/v1/9c4c990f44bb4767bb46271f326dd574/index.m3u8
 - **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
 - **ATN Music (360p)** — New Channels — BD — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 - **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
 - **BRIDGE Hits (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
 - **Concert Channel (720p)** — New Channels — US — https://jmp2.uk/plu-6868152657543d1f8be4ece3.m3u8
 - **D Music (1280p) [Not 24/7]** — New Channels — KH — http://43.252.18.195:5080/live/streams/WCVNews.playlist.m3u8
+- **Farra Play (576p)** — New Channels — PY — https://stream.farra.com.py/live/farra_low.m3u8
 
 ## Backup alternates
 
@@ -81,8 +81,6 @@
 - **Viasat Kino Action** — UA — http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
 - **FON Music** — US — https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
 - **M1 (Ukraine)** — UA — http://dtv.vol.net.ua/M1-HD/index.m3u8
-- **Salsa Gorda Television** — CO — https://stmv1.voxtvhd.com.br/salsagorda/salsagorda/playlist.m3u8
-- **VIVA Russia** — RU — https://183.giatvcdn.com/ssh101/ssh101/vivarussia/playlist.m3u8
 
 ## Country Migrations
 
@@ -111,19 +109,19 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-11-21T01:16:04+00:00
+- Run timestamp: 2026-11-21T07:36:35+06:00
 - Mode: international
-- New entries and discovery queues probed: 66
+- New entries and discovery queues probed: 67
 - Verified live media responses: 11
 - Verified new primary channels retained in New Channels: 7
 - Verified alternate streams retained in New Backups: 4
 - Inconclusive candidates retained for manual review: 0
 - Unverified backup streams moved to Review: 0
-- Definitively dead new candidates removed: 55
+- Definitively dead new candidates removed: 56
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
-- Candidates retained without authentic local logos (no placeholder used): 3
+- Candidates retained without authentic local logos (no placeholder used): 1
 
 ### Stream probe details
 - Removed newly discovered 4 Fun TV from New Channels — HTTP 404.
@@ -138,6 +136,7 @@
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Concert Channel (720p) from New Channels — HTTP 404.
 - Removed newly discovered D Music (1280p) [Not 24/7] from New Channels — HTTP 404.
+- Removed newly discovered Farra Play (576p) from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Hollywood Ukraine (576p) from New Channels — HTTP 404.
 - Removed newly discovered HomePlus from New Channels — HTTP 404.
@@ -180,20 +179,18 @@
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
 - Removed newly discovered Lifetime Movies from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
-- Kept Salsa Gorda Television in New Backups without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
-- Kept VIVA Russia in New Backups without tvg-logo — no authentic local repository asset was available.
 
 ## Final validation
 
-- Run timestamp: 2026-11-21T01:16:04+00:00
+- Run timestamp: 2026-11-21T07:36:36+06:00
 - Validation status: PASS
 - M3U entries parsed: 3304
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 3
+- Discovery entries missing a logo (left blank rather than using a placeholder): 1
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
