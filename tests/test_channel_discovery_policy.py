@@ -195,8 +195,12 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn("news", reason)
 
     def test_indian_islamic_religious_channels_are_allowed_for_iptv_policy(self):
-        for name in ("Madani TV", "Peace TV", "Quran TV", "Islam Channel", "Al Huda", "Q TV", "Islamic TV"):
-            attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
+        for name, channel_id in [
+            ("Madani TV", "MadaniTV.in"), ("Peace TV", "PeaceTV.in"),
+            ("Quran TV", "QuranTV.in"), ("Islam Channel", "IslamChannel.in"),
+            ("Al Huda", "AlHuda.in"), ("Q TV", "QTV.in"), ("Islamic TV", "IslamicTV.in"),
+        ]:
+            attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": channel_id}
             with self.subTest(name=name):
                 self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
