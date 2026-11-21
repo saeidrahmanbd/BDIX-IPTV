@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-20 03:58 UTC
+- Last scan: 2026-11-21 00:52 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
-- Source records parsed: 12396
-- Existing playlist records: 3303
+- Source records parsed: 12222
+- Existing playlist records: 3304
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2244
+- Exact source URLs already in playlist: 2215
 - Duplicate URLs within source feed: 3
-- New eligible source records after URL/policy filtering: 130
+- New eligible source records after URL/policy filtering: 138
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
 - New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
@@ -16,7 +16,7 @@
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
-- New Backups staged for manual review: 6
+- New Backups staged for manual review: 7
 - Category migrations: 0
 - Existing discovery-queue entries removed: 0
 
@@ -53,11 +53,18 @@
 - **Rakuten TV Top Movies Germany (1080p)** — New Channels — ES — https://cbb622b29f5d43b598991f3fa19de291.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5985/master.m3u8
 - **Rakuten TV Top Movies Italy (1080p)** — New Channels — ES — https://d4a4999341764c67a67e9ec9eb3790ab.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5984/master.m3u8
 - **Rakuten TV Top Movies UK (1080p)** — New Channels — ES — https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8
+- **Star Gold 2 (576p)** — New Channels — IN — http://116.90.120.149:8000/play/a12b/index.m3u8
+- **Star Gold HD (1080p)** — New Channels — IN — http://116.90.120.149:8000/play/a12a/index.m3u8
+- **Star Gold Romance (576p)** — New Channels — IN — http://116.90.120.149:8000/play/a12c/index.m3u8
+- **Star Gold Select HD (1080p)** — New Channels — IN — http://116.90.120.149:8000/play/a131/index.m3u8
+- **Star Movies (India) HD (1080p)** — New Channels — IN — http://116.90.120.149:8000/play/a13a/index.m3u8
 - **Starz Cinema (720p)** — New Channels — US — http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8
 - **Summer of Movies** — New Channels — US — https://jmp2.uk/plu-6654adb1f99922000854388c.m3u8
 - **Sundance TV (Spain)** — New Channels — ES — https://cdn.stmify.com/zapitv/stream/SUNDANCE_TV/sundance_hd.mpd
 - **TVS Film Noir Network (720p)** — New Channels — US — https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
 - **Viasat Kino Romania** — New Channels — UA — https://flash1.bogulus1.cfd/tivi10/usergenrxs4f7zc.m3u8
+- **Zee Talkies HD (1080p)** — New Channels — IN — http://116.90.120.149:8000/play/a116/index.m3u8
+- **Zee Thirai HD (1080p)** — New Channels — IN — http://116.90.120.149:8000/play/a11q/index.m3u8
 - **4 Fun TV** — New Channels — PL — https://stream.4fun.tv:8888/sd/4fun_sd_high.m3u8
 - **7 RadioVisione (720p)** — New Channels — IT — https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8
 - **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
@@ -65,18 +72,12 @@
 - **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
 - **BRIDGE Hits (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
 - **Concert Channel (720p)** — New Channels — US — https://jmp2.uk/plu-6868152657543d1f8be4ece3.m3u8
-- **Farra Play (576p)** — New Channels — PY — https://stream.farra.com.py/live/farra_low.m3u8
-- **GMTV (1080p)** — New Channels — US — https://livechannel.mdc.akamaized.net/stitch/livechannel/1341/master1400000.m3u8;session=live_stream_1341
-- **Italianissimo (360p) [Not 24/7]** — New Channels — VE — https://vcp.myplaytv.com/italianissimo/italianissimo/playlist.m3u8
-- **La Hermandad Salsera (1080p) [Not 24/7]** — New Channels — CO — https://streamlov.alsolnet.com/hermandadsalsera/live/playlist.m3u8
-- **La Voz del Tropico (480p) [Geo-blocked]** — New Channels — DO — https://ss2.tvrdomi.com:1936/lavozdeltropico/lavozdeltropico/playlist.m3u8
-- **LaPuraCrema Television** — New Channels — VE — https://streamlov.alsolnet.com/lapuracrema/live/playlist.m3u8
-- **Look Thoong TV (720p) [Not 24/7]** — New Channels — LA — https://livefta.malimarcdn.com/ftaedge00/lookthoongtv.sdp/playlist.m3u8
 
 ## Backup alternates
 
 - **Kinouzhas** — RU — http://s1.merlive.am/Kinoujas/index.m3u8
 - **Lifetime Movies** — US — http://23.237.104.106:8080/USA_LMN/index.m3u8
+- **Star Movies Select** — IN — http://116.90.120.149:8000/play/a139/index.m3u8
 - **Viasat Kino** — UA — http://dtv.vol.net.ua/Viasat_Kino/index.m3u8
 - **Viasat Kino Action** — UA — http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
 - **FON Music** — US — https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
@@ -92,36 +93,37 @@
 
 - Fashion TV is a preserved legacy exception, not a discovery genre: 7
 - Indian religious channel is prohibited: 1
-- TV series is not a dedicated Movie/Music channel: 36
+- TV series is not a dedicated Movie/Music channel: 24
 - ambiguous Movie/Music classification: 1
-- documentary & wildlife is outside the worldwide Movie/Music-only discovery policy: 205
-- general entertainment is not a dedicated Movie/Music channel: 70
-- kids is outside the worldwide Movie/Music-only discovery policy: 318
+- documentary & wildlife is outside the worldwide Movie/Music-only discovery policy: 200
+- general entertainment is not a dedicated Movie/Music channel: 67
+- kids is outside the worldwide Movie/Music-only discovery policy: 308
 - known Indian prohibited brand/category is prohibited: 12
-- news is outside the worldwide Movie/Music-only discovery policy: 1085
+- news is outside the worldwide Movie/Music-only discovery policy: 1086
 - non-real/test channel: 2
 - permanently banned channel: 10
 - religious is outside the worldwide Movie/Music-only discovery policy: 780
-- source category is not Movies or Music: 6756
-- sports is outside the worldwide Movie/Music-only discovery policy: 317
+- source category is not Movies or Music: 6623
+- sports is outside the worldwide Movie/Music-only discovery policy: 312
 - test/VOD/non-TV name: 299
-- unsafe or tokenized URL: 120
+- unsafe or tokenized URL: 134
 
 ## Stream verification
 
-- Run timestamp: 2026-11-20T03:58:08+00:00
+- Run timestamp: 2026-11-21T00:52:48+00:00
 - Mode: international
-- New entries and discovery queues probed: 56
-- Verified live media responses: 1
-- Verified new primary channels automatically promoted: 0
-- Verified alternate streams moved to Backup: 0
+- New entries and discovery queues probed: 57
+- Verified live media responses: 8
+- Verified new primary channels automatically promoted: 4
+- Verified alternate streams moved to Backup: 1
 - Inconclusive candidates retained for manual review: 0
-- Definitively dead new candidates removed: 55
+- Unverified backup streams moved to Review: 0
+- Definitively dead new candidates removed: 49
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
 - IPTV manual-review candidates needing later local-logo repair (warning only): 0
-- International candidates held for missing local logos: 1
+- International candidates held for missing local logos: 3
 
 ### Stream probe details
 - Removed newly discovered 4 Fun TV from New Channels — HTTP 404.
@@ -133,19 +135,12 @@
 - Removed newly discovered BRIDGE Hits (576p) from New Channels — HTTP 404.
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Concert Channel (720p) from New Channels — HTTP 404.
-- Removed newly discovered Farra Play (576p) from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
-- Removed newly discovered GMTV (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Hollywood Ukraine (576p) from New Channels — HTTP 404.
 - Removed newly discovered HomePlus from New Channels — HTTP 404.
 - Removed newly discovered ICC plus (1080p) from New Channels — HTTP 404.
-- Removed newly discovered Italianissimo (360p) [Not 24/7] from New Channels — HTTP 404.
 - Removed newly discovered Kinosvidanie (576p) from New Channels — HTTP 404.
 - Removed newly discovered Komsan TV [Not 24/7] from New Channels — HTTP 404.
-- Removed newly discovered La Hermandad Salsera (1080p) [Not 24/7] from New Channels — HTTP 404.
-- Removed newly discovered La Voz del Tropico (480p) [Geo-blocked] from New Channels — HTTP 404.
-- Removed newly discovered LaPuraCrema Television from New Channels — HTTP 404.
-- Moved Look Thoong TV (720p) [Not 24/7] to Review — no authentic local logo asset is available.
 - Removed newly discovered More TV Sci-fi from New Channels — HTTP 404.
 - Removed newly discovered Mosfilm Gold Collection (576p) from New Channels — HTTP 404.
 - Removed newly discovered Patriot (720p) from New Channels — HTTP 404.
@@ -169,28 +164,38 @@
 - Removed newly discovered Rakuten TV Top Movies Germany (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Top Movies Italy (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Top Movies UK (1080p) from New Channels — HTTP 404.
+- Moved Star Gold Romance (576p) to Review — no authentic local logo asset is available.
+- Moved Star Gold Select HD (1080p) to Review — no authentic local logo asset is available.
 - Removed newly discovered Starz Cinema (720p) from New Channels — HTTP 404.
 - Removed newly discovered Summer of Movies from New Channels — HTTP 404.
 - Removed newly discovered Sundance TV (Spain) from New Channels — HTTP 404.
 - Removed newly discovered TVS Film Noir Network (720p) from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Removed newly discovered Viasat Kino Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
+- Moved Zee Thirai HD (1080p) to Review — no authentic local logo asset is available.
 - Removed newly discovered FON Music from New Backups — HTTP 404.
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
 - Removed newly discovered Lifetime Movies from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
-- Promoted Look Thoong TV (720p) [Not 24/7] from New Channels to Review — no authentic local repository logo.
+- Promoted Star Gold 2 (576p) from New Channels to Indian Movies — verified primary candidate.
+- Promoted Star Gold HD (1080p) from New Channels to Indian Movies — verified primary candidate.
+- Promoted Star Gold Romance (576p) from New Channels to Review — no authentic local repository logo.
+- Promoted Star Gold Select HD (1080p) from New Channels to Review — no authentic local repository logo.
+- Promoted Star Movies (India) HD (1080p) from New Channels to Indian Movies — verified primary candidate.
+- Promoted Zee Talkies HD (1080p) from New Channels to Indian Movies — verified primary candidate.
+- Promoted Zee Thirai HD (1080p) from New Channels to Review — no authentic local repository logo.
+- Promoted Star Movies Select from New Backups to Backup — verified alternate stream.
 
 ## Final validation
 
-- Run timestamp: 2026-11-20T03:58:09+00:00
+- Run timestamp: 2026-11-21T00:52:48+00:00
 - Validation status: PASS
-- M3U entries parsed: 3304
+- M3U entries parsed: 3312
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 1
+- Discovery entries missing a logo (left blank rather than using a placeholder): 3
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
