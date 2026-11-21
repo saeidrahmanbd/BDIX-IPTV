@@ -647,6 +647,41 @@ def final_mode(playlist, report, baseline, mode):
             "new International candidates must remain in New Channels/New Backups or an approved Review hold: "
             + ", ".join(wrong_queue[:20])
         )
+
+    def identity(entry):
+        return discovery.primary_identity(entry["attrs"], entry["name"])
+
+    queue_keys = {"new channels", "new backup", "new backups"}
+    existing_channel_ids = {
+        identity(e) for e in entries
+        if e["group"].casefold() not in queue_keys and identity(e)
+    }
+    represented_for_backup = {
+        identity(e) for e in entries
+        if e["group"].casefold() not in {"new backup", "new backups", "new backup"} and identity(e)
+    }
+    new_channel_ids = [
+        identity(e) for e in entries
+        if e["group"].casefold() == "new channels" and identity(e)
+    ]
+    duplicate_new_channels = sorted(
+        key for key, count in Counter(new_channel_ids).items() if count > 1
+    )
+    if duplicate_new_channels:
+        errors.append(
+            "duplicate primary identities in New Channels must be moved to New Backups: "
+            + ", ".join(duplicate_new_channels[:20])
+        )
+    for entry in entries:
+        group_key = entry["group"].casefold()
+        key = identity(entry)
+        if not key:
+            continue
+        if group_key == "new channels" and key in existing_channel_ids:
+            errors.append(f"New Channels identity is already represented elsewhere: {entry['name']}")
+        elif group_key in {"new backup", "new backups"} and key not in represented_for_backup:
+            errors.append(f"New Backups row has no already-represented channel identity: {entry['name']}")
+
     url_counts = Counter(stream_url_key(e["url"]) for e in entries)
     duplicate_count = sum(n - 1 for n in url_counts.values() if n > 1)
     validator_outcome = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME", "success").casefold()
