@@ -235,15 +235,15 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
 
     def test_existing_indian_education_queue_rows_are_preserved(self):
         text = (
-            "#EXTM3U\\n"
-            '#EXTINF:-1 tvg-name="Vyas Channel" tvg-country="IN" group-title="New Channels",Vyas Channel\\n'
-            "https://example.invalid/vyas.m3u8\\n"
-            '#EXTINF:-1 tvg-name="Shiksha TV" tvg-id="ShikshaTV.in" group-title="New Backups",Shiksha TV\\n'
-            "https://example.invalid/shiksha.m3u8\\n"
-            '#EXTINF:-1 tvg-name="Gyandarshan HD" tvg-country="IN" group-title="New Backups",Gyandarshan HD\\n'
-            "https://example.invalid/gyandarshan.m3u8\\n"
-            '#EXTINF:-1 tvg-name="Channel 24" tvg-country="BD" group-title="New Channels",Channel 24\\n'
-            "https://example.invalid/channel24.m3u8\\n"
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-name="Vyas Channel" tvg-country="IN" group-title="New Channels",Vyas Channel\n'
+            "https://example.invalid/vyas.m3u8\n"
+            '#EXTINF:-1 tvg-name="Shiksha TV" tvg-id="ShikshaTV.in" group-title="New Backups",Shiksha TV\n'
+            "https://example.invalid/shiksha.m3u8\n"
+            '#EXTINF:-1 tvg-name="Gyandarshan HD" tvg-country="IN" group-title="New Backups",Gyandarshan HD\n'
+            "https://example.invalid/gyandarshan.m3u8\n"
+            '#EXTINF:-1 tvg-name="Channel 24" tvg-country="BD" group-title="New Channels",Channel 24\n'
+            "https://example.invalid/channel24.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
         self.assertEqual(removed, [])
@@ -376,37 +376,37 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
 
     def test_legacy_queue_purge_removes_only_indian_news_and_non_islamic_religion(self):
         text = (
-            "#EXTM3U\\n"
-            '#EXTINF:-1 tvg-id="TV100.in@SD" group-title="New Channels",TV 100\\n'
-            "https://example.invalid/tv100.m3u8\\n"
-            '#EXTINF:-1 tvg-id="RPlus.in@SD" group-title="New Channels",R Plus\\n'
-            "https://example.invalid/rplus.m3u8\\n"
-            '#EXTINF:-1 tvg-id="SonyYay.in@SD" group-title="New Backups",Sony Yay!\\n'
-            "https://example.invalid/sonyyay.m3u8\\n"
-            '#EXTINF:-1 tvg-id="DishaTV.in@SD" group-title="New Backups",Disha TV\\n'
-            "https://example.invalid/disha.m3u8\\n"
-            '#EXTINF:-1 tvg-id="VTU.in@SD" group-title="New Backups",VTU\\n'
-            "https://example.invalid/vtu.m3u8\\n"
-            '#EXTINF:-1 tvg-id="DDKisan.in@SD" group-title="New Channels",DD Kisan (1080p)\\n'
-            "https://example.invalid/dd-kisan.m3u8\\n"
-            '#EXTINF:-1 tvg-id="Gyandarshan.in@SD" group-title="New Channels",Gyandarshan (720p)\\n'
-            "https://example.invalid/gyandarshan.m3u8\\n"
-            '#EXTINF:-1 tvg-id="KiteVicters.in@SD" group-title="New Channels",Kite Victers (720p)\\n'
-            "https://example.invalid/kite-victers.m3u8\\n"
-            '#EXTINF:-1 tvg-id="ShikshaTV.in@SD" group-title="New Channels",Shiksha TV (720p)\\n'
-            "https://example.invalid/shiksha.m3u8\\n"
-            '#EXTINF:-1 tvg-id="VyasChannel.in@SD" group-title="New Channels",Vyas Channel (576p)\\n'
-            "https://example.invalid/vyas.m3u8\\n"
-            '#EXTINF:-1 tvg-id="NickJr.in@SD" group-title="New Backups",Nick Jr. (India) (576p)\\n'
-            "https://example.invalid/nick-jr.m3u8\\n"
-            '#EXTINF:-1 tvg-id="DiscoveryChannel.in@HD" group-title="New Backups",Discovery Channel (India) HD (1080p)\\n'
-            "https://example.invalid/discovery.m3u8\\n"
-            '#EXTINF:-1 tvg-id="HistoryTV18.in@HD" group-title="New Backups",History TV18 HD (1080p)\\n'
-            "https://example.invalid/history.m3u8\\n"
-            '#EXTINF:-1 tvg-id="SafariTV.in@SD" group-title="New Backups",Safari TV (576p)\\n'
-            "https://example.invalid/safari.m3u8\\n"
-            '#EXTINF:-1 tvg-country="BD" tvg-id="Channel24.bd" group-title="New Channels",Channel 24\\n'
-            "https://example.invalid/channel24.m3u8\\n"
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-id="TV100.in@SD" group-title="New Channels",TV 100\n'
+            "https://example.invalid/tv100.m3u8\n"
+            '#EXTINF:-1 tvg-id="RPlus.in@SD" group-title="New Channels",R Plus\n'
+            "https://example.invalid/rplus.m3u8\n"
+            '#EXTINF:-1 tvg-id="SonyYay.in@SD" group-title="New Backups",Sony Yay!\n'
+            "https://example.invalid/sonyyay.m3u8\n"
+            '#EXTINF:-1 tvg-id="DishaTV.in@SD" group-title="New Backups",Disha TV\n'
+            "https://example.invalid/disha.m3u8\n"
+            '#EXTINF:-1 tvg-id="VTU.in@SD" group-title="New Backups",VTU\n'
+            "https://example.invalid/vtu.m3u8\n"
+            '#EXTINF:-1 tvg-id="DDKisan.in@SD" group-title="New Channels",DD Kisan (1080p)\n'
+            "https://example.invalid/dd-kisan.m3u8\n"
+            '#EXTINF:-1 tvg-id="Gyandarshan.in@SD" group-title="New Channels",Gyandarshan (720p)\n'
+            "https://example.invalid/gyandarshan.m3u8\n"
+            '#EXTINF:-1 tvg-id="KiteVicters.in@SD" group-title="New Channels",Kite Victers (720p)\n'
+            "https://example.invalid/kite-victers.m3u8\n"
+            '#EXTINF:-1 tvg-id="ShikshaTV.in@SD" group-title="New Channels",Shiksha TV (720p)\n'
+            "https://example.invalid/shiksha.m3u8\n"
+            '#EXTINF:-1 tvg-id="VyasChannel.in@SD" group-title="New Channels",Vyas Channel (576p)\n'
+            "https://example.invalid/vyas.m3u8\n"
+            '#EXTINF:-1 tvg-id="NickJr.in@SD" group-title="New Backups",Nick Jr. (India) (576p)\n'
+            "https://example.invalid/nick-jr.m3u8\n"
+            '#EXTINF:-1 tvg-id="DiscoveryChannel.in@HD" group-title="New Backups",Discovery Channel (India) HD (1080p)\n'
+            "https://example.invalid/discovery.m3u8\n"
+            '#EXTINF:-1 tvg-id="HistoryTV18.in@HD" group-title="New Backups",History TV18 HD (1080p)\n'
+            "https://example.invalid/history.m3u8\n"
+            '#EXTINF:-1 tvg-id="SafariTV.in@SD" group-title="New Backups",Safari TV (576p)\n'
+            "https://example.invalid/safari.m3u8\n"
+            '#EXTINF:-1 tvg-country="BD" tvg-id="Channel24.bd" group-title="New Channels",Channel 24\n'
+            "https://example.invalid/channel24.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
         self.assertEqual(set(removed), {"TV 100", "R Plus", "Disha TV"})
