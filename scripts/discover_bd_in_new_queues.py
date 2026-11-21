@@ -486,28 +486,28 @@ def acceptable(country: str, a: dict[str, str], name: str, url: str, reference=N
 
 def normalize_queue_logo(extinf_line: str, logo_root: Path = Path("logos")) -> str:
     """Keep only verified repository-local logo paths on discovery queue rows."""
-    match = re.search(r'tvg-logo="([^"]*)"', extinf_line)
+    match = re.search(r'\btvg-logo="([^"]*)"', extinf_line)
     if not match:
         return extinf_line
     logo = match.group(1).strip()
     if not logo:
-        return re.sub(r's+tvg-logo="[^"]*"', "", extinf_line, count=1)
+        return re.sub(r'\s+tvg-logo="[^"]*"', "", extinf_line, count=1)
     if logo.startswith("logos/"):
         relative = logo[len("logos/"):]
     elif logo.startswith(RAW_LOGO_BASE):
         relative = unquote(logo[len(RAW_LOGO_BASE):].split("?", 1)[0].split("#", 1)[0])
     else:
-        return re.sub(r's+tvg-logo="[^"]*"', "", extinf_line, count=1)
+        return re.sub(r'\s+tvg-logo="[^"]*"', "", extinf_line, count=1)
     rel_path = Path(relative)
     if not relative or rel_path.is_absolute() or ".." in rel_path.parts:
-        return re.sub(r's+tvg-logo="[^"]*"', "", extinf_line, count=1)
+        return re.sub(r'\s+tvg-logo="[^"]*"', "", extinf_line, count=1)
     root = Path(logo_root).resolve()
     target = (root / rel_path).resolve()
     if root not in target.parents or not target.is_file():
-        return re.sub(r's+tvg-logo="[^"]*"', "", extinf_line, count=1)
+        return re.sub(r'\s+tvg-logo="[^"]*"', "", extinf_line, count=1)
     local_logo = "logos/" + rel_path.as_posix()
     return re.sub(
-        r'tvg-logo="[^"]*"',
+        r'\btvg-logo="[^"]*"',
         lambda _: f'tvg-logo="{local_logo}"',
         extinf_line,
         count=1,
