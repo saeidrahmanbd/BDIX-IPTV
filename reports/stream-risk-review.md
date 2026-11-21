@@ -1,7 +1,7 @@
 # Stream Risk Review
 
-Generated: **2026-11-21T00:57:42+00:00**
-IPTV-Playlist.m3u SHA-256: **9bbdc0608673318c3fc970a8904a67dc47387c4068ee8bc6dc3bab1594a1def7**
+Generated: **2026-11-21T04:23:44+00:00**
+IPTV-Playlist.m3u SHA-256: **6f0c1b004804ee4dc27caa489be97d275fb316526b22a13079e5fe7817aee82c**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
 
@@ -21,16 +21,16 @@ Generated from the current playlist and latest available stream-health report. T
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1394 |
-| Reachable | 1167 |
-| Failed this check | 227 |
+| Streams tested | 1389 |
+| Reachable | 1150 |
+| Failed this check | 239 |
 | Persistent failures (3+ consecutive) | 51 |
 
 ### Persistent failures
 
 - **&TV** — Review — consecutive failed days: **7** — HTTP 404
 - **AMN TV** — Review — consecutive failed days: **7** — HTTP 404
-- **Amar Bangla** — Review — consecutive failed days: **7** — HTTP 404
+- **Amar Bangla** — Review — consecutive failed days: **7** — HTTP 500
 - **Animal Planet HD** — Review — consecutive failed days: **7** — HTTP 404
 - **Asian TV** — Review — consecutive failed days: **7** — HTTP 404
 - **B4U Movies** — Review — consecutive failed days: **7** — HTTP 404

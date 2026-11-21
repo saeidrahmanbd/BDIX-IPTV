@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-21T00:57:50+00:00**
+Generated: **2026-11-21T04:23:55+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **9bbdc0608673318c3fc970a8904a67dc47387c4068ee8bc6dc3bab1594a1def7**
-- International-Playlist.m3u SHA-256: **1ffb8f01cbc5694b718e2ba0f78cd5a5e25903fa37066a3a5459a36984333cb6**
+- IPTV-Playlist.m3u SHA-256: **6f0c1b004804ee4dc27caa489be97d275fb316526b22a13079e5fe7817aee82c**
+- International-Playlist.m3u SHA-256: **c5dab98657a86fd204721157eb66952ef1e8bda7f06c338d2f3ec73737802c71**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 29 | 2 | 1363 |
-| International-Playlist.m3u | 0 | 0 | 0 | 3301 |
+| IPTV-Playlist.m3u | 0 | 35 | 2 | 1352 |
+| International-Playlist.m3u | 0 | 982 | 0 | 2322 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **4664**
+- Logos needing attribution review: **3674**
 - Unofficial fallback logos: **2**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 4664 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3674 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
@@ -107,22 +107,8 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | gtc-punjabi.png | GTC Punjabi US | GTCPunjabi.in@US |
 | history-tv18.png | History TV | HistoryTV18.in@SD |
 | history-tv18.png | History TV18 Hindi | custom.historytv18hindi |
-| image.png | Sony Sports Ten 1 HD (1080p) | SonySportsTen1.in@HD |
-| image.png | Sony Sports Ten 1 (576p) | SonySportsTen1.in@SD |
-| image.png | Sony Sports Ten 2 HD (1080p) | SonySportsTen2.in@HD |
-| image.png | Sony Sports Ten 5 (576p) | SonySportsTen5.in@SD |
-| image.png | Star Movies (India) HD (1080p) | StarMovies.in@HD |
-| image.png | Star Movies Select HD (1080p) | StarMoviesSelect.in@HD |
-| image.png | Star Sports 1 Hindi HD (1080p) | StarSports1Hindi.in@HD |
-| image.png | Star Sports 2 HD (1080p) | StarSports2.in@HD |
-| image.png | TLC (India) HD (1080p) | TLC.in@HD |
 | jalsha-movies.png | Jalsha Movies | JalshaMovies.in@SD |
 | jalsha-movies.png | Jalsha Movies | Star.Jalsha.Movies.in |
-| logo_hd_image.png | Zee Classic (576p) | ZeeClassic.in@SD |
-| logo_hd_image.png | Zee Talkies HD (1080p) | ZeeTalkies.in@HD |
-| logo_hd_image.png | Zee Thirai HD (1080p) | ZeeThirai.in@HD |
-| mnx.png | MNX HD (1080p) | MNX.in@HD |
-| mnx.png | MNX (576p) | MNX.in@SD |
 | mtv-india-hd-720p.png | MTV (India) HD (1080p) | MTV.in@HD |
 | mtv-india-hd-720p.png | MTV India | MTV.in@SD |
 | mytime-movie-network.png | MyTime Movie Network (Brazil) | MyTimeMovieNetwork.br |
@@ -132,10 +118,12 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | rakuten-tv-top-movies.png | Rakuten TV Comedy Movies UK | RakutenTVComedyMovies.es@UK |
 | rakuten-tv-top-movies.png | Rakuten TV Family Movies UK | RakutenTVFamilyMovies.es@UK |
 | sony-max.png | Sony Max HD (1080p) | SonyMax.in@HD |
-| sony-max.png | Sony Max, Sony Max (720p) | SonyMax.in@SD |
+| sony-max.png | Sony Max | SonyMax.in@SD |
 | star-jalsha.png | Star Jalsha | Star.Jalsha.in |
 | star-jalsha.png | Star Jalsha | StarJalsha.in@HD |
 | star-jalsha.png | Star Jalsha | StarJalsha.in@SD |
+| star-sports-2.png | Star Sports 2 | StarSports2.in |
+| star-sports-2.png | Star Sports 2 HD (1080p) | StarSports2.in@HD |
 | sunnah-tv.png | Makkah Live | MakkahLive.sa |
 | sunnah-tv.png | Al Sunnah Al Nabawiyah | custom.alsunnahalnabawiyah |
 | us-willow-sports-hd.png | Willow Sports | custom.willowsports |

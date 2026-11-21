@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T00:57:42+00:00",
+  "generated": "2026-11-21T04:23:44+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -466,7 +466,7 @@
         "andpictures.in@sd"
       ],
       "groups": [
-        "New Backups",
+        "New Channels",
         "Review"
       ],
       "streams": 2,
@@ -4400,7 +4400,7 @@
         "etvplus.in@hd"
       ],
       "groups": [
-        "New Backups",
+        "New Channels",
         "Review"
       ],
       "streams": 2,
@@ -4424,7 +4424,6 @@
     "eurosport": {
       "names": [
         "Eurosport",
-        "Eurosport (India) HD (1080p)",
         "Eurosport India HD"
       ],
       "ids": [
@@ -4433,11 +4432,10 @@
         "eurosport.in@sd"
       ],
       "groups": [
-        "New Backups",
         "Review"
       ],
-      "streams": 4,
-      "primary": 4,
+      "streams": 3,
+      "primary": 3,
       "backup": 0
     },
     "faktmarathi": {
@@ -6356,19 +6354,16 @@
     },
     "mnx": {
       "names": [
-        "MNX (576p)",
-        "MNX HD (1080p)"
+        "MNX (576p)"
       ],
       "ids": [
-        "mnx.in@hd",
         "mnx.in@sd"
       ],
       "groups": [
-        "New Backups",
         "New Channels"
       ],
-      "streams": 2,
-      "primary": 2,
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "mohonatv": {
@@ -8811,7 +8806,6 @@
     "sonymax": {
       "names": [
         "Sony Max",
-        "Sony Max (720p)",
         "Sony Max HD (1080p)"
       ],
       "ids": [
@@ -8819,11 +8813,11 @@
         "sonymax.in@sd"
       ],
       "groups": [
-        "New Backups",
+        "New Channels",
         "Review"
       ],
-      "streams": 3,
-      "primary": 3,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "sonymax2": {
@@ -8892,7 +8886,7 @@
         "sonysab.in@hd"
       ],
       "groups": [
-        "New Backups",
+        "New Channels",
         "Review"
       ],
       "streams": 2,
@@ -8901,19 +8895,16 @@
     },
     "sonysportsten1": {
       "names": [
-        "Sony Sports Ten 1 (576p)",
         "Sony Sports Ten 1 HD (1080p)"
       ],
       "ids": [
-        "sonysportsten1.in@hd",
-        "sonysportsten1.in@sd"
+        "sonysportsten1.in@hd"
       ],
       "groups": [
-        "New Backups",
         "New Channels"
       ],
-      "streams": 2,
-      "primary": 2,
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "sonysportsten2": {
@@ -9140,7 +9131,7 @@
         "stargold.in@hd"
       ],
       "groups": [
-        "New Backups",
+        "New Channels",
         "Review"
       ],
       "streams": 3,
@@ -9184,7 +9175,7 @@
         "stargoldselect.in@hd"
       ],
       "groups": [
-        "New Backups",
+        "New Channels",
         "Review"
       ],
       "streams": 2,
@@ -9245,7 +9236,7 @@
         "starmovies.in@hd"
       ],
       "groups": [
-        "New Backups",
+        "New Channels",
         "Review"
       ],
       "streams": 2,
@@ -9261,7 +9252,7 @@
         "starmoviesselect.in@hd"
       ],
       "groups": [
-        "New Backups",
+        "New Channels",
         "Review"
       ],
       "streams": 2,
@@ -10264,7 +10255,7 @@
         "travelxp.in@hd"
       ],
       "groups": [
-        "New Backups",
+        "New Channels",
         "Review"
       ],
       "streams": 2,
@@ -10487,19 +10478,16 @@
     },
     "unite8sports1": {
       "names": [
-        "Unite8 Sports 1 (576p)",
-        "Unite8 Sports 1 HD (1080p)"
+        "Unite8 Sports 1 (576p)"
       ],
       "ids": [
-        "unite8sports1.in@hd",
         "unite8sports1.in@sd"
       ],
       "groups": [
-        "New Backups",
         "New Channels"
       ],
-      "streams": 2,
-      "primary": 2,
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "unite8sports2": {

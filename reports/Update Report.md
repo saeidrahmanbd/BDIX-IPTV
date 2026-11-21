@@ -1,40 +1,40 @@
 # Update Report
 
-_Last generated: **2026-11-21 00:57 UTC**_
+_Last generated: **2026-11-21 04:23 UTC**_
 
-Source playlist SHA-256: **9bbdc0608673318c3fc970a8904a67dc47387c4068ee8bc6dc3bab1594a1def7**
+Source playlist SHA-256: **6f0c1b004804ee4dc27caa489be97d275fb316526b22a13079e5fe7817aee82c**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1394** |
+| Streams | **1389** |
 | Active Channel Identities | **694** |
 | Active Primary Streams | **694** |
 | Bangladesh | **70** |
 | India | **299** |
 | Backup Stream Entries | **443** |
-| IPTV Local Logos | **98.4%** |
+| IPTV Local Logos | **100.0%** |
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
-| Stream Health Tested | **1394** |
-| Stream Health Failures | **227** |
+| Stream Health Tested | **1389** |
+| Stream Health Failures | **239** |
 | Persistent Failures | **51** |
 | Near-Duplicate URL Families | **1** |
-| Audit findings (review warnings included) | **1** |
+| Audit findings (review warnings included) | **5** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-11-21T00:56:47+00:00** |
+| Pre-Publish Gate Generated | **2026-11-21T04:22:45+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
 - Metadata conflicts (canonical primary scope): **0**
 - Same-name / different-ID collisions (canonical primary scope): **0**
-- Cross-queue metadata identity variants: **11**
+- Cross-queue metadata identity variants: **10**
 - Cross-queue same-name / different-ID collisions: **9**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Logo exceptions: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
+- Category block-order issues: **4**
 - Alphabetical ordering issues: **1**
 - Signed/tokenized URLs: **11**
 
@@ -62,14 +62,14 @@ Source playlist SHA-256: **9bbdc0608673318c3fc970a8904a67dc47387c4068ee8bc6dc3ba
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-21T00:56:46.336044+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-21T04:22:44.779824+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-20T01:31:21+00:00** | **PENDING — guide missing or freshness not PASS** |
-| Stream health | **2026-11-21T00:57:42+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-21T00:56:47+00:00** | **CURRENT** |
+| Stream health | **2026-11-21T04:23:43+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-21T04:22:45+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
-- Latest entries change: **1379 → 1394**
-- Latest health failures: **229 → 227**
+- Latest entries change: **1394 → 1389**
+- Latest health failures: **227 → 239**
 
 Historical records are retained in reports/maintenance-history.json.

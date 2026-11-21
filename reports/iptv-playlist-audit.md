@@ -1,27 +1,27 @@
 # IPTV Playlist Audit
-Generated: **2026-11-21T00:56:46.336044+00:00**
-Source playlist SHA-256: **9bbdc0608673318c3fc970a8904a67dc47387c4068ee8bc6dc3bab1594a1def7**
+Generated: **2026-11-21T04:22:44.779824+00:00**
+Source playlist SHA-256: **6f0c1b004804ee4dc27caa489be97d275fb316526b22a13079e5fe7817aee82c**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1394**
-- Unique channel IDs: **820**
-- IDs with multiple streams: **267**
+- Playlist entries: **1389**
+- Unique channel IDs: **817**
+- IDs with multiple streams: **265**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-queue same-ID name variants (review): **10**
 - Cross-queue normalized-name/different-ID groups (review): **10**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **226**
+- IDs with multiple logo references: **222**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
-- External logo references (review only): **23**
-- Logo references checked: **1394**
+- External logo references (review only): **0**
+- Logo references checked: **1389**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **5**
 - Primary channel-number collisions: **0**
@@ -30,7 +30,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
+- Category block-order issues: **4**
 - Category registry issues: **0**
 - Alphabetical ordering issues: **1**
 - Suspicious URL credentials/syntax: **0**
@@ -62,13 +62,13 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 
 - Same ID animalplanet.in@sd: Animal Planet [Backup]; Animal Planet [Documentary & Wildlife]; Animal Planet HD [Review]
 - Same ID colorsbangla.in@hd: Colors Bangla [Review]; Colors Bangla HD (1080p) [Review]
-- Same ID etvplus.in@hd: ETV Plus [Review]; ETV Plus HD (1080p) [New Backups]
+- Same ID etvplus.in@hd: ETV Plus [Review]; ETV Plus HD (1080p) [New Channels]
 - Same ID moviesnow.in@hd: Movies Now [Indian Movies]; Movies Now HD (1080p) [New Backups]
 - Same ID olitv.in@sd: Oli TV [Review]; Oli TV (India) (1080p) [Review]
-- Same ID sonysab.in@hd: Sony SAB [Review]; Sony SAB HD (1080p) [New Backups]
-- Same ID stargold.in@hd: Star Gold [Review]; Star Gold HD (1080p) [New Backups]
-- Same ID stargoldselect.in@hd: Star Gold Select [Review]; Star Gold Select HD (1080p) [New Backups]
-- Same ID starmoviesselect.in@hd: Star Movies Select [Review]; Star Movies Select HD (1080p) [New Backups]
+- Same ID sonysab.in@hd: Sony SAB [Review]; Sony SAB HD (1080p) [New Channels]
+- Same ID stargold.in@hd: Star Gold [Review]; Star Gold HD (1080p) [New Channels]
+- Same ID stargoldselect.in@hd: Star Gold Select [Review]; Star Gold Select HD (1080p) [New Channels]
+- Same ID starmoviesselect.in@hd: Star Movies Select [Review]; Star Movies Select HD (1080p) [New Channels]
 - Same ID starsports1hindi.in@hd: Star Sports 1 Hindi [Sports]; Star Sports 1 Hindi HD (1080p) [New Backups]
 
 - Same normalized name: Colors [colors.in] (Review); Colors [colors.in@hd] (Indian Entertainment); Colors [colors.in@hd] (Review)
@@ -543,11 +543,8 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - ETV Cinema — Indian Movies — https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=[REDACTED]
 - ETV Cinema — Review — https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
 ### etvplus.in@hd (2 streams)
-- ETV Plus HD (1080p) — New Backups — https://d1qqzrxc7kpb0u.cloudfront.net/v1/50e3ae620bd6496cb3ac4294c877c36a/airtTA6RA.m3u8
+- ETV Plus HD (1080p) — New Channels — https://d1qqzrxc7kpb0u.cloudfront.net/v1/50e3ae620bd6496cb3ac4294c877c36a/airtTA6RA.m3u8
 - ETV Plus — Review — https://d12ee3o8yfkkhd.cloudfront.net/c6a4b411295f47f48c908d2ac0605bad/index.m3u8
-### eurosport.in@hd (2 streams)
-- Eurosport (India) HD (1080p) — New Backups — http://116.90.120.149:8000/play/a118/index.m3u8
-- Eurosport India HD — Review — https://livetv.shamon-cable.net:8443/Eurosport-HD/index.m3u8
 ### faktmarathi.in@sd (3 streams)
 - Fakt Marathi — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8
 - Fakt Marathi — Backup — https://cdn.pishow.tv/ott/live/10002/master.m3u8
@@ -1049,14 +1046,11 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 ### sonyentertainmenttelevision.in@hd (2 streams)
 - Sony Entertainment TV — Indian Entertainment — http://38.96.178.205/SONYHD/index.m3u8
 - Sony Entertainment TV — Review — http://103.135.253.32:8080/SONY-ENTARTANMEN/index.m3u8
-### sonymax.in@sd (2 streams)
-- Sony Max (720p) — New Backups — https://drk6xq0vhn.gpcdn.net/hls/set_max_m4fb8dz2wp6kr9s_720/index.m3u8
-- Sony Max — Review — http://103.135.253.32:8080/Sony-Max-HD/index.m3u8
 ### sonypal.in@sd (2 streams)
 - Sony Pal — Indian Entertainment — http://163.61.226.31:9981/stream/channelid/1571254341?profile=pass
 - Sony Pal — Review — http://59.103.38.46:8000/play/a0ac/index.m3u8
 ### sonysab.in@hd (2 streams)
-- Sony SAB HD (1080p) — New Backups — http://116.90.120.149:8000/play/a128/index.m3u8
+- Sony SAB HD (1080p) — New Channels — http://116.90.120.149:8000/play/a128/index.m3u8
 - Sony SAB — Review — https://drk6xq0vhn.gpcdn.net/live/sub_hd_abr/index.m3u8
 ### southstation.in (2 streams)
 - South Station — Indian Movies — https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/SS_IN.m3u8
@@ -1069,17 +1063,17 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - SRK — Bangladesh — https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8
 - SRK — Backup — https://srktv.net/srktvhls/cdnlive_srktv.m3u8
 ### stargold.in@hd (3 streams)
-- Star Gold HD (1080p) — New Backups — http://116.90.120.149:8000/play/a12a/index.m3u8
+- Star Gold HD (1080p) — New Channels — http://116.90.120.149:8000/play/a12a/index.m3u8
 - Star Gold — Review — http://103.135.253.32:8080/STAR-GOLD-HD/index.m3u8
 - Star Gold — Review — http://103.185.24.134:3001/Star-Gold/index.m3u8
 ### stargoldselect.in@hd (2 streams)
-- Star Gold Select HD (1080p) — New Backups — http://116.90.120.149:8000/play/a131/index.m3u8
+- Star Gold Select HD (1080p) — New Channels — http://116.90.120.149:8000/play/a131/index.m3u8
 - Star Gold Select — Review — https://livetv.shamon-cable.net:8443/StarGoldSelect/index.m3u8
 ### starjalsha.in@hd (2 streams)
 - Star Jalsha — Indian Bangla — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
 - Star Jalsha — Review — https://livetv.shamon-cable.net:8443/Star-Jalsha/index.m3u8
 ### starmoviesselect.in@hd (2 streams)
-- Star Movies Select HD (1080p) — New Backups — http://116.90.120.149:8000/play/a139/index.m3u8
+- Star Movies Select HD (1080p) — New Channels — http://116.90.120.149:8000/play/a139/index.m3u8
 - Star Movies Select — Review — http://103.135.253.32:8080/STAR-MOVIES-SEL/index.m3u8
 ### starnews.bd (3 streams)
 - Star News — Bangladesh — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/playlist.m3u8
@@ -1270,7 +1264,10 @@ None.
 
 ## Ordering
 
-Category block order: OK.
+- category block **New Channels** — out of canonical block order
+- category block **New Channels** — out of canonical block order
+- category block **New Channels** — out of canonical block order
+- category block **New Channels** — out of canonical block order
 - **International** — **4ever Cinema** appears after **30A Music**
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
@@ -1306,8 +1303,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1371**
-- External references (review only): **23**
+- Healthy/local references: **1389**
+- External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair
 
@@ -1330,29 +1327,7 @@ None.
 
 ## External Logo Review
 
-- Sony Sports Ten 1 HD (1080p) [sonysportsten1.in@hd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1/images/LOGO_HD/image.png
-- Sony Sports Ten 2 HD (1080p) [sonysportsten2.in@hd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2/images/LOGO_HD/image.png
-- Sony Sports Ten 5 (576p) [sonysportsten5.in@sd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5/images/LOGO_HD/image.png
-- Star Gold 2 (576p) [stargold2.in@sd] (New Channels) — https://i.imgur.com/G0ZfzZr.png
-- Star Gold Romance (576p) [stargoldromance.in@sd] (New Channels) — https://i.imgur.com/gSWv9U3.png
-- Star Sports 1 HD (1080p) [starsports1.in@hd] (New Channels) — https://i.imgur.com/E5jjKHI.png
-- TLC (India) HD (1080p) [tlc.in@hd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TLC/images/LOGO_HD/image.png
-- Unite8 Sports 1 (576p) [unite8sports1.in@sd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CAFE/images/LOGO_HD/LOGO_HD_5UHAHVIHu_UNITE8-SPORTS-1_264X144.webp
-- Unite8 Sports 2 HD (1080p) [unite8sports2.in@hd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDFLIX_HD/images/LOGO_HD/LOGO_HD_qVrE3q5rN_UNITE8-SPORTS-2_HD_264X144.webp
-- Zee Classic (576p) [zeeclassic.in@sd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CLASSIC/images/LOGO_HD/LOGO_HD_image.png
-- Zee Power HD (1080p) [zeepower.in@hd] (New Channels) — https://dtil.tmsimg.com/assets/GNLZZGG0028ZJ97.png?lock=720x540
-- Zee Talkies HD (1080p) [zeetalkies.in@hd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_TALKIES/images/LOGO_HD/LOGO_HD_image.png
-- Zee Thirai HD (1080p) [zeethirai.in@hd] (New Channels) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_THIRAI/images/LOGO_HD/LOGO_HD_image.png
-- Apna Punjab TV (India) (576p) [apnapunjabtv.in@sd] (New Backups) — https://www.apnapunjab.tv/images/logo.png
-- Sony SAB HD (1080p) [sonysab.in@hd] (New Backups) — https://dtil.tmsimg.com/assets/s159099_ld_h15_ab.png?lock=720x540
-- Sony Sports Ten 1 (576p) [sonysportsten1.in@sd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1/images/LOGO_HD/image.png
-- Star Gold HD (1080p) [stargold.in@hd] (New Backups) — https://i.imgur.com/xC460sj.png
-- Star Gold Select HD (1080p) [stargoldselect.in@hd] (New Backups) — https://i.imgur.com/U7eiuqv.png
-- Star Movies (India) HD (1080p) [starmovies.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png
-- Star Movies Select HD (1080p) [starmoviesselect.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD/images/LOGO_HD/image.png
-- Star Sports 1 Hindi HD (1080p) [starsports1hindi.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HD_HINDI/images/LOGO_HD/image.png
-- Star Sports 2 HD (1080p) [starsports2.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_2/images/LOGO_HD/image.png
-- Unite8 Sports 1 HD (1080p) [unite8sports1.in@hd] (New Backups) — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CAFE_HD/images/LOGO_HD/LOGO_HD_F6ILcp4Kk_UNITE8-SPORTS-1_HD_264X144.webp
+None.
 
 ## Protected Primary Entries
 
