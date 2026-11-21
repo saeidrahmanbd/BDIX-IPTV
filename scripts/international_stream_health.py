@@ -521,6 +521,12 @@ def apply_results(text, results, history, check_date):
             }
             entries[key] = rec
 
+        # If a curated row is deliberately returned to a discovery queue, that
+        # queue becomes its recovery destination even when older history recorded
+        # a previous primary/Backup group.
+        if current.casefold() in {"new channels", "new backup", "new backups"}:
+            rec["original_group"] = current
+
         action = "unchanged"
         # Adult is a protected collection, not a health-retirement queue. Also
         # recognize rows previously moved from Adult to Review by older code.
