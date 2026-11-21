@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5240,
-  "all_explicitly_referenced_logo_files": 2509,
-  "runtime_referenced_logo_files": 2507,
+  "all_explicitly_referenced_logo_files": 2506,
+  "runtime_referenced_logo_files": 2504,
   "playlist_referenced_logo_files": 2479,
-  "apparently_unreferenced_by_any_text_file": 2731,
-  "apparently_unreferenced_by_runtime_sources": 2733,
+  "apparently_unreferenced_by_any_text_file": 2734,
+  "apparently_unreferenced_by_runtime_sources": 2736,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -14858,9 +14858,6 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/international/star-movies-india-hd-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -18566,9 +18563,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/star-gold-hd-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/star-gold-romance-c5fa568b2f3a21118f2b.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -18617,9 +18611,6 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/star-movies-select.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-news-722ad595.png": [
       "IPTV-Playlist.m3u",
@@ -20921,14 +20912,16 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-movies-india-hd-1080p-5e3c4d8df5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-movies-portugal-117de92eba.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-movies-select-2b1d079564.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-movies-slovenia-4e0111a47b.png": [
       "International-Playlist.m3u",
@@ -26426,9 +26419,6 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/international/star-movies-india-hd-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -30138,9 +30128,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/star-gold-hd-1080p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/star-gold-romance-c5fa568b2f3a21118f2b.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -30189,9 +30176,6 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/star-movies-select.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-news-722ad595.png": [
       "IPTV-Playlist.m3u",
@@ -32494,14 +32478,16 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-movies-india-hd-1080p-5e3c4d8df5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-movies-portugal-117de92eba.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-movies-select-2b1d079564.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-movies-slovenia-4e0111a47b.png": [
       "International-Playlist.m3u",
@@ -34388,6 +34374,7 @@
     "logos/international/star-cinema.png",
     "logos/international/star-gold-hd-1080p.png",
     "logos/international/star-jalsha-1080p-geo-blocked.png",
+    "logos/international/star-movies-india-hd-1080p.png",
     "logos/international/star-movies-portugal.png",
     "logos/international/star-movies-select.png",
     "logos/international/star-movies-slovenia.png",
@@ -35184,6 +35171,7 @@
     "logos/star-action-720p.png",
     "logos/star-bangla.png",
     "logos/star-channel.png",
+    "logos/star-gold-hd-1080p.png",
     "logos/star-gold-select.png",
     "logos/star-gold-thrills.png",
     "logos/star-gold.png",
@@ -35191,6 +35179,7 @@
     "logos/star-maa-gold-576p.png",
     "logos/star-maa-music.png",
     "logos/star-movies-portugal.png",
+    "logos/star-movies-select.png",
     "logos/star-movies-slovenia.png",
     "logos/star-plus.png",
     "logos/star-sports-2-hindi.png",
