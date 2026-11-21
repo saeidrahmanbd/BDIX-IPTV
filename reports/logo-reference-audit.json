@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5239,
-  "all_explicitly_referenced_logo_files": 2507,
-  "runtime_referenced_logo_files": 2505,
-  "playlist_referenced_logo_files": 2481,
-  "apparently_unreferenced_by_any_text_file": 2732,
-  "apparently_unreferenced_by_runtime_sources": 2734,
+  "all_explicitly_referenced_logo_files": 2508,
+  "runtime_referenced_logo_files": 2506,
+  "playlist_referenced_logo_files": 2474,
+  "apparently_unreferenced_by_any_text_file": 2731,
+  "apparently_unreferenced_by_runtime_sources": 2733,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -13644,7 +13644,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/eurosport-india-993030c6b65b4961f751.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -14836,6 +14835,9 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/bridge-hits-576p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/international/famatv-1080p-not-24-7.png": [
       "reports/logo-source-registry.json"
     ],
@@ -15105,7 +15107,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17143,7 +17144,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pickleball-now-720p-geo-blocked-0b59f9270029b91e10eb.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -18355,11 +18355,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-sports-ten-1.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-sports-ten-2.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-sports-ten-3-hindi.png": [
@@ -18367,7 +18365,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-sports-ten-5.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-wah.png": [
@@ -18642,7 +18639,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-sports-1.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-sports-2-telugu-fd5f54f558.png": [
@@ -19868,11 +19864,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/unite8-sports-1-c39b236b6693e186f49c.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/unite8-sports-2.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/universal-cinema-414d1fc054.png": [
@@ -25211,7 +25205,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/eurosport-india-993030c6b65b4961f751.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -26404,6 +26397,9 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/bridge-hits-576p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/international/famatv-1080p-not-24-7.png": [
       "reports/logo-source-registry.json"
     ],
@@ -26673,7 +26669,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -28711,7 +28706,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/pickleball-now-720p-geo-blocked-0b59f9270029b91e10eb.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -29927,11 +29921,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-sports-ten-1.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-sports-ten-2.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-sports-ten-3-hindi.png": [
@@ -29939,7 +29931,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-sports-ten-5.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-wah.png": [
@@ -30214,7 +30205,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-sports-1.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-sports-2-telugu-fd5f54f558.png": [
@@ -31441,11 +31431,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/unite8-sports-1-c39b236b6693e186f49c.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/unite8-sports-2.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/universal-cinema-414d1fc054.png": [
@@ -33627,7 +33615,6 @@
     "logos/international/bravo-farsi-tv-360p.png",
     "logos/international/bridge-classic-576p.png",
     "logos/international/bridge-deluxe-1080p.png",
-    "logos/international/bridge-hits-576p.png",
     "logos/international/bridge.png",
     "logos/international/bstv-pakistan-576p.png",
     "logos/international/bt-tv-720p.png",

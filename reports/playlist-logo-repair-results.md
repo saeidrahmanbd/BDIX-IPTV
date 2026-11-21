@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-21 01:38 UTC**  
+Run time: **2026-11-21 01:45 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,8 +9,8 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1394 | 0 | 0 | 0 | 0 | 0 | 0 |
-| International-Playlist.m3u | 3304 | 0 | 0 | 72 | 372 | 0 | 72 |
+| IPTV-Playlist.m3u | 1379 | 0 | 0 | 0 | 0 | 0 | 0 |
+| International-Playlist.m3u | 3305 | 0 | 0 | 72 | 372 | 0 | 72 |
 
 ## Repair log
 
@@ -100,8 +100,8 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 5769 | Willow Sports 2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 5859 | Abdulmajeed Abdullah (1080p) | (missing) | (none) | IPTV-org exact ID: AbdulmajeedAbdullah.sa |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 5859 | Abdulmajeed Abdullah (1080p) | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 6157 | Enter 10 Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 6159 | Enter 10 Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 6161 | Enter 10 Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 
 ## Quality rule
 
