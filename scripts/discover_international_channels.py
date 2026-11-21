@@ -456,7 +456,7 @@ def main():
   else:
    if len(new_rows)+len(adult_rows)>=MAX_NEW_CHANNELS:continue
    target="Adult" if base=="Adult" else "New Channels"
-   if code in ISO_CODES and code not in {"BD","IN","PK"}:
+   if target=="New Channels" and code in ISO_CODES and code not in {"BD","IN","PK"}:
     if per_country[code]>=MAX_NEW_PER_GROUP:continue
     per_country[code]+=1
    if target!="New Channels" and per_group[target]>=MAX_NEW_PER_GROUP:continue
