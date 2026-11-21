@@ -494,7 +494,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNotNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
 
-    def test_indian_cricket_and_football_are_rejected_even_with_country_metadata_mismatch(self):
+    def test_indian_sports_are_allowed_even_with_country_metadata_mismatch(self):
         for name, genre in [
             ("Cricket 24", "Cricket"),
             ("Test Cricket HD", "Cricket"),
@@ -510,10 +510,9 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 candidate, reason = evaluate(
                     "India", source_metadata, name, "https://example.org/live/index.m3u8"
                 )
-                self.assertIsNone(candidate)
-                self.assertIn("sports", reason)
+                self.assertIsNotNone(candidate, reason)
 
-    def test_indian_cricket_and_football_sports_channels_are_rejected(self):
+    def test_indian_cricket_and_football_sports_channels_are_allowed(self):
         for name in ("Cricket 24", "Test Cricket HD", "Football Live", "Football Sports"):
             with self.subTest(name=name):
                 attrs = {
@@ -525,8 +524,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 candidate, reason = evaluate(
                     "India", attrs, name, "https://example.org/sports/live/index.m3u8"
                 )
-                self.assertIsNone(candidate)
-                self.assertIn("sports", reason)
+                self.assertIsNotNone(candidate, reason)
 
     def test_bangladeshi_news_is_allowed(self):
         attrs = {"group-title": "News", "tvg-country": "BD", "tvg-id": "Channel24.bd"}
