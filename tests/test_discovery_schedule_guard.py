@@ -1015,6 +1015,41 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
                 client.request("GET", "actions/runs/1")
         self.assertEqual(mocked.call_count, 1)
 
+    def test_push_triggered_watchdog_still_recovers_missing_workflows(self):
+        import os
+        from unittest.mock import patch
+
+        dispatched = []
+
+        class FakeClient:
+            def __init__(self, repository, token):
+                pass
+
+            def workflow_runs(self, workflow_file, target_date):
+                return []
+
+            def dispatch(self, workflow_file):
+                dispatched.append(workflow_file)
+
+        workflow_files = [
+            "iptv-maintenance.yml",
+            "new-channel-discovery.yml",
+            "international-channel-discovery.yml",
+            "playlist-logo-localization.yml",
+            "international-stream-health.yml",
+            "epg-refresh.yml",
+        ]
+        with patch.dict(os.environ, {
+            "GITHUB_EVENT_NAME": "push",
+            "GITHUB_REPOSITORY": "owner/repo",
+            "GH_TOKEN": "test-token",
+        }), patch.object(guard, "GitHubActions", FakeClient), \
+             patch.object(guard, "today_in_bangladesh", return_value=self.today), \
+             patch.object(guard, "recovery_is_due", return_value=True):
+            self.assertEqual(guard.watchdog(workflow_files), 0)
+
+        self.assertEqual(dispatched, workflow_files)
+
 
 if __name__ == "__main__":
     unittest.main()
