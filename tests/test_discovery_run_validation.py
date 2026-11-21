@@ -280,8 +280,8 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             registry = ["Bangladesh", "New Channels", "New Backups", "Backup", "Review"]
             prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry) + "\n"
             legacy = (
-                '#EXTINF:-1 tvg-id="SonyYay.in@SD" tvg-name="Sony Yay!" group-title="New Backups",Sony Yay!\n'
-                "https://example.org/sony-yay.m3u8\n"
+                '#EXTINF:-1 tvg-id="CVRHealth.in@HD" tvg-name="CVR Health" group-title="New Backups",CVR Health\n'
+                "https://example.org/cvr-health.m3u8\n"
             )
             playlist.write_text(prefix + legacy, encoding="utf-8")
             baseline.write_text(prefix + legacy, encoding="utf-8")
@@ -297,7 +297,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
             final_report = report.read_text(encoding="utf-8")
             self.assertIn("- Validation status: FAIL", final_report)
-            self.assertIn("Prohibited Indian queue row: Sony Yay!", final_report)
+            self.assertIn("Prohibited Indian queue row: CVR Health", final_report)
             self.assertIn("Out-of-scope/prohibited Indian rows remaining in New Channels/New Backups: 1", final_report)
 
     def test_final_iptv_validation_blocks_foreign_country_queue_rows(self):
