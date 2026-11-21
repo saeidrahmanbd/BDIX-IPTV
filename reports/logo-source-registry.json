@@ -8188,5 +8188,40 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/eT7iE34.png",
     "notes": "IPTV-org exact ID: LookThoongTV.la IPTV-org public logo dataset Source page: https://i.imgur.com/eT7iE34.png"
+  },
+  "IPTV-Playlist.m3u|StarGoldRomance.in@SD|Star Gold Romance (576p)|logos/star-gold-romance-c5fa568b2f3a21118f2b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s158298_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: StarGoldRomance.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s158298_ld_h15_aa.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|Unite8Sports1.in@SD|Unite8 Sports 1 (576p)|logos/unite8-sports-1-c39b236b6693e186f49c.webp": {
+    "status": "third_party_verified",
+    "source_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CAFE/images/LOGO_HD/LOGO_HD_5UHAHVIHu_UNITE8-SPORTS-1_264X144.webp",
+    "notes": "IPTV-org exact ID: Unite8Sports1.in IPTV-org public logo dataset Source page: https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CAFE/images/LOGO_HD/LOGO_HD_5UHAHVIHu_UNITE8-SPORTS-1_264X144.webp"
+  },
+  "IPTV-Playlist.m3u|ZeeClassic.in@SD|Zee Classic (576p)|logos/zee-classic-60a1348c57a3a772d876.png": {
+    "status": "third_party_verified",
+    "source_url": "https://static.cdnlogo.com/logos/z/39/zee-classic_800.png",
+    "notes": "IPTV-org exact ID: ZeeClassic.in IPTV-org public logo dataset Source page: https://static.cdnlogo.com/logos/z/39/zee-classic_800.png"
+  },
+  "IPTV-Playlist.m3u|ZeePower.in@HD|Zee Power HD (1080p)|logos/zee-power-3af99da652f1686dfcae.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/GNLZZGG0028ZJ97.png?lock=720x540",
+    "notes": "IPTV-org exact ID: ZeePower.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/GNLZZGG0028ZJ97.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|ZeeThirai.in@HD|Zee Thirai HD (1080p)|logos/zee-thirai-7ca309bb44820a2b7a4b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/GNLZZGG0022S9BF.png?lock=720x540",
+    "notes": "IPTV-org exact ID: ZeeThirai.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/GNLZZGG0022S9BF.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|ApnaPunjabTV.in@SD|Apna Punjab TV (India) (576p)|logos/apna-punjab-tv-india-23af30c75dadda3dde96.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.apnapunjab.tv/images/logo.png",
+    "notes": "IPTV-org exact ID: ApnaPunjabTV.in IPTV-org public logo dataset Source page: https://www.apnapunjab.tv/images/logo.png"
+  },
+  "IPTV-Playlist.m3u|StarMoviesSelect.in@HD|Star Movies Select HD (1080p)|logos/star-movies-select-776284c9b5222ea0ecf1.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s158863_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: StarMoviesSelect.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s158863_ld_h15_aa.png?lock=720x540"
   }
 }
