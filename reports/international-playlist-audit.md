@@ -1,16 +1,16 @@
 # International Playlist Organization Audit
 
-- Entries before: 3301
-- Entries after: 3301
-- Channel names normalized: 7
+- Entries before: 3304
+- Entries after: 3304
+- Channel names normalized: 1
 - Malformed HTTP options moved into VLC directives: 0
-- Invalid/external logo references removed: 2850
+- Invalid/external logo references removed: 2860
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1478
-- Matching alternate streams retained in Backup: 368
-- True orphan Backup rows evaluated: 2
-- Eligible orphan Backup rows promoted to primary: 1
+- Original Backup/Backups and protected queue rows examined: 1483
+- Matching alternate streams retained in Backup: 367
+- True orphan Backup rows evaluated: 1
+- Eligible orphan Backup rows promoted to primary: 0
 - Clearly identified Adult orphans restored to Adult: 0
 - Ineligible/unclassified orphan Backup rows retained: 1
 - Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.
@@ -32,7 +32,7 @@
 
 - Bangladesh: 46
 - Indian Bangla: 31
-- Indian Movies: 80
+- Indian Movies: 73
 - Indian Music: 54
 - Indian Entertainment: 163
 - Pakistani: 18
@@ -79,5 +79,5 @@
 - Religious: 3
 - Sports: 8
 - Adult: 366
-- Review: 1110
-- Backup: 369
+- Review: 1117
+- Backup: 372
