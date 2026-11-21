@@ -1393,14 +1393,6 @@ https://dpv6ceilvhyrw.cloudfront.net/playlist.m3u8
 http://iptv.prosto.tv:7000/ch109/video.m3u8
 #EXTINF:-1 tvg-id="XtremSports.es@SD" tvg-name="Xtrem Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xtrem-sports-1d0aff4f7e.png" tvg-chno="706" channel-id="XtremSports.es@SD" tvg-country="ES" tvg-language="spa" group-title="Sports",Xtrem Sports
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e0b81a5c-6ab5-48cd-aaa9-f82de4ab5bf9/manifest.m3u8
-#EXTINF:-1 tvg-id="BTLTV.nl@SD" tvg-name="BTL TV (Netherlands) (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btl-tv-netherlands-1080p.png" group-title="New Channels" x-discovery-source-country="BD",BTL TV (Netherlands) (1080p)
-https://cdn.liveplustv.com/v1/live/btl-tv/master.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.pk@SD" tvg-name="Cartoon Network (Pakistan)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-pakistan.png" group-title="New Channels" x-discovery-source-country="BD",Cartoon Network (Pakistan)
-https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8
-#EXTINF:-1 tvg-id="NationalGeographic.in@HD" tvg-name="National Geographic (India) HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic-india-hd-1080p.png" group-title="New Channels" x-discovery-source-country="BD",National Geographic (India) HD (1080p)
-http://116.90.120.149:8000/play/a115/index.m3u8
-#EXTINF:-1 tvg-id="NationalGeographicWild.in@HD" tvg-name="National Geographic Wild (India) HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic-wild-india-hd-1080p.png" group-title="New Channels" x-discovery-source-country="BD",National Geographic Wild (India) HD (1080p)
-http://116.90.120.149:8000/play/a11h/index.m3u8
 #EXTINF:-1 tvg-id="AyushNextCommunicationNetwork.in@SD" tvg-name="Ayush Next Communication Network (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png" group-title="New Channels" x-discovery-source-country="IN",Ayush Next Communication Network (576p)
 https://d2lk5u59tns74c.cloudfront.net/out/v1/60ab07b02a2942498cdd81f045a625a1/index.m3u8
 #EXTINF:-1 tvg-id="BollywoodMasala.in@SD" tvg-name="Bollywood Masala (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bollywood-masala-a6b8705b09a523f7b504.png" group-title="New Channels" x-discovery-source-country="IN",Bollywood Masala (1080p)
@@ -1421,8 +1413,6 @@ https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01
 https://distro-timesgroup.vgcdn.net/vglive-sk-843549/playlist.m3u8
 #EXTINF:-1 tvg-id="PunjabPlus.in@SD" tvg-name="Punjab Plus (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/punjab-plus-1080p.png" group-title="New Channels" x-discovery-source-country="IN",Punjab Plus (1080p)
 https://punjabplustv.akamaized.net/punjabplustv/master.m3u8
-#EXTINF:-1 tvg-id="QelloConcertsbyStingray.ca@SD" tvg-name="Qello Concerts by Stingray (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/qello-concerts-by-stingray.png" group-title="New Channels" x-discovery-source-country="IN",Qello Concerts by Stingray (1080p)
-https://lotus.stingray.com/manifest/qello-qello001-montreal/samsungtvplus/master.m3u8
 #EXTINF:-1 tvg-id="SonyPix.in@HD" tvg-name="Sony Pix HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-pix.png" group-title="New Channels" x-discovery-source-country="IN",Sony Pix HD (1080p)
 http://116.90.120.149:8000/play/a138/index.m3u8
 #EXTINF:-1 tvg-id="ViiMEDIA.in@SD" tvg-name="Vii MEDIA (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vii-media-f846eef4fa28daa1283a.png" group-title="New Channels" x-discovery-source-country="IN",Vii MEDIA (1080p)
@@ -1433,8 +1423,32 @@ https://jukin-weatherspy-2-in.samsung.wurl.tv/playlist.m3u8
 http://116.90.120.149:8000/play/a11o/index.m3u8
 #EXTINF:-1 tvg-id="ZodiakTV.in@SD" tvg-name="Zodiak TV (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zodiak-tv.png" group-title="New Channels" x-discovery-source-country="IN",Zodiak TV (1080p)
 https://ranacable.duckdns.org/ZodiakTv/index.m3u8
-#EXTINF:-1 tvg-id="NickJr.in@SD" tvg-name="Nick Jr. (India) (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr-india.png" group-title="New Backups" x-discovery-source-country="BD",Nick Jr. (India) (576p)
-http://103.135.253.32:8080/NICK-Jr/index.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen1.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1/images/LOGO_HD/image.png" tvg-country="IN" tvg-name="Sony Sports Ten 1 HD (1080p)" x-discovery-source-country="IN" group-title="New Channels",Sony Sports Ten 1 HD (1080p)
+http://116.90.120.149:8000/play/a11t/index.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen2.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2/images/LOGO_HD/image.png" tvg-country="IN" tvg-name="Sony Sports Ten 2 HD (1080p)" x-discovery-source-country="IN" group-title="New Channels",Sony Sports Ten 2 HD (1080p)
+http://116.90.120.149:8000/play/a137/index.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen5.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5/images/LOGO_HD/image.png" tvg-country="IN" tvg-name="Sony Sports Ten 5 (576p)" x-discovery-source-country="IN" group-title="New Channels",Sony Sports Ten 5 (576p)
+http://116.90.120.149:8000/play/a117/index.m3u8
+#EXTINF:-1 tvg-id="StarGold2.in@SD" tvg-logo="https://i.imgur.com/G0ZfzZr.png" tvg-country="IN" tvg-name="Star Gold 2 (576p)" x-discovery-source-country="IN" group-title="New Channels",Star Gold 2 (576p)
+http://116.90.120.149:8000/play/a12b/index.m3u8
+#EXTINF:-1 tvg-id="StarGoldRomance.in@SD" tvg-logo="https://i.imgur.com/gSWv9U3.png" tvg-country="IN" tvg-name="Star Gold Romance (576p)" x-discovery-source-country="IN" group-title="New Channels",Star Gold Romance (576p)
+http://116.90.120.149:8000/play/a12c/index.m3u8
+#EXTINF:-1 tvg-id="StarSports1.in@HD" tvg-logo="https://i.imgur.com/E5jjKHI.png" tvg-country="IN" tvg-name="Star Sports 1 HD (1080p)" x-discovery-source-country="IN" group-title="New Channels",Star Sports 1 HD (1080p)
+http://116.90.120.149:8000/play/a11x/index.m3u8
+#EXTINF:-1 tvg-id="TLC.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TLC/images/LOGO_HD/image.png" tvg-country="IN" tvg-name="TLC (India) HD (1080p)" x-discovery-source-country="IN" group-title="New Channels",TLC (India) HD (1080p)
+http://116.90.120.149:8000/play/a11g/index.m3u8
+#EXTINF:-1 tvg-id="Unite8Sports1.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CAFE/images/LOGO_HD/LOGO_HD_5UHAHVIHu_UNITE8-SPORTS-1_264X144.webp" tvg-country="IN" tvg-name="Unite8 Sports 1 (576p)" x-discovery-source-country="IN" group-title="New Channels",Unite8 Sports 1 (576p)
+http://116.90.120.149:8000/play/a11l/index.m3u8
+#EXTINF:-1 tvg-id="Unite8Sports2.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDFLIX_HD/images/LOGO_HD/LOGO_HD_qVrE3q5rN_UNITE8-SPORTS-2_HD_264X144.webp" tvg-country="IN" tvg-name="Unite8 Sports 2 HD (1080p)" x-discovery-source-country="IN" group-title="New Channels",Unite8 Sports 2 HD (1080p)
+http://116.90.120.149:8000/play/a129/index.m3u8
+#EXTINF:-1 tvg-id="ZeeClassic.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CLASSIC/images/LOGO_HD/LOGO_HD_image.png" tvg-country="IN" tvg-name="Zee Classic (576p)" x-discovery-source-country="IN" group-title="New Channels",Zee Classic (576p)
+http://116.90.120.149:8000/play/a121/index.m3u8
+#EXTINF:-1 tvg-id="ZeePower.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0028ZJ97.png?lock=720x540" tvg-country="IN" tvg-name="Zee Power HD (1080p)" x-discovery-source-country="IN" group-title="New Channels",Zee Power HD (1080p)
+http://116.90.120.149:8000/play/a11p/index.m3u8
+#EXTINF:-1 tvg-id="ZeeTalkies.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_TALKIES/images/LOGO_HD/LOGO_HD_image.png" tvg-country="IN" tvg-name="Zee Talkies HD (1080p)" x-discovery-source-country="IN" group-title="New Channels",Zee Talkies HD (1080p)
+http://116.90.120.149:8000/play/a116/index.m3u8
+#EXTINF:-1 tvg-id="ZeeThirai.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_THIRAI/images/LOGO_HD/LOGO_HD_image.png" tvg-country="IN" tvg-name="Zee Thirai HD (1080p)" x-discovery-source-country="IN" group-title="New Channels",Zee Thirai HD (1080p)
+http://116.90.120.149:8000/play/a11q/index.m3u8
 #EXTINF:-1 tvg-id="DDKashir.in@SD" tvg-name="DD Kashir (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-kashir.png" group-title="New Backups" x-discovery-source-country="IN",DD Kashir (576p)
 https://cdn.pishow.tv/ott/live/16/master.m3u8
 #EXTINF:-1 tvg-id="DDNational.in@HD" tvg-name="DD National HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-national.png" group-title="New Backups" x-discovery-source-country="IN",DD National HD (1080p)
@@ -1481,6 +1495,26 @@ https://indianews-yupptv.vgcdn.net/vglive-sk-926943/index.m3u8
 https://deltatesttatasky.akamaized.net/out/i/968284.m3u8
 #EXTINF:-1 tvg-id="AndTV.in@HD" tvg-name="&TV HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-tv-af1a6839d33bb0bcceb7.png" group-title="New Backups" x-discovery-source-country="IN",&TV HD (1080p)
 http://116.90.120.149:8000/play/a133/index.m3u8
+#EXTINF:-1 tvg-id="ApnaPunjabTV.in@SD" tvg-logo="https://www.apnapunjab.tv/images/logo.png" tvg-country="IN" tvg-name="Apna Punjab TV (India) (576p)" x-discovery-source-country="IN" group-title="New Backups",Apna Punjab TV (India) (576p)
+https://samitaorigin.tangotv.in/APNAPUNJAB/SAMITAORIGIN/index.m3u8
+#EXTINF:-1 tvg-id="SonySAB.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s159099_ld_h15_ab.png?lock=720x540" tvg-country="IN" tvg-name="Sony SAB HD (1080p)" x-discovery-source-country="IN" group-title="New Backups",Sony SAB HD (1080p)
+http://116.90.120.149:8000/play/a128/index.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen1.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1/images/LOGO_HD/image.png" tvg-country="IN" tvg-name="Sony Sports Ten 1 (576p)" x-discovery-source-country="IN" group-title="New Backups",Sony Sports Ten 1 (576p)
+http://116.90.120.149:8000/play/a126/index.m3u8
+#EXTINF:-1 tvg-id="StarGold.in@HD" tvg-logo="https://i.imgur.com/xC460sj.png" tvg-country="IN" tvg-name="Star Gold HD (1080p)" x-discovery-source-country="IN" group-title="New Backups",Star Gold HD (1080p)
+http://116.90.120.149:8000/play/a12a/index.m3u8
+#EXTINF:-1 tvg-id="StarGoldSelect.in@HD" tvg-logo="https://i.imgur.com/U7eiuqv.png" tvg-country="IN" tvg-name="Star Gold Select HD (1080p)" x-discovery-source-country="IN" group-title="New Backups",Star Gold Select HD (1080p)
+http://116.90.120.149:8000/play/a131/index.m3u8
+#EXTINF:-1 tvg-id="StarMovies.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png" tvg-country="IN" tvg-name="Star Movies (India) HD (1080p)" x-discovery-source-country="IN" group-title="New Backups",Star Movies (India) HD (1080p)
+http://116.90.120.149:8000/play/a13a/index.m3u8
+#EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD/images/LOGO_HD/image.png" tvg-country="IN" tvg-name="Star Movies Select HD (1080p)" x-discovery-source-country="IN" group-title="New Backups",Star Movies Select HD (1080p)
+http://116.90.120.149:8000/play/a139/index.m3u8
+#EXTINF:-1 tvg-id="StarSports1Hindi.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HD_HINDI/images/LOGO_HD/image.png" tvg-country="IN" tvg-name="Star Sports 1 Hindi HD (1080p)" x-discovery-source-country="IN" group-title="New Backups",Star Sports 1 Hindi HD (1080p)
+http://116.90.120.149:8000/play/a122/index.m3u8
+#EXTINF:-1 tvg-id="StarSports2.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_2/images/LOGO_HD/image.png" tvg-country="IN" tvg-name="Star Sports 2 HD (1080p)" x-discovery-source-country="IN" group-title="New Backups",Star Sports 2 HD (1080p)
+http://116.90.120.149:8000/play/a120/index.m3u8
+#EXTINF:-1 tvg-id="Unite8Sports1.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CAFE_HD/images/LOGO_HD/LOGO_HD_F6ILcp4Kk_UNITE8-SPORTS-1_HD_264X144.webp" tvg-country="IN" tvg-name="Unite8 Sports 1 HD (1080p)" x-discovery-source-country="IN" group-title="New Backups",Unite8 Sports 1 HD (1080p)
+http://116.90.120.149:8000/play/a125/index.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" tvg-name="7S Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" channel-id="7SMusic.in@SD" tvg-country="IN" tvg-language="tam" group-title="Backup",7S Music
 https://fta.ektv.in/live/771/master.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" tvg-name="7S Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" channel-id="7SMusic.in@SD" tvg-country="IN" tvg-language="tam" group-title="Backup",7S Music
