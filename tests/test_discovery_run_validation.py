@@ -3,11 +3,65 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from validate_discovery_run import NEWS_RE, append_section, classify_response, consolidate_international_country_groups, ensure_local_logo, final_mode, parse_playlist
+from validate_discovery_run import NEWS_RE, append_section, classify_response, consolidate_international_country_groups, ensure_local_logo, final_mode, now, parse_playlist
 from discover_bd_in_new_queues import parse as parse_bd_playlist
 
 
 class DiscoveryRunValidationTests(unittest.TestCase):
+    def test_discovery_report_timestamps_use_bangladesh_offset(self):
+        self.assertTrue(now().endswith("+06:00"))
+
+    def test_ensure_local_logo_converts_verified_repo_raw_url_to_relative_path(self):
+        import os
+        import tempfile
+        from validate_discovery_run import RAW_BASE
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = Path.cwd()
+            os.chdir(directory)
+            try:
+                Path("logos").mkdir()
+                (Path("logos") / "sample.png").write_bytes(b"authentic-local-logo")
+                extinf = f'#EXTINF:-1 tvg-name="Sample" tvg-logo="{RAW_BASE}sample.png" group-title="New Channels",Sample'
+                entry = {"name": "Sample", "logo": RAW_BASE + "sample.png", "extinf": extinf}
+                updated, localized, unavailable = ensure_local_logo(entry)
+                self.assertIn('tvg-logo="logos/sample.png"', updated)
+                self.assertTrue(localized)
+                self.assertFalse(unavailable)
+            finally:
+                os.chdir(old_cwd)
+
+    def test_iptv_new_backup_requires_an_already_represented_channel(self):
+        import os
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = Path.cwd()
+            os.chdir(directory)
+            try:
+                playlist = Path("IPTV-Playlist.m3u")
+                baseline = Path("before.m3u")
+                report = Path("report.md")
+                prefix = '#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:["New Channels","New Backups","Backup","Review"]\n'
+                backup = (
+                    '#EXTINF:-1 tvg-id="Orphan.in" tvg-name="Orphan" tvg-country="IN" group-title="New Backups",Orphan\n'
+                    "https://example.org/orphan.m3u8\n"
+                )
+                playlist.write_text(prefix + backup, encoding="utf-8")
+                baseline.write_text(prefix, encoding="utf-8")
+                report.write_text("# Report\n", encoding="utf-8")
+                previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+                os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+                try:
+                    final_mode(str(playlist), str(report), str(baseline), "iptv")
+                finally:
+                    if previous is None:
+                        os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                    else:
+                        os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+                self.assertIn("- Validation status: FAIL", report.read_text(encoding="utf-8"))
+                self.assertIn("New Backups row has no already-represented channel identity: Orphan", report.read_text(encoding="utf-8"))
+            finally:
+                os.chdir(old_cwd)
+
     def test_news_filter_does_not_misclassify_ndtv_good_times(self):
         self.assertFalse(NEWS_RE.search("NDTV Good Times"))
         self.assertTrue(NEWS_RE.search("NDTV 24x7"))

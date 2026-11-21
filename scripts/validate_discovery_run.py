@@ -11,8 +11,9 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import discover_international_channels as discovery
 import discover_bd_in_new_queues as bd_discovery
@@ -20,6 +21,7 @@ from stream_url_identity import stream_url_key
 
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 LOGOS = Path("logos")
+BD_TZ = ZoneInfo("Asia/Dhaka")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 NEWS_RE = re.compile(r"\b(?:news|headlines?|current affairs|zee business|aaj tak|times now|ndtv\s*(?:24x7|india|profit|world|marathi|mp-cg|rajasthan|haryana|bihar|assam)|republic|india today|news18|tv9)\b", re.I)
 RELIGIOUS_RE = re.compile(r"\b(?:calvary|santvani|sharnam|sharanam|christian|christ|hindu|hinduism|bhakti|bhakthi|sanatan|sikh|gurbani|jinvani|jain|devotional|gospel|bible|jesus|church|temple|prayer|sermon|satsang|aastha|sanskar|jagran|krishna|shiva|ganesh)\b", re.I)
@@ -28,7 +30,7 @@ INTL_BAD_RE = re.compile(r"\b(?:news|sports?|kids?|children|documentary|wildlife
 FASHION_RE = re.compile(r"\bfashion\s*tv\b", re.I)
 
 def now():
-    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+    return datetime.now(BD_TZ).isoformat(timespec="seconds")
 
 def attrs(line):
     return dict(ATTR_RE.findall(line))
@@ -136,7 +138,15 @@ def ensure_local_logo(entry):
     logo = entry["logo"]
     path = local_logo_path(logo)
     if path is not None and path.is_file():
-        return entry["extinf"], False, False
+        try:
+            relative = path.resolve().relative_to(LOGOS.resolve())
+        except ValueError:
+            relative = None
+        if relative is not None:
+            local_logo = "logos/" + relative.as_posix()
+            if logo != local_logo:
+                return set_logo(entry["extinf"], local_logo), True, False
+            return entry["extinf"], False, False
     found = find_logo(entry["name"])
     if found:
         return set_logo(entry["extinf"], found), True, False
@@ -274,13 +284,15 @@ def probe_mode(playlist, report, baseline, mode):
     # IPTV manual-review queues are immutable after insertion: do not re-probe
     # or rewrite old queue rows on subsequent discovery runs.
     if mode == "iptv":
-        baseline_records = Counter((e["extinf"], e["url"]) for e in before_entries)
-        consumed_records = Counter()
+        # URL identity determines whether a stream is new. Metadata-only repairs
+        # to an existing queue row must not cause old streams to be re-probed.
+        baseline_urls = Counter(stream_url_key(e["url"]) for e in before_entries)
+        consumed_urls = Counter()
         new_entries = []
         for entry in entries:
-            signature = (entry["extinf"], entry["url"])
-            if consumed_records[signature] < baseline_records[signature]:
-                consumed_records[signature] += 1
+            key = stream_url_key(entry["url"])
+            if consumed_urls[key] < baseline_urls[key]:
+                consumed_urls[key] += 1
             else:
                 new_entries.append(entry)
         targets = new_entries
@@ -413,13 +425,15 @@ def final_mode(playlist, report, baseline, mode):
         # Compare only this run's additions against the exact pre-run snapshot.
         # Legacy malformed rows, duplicates, category order, country metadata,
         # logos and other historical defects must not block manual-review intake.
-        baseline_records = Counter((e["extinf"], e["url"]) for e in before_entries)
-        consumed_records = Counter()
+        # Compare stream URLs rather than the full EXTINF line so local-logo
+        # normalization of an existing queue row is not mistaken for a new stream.
+        baseline_urls = Counter(stream_url_key(e["url"]) for e in before_entries)
+        consumed_urls = Counter()
         new_entries = []
         for entry in entries:
-            signature = (entry["extinf"], entry["url"])
-            if consumed_records[signature] < baseline_records[signature]:
-                consumed_records[signature] += 1
+            key = stream_url_key(entry["url"])
+            if consumed_urls[key] < baseline_urls[key]:
+                consumed_urls[key] += 1
             else:
                 new_entries.append(entry)
 
@@ -487,6 +501,59 @@ def final_mode(playlist, report, baseline, mode):
 
         queue_policy_issues = []
         queue_groups = {"new channels", "new backup", "new backups"}
+        queue_logo_issues = []
+        for entry in entries:
+            if entry["group"].casefold() in queue_groups and entry["logo"]:
+                logo_path = local_logo_path(entry["logo"])
+                if logo_path is None or not logo_path.is_file():
+                    queue_logo_issues.append(
+                        f"Discovery queue row has a non-local or broken logo reference: {entry['name']}"
+                    )
+        errors.extend(queue_logo_issues)
+
+        def identity_keys(entry):
+            keys = set()
+            name_key = norm_key(entry["name"])
+            if name_key:
+                keys.add("name:" + name_key)
+            for field in ("tvg-id", "channel-id"):
+                channel_id = bd_discovery.base_id(entry["attrs"].get(field, ""))
+                if channel_id:
+                    keys.add("id:" + channel_id)
+            return keys
+
+        represented = [
+            identity_keys(entry) for entry in entries
+            if entry["group"].casefold() not in queue_groups
+            and entry["group"].casefold() != "review"
+            and identity_keys(entry)
+        ]
+        new_channel_rows = [
+            entry for entry in entries
+            if entry["group"].casefold() == "new channels"
+        ]
+        backup_identity_issues = []
+        for index, entry in enumerate(new_channel_rows):
+            keys = identity_keys(entry)
+            if any(keys & other for other in represented):
+                backup_identity_issues.append(
+                    f"New Channels identity is already represented elsewhere: {entry['name']}"
+                )
+            for earlier in new_channel_rows[:index]:
+                if keys & identity_keys(earlier):
+                    backup_identity_issues.append(
+                        f"Duplicate primary identity in New Channels: {entry['name']}"
+                    )
+                    break
+        for entry in entries:
+            if entry["group"].casefold() in {"new backup", "new backups"}:
+                keys = identity_keys(entry)
+                if not any(keys & other for other in represented):
+                    backup_identity_issues.append(
+                        f"New Backups row has no already-represented channel identity: {entry['name']}"
+                    )
+        errors.extend(backup_identity_issues)
+
         for entry in entries:
             if entry["group"].casefold() not in queue_groups:
                 continue
@@ -519,7 +586,9 @@ def final_mode(playlist, report, baseline, mode):
             f"- New candidates with country metadata requiring manual review: {country_warning} (warning only)",
             f"- New candidates outside New Channels/New Backups or approved Review holds: {len(wrong_queue)}",
             f"- Out-of-scope/prohibited Indian rows remaining in New Channels/New Backups: {len(queue_policy_issues)}",
-            "- Existing unrelated playlist defects and incomplete logo/country metadata do not block discovery.",
+            f"- Discovery queue rows with non-local/broken logos: {len(queue_logo_issues)}",
+            f"- New Backup identity/duplicate-primary issues: {len(backup_identity_issues)}",
+            "- Existing unrelated playlist defects and incomplete nonessential country metadata do not block discovery.",
             "- New Channels retains primary candidates for owner review; only verified alternates remain in New Backups, and inconclusive alternates are held in Review.",
         ]
         if errors:
