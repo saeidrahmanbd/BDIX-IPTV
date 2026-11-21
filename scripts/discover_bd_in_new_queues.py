@@ -52,7 +52,7 @@ IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(
         r"\b(?:news(?:\s*\d+)?|headlines?|current affairs|newsroom|bulletin|breaking news|"
         r"gnt|aaj tak|india today|times now|republic(?:\s+(?:bharat|bangla))?|"
-        r"abp(?:\s+ananda)?|zee news|wion|tv\s*9|news18|news nation|sudarshan news|"
+        r"abp(?:\s+ananda)?|zee news|wion|tv\s*9|news18|ndtv\s*(?:24x7|24\s*x\s*7)|mirror\s*now|news nation|sudarshan news|"
         r"dd news|sansad\s*tv(?:\s+[12])?|bharat samachar|pratidin time|network\s*10|saam\s*tv|"
         r"total\s*tv(?:\s*haryana)?|aagaaz\s+times|aaj\s+ki\s+khabar|"
         r"abn\s+andhra\s+jyoti|r\s*plus(?:\s+gold)?|bhi\s+channel|tv\s*100(?:\s+national)?)\b",
