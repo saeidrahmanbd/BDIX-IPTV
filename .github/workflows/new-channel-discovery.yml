@@ -106,6 +106,8 @@ jobs:
             git add reports/iptv-channel-discovery.md
             if ! git diff --cached --quiet; then
               git commit -m 'Record IPTV discovery validation blocker'
+              # Do not let the unvalidated in-memory playlist block the report-only rebase.
+              git restore --worktree -- IPTV-Playlist.m3u
               for attempt in 1 2 3; do
                 git fetch origin main
                 git pull --rebase origin main || { git rebase --abort || true; exit 1; }
