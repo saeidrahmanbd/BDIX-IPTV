@@ -1,16 +1,16 @@
 # International Playlist Organization Audit
 
-- Entries before: 3304
-- Entries after: 3304
-- Channel names normalized: 1
+- Entries before: 3301
+- Entries after: 3301
+- Channel names normalized: 7
 - Malformed HTTP options moved into VLC directives: 0
-- Invalid/external logo references removed: 2859
+- Invalid/external logo references removed: 2850
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1477
-- Matching alternate streams retained in Backup: 371
-- True orphan Backup rows evaluated: 1
-- Eligible orphan Backup rows promoted to primary: 0
+- Original Backup/Backups and protected queue rows examined: 1478
+- Matching alternate streams retained in Backup: 368
+- True orphan Backup rows evaluated: 2
+- Eligible orphan Backup rows promoted to primary: 1
 - Clearly identified Adult orphans restored to Adult: 0
 - Ineligible/unclassified orphan Backup rows retained: 1
 - Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.
@@ -30,19 +30,19 @@
 
 ## Category counts
 
-- Bangladesh: 47
-- Indian Bangla: 32
-- Indian Movies: 76
-- Indian Music: 59
-- Indian Entertainment: 169
-- Pakistani: 19
+- Bangladesh: 46
+- Indian Bangla: 31
+- Indian Movies: 80
+- Indian Music: 54
+- Indian Entertainment: 163
+- Pakistani: 18
 - Argentina: 14
 - Brazil: 15
 - Bulgaria: 21
 - Canada: 31
-- Chile: 11
+- Chile: 10
 - China: 9
-- Colombia: 8
+- Colombia: 9
 - Costa Rica: 9
 - Czech Republic: 22
 - DO: 11
@@ -50,7 +50,7 @@
 - France: 45
 - Germany: 72
 - Greece: 8
-- Hungary: 15
+- Hungary: 14
 - Iran: 13
 - Italy: 25
 - Lebanon: 6
@@ -59,9 +59,9 @@
 - North Macedonia: 5
 - Panama: 5
 - Paraguay: 5
-- Peru: 8
+- Peru: 9
 - Poland: 24
-- Romania: 28
+- Romania: 30
 - Russia: 76
 - Saudi Arabia: 9
 - Singapore: 5
@@ -70,7 +70,7 @@
 - Turkey: 15
 - Ukraine: 28
 - United Kingdom: 21
-- United States: 239
+- United States: 242
 - Uzbekistan: 5
 - Vietnam: 6
 - International: 102
@@ -79,5 +79,5 @@
 - Religious: 3
 - Sports: 8
 - Adult: 366
-- Review: 1105
-- Backup: 372
+- Review: 1110
+- Backup: 369
