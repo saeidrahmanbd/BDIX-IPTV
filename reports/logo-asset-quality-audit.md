@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-21T01:01:31+00:00**
+Generated: **2026-11-21T01:17:48+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **1b08faa50cf5d445d7b46f47ff3a1c6115000b401c795a2193ded511735ccc3c**
-- International-Playlist.m3u SHA-256: **bd4a216f363d02c881d4a190b02aea467812373604165bfd354ef27f0c4de880**
+- International-Playlist.m3u SHA-256: **89c12a49f7f9491b7dfdc3b934d43eb67596371e128523779b40bc65076df5d7**
 
 ## Summary
 
@@ -1560,8 +1560,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pitaara TV | pitaara-tv.png | Indian Movies |
 | International-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Indian Movies |
 | International-Playlist.m3u | Soneri Cinema | verified-soneri-cinema-360p-0ba64f92f1.png | Indian Movies |
-| International-Playlist.m3u | Star Gold | star-gold-hd-1080p.png | Indian Movies |
-| International-Playlist.m3u | Star Movies (India) | star-movies-india-hd-1080p.png | Indian Movies |
 | International-Playlist.m3u | Studio One + | studio-one-plus-f44320b0327b653063d3.png | Indian Movies |
 | International-Playlist.m3u | TamilVision-TV | tamilvision-tv-1080p.png | Indian Movies |
 | International-Playlist.m3u | Thalaa TV | thalaa-tv.png | Indian Movies |
@@ -2476,6 +2474,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
+| International-Playlist.m3u | Star Movies (India) | star-movies-india-hd-1080p.png | New Channels |
+| International-Playlist.m3u | Star Gold | star-gold-hd-1080p.png | New Backups |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
