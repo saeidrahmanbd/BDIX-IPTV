@@ -189,9 +189,19 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         reason = prohibited_channel(attrs, "Disney Channel", "BD", iptv_discovery=True)
         self.assertIn("kids", reason)
 
-    def test_indian_islamic_religious_channels_are_rejected_for_iptv_policy(self):
-        attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
-        self.assertIsNotNone(prohibited_channel(attrs, "Islamic TV", iptv_discovery=True))
+    def test_indian_islamic_religious_channels_are_allowed_for_iptv_policy(self):
+        examples = [
+            ("Islamic TV", "SampleChannel.in"),
+            ("Q TV", "QTV.in"),
+            ("Madani TV", "MadaniTV.in"),
+            ("Peace TV", "PeaceTV.in"),
+            ("Quran TV", "QuranTV.in"),
+            ("Al Huda", "AlHuda.in"),
+        ]
+        for name, channel_id in examples:
+            attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": channel_id}
+            with self.subTest(name=name):
+                self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
     def test_indian_kids_are_rejected_for_active_and_discovery_policy(self):
         for name, group in [
@@ -327,7 +337,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNotNone(reason)
                 self.assertIn("news", reason)
 
-    def test_known_indian_news_kids_religious_and_vtu_aliases_are_rejected(self):
+    def test_known_indian_news_kids_non_islamic_religious_and_vtu_aliases_are_rejected(self):
         examples = [
             ("TV 100", {"tvg-id": "TV100.in@SD"}, "news"),
             ("R Plus", {"tvg-id": "RPlus.in@SD"}, "news"),
@@ -337,7 +347,6 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("Disha TV", {}, "religious"),
             ("R Plus Gold", {"tvg-id": "RPlusGold.in@SD"}, "news"),
             ("BHI Channel", {"tvg-id": "BHI.Channel.in"}, "news"),
-            ("Q TV", {"tvg-id": "QTV.in"}, "religious"),
             ("Shekinah TV", {"tvg-id": "ShekinahTV.in@SD"}, "religious"),
             ("Disney Channel", {"tvg-id": "DisneyChannel.in@HD"}, "kids"),
             ("CVR Health", {"tvg-id": "CVRHealth.in@SD"}, "knowledge"),
@@ -452,8 +461,8 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn("education", reason)
 
 
-    def test_all_indian_religious_channels_are_rejected(self):
-        for name in ("Madani TV", "Peace TV", "Quran TV", "Islam Channel", "Al Huda", "Aastha"):
+    def test_non_islamic_indian_religious_channels_are_rejected(self):
+        for name in ("Aastha", "Disha TV", "Shekinah TV", "Santvani Channel", "Calvary TV"):
             attrs = {"group-title": "Religious", "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
             with self.subTest(name=name):
                 self.assertIsNotNone(prohibited_channel(attrs, name, iptv_discovery=True))
