@@ -64,7 +64,7 @@ DISCOVERY_EXTRA_CATEGORY_PATTERNS = {}
 
 def canonical_channel_name(value: str) -> str:
     value = re.sub(r"\([^)]*\)|\[[^]]*\]", " ", str(value or ""))
-    value = re.sub(r"\b(?:\d{3,4}p|uhd|fhd|hd|sd|4k)\b", " ", value, flags=re.IGNORECASE)
+    value = re.sub(r"\b(?:\d{3,4}p|uhd|fhd|hd|sd|4k|hdr)\b", " ", value, flags=re.IGNORECASE)
     value = unicodedata.normalize("NFKD", value).casefold()
     return re.sub(r"[^a-z0-9]+", " ", value).strip()
 
@@ -329,6 +329,20 @@ def base_id(value: str) -> str:
     return (value or "").strip().casefold().split("@", 1)[0]
 
 
+def channel_identity_keys(a: dict[str, str], name: str) -> set[str]:
+    """Stable name/ID keys that ignore quality and regional display qualifiers."""
+    clean = re.sub(r"\([^)]*\)|\[[^]]*\]", " ", str(name or ""))
+    clean = re.sub(r"\b(?:\d{3,4}p|uhd|fhd|hd|sd|4k|hdr)\b", " ", clean, flags=re.I)
+    clean = re.sub(r"\b(?:india|indian|bangladesh|pakistan|pakistani)\s*$", "", clean, flags=re.I)
+    normalized = norm_name(clean)
+    keys = {"name:" + normalized} if normalized else set()
+    for field in ("tvg-id", "channel-id"):
+        channel_id = base_id(a.get(field, ""))
+        if channel_id:
+            keys.add("id:" + channel_id)
+    return keys
+
+
 def parse(text: str):
     lines = text.replace("\r", "").splitlines()
     out = []
@@ -516,6 +530,85 @@ def normalize_queue_logo(extinf_line: str, logo_root: Path = Path("logos")) -> s
     )
 
 
+
+
+def set_group_title(extinf_line: str, group: str) -> str:
+    return re.sub(
+        r'\bgroup-title="[^"]*"',
+        lambda _: f'group-title="{group}"',
+        extinf_line,
+        count=1,
+    )
+
+
+def normalize_existing_queue_roles(text: str) -> tuple[str, list[str], list[str], list[str]]:
+    """Keep New Channels genuinely new and New Backups tied to represented channels."""
+    lines = text.replace("\r", "").splitlines()
+    first = next((i for i, line in enumerate(lines) if line.startswith("#EXTINF:")), len(lines))
+    prefix = lines[:first]
+    blocks = []
+    if first < len(lines):
+        start = first
+        for i in range(first + 1, len(lines)):
+            if lines[i].startswith("#EXTINF:"):
+                blocks.append(lines[start:i])
+                start = i
+        blocks.append(lines[start:])
+
+    queue_groups = {"new channels", "new backup", "new backups"}
+    primary_keys, primary_urls = set(), set()
+    details = []
+    for block in blocks:
+        info = next((line for line in block if line.startswith("#EXTINF:")), "")
+        if not info:
+            details.append((block, {}, "", "", "", set()))
+            continue
+        a = attrs(info)
+        _, display = split_extinf(info)
+        name = (a.get("tvg-name") or display).strip()
+        group = (a.get("group-title") or "").strip()
+        url = next((line.strip() for line in block if line.strip().lower().startswith(("http://", "https://"))), "")
+        keys = channel_identity_keys(a, name)
+        details.append((block, a, name, group, url, keys))
+        if group.casefold() not in queue_groups and group.casefold() != "review":
+            primary_keys.update(keys)
+            if url:
+                primary_urls.add(stream_url_key(url))
+
+    kept, moved_to_channels, moved_to_backups, removed_duplicates = [], [], [], []
+    kept_new_channel_keys = set()
+    for block, a, name, group, url, keys in details:
+        group_key = group.casefold()
+        if group_key == "new channels":
+            if keys & primary_keys:
+                if url and stream_url_key(url) in primary_urls:
+                    removed_duplicates.append(name)
+                    continue
+                block[0] = set_group_title(block[0], "New Backups")
+                moved_to_backups.append(name)
+            else:
+                if keys & kept_new_channel_keys:
+                    removed_duplicates.append(name)
+                    continue
+                kept_new_channel_keys.update(keys)
+        elif group_key in {"new backup", "new backups"}:
+            if keys & primary_keys:
+                if url and stream_url_key(url) in primary_urls:
+                    removed_duplicates.append(name)
+                    continue
+                block[0] = set_group_title(block[0], "New Backups")
+            else:
+                if keys & kept_new_channel_keys:
+                    removed_duplicates.append(name)
+                    continue
+                block[0] = set_group_title(block[0], "New Channels")
+                moved_to_channels.append(name)
+                kept_new_channel_keys.update(keys)
+        kept.extend(block)
+
+    result = "\n".join(prefix + kept).rstrip() + "\n"
+    return result, moved_to_channels, moved_to_backups, removed_duplicates
+
 def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
     """Purge prohibited Indian queue rows and normalize their logos to local assets."""
     lines = text.replace("\r", "").splitlines()
@@ -581,22 +674,18 @@ def main() -> int:
     # discovery queues. All other existing playlist rows remain untouched.
     original = PLAYLIST.read_text(encoding="utf-8-sig")
     original, purged_existing = purge_forbidden_existing_queue_rows(original)
+    original, moved_to_channels, moved_to_backups, removed_queue_duplicates = normalize_existing_queue_roles(original)
     entries = parse(original)
     existing_urls = {stream_url_key(u) for _, _, u in entries}
     queue_groups = {"new channels", "new backup", "new backups"}
-    existing_names = {norm(n) for _, n, _ in entries}
-    existing_ids = {base_id(a.get("tvg-id") or a.get("channel-id")) for a, _, _ in entries if base_id(a.get("tvg-id") or a.get("channel-id"))}
-    represented_names = {
-        norm(n) for a, n, _ in entries
-        if (a.get("group-title") or "").strip().casefold() not in queue_groups
-        and (a.get("group-title") or "").strip().casefold() != "review"
-    }
-    represented_ids = {
-        base_id(a.get("tvg-id") or a.get("channel-id")) for a, _, _ in entries
-        if (a.get("group-title") or "").strip().casefold() not in queue_groups
-        and (a.get("group-title") or "").strip().casefold() != "review"
-        and base_id(a.get("tvg-id") or a.get("channel-id"))
-    }
+    existing_identity_keys = set()
+    represented_identity_keys = set()
+    for a, name, _ in entries:
+        keys = channel_identity_keys(a, name)
+        existing_identity_keys.update(keys)
+        group_key = (a.get("group-title") or "").strip().casefold()
+        if group_key not in queue_groups and group_key != "review":
+            represented_identity_keys.update(keys)
 
     candidates = []
     rejected = 0
@@ -621,21 +710,18 @@ def main() -> int:
 
     candidates.sort(key=lambda x: (x[0] != "Bangladesh", norm(x[2]), x[3]))
     new_channels, new_backups = [], []
-    planned_names, planned_ids = set(existing_names), set(existing_ids)
+    planned_identity_keys = set(existing_identity_keys)
 
     for country, a, name, url in candidates:
-        key = norm(name)
-        cid = base_id(a.get("tvg-id") or a.get("channel-id"))
-        if key in represented_names or (cid and cid in represented_ids):
+        keys = channel_identity_keys(a, name)
+        if keys & represented_identity_keys:
             new_backups.append((country, a, name, url))
-        elif key in planned_names or (cid and cid in planned_ids):
+        elif keys & planned_identity_keys:
             rejected += 1
             reasons["duplicate channel identity already staged in a discovery queue"] += 1
         else:
             new_channels.append((country, a, name, url))
-            planned_names.add(key)
-            if cid:
-                planned_ids.add(cid)
+            planned_identity_keys.update(keys)
 
     new_channels = new_channels[:40]
     new_backups = new_backups[:80]
@@ -709,10 +795,13 @@ def main() -> int:
         "- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**",
         "- Bangladesh channels of all genres are eligible. Indian News, Sports, Kids, Education, Knowledge, Business/Finance and non-Islamic Religious channels are prohibited in this IPTV playlist; Islamic religious channels remain eligible.",
         f"- Previously admitted prohibited Indian queue rows purged: **{len(purged_existing)}**",
+        f"- Existing orphan New Backups moved to New Channels: **{len(moved_to_channels)}**",
+        f"- Existing New Channels moved to New Backups because a primary channel already exists: **{len(moved_to_backups)}**",
+        f"- Duplicate queue rows removed during role normalization: **{len(removed_queue_duplicates)}**",
         "- Existing discovery-queue logo URLs were converted to verified local /logos/ paths or removed when no matching local asset existed; no placeholder art was used.",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
-        "- Existing manual-review queue rows changed only where they violated the owner-authorized Indian exclusions or required local-logo normalization.",
+        "- Only discovery queue rows were purged, reclassified or logo-normalized; unrelated primary playlist entries were preserved.",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected/held candidates: **{rejected}**",
@@ -724,8 +813,12 @@ def main() -> int:
     report.extend(f"- {name} (source feed: {country}) — {url}" for country, _, name, url in new_channels)
     report += ["", "## New Backups", ""]
     report.extend(f"- {name} (source feed: {country}) — {url}" for country, _, name, url in new_backups)
+    report += ["", "## Existing queue-role corrections", ""]
+    report.extend(f"- Moved from New Backups to New Channels: {name}" for name in moved_to_channels)
+    report.extend(f"- Moved from New Channels to New Backups: {name}" for name in moved_to_backups)
+    report.extend(f"- Duplicate queue row removed: {name}" for name in removed_queue_duplicates)
     REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
-    print(f"Discovery: {len(new_channels)} new channels, {len(new_backups)} new backups, {rejected} rejected; {len(purged_existing)} prohibited Indian queue rows purged.")
+    print(f"Discovery: {len(new_channels)} new channels, {len(new_backups)} new backups, {rejected} rejected; {len(purged_existing)} prohibited Indian queue rows purged; {len(moved_to_channels)} moved to New Channels, {len(moved_to_backups)} moved to New Backups, {len(removed_queue_duplicates)} duplicate queue rows removed.")
     return 0
 
 
