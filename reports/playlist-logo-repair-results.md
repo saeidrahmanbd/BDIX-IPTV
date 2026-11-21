@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-21 03:59 UTC**  
+Run time: **2026-11-21 04:07 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,15 +9,13 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1389 | 2 | 0 | 0 | 0 | 0 | 0 |
+| IPTV-Playlist.m3u | 1389 | 0 | 0 | 0 | 0 | 0 | 0 |
 | International-Playlist.m3u | 3304 | 0 | 0 | 72 | 372 | 0 | 72 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| IPTV-Playlist.m3u | 1494 | Pickleball Now (720p) [Geo-blocked] | (missing) | pickleball-now-720p-geo-blocked-0b59f9270029b91e10eb.png | [IPTV-org exact ID: PickleballNow.in](https://jiotvimages.cdn.jio.com/dare_images/images/Pickleball_Now.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| IPTV-Playlist.m3u | 1504 | Unite8 Sports 1 (576p) | (missing) | unite8-sports-1-c39b236b6693e186f49c.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | International-Playlist.m3u | 21 | Banglar Kontho 24 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 99 | Vision 24 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 123 | JTV Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
