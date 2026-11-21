@@ -1,7 +1,9 @@
 name: Discovery Schedule Watchdog
 # GitHub schedule events are best-effort and may be delayed or dropped.
 # Independent checkpoints plus workflow-completion callbacks recover missed
-# production jobs throughout the Bangladesh morning. The guard checks each
+# production jobs throughout the Bangladesh morning. A push to this file also
+# provides an immediate recovery trigger when GitHub drops every scheduled
+# event for a date. The guard checks each
 # workflow's actual writer/probe job, not wrapper conclusions.
 on:
   push:
