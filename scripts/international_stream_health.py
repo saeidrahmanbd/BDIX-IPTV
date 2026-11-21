@@ -418,7 +418,19 @@ def _primary_identity_state(blocks):
 def _review_recovery_target(info: str, original_group: str,
                             primary_keys: set[tuple[str, str, str]],
                             country_ids: dict[str, set[str]]) -> str | None:
-    """Classify a working Review stream, routing duplicate identities to Backup."""
+    """Classify a working Review stream, preserving discovery-queue origin."""
+    original_key = (original_group or "").strip().casefold()
+    if original_key in {"new channels", "new backup", "new backups"}:
+        queue_group = "New Backups" if original_key in {"new backup", "new backups"} else "New Channels"
+        policy_attrs = dict(attrs(info))
+        policy_attrs["group-title"] = queue_group
+        eligible_target, eligibility_reason, _ = international_policy.discovery.discovery_eligibility(
+            policy_attrs, name_of(info)
+        )
+        if not eligible_target or eligibility_reason:
+            return None
+        return queue_group
+
     a = attrs(info)
     name = name_of(info)
     context_group = original_group if original_group and original_group.casefold() != REVIEW.casefold() else "International"
@@ -546,7 +558,10 @@ def apply_results(text, results, history, check_date):
                     if target and target.casefold() != REVIEW.casefold():
                         info = set_group(info, target)
                         current = target
-                        action = "restored-to-backup" if target == "Backup" else "restored-to-primary"
+                        if target in {"New Channels", "New Backups"}:
+                            action = "restored-to-discovery-queue"
+                        else:
+                            action = "restored-to-backup" if target == "Backup" else "restored-to-primary"
                 rec["consecutive_failures"] = 0
                 rec["auto_review"] = False
                 rec["last_status"] = "ok"
@@ -616,7 +631,7 @@ def build_report(events, history, check_date, generated, total):
     failures = [e for e in events if e["state"] == "fail"]
     uncertain = [e for e in events if e["state"] == "inconclusive"]
     moved = [e for e in events if e["action"] == "moved-to-review"]
-    recovered = [e for e in events if e["action"] in {"restored", "restored-to-primary", "restored-to-backup"}]
+    recovered = [e for e in events if e["action"] in {"restored", "restored-to-primary", "restored-to-backup", "restored-to-discovery-queue"}]
     removed = [e for e in events if e["action"] == "removed-after-three-failed-days"]
     flagged = sum(1 for r in history["entries"].values() if r.get("auto_review") and not r.get("removed"))
     inconclusive_reasons = Counter(
@@ -635,7 +650,7 @@ def build_report(events, history, check_date, generated, total):
         f"- Definitive failures today: **{len(failures)}**",
         f"- Inconclusive checks: **{len(uncertain)}**",
         f"- Newly moved to Review: **{len(moved)}**",
-        f"- Restored from Review to primary/Backup: **{len(recovered)}**",
+        f"- Restored from Review to primary/Backup/discovery queue: **{len(recovered)}**",
         f"- Removed after three consecutive failed days: **{len(removed)}**",
         f"- Automatically flagged rows still under Review: **{flagged}**", "",
         "## Rules", "",
