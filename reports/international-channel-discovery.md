@@ -1,16 +1,17 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-21T07:43:30+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-21T09:57:51+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12222
-- Existing playlist records: 3304
+- Existing playlist records: 3305
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2218
+- Exact source URLs already in playlist: 2219
 - Duplicate URLs within source feed: 3
-- New eligible source records after URL/policy filtering: 135
+- New eligible source records after URL/policy filtering: 134
+- Adult channels discovered directly into Adult: 0
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
-- New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.
+- New discoveries from every country, including Bangladesh, India and Pakistan, may be dedicated Movies or Music channels or Adult channels. Adult channels are placed directly in Adult, not New Channels. News, religious, kids, sports, documentary and general entertainment remain excluded. Fashion TV is also an explicit allowed exception.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
 - New discoveries remain in New Channels/New Backups after probing. Verified primary channels stay in New Channels; verified alternate streams stay in New Backups. Inconclusive alternate streams are held in Review, and missing authentic logos are left blank rather than invented.
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
@@ -68,10 +69,13 @@
 - **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
 - **ATN Music (360p)** — New Channels — BD — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 - **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
-- **BRIDGE Hits (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
 - **Concert Channel (720p)** — New Channels — US — https://jmp2.uk/plu-6868152657543d1f8be4ece3.m3u8
 - **D Music (1280p) [Not 24/7]** — New Channels — KH — http://43.252.18.195:5080/live/streams/WCVNews.playlist.m3u8
 - **Farra Play (576p)** — New Channels — PY — https://stream.farra.com.py/live/farra_low.m3u8
+- **GMTV (1080p)** — New Channels — US — https://livechannel.mdc.akamaized.net/stitch/livechannel/1341/master1400000.m3u8;session=live_stream_1341
+
+## Adult channels added directly to Adult
+
 
 ## Backup alternates
 
@@ -109,15 +113,15 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-11-21T07:43:35+06:00
+- Run timestamp: 2026-11-21T09:57:55+06:00
 - Mode: international
-- New entries and discovery queues probed: 67
-- Verified live media responses: 12
-- Verified new primary channels retained in New Channels: 8
+- New entries and discovery queues probed: 68
+- Verified live media responses: 11
+- Verified new primary channels retained in New Channels: 7
 - Verified alternate streams retained in New Backups: 4
 - Inconclusive candidates retained for manual review: 0
 - Unverified backup streams moved to Review: 0
-- Definitively dead new candidates removed: 55
+- Definitively dead new candidates removed: 57
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
@@ -132,11 +136,13 @@
 - Removed newly discovered Andina RTV (720p) from New Channels — HTTP 404.
 - Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
 - Removed newly discovered BRIDGE Classic (576p) from New Channels — HTTP 404.
+- Removed newly discovered BRIDGE Hits (576p) from New Channels — HTTP 404.
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Concert Channel (720p) from New Channels — HTTP 404.
 - Removed newly discovered D Music (1280p) [Not 24/7] from New Channels — HTTP 404.
 - Removed newly discovered Farra Play (576p) from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
+- Removed newly discovered GMTV (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Hollywood Ukraine (576p) from New Channels — HTTP 404.
 - Removed newly discovered HomePlus from New Channels — HTTP 404.
 - Removed newly discovered ICC plus (1080p) from New Channels — HTTP 404.
@@ -183,9 +189,9 @@
 
 ## Final validation
 
-- Run timestamp: 2026-11-21T07:43:36+06:00
+- Run timestamp: 2026-11-21T09:57:56+06:00
 - Validation status: PASS
-- M3U entries parsed: 3305
+- M3U entries parsed: 3304
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed

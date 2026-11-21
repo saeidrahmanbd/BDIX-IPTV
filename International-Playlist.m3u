@@ -5858,27 +5858,25 @@ https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg0
 https://zoomoo-samsungau.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="AbdulmajeedAbdullah.sa@SD" tvg-name="Abdulmajeed Abdullah (1080p)" tvg-country="SA" channel-id="AbdulmajeedAbdullah.sa@SD" group-title="New Channels" tvg-content="Music",Abdulmajeed Abdullah (1080p)
 https://d2hng5r56zpsbw.cloudfront.net/out/v1/9c4c990f44bb4767bb46271f326dd574/index.m3u8
-#EXTINF:-1 tvg-id="BRIDGEHits.ru@SD" tvg-name="BRIDGE Hits (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/bridge-hits-576p.png" tvg-country="RU" channel-id="BRIDGEHits.ru@SD" group-title="New Channels" tvg-content="Music",BRIDGE Hits (576p)
-http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
-#EXTINF:-1 tvg-id="StarGold2.in@SD" channel-id="StarGold2.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-2.png" tvg-country="IN" tvg-language="hin" tvg-content="Movies" group-title="New Channels" tvg-name="Star Gold 2",Star Gold 2
+#EXTINF:-1 tvg-id="StarGold2.in@SD" channel-id="StarGold2.in@SD" tvg-logo="logos/star-gold-2.png" tvg-country="IN" tvg-language="hin" tvg-content="Movies" group-title="New Channels" tvg-name="Star Gold 2",Star Gold 2
 http://116.90.120.149:8000/play/a12b/index.m3u8
-#EXTINF:-1 tvg-id="StarGoldRomance.in@SD" channel-id="StarGoldRomance.in@SD" tvg-country="IN" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-romance-c5fa568b2f3a21118f2b.png" tvg-content="Movies" group-title="New Channels" tvg-name="Star Gold Romance",Star Gold Romance
+#EXTINF:-1 tvg-id="StarGoldRomance.in@SD" channel-id="StarGoldRomance.in@SD" tvg-country="IN" tvg-language="hin" tvg-logo="logos/star-gold-romance-c5fa568b2f3a21118f2b.png" tvg-content="Movies" group-title="New Channels" tvg-name="Star Gold Romance",Star Gold Romance
 http://116.90.120.149:8000/play/a12c/index.m3u8
-#EXTINF:-1 tvg-id="StarGoldSelect.in@HD" channel-id="StarGoldSelect.in@HD" tvg-country="IN" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select-fa81030f74.png" tvg-content="Movies" group-title="New Channels" tvg-name="Star Gold Select",Star Gold Select
+#EXTINF:-1 tvg-id="StarGoldSelect.in@HD" channel-id="StarGoldSelect.in@HD" tvg-country="IN" tvg-language="hin" tvg-logo="logos/star-gold-select-fa81030f74.png" tvg-content="Movies" group-title="New Channels" tvg-name="Star Gold Select",Star Gold Select
 http://116.90.120.149:8000/play/a131/index.m3u8
-#EXTINF:-1 tvg-id="StarMovies.in@HD" channel-id="StarMovies.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/star-movies-india-hd-1080p.png" tvg-country="IN" tvg-language="und" tvg-content="Movies" group-title="New Channels" tvg-name="Star Movies (India)",Star Movies (India)
+#EXTINF:-1 tvg-id="StarMovies.in@HD" channel-id="StarMovies.in@HD" tvg-logo="logos/international/star-movies-india-hd-1080p.png" tvg-country="IN" tvg-language="und" tvg-content="Movies" group-title="New Channels" tvg-name="Star Movies (India)",Star Movies (India)
 http://116.90.120.149:8000/play/a13a/index.m3u8
-#EXTINF:-1 tvg-id="ZeeTalkies.in@HD" channel-id="ZeeTalkies.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-talkies.png" tvg-country="IN" tvg-language="mar" tvg-content="Movies" group-title="New Channels" tvg-name="Zee Talkies",Zee Talkies
+#EXTINF:-1 tvg-id="ZeeTalkies.in@HD" channel-id="ZeeTalkies.in@HD" tvg-logo="logos/zee-talkies.png" tvg-country="IN" tvg-language="mar" tvg-content="Movies" group-title="New Channels" tvg-name="Zee Talkies",Zee Talkies
 http://116.90.120.149:8000/play/a116/index.m3u8
-#EXTINF:-1 tvg-id="ZeeThirai.in@HD" channel-id="ZeeThirai.in@HD" tvg-country="IN" tvg-language="tam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-thirai-7ca309bb44820a2b7a4b.png" tvg-content="Movies" group-title="New Channels" tvg-name="Zee Thirai",Zee Thirai
+#EXTINF:-1 tvg-id="ZeeThirai.in@HD" channel-id="ZeeThirai.in@HD" tvg-country="IN" tvg-language="tam" tvg-logo="logos/zee-thirai-7ca309bb44820a2b7a4b.png" tvg-content="Movies" group-title="New Channels" tvg-name="Zee Thirai",Zee Thirai
 http://116.90.120.149:8000/play/a11q/index.m3u8
-#EXTINF:-1 tvg-id="SalsaGordaTelevision.co@SD" tvg-name="Salsa Gorda Television" tvg-country="CO" channel-id="SalsaGordaTelevision.co@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/salsa-gorda-television-ce7324b2d1.png" group-title="New Backups" tvg-content="Music",Salsa Gorda Television
+#EXTINF:-1 tvg-id="SalsaGordaTelevision.co@SD" tvg-name="Salsa Gorda Television" tvg-country="CO" channel-id="SalsaGordaTelevision.co@SD" tvg-logo="logos/salsa-gorda-television-ce7324b2d1.png" group-title="New Backups" tvg-content="Music",Salsa Gorda Television
 https://stmv1.voxtvhd.com.br/salsagorda/salsagorda/playlist.m3u8
-#EXTINF:-1 tvg-id="StarGold.in@HD" channel-id="StarGold.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-hd-1080p.png" tvg-country="IN" tvg-language="und" tvg-content="Movies" group-title="New Backups" tvg-name="Star Gold",Star Gold
+#EXTINF:-1 tvg-id="StarGold.in@HD" channel-id="StarGold.in@HD" tvg-logo="logos/star-gold-hd-1080p.png" tvg-country="IN" tvg-language="und" tvg-content="Movies" group-title="New Backups" tvg-name="Star Gold",Star Gold
 http://116.90.120.149:8000/play/a12a/index.m3u8
-#EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-language="eng" channel-id="StarMoviesSelect.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-movies-select.png" tvg-country="IN" tvg-content="Movies" group-title="New Backups" tvg-name="Star Movies Select",Star Movies Select
+#EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-language="eng" channel-id="StarMoviesSelect.in@HD" tvg-logo="logos/star-movies-select.png" tvg-country="IN" tvg-content="Movies" group-title="New Backups" tvg-name="Star Movies Select",Star Movies Select
 http://116.90.120.149:8000/play/a139/index.m3u8
-#EXTINF:-1 tvg-id="VIVARussia.ru@SD" tvg-name="VIVA Russia" tvg-country="RU" channel-id="VIVARussia.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viva-russia-9fd4352f47.png" group-title="New Backups" tvg-content="Music",VIVA Russia
+#EXTINF:-1 tvg-id="VIVARussia.ru@SD" tvg-name="VIVA Russia" tvg-country="RU" channel-id="VIVARussia.ru@SD" tvg-logo="logos/viva-russia-9fd4352f47.png" group-title="New Backups" tvg-content="Music",VIVA Russia
 https://183.giatvcdn.com/ssh101/ssh101/vivarussia/playlist.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" channel-id="7SMusic.in@SD" tvg-language="tam" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" group-title="Backup" tvg-name="7S Music",7S Music
 https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
