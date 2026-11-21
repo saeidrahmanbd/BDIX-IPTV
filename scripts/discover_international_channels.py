@@ -245,6 +245,13 @@ def localize_existing_logo(a,name):
    return "logos/"+rel[len("logos/"):].replace("\\","/")
   clean=dict(a);clean.pop("tvg-logo",None)
   return local_logo(clean,name)
+ if raw.startswith(RAW_BASE):
+  rel=urllib.parse.unquote(raw[len(RAW_BASE):].split("?",1)[0].split("#",1)[0])
+  path=LOGOS / rel
+  if rel and not Path(rel).is_absolute() and ".." not in Path(rel).parts and path.is_file() and "unused" not in path.parts and not is_blocked_logo_basename(path.name):
+   return "logos/"+rel.replace("\\","/")
+  clean=dict(a);clean.pop("tvg-logo",None)
+  return local_logo(clean,name)
  if raw.startswith(("http://","https://")):return local_logo(a,name)
  return ""
 def set_logo_attr(line,logo):
@@ -254,7 +261,7 @@ def set_logo_attr(line,logo):
  if not m:return line
  return m.group(1)+f' tvg-logo="{logo}"'+m.group(2)
 def localize_discovery_queue_logos(blocks, discovery_urls, rejected_rows):
- """Localize candidate logos and exclude review rows without authentic local assets."""
+ """Localize candidate logos; retain valid candidates even when no local art exists."""
  kept=[]; repaired=0; removed=0
  for block in blocks:
   if url_of(block) not in discovery_urls:
@@ -484,11 +491,11 @@ def main():
    if not safe_url(url_of(b)):
     filtered_existing.append((name,old,"unsafe or tokenized URL"))
     continue
-   queue_logo=local_logo(a,name)
+   queue_logo=localize_existing_logo(a,name) or localize_existing_logo(canonical,cname)
    if queue_logo:
     b[0]=set_attr(b[0],"tvg-logo",queue_logo)
    else:
-    b[0]=re.sub(r'\\s+tvg-logo="[^"]*"', "", b[0], count=1)
+    b[0]=re.sub(r'\s+tvg-logo="[^"]*"', "", b[0], count=1)
    group="New Backups"
   elif old_key=="new channels" and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
@@ -499,11 +506,11 @@ def main():
    if not safe_url(url_of(b)):
     filtered_existing.append((name,old,"unsafe or tokenized URL"))
     continue
-   queue_logo=local_logo(a,name)
+   queue_logo=localize_existing_logo(a,name)
    if queue_logo:
     b[0]=set_attr(b[0],"tvg-logo",queue_logo)
    else:
-    b[0]=re.sub(r'\\s+tvg-logo="[^"]*"', "", b[0], count=1)
+    b[0]=re.sub(r'\s+tvg-logo="[^"]*"', "", b[0], count=1)
    group="New Channels"
   elif old_key=="international" and not is_new:
    group,reason,genre=existing_international_target(a,name,country_groups)
