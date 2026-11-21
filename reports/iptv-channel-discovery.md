@@ -1,21 +1,21 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-21T07:42:56+06:00** (Asia/Dhaka)
+Generated: **2026-11-21T09:56:07+06:00** (Asia/Dhaka)
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**
-- Bangladesh channels of all genres are eligible. Indian News, Sports, Kids, Education, Knowledge, Business/Finance and non-Islamic Religious channels are prohibited in this IPTV playlist; Islamic religious channels remain eligible.
-- Previously admitted prohibited Indian queue rows purged: **13**
-- Existing orphan New Backups moved to New Channels: **9**
+- Bangladesh channels of all genres are eligible. Indian News, Kids, Education, Knowledge, Business/Finance and non-Islamic Religious channels are prohibited in this IPTV playlist; Indian Sports channels are allowed, and Islamic religious channels remain eligible.
+- Previously admitted prohibited Indian queue rows purged: **0**
+- Existing orphan New Backups moved to New Channels: **0**
 - Existing New Channels moved to New Backups because a primary channel already exists: **0**
-- Duplicate queue rows removed during role normalization: **2**
+- Duplicate queue rows removed during role normalization: **0**
 - Existing discovery-queue logo URLs were converted to verified local /logos/ paths or removed when no matching local asset existed; no placeholder art was used.
 - Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.
 - Country-group threshold: **5** legitimate primary identities
 - Only discovery queue rows were purged, reclassified or logo-normalized; unrelated primary playlist entries were preserved.
-- New channels: **5**
-- New backups: **5**
-- Rejected/held candidates: **908**
+- New channels: **13**
+- New backups: **7**
+- Rejected/held candidates: **898**
 - Country metadata, channel IDs, language and logos are advisory at this stage; retain uncertain values for owner review and repair later.
 
 ## Rejection reasons
@@ -26,12 +26,11 @@ Generated: **2026-11-21T07:42:56+06:00** (Asia/Dhaka)
 - Indian knowledge channel is prohibited: 15
 - Indian news channel is prohibited: 304
 - Indian religious channel is prohibited: 121
-- Indian sports channel is prohibited: 16
 - channel country CA is outside Bangladesh/India: 1
 - channel country NL is outside Bangladesh/India: 2
 - channel country PK is outside Bangladesh/India: 1
-- duplicate channel identity already staged in a discovery queue: 4
-- duplicate stream URL: 329
+- duplicate channel identity already staged in a discovery queue: 7
+- duplicate stream URL: 332
 - known Indian prohibited MH One Prime channel is prohibited: 1
 - known Indian prohibited brand/category is prohibited: 12
 - permanently banned channel: 31
@@ -45,6 +44,14 @@ Generated: **2026-11-21T07:42:56+06:00** (Asia/Dhaka)
 - Anmol TV (576p) (source feed: India) — https://fta.ektv.in/live/256/master.m3u8
 - Captain (576p) (source feed: India) — https://fta.ektv.in/live/173/master.m3u8
 - Jaya Plus (576p) (source feed: India) — https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8
+- Kabaddi 24x7 (720p) (source feed: India) — https://samitaorigin.tangotv.in/KABADDI24X7/SAMITAORIGIN/index.m3u8
+- Pickleball Now (720p) [Geo-blocked] (source feed: India) — https://distro-timesgroup.vgcdn.net/vglive-sk-843549/playlist.m3u8
+- Sony Sports Ten 1 HD (1080p) (source feed: India) — http://116.90.120.149:8000/play/a11t/index.m3u8
+- Sony Sports Ten 2 HD (1080p) (source feed: India) — http://116.90.120.149:8000/play/a137/index.m3u8
+- Sony Sports Ten 5 (576p) (source feed: India) — http://116.90.120.149:8000/play/a117/index.m3u8
+- Star Sports 1 HD (1080p) (source feed: India) — http://116.90.120.149:8000/play/a11x/index.m3u8
+- Unite8 Sports 1 (576p) (source feed: India) — http://116.90.120.149:8000/play/a11l/index.m3u8
+- Unite8 Sports 2 HD (1080p) (source feed: India) — http://116.90.120.149:8000/play/a129/index.m3u8
 - Win TV (576p) (source feed: India) — https://mumbai-edge.smartplaytv.in/WINTV/index.m3u8
 
 ## New Backups
@@ -53,28 +60,18 @@ Generated: **2026-11-21T07:42:56+06:00** (Asia/Dhaka)
 - DD Manipur (576p) (source feed: India) — https://fta.ektv.in/live/671/master.m3u8
 - DD Nagaland (576p) (source feed: India) — https://fta.ektv.in/live/670/master.m3u8
 - DD Tripura (576p) (source feed: India) — https://fta.ektv.in/live/661/master.m3u8
+- Star Sports 1 Hindi HD (1080p) (source feed: India) — http://116.90.120.149:8000/play/a122/index.m3u8
+- Star Sports 2 HD (1080p) (source feed: India) — http://116.90.120.149:8000/play/a120/index.m3u8
 - Vanitha TV (576p) (source feed: India) — https://mumbai-edge.smartplaytv.in/VanithaTV/index.m3u8
 
 ## Existing queue-role corrections
 
-- Moved from New Backups to New Channels: ETV Plus HD (1080p)
-- Moved from New Backups to New Channels: &pictures HD (1080p)
-- Moved from New Backups to New Channels: Sony Max HD (1080p)
-- Moved from New Backups to New Channels: Travelxp 4K HDR (2160p) [Geo-blocked]
-- Moved from New Backups to New Channels: Sony SAB HD (1080p)
-- Moved from New Backups to New Channels: Star Gold HD (1080p)
-- Moved from New Backups to New Channels: Star Gold Select HD (1080p)
-- Moved from New Backups to New Channels: Star Movies (India) HD (1080p)
-- Moved from New Backups to New Channels: Star Movies Select HD (1080p)
-- Duplicate queue row removed: MNX HD (1080p)
-- Duplicate queue row removed: Sony Max (720p)
-
 ## Stream verification
 
-- Run timestamp: 2026-11-21T07:42:57+06:00
+- Run timestamp: 2026-11-21T09:56:09+06:00
 - Mode: iptv
-- New entries and discovery queues probed: 10
-- Verified live media responses: 0
+- New entries and discovery queues probed: 20
+- Verified live media responses: 10
 - Verified new primary channels retained in New Channels: 0
 - Verified alternate streams retained in New Backups: 0
 - Inconclusive candidates retained for manual review: 0
@@ -82,8 +79,8 @@ Generated: **2026-11-21T07:42:56+06:00** (Asia/Dhaka)
 - Definitively dead new candidates removed: 10
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
-- Logo references localized to authentic repository assets: 0
-- Candidates retained without authentic local logos (no placeholder used): 0
+- Logo references localized to authentic repository assets: 8
+- Candidates retained without authentic local logos (no placeholder used): 2
 
 ### Stream probe details
 - Removed newly discovered DD Assam (576p) from New Backups — HTTP 404.
@@ -95,16 +92,18 @@ Generated: **2026-11-21T07:42:56+06:00** (Asia/Dhaka)
 - Removed newly discovered Anmol TV (576p) from New Channels — HTTP 404.
 - Removed newly discovered Captain (576p) from New Channels — HTTP 404.
 - Removed newly discovered Jaya Plus (576p) from New Channels — HTTP 404.
+- Kept Pickleball Now (720p) [Geo-blocked] in New Channels without tvg-logo — no authentic local repository asset was available.
+- Kept Unite8 Sports 1 (576p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Win TV (576p) from New Channels — HTTP 404.
 
 ## Final validation
 
-- Run timestamp: 2026-11-21T07:42:58+06:00
+- Run timestamp: 2026-11-21T09:56:09+06:00
 - Validation status: PASS
-- New manual-review candidates retained: 0
+- New manual-review candidates retained: 10
 - New malformed EXTINF/URL pairs: 0
 - New duplicate stream URL occurrences: 0
-- New candidates missing an authentic local logo: 0 (warning only)
+- New candidates missing an authentic local logo: 2 (warning only)
 - New candidates with non-local logo references: 0 (warning only)
 - New candidates with country metadata requiring manual review: 0 (warning only)
 - New candidates outside New Channels/New Backups or approved Review holds: 0
