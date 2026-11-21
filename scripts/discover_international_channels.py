@@ -185,36 +185,39 @@ def policy(a,name,allow_legacy_group=False):
  if code=="PK": return "Pakistani",None,code
  return ("International Movies" if movie else "International Music"),None,code
 
-def discovery_eligibility(a,name,allow_legacy_group=False):
- """Strict eligibility for new International discoveries: Movies/Music worldwide."""
- target, reason, code = policy(a,name,allow_legacy_group=allow_legacy_group)
- if target is None:
-  return None,reason,code
- if FASHION_RE.search(f"{name} {a.get('tvg-name','')}"):
-  return None,"Fashion TV is a preserved legacy exception, not a discovery genre",code
- if target in {"News","Religious","Kids","Sports","Documentary & Wildlife","Fashion TV"}:
-  label = "news" if target == "News" else target.casefold()
-  return None,f"{label} is outside the worldwide Movie/Music-only discovery policy",code
- candidate_text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
- if re.search(r"\b(?:adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel)\b",candidate_text,re.I):
-  return None,"adult is outside the worldwide Movie/Music-only discovery policy",code
- group_text=(a.get("group-title") or "").strip()
- group_key=norm(group_text)
- if group_text and group_key not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_key=="international"):
-  group_parts=[norm(part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
-  if any(part not in MOVIE_CATEGORY_PARTS and part not in MUSIC_CATEGORY_PARTS for part in group_parts):
-   return None,"source category is not Movies or Music",code
- genre=infer_genre(a,name)
- if genre not in {"Movies","Music"}:
-  return None,"channel is not clearly Movies or Music",code
- if code=="BD":
-  return "Bangladesh",None,code
- if code=="PK":
-  return "Pakistani",None,code
- if code=="IN":
-  return ("Indian Movies" if genre=="Movies" else "Indian Music"),None,code
- return ("International Movies" if genre=="Movies" else "International Music"),None,code
+def is_adult_channel(a,name):
+ group=norm(str(a.get('group-title','')))
+ content=norm(str(a.get('tvg-content','')))
+ text=' '.join((name,a.get('tvg-name',''),a.get('tvg-id',''),a.get('channel-id','')))
+ adult_names=re.compile(r'\b(?:xxx|porn|erotic|red\s*light|playboy|penthouse|hustler|brazzers|dorcel|adult\s+(?:channel|entertainment|movies?|tv))\b',re.I)
+ return group in {'adult','xxx','adultentertainment','erotic','porn'} or content in {'adult','xxx','porn','erotic','adultentertainment'} or bool(adult_names.search(text))
 
+def discovery_eligibility(a,name,allow_legacy_group=False):
+ code=country_code(a)
+ if is_adult_channel(a,name):
+  if BAD_NAME_RE.search(name): return None,'test/VOD/non-TV name',code
+  return 'Adult',None,code
+ target, reason, code = policy(a,name,allow_legacy_group=allow_legacy_group)
+ if target is None: return None,reason,code
+ if FASHION_RE.search(f'{name} {a.get("tvg-name","")}'): return None,'Fashion TV is a preserved legacy exception, not a discovery genre',code
+ if target in {'News','Religious','Kids','Sports','Documentary & Wildlife','Fashion TV'}:
+  label='news' if target=='News' else target.casefold()
+  return None,f'{label} is outside the worldwide Movie/Music-only discovery policy',code
+ candidate_text=' '.join((name,a.get('tvg-name',''),a.get('tvg-id',''),a.get('channel-id','')))
+ if re.search(r'\b(?:adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel)\b',candidate_text,re.I):
+  return None,'adult is outside the worldwide Movie/Music-only discovery policy',code
+ group_text=(a.get('group-title') or '').strip()
+ group_key=norm(group_text)
+ if group_text and group_key not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_key=='international'):
+  group_parts=[norm(part) for part in re.split(r'[;,|/]+',group_text) if part.strip()]
+  if any(part not in MOVIE_CATEGORY_PARTS and part not in MUSIC_CATEGORY_PARTS for part in group_parts):
+   return None,'source category is not Movies or Music',code
+ genre=infer_genre(a,name)
+ if genre not in {'Movies','Music'}: return None,'channel is not clearly Movies or Music',code
+ if code=='BD': return 'Bangladesh',None,code
+ if code=='PK': return 'Pakistani',None,code
+ if code=='IN': return ('Indian Movies' if genre=='Movies' else 'Indian Music'),None,code
+ return ('International Movies' if genre=='Movies' else 'International Music'),None,code
 def safe_url(url):
  try:
   p=urllib.parse.urlsplit(url)
