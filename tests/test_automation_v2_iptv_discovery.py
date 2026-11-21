@@ -21,12 +21,13 @@ class IptvDiscoveryAdapterTests(unittest.TestCase):
         self.assertTrue(any("country conflicts" in warning for warning in result.warnings))
         self.assertTrue(any("no authentic local logo" in warning for warning in result.warnings))
 
-    def test_indian_sports_and_news_are_rejected(self):
+    def test_indian_sports_are_allowed_but_news_remains_rejected(self):
         with tempfile.TemporaryDirectory() as temp:
             result=build_discovery_batch(BASE,{"India":IN_FEED},temp)
-        self.assertEqual(len(result.candidates),0)
+        self.assertEqual(len(result.candidates),1)
+        self.assertIn("Cricket Sports", result.candidates[0].extinf)
+        self.assertIn('group-title="New Channels"', result.candidates[0].extinf)
         reasons = dict(result.rejected_reasons)
-        self.assertGreater(reasons.get("Indian sports channel is prohibited", 0), 0)
         self.assertGreater(reasons.get("Indian news channel is prohibited", 0), 0)
 
     def test_duplicate_channel_identity_becomes_new_backup(self):

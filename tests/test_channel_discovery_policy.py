@@ -213,17 +213,16 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
                 self.assertIsNotNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
-    def test_indian_sports_are_rejected_but_knowledge_business_and_education_remain_rejected(self):
+    def test_indian_sports_are_allowed_but_knowledge_business_and_education_remain_rejected(self):
         for name, group in [
             ("Star Sports", "Sports"), ("Sony Sports Ten 1 HD", "Entertainment"),
             ("Unite8 Sports 1", "Entertainment"), ("Kabaddi 24x7", "Entertainment"),
             ("Pickleball Now", "Entertainment"), ("Eurosport India", "Entertainment"),
+            ("Cricket 24", "Cricket"), ("Football Live", "Football"),
         ]:
             attrs = {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}
             with self.subTest(name=name, group=group):
-                reason = prohibited_channel(attrs, name, iptv_discovery=True)
-                self.assertIsNotNone(reason)
-                self.assertIn("sports", reason)
+                self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
         for name, group in [
             ("Discovery Channel", "Knowledge"), ("National Geographic", "Documentary"),
             ("Animal Planet", "Entertainment"), ("Corporate Channel", "Business"),
@@ -260,19 +259,20 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(set(removed), {"Vyas Channel", "Shiksha TV", "Gyandarshan HD"})
         self.assertIn("Channel 24", filtered)
 
-    def test_existing_prohibited_indian_sports_queue_rows_are_purged(self):
+    def test_existing_indian_sports_queue_rows_are_preserved(self):
         text = (
-            "#EXTM3U\n"
-            '#EXTINF:-1 tvg-name="Sony Sports Ten 1" tvg-country="IN" group-title="New Channels",Sony Sports Ten 1\n'
-            "https://example.org/sony-sports.m3u8\n"
-            '#EXTINF:-1 tvg-name="Kabaddi 24x7" tvg-country="IN" group-title="New Backups",Kabaddi 24x7\n'
-            "https://example.org/kabaddi.m3u8\n"
-            '#EXTINF:-1 tvg-name="T Sports" tvg-country="BD" group-title="New Backups",T Sports\n'
-            "https://example.org/t-sports.m3u8\n"
+            "#EXTM3U\\n"
+            '#EXTINF:-1 tvg-name="Sony Sports Ten 1" tvg-country="IN" group-title="New Channels",Sony Sports Ten 1\\n'
+            "https://example.org/sony-sports.m3u8\\n"
+            '#EXTINF:-1 tvg-name="Kabaddi 24x7" tvg-country="IN" group-title="New Backups",Kabaddi 24x7\\n'
+            "https://example.org/kabaddi.m3u8\\n"
+            '#EXTINF:-1 tvg-name="T Sports" tvg-country="BD" group-title="New Backups",T Sports\\n'
+            "https://example.org/t-sports.m3u8\\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
-        self.assertEqual(set(removed), {"Sony Sports Ten 1", "Kabaddi 24x7"})
-        self.assertNotIn("Sony Sports Ten 1", filtered)
+        self.assertEqual(removed, [])
+        self.assertIn("Sony Sports Ten 1", filtered)
+        self.assertIn("Kabaddi 24x7", filtered)
         self.assertIn("T Sports", filtered)
 
     def test_existing_queue_roles_are_normalized_by_channel_identity(self):
@@ -494,7 +494,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNotNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
 
-    def test_indian_cricket_and_football_are_rejected_even_with_country_metadata_mismatch(self):
+    def test_indian_sports_are_allowed_even_with_country_metadata_mismatch(self):
         for name, genre in [
             ("Cricket 24", "Cricket"),
             ("Test Cricket HD", "Cricket"),
@@ -510,10 +510,9 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 candidate, reason = evaluate(
                     "India", source_metadata, name, "https://example.org/live/index.m3u8"
                 )
-                self.assertIsNone(candidate)
-                self.assertIn("sports", reason)
+                self.assertIsNotNone(candidate, reason)
 
-    def test_indian_cricket_and_football_sports_channels_are_rejected(self):
+    def test_indian_cricket_and_football_sports_channels_are_allowed(self):
         for name in ("Cricket 24", "Test Cricket HD", "Football Live", "Football Sports"):
             with self.subTest(name=name):
                 attrs = {
@@ -525,8 +524,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 candidate, reason = evaluate(
                     "India", attrs, name, "https://example.org/sports/live/index.m3u8"
                 )
-                self.assertIsNone(candidate)
-                self.assertIn("sports", reason)
+                self.assertIsNotNone(candidate, reason)
 
     def test_bangladeshi_news_is_allowed(self):
         attrs = {"group-title": "News", "tvg-country": "BD", "tvg-id": "Channel24.bd"}

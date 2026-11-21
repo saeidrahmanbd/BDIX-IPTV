@@ -6,9 +6,9 @@ country IDs/codes must identify Bangladesh or India; a recognized .in ID also
 activates the Indian discovery exclusions even when listed in the BD feed.
 Definite policy/URL exclusions and duplicate streams prevent queueing.
 
-Bangladesh channels of all genres are eligible. Indian News, Sports, Kids, Education,
-Knowledge, Business/Finance and non-Islamic Religious channels are excluded from this
-IPTV playlist discovery policy. International retains its separate policy.
+Bangladesh channels of all genres are eligible. Indian News, Kids, Education, Knowledge,
+Business/Finance and non-Islamic Religious channels are excluded from this IPTV playlist
+discovery policy. Indian Sports channels are allowed. International retains its separate policy.
 """
 # Owner-authorized policy-alignment retry marker (2026-11-19).
 # [manual-new-channel-discovery] Fresh daily discovery trigger for 2026-11-20.
@@ -57,7 +57,6 @@ IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
     "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|vyas channel|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television|vtu)\b", re.I),
     "knowledge": re.compile(r"\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv|inwild|safari tv|dd kisan|krishi darshan|agriculture|agricultural|farming|farmer)\b", re.I),
     "business": re.compile(r"\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\b", re.I),
-    "sports": re.compile(r"\b(?:sports?|espn|bein\s*sports|fox\s*sports|sky\s*sports|star\s*sports|sony\s*sports|ten\s*sports|dd\s*sports|unite8\s*sports|eurosport|willow|cricket|kabaddi|pickleball|football|soccer|hockey|basketball|volleyball|tennis|badminton|wrestling|boxing|motorsports?|formula\s*1|f1|golf|rugby|baseball|ufc|wwe|olympics?)\b", re.I),
     "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv|angel|hosanna|madani|iqra|huda|noor|deen|mta|qtv|aastha|sadhna|sanskar|jinvani|satsang|jagran|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|calvary|santvani|sharnam|disha tv)\b", re.I),
 }
 DISCOVERY_EXTRA_CATEGORY_PATTERNS = {}
@@ -793,7 +792,7 @@ def main() -> int:
         f"Generated: **{datetime.now(BD_TZ).isoformat(timespec='seconds')}** (Asia/Dhaka)", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**",
-        "- Bangladesh channels of all genres are eligible. Indian News, Sports, Kids, Education, Knowledge, Business/Finance and non-Islamic Religious channels are prohibited in this IPTV playlist; Islamic religious channels remain eligible.",
+        "- Bangladesh channels of all genres are eligible. Indian News, Kids, Education, Knowledge, Business/Finance and non-Islamic Religious channels are prohibited in this IPTV playlist; Indian Sports channels are allowed, and Islamic religious channels remain eligible.",
         f"- Previously admitted prohibited Indian queue rows purged: **{len(purged_existing)}**",
         f"- Existing orphan New Backups moved to New Channels: **{len(moved_to_channels)}**",
         f"- Existing New Channels moved to New Backups because a primary channel already exists: **{len(moved_to_backups)}**",

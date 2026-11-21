@@ -1,4 +1,4 @@
-"""IPTV Bangladesh/India source adapter with advisory country/logo metadata and no file writes."""
+"""IPTV Bangladesh/India discovery adapter; Indian sports remain eligible."""
 from __future__ import annotations
 from dataclasses import dataclass
 from functools import lru_cache
