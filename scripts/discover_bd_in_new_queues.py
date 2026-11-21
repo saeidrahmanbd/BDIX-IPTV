@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Discover Bangladesh/India candidates into manual-review queues.
 
-The Bangladesh and India source feeds establish discovery scope. Explicit
-conflicting foreign country metadata is rejected; incomplete nonessential
-metadata alone is not a reason to reject a legitimate live channel.
+The Bangladesh and India source feeds establish discovery scope. Corroborated
+foreign identities are rejected; an isolated foreign suffix in a stale ID does
+not override a clear BD/IN feed context. Incomplete nonessential metadata alone
+is not a reason to reject a legitimate live channel.
 
 Bangladesh channels of all genres are eligible. For Indian channels, exclude
 News and non-Islamic religious content only. Islamic religious channels, Kids,
@@ -681,7 +682,7 @@ def main() -> int:
         "# IPTV Channel Discovery", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
-        "- **Discovery scope: Bangladesh and India source feeds. Feed context establishes scope; explicit conflicting foreign country metadata is rejected, while missing nonessential metadata alone does not disqualify a channel.**",
+        "- **Discovery scope: Bangladesh and India source feeds. Feed context establishes scope; corroborated foreign identities are rejected, while an isolated stale foreign ID suffix or missing nonessential metadata alone does not disqualify a channel.**",
         "- Bangladesh channels of all genres are eligible. For Indian channels, only News and non-Islamic religious content are excluded; Islamic religious, Kids, Education, Knowledge, Business/Finance, Sports and other legitimate live-TV genres remain eligible unless permanently banned.",
         f"- Previously admitted prohibited Indian queue rows purged: **{len(purged_existing)}**",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
