@@ -12,13 +12,15 @@ Playback is checked by the downstream validation step.
 from __future__ import annotations
 import hashlib,re,unicodedata,urllib.parse,urllib.request
 from collections import Counter,defaultdict
-from datetime import datetime,timezone
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from stream_url_identity import stream_url_key
 from logo_asset_naming import is_blocked_logo_basename
 from country_verification import ISO_CODES as ALL_ISO_CODES
 import discover_bd_in_new_queues as bd_discovery
 PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-channel-discovery.md"); LOGOS=Path("logos")
+BD_TZ=ZoneInfo("Asia/Dhaka")
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
 FIXED_GROUPS=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani"]
@@ -588,7 +590,7 @@ def main():
   if fg.casefold() not in {"backup","backups","adult","test","new backup","new backups","new channels","not playing","review"}:
    final_group_by_identity[(key_name,country_code(fa) or "")]=fg
  new_rows=[(n,final_group_by_identity.get((norm(n),c or ""),final_group_by_name.get(norm(n),g)),c,u) for n,g,c,u in new_rows]
- REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
+ REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(BD_TZ).isoformat(timespec='seconds')} (Asia/Dhaka)",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
   f"- Existing logo references localized/repaired: {logo_refs_repaired}",
   f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for every country except Bangladesh and India, including Pakistan.","- New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.","- Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.","- New discoveries remain in New Channels/New Backups after probing. Verified primary channels stay in New Channels; verified alternate streams stay in New Backups. Inconclusive alternate streams are held in Review, and missing authentic logos are left blank rather than invented.","- Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
  report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Existing discovery-queue entries removed",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
