@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T05:28:07+00:00",
+  "generated": "2026-11-21T00:57:42+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -567,16 +567,19 @@
     },
     "apnapunjabtv": {
       "names": [
-        "Apna Punjab TV"
+        "Apna Punjab TV",
+        "Apna Punjab TV (India) (576p)"
       ],
       "ids": [
-        "apnapunjabtv.ca@sd"
+        "apnapunjabtv.ca@sd",
+        "apnapunjabtv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "ary.digital": {
@@ -1263,20 +1266,6 @@
       "primary": 1,
       "backup": 0
     },
-    "btltv": {
-      "names": [
-        "BTL TV (Netherlands) (1080p)"
-      ],
-      "ids": [
-        "btltv.nl@sd"
-      ],
-      "groups": [
-        "New Channels"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "btvchattogram": {
       "names": [
         "BTV Chattogram"
@@ -1330,20 +1319,6 @@
       ],
       "groups": [
         "Documentary & Wildlife"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "cartoonnetwork": {
-      "names": [
-        "Cartoon Network (Pakistan)"
-      ],
-      "ids": [
-        "cartoonnetwork.pk@sd"
-      ],
-      "groups": [
-        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -3031,20 +3006,6 @@
       ],
       "groups": [
         "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "cvrhealth": {
-      "names": [
-        "CVR Health (576p)"
-      ],
-      "ids": [
-        "cvrhealth.in@sd"
-      ],
-      "groups": [
-        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -6797,34 +6758,6 @@
       "primary": 2,
       "backup": 1
     },
-    "nationalgeographic": {
-      "names": [
-        "National Geographic (India) HD (1080p)"
-      ],
-      "ids": [
-        "nationalgeographic.in@hd"
-      ],
-      "groups": [
-        "New Channels"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "nationalgeographicwild": {
-      "names": [
-        "National Geographic Wild (India) HD (1080p)"
-      ],
-      "ids": [
-        "nationalgeographicwild.in@hd"
-      ],
-      "groups": [
-        "New Channels"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "naturetime": {
       "names": [
         "Nature Time"
@@ -7061,8 +6994,7 @@
     "nickjr": {
       "names": [
         "Nick Jr",
-        "Nick Jr. (India)",
-        "Nick Jr. (India) (576p)"
+        "Nick Jr. (India)"
       ],
       "ids": [
         "nickjr.in@sd",
@@ -7070,11 +7002,10 @@
       ],
       "groups": [
         "Kids",
-        "New Backups",
         "Review"
       ],
-      "streams": 3,
-      "primary": 3,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "now70s": {
@@ -7887,20 +7818,6 @@
       ],
       "groups": [
         "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "qelloconcertsbystingray": {
-      "names": [
-        "Qello Concerts by Stingray (1080p)"
-      ],
-      "ids": [
-        "qelloconcertsbystingray.ca@sd"
-      ],
-      "groups": [
-        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -8968,13 +8885,46 @@
     },
     "sonysab": {
       "names": [
-        "Sony SAB"
+        "Sony SAB",
+        "Sony SAB HD (1080p)"
       ],
       "ids": [
         "sonysab.in@hd"
       ],
       "groups": [
+        "New Backups",
         "Review"
+      ],
+      "streams": 2,
+      "primary": 2,
+      "backup": 0
+    },
+    "sonysportsten1": {
+      "names": [
+        "Sony Sports Ten 1 (576p)",
+        "Sony Sports Ten 1 HD (1080p)"
+      ],
+      "ids": [
+        "sonysportsten1.in@hd",
+        "sonysportsten1.in@sd"
+      ],
+      "groups": [
+        "New Backups",
+        "New Channels"
+      ],
+      "streams": 2,
+      "primary": 2,
+      "backup": 0
+    },
+    "sonysportsten2": {
+      "names": [
+        "Sony Sports Ten 2 HD (1080p)"
+      ],
+      "ids": [
+        "sonysportsten2.in@hd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -8989,6 +8939,20 @@
       ],
       "groups": [
         "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sonysportsten5": {
+      "names": [
+        "Sony Sports Ten 5 (576p)"
+      ],
+      "ids": [
+        "sonysportsten5.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -9169,30 +9133,62 @@
     },
     "stargold": {
       "names": [
-        "Star Gold"
+        "Star Gold",
+        "Star Gold HD (1080p)"
       ],
       "ids": [
         "stargold.in@hd"
       ],
       "groups": [
+        "New Backups",
         "Review"
       ],
-      "streams": 2,
-      "primary": 2,
+      "streams": 3,
+      "primary": 3,
+      "backup": 0
+    },
+    "stargold2": {
+      "names": [
+        "Star Gold 2 (576p)"
+      ],
+      "ids": [
+        "stargold2.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "stargoldromance": {
+      "names": [
+        "Star Gold Romance (576p)"
+      ],
+      "ids": [
+        "stargoldromance.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "stargoldselect": {
       "names": [
-        "Star Gold Select"
+        "Star Gold Select",
+        "Star Gold Select HD (1080p)"
       ],
       "ids": [
         "stargoldselect.in@hd"
       ],
       "groups": [
+        "New Backups",
         "Review"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "starjalsha": {
@@ -9241,30 +9237,35 @@
     },
     "starmovies": {
       "names": [
-        "Star Movies"
+        "Star Movies",
+        "Star Movies (India) HD (1080p)"
       ],
       "ids": [
-        "starmovies.in"
+        "starmovies.in",
+        "starmovies.in@hd"
       ],
       "groups": [
+        "New Backups",
         "Review"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "starmoviesselect": {
       "names": [
-        "Star Movies Select"
+        "Star Movies Select",
+        "Star Movies Select HD (1080p)"
       ],
       "ids": [
         "starmoviesselect.in@hd"
       ],
       "groups": [
+        "New Backups",
         "Review"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "starnews": {
@@ -9312,33 +9313,52 @@
       "primary": 1,
       "backup": 0
     },
-    "starsports1hindi": {
+    "starsports1": {
       "names": [
-        "Star Sports 1 Hindi"
+        "Star Sports 1 HD (1080p)"
       ],
       "ids": [
-        "starsports1hindi.in@hd"
+        "starsports1.in@hd"
       ],
       "groups": [
-        "Sports"
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
       "backup": 0
     },
-    "starsports2": {
+    "starsports1hindi": {
       "names": [
-        "Star Sports 2"
+        "Star Sports 1 Hindi",
+        "Star Sports 1 Hindi HD (1080p)"
       ],
       "ids": [
-        "starsports2.in"
+        "starsports1hindi.in@hd"
       ],
       "groups": [
-        "Backup",
+        "New Backups",
         "Sports"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
+      "backup": 0
+    },
+    "starsports2": {
+      "names": [
+        "Star Sports 2",
+        "Star Sports 2 HD (1080p)"
+      ],
+      "ids": [
+        "starsports2.in",
+        "starsports2.in@hd"
+      ],
+      "groups": [
+        "Backup",
+        "New Backups",
+        "Sports"
+      ],
+      "streams": 3,
+      "primary": 2,
       "backup": 1
     },
     "starsports2telugu": {
@@ -10079,6 +10099,20 @@
       "primary": 1,
       "backup": 0
     },
+    "tlc": {
+      "names": [
+        "TLC (India) HD (1080p)"
+      ],
+      "ids": [
+        "tlc.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "tntsports1": {
       "names": [
         "TNT Sports 1"
@@ -10451,6 +10485,37 @@
       "primary": 1,
       "backup": 1
     },
+    "unite8sports1": {
+      "names": [
+        "Unite8 Sports 1 (576p)",
+        "Unite8 Sports 1 HD (1080p)"
+      ],
+      "ids": [
+        "unite8sports1.in@hd",
+        "unite8sports1.in@sd"
+      ],
+      "groups": [
+        "New Backups",
+        "New Channels"
+      ],
+      "streams": 2,
+      "primary": 2,
+      "backup": 0
+    },
+    "unite8sports2": {
+      "names": [
+        "Unite8 Sports 2 HD (1080p)"
+      ],
+      "ids": [
+        "unite8sports2.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "usbb5200028mm": {
       "names": [
         "Mysteries Xplored"
@@ -10647,20 +10712,6 @@
       ],
       "groups": [
         "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "voktatv": {
-      "names": [
-        "Vokta TV (720p)"
-      ],
-      "ids": [
-        "voktatv.bd@sd"
-      ],
-      "groups": [
-        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -11122,6 +11173,20 @@
       "primary": 3,
       "backup": 0
     },
+    "zeeclassic": {
+      "names": [
+        "Zee Classic (576p)"
+      ],
+      "ids": [
+        "zeeclassic.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "zeecomedynation": {
       "names": [
         "Zee Comedy Nation"
@@ -11192,6 +11257,20 @@
       "primary": 1,
       "backup": 0
     },
+    "zeepower": {
+      "names": [
+        "Zee Power HD (1080p)"
+      ],
+      "ids": [
+        "zeepower.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "zeesouthflix": {
       "names": [
         "Zee South Flix"
@@ -11201,6 +11280,20 @@
       ],
       "groups": [
         "Review"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "zeetalkies": {
+      "names": [
+        "Zee Talkies HD (1080p)"
+      ],
+      "ids": [
+        "zeetalkies.in@hd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -11235,6 +11328,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "zeethirai": {
+      "names": [
+        "Zee Thirai HD (1080p)"
+      ],
+      "ids": [
+        "zeethirai.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "zeetv": {
       "names": [

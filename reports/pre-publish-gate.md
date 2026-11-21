@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-20T05:27:11+00:00**
-Source playlist SHA-256: **10dc5d953b8fa919ba140bcf0d52bec4b3bdcf891a095bd114c71c57796b4afe**
+Generated: **2026-11-21T00:56:47+00:00**
+Source playlist SHA-256: **9bbdc0608673318c3fc970a8904a67dc47387c4068ee8bc6dc3bab1594a1def7**
 
 Status: **PASS**
 
-- Current entries: **1379**
+- Current entries: **1394**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -22,16 +22,16 @@ Status: **PASS**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **46**
-- Raw resolution/geoblock name tags: **50**
+- Entries missing tvg-language: **61**
+- Raw resolution/geoblock name tags: **66**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
-- External logo URLs: **0**
+- External logo URLs: **23**
 - Incorrect/placeholder/generic logos: **0**
-- Missing referenced local logo files: **0**
+- Missing referenced local logo files: **23**
 - Entries added this run: **0**
 - Entries removed this run: **0**
-- Entries modified this run: **1**
+- Entries modified this run: **0**
 
 ## Protected-queue policy
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
@@ -48,9 +48,11 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 
 ## Warnings / Manual Review
 
-- entries missing tvg-language: 46
-- raw resolution/geoblock tags in channel names: 50
-- New queue candidates pending owner review: 46
+- entries missing tvg-language: 61
+- raw resolution/geoblock tags in channel names: 66
+- external logo URLs: 23
+- referenced local logo files missing from repository: 23
+- New queue candidates pending owner review: 38
 
 ## Review-queue logo gaps
 
@@ -64,13 +66,8 @@ None.
 
 ## Raw name tags
 
-- **BTL TV (Netherlands) (1080p)** — New Channels
-- **National Geographic (India) HD (1080p)** — New Channels
-- **National Geographic Wild (India) HD (1080p)** — New Channels
-- **Vokta TV (720p)** — New Channels
 - **Ayush Next Communication Network (576p)** — New Channels
 - **Bollywood Masala (1080p)** — New Channels
-- **CVR Health (576p)** — New Channels
 - **ETV Life (1080p)** — New Channels
 - **ETV Telugu HD (1080p)** — New Channels
 - **Gaunda Punjab TV (720p)** — New Channels
@@ -79,13 +76,24 @@ None.
 - **NDTV Good Times (1080p)** — New Channels
 - **Pickleball Now (720p) [Geo-blocked]** — New Channels
 - **Punjab Plus (1080p)** — New Channels
-- **Qello Concerts by Stingray (1080p)** — New Channels
 - **Sony Pix HD (1080p)** — New Channels
 - **Vii MEDIA (1080p)** — New Channels
 - **WeatherSpy (India) (720p)** — New Channels
 - **&xplor HD (1080p)** — New Channels
 - **Zodiak TV (1080p)** — New Channels
-- **Nick Jr. (India) (576p)** — New Backups
+- **Sony Sports Ten 1 HD (1080p)** — New Channels
+- **Sony Sports Ten 2 HD (1080p)** — New Channels
+- **Sony Sports Ten 5 (576p)** — New Channels
+- **Star Gold 2 (576p)** — New Channels
+- **Star Gold Romance (576p)** — New Channels
+- **Star Sports 1 HD (1080p)** — New Channels
+- **TLC (India) HD (1080p)** — New Channels
+- **Unite8 Sports 1 (576p)** — New Channels
+- **Unite8 Sports 2 HD (1080p)** — New Channels
+- **Zee Classic (576p)** — New Channels
+- **Zee Power HD (1080p)** — New Channels
+- **Zee Talkies HD (1080p)** — New Channels
+- **Zee Thirai HD (1080p)** — New Channels
 - **DD Kashir (576p)** — New Backups
 - **DD National HD (1080p)** — New Backups
 - **ETV Beats (1080p)** — New Backups
@@ -109,6 +117,16 @@ None.
 - **Spondon (1080p)** — New Backups
 - **Travelxp 4K HDR (2160p) [Geo-blocked]** — New Backups
 - **&TV HD (1080p)** — New Backups
+- **Apna Punjab TV (India) (576p)** — New Backups
+- **Sony SAB HD (1080p)** — New Backups
+- **Sony Sports Ten 1 (576p)** — New Backups
+- **Star Gold HD (1080p)** — New Backups
+- **Star Gold Select HD (1080p)** — New Backups
+- **Star Movies (India) HD (1080p)** — New Backups
+- **Star Movies Select HD (1080p)** — New Backups
+- **Star Sports 1 Hindi HD (1080p)** — New Backups
+- **Star Sports 2 HD (1080p)** — New Backups
+- **Unite8 Sports 1 HD (1080p)** — New Backups
 - **Colors Bangla HD (1080p)** — Review
 - **NAN TV (720p)** — Review
 - **Oli TV (India) (1080p)** — Review
@@ -117,14 +135,8 @@ None.
 
 ## Queue validation
 
-- BTL TV (Netherlands) (1080p) has provisional/unverified queue country missing
-- Cartoon Network (Pakistan) has provisional/unverified queue country missing
-- National Geographic (India) HD (1080p) has provisional/unverified queue country missing
-- National Geographic Wild (India) HD (1080p) has provisional/unverified queue country missing
-- Vokta TV (720p) has provisional/unverified queue country missing
 - Ayush Next Communication Network (576p) has provisional/unverified queue country missing
 - Bollywood Masala (1080p) has provisional/unverified queue country missing
-- CVR Health (576p) has provisional/unverified queue country missing
 - ETV Life (1080p) has provisional/unverified queue country missing
 - ETV Telugu HD (1080p) has provisional/unverified queue country missing
 - Gaunda Punjab TV (720p) has provisional/unverified queue country missing
@@ -133,13 +145,11 @@ None.
 - NDTV Good Times (1080p) has provisional/unverified queue country missing
 - Pickleball Now (720p) [Geo-blocked] has provisional/unverified queue country missing
 - Punjab Plus (1080p) has provisional/unverified queue country missing
-- Qello Concerts by Stingray (1080p) has provisional/unverified queue country missing
 - Sony Pix HD (1080p) has provisional/unverified queue country missing
 - Vii MEDIA (1080p) has provisional/unverified queue country missing
 - WeatherSpy (India) (720p) has provisional/unverified queue country missing
 - &xplor HD (1080p) has provisional/unverified queue country missing
 - Zodiak TV (1080p) has provisional/unverified queue country missing
-- Nick Jr. (India) (576p) has provisional/unverified queue country missing
 - DD Kashir (576p) has provisional/unverified queue country missing
 - DD National HD (1080p) has provisional/unverified queue country missing
 - ETV Beats (1080p) has provisional/unverified queue country missing
@@ -168,7 +178,29 @@ None.
 
 | Channel | Group | Referenced filename |
 |---|---|---|
-| — | — | none |
+| Sony Sports Ten 1 HD (1080p) | New Channels | image.png |
+| Sony Sports Ten 2 HD (1080p) | New Channels | image.png |
+| Sony Sports Ten 5 (576p) | New Channels | image.png |
+| Star Gold 2 (576p) | New Channels | G0ZfzZr.png |
+| Star Gold Romance (576p) | New Channels | gSWv9U3.png |
+| Star Sports 1 HD (1080p) | New Channels | E5jjKHI.png |
+| TLC (India) HD (1080p) | New Channels | image.png |
+| Unite8 Sports 1 (576p) | New Channels | LOGO_HD_5UHAHVIHu_UNITE8-SPORTS-1_264X144.webp |
+| Unite8 Sports 2 HD (1080p) | New Channels | LOGO_HD_qVrE3q5rN_UNITE8-SPORTS-2_HD_264X144.webp |
+| Zee Classic (576p) | New Channels | LOGO_HD_image.png |
+| Zee Power HD (1080p) | New Channels | GNLZZGG0028ZJ97.png |
+| Zee Talkies HD (1080p) | New Channels | LOGO_HD_image.png |
+| Zee Thirai HD (1080p) | New Channels | LOGO_HD_image.png |
+| Apna Punjab TV (India) (576p) | New Backups | logo.png |
+| Sony SAB HD (1080p) | New Backups | s159099_ld_h15_ab.png |
+| Sony Sports Ten 1 (576p) | New Backups | image.png |
+| Star Gold HD (1080p) | New Backups | xC460sj.png |
+| Star Gold Select HD (1080p) | New Backups | U7eiuqv.png |
+| Star Movies (India) HD (1080p) | New Backups | image.png |
+| Star Movies Select HD (1080p) | New Backups | image.png |
+| Star Sports 1 Hindi HD (1080p) | New Backups | image.png |
+| Star Sports 2 HD (1080p) | New Backups | image.png |
+| Unite8 Sports 1 HD (1080p) | New Backups | LOGO_HD_F6ILcp4Kk_UNITE8-SPORTS-1_HD_264X144.webp |
 
 ## Blocked logo references
 

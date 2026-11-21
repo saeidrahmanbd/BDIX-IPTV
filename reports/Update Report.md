@@ -1,33 +1,33 @@
 # Update Report
 
-_Last generated: **2026-11-20 05:28 UTC**_
+_Last generated: **2026-11-21 00:57 UTC**_
 
-Source playlist SHA-256: **10dc5d953b8fa919ba140bcf0d52bec4b3bdcf891a095bd114c71c57796b4afe**
+Source playlist SHA-256: **9bbdc0608673318c3fc970a8904a67dc47387c4068ee8bc6dc3bab1594a1def7**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1379** |
+| Streams | **1394** |
 | Active Channel Identities | **694** |
 | Active Primary Streams | **694** |
 | Bangladesh | **70** |
 | India | **299** |
 | Backup Stream Entries | **443** |
-| IPTV Local Logos | **100.0%** |
+| IPTV Local Logos | **98.4%** |
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
-| Stream Health Tested | **1379** |
-| Stream Health Failures | **229** |
-| Persistent Failures | **48** |
+| Stream Health Tested | **1394** |
+| Stream Health Failures | **227** |
+| Persistent Failures | **51** |
 | Near-Duplicate URL Families | **1** |
 | Audit findings (review warnings included) | **1** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-11-20T05:27:11+00:00** |
+| Pre-Publish Gate Generated | **2026-11-21T00:56:47+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
 - Metadata conflicts (canonical primary scope): **0**
 - Same-name / different-ID collisions (canonical primary scope): **0**
-- Cross-queue metadata identity variants: **6**
+- Cross-queue metadata identity variants: **11**
 - Cross-queue same-name / different-ID collisions: **9**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
@@ -62,14 +62,14 @@ Source playlist SHA-256: **10dc5d953b8fa919ba140bcf0d52bec4b3bdcf891a095bd114c71
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-20T05:27:10.618890+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-21T00:56:46.336044+00:00** | **CURRENT** |
 | EPG coverage / two-playlist inventory | **2026-11-20T01:31:21+00:00** | **PENDING — guide missing or freshness not PASS** |
-| Stream health | **2026-11-20T05:28:06+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-20T05:27:11+00:00** | **CURRENT** |
+| Stream health | **2026-11-21T00:57:42+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-21T00:56:47+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
-- Latest entries change: **1379 → 1379**
-- Latest health failures: **226 → 229**
+- Latest entries change: **1379 → 1394**
+- Latest health failures: **229 → 227**
 
 Historical records are retained in reports/maintenance-history.json.

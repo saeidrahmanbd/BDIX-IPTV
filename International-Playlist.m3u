@@ -282,17 +282,17 @@ http://116.90.120.149:8000/play/a138/index.m3u8
 https://sl.vodep39240327.workers.dev/channel/SONY+WAH.m3u8
 #EXTINF:-1 tvg-id="SouthStation.in@HD" tvg-language="hin" tvg-country="IN" group-title="Indian Movies" tvg-name="South Station",South Station
 https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/SS_IN.m3u8
-#EXTINF:-1 tvg-id="StarGold.in@HD" channel-id="StarGold.in@HD" tvg-logo="logos/star-gold-hd-1080p.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Star Gold",Star Gold
+#EXTINF:-1 tvg-id="StarGold.in@HD" channel-id="StarGold.in@HD" tvg-logo="logos/star-gold-hd-1080p.png" tvg-country="IN" tvg-language="und" group-title="Indian Movies" tvg-name="Star Gold",Star Gold
 http://116.90.120.149:8000/play/a12a/index.m3u8
-#EXTINF:-1 tvg-id="StarGold2.in@SD" channel-id="StarGold2.in@SD" tvg-logo="logos/star-gold-2.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Star Gold 2",Star Gold 2
+#EXTINF:-1 tvg-id="StarGold2.in@SD" channel-id="StarGold2.in@SD" tvg-logo="logos/star-gold-2.png" tvg-country="IN" tvg-language="hin" group-title="Indian Movies" tvg-name="Star Gold 2",Star Gold 2
 http://116.90.120.149:8000/play/a12b/index.m3u8
-#EXTINF:-1 tvg-id="StarGoldRomance.in@SD" channel-id="StarGoldRomance.in@SD" tvg-country="IN" group-title="Indian Movies" tvg-name="Star Gold Romance",Star Gold Romance
+#EXTINF:-1 tvg-id="StarGoldRomance.in@SD" channel-id="StarGoldRomance.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Movies" tvg-name="Star Gold Romance",Star Gold Romance
 http://116.90.120.149:8000/play/a12c/index.m3u8
-#EXTINF:-1 tvg-id="StarGoldSelect.in@HD" channel-id="StarGoldSelect.in@HD" tvg-country="IN" group-title="Indian Movies" tvg-name="Star Gold Select",Star Gold Select
+#EXTINF:-1 tvg-id="StarGoldSelect.in@HD" channel-id="StarGoldSelect.in@HD" tvg-country="IN" tvg-language="hin" group-title="Indian Movies" tvg-name="Star Gold Select",Star Gold Select
 http://116.90.120.149:8000/play/a131/index.m3u8
 #EXTINF:-1 tvg-id="StarMaaMovies.in@SD" channel-id="StarMaaMovies.in@SD" tvg-language="tel" tvg-country="IN" group-title="Indian Movies" tvg-name="Star Maa Movies",Star Maa Movies
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8
-#EXTINF:-1 tvg-id="StarMovies.in@HD" channel-id="StarMovies.in@HD" tvg-logo="logos/international/star-movies-india-hd-1080p.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Star Movies (India)",Star Movies (India)
+#EXTINF:-1 tvg-id="StarMovies.in@HD" channel-id="StarMovies.in@HD" tvg-logo="logos/international/star-movies-india-hd-1080p.png" tvg-country="IN" tvg-language="und" group-title="Indian Movies" tvg-name="Star Movies (India)",Star Movies (India)
 http://116.90.120.149:8000/play/a13a/index.m3u8
 #EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-language="eng" channel-id="StarMoviesSelect.in@HD" tvg-country="IN" group-title="Indian Movies" tvg-name="Star Movies Select",Star Movies Select
 https://livetv.shamon-cable.net:8443/Star-movies-select/index.m3u8
@@ -316,9 +316,9 @@ https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13
 http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/967.ts
 #EXTINF:-1 tvg-language="und" tvg-id="AnmolTV.in@SD" tvg-country="IN" group-title="Indian Movies" tvg-name="Zee Anmol TV",Zee Anmol TV
 http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/203.ts
-#EXTINF:-1 tvg-id="ZeeTalkies.in@HD" channel-id="ZeeTalkies.in@HD" tvg-logo="logos/zee-talkies.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Zee Talkies",Zee Talkies
+#EXTINF:-1 tvg-id="ZeeTalkies.in@HD" channel-id="ZeeTalkies.in@HD" tvg-logo="logos/zee-talkies.png" tvg-country="IN" tvg-language="mar" group-title="Indian Movies" tvg-name="Zee Talkies",Zee Talkies
 http://116.90.120.149:8000/play/a116/index.m3u8
-#EXTINF:-1 tvg-id="ZeeThirai.in@HD" channel-id="ZeeThirai.in@HD" tvg-country="IN" group-title="Indian Movies" tvg-name="Zee Thirai",Zee Thirai
+#EXTINF:-1 tvg-id="ZeeThirai.in@HD" channel-id="ZeeThirai.in@HD" tvg-country="IN" tvg-language="tam" group-title="Indian Movies" tvg-name="Zee Thirai",Zee Thirai
 http://116.90.120.149:8000/play/a11q/index.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" tvg-language="tam" channel-id="7SMusic.in@SD" tvg-country="IN" group-title="Indian Music" tvg-name="7S Music",7S Music
 https://cdn.pishow.tv/ott/live/1257/master.m3u8
@@ -1568,7 +1568,7 @@ https://copacogen.desdeparaguay.net/heitv/heitv_py_alta/playlist.m3u8?admin=naci
 https://live.enhdtv.com:19360/nexthd/nexthd.m3u8
 #EXTINF:-1 tvg-id="VenusMedia.py@SD" tvg-language="spa" tvg-country="PY" tvg-content="Music" group-title="Paraguay" tvg-name="Venus Media",Venus Media
 https://tigocloud.desdeparaguay.net/venusmedia/venusmedia/playlist.m3u8
-#EXTINF:-1 tvg-id="GalacticaTV.pe@SD" channel-id="GalacticaTV.pe@SD" tvg-country="PE" tvg-content="Music" group-title="Peru" tvg-name="Galactica TV",Galactica TV
+#EXTINF:-1 tvg-id="GalacticaTV.pe@SD" channel-id="GalacticaTV.pe@SD" tvg-country="PE" tvg-content="Music" tvg-language="spa" group-title="Peru" tvg-name="Galactica TV",Galactica TV
 https://stream.neux.site/memfs/e3f59eec-6b93-45e1-a2ab-c82381c2a9ec.m3u8
 #EXTINF:-1 tvg-id="Karibena.pe@SD" tvg-language="spa" tvg-country="PE" tvg-content="Music" group-title="Peru" tvg-name="Karibena",Karibena
 http://187.102.210.46/KARIBENA/index.m3u8
@@ -1680,9 +1680,9 @@ https://hls02ns.antenaplay.ro/hls/party-mix-hd/index.m3u8
 http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-procinema/live_fullhd?offsetSeconds=0
 #EXTINF:-1 tvg-id="RockTV.ro@SD" tvg-language="und" tvg-country="RO" tvg-content="Music" group-title="Romania" tvg-name="Rock TV (Romania)",Rock TV (Romania)
 https://tv.broadcasting.ro/rocktv/85c83a80-4f71-4f2d-a8d6-43f676896bcb.m3u8
-#EXTINF:-1 tvg-id="SkyShowtime1.ro@HD" channel-id="SkyShowtime1.ro@HD" tvg-country="RO" tvg-content="Movies" group-title="Romania" tvg-name="SkyShowtime 1",SkyShowtime 1
+#EXTINF:-1 tvg-id="SkyShowtime1.ro@HD" channel-id="SkyShowtime1.ro@HD" tvg-country="RO" tvg-content="Movies" tvg-language="und" group-title="Romania" tvg-name="SkyShowtime 1",SkyShowtime 1
 https://rundle.tv/proxy5.php?src=https%3A%2F%2Fthor1.syndula001.cfd%2Fschi1%2Fusergendxn430rnd-got.htm
-#EXTINF:-1 tvg-id="SkyShowtime2.ro@HD" channel-id="SkyShowtime2.ro@HD" tvg-country="RO" tvg-content="Movies" group-title="Romania" tvg-name="SkyShowtime 2",SkyShowtime 2
+#EXTINF:-1 tvg-id="SkyShowtime2.ro@HD" channel-id="SkyShowtime2.ro@HD" tvg-country="RO" tvg-content="Movies" tvg-language="und" group-title="Romania" tvg-name="SkyShowtime 2",SkyShowtime 2
 https://rundle.tv/proxy5.php?src=https%3A%2F%2Fthor1.syndula001.cfd%2Fschi2%2Fusergendxj85trnd-got.htm
 #EXTINF:-1 tvg-id="SuperTV.ro@SD" tvg-language="und" tvg-country="RO" tvg-content="Music" group-title="Romania" tvg-name="Super TV (Romania)",Super TV (Romania)
 http://iptv.supertv.ro:8000/play/a001/index.m3u8

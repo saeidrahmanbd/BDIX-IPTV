@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-20T05:28:06+00:00**
-IPTV-Playlist.m3u SHA-256: **10dc5d953b8fa919ba140bcf0d52bec4b3bdcf891a095bd114c71c57796b4afe**
+Generated: **2026-11-21T00:57:42+00:00**
+IPTV-Playlist.m3u SHA-256: **9bbdc0608673318c3fc970a8904a67dc47387c4068ee8bc6dc3bab1594a1def7**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **280**
+- Flagged streams: **277**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -98,9 +98,6 @@ These streams are not automatically removed. URL credentials, user information a
 | Sport 2 (Hungary) | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/sport2_hun/index.m3u8` |
 | Sport5 | Sports | credential-bearing route pattern (values redacted) | `https://rgelive.akamaized.net/hls/live/REDACTED/REDACTED/playlist.m3u8` |
 | TVRI Sport | Sports | credential-bearing route pattern (values redacted) | `https://ott-balancer.tvri.go.id/live/REDACTED/REDACTED/hls/SportHD.m3u8` |
-| BTL TV (Netherlands) (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.liveplustv.com/v1/live/btl-tv/master.m3u8` |
-| Cartoon Network (Pakistan) | New Channels | credential-bearing route pattern (values redacted) | `https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8` |
-| Vokta TV (720p) | New Channels | credential-bearing route pattern (values redacted) | `https://vokta.raytahost.com/live/voktatv/index.m3u8` |
 | DD Kashir (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/16/master.m3u8` |
 | DD National HD (1080p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/15/master.m3u8` |
 | MH One (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/353/master.m3u8` |
