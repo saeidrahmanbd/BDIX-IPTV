@@ -654,11 +654,11 @@ def final_mode(playlist, report, baseline, mode):
     queue_keys = {"new channels", "new backup", "new backups"}
     existing_channel_ids = {
         identity(e) for e in entries
-        if e["group"].casefold() not in queue_keys and identity(e)
+        if e["group"].casefold() != "new channels" and identity(e)
     }
     represented_for_backup = {
         identity(e) for e in entries
-        if e["group"].casefold() not in {"new backup", "new backups", "new backup"} and identity(e)
+        if e["group"].casefold() not in {"new backup", "new backups"} and identity(e)
     }
     new_channel_ids = [
         identity(e) for e in entries
