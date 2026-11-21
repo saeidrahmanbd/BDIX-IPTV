@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """Discover Bangladesh/India candidates into manual-review queues.
 
-The source feed is a fallback when channel-country metadata is absent. Explicit
-country IDs/codes must identify Bangladesh or India; a recognized .in ID also
-activates the Indian discovery exclusions even when listed in the BD feed.
-Definite policy/URL exclusions and duplicate streams prevent queueing.
+The Bangladesh and India source feeds establish discovery scope. Explicit
+conflicting foreign country metadata is rejected; incomplete nonessential
+metadata alone is not a reason to reject a legitimate live channel.
 
-Bangladesh channels of all genres are eligible. Indian News, Kids, Education,
-Knowledge, Business/Finance and all Religious channels are excluded from this
-IPTV playlist discovery policy. International retains its separate policy.
+Bangladesh channels of all genres are eligible. For Indian channels, exclude
+News and non-Islamic religious content only. Islamic religious channels, Kids,
+Education, Knowledge, Business/Finance, Sports and other legitimate live-TV
+genres remain eligible unless separately blocked by a permanent denylist.
+International retains its separate policy.
 """
 # Owner-authorized policy-alignment retry marker (2026-11-19).
 # [manual-new-channel-discovery] Fresh daily discovery trigger for 2026-11-20.
@@ -680,8 +681,8 @@ def main() -> int:
         "# IPTV Channel Discovery", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
-        "- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**",
-        "- Bangladesh channels of all genres are eligible. Indian News, Kids, Education, Knowledge, Business/Finance and all Religious channels are prohibited in this IPTV playlist.",
+        "- **Discovery scope: Bangladesh and India source feeds. Feed context establishes scope; explicit conflicting foreign country metadata is rejected, while missing nonessential metadata alone does not disqualify a channel.**",
+        "- Bangladesh channels of all genres are eligible. For Indian channels, only News and non-Islamic religious content are excluded; Islamic religious, Kids, Education, Knowledge, Business/Finance, Sports and other legitimate live-TV genres remain eligible unless permanently banned.",
         f"- Previously admitted prohibited Indian queue rows purged: **{len(purged_existing)}**",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
