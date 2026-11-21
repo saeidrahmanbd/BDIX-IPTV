@@ -548,7 +548,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
 
         row = (
             '#EXTINF:-1 tvg-id="PK1.pk" tvg-name="Pakistan Primary 1" tvg-country="PK" '
-            'tvg-content="Movies" group-title="New Channels",Pakistan Primary 1\\n'
+            'tvg-content="Movies" group-title="New Channels",Pakistan Primary 1\n'
             'https://example.org/pk1.m3u8'
         )
         _, entries, malformed = parse_playlist(row)
@@ -566,7 +566,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         row = (
             '#EXTINF:-1 tvg-id="MysteryCinema" tvg-name="Mystery Cinema" '
             'tvg-logo="logos/mystery-cinema.svg" tvg-content="Movies" '
-            'group-title="New Channels",Mystery Cinema\\nhttps://example.org/mystery.m3u8'
+            'group-title="New Channels",Mystery Cinema\nhttps://example.org/mystery.m3u8'
         )
         _, entries, malformed = parse_playlist(row)
         self.assertFalse(malformed)
@@ -582,7 +582,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
 
         row = (
             '#EXTINF:-1 tvg-id="MCMPop.fr" tvg-name="MCM Pop" tvg-country="FR" '
-            'group-title="New Channels",MCM Pop\\nhttps://example.org/mcm-pop.m3u8'
+            'group-title="New Channels",MCM Pop\nhttps://example.org/mcm-pop.m3u8'
         )
         _, entries, malformed = parse_playlist(row)
         self.assertFalse(malformed)
