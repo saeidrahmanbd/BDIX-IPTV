@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-21T02:18:31+00:00**
+Generated: **2026-11-21T03:59:50+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **0a9433a3572725422fe91f6f4d27a2f85ed988b426a105087ff674702a8718ad**
-- International-Playlist.m3u SHA-256: **a6bce86331679bed10a932a92cee9da28b03978193fbcb9f45370c6ab34875a9**
+- IPTV-Playlist.m3u SHA-256: **504128821aba4c16bc70f5330008c687b761ac2214032704233cd2f08b0cb3f1**
+- International-Playlist.m3u SHA-256: **89c12a49f7f9491b7dfdc3b934d43eb67596371e128523779b40bc65076df5d7**
 
 ## Summary
 
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **146**
 - Exact-byte duplicate asset clusters: **740**
-- Playlist references whose asset stem differs from the normalized channel name: **1624**
-- Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1632**
+- Unreferenced image assets immediately inside logos/: **957** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1244,11 +1244,20 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Travelxp 4K HDR (2160p) [Geo-blocked] | travelxp-4k-hdr-2160p-geo-blocked-b3aa521bb125b0495ef7.png | New Channels |
 | IPTV-Playlist.m3u | &TV HD (1080p) | and-tv-af1a6839d33bb0bcceb7.png | New Backups |
 | IPTV-Playlist.m3u | Apna Punjab TV (India) (576p) | apna-punjab-tv-india-23af30c75dadda3dde96.png | New Backups |
+| IPTV-Playlist.m3u | Star Sports 1 Hindi HD (1080p) | star-sports-1-hindi.png | New Backups |
+| IPTV-Playlist.m3u | Star Sports 2 HD (1080p) | star-sports-2.png | New Backups |
 | IPTV-Playlist.m3u | Sony SAB HD (1080p) | sony-sab.png | New Channels |
 | IPTV-Playlist.m3u | Star Gold HD (1080p) | verified-star-gold-hd-1080p-f2178a885b.png | New Channels |
 | IPTV-Playlist.m3u | Star Gold Select HD (1080p) | star-gold-select-fa81030f74.png | New Channels |
 | IPTV-Playlist.m3u | Star Movies (India) HD (1080p) | star-movies-india-hd-1080p.png | New Channels |
 | IPTV-Playlist.m3u | Star Movies Select HD (1080p) | star-movies-select-776284c9b5222ea0ecf1.png | New Channels |
+| IPTV-Playlist.m3u | Kabaddi 24x7 (720p) | kabaddi-24x7.png | New Channels |
+| IPTV-Playlist.m3u | Sony Sports Ten 1 HD (1080p) | sony-sports-ten-1.png | New Channels |
+| IPTV-Playlist.m3u | Sony Sports Ten 2 HD (1080p) | sony-sports-ten-2.png | New Channels |
+| IPTV-Playlist.m3u | Sony Sports Ten 5 (576p) | sony-sports-ten-5.png | New Channels |
+| IPTV-Playlist.m3u | Star Sports 1 HD (1080p) | star-sports-1.png | New Channels |
+| IPTV-Playlist.m3u | Unite8 Sports 1 (576p) | unite8-sports-1-c39b236b6693e186f49c.png | New Channels |
+| IPTV-Playlist.m3u | Unite8 Sports 2 HD (1080p) | unite8-sports-2.png | New Channels |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
@@ -2460,7 +2469,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
-| International-Playlist.m3u | BRIDGE Hits (576p) | bridge-hits-576p.png | New Channels |
 | International-Playlist.m3u | Star Movies (India) | star-movies-india-hd-1080p.png | New Channels |
 | International-Playlist.m3u | Star Gold | star-gold-hd-1080p.png | New Backups |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
