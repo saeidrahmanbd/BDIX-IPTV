@@ -481,18 +481,18 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             baseline = root / "baseline.m3u"
             report = root / "report.md"
             prefix = (
-                "#EXTM3U\\n"
-                '#PLAYLIST-STUDIO-CATEGORIES:["International","Review","New Channels","New Backups","Backup"]\\n'
+                "#EXTM3U\n"
+                '#PLAYLIST-STUDIO-CATEGORIES:["International","Review","New Channels","New Backups","Backup"]\n'
             )
             rows = (
-                '#EXTINF:-1 tvg-id="WorldMovie.us" tvg-name="World Movie" tvg-country="US" tvg-content="Movies" tvg-logo="logos/world-movie.svg" group-title="New Channels",World Movie\\n'
-                'https://example.org/world-movie.m3u8\\n'
-                '#EXTINF:-1 tvg-id="WorldMusic.us" tvg-name="World Music" tvg-country="US" tvg-content="Music" tvg-logo="logos/world-music.svg" group-title="New Backups",World Music\\n'
-                'https://example.org/world-music.m3u8\\n'
+                '#EXTINF:-1 tvg-id="WorldMovie.us" tvg-name="World Movie" tvg-country="US" tvg-content="Movies" tvg-logo="logos/world-movie.svg" group-title="New Channels",World Movie\n'
+                'https://example.org/world-movie.m3u8\n'
+                '#EXTINF:-1 tvg-id="WorldMusic.us" tvg-name="World Music" tvg-country="US" tvg-content="Music" tvg-logo="logos/world-music.svg" group-title="New Backups",World Music\n'
+                'https://example.org/world-music.m3u8\n'
             )
             playlist.write_text(prefix + rows, encoding="utf-8")
             baseline.write_text(prefix, encoding="utf-8")
-            report.write_text("# Report\\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
             with patch.object(validation, "probe_url", side_effect=[
                 ("verified", "Media bytes received"),
                 ("verified", "Media bytes received"),
@@ -523,16 +523,16 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             baseline = root / "baseline.m3u"
             report = root / "report.md"
             prefix = (
-                "#EXTM3U\\n"
-                '#PLAYLIST-STUDIO-CATEGORIES:["International","Review","New Channels","New Backups","Backup"]\\n'
+                "#EXTM3U\n"
+                '#PLAYLIST-STUDIO-CATEGORIES:["International","Review","New Channels","New Backups","Backup"]\n'
             )
             row = (
-                '#EXTINF:-1 tvg-id="NoLogoMovie.us" tvg-name="No Logo Movie" tvg-country="US" tvg-content="Movies" group-title="New Channels",No Logo Movie\\n'
-                'https://example.org/no-logo-movie.m3u8\\n'
+                '#EXTINF:-1 tvg-id="NoLogoMovie.us" tvg-name="No Logo Movie" tvg-country="US" tvg-content="Movies" group-title="New Channels",No Logo Movie\n'
+                'https://example.org/no-logo-movie.m3u8\n'
             )
             playlist.write_text(prefix + row, encoding="utf-8")
             baseline.write_text(prefix, encoding="utf-8")
-            report.write_text("# Report\\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
             with patch.object(validation, "probe_url", return_value=("verified", "Media bytes received")), patch.object(
                 validation, "ensure_local_logo",
                 side_effect=lambda entry: (entry["extinf"], False, True),
