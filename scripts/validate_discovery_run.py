@@ -512,15 +512,7 @@ def final_mode(playlist, report, baseline, mode):
         errors.extend(queue_logo_issues)
 
         def identity_keys(entry):
-            keys = set()
-            name_key = norm_key(entry["name"])
-            if name_key:
-                keys.add("name:" + name_key)
-            for field in ("tvg-id", "channel-id"):
-                channel_id = bd_discovery.base_id(entry["attrs"].get(field, ""))
-                if channel_id:
-                    keys.add("id:" + channel_id)
-            return keys
+            return bd_discovery.channel_identity_keys(entry["attrs"], entry["name"])
 
         represented = [
             identity_keys(entry) for entry in entries

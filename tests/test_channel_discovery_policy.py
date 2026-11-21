@@ -8,7 +8,7 @@ from discover_bd_in_new_queues import (
     PERMANENTLY_BANNED_CHANNEL_NAMES, PERMANENTLY_BANNED_CHANNEL_IDS, canonical_channel_name,
     evaluate, extinf, explicit_foreign_country, prohibited_channel, purge_forbidden_existing_queue_rows,
     is_indian_discovery_candidate, known_indian_forbidden_category,
-    normalize_queue_logo,
+    normalize_queue_logo, normalize_existing_queue_roles, channel_identity_keys,
 )
 
 
@@ -274,6 +274,32 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(set(removed), {"Sony Sports Ten 1", "Kabaddi 24x7"})
         self.assertNotIn("Sony Sports Ten 1", filtered)
         self.assertIn("T Sports", filtered)
+
+    def test_existing_queue_roles_are_normalized_by_channel_identity(self):
+        text = (
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-id="ApnaPunjabTV.ca@SD" tvg-name="Apna Punjab TV" group-title="Indian Entertainment",Apna Punjab TV\n'
+            "https://example.org/apna-primary.m3u8\n"
+            '#EXTINF:-1 tvg-id="ApnaPunjabTV.in@HD" tvg-name="Apna Punjab TV (India) HD" group-title="New Backups",Apna Punjab TV (India) HD\n'
+            "https://example.org/apna-alt.m3u8\n"
+            '#EXTINF:-1 tvg-id="Existing.in" tvg-name="Existing Channel" group-title="Indian Entertainment",Existing Channel\n'
+            "https://example.org/existing-primary.m3u8\n"
+            '#EXTINF:-1 tvg-id="Existing.in@HD" tvg-name="Existing Channel HD" group-title="New Channels",Existing Channel HD\n'
+            "https://example.org/existing-alt.m3u8\n"
+            '#EXTINF:-1 tvg-id="SonyMax.in@HD" tvg-name="Sony Max HD" group-title="New Backups",Sony Max HD\n'
+            "https://example.org/sony-max.m3u8\n"
+            '#EXTINF:-1 tvg-id="SonyMax.in@SD" tvg-name="Sony Max (720p)" group-title="New Backups",Sony Max (720p)\n'
+            "https://example.org/sony-max-alt.m3u8\n"
+        )
+        normalized, moved_to_channels, moved_to_backups, removed = normalize_existing_queue_roles(text)
+        self.assertEqual(moved_to_channels, ["Sony Max HD"])
+        self.assertEqual(moved_to_backups, ["Existing Channel HD"])
+        self.assertEqual(removed, ["Sony Max (720p)"])
+        self.assertIn('group-title="New Backups",Apna Punjab TV (India) HD', normalized)
+        self.assertIn('group-title="New Backups",Existing Channel HD', normalized)
+        self.assertIn('group-title="New Channels",Sony Max HD', normalized)
+        self.assertNotIn("Sony Max (720p)", normalized)
+        self.assertIn("name:apnapunjabtv", channel_identity_keys({"tvg-id":"ApnaPunjabTV.in@HD"}, "Apna Punjab TV (India) HD"))
 
     def test_queue_logo_normalizer_keeps_only_existing_local_repository_assets(self):
         with tempfile.TemporaryDirectory() as directory:
