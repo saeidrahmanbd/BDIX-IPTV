@@ -1,9 +1,9 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-21 00:52 UTC
+- Last scan: 2026-11-21 01:16 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12222
-- Existing playlist records: 3304
+- Existing playlist records: 3301
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
 - Exact source URLs already in playlist: 2215
@@ -12,17 +12,18 @@
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
 - New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
-- New discoveries are staged in New Channels/New Backups before probing. Verified unique primary channels are automatically promoted into policy-eligible groups, verified alternate streams move to Backup, and inconclusive or untrusted-logo candidates remain in Review.
+- New discoveries remain in New Channels/New Backups after probing. Verified primary channels stay in New Channels; verified alternate streams stay in New Backups. Inconclusive alternate streams are held in Review, and missing authentic logos are left blank rather than invented.
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
-- New Backups staged for manual review: 7
+- New Backups staged for manual review: 8
 - Category migrations: 0
 - Existing discovery-queue entries removed: 0
 
 ## New primary channels
 
 - **AMC (United States) (1080p) [Geo-blocked]** — New Channels — US — http://41.205.93.154/AMC/index.m3u8
+- **AMC Latin America (1080p)** — New Channels — US — http://15.204.246.24:8080/AMCHD/index.m3u8
 - **Cinevault 80s (720p)** — New Channels — US — https://aegis-cloudfront-1.tubi.video/ea1ab5d1-f554-4f6b-b03f-2611fcd94257/playlist.m3u8
 - **Film & Arts (1080p)** — New Channels — AR — http://15.204.246.24:8080/FilmArtsHD/index.m3u8
 - **Hollywood Ukraine (576p)** — New Channels — UA — http://dtv.vol.net.ua/Hollywood-HD/index.m3u8
@@ -44,7 +45,11 @@
 - **Rakuten TV Action Movies Germany (1080p)** — New Channels — ES — https://284824cf70404fdfb6ddf9349009c710.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6066/master.m3u8
 - **Rakuten TV Action Movies Italy (1080p)** — New Channels — ES — https://87f2e2e5e7624e3bad85da1ca2ed31a7.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6067/master.m3u8
 - **Rakuten TV Action Movies UK (1080p)** — New Channels — ES — https://54045f0c40fd442c8b06df076aaf1e85.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6065/master.m3u8
+- **Rakuten TV Comedy Movies (1080p)** — New Channels — ES — https://71db867f03ce4d71a29e92155f07ab87.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6180/master.m3u8
 - **Rakuten TV Comedy Movies Finland (1080p)** — New Channels — ES — https://a300af98e00746e2acf2346f43e47bd1.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6191/master.m3u8
+- **Rakuten TV Comedy Movies Germany (1080p)** — New Channels — ES — https://ecac08c9e2214375b907d6825aaf9a01.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6182/master.m3u8
+- **Rakuten TV Comedy Movies Italy (1080p)** — New Channels — ES — https://b8bc6c4b9be64bd6aeb3b92aa8521ed4.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6184/master.m3u8
+- **Rakuten TV Comedy Movies UK (1080p)** — New Channels — ES — https://9be783d652cd4b099cf63e1dc134c4a3.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6181/master.m3u8
 - **Rakuten TV Drama Movies Finland (1080p)** — New Channels — ES — https://d7e8ee3c924d4305a0c1840fe94c5d36.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6102/master.m3u8
 - **Rakuten TV Family Movies Finland (1080p)** — New Channels — ES — https://758ee983d61e400381dea6fa8154f4e0.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6227/master.m3u8
 - **Rakuten TV Nordic Films (1080p)** — New Channels — ES — https://4aa9ef08b70d4b0c8f3519c5950b1930.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6303/master.m3u8
@@ -53,35 +58,31 @@
 - **Rakuten TV Top Movies Germany (1080p)** — New Channels — ES — https://cbb622b29f5d43b598991f3fa19de291.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5985/master.m3u8
 - **Rakuten TV Top Movies Italy (1080p)** — New Channels — ES — https://d4a4999341764c67a67e9ec9eb3790ab.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5984/master.m3u8
 - **Rakuten TV Top Movies UK (1080p)** — New Channels — ES — https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8
-- **Star Gold 2 (576p)** — New Channels — IN — http://116.90.120.149:8000/play/a12b/index.m3u8
-- **Star Gold HD (1080p)** — New Channels — IN — http://116.90.120.149:8000/play/a12a/index.m3u8
-- **Star Gold Romance (576p)** — New Channels — IN — http://116.90.120.149:8000/play/a12c/index.m3u8
-- **Star Gold Select HD (1080p)** — New Channels — IN — http://116.90.120.149:8000/play/a131/index.m3u8
-- **Star Movies (India) HD (1080p)** — New Channels — IN — http://116.90.120.149:8000/play/a13a/index.m3u8
 - **Starz Cinema (720p)** — New Channels — US — http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8
 - **Summer of Movies** — New Channels — US — https://jmp2.uk/plu-6654adb1f99922000854388c.m3u8
 - **Sundance TV (Spain)** — New Channels — ES — https://cdn.stmify.com/zapitv/stream/SUNDANCE_TV/sundance_hd.mpd
 - **TVS Film Noir Network (720p)** — New Channels — US — https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
 - **Viasat Kino Romania** — New Channels — UA — https://flash1.bogulus1.cfd/tivi10/usergenrxs4f7zc.m3u8
-- **Zee Talkies HD (1080p)** — New Channels — IN — http://116.90.120.149:8000/play/a116/index.m3u8
-- **Zee Thirai HD (1080p)** — New Channels — IN — http://116.90.120.149:8000/play/a11q/index.m3u8
 - **4 Fun TV** — New Channels — PL — https://stream.4fun.tv:8888/sd/4fun_sd_high.m3u8
 - **7 RadioVisione (720p)** — New Channels — IT — https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8
+- **Abdulmajeed Abdullah (1080p)** — New Channels — SA — https://d2hng5r56zpsbw.cloudfront.net/out/v1/9c4c990f44bb4767bb46271f326dd574/index.m3u8
 - **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
 - **ATN Music (360p)** — New Channels — BD — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 - **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
 - **BRIDGE Hits (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
 - **Concert Channel (720p)** — New Channels — US — https://jmp2.uk/plu-6868152657543d1f8be4ece3.m3u8
+- **D Music (1280p) [Not 24/7]** — New Channels — KH — http://43.252.18.195:5080/live/streams/WCVNews.playlist.m3u8
 
 ## Backup alternates
 
 - **Kinouzhas** — RU — http://s1.merlive.am/Kinoujas/index.m3u8
 - **Lifetime Movies** — US — http://23.237.104.106:8080/USA_LMN/index.m3u8
-- **Star Movies Select** — IN — http://116.90.120.149:8000/play/a139/index.m3u8
 - **Viasat Kino** — UA — http://dtv.vol.net.ua/Viasat_Kino/index.m3u8
 - **Viasat Kino Action** — UA — http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
 - **FON Music** — US — https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
 - **M1 (Ukraine)** — UA — http://dtv.vol.net.ua/M1-HD/index.m3u8
+- **Salsa Gorda Television** — CO — https://stmv1.voxtvhd.com.br/salsagorda/salsagorda/playlist.m3u8
+- **VIVA Russia** — RU — https://183.giatvcdn.com/ssh101/ssh101/vivarussia/playlist.m3u8
 
 ## Country Migrations
 
@@ -110,31 +111,33 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-11-21T00:52:48+00:00
+- Run timestamp: 2026-11-21T01:16:04+00:00
 - Mode: international
-- New entries and discovery queues probed: 57
-- Verified live media responses: 8
-- Verified new primary channels automatically promoted: 4
-- Verified alternate streams moved to Backup: 1
+- New entries and discovery queues probed: 66
+- Verified live media responses: 11
+- Verified new primary channels retained in New Channels: 7
+- Verified alternate streams retained in New Backups: 4
 - Inconclusive candidates retained for manual review: 0
 - Unverified backup streams moved to Review: 0
-- Definitively dead new candidates removed: 49
+- Definitively dead new candidates removed: 55
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
-- IPTV manual-review candidates needing later local-logo repair (warning only): 0
-- International candidates held for missing local logos: 3
+- Candidates retained without authentic local logos (no placeholder used): 3
 
 ### Stream probe details
 - Removed newly discovered 4 Fun TV from New Channels — HTTP 404.
 - Removed newly discovered 7 RadioVisione (720p) from New Channels — HTTP 404.
+- Kept Abdulmajeed Abdullah (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered AMC (United States) (1080p) [Geo-blocked] from New Channels — HTTP 404.
+- Removed newly discovered AMC Latin America (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Andina RTV (720p) from New Channels — HTTP 404.
 - Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
 - Removed newly discovered BRIDGE Classic (576p) from New Channels — HTTP 404.
 - Removed newly discovered BRIDGE Hits (576p) from New Channels — HTTP 404.
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Concert Channel (720p) from New Channels — HTTP 404.
+- Removed newly discovered D Music (1280p) [Not 24/7] from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Hollywood Ukraine (576p) from New Channels — HTTP 404.
 - Removed newly discovered HomePlus from New Channels — HTTP 404.
@@ -155,7 +158,11 @@
 - Removed newly discovered Rakuten TV Action Movies Germany (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Action Movies Italy (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Action Movies UK (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Rakuten TV Comedy Movies (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Comedy Movies Finland (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Rakuten TV Comedy Movies Germany (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Rakuten TV Comedy Movies Italy (1080p) from New Channels — HTTP 404.
+- Removed newly discovered Rakuten TV Comedy Movies UK (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Drama Movies Finland (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Family Movies Finland (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Nordic Films (1080p) from New Channels — HTTP 404.
@@ -164,34 +171,25 @@
 - Removed newly discovered Rakuten TV Top Movies Germany (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Top Movies Italy (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Top Movies UK (1080p) from New Channels — HTTP 404.
-- Moved Star Gold Romance (576p) to Review — no authentic local logo asset is available.
-- Moved Star Gold Select HD (1080p) to Review — no authentic local logo asset is available.
 - Removed newly discovered Starz Cinema (720p) from New Channels — HTTP 404.
 - Removed newly discovered Summer of Movies from New Channels — HTTP 404.
 - Removed newly discovered Sundance TV (Spain) from New Channels — HTTP 404.
 - Removed newly discovered TVS Film Noir Network (720p) from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Removed newly discovered Viasat Kino Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
-- Moved Zee Thirai HD (1080p) to Review — no authentic local logo asset is available.
 - Removed newly discovered FON Music from New Backups — HTTP 404.
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
 - Removed newly discovered Lifetime Movies from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
+- Kept Salsa Gorda Television in New Backups without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
-- Promoted Star Gold 2 (576p) from New Channels to Indian Movies — verified primary candidate.
-- Promoted Star Gold HD (1080p) from New Channels to Indian Movies — verified primary candidate.
-- Promoted Star Gold Romance (576p) from New Channels to Review — no authentic local repository logo.
-- Promoted Star Gold Select HD (1080p) from New Channels to Review — no authentic local repository logo.
-- Promoted Star Movies (India) HD (1080p) from New Channels to Indian Movies — verified primary candidate.
-- Promoted Zee Talkies HD (1080p) from New Channels to Indian Movies — verified primary candidate.
-- Promoted Zee Thirai HD (1080p) from New Channels to Review — no authentic local repository logo.
-- Promoted Star Movies Select from New Backups to Backup — verified alternate stream.
+- Kept VIVA Russia in New Backups without tvg-logo — no authentic local repository asset was available.
 
 ## Final validation
 
-- Run timestamp: 2026-11-21T00:52:48+00:00
+- Run timestamp: 2026-11-21T01:16:04+00:00
 - Validation status: PASS
-- M3U entries parsed: 3312
+- M3U entries parsed: 3304
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
