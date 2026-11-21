@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-21T04:07:22+00:00**
+Generated: **2026-11-21T04:21:16+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **504128821aba4c16bc70f5330008c687b761ac2214032704233cd2f08b0cb3f1**
-- International-Playlist.m3u SHA-256: **89c12a49f7f9491b7dfdc3b934d43eb67596371e128523779b40bc65076df5d7**
+- International-Playlist.m3u SHA-256: **c5dab98657a86fd204721157eb66952ef1e8bda7f06c338d2f3ec73737802c71**
 
 ## Summary
 
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **146**
 - Exact-byte duplicate asset clusters: **740**
-- Playlist references whose asset stem differs from the normalized channel name: **1632**
-- Unreferenced image assets immediately inside logos/: **957** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1635**
+- Unreferenced image assets immediately inside logos/: **958** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -794,7 +794,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/international/star-action-720p.png, logos/star-action-720p.png, logos/verified-star-action-720p-092c301e31.png
 - logos/international/star-cinema.png, logos/star-cinema-5a96e69773.png
 - logos/international/star-gold-hd-1080p.png, logos/star-gold-hd-1080p.png, logos/verified-star-gold-hd-1080p-f2178a885b.png
-- logos/international/star-movies-india-hd-1080p.png, logos/star-movies-india-hd-1080p.png
+- logos/international/star-movies-india-hd-1080p.png, logos/star-movies-india-hd-1080p.png, logos/verified-star-movies-india-hd-1080p-5e3c4d8df5.png
 - logos/international/star-movies-portugal.png, logos/star-movies-portugal.png, logos/verified-star-movies-portugal-117de92eba.png
 - logos/international/star-movies-select.png, logos/star-movies-select.png, logos/verified-star-movies-select-2b1d079564.png
 - logos/international/star-movies-slovenia.png, logos/star-movies-slovenia.png, logos/verified-star-movies-slovenia-4e0111a47b.png
@@ -1555,6 +1555,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Pitaara TV | pitaara-tv.png | Indian Movies |
 | International-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Indian Movies |
 | International-Playlist.m3u | Soneri Cinema | verified-soneri-cinema-360p-0ba64f92f1.png | Indian Movies |
+| International-Playlist.m3u | Star Movies Select | verified-star-movies-select-2b1d079564.png | Indian Movies |
 | International-Playlist.m3u | Studio One + | studio-one-plus-f44320b0327b653063d3.png | Indian Movies |
 | International-Playlist.m3u | TamilVision-TV | tamilvision-tv-1080p.png | Indian Movies |
 | International-Playlist.m3u | Thalaa TV | thalaa-tv.png | Indian Movies |
@@ -2422,8 +2423,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Sports Fishing TV | sports-fishing-tv-50d0f501d6.png | Review |
 | International-Playlist.m3u | Sqala TV | sqala-tv-1080p-d174c17569.png | Review |
 | International-Playlist.m3u | Star Gold | verified-star-gold-hd-1080p-f2178a885b.png | Review |
+| International-Playlist.m3u | Star Movies (India) | verified-star-movies-india-hd-1080p-5e3c4d8df5.png | Review |
 | International-Playlist.m3u | Star Movies (Portugal) | verified-star-movies-portugal-117de92eba.png | Review |
 | International-Playlist.m3u | Star Movies (Slovenia) | verified-star-movies-slovenia-4e0111a47b.png | Review |
+| International-Playlist.m3u | Star Movies Select | verified-star-movies-select-2b1d079564.png | Review |
 | International-Playlist.m3u | Star Tamil Television | verified-star-tamil-television-360p-eca1011501.png | Review |
 | International-Playlist.m3u | Starz Kids & Family | starz-kids-and-family-6c2cde1a69.png | Review |
 | International-Playlist.m3u | Subin TV | subin-tv.png | Review |
@@ -2469,8 +2472,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
-| International-Playlist.m3u | Star Movies (India) | star-movies-india-hd-1080p.png | New Channels |
-| International-Playlist.m3u | Star Gold | star-gold-hd-1080p.png | New Backups |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
@@ -2569,6 +2570,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Shanson TV | shanson-tv.png | Backup |
 | International-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Backup |
 | International-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
+| International-Playlist.m3u | Star Gold | verified-star-gold-hd-1080p-f2178a885b.png | Backup |
+| International-Playlist.m3u | Star Movies Select | verified-star-movies-select-2b1d079564.png | Backup |
 | International-Playlist.m3u | Suriyan TV | suriyan-tv.png | Backup |
 | International-Playlist.m3u | Thalaa TV | thalaa-tv.png | Backup |
 | International-Playlist.m3u | Tolly TV | tolly-tv.png | Backup |
