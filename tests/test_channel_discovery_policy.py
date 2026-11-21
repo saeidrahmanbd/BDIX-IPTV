@@ -291,7 +291,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNone(prohibited_channel(attrs, name, iptv_discovery=True))
 
     def test_compact_indian_news_brands_are_rejected(self):
-        for name in ("News18 Bangla", "TV9 Bangla", "Aaj Tak", "India Today", "Times Now", "Republic Bangla", "ABP Ananda", "Zee News", "WION"):
+        for name in ("News18 Bangla", "TV9 Bangla", "Aaj Tak", "India Today", "Times Now", "Republic Bangla", "ABP Ananda", "Zee News", "WION", "NDTV 24x7", "Mirror Now", "Sansad TV 2"):
             attrs = {"group-title": "General", "tvg-country": "IN", "tvg-id": "GenericChannel.in"}
             with self.subTest(name=name):
                 reason = prohibited_channel(attrs, name, iptv_discovery=True)
