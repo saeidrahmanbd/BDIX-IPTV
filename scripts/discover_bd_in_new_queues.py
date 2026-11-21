@@ -6,7 +6,7 @@ country IDs/codes must identify Bangladesh or India; a recognized .in ID also
 activates the Indian discovery exclusions even when listed in the BD feed.
 Definite policy/URL exclusions and duplicate streams prevent queueing.
 
-Bangladesh channels of all genres are eligible. Indian News, Kids, Education,
+Bangladesh channels of all genres are eligible. Indian News, Sports, Kids, Education,
 Knowledge, Business/Finance and all Religious channels are excluded from this
 IPTV playlist discovery policy. International retains its separate policy.
 """
@@ -16,15 +16,18 @@ IPTV playlist discovery policy. International retains its separate policy.
 from __future__ import annotations
 import json, re, unicodedata, urllib.request
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
-from urllib.parse import parse_qsl, urlparse
+from urllib.parse import parse_qsl, unquote, urlparse
+from zoneinfo import ZoneInfo
 
 from country_verification import norm_name, id_country, ISO_CODES
 from stream_url_identity import stream_url_key
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/iptv-channel-discovery.md")
+BD_TZ = ZoneInfo("Asia/Dhaka")
+RAW_LOGO_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 SOURCES = (
     ("Bangladesh", "https://iptv-org.github.io/iptv/countries/bd.m3u"),
     ("India", "https://iptv-org.github.io/iptv/countries/in.m3u"),
@@ -36,6 +39,7 @@ BAD_WORDS = {
 # Legacy India exclusions are retained for the International playlist's distinct policy.
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
+    "sports": re.compile(r"\b(?:sports?|espn|bein\s*sports|fox\s*sports|sky\s*sports|star\s*sports|sony\s*sports|ten\s*sports|dd\s*sports|unite8\s*sports|eurosport|willow|cricket|kabaddi|pickleball)\b", re.I),
     "religious": re.compile(r"\b(?:religious|religion|darshana tv|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
 }
 # Strict India-only exclusions for IPTV-Playlist.m3u. Bangladesh remains
@@ -480,8 +484,38 @@ def acceptable(country: str, a: dict[str, str], name: str, url: str, reference=N
     return evaluate(country, a, name, url, reference)[0] is not None
 
 
+def normalize_queue_logo(extinf_line: str, logo_root: Path = Path("logos")) -> str:
+    """Keep only verified repository-local logo paths on discovery queue rows."""
+    match = re.search(r'tvg-logo="([^"]*)"', extinf_line)
+    if not match:
+        return extinf_line
+    logo = match.group(1).strip()
+    if not logo:
+        return re.sub(r's+tvg-logo="[^"]*"', "", extinf_line, count=1)
+    if logo.startswith("logos/"):
+        relative = logo[len("logos/"):]
+    elif logo.startswith(RAW_LOGO_BASE):
+        relative = unquote(logo[len(RAW_LOGO_BASE):].split("?", 1)[0].split("#", 1)[0])
+    else:
+        return re.sub(r's+tvg-logo="[^"]*"', "", extinf_line, count=1)
+    rel_path = Path(relative)
+    if not relative or rel_path.is_absolute() or ".." in rel_path.parts:
+        return re.sub(r's+tvg-logo="[^"]*"', "", extinf_line, count=1)
+    root = Path(logo_root).resolve()
+    target = (root / rel_path).resolve()
+    if root not in target.parents or not target.is_file():
+        return re.sub(r's+tvg-logo="[^"]*"', "", extinf_line, count=1)
+    local_logo = "logos/" + rel_path.as_posix()
+    return re.sub(
+        r'tvg-logo="[^"]*"',
+        lambda _: f'tvg-logo="{local_logo}"',
+        extinf_line,
+        count=1,
+    )
+
+
 def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
-    """Remove permanently banned channels and prohibited categories from review queues."""
+    """Purge prohibited Indian queue rows and normalize their logos to local assets."""
     lines = text.replace("\r", "").splitlines()
     first = next((i for i, line in enumerate(lines) if line.startswith("#EXTINF:")), len(lines))
     prefix = lines[:first]
@@ -516,6 +550,7 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
             if reason:
                 removed.append(name or "(unnamed)")
                 continue
+            block[0] = normalize_queue_logo(extinf_line)
         kept.extend(block)
     result = "\n".join(prefix + kept).rstrip() + "\n"
     return result, removed
@@ -536,7 +571,7 @@ def extinf(a: dict[str, str], name: str, group: str, country: str) -> str:
         fields.append(f'tvg-name="{name}"')
     fields.append(f'x-discovery-source-country="{COUNTRY_CODE.get(country, "").upper()}"')
     fields.append(f'group-title="{group}"')
-    return "#EXTINF:-1 " + " ".join(fields) + "," + name
+    return normalize_queue_logo("#EXTINF:-1 " + " ".join(fields) + "," + name)
 
 
 def main() -> int:
@@ -546,8 +581,20 @@ def main() -> int:
     original, purged_existing = purge_forbidden_existing_queue_rows(original)
     entries = parse(original)
     existing_urls = {stream_url_key(u) for _, _, u in entries}
+    queue_groups = {"new channels", "new backup", "new backups"}
     existing_names = {norm(n) for _, n, _ in entries}
     existing_ids = {base_id(a.get("tvg-id") or a.get("channel-id")) for a, _, _ in entries if base_id(a.get("tvg-id") or a.get("channel-id"))}
+    represented_names = {
+        norm(n) for a, n, _ in entries
+        if (a.get("group-title") or "").strip().casefold() not in queue_groups
+        and (a.get("group-title") or "").strip().casefold() != "review"
+    }
+    represented_ids = {
+        base_id(a.get("tvg-id") or a.get("channel-id")) for a, _, _ in entries
+        if (a.get("group-title") or "").strip().casefold() not in queue_groups
+        and (a.get("group-title") or "").strip().casefold() != "review"
+        and base_id(a.get("tvg-id") or a.get("channel-id"))
+    }
 
     candidates = []
     rejected = 0
@@ -577,8 +624,11 @@ def main() -> int:
     for country, a, name, url in candidates:
         key = norm(name)
         cid = base_id(a.get("tvg-id") or a.get("channel-id"))
-        if key in planned_names or (cid and cid in planned_ids):
+        if key in represented_names or (cid and cid in represented_ids):
             new_backups.append((country, a, name, url))
+        elif key in planned_names or (cid and cid in planned_ids):
+            rejected += 1
+            reasons["duplicate channel identity already staged in a discovery queue"] += 1
         else:
             new_channels.append((country, a, name, url))
             planned_names.add(key)
@@ -652,14 +702,15 @@ def main() -> int:
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     report = [
         "# IPTV Channel Discovery", "",
-        f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
+        f"Generated: **{datetime.now(BD_TZ).isoformat(timespec='seconds')}** (Asia/Dhaka)", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**",
-        "- Bangladesh channels of all genres are eligible. Indian News, Kids, Education, Knowledge, Business/Finance and all Religious channels are prohibited in this IPTV playlist.",
+        "- Bangladesh channels of all genres are eligible. Indian News, Sports, Kids, Education, Knowledge, Business/Finance and all Religious channels are prohibited in this IPTV playlist.",
         f"- Previously admitted prohibited Indian queue rows purged: **{len(purged_existing)}**",
+        "- Existing discovery-queue logo URLs were converted to verified local /logos/ paths or removed when no matching local asset existed; no placeholder art was used.",
         "- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
-        "- Existing manual-review queue rows changed only where they violated the owner-authorized Indian exclusion policy.",
+        "- Existing manual-review queue rows changed only where they violated the owner-authorized Indian exclusions or required local-logo normalization.",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected/held candidates: **{rejected}**",
