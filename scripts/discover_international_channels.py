@@ -389,6 +389,21 @@ def existing_international_target(a,name,country_groups):
  if base is None or (code not in {"BD","IN","PK"} and not genre):
   return None,reason or "entry is not confidently classifiable under country policy",genre
  return primary_target(base,code,country_groups),None,genre
+def existing_primary_index(blocks):
+ """Index every represented channel identity, including Review and Backup rows.
+
+ Discovery queues are also represented identities: a second stream for a queued
+ primary belongs in New Backups rather than creating a duplicate New Channels row.
+ """
+ existing_primary=defaultdict(list)
+ excluded={"not playing","test"}
+ for block in blocks:
+  a=attrs(block[0]); name=name_of(block); key=norm(name)
+  group=(a.get("group-title") or "").strip().casefold()
+  if key and group not in excluded:
+   existing_primary[key].append(a)
+ return existing_primary
+
 def main():
  if not PLAYLIST.exists():raise SystemExit("International-Playlist.m3u not found; refusing to create it.")
  req=urllib.request.Request(SOURCE_URL,headers={"User-Agent":"BDIX-IPTV-International-Discovery/1.0"})
@@ -397,11 +412,10 @@ def main():
  _,source=parse(raw.decode("utf-8-sig","replace")); prefix,existing=parse(PLAYLIST.read_text(encoding="utf-8-sig"))
  if not source:raise SystemExit("Source feed contains no channel records; playlist unchanged.")
  existing_urls={stream_url_key(url_of(b)) for b in existing if url_of(b)}
- existing_primary=defaultdict(list); country_primary_ids=defaultdict(set)
+ existing_primary=existing_primary_index(existing); country_primary_ids=defaultdict(set)
  queue_or_nonprimary={"backup","backups","new backup","new backups","not playing","review","adult","test"}
  for b in existing:
-  a=attrs(b[0]); name=name_of(b); key=norm(name); group=a.get("group-title","").strip()
-  if group.casefold() not in {"backup","backups","new backup","new backups","not playing","review","test"} and key:existing_primary[key].append(a)
+  a=attrs(b[0]); name=name_of(b); group=a.get("group-title","").strip()
   code=country_code(a)
   if code in ISO_CODES and counts_toward_country_group(group,code) and group.casefold() not in queue_or_nonprimary:
    ident=primary_identity(a,name)
@@ -471,10 +485,10 @@ def main():
     filtered_existing.append((name,old,"unsafe or tokenized URL"))
     continue
    queue_logo=local_logo(a,name)
-   if not queue_logo:
-    filtered_existing.append((name,old,"no authentic local repository logo"))
-    continue
-   b[0]=set_attr(b[0],"tvg-logo",queue_logo)
+   if queue_logo:
+    b[0]=set_attr(b[0],"tvg-logo",queue_logo)
+   else:
+    b[0]=re.sub(r'\\s+tvg-logo="[^"]*"', "", b[0], count=1)
    group="New Backups"
   elif old_key=="new channels" and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
@@ -486,10 +500,10 @@ def main():
     filtered_existing.append((name,old,"unsafe or tokenized URL"))
     continue
    queue_logo=local_logo(a,name)
-   if not queue_logo:
-    filtered_existing.append((name,old,"no authentic local repository logo"))
-    continue
-   b[0]=set_attr(b[0],"tvg-logo",queue_logo)
+   if queue_logo:
+    b[0]=set_attr(b[0],"tvg-logo",queue_logo)
+   else:
+    b[0]=re.sub(r'\\s+tvg-logo="[^"]*"', "", b[0], count=1)
    group="New Channels"
   elif old_key=="international" and not is_new:
    group,reason,genre=existing_international_target(a,name,country_groups)
@@ -569,7 +583,7 @@ def main():
  new_rows=[(n,final_group_by_identity.get((norm(n),c or ""),final_group_by_name.get(norm(n),g)),c,u) for n,g,c,u in new_rows]
  REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
   f"- Existing logo references localized/repaired: {logo_refs_repaired}",
-  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for every country except Bangladesh and India, including Pakistan.","- New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.","- Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.","- New discoveries are staged in New Channels/New Backups before probing. Verified unique primary channels are automatically promoted into policy-eligible groups, verified alternate streams move to Backup, and inconclusive or untrusted-logo candidates remain in Review.","- Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
+  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for every country except Bangladesh and India, including Pakistan.","- New discoveries from every country, including Bangladesh, India and Pakistan, must be dedicated Movies or Music channels. News, religious, kids, sports, documentary, general entertainment and other genres are excluded. Existing Fashion TV entries are preserved as a legacy exception.","- Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.","- New discoveries remain in New Channels/New Backups after probing. Verified primary channels stay in New Channels; verified alternate streams stay in New Backups. Inconclusive alternate streams are held in Review, and missing authentic logos are left blank rather than invented.","- Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
  report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Existing discovery-queue entries removed",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  print(f"International discovery complete: new={len(new_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} qualifying_country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())
