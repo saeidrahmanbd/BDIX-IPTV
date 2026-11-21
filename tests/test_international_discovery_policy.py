@@ -14,6 +14,37 @@ import repair_international_playlist as legacy_repair
 
 
 class InternationalDiscoveryPolicyTests(unittest.TestCase):
+    def test_existing_primary_index_counts_review_backup_and_queues_as_represented(self):
+        blocks = [
+            ['#EXTINF:-1 tvg-name="Star Gold" group-title="Review",Star Gold', "https://example.org/star-gold-review.m3u8"],
+            ['#EXTINF:-1 tvg-name="Star Movies Select" group-title="Backup",Star Movies Select', "https://example.org/star-movies-select-backup.m3u8"],
+            ['#EXTINF:-1 tvg-name="New Candidate" group-title="New Channels",New Candidate', "https://example.org/new-candidate.m3u8"],
+            ['#EXTINF:-1 tvg-name="Queued Alternate" group-title="New Backups",Queued Alternate', "https://example.org/queued-alternate.m3u8"],
+            ['#EXTINF:-1 tvg-name="Ignored Test" group-title="Test",Ignored Test', "https://example.org/test.m3u8"],
+        ]
+        index = discovery.existing_primary_index(blocks)
+        self.assertIn(discovery.norm("Star Gold"), index)
+        self.assertIn(discovery.norm("Star Movies Select"), index)
+        self.assertIn(discovery.norm("New Candidate"), index)
+        self.assertIn(discovery.norm("Queued Alternate"), index)
+        self.assertNotIn(discovery.norm("Ignored Test"), index)
+
+    def test_queue_candidate_without_local_logo_is_kept_without_external_reference(self):
+        name = "Unique Channel Without Local Art 2026"
+        url = "https://example.org/unique-channel-without-local-art.m3u8"
+        block = [
+            f'#EXTINF:-1 tvg-name="{name}" tvg-logo="https://logos.example.test/fake.png" group-title="New Channels",{name}',
+            url,
+        ]
+        kept, repaired, removed = discovery.localize_discovery_queue_logos(
+            [block], {url}, []
+        )
+        self.assertEqual(len(kept), 1)
+        self.assertNotIn("tvg-logo=", kept[0][0])
+        self.assertEqual(repaired, 0)
+        self.assertEqual(removed, 1)
+
+
     def classify(self, name, group, country=None, tvg_id=None, language=None):
         attrs = {"group-title": group}
         if country:

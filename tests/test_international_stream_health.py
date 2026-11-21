@@ -51,6 +51,65 @@ class InternationalStreamHealthTests(unittest.TestCase):
         self.assertEqual(events[0]["streak"], 1)
         self.assertEqual(next(iter(history["entries"].values()))["original_group"], "International Movies")
 
+    def test_recovered_new_channel_returns_to_new_channels_queue(self):
+        url = "https://example.test/world-movie.m3u8"
+        info = (
+            '#EXTINF:-1 tvg-id="worldmovie.us" tvg-name="World Movie" tvg-country="US" '
+            'tvg-content="Movies" group-title="Review",World Movie'
+        )
+        source = self.playlist(info + "\n" + url + "\n")
+        key = health.stream_key(info, url)
+        history = {"entries": {key: {
+            "name": "World Movie", "tvg_id": "worldmovie.us", "country": "US",
+            "original_group": "New Channels", "auto_review": True,
+            "consecutive_failures": 1, "last_checked_date": "2026-11-07",
+            "last_status": "fail", "removed": False,
+        }}, "removed": []}
+        output, _, events = apply(source, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
+        self.assertIn('group-title="New Channels"', output)
+        self.assertEqual(events[0]["action"], "restored-to-discovery-queue")
+
+    def test_recovered_new_backup_returns_to_new_backups_queue(self):
+        url = "https://example.test/world-movie-backup.m3u8"
+        info = (
+            '#EXTINF:-1 tvg-id="worldmovie.us" tvg-name="World Movie" tvg-country="US" '
+            'tvg-content="Movies" group-title="Review",World Movie'
+        )
+        source = self.playlist(info + "\n" + url + "\n")
+        key = health.stream_key(info, url)
+        history = {"entries": {key: {
+            "name": "World Movie", "tvg_id": "worldmovie.us", "country": "US",
+            "original_group": "New Backups", "auto_review": True,
+            "consecutive_failures": 1, "last_checked_date": "2026-11-07",
+            "last_status": "fail", "removed": False,
+        }}, "removed": []}
+        output, _, events = apply(source, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
+        self.assertIn('group-title="New Backups"', output)
+        self.assertEqual(events[0]["action"], "restored-to-discovery-queue")
+
+    def test_requeued_channel_updates_old_health_history_recovery_destination(self):
+        url = "https://example.test/requeued-world-movie.m3u8"
+        source = self.playlist(row(
+            name="World Movie",
+            group="New Channels",
+            url=url,
+            extra='tvg-content="Movies" ',
+        ))
+        info = health.parse(source)[1][0][0]
+        key = health.stream_key(info, url)
+        history = {"entries": {key: {
+            "name": "World Movie", "tvg_id": "testmovie.us", "country": "US",
+            "original_group": "Indian Movies", "auto_review": True,
+            "consecutive_failures": 1, "last_checked_date": "2026-11-06",
+            "last_status": "fail", "removed": False,
+        }}, "removed": []}
+        output, history, events = apply(source, "fail", history, "2026-11-07")
+        self.assertIn('group-title="Review"', output)
+        self.assertEqual(history["entries"][key]["original_group"], "New Channels")
+        output, history, events = apply(output, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
+        self.assertIn('group-title="New Channels"', output)
+        self.assertEqual(events[0]["action"], "restored-to-discovery-queue")
+
     def test_third_consecutive_daily_failure_removes_row(self):
         output, history = self.playlist(row()), {}
         for day in range(7, 10):
