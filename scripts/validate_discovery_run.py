@@ -633,6 +633,7 @@ def final_mode(playlist, report, baseline, mode):
             groups.append(e["group"])
     queue_names = {"new channels", "new backup", "new backups"}
     candidates = [e for e in entries if e["group"].casefold() in queue_names or stream_url_key(e["url"]) not in baseline_urls]
+    errors = []
     wrong_queue = [
         e["name"] for e in candidates
         if e["group"].casefold() not in queue_names
@@ -648,7 +649,6 @@ def final_mode(playlist, report, baseline, mode):
         )
     url_counts = Counter(stream_url_key(e["url"]) for e in entries)
     duplicate_count = sum(n - 1 for n in url_counts.values() if n > 1)
-    errors = []
     validator_outcome = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME", "success").casefold()
     if validator_outcome != "success":
         errors.append(f"official validator result: {validator_outcome}")
