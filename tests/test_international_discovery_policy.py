@@ -70,7 +70,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         backup_attrs = dict(adult_attrs, **{"group-title": "Backup"})
         self.assertEqual(
             reorg.classify(backup_attrs, "Adult Channel Alpha", "Backup", "US"),
-            ("Review", None, None),
+            ("Backup", None, None),
         )
         self.assertEqual(
             reorg.classify(backup_attrs, "Adult Channel Alpha", "Backup", "US", promote_backup=True),
@@ -83,7 +83,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
 
     def test_generic_adult_word_does_not_reclassify_backup(self):
         attrs = {"group-title": "Backup", "tvg-id": "AdultChannelAlpha.us"}
-        self.assertEqual(reorg.classify(attrs, "Adult Channel Alpha", "Backup", "US"), ("Review", None, None))
+        self.assertEqual(reorg.classify(attrs, "Adult Channel Alpha", "Backup", "US"), ("Backup", None, None))
     def test_known_channel_aliases_share_one_identity_key(self):
         pairs = [
             ("Rupasi Bangla", "Ruposhi Bangla"),
@@ -676,6 +676,28 @@ class StrictWorldwideDiscoveryTests(unittest.TestCase):
         target, reason, _ = self.eligible("Fashion TV", "Fashion", "FR", "FashionTV.fr")
         self.assertIsNone(target)
         self.assertIn("Fashion TV", reason)
+
+    def test_adult_channels_are_allowed_directly_in_adult_group_worldwide(self):
+        examples = [
+            ("Adult Channel", "Adult", "US", "AdultChannel.us"),
+            ("Playboy TV", "Movies", "GB", "PlayboyTV.uk"),
+            ("Penthouse", "Adult", "FR", "Penthouse.fr"),
+            ("XXX Network", "XXX", "IN", "XXXNetwork.in"),
+            ("Erotic TV", "Entertainment", "BD", "EroticTV.bd"),
+        ]
+        for name, genre, country, tvg_id in examples:
+            with self.subTest(name=name, country=country):
+                attrs = {"group-title": genre, "tvg-country": country, "tvg-id": tvg_id}
+                target, reason, verified = discovery.discovery_eligibility(attrs, name)
+                self.assertIsNone(reason)
+                self.assertEqual(target, "Adult")
+                self.assertEqual(verified, country)
+
+    def test_adult_swim_is_not_misclassified_as_adult_content(self):
+        attrs = {"group-title": "Entertainment", "tvg-country": "US", "tvg-id": "AdultSwim.us"}
+        target, reason, _ = discovery.discovery_eligibility(attrs, "Adult Swim")
+        self.assertIsNone(target)
+        self.assertTrue(reason)
 
     def test_missing_local_logo_does_not_remove_review_candidate(self):
         block = ['#EXTINF:-1 tvg-name="Cinema World" group-title="New Channels",Cinema World', "https://example.org/cinema.m3u8"]
