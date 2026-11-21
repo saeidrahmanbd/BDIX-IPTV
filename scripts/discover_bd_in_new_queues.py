@@ -49,12 +49,15 @@ IPTV_KNOWN_INDIAN_EDUCATION_IDS = {
     "ddgyandarshan.in", "kitevicters.in", "victers.in", "swayamprabha.in",
 }
 IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
-    "news": re.compile(r"\b(?:news(?:\s*\d+)?|headlines?|current affairs|newsroom|bulletin|breaking news|gnt|aaj tak|india today|times now|republic(?:\s+(?:bharat|bangla))?|abp(?:\s+ananda)?|zee news|wion|tv\s*9)\b", re.I),
-    "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|disney channel|baby tv|pogo|hungama|sonic|discovery kids|green gold|sony yay)\b", re.I),
-    "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|vyas channel|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television|vtu)\b", re.I),
-    "knowledge": re.compile(r"\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv|inwild|safari tv|dd kisan|krishi darshan|agriculture|agricultural|farming|farmer)\b", re.I),
-    "business": re.compile(r"\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\b", re.I),
-    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv|angel|hosanna|madani|iqra|huda|noor|deen|mta|qtv|aastha|sadhna|sanskar|jinvani|satsang|jagran|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|calvary|santvani|sharnam|disha tv)\b", re.I),
+    "news": re.compile(
+        r"\b(?:news(?:\s*\d+)?|headlines?|current affairs|newsroom|bulletin|breaking news|"
+        r"gnt|aaj tak|india today|times now|republic(?:\s+(?:bharat|bangla))?|"
+        r"abp(?:\s+ananda)?|zee news|wion|tv\s*9|news18|news nation|sudarshan news|"
+        r"dd news|bharat samachar|pratidin time|network\s*10|saam\s*tv|"
+        r"total\s*tv(?:\s*haryana)?|aagaaz\s+times|aaj\s+ki\s+khabar|"
+        r"abn\s+andhra\s+jyoti|r\s*plus(?:\s+gold)?|bhi\s+channel|tv\s*100(?:\s+national)?)\b",
+        re.I,
+    ),
 }
 DISCOVERY_EXTRA_CATEGORY_PATTERNS = {}
 
@@ -65,16 +68,26 @@ def canonical_channel_name(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value).strip()
 
 IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
-    "news": {"r plus", "r plus gold", "bhi channel", "tv 100", "tv 100 national"},
-    "kids": {"sony yay", "disney channel", "jungle book", "doraemon"},
-    "education": {"vtu"},
-    "knowledge": {"dd kisan", "krishi darshan", "cvr health"},
-    "religious": {"disha tv", "q tv", "shekinah tv", "darshana tv"},
+    "news": {
+        "r plus", "r plus gold", "bhi channel", "tv 100", "tv 100 national",
+        "network 10", "saam tv", "total tv", "total tv haryana",
+        "aagaaz times", "aaj ki khabar", "abn andhra jyoti",
+    },
+    "religious": {
+        "disha tv", "shekinah tv", "darshana tv", "sai tv",
+        "calvary tv", "santvani channel", "sharnam tv", "sharanam tv",
+        "aastha", "sadhna", "sanskar", "jinvani", "satsang", "jagran",
+        "bhagwat", "aradhana", "prarthana", "divya", "shubh tv",
+        "amrit gurbani", "sarv dharm sangam",
+    },
 }
 IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
-    "rplus.in": "news", "rplusgold.in": "news", "bhi.channel.in": "news", "tv100.in": "news", "tv100national.in": "news",
-    "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "qtv.in": "religious", "shekinahtv.in": "religious", "darshanatv.in": "religious",
-    "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge", "cvrhealth.in": "knowledge",
+    "rplus.in": "news", "rplusgold.in": "news", "bhi.channel.in": "news",
+    "tv100.in": "news", "tv100national.in": "news",
+    "network10.in": "news", "saamtv.in": "news", "totaltv.in": "news",
+    "dishatv.in": "religious", "shekinahtv.in": "religious",
+    "darshanatv.in": "religious", "saitv.in": "religious",
+    "calvarytv.in": "religious", "amritgurbani.in": "religious",
 }
 
 
@@ -89,8 +102,6 @@ def known_indian_forbidden_category(a: dict[str, str], name: str) -> str | None:
         str(a.get(key, "")).strip().casefold().split("@", 1)[0]
         for key in ("tvg-id", "channel-id") if a.get(key)
     }
-    if names & IPTV_KNOWN_INDIAN_EDUCATION_NAMES or ids & IPTV_KNOWN_INDIAN_EDUCATION_IDS:
-        return "education"
     for category, aliases in IPTV_KNOWN_INDIAN_CATEGORY_NAMES.items():
         if names & aliases:
             return category
@@ -267,7 +278,16 @@ NON_ISLAMIC_RELIGIOUS_MARKERS = re.compile(
     r"gurbani|gurubani|church|temple|calvary|santvani|sharnam|sharanam|aastha|"
     r"sadhna|sanskar|jinvani|satsang|jagran|bhagwat|aradhana|prarthana|divya|"
     r"shubh|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|"
-    r"deity|holy\s*mass|orthodox|shrine)\b",
+    r"deity|holy\s*mass|orthodox|shrine|amrit\s*gurbani|sai\s*tv|darshana\s*tv|"
+    r"disha\s*tv|sarv\s*dharm\s*sangam|shekinah|aad(?:i|ee)nath|aaseervatham)\b",
+    re.IGNORECASE,
+)
+IPTV_RELIGIOUS_GENERIC_MARKERS = re.compile(
+    r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|prayer|sermons?)\b",
+    re.IGNORECASE,
+)
+IPTV_FORBIDDEN_CATEGORY_PATTERNS["religious"] = re.compile(
+    IPTV_RELIGIOUS_GENERIC_MARKERS.pattern + "|" + NON_ISLAMIC_RELIGIOUS_MARKERS.pattern,
     re.IGNORECASE,
 )
 FORBIDDEN_BRANDS = re.compile(
@@ -429,6 +449,12 @@ def prohibited_channel(
         expanded_values = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", values)
         for category, pattern in IPTV_FORBIDDEN_CATEGORY_PATTERNS.items():
             if pattern.search(expanded_values):
+                if (
+                    category == "religious"
+                    and ISLAMIC_ALLOWED_MARKERS.search(expanded_values)
+                    and not NON_ISLAMIC_RELIGIOUS_MARKERS.search(expanded_values)
+                ):
+                    continue
                 return f"Indian {category} channel is prohibited"
     else:
         for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
@@ -440,7 +466,7 @@ def prohibited_channel(
             for category, pattern in DISCOVERY_EXTRA_CATEGORY_PATTERNS.items():
                 if pattern.search(group) or pattern.search(values):
                     return f"Indian {category} channel is prohibited"
-    if FORBIDDEN_BRANDS.search(values):
+    if not iptv_discovery and FORBIDDEN_BRANDS.search(values):
         return "known Indian prohibited brand/category is prohibited"
     for word in FORBIDDEN_WORDS:
         if re.search(r"(?<![\\w])" + re.escape(word) + r"(?![\\w])", values, re.UNICODE):
