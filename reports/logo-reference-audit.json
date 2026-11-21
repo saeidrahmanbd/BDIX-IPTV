@@ -146,6 +146,7 @@
     "logos/bpx-tv-radio-27fa94df9f.jpg",
     "logos/brand-new-amateurs-2a9d40f4b1.png",
     "logos/bravo-kids-tv-c6dda6126e.png",
+    "logos/broadcaster.png",
     "logos/bstv.svg",
     "logos/btl-tv-netherlands-2790d02135.jpg",
     "logos/btv-news-ebbebf7ffd6cc8116fbe.jpg",
@@ -1299,6 +1300,9 @@
     ],
     "logos/bravo-kids-tv-c6dda6126e.png": [
       "reports/logo-source-registry.json"
+    ],
+    "logos/broadcaster.png": [
+      "tests/test_channel_discovery_policy.py"
     ],
     "logos/bstv.svg": [
       "tests/test_discovery_run_validation.py"
@@ -3064,6 +3068,7 @@
       "tests/test_logo_authenticity_manifest.py"
     ],
     "logos/sample.png": [
+      "tests/test_discovery_run_validation.py",
       "tests/test_logo_provenance_review.py",
       "tests/test_logo_reference_audit.py",
       "tests/test_logo_repair_source_hints.py"
