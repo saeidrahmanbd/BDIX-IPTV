@@ -39,7 +39,6 @@ BAD_WORDS = {
 # Legacy India exclusions are retained for the International playlist's distinct policy.
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news|headlines?|current affairs|newsroom|gnt)\b", re.IGNORECASE),
-    "sports": re.compile(r"\b(?:sports?|espn|bein\s*sports|fox\s*sports|sky\s*sports|star\s*sports|sony\s*sports|ten\s*sports|dd\s*sports|unite8\s*sports|eurosport|willow|cricket|kabaddi|pickleball)\b", re.I),
     "religious": re.compile(r"\b(?:religious|religion|darshana tv|angel|hosanna|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|madani|iqra|huda|noor|deen|mta|qtv|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|deen|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv)\b", re.IGNORECASE),
 }
 # Strict India-only exclusions for IPTV-Playlist.m3u. Bangladesh remains
@@ -58,6 +57,7 @@ IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
     "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|vyas channel|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television|vtu)\b", re.I),
     "knowledge": re.compile(r"\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv|inwild|safari tv|dd kisan|krishi darshan|agriculture|agricultural|farming|farmer)\b", re.I),
     "business": re.compile(r"\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\b", re.I),
+    "sports": re.compile(r"\b(?:sports?|espn|bein\s*sports|fox\s*sports|sky\s*sports|star\s*sports|sony\s*sports|ten\s*sports|dd\s*sports|unite8\s*sports|eurosport|willow|cricket|kabaddi|pickleball)\b", re.I),
     "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv|angel|hosanna|madani|iqra|huda|noor|deen|mta|qtv|aastha|sadhna|sanskar|jinvani|satsang|jagran|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|calvary|santvani|sharnam|disha tv)\b", re.I),
 }
 DISCOVERY_EXTRA_CATEGORY_PATTERNS = {}
@@ -571,7 +571,7 @@ def extinf(a: dict[str, str], name: str, group: str, country: str) -> str:
         fields.append(f'tvg-name="{name}"')
     fields.append(f'x-discovery-source-country="{COUNTRY_CODE.get(country, "").upper()}"')
     fields.append(f'group-title="{group}"')
-    return normalize_queue_logo("#EXTINF:-1 " + " ".join(fields) + "," + name)
+    return "#EXTINF:-1 " + " ".join(fields) + "," + name
 
 
 def main() -> int:
