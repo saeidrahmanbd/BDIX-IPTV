@@ -316,7 +316,7 @@ def queue_policy(a,name):
  genre=infer_genre(a,name)
  if base is None:
   return None,reason,code,genre
- if code not in {"BD","IN","PK"} and not genre:
+ if base != "Adult" and code not in {"BD","IN","PK"} and not genre:
   return None,"channel is not clearly Movies or Music",code,genre
  return base,None,code,genre
 def special_group(a,name):
@@ -446,7 +446,7 @@ def main():
   if base is None:rejected[reason]+=1; continue
   seen.add(stream_url_key(url)); candidates.append((a,name,url,norm(name),base,code))
  country_groups=qualified_country_groups(country_primary_ids)
- additions=[]; new_rows=[]; backup_rows=[]; per_group=Counter(); per_country=Counter(); added_primary_ids=defaultdict(set); planned={k:list(v) for k,v in existing_primary.items()}
+ additions=[]; new_rows=[]; adult_rows=[]; backup_rows=[]; per_group=Counter(); per_country=Counter(); added_primary_ids=defaultdict(set); planned={k:list(v) for k,v in existing_primary.items()}
  for a,name,url,key,base,code in candidates:
   if not key:continue
   is_backup=key in planned
@@ -454,8 +454,8 @@ def main():
    if len(backup_rows)>=MAX_NEW_BACKUPS:continue
    target="New Backups"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
   else:
-   if len(new_rows)>=MAX_NEW_CHANNELS:continue
-   target="New Channels"
+   if len(new_rows)+len(adult_rows)>=MAX_NEW_CHANNELS:continue
+   target="Adult" if base=="Adult" else "New Channels"
    if code in ISO_CODES and code not in {"BD","IN","PK"}:
     if per_country[code]>=MAX_NEW_PER_GROUP:continue
     per_country[code]+=1
@@ -467,10 +467,13 @@ def main():
   additions.append([make_extinf(canonical,cname,target,ccode,logo,base),url])
   if is_backup:backup_rows.append((cname,ccode,url))
   else:
-   new_rows.append((cname,target,ccode,url))
-   per_group[target]+=1
-   ident=primary_identity(a,cname)
-   if ccode in ISO_CODES and counts_toward_country_group(target,ccode) and ident:added_primary_ids[ccode].add(ident)
+   if target=="Adult":
+    adult_rows.append((cname,target,ccode,url))
+   else:
+    new_rows.append((cname,target,ccode,url))
+    per_group[target]+=1
+    ident=primary_identity(a,cname)
+    if ccode in ISO_CODES and counts_toward_country_group(target,ccode) and ident:added_primary_ids[ccode].add(ident)
    planned.setdefault(key,[]).append(attrs(additions[-1][0]))
  # Qualification is based only on actual general primary entries in the playlist
  # plus the entries selected for this run, never every eligible source-feed candidate.
