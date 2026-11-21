@@ -225,7 +225,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn('tvg-id="Fresh.in"', output)
             self.assertIn('x-discovery-source-country="BD"', output)
             self.assertEqual(probe.call_count, 1)
-            logo_repair.assert_not_called()
+            logo_repair.assert_called_once()
             self.assertIn("manual review", report.read_text(encoding="utf-8").casefold())
 
     def test_final_iptv_validation_ignores_country_logo_and_preexisting_playlist_duplicates(self):
@@ -455,6 +455,94 @@ class DiscoveryRunValidationTests(unittest.TestCase):
 
 
 
+    def test_raw_repository_logo_url_resolves_to_local_asset(self):
+        import tempfile
+        import validate_discovery_run as validation
+        from unittest.mock import patch
+
+        with tempfile.TemporaryDirectory() as directory:
+            logos = Path(directory) / "logos"
+            logos.mkdir()
+            asset = logos / "test-logo.png"
+            asset.write_bytes(b"authentic local logo")
+            with patch.object(validation, "LOGOS", logos):
+                path = validation.local_logo_path(validation.RAW_BASE + "test-logo.png")
+            self.assertEqual(path, asset)
+            self.assertTrue(path.is_file())
+
+    def test_international_probe_keeps_verified_candidates_in_discovery_queues(self):
+        import tempfile
+        from unittest.mock import patch
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "International-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            prefix = (
+                "#EXTM3U\\n"
+                '#PLAYLIST-STUDIO-CATEGORIES:["International","Review","New Channels","New Backups","Backup"]\\n'
+            )
+            rows = (
+                '#EXTINF:-1 tvg-id="WorldMovie.us" tvg-name="World Movie" tvg-country="US" tvg-content="Movies" tvg-logo="logos/world-movie.svg" group-title="New Channels",World Movie\\n'
+                'https://example.org/world-movie.m3u8\\n'
+                '#EXTINF:-1 tvg-id="WorldMusic.us" tvg-name="World Music" tvg-country="US" tvg-content="Music" tvg-logo="logos/world-music.svg" group-title="New Backups",World Music\\n'
+                'https://example.org/world-music.m3u8\\n'
+            )
+            playlist.write_text(prefix + rows, encoding="utf-8")
+            baseline.write_text(prefix, encoding="utf-8")
+            report.write_text("# Report\\n", encoding="utf-8")
+            with patch.object(validation, "probe_url", side_effect=[
+                ("verified", "Media bytes received"),
+                ("verified", "Media bytes received"),
+            ]), patch.object(
+                validation, "ensure_local_logo",
+                side_effect=lambda entry: (entry["extinf"], False, False),
+            ), patch.object(
+                validation, "promote_verified_candidates",
+                side_effect=AssertionError("automatic promotion must not run"),
+            ):
+                validation.probe_mode(str(playlist), str(report), str(baseline), "international")
+            output = playlist.read_text(encoding="utf-8")
+            self.assertIn('group-title="New Channels"', output)
+            self.assertIn('group-title="New Backups"', output)
+            self.assertNotIn('group-title="Backup"', output)
+            result = report.read_text(encoding="utf-8")
+            self.assertIn("Verified new primary channels retained in New Channels: 1", result)
+            self.assertIn("Verified alternate streams retained in New Backups: 1", result)
+
+    def test_international_probe_keeps_valid_candidate_without_logo_in_new_channels(self):
+        import tempfile
+        from unittest.mock import patch
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "International-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            prefix = (
+                "#EXTM3U\\n"
+                '#PLAYLIST-STUDIO-CATEGORIES:["International","Review","New Channels","New Backups","Backup"]\\n'
+            )
+            row = (
+                '#EXTINF:-1 tvg-id="NoLogoMovie.us" tvg-name="No Logo Movie" tvg-country="US" tvg-content="Movies" group-title="New Channels",No Logo Movie\\n'
+                'https://example.org/no-logo-movie.m3u8\\n'
+            )
+            playlist.write_text(prefix + row, encoding="utf-8")
+            baseline.write_text(prefix, encoding="utf-8")
+            report.write_text("# Report\\n", encoding="utf-8")
+            with patch.object(validation, "probe_url", return_value=("verified", "Media bytes received")), patch.object(
+                validation, "ensure_local_logo",
+                side_effect=lambda entry: (entry["extinf"], False, True),
+            ):
+                validation.probe_mode(str(playlist), str(report), str(baseline), "international")
+            output = playlist.read_text(encoding="utf-8")
+            self.assertIn('group-title="New Channels"', output)
+            self.assertNotIn('tvg-logo=""', output)
+            self.assertIn("without tvg-logo", report.read_text(encoding="utf-8"))
+
     def test_verified_channels_auto_promote_alternates_go_to_backup_and_inconclusive_go_to_review(self):
         import tempfile
         import validate_discovery_run as validation
@@ -567,7 +655,8 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                  patch.object(validation, "ensure_local_logo", side_effect=lambda entry: (entry["extinf"], False, True)):
                 validation.probe_mode(str(playlist), str(report), str(baseline), "international")
             output = playlist.read_text(encoding="utf-8")
-            self.assertIn('group-title="Review"', output)
+            self.assertIn('group-title="New Channels"', output)
+            self.assertNotIn('group-title="Review"', output)
             self.assertIn("https://example.org/bd-test.m3u8", output)
             previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
             os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
@@ -581,7 +670,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
 
 
-    def test_final_validation_accepts_promoted_foreign_country_group_rows(self):
+    def test_final_validation_rejects_new_candidates_promoted_out_of_queues(self):
         import json
         import os
         import tempfile
@@ -620,7 +709,8 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 else:
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
             final_report = report.read_text(encoding="utf-8")
-            self.assertIn("- Validation status: PASS", final_report)
+            self.assertIn("- Validation status: FAIL", final_report)
+            self.assertIn("new International candidates must remain in New Channels/New Backups", final_report)
             self.assertIn("- Geography/content policy issues: 0", final_report)
 
 
