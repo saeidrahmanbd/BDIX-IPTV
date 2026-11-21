@@ -670,6 +670,74 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
 
 
+    def test_final_validation_accepts_new_backup_for_channel_in_review(self):
+        import json
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "International-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["International", "Review", "New Channels", "New Backups", "Backup"]
+            prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry) + "\n"
+            existing = (
+                '#EXTINF:-1 tvg-id="stargold.in" tvg-name="Star Gold" tvg-country="IN" tvg-content="Movies" group-title="Review",Star Gold\n'
+                "https://example.org/star-gold-old.m3u8\n"
+            )
+            backup = (
+                '#EXTINF:-1 tvg-id="stargold.in" tvg-name="Star Gold" tvg-country="IN" tvg-content="Movies" group-title="New Backups",Star Gold\n'
+                "https://example.org/star-gold-new.m3u8\n"
+            )
+            baseline.write_text(prefix + existing, encoding="utf-8")
+            playlist.write_text(prefix + existing + backup, encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "international")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
+
+    def test_final_validation_rejects_new_backup_without_existing_channel(self):
+        import json
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "International-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["International", "Review", "New Channels", "New Backups", "Backup"]
+            prefix = "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry) + "\n"
+            backup = (
+                '#EXTINF:-1 tvg-id="stargold.in" tvg-name="Star Gold" tvg-country="IN" tvg-content="Movies" group-title="New Backups",Star Gold\n'
+                "https://example.org/star-gold-new.m3u8\n"
+            )
+            baseline.write_text(prefix, encoding="utf-8")
+            playlist.write_text(prefix + backup, encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "international")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            final_report = report.read_text(encoding="utf-8")
+            self.assertIn("- Validation status: FAIL", final_report)
+            self.assertIn("New Backups row has no already-represented channel identity: Star Gold", final_report)
+
     def test_final_validation_rejects_new_candidates_promoted_out_of_queues(self):
         import json
         import os
