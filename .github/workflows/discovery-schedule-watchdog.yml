@@ -26,6 +26,7 @@ on:
       - Playlist Logo Repair and Localization
       - International Stream Health
       - Refresh IPTV EPG
+      - Daily Xtream Health Check
     types: [completed]
     branches: [main]
   # On-demand recovery check. Every schedule checkpoint below shares GitHub's
@@ -77,4 +78,5 @@ jobs:
             international-channel-discovery.yml \
             playlist-logo-localization.yml \
             international-stream-health.yml \
-            epg-refresh.yml
+            epg-refresh.yml \
+            check-xtream.yml

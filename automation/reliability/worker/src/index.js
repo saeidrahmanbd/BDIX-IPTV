@@ -1,4 +1,5 @@
 import { createGitHubClient, verifyGitHubAppAccess } from "./github-app.js";
+import { runWatchdogTrigger, recentWatchdogTriggers, triggerMode } from "./watchdog-trigger.js";
 
 const TIME_ZONE = "Asia/Dhaka";
 const LOOKBACK_DAYS = 3;
@@ -274,15 +275,40 @@ async function runReconciliationWithHeartbeat(env) {
   }
 }
 
+// Fires the GitHub watchdog (never the playlist/EPG/Xtream workflows) at fixed
+// Bangladesh checkpoints. Independent of reconciliation: a reconciliation or D1
+// problem there must not stop the trigger, and vice versa. Errors are reduced to a
+// short message so no credential or token can reach the logs.
+async function runWatchdogTriggerSafely(env,options) {
+  try {
+    return await runWatchdogTrigger(env,{createClient:createGitHubClient},options);
+  } catch (error) {
+    console.error("watchdog trigger failed: "+String((error && error.message) || error).slice(0,200));
+    return {action:"failed",error:"watchdog_trigger_failed"};
+  }
+}
+
 export default {
   async fetch(request,env) {
     const url=new URL(request.url);
     if (request.method === "GET" && url.pathname === "/healthz")
-      return Response.json({ok:true,mode:env.MODE === "active" ? "active" : "shadow"});
-    if (request.method !== "POST" || !["/reconcile","/github-check"].includes(url.pathname))
+      return Response.json({ok:true,mode:env.MODE === "active" ? "active" : "shadow",
+        watchdog_trigger:triggerMode(env)});
+    if (request.method !== "POST" ||
+        !["/reconcile","/github-check","/watchdog-dispatch","/watchdog-status"].includes(url.pathname))
       return new Response("Not found",{status:404});
     if (!env.RECONCILE_BEARER_TOKEN) return new Response("Protected endpoint is not configured",{status:503});
     if (!authorized(request,env)) return new Response("Unauthorized",{status:401});
+    if (url.pathname === "/watchdog-dispatch") {
+      // Manual recovery: dispatch the watchdog now. ?dry_run=1 records the decision only.
+      const dryRun=url.searchParams.get("dry_run") === "1";
+      const result=await runWatchdogTriggerSafely(env,{source:"manual",dryRun});
+      return Response.json(result,{status:result.action === "failed" ? 503 : 200});
+    }
+    if (url.pathname === "/watchdog-status") {
+      try { return Response.json({mode:triggerMode(env),recent:await recentWatchdogTriggers(env)}); }
+      catch (error) { return Response.json({error:"watchdog_status_failed"},{status:503}); }
+    }
     try {
       if (url.pathname === "/github-check") {
         const result=await verifyGitHubAppAccess(env);
@@ -294,5 +320,7 @@ export default {
         message:String(error.message || error).slice(0,240)},{status:503});
     }
   },
-  async scheduled(_controller,env,ctx) { ctx.waitUntil(runReconciliationWithHeartbeat(env)); }
+  async scheduled(_controller,env,ctx) {
+    ctx.waitUntil(Promise.allSettled([runReconciliationWithHeartbeat(env),runWatchdogTriggerSafely(env)]));
+  }
 };

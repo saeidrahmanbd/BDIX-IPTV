@@ -1200,6 +1200,118 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         total = (hour_utc * 60 + minute_utc + 6 * 60) % (24 * 60)  # Asia/Dhaka = UTC+6
         self.assertEqual(guard.EPG_DAILY_REFRESH_LOCAL, (total // 60, total % 60))
 
+    # --- Xtream health-check recovery ------------------------------------
+
+    XTREAM_SUCCESS_JOBS = [{
+        "name": "check", "status": "completed", "conclusion": "success",
+        "steps": [{"name": "Check main IPTV Xtream gateway", "conclusion": "success"}],
+    }]
+
+    def _xtream_run(self, run_id, status="completed", conclusion="success", actor="github-actions[bot]",
+                    event="workflow_dispatch", created="2026-11-07T02:00:00Z"):
+        return {
+            "id": run_id, "event": event, "status": status, "conclusion": conclusion,
+            "created_at": created, "actor": {"login": actor},
+        }
+
+    def _watch_with(self, runs_by_workflow, jobs_by_run=None):
+        dispatched = []
+
+        class Client:
+            def __init__(self, repository, token):
+                pass
+
+            def workflow_runs(self, workflow_file, target_date):
+                return list(runs_by_workflow.get(workflow_file, []))
+
+            def workflow_run_jobs(self, run_id):
+                return (jobs_by_run or {}).get(int(run_id), [])
+
+            def dispatch(self, workflow_file):
+                dispatched.append(workflow_file)
+
+        import os
+        from unittest.mock import patch
+
+        with patch.dict(os.environ, {"GITHUB_REPOSITORY": "owner/repo", "GH_TOKEN": "t"}), \
+             patch.object(guard, "GitHubActions", Client), \
+             patch.object(guard, "today_in_bangladesh", return_value=self.today), \
+             patch.object(guard, "recovery_is_due", return_value=True):
+            result = guard.watchdog(["check-xtream.yml"])
+        return result, dispatched
+
+    def test_xtream_is_a_supported_recovery_workflow_with_real_job_checks(self):
+        self.assertIn("check-xtream.yml", guard.VALID_WORKFLOWS)
+        self.assertEqual(guard.REQUIRED_JOB_BY_WORKFLOW["check-xtream.yml"], "check")
+        self.assertEqual(guard.REQUIRED_STEP_BY_WORKFLOW["check-xtream.yml"], "Check main IPTV Xtream gateway")
+        # Recovery waits until after the 06:30 cron and the playlist writers.
+        self.assertEqual(guard.RECOVERY_AFTER_LOCAL["check-xtream.yml"], (6, 45))
+        self.assertFalse(guard.recovery_is_due(
+            "check-xtream.yml", datetime(2026, 11, 7, 6, 44, tzinfo=guard.BD_TZ)))
+        self.assertTrue(guard.recovery_is_due(
+            "check-xtream.yml", datetime(2026, 11, 7, 6, 45, tzinfo=guard.BD_TZ)))
+
+    def test_xtream_missing_today_is_dispatched_once(self):
+        result, dispatched = self._watch_with({})
+        self.assertEqual(result, 0)
+        self.assertEqual(dispatched, ["check-xtream.yml"])
+
+    def test_xtream_success_with_real_check_step_suppresses_dispatch(self):
+        done = self._xtream_run(700)
+        result, dispatched = self._watch_with(
+            {"check-xtream.yml": [done]}, {700: self.XTREAM_SUCCESS_JOBS})
+        self.assertEqual((result, dispatched), (0, []))
+
+    def test_xtream_guard_only_noop_run_does_not_count_as_success(self):
+        # A run whose "check" job was skipped by its daily guard must not hide a missing probe.
+        noop = self._xtream_run(701)
+        skipped_jobs = [{"name": "daily_guard", "status": "completed", "conclusion": "success", "steps": []},
+                        {"name": "check", "status": "completed", "conclusion": "skipped", "steps": []}]
+        result, dispatched = self._watch_with({"check-xtream.yml": [noop]}, {701: skipped_jobs})
+        self.assertEqual(dispatched, ["check-xtream.yml"])
+
+    def test_xtream_active_run_blocks_duplicate_dispatch(self):
+        running = self._xtream_run(702, status="in_progress", conclusion=None)
+        result, dispatched = self._watch_with({"check-xtream.yml": [running]})
+        self.assertEqual((result, dispatched), (0, []))
+
+    def test_xtream_recovery_defers_while_any_playlist_writer_is_active(self):
+        for writer in guard.DEFER_WHILE_WRITERS_ACTIVE["check-xtream.yml"]:
+            with self.subTest(writer=writer):
+                busy = {"id": 800, "event": "workflow_dispatch", "status": "queued", "conclusion": None,
+                        "created_at": "2026-11-07T02:00:00Z"}
+                result, dispatched = self._watch_with({writer: [busy]})
+                self.assertEqual((result, dispatched), (0, []))
+
+    def test_xtream_ignores_completed_writers_and_other_days_when_deferring(self):
+        finished = {"id": 801, "event": "schedule", "status": "completed", "conclusion": "success",
+                    "created_at": "2026-11-07T02:00:00Z"}
+        yesterday_busy = {"id": 802, "event": "schedule", "status": "in_progress", "conclusion": None,
+                          "created_at": "2026-11-05T02:00:00Z"}
+        result, dispatched = self._watch_with({
+            "iptv-maintenance.yml": [finished], "epg-refresh.yml": [yesterday_busy]})
+        self.assertEqual(dispatched, ["check-xtream.yml"])
+
+    def test_xtream_failed_attempts_respect_the_daily_dispatch_limit(self):
+        failures = [self._xtream_run(710 + i, conclusion="failure") for i in range(guard.MAX_WATCHDOG_DISPATCHES_PER_DAY)]
+        result, dispatched = self._watch_with({"check-xtream.yml": failures})
+        self.assertEqual((result, dispatched), (0, []))
+        one_failure = failures[:1]
+        result, dispatched = self._watch_with({"check-xtream.yml": one_failure})
+        self.assertEqual(dispatched, ["check-xtream.yml"])
+
+    def test_deferral_does_not_apply_to_the_playlist_writers(self):
+        self.assertNotIn("iptv-maintenance.yml", guard.DEFER_WHILE_WRITERS_ACTIVE)
+        self.assertNotIn("epg-refresh.yml", guard.DEFER_WHILE_WRITERS_ACTIVE)
+
+    def test_watchdog_workflow_runs_and_wakes_for_xtream(self):
+        source = (ROOT / ".github" / "workflows" / "discovery-schedule-watchdog.yml").read_text(encoding="utf-8")
+        self.assertIn("      - Daily Xtream Health Check", source)
+        self.assertIn("check-xtream.yml", source.split("python scripts/discovery_schedule_guard.py watchdog", 1)[1])
+        xtream = (ROOT / ".github" / "workflows" / "check-xtream.yml").read_text(encoding="utf-8")
+        self.assertRegex(xtream, r"(?m)^  workflow_dispatch:")
+        self.assertRegex(xtream, r"(?m)^name: Daily Xtream Health Check$")
+
     def test_watchdog_workflow_has_manual_dispatch_and_keeps_report_push_wakeups(self):
         import re
 

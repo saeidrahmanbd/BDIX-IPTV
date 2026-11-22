@@ -28,6 +28,7 @@ VALID_WORKFLOWS = {
     "iptv-maintenance.yml", "new-channel-discovery.yml",
     "international-channel-discovery.yml", "playlist-logo-localization.yml",
     "international-stream-health.yml", "epg-refresh.yml",
+    "check-xtream.yml",
 }
 REQUIRED_JOB_BY_WORKFLOW = {
     "iptv-maintenance.yml": "maintain",
@@ -36,6 +37,7 @@ REQUIRED_JOB_BY_WORKFLOW = {
     "playlist-logo-localization.yml": "localize",
     "international-stream-health.yml": "check",
     "epg-refresh.yml": "refresh",
+    "check-xtream.yml": "check",
 }
 REQUIRED_STEP_BY_WORKFLOW = {
     "iptv-maintenance.yml": "Run maintenance",
@@ -44,6 +46,7 @@ REQUIRED_STEP_BY_WORKFLOW = {
     "playlist-logo-localization.yml": "Localize and commit logos",
     "international-stream-health.yml": "Probe all International streams and apply three-day policy",
     "epg-refresh.yml": "Regenerate, validate and publish XMLTV",
+    "check-xtream.yml": "Check main IPTV Xtream gateway",
 }
 RECOVERY_AFTER_LOCAL = {
     "iptv-maintenance.yml": (6, 10),
@@ -52,6 +55,19 @@ RECOVERY_AFTER_LOCAL = {
     "playlist-logo-localization.yml": (5, 45),
     "international-stream-health.yml": (5, 55),
     "epg-refresh.yml": (6, 45),
+    # Cron is 06:30; recovery waits until the playlist writers normally finish.
+    "check-xtream.yml": (6, 45),
+}
+# Read-only probes that validate the published playlist must not run while a
+# playlist writer is still queued or running, or they would check a half-updated
+# snapshot. Deferral is safe: each writer completion wakes the watchdog again
+# (workflow_run) and the external checkpoints keep firing.
+DEFER_WHILE_WRITERS_ACTIVE = {
+    "check-xtream.yml": (
+        "iptv-maintenance.yml", "new-channel-discovery.yml",
+        "international-channel-discovery.yml", "playlist-logo-localization.yml",
+        "international-stream-health.yml", "epg-refresh.yml",
+    ),
 }
 # Earliest Bangladesh-local creation time of an EPG run that counts as the
 # daily publication. Keep in step with the cron in .github/workflows/epg-refresh.yml
@@ -606,6 +622,15 @@ def watchdog_dispatch_count(runs: list[dict[str, Any]]) -> int:
     )
 
 
+def active_blocking_writer(client, workflow_file: str, target_date: date) -> str | None:
+    """Return the first writer workflow with a queued/running run today, if this workflow defers to writers."""
+    for writer in DEFER_WHILE_WRITERS_ACTIVE.get(workflow_file, ()):
+        for run in runs_for_date(client.workflow_runs(writer, target_date), target_date):
+            if str(run.get("status") or "").casefold() != "completed":
+                return writer
+    return None
+
+
 def _recover_workflow(client, workflow_file: str, target_date: date) -> None:
     """Evaluate one workflow's daily obligation and dispatch it only if missing."""
     if not recovery_is_due(workflow_file):
@@ -642,6 +667,13 @@ def _recover_workflow(client, workflow_file: str, target_date: date) -> None:
             f"{automatic_dispatches} automatic watchdog dispatches already ran "
             f"(limit {MAX_WATCHDOG_DISPATCHES_PER_DAY}). No further dispatch will be sent today; "
             "the next scheduled Bangladesh-day cycle may retry after investigation."
+        )
+        return
+    busy_writer = active_blocking_writer(client, workflow_file, target_date)
+    if busy_writer:
+        print(
+            f"Recovery for {workflow_file} deferred: {busy_writer} still has an active run for "
+            f"{target_date}. The next writer completion or external checkpoint re-evaluates it."
         )
         return
     if todays:
