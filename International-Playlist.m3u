@@ -242,7 +242,7 @@ https://cdn.pishow.tv/ott/live/1011/master.m3u8
 https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/index.m3u8
 #EXTINF:-1 tvg-id="MHOneMovies.in@SD" channel-id="MHOneMovies.in@SD" tvg-language="hin" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-movies.png" group-title="Indian Movies" tvg-name="MH One Movies",MH One Movies
 https://fta.ektv.in/live/639/master.m3u8
-#EXTINF:-1 tvg-id="MNX.in@SD" channel-id="MNX.in@SD" tvg-language="eng" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mnx.png" group-title="Indian Movies" tvg-name="MNX",MNX
+#EXTINF:-1 tvg-id="MNX.in@SD" channel-id="MNX.in@SD" tvg-language="eng" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mnx.png" group-title="International" tvg-name="MNX",MNX
 http://116.90.120.149:8000/play/a11e/index.m3u8
 #EXTINF:-1 tvg-id="MoviePunjab.in@SD" tvg-language="und" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/verified-movie-punjab-720p-82d197a4e5.png" group-title="Indian Movies" tvg-name="Movie Punjab",Movie Punjab
 https://samitaorigin.tangotv.in/MOVIEPUNJAB/SAMITAORIGIN/index.m3u8
@@ -276,7 +276,7 @@ https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/in
 https://samitaorigin.tangotv.in/SONERICINEMA/SAMITAORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="SonyMax.in@SD" tvg-language="und" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" group-title="Indian Movies" tvg-name="Sony Max",Sony Max
 http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/151.ts
-#EXTINF:-1 tvg-id="SonyMovies.in" channel-id="SonyMovies.in" tvg-language="eng" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-movies-563051ab.png" group-title="Indian Movies" tvg-name="Sony Movies",Sony Movies
+#EXTINF:-1 tvg-id="SonyMovies.in" channel-id="SonyMovies.in" tvg-language="eng" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-movies-563051ab.png" group-title="International" tvg-name="Sony Movies",Sony Movies
 https://a-cdn.klowdtv.com/live1/smc_720p/chunks.m3u8
 #EXTINF:-1 tvg-id="SonyPix.in@HD" channel-id="SonyPix.in@HD" tvg-language="eng;hin;tam;tel" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-pix.png" group-title="Indian Movies" tvg-name="Sony Pix",Sony Pix
 http://116.90.120.149:8000/play/a138/index.m3u8
@@ -286,7 +286,7 @@ https://sl.vodep39240327.workers.dev/channel/SONY+WAH.m3u8
 https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/SS_IN.m3u8
 #EXTINF:-1 tvg-id="StarMaaMovies.in@SD" channel-id="StarMaaMovies.in@SD" tvg-language="tel" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png" group-title="Indian Movies" tvg-name="Star Maa Movies",Star Maa Movies
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8
-#EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-language="eng" channel-id="StarMoviesSelect.in@HD" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/verified-star-movies-select-2b1d079564.png" group-title="Indian Movies" tvg-name="Star Movies Select",Star Movies Select
+#EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-language="eng" channel-id="StarMoviesSelect.in@HD" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/verified-star-movies-select-2b1d079564.png" group-title="International" tvg-name="Star Movies Select",Star Movies Select
 https://livetv.shamon-cable.net:8443/Star-movies-select/index.m3u8
 #EXTINF:-1 tvg-id="StarUtsavMovies.in@SD" channel-id="StarUtsavMovies.in@SD" tvg-language="hin" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-utsav-movies.png" group-title="Indian Movies" tvg-name="Star Utsav Movies",Star Utsav Movies
 http://163.61.226.31:9981/stream/channelid/1225596390?profile=pass
