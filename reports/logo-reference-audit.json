@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5240,
-  "all_explicitly_referenced_logo_files": 2504,
-  "runtime_referenced_logo_files": 2502,
-  "playlist_referenced_logo_files": 2476,
+  "logo_image_files": 5241,
+  "all_explicitly_referenced_logo_files": 2505,
+  "runtime_referenced_logo_files": 2503,
+  "playlist_referenced_logo_files": 2475,
   "apparently_unreferenced_by_any_text_file": 2736,
   "apparently_unreferenced_by_runtime_sources": 2738,
   "missing_explicit_logo_targets": [
@@ -4295,8 +4295,8 @@
     "logos/zoom-india-27531244ca.png",
     "logos/zoom-israel-ed459937c9.png"
   ],
-  "exact_duplicate_groups": 740,
-  "exact_duplicate_files": 1404,
+  "exact_duplicate_groups": 741,
+  "exact_duplicate_files": 1405,
   "exact_duplicates": [
     {
       "sha256": "00cefab928f6517f0261b462ce57173a7235e7f88cfdcdb868b2728727e2fdb9",
@@ -9723,6 +9723,13 @@
       ]
     },
     {
+      "sha256": "edb83c94c30927d049409f11a2f18d85d14cc4cc55184ee7d45d18442795f25c",
+      "files": [
+        "logos/international/starz-cinema-720p.png",
+        "logos/starz-cinema-720p.png"
+      ]
+    },
+    {
       "sha256": "ee81b22c4adede486acfde52d934e91b205388ef68320c745f27de94416a9ae8",
       "files": [
         "logos/axn-poland-1080p.png",
@@ -14854,7 +14861,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/starz-cinema-720p.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/into-crime-c391ebb086.png": [
@@ -15425,7 +15431,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/lifetimemovies.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/liratv-9d36bd20f2.png": [
@@ -18675,6 +18680,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/starz-cinema-720p.png": [
+      "International-Playlist.m3u"
     ],
     "logos/starz-comedy-b4f7a4d16e.png": [
       "International-Playlist.m3u",
@@ -26404,7 +26412,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/starz-cinema-720p.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/into-crime-c391ebb086.png": [
@@ -26975,7 +26982,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/lifetimemovies.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/liratv-9d36bd20f2.png": [
@@ -30229,6 +30235,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/starz-cinema-720p.png": [
+      "International-Playlist.m3u"
     ],
     "logos/starz-comedy-b4f7a4d16e.png": [
       "International-Playlist.m3u",

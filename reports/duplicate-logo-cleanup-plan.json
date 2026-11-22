@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
-  "exact_duplicate_groups": 740,
-  "exact_duplicate_files": 1404,
+  "exact_duplicate_groups": 741,
+  "exact_duplicate_files": 1405,
   "low_risk_review_candidates": [
     {
       "candidate": "logos/unused/filmrise-forensic-files-720p-56ce9d346d.png",
