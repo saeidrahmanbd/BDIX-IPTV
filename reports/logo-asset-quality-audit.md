@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-22T03:38:01+00:00**
+Generated: **2026-11-22T11:26:00+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **0e135710f0964eb757aa03c22ce16c8b1d48cad03639d48f28903aadee255a73**
+- IPTV-Playlist.m3u SHA-256: **af1e86211cc8ff56d9347bf15d9bd8a9643ac18cf1fcaeefe8f2a6bb29371b1e**
 - International-Playlist.m3u SHA-256: **0c54abb3d310210c638b0c43b5414caed35a5d3c5ea2a19a0e1871a40b07eb74**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **146**
 - Exact-byte duplicate asset clusters: **741**
-- Playlist references whose asset stem differs from the normalized channel name: **1629**
-- Unreferenced image assets immediately inside logos/: **963** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1578**
+- Unreferenced image assets immediately inside logos/: **969** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -155,7 +155,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | sa-tv.png | 187×53 | yes |
 | songtv-russia-53ffc24d1b.png | 141×30 | yes |
 | sport-3-be6e1e361e.png | 325×60 | no |
-| sport-4-19a83fa7a4.png | 329×60 | yes |
+| sport-4-19a83fa7a4.png | 329×60 | no |
 | sports-grid.png | 141×42 | yes |
 | sportsgrid-bb9303e31f.png | 141×42 | no |
 | stingray-holiday-hits.png | 110×40 | yes |
@@ -957,9 +957,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Ayna TV | ayna-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Bangladesh |
 | IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Bangladesh |
-| IPTV-Playlist.m3u | Banglar Kontho 24 | banglar-kontho.png | Bangladesh |
+| IPTV-Playlist.m3u | SA TV | sa-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Bijoy TV | bijoy-tv.png | Bangladesh |
-| IPTV-Playlist.m3u | Biswa Bangla 24 | biswabangla-24-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | CB24 TV | cb24-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Bangladesh |
@@ -991,29 +990,29 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Bangladesh |
 | IPTV-Playlist.m3u | My TV | my-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Nagorik TV | nagorik-tv-90b5d16aaf.png | Bangladesh |
-| IPTV-Playlist.m3u | News 21 | news-21-bangla-tv.png | Bangladesh |
+| IPTV-Playlist.m3u | Channel Europe | channel-europe-c8db0338dc.png | Bangladesh |
 | IPTV-Playlist.m3u | Nexus TV | nexus-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | NRB TV | nrb-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Probashi TV | probashi-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Bangladesh |
-| IPTV-Playlist.m3u | SA TV | sa-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Shikor TV Canada | shikor-tv-canada.png | Bangladesh |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | TBN 24 USA | tbn-24.png | Bangladesh |
 | IPTV-Playlist.m3u | Vision 24 | vision.png | Bangladesh |
+| IPTV-Playlist.m3u | ME TV | me-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | BHI Channel | bhi-channel.png | Indian Bangla |
-| IPTV-Playlist.m3u | Enterr10 Bangla | enter10-bangla.png | Indian Bangla |
 | IPTV-Playlist.m3u | Jhankar TV | jhankar-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | JTV Bangla | jtv-bangla-converted-badc0be693.png | Indian Bangla |
 | IPTV-Playlist.m3u | Orange Bangla TV | orange-bangla-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Tara TV | tara-tv.png | Indian Bangla |
-| IPTV-Playlist.m3u | Ten TV Prime | ten-tv-prime.png | Indian Bangla |
+| IPTV-Playlist.m3u | Enterr10 Bangla | enter10-bangla.png | Indian Bangla |
+| IPTV-Playlist.m3u | &pictures HD | and-pictures.png | Indian Movies |
+| IPTV-Playlist.m3u | &xplor HD | and-xplor-hd.png | Indian Movies |
 | IPTV-Playlist.m3u | Alankar TV | alankar-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | B4U Bhojpuri Plus | b4u-bhojpuri.png | Indian Movies |
 | IPTV-Playlist.m3u | Bollygold | nh-bollygold-dbedeff9.png | Indian Movies |
 | IPTV-Playlist.m3u | Bollywood | bollywood-hd-576p.png | Indian Movies |
-| IPTV-Playlist.m3u | Colors Cineplex [UK] | colors-cineplex.png | Indian Movies |
 | IPTV-Playlist.m3u | Epic Bhojpuri Digital | epic-bhojpuri.png | Indian Movies |
 | IPTV-Playlist.m3u | Goldmines Movies 2 | goldmines-movies.png | Indian Movies |
 | IPTV-Playlist.m3u | Indywood TV | indywood-tv.png | Indian Movies |
@@ -1022,6 +1021,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | TamilVision-TV | tamilvision-tv-1080p.png | Indian Movies |
 | IPTV-Playlist.m3u | Thalaa TV | thalaa-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Tolly TV | tolly-tv.png | Indian Movies |
+| IPTV-Playlist.m3u | Movies Now+ | movies-now-plus-0cafc6cc49572c25cbc8.png | Indian Movies |
+| IPTV-Playlist.m3u | Star Gold HD | verified-star-gold-hd-1080p-f2178a885b.png | Indian Movies |
+| IPTV-Playlist.m3u | Star Movies (India) HD | star-movies-india-hd-1080p.png | Indian Movies |
+| IPTV-Playlist.m3u | Zee Talkies HD | zee-talkies-hd-1080p.png | Indian Movies |
+| IPTV-Playlist.m3u | Thendral TV | thendral-tv-ed9b933eb5.png | Indian Movies |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Indian Music |
 | IPTV-Playlist.m3u | Aaryaa TV | aaryaa-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Dhool TV | dhool-tv.png | Indian Music |
@@ -1033,6 +1037,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Songdew TV | songdew-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Ultimate TV | ultimate-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Indian Music |
+| IPTV-Playlist.m3u | Oli TV | oli-tv.png | Indian Music |
+| IPTV-Playlist.m3u | V9 News | ccv.png | Indian Music |
 | IPTV-Playlist.m3u | &TV | tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Alright! TV | alright-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Indian Entertainment |
@@ -1041,7 +1047,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Apna Punjab TV | apna-punjab-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Baiscope TV | baiscope-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | BIG TV | big-tv-24x7.png | Indian Entertainment |
-| IPTV-Playlist.m3u | C Malayalam TV | c-malayalam-tv-1080p-3b1c6293f5.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Darshana TV | darshana-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Desi Channel | desi-channel.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Gangaur TV | gangaur-tv.png | Indian Entertainment |
@@ -1072,7 +1077,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Sony Entertainment TV | sony-entertainment-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Suriya TV | suriya-tv.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Tarang TV | tarang-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Vaanavil TV | vaanavil-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Vanitha TV | vanitha-tv.png | Indian Entertainment |
@@ -1081,6 +1085,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Vision (India) | vision.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Vissa TV | vissa-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Indian Entertainment |
+| IPTV-Playlist.m3u | ETV Plus HD | etv-plus-hd-1080p.png | Indian Entertainment |
+| IPTV-Playlist.m3u | ETV Telugu HD | etv-telugu-hd-1080p.png | Indian Entertainment |
+| IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Ary Digital | arydigital.png | Pakistani |
 | IPTV-Playlist.m3u | aur LIFE | aurlife.png | Pakistani |
 | IPTV-Playlist.m3u | Falak TV | falak-tv.png | Pakistani |
@@ -1089,6 +1096,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | See TV | see-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Sindh TV | sindh-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Tag TV | tag-tv.png | Pakistani |
+| IPTV-Playlist.m3u | Waseb TV | waseb-tv.png | Pakistani |
 | IPTV-Playlist.m3u | AMC Thrillers | amc-triller.png | International |
 | IPTV-Playlist.m3u | BBC World | bbc-world-news.png | International |
 | IPTV-Playlist.m3u | Blues TV | blues-tv.png | International |
@@ -1142,7 +1150,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Green Gold TV | green-gold-tv.png | Kids |
 | IPTV-Playlist.m3u | Kartoon Channel! | kartoon-channel.png | Kids |
 | IPTV-Playlist.m3u | Lego Channel | lego-channel-1080p.png | Kids |
-| IPTV-Playlist.m3u | Nickelodeon | nick.png | Kids |
 | IPTV-Playlist.m3u | Powerkids Kartoon Channel | powerkids-kartoon-channel.png | Kids |
 | IPTV-Playlist.m3u | Smurf TV | smurf-tv.png | Kids |
 | IPTV-Playlist.m3u | Sonic The Hedgehog | sonic.png | Kids |
@@ -1170,6 +1177,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Quran TV | quran-tv.png | Religious |
 | IPTV-Playlist.m3u | TV One UK | tv-one-uk.png | Religious |
 | IPTV-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Religious |
+| IPTV-Playlist.m3u | Peace TV English | peace-tv-english.png | Religious |
+| IPTV-Playlist.m3u | Peace TV Urdu | peace-tv-urdu.png | Religious |
+| IPTV-Playlist.m3u | Pickleball Now | pickleball-now-720p-geo-blocked-0b59f9270029b91e10eb.png | Sports |
 | IPTV-Playlist.m3u | ACI Sport TV | aci-sport-tv.png | Sports |
 | IPTV-Playlist.m3u | Channel Fight | channel-fight.png | Sports |
 | IPTV-Playlist.m3u | ESPN2 | espn-2-united-states-7a4d2daafc.png | Sports |
@@ -1182,10 +1192,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Goal TV | goal-tv-237cfbed.png | Sports |
 | IPTV-Playlist.m3u | Golf Channel | golf-channel-73bed53091.png | Sports |
 | IPTV-Playlist.m3u | MMA TV com 格斗 | mma-tv-com-85ca206b32.png | Sports |
-| IPTV-Playlist.m3u | NBA TV | nba-tv.png | Sports |
 | IPTV-Playlist.m3u | Oman Sports TV | oman-sports-tv.png | Sports |
 | IPTV-Playlist.m3u | Rally TV | rally-tv.png | Sports |
-| IPTV-Playlist.m3u | Real Madrid TV | real-madrid-tv.png | Sports |
 | IPTV-Playlist.m3u | Red Bull TV | red-bull-tv-au-4ec4c704c2.png | Sports |
 | IPTV-Playlist.m3u | SN TV | sn-tv.png | Sports |
 | IPTV-Playlist.m3u | Sony Sports Ten 3 | sony-sports-ten-3-hindi.png | Sports |
@@ -1201,65 +1209,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | TSN 3 | tsn-3-ca.png | Sports |
 | IPTV-Playlist.m3u | Türkmenistan Sport | turkmenistan-sport-714745951c.png | Sports |
 | IPTV-Playlist.m3u | UFC | ufc-tv.png | Sports |
-| IPTV-Playlist.m3u | viju+ Sport | viju-plus-sport-14b136d70c.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports | us-willow-sports-hd.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports 2 | us-willow-sports-hd.png | Sports |
-| IPTV-Playlist.m3u | Ayush Next Communication Network (576p) | ayush-next-communication-network-f7c7f33323dd3095ae15.png | New Channels |
-| IPTV-Playlist.m3u | Bollywood Masala (1080p) | bollywood-masala-a6b8705b09a523f7b504.png | New Channels |
-| IPTV-Playlist.m3u | ETV Life (1080p) | etv-life.png | New Channels |
-| IPTV-Playlist.m3u | ETV Telugu HD (1080p) | etv-telugu-hd-1080p.png | New Channels |
-| IPTV-Playlist.m3u | Gaunda Punjab TV (720p) | gaunda-punjab-tv-720p.png | New Channels |
-| IPTV-Playlist.m3u | MNX (576p) | mnx.png | New Channels |
-| IPTV-Playlist.m3u | NDTV Good Times (1080p) | ndtv-good-times.png | New Channels |
-| IPTV-Playlist.m3u | Punjab Plus (1080p) | punjab-plus-1080p.png | New Channels |
-| IPTV-Playlist.m3u | Sony Pix HD (1080p) | sony-pix.png | New Channels |
-| IPTV-Playlist.m3u | Vii MEDIA (1080p) | vii-media-f846eef4fa28daa1283a.png | New Channels |
-| IPTV-Playlist.m3u | WeatherSpy (India) (720p) | weatherspy-india.png | New Channels |
-| IPTV-Playlist.m3u | &xplor HD (1080p) | and-xplor-hd.png | New Channels |
-| IPTV-Playlist.m3u | Zodiak TV (1080p) | zodiak-tv.png | New Channels |
-| IPTV-Playlist.m3u | Star Gold 2 (576p) | star-gold-2.png | New Channels |
-| IPTV-Playlist.m3u | Star Gold Romance (576p) | star-gold-romance-c5fa568b2f3a21118f2b.png | New Channels |
-| IPTV-Playlist.m3u | TLC (India) HD (1080p) | tlc-india.png | New Channels |
-| IPTV-Playlist.m3u | Zee Classic (576p) | zee-classic-60a1348c57a3a772d876.png | New Channels |
-| IPTV-Playlist.m3u | Zee Power HD (1080p) | zee-power-3af99da652f1686dfcae.png | New Channels |
-| IPTV-Playlist.m3u | Zee Talkies HD (1080p) | zee-talkies-hd-1080p.png | New Channels |
-| IPTV-Playlist.m3u | Zee Thirai HD (1080p) | zee-thirai-7ca309bb44820a2b7a4b.png | New Channels |
-| IPTV-Playlist.m3u | DD Kashir (576p) | dd-kashir.png | New Backups |
-| IPTV-Playlist.m3u | DD National HD (1080p) | dd-national.png | New Backups |
-| IPTV-Playlist.m3u | ETV Beats (1080p) | etv-beats-1080p.png | New Backups |
-| IPTV-Playlist.m3u | ETV Cinema HD (1080p) | etv-cinema-8211c9a4643e7d2c26af.png | New Backups |
-| IPTV-Playlist.m3u | ETV Comedy (1080p) | etv-comedy.png | New Backups |
-| IPTV-Playlist.m3u | ETV Josh (1080p) | etv-josh.png | New Backups |
-| IPTV-Playlist.m3u | ETV Music (1080p) | etv-music.png | New Backups |
-| IPTV-Playlist.m3u | ETV Plus HD (1080p) | etv-plus-hd-1080p.png | New Channels |
-| IPTV-Playlist.m3u | MH One (576p) | mh-one.png | New Backups |
-| IPTV-Playlist.m3u | MH One Dil Se (576p) | mh-one-dil-se.png | New Backups |
-| IPTV-Playlist.m3u | MH One Movies (576p) | mh-one-movies.png | New Backups |
-| IPTV-Playlist.m3u | Movies Now HD (1080p) | movies-now.png | New Backups |
-| IPTV-Playlist.m3u | Movies Now + (1080p) | movies-now-plus-0cafc6cc49572c25cbc8.png | New Backups |
-| IPTV-Playlist.m3u | MTV (India) HD (1080p) | mtv-india-hd-720p.png | New Backups |
-| IPTV-Playlist.m3u | Nepal 1 (576p) | nepal-1.png | New Backups |
-| IPTV-Playlist.m3u | &pictures HD (1080p) | and-pictures.png | New Channels |
-| IPTV-Playlist.m3u | Sony Max HD (1080p) | sony-max.png | New Channels |
-| IPTV-Playlist.m3u | Spondon (1080p) | spondon.png | New Backups |
-| IPTV-Playlist.m3u | Travelxp 4K HDR (2160p) [Geo-blocked] | travelxp-4k-hdr-2160p-geo-blocked-b3aa521bb125b0495ef7.png | New Channels |
-| IPTV-Playlist.m3u | &TV HD (1080p) | and-tv-af1a6839d33bb0bcceb7.png | New Backups |
-| IPTV-Playlist.m3u | Apna Punjab TV (India) (576p) | apna-punjab-tv-india-23af30c75dadda3dde96.png | New Backups |
-| IPTV-Playlist.m3u | Star Sports 1 Hindi HD (1080p) | star-sports-1-hindi.png | New Backups |
-| IPTV-Playlist.m3u | Star Sports 2 HD (1080p) | star-sports-2.png | New Backups |
-| IPTV-Playlist.m3u | Sony SAB HD (1080p) | sony-sab.png | New Channels |
-| IPTV-Playlist.m3u | Star Gold HD (1080p) | verified-star-gold-hd-1080p-f2178a885b.png | New Channels |
-| IPTV-Playlist.m3u | Star Gold Select HD (1080p) | star-gold-select-fa81030f74.png | New Channels |
-| IPTV-Playlist.m3u | Star Movies (India) HD (1080p) | star-movies-india-hd-1080p.png | New Channels |
-| IPTV-Playlist.m3u | Star Movies Select HD (1080p) | star-movies-select-776284c9b5222ea0ecf1.png | New Channels |
-| IPTV-Playlist.m3u | Kabaddi 24x7 (720p) | kabaddi-24x7.png | New Channels |
-| IPTV-Playlist.m3u | Sony Sports Ten 1 HD (1080p) | sony-sports-ten-1.png | New Channels |
-| IPTV-Playlist.m3u | Sony Sports Ten 2 HD (1080p) | sony-sports-ten-2.png | New Channels |
-| IPTV-Playlist.m3u | Sony Sports Ten 5 (576p) | sony-sports-ten-5.png | New Channels |
-| IPTV-Playlist.m3u | Star Sports 1 HD (1080p) | star-sports-1.png | New Channels |
-| IPTV-Playlist.m3u | Unite8 Sports 1 (576p) | unite8-sports-1-c39b236b6693e186f49c.png | New Channels |
-| IPTV-Playlist.m3u | Unite8 Sports 2 HD (1080p) | unite8-sports-2.png | New Channels |
-| IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
+| IPTV-Playlist.m3u | &TV | and-tv-af1a6839d33bb0bcceb7.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
@@ -1274,9 +1226,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | IPTV-Playlist.m3u | Anjan TV | anjan-tv.png | Backup |
 | IPTV-Playlist.m3u | Anjan TV | anjan-tv.png | Backup |
+| IPTV-Playlist.m3u | Apna Punjab TV | apna-punjab-tv-india-23af30c75dadda3dde96.png | Backup |
 | IPTV-Playlist.m3u | Asian TV | asian-tv.png | Backup |
 | IPTV-Playlist.m3u | Azan TV | azan-tv-15e8ac79.png | Backup |
-| IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Backup |
 | IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Backup |
 | IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Backup |
 | IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
@@ -1287,10 +1239,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Backup |
-| IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
-| IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
 | IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
 | IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
+| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
+| IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
+| IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
@@ -1300,7 +1253,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
 | IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
 | IPTV-Playlist.m3u | Channel S UK | channel-s-uk.png | Backup |
-| IPTV-Playlist.m3u | Colors Cineplex [UK] | colors-cineplex.png | Backup |
 | IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Backup |
 | IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Backup |
 | IPTV-Playlist.m3u | Deepto TV | deepto-tv.png | Backup |
@@ -1316,6 +1268,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | IPTV-Playlist.m3u | Enter TV | enter-tv.png | Backup |
 | IPTV-Playlist.m3u | Enter TV | enter-tv.png | Backup |
+| IPTV-Playlist.m3u | Enterr10 Bangla | enter10-bangla.png | Backup |
 | IPTV-Playlist.m3u | Enterr10 Bangla | enter10-bangla.png | Backup |
 | IPTV-Playlist.m3u | Enterr10 Bangla | enter10-bangla.png | Backup |
 | IPTV-Playlist.m3u | Epic Bhojpuri Digital | epic-bhojpuri.png | Backup |
@@ -1347,16 +1300,20 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Backup |
 | IPTV-Playlist.m3u | Matribhumi TV | matri-bhumi-tv.png | Backup |
 | IPTV-Playlist.m3u | Matribhumi TV | matri-bhumi-tv.png | Backup |
+| IPTV-Playlist.m3u | ME TV | me-tv.png | Backup |
 | IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Backup |
 | IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Backup |
+| IPTV-Playlist.m3u | MTV India | mtv-india-hd-720p.png | Backup |
 | IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
 | IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
 | IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
 | IPTV-Playlist.m3u | Nagorik TV | nagorik-tv-90b5d16aaf.png | Backup |
 | IPTV-Playlist.m3u | Nat Geo TV | national-geographic.png | Backup |
 | IPTV-Playlist.m3u | NRB TV | nrb-tv.png | Backup |
+| IPTV-Playlist.m3u | Oli TV | oli-tv-india-b4a7917c53.png | Backup |
 | IPTV-Playlist.m3u | Pardesi TV | pardesi-tv.png | Backup |
 | IPTV-Playlist.m3u | Pasand TV | pasand-tv.png | Backup |
+| IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Backup |
 | IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Backup |
 | IPTV-Playlist.m3u | Pear TV | pear-tv.png | Backup |
 | IPTV-Playlist.m3u | Pitaara | pitaara-tv.png | Backup |
@@ -1386,7 +1343,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
-| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
 | IPTV-Playlist.m3u | Shemaroo TV | shemaroo-tv.png | Backup |
 | IPTV-Playlist.m3u | Shemaroo TV | shemaroo-tv.png | Backup |
@@ -1397,7 +1353,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Backup |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
-| IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Backup |
 | IPTV-Playlist.m3u | Thalaa TV | thalaa-tv.png | Backup |
 | IPTV-Playlist.m3u | Tolly TV | tolly-tv.png | Backup |
 | IPTV-Playlist.m3u | Türkmenistan Sport | turkmenistan-sport-714745951c.png | Backup |
@@ -1412,17 +1367,21 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
-| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | &TV | tv.png | Review |
+| IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Review |
 | IPTV-Playlist.m3u | AMN TV | amn-tv.png | Review |
 | IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Review |
 | IPTV-Playlist.m3u | Animax Asia India | animax-asia-india-1080p-geo-blocked.png | Review |
 | IPTV-Playlist.m3u | Asian TV | asian-tv.png | Review |
 | IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Review |
 | IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Review |
+| IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Review |
+| IPTV-Playlist.m3u | Banglar Kontho 24 | banglar-kontho.png | Review |
 | IPTV-Playlist.m3u | Bijoy TV | bijoy-tv.png | Review |
 | IPTV-Playlist.m3u | Bijoy TV | bijoy-tv.png | Review |
+| IPTV-Playlist.m3u | Biswa Bangla 24 | biswabangla-24-tv.png | Review |
 | IPTV-Playlist.m3u | BTV News | repaired-btv-news-0646349a43.png | Review |
+| IPTV-Playlist.m3u | C Malayalam TV | c-malayalam-tv-1080p-3b1c6293f5.png | Review |
 | IPTV-Playlist.m3u | Cartoon Network HD+ | cartoon-network-hd-plus-0af84f2a76.png | Review |
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Review |
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Review |
@@ -1433,11 +1392,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Review |
-| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Review |
-| IPTV-Playlist.m3u | Channel Europe | channel-europe-c8db0338dc.png | Review |
 | IPTV-Playlist.m3u | Colors Bangla | colors-bangla-hd.png | Review |
-| IPTV-Playlist.m3u | Colors Bangla HD (1080p) | colors-bangla.png | Review |
-| IPTV-Playlist.m3u | Colors Cineplex [UK] | colors-cineplex.png | Review |
 | IPTV-Playlist.m3u | Deepto TV | deepto-tv.png | Review |
 | IPTV-Playlist.m3u | Deewana | deewana-hd.png | Review |
 | IPTV-Playlist.m3u | Desh TV | desh-tv.png | Review |
@@ -1448,11 +1403,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Review |
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Review |
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Review |
-| IPTV-Playlist.m3u | Enterr10 Bangla | enter10-bangla.png | Review |
-| IPTV-Playlist.m3u | Enterr10 Bangla | enter10-bangla.png | Review |
 | IPTV-Playlist.m3u | Epic Bharat Digital | epic-bharat.png | Review |
 | IPTV-Playlist.m3u | Epic TV Digital | epic-tv-digital.png | Review |
-| IPTV-Playlist.m3u | Eurosport India HD | eurosport.png | Review |
 | IPTV-Playlist.m3u | G TV | g-tv.png | Review |
 | IPTV-Playlist.m3u | G TV | g-tv.png | Review |
 | IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Review |
@@ -1468,29 +1420,22 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
 | IPTV-Playlist.m3u | Madani Channel Bangla | madani-channel-bangla.png | Review |
 | IPTV-Playlist.m3u | Mango Mobile TV | mango-mobile-tv.png | Review |
-| IPTV-Playlist.m3u | ME TV | me-tv.png | Review |
-| IPTV-Playlist.m3u | ME TV | me-tv.png | Review |
-| IPTV-Playlist.m3u | ME TV | me-tv.png | Review |
-| IPTV-Playlist.m3u | ME TV | me-tv.png | Review |
 | IPTV-Playlist.m3u | MLB | mlb-strike-zone-4930a654ce.png | Review |
 | IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Review |
 | IPTV-Playlist.m3u | MTV India | mtv-india-hd-720p.png | Review |
 | IPTV-Playlist.m3u | My TV | my-tv.png | Review |
 | IPTV-Playlist.m3u | NAN TV | nan-tv.png | Review |
-| IPTV-Playlist.m3u | NAN TV (720p) | nan-tv.png | Review |
 | IPTV-Playlist.m3u | Nat Geo TV | national-geographic.png | Review |
+| IPTV-Playlist.m3u | NBA TV | nba-tv.png | Review |
+| IPTV-Playlist.m3u | News 21 | news-21-bangla-tv.png | Review |
 | IPTV-Playlist.m3u | Nexus TV | nexus-tv.png | Review |
-| IPTV-Playlist.m3u | Oli TV | oli-tv.png | Review |
-| IPTV-Playlist.m3u | Oli TV (India) (1080p) | oli-tv-india-b4a7917c53.png | Review |
+| IPTV-Playlist.m3u | Nickelodeon | nick.png | Review |
 | IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Review |
-| IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Review |
-| IPTV-Playlist.m3u | Peace TV Bangla (1080p) | peace-tv-bangla.png | Review |
-| IPTV-Playlist.m3u | Peace TV English | peace-tv-english.png | Review |
-| IPTV-Playlist.m3u | Peace TV Urdu (1080p) | peace-tv-urdu.png | Review |
 | IPTV-Playlist.m3u | Raj TV | raj-tv.png | Review |
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Review |
 | IPTV-Playlist.m3u | Rakuten TV Action Movies UK | rakuten-tv-family-movies-uk-1080p.png | Review |
 | IPTV-Playlist.m3u | Rakuten TV Comedy Movies UK | rakuten-tv-top-movies.png | Review |
+| IPTV-Playlist.m3u | Real Madrid TV | real-madrid-tv.png | Review |
 | IPTV-Playlist.m3u | Rupashi Bangla TV | rupashi-bangla-tv.png | Review |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Review |
 | IPTV-Playlist.m3u | Shekinah TV | shekinah-tv-1080p.png | Review |
@@ -1498,16 +1443,20 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Review |
 | IPTV-Playlist.m3u | Sony Entertainment TV | sony-entertainment-tv.png | Review |
 | IPTV-Playlist.m3u | Sooriyan TV | sooriyan-tv.png | Review |
-| IPTV-Playlist.m3u | Star Gold | repaired-star-gold-de06c8e974.png | Review |
-| IPTV-Playlist.m3u | Star Gold | repaired-star-gold-de06c8e974.png | Review |
+| IPTV-Playlist.m3u | Star Gold HD | repaired-star-gold-de06c8e974.png | Review |
+| IPTV-Playlist.m3u | Star Gold HD | repaired-star-gold-de06c8e974.png | Review |
+| IPTV-Playlist.m3u | Star Movies (India) HD | star-movies-2087bb49.png | Review |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Sun TV | sun-tv.png | Review |
-| IPTV-Playlist.m3u | Thendral TV | thendral-tv-ed9b933eb5.png | Review |
-| IPTV-Playlist.m3u | Travelxp HD | travelxp-hd-1080p-geo-blocked.png | Review |
-| IPTV-Playlist.m3u | Waseb TV | waseb-tv.png | Review |
+| IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Review |
+| IPTV-Playlist.m3u | Ten TV Prime | ten-tv-prime.png | Indian Bangla |
+| IPTV-Playlist.m3u | Travelxp 4K HDR | travelxp-4k-hdr-2160p-geo-blocked-b3aa521bb125b0495ef7.png | Review |
+| IPTV-Playlist.m3u | Travelxp 4K HDR | travelxp-hd-1080p-geo-blocked.png | Review |
+| IPTV-Playlist.m3u | viju+ Sport | viju-plus-sport-14b136d70c.png | Review |
 | IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Review |
 | IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Review |
+| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Review |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Bangladesh |
 | International-Playlist.m3u | Asian TV | asian-tv.png | Bangladesh |
 | International-Playlist.m3u | Ayna TV | ayna-tv.png | Bangladesh |

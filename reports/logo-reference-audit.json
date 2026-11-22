@@ -4,7 +4,7 @@
   "logo_image_files": 5241,
   "all_explicitly_referenced_logo_files": 2503,
   "runtime_referenced_logo_files": 2501,
-  "playlist_referenced_logo_files": 2475,
+  "playlist_referenced_logo_files": 2469,
   "apparently_unreferenced_by_any_text_file": 2738,
   "apparently_unreferenced_by_runtime_sources": 2740,
   "missing_explicit_logo_targets": [
@@ -11075,7 +11075,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ayush-tv.png": [
@@ -13375,7 +13374,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/enterr10-bangla.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "scripts/migrate_external_logos_fixed.py"
     ],
@@ -13587,7 +13585,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/etv-life.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/etv-music.png": [
@@ -14204,7 +14201,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gaunda-punjab-tv-720p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gazi-tv.png": [
@@ -15102,7 +15098,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17388,7 +17383,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/punjab-plus-1080p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/punjabi-beats.png": [
@@ -19297,7 +19291,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tlc-india.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tlc.png": [
@@ -21285,7 +21278,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/weatherspy-india.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21696,7 +21688,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/zodiak-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22619,7 +22610,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ayush-tv.png": [
@@ -24920,7 +24910,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/enterr10-bangla.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "scripts/migrate_external_logos_fixed.py"
     ],
@@ -25132,7 +25121,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/etv-life.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/etv-music.png": [
@@ -25749,7 +25737,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gaunda-punjab-tv-720p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/gazi-tv.png": [
@@ -26648,7 +26635,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -28937,7 +28923,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/punjab-plus-1080p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/punjabi-beats.png": [
@@ -30848,7 +30833,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tlc-india.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/tlc.png": [
@@ -32836,7 +32820,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/weatherspy-india.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -33250,7 +33233,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/zodiak-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
