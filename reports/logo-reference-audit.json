@@ -4,7 +4,7 @@
   "logo_image_files": 5242,
   "all_explicitly_referenced_logo_files": 2499,
   "runtime_referenced_logo_files": 2497,
-  "playlist_referenced_logo_files": 2470,
+  "playlist_referenced_logo_files": 2469,
   "apparently_unreferenced_by_any_text_file": 2743,
   "apparently_unreferenced_by_runtime_sources": 2745,
   "missing_explicit_logo_targets": [
@@ -19883,7 +19883,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/v9-news-malayalam.png": [
-      "IPTV-Playlist.m3u"
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/vaanavil-tv.png": [
       "IPTV-Playlist.m3u",
@@ -31411,7 +31411,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/v9-news-malayalam.png": [
-      "IPTV-Playlist.m3u"
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/vaanavil-tv.png": [
       "IPTV-Playlist.m3u",
