@@ -424,10 +424,10 @@ def main():
  _,source=parse(raw.decode("utf-8-sig","replace")); prefix,existing=parse(PLAYLIST.read_text(encoding="utf-8-sig"))
  if not source:raise SystemExit("Source feed contains no channel records; playlist unchanged.")
  existing_urls={stream_url_key(url_of(b)) for b in existing if url_of(b)}
-  existing_endpoint_families={stream_endpoint_family_key(url_of(b)) for b in existing if url_of(b)}
-  retired_data=json.loads(RETIRED_ENDPOINTS_FILE.read_text(encoding="utf-8"))
-  retired_endpoint_families=set(retired_data.get("endpoint_keys", []))
-  seen_endpoint_families=existing_endpoint_families | retired_endpoint_families
+ existing_endpoint_families={stream_endpoint_family_key(url_of(b)) for b in existing if url_of(b)}
+ retired_data=json.loads(RETIRED_ENDPOINTS_FILE.read_text(encoding="utf-8"))
+ retired_endpoint_families=set(retired_data.get("endpoint_keys", []))
+ seen_endpoint_families=existing_endpoint_families | retired_endpoint_families
  existing_primary=existing_primary_index(existing); country_primary_ids=defaultdict(set)
  queue_or_nonprimary={"backup","backups","new backup","new backups","not playing","review","adult","test"}
  for b in existing:
@@ -443,10 +443,10 @@ def main():
   if BAD_NAME_RE.search(name):rejected["test/VOD/non-TV name"]+=1; continue
   if not safe_url(url):rejected["unsafe or tokenized URL"]+=1; continue
   endpoint_family=stream_endpoint_family_key(url)
-   if stream_url_key(url) in existing_urls or endpoint_family in seen_endpoint_families:
-    exact_existing+=1; continue
-   if stream_url_key(url) in seen:
-    exact_source_duplicates+=1; continue
+  if stream_url_key(url) in existing_urls or endpoint_family in seen_endpoint_families:
+   exact_existing+=1; continue
+  if stream_url_key(url) in seen:
+   exact_source_duplicates+=1; continue
   base,reason,code=discovery_eligibility(a,name)
   if base is None:rejected[reason]+=1; continue
   seen.add(stream_url_key(url)); seen_endpoint_families.add(endpoint_family); candidates.append((a,name,url,norm(name),base,code))
