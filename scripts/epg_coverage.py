@@ -185,6 +185,26 @@ EPG_ALIASES = {
     "custom.willowextra": ["Willow.2.Xtra.us2"],
     "custom.thewalkingdeaduniverse": ["plex.tv.The.Walking.Dead.Universe.plex"],
     "custom.highwaythruhell": ["plex.tv.Highway.Thru.Hell.plex"],
+    # Verified India EPG source identities for the 2026-11-22 playlist import.
+    "AndTV.in@HD": ["AndTV.in@SD"],
+    "DDKashir.in@SD": ["DD.Kashir.in", "577429", "142788", "LIVETV_LIVETVCHANNEL_DD_KASHIR", "jtv716", "716"],
+    "ETVPlus.in@HD": ["ETV.PLUS.in", "577159", "143030", "LIVETV_LIVETVCHANNEL_ETV_PLUS", "jtv2956", "jtv692", "692"],
+    "ETVBeats.in@HD": ["IN4900002RV", "3559"],
+    "ETVCinema.in@HD": ["ETV.CINEMA.in", "ETVCinema.in", "577195", "143026", "LIVETV_LIVETVCHANNEL_ETV_CINEMA", "jtv1665", "jtv252", "252", "1665"],
+    "ETVJosh.in@HD": ["IN4900004LP", "jtv3560"],
+    "ETVMusic.in@SD": ["143023", "LIVETV_LIVETVCHANNEL_ETV_ABHIRUCHI", "jtv3559", "565"],
+    "MHOne.in@SD": ["MH.ONE.in", "577353", "143539"],
+    "MHOneDilSe.in@SD": ["143536"],
+    "MNX.in@SD": ["MNX.HD.in", "MNX.in", "577121", "143549", "147570", "LIVETV_LIVETVCHANNEL_MNX", "LIVETV_LIVETVCHANNEL_MNX_HD", "jtv462", "jtv877", "877"],
+    "MoviesNow.in@HD": ["MOVIES.NOW.in", "577100", "143554", "147571", "LIVETV_LIVETVCHANNEL_MOVIES_NOW", "LIVETV_LIVETVCHANNEL_MOVIES_NOW_HD", "jtv151", "151"],
+    "MTV.in@HD": ["MTV.HD.in", "MTV.in", "577408", "143558", "159093", "LIVETV_LIVETVCHANNEL_MTV", "jtv1145", "jtv248"],
+    "Nepal1.in@SD": ["NEPAL.1.in", "577312", "143584"],
+    "SonyMax.in@HD": ["Sony.Max.SD.in", "SONY.MAX.in", "157590", "159098", "LIVETV_LIVETVCHANNEL_SONY_MAX", "Sony.Max.in", "476"],
+    "Spondon.in@SD": ["Spondon.in", "jtv2435"],
+    "StarMovies.in@HD": ["LIVETV_LIVETVCHANNEL_STAR_MOVIES_HD"],
+    "StarMoviesSelect.in@HD": ["STAR.MOVIES.SELECT.in", "143830", "158863", "LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT", "LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD", "jtv1110", "jtv3276"],
+    "StarSports1Hindi.in@HD": ["STAR.SPORTS.1.HINDI.in", "StarSports1Hindi.in", "576985", "577203", "143838", "143839", "jtv1108", "jtv362"],
+    "StarSports2.in@HD": ["STAR.SPORTS.2.HD.in", "STAR.SPORTS.2.in", "StarSports2.in", "143844", "143845", "LIVETV_LIVETVCHANNEL_STAR_SPORTS_2", "LIVETV_LIVETVCHANNEL_STAR_SPORTS_2_HD", "jtv1109", "jtv1141"],
 }
 
 EPG_LOCKS = {
