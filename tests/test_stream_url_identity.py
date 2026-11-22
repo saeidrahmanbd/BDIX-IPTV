@@ -56,6 +56,20 @@ class StreamUrlIdentityTests(unittest.TestCase):
             stream_endpoint_family_key("https://b.example/live/index.m3u8"),
         )
 
+    def test_retired_endpoint_registry_covers_removed_star_sports_endpoint_family(self):
+        import json
+        root = Path(__file__).resolve().parents[1]
+        registry = json.loads((root / "config" / "discovery-retired-endpoints.json").read_text(encoding="utf-8"))
+        retired = set(registry["endpoint_keys"])
+        self.assertIn(
+            stream_endpoint_family_key("https://tvsen7.aynaott.com/ssport2hd/index.m3u8"),
+            retired,
+        )
+        self.assertIn(
+            stream_endpoint_family_key("https://tvsen7.aynaott.com/ssport2hd/tracks-v1a1/mono.ts.m3u8"),
+            retired,
+        )
+
     def test_empty_and_malformed_values_are_safe(self):
         self.assertEqual(stream_url_key(""), "")
         self.assertEqual(stream_endpoint_family_key(""), "")
