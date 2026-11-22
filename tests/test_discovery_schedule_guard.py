@@ -613,7 +613,7 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
     def test_epg_watchdog_ignores_successful_pre_schedule_refresh(self):
         midnight_push = {
             "id": 170, "event": "push", "status": "completed", "conclusion": "success",
-            "created_at": "2026-11-07T00:09:00Z",
+            "created_at": "2026-11-07T00:06:00Z",  # 06:06 Dhaka, before the 06:07 cron
             "jobs": [{
                 "name": "refresh", "status": "completed", "conclusion": "success",
                 "steps": [{
@@ -1049,6 +1049,171 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             self.assertEqual(guard.watchdog(workflow_files), 0)
 
         self.assertEqual(dispatched, workflow_files)
+
+    # --- Recovery-resilience repairs (2026-11-22) -------------------------
+
+    ALL_WATCHDOG_WORKFLOWS = [
+        "iptv-maintenance.yml",
+        "new-channel-discovery.yml",
+        "international-channel-discovery.yml",
+        "playlist-logo-localization.yml",
+        "international-stream-health.yml",
+        "epg-refresh.yml",
+    ]
+
+    def _run_watchdog(self, client_class):
+        import os
+        from unittest.mock import patch
+
+        with patch.dict(os.environ, {
+            "GITHUB_REPOSITORY": "owner/repo",
+            "GH_TOKEN": "test-token",
+        }), patch.object(guard, "GitHubActions", client_class), \
+             patch.object(guard, "today_in_bangladesh", return_value=self.today), \
+             patch.object(guard, "recovery_is_due", return_value=True):
+            return guard.watchdog(self.ALL_WATCHDOG_WORKFLOWS)
+
+    def test_rate_limited_lookup_for_one_workflow_does_not_skip_the_others(self):
+        # 2026-11-19: an installation rate-limit 403 on the first workflow's
+        # run listing aborted the whole watchdog, so no other workflow was
+        # even checked. Each workflow must now be evaluated independently.
+        dispatched = []
+
+        class FlakyClient:
+            def __init__(self, repository, token):
+                pass
+
+            def workflow_runs(self, workflow_file, target_date):
+                if workflow_file == "iptv-maintenance.yml":
+                    raise RuntimeError(
+                        "GitHub API GET actions/workflows/iptv-maintenance.yml/runs "
+                        "failed: HTTP 403: API rate limit exceeded for installation"
+                    )
+                return []
+
+            def dispatch(self, workflow_file):
+                dispatched.append(workflow_file)
+
+        result = self._run_watchdog(FlakyClient)
+
+        self.assertEqual(dispatched, self.ALL_WATCHDOG_WORKFLOWS[1:])
+        # The failure must stay visible: a silent exit 0 would hide that
+        # maintenance was never evaluated.
+        self.assertEqual(result, 1)
+
+    def test_failed_dispatch_for_one_workflow_does_not_block_other_dispatches(self):
+        dispatched = []
+
+        class DispatchFailsOnce:
+            def __init__(self, repository, token):
+                pass
+
+            def workflow_runs(self, workflow_file, target_date):
+                return []
+
+            def dispatch(self, workflow_file):
+                if workflow_file == "new-channel-discovery.yml":
+                    raise RuntimeError(
+                        "GitHub API POST actions/workflows/new-channel-discovery.yml/"
+                        "dispatches failed: HTTP 403: Resource not accessible by integration"
+                    )
+                dispatched.append(workflow_file)
+
+        result = self._run_watchdog(DispatchFailsOnce)
+
+        expected = [w for w in self.ALL_WATCHDOG_WORKFLOWS if w != "new-channel-discovery.yml"]
+        self.assertEqual(dispatched, expected)
+        self.assertEqual(result, 1)
+
+    def test_unexpected_programming_errors_are_not_swallowed(self):
+        class BrokenClient:
+            def __init__(self, repository, token):
+                pass
+
+            def workflow_runs(self, workflow_file, target_date):
+                raise KeyError("bug")
+
+            def dispatch(self, workflow_file):
+                raise AssertionError("must not dispatch")
+
+        with self.assertRaises(KeyError):
+            self._run_watchdog(BrokenClient)
+
+    def test_watchdog_still_skips_workflows_with_a_successful_required_job(self):
+        dispatched = []
+        today_epg = {
+            "id": 900, "event": "workflow_dispatch", "status": "completed",
+            "conclusion": "success", "created_at": "2026-11-07T02:00:00Z",
+            "actor": {"login": "github-actions[bot]"},
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "success",
+                "steps": [{
+                    "name": "Regenerate, validate and publish XMLTV",
+                    "conclusion": "success",
+                }],
+            }],
+        }
+
+        class MostlyDone:
+            def __init__(self, repository, token):
+                pass
+
+            def workflow_runs(self, workflow_file, target_date):
+                return [today_epg] if workflow_file == "epg-refresh.yml" else []
+
+            def workflow_run_jobs(self, run_id):
+                return today_epg["jobs"]
+
+            def dispatch(self, workflow_file):
+                dispatched.append(workflow_file)
+
+        self.assertEqual(self._run_watchdog(MostlyDone), 0)
+        self.assertNotIn("epg-refresh.yml", dispatched)
+        self.assertEqual(len(dispatched), 5)
+
+    def test_epg_watchdog_accepts_on_time_scheduled_refresh_at_the_cron_minute(self):
+        # epg-refresh.yml is scheduled for 06:07 Dhaka (00:07 UTC). An on-time
+        # run must satisfy the daily obligation, otherwise the 06:45
+        # checkpoint would dispatch a redundant second publication.
+        on_time = {
+            "id": 173, "event": "schedule", "status": "completed", "conclusion": "success",
+            "created_at": "2026-11-07T00:07:00Z",
+            "jobs": [{
+                "name": "refresh", "status": "completed", "conclusion": "success",
+                "steps": [{
+                    "name": "Regenerate, validate and publish XMLTV",
+                    "conclusion": "success",
+                }],
+            }],
+        }
+        self.assertTrue(guard.watchdog_run_blocks_retry(
+            on_time, workflow_file="epg-refresh.yml"
+        ))
+
+    def test_epg_daily_refresh_threshold_matches_the_workflow_cron(self):
+        import re
+
+        source = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        match = re.search(r"-\s*cron:\s*['\"](\d+)\s+(\d+)\s+\*\s+\*\s+\*['\"]", source)
+        self.assertIsNotNone(match, "epg-refresh.yml must keep a daily cron")
+        minute_utc, hour_utc = int(match.group(1)), int(match.group(2))
+        total = (hour_utc * 60 + minute_utc + 6 * 60) % (24 * 60)  # Asia/Dhaka = UTC+6
+        self.assertEqual(guard.EPG_DAILY_REFRESH_LOCAL, (total // 60, total % 60))
+
+    def test_watchdog_workflow_has_manual_dispatch_and_keeps_report_push_wakeups(self):
+        import re
+
+        source = (ROOT / ".github" / "workflows" / "discovery-schedule-watchdog.yml").read_text(encoding="utf-8")
+        self.assertRegex(source, r"(?m)^  workflow_dispatch:")
+        self.assertRegex(source, r"(?m)^  push:")
+        self.assertIn("- 'reports/iptv-channel-discovery.md'", source)
+        self.assertIn("- 'reports/international-channel-discovery.md'", source)
+        self.assertRegex(source, r"(?m)^  workflow_run:")
+        # Least privilege: dispatching needs actions: write; nothing writes content.
+        self.assertRegex(source, r"(?m)^  actions: write")
+        self.assertRegex(source, r"(?m)^  contents: read")
+        self.assertNotIn("contents: write", source)
+        self.assertEqual(len(re.findall(r"- cron:", source)), 12)
 
 
 if __name__ == "__main__":

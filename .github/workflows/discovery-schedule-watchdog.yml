@@ -28,6 +28,10 @@ on:
       - Refresh IPTV EPG
     types: [completed]
     branches: [main]
+  # On-demand recovery check. Every schedule checkpoint below shares GitHub's
+  # scheduled-event delay/drop failure mode, so the owner (or an external
+  # scheduler) needs a way to run the same idempotent check without a code push.
+  workflow_dispatch:
   schedule:
     - cron: '15 23 * * *'  # 05:15 early discovery checkpoint
     - cron: '30 23 * * *'  # 05:30 discovery recovery
