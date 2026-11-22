@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-22T17:10:59+00:00**
+Generated: **2026-11-22T23:52:54+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **e7d4b9a46cf91f2676f94897007cdf3c333020a289e4fd08962ab151e0657364**
+- IPTV-Playlist.m3u SHA-256: **edc2e1edbb195131dceb66cfedc7a3d7d3fcf9901d4a7c41066b9f052a4e3e0b**
 - International-Playlist.m3u SHA-256: **2ffb83faaad2c67007447862249846da773bb5f5d454d611f30996e71aaffdf9**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **146**
 - Exact-byte duplicate asset clusters: **741**
-- Playlist references whose asset stem differs from the normalized channel name: **1558**
-- Unreferenced image assets immediately inside logos/: **970** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1572**
+- Unreferenced image assets immediately inside logos/: **965** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1214,6 +1214,20 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | UFC | ufc-tv.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports | us-willow-sports-hd.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports 2 | us-willow-sports-hd.png | Sports |
+| IPTV-Playlist.m3u | Ayush Next Communication Network (576p) | ayush-next-communication-network-f7c7f33323dd3095ae15.png | New Channels |
+| IPTV-Playlist.m3u | CCV (480p) | ccv.png | New Channels |
+| IPTV-Playlist.m3u | ETV Life (1080p) | etv-life.png | New Channels |
+| IPTV-Playlist.m3u | Gaunda Punjab TV (720p) | gaunda-punjab-tv-720p.png | New Channels |
+| IPTV-Playlist.m3u | Kabaddi 24x7 (720p) | kabaddi-24x7.png | New Channels |
+| IPTV-Playlist.m3u | Punjab Plus (1080p) | punjab-plus-1080p.png | New Channels |
+| IPTV-Playlist.m3u | TLC (India) HD (1080p) | tlc-india.png | New Channels |
+| IPTV-Playlist.m3u | WeatherSpy (India) (720p) | weatherspy-india.png | New Channels |
+| IPTV-Playlist.m3u | Zodiak TV (1080p) | zodiak-tv.png | New Channels |
+| IPTV-Playlist.m3u | DD National HD (1080p) | dd-national.png | New Backups |
+| IPTV-Playlist.m3u | MNX HD (1080p) | mnx.png | New Backups |
+| IPTV-Playlist.m3u | Sony Max (720p) | sony-max.png | New Backups |
+| IPTV-Playlist.m3u | Sony Sports Ten 1 (576p) | sony-sports-ten-1.png | New Backups |
+| IPTV-Playlist.m3u | Unite8 Sports 1 HD (1080p) | unite8-sports-1-c39b236b6693e186f49c.png | New Backups |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |

@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-22 17:10 UTC**  
+Run time: **2026-11-22 23:52 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,13 +9,15 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1332 | 0 | 0 | 0 | 0 | 0 | 0 |
+| IPTV-Playlist.m3u | 1346 | 2 | 0 | 0 | 0 | 0 | 0 |
 | International-Playlist.m3u | 3295 | 0 | 0 | 71 | 372 | 0 | 71 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
+| IPTV-Playlist.m3u | 1441 | Ayush Next Communication Network (576p) | (missing) | ayush-next-communication-network-f7c7f33323dd3095ae15.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 1467 | Unite8 Sports 1 HD (1080p) | (missing) | unite8-sports-1-c39b236b6693e186f49c.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | International-Playlist.m3u | 97 | Vision 24 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 121 | JTV Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 171 | Asian Sony Max 2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
