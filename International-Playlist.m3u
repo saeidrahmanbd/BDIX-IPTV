@@ -5862,9 +5862,9 @@ http://41.205.93.154/ZEE-TV/index.m3u8
 https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg01553-blueantmediaasi-zoomoonz-samsungnz/playlist.m3u8
 #EXTINF:-1 tvg-id="ZooMoo.sg" channel-id="ZooMoo.sg" tvg-language="eng" tvg-country="SG" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoomoo.png" group-title="Review" tvg-name="ZooMoo",ZooMoo
 https://zoomoo-samsungau.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="StarzCinema.us@East" tvg-name="Starz Cinema (720p)" tvg-logo="logos/international/starz-cinema-720p.png" tvg-country="US" channel-id="StarzCinema.us@East" group-title="New Channels" tvg-content="Movies",Starz Cinema (720p)
+#EXTINF:-1 tvg-id="StarzCinema.us@East" tvg-name="Starz Cinema (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/starz-cinema-720p.png" tvg-country="US" channel-id="StarzCinema.us@East" group-title="New Channels" tvg-content="Movies",Starz Cinema (720p)
 http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8
-#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="lifetimemovies.us" tvg-name="Lifetime Movies" tvg-logo="logos/lifetimemovies.png" tvg-country="US" tvg-language="eng;spa" channel-id="lifetimemovies.us" group-title="Review" tvg-content="Movies",Lifetime Movies
+#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="lifetimemovies.us" tvg-name="Lifetime Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lifetimemovies.png" tvg-country="US" tvg-language="eng;spa" channel-id="lifetimemovies.us" group-title="Review" tvg-content="Movies",Lifetime Movies
 http://23.237.104.106:8080/USA_LMN/index.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" channel-id="7SMusic.in@SD" tvg-language="tam" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" group-title="Backup" tvg-name="7S Music",7S Music
 https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8

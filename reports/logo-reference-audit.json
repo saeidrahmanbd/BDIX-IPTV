@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5240,
-  "all_explicitly_referenced_logo_files": 2506,
-  "runtime_referenced_logo_files": 2504,
-  "playlist_referenced_logo_files": 2474,
-  "apparently_unreferenced_by_any_text_file": 2734,
-  "apparently_unreferenced_by_runtime_sources": 2736,
+  "all_explicitly_referenced_logo_files": 2504,
+  "runtime_referenced_logo_files": 2502,
+  "playlist_referenced_logo_files": 2476,
+  "apparently_unreferenced_by_any_text_file": 2736,
+  "apparently_unreferenced_by_runtime_sources": 2738,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -10965,9 +10965,6 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/aurora-media-films-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/autentic-adventure-earth-english-german.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -14856,6 +14853,10 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/starz-cinema-720p.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -15422,6 +15423,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/lifetimemovies.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/liratv-9d36bd20f2.png": [
       "International-Playlist.m3u",
@@ -17563,7 +17568,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/rakuten-tv-drama-movies-166043b571489b238b1f.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/rakuten-tv-family-movies-166043b571489b238b1f.png": [
@@ -20191,9 +20195,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/verified-nande-portetepe-tv-adb30ee16d.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/verified-nashe-hd-576p-c2e4bb60ea.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -20796,12 +20797,6 @@
     ],
     "logos/verified-rakuten-tv-drama-movies-austria-720p-166043b571.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-rakuten-tv-drama-movies-germany-1080p-166043b571.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-rakuten-tv-drama-movies-uk-1080p-166043b571.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-austria-720p-166043b571.png": [
@@ -22516,9 +22511,6 @@
     ],
     "logos/aurlife.png": [
       "IPTV-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/aurora-media-films-720p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/autentic-adventure-earth-english-german.png": [
@@ -26411,6 +26403,10 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/starz-cinema-720p.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
+    ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -26977,6 +26973,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/lifetimemovies.png": [
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/liratv-9d36bd20f2.png": [
       "International-Playlist.m3u",
@@ -29121,7 +29121,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/rakuten-tv-drama-movies-166043b571489b238b1f.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/rakuten-tv-family-movies-166043b571489b238b1f.png": [
@@ -31751,9 +31750,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/verified-nande-portetepe-tv-adb30ee16d.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/verified-nashe-hd-576p-c2e4bb60ea.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -32356,12 +32352,6 @@
     ],
     "logos/verified-rakuten-tv-drama-movies-austria-720p-166043b571.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-rakuten-tv-drama-movies-germany-1080p-166043b571.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-rakuten-tv-drama-movies-uk-1080p-166043b571.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-austria-720p-166043b571.png": [
@@ -33324,6 +33314,7 @@
     "logos/atg-live.png",
     "logos/atn-music.png",
     "logos/atn-news.png",
+    "logos/aurora-media-films-720p.png",
     "logos/ava-family.png",
     "logos/ava-series.png",
     "logos/axn-black-poland.png",
@@ -34381,7 +34372,6 @@
     "logos/international/star-trek-voyager-germany-it.png",
     "logos/international/star-trek-voyager-germany.png",
     "logos/international/star-trek-voyager-united-states.png",
-    "logos/international/starz-cinema-720p.png",
     "logos/international/stingray-cityscapes-1080p.png",
     "logos/international/stingray-cozy-cafe-1080p.png",
     "logos/international/summer-of-movies.png",
@@ -34543,7 +34533,6 @@
     "logos/kuriakos-kids-1080p.png",
     "logos/la-kalle-1080p.png",
     "logos/laff-tv.png",
-    "logos/lifetimemovies.png",
     "logos/lingkar-tv.png",
     "logos/local-logo-accuweather.png",
     "logos/local-logo-bloomberg-tv.png",
@@ -35978,9 +35967,12 @@
     "logos/velvet-scary-1080p.png",
     "logos/velvet-sovetskoe-kino-1080p.png",
     "logos/venus.png",
+    "logos/verified-nande-portetepe-tv-adb30ee16d.png",
     "logos/verified-rakuten-tv-comedy-movies-germany-1080p-166043b571.png",
     "logos/verified-rakuten-tv-comedy-movies-italy-1080p-166043b571.png",
     "logos/verified-rakuten-tv-comedy-movies-uk-1080p-166043b571.png",
+    "logos/verified-rakuten-tv-drama-movies-germany-1080p-166043b571.png",
+    "logos/verified-rakuten-tv-drama-movies-uk-1080p-166043b571.png",
     "logos/viafree-movies-dk.png",
     "logos/viafree-movies-no.png",
     "logos/viafree-movies.png",
