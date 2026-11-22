@@ -4,7 +4,7 @@
   "logo_image_files": 5240,
   "all_explicitly_referenced_logo_files": 2506,
   "runtime_referenced_logo_files": 2504,
-  "playlist_referenced_logo_files": 2479,
+  "playlist_referenced_logo_files": 2474,
   "apparently_unreferenced_by_any_text_file": 2734,
   "apparently_unreferenced_by_runtime_sources": 2736,
   "missing_explicit_logo_targets": [
@@ -10966,7 +10966,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/aurora-media-films-720p.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/autentic-adventure-earth-english-german.png": [
@@ -11402,7 +11401,6 @@
     ],
     "logos/bol-entertainment.png": [
       "IPTV-Playlist.m3u",
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bolajon-a17f144644.png": [
@@ -17565,7 +17563,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/rakuten-tv-drama-movies-166043b571489b238b1f.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -20195,7 +20192,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-nande-portetepe-tv-adb30ee16d.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-nashe-hd-576p-c2e4bb60ea.png": [
@@ -20803,11 +20799,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-drama-movies-germany-1080p-166043b571.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-drama-movies-uk-1080p-166043b571.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-austria-720p-166043b571.png": [
@@ -22525,7 +22519,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/aurora-media-films-720p.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/autentic-adventure-earth-english-german.png": [
@@ -22961,7 +22954,6 @@
     ],
     "logos/bol-entertainment.png": [
       "IPTV-Playlist.m3u",
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bolajon-a17f144644.png": [
@@ -29129,7 +29121,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/rakuten-tv-drama-movies-166043b571489b238b1f.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -31761,7 +31752,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-nande-portetepe-tv-adb30ee16d.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-nashe-hd-576p-c2e4bb60ea.png": [
@@ -32369,11 +32359,9 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-drama-movies-germany-1080p-166043b571.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-drama-movies-uk-1080p-166043b571.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-rakuten-tv-family-movies-austria-720p-166043b571.png": [
