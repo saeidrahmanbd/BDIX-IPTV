@@ -5,35 +5,27 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-21 — `IPTV-Playlist.m3u`
+### 2026-11-22 — `IPTV-Playlist.m3u`
 
-- New channel identities: **16**
-- Channel identities removed: **6**
-- Stream URLs added / removed: **21 / 9**
-- Backup URL updates: **0**
-- Logo reference changes: **444**
-- Replaced channel identities: **0**
+- New channel identities: **0**
+- Channel identities removed: **10**
+- Stream URLs added / removed: **2 / 59**
+- Backup URL updates: **1**
+- Logo reference changes: **401**
+- Replaced channel identities: **2**
 - Duplicate URL occurrences removed: **0**
 
-Added channel identities (up to 10):
-- Star Gold 2 (576p)
-- Star Gold Romance (576p)
-- TLC (India) HD (1080p)
-- Zee Classic (576p)
-- Zee Power HD (1080p)
-- Zee Talkies HD (1080p)
-- Zee Thirai HD (1080p)
-- Apna Punjab TV (India) (576p)
-- Star Sports 2 HD (1080p)
-- Star Movies (India) HD (1080p)
-
 Removed channel identities (up to 10):
-- BTL TV (Netherlands) (1080p)
-- Cartoon Network (Pakistan)
-- National Geographic (India) HD (1080p)
-- National Geographic Wild (India) HD (1080p)
-- Qello Concerts by Stingray (1080p)
-- MNX HD (1080p)
+- Ayush Next Communication Network (576p)
+- ETV Life (1080p)
+- Gaunda Punjab TV (720p)
+- Punjab Plus (1080p)
+- WeatherSpy (India) (720p)
+- Zodiak TV (1080p)
+- TLC (India) HD (1080p)
+- DD National HD (1080p)
+- Kabaddi 24x7 (720p)
+- CCV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-22 — `International-Playlist.m3u`
