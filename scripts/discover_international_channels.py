@@ -10,16 +10,16 @@ Playback is checked by the downstream validation step.
 # [manual-international-discovery] Fresh daily discovery trigger for 2026-11-20.
 
 from __future__ import annotations
-import hashlib,re,unicodedata,urllib.parse,urllib.request
+import hashlib,json,re,unicodedata,urllib.parse,urllib.request
 from collections import Counter,defaultdict
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
-from stream_url_identity import stream_url_key
+from stream_url_identity import stream_url_key, stream_endpoint_family_key
 from logo_asset_naming import is_blocked_logo_basename
 from country_verification import ISO_CODES as ALL_ISO_CODES
 import discover_bd_in_new_queues as bd_discovery
-PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-channel-discovery.md"); LOGOS=Path("logos")
+PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-channel-discovery.md"); LOGOS=Path("logos"); RETIRED_ENDPOINTS_FILE=Path("config/discovery-retired-endpoints.json")
 BD_TZ=ZoneInfo("Asia/Dhaka")
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
