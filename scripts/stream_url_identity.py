@@ -48,7 +48,7 @@ def stream_endpoint_family_key(url: str) -> str:
         if parts.port is not None:
             host += f":{parts.port}"
         path = __import__("re").sub(
-            r"/(?:tracks-v\\d+a\\d+/mono(?:\\.ts)?|index|playlist|master|chunks)(?:\\.fmp4)?\\.m3u8$",
+            r"/(?:tracks-v\d+a\d+/mono(?:\.ts)?|index|playlist|master|chunks)(?:\.fmp4)?\.m3u8$",
             "",
             parts.path,
             flags=__import__("re").IGNORECASE,
