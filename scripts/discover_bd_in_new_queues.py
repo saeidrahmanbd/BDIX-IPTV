@@ -22,10 +22,11 @@ from urllib.parse import parse_qsl, unquote, urlparse
 from zoneinfo import ZoneInfo
 
 from country_verification import norm_name, id_country, ISO_CODES
-from stream_url_identity import stream_url_key
+from stream_url_identity import stream_url_key, stream_endpoint_family_key
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/iptv-channel-discovery.md")
+RETIRED_ENDPOINTS_FILE = Path("config/discovery-retired-endpoints.json")
 BD_TZ = ZoneInfo("Asia/Dhaka")
 RAW_LOGO_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 SOURCES = (
@@ -690,6 +691,10 @@ def main() -> int:
     rejected = 0
     reasons: Counter = Counter()
     seen_source_urls = set(existing_urls)
+    existing_endpoint_families = {stream_endpoint_family_key(u) for _, _, u in entries}
+    retired_data = json.loads(RETIRED_ENDPOINTS_FILE.read_text(encoding="utf-8"))
+    retired_endpoint_families = set(retired_data.get("endpoint_keys", []))
+    seen_endpoint_families = existing_endpoint_families | retired_endpoint_families
     for country, source in SOURCES:
         try:
             req = urllib.request.Request(source, headers={"User-Agent": "BDIX-IPTV-discovery/2.0"})
@@ -699,10 +704,12 @@ def main() -> int:
             continue
         for a, name, url in parse(text):
             key = stream_url_key(url)
+            endpoint_family = stream_endpoint_family_key(url)
             normalized, reason = evaluate(country, a, name, url)
-            if normalized is not None and key not in seen_source_urls:
+            if normalized is not None and key not in seen_source_urls and endpoint_family not in seen_endpoint_families:
                 candidates.append((country, normalized, name, url))
                 seen_source_urls.add(key)
+                seen_endpoint_families.add(endpoint_family)
             else:
                 rejected += 1
                 reasons[reason or "duplicate stream URL"] += 1
