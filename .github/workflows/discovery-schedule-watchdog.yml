@@ -11,6 +11,10 @@ on:
     paths:
       - '.github/workflows/discovery-schedule-watchdog.yml'
       - 'scripts/discovery_schedule_guard.py'
+      # Daily report commits are independent evidence that the primary
+      # schedules may have been missed. Use them to wake the recovery watchdog.
+      - 'reports/iptv-channel-discovery.md'
+      - 'reports/international-channel-discovery.md'
   # A completed production writer is a second recovery signal. The watchdog
   # rechecks all due jobs and dispatches only missing/failed work for today's
   # Bangladesh date; per-workflow guards and writer locks prevent duplicates.
