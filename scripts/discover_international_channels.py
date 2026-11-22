@@ -10,16 +10,16 @@ Playback is checked by the downstream validation step.
 # [manual-international-discovery] Fresh daily discovery trigger for 2026-11-20.
 
 from __future__ import annotations
-import hashlib,re,unicodedata,urllib.parse,urllib.request
+import hashlib,json,re,unicodedata,urllib.parse,urllib.request
 from collections import Counter,defaultdict
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
-from stream_url_identity import stream_url_key
+from stream_url_identity import stream_url_key, stream_endpoint_family_key
 from logo_asset_naming import is_blocked_logo_basename
 from country_verification import ISO_CODES as ALL_ISO_CODES
 import discover_bd_in_new_queues as bd_discovery
-PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-channel-discovery.md"); LOGOS=Path("logos")
+PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-channel-discovery.md"); LOGOS=Path("logos"); RETIRED_ENDPOINTS_FILE=Path("config/discovery-retired-endpoints.json")
 BD_TZ=ZoneInfo("Asia/Dhaka")
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
@@ -424,6 +424,10 @@ def main():
  _,source=parse(raw.decode("utf-8-sig","replace")); prefix,existing=parse(PLAYLIST.read_text(encoding="utf-8-sig"))
  if not source:raise SystemExit("Source feed contains no channel records; playlist unchanged.")
  existing_urls={stream_url_key(url_of(b)) for b in existing if url_of(b)}
+ existing_endpoint_families={stream_endpoint_family_key(url_of(b)) for b in existing if url_of(b)}
+ retired_data=json.loads(RETIRED_ENDPOINTS_FILE.read_text(encoding="utf-8"))
+ retired_endpoint_families=set(retired_data.get("endpoint_keys", []))
+ seen_endpoint_families=existing_endpoint_families | retired_endpoint_families
  existing_primary=existing_primary_index(existing); country_primary_ids=defaultdict(set)
  queue_or_nonprimary={"backup","backups","new backup","new backups","not playing","review","adult","test"}
  for b in existing:
@@ -438,13 +442,14 @@ def main():
   if not name:rejected["missing channel name"]+=1; continue
   if BAD_NAME_RE.search(name):rejected["test/VOD/non-TV name"]+=1; continue
   if not safe_url(url):rejected["unsafe or tokenized URL"]+=1; continue
-  if stream_url_key(url) in existing_urls:
+  endpoint_family=stream_endpoint_family_key(url)
+  if stream_url_key(url) in existing_urls or endpoint_family in seen_endpoint_families:
    exact_existing+=1; continue
   if stream_url_key(url) in seen:
    exact_source_duplicates+=1; continue
   base,reason,code=discovery_eligibility(a,name)
   if base is None:rejected[reason]+=1; continue
-  seen.add(stream_url_key(url)); candidates.append((a,name,url,norm(name),base,code))
+  seen.add(stream_url_key(url)); seen_endpoint_families.add(endpoint_family); candidates.append((a,name,url,norm(name),base,code))
  country_groups=qualified_country_groups(country_primary_ids)
  additions=[]; new_rows=[]; adult_rows=[]; backup_rows=[]; per_group=Counter(); per_country=Counter(); added_primary_ids=defaultdict(set); planned={k:list(v) for k,v in existing_primary.items()}
  for a,name,url,key,base,code in candidates:

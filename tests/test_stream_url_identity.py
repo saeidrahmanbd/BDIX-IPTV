@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from stream_url_identity import stream_url_key
+from stream_url_identity import stream_url_key, stream_endpoint_family_key
 
 
 class StreamUrlIdentityTests(unittest.TestCase):
@@ -36,7 +36,42 @@ class StreamUrlIdentityTests(unittest.TestCase):
         self.assertNotIn("urls[url.lower()]", audit)
         self.assertNotIn("cur_urls=Counter(u.lower()", gate)
 
+    def test_near_duplicate_hls_rendition_urls_share_endpoint_family(self):
+        self.assertEqual(
+            stream_endpoint_family_key("https://tvsen7.aynaott.com/ssport2hd/index.m3u8"),
+            stream_endpoint_family_key("https://tvsen7.aynaott.com/ssport2hd/tracks-v1a1/mono.ts.m3u8"),
+        )
+        self.assertEqual(
+            stream_endpoint_family_key("http://live.playmax.live/matribhumi/index.m3u8"),
+            stream_endpoint_family_key("https://live.playmax.live/matribhumi/playlist.m3u8"),
+        )
+
+    def test_endpoint_family_preserves_case_sensitive_paths_and_distinct_hosts(self):
+        self.assertNotEqual(
+            stream_endpoint_family_key("https://stream.example/Tunes6music/index.m3u8"),
+            stream_endpoint_family_key("https://stream.example/tunes6music/index.m3u8"),
+        )
+        self.assertNotEqual(
+            stream_endpoint_family_key("https://a.example/live/index.m3u8"),
+            stream_endpoint_family_key("https://b.example/live/index.m3u8"),
+        )
+
+    def test_retired_endpoint_registry_covers_removed_star_sports_endpoint_family(self):
+        import json
+        root = Path(__file__).resolve().parents[1]
+        registry = json.loads((root / "config" / "discovery-retired-endpoints.json").read_text(encoding="utf-8"))
+        retired = set(registry["endpoint_keys"])
+        self.assertIn(
+            stream_endpoint_family_key("https://tvsen7.aynaott.com/ssport2hd/index.m3u8"),
+            retired,
+        )
+        self.assertIn(
+            stream_endpoint_family_key("https://tvsen7.aynaott.com/ssport2hd/tracks-v1a1/mono.ts.m3u8"),
+            retired,
+        )
+
     def test_empty_and_malformed_values_are_safe(self):
         self.assertEqual(stream_url_key(""), "")
+        self.assertEqual(stream_endpoint_family_key(""), "")
         malformed = "https://[not-a-valid-host/live"
         self.assertEqual(stream_url_key(malformed), malformed)

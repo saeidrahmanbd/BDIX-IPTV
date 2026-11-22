@@ -19,6 +19,9 @@ on:
       - '.github/workflows/international-channel-discovery.yml'
       - 'International-Playlist.m3u'
       - 'scripts/discover_international_channels.py'
+      - 'scripts/stream_url_identity.py'
+      - 'config/discovery-retired-endpoints.json'
+      - 'tests/test_stream_url_identity.py'
       - 'scripts/validate_international_playlist.py'
       - 'scripts/validate_discovery_run.py'
       - 'scripts/discovery_schedule_guard.py'
@@ -91,6 +94,8 @@ jobs:
         run: cp International-Playlist.m3u /tmp/International-Playlist.before.m3u
       - name: Test strict International movie/music policy
         run: python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
+      - name: Test retired endpoint protection
+        run: python -m unittest discover -s tests -p 'test_stream_url_identity.py'
       - name: Test discovery stream validator
         run: python -m unittest discover -s tests -p 'test_discovery_run_validation.py'
       - name: Test five-channel threshold and protected groups
