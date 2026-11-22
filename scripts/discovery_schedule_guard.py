@@ -53,6 +53,10 @@ RECOVERY_AFTER_LOCAL = {
     "international-stream-health.yml": (5, 55),
     "epg-refresh.yml": (6, 45),
 }
+# Earliest Bangladesh-local creation time of an EPG run that counts as the
+# daily publication. Keep in step with the cron in .github/workflows/epg-refresh.yml
+# ('7 0 * * *' UTC == 06:07 Asia/Dhaka); tests assert the two agree.
+EPG_DAILY_REFRESH_LOCAL = (6, 7)
 
 
 def recovery_is_due(workflow_file: str, now: datetime | None = None) -> bool:
@@ -186,10 +190,13 @@ def watchdog_run_blocks_retry(
 ) -> bool:
     """Decide whether a completed run satisfies the watchdog's daily obligation.
 
-    EPG's canonical daily refresh is scheduled for 06:10 Asia/Dhaka, after
-    the 05:50 playlist-maintenance run. Active runs still block overlapping
-    dispatches; successful EPG runs created at/after 06:10 satisfy the
-    daily obligation.
+    EPG's canonical daily refresh is scheduled for 06:07 Asia/Dhaka
+    (``epg-refresh.yml`` cron ``7 0 * * *``), after the playlist writers.
+    Active runs still block overlapping dispatches; successful EPG runs
+    created at/after EPG_DAILY_REFRESH_LOCAL satisfy the daily obligation.
+    The threshold must not be later than the workflow's own cron minute,
+    otherwise an on-time scheduled refresh would be ignored and the watchdog
+    would dispatch a redundant second publication.
     """
     if workflow_file == "epg-refresh.yml":
         status = str(run.get("status") or "").casefold()
@@ -198,7 +205,7 @@ def watchdog_run_blocks_retry(
             if not created_at:
                 return False
             local_created = parse_github_timestamp(created_at).astimezone(BD_TZ)
-            if (local_created.hour, local_created.minute) < (6, 10):
+            if (local_created.hour, local_created.minute) < EPG_DAILY_REFRESH_LOCAL:
                 return False
     return run_blocks_retry(run, client, workflow_file)
 
@@ -599,6 +606,59 @@ def watchdog_dispatch_count(runs: list[dict[str, Any]]) -> int:
     )
 
 
+def _recover_workflow(client, workflow_file: str, target_date: date) -> None:
+    """Evaluate one workflow's daily obligation and dispatch it only if missing."""
+    if not recovery_is_due(workflow_file):
+        hour, minute = RECOVERY_AFTER_LOCAL[workflow_file]
+        print(f"Recovery deferred for {workflow_file} until {hour:02d}:{minute:02d} Asia/Dhaka.")
+        return
+    runs = client.workflow_runs(workflow_file, target_date)
+    if workflow_file == "epg-refresh.yml":
+        runs = wait_for_epg_runs_to_settle(client, target_date, runs)
+    todays = runs_for_date(runs, target_date)
+    blocking = [
+        run for run in todays
+        if watchdog_run_blocks_retry(run, client, workflow_file)
+    ]
+    if blocking:
+        owner = min(
+            blocking,
+            key=lambda run: (parse_github_timestamp(run["created_at"]), int(run["id"])),
+        )
+        owner_id = int(owner["id"])
+        newest = max(blocking, key=lambda run: parse_github_timestamp(run["created_at"]))
+        print(
+            f"No dispatch needed for {workflow_file}: "
+            f"{len(blocking)} active/successful run(s) exist for {target_date}; "
+            f"owner={owner_id}, latest={newest['id']} "
+            f"event={newest.get('event')} status={newest.get('status')} "
+            f"conclusion={newest.get('conclusion')}."
+        )
+        return
+    automatic_dispatches = watchdog_dispatch_count(todays)
+    if automatic_dispatches >= MAX_WATCHDOG_DISPATCHES_PER_DAY:
+        print(
+            f"Recovery circuit breaker OPEN for {workflow_file} on {target_date}: "
+            f"{automatic_dispatches} automatic watchdog dispatches already ran "
+            f"(limit {MAX_WATCHDOG_DISPATCHES_PER_DAY}). No further dispatch will be sent today; "
+            "the next scheduled Bangladesh-day cycle may retry after investigation."
+        )
+        return
+    if todays:
+        print(
+            f"Retrying {workflow_file}: today's prior attempts all ended unsuccessfully "
+            f"({len(todays)} run(s)); automatic recovery dispatch "
+            f"{automatic_dispatches + 1}/{MAX_WATCHDOG_DISPATCHES_PER_DAY}."
+        )
+    print(
+        f"No active or successful required job exists for {workflow_file} on Bangladesh date {target_date}; "
+        f"dispatching recovery attempt {automatic_dispatches + 1}/{MAX_WATCHDOG_DISPATCHES_PER_DAY} "
+        f"on {DEFAULT_BRANCH}."
+    )
+    client.dispatch(workflow_file)
+    print(f"Dispatch accepted for {workflow_file}.")
+
+
 def watchdog(workflow_files: list[str]) -> int:
     # Push-triggered watchdog runs must still recover workflows that were not
     # triggered by the pushed paths. Existing active/successful-job checks and
@@ -608,56 +668,25 @@ def watchdog(workflow_files: list[str]) -> int:
     target_date = today_in_bangladesh()
     client = GitHubActions(repository, token)
 
+    # Each workflow is evaluated independently. On 2026-11-19 an installation
+    # rate-limit 403 raised out of the first workflow's lookup and aborted the
+    # whole run, so EPG and discovery were never even checked. A failure for one
+    # workflow is now recorded, the remaining workflows are still evaluated, and
+    # the run then fails visibly instead of silently skipping recovery.
+    failures: list[str] = []
     for workflow_file in workflow_files:
-        if not recovery_is_due(workflow_file):
-            hour, minute = RECOVERY_AFTER_LOCAL[workflow_file]
-            print(f"Recovery deferred for {workflow_file} until {hour:02d}:{minute:02d} Asia/Dhaka.")
-            continue
-        runs = client.workflow_runs(workflow_file, target_date)
-        if workflow_file == "epg-refresh.yml":
-            runs = wait_for_epg_runs_to_settle(client, target_date, runs)
-        todays = runs_for_date(runs, target_date)
-        blocking = [
-            run for run in todays
-            if watchdog_run_blocks_retry(run, client, workflow_file)
-        ]
-        if blocking:
-            owner = min(
-                blocking,
-                key=lambda run: (parse_github_timestamp(run["created_at"]), int(run["id"])),
-            )
-            owner_id = int(owner["id"])
-            newest = max(blocking, key=lambda run: parse_github_timestamp(run["created_at"]))
-            print(
-                f"No dispatch needed for {workflow_file}: "
-                f"{len(blocking)} active/successful run(s) exist for {target_date}; "
-                f"owner={owner_id}, latest={newest['id']} "
-                f"event={newest.get('event')} status={newest.get('status')} "
-                f"conclusion={newest.get('conclusion')}."
-            )
-            continue
-        automatic_dispatches = watchdog_dispatch_count(todays)
-        if automatic_dispatches >= MAX_WATCHDOG_DISPATCHES_PER_DAY:
-            print(
-                f"Recovery circuit breaker OPEN for {workflow_file} on {target_date}: "
-                f"{automatic_dispatches} automatic watchdog dispatches already ran "
-                f"(limit {MAX_WATCHDOG_DISPATCHES_PER_DAY}). No further dispatch will be sent today; "
-                "the next scheduled Bangladesh-day cycle may retry after investigation."
-            )
-            continue
-        if todays:
-            print(
-                f"Retrying {workflow_file}: today's prior attempts all ended unsuccessfully "
-                f"({len(todays)} run(s)); automatic recovery dispatch "
-                f"{automatic_dispatches + 1}/{MAX_WATCHDOG_DISPATCHES_PER_DAY}."
-            )
+        try:
+            _recover_workflow(client, workflow_file, target_date)
+        except RuntimeError as exc:
+            failures.append(workflow_file)
+            detail = " ".join(str(exc).split())[:300]
+            print(f"::error::Recovery check for {workflow_file} failed: {detail}")
+    if failures:
         print(
-            f"No active or successful required job exists for {workflow_file} on Bangladesh date {target_date}; "
-            f"dispatching recovery attempt {automatic_dispatches + 1}/{MAX_WATCHDOG_DISPATCHES_PER_DAY} "
-            f"on {DEFAULT_BRANCH}."
+            "::error::Watchdog could not complete recovery for: "
+            f"{', '.join(failures)}. The remaining workflows were still evaluated."
         )
-        client.dispatch(workflow_file)
-        print(f"Dispatch accepted for {workflow_file}.")
+        return 1
     return 0
 
 
