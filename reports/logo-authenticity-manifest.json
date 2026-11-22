@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-22T03:01:58.860380+00:00",
+  "generated_at_utc": "2026-11-22T03:10:40.295421+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -12,7 +12,7 @@
   },
   "source_sha256_by_playlist": {
     "IPTV-Playlist.m3u": "0e135710f0964eb757aa03c22ce16c8b1d48cad03639d48f28903aadee255a73",
-    "International-Playlist.m3u": "775cbe8b25427f90c357e609d25ad6f68e563b00c346ad949ed59ea6be3267f5"
+    "International-Playlist.m3u": "c81624e2253b562a7758049676834e15ee42db852678499b94aa2e74fae0526e"
   },
   "status_counts": {
     "needs_review": 3666,
@@ -48967,6 +48967,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 4759,
+      "channel_name": "Lifetime Movies",
+      "tvg_id": "lifetimemovies.us",
+      "channel_id": "lifetimemovies.us",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lifetimemovies.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 4761,
       "channel_name": "Love Nature",
       "tvg_id": "custom.love-natural",
       "channel_id": "custom.love-natural",
@@ -48979,7 +48992,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4761,
+      "line": 4763,
       "channel_name": "Love Nature",
       "tvg_id": "custom.love-natural-xfim4",
       "channel_id": "custom.love-natural-xfim4",
@@ -48992,7 +49005,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4763,
+      "line": 4765,
       "channel_name": "Love Nature",
       "tvg_id": "LoveNature.us",
       "channel_id": "LoveNature.us",
@@ -49005,7 +49018,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4765,
+      "line": 4767,
       "channel_name": "Love Nature",
       "tvg_id": "custom.love-natural",
       "channel_id": "custom.love-natural",
@@ -49018,7 +49031,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4767,
+      "line": 4769,
       "channel_name": "Love Nature",
       "tvg_id": "LoveNature.ca@4K",
       "channel_id": "",
@@ -49031,7 +49044,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4769,
+      "line": 4771,
       "channel_name": "Love Nature en Espanol",
       "tvg_id": "LoveNatureenEspanol.us@SD",
       "channel_id": "",
@@ -49044,7 +49057,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4771,
+      "line": 4773,
       "channel_name": "Love Pets",
       "tvg_id": "LovePets.ca@US",
       "channel_id": "",
@@ -49057,7 +49070,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4773,
+      "line": 4775,
       "channel_name": "Love The Planet",
       "tvg_id": "LoveThePlanet.es@EN",
       "channel_id": "",
@@ -49070,7 +49083,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4775,
+      "line": 4777,
       "channel_name": "Love the Planet",
       "tvg_id": "LoveThePlanet.us",
       "channel_id": "LoveThePlanet.us",
@@ -49083,7 +49096,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4777,
+      "line": 4779,
       "channel_name": "LRT Plius",
       "tvg_id": "LRTPlius.lt@SD",
       "channel_id": "",
@@ -49096,7 +49109,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4779,
+      "line": 4781,
       "channel_name": "LTN Family",
       "tvg_id": "LTNFamily.pk@SD",
       "channel_id": "LTNFamily.pk@SD",
@@ -49109,7 +49122,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4781,
+      "line": 4783,
       "channel_name": "M4 Sport",
       "tvg_id": "M4Sport.hu@SD",
       "channel_id": "",
@@ -49122,7 +49135,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4783,
+      "line": 4785,
       "channel_name": "Maasranga TV",
       "tvg_id": "229000",
       "channel_id": "",
@@ -49135,24 +49148,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4785,
+      "line": 4787,
       "channel_name": "Maasranga TV",
       "tvg_id": "MaasrangaTV.bd",
       "channel_id": "MaasrangaTV.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maasranga-tv.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 4787,
-      "channel_name": "Madani TV",
-      "tvg_id": "MadaniTV.sa",
-      "channel_id": "MadaniTV.sa",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-tv.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -49175,6 +49175,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 4791,
+      "channel_name": "Madani TV",
+      "tvg_id": "MadaniTV.sa",
+      "channel_id": "MadaniTV.sa",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 4793,
       "channel_name": "MadeinBO TV",
       "tvg_id": "MadeinBOTV.it@SD",
       "channel_id": "",
@@ -49183,19 +49196,6 @@
       "registry_match": "exact-key",
       "source_url": "https://i.imgur.com/47X44DD.png",
       "reason": "IPTV-org exact ID: MadeinBOTV.it IPTV-org public logo dataset Source page: https://i.imgur.com/47X44DD.png",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 4793,
-      "channel_name": "Madhimugam TV",
-      "tvg_id": "MadhimugamTV.in",
-      "channel_id": "MadhimugamTV.in",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madhimugam-tv-576p-80c57e3e48.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
       "registry_conflict": ""
     },
     {
@@ -49214,6 +49214,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 4797,
+      "channel_name": "Madhimugam TV",
+      "tvg_id": "MadhimugamTV.in",
+      "channel_id": "MadhimugamTV.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madhimugam-tv-576p-80c57e3e48.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 4799,
       "channel_name": "Madina Live",
       "tvg_id": "custom.bdix.madinalive",
       "channel_id": "custom.bdix.madinalive",
@@ -49226,7 +49239,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4799,
+      "line": 4801,
       "channel_name": "MagentaMusik 360",
       "tvg_id": "MagentaMusik360.de@SD",
       "channel_id": "MagentaMusik360.de@SD",
@@ -49239,7 +49252,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4801,
+      "line": 4803,
       "channel_name": "Maincast Cybersport",
       "tvg_id": "MaincastCybersport.ua@SD",
       "channel_id": "",
@@ -49252,7 +49265,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4803,
+      "line": 4805,
       "channel_name": "Maincast Sport",
       "tvg_id": "MaincastSport.ua@SD",
       "channel_id": "",
@@ -49265,7 +49278,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4805,
+      "line": 4807,
       "channel_name": "Major League Cricket",
       "tvg_id": "major.league.cricket.com",
       "channel_id": "major.league.cricket.com",
@@ -49278,7 +49291,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4807,
+      "line": 4809,
       "channel_name": "Makkah Live",
       "tvg_id": "MakkahLive.sa",
       "channel_id": "MakkahLive.sa",
@@ -49287,19 +49300,6 @@
       "registry_match": "same-asset-stem-format-conversion",
       "source_url": "https://www.jagobd.com/wp-content/uploads/2020/05/MakkahLive.jpg",
       "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact unique channel name: MakkahLive.bd IPTV-org public logo dataset Source page: https://www.jagobd.com/wp-content/uploads/2020/05/MakkahLive.jpg",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 4809,
-      "channel_name": "Makkah TV",
-      "tvg_id": "MakkahTV.sa",
-      "channel_id": "MakkahTV.sa",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makkah-tv.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
       "registry_conflict": ""
     },
     {
@@ -49318,6 +49318,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 4813,
+      "channel_name": "Makkah TV",
+      "tvg_id": "MakkahTV.sa",
+      "channel_id": "MakkahTV.sa",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makkah-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 4815,
       "channel_name": "Marina TV",
       "tvg_id": "MarinaTV.kw@SD",
       "channel_id": "MarinaTV.kw@SD",
@@ -49330,7 +49343,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4815,
+      "line": 4817,
       "channel_name": "Marquee Sports Network",
       "tvg_id": "MarqueeSportsNetwork.us",
       "channel_id": "MarqueeSportsNetwork.us",
@@ -49343,7 +49356,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4817,
+      "line": 4819,
       "channel_name": "Masala TV",
       "tvg_id": "MasalaTV.pk@SD",
       "channel_id": "MasalaTV.pk@SD",
@@ -49356,7 +49369,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4819,
+      "line": 4821,
       "channel_name": "Match4",
       "tvg_id": "Match4.hu@SD",
       "channel_id": "",
@@ -49369,7 +49382,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4821,
+      "line": 4823,
       "channel_name": "Match! Ultra",
       "tvg_id": "MatchUltra.ru@4K",
       "channel_id": "",
@@ -49382,7 +49395,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4823,
+      "line": 4825,
       "channel_name": "MAX4",
       "tvg_id": "MAX4.hu@SD",
       "channel_id": "MAX4.hu@SD",
@@ -49395,7 +49408,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4825,
+      "line": 4827,
       "channel_name": "Max Sport 1",
       "tvg_id": "custom.maxsport1",
       "channel_id": "custom.maxsport1",
@@ -49408,7 +49421,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4827,
+      "line": 4829,
       "channel_name": "Max Sport 2",
       "tvg_id": "custom.maxsport2",
       "channel_id": "custom.maxsport2",
@@ -49421,7 +49434,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4829,
+      "line": 4831,
       "channel_name": "Max Sport 3",
       "tvg_id": "custom.maxsport3",
       "channel_id": "custom.maxsport3",
@@ -49434,7 +49447,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4831,
+      "line": 4833,
       "channel_name": "Max Sport 4",
       "tvg_id": "custom.maxsport4",
       "channel_id": "custom.maxsport4",
@@ -49447,7 +49460,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4833,
+      "line": 4835,
       "channel_name": "Maxcine",
       "tvg_id": "Maxcine.us@HD",
       "channel_id": "",
@@ -49460,7 +49473,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4835,
+      "line": 4837,
       "channel_name": "Maxcine 2",
       "tvg_id": "Maxcine2.us@HD",
       "channel_id": "",
@@ -49473,7 +49486,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4837,
+      "line": 4839,
       "channel_name": "Maxcine Comedy",
       "tvg_id": "MaxcineComedy.us@HD",
       "channel_id": "",
@@ -49486,7 +49499,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4839,
+      "line": 4841,
       "channel_name": "Maxcine Family",
       "tvg_id": "MaxcineFamily.us@HD",
       "channel_id": "",
@@ -49499,7 +49512,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4841,
+      "line": 4843,
       "channel_name": "Maxcine Kids",
       "tvg_id": "MaxcineKids.us@HD",
       "channel_id": "",
@@ -49512,7 +49525,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4843,
+      "line": 4845,
       "channel_name": "Mayday: Air Disaster",
       "tvg_id": "MaydayAirDisaster.us",
       "channel_id": "MaydayAirDisaster.us",
@@ -49525,7 +49538,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4845,
+      "line": 4847,
       "channel_name": "MBC 3 USA",
       "tvg_id": "MBC3USA.us@SD",
       "channel_id": "",
@@ -49538,7 +49551,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4847,
+      "line": 4849,
       "channel_name": "MBC TV",
       "tvg_id": "MBCTV.in@SD",
       "channel_id": "MBCTV.in@SD",
@@ -49551,7 +49564,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4849,
+      "line": 4851,
       "channel_name": "MCI Television",
       "tvg_id": "custom.mci-television-co-movie",
       "channel_id": "custom.mci-television-co-movie",
@@ -49564,7 +49577,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4851,
+      "line": 4853,
       "channel_name": "MCM Pop",
       "tvg_id": "MCMPop.fr@SD",
       "channel_id": "MCMPop.fr@SD",
@@ -49577,7 +49590,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4853,
+      "line": 4855,
       "channel_name": "MCM Top (France)",
       "tvg_id": "MCMTop.fr@SD",
       "channel_id": "MCMTop.fr@SD",
@@ -49590,7 +49603,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4855,
+      "line": 4857,
       "channel_name": "MCM Top (Russia)",
       "tvg_id": "MCMTop.ru@SD",
       "channel_id": "MCMTop.ru@SD",
@@ -49603,7 +49616,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4857,
+      "line": 4859,
       "channel_name": "Mega Extreno",
       "tvg_id": "MegaExtrenoHD.us@HD",
       "channel_id": "MegaExtrenoHD.us@HD",
@@ -49616,7 +49629,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4859,
+      "line": 4861,
       "channel_name": "Mehran TV",
       "tvg_id": "MehranTV.pk@SD",
       "channel_id": "MehranTV.pk@SD",
@@ -49629,7 +49642,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4861,
+      "line": 4863,
       "channel_name": "Mei Alai TV",
       "tvg_id": "MeiAlaiTV.in",
       "channel_id": "MeiAlaiTV.in",
@@ -49642,7 +49655,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4863,
+      "line": 4865,
       "channel_name": "Metropolitana del Cuzco",
       "tvg_id": "MetropolitanadelCuzco.pe@SD",
       "channel_id": "MetropolitanadelCuzco.pe@SD",
@@ -49655,7 +49668,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4865,
+      "line": 4867,
       "channel_name": "Mezzo",
       "tvg_id": "Mezzo.fr@SD",
       "channel_id": "Mezzo.fr@SD",
@@ -49668,7 +49681,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4867,
+      "line": 4869,
       "channel_name": "Mh 1 Prime",
       "tvg_id": "Mh1Prime.in@SD",
       "channel_id": "",
@@ -49681,7 +49694,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4869,
+      "line": 4871,
       "channel_name": "MH One",
       "tvg_id": "MHOne.in@SD",
       "channel_id": "",
@@ -49694,7 +49707,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4871,
+      "line": 4873,
       "channel_name": "MH One Dil Se",
       "tvg_id": "MHOneDilSe.in@SD",
       "channel_id": "MHOneDilSe.in@SD",
@@ -49707,7 +49720,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4873,
+      "line": 4875,
       "channel_name": "MH One Dil Se",
       "tvg_id": "MHOneDilSe.in@SD",
       "channel_id": "",
@@ -49720,7 +49733,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4875,
+      "line": 4877,
       "channel_name": "MH One Movies",
       "tvg_id": "MHOneMovies.in@SD",
       "channel_id": "",
@@ -49733,7 +49746,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4877,
+      "line": 4879,
       "channel_name": "MH One Movies",
       "tvg_id": "MHOneMovies.in",
       "channel_id": "MHOneMovies.in",
@@ -49746,7 +49759,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4879,
+      "line": 4881,
       "channel_name": "MH One Prime",
       "tvg_id": "Mh1Prime.in",
       "channel_id": "Mh1Prime.in",
@@ -49759,7 +49772,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4881,
+      "line": 4883,
       "channel_name": "Mi Musica Romantica",
       "tvg_id": "MiMusicaRomantica.us@SD",
       "channel_id": "MiMusicaRomantica.us@SD",
@@ -49772,7 +49785,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4883,
+      "line": 4885,
       "channel_name": "Milan TV",
       "tvg_id": "MilanTV.it@SD",
       "channel_id": "",
@@ -49785,7 +49798,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4885,
+      "line": 4887,
       "channel_name": "Military History",
       "tvg_id": "militaryhistory.us",
       "channel_id": "militaryhistory.us",
@@ -49798,7 +49811,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4887,
+      "line": 4889,
       "channel_name": "Military History",
       "tvg_id": "MilitaryHistory.us@SD",
       "channel_id": "",
@@ -49811,7 +49824,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4889,
+      "line": 4891,
       "channel_name": "Minika Cocuk",
       "tvg_id": "MinikaCocuk.tr@SD",
       "channel_id": "",
@@ -49824,7 +49837,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4891,
+      "line": 4893,
       "channel_name": "Minika Go",
       "tvg_id": "MinikaGo.tr@SD",
       "channel_id": "",
@@ -49837,7 +49850,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4893,
+      "line": 4895,
       "channel_name": "Minimax (Hungary)",
       "tvg_id": "Minimax.hu@SD",
       "channel_id": "",
@@ -49850,7 +49863,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4895,
+      "line": 4897,
       "channel_name": "Minimax CEE",
       "tvg_id": "MinimaxCEE.cz@SD",
       "channel_id": "",
@@ -49863,7 +49876,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4897,
+      "line": 4899,
       "channel_name": "MMA-TV.com",
       "tvg_id": "MMATVcom.ru@SD",
       "channel_id": "",
@@ -49876,7 +49889,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4899,
+      "line": 4901,
       "channel_name": "MNB Sport",
       "tvg_id": "MNBSport.mn@SD",
       "channel_id": "",
@@ -49889,7 +49902,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4901,
+      "line": 4903,
       "channel_name": "MNTV (Tamil)",
       "tvg_id": "MarutamTV.in",
       "channel_id": "MarutamTV.in",
@@ -49902,7 +49915,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4903,
+      "line": 4905,
       "channel_name": "Molahits TV",
       "tvg_id": "custom.molahits-tv-es-music",
       "channel_id": "custom.molahits-tv-es-music",
@@ -49915,7 +49928,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4905,
+      "line": 4907,
       "channel_name": "Monterrico TV",
       "tvg_id": "MonterricoTV.pe@SD",
       "channel_id": "",
@@ -49928,7 +49941,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4907,
+      "line": 4909,
       "channel_name": "Montones TV",
       "tvg_id": "MontonesTV.do@HD",
       "channel_id": "",
@@ -49941,7 +49954,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4909,
+      "line": 4911,
       "channel_name": "Moonbug Kids",
       "tvg_id": "MoonbugKids.uk",
       "channel_id": "MoonbugKids.uk",
@@ -49954,7 +49967,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4911,
+      "line": 4913,
       "channel_name": "Mooz Dance HD [ ]",
       "tvg_id": "MoozDance.ro@HD",
       "channel_id": "MoozDance.ro@HD",
@@ -49967,7 +49980,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4913,
+      "line": 4915,
       "channel_name": "More Than Sports TV",
       "tvg_id": "MoreThanSportsTV.de@SD",
       "channel_id": "",
@@ -49980,7 +49993,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4915,
+      "line": 4917,
       "channel_name": "Motortrend",
       "tvg_id": "motortrend.us",
       "channel_id": "motortrend.us",
@@ -49993,7 +50006,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4917,
+      "line": 4919,
       "channel_name": "Motorvision",
       "tvg_id": "Motorvision.de@SD",
       "channel_id": "Motorvision.de@SD",
@@ -50006,7 +50019,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4919,
+      "line": 4921,
       "channel_name": "Motu Patlu",
       "tvg_id": "custom.bdix.motu-patlu",
       "channel_id": "",
@@ -50019,24 +50032,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4921,
+      "line": 4923,
       "channel_name": "Movie Music by Stingray",
       "tvg_id": "custom.movie-music-by-stingray-ca-music",
       "channel_id": "custom.movie-music-by-stingray-ca-music",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movie-music-by-stingray-1080p-cf132e65b8.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 4923,
-      "channel_name": "Movies Now",
-      "tvg_id": "MoviesNow.in@SD",
-      "channel_id": "MoviesNow.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -50072,6 +50072,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 4929,
+      "channel_name": "Movies Now",
+      "tvg_id": "MoviesNow.in@SD",
+      "channel_id": "MoviesNow.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 4931,
       "channel_name": "Movies!",
       "tvg_id": "Movies.us@SD",
       "channel_id": "Movies.us@SD",
@@ -50084,7 +50097,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4931,
+      "line": 4933,
       "channel_name": "MovieSmart Turk",
       "tvg_id": "MovieSmartTurk.tr@SD",
       "channel_id": "MovieSmartTurk.tr@SD",
@@ -50097,7 +50110,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4933,
+      "line": 4935,
       "channel_name": "Movify Kino",
       "tvg_id": "MovifyKino.lv@SD",
       "channel_id": "MovifyKino.lv@SD",
@@ -50110,7 +50123,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4935,
+      "line": 4937,
       "channel_name": "Mr Bean Animated",
       "tvg_id": "MrBeanAnimated.uk",
       "channel_id": "MrBeanAnimated.uk",
@@ -50123,7 +50136,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4937,
+      "line": 4939,
       "channel_name": "Mr Bean Animated ES",
       "tvg_id": "MrBeanAnimated.uk@ES",
       "channel_id": "MrBeanAnimated.uk@ES",
@@ -50136,7 +50149,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4939,
+      "line": 4941,
       "channel_name": "Mr Bean Animated FR",
       "tvg_id": "MrBeanAnimated.uk@FR",
       "channel_id": "MrBeanAnimated.uk@FR",
@@ -50149,7 +50162,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4941,
+      "line": 4943,
       "channel_name": "MRTV Sports",
       "tvg_id": "MRTVSports.mm@SD",
       "channel_id": "MRTVSports.mm@SD",
@@ -50162,7 +50175,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4943,
+      "line": 4945,
       "channel_name": "MSG SportsZone",
       "tvg_id": "msg.sportszone.com",
       "channel_id": "msg.sportszone.com",
@@ -50175,7 +50188,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4945,
+      "line": 4947,
       "channel_name": "MTRSPT1",
       "tvg_id": "custom.mtrspt",
       "channel_id": "custom.mtrspt",
@@ -50188,7 +50201,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4947,
+      "line": 4949,
       "channel_name": "Music [ ]",
       "tvg_id": "Music.kg@SD",
       "channel_id": "Music.kg@SD",
@@ -50201,7 +50214,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4949,
+      "line": 4951,
       "channel_name": "Music Mastii",
       "tvg_id": "Mastiii.in@SD",
       "channel_id": "",
@@ -50214,7 +50227,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4951,
+      "line": 4953,
       "channel_name": "MUTV",
       "tvg_id": "MUTV.uk@SD",
       "channel_id": "",
@@ -50227,7 +50240,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4953,
+      "line": 4955,
       "channel_name": "MWD Documentary",
       "tvg_id": "MWDDocumentary.mm@SD",
       "channel_id": "",
@@ -50240,7 +50253,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4955,
+      "line": 4957,
       "channel_name": "My Cinema [ ]",
       "tvg_id": "MyCinema.id@SD",
       "channel_id": "MyCinema.id@SD",
@@ -50253,7 +50266,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4957,
+      "line": 4959,
       "channel_name": "My TV",
       "tvg_id": "MyTV.bd@SD",
       "channel_id": "",
@@ -50266,7 +50279,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4959,
+      "line": 4961,
       "channel_name": "Mysteries Xplored",
       "tvg_id": "USBB5200028MM",
       "channel_id": "USBB5200028MM",
@@ -50279,7 +50292,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4961,
+      "line": 4963,
       "channel_name": "Mystery TV",
       "tvg_id": "MysteryTV.us",
       "channel_id": "MysteryTV.us",
@@ -50292,24 +50305,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4963,
+      "line": 4965,
       "channel_name": "Mythbusters",
       "tvg_id": "Mythbusters.us",
       "channel_id": "Mythbusters.us",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mythbusters.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 4965,
-      "channel_name": "Nagorik TV",
-      "tvg_id": "NagorikTV.bd",
-      "channel_id": "NagorikTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nagorik-tv-90b5d16aaf.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -50332,6 +50332,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 4969,
+      "channel_name": "Nagorik TV",
+      "tvg_id": "NagorikTV.bd",
+      "channel_id": "NagorikTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nagorik-tv-90b5d16aaf.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 4971,
       "channel_name": "Nandighosha TV",
       "tvg_id": "NandighoshaTV.in@SD",
       "channel_id": "",
@@ -50344,7 +50357,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4971,
+      "line": 4973,
       "channel_name": "Nano",
       "tvg_id": "Nano.ru@HD",
       "channel_id": "",
@@ -50357,7 +50370,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4973,
+      "line": 4975,
       "channel_name": "Nano",
       "tvg_id": "Nano.ru@SD",
       "channel_id": "",
@@ -50370,7 +50383,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4975,
+      "line": 4977,
       "channel_name": "Nat Geo People",
       "tvg_id": "NatGeoPeople.pl@SD",
       "channel_id": "",
@@ -50379,19 +50392,6 @@
       "registry_match": "exact-key",
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/New_NatGeo_People_logo.svg/960px-New_NatGeo_People_logo.svg.png",
       "reason": "IPTV-org exact ID: NatGeoPeople.pl IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/New_NatGeo_People_logo.svg/960px-New_NatGeo_People_logo.svg.png",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 4977,
-      "channel_name": "Nat Geo TV",
-      "tvg_id": "NatGeoTV.us",
-      "channel_id": "NatGeoTV.us",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-tv-3ec65d6036cedcccbd1a.png",
-      "status": "third_party_verified",
-      "registry_match": "same-asset-stem-format-conversion",
-      "source_url": "https://s3.aynaott.com/storage/2dce8297266bbc9c235c27119f914e1b",
-      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact original tvg-logo URL from playlist history Historical source URL; reuse rights not specified Source page: https://github.com/saeidrahmanbd/BDIX-IPTV/blob/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u",
       "registry_conflict": ""
     },
     {
@@ -50410,23 +50410,23 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 4981,
-      "channel_name": "Nat Geo Wild",
-      "tvg_id": "NationalGeographicWild.in@SD",
-      "channel_id": "NationalGeographicWild.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "channel_name": "Nat Geo TV",
+      "tvg_id": "NatGeoTV.us",
+      "channel_id": "NatGeoTV.us",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-tv-3ec65d6036cedcccbd1a.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://s3.aynaott.com/storage/2dce8297266bbc9c235c27119f914e1b",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact original tvg-logo URL from playlist history Historical source URL; reuse rights not specified Source page: https://github.com/saeidrahmanbd/BDIX-IPTV/blob/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u",
       "registry_conflict": ""
     },
     {
       "playlist": "International-Playlist.m3u",
       "line": 4983,
-      "channel_name": "National Geographic",
-      "tvg_id": "natgeo.us",
-      "channel_id": "natgeo.us",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png",
+      "channel_name": "Nat Geo Wild",
+      "tvg_id": "NationalGeographicWild.in@SD",
+      "channel_id": "NationalGeographicWild.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -50449,6 +50449,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 4987,
+      "channel_name": "National Geographic",
+      "tvg_id": "natgeo.us",
+      "channel_id": "natgeo.us",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 4989,
       "channel_name": "National Geographic (Czech Republic)",
       "tvg_id": "NationalGeographic.cz@SD",
       "channel_id": "",
@@ -50461,7 +50474,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4989,
+      "line": 4991,
       "channel_name": "National Geographic (Hungary)",
       "tvg_id": "NationalGeographic.hu@SD",
       "channel_id": "",
@@ -50474,7 +50487,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4991,
+      "line": 4993,
       "channel_name": "National Geographic (Mexico)",
       "tvg_id": "NationalGeographic.mx@SD",
       "channel_id": "",
@@ -50487,7 +50500,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4993,
+      "line": 4995,
       "channel_name": "National Geographic (Poland)",
       "tvg_id": "NationalGeographic.pl@SD",
       "channel_id": "",
@@ -50500,7 +50513,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4995,
+      "line": 4997,
       "channel_name": "National Geographic (United States)",
       "tvg_id": "NationalGeographic.us@East",
       "channel_id": "",
@@ -50513,7 +50526,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4997,
+      "line": 4999,
       "channel_name": "National Geographic Wild (Czech Republic)",
       "tvg_id": "NationalGeographicWild.cz@SD",
       "channel_id": "",
@@ -50526,7 +50539,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 4999,
+      "line": 5001,
       "channel_name": "National Geographic Wild (Hungary)",
       "tvg_id": "NationalGeographicWild.hu@SD",
       "channel_id": "",
@@ -50539,7 +50552,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5001,
+      "line": 5003,
       "channel_name": "NatureTime AU",
       "tvg_id": "NatureTime.ca@AU",
       "channel_id": "",
@@ -50552,7 +50565,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5003,
+      "line": 5005,
       "channel_name": "NatureTime France",
       "tvg_id": "NatureTime.ca@France",
       "channel_id": "",
@@ -50565,7 +50578,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5005,
+      "line": 5007,
       "channel_name": "Nautical Channel",
       "tvg_id": "NauticalChannel.it@SD",
       "channel_id": "",
@@ -50578,7 +50591,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5007,
+      "line": 5009,
       "channel_name": "NBA TV",
       "tvg_id": "NBATV.us@SD",
       "channel_id": "",
@@ -50591,7 +50604,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5009,
+      "line": 5011,
       "channel_name": "NBC Sports NOW",
       "tvg_id": "NBCSportsNOW.us@SD",
       "channel_id": "",
@@ -50604,7 +50617,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5011,
+      "line": 5013,
       "channel_name": "Network 10",
       "tvg_id": "Network10.in@SD",
       "channel_id": "",
@@ -50617,7 +50630,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5013,
+      "line": 5015,
       "channel_name": "NEW K.MOVIES",
       "tvg_id": "NEWKMOVIES.us@SD",
       "channel_id": "NEWKMOVIES.us@SD",
@@ -50630,7 +50643,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5015,
+      "line": 5017,
       "channel_name": "NewFlix",
       "tvg_id": "NewFlix.ir@SD",
       "channel_id": "NewFlix.ir@SD",
@@ -50643,7 +50656,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5017,
+      "line": 5019,
       "channel_name": "NFL Network",
       "tvg_id": "NFLNetwork.us@SD",
       "channel_id": "NFLNetwork.us@SD",
@@ -50656,7 +50669,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5019,
+      "line": 5021,
       "channel_name": "NHL AntenaPlay",
       "tvg_id": "NHLAntenaPlay.ro@SD",
       "channel_id": "",
@@ -50669,7 +50682,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5021,
+      "line": 5023,
       "channel_name": "NHL Network",
       "tvg_id": "NHLNetwork.us@SD",
       "channel_id": "",
@@ -50682,7 +50695,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5023,
+      "line": 5025,
       "channel_name": "Nick Bangla",
       "tvg_id": "NickBangla.bd",
       "channel_id": "NickBangla.bd",
@@ -50695,7 +50708,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5025,
+      "line": 5027,
       "channel_name": "Nick Jr East",
       "tvg_id": "custom.nick-jr-east",
       "channel_id": "custom.nick-jr-east",
@@ -50708,7 +50721,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5027,
+      "line": 5029,
       "channel_name": "Nick Jr. (Czech Republic)",
       "tvg_id": "NickJr.cz@SD",
       "channel_id": "",
@@ -50721,7 +50734,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5029,
+      "line": 5031,
       "channel_name": "Nick Jr. (Hungary)",
       "tvg_id": "NickJr.hu@SD",
       "channel_id": "",
@@ -50734,7 +50747,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5031,
+      "line": 5033,
       "channel_name": "Nick Jr. (India)",
       "tvg_id": "NickJr.in@SD",
       "channel_id": "NickJr.in@SD",
@@ -50747,7 +50760,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5033,
+      "line": 5035,
       "channel_name": "Nick Jr. (Italy)",
       "tvg_id": "NickJr.it@SD",
       "channel_id": "",
@@ -50760,7 +50773,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5035,
+      "line": 5037,
       "channel_name": "Nick Jr. (Poland)",
       "tvg_id": "NickJr.pl@SD",
       "channel_id": "",
@@ -50773,7 +50786,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5037,
+      "line": 5039,
       "channel_name": "Nick Jr. (United States)",
       "tvg_id": "NickJr.us@East",
       "channel_id": "",
@@ -50786,7 +50799,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5039,
+      "line": 5041,
       "channel_name": "Nick Jr. Latin America",
       "tvg_id": "NickJrLatinAmerica.us@Panregional",
       "channel_id": "",
@@ -50799,7 +50812,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5041,
+      "line": 5043,
       "channel_name": "Nickelodeon",
       "tvg_id": "nickelodeon.ca",
       "channel_id": "nickelodeon.ca",
@@ -50812,7 +50825,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5043,
+      "line": 5045,
       "channel_name": "Nickelodeon (Brazil)",
       "tvg_id": "Nickelodeon.br@SD",
       "channel_id": "",
@@ -50825,7 +50838,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5045,
+      "line": 5047,
       "channel_name": "Nickelodeon (Czech Republic)",
       "tvg_id": "Nickelodeon.cz@SD",
       "channel_id": "",
@@ -50838,7 +50851,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5047,
+      "line": 5049,
       "channel_name": "Nickelodeon (Germany)",
       "tvg_id": "Nickelodeon.de@SD",
       "channel_id": "",
@@ -50851,7 +50864,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5049,
+      "line": 5051,
       "channel_name": "Nickelodeon (Hungary)",
       "tvg_id": "Nickelodeon.hu@SD",
       "channel_id": "",
@@ -50864,7 +50877,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5051,
+      "line": 5053,
       "channel_name": "Nickelodeon (India)",
       "tvg_id": "Nickelodeon.in@SD",
       "channel_id": "Nickelodeon.in@SD",
@@ -50877,7 +50890,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5053,
+      "line": 5055,
       "channel_name": "Nickelodeon (Poland)",
       "tvg_id": "Nickelodeon.pl@SD",
       "channel_id": "",
@@ -50890,7 +50903,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5055,
+      "line": 5057,
       "channel_name": "Nickelodeon CIS",
       "tvg_id": "NickelodeonCIS.kz@SD",
       "channel_id": "",
@@ -50903,7 +50916,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5057,
+      "line": 5059,
       "channel_name": "Nicktoons (Czech Republic)",
       "tvg_id": "Nicktoons.cz@SD",
       "channel_id": "",
@@ -50916,7 +50929,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5059,
+      "line": 5061,
       "channel_name": "Nicktoons (Hungary)",
       "tvg_id": "Nicktoons.hu@SD",
       "channel_id": "",
@@ -50929,7 +50942,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5061,
+      "line": 5063,
       "channel_name": "Nicktoons (Poland)",
       "tvg_id": "Nicktoons.pl@SD",
       "channel_id": "",
@@ -50942,7 +50955,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5063,
+      "line": 5065,
       "channel_name": "Nicktoons (United States)",
       "tvg_id": "Nicktoons.us@East",
       "channel_id": "",
@@ -50955,7 +50968,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5065,
+      "line": 5067,
       "channel_name": "Nicktoons CIS",
       "tvg_id": "NicktoonsCIS.ru@SD",
       "channel_id": "",
@@ -50968,7 +50981,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5067,
+      "line": 5069,
       "channel_name": "Niki Junior",
       "tvg_id": "NikiJunior.ua@SD",
       "channel_id": "",
@@ -50981,7 +50994,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5069,
+      "line": 5071,
       "channel_name": "Ninja Kidz TV",
       "tvg_id": "NinjaKidzTV.us@SD",
       "channel_id": "",
@@ -50994,7 +51007,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5071,
+      "line": 5073,
       "channel_name": "NKR TV Kannada",
       "tvg_id": "NKRTVKannada.in@SD",
       "channel_id": "",
@@ -51007,7 +51020,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5073,
+      "line": 5075,
       "channel_name": "NTV",
       "tvg_id": "NTV.bd",
       "channel_id": "NTV.bd",
@@ -51020,7 +51033,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5075,
+      "line": 5077,
       "channel_name": "O! International",
       "tvg_id": "O.ru@International",
       "channel_id": "",
@@ -51033,7 +51046,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5077,
+      "line": 5079,
       "channel_name": "O'zbekiston Tarixi",
       "tvg_id": "OzbekistonTarixi.uz@SD",
       "channel_id": "",
@@ -51046,7 +51059,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5079,
+      "line": 5081,
       "channel_name": "Odisha TV",
       "tvg_id": "OdishaTV.in@SD",
       "channel_id": "",
@@ -51059,7 +51072,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5081,
+      "line": 5083,
       "channel_name": "Okko Futbol",
       "tvg_id": "OkkoFutbol.ru@SD",
       "channel_id": "",
@@ -51072,7 +51085,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5083,
+      "line": 5085,
       "channel_name": "Oman Sports TV",
       "tvg_id": "OmanSportsTV.om@SD",
       "channel_id": "",
@@ -51085,7 +51098,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5085,
+      "line": 5087,
       "channel_name": "ON Kids",
       "tvg_id": "ONKids.vn@SD",
       "channel_id": "",
@@ -51098,7 +51111,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5087,
+      "line": 5089,
       "channel_name": "One Paschima",
       "tvg_id": "OnePaschima.in@SD",
       "channel_id": "OnePaschima.in@SD",
@@ -51111,7 +51124,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5089,
+      "line": 5091,
       "channel_name": "OSN Movies Action",
       "tvg_id": "OSNMoviesAction.ae@SD",
       "channel_id": "OSNMoviesAction.ae@SD",
@@ -51124,7 +51137,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5091,
+      "line": 5093,
       "channel_name": "Outdoor Channel",
       "tvg_id": "OutdoorChannel.us",
       "channel_id": "OutdoorChannel.us",
@@ -51137,7 +51150,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5093,
+      "line": 5095,
       "channel_name": "Ovacion TV",
       "tvg_id": "OvacionTV.pe@SD",
       "channel_id": "",
@@ -51150,7 +51163,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5095,
+      "line": 5097,
       "channel_name": "Pac-12 Insider",
       "tvg_id": "Pac12Insider.us@SD",
       "channel_id": "",
@@ -51163,7 +51176,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5097,
+      "line": 5099,
       "channel_name": "Paighan TV",
       "tvg_id": "PaighanTV.pk@SD",
       "channel_id": "PaighanTV.pk@SD",
@@ -51176,7 +51189,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5099,
+      "line": 5101,
       "channel_name": "Pakapaka",
       "tvg_id": "Pakapaka.ar@SD",
       "channel_id": "",
@@ -51189,7 +51202,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5101,
+      "line": 5103,
       "channel_name": "Pankh",
       "tvg_id": "Pankh.in@SD",
       "channel_id": "",
@@ -51202,7 +51215,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5103,
+      "line": 5105,
       "channel_name": "Pantalla Clasica EC [ ]",
       "tvg_id": "PantallaClasicaEC.ec@SD",
       "channel_id": "PantallaClasicaEC.ec@SD",
@@ -51215,7 +51228,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5105,
+      "line": 5107,
       "channel_name": "Paramount Network",
       "tvg_id": "ParamountNetwork.us@East",
       "channel_id": "ParamountNetwork.us@East",
@@ -51228,7 +51241,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5107,
+      "line": 5109,
       "channel_name": "Pashto 1",
       "tvg_id": "Pashto1.pk@SD",
       "channel_id": "Pashto1.pk@SD",
@@ -51241,7 +51254,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5109,
+      "line": 5111,
       "channel_name": "PBS Arts",
       "tvg_id": "PBSArts.us",
       "channel_id": "PBSArts.us",
@@ -51254,7 +51267,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5111,
+      "line": 5113,
       "channel_name": "PBS Kids",
       "tvg_id": "PBSKids.us@SD",
       "channel_id": "PBSKids.us@SD",
@@ -51267,7 +51280,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5113,
+      "line": 5115,
       "channel_name": "Peace TV",
       "tvg_id": "custom.peace-tv-tw8cm",
       "channel_id": "custom.peace-tv-tw8cm",
@@ -51280,23 +51293,10 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5115,
-      "channel_name": "Peace TV Bangla",
-      "tvg_id": "PeaceTVBangla.ae",
-      "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-bangla.png",
-      "status": "needs_review",
-      "registry_match": "exact-key",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
       "line": 5117,
       "channel_name": "Peace TV Bangla",
       "tvg_id": "PeaceTVBangla.ae",
-      "channel_id": "PeaceTVBangla.ae",
+      "channel_id": "",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-bangla.png",
       "status": "needs_review",
       "registry_match": "exact-key",
@@ -51320,6 +51320,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5121,
+      "channel_name": "Peace TV Bangla",
+      "tvg_id": "PeaceTVBangla.ae",
+      "channel_id": "PeaceTVBangla.ae",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-bangla.png",
+      "status": "needs_review",
+      "registry_match": "exact-key",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5123,
       "channel_name": "Peques TV",
       "tvg_id": "PequesTV.pe@SD",
       "channel_id": "",
@@ -51332,7 +51345,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5123,
+      "line": 5125,
       "channel_name": "Persiana Docs",
       "tvg_id": "PersianaDocs.fr@HD",
       "channel_id": "",
@@ -51345,7 +51358,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5125,
+      "line": 5127,
       "channel_name": "Persiana Family",
       "tvg_id": "custom.persiana-family-ir-movie",
       "channel_id": "custom.persiana-family-ir-movie",
@@ -51358,7 +51371,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5127,
+      "line": 5129,
       "channel_name": "Persiana Fight",
       "tvg_id": "PersianaFight.fr@HD",
       "channel_id": "",
@@ -51371,7 +51384,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5129,
+      "line": 5131,
       "channel_name": "Persiana Iranian",
       "tvg_id": "custom.persiana-iranian-ir-movie",
       "channel_id": "custom.persiana-iranian-ir-movie",
@@ -51384,7 +51397,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5131,
+      "line": 5133,
       "channel_name": "Persiana Korea",
       "tvg_id": "custom.persiana-korea-ir-movie",
       "channel_id": "custom.persiana-korea-ir-movie",
@@ -51397,7 +51410,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5133,
+      "line": 5135,
       "channel_name": "Persiana Latino",
       "tvg_id": "PersianaLatino.fr@SD",
       "channel_id": "PersianaLatino.fr@SD",
@@ -51410,7 +51423,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5135,
+      "line": 5137,
       "channel_name": "Persiana Plus",
       "tvg_id": "custom.persiana-plus-ir-movie",
       "channel_id": "custom.persiana-plus-ir-movie",
@@ -51423,7 +51436,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5137,
+      "line": 5139,
       "channel_name": "Persiana Travel",
       "tvg_id": "PersianaTravel.fr@SD",
       "channel_id": "",
@@ -51436,7 +51449,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5139,
+      "line": 5141,
       "channel_name": "PFL",
       "tvg_id": "fight.pfl.com",
       "channel_id": "fight.pfl.com",
@@ -51449,7 +51462,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5141,
+      "line": 5143,
       "channel_name": "PGA Tour",
       "tvg_id": "PGATour.us@SD",
       "channel_id": "",
@@ -51462,7 +51475,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5143,
+      "line": 5145,
       "channel_name": "Pink Erotic 2",
       "tvg_id": "custom.pink-erotic-2",
       "channel_id": "custom.pink-erotic-2",
@@ -51475,7 +51488,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5145,
+      "line": 5147,
       "channel_name": "Pink Erotic 3",
       "tvg_id": "custom.pink-erotic-3",
       "channel_id": "custom.pink-erotic-3",
@@ -51488,7 +51501,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5147,
+      "line": 5149,
       "channel_name": "Pink Erotic 5",
       "tvg_id": "custom.pink-erotic-5",
       "channel_id": "custom.pink-erotic-5",
@@ -51501,7 +51514,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5149,
+      "line": 5151,
       "channel_name": "Pink Erotic 7",
       "tvg_id": "custom.pink-erotic-7",
       "channel_id": "custom.pink-erotic-7",
@@ -51514,7 +51527,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5151,
+      "line": 5153,
       "channel_name": "Pink Erotic 8",
       "tvg_id": "custom.pink-erotic-8",
       "channel_id": "custom.pink-erotic-8",
@@ -51527,7 +51540,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5153,
+      "line": 5155,
       "channel_name": "Pixel TV",
       "tvg_id": "PixelTV.ua@SD",
       "channel_id": "",
@@ -51540,7 +51553,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5155,
+      "line": 5157,
       "channel_name": "PK Sports",
       "tvg_id": "PKSports.pk@SD",
       "channel_id": "",
@@ -51553,7 +51566,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5157,
+      "line": 5159,
       "channel_name": "Play Entertainment",
       "tvg_id": "PlayEntertainment.pk@SD",
       "channel_id": "PlayEntertainment.pk@SD",
@@ -51566,7 +51579,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5159,
+      "line": 5161,
       "channel_name": "Plim Plim",
       "tvg_id": "PlimPlim.ar@SD",
       "channel_id": "",
@@ -51579,7 +51592,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5161,
+      "line": 5163,
       "channel_name": "Pogo",
       "tvg_id": "Pogo.in@SD",
       "channel_id": "Pogo.in@SD",
@@ -51592,7 +51605,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5163,
+      "line": 5165,
       "channel_name": "Polsat JimJam",
       "tvg_id": "PolsatJimJam.pl@SD",
       "channel_id": "",
@@ -51605,7 +51618,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5165,
+      "line": 5167,
       "channel_name": "Polsat Viasat Explore",
       "tvg_id": "PolsatViasatExplore.pl@SD",
       "channel_id": "",
@@ -51618,7 +51631,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5167,
+      "line": 5169,
       "channel_name": "Polsat Viasat History",
       "tvg_id": "PolsatViasatHistory.pl@SD",
       "channel_id": "",
@@ -51631,7 +51644,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5169,
+      "line": 5171,
       "channel_name": "Polsat Viasat Nature",
       "tvg_id": "PolsatViasatNature.pl@SD",
       "channel_id": "",
@@ -51644,7 +51657,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5171,
+      "line": 5173,
       "channel_name": "Pooya TV",
       "tvg_id": "PooyaTV.ir@SD",
       "channel_id": "",
@@ -51657,7 +51670,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5173,
+      "line": 5175,
       "channel_name": "Pop",
       "tvg_id": "Pop.uk",
       "channel_id": "Pop.uk",
@@ -51670,7 +51683,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5175,
+      "line": 5177,
       "channel_name": "Popular Science",
       "tvg_id": "PopularScience.us",
       "channel_id": "PopularScience.us",
@@ -51683,7 +51696,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5177,
+      "line": 5179,
       "channel_name": "Powerkids Kartoon Channel",
       "tvg_id": "PowerkidsKartoonChannel.us",
       "channel_id": "PowerkidsKartoonChannel.us",
@@ -51696,7 +51709,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5179,
+      "line": 5181,
       "channel_name": "PowerNation TV",
       "tvg_id": "PowerNationTV.us@SD",
       "channel_id": "PowerNationTV.us@SD",
@@ -51709,7 +51722,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5181,
+      "line": 5183,
       "channel_name": "Prima Sport Czechia",
       "tvg_id": "PrimaSportCzechia.cz@SD",
       "channel_id": "",
@@ -51722,7 +51735,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5183,
+      "line": 5185,
       "channel_name": "Prime (Syria)",
       "tvg_id": "Prime.sy@HD",
       "channel_id": "",
@@ -51735,7 +51748,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5185,
+      "line": 5187,
       "channel_name": "PTV Sports",
       "tvg_id": "PTVSports.pk",
       "channel_id": "PTVSports.pk",
@@ -51748,7 +51761,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5187,
+      "line": 5189,
       "channel_name": "PTV Sports",
       "tvg_id": "PTVSports.pk@SD",
       "channel_id": "",
@@ -51761,24 +51774,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5189,
+      "line": 5191,
       "channel_name": "Punjabi TV",
       "tvg_id": "PunjabiTV.in@SD",
       "channel_id": "",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/punjabi-tv-9b4d7425b3.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5191,
-      "channel_name": "Q TV",
-      "tvg_id": "QTV.in@SD",
-      "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -51801,6 +51801,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5195,
+      "channel_name": "Q TV",
+      "tvg_id": "QTV.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5197,
       "channel_name": "Qmusic",
       "tvg_id": "Qmusic.nl@SD",
       "channel_id": "Qmusic.nl@SD",
@@ -51813,7 +51826,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5197,
+      "line": 5199,
       "channel_name": "QTV-3",
       "tvg_id": "QTV3.cn@SD",
       "channel_id": "QTV3.cn@SD",
@@ -51826,7 +51839,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5199,
+      "line": 5201,
       "channel_name": "Quran",
       "tvg_id": "custom.quran",
       "channel_id": "custom.quran",
@@ -51839,7 +51852,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5201,
+      "line": 5203,
       "channel_name": "Quran",
       "tvg_id": "custom.quran-brqze",
       "channel_id": "custom.quran-brqze",
@@ -51852,24 +51865,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5203,
+      "line": 5205,
       "channel_name": "Quran",
       "tvg_id": "custom.quran-w3y9b",
       "channel_id": "custom.quran-w3y9b",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5205,
-      "channel_name": "Quran TV",
-      "tvg_id": "QuranTV.iq",
-      "channel_id": "QuranTV.iq",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -51892,6 +51892,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5209,
+      "channel_name": "Quran TV",
+      "tvg_id": "QuranTV.iq",
+      "channel_id": "QuranTV.iq",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5211,
       "channel_name": "RACER International",
       "tvg_id": "RACERInternational.pl@FAST",
       "channel_id": "",
@@ -51904,7 +51917,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5211,
+      "line": 5213,
       "channel_name": "Racer Select",
       "tvg_id": "RacerSelect.us@SD",
       "channel_id": "",
@@ -51917,7 +51930,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5213,
+      "line": 5215,
       "channel_name": "RACING | Hagerty",
       "tvg_id": "racing.hagerty.com",
       "channel_id": "racing.hagerty.com",
@@ -51930,7 +51943,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5215,
+      "line": 5217,
       "channel_name": "Raftaar Media",
       "tvg_id": "RaftaarMedia.in@SD",
       "channel_id": "",
@@ -51943,7 +51956,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5217,
+      "line": 5219,
       "channel_name": "Raj Digital Plus",
       "tvg_id": "RajDigitalPlus.in@SD",
       "channel_id": "",
@@ -51956,7 +51969,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5219,
+      "line": 5221,
       "channel_name": "Raj TV",
       "tvg_id": "RajTV.in@SD",
       "channel_id": "RajTV.in@SD",
@@ -51969,7 +51982,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5221,
+      "line": 5223,
       "channel_name": "Raj TV",
       "tvg_id": "RajTV.in@SD",
       "channel_id": "",
@@ -51982,7 +51995,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5223,
+      "line": 5225,
       "channel_name": "Rakuten TV Action Movies Austria",
       "tvg_id": "RakutenTVActionMovies.es@Austria",
       "channel_id": "RakutenTVActionMovies.es@Austria",
@@ -51995,7 +52008,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5225,
+      "line": 5227,
       "channel_name": "Rakuten TV Comedy Movies Austria",
       "tvg_id": "RakutenTVComedyMovies.es@Austria",
       "channel_id": "RakutenTVComedyMovies.es@Austria",
@@ -52008,7 +52021,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5227,
+      "line": 5229,
       "channel_name": "Rakuten TV Drama Movies Austria",
       "tvg_id": "RakutenTVDramaMovies.es@Austria",
       "channel_id": "RakutenTVDramaMovies.es@Austria",
@@ -52021,7 +52034,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5229,
+      "line": 5231,
       "channel_name": "Rakuten TV Family Movies Austria",
       "tvg_id": "RakutenTVFamilyMovies.es@Austria",
       "channel_id": "RakutenTVFamilyMovies.es@Austria",
@@ -52034,7 +52047,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5231,
+      "line": 5233,
       "channel_name": "Rakuten TV Family Movies Switzerland",
       "tvg_id": "RakutenTVFamilyMovies.es@Switzerland",
       "channel_id": "RakutenTVFamilyMovies.es@Switzerland",
@@ -52047,7 +52060,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5233,
+      "line": 5235,
       "channel_name": "Rally TV",
       "tvg_id": "RallyTV.us@SD",
       "channel_id": "",
@@ -52060,7 +52073,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5235,
+      "line": 5237,
       "channel_name": "Rang Rangoli",
       "tvg_id": "RangRangoli.in",
       "channel_id": "RangRangoli.in",
@@ -52073,7 +52086,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5237,
+      "line": 5239,
       "channel_name": "Real Madrid TV",
       "tvg_id": "RealMadridTV.es@SD",
       "channel_id": "",
@@ -52086,7 +52099,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5239,
+      "line": 5241,
       "channel_name": "Real Madrid TV English",
       "tvg_id": "RealMadridTVEnglish.es@SD",
       "channel_id": "",
@@ -52095,19 +52108,6 @@
       "registry_match": "exact-key",
       "source_url": "https://i.imgur.com/5pMo7dL.png",
       "reason": "IPTV-org exact ID: RealMadridTVEnglish.es IPTV-org public logo dataset Source page: https://i.imgur.com/5pMo7dL.png",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5241,
-      "channel_name": "Real Wild",
-      "tvg_id": "RealWild.uk",
-      "channel_id": "RealWild.uk",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/real-wild.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
       "registry_conflict": ""
     },
     {
@@ -52126,6 +52126,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5245,
+      "channel_name": "Real Wild",
+      "tvg_id": "RealWild.uk",
+      "channel_id": "RealWild.uk",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/real-wild.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5247,
       "channel_name": "Realitatea Sportiva",
       "tvg_id": "RealitateaSportiva.ro@SD",
       "channel_id": "",
@@ -52138,7 +52151,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5247,
+      "line": 5249,
       "channel_name": "Red Bull TV",
       "tvg_id": "RedBullTV.at@EUMENA",
       "channel_id": "",
@@ -52151,7 +52164,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5249,
+      "line": 5251,
       "channel_name": "Red Bull TV",
       "tvg_id": "RedBullTV.at@SD",
       "channel_id": "",
@@ -52164,7 +52177,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5251,
+      "line": 5253,
       "channel_name": "Red Bull TV AU",
       "tvg_id": "RedBullTV.at@AU",
       "channel_id": "",
@@ -52177,7 +52190,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5253,
+      "line": 5255,
       "channel_name": "Red Bull TV BR",
       "tvg_id": "RedBullTV.at@BR",
       "channel_id": "",
@@ -52190,7 +52203,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5255,
+      "line": 5257,
       "channel_name": "Red Bull TV DE",
       "tvg_id": "RedBullTV.at@DE",
       "channel_id": "",
@@ -52203,7 +52216,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5257,
+      "line": 5259,
       "channel_name": "Red Bull TV ES",
       "tvg_id": "RedBullTV.at@ES",
       "channel_id": "",
@@ -52216,7 +52229,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5259,
+      "line": 5261,
       "channel_name": "Red Bull TV UK",
       "tvg_id": "RedBullTV.at@UK",
       "channel_id": "",
@@ -52229,7 +52242,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5261,
+      "line": 5263,
       "channel_name": "Red Bull TV US",
       "tvg_id": "RedBullTV.at@US",
       "channel_id": "",
@@ -52242,7 +52255,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5263,
+      "line": 5265,
       "channel_name": "Reino Infantil",
       "tvg_id": "ReinoInfantil.mz@SD",
       "channel_id": "",
@@ -52255,7 +52268,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5265,
+      "line": 5267,
       "channel_name": "Retro Cartoon",
       "tvg_id": "RetroCartoon.br@SD",
       "channel_id": "",
@@ -52268,7 +52281,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5267,
+      "line": 5269,
       "channel_name": "RetroCrush",
       "tvg_id": "RetroCrush.us",
       "channel_id": "RetroCrush.us",
@@ -52281,7 +52294,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5269,
+      "line": 5271,
       "channel_name": "RiC",
       "tvg_id": "RiC.de@SD",
       "channel_id": "",
@@ -52294,7 +52307,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5271,
+      "line": 5273,
       "channel_name": "Right Now TV",
       "tvg_id": "RightNowTV.us@SD",
       "channel_id": "",
@@ -52307,7 +52320,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5273,
+      "line": 5275,
       "channel_name": "Robot Wars by Mech+",
       "tvg_id": "RobotWarsByMech.us",
       "channel_id": "RobotWarsByMech.us",
@@ -52320,7 +52333,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5275,
+      "line": 5277,
       "channel_name": "Rotana Cinema Egypt [ ]",
       "tvg_id": "RotanaCinemaEgypt.eg@SD",
       "channel_id": "RotanaCinemaEgypt.eg@SD",
@@ -52333,7 +52346,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5277,
+      "line": 5279,
       "channel_name": "Rotana Cinema KSA [ ]",
       "tvg_id": "RotanaCinemaKSA.sa@SD",
       "channel_id": "RotanaCinemaKSA.sa@SD",
@@ -52346,7 +52359,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5279,
+      "line": 5281,
       "channel_name": "RT Documentary",
       "tvg_id": "RTDocumentary.ru",
       "channel_id": "RTDocumentary.ru",
@@ -52359,7 +52372,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5281,
+      "line": 5283,
       "channel_name": "RT Documentary",
       "tvg_id": "RTDocumentary.ru@English",
       "channel_id": "",
@@ -52372,7 +52385,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5283,
+      "line": 5285,
       "channel_name": "RT Documentary Russian",
       "tvg_id": "RTDocumentary.ru@Russian",
       "channel_id": "",
@@ -52385,7 +52398,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5285,
+      "line": 5287,
       "channel_name": "RTV (Bangladesh)",
       "tvg_id": "RTV.bd@SD",
       "channel_id": "RTV.bd@SD",
@@ -52398,7 +52411,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5287,
+      "line": 5289,
       "channel_name": "Rupashi Bangla TV",
       "tvg_id": "RupashiBanglaTV.bd@SD",
       "channel_id": "",
@@ -52411,7 +52424,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5289,
+      "line": 5291,
       "channel_name": "Russian Extreme Ultra",
       "tvg_id": "RussianExtremeUltra.ru@SD",
       "channel_id": "",
@@ -52424,7 +52437,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5291,
+      "line": 5293,
       "channel_name": "Russkiy Illusion",
       "tvg_id": "RusskiyIllusion.ru@SD",
       "channel_id": "RusskiyIllusion.ru@SD",
@@ -52437,7 +52450,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5293,
+      "line": 5295,
       "channel_name": "Russkiy roman",
       "tvg_id": "custom.russkiy-roman-ru-movie",
       "channel_id": "custom.russkiy-roman-ru-movie",
@@ -52450,7 +52463,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5295,
+      "line": 5297,
       "channel_name": "Ryan and Friends",
       "tvg_id": "RyanandFriends.us@SD",
       "channel_id": "",
@@ -52463,7 +52476,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5297,
+      "line": 5299,
       "channel_name": "Ryzhiy",
       "tvg_id": "Ryzhiy.ru@SD",
       "channel_id": "",
@@ -52476,7 +52489,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5299,
+      "line": 5301,
       "channel_name": "SAB TV",
       "tvg_id": "SABTV.pk@SD",
       "channel_id": "SABTV.pk@SD",
@@ -52489,7 +52502,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5301,
+      "line": 5303,
       "channel_name": "Sai TV",
       "tvg_id": "SaiTV.in@SD",
       "channel_id": "",
@@ -52502,7 +52515,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5303,
+      "line": 5305,
       "channel_name": "Salsa Gorda Television",
       "tvg_id": "SalsaGordaTelevision.co@SD",
       "channel_id": "",
@@ -52515,7 +52528,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5305,
+      "line": 5307,
       "channel_name": "Salsa Gorda Television",
       "tvg_id": "SalsaGordaTelevision.co@SD",
       "channel_id": "SalsaGordaTelevision.co@SD",
@@ -52528,7 +52541,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5307,
+      "line": 5309,
       "channel_name": "Sansad TV 1",
       "tvg_id": "SansadTV1.in@HD",
       "channel_id": "",
@@ -52541,7 +52554,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5309,
+      "line": 5311,
       "channel_name": "Sansad TV 2",
       "tvg_id": "SansadTV2.in@SD",
       "channel_id": "",
@@ -52554,7 +52567,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5311,
+      "line": 5313,
       "channel_name": "Sansad TV 2",
       "tvg_id": "SansadTV2.in@HD",
       "channel_id": "",
@@ -52567,7 +52580,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5313,
+      "line": 5315,
       "channel_name": "Santvani Channel",
       "tvg_id": "SantvaniChannel.in@SD",
       "channel_id": "",
@@ -52580,7 +52593,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5315,
+      "line": 5317,
       "channel_name": "Sarv Dharm Sangam",
       "tvg_id": "SarvDharmSangam.in@SD",
       "channel_id": "",
@@ -52593,7 +52606,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5317,
+      "line": 5319,
       "channel_name": "SATV",
       "tvg_id": "custom.bdix.satv",
       "channel_id": "",
@@ -52606,7 +52619,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5319,
+      "line": 5321,
       "channel_name": "Saudi Quran",
       "tvg_id": "custom.saudi-quran-y9quu",
       "channel_id": "custom.saudi-quran-y9quu",
@@ -52619,7 +52632,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5321,
+      "line": 5323,
       "channel_name": "Setanta Sports 1 Eurasia",
       "tvg_id": "custom.setantasports1eurasia",
       "channel_id": "custom.setantasports1eurasia",
@@ -52632,7 +52645,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5323,
+      "line": 5325,
       "channel_name": "Setanta Sports 2 Eurasia",
       "tvg_id": "SetantaSports2Eurasia.ie@SD",
       "channel_id": "SetantaSports2Eurasia.ie@SD",
@@ -52645,7 +52658,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5325,
+      "line": 5327,
       "channel_name": "Sharnam TV",
       "tvg_id": "SharnamTV.in@SD",
       "channel_id": "",
@@ -52658,7 +52671,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5327,
+      "line": 5329,
       "channel_name": "Shemaroo Filmi Gaane",
       "tvg_id": "ShemarooFilmiGaane.in@HD",
       "channel_id": "ShemarooFilmiGaane.in@HD",
@@ -52671,7 +52684,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5329,
+      "line": 5331,
       "channel_name": "Shikor TV Canada",
       "tvg_id": "custom.shikortvcanada",
       "channel_id": "custom.shikortvcanada",
@@ -52684,7 +52697,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5331,
+      "line": 5333,
       "channel_name": "Shubh TV",
       "tvg_id": "ShubhTV.in@SD",
       "channel_id": "",
@@ -52697,7 +52710,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5333,
+      "line": 5335,
       "channel_name": "Siri Kannada All Time",
       "tvg_id": "SiriKannadaAllTime.in@SD",
       "channel_id": "",
@@ -52710,7 +52723,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5335,
+      "line": 5337,
       "channel_name": "Skwad Play",
       "tvg_id": "SkwadPlay.us@SD",
       "channel_id": "",
@@ -52723,7 +52736,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5337,
+      "line": 5339,
       "channel_name": "Sky Cinema Action",
       "tvg_id": "SkyCinemaAction.it@SD",
       "channel_id": "SkyCinemaAction.it@SD",
@@ -52736,7 +52749,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5339,
+      "line": 5341,
       "channel_name": "Sky Cinema Collection",
       "tvg_id": "SkyCinemaCollection.it@SD",
       "channel_id": "SkyCinemaCollection.it@SD",
@@ -52749,7 +52762,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5341,
+      "line": 5343,
       "channel_name": "Sky Cinema Family",
       "tvg_id": "SkyCinemaFamily.it@SD",
       "channel_id": "SkyCinemaFamily.it@SD",
@@ -52762,7 +52775,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5343,
+      "line": 5345,
       "channel_name": "Sky Cinema Suspense",
       "tvg_id": "SkyCinemaSuspense.it@SD",
       "channel_id": "SkyCinemaSuspense.it@SD",
@@ -52775,7 +52788,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5345,
+      "line": 5347,
       "channel_name": "Sky Cinema Uno",
       "tvg_id": "SkyCinemaUno.it@SD",
       "channel_id": "SkyCinemaUno.it@SD",
@@ -52788,7 +52801,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5347,
+      "line": 5349,
       "channel_name": "Sky Racing 1",
       "tvg_id": "SkyRacing1.au@SD",
       "channel_id": "",
@@ -52801,7 +52814,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5349,
+      "line": 5351,
       "channel_name": "Smithsonian Channel",
       "tvg_id": "smithsonianchannel.us",
       "channel_id": "smithsonianchannel.us",
@@ -52814,7 +52827,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5351,
+      "line": 5353,
       "channel_name": "Smotrim 100% Detskoe",
       "tvg_id": "Smotrim100Detskoe.ru@SD",
       "channel_id": "",
@@ -52827,7 +52840,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5353,
+      "line": 5355,
       "channel_name": "Smotrim 100% Fakty",
       "tvg_id": "Smotrim100Fakty.ru@SD",
       "channel_id": "",
@@ -52840,7 +52853,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5355,
+      "line": 5357,
       "channel_name": "Smurf TV",
       "tvg_id": "SmurfTV.us",
       "channel_id": "SmurfTV.us",
@@ -52853,7 +52866,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5357,
+      "line": 5359,
       "channel_name": "Smurf TV",
       "tvg_id": "SmurfTV.us@SD",
       "channel_id": "",
@@ -52866,7 +52879,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5359,
+      "line": 5361,
       "channel_name": "SN TV",
       "tvg_id": "sn.tv.com",
       "channel_id": "sn.tv.com",
@@ -52879,7 +52892,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5361,
+      "line": 5363,
       "channel_name": "Solo Calcio Italia",
       "tvg_id": "SiSoloCalcio.it",
       "channel_id": "SiSoloCalcio.it",
@@ -52892,7 +52905,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5363,
+      "line": 5365,
       "channel_name": "Sonic",
       "tvg_id": "Sonic.in@SD",
       "channel_id": "Sonic.in@SD",
@@ -52905,24 +52918,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5365,
+      "line": 5367,
       "channel_name": "Sonic The Hedgehog",
       "tvg_id": "custom.sonicthehedgehog",
       "channel_id": "custom.sonicthehedgehog",
       "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5367,
-      "channel_name": "Sony Aath",
-      "tvg_id": "SonyAath.in@SD",
-      "channel_id": "SonyAath.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -52945,6 +52945,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5371,
+      "channel_name": "Sony Aath",
+      "tvg_id": "SonyAath.in@SD",
+      "channel_id": "SonyAath.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5373,
       "channel_name": "SONY AATH kids",
       "tvg_id": "SonyAath.in@SD",
       "channel_id": "",
@@ -52957,24 +52970,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5373,
+      "line": 5375,
       "channel_name": "Sony BBC Earth",
       "tvg_id": "SonyBBCEarth.in@HD",
       "channel_id": "SonyBBCEarth.in@HD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-bbc-earth.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5375,
-      "channel_name": "Sony Entertainment Television",
-      "tvg_id": "SonyEntertainmentTelevision.in@HD",
-      "channel_id": "SonyEntertainmentTelevision.in@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/verified-sony-entertainment-television-fe9e40a5a2.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -52997,12 +52997,12 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5379,
-      "channel_name": "Sony Max",
-      "tvg_id": "SonyMax.in@SD",
-      "channel_id": "SonyMax.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png",
+      "channel_name": "Sony Entertainment Television",
+      "tvg_id": "SonyEntertainmentTelevision.in@HD",
+      "channel_id": "SonyEntertainmentTelevision.in@HD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/verified-sony-entertainment-television-fe9e40a5a2.png",
       "status": "needs_review",
-      "registry_match": "exact-key",
+      "registry_match": "none",
       "source_url": "",
       "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
       "registry_conflict": ""
@@ -53023,6 +53023,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5383,
+      "channel_name": "Sony Max",
+      "tvg_id": "SonyMax.in@SD",
+      "channel_id": "SonyMax.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png",
+      "status": "needs_review",
+      "registry_match": "exact-key",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5385,
       "channel_name": "Sony Movies",
       "tvg_id": "sony.us",
       "channel_id": "sony.us",
@@ -53035,7 +53048,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5385,
+      "line": 5387,
       "channel_name": "Sony Movies (Brazil)",
       "tvg_id": "SonyMovies.br@SD",
       "channel_id": "SonyMovies.br@SD",
@@ -53048,7 +53061,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5387,
+      "line": 5389,
       "channel_name": "Sony Movies Latin America",
       "tvg_id": "SonyMoviesLatinAmerica.us@SD",
       "channel_id": "SonyMoviesLatinAmerica.us@SD",
@@ -53061,7 +53074,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5389,
+      "line": 5391,
       "channel_name": "Sony Pal",
       "tvg_id": "SonyPal.in@SD",
       "channel_id": "SonyPal.in@SD",
@@ -53074,7 +53087,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5391,
+      "line": 5393,
       "channel_name": "Sony Yay!",
       "tvg_id": "SonyYay.in@SD",
       "channel_id": "SonyYay.in@SD",
@@ -53087,7 +53100,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5393,
+      "line": 5395,
       "channel_name": "Sooriyan TV",
       "tvg_id": "SooriyanTV.ca@SD",
       "channel_id": "SooriyanTV.ca@SD",
@@ -53100,7 +53113,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5395,
+      "line": 5397,
       "channel_name": "South Movies",
       "tvg_id": "SouthMovies.in",
       "channel_id": "SouthMovies.in",
@@ -53113,7 +53126,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5397,
+      "line": 5399,
       "channel_name": "Spacetoon Arabic",
       "tvg_id": "SpacetoonArabic.ae@SD",
       "channel_id": "SpacetoonArabic.ae@SD",
@@ -53126,7 +53139,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5399,
+      "line": 5401,
       "channel_name": "Spektrum (Czech Republic)",
       "tvg_id": "Spektrum.cz@SD",
       "channel_id": "",
@@ -53139,7 +53152,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5401,
+      "line": 5403,
       "channel_name": "Spektrum (Hungary)",
       "tvg_id": "Spektrum.hu@SD",
       "channel_id": "",
@@ -53152,7 +53165,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5403,
+      "line": 5405,
       "channel_name": "Spiler 1",
       "tvg_id": "Spiler1.hu@SD",
       "channel_id": "",
@@ -53165,7 +53178,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5405,
+      "line": 5407,
       "channel_name": "Spiler 2",
       "tvg_id": "Spiler2.hu@SD",
       "channel_id": "",
@@ -53178,7 +53191,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5407,
+      "line": 5409,
       "channel_name": "Spondon",
       "tvg_id": "Spondon.in@SD",
       "channel_id": "Spondon.in@SD",
@@ -53191,7 +53204,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5409,
+      "line": 5411,
       "channel_name": "Sport1",
       "tvg_id": "Sport1.cz@SD",
       "channel_id": "",
@@ -53204,7 +53217,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5411,
+      "line": 5413,
       "channel_name": "Sport2",
       "tvg_id": "Sport2.cz@SD",
       "channel_id": "",
@@ -53217,7 +53230,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5413,
+      "line": 5415,
       "channel_name": "Sport5",
       "tvg_id": "custom.sport5",
       "channel_id": "custom.sport5",
@@ -53230,7 +53243,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5415,
+      "line": 5417,
       "channel_name": "Sport 1 (Hungary)",
       "tvg_id": "Sport1.hu@SD",
       "channel_id": "",
@@ -53243,7 +53256,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5417,
+      "line": 5419,
       "channel_name": "Sport 1 (Ukraine)",
       "tvg_id": "Sport1.ua@SD",
       "channel_id": "",
@@ -53256,7 +53269,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5419,
+      "line": 5421,
       "channel_name": "Sport 1 Baltic",
       "tvg_id": "Sport1Baltic.ua@SD",
       "channel_id": "",
@@ -53269,7 +53282,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5421,
+      "line": 5423,
       "channel_name": "Sport 2 (Hungary)",
       "tvg_id": "Sport2.hu@SD",
       "channel_id": "",
@@ -53282,7 +53295,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5423,
+      "line": 5425,
       "channel_name": "Sport 2 (Ukraine)",
       "tvg_id": "custom.sport2ukraine",
       "channel_id": "custom.sport2ukraine",
@@ -53295,7 +53308,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5425,
+      "line": 5427,
       "channel_name": "Sport 3",
       "tvg_id": "Sport3.ua@SD",
       "channel_id": "",
@@ -53308,7 +53321,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5427,
+      "line": 5429,
       "channel_name": "Sport 4",
       "tvg_id": "custom.sport4",
       "channel_id": "custom.sport4",
@@ -53321,7 +53334,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5429,
+      "line": 5431,
       "channel_name": "Sport (Slovakia)",
       "tvg_id": "Sport.sk@SD",
       "channel_id": "",
@@ -53334,7 +53347,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5431,
+      "line": 5433,
       "channel_name": "Sport TV",
       "tvg_id": "SportTV.by@SD",
       "channel_id": "",
@@ -53347,7 +53360,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5433,
+      "line": 5435,
       "channel_name": "Sportivnyy",
       "tvg_id": "Sportivnyy.ru@SD",
       "channel_id": "",
@@ -53360,7 +53373,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5435,
+      "line": 5437,
       "channel_name": "Sports First TV",
       "tvg_id": "SportsFirstTV.us",
       "channel_id": "SportsFirstTV.us",
@@ -53373,7 +53386,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5437,
+      "line": 5439,
       "channel_name": "Sports Fishing TV",
       "tvg_id": "SportsFishingTV.us",
       "channel_id": "SportsFishingTV.us",
@@ -53386,7 +53399,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5439,
+      "line": 5441,
       "channel_name": "Sports Grid",
       "tvg_id": "custom.sportsgrid",
       "channel_id": "custom.sportsgrid",
@@ -53399,7 +53412,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5441,
+      "line": 5443,
       "channel_name": "Sports Television",
       "tvg_id": "SportsTelevision.kp@HD",
       "channel_id": "",
@@ -53412,7 +53425,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5443,
+      "line": 5445,
       "channel_name": "SportsGrid",
       "tvg_id": "SportsGrid.us@SD",
       "channel_id": "",
@@ -53425,7 +53438,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5445,
+      "line": 5447,
       "channel_name": "Sqala TV",
       "tvg_id": "SqalaTV.pe@SD",
       "channel_id": "",
@@ -53438,7 +53451,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5447,
+      "line": 5449,
       "channel_name": "Star Bharat",
       "tvg_id": "StarBharat.in",
       "channel_id": "StarBharat.in",
@@ -53451,7 +53464,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5449,
+      "line": 5451,
       "channel_name": "Star Gold",
       "tvg_id": "StarGold.in@HD",
       "channel_id": "StarGold.in@HD",
@@ -53464,7 +53477,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5451,
+      "line": 5453,
       "channel_name": "Star Gold 2",
       "tvg_id": "StarGold2.in@SD",
       "channel_id": "StarGold2.in@SD",
@@ -53477,7 +53490,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5453,
+      "line": 5455,
       "channel_name": "Star Gold Romance",
       "tvg_id": "StarGoldRomance.in@SD",
       "channel_id": "StarGoldRomance.in@SD",
@@ -53490,24 +53503,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5455,
+      "line": 5457,
       "channel_name": "Star Gold Select",
       "tvg_id": "StarGoldSelect.in@HD",
       "channel_id": "StarGoldSelect.in@HD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select-fa81030f74.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5457,
-      "channel_name": "Star Jalsha",
-      "tvg_id": "Star.Jalsha.in",
-      "channel_id": "Star.Jalsha.in",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -53530,6 +53530,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5461,
+      "channel_name": "Star Jalsha",
+      "tvg_id": "Star.Jalsha.in",
+      "channel_id": "Star.Jalsha.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5463,
       "channel_name": "Star Kiran",
       "tvg_id": "StarKiran.in@SD",
       "channel_id": "StarKiran.in@SD",
@@ -53542,7 +53555,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5463,
+      "line": 5465,
       "channel_name": "Star Movies",
       "tvg_id": "StarMovies.in",
       "channel_id": "StarMovies.in",
@@ -53555,7 +53568,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5465,
+      "line": 5467,
       "channel_name": "Star Movies (India)",
       "tvg_id": "StarMovies.in@HD",
       "channel_id": "StarMovies.in@HD",
@@ -53568,7 +53581,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5467,
+      "line": 5469,
       "channel_name": "Star Movies (Portugal)",
       "tvg_id": "StarMovies.pt@SD",
       "channel_id": "StarMovies.pt@SD",
@@ -53581,7 +53594,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5469,
+      "line": 5471,
       "channel_name": "Star Movies (Slovenia)",
       "tvg_id": "StarMovies.si@SD",
       "channel_id": "StarMovies.si@SD",
@@ -53594,7 +53607,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5471,
+      "line": 5473,
       "channel_name": "Star Movies Select",
       "tvg_id": "StarMoviesSelect.in@HD",
       "channel_id": "StarMoviesSelect.in@HD",
@@ -53607,7 +53620,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5473,
+      "line": 5475,
       "channel_name": "Star News",
       "tvg_id": "StarNews.bd",
       "channel_id": "StarNews.bd",
@@ -53620,24 +53633,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5475,
+      "line": 5477,
       "channel_name": "Star Sports 2",
       "tvg_id": "StarSports2.in",
       "channel_id": "StarSports2.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5477,
-      "channel_name": "Star Sports Select 1",
-      "tvg_id": "StarSportsSelect1.in@SD",
-      "channel_id": "StarSportsSelect1.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-1.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -53660,6 +53660,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5481,
+      "channel_name": "Star Sports Select 1",
+      "tvg_id": "StarSportsSelect1.in@SD",
+      "channel_id": "StarSportsSelect1.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-1.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5483,
       "channel_name": "Star Tamil Television",
       "tvg_id": "StarTamilTelevision.lk@SD",
       "channel_id": "StarTamilTelevision.lk@SD",
@@ -53672,7 +53685,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5483,
+      "line": 5485,
       "channel_name": "StarPlus (India)",
       "tvg_id": "StarPlus.in@HD",
       "channel_id": "StarPlus.in@HD",
@@ -53685,7 +53698,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5485,
+      "line": 5487,
       "channel_name": "Starz Kids & Family",
       "tvg_id": "StarzKidsFamily.us@East",
       "channel_id": "",
@@ -53698,7 +53711,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5487,
+      "line": 5489,
       "channel_name": "Steelbird Music",
       "tvg_id": "SteelbirdMusic.in@SD",
       "channel_id": "",
@@ -53711,7 +53724,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5489,
+      "line": 5491,
       "channel_name": "Strawberry Shortcake",
       "tvg_id": "StrawberryShortcake.us",
       "channel_id": "StrawberryShortcake.us",
@@ -53724,7 +53737,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5491,
+      "line": 5493,
       "channel_name": "Strongman",
       "tvg_id": "Strongman.us@Germany",
       "channel_id": "",
@@ -53737,7 +53750,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5493,
+      "line": 5495,
       "channel_name": "Strongman Champions League",
       "tvg_id": "StrongmanChampionsLeague.uk@SD",
       "channel_id": "",
@@ -53750,7 +53763,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5495,
+      "line": 5497,
       "channel_name": "Strongman UK",
       "tvg_id": "Strongman.us@UK",
       "channel_id": "",
@@ -53763,7 +53776,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5497,
+      "line": 5499,
       "channel_name": "Subin TV",
       "tvg_id": "SubinTV.in@SD",
       "channel_id": "",
@@ -53776,7 +53789,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5499,
+      "line": 5501,
       "channel_name": "Sun Bangla",
       "tvg_id": "SunBangla.in",
       "channel_id": "SunBangla.in",
@@ -53789,7 +53802,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5501,
+      "line": 5503,
       "channel_name": "Sun TV",
       "tvg_id": "SunTV.in@HD",
       "channel_id": "",
@@ -53802,7 +53815,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5503,
+      "line": 5505,
       "channel_name": "Sunna TV",
       "tvg_id": "SunnaTV.ng@SD",
       "channel_id": "",
@@ -53815,7 +53828,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5505,
+      "line": 5507,
       "channel_name": "Sunnah TV",
       "tvg_id": "custom.sunnah-tv",
       "channel_id": "custom.sunnah-tv",
@@ -53828,7 +53841,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5507,
+      "line": 5509,
       "channel_name": "Super Simple Songs",
       "tvg_id": "SuperSimpleSongs.us@SD",
       "channel_id": "",
@@ -53841,7 +53854,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5509,
+      "line": 5511,
       "channel_name": "Super!",
       "tvg_id": "Super.it@SD",
       "channel_id": "",
@@ -53854,7 +53867,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5511,
+      "line": 5513,
       "channel_name": "Survivor",
       "tvg_id": "Survivor.us",
       "channel_id": "Survivor.us",
@@ -53867,7 +53880,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5513,
+      "line": 5515,
       "channel_name": "Suspilne. Sport",
       "tvg_id": "SuspilneSport.ua@SD",
       "channel_id": "",
@@ -53880,7 +53893,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5515,
+      "line": 5517,
       "channel_name": "Swerve Combat",
       "tvg_id": "SwerveCombat.us@SD",
       "channel_id": "",
@@ -53893,7 +53906,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5517,
+      "line": 5519,
       "channel_name": "Swerve Sports",
       "tvg_id": "SwerveSports.us@SD",
       "channel_id": "",
@@ -53906,7 +53919,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5519,
+      "line": 5521,
       "channel_name": "T Sports 7",
       "tvg_id": "TSports7.th@SD",
       "channel_id": "",
@@ -53919,7 +53932,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5521,
+      "line": 5523,
       "channel_name": "Taaza TV",
       "tvg_id": "TaazaTV.in@SD",
       "channel_id": "",
@@ -53932,7 +53945,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5523,
+      "line": 5525,
       "channel_name": "Takbeer TV",
       "tvg_id": "TakbeerTV.uk@SD",
       "channel_id": "",
@@ -53945,7 +53958,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5525,
+      "line": 5527,
       "channel_name": "talkSPORT",
       "tvg_id": "talkSPORT.uk@SD",
       "channel_id": "",
@@ -53958,7 +53971,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5527,
+      "line": 5529,
       "channel_name": "Tamilan TV",
       "tvg_id": "TamilanTV.in@SD",
       "channel_id": "",
@@ -53971,7 +53984,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5529,
+      "line": 5531,
       "channel_name": "Tamyr",
       "tvg_id": "Tamyr.ru@SD",
       "channel_id": "",
@@ -53984,7 +53997,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5531,
+      "line": 5533,
       "channel_name": "TBN24",
       "tvg_id": "TBN24.us",
       "channel_id": "TBN24.us",
@@ -53997,7 +54010,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5533,
+      "line": 5535,
       "channel_name": "Teen Nick",
       "tvg_id": "TeenNick.us@SD",
       "channel_id": "TeenNick.us@SD",
@@ -54010,7 +54023,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5535,
+      "line": 5537,
       "channel_name": "Tehzeeb TV",
       "tvg_id": "TehzeebTV.in@SD",
       "channel_id": "",
@@ -54023,7 +54036,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5537,
+      "line": 5539,
       "channel_name": "Teletoon+",
       "tvg_id": "TeletoonPlus.pl@HD",
       "channel_id": "",
@@ -54036,7 +54049,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5539,
+      "line": 5541,
       "channel_name": "Teletubbies",
       "tvg_id": "Teletubbies.uk@SD",
       "channel_id": "",
@@ -54049,7 +54062,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5541,
+      "line": 5543,
       "channel_name": "Teletubbies",
       "tvg_id": "Teletubbies.uk",
       "channel_id": "Teletubbies.uk",
@@ -54062,7 +54075,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5543,
+      "line": 5545,
       "channel_name": "Tennis Channel",
       "tvg_id": "TennisChannel.us@SD",
       "channel_id": "",
@@ -54075,7 +54088,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5545,
+      "line": 5547,
       "channel_name": "Tennis Channel 2",
       "tvg_id": "TennisChannel2.us@SD",
       "channel_id": "",
@@ -54088,7 +54101,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5547,
+      "line": 5549,
       "channel_name": "Tennis+",
       "tvg_id": "tennis.com",
       "channel_id": "tennis.com",
@@ -54101,7 +54114,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5549,
+      "line": 5551,
       "channel_name": "Terra Mater WILD",
       "tvg_id": "TerraMaterWILD.de@German",
       "channel_id": "",
@@ -54114,7 +54127,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5551,
+      "line": 5553,
       "channel_name": "TF1 Series Films",
       "tvg_id": "TF1SeriesFilms.fr@SD",
       "channel_id": "",
@@ -54127,7 +54140,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5553,
+      "line": 5555,
       "channel_name": "TG Junior",
       "tvg_id": "TGJunior.us@SD",
       "channel_id": "",
@@ -54140,7 +54153,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5555,
+      "line": 5557,
       "channel_name": "Thanthi One",
       "tvg_id": "ThanthiOne.in@SD",
       "channel_id": "ThanthiOne.in@SD",
@@ -54153,7 +54166,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5557,
+      "line": 5559,
       "channel_name": "The Nest",
       "tvg_id": "TheNest.us@SD",
       "channel_id": "",
@@ -54166,7 +54179,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5559,
+      "line": 5561,
       "channel_name": "The Pet Collective India",
       "tvg_id": "ThePetCollective.us@India",
       "channel_id": "ThePetCollective.us@India",
@@ -54179,7 +54192,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5561,
+      "line": 5563,
       "channel_name": "Thrill",
       "tvg_id": "Thrill.hk@SD",
       "channel_id": "Thrill.hk@SD",
@@ -54192,7 +54205,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5563,
+      "line": 5565,
       "channel_name": "Tigo Sports (Paraguay)",
       "tvg_id": "TigoSports.py@SD",
       "channel_id": "",
@@ -54205,7 +54218,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5565,
+      "line": 5567,
       "channel_name": "Tiguerito TV",
       "tvg_id": "TigueritoTV.do@HD",
       "channel_id": "",
@@ -54218,7 +54231,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5567,
+      "line": 5569,
       "channel_name": "TiJi",
       "tvg_id": "TiJi.ru@SD",
       "channel_id": "",
@@ -54231,7 +54244,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5569,
+      "line": 5571,
       "channel_name": "Time Television",
       "tvg_id": "TimeTelevision.us",
       "channel_id": "TimeTelevision.us",
@@ -54244,7 +54257,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5571,
+      "line": 5573,
       "channel_name": "Tiny Pop",
       "tvg_id": "TinyPop.uk",
       "channel_id": "TinyPop.uk",
@@ -54257,7 +54270,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5573,
+      "line": 5575,
       "channel_name": "TJK TV",
       "tvg_id": "TJKTV.tr@SD",
       "channel_id": "",
@@ -54270,7 +54283,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5575,
+      "line": 5577,
       "channel_name": "TNT Sports 1",
       "tvg_id": "TNTSports1.uk@SD",
       "channel_id": "TNTSports1.uk@SD",
@@ -54283,7 +54296,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5577,
+      "line": 5579,
       "channel_name": "Tochka.rf",
       "tvg_id": "Tochkarf.ru",
       "channel_id": "Tochkarf.ru",
@@ -54296,7 +54309,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5579,
+      "line": 5581,
       "channel_name": "Tom And Jerry",
       "tvg_id": "TomAndJerry.do@HD",
       "channel_id": "",
@@ -54309,7 +54322,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5581,
+      "line": 5583,
       "channel_name": "Tom and Jerry",
       "tvg_id": "TomAndJerry.do",
       "channel_id": "TomAndJerry.do",
@@ -54322,7 +54335,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5583,
+      "line": 5585,
       "channel_name": "Tooku",
       "tvg_id": "Tooku.ru",
       "channel_id": "Tooku.ru",
@@ -54335,7 +54348,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5585,
+      "line": 5587,
       "channel_name": "Toonami Aftermath",
       "tvg_id": "ToonamiAftermath.us@East",
       "channel_id": "",
@@ -54348,7 +54361,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5587,
+      "line": 5589,
       "channel_name": "Toonami Aftermath West",
       "tvg_id": "ToonamiAftermath.us@West",
       "channel_id": "ToonamiAftermath.us@West",
@@ -54361,7 +54374,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5589,
+      "line": 5591,
       "channel_name": "Tooncast SouthAmerica",
       "tvg_id": "Tooncast.us@SouthAmerica",
       "channel_id": "",
@@ -54374,7 +54387,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5591,
+      "line": 5593,
       "channel_name": "ToonGoggles",
       "tvg_id": "ToonGoggles.us@SD",
       "channel_id": "",
@@ -54387,7 +54400,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5593,
+      "line": 5595,
       "channel_name": "ToonGoggles",
       "tvg_id": "ToonGoggles.us",
       "channel_id": "ToonGoggles.us",
@@ -54400,7 +54413,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5595,
+      "line": 5597,
       "channel_name": "Total Crime",
       "tvg_id": "TotalCrime.ca@CA",
       "channel_id": "",
@@ -54413,7 +54426,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5597,
+      "line": 5599,
       "channel_name": "Total TV Haryana",
       "tvg_id": "TotalTVHaryana.in@SD",
       "channel_id": "",
@@ -54426,7 +54439,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5599,
+      "line": 5601,
       "channel_name": "TR Sport",
       "tvg_id": "TRSport.it@SD",
       "channel_id": "",
@@ -54439,7 +54452,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5601,
+      "line": 5603,
       "channel_name": "Trace Gospel",
       "tvg_id": "custom.trace-gospel-fr-music",
       "channel_id": "custom.trace-gospel-fr-music",
@@ -54452,7 +54465,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5603,
+      "line": 5605,
       "channel_name": "Trace Gospel Nigeria and East Africa",
       "tvg_id": "custom.trace-gospel-nigeria-and-east-africa-fr-music",
       "channel_id": "custom.trace-gospel-nigeria-and-east-africa-fr-music",
@@ -54465,7 +54478,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5605,
+      "line": 5607,
       "channel_name": "Trace Gospel Southern Africa",
       "tvg_id": "custom.trace-gospel-southern-africa-fr-music",
       "channel_id": "custom.trace-gospel-southern-africa-fr-music",
@@ -54478,7 +54491,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5607,
+      "line": 5609,
       "channel_name": "Trace Sport Stars",
       "tvg_id": "TraceSportStars.fr@SD",
       "channel_id": "",
@@ -54491,7 +54504,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5609,
+      "line": 5611,
       "channel_name": "Trace Sport Stars",
       "tvg_id": "TraceSportStars.fr@HD",
       "channel_id": "",
@@ -54504,7 +54517,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5611,
+      "line": 5613,
       "channel_name": "Trace Sport Stars Russia",
       "tvg_id": "TraceSportStars.fr@Russia",
       "channel_id": "",
@@ -54517,7 +54530,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5613,
+      "line": 5615,
       "channel_name": "Trace Sports Stars",
       "tvg_id": "mixer.trace.sports.stars.com",
       "channel_id": "mixer.trace.sports.stars.com",
@@ -54530,7 +54543,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5615,
+      "line": 5617,
       "channel_name": "TraLaLa TV",
       "tvg_id": "TraLaLaTV.ro@SD",
       "channel_id": "",
@@ -54543,7 +54556,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5617,
+      "line": 5619,
       "channel_name": "Travel Channel",
       "tvg_id": "TravelChannel.us@SD",
       "channel_id": "TravelChannel.us@SD",
@@ -54556,7 +54569,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5619,
+      "line": 5621,
       "channel_name": "Travel Channel East",
       "tvg_id": "travel.us",
       "channel_id": "travel.us",
@@ -54569,7 +54582,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5621,
+      "line": 5623,
       "channel_name": "Travel XP Bangla",
       "tvg_id": "custom.bdix.travelxp-bangla",
       "channel_id": "",
@@ -54582,7 +54595,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5623,
+      "line": 5625,
       "channel_name": "Travelxp",
       "tvg_id": "custom.bdix.travelxp",
       "channel_id": "custom.bdix.travelxp",
@@ -54595,7 +54608,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5625,
+      "line": 5627,
       "channel_name": "TRT Cocuk",
       "tvg_id": "TRTCocuk.tr@SD",
       "channel_id": "",
@@ -54608,7 +54621,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5627,
+      "line": 5629,
       "channel_name": "TRT Diyanet Cocuk",
       "tvg_id": "TRTDiyanetCocuk.tr@SD",
       "channel_id": "",
@@ -54621,7 +54634,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5629,
+      "line": 5631,
       "channel_name": "True Crime UK",
       "tvg_id": "TrueCrime.uk",
       "channel_id": "TrueCrime.uk",
@@ -54634,7 +54647,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5631,
+      "line": 5633,
       "channel_name": "TSN 1",
       "tvg_id": "TSN1.ca@SD",
       "channel_id": "TSN1.ca@SD",
@@ -54647,7 +54660,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5633,
+      "line": 5635,
       "channel_name": "TSN 2",
       "tvg_id": "TSN2.ca@SD",
       "channel_id": "TSN2.ca@SD",
@@ -54660,7 +54673,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5635,
+      "line": 5637,
       "channel_name": "TSN 3",
       "tvg_id": "TSN3.ca@SD",
       "channel_id": "TSN3.ca@SD",
@@ -54673,7 +54686,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5637,
+      "line": 5639,
       "channel_name": "TSN The Ocho",
       "tvg_id": "TSNTheOcho.ca@SD",
       "channel_id": "",
@@ -54686,7 +54699,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5639,
+      "line": 5641,
       "channel_name": "Turf Movil",
       "tvg_id": "TurfMovil.cl@SD",
       "channel_id": "",
@@ -54699,7 +54712,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5641,
+      "line": 5643,
       "channel_name": "Turkmenistan Sport",
       "tvg_id": "TurkmenistanSport.tm@SD",
       "channel_id": "",
@@ -54712,7 +54725,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5643,
+      "line": 5645,
       "channel_name": "TV2 Kids",
       "tvg_id": "TV2Kids.hu@SD",
       "channel_id": "",
@@ -54725,7 +54738,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5645,
+      "line": 5647,
       "channel_name": "TV9 Bangla",
       "tvg_id": "TV9Bangla.in",
       "channel_id": "TV9Bangla.in",
@@ -54738,7 +54751,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5647,
+      "line": 5649,
       "channel_name": "TV BRICS English",
       "tvg_id": "TVBRICSEnglish.in@SD",
       "channel_id": "",
@@ -54751,7 +54764,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5649,
+      "line": 5651,
       "channel_name": "TV One UK",
       "tvg_id": "TVOne.uk",
       "channel_id": "TVOne.uk",
@@ -54764,7 +54777,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5651,
+      "line": 5653,
       "channel_name": "TVC Arabic Kids",
       "tvg_id": "custom.tvcarabickids",
       "channel_id": "custom.tvcarabickids",
@@ -54777,7 +54790,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5653,
+      "line": 5655,
       "channel_name": "TVCARiB Kids & Teens",
       "tvg_id": "TVCARiBKidsTeens.sx",
       "channel_id": "TVCARiBKidsTeens.sx",
@@ -54790,7 +54803,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5655,
+      "line": 5657,
       "channel_name": "TVOKids",
       "tvg_id": "TVOKids.ca@SD",
       "channel_id": "",
@@ -54803,7 +54816,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5657,
+      "line": 5659,
       "channel_name": "TVP ABC",
       "tvg_id": "TVPABC.pl@SD",
       "channel_id": "",
@@ -54816,7 +54829,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5659,
+      "line": 5661,
       "channel_name": "TVR Sport",
       "tvg_id": "TVRSport.ro@SD",
       "channel_id": "",
@@ -54829,7 +54842,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5661,
+      "line": 5663,
       "channel_name": "TVRI Sport",
       "tvg_id": "custom.tvrisport",
       "channel_id": "custom.tvrisport",
@@ -54842,7 +54855,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5663,
+      "line": 5665,
       "channel_name": "TVS Bowling Network",
       "tvg_id": "TVSBowlingNetwork.us@SD",
       "channel_id": "",
@@ -54855,7 +54868,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5665,
+      "line": 5667,
       "channel_name": "TVS Boxing",
       "tvg_id": "TVSBoxing.us@SD",
       "channel_id": "",
@@ -54868,7 +54881,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5667,
+      "line": 5669,
       "channel_name": "TVS Classic Sports",
       "tvg_id": "TVSClassicSports.us@SD",
       "channel_id": "",
@@ -54881,7 +54894,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5669,
+      "line": 5671,
       "channel_name": "TVS Hi Tops",
       "tvg_id": "TVSHiTops.us@SD",
       "channel_id": "",
@@ -54894,7 +54907,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5671,
+      "line": 5673,
       "channel_name": "TVS Hollywood History",
       "tvg_id": "TVSHollywoodHistory.us@SD",
       "channel_id": "",
@@ -54907,7 +54920,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5673,
+      "line": 5675,
       "channel_name": "TVS Sports",
       "tvg_id": "TVSSports.us@SD",
       "channel_id": "",
@@ -54920,7 +54933,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5675,
+      "line": 5677,
       "channel_name": "TVS Sports Bureau",
       "tvg_id": "TVSSportsBureau.us@SD",
       "channel_id": "",
@@ -54933,7 +54946,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5677,
+      "line": 5679,
       "channel_name": "TVS Turbo",
       "tvg_id": "TVSTurbo.us@SD",
       "channel_id": "",
@@ -54946,7 +54959,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5679,
+      "line": 5681,
       "channel_name": "TVS Women Sports",
       "tvg_id": "TVSWomenSports.us@SD",
       "channel_id": "",
@@ -54959,7 +54972,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5681,
+      "line": 5683,
       "channel_name": "TyC Sports",
       "tvg_id": "TyCSports.ar@SD",
       "channel_id": "",
@@ -54972,7 +54985,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5683,
+      "line": 5685,
       "channel_name": "TyC Sports USA",
       "tvg_id": "TyCSportsUSA.ar@SD",
       "channel_id": "",
@@ -54985,7 +54998,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5685,
+      "line": 5687,
       "channel_name": "UFC",
       "tvg_id": "ufc.com",
       "channel_id": "ufc.com",
@@ -54998,7 +55011,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5687,
+      "line": 5689,
       "channel_name": "Unbeaten",
       "tvg_id": "Unbeaten.us@SD",
       "channel_id": "",
@@ -55011,7 +55024,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5689,
+      "line": 5691,
       "channel_name": "Unidentified",
       "tvg_id": "Unidentified.us@SD",
       "channel_id": "",
@@ -55024,7 +55037,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5691,
+      "line": 5693,
       "channel_name": "Unidentified",
       "tvg_id": "Unidentified.us",
       "channel_id": "Unidentified.us",
@@ -55037,7 +55050,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5693,
+      "line": 5695,
       "channel_name": "Unique TV",
       "tvg_id": "UniqueTV.in@SD",
       "channel_id": "",
@@ -55050,7 +55063,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5695,
+      "line": 5697,
       "channel_name": "V Classic TV",
       "tvg_id": "VClassicTV.cl@SD",
       "channel_id": "VClassicTV.cl@SD",
@@ -55063,7 +55076,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5697,
+      "line": 5699,
       "channel_name": "V Classic TV",
       "tvg_id": "VClassicTV.cl@SD",
       "channel_id": "",
@@ -55076,7 +55089,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5699,
+      "line": 5701,
       "channel_name": "V gostyakh u skazki",
       "tvg_id": "Vgostyakhuskazki.ru@SD",
       "channel_id": "",
@@ -55089,7 +55102,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5701,
+      "line": 5703,
       "channel_name": "VCV",
       "tvg_id": "VCV.in@SD",
       "channel_id": "",
@@ -55102,7 +55115,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5703,
+      "line": 5705,
       "channel_name": "Velvet. European Movies",
       "tvg_id": "VelvetEuropeanMovies.ru@HD",
       "channel_id": "VelvetEuropeanMovies.ru@HD",
@@ -55115,7 +55128,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5705,
+      "line": 5707,
       "channel_name": "Velvet. Golden Collection",
       "tvg_id": "VelvetGoldenCollection.ru@HD",
       "channel_id": "VelvetGoldenCollection.ru@HD",
@@ -55128,7 +55141,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5707,
+      "line": 5709,
       "channel_name": "Velvet. Scary",
       "tvg_id": "VelvetScary.ru@HD",
       "channel_id": "VelvetScary.ru@HD",
@@ -55141,7 +55154,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5709,
+      "line": 5711,
       "channel_name": "Velvet. Sovetskoe Kino",
       "tvg_id": "VelvetSovetskoeKino.ru@HD",
       "channel_id": "VelvetSovetskoeKino.ru@HD",
@@ -55154,7 +55167,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5711,
+      "line": 5713,
       "channel_name": "Vevo Pop",
       "tvg_id": "VevoPop.us",
       "channel_id": "VevoPop.us",
@@ -55167,7 +55180,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5713,
+      "line": 5715,
       "channel_name": "Viasat Explore (Czech Republic)",
       "tvg_id": "ViasatExplore.cz@SD",
       "channel_id": "",
@@ -55180,7 +55193,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5715,
+      "line": 5717,
       "channel_name": "Viasat History (Czech Republic)",
       "tvg_id": "ViasatHistory.cz@SD",
       "channel_id": "",
@@ -55193,7 +55206,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5717,
+      "line": 5719,
       "channel_name": "Viasat Kino Balkan",
       "tvg_id": "ViasatKino.ua@Balkan",
       "channel_id": "ViasatKino.ua@Balkan",
@@ -55206,7 +55219,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5719,
+      "line": 5721,
       "channel_name": "Viasat Nature (Czech Republic)",
       "tvg_id": "ViasatNature.cz@SD",
       "channel_id": "",
@@ -55219,7 +55232,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5721,
+      "line": 5723,
       "channel_name": "Viasat Nature (Ukraine)",
       "tvg_id": "ViasatNature.ua@SD",
       "channel_id": "",
@@ -55232,7 +55245,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5723,
+      "line": 5725,
       "channel_name": "Video Tour Channel",
       "tvg_id": "custom.video-tour-channel-cr-music",
       "channel_id": "custom.video-tour-channel-cr-music",
@@ -55245,7 +55258,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5725,
+      "line": 5727,
       "channel_name": "viju History",
       "tvg_id": "vijuHistory.ru@SD",
       "channel_id": "",
@@ -55258,7 +55271,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5727,
+      "line": 5729,
       "channel_name": "viju+ Sport",
       "tvg_id": "vijuPlusSport.ru@HD",
       "channel_id": "",
@@ -55271,7 +55284,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5729,
+      "line": 5731,
       "channel_name": "viju+ Sport",
       "tvg_id": "vijuPlusSport.ru@SD",
       "channel_id": "",
@@ -55284,7 +55297,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5731,
+      "line": 5733,
       "channel_name": "Vision (India)",
       "tvg_id": "Vision.in@SD",
       "channel_id": "Vision.in@SD",
@@ -55297,7 +55310,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5733,
+      "line": 5735,
       "channel_name": "Vision Beats",
       "tvg_id": "VisionBeats.in@SD",
       "channel_id": "VisionBeats.in@SD",
@@ -55310,7 +55323,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5735,
+      "line": 5737,
       "channel_name": "VIVA Russia",
       "tvg_id": "VIVARussia.ru@SD",
       "channel_id": "VIVARussia.ru@SD",
@@ -55323,7 +55336,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5737,
+      "line": 5739,
       "channel_name": "VIVA Russia",
       "tvg_id": "VIVARussia.ru@SD",
       "channel_id": "",
@@ -55336,7 +55349,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5739,
+      "line": 5741,
       "channel_name": "Vokta TV",
       "tvg_id": "VoktaTV.bd@SD",
       "channel_id": "VoktaTV.bd@SD",
@@ -55349,7 +55362,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5741,
+      "line": 5743,
       "channel_name": "Vos y TV",
       "tvg_id": "custom.vos-y-tv-ec-music",
       "channel_id": "custom.vos-y-tv-ec-music",
@@ -55362,7 +55375,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5743,
+      "line": 5745,
       "channel_name": "Voyo Sport 1",
       "tvg_id": "VoyoSport1.ro@HD",
       "channel_id": "",
@@ -55375,7 +55388,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5745,
+      "line": 5747,
       "channel_name": "VTU",
       "tvg_id": "VTU.in@SD",
       "channel_id": "",
@@ -55388,7 +55401,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5747,
+      "line": 5749,
       "channel_name": "Watch Mojo",
       "tvg_id": "WatchMojo.us",
       "channel_id": "WatchMojo.us",
@@ -55401,7 +55414,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5749,
+      "line": 5751,
       "channel_name": "WaterBear",
       "tvg_id": "WaterBear.ch@SD",
       "channel_id": "",
@@ -55414,7 +55427,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5751,
+      "line": 5753,
       "channel_name": "WaterBear",
       "tvg_id": "WaterBear.ch",
       "channel_id": "WaterBear.ch",
@@ -55427,7 +55440,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5753,
+      "line": 5755,
       "channel_name": "Wedo Big Stories",
       "tvg_id": "WedoBigStories.ch@SD",
       "channel_id": "",
@@ -55440,7 +55453,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5755,
+      "line": 5757,
       "channel_name": "Wheel World",
       "tvg_id": "WheelWorld.us",
       "channel_id": "WheelWorld.us",
@@ -55453,7 +55466,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5757,
+      "line": 5759,
       "channel_name": "Wild Planet",
       "tvg_id": "WildPlanet.us",
       "channel_id": "WildPlanet.us",
@@ -55466,24 +55479,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5759,
+      "line": 5761,
       "channel_name": "Wild TV",
       "tvg_id": "WildTV.ca@SD",
       "channel_id": "WildTV.ca@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wild-tv.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5761,
-      "channel_name": "WildEarth",
-      "tvg_id": "WildEarth.za",
-      "channel_id": "WildEarth.za",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wildearth.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -55519,6 +55519,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5767,
+      "channel_name": "WildEarth",
+      "tvg_id": "WildEarth.za",
+      "channel_id": "WildEarth.za",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wildearth.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5769,
       "channel_name": "Willow Extra",
       "tvg_id": "custom.willowextra",
       "channel_id": "custom.willowextra",
@@ -55531,7 +55544,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5769,
+      "line": 5771,
       "channel_name": "Willow Sports",
       "tvg_id": "custom.willowsports",
       "channel_id": "custom.willowsports",
@@ -55544,7 +55557,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5771,
+      "line": 5773,
       "channel_name": "Willow Sports 2",
       "tvg_id": "custom.willowsports2",
       "channel_id": "custom.willowsports2",
@@ -55557,7 +55570,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5773,
+      "line": 5775,
       "channel_name": "Win Sports",
       "tvg_id": "WinSports.co@SD",
       "channel_id": "",
@@ -55570,7 +55583,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5775,
+      "line": 5777,
       "channel_name": "Win+ Futbol",
       "tvg_id": "WinPlusFutbol.co@SD",
       "channel_id": "",
@@ -55583,7 +55596,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5777,
+      "line": 5779,
       "channel_name": "Witness to Justice",
       "tvg_id": "WitnessToJustice.us",
       "channel_id": "WitnessToJustice.us",
@@ -55596,7 +55609,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5779,
+      "line": 5781,
       "channel_name": "Women's Sports Network",
       "tvg_id": "WomensSportsNetwork.us@SD",
       "channel_id": "",
@@ -55609,7 +55622,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5781,
+      "line": 5783,
       "channel_name": "Wonder",
       "tvg_id": "Wonder.us",
       "channel_id": "Wonder.us",
@@ -55622,7 +55635,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5783,
+      "line": 5785,
       "channel_name": "World Fishing Network",
       "tvg_id": "worldfishingnetwork.us",
       "channel_id": "worldfishingnetwork.us",
@@ -55635,7 +55648,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5785,
+      "line": 5787,
       "channel_name": "World of Freesports",
       "tvg_id": "WorldofFreesports.de@SD",
       "channel_id": "",
@@ -55648,7 +55661,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5787,
+      "line": 5789,
       "channel_name": "World Poker Tour",
       "tvg_id": "WorldPokerTour.us@US",
       "channel_id": "",
@@ -55661,7 +55674,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5789,
+      "line": 5791,
       "channel_name": "World Poker Tour Poland",
       "tvg_id": "WorldPokerTour.us@Poland",
       "channel_id": "",
@@ -55674,7 +55687,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5791,
+      "line": 5793,
       "channel_name": "World Poker Tour UK",
       "tvg_id": "WorldPokerTour.us@UK",
       "channel_id": "",
@@ -55687,7 +55700,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5793,
+      "line": 5795,
       "channel_name": "World War TV",
       "tvg_id": "WorldWarTV.us",
       "channel_id": "WorldWarTV.us",
@@ -55700,7 +55713,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5795,
+      "line": 5797,
       "channel_name": "WWE Superstar Central",
       "tvg_id": "wwe.superstar.central.com",
       "channel_id": "wwe.superstar.central.com",
@@ -55713,7 +55726,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5797,
+      "line": 5799,
       "channel_name": "X SPORT",
       "tvg_id": "custom.xsport",
       "channel_id": "custom.xsport",
@@ -55726,7 +55739,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5799,
+      "line": 5801,
       "channel_name": "Xtrem Sports",
       "tvg_id": "XtremSports.es@SD",
       "channel_id": "XtremSports.es@SD",
@@ -55739,7 +55752,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5801,
+      "line": 5803,
       "channel_name": "Xtrema Cartoons",
       "tvg_id": "XtremaCartoons.ar@SD",
       "channel_id": "",
@@ -55752,7 +55765,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5803,
+      "line": 5805,
       "channel_name": "XXTreme Jobs Hindi",
       "tvg_id": "XXTremeJobsHindi.in",
       "channel_id": "XXTremeJobsHindi.in",
@@ -55765,7 +55778,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5805,
+      "line": 5807,
       "channel_name": "YTV",
       "tvg_id": "YTV.ca@SD",
       "channel_id": "YTV.ca@SD",
@@ -55778,7 +55791,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5807,
+      "line": 5809,
       "channel_name": "Yu-Gi-Oh!",
       "tvg_id": "YuGiOh.us@SD",
       "channel_id": "YuGiOh.us@SD",
@@ -55791,7 +55804,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5809,
+      "line": 5811,
       "channel_name": "Yu-Gi-Oh! en espanol",
       "tvg_id": "YuGiOhenespanol.us@SD",
       "channel_id": "",
@@ -55804,7 +55817,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5811,
+      "line": 5813,
       "channel_name": "Zainabia Channel",
       "tvg_id": "ZainabiaChannel.sa",
       "channel_id": "ZainabiaChannel.sa",
@@ -55817,7 +55830,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5813,
+      "line": 5815,
       "channel_name": "ZB Cartoon",
       "tvg_id": "ZBCartoon.in",
       "channel_id": "ZBCartoon.in",
@@ -55830,7 +55843,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5815,
+      "line": 5817,
       "channel_name": "ZB Cinema",
       "tvg_id": "ZBCinema.in",
       "channel_id": "ZBCinema.in",
@@ -55843,24 +55856,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5817,
+      "line": 5819,
       "channel_name": "Zee 24 Ghanta",
       "tvg_id": "Zee24Ghanta.in@SD",
       "channel_id": "",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-24-ghanta.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5819,
-      "channel_name": "Zee Bangla Sonar",
-      "tvg_id": "ZeeBanglaSonar.in@SD",
-      "channel_id": "ZeeBanglaSonar.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -55883,6 +55883,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5823,
+      "channel_name": "Zee Bangla Sonar",
+      "tvg_id": "ZeeBanglaSonar.in@SD",
+      "channel_id": "ZeeBanglaSonar.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5825,
       "channel_name": "ZEE BUSINESS",
       "tvg_id": "ZeeBusiness.in@SD",
       "channel_id": "",
@@ -55895,7 +55908,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5825,
+      "line": 5827,
       "channel_name": "Zee Business",
       "tvg_id": "ZeeBusiness.in@SD",
       "channel_id": "ZeeBusiness.in@SD",
@@ -55908,7 +55921,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5827,
+      "line": 5829,
       "channel_name": "Zee Cine Classic",
       "tvg_id": "ZeeCineClassic.in@SD",
       "channel_id": "ZeeCineClassic.in@SD",
@@ -55921,23 +55934,10 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5829,
+      "line": 5831,
       "channel_name": "Zee Cinema",
       "tvg_id": "ZeeCinema.in@HD",
       "channel_id": "ZeeCinema.in@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5831,
-      "channel_name": "Zee Cinema",
-      "tvg_id": "ZeeCinema.in@SD",
-      "channel_id": "ZeeCinema.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png",
       "status": "needs_review",
       "registry_match": "none",
@@ -55961,6 +55961,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5835,
+      "channel_name": "Zee Cinema",
+      "tvg_id": "ZeeCinema.in@SD",
+      "channel_id": "ZeeCinema.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5837,
       "channel_name": "Zee Comedy Nation",
       "tvg_id": "ZeeComedyNation.in@HD",
       "channel_id": "ZeeComedyNation.in@HD",
@@ -55973,7 +55986,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5837,
+      "line": 5839,
       "channel_name": "Zee Dil Se",
       "tvg_id": "ZeeDilSe.in@HD",
       "channel_id": "ZeeDilSe.in@HD",
@@ -55986,7 +55999,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5839,
+      "line": 5841,
       "channel_name": "Zee Horror Nights",
       "tvg_id": "ZeeHorrorNights.in@HD",
       "channel_id": "ZeeHorrorNights.in@HD",
@@ -55999,7 +56012,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5841,
+      "line": 5843,
       "channel_name": "Zee South Flix",
       "tvg_id": "ZeeSouthFlix.in@HD",
       "channel_id": "ZeeSouthFlix.in@HD",
@@ -56012,7 +56025,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5843,
+      "line": 5845,
       "channel_name": "Zee Talkies",
       "tvg_id": "ZeeTalkies.in@HD",
       "channel_id": "ZeeTalkies.in@HD",
@@ -56025,7 +56038,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5845,
+      "line": 5847,
       "channel_name": "Zee Tamil",
       "tvg_id": "ZeeTamil.in@SD",
       "channel_id": "ZeeTamil.in@SD",
@@ -56038,7 +56051,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5847,
+      "line": 5849,
       "channel_name": "Zee Tamil [ ]",
       "tvg_id": "ZeeTamil.in@SD",
       "channel_id": "ZeeTamil.in@SD",
@@ -56051,7 +56064,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5849,
+      "line": 5851,
       "channel_name": "Zee Telugu",
       "tvg_id": "ZeeTelugu.in@HD",
       "channel_id": "ZeeTelugu.in@HD",
@@ -56064,7 +56077,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5851,
+      "line": 5853,
       "channel_name": "Zee Telugu",
       "tvg_id": "ZeeTelugu.in@HD",
       "channel_id": "",
@@ -56077,24 +56090,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5853,
+      "line": 5855,
       "channel_name": "Zee Thirai",
       "tvg_id": "ZeeThirai.in@HD",
       "channel_id": "ZeeThirai.in@HD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-thirai-7ca309bb44820a2b7a4b.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5855,
-      "channel_name": "Zee TV",
-      "tvg_id": "ZeeTV.in@HD",
-      "channel_id": "ZeeTV.in@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv-2fb6673cf7.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -56119,7 +56119,7 @@
       "line": 5859,
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@HD",
-      "channel_id": "",
+      "channel_id": "ZeeTV.in@HD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv-2fb6673cf7.png",
       "status": "needs_review",
       "registry_match": "none",
@@ -56130,6 +56130,19 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5861,
+      "channel_name": "Zee TV",
+      "tvg_id": "ZeeTV.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv-2fb6673cf7.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5863,
       "channel_name": "Zoo Moo",
       "tvg_id": "ZooMoo.sg",
       "channel_id": "ZooMoo.sg",
@@ -56142,7 +56155,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5863,
+      "line": 5865,
       "channel_name": "ZooMoo",
       "tvg_id": "ZooMoo.sg",
       "channel_id": "ZooMoo.sg",
@@ -56155,24 +56168,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5865,
+      "line": 5867,
       "channel_name": "Starz Cinema (720p)",
       "tvg_id": "StarzCinema.us@East",
       "channel_id": "StarzCinema.us@East",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/starz-cinema-720p.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5867,
-      "channel_name": "Lifetime Movies",
-      "tvg_id": "lifetimemovies.us",
-      "channel_id": "lifetimemovies.us",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lifetimemovies.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",

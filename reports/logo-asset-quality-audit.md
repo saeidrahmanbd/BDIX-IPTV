@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-22T03:01:41+00:00**
+Generated: **2026-11-22T03:10:26+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **0e135710f0964eb757aa03c22ce16c8b1d48cad03639d48f28903aadee255a73**
-- International-Playlist.m3u SHA-256: **775cbe8b25427f90c357e609d25ad6f68e563b00c346ad949ed59ea6be3267f5**
+- International-Playlist.m3u SHA-256: **c81624e2253b562a7758049676834e15ee42db852678499b94aa2e74fae0526e**
 
 ## Summary
 
@@ -2306,6 +2306,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Law & Crime | law-and-crime-f698aa08fe.png | Review |
 | International-Playlist.m3u | Lego Channel | lego-channel-1080p.png | Review |
 | International-Playlist.m3u | Life+Style | life-plus-style-259a601564e8bc147e54.png | Review |
+| International-Playlist.m3u | Lifetime Movies | lifetimemovies.png | Review |
 | International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
 | International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Review |
 | International-Playlist.m3u | Madani TV | madani-tv.png | Review |
@@ -2469,7 +2470,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Starz Cinema (720p) | starz-cinema-720p.png | New Channels |
-| International-Playlist.m3u | Lifetime Movies | lifetimemovies.png | Review |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
