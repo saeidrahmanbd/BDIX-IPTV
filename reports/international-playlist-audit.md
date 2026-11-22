@@ -1,16 +1,16 @@
 # International Playlist Organization Audit
 
-- Entries before: 3304
-- Entries after: 3304
-- Channel names normalized: 1
+- Entries before: 3293
+- Entries after: 3293
+- Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
-- Invalid/external logo references removed: 2860
+- Invalid/external logo references removed: 2850
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1483
-- Matching alternate streams retained in Backup: 367
-- True orphan Backup rows evaluated: 1
-- Eligible orphan Backup rows promoted to primary: 0
+- Original Backup/Backups and protected queue rows examined: 1476
+- Matching alternate streams retained in Backup: 364
+- True orphan Backup rows evaluated: 6
+- Eligible orphan Backup rows promoted to primary: 5
 - Clearly identified Adult orphans restored to Adult: 0
 - Ineligible/unclassified orphan Backup rows retained: 1
 - Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.
@@ -30,11 +30,11 @@
 
 ## Category counts
 
-- Bangladesh: 46
+- Bangladesh: 45
 - Indian Bangla: 31
-- Indian Movies: 73
+- Indian Movies: 76
 - Indian Music: 54
-- Indian Entertainment: 163
+- Indian Entertainment: 164
 - Pakistani: 18
 - Argentina: 14
 - Brazil: 15
@@ -47,10 +47,10 @@
 - Czech Republic: 22
 - DO: 11
 - Estonia: 6
-- France: 45
+- France: 44
 - Germany: 72
 - Greece: 8
-- Hungary: 14
+- Hungary: 15
 - Iran: 13
 - Italy: 25
 - Lebanon: 6
@@ -59,10 +59,10 @@
 - North Macedonia: 5
 - Panama: 5
 - Paraguay: 5
-- Peru: 9
+- Peru: 7
 - Poland: 24
 - Romania: 30
-- Russia: 76
+- Russia: 75
 - Saudi Arabia: 9
 - Singapore: 5
 - Spain: 18
@@ -70,14 +70,14 @@
 - Turkey: 15
 - Ukraine: 28
 - United Kingdom: 21
-- United States: 242
+- United States: 241
 - Uzbekistan: 5
 - Vietnam: 6
-- International: 102
-- News: 12
-- Kids: 13
+- International: 104
+- News: 11
+- Kids: 12
 - Religious: 3
 - Sports: 8
 - Adult: 366
-- Review: 1117
-- Backup: 372
+- Review: 1114
+- Backup: 365
