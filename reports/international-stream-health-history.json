@@ -45551,6 +45551,28 @@
       "last_status": "ok",
       "removed": false,
       "last_ok_date": "2026-11-22"
+    },
+    "d0bfd2a67903c8a05fcf21624c4b651a124cd3e9e523c3545fa4d9ae732c6ee5": {
+      "name": "Lifetime Movies",
+      "tvg_id": "lifetimemovies.us",
+      "country": "US",
+      "original_group": "Review",
+      "auto_review": false,
+      "consecutive_failures": 0,
+      "last_checked_date": "2026-11-22",
+      "last_status": "inconclusive",
+      "removed": false
+    },
+    "c54997a048aff3cdc0856574b79ca73ccf9bc9af24ceea55866148e92307cbe8": {
+      "name": "Starz Cinema (720p)",
+      "tvg_id": "StarzCinema.us@East",
+      "country": "US",
+      "original_group": "New Channels",
+      "auto_review": false,
+      "consecutive_failures": 0,
+      "last_checked_date": "2026-11-22",
+      "last_status": "inconclusive",
+      "removed": false
     }
   },
   "removed": [
