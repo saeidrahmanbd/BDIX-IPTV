@@ -1,67 +1,102 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-22T06:58:06+06:00** (Asia/Dhaka)
+Generated: **2026-11-22T08:38:42+06:00** (Asia/Dhaka)
 
-## Run status
+- Sources: Bangladesh + India iptv-org country feeds
+- **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**
+- Bangladesh channels of all genres are eligible. Indian News, Kids, Education, Knowledge, Business/Finance and non-Islamic Religious channels are prohibited in this IPTV playlist; Indian Sports channels are allowed, and Islamic religious channels remain eligible.
+- Previously admitted prohibited Indian queue rows purged: **0**
+- Existing orphan New Backups moved to New Channels: **0**
+- Existing New Channels moved to New Backups because a primary channel already exists: **0**
+- Duplicate queue rows removed during role normalization: **0**
+- Existing discovery-queue logo URLs were converted to verified local /logos/ paths or removed when no matching local asset existed; no placeholder art was used.
+- Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.
+- Country-group threshold: **5** legitimate primary identities
+- Only discovery queue rows were purged, reclassified or logo-normalized; unrelated primary playlist entries were preserved.
+- New channels: **5**
+- New backups: **5**
+- Rejected/held candidates: **908**
+- Country metadata, channel IDs, language and logos are advisory at this stage; retain uncertain values for owner review and repair later.
 
-**BLOCKED — fresh discovery stage did not execute.**
+## Rejection reasons
 
-- Playlist: `IPTV-Playlist.m3u`
-- Current playlist blob: `c3c20a71713cd27f3e36a179242161b185078cdc`
-- Candidates added: **0**
-- Candidates rejected after fresh evaluation: **0**
-- Candidates held for manual review: **not assessed** — no fresh source-feed discovery or stream probes ran.
-- This is not a finding that no eligible channels exist. No current candidate set was produced.
+- Indian business channel is prohibited: 9
+- Indian education channel is prohibited: 7
+- Indian kids channel is prohibited: 24
+- Indian knowledge channel is prohibited: 15
+- Indian news channel is prohibited: 304
+- Indian religious channel is prohibited: 121
+- channel country CA is outside Bangladesh/India: 1
+- channel country NL is outside Bangladesh/India: 2
+- channel country PK is outside Bangladesh/India: 1
+- duplicate channel identity already staged in a discovery queue: 7
+- duplicate stream URL: 342
+- known Indian prohibited MH One Prime channel is prohibited: 1
+- known Indian prohibited brand/category is prohibited: 12
+- permanently banned channel: 31
+- proxy/worker host: 1
+- tokenized URL: 10
+- unsupported stream path: 20
 
-## Freshness and execution evidence
+## New Channels
 
-- Latest scheduled IPTV discovery run found: [run #44863492835](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/44863492835), created **2026-11-21 09:54:59 +06:00**, conclusion: success.
-- No IPTV New Channel Discovery run for Bangladesh date **2026-11-22** was present in the Actions run list checked at this report time.
-- Latest Discovery Schedule Watchdog run found: [run #44905290354](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/44905290354), created **2026-11-21 18:43:08 +06:00**, conclusion: success. Its log confirms that it checked and found a successful IPTV discovery run for **2026-11-21**. No watchdog run for **2026-11-22** was present.
-- Exact execution blocker: the connected GitHub actions available in this run support reading files/runs and repository writes, but expose no workflow-dispatch action. The GitHub fetch action is read-only. A local fallback was attempted with `git ls-remote https://github.com/saeidrahmanbd/BDIX-IPTV.git HEAD`; it failed with **`Could not resolve host: github.com`**, so the discovery script could not be run locally.
-- The last successful discovery report is from 2026-11-21 and was not reused as today's result.
+- ATN Music (360p) (source feed: Bangladesh) — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
+- Anmol TV (576p) (source feed: India) — https://fta.ektv.in/live/256/master.m3u8
+- Captain (576p) (source feed: India) — https://fta.ektv.in/live/173/master.m3u8
+- Jaya Plus (576p) (source feed: India) — https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8
+- Win TV (576p) (source feed: India) — https://mumbai-edge.smartplaytv.in/WINTV/index.m3u8
 
-## Current playlist structural snapshot (read-only)
+## New Backups
 
-- Entries: **1,389**
-- `#EXTINF` entries with exactly one HTTP(S) stream URL: **1,389 / 1,389**
-- Missing or multiple stream URLs: **0**
-- Duplicate stream URLs: **0**
-- Duplicate primary channel identities outside Backup/Review roles: **0**
-- External `tvg-logo` URLs: **0**
-- Logo attributes pointing to repository-local `/logos/` assets: **1,389** (path references checked; individual asset existence was not probed in this blocked run)
-- New Channels: **37**
-- New Backups: **19**
-- Backup: **443**
-- Review: **196**
-- Queue order: **New Channels → New Backups → Backup**; Review follows Backup in the current playlist.
-- Indian sports remain permitted by the current discovery policy. No current feed candidates were evaluated, and no existing playlist rows were changed.
+- DD Assam (576p) (source feed: India) — https://fta.ektv.in/live/672/master.m3u8
+- DD Manipur (576p) (source feed: India) — https://fta.ektv.in/live/671/master.m3u8
+- DD Nagaland (576p) (source feed: India) — https://fta.ektv.in/live/670/master.m3u8
+- DD Tripura (576p) (source feed: India) — https://fta.ektv.in/live/661/master.m3u8
+- Vanitha TV (576p) (source feed: India) — https://mumbai-edge.smartplaytv.in/VanithaTV/index.m3u8
 
-## Validation
+## Existing queue-role corrections
 
-| Check | Result |
-|---|---:|
-| M3U header present | PASS |
-| Every EXTINF has exactly one URL | PASS |
-| Duplicate stream URLs | 0 |
-| Duplicate primary identities outside backup/review roles | 0 |
-| External logo URLs | 0 |
-| Live stream probes in this run | NOT RUN |
-| Fresh Bangladesh/India source-feed scan | NOT RUN |
-| Country threshold evaluation | NOT RUN |
+## Stream verification
 
-## Rejected / held candidates
+- Run timestamp: 2026-11-22T08:38:43+06:00
+- Mode: iptv
+- New entries and discovery queues probed: 10
+- Verified live media responses: 0
+- Verified new primary channels retained in New Channels: 0
+- Verified alternate streams retained in New Backups: 0
+- Inconclusive candidates retained for manual review: 0
+- Unverified backup streams moved to Review: 0
+- Definitively dead new candidates removed: 10
+- Duplicate newly discovered stream entries removed: 0
+- Country-group rows consolidated after stream probing: 0
+- Logo references localized to authentic repository assets: 0
+- Candidates retained without authentic local logos (no placeholder used): 0
 
-No candidate-level decisions were made. The stage was blocked before fetching and classifying today's Bangladesh and India source feeds; therefore rejection and hold counts are **not available**, rather than zero eligible candidates.
+### Stream probe details
+- Removed newly discovered DD Assam (576p) from New Backups — HTTP 404.
+- Removed newly discovered DD Manipur (576p) from New Backups — HTTP 404.
+- Removed newly discovered DD Nagaland (576p) from New Backups — HTTP 404.
+- Removed newly discovered DD Tripura (576p) from New Backups — HTTP 404.
+- Removed newly discovered Vanitha TV (576p) from New Backups — HTTP 404.
+- Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
+- Removed newly discovered Anmol TV (576p) from New Channels — HTTP 404.
+- Removed newly discovered Captain (576p) from New Channels — HTTP 404.
+- Removed newly discovered Jaya Plus (576p) from New Channels — HTTP 404.
+- Removed newly discovered Win TV (576p) from New Channels — HTTP 404.
 
-## Changes and blockers
+## Final validation
 
-- Playlist additions/repairs committed: **none**
-- Playlist file changed: **no**
-- Report-only update: this dated report.
-- Primary blocker: no available workflow-dispatch action and local GitHub DNS resolution failure.
-- Next required action: restore/enable a workflow-dispatch path or let the repository's scheduled/watchdog workflow execute, then verify its fresh run and stream-probe results before publishing candidates.
-
-## Commit
-
-Report-only commit; no playlist content was modified.
+- Run timestamp: 2026-11-22T08:38:43+06:00
+- Validation status: PASS
+- New manual-review candidates retained: 0
+- New malformed EXTINF/URL pairs: 0
+- New duplicate stream URL occurrences: 0
+- New candidates missing an authentic local logo: 0 (warning only)
+- New candidates with non-local logo references: 0 (warning only)
+- New candidates with country metadata requiring manual review: 0 (warning only)
+- New candidates outside New Channels/New Backups or approved Review holds: 0
+- Out-of-scope/prohibited Indian rows remaining in New Channels/New Backups: 0
+- Discovery queue rows with non-local/broken logos: 0
+- New Backup identity/duplicate-primary issues: 0
+- Existing unrelated playlist defects and incomplete nonessential country metadata do not block discovery.
+- New Channels retains primary candidates for owner review; only verified alternates remain in New Backups, and inconclusive alternates are held in Review.
