@@ -206,9 +206,9 @@ https://server.zillarbarta.com/ZBCINEMA/index.m3u8
 https://server.zillarbarta.com/zbmusic/index.m3u8
 #EXTINF:-1 tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" tvg-chno="102" channel-id="ZeeBangla.in@HD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Zee Bangla
 https://tvsen6.aynaott.com/ZeeBangla/index.m3u8
-#EXTINF:-1 x-discovery-source-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-pictures.png" tvg-id="Andpictures.in@HD" tvg-name="&pictures HD" group-title="Indian Movies",&pictures HD
+#EXTINF:-1 x-discovery-source-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-pictures.png" tvg-id="Andpictures.in@HD" channel-id="Andpictures.in@HD" tvg-country="IN" tvg-name="&pictures HD" group-title="Indian Movies",&pictures HD
 http://116.90.120.149:8000/play/a132/index.m3u8
-#EXTINF:-1 x-discovery-source-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-xplor-hd.png" tvg-id="AndxplorHD.in@HD" tvg-name="&xplor HD" group-title="Indian Movies",&xplor HD
+#EXTINF:-1 x-discovery-source-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-xplor-hd.png" tvg-id="AndxplorHD.in@HD" channel-id="AndxplorHD.in@HD" tvg-country="IN" tvg-name="&xplor HD" group-title="Indian Movies",&xplor HD
 http://116.90.120.149:8000/play/a11o/index.m3u8
 #EXTINF:-1 tvg-id="AlankarTV.in@SD" tvg-name="Alankar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alankar-tv.png" tvg-chno="103" channel-id="AlankarTV.in@SD" tvg-country="IN" tvg-language="ori" group-title="Indian Movies",Alankar TV
 https://livetv.tarangplus.in/alankar-origin/live/playlist.m3u8
@@ -500,7 +500,7 @@ https://mumt03.tangotv.in/Dsly5z3HASIANETMIDDLEEAST/index.m3u8
 https://live.ekamraott.com/baiscope/baiscope/index.m3u8
 #EXTINF:-1 tvg-id="BIGTV.in@SD" tvg-name="BIG TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/big-tv-24x7.png" tvg-chno="236" channel-id="BIGTV.in@SD" tvg-country="IN" tvg-language="tel" group-title="Indian Entertainment",BIG TV
 https://cdn.pishow.tv/ott/live/1059/master.m3u8
-#EXTINF:-1 x-discovery-source-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bollywood-masala-a6b8705b09a523f7b504.png" tvg-id="BollywoodMasala.in@SD" tvg-name="Bollywood Masala" group-title="Indian Entertainment",Bollywood Masala
+#EXTINF:-1 x-discovery-source-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bollywood-masala-a6b8705b09a523f7b504.png" tvg-id="BollywoodMasala.in@SD" channel-id="BollywoodMasala.in@SD" tvg-country="IN" tvg-name="Bollywood Masala" group-title="Indian Entertainment",Bollywood Masala
 https://lamhas.net/bollywoodmasala/index.m3u8
 #EXTINF:-1 tvg-id="CMalayalamTV.ca@SD" tvg-name="C Malayalam TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/c-malayalam-tv-1080p-3b1c6293f5.png" tvg-chno="237" channel-id="CMalayalamTV.ca@SD" tvg-country="CA" tvg-language="mal" group-title="Indian Entertainment",C Malayalam TV
 https://2-fss-2.streamhoster.com/pl_120/206508-3261972-1/playlist.m3u8
