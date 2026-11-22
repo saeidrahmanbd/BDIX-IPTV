@@ -36,35 +36,27 @@ Removed channel identities (up to 10):
 - MNX HD (1080p)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-21 — `International-Playlist.m3u`
+### 2026-11-22 — `International-Playlist.m3u`
 
-- New channel identities: **6**
-- Channel identities removed: **10**
-- Stream URLs added / removed: **10 / 10**
+- New channel identities: **1**
+- Channel identities removed: **7**
+- Stream URLs added / removed: **2 / 11**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Star Gold 2
-- Star Gold Romance
-- Star Gold Select
-- Star Movies (India)
-- Zee Talkies
-- Zee Thirai
+- Starz Cinema
 
 Removed channel identities (up to 10):
-- AMC Latin America
-- D Music [ ]
-- MLB
-- Mohammed Abdo
-- Rakuten TV Comedy Movies
-- Rakuten TV Comedy Movies Germany
-- Rakuten TV Comedy Movies Italy
-- Rakuten TV Comedy Movies UK
-- Stadium
-- T Sports
+- Aurora Media Films
+- Bol Entertainment
+- Nande Portetepe TV
+- Rakuten TV Drama Movies
+- Rakuten TV Drama Movies Germany
+- Rakuten TV Drama Movies Italy
+- Rakuten TV Drama Movies UK
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
