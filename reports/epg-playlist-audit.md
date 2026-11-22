@@ -1,13 +1,13 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-21T07:19:38+00:00**
+Generated: **2026-11-22T02:30:13+00:00**
 
 This report measures the two maintained M3U playlists included in the automated EPG pipeline. This report covers only the two maintained playlists.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1389 | 694 | 431 | 397 | 431 | 383 | 263 | OK |
-| International-Playlist.m3u | 3304 | 1815 | 622 | 562 | 609 | 547 | 1193 | OK |
+| IPTV-Playlist.m3u | 1389 | 694 | 431 | 393 | 431 | 377 | 263 | OK |
+| International-Playlist.m3u | 3304 | 1815 | 622 | 560 | 609 | 542 | 1193 | OK |
 
 ## Group coverage
 
@@ -15,10 +15,10 @@ This report measures the two maintained M3U playlists included in the automated 
 |---|---:|---:|---:|---:|
 | Adult | 366 | 13 | 13 | 353 |
 | Argentina | 14 | 1 | 0 | 13 |
-| Bangladesh | 82 | 5 | 4 | 77 |
+| Bangladesh | 82 | 5 | 3 | 77 |
 | Brazil | 14 | 7 | 7 | 7 |
 | Bulgaria | 21 | 6 | 4 | 15 |
-| Canada | 27 | 20 | 16 | 7 |
+| Canada | 27 | 20 | 15 | 7 |
 | Chile | 10 | 0 | 0 | 10 |
 | China | 9 | 3 | 3 | 6 |
 | Colombia | 9 | 0 | 0 | 9 |
@@ -33,8 +33,8 @@ This report measures the two maintained M3U playlists included in the automated 
 | Hungary | 14 | 6 | 5 | 8 |
 | Indian Bangla | 42 | 32 | 29 | 10 |
 | Indian Entertainment | 195 | 163 | 152 | 32 |
-| Indian Movies | 89 | 67 | 63 | 22 |
-| Indian Music | 71 | 59 | 56 | 12 |
+| Indian Movies | 89 | 67 | 60 | 22 |
+| Indian Music | 71 | 59 | 55 | 12 |
 | International | 182 | 49 | 41 | 133 |
 | Iran | 13 | 1 | 0 | 12 |
 | Italy | 23 | 12 | 12 | 11 |
@@ -48,14 +48,14 @@ This report measures the two maintained M3U playlists included in the automated 
 | Panama | 5 | 0 | 0 | 5 |
 | Paraguay | 5 | 0 | 0 | 5 |
 | Peru | 9 | 0 | 0 | 9 |
-| Poland | 23 | 11 | 9 | 12 |
+| Poland | 23 | 11 | 10 | 12 |
 | Religious | 27 | 6 | 6 | 21 |
 | Romania | 30 | 9 | 7 | 21 |
-| Russia | 75 | 20 | 16 | 55 |
+| Russia | 75 | 20 | 18 | 55 |
 | Saudi Arabia | 8 | 0 | 0 | 8 |
 | Singapore | 5 | 1 | 0 | 4 |
 | Spain | 18 | 6 | 5 | 12 |
-| Sports | 111 | 68 | 67 | 43 |
+| Sports | 111 | 68 | 68 | 43 |
 | Sweden | 49 | 12 | 12 | 37 |
 | Turkey | 14 | 0 | 0 | 14 |
 | Ukraine | 28 | 8 | 7 | 20 |

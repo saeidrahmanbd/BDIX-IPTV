@@ -1,10 +1,10 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-21T07:19:38+00:00**
+Generated: **2026-11-22T02:30:13+00:00**
 
 - Active Bangladesh playlist identities: **86**
 - Identities with a retained source mapping: **5**
-- Identities with usable current/future schedules: **4**
+- Identities with usable current/future schedules: **3**
 - Identities without a source mapping: **81**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
@@ -14,7 +14,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 
 | Source label | Matched Bangladesh IDs | IDs with usable current/future schedules | Source health | Error / note |
 |---|---:|---:|---|---|
-| https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | OK | - |
 | iptv-org/epg (targeted build-time guide) | 2 | 2 | OK | - |
 | Maasranga official weekly grid (undated) | 1 | 1 | OK | - |
 
@@ -23,7 +22,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; rtvbd.tv/live.php: URLError; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 29 | - |
+| FAILED | https://migrate.btvlive.gov.bd/channel/BTV | 0 | 0 | 0 | BTV official guide produced fewer than 8 explicit current/future programme slots; the page markup or schedule may have changed. |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
