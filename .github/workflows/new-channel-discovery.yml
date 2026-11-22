@@ -16,6 +16,8 @@ on:
       - 'scripts/discover_bd_in_new_queues.py'
       - 'scripts/run_bd_discovery_with_policy.py'
       - 'scripts/validate_discovery_run.py'
+      - 'scripts/stream_url_identity.py'
+      - 'config/discovery-retired-endpoints.json'
       - 'scripts/discovery_schedule_guard.py'
       - 'scripts/country_verification.py'
       - 'scripts/discover_bd_in_new_queues.py'
@@ -81,6 +83,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_channel_discovery_policy.py'
       - name: Test country metadata is advisory
         run: python -m unittest discover -s tests -p 'test_country_verification.py'
+      - name: Test discovery stream URL identity and retired endpoint protection
+        run: python -m unittest discover -s tests -p 'test_stream_url_identity.py'
       - name: Test discovery stream validator
         run: python -m unittest discover -s tests -p 'test_discovery_run_validation.py'
       - name: Test discovery daily guard
