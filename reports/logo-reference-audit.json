@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5241,
-  "all_explicitly_referenced_logo_files": 2505,
-  "runtime_referenced_logo_files": 2503,
+  "all_explicitly_referenced_logo_files": 2503,
+  "runtime_referenced_logo_files": 2501,
   "playlist_referenced_logo_files": 2475,
-  "apparently_unreferenced_by_any_text_file": 2736,
-  "apparently_unreferenced_by_runtime_sources": 2738,
+  "apparently_unreferenced_by_any_text_file": 2738,
+  "apparently_unreferenced_by_runtime_sources": 2740,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -14860,9 +14860,6 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/international/starz-cinema-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -15429,9 +15426,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/lifetimemovies.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/liratv-9d36bd20f2.png": [
       "International-Playlist.m3u",
@@ -18682,7 +18676,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/starz-cinema-720p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/starz-comedy-b4f7a4d16e.png": [
       "International-Playlist.m3u",
@@ -26411,9 +26406,6 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/international/starz-cinema-720p.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -26980,9 +26972,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/lifetimemovies.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/liratv-9d36bd20f2.png": [
       "International-Playlist.m3u",
@@ -30237,7 +30226,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/starz-cinema-720p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/starz-comedy-b4f7a4d16e.png": [
       "International-Playlist.m3u",
@@ -34381,6 +34371,7 @@
     "logos/international/star-trek-voyager-germany-it.png",
     "logos/international/star-trek-voyager-germany.png",
     "logos/international/star-trek-voyager-united-states.png",
+    "logos/international/starz-cinema-720p.png",
     "logos/international/stingray-cityscapes-1080p.png",
     "logos/international/stingray-cozy-cafe-1080p.png",
     "logos/international/summer-of-movies.png",
@@ -34542,6 +34533,7 @@
     "logos/kuriakos-kids-1080p.png",
     "logos/la-kalle-1080p.png",
     "logos/laff-tv.png",
+    "logos/lifetimemovies.png",
     "logos/lingkar-tv.png",
     "logos/local-logo-accuweather.png",
     "logos/local-logo-bloomberg-tv.png",
