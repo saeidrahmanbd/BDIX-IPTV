@@ -2710,7 +2710,7 @@ http://stream.mcquack.net/444/index.m3u8
 http://103.135.253.32:8080/T-SPORTS-FULL-HD/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="TSports.bd" tvg-name="T Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png" channel-id="TSports.bd" tvg-country="BD" tvg-language="ben" group-title="Review",T Sports
 https://tvsen5.aynaott.com/TnMn5kZz8aLmjklkk/index.m3u8
-#EXTINF:-1 tvg-id="custom.tentvprime" tvg-name="Ten TV Prime" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-tv-prime.png" channel-id="custom.tentvprime" tvg-country="IN" tvg-language="ben" group-title="Review",Ten TV Prime
+#EXTINF:-1 tvg-id="custom.tentvprime" tvg-name="Ten TV Prime" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-tv-prime.png" channel-id="custom.tentvprime" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Ten TV Prime
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/primetv.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="ThanthiOne.in" tvg-name="Thanthi One" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thanthi-one.png" channel-id="ThanthiOne.in" tvg-country="IN" tvg-language="tam" group-title="Review",Thanthi One
 https://mumbai-edge.smartplaytv.in/thanthione/index.m3u8
