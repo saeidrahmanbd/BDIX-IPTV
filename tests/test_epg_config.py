@@ -173,14 +173,17 @@ class EpgConfigTests(unittest.TestCase):
         self.assertTrue(epg_coverage.source_region_compatible("US", "SonyKALHindi.us", sling))
         self.assertFalse(epg_coverage.source_region_compatible("IN", "B4UMusic.in", sling))
 
-    def test_private_m3u4u_source_is_selected_for_discovery_without_mapping(self):
+    def test_m3u4u_is_excluded_from_public_generation_even_without_mapping(self):
         with tempfile.TemporaryDirectory() as tmp:
             mapping = Path(tmp) / "mapping.csv"
             mapping.write_text("group,channel,tvg_id,epg_id,source,status,note\n", encoding="utf-8")
             private_url = "https://m3u4u.com/epg/example-private-feed.xml"
             with patch.object(generate_epg, "MAPPING", mapping), patch.dict(os.environ, {"M3U4U_XMLTV_URL": private_url}):
                 selected = generate_epg.sources_with_mapped_channels([private_url, "https://example.test/unused.xml"])
-        self.assertEqual(selected, [private_url])
+                configured = generate_epg.configured_sources()
+        self.assertNotIn(private_url, selected)
+        self.assertNotIn(private_url, configured)
+        self.assertNotIn(private_url, generate_epg.sources_with_mapped_channels([private_url]))
 
     def test_targeted_iptv_org_guide_is_audited_when_present(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -223,10 +226,11 @@ class EpgConfigTests(unittest.TestCase):
         )
         self.assertEqual(epg_coverage.source_health(set(), set(), {}), "NO_CHANNELS")
 
-    def test_private_m3u4u_source_is_available_to_final_generation_without_leaking_its_label(self):
+    def test_private_m3u4u_remains_available_to_private_audit_but_not_public_generation(self):
         private_url = "https://m3u4u.com/epg/example-private-feed.xml"
         with patch.dict(os.environ, {"M3U4U_XMLTV_URL": private_url}):
-            self.assertIn(private_url, generate_epg.configured_sources())
+            self.assertIn(private_url, epg_coverage.configured_sources())
+            self.assertNotIn(private_url, generate_epg.configured_sources())
             self.assertNotEqual(generate_epg.source_label(private_url), private_url)
             status_line = generate_epg.source_status_line(
                 private_url, f"FAILED: {private_url}"
