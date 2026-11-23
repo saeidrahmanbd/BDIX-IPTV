@@ -414,7 +414,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn('group-title="Review"', output)
             self.assertIn('x-discovery-hold-reason="unverified-backup-stream"', output)
             self.assertNotIn('group-title="New Backups"', output)
-            self.assertIn("Moved unverified alternate stream Travelxp", report.read_text(encoding="utf-8"))
+            self.assertIn("Moved unverified New Backups candidate Travelxp to Review", report.read_text(encoding="utf-8"))
 
     def test_final_iptv_validation_allows_explicitly_tagged_unverified_backup_review_hold(self):
         import os
