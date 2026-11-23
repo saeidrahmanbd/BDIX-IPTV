@@ -178,9 +178,11 @@ def run_blocks_retry(run: dict[str, Any], client=None, workflow_file: str = "new
     """
     status = str(run.get("status") or "").casefold()
     conclusion = str(run.get("conclusion") or "").casefold()
-    if status != "completed":
+    # Queued/pending runs have not acquired the writer lock or started work.
+    # They must not reserve the whole Bangladesh date indefinitely.
+    if status in {"in_progress", "waiting"}:
         return True
-    if conclusion not in {"success", "neutral"}:
+    if status != "completed" or conclusion not in {"success", "neutral"}:
         return False
     jobs = client.workflow_run_jobs(int(run["id"])) if client is not None else run.get("jobs", [])
     return successful_required_job(jobs if isinstance(jobs, list) else [], workflow_file)
@@ -264,7 +266,7 @@ def should_current_run_execute(
     manual = str(event or "").casefold() == "workflow_dispatch"
     active_others = [
         run for run in others
-        if str(run.get("status") or "").casefold() != "completed"
+        if str(run.get("status") or "").casefold() in {"in_progress", "waiting"}
     ]
     if manual:
         # Logo localization has its own shared main-branch writer concurrency
