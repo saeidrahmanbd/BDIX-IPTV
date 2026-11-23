@@ -112,6 +112,7 @@ jobs:
             .github/workflows
             analytics
             assets
+            config
             docs
             epg
             logos
