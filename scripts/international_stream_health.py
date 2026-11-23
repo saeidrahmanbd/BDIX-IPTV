@@ -456,7 +456,7 @@ def _review_recovery_target(info: str, original_group: str,
             return "Backup"
         primary_keys.update(identity_keys)
         name_key = international_policy.channel_key(name)
-        if target.casefold() != "adult" and country not in {"BD", "IN"} and (
+        if target.casefold() != "adult" and country not in {"BD", "IN", "ZZ"} and (
             target.casefold() == "international"
             or target.casefold() == "pakistani"
             or international_policy.country_from_group(target) == country
