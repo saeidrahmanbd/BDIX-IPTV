@@ -21,7 +21,6 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/international-channel-discovery.yml'
-      - 'International-Playlist.m3u'
       - 'scripts/discover_international_channels.py'
       - 'scripts/stream_url_identity.py'
       - 'config/discovery-retired-endpoints.json'
