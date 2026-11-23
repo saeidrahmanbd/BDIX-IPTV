@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5251,
-  "all_explicitly_referenced_logo_files": 2525,
-  "runtime_referenced_logo_files": 2523,
-  "playlist_referenced_logo_files": 2496,
-  "apparently_unreferenced_by_any_text_file": 2726,
-  "apparently_unreferenced_by_runtime_sources": 2728,
+  "all_explicitly_referenced_logo_files": 2524,
+  "runtime_referenced_logo_files": 2522,
+  "playlist_referenced_logo_files": 2495,
+  "apparently_unreferenced_by_any_text_file": 2727,
+  "apparently_unreferenced_by_runtime_sources": 2729,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -13604,10 +13604,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/etv-beats-1080p.png": [
-      "IPTV-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/etv-cinema-8211c9a4643e7d2c26af.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -16993,7 +16989,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/oli-tv-india-b4a7917c53.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -25245,10 +25240,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/etv-beats-1080p.png": [
-      "IPTV-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/etv-cinema-8211c9a4643e7d2c26af.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -28635,7 +28626,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/oli-tv-india-b4a7917c53.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -33618,6 +33608,7 @@
     "logos/espn5.png",
     "logos/espn8-the-ocho-1080p-76369a61db.png",
     "logos/etv-bal-bharat.png",
+    "logos/etv-beats-1080p.png",
     "logos/etv-telugu.png",
     "logos/euro-sport-hd.png",
     "logos/euro-sports-hd.png",
