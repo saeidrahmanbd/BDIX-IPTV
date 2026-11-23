@@ -476,8 +476,10 @@ def main():
   else:
    if target=="Adult":
     adult_rows.append((cname,target,ccode,url))
+    per_group[target]+=1
    elif target=="Fashion TV":
     fashion_rows.append((cname,target,ccode,url))
+    per_group[target]+=1
    else:
     new_rows.append((cname,target,ccode,url))
     per_group[target]+=1
@@ -542,7 +544,7 @@ def main():
    if base is None or not safe_url(url_of(b)):
     filtered_existing.append((name,old,reason or "unsafe or ineligible discovery candidate"))
     continue
-   group=(base if base in {"Adult", "Fashion TV"} else ("New Backups" if old_key in {"new backup","new backups"} else "New Channels"))
+   group=("New Backups" if old_key in {"new backup","new backups"} else (base if base in {"Adult", "Fashion TV"} else "New Channels"))
   else:
    # Preserve unrelated existing entries. Remove only the two exact false
    # positives from earlier discovery runs; do not broadly reclassify
