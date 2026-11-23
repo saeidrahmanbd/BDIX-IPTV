@@ -652,15 +652,19 @@ def final_mode(playlist, report, baseline, mode):
     errors = []
     wrong_queue = [
         e["name"] for e in candidates
-        if e["group"].casefold() not in queue_names | {"fashion tv"}
+        if e["group"].casefold() not in queue_names
         and not (
-            e["group"].casefold() == "review"
-            and e["attrs"].get("x-discovery-hold-reason") in {"unverified-backup-stream", "unverified-special-primary"}
+            (e["group"].casefold() == "fashion tv"
+             and discovery.FASHION_RE.search(f"{e['name']} {e['attrs'].get('tvg-name', '')}"))
+            or (e["group"].casefold() == "adult"
+                and discovery.is_adult_channel(e["attrs"], e["name"]))
+            or (e["group"].casefold() == "review"
+                and e["attrs"].get("x-discovery-hold-reason") in {"unverified-backup-stream", "unverified-special-primary"})
         )
     ]
     if wrong_queue:
         errors.append(
-            "new International candidates must remain in New Channels/New Backups or an approved Review hold: "
+            "new International candidates must remain in New Channels/New Backups, an identified Fashion TV/Adult group, or an approved Review hold: "
             + ", ".join(wrong_queue[:20])
         )
 
