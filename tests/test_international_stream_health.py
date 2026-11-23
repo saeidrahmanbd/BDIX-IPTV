@@ -162,8 +162,18 @@ class InternationalStreamHealthTests(unittest.TestCase):
         for name, expected_group in cases:
             with self.subTest(name=name):
                 source = self.playlist(row(name=name, group="Review"))
+                blocks = health.parse(source)[1]
+                info = blocks[0][0]
+                url = health.urls(blocks[0])[0]
+                key = health.stream_key(info, url)
+                history = {"entries": {key: {
+                    "name": name, "tvg_id": "testmovie.us", "country": "US",
+                    "original_group": expected_group, "auto_review": True,
+                    "consecutive_failures": 1, "last_checked_date": "2026-11-07",
+                    "last_status": "fail", "removed": False,
+                }}, "removed": []}
                 output, _, events = apply(
-                    source, "ok", {}, "2026-11-08",
+                    source, "ok", history, "2026-11-08",
                     status=200, reason="Media bytes received",
                 )
                 self.assertIn(f'group-title="{expected_group}"', output)
