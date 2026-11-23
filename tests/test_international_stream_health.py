@@ -206,7 +206,7 @@ class InternationalStreamHealthTests(unittest.TestCase):
     def test_working_manual_review_channel_moves_to_primary(self):
         source = self.playlist(row(name="Manual Movie", group="Review"))
         output, _, events = apply(source, "ok", {}, "2026-11-08", status=200, reason="Media bytes received")
-        self.assertIn('group-title="International"', output)
+        self.assertIn('group-title="International Movies"', output)
         self.assertEqual(events[0]["action"], "restored-to-primary")
 
     def test_working_review_special_genres_are_restored_to_primary_groups(self):
