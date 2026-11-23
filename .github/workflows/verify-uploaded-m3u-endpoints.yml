@@ -1,0 +1,184 @@
+name: Verify uploaded M3U alternative streams
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_m3u:
+        description: "Paste the complete uploaded M3U text. This input is used only for this run and is not committed."
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: uploaded-m3u-endpoint-verification
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Verify candidate endpoints against the live playlist
+        env:
+          CANDIDATE_M3U: ${{ inputs.candidate_m3u }}
+        run: |
+          python - <<'PY'
+          import csv, os, re, time, json, hashlib
+          from urllib.parse import urlsplit, urlunsplit
+          from pathlib import Path
+          import requests
+
+          REPO_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u"
+          candidate_text = os.environ.get("CANDIDATE_M3U", "")
+          if "#EXTM3U" not in candidate_text[:1000]:
+              raise SystemExit("Input does not look like an M3U playlist.")
+
+          def parse(text):
+              rows, meta = [], None
+              for raw in text.splitlines():
+                  line = raw.strip()
+                  if line.startswith("#EXTINF"):
+                      attrs = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
+                      name = line.rsplit(",", 1)[-1].strip() if "," in line else attrs.get("tvg-name", "")
+                      meta = {"name": name, "tvg_name": attrs.get("tvg-name", name),
+                              "tvg_id": attrs.get("tvg-id", ""), "group": attrs.get("group-title", "")}
+                  elif line and not line.startswith("#") and meta:
+                      rows.append({**meta, "url": line})
+                      meta = None
+              return rows
+
+          def identity(s):
+              s = (s or "").lower()
+              s = re.sub(r'\b(hd|fhd|uhd|4k|sd|live|tv)\b', ' ', s)
+              return re.sub(r'[^a-z0-9]+', '', s)
+
+          def endpoint_key(url):
+              p = urlsplit(url.strip())
+              return (p.hostname or "").lower(), p.path.rstrip("/").lower()
+
+          candidates = parse(candidate_text)
+          if not candidates:
+              raise SystemExit("No EXTINF/URL entries found in the supplied M3U.")
+
+          sess = requests.Session()
+          sess.headers.update({"User-Agent": "BDIX-IPTV-Endpoint-Audit/1.0", "Accept": "*/*"})
+          current_resp = sess.get(REPO_URL, timeout=30)
+          current_resp.raise_for_status()
+          current = parse(current_resp.text)
+          current_urls = {x["url"].strip() for x in current}
+          current_by_identity = {}
+          current_by_endpoint = {}
+          for row in current:
+              keys = {identity(row["name"]), identity(row["tvg_name"]), identity(row["tvg_id"])}
+              for key in keys:
+                  if key:
+                      current_by_identity.setdefault(key, []).append(row)
+              current_by_endpoint.setdefault(endpoint_key(row["url"]), []).append(row)
+
+          results = []
+          for i, row in enumerate(candidates, 1):
+              url = row["url"]
+              ident_keys = {identity(row["name"]), identity(row["tvg_name"]), identity(row["tvg_id"])}
+              matches = []
+              for key in ident_keys:
+                  if key:
+                      matches.extend(current_by_identity.get(key, []))
+              # De-duplicate matched current records by URL.
+              matches = list({m["url"]: m for m in matches}.values())
+              exact = url in current_urls
+              same_endpoint = current_by_endpoint.get(endpoint_key(url), [])
+              started = time.time()
+              status, final_url, content_type, manifest, detail = "", "", "", False, ""
+              try:
+                  response = sess.get(url, timeout=(8, 18), allow_redirects=True,
+                                      headers={"Range": "bytes=0-65535"}, stream=True)
+                  status = str(response.status_code)
+                  final_url = response.url
+                  content_type = response.headers.get("Content-Type", "")
+                  sample = next(response.iter_content(chunk_size=65536), b"")
+                  manifest = b"#EXTM3U" in sample[:4096]
+                  if response.status_code in (200, 206):
+                      detail = "HLS manifest returned" if manifest else "HTTP response received; manifest not confirmed"
+                  else:
+                      detail = "HTTP error response"
+                  response.close()
+              except requests.RequestException as exc:
+                  detail = f"Request error: {type(exc).__name__}: {str(exc)[:220]}"
+              elapsed = round(time.time() - started, 2)
+              if exact:
+                  relation = "Exact URL already in playlist"
+              elif same_endpoint:
+                  relation = "Same host/path endpoint; query or URL variant"
+              elif matches:
+                  relation = "Existing channel identity; potential alternative"
+              else:
+                  relation = "No identity match; possible new channel or naming mismatch"
+              if exact:
+                  verdict = "ALREADY_PRESENT"
+              elif status in ("200", "206") and manifest:
+                  verdict = "HTTP_OK_HLS_MANIFEST"
+              elif status in ("200", "206"):
+                  verdict = "HTTP_OK_MANIFEST_UNCONFIRMED"
+              elif status:
+                  verdict = "HTTP_NOT_OK"
+              else:
+                  verdict = "INCONCLUSIVE_NETWORK_ERROR"
+              results.append({
+                  "candidate_name": row["name"], "candidate_group": row["group"],
+                  "candidate_url": url, "relation_to_repository": relation,
+                  "matched_repository_names": "; ".join(sorted({m["name"] for m in matches})),
+                  "matched_repository_urls": "; ".join(sorted({m["url"] for m in matches})),
+                  "exact_url_present": str(exact).lower(), "http_status": status,
+                  "hls_manifest_detected": str(manifest).lower(), "content_type": content_type,
+                  "final_url": final_url, "response_seconds": elapsed, "verdict": verdict,
+                  "detail": detail
+              })
+
+          out = Path("endpoint-audit")
+          out.mkdir(exist_ok=True)
+          csv_path = out / "uploaded-m3u-endpoint-audit.csv"
+          with csv_path.open("w", newline="", encoding="utf-8-sig") as f:
+              writer = csv.DictWriter(f, fieldnames=list(results[0].keys()))
+              writer.writeheader()
+              writer.writerows(results)
+
+          counts = {}
+          for r in results:
+              counts[r["verdict"]] = counts.get(r["verdict"], 0) + 1
+          md = [
+              "# Uploaded M3U endpoint verification",
+              "",
+              f"- Candidate entries checked: **{len(results)}**",
+              f"- Current repository entries parsed: **{len(current)}**",
+              f"- Live playlist source: {REPO_URL}",
+              "- This workflow is read-only: it does not modify either playlist.",
+              "",
+              "## Results summary",
+              ""
+          ]
+          md.extend(f"- {k}: **{v}**" for k, v in sorted(counts.items()))
+          md += ["", "## Candidate results", "",
+                 "| Candidate | Relationship | HTTP | HLS manifest | Verdict |",
+                 "|---|---|---:|---|---|"]
+          for r in results:
+              nm = r["candidate_name"].replace("|", "\|")
+              rel = r["relation_to_repository"].replace("|", "\|")
+              md.append(f"| {nm} | {rel} | {r['http_status'] or '—'} | {r['hls_manifest_detected']} | {r['verdict']} |")
+          md += ["", "See the CSV artifact for exact URLs, matched repository streams, final redirect URLs, timing, and error details.",
+                 "", "## Interpretation", "",
+                 "- An HTTP 200/206 response with an HLS manifest is a positive manifest check, not proof of sustained playback.",
+                 "- A successful manifest still needs segment/key validation and playback testing before promotion.",
+                 "- Network errors and rate limits are inconclusive, not proof that a stream is dead.",
+                 "- No candidate is automatically imported."]
+          (out / "uploaded-m3u-endpoint-audit.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+          print(json.dumps({"candidate_count": len(results), "repository_count": len(current), "summary": counts}, indent=2))
+          PY
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: uploaded-m3u-endpoint-audit
+          path: endpoint-audit/
+          if-no-files-found: error
+          retention-days: 30
