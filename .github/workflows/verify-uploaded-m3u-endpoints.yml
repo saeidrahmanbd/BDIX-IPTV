@@ -40,7 +40,7 @@ jobs:
               for raw in text.splitlines():
                   line = raw.strip()
                   if line.startswith("#EXTINF"):
-                      attrs = dict(re.findall(r'([\\w-]+)="([^"]*)"', line))
+                      attrs = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
                       name = line.rsplit(",", 1)[-1].strip() if "," in line else attrs.get("tvg-name", "")
                       meta = {"name": name, "tvg_name": attrs.get("tvg-name", name),
                               "tvg_id": attrs.get("tvg-id", ""), "group": attrs.get("group-title", "")}
@@ -51,7 +51,7 @@ jobs:
 
           def identity(s):
               s = (s or "").lower()
-              s = re.sub(r'\\b(hd|fhd|uhd|4k|sd|live|tv)\\b', ' ', s)
+              s = re.sub(r'\b(hd|fhd|uhd|4k|sd|live|tv)\b', ' ', s)
               return re.sub(r'[^a-z0-9]+', '', s)
 
           def endpoint_key(url):
@@ -163,8 +163,8 @@ jobs:
                  "| Candidate | Relationship | HTTP | HLS manifest | Verdict |",
                  "|---|---|---:|---|---|"]
           for r in results:
-              nm = r["candidate_name"].replace("|", "\\|")
-              rel = r["relation_to_repository"].replace("|", "\\|")
+              nm = r["candidate_name"].replace("|", "\|")
+              rel = r["relation_to_repository"].replace("|", "\|")
               md.append(f"| {nm} | {rel} | {r['http_status'] or '—'} | {r['hls_manifest_detected']} | {r['verdict']} |")
           md += ["", "See the CSV artifact for exact URLs, matched repository streams, final redirect URLs, timing, and error details.",
                  "", "## Interpretation", "",
@@ -172,7 +172,7 @@ jobs:
                  "- A successful manifest still needs segment/key validation and playback testing before promotion.",
                  "- Network errors and rate limits are inconclusive, not proof that a stream is dead.",
                  "- No candidate is automatically imported."]
-          (out / "uploaded-m3u-endpoint-audit.md").write_text("\\n".join(md) + "\\n", encoding="utf-8")
+          (out / "uploaded-m3u-endpoint-audit.md").write_text("\n".join(md) + "\n", encoding="utf-8")
           print(json.dumps({"candidate_count": len(results), "repository_count": len(current), "summary": counts}, indent=2))
           PY
       - name: Upload audit report
