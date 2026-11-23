@@ -436,8 +436,6 @@ def _review_recovery_target(info: str, original_group: str,
     name = name_of(info)
     context_group = original_group if original_group and original_group.casefold() != REVIEW.casefold() else "International"
     country = international_policy.country_code(a, context_group, name)
-    if not country or country == "ZZ":
-        return None
     # A stream with trusted primary-group provenance should return to that
     # same curated group. New-discovery eligibility must not be reapplied to
     # an established channel that was moved to Review only for health reasons.
@@ -465,6 +463,9 @@ def _review_recovery_target(info: str, original_group: str,
         ):
             country_ids[country].add(name_key)
         return target
+
+    if not country or country == "ZZ":
+        return None
 
     # A manually staged Review row without a trusted former primary group
     # still has to pass current discovery eligibility. This keeps prohibited
