@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-23T09:58:52+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-23T10:07:46+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12152
 - Existing playlist records: 3314
@@ -114,7 +114,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-23T09:58:56+06:00
+- Run timestamp: 2026-11-23T10:07:50+06:00
 - Mode: international
 - New entries and discovery queues probed: 66
 - Verified live media responses: 10
@@ -140,8 +140,8 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered BRIDGE Hits (576p) from New Channels — HTTP 404.
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
-- Retained Galaxy (720p) in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
-- Retained Galaxy Premium (720p) in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Retained Galaxy in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Retained Galaxy Premium in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Removed newly discovered Hollywood Ukraine (576p) from New Channels — HTTP 404.
 - Removed newly discovered HomePlus from New Channels — HTTP 404.
 - Removed newly discovered ICC plus (1080p) from New Channels — HTTP 404.
@@ -188,7 +188,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Final validation
 
-- Run timestamp: 2026-11-23T09:58:56+06:00
+- Run timestamp: 2026-11-23T10:07:51+06:00
 - Validation status: PASS
 - M3U entries parsed: 3314
 - Malformed EXTINF/URL pairs: 0
