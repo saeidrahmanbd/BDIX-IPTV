@@ -94,6 +94,25 @@ def permanently_banned_playlist_errors(entries):
             errors.append(name + " (permanently banned) in " + (a.get("group-title", "").strip() or "(missing group)"))
     return errors
 
+def primary_channel_number_collisions(entries):
+    """Return duplicate owner-assigned numbers mapped to their stable row identities.
+
+    Entries use the parser shape (EXTINF, attributes, URL). Group and normalized
+    stream URL are included so an existing collision is grandfathered only when
+    the exact same rows still own that number.
+    """
+    numbered = defaultdict(set)
+    for _, metadata, url in entries:
+        group = metadata.get("group-title", "").strip()
+        if group in EXCLUDE:
+            continue
+        number = metadata.get("tvg-chno", "").strip()
+        if not number:
+            continue
+        numbered[number].add((group, stream_url_key(url)))
+    return {number: rows for number, rows in numbered.items() if len(rows) > 1}
+
+
 def main():
     current=parse(P.read_text(encoding="utf-8-sig"))
     try: old=parse(subprocess.check_output(["git","show","HEAD:IPTV-Playlist.m3u"],text=True))
@@ -119,7 +138,14 @@ def main():
             # No owner-migration exception exists in the owner-curated architecture.
             review_promoted.append((state["name"],url,state["group"]))
         elif not cur and url not in current_by_url: review_removed.append((state["name"],url,state["group"]))
-    primary_chno=Counter(a.get("tvg-chno","").strip() for a,_ in cur_primary if a.get("tvg-chno","").strip()); chno_dupes=[n for n,c in primary_chno.items() if c>1]
+    current_chno_collisions = primary_channel_number_collisions(current)
+    baseline_chno_collisions = primary_channel_number_collisions(old)
+    chno_dupes = sorted(current_chno_collisions)
+    new_chno_dupes = sorted(
+        number for number, rows in current_chno_collisions.items()
+        if baseline_chno_collisions.get(number) != rows
+    )
+    preexisting_chno_dupes = sorted(set(chno_dupes) - set(new_chno_dupes))
     primary_identity=defaultdict(list)
     for a,u in cur_primary:
         for cid in {value.strip().casefold() for value in (a.get("tvg-id",""),a.get("channel-id","")) if value.strip()}:
@@ -190,7 +216,13 @@ def main():
     if review_reclassified: issues.append(f"review entries reclassified: {len(review_reclassified)}")
     if review_promoted: issues.append(f"protected review entries promoted: {len(review_promoted)}")
     if review_removed: issues.append(f"protected review entries deleted: {len(review_removed)}")
-    if chno_dupes: issues.append(f"duplicate primary channel numbers: {len(chno_dupes)}")
+    if new_chno_dupes:
+        issues.append("new or changed duplicate primary channel numbers: " + ", ".join(new_chno_dupes))
+    if preexisting_chno_dupes:
+        warnings.append(
+            "pre-existing owner-curated duplicate channel numbers preserved unchanged: "
+            + ", ".join(preexisting_chno_dupes)
+        )
     if duplicate_primary: issues.append(f"duplicate primary identities: {len(duplicate_primary)}")
 
     # These findings remain visible in the report, but automation cannot
@@ -223,8 +255,19 @@ def main():
     status="PASS" if not issues else "BLOCK"
     old_by_url={stream_url_key(u):(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in old}; cur_by_url_all={stream_url_key(u):(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in current}
     added=[u for u in cur_by_url_all if u not in old_by_url]; removed_all=[u for u in old_by_url if u not in cur_by_url_all]; modified=[u for u in cur_by_url_all if u in old_by_url and cur_by_url_all[u]!=old_by_url[u]]
-    lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Primary streams intentionally removed by known-bad or Indian genre policy: **{len(approved_removed)}**",f"- Primary streams quarantined: **{len(quarantined)}**",f"- Review entries reclassified: **{len(review_reclassified)}**",f"- Review entries promoted: **{len(review_promoted)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",f"- Permanently banned channel entries across all IPTV groups: **{len(permanent_ban_errors)}**",f"- Primary entries missing channel numbers: **{len(missing)}**",f"- Primary channel-number sequence issues (non-blocking; existing row order is protected): **{len(chno_sequence_issues)}**",f"- Numbered review entries: **{len(review_numbered)}**",f"- Same-ID metadata name conflicts: **{len(metadata_conflicts)}**",f"- Orphan Backup entries: **{len(orphan_backups)}**",f"- Active rows with incomplete required metadata: **{len(incomplete_metadata)}**",f"- tvg-id/channel-id inconsistencies: **{len(id_pair_conflicts)}**",f"- Entries missing tvg-language: **{len(missing_languages)}**",f"- Raw resolution/geoblock name tags: **{len(raw_name_issues)}**",f"- Missing logos in active groups: **{len(logo_missing)}**",f"- Missing logos deferred in review groups (Review/New Channels/New Backups): **{len(logo_missing_review)}**",f"- External logo URLs: **{len(logo_external)}**",f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",f"- Missing referenced local logo files: **{len(logo_missing_files)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Protected-queue policy","New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.","","## Channel-Number Sequence Review",f"Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **{len(chno_sequence_issues)}**.","","## Blocking Reasons"]
+    lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Primary streams intentionally removed by known-bad or Indian genre policy: **{len(approved_removed)}**",f"- Primary streams quarantined: **{len(quarantined)}**",f"- Review entries reclassified: **{len(review_reclassified)}**",f"- Review entries promoted: **{len(review_promoted)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers (all): **{len(chno_dupes)}**",f"- New/changed duplicate primary channel numbers (blocking): **{len(new_chno_dupes)}**",f"- Pre-existing duplicate primary channel numbers preserved unchanged: **{len(preexisting_chno_dupes)}**",f"- Permanently banned channel entries across all IPTV groups: **{len(permanent_ban_errors)}**",f"- Primary entries missing channel numbers: **{len(missing)}**",f"- Primary channel-number sequence issues (non-blocking; existing row order is protected): **{len(chno_sequence_issues)}**",f"- Numbered review entries: **{len(review_numbered)}**",f"- Same-ID metadata name conflicts: **{len(metadata_conflicts)}**",f"- Orphan Backup entries: **{len(orphan_backups)}**",f"- Active rows with incomplete required metadata: **{len(incomplete_metadata)}**",f"- tvg-id/channel-id inconsistencies: **{len(id_pair_conflicts)}**",f"- Entries missing tvg-language: **{len(missing_languages)}**",f"- Raw resolution/geoblock name tags: **{len(raw_name_issues)}**",f"- Missing logos in active groups: **{len(logo_missing)}**",f"- Missing logos deferred in review groups (Review/New Channels/New Backups): **{len(logo_missing_review)}**",f"- External logo URLs: **{len(logo_external)}**",f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",f"- Missing referenced local logo files: **{len(logo_missing_files)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Protected-queue policy","New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.","","## Channel-Number Sequence Review",f"Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **{len(chno_sequence_issues)}**.","","## Blocking Reasons"]
     lines.extend("- "+x for x in issues) if issues else lines.append("No hard safety blockers detected.")
+    lines += ["", "## Channel-number collision review", ""]
+    for number in chno_dupes:
+        rows = current_chno_collisions[number]
+        labels = []
+        for group, url in sorted(rows):
+            match = next((a for _, a, u in current if stream_url_key(u) == url and a.get("group-title", "").strip() == group), {})
+            labels.append(f"{match.get('tvg-name', '(unnamed)')} [{group}]")
+        classification = "BLOCKING (new/changed)" if number in new_chno_dupes else "PRESERVED (pre-existing)"
+        lines.append(f"- **{number}** — {classification}: " + "; ".join(labels))
+    if not chno_dupes:
+        lines.append("No duplicate primary channel numbers.")
     lines += ["", "## Permanent channel-ban blockers", ""]
     lines.extend("- " + x for x in permanent_ban_errors) if permanent_ban_errors else lines.append("No permanently banned channel IDs/names or MH One Prime legacy entries remain in the IPTV playlist.")
     lines += ["","## Warnings / Manual Review",""]
