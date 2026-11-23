@@ -347,7 +347,7 @@ def probe_mode(playlist, report, baseline, mode):
             verified_starts.add(e["start"])
         else:
             inconclusive_starts.add(e["start"])
-            if e["group"].casefold() in {"new backup", "new backups"}:
+            if e["group"].casefold() in {"new backup", "new backups", "adult", "fashion tv"}:
                 # A New Backup is only valid after its alternate stream is verified.
                 # Keep an inconclusive candidate out of that queue, but preserve it
                 # in the quarantined Review group for a later manual check.
