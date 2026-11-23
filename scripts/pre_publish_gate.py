@@ -141,7 +141,18 @@ def main():
             missing_fields=[key for key in ("tvg-name","tvg-id","channel-id","tvg-country","tvg-logo") if not a.get(key,"").strip()]
             if missing_fields: incomplete_metadata.append((a.get("tvg-name",""),missing_fields))
     missing=[a.get("tvg-name","") for a,_ in cur_primary if not a.get("tvg-chno","").strip()]
-    chno_sequence_issues=[(index+1,a.get("tvg-name",""),a.get("tvg-chno","").strip() or "(missing)") for index,(a,_) in enumerate(cur_primary) if a.get("tvg-chno","").strip()!=str(index+1)]
+    # Owner-assigned channel numbers are preserved verbatim and need not equal row
+    # position. Flag only malformed numbers and order inversions within a group.
+    chno_sequence_issues=[]; last_chno_by_group={}
+    for a,_ in cur_primary:
+        chno_value=a.get("tvg-chno","").strip(); chno_group=a.get("group-title","").strip()
+        if not chno_value: continue
+        if not re.fullmatch(r"[1-9][0-9]*",chno_value):
+            chno_sequence_issues.append((chno_group,a.get("tvg-name",""),chno_value)); continue
+        chno_number=int(chno_value)
+        if chno_group in last_chno_by_group and chno_number<=last_chno_by_group[chno_group]:
+            chno_sequence_issues.append((chno_group,a.get("tvg-name",""),chno_value))
+        last_chno_by_group[chno_group]=chno_number
     review_numbered=[a.get("tvg-name","") for _,a,_ in current if a.get("group-title","").strip() in EXCLUDE and a.get("tvg-chno","").strip()]
     # Every published group, including Backup and review queues, must agree on
     # the display name for a given channel ID. This catches the common case

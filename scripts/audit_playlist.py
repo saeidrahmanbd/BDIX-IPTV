@@ -261,11 +261,26 @@ for info, url in primary_entries:
         primary_channel_numbers[chno].append((info, url))
 primary_duplicate_ids = {key: items for key, items in primary_identity_groups.items() if len(items) > 1}
 primary_chno_collisions = {key: items for key, items in primary_channel_numbers.items() if len(items) > 1}
+# Channel numbers are owner-assigned and preserved verbatim; they are not required
+# to equal the row position (gaps, unnumbered alternate feeds and the
+# Bangladesh group's tvg-chno ordering are intentional). Review only genuine
+# integrity problems: malformed numbers and order inversions within a group.
+# Missing numbers and duplicate numbers are reported by their own checks.
 primary_chno_sequence_issues = []
-for expected_number, (info, url) in enumerate(primary_entries, start=1):
-    actual_number = attrs(info).get("tvg-chno", "").strip()
-    if actual_number != str(expected_number):
-        primary_chno_sequence_issues.append((expected_number, actual_number or "(missing)", display_name(info)))
+_last_chno_by_group = {}
+for info, url in primary_entries:
+    _meta = attrs(info)
+    actual_number = _meta.get("tvg-chno", "").strip()
+    _group = _meta.get("group-title", "").strip()
+    if not actual_number:
+        continue
+    if not re.fullmatch(r"[1-9][0-9]*", actual_number):
+        primary_chno_sequence_issues.append(("a positive integer", actual_number, display_name(info)))
+        continue
+    _number = int(actual_number)
+    if _group in _last_chno_by_group and _number <= _last_chno_by_group[_group]:
+        primary_chno_sequence_issues.append((f"a number above {_last_chno_by_group[_group]}", actual_number, display_name(info)))
+    _last_chno_by_group[_group] = _number
 
 suspicious_urls = []
 advisory_urls = []
