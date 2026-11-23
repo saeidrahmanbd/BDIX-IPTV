@@ -64,6 +64,32 @@ def parse_playlist(text):
         })
     return lines, entries, malformed
 
+
+def stable_group_order(lines):
+    """Move only channel blocks between group sections; preserve order within each group."""
+    registry_line = next((line for line in lines if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")), "")
+    try:
+        registry = json.loads(registry_line.split(":", 1)[1]) if registry_line else []
+    except (IndexError, json.JSONDecodeError):
+        registry = []
+    rank = {str(group).casefold(): index for index, group in enumerate(registry)}
+    first = next((i for i, line in enumerate(lines) if line.startswith("#EXTINF:")), len(lines))
+    prefix, blocks, current = lines[:first], [], None
+    for line in lines[first:]:
+        if line.startswith("#EXTINF:"):
+            if current is not None:
+                blocks.append(current)
+            current = [line]
+        elif current is not None:
+            current.append(line)
+        else:
+            prefix.append(line)
+    if current is not None:
+        blocks.append(current)
+    blocks.sort(key=lambda block: rank.get(attrs(block[0]).get("group-title", "").strip().casefold(), len(rank)))
+    return prefix + [line for block in blocks for line in block]
+
+
 def classify_response(status, headers, body, url):
     if status in (404, 410):
         return "dead", f"HTTP {status}"
@@ -347,9 +373,9 @@ def probe_mode(playlist, report, baseline, mode):
             verified_starts.add(e["start"])
         else:
             inconclusive_starts.add(e["start"])
-            if e["group"].casefold() in {"new backup", "new backups", "adult", "fashion tv"}:
-                # New backups and newly discovered special primary channels must be
-                # verified before they remain in their published destination group.
+            if e["group"].casefold() in {"new backup", "new backups", "adult"}:
+                # Fashion TV is an always-allowed dedicated group. An inconclusive
+                # probe is not evidence that its channel should leave that group.
                 current = update_lines.get(e["start"], e["extinf"])
                 current = discovery.set_attr(current, "group-title", "Review")
                 hold_reason = "unverified-backup-stream" if e["group"].casefold() in {"new backup", "new backups"} else "unverified-special-primary"
@@ -357,16 +383,19 @@ def probe_mode(playlist, report, baseline, mode):
                 update_lines[e["start"]] = current
                 if hold_reason == "unverified-backup-stream":
                     counts["unverified backup streams moved to Review"] += 1
-                else:
-                    counts["unverified Adult/Fashion primary streams moved to Review"] += 1
-                if hold_reason == "unverified-backup-stream":
                     details.append(
                         f"- Moved unverified alternate stream {e['name']} from {e['group']} to Review — probe was inconclusive ({reason})."
                     )
                 else:
+                    counts["unverified Adult primary streams moved to Review"] += 1
                     details.append(
                         f"- Moved unverified {e['group']} candidate {e['name']} to Review — probe was inconclusive ({reason})."
                     )
+            elif e["group"].casefold() == "fashion tv":
+                counts["inconclusive Fashion TV primaries retained in Fashion TV"] += 1
+                details.append(
+                    f"- Retained Fashion TV candidate {e['name']} in Fashion TV — probe was inconclusive ({reason}); Fashion TV is always allowed."
+                )
             else:
                 counts["inconclusive streams retained for manual review"] += 1
                 details.append(
@@ -406,6 +435,7 @@ def probe_mode(playlist, report, baseline, mode):
         e = by_start[start]
         remove_indices.update(range(e["start"], e["end"] + 1))
     new_lines = [update_lines.get(i, line) for i, line in enumerate(lines) if i not in remove_indices]
+    new_lines = stable_group_order(new_lines)
     p.write_text("\n".join(new_lines).rstrip() + "\n", encoding="utf-8")
     report_body = [
         f"- Run timestamp: {now()}",
@@ -597,7 +627,7 @@ def final_mode(playlist, report, baseline, mode):
             f"- Discovery queue rows with non-local/broken logos: {len(queue_logo_issues)}",
             f"- New Backup identity/duplicate-primary issues: {len(backup_identity_issues)}",
             "- Existing unrelated playlist defects and incomplete nonessential country metadata do not block discovery.",
-            "- New Channels retains primary candidates for owner review; only verified alternates remain in New Backups, and inconclusive alternates are held in Review.",
+            "- New Channels retains eligible Movies/Music primaries for owner review; Adult and Fashion TV use their dedicated groups. Fashion TV is always allowed. Inconclusive alternates are held in Review.",
         ]
         if errors:
             body += ["", "### Blockers", *(f"- {error}" for error in errors[:100])]
@@ -615,10 +645,10 @@ def final_mode(playlist, report, baseline, mode):
     errors = []
     wrong_queue = [
         e["name"] for e in candidates
-        if e["group"].casefold() not in queue_names
+        if e["group"].casefold() not in queue_names | {"fashion tv"}
         and not (
             e["group"].casefold() == "review"
-            and e["attrs"].get("x-discovery-hold-reason") == "unverified-backup-stream"
+            and e["attrs"].get("x-discovery-hold-reason") in {"unverified-backup-stream", "unverified-special-primary"}
         )
     ]
     if wrong_queue:
@@ -726,11 +756,14 @@ def final_mode(playlist, report, baseline, mode):
             # not the destination country-group label (e.g. "Albania" or "United States").
             policy_attrs = dict(attrs)
             policy_attrs["group-title"] = "International"
-            target, reason, policy_country = discovery.policy(
+            target, reason, policy_country = discovery.discovery_eligibility(
                 policy_attrs, e["name"], allow_legacy_group=True
             )
             if target is None:
                 policy_issues.append(f"country/content policy: {e['name']} ({reason or 'not eligible'})")
+            # Fashion TV is an explicit global exception, independent of genre tags.
+            elif target == "Fashion TV":
+                pass
             # Pakistan is unrestricted by genre; only its primary-group threshold applies.
             elif policy_country not in {"BD", "IN", "PK"}:
                 content = attrs.get("tvg-content", "").strip().casefold()
