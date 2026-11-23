@@ -70,7 +70,7 @@ class InternationalStreamHealthTests(unittest.TestCase):
         updated, history, events = apply(source, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
         report = health.build_report(events, history, "2026-11-08", "2026-11-08T00:00:00+00:00", 1)
         with self.assertRaisesRegex(ValueError, "Published recovery total"):
-            health.validate_recovery_accounting(source, updated, events, report.replace("**1**", "**0**", 1))
+            health.validate_recovery_accounting(source, updated, events, report.replace("Restored from Review to primary/Backup/discovery queue: **1**", "Restored from Review to primary/Backup/discovery queue: **0**"))
         wrong_destination = updated.replace('group-title="International Movies"', 'group-title="Review"')
         with self.assertRaisesRegex(ValueError, "destination"):
             health.validate_recovery_accounting(source, wrong_destination, events, report)
