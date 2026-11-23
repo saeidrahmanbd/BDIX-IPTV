@@ -770,9 +770,12 @@ def final_mode(playlist, report, baseline, mode):
             target, reason, policy_country = discovery.policy(
                 policy_attrs, e["name"], allow_legacy_group=True
             )
-            if target is None:
+            # Adult and Fashion TV are explicit global discovery exceptions;
+            # neither requires a Movies/Music content tag.
+            if discovery.is_adult_channel(attrs, e["name"]):
+                pass
+            elif target is None:
                 policy_issues.append(f"country/content policy: {e['name']} ({reason or 'not eligible'})")
-            # Fashion TV is an explicit global exception, independent of genre tags.
             elif target == "Fashion TV":
                 pass
             # Pakistan is unrestricted by genre; only its primary-group threshold applies.
