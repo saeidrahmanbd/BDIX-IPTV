@@ -1,17 +1,17 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-23T03:21:03+00:00**
+Generated: **2026-11-23T03:40:02+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **edc2e1edbb195131dceb66cfedc7a3d7d3fcf9901d4a7c41066b9f052a4e3e0b**
+- IPTV-Playlist.m3u SHA-256: **b0f7fb7056bec0e61e50437f4ce8070b5c6a05169d030fc162bab5d1ca59f9da**
 - International-Playlist.m3u SHA-256: **4d1714392688e4b51fbc037a9b3b2fa8be4e9e85063655286d379310bc962aa6**
 
 ## Summary
 
-- Safe repairs applied this run: **0**
+- Safe repairs applied this run: **0 (read-only mode)**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**

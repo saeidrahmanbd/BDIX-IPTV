@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-23T01:29:43+00:00**
-Source playlist SHA-256: **edc2e1edbb195131dceb66cfedc7a3d7d3fcf9901d4a7c41066b9f052a4e3e0b**
+Generated: **2026-11-23T03:40:03+00:00**
+Source playlist SHA-256: **b0f7fb7056bec0e61e50437f4ce8070b5c6a05169d030fc162bab5d1ca59f9da**
 
 Status: **PASS**
 
-- Current entries: **1346**
+- Current entries: **1345**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -16,7 +16,7 @@ Status: **PASS**
 - Duplicate primary channel numbers: **0**
 - Permanently banned channel entries across all IPTV groups: **0**
 - Primary entries missing channel numbers: **8**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **541**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **447**
 - Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
@@ -37,7 +37,7 @@ Status: **PASS**
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **541**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **447**.
 
 ## Blocking Reasons
 No hard safety blockers detected.

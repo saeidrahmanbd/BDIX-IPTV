@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T01:30:53+00:00",
+  "generated": "2026-11-23T03:41:00+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -6378,20 +6378,6 @@
       ],
       "groups": [
         "Kids"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "mov.bollywood.old": {
-      "names": [
-        "Bollywood OLD"
-      ],
-      "ids": [
-        "mov.bollywood.old.in"
-      ],
-      "groups": [
-        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,

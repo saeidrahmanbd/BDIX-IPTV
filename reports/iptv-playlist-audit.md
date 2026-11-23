@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-23T01:29:42.804826+00:00**
-Source playlist SHA-256: **edc2e1edbb195131dceb66cfedc7a3d7d3fcf9901d4a7c41066b9f052a4e3e0b**
+Generated: **2026-11-23T03:40:02.972273+00:00**
+Source playlist SHA-256: **b0f7fb7056bec0e61e50437f4ce8070b5c6a05169d030fc162bab5d1ca59f9da**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1346**
-- Unique channel IDs: **820**
+- Playlist entries: **1345**
+- Unique channel IDs: **819**
 - IDs with multiple streams: **258**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -21,11 +21,11 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1346**
+- Logo references checked: **1345**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **5**
 - Primary channel-number collisions: **0**
-- Primary channel-number sequence issues (review only): **541**
+- Primary channel-number sequence issues (review only): **447**
 - Primary entries missing channel numbers: **8**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
@@ -1147,56 +1147,56 @@ None.
 
 ## Primary Channel-Number Sequence (Review Only)
 
-- **ETV Cinema** — expected channel number 124, found (missing)
-- **Goldmines** — expected channel number 125, found 124
-- **Goldmines 2** — expected channel number 126, found 125
-- **Goldmines Action** — expected channel number 127, found 126
-- **Goldmines Bollywood** — expected channel number 128, found 127
-- **Goldmines Movies** — expected channel number 129, found 128
-- **Goldmines Movies 2** — expected channel number 130, found 129
-- **Hindi Movie Classic 24** — expected channel number 131, found 130
-- **India Talkies** — expected channel number 132, found 131
-- **Indywood TV** — expected channel number 133, found 132
-- **K Cine** — expected channel number 134, found 133
-- **Kairali We** — expected channel number 135, found 134
-- **Maha Movie** — expected channel number 136, found 135
-- **Mango** — expected channel number 137, found 136
-- **Manoranjan Movies** — expected channel number 138, found 137
-- **MBC Bollywood** — expected channel number 139, found 138
-- **MH One Movies** — expected channel number 140, found 139
-- **NH BollyFlix** — expected channel number 143, found 144
-- **NH Tamil Gold** — expected channel number 144, found 145
-- **NTV Malayalam** — expected channel number 145, found 146
-- **Oscar Movies Bhojpuri** — expected channel number 146, found 147
-- **Pitaara** — expected channel number 147, found 148
-- **Pocket Films** — expected channel number 148, found 149
-- **Public Movies** — expected channel number 149, found 150
-- **Raj Digital Plus** — expected channel number 150, found 151
-- **Roja Movies** — expected channel number 151, found 152
-- **Shemaroo Josh** — expected channel number 152, found 153
-- **Shubh Cinema TV** — expected channel number 153, found 154
-- **Soneri Cinema** — expected channel number 154, found 155
-- **Sony Max HD** — expected channel number 155, found 156
-- **Sony Wah** — expected channel number 156, found 159
-- **South Station** — expected channel number 157, found 160
-- **Star Gold 2** — expected channel number 158, found 161
-- **Star Gold HD** — expected channel number 159, found 162
-- **Star Gold Romance** — expected channel number 160, found 163
-- **Star Gold Select HD** — expected channel number 161, found 164
-- **Star Maa Movies** — expected channel number 162, found 165
-- **Star Movies (India) HD** — expected channel number 163, found 166
-- **Star Utsav Movies** — expected channel number 164, found 168
-- **Studio One+** — expected channel number 165, found 169
-- **Sun Gemini** — expected channel number 166, found 170
-- **Tabbar Hits** — expected channel number 167, found 171
-- **TamilVision-TV** — expected channel number 168, found 172
-- **Thalaa TV** — expected channel number 169, found 173
-- **The Movie Club** — expected channel number 170, found 174
-- **The Movie Club +2** — expected channel number 171, found 175
-- **Thendral TV** — expected channel number 172, found 176
-- **Tolly TV** — expected channel number 173, found 177
-- **Zee Action** — expected channel number 174, found 178
-- **Zee Cinema** — expected channel number 175, found 179
+- **Chhaya Chitram Telugu** — expected channel number 115, found 116
+- **Colors Cineplex** — expected channel number 116, found 117
+- **Colors Cineplex Bollywood** — expected channel number 117, found 118
+- **Colors Cineplex Superhits** — expected channel number 118, found 119
+- **Ekamra Cinema** — expected channel number 119, found 120
+- **Epic Bhojpuri** — expected channel number 120, found 121
+- **Epic Bhojpuri Digital** — expected channel number 121, found 122
+- **ETV Cinema** — expected channel number 122, found 123
+- **ETV Cinema** — expected channel number 123, found (missing)
+- **Movie Punjab** — expected channel number 140, found 141
+- **Movies Now** — expected channel number 141, found 142
+- **NH BollyFlix** — expected channel number 142, found 144
+- **NH Tamil Gold** — expected channel number 143, found 145
+- **NTV Malayalam** — expected channel number 144, found 146
+- **Oscar Movies Bhojpuri** — expected channel number 145, found 147
+- **Pitaara** — expected channel number 146, found 148
+- **Pocket Films** — expected channel number 147, found 149
+- **Public Movies** — expected channel number 148, found 150
+- **Raj Digital Plus** — expected channel number 149, found 151
+- **Roja Movies** — expected channel number 150, found 152
+- **Shemaroo Josh** — expected channel number 151, found 153
+- **Shubh Cinema TV** — expected channel number 152, found 154
+- **Soneri Cinema** — expected channel number 153, found 155
+- **Sony Max HD** — expected channel number 154, found 156
+- **Sony Wah** — expected channel number 155, found 159
+- **South Station** — expected channel number 156, found 160
+- **Star Gold 2** — expected channel number 157, found 161
+- **Star Gold HD** — expected channel number 158, found 162
+- **Star Gold Romance** — expected channel number 159, found 163
+- **Star Gold Select HD** — expected channel number 160, found 164
+- **Star Maa Movies** — expected channel number 161, found 165
+- **Star Movies (India) HD** — expected channel number 162, found 166
+- **Star Utsav Movies** — expected channel number 163, found 168
+- **Studio One+** — expected channel number 164, found 169
+- **Sun Gemini** — expected channel number 165, found 170
+- **Tabbar Hits** — expected channel number 166, found 171
+- **TamilVision-TV** — expected channel number 167, found 172
+- **Thalaa TV** — expected channel number 168, found 173
+- **The Movie Club** — expected channel number 169, found 174
+- **The Movie Club +2** — expected channel number 170, found 175
+- **Thendral TV** — expected channel number 171, found 176
+- **Tolly TV** — expected channel number 172, found 177
+- **Zee Action** — expected channel number 173, found 178
+- **Zee Cinema** — expected channel number 174, found 179
+- **Zee Classic** — expected channel number 175, found 180
+- **Zee Power HD** — expected channel number 176, found 181
+- **Zee Talkies HD** — expected channel number 177, found 182
+- **Zee Thirai HD** — expected channel number 178, found 183
+- **7S Music** — expected channel number 179, found 184
+- **7X Punjabi** — expected channel number 180, found 185
 
 ## Malformed EXTINF Entries
 
@@ -1240,7 +1240,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1346**
+- Healthy/local references: **1345**
 - External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair
