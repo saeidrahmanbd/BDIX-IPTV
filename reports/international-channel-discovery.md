@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-23T09:19:26+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-23T09:41:42+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12152
 - Existing playlist records: 3294
@@ -124,7 +124,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-23T09:19:36+06:00
+- Run timestamp: 2026-11-23T09:41:47+06:00
 - Mode: international
 - New entries and discovery queues probed: 64
 - Verified live media responses: 14
@@ -152,9 +152,9 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
 - Kept FMH Movies (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Retained Galaxy (720p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Retained Galaxy (720p) in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Kept Galaxy (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Retained Galaxy Premium (720p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Retained Galaxy Premium (720p) in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Kept Galaxy Premium (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Hollywood Ukraine (576p) from New Channels — HTTP 404.
 - Removed newly discovered HomePlus from New Channels — HTTP 404.
@@ -204,7 +204,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Final validation
 
-- Run timestamp: 2026-11-23T09:19:37+06:00
+- Run timestamp: 2026-11-23T09:41:48+06:00
 - Validation status: FAIL
 - M3U entries parsed: 3313
 - Malformed EXTINF/URL pairs: 0
