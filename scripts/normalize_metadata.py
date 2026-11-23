@@ -287,8 +287,32 @@ def norm(s):
  value=re.sub(r"[^a-z0-9]+","",s.replace("&","and"))
  aliases={"ekhonetv":"ekhontv","rocktv":"suriyantv","suriyantvtamil":"suriyantv"}
  return aliases.get(value,value)
+# These owner-curated channel brands intentionally include a trailing HD suffix.
+# Keep this explicit: generic source-resolution suffixes may still be normalized.
+PRESERVE_HD_SUFFIX_NAMES = {
+    "&pictures hd",
+    "&xplor hd",
+    "sony max hd",
+    "star gold hd",
+    "star gold select hd",
+    "star movies (india) hd",
+    "zee power hd",
+    "zee talkies hd",
+    "zee thirai hd",
+    "etv plus hd",
+    "etv telugu hd",
+    "sony sab hd",
+    "sony pix hd",
+    "star movies select hd",
+    "sony sports ten 1 hd",
+    "sony sports ten 2 hd",
+    "star sports 1 hd",
+    "unite8 sports 2 hd",
+}
+
 def clean(s):
  s=re.sub(r"\s+"," ",re.sub(r"[._]+"," ",str(s or ""))).strip()
+ if s.casefold() in PRESERVE_HD_SUFFIX_NAMES: return s
  # Preserve the channel name suffix for the separate Jalsha Movies HD service.
  if re.fullmatch(r"jalsha\s+movies\s+hd",s,flags=re.I): return "Jalsha Movies HD"
  # Drop source annotations first; otherwise a trailing geoblock label hides the
