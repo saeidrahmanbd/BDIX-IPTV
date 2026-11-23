@@ -39,6 +39,12 @@ PERMANENTLY_REMOVED_NAMES = (
     "Prarthana TV",
     "Santvani Channel",
     "Sharnam TV",
+    # Owner-selected duplicate identities; prevent discovery from reintroducing them.
+    "Fight TV",
+    "Futbol TV",
+    "Movies Now+",
+    "MyTime Movie Network (US)",
+    "Travel Channel",
 )
 
 # Exact owner-authorized removal of orphan Backup rows. Both channel ID and URL
