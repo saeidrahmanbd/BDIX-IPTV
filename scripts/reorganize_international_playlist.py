@@ -269,6 +269,26 @@ def classify(a, name, group, country, promote_backup=False):
     if discovery.BAD_NAME_RE.search(name):
         return None, None, "test/VOD/non-TV name"
 
+    # Existing International genre groups are country-independent. The
+    # stricter Movies/Music discovery gate applies only to newly sourced queue
+    # candidates; it must not quarantine an established News/Sports/Kids/
+    # Religious/Documentary/Fashion channel merely because it is foreign.
+    # Resolve recognizable genres before applying country-specific policy.
+    if group_key not in QUEUE_GROUPS:
+        explicit_group = re.sub(r"[^a-z0-9]+", " ", group_key).strip()
+        if explicit_group in {"news", "news channel", "news channels"} or NEWS_RE.search(joined):
+            return "News", None, None
+        if explicit_group in {"sports", "sport"} or SPORTS_RE.search(joined):
+            return "Sports", None, None
+        if explicit_group in {"kids", "kid", "children", "childrens"} or KIDS_RE.search(joined):
+            return "Kids", None, None
+        if explicit_group in {"documentary", "documentaries", "wildlife", "nature", "documentary wildlife"} or DOC_RE.search(joined):
+            return "Documentary & Wildlife", None, None
+        if explicit_group in {"religious", "religion", "faith", "devotional"} or NON_ISLAM_RE.search(joined) or ISLAM_RE.search(joined) or discovery.RELIGIOUS_RE.search(joined):
+            return "Religious", None, None
+        if explicit_group == "fashion tv" or FASHION_RE.search(joined):
+            return "Fashion TV", None, None
+
     # Enforce the current regional policy before thematic grouping or Backup
     # preservation. Policy-ineligible and country-ambiguous existing rows are
     # quarantined in Review; they are never silently promoted to another genre.
