@@ -205,11 +205,6 @@ def discovery_eligibility(a,name,allow_legacy_group=False):
  if target in {'News','Religious','Kids','Sports','Documentary & Wildlife','Fashion TV'}:
   label='news' if target=='News' else target.casefold()
   return None,f'{label} is outside the worldwide Movie/Music-only discovery policy',code
- # Bangladesh and Pakistan country feeds are eligible without a Movies/Music
- # genre inference. Their dedicated country groups are intentional policy
- # exceptions; the general foreign-country discovery pool remains Movies/Music.
- if code in {'BD','PK'}:
-  return target,None,code
  candidate_text=' '.join((name,a.get('tvg-name',''),a.get('tvg-id',''),a.get('channel-id','')))
  if re.search(r'\b(?:adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel)\b',candidate_text,re.I):
   return None,'adult is outside the worldwide Movie/Music-only discovery policy',code
