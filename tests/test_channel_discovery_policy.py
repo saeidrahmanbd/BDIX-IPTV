@@ -487,8 +487,10 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "TV 100", "R Plus", "Sony Yay!", "Disha TV", "VTU",
             "DD Kisan (1080p)", "Gyandarshan (720p)", "Kite Victers (720p)",
             "Shiksha TV (720p)", "Vyas Channel (576p)", "Nick Jr. (India) (576p)",
-            "Discovery Channel (India) HD (1080p)", "History TV18 HD (1080p)", "Safari TV (576p)",
         })
+        self.assertIn("Discovery Channel (India) HD (1080p)", filtered)
+        self.assertIn("History TV18 HD (1080p)", filtered)
+        self.assertIn("Safari TV (576p)", filtered)
         self.assertIn("Channel 24", filtered)
 
     def test_iptv_evaluate_uses_india_source_country_despite_misleading_metadata(self):
