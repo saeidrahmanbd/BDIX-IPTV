@@ -1,7 +1,6 @@
 """Single source of truth for owner-authorized permanent channel removals."""
 
 PERMANENTLY_REMOVED_NAMES = (
-    "Bollywood Masala",
     "Crime + Investigation",
     "History Hunters",
     "True History",
