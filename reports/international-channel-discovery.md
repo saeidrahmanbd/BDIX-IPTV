@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-23T09:45:58+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-23T09:54:24+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12152
 - Existing playlist records: 3294
@@ -124,25 +124,25 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-23T09:46:04+06:00
+- Run timestamp: 2026-11-23T09:54:31+06:00
 - Mode: international
 - New entries and discovery queues probed: 64
 - Verified live media responses: 14
 - Verified new primary channels retained in New Channels: 2
 - Verified alternate streams retained in New Backups: 8
 - Inconclusive candidates retained for manual review: 2
-- Unverified backup streams moved to Review: 1
-- Definitively dead new candidates removed: 45
+- Unverified backup streams moved to Review: 2
+- Definitively dead new candidates removed: 44
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
 - Candidates retained without authentic local logos (no placeholder used): 12
 
 ### Stream probe details
-- Moved unverified Fashion TV candidate Code Fashion TV (1080p) to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Retained Fashion TV candidate Code Fashion TV (1080p) in Fashion TV — probe was inconclusive (HTTP 403; access/availability could not be confirmed); Fashion TV is always allowed.
 - Kept Code Fashion TV (1080p) in Fashion TV without tvg-logo — no authentic local repository asset was available.
 - Kept FashionTV (Russia) (1080p) in Fashion TV without tvg-logo — no authentic local repository asset was available.
-- Moved unverified Fashion TV candidate FashionTV Europe (1080p) to Review — probe was inconclusive (HTTP 504; access/availability could not be confirmed).
+- Retained Fashion TV candidate FashionTV Europe (1080p) in Fashion TV — probe was inconclusive (HTTP 504; access/availability could not be confirmed); Fashion TV is always allowed.
 - Kept FashionTV Europe (1080p) in Fashion TV without tvg-logo — no authentic local repository asset was available.
 - Kept FashionTV Paris L'Original (1080p) in Fashion TV without tvg-logo — no authentic local repository asset was available.
 - Kept FashionTV Secrets (1080p) in Fashion TV without tvg-logo — no authentic local repository asset was available.
@@ -193,7 +193,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Rakuten TV Top Movies UK (1080p) from New Channels — HTTP 404.
 - Moved unverified alternate stream Fashion TV from New Backups to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Kept Fashion TV in New Backups without tvg-logo — no authentic local repository asset was available.
-- Removed newly discovered FON Music from New Backups — HTTP 404.
+- Moved unverified alternate stream FON Music from New Backups to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Kept iFilm Persian in New Backups without tvg-logo — no authentic local repository asset was available.
 - Kept Indiyskoye Kino in New Backups without tvg-logo — no authentic local repository asset was available.
 - Kept KinoHit in New Backups without tvg-logo — no authentic local repository asset was available.
@@ -204,24 +204,13 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Final validation
 
-- Run timestamp: 2026-11-23T09:46:05+06:00
-- Validation status: FAIL
-- M3U entries parsed: 3313
+- Run timestamp: 2026-11-23T09:54:32+06:00
+- Validation status: PASS
+- M3U entries parsed: 3314
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
-- Review/New Channels/New Backups/Backup ordering: failed
+- Review/New Channels/New Backups/Backup ordering: passed
 - Discovery entries missing a logo (left blank rather than using a placeholder): 12
 - Non-local discovery logo references: 0
-- Geography/content policy issues: 6
+- Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
-
-### Blockers
-- new International candidates must remain in New Channels/New Backups or an approved Review hold: Code Fashion TV (1080p), FashionTV (India) (576p), FashionTV (Russia) (1080p), FashionTV Europe (1080p), FashionTV Paris L'Original (1080p), FashionTV Secrets (1080p)
-- official validator result: failure
-- Category registry must end Review/New Channels/New Backups/Backup and present playlist groups must follow that registry order
-- non-Bangladesh/India entry lacks Movie/Music tag: Code Fashion TV (1080p)
-- non-Bangladesh/India entry lacks Movie/Music tag: FashionTV (Russia) (1080p)
-- non-Bangladesh/India entry lacks Movie/Music tag: FashionTV Europe (1080p)
-- non-Bangladesh/India entry lacks Movie/Music tag: FashionTV Paris L'Original (1080p)
-- non-Bangladesh/India entry lacks Movie/Music tag: FashionTV Secrets (1080p)
-- non-Bangladesh/India entry lacks Movie/Music tag: Fashion TV

@@ -4,8 +4,8 @@
 # Facebook: https://www.facebook.com/saeid.rahman.sr
 # Email: saeidrahman.mkt@gmail.com
 #=================================
-#PLAYLIST-STUDIO-NAME:"International Playlist"
 #PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "Argentina", "Brazil", "Bulgaria", "Canada", "Chile", "China", "Colombia", "Costa Rica", "Czech Republic", "DO", "Estonia", "France", "Germany", "Greece", "Hungary", "Iran", "Italy", "Lebanon", "Mexico", "Netherlands", "North Macedonia", "Panama", "Paraguay", "Peru", "Poland", "Romania", "Russia", "Saudi Arabia", "Singapore", "Spain", "Sweden", "Turkey", "Ukraine", "United Kingdom", "United States", "Uzbekistan", "Vietnam", "International", "News", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
+#PLAYLIST-STUDIO-NAME:"International Playlist"
 #EXTINF:-1 tvg-id="AnandaTV.bd" channel-id="AnandaTV.bd" tvg-language="ben" tvg-country="BD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" group-title="Bangladesh" tvg-name="Ananda TV",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" channel-id="AsianTV.bd" tvg-language="ben" tvg-country="BD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" group-title="Bangladesh" tvg-name="Asian TV",Asian TV
@@ -2848,6 +2848,18 @@ http://103.190.133.68:1935/news21live/live/playlist.m3u8
 https://tvsen6.aynaott.com/cdgr3tw6WoG7JyRnLbi0/index.m3u8
 #EXTINF:-1 tvg-id="SomoyNewsTV.bd" channel-id="SomoyNewsTV.bd" tvg-language="ben" tvg-country="BD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/somoy-tv.png" group-title="News" tvg-name="Somoy TV",Somoy TV
 https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8
+#EXTINF:-1 tvg-id="CodeFashionTV.bg@SD" tvg-name="Code Fashion TV (1080p)" tvg-country="BG" channel-id="CodeFashionTV.bg@SD" group-title="Fashion TV",Code Fashion TV (1080p)
+https://cdn2.invivo.bg/Codefashion_5500/index.m3u8
+#EXTINF:-1 tvg-id="FashionTV.in@SD" tvg-name="FashionTV (India) (576p)" tvg-logo="logos/international/fashiontv-india-576p.png" tvg-country="IN" channel-id="FashionTV.in@SD" group-title="Fashion TV",FashionTV (India) (576p)
+http://163.61.226.31:9981/stream/channelid/448803688?profile=pass
+#EXTINF:-1 tvg-id="FashionTV.ru@SD" tvg-name="FashionTV (Russia) (1080p)" tvg-country="RU" channel-id="FashionTV.ru@SD" group-title="Fashion TV",FashionTV (Russia) (1080p)
+http://fashionlive.mediacdn.ru/cdn/fashiontv/playlist.m3u8
+#EXTINF:-1 tvg-id="FashionTVEurope.fr@SD" tvg-name="FashionTV Europe (1080p)" tvg-country="FR" channel-id="FashionTVEurope.fr@SD" group-title="Fashion TV",FashionTV Europe (1080p)
+https://68f1accef2154d2195cae87dec183843.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RakutenTV-eu_FashionTV/playlist.m3u8
+#EXTINF:-1 tvg-id="FashionTVParisLOriginal.fr@SD" tvg-name="FashionTV Paris L'Original (1080p)" tvg-country="FR" channel-id="FashionTVParisLOriginal.fr@SD" group-title="Fashion TV",FashionTV Paris L'Original (1080p)
+https://edge-fast3.evrideo.tv/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8
+#EXTINF:-1 tvg-id="FashionTVSecrets.fr@HD" tvg-name="FashionTV Secrets (1080p)" tvg-country="FR" channel-id="FashionTVSecrets.fr@HD" group-title="Fashion TV",FashionTV Secrets (1080p)
+https://ssai.aniview.com/api/v1/hls/stream.m3u8?AVS_SSAIID=67c0c39764ad6f7dab07aa0b&AV_APPNAME=[ADS.APP_NAME]&AV_APPPKGNAME=[ADS.APP_BUNDLE]&AV_APPSTOREURL=[ADS.APP_STORE_URL]&AV_CCPA=[ADS.US_PRIVACY]&AV_CLIENT_SECTION=ftv_secrets&AV_CONSENT=[ADS.GDPR_CONSENT]&AV_CONTENT_CAT=IAB7&AV_CONTENT_CHANNEL=&AV_CONTENT_CONTEXT=&AV_CONTENT_EPISODE=&AV_CONTENT_GENRE=fashion+and+lifestyle&AV_CONTENT_ID=[ADS.VIDAA_ADS_CONTENTID]&AV_CONTENT_KEYWORDS=&AV_CONTENT_LANGUAGE=en&AV_CONTENT_LENGTH=&AV_CONTENT_NETWORK=&AV_CONTENT_PROVIDER=FTV&AV_CONTENT_RATING=R&AV_CONTENT_SEASON=&AV_CONTENT_SERIES=&AV_CONTENT_TITLE=&AV_CONTENT_URL=&AV_DNT=[ADS.DNT]&AV_GDPR=[ADS.GDPR]&AV_HEIGHT=[ADS.H]&AV_IDFA=[ADS.IFA]&AV_IFA_TYPE=[ADS.IFA_TYPE]&AV_LANGUAGE=[ADS.DEVICE_LANGUAGE]&AV_OSVERS=[ADS.DEVICE_OSV]&AV_RTB_DEVICE_TYPE=[ADS.DEVICE_TYPE]&AV_VAUTH=[ADS.VAUTH]&AV_WIDTH=[ADS.W]&Content_Id=[ADS.ADS_CONTENTID]&ads.vidaa_ads_param=1191723366&cb=[CACHEBUSTER]&content_channel_name=ftv+-fashiontv+Secrets&content_livestream=1
 #EXTINF:-1 tvg-id="CartoonNetwork.pk@SD" channel-id="CartoonNetwork.pk@SD" tvg-language="und" tvg-country="PK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-pakistan.png" group-title="Kids" tvg-name="Cartoon Network (Pakistan)",Cartoon Network (Pakistan)
 https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8
 #EXTINF:-1 tvg-id="DisneyChannel.in@HD" channel-id="DisneyChannel.in@HD" tvg-language="eng" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-india.png" group-title="Kids" tvg-name="Disney Channel India",Disney Channel India
@@ -5872,6 +5884,34 @@ http://41.205.93.154/ZEE-TV/index.m3u8
 https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg01553-blueantmediaasi-zoomoonz-samsungnz/playlist.m3u8
 #EXTINF:-1 tvg-id="ZooMoo.sg" channel-id="ZooMoo.sg" tvg-language="eng" tvg-country="SG" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoomoo.png" group-title="Review" tvg-name="ZooMoo",ZooMoo
 https://zoomoo-samsungau.amagi.tv/playlist.m3u8
+#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="FashionTV.us" tvg-name="Fashion TV" tvg-country="US" tvg-language="eng" channel-id="FashionTV.us" group-title="Review",Fashion TV
+http://stream.mcquack.net/287/index.m3u8
+#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="FONMusic.us" tvg-name="FON Music" tvg-logo="logos/fon-music.png" tvg-country="US" tvg-language="eng" channel-id="FONMusic.us" group-title="Review" tvg-content="Music",FON Music
+https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="FMHMovies.us@SD" tvg-name="FMH Movies (1080p)" tvg-country="US" channel-id="FMHMovies.us@SD" group-title="New Channels" tvg-content="Movies",FMH Movies (1080p)
+http://45.186.254.75:8000/play/a07j/index.m3u8
+#EXTINF:-1 tvg-id="Galaxy.id@SD" tvg-name="Galaxy (720p)" tvg-country="ID" channel-id="Galaxy.id@SD" group-title="New Channels" tvg-content="Movies",Galaxy (720p)
+https://proxy-v.rctiplus.id/live/web/galaxy/index.m3u8
+#EXTINF:-1 tvg-id="GalaxyPremium.id@SD" tvg-name="Galaxy Premium (720p)" tvg-country="ID" channel-id="GalaxyPremium.id@SD" group-title="New Channels" tvg-content="Movies",Galaxy Premium (720p)
+https://proxy-v.rctiplus.id/live/web/galaxyprem/index.m3u8
+#EXTINF:-1 tvg-id="Kinosvidanie.ru@SD" tvg-name="Kinosvidanie (1080p)" tvg-logo="logos/international/kinosvidanie-576p.png" tvg-country="RU" channel-id="Kinosvidanie.ru@SD" group-title="New Channels" tvg-content="Movies",Kinosvidanie (1080p)
+https://stream8.cinerama.uz/1203/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="Cinema.ru@SD" tvg-name="Cinema (Russia)" tvg-logo="logos/cinema-russia-576p.png" tvg-country="RU" channel-id="Cinema.ru@SD" group-title="New Backups" tvg-content="Movies",Cinema (Russia)
+https://stream8.cinerama.uz/1227/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="custom.dom-kino-ru-movie" tvg-name="Dom kino" tvg-logo="logos/dom-kino-576p.png" tvg-country="RU" tvg-language="rus" channel-id="custom.dom-kino-ru-movie" group-title="New Backups" tvg-content="Movies",Dom kino
+https://stream8.cinerama.uz/1054/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="Dorama.ru@SD" tvg-name="Dorama" tvg-logo="logos/dorama.png" tvg-country="RU" tvg-language="rus" channel-id="Dorama.ru@SD" group-title="New Backups" tvg-content="Movies",Dorama
+https://stream8.cinerama.uz/1273/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="iFilmPersian.ir@SD" tvg-name="iFilm Persian" tvg-country="IR" tvg-language="fas" channel-id="iFilmPersian.ir@SD" group-title="New Backups" tvg-content="Movies",iFilm Persian
+https://ncdn.telewebion.ir/ifilm/live/playlist.m3u8
+#EXTINF:-1 tvg-id="IndiyskoyeKino.ru@SD" tvg-name="Indiyskoye Kino" tvg-country="RU" tvg-language="rus" channel-id="IndiyskoyeKino.ru@SD" group-title="New Backups" tvg-content="Movies",Indiyskoye Kino
+https://stream8.cinerama.uz/1060/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="KinoHit.ru@SD" tvg-name="KinoHit" tvg-country="RU" tvg-language="rus" channel-id="KinoHit.ru@SD" group-title="New Backups" tvg-content="Movies",KinoHit
+https://stream8.cinerama.uz/1055/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="MuzykaPervogo.ru@SD" tvg-name="Muzyka Pervogo" tvg-logo="logos/muzyka-pervogo-576p.png" tvg-country="RU" tvg-language="rus;ukr" channel-id="MuzykaPervogo.ru@SD" group-title="New Backups" tvg-content="Music",Muzyka Pervogo
+https://stream8.cinerama.uz/1201/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="TRTMuzik.tr@SD" tvg-name="TRT Muzik" tvg-logo="logos/trt-muzik.png" tvg-country="TR" tvg-language="tur" channel-id="TRTMuzik.tr@SD" group-title="New Backups" tvg-content="Music",TRT Muzik
+https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" channel-id="7SMusic.in@SD" tvg-language="tam" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" group-title="Backup" tvg-name="7S Music",7S Music
 https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 #EXTINF:-1 tvg-id="8XM.pk@SD" channel-id="8XM.pk@SD" tvg-language="urd" tvg-country="PK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" group-title="Backup" tvg-name="8XM",8XM
