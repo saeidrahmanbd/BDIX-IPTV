@@ -26,14 +26,12 @@ on:
       - 'config/discovery-retired-endpoints.json'
       - 'tests/test_stream_url_identity.py'
       - 'scripts/validate_international_playlist.py'
-      - 'scripts/validate_discovery_run.py'
       - 'scripts/discovery_schedule_guard.py'
       - 'tests/test_discovery_schedule_guard.py'
       - 'scripts/reorganize_international_playlist.py'
       - 'scripts/country_verification.py'
       - 'tests/test_international_protected_guard.py'
       - 'tests/test_international_discovery_policy.py'
-      - 'tests/test_discovery_run_validation.py'
   schedule:
     - cron: '17 23 * * *' # 05:17 Asia/Dhaka (UTC+6)
   workflow_dispatch:
