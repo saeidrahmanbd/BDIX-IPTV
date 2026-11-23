@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-23 03:55 UTC**  
+Run time: **2026-11-23 03:57 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,7 +10,7 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1355 | 0 | 0 | 0 | 0 | 0 | 0 |
-| International-Playlist.m3u | 3314 | 12 | 0 | 71 | 372 | 0 | 71 |
+| International-Playlist.m3u | 3314 | 0 | 0 | 71 | 372 | 0 | 71 |
 
 ## Repair log
 
@@ -45,11 +45,6 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 2649 | Bigscreen TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2797 | Sine Plus | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2845 | NEWS 21 BANGLA | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 2851 | Code Fashion TV (1080p) | (missing) | code-fashion-tv-1080p-eba84a3007.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| International-Playlist.m3u | 2855 | FashionTV (Russia) (1080p) | (missing) | fashiontv-russia-73cb96c4010c448b6740.png | [IPTV-org exact ID: FashionTV.ru](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 2857 | FashionTV Europe (1080p) | (missing) | fashiontv-europe-73cb96c4010c448b6740.png | [IPTV-org exact ID: FashionTVEurope.fr](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 2859 | FashionTV Paris L'Original (1080p) | (missing) | fashiontv-paris-l-original-1080p-ccf00a0d8f.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| International-Playlist.m3u | 2861 | FashionTV Secrets (1080p) | (missing) | fashiontv-secrets-1080p-e90e2c8d5b.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | International-Playlist.m3u | 3673 | Abdulmajeed Abdullah | (missing) | (none) | IPTV-org exact ID: AbdulmajeedAbdullah.sa |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 3673 | Abdulmajeed Abdullah | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 3705 | Al Sunnah Al Nabawiyah | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
@@ -104,13 +99,6 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 5709 | UFC | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 5769 | Watch Mojo | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 5793 | Willow Sports 2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5887 | Fashion TV | (missing) | fashion-tv-aa7f9461cf.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| International-Playlist.m3u | 5891 | FMH Movies (1080p) | (missing) | fmh-movies-0d9b9c72dc198e5613eb.png | [IPTV-org exact ID: FMHMovies.us](https://img-evg3.tv360.bitel.com.pe/peru-image/2024/12/24/23/1735058961578/eaf883fb926d_480_270.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 5893 | Galaxy (720p) | (missing) | galaxy-49d13dbaba825105696f.webp | [IPTV-org exact ID: Galaxy.id](https://i.ibb.co/PG69mfKm/IMG-2469.webp) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 5895 | Galaxy Premium (720p) | (missing) | galaxy-premium-7337475394524cf6dbe7.png | [IPTV-org exact ID: GalaxyPremium.id](https://i.imgur.com/oGKtYYG.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 5905 | iFilm Persian | (missing) | ifilm-persian-ec5dbb3a2a50944e9fe3.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| International-Playlist.m3u | 5907 | Indiyskoye Kino | (missing) | indiyskoye-kino-7582f40712.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| International-Playlist.m3u | 5909 | KinoHit | (missing) | kinohit-5a08ec1395.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | International-Playlist.m3u | 6181 | Enter 10 Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 6183 | Enter 10 Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 

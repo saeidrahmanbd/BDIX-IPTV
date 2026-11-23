@@ -12369,7 +12369,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/code-fashion-tv-1080p-eba84a3007.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/colimdo-tv-e106271533.png": [
       "International-Playlist.m3u",
@@ -13744,17 +13745,21 @@
     ],
     "logos/fashiontv-europe-73cb96c4010c448b6740.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/fashiontv-paris-l-original-1080p-ccf00a0d8f.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/fashiontv-russia-73cb96c4010c448b6740.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/fashiontv-secrets-1080p-e90e2c8d5b.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/fast-and-funbox-1109f0c4b7.png": [
       "International-Playlist.m3u",
@@ -14094,6 +14099,7 @@
     ],
     "logos/fmh-movies-0d9b9c72dc198e5613eb.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/fmtv-83c0af144c.png": [
@@ -14249,10 +14255,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/galaxy-49d13dbaba825105696f.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/galaxy-premium-7337475394524cf6dbe7.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/galaxy-tv-de6e9f102086aef6c97c.png": [
@@ -14908,7 +14916,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/international/fashiontv-india-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/goldmines-2.png": [
       "IPTV-Playlist.m3u",
@@ -14927,7 +14936,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/kinosvidanie-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/movie-punjab-720p.png": [
       "IPTV-Playlist.m3u",
@@ -16426,7 +16436,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/muzyka-pervogo-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/mwd-documentary-fbdc0a1ba5.png": [
       "International-Playlist.m3u",
@@ -23956,7 +23967,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/code-fashion-tv-1080p-eba84a3007.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/colimdo-tv-e106271533.png": [
       "International-Playlist.m3u",
@@ -25332,17 +25344,21 @@
     ],
     "logos/fashiontv-europe-73cb96c4010c448b6740.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/fashiontv-paris-l-original-1080p-ccf00a0d8f.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/fashiontv-russia-73cb96c4010c448b6740.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/fashiontv-secrets-1080p-e90e2c8d5b.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/fast-and-funbox-1109f0c4b7.png": [
       "International-Playlist.m3u",
@@ -25682,6 +25698,7 @@
     ],
     "logos/fmh-movies-0d9b9c72dc198e5613eb.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/fmtv-83c0af144c.png": [
@@ -25837,10 +25854,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/galaxy-49d13dbaba825105696f.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/galaxy-premium-7337475394524cf6dbe7.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/galaxy-tv-de6e9f102086aef6c97c.png": [
@@ -26497,7 +26516,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/international/fashiontv-india-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/goldmines-2.png": [
       "IPTV-Playlist.m3u",
@@ -26516,7 +26536,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/kinosvidanie-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/movie-punjab-720p.png": [
       "IPTV-Playlist.m3u",
@@ -28015,7 +28036,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/muzyka-pervogo-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/mwd-documentary-fbdc0a1ba5.png": [
       "International-Playlist.m3u",
