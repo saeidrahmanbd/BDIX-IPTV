@@ -387,6 +387,14 @@ def probe_mode(playlist, report, baseline, mode):
             1 for e in probe_targets
             if e["start"] in verified_starts and e["group"].casefold() in {"new backup", "new backups"}
         )
+        counts["verified Adult primary streams retained in Adult"] += sum(
+            1 for e in probe_targets
+            if e["start"] in verified_starts and e["group"].casefold() == "adult"
+        )
+        counts["verified Fashion TV primary streams retained in Fashion TV"] += sum(
+            1 for e in probe_targets
+            if e["start"] in verified_starts and e["group"].casefold() == "fashion tv"
+        )
     remove_indices = set()
     by_start = {e["start"]: e for e in entries}
     for start in remove_starts:
