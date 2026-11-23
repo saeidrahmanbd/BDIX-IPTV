@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-23T08:28:11+00:00**
+Generated: **2026-11-23T08:51:17+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
-- International-Playlist.m3u SHA-256: **8b19033950c617961164dff6f8a1974925123924df2ce91cfba8bc1bee566397**
+- IPTV-Playlist.m3u SHA-256: **8605b2b64684072ed4bc3d53d8d3ba804983ef9b81f96d2cb91e551df9841a7c**
+- International-Playlist.m3u SHA-256: **e399bcc9869261b4e9f7d33bf015df494374c1394911ade718b3ae98417a2375**
 
 ## Summary
 
@@ -18,7 +18,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
 - Playlist references whose asset stem differs from the normalized channel name: **1587**
-- Unreferenced image assets immediately inside logos/: **961** (not deleted; other tooling or playlists may use them)
+- Unreferenced image assets immediately inside logos/: **962** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1325,7 +1325,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Nagorik TV | nagorik-tv-90b5d16aaf.png | Backup |
 | IPTV-Playlist.m3u | Nat Geo TV | national-geographic.png | Backup |
 | IPTV-Playlist.m3u | NRB TV | nrb-tv.png | Backup |
-| IPTV-Playlist.m3u | Oli TV | oli-tv-india-b4a7917c53.png | Backup |
+| IPTV-Playlist.m3u | Oli TV | oli-tv.png | Backup |
 | IPTV-Playlist.m3u | Pasand TV | pasand-tv.png | Backup |
 | IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Backup |
 | IPTV-Playlist.m3u | Pear TV | pear-tv.png | Backup |

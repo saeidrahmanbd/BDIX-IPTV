@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-23T08:24:47.359517+00:00**
-Source playlist SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
+Generated: **2026-11-23T08:51:18.425231+00:00**
+Source playlist SHA-256: **8605b2b64684072ed4bc3d53d8d3ba804983ef9b81f96d2cb91e551df9841a7c**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -16,7 +16,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-queue same-ID name variants (review): **1**
 - Cross-queue normalized-name/different-ID groups (review): **20**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **6**
+- IDs with multiple logo references: **216**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
@@ -28,7 +28,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Primary channel-number sequence issues (review only): **7**
 - Primary entries missing channel numbers: **8**
 - Primary entries missing tvg-country: **0**
-- Primary entries missing tvg-language: **6**
+- Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
@@ -43,11 +43,10 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
 - Active primary entries missing tvg-country: **0**
-- Active primary entries missing tvg-language: **6**
+- Active primary entries missing tvg-language: **0**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
-| International | 0 | 6 |
 
 ## Review Queue Country Verification
 

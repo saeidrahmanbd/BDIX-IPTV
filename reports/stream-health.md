@@ -1,6 +1,6 @@
 # Stream Health Report
 
-Generated: **2026-11-23T08:25:54+00:00**
+Generated: **2026-11-23T08:52:15+00:00**
 Stream URL inventory SHA-256: **1ef03045514d1aa73d71c301d8dea6c88d8e127933c824f65275f9c296c0658d**
 
 Probe environment: **GitHub-hosted ubuntu-latest runner**.
@@ -9,10 +9,10 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 ## Summary
 
 - Streams tested: **1355**
-- Reachable: **1099**
-- Failed this check: **256**
+- Reachable: **1101**
+- Failed this check: **254**
 - Persistent failures (3+ consecutive): **55**
-- Intermittent failures: **201**
+- Intermittent failures: **199**
 - Primary tested: **721**
 - Backup tested: **410**
 - Review-queue entries tested: **224**
@@ -23,8 +23,8 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - Only HTTP 404 and 410 count as definitive failures; all other HTTP statuses and network/authentication errors are inconclusive.
 - Streaks count consecutive Bangladesh calendar days; repeated runs on one date count once, and a missed day resets the streak.
 
-- HTTP 404/410 (definitive): **77**
-- Inconclusive HTTP/network failure: **179**
+- HTTP 404/410 (definitive): **74**
+- Inconclusive HTTP/network failure: **180**
 
 ## Persistent Failures
 
@@ -91,8 +91,11 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Aakaash Aath** — Backup — streak 0 days — HTTP 403
 - **Amar Bangla** — Backup — streak 1 days — HTTP 404
 - **Amar Bangla Digital** — Backup — streak 1 days — HTTP 404
+- **Bahrain Sports 2** — Backup — streak 0 days — HTTP 404
 - **Channel 9** — Backup — streak 0 days — HTTP 404
 - **Dangal 2** — Backup — streak 0 days — HTTP 403
+- **Deepto TV** — Backup — streak 1 days — HTTP 404
+- **ESPN** — Backup — streak 0 days — HTTP 403
 - **ESPN** — Backup — streak 0 days — HTTP 403
 - **Goldmines Bollywood** — Backup — streak 0 days — HTTP 403
 - **JA TV** — Backup — streak 0 days — HTTP 523
@@ -101,70 +104,65 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **MNTV (Tamil)** — Backup — streak 1 days — HTTP 404
 - **Mahaa Max** — Backup — streak 0 days — HTTP 403
 - **Mazhavil Manorama** — Backup — streak 0 days — HTTP 403
-- **Movies Now** — Backup — streak 0 days — Timeout
+- **Movies Now** — Backup — streak 0 days — Network
 - **Shanson TV** — Backup — streak 0 days — HTTP 403
 - **Shubh Cinema TV** — Backup — streak 0 days — HTTP 403
-- **Star Sports 1 Hindi** — Backup — streak 0 days — Timeout
-- **Channel 24** — Bangladesh — streak 0 days — HTTP 404
+- **Star Sports 1 Hindi** — Backup — streak 0 days — Network
 - **JA TV** — Bangladesh — streak 0 days — HTTP 500
 - **Jalsha Bangla BD** — Bangladesh — streak 0 days — HTTP 523
 - **Jonmobhumi TV** — Bangladesh — streak 1 days — HTTP 404
 - **Ten TV Prime** — Indian Bangla — streak 0 days — HTTP 500
-- **&TV** — Indian Entertainment — streak 0 days — Timeout
+- **&TV** — Indian Entertainment — streak 0 days — Network
 - **Asianet Middle East** — Indian Entertainment — streak 0 days — HTTP 403
 - **Kairali Arabia** — Indian Entertainment — streak 0 days — HTTP 403
 - **MNTV (Tamil)** — Indian Entertainment — streak 1 days — HTTP 404
-- **Namma Bangalore** — Indian Entertainment — streak 0 days — HTTP 404
 - **Siri Kannada** — Indian Entertainment — streak 0 days — HTTP 403
-- **Sony SAB HD** — Indian Entertainment — streak 0 days — Timeout
-- **Sun Surya** — Indian Entertainment — streak 0 days — HTTP 403
-- **&pictures HD** — Indian Movies — streak 0 days — Timeout
-- **&xplor HD** — Indian Movies — streak 0 days — Timeout
+- **Sony SAB HD** — Indian Entertainment — streak 0 days — Network
+- **&pictures HD** — Indian Movies — streak 0 days — Network
+- **&xplor HD** — Indian Movies — streak 0 days — Network
 - **Goldmines 2** — Indian Movies — streak 0 days — HTTP 403
 - **Goldmines Action** — Indian Movies — streak 0 days — HTTP 403
 - **MH One Movies** — Indian Movies — streak 0 days — HTTP 403
-- **Sony Max HD** — Indian Movies — streak 0 days — Timeout
-- **Star Gold 2** — Indian Movies — streak 0 days — Timeout
-- **Star Gold HD** — Indian Movies — streak 0 days — Timeout
-- **Star Gold Romance** — Indian Movies — streak 0 days — Timeout
-- **Star Gold Select HD** — Indian Movies — streak 0 days — Timeout
-- **Star Movies (India) HD** — Indian Movies — streak 0 days — Timeout
+- **Sony Max HD** — Indian Movies — streak 0 days — Network
+- **Star Gold 2** — Indian Movies — streak 0 days — Network
+- **Star Gold HD** — Indian Movies — streak 0 days — Network
+- **Star Gold Romance** — Indian Movies — streak 0 days — Network
+- **Star Gold Select HD** — Indian Movies — streak 0 days — Network
+- **Star Movies (India) HD** — Indian Movies — streak 0 days — Network
 - **Thendral TV** — Indian Movies — streak 0 days — HTTP 404
-- **Zee Classic** — Indian Movies — streak 0 days — Timeout
-- **Zee Power HD** — Indian Movies — streak 0 days — Timeout
-- **Zee Talkies HD** — Indian Movies — streak 0 days — Timeout
-- **Zee Thirai HD** — Indian Movies — streak 0 days — Timeout
+- **Zee Classic** — Indian Movies — streak 0 days — Network
+- **Zee Power HD** — Indian Movies — streak 0 days — Network
+- **Zee Talkies HD** — Indian Movies — streak 0 days — Network
+- **Zee Thirai HD** — Indian Movies — streak 0 days — Network
 - **Andy Haryana** — Indian Music — streak 0 days — HTTP 403
-- **MTV India** — Indian Music — streak 0 days — Timeout
+- **MTV India** — Indian Music — streak 0 days — Network
 - **Vision Beats** — Indian Music — streak 0 days — HTTP 404
 - **Fashion&LifeStyle** — International — streak 0 days — HTTP 403
 - **HBO** — International — streak 0 days — HTTP 403
-- **MNX** — International — streak 0 days — Timeout
-- **Movies Now+** — International — streak 0 days — Timeout
-- **Sony Pix HD** — International — streak 0 days — Timeout
-- **Star Movies Select HD** — International — streak 0 days — Timeout
+- **MNX** — International — streak 0 days — Network
+- **Movies Now+** — International — streak 0 days — Network
+- **Sony Pix HD** — International — streak 0 days — Network
+- **Star Movies Select HD** — International — streak 0 days — Network
 - **Teleritmo** — International — streak 0 days — HTTP 403
+- **Disney Channel** — Kids — streak 0 days — HTTP 403
 - **Teen Nick** — Kids — streak 0 days — HTTP 403
-- **MNX HD (1080p)** — New Backups — streak 0 days — Timeout
-- **Sony Sports Ten 1 (576p)** — New Backups — streak 0 days — Timeout
-- **Unite8 Sports 1 HD (1080p)** — New Backups — streak 0 days — Timeout
-- **TLC (India) HD (1080p)** — New Channels — streak 0 days — Timeout
+- **MNX HD (1080p)** — New Backups — streak 0 days — Network
+- **Sony Sports Ten 1 (576p)** — New Backups — streak 0 days — Network
+- **Unite8 Sports 1 HD (1080p)** — New Backups — streak 0 days — Network
+- **TLC (India) HD (1080p)** — New Channels — streak 0 days — Network
 - **&TV** — Review — streak 9 days — HTTP 404
 - **&pictures HD** — Review — streak 0 days — Connection
 - **4ever Cinema** — Review — streak 0 days — HTTP 403
 - **4ever Music** — Review — streak 0 days — HTTP 403
 - **8XM** — Review — streak 4 days — HTTP 404
-- **9X Jalwa** — Review — streak 0 days — HTTP 404
 - **9XM** — Review — streak 0 days — HTTP 403
 - **AMN TV** — Review — streak 9 days — HTTP 404
 - **ATN Bangla** — Review — streak 0 days — Timeout
 - **Aakaash Aath** — Review — streak 0 days — Timeout
-- **All Time Movies** — Review — streak 0 days — HTTP 404
 - **Amar Bangla** — Review — streak 9 days — HTTP 404
 - **Ananda TV** — Review — streak 0 days — Connection
 - **Animal Planet** — Review — streak 9 days — HTTP 404
 - **Asian TV** — Review — streak 9 days — HTTP 404
-- **B4U Kadak** — Review — streak 0 days — HTTP 404
 - **B4U Movies** — Review — streak 0 days — Connection
 - **B4U Movies** — Review — streak 9 days — HTTP 404
 - **B4U Music** — Review — streak 9 days — HTTP 404
@@ -190,7 +188,7 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Channel 24** — Review — streak 9 days — HTTP 404
 - **Channel 24** — Review — streak 9 days — HTTP 404
 - **Channel 24** — Review — streak 9 days — HTTP 404
-- **Cinemax MoreMax** — Review — streak 0 days — Timeout
+- **Cinemax MoreMax** — Review — streak 0 days — Network
 - **Colors** — Review — streak 0 days — Connection
 - **Colors** — Review — streak 0 days — Timeout
 - **Colors Bangla** — Review — streak 0 days — Timeout
@@ -305,7 +303,7 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Star Sports Select 1** — Review — streak 0 days — Connection
 - **Star Sports Select 2** — Review — streak 0 days — Timeout
 - **Sun Bangla** — Review — streak 0 days — Connection
-- **Sun TV** — Review — streak 0 days — HTTP 403
+- **Sun TV** — Review — streak 0 days — HTTP 400
 - **Suriyan TV** — Review — streak 1 days — HTTP 503
 - **Suspilne Sport** — Review — streak 0 days — HTTP 403
 - **T Sports** — Review — streak 0 days — Connection
@@ -330,17 +328,17 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Zee Tamil** — Review — streak 0 days — HTTP 403
 - **Zoom** — Review — streak 0 days — HTTP 403
 - **viju+ Sport** — Review — streak 0 days — HTTP 403
-- **Sony Sports Ten 1 HD** — Sports — streak 0 days — Timeout
-- **Sony Sports Ten 2 HD** — Sports — streak 0 days — Timeout
-- **Sony Sports Ten 5** — Sports — streak 0 days — Timeout
-- **Star Sports 1 HD** — Sports — streak 0 days — Timeout
+- **Sony Sports Ten 1 HD** — Sports — streak 0 days — Network
+- **Sony Sports Ten 2 HD** — Sports — streak 0 days — Network
+- **Sony Sports Ten 5** — Sports — streak 0 days — Network
+- **Star Sports 1 HD** — Sports — streak 0 days — Network
 - **Star Sports 2** — Sports — streak 0 days — HTTP 403
-- **Star Sports 2** — Sports — streak 0 days — Timeout
+- **Star Sports 2** — Sports — streak 0 days — Network
 - **TSN 1** — Sports — streak 0 days — HTTP 403
 - **TSN 2** — Sports — streak 0 days — HTTP 403
 - **TSN 3** — Sports — streak 0 days — HTTP 403
-- **Unite8 Sports 1** — Sports — streak 0 days — Timeout
-- **Unite8 Sports 2 HD** — Sports — streak 0 days — Timeout
+- **Unite8 Sports 1** — Sports — streak 0 days — Network
+- **Unite8 Sports 2 HD** — Sports — streak 0 days — Network
 - **Willow Sports 2** — Sports — streak 0 days — HTTP 403
 
 ## Near-Duplicate URL Families

@@ -1,7 +1,7 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-23T08:24:48+00:00**
-Source playlist SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
+Generated: **2026-11-23T08:51:19+00:00**
+Source playlist SHA-256: **8605b2b64684072ed4bc3d53d8d3ba804983ef9b81f96d2cb91e551df9841a7c**
 
 Status: **PASS**
 
@@ -24,7 +24,7 @@ Status: **PASS**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **24**
+- Entries missing tvg-language: **18**
 - Raw resolution/geoblock name tags: **18**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
@@ -59,7 +59,7 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 ## Warnings / Manual Review
 
 - pre-existing owner-curated duplicate channel numbers preserved unchanged: 0, 618, 619, 620, 621
-- entries missing tvg-language: 24
+- entries missing tvg-language: 18
 - primary entries missing tvg-chno: 8
 - raw resolution/geoblock tags in channel names: 18
 - New queue candidates pending owner review: 2
