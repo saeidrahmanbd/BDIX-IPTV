@@ -194,12 +194,14 @@ def is_adult_channel(a,name):
 
 def discovery_eligibility(a,name,allow_legacy_group=False):
  code=country_code(a)
+ # Fashion TV is an explicit global exception, not a Movies/Music genre.
+ if FASHION_RE.search(f'{name} {a.get("tvg-name","")}'):
+  return 'Fashion TV',None,code
  if is_adult_channel(a,name):
   if BAD_NAME_RE.search(name): return None,'test/VOD/non-TV name',code
   return 'Adult',None,code
  target, reason, code = policy(a,name,allow_legacy_group=allow_legacy_group)
  if target is None: return None,reason,code
- if FASHION_RE.search(f'{name} {a.get("tvg-name","")}'): return None,'Fashion TV is a preserved legacy exception, not a discovery genre',code
  if target in {'News','Religious','Kids','Sports','Documentary & Wildlife','Fashion TV'}:
   label='news' if target=='News' else target.casefold()
   return None,f'{label} is outside the worldwide Movie/Music-only discovery policy',code
@@ -316,7 +318,7 @@ def queue_policy(a,name):
  genre=infer_genre(a,name)
  if base is None:
   return None,reason,code,genre
- if base != "Adult" and code not in {"BD","IN","PK"} and not genre:
+ if base not in {"Adult", "Fashion TV"} and code not in {"BD","IN","PK"} and not genre:
   return None,"channel is not clearly Movies or Music",code,genre
  return base,None,code,genre
 def special_group(a,name):
@@ -451,7 +453,7 @@ def main():
   if base is None:rejected[reason]+=1; continue
   seen.add(stream_url_key(url)); seen_endpoint_families.add(endpoint_family); candidates.append((a,name,url,norm(name),base,code))
  country_groups=qualified_country_groups(country_primary_ids)
- additions=[]; new_rows=[]; adult_rows=[]; backup_rows=[]; per_group=Counter(); per_country=Counter(); added_primary_ids=defaultdict(set); planned={k:list(v) for k,v in existing_primary.items()}
+ additions=[]; new_rows=[]; adult_rows=[]; fashion_rows=[]; backup_rows=[]; per_group=Counter(); per_country=Counter(); added_primary_ids=defaultdict(set); planned={k:list(v) for k,v in existing_primary.items()}
  for a,name,url,key,base,code in candidates:
   if not key:continue
   is_backup=key in planned
@@ -459,8 +461,8 @@ def main():
    if len(backup_rows)>=MAX_NEW_BACKUPS:continue
    target="New Backups"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
   else:
-   if len(new_rows)+len(adult_rows)>=MAX_NEW_CHANNELS:continue
-   target="Adult" if base=="Adult" else "New Channels"
+   if len(new_rows)+len(adult_rows)+len(fashion_rows)>=MAX_NEW_CHANNELS:continue
+   target=base if base in {"Adult", "Fashion TV"} else "New Channels"
    if target=="New Channels" and code in ISO_CODES and code not in {"BD","IN","PK"}:
     if per_country[code]>=MAX_NEW_PER_GROUP:continue
     per_country[code]+=1
@@ -474,6 +476,10 @@ def main():
   else:
    if target=="Adult":
     adult_rows.append((cname,target,ccode,url))
+    per_group[target]+=1
+   elif target=="Fashion TV":
+    fashion_rows.append((cname,target,ccode,url))
+    per_group[target]+=1
    else:
     new_rows.append((cname,target,ccode,url))
     per_group[target]+=1
@@ -538,7 +544,7 @@ def main():
    if base is None or not safe_url(url_of(b)):
     filtered_existing.append((name,old,reason or "unsafe or ineligible discovery candidate"))
     continue
-   group="New Backups" if old_key in {"new backup","new backups"} else "New Channels"
+   group=("New Backups" if old_key in {"new backup","new backups"} else (base if base in {"Adult", "Fashion TV"} else "New Channels"))
   else:
    # Preserve unrelated existing entries. Remove only the two exact false
    # positives from earlier discovery runs; do not broadly reclassify
@@ -603,7 +609,7 @@ def main():
  new_rows=[(n,final_group_by_identity.get((norm(n),c or ""),final_group_by_name.get(norm(n),g)),c,u) for n,g,c,u in new_rows]
  REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(BD_TZ).isoformat(timespec='seconds')} (Asia/Dhaka)",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
   f"- Existing logo references localized/repaired: {logo_refs_repaired}",
-  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Adult channels discovered directly into Adult: {len(adult_rows)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for every country except Bangladesh and India, including Pakistan.","- New discoveries from every country, including Bangladesh, India and Pakistan, may be dedicated Movies or Music channels or Adult channels. Adult channels are placed directly in Adult, not New Channels. News, religious, kids, sports, documentary and general entertainment remain excluded. Fashion TV is also an explicit allowed exception.","- Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.","- New discoveries remain in New Channels/New Backups after probing. Verified primary channels stay in New Channels; verified alternate streams stay in New Backups. Inconclusive alternate streams are held in Review, and missing authentic logos are left blank rather than invented.","- Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
+  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Adult channels discovered directly into Adult: {len(adult_rows)}",f"- Fashion TV channels discovered directly into Fashion TV: {len(fashion_rows)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for every country except Bangladesh and India, including Pakistan.","- New discoveries from every country, including Bangladesh, India and Pakistan, may be dedicated Movies or Music channels or Adult channels. Adult channels are placed directly in Adult, not New Channels. News, religious, kids, sports, documentary and general entertainment remain excluded. Fashion TV is also an explicit allowed exception.","- Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.","- New discoveries remain in New Channels/New Backups after probing. Verified primary channels stay in New Channels; verified alternate streams stay in New Backups. Inconclusive alternate streams are held in Review, and missing authentic logos are left blank rather than invented.","- Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.","- The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.",f"- New Channels staged for manual review: {len(new_rows)}",f"- New Backups staged for manual review: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
  report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Adult channels added directly to Adult",""]+[f"- **{n}** — {c} — {u}" for n,_,c,u in adult_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Existing discovery-queue entries removed",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  print(f"International discovery complete: new={len(new_rows)} adult={len(adult_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} qualifying_country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())

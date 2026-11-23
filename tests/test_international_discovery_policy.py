@@ -672,10 +672,34 @@ class StrictWorldwideDiscoveryTests(unittest.TestCase):
                 self.assertIsNone(target)
                 self.assertTrue(reason)
 
-    def test_fashion_tv_is_not_new_discovery(self):
-        target, reason, _ = self.eligible("Fashion TV", "Fashion", "FR", "FashionTV.fr")
-        self.assertIsNone(target)
-        self.assertIn("Fashion TV", reason)
+    def test_fashion_tv_is_allowed_as_an_explicit_global_exception(self):
+        attrs = {"group-title": "Fashion", "tvg-country": "FR", "tvg-id": "FashionTV.fr"}
+        target, reason, code = discovery.discovery_eligibility(attrs, "Fashion TV")
+        self.assertEqual((target, reason, code), ("Fashion TV", None, "FR"))
+        queued_target, queued_reason, queued_code, _ = discovery.queue_policy(attrs, "Fashion TV")
+        self.assertEqual((queued_target, queued_reason, queued_code), ("Fashion TV", None, "FR"))
+
+    def test_raw_repository_logo_url_is_resolved_to_a_local_asset(self):
+        import tempfile
+        from pathlib import Path
+        reorg_module = reorg
+        with tempfile.TemporaryDirectory() as tmp:
+            old_logos = reorg_module.LOGOS
+            reorg_module.LOGOS = Path(tmp) / "logos"
+            reorg_module.LOGOS.mkdir()
+            try:
+                asset = reorg_module.LOGOS / "fashion-tv.svg"
+                asset.write_text("<svg/>", encoding="utf-8")
+                resolved = reorg_module.local_logo_path(
+                    reorg_module.RAW_BASE + "fashion-tv.svg"
+                )
+                self.assertEqual(resolved, asset)
+                self.assertEqual(
+                    reorg_module.exact_local_logo_path("Fashion TV"),
+                    asset,
+                )
+            finally:
+                reorg_module.LOGOS = old_logos
 
     def test_adult_channels_are_allowed_directly_in_adult_group_worldwide(self):
         examples = [

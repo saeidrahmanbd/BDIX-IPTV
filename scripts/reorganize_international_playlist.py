@@ -6,6 +6,7 @@ from pathlib import Path
 import json
 import re
 import unicodedata
+import urllib.parse
 import discover_international_channels as discovery
 import discover_bd_in_new_queues as bd_policy
 from stream_url_identity import stream_url_key
@@ -162,11 +163,13 @@ def url_of(block):
 
 def local_logo_path(logo):
     logo = str(logo or "").strip()
-    if not logo.startswith("logos/"):
+    if logo.startswith(RAW_BASE):
+        rel = urllib.parse.unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])
+    elif logo.startswith("logos/"):
+        rel = urllib.parse.unquote(logo[len("logos/"):].split("?", 1)[0].split("#", 1)[0])
+    else:
         return None
-    rel = logo[len("logos/"):].split("?", 1)[0].split("#", 1)[0]
-    rel = rel.replace("%20", " ")
-    if not rel or "unused" in {p.casefold() for p in Path(rel).parts}:
+    if not rel or Path(rel).is_absolute() or ".." in Path(rel).parts or "unused" in {p.casefold() for p in Path(rel).parts}:
         return None
     path = LOGOS / rel
     try:
@@ -176,6 +179,22 @@ def local_logo_path(logo):
     if not path.is_file() or discovery.is_blocked_logo_basename(path.name):
         return None
     return path
+
+
+def exact_local_logo_path(name):
+    """Use a repository asset only when its filename exactly matches the channel identity."""
+    key = channel_key(name)
+    if not key or not LOGOS.is_dir():
+        return None
+    matches = [
+        path for path in LOGOS.rglob("*")
+        if path.is_file()
+        and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg"}
+        and "unused" not in {part.casefold() for part in path.parts}
+        and not discovery.is_blocked_logo_basename(path.name)
+        and channel_key(path.stem) == key
+    ]
+    return matches[0] if len(matches) == 1 else None
 
 def infer_kind(name, group, a):
     if re.match(r"FTV\.uz\b", str(a.get("tvg-id") or ""), re.I):
@@ -371,9 +390,13 @@ def set_extinf(block, name, group, country, content_kind, keep_logo, is_queue=Fa
     for key in ("group-title", "tvg-name", "tvg-logo", "tvg-content", "tvg-country", "tvg-chno", "http-user-agent", "http-referrer"):
         left = re.sub(rf'\s+{re.escape(key)}="[^"]*"', "", left)
     fields = [left.rstrip()]
-    if keep_logo:
-        original = attrs(block[0]).get("tvg-logo", "")
-        fields.append(f'tvg-logo="{original}"')
+    if isinstance(keep_logo, str) and keep_logo.startswith("logos/"):
+        fields.append(f'tvg-logo="{keep_logo}"')
+    elif keep_logo is True:
+        original_path = local_logo_path(attrs(block[0]).get("tvg-logo", ""))
+        if original_path is not None:
+            local_ref = "logos/" + original_path.relative_to(LOGOS).as_posix()
+            fields.append(f'tvg-logo="{local_ref}"')
     if country in discovery.ISO_CODES:
         fields.append(f'tvg-country="{country}"')
     # Keep the original content type while a failed stream is in Review.
@@ -449,15 +472,16 @@ def main():
             removed[reason] += 1
             continue
         logo = a.get("tvg-logo", "")
-        local_logo = local_logo_path(logo)
-        invalid_logos += int(bool(logo) and local_logo is None)
+        local_logo = local_logo_path(logo) or exact_local_logo_path(name)
+        invalid_logos += int(bool(logo) and local_logo_path(logo) is None and local_logo is None)
+        local_logo_ref = ("logos/" + local_logo.relative_to(LOGOS).as_posix()) if local_logo else ""
         extras = [line for line in block[1:] if line.strip()
                   and not line.strip().startswith(("http://", "https://"))
                   and not re.match(r"#EXTVLCOPT:http-(?:user-agent|referrer)=", line.strip(), re.I)]
         staged.append({
             "block": block, "a": a, "name": name, "key": channel_key(name),
             "group": target, "original_group": group, "country": country, "kind": kind, "content_kind": kind,
-            "url": url, "options": options, "extras": extras, "keep_logo": local_logo is not None,
+            "url": url, "options": options, "extras": extras, "keep_logo": local_logo_ref,
             "was_backup": group.casefold() in BACKUP_GROUPS or is_protected,
             "was_review": group.casefold() == "review",
             "was_protected": is_protected,

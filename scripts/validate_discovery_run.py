@@ -347,17 +347,20 @@ def probe_mode(playlist, report, baseline, mode):
             verified_starts.add(e["start"])
         else:
             inconclusive_starts.add(e["start"])
-            if e["group"].casefold() in {"new backup", "new backups"}:
-                # A New Backup is only valid after its alternate stream is verified.
-                # Keep an inconclusive candidate out of that queue, but preserve it
-                # in the quarantined Review group for a later manual check.
+            if e["group"].casefold() in {"new backup", "new backups", "adult", "fashion tv"}:
+                # New backups and newly discovered special primary channels must be
+                # verified before they remain in their published destination group.
                 current = update_lines.get(e["start"], e["extinf"])
                 current = discovery.set_attr(current, "group-title", "Review")
-                current = discovery.set_attr(current, "x-discovery-hold-reason", "unverified-backup-stream")
+                hold_reason = "unverified-backup-stream" if e["group"].casefold() in {"new backup", "new backups"} else "unverified-special-primary"
+                current = discovery.set_attr(current, "x-discovery-hold-reason", hold_reason)
                 update_lines[e["start"]] = current
-                counts["unverified backup streams moved to Review"] += 1
+                if hold_reason == "unverified-backup-stream":
+                    counts["unverified backup streams moved to Review"] += 1
+                else:
+                    counts["unverified Adult/Fashion primary streams moved to Review"] += 1
                 details.append(
-                    f"- Moved unverified alternate stream {e['name']} from {e['group']} to Review — probe was inconclusive ({reason})."
+                    f"- Moved unverified {e['group']} candidate {e['name']} to Review — probe was inconclusive ({reason})."
                 )
             else:
                 counts["inconclusive streams retained for manual review"] += 1
@@ -383,6 +386,14 @@ def probe_mode(playlist, report, baseline, mode):
         counts["verified alternate streams retained in New Backups"] += sum(
             1 for e in probe_targets
             if e["start"] in verified_starts and e["group"].casefold() in {"new backup", "new backups"}
+        )
+        counts["verified Adult primary streams retained in Adult"] += sum(
+            1 for e in probe_targets
+            if e["start"] in verified_starts and e["group"].casefold() == "adult"
+        )
+        counts["verified Fashion TV primary streams retained in Fashion TV"] += sum(
+            1 for e in probe_targets
+            if e["start"] in verified_starts and e["group"].casefold() == "fashion tv"
         )
     remove_indices = set()
     by_start = {e["start"]: e for e in entries}
