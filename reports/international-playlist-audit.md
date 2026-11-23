@@ -1,16 +1,16 @@
 # International Playlist Organization Audit
 
-- Entries before: 3294
-- Entries after: 3294
-- Channel names normalized: 0
+- Entries before: 3314
+- Entries after: 3314
+- Channel names normalized: 10
 - Malformed HTTP options moved into VLC directives: 0
-- Invalid/external logo references removed: 2851
+- Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1487
+- Original Backup/Backups and protected queue rows examined: 1494
 - Matching alternate streams retained in Backup: 360
-- True orphan Backup rows evaluated: 4
-- Eligible orphan Backup rows promoted to primary: 3
+- True orphan Backup rows evaluated: 1
+- Eligible orphan Backup rows promoted to primary: 0
 - Clearly identified Adult orphans restored to Adult: 0
 - Ineligible/unclassified orphan Backup rows retained: 1
 - Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.
@@ -75,9 +75,12 @@
 - Vietnam: 6
 - International: 102
 - News: 11
+- Fashion TV: 1
 - Kids: 12
 - Religious: 3
 - Sports: 8
 - Adult: 366
-- Review: 1123
+- Review: 1130
+- New Channels: 4
+- New Backups: 8
 - Backup: 361
