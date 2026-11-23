@@ -5,50 +5,53 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-22 — `IPTV-Playlist.m3u`
+### 2026-11-23 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **10**
-- Stream URLs added / removed: **2 / 59**
-- Backup URL updates: **1**
-- Logo reference changes: **401**
-- Replaced channel identities: **2**
-- Duplicate URL occurrences removed: **0**
-
-Removed channel identities (up to 10):
-- Ayush Next Communication Network (576p)
-- ETV Life (1080p)
-- Gaunda Punjab TV (720p)
-- Punjab Plus (1080p)
-- WeatherSpy (India) (720p)
-- Zodiak TV (1080p)
-- TLC (India) HD (1080p)
-- DD National HD (1080p)
-- Kabaddi 24x7 (720p)
-- CCV
-
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-22 — `International-Playlist.m3u`
-
-- New channel identities: **1**
-- Channel identities removed: **7**
-- Stream URLs added / removed: **2 / 11**
+- New channel identities: **21**
+- Channel identities removed: **1**
+- Stream URLs added / removed: **24 / 1**
 - Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **411**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Starz Cinema
+- Fashion&LifeStyle
+- FashionBox
+- FashionTV
+- FashionTV Paris L'Original
+- FashionTV Secrets
+- Global Fashion Channel
+- Ayush Next Communication Network (576p)
+- CCV (480p)
+- ETV Life (1080p)
+- Gaunda Punjab TV (720p)
 
 Removed channel identities (up to 10):
-- Aurora Media Films
-- Bol Entertainment
-- Nande Portetepe TV
-- Rakuten TV Drama Movies
-- Rakuten TV Drama Movies Germany
-- Rakuten TV Drama Movies Italy
-- Rakuten TV Drama Movies UK
+- Bollywood OLD
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-23 — `International-Playlist.m3u`
+
+- New channel identities: **10**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **20 / 1**
+- Backup URL updates: **0**
+- Logo reference changes: **21**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- FashionTV (India)
+- FashionTV (Russia)
+- FashionTV Paris L'Original
+- FashionTV Secrets
+- Code Fashion TV
+- FashionTV Europe
+- FMH Movies
+- Galaxy
+- Galaxy Premium
+- Kinosvidanie
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
