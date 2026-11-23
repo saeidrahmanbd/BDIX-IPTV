@@ -10,7 +10,7 @@ name: International Channel Discovery
 # two simultaneous manual dispatches can each see the other as active and both
 # skip the discover job (mutual-exclusion race).
 concurrency:
-  group: international-channel-discovery-run-v1
+  group: international-channel-discovery-run-v2
   cancel-in-progress: false
   queue: max
 # [manual-international-discovery] One-time explicit reorganization after genre-policy merge.
