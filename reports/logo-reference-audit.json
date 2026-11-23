@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5243,
-  "all_explicitly_referenced_logo_files": 2504,
-  "runtime_referenced_logo_files": 2502,
-  "playlist_referenced_logo_files": 2475,
-  "apparently_unreferenced_by_any_text_file": 2739,
-  "apparently_unreferenced_by_runtime_sources": 2741,
+  "all_explicitly_referenced_logo_files": 2505,
+  "runtime_referenced_logo_files": 2503,
+  "playlist_referenced_logo_files": 2476,
+  "apparently_unreferenced_by_any_text_file": 2738,
+  "apparently_unreferenced_by_runtime_sources": 2740,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -610,6 +610,7 @@
     "logos/on-movies-e521135430.webp",
     "logos/on-music-d304b15bd2.webp",
     "logos/one.png",
+    "logos/one/fashion-tv.svg",
     "logos/orizont-tv-86d90ff35c.webp",
     "logos/orphan.png",
     "logos/panorama-fm-e760f9450e.png",
@@ -2714,6 +2715,9 @@
     ],
     "logos/one.png": [
       "tests/test_maintenance_extinf_canonicalization.py"
+    ],
+    "logos/one/fashion-tv.svg": [
+      "tests/test_discovery_run_validation.py"
     ],
     "logos/orizont-tv-86d90ff35c.webp": [
       "reports/logo-source-registry.json"
@@ -12893,6 +12897,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/digital-fashion.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/disco-mix-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -13693,6 +13700,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/fashion-tv-aa7f9461cf.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -14846,7 +14854,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/history-tv18-hd-1080p-geo-blocked.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/introuble-1080p.png": [
       "IPTV-Playlist.m3u",
@@ -24438,6 +24447,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/digital-fashion.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/disco-mix-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -25238,6 +25250,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/fashion-tv-aa7f9461cf.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -26392,7 +26405,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/history-tv18-hd-1080p-geo-blocked.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/introuble-1080p.png": [
       "IPTV-Playlist.m3u",
@@ -33369,7 +33383,6 @@
     "logos/dd-kisan.png",
     "logos/dd-news.png",
     "logos/deluxe-music-dance-by-kontor.png",
-    "logos/digital-fashion.png",
     "logos/dios-te-ve-kids.png",
     "logos/discovery-kids.png",
     "logos/discovery-turbo-india.png",

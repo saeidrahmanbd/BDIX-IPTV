@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-23T03:43:50+00:00**
+Generated: **2026-11-23T03:53:22+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **6ef85aaa3946afee27fd18d4b2e02fb4d4d611f9f4c37856f7e5ce43e51e0a49**
+- IPTV-Playlist.m3u SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
 - International-Playlist.m3u SHA-256: **4d1714392688e4b51fbc037a9b3b2fa8be4e9e85063655286d379310bc962aa6**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **146**
 - Exact-byte duplicate asset clusters: **741**
-- Playlist references whose asset stem differs from the normalized channel name: **1576**
-- Unreferenced image assets immediately inside logos/: **966** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1582**
+- Unreferenced image assets immediately inside logos/: **965** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1106,6 +1106,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Cowboy Movie Channel | cowboy-movie-channel.png | International |
 | IPTV-Playlist.m3u | Dance TV | dance-tv.png | International |
 | IPTV-Playlist.m3u | EPIX | epix-tv.png | International |
+| IPTV-Playlist.m3u | Fashion&LifeStyle | fashion-tv-aa7f9461cf.png | International |
+| IPTV-Playlist.m3u | FashionBox | fashion-tv-aa7f9461cf.png | International |
+| IPTV-Playlist.m3u | FashionTV | fashion-tv-aa7f9461cf.png | International |
+| IPTV-Playlist.m3u | FashionTV Paris L'Original | fashion-tv-aa7f9461cf.png | International |
+| IPTV-Playlist.m3u | FashionTV Secrets | fashion-tv-aa7f9461cf.png | International |
+| IPTV-Playlist.m3u | Global Fashion Channel | digital-fashion.png | International |
 | IPTV-Playlist.m3u | Hollywood | hollywood-hd.png | International |
 | IPTV-Playlist.m3u | Movies Now+ | movies-now-plus-0cafc6cc49572c25cbc8.png | International |
 | IPTV-Playlist.m3u | MyTime Movie (UK) | mytime-movie.png | International |
