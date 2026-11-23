@@ -775,6 +775,45 @@ def validate_recovery_accounting(source_text, updated_text, events, report):
     return {"recovered": len(recovered_events), "protected_restored": len(protected_events), "retired": len(retired_events)}
 
 
+def validate_published_recovery_report(playlist_text, report_text, history):
+    """Validate recovery rows against the final post-reorganization playlist and probe history."""
+    date_match = re.search(r"- Bangladesh check date: \\*\\*(\\d{4}-\\d{2}-\\d{2})\\*\\*", report_text)
+    if not date_match:
+        raise ValueError("Published health report is missing its Bangladesh check date")
+    check_date = date_match.group(1)
+    section = report_text.split("## Recovered streams", 1)
+    if len(section) != 2:
+        raise ValueError("Published report is missing the Recovered streams section")
+    body = section[1].split("\\n## ", 1)[0]
+    rows = []
+    for line in body.splitlines():
+        match = re.fullmatch(r"- \\*\\*(.*?)\\*\\* — restored to \\*\\*(.*?)\\*\\*", line.strip())
+        if match:
+            rows.append((match.group(1), match.group(2)))
+    metric = f"- Restored from Review to primary/Backup/discovery queue: **{len(rows)}**"
+    if metric not in report_text:
+        raise ValueError("Published recovery total does not match its recovered-stream list")
+
+    _, blocks = parse(playlist_text)
+    final_rows = Counter()
+    for block in blocks:
+        name, group = name_of(block[0]), group_of(block[0])
+        entry_urls = urls(block)
+        if len(entry_urls) != 1:
+            continue
+        key = stream_key(block[0], entry_urls[0])
+        record = history.get("entries", {}).get(key, {})
+        if record.get("last_status") == "ok" and record.get("last_ok_date") == check_date:
+            final_rows[(name, group)] += 1
+    for row in rows:
+        if final_rows[row] <= 0:
+            raise ValueError(
+                f"Recovered report row is absent from the final playlist or lacks a successful probe: {row[0]}"
+            )
+        final_rows[row] -= 1
+    return len(rows)
+
+
 def build_report(events, history, check_date, generated, total):
     ok = sum(e["state"] == "ok" for e in events)
     failures = [e for e in events if e["state"] == "fail"]
