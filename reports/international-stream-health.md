@@ -1,21 +1,23 @@
 # International Stream Health
 
-- Generated: **2026-11-23T04:06:15+00:00**
+- Generated: **2026-11-23T04:27:24+00:00**
 - Bangladesh check date: **2026-11-23**
 - Playlist rows checked: **3314**
-- Reachable media streams: **2407**
-- Definitive failures today: **39**
-- Inconclusive checks: **868**
+- Reachable media streams: **2424**
+- Definitive failures today: **40**
+- Inconclusive checks: **850**
 - Newly moved to Review: **0**
-- Restored from Review to primary/Backup/discovery queue: **0**
+- Moved to Review after three consecutive inconclusive days: **0**
+- Restored from Review to primary/Backup/discovery queue: **587**
 - Removed after three consecutive failed days: **0**
-- Automatically flagged rows still under Review: **162**
+- Automatically flagged rows still under Review: **153**
 
 ## Rules
 
 - First definitive failed day: move the row to Review; all metadata and its logo stay intact.
 - A successful later check reclassifies a Review row to its eligible primary category; a working alternate whose identity already has a primary is placed in Backup.
 - Third consecutive definitive failed Bangladesh calendar day: remove the stream row.
+- Third consecutive inconclusive Bangladesh calendar day: move a Primary/Backup stream to Review without deleting it; inconclusive checks never advance the definitive-failure retirement streak.
 - A working Review row that is not eligible under the country/genre policy remains in Review.
 - Reruns on the same Bangladesh date do not increase the streak; a missed day restarts it.
 - Only HTTP 404/410 are definitive HTTP failures. All other HTTP errors, access-denial pages, empty responses, DNS/TLS/timeouts and connection failures are inconclusive and never advance the three-day retirement streak.
@@ -27,39 +29,40 @@ None.
 
 ## Failed streams still under Review
 
+- **Ruposhi Bangla** — 0/3 consecutive days — HTTP 404
+- **Fiesta TV** — 0/3 consecutive days — HTTP 404
 - **Metropolitana del Cuzco** — 0/3 consecutive days — HTTP 404
 - **CEACOM TV [ ]** — 0/3 consecutive days — HTTP 404
 - **Ishtar TV** — 0/3 consecutive days — HTTP 404
-- **Angel Smalls** — 0/3 consecutive days — HTTP 404
-- **Cathy Heaven** — 0/3 consecutive days — HTTP 404
+- **LRT Klasika** — 0/3 consecutive days — HTTP 404
+- **LRT Opus** — 0/3 consecutive days — HTTP 404
 - **Day With A Pornstar** — 0/3 consecutive days — HTTP 404
 - **Ero Xxx** — 0/3 consecutive days — HTTP 404
-- **Hilary Scott** — 0/3 consecutive days — HTTP 404
 - **Hustler** — 0/3 consecutive days — HTTP 404
 - **Mctv Big Dick** — 0/3 consecutive days — HTTP 404
 - **Mctv Big Tits** — 0/3 consecutive days — HTTP 404
 - **Mctv Pornstar** — 0/3 consecutive days — HTTP 404
 - **Mctv Rough** — 0/3 consecutive days — HTTP 404
 - **PORNBOX: SLIM** — 0/3 consecutive days — HTTP 404
-- **Reality Kings** — 0/3 consecutive days — HTTP 404
+- **Rated 3** — 0/3 consecutive days — HTTP 404
 - **Russian Night** — 0/3 consecutive days — HTTP 404
 - **Super One** — 0/3 consecutive days — HTTP 404
 - **Vivid Red** — 0/3 consecutive days — HTTP 404
 - **Xy Max** — 0/3 consecutive days — HTTP 404
 - **Aamar Bangla** — 1/3 consecutive days — HTTP 404
 - **Abdulmajeed Abdullah** — 2/3 consecutive days — HTTP 404
-- **aur LIFE** — 1/3 consecutive days — HTTP 404
 - **C Malayalam TV** — 1/3 consecutive days — HTTP 404
+- **DD Kashir** — 0/3 consecutive days — HTTP 404
 - **DeporTV** — 1/3 consecutive days — HTTP 404
 - **FON Music** — 1/3 consecutive days — HTTP 404
 - **Galactica TV** — 2/3 consecutive days — HTTP 404
+- **Global Punjab** — 0/3 consecutive days — HTTP 404
 - **Hero [ ]** — 1/3 consecutive days — HTTP 404
 - **Independent TV** — 2/3 consecutive days — HTTP 404
 - **JooMusic** — 1/3 consecutive days — HTTP 404
 - **MCM Pop** — 2/3 consecutive days — HTTP 404
 - **MNTV (Tamil)** — 1/3 consecutive days — HTTP 404
 - **Play TV (Cameroon)** — 1/3 consecutive days — HTTP 404
-- **Reino Infantil** — 1/3 consecutive days — HTTP 404
 - **Rupasi Bangla** — 1/3 consecutive days — HTTP 404
 - **Steelbird Music** — 2/3 consecutive days — HTTP 404
 - **Vision Beats** — 0/3 consecutive days — HTTP 404
@@ -69,7 +72,593 @@ None.
 
 ## Recovered streams
 
-None.
+- **4 SiDES TV** — restored to **Indian Entertainment**
+- **4K Travel** — restored to **Documentary & Wildlife**
+- **7X Punjabi** — restored to **Indian Music**
+- **30A Golf Kingdom** — restored to **Sports**
+- **A Spor** — restored to **Sports**
+- **ABN Bible Movies Channel** — restored to **United States**
+- **ACC Digital Network** — restored to **Sports**
+- **ACI Sport TV** — restored to **Sports**
+- **ADN TV+** — restored to **Kids**
+- **Adventure Earth** — restored to **Documentary & Wildlife**
+- **Afarin TV** — restored to **Kids**
+- **Al Istiqama** — restored to **Religious**
+- **Al Qamar** — restored to **Religious**
+- **Al Sunnah Al Nabawiyah** — restored to **Religious**
+- **Al Sunnah TV** — restored to **Religious**
+- **Al-Zahra TV Turkic** — restored to **Religious**
+- **Alone** — restored to **Documentary & Wildlife**
+- **American Ninja Warrior** — restored to **Sports**
+- **Amou Yazid TV** — restored to **Kids**
+- **Animal Planet** — restored to **Indian Entertainment**
+- **Animal Planet (Czech Republic)** — restored to **Documentary & Wildlife**
+- **Animal Planet (Hungary)** — restored to **Documentary & Wildlife**
+- **Aqlvoy** — restored to **Kids**
+- **Arena4** — restored to **Sports**
+- **Arena Sport 1** — restored to **Sports**
+- **Arena Sport 2** — restored to **Sports**
+- **Arryadia** — restored to **Sports**
+- **Arsenal** — restored to **Documentary & Wildlife**
+- **Asharq Discovery** — restored to **Documentary & Wildlife**
+- **Asharq Documentary** — restored to **Documentary & Wildlife**
+- **Astrahan.Ru Sport** — restored to **Sports**
+- **Atfal & Mawaheb TV** — restored to **Kids**
+- **ATG Live** — restored to **Sports**
+- **ATN Bangla UK** — restored to **Bangladesh**
+- **ATV USA** — restored to **Bangladesh**
+- **aur LIFE** — restored to **Pakistani**
+- **Autentic History** — restored to **Documentary & Wildlife**
+- **Ax Men** — restored to **Documentary & Wildlife**
+- **AXN (Brazil)** — restored to **Brazil**
+- **AXN Black (United States)** — restored to **United States**
+- **AXN Black (United States) Czech Republic** — restored to **Czech Republic**
+- **AXN Black (United States) Hungary** — restored to **Hungary**
+- **AXN Black (United States) Poland** — restored to **Poland**
+- **AXN CEE** — restored to **Hungary**
+- **AXN CEE Czech Republic** — restored to **Czech Republic**
+- **AXN Crime** — restored to **United States**
+- **AXN Latin America** — restored to **United States**
+- **AXN Poland** — restored to **Poland**
+- **AXN White (Poland)** — restored to **Poland**
+- **Ayush TV** — restored to **Indian Entertainment**
+- **Baby Shark TV** — restored to **Kids**
+- **Baby Time** — restored to **Kids**
+- **BabyFirst** — restored to **Kids**
+- **BabyFirst Spanish** — restored to **Backup**
+- **Bahrain Quran** — restored to **Religious**
+- **Bahrain Sports 1** — restored to **Sports**
+- **Bahrain Sports 2** — restored to **Sports**
+- **Baiscope TV** — restored to **Indian Entertainment**
+- **Balapan** — restored to **Kids**
+- **Bang Bang TV** — restored to **Kids**
+- **Bangla Jago TV** — restored to **Indian Bangla**
+- **Banglar Kontho 24** — restored to **Bangladesh**
+- **BBC Earth Czechia** — restored to **Documentary & Wildlife**
+- **BBC Earth Hungary** — restored to **Documentary & Wildlife**
+- **beIN SPORTS** — restored to **Sports**
+- **beIN SPORTS 1** — restored to **Sports**
+- **beIN SPORTS 2** — restored to **Sports**
+- **beIN SPORTS 3** — restored to **Sports**
+- **beIN SPORTS XTRA** — restored to **Sports**
+- **beIN Sports XTRA en Espanol** — restored to **Sports**
+- **BeJoy.kids** — restored to **Kids**
+- **BEK Sports West** — restored to **Sports**
+- **Boing (Italy)** — restored to **Kids**
+- **Bolajon** — restored to **Kids**
+- **Bon Voyage** — restored to **Documentary & Wildlife**
+- **Box Kids TV** — restored to **Kids**
+- **Brat TV** — restored to **Kids**
+- **BritBox Mysteries** — restored to **Documentary & Wildlife**
+- **Caillou** — restored to **Kids**
+- **Camp Spoopy** — restored to **Kids**
+- **Canal Cine Dios** — restored to **Colombia**
+- **Canal+ Sport 2 SK** — restored to **Sports**
+- **Canal+ Sport 3 SK** — restored to **Sports**
+- **Canal+ Sport 4 SK** — restored to **Sports**
+- **Canal+ Sport 5 SK** — restored to **Sports**
+- **Canal+ Sport 6 SK** — restored to **Sports**
+- **Canal+ Sport 7 SK** — restored to **Sports**
+- **Canal+ Sport 8 SK** — restored to **Sports**
+- **Canal+ Sport SK** — restored to **Sports**
+- **Carousel +4** — restored to **Kids**
+- **Cartoon Network Arabic** — restored to **Kids**
+- **Cartoon Network Asia** — restored to **Kids**
+- **Cartoon Network CEE Czech Republic** — restored to **Kids**
+- **Cartoon Network CEE Poland** — restored to **Kids**
+- **Cartoon Network CEE Ukraine** — restored to **Kids**
+- **Cartoon Network Latin America South Atlantic** — restored to **Kids**
+- **Cartoon Network Latin America South Pacific** — restored to **Backup**
+- **Cartoonito** — restored to **Kids**
+- **Cartoonito Asia** — restored to **Kids**
+- **Cartoonito CEE Czechia** — restored to **Kids**
+- **Cartoonito CEE Poland** — restored to **Kids**
+- **Cartoonito Latin America** — restored to **Kids**
+- **CB24 TV** — restored to **Bangladesh**
+- **CBeebies (Poland)** — restored to **Kids**
+- **CCTV-9** — restored to **Documentary & Wildlife**
+- **CCTV-14** — restored to **Kids**
+- **CCTV-Billiards** — restored to **Sports**
+- **CCTV-Golf & Tennis** — restored to **Sports**
+- **CCTV-Storm Football** — restored to **Sports**
+- **CCTV-Weapon & Technology** — restored to **Documentary & Wildlife**
+- **CGTN Documentary** — restored to **Documentary & Wildlife**
+- **Channel Fight** — restored to **Sports**
+- **Channel S** — restored to **Bangladesh**
+- **Channel S UK** — restored to **Backup**
+- **Chikitoonz** — restored to **Kids**
+- **China Travel** — restored to **Documentary & Wildlife**
+- **Chithiram** — restored to **Kids**
+- **Choppertown** — restored to **Documentary & Wildlife**
+- **Clan** — restored to **Kids**
+- **Claro Sports** — restored to **Sports**
+- **ClickTV Chile** — restored to **Documentary & Wildlife**
+- **CNA Originals** — restored to **Documentary & Wildlife**
+- **Community TV** — restored to **Bangladesh**
+- **Cosmos Tv** — restored to **Argentina**
+- **Court TV** — restored to **Documentary & Wildlife**
+- **Cricket Gold** — restored to **Sports**
+- **Crime & Justice** — restored to **Documentary & Wildlife**
+- **Crime Scene TV** — restored to **Documentary & Wildlife**
+- **CRTV (Chile)** — restored to **Sports**
+- **CT2** — restored to **Documentary & Wildlife**
+- **CT Decko** — restored to **Kids**
+- **CT Sport** — restored to **Sports**
+- **CVR Health** — restored to **Indian Entertainment**
+- **Darshana TV** — restored to **Indian Entertainment**
+- **Dateline 24/7** — restored to **Documentary & Wildlife**
+- **Dazn Ringside** — restored to **Sports**
+- **DD Bharati** — restored to **Indian Entertainment**
+- **DD Bihar** — restored to **Indian Entertainment**
+- **DD India** — restored to **Indian Entertainment**
+- **DD National** — restored to **Backup**
+- **DD Rajasthan** — restored to **Backup**
+- **DD Urdu** — restored to **Backup**
+- **DD Uttar Pradesh** — restored to **Indian Entertainment**
+- **Deadly Women** — restored to **Documentary & Wildlife**
+- **Deen TV** — restored to **Religious**
+- **Deshe Bideshe** — restored to **Bangladesh**
+- **Deshi TV** — restored to **Bangladesh**
+- **Detskiy** — restored to **Kids**
+- **Discovering China** — restored to **Documentary & Wildlife**
+- **Discovery Asia Taiwan** — restored to **Documentary & Wildlife**
+- **Discovery Channel (Czech Republic)** — restored to **Documentary & Wildlife**
+- **Discovery Channel (Hungary)** — restored to **Documentary & Wildlife**
+- **Discovery Channel (Italy)** — restored to **Documentary & Wildlife**
+- **Discovery Channel (United States)** — restored to **Documentary & Wildlife**
+- **Discovery Channel Latin America** — restored to **Documentary & Wildlife**
+- **Discovery Kids Latin America** — restored to **Kids**
+- **Discovery Kids Latin America Chile** — restored to **Kids**
+- **Discovery Kids Latin America Colombia** — restored to **Kids**
+- **Discovery Science Latin America** — restored to **Documentary & Wildlife**
+- **Discovery Theater Latin America** — restored to **Documentary & Wildlife**
+- **Discovery Turbo** — restored to **Documentary & Wildlife**
+- **Discovery Turbo (Italy)** — restored to **Documentary & Wildlife**
+- **Discovery Turbo (United States)** — restored to **Documentary & Wildlife**
+- **Discovery Turbo Latin America** — restored to **Documentary & Wildlife**
+- **Discovery World** — restored to **Documentary & Wildlife**
+- **Disney Channel (Bulgaria)** — restored to **Kids**
+- **Disney Channel (Czech Republic)** — restored to **Kids**
+- **Disney Channel (Germany)** — restored to **Kids**
+- **Disney Channel (Hungary)** — restored to **Kids**
+- **Disney Channel (Poland)** — restored to **Kids**
+- **Disney Channel Latin America Center** — restored to **Kids**
+- **Disney Channel Latin America Mexico** — restored to **Kids**
+- **Disney Channel Latin America North** — restored to **Backup**
+- **Disney Jr** — restored to **Kids**
+- **Disney Jr. Latin America** — restored to **Kids**
+- **Disney Jr. Latin America North** — restored to **Backup**
+- **Disney Junior (Czech Republic)** — restored to **Kids**
+- **Disney XD (Poland)** — restored to **Kids**
+- **Disney XD (United States)** — restored to **Kids**
+- **DocuBox** — restored to **Documentary & Wildlife**
+- **Documentary+** — restored to **Documentary & Wildlife**
+- **Dokusat** — restored to **Documentary & Wildlife**
+- **Doyel TV** — restored to **Bangladesh**
+- **DraftKings Network** — restored to **Sports**
+- **DTV USA** — restored to **Bangladesh**
+- **Dua Channel** — restored to **Religious**
+- **Duck TV** — restored to **Kids**
+- **ducktv PLUS** — restored to **Kids**
+- **Dvojka** — restored to **Documentary & Wildlife**
+- **EBS Kids** — restored to **Kids**
+- **Ekamra Bharat Odia** — restored to **Indian Entertainment**
+- **Ekamra Manoranjan** — restored to **Indian Entertainment**
+- **Ekamra Musiq** — restored to **Indian Music**
+- **EKids** — restored to **Kids**
+- **Eleven Sports 1** — restored to **Sports**
+- **Eleven Sports 2** — restored to **Sports**
+- **Eleven Sports 3** — restored to **Sports**
+- **Eleven Sports 4** — restored to **Sports**
+- **Eman Channel** — restored to **Religious**
+- **Epic Kids Digital** — restored to **Kids**
+- **Equidia** — restored to **Sports**
+- **Escape TV** — restored to **Documentary & Wildlife**
+- **ESPN8: The Ocho** — restored to **Sports**
+- **ESPN 2 (United States)** — restored to **Sports**
+- **ESPN 4 (Brazil)** — restored to **Sports**
+- **ESPN (Brazil)** — restored to **Sports**
+- **ESPN (United States)** — restored to **Sports**
+- **ESPN Latin America Colombia** — restored to **Sports**
+- **ESPN Latin America Mexico** — restored to **Sports**
+- **ESPN Premium (Argentina)** — restored to **Sports**
+- **ESPNU** — restored to **Sports**
+- **ETV 2** — restored to **Kids**
+- **Eurosport 1 Hungary** — restored to **Sports**
+- **Eurosport 2 Hungary** — restored to **Sports**
+- **Eurosport 4K Czechia** — restored to **Sports**
+- **Fashion TV** — restored to **Fashion TV**
+- **FashionTV (Russia)** — restored to **Fashion TV**
+- **FashionTV Paris L'Original** — restored to **Fashion TV**
+- **FashionTV Secrets** — restored to **Fashion TV**
+- **Fast&FunBox** — restored to **Sports**
+- **FIFA+ Italy** — restored to **Sports**
+- **FIFA+ Spain** — restored to **Sports**
+- **FIFA+ United States** — restored to **Sports**
+- **Fight Network** — restored to **Sports**
+- **Fight TV** — restored to **Sports**
+- **FightBox** — restored to **Sports**
+- **FightBox Poland** — restored to **Sports**
+- **FITE 24** — restored to **Sports**
+- **FITE 24/7** — restored to **Backup**
+- **Five Stars Sports** — restored to **Sports**
+- **FloHockey** — restored to **Sports**
+- **FloRacing** — restored to **Sports**
+- **Food Network (Czech Republic)** — restored to **Documentary & Wildlife**
+- **Fox Sports** — restored to **Sports**
+- **Fox Sports 1** — restored to **Sports**
+- **Friends TV** — restored to **Indian Entertainment**
+- **FUEL TV** — restored to **Sports**
+- **FUEL TV AU** — restored to **Backup**
+- **FunBox** — restored to **Kids**
+- **Futbol** — restored to **Sports**
+- **Futbol TV** — restored to **Sports**
+- **Get.factual** — restored to **Documentary & Wildlife**
+- **Glory Kickboxing Poland** — restored to **Sports**
+- **GNT** — restored to **Indian Entertainment**
+- **Golf Channel** — restored to **Sports**
+- **Gulli** — restored to **Kids**
+- **Gulli Girl** — restored to **Kids**
+- **HappyKids** — restored to **Kids**
+- **History 2 Latin America** — restored to **Documentary & Wildlife**
+- **History & Warfare Now** — restored to **Documentary & Wildlife**
+- **History (Czech Republic)** — restored to **Documentary & Wildlife**
+- **History (Hungary)** — restored to **Documentary & Wildlife**
+- **History (Poland)** — restored to **Documentary & Wildlife**
+- **History (United States)** — restored to **Documentary & Wildlife**
+- **History Asia** — restored to **Documentary & Wildlife**
+- **History Latin America** — restored to **Documentary & Wildlife**
+- **History TV18** — restored to **Documentary & Wildlife**
+- **HMI PROMZ NEWS** — restored to **United States**
+- **Horse TV** — restored to **Sports**
+- **Hosanna TV** — restored to **Indian Entertainment**
+- **House of Crime** — restored to **Documentary & Wildlife**
+- **HTSpor TV** — restored to **Sports**
+- **Hyder TV** — restored to **Religious**
+- **InFast** — restored to **Documentary & Wildlife**
+- **Inside Crime** — restored to **Documentary & Wildlife**
+- **Inter TV (Italy)** — restored to **Sports**
+- **Into Crime** — restored to **Documentary & Wildlife**
+- **InTrouble** — restored to **Sports**
+- **Investigation Discovery (Czech Republic)** — restored to **Documentary & Wildlife**
+- **Investigation Discovery (Hungary)** — restored to **Documentary & Wildlife**
+- **Investigation Discovery (United States)** — restored to **Documentary & Wildlife**
+- **INWILD** — restored to **Documentary & Wildlife**
+- **InWonder** — restored to **Documentary & Wildlife**
+- **iON TV UK** — restored to **Religious**
+- **Iqra Bangla** — restored to **Religious**
+- **Iqraa TV** — restored to **Religious**
+- **Islam Channel Bangla** — restored to **Religious**
+- **Islam TV** — restored to **Religious**
+- **Italiana** — restored to **Documentary & Wildlife**
+- **ITV Deportes** — restored to **Sports**
+- **Iunior TV** — restored to **Kids**
+- **Jan TV** — restored to **Indian Entertainment**
+- **Jeevan TV** — restored to **Indian Entertainment**
+- **JimJam** — restored to **Kids**
+- **Jordan Sport** — restored to **Sports**
+- **kabel eins Doku** — restored to **Documentary & Wildlife**
+- **KandelaTV** — restored to **International**
+- **Kartoon Channel!** — restored to **Kids**
+- **Kaumudy TV** — restored to **Indian Entertainment**
+- **KidsFlix** — restored to **Kids**
+- **KiKA** — restored to **Kids**
+- **Knowledge Network** — restored to **Documentary & Wildlife**
+- **Kolyokklub** — restored to **Kids**
+- **Kozoom TV** — restored to **Sports**
+- **KTV Sport** — restored to **Sports**
+- **Kuriakos Kids** — restored to **Kids**
+- **L1 Max** — restored to **Sports**
+- **L'Equipe** — restored to **Sports**
+- **Lale** — restored to **Kids**
+- **Lego Channel** — restored to **Kids**
+- **Life+Style** — restored to **Documentary & Wildlife**
+- **Love Nature en Espanol** — restored to **Documentary & Wildlife**
+- **Love Pets** — restored to **Documentary & Wildlife**
+- **Love The Planet** — restored to **Documentary & Wildlife**
+- **M4 Sport** — restored to **Sports**
+- **Madani TV** — restored to **Religious**
+- **MadeinBO TV** — restored to **Sports**
+- **Madhimugam TV** — restored to **Indian Entertainment**
+- **Madina Live** — restored to **Religious**
+- **Major League Cricket** — restored to **Sports**
+- **Makkah Live** — restored to **Religious**
+- **Makkah TV** — restored to **Religious**
+- **Marquee Sports Network** — restored to **Sports**
+- **Marutam TV** — restored to **Indian Entertainment**
+- **Match4** — restored to **Sports**
+- **Match! Ultra** — restored to **Sports**
+- **Max Sport 1** — restored to **Sports**
+- **Max Sport 2** — restored to **Sports**
+- **Max Sport 3** — restored to **Sports**
+- **Max Sport 4** — restored to **Sports**
+- **Mayday: Air Disaster** — restored to **Documentary & Wildlife**
+- **MBC 3 USA** — restored to **Kids**
+- **MCI Television** — restored to **Colombia**
+- **Mei Alai TV** — restored to **Indian Entertainment**
+- **Mh 1 Prime** — restored to **Indian Entertainment**
+- **MH One** — restored to **Indian Entertainment**
+- **MH One Dil Se** — restored to **Indian Entertainment**
+- **MH One Prime** — restored to **Backup**
+- **Milan TV** — restored to **Sports**
+- **Minika Cocuk** — restored to **Kids**
+- **Minika Go** — restored to **Kids**
+- **Minimax (Hungary)** — restored to **Kids**
+- **Minimax CEE** — restored to **Kids**
+- **MMA-TV.com** — restored to **Sports**
+- **MNB Sport** — restored to **Sports**
+- **Moonbug Kids** — restored to **Kids**
+- **More Than Sports TV** — restored to **Sports**
+- **Motorvision** — restored to **Sports**
+- **Movie Music by Stingray** — restored to **Canada**
+- **Mr Bean Animated** — restored to **Kids**
+- **Mr Bean Animated ES** — restored to **Backup**
+- **Mr Bean Animated FR** — restored to **Backup**
+- **MRTV Sports** — restored to **Sports**
+- **MSG SportsZone** — restored to **Sports**
+- **MTRSPT1** — restored to **Sports**
+- **Mysteries Xplored** — restored to **Documentary & Wildlife**
+- **Mystery TV** — restored to **Documentary & Wildlife**
+- **Mythbusters** — restored to **Documentary & Wildlife**
+- **Nagorik TV** — restored to **Bangladesh**
+- **Nandighosha TV** — restored to **Indian Entertainment**
+- **Nano** — restored to **Documentary & Wildlife**
+- **Nat Geo People** — restored to **Documentary & Wildlife**
+- **National Geographic (Czech Republic)** — restored to **Documentary & Wildlife**
+- **National Geographic (Hungary)** — restored to **Documentary & Wildlife**
+- **National Geographic (Mexico)** — restored to **Documentary & Wildlife**
+- **National Geographic (Poland)** — restored to **Documentary & Wildlife**
+- **National Geographic (United States)** — restored to **Documentary & Wildlife**
+- **National Geographic Wild (Czech Republic)** — restored to **Documentary & Wildlife**
+- **National Geographic Wild (Hungary)** — restored to **Documentary & Wildlife**
+- **NatureTime AU** — restored to **Documentary & Wildlife**
+- **NatureTime France** — restored to **Documentary & Wildlife**
+- **Nautical Channel** — restored to **Sports**
+- **NBC Sports NOW** — restored to **Sports**
+- **Network 10** — restored to **Indian Entertainment**
+- **NFL Network** — restored to **Sports**
+- **NHL Network** — restored to **Sports**
+- **Nick Jr. (Czech Republic)** — restored to **Kids**
+- **Nick Jr. (Hungary)** — restored to **Kids**
+- **Nick Jr. (Italy)** — restored to **Kids**
+- **Nick Jr. (Poland)** — restored to **Kids**
+- **Nick Jr. (United States)** — restored to **Kids**
+- **Nick Jr. Latin America** — restored to **Kids**
+- **Nickelodeon (Brazil)** — restored to **Kids**
+- **Nickelodeon (Czech Republic)** — restored to **Kids**
+- **Nickelodeon (Germany)** — restored to **Kids**
+- **Nickelodeon (Hungary)** — restored to **Kids**
+- **Nickelodeon (Poland)** — restored to **Kids**
+- **Nickelodeon CIS** — restored to **Kids**
+- **Nicktoons (Czech Republic)** — restored to **Kids**
+- **Nicktoons (Hungary)** — restored to **Kids**
+- **Nicktoons (Poland)** — restored to **Kids**
+- **Nicktoons CIS** — restored to **Kids**
+- **Ninja Kidz TV** — restored to **Kids**
+- **NKR TV Kannada** — restored to **Indian Entertainment**
+- **O! International** — restored to **Kids**
+- **O'zbekiston Tarixi** — restored to **Documentary & Wildlife**
+- **Odisha TV** — restored to **Indian Entertainment**
+- **ON Kids** — restored to **Kids**
+- **One Paschima** — restored to **Indian Entertainment**
+- **Outdoor Channel** — restored to **Documentary & Wildlife**
+- **Ovacion TV** — restored to **Sports**
+- **Pac-12 Insider** — restored to **Sports**
+- **Pakapaka** — restored to **Kids**
+- **Pankh** — restored to **Indian Music**
+- **PBS Arts** — restored to **Documentary & Wildlife**
+- **PBS Kids** — restored to **Kids**
+- **Peace TV** — restored to **Religious**
+- **Peace TV Bangla** — restored to **Religious**
+- **Peques TV** — restored to **Kids**
+- **Persiana Docs** — restored to **Documentary & Wildlife**
+- **Persiana Family** — restored to **Iran**
+- **Persiana Fight** — restored to **Sports**
+- **Persiana Iranian** — restored to **Iran**
+- **Persiana Korea** — restored to **Iran**
+- **Persiana Plus** — restored to **Iran**
+- **Persiana Travel** — restored to **Documentary & Wildlife**
+- **PFL** — restored to **Sports**
+- **PGA Tour** — restored to **Sports**
+- **Plim Plim** — restored to **Kids**
+- **Polsat JimJam** — restored to **Kids**
+- **Polsat Viasat Explore** — restored to **Documentary & Wildlife**
+- **Polsat Viasat History** — restored to **Documentary & Wildlife**
+- **Polsat Viasat Nature** — restored to **Documentary & Wildlife**
+- **Pop** — restored to **Kids**
+- **Popular Science** — restored to **Documentary & Wildlife**
+- **Powerkids Kartoon Channel** — restored to **Kids**
+- **PowerNation TV** — restored to **Documentary & Wildlife**
+- **Prima Sport Czechia** — restored to **Sports**
+- **Prime (Syria)** — restored to **Sports**
+- **Punjabi TV** — restored to **Indian Entertainment**
+- **Q TV** — restored to **Religious**
+- **Quran** — restored to **Religious**
+- **Quran TV** — restored to **Religious**
+- **RACER International** — restored to **Sports**
+- **Racer Select** — restored to **Sports**
+- **RACING | Hagerty** — restored to **Sports**
+- **Raftaar Media** — restored to **Indian Entertainment**
+- **Raj Digital Plus** — restored to **Indian Movies**
+- **Raj TV** — restored to **Indian Entertainment**
+- **Rally TV** — restored to **Sports**
+- **Rang Rangoli** — restored to **Indian Music**
+- **Real Madrid TV** — restored to **Sports**
+- **Real Madrid TV English** — restored to **Sports**
+- **Real Wild** — restored to **Documentary & Wildlife**
+- **Realitatea Sportiva** — restored to **Sports**
+- **Red Bull TV** — restored to **Sports**
+- **Red Bull TV AU** — restored to **Backup**
+- **Red Bull TV BR** — restored to **Backup**
+- **Red Bull TV DE** — restored to **Backup**
+- **Red Bull TV ES** — restored to **Backup**
+- **Red Bull TV UK** — restored to **Sports**
+- **Red Bull TV US** — restored to **Backup**
+- **Retro Cartoon** — restored to **Kids**
+- **RetroCrush** — restored to **Kids**
+- **RiC** — restored to **Kids**
+- **Right Now TV** — restored to **Sports**
+- **Robot Wars by Mech+** — restored to **Documentary & Wildlife**
+- **RT Documentary** — restored to **Documentary & Wildlife**
+- **RT Documentary Russian** — restored to **Backup**
+- **Russian Extreme Ultra** — restored to **Sports**
+- **Ryan and Friends** — restored to **Kids**
+- **Ryzhiy** — restored to **Kids**
+- **Sai TV** — restored to **Indian Entertainment**
+- **Sansad TV 1** — restored to **Indian Entertainment**
+- **Sansad TV 2** — restored to **Indian Entertainment**
+- **Santvani Channel** — restored to **Indian Entertainment**
+- **Sarv Dharm Sangam** — restored to **Indian Entertainment**
+- **Saudi Quran** — restored to **Religious**
+- **Sharnam TV** — restored to **Indian Entertainment**
+- **Shikor TV Canada** — restored to **Bangladesh**
+- **Shubh TV** — restored to **Indian Entertainment**
+- **Siri Kannada All Time** — restored to **Indian Entertainment**
+- **Skwad Play** — restored to **Kids**
+- **Sky Racing 1** — restored to **Sports**
+- **Smotrim 100% Detskoe** — restored to **Kids**
+- **Smotrim 100% Fakty** — restored to **Documentary & Wildlife**
+- **Smurf TV** — restored to **Kids**
+- **SN TV** — restored to **Sports**
+- **Solo Calcio Italia** — restored to **Sports**
+- **Sonic The Hedgehog** — restored to **Kids**
+- **Spacetoon Arabic** — restored to **Kids**
+- **Spektrum (Czech Republic)** — restored to **Documentary & Wildlife**
+- **Spektrum (Hungary)** — restored to **Documentary & Wildlife**
+- **Spiler 1** — restored to **Sports**
+- **Spiler 2** — restored to **Sports**
+- **Sport1** — restored to **Sports**
+- **Sport2** — restored to **Sports**
+- **Sport5** — restored to **Sports**
+- **Sport 1 (Hungary)** — restored to **Sports**
+- **Sport 2 (Hungary)** — restored to **Sports**
+- **Sport (Slovakia)** — restored to **Sports**
+- **Sportivnyy** — restored to **Sports**
+- **Sports First TV** — restored to **Sports**
+- **Sports Fishing TV** — restored to **Sports**
+- **Sports Grid** — restored to **Sports**
+- **SportsGrid** — restored to **Backup**
+- **Sqala TV** — restored to **Sports**
+- **Strawberry Shortcake** — restored to **Kids**
+- **Strongman** — restored to **Sports**
+- **Strongman UK** — restored to **Sports**
+- **Subin TV** — restored to **Indian Entertainment**
+- **Sunnah TV** — restored to **Religious**
+- **Super Simple Songs** — restored to **Kids**
+- **Super!** — restored to **Kids**
+- **Survivor** — restored to **Documentary & Wildlife**
+- **Swerve Combat** — restored to **Sports**
+- **Swerve Sports** — restored to **Sports**
+- **talkSPORT** — restored to **Sports**
+- **Tamilan TV** — restored to **Indian Entertainment**
+- **Tamyr** — restored to **Kids**
+- **TBN24** — restored to **Bangladesh**
+- **Tehzeeb TV** — restored to **Indian Entertainment**
+- **Teletoon+** — restored to **Kids**
+- **Tennis Channel** — restored to **Sports**
+- **Tennis Channel 2** — restored to **Sports**
+- **Tennis+** — restored to **Sports**
+- **Terra Mater WILD** — restored to **Documentary & Wildlife**
+- **TG Junior** — restored to **Kids**
+- **The Nest** — restored to **Documentary & Wildlife**
+- **The Pet Collective India** — restored to **Documentary & Wildlife**
+- **Time Television** — restored to **Bangladesh**
+- **Tiny Pop** — restored to **Kids**
+- **TJK TV** — restored to **Sports**
+- **TNT Sports 1** — restored to **Sports**
+- **Tooku** — restored to **Kids**
+- **Toonami Aftermath** — restored to **Kids**
+- **Toonami Aftermath West** — restored to **Backup**
+- **Tooncast SouthAmerica** — restored to **Kids**
+- **ToonGoggles** — restored to **Kids**
+- **Total Crime** — restored to **Documentary & Wildlife**
+- **Total TV Haryana** — restored to **Indian Entertainment**
+- **TR Sport** — restored to **Sports**
+- **Trace Sport Stars Russia** — restored to **Sports**
+- **Trace Sports Stars** — restored to **Sports**
+- **TraLaLa TV** — restored to **Kids**
+- **Travel Channel** — restored to **Documentary & Wildlife**
+- **Travel XP Bangla** — restored to **Documentary & Wildlife**
+- **True Crime UK** — restored to **Documentary & Wildlife**
+- **TSN The Ocho** — restored to **Sports**
+- **Tunes 6** — restored to **Indian Music**
+- **Turf Movil** — restored to **Sports**
+- **TV2 Kids** — restored to **Kids**
+- **TV9 Bangla** — restored to **Indian Bangla**
+- **TV One UK** — restored to **Religious**
+- **TVC Arabic Kids** — restored to **Kids**
+- **TVOKids** — restored to **Kids**
+- **TVP ABC** — restored to **Kids**
+- **TVR Sport** — restored to **Sports**
+- **TVRI Sport** — restored to **Sports**
+- **TyC Sports** — restored to **Sports**
+- **TyC Sports USA** — restored to **Sports**
+- **UFC** — restored to **Sports**
+- **Unbeaten** — restored to **Sports**
+- **Unidentified** — restored to **Documentary & Wildlife**
+- **Unique TV** — restored to **Kids**
+- **V gostyakh u skazki** — restored to **Kids**
+- **Viasat Explore (Czech Republic)** — restored to **Documentary & Wildlife**
+- **Viasat History (Czech Republic)** — restored to **Documentary & Wildlife**
+- **Viasat Nature (Czech Republic)** — restored to **Documentary & Wildlife**
+- **Viasat Nature (Ukraine)** — restored to **Documentary & Wildlife**
+- **Video Tour Channel** — restored to **Costa Rica**
+- **viju+ Sport** — restored to **Sports**
+- **Vision (India)** — restored to **Indian Entertainment**
+- **Voyo Sport 1** — restored to **Sports**
+- **Watch Mojo** — restored to **Documentary & Wildlife**
+- **WaterBear** — restored to **Documentary & Wildlife**
+- **Wedo Big Stories** — restored to **Documentary & Wildlife**
+- **Wheel World** — restored to **Documentary & Wildlife**
+- **Wild Planet** — restored to **Documentary & Wildlife**
+- **Wild TV** — restored to **Documentary & Wildlife**
+- **WildEarth** — restored to **Documentary & Wildlife**
+- **Willow Extra** — restored to **Sports**
+- **Willow Sports** — restored to **Sports**
+- **Win Sports** — restored to **Sports**
+- **Win+ Futbol** — restored to **Sports**
+- **Witness to Justice** — restored to **Documentary & Wildlife**
+- **Women's Sports Network** — restored to **Sports**
+- **Wonder** — restored to **Documentary & Wildlife**
+- **World of Freesports** — restored to **Sports**
+- **World Poker Tour** — restored to **Sports**
+- **World Poker Tour Poland** — restored to **Sports**
+- **World Poker Tour UK** — restored to **Sports**
+- **World War TV** — restored to **Documentary & Wildlife**
+- **WWE Superstar Central** — restored to **Sports**
+- **X SPORT** — restored to **Sports**
+- **Xtrem Sports** — restored to **Sports**
+- **Xtrema Cartoons** — restored to **Kids**
+- **XXTreme Jobs Hindi** — restored to **Documentary & Wildlife**
+- **YTV** — restored to **Kids**
+- **Yu-Gi-Oh!** — restored to **Kids**
+- **Yu-Gi-Oh! en espanol** — restored to **Kids**
+- **ZB Cartoon** — restored to **Kids**
+- **ZB Music** — restored to **Indian Bangla**
+- **Zee Business** — restored to **Indian Entertainment**
+- **Zee Telugu** — restored to **Indian Entertainment**
+- **ZooMoo** — restored to **Kids**
+- **Indiyskoye Kino** — restored to **New Backups**
 
 ## Removed after three consecutive failed days
 
@@ -77,17 +666,17 @@ None.
 
 ## Inconclusive reason summary
 
-- **HTTP 403** — 227
+- **HTTP 403** — 226
 - **Timeout** — 151
-- **HTTP 503** — 91
+- **HTTP 503** — 112
+- **HTTP 401** — 83
 - **HTTP 444** — 80
-- **HTTP 401** — 77
-- **HTTP 429** — 70
-- **Connection** — 42
+- **Connection** — 41
 - **TLS** — 41
-- **Other** — 32
+- **Other** — 35
+- **HTTP 429** — 23
 - **DNS** — 22
-- **HTTP 400** — 10
+- **HTTP 400** — 11
 - **HTTP 504** — 7
 - **HTTP 500** — 5
 - **HLS manifest has no accessible media resources** — 3
@@ -105,16 +694,16 @@ None.
 - **HTTP 200** — 3
 - **HTTP 204** — 1
 - **HTTP 206** — 1
-- **HTTP 400** — 10
-- **HTTP 401** — 77
-- **HTTP 403** — 227
+- **HTTP 400** — 11
+- **HTTP 401** — 83
+- **HTTP 403** — 226
 - **HTTP 416** — 1
-- **HTTP 429** — 70
+- **HTTP 429** — 23
 - **HTTP 444** — 80
 - **HTTP 451** — 1
 - **HTTP 500** — 5
 - **HTTP 502** — 2
-- **HTTP 503** — 91
+- **HTTP 503** — 112
 - **HTTP 504** — 7
 - **HTTP 523** — 1
 - **HTTP 567** — 1
@@ -143,7 +732,7 @@ None.
 - **Goldmines Bollywood** — HTTP 403 — HTTP 403
 - **Movies Now** — Timeout
 - **Pocket Films** — Other
-- **Shemaroo Bollywood** — HTTP 500 — HTTP 500
+- **Shemaroo Bollywood** — Other
 - **Sony Pix** — Timeout
 - **Star Movies Select** — Timeout
 - **Andy Haryana** — HTTP 403 — HTTP 403
@@ -151,10 +740,12 @@ None.
 - **Zoom** — HTTP 206 — HTML/JSON response may be an access restriction, not media
 - **Aakaash Aath** — HTTP 403 — HTTP 403
 - **Asianet Middle East** — HTTP 403 — HTTP 403
+- **Colors Rishtey Americas** — Other
 - **Epic Bharat Digital** — HTTP 403 — HTTP 403
 - **Epic TV Digital** — HTTP 403 — HTTP 403
 - **ETV Plus** — Other
 - **Flowers US** — Other
+- **Gangaur TV** — Timeout
 - **Jaihind TV** — HTTP 403 — HTTP 403
 - **Kairali Arabia** — HTTP 403 — HTTP 403
 - **Kerala Vision** — HTTP 403 — HTTP 403
@@ -172,6 +763,7 @@ None.
 - **HTV Argentina** — Timeout
 - **Rock & Pop** — HTTP 403 — HTTP 403
 - **HBO East** — HTTP 444 — HTTP 444
+- **Sensacion Costa** — HTTP 500 — HTTP 500
 - **CND Film Middle School Channel** — HTTP 403 — HTTP 403
 - **Jiangxi Movie Channel** — HTTP 403 — HTTP 403
 - **Mezzo Live** — HTTP 403 — HTTP 403
@@ -195,8 +787,12 @@ None.
 - **Trace Urban International** — HTTP 403 — HTTP 403
 - **Trace Urban Southern Africa** — HTTP 403 — HTTP 403
 - **Trace Vanilla Islands** — HTTP 403 — HTTP 403
+- **Cine Catastrophe by Pluto TV** — HTTP 401 — HTTP 401
+- **Cine Retro by Pluto TV** — HTTP 401 — HTTP 401
 - **Finest TV [ ]** — Timeout
+- **Pluto TV Cine de autor** — HTTP 401 — HTTP 401
 - **Rakuten TV Family Movies Germany** — HTTP 403 — HTTP 403
+- **SensaCine TV x Pluto** — HTTP 401 — HTTP 401
 - **Cine34** — HTTP 403 — HTTP 403
 - **R101 TV** — HTTP 451 — HTTP 451
 - **Sky Cinema Due** — HTTP 403 — HTTP 403
@@ -207,6 +803,7 @@ None.
 - **Film1 Drama** — HTTP 403 — HTTP 403
 - **Film1 Family** — HTTP 403 — HTTP 403
 - **Film1 Premiere** — HTTP 403 — HTTP 403
+- **TopEstrada TV** — Timeout
 - **GO TV** — Timeout
 - **Karibena** — Timeout
 - **FILMBOX+ Emotion Adria** — HTTP 403 — HTTP 403
@@ -224,7 +821,6 @@ None.
 - **Kinosemja** — HTTP 403 — HTTP 403
 - **Kinouzhas** — HTTP 403 — HTTP 403
 - **Muzhskoe kino** — HTTP 403 — HTTP 403
-- **Muzhskoy** — Other
 - **Muzyka Pervogo** — HTTP 403 — HTTP 403
 - **Nashe** — HTTP 403 — HTTP 403
 - **Nashe muzhskoe** — HTTP 403 — HTTP 403
@@ -238,9 +834,8 @@ None.
 - **HITS Movies** — HTTP 403 — HTTP 403
 - **Cadena Elite** — Timeout
 - **Rakuten TV Family Movies** — HTTP 403 — HTTP 403
-- **TVOMIX** — Other
+- **TVOMIX** — HTTP 400 — HTTP 400
 - **Kral Pop TV** — HTTP 403 — HTTP 403
-- **TRT Muzik** — Other
 - **4ever Cinema** — HTTP 403 — HTTP 403
 - **4ever Music** — HTTP 403 — HTTP 403
 - **Black** — HTTP 403 — HTTP 403
@@ -327,10 +922,12 @@ None.
 - **Pluto TV Cine Accion** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Comedia (United States)** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Comedia (United States) LatAm** — HTTP 401 — HTTP 401
+- **Pluto TV Cine Comedia Romantica** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Crimen** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Drama LatAm** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Estelar** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Familia LatAm** — HTTP 401 — HTTP 401
+- **Pluto TV Cine Inspiracao** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Inspirador** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Romance LatAm** — HTTP 401 — HTTP 401
 - **Pluto TV Cine Suspenso** — HTTP 401 — HTTP 401
@@ -369,20 +966,16 @@ None.
 - **Turner Classic Movies** — HTTP 444 — HTTP 444
 - **VH1** — Timeout
 - **Whiplash Cinema** — Other
-- **FTV (Uzbekistan)** — HTTP 403 — HTTP 403
+- **Muz TV Uzbekistan** — HTTP 403 — HTTP 403
 - **Armenia Premium** — HTTP 403 — HTTP 403
 - **Celestial Movies** — HTTP 401 — HTTP 401
 - **HMTV (Nigeria)** — HTTP 204 — Empty response; not proof of a dead stream
-- **IDJTV** — HTTP 403 — HTTP 403
-- **K100** — Other
 - **Kantipur Max [ ]** — HTTP 403 — HTTP 403
 - **Mei Ah Movie Channel** — Timeout
 - **NogoumFMTV** — HTTP 403 — HTTP 403
-- **Tjil TV** — Other
 - **Yes Movies Action** — HTTP 403 — HTTP 403
 - **BTV News** — HTTP 502 — HTTP 502
-- **Code Fashion TV (1080p)** — HTTP 403 — HTTP 403
-- **FashionTV Europe (1080p)** — HTTP 504 — HTTP 504
+- **WOW Kidz** — Other
 - **Star Sports 2** — HTTP 403 — HTTP 403
 - **Alba 2** — HTTP 444 — HTTP 444
 - **Alba 3** — HTTP 444 — HTTP 444
@@ -392,31 +985,27 @@ None.
 - **Babes TV Russia** — HTTP 444 — HTTP 444
 - **Bang U** — HTTP 444 — HTTP 444
 - **Blonde** — HTTP 444 — HTTP 444
-- **Brazzers Europe** — HTTP 503 — HTTP 503
-- **Brazzers Rated** — HTTP 503 — HTTP 503
+- **Brazzers Extra** — HTTP 503 — HTTP 503
+- **Brazzers Rated 2** — HTTP 503 — HTTP 503
+- **Brazzzers 2** — HTTP 503 — HTTP 503
+- **Bridgette B** — HTTP 503 — HTTP 503
 - **Brunette** — HTTP 444 — HTTP 444
 - **Cuckold** — HTTP 444 — HTTP 444
-- **Cum Perfection** — HTTP 503 — HTTP 503
-- **Elsa Jean** — HTTP 503 — HTTP 503
+- **Euro Girls On Girls** — HTTP 503 — HTTP 503
 - **Evil Angel** — HTTP 503 — HTTP 503
-- **Evil Angel** — HTTP 503 — HTTP 503
-- **Evolved Fights** — HTTP 503 — HTTP 503
 - **Exxxotica TV** — HTTP 444 — HTTP 444
-- **Fake Taxi 3** — HTTP 503 — HTTP 503
+- **Fake Taxi 1** — HTTP 503 — HTTP 503
 - **Fap TV 6** — HTTP 444 — HTTP 444
+- **Gay 3** — HTTP 503 — HTTP 503
 - **Gay Latin** — HTTP 503 — HTTP 503
-- **Gloryhole** — HTTP 503 — HTTP 503
 - **Group 2** — HTTP 503 — HTTP 503
 - **Hardcore** — HTTP 503 — HTTP 503
-- **Holly Hendrix** — HTTP 503 — HTTP 503
-- **Jada Stevens** — HTTP 503 — HTTP 503
-- **Jasmine Jae** — HTTP 503 — HTTP 503
+- **Karma RX** — HTTP 503 — HTTP 503
 - **Kelly Divine** — HTTP 503 — HTTP 503
 - **Kelsie Monroe** — HTTP 503 — HTTP 503
 - **Latina** — HTTP 444 — HTTP 444
 - **LEO TV** — HTTP 444 — HTTP 444
 - **Live Cams** — HTTP 444 — HTTP 444
-- **Only Fans Jade Bunny** — HTTP 503 — HTTP 503
 - **Penthouse After Midnight** — HTTP 444 — HTTP 444
 - **Penthouse Black** — HTTP 444 — HTTP 444
 - **Penthouse Naughty Nights** — HTTP 444 — HTTP 444
@@ -424,148 +1013,125 @@ None.
 - **Penthouse Reality TV** — HTTP 444 — HTTP 444
 - **Penthouse TV** — HTTP 444 — HTTP 444
 - **Pink Erotic 1** — HTTP 444 — HTTP 444
-- **Pink Erotic 8** — HTTP 503 — HTTP 503
-- **PORNBOX 4K: BAEB** — HTTP 503 — HTTP 503
-- **PORNBOX 4K: BBC PIE** — HTTP 503 — HTTP 503
-- **PORNBOX 4K: CUM** — HTTP 503 — HTTP 503
 - **PORNBOX 4K: JAYS POV** — HTTP 503 — HTTP 503
 - **PORNBOX 4K: LUBED PORN** — HTTP 503 — HTTP 503
-- **PORNBOX 4K: NANNY SPY** — HTTP 503 — HTTP 503
 - **PORNBOX 4K: SPANK MONSTER** — HTTP 503 — HTTP 503
 - **PORNBOX 4K: SPY FAM** — HTTP 503 — HTTP 503
 - **PORNBOX 4K: TINY** — HTTP 503 — HTTP 503
-- **PORNBOX GAY: BOY FUN** — HTTP 503 — HTTP 503
+- **PORNBOX GAY: BEEFCAKE HUNTER** — HTTP 503 — HTTP 503
+- **PORNBOX GAY: MAN** — HTTP 503 — HTTP 503
 - **PORNBOX: 1111 CUSTOMS** — HTTP 503 — HTTP 503
-- **PORNBOX: ADULT TIME** — HTTP 503 — HTTP 503
 - **PORNBOX: ALEX LEGEND** — HTTP 503 — HTTP 503
 - **PORNBOX: ALL GROUP SEX** — HTTP 503 — HTTP 503
 - **PORNBOX: AMATEUR EURO** — HTTP 503 — HTTP 503
 - **PORNBOX: ATK GIRLFRIENDS** — HTTP 503 — HTTP 503
 - **PORNBOX: AV TAXI** — HTTP 503 — HTTP 503
-- **PORNBOX: BANG BROS NETWORK** — HTTP 503 — HTTP 503
+- **PORNBOX: BABES** — HTTP 503 — HTTP 503
 - **PORNBOX: BIG BOOTY CITY** — HTTP 503 — HTTP 503
 - **PORNBOX: BLACKED** — HTTP 503 — HTTP 503
-- **PORNBOX: BRATTY SIS** — HTTP 503 — HTTP 503
+- **PORNBOX: BLOW ME POV** — HTTP 503 — HTTP 503
+- **PORNBOX: BOX OF PORN** — HTTP 503 — HTTP 503
 - **PORNBOX: BRAZZERS** — HTTP 503 — HTTP 503
 - **PORNBOX: BUMS BUS** — HTTP 503 — HTTP 503
 - **PORNBOX: CASTING COUCH** — HTTP 503 — HTTP 503
-- **PORNBOX: DAGFS** — HTTP 503 — HTTP 503
 - **PORNBOX: DDF BUSTY** — HTTP 503 — HTTP 503
 - **PORNBOX: DEEPER** — HTTP 503 — HTTP 503
-- **PORNBOX: DIGITAL PLAYGROUND** — HTTP 503 — HTTP 503
-- **PORNBOX: DOG HOUSE** — HTTP 503 — HTTP 503
 - **PORNBOX: DOGFART NETWORK** — HTTP 503 — HTTP 503
 - **PORNBOX: DORCEL CLUB** — HTTP 503 — HTTP 503
 - **PORNBOX: EXOTIC** — HTTP 503 — HTTP 503
-- **PORNBOX: FAKE HOSTEL** — HTTP 503 — HTTP 503
-- **PORNBOX: FAKE TAXI** — HTTP 503 — HTTP 503
 - **PORNBOX: FAMILY SWAP XXX** — HTTP 503 — HTTP 503
+- **PORNBOX: FAPADOO** — HTTP 503 — HTTP 503
 - **PORNBOX: FILTHY KINGS** — HTTP 503 — HTTP 503
 - **PORNBOX: FIRST ANAL QUEST** — HTTP 503 — HTTP 503
 - **PORNBOX: FIRST CLASS POV** — HTTP 503 — HTTP 503
 - **PORNBOX: FIT 18** — HTTP 503 — HTTP 503
-- **PORNBOX: GANGBANG CREAMPIE** — HTTP 503 — HTTP 503
-- **PORNBOX: GOTMYLF** — HTTP 429 — HTTP 429
+- **PORNBOX: GOTMYLF** — HTTP 503 — HTTP 503
 - **PORNBOX: HENTAINED** — HTTP 503 — HTTP 503
-- **PORNBOX: HER LIMIT** — HTTP 429 — HTTP 429
-- **PORNBOX: HOLED** — HTTP 429 — HTTP 429
+- **PORNBOX: HER LIMIT** — HTTP 503 — HTTP 503
 - **PORNBOX: HORNY DREAM BABEZ** — HTTP 503 — HTTP 503
-- **PORNBOX: HORNY HOSTEL** — HTTP 429 — HTTP 429
-- **PORNBOX: HUSSIE PASS** — HTTP 429 — HTTP 429
+- **PORNBOX: HOT WIFE XXX** — HTTP 503 — HTTP 503
+- **PORNBOX: HUSSIE PASS** — HTTP 503 — HTTP 503
 - **PORNBOX: INTERRACIAL PASS** — HTTP 503 — HTTP 503
 - **PORNBOX: JOI BABES** — HTTP 503 — HTTP 503
-- **PORNBOX: KINKY FAMILY** — HTTP 429 — HTTP 429
-- **PORNBOX: KINKY SPA** — HTTP 429 — HTTP 429
-- **PORNBOX: LETHAL TEENS** — HTTP 429 — HTTP 429
-- **PORNBOX: LETS DOE IT** — HTTP 429 — HTTP 429
-- **PORNBOX: LIFE SELECTOR** — HTTP 429 — HTTP 429
-- **PORNBOX: LOVE HOME PORN** — HTTP 429 — HTTP 429
-- **PORNBOX: LUBED** — HTTP 429 — HTTP 429
-- **PORNBOX: LW PRODUCTIONS** — HTTP 429 — HTTP 429
-- **PORNBOX: MANO JOB** — HTTP 503 — HTTP 503
-- **PORNBOX: MAX J** — HTTP 429 — HTTP 429
-- **PORNBOX: MOFOS** — HTTP 429 — HTTP 429
-- **PORNBOX: MOM TEACH SEX** — HTTP 503 — HTTP 503
-- **PORNBOX: MOM XXX** — HTTP 429 — HTTP 429
-- **PORNBOX: MY 18 TEENS** — HTTP 429 — HTTP 429
-- **PORNBOX: MY FAMILY PIES** — HTTP 429 — HTTP 429
-- **PORNBOX: MY LIFE IN MIAMI** — HTTP 429 — HTTP 429
-- **PORNBOX: MYLF** — HTTP 429 — HTTP 429
+- **PORNBOX: KINKY FAMILY** — HTTP 503 — HTTP 503
+- **PORNBOX: KINKY SPA** — HTTP 503 — HTTP 503
+- **PORNBOX: LETHAL TEENS** — HTTP 503 — HTTP 503
+- **PORNBOX: LIFE SELECTOR** — HTTP 503 — HTTP 503
+- **PORNBOX: LOVE HER FEET** — HTTP 503 — HTTP 503
+- **PORNBOX: LUBED** — HTTP 503 — HTTP 503
+- **PORNBOX: LW PRODUCTIONS** — HTTP 503 — HTTP 503
+- **PORNBOX: MAMACITAZ** — HTTP 503 — HTTP 503
+- **PORNBOX: MASSAGE ROOMS** — HTTP 503 — HTTP 503
+- **PORNBOX: MAX J** — HTTP 503 — HTTP 503
+- **PORNBOX: MOM XXX** — HTTP 503 — HTTP 503
+- **PORNBOX: MY 18 TEENS** — HTTP 503 — HTTP 503
+- **PORNBOX: MY FAMILY PIES** — HTTP 503 — HTTP 503
+- **PORNBOX: MY PERVY FAMILY** — HTTP 503 — HTTP 503
 - **PORNBOX: NF BUSTY** — HTTP 503 — HTTP 503
-- **PORNBOX: NUBILE FILMS** — HTTP 429 — HTTP 429
-- **PORNBOX: PASSION** — HTTP 429 — HTTP 429
-- **PORNBOX: PERV MOM** — HTTP 429 — HTTP 429
-- **PORNBOX: POOKSI** — HTTP 429 — HTTP 429
+- **PORNBOX: NUBILE FILMS** — HTTP 503 — HTTP 503
+- **PORNBOX: PERV MOM** — HTTP 503 — HTTP 503
+- **PORNBOX: POOKSI** — HTTP 503 — HTTP 503
 - **PORNBOX: PORN WORLD HARDCORE** — HTTP 429 — HTTP 429
-- **PORNBOX: PORNHOCHIC** — HTTP 429 — HTTP 429
+- **PORNBOX: PORNHOCHIC** — HTTP 503 — HTTP 503
 - **PORNBOX: POV MASTERS** — HTTP 503 — HTTP 503
 - **PORNBOX: PRIVATE SOCIETY** — HTTP 503 — HTTP 503
 - **PORNBOX: PUBA** — HTTP 429 — HTTP 429
-- **PORNBOX: PUBLIC AGENT** — HTTP 503 — HTTP 503
+- **PORNBOX: PUBLIC AGENT** — HTTP 429 — HTTP 429
 - **PORNBOX: PURE MATURE** — HTTP 429 — HTTP 429
+- **PORNBOX: RAW ATTACK** — HTTP 503 — HTTP 503
 - **PORNBOX: REALITY JUNKIES** — HTTP 429 — HTTP 429
+- **PORNBOX: REALITY KINGS** — HTTP 429 — HTTP 429
 - **PORNBOX: SHAGGING MOMS** — HTTP 429 — HTTP 429
-- **PORNBOX: SHE IS NERDY** — HTTP 503 — HTTP 503
-- **PORNBOX: SOFIE MARIE XXX** — HTTP 503 — HTTP 503
-- **PORNBOX: STROKIES** — HTTP 429 — HTTP 429
-- **PORNBOX: SUGAR BABES TV** — HTTP 429 — HTTP 429
-- **PORNBOX: SWEET SINNER** — HTTP 429 — HTTP 429
-- **PORNBOX: SWEETHEART PORN** — HTTP 429 — HTTP 429
-- **PORNBOX: TRUE AMATEURS** — HTTP 503 — HTTP 503
-- **Princess Cum** — HTTP 503 — HTTP 503
+- **PORNBOX: SHE IS NERDY** — HTTP 429 — HTTP 429
+- **PORNBOX: SUGAR BABES TV** — HTTP 503 — HTTP 503
+- **PORNBOX: SWEETHEART PORN** — HTTP 503 — HTTP 503
+- **PORNBOX: TRUE AMATEURS** — HTTP 429 — HTTP 429
+- **PORNBOX: TWISTY** — HTTP 503 — HTTP 503
 - **Pure Babes** — HTTP 444 — HTTP 444
 - **Pure Taboo** — HTTP 503 — HTTP 503
-- **Rated 3** — HTTP 503 — HTTP 503
 - **Real Wife Stories** — HTTP 503 — HTTP 503
+- **Reality Kings** — HTTP 503 — HTTP 503
 - **Reality Kings** — HTTP 429 — HTTP 429
 - **Riley Reid** — HTTP 429 — HTTP 429
+- **ShopLyfter** — HTTP 503 — HTTP 503
 - **STARS EXCLUSIVE: ABELLA DANGER** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: ADRIANA CHECHIK** — HTTP 429 — HTTP 429
-- **STARS EXCLUSIVE: ALINA LOPEZ** — HTTP 429 — HTTP 429
 - **STARS EXCLUSIVE: ANGELA WHITE** — HTTP 503 — HTTP 503
 - **STARS EXCLUSIVE: ARIANA MARIE** — HTTP 429 — HTTP 429
-- **STARS EXCLUSIVE: AUGUST AMES** — HTTP 429 — HTTP 429
-- **STARS EXCLUSIVE: AUTUMN FALLS** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: AUGUST AMES** — HTTP 503 — HTTP 503
 - **STARS EXCLUSIVE: BLAKE BLOSSOM** — HTTP 429 — HTTP 429
-- **STARS EXCLUSIVE: BRANDI LOVE** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: BRANDI LOVE** — HTTP 503 — HTTP 503
 - **STARS EXCLUSIVE: DANI DANIELS** — HTTP 429 — HTTP 429
-- **STARS EXCLUSIVE: ELSA JEAN** — HTTP 429 — HTTP 429
-- **STARS EXCLUSIVE: EVA LOVIA** — HTTP 503 — HTTP 503
+- **STARS EXCLUSIVE: EMILY WILLIS** — HTTP 503 — HTTP 503
 - **STARS EXCLUSIVE: GINA VALENTINA** — HTTP 429 — HTTP 429
-- **STARS EXCLUSIVE: LISA ANN** — HTTP 429 — HTTP 429
-- **STARS EXCLUSIVE: MIA MALKOVA** — HTTP 429 — HTTP 429
-- **STARS EXCLUSIVE: NICOLE ANISTON** — HTTP 503 — HTTP 503
+- **STARS EXCLUSIVE: LANA RHOADES** — HTTP 503 — HTTP 503
+- **STARS EXCLUSIVE: LENA PAUL** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: LISA ANN** — HTTP 503 — HTTP 503
+- **STARS EXCLUSIVE: MIA MALKOVA** — HTTP 503 — HTTP 503
 - **STARS EXCLUSIVE: RILEY REID** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: UMA JOLIE** — HTTP 503 — HTTP 503
-- **STARS EXCLUSIVE: VALENTINA NAPPI** — HTTP 429 — HTTP 429
-- **Strap on** — HTTP 429 — HTTP 429
-- **Swallowed** — HTTP 429 — HTTP 429
-- **Teen Red TV** — HTTP 429 — HTTP 429
-- **Tiny** — HTTP 429 — HTTP 429
+- **STARS EXCLUSIVE: VALENTINA NAPPI** — HTTP 503 — HTTP 503
+- **Strap on** — HTTP 503 — HTTP 503
+- **Tiny** — HTTP 503 — HTTP 503
 - **Trans** — HTTP 503 — HTTP 503
-- **True Anal** — HTTP 429 — HTTP 429
-- **Uniform** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: CARLACUTE** — HTTP 429 — HTTP 429
+- **True Anal** — HTTP 503 — HTTP 503
+- **Uniform** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: CARLACUTE** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: CHERRY GRACE** — HTTP 503 — HTTP 503
 - **VERIFIED AMATEURS: CHESSIE RAE** — HTTP 429 — HTTP 429
 - **VERIFIED AMATEURS: DIANA DANIELS** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: ELLA KOJIRO** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: KRISS KISS** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: LEAH MEOW** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: LUXURYGIRL** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: MINI DIVA** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: NOFACEGIRL** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: NOTSOAMATEUR** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: KRISS KISS** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: LEAH MEOW** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: MIKANIKA69** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: MINI DIVA** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: NOFACEGIRL** — HTTP 503 — HTTP 503
 - **VERIFIED AMATEURS: NYNA FERRAGNI** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: PAMSNUSNU** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: PURPLE BITCH** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: REISLIN** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: PAMSNUSNU** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: PURPLE BITCH** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: REISLIN** — HTTP 429 — HTTP 429
 - **VERIFIED AMATEURS: SECRETCRUSH** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: SHAIDEN ROUGE** — HTTP 503 — HTTP 503
-- **VERIFIED AMATEURS: SOLAZOLA** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: TESSA WINTERS** — HTTP 429 — HTTP 429
-- **VERIFIED AMATEURS: TINNA ANGEL** — HTTP 429 — HTTP 429
-- **Veronica Avluv** — HTTP 503 — HTTP 503
-- **Violet Myers** — HTTP 429 — HTTP 429
+- **VERIFIED AMATEURS: TINNA ANGEL** — HTTP 503 — HTTP 503
+- **VERIFIED AMATEURS: YINYLEON** — HTTP 503 — HTTP 503
+- **Veronica Avluv** — HTTP 429 — HTTP 429
+- **Violet Myers** — HTTP 503 — HTTP 503
 - **Vivid TV Europe** — HTTP 444 — HTTP 444
 - **Vixen** — HTTP 444 — HTTP 444
 - **9XM** — HTTP 403 — HTTP 403
@@ -627,7 +1193,6 @@ None.
 - **Cartoon Network Latin America Brazil** — Connection
 - **CazeTV** — HTTP 403 — HTTP 403
 - **CCTV-6 [ ]** — HTTP 500 — HTTP 500
-- **Channel S** — HTTP 500 — HTTP 500
 - **CHC Action** — Timeout
 - **Cine34 [ ]** — DNS
 - **Cine+ Classic** — Timeout
@@ -638,6 +1203,7 @@ None.
 - **CinemaWorld** — Connection
 - **City Eden KinoSemya [ ]** — HTTP 503 — HTTP 503
 - **Clubbing TV France** — HTTP 504 — HTTP 504
+- **Code Fashion TV** — HTTP 403 — HTTP 403
 - **Colors** — Connection
 - **Colors Bangla** — HTTP 403 — HTTP 403
 - **Colors Bangla** — Timeout
@@ -667,7 +1233,6 @@ None.
 - **Discovery Life** — HTTP 444 — HTTP 444
 - **Discovery Science** — HTTP 444 — HTTP 444
 - **Discovery Velocity** — HTTP 444 — HTTP 444
-- **Disney Channel (Bulgaria)** — Connection
 - **Disney Channel (India)** — Timeout
 - **Disney Channel East** — HTTP 444 — HTTP 444
 - **Disney Channel Latin America Panregional** — Timeout
@@ -698,6 +1263,7 @@ None.
 - **Famatv [ ]** — HTTP 500 — HTTP 500
 - **FAN** — Timeout
 - **Fashion TV** — HTTP 403 — HTTP 403
+- **FashionTV Europe** — HTTP 504 — HTTP 504
 - **Feniks plus Kino** — Timeout
 - **Film Cafe Romania** — DNS
 - **Film Mania** — Timeout
@@ -731,6 +1297,7 @@ None.
 - **Hungama** — Connection
 - **Id Investigation Discovery** — HTTP 444 — HTTP 444
 - **Investigation Discovery** — HTTP 444 — HTTP 444
+- **Islamic TV** — HTTP 500 — HTTP 500
 - **JA TV** — Timeout
 - **Jalsha Movies** — Connection
 - **Jiangsu Movie Channel** — Timeout
@@ -745,6 +1312,7 @@ None.
 - **KinoSat** — Timeout
 - **Klasik [ ]** — TLS
 - **KpopTV Play** — TLS
+- **KTV Sport Plus** — Other
 - **La 98.1 TV [ ]** — Timeout
 - **La Kalle** — Timeout
 - **La Urban TV [ ]** — TLS
@@ -787,7 +1355,6 @@ None.
 - **Movies!** — HTTP 403 — HTTP 403
 - **MovieSmart Turk** — Other
 - **Movify Kino** — DNS
-- **MRTV Sports** — Timeout
 - **Music [ ]** — HTTP 403 — HTTP 403
 - **Music Mastii** — TLS
 - **My Cinema [ ]** — DNS
@@ -807,6 +1374,7 @@ None.
 - **Nickelodeon (India)** — Timeout
 - **Niki Junior** — HTTP 403 — HTTP 403
 - **Okko Futbol** — HTTP 400 — HTTP 400
+- **Oman Sports TV** — Other
 - **OSN Movies Action** — Timeout
 - **Paighan TV** — Timeout
 - **Pantalla Clasica EC [ ]** — TLS
@@ -895,9 +1463,9 @@ None.
 - **Starz Kids & Family** — Timeout
 - **Sun Bangla** — Connection
 - **Sun TV** — HTTP 403 — HTTP 403
-- **Suriyan TV** — Other
+- **Suriyan TV** — HTTP 503 — HTTP 503
 - **Suspilne. Sport** — HTTP 403 — HTTP 403
-- **T Sports 7** — Timeout
+- **T Sports 7** — Other
 - **Taaza TV** — Other
 - **Teen Nick** — HTTP 403 — HTTP 403
 - **TF1 Series Films** — Connection
@@ -914,9 +1482,12 @@ None.
 - **Trace Sport Stars** — HTTP 403 — HTTP 403
 - **Travel Channel East** — HTTP 444 — HTTP 444
 - **Travelxp** — HTTP 403 — HTTP 403
+- **TRT Cocuk** — Other
 - **TSN 1** — HTTP 403 — HTTP 403
 - **TSN 2** — HTTP 403 — HTTP 403
 - **TSN 3** — HTTP 403 — HTTP 403
+- **TV BRICS English** — Other
+- **TVCARiB Kids & Teens** — Other
 - **V Classic TV** — Timeout
 - **Velvet. European Movies** — Timeout
 - **Velvet. Golden Collection** — Timeout
@@ -947,8 +1518,8 @@ None.
 - **Zee Thirai** — Timeout
 - **Zee TV** — Connection
 - **Zee TV** — HTTP 403 — HTTP 403
-- **Galaxy (720p)** — HTTP 403 — HTTP 403
-- **Galaxy Premium (720p)** — HTTP 403 — HTTP 403
+- **Galaxy** — HTTP 403 — HTTP 403
+- **Galaxy Premium** — HTTP 403 — HTTP 403
 - **7S Music** — HTTP 403 — HTTP 403
 - **9X Jalwa** — HTTP 403 — HTTP 403
 - **Aakaash Aath** — HTTP 403 — HTTP 403
