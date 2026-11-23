@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-23T10:07:46+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-23T10:24:14+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12152
 - Existing playlist records: 3314
@@ -114,14 +114,14 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-23T10:07:50+06:00
+- Run timestamp: 2026-11-23T10:24:20+06:00
 - Mode: international
 - New entries and discovery queues probed: 66
-- Verified live media responses: 10
+- Verified live media responses: 9
 - Verified new primary channels retained in New Channels: 2
-- Verified alternate streams retained in New Backups: 8
+- Verified alternate streams retained in New Backups: 7
 - Inconclusive candidates retained for manual review: 2
-- Unverified backup streams moved to Review: 0
+- Unverified backup streams moved to Review: 1
 - Definitively dead new candidates removed: 54
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
@@ -181,6 +181,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Sundance TV (Spain) from New Channels — HTTP 404.
 - Removed newly discovered TVS Film Noir Network (720p) from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Removed newly discovered Viasat Kino Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
+- Moved unverified alternate stream Indiyskoye Kino from New Backups to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
@@ -188,7 +189,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Final validation
 
-- Run timestamp: 2026-11-23T10:07:51+06:00
+- Run timestamp: 2026-11-23T10:24:21+06:00
 - Validation status: PASS
 - M3U entries parsed: 3314
 - Malformed EXTINF/URL pairs: 0
