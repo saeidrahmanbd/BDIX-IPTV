@@ -868,7 +868,7 @@ def main():
     # Publish only after playlist/report/event reconciliation succeeds.
     PLAYLIST.write_text(updated, encoding="utf-8")
     HISTORY.parent.mkdir(parents=True, exist_ok=True)
-    HISTORY.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    HISTORY.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(report, encoding="utf-8")
     print(
