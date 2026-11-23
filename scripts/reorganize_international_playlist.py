@@ -290,9 +290,8 @@ def classify(a, name, group, country, promote_backup=False):
         if explicit_group in curated_genres:
             return curated_genres[explicit_group], None, None
 
-    # Enforce the current regional policy before thematic grouping or Backup
-    # preservation. Policy-ineligible and country-ambiguous existing rows are
-    # quarantined in Review; they are never silently promoted to another genre.
+    # Enforce regional discovery policy for non-genre rows before Backup
+    # preservation. Policy-ineligible and country-ambiguous rows stay in Review.
     if group_key in QUEUE_GROUPS:
         pass  # Discovery queues are filtered by the dedicated queue policy below.
     elif country == "IN" or group in INDIAN_GROUPS:
