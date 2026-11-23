@@ -129,6 +129,65 @@ class InternationalStreamHealthTests(unittest.TestCase):
         output, history, events = apply(output, "fail", history, "2026-11-09")
         self.assertEqual(events[0]["streak"], 1)
 
+    def test_three_consecutive_inconclusive_days_move_primary_to_review_without_deleting(self):
+        source = self.playlist(row(name="Unverified Movie"))
+        output, history, _ = apply(
+            source, "inconclusive", {}, "2026-11-07",
+            status=403, reason="HTTP 403",
+        )
+        output, history, _ = apply(
+            output, "inconclusive", history, "2026-11-08",
+            status=403, reason="HTTP 403",
+        )
+        self.assertIn('group-title="International Movies"', output)
+        output, history, events = apply(
+            output, "inconclusive", history, "2026-11-09",
+            status=403, reason="HTTP 403",
+        )
+        self.assertIn('group-title="Review"', output)
+        self.assertIn("https://example.test/live/test.m3u8", output)
+        self.assertEqual(events[0]["action"], "moved-to-review-after-inconclusive-streak")
+        record = next(iter(history["entries"].values()))
+        self.assertEqual(record["consecutive_failures"], 0)
+        self.assertEqual(record["consecutive_inconclusive"], 3)
+        self.assertFalse(record["removed"])
+
+    def test_working_stream_recovers_after_inconclusive_quarantine(self):
+        source = self.playlist(row(name="Recoverable Movie"))
+        output, history, _ = apply(
+            source, "inconclusive", {}, "2026-11-07",
+            status=403, reason="HTTP 403",
+        )
+        output, history, _ = apply(
+            output, "inconclusive", history, "2026-11-08",
+            status=403, reason="HTTP 403",
+        )
+        output, history, _ = apply(
+            output, "inconclusive", history, "2026-11-09",
+            status=403, reason="HTTP 403",
+        )
+        output, _, events = apply(
+            output, "ok", history, "2026-11-10",
+            status=200, reason="Media bytes received",
+        )
+        self.assertIn('group-title="International Movies"', output)
+        self.assertEqual(events[0]["action"], "restored-to-primary")
+
+    def test_missing_day_restarts_inconclusive_quarantine_streak(self):
+        source = self.playlist(row(name="Intermittent Movie"))
+        output, history, _ = apply(
+            source, "inconclusive", {}, "2026-11-07",
+            status=403, reason="HTTP 403",
+        )
+        output, history, events = apply(
+            output, "inconclusive", history, "2026-11-09",
+            status=403, reason="HTTP 403",
+        )
+        self.assertIn('group-title="International Movies"', output)
+        self.assertEqual(events[0]["action"], "inconclusive-streak")
+        record = next(iter(history["entries"].values()))
+        self.assertEqual(record["consecutive_inconclusive"], 1)
+
     def test_inconclusive_day_breaks_streak_but_keeps_review(self):
         output, history, _ = apply(self.playlist(row()), "fail", {}, "2026-11-07")
         output, history, _ = apply(output, "inconclusive", history, "2026-11-08", status=403, reason="HTTP 403")
