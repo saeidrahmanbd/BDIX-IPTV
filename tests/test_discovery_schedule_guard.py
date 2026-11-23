@@ -163,11 +163,11 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         self.assertFalse(guard.should_current_run_execute(runs, 20, self.today))
         self.assertFalse(guard.should_current_run_execute(runs, 22, self.today))
 
-    def test_pending_or_failed_earliest_run_still_prevents_a_second_discovery(self):
+    def test_queued_run_does_not_reserve_daily_discovery_slot(self):
         runs = [
             {
                 "id": 30,
-                "event": "schedule",
+                "event": "push",
                 "status": "queued",
                 "conclusion": None,
                 "created_at": "2026-11-07T01:00:00Z",
@@ -175,13 +175,15 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             {
                 "id": 31,
                 "event": "workflow_dispatch",
-                "status": "completed",
-                "conclusion": "success",
+                "status": "in_progress",
+                "conclusion": None,
                 "created_at": "2026-11-07T01:20:00Z",
             },
         ]
-        self.assertTrue(guard.should_current_run_execute(runs, 30, self.today))
-        self.assertFalse(guard.should_current_run_execute(runs, 31, self.today))
+        self.assertFalse(guard.run_blocks_retry(runs[0]))
+        self.assertTrue(guard.run_blocks_retry(runs[1]))
+        self.assertTrue(guard.should_current_run_execute(runs, 31, self.today, event="workflow_dispatch"))
+        self.assertIsNone(guard.first_run_id([runs[0]]))
 
     def test_no_run_for_date_fails_closed(self):
         self.assertIsNone(guard.first_run_id([]))
