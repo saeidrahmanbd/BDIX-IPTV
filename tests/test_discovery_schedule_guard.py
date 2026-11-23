@@ -772,6 +772,53 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
             event="schedule", workflow_file="epg-refresh.yml",
         ))
 
+    def test_health_guard_allows_new_checker_revision_after_same_day_success(self):
+        runs = [
+            {
+                "id": 490, "event": "workflow_dispatch", "status": "completed",
+                "conclusion": "success", "created_at": "2026-11-23T00:01:02Z",
+                "head_sha": "eb64e9780cbc250e1f750873c3ee8f63ca2d3c88",
+                "jobs": [{
+                    "name": "check", "status": "completed", "conclusion": "success",
+                    "steps": [{"name": guard.REQUIRED_STEP_BY_WORKFLOW["international-stream-health.yml"],
+                               "conclusion": "success"}],
+                }],
+            },
+            {
+                "id": 499, "event": "push", "status": "in_progress",
+                "conclusion": None, "created_at": "2026-11-23T08:05:06Z",
+                "head_sha": "db3e7daf790a30bbdaf169ceb9fb9ed0c1c94844",
+            },
+        ]
+        self.assertTrue(guard.should_current_run_execute(
+            runs, 499, date(2026, 11, 23),
+            workflow_file="international-stream-health.yml", event="push",
+        ))
+
+    def test_health_guard_still_suppresses_same_revision_duplicate(self):
+        sha = "db3e7daf790a30bbdaf169ceb9fb9ed0c1c94844"
+        runs = [
+            {
+                "id": 499, "event": "push", "status": "completed",
+                "conclusion": "success", "created_at": "2026-11-23T08:05:06Z",
+                "head_sha": sha,
+                "jobs": [{
+                    "name": "check", "status": "completed", "conclusion": "success",
+                    "steps": [{"name": guard.REQUIRED_STEP_BY_WORKFLOW["international-stream-health.yml"],
+                               "conclusion": "success"}],
+                }],
+            },
+            {
+                "id": 500, "event": "push", "status": "in_progress",
+                "conclusion": None, "created_at": "2026-11-23T08:10:06Z",
+                "head_sha": sha,
+            },
+        ]
+        self.assertFalse(guard.should_current_run_execute(
+            runs, 500, date(2026, 11, 23),
+            workflow_file="international-stream-health.yml", event="push",
+        ))
+
     def test_epg_guard_ignores_completed_pre_schedule_push_for_post_schedule_workflow_run(self):
         early_push = {
             "id": 158, "event": "push", "status": "completed", "conclusion": "success",
