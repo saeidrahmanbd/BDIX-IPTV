@@ -705,5 +705,21 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
 
 
 
+    def test_owner_approved_fashion_channels_are_preserved_in_international_group(self):
+        playlist = (Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        expected = {
+            "Fashion&LifeStyle", "FashionBox", "FashionTV",
+            "FashionTV Paris L'Original", "FashionTV Secrets", "Global Fashion Channel",
+        }
+        found = set()
+        for line in playlist.splitlines():
+            if not line.startswith("#EXTINF:") or 'group-title="International"' not in line:
+                continue
+            name = line.rsplit(",", 1)[-1].strip()
+            if name in expected:
+                found.add(name)
+        self.assertEqual(found, expected)
+
+
 if __name__ == "__main__":
     unittest.main()
