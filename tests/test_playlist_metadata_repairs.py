@@ -9,6 +9,7 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import reorganize_international_playlist as international_reorg
+import permanent_removals
 
 
 def playlist_rows(path):
@@ -138,6 +139,56 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         self.assertIn('if group == "Adult":', normalizer)
         self.assertIn('casefold() == "adult"', logo_migration)
         self.assertIn('"adult"', cross_playlist.split("REVIEW_GROUPS =", 1)[1].split("\\n", 1)[0])
+
+
+    def test_owner_curated_hd_suffixes_survive_metadata_normalization(self):
+        names = [
+            "&pictures HD", "&xplor HD", "Sony Max HD", "Star Gold HD",
+            "Star Gold Select HD", "Star Movies (India) HD", "Zee Power HD",
+            "Zee Talkies HD", "Zee Thirai HD", "ETV Plus HD", "ETV Telugu HD",
+            "Sony SAB HD", "Sony Pix HD", "Star Movies Select HD",
+            "Sony Sports Ten 1 HD", "Sony Sports Ten 2 HD", "Star Sports 1 HD",
+            "Unite8 Sports 2 HD",
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "logos").mkdir()
+            (root / "reports").mkdir()
+            entries = ["#EXTM3U"]
+            for index, name in enumerate(names, 1):
+                channel_id = f"testchannel{index}.in@HD"
+                entries.extend([
+                    f'#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{name}" '
+                    f'channel-id="{channel_id}" tvg-country="IN" '
+                    f'tvg-language="eng" tvg-chno="{index}" '
+                    f'group-title="Indian Movies",{name}',
+                    f"https://example.test/channel{index}.m3u8",
+                ])
+            (root / "IPTV-Playlist.m3u").write_text(
+                "\n".join(entries) + "\n", encoding="utf-8"
+            )
+            env = dict(os.environ, PYTHONPATH=str(ROOT / "scripts"))
+            result = subprocess.run(
+                [sys.executable, str(ROOT / "scripts" / "normalize_metadata.py")],
+                cwd=root, env=env, capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            output = (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        for name in names:
+            with self.subTest(name=name):
+                self.assertIn(f'tvg-name="{name}"', output)
+                self.assertIn(f',{name}\n', output)
+
+    def test_restored_bollywood_masala_is_not_permanently_removed(self):
+        removed = {name.casefold() for name in permanent_removals.PERMANENTLY_REMOVED_NAMES}
+        self.assertNotIn("bollywood masala", removed)
+        self.assertIn("deadly women", removed)
+        rows = playlist_rows(ROOT / "IPTV-Playlist.m3u")
+        self.assertTrue(any(
+            row["display"].casefold() == "bollywood masala"
+            for row in rows
+        ))
+
 
 
 if __name__ == "__main__":
