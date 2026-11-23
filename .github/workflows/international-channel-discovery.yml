@@ -81,6 +81,7 @@ jobs:
             .
             .github/workflows
             assets
+            config
             docs
             logos
             reports
