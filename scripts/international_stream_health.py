@@ -450,7 +450,7 @@ def _review_recovery_target(info: str, original_group: str,
         str(group).casefold()
         for group in international_policy.discovery.COUNTRY_NAMES.values()
     )
-    primary_groups.update({"international", "international movies", "international music"})
+    primary_groups.update({"international movies", "international music"})
     if original_key in primary_groups:
         target = original_group.strip()
         identity_keys = _row_identity_keys(info, country)
