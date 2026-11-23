@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-22T03:34:56+00:00**
-Source playlist SHA-256: **6f0c1b004804ee4dc27caa489be97d275fb316526b22a13079e5fe7817aee82c**
+Generated: **2026-11-23T00:17:21+00:00**
+Source playlist SHA-256: **edc2e1edbb195131dceb66cfedc7a3d7d3fcf9901d4a7c41066b9f052a4e3e0b**
 
 Status: **PASS**
 
-- Current entries: **1389**
+- Current entries: **1346**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -15,15 +15,15 @@ Status: **PASS**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Permanently banned channel entries across all IPTV groups: **0**
-- Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **505**
+- Primary entries missing channel numbers: **8**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **541**
 - Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **56**
-- Raw resolution/geoblock name tags: **61**
+- Entries missing tvg-language: **14**
+- Raw resolution/geoblock name tags: **14**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -37,7 +37,7 @@ Status: **PASS**
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **505**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **541**.
 
 ## Blocking Reasons
 No hard safety blockers detected.
@@ -48,9 +48,10 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 
 ## Warnings / Manual Review
 
-- entries missing tvg-language: 56
-- raw resolution/geoblock tags in channel names: 61
-- New queue candidates pending owner review: 33
+- entries missing tvg-language: 14
+- primary entries missing tvg-chno: 8
+- raw resolution/geoblock tags in channel names: 14
+- New queue candidates pending owner review: 1
 
 ## Review-queue logo gaps
 
@@ -65,102 +66,23 @@ None.
 ## Raw name tags
 
 - **Ayush Next Communication Network (576p)** — New Channels
-- **Bollywood Masala (1080p)** — New Channels
+- **CCV (480p)** — New Channels
 - **ETV Life (1080p)** — New Channels
-- **ETV Telugu HD (1080p)** — New Channels
 - **Gaunda Punjab TV (720p)** — New Channels
-- **MNX (576p)** — New Channels
-- **NDTV Good Times (1080p)** — New Channels
-- **Punjab Plus (1080p)** — New Channels
-- **Sony Pix HD (1080p)** — New Channels
-- **Vii MEDIA (1080p)** — New Channels
-- **WeatherSpy (India) (720p)** — New Channels
-- **&xplor HD (1080p)** — New Channels
-- **Zodiak TV (1080p)** — New Channels
-- **Star Gold 2 (576p)** — New Channels
-- **Star Gold Romance (576p)** — New Channels
-- **TLC (India) HD (1080p)** — New Channels
-- **Zee Classic (576p)** — New Channels
-- **Zee Power HD (1080p)** — New Channels
-- **Zee Talkies HD (1080p)** — New Channels
-- **Zee Thirai HD (1080p)** — New Channels
-- **DD Kashir (576p)** — New Backups
-- **DD National HD (1080p)** — New Backups
-- **ETV Beats (1080p)** — New Backups
-- **ETV Cinema HD (1080p)** — New Backups
-- **ETV Comedy (1080p)** — New Backups
-- **ETV Josh (1080p)** — New Backups
-- **ETV Music (1080p)** — New Backups
-- **ETV Plus HD (1080p)** — New Channels
-- **MH One (576p)** — New Backups
-- **MH One Dil Se (576p)** — New Backups
-- **MH One Movies (576p)** — New Backups
-- **Movies Now HD (1080p)** — New Backups
-- **Movies Now + (1080p)** — New Backups
-- **MTV (India) HD (1080p)** — New Backups
-- **Nepal 1 (576p)** — New Backups
-- **&pictures HD (1080p)** — New Channels
-- **Sony Max HD (1080p)** — New Channels
-- **Spondon (1080p)** — New Backups
-- **Travelxp 4K HDR (2160p) [Geo-blocked]** — New Channels
-- **&TV HD (1080p)** — New Backups
-- **Apna Punjab TV (India) (576p)** — New Backups
-- **Star Sports 1 Hindi HD (1080p)** — New Backups
-- **Star Sports 2 HD (1080p)** — New Backups
-- **Sony SAB HD (1080p)** — New Channels
-- **Star Gold HD (1080p)** — New Channels
-- **Star Gold Select HD (1080p)** — New Channels
-- **Star Movies (India) HD (1080p)** — New Channels
-- **Star Movies Select HD (1080p)** — New Channels
 - **Kabaddi 24x7 (720p)** — New Channels
-- **Pickleball Now (720p) [Geo-blocked]** — New Channels
-- **Sony Sports Ten 1 HD (1080p)** — New Channels
-- **Sony Sports Ten 2 HD (1080p)** — New Channels
-- **Sony Sports Ten 5 (576p)** — New Channels
-- **Star Sports 1 HD (1080p)** — New Channels
-- **Unite8 Sports 1 (576p)** — New Channels
-- **Unite8 Sports 2 HD (1080p)** — New Channels
-- **Colors Bangla HD (1080p)** — Review
-- **NAN TV (720p)** — Review
-- **Oli TV (India) (1080p)** — Review
-- **Peace TV Bangla (1080p)** — Review
-- **Peace TV Urdu (1080p)** — Review
+- **Punjab Plus (1080p)** — New Channels
+- **TLC (India) HD (1080p)** — New Channels
+- **WeatherSpy (India) (720p)** — New Channels
+- **Zodiak TV (1080p)** — New Channels
+- **DD National HD (1080p)** — New Backups
+- **MNX HD (1080p)** — New Backups
+- **Sony Max (720p)** — New Backups
+- **Sony Sports Ten 1 (576p)** — New Backups
+- **Unite8 Sports 1 HD (1080p)** — New Backups
 
 ## Queue validation
 
-- Ayush Next Communication Network (576p) has provisional/unverified queue country missing
-- Bollywood Masala (1080p) has provisional/unverified queue country missing
-- ETV Life (1080p) has provisional/unverified queue country missing
-- ETV Telugu HD (1080p) has provisional/unverified queue country missing
-- Gaunda Punjab TV (720p) has provisional/unverified queue country missing
-- MNX (576p) has provisional/unverified queue country missing
-- NDTV Good Times (1080p) has provisional/unverified queue country missing
-- Punjab Plus (1080p) has provisional/unverified queue country missing
-- Sony Pix HD (1080p) has provisional/unverified queue country missing
-- Vii MEDIA (1080p) has provisional/unverified queue country missing
-- WeatherSpy (India) (720p) has provisional/unverified queue country missing
-- &xplor HD (1080p) has provisional/unverified queue country missing
-- Zodiak TV (1080p) has provisional/unverified queue country missing
-- DD Kashir (576p) has provisional/unverified queue country missing
-- DD National HD (1080p) has provisional/unverified queue country missing
-- ETV Beats (1080p) has provisional/unverified queue country missing
-- ETV Cinema HD (1080p) has provisional/unverified queue country missing
-- ETV Comedy (1080p) has provisional/unverified queue country missing
-- ETV Josh (1080p) has provisional/unverified queue country missing
-- ETV Music (1080p) has provisional/unverified queue country missing
-- ETV Plus HD (1080p) has provisional/unverified queue country missing
-- MH One (576p) has provisional/unverified queue country missing
-- MH One Dil Se (576p) has provisional/unverified queue country missing
-- MH One Movies (576p) has provisional/unverified queue country missing
-- Movies Now HD (1080p) has provisional/unverified queue country missing
-- Movies Now + (1080p) has provisional/unverified queue country missing
-- MTV (India) HD (1080p) has provisional/unverified queue country missing
-- Nepal 1 (576p) has provisional/unverified queue country missing
-- &pictures HD (1080p) has provisional/unverified queue country missing
-- Sony Max HD (1080p) has provisional/unverified queue country missing
-- Spondon (1080p) has provisional/unverified queue country missing
-- Travelxp 4K HDR (2160p) [Geo-blocked] has provisional/unverified queue country missing
-- &TV HD (1080p) has provisional/unverified queue country missing
+- Gaunda Punjab TV (720p) country not verified as BD/IN (id carries a non-BD/IN country suffix)
 
 ## Missing local logo files
 
