@@ -75,6 +75,26 @@ class InternationalStreamHealthTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "destination"):
             health.validate_recovery_accounting(source, wrong_destination, events, report)
 
+    def test_published_recovery_report_matches_final_playlist_and_probe_history(self):
+        source = self.playlist(row(name="Final Movie", group="Review"))
+        info, url = health.parse(source)[1][0][0], "https://example.test/live/test.m3u8"
+        key = health.stream_key(info, url)
+        history = {"entries": {key: {
+            "name": "Final Movie", "tvg_id": "testmovie.us", "country": "US",
+            "original_group": "International Movies", "auto_review": True,
+            "consecutive_failures": 1, "last_checked_date": "2026-11-07",
+            "last_status": "fail", "removed": False,
+        }}, "removed": []}
+        updated, history, events = apply(source, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
+        report = health.build_report(events, history, "2026-11-08", "2026-11-08T00:00:00+00:00", 1)
+        self.assertEqual(health.validate_published_recovery_report(updated, report, history), 1)
+        wrong_group = updated.replace('group-title="International Movies"', 'group-title="Review"')
+        with self.assertRaisesRegex(ValueError, "absent from the final playlist"):
+            health.validate_published_recovery_report(wrong_group, report, history)
+        bad_history = {"entries": {key: dict(history["entries"][key], last_status="inconclusive")}}
+        with self.assertRaisesRegex(ValueError, "absent from the final playlist"):
+            health.validate_published_recovery_report(updated, report, bad_history)
+
     def test_report_summarizes_inconclusive_reasons_and_http_statuses(self):
         events = [
             {"state": "inconclusive", "status": 403, "reason": "HTTP 403", "action": "none", "name": "Example 403"},
