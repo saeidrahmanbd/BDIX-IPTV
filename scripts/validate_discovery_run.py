@@ -359,9 +359,14 @@ def probe_mode(playlist, report, baseline, mode):
                     counts["unverified backup streams moved to Review"] += 1
                 else:
                     counts["unverified Adult/Fashion primary streams moved to Review"] += 1
-                details.append(
-                    f"- Moved unverified {e['group']} candidate {e['name']} to Review — probe was inconclusive ({reason})."
-                )
+                if hold_reason == "unverified-backup-stream":
+                    details.append(
+                        f"- Moved unverified alternate stream {e['name']} from {e['group']} to Review — probe was inconclusive ({reason})."
+                    )
+                else:
+                    details.append(
+                        f"- Moved unverified {e['group']} candidate {e['name']} to Review — probe was inconclusive ({reason})."
+                    )
             else:
                 counts["inconclusive streams retained for manual review"] += 1
                 details.append(
