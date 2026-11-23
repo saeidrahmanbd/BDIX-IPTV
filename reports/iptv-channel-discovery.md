@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-23T09:42:26+06:00** (Asia/Dhaka)
+Generated: **2026-11-24T05:27:15+06:00** (Asia/Dhaka)
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**
@@ -14,8 +14,8 @@ Generated: **2026-11-23T09:42:26+06:00** (Asia/Dhaka)
 - Country-group threshold: **5** legitimate primary identities
 - Only discovery queue rows were purged, reclassified or logo-normalized; unrelated primary playlist entries were preserved.
 - New channels: **4**
-- New backups: **9**
-- Rejected/held candidates: **859**
+- New backups: **5**
+- Rejected/held candidates: **863**
 - Country metadata, channel IDs, language and logos are advisory at this stage; retain uncertain values for owner review and repair later.
 
 ## Rejection reasons
@@ -30,7 +30,7 @@ Generated: **2026-11-23T09:42:26+06:00** (Asia/Dhaka)
 - channel country NL is outside Bangladesh/India: 2
 - channel country PK is outside Bangladesh/India: 1
 - duplicate channel identity already staged in a discovery queue: 2
-- duplicate stream URL: 322
+- duplicate stream URL: 326
 - known Indian prohibited MH One Prime channel is prohibited: 1
 - known Indian prohibited brand/category is prohibited: 12
 - permanently banned channel: 30
@@ -51,20 +51,16 @@ Generated: **2026-11-23T09:42:26+06:00** (Asia/Dhaka)
 - DD Manipur (576p) (source feed: India) — https://fta.ektv.in/live/671/master.m3u8
 - DD Nagaland (576p) (source feed: India) — https://fta.ektv.in/live/670/master.m3u8
 - DD Tripura (576p) (source feed: India) — https://fta.ektv.in/live/661/master.m3u8
-- History TV18 HD (1080p) [Geo-blocked] (source feed: India) — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
-- INWILD (1080p) (source feed: India) — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
-- MTV (India) (396p) (source feed: India) — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:mtvindia.smil/playlist.m3u8
-- Safari TV (576p) (source feed: India) — https://fta.ektv.in/live/410/master.m3u8
 - Vanitha TV (576p) (source feed: India) — https://mumbai-edge.smartplaytv.in/VanithaTV/index.m3u8
 
 ## Existing queue-role corrections
 
 ## Stream verification
 
-- Run timestamp: 2026-11-23T09:42:30+06:00
+- Run timestamp: 2026-11-24T05:27:16+06:00
 - Mode: iptv
-- New entries and discovery queues probed: 13
-- Verified live media responses: 4
+- New entries and discovery queues probed: 9
+- Verified live media responses: 0
 - Verified new primary channels retained in New Channels: 0
 - Verified alternate streams retained in New Backups: 0
 - Inconclusive candidates retained for manual review: 0
@@ -72,7 +68,7 @@ Generated: **2026-11-23T09:42:26+06:00** (Asia/Dhaka)
 - Definitively dead new candidates removed: 9
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
-- Logo references localized to authentic repository assets: 4
+- Logo references localized to authentic repository assets: 0
 - Candidates retained without authentic local logos (no placeholder used): 0
 
 ### Stream probe details
@@ -88,17 +84,17 @@ Generated: **2026-11-23T09:42:26+06:00** (Asia/Dhaka)
 
 ## Final validation
 
-- Run timestamp: 2026-11-23T09:42:30+06:00
+- Run timestamp: 2026-11-24T05:27:16+06:00
 - Validation status: PASS
-- New manual-review candidates retained: 4
+- New manual-review candidates retained: 0
 - New malformed EXTINF/URL pairs: 0
 - New duplicate stream URL occurrences: 0
 - New candidates missing an authentic local logo: 0 (warning only)
 - New candidates with non-local logo references: 0 (warning only)
-- New candidates with country metadata requiring manual review: 1 (warning only)
+- New candidates with country metadata requiring manual review: 0 (warning only)
 - New candidates outside New Channels/New Backups or approved Review holds: 0
 - Out-of-scope/prohibited Indian rows remaining in New Channels/New Backups: 0
 - Discovery queue rows with non-local/broken logos: 0
 - New Backup identity/duplicate-primary issues: 0
 - Existing unrelated playlist defects and incomplete nonessential country metadata do not block discovery.
-- New Channels retains primary candidates for owner review; only verified alternates remain in New Backups, and inconclusive alternates are held in Review.
+- New Channels retains eligible Movies/Music primaries for owner review; Adult and Fashion TV use their dedicated groups. Fashion TV is always allowed. Inconclusive alternates are held in Review.
