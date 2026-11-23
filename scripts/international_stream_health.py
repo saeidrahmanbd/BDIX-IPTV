@@ -572,7 +572,15 @@ def apply_results(text, results, history, check_date):
                 and str(rec.get("original_group", "")).casefold() == "adult"
             )
         )
-        if rec.get("last_checked_date") == check_date:
+        # A successful probe of a row that is still in Review may be
+        # re-evaluated on the same Bangladesh date. This is essential when a
+        # policy/recovery fix is deployed after an earlier same-day health run:
+        # it must not strand a verified stream merely because the old code
+        # already recorded today's successful probe. Failures and inconclusive
+        # results remain idempotent and never advance twice on the same date.
+        if rec.get("last_checked_date") == check_date and not (
+            state == "ok" and current.casefold() == REVIEW.casefold()
+        ):
             action = "already-checked-today"
         else:
             previous_date, previous_status = rec.get("last_checked_date", ""), rec.get("last_status", "")
