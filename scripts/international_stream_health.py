@@ -437,9 +437,12 @@ def _review_recovery_target(info: str, original_group: str,
     country = international_policy.country_code(a, context_group, name)
     if not country or country == "ZZ":
         return None
-    eligible_target, eligibility_reason, _ = international_policy.discovery.discovery_eligibility(a, name)
-    if not eligible_target or eligibility_reason:
-        return None
+    # A Review row that came from an established primary group must be
+    # reclassified by the International organizer, not by the stricter *new
+    # discovery* gate. That gate intentionally excludes News/Kids/Sports/
+    # Religious/Documentary/Fashion categories and was stranding healthy
+    # curated streams in Review. The organizer applies the existing playlist
+    # policy, including the country threshold and duplicate-to-Backup rules.
     target, kind, reason = international_policy.classify(
         a, name, context_group, country, promote_backup=True
     )
