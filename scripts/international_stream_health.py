@@ -25,6 +25,7 @@ HISTORY = Path("reports/international-stream-health-history.json")
 REPORT = Path("reports/international-stream-health.md")
 REVIEW = "Review"
 FAILURE_LIMIT = 3
+INCONCLUSIVE_REVIEW_LIMIT = 3
 WORKERS = 48
 TIMEOUT = 8
 RETRIES = 2
@@ -547,6 +548,7 @@ def apply_results(text, results, history, check_date):
                 "original_group": current,
                 "auto_review": False,
                 "consecutive_failures": 0,
+                "consecutive_inconclusive": 0,
                 "last_checked_date": "",
                 "last_status": "",
                 "removed": False,
@@ -582,6 +584,7 @@ def apply_results(text, results, history, check_date):
                     action = "restored-protected-adult"
                 rec["original_group"] = "Adult"
                 rec["consecutive_failures"] = 0
+                rec["consecutive_inconclusive"] = 0
                 rec["auto_review"] = False
                 rec["last_status"] = state
                 if state == "ok":
@@ -601,6 +604,7 @@ def apply_results(text, results, history, check_date):
                         else:
                             action = "restored-to-backup" if target == "Backup" else "restored-to-primary"
                 rec["consecutive_failures"] = 0
+                rec["consecutive_inconclusive"] = 0
                 rec["auto_review"] = False
                 rec["last_status"] = "ok"
                 rec["last_ok_date"] = check_date
@@ -608,6 +612,7 @@ def apply_results(text, results, history, check_date):
                 streak = int(rec.get("consecutive_failures", 0))
                 streak = streak + 1 if previous_date == yesterday and previous_status == "fail" else 1
                 rec["consecutive_failures"] = streak
+                rec["consecutive_inconclusive"] = 0
                 if current.casefold() != REVIEW.casefold():
                     rec["original_group"] = current
                     rec["auto_review"] = True
@@ -621,9 +626,23 @@ def apply_results(text, results, history, check_date):
                 rec["last_status"] = "fail"
                 rec["last_failure_date"] = check_date
             else:
-                # 401/403/429/geo restrictions and uncertain responses reset the
-                # consecutive-failure streak without releasing an existing Review row.
+                # An inconclusive result never advances the destructive
+                # three-definitive-failure retirement streak. However, a stream
+                # that cannot be verified on three consecutive Bangladesh
+                # dates must leave Primary/Backup and enter Review so it is not
+                # advertised as active indefinitely.
+                streak = int(rec.get("consecutive_inconclusive", 0))
+                streak = streak + 1 if previous_date == yesterday and previous_status == "inconclusive" else 1
+                rec["consecutive_inconclusive"] = streak
                 rec["consecutive_failures"] = 0
+                if current.casefold() != REVIEW.casefold() and streak >= INCONCLUSIVE_REVIEW_LIMIT:
+                    rec["original_group"] = current
+                    rec["auto_review"] = True
+                    info = set_group(info, REVIEW)
+                    current = REVIEW
+                    action = "moved-to-review-after-inconclusive-streak"
+                else:
+                    action = "inconclusive-streak"
                 rec["last_status"] = "inconclusive"
             rec["last_checked_date"] = check_date
 
@@ -668,7 +687,8 @@ def build_report(events, history, check_date, generated, total):
     ok = sum(e["state"] == "ok" for e in events)
     failures = [e for e in events if e["state"] == "fail"]
     uncertain = [e for e in events if e["state"] == "inconclusive"]
-    moved = [e for e in events if e["action"] == "moved-to-review"]
+    moved = [e for e in events if e["action"] in {"moved-to-review", "moved-to-review-after-inconclusive-streak"}]
+    inconclusive_moved = [e for e in events if e["action"] == "moved-to-review-after-inconclusive-streak"]
     recovered = [e for e in events if e["action"] in {"restored", "restored-to-primary", "restored-to-backup", "restored-to-discovery-queue"}]
     removed = [e for e in events if e["action"] == "removed-after-three-failed-days"]
     flagged = sum(1 for r in history["entries"].values() if r.get("auto_review") and not r.get("removed"))
@@ -688,6 +708,7 @@ def build_report(events, history, check_date, generated, total):
         f"- Definitive failures today: **{len(failures)}**",
         f"- Inconclusive checks: **{len(uncertain)}**",
         f"- Newly moved to Review: **{len(moved)}**",
+        f"- Moved to Review after three consecutive inconclusive days: **{len(inconclusive_moved)}**",
         f"- Restored from Review to primary/Backup/discovery queue: **{len(recovered)}**",
         f"- Removed after three consecutive failed days: **{len(removed)}**",
         f"- Automatically flagged rows still under Review: **{flagged}**", "",
@@ -695,6 +716,7 @@ def build_report(events, history, check_date, generated, total):
         "- First definitive failed day: move the row to Review; all metadata and its logo stay intact.",
         "- A successful later check reclassifies a Review row to its eligible primary category; a working alternate whose identity already has a primary is placed in Backup.",
         "- Third consecutive definitive failed Bangladesh calendar day: remove the stream row.",
+        "- Third consecutive inconclusive Bangladesh calendar day: move a Primary/Backup stream to Review without deleting it; inconclusive checks never advance the definitive-failure retirement streak.",
         "- A working Review row that is not eligible under the country/genre policy remains in Review.",
         "- Reruns on the same Bangladesh date do not increase the streak; a missed day restarts it.",
         "- Only HTTP 404/410 are definitive HTTP failures. All other HTTP errors, access-denial pages, empty responses, DNS/TLS/timeouts and connection failures are inconclusive and never advance the three-day retirement streak.",
