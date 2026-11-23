@@ -9,7 +9,7 @@ from discover_bd_in_new_queues import (
     PERMANENTLY_BANNED_CHANNEL_NAMES, PERMANENTLY_BANNED_CHANNEL_IDS, canonical_channel_name,
     evaluate, extinf, explicit_foreign_country, prohibited_channel, purge_forbidden_existing_queue_rows,
     is_indian_discovery_candidate, known_indian_forbidden_category,
-    normalize_queue_logo, normalize_existing_queue_roles, channel_identity_keys,
+    normalize_queue_logo, normalize_existing_queue_roles, channel_identity_keys, parse,
 )
 
 
