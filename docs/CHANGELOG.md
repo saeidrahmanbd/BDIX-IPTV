@@ -7,28 +7,20 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-23 — `IPTV-Playlist.m3u`
 
-- New channel identities: **21**
-- Channel identities removed: **1**
-- Stream URLs added / removed: **24 / 1**
+- New channel identities: **0**
+- Channel identities removed: **5**
+- Stream URLs added / removed: **0 / 5**
 - Backup URL updates: **0**
 - Logo reference changes: **411**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Added channel identities (up to 10):
-- Fashion&LifeStyle
-- FashionBox
-- FashionTV
-- FashionTV Paris L'Original
-- FashionTV Secrets
-- Global Fashion Channel
-- Ayush Next Communication Network (576p)
-- CCV (480p)
-- ETV Life (1080p)
-- Gaunda Punjab TV (720p)
-
 Removed channel identities (up to 10):
-- Bollywood OLD
+- Movies Now+
+- MyTime Movie Network (US)
+- Travel Channel
+- Fight TV
+- Futbol TV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-23 — `International-Playlist.m3u`
