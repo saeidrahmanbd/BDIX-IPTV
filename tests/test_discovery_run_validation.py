@@ -8,6 +8,35 @@ from discover_bd_in_new_queues import parse as parse_bd_playlist
 
 
 class DiscoveryRunValidationTests(unittest.TestCase):
+    def test_discovery_eligibility_allows_unclassified_bd_and_pk_country_feed_channels(self):
+        import discover_international_channels as discovery
+
+        for attrs, name, expected in (
+            ({"tvg-id": "NetworkOneBD.bd", "tvg-country": "BD"}, "Bangladesh Network One", "Bangladesh"),
+            ({"tvg-id": "ATV.pk", "tvg-country": "PK"}, "ATV (Pakistan)", "Pakistani"),
+        ):
+            with self.subTest(country=expected):
+                target, reason, code = discovery.discovery_eligibility(attrs, name)
+                self.assertEqual(target, expected)
+                self.assertIsNone(reason)
+                self.assertEqual(code, "BD" if expected == "Bangladesh" else "PK")
+
+    def test_fashion_tv_is_global_exception_but_not_generic_fashion_named_channels(self):
+        import discover_international_channels as discovery
+
+        target, reason, code = discovery.discovery_eligibility(
+            {"tvg-id": "fashiontv.ru", "tvg-country": "RU"},
+            "FashionTV Russia",
+        )
+        self.assertEqual((target, reason, code), ("Fashion TV", None, "RU"))
+
+        target, reason, code = discovery.discovery_eligibility(
+            {"tvg-id": "genericfashion.us", "tvg-country": "US"},
+            "Generic Fashion Channel",
+        )
+        self.assertIsNone(target)
+        self.assertTrue(reason)
+
     def test_discovery_report_timestamps_use_bangladesh_offset(self):
         self.assertTrue(now().endswith("+06:00"))
 
