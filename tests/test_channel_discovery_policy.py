@@ -676,14 +676,25 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIsNone(prohibited_channel(attrs, name))
                 self.assertIn("kids", prohibited_channel(attrs, name, iptv_discovery=True))
 
-    def test_bollywood_old_and_hindi_movie_classic_share_one_identity_and_endpoint_family(self):
+    def test_bollywood_old_is_consolidated_under_hindi_movie_classic_and_not_rediscovered(self):
         from stream_url_identity import stream_endpoint_family_key
         a = {"tvg-id": "mov.bollywood.old.in", "channel-id": "mov.bollywood.old.in"}
         b = {"tvg-id": "new.hindi.movie.classic.24", "channel-id": "new.hindi.movie.classic.24"}
         self.assertTrue(channel_identity_keys(a, "Bollywood OLD") & channel_identity_keys(b, "Hindi Movie Classic 24"))
-        url_a = "https://vods2.aynaott.com/hindimovies/tracks-v1a1/mono.ts.m3u8"
-        url_b = "https://vods2.aynaott.com/hindimovies/index.m3u8"
-        self.assertEqual(stream_endpoint_family_key(url_a), stream_endpoint_family_key(url_b))
+        url_old = "https://vods2.aynaott.com/hindimovies/tracks-v1a1/mono.ts.m3u8"
+        url_master = "https://vods2.aynaott.com/hindimovies/index.m3u8"
+        self.assertEqual(stream_endpoint_family_key(url_old), stream_endpoint_family_key(url_master))
+
+        playlist = (Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        rows = parse(playlist)
+        matching = [(attrs, name, url) for attrs, name, url in rows
+                    if channel_identity_keys(attrs, name) & channel_identity_keys(a, "Bollywood OLD")]
+        self.assertEqual(len(matching), 1)
+        attrs, name, url = matching[0]
+        self.assertEqual(name, "Hindi Movie Classic 24")
+        self.assertEqual(attrs.get("tvg-name"), "Hindi Movie Classic 24")
+        self.assertEqual(url, url_master)
+        self.assertEqual(attrs.get("group-title"), "Indian Movies")
 
     def test_r_plus_gold_is_not_classified_as_indian_news(self):
         attrs = {"tvg-id": "RPlusGold.in@SD", "channel-id": "RPlusGold.in@SD", "tvg-country": "IN", "tvg-language": "ben", "group-title": "Indian Bangla"}
