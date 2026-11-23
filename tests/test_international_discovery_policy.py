@@ -679,6 +679,28 @@ class StrictWorldwideDiscoveryTests(unittest.TestCase):
         queued_target, queued_reason, queued_code, _ = discovery.queue_policy(attrs, "Fashion TV")
         self.assertEqual((queued_target, queued_reason, queued_code), ("Fashion TV", None, "FR"))
 
+    def test_raw_repository_logo_url_is_resolved_to_a_local_asset(self):
+        import tempfile
+        from pathlib import Path
+        from scripts import reorganize_international_playlist as reorg_module
+        with tempfile.TemporaryDirectory() as tmp:
+            old_logos = reorg_module.LOGOS
+            reorg_module.LOGOS = Path(tmp) / "logos"
+            reorg_module.LOGOS.mkdir()
+            try:
+                asset = reorg_module.LOGOS / "fashion-tv.svg"
+                asset.write_text("<svg/>", encoding="utf-8")
+                resolved = reorg_module.local_logo_path(
+                    reorg_module.RAW_BASE + "fashion-tv.svg"
+                )
+                self.assertEqual(resolved, asset)
+                self.assertEqual(
+                    reorg_module.exact_local_logo_path("Fashion TV"),
+                    asset,
+                )
+            finally:
+                reorg_module.LOGOS = old_logos
+
     def test_adult_channels_are_allowed_directly_in_adult_group_worldwide(self):
         examples = [
             ("Adult Channel", "Adult", "US", "AdultChannel.us"),
