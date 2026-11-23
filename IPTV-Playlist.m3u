@@ -895,8 +895,6 @@ https://ml-pull-hwc.myco.io/MixTV/hls/index.m3u8
 http://116.90.120.149:8000/play/a11e/index.m3u8
 #EXTINF:-1 tvg-id="MovieDomeFamily.us" tvg-name="Movie Dome Family" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movie-dome-family.png" tvg-chno="438" channel-id="MovieDomeFamily.us" tvg-country="US" tvg-language="eng" group-title="International",Movie Dome Family
 https://amg00771-kochfilmsgerman-moviedomefamily-tcl-tpicw.amagi.tv/playlist/amg00771-kochfilmsgerman-moviedomefamily-tcl/playlist.m3u8
-#EXTINF:-1 tvg-id="MoviesNowPlus.in@HD" tvg-name="Movies Now+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now-plus-0cafc6cc49572c25cbc8.png" tvg-chno="143" channel-id="MoviesNowPlus.in@HD" tvg-country="IN" tvg-language="eng" group-title="International",Movies Now+
-http://116.90.120.149:8000/play/a11k/index.m3u8
 #EXTINF:-1 tvg-id="MoviesThriller.sa@SD" tvg-name="Movies Thriller" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-thriller.png" tvg-chno="439" channel-id="MoviesThriller.sa@SD" tvg-country="SA" tvg-language="eng" group-title="International",Movies Thriller
 https://shd-amg-fast.edgenextcdn.net/tx012/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.moviesphereau" tvg-name="MovieSphere AU" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moviesphere-au-1080p-1b23bc91d7.png" tvg-chno="440" channel-id="custom.moviesphereau" tvg-country="AU" tvg-language="eng" group-title="International",MovieSphere AU
@@ -907,8 +905,6 @@ https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8
 https://mytimeuk-rakuten-samsung.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="MyTimeMovieNetwork.br" tvg-name="MyTime Movie Network (Brazil)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network.png" tvg-chno="443" channel-id="MyTimeMovieNetwork.br" tvg-country="BR" tvg-language="por" group-title="International",MyTime Movie Network (Brazil)
 https://appletree-mytime-samsungbrazil.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="MyTimeMovieNetwork.us@SD" tvg-name="MyTime Movie Network (US)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network.png" tvg-chno="444" channel-id="MyTimeMovieNetwork.us@SD" tvg-country="US" tvg-language="eng" group-title="International",MyTime Movie Network (US)
-https://mytime-tcl.amagi.tv/1080p-en-cc/index.m3u8
 #EXTINF:-1 tvg-id="MyTimeMovieNetworkEast.us" tvg-name="MyTime Movie Network East (US)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-east.png" tvg-chno="445" channel-id="MyTimeMovieNetworkEast.us" tvg-country="US" tvg-language="eng" group-title="International",MyTime Movie Network East (US)
 https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="NOW70s.us" tvg-name="NOW 70s" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/now-70s.png" tvg-chno="446" channel-id="NOW70s.us" tvg-country="GB" tvg-language="eng" group-title="International",NOW 70s
@@ -1081,8 +1077,6 @@ https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/mast
 http://amg00627-banijaygroup-surviour-uk-samsunguk-uyz22.amagi.tv/ts-eu-w1-n2/playlist/amg00627-banijaygroup-survivor-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-id="ThePetCollective.us@India" tvg-name="The Pet Collective India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-pet-collective-india-460b4e0e70.png" tvg-chno="527" channel-id="ThePetCollective.us@India" tvg-country="IN" tvg-language="eng" group-title="Documentary & Wildlife",The Pet Collective India
 https://the-pet-collective-international-in.samsung.wurl.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="TravelChannel.us@SD" tvg-name="Travel Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-channel.png" tvg-chno="528" channel-id="TravelChannel.us@SD" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Travel Channel
-https://tvsen3.aynaott.com/sFwCR6Fu/index.m3u8
 #EXTINF:-1 tvg-id="TravelxpEnglish.us" tvg-name="Travelxp English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp.png" tvg-chno="529" channel-id="TravelxpEnglish.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Travelxp English
 https://travelxp-travelxp-1-eu.rakuten.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TrueCrime.uk" tvg-name="True Crime UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/true-crime-uk.png" tvg-chno="530" channel-id="TrueCrime.uk" tvg-country="GB" tvg-language="eng" group-title="Documentary & Wildlife",True Crime UK
@@ -1283,8 +1277,6 @@ https://d2w9q46ikgrcwx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 https://cffda8ff.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9GSUZBUGx1c3dvbWVuX0hMUw/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.fightnetwork" tvg-name="Fight Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fight-network.png" tvg-chno="628" channel-id="custom.fightnetwork" tvg-country="CA" tvg-language="eng" group-title="Sports",Fight Network
 https://amg00966-amg00966c10-amgplt0201.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg00966-amg00966c10-amgplt0201/playlist.m3u8
-#EXTINF:-1 tvg-id="fight.tv.com" tvg-name="Fight TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fight-tv.png" tvg-chno="629" channel-id="fight.tv.com" tvg-country="US" tvg-language="eng" group-title="Sports",Fight TV
-https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/70e45fc8-1f6c-4492-ac26-9868f70f4e02/manifest.m3u8
 #EXTINF:-1 tvg-id="FITE247.us" tvg-name="FITE 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fite-24-7.png" tvg-chno="630" channel-id="FITE247.us" tvg-country="US" tvg-language="eng" group-title="Sports",FITE 24
 https://d3d85c7qkywguj.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/FiteTV-Nuestra/263.m3u8
 #EXTINF:-1 tvg-id="five.stars.sports.com@five.stars.sports" tvg-name="Five Stars Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/five-stars-sports.png" tvg-chno="631" channel-id="five.stars.sports.com@five.stars.sports" tvg-country="IL" tvg-language="zho" group-title="Sports",Five Stars Sports
@@ -1297,8 +1289,6 @@ http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8
 https://amg01074-fueltv-fueltvau-samsungau-g09kq.amagi.tv/playlist/amg01074-fueltv-fueltvau-samsungau/playlist.m3u8
 #EXTINF:-1 tvg-id="Futbol.tj@SD" tvg-name="Futbol" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/futbol-tv-068fcbdde9.png" tvg-chno="635" channel-id="Futbol.tj@SD" tvg-country="TJ" tvg-language="ukr" group-title="Sports",Futbol
 http://185.121.1.163:8083/FootballHD/index.m3u8
-#EXTINF:-1 tvg-id="FutbolTV.uz@HD" tvg-name="Futbol TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/futbol-tv-068fcbdde9.png" tvg-chno="636" channel-id="FutbolTV.uz@HD" tvg-country="UZ" tvg-language="tgk" group-title="Sports",Futbol TV
-http://stream3.cinerama.uz/1010/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="GoalTV.in" tvg-name="Goal TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goal-tv-237cfbed.png" tvg-chno="637" channel-id="GoalTV.in" tvg-country="IN" tvg-language="eng" group-title="Sports",Goal TV
 https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8
 #EXTINF:-1 tvg-id="GolfChannel.us@SD" tvg-name="Golf Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/golf-channel-73bed53091.png" tvg-chno="638" channel-id="GolfChannel.us@SD" tvg-country="US" tvg-language="eng" group-title="Sports",Golf Channel
