@@ -861,6 +861,40 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
             self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
 
+    def test_international_final_validation_accepts_adult_group_exception(self):
+        import json
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "International-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Adult", "Review", "New Channels", "New Backups", "Backup"]
+            row = (
+                '#EXTINF:-1 tvg-id="adult.us" tvg-name="Adult Channel" tvg-country="US" '
+                'tvg-content="Adult" group-title="Adult",Adult Channel\n'
+                'https://example.org/adult.m3u8\n'
+            )
+            playlist.write_text(
+                "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry) + "\n" + row,
+                encoding="utf-8",
+            )
+            baseline.write_text("#EXTM3U\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "international")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
+
     def test_international_probe_keeps_fashion_tv_and_stably_reorders_review_holds(self):
         from validate_discovery_run import stable_group_order
 

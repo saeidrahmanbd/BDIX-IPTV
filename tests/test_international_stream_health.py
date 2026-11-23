@@ -25,7 +25,7 @@ class InternationalStreamHealthTests(unittest.TestCase):
     def playlist(self, entry):
         return (
             "#EXTM3U\n"
-            '#PLAYLIST-STUDIO-CATEGORIES:["International Movies","New Channels","New Backups","Backup"]\n'
+            '#PLAYLIST-STUDIO-CATEGORIES:["International Movies","Bangladesh","Indian Movies","Indian Music","Indian Bangla","Indian Entertainment","Pakistani","News","Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","Review","New Channels","New Backups","Backup"]\n'
             + entry
         )
 
@@ -129,6 +129,65 @@ class InternationalStreamHealthTests(unittest.TestCase):
         output, history, events = apply(output, "fail", history, "2026-11-09")
         self.assertEqual(events[0]["streak"], 1)
 
+    def test_three_consecutive_inconclusive_days_move_primary_to_review_without_deleting(self):
+        source = self.playlist(row(name="Unverified Movie"))
+        output, history, _ = apply(
+            source, "inconclusive", {}, "2026-11-07",
+            status=403, reason="HTTP 403",
+        )
+        output, history, _ = apply(
+            output, "inconclusive", history, "2026-11-08",
+            status=403, reason="HTTP 403",
+        )
+        self.assertIn('group-title="International Movies"', output)
+        output, history, events = apply(
+            output, "inconclusive", history, "2026-11-09",
+            status=403, reason="HTTP 403",
+        )
+        self.assertIn('group-title="Review"', output)
+        self.assertIn("https://example.test/live/test.m3u8", output)
+        self.assertEqual(events[0]["action"], "moved-to-review-after-inconclusive-streak")
+        record = next(iter(history["entries"].values()))
+        self.assertEqual(record["consecutive_failures"], 0)
+        self.assertEqual(record["consecutive_inconclusive"], 3)
+        self.assertFalse(record["removed"])
+
+    def test_working_stream_recovers_after_inconclusive_quarantine(self):
+        source = self.playlist(row(name="Recoverable Movie"))
+        output, history, _ = apply(
+            source, "inconclusive", {}, "2026-11-07",
+            status=403, reason="HTTP 403",
+        )
+        output, history, _ = apply(
+            output, "inconclusive", history, "2026-11-08",
+            status=403, reason="HTTP 403",
+        )
+        output, history, _ = apply(
+            output, "inconclusive", history, "2026-11-09",
+            status=403, reason="HTTP 403",
+        )
+        output, _, events = apply(
+            output, "ok", history, "2026-11-10",
+            status=200, reason="Media bytes received",
+        )
+        self.assertIn('group-title="International Movies"', output)
+        self.assertEqual(events[0]["action"], "restored-to-primary")
+
+    def test_missing_day_restarts_inconclusive_quarantine_streak(self):
+        source = self.playlist(row(name="Intermittent Movie"))
+        output, history, _ = apply(
+            source, "inconclusive", {}, "2026-11-07",
+            status=403, reason="HTTP 403",
+        )
+        output, history, events = apply(
+            output, "inconclusive", history, "2026-11-09",
+            status=403, reason="HTTP 403",
+        )
+        self.assertIn('group-title="International Movies"', output)
+        self.assertEqual(events[0]["action"], "inconclusive-streak")
+        record = next(iter(history["entries"].values()))
+        self.assertEqual(record["consecutive_inconclusive"], 1)
+
     def test_inconclusive_day_breaks_streak_but_keeps_review(self):
         output, history, _ = apply(self.playlist(row()), "fail", {}, "2026-11-07")
         output, history, _ = apply(output, "inconclusive", history, "2026-11-08", status=403, reason="HTTP 403")
@@ -139,7 +198,7 @@ class InternationalStreamHealthTests(unittest.TestCase):
     def test_success_reclassifies_auto_review_to_correct_primary_group(self):
         output, history, _ = apply(self.playlist(row(name="Example Movie")), "fail", {}, "2026-11-07")
         output, history, events = apply(output, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
-        self.assertIn('group-title="International"', output)
+        self.assertIn('group-title="International Movies"', output)
         self.assertEqual(events[0]["action"], "restored-to-primary")
         self.assertEqual(events[0]["streak"], 0)
 
@@ -149,6 +208,35 @@ class InternationalStreamHealthTests(unittest.TestCase):
         output, _, events = apply(source, "ok", {}, "2026-11-08", status=200, reason="Media bytes received")
         self.assertIn('group-title="International"', output)
         self.assertEqual(events[0]["action"], "restored-to-primary")
+
+    def test_working_review_special_genres_are_restored_to_primary_groups(self):
+        cases = (
+            ("CNN International", "News"),
+            ("Cartoon Network", "Kids"),
+            ("ESPN", "Sports"),
+            ("National Geographic", "Documentary & Wildlife"),
+            ("Peace TV", "Religious"),
+            ("Fashion TV", "Fashion TV"),
+        )
+        for name, expected_group in cases:
+            with self.subTest(name=name):
+                source = self.playlist(row(name=name, group="Review"))
+                blocks = health.parse(source)[1]
+                info = blocks[0][0]
+                url = health.urls(blocks[0])[0]
+                key = health.stream_key(info, url)
+                history = {"entries": {key: {
+                    "name": name, "tvg_id": "testmovie.us", "country": "US",
+                    "original_group": expected_group, "auto_review": True,
+                    "consecutive_failures": 1, "last_checked_date": "2026-11-07",
+                    "last_status": "fail", "removed": False,
+                }}, "removed": []}
+                output, _, events = apply(
+                    source, "ok", history, "2026-11-08",
+                    status=200, reason="Media bytes received",
+                )
+                self.assertIn(f'group-title="{expected_group}"', output)
+                self.assertEqual(events[0]["action"], "restored-to-primary")
 
     def test_working_review_alternate_moves_to_backup_when_primary_exists(self):
         primary = row(name="Shared Movie", group="International Movies", url="https://example.test/primary.m3u8")

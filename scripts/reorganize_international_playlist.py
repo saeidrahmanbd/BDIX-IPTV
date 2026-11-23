@@ -269,9 +269,29 @@ def classify(a, name, group, country, promote_backup=False):
     if discovery.BAD_NAME_RE.search(name):
         return None, None, "test/VOD/non-TV name"
 
-    # Enforce the current regional policy before thematic grouping or Backup
-    # preservation. Policy-ineligible and country-ambiguous existing rows are
-    # quarantined in Review; they are never silently promoted to another genre.
+    # Preserve a curated genre destination when a stream returns from Review.
+    # The original group is trusted provenance; a newly reviewed row whose
+    # original group is only Review still has to pass the normal discovery and
+    # country/content policy below.
+    if group_key not in QUEUE_GROUPS:
+        explicit_group = re.sub(r"[^a-z0-9]+", " ", group_key).strip()
+        curated_genres = {
+            "news": "News", "news channel": "News", "news channels": "News",
+            "sports": "Sports", "sport": "Sports",
+            "kids": "Kids", "kid": "Kids", "children": "Kids", "childrens": "Kids",
+            "documentary": "Documentary & Wildlife",
+            "documentaries": "Documentary & Wildlife",
+            "wildlife": "Documentary & Wildlife", "nature": "Documentary & Wildlife",
+            "documentary wildlife": "Documentary & Wildlife",
+            "religious": "Religious", "religion": "Religious",
+            "faith": "Religious", "devotional": "Religious",
+            "fashion tv": "Fashion TV",
+        }
+        if explicit_group in curated_genres:
+            return curated_genres[explicit_group], None, None
+
+    # Enforce regional discovery policy for non-genre rows before Backup
+    # preservation. Policy-ineligible and country-ambiguous rows stay in Review.
     if group_key in QUEUE_GROUPS:
         pass  # Discovery queues are filtered by the dedicated queue policy below.
     elif country == "IN" or group in INDIAN_GROUPS:
