@@ -1,5 +1,7 @@
 name: International Channel Discovery
 
+# Fashion TV exception, probe-safe ordering and unique exact-logo verification: 2026-11-23.
+
 # Post-merge verification rerun: 2026-11-23 validator wording compatibility fix.
 
 # Fresh paired discovery recovery run: 2026-11-20 (no policy change).
