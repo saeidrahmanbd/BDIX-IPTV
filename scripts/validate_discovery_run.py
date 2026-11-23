@@ -763,7 +763,7 @@ def final_mode(playlist, report, baseline, mode):
             # not the destination country-group label (e.g. "Albania" or "United States").
             policy_attrs = dict(attrs)
             policy_attrs["group-title"] = "International"
-            target, reason, policy_country = discovery.discovery_eligibility(
+            target, reason, policy_country = discovery.policy(
                 policy_attrs, e["name"], allow_legacy_group=True
             )
             if target is None:
