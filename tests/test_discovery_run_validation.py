@@ -811,5 +811,83 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("- Geography/content policy issues: 0", final_report)
 
 
+    def test_international_final_validation_accepts_fashion_tv_exception(self):
+        import json
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "International-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            registry = ["Fashion TV", "Review", "New Channels", "New Backups", "Backup"]
+            row = (
+                '#EXTINF:-1 tvg-id="FashionTV.fr" tvg-name="Fashion TV" tvg-country="FR" '
+                'group-title="Fashion TV",Fashion TV\\n'
+                'https://example.org/fashion-tv.m3u8\\n'
+            )
+            playlist.write_text(
+                "#EXTM3U\\n#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry) + "\\n" + row,
+                encoding="utf-8",
+            )
+            baseline.write_text("#EXTM3U\\n", encoding="utf-8")
+            report.write_text("# Report\\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                validation.final_mode(str(playlist), str(report), str(baseline), "international")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
+
+    def test_international_probe_keeps_fashion_tv_and_stably_reorders_review_holds(self):
+        from validate_discovery_run import stable_group_order
+
+        registry = ["Fashion TV", "Review", "New Channels", "New Backups", "Backup"]
+        lines = [
+            "#EXTM3U",
+            "#PLAYLIST-STUDIO-CATEGORIES:" + __import__("json").dumps(registry),
+            '#EXTINF:-1 group-title="New Backups" tvg-name="Fashion TV",Fashion TV',
+            "https://example.org/fashion-backup.m3u8",
+            '#EXTINF:-1 group-title="Fashion TV" tvg-name="FashionTV Europe",FashionTV Europe',
+            "https://example.org/fashion-europe.m3u8",
+            '#EXTINF:-1 group-title="Review" tvg-name="Existing Review",Existing Review',
+            "https://example.org/review.m3u8",
+        ]
+        ordered = stable_group_order(lines)
+        groups = [
+            line.split('group-title="', 1)[1].split('"', 1)[0]
+            for line in ordered if line.startswith("#EXTINF:")
+        ]
+        self.assertEqual(groups, ["Fashion TV", "Review", "New Backups"])
+        self.assertLess(
+            next(i for i, line in enumerate(ordered) if 'tvg-name="FashionTV Europe"' in line),
+            next(i for i, line in enumerate(ordered) if 'tvg-name="Existing Review"' in line),
+        )
+
+    def test_logo_lookup_restores_only_one_exact_local_match(self):
+        import os
+        import tempfile
+        import validate_discovery_run as validation
+
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = Path.cwd()
+            os.chdir(directory)
+            try:
+                logos = Path("logos")
+                (logos / "one").mkdir(parents=True)
+                (logos / "one" / "fashion-tv.svg").write_text("<svg/>", encoding="utf-8")
+                self.assertEqual(validation.find_logo("Fashion TV"), "logos/one/fashion-tv.svg")
+                (logos / "two").mkdir()
+                (logos / "two" / "fashion-tv.png").write_bytes(b"duplicate exact-name asset")
+                self.assertIsNone(validation.find_logo("Fashion TV"))
+            finally:
+                os.chdir(old_cwd)
+
 if __name__ == "__main__":
     unittest.main()
