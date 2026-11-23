@@ -672,10 +672,12 @@ class StrictWorldwideDiscoveryTests(unittest.TestCase):
                 self.assertIsNone(target)
                 self.assertTrue(reason)
 
-    def test_fashion_tv_is_not_new_discovery(self):
-        target, reason, _ = self.eligible("Fashion TV", "Fashion", "FR", "FashionTV.fr")
-        self.assertIsNone(target)
-        self.assertIn("Fashion TV", reason)
+    def test_fashion_tv_is_allowed_as_an_explicit_global_exception(self):
+        attrs = {"group-title": "Fashion", "tvg-country": "FR", "tvg-id": "FashionTV.fr"}
+        target, reason, code = discovery.discovery_eligibility(attrs, "Fashion TV")
+        self.assertEqual((target, reason, code), ("Fashion TV", None, "FR"))
+        queued_target, queued_reason, queued_code, _ = discovery.queue_policy(attrs, "Fashion TV")
+        self.assertEqual((queued_target, queued_reason, queued_code), ("Fashion TV", None, "FR"))
 
     def test_adult_channels_are_allowed_directly_in_adult_group_worldwide(self):
         examples = [
