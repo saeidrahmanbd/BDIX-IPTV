@@ -437,12 +437,41 @@ def _review_recovery_target(info: str, original_group: str,
     country = international_policy.country_code(a, context_group, name)
     if not country or country == "ZZ":
         return None
-    # A Review row that came from an established primary group must be
-    # reclassified by the International organizer, not by the stricter *new
-    # discovery* gate. That gate intentionally excludes News/Kids/Sports/
-    # Religious/Documentary/Fashion categories and was stranding healthy
-    # curated streams in Review. The organizer applies the existing playlist
-    # policy, including the country threshold and duplicate-to-Backup rules.
+    # A stream with trusted primary-group provenance should return to that
+    # same curated group. New-discovery eligibility must not be reapplied to
+    # an established channel that was moved to Review only for health reasons.
+    primary_groups = {str(group).casefold() for group in international_policy.FIXED}
+    primary_groups.update(
+        str(group).casefold() for group in international_policy.TAIL
+        if str(group).casefold() not in {"review", "new channels", "new backups", "backup"}
+    )
+    primary_groups.update(
+        str(group).casefold()
+        for group in international_policy.discovery.COUNTRY_NAMES.values()
+    )
+    primary_groups.update({"international", "international movies", "international music"})
+    if original_key in primary_groups:
+        target = original_group.strip()
+        identity_keys = _row_identity_keys(info, country)
+        if identity_keys & primary_keys:
+            return "Backup"
+        primary_keys.update(identity_keys)
+        name_key = international_policy.channel_key(name)
+        if target.casefold() != "adult" and country not in {"BD", "IN"} and (
+            target.casefold() == "international"
+            or target.casefold() == "pakistani"
+            or international_policy.discovery.country_from_group(target) == country
+        ):
+            country_ids[country].add(name_key)
+        return target
+
+    # A manually staged Review row without a trusted former primary group
+    # still has to pass current discovery eligibility. This keeps prohibited
+    # or unclassifiable candidates from being promoted just because a URL
+    # responds successfully.
+    eligible_target, eligibility_reason, _ = international_policy.discovery.discovery_eligibility(a, name)
+    if not eligible_target or eligibility_reason:
+        return None
     target, kind, reason = international_policy.classify(
         a, name, context_group, country, promote_backup=True
     )
