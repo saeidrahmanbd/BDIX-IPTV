@@ -151,13 +151,13 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         ]
         todays = guard.runs_for_date(runs, self.today)
         self.assertEqual({run["id"] for run in todays}, {10, 11})
-        self.assertEqual(guard.first_run_id(todays), 11)
+        self.assertIsNone(guard.first_run_id(todays))
 
-    def test_only_the_first_run_of_the_bangladesh_day_executes(self):
+    def test_only_the_first_active_run_of_the_bangladesh_day_executes(self):
         runs = [
-            {"id": 20, "created_at": "2026-11-07T01:10:00Z"},
-            {"id": 21, "created_at": "2026-11-07T01:05:00Z"},
-            {"id": 22, "created_at": "2026-11-06T17:59:59Z"},
+            {"id": 20, "status": "in_progress", "created_at": "2026-11-07T01:10:00Z"},
+            {"id": 21, "status": "in_progress", "created_at": "2026-11-07T01:05:00Z"},
+            {"id": 22, "status": "in_progress", "created_at": "2026-11-06T17:59:59Z"},
         ]
         self.assertTrue(guard.should_current_run_execute(runs, 21, self.today))
         self.assertFalse(guard.should_current_run_execute(runs, 20, self.today))
