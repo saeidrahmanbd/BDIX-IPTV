@@ -1,16 +1,16 @@
 # International Playlist Organization Audit
 
-- Entries before: 3295
-- Entries after: 3295
-- Channel names normalized: 1
+- Entries before: 3294
+- Entries after: 3294
+- Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
-- Invalid/external logo references removed: 2852
+- Invalid/external logo references removed: 2851
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1480
-- Matching alternate streams retained in Backup: 364
-- True orphan Backup rows evaluated: 1
-- Eligible orphan Backup rows promoted to primary: 0
+- Original Backup/Backups and protected queue rows examined: 1487
+- Matching alternate streams retained in Backup: 360
+- True orphan Backup rows evaluated: 4
+- Eligible orphan Backup rows promoted to primary: 3
 - Clearly identified Adult orphans restored to Adult: 0
 - Ineligible/unclassified orphan Backup rows retained: 1
 - Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.
@@ -32,11 +32,11 @@
 
 - Bangladesh: 45
 - Indian Bangla: 31
-- Indian Movies: 76
+- Indian Movies: 75
 - Indian Music: 54
-- Indian Entertainment: 164
-- Pakistani: 18
-- Argentina: 14
+- Indian Entertainment: 162
+- Pakistani: 17
+- Argentina: 13
 - Brazil: 15
 - Bulgaria: 21
 - Canada: 31
@@ -59,10 +59,10 @@
 - North Macedonia: 5
 - Panama: 5
 - Paraguay: 5
-- Peru: 7
+- Peru: 8
 - Poland: 24
 - Romania: 30
-- Russia: 75
+- Russia: 76
 - Saudi Arabia: 9
 - Singapore: 5
 - Spain: 18
@@ -70,14 +70,14 @@
 - Turkey: 15
 - Ukraine: 28
 - United Kingdom: 21
-- United States: 241
+- United States: 242
 - Uzbekistan: 5
 - Vietnam: 6
-- International: 104
+- International: 102
 - News: 11
 - Kids: 12
 - Religious: 3
 - Sports: 8
 - Adult: 366
-- Review: 1116
-- Backup: 365
+- Review: 1123
+- Backup: 361
