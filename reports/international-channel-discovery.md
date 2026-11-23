@@ -1,23 +1,24 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-22T09:08:25+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-23T09:18:30+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
-- Source records parsed: 12163
-- Existing playlist records: 3295
+- Source records parsed: 12152
+- Existing playlist records: 3294
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2210
-- Duplicate URLs within source feed: 3
-- New eligible source records after URL/policy filtering: 140
+- Exact source URLs already in playlist: 2185
+- Duplicate URLs within source feed: 0
+- New eligible source records after URL/policy filtering: 159
 - Adult channels discovered directly into Adult: 0
+- Fashion TV channels discovered directly into Fashion TV: 6
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
 - New discoveries from every country, including Bangladesh, India and Pakistan, may be dedicated Movies or Music channels or Adult channels. Adult channels are placed directly in Adult, not New Channels. News, religious, kids, sports, documentary and general entertainment remain excluded. Fashion TV is also an explicit allowed exception.
 - Pakistan uses the Pakistani group only after five unique primary channel identities; below five, eligible Pakistani channels remain in International.
-- New discoveries remain in New Channels/New Backups after probing. Verified primary channels stay in New Channels; verified alternate streams stay in New Backups. Inconclusive alternate streams are held in Review, and missing authentic logos are left blank rather than invented.
+Eligible Movies/Music primary discoveries are staged in New Channels; new Adult and Fashion TV primaries are routed directly to their dedicated groups. Verified alternatives for represented identities are staged in New Backups. Inconclusive new special primaries and alternatives are held in Review; missing authentic logos are left blank rather than invented.
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
-- New Channels staged for manual review: 50
-- New Backups staged for manual review: 5
+- New Channels staged for manual review: 44
+- New Backups staged for manual review: 14
 - Category migrations: 0
 - Existing discovery-queue entries removed: 0
 
@@ -28,10 +29,13 @@
 - **Aurora Media Films (720p)** — New Channels — GT — https://cdn.streamhispanatv.net:3417/live/auroramflive.m3u8
 - **Cinevault 80s (720p)** — New Channels — US — https://aegis-cloudfront-1.tubi.video/ea1ab5d1-f554-4f6b-b03f-2611fcd94257/playlist.m3u8
 - **Film & Arts (1080p)** — New Channels — AR — http://15.204.246.24:8080/FilmArtsHD/index.m3u8
+- **FMH Movies (1080p)** — New Channels — US — http://45.186.254.75:8000/play/a07j/index.m3u8
+- **Galaxy (720p)** — New Channels — ID — https://proxy-v.rctiplus.id/live/web/galaxy/index.m3u8
+- **Galaxy Premium (720p)** — New Channels — ID — https://proxy-v.rctiplus.id/live/web/galaxyprem/index.m3u8
 - **Hollywood Ukraine (576p)** — New Channels — UA — http://dtv.vol.net.ua/Hollywood-HD/index.m3u8
 - **HomePlus** — New Channels — IR — https://homeplushls.wns.live/hls/stream.m3u8
 - **ICC plus (1080p)** — New Channels — US — https://icchls.wns.live/hls/stream.m3u8
-- **Kinosvidanie (576p)** — New Channels — RU — http://5.188.159.128:8070/kinosvidanie/index.m3u8
+- **Kinosvidanie (1080p)** — New Channels — RU — https://stream8.cinerama.uz/1203/tracks-v1a1/mono.m3u8
 - **Komsan TV [Not 24/7]** — New Channels — KH — http://tv.cootel.com.kh:8077/streams/d/Komsan/playlist.m3u8
 - **More TV Sci-fi** — New Channels — DE — https://jmp2.uk/plu-645e00d5d3fdde000829463a.m3u8
 - **Mosfilm Gold Collection (576p)** — New Channels — RU — http://31.222.235.15/mosfilm/index.m3u8
@@ -64,26 +68,35 @@
 - **Rakuten TV Top Movies Germany (1080p)** — New Channels — ES — https://cbb622b29f5d43b598991f3fa19de291.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5985/master.m3u8
 - **Rakuten TV Top Movies Italy (1080p)** — New Channels — ES — https://d4a4999341764c67a67e9ec9eb3790ab.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5984/master.m3u8
 - **Rakuten TV Top Movies UK (1080p)** — New Channels — ES — https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8
-- **Summer of Movies** — New Channels — US — https://jmp2.uk/plu-6654adb1f99922000854388c.m3u8
-- **Sundance TV (Spain)** — New Channels — ES — https://cdn.stmify.com/zapitv/stream/SUNDANCE_TV/sundance_hd.mpd
-- **TVS Film Noir Network (720p)** — New Channels — US — https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
-- **Viasat Kino Romania** — New Channels — UA — https://flash1.bogulus1.cfd/tivi10/usergenrxs4f7zc.m3u8
-- **4 Fun TV** — New Channels — PL — https://stream.4fun.tv:8888/sd/4fun_sd_high.m3u8
-- **7 RadioVisione (720p)** — New Channels — IT — https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8
-- **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
-- **ATN Music (360p)** — New Channels — BD — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
-- **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
 
 ## Adult channels added directly to Adult
 
 
+## Fashion TV channels added directly to Fashion TV
+
+- **Code Fashion TV (1080p)** — BG — https://cdn2.invivo.bg/Codefashion_5500/index.m3u8
+- **FashionTV (India) (576p)** — IN — http://163.61.226.31:9981/stream/channelid/448803688?profile=pass
+- **FashionTV (Russia) (1080p)** — RU — http://fashionlive.mediacdn.ru/cdn/fashiontv/playlist.m3u8
+- **FashionTV Europe (1080p)** — FR — https://68f1accef2154d2195cae87dec183843.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RakutenTV-eu_FashionTV/playlist.m3u8
+- **FashionTV Paris L'Original (1080p)** — FR — https://edge-fast3.evrideo.tv/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8
+- **FashionTV Secrets (1080p)** — FR — https://ssai.aniview.com/api/v1/hls/stream.m3u8?AVS_SSAIID=67c0c39764ad6f7dab07aa0b&AV_APPNAME=[ADS.APP_NAME]&AV_APPPKGNAME=[ADS.APP_BUNDLE]&AV_APPSTOREURL=[ADS.APP_STORE_URL]&AV_CCPA=[ADS.US_PRIVACY]&AV_CLIENT_SECTION=ftv_secrets&AV_CONSENT=[ADS.GDPR_CONSENT]&AV_CONTENT_CAT=IAB7&AV_CONTENT_CHANNEL=&AV_CONTENT_CONTEXT=&AV_CONTENT_EPISODE=&AV_CONTENT_GENRE=fashion+and+lifestyle&AV_CONTENT_ID=[ADS.VIDAA_ADS_CONTENTID]&AV_CONTENT_KEYWORDS=&AV_CONTENT_LANGUAGE=en&AV_CONTENT_LENGTH=&AV_CONTENT_NETWORK=&AV_CONTENT_PROVIDER=FTV&AV_CONTENT_RATING=R&AV_CONTENT_SEASON=&AV_CONTENT_SERIES=&AV_CONTENT_TITLE=&AV_CONTENT_URL=&AV_DNT=[ADS.DNT]&AV_GDPR=[ADS.GDPR]&AV_HEIGHT=[ADS.H]&AV_IDFA=[ADS.IFA]&AV_IFA_TYPE=[ADS.IFA_TYPE]&AV_LANGUAGE=[ADS.DEVICE_LANGUAGE]&AV_OSVERS=[ADS.DEVICE_OSV]&AV_RTB_DEVICE_TYPE=[ADS.DEVICE_TYPE]&AV_VAUTH=[ADS.VAUTH]&AV_WIDTH=[ADS.W]&Content_Id=[ADS.ADS_CONTENTID]&ads.vidaa_ads_param=1191723366&cb=[CACHEBUSTER]&content_channel_name=ftv+-fashiontv+Secrets&content_livestream=1
+
 ## Backup alternates
 
+- **Fashion TV** — US — http://stream.mcquack.net/287/index.m3u8
+- **Cinema (Russia)** — RU — https://stream8.cinerama.uz/1227/tracks-v1a1/mono.m3u8
+- **Dom kino** — RU — https://stream8.cinerama.uz/1054/tracks-v1a1/mono.m3u8
+- **Dorama** — RU — https://stream8.cinerama.uz/1273/tracks-v1a1/mono.m3u8
+- **iFilm Persian** — IR — https://ncdn.telewebion.ir/ifilm/live/playlist.m3u8
+- **Indiyskoye Kino** — RU — https://stream8.cinerama.uz/1060/tracks-v1a1/mono.m3u8
+- **KinoHit** — RU — https://stream8.cinerama.uz/1055/tracks-v1a1/mono.m3u8
 - **Kinouzhas** — RU — http://s1.merlive.am/Kinoujas/index.m3u8
 - **Viasat Kino** — UA — http://dtv.vol.net.ua/Viasat_Kino/index.m3u8
 - **Viasat Kino Action** — UA — http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
 - **FON Music** — US — https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
 - **M1 (Ukraine)** — UA — http://dtv.vol.net.ua/M1-HD/index.m3u8
+- **Muzyka Pervogo** — RU — https://stream8.cinerama.uz/1201/tracks-v1a1/mono.m3u8
+- **TRT Muzik** — TR — https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
 
 ## Country Migrations
 
@@ -93,54 +106,59 @@
 
 ## Rejections
 
-- Fashion TV is a preserved legacy exception, not a discovery genre: 7
 - Indian religious channel is prohibited: 1
 - TV series is not a dedicated Movie/Music channel: 24
 - ambiguous Movie/Music classification: 1
-- documentary & wildlife is outside the worldwide Movie/Music-only discovery policy: 200
+- documentary & wildlife is outside the worldwide Movie/Music-only discovery policy: 195
 - general entertainment is not a dedicated Movie/Music channel: 67
-- kids is outside the worldwide Movie/Music-only discovery policy: 308
+- kids is outside the worldwide Movie/Music-only discovery policy: 309
 - known Indian prohibited brand/category is prohibited: 12
-- news is outside the worldwide Movie/Music-only discovery policy: 1080
-- non-real/test channel: 2
+- news is outside the worldwide Movie/Music-only discovery policy: 1081
+- non-real/test channel: 1
 - permanently banned channel: 10
-- religious is outside the worldwide Movie/Music-only discovery policy: 780
-- source category is not Movies or Music: 6572
-- sports is outside the worldwide Movie/Music-only discovery policy: 313
+- religious is outside the worldwide Movie/Music-only discovery policy: 782
+- source category is not Movies or Music: 6584
+- sports is outside the worldwide Movie/Music-only discovery policy: 303
 - test/VOD/non-TV name: 299
-- unsafe or tokenized URL: 134
+- unsafe or tokenized URL: 139
 
 ## Stream verification
 
-- Run timestamp: 2026-11-22T09:08:36+06:00
+- Run timestamp: 2026-11-23T09:18:41+06:00
 - Mode: international
-- New entries and discovery queues probed: 56
-- Verified live media responses: 0
-- Verified new primary channels retained in New Channels: 0
-- Verified alternate streams retained in New Backups: 0
-- Inconclusive candidates retained for manual review: 1
-- Unverified backup streams moved to Review: 0
-- Definitively dead new candidates removed: 55
+- New entries and discovery queues probed: 64
+- Verified live media responses: 14
+- Verified new primary channels retained in New Channels: 2
+- Verified alternate streams retained in New Backups: 8
+- Inconclusive candidates retained for manual review: 2
+- Unverified backup streams moved to Review: 1
+- Definitively dead new candidates removed: 45
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
-- Candidates retained without authentic local logos (no placeholder used): 0
+- Candidates retained without authentic local logos (no placeholder used): 12
 
 ### Stream probe details
-- Removed newly discovered 4 Fun TV from New Channels — HTTP 404.
-- Removed newly discovered 7 RadioVisione (720p) from New Channels — HTTP 404.
+- Moved unverified Fashion TV candidate Code Fashion TV (1080p) to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Kept Code Fashion TV (1080p) in Fashion TV without tvg-logo — no authentic local repository asset was available.
+- Kept FashionTV (Russia) (1080p) in Fashion TV without tvg-logo — no authentic local repository asset was available.
+- Moved unverified Fashion TV candidate FashionTV Europe (1080p) to Review — probe was inconclusive (HTTP 504; access/availability could not be confirmed).
+- Kept FashionTV Europe (1080p) in Fashion TV without tvg-logo — no authentic local repository asset was available.
+- Kept FashionTV Paris L'Original (1080p) in Fashion TV without tvg-logo — no authentic local repository asset was available.
+- Kept FashionTV Secrets (1080p) in Fashion TV without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered AMC (United States) (1080p) [Geo-blocked] from New Channels — HTTP 404.
 - Removed newly discovered AMC Latin America (1080p) from New Channels — HTTP 404.
-- Removed newly discovered Andina RTV (720p) from New Channels — HTTP 404.
-- Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
 - Removed newly discovered Aurora Media Films (720p) from New Channels — HTTP 404.
-- Removed newly discovered BRIDGE Classic (576p) from New Channels — HTTP 404.
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
+- Kept FMH Movies (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
+- Retained Galaxy (720p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Kept Galaxy (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
+- Retained Galaxy Premium (720p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Kept Galaxy Premium (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Hollywood Ukraine (576p) from New Channels — HTTP 404.
 - Removed newly discovered HomePlus from New Channels — HTTP 404.
 - Removed newly discovered ICC plus (1080p) from New Channels — HTTP 404.
-- Removed newly discovered Kinosvidanie (576p) from New Channels — HTTP 404.
 - Removed newly discovered Komsan TV [Not 24/7] from New Channels — HTTP 404.
 - Removed newly discovered More TV Sci-fi from New Channels — HTTP 404.
 - Removed newly discovered Mosfilm Gold Collection (576p) from New Channels — HTTP 404.
@@ -173,12 +191,12 @@
 - Removed newly discovered Rakuten TV Top Movies Germany (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Top Movies Italy (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Top Movies UK (1080p) from New Channels — HTTP 404.
-- Retained Starz Cinema (720p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Removed newly discovered Summer of Movies from New Channels — HTTP 404.
-- Removed newly discovered Sundance TV (Spain) from New Channels — HTTP 404.
-- Removed newly discovered TVS Film Noir Network (720p) from New Channels — HTTP success returned an HTML/error page, not a TV stream.
-- Removed newly discovered Viasat Kino Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
+- Moved unverified alternate stream Fashion TV from New Backups to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Kept Fashion TV in New Backups without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered FON Music from New Backups — HTTP 404.
+- Kept iFilm Persian in New Backups without tvg-logo — no authentic local repository asset was available.
+- Kept Indiyskoye Kino in New Backups without tvg-logo — no authentic local repository asset was available.
+- Kept KinoHit in New Backups without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
@@ -186,13 +204,24 @@
 
 ## Final validation
 
-- Run timestamp: 2026-11-22T09:08:37+06:00
-- Validation status: PASS
-- M3U entries parsed: 3295
+- Run timestamp: 2026-11-23T09:18:42+06:00
+- Validation status: FAIL
+- M3U entries parsed: 3313
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
-- Review/New Channels/New Backups/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 0
+- Review/New Channels/New Backups/Backup ordering: failed
+- Discovery entries missing a logo (left blank rather than using a placeholder): 12
 - Non-local discovery logo references: 0
-- Geography/content policy issues: 0
+- Geography/content policy issues: 6
 - Existing non-discovery entries were not removed by the stream-validation step.
+
+### Blockers
+- new International candidates must remain in New Channels/New Backups or an approved Review hold: Code Fashion TV (1080p), FashionTV (India) (576p), FashionTV (Russia) (1080p), FashionTV Europe (1080p), FashionTV Paris L'Original (1080p), FashionTV Secrets (1080p)
+- official validator result: failure
+- Category registry must end Review/New Channels/New Backups/Backup and present playlist groups must follow that registry order
+- non-Bangladesh/India entry lacks Movie/Music tag: Code Fashion TV (1080p)
+- non-Bangladesh/India entry lacks Movie/Music tag: FashionTV (Russia) (1080p)
+- non-Bangladesh/India entry lacks Movie/Music tag: FashionTV Europe (1080p)
+- non-Bangladesh/India entry lacks Movie/Music tag: FashionTV Paris L'Original (1080p)
+- non-Bangladesh/India entry lacks Movie/Music tag: FashionTV Secrets (1080p)
+- non-Bangladesh/India entry lacks Movie/Music tag: Fashion TV
