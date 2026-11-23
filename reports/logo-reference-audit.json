@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5251,
-  "all_explicitly_referenced_logo_files": 2516,
-  "runtime_referenced_logo_files": 2514,
-  "playlist_referenced_logo_files": 2487,
-  "apparently_unreferenced_by_any_text_file": 2735,
-  "apparently_unreferenced_by_runtime_sources": 2737,
+  "all_explicitly_referenced_logo_files": 2525,
+  "runtime_referenced_logo_files": 2523,
+  "playlist_referenced_logo_files": 2496,
+  "apparently_unreferenced_by_any_text_file": 2726,
+  "apparently_unreferenced_by_runtime_sources": 2728,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -14689,6 +14689,7 @@
     ],
     "logos/history-warfare-now.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/history.png": [
@@ -14912,12 +14913,27 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/blonde.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/cuckold.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/international/famatv-1080p-not-24-7.png": [
       "reports/logo-source-registry.json"
     ],
     "logos/international/fashiontv-india-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/filmbox-emotion-adria.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/filmbox-hits-adria.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/filmbox-love-crime-adria.png": [
+      "International-Playlist.m3u"
     ],
     "logos/international/goldmines-2.png": [
       "IPTV-Playlist.m3u",
@@ -14938,6 +14954,9 @@
     "logos/international/kinosvidanie-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/latina.png": [
+      "International-Playlist.m3u"
     ],
     "logos/international/movie-punjab-720p.png": [
       "IPTV-Playlist.m3u",
@@ -16062,6 +16081,9 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/mh1-prime.png": [
+      "International-Playlist.m3u"
     ],
     "logos/mi-musica-popular-20cac05b9e.png": [
       "International-Playlist.m3u",
@@ -17860,6 +17882,7 @@
     ],
     "logos/robot-wars-by-mech.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/rock-and-pop-a4fa7a4b05.png": [
@@ -18873,6 +18896,9 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/stingray-pop-adult.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/stingray-remember-the-80s.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -19294,6 +19320,7 @@
     ],
     "logos/the-movie-club-2.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/the-movie-club.png": [
@@ -21184,14 +21211,17 @@
     ],
     "logos/vevo-70s-80s.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vevo-90s-00s.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vevo-hip-hop-r-b.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vevo-latino-3e213deca7.png": [
@@ -21315,6 +21345,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/vixen.png": [
+      "International-Playlist.m3u"
     ],
     "logos/vm-latino-945653cc05.png": [
       "International-Playlist.m3u",
@@ -26289,6 +26322,7 @@
     ],
     "logos/history-warfare-now.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/history.png": [
@@ -26512,12 +26546,27 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/blonde.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/cuckold.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/international/famatv-1080p-not-24-7.png": [
       "reports/logo-source-registry.json"
     ],
     "logos/international/fashiontv-india-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/filmbox-emotion-adria.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/filmbox-hits-adria.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/international/filmbox-love-crime-adria.png": [
+      "International-Playlist.m3u"
     ],
     "logos/international/goldmines-2.png": [
       "IPTV-Playlist.m3u",
@@ -26538,6 +26587,9 @@
     "logos/international/kinosvidanie-576p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/latina.png": [
+      "International-Playlist.m3u"
     ],
     "logos/international/movie-punjab-720p.png": [
       "IPTV-Playlist.m3u",
@@ -27662,6 +27714,9 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/mh1-prime.png": [
+      "International-Playlist.m3u"
     ],
     "logos/mi-musica-popular-20cac05b9e.png": [
       "International-Playlist.m3u",
@@ -29463,6 +29518,7 @@
     ],
     "logos/robot-wars-by-mech.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/rock-and-pop-a4fa7a4b05.png": [
@@ -30477,6 +30533,9 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/stingray-pop-adult.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/stingray-remember-the-80s.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -30899,6 +30958,7 @@
     ],
     "logos/the-movie-club-2.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/the-movie-club.png": [
@@ -32789,14 +32849,17 @@
     ],
     "logos/vevo-70s-80s.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vevo-90s-00s.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vevo-hip-hop-r-b.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/vevo-latino-3e213deca7.png": [
@@ -32920,6 +32983,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/vixen.png": [
+      "International-Playlist.m3u"
     ],
     "logos/vm-latino-945653cc05.png": [
       "International-Playlist.m3u",
@@ -33716,7 +33782,6 @@
     "logos/international/black-1080p.png",
     "logos/international/blaze.png",
     "logos/international/blokbaster-hd-1080p.png",
-    "logos/international/blonde.png",
     "logos/international/bmg-tv.png",
     "logos/international/boktv-720p-not-24-7.png",
     "logos/international/bollygold-1080p.png",
@@ -33876,7 +33941,6 @@
     "logos/international/couleur-3-720p.png",
     "logos/international/crunchyroll-720p.png",
     "logos/international/ctb-perth-movies-channel-720p.png",
-    "logos/international/cuckold.png",
     "logos/international/dance-television-1080p.png",
     "logos/international/dance-tv-geo-blocked.png",
     "logos/international/dancetv-deep-house-district-1080p.png",
@@ -33958,11 +34022,8 @@
     "logos/international/film1-drama.png",
     "logos/international/film1-family.png",
     "logos/international/film1-premiere.png",
-    "logos/international/filmbox-emotion-adria.png",
     "logos/international/filmbox-emotion-bulgaria.png",
     "logos/international/filmbox-emotion-romania.png",
-    "logos/international/filmbox-hits-adria.png",
-    "logos/international/filmbox-love-crime-adria.png",
     "logos/international/filmbox-love-crime-bulgaria-720p.png",
     "logos/international/filmbox-one-bulgaria-576p.png",
     "logos/international/filmbox-one-nederland.png",
@@ -34077,7 +34138,6 @@
     "logos/international/lamil35-tv-720p.png",
     "logos/international/lapuracrema-television.png",
     "logos/international/las-tortugas-ninja-720p.png",
-    "logos/international/latina.png",
     "logos/international/lawcrime.png",
     "logos/international/laxitosa-panama-360p-not-24-7.png",
     "logos/international/le-nouveau-manager-tv.png",
@@ -34713,7 +34773,6 @@
     "logos/metro-tv-honduras.png",
     "logos/metropolitana-del-cuzco.png",
     "logos/mezzo-576p.png",
-    "logos/mh1-prime.png",
     "logos/mi-musica-hits-720p.png",
     "logos/minimax.png",
     "logos/mn.png",
@@ -35316,7 +35375,6 @@
     "logos/stingray-cityscapes-1080p.png",
     "logos/stingray-cozy-cafe-1080p.png",
     "logos/stingray-music.png",
-    "logos/stingray-pop-adult.png",
     "logos/stingray-stream-101.png",
     "logos/super-hungama.png",
     "logos/superhitz.png",
@@ -36132,7 +36190,6 @@
     "logos/vip-tv-720p.png",
     "logos/virgin-radio-tv.png",
     "logos/viva-latino-1080p.png",
-    "logos/vixen.png",
     "logos/wifm-100-9.png",
     "logos/willow.png",
     "logos/win-tv.png",

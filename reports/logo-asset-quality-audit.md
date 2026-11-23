@@ -1,24 +1,24 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-23T04:02:20+00:00**
+Generated: **2026-11-23T04:09:08+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
-- International-Playlist.m3u SHA-256: **c8d0e868397e33a5bc728a40a62c78133225516ea0baa1ccd64e49c56f55a6ad**
+- International-Playlist.m3u SHA-256: **d70cfceb10b70f548dc263c570c63bea6e99bdf57789148803c63e7970aa09ef**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1593**
-- Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1587**
+- Unreferenced image assets immediately inside logos/: **961** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -2070,12 +2070,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ekhon TV | ekhon-tv.png | News |
 | International-Playlist.m3u | Jamuna TV | jamuna-tv.png | News |
 | International-Playlist.m3u | Somoy TV | somoy-tv.png | News |
-| International-Playlist.m3u | Code Fashion TV (1080p) | code-fashion-tv-1080p-eba84a3007.png | Fashion TV |
-| International-Playlist.m3u | FashionTV (India) (576p) | fashiontv-india-576p.png | Fashion TV |
-| International-Playlist.m3u | FashionTV (Russia) (1080p) | fashiontv-russia-73cb96c4010c448b6740.png | Fashion TV |
-| International-Playlist.m3u | FashionTV Europe (1080p) | fashiontv-europe-73cb96c4010c448b6740.png | Fashion TV |
-| International-Playlist.m3u | FashionTV Paris L'Original (1080p) | fashiontv-paris-l-original-1080p-ccf00a0d8f.png | Fashion TV |
-| International-Playlist.m3u | FashionTV Secrets (1080p) | fashiontv-secrets-1080p-e90e2c8d5b.png | Fashion TV |
 | International-Playlist.m3u | Disney Channel India | disney-channel-india.png | Kids |
 | International-Playlist.m3u | God Stands Kids Club TV | god-stands-kids-club-tv.png | Kids |
 | International-Playlist.m3u | God Stands Kids Club TV Arabic | god-stands-kids-club-tv-arabic.png | Kids |
@@ -2147,6 +2141,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Cine+ Classic | cine-plus-classic-bc41b278d8f839451504.png | Review |
 | International-Playlist.m3u | Cine+ Frisson | cine-plus-frisson-8ed92ebd854efc32930a.png | Review |
 | International-Playlist.m3u | Clubbing TV France | clubbing-tv-france.png | Review |
+| International-Playlist.m3u | Code Fashion TV | code-fashion-tv-1080p-eba84a3007.png | Review |
 | International-Playlist.m3u | Colimdo TV | colimdo-tv-e106271533.png | Review |
 | International-Playlist.m3u | Community TV | community-tv.png | Review |
 | International-Playlist.m3u | Cosmos Tv | cosmos-tv-7521381461.png | Review |
@@ -2291,6 +2286,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Mehran TV | mehran-tv.png | Review |
 | International-Playlist.m3u | Mei Alai TV | mei-alai-tv.png | Review |
 | International-Playlist.m3u | Mezzo | verified-mezzo-576p-cd14529869.png | Review |
+| International-Playlist.m3u | Mh 1 Prime | mh1-prime.png | Review |
 | International-Playlist.m3u | Milan TV | milan-tv-4eb09f758d.png | Review |
 | International-Playlist.m3u | MMA-TV.com | mma-tv-com-85ca206b32.png | Review |
 | International-Playlist.m3u | Molahits TV | verified-molahits-tv-720p-ab91e83f1b.png | Review |
@@ -2436,10 +2432,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
-| International-Playlist.m3u | FMH Movies (1080p) | fmh-movies-0d9b9c72dc198e5613eb.png | New Channels |
-| International-Playlist.m3u | Galaxy (720p) | galaxy-49d13dbaba825105696f.png | New Channels |
-| International-Playlist.m3u | Galaxy Premium (720p) | galaxy-premium-7337475394524cf6dbe7.png | New Channels |
-| International-Playlist.m3u | Kinosvidanie (1080p) | kinosvidanie-576p.png | New Channels |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
@@ -2482,6 +2474,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | International-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | International-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
+| International-Playlist.m3u | Enter 10 Bangla | enter10-bangla.png | Backup |
+| International-Playlist.m3u | Enter 10 Bangla | enter10-bangla.png | Backup |
 | International-Playlist.m3u | Enter TV | enter-tv.png | Backup |
 | International-Playlist.m3u | Enter TV | enter-tv.png | Backup |
 | International-Playlist.m3u | Evrokino | evrokino-hd-1080p.png | Backup |
