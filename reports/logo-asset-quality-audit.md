@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-23T08:54:52+00:00**
+Generated: **2026-11-23T09:44:07+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **73d887ef70e80366acaec9b977f1679b1f7c35499ecc7d70107d59f10a0c6a0b**
+- IPTV-Playlist.m3u SHA-256: **7947d96534c677f71e6c260d498c00915dad4dfaf857602f63893a10949c1620**
 - International-Playlist.m3u SHA-256: **e399bcc9869261b4e9f7d33bf015df494374c1394911ade718b3ae98417a2375**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1587**
-- Unreferenced image assets immediately inside logos/: **962** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1582**
+- Unreferenced image assets immediately inside logos/: **963** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1118,10 +1118,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | FashionTV Secrets | fashion-tv-aa7f9461cf.png | International |
 | IPTV-Playlist.m3u | Global Fashion Channel | digital-fashion.png | International |
 | IPTV-Playlist.m3u | Hollywood | hollywood-hd.png | International |
-| IPTV-Playlist.m3u | Movies Now+ | movies-now-plus-0cafc6cc49572c25cbc8.png | International |
 | IPTV-Playlist.m3u | MyTime Movie (UK) | mytime-movie.png | International |
 | IPTV-Playlist.m3u | MyTime Movie Network (Brazil) | mytime-movie-network.png | International |
-| IPTV-Playlist.m3u | MyTime Movie Network (US) | mytime-movie-network.png | International |
 | IPTV-Playlist.m3u | MyTime Movie Network East (US) | mytime-movie-network-east.png | International |
 | IPTV-Playlist.m3u | NOW 80s | now-80-s.png | International |
 | IPTV-Playlist.m3u | NOW 90s & 00s | now-90s00s-0571db9df6.png | International |
@@ -1150,7 +1148,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Nature Time | naturetime.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Outdoor Channel | outdoor-channel.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Safari TV | safari-tv.png | Documentary & Wildlife |
-| IPTV-Playlist.m3u | Travel Channel | travel-channel.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Travelxp English | travel-xp.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Watch Mojo | watch-mojo-eu.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Wild TV | wild-tv.png | Documentary & Wildlife |
@@ -1197,11 +1194,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Channel Fight | channel-fight.png | Sports |
 | IPTV-Playlist.m3u | ESPN2 | espn-2-united-states-7a4d2daafc.png | Sports |
 | IPTV-Playlist.m3u | FIFA+ Women | fifa-plus-women-6465461e16.png | Sports |
-| IPTV-Playlist.m3u | Fight TV | fight-tv.png | Sports |
 | IPTV-Playlist.m3u | FITE 24 | fite-24-7.png | Sports |
 | IPTV-Playlist.m3u | Fuel TV | fuel-tv.png | Sports |
 | IPTV-Playlist.m3u | Futbol | futbol-tv-068fcbdde9.png | Sports |
-| IPTV-Playlist.m3u | Futbol TV | futbol-tv-068fcbdde9.png | Sports |
 | IPTV-Playlist.m3u | Goal TV | goal-tv-237cfbed.png | Sports |
 | IPTV-Playlist.m3u | Golf Channel | golf-channel-73bed53091.png | Sports |
 | IPTV-Playlist.m3u | MMA TV com 格斗 | mma-tv-com-85ca206b32.png | Sports |
