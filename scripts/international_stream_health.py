@@ -777,14 +777,14 @@ def validate_recovery_accounting(source_text, updated_text, events, report):
 
 def validate_published_recovery_report(playlist_text, report_text, history):
     """Validate recovery rows against the final post-reorganization playlist and probe history."""
-    date_match = re.search(r"- Bangladesh check date: \\*\\*(\\d{4}-\\d{2}-\\d{2})\\*\\*", report_text)
+    date_match = re.search(r"- Bangladesh check date: \*\*(\d{4}-\d{2}-\d{2})\*\*", report_text)
     if not date_match:
         raise ValueError("Published health report is missing its Bangladesh check date")
     check_date = date_match.group(1)
     section = report_text.split("## Recovered streams", 1)
     if len(section) != 2:
         raise ValueError("Published report is missing the Recovered streams section")
-    body = section[1].split("\\n## ", 1)[0]
+    body = section[1].split("\n## ", 1)[0]
     rows = []
     for line in body.splitlines():
         match = re.fullmatch(r"- \\*\\*(.*?)\\*\\* — restored to \\*\\*(.*?)\\*\\*", line.strip())
