@@ -459,7 +459,7 @@ def _review_recovery_target(info: str, original_group: str,
         if target.casefold() != "adult" and country not in {"BD", "IN"} and (
             target.casefold() == "international"
             or target.casefold() == "pakistani"
-            or international_policy.discovery.country_from_group(target) == country
+            or international_policy.country_from_group(target) == country
         ):
             country_ids[country].add(name_key)
         return target
