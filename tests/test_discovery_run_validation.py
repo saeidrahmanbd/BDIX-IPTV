@@ -8,6 +8,22 @@ from discover_bd_in_new_queues import parse as parse_bd_playlist
 
 
 class DiscoveryRunValidationTests(unittest.TestCase):
+    def test_fashion_tv_is_global_exception_but_not_generic_fashion_named_channels(self):
+        import discover_international_channels as discovery
+
+        target, reason, code = discovery.discovery_eligibility(
+            {"tvg-id": "fashiontv.ru", "tvg-country": "RU"},
+            "FashionTV Russia",
+        )
+        self.assertEqual((target, reason, code), ("Fashion TV", None, "RU"))
+
+        target, reason, code = discovery.discovery_eligibility(
+            {"tvg-id": "genericfashion.us", "tvg-country": "US"},
+            "Generic Fashion Channel",
+        )
+        self.assertIsNone(target)
+        self.assertTrue(reason)
+
     def test_discovery_report_timestamps_use_bangladesh_offset(self):
         self.assertTrue(now().endswith("+06:00"))
 
@@ -185,7 +201,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
             self.assertIn("- Review/New Channels/New Backups/Backup ordering: passed", report.read_text(encoding="utf-8"))
 
-    def test_final_validation_accepts_pakistani_channels_of_any_genre_without_movie_music_tag(self):
+    def test_final_validation_accepts_pakistani_movie_candidates_with_explicit_genre_tags(self):
         import os
         import tempfile
         with tempfile.TemporaryDirectory() as directory:
@@ -202,8 +218,8 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 for i in range(1, 6)
             ]
             rows.extend([
-                '#EXTINF:-1 tvg-id="ATV.pk" tvg-name="ATV (Pakistan)" tvg-country="PK" tvg-logo="logos/atv.svg" group-title="New Channels",ATV (Pakistan)\nhttps://example.org/atv.m3u8',
-                '#EXTINF:-1 tvg-id="BSTV.pk" tvg-name="BSTV (Pakistan)" tvg-country="PK" tvg-logo="logos/bstv.svg" group-title="New Channels",BSTV (Pakistan)\nhttps://example.org/bstv.m3u8',
+                '#EXTINF:-1 tvg-id="ATV.pk" tvg-name="ATV (Pakistan)" tvg-country="PK" tvg-content="Movies" tvg-logo="logos/atv.svg" group-title="New Channels",ATV (Pakistan)\nhttps://example.org/atv.m3u8',
+                '#EXTINF:-1 tvg-id="BSTV.pk" tvg-name="BSTV (Pakistan)" tvg-country="PK" tvg-content="Movies" tvg-logo="logos/bstv.svg" group-title="New Channels",BSTV (Pakistan)\nhttps://example.org/bstv.m3u8',
             ])
             content = (
                 "#EXTM3U\n"
@@ -660,7 +676,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         )
         self.assertEqual(decisions, [])
 
-    def test_inconclusive_candidate_without_local_logo_is_preserved_in_new_channels(self):
+    def test_inconclusive_movie_candidate_without_local_logo_is_preserved_in_new_channels(self):
         import os
         import tempfile
         from unittest.mock import patch
@@ -674,7 +690,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             content = (
                 '#EXTM3U\n'
                 '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Review","New Channels","New Backups","Backup"]\n'
-                '#EXTINF:-1 tvg-id="NetworkOneBD.bd" tvg-name="Bangladesh Network One" tvg-country="BD" group-title="New Channels",Bangladesh Network One\n'
+                '#EXTINF:-1 tvg-id="NetworkOneBD.bd" tvg-name="Bangladesh Network One" tvg-country="BD" tvg-content="Movies" group-title="New Channels",Bangladesh Network One\n'
                 'https://example.org/bd-test.m3u8\n'
             )
             playlist.write_text(content, encoding="utf-8")
