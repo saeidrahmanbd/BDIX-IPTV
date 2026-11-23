@@ -825,15 +825,15 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             registry = ["Fashion TV", "Review", "New Channels", "New Backups", "Backup"]
             row = (
                 '#EXTINF:-1 tvg-id="FashionTV.fr" tvg-name="Fashion TV" tvg-country="FR" '
-                'group-title="Fashion TV",Fashion TV\\n'
-                'https://example.org/fashion-tv.m3u8\\n'
+                'group-title="Fashion TV",Fashion TV\n'
+                'https://example.org/fashion-tv.m3u8\n'
             )
             playlist.write_text(
-                "#EXTM3U\\n#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry) + "\\n" + row,
+                "#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry) + "\n" + row,
                 encoding="utf-8",
             )
-            baseline.write_text("#EXTM3U\\n", encoding="utf-8")
-            report.write_text("# Report\\n", encoding="utf-8")
+            baseline.write_text("#EXTM3U\n", encoding="utf-8")
+            report.write_text("# Report\n", encoding="utf-8")
             previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
             os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
             try:
