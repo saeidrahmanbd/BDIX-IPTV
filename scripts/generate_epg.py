@@ -155,22 +155,23 @@ PRIVATE_SOURCE_LABEL = "M3U4U XMLTV (private Actions secret)"
 
 
 def configured_sources():
-    """Add the personalized M3U4U feed only from a GitHub Actions secret."""
-    sources = list(SOURCES)
-    private_url = os.environ.get(PRIVATE_SOURCE_ENV, "").strip()
-    if not private_url:
-        return sources
-    parsed = urlparse(private_url)
-    if (
-        parsed.scheme.lower() != "https"
-        or (parsed.hostname or "").lower() not in {"m3u4u.com", "www.m3u4u.com"}
-        or not parsed.path.startswith(("/epg/", "/xml/"))
-    ):
-        print(f"Ignoring {PRIVATE_SOURCE_ENV}: use an HTTPS M3U4U XMLTV endpoint; the configured URL is not printed.")
-        return sources
-    if private_url not in sources:
-        sources.append(private_url)
-    return sources
+    """Return only sources eligible for the public XMLTV generation pipeline.
+
+    The personalized M3U4U feed is intentionally excluded: its redistribution
+    terms have not been confirmed. It remains available to the separate
+    private coverage/discovery audit in epg_coverage.py.
+    """
+    return list(SOURCES)
+
+
+def is_private_m3u4u_source(source):
+    """Identify personalized M3U4U XMLTV endpoints that must never enter public output."""
+    parsed = urlparse(str(source or ""))
+    return (
+        parsed.scheme.lower() == "https"
+        and (parsed.hostname or "").lower() in {"m3u4u.com", "www.m3u4u.com"}
+        and parsed.path.startswith(("/epg/", "/xml/"))
+    )
 
 
 COUNTRY_GROUP_CODES = {
@@ -354,8 +355,15 @@ TARGETED_DISCOVERY_SOURCES = {
 
 
 def sources_with_mapped_channels(source_urls):
-    """Keep mapped feeds plus country-specific discovery feeds for active playlist regions."""
-    source_urls = list(source_urls)
+    """Keep public-eligible mapped feeds plus country-specific discovery feeds.
+
+    M3U4U is private-use pending explicit redistribution permission, so exclude
+    it before every early-return path as well as from the normal selection.
+    """
+    source_urls = [
+        source for source in source_urls
+        if not is_private_m3u4u_source(source)
+    ]
     if not MAPPING.is_file():
         print("EPG source pruning skipped: mapping CSV is missing.")
         return source_urls
@@ -369,7 +377,6 @@ def sources_with_mapped_channels(source_urls):
     except (OSError, csv.Error, UnicodeError) as exc:
         print(f"EPG source pruning skipped: cannot read mapping CSV ({exc}).")
         return source_urls
-    private_url = os.environ.get(PRIVATE_SOURCE_ENV, "").strip()
     active_countries = active_playlist_country_codes()
     discovery_sources = {
         source for source in source_urls
@@ -380,7 +387,6 @@ def sources_with_mapped_channels(source_urls):
         if source in mapped_sources
         or source in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE, MAASRANGA_SOURCE)
         or source.startswith("file://")
-        or (private_url and source == private_url)
         or source in discovery_sources
         or source in TARGETED_DISCOVERY_SOURCES
     ]
