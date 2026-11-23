@@ -787,7 +787,7 @@ def validate_published_recovery_report(playlist_text, report_text, history):
     body = section[1].split("\n## ", 1)[0]
     rows = []
     for line in body.splitlines():
-        match = re.fullmatch(r"- \\*\\*(.*?)\\*\\* — restored to \\*\\*(.*?)\\*\\*", line.strip())
+        match = re.fullmatch(r"- \*\*(.*?)\*\* — restored to \*\*(.*?)\*\*", line.strip())
         if match:
             rows.append((match.group(1), match.group(2)))
     metric = f"- Restored from Review to primary/Backup/discovery queue: **{len(rows)}**"
