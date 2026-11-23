@@ -682,7 +682,7 @@ class StrictWorldwideDiscoveryTests(unittest.TestCase):
     def test_raw_repository_logo_url_is_resolved_to_a_local_asset(self):
         import tempfile
         from pathlib import Path
-        from scripts import reorganize_international_playlist as reorg_module
+        reorg_module = reorg
         with tempfile.TemporaryDirectory() as tmp:
             old_logos = reorg_module.LOGOS
             reorg_module.LOGOS = Path(tmp) / "logos"
