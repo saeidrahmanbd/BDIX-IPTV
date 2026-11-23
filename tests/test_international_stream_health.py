@@ -150,6 +150,25 @@ class InternationalStreamHealthTests(unittest.TestCase):
         self.assertIn('group-title="International"', output)
         self.assertEqual(events[0]["action"], "restored-to-primary")
 
+    def test_working_review_special_genres_are_restored_to_primary_groups(self):
+        cases = (
+            ("CNN International", "News"),
+            ("Cartoon Network", "Kids"),
+            ("ESPN", "Sports"),
+            ("National Geographic", "Documentary & Wildlife"),
+            ("Peace TV", "Religious"),
+            ("Fashion TV", "Fashion TV"),
+        )
+        for name, expected_group in cases:
+            with self.subTest(name=name):
+                source = self.playlist(row(name=name, group="Review"))
+                output, _, events = apply(
+                    source, "ok", {}, "2026-11-08",
+                    status=200, reason="Media bytes received",
+                )
+                self.assertIn(f'group-title="{expected_group}"', output)
+                self.assertEqual(events[0]["action"], "restored-to-primary")
+
     def test_working_review_alternate_moves_to_backup_when_primary_exists(self):
         primary = row(name="Shared Movie", group="International Movies", url="https://example.test/primary.m3u8")
         review = row(name="Shared Movie", group="Review", url="https://example.test/alternate.m3u8")
