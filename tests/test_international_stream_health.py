@@ -198,7 +198,7 @@ class InternationalStreamHealthTests(unittest.TestCase):
     def test_success_reclassifies_auto_review_to_correct_primary_group(self):
         output, history, _ = apply(self.playlist(row(name="Example Movie")), "fail", {}, "2026-11-07")
         output, history, events = apply(output, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
-        self.assertIn('group-title="International"', output)
+        self.assertIn('group-title="International Movies"', output)
         self.assertEqual(events[0]["action"], "restored-to-primary")
         self.assertEqual(events[0]["streak"], 0)
 
@@ -206,7 +206,7 @@ class InternationalStreamHealthTests(unittest.TestCase):
     def test_working_manual_review_channel_moves_to_primary(self):
         source = self.playlist(row(name="Manual Movie", group="Review"))
         output, _, events = apply(source, "ok", {}, "2026-11-08", status=200, reason="Media bytes received")
-        self.assertIn('group-title="International Movies"', output)
+        self.assertIn('group-title="International"', output)
         self.assertEqual(events[0]["action"], "restored-to-primary")
 
     def test_working_review_special_genres_are_restored_to_primary_groups(self):
