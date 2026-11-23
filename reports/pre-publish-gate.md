@@ -1,9 +1,9 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-23T08:06:07+00:00**
+Generated: **2026-11-23T08:24:48+00:00**
 Source playlist SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
 
-Status: **BLOCK**
+Status: **PASS**
 
 - Current entries: **1355**
 - Duplicate stream URLs: **0**
@@ -13,7 +13,9 @@ Status: **BLOCK**
 - Review entries reclassified: **0**
 - Review entries promoted: **0**
 - Review entries deleted: **0**
-- Duplicate primary channel numbers: **5**
+- Duplicate primary channel numbers (all): **5**
+- New/changed duplicate primary channel numbers (blocking): **0**
+- Pre-existing duplicate primary channel numbers preserved unchanged: **5**
 - Permanently banned channel entries across all IPTV groups: **0**
 - Primary entries missing channel numbers: **8**
 - Primary channel-number sequence issues (non-blocking; existing row order is protected): **7**
@@ -40,7 +42,15 @@ New Channels and New Backups are discovery queues. Backup and Review remain prot
 Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **7**.
 
 ## Blocking Reasons
-- duplicate primary channel numbers: 5
+No hard safety blockers detected.
+
+## Channel-number collision review
+
+- **0** — PRESERVED (pre-existing): FashionBox [International]; FashionTV Secrets [International]
+- **618** — PRESERVED (pre-existing): Fashion&LifeStyle [International]; DD Sports [Sports]
+- **619** — PRESERVED (pre-existing): FashionTV [International]; DraftKings Network [Sports]
+- **620** — PRESERVED (pre-existing): FashionTV Paris L'Original [International]; Eleven Sports 1 [Sports]
+- **621** — PRESERVED (pre-existing): Global Fashion Channel [International]; Eleven Sports 2 [Sports]
 
 ## Permanent channel-ban blockers
 
@@ -48,6 +58,7 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 
 ## Warnings / Manual Review
 
+- pre-existing owner-curated duplicate channel numbers preserved unchanged: 0, 618, 619, 620, 621
 - entries missing tvg-language: 24
 - primary entries missing tvg-chno: 8
 - raw resolution/geoblock tags in channel names: 18
