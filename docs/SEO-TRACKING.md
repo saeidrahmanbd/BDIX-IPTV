@@ -2,7 +2,7 @@
 
 This document records the repository's search-engine setup, the public pages intended for indexing, and the off-site actions that help people discover the project. It is an operational checklist, not a claim that the site currently ranks for particular keywords.
 
-## Latest SEO maintenance — 2026-11-09
+## Latest SEO maintenance — 2026-11-23
 
 - Corrected the English homepage title, H1, meta description, Open Graph title and Twitter title to consistently describe Bangladesh, India and the wider multi-country collection.
 - Updated the English playlist guide title and description and aligned its social-sharing titles.
@@ -132,3 +132,34 @@ Use Search Console data to decide which topics merit clearer explanations. Do no
 - A click on an M3U URL does not prove that a stream played.
 - Public search-result spot checks are not a substitute for Search Console or Bing Webmaster Tools indexing reports.
 - No README, keyword, structured-data block or backlink guarantees a ranking position or AI Overview citation.
+
+## Live project statistics — 2026-11-23
+
+The English homepage now includes a project-statistics section that combines:
+
+- GitHub Shields badges for repository stars, forks, open issues and latest commit. These are live external badges and may be briefly cached.
+- The generated project dashboard at `assets/dashboard.svg`, linked to the detailed [Update Report](../reports/Update%20Report.md).
+- A link to the repository's operational reports and GitHub Actions runs.
+
+### Metric definitions and freshness
+
+The dashboard is a generated snapshot, not a second-by-second monitor. The existing `scripts/generate_dashboard.py` builds it from playlist files and audit reports during the scheduled playlist-maintenance and EPG-publication workflows.
+
+The generator compares report fingerprints with current playlist inputs and labels stale or unavailable metrics rather than presenting them as current. EPG metrics remain **PENDING** unless the published XMLTV guide, freshness status and two-playlist audit checks pass. Stream-health metrics describe probes from GitHub-hosted runners and do not guarantee playback from Bangladesh, a particular ISP, region or IPTV application.
+
+The dashboard currently reports the latest generated values in [Update Report](../reports/Update%20Report.md). Do not copy these values into page metadata or structured data as permanent facts.
+
+### Search performance measurement
+
+The website does not currently expose Google Search Console or Bing Webmaster Tools performance data inside the public dashboard. Search clicks, impressions, CTR, average position, indexed-page status and query performance must be read from the verified owner accounts. No search traffic or ranking numbers should be inferred from GitHub stars, forks, playlist rows, or workflow runs.
+
+For Google measurement, use the exact URL-prefix property and the steps in the [Google Search Console section](#google-search-console). For Bing, use the [Bing Webmaster Tools section](#bing-and-other-indexnow-participants).
+
+### Recent technical SEO change
+
+- Added a project-statistics section to the English homepage using the generated dashboard SVG and live GitHub repository badges.
+- Added explicit links to the maintenance report, report directory and GitHub Actions.
+- Updated the homepage structured-data `dateModified` and XML sitemap `lastmod` to 2026-11-23 because the homepage content changed.
+- Improved the dashboard header contrast in both the generated SVG and its generator so future snapshots retain readable text.
+- Kept the four canonical landing pages as the only sitemap entries. The operational dashboard is supporting content, not a separate search landing page.
+
