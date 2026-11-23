@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5243,
-  "all_explicitly_referenced_logo_files": 2505,
-  "runtime_referenced_logo_files": 2503,
-  "playlist_referenced_logo_files": 2476,
-  "apparently_unreferenced_by_any_text_file": 2738,
-  "apparently_unreferenced_by_runtime_sources": 2740,
+  "logo_image_files": 5251,
+  "all_explicitly_referenced_logo_files": 2516,
+  "runtime_referenced_logo_files": 2514,
+  "playlist_referenced_logo_files": 2487,
+  "apparently_unreferenced_by_any_text_file": 2735,
+  "apparently_unreferenced_by_runtime_sources": 2737,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -319,6 +319,7 @@
     "logos/fuel-tv-au-4ce4ea61f5.png",
     "logos/futbol-fe33fdb436.png",
     "logos/futv-22fa666e2f.png",
+    "logos/galaxy-49d13dbaba825105696f.webp",
     "logos/galaxy-tv-de6e9f1020.png",
     "logos/gaunda-punjab-tv-001fec37aa.png",
     "logos/generated-fallback-a-sports-hd.svg",
@@ -1827,6 +1828,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/futv-22fa666e2f.png": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/galaxy-49d13dbaba825105696f.webp": [
       "reports/logo-source-registry.json"
     ],
     "logos/galaxy-tv-de6e9f1020.png": [
@@ -3790,6 +3794,7 @@
     "logos/fuel-tv-au-4ce4ea61f5.png",
     "logos/futbol-fe33fdb436.png",
     "logos/futv-22fa666e2f.png",
+    "logos/galaxy-49d13dbaba825105696f.webp",
     "logos/galaxy-tv-de6e9f1020.png",
     "logos/gaunda-punjab-tv-001fec37aa.png",
     "logos/generated-fallback-a-sports-hd.svg",
@@ -4298,8 +4303,8 @@
     "logos/zoom-india-27531244ca.png",
     "logos/zoom-israel-ed459937c9.png"
   ],
-  "exact_duplicate_groups": 741,
-  "exact_duplicate_files": 1406,
+  "exact_duplicate_groups": 745,
+  "exact_duplicate_files": 1410,
   "exact_duplicates": [
     {
       "sha256": "00cefab928f6517f0261b462ce57173a7235e7f88cfdcdb868b2728727e2fdb9",
@@ -6692,6 +6697,13 @@
       ]
     },
     {
+      "sha256": "73cb96c4010c448b6740ebdc121e110382a242e8217dee5925f8fdca05f137ef",
+      "files": [
+        "logos/fashiontv-europe-73cb96c4010c448b6740.png",
+        "logos/fashiontv-russia-73cb96c4010c448b6740.png"
+      ]
+    },
+    {
       "sha256": "73dea3d52fdceda0077294bbd6731af8bb3dab1c0fb93ab098a020092ef13878",
       "files": [
         "logos/unused/xite-siempre-latino-1080p-ef6e87e703.png",
@@ -6976,6 +6988,13 @@
       ]
     },
     {
+      "sha256": "7f9979e3ee84aae6e62bdfcffaee944457e4829ab70b887c223fbee78eb17ebf",
+      "files": [
+        "logos/fashiontv-paris-l-original-1080p-ccf00a0d8f.png",
+        "logos/unused/fashiontv-paris-l-original-1080p-ccf00a0d8f.png"
+      ]
+    },
+    {
       "sha256": "7faba4c54268ef0a6121b8945edde1d4c0ecb9dda65505c7cd7563f82bcd9dc6",
       "files": [
         "logos/unused/sl1.png",
@@ -7040,6 +7059,13 @@
         "logos/international/mcm-top-576p.png",
         "logos/mcm-top-france-821b5da224.png",
         "logos/mcm-top-russia-821b5da22478bf89ef92.png"
+      ]
+    },
+    {
+      "sha256": "82c46def8efec888fe7475e2aafdb03b3f9711efc73fd0ec920dc4a94380d557",
+      "files": [
+        "logos/fashiontv-secrets-1080p-e90e2c8d5b.png",
+        "logos/unused/fashiontv-secrets-1080p-e90e2c8d5b.png"
       ]
     },
     {
@@ -8210,6 +8236,13 @@
         "logos/international/muz-soyuz-576p.png",
         "logos/muz-soyuz-576p.png",
         "logos/verified-muz-soyuz-576p-aee2903b69.png"
+      ]
+    },
+    {
+      "sha256": "aeee86f2e170d4acc4f30d02d0ad25cf88e0bc0f5a87fb8dadba0d1bc8f04ef3",
+      "files": [
+        "logos/code-fashion-tv-1080p-eba84a3007.png",
+        "logos/unused/code-fashion-tv-1080p-eba84a3007.png"
       ]
     },
     {
@@ -12335,6 +12368,9 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/code-fashion-tv-1080p-eba84a3007.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/colimdo-tv-e106271533.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -12898,7 +12934,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/digital-fashion.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/disco-mix-576p.png": [
       "International-Playlist.m3u",
@@ -13705,6 +13742,20 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/fashiontv-europe-73cb96c4010c448b6740.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/fashiontv-paris-l-original-1080p-ccf00a0d8f.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/fashiontv-russia-73cb96c4010c448b6740.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/fashiontv-secrets-1080p-e90e2c8d5b.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/fast-and-funbox-1109f0c4b7.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -14041,6 +14092,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/fmh-movies-0d9b9c72dc198e5613eb.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/fmtv-83c0af144c.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -14192,6 +14247,13 @@
     "logos/galactica-tv.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/galaxy-49d13dbaba825105696f.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/galaxy-premium-7337475394524cf6dbe7.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/galaxy-tv-de6e9f102086aef6c97c.png": [
       "International-Playlist.m3u",
@@ -14845,6 +14907,9 @@
     "logos/international/famatv-1080p-not-24-7.png": [
       "reports/logo-source-registry.json"
     ],
+    "logos/international/fashiontv-india-576p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/international/goldmines-2.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -14860,6 +14925,9 @@
     "logos/international/introuble-1080p.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/kinosvidanie-576p.png": [
+      "International-Playlist.m3u"
     ],
     "logos/international/movie-punjab-720p.png": [
       "IPTV-Playlist.m3u",
@@ -16356,6 +16424,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/muzyka-pervogo-576p.png": [
+      "International-Playlist.m3u"
     ],
     "logos/mwd-documentary-fbdc0a1ba5.png": [
       "International-Playlist.m3u",
@@ -23884,6 +23955,9 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/code-fashion-tv-1080p-eba84a3007.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/colimdo-tv-e106271533.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -24448,7 +24522,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/digital-fashion.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/disco-mix-576p.png": [
       "International-Playlist.m3u",
@@ -25255,6 +25330,20 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/fashiontv-europe-73cb96c4010c448b6740.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/fashiontv-paris-l-original-1080p-ccf00a0d8f.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/fashiontv-russia-73cb96c4010c448b6740.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/fashiontv-secrets-1080p-e90e2c8d5b.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/fast-and-funbox-1109f0c4b7.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -25591,6 +25680,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/fmh-movies-0d9b9c72dc198e5613eb.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/fmtv-83c0af144c.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -25742,6 +25835,13 @@
     "logos/galactica-tv.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/galaxy-49d13dbaba825105696f.png": [
+      "International-Playlist.m3u"
+    ],
+    "logos/galaxy-premium-7337475394524cf6dbe7.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/galaxy-tv-de6e9f102086aef6c97c.png": [
       "International-Playlist.m3u",
@@ -26396,6 +26496,9 @@
     "logos/international/famatv-1080p-not-24-7.png": [
       "reports/logo-source-registry.json"
     ],
+    "logos/international/fashiontv-india-576p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/international/goldmines-2.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -26411,6 +26514,9 @@
     "logos/international/introuble-1080p.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/kinosvidanie-576p.png": [
+      "International-Playlist.m3u"
     ],
     "logos/international/movie-punjab-720p.png": [
       "IPTV-Playlist.m3u",
@@ -27907,6 +28013,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/muzyka-pervogo-576p.png": [
+      "International-Playlist.m3u"
     ],
     "logos/mwd-documentary-fbdc0a1ba5.png": [
       "International-Playlist.m3u",
@@ -33816,7 +33925,6 @@
     "logos/international/fabulosa-estereo-100-5-fm-720p.png",
     "logos/international/fan-1080p.png",
     "logos/international/farra-play-576p.png",
-    "logos/international/fashiontv-india-576p.png",
     "logos/international/feniks-plus-kino-576p.png",
     "logos/international/fierro-a-fondo-tv-1080p.png",
     "logos/international/film-arts-1080p.png",
@@ -33931,7 +34039,6 @@
     "logos/international/kinosat-576p.png",
     "logos/international/kinosemja-576p.png",
     "logos/international/kinoseriya-1080p.png",
-    "logos/international/kinosvidanie-576p.png",
     "logos/international/kinouzhas-576p.png",
     "logos/international/kinowood-1080p.png",
     "logos/international/kite-victers-720p-not-24-7.png",
@@ -34614,7 +34721,6 @@
     "logos/muz-soyuz-576p.png",
     "logos/muzhskoe-kino-576p.png",
     "logos/muzhskoy-hd-1080p.png",
-    "logos/muzyka-pervogo-576p.png",
     "logos/nagorik.png",
     "logos/nakshatra-digital-tv-576p.png",
     "logos/nande-portetepe-tv.png",

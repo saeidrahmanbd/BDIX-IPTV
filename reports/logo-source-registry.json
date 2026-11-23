@@ -8223,5 +8223,30 @@
     "status": "third_party_verified",
     "source_url": "https://dtil.tmsimg.com/assets/s158863_ld_h15_aa.png?lock=720x540",
     "notes": "IPTV-org exact ID: StarMoviesSelect.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s158863_ld_h15_aa.png?lock=720x540"
+  },
+  "International-Playlist.m3u|FashionTV.ru@SD|FashionTV (Russia) (1080p)|logos/fashiontv-russia-73cb96c4010c448b6740.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png",
+    "notes": "IPTV-org exact ID: FashionTV.ru IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png"
+  },
+  "International-Playlist.m3u|FashionTVEurope.fr@SD|FashionTV Europe (1080p)|logos/fashiontv-europe-73cb96c4010c448b6740.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png",
+    "notes": "IPTV-org exact ID: FashionTVEurope.fr IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png"
+  },
+  "International-Playlist.m3u|FMHMovies.us@SD|FMH Movies (1080p)|logos/fmh-movies-0d9b9c72dc198e5613eb.png": {
+    "status": "third_party_verified",
+    "source_url": "https://img-evg3.tv360.bitel.com.pe/peru-image/2024/12/24/23/1735058961578/eaf883fb926d_480_270.png",
+    "notes": "IPTV-org exact ID: FMHMovies.us IPTV-org public logo dataset Source page: https://img-evg3.tv360.bitel.com.pe/peru-image/2024/12/24/23/1735058961578/eaf883fb926d_480_270.png"
+  },
+  "International-Playlist.m3u|Galaxy.id@SD|Galaxy (720p)|logos/galaxy-49d13dbaba825105696f.webp": {
+    "status": "third_party_verified",
+    "source_url": "https://i.ibb.co/PG69mfKm/IMG-2469.webp",
+    "notes": "IPTV-org exact ID: Galaxy.id IPTV-org public logo dataset Source page: https://i.ibb.co/PG69mfKm/IMG-2469.webp"
+  },
+  "International-Playlist.m3u|GalaxyPremium.id@SD|Galaxy Premium (720p)|logos/galaxy-premium-7337475394524cf6dbe7.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/oGKtYYG.png",
+    "notes": "IPTV-org exact ID: GalaxyPremium.id IPTV-org public logo dataset Source page: https://i.imgur.com/oGKtYYG.png"
   }
 }

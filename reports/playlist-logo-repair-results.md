@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-23 03:52 UTC**  
+Run time: **2026-11-23 03:55 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,7 +10,7 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1355 | 0 | 0 | 0 | 0 | 0 | 0 |
-| International-Playlist.m3u | 3294 | 0 | 0 | 71 | 372 | 0 | 71 |
+| International-Playlist.m3u | 3314 | 12 | 0 | 71 | 372 | 0 | 71 |
 
 ## Repair log
 
@@ -45,62 +45,74 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 2649 | Bigscreen TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2797 | Sine Plus | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2845 | NEWS 21 BANGLA | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 3661 | Abdulmajeed Abdullah | (missing) | (none) | IPTV-org exact ID: AbdulmajeedAbdullah.sa |  | Download/validation failed: HTTP Error 403: Forbidden |
-| International-Playlist.m3u | 3661 | Abdulmajeed Abdullah | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 3693 | Al Sunnah Al Nabawiyah | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 3695 | Al Sunnah TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 3793 | ATV USA | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 3855 | Bangla Jago TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 3859 | Banglar Kontho 24 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 3869 | BBC World | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4031 | Chikitoonz | (missing) | (none) | IPTV-org exact ID: Chikitoonz.pe |  | Download/validation failed: HTTP Error 404: Not Found |
-| International-Playlist.m3u | 4031 | Chikitoonz | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4051 | Cinema | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4093 | Cooking Channel | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4095 | Cooking Channel | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4113 | CRTV (Chile) | (missing) | (none) | IPTV-org exact ID: CRTV.cl |  | Download/validation failed: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)> |
-| International-Playlist.m3u | 4113 | CRTV (Chile) | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4129 | DanceTV EDM Mainstage | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4131 | DanceTV Minimal Tech | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4309 | DTV USA | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4343 | EKids | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4479 | FloRacing | (missing) | (none) | IPTV-org exact ID: FloRacing.us |  | Download/validation failed: HTTP Error 403: Forbidden |
-| International-Playlist.m3u | 4479 | FloRacing | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4543 | Gopal Bhar TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4569 | History & Warfare Now | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4613 | Id Investigation Discovery | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 4869 | Mh 1 Prime | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5017 | NewFlix | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5027 | Nick Jr East | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5115 | Peace TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5135 | Persiana Latino | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5239 | Rang Rangoli | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5277 | Robot Wars by Mech+ | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5325 | Saudi Quran | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5343 | Sky Cinema Action | (missing) | (none) | IPTV-org exact ID: SkyCinemaAction.it |  | Download/validation failed: HTTP Error 404: Not Found |
-| International-Playlist.m3u | 5343 | Sky Cinema Action | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5345 | Sky Cinema Collection | (missing) | (none) | IPTV-org exact ID: SkyCinemaCollection.it |  | Download/validation failed: HTTP Error 404: Not Found |
-| International-Playlist.m3u | 5345 | Sky Cinema Collection | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5347 | Sky Cinema Family | (missing) | (none) | IPTV-org exact ID: SkyCinemaFamily.it |  | Download/validation failed: HTTP Error 404: Not Found |
-| International-Playlist.m3u | 5347 | Sky Cinema Family | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5349 | Sky Cinema Suspense | (missing) | (none) | IPTV-org exact ID: SkyCinemaSuspense.it |  | Download/validation failed: HTTP Error 404: Not Found |
-| International-Playlist.m3u | 5349 | Sky Cinema Suspense | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5351 | Sky Cinema Uno | (missing) | (none) | IPTV-org exact ID: SkyCinemaUno.it |  | Download/validation failed: HTTP Error 404: Not Found |
-| International-Playlist.m3u | 5351 | Sky Cinema Uno | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5371 | Sonic The Hedgehog | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5419 | Sport5 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5557 | Tennis+ | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5613 | Trace Gospel Nigeria and East Africa | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5615 | Trace Gospel Southern Africa | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5623 | Trace Sports Stars | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5629 | Travel Channel East | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5631 | Travel XP Bangla | (missing) | (none) | Exact original tvg-logo URL from playlist history |  | Download/validation failed: HTTP Error 404: Not Found |
-| International-Playlist.m3u | 5631 | Travel XP Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5697 | UFC | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5757 | Watch Mojo | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5781 | Willow Sports 2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 6141 | Enter 10 Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 6143 | Enter 10 Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 2851 | Code Fashion TV (1080p) | (missing) | code-fashion-tv-1080p-eba84a3007.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| International-Playlist.m3u | 2855 | FashionTV (Russia) (1080p) | (missing) | fashiontv-russia-73cb96c4010c448b6740.png | [IPTV-org exact ID: FashionTV.ru](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| International-Playlist.m3u | 2857 | FashionTV Europe (1080p) | (missing) | fashiontv-europe-73cb96c4010c448b6740.png | [IPTV-org exact ID: FashionTVEurope.fr](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| International-Playlist.m3u | 2859 | FashionTV Paris L'Original (1080p) | (missing) | fashiontv-paris-l-original-1080p-ccf00a0d8f.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| International-Playlist.m3u | 2861 | FashionTV Secrets (1080p) | (missing) | fashiontv-secrets-1080p-e90e2c8d5b.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| International-Playlist.m3u | 3673 | Abdulmajeed Abdullah | (missing) | (none) | IPTV-org exact ID: AbdulmajeedAbdullah.sa |  | Download/validation failed: HTTP Error 403: Forbidden |
+| International-Playlist.m3u | 3673 | Abdulmajeed Abdullah | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 3705 | Al Sunnah Al Nabawiyah | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 3707 | Al Sunnah TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 3805 | ATV USA | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 3867 | Bangla Jago TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 3871 | Banglar Kontho 24 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 3881 | BBC World | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4043 | Chikitoonz | (missing) | (none) | IPTV-org exact ID: Chikitoonz.pe |  | Download/validation failed: HTTP Error 404: Not Found |
+| International-Playlist.m3u | 4043 | Chikitoonz | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4063 | Cinema | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4105 | Cooking Channel | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4107 | Cooking Channel | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4125 | CRTV (Chile) | (missing) | (none) | IPTV-org exact ID: CRTV.cl |  | Download/validation failed: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)> |
+| International-Playlist.m3u | 4125 | CRTV (Chile) | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4141 | DanceTV EDM Mainstage | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4143 | DanceTV Minimal Tech | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4321 | DTV USA | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4355 | EKids | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4491 | FloRacing | (missing) | (none) | IPTV-org exact ID: FloRacing.us |  | Download/validation failed: HTTP Error 403: Forbidden |
+| International-Playlist.m3u | 4491 | FloRacing | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4555 | Gopal Bhar TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4581 | History & Warfare Now | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4625 | Id Investigation Discovery | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 4881 | Mh 1 Prime | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5029 | NewFlix | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5039 | Nick Jr East | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5127 | Peace TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5147 | Persiana Latino | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5251 | Rang Rangoli | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5289 | Robot Wars by Mech+ | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5337 | Saudi Quran | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5355 | Sky Cinema Action | (missing) | (none) | IPTV-org exact ID: SkyCinemaAction.it |  | Download/validation failed: HTTP Error 404: Not Found |
+| International-Playlist.m3u | 5355 | Sky Cinema Action | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5357 | Sky Cinema Collection | (missing) | (none) | IPTV-org exact ID: SkyCinemaCollection.it |  | Download/validation failed: HTTP Error 404: Not Found |
+| International-Playlist.m3u | 5357 | Sky Cinema Collection | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5359 | Sky Cinema Family | (missing) | (none) | IPTV-org exact ID: SkyCinemaFamily.it |  | Download/validation failed: HTTP Error 404: Not Found |
+| International-Playlist.m3u | 5359 | Sky Cinema Family | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5361 | Sky Cinema Suspense | (missing) | (none) | IPTV-org exact ID: SkyCinemaSuspense.it |  | Download/validation failed: HTTP Error 404: Not Found |
+| International-Playlist.m3u | 5361 | Sky Cinema Suspense | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5363 | Sky Cinema Uno | (missing) | (none) | IPTV-org exact ID: SkyCinemaUno.it |  | Download/validation failed: HTTP Error 404: Not Found |
+| International-Playlist.m3u | 5363 | Sky Cinema Uno | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5383 | Sonic The Hedgehog | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5431 | Sport5 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5569 | Tennis+ | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5625 | Trace Gospel Nigeria and East Africa | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5627 | Trace Gospel Southern Africa | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5635 | Trace Sports Stars | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5641 | Travel Channel East | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5643 | Travel XP Bangla | (missing) | (none) | Exact original tvg-logo URL from playlist history |  | Download/validation failed: HTTP Error 404: Not Found |
+| International-Playlist.m3u | 5643 | Travel XP Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5709 | UFC | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5769 | Watch Mojo | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5793 | Willow Sports 2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 5887 | Fashion TV | (missing) | fashion-tv-aa7f9461cf.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| International-Playlist.m3u | 5891 | FMH Movies (1080p) | (missing) | fmh-movies-0d9b9c72dc198e5613eb.png | [IPTV-org exact ID: FMHMovies.us](https://img-evg3.tv360.bitel.com.pe/peru-image/2024/12/24/23/1735058961578/eaf883fb926d_480_270.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| International-Playlist.m3u | 5893 | Galaxy (720p) | (missing) | galaxy-49d13dbaba825105696f.webp | [IPTV-org exact ID: Galaxy.id](https://i.ibb.co/PG69mfKm/IMG-2469.webp) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| International-Playlist.m3u | 5895 | Galaxy Premium (720p) | (missing) | galaxy-premium-7337475394524cf6dbe7.png | [IPTV-org exact ID: GalaxyPremium.id](https://i.imgur.com/oGKtYYG.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| International-Playlist.m3u | 5905 | iFilm Persian | (missing) | ifilm-persian-ec5dbb3a2a50944e9fe3.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| International-Playlist.m3u | 5907 | Indiyskoye Kino | (missing) | indiyskoye-kino-7582f40712.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| International-Playlist.m3u | 5909 | KinoHit | (missing) | kinohit-5a08ec1395.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| International-Playlist.m3u | 6181 | Enter 10 Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
+| International-Playlist.m3u | 6183 | Enter 10 Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 
 ## Quality rule
 

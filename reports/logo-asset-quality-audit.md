@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-23T03:53:22+00:00**
+Generated: **2026-11-23T03:56:05+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
-- International-Playlist.m3u SHA-256: **4d1714392688e4b51fbc037a9b3b2fa8be4e9e85063655286d379310bc962aa6**
+- International-Playlist.m3u SHA-256: **20fd7e1bc3374c00665a47e2f14200768e5639e61dbcdc4a9e6dde33024242b8**
 
 ## Summary
 
@@ -15,10 +15,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
-- Raster/SVG assets with short side under 64 px: **146**
-- Exact-byte duplicate asset clusters: **741**
-- Playlist references whose asset stem differs from the normalized channel name: **1582**
-- Unreferenced image assets immediately inside logos/: **965** (not deleted; other tooling or playlists may use them)
+- Raster/SVG assets with short side under 64 px: **147**
+- Exact-byte duplicate asset clusters: **745**
+- Playlist references whose asset stem differs from the normalized channel name: **1593**
+- Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -85,6 +85,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | filmazia.png | 128×23 | no |
 | filmuadrama-1080p.png | 512×49 | yes |
 | futbol-fe33fdb4361de22aa1cb.png | 132×55 | no |
+| galaxy-premium-7337475394524cf6dbe7.png | 132×37 | no |
 | gazi-tv.png | 128×53 | yes |
 | girlfriends-films.png | 130×20 | yes |
 | go-tv-720p.png | 128×33 | yes |
@@ -404,6 +405,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/cmt-equal-play-720p.png, logos/international/cmt-equal-play-720p.png
 - logos/cmt.png, logos/unused/cmtv-720p-5bf23d265d.png
 - logos/cnd-film-middle-school-channel.png, logos/international/cnd-film-middle-school-channel.png
+- logos/code-fashion-tv-1080p-eba84a3007.png, logos/unused/code-fashion-tv-1080p-eba84a3007.png
 - logos/colors-super-7ff1b18f5f.png, logos/international/colors-super-396p.png
 - logos/company-tv-720p.png, logos/international/company-tv-720p.png
 - logos/conecta-tv-720p.png, logos/international/conecta-tv-720p.png
@@ -466,6 +468,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/exa-tv.png, logos/international/exa-tv.png
 - logos/fabulosa-estereo-100-5-fm-720p.png, logos/international/fabulosa-estereo-100-5-fm-720p.png
 - logos/fan-1080p.png, logos/international/fan-1080p.png
+- logos/fashiontv-europe-73cb96c4010c448b6740.png, logos/fashiontv-russia-73cb96c4010c448b6740.png
+- logos/fashiontv-paris-l-original-1080p-ccf00a0d8f.png, logos/unused/fashiontv-paris-l-original-1080p-ccf00a0d8f.png
+- logos/fashiontv-secrets-1080p-e90e2c8d5b.png, logos/unused/fashiontv-secrets-1080p-e90e2c8d5b.png
 - logos/feniks-plus-kino-576p.png, logos/international/feniks-plus-kino-576p.png
 - logos/fifa-plus-french-68fe723cf8e2f7593bac.png, logos/fifa-plus-german-68fe723cf8e2f7593bac.png, logos/fifa-plus-hispanic-america-68fe723cf8e2f7593bac.png, logos/fifa-plus-italy-68fe723cf8.png, logos/fifa-plus-portuguese-68fe723cf8e2f7593bac.png, logos/fifa-plus-spain-68fe723cf8e2f7593bac.png, logos/fifa-plus-united-states-68fe723cf8e2f7593bac.png
 - logos/fightbox-45d2349fcb.png, logos/fightbox-poland-45d2349fcb018c8b4aa8.png
@@ -2065,6 +2070,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ekhon TV | ekhon-tv.png | News |
 | International-Playlist.m3u | Jamuna TV | jamuna-tv.png | News |
 | International-Playlist.m3u | Somoy TV | somoy-tv.png | News |
+| International-Playlist.m3u | Code Fashion TV (1080p) | code-fashion-tv-1080p-eba84a3007.png | Fashion TV |
+| International-Playlist.m3u | FashionTV (India) (576p) | fashiontv-india-576p.png | Fashion TV |
+| International-Playlist.m3u | FashionTV (Russia) (1080p) | fashiontv-russia-73cb96c4010c448b6740.png | Fashion TV |
+| International-Playlist.m3u | FashionTV Europe (1080p) | fashiontv-europe-73cb96c4010c448b6740.png | Fashion TV |
+| International-Playlist.m3u | FashionTV Paris L'Original (1080p) | fashiontv-paris-l-original-1080p-ccf00a0d8f.png | Fashion TV |
+| International-Playlist.m3u | FashionTV Secrets (1080p) | fashiontv-secrets-1080p-e90e2c8d5b.png | Fashion TV |
 | International-Playlist.m3u | Disney Channel India | disney-channel-india.png | Kids |
 | International-Playlist.m3u | God Stands Kids Club TV | god-stands-kids-club-tv.png | Kids |
 | International-Playlist.m3u | God Stands Kids Club TV Arabic | god-stands-kids-club-tv-arabic.png | Kids |
@@ -2424,6 +2435,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
+| International-Playlist.m3u | Fashion TV | fashion-tv-aa7f9461cf.png | Review |
+| International-Playlist.m3u | FMH Movies (1080p) | fmh-movies-0d9b9c72dc198e5613eb.png | New Channels |
+| International-Playlist.m3u | Galaxy (720p) | galaxy-49d13dbaba825105696f.png | New Channels |
+| International-Playlist.m3u | Galaxy Premium (720p) | galaxy-premium-7337475394524cf6dbe7.png | New Channels |
+| International-Playlist.m3u | Kinosvidanie (1080p) | kinosvidanie-576p.png | New Channels |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |

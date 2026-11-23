@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "policy": "Planning only. No assets are deleted or moved. A candidate requires a same-named root-level exact-byte copy and no basename/path mention in scanned runtime text. Dynamic references may still exist.",
-  "exact_duplicate_groups": 741,
-  "exact_duplicate_files": 1406,
+  "exact_duplicate_groups": 745,
+  "exact_duplicate_files": 1410,
   "low_risk_review_candidates": [
     {
       "candidate": "logos/unused/filmrise-forensic-files-720p-56ce9d346d.png",
@@ -68,6 +68,20 @@
       "requires_review": true
     },
     {
+      "candidate": "logos/unused/fashiontv-paris-l-original-1080p-ccf00a0d8f.png",
+      "retain": "logos/fashiontv-paris-l-original-1080p-ccf00a0d8f.png",
+      "sha256": "7f9979e3ee84aae6e62bdfcffaee944457e4829ab70b887c223fbee78eb17ebf",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/fashiontv-secrets-1080p-e90e2c8d5b.png",
+      "retain": "logos/fashiontv-secrets-1080p-e90e2c8d5b.png",
+      "sha256": "82c46def8efec888fe7475e2aafdb03b3f9711efc73fd0ec920dc4a94380d557",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
       "candidate": "logos/unused/movies-480p-741fd393f0.png",
       "retain": "logos/movies-480p-741fd393f0.png",
       "sha256": "891bfd1cb57ec056124413ecf8e8d464b32b4d9c8da3461aed5ccae8cb221ef6",
@@ -99,6 +113,13 @@
       "candidate": "logos/unused/hbo-hits-1080p-27da015c1f.png",
       "retain": "logos/hbo-hits-1080p-27da015c1f.png",
       "sha256": "ac9f7338ded899cec1d72e605425dc03ea19b74bb7324a223577719ffcd9c689",
+      "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
+      "requires_review": true
+    },
+    {
+      "candidate": "logos/unused/code-fashion-tv-1080p-eba84a3007.png",
+      "retain": "logos/code-fashion-tv-1080p-eba84a3007.png",
+      "sha256": "aeee86f2e170d4acc4f30d02d0ad25cf88e0bc0f5a87fb8dadba0d1bc8f04ef3",
       "reason": "same-named root-level exact-byte copy; no runtime basename/path mention found",
       "requires_review": true
     },
