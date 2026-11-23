@@ -461,7 +461,7 @@ def main():
    if len(backup_rows)>=MAX_NEW_BACKUPS:continue
    target="New Backups"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
   else:
-   if len(new_rows)+len(adult_rows)>=MAX_NEW_CHANNELS:continue
+   if len(new_rows)+len(adult_rows)+len(fashion_rows)>=MAX_NEW_CHANNELS:continue
    target=base if base in {"Adult", "Fashion TV"} else "New Channels"
    if target=="New Channels" and code in ISO_CODES and code not in {"BD","IN","PK"}:
     if per_country[code]>=MAX_NEW_PER_GROUP:continue
