@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-23T01:28:31+00:00**
+Generated: **2026-11-23T08:00:10+00:00**
 
-- Active Bangladesh playlist identities: **84**
+- Active Bangladesh playlist identities: **85**
 - Identities with a retained source mapping: **5**
-- Identities with usable current/future schedules: **3**
-- Identities without a source mapping: **79**
+- Identities with usable current/future schedules: **4**
+- Identities without a source mapping: **80**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -14,6 +14,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 
 | Source label | Matched Bangladesh IDs | IDs with usable current/future schedules | Source health | Error / note |
 |---|---:|---:|---|---|
+| https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | OK | - |
 | iptv-org/epg (targeted build-time guide) | 2 | 2 | OK | - |
 | Maasranga official weekly grid (undated) | 1 | 1 | OK | - |
 
@@ -22,8 +23,8 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; rtvbd.tv/live.php: URLError; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry |
-| FAILED | https://migrate.btvlive.gov.bd/channel/BTV | 0 | 0 | 0 | BTV official programme guide contained no programme cards |
-| NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 229 | 0 | 0 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 72 | - |
+| FAILED | M3U4U XMLTV (private Actions secret) | 0 | 0 | 0 | details suppressed for private source |
 
 ## Unmapped Bangladesh identities
 
@@ -37,6 +38,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Ayna TV | custom.bdix.ayna-tv | NO_GUIDE_HIT |
 | Bangla TV | BanglaTV.bd | NO_GUIDE_HIT |
 | Bangla Vision | BanglaVision.bd | NO_GUIDE_HIT |
+| Banglar Kontho 24 | BanglarKontho24.bd@SD | NO_GUIDE_HIT |
 | Bijoy TV | BijoyTV.bd | NO_GUIDE_HIT |
 | Boishakhi TV | BoishakhiTV.bd | NO_GUIDE_HIT |
 | BTV Chattogram | BTVChattogram.bd | NO_GUIDE_HIT |

@@ -1,14 +1,14 @@
 # Strict Unmapped EPG Audit
 
-Generated: **2026-11-23T01:28:28+00:00**
+Generated: **2026-11-23T08:00:06+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
 Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
 
-- Unmapped active channel identities reviewed: **1329**
+- Unmapped active channel identities reviewed: **1501**
 - Unmapped identities with exact/region-normalized schedule candidates: **0**
 - Candidate rows: **0**
-- Unmapped identities without an exact schedule-backed candidate: **1329**
+- Unmapped identities without an exact schedule-backed candidate: **1501**
 
 ## Exact candidates for manual review
 
@@ -17,13 +17,13 @@ Bangladesh-group channels are not name-matched here. Their domestic schedules re
 
 ## Bangladesh-specific review
 
-- Bangladesh-group IDs without a mapping: **75**
+- Bangladesh-group IDs without a mapping: **76**
 The nasimali/epg-auto diaspora guide uses numeric Sky channel IDs with generic display names such as Channel 3914; channel identity is never inferred from list ordering. Explicit sources are used for Iqra Bangla, ATN Bangla UK, NTV Europe, Channel S UK, and Deen TV. These mappings do not imply a general domestic Bangladesh EPG source.
 No dependable public, current XMLTV feed for the domestic Bangladesh channel set was verified. NTV Europe and Channel S UK use dedicated UK diaspora channel feeds; the remaining domestic channels stay unmapped until a trustworthy exact-ID schedule source is verified. No schedule is fabricated from stale static schedules or unrelated foreign channels.
 
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **edc2e1edbb195131dceb66cfedc7a3d7d3fcf9901d4a7c41066b9f052a4e3e0b**
-- International-Playlist.m3u SHA-256: **35fbe097fb9a4a414f460b8c37bc76be8e5766eef13a71d278e2e05500834b16**
+- IPTV-Playlist.m3u SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
+- International-Playlist.m3u SHA-256: **8b19033950c617961164dff6f8a1974925123924df2ce91cfba8bc1bee566397**
 
