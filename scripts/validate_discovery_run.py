@@ -144,14 +144,21 @@ def local_logo_path(logo):
     return None
 
 def find_logo(name):
+    """Return a logo only when exactly one authentic local asset matches the full channel name."""
     key = norm_key(name)
     if not key or not LOGOS.exists():
         return None
-    for path in LOGOS.rglob("*"):
-        if path.is_file() and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg"} and "unused" not in path.parts and not discovery.is_blocked_logo_basename(path.name):
-            if norm_key(path.stem) == key:
-                return "logos/" + str(path.relative_to(LOGOS)).replace("\\", "/")
-    return None
+    matches = [
+        path for path in LOGOS.rglob("*")
+        if path.is_file()
+        and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg"}
+        and "unused" not in {part.casefold() for part in path.parts}
+        and not discovery.is_blocked_logo_basename(path.name)
+        and norm_key(path.stem) == key
+    ]
+    if len(matches) != 1:
+        return None
+    return "logos/" + str(matches[0].relative_to(LOGOS)).replace("\\", "/")
 
 def set_logo(extinf, logo):
     if re.search(r'\btvg-logo="[^"]*"', extinf):
