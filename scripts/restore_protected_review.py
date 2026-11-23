@@ -14,7 +14,7 @@ import unicodedata
 from collections import Counter
 from pathlib import Path
 
-from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS, PERMANENTLY_REMOVED_NAMES
+from permanent_removals import AUTHORIZED_ORPHAN_BACKUP_REMOVALS, PERMANENTLY_REMOVED_NAMES, AUTHORIZED_PRIMARY_CHANNEL_REMOVALS
 from stream_url_identity import stream_url_key
 from urllib.parse import urlsplit
 
@@ -244,9 +244,27 @@ def is_authorized_duplicate_backup(info: str, url: str) -> bool:
     )
 
 
+
+def is_authorized_primary_channel_removal(info: str, url: str) -> bool:
+    """Authorize only the exact owner-selected primary channel row."""
+    a = attrs(info)
+    channel_ids = {
+        value.strip()
+        for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
+        if value.strip()
+    }
+    group = a.get("group-title", "").strip()
+    return any(
+        channel_id in AUTHORIZED_PRIMARY_CHANNEL_REMOVALS
+        and group == AUTHORIZED_PRIMARY_CHANNEL_REMOVALS[channel_id][1]
+        and stream_url_key(url) == stream_url_key(AUTHORIZED_PRIMARY_CHANNEL_REMOVALS[channel_id][0])
+        for channel_id in channel_ids
+    )
+
 def is_authorized_removal(info: str, url: str) -> bool:
     return (
-        is_permanently_removed(info)
+        is_authorized_primary_channel_removal(info, url)
+        or is_permanently_removed(info)
         or is_authorized_duplicate_backup(info, url)
         or is_authorized_orphan_backup_removal(info, url)
     )
