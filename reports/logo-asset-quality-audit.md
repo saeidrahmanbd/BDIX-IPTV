@@ -1,23 +1,23 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-23T03:40:02+00:00**
+Generated: **2026-11-23T03:43:50+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **b0f7fb7056bec0e61e50437f4ce8070b5c6a05169d030fc162bab5d1ca59f9da**
+- IPTV-Playlist.m3u SHA-256: **6ef85aaa3946afee27fd18d4b2e02fb4d4d611f9f4c37856f7e5ce43e51e0a49**
 - International-Playlist.m3u SHA-256: **4d1714392688e4b51fbc037a9b3b2fa8be4e9e85063655286d379310bc962aa6**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **146**
 - Exact-byte duplicate asset clusters: **741**
-- Playlist references whose asset stem differs from the normalized channel name: **1572**
+- Playlist references whose asset stem differs from the normalized channel name: **1576**
 - Unreferenced image assets immediately inside logos/: **966** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1228,6 +1228,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Sony Max (720p) | sony-max.png | New Backups |
 | IPTV-Playlist.m3u | Sony Sports Ten 1 (576p) | sony-sports-ten-1.png | New Backups |
 | IPTV-Playlist.m3u | Unite8 Sports 1 HD (1080p) | unite8-sports-1-c39b236b6693e186f49c.png | New Backups |
+| IPTV-Playlist.m3u | History TV18 HD (1080p) [Geo-blocked] | history-tv18-hd-1080p-geo-blocked.png | New Backups |
+| IPTV-Playlist.m3u | INWILD (1080p) | inwild.png | New Backups |
+| IPTV-Playlist.m3u | MTV (India) (396p) | mtv-india-hd-720p.png | New Backups |
+| IPTV-Playlist.m3u | Safari TV (576p) | safari-tv.png | New Backups |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |

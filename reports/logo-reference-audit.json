@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5243,
-  "all_explicitly_referenced_logo_files": 2503,
-  "runtime_referenced_logo_files": 2501,
-  "playlist_referenced_logo_files": 2474,
-  "apparently_unreferenced_by_any_text_file": 2740,
-  "apparently_unreferenced_by_runtime_sources": 2742,
+  "all_explicitly_referenced_logo_files": 2504,
+  "runtime_referenced_logo_files": 2502,
+  "playlist_referenced_logo_files": 2475,
+  "apparently_unreferenced_by_any_text_file": 2739,
+  "apparently_unreferenced_by_runtime_sources": 2741,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -11431,7 +11431,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/bollywood-old.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -14845,6 +14844,9 @@
     "logos/international/greenentertainment.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/history-tv18-hd-1080p-geo-blocked.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/international/introuble-1080p.png": [
       "IPTV-Playlist.m3u",
@@ -22973,7 +22975,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/bollywood-old.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26389,6 +26390,9 @@
     "logos/international/greenentertainment.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/history-tv18-hd-1080p-geo-blocked.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/international/introuble-1080p.png": [
       "IPTV-Playlist.m3u",
@@ -33873,7 +33877,6 @@
     "logos/international/hero-720p-not-24-7.png",
     "logos/international/hero.png",
     "logos/international/hidayattv.png",
-    "logos/international/history-tv18-hd-1080p-geo-blocked.png",
     "logos/international/hit-hd-1080p.png",
     "logos/international/hit-mix-music.png",
     "logos/international/hits-360-tv-720p-not-24-7.png",
