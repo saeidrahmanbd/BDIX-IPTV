@@ -659,6 +659,9 @@ def apply_results(text, results, history, check_date):
         rec["tvg_id"] = a.get("tvg-id") or a.get("channel-id", "")
         rec["country"] = a.get("tvg-country", "")
         event = {
+            # Stable one-way identity for internal reconciliation; never publish
+            # raw stream URLs or credentials in reports/history.
+            "stream_key": key,
             "name": name,
             "tvg_id": rec.get("tvg_id", ""),
             "original_group": rec.get("original_group", current),
@@ -690,6 +693,125 @@ def apply_results(text, results, history, check_date):
     validate_metadata_preservation(text, updated_text, removed_urls)
     validate_rendered_playlist(updated_text)
     return updated_text, history, events
+
+
+def validate_recovery_accounting(source_text, updated_text, events, report):
+    """Reconcile successful Review recoveries against playlist deltas and report rows."""
+    recovery_actions = {
+        "restored-to-primary", "restored-to-backup", "restored-to-discovery-queue",
+    }
+    protected_actions = {"restored-protected-adult"}
+    retired_actions = {"removed-after-three-failed-days"}
+
+    def group_index(playlist_text):
+        _, parsed = parse(playlist_text)
+        index = {}
+        for block in parsed:
+            entry_urls = urls(block)
+            if len(entry_urls) != 1:
+                raise ValueError("Recovery accounting requires exactly one URL per row")
+            key = stream_key(block[0], entry_urls[0])
+            if key in index:
+                raise ValueError("Recovery accounting found a duplicate stream identity")
+            index[key] = group_of(block[0])
+        return index
+
+    before, after = group_index(source_text), group_index(updated_text)
+    recovered_events = [e for e in events if e.get("action") in recovery_actions]
+    protected_events = [e for e in events if e.get("action") in protected_actions]
+    retired_events = [e for e in events if e.get("action") in retired_actions]
+
+    for event in recovered_events:
+        key = event.get("stream_key")
+        if event.get("state") != "ok":
+            raise ValueError("A reported recovered stream does not have a successful media probe")
+        if str(event.get("group_before", "")).casefold() != REVIEW.casefold():
+            raise ValueError("A reported recovered stream did not originate in Review")
+        if not key or key not in before or key not in after:
+            raise ValueError("A reported recovered stream is missing from the before/after playlist")
+        if before[key].casefold() != REVIEW.casefold():
+            raise ValueError("A reported recovered stream was not in Review before the run")
+        if after[key] != event.get("group_after") or after[key].casefold() == REVIEW.casefold():
+            raise ValueError("A reported recovery destination does not match the published playlist")
+
+    for event in protected_events:
+        key = event.get("stream_key")
+        if not key or key not in before or key not in after:
+            raise ValueError("A protected Adult restoration is missing from the before/after playlist")
+        if before[key].casefold() != REVIEW.casefold() or after[key].casefold() != "adult":
+            raise ValueError("A protected Adult restoration does not match the playlist change")
+
+    for event in retired_events:
+        key = event.get("stream_key")
+        if not key or key not in before or key in after:
+            raise ValueError("A retired stream does not match the playlist removal")
+
+    recovered_keys = {e["stream_key"] for e in recovered_events}
+    protected_keys = {e["stream_key"] for e in protected_events}
+    retired_keys = {e["stream_key"] for e in retired_events}
+    actual_departures = {
+        key for key, group in before.items()
+        if group.casefold() == REVIEW.casefold()
+        and (key not in after or after[key].casefold() != REVIEW.casefold())
+    }
+    if actual_departures != recovered_keys | protected_keys | retired_keys:
+        raise ValueError("Review playlist changes are not fully accounted for")
+
+    metric = f"- Restored from Review to primary/Backup/discovery queue: **{len(recovered_events)}**"
+    if metric not in report:
+        raise ValueError("Published recovery total does not match the recovery event count")
+    section = report.split("## Recovered streams", 1)
+    if len(section) != 2:
+        raise ValueError("Published report is missing the Recovered streams section")
+    listed = section[1].split("\n## ", 1)[0]
+    report_rows = []
+    for line in listed.splitlines():
+        match = re.fullmatch(r"- \*\*(.*?)\*\* — restored to \*\*(.*?)\*\*", line.strip())
+        if match:
+            report_rows.append((match.group(1), match.group(2)))
+    expected_rows = [(e["name"], e["group_after"]) for e in recovered_events]
+    if Counter(report_rows) != Counter(expected_rows):
+        raise ValueError("Published recovered-stream list does not match verified recovery events")
+    return {"recovered": len(recovered_events), "protected_restored": len(protected_events), "retired": len(retired_events)}
+
+
+def validate_published_recovery_report(playlist_text, report_text, history):
+    """Validate recovery rows against the final post-reorganization playlist and probe history."""
+    date_match = re.search(r"- Bangladesh check date: \*\*(\d{4}-\d{2}-\d{2})\*\*", report_text)
+    if not date_match:
+        raise ValueError("Published health report is missing its Bangladesh check date")
+    check_date = date_match.group(1)
+    section = report_text.split("## Recovered streams", 1)
+    if len(section) != 2:
+        raise ValueError("Published report is missing the Recovered streams section")
+    body = section[1].split("\n## ", 1)[0]
+    rows = []
+    for line in body.splitlines():
+        match = re.fullmatch(r"- \*\*(.*?)\*\* — restored to \*\*(.*?)\*\*", line.strip())
+        if match:
+            rows.append((match.group(1), match.group(2)))
+    metric = f"- Restored from Review to primary/Backup/discovery queue: **{len(rows)}**"
+    if metric not in report_text:
+        raise ValueError("Published recovery total does not match its recovered-stream list")
+
+    _, blocks = parse(playlist_text)
+    final_rows = Counter()
+    for block in blocks:
+        name, group = name_of(block[0]), group_of(block[0])
+        entry_urls = urls(block)
+        if len(entry_urls) != 1:
+            continue
+        key = stream_key(block[0], entry_urls[0])
+        record = history.get("entries", {}).get(key, {})
+        if record.get("last_status") == "ok" and record.get("last_ok_date") == check_date:
+            final_rows[(name, group)] += 1
+    for row in rows:
+        if final_rows[row] <= 0:
+            raise ValueError(
+                f"Recovered report row is absent from the final playlist or lacks a successful probe: {row[0]}"
+            )
+        final_rows[row] -= 1
+    return len(rows)
 
 
 def build_report(events, history, check_date, generated, total):
@@ -780,20 +902,24 @@ def main():
     validate_probe_batch(results)
     generated = datetime.now(timezone.utc).isoformat(timespec="seconds")
     updated, history, events = apply_results(text, results, load_history(), check_date)
+    report = build_report(events, history, check_date, generated, len(blocks))
+    accounting = validate_recovery_accounting(text, updated, events, report)
+    # Publish only after playlist/report/event reconciliation succeeds.
     PLAYLIST.write_text(updated, encoding="utf-8")
     HISTORY.parent.mkdir(parents=True, exist_ok=True)
     HISTORY.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     REPORT.parent.mkdir(parents=True, exist_ok=True)
-    REPORT.write_text(build_report(events, history, check_date, generated, len(blocks)), encoding="utf-8")
+    REPORT.write_text(report, encoding="utf-8")
     print(
         "International stream health: "
         f"checked={len(blocks)} "
         f"ok={sum(e['state']=='ok' for e in events)} "
         f"failed={sum(e['state']=='fail' for e in events)} "
         f"inconclusive={sum(e['state']=='inconclusive' for e in events)} "
-        f"reviewed={sum(e['action']=='moved-to-review' for e in events)} "
-        f"recovered={sum(e['action']=='restored' for e in events)} "
-        f"removed={sum(e['action']=='removed-after-three-failed-days' for e in events)}"
+        f"reviewed={sum(e['action'] in {'moved-to-review', 'moved-to-review-after-inconclusive-streak'} for e in events)} "
+        f"recovered={accounting['recovered']} "
+        f"protected_restored={accounting['protected_restored']} "
+        f"removed={accounting['retired']}"
     )
 
 

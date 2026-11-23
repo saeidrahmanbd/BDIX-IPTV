@@ -29,6 +29,72 @@ class InternationalStreamHealthTests(unittest.TestCase):
             + entry
         )
 
+    def test_recovery_accounting_matches_successful_probe_playlist_and_report(self):
+        source = self.playlist(row(name="Recovered Movie", group="Review"))
+        info, url = health.parse(source)[1][0][0], "https://example.test/live/test.m3u8"
+        key = health.stream_key(info, url)
+        history = {"entries": {key: {
+            "name": "Recovered Movie", "tvg_id": "testmovie.us", "country": "US",
+            "original_group": "International Movies", "auto_review": True,
+            "consecutive_failures": 1, "last_checked_date": "2026-11-07",
+            "last_status": "fail", "removed": False,
+        }}, "removed": []}
+        updated, history, events = apply(source, "ok", history, "2026-11-08", status=200, reason="HLS media segment reachable")
+        report = health.build_report(events, history, "2026-11-08", "2026-11-08T00:00:00+00:00", 1)
+        accounting = health.validate_recovery_accounting(source, updated, events, report)
+        self.assertEqual(accounting["recovered"], 1)
+        self.assertIn("Restored from Review to primary/Backup/discovery queue: **1**", report)
+        self.assertIn("**Recovered Movie** — restored to **International Movies**", report)
+
+    def test_recovery_accounting_rejects_non_successful_probe(self):
+        source = self.playlist(row(name="Not Verified", group="Review"))
+        info, url = health.parse(source)[1][0][0], "https://example.test/live/test.m3u8"
+        key = health.stream_key(info, url)
+        _, history, events = apply(source, "fail", {}, "2026-11-08", status=404, reason="HTTP 404")
+        event = dict(events[0], stream_key=key, action="restored-to-primary",
+                     group_before="Review", group_after="International Movies")
+        report = health.build_report([event], history, "2026-11-08", "2026-11-08T00:00:00+00:00", 1)
+        with self.assertRaisesRegex(ValueError, "successful media probe"):
+            health.validate_recovery_accounting(source, source, [event], report)
+
+    def test_recovery_accounting_rejects_report_count_or_destination_drift(self):
+        source = self.playlist(row(name="Counted Movie", group="Review"))
+        info, url = health.parse(source)[1][0][0], "https://example.test/live/test.m3u8"
+        key = health.stream_key(info, url)
+        history = {"entries": {key: {
+            "name": "Counted Movie", "tvg_id": "testmovie.us", "country": "US",
+            "original_group": "International Movies", "auto_review": True,
+            "consecutive_failures": 1, "last_checked_date": "2026-11-07",
+            "last_status": "fail", "removed": False,
+        }}, "removed": []}
+        updated, history, events = apply(source, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
+        report = health.build_report(events, history, "2026-11-08", "2026-11-08T00:00:00+00:00", 1)
+        with self.assertRaisesRegex(ValueError, "Published recovery total"):
+            health.validate_recovery_accounting(source, updated, events, report.replace("Restored from Review to primary/Backup/discovery queue: **1**", "Restored from Review to primary/Backup/discovery queue: **0**"))
+        wrong_destination = updated.replace('group-title="International Movies"', 'group-title="Review"')
+        with self.assertRaisesRegex(ValueError, "destination"):
+            health.validate_recovery_accounting(source, wrong_destination, events, report)
+
+    def test_published_recovery_report_matches_final_playlist_and_probe_history(self):
+        source = self.playlist(row(name="Final Movie", group="Review"))
+        info, url = health.parse(source)[1][0][0], "https://example.test/live/test.m3u8"
+        key = health.stream_key(info, url)
+        history = {"entries": {key: {
+            "name": "Final Movie", "tvg_id": "testmovie.us", "country": "US",
+            "original_group": "International Movies", "auto_review": True,
+            "consecutive_failures": 1, "last_checked_date": "2026-11-07",
+            "last_status": "fail", "removed": False,
+        }}, "removed": []}
+        updated, history, events = apply(source, "ok", history, "2026-11-08", status=200, reason="Media bytes received")
+        report = health.build_report(events, history, "2026-11-08", "2026-11-08T00:00:00+00:00", 1)
+        self.assertEqual(health.validate_published_recovery_report(updated, report, history), 1)
+        wrong_group = updated.replace('group-title="International Movies"', 'group-title="Review"')
+        with self.assertRaisesRegex(ValueError, "absent from the final playlist"):
+            health.validate_published_recovery_report(wrong_group, report, history)
+        bad_history = {"entries": {key: dict(history["entries"][key], last_status="inconclusive")}}
+        with self.assertRaisesRegex(ValueError, "absent from the final playlist"):
+            health.validate_published_recovery_report(updated, report, bad_history)
+
     def test_report_summarizes_inconclusive_reasons_and_http_statuses(self):
         events = [
             {"state": "inconclusive", "status": 403, "reason": "HTTP 403", "action": "none", "name": "Example 403"},
