@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T03:41:00+00:00",
+  "generated": "2026-11-23T04:03:30+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -4444,6 +4444,76 @@
       "primary": 1,
       "backup": 0
     },
+    "fashionbox": {
+      "names": [
+        "FashionBox"
+      ],
+      "ids": [
+        "fashionbox.nl@sd"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "fashionlifestyle": {
+      "names": [
+        "Fashion&LifeStyle"
+      ],
+      "ids": [
+        "fashionlifestyle.ru@sd"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "fashiontv": {
+      "names": [
+        "FashionTV"
+      ],
+      "ids": [
+        "fashiontv.ru@sd"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "fashiontvparisloriginal": {
+      "names": [
+        "FashionTV Paris L'Original"
+      ],
+      "ids": [
+        "fashiontvparisloriginal.fr@sd"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "fashiontvsecrets": {
+      "names": [
+        "FashionTV Secrets"
+      ],
+      "ids": [
+        "fashiontvsecrets.fr@hd"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "fast1": {
       "names": [
         "Fast1"
@@ -4695,6 +4765,20 @@
       ],
       "groups": [
         "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "globalfashionchannel": {
+      "names": [
+        "Global Fashion Channel"
+      ],
+      "ids": [
+        "globalfashionchannel.us@sd"
+      ],
+      "groups": [
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -5010,16 +5094,19 @@
     },
     "historytv18": {
       "names": [
-        "History TV"
+        "History TV",
+        "History TV18 HD (1080p) [Geo-blocked]"
       ],
       "ids": [
+        "historytv18.in@hd",
         "historytv18.in@sd"
       ],
       "groups": [
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "houseofcrime": {
@@ -5210,16 +5297,19 @@
     },
     "inwild": {
       "names": [
+        "INWILD (1080p)",
         "InWild"
       ],
       "ids": [
-        "inwild.nl"
+        "inwild.nl",
+        "inwild.nl@sd"
       ],
       "groups": [
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "inwonder": {
@@ -6529,6 +6619,7 @@
     },
     "mtv": {
       "names": [
+        "MTV (India) (396p)",
         "MTV India"
       ],
       "ids": [
@@ -6537,10 +6628,11 @@
       ],
       "groups": [
         "Indian Music",
+        "New Backups",
         "Review"
       ],
-      "streams": 3,
-      "primary": 3,
+      "streams": 4,
+      "primary": 4,
       "backup": 0
     },
     "musicbangla": {
@@ -8232,16 +8324,18 @@
     },
     "safaritv": {
       "names": [
-        "Safari TV"
+        "Safari TV",
+        "Safari TV (576p)"
       ],
       "ids": [
         "safaritv.in@sd"
       ],
       "groups": [
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "sagamusic": {

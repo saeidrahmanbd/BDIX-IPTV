@@ -1,38 +1,38 @@
 # IPTV Playlist Audit
-Generated: **2026-11-23T03:40:02.972273+00:00**
-Source playlist SHA-256: **b0f7fb7056bec0e61e50437f4ce8070b5c6a05169d030fc162bab5d1ca59f9da**
+Generated: **2026-11-23T04:02:21.637461+00:00**
+Source playlist SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1345**
-- Unique channel IDs: **819**
-- IDs with multiple streams: **258**
+- Playlist entries: **1355**
+- Unique channel IDs: **827**
+- IDs with multiple streams: **259**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-queue same-ID name variants (review): **1**
-- Cross-queue normalized-name/different-ID groups (review): **19**
+- Cross-queue normalized-name/different-ID groups (review): **20**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **6**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1345**
+- Logo references checked: **1355**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **5**
-- Primary channel-number collisions: **0**
-- Primary channel-number sequence issues (review only): **447**
+- Primary channel-number collisions: **5**
+- Primary channel-number sequence issues (review only): **7**
 - Primary entries missing channel numbers: **8**
 - Primary entries missing tvg-country: **0**
-- Primary entries missing tvg-language: **0**
+- Primary entries missing tvg-language: **6**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
-- Alphabetical ordering issues: **0**
+- Alphabetical ordering issues: **1**
 - Suspicious URL credentials/syntax: **0**
 - Unverified provider playback routes (review only): **0**
 - Signed/tokenized stream URLs: **11**
@@ -43,10 +43,11 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
 - Active primary entries missing tvg-country: **0**
-- Active primary entries missing tvg-language: **0**
+- Active primary entries missing tvg-language: **6**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
+| International | 0 | 6 |
 
 ## Review Queue Country Verification
 
@@ -70,9 +71,10 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Same normalized name: ETV Josh [etvjosh.in] (Indian Entertainment); ETV Josh [etvjosh.in@hd] (Indian Music)
 - Same normalized name: ETV Music [etvmusic.in] (Indian Music); ETV Music [etvmusic.in@sd] (Indian Music)
 - Same normalized name: Eurosport [eurosport.fr@asia] (Review); Eurosport [eurosport.in@hd] (Review); Eurosport [eurosport.in@sd] (Review)
+- Same normalized name: InWild [inwild.nl] (Documentary & Wildlife); INWILD (1080p) [inwild.nl@sd] (New Backups)
 - Same normalized name: Jalsha Movies [jalshamovies.in@sd] (Indian Bangla); Jalsha Movies [jalshamovies.in@sd] (Review); Jalsha Movies [star.jalsha.movies.in] (Review)
 - Same normalized name: Movies Now [moviesnow.in@hd] (Backup); Movies Now [moviesnow.in@hd] (Indian Movies); Movies Now+ [moviesnowplus.in@hd] (International)
-- Same normalized name: MTV India [mtv.in@hd] (Indian Music); MTV India [mtv.in@sd] (Indian Music); MTV India [mtv.in@sd] (Review)
+- Same normalized name: MTV India [mtv.in@hd] (Indian Music); MTV (India) (396p) [mtv.in@sd] (New Backups); MTV India [mtv.in@sd] (Indian Music); MTV India [mtv.in@sd] (Review)
 - Same normalized name: Peace TV Bangla [peacetvbangla.ae] (Backup); Peace TV Bangla [peacetvbangla.ae] (Religious); Peace TV Bangla [peacetvbangla.ae@sd] (Review)
 - Same normalized name: &pictures HD [andpictures.in@hd] (Indian Movies); &pictures HD [andpictures.in@sd] (Review)
 - Same normalized name: Sony Max HD [sonymax.in@hd] (Indian Movies); Sony Max HD [sonymax.in@sd] (Review)
@@ -734,8 +736,9 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 ### moviesnow.in@hd (2 streams)
 - Movies Now — Indian Movies — http://27.124.71.27/Movies_Now/index.m3u8
 - Movies Now — Backup — http://116.90.120.149:8000/play/a11f/index.m3u8
-### mtv.in@sd (2 streams)
+### mtv.in@sd (3 streams)
 - MTV India — Indian Music — https://tvsen6.aynaott.com/mtv/index.m3u8
+- MTV (India) (396p) — New Backups — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:mtvindia.smil/playlist.m3u8
 - MTV India — Review — https://yupp-music.keralive.workers.dev/out/v1/a797c00cba954265ba781f92a57e2cf5/index.m3u8
 ### musicindia.in@sd (4 streams)
 - Music India — Indian Music — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
@@ -920,6 +923,9 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Ruposhi Bangla — Backup — http://103.175.73.12:8080/live/664/664_0.m3u8
 - Ruposhi Bangla — Backup — https://cdn.pishow.tv/ott/live/1039/master.m3u8
 - Ruposhi Bangla — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:rupashibangla.smil/playlist.m3u8
+### safaritv.in@sd (2 streams)
+- Safari TV — Documentary & Wildlife — https://mumt04.tangotv.in/m18aqlK4SAFARITV/index.m3u8
+- Safari TV (576p) — New Backups — https://fta.ektv.in/live/410/master.m3u8
 ### sanandatv.in (4 streams)
 - Sananda — Indian Bangla — http://27.124.71.27/Sun_Bangla/index.m3u8
 - Sananda — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8
@@ -1143,60 +1149,21 @@ These are review suggestions only. The audit does not merge identities, change c
 
 ## Primary Channel-Number Collisions
 
-None.
+- **0** — FashionBox, FashionTV Secrets
+- **618** — Fashion&LifeStyle, DD Sports
+- **619** — FashionTV, DraftKings Network
+- **620** — FashionTV Paris L'Original, Eleven Sports 1
+- **621** — Global Fashion Channel, Eleven Sports 2
 
 ## Primary Channel-Number Sequence (Review Only)
 
-- **Chhaya Chitram Telugu** — expected channel number 115, found 116
-- **Colors Cineplex** — expected channel number 116, found 117
-- **Colors Cineplex Bollywood** — expected channel number 117, found 118
-- **Colors Cineplex Superhits** — expected channel number 118, found 119
-- **Ekamra Cinema** — expected channel number 119, found 120
-- **Epic Bhojpuri** — expected channel number 120, found 121
-- **Epic Bhojpuri Digital** — expected channel number 121, found 122
-- **ETV Cinema** — expected channel number 122, found 123
-- **ETV Cinema** — expected channel number 123, found (missing)
-- **Movie Punjab** — expected channel number 140, found 141
-- **Movies Now** — expected channel number 141, found 142
-- **NH BollyFlix** — expected channel number 142, found 144
-- **NH Tamil Gold** — expected channel number 143, found 145
-- **NTV Malayalam** — expected channel number 144, found 146
-- **Oscar Movies Bhojpuri** — expected channel number 145, found 147
-- **Pitaara** — expected channel number 146, found 148
-- **Pocket Films** — expected channel number 147, found 149
-- **Public Movies** — expected channel number 148, found 150
-- **Raj Digital Plus** — expected channel number 149, found 151
-- **Roja Movies** — expected channel number 150, found 152
-- **Shemaroo Josh** — expected channel number 151, found 153
-- **Shubh Cinema TV** — expected channel number 152, found 154
-- **Soneri Cinema** — expected channel number 153, found 155
-- **Sony Max HD** — expected channel number 154, found 156
-- **Sony Wah** — expected channel number 155, found 159
-- **South Station** — expected channel number 156, found 160
-- **Star Gold 2** — expected channel number 157, found 161
-- **Star Gold HD** — expected channel number 158, found 162
-- **Star Gold Romance** — expected channel number 159, found 163
-- **Star Gold Select HD** — expected channel number 160, found 164
-- **Star Maa Movies** — expected channel number 161, found 165
-- **Star Movies (India) HD** — expected channel number 162, found 166
-- **Star Utsav Movies** — expected channel number 163, found 168
-- **Studio One+** — expected channel number 164, found 169
-- **Sun Gemini** — expected channel number 165, found 170
-- **Tabbar Hits** — expected channel number 166, found 171
-- **TamilVision-TV** — expected channel number 167, found 172
-- **Thalaa TV** — expected channel number 168, found 173
-- **The Movie Club** — expected channel number 169, found 174
-- **The Movie Club +2** — expected channel number 170, found 175
-- **Thendral TV** — expected channel number 171, found 176
-- **Tolly TV** — expected channel number 172, found 177
-- **Zee Action** — expected channel number 173, found 178
-- **Zee Cinema** — expected channel number 174, found 179
-- **Zee Classic** — expected channel number 175, found 180
-- **Zee Power HD** — expected channel number 176, found 181
-- **Zee Talkies HD** — expected channel number 177, found 182
-- **Zee Thirai HD** — expected channel number 178, found 183
-- **7S Music** — expected channel number 179, found 184
-- **7X Punjabi** — expected channel number 180, found 185
+- **FashionBox** — expected channel number a positive integer, found 0
+- **FashionTV Secrets** — expected channel number a positive integer, found 0
+- **Grand Cinema** — expected channel number a number above 621, found 427
+- **MNX** — expected channel number a number above 437, found 140
+- **Movies Now+** — expected channel number a number above 438, found 143
+- **Sony Movies** — expected channel number a number above 456, found 157
+- **Star Movies Select HD** — expected channel number a number above 457, found 167
 
 ## Malformed EXTINF Entries
 
@@ -1205,7 +1172,7 @@ None.
 ## Ordering
 
 Category block order: OK.
-Primary-category alphabetical/channel-number order: OK.
+- **International** — **Fashion&LifeStyle** appears after **FON Music**
 Backup/Review/New Channels/New Backups internal order is preserved for manual review and is intentionally not auto-enforced.
 
 ## Suspicious URLs
@@ -1240,7 +1207,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1345**
+- Healthy/local references: **1355**
 - External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair

@@ -1,17 +1,17 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-23T03:58:02+00:00**
+Generated: **2026-11-23T04:02:20+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
-- International-Playlist.m3u SHA-256: **20fd7e1bc3374c00665a47e2f14200768e5639e61dbcdc4a9e6dde33024242b8**
+- International-Playlist.m3u SHA-256: **c8d0e868397e33a5bc728a40a62c78133225516ea0baa1ccd64e49c56f55a6ad**
 
 ## Summary
 
-- Safe repairs applied this run: **0**
+- Safe repairs applied this run: **0 (read-only mode)**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
@@ -2198,6 +2198,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Eurosport 4K Czechia | eurosport-4k-czechia-1a359dc9dd.png | Review |
 | International-Playlist.m3u | Extrema Kids TV | extrema-kids-tv-not-24-7-0108df4648.png | Review |
 | International-Playlist.m3u | Fashion TV | fashion-tv-aa7f9461cf.png | Review |
+| International-Playlist.m3u | Fashion TV | fashion-tv-aa7f9461cf.png | Review |
 | International-Playlist.m3u | Fast&FunBox | fast-and-funbox-1109f0c4b7.png | Review |
 | International-Playlist.m3u | FIFA+ French | fifa-plus-french-68fe723cf8e2f7593bac.png | Review |
 | International-Playlist.m3u | FIFA+ German | fifa-plus-german-68fe723cf8e2f7593bac.png | Review |
@@ -2435,7 +2436,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
-| International-Playlist.m3u | Fashion TV | fashion-tv-aa7f9461cf.png | Review |
 | International-Playlist.m3u | FMH Movies (1080p) | fmh-movies-0d9b9c72dc198e5613eb.png | New Channels |
 | International-Playlist.m3u | Galaxy (720p) | galaxy-49d13dbaba825105696f.png | New Channels |
 | International-Playlist.m3u | Galaxy Premium (720p) | galaxy-premium-7337475394524cf6dbe7.png | New Channels |

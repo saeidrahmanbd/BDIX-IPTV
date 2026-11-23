@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-23T03:41:00+00:00**
-IPTV-Playlist.m3u SHA-256: **b0f7fb7056bec0e61e50437f4ce8070b5c6a05169d030fc162bab5d1ca59f9da**
+Generated: **2026-11-23T04:03:30+00:00**
+IPTV-Playlist.m3u SHA-256: **fdf0515a52d6545ef6c4b5f1a5f9bbc0e87e46dcb7adc948b5457b356e8a5279**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **275**
+- Flagged streams: **277**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -71,6 +71,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Vision (India) | Indian Entertainment | credential-bearing route pattern (values redacted) | `http://103.85.204.205:1935/VISIONMEDIA/live/playlist.m3u8` |
 | Zee Kannada | Indian Entertainment | sensitive query parameter (value redacted) | `https://yuppnimresmum.akamaized.net/28072023/smil:zeekannadahd.smil/playlist.m3u8?hdnts=REDACTED` |
 | DW News | International | credential-bearing route pattern (values redacted) | `https://dwamdstream102.akamaized.net/hls/live/REDACTED/REDACTED/stream02/streamPlaylist.m3u8` |
+| FashionBox | International | credential-bearing route pattern (values redacted) | `https://dash2.antik.sk/live/test_fashionbox_medium_atk/playlist.m3u8` |
 | M20 Music | International | credential-bearing route pattern (values redacted) | `https://streamcdne2-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/REDACTED/REDACTED/chunklist_b1064000.m3u8` |
 | Shanson TV | International | credential-bearing route pattern (values redacted) | `https://streaming.thestream.cyou/live/7009.m3u8` |
 | Totalmusic | International | credential-bearing route pattern (values redacted) | `https://cdn.global.elektamedia.com/live/REDACTED/REDACTED/SA_LIVE_hls_enc/master.m3u8` |
@@ -98,6 +99,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Sport5 | Sports | credential-bearing route pattern (values redacted) | `https://rgelive.akamaized.net/hls/live/REDACTED/REDACTED/playlist.m3u8` |
 | TVRI Sport | Sports | credential-bearing route pattern (values redacted) | `https://ott-balancer.tvri.go.id/live/REDACTED/REDACTED/hls/SportHD.m3u8` |
 | DD National HD (1080p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/15/master.m3u8` |
+| Safari TV (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/410/master.m3u8` |
 | 7S Music | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/771/master.m3u8` |
 | 9X Jalwa | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/161/master.m3u8` |
 | 9X Jhakaas | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/6/master.m3u8` |
