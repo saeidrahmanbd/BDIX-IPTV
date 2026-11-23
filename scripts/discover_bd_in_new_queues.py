@@ -333,6 +333,13 @@ def channel_identity_keys(a: dict[str, str], name: str) -> set[str]:
     clean = re.sub(r"\b(?:\d{3,4}p|uhd|fhd|hd|sd|4k|hdr)\b", " ", clean, flags=re.I)
     clean = re.sub(r"\b(?:india|indian|bangladesh|pakistan|pakistani)\s*$", "", clean, flags=re.I)
     normalized = norm_name(clean)
+    # Owner-confirmed same-feed aliases must share a channel identity so a
+    # source changing its URL/hostname cannot reintroduce the duplicate.
+    same_feed_aliases = {
+        "bollywoodold": "bollywoodoldhindimovieclassic24",
+        "hindimovieclassic24": "bollywoodoldhindimovieclassic24",
+    }
+    normalized = same_feed_aliases.get(normalized, normalized)
     keys = {"name:" + normalized} if normalized else set()
     for field in ("tvg-id", "channel-id"):
         channel_id = base_id(a.get(field, ""))
