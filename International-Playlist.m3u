@@ -4436,6 +4436,8 @@ https://627bb251f23c7.streamlock.net:444/ExtremaKids/ExtremaKids/playlist.m3u8
 https://tv2.fastcast4u.com:3310/live/famatvlive.m3u8
 #EXTINF:-1 tvg-id="FAN.ru@SD" channel-id="FAN.ru@SD" tvg-country="RU" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fan-1080p.png" group-title="Review" tvg-name="FAN",FAN
 http://31.148.48.15/Fan/index.m3u8
+#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="FashionTV.us" tvg-name="Fashion TV" tvg-country="US" tvg-language="eng" channel-id="FashionTV.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashion-tv-aa7f9461cf.png" group-title="Review",Fashion TV
+http://stream.mcquack.net/287/index.m3u8
 #EXTINF:-1 tvg-id="FashionTV.us" channel-id="FashionTV.us" tvg-language="eng" tvg-country="US" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashion-tv-aa7f9461cf.png" group-title="Review" tvg-name="Fashion TV",Fashion TV
 https://ftv1.b-cdn.net/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8
 #EXTINF:-1 tvg-id="FastFunBox.nl@SD" tvg-country="NL" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fast-and-funbox-1109f0c4b7.png" group-title="Review" tvg-name="Fast&FunBox",Fast&FunBox
@@ -4492,6 +4494,8 @@ https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playl
 https://amg02278-amg02278c1-flosports-worldwide-7592.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="FolkloreTV.pe@SD" channel-id="FolkloreTV.pe@SD" tvg-country="PE" tvg-content="Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/folklore-tv-720p.png" group-title="Review" tvg-name="Folklore TV",Folklore TV
 https://play.folkloretv.pe/StreamSD/index.m3u8
+#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="FONMusic.us" tvg-name="FON Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fon-music.png" tvg-country="US" tvg-language="eng" channel-id="FONMusic.us" group-title="Review" tvg-content="Music",FON Music
+https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="FoodFood.in@SD" tvg-language="hin" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/food-food.png" group-title="Review" tvg-name="Food Food",Food Food
 https://mumt03.tangotv.in/Dsly5z3HFOODFOOD/index.m3u8
 #EXTINF:-1 tvg-id="custom.food-network-bd0w6" tvg-language="eng" channel-id="custom.food-network-bd0w6" tvg-country="US" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/food-network.png" group-title="Review" tvg-name="Food Network",Food Network
@@ -5884,33 +5888,29 @@ http://41.205.93.154/ZEE-TV/index.m3u8
 https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg01553-blueantmediaasi-zoomoonz-samsungnz/playlist.m3u8
 #EXTINF:-1 tvg-id="ZooMoo.sg" channel-id="ZooMoo.sg" tvg-language="eng" tvg-country="SG" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoomoo.png" group-title="Review" tvg-name="ZooMoo",ZooMoo
 https://zoomoo-samsungau.amagi.tv/playlist.m3u8
-#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="FashionTV.us" tvg-name="Fashion TV" tvg-country="US" tvg-language="eng" channel-id="FashionTV.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashion-tv-aa7f9461cf.png" group-title="Review",Fashion TV
-http://stream.mcquack.net/287/index.m3u8
-#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="FONMusic.us" tvg-name="FON Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fon-music.png" tvg-country="US" tvg-language="eng" channel-id="FONMusic.us" group-title="Review" tvg-content="Music",FON Music
-https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="FMHMovies.us@SD" tvg-name="FMH Movies (1080p)" tvg-country="US" channel-id="FMHMovies.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fmh-movies-0d9b9c72dc198e5613eb.png" group-title="New Channels" tvg-content="Movies",FMH Movies (1080p)
+#EXTINF:-1 tvg-id="FMHMovies.us@SD" tvg-name="FMH Movies (1080p)" tvg-country="US" channel-id="FMHMovies.us@SD" tvg-logo="logos/fmh-movies-0d9b9c72dc198e5613eb.png" group-title="New Channels" tvg-content="Movies",FMH Movies (1080p)
 http://45.186.254.75:8000/play/a07j/index.m3u8
-#EXTINF:-1 tvg-id="Galaxy.id@SD" tvg-name="Galaxy (720p)" tvg-country="ID" channel-id="Galaxy.id@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/galaxy-49d13dbaba825105696f.png" group-title="New Channels" tvg-content="Movies",Galaxy (720p)
+#EXTINF:-1 tvg-id="Galaxy.id@SD" tvg-name="Galaxy (720p)" tvg-country="ID" channel-id="Galaxy.id@SD" tvg-logo="logos/galaxy-49d13dbaba825105696f.png" group-title="New Channels" tvg-content="Movies",Galaxy (720p)
 https://proxy-v.rctiplus.id/live/web/galaxy/index.m3u8
-#EXTINF:-1 tvg-id="GalaxyPremium.id@SD" tvg-name="Galaxy Premium (720p)" tvg-country="ID" channel-id="GalaxyPremium.id@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/galaxy-premium-7337475394524cf6dbe7.png" group-title="New Channels" tvg-content="Movies",Galaxy Premium (720p)
+#EXTINF:-1 tvg-id="GalaxyPremium.id@SD" tvg-name="Galaxy Premium (720p)" tvg-country="ID" channel-id="GalaxyPremium.id@SD" tvg-logo="logos/galaxy-premium-7337475394524cf6dbe7.png" group-title="New Channels" tvg-content="Movies",Galaxy Premium (720p)
 https://proxy-v.rctiplus.id/live/web/galaxyprem/index.m3u8
-#EXTINF:-1 tvg-id="Kinosvidanie.ru@SD" tvg-name="Kinosvidanie (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kinosvidanie-576p.png" tvg-country="RU" channel-id="Kinosvidanie.ru@SD" group-title="New Channels" tvg-content="Movies",Kinosvidanie (1080p)
+#EXTINF:-1 tvg-id="Kinosvidanie.ru@SD" tvg-name="Kinosvidanie (1080p)" tvg-logo="logos/international/kinosvidanie-576p.png" tvg-country="RU" channel-id="Kinosvidanie.ru@SD" group-title="New Channels" tvg-content="Movies",Kinosvidanie (1080p)
 https://stream8.cinerama.uz/1203/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="Cinema.ru@SD" tvg-name="Cinema (Russia)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinema-russia-576p.png" tvg-country="RU" channel-id="Cinema.ru@SD" group-title="New Backups" tvg-content="Movies",Cinema (Russia)
+#EXTINF:-1 tvg-id="Cinema.ru@SD" tvg-name="Cinema (Russia)" tvg-logo="logos/cinema-russia-576p.png" tvg-country="RU" channel-id="Cinema.ru@SD" group-title="New Backups" tvg-content="Movies",Cinema (Russia)
 https://stream8.cinerama.uz/1227/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="custom.dom-kino-ru-movie" tvg-name="Dom kino" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dom-kino-576p.png" tvg-country="RU" tvg-language="rus" channel-id="custom.dom-kino-ru-movie" group-title="New Backups" tvg-content="Movies",Dom kino
+#EXTINF:-1 tvg-id="custom.dom-kino-ru-movie" tvg-name="Dom kino" tvg-logo="logos/dom-kino-576p.png" tvg-country="RU" tvg-language="rus" channel-id="custom.dom-kino-ru-movie" group-title="New Backups" tvg-content="Movies",Dom kino
 https://stream8.cinerama.uz/1054/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="Dorama.ru@SD" tvg-name="Dorama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dorama.png" tvg-country="RU" tvg-language="rus" channel-id="Dorama.ru@SD" group-title="New Backups" tvg-content="Movies",Dorama
+#EXTINF:-1 tvg-id="Dorama.ru@SD" tvg-name="Dorama" tvg-logo="logos/dorama.png" tvg-country="RU" tvg-language="rus" channel-id="Dorama.ru@SD" group-title="New Backups" tvg-content="Movies",Dorama
 https://stream8.cinerama.uz/1273/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="iFilmPersian.ir@SD" tvg-name="iFilm Persian" tvg-country="IR" tvg-language="fas" channel-id="iFilmPersian.ir@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ifilm-persian-ec5dbb3a2a50944e9fe3.png" group-title="New Backups" tvg-content="Movies",iFilm Persian
+#EXTINF:-1 tvg-id="iFilmPersian.ir@SD" tvg-name="iFilm Persian" tvg-country="IR" tvg-language="fas" channel-id="iFilmPersian.ir@SD" tvg-logo="logos/ifilm-persian-ec5dbb3a2a50944e9fe3.png" group-title="New Backups" tvg-content="Movies",iFilm Persian
 https://ncdn.telewebion.ir/ifilm/live/playlist.m3u8
-#EXTINF:-1 tvg-id="IndiyskoyeKino.ru@SD" tvg-name="Indiyskoye Kino" tvg-country="RU" tvg-language="rus" channel-id="IndiyskoyeKino.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/indiyskoye-kino-7582f40712.png" group-title="New Backups" tvg-content="Movies",Indiyskoye Kino
+#EXTINF:-1 tvg-id="IndiyskoyeKino.ru@SD" tvg-name="Indiyskoye Kino" tvg-country="RU" tvg-language="rus" channel-id="IndiyskoyeKino.ru@SD" tvg-logo="logos/indiyskoye-kino-7582f40712.png" group-title="New Backups" tvg-content="Movies",Indiyskoye Kino
 https://stream8.cinerama.uz/1060/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="KinoHit.ru@SD" tvg-name="KinoHit" tvg-country="RU" tvg-language="rus" channel-id="KinoHit.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kinohit-5a08ec1395.png" group-title="New Backups" tvg-content="Movies",KinoHit
+#EXTINF:-1 tvg-id="KinoHit.ru@SD" tvg-name="KinoHit" tvg-country="RU" tvg-language="rus" channel-id="KinoHit.ru@SD" tvg-logo="logos/kinohit-5a08ec1395.png" group-title="New Backups" tvg-content="Movies",KinoHit
 https://stream8.cinerama.uz/1055/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="MuzykaPervogo.ru@SD" tvg-name="Muzyka Pervogo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/muzyka-pervogo-576p.png" tvg-country="RU" tvg-language="rus;ukr" channel-id="MuzykaPervogo.ru@SD" group-title="New Backups" tvg-content="Music",Muzyka Pervogo
+#EXTINF:-1 tvg-id="MuzykaPervogo.ru@SD" tvg-name="Muzyka Pervogo" tvg-logo="logos/muzyka-pervogo-576p.png" tvg-country="RU" tvg-language="rus;ukr" channel-id="MuzykaPervogo.ru@SD" group-title="New Backups" tvg-content="Music",Muzyka Pervogo
 https://stream8.cinerama.uz/1201/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="TRTMuzik.tr@SD" tvg-name="TRT Muzik" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trt-muzik.png" tvg-country="TR" tvg-language="tur" channel-id="TRTMuzik.tr@SD" group-title="New Backups" tvg-content="Music",TRT Muzik
+#EXTINF:-1 tvg-id="TRTMuzik.tr@SD" tvg-name="TRT Muzik" tvg-logo="logos/trt-muzik.png" tvg-country="TR" tvg-language="tur" channel-id="TRTMuzik.tr@SD" group-title="New Backups" tvg-content="Music",TRT Muzik
 https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" channel-id="7SMusic.in@SD" tvg-language="tam" tvg-country="IN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" group-title="Backup" tvg-name="7S Music",7S Music
 https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
