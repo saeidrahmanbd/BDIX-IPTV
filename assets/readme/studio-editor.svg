@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="92" viewBox="0 0 300 92" role="img" aria-label="M3U/M3U8 editor">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#1c2128"/></linearGradient>
+<linearGradient id="ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#58a6ff"/><stop offset="1" stop-color="#0969da"/></linearGradient>
+<radialGradient id="gl" cx="0.1" cy="0.5" r="0.8"><stop offset="0" stop-color="#58a6ff" stop-opacity="0.28"/><stop offset="1" stop-color="#58a6ff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="1" y="1" width="298" height="90" rx="16" fill="url(#bg)"/>
+<rect x="1" y="1" width="298" height="90" rx="16" fill="url(#gl)"/>
+<rect x="1" y="1" width="298" height="90" rx="16" fill="none" stroke="#58a6ff" stroke-opacity="0.55" stroke-width="1.5"/>
+<rect x="230" y="1" width="69" height="5" rx="2.5" fill="url(#ac)" fill-opacity="0.9"/>
+<rect x="18" y="19.0" width="54" height="54" rx="16" fill="url(#ac)"/>
+<rect x="18" y="19.0" width="54" height="27" rx="16" fill="#ffffff" fill-opacity="0.13"/>
+<g transform="translate(31 32.0) scale(1.1667)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="6" x2="21" y2="6"/><line x1="9" y1="12" x2="21" y2="12"/><line x1="9" y1="18" x2="21" y2="18"/><line x1="3.5" y1="6" x2="3.51" y2="6"/><line x1="3.5" y1="12" x2="3.51" y2="12"/><line x1="3.5" y1="18" x2="3.51" y2="18"/></g>
+<text x="90" y="43" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="700" fill="#f0f6fc">M3U/M3U8</text><text x="90" y="64" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="700" fill="#f0f6fc">editor</text>
+</svg>

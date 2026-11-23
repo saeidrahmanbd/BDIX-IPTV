@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="176" viewBox="0 0 440 176" role="img" aria-label="IPTV-Playlist.m3u — MAIN MULTI-COUNTRY PLAYLIST">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1117"/><stop offset="0.6" stop-color="#161b22"/><stop offset="1" stop-color="#0969da" stop-opacity="0.7"/></linearGradient>
+<linearGradient id="ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#58a6ff"/><stop offset="1" stop-color="#0969da"/></linearGradient>
+<radialGradient id="gl" cx="0.95" cy="0.0" r="0.9"><stop offset="0" stop-color="#58a6ff" stop-opacity="0.45"/><stop offset="1" stop-color="#58a6ff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="1" y="1" width="438" height="174" rx="22" fill="#0d1117"/>
+<rect x="1" y="1" width="438" height="174" rx="22" fill="url(#bg)"/>
+<rect x="1" y="1" width="438" height="174" rx="22" fill="url(#gl)"/>
+<rect x="250" y="22" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.12"/><rect x="280" y="22" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.15"/><rect x="310" y="22" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.15"/><rect x="340" y="22" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.20"/><rect x="370" y="22" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.16"/><rect x="400" y="22" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.13"/><rect x="250" y="44" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.19"/><rect x="280" y="44" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.22"/><rect x="310" y="44" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.24"/><rect x="340" y="44" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.12"/><rect x="370" y="44" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.17"/><rect x="400" y="44" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.14"/><rect x="250" y="66" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.21"/><rect x="280" y="66" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.19"/><rect x="310" y="66" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.17"/><rect x="340" y="66" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.14"/><rect x="370" y="66" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.10"/><rect x="400" y="66" width="24" height="16" rx="4" fill="#58a6ff" fill-opacity="0.11"/>
+<rect x="1" y="1" width="438" height="174" rx="22" fill="none" stroke="#58a6ff" stroke-opacity="0.6" stroke-width="1.5"/>
+<circle cx="64" cy="88" r="38" fill="url(#ac)"/>
+<circle cx="64" cy="88" r="46" fill="none" stroke="#58a6ff" stroke-opacity="0.35" stroke-width="2"/>
+<polygon points="53,70 53,106 85,88" fill="#ffffff"/>
+<text x="124" y="84" font-family="Consolas,'SF Mono',Menlo,monospace" font-size="19" font-weight="700" fill="#f0f6fc">IPTV-Playlist.m3u</text>
+<text x="125" y="108" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="#58a6ff">MAIN MULTI-COUNTRY PLAYLIST</text>
+<rect x="125" y="124" width="150" height="5" rx="2.5" fill="url(#ac)"/>
+<rect x="280" y="124" width="40" height="5" rx="2.5" fill="#58a6ff" fill-opacity="0.35"/>
+</svg>

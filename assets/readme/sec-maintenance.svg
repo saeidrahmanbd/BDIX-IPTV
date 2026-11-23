@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="112" viewBox="0 0 1000 112" role="img" aria-label="How Playlist Maintenance Works">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0d1117"/><stop offset="0.55" stop-color="#161b22"/><stop offset="1" stop-color="#1f9d8b" stop-opacity="0.34"/></linearGradient>
+<linearGradient id="ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#1f9d8b"/></linearGradient>
+<radialGradient id="gl" cx="0.92" cy="0.1" r="0.75"><stop offset="0" stop-color="#2dd4bf" stop-opacity="0.26"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/></radialGradient>
+<linearGradient id="ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#1f9d8b" stop-opacity="0"/></linearGradient>
+<clipPath id="cp"><rect width="1000" height="112" rx="18"/></clipPath>
+</defs>
+<g clip-path="url(#cp)">
+<rect width="1000" height="112" fill="#0d1117"/>
+<rect width="1000" height="112" fill="url(#bg)"/>
+<rect width="1000" height="112" fill="url(#gl)"/>
+<circle cx="820" cy="20" r="90" fill="#2dd4bf" fill-opacity="0.07"/>
+<circle cx="900" cy="100" r="60" fill="#2dd4bf" fill-opacity="0.08"/>
+<text x="985" y="98" text-anchor="end" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="120" font-weight="900" fill="#2dd4bf" fill-opacity="0.30">07</text>
+<rect x="0" y="104" width="1000" height="8" fill="url(#ln)"/>
+<rect x="0" y="0" width="7" height="112" fill="url(#ac)"/>
+</g>
+<rect x="0.75" y="0.75" width="998.5" height="110.5" rx="17.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.5" stroke-width="1.5"/>
+<rect x="34" y="26" width="58" height="58" rx="17" fill="url(#ac)"/>
+<rect x="34" y="26" width="58" height="29" rx="17" fill="#ffffff" fill-opacity="0.12"/>
+<g transform="translate(48 40) scale(1.2500)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="19.00" y1="12.00" x2="22.00" y2="12.00"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="12.00" y1="19.00" x2="12.00" y2="22.00"/><line x1="7.05" y1="16.95" x2="4.93" y2="19.07"/><line x1="5.00" y1="12.00" x2="2.00" y2="12.00"/><line x1="7.05" y1="7.05" x2="4.93" y2="4.93"/><line x1="12.00" y1="5.00" x2="12.00" y2="2.00"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></g>
+<text x="112" y="56" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="800" fill="#f0f6fc">How Playlist Maintenance Works</text>
+<text x="113" y="82" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="500" fill="#2dd4bf">Scripts and GitHub Actions</text>
+</svg>

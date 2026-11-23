@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="104" viewBox="0 0 300 104" role="img" aria-label="Step 2: Add">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#1c2128"/></linearGradient>
+<linearGradient id="ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b392f0"/><stop offset="1" stop-color="#8957e5"/></linearGradient>
+<radialGradient id="gl" cx="0.15" cy="0.5" r="0.9"><stop offset="0" stop-color="#b392f0" stop-opacity="0.35"/><stop offset="1" stop-color="#b392f0" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="1" y="1" width="298" height="102" rx="18" fill="url(#bg)"/>
+<rect x="1" y="1" width="298" height="102" rx="18" fill="url(#gl)"/>
+<rect x="1" y="1" width="298" height="102" rx="18" fill="none" stroke="#b392f0" stroke-opacity="0.6" stroke-width="1.5"/>
+<circle cx="52" cy="52" r="30" fill="url(#ac)"/>
+<circle cx="52" cy="52" r="30" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+<text x="52" y="64" text-anchor="middle" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="34" font-weight="900" fill="#ffffff">2</text>
+<text x="100" y="60" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="800" fill="#f0f6fc">Add</text>
+<g opacity="0.95"><g transform="translate(236 32) scale(1.6667)" fill="none" stroke="#b392f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></g></g>
+</svg>

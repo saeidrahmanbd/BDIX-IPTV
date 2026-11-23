@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="18" viewBox="0 0 1000 18" role="presentation" aria-hidden="true">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ff6b35"/><stop offset="0.25" stop-color="#0969da"/><stop offset="0.5" stop-color="#8957e5"/><stop offset="0.75" stop-color="#2ea44f"/><stop offset="1" stop-color="#17b2e7"/>
+</linearGradient>
+<linearGradient id="sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect x="20" y="7" width="960" height="4" rx="2"/></clipPath>
+</defs>
+<rect x="20" y="7" width="960" height="4" rx="2" fill="url(#g)" fill-opacity="0.9"/>
+<g clip-path="url(#c)"><rect x="-200" y="7" width="200" height="4" fill="url(#sh)"><animate attributeName="x" from="-200" to="1000" dur="5s" repeatCount="indefinite"/></rect></g>
+<circle cx="500" cy="9" r="6" fill="#0d1117" stroke="#8957e5" stroke-width="2.5"/>
+<circle cx="500" cy="9" r="2" fill="#8957e5"/>
+<circle cx="478" cy="9" r="3" fill="#0969da"/>
+<circle cx="522" cy="9" r="3" fill="#2ea44f"/>
+</svg>
