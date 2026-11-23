@@ -203,6 +203,26 @@ class InternationalStreamHealthTests(unittest.TestCase):
         self.assertEqual(events[0]["streak"], 0)
 
 
+    def test_same_day_success_rechecks_review_after_recovery_policy_fix(self):
+        source = self.playlist(row(name="Example Movie", group="Review"))
+        blocks = health.parse(source)[1]
+        info = blocks[0][0]
+        url = health.urls(blocks[0])[0]
+        key = health.stream_key(info, url)
+        history = {"entries": {key: {
+            "name": "Example Movie", "tvg_id": "testmovie.us", "country": "US",
+            "original_group": "International Movies", "auto_review": True,
+            "consecutive_failures": 0, "consecutive_inconclusive": 0,
+            "last_checked_date": "2026-11-08", "last_status": "ok",
+            "removed": False,
+        }}, "removed": []}
+        output, _, events = apply(
+            source, "ok", history, "2026-11-08",
+            status=200, reason="Media bytes received",
+        )
+        self.assertIn('group-title="International Movies"', output)
+        self.assertEqual(events[0]["action"], "restored-to-primary")
+
     def test_working_manual_review_channel_moves_to_primary(self):
         source = self.playlist(row(name="Manual Movie", group="Review"))
         output, _, events = apply(source, "ok", {}, "2026-11-08", status=200, reason="Media bytes received")
