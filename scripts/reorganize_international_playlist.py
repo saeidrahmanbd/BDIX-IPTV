@@ -390,8 +390,13 @@ def set_extinf(block, name, group, country, content_kind, keep_logo, is_queue=Fa
     for key in ("group-title", "tvg-name", "tvg-logo", "tvg-content", "tvg-country", "tvg-chno", "http-user-agent", "http-referrer"):
         left = re.sub(rf'\s+{re.escape(key)}="[^"]*"', "", left)
     fields = [left.rstrip()]
-    if keep_logo:
+    if isinstance(keep_logo, str) and keep_logo.startswith("logos/"):
         fields.append(f'tvg-logo="{keep_logo}"')
+    elif keep_logo is True:
+        original_path = local_logo_path(attrs(block[0]).get("tvg-logo", ""))
+        if original_path is not None:
+            local_ref = "logos/" + original_path.relative_to(LOGOS).as_posix()
+            fields.append(f'tvg-logo="{local_ref}"')
     if country in discovery.ISO_CODES:
         fields.append(f'tvg-country="{country}"')
     # Keep the original content type while a failed stream is in Review.
