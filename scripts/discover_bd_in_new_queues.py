@@ -6,9 +6,10 @@ country IDs/codes must identify Bangladesh or India; a recognized .in ID also
 activates the Indian discovery exclusions even when listed in the BD feed.
 Definite policy/URL exclusions and duplicate streams prevent queueing.
 
-Bangladesh channels of all genres are eligible. Indian News, Kids, Education, Knowledge,
+Bangladesh channels of all genres are eligible. Indian News, Kids, Education,
 Business/Finance and non-Islamic Religious channels are excluded from this IPTV playlist
-discovery policy. Indian Sports channels are allowed. International retains its separate policy.
+discovery policy. Indian Sports and Documentary/Knowledge/Wildlife channels are allowed.
+International retains its separate policy.
 """
 # Owner-authorized policy-alignment retry marker (2026-11-19).
 # [manual-new-channel-discovery] Fresh daily discovery trigger for 2026-11-20.
@@ -56,7 +57,6 @@ IPTV_FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\b(?:news(?:\s*\d+)?|headlines?|current affairs|newsroom|bulletin|breaking news|gnt|aaj tak|india today|times now|republic(?:\s+(?:bharat|bangla))?|abp(?:\s+ananda)?|zee news|wion|tv\s*9)\b", re.I),
     "kids": re.compile(r"\b(?:kids?|children|childrens|cartoon|animation|animated|junior|nick jr|nickelodeon|disney junior|disney channel|baby tv|pogo|hungama|sonic|discovery kids|green gold|sony yay)\b", re.I),
     "education": re.compile(r"\b(?:education(?:al)?|higher education|university|universities|college|school|e[ -]?learning|learning channel|academic|curriculum|lecture|classroom|courseware|shiksha|vidya|vyas channel|gyandarshan|gyan darshan|swayam|victers|diksha|e[ -]?vidya|educational television|vtu)\b", re.I),
-    "knowledge": re.compile(r"\b(?:knowledge|documentary|documentaries|science|scientific|discovery|exploration|history|geography|wildlife|nature|national geographic|animal planet|discovery channel|discovery science|discovery turbo|history tv|inwild|safari tv|dd kisan|krishi darshan|agriculture|agricultural|farming|farmer)\b", re.I),
     "business": re.compile(r"\b(?:business|finance|financial|stock market|share market|market news|economy|economic|corporate|investment|investing|trading|money|cnbc|zee business|ndtv profit|et now|moneycontrol|bloomberg)\b", re.I),
     "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer|islam|islamic|muslim|quran|quranic|koran|allah|muhammad|mohammed|hadith|sunnah|salafi|sufi|ramadan|mecca|makkah|madinah|medina|masjid|mosque|ummah|fiqh|tafsir|azan|adhan|jumuah|hajj|umrah|kaaba|sharia|peace\s*tv|angel|hosanna|madani|iqra|huda|noor|deen|mta|qtv|aastha|sadhna|sanskar|jinvani|satsang|jagran|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|calvary|santvani|sharnam|disha tv)\b", re.I),
 }
@@ -69,14 +69,14 @@ def canonical_channel_name(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value).strip()
 
 IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
-    "news": {"r plus", "r plus gold", "bhi channel", "tv 100", "tv 100 national"},
+    "news": {"r plus", "bhi channel", "tv 100", "tv 100 national"},
     "kids": {"sony yay", "disney channel", "jungle book", "doraemon"},
     "education": {"vtu"},
     "knowledge": {"dd kisan", "krishi darshan", "cvr health"},
     "religious": {"disha tv", "shekinah tv", "darshana tv"},
 }
 IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
-    "rplus.in": "news", "rplusgold.in": "news", "bhi.channel.in": "news", "tv100.in": "news", "tv100national.in": "news",
+    "rplus.in": "news", "bhi.channel.in": "news", "tv100.in": "news", "tv100national.in": "news",
     "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "shekinahtv.in": "religious", "darshanatv.in": "religious",
     "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge", "cvrhealth.in": "knowledge",
 }
@@ -211,7 +211,6 @@ PERMANENTLY_BANNED_CHANNEL_NAMES = {
         "Bangla Jago TV",
         "DD Bharati",
         "Food Food",
-        "Discovery Turbo India",
         "XXTreme Jobs Hindi",
         "Power Turk",
         "Safari TV Tamil",
@@ -250,7 +249,6 @@ PERMANENTLY_BANNED_CHANNEL_IDS = {
     "banglajagotv.in",
     "ddbharati.in",
     "foodfood.in",
-    "discoveryturbo.in",
     "xxtremejobshindi.in",
     "powerturktv.tr",
     "cvrhealth.in",
