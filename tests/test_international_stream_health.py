@@ -25,7 +25,7 @@ class InternationalStreamHealthTests(unittest.TestCase):
     def playlist(self, entry):
         return (
             "#EXTM3U\n"
-            '#PLAYLIST-STUDIO-CATEGORIES:["International Movies","New Channels","New Backups","Backup"]\n'
+            '#PLAYLIST-STUDIO-CATEGORIES:["International Movies","Bangladesh","Indian Movies","Indian Music","Indian Bangla","Indian Entertainment","Pakistani","News","Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","Review","New Channels","New Backups","Backup"]\n'
             + entry
         )
 
