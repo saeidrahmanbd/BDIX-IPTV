@@ -8,26 +8,38 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 ### 2026-11-24 — `IPTV-Playlist.m3u`
 
 - New channel identities: **0**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **6 / 0**
+- Channel identities removed: **16**
+- Stream URLs added / removed: **2 / 20**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
+
+Removed channel identities (up to 10):
+- Anand TV
+- BIG TV
+- Darshana TV
+- Ekamra Bharat Odia
+- Fast1
+- Jaihind TV
+- Metro TV
+- Red Bull TV
+- Ayush Next Communication Network (576p)
+- CCV (480p)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-24 — `International-Playlist.m3u`
 
 - New channel identities: **1**
 - Channel identities removed: **0**
-- Stream URLs added / removed: **1 / 0**
+- Stream URLs added / removed: **4 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **24**
+- Logo reference changes: **6**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Aurora Media Films (720p)
+- BRIDGE Dance (720p) [Geo-blocked]
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
