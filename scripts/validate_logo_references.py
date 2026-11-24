@@ -66,7 +66,7 @@ def validate_playlist(name, text, registry, root=Path("."), blocked=None):
     blocked = blocked_filenames() if blocked is None else blocked
     current = normalize_newlines(text)
     entries = [line for line in current.splitlines() if line.startswith("#EXTINF:")]
-    missing = review_missing = external = nvision = broken = adult_ignored = non_png = relative_refs = 0
+    missing = review_missing = adult_missing = external = nvision = broken = adult_ignored = non_png = relative_refs = 0
     invalid = []
 
     for line in entries:
@@ -74,12 +74,13 @@ def validate_playlist(name, text, registry, root=Path("."), blocked=None):
         group = (meta.get("group-title") or "").strip().casefold()
         channel_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
         label = line.rsplit(",", 1)[-1].strip() if "," in line else (meta.get("tvg-name") or "").strip()
-        if logo_repair.is_adult_playlist_entry(name, group, channel_id, logo_repair.norm_key(label)):
-            adult_ignored += 1
-            continue
-
         found = re.search(r'tvg-logo="([^"]*)"', line)
         logo = found.group(1).strip() if found else ""
+        if logo_repair.is_adult_playlist_entry(name, group, channel_id, logo_repair.norm_key(label)):
+            adult_ignored += 1
+            if not logo:
+                adult_missing += 1
+            continue
         if not logo:
             if group in REVIEW_GROUPS:
                 review_missing += 1
@@ -139,6 +140,7 @@ def validate_playlist(name, text, registry, root=Path("."), blocked=None):
     summary = {
         "entries": len(entries), "missing_logo_metadata": missing,
         "review_missing_logo_metadata": review_missing,
+        "adult_missing_logo_metadata": adult_missing,
         "adult_entries_ignored": adult_ignored,
         "nonrepository_logo_refs": external, "relative_logo_refs": relative_refs, "nvision_refs": nvision,
         "invalid_or_blocked_refs": broken, "non_png_refs": non_png,
