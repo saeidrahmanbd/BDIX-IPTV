@@ -35,7 +35,7 @@ class CountryVerificationTests(unittest.TestCase):
         expected = {
             "JTV Bangla": ("JTVBangla.in@SD", "IN", "Indian Bangla"),
             "Ten TV Prime": ("custom.tentvprime", "IN", "Indian Bangla"),
-            "Jalsha Bangla BD": ("JalshaBanglaBD.bd", "BD", "Bangladesh"),
+            "Jalsha Bangla BD": ("JalshaBanglaBD.bd", "BD", "Review"),  # Non-playing feed stays in the protected Review queue.
         }
         for channel, (channel_id, country, group) in expected.items():
             matches = []
