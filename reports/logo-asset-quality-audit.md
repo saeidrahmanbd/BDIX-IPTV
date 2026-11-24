@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-24T07:01:26+00:00**
+Generated: **2026-11-24T07:07:32+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **4f386a6298e86ad5286163c966c03c0de59e9abcfad46eb95e9ef3fca1f68ec2**
+- IPTV-Playlist.m3u SHA-256: **5597939b6dcbf0d92f1c4a9de643399c3fb52770a133ce6d803e370b2486b6c3**
 - International-Playlist.m3u SHA-256: **1e8a9d34987a0e4fa2c626dc68216f38db8d562a2a26d12945d6138a2d6e7585**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1580**
-- Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1579**
+- Unreferenced image assets immediately inside logos/: **965** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -132,7 +132,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | maidan-94b77a5495.png | 200×63 | yes |
 | mbc-america-7d5b369cc4.png | 359×44 | yes |
 | messatida-tv-a5ca95c15e.png | 277×55 | yes |
-| metro-tv-1080p-ee3f23e15b.png | 512×57 | yes |
+| metro-tv-1080p-ee3f23e15b.png | 512×57 | no |
 | mlb-strike-zone-4930a654ce.png | 96×54 | no |
 | mnb-sport-037e6fd069.png | 128×60 | yes |
 | molahits-tv-720p.png | 259×50 | no |
@@ -1060,7 +1060,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Kalaignar TV | kalaignar-tv-82de1b8f.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | MBC TV | mbc-tv.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Metro TV | metro-tv-1080p-ee3f23e15b.png | Indian Entertainment |
 | IPTV-Playlist.m3u | NTC TV | ntc-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pardesi TV | pardesi-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pasand TV | pasand-tv.png | Indian Entertainment |

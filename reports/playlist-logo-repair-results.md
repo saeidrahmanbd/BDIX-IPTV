@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-24 07:00 UTC**  
+Run time: **2026-11-24 07:07 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,8 +9,8 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1341 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| International-Playlist.m3u | 3319 | 2 | 17 | 20 | 364 | 372 | 0 | 0 | 37 |
+| IPTV-Playlist.m3u | 1339 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| International-Playlist.m3u | 3319 | 0 | 17 | 20 | 364 | 372 | 0 | 0 | 37 |
 
 ## Repair log
 
@@ -65,8 +65,6 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 5743 | Trace Gospel Nigeria and East Africa | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 5745 | Trace Gospel Southern Africa | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 5751 | Travel Channel East | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5887 | BRIDGE Dance (720p) [Geo-blocked] | (missing) | bridge-dance-720p-geo-blocked-28be35859700d79948e2.svg | [IPTV-org exact ID: BRIDGEDance.ru](https://bridgemusic.ru/s/img/channels/dance-white.svg) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 5897 | Rotana Cinema KSA (540p) | (missing) | rotana-cinema-ksa-7d593b9f93819c244020.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 
 ## Quality rule
 
