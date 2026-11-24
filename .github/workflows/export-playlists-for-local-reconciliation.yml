@@ -1,10 +1,7 @@
 name: Export Playlists for Local Reconciliation
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/export-playlists-for-local-reconciliation.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
