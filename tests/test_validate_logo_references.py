@@ -188,11 +188,16 @@ class FinalValidationTests(unittest.TestCase):
 
     def test_review_and_missing_logos_are_counted_not_failed(self):
         tree = self.make(iptv_entries=[
-            extinf("Active", "a.1"), extinf("Queued", "q.1", group="Review")])
+            extinf("Active", "a.1"),
+            extinf("Queued", "q.1", group="Review"),
+            extinf("Adult item", "adult.1", group="Adult"),
+        ])
         summaries, error, _ = tree.run()
         self.assertIsNone(error)
         self.assertEqual(summaries[IPTV]["missing_logo_metadata"], 1)
         self.assertEqual(summaries[IPTV]["review_missing_logo_metadata"], 1)
+        self.assertEqual(summaries[IPTV]["adult_missing_logo_metadata"], 1)
+        self.assertEqual(summaries[IPTV]["adult_entries_ignored"], 1)
 
     def test_both_playlists_are_validated_even_when_the_first_fails(self):
         tree = self.make(
