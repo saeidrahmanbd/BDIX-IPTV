@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Read-only binary logo audit against both published playlists."""
-import argparse, difflib, hashlib, json, re, subprocess
+import argparse, difflib, hashlib, json, re, subprocess, io, urllib.request, urllib.error, urllib.parse, xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
 from collections import defaultdict
 from pathlib import Path
 from urllib.parse import unquote, urlparse
@@ -36,6 +37,45 @@ def validate(p):
     except Exception as e:
         return False, f"{type(e).__name__}: {e}"
 
+
+def verify_http_asset(rel):
+    """Fetch the published raw URL and verify HTTP delivery and image bytes."""
+    url = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/" + urllib.parse.quote(rel, safe="/")
+    request = urllib.request.Request(url, headers={
+        "User-Agent": "BDIX-IPTV-logo-http-audit/1.0",
+        "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    })
+    try:
+        with urllib.request.urlopen(request, timeout=12) as response:
+            status = getattr(response, "status", 200)
+            content_type = response.headers.get("Content-Type", "")
+            data = response.read(10 * 1024 * 1024 + 1)
+            if status != 200:
+                return {"path": rel, "url": url, "http_status": status, "valid": False, "reason": "Unexpected HTTP status"}
+            if len(data) > 10 * 1024 * 1024:
+                return {"path": rel, "url": url, "http_status": status, "valid": False, "reason": "Response exceeded 10 MiB safety limit"}
+            suffix = Path(rel).suffix.lower()
+            if suffix == ".svg":
+                root = ET.fromstring(data)
+                if not str(root.tag).lower().endswith("svg"):
+                    raise ValueError("XML root is not SVG")
+            else:
+                from PIL import Image
+                with Image.open(io.BytesIO(data)) as image:
+                    image.verify()
+                with Image.open(io.BytesIO(data)) as image:
+                    image.load()
+                    dimensions = list(image.size)
+            result = {"path": rel, "url": url, "http_status": status, "content_type": content_type,
+                      "bytes": len(data), "valid": True, "reason": "HTTP 200 and image content decoded"}
+            if suffix != ".svg":
+                result["dimensions"] = dimensions
+            return result
+    except Exception as exc:
+        status = getattr(exc, "code", None)
+        return {"path": rel, "url": url, "http_status": status, "valid": False,
+                "reason": f"{type(exc).__name__}: {str(exc)[:180]}"}
+
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--json",default="reports/logo-binary-audit.json")
@@ -63,6 +103,13 @@ def main():
             if lp: refs[n][lp].append({"line":ln,"channel":line.rsplit(",",1)[-1][:100]})
             elif v: external[n].append({"line":ln,"value":v})
     referenced={p for d in refs.values() for p in d}
+    missing_metadata = {}
+    for n in PLAYLISTS:
+        count = 0
+        for line in (ROOT/n).read_text(encoding="utf-8", errors="replace").splitlines():
+            if line.startswith("#EXTINF") and not ATTR.search(line):
+                count += 1
+        missing_metadata[n] = count
     missing=[]; corrupt=[]
     for n,d in refs.items():
         for p,channels in d.items():
@@ -98,13 +145,17 @@ def main():
           "meaning":"Git blob identity proves byte-for-byte preservation somewhere in the pre-cleanup logos tree."}
     except Exception as e: historical["error"]=str(e)
     invalid=[{"path":p,"bytes":v["bytes"],"validation":v["validation"]} for p,v in info.items() if not v["valid"]]
+    http_targets = sorted(p for p in referenced if p.startswith("logos/"))
+    with ThreadPoolExecutor(max_workers=20) as pool:
+        http_checks = list(pool.map(verify_http_asset, http_targets))
+    http_failures = [x for x in http_checks if not x["valid"]]
     report={"repository_head":git("rev-parse","HEAD"),"asset_count":len(assets),
       "asset_bytes":sum(v["bytes"] for v in info.values()),
       "playlists":{n:{"logo_references":sum(map(len,refs[n].values()),0),"unique_local_paths":len(refs[n]),
-        "missing":sum(x["playlist"]==n for x in missing),"external_or_nonlocal":len(external[n])} for n in PLAYLISTS},
+        "missing":sum(x["playlist"]==n for x in missing),"missing_logo_metadata":missing_metadata[n],"external_or_nonlocal":len(external[n])} for n in PLAYLISTS},
       "byte_identical_duplicate_groups":sorted(duplicates,key=lambda x:(-x["count"],x["files"])),
       "missing_referenced_files":missing,"corrupt_referenced_files":corrupt,
-      "invalid_assets":invalid,"unreferenced_assets":sorted(set(info)-referenced),
+      "invalid_assets":invalid,"http_checks":http_checks,"http_failures":http_failures,"unreferenced_assets":sorted(set(info)-referenced),
       "different_content_same_normalized_filename":collisions,"near_filename_candidates":near,
       "historical_cleanup_impact":historical,"external_logo_references":external,
       "playlist_errors":playlist_errors,"safety":"Read-only: no playlist or logo files modified or deleted."}
@@ -117,11 +168,14 @@ def main():
       f"- Missing referenced files: {len(missing)}",
       f"- Corrupt referenced files: {len(corrupt)}",
       f"- Invalid assets: {len(invalid)}",
+      f"- Published raw URLs checked: {len(http_checks)}",
+      f"- HTTP/content failures: {len(http_failures)}",
       f"- Unreferenced assets: {len(report['unreferenced_assets'])}",
       f"- Same-normalized-name/different-content groups: {len(collisions)}",
       f"- Near-name review candidates: {len(near)}","",
       "## Playlist summary"]
     for n,v in report["playlists"].items(): lines.append(f"- {n}: {v}")
+    lines += ["","## HTTP and image-content failures"] + [f"- {x['path']}: HTTP {x.get('http_status')}; {x['reason']}" for x in http_failures[:1000]]
     lines += ["","## Historical cleanup impact","",json.dumps(historical,indent=2),"","## Duplicate groups"]
     for x in duplicates[:250]: lines.append(f"- {x['sha256']} ({x['count']}): "+", ".join(x["files"]))
     lines += ["","## Missing references"]+[f"- {x['playlist']}: {x['path']} ({x['channels'][:3]})" for x in missing[:300]]
