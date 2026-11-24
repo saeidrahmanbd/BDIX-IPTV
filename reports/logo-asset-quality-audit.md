@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-24T06:55:50+00:00**
+Generated: **2026-11-24T06:58:22+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **1fe2e3856b59240aae45e3b608bc9e97317243d8979849fe521b1cdd668f0b1f**
+- IPTV-Playlist.m3u SHA-256: **4f386a6298e86ad5286163c966c03c0de59e9abcfad46eb95e9ef3fca1f68ec2**
 - International-Playlist.m3u SHA-256: **a23c4e7f47de23d227b82518a8b617554ee82ff849538558aac56bd20dbaf7f6**
 
 ## Summary
@@ -1065,7 +1065,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Pardesi TV | pardesi-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pasand TV | pasand-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pear TV | pear-tv.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Peppers TV | peppers-tv.png | Indian Entertainment |
+| IPTV-Playlist.m3u | Peppers TV | peppers-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Polimer TV | polimer-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pravasi Channel | pravasi-channel.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pulari TV | pulari-tv.png | Indian Entertainment |
