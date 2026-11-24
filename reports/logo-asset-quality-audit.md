@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-24T04:52:42+00:00**
+Generated: **2026-11-24T06:50:19+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **089107075680d0222abadedac6cd4940cd815a5cc3d88732a4b9e6b7a5b37a8c**
+- IPTV-Playlist.m3u SHA-256: **67a9cdaa9b03bbbfb3ea6f7180a51bb36d1494f7700da7ddfda88b70049c9ffb**
 - International-Playlist.m3u SHA-256: **a23c4e7f47de23d227b82518a8b617554ee82ff849538558aac56bd20dbaf7f6**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1586**
-- Unreferenced image assets immediately inside logos/: **962** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1581**
+- Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1044,14 +1044,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | &TV | tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Alright! TV | alright-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Anand TV | anand-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Anjan TV | anjan-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Apna Punjab TV | apna-punjab-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Apna Punjab TV | apna-punjab-tv-india-23af30c75dadda3dde96.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Baiscope TV | baiscope-tv.png | Indian Entertainment |
-| IPTV-Playlist.m3u | BIG TV | big-tv-24x7.png | Indian Entertainment |
 | IPTV-Playlist.m3u | C Malayalam TV | c-malayalam-tv-1080p-3b1c6293f5.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Darshana TV | darshana-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Desi Channel | desi-channel.png | Indian Entertainment |
 | IPTV-Playlist.m3u | ETV Plus HD | etv-plus-hd-1080p.png | Indian Entertainment |
 | IPTV-Playlist.m3u | ETV Telugu HD | etv-telugu-hd-1080p.png | Indian Entertainment |
@@ -1224,7 +1221,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Al Quran Al Kareem TV | al-quran-al-kareem-tv.png | Backup |
 | IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
-| IPTV-Playlist.m3u | Anand TV | anand-tv.png | Backup |
 | IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
@@ -1426,7 +1422,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Rakuten TV Family Movies UK | rakuten-tv-top-movies.png | Review |
 | IPTV-Playlist.m3u | Rupashi Bangla TV | rupashi-bangla-tv.png | Review |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Review |
-| IPTV-Playlist.m3u | Shekinah TV | shekinah-tv-1080p.png | Review |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Review |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Review |
 | IPTV-Playlist.m3u | Sony Entertainment TV | sony-entertainment-tv.png | Review |

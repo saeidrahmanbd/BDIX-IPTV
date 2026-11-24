@@ -4,7 +4,7 @@
   "logo_image_files": 5252,
   "all_explicitly_referenced_logo_files": 2526,
   "runtime_referenced_logo_files": 2524,
-  "playlist_referenced_logo_files": 2496,
+  "playlist_referenced_logo_files": 2494,
   "apparently_unreferenced_by_any_text_file": 2726,
   "apparently_unreferenced_by_runtime_sources": 2728,
   "missing_explicit_logo_targets": [
@@ -10728,7 +10728,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/anand-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -11394,7 +11393,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/big-tv-24x7.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/big-tv-e8a3c6987279c2d2a0e4.png": [
@@ -12611,7 +12609,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/darshana-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -18190,7 +18187,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shekinah-tv-1080p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-bollywood.png": [
@@ -22376,7 +22372,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/anand-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -23042,7 +23037,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/big-tv-24x7.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/big-tv-e8a3c6987279c2d2a0e4.png": [
@@ -24259,7 +24253,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/darshana-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29843,7 +29836,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shekinah-tv-1080p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-bollywood.png": [
