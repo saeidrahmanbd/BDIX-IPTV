@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-24T04:47:20+00:00**
+Generated: **2026-11-24T04:52:42+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **8649006d857a0599a761789b917ace0a1c22c77c1c1fece4a337bb06e8eaf1a3**
+- IPTV-Playlist.m3u SHA-256: **089107075680d0222abadedac6cd4940cd815a5cc3d88732a4b9e6b7a5b37a8c**
 - International-Playlist.m3u SHA-256: **a23c4e7f47de23d227b82518a8b617554ee82ff849538558aac56bd20dbaf7f6**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1595**
+- Playlist references whose asset stem differs from the normalized channel name: **1586**
 - Unreferenced image assets immediately inside logos/: **962** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1056,6 +1056,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | ETV Plus HD | etv-plus-hd-1080p.png | Indian Entertainment |
 | IPTV-Playlist.m3u | ETV Telugu HD | etv-telugu-hd-1080p.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Gangaur TV | gangaur-tv.png | Indian Entertainment |
+| IPTV-Playlist.m3u | Gaunda Punjab TV | gaunda-punjab-tv-720p.png | Indian Entertainment |
 | IPTV-Playlist.m3u | GTC Punjabi UK | gtc-punjabi.png | Indian Entertainment |
 | IPTV-Playlist.m3u | GTC Punjabi US | gtc-punjabi.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Jaihind TV | jaihind-tv.png | Indian Entertainment |
@@ -1215,13 +1216,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | UFC | ufc-tv.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports | us-willow-sports-hd.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports 2 | us-willow-sports-hd.png | Sports |
-| IPTV-Playlist.m3u | ETV Life (1080p) | etv-life.png | New Channels |
-| IPTV-Playlist.m3u | Gaunda Punjab TV (720p) | gaunda-punjab-tv-720p.png | New Channels |
-| IPTV-Playlist.m3u | Punjab Plus (1080p) | punjab-plus-1080p.png | New Channels |
-| IPTV-Playlist.m3u | DD National HD (1080p) | dd-national.png | New Backups |
-| IPTV-Playlist.m3u | INWILD (1080p) | inwild.png | New Backups |
-| IPTV-Playlist.m3u | Safari TV (576p) | safari-tv.png | New Backups |
-| IPTV-Playlist.m3u | Sony Max (720p) | sony-max.png | New Backups |
 | IPTV-Playlist.m3u | 7X Punjabi | 7x-music.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
@@ -1334,6 +1328,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
+| IPTV-Playlist.m3u | Safari TV | safari-tv.png | Backup |
 | IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
 | IPTV-Playlist.m3u | Shemaroo TV | shemaroo-tv.png | Backup |
 | IPTV-Playlist.m3u | Shemaroo TV | shemaroo-tv.png | Backup |
@@ -1399,7 +1394,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Review |
 | IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Review |
 | IPTV-Playlist.m3u | Green TV | repaired-green-tv-d4fdf1175a.png | Review |
-| IPTV-Playlist.m3u | History TV18 HD (1080p) [Geo-blocked] | history-tv18-hd-1080p-geo-blocked.png | Review |
+| IPTV-Playlist.m3u | History TV18 HD | history-tv18-hd-1080p-geo-blocked.png | Review |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Review |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Review |
 | IPTV-Playlist.m3u | Islamic TV | islamic-tv.png | Review |
@@ -1413,9 +1408,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Mango Mobile TV | mango-mobile-tv.png | Review |
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Review |
 | IPTV-Playlist.m3u | MLB | mlb-strike-zone-4930a654ce.png | Review |
-| IPTV-Playlist.m3u | MNX HD (1080p) | mnx.png | Review |
 | IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Review |
-| IPTV-Playlist.m3u | MTV (India) (396p) | mtv-india-hd-720p.png | Review |
+| IPTV-Playlist.m3u | MTV (India) | mtv-india-hd-720p.png | Review |
 | IPTV-Playlist.m3u | MTV India | mtv-india-hd-720p.png | Review |
 | IPTV-Playlist.m3u | MTV India | mtv-india-hd-720p.png | Review |
 | IPTV-Playlist.m3u | My TV | my-tv.png | Review |
@@ -1436,7 +1430,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Review |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Review |
 | IPTV-Playlist.m3u | Sony Entertainment TV | sony-entertainment-tv.png | Review |
-| IPTV-Playlist.m3u | Sony Sports Ten 1 (576p) | sony-sports-ten-1.png | Review |
 | IPTV-Playlist.m3u | Sooriyan TV | sooriyan-tv.png | Review |
 | IPTV-Playlist.m3u | Star Gold HD | repaired-star-gold-de06c8e974.png | Review |
 | IPTV-Playlist.m3u | Star Gold HD | repaired-star-gold-de06c8e974.png | Review |
@@ -1446,10 +1439,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Review |
 | IPTV-Playlist.m3u | Sun TV | sun-tv.png | Review |
-| IPTV-Playlist.m3u | TLC (India) HD (1080p) | tlc-india.png | Review |
 | IPTV-Playlist.m3u | Travelxp 4K HDR | travelxp-4k-hdr-2160p-geo-blocked-b3aa521bb125b0495ef7.png | Review |
 | IPTV-Playlist.m3u | Travelxp 4K HDR | travelxp-hd-1080p-geo-blocked.png | Review |
-| IPTV-Playlist.m3u | Unite8 Sports 1 HD (1080p) | unite8-sports-1-c39b236b6693e186f49c.png | Review |
 | IPTV-Playlist.m3u | viju+ Sport | viju-plus-sport-14b136d70c.png | Review |
 | IPTV-Playlist.m3u | Zee Talkies HD | zee-talkies-hd-1080p.png | Review |
 | IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Review |
