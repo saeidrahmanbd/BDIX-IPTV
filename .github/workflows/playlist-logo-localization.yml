@@ -8,9 +8,8 @@ name: Playlist Logo Repair and Localization
 on:
   push:
     branches: [main]
-    # Playlist changes are handled by the owning discovery/maintenance workflows.
-    # This workflow is intentionally triggered by its own repair tooling only,
-    # preventing a logo-repair commit from recursively spawning another logo run.
+    # Also run after playlist-only updates. The localization commit carries a marker
+    # so its own push is skipped rather than recursively launching another repair.
     paths:
       - .github/workflows/playlist-logo-localization.yml
       - scripts/repair_playlist_logos.py
@@ -79,7 +78,7 @@ jobs:
     needs: daily_guard
     # Explicit source/tooling pushes should run immediately even if the daily guard
     # already saw a manual run today; playlist/logo-only commits do not match push paths.
-    if: always() && (github.event_name == 'push' || needs.daily_guard.outputs.should_run == 'true')
+    if: always() && ((github.event_name == 'push' && !contains(github.event.head_commit.message, '[logo-localization]')) || (github.event_name != 'push' && needs.daily_guard.outputs.should_run == 'true'))
     permissions:
       contents: write
     # Shared main-branch writer queue. Set on the writing job, not the workflow,
@@ -174,7 +173,7 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m "Repair playlist logos only; leave stream URLs unchanged"
+          git commit -m "Repair playlist logos only; leave stream URLs unchanged [logo-localization]"
           for attempt in 1 2 3; do
             git fetch origin main
             if ! git pull --rebase origin main; then
