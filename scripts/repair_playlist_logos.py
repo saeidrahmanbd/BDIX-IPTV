@@ -88,7 +88,12 @@ LOCAL_OVERRIDES = {
     "global tv": "unused/global-tv-1080p-5ffc043912.png",
     "channel 1": "channel-1.png",
     "classic movies": "unused/classic-movies-channel-1d5f82d98a.png",
-    "allo cine": "allo-cine-1080p.webp",
+    "allo cine": "allo-cine-1080p.png",
+    # Exact existing local channel marks visually checked against their channel identities.
+    "asian sony max 2": "sony-max-2.png",
+    "raj music telugu": "raj-musix-telugu-720p-e8fd0fb178.png",
+    "rengoni tv": "rengoni.png",
+    "news 21 bangla": "news-21-bangla-tv.png",
     # Exact channel-name matches already present in the repository logo library.
     "vevo 70s 80s": "vevo-70s-80s.png",
     "vevo 90s 00s": "vevo-90s-00s.png",
@@ -153,6 +158,20 @@ EXTRA_DIRECT_HINTS = {
         "format": "PNG",
         "page": "https://github.com/iptv-org/database/issues/15624",
         "license": "Official MBC Mood CDN logo URL cited by the approved iptv-org/database Tarab channel record; source attribution only, no separate copyright licence asserted",
+        "license_url": "",
+    },
+    "EKids": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/E-Kids_logo_2024.svg",
+        "format": "SVG",
+        "page": "https://commons.wikimedia.org/wiki/File:E-Kids_logo_2024.svg",
+        "license": "Original EKids channel artwork uploaded from the broadcaster's official ekids.bg website; Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    },
+    "FloRacing": {
+        "url": "https://a.jsrdn.com/hls/22883/floracing-247/logo_20231219_225054_24.png",
+        "format": "PNG",
+        "page": "https://github.com/iptv-org/database/issues/27573",
+        "license": "Exact FloRacing 24/7 channel logo URL listed in the approved iptv-org channel record; source attribution only, no separate copyright licence asserted",
         "license_url": "",
     },
     "Stingray Greatest Hits": {
