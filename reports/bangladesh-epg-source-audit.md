@@ -1,6 +1,6 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-24T01:29:12+00:00**
+Generated: **2026-11-24T10:06:29+00:00**
 
 - Active Bangladesh playlist identities: **85**
 - Identities with a retained source mapping: **5**
@@ -40,6 +40,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Bangla Vision | BanglaVision.bd | NO_GUIDE_HIT |
 | Banglar Kontho 24 | BanglarKontho24.bd@SD | NO_GUIDE_HIT |
 | Bijoy TV | BijoyTV.bd | NO_GUIDE_HIT |
+| Biswa Bangla 24 | BiswaBangla24.us@SD | NO_GUIDE_HIT |
 | Boishakhi TV | BoishakhiTV.bd | NO_GUIDE_HIT |
 | BTV Chattogram | BTVChattogram.bd | NO_GUIDE_HIT |
 | BTV News | BTVNews.bd | NO_GUIDE_HIT |
@@ -75,11 +76,9 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Global TV | GlobalTV.bd | NO_GUIDE_HIT |
 | Independent TV | IndependentTV.bd | NO_GUIDE_HIT |
 | Islamic TV | IslamicTV.bd | NO_GUIDE_HIT |
-| JA TV | JATV.bd | NO_GUIDE_HIT |
 | Jago News 24 | JagoNews24.bd | NO_GUIDE_HIT |
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
-| Jonmobhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd@HD | NO_GUIDE_HIT |
 | ME TV | METV.bd | NO_GUIDE_HIT |
@@ -91,6 +90,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | My TV | MyTV.bd | NO_GUIDE_HIT |
 | Nagorik TV | NagorikTV.bd | NO_GUIDE_HIT |
 | NAN TV | NANTV.bd@SD | NO_GUIDE_HIT |
+| News 21 | News21BanglaTV.bd@SD | NO_GUIDE_HIT |
 | News 24 | News24.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd@SD | NO_GUIDE_HIT |

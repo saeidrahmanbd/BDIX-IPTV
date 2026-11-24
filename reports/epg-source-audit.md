@@ -1,116 +1,116 @@
 # EPG Source Health Audit
 
-Generated: **2026-11-24T01:29:12+00:00**
+Generated: **2026-11-24T10:06:29+00:00**
 
 This is a runtime availability and schedule-coverage report, not a permission gate. The source-review register is advisory and does not block discovery, mapping, generation, or publication.
 
 | Status | Source | Channel IDs | Current/future IDs | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
-| OK | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | 946 | 697 | 74917 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz | 54 | 2 | 19 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | 557 | 499 | 17869 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | 946 | 699 | 91367 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz | 54 | 5 | 50 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | 557 | 518 | 20413 | - |
 | FAILED | https://www.free-epg.de/api/epg/pk.xml.gz | 0 | 0 | 0 | HTTP Error 503: Service Unavailable |
-| OK | https://iptv-epg.org/files/epg-in.xml.gz | 411 | 260 | 46665 | - |
-| OK | https://epg.lat/files/in.xml.gz | 946 | 697 | 74917 | - |
-| OK | https://epg.lat/files/us.xml.gz | 4471 | 4471 | 490100 | - |
-| OK | https://www.free-epg.de/api/epg/in.xml.gz | 939 | 674 | 48384 | - |
-| OK | https://www.free-epg.de/api/epg/us.xml.gz | 5547 | 5545 | 249896 | - |
-| OK | https://www.open-epg.com/files/india.xml.gz | 1178 | 751 | 38686 | - |
+| OK | https://iptv-epg.org/files/epg-in.xml.gz | 411 | 264 | 52281 | - |
+| OK | https://epg.lat/files/in.xml.gz | 946 | 699 | 91367 | - |
+| OK | https://epg.lat/files/us.xml.gz | 4471 | 4471 | 438623 | - |
+| OK | https://www.free-epg.de/api/epg/in.xml.gz | 939 | 760 | 63800 | - |
+| OK | https://www.free-epg.de/api/epg/us.xml.gz | 5547 | 5545 | 190893 | - |
+| OK | https://www.open-epg.com/files/india.xml.gz | 1178 | 832 | 59474 | - |
 | NO_PROGRAMMES | https://iptv-epg.org/files/epg-ar.xml.gz | 183 | 0 | 0 | - |
-| OK | https://iptv-epg.org/files/epg-bg.xml.gz | 116 | 99 | 14390 | - |
-| OK | https://iptv-epg.org/files/epg-br.xml.gz | 182 | 133 | 21837 | - |
-| OK | https://iptv-epg.org/files/epg-ca.xml.gz | 741 | 736 | 97194 | - |
+| OK | https://iptv-epg.org/files/epg-bg.xml.gz | 116 | 103 | 17862 | - |
+| OK | https://iptv-epg.org/files/epg-br.xml.gz | 182 | 133 | 24575 | - |
+| OK | https://iptv-epg.org/files/epg-ca.xml.gz | 741 | 738 | 106206 | - |
 | NO_PROGRAMMES | https://iptv-epg.org/files/epg-cl.xml.gz | 181 | 0 | 0 | - |
 | NO_PROGRAMMES | https://iptv-epg.org/files/epg-co.xml.gz | 179 | 0 | 0 | - |
-| OK | https://iptv-epg.org/files/epg-cz.xml.gz | 258 | 218 | 45334 | - |
-| OK | https://iptv-epg.org/files/epg-de.xml.gz | 437 | 369 | 60110 | - |
-| OK | https://iptv-epg.org/files/epg-es.xml.gz | 295 | 272 | 28950 | - |
-| OK | https://iptv-epg.org/files/epg-fr.xml.gz | 485 | 375 | 34167 | - |
-| OK | https://iptv-epg.org/files/epg-gr.xml.gz | 151 | 137 | 10314 | - |
-| OK | https://iptv-epg.org/files/epg-hk.xml.gz | 175 | 125 | 18543 | - |
-| OK | https://iptv-epg.org/files/epg-hu.xml.gz | 152 | 130 | 26346 | - |
-| OK | https://iptv-epg.org/files/epg-it.xml.gz | 306 | 261 | 30521 | - |
-| OK | https://iptv-epg.org/files/epg-mx.xml.gz | 174 | 136 | 14308 | - |
-| OK | https://iptv-epg.org/files/epg-nl.xml.gz | 167 | 137 | 32186 | - |
+| OK | https://iptv-epg.org/files/epg-cz.xml.gz | 258 | 219 | 49133 | - |
+| OK | https://iptv-epg.org/files/epg-de.xml.gz | 437 | 381 | 66626 | - |
+| OK | https://iptv-epg.org/files/epg-es.xml.gz | 295 | 272 | 31638 | - |
+| OK | https://iptv-epg.org/files/epg-fr.xml.gz | 485 | 376 | 41021 | - |
+| OK | https://iptv-epg.org/files/epg-gr.xml.gz | 151 | 137 | 12080 | - |
+| OK | https://iptv-epg.org/files/epg-hk.xml.gz | 175 | 126 | 21514 | - |
+| OK | https://iptv-epg.org/files/epg-hu.xml.gz | 152 | 131 | 29432 | - |
+| OK | https://iptv-epg.org/files/epg-it.xml.gz | 306 | 261 | 33955 | - |
+| OK | https://iptv-epg.org/files/epg-mx.xml.gz | 174 | 136 | 16020 | - |
+| OK | https://iptv-epg.org/files/epg-nl.xml.gz | 167 | 137 | 35565 | - |
 | NO_PROGRAMMES | https://iptv-epg.org/files/epg-pe.xml.gz | 125 | 0 | 0 | - |
-| OK | https://iptv-epg.org/files/epg-pl.xml.gz | 443 | 398 | 78056 | - |
-| OK | https://iptv-epg.org/files/epg-pt.xml.gz | 195 | 148 | 27314 | - |
-| OK | https://iptv-epg.org/files/epg-ro.xml.gz | 282 | 255 | 45429 | - |
-| OK | https://iptv-epg.org/files/epg-ru.xml.gz | 223 | 198 | 41776 | - |
-| OK | https://iptv-epg.org/files/epg-rs.xml.gz | 265 | 238 | 20540 | - |
-| OK | https://iptv-epg.org/files/epg-se.xml.gz | 95 | 80 | 14015 | - |
-| OK | https://iptv-epg.org/files/epg-tr.xml.gz | 107 | 80 | 17329 | - |
-| OK | https://iptv-epg.org/files/epg-gb.xml.gz | 924 | 865 | 82255 | - |
-| OK | https://iptv-epg.org/files/epg-at.xml.gz | 286 | 261 | 36145 | - |
-| OK | https://iptv-epg.org/files/epg-au.xml.gz | 485 | 481 | 50128 | - |
-| OK | https://iptv-epg.org/files/epg-cr.xml.gz | 84 | 77 | 7668 | - |
-| OK | https://iptv-epg.org/files/epg-pa.xml.gz | 121 | 112 | 9008 | - |
-| OK | https://iptv-epg.org/files/epg-py.xml.gz | 79 | 70 | 7738 | - |
-| OK | https://iptv-epg.org/files/epg-sg.xml.gz | 207 | 151 | 24463 | - |
-| OK | https://free-epg.de/api/epg/at.xml.gz | 286 | 261 | 36145 | - |
-| OK | https://free-epg.de/api/epg/cn.xml.gz | 709 | 220 | 24526 | - |
-| OK | https://free-epg.de/api/epg/cr.xml.gz | 84 | 77 | 7668 | - |
+| OK | https://iptv-epg.org/files/epg-pl.xml.gz | 443 | 398 | 87431 | - |
+| OK | https://iptv-epg.org/files/epg-pt.xml.gz | 195 | 148 | 30549 | - |
+| OK | https://iptv-epg.org/files/epg-ro.xml.gz | 282 | 257 | 44254 | - |
+| OK | https://iptv-epg.org/files/epg-ru.xml.gz | 223 | 198 | 40406 | - |
+| OK | https://iptv-epg.org/files/epg-rs.xml.gz | 265 | 240 | 27004 | - |
+| OK | https://iptv-epg.org/files/epg-se.xml.gz | 95 | 80 | 15543 | - |
+| OK | https://iptv-epg.org/files/epg-tr.xml.gz | 107 | 80 | 20714 | - |
+| OK | https://iptv-epg.org/files/epg-gb.xml.gz | 924 | 865 | 88863 | - |
+| OK | https://iptv-epg.org/files/epg-at.xml.gz | 286 | 261 | 42413 | - |
+| OK | https://iptv-epg.org/files/epg-au.xml.gz | 485 | 481 | 46835 | - |
+| OK | https://iptv-epg.org/files/epg-cr.xml.gz | 84 | 77 | 7298 | - |
+| OK | https://iptv-epg.org/files/epg-pa.xml.gz | 121 | 112 | 8285 | - |
+| OK | https://iptv-epg.org/files/epg-py.xml.gz | 79 | 70 | 8616 | - |
+| OK | https://iptv-epg.org/files/epg-sg.xml.gz | 207 | 151 | 27053 | - |
+| OK | https://free-epg.de/api/epg/at.xml.gz | 286 | 261 | 42413 | - |
+| OK | https://free-epg.de/api/epg/cn.xml.gz | 711 | 625 | 32876 | - |
+| OK | https://free-epg.de/api/epg/cr.xml.gz | 84 | 77 | 7298 | - |
 | NO_PROGRAMMES | https://free-epg.de/api/epg/ec.xml.gz | 104 | 0 | 0 | - |
 | FAILED | https://free-epg.de/api/epg/ee.xml.gz | 0 | 0 | 0 | HTTP Error 503: Service Unavailable |
-| OK | https://free-epg.de/api/epg/pa.xml.gz | 121 | 112 | 9006 | - |
+| OK | https://free-epg.de/api/epg/pa.xml.gz | 121 | 112 | 8285 | - |
 | OK | https://free-epg.de/api/epg/sa.xml.gz | 138 | 18 | 810 | - |
 | NO_PROGRAMMES | https://free-epg.de/api/epg/ua.xml.gz | 231 | 0 | 0 | - |
-| OK | https://i.mjh.nz/SamsungTVPlus/in.xml | 205 | 201 | 2114 | - |
-| OK | https://i.mjh.nz/SamsungTVPlus/us.xml | 594 | 593 | 4999 | - |
-| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | 698 | 604 | 43023 | - |
+| OK | https://i.mjh.nz/SamsungTVPlus/in.xml | 205 | 201 | 2060 | - |
+| OK | https://i.mjh.nz/SamsungTVPlus/us.xml | 594 | 592 | 5081 | - |
+| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | 698 | 604 | 35206 | - |
 | NO_PROGRAMMES | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | 717 | 0 | 0 | - |
-| OK | https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | 946 | 697 | 74900 | - |
-| OK | https://m3u-edit.com/epg-source.php?file=IN4.xml.gz | 557 | 499 | 17855 | - |
-| OK | https://m3u-edit.com/epg-source.php?file=BG1.xml.gz | 86 | 70 | 5596 | - |
-| OK | https://m3u-edit.com/epg-source.php?file=BEIN1.xml.gz | 80 | 78 | 2981 | - |
-| OK | https://m3u-edit.com/epg-source.php?file=FR1.xml.gz | 574 | 528 | 44460 | - |
-| OK | https://m3u-edit.com/epg-source.php?file=HU1.xml.gz | 193 | 168 | 18618 | - |
-| OK | https://m3u-edit.com/epg-source.php?file=ID1.xml.gz | 283 | 160 | 11625 | - |
-| OK | https://m3u-edit.com/epg-source.php?file=LT1.xml.gz | 89 | 75 | 6362 | - |
-| OK | https://m3u-edit.com/epg-source.php?file=PLEX1.xml.gz | 689 | 681 | 61003 | - |
+| OK | https://m3u-edit.com/epg-source.php?file=IN1.xml.gz | 946 | 697 | 65809 | - |
+| OK | https://m3u-edit.com/epg-source.php?file=IN4.xml.gz | 557 | 497 | 11331 | - |
+| OK | https://m3u-edit.com/epg-source.php?file=BG1.xml.gz | 86 | 70 | 4925 | - |
+| OK | https://m3u-edit.com/epg-source.php?file=BEIN1.xml.gz | 80 | 78 | 2516 | - |
+| OK | https://m3u-edit.com/epg-source.php?file=FR1.xml.gz | 574 | 528 | 38727 | - |
+| OK | https://m3u-edit.com/epg-source.php?file=HU1.xml.gz | 193 | 168 | 16570 | - |
+| OK | https://m3u-edit.com/epg-source.php?file=ID1.xml.gz | 283 | 160 | 10002 | - |
+| OK | https://m3u-edit.com/epg-source.php?file=LT1.xml.gz | 89 | 75 | 5709 | - |
+| OK | https://m3u-edit.com/epg-source.php?file=PLEX1.xml.gz | 689 | 681 | 53906 | - |
 | NO_PROGRAMMES | https://m3u-edit.com/epg-source.php?file=UA1.xml.gz | 1219 | 0 | 0 | - |
-| OK | https://m3u-edit.com/epg-source.php?file=US2.xml.gz | 792 | 775 | 51026 | - |
+| OK | https://m3u-edit.com/epg-source.php?file=US2.xml.gz | 792 | 775 | 43455 | - |
 | NO_PROGRAMMES | https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml | 394 | 0 | 0 | - |
-| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | 761 | 759 | 82541 | - |
-| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | 1499 | 1272 | 42445 | - |
-| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml | 286 | 17 | 2124 | - |
-| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | 123 | 109 | 20985 | - |
-| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/slingtv.xml | 6 | 6 | 105 | - |
-| NO_PROGRAMMES | https://avkb.short.gy/epg.xml.gz | 1437 | 0 | 0 | - |
-| NO_PROGRAMMES | https://avkb.short.gy/jioepg.xml.gz | 1171 | 0 | 0 | - |
+| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | 761 | 760 | 82903 | - |
+| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | 1499 | 1270 | 26684 | - |
+| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml | 286 | 250 | 8239 | - |
+| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | 123 | 108 | 19558 | - |
+| OK | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/slingtv.xml | 6 | 6 | 115 | - |
+| OK | https://avkb.short.gy/epg.xml.gz | 1437 | 493 | 10943 | - |
+| OK | https://avkb.short.gy/jioepg.xml.gz | 1171 | 1166 | 24215 | - |
 | NO_PROGRAMMES | https://avkb.short.gy/tsepg.xml.gz | 717 | 0 | 0 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | 487 | 383 | 35051 | - |
-| OK | https://www.open-epg.com/files/unitedkingdom.xml.gz | 566 | 426 | 21973 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz | 792 | 778 | 71523 | - |
-| OK | https://iptv-epg.org/files/epg-us.xml.gz | 12592 | 12167 | 866278 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz | 912 | 811 | 74612 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz | 345 | 279 | 39876 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz | 696 | 695 | 59402 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz | 751 | 730 | 74186 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz | 1087 | 501 | 31773 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz | 266 | 250 | 22475 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_DO1.xml.gz | 56 | 55 | 2524 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz | 256 | 239 | 20714 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz | 574 | 528 | 44400 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz | 321 | 300 | 22894 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz | 143 | 132 | 11534 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz | 193 | 168 | 18609 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz | 195 | 155 | 17722 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz | 163 | 129 | 9116 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_MX1.xml.gz | 175 | 162 | 13538 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | 159 | 158 | 19120 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | 636 | 589 | 97068 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz | 370 | 356 | 39883 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_SA2.xml.gz | 31 | 31 | 3635 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz | 178 | 139 | 10364 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz | 266 | 106 | 13683 | - |
-| OK | https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz | 97 | 92 | 9259 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | 487 | 383 | 31200 | - |
+| OK | https://www.open-epg.com/files/unitedkingdom.xml.gz | 566 | 429 | 27623 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz | 792 | 778 | 63949 | - |
+| OK | https://iptv-epg.org/files/epg-us.xml.gz | 12592 | 12112 | 917775 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz | 912 | 809 | 65937 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz | 345 | 279 | 45338 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz | 696 | 695 | 69108 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz | 751 | 730 | 66879 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz | 1087 | 536 | 43763 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz | 266 | 251 | 22317 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_DO1.xml.gz | 56 | 55 | 2250 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz | 256 | 239 | 18376 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz | 574 | 527 | 51977 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz | 321 | 300 | 21186 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz | 143 | 132 | 10078 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz | 193 | 168 | 16568 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz | 195 | 155 | 15792 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz | 163 | 132 | 11319 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_MX1.xml.gz | 175 | 162 | 11903 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | 159 | 158 | 22900 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | 636 | 589 | 89705 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz | 370 | 356 | 35855 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_SA2.xml.gz | 31 | 31 | 4291 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz | 178 | 141 | 13887 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz | 266 | 106 | 12158 | - |
+| OK | https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz | 97 | 92 | 8589 | - |
 | OK | https://hum.tv/schedule/ | 1 | 1 | 21 | - |
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; rtvbd.tv/live.php: URLError; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry |
 | OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 70 | - |
-| OK | Maasranga official weekly grid (undated) | 1 | 1 | 173 | - |
+| OK | Maasranga official weekly grid (undated) | 1 | 1 | 183 | - |
 | FAILED | M3U4U XMLTV (private Actions secret) | 0 | 0 | 0 | details suppressed for private source |
-| OK | iptv-org/epg (targeted build-time guide) | 336 | 282 | 13658 | - |
+| OK | iptv-org/epg (targeted build-time guide) | 317 | 266 | 13001 | - |
 
 ## Source handling notes
 
