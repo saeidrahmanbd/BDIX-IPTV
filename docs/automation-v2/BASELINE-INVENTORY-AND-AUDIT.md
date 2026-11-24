@@ -1,5 +1,7 @@
 # BDIX-IPTV Automation V2 — Baseline Inventory & Audit
 
+> **Historical baseline:** This document records the 2026-11-13 inventory and must not be treated as the current repository state. See [the 2026-11-24 repository-wide cleanup audit](../REPOSITORY-CLEANUP-AUDIT-2026-11-24.md) for the current inventory and subsequent verified cleanup.
+
 **Audit date:** 2026-11-13  
 **Baseline branch:** `main`  
 **Baseline commit:** `aec37357dfbb47f0792682af744ccaf111416d7a`  
