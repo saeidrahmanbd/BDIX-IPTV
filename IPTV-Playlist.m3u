@@ -610,8 +610,6 @@ https://neotv.ottlive.co.in/gtcpunjabiuk/index.m3u8
 https://neotv.ottlive.co.in/gtcpunjabiusa/index.m3u8
 #EXTINF:-1 tvg-id="HiDost.in@SD" tvg-name="Hi Dost!" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hi-dost.png" tvg-chno="305" channel-id="HiDost.in@SD" tvg-country="IN" tvg-language="eng" group-title="Indian Entertainment",Hi Dost!
 https://cdn.pishow.tv/ott/live/224/master.m3u8
-#EXTINF:-1 tvg-id="JaihindTV.in@SD" tvg-name="Jaihind TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jaihind-tv.png" tvg-chno="306" channel-id="JaihindTV.in@SD" tvg-country="IN" tvg-language="mal" group-title="Indian Entertainment",Jaihind TV
-https://yuppnimrestreammum.akamaized.net/260723/smil:jaihind1.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 #EXTINF:-1 tvg-id="Jonack.in@SD" tvg-name="Jonack" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jonack.png" tvg-chno="307" channel-id="Jonack.in@SD" tvg-country="IN" tvg-language="asm" group-title="Indian Entertainment",Jonack
 https://cdn.pishow.tv/ott/live/10006/master.m3u8
 #EXTINF:-1 tvg-id="KairaliArabia.in" tvg-name="Kairali Arabia" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kairali-arabia.png" tvg-chno="308" channel-id="KairaliArabia.in" tvg-country="IN" tvg-language="mal" group-title="Indian Entertainment",Kairali Arabia
@@ -1808,8 +1806,6 @@ https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF9
 https://app.ncare.live/live-orgin/jagonews24.stream/live-orgin/jagonews24.stream/chunks.m3u8
 #EXTINF:-1 tvg-id="JagoNews24.bd" tvg-name="Jago News 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jago-news-24.png" channel-id="JagoNews24.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Jago News 24
 https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
-#EXTINF:-1 tvg-id="JaihindTV.in@SD" tvg-name="Jaihind TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jaihind-tv.png" channel-id="JaihindTV.in@SD" tvg-country="IN" tvg-language="mal" group-title="Backup",Jaihind TV
-https://fta.ektv.in/live/700/master.m3u8
 #EXTINF:-1 channel-id="JalwaTV.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa-tv.png" tvg-id="JalwaTV.pk@SD" tvg-name="Jalwa TV" tvg-language="urd" tvg-country="PK" group-title="Backup",Jalwa TV
 https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/live/135M/chunks.m3u8
 #EXTINF:-1 tvg-id="JamunaTV.bd" tvg-name="Jamuna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jamuna-tv.png" channel-id="JamunaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Jamuna TV
