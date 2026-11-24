@@ -1,6 +1,7 @@
 import json
 import re
 import sqlite3
+import tomllib
 import unittest
 from pathlib import Path
 
@@ -40,6 +41,15 @@ class ReliabilityFoundationTests(unittest.TestCase):
             source = (WORKFLOWS / filename).read_text(encoding="utf-8")
             self.assertIn(f"cron: '{cron}'", source)
             self.assertRegex(source, rf"(?m)^  {re.escape(job_id)}:")
+
+    def test_worker_registry_matches_canonical_registry_in_production_and_preview(self):
+        canonical = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+        config_path = ROOT / "automation" / "reliability" / "worker" / "wrangler.toml"
+        config = tomllib.loads(config_path.read_text(encoding="utf-8"))
+        production = json.loads(config["vars"]["REGISTRY_JSON"])
+        preview = json.loads(config["previews"]["vars"]["REGISTRY_JSON"])
+        self.assertEqual(production, canonical)
+        self.assertEqual(preview, canonical)
 
     def test_every_registered_workflow_uses_the_shared_playlist_writer_lock(self):
         data = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
