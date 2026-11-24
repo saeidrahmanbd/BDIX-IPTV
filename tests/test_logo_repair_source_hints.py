@@ -118,6 +118,30 @@ class LogoRepairSourceTests(unittest.TestCase):
             ".png",
         )
 
+    def test_recovered_local_logo_overrides_are_exact_existing_assets(self):
+        expected = {
+            "asian sony max 2": "sony-max-2.png",
+            "raj music telugu": "raj-musix-telugu-720p-e8fd0fb178.png",
+            "rengoni tv": "rengoni.png",
+            "allo cine": "allo-cine-1080p.png",
+            "news 21 bangla": "news-21-bangla-tv.png",
+        }
+        for channel, filename in expected.items():
+            with self.subTest(channel=channel):
+                self.assertEqual(logo_repair.LOCAL_OVERRIDES[channel], filename)
+                self.assertTrue(logo_repair.file_is_valid(ROOT / "logos" / filename))
+
+    def test_ekids_and_floracing_have_exact_attributed_logo_sources(self):
+        ekids = logo_repair.EXTRA_DIRECT_HINTS["EKids"]
+        self.assertEqual(ekids["url"], "https://upload.wikimedia.org/wikipedia/commons/8/8f/E-Kids_logo_2024.svg")
+        self.assertEqual(ekids["page"], "https://commons.wikimedia.org/wiki/File:E-Kids_logo_2024.svg")
+        self.assertIn("Creative Commons Attribution 4.0", ekids["license"])
+        self.assertEqual(ekids["license_url"], "https://creativecommons.org/licenses/by/4.0/")
+        floracing = logo_repair.EXTRA_DIRECT_HINTS["FloRacing"]
+        self.assertEqual(floracing["url"], "https://a.jsrdn.com/hls/22883/floracing-247/logo_20231219_225054_24.png")
+        self.assertEqual(floracing["page"], "https://github.com/iptv-org/database/issues/27573")
+        self.assertIn("FloRacing 24/7", floracing["license"])
+
     def test_international_logo_sources_are_exact_and_attributed(self):
         expected = {
             "Diema": (
