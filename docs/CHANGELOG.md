@@ -5,45 +5,29 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-23 — `IPTV-Playlist.m3u`
+### 2026-11-24 — `IPTV-Playlist.m3u`
 
 - New channel identities: **0**
-- Channel identities removed: **5**
-- Stream URLs added / removed: **0 / 5**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **6 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **411**
+- Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Removed channel identities (up to 10):
-- Movies Now+
-- MyTime Movie Network (US)
-- Travel Channel
-- Fight TV
-- Futbol TV
-
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-23 — `International-Playlist.m3u`
+### 2026-11-24 — `International-Playlist.m3u`
 
-- New channel identities: **10**
+- New channel identities: **1**
 - Channel identities removed: **0**
-- Stream URLs added / removed: **20 / 1**
+- Stream URLs added / removed: **1 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **21**
+- Logo reference changes: **24**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- FashionTV (India)
-- FashionTV (Russia)
-- FashionTV Paris L'Original
-- FashionTV Secrets
-- Code Fashion TV
-- FashionTV Europe
-- FMH Movies
-- Galaxy
-- Galaxy Premium
-- Kinosvidanie
+- Aurora Media Films (720p)
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
