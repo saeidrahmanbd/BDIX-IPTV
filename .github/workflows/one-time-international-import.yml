@@ -1,12 +1,13 @@
 name: One-time IPTV to International Import
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/import_iptv_into_international.py'
-      - '.github/workflows/one-time-international-import.yml'
   workflow_dispatch:
+    inputs:
+      confirm_import:
+        description: "Confirm the one-time import and reorganization of International-Playlist.m3u"
+        required: true
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -18,6 +19,7 @@ concurrency:
 
 jobs:
   import:
+    if: ${{ inputs.confirm_import }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
