@@ -1,32 +1,32 @@
 # IPTV Playlist Audit
-Generated: **2026-11-23T08:51:18.425231+00:00**
-Source playlist SHA-256: **8605b2b64684072ed4bc3d53d8d3ba804983ef9b81f96d2cb91e551df9841a7c**
+Generated: **2026-11-24T00:17:32.978741+00:00**
+Source playlist SHA-256: **95ca9078eca1ae8371b7c211029a02bfed62a01de35303f09627ec12f3ba8bc7**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1355**
-- Unique channel IDs: **827**
+- Playlist entries: **1350**
+- Unique channel IDs: **822**
 - IDs with multiple streams: **259**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-queue same-ID name variants (review): **1**
-- Cross-queue normalized-name/different-ID groups (review): **20**
+- Cross-queue normalized-name/different-ID groups (review): **19**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **216**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1355**
+- Logo references checked: **1350**
 - Duplicate primary identities: **0**
-- Potential near-duplicate primary name groups (review only): **5**
-- Primary channel-number collisions: **5**
-- Primary channel-number sequence issues (review only): **7**
-- Primary entries missing channel numbers: **8**
+- Potential near-duplicate primary name groups (review only): **0**
+- Primary channel-number collisions: **0**
+- Primary channel-number sequence issues (review only): **0**
+- Primary entries missing channel numbers: **0**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
@@ -72,7 +72,6 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 - Same normalized name: Eurosport [eurosport.fr@asia] (Review); Eurosport [eurosport.in@hd] (Review); Eurosport [eurosport.in@sd] (Review)
 - Same normalized name: InWild [inwild.nl] (Documentary & Wildlife); INWILD (1080p) [inwild.nl@sd] (New Backups)
 - Same normalized name: Jalsha Movies [jalshamovies.in@sd] (Indian Bangla); Jalsha Movies [jalshamovies.in@sd] (Review); Jalsha Movies [star.jalsha.movies.in] (Review)
-- Same normalized name: Movies Now [moviesnow.in@hd] (Backup); Movies Now [moviesnow.in@hd] (Indian Movies); Movies Now+ [moviesnowplus.in@hd] (International)
 - Same normalized name: MTV India [mtv.in@hd] (Indian Music); MTV (India) (396p) [mtv.in@sd] (New Backups); MTV India [mtv.in@sd] (Indian Music); MTV India [mtv.in@sd] (Review)
 - Same normalized name: Peace TV Bangla [peacetvbangla.ae] (Backup); Peace TV Bangla [peacetvbangla.ae] (Religious); Peace TV Bangla [peacetvbangla.ae@sd] (Review)
 - Same normalized name: &pictures HD [andpictures.in@hd] (Indian Movies); &pictures HD [andpictures.in@sd] (Review)
@@ -1138,31 +1137,15 @@ None.
 
 ## Potential Near-Duplicate Primary Names (Review Only)
 
-- Channel Fight [channel.fight.com] (Sports); Fight TV [fight.tv.com] (Sports)
-- Futbol [futbol.tj@sd] (Sports); Futbol TV [futboltv.uz@hd] (Sports)
-- Movies Now [moviesnow.in@hd] (Indian Movies); Movies Now+ [moviesnowplus.in@hd] (International)
-- MyTime Movie Network (Brazil) [mytimemovienetwork.br] (International); MyTime Movie Network (US) [mytimemovienetwork.us@sd] (International)
-- 4K Travel [travel.us] (Documentary & Wildlife); Travel Channel [travelchannel.us@sd] (Documentary & Wildlife)
-
-These are review suggestions only. The audit does not merge identities, change channel order, or remove streams.
+None.
 
 ## Primary Channel-Number Collisions
 
-- **0** — FashionBox, FashionTV Secrets
-- **618** — Fashion&LifeStyle, DD Sports
-- **619** — FashionTV, DraftKings Network
-- **620** — FashionTV Paris L'Original, Eleven Sports 1
-- **621** — Global Fashion Channel, Eleven Sports 2
+None.
 
 ## Primary Channel-Number Sequence (Review Only)
 
-- **FashionBox** — expected channel number a positive integer, found 0
-- **FashionTV Secrets** — expected channel number a positive integer, found 0
-- **Grand Cinema** — expected channel number a number above 621, found 427
-- **MNX** — expected channel number a number above 437, found 140
-- **Movies Now+** — expected channel number a number above 438, found 143
-- **Sony Movies** — expected channel number a number above 456, found 157
-- **Star Movies Select HD** — expected channel number a number above 457, found 167
+No sequence discrepancies detected.
 
 ## Malformed EXTINF Entries
 
@@ -1206,7 +1189,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1355**
+- Healthy/local references: **1350**
 - External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair

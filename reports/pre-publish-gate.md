@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-23T08:51:19+00:00**
-Source playlist SHA-256: **8605b2b64684072ed4bc3d53d8d3ba804983ef9b81f96d2cb91e551df9841a7c**
+Generated: **2026-11-24T00:17:34+00:00**
+Source playlist SHA-256: **95ca9078eca1ae8371b7c211029a02bfed62a01de35303f09627ec12f3ba8bc7**
 
 Status: **PASS**
 
-- Current entries: **1355**
+- Current entries: **1350**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -13,12 +13,12 @@ Status: **PASS**
 - Review entries reclassified: **0**
 - Review entries promoted: **0**
 - Review entries deleted: **0**
-- Duplicate primary channel numbers (all): **5**
+- Duplicate primary channel numbers (all): **0**
 - New/changed duplicate primary channel numbers (blocking): **0**
-- Pre-existing duplicate primary channel numbers preserved unchanged: **5**
+- Pre-existing duplicate primary channel numbers preserved unchanged: **0**
 - Permanently banned channel entries across all IPTV groups: **0**
-- Primary entries missing channel numbers: **8**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **7**
+- Primary entries missing channel numbers: **0**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **0**
 - Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
@@ -39,18 +39,14 @@ Status: **PASS**
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **7**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **0**.
 
 ## Blocking Reasons
 No hard safety blockers detected.
 
 ## Channel-number collision review
 
-- **0** — PRESERVED (pre-existing): FashionBox [International]; FashionTV Secrets [International]
-- **618** — PRESERVED (pre-existing): Fashion&LifeStyle [International]; DD Sports [Sports]
-- **619** — PRESERVED (pre-existing): FashionTV [International]; DraftKings Network [Sports]
-- **620** — PRESERVED (pre-existing): FashionTV Paris L'Original [International]; Eleven Sports 1 [Sports]
-- **621** — PRESERVED (pre-existing): Global Fashion Channel [International]; Eleven Sports 2 [Sports]
+No duplicate primary channel numbers.
 
 ## Permanent channel-ban blockers
 
@@ -58,9 +54,7 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 
 ## Warnings / Manual Review
 
-- pre-existing owner-curated duplicate channel numbers preserved unchanged: 0, 618, 619, 620, 621
 - entries missing tvg-language: 18
-- primary entries missing tvg-chno: 8
 - raw resolution/geoblock tags in channel names: 18
 - New queue candidates pending owner review: 2
 

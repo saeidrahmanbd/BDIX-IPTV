@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T08:52:15+00:00",
+  "generated": "2026-11-24T00:18:41+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -4556,20 +4556,6 @@
       "primary": 1,
       "backup": 0
     },
-    "fight.tv.com": {
-      "names": [
-        "Fight TV"
-      ],
-      "ids": [
-        "fight.tv.com"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "fite247": {
       "names": [
         "FITE 24"
@@ -4661,20 +4647,6 @@
       ],
       "ids": [
         "futbol.tj@sd"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "futboltv": {
-      "names": [
-        "Futbol TV"
-      ],
-      "ids": [
-        "futboltv.uz@hd"
       ],
       "groups": [
         "Sports"
@@ -6533,20 +6505,6 @@
       "primary": 1,
       "backup": 1
     },
-    "moviesnowplus": {
-      "names": [
-        "Movies Now+"
-      ],
-      "ids": [
-        "moviesnowplus.in@hd"
-      ],
-      "groups": [
-        "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "moviesphere": {
       "names": [
         "MovieSphere"
@@ -6695,19 +6653,17 @@
     "mytimemovienetwork": {
       "names": [
         "MyTime Movie (UK)",
-        "MyTime Movie Network (Brazil)",
-        "MyTime Movie Network (US)"
+        "MyTime Movie Network (Brazil)"
       ],
       "ids": [
         "mytimemovienetwork.br",
-        "mytimemovienetwork.uk@sd",
-        "mytimemovienetwork.us@sd"
+        "mytimemovienetwork.uk@sd"
       ],
       "groups": [
         "International"
       ],
-      "streams": 3,
-      "primary": 3,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "mytimemovienetworkeast": {
@@ -10259,20 +10215,6 @@
       ],
       "ids": [
         "travel.us"
-      ],
-      "groups": [
-        "Documentary & Wildlife"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "travelchannel": {
-      "names": [
-        "Travel Channel"
-      ],
-      "ids": [
-        "travelchannel.us@sd"
       ],
       "groups": [
         "Documentary & Wildlife"

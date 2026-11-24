@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-23T08:52:23+00:00**
+Generated: **2026-11-24T00:18:53+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **8605b2b64684072ed4bc3d53d8d3ba804983ef9b81f96d2cb91e551df9841a7c**
-- International-Playlist.m3u SHA-256: **e399bcc9869261b4e9f7d33bf015df494374c1394911ade718b3ae98417a2375**
+- IPTV-Playlist.m3u SHA-256: **95ca9078eca1ae8371b7c211029a02bfed62a01de35303f09627ec12f3ba8bc7**
+- International-Playlist.m3u SHA-256: **21bb925089e872099dfa3bd8ac0e1567e723bad28fa3294020917ed6d6bbbfee**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 21 | 2 | 1332 |
-| International-Playlist.m3u | 0 | 985 | 0 | 2329 |
+| IPTV-Playlist.m3u | 0 | 21 | 2 | 1327 |
+| International-Playlist.m3u | 0 | 985 | 0 | 2330 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3661**
+- Logos needing attribution review: **3657**
 - Unofficial fallback logos: **2**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3661 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3657 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
@@ -103,8 +103,6 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | fashion-tv-aa7f9461cf.png | FashionTV | FashionTV.ru@SD |
 | fashion-tv-aa7f9461cf.png | FashionTV Paris L'Original | FashionTVParisLOriginal.fr@SD |
 | fashion-tv-aa7f9461cf.png | FashionTV Secrets | FashionTVSecrets.fr@HD |
-| futbol-tv-068fcbdde9.png | Futbol | Futbol.tj@SD |
-| futbol-tv-068fcbdde9.png | Futbol TV | FutbolTV.uz@HD |
 | goldmines-movies.png | Goldmines Movies | GoldminesMovies.in@SD |
 | goldmines-movies.png | Goldmines Movies 2 | goldmines.movies.2.in |
 | gtc-punjabi.png | GTC Punjabi | GTCPunjabi.in@SD |
@@ -120,8 +118,6 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | mnx.png | MNX | MNX.in@SD |
 | mtv-india-hd-720p.png | MTV India | MTV.in@HD |
 | mtv-india-hd-720p.png | MTV (India) (396p), MTV India | MTV.in@SD |
-| mytime-movie-network.png | MyTime Movie Network (Brazil) | MyTimeMovieNetwork.br |
-| mytime-movie-network.png | MyTime Movie Network (US) | MyTimeMovieNetwork.us@SD |
 | peace-tv-bangla.png | Peace TV Bangla | PeaceTVBangla.ae |
 | peace-tv-bangla.png | Peace TV Bangla | PeaceTVBangla.ae@SD |
 | rakuten-tv-top-movies.png | Rakuten TV Comedy Movies UK | RakutenTVComedyMovies.es@UK |
