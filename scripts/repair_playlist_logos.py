@@ -1162,6 +1162,7 @@ def main():
             path.write_text(new_text, encoding="utf-8")
         # Confirm reference counts against the resulting file.
         missing_after = flagged_after = 0
+        active_missing_after = review_missing_after = adult_missing_after = 0
         for item in output:
             if not item.startswith("#EXTINF:"):
                 continue
@@ -1169,13 +1170,21 @@ def main():
             meta_group = (meta.get("group-title") or "").strip().casefold()
             meta_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
             meta_key = norm_key(meta_label or meta.get("tvg-name", ""))
-            if is_adult_playlist_entry(playlist, meta_group, meta_id, meta_key):
-                continue
             logo = (meta.get("tvg-logo") or "").strip()
+            if is_adult_playlist_entry(playlist, meta_group, meta_id, meta_key):
+                # Adult rows are protected from repair. Count missing metadata
+                # separately so "entries skipped" is never mistaken for "logos missing".
+                if not logo:
+                    adult_missing_after += 1
+                continue
             name = Path(urllib.parse.urlparse(logo).path).name.casefold() if logo else ""
             allow_fallback = bool(name.startswith("generated-fallback-") and (LOGOS / urllib.parse.unquote(name)).is_file())
             if not logo or not is_valid_local_logo_reference(logo, allow_generated_fallback=allow_fallback):
                 missing_after += 1
+                if meta_group == "review":
+                    review_missing_after += 1
+                else:
+                    active_missing_after += 1
             if (
                 name in BAD_ASSETS or name in GENERIC_ASSETS
                 or name.startswith(("nvisionbd-", "placeholder-", "generated-fallback-", "generic-", "unknown-", "unidentified-"))
@@ -1184,6 +1193,9 @@ def main():
                 flagged_after += 1
         summary[playlist] = {
             "entries": entries, "changed": changed, "missing_after": missing_after,
+            "active_missing_after": active_missing_after,
+            "review_missing_after": review_missing_after,
+            "adult_missing_after": adult_missing_after,
             "flagged_after": flagged_after, "generated_fallbacks": fallback_count,
             "unresolved": unresolved, "adult_entries_skipped": adult_ignored,
         }
@@ -1220,11 +1232,16 @@ def main():
         f"IPTV-org data: {iptv_status}  ",
         f"Historical mapping index: {history_status}", "",
         "## Results by playlist", "",
-        "| Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|",
+        "| Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for name, data in summary.items():
-        report.append(f"| {name} | {data['entries']} | {data['changed']} | {data['generated_fallbacks']} | {data['missing_after']} | {data.get('adult_entries_skipped', 0)} | {data['flagged_after']} | {data['unresolved']} |")
+        report.append(
+            f"| {name} | {data['entries']} | {data['changed']} | {data.get('active_missing_after', 0)} | "
+            f"{data.get('review_missing_after', 0)} | {data.get('adult_missing_after', 0)} | "
+            f"{data.get('adult_entries_skipped', 0)} | {data['generated_fallbacks']} | "
+            f"{data['flagged_after']} | {data['unresolved']} |"
+        )
     report += ["", "## Repair log", "",
                "| Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |",
                "|---|---:|---|---|---|---|---|---|"]
