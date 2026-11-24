@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-24 03:38 UTC**  
+Run time: **2026-11-24 03:39 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,15 +10,12 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1356 | 0 | 0 | 0 | 0 | 0 | 0 |
-| International-Playlist.m3u | 3315 | 6 | 0 | 37 | 372 | 0 | 37 |
+| International-Playlist.m3u | 3315 | 0 | 0 | 37 | 372 | 0 | 37 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| International-Playlist.m3u | 177 | Asian Sony Max 2 | (missing) | sony-max-2.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| International-Playlist.m3u | 395 | Raj Music Telugu | (missing) | raj-musix-telugu-720p-e8fd0fb178.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| International-Playlist.m3u | 683 | Rengoni TV | (missing) | rengoni.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | International-Playlist.m3u | 887 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1041 | Cedros TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1125 | DanceTV Algorhythm | (missing) | (none) | Official DanceTV channel artwork URL, corroborated by the broadcaster's public stream listing |  | Download/validation failed: HTTP Error 404: Not Found |
@@ -28,16 +25,13 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 1891 | Tarab | (missing) | (none) | Exact external logo asset |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 1891 | Tarab | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2421 | MyTime Movie Network (US) | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 2679 | Allo Cine | (missing) | allo-cine-1080p.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | International-Playlist.m3u | 2689 | Asia Flix TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2695 | Bigscreen TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2845 | Sine Plus | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 2893 | NEWS 21 BANGLA | (missing) | news-21-bangla-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | International-Playlist.m3u | 3131 | Travel XP Bangla | (missing) | (none) | Exact original tvg-logo URL from playlist history |  | Download/validation failed: HTTP Error 404: Not Found |
 | International-Playlist.m3u | 3131 | Travel XP Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 3231 | Chikitoonz | (missing) | (none) | IPTV-org exact ID: Chikitoonz.pe |  | Download/validation failed: HTTP Error 404: Not Found |
 | International-Playlist.m3u | 3231 | Chikitoonz | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 3279 | EKids | (missing) | ekids-a496dce1a5deb826a721.svg | [Exact external logo asset](https://commons.wikimedia.org/wiki/File:E-Kids_logo_2024.svg) | Original EKids channel artwork uploaded from the broadcaster's official ekids.bg website; Creative Commons Attribution 4.0 International — https://creativecommons.org/licenses/by/4.0/ | replaced |
 | International-Playlist.m3u | 3471 | Al Sunnah TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 3507 | Peace TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 3519 | Saudi Quran | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
