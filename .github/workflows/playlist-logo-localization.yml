@@ -29,6 +29,8 @@ on:
       - tests/test_logo_repair_source_hints.py
       - tests/test_duplicate_logo_cleanup_plan.py
       - scripts/discovery_schedule_guard.py
+      - IPTV-Playlist.m3u
+      - International-Playlist.m3u
   # Re-run after a playlist writer publishes a newer main revision. The
   # daily guard compares input SHAs, so a previous logo pass cannot suppress
   # localization of later discovery/maintenance changes.
