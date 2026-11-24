@@ -1,19 +1,19 @@
 # Stream Risk Review
 
-Generated: **2026-11-24T00:18:41+00:00**
-IPTV-Playlist.m3u SHA-256: **95ca9078eca1ae8371b7c211029a02bfed62a01de35303f09627ec12f3ba8bc7**
+Generated: **2026-11-24T07:09:44+00:00**
+IPTV-Playlist.m3u SHA-256: **ff15c8ceffaa71c72e6b9f2c387ff941dc227454cb482bb4a2943966640ec13c**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
 
 ## Summary
 
 - /streamtest/ endpoints: **12**
-- Signed/token-query endpoints: **12**
+- Signed/token-query endpoints: **15**
 - Signed endpoints with expired embedded expiry: **0**
 - Signed endpoints expiring within 72 hours: **0**
-- Signed endpoints with no parseable expiry: **0**
+- Signed endpoints with no parseable expiry: **4**
 - Xtream-style credential paths (credentials redacted): **3**
-- Proxy/worker-host routes: **28** (2 primary, 26 Backup)
+- Proxy/worker-host routes: **28** (1 primary, 27 Backup)
 - /api/play/ relay routes: **0**
 - Expiry is parsed only from explicit Unix timestamps; opaque signatures remain UNKNOWN and are never guessed.
 
@@ -21,13 +21,15 @@ Generated from the current playlist and latest available stream-health report. T
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1350 |
-| Reachable | 1100 |
-| Failed this check | 250 |
+| Streams tested | 1339 |
+| Reachable | 1068 |
+| Failed this check | 271 |
 | Persistent failures (3+ consecutive) | 56 |
 
 ### Persistent failures
 
+- **Jalwa TV** — Backup — consecutive failed days: **5** — 206
+- **Jalwa TV** — Indian Music — consecutive failed days: **5** — 206
 - **&TV** — Review — consecutive failed days: **10** — HTTP 404
 - **8XM** — Review — consecutive failed days: **5** — HTTP 404
 - **AMN TV** — Review — consecutive failed days: **10** — HTTP 404
@@ -57,8 +59,6 @@ Generated from the current playlist and latest available stream-health report. T
 - **Hum TV** — Review — consecutive failed days: **10** — HTTP 404
 - **Hum TV** — Review — consecutive failed days: **10** — HTTP 404
 - **Islamic TV** — Review — consecutive failed days: **10** — HTTP 404
-- **Jalwa TV** — Review — consecutive failed days: **5** — HTTP 404
-- **Jalwa TV** — Review — consecutive failed days: **5** — HTTP 404
 - **Jamuna TV** — Review — consecutive failed days: **10** — HTTP 404
 - **MBC Bollywood** — Review — consecutive failed days: **8** — HTTP 404
 - **MLB** — Review — consecutive failed days: **6** — HTTP 404
@@ -69,7 +69,7 @@ Generated from the current playlist and latest available stream-health report. T
 - **Rajdhani TV** — Review — consecutive failed days: **10** — HTTP 404
 - **Rakuten TV Action Movies UK** — Review — consecutive failed days: **7** — HTTP 404
 - **Rakuten TV Comedy Movies UK** — Review — consecutive failed days: **6** — HTTP 404
-- **Rupashi Bangla TV** — Review — consecutive failed days: **7** — HTTP 404
+- **Rupashi Bangla TV** — Review — consecutive failed days: **7** — HTTP 500
 - **Sananda** — Review — consecutive failed days: **10** — HTTP 404
 - **Somoy TV** — Review — consecutive failed days: **10** — HTTP 404
 - **Sony Aath** — Review — consecutive failed days: **10** — HTTP 404
@@ -89,6 +89,7 @@ Generated from the current playlist and latest available stream-health report. T
 
 | Channel | Group | Host | Path |
 |---|---|---|---|
+| Jalwa TV | Indian Music | cdn4.mjunoon.tv:8087 | /streamtest/135M/chunks.m3u8 |
 | 8XM | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/8XM-131/playlist.m3u8 |
 | Ary Digital | Pakistani | cdn4.mjunoon.tv:8087 | /streamtest/84M/chunks.m3u8 |
 | Green Entertainment | Pakistani | cdn4.mjunoon.tv:8087 | /streamtest/166M/chunks.m3u8 |
@@ -97,10 +98,9 @@ Generated from the current playlist and latest available stream-health report. T
 | Paighan TV | Religious | cdn4.mjunoon.tv:8087 | /streamtest/107M/chunks.m3u8 |
 | Animal Planet | Backup | vodzong.mjunoon.tv:8087 | /streamtest/Animal-Planet-158-3/playlist.m3u8 |
 | Hum TV | Backup | cdn4.mjunoon.tv:8087 | /streamtest/82M/chunks.m3u8 |
+| Jalwa TV | Backup | vodzong.mjunoon.tv:8087 | /streamtest/JalwaTV-135/live/135M/chunks.m3u8 |
 | 8XM | Review | cdn4.mjunoon.tv:8087 | /streamtest/131M/chunks.m3u8 |
 | Bol Entertainment | Review | vodzong.mjunoon.tv:8087 | /streamtest/Channel5-159-4/playlist.m3u8 |
-| Jalwa TV | Review | cdn4.mjunoon.tv:8087 | /streamtest/135M/chunks.m3u8 |
-| Jalwa TV | Review | vodzong.mjunoon.tv:8087 | /streamtest/JalwaTV-135/live/135M/chunks.m3u8 |
 
 ## Signed / Token-Query Endpoints
 
@@ -110,17 +110,20 @@ Expiry is classified only when a numeric Unix timestamp is explicitly present (i
 
 | Channel | Group | Host | Parameter names | Expiry status | Expiry (UTC) |
 |---|---|---|---|---|---|
+| Colors Bangla Cinema | Indian Bangla | 103.114.11.37:8081 | token | UNKNOWN | Not exposed |
 | ETV Cinema | Indian Movies | yupplivegcpusa.yuppcdn.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | Boogle Bollywood | Indian Music | yuppnimrestreammum.akamaized.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | Songdew TV | Indian Music | yuppnimrestreammum.akamaized.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | Wah Punjabi | Indian Music | yuppnimrestreammum.akamaized.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | Colors Super | Indian Entertainment | d1rc86nwwc9fag.cloudfront.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
-| Jaihind TV | Indian Entertainment | yuppnimrestreammum.akamaized.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | Zee Kannada | Indian Entertainment | yuppnimresmum.akamaized.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | WOW Kidz Hindi | Kids | yuppparoriglin.akamaized.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | WOW Kidz Tamil | Kids | yuppparoriglin.akamaized.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | WOW Kidz Telugu | Kids | yuppparoriglin.akamaized.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | Major League Cricket | Sports | bl.rutube.ru | e | FUTURE | 2035-09-29T13:14:34+00:00 |
+| Star Sports 1 HD | Sports | 103.114.11.37:8081 | token | UNKNOWN | Not exposed |
+| Star Sports Select 1 | Sports | 103.114.11.37:8081 | token | UNKNOWN | Not exposed |
+| Star Sports Select 2 | Sports | 103.114.11.37:8081 | token | UNKNOWN | Not exposed |
 | Studio Yuva | Backup | d2gvyg6lvauoko.cloudfront.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 
 ## Xtream-Style Credential Paths
@@ -145,6 +148,7 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | Bangla Vision | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Bhojpuri Cinema | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Boishakhi TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
+| Channel 16 | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Channel I | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Channel S | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | DBC News | Backup | iptvlive.ahmed-bd-org.workers.dev |
@@ -165,7 +169,6 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | Sananda | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Somoy TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Zee Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
-| Channel 16 | Review | iptvlive.ahmed-bd-org.workers.dev |
 | Channel 24 | Review | iptvlive.ahmed-bd-org.workers.dev |
 
 ## Hosted /api/play/ Relay Routes
