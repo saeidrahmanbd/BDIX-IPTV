@@ -1,4 +1,6 @@
-# Logo storage audit — baseline and repository-wide findings
+# Logo storage audit — historical baseline and repository-wide findings
+
+> **Historical snapshot:** The counts below describe the earlier Automation v2 baseline, not the current logo inventory. See [the 2026-11-24 repository-wide cleanup audit](../REPOSITORY-CLEANUP-AUDIT-2026-11-24.md) for current counts. No logo cleanup is authorized by this historical report.
 
 Baseline: 46275f5ebafa2ae1b56f3e480f684ac1e85ae45e
 
