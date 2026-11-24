@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-24T03:17:29+00:00**
+Generated: **2026-11-24T03:38:19+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **178dd894a04de89554226ce923e5a9d831de730a2f89c8fbd05c5689d97f4959**
-- International-Playlist.m3u SHA-256: **965c954054ef8cdb955bae8c73de0675a56f80bb40e958c8a52356981613104a**
+- IPTV-Playlist.m3u SHA-256: **807454d35dfde892070cba70cac5224155c033cbd2a9da5b374e836cce2c6e9a**
+- International-Playlist.m3u SHA-256: **a23c4e7f47de23d227b82518a8b617554ee82ff849538558aac56bd20dbaf7f6**
 
 ## Summary
 
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1598**
-- Unreferenced image assets immediately inside logos/: **962** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1602**
+- Unreferenced image assets immediately inside logos/: **961** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1306,6 +1306,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Backup |
 | IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
 | IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
+| IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
 | IPTV-Playlist.m3u | Makkah TV | makkah-tv.png | Backup |
 | IPTV-Playlist.m3u | Makkah TV | makkah-tv.png | Backup |
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Backup |
@@ -1506,6 +1507,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | &TV International | and-tv-international-af1a6839d33bb0bcceb7.png | Indian Movies |
 | International-Playlist.m3u | &xplor | and-xplor-hd.png | Indian Movies |
 | International-Playlist.m3u | Alankar TV | alankar-tv.png | Indian Movies |
+| International-Playlist.m3u | Asian Sony Max 2 | sony-max-2.png | Indian Movies |
 | International-Playlist.m3u | Bollygold | nh-bollygold-dbedeff9.png | Indian Movies |
 | International-Playlist.m3u | Colors Cineplex [UK] | colors-cineplex.png | Indian Movies |
 | International-Playlist.m3u | Goldmines Movies 2 | goldmines-movies.png | Indian Movies |
@@ -1526,6 +1528,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Kappa TV (Music) | kappa-tv-music-53d014bd887255130e2c.png | Indian Music |
 | International-Playlist.m3u | MTV (India) | mtv-india-hd-720p.png | Indian Music |
 | International-Playlist.m3u | Peppers TV | peppers-tv.png | Indian Music |
+| International-Playlist.m3u | Raj Music Telugu | raj-musix-telugu-720p-e8fd0fb178.png | Indian Music |
 | International-Playlist.m3u | Songdew TV | songdew-tv.png | Indian Music |
 | International-Playlist.m3u | Ultimate TV | ultimate-tv.png | Indian Music |
 | International-Playlist.m3u | Vaanavil TV | vaanavil-tv.png | Indian Music |
@@ -2075,6 +2078,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ekattor TV | ekattor-tv.png | News |
 | International-Playlist.m3u | Ekhon TV | ekhon-tv.png | News |
 | International-Playlist.m3u | Jamuna TV | jamuna-tv.png | News |
+| International-Playlist.m3u | NEWS 21 BANGLA | news-21-bangla-tv.png | News |
 | International-Playlist.m3u | Somoy TV | somoy-tv.png | News |
 | International-Playlist.m3u | Fashion TV | fashion-tv-aa7f9461cf.png | Fashion TV |
 | International-Playlist.m3u | 4K Travel | 4k-travel.png | Documentary & Wildlife |

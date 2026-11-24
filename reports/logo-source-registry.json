@@ -8248,5 +8248,10 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/oGKtYYG.png",
     "notes": "IPTV-org exact ID: GalaxyPremium.id IPTV-org public logo dataset Source page: https://i.imgur.com/oGKtYYG.png"
+  },
+  "International-Playlist.m3u|EKids.bg@SD|EKids|logos/ekids-a496dce1a5deb826a721.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/E-Kids_logo_2024.svg",
+    "notes": "Exact external logo asset Original EKids channel artwork uploaded from the broadcaster's official ekids.bg website; Creative Commons Attribution 4.0 International Source page: https://commons.wikimedia.org/wiki/File:E-Kids_logo_2024.svg"
   }
 }

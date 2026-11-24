@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5251,
-  "all_explicitly_referenced_logo_files": 2525,
-  "runtime_referenced_logo_files": 2523,
-  "playlist_referenced_logo_files": 2495,
-  "apparently_unreferenced_by_any_text_file": 2726,
-  "apparently_unreferenced_by_runtime_sources": 2728,
+  "logo_image_files": 5252,
+  "all_explicitly_referenced_logo_files": 2527,
+  "runtime_referenced_logo_files": 2525,
+  "playlist_referenced_logo_files": 2497,
+  "apparently_unreferenced_by_any_text_file": 2725,
+  "apparently_unreferenced_by_runtime_sources": 2727,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -246,6 +246,7 @@
     "logos/dorcel-xxx-2716706ff3.png",
     "logos/dumdum-8be5079872.svg",
     "logos/ebc-foreign-movie-0a28ff7830.png",
+    "logos/ekids-a496dce1a5deb826a721.svg",
     "logos/el-radio-9090-fm-373fbfd508.png",
     "logos/eman-channel-e0ed1458f2.png",
     "logos/epix-hits-2a277450b6.png",
@@ -1608,6 +1609,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/ebc-foreign-movie-0a28ff7830.png": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/ekids-a496dce1a5deb826a721.svg": [
       "reports/logo-source-registry.json"
     ],
     "logos/el-radio-9090-fm-373fbfd508.png": [
@@ -3724,6 +3728,7 @@
     "logos/dorcel-xxx-2716706ff3.png",
     "logos/dumdum-8be5079872.svg",
     "logos/ebc-foreign-movie-0a28ff7830.png",
+    "logos/ekids-a496dce1a5deb826a721.svg",
     "logos/el-radio-9090-fm-373fbfd508.png",
     "logos/eman-channel-e0ed1458f2.png",
     "logos/epix-hits-2a277450b6.png",
@@ -10592,6 +10597,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/allo-cine-1080p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/alone.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -13354,6 +13362,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/ekids-a496dce1a5deb826a721.png": [
+      "International-Playlist.m3u"
     ],
     "logos/ekushey-tv-d9479035b4.png": [
       "IPTV-Playlist.m3u",
@@ -16679,6 +16690,7 @@
     ],
     "logos/news-21-bangla-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/news-24.png": [
@@ -18424,6 +18436,7 @@
     ],
     "logos/sony-max-2.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-max.png": [
@@ -22239,6 +22252,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/allo-cine-1080p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/alone.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -25002,6 +25018,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/ekids-a496dce1a5deb826a721.png": [
+      "International-Playlist.m3u"
     ],
     "logos/ekushey-tv-d9479035b4.png": [
       "IPTV-Playlist.m3u",
@@ -28328,6 +28347,7 @@
     ],
     "logos/news-21-bangla-tv.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/news-24.png": [
@@ -30077,6 +30097,7 @@
     ],
     "logos/sony-max-2.png": [
       "IPTV-Playlist.m3u",
+      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sony-max.png": [
@@ -33540,7 +33561,6 @@
     "logos/adventure-earth-converted-36c5bd675d.png",
     "logos/ajj-entertainment.png",
     "logos/alcance-fm-play-tv.png",
-    "logos/allo-cine-1080p.png",
     "logos/amazing-discoveries-tv.png",
     "logos/amc-1080p-95485d9836.png",
     "logos/amc-latin-america-1080p-95485d9836.png",
