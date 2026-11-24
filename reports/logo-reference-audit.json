@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5252,
-  "all_explicitly_referenced_logo_files": 2526,
-  "runtime_referenced_logo_files": 2524,
+  "all_explicitly_referenced_logo_files": 2524,
+  "runtime_referenced_logo_files": 2522,
   "playlist_referenced_logo_files": 2494,
-  "apparently_unreferenced_by_any_text_file": 2726,
-  "apparently_unreferenced_by_runtime_sources": 2728,
+  "apparently_unreferenced_by_any_text_file": 2728,
+  "apparently_unreferenced_by_runtime_sources": 2730,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -11392,9 +11392,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/big-tv-24x7.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/big-tv-e8a3c6987279c2d2a0e4.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -15103,7 +15100,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jaihind-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -18184,9 +18180,6 @@
     ],
     "logos/sharnam-tv.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/shekinah-tv-1080p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-bollywood.png": [
@@ -23036,9 +23029,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/big-tv-24x7.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/big-tv-e8a3c6987279c2d2a0e4.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -26749,7 +26739,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jaihind-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29833,9 +29822,6 @@
     ],
     "logos/sharnam-tv.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/shekinah-tv-1080p.png": [
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-bollywood.png": [
@@ -33574,6 +33560,7 @@
     "logos/bharat-samachar.png",
     "logos/big-12-studios.png",
     "logos/big-magic-576p.png",
+    "logos/big-tv-24x7.png",
     "logos/bloomberg-tv.png",
     "logos/bollywood-classic-hd.png",
     "logos/bowling-tv.png",
@@ -35346,6 +35333,7 @@
     "logos/saudi-sunnah.png",
     "logos/saudi-tv.png",
     "logos/sensacine-tv-x-pluto.png",
+    "logos/shekinah-tv-1080p.png",
     "logos/shekinah-tv.png",
     "logos/shin-chan-720p.png",
     "logos/shokiruyushchee-hd-1080p.png",

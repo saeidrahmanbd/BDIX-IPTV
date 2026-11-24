@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-24T06:50:19+00:00**
+Generated: **2026-11-24T06:52:56+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **67a9cdaa9b03bbbfb3ea6f7180a51bb36d1494f7700da7ddfda88b70049c9ffb**
+- IPTV-Playlist.m3u SHA-256: **2cf2982d3fac9e88d7dc48181278b2431ab0dedfcf6e00f9ee2a3f23c60efa12**
 - International-Playlist.m3u SHA-256: **a23c4e7f47de23d227b82518a8b617554ee82ff849538558aac56bd20dbaf7f6**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1581**
+- Playlist references whose asset stem differs from the normalized channel name: **1579**
 - Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1056,7 +1056,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Gaunda Punjab TV | gaunda-punjab-tv-720p.png | Indian Entertainment |
 | IPTV-Playlist.m3u | GTC Punjabi UK | gtc-punjabi.png | Indian Entertainment |
 | IPTV-Playlist.m3u | GTC Punjabi US | gtc-punjabi.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Jaihind TV | jaihind-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Kairali TV | kairali-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Kalaignar TV | kalaignar-tv-82de1b8f.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Indian Entertainment |
@@ -1274,7 +1273,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
 | IPTV-Playlist.m3u | Islam Channel Bangla | islam-channel-bangla.png | Backup |
-| IPTV-Playlist.m3u | Jaihind TV | jaihind-tv.png | Backup |
 | IPTV-Playlist.m3u | Jalwa TV | jalwa-tv.png | Backup |
 | IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
 | IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
