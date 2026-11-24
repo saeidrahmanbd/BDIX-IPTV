@@ -28,6 +28,8 @@
 
 ## Project Documentation
 
+- [Repository-wide cleanup audit (24 November 2026)](REPOSITORY-CLEANUP-AUDIT-2026-11-24.md) — verified cleanup decisions, retained components and follow-up risks
+
 - [Download Center](DOWNLOADS.md)
 - [Changelog](CHANGELOG.md)
 - [Playlist Studio 5.1](PLAYLIST-STUDIO.md)
