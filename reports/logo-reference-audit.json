@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5253,
-  "all_explicitly_referenced_logo_files": 2525,
-  "runtime_referenced_logo_files": 2523,
+  "all_explicitly_referenced_logo_files": 2524,
+  "runtime_referenced_logo_files": 2522,
   "playlist_referenced_logo_files": 2494,
-  "apparently_unreferenced_by_any_text_file": 2728,
-  "apparently_unreferenced_by_runtime_sources": 2730,
+  "apparently_unreferenced_by_any_text_file": 2729,
+  "apparently_unreferenced_by_runtime_sources": 2731,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -16051,9 +16051,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/metro-tv-1080p-ee3f23e15b.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/metro-tv-india-0625d4e893.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -27691,9 +27688,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/metro-tv-1080p-ee3f23e15b.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/metro-tv-india-0625d4e893.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -34795,6 +34789,7 @@
     "logos/merry-christmas-from-viafree-dk.png",
     "logos/merry-christmas-from-viafree-no.png",
     "logos/merry-christmas-from-viafree.png",
+    "logos/metro-tv-1080p-ee3f23e15b.png",
     "logos/metro-tv-honduras.png",
     "logos/metropolitana-del-cuzco.png",
     "logos/mezzo-576p.png",
