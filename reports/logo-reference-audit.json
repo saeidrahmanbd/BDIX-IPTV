@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5253,
-  "all_explicitly_referenced_logo_files": 2524,
-  "runtime_referenced_logo_files": 2522,
-  "playlist_referenced_logo_files": 2494,
-  "apparently_unreferenced_by_any_text_file": 2729,
-  "apparently_unreferenced_by_runtime_sources": 2731,
+  "logo_image_files": 5256,
+  "all_explicitly_referenced_logo_files": 2529,
+  "runtime_referenced_logo_files": 2527,
+  "playlist_referenced_logo_files": 2499,
+  "apparently_unreferenced_by_any_text_file": 2727,
+  "apparently_unreferenced_by_runtime_sources": 2729,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -147,6 +147,7 @@
     "logos/brand-new-amateurs-2a9d40f4b1.png",
     "logos/bravo-kids-tv-c6dda6126e.png",
     "logos/bridge-dance-720p-geo-blocked-28be35859700d79948e2.svg",
+    "logos/bridge-jazz-720p-geo-blocked-87f95b66247ee3252561.svg",
     "logos/broadcaster.png",
     "logos/bstv.svg",
     "logos/btl-tv-netherlands-2790d02135.jpg",
@@ -1306,6 +1307,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/bridge-dance-720p-geo-blocked-28be35859700d79948e2.svg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/bridge-jazz-720p-geo-blocked-87f95b66247ee3252561.svg": [
       "reports/logo-source-registry.json"
     ],
     "logos/broadcaster.png": [
@@ -3644,6 +3648,7 @@
     "logos/brand-new-amateurs-2a9d40f4b1.png",
     "logos/bravo-kids-tv-c6dda6126e.png",
     "logos/bridge-dance-720p-geo-blocked-28be35859700d79948e2.svg",
+    "logos/bridge-jazz-720p-geo-blocked-87f95b66247ee3252561.svg",
     "logos/btl-tv-netherlands-2790d02135.jpg",
     "logos/btv-news-ebbebf7ffd6cc8116fbe.jpg",
     "logos/buenisima-radio-tv-42f9a29430.png",
@@ -11129,6 +11134,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/ayush-tv.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -11556,6 +11564,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/bridge-jazz-720p-geo-blocked-87f95b66247ee3252561.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/bridge-rock-1abe531ff3.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -11861,6 +11872,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/ccv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -13440,6 +13452,7 @@
       "scripts/migrate_external_logos_fixed.py"
     ],
     "logos/epic-bharat-digital-67aee5508b31a1940934.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -13781,6 +13794,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/fast1.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -14984,6 +14998,9 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/tvs-film-noir-network-720p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -15106,6 +15123,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jaihind-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -15226,6 +15244,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -16051,6 +16070,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/metro-tv-india-0625d4e893.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -16540,6 +16560,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/n-vision-dca55fe8b5825ff1d796.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/nagorik-tv-90b5d16aaf.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -16551,6 +16575,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/nan-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21423,7 +21448,12 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/wayanad-vision-e34be4ac26de16c0b4a7.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/weatherspy-india.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21834,6 +21864,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/zodiak-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22763,6 +22794,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/ayush-tv.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -23190,6 +23224,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/bridge-jazz-720p-geo-blocked-87f95b66247ee3252561.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/bridge-rock-1abe531ff3.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -23495,6 +23532,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/ccv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -25075,6 +25113,7 @@
       "scripts/migrate_external_logos_fixed.py"
     ],
     "logos/epic-bharat-digital-67aee5508b31a1940934.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -25416,6 +25455,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/fast1.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26620,6 +26660,9 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/tvs-film-noir-network-720p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -26742,6 +26785,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jaihind-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26862,6 +26906,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -27687,6 +27732,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/metro-tv-india-0625d4e893.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -28176,6 +28222,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/n-vision-dca55fe8b5825ff1d796.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/nagorik-tv-90b5d16aaf.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -28187,6 +28237,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/nan-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -33064,7 +33115,12 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/wayanad-vision-e34be4ac26de16c0b4a7.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/weatherspy-india.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -33478,6 +33534,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/zodiak-tv.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -33543,7 +33600,6 @@
     "logos/ava-series.png",
     "logos/axn-black-poland.png",
     "logos/axn.png",
-    "logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png",
     "logos/b4u-bhojpuri-1080p.png",
     "logos/bangla-cinema.png",
     "logos/bangla-tv.png",
@@ -34644,7 +34700,6 @@
     "logos/international/tv1000.png",
     "logos/international/tvone.png",
     "logos/international/tvs-classic-movies-288p.png",
-    "logos/international/tvs-film-noir-network-720p.png",
     "logos/international/tvs-nostalgia-movies-480p.png",
     "logos/international/tvs-western-movie-270p.png",
     "logos/international/tzik-not-24-7.png",

@@ -1,31 +1,31 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-24T11:32:46+00:00**
+Generated: **2026-11-24T23:52:42+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **4e3afc4ecc4255d1de2c6ef625e771ec49e52007641890804ec8f14ab75042e1**
-- International-Playlist.m3u SHA-256: **1e8a9d34987a0e4fa2c626dc68216f38db8d562a2a26d12945d6138a2d6e7585**
+- IPTV-Playlist.m3u SHA-256: **a2ef9bb3e7d03dbfffd4f78e796027e4f5e46374fe9717d89785190c04f23e6a**
+- International-Playlist.m3u SHA-256: **ac46370e5f6aa0b95c2c56df06a0d9b8eadf35f94c85e7044e9cec3f316f7619**
 
 ## Summary
 
-- Safe repairs applied this run: **0**
+- Safe repairs applied this run: **1**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1579**
-- Unreferenced image assets immediately inside logos/: **965** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1596**
+- Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| n-vision-dca55fe8b5825ff1d796.png | PNG | PNG | 508×491 | 457×442 | downscaled, re-encoded/compressed |
 
 ## Remaining extension mismatches
 
@@ -1041,6 +1041,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Songdew TV | songdew-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Ultimate TV | ultimate-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Indian Music |
+| IPTV-Playlist.m3u | Peppers TV | peppers-tv.png | Indian Music |
 | IPTV-Playlist.m3u | &TV | tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Alright! TV | alright-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Indian Entertainment |
@@ -1064,7 +1065,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Pardesi TV | pardesi-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pasand TV | pasand-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pear TV | pear-tv.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Peppers TV | peppers-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Polimer TV | polimer-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pravasi Channel | pravasi-channel.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Pulari TV | pulari-tv.png | Indian Entertainment |
@@ -1125,6 +1125,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | XITE Hits | xite-hits-germany-1080p.png | International |
 | IPTV-Playlist.m3u | XITE Hits UK | xite-hits-germany-1080p.png | International |
 | IPTV-Playlist.m3u | XITE Summer | xite-celebrates-0178ee79a4.png | International |
+| IPTV-Playlist.m3u | Fashion&LifeStyle | fashion-tv-aa7f9461cf.png | International |
 | IPTV-Playlist.m3u | 4K Travel | 4k-travel.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Autentic Adventure Earth | autentic-adventure-earth-english-german.png | Documentary & Wildlife |
 | IPTV-Playlist.m3u | Crime & Justice | crime-and-justice.png | Documentary & Wildlife |
@@ -1211,6 +1212,22 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | UFC | ufc-tv.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports | us-willow-sports-hd.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports 2 | us-willow-sports-hd.png | Sports |
+| IPTV-Playlist.m3u | NAN TV (720p) | nan-tv.png | New Channels |
+| IPTV-Playlist.m3u | Ayush Next Communication Network (576p) | ayush-next-communication-network-f7c7f33323dd3095ae15.png | New Channels |
+| IPTV-Playlist.m3u | CCV (480p) | ccv.png | New Channels |
+| IPTV-Playlist.m3u | Fast1 (576p) | fast1.png | New Channels |
+| IPTV-Playlist.m3u | Jaihind TV (576p) | jaihind-tv.png | New Channels |
+| IPTV-Playlist.m3u | Kabaddi 24x7 (720p) | kabaddi-24x7.png | New Channels |
+| IPTV-Playlist.m3u | Metro TV (India) (1080p) | metro-tv-india-0625d4e893.png | New Channels |
+| IPTV-Playlist.m3u | N Vision (1080p) | n-vision-dca55fe8b5825ff1d796.png | New Channels |
+| IPTV-Playlist.m3u | Wayanad Vision (1080p) | wayanad-vision-e34be4ac26de16c0b4a7.png | New Channels |
+| IPTV-Playlist.m3u | WeatherSpy (India) (720p) | weatherspy-india.png | New Channels |
+| IPTV-Playlist.m3u | Zodiak TV (1080p) | zodiak-tv.png | New Channels |
+| IPTV-Playlist.m3u | Duronto TV (720p) | duronto-tv-2b3c7dd202.png | New Backups |
+| IPTV-Playlist.m3u | B4U Music (1080p) | b4u-music.png | New Backups |
+| IPTV-Playlist.m3u | Epic Bharat Digital (1080p) | epic-bharat-digital-67aee5508b31a1940934.png | New Backups |
+| IPTV-Playlist.m3u | INWILD (1080p) | inwild.png | New Backups |
+| IPTV-Playlist.m3u | Mazhavil Manorama (576p) | mazhavil-manorama.png | New Backups |
 | IPTV-Playlist.m3u | 7X Punjabi | 7x-music.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
@@ -1381,7 +1398,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Review |
 | IPTV-Playlist.m3u | Epic Bharat Digital | epic-bharat.png | Review |
 | IPTV-Playlist.m3u | Epic TV Digital | epic-tv-digital.png | Review |
-| IPTV-Playlist.m3u | Fashion&LifeStyle | fashion-tv-aa7f9461cf.png | International |
 | IPTV-Playlist.m3u | G TV | g-tv.png | Review |
 | IPTV-Playlist.m3u | G TV | g-tv.png | Review |
 | IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Review |
@@ -2424,6 +2440,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Aurora Media Films (720p) | aurora-media-films-720p.png | New Channels |
 | International-Playlist.m3u | Rotana Cinema KSA (540p) | rotana-cinema-ksa-7d593b9f93819c244020.png | New Channels |
+| International-Playlist.m3u | TVS Film Noir Network (720p) | tvs-film-noir-network-720p.png | New Channels |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |

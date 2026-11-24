@@ -8258,5 +8258,20 @@
     "status": "third_party_verified",
     "source_url": "https://bridgemusic.ru/s/img/channels/dance-white.svg",
     "notes": "IPTV-org exact ID: BRIDGEDance.ru IPTV-org public logo dataset Source page: https://bridgemusic.ru/s/img/channels/dance-white.svg"
+  },
+  "IPTV-Playlist.m3u|NVision.in@SD|N Vision (1080p)|logos/n-vision-dca55fe8b5825ff1d796.png": {
+    "status": "third_party_verified",
+    "source_url": "https://livetv.ashokadigital.net/upload/logo/1739890627_WhatsApp_Image_2025-02-18_at_8.25.19_PM__1_-removebg-preview.png",
+    "notes": "IPTV-org exact ID: NVision.in IPTV-org public logo dataset Source page: https://livetv.ashokadigital.net/upload/logo/1739890627_WhatsApp_Image_2025-02-18_at_8.25.19_PM__1_-removebg-preview.png"
+  },
+  "IPTV-Playlist.m3u|WayanadVision.in@SD|Wayanad Vision (1080p)|logos/wayanad-vision-e34be4ac26de16c0b4a7.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/yF2C4Dt.png",
+    "notes": "IPTV-org exact ID: WayanadVision.in IPTV-org public logo dataset Source page: https://i.imgur.com/yF2C4Dt.png"
+  },
+  "International-Playlist.m3u|BRIDGEJazz.ru@SD|BRIDGE Jazz (720p) [Geo-blocked]|logos/bridge-jazz-720p-geo-blocked-87f95b66247ee3252561.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://bridgemusic.ru/s/img/channels/jazz-white.svg",
+    "notes": "IPTV-org exact ID: BRIDGEJazz.ru IPTV-org public logo dataset Source page: https://bridgemusic.ru/s/img/channels/jazz-white.svg"
   }
 }
