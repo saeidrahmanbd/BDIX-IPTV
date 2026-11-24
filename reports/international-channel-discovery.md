@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-24T12:59:29+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-25T05:36:58+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12125
-- Existing playlist records: 3315
+- Existing playlist records: 3319
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2192
+- Exact source URLs already in playlist: 2196
 - Duplicate URLs within source feed: 0
-- New eligible source records after URL/policy filtering: 152
+- New eligible source records after URL/policy filtering: 148
 - Adult channels discovered directly into Adult: 0
 - Fashion TV channels discovered directly into Fashion TV: 0
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
@@ -18,7 +18,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
-- New Backups staged for manual review: 7
+- New Backups staged for manual review: 5
 - Category migrations: 0
 - Existing discovery-queue entries removed: 0
 
@@ -63,7 +63,6 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - **Rakuten TV Top Movies Germany (1080p)** — New Channels — ES — https://cbb622b29f5d43b598991f3fa19de291.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5985/master.m3u8
 - **Rakuten TV Top Movies Italy (1080p)** — New Channels — ES — https://d4a4999341764c67a67e9ec9eb3790ab.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5984/master.m3u8
 - **Rakuten TV Top Movies UK (1080p)** — New Channels — ES — https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8
-- **Rotana Cinema KSA (540p)** — New Channels — SA — https://r.eu.cdn-redge.media/livehls/oeu/mt/live/rotana_cinema/live.livx/playlist.m3u8
 - **Summer of Movies** — New Channels — US — https://jmp2.uk/plu-6654adb1f99922000854388c.m3u8
 - **Sundance TV (Spain)** — New Channels — ES — https://cdn.stmify.com/zapitv/stream/SUNDANCE_TV/sundance_hd.mpd
 - **TVS Film Noir Network (720p)** — New Channels — US — https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
@@ -73,7 +72,8 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
 - **ATN Music (360p)** — New Channels — BD — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 - **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
-- **BRIDGE Dance (720p) [Geo-blocked]** — New Channels — RU — https://bridgemedia-hls.cdnvideo.ru/hls/live/6aff09f290affe00013a80a9/720p.m3u8
+- **BRIDGE Hits (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
+- **BRIDGE Jazz (720p) [Geo-blocked]** — New Channels — RU — https://bridgemedia-hls.cdnvideo.ru/hls/live/6aff0a0390affe00013a80aa/720p.m3u8
 
 ## Adult channels added directly to Adult
 
@@ -87,8 +87,6 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - **Viasat Kino** — UA — http://dtv.vol.net.ua/Viasat_Kino/index.m3u8
 - **Viasat Kino Action** — UA — http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
 - **8XM** — PK — https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
-- **B4U Music** — IN — https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/playlist.m3u8
-- **Epic Music** — IN — https://fta.ektv.in/live/469/master.m3u8
 - **M1 (Ukraine)** — UA — http://dtv.vol.net.ua/M1-HD/index.m3u8
 
 ## Country Migrations
@@ -117,19 +115,19 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-24T12:59:38+06:00
+- Run timestamp: 2026-11-25T05:37:11+06:00
 - Mode: international
-- New entries and discovery queues probed: 70
-- Verified live media responses: 14
-- Verified new primary channels retained in New Channels: 5
+- New entries and discovery queues probed: 71
+- Verified live media responses: 15
+- Verified new primary channels retained in New Channels: 6
 - Verified alternate streams retained in New Backups: 9
-- Inconclusive candidates retained for manual review: 2
-- Unverified backup streams moved to Review: 1
+- Inconclusive candidates retained for manual review: 3
+- Unverified backup streams moved to Review: 0
 - Definitively dead new candidates removed: 53
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
-- Candidates retained without authentic local logos (no placeholder used): 2
+- Candidates retained without authentic local logos (no placeholder used): 1
 
 ### Stream probe details
 - Removed newly discovered 4 Fun TV from New Channels — HTTP 404.
@@ -139,7 +137,8 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Andina RTV (720p) from New Channels — HTTP 404.
 - Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
 - Removed newly discovered BRIDGE Classic (576p) from New Channels — HTTP 404.
-- Kept BRIDGE Dance (720p) [Geo-blocked] in New Channels without tvg-logo — no authentic local repository asset was available.
+- Removed newly discovered BRIDGE Hits (576p) from New Channels — HTTP 404.
+- Kept BRIDGE Jazz (720p) [Geo-blocked] in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
 - Retained Galaxy in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
@@ -179,13 +178,11 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Rakuten TV Top Movies Germany (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Top Movies Italy (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Top Movies UK (1080p) from New Channels — HTTP 404.
-- Kept Rotana Cinema KSA (540p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Summer of Movies from New Channels — HTTP 404.
 - Removed newly discovered Sundance TV (Spain) from New Channels — HTTP 404.
-- Removed newly discovered TVS Film Noir Network (720p) from New Channels — HTTP success returned an HTML/error page, not a TV stream.
+- Retained TVS Film Noir Network (720p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: TimeoutError).
 - Removed newly discovered Viasat Kino Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Removed newly discovered 8XM from New Backups — HTTP 404.
-- Moved unverified alternate stream B4U Music from New Backups to Review — probe was inconclusive (connection could not be confirmed: URLError).
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino from New Backups — HTTP 404.
@@ -193,13 +190,13 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Final validation
 
-- Run timestamp: 2026-11-24T12:59:39+06:00
+- Run timestamp: 2026-11-25T05:37:12+06:00
 - Validation status: PASS
-- M3U entries parsed: 3319
+- M3U entries parsed: 3321
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 2
+- Discovery entries missing a logo (left blank rather than using a placeholder): 1
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
