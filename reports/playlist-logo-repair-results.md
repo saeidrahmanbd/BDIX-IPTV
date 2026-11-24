@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-24 03:47 UTC**  
+Run time: **2026-11-24 03:50 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,7 +9,7 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1356 | 0 | 0 | 0 | 0 | 0 | 0 |
+| IPTV-Playlist.m3u | 1357 | 0 | 0 | 0 | 0 | 0 | 0 |
 | International-Playlist.m3u | 3315 | 0 | 0 | 37 | 372 | 0 | 37 |
 
 ## Repair log
