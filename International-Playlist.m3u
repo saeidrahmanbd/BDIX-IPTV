@@ -5880,39 +5880,39 @@ http://103.151.60.162:2122/play/a01u/index.m3u8?hls
 http://41.205.93.154/ZEE-TV/index.m3u8
 #EXTINF:-1 tvg-id="ZooMoo.sg" channel-id="ZooMoo.sg" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoo-moo-b735c650d58c9dd89dce.png" tvg-country="SG" group-title="Review" tvg-name="Zoo Moo",Zoo Moo
 https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg01553-blueantmediaasi-zoomoonz-samsungnz/playlist.m3u8
-#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="logos/b4u-music.png" tvg-country="IN" tvg-language="hin" channel-id="B4UMusic.in@India" group-title="Review" tvg-content="Music",B4U Music
+#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" tvg-country="IN" tvg-language="hin" channel-id="B4UMusic.in@India" group-title="Review" tvg-content="Music",B4U Music
 https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="AuroraMediaFilms.gt@SD" tvg-name="Aurora Media Films (720p)" tvg-logo="logos/aurora-media-films-720p.png" tvg-country="GT" channel-id="AuroraMediaFilms.gt@SD" group-title="New Channels" tvg-content="Movies",Aurora Media Films (720p)
+#EXTINF:-1 tvg-id="AuroraMediaFilms.gt@SD" tvg-name="Aurora Media Films (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aurora-media-films-720p.png" tvg-country="GT" channel-id="AuroraMediaFilms.gt@SD" group-title="New Channels" tvg-content="Movies",Aurora Media Films (720p)
 https://cdn.streamhispanatv.net:3417/live/auroramflive.m3u8
-#EXTINF:-1 tvg-id="BRIDGEDance.ru@SD" tvg-name="BRIDGE Dance (720p) [Geo-blocked]" tvg-country="RU" channel-id="BRIDGEDance.ru@SD" group-title="New Channels" tvg-content="Music",BRIDGE Dance (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="BRIDGEDance.ru@SD" tvg-name="BRIDGE Dance (720p) [Geo-blocked]" tvg-country="RU" channel-id="BRIDGEDance.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bridge-dance-720p-geo-blocked-28be35859700d79948e2.png" group-title="New Channels" tvg-content="Music",BRIDGE Dance (720p) [Geo-blocked]
 https://bridgemedia-hls.cdnvideo.ru/hls/live/6aff09f290affe00013a80a9/720p.m3u8
-#EXTINF:-1 tvg-id="FMHMovies.us@SD" channel-id="FMHMovies.us@SD" tvg-logo="logos/fmh-movies-0d9b9c72dc198e5613eb.png" tvg-country="US" tvg-content="Movies" group-title="New Channels" tvg-name="FMH Movies",FMH Movies
+#EXTINF:-1 tvg-id="FMHMovies.us@SD" channel-id="FMHMovies.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fmh-movies-0d9b9c72dc198e5613eb.png" tvg-country="US" tvg-content="Movies" group-title="New Channels" tvg-name="FMH Movies",FMH Movies
 http://45.186.254.75:8000/play/a07j/index.m3u8
-#EXTINF:-1 tvg-id="Galaxy.id@SD" channel-id="Galaxy.id@SD" tvg-logo="logos/galaxy-49d13dbaba825105696f.png" tvg-country="ID" tvg-content="Movies" group-title="New Channels" tvg-name="Galaxy",Galaxy
+#EXTINF:-1 tvg-id="Galaxy.id@SD" channel-id="Galaxy.id@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/galaxy-49d13dbaba825105696f.png" tvg-country="ID" tvg-content="Movies" group-title="New Channels" tvg-name="Galaxy",Galaxy
 https://proxy-v.rctiplus.id/live/web/galaxy/index.m3u8
-#EXTINF:-1 tvg-id="GalaxyPremium.id@SD" channel-id="GalaxyPremium.id@SD" tvg-logo="logos/galaxy-premium-7337475394524cf6dbe7.png" tvg-country="ID" tvg-content="Movies" group-title="New Channels" tvg-name="Galaxy Premium",Galaxy Premium
+#EXTINF:-1 tvg-id="GalaxyPremium.id@SD" channel-id="GalaxyPremium.id@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/galaxy-premium-7337475394524cf6dbe7.png" tvg-country="ID" tvg-content="Movies" group-title="New Channels" tvg-name="Galaxy Premium",Galaxy Premium
 https://proxy-v.rctiplus.id/live/web/galaxyprem/index.m3u8
-#EXTINF:-1 tvg-id="Kinosvidanie.ru@SD" channel-id="Kinosvidanie.ru@SD" tvg-logo="logos/international/kinosvidanie-576p.png" tvg-country="RU" tvg-content="Movies" group-title="New Channels" tvg-name="Kinosvidanie",Kinosvidanie
+#EXTINF:-1 tvg-id="Kinosvidanie.ru@SD" channel-id="Kinosvidanie.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kinosvidanie-576p.png" tvg-country="RU" tvg-content="Movies" group-title="New Channels" tvg-name="Kinosvidanie",Kinosvidanie
 https://stream8.cinerama.uz/1203/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="RotanaCinemaKSA.sa@SD" tvg-name="Rotana Cinema KSA (540p)" tvg-country="SA" channel-id="RotanaCinemaKSA.sa@SD" group-title="New Channels" tvg-content="Movies",Rotana Cinema KSA (540p)
+#EXTINF:-1 tvg-id="RotanaCinemaKSA.sa@SD" tvg-name="Rotana Cinema KSA (540p)" tvg-country="SA" channel-id="RotanaCinemaKSA.sa@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rotana-cinema-ksa-7d593b9f93819c244020.png" group-title="New Channels" tvg-content="Movies",Rotana Cinema KSA (540p)
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/rotana_cinema/live.livx/playlist.m3u8
-#EXTINF:-1 tvg-id="Cinema.ru@SD" channel-id="Cinema.ru@SD" tvg-logo="logos/cinema-russia-576p.png" tvg-country="RU" tvg-content="Movies" group-title="New Backups" tvg-name="Cinema (Russia)",Cinema (Russia)
+#EXTINF:-1 tvg-id="Cinema.ru@SD" channel-id="Cinema.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinema-russia-576p.png" tvg-country="RU" tvg-content="Movies" group-title="New Backups" tvg-name="Cinema (Russia)",Cinema (Russia)
 https://stream8.cinerama.uz/1227/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="custom.dom-kino-ru-movie" tvg-language="rus" channel-id="custom.dom-kino-ru-movie" tvg-logo="logos/dom-kino-576p.png" tvg-country="RU" tvg-content="Movies" group-title="New Backups" tvg-name="Dom kino",Dom kino
+#EXTINF:-1 tvg-id="custom.dom-kino-ru-movie" tvg-language="rus" channel-id="custom.dom-kino-ru-movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dom-kino-576p.png" tvg-country="RU" tvg-content="Movies" group-title="New Backups" tvg-name="Dom kino",Dom kino
 https://stream8.cinerama.uz/1054/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="Dorama.ru@SD" tvg-language="rus" channel-id="Dorama.ru@SD" tvg-logo="logos/dorama.png" tvg-country="RU" tvg-content="Movies" group-title="New Backups" tvg-name="Dorama",Dorama
+#EXTINF:-1 tvg-id="Dorama.ru@SD" tvg-language="rus" channel-id="Dorama.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dorama.png" tvg-country="RU" tvg-content="Movies" group-title="New Backups" tvg-name="Dorama",Dorama
 https://stream8.cinerama.uz/1273/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="EpicMusic.in@SD" tvg-name="Epic Music" tvg-logo="logos/epic-music.png" tvg-country="IN" tvg-language="hin" channel-id="EpicMusic.in@SD" group-title="New Backups" tvg-content="Music",Epic Music
+#EXTINF:-1 tvg-id="EpicMusic.in@SD" tvg-name="Epic Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-music.png" tvg-country="IN" tvg-language="hin" channel-id="EpicMusic.in@SD" group-title="New Backups" tvg-content="Music",Epic Music
 https://fta.ektv.in/live/469/master.m3u8
-#EXTINF:-1 tvg-id="iFilmPersian.ir@SD" tvg-language="fas" channel-id="iFilmPersian.ir@SD" tvg-logo="logos/ifilm-persian-ec5dbb3a2a50944e9fe3.png" tvg-country="IR" tvg-content="Movies" group-title="New Backups" tvg-name="iFilm Persian",iFilm Persian
+#EXTINF:-1 tvg-id="iFilmPersian.ir@SD" tvg-language="fas" channel-id="iFilmPersian.ir@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ifilm-persian-ec5dbb3a2a50944e9fe3.png" tvg-country="IR" tvg-content="Movies" group-title="New Backups" tvg-name="iFilm Persian",iFilm Persian
 https://ncdn.telewebion.ir/ifilm/live/playlist.m3u8
-#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="IndiyskoyeKino.ru@SD" tvg-language="rus" channel-id="IndiyskoyeKino.ru@SD" tvg-logo="logos/indiyskoye-kino-7582f40712.png" tvg-country="RU" tvg-content="Movies" group-title="New Backups" tvg-name="Indiyskoye Kino",Indiyskoye Kino
+#EXTINF:-1 x-discovery-hold-reason="unverified-backup-stream" tvg-id="IndiyskoyeKino.ru@SD" tvg-language="rus" channel-id="IndiyskoyeKino.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/indiyskoye-kino-7582f40712.png" tvg-country="RU" tvg-content="Movies" group-title="New Backups" tvg-name="Indiyskoye Kino",Indiyskoye Kino
 https://stream8.cinerama.uz/1060/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="KinoHit.ru@SD" tvg-language="rus" channel-id="KinoHit.ru@SD" tvg-logo="logos/kinohit-5a08ec1395.png" tvg-country="RU" tvg-content="Movies" group-title="New Backups" tvg-name="KinoHit",KinoHit
+#EXTINF:-1 tvg-id="KinoHit.ru@SD" tvg-language="rus" channel-id="KinoHit.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kinohit-5a08ec1395.png" tvg-country="RU" tvg-content="Movies" group-title="New Backups" tvg-name="KinoHit",KinoHit
 https://stream8.cinerama.uz/1055/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="MuzykaPervogo.ru@SD" tvg-language="rus;ukr" channel-id="MuzykaPervogo.ru@SD" tvg-logo="logos/muzyka-pervogo-576p.png" tvg-country="RU" tvg-content="Music" group-title="New Backups" tvg-name="Muzyka Pervogo",Muzyka Pervogo
+#EXTINF:-1 tvg-id="MuzykaPervogo.ru@SD" tvg-language="rus;ukr" channel-id="MuzykaPervogo.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/muzyka-pervogo-576p.png" tvg-country="RU" tvg-content="Music" group-title="New Backups" tvg-name="Muzyka Pervogo",Muzyka Pervogo
 https://stream8.cinerama.uz/1201/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="TRTMuzik.tr@SD" tvg-language="tur" channel-id="TRTMuzik.tr@SD" tvg-logo="logos/trt-muzik.png" tvg-country="TR" tvg-content="Music" group-title="New Backups" tvg-name="TRT Muzik",TRT Muzik
+#EXTINF:-1 tvg-id="TRTMuzik.tr@SD" tvg-language="tur" channel-id="TRTMuzik.tr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trt-muzik.png" tvg-country="TR" tvg-content="Music" group-title="New Backups" tvg-name="TRT Muzik",TRT Muzik
 https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" channel-id="7SMusic.in@SD" tvg-language="tam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" tvg-country="IN" group-title="Backup" tvg-name="7S Music",7S Music
 https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8

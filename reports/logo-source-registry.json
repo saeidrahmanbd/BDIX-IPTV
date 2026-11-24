@@ -8253,5 +8253,10 @@
     "status": "third_party_verified",
     "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/E-Kids_logo_2024.svg",
     "notes": "Exact external logo asset Original EKids channel artwork uploaded from the broadcaster's official ekids.bg website; Creative Commons Attribution 4.0 International Source page: https://commons.wikimedia.org/wiki/File:E-Kids_logo_2024.svg"
+  },
+  "International-Playlist.m3u|BRIDGEDance.ru@SD|BRIDGE Dance (720p) [Geo-blocked]|logos/bridge-dance-720p-geo-blocked-28be35859700d79948e2.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://bridgemusic.ru/s/img/channels/dance-white.svg",
+    "notes": "IPTV-org exact ID: BRIDGEDance.ru IPTV-org public logo dataset Source page: https://bridgemusic.ru/s/img/channels/dance-white.svg"
   }
 }

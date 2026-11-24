@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5252,
-  "all_explicitly_referenced_logo_files": 2524,
-  "runtime_referenced_logo_files": 2522,
-  "playlist_referenced_logo_files": 2494,
+  "logo_image_files": 5253,
+  "all_explicitly_referenced_logo_files": 2525,
+  "runtime_referenced_logo_files": 2523,
+  "playlist_referenced_logo_files": 2495,
   "apparently_unreferenced_by_any_text_file": 2728,
   "apparently_unreferenced_by_runtime_sources": 2730,
   "missing_explicit_logo_targets": [
@@ -146,6 +146,7 @@
     "logos/bpx-tv-radio-27fa94df9f.jpg",
     "logos/brand-new-amateurs-2a9d40f4b1.png",
     "logos/bravo-kids-tv-c6dda6126e.png",
+    "logos/bridge-dance-720p-geo-blocked-28be35859700d79948e2.svg",
     "logos/broadcaster.png",
     "logos/bstv.svg",
     "logos/btl-tv-netherlands-2790d02135.jpg",
@@ -1302,6 +1303,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/bravo-kids-tv-c6dda6126e.png": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/bridge-dance-720p-geo-blocked-28be35859700d79948e2.svg": [
       "reports/logo-source-registry.json"
     ],
     "logos/broadcaster.png": [
@@ -3639,6 +3643,7 @@
     "logos/bpx-tv-radio-27fa94df9f.jpg",
     "logos/brand-new-amateurs-2a9d40f4b1.png",
     "logos/bravo-kids-tv-c6dda6126e.png",
+    "logos/bridge-dance-720p-geo-blocked-28be35859700d79948e2.svg",
     "logos/btl-tv-netherlands-2790d02135.jpg",
     "logos/btv-news-ebbebf7ffd6cc8116fbe.jpg",
     "logos/buenisima-radio-tv-42f9a29430.png",
@@ -11542,6 +11547,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/bridge-dance-720p-geo-blocked-28be35859700d79948e2.png": [
+      "International-Playlist.m3u"
     ],
     "logos/bridge-deluxe-1080p.png": [
       "International-Playlist.m3u",
@@ -23178,6 +23186,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/bridge-dance-720p-geo-blocked-28be35859700d79948e2.png": [
+      "International-Playlist.m3u"
     ],
     "logos/bridge-deluxe-1080p.png": [
       "International-Playlist.m3u",

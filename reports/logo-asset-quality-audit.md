@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-24T06:58:22+00:00**
+Generated: **2026-11-24T07:01:26+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **4f386a6298e86ad5286163c966c03c0de59e9abcfad46eb95e9ef3fca1f68ec2**
-- International-Playlist.m3u SHA-256: **a23c4e7f47de23d227b82518a8b617554ee82ff849538558aac56bd20dbaf7f6**
+- International-Playlist.m3u SHA-256: **1e8a9d34987a0e4fa2c626dc68216f38db8d562a2a26d12945d6138a2d6e7585**
 
 ## Summary
 
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1579**
+- Playlist references whose asset stem differs from the normalized channel name: **1580**
 - Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -2424,6 +2424,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Aurora Media Films (720p) | aurora-media-films-720p.png | New Channels |
+| International-Playlist.m3u | Rotana Cinema KSA (540p) | rotana-cinema-ksa-7d593b9f93819c244020.png | New Channels |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
