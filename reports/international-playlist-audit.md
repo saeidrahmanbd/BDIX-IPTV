@@ -2,15 +2,15 @@
 
 - Entries before: 3321
 - Entries after: 3321
-- Channel names normalized: 5
+- Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 932
+- Original Backup/Backups and protected queue rows examined: 928
 - Matching alternate streams retained in Backup: 365
-- True orphan Backup rows evaluated: 20
-- Eligible orphan Backup rows promoted to primary: 19
+- True orphan Backup rows evaluated: 19
+- Eligible orphan Backup rows promoted to primary: 18
 - Clearly identified Adult orphans restored to Adult: 0
 - Ineligible/unclassified orphan Backup rows retained: 1
 - Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.
@@ -33,7 +33,7 @@
 - Bangladesh: 48
 - Indian Bangla: 32
 - Indian Movies: 75
-- Indian Music: 58
+- Indian Music: 60
 - Indian Entertainment: 174
 - Pakistani: 19
 - Argentina: 14
@@ -73,7 +73,7 @@
 - United States: 242
 - Uzbekistan: 5
 - Vietnam: 6
-- International: 101
+- International: 102
 - News: 12
 - Fashion TV: 5
 - Documentary & Wildlife: 133
@@ -81,7 +81,7 @@
 - Religious: 31
 - Sports: 185
 - Adult: 366
-- Review: 626
+- Review: 623
 - New Channels: 9
 - New Backups: 9
 - Backup: 366
