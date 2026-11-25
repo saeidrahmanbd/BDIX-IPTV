@@ -1,6 +1,6 @@
 # Stream Health Report
 
-Generated: **2026-11-25T05:31:34+00:00**
+Generated: **2026-11-25T05:39:24+00:00**
 Stream URL inventory SHA-256: **e97c5dfad44d4eed1686d0d2ec0351e2e83feb09e27b3b282fb203f0ba9f0676**
 
 Probe environment: **GitHub-hosted ubuntu-latest runner**.
@@ -9,10 +9,10 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 ## Summary
 
 - Streams tested: **1369**
-- Reachable: **1122**
-- Failed this check: **247**
+- Reachable: **1121**
+- Failed this check: **248**
 - Persistent failures (3+ consecutive): **57**
-- Intermittent failures: **190**
+- Intermittent failures: **191**
 - Primary tested: **695**
 - Backup tested: **405**
 - Review-queue entries tested: **269**
@@ -23,8 +23,8 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - Only HTTP 404 and 410 count as definitive failures; all other HTTP statuses and network/authentication errors are inconclusive.
 - Streaks count consecutive Bangladesh calendar days; repeated runs on one date count once, and a missed day resets the streak.
 
-- HTTP 404/410 (definitive): **71**
-- Inconclusive HTTP/network failure: **176**
+- HTTP 404/410 (definitive): **70**
+- Inconclusive HTTP/network failure: **178**
 
 ## Persistent Failures
 
@@ -94,7 +94,6 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Channel 16** — Backup — streak 1 days — HTTP 404
 - **Colors Bangla Cinema** — Backup — streak 0 days — Connection
 - **Colors Bangla Cinema** — Backup — streak 0 days — Timeout
-- **DD Bangla** — Backup — streak 0 days — HTTP 404
 - **Dangal 2** — Backup — streak 0 days — HTTP 403
 - **Disney Channel** — Backup — streak 0 days — 200
 - **ESPN** — Backup — streak 0 days — HTTP 403
@@ -105,11 +104,10 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **MNTV (Tamil)** — Backup — streak 1 days — HTTP 404
 - **Mahaa Max** — Backup — streak 0 days — HTTP 403
 - **Mazhavil Manorama** — Backup — streak 0 days — HTTP 403
-- **Sangeet Bangla** — Backup — streak 0 days — HTTP 404
+- **NTV Europe** — Backup — streak 0 days — HTTP 500
 - **Shanson TV** — Backup — streak 0 days — HTTP 403
 - **Shubh Cinema TV** — Backup — streak 0 days — HTTP 403
 - **Star Jalsha** — Backup — streak 0 days — HTTP 458
-- **CB24 TV** — Bangladesh — streak 0 days — HTTP 500
 - **Channel 16** — Bangladesh — streak 1 days — HTTP 404
 - **Star News** — Bangladesh — streak 1 days — HTTP 404
 - **Asianet Middle East** — Indian Entertainment — streak 0 days — HTTP 403
@@ -129,7 +127,9 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Teen Nick** — Kids — streak 0 days — HTTP 403
 - **B4U Music** — New Backups — streak 0 days — DNS
 - **Duronto TV** — New Backups — streak 1 days — HTTP 404
+- **N Vision** — New Channels — streak 0 days — HTTP 503
 - **NAN TV** — New Channels — streak 0 days — HTTP 404
+- **Periyar Vision (1080p)** — New Channels — streak 0 days — HTTP 503
 - **Zainabia Channel** — Religious — streak 1 days — HTTP 404
 - **&TV** — Review — streak 11 days — HTTP 404
 - **&TV** — Review — streak 0 days — Timeout
@@ -149,6 +149,7 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Ananda TV** — Review — streak 0 days — Connection
 - **Animal Planet** — Review — streak 11 days — HTTP 404
 - **Asian TV** — Review — streak 11 days — HTTP 404
+- **B4U Kadak** — Review — streak 0 days — HTTP 404
 - **B4U Kadak** — Review — streak 0 days — DNS
 - **B4U Movies** — Review — streak 0 days — Connection
 - **B4U Movies** — Review — streak 11 days — HTTP 404
@@ -181,6 +182,7 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Colors Cineplex** — Review — streak 0 days — Connection
 - **DBC News** — Review — streak 0 days — Network
 - **DD National** — Review — streak 0 days — HTTP 403
+- **Dangal** — Review — streak 0 days — HTTP 404
 - **Deepto TV** — Review — streak 0 days — Connection
 - **Deewana** — Review — streak 0 days — TLS
 - **Desh TV** — Review — streak 11 days — HTTP 404
@@ -205,7 +207,6 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Global TV** — Review — streak 0 days — Timeout
 - **Global TV** — Review — streak 11 days — HTTP 404
 - **Go3 Sport 1** — Review — streak 0 days — HTTP 403
-- **Goldmines Movies** — Review — streak 0 days — HTTP 404
 - **Green TV** — Review — streak 11 days — HTTP 404
 - **Hum TV** — Review — streak 11 days — HTTP 404
 - **Hum TV** — Review — streak 11 days — HTTP 404
