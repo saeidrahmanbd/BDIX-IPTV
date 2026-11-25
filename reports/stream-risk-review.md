@@ -1,6 +1,6 @@
 # Stream Risk Review
 
-Generated: **2026-11-25T06:06:12+00:00**
+Generated: **2026-11-25T07:29:11+00:00**
 IPTV-Playlist.m3u SHA-256: **c4a95d4b9182121074a01e2863683a37f0b41db4242dba26b72ee7a1c25de3d5**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
@@ -22,8 +22,8 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1369 |
-| Reachable | 1114 |
-| Failed this check | 255 |
+| Reachable | 1112 |
+| Failed this check | 257 |
 | Persistent failures (3+ consecutive) | 57 |
 
 ### Persistent failures
@@ -38,7 +38,7 @@ Generated from the current playlist and latest available stream-health report. T
 - **Asian TV** — Review — consecutive failed days: **11** — HTTP 404
 - **B4U Movies** — Review — consecutive failed days: **11** — HTTP 404
 - **B4U Music** — Review — consecutive failed days: **11** — HTTP 404
-- **B4U Music** — Review — consecutive failed days: **4** — HTTP 404
+- **B4U Music** — Review — consecutive failed days: **4** — 206
 - **Bijoy TV** — Review — consecutive failed days: **11** — HTTP 404
 - **Bijoy TV** — Review — consecutive failed days: **11** — HTTP 404
 - **Bol Entertainment** — Review — consecutive failed days: **6** — HTTP 404

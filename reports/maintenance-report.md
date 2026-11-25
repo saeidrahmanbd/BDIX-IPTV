@@ -1,6 +1,6 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-11-25 06:06 UTC**_
+_Generated: **2026-11-25 07:29 UTC**_
 
 Source playlist SHA-256: **c4a95d4b9182121074a01e2863683a37f0b41db4242dba26b72ee7a1c25de3d5**
 
@@ -13,7 +13,7 @@ Source playlist SHA-256: **c4a95d4b9182121074a01e2863683a37f0b41db4242dba26b72ee
 | Logo exceptions | **0** |
 | EPG mapping | **PENDING — guide not current** |
 | EPG programme coverage | **PENDING** |
-| Health failures | **255** |
+| Health failures | **257** |
 | Persistent health failures | **57** |
 | Audit findings (review warnings included) | **4** |
 | Pre-publish gate | **PASS** |
