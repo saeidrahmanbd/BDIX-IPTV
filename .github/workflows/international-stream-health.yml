@@ -120,9 +120,9 @@ jobs:
           # and country grouping in the same International-only automation path.
           python scripts/reorganize_international_playlist.py
           python scripts/validate_international_playlist.py
-      - name: Validate playlist structure, metadata preservation and group ordering
+      - name: Reconcile recovery report with final policy groups and validate output
         if: steps.revision.outputs.current == 'true'
-        run: python scripts/validate_international_health_output.py
+        run: python scripts/validate_international_health_output.py --reconcile
       - name: Validate reports and whitespace
         if: steps.revision.outputs.current == 'true'
         run: |
