@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-26T05:36:53+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-26T05:52:10+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12149
 - Existing playlist records: 3321
@@ -114,14 +114,14 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-26T05:37:03+06:00
+- Run timestamp: 2026-11-26T05:52:21+06:00
 - Mode: international
 - New entries and discovery queues probed: 72
-- Verified live media responses: 15
+- Verified live media responses: 16
 - Verified new primary channels retained in New Channels: 7
-- Verified alternate streams retained in New Backups: 8
+- Verified alternate streams retained in New Backups: 9
 - Inconclusive candidates retained for manual review: 3
-- Unverified backup streams moved to Review: 1
+- Unverified backup streams moved to Review: 0
 - Definitively dead new candidates removed: 53
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
@@ -185,12 +185,11 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered 8XM from New Backups — HTTP 404.
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
-- Moved unverified alternate stream Muzyka Pervogo from New Backups to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
 
 ## Final validation
 
-- Run timestamp: 2026-11-26T05:37:04+06:00
+- Run timestamp: 2026-11-26T05:52:21+06:00
 - Validation status: FAIL
 - M3U entries parsed: 3322
 - Malformed EXTINF/URL pairs: 0
