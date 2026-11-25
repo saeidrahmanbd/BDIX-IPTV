@@ -96,7 +96,7 @@ class InternationalStreamHealthTests(unittest.TestCase):
             health.validate_published_recovery_report(updated, report, bad_history)
 
     def test_recovery_report_reconciles_policy_retained_review_rows(self):
-        source = self.playlist(row(name="ABN Bible Movies Channel", group="Review"))
+        source = self.playlist(row(name="ABN Bible Movies Channel", group="Review", extra='tvg-content="Religious" '))
         info, url = health.parse(source)[1][0][0], "https://example.test/live/test.m3u8"
         key = health.stream_key(info, url)
         history = {"entries": {key: {
