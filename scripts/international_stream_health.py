@@ -782,7 +782,7 @@ def validate_recovery_accounting(source_text, updated_text, events, report):
 
 def reconcile_published_recovery_report(playlist_text, report_text, history):
     """Align the recovery report with final policy destinations after playlist reorganization."""
-    date_match = re.search(r"- Bangladesh check date: \\*\\*(\\d{4}-\\d{2}-\\d{2})\\*\\*", report_text)
+    date_match = re.search(r"- Bangladesh check date: \*\*(\d{4}-\d{2}-\d{2})\*\*", report_text)
     if not date_match:
         raise ValueError("Published health report is missing its Bangladesh check date")
     check_date = date_match.group(1)
@@ -790,13 +790,13 @@ def reconcile_published_recovery_report(playlist_text, report_text, history):
     if len(section) != 2:
         raise ValueError("Published report is missing the Recovered streams section")
     tail = section[1]
-    next_heading = "\\n## Removed after three consecutive failed days"
+    next_heading = "\n## Removed after three consecutive failed days"
     if next_heading not in tail:
         raise ValueError("Published report is missing the Removed section after recovery rows")
     body, remainder = tail.split(next_heading, 1)
     rows = []
     for line in body.splitlines():
-        match = re.fullmatch(r"- \\*\\*(.*?)\\*\\* — restored to \\*\\*(.*?)\\*\\*", line.strip())
+        match = re.fullmatch(r"- \*\*(.*?)\*\* — restored to \*\*(.*?)\*\*", line.strip())
         if match:
             rows.append((match.group(1), match.group(2)))
 
@@ -821,8 +821,10 @@ def reconcile_published_recovery_report(playlist_text, report_text, history):
         if candidates[previous_group] > 0:
             destination = previous_group
         else:
-            non_review = sorted(group for group, count in candidates.items()
-                                if count > 0 and group.casefold() != REVIEW.casefold())
+            non_review = sorted(
+                group for group, count in candidates.items()
+                if count > 0 and group.casefold() != REVIEW.casefold()
+            )
             if non_review:
                 destination = non_review[0]
             elif candidates[REVIEW] > 0:
@@ -837,15 +839,18 @@ def reconcile_published_recovery_report(playlist_text, report_text, history):
     lines = ["", *([f"- **{name}** — restored to **{group}**" for name, group in restored] or ["None."])]
     if retained:
         lines += ["", "## Successfully probed; retained in Review by policy", ""]
-        lines += [f"- **{name}** — probe succeeded; retained in **Review** under playlist policy" for name in retained]
-    replacement = "## Recovered streams\\n" + "\\n".join(lines) + next_heading + remainder
+        lines += [
+            f"- **{name}** — probe succeeded; retained in **Review** under playlist policy"
+            for name in retained
+        ]
+    replacement = "## Recovered streams\n" + "\n".join(lines) + next_heading + remainder
     replacement = re.sub(
-        r"(?m)^- Restored from Review to primary/Backup/discovery queue: \\*\\*\\d+\\*\\*$",
+        r"(?m)^- Restored from Review to primary/Backup/discovery queue: \*\*\d+\*\*$",
         f"- Restored from Review to primary/Backup/discovery queue: **{len(restored)}**",
         replacement,
         count=1,
     )
-    return report_text[:section[0].__len__()] + replacement
+    return report_text[:len(section[0])] + replacement
 
 
 def validate_published_recovery_report(playlist_text, report_text, history):
@@ -887,10 +892,10 @@ def validate_published_recovery_report(playlist_text, report_text, history):
 
     retained_section = report_text.split("## Successfully probed; retained in Review by policy", 1)
     if len(retained_section) == 2:
-        retained_body = retained_section[1].split("\\n## ", 1)[0]
+        retained_body = retained_section[1].split("\n## ", 1)[0]
         retained_names = []
         for line in retained_body.splitlines():
-            match = re.fullmatch(r"- \\*\\*(.*?)\\*\\* — probe succeeded; retained in \\*\\*Review\\*\\* under playlist policy", line.strip())
+            match = re.fullmatch(r"- \*\*(.*?)\*\* — probe succeeded; retained in \*\*Review\*\* under playlist policy", line.strip())
             if match:
                 retained_names.append(match.group(1))
         review_rows = Counter()
