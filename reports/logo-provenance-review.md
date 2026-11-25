@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-24T07:09:51+00:00**
+Generated: **2026-11-25T00:21:20+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **ff15c8ceffaa71c72e6b9f2c387ff941dc227454cb482bb4a2943966640ec13c**
-- International-Playlist.m3u SHA-256: **1e8a9d34987a0e4fa2c626dc68216f38db8d562a2a26d12945d6138a2d6e7585**
+- IPTV-Playlist.m3u SHA-256: **a2ef9bb3e7d03dbfffd4f78e796027e4f5e46374fe9717d89785190c04f23e6a**
+- International-Playlist.m3u SHA-256: **ac46370e5f6aa0b95c2c56df06a0d9b8eadf35f94c85e7044e9cec3f316f7619**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 20 | 2 | 1317 |
-| International-Playlist.m3u | 0 | 987 | 0 | 2332 |
+| IPTV-Playlist.m3u | 0 | 23 | 2 | 1329 |
+| International-Playlist.m3u | 0 | 988 | 0 | 2333 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3649**
+- Logos needing attribution review: **3662**
 - Unofficial fallback logos: **2**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3649 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3662 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
@@ -83,6 +83,8 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | colors-3cfc323d7c.png | Colors | Colors.in@HD |
 | colors-bangla.png | Colors Bangla | Colors.Bangla.in |
 | colors-bangla.png | Colors Bangla | ColorsBangla.in@HD |
+| duronto-tv-2b3c7dd202.png | Duronto TV | DurontoTV.bd |
+| duronto-tv-2b3c7dd202.png | Duronto TV (720p) | DurontoTV.bd@SD |
 | epic-bharat.png | Epic Bharat Digital | EpicBharat.in@Digital |
 | epic-bharat.png | Epic Bharat | EpicBharat.in@SD |
 | epic-bhojpuri.png | Epic Bhojpuri | EpicBhojpuri.in@SD |
@@ -106,6 +108,8 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | gtc-punjabi.png | GTC Punjabi US | GTCPunjabi.in@US |
 | history-tv18.png | History TV | HistoryTV18.in@SD |
 | history-tv18.png | History TV18 Hindi | custom.historytv18hindi |
+| inwild.png | InWild | INWILD.nl |
+| inwild.png | INWILD (1080p) | INWILD.nl@SD |
 | jalsha-movies.png | Jalsha Movies | JalshaMovies.in@SD |
 | jalsha-movies.png | Jalsha Movies | Star.Jalsha.Movies.in |
 | mnx.png | MNX HD | MNX.in@HD |

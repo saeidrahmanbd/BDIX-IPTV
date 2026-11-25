@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T07:09:44+00:00",
+  "generated": "2026-11-25T00:21:07+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -764,6 +764,20 @@
       "primary": 1,
       "backup": 0
     },
+    "ayushnextcommunicationnetwork": {
+      "names": [
+        "Ayush Next Communication Network (576p)"
+      ],
+      "ids": [
+        "ayushnextcommunicationnetwork.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "b4ubhojpuri": {
       "names": [
         "B4U Bhojpuri",
@@ -815,7 +829,8 @@
     },
     "b4umusic": {
       "names": [
-        "B4U Music"
+        "B4U Music",
+        "B4U Music (1080p)"
       ],
       "ids": [
         "b4umusic.in@india"
@@ -823,10 +838,11 @@
       "groups": [
         "Backup",
         "Indian Music",
+        "New Backups",
         "Review"
       ],
-      "streams": 9,
-      "primary": 4,
+      "streams": 10,
+      "primary": 5,
       "backup": 5
     },
     "babysharktv": {
@@ -1282,6 +1298,20 @@
       ],
       "groups": [
         "Bangladesh"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "ccv": {
+      "names": [
+        "CCV (480p)"
+      ],
+      "ids": [
+        "ccv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -3050,20 +3080,6 @@
       "primary": 2,
       "backup": 2
     },
-    "ddbharati": {
-      "names": [
-        "DD Bharati"
-      ],
-      "ids": [
-        "ddbharati.in@sd"
-      ],
-      "groups": [
-        "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "ddbihar": {
       "names": [
         "DD Bihar"
@@ -3816,17 +3832,20 @@
     },
     "durontotv": {
       "names": [
-        "Duronto TV"
+        "Duronto TV",
+        "Duronto TV (720p)"
       ],
       "ids": [
-        "durontotv.bd"
+        "durontotv.bd",
+        "durontotv.bd@sd"
       ],
       "groups": [
         "Kids",
+        "New Backups",
         "Review"
       ],
-      "streams": 3,
-      "primary": 3,
+      "streams": 4,
+      "primary": 4,
       "backup": 0
     },
     "dwnews": {
@@ -4049,7 +4068,8 @@
     "epicbharat": {
       "names": [
         "Epic Bharat",
-        "Epic Bharat Digital"
+        "Epic Bharat Digital",
+        "Epic Bharat Digital (1080p)"
       ],
       "ids": [
         "epicbharat.in@digital",
@@ -4058,10 +4078,11 @@
       "groups": [
         "Backup",
         "Indian Entertainment",
+        "New Backups",
         "Review"
       ],
-      "streams": 4,
-      "primary": 2,
+      "streams": 5,
+      "primary": 3,
       "backup": 2
     },
     "epicbhojpuri": {
@@ -4381,7 +4402,7 @@
         "fashionlifestyle.ru@sd"
       ],
       "groups": [
-        "Review"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -4424,6 +4445,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "fast1": {
+      "names": [
+        "Fast1 (576p)"
+      ],
+      "ids": [
+        "fast1.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -5169,16 +5204,19 @@
     },
     "inwild": {
       "names": [
+        "INWILD (1080p)",
         "InWild"
       ],
       "ids": [
-        "inwild.nl"
+        "inwild.nl",
+        "inwild.nl@sd"
       ],
       "groups": [
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "inwonder": {
@@ -5295,6 +5333,20 @@
       "streams": 3,
       "primary": 1,
       "backup": 2
+    },
+    "jaihindtv": {
+      "names": [
+        "Jaihind TV (576p)"
+      ],
+      "ids": [
+        "jaihindtv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "jalshabanglabd": {
       "names": [
@@ -5435,6 +5487,20 @@
       ],
       "groups": [
         "Indian Bangla"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "kabaddi24x7": {
+      "names": [
+        "Kabaddi 24x7 (720p)"
+      ],
+      "ids": [
+        "kabaddi24x7.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -6036,17 +6102,19 @@
     },
     "mazhavilmanorama": {
       "names": [
-        "Mazhavil Manorama"
+        "Mazhavil Manorama",
+        "Mazhavil Manorama (576p)"
       ],
       "ids": [
         "mazhavilmanorama.in@sd"
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backups"
       ],
-      "streams": 7,
-      "primary": 1,
+      "streams": 8,
+      "primary": 2,
       "backup": 6
     },
     "mbcbollywood": {
@@ -6092,6 +6160,20 @@
       "streams": 3,
       "primary": 1,
       "backup": 2
+    },
+    "metrotv": {
+      "names": [
+        "Metro TV (India) (1080p)"
+      ],
+      "ids": [
+        "metrotv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "metv": {
       "names": [
@@ -6577,6 +6659,20 @@
       "primary": 1,
       "backup": 0
     },
+    "nantv": {
+      "names": [
+        "NAN TV (720p)"
+      ],
+      "ids": [
+        "nantv.bd@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "natgeotv": {
       "names": [
         "Nat Geo TV"
@@ -6942,6 +7038,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "nvision": {
+      "names": [
+        "N Vision (1080p)"
+      ],
+      "ids": [
+        "nvision.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "olitv": {
       "names": [
@@ -10514,6 +10624,34 @@
       "primary": 1,
       "backup": 0
     },
+    "wayanadvision": {
+      "names": [
+        "Wayanad Vision (1080p)"
+      ],
+      "ids": [
+        "wayanadvision.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "weatherspy": {
+      "names": [
+        "WeatherSpy (India) (720p)"
+      ],
+      "ids": [
+        "weatherspy.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "wheelworld": {
       "names": [
         "Wheel World"
@@ -11110,6 +11248,20 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "zodiaktv": {
+      "names": [
+        "Zodiak TV (1080p)"
+      ],
+      "ids": [
+        "zodiaktv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
