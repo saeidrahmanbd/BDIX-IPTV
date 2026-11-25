@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-25T01:29:32+00:00**
+Generated: **2026-11-25T08:39:51+00:00**
 
-- Active Bangladesh playlist identities: **85**
+- Active Bangladesh playlist identities: **86**
 - Identities with a retained source mapping: **5**
 - Identities with usable current/future schedules: **4**
-- Identities without a source mapping: **80**
+- Identities without a source mapping: **81**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -23,7 +23,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvonline: no daily schedule article link on homepage; rtvbd.tv/live.php: URLError; www.rtvbd.tv: URLError after retry; rtvbd.tv: URLError after retry |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 65 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 63 | - |
 | FAILED | M3U4U XMLTV (private Actions secret) | 0 | 0 | 0 | details suppressed for private source |
 
 ## Unmapped Bangladesh identities
@@ -76,6 +76,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Global TV | GlobalTV.bd | NO_GUIDE_HIT |
 | Independent TV | IndependentTV.bd | NO_GUIDE_HIT |
 | Islamic TV | IslamicTV.bd | NO_GUIDE_HIT |
+| JA TV | JATV.bd | NO_GUIDE_HIT |
 | Jago News 24 | JagoNews24.bd | NO_GUIDE_HIT |
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
