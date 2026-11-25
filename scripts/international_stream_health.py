@@ -727,10 +727,6 @@ def validate_recovery_accounting(source_text, updated_text, events, report):
         if departed > 0:
             departures_by_key[key] = departed
 
-    event_counts = Counter(e.get("stream_key") for e in recovered_events + protected_events + retired_events)
-    if any(not key or count > departures_by_key.get(key, 0) for key, count in event_counts.items()):
-        raise ValueError("Review playlist changes are not fully accounted for")
-    
     recovered_destinations = Counter((e.get("stream_key"), str(e.get("group_after", "")).casefold()) for e in recovered_events)
     protected_destinations = Counter((e.get("stream_key"), "adult") for e in protected_events)
     for event in recovered_events:
@@ -756,6 +752,12 @@ def validate_recovery_accounting(source_text, updated_text, events, report):
         key = event.get("stream_key")
         if not key or before.get(key, Counter()).get(REVIEW.casefold(), 0) == 0:
             raise ValueError("A retired stream does not match the playlist removal")
+
+    # Check the aggregate only after validating each event, so the more specific
+    # probe/destination integrity errors remain visible to callers and tests.
+    event_counts = Counter(e.get("stream_key") for e in recovered_events + protected_events + retired_events)
+    if any(not key or count > departures_by_key.get(key, 0) for key, count in event_counts.items()):
+        raise ValueError("Review playlist changes are not fully accounted for")
 
     if sum(departures_by_key.values()) != sum(event_counts.values()):
         raise ValueError("Review playlist changes are not fully accounted for")
