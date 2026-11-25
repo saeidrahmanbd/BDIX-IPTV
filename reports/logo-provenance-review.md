@@ -1,14 +1,14 @@
 # Logo Provenance Review
 
-Generated: **2026-11-25T09:18:55+00:00**
+Generated: **2026-11-25T09:23:22+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **c4a95d4b9182121074a01e2863683a37f0b41db4242dba26b72ee7a1c25de3d5**
-- International-Playlist.m3u SHA-256: **cc8d5ebf31d5cac701c4dd002ec1dcd3b9a074e533d69900a4df734d1f7ac1a9**
+- IPTV-Playlist.m3u SHA-256: **72b27febe9a11669f9351b81beac6ff23b82b10f241a4052af20783e38fde0cf**
+- International-Playlist.m3u SHA-256: **2438e137ff42a85a52747a9f71def8892548dac805d8fec236ddd53bdfe094e9**
 
 ## Provenance status by playlist
 
@@ -45,7 +45,7 @@ Showing up to 40 of 3667 items. The complete inventory, including all status rea
 | IPTV-Playlist.m3u | 7S Music | 7SMusic.in@SD | 7s-music.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 7S Music | 7SMusic.in@SD | 7s-music.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 7X Punjabi | 7XPunjabi.in | 7x-punjabi.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
-| IPTV-Playlist.m3u | 7X Punjabi | 7XPunjabi.in | 7x-music.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+| IPTV-Playlist.m3u | 7X Punjabi | 7XPunjabi.in | 7x-punjabi.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 8XM | 8XM.pk@SD | 8xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 8XM | 8XM.pk@SD | 8xm.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | IPTV-Playlist.m3u | 9X Jalwa | 9XJalwa.in | jalwa.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
