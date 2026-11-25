@@ -1,23 +1,23 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-25T09:31:47+00:00**
+Generated: **2026-11-25T23:53:27+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **989680868b7ee36faec4fec5c206bd27fb0edaa66d06d043bcae4384b80e50a1**
+- IPTV-Playlist.m3u SHA-256: **598d10bb9ef2f245554816b0258abfb34c703349ec2ecf48e5ae3317bb2ff04a**
 - International-Playlist.m3u SHA-256: **2438e137ff42a85a52747a9f71def8892548dac805d8fec236ddd53bdfe094e9**
 
 ## Summary
 
-- Safe repairs applied this run: **0**
+- Safe repairs applied this run: **2**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1598**
+- Playlist references whose asset stem differs from the normalized channel name: **1600**
 - Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -25,7 +25,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| malabar-plus-d6e579c29354453addc3.png | PNG | PNG | 1280×1280 | 674×674 | downscaled, re-encoded/compressed |
+| thanima-83afbf82b637391714f3.png | PNG | PNG | 512×512 | 362×362 | downscaled, re-encoded/compressed |
 
 ## Remaining extension mismatches
 
@@ -1231,6 +1232,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | South Vision (1080p) | south-vision-c39b6b63a7878132e257.png | New Channels |
 | IPTV-Playlist.m3u | Wayanad Vision Movies (720p) | wayanad-vision-movies-e71e1066086194408e92.png | New Channels |
 | IPTV-Playlist.m3u | Wayanad Vision Plus (720p) | wayanad-vision-plus-82bd345c3914db6ab3e2.png | New Channels |
+| IPTV-Playlist.m3u | Malabar Plus (720p) | malabar-plus-d6e579c29354453addc3.png | New Channels |
+| IPTV-Playlist.m3u | Thanima (1080p) | thanima-83afbf82b637391714f3.png | New Channels |
 | IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | New Backups |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
