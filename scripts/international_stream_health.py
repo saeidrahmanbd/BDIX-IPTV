@@ -780,6 +780,81 @@ def validate_recovery_accounting(source_text, updated_text, events, report):
     return {"recovered": len(recovered_events), "protected_restored": len(protected_events), "retired": len(retired_events)}
 
 
+def reconcile_published_recovery_report(playlist_text, report_text, history):
+    """Align the recovery report with final policy destinations after playlist reorganization."""
+    date_match = re.search(r"- Bangladesh check date: \*\*(\d{4}-\d{2}-\d{2})\*\*", report_text)
+    if not date_match:
+        raise ValueError("Published health report is missing its Bangladesh check date")
+    check_date = date_match.group(1)
+    section = report_text.split("## Recovered streams", 1)
+    if len(section) != 2:
+        raise ValueError("Published report is missing the Recovered streams section")
+    tail = section[1]
+    next_heading = "\n## Removed after three consecutive failed days"
+    if next_heading not in tail:
+        raise ValueError("Published report is missing the Removed section after recovery rows")
+    body, remainder = tail.split(next_heading, 1)
+    rows = []
+    for line in body.splitlines():
+        match = re.fullmatch(r"- \*\*(.*?)\*\* — restored to \*\*(.*?)\*\*", line.strip())
+        if match:
+            rows.append((match.group(1), match.group(2)))
+
+    _, blocks = parse(playlist_text)
+    available = defaultdict(Counter)
+    for block in blocks:
+        entry_urls = urls(block)
+        if len(entry_urls) != 1:
+            continue
+        key = stream_key(block[0], entry_urls[0])
+        record = history.get("entries", {}).get(key, {})
+        if record.get("last_status") != "ok" or record.get("last_ok_date") != check_date:
+            continue
+        available[norm_name(name_of(block[0]))][group_of(block[0])] += 1
+
+    restored, retained = [], []
+    for name, previous_group in rows:
+        candidates = available[norm_name(name)]
+        if not candidates:
+            raise ValueError(f"Recovered report row has no successful final playlist row: {name}")
+        destination = None
+        if candidates[previous_group] > 0:
+            destination = previous_group
+        else:
+            non_review = sorted(
+                group for group, count in candidates.items()
+                if count > 0 and group.casefold() != REVIEW.casefold()
+            )
+            if non_review:
+                destination = non_review[0]
+            elif candidates[REVIEW] > 0:
+                retained.append(name)
+                candidates[REVIEW] -= 1
+                continue
+        if destination is None:
+            raise ValueError(f"Recovered report row cannot be reconciled to a final destination: {name}")
+        restored.append((name, destination))
+        candidates[destination] -= 1
+
+    lines = ["", *([f"- **{name}** — restored to **{group}**" for name, group in restored] or ["None."])]
+    if retained:
+        lines += ["", "## Successfully probed; retained in Review by policy", ""]
+        lines += [
+            f"- **{name}** — probe succeeded; retained in **Review** under playlist policy"
+            for name in retained
+        ]
+    replacement = "## Recovered streams\n" + "\n".join(lines) + next_heading + remainder
+    prefix = re.sub(
+        r"(?m)^- Restored from Review to primary/Backup/discovery queue: \*\*\d+\*\*$",
+        f"- Restored from Review to primary/Backup/discovery queue: **{len(restored)}**",
+        section[0],
+        count=1,
+    )
+    if prefix == section[0]:
+        raise ValueError("Published recovery total is missing during policy reconciliation")
+    return prefix + replacement
+
+
 def validate_published_recovery_report(playlist_text, report_text, history):
     """Validate recovery rows against the final post-reorganization playlist and probe history."""
     date_match = re.search(r"- Bangladesh check date: \*\*(\d{4}-\d{2}-\d{2})\*\*", report_text)
@@ -816,6 +891,31 @@ def validate_published_recovery_report(playlist_text, report_text, history):
                 f"Recovered report row is absent from the final playlist or lacks a successful probe: {row[0]}"
             )
         final_rows[row] -= 1
+
+    retained_section = report_text.split("## Successfully probed; retained in Review by policy", 1)
+    if len(retained_section) == 2:
+        retained_body = retained_section[1].split("\n## ", 1)[0]
+        retained_names = []
+        for line in retained_body.splitlines():
+            match = re.fullmatch(r"- \*\*(.*?)\*\* — probe succeeded; retained in \*\*Review\*\* under playlist policy", line.strip())
+            if match:
+                retained_names.append(match.group(1))
+        review_rows = Counter()
+        for block in blocks:
+            if group_of(block[0]).casefold() != REVIEW.casefold():
+                continue
+            entry_urls = urls(block)
+            if len(entry_urls) != 1:
+                continue
+            key = stream_key(block[0], entry_urls[0])
+            record = history.get("entries", {}).get(key, {})
+            if record.get("last_status") == "ok" and record.get("last_ok_date") == check_date:
+                review_rows[norm_name(name_of(block[0]))] += 1
+        for name in retained_names:
+            key = norm_name(name)
+            if review_rows[key] <= 0:
+                raise ValueError(f"Policy-retained recovery row is absent from Review or lacks a successful probe: {name}")
+            review_rows[key] -= 1
     return len(rows)
 
 

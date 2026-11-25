@@ -95,6 +95,37 @@ class InternationalStreamHealthTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "absent from the final playlist"):
             health.validate_published_recovery_report(updated, report, bad_history)
 
+    def test_recovery_report_reconciles_policy_retained_review_rows(self):
+        source = self.playlist(row(name="ABN Bible Movies Channel", group="Review", extra='tvg-content="Religious" '))
+        info, url = health.parse(source)[1][0][0], "https://example.test/live/test.m3u8"
+        key = health.stream_key(info, url)
+        history = {"entries": {key: {
+            "name": "ABN Bible Movies Channel", "tvg_id": "testmovie.us", "country": "US",
+            "original_group": "United States", "auto_review": True,
+            "consecutive_failures": 1, "last_checked_date": "2026-11-24",
+            "last_status": "fail", "removed": False,
+        }}, "removed": []}
+        restored, history, events = apply(
+            source, "ok", history, "2026-11-25", status=200, reason="Media bytes received"
+        )
+        report = health.build_report(
+            events, history, "2026-11-25", "2026-11-25T00:00:00+00:00", 1
+        )
+        # The final International policy organizer retains this successful
+        # non-Movies/Music foreign channel in Review.
+        final_playlist = restored.replace(
+            'group-title="United States"', 'group-title="Review"'
+        )
+        reconciled = health.reconcile_published_recovery_report(
+            final_playlist, report, history
+        )
+        self.assertIn("Restored from Review to primary/Backup/discovery queue: **0**", reconciled)
+        self.assertIn("## Successfully probed; retained in Review by policy", reconciled)
+        self.assertIn("**ABN Bible Movies Channel** — probe succeeded; retained in **Review** under playlist policy", reconciled)
+        self.assertEqual(
+            health.validate_published_recovery_report(final_playlist, reconciled, history), 0
+        )
+
     def test_report_summarizes_inconclusive_reasons_and_http_statuses(self):
         events = [
             {"state": "inconclusive", "status": 403, "reason": "HTTP 403", "action": "none", "name": "Example 403"},
