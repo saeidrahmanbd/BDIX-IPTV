@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25T03:30:22+00:00",
+  "generated": "2026-11-25T04:32:02+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -766,7 +766,7 @@
     },
     "ayushnextcommunicationnetwork": {
       "names": [
-        "Ayush Next Communication Network (576p)"
+        "Ayush Next Communication Network"
       ],
       "ids": [
         "ayushnextcommunicationnetwork.in@sd"
@@ -829,8 +829,7 @@
     },
     "b4umusic": {
       "names": [
-        "B4U Music",
-        "B4U Music (1080p)"
+        "B4U Music"
       ],
       "ids": [
         "b4umusic.in@india"
@@ -1305,7 +1304,7 @@
     },
     "ccv": {
       "names": [
-        "CCV (480p)"
+        "CCV"
       ],
       "ids": [
         "ccv.in@sd"
@@ -1630,11 +1629,12 @@
         "colorsbanglacinema.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Bangla"
       ],
       "streams": 3,
-      "primary": 3,
-      "backup": 0
+      "primary": 1,
+      "backup": 2
     },
     "colorscineplex": {
       "names": [
@@ -3654,11 +3654,12 @@
         "dhoommusic.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Bangla"
       ],
       "streams": 3,
-      "primary": 3,
-      "backup": 0
+      "primary": 1,
+      "backup": 2
     },
     "discoverpakistan": {
       "names": [
@@ -3832,8 +3833,7 @@
     },
     "durontotv": {
       "names": [
-        "Duronto TV",
-        "Duronto TV (720p)"
+        "Duronto TV"
       ],
       "ids": [
         "durontotv.bd",
@@ -4068,8 +4068,7 @@
     "epicbharat": {
       "names": [
         "Epic Bharat",
-        "Epic Bharat Digital",
-        "Epic Bharat Digital (1080p)"
+        "Epic Bharat Digital"
       ],
       "ids": [
         "epicbharat.in@digital",
@@ -4452,7 +4451,7 @@
     },
     "fast1": {
       "names": [
-        "Fast1 (576p)"
+        "Fast1"
       ],
       "ids": [
         "fast1.in@sd"
@@ -5204,7 +5203,7 @@
     },
     "inwild": {
       "names": [
-        "INWILD (1080p)",
+        "INWILD",
         "InWild"
       ],
       "ids": [
@@ -5336,7 +5335,7 @@
     },
     "jaihindtv": {
       "names": [
-        "Jaihind TV (576p)"
+        "Jaihind TV"
       ],
       "ids": [
         "jaihindtv.in@sd"
@@ -5370,11 +5369,12 @@
         "jalshamovies.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Bangla"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "jalwatv": {
       "names": [
@@ -5494,7 +5494,7 @@
     },
     "kabaddi24x7": {
       "names": [
-        "Kabaddi 24x7 (720p)"
+        "Kabaddi 24x7"
       ],
       "ids": [
         "kabaddi24x7.in@sd"
@@ -6102,8 +6102,7 @@
     },
     "mazhavilmanorama": {
       "names": [
-        "Mazhavil Manorama",
-        "Mazhavil Manorama (576p)"
+        "Mazhavil Manorama"
       ],
       "ids": [
         "mazhavilmanorama.in@sd"
@@ -6163,7 +6162,7 @@
     },
     "metrotv": {
       "names": [
-        "Metro TV (India) (1080p)"
+        "Metro TV (India)"
       ],
       "ids": [
         "metrotv.in@sd"
@@ -6661,7 +6660,7 @@
     },
     "nantv": {
       "names": [
-        "NAN TV (720p)"
+        "NAN TV"
       ],
       "ids": [
         "nantv.bd@sd"
@@ -7041,7 +7040,7 @@
     },
     "nvision": {
       "names": [
-        "N Vision (1080p)"
+        "N Vision"
       ],
       "ids": [
         "nvision.in@sd"
@@ -8307,11 +8306,12 @@
         "sangeetbangla.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Bangla"
       ],
       "streams": 5,
-      "primary": 5,
-      "backup": 0
+      "primary": 1,
+      "backup": 4
     },
     "sangeetbhojpuri": {
       "names": [
@@ -10626,7 +10626,7 @@
     },
     "wayanadvision": {
       "names": [
-        "Wayanad Vision (1080p)"
+        "Wayanad Vision"
       ],
       "ids": [
         "wayanadvision.in@sd"
@@ -10640,7 +10640,7 @@
     },
     "weatherspy": {
       "names": [
-        "WeatherSpy (India) (720p)"
+        "WeatherSpy (India)"
       ],
       "ids": [
         "weatherspy.in@sd"
@@ -11255,7 +11255,7 @@
     },
     "zodiaktv": {
       "names": [
-        "Zodiak TV (1080p)"
+        "Zodiak TV"
       ],
       "ids": [
         "zodiaktv.in@sd"

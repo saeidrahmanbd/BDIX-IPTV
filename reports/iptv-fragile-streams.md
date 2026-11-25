@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-25T03:30:21+00:00**
-IPTV-Playlist.m3u SHA-256: **a2ef9bb3e7d03dbfffd4f78e796027e4f5e46374fe9717d89785190c04f23e6a**
+Generated: **2026-11-25T04:32:02+00:00**
+IPTV-Playlist.m3u SHA-256: **1ff53c65cb7ffa5a8313f055f8b1cd8dc61fcb264496556cdfb65eac327ec8f9**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
@@ -17,10 +17,6 @@ These streams are not automatically removed. URL credentials, user information a
 | Colors Bangla Cinema | Indian Bangla | sensitive query parameter (value redacted) | `http://103.114.11.37:8081/Colors-bangla-cinema/tracks-v1a1/mono.m3u8?token=REDACTED` |
 | Dhoom Music | Indian Bangla | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/378/master.m3u8` |
 | Orange Bangla TV | Indian Bangla | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1499/master.m3u8` |
-| Dhoom Music | Indian Bangla | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1456/master.m3u8` |
-| Sangeet Bangla | Indian Bangla | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/379/379_0.m3u8` |
-| Sangeet Bangla | Indian Bangla | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1143/master.m3u8` |
-| Sangeet Bangla | Indian Bangla | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/379/master.m3u8` |
 | Alankar TV | Indian Movies | credential-bearing route pattern (values redacted) | `https://livetv.tarangplus.in/alankar-origin/live/playlist.m3u8` |
 | B4U Kadak | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/227/master.m3u8` |
 | B4U Movies | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/419/master.m3u8` |
@@ -106,8 +102,8 @@ These streams are not automatically removed. URL credentials, user information a
 | Star Sports Select 1 | Sports | sensitive query parameter (value redacted) | `http://103.114.11.37:8081/Star-select-1/index.m3u8?token=REDACTED` |
 | Star Sports Select 2 | Sports | sensitive query parameter (value redacted) | `http://103.114.11.37:8081/Star-select-2/index.m3u8?token=REDACTED` |
 | TVRI Sport | Sports | credential-bearing route pattern (values redacted) | `https://ott-balancer.tvri.go.id/live/REDACTED/REDACTED/hls/SportHD.m3u8` |
-| Fast1 (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/10008/master.m3u8` |
-| Jaihind TV (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/700/master.m3u8` |
+| Fast1 | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/10008/master.m3u8` |
+| Jaihind TV | New Channels | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/700/master.m3u8` |
 | 7S Music | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/771/master.m3u8` |
 | 9X Jalwa | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/161/master.m3u8` |
 | 9X Tashan | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/178/master.m3u8` |
@@ -231,6 +227,10 @@ These streams are not automatically removed. URL credentials, user information a
 | YRF Music | Backup | credential-bearing route pattern (values redacted) | `https://vidaa.kableone.com/hls/live/REDACTED/REDACTED/1.m3u8` |
 | Zee Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8` |
 | Zee Bangla | Backup | credential-bearing route pattern (values redacted) | `http://rgkkw.live:80/live/REDACTED/REDACTED/98881.ts` |
+| Dhoom Music | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1456/master.m3u8` |
+| Sangeet Bangla | Backup | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/379/379_0.m3u8` |
+| Sangeet Bangla | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1143/master.m3u8` |
+| Sangeet Bangla | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/379/master.m3u8` |
 | &TV | Review | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8` |
 | 9X Jhakaas | Review | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/6/master.m3u8` |
 | 9X Tashan | Review | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1613/master.m3u8` |

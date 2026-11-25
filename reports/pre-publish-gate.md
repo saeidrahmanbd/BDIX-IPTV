@@ -1,9 +1,9 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-25T03:29:24+00:00**
-Source playlist SHA-256: **a2ef9bb3e7d03dbfffd4f78e796027e4f5e46374fe9717d89785190c04f23e6a**
+Generated: **2026-11-25T04:30:53+00:00**
+Source playlist SHA-256: **1ff53c65cb7ffa5a8313f055f8b1cd8dc61fcb264496556cdfb65eac327ec8f9**
 
-Status: **BLOCK**
+Status: **PASS**
 
 - Current entries: **1354**
 - Duplicate stream URLs: **0**
@@ -17,15 +17,15 @@ Status: **BLOCK**
 - New/changed duplicate primary channel numbers (blocking): **0**
 - Pre-existing duplicate primary channel numbers preserved unchanged: **1**
 - Permanently banned channel entries across all IPTV groups: **0**
-- Primary entries missing channel numbers: **9**
+- Primary entries missing channel numbers: **0**
 - Primary channel-number sequence issues (non-blocking; existing row order is protected): **1**
 - Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **16**
-- Raw resolution/geoblock name tags: **16**
+- Entries missing tvg-language: **0**
+- Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -42,7 +42,7 @@ New Channels and New Backups are discovery queues. Backup and Review remain prot
 Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **1**.
 
 ## Blocking Reasons
-- duplicate primary identities: 4
+No hard safety blockers detected.
 
 ## Channel-number collision review
 
@@ -55,9 +55,6 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 ## Warnings / Manual Review
 
 - pre-existing owner-curated duplicate channel numbers preserved unchanged: 426
-- entries missing tvg-language: 16
-- primary entries missing tvg-chno: 9
-- raw resolution/geoblock tags in channel names: 16
 - New queue candidates pending owner review: 1
 
 ## Review-queue logo gaps
@@ -72,26 +69,11 @@ None.
 
 ## Raw name tags
 
-- **NAN TV (720p)** — New Channels
-- **Ayush Next Communication Network (576p)** — New Channels
-- **CCV (480p)** — New Channels
-- **Fast1 (576p)** — New Channels
-- **Jaihind TV (576p)** — New Channels
-- **Kabaddi 24x7 (720p)** — New Channels
-- **Metro TV (India) (1080p)** — New Channels
-- **N Vision (1080p)** — New Channels
-- **Wayanad Vision (1080p)** — New Channels
-- **WeatherSpy (India) (720p)** — New Channels
-- **Zodiak TV (1080p)** — New Channels
-- **Duronto TV (720p)** — New Backups
-- **B4U Music (1080p)** — New Backups
-- **Epic Bharat Digital (1080p)** — New Backups
-- **INWILD (1080p)** — New Backups
-- **Mazhavil Manorama (576p)** — New Backups
+None.
 
 ## Queue validation
 
-- INWILD (1080p) country not verified as BD/IN (id carries a non-BD/IN country suffix)
+- INWILD country not verified as BD/IN (id carries a non-BD/IN country suffix)
 
 ## Missing local logo files
 

@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-25T03:29:23.525594+00:00**
-Source playlist SHA-256: **a2ef9bb3e7d03dbfffd4f78e796027e4f5e46374fe9717d89785190c04f23e6a**
+Generated: **2026-11-25T04:30:52.388222+00:00**
+Source playlist SHA-256: **1ff53c65cb7ffa5a8313f055f8b1cd8dc61fcb264496556cdfb65eac327ec8f9**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -22,17 +22,17 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
 - Logo references checked: **1354**
-- Duplicate primary identities: **4**
+- Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **1**
 - Primary channel-number sequence issues (review only): **1**
-- Primary entries missing channel numbers: **9**
+- Primary entries missing channel numbers: **0**
 - Primary entries missing tvg-country: **0**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
-- Alphabetical ordering issues: **5**
+- Alphabetical ordering issues: **3**
 - Suspicious URL credentials/syntax: **0**
 - Unverified provider playback routes (review only): **0**
 - Signed/tokenized stream URLs: **14**
@@ -65,13 +65,13 @@ No same-ID label variants found across groups.
 - Same normalized name: Apna Punjab TV [apnapunjabtv.ca@sd] (Indian Entertainment); Apna Punjab TV [apnapunjabtv.in@sd] (Indian Entertainment)
 - Same normalized name: Colors [colors.in] (Review); Colors [colors.in@hd] (Indian Entertainment); Colors [colors.in@hd] (Review)
 - Same normalized name: Colors Bangla [colors.bangla.in] (Review); Colors Bangla [colorsbangla.in@hd] (Review)
-- Same normalized name: Duronto TV [durontotv.bd] (Kids); Duronto TV [durontotv.bd] (Review); Duronto TV (720p) [durontotv.bd@sd] (New Backups)
+- Same normalized name: Duronto TV [durontotv.bd] (Kids); Duronto TV [durontotv.bd] (Review); Duronto TV [durontotv.bd@sd] (New Backups)
 - Same normalized name: ETV Cinema [etvcinema.in] (Indian Movies); ETV Cinema [etvcinema.in] (Review); ETV Cinema [etvcinema.in@hd] (Indian Movies)
 - Same normalized name: ETV Comedy [etvcomedy.in] (Indian Entertainment); ETV Comedy [etvcomedy.in@hd] (Indian Entertainment)
 - Same normalized name: ETV Music [etvmusic.in] (Indian Music); ETV Music [etvmusic.in@sd] (Indian Music)
 - Same normalized name: Eurosport [eurosport.fr@asia] (Review); Eurosport [eurosport.in@hd] (Review); Eurosport [eurosport.in@sd] (Review)
-- Same normalized name: InWild [inwild.nl] (Documentary & Wildlife); INWILD (1080p) [inwild.nl@sd] (New Backups)
-- Same normalized name: Jalsha Movies [jalshamovies.in@sd] (Indian Bangla); Jalsha Movies [star.jalsha.movies.in] (Review)
+- Same normalized name: InWild [inwild.nl] (Documentary & Wildlife); INWILD [inwild.nl@sd] (New Backups)
+- Same normalized name: Jalsha Movies [jalshamovies.in@sd] (Backup); Jalsha Movies [jalshamovies.in@sd] (Indian Bangla); Jalsha Movies [star.jalsha.movies.in] (Review)
 - Same normalized name: MTV India [mtv.in@hd] (Review); MTV (India) [mtv.in@sd] (Review); MTV India [mtv.in@sd] (Indian Music); MTV India [mtv.in@sd] (Review)
 - Same normalized name: Peace TV Bangla [peacetvbangla.ae] (Backup); Peace TV Bangla [peacetvbangla.ae] (Religious); Peace TV Bangla [peacetvbangla.ae@sd] (Review)
 - Same normalized name: &pictures HD [andpictures.in@hd] (Review); &pictures HD [andpictures.in@sd] (Review)
@@ -207,7 +207,7 @@ No same-ID label variants found across groups.
 - B4U Movies — Review — https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8
 ### b4umusic.in@india (10 streams)
 - B4U Music — Indian Music — https://streams.tangotv.in/B4UMUSIC/ORIGIN/index.m3u8
-- B4U Music (1080p) — New Backups — https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/playlist.m3u8
+- B4U Music — New Backups — https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/playlist.m3u8
 - B4U Music — Backup — http://103.175.73.12:8080/live/157/master.m3u8
 - B4U Music — Backup — http://163.61.226.31:9981/stream/channelid/494430938?profile=pass
 - B4U Music — Backup — https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/playlist.m3u8
@@ -307,8 +307,8 @@ No same-ID label variants found across groups.
 - Colors Bangla — Review — http://103.135.253.32:8080/COLORS-BANGLA-HD/index.m3u8
 ### colorsbanglacinema.in@sd (3 streams)
 - Colors Bangla Cinema — Indian Bangla — http://103.114.11.37:8081/Colors-bangla-cinema/tracks-v1a1/mono.m3u8?token=[REDACTED]
-- Colors Bangla Cinema — Indian Bangla — http://103.135.253.32:8080/COLORS-BANGLA-CINEMA/index.m3u8
-- Colors Bangla Cinema — Indian Bangla — https://livetv.shamon-cable.net:8443/Colors-bangla-cinema/index.m3u8
+- Colors Bangla Cinema — Backup — http://103.135.253.32:8080/COLORS-BANGLA-CINEMA/index.m3u8
+- Colors Bangla Cinema — Backup — https://livetv.shamon-cable.net:8443/Colors-bangla-cinema/index.m3u8
 ### colorscineplex.uk (3 streams)
 - Colors Cineplex — Indian Movies — https://d1rc86nwwc9fag.cloudfront.net/260723/smil:rishteycineplexukdev.smil/chunklist_b1928000.m3u8
 - Colors Cineplex — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8
@@ -459,8 +459,8 @@ No same-ID label variants found across groups.
 - Desi Channel — Backup — https://desichannel.kableone.com/desichannel/master.m3u8
 ### dhoommusic.in@sd (3 streams)
 - Dhoom Music — Indian Bangla — https://fta.ektv.in/live/378/master.m3u8
-- Dhoom Music — Indian Bangla — https://cdn.pishow.tv/ott/live/1456/master.m3u8
-- Dhoom Music — Indian Bangla — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
+- Dhoom Music — Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
+- Dhoom Music — Backup — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 ### discoverpakistan.pk@sd (2 streams)
 - Discover Pakistan — Pakistani — https://livecdn.live247stream.com/discoverpakistan/web/playlist.m3u8
 - Discover Pakistan — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/discoverpakistan.stream/playlist.m3u8
@@ -499,7 +499,7 @@ No same-ID label variants found across groups.
 - Enter TV — Bangladesh — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8
 - Enter TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8
 ### epicbharat.in@digital (2 streams)
-- Epic Bharat Digital (1080p) — New Backups — https://dt4psgz92awc5.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/naazara_tv/master.m3u8
+- Epic Bharat Digital — New Backups — https://dt4psgz92awc5.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/naazara_tv/master.m3u8
 - Epic Bharat Digital — Review — https://cc-p1izg43bk7sj5.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-p1izg43bk7sj5/DIYC/PMSL/IN10/Nazara_IN_B/Nazara_IN_B.m3u8
 ### epicbharat.in@sd (3 streams)
 - Epic Bharat — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVEPICTV/index.m3u8
@@ -612,7 +612,7 @@ No same-ID label variants found across groups.
 - Jago News 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
 ### jalshamovies.in@sd (2 streams)
 - Jalsha Movies — Indian Bangla — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
-- Jalsha Movies — Indian Bangla — https://livetv.shamon-cable.net:8443/Jalsha-Movies/index.m3u8
+- Jalsha Movies — Backup — https://livetv.shamon-cable.net:8443/Jalsha-Movies/index.m3u8
 ### jalwatv.pk@sd (2 streams)
 - Jalwa TV — Indian Music — https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 - Jalwa TV — Backup — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/live/135M/chunks.m3u8
@@ -694,7 +694,7 @@ No same-ID label variants found across groups.
 - Matribhumi TV — Backup — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/matribhumitv.stream/playlist.m3u8
 ### mazhavilmanorama.in@sd (8 streams)
 - Mazhavil Manorama — Indian Entertainment — https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
-- Mazhavil Manorama (576p) — New Backups — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/ad6c59acd03b4b5a9928e32d7fee66db/index.m3u8
+- Mazhavil Manorama — New Backups — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/ad6c59acd03b4b5a9928e32d7fee66db/index.m3u8
 - Mazhavil Manorama — Backup — https://cdn.pishow.tv/ott/live/1479/master.m3u8
 - Mazhavil Manorama — Backup — https://mmtv-vglivessai.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/f8a0827f-030f-4a0d-b7e5-338996c09a5b/index.m3u8
 - Mazhavil Manorama — Backup — https://mumt03.tangotv.in/Dsly5z3HMAZHAVILMANORAMAINT/index.m3u8
@@ -942,10 +942,10 @@ No same-ID label variants found across groups.
 - Sana Plus — Backup — https://galaxyott.live/hls/sanaplus.m3u8
 ### sangeetbangla.in@sd (5 streams)
 - Sangeet Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8
-- Sangeet Bangla — Indian Bangla — http://103.175.73.12:8080/live/379/379_0.m3u8
-- Sangeet Bangla — Indian Bangla — https://cdn.pishow.tv/ott/live/1143/master.m3u8
-- Sangeet Bangla — Indian Bangla — https://fta.ektv.in/live/379/master.m3u8
-- Sangeet Bangla — Indian Bangla — https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
+- Sangeet Bangla — Backup — http://103.175.73.12:8080/live/379/379_0.m3u8
+- Sangeet Bangla — Backup — https://cdn.pishow.tv/ott/live/1143/master.m3u8
+- Sangeet Bangla — Backup — https://fta.ektv.in/live/379/master.m3u8
+- Sangeet Bangla — Backup — https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
 ### sangeetbhojpuri.in@sd (3 streams)
 - Sangeet Bhojpuri — Indian Music — https://cdn.pishow.tv/ott/live/1293/master.m3u8
 - Sangeet Bhojpuri — Backup — https://mumt01.tangotv.in/O5aw8Zn3SANGEETBHOJPURI/index.m3u8
@@ -1155,10 +1155,7 @@ No same-ID label variants found across groups.
 
 ## Duplicate Primary Identities
 
-- **colorsbanglacinema.in@sd** — Colors Bangla Cinema [Indian Bangla] — http://103.114.11.37:8081/Colors-bangla-cinema/tracks-v1a1/mono.m3u8?token=[REDACTED]; Colors Bangla Cinema [Indian Bangla] — http://103.135.253.32:8080/COLORS-BANGLA-CINEMA/index.m3u8; Colors Bangla Cinema [Indian Bangla] — https://livetv.shamon-cable.net:8443/Colors-bangla-cinema/index.m3u8
-- **dhoommusic.in@sd** — Dhoom Music [Indian Bangla] — https://fta.ektv.in/live/378/master.m3u8; Dhoom Music [Indian Bangla] — https://cdn.pishow.tv/ott/live/1456/master.m3u8; Dhoom Music [Indian Bangla] — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
-- **jalshamovies.in@sd** — Jalsha Movies [Indian Bangla] — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8; Jalsha Movies [Indian Bangla] — https://livetv.shamon-cable.net:8443/Jalsha-Movies/index.m3u8
-- **sangeetbangla.in@sd** — Sangeet Bangla [Indian Bangla] — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8; Sangeet Bangla [Indian Bangla] — http://103.175.73.12:8080/live/379/379_0.m3u8; Sangeet Bangla [Indian Bangla] — https://cdn.pishow.tv/ott/live/1143/master.m3u8; Sangeet Bangla [Indian Bangla] — https://fta.ektv.in/live/379/master.m3u8; Sangeet Bangla [Indian Bangla] — https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
+None.
 
 ## Potential Near-Duplicate Primary Names (Review Only)
 
@@ -1179,8 +1176,6 @@ None.
 ## Ordering
 
 Category block order: OK.
-- **Indian Bangla** — **Dhoom Music** appears after **Zee Bangla**
-- **Indian Bangla** — **Colors Bangla Cinema** appears after **Sangeet Bangla**
 - **Indian Movies** — **Kalaignar Murasu** appears after **Zee Cinema**
 - **Indian Music** — **Peppers TV** appears after **Zoom**
 - **International** — **Fashion&LifeStyle** appears after **XITE Summer**
