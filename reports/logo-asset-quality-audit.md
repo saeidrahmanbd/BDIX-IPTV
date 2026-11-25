@@ -1,23 +1,23 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-25T05:30:25+00:00**
+Generated: **2026-11-25T05:32:49+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **b608019a871e306600fa5b57c03942e87e239ddaadd6f86c7d87aa4d4cafcd17**
+- IPTV-Playlist.m3u SHA-256: **c4a95d4b9182121074a01e2863683a37f0b41db4242dba26b72ee7a1c25de3d5**
 - International-Playlist.m3u SHA-256: **16e07744da900baa13cde66615fb851fd838e1c19c033756a787a575a7f71659**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **7**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1584**
+- Playlist references whose asset stem differs from the normalized channel name: **1599**
 - Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -25,7 +25,13 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| city-channel-ccf4f79ac480e997303f.png | PNG | PNG | 512×512 | 459×459 | downscaled, re-encoded/compressed |
+| drisya-tv-5223fe671a054e0ca930.png | PNG | PNG | 512×512 | 420×420 | downscaled, re-encoded/compressed |
+| kerala-today-tv-ea3bd412028baff3c097.png | PNG | PNG | 512×512 | 272×272 | downscaled, re-encoded/compressed |
+| new-vision-e4ea60bbeb3674e20755.png | PNG | PNG | 634×609 | 571×548 | downscaled, re-encoded/compressed |
+| south-vision-c39b6b63a7878132e257.png | PNG | PNG | 512×512 | 364×364 | downscaled, re-encoded/compressed |
+| wayanad-vision-movies-e71e1066086194408e92.png | PNG | PNG | 512×512 | 461×461 | downscaled, re-encoded/compressed |
+| wayanad-vision-plus-82bd345c3914db6ab3e2.png | PNG | PNG | 537×638 | 467×555 | downscaled, re-encoded/compressed |
 
 ## Remaining extension mismatches
 
@@ -1216,6 +1222,21 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Jaihind TV | jaihind-tv.png | New Channels |
 | IPTV-Playlist.m3u | Metro TV (India) | metro-tv-india-0625d4e893.png | New Channels |
 | IPTV-Playlist.m3u | Zodiak TV | zodiak-tv.png | New Channels |
+| IPTV-Playlist.m3u | CCTV Kunnamkulam (720p) | cctv-kunnamkulam-62fa6fc277ae8c5e526d.png | New Channels |
+| IPTV-Playlist.m3u | City Channel HD (1080p) | city-channel-ccf4f79ac480e997303f.png | New Channels |
+| IPTV-Playlist.m3u | City Vision Kannur (576p) | city-vision-kannur-9ecc98dce4b989c0f5ad.png | New Channels |
+| IPTV-Playlist.m3u | Drishya TV (576p) | drishya-tv-77559c4cddec4f3b15ea.png | New Channels |
+| IPTV-Playlist.m3u | Drisya TV (576p) | drisya-tv-5223fe671a054e0ca930.png | New Channels |
+| IPTV-Playlist.m3u | Kasargod Vision (576p) | kasargod-vision-9087ad218648d7b61827.png | New Channels |
+| IPTV-Playlist.m3u | KCN Kasargod (576p) | kcn-kasargod-32b58ffed02e7a179d50.png | New Channels |
+| IPTV-Playlist.m3u | Kerala Today TV (1080p) | kerala-today-tv-ea3bd412028baff3c097.png | New Channels |
+| IPTV-Playlist.m3u | Malappuram Cable Vision (1080p) | malappuram-cable-vision-bb4b6da37bd6a3ad422c.png | New Channels |
+| IPTV-Playlist.m3u | New Vision HD (576p) | new-vision-e4ea60bbeb3674e20755.png | New Channels |
+| IPTV-Playlist.m3u | NM Media Channel HD (1080p) | nm-media-channel-adf4a8ecc0dbe61589c3.png | New Channels |
+| IPTV-Playlist.m3u | Periyar Vision (1080p) | periyar-vision-a12b57416fc2319332e8.png | New Channels |
+| IPTV-Playlist.m3u | South Vision (1080p) | south-vision-c39b6b63a7878132e257.png | New Channels |
+| IPTV-Playlist.m3u | Wayanad Vision Movies (720p) | wayanad-vision-movies-e71e1066086194408e92.png | New Channels |
+| IPTV-Playlist.m3u | Wayanad Vision Plus (720p) | wayanad-vision-plus-82bd345c3914db6ab3e2.png | New Channels |
 | IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | New Backups |
 | IPTV-Playlist.m3u | 7X Punjabi | 7x-music.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |

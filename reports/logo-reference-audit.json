@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5256,
-  "all_explicitly_referenced_logo_files": 2529,
-  "runtime_referenced_logo_files": 2527,
-  "playlist_referenced_logo_files": 2499,
+  "logo_image_files": 5271,
+  "all_explicitly_referenced_logo_files": 2544,
+  "runtime_referenced_logo_files": 2542,
+  "playlist_referenced_logo_files": 2514,
   "apparently_unreferenced_by_any_text_file": 2727,
   "apparently_unreferenced_by_runtime_sources": 2729,
   "missing_explicit_logo_targets": [
@@ -176,6 +176,7 @@
     "logos/cartoonito-cee-czechia-c2ca264a25.png",
     "logos/cartoonito-latin-america-7c8159f019.png",
     "logos/cctv-9-9b5936f400.png",
+    "logos/cctv-kunnamkulam-62fa6fc277ae8c5e526d.jpg",
     "logos/ceacom-tv-0e4b08d706.png",
     "logos/celestial-movies-ed30baf6b6.png",
     "logos/cento-x-cento-tv-d0a4e416b1.png",
@@ -193,12 +194,14 @@
     "logos/cine-plus-frisson-8ed92ebd854efc32930a.jpg",
     "logos/cine34-6969b2509c.png",
     "logos/cinemax-hits-d7aa5bbda6.svg",
+    "logos/city-channel-ccf4f79ac480e997303f.jpg",
     "logos/city-eden-birma-play-c04db7f6ee.png",
     "logos/city-eden-kinoaction-bb30b4455e.png",
     "logos/city-eden-kinoasia-45616170d3.png",
     "logos/city-eden-kinodok-7438a60ff5.png",
     "logos/city-eden-kinosemya-7d6b349e53.png",
     "logos/city-eden-sirtaki-tv-00cefab928.png",
+    "logos/city-vision-kannur-9ecc98dce4b989c0f5ad.jpg",
     "logos/clan-adcd13d9a5.svg",
     "logos/classic-movies-27994c39.png",
     "logos/cna-originals-3a3fdcc32c.svg",
@@ -246,6 +249,8 @@
     "logos/doraemon-cf58b50f0c.svg",
     "logos/dorcel-tv-31bb10ac59.png",
     "logos/dorcel-xxx-2716706ff3.png",
+    "logos/drishya-tv-77559c4cddec4f3b15ea.webp",
+    "logos/drisya-tv-5223fe671a054e0ca930.jpg",
     "logos/dumdum-8be5079872.svg",
     "logos/ebc-foreign-movie-0a28ff7830.png",
     "logos/ekids-a496dce1a5deb826a721.svg",
@@ -460,6 +465,8 @@
     "logos/kantipur-max-aa9dcce37b.jpg",
     "logos/kantipur-max-aa9dcce37bc9ecc63583.jpg",
     "logos/kappa-tv-music-53d014bd88.png",
+    "logos/kasargod-vision-9087ad218648d7b61827.jpg",
+    "logos/kcn-kasargod-32b58ffed02e7a179d50.jpg",
     "logos/kinopremyera-4621304199.png",
     "logos/kinosemja-19c5905acc.png",
     "logos/kinosvidanie-6649816108.png",
@@ -578,6 +585,7 @@
     "logos/national-geographic-wild-united-states-hd-east-82df6a8299.png",
     "logos/nature-time-89beb43c58.png",
     "logos/naturetime-france-89beb43c58.png",
+    "logos/new-vision-e4ea60bbeb3674e20755.jpg",
     "logos/new.png",
     "logos/news-21-9b926f453c.png",
     "logos/nick-jr-croatia-a865fd62c7.png",
@@ -600,6 +608,7 @@
     "logos/nicktoons-united-states-2da2648c2b.svg",
     "logos/nidae-alislam-radio-6f41b21110.png",
     "logos/nile-drama-e6458ea665.png",
+    "logos/nm-media-channel-adf4a8ecc0dbe61589c3.jpg",
     "logos/nost-5d9e212ea1.jpg",
     "logos/now-90s-and-00s-1d733d9115.png",
     "logos/nrb-68691f4727.png",
@@ -850,6 +859,8 @@
     "logos/warner-tv-31ad1a3d8e.webp",
     "logos/warner-tv-asia-dd4e7d81e7.png",
     "logos/wavez-fm-c0b188a2e9.png",
+    "logos/wayanad-vision-movies-e71e1066086194408e92.jpg",
+    "logos/wayanad-vision-plus-82bd345c3914db6ab3e2.jpg",
     "logos/win-tv-a92ce20718.png",
     "logos/world-cinema.png",
     "logos/world-fishing-network-49845d1dba.png",
@@ -1396,6 +1407,9 @@
     "logos/cctv-9-9b5936f400.png": [
       "reports/logo-source-registry.json"
     ],
+    "logos/cctv-kunnamkulam-62fa6fc277ae8c5e526d.jpg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/ceacom-tv-0e4b08d706.png": [
       "reports/logo-source-registry.json"
     ],
@@ -1452,6 +1466,9 @@
     "logos/cinemax-hits-d7aa5bbda6.svg": [
       "reports/logo-source-registry.json"
     ],
+    "logos/city-channel-ccf4f79ac480e997303f.jpg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/city-eden-birma-play-c04db7f6ee.png": [
       "reports/logo-source-registry.json"
     ],
@@ -1468,6 +1485,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/city-eden-sirtaki-tv-00cefab928.png": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/city-vision-kannur-9ecc98dce4b989c0f5ad.jpg": [
       "reports/logo-source-registry.json"
     ],
     "logos/clan-adcd13d9a5.svg": [
@@ -1611,6 +1631,12 @@
       "reports/logo-source-registry.json"
     ],
     "logos/dorcel-xxx-2716706ff3.png": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/drishya-tv-77559c4cddec4f3b15ea.webp": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/drisya-tv-5223fe671a054e0ca930.jpg": [
       "reports/logo-source-registry.json"
     ],
     "logos/dumdum-8be5079872.svg": [
@@ -2258,6 +2284,12 @@
     "logos/kappa-tv-music-53d014bd88.png": [
       "reports/logo-source-registry.json"
     ],
+    "logos/kasargod-vision-9087ad218648d7b61827.jpg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/kcn-kasargod-32b58ffed02e7a179d50.jpg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/kinopremyera-4621304199.png": [
       "reports/logo-source-registry.json"
     ],
@@ -2621,6 +2653,9 @@
     "logos/naturetime-france-89beb43c58.png": [
       "reports/logo-source-registry.json"
     ],
+    "logos/new-vision-e4ea60bbeb3674e20755.jpg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/new.png": [
       "tests/test_automation_v2_contract.py",
       "tests/test_automation_v2_iptv_engine.py",
@@ -2687,6 +2722,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/nile-drama-e6458ea665.png": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/nm-media-channel-adf4a8ecc0dbe61589c3.jpg": [
       "reports/logo-source-registry.json"
     ],
     "logos/nost-5d9e212ea1.jpg": [
@@ -3447,6 +3485,12 @@
     "logos/wavez-fm-c0b188a2e9.png": [
       "reports/logo-source-registry.json"
     ],
+    "logos/wayanad-vision-movies-e71e1066086194408e92.jpg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/wayanad-vision-plus-82bd345c3914db6ab3e2.jpg": [
+      "reports/logo-source-registry.json"
+    ],
     "logos/win-tv-a92ce20718.png": [
       "reports/logo-source-registry.json"
     ],
@@ -3675,6 +3719,7 @@
     "logos/cartoonito-cee-czechia-c2ca264a25.png",
     "logos/cartoonito-latin-america-7c8159f019.png",
     "logos/cctv-9-9b5936f400.png",
+    "logos/cctv-kunnamkulam-62fa6fc277ae8c5e526d.jpg",
     "logos/ceacom-tv-0e4b08d706.png",
     "logos/celestial-movies-ed30baf6b6.png",
     "logos/cento-x-cento-tv-d0a4e416b1.png",
@@ -3685,12 +3730,14 @@
     "logos/cine-plus-frisson-8ed92ebd854efc32930a.jpg",
     "logos/cine34-6969b2509c.png",
     "logos/cinemax-hits-d7aa5bbda6.svg",
+    "logos/city-channel-ccf4f79ac480e997303f.jpg",
     "logos/city-eden-birma-play-c04db7f6ee.png",
     "logos/city-eden-kinoaction-bb30b4455e.png",
     "logos/city-eden-kinoasia-45616170d3.png",
     "logos/city-eden-kinodok-7438a60ff5.png",
     "logos/city-eden-kinosemya-7d6b349e53.png",
     "logos/city-eden-sirtaki-tv-00cefab928.png",
+    "logos/city-vision-kannur-9ecc98dce4b989c0f5ad.jpg",
     "logos/clan-adcd13d9a5.svg",
     "logos/classic-movies-27994c39.png",
     "logos/cna-originals-3a3fdcc32c.svg",
@@ -3736,6 +3783,8 @@
     "logos/doraemon-cf58b50f0c.svg",
     "logos/dorcel-tv-31bb10ac59.png",
     "logos/dorcel-xxx-2716706ff3.png",
+    "logos/drishya-tv-77559c4cddec4f3b15ea.webp",
+    "logos/drisya-tv-5223fe671a054e0ca930.jpg",
     "logos/dumdum-8be5079872.svg",
     "logos/ebc-foreign-movie-0a28ff7830.png",
     "logos/ekids-a496dce1a5deb826a721.svg",
@@ -3936,6 +3985,8 @@
     "logos/kantipur-max-aa9dcce37b.jpg",
     "logos/kantipur-max-aa9dcce37bc9ecc63583.jpg",
     "logos/kappa-tv-music-53d014bd88.png",
+    "logos/kasargod-vision-9087ad218648d7b61827.jpg",
+    "logos/kcn-kasargod-32b58ffed02e7a179d50.jpg",
     "logos/kinopremyera-4621304199.png",
     "logos/kinosemja-19c5905acc.png",
     "logos/kinosvidanie-6649816108.png",
@@ -4050,6 +4101,7 @@
     "logos/national-geographic-wild-united-states-hd-east-82df6a8299.png",
     "logos/nature-time-89beb43c58.png",
     "logos/naturetime-france-89beb43c58.png",
+    "logos/new-vision-e4ea60bbeb3674e20755.jpg",
     "logos/news-21-9b926f453c.png",
     "logos/nick-jr-croatia-a865fd62c7.png",
     "logos/nick-jr-czech-republic-88856e732a.png",
@@ -4071,6 +4123,7 @@
     "logos/nicktoons-united-states-2da2648c2b.svg",
     "logos/nidae-alislam-radio-6f41b21110.png",
     "logos/nile-drama-e6458ea665.png",
+    "logos/nm-media-channel-adf4a8ecc0dbe61589c3.jpg",
     "logos/nost-5d9e212ea1.jpg",
     "logos/now-90s-and-00s-1d733d9115.png",
     "logos/nrb-68691f4727.png",
@@ -4296,6 +4349,8 @@
     "logos/warner-tv-31ad1a3d8e.webp",
     "logos/warner-tv-asia-dd4e7d81e7.png",
     "logos/wavez-fm-c0b188a2e9.png",
+    "logos/wayanad-vision-movies-e71e1066086194408e92.jpg",
+    "logos/wayanad-vision-plus-82bd345c3914db6ab3e2.jpg",
     "logos/win-tv-a92ce20718.png",
     "logos/world-fishing-network-49845d1dba.png",
     "logos/world-poker-tour-poland-76e16779ab.png",
@@ -11851,6 +11906,9 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/cctv-kunnamkulam-62fa6fc277ae8c5e526d.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/cctv-storm-football-fdb27d3db1.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -12232,6 +12290,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/city-channel-ccf4f79ac480e997303f.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/city-eden-birma-play-c04db7f6eee0d229f6ab.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -12306,6 +12367,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/city-vision-kannur-9ecc98dce4b989c0f5ad.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/clan-adcd13d9a5.png": [
       "International-Playlist.m3u",
@@ -13251,6 +13315,12 @@
     "logos/dream-turk-720p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/drishya-tv-77559c4cddec4f3b15ea.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/drisya-tv-5223fe671a054e0ca930.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/dstv-bulgaria-88284875fc.png": [
       "International-Playlist.m3u",
@@ -15315,6 +15385,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/kasargod-vision-9087ad218648d7b61827.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/kaumudy-tv.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -15331,6 +15404,13 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/kcn-kasargod-32b58ffed02e7a179d50.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/kerala-today-tv-ea3bd412028baff3c097.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/kerala-vision.png": [
@@ -15809,6 +15889,10 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/malappuram-cable-vision-bb4b6da37bd6a3ad422c.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/mango-india-224e210d95.png": [
       "International-Playlist.m3u",
@@ -16708,6 +16792,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/new-vision-e4ea60bbeb3674e20755.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/news-21-bangla-tv.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -16882,6 +16969,9 @@
     "logos/nkr-tv-kannada.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/nm-media-channel-adf4a8ecc0dbe61589c3.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/nogoumfmtv-5286d22e76.png": [
       "International-Playlist.m3u",
@@ -17227,6 +17317,10 @@
     "logos/peques-tv-9c5f8f9d84.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/periyar-vision-a12b57416fc2319332e8.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/persiana-cinema-59e95e186a.png": [
@@ -18540,6 +18634,10 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/south-vision-c39b6b63a7878132e257.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/soy-plancha-tv-0a254093f8.png": [
       "International-Playlist.m3u",
@@ -21457,6 +21555,12 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/wayanad-vision-movies-e71e1066086194408e92.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/wayanad-vision-plus-82bd345c3914db6ab3e2.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/weatherspy-india.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -23516,6 +23620,9 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/cctv-kunnamkulam-62fa6fc277ae8c5e526d.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/cctv-storm-football-fdb27d3db1.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -23897,6 +24004,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/city-channel-ccf4f79ac480e997303f.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/city-eden-birma-play-c04db7f6eee0d229f6ab.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -23971,6 +24081,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/city-vision-kannur-9ecc98dce4b989c0f5ad.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/clan-adcd13d9a5.png": [
       "International-Playlist.m3u",
@@ -24917,6 +25030,12 @@
     "logos/dream-turk-720p.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/drishya-tv-77559c4cddec4f3b15ea.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/drisya-tv-5223fe671a054e0ca930.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/dstv-bulgaria-88284875fc.png": [
       "International-Playlist.m3u",
@@ -26982,6 +27101,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/kasargod-vision-9087ad218648d7b61827.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/kaumudy-tv.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -26998,6 +27120,13 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/kcn-kasargod-32b58ffed02e7a179d50.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/kerala-today-tv-ea3bd412028baff3c097.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/kerala-vision.png": [
@@ -27476,6 +27605,10 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/malappuram-cable-vision-bb4b6da37bd6a3ad422c.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/mango-india-224e210d95.png": [
       "International-Playlist.m3u",
@@ -28375,6 +28508,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/new-vision-e4ea60bbeb3674e20755.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/news-21-bangla-tv.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -28549,6 +28685,9 @@
     "logos/nkr-tv-kannada.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/nm-media-channel-adf4a8ecc0dbe61589c3.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/nogoumfmtv-5286d22e76.png": [
       "International-Playlist.m3u",
@@ -28894,6 +29033,10 @@
     "logos/peques-tv-9c5f8f9d84.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/periyar-vision-a12b57416fc2319332e8.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/persiana-cinema-59e95e186a.png": [
@@ -30211,6 +30354,10 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/south-vision-c39b6b63a7878132e257.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/soy-plancha-tv-0a254093f8.png": [
       "International-Playlist.m3u",
@@ -33128,6 +33275,12 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/wayanad-vision-movies-e71e1066086194408e92.png": [
+      "IPTV-Playlist.m3u"
+    ],
+    "logos/wayanad-vision-plus-82bd345c3914db6ab3e2.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/weatherspy-india.png": [
       "IPTV-Playlist.m3u",
