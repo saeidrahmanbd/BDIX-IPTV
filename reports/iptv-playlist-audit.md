@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-25T04:30:52.388222+00:00**
-Source playlist SHA-256: **1ff53c65cb7ffa5a8313f055f8b1cd8dc61fcb264496556cdfb65eac327ec8f9**
+Generated: **2026-11-25T05:30:26.548449+00:00**
+Source playlist SHA-256: **b608019a871e306600fa5b57c03942e87e239ddaadd6f86c7d87aa4d4cafcd17**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1354**
-- Unique channel IDs: **814**
+- Playlist entries: **1369**
+- Unique channel IDs: **829**
 - IDs with multiple streams: **265**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -16,12 +16,12 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-queue same-ID name variants (review): **0**
 - Cross-queue normalized-name/different-ID groups (review): **17**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **6**
+- IDs with multiple logo references: **8**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
-- Missing logos in review queues (review only): **0**
+- Missing logos in review queues (review only): **15**
 - External logo references (review only): **0**
-- Logo references checked: **1354**
+- Logo references checked: **1369**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **1**
@@ -1229,8 +1229,22 @@ None.
 
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
-None.
-- missing: **0**
+- **CCTV Kunnamkulam (720p)** [cctvkunnamkulam.in@sd]
+- **City Channel HD (1080p)** [citychannelhd.in@sd]
+- **City Vision Kannur (576p)** [cityvisionkannur.in@sd]
+- **Drishya TV (576p)** [drishyatv.in@sd]
+- **Drisya TV (576p)** [drisyatv.in@sd]
+- **Kasargod Vision (576p)** [kasargodvision.in@sd]
+- **KCN Kasargod (576p)** [kcnkasargod.in@sd]
+- **Kerala Today TV (1080p)** [keralatodaytv.in@sd]
+- **Malappuram Cable Vision (1080p)** [malappuramcablevision.in@sd]
+- **New Vision HD (576p)** [newvisionhd.in@sd]
+- **NM Media Channel HD (1080p)** [nmmediachannelhd.in@sd]
+- **Periyar Vision (1080p)** [periyarvision.in@sd]
+- **South Vision (1080p)** [southvision.in@sd]
+- **Wayanad Vision Movies (720p)** [wayanadvisionmovies.in@sd]
+- **Wayanad Vision Plus (720p)** [wayanadvisionplus.in@sd]
+- missing: **15**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**

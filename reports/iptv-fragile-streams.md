@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-25T04:32:02+00:00**
-IPTV-Playlist.m3u SHA-256: **1ff53c65cb7ffa5a8313f055f8b1cd8dc61fcb264496556cdfb65eac327ec8f9**
+Generated: **2026-11-25T05:31:34+00:00**
+IPTV-Playlist.m3u SHA-256: **b608019a871e306600fa5b57c03942e87e239ddaadd6f86c7d87aa4d4cafcd17**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **276**
+- Flagged streams: **287**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -104,6 +104,17 @@ These streams are not automatically removed. URL credentials, user information a
 | TVRI Sport | Sports | credential-bearing route pattern (values redacted) | `https://ott-balancer.tvri.go.id/live/REDACTED/REDACTED/hls/SportHD.m3u8` |
 | Fast1 | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/10008/master.m3u8` |
 | Jaihind TV | New Channels | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/700/master.m3u8` |
+| City Channel HD (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/citytv2924/index.m3u8` |
+| City Vision Kannur (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/citykannurcity/index.m3u8` |
+| Drishya TV (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/drishya5060/index.m3u8` |
+| Drisya TV (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/drishyakarunagapally/index.m3u8` |
+| Kasargod Vision (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/kasaragodvsn/index.m3u8` |
+| KCN Kasargod (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/kcnksrgod/index.m3u8` |
+| Kerala Today TV (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/krlatoday/index.m3u8` |
+| Malappuram Cable Vision (1080p) | New Channels | credential-bearing route pattern (values redacted) | `http://cloud.logichost.in:1935/live/mcvlive/playlist.m3u8` |
+| New Vision HD (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newvision2924/index.m3u8` |
+| NM Media Channel HD (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newmedia2924/index.m3u8` |
+| South Vision (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/southvsnklm/index.m3u8` |
 | 7S Music | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/771/master.m3u8` |
 | 9X Jalwa | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/161/master.m3u8` |
 | 9X Tashan | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/178/master.m3u8` |

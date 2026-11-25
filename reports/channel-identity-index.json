@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25T04:32:02+00:00",
+  "generated": "2026-11-25T05:31:34+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -1302,6 +1302,20 @@
       "primary": 1,
       "backup": 0
     },
+    "cctvkunnamkulam": {
+      "names": [
+        "CCTV Kunnamkulam (720p)"
+      ],
+      "ids": [
+        "cctvkunnamkulam.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "ccv": {
       "names": [
         "CCV"
@@ -1530,6 +1544,34 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "citychannelhd": {
+      "names": [
+        "City Channel HD (1080p)"
+      ],
+      "ids": [
+        "citychannelhd.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "cityvisionkannur": {
+      "names": [
+        "City Vision Kannur (576p)"
+      ],
+      "ids": [
+        "cityvisionkannur.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -3789,6 +3831,34 @@
       "primary": 1,
       "backup": 0
     },
+    "drishyatv": {
+      "names": [
+        "Drishya TV (576p)"
+      ],
+      "ids": [
+        "drishyatv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "drisyatv": {
+      "names": [
+        "Drisya TV (576p)"
+      ],
+      "ids": [
+        "drisyatv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "dtvusa": {
       "names": [
         "DTV USA"
@@ -5622,6 +5692,20 @@
       "primary": 1,
       "backup": 0
     },
+    "kasargodvision": {
+      "names": [
+        "Kasargod Vision (576p)"
+      ],
+      "ids": [
+        "kasargodvision.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "kcine": {
       "names": [
         "K Cine"
@@ -5645,6 +5729,34 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "kcnkasargod": {
+      "names": [
+        "KCN Kasargod (576p)"
+      ],
+      "ids": [
+        "kcnkasargod.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "keralatodaytv": {
+      "names": [
+        "Kerala Today TV (1080p)"
+      ],
+      "ids": [
+        "keralatodaytv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -5952,6 +6064,20 @@
       "streams": 3,
       "primary": 1,
       "backup": 2
+    },
+    "malappuramcablevision": {
+      "names": [
+        "Malappuram Cable Vision (1080p)"
+      ],
+      "ids": [
+        "malappuramcablevision.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "mango": {
       "names": [
@@ -6801,6 +6927,20 @@
       "primary": 1,
       "backup": 2
     },
+    "newvisionhd": {
+      "names": [
+        "New Vision HD (576p)"
+      ],
+      "ids": [
+        "newvisionhd.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "nexustv": {
       "names": [
         "Nexus TV"
@@ -6932,6 +7072,20 @@
       ],
       "streams": 2,
       "primary": 2,
+      "backup": 0
+    },
+    "nmmediachannelhd": {
+      "names": [
+        "NM Media Channel HD (1080p)"
+      ],
+      "ids": [
+        "nmmediachannelhd.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "now70s": {
@@ -7320,6 +7474,20 @@
       ],
       "groups": [
         "Indian Music"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "periyarvision": {
+      "names": [
+        "Periyar Vision (1080p)"
+      ],
+      "ids": [
+        "periyarvision.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -8921,6 +9089,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "southvision": {
+      "names": [
+        "South Vision (1080p)"
+      ],
+      "ids": [
+        "southvision.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "spondon": {
       "names": [
@@ -10630,6 +10812,34 @@
       ],
       "ids": [
         "wayanadvision.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "wayanadvisionmovies": {
+      "names": [
+        "Wayanad Vision Movies (720p)"
+      ],
+      "ids": [
+        "wayanadvisionmovies.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "wayanadvisionplus": {
+      "names": [
+        "Wayanad Vision Plus (720p)"
+      ],
+      "ids": [
+        "wayanadvisionplus.in@sd"
       ],
       "groups": [
         "New Channels"

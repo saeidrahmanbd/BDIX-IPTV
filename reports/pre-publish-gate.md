@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-25T04:30:53+00:00**
-Source playlist SHA-256: **1ff53c65cb7ffa5a8313f055f8b1cd8dc61fcb264496556cdfb65eac327ec8f9**
+Generated: **2026-11-25T05:30:27+00:00**
+Source playlist SHA-256: **b608019a871e306600fa5b57c03942e87e239ddaadd6f86c7d87aa4d4cafcd17**
 
 Status: **PASS**
 
-- Current entries: **1354**
+- Current entries: **1369**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -24,10 +24,10 @@ Status: **PASS**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **0**
-- Raw resolution/geoblock name tags: **0**
+- Entries missing tvg-language: **15**
+- Raw resolution/geoblock name tags: **15**
 - Missing logos in active groups: **0**
-- Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
+- Missing logos deferred in review groups (Review/New Channels/New Backups): **15**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
@@ -55,13 +55,29 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 ## Warnings / Manual Review
 
 - pre-existing owner-curated duplicate channel numbers preserved unchanged: 426
+- entries missing tvg-language: 15
+- raw resolution/geoblock tags in channel names: 15
 - New queue candidates pending owner review: 1
 
 ## Review-queue logo gaps
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
-None.
+- **CCTV Kunnamkulam (720p)**
+- **City Channel HD (1080p)**
+- **City Vision Kannur (576p)**
+- **Drishya TV (576p)**
+- **Drisya TV (576p)**
+- **Kasargod Vision (576p)**
+- **KCN Kasargod (576p)**
+- **Kerala Today TV (1080p)**
+- **Malappuram Cable Vision (1080p)**
+- **New Vision HD (576p)**
+- **NM Media Channel HD (1080p)**
+- **Periyar Vision (1080p)**
+- **South Vision (1080p)**
+- **Wayanad Vision Movies (720p)**
+- **Wayanad Vision Plus (720p)**
 
 ## Metadata conflicts
 
@@ -69,7 +85,21 @@ None.
 
 ## Raw name tags
 
-None.
+- **CCTV Kunnamkulam (720p)** — New Channels
+- **City Channel HD (1080p)** — New Channels
+- **City Vision Kannur (576p)** — New Channels
+- **Drishya TV (576p)** — New Channels
+- **Drisya TV (576p)** — New Channels
+- **Kasargod Vision (576p)** — New Channels
+- **KCN Kasargod (576p)** — New Channels
+- **Kerala Today TV (1080p)** — New Channels
+- **Malappuram Cable Vision (1080p)** — New Channels
+- **New Vision HD (576p)** — New Channels
+- **NM Media Channel HD (1080p)** — New Channels
+- **Periyar Vision (1080p)** — New Channels
+- **South Vision (1080p)** — New Channels
+- **Wayanad Vision Movies (720p)** — New Channels
+- **Wayanad Vision Plus (720p)** — New Channels
 
 ## Queue validation
 
