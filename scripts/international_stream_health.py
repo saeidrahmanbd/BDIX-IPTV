@@ -704,6 +704,9 @@ def validate_recovery_accounting(source_text, updated_text, events, report):
     retired_actions = {"removed-after-three-failed-days"}
 
     def group_index(playlist_text):
+        # A stable stream fingerprint can legitimately occur on multiple rows
+        # (for example, an owner-maintained alternate row). Preserve row counts
+        # instead of collapsing the playlist into a one-value-per-key dictionary.
         _, parsed = parse(playlist_text)
         index = {}
         for block in parsed:
@@ -711,50 +714,52 @@ def validate_recovery_accounting(source_text, updated_text, events, report):
             if len(entry_urls) != 1:
                 raise ValueError("Recovery accounting requires exactly one URL per row")
             key = stream_key(block[0], entry_urls[0])
-            if key in index:
-                raise ValueError("Recovery accounting found a duplicate stream identity")
-            index[key] = group_of(block[0])
+            index.setdefault(key, Counter())[group_of(block[0]).casefold()] += 1
         return index
 
     before, after = group_index(source_text), group_index(updated_text)
     recovered_events = [e for e in events if e.get("action") in recovery_actions]
     protected_events = [e for e in events if e.get("action") in protected_actions]
     retired_events = [e for e in events if e.get("action") in retired_actions]
+    departures_by_key = {}
+    for key, groups in before.items():
+        departed = groups.get(REVIEW.casefold(), 0) - after.get(key, Counter()).get(REVIEW.casefold(), 0)
+        if departed > 0:
+            departures_by_key[key] = departed
 
+    recovered_destinations = Counter((e.get("stream_key"), str(e.get("group_after", "")).casefold()) for e in recovered_events)
+    protected_destinations = Counter((e.get("stream_key"), "adult") for e in protected_events)
     for event in recovered_events:
-        key = event.get("stream_key")
         if event.get("state") != "ok":
             raise ValueError("A reported recovered stream does not have a successful media probe")
         if str(event.get("group_before", "")).casefold() != REVIEW.casefold():
             raise ValueError("A reported recovered stream did not originate in Review")
-        if not key or key not in before or key not in after:
-            raise ValueError("A reported recovered stream is missing from the before/after playlist")
-        if before[key].casefold() != REVIEW.casefold():
+        key = event.get("stream_key")
+        destination = str(event.get("group_after", "")).casefold()
+        if not key or before.get(key, Counter()).get(REVIEW.casefold(), 0) == 0:
             raise ValueError("A reported recovered stream was not in Review before the run")
-        if after[key] != event.get("group_after") or after[key].casefold() == REVIEW.casefold():
+        if not destination or destination == REVIEW.casefold() or after.get(key, Counter()).get(destination, 0) < recovered_destinations[(key, destination)]:
             raise ValueError("A reported recovery destination does not match the published playlist")
 
     for event in protected_events:
         key = event.get("stream_key")
-        if not key or key not in before or key not in after:
+        if not key or before.get(key, Counter()).get(REVIEW.casefold(), 0) == 0:
             raise ValueError("A protected Adult restoration is missing from the before/after playlist")
-        if before[key].casefold() != REVIEW.casefold() or after[key].casefold() != "adult":
+        if after.get(key, Counter()).get("adult", 0) < protected_destinations[(key, "adult")]:
             raise ValueError("A protected Adult restoration does not match the playlist change")
 
     for event in retired_events:
         key = event.get("stream_key")
-        if not key or key not in before or key in after:
+        if not key or before.get(key, Counter()).get(REVIEW.casefold(), 0) == 0:
             raise ValueError("A retired stream does not match the playlist removal")
 
-    recovered_keys = {e["stream_key"] for e in recovered_events}
-    protected_keys = {e["stream_key"] for e in protected_events}
-    retired_keys = {e["stream_key"] for e in retired_events}
-    actual_departures = {
-        key for key, group in before.items()
-        if group.casefold() == REVIEW.casefold()
-        and (key not in after or after[key].casefold() != REVIEW.casefold())
-    }
-    if actual_departures != recovered_keys | protected_keys | retired_keys:
+    # Check the aggregate only after validating each event, so the more specific
+    # probe/destination integrity errors remain visible to callers and tests.
+    event_counts = Counter(e.get("stream_key") for e in recovered_events + protected_events + retired_events)
+    if any(not key or count > departures_by_key.get(key, 0) for key, count in event_counts.items()):
+        raise ValueError("Review playlist changes are not fully accounted for")
+
+    if sum(departures_by_key.values()) != sum(event_counts.values()):
         raise ValueError("Review playlist changes are not fully accounted for")
 
     metric = f"- Restored from Review to primary/Backup/discovery queue: **{len(recovered_events)}**"

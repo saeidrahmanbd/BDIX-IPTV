@@ -459,6 +459,42 @@ class InternationalStreamHealthTests(unittest.TestCase):
         self.assertLess(output.index("Alpha Movie"), output.index("Zed Movie"))
 
 
+    def test_recovery_accounting_accepts_repeated_stream_fingerprints_without_losing_row_counts(self):
+        source = self.playlist(
+            row(name="Repeated Movie", group="Review", url="https://example.test/repeated.m3u8")
+            + row(name="Repeated Movie", group="Review", url="https://example.test/repeated.m3u8")
+        )
+        info, url = health.parse(source)[1][0][0], "https://example.test/repeated.m3u8"
+        key = health.stream_key(info, url)
+        updated = self.playlist(
+            row(name="Repeated Movie", group="International Movies", url=url)
+            + row(name="Repeated Movie", group="International Movies", url=url)
+        )
+        events = [
+            {"stream_key": key, "state": "ok", "action": "restored-to-primary",
+             "group_before": "Review", "group_after": "International Movies", "name": "Repeated Movie"},
+            {"stream_key": key, "state": "ok", "action": "restored-to-primary",
+             "group_before": "Review", "group_after": "International Movies", "name": "Repeated Movie"},
+        ]
+        report = health.build_report(events, {"entries": {}}, "2026-11-25", "2026-11-25T00:00:00+00:00", 2)
+        accounting = health.validate_recovery_accounting(source, updated, events, report)
+        self.assertEqual(accounting["recovered"], 2)
+
+    def test_recovery_accounting_rejects_unaccounted_duplicate_row_departure(self):
+        source = self.playlist(
+            row(name="Repeated Movie", group="Review", url="https://example.test/repeated.m3u8")
+            + row(name="Repeated Movie", group="Review", url="https://example.test/repeated.m3u8")
+        )
+        info, url = health.parse(source)[1][0][0], "https://example.test/repeated.m3u8"
+        key = health.stream_key(info, url)
+        updated = self.playlist(row(name="Repeated Movie", group="International Movies", url=url))
+        events = [{"stream_key": key, "state": "ok", "action": "restored-to-primary",
+                   "group_before": "Review", "group_after": "International Movies", "name": "Repeated Movie"}]
+        report = health.build_report(events, {"entries": {}}, "2026-11-25", "2026-11-25T00:00:00+00:00", 2)
+        with self.assertRaisesRegex(ValueError, "not fully accounted"):
+            health.validate_recovery_accounting(source, updated, events, report)
+
+
 if __name__ == "__main__":
     unittest.main()
 
