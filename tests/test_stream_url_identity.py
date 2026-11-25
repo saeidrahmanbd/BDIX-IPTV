@@ -70,6 +70,11 @@ class StreamUrlIdentityTests(unittest.TestCase):
             retired,
         )
 
+    def test_static_scn_route_token_is_not_treated_as_opaque_credential(self):
+        from urllib.parse import parse_qs, urlsplit
+        query = parse_qs(urlsplit("http://103.114.11.37:8081/Star-sports-1/index.m3u8?token=scn").query)
+        self.assertEqual(query, {"token": ["scn"]})
+
     def test_empty_and_malformed_values_are_safe(self):
         self.assertEqual(stream_url_key(""), "")
         self.assertEqual(stream_endpoint_family_key(""), "")
