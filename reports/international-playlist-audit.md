@@ -1,16 +1,16 @@
 # International Playlist Organization Audit
 
-- Entries before: 3314
-- Entries after: 3314
-- Channel names normalized: 0
+- Entries before: 3321
+- Entries after: 3321
+- Channel names normalized: 5
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 934
-- Matching alternate streams retained in Backup: 364
-- True orphan Backup rows evaluated: 18
-- Eligible orphan Backup rows promoted to primary: 17
+- Original Backup/Backups and protected queue rows examined: 932
+- Matching alternate streams retained in Backup: 365
+- True orphan Backup rows evaluated: 20
+- Eligible orphan Backup rows promoted to primary: 19
 - Clearly identified Adult orphans restored to Adult: 0
 - Ineligible/unclassified orphan Backup rows retained: 1
 - Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.
@@ -30,58 +30,58 @@
 
 ## Category counts
 
-- Bangladesh: 47
+- Bangladesh: 48
 - Indian Bangla: 32
-- Indian Movies: 76
+- Indian Movies: 75
 - Indian Music: 58
-- Indian Entertainment: 175
-- Pakistani: 18
+- Indian Entertainment: 174
+- Pakistani: 19
 - Argentina: 14
-- Brazil: 15
+- Brazil: 14
 - Bulgaria: 21
 - Canada: 31
 - Chile: 10
 - China: 9
 - Colombia: 9
 - Costa Rica: 9
-- Czech Republic: 22
+- Czech Republic: 23
 - DO: 11
 - Estonia: 6
 - France: 44
-- Germany: 72
+- Germany: 71
 - Greece: 8
 - Hungary: 15
 - Iran: 13
-- Italy: 25
+- Italy: 24
 - Lebanon: 6
 - Mexico: 17
 - Netherlands: 17
 - North Macedonia: 5
 - Panama: 5
 - Paraguay: 5
-- Peru: 8
-- Poland: 24
+- Peru: 7
+- Poland: 25
 - Romania: 30
 - Russia: 76
 - Saudi Arabia: 9
 - Singapore: 5
-- Spain: 18
+- Spain: 17
 - Sweden: 49
 - Turkey: 15
 - Ukraine: 28
-- United Kingdom: 21
+- United Kingdom: 20
 - United States: 242
 - Uzbekistan: 5
 - Vietnam: 6
-- International: 103
-- News: 11
+- International: 101
+- News: 12
 - Fashion TV: 5
-- Documentary & Wildlife: 129
-- Kids: 149
-- Religious: 30
-- Sports: 183
+- Documentary & Wildlife: 133
+- Kids: 151
+- Religious: 31
+- Sports: 185
 - Adult: 366
-- Review: 630
-- New Channels: 4
-- New Backups: 8
-- Backup: 365
+- Review: 626
+- New Channels: 9
+- New Backups: 9
+- Backup: 366
