@@ -237,6 +237,37 @@ class DiscoveryScheduleGuardTests(unittest.TestCase):
         ]
         self.assertEqual(guard.watchdog_dispatch_count(runs), 2)
 
+    def test_watchdog_dispatch_budget_resets_for_a_new_main_revision(self):
+        runs = [
+            {
+                "event": "workflow_dispatch",
+                "actor": {"login": "github-actions[bot]"},
+                "head_sha": "old-revision",
+            },
+            {
+                "event": "workflow_dispatch",
+                "actor": {"login": "github-actions[bot]"},
+                "head_sha": "old-revision",
+            },
+            {
+                "event": "workflow_dispatch",
+                "actor": {"login": "github-actions[bot]"},
+                "head_sha": "current-revision",
+            },
+            {
+                "event": "workflow_dispatch",
+                "actor": {"login": "saeidrahmanbd"},
+                "head_sha": "current-revision",
+            },
+        ]
+        self.assertEqual(guard.watchdog_dispatch_count(runs), 3)
+        self.assertEqual(
+            guard.watchdog_dispatch_count(runs, "current-revision"), 1
+        )
+        self.assertEqual(
+            guard.watchdog_dispatch_count(runs, "new-fixed-revision"), 0
+        )
+
     def test_watchdog_dispatch_limit_is_two_per_day(self):
         self.assertEqual(guard.MAX_WATCHDOG_DISPATCHES_PER_DAY, 2)
         runs = [
