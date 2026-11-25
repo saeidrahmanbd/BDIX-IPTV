@@ -618,12 +618,24 @@ def wait_for_epg_runs_to_settle(
 MAX_WATCHDOG_DISPATCHES_PER_DAY = 2
 
 
-def watchdog_dispatch_count(runs: list[dict[str, Any]]) -> int:
-    """Count only automatic watchdog dispatches, not owner-requested manual retries."""
+def watchdog_dispatch_count(
+    runs: list[dict[str, Any]], current_revision: str | None = None
+) -> int:
+    """Count automatic watchdog dispatches for the current main revision only.
+
+    A new main revision may contain a fix for the failure that exhausted the
+    previous revision's retry budget. Keep the daily breaker strict within one
+    revision, while allowing a bounded fresh budget after code changes.
+    """
     return sum(
         1 for run in runs
         if str(run.get("event") or "").casefold() == "workflow_dispatch"
         and str((run.get("actor") or {}).get("login") or "").casefold() == "github-actions[bot]"
+        and (
+            current_revision is None
+            or not run.get("head_sha")
+            or str(run.get("head_sha")) == current_revision
+        )
     )
 
 
@@ -636,7 +648,9 @@ def active_blocking_writer(client, workflow_file: str, target_date: date) -> str
     return None
 
 
-def _recover_workflow(client, workflow_file: str, target_date: date) -> None:
+def _recover_workflow(
+    client, workflow_file: str, target_date: date, current_revision: str | None = None
+) -> None:
     """Evaluate one workflow's daily obligation and dispatch it only if missing."""
     if not recovery_is_due(workflow_file):
         hour, minute = RECOVERY_AFTER_LOCAL[workflow_file]
@@ -665,13 +679,17 @@ def _recover_workflow(client, workflow_file: str, target_date: date) -> None:
             f"conclusion={newest.get('conclusion')}."
         )
         return
-    automatic_dispatches = watchdog_dispatch_count(todays)
+    automatic_dispatches = watchdog_dispatch_count(todays, current_revision)
     if automatic_dispatches >= MAX_WATCHDOG_DISPATCHES_PER_DAY:
+        revision_note = (
+            " for the current main revision"
+            if current_revision else ""
+        )
         print(
             f"Recovery circuit breaker OPEN for {workflow_file} on {target_date}: "
-            f"{automatic_dispatches} automatic watchdog dispatches already ran "
+            f"{automatic_dispatches} automatic watchdog dispatches already ran{revision_note} "
             f"(limit {MAX_WATCHDOG_DISPATCHES_PER_DAY}). No further dispatch will be sent today; "
-            "the next scheduled Bangladesh-day cycle may retry after investigation."
+            "a new main revision receives a fresh bounded retry budget."
         )
         return
     busy_writer = active_blocking_writer(client, workflow_file, target_date)
@@ -704,6 +722,10 @@ def watchdog(workflow_files: list[str]) -> int:
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
     target_date = today_in_bangladesh()
     client = GitHubActions(repository, token)
+    # For workflow_run/schedule events, GITHUB_SHA resolves to the current
+    # default-branch revision. A fixed daily retry budget must not block a
+    # corrected main revision after earlier attempts failed on older code.
+    current_revision = os.environ.get("GITHUB_SHA") or None
 
     # Each workflow is evaluated independently. On 2026-11-19 an installation
     # rate-limit 403 raised out of the first workflow's lookup and aborted the
@@ -713,7 +735,7 @@ def watchdog(workflow_files: list[str]) -> int:
     failures: list[str] = []
     for workflow_file in workflow_files:
         try:
-            _recover_workflow(client, workflow_file, target_date)
+            _recover_workflow(client, workflow_file, target_date, current_revision)
         except RuntimeError as exc:
             failures.append(workflow_file)
             detail = " ".join(str(exc).split())[:300]
