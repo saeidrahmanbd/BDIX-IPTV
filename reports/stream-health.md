@@ -1,6 +1,6 @@
 # Stream Health Report
 
-Generated: **2026-11-25T07:29:11+00:00**
+Generated: **2026-11-25T08:45:04+00:00**
 Stream URL inventory SHA-256: **e97c5dfad44d4eed1686d0d2ec0351e2e83feb09e27b3b282fb203f0ba9f0676**
 
 Probe environment: **GitHub-hosted ubuntu-latest runner**.
@@ -9,10 +9,10 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 ## Summary
 
 - Streams tested: **1369**
-- Reachable: **1112**
-- Failed this check: **257**
+- Reachable: **1120**
+- Failed this check: **249**
 - Persistent failures (3+ consecutive): **57**
-- Intermittent failures: **201**
+- Intermittent failures: **193**
 - Primary tested: **695**
 - Backup tested: **405**
 - Review-queue entries tested: **269**
@@ -23,8 +23,8 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - Only HTTP 404 and 410 count as definitive failures; all other HTTP statuses and network/authentication errors are inconclusive.
 - Streaks count consecutive Bangladesh calendar days; repeated runs on one date count once, and a missed day resets the streak.
 
-- HTTP 404/410 (definitive): **75**
-- Inconclusive HTTP/network failure: **182**
+- HTTP 404/410 (definitive): **69**
+- Inconclusive HTTP/network failure: **180**
 
 ## Persistent Failures
 
@@ -33,7 +33,7 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **AMN TV** — Review — consecutive failed days: **11** — HTTP 404
 - **Amar Bangla** — Review — consecutive failed days: **3** — HTTP 404
 - **Amar Bangla** — Review — consecutive failed days: **11** — HTTP 404
-- **Amar Bangla Digital** — Review — consecutive failed days: **3** — HTTP 404
+- **Amar Bangla Digital** — Review — consecutive failed days: **3** — HTTP 500
 - **Animal Planet** — Review — consecutive failed days: **11** — HTTP 404
 - **Asian TV** — Review — consecutive failed days: **11** — HTTP 404
 - **B4U Movies** — Review — consecutive failed days: **11** — HTTP 404
@@ -91,10 +91,11 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **7S Music** — Backup — streak 0 days — HTTP 403
 - **9X Jalwa** — Backup — streak 0 days — HTTP 403
 - **Aakaash Aath** — Backup — streak 0 days — HTTP 403
-- **Ananda TV** — Backup — streak 0 days — HTTP 500
-- **Animal Planet** — Backup — streak 0 days — HTTP 404
-- **Bahrain Sports 2** — Backup — streak 0 days — HTTP 404
 - **Channel 16** — Backup — streak 1 days — HTTP 404
+- **Channel S** — Backup — streak 0 days — HTTP 404
+- **Channel S** — Backup — streak 0 days — HTTP 404
+- **Channel S** — Backup — streak 0 days — HTTP 404
+- **Channel S** — Backup — streak 0 days — HTTP 404
 - **Colors Bangla Cinema** — Backup — streak 0 days — Connection
 - **Colors Bangla Cinema** — Backup — streak 0 days — Timeout
 - **Dangal 2** — Backup — streak 0 days — HTTP 403
@@ -107,15 +108,12 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Kerala Vision** — Backup — streak 0 days — HTTP 403
 - **MNTV (Tamil)** — Backup — streak 1 days — HTTP 404
 - **Mahaa Max** — Backup — streak 0 days — HTTP 403
-- **Matribhumi TV** — Backup — streak 0 days — HTTP 404
 - **Mazhavil Manorama** — Backup — streak 0 days — HTTP 403
 - **Oli TV** — Backup — streak 0 days — HTTP 403
-- **Sangeet Bangla** — Backup — streak 0 days — HTTP 404
 - **Shubh Cinema TV** — Backup — streak 0 days — HTTP 403
 - **Star Jalsha** — Backup — streak 0 days — HTTP 458
 - **Channel 16** — Bangladesh — streak 1 days — HTTP 404
-- **Movie Bangla** — Bangladesh — streak 0 days — Timeout
-- **SA TV** — Bangladesh — streak 0 days — HTTP 500
+- **Channel S** — Bangladesh — streak 0 days — HTTP 404
 - **Star News** — Bangladesh — streak 1 days — HTTP 404
 - **Asianet Middle East** — Indian Entertainment — streak 0 days — HTTP 403
 - **Gangaur TV** — Indian Entertainment — streak 0 days — Timeout
@@ -125,14 +123,11 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Goldmines 2** — Indian Movies — streak 0 days — HTTP 403
 - **Goldmines Action** — Indian Movies — streak 0 days — HTTP 403
 - **MH One Movies** — Indian Movies — streak 0 days — HTTP 403
-- **Thendral TV** — Indian Movies — streak 0 days — HTTP 404
 - **Andy Haryana** — Indian Music — streak 0 days — HTTP 403
-- **Hindi Hits** — Indian Music — streak 0 days — HTTP 404
 - **Oli TV** — Indian Music — streak 0 days — HTTP 403
 - **Fashion&LifeStyle** — International — streak 0 days — HTTP 403
 - **HBO** — International — streak 0 days — HTTP 403
 - **Teleritmo** — International — streak 0 days — HTTP 403
-- **Afarin TV** — Kids — streak 0 days — HTTP 404
 - **Disney Channel** — Kids — streak 0 days — HTTP 403
 - **Teen Nick** — Kids — streak 0 days — HTTP 403
 - **B4U Music** — New Backups — streak 0 days — DNS
@@ -150,10 +145,9 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **AMN TV** — Review — streak 11 days — HTTP 404
 - **ATN Bangla** — Review — streak 0 days — Timeout
 - **Aakaash Aath** — Review — streak 0 days — Timeout
-- **All Time Movies** — Review — streak 0 days — HTTP 404
 - **Amar Bangla** — Review — streak 3 days — HTTP 404
 - **Amar Bangla** — Review — streak 11 days — HTTP 404
-- **Amar Bangla Digital** — Review — streak 3 days — HTTP 404
+- **Amar Bangla Digital** — Review — streak 3 days — HTTP 500
 - **Ananda TV** — Review — streak 0 days — Connection
 - **Animal Planet** — Review — streak 11 days — HTTP 404
 - **Asian TV** — Review — streak 11 days — HTTP 404
@@ -189,7 +183,6 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Colors Cineplex** — Review — streak 0 days — Connection
 - **DBC News** — Review — streak 0 days — Network
 - **DD National** — Review — streak 0 days — HTTP 403
-- **Dangal** — Review — streak 0 days — HTTP 404
 - **Deepto TV** — Review — streak 0 days — Connection
 - **Deewana** — Review — streak 0 days — TLS
 - **Desh TV** — Review — streak 11 days — HTTP 404
@@ -222,7 +215,6 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **Jalsha Movies** — Review — streak 0 days — Connection
 - **Jamuna TV** — Review — streak 11 days — HTTP 404
 - **Jonmobhumi TV** — Review — streak 3 days — HTTP 404
-- **Khushboo Bangla** — Review — streak 0 days — HTTP 404
 - **MBC Bollywood** — Review — streak 9 days — HTTP 404
 - **MLB** — Review — streak 7 days — HTTP 404
 - **MNX** — Review — streak 0 days — Timeout
