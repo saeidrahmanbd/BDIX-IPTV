@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-25T03:32:19+00:00**
+Generated: **2026-11-25T03:44:37+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **a2ef9bb3e7d03dbfffd4f78e796027e4f5e46374fe9717d89785190c04f23e6a**
+- IPTV-Playlist.m3u SHA-256: **1ff53c65cb7ffa5a8313f055f8b1cd8dc61fcb264496556cdfb65eac327ec8f9**
 - International-Playlist.m3u SHA-256: **ac46370e5f6aa0b95c2c56df06a0d9b8eadf35f94c85e7044e9cec3f316f7619**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1596**
+- Playlist references whose asset stem differs from the normalized channel name: **1585**
 - Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1212,22 +1212,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | UFC | ufc-tv.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports | us-willow-sports-hd.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports 2 | us-willow-sports-hd.png | Sports |
-| IPTV-Playlist.m3u | NAN TV (720p) | nan-tv.png | New Channels |
-| IPTV-Playlist.m3u | Ayush Next Communication Network (576p) | ayush-next-communication-network-f7c7f33323dd3095ae15.png | New Channels |
-| IPTV-Playlist.m3u | CCV (480p) | ccv.png | New Channels |
-| IPTV-Playlist.m3u | Fast1 (576p) | fast1.png | New Channels |
-| IPTV-Playlist.m3u | Jaihind TV (576p) | jaihind-tv.png | New Channels |
-| IPTV-Playlist.m3u | Kabaddi 24x7 (720p) | kabaddi-24x7.png | New Channels |
-| IPTV-Playlist.m3u | Metro TV (India) (1080p) | metro-tv-india-0625d4e893.png | New Channels |
-| IPTV-Playlist.m3u | N Vision (1080p) | n-vision-dca55fe8b5825ff1d796.png | New Channels |
-| IPTV-Playlist.m3u | Wayanad Vision (1080p) | wayanad-vision-e34be4ac26de16c0b4a7.png | New Channels |
-| IPTV-Playlist.m3u | WeatherSpy (India) (720p) | weatherspy-india.png | New Channels |
-| IPTV-Playlist.m3u | Zodiak TV (1080p) | zodiak-tv.png | New Channels |
-| IPTV-Playlist.m3u | Duronto TV (720p) | duronto-tv-2b3c7dd202.png | New Backups |
-| IPTV-Playlist.m3u | B4U Music (1080p) | b4u-music.png | New Backups |
-| IPTV-Playlist.m3u | Epic Bharat Digital (1080p) | epic-bharat-digital-67aee5508b31a1940934.png | New Backups |
-| IPTV-Playlist.m3u | INWILD (1080p) | inwild.png | New Backups |
-| IPTV-Playlist.m3u | Mazhavil Manorama (576p) | mazhavil-manorama.png | New Backups |
+| IPTV-Playlist.m3u | NAN TV | nan-tv.png | New Channels |
+| IPTV-Playlist.m3u | Jaihind TV | jaihind-tv.png | New Channels |
+| IPTV-Playlist.m3u | Metro TV (India) | metro-tv-india-0625d4e893.png | New Channels |
+| IPTV-Playlist.m3u | Zodiak TV | zodiak-tv.png | New Channels |
+| IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | New Backups |
 | IPTV-Playlist.m3u | 7X Punjabi | 7x-music.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
