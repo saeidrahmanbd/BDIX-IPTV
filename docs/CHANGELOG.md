@@ -7,25 +7,13 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-25 — `IPTV-Playlist.m3u`
 
-- New channel identities: **28**
+- New channel identities: **0**
 - Channel identities removed: **0**
-- Stream URLs added / removed: **31 / 0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **1**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- NAN TV
-- Ayush Next Communication Network
-- CCV
-- Fast1
-- Jaihind TV
-- Kabaddi 24x7
-- Metro TV (India)
-- N Vision
-- Wayanad Vision
-- WeatherSpy (India)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-25 — `International-Playlist.m3u`
