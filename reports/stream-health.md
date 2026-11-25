@@ -1,6 +1,6 @@
 # Stream Health Report
 
-Generated: **2026-11-25T05:53:06+00:00**
+Generated: **2026-11-25T06:02:33+00:00**
 Stream URL inventory SHA-256: **e97c5dfad44d4eed1686d0d2ec0351e2e83feb09e27b3b282fb203f0ba9f0676**
 
 Probe environment: **GitHub-hosted ubuntu-latest runner**.
@@ -23,8 +23,8 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - Only HTTP 404 and 410 count as definitive failures; all other HTTP statuses and network/authentication errors are inconclusive.
 - Streaks count consecutive Bangladesh calendar days; repeated runs on one date count once, and a missed day resets the streak.
 
-- HTTP 404/410 (definitive): **68**
-- Inconclusive HTTP/network failure: **179**
+- HTTP 404/410 (definitive): **71**
+- Inconclusive HTTP/network failure: **176**
 
 ## Persistent Failures
 
@@ -91,15 +91,14 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **7S Music** — Backup — streak 0 days — HTTP 403
 - **9X Jalwa** — Backup — streak 0 days — HTTP 403
 - **Aakaash Aath** — Backup — streak 0 days — HTTP 403
-- **Boishakhi TV** — Backup — streak 0 days — HTTP 500
-- **Channel 16** — Backup — streak 1 days — HTTP 500
+- **Animal Planet** — Backup — streak 0 days — HTTP 404
+- **Bahrain Sports 2** — Backup — streak 0 days — HTTP 404
+- **Channel 16** — Backup — streak 1 days — HTTP 404
 - **Colors Bangla Cinema** — Backup — streak 0 days — Connection
 - **Colors Bangla Cinema** — Backup — streak 0 days — Timeout
 - **Dangal 2** — Backup — streak 0 days — HTTP 403
 - **Disney Channel** — Backup — streak 0 days — 200
 - **ESPN** — Backup — streak 0 days — HTTP 403
-- **G TV** — Backup — streak 0 days — HTTP 500
-- **Global TV** — Backup — streak 0 days — HTTP 500
 - **Goldmines Bollywood** — Backup — streak 0 days — HTTP 403
 - **Jalsha Movies** — Backup — streak 0 days — Timeout
 - **Kappa TV (Music)** — Backup — streak 0 days — HTTP 403
@@ -130,7 +129,7 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **B4U Music** — New Backups — streak 0 days — DNS
 - **Duronto TV** — New Backups — streak 1 days — HTTP 404
 - **NAN TV** — New Channels — streak 0 days — HTTP 404
-- **Zainabia Channel** — Religious — streak 1 days — HTTP 404
+- **Makkah Live** — Religious — streak 0 days — HTTP 500
 - **&TV** — Review — streak 11 days — HTTP 404
 - **&TV** — Review — streak 0 days — Timeout
 - **&pictures HD** — Review — streak 0 days — Connection
@@ -143,6 +142,7 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - **AMN TV** — Review — streak 11 days — HTTP 404
 - **ATN Bangla** — Review — streak 0 days — Timeout
 - **Aakaash Aath** — Review — streak 0 days — Timeout
+- **All Time Movies** — Review — streak 0 days — HTTP 404
 - **Amar Bangla** — Review — streak 3 days — HTTP 404
 - **Amar Bangla** — Review — streak 11 days — HTTP 404
 - **Amar Bangla Digital** — Review — streak 3 days — HTTP 404
