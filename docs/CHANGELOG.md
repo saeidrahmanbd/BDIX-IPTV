@@ -5,41 +5,42 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-24 — `IPTV-Playlist.m3u`
+### 2026-11-25 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **16**
-- Stream URLs added / removed: **2 / 20**
+- New channel identities: **28**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **31 / 0**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Removed channel identities (up to 10):
-- Anand TV
-- BIG TV
-- Darshana TV
-- Ekamra Bharat Odia
+Added channel identities (up to 10):
+- NAN TV
+- Ayush Next Communication Network
+- CCV
 - Fast1
 - Jaihind TV
-- Metro TV
-- Red Bull TV
-- Ayush Next Communication Network (576p)
-- CCV (480p)
+- Kabaddi 24x7
+- Metro TV (India)
+- N Vision
+- Wayanad Vision
+- WeatherSpy (India)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-24 — `International-Playlist.m3u`
+### 2026-11-25 — `International-Playlist.m3u`
 
-- New channel identities: **1**
+- New channel identities: **2**
 - Channel identities removed: **0**
-- Stream URLs added / removed: **4 / 0**
+- Stream URLs added / removed: **2 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **6**
+- Logo reference changes: **8**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- BRIDGE Dance (720p) [Geo-blocked]
+- BRIDGE Jazz [ ]
+- TVS Film Noir Network
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
