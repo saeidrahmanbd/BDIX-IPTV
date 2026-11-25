@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-25T11:25:07+06:00** (Asia/Dhaka)
+Generated: **2026-11-26T05:27:26+06:00** (Asia/Dhaka)
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**
@@ -13,9 +13,9 @@ Generated: **2026-11-25T11:25:07+06:00** (Asia/Dhaka)
 - Permanent denylist: E-Vidya 4–12, Friends TV, HSTV, and 31 additional channel IDs/names listed in the canonical permanent denylist.
 - Country-group threshold: **5** legitimate primary identities
 - Only discovery queue rows were purged, reclassified or logo-normalized; unrelated primary playlist entries were preserved.
-- New channels: **19**
+- New channels: **4**
 - New backups: **4**
-- Rejected/held candidates: **840**
+- Rejected/held candidates: **855**
 - Country metadata, channel IDs, language and logos are advisory at this stage; retain uncertain values for owner review and repair later.
 
 ## Rejection reasons
@@ -30,7 +30,7 @@ Generated: **2026-11-25T11:25:07+06:00** (Asia/Dhaka)
 - channel country NL is outside Bangladesh/India: 2
 - channel country PK is outside Bangladesh/India: 1
 - duplicate channel identity already staged in a discovery queue: 3
-- duplicate stream URL: 314
+- duplicate stream URL: 329
 - known Indian prohibited MH One Prime channel is prohibited: 1
 - known Indian prohibited brand/category is prohibited: 12
 - permanently banned channel: 30
@@ -41,23 +41,8 @@ Generated: **2026-11-25T11:25:07+06:00** (Asia/Dhaka)
 ## New Channels
 
 - ATN Music (360p) (source feed: Bangladesh) — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
-- CCTV Kunnamkulam (720p) (source feed: India) — https://96vd9q4kyxq7-hls-live.5centscdn.com/livestream/f25aeb3e9210967d546a077de6e105e4.sdp/playlist.m3u8
-- City Channel HD (1080p) (source feed: India) — https://live.skystream.in/live/citytv2924/index.m3u8
-- City Vision Kannur (576p) (source feed: India) — https://live.skystream.in/live/citykannurcity/index.m3u8
-- Drishya TV (576p) (source feed: India) — https://live.skystream.in/live/drishya5060/index.m3u8
-- Drisya TV (576p) (source feed: India) — https://live.skystream.in/live/drishyakarunagapally/index.m3u8
-- Kasargod Vision (576p) (source feed: India) — https://live.skystream.in/live/kasaragodvsn/index.m3u8
-- KCN Kasargod (576p) (source feed: India) — https://live.skystream.in/live/kcnksrgod/index.m3u8
-- Kerala Today TV (1080p) (source feed: India) — https://live.skystream.in/live/krlatoday/index.m3u8
 - Malabar Plus (720p) (source feed: India) — http://cloud.logichost.in:1935/live/mplus/index.m3u8
-- Malappuram Cable Vision (1080p) (source feed: India) — http://cloud.logichost.in:1935/live/mcvlive/playlist.m3u8
-- New Vision HD (576p) (source feed: India) — https://live.skystream.in/live/newvision2924/index.m3u8
-- NM Media Channel HD (1080p) (source feed: India) — https://live.skystream.in/live/newmedia2924/index.m3u8
-- Periyar Vision (1080p) (source feed: India) — https://stream.onecloudlive.in/periyarvision/periyarvision/index.m3u8
-- South Vision (1080p) (source feed: India) — https://live.skystream.in/live/southvsnklm/index.m3u8
 - Thanima (1080p) (source feed: India) — https://live.skystream.in/live/thanimatvtvm/index.m3u8
-- Wayanad Vision Movies (720p) (source feed: India) — https://online.wayanadvision.in/hls/wvmovies.m3u8
-- Wayanad Vision Plus (720p) (source feed: India) — https://online.wayanadvision.in/hls/streaming1.m3u8
 - Win TV (576p) (source feed: India) — https://mumbai-edge.smartplaytv.in/WINTV/index.m3u8
 
 ## New Backups
@@ -71,40 +56,24 @@ Generated: **2026-11-25T11:25:07+06:00** (Asia/Dhaka)
 
 ## Stream verification
 
-- Run timestamp: 2026-11-25T11:25:09+06:00
+- Run timestamp: 2026-11-26T05:27:27+06:00
 - Mode: iptv
-- New entries and discovery queues probed: 23
-- Verified live media responses: 14
+- New entries and discovery queues probed: 8
+- Verified live media responses: 2
 - Verified new primary channels retained in New Channels: 0
 - Verified alternate streams retained in New Backups: 0
-- Inconclusive candidates retained for manual review: 1
+- Inconclusive candidates retained for manual review: 0
 - Unverified backup streams moved to Review: 0
-- Definitively dead new candidates removed: 8
+- Definitively dead new candidates removed: 6
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
-- Candidates retained without authentic local logos (no placeholder used): 15
+- Candidates retained without authentic local logos (no placeholder used): 2
 
 ### Stream probe details
 - Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
-- Kept CCTV Kunnamkulam (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept City Channel HD (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept City Vision Kannur (576p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept Drishya TV (576p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept Drisya TV (576p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept Kasargod Vision (576p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept KCN Kasargod (576p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept Kerala Today TV (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Removed newly discovered Malabar Plus (720p) from New Channels — HTTP 404.
-- Kept Malappuram Cable Vision (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept New Vision HD (576p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept NM Media Channel HD (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Retained Periyar Vision (1080p) in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
-- Kept Periyar Vision (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept South Vision (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Removed newly discovered Thanima (1080p) from New Channels — HTTP 404.
-- Kept Wayanad Vision Movies (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
-- Kept Wayanad Vision Plus (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
+- Kept Malabar Plus (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
+- Kept Thanima (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Win TV (576p) from New Channels — HTTP 404.
 - Removed newly discovered DD Assam (576p) from New Backups — HTTP 404.
 - Removed newly discovered DD Manipur (576p) from New Backups — HTTP 404.
@@ -113,12 +82,12 @@ Generated: **2026-11-25T11:25:07+06:00** (Asia/Dhaka)
 
 ## Final validation
 
-- Run timestamp: 2026-11-25T11:25:10+06:00
+- Run timestamp: 2026-11-26T05:27:27+06:00
 - Validation status: PASS
-- New manual-review candidates retained: 15
+- New manual-review candidates retained: 2
 - New malformed EXTINF/URL pairs: 0
 - New duplicate stream URL occurrences: 0
-- New candidates missing an authentic local logo: 15 (warning only)
+- New candidates missing an authentic local logo: 2 (warning only)
 - New candidates with non-local logo references: 0 (warning only)
 - New candidates with country metadata requiring manual review: 0 (warning only)
 - New candidates outside New Channels/New Backups or approved Review holds: 0
