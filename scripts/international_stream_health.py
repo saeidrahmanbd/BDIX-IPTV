@@ -844,13 +844,15 @@ def reconcile_published_recovery_report(playlist_text, report_text, history):
             for name in retained
         ]
     replacement = "## Recovered streams\n" + "\n".join(lines) + next_heading + remainder
-    replacement = re.sub(
+    prefix = re.sub(
         r"(?m)^- Restored from Review to primary/Backup/discovery queue: \*\*\d+\*\*$",
         f"- Restored from Review to primary/Backup/discovery queue: **{len(restored)}**",
-        replacement,
+        section[0],
         count=1,
     )
-    return report_text[:len(section[0])] + replacement
+    if prefix == section[0]:
+        raise ValueError("Published recovery total is missing during policy reconciliation")
+    return prefix + replacement
 
 
 def validate_published_recovery_report(playlist_text, report_text, history):
