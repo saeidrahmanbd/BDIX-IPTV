@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-25T05:32:49+00:00**
+Generated: **2026-11-25T05:34:13+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -11,7 +11,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 ## Summary
 
-- Safe repairs applied this run: **7**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
@@ -25,13 +25,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| city-channel-ccf4f79ac480e997303f.png | PNG | PNG | 512×512 | 459×459 | downscaled, re-encoded/compressed |
-| drisya-tv-5223fe671a054e0ca930.png | PNG | PNG | 512×512 | 420×420 | downscaled, re-encoded/compressed |
-| kerala-today-tv-ea3bd412028baff3c097.png | PNG | PNG | 512×512 | 272×272 | downscaled, re-encoded/compressed |
-| new-vision-e4ea60bbeb3674e20755.png | PNG | PNG | 634×609 | 571×548 | downscaled, re-encoded/compressed |
-| south-vision-c39b6b63a7878132e257.png | PNG | PNG | 512×512 | 364×364 | downscaled, re-encoded/compressed |
-| wayanad-vision-movies-e71e1066086194408e92.png | PNG | PNG | 512×512 | 461×461 | downscaled, re-encoded/compressed |
-| wayanad-vision-plus-82bd345c3914db6ab3e2.png | PNG | PNG | 537×638 | 467×555 | downscaled, re-encoded/compressed |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 

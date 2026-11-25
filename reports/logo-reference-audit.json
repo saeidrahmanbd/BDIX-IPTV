@@ -11907,7 +11907,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/cctv-kunnamkulam-62fa6fc277ae8c5e526d.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/cctv-storm-football-fdb27d3db1.png": [
       "International-Playlist.m3u",
@@ -12291,7 +12292,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/city-channel-ccf4f79ac480e997303f.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/city-eden-birma-play-c04db7f6eee0d229f6ab.png": [
       "International-Playlist.m3u",
@@ -12369,7 +12371,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/city-vision-kannur-9ecc98dce4b989c0f5ad.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/clan-adcd13d9a5.png": [
       "International-Playlist.m3u",
@@ -13317,10 +13320,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/drishya-tv-77559c4cddec4f3b15ea.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/drisya-tv-5223fe671a054e0ca930.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/dstv-bulgaria-88284875fc.png": [
       "International-Playlist.m3u",
@@ -15386,7 +15391,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/kasargod-vision-9087ad218648d7b61827.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kaumudy-tv.png": [
       "International-Playlist.m3u",
@@ -15407,10 +15413,12 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kcn-kasargod-32b58ffed02e7a179d50.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kerala-today-tv-ea3bd412028baff3c097.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/kerala-vision.png": [
@@ -15892,6 +15900,7 @@
     ],
     "logos/malappuram-cable-vision-bb4b6da37bd6a3ad422c.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/mango-india-224e210d95.png": [
@@ -16793,7 +16802,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/new-vision-e4ea60bbeb3674e20755.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/news-21-bangla-tv.png": [
       "IPTV-Playlist.m3u",
@@ -16971,7 +16981,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/nm-media-channel-adf4a8ecc0dbe61589c3.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/nogoumfmtv-5286d22e76.png": [
       "International-Playlist.m3u",
@@ -17321,6 +17332,7 @@
     ],
     "logos/periyar-vision-a12b57416fc2319332e8.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/persiana-cinema-59e95e186a.png": [
@@ -18637,6 +18649,7 @@
     ],
     "logos/south-vision-c39b6b63a7878132e257.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/soy-plancha-tv-0a254093f8.png": [
@@ -21556,10 +21569,12 @@
       "reports/logo-source-registry.json"
     ],
     "logos/wayanad-vision-movies-e71e1066086194408e92.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/wayanad-vision-plus-82bd345c3914db6ab3e2.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/weatherspy-india.png": [
       "IPTV-Playlist.m3u",
@@ -23621,7 +23636,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/cctv-kunnamkulam-62fa6fc277ae8c5e526d.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/cctv-storm-football-fdb27d3db1.png": [
       "International-Playlist.m3u",
@@ -24005,7 +24021,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/city-channel-ccf4f79ac480e997303f.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/city-eden-birma-play-c04db7f6eee0d229f6ab.png": [
       "International-Playlist.m3u",
@@ -24083,7 +24100,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/city-vision-kannur-9ecc98dce4b989c0f5ad.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/clan-adcd13d9a5.png": [
       "International-Playlist.m3u",
@@ -25032,10 +25050,12 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/drishya-tv-77559c4cddec4f3b15ea.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/drisya-tv-5223fe671a054e0ca930.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/dstv-bulgaria-88284875fc.png": [
       "International-Playlist.m3u",
@@ -27102,7 +27122,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/kasargod-vision-9087ad218648d7b61827.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kaumudy-tv.png": [
       "International-Playlist.m3u",
@@ -27123,10 +27144,12 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kcn-kasargod-32b58ffed02e7a179d50.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kerala-today-tv-ea3bd412028baff3c097.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/kerala-vision.png": [
@@ -27608,6 +27631,7 @@
     ],
     "logos/malappuram-cable-vision-bb4b6da37bd6a3ad422c.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/mango-india-224e210d95.png": [
@@ -28509,7 +28533,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/new-vision-e4ea60bbeb3674e20755.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/news-21-bangla-tv.png": [
       "IPTV-Playlist.m3u",
@@ -28687,7 +28712,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/nm-media-channel-adf4a8ecc0dbe61589c3.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/nogoumfmtv-5286d22e76.png": [
       "International-Playlist.m3u",
@@ -29037,6 +29063,7 @@
     ],
     "logos/periyar-vision-a12b57416fc2319332e8.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/persiana-cinema-59e95e186a.png": [
@@ -30357,6 +30384,7 @@
     ],
     "logos/south-vision-c39b6b63a7878132e257.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/soy-plancha-tv-0a254093f8.png": [
@@ -33277,10 +33305,12 @@
       "reports/logo-source-registry.json"
     ],
     "logos/wayanad-vision-movies-e71e1066086194408e92.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/wayanad-vision-plus-82bd345c3914db6ab3e2.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/weatherspy-india.png": [
       "IPTV-Playlist.m3u",
