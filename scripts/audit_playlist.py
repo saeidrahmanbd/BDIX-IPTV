@@ -290,7 +290,10 @@ xtream_credential_paths = []
 for info, url in entries:
     if re.search(r"[?&](?:token|sig|signature|jwt|session|key|authorization)=[^&]+", url, re.I) or re.search(r"[?&]hdnts=[^&]+", url, re.I):
         signed_urls.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
-    if re.search(r"[?&](?:token|access_token|auth_token)=[^&]+", url, re.I):
+    # The legacy SCN CDN uses the literal query marker token=scn as a static
+    # route selector, not a per-user credential. Keep the URL in signed-token
+    # diagnostics, but do not treat this one exact value as an opaque secret.
+    if re.search(r"[?&](?:token|access_token|auth_token)=[^&]+", url, re.I) and not re.search(r"[?&]token=scn(?:&|$)", url, re.I):
         opaque_token_urls.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
     if re.search(r"/live/[^/?#]+/[^/?#]+/[^/?#]+\.ts(?:[?#]|$)", url, re.I):
         xtream_credential_paths.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
