@@ -649,9 +649,10 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
             re.sub(r"@.*$", "", str(a.get(key, "")).strip().casefold())
             for key in ("tvg-id", "channel-id") if a.get(key)
         }
-        permanently_banned = bool(normalized_ids & PERMANENTLY_BANNED_CHANNEL_IDS) or (
-            canonical_channel_name(name) in PERMANENTLY_BANNED_CHANNEL_NAMES
-        )
+        # Only exact permanent IDs are enforced globally. Name-only bans
+        # remain queue-scoped below to avoid deleting an unrelated primary row
+        # that happens to share a display name with a blocked candidate.
+        permanently_banned = bool(normalized_ids & PERMANENTLY_BANNED_CHANNEL_IDS)
         if permanently_banned:
             removed.append(name or "(unnamed)")
             continue
