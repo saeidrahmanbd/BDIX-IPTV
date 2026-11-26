@@ -29,6 +29,16 @@ The owner explicitly authorized a one-time migration of five already-retained Ba
 
 This is a narrowly scoped manual curation exception, not a discovery-policy change. The Indian Kids discovery exclusion remains active for all other Indian Kids candidates. Discovery must continue rejecting those candidates unless the owner gives a new explicit approval. The three named Indian Kids rows must not be used as precedent to automatically admit further Indian Kids channels.
 
+### Explicit owner-directed removals and discovery exclusions — 2026-11-26
+
+The owner explicitly instructed removal of these two India-origin candidates from the maintained IPTV playlist because they do not fit the permitted Indian channel categories:
+- `MetroTV.in@SD` — Metro TV (India), Telugu news; classified as Indian News.
+- `AyushNextCommunicationNetwork.in@SD` — Ayush Next Communication Network; classified as Indian Knowledge/health-information content.
+
+Both rows were removed from `New Channels`. Their exact identities are now explicit Indian discovery exclusions, so future scheduled discovery must reject them rather than re-adding them. This is a narrow owner-directed exception to the normal protected-queue/no-delete rule, not a general authorization to delete other queue entries.
+
+Disney Channel India (`DisneyChannel.in@HD`) was already present in the primary `Kids` group; no additional promotion was needed. Its separate alternate stream remains in `Backup`.
+
 The main-playlist publication gate verifies that every pre-existing stream URL occurrence remains present. Routine automation may repair metadata and authentic local-logo references only. It must preserve existing row order, group assignments, channel numbers and stream URLs. It must not promote, demote, migrate, renumber, regroup or reassemble existing IPTV rows. New discoveries remain in the manual `New Channels` / `New Backups` queues for owner review.
 
 The former one-time owner-requested migration authorization was revoked on 2026-11-14 and its automatic workflow path has been retired. The revoked marker remains in the repository as an audit record; it is not read by production automation. Any future structural exception requires a new, explicit owner decision and a separately reviewed change; the retired queue-promotion mechanism must not be reactivated.
