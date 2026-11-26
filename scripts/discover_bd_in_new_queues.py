@@ -77,8 +77,10 @@ IPTV_KNOWN_INDIAN_CATEGORY_NAMES = {
 }
 IPTV_KNOWN_INDIAN_CATEGORY_IDS = {
     "rplus.in": "news", "bhi.channel.in": "news", "tv100.in": "news", "tv100national.in": "news",
+    "metrotv.in": "news",
     "sonyyay.in": "kids", "vtu.in": "education", "dishatv.in": "religious", "shekinahtv.in": "religious", "darshanatv.in": "religious",
     "ddkisan.in": "knowledge", "krishidarshan.in": "knowledge", "cvrhealth.in": "knowledge",
+    "ayushnextcommunicationnetwork.in": "knowledge",
 }
 
 
