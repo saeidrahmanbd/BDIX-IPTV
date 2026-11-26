@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-26T05:15:22+00:00**
+Generated: **2026-11-26T05:30:13+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **b5c5c72d52e843f347be0249963dd6db8de62fb378921a05bc98d76444751921**
-- International-Playlist.m3u SHA-256: **7715b87f66920765be3b5eb8458473d50f854af1c4844c217d749ab40fb590ea**
+- International-Playlist.m3u SHA-256: **3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155**
 
 ## Summary
 
@@ -2070,6 +2070,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ishtar TV | verified-ishtar-tv-sd-1080p-e96abfb835.png | International |
 | International-Playlist.m3u | Itage TV | itage-tv-480p-453d42d446.png | International |
 | International-Playlist.m3u | Ivoire Channel | ivoire-channel-3c9ebec26d.png | International |
+| International-Playlist.m3u | KandelaTV | verified-kandelatv-480p-90ac12180c.png | International |
 | International-Playlist.m3u | Kayhan TV | kayhan-tv-720p-470680d85f.png | International |
 | International-Playlist.m3u | Klape i Tambure TV | klape-i-tambure-tv-302ab07bf9.png | International |
 | International-Playlist.m3u | KN Music TV | kn-music-tv-ad8cb6ea77.png | International |
@@ -2105,6 +2106,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Jamuna TV | jamuna-tv.png | News |
 | International-Playlist.m3u | NEWS 21 BANGLA | news-21-bangla-tv.png | News |
 | International-Playlist.m3u | Somoy TV | somoy-tv.png | News |
+| International-Playlist.m3u | Fashion TV | fashion-tv-aa7f9461cf.png | Fashion TV |
 | International-Playlist.m3u | 4K Travel | 4k-travel.png | Documentary & Wildlife |
 | International-Playlist.m3u | American Heroes Channel | american-heroes-channel-3bf071dd67f685548795.png | Documentary & Wildlife |
 | International-Playlist.m3u | CCTV-Weapon & Technology | cctv-weapon-and-technology-6f9b3509e8.png | Documentary & Wildlife |
@@ -2311,7 +2313,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Europa Plus TV | europa-plus-tv-1080p.png | Review |
 | International-Playlist.m3u | Extrema Kids TV | extrema-kids-tv-not-24-7-0108df4648.png | Review |
 | International-Playlist.m3u | Fashion TV | fashion-tv-aa7f9461cf.png | Review |
-| International-Playlist.m3u | Fashion TV | fashion-tv-aa7f9461cf.png | Review |
 | International-Playlist.m3u | FIFA+ French | fifa-plus-french-68fe723cf8e2f7593bac.png | Review |
 | International-Playlist.m3u | FIFA+ German | fifa-plus-german-68fe723cf8e2f7593bac.png | Review |
 | International-Playlist.m3u | FIFA+ Hispanic America | fifa-plus-hispanic-america-68fe723cf8e2f7593bac.png | Review |
@@ -2345,7 +2346,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Jiangsu Movie Channel | verified-jiangsu-movie-channel-576p-455ec43607.png | Review |
 | International-Playlist.m3u | Jilin Movie Channel | verified-jilin-movie-channel-ec13d25815.png | Review |
 | International-Playlist.m3u | Juice TV [ ] | juice-tv-830eccfd5c68004843df.png | Review |
-| International-Playlist.m3u | KandelaTV | verified-kandelatv-480p-90ac12180c.png | Review |
 | International-Playlist.m3u | Kappa TV (Music) | kappa-tv-music-53d014bd887255130e2c.png | Review |
 | International-Playlist.m3u | Kartoon Channel! | kartoon-channel.png | Review |
 | International-Playlist.m3u | Kaumudy TV | kaumudy-tv.png | Review |
@@ -2475,9 +2475,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | BRIDGE Dance [ ] | bridge-dance-720p-geo-blocked-28be35859700d79948e2.png | New Channels |
-| International-Playlist.m3u | BRIDGE Hits (576p) | bridge-hits-576p.png | New Channels |
 | International-Playlist.m3u | BRIDGE Jazz [ ] | bridge-jazz-720p-geo-blocked-87f95b66247ee3252561.png | New Channels |
-| International-Playlist.m3u | Komsan TV [Not 24/7] | komsan-tv-not-24-7.png | New Channels |
+| International-Playlist.m3u | Komsan TV [ ] | komsan-tv-not-24-7.png | New Channels |
+| International-Playlist.m3u | Viasat Kino (Romania) | viasat-kino-romania-576i-96dae76d5fcac63f6132.png | New Channels |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
