@@ -36,7 +36,7 @@ class ReportFreshnessTests(unittest.TestCase):
         reports = {
             "iptv-playlist-audit.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "pre-publish-gate.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
-            "epg-coverage.md": epg, "epg-playlist-audit.md": epg, "epg-unmapped-audit.md": epg,
+            "epg-coverage.md": epg, "epg-playlist-audit.md": epg, "epg-unmapped-audit.md": epg, "iptv-playlist-epg-priority.md": epg,
             "iptv-metadata-backfill.md": f"Generated: **{self.timestamp}**\nPlaylist SHA-256: **{one}**\n",
             "iptv-fragile-streams.md": f"Generated: **{self.timestamp}**\nIPTV-Playlist.m3u SHA-256: **{one}**\n",
             "stream-risk-review.md": f"Generated: **{self.timestamp}**\nIPTV-Playlist.m3u SHA-256: **{one}**\n",
