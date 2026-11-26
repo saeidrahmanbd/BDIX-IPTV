@@ -2405,6 +2405,15 @@ https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 https://mumbai-edge.smartplaytv.in/Zoom/index.m3u8
 #EXTINF:-1 tvg-id="Zoom.in" tvg-name="Zoom" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" channel-id="Zoom.in" tvg-country="IN" tvg-language="hin" group-title="Backup",Zoom
 https://d2esfk1pb9cdob.cloudfront.net/chunklist_1.m3u8
+#EXTINF:-1 tvg-id="9XTashan.in@SD" tvg-name="9X Tashan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-tashan.png" channel-id="9XTashan.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",9X Tashan
+https://tvsen6.aynaott.com/sMqhLN6n/index.m3u8
+#EXTINF:-1 tvg-id="custom.fifa" tvg-name="FIFA+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa.png" channel-id="custom.fifa" tvg-country="CH" tvg-language="eng" group-title="Backup",FIFA+
+https://4397879b.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWRlX0ZJRkFQbHVzR2VybWFuX0hMUw/playlist.m3u8
+#EXTINF:-1 tvg-id="TSports.bd" tvg-name="T Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png" channel-id="TSports.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",T Sports
+https://tvsen5.aynaott.com/TnMn5kZz8/index.m3u8
+#EXTINF:-1 tvg-id="GoldminesBollywood.in@SD" tvg-name="Goldmines Bollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-bollywood.png" channel-id="GoldminesBollywood.in@SD" tvg-country="IN" tvg-language="hin" group-title="Backup",Goldmines Bollywood
+https://tvsen6.aynaott.com/55xNrLdf/index.m3u8
+
 #EXTINF:-1 tvg-id="AndPictures.in@SD" tvg-name="&pictures HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pictures.png" channel-id="AndPictures.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",&pictures HD
 http://103.135.253.32:8080/PICTURE-HD/index.m3u8
 #EXTINF:-1 tvg-id="Andpictures.in@HD" tvg-name="&pictures HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-pictures.png" channel-id="Andpictures.in@HD" tvg-country="IN" tvg-language="hin" group-title="Review" x-discovery-source-country="IN",&pictures HD
