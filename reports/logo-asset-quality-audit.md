@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-26T00:18:16+00:00**
+Generated: **2026-11-26T01:31:36+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **3eed831257f2645543d1d7b58829ecd86618988210a25acb0891f26815860bc1**
-- International-Playlist.m3u SHA-256: **ae090b7bdd1fb00106c6b28ce85030047395270f2023a1c39cf3c8e4922d51a6**
+- IPTV-Playlist.m3u SHA-256: **8167fe97fbf5e046ec9f27fdb6a89679c51ec7abda12ff14819dab25c02bb081**
+- International-Playlist.m3u SHA-256: **aca22e32fbe473ee8505b996463c19709bc709420f345a316c8d9e7bcd3d4c08**
 
 ## Summary
 
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1600**
+- Playlist references whose asset stem differs from the normalized channel name: **1601**
 - Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -2447,6 +2447,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | BRIDGE Dance [ ] | bridge-dance-720p-geo-blocked-28be35859700d79948e2.png | New Channels |
 | International-Playlist.m3u | BRIDGE Jazz [ ] | bridge-jazz-720p-geo-blocked-87f95b66247ee3252561.png | New Channels |
+| International-Playlist.m3u | Komsan TV [Not 24/7] | komsan-tv-not-24-7.png | New Channels |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
