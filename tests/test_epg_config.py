@@ -311,6 +311,7 @@ class EpgConfigTests(unittest.TestCase):
             official_epg_sources.urllib.request,
             "urlopen",
             side_effect=[
+                io.BytesIO(b"<html>No schedule</html>"),
                 io.BytesIO(homepage.encode("utf-8")),
                 io.BytesIO(article.encode("utf-8")),
             ],
@@ -319,12 +320,12 @@ class EpgConfigTests(unittest.TestCase):
                 datetime(2026, 11, 6, 0, 0, tzinfo=timezone.utc)
             )
         self.assertEqual(
-            urlopen.call_args_list[0].args[0].full_url,
-            "https://rtvonline.com/home/",
-        )
-        self.assertEqual(
-            urlopen.call_args_list[1].args[0].full_url,
-            "https://rtvonline.com/entertainment/rtv/413846",
+            [call.args[0].full_url for call in urlopen.call_args_list],
+            [
+                "https://www.rtvbd.tv/schedule.php",
+                "https://rtvonline.com/home/",
+                "https://rtvonline.com/entertainment/rtv/413846",
+            ],
         )
         self.assertGreaterEqual(len(programmes), 4)
         self.assertTrue(all(p["channel_id"] == "RTV.bd" for p in programmes))
