@@ -11887,6 +11887,7 @@
     ],
     "logos/cc-net-500387d0e2242b651988.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cctv-11.png": [
@@ -12621,6 +12622,7 @@
     ],
     "logos/cricbuzz-cb3cb39a6d687801bce3.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cricket-gold.png": [
@@ -15040,7 +15042,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/cartoon-network-india-720p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/cuckold.png": [
       "International-Playlist.m3u",
@@ -15345,6 +15348,7 @@
     ],
     "logos/k7-keralam-channel-46beb3882d21a7547993.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
@@ -18452,7 +18456,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sky-sports-cricket.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/skyshowtime-1-f3376493660540500c72.png": [
       "International-Playlist.m3u",
@@ -18832,6 +18837,7 @@
     ],
     "logos/sristi-tv-772e078ab196764d315f.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/srk.png": [
@@ -18944,7 +18950,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-sports-3.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-sports-select-1.png": [
       "IPTV-Playlist.m3u",
@@ -19454,6 +19461,7 @@
     ],
     "logos/ten-cricket.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/ten-tv-prime.png": [
@@ -23655,6 +23663,7 @@
     ],
     "logos/cc-net-500387d0e2242b651988.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cctv-11.png": [
@@ -24389,6 +24398,7 @@
     ],
     "logos/cricbuzz-cb3cb39a6d687801bce3.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cricket-gold.png": [
@@ -26810,7 +26820,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/cartoon-network-india-720p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/cuckold.png": [
       "International-Playlist.m3u",
@@ -27115,6 +27126,7 @@
     ],
     "logos/k7-keralam-channel-46beb3882d21a7547993.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
@@ -30226,7 +30238,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/sky-sports-cricket.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/skyshowtime-1-f3376493660540500c72.png": [
       "International-Playlist.m3u",
@@ -30606,6 +30619,7 @@
     ],
     "logos/sristi-tv-772e078ab196764d315f.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/srk.png": [
@@ -30718,7 +30732,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-sports-3.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/star-sports-select-1.png": [
       "IPTV-Playlist.m3u",
@@ -31228,6 +31243,7 @@
     ],
     "logos/ten-cricket.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/ten-tv-prime.png": [
