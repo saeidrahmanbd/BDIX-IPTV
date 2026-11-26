@@ -4,7 +4,7 @@
   "logo_image_files": 5278,
   "all_explicitly_referenced_logo_files": 2521,
   "runtime_referenced_logo_files": 2519,
-  "playlist_referenced_logo_files": 2485,
+  "playlist_referenced_logo_files": 2484,
   "apparently_unreferenced_by_any_text_file": 2757,
   "apparently_unreferenced_by_runtime_sources": 2759,
   "missing_explicit_logo_targets": [
@@ -10631,7 +10631,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/al-jazeera.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -11356,7 +11355,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bbc-world-news.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -13363,7 +13361,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/dw-news.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -15176,7 +15173,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jaihind-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -15658,7 +15654,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/local-logo-cnn.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/lol-tv.png": [
@@ -22185,7 +22180,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/al-jazeera.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22910,7 +22904,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bbc-world-news.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -24918,7 +24911,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/dw-news.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26732,7 +26724,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/jaihind-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -27214,7 +27205,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/local-logo-cnn.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/lol-tv.png": [

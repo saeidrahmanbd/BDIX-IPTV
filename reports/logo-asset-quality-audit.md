@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-26T09:36:36+00:00**
+Generated: **2026-11-26T09:42:11+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **3a6475bd345a8bf0c758826c0f759aad8d020660f2125fcb8262f252edaea744**
+- IPTV-Playlist.m3u SHA-256: **eaa1ac46a4fa9b55b36af6ec5a1a09afc780f5619ae410876a58f31b65fbfbfc**
 - International-Playlist.m3u SHA-256: **3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **746**
-- Playlist references whose asset stem differs from the normalized channel name: **1503**
-- Unreferenced image assets immediately inside logos/: **1000** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1501**
+- Unreferenced image assets immediately inside logos/: **1001** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1013,7 +1013,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Tara TV | tara-tv.png | Indian Bangla |
 | IPTV-Playlist.m3u | Ten TV Prime | ten-tv-prime.png | Indian Bangla |
-| IPTV-Playlist.m3u | Alankar TV | alankar-tv.png | Indian Movies |
+| IPTV-Playlist.m3u | Alankar TV | alankar-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | B4U Bhojpuri Plus | b4u-bhojpuri.png | Indian Movies |
 | IPTV-Playlist.m3u | Bollygold | nh-bollygold-dbedeff9.png | Indian Movies |
 | IPTV-Playlist.m3u | Bollywood | bollywood-hd-576p.png | Indian Movies |
@@ -1024,7 +1024,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Pitaara | pitaara-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Star Movies | star-movies-india-hd-1080p.png | International |
-| IPTV-Playlist.m3u | TamilVision-TV | tamilvision-tv-1080p.png | Indian Movies |
+| IPTV-Playlist.m3u | TamilVision-TV | tamilvision-tv-1080p.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Thalaa TV | thalaa-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Thendral TV | thendral-tv-ed9b933eb5.png | Indian Movies |
 | IPTV-Playlist.m3u | Tolly TV | tolly-tv.png | Indian Movies |
@@ -1059,7 +1059,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Gaunda Punjab TV | gaunda-punjab-tv-720p.png | Indian Entertainment |
 | IPTV-Playlist.m3u | GTC Punjabi UK | gtc-punjabi.png | Indian Entertainment |
 | IPTV-Playlist.m3u | GTC Punjabi US | gtc-punjabi.png | Indian Entertainment |
-| IPTV-Playlist.m3u | Jaihind TV | jaihind-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | K7 Keralam Channel | k7-keralam-channel-46beb3882d21a7547993.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Kairali TV | kairali-tv.png | Indian Entertainment |
 | IPTV-Playlist.m3u | Kalaignar TV | kalaignar-tv-82de1b8f.png | Indian Entertainment |
@@ -1103,7 +1102,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Tag TV | tag-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Waseb TV | waseb-tv.png | Pakistani |
 | IPTV-Playlist.m3u | AMC Thrillers | amc-triller.png | International |
-| IPTV-Playlist.m3u | BBC World | bbc-world-news.png | International |
 | IPTV-Playlist.m3u | Blues TV | blues-tv.png | International |
 | IPTV-Playlist.m3u | CMC TV | cmc-tv.png | International |
 | IPTV-Playlist.m3u | Cowboy Movie Channel | cowboy-movie-channel.png | International |
