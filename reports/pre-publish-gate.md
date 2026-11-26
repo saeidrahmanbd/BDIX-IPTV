@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-26T05:34:17+00:00**
-Source playlist SHA-256: **b5c5c72d52e843f347be0249963dd6db8de62fb378921a05bc98d76444751921**
+Generated: **2026-11-26T10:38:42+00:00**
+Source playlist SHA-256: **6ed75613aa2965cc341a0d144242ed4fab07eebdd8f1175ab003c66d0f701a97**
 
 Status: **PASS**
 
-- Current entries: **1429**
+- Current entries: **1143**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -13,19 +13,19 @@ Status: **PASS**
 - Review entries reclassified: **0**
 - Review entries promoted: **0**
 - Review entries deleted: **0**
-- Duplicate primary channel numbers (all): **1**
+- Duplicate primary channel numbers (all): **0**
 - New/changed duplicate primary channel numbers (blocking): **0**
-- Pre-existing duplicate primary channel numbers preserved unchanged: **1**
+- Pre-existing duplicate primary channel numbers preserved unchanged: **0**
 - Permanently banned channel entries across all IPTV groups: **0**
 - Primary entries missing channel numbers: **0**
-- Primary channel-number sequence issues (non-blocking; existing row order is protected): **1**
+- Primary channel-number sequence issues (non-blocking; existing row order is protected): **0**
 - Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
-- Orphan Backup entries: **19**
+- Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **20**
-- Raw resolution/geoblock name tags: **20**
+- Entries missing tvg-language: **0**
+- Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -33,20 +33,20 @@ Status: **PASS**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
 - Entries removed this run: **0**
-- Entries modified this run: **0**
+- Entries modified this run: **4**
 
 ## Protected-queue policy
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
 
 ## Channel-Number Sequence Review
-Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **1**.
+Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **0**.
 
 ## Blocking Reasons
 No hard safety blockers detected.
 
 ## Channel-number collision review
 
-- **426** — PRESERVED (pre-existing): Fashion&LifeStyle [International]; FON Music [International]
+No duplicate primary channel numbers.
 
 ## Permanent channel-ban blockers
 
@@ -54,11 +54,7 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 
 ## Warnings / Manual Review
 
-- pre-existing owner-curated duplicate channel numbers preserved unchanged: 426
-- orphan Backup entries awaiting owner review: 19
-- entries missing tvg-language: 20
-- raw resolution/geoblock tags in channel names: 20
-- New queue candidates pending owner review: 1
+No outstanding metadata or discovery warnings.
 
 ## Review-queue logo gaps
 
@@ -72,30 +68,11 @@ None.
 
 ## Raw name tags
 
-- **CCTV Kunnamkulam (720p)** — New Channels
-- **City Channel HD (1080p)** — New Channels
-- **City Vision Kannur (576p)** — New Channels
-- **Drishya TV (576p)** — New Channels
-- **Drisya TV (576p)** — New Channels
-- **Kasargod Vision (576p)** — New Channels
-- **KCN Kasargod (576p)** — New Channels
-- **Kerala Today TV (1080p)** — New Channels
-- **Malappuram Cable Vision (1080p)** — New Channels
-- **New Vision HD (576p)** — New Channels
-- **NM Media Channel HD (1080p)** — New Channels
-- **Periyar Vision (1080p)** — New Channels
-- **South Vision (1080p)** — New Channels
-- **Wayanad Vision Movies (720p)** — New Channels
-- **Wayanad Vision Plus (720p)** — New Channels
-- **Malabar Plus (720p)** — New Channels
-- **Thanima (1080p)** — New Channels
-- **CC NET (1080p)** — New Channels
-- **K7 Keralam Channel (1080p)** — New Channels
-- **Sristi TV (1080p)** — New Channels
+None.
 
 ## Queue validation
 
-- INWILD country not verified as BD/IN (id carries a non-BD/IN country suffix)
+Queue country checks completed.
 
 ## Missing local logo files
 

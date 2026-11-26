@@ -1,11 +1,11 @@
 # Cross-Playlist Metadata Backfill
 
-Generated: **2026-11-26T00:17:47+00:00**
+Generated: **2026-11-26T10:38:17+00:00**
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **3eed831257f2645543d1d7b58829ecd86618988210a25acb0891f26815860bc1**
-- International-Playlist.m3u SHA-256: **ae090b7bdd1fb00106c6b28ce85030047395270f2023a1c39cf3c8e4922d51a6**
+- IPTV-Playlist.m3u SHA-256: **6ed75613aa2965cc341a0d144242ed4fab07eebdd8f1175ab003c66d0f701a97**
+- International-Playlist.m3u SHA-256: **3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155**
 
 Only missing tvg-country and tvg-language values were filled. Sources: exact playlist tvg-id/channel-id, unique exact channel names, and iptv-org channel/feed metadata. Unresolved broadcast languages are marked und (ISO 639-2 undetermined), never guessed. iptv-org catalogue status: loaded.
 The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, stream URLs, or Backup/Review/Adult/Not Playing entries.
@@ -14,8 +14,8 @@ The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, st
 
 | Playlist | Entries changed | Country fields filled | Language fields filled | Language marked undetermined | Active entries still missing either field | Stream URL inventory | SHA-256 |
 |---|---:|---:|---:|---:|---:|---|---|
-| IPTV-Playlist.m3u | 0 | 0 | 0 | 0 | 0 | unchanged (f4308f76911e...) | 3eed831257f2645543d1d7b58829ecd86618988210a25acb0891f26815860bc1 |
-| International-Playlist.m3u | 0 | 0 | 0 | 0 | 7 | unchanged (2f2f1544697f...) | ae090b7bdd1fb00106c6b28ce85030047395270f2023a1c39cf3c8e4922d51a6 |
+| IPTV-Playlist.m3u | 0 | 0 | 0 | 0 | 0 | unchanged (ef7b1c5c1992...) | 6ed75613aa2965cc341a0d144242ed4fab07eebdd8f1175ab003c66d0f701a97 |
+| International-Playlist.m3u | 0 | 0 | 0 | 0 | 7 | unchanged (3c5a3028e53f...) | 3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155 |
 
 ## Policy
 
