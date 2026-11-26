@@ -30,7 +30,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "Safari TV Tamil (Not 24/7)", "CVR Health", "Vokta TV (720p)",
         ]
         self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_NAMES), 44)
-        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_IDS), 32)
+        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_IDS), 33)
         for name in names:
             with self.subTest(name=name):
                 self.assertIn(canonical_channel_name(name), PERMANENTLY_BANNED_CHANNEL_NAMES)
@@ -38,6 +38,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
 
     def test_permanently_banned_ids_block_renamed_aliases_and_quality_suffixes(self):
         examples = [
+            ("Nepal1.in@SD", "Nepal 1 news feed"),
             ("4SiDESTV.in@HD", "Renamed regional feed"),
             ("DDIndia.in@SD", "Renamed news feed"),
             ("GlobalPunjab.in", "Punjabi alternative stream"),
@@ -82,10 +83,13 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "https://example.invalid/taaza.m3u8\n"
             '#EXTINF:-1 tvg-id="PulariTV.in@SD" tvg-name="Pulari TV" tvg-country="IN" group-title="New Channels",Pulari TV\n'
             "https://example.invalid/pulari.m3u8\n"
+            '#EXTINF:-1 tvg-id="Nepal1.in@SD" tvg-name="Nepal 1" tvg-country="IN" group-title="Review",Nepal 1\n'
+            "https://example.invalid/nepal1.m3u8\n"
         )
         filtered, removed = purge_forbidden_existing_queue_rows(text)
-        self.assertEqual(removed, ["Taaza TV"])
+        self.assertEqual(removed, ["Taaza TV", "Nepal 1"])
         self.assertNotIn("Taaza TV", filtered)
+        self.assertNotIn("Nepal 1", filtered)
         self.assertIn("Pulari TV", filtered)
 
     def test_indian_news_and_non_islamic_religious_channels_are_rejected(self):
