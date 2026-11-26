@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-26T11:01:26+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-27T05:36:57+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12164
-- Existing playlist records: 3322
+- Existing playlist records: 3318
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2186
+- Exact source URLs already in playlist: 2182
 - Duplicate URLs within source feed: 0
-- New eligible source records after URL/policy filtering: 148
+- New eligible source records after URL/policy filtering: 152
 - Adult channels discovered directly into Adult: 0
 - Fashion TV channels discovered directly into Fashion TV: 0
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
@@ -18,7 +18,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
-- New Backups staged for manual review: 4
+- New Backups staged for manual review: 8
 - Category migrations: 0
 - Existing discovery-queue entries removed: 0
 
@@ -31,6 +31,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - **Hollywood Ukraine (576p)** — New Channels — UA — http://dtv.vol.net.ua/Hollywood-HD/index.m3u8
 - **HomePlus** — New Channels — IR — https://homeplushls.wns.live/hls/stream.m3u8
 - **ICC plus (1080p)** — New Channels — US — https://icchls.wns.live/hls/stream.m3u8
+- **Kinosvidanie (1080p)** — New Channels — RU — https://stream8.cinerama.uz/1203/tracks-v1a1/mono.m3u8
 - **More TV Sci-fi** — New Channels — DE — https://jmp2.uk/plu-645e00d5d3fdde000829463a.m3u8
 - **Mosfilm Gold Collection (576p)** — New Channels — RU — http://31.222.235.15/mosfilm/index.m3u8
 - **Patriot (720p)** — New Channels — RU — https://stream.smotrim.ru/hls2/static/playlist_4.m3u8
@@ -72,7 +73,6 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
 - **ATN Music (360p)** — New Channels — BD — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 - **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
-- **BRIDGE Hits (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
 - **BRIDGE Rap (720p) [Geo-blocked]** — New Channels — RU — https://bridgemedia-hls.cdnvideo.ru/hls/live/6affed9990affe00013a80b1/720p.m3u8
 
 ## Adult channels added directly to Adult
@@ -83,10 +83,14 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Backup alternates
 
+- **Indiyskoye Kino** — RU — https://stream8.cinerama.uz/1060/tracks-v1a1/mono.m3u8
+- **KinoHit** — RU — https://stream8.cinerama.uz/1055/tracks-v1a1/mono.m3u8
 - **Kinouzhas** — RU — http://s1.merlive.am/Kinoujas/index.m3u8
 - **Viasat Kino Action** — UA — http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
 - **8XM** — PK — https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
 - **M1 (Ukraine)** — UA — http://dtv.vol.net.ua/M1-HD/index.m3u8
+- **Muzyka Pervogo** — RU — https://stream8.cinerama.uz/1201/tracks-v1a1/mono.m3u8
+- **TRT Muzik** — TR — https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
 
 ## Country Migrations
 
@@ -114,19 +118,19 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-26T11:01:37+06:00
+- Run timestamp: 2026-11-27T05:37:13+06:00
 - Mode: international
-- New entries and discovery queues probed: 71
-- Verified live media responses: 10
-- Verified new primary channels retained in New Channels: 6
-- Verified alternate streams retained in New Backups: 4
-- Inconclusive candidates retained for manual review: 3
-- Unverified backup streams moved to Review: 0
-- Definitively dead new candidates removed: 58
+- New entries and discovery queues probed: 72
+- Verified live media responses: 14
+- Verified new primary channels retained in New Channels: 4
+- Verified alternate streams retained in New Backups: 10
+- Inconclusive candidates retained for manual review: 9
+- Unverified backup streams moved to Review: 2
+- Definitively dead new candidates removed: 47
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
-- Candidates retained without authentic local logos (no placeholder used): 0
+- Candidates retained without authentic local logos (no placeholder used): 4
 
 ### Stream probe details
 - Removed newly discovered 4 Fun TV from New Channels — HTTP 404.
@@ -136,16 +140,18 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Andina RTV (720p) from New Channels — HTTP 404.
 - Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
 - Removed newly discovered BRIDGE Classic (576p) from New Channels — HTTP 404.
-- Removed newly discovered BRIDGE Rap (720p) [Geo-blocked] from New Channels — HTTP 404.
+- Retained BRIDGE Dance [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Retained BRIDGE Jazz [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Retained BRIDGE Rap (720p) [Geo-blocked] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Kept BRIDGE Rap (720p) [Geo-blocked] in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
 - Retained Galaxy in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Retained Galaxy Premium in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
-- Removed newly discovered Hollywood Ukraine (576p) from New Channels — HTTP 404.
+- Retained Hollywood Ukraine (576p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Removed newly discovered HomePlus from New Channels — HTTP 404.
 - Removed newly discovered ICC plus (1080p) from New Channels — HTTP 404.
-- Removed newly discovered Kinosvidanie from New Channels — HTTP 404.
-- Retained Komsan TV [Not 24/7] in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Retained Komsan TV [ ] in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Removed newly discovered More TV Sci-fi from New Channels — HTTP 404.
 - Removed newly discovered Mosfilm Gold Collection (576p) from New Channels — HTTP 404.
 - Removed newly discovered Patriot (720p) from New Channels — HTTP 404.
@@ -154,7 +160,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Pluto TV Notti di Sangue from New Channels — HTTP 404.
 - Removed newly discovered Pluto TV Notti di Terrore from New Channels — HTTP 404.
 - Removed newly discovered Pluto TV Weihnachten im Sommer from New Channels — HTTP 404.
-- Removed newly discovered Prokino (360p) from New Channels — HTTP 404.
+- Retained Prokino (360p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Removed newly discovered Rakuten TV Action Movies (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Action Movies Finland (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Rakuten TV Action Movies Germany (1080p) from New Channels — HTTP 404.
@@ -180,26 +186,25 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Summer of Movies from New Channels — HTTP 404.
 - Removed newly discovered Sundance TV (Spain) from New Channels — HTTP 404.
 - Removed newly discovered TVS Film Noir Network (720p) from New Channels — HTTP success returned an HTML/error page, not a TV stream.
-- Removed newly discovered Viasat Kino (Ukraine) (576p) from New Channels — HTTP 404.
+- Retained Viasat Kino (Ukraine) (576p) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
+- Kept Viasat Kino (Ukraine) (576p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Viasat Kino (Ukraine) Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Removed newly discovered 8XM from New Backups — HTTP 404.
-- Removed newly discovered Indiyskoye Kino from New Backups — HTTP 404.
-- Removed newly discovered KinoHit from New Backups — HTTP 404.
+- Kept Indiyskoye Kino in New Backups without tvg-logo — no authentic local repository asset was available.
+- Kept KinoHit in New Backups without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
-- Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
-- Removed newly discovered Muzyka Pervogo from New Backups — HTTP 404.
-- Removed newly discovered TRT Muzik from New Backups — HTTP 404.
-- Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
+- Moved unverified alternate stream M1 (Ukraine) from New Backups to Review — probe was inconclusive (connection could not be confirmed: URLError).
+- Moved unverified alternate stream Viasat Kino Action from New Backups to Review — probe was inconclusive (connection could not be confirmed: URLError).
 
 ## Final validation
 
-- Run timestamp: 2026-11-26T11:01:37+06:00
+- Run timestamp: 2026-11-27T05:37:13+06:00
 - Validation status: PASS
-- M3U entries parsed: 3318
+- M3U entries parsed: 3329
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 0
+- Discovery entries missing a logo (left blank rather than using a placeholder): 4
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
