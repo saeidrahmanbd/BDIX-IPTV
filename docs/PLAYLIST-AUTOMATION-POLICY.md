@@ -51,12 +51,17 @@ The owner clarified that broadcaster headquarters, incorporation, uplink or coun
 Do not reject a channel solely because its metadata country is PK, CA, US, AE or another country. Do not classify a channel as Indian solely because its metadata country is IN. Inspect the actual channel programming and classify by content genre. News-only channels do not qualify for these four groups.
 
 Owner-directed corrections:
-- Jalwa TV remains in Indian Music because its programming is music; its PK country and Urdu language metadata remain unchanged.
+- Jalwa TV (`JalwaTV.pk@SD`) belongs in `Pakistani`: it is a Pakistani music channel, not an Indian music channel. Preserve its PK/Urdu metadata.
 - Wayanad Vision Movies belongs in Indian Movies.
 - Movies Now, Sony Movies, and Star Movies belong in International per the owner's explicit instruction; rename `Star Movies (India) HD` to `Star Movies`.
 - MBC Bollywood is an Arabic-language service for this playlist's classification; move it to International and rename it `MBC`. Preserve its channel ID and EPG identity.
 - KCM India remains in Indian Entertainment because its programming comprises English-language dramas, movies and factual entertainment; its non-Indian operator/origin alone is not grounds for exclusion.
-- Nepal 1 remains in Review because the identified current programming is APN TV news, not an eligible entertainment format.
+- Nepal 1 (`Nepal1.in@SD`) is prohibited non-Bangladeshi news content; remove it from every playlist group and permanently block its identity from rediscovery.
+
+- Non-Bangladeshi news channels are prohibited from every playlist, including `International`, `Backup` and `Review`. Remove them entirely; do not park them in Review. Bangladeshi news channels remain allowed.
+- The classification is based on the actual programme genre/content, not the broadcaster's headquarters, distribution market, uplink, or country metadata. For example, a Pakistani music channel is not an Indian Music channel merely because it broadcasts music.
+- Recheck corrections: Alankar TV -> Indian Entertainment (Jatra/drama-led Odia entertainment); Tabbar Hits -> Indian Music (Punjabi music channel); Mahua Play -> Indian Movies (Bhojpuri movie service); TamilVision-TV -> Indian Entertainment (mixed Tamil-language entertainment, not a dedicated movie channel); NTC TV language metadata -> `tam`.
+- Jaihind TV, Al Jazeera, BBC World, CNN and DW News are non-Bangladeshi news channels and are permanently excluded from the playlist and automatic rediscovery.
 
 The main-playlist publication gate verifies that every pre-existing stream URL occurrence remains present. Routine automation may repair metadata and authentic local-logo references only. It must preserve existing row order, group assignments, channel numbers and stream URLs. It must not promote, demote, migrate, renumber, regroup or reassemble existing IPTV rows. New discoveries remain in the manual `New Channels` / `New Backups` queues for owner review.
 
