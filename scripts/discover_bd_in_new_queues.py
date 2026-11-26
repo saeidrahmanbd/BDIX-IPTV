@@ -224,6 +224,11 @@ PERMANENTLY_BANNED_CHANNEL_NAMES = {
 # exact-ID denylist prevents renamed aliases and alternate feeds from returning.
 PERMANENTLY_BANNED_CHANNEL_IDS = {
     "nepal1.in",
+    "aljazeera.qa",
+    "custom.bbcworld",
+    "cnn.us",
+    "dwnews.de",
+    "jaihindtv.in",
     "4sidestv.in",
     "ddindia.in",
     "globalpunjab.in",
