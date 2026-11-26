@@ -58,10 +58,10 @@ Owner-directed corrections:
 - KCM India remains in Indian Entertainment because its programming comprises English-language dramas, movies and factual entertainment; its non-Indian operator/origin alone is not grounds for exclusion.
 - Nepal 1 (`Nepal1.in@SD`) is prohibited non-Bangladeshi news content; remove it from every playlist group and permanently block its identity from rediscovery.
 
-- Non-Bangladeshi news channels are prohibited from every playlist, including `International`, `Backup` and `Review`. Remove them entirely; do not park them in Review. Bangladeshi news channels remain allowed.
+- Non-Bangladeshi news channels are prohibited from every playlist, including `International`, `Backup` and `Review`, except the four owner-approved International news exceptions: Al Jazeera (`AlJazeera.qa`), BBC World (`custom.bbcworld`), CNN (`CNN.us`) and DW News (`DWNews.de`). Keep these four in `International`; their exact identities are exempt from automatic foreign-news exclusion. Bangladeshi news channels remain allowed.
 - The classification is based on the actual programme genre/content, not the broadcaster's headquarters, distribution market, uplink, or country metadata. For example, a Pakistani music channel is not an Indian Music channel merely because it broadcasts music.
 - Recheck corrections: Alankar TV -> Indian Entertainment (Jatra/drama-led Odia entertainment); Tabbar Hits -> Indian Music (Punjabi music channel); Mahua Play -> Indian Movies (Bhojpuri movie service); TamilVision-TV -> Indian Entertainment (mixed Tamil-language entertainment, not a dedicated movie channel); NTC TV language metadata -> `tam`.
-- Jaihind TV, Al Jazeera, BBC World, CNN and DW News are non-Bangladeshi news channels and are permanently excluded from the playlist and automatic rediscovery.
+- Jaihind TV (`JaihindTV.in@SD`) is non-Bangladeshi news and remains permanently excluded from the playlist and automatic rediscovery. Al Jazeera, BBC World, CNN and DW News are explicit owner-approved exceptions and must remain in `International`.
 
 The main-playlist publication gate verifies that every pre-existing stream URL occurrence remains present. Routine automation may repair metadata and authentic local-logo references only. It must preserve existing row order, group assignments, channel numbers and stream URLs. It must not promote, demote, migrate, renumber, regroup or reassemble existing IPTV rows. New discoveries remain in the manual `New Channels` / `New Backups` queues for owner review.
 
