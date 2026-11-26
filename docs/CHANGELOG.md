@@ -5,29 +5,58 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-25 — `IPTV-Playlist.m3u`
+### 2026-11-26 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **0 / 0**
-- Backup URL updates: **0**
-- Logo reference changes: **1**
-- Replaced channel identities: **0**
+- New channel identities: **11**
+- Channel identities removed: **138**
+- Stream URLs added / removed: **64 / 283**
+- Backup URL updates: **2**
+- Logo reference changes: **0**
+- Replaced channel identities: **35**
 - Duplicate URL occurrences removed: **0**
 
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-25 — `International-Playlist.m3u`
+Added channel identities (up to 10):
+- CC NET
+- K7 Keralam Channel
+- Malabar Plus
+- Thanima
+- Discovery Bangla
+- Cartoon Network
+- beIN SPORTS Arabic
+- Cricbuzz
+- Sky Sports Cricket
+- Star Sports 3
 
-- New channel identities: **2**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **2 / 0**
+Removed channel identities (up to 10):
+- Ayna TV
+- CB24 TV
+- News 21
+- Star News
+- MTV India
+- Punjabi Beats
+- Vision Beats
+- Zee Tamil
+- Zee Telugu
+- AMC
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-26 — `International-Playlist.m3u`
+
+- New channel identities: **3**
+- Channel identities removed: **2**
+- Stream URLs added / removed: **3 / 6**
 - Backup URL updates: **0**
-- Logo reference changes: **8**
+- Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- BRIDGE Jazz [ ]
+- BRIDGE Hits
+- Komsan TV [ ]
+- Viasat Kino (Romania)
+
+Removed channel identities (up to 10):
+- Kinosvidanie
 - TVS Film Noir Network
 
 ## [5.1] — Playlist Studio (2026-11-11)
