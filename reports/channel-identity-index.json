@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25T09:28:38+00:00",
+  "generated": "2026-11-26T00:19:29+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -6065,6 +6065,20 @@
       "primary": 1,
       "backup": 2
     },
+    "malabarplus": {
+      "names": [
+        "Malabar Plus (720p)"
+      ],
+      "ids": [
+        "malabarplus.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "malappuramcablevision": {
       "names": [
         "Malappuram Cable Vision (1080p)"
@@ -10032,6 +10046,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "thanima": {
+      "names": [
+        "Thanima (1080p)"
+      ],
+      "ids": [
+        "thanima.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "thanthione": {
       "names": [

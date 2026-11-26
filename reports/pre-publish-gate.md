@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-25T09:27:08+00:00**
-Source playlist SHA-256: **72b27febe9a11669f9351b81beac6ff23b82b10f241a4052af20783e38fde0cf**
+Generated: **2026-11-26T00:18:19+00:00**
+Source playlist SHA-256: **3eed831257f2645543d1d7b58829ecd86618988210a25acb0891f26815860bc1**
 
 Status: **PASS**
 
-- Current entries: **1369**
+- Current entries: **1371**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -24,8 +24,8 @@ Status: **PASS**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **15**
-- Raw resolution/geoblock name tags: **15**
+- Entries missing tvg-language: **17**
+- Raw resolution/geoblock name tags: **17**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -55,8 +55,8 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 ## Warnings / Manual Review
 
 - pre-existing owner-curated duplicate channel numbers preserved unchanged: 426
-- entries missing tvg-language: 15
-- raw resolution/geoblock tags in channel names: 15
+- entries missing tvg-language: 17
+- raw resolution/geoblock tags in channel names: 17
 - New queue candidates pending owner review: 1
 
 ## Review-queue logo gaps
@@ -86,6 +86,8 @@ None.
 - **South Vision (1080p)** — New Channels
 - **Wayanad Vision Movies (720p)** — New Channels
 - **Wayanad Vision Plus (720p)** — New Channels
+- **Malabar Plus (720p)** — New Channels
+- **Thanima (1080p)** — New Channels
 
 ## Queue validation
 

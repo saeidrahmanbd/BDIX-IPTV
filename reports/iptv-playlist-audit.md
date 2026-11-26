@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-25T09:27:07.361305+00:00**
-Source playlist SHA-256: **72b27febe9a11669f9351b81beac6ff23b82b10f241a4052af20783e38fde0cf**
+Generated: **2026-11-26T00:18:18.178410+00:00**
+Source playlist SHA-256: **3eed831257f2645543d1d7b58829ecd86618988210a25acb0891f26815860bc1**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1369**
-- Unique channel IDs: **829**
+- Playlist entries: **1371**
+- Unique channel IDs: **831**
 - IDs with multiple streams: **265**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -21,7 +21,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1369**
+- Logo references checked: **1371**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **1**
@@ -1216,7 +1216,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1369**
+- Healthy/local references: **1371**
 - External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair

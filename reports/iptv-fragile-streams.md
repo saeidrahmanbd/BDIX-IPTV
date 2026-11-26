@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-25T09:28:37+00:00**
-IPTV-Playlist.m3u SHA-256: **72b27febe9a11669f9351b81beac6ff23b82b10f241a4052af20783e38fde0cf**
+Generated: **2026-11-26T00:19:29+00:00**
+IPTV-Playlist.m3u SHA-256: **3eed831257f2645543d1d7b58829ecd86618988210a25acb0891f26815860bc1**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **287**
+- Flagged streams: **289**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -115,6 +115,8 @@ These streams are not automatically removed. URL credentials, user information a
 | New Vision HD (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newvision2924/index.m3u8` |
 | NM Media Channel HD (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newmedia2924/index.m3u8` |
 | South Vision (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/southvsnklm/index.m3u8` |
+| Malabar Plus (720p) | New Channels | credential-bearing route pattern (values redacted) | `http://cloud.logichost.in:1935/live/mplus/index.m3u8` |
+| Thanima (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/thanimatvtvm/index.m3u8` |
 | 7S Music | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/771/master.m3u8` |
 | 9X Jalwa | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/161/master.m3u8` |
 | 9X Tashan | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/178/master.m3u8` |
