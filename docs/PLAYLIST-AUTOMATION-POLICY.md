@@ -39,6 +39,19 @@ Both rows were removed from `New Channels`. Their exact identities are now expli
 
 Disney Channel India (`DisneyChannel.in@HD`) was already present in the primary `Kids` group; no additional promotion was needed. Its separate alternate stream remains in `Backup`.
 
+### Owner-directed Indian-group origin/category corrections — 2026-11-26
+
+The four Indian groups are restricted to Indian-origin channels that match the group genre. A channel's language, audience, or programme content alone does not make a foreign-origin broadcaster Indian. Preserve Indian-origin channels when they air foreign-language or Hollywood content if they still meet the group's channel-origin and genre rule.
+
+Manual corrections:
+- `JalwaTV.pk@SD`: `Indian Music` -> `Pakistani` (Pakistan broadcaster; PK/Urdu identity). Its alternate stream remains in `Backup`.
+- `WayanadVisionMovies.in@SD`: `Indian Entertainment` -> `Indian Movies`.
+- `MoviesNow.in@HD` and `SonyMovies.in`: `International` -> `Indian Movies`; both are India-origin English-language movie channels.
+- `KCM.sg@India`: `Indian Entertainment` -> `International`; KC Global Media's English-language FAST service is a global operator's India-market feed, not an Indian-origin broadcaster.
+- `Nepal1.in@SD`: `Indian Entertainment` -> `Review`; current channel evidence indicates APN TV news rebroadcast rather than an entertainment service. Its alternate stream remains in `Backup`.
+
+MBC Bollywood requires owner clarification before any Pakistani-group move or rename: the current `MBCBollywood.ae` stream is the MBC Group channel targeted at MENA audiences, not a Pakistani broadcaster. Do not relabel its country as Pakistan based only on the Bollywood content.
+
 The main-playlist publication gate verifies that every pre-existing stream URL occurrence remains present. Routine automation may repair metadata and authentic local-logo references only. It must preserve existing row order, group assignments, channel numbers and stream URLs. It must not promote, demote, migrate, renumber, regroup or reassemble existing IPTV rows. New discoveries remain in the manual `New Channels` / `New Backups` queues for owner review.
 
 The former one-time owner-requested migration authorization was revoked on 2026-11-14 and its automatic workflow path has been retired. The revoked marker remains in the repository as an audit record; it is not read by production automation. Any future structural exception requires a new, explicit owner decision and a separately reviewed change; the retired queue-promotion mechanism must not be reactivated.
