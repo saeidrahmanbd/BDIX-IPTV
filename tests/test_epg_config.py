@@ -285,7 +285,7 @@ class EpgConfigTests(unittest.TestCase):
             [call.args[0].full_url for call in urlopen.call_args_list],
             [
                 "https://www.rtvbd.tv/schedule.php",
-                "https://rtvonline.com/home/",
+                "https://rtvonline.com/index.php/bangladesh",
                 "https://rtvonline.com/entertainment/rtv/413846",
             ],
         )
@@ -323,7 +323,7 @@ class EpgConfigTests(unittest.TestCase):
             [call.args[0].full_url for call in urlopen.call_args_list],
             [
                 "https://www.rtvbd.tv/schedule.php",
-                "https://rtvonline.com/home/",
+                "https://rtvonline.com/index.php/bangladesh",
                 "https://rtvonline.com/entertainment/rtv/413846",
             ],
         )
