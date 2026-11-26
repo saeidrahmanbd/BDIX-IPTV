@@ -39,6 +39,25 @@ Both rows were removed from `New Channels`. Their exact identities are now expli
 
 Disney Channel India (`DisneyChannel.in@HD`) was already present in the primary `Kids` group; no additional promotion was needed. Its separate alternate stream remains in `Backup`.
 
+
+### Owner clarification: Indian groups are programme-based, not origin-based — 2026-11-26
+
+The owner clarified that broadcaster headquarters, incorporation, uplink or country of origin do not determine eligibility for the four Indian groups. Classification is based on the actual channel programming and the four group definitions:
+- Indian Bangla: Bengali-language programming.
+- Indian Movies: movie programming, any language or region.
+- Indian Music: music programming, any language or region.
+- Indian Entertainment: entertainment programming, any language or region.
+
+Do not reject a channel solely because its metadata country is PK, CA, US, AE or another country. Do not classify a channel as Indian solely because its metadata country is IN. Inspect the actual channel programming and classify by content genre. News-only channels do not qualify for these four groups.
+
+Owner-directed corrections:
+- Jalwa TV remains in Indian Music because its programming is music; its PK country and Urdu language metadata remain unchanged.
+- Wayanad Vision Movies belongs in Indian Movies.
+- Movies Now, Sony Movies, and Star Movies belong in International per the owner's explicit instruction; rename `Star Movies (India) HD` to `Star Movies`.
+- MBC Bollywood is an Arabic-language service for this playlist's classification; move it to International and rename it `MBC`. Preserve its channel ID and EPG identity.
+- KCM India remains in Indian Entertainment because its programming comprises English-language dramas, movies and factual entertainment; its non-Indian operator/origin alone is not grounds for exclusion.
+- Nepal 1 remains in Review because the identified current programming is APN TV news, not an eligible entertainment format.
+
 The main-playlist publication gate verifies that every pre-existing stream URL occurrence remains present. Routine automation may repair metadata and authentic local-logo references only. It must preserve existing row order, group assignments, channel numbers and stream URLs. It must not promote, demote, migrate, renumber, regroup or reassemble existing IPTV rows. New discoveries remain in the manual `New Channels` / `New Backups` queues for owner review.
 
 The former one-time owner-requested migration authorization was revoked on 2026-11-14 and its automatic workflow path has been retired. The revoked marker remains in the repository as an audit record; it is not read by production automation. Any future structural exception requires a new, explicit owner decision and a separately reviewed change; the retired queue-promotion mechanism must not be reactivated.
@@ -51,7 +70,7 @@ Daily automation must:
 - Maintain channel metadata, authentic local logos, EPG mappings and correct country/genre grouping.
 - Probe all streams and maintain consecutive Bangladesh-calendar-day failure history.
 - Move a first-day definitive failure to `Review`; remove a stream only after three consecutive definitive failed days. A missed day restarts the streak; an inconclusive/authentication/rate-limit/geo-block result is not a definitive failure and cannot authorize deletion.
-- Re-test `Review` entries. When a row is confirmed working and still satisfies the country/genre policy, migrate it to its correct primary group; if the channel identity already has a primary stream, place the working alternate in `Backup`. Keep invalid or policy-ineligible entries in `Review`.
+- Re-test `Review` entries. When a row is confirmed working and still satisfies the country/genre policy, migrate it to its correct primary group; if the channel identity already has a primary stream, place the working alternate in `Backup`. Remove policy-ineligible channels from all playlist groups immediately; `Review` is only for channels temporarily unavailable pending stream rechecks.
 - Create a dedicated country group only when there are at least five unique primary channel identities for that country. Backup/alternate streams and Review rows do not count. Bangladesh and India retain their established fixed groups; Pakistan and all other country-specific groups follow the five-identity threshold.
 - Discover only dedicated Movies/Music channels worldwide, including Bangladesh, India and Pakistan; preserve existing Fashion TV entries as a legacy exception.
 - Discovery must not broadly reclassify, reorder or delete unrelated existing entries. Commit only validated, targeted queue additions and their fresh report.
