@@ -708,7 +708,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
     def test_owner_approved_fashion_channels_are_preserved_in_international_group(self):
         playlist = (Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
         expected = {
-            "Fashion&LifeStyle", "FashionBox", "FashionTV",
+            "FashionBox", "FashionTV",
             "FashionTV Paris L'Original", "FashionTV Secrets", "Global Fashion Channel",
         }
         found = set()

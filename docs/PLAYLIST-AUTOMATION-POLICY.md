@@ -20,6 +20,15 @@ Automation must never:
 - Alter `Adult` entries or guess country/genre metadata when evidence is ambiguous.
 - Treat an HTTP block, regional restriction, transient outage or inconclusive probe as authorization to remove a channel.
 
+### Explicit owner-approved manual exception — 2026-11-26
+
+The owner explicitly authorized a one-time migration of five already-retained Backup entries in PR #391:
+- `CartoonNetwork.in@SD`, `Pogo.in@SD`, and `SonyYay.in@SD` -> `Kids`.
+- `custom.discoverybangla` -> `Documentary & Wildlife`.
+- `MatribhumiTV.bd` -> `Bangladesh`.
+
+This is a narrowly scoped manual curation exception, not a discovery-policy change. The Indian Kids discovery exclusion remains active for all other Indian Kids candidates. Discovery must continue rejecting those candidates unless the owner gives a new explicit approval. The three named Indian Kids rows must not be used as precedent to automatically admit further Indian Kids channels.
+
 The main-playlist publication gate verifies that every pre-existing stream URL occurrence remains present. Routine automation may repair metadata and authentic local-logo references only. It must preserve existing row order, group assignments, channel numbers and stream URLs. It must not promote, demote, migrate, renumber, regroup or reassemble existing IPTV rows. New discoveries remain in the manual `New Channels` / `New Backups` queues for owner review.
 
 The former one-time owner-requested migration authorization was revoked on 2026-11-14 and its automatic workflow path has been retired. The revoked marker remains in the repository as an audit record; it is not read by production automation. Any future structural exception requires a new, explicit owner decision and a separately reviewed change; the retired queue-promotion mechanism must not be reactivated.
