@@ -222,12 +222,17 @@ PERMANENTLY_BANNED_CHANNEL_NAMES = {
 }
 # Stable base channel IDs (region/quality suffixes after "@" are ignored). This
 # exact-ID denylist prevents renamed aliases and alternate feeds from returning.
-PERMANENTLY_BANNED_CHANNEL_IDS = {
-    "nepal1.in",
+# Explicit owner-approved International news exceptions. These exact IDs may
+# remain in the International group despite the general non-Bangladeshi-news rule.
+EXCEPTIONAL_INTERNATIONAL_NEWS_IDS = {
     "aljazeera.qa",
     "custom.bbcworld",
     "cnn.us",
     "dwnews.de",
+}
+
+PERMANENTLY_BANNED_CHANNEL_IDS = {
+    "nepal1.in",
     "jaihindtv.in",
     "4sidestv.in",
     "ddindia.in",
@@ -413,6 +418,8 @@ def prohibited_channel(
         for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
         if (value or "").strip()
     }
+    if ids & EXCEPTIONAL_INTERNATIONAL_NEWS_IDS:
+        return None
     if ids & PERMANENTLY_BANNED_CHANNEL_IDS:
         return "permanently banned channel"
     for candidate in (name, a.get("tvg-name", "")):
