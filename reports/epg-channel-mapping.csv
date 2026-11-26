@@ -1075,7 +1075,7 @@ International,NOW 90s & 00s,Now90s00s.uk@Poland,NOW.90s00s.uk,https://epgshare01
 International,Navahang TV,NavahangTV.fi@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,NogoumFMTV,NogoumFMTV.eg@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,Noroc TV,NorocTV.md@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-International,Ocko Expres,custom.ockoexpres,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+International,Ocko Expres,custom.ockoexpres,OckoExpres.cz@SD,iptv-org/epg (targeted build-time guide),MAPPED,Exact channel-name and Czech-region match to Ocko Expres; source mapping has current/future programme data.
 International,Oxygen Music,OxygenMusic.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,PMC,PMC.ae@SD,4906,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 International,PMC Royale,PMCRoyale.ae@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
