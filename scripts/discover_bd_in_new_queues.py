@@ -641,6 +641,20 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
         group = a.get("group-title", "").strip()
         _, display = split_extinf(extinf_line)
         name = (a.get("tvg-name") or display).strip()
+        # Permanent identity/name bans apply to every playlist group, including
+        # protected Review and Backup. Temporary discovery-policy checks remain
+        # limited to discovery queues so this cleanup cannot purge unrelated
+        # existing primary channels.
+        normalized_ids = {
+            re.sub(r"@.*$", "", str(a.get(key, "")).strip().casefold())
+            for key in ("tvg-id", "channel-id") if a.get(key)
+        }
+        permanently_banned = bool(normalized_ids & PERMANENTLY_BANNED_CHANNEL_IDS) or (
+            canonical_channel_name(name) in PERMANENTLY_BANNED_CHANNEL_NAMES
+        )
+        if permanently_banned:
+            removed.append(name or "(unnamed)")
+            continue
         is_discovery_queue = (
             group in queue_groups
             or bool(re.search(r'group-title="(?:New Channels|New Backups|New Backup)"', extinf_line, re.I))
