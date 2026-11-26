@@ -30,7 +30,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             "Safari TV Tamil (Not 24/7)", "CVR Health", "Vokta TV (720p)",
         ]
         self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_NAMES), 44)
-        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_IDS), 33)
+        self.assertEqual(len(PERMANENTLY_BANNED_CHANNEL_IDS), 38)
         for name in names:
             with self.subTest(name=name):
                 self.assertIn(canonical_channel_name(name), PERMANENTLY_BANNED_CHANNEL_NAMES)
@@ -54,6 +54,11 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("PowerTurkTV.tr@HD", "Power Turk alternate"),
             ("CVRHealth.in@SD", "Renamed CVR Health feed"),
             ("VoktaTV.bd@SD", "Renamed Vokta TV feed"),
+            ("AlJazeera.qa", "Al Jazeera news feed"),
+            ("custom.bbcworld", "BBC World news feed"),
+            ("CNN.us", "CNN news feed"),
+            ("DWNews.de", "DW News feed"),
+            ("JaihindTV.in@SD", "Jaihind Malayalam news feed"),
         ]
         for channel_id, alias in examples:
             with self.subTest(channel_id=channel_id):
@@ -65,6 +70,33 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                     ),
                     "permanently banned channel",
                 )
+
+    def test_non_bangladeshi_news_channels_are_permanently_excluded(self):
+        playlist = (Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        prohibited_ids = ("AlJazeera.qa", "custom.bbcworld", "CNN.us", "DWNews.de", "JaihindTV.in@SD")
+        for channel_id in prohibited_ids:
+            with self.subTest(channel_id=channel_id):
+                self.assertNotIn(f'tvg-id="{channel_id}"', playlist)
+                self.assertEqual(
+                    prohibited_channel({"tvg-id": channel_id, "channel-id": channel_id}, channel_id),
+                    "permanently banned channel",
+                )
+
+    def test_programme_based_indian_group_corrections_and_language_metadata(self):
+        playlist = (Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        expected = {
+            "AlankarTV.in@SD": "Indian Entertainment",
+            "TabbarHits.in": "Indian Music",
+            "MahuaPlay.in@SD": "Indian Movies",
+            "TamilVisionTV.ca@SD": "Indian Entertainment",
+        }
+        for channel_id, group in expected.items():
+            with self.subTest(channel_id=channel_id):
+                rows = [line for line in playlist.splitlines() if line.startswith("#EXTINF:") and f'tvg-id="{channel_id}"' in line]
+                self.assertEqual(len(rows), 1)
+                self.assertIn(f'group-title="{group}"', rows[0])
+        self.assertRegex(playlist, r'tvg-id="MBCBollywood.ae".*tvg-language="ara"|tvg-language="ara".*tvg-id="MBCBollywood.ae"')
+        self.assertRegex(playlist, r'tvg-id="NTCTV.in@SD".*tvg-language="tam"|tvg-language="tam".*tvg-id="NTCTV.in@SD"')
 
     def test_safari_tv_tamil_is_blocked_without_blocking_main_safari_tv(self):
         attrs = {"tvg-id": "SafariTV.in@SD", "tvg-name": "Safari TV Tamil (Not 24/7)"}
