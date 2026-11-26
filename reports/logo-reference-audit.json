@@ -4,7 +4,7 @@
   "logo_image_files": 5278,
   "all_explicitly_referenced_logo_files": 2521,
   "runtime_referenced_logo_files": 2519,
-  "playlist_referenced_logo_files": 2484,
+  "playlist_referenced_logo_files": 2485,
   "apparently_unreferenced_by_any_text_file": 2757,
   "apparently_unreferenced_by_runtime_sources": 2759,
   "missing_explicit_logo_targets": [
@@ -1214,7 +1214,6 @@
       "scripts/repair_playlist_logos.py"
     ],
     "logos/blob/main/countries/international/bbc-world-news-int.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/blob/main/countries/international/beinsports/old/horizontal/bein-sports-xtra-hz-int.png": [
@@ -10631,6 +10630,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/al-jazeera.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -11355,6 +11355,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bbc-world-news.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -13361,6 +13362,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/dw-news.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -15654,7 +15656,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/local-logo-cnn.png": [
-      "reports/logo-authenticity-manifest.json"
+      "IPTV-Playlist.m3u"
     ],
     "logos/lol-tv.png": [
       "scripts/migrate_external_logos_fixed.py"
@@ -22180,6 +22182,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/al-jazeera.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22904,6 +22907,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bbc-world-news.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -24911,6 +24915,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/dw-news.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -27205,7 +27210,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/local-logo-cnn.png": [
-      "reports/logo-authenticity-manifest.json"
+      "IPTV-Playlist.m3u"
     ],
     "logos/lol-tv.png": [
       "scripts/migrate_external_logos_fixed.py"

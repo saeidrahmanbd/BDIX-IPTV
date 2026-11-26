@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-26T09:42:11+00:00**
+Generated: **2026-11-26T09:49:35+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **eaa1ac46a4fa9b55b36af6ec5a1a09afc780f5619ae410876a58f31b65fbfbfc**
+- IPTV-Playlist.m3u SHA-256: **060840fc0bc2acd4d6c3154e84d45e61596bf5fa7f2c0899d864323d14a484f1**
 - International-Playlist.m3u SHA-256: **3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **746**
-- Playlist references whose asset stem differs from the normalized channel name: **1501**
-- Unreferenced image assets immediately inside logos/: **1001** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1502**
+- Unreferenced image assets immediately inside logos/: **1000** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1102,6 +1102,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Tag TV | tag-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Waseb TV | waseb-tv.png | Pakistani |
 | IPTV-Playlist.m3u | AMC Thrillers | amc-triller.png | International |
+| IPTV-Playlist.m3u | BBC World | bbc-world-news.png | International |
 | IPTV-Playlist.m3u | Blues TV | blues-tv.png | International |
 | IPTV-Playlist.m3u | CMC TV | cmc-tv.png | International |
 | IPTV-Playlist.m3u | Cowboy Movie Channel | cowboy-movie-channel.png | International |
