@@ -704,6 +704,25 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertRegex(playlist, r'tvg-name="R Plus Gold".*group-title="Indian Bangla"|group-title="Indian Bangla".*tvg-name="R Plus Gold"')
 
 
+    def test_owner_excluded_indian_news_and_knowledge_channels_stay_out_of_discovery(self):
+        cases = (
+            ({"tvg-id": "MetroTV.in@SD", "channel-id": "MetroTV.in@SD", "tvg-country": "IN"}, "Metro TV (India)", "news"),
+            ({"tvg-id": "AyushNextCommunicationNetwork.in@SD", "channel-id": "AyushNextCommunicationNetwork.in@SD", "tvg-country": "IN"}, "Ayush Next Communication Network", "knowledge"),
+        )
+        for attrs, name, category in cases:
+            with self.subTest(name=name):
+                self.assertEqual(known_indian_forbidden_category(attrs, name), category)
+                self.assertIn(f"Indian {category} channel is prohibited", prohibited_channel(attrs, name, iptv_discovery=True))
+        playlist = (Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        self.assertNotIn('tvg-id="MetroTV.in@SD"', playlist)
+        self.assertNotIn('tvg-id="AyushNextCommunicationNetwork.in@SD"', playlist)
+
+    def test_disney_channel_is_already_in_kids_group(self):
+        playlist = (Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+        rows = [line for line in playlist.splitlines() if line.startswith("#EXTINF:") and 'tvg-id="DisneyChannel.in@HD"' in line]
+        self.assertTrue(any('group-title="Kids"' in line for line in rows))
+
+
 
     def test_owner_approved_fashion_channels_are_preserved_in_international_group(self):
         playlist = (Path(__file__).resolve().parents[1] / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
