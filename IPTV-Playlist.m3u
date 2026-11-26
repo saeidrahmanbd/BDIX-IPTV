@@ -386,7 +386,7 @@ https://samitaorigin.tangotv.in/HINDIHITS/SAMITAORIGIN/index.m3u8
 https://mumt04.tangotv.in/m18aqlK4INSYNC/index.m3u8
 #EXTINF:-1 tvg-id="IsaiAruvi.in@SD" tvg-name="Isai Aruvi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/isai-aruvi.png" tvg-chno="190" channel-id="IsaiAruvi.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Music",Isai Aruvi
 https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8
-#EXTINF:-1 tvg-id="JalwaTV.pk@SD" tvg-name="Jalwa TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa-tv.png" tvg-chno="191" channel-id="JalwaTV.pk@SD" tvg-country="PK" tvg-language="urd" group-title="Indian Music",Jalwa TV
+#EXTINF:-1 tvg-id="JalwaTV.pk@SD" tvg-name="Jalwa TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa-tv.png" tvg-chno="191" channel-id="JalwaTV.pk@SD" tvg-country="PK" tvg-language="urd" group-title="Pakistani",Jalwa TV
 https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 #EXTINF:-1 tvg-id="KalikaTV.in@SD" tvg-name="Kalika TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kalika-tv.png" tvg-chno="192" channel-id="KalikaTV.in@SD" tvg-country="IN" tvg-language="mal" group-title="Indian Music",Kalika TV
 http://server.applelive.in/kalikatv/kalikatv.m3u8
@@ -630,7 +630,7 @@ https://mumt03.tangotv.in/Dsly5z3HKAIRALIARABIA/index.m3u8
 https://streams.tangotv.in/KAIRALI/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="KalaignarTV.in@SD" tvg-name="Kalaignar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kalaignar-tv-82de1b8f.png" tvg-chno="311" channel-id="KalaignarTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Kalaignar TV
 https://segment.yuppcdn.net/240122/kalaignartv/playlist.m3u8
-#EXTINF:-1 tvg-id="KCM.sg@India" tvg-name="KCM India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kcm-india-14b4e9cf80.png" tvg-chno="312" channel-id="KCM.sg@India" tvg-country="IN" tvg-language="eng" group-title="Indian Entertainment",KCM India
+#EXTINF:-1 tvg-id="KCM.sg@India" tvg-name="KCM India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kcm-india-14b4e9cf80.png" tvg-chno="312" channel-id="KCM.sg@India" tvg-country="IN" tvg-language="eng" group-title="International",KCM India
 https://amg02159-amg02159c7-samsung-in-4001.playouts.now.amagi.tv/playlist/amg02159-kcglobal-kcm-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="KCNKasargod.in@SD" tvg-name="KCN Kasargod" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kcn-kasargod-32b58ffed02e7a179d50.png" tvg-country="IN" group-title="Indian Entertainment" x-discovery-source-country="IN" channel-id="KCNKasargod.in@SD" tvg-language="mal" tvg-chno="394",KCN Kasargod
 https://live.skystream.in/live/kcnksrgod/index.m3u8
@@ -662,7 +662,7 @@ https://mntv.livebox.co.in/mntvhls/live.m3u8
 https://ipcloud.live/nvision/nvisionhd/index.m3u8
 #EXTINF:-1 tvg-id="NammaBangalore.in@SD" tvg-name="Namma Bangalore" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/namma-bangalore.png" tvg-chno="324" channel-id="NammaBangalore.in@SD" tvg-country="IN" tvg-language="kan" group-title="Indian Entertainment",Namma Bangalore
 https://stream.ottlive.co.in/nammatv/index.m3u8
-#EXTINF:-1 tvg-id="Nepal1.in@SD" tvg-name="Nepal 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nepal-1.png" tvg-chno="325" channel-id="Nepal1.in@SD" tvg-country="IN" tvg-language="nep" group-title="Indian Entertainment",Nepal 1
+#EXTINF:-1 tvg-id="Nepal1.in@SD" tvg-name="Nepal 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nepal-1.png" tvg-chno="325" channel-id="Nepal1.in@SD" tvg-country="IN" tvg-language="nep" group-title="Review",Nepal 1
 https://mumt05.tangotv.in/87NeALx2NEPAL1/index.m3u8
 #EXTINF:-1 tvg-id="NewVisionHD.in@SD" tvg-name="New Vision HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/new-vision-e4ea60bbeb3674e20755.png" tvg-country="IN" group-title="Indian Entertainment" x-discovery-source-country="IN" channel-id="NewVisionHD.in@SD" tvg-language="mal" tvg-chno="408",New Vision HD
 https://live.skystream.in/live/newvision2924/index.m3u8
@@ -780,7 +780,7 @@ http://103.85.204.205:1935/VISIONMEDIA/live/playlist.m3u8
 https://mumt07.tangotv.in/zHjX9OFlVISSATV/index.m3u8
 #EXTINF:-1 tvg-id="WayanadVision.in@SD" tvg-name="Wayanad Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wayanad-vision-e34be4ac26de16c0b4a7.png" tvg-country="IN" tvg-language="mal" group-title="Indian Entertainment" x-discovery-source-country="IN" channel-id="WayanadVision.in@SD" tvg-chno="400",Wayanad Vision
 https://online.wayanadvision.in/hls/wayanadvision.m3u8
-#EXTINF:-1 tvg-id="WayanadVisionMovies.in@SD" tvg-name="Wayanad Vision Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wayanad-vision-movies-e71e1066086194408e92.png" tvg-country="IN" group-title="Indian Entertainment" x-discovery-source-country="IN" channel-id="WayanadVisionMovies.in@SD" tvg-language="mal" tvg-chno="401",Wayanad Vision Movies
+#EXTINF:-1 tvg-id="WayanadVisionMovies.in@SD" tvg-name="Wayanad Vision Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wayanad-vision-movies-e71e1066086194408e92.png" tvg-country="IN" group-title="Indian Movies" x-discovery-source-country="IN" channel-id="WayanadVisionMovies.in@SD" tvg-language="mal" tvg-chno="401",Wayanad Vision Movies
 https://online.wayanadvision.in/hls/wvmovies.m3u8
 #EXTINF:-1 tvg-id="WayanadVisionPlus.in@SD" tvg-name="Wayanad Vision Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wayanad-vision-plus-82bd345c3914db6ab3e2.png" tvg-country="IN" group-title="Indian Entertainment" x-discovery-source-country="IN" channel-id="WayanadVisionPlus.in@SD" tvg-language="mal" tvg-chno="402",Wayanad Vision Plus
 https://online.wayanadvision.in/hls/streaming1.m3u8
@@ -894,7 +894,7 @@ https://connection3-ent-nz.samsung.wurl.tv/playlist.m3u8
 https://ml-pull-hwc.myco.io/MixTV/hls/index.m3u8
 #EXTINF:-1 tvg-id="MovieDomeFamily.us" tvg-name="Movie Dome Family" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movie-dome-family.png" tvg-chno="439" channel-id="MovieDomeFamily.us" tvg-country="US" tvg-language="eng" group-title="International",Movie Dome Family
 https://amg00771-kochfilmsgerman-moviedomefamily-tcl-tpicw.amagi.tv/playlist/amg00771-kochfilmsgerman-moviedomefamily-tcl/playlist.m3u8
-#EXTINF:-1 channel-id="MoviesNow.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now.png" tvg-id="MoviesNow.in@HD" tvg-name="Movies Now" tvg-language="eng" tvg-country="IN" group-title="International",Movies Now
+#EXTINF:-1 channel-id="MoviesNow.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now.png" tvg-id="MoviesNow.in@HD" tvg-name="Movies Now" tvg-language="eng" tvg-country="IN" group-title="Indian Movies",Movies Now
 http://27.124.71.27/Movies_Now/index.m3u8
 #EXTINF:-1 tvg-id="MoviesThriller.sa@SD" tvg-name="Movies Thriller" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-thriller.png" tvg-chno="440" channel-id="MoviesThriller.sa@SD" tvg-country="SA" tvg-language="eng" group-title="International",Movies Thriller
 https://shd-amg-fast.edgenextcdn.net/tx012/playlist.m3u8
@@ -928,7 +928,7 @@ https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index.m3u8
 https://stream.mediawork.cz/retrotv/smil:retrotv2.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="ShansonTV.ru" tvg-name="Shanson TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shanson-tv-576p-3c01614e19.png" tvg-chno="454" channel-id="ShansonTV.ru" tvg-country="RU" tvg-language="rus" group-title="International",Shanson TV
 https://streaming.thestream.cyou/live/7009.m3u8
-#EXTINF:-1 tvg-id="SonyMovies.in" tvg-name="Sony Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-movies-563051ab.png" tvg-chno="455" channel-id="SonyMovies.in" tvg-country="IN" tvg-language="eng" group-title="International",Sony Movies
+#EXTINF:-1 tvg-id="SonyMovies.in" tvg-name="Sony Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-movies-563051ab.png" tvg-chno="455" channel-id="SonyMovies.in" tvg-country="IN" tvg-language="eng" group-title="Indian Movies",Sony Movies
 https://a-cdn.klowdtv.com/live1/smc_720p/chunks.m3u8
 #EXTINF:-1 tvg-id="GBAJ400042T1" tvg-name="Sparkle Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sparkle-movies.png" tvg-chno="456" channel-id="GBAJ400042T1" tvg-country="US" tvg-language="eng" group-title="International",Sparkle Movies
 https://61fc4f1a40a342daa23f92141853b7b4.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-gb_SparkleMovies/playlist.m3u8
