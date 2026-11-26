@@ -1325,4 +1325,82 @@ def main():
     report_lines += ["", "## Source Playlist Fingerprints", "", *source_fingerprints, ""]
     PLAYLIST_AUDIT_REPORT.write_text("\n".join(report_lines), encoding="utf-8")
 
+    # A dedicated IPTV-Playlist action list prevents the larger International
+    # playlist from hiding gaps in the primary playlist. It reports identity,
+    # source-schedule and published-guide states separately; it never edits
+    # mappings or promotes channels.
+    primary_path = Path("IPTV-Playlist.m3u")
+    primary_records = playlist_records(primary_path)
+    primary_active = {}
+    for record in primary_records:
+        cid = record["tvg_id"]
+        if cid and record["group"] not in INACTIVE_GROUPS:
+            primary_active.setdefault(cid, record)
+    priority = {
+        "NO_GUIDE_HIT": 0,
+        "MAPPED_NOT_CURRENTLY_FOUND": 1,
+        "MAPPED_ID_ONLY": 1,
+        "MAPPED_ENDED": 1,
+        "MAPPED": 2,
+    }
+    priority_lines = [
+        "# IPTV-Playlist EPG Priority Audit",
+        "",
+        f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
+        "",
+        "This report is scoped only to IPTV-Playlist.m3u. It is an action list, not an automatic mapping mechanism. Backup, Review, Test and discovery-queue groups are excluded using the same active-group policy as the main EPG audit.",
+        "",
+        f"- Active unique IPTV-Playlist identities: **{len(primary_active)}**",
+        f"- IDs with a retained source mapping: **{sum(bool(mapping_by_id.get(cid, {}).get('epg_id')) for cid in primary_active)}**",
+        f"- IDs with current/future source schedules: **{sum(mapping_by_id.get(cid, {}).get('status') == 'MAPPED' for cid in primary_active)}**",
+        f"- IDs with published current/future programmes: **{sum(cid in guide_live for cid in primary_active)}**",
+        f"- IDs without a source mapping: **{sum(not mapping_by_id.get(cid, {}).get('epg_id') for cid in primary_active)}**",
+        "",
+        "## Channel-level priorities",
+        "",
+        "| Priority | Group | Channel | Playlist tvg-id | Mapping status | Source EPG ID(s) | Source feed(s) | Published schedule |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    def primary_priority(cid):
+        row = mapping_by_id.get(cid, {})
+        if cid in guide_live:
+            return 3
+        return priority.get(row.get("status", "NO_GUIDE_HIT"), 0)
+    for cid, record in sorted(
+        primary_active.items(),
+        key=lambda item: (
+            primary_priority(item[0]),
+            item[1]["group"].casefold(),
+            item[1]["name"].casefold(),
+            item[0],
+        ),
+    ):
+        mapped = mapping_by_id.get(cid, {})
+        status = mapped.get("status", "NO_MAPPING")
+        published = "YES" if cid in guide_live else ("CHANNEL ONLY" if cid in guide_channels else "NO")
+        clean = lambda value: str(value or "-").replace("|", "\\|").replace("\\n", " ")
+        priority_label = (
+            "PUBLISHED" if cid in guide_live else
+            "NO SOURCE MAPPING" if not mapped.get("epg_id") else
+            "NO CURRENT SOURCE SCHEDULE" if status != "MAPPED" else
+            "NOT IN PUBLISHED GUIDE"
+        )
+        priority_lines.append(
+            f"| {priority_label} | {clean(record['group'])} | {clean(record['name'])} | {clean(cid)} | {clean(status)} | {clean(mapped.get('epg_id'))} | {clean(mapped.get('source'))} | {published} |"
+        )
+    priority_lines += [
+        "",
+        "## Safe interpretation",
+        "",
+        "- NO SOURCE MAPPING: discover exact provider IDs and validate channel identity before adding an explicit alias.",
+        "- NO CURRENT SOURCE SCHEDULE: investigate feed freshness, source ID correctness and programme validity; a retained ID alone is not coverage.",
+        "- NOT IN PUBLISHED GUIDE: inspect XMLTV generation and publication gates before changing a mapping.",
+        "- PUBLISHED: the playlist tvg-id has current/future programmes in the published XMLTV.",
+        "- Bangladesh identities remain exact-ID/explicit-alias only. No fuzzy or cross-region mapping is applied.",
+        "",
+    ]
+    priority_lines += ["", "## Source Playlist Fingerprints", "", *source_fingerprints, ""]
+    Path("reports/iptv-playlist-epg-priority.md").write_text("\n".join(priority_lines), encoding="utf-8")
+
+
 if __name__=="__main__": main()
