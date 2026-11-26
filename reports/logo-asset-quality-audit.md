@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-26T10:38:40+00:00**
+Generated: **2026-11-26T10:44:39+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **6ed75613aa2965cc341a0d144242ed4fab07eebdd8f1175ab003c66d0f701a97**
-- International-Playlist.m3u SHA-256: **3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155**
+- IPTV-Playlist.m3u SHA-256: **00129460214a9ee239552d01b1bc22ffd907140b7e55a60236d9cf77d46ba935**
+- International-Playlist.m3u SHA-256: **0f07449134d36264a75c856d7f9a04c968349687a62008481b0e025e80290d70**
 
 ## Summary
 
@@ -1446,7 +1446,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | DocuBay TV | docubay-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Epic TV Digital | epic-tv-digital.png | Indian Entertainment |
 | International-Playlist.m3u | Gangaur TV | gangaur-tv.png | Indian Entertainment |
-| International-Playlist.m3u | Jaihind TV | jaihind-tv.png | Indian Entertainment |
 | International-Playlist.m3u | JTBS Classic | verified-jtbs-classic-9feacbbf6a.png | Indian Entertainment |
 | International-Playlist.m3u | Kairali TV | kairali-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Kalaignar TV | kalaignar-tv-82de1b8f.png | Indian Entertainment |
@@ -2211,6 +2210,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Hollywood | hollywood-hd.png | Review |
 | International-Playlist.m3u | Hosanna TV | hosanna-tv-016e291e22.png | Review |
 | International-Playlist.m3u | Islam TV | islam-tv.png | Review |
+| International-Playlist.m3u | Jaihind TV | jaihind-tv.png | Review |
 | International-Playlist.m3u | Jan TV | jan-tv.png | Review |
 | International-Playlist.m3u | JapanimTV | verified-japanimtv-1080p-e537a7ae9b.png | Review |
 | International-Playlist.m3u | Jeevan TV | jeevan-tv.png | Review |
