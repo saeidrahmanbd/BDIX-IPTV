@@ -223,6 +223,7 @@ PERMANENTLY_BANNED_CHANNEL_NAMES = {
 # Stable base channel IDs (region/quality suffixes after "@" are ignored). This
 # exact-ID denylist prevents renamed aliases and alternate feeds from returning.
 PERMANENTLY_BANNED_CHANNEL_IDS = {
+    "nepal1.in",
     "4sidestv.in",
     "ddindia.in",
     "globalpunjab.in",
