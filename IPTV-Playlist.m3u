@@ -2289,5 +2289,85 @@ https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 https://mumbai-edge.smartplaytv.in/Zoom/index.m3u8
 #EXTINF:-1 tvg-id="Zoom.in" tvg-name="Zoom" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" channel-id="Zoom.in" tvg-country="IN" tvg-language="hin" group-title="Backup",Zoom
 https://d2esfk1pb9cdob.cloudfront.net/chunklist_1.m3u8
+#EXTINF:-1 tvg-id="MadaniChannelBangla.bd@SD" tvg-logo="logos/madani-channel-bangla.png" tvg-country="BD" tvg-name="Madani Channel Bangla (1080p)" x-discovery-source-country="BD" group-title="New Channels",Madani Channel Bangla (1080p)
+https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8
+#EXTINF:-1 tvg-id="News21BanglaTV.bd@SD" tvg-logo="logos/news-21-bangla-tv.png" tvg-country="BD" tvg-name="News 21 Bangla TV (1080p)" x-discovery-source-country="BD" group-title="New Channels",News 21 Bangla TV (1080p)
+http://103.190.133.68:1935/news21live/live/playlist.m3u8
+#EXTINF:-1 tvg-id="RupashiBanglaTV.bd@SD" tvg-logo="logos/rupashi-bangla-tv.png" tvg-country="BD" tvg-name="Rupashi Bangla TV (720p)" x-discovery-source-country="BD" group-title="New Channels",Rupashi Bangla TV (720p)
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="AMNTV.in@SD" tvg-logo="logos/amn-tv.png" tvg-country="IN" tvg-name="AMN TV (576p)" x-discovery-source-country="IN" group-title="New Channels",AMN TV (576p)
+https://live.onecloudlive.in/amn/amntv/index.m3u8
+#EXTINF:-1 tvg-id="CineJomjomat.in@SD" tvg-logo="logos/cine-jomjomat.png" tvg-country="IN" tvg-name="Cine Jomjomat (1080p)" x-discovery-source-country="IN" group-title="New Channels",Cine Jomjomat (1080p)
+https://amg13779-amg13779c1-amgplt0016.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg13779-amg13779c1-amgplt0016/playlist.m3u8
+#EXTINF:-1 tvg-id="EpicTV.in@Digital" tvg-country="IN" tvg-name="Epic TV Digital (1080p)" x-discovery-source-country="IN" group-title="New Channels",Epic TV Digital (1080p)
+https://d1fodel5fjpe8b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-68r9vf9490xt2/master.m3u8?ads.ads_cdn=cf&ads.cdn=cf
+#EXTINF:-1 tvg-id="HistoryTV18.in@HD" tvg-logo="logos/international/history-tv18-hd-1080p-geo-blocked.png" tvg-country="IN" tvg-name="History TV18 HD (1080p) [Geo-blocked]" x-discovery-source-country="IN" group-title="New Channels",History TV18 HD (1080p) [Geo-blocked]
+https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="MangoMobileTV.in@HD" tvg-logo="logos/mango-mobile-tv.png" tvg-country="IN" tvg-name="Mango Mobile TV (1080p)" x-discovery-source-country="IN" group-title="New Channels",Mango Mobile TV (1080p)
+https://amg01911-mangotv-amg01911c1-xiaomi-in-1270.playouts.now.amagi.tv/playlist/amg01911-mangomassmedia-mangotv-xiaomiin/playlist.m3u8
+#EXTINF:-1 tvg-id="MTV.in@SD" tvg-logo="logos/mtv-india-hd-720p.png" tvg-country="IN" tvg-name="MTV (India) (396p)" x-discovery-source-country="IN" group-title="New Channels",MTV (India) (396p)
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:mtvindia.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="NDTVGoodTimes.in@SD" tvg-logo="logos/ndtv-good-times.png" tvg-country="IN" tvg-name="NDTV Good Times (1080p)" x-discovery-source-country="IN" group-title="New Channels",NDTV Good Times (1080p)
+https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="NMMediaChannelHD.in@SD" tvg-country="IN" tvg-name="NM Media Channel HD (1080p)" x-discovery-source-country="IN" group-title="New Channels",NM Media Channel HD (1080p)
+https://live.skystream.in/live/newmedia2924/index.m3u8
+#EXTINF:-1 tvg-id="ShemarooFilmiGaane.in@HD" tvg-country="IN" tvg-name="Shemaroo Filmi Gaane (1080p)" x-discovery-source-country="IN" group-title="New Channels",Shemaroo Filmi Gaane (1080p)
+https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8
+#EXTINF:-1 tvg-id="SooriyanTV.ca@SD" tvg-logo="logos/sooriyan-tv.png" tvg-country="IN" tvg-name="Sooriyan TV (1080p)" x-discovery-source-country="IN" group-title="New Channels",Sooriyan TV (1080p)
+https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8
+#EXTINF:-1 tvg-id="SristiTV.in@SD" tvg-country="IN" tvg-name="Sristi TV (1080p)" x-discovery-source-country="IN" group-title="New Channels",Sristi TV (1080p)
+https://stream.ottlive.co.in/sristitv/index.m3u8
+#EXTINF:-1 tvg-id="Travelxp.in@HD" tvg-logo="logos/travelxp-hd-1080p-geo-blocked.png" tvg-country="IN" tvg-name="Travelxp HD (1080p) [Geo-blocked]" x-discovery-source-country="IN" group-title="New Channels",Travelxp HD (1080p) [Geo-blocked]
+https://amg00416-amg00416c9-samsung-in-4882.playouts.now.amagi.tv/playlist/amg00416-travelxp-travelxphd-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="VisionBeats.in@SD" tvg-logo="logos/vision-beats.png" tvg-country="IN" tvg-name="Vision Beats (720p)" x-discovery-source-country="IN" group-title="New Channels",Vision Beats (720p)
+http://a-edge.bliscdn.com/Visionbeats/index.m3u8
+#EXTINF:-1 tvg-id="WeatherSpy.in@SD" tvg-logo="logos/weatherspy-india.png" tvg-country="IN" tvg-name="WeatherSpy (India) (720p)" x-discovery-source-country="IN" group-title="New Channels",WeatherSpy (India) (720p)
+https://jukin-weatherspy-2-in.samsung.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeCineClassic.in@SD" tvg-country="IN" tvg-name="Zee Cine Classic (1080p)" x-discovery-source-country="IN" group-title="New Channels",Zee Cine Classic (1080p)
+https://amg00862-amg00862c8-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c8-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeComedyNation.in@HD" tvg-country="IN" tvg-name="Zee Comedy Nation (1080p)" x-discovery-source-country="IN" group-title="New Channels",Zee Comedy Nation (1080p)
+https://amg00862-amg00862c5-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c5-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeDilSe.in@HD" tvg-logo="logos/zee-dil-se.png" tvg-country="IN" tvg-name="Zee Dil Se (1080p)" x-discovery-source-country="IN" group-title="New Channels",Zee Dil Se (1080p)
+https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeHorrorNights.in@HD" tvg-logo="logos/zee-horror-nights.png" tvg-country="IN" tvg-name="Zee Horror Nights (1080p)" x-discovery-source-country="IN" group-title="New Channels",Zee Horror Nights (1080p)
+https://amg00862-amg00862c7-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c7-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeSouthFlix.in@HD" tvg-logo="logos/zee-south-flix.png" tvg-country="IN" tvg-name="Zee South Flix (1080p)" x-discovery-source-country="IN" group-title="New Channels",Zee South Flix (1080p)
+https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeTamil.in@HD" tvg-logo="logos/zee-tamil.png" tvg-country="IN" tvg-name="Zee Tamil HD (720p)" x-discovery-source-country="IN" group-title="New Channels",Zee Tamil HD (720p)
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:zeetamil1.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeTelugu.in@HD" tvg-country="IN" tvg-name="Zee Telugu HD (720p)" x-discovery-source-country="IN" group-title="New Channels",Zee Telugu HD (720p)
+https://listas-m3u8.github.io/iptv/128.19.173.10:8888/ZEETELUGUHD.m3u8
+#EXTINF:-1 tvg-id="ZodiakTV.in@SD" tvg-logo="logos/zodiak-tv.png" tvg-country="IN" tvg-name="Zodiak TV (1080p)" x-discovery-source-country="IN" group-title="New Channels",Zodiak TV (1080p)
+https://ranacable.duckdns.org/ZodiakTv/index.m3u8
+#EXTINF:-1 tvg-id="ATNBangla.bd@SD" tvg-logo="logos/atn-bangla.png" tvg-country="BD" tvg-name="ATN Bangla (720p)" x-discovery-source-country="BD" group-title="New Backups",ATN Bangla (720p)
+http://tvsen5.aynascope.net/atnbangla/index.m3u8
+#EXTINF:-1 tvg-id="DBCNews.bd@SD" tvg-logo="logos/dbc-news.png" tvg-country="BD" tvg-name="DBC News (480p)" x-discovery-source-country="BD" group-title="New Backups",DBC News (480p)
+http://tvn3.chowdhury-shaheb.com/dbc/index.m3u8
+#EXTINF:-1 tvg-id="DurontoTV.bd@SD" tvg-country="BD" tvg-name="Duronto TV (720p)" x-discovery-source-country="BD" group-title="New Backups",Duronto TV (720p)
+https://box.bbaria.net/DurontoTV/index.m3u8
+#EXTINF:-1 tvg-id="EkhonTV.bd@SD" tvg-logo="logos/ekhon-tv.png" tvg-country="BD" tvg-name="Ekhon TV (1080p)" x-discovery-source-country="BD" group-title="New Backups",Ekhon TV (1080p)
+https://tplay.live/out/bangladesh/ekhontv.index.m3u8
+#EXTINF:-1 tvg-id="GaziTV.bd@SD" tvg-logo="logos/gazi-tv.png" tvg-country="BD" tvg-name="Gazi TV (1080p)" x-discovery-source-country="BD" group-title="New Backups",Gazi TV (1080p)
+http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
+#EXTINF:-1 tvg-id="MaasrangaTV.bd@SD" tvg-logo="logos/maasranga-tv.png" tvg-country="BD" tvg-name="Maasranga TV (720p)" x-discovery-source-country="BD" group-title="New Backups",Maasranga TV (720p)
+http://tvsen5.aynascope.net/maasrangatv/index.m3u8
+#EXTINF:-1 tvg-id="RTV.bd@SD" tvg-country="BD" tvg-name="RTV (Bangladesh) (720p)" x-discovery-source-country="BD" group-title="New Backups",RTV (Bangladesh) (720p)
+http://tvsen5.aynascope.net/RtvHD/index.m3u8
+#EXTINF:-1 tvg-id="9XJhakaas.in@SD" tvg-logo="logos/9x-jhakaas.png" tvg-country="IN" tvg-name="9X Jhakaas (1080p)" x-discovery-source-country="IN" group-title="New Backups",9X Jhakaas (1080p)
+https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="9XTashan.in@SD" tvg-logo="logos/9x-tashan.png" tvg-country="IN" tvg-name="9X Tashan (1080p)" x-discovery-source-country="IN" group-title="New Backups",9X Tashan (1080p)
+https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="B4UBhojpuri.in@SD" tvg-country="IN" tvg-name="B4U Bhojpuri (1080p)" x-discovery-source-country="IN" group-title="New Backups",B4U Bhojpuri (1080p)
+https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
+#EXTINF:-1 tvg-id="B4UKadak.in@SD" tvg-logo="logos/b4u-kadak.png" tvg-country="IN" tvg-name="B4U Kadak (1080p)" x-discovery-source-country="IN" group-title="New Backups",B4U Kadak (1080p)
+https://amg00877-b4unew-amg00877c4-xiaomi-in-5473.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="B4UMovies.in@India" tvg-logo="logos/b4u-movies.png" tvg-country="IN" tvg-name="B4U Movies (1080p)" x-discovery-source-country="IN" group-title="New Backups",B4U Movies (1080p)
+https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="DDUttarPradesh.in@SD" tvg-logo="logos/dd-uttar-pradesh.png" tvg-country="IN" tvg-name="DD Uttar Pradesh (720p)" x-discovery-source-country="IN" group-title="New Backups",DD Uttar Pradesh (720p)
+https://cdn.pishow.tv/ott/live/36/master.m3u8
+#EXTINF:-1 tvg-id="DhoomMusic.in@SD" tvg-logo="logos/international/dhoom-music-720p.png" tvg-country="IN" tvg-name="Dhoom Music (720p)" x-discovery-source-country="IN" group-title="New Backups",Dhoom Music (720p)
+https://cdn.pishow.tv/ott/live/1456/master.m3u8
+#EXTINF:-1 tvg-id="INWILD.nl@SD" tvg-logo="logos/inwild.png" tvg-country="IN" tvg-name="INWILD (1080p)" x-discovery-source-country="IN" group-title="New Backups",INWILD (1080p)
+https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-id="SangeetBangla.in@SD" tvg-name="Sangeet Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png" channel-id="SangeetBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Review",Sangeet Bangla
 https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
