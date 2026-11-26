@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5278,
-  "all_explicitly_referenced_logo_files": 2554,
-  "runtime_referenced_logo_files": 2552,
-  "playlist_referenced_logo_files": 2525,
-  "apparently_unreferenced_by_any_text_file": 2724,
-  "apparently_unreferenced_by_runtime_sources": 2726,
+  "all_explicitly_referenced_logo_files": 2555,
+  "runtime_referenced_logo_files": 2553,
+  "playlist_referenced_logo_files": 2524,
+  "apparently_unreferenced_by_any_text_file": 2723,
+  "apparently_unreferenced_by_runtime_sources": 2725,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -15041,6 +15041,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/bridge-hits-576p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/international/cartoon-network-india-720p.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -15085,7 +15088,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/kinosvidanie-576p.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/komsan-tv-not-24-7.png": [
@@ -16621,7 +16623,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/muzyka-pervogo-576p.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mwd-documentary-fbdc0a1ba5.png": [
@@ -26819,6 +26820,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/bridge-hits-576p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/international/cartoon-network-india-720p.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -26863,7 +26867,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/kinosvidanie-576p.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/komsan-tv-not-24-7.png": [
@@ -28399,7 +28402,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/muzyka-pervogo-576p.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mwd-documentary-fbdc0a1ba5.png": [
@@ -34173,7 +34175,6 @@
     "logos/international/bravo-farsi-tv-360p.png",
     "logos/international/bridge-classic-576p.png",
     "logos/international/bridge-deluxe-1080p.png",
-    "logos/international/bridge-hits-576p.png",
     "logos/international/bridge.png",
     "logos/international/bstv-pakistan-576p.png",
     "logos/international/bt-tv-720p.png",

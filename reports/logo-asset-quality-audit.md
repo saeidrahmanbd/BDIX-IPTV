@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-26T05:00:39+00:00**
+Generated: **2026-11-26T05:03:15+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **b5c5c72d52e843f347be0249963dd6db8de62fb378921a05bc98d76444751921**
-- International-Playlist.m3u SHA-256: **aca22e32fbe473ee8505b996463c19709bc709420f345a316c8d9e7bcd3d4c08**
+- International-Playlist.m3u SHA-256: **7715b87f66920765be3b5eb8458473d50f854af1c4844c217d749ab40fb590ea**
 
 ## Summary
 
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **746**
-- Playlist references whose asset stem differs from the normalized channel name: **1629**
-- Unreferenced image assets immediately inside logos/: **961** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1630**
+- Unreferenced image assets immediately inside logos/: **962** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -2475,6 +2475,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | BRIDGE Dance [ ] | bridge-dance-720p-geo-blocked-28be35859700d79948e2.png | New Channels |
+| International-Playlist.m3u | BRIDGE Hits (576p) | bridge-hits-576p.png | New Channels |
 | International-Playlist.m3u | BRIDGE Jazz [ ] | bridge-jazz-720p-geo-blocked-87f95b66247ee3252561.png | New Channels |
 | International-Playlist.m3u | Komsan TV [Not 24/7] | komsan-tv-not-24-7.png | New Channels |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
