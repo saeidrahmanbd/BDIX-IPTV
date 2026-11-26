@@ -8,20 +8,12 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 ### 2026-11-26 — `IPTV-Playlist.m3u`
 
 - New channel identities: **0**
-- Channel identities removed: **6**
-- Stream URLs added / removed: **0 / 7**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
 - Logo reference changes: **434**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Removed channel identities (up to 10):
-- Jaihind TV
-- Nepal 1
-- RetroCrush
-- RACING | Hagerty
-- Ayush Next Communication Network
-- Metro TV (India)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-26 — `International-Playlist.m3u`
