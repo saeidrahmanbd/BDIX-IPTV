@@ -8363,5 +8363,25 @@
     "status": "third_party_verified",
     "source_url": "https://static.wikia.nocookie.net/logopedia/images/0/0f/Viasat_Kino_2025.svg/revision/latest?cb=20250506205346",
     "notes": "IPTV-org exact ID: ViasatKino.ro IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/0/0f/Viasat_Kino_2025.svg/revision/latest?cb=20250506205346"
+  },
+  "IPTV-Playlist.m3u|CCNET.in@SD|CC NET (1080p)|logos/cc-net-500387d0e2242b651988.png": {
+    "status": "third_party_verified",
+    "source_url": "https://play-lh.googleusercontent.com/q5iULjQ59LU1X_ExM6aKYQk64fouGbzBtdKTgNSgO8sHdGfTcgcbIaunns9pATnwu2ttBpAm-DftDzV6u-ClJg8",
+    "notes": "IPTV-org exact ID: CCNET.in IPTV-org public logo dataset Source page: https://play-lh.googleusercontent.com/q5iULjQ59LU1X_ExM6aKYQk64fouGbzBtdKTgNSgO8sHdGfTcgcbIaunns9pATnwu2ttBpAm-DftDzV6u-ClJg8"
+  },
+  "IPTV-Playlist.m3u|K7KeralamChannel.in@SD|K7 Keralam Channel (1080p)|logos/k7-keralam-channel-46beb3882d21a7547993.png": {
+    "status": "third_party_verified",
+    "source_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9HJ1d-xOsWKg7ZYyU7algdOhJspVrXQUvQnCxqKfsrw&s=10",
+    "notes": "IPTV-org exact ID: K7KeralamChannel.in IPTV-org public logo dataset Source page: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9HJ1d-xOsWKg7ZYyU7algdOhJspVrXQUvQnCxqKfsrw&s=10"
+  },
+  "IPTV-Playlist.m3u|SristiTV.in@SD|Sristi TV (1080p)|logos/sristi-tv-772e078ab196764d315f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Sristi_TV.png",
+    "notes": "IPTV-org exact ID: SristiTV.in IPTV-org public logo dataset Source page: https://jiotvimages.cdn.jio.com/dare_images/images/Sristi_TV.png"
+  },
+  "IPTV-Playlist.m3u|custom.cricbuzz|Cricbuzz|logos/cricbuzz-cb3cb39a6d687801bce3.png": {
+    "status": "third_party_verified",
+    "source_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cricbuzz_Logo.png",
+    "notes": "Wikimedia Commons Public domain text logo Source page: https://commons.wikimedia.org/wiki/File:Cricbuzz_Logo.png"
   }
 }

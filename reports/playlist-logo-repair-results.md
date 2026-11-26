@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-26 04:47 UTC**  
+Run time: **2026-11-26 04:58 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,13 +9,17 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1418 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| IPTV-Playlist.m3u | 1430 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | International-Playlist.m3u | 3322 | 0 | 18 | 19 | 364 | 372 | 0 | 0 | 37 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
+| IPTV-Playlist.m3u | 1454 | CC NET (1080p) | (missing) | cc-net-500387d0e2242b651988.png | [IPTV-org exact ID: CCNET.in](https://play-lh.googleusercontent.com/q5iULjQ59LU1X_ExM6aKYQk64fouGbzBtdKTgNSgO8sHdGfTcgcbIaunns9pATnwu2ttBpAm-DftDzV6u-ClJg8) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 1456 | K7 Keralam Channel (1080p) | (missing) | k7-keralam-channel-46beb3882d21a7547993.png | [IPTV-org exact ID: K7KeralamChannel.in](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9HJ1d-xOsWKg7ZYyU7algdOhJspVrXQUvQnCxqKfsrw&s=10) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 1458 | Sristi TV (1080p) | (missing) | sristi-tv-772e078ab196764d315f.png | [IPTV-org exact ID: SristiTV.in](https://jiotvimages.cdn.jio.com/dare_images/images/Sristi_TV.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 1684 | Cricbuzz | nvisionbd-official-cricbuzz.png | cricbuzz-cb3cb39a6d687801bce3.png | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cricbuzz_Logo.png) | Public domain text logo — https://creativecommons.org/publicdomain/zero/1.0/ | replaced |
 | International-Playlist.m3u | 883 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1037 | Cedros TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1123 | DanceTV Algorhythm | (missing) | (none) | Official DanceTV channel artwork URL, corroborated by the broadcaster's public stream listing |  | Download/validation failed: HTTP Error 404: Not Found |

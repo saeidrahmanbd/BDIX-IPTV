@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5274,
-  "all_explicitly_referenced_logo_files": 2547,
-  "runtime_referenced_logo_files": 2545,
-  "playlist_referenced_logo_files": 2517,
-  "apparently_unreferenced_by_any_text_file": 2727,
-  "apparently_unreferenced_by_runtime_sources": 2729,
+  "logo_image_files": 5278,
+  "all_explicitly_referenced_logo_files": 2554,
+  "runtime_referenced_logo_files": 2552,
+  "playlist_referenced_logo_files": 2525,
+  "apparently_unreferenced_by_any_text_file": 2724,
+  "apparently_unreferenced_by_runtime_sources": 2726,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -4378,8 +4378,8 @@
     "logos/zoom-india-27531244ca.png",
     "logos/zoom-israel-ed459937c9.png"
   ],
-  "exact_duplicate_groups": 745,
-  "exact_duplicate_files": 1410,
+  "exact_duplicate_groups": 746,
+  "exact_duplicate_files": 1411,
   "exact_duplicates": [
     {
       "sha256": "00cefab928f6517f0261b462ce57173a7235e7f88cfdcdb868b2728727e2fdb9",
@@ -9091,6 +9091,13 @@
       ]
     },
     {
+      "sha256": "cb3cb39a6d687801bce33fe5a14ae3dec3d1e098d6c9b48028ce96f55c812d48",
+      "files": [
+        "logos/cricbuzz-cb3cb39a6d687801bce3.png",
+        "logos/nvisionbd-official-cricbuzz.png"
+      ]
+    },
+    {
       "sha256": "cb5933e48e8a989106679c2dd3cacb492de278acbca28056827644f2ad7f8872",
       "files": [
         "logos/international/pluto-tv-cinema-italiano.png",
@@ -11878,6 +11885,10 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/cc-net-500387d0e2242b651988.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/cctv-11.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -12607,6 +12618,10 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/cricbuzz-cb3cb39a6d687801bce3.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/cricket-gold.png": [
       "IPTV-Playlist.m3u",
@@ -15024,6 +15039,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/cartoon-network-india-720p.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/international/cuckold.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -15323,6 +15341,10 @@
     "logos/k100-10dd3a8482.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/k7-keralam-channel-46beb3882d21a7547993.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
@@ -18429,6 +18451,9 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/sky-sports-cricket.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/skyshowtime-1-f3376493660540500c72.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -18805,6 +18830,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/sristi-tv-772e078ab196764d315f.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/srk.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -18913,6 +18942,9 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/star-sports-3.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/star-sports-select-1.png": [
       "IPTV-Playlist.m3u",
@@ -19421,6 +19453,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ten-cricket.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/ten-tv-prime.png": [
@@ -23620,6 +23653,10 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/cc-net-500387d0e2242b651988.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/cctv-11.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -24349,6 +24386,10 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/cricbuzz-cb3cb39a6d687801bce3.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
     ],
     "logos/cricket-gold.png": [
       "IPTV-Playlist.m3u",
@@ -26768,6 +26809,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/cartoon-network-india-720p.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/international/cuckold.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -27067,6 +27111,10 @@
     "logos/k100-10dd3a8482.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
+      "reports/logo-source-registry.json"
+    ],
+    "logos/k7-keralam-channel-46beb3882d21a7547993.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/kabaddi-24x7.png": [
@@ -30177,6 +30225,9 @@
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/sky-sports-cricket.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/skyshowtime-1-f3376493660540500c72.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -30553,6 +30604,10 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/sristi-tv-772e078ab196764d315f.png": [
+      "IPTV-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/srk.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -30661,6 +30716,9 @@
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/star-sports-3.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/star-sports-select-1.png": [
       "IPTV-Playlist.m3u",
@@ -31169,6 +31227,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ten-cricket.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/ten-tv-prime.png": [
@@ -34121,7 +34180,6 @@
     "logos/international/cartoon-classics.png",
     "logos/international/cartoon-network-arabic.png",
     "logos/international/cartoon-network-asia-720p.png",
-    "logos/international/cartoon-network-india-720p.png",
     "logos/international/cartoon-network-pakistan.png",
     "logos/international/cartoon-network-united-states-720p.png",
     "logos/international/cartoonitoasia.png",
@@ -35622,7 +35680,6 @@
     "logos/silver-screen.png",
     "logos/sky-cinema-due.png",
     "logos/sky-sports-action.png",
-    "logos/sky-sports-cricket.png",
     "logos/sky-sports-football.png",
     "logos/solnce.png",
     "logos/soneri-cinema-360p.png",
@@ -35658,7 +35715,6 @@
     "logos/star-movies-slovenia.png",
     "logos/star-plus.png",
     "logos/star-sports-2-hindi.png",
-    "logos/star-sports-3.png",
     "logos/star-sports-4k.png",
     "logos/star-sports-sl-1.png",
     "logos/star-sports-sl-2.png",

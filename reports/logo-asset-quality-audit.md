@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-26T04:48:06+00:00**
+Generated: **2026-11-26T04:59:11+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **5e6bccdfc97be42553542ce2cc5fd90388d10c2462373aeca08d6041ccad28cf**
+- IPTV-Playlist.m3u SHA-256: **b5c5c72d52e843f347be0249963dd6db8de62fb378921a05bc98d76444751921**
 - International-Playlist.m3u SHA-256: **aca22e32fbe473ee8505b996463c19709bc709420f345a316c8d9e7bcd3d4c08**
 
 ## Summary
@@ -16,9 +16,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
-- Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1621**
-- Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
+- Exact-byte duplicate asset clusters: **746**
+- Playlist references whose asset stem differs from the normalized channel name: **1629**
+- Unreferenced image assets immediately inside logos/: **961** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -412,6 +412,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/cool-fm-98-9-720p.png, logos/international/cool-fm-98-9-720p.png
 - logos/corazon-tv.png, logos/international/corazon-tv.png
 - logos/cowboy-movie-channel.png, logos/unused/cowboy-movie-channel.png
+- logos/cricbuzz-cb3cb39a6d687801bce3.png, logos/nvisionbd-official-cricbuzz.png
 - logos/ctb-perth-movies-channel-720p.png, logos/international/ctb-perth-movies-channel-720p.png
 - logos/dance-television-1080p.png, logos/international/dance-television-1080p.png
 - logos/dancetv-deep-house-district-1080p.png, logos/international/dancetv-deep-house-district-1080p.png
@@ -1233,6 +1234,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Wayanad Vision Plus (720p) | wayanad-vision-plus-82bd345c3914db6ab3e2.png | New Channels |
 | IPTV-Playlist.m3u | Malabar Plus (720p) | malabar-plus-d6e579c29354453addc3.png | New Channels |
 | IPTV-Playlist.m3u | Thanima (1080p) | thanima-83afbf82b637391714f3.png | New Channels |
+| IPTV-Playlist.m3u | CC NET (1080p) | cc-net-500387d0e2242b651988.png | New Channels |
+| IPTV-Playlist.m3u | K7 Keralam Channel (1080p) | k7-keralam-channel-46beb3882d21a7547993.png | New Channels |
+| IPTV-Playlist.m3u | Sristi TV (1080p) | sristi-tv-772e078ab196764d315f.png | New Channels |
 | IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | New Backups |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
@@ -1253,9 +1257,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
 | IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
 | IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
+| IPTV-Playlist.m3u | beIN SPORTS Arabic | bein-sports.png | Backup |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
+| IPTV-Playlist.m3u | Cartoon Network | cartoon-network-india-720p.png | Backup |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Backup |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Backup |
 | IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
@@ -1281,6 +1287,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Deepto TV | deepto-tv.png | Backup |
 | IPTV-Playlist.m3u | Desh TV | desh-tv.png | Backup |
 | IPTV-Playlist.m3u | Desi Channel | desi-channel.png | Backup |
+| IPTV-Playlist.m3u | Discovery Bangla | discovery-hd.png | Backup |
 | IPTV-Playlist.m3u | Disney Channel | disney-channel-india.png | Backup |
 | IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Backup |
 | IPTV-Playlist.m3u | Ekattor TV | ekattor-tv.png | Backup |
@@ -1371,6 +1378,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
+| IPTV-Playlist.m3u | Sony Sports Ten 3 | sony-sports-ten-3-hindi.png | Backup |
 | IPTV-Playlist.m3u | Star Movies (India) HD | star-movies-india-hd-1080p.png | Backup |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Backup |
 | IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Backup |
@@ -1384,6 +1392,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
 | IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
 | IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
+| IPTV-Playlist.m3u | Willow Sports 2 | us-willow-sports-hd.png | Backup |
 | IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
 | IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
