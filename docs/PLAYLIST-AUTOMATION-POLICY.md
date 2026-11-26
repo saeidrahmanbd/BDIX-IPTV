@@ -100,3 +100,8 @@ The owner explicitly instructed these one-time changes to the owner-curated IPTV
 - Sort channel entries alphabetically (A–Z) by displayed channel name within each group after these changes. Preserve stream URLs, channel IDs, EPG IDs, logos and channel numbers for retained entries.
 
 This is a narrowly scoped owner-directed curation exception. It does not authorize automatic regrouping or removal of other existing entries.
+
+
+### Owner clarification — Review queue for IPTV-Playlist.m3u (2026-11-26)
+
+The owner confirms that `Review` is the holding group for any channel that is currently not working. Keep those entries in `Review` for future testing; do not treat their presence as a duplicate or automatically delete them. Re-test them in future checks and only promote a confirmed-working stream to its correct primary group (or `Backup` when an identity already has a primary stream), subject to the owner's playlist curation rules. This clarification explicitly applies to `IPTV-Playlist.m3u`. The current `Sangeet Bangla` entry in `Review` is intentional because its stream is presently unavailable.
