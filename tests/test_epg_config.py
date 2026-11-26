@@ -234,7 +234,7 @@ class EpgConfigTests(unittest.TestCase):
             self.assertNotIn(private_url, status_line)
             self.assertIn(generate_epg.PRIVATE_SOURCE_LABEL, status_line)
 
-    def test_rtv_schedule_tries_current_daily_then_live_then_legacy_https_without_disabling_tls(self):
+    def test_rtv_schedule_prefers_official_weekly_schedule_before_daily_discovery(self):
         weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
         html = "".join(
             f"<p>{day}</p>"
@@ -246,11 +246,7 @@ class EpgConfigTests(unittest.TestCase):
         with patch.object(
             official_epg_sources.urllib.request,
             "urlopen",
-            side_effect=[
-                OSError("current daily page unavailable"),
-                OSError("official live schedule page unavailable"),
-                io.BytesIO(html.encode("utf-8")),
-            ],
+            return_value=io.BytesIO(html.encode("utf-8")),
         ) as urlopen:
             programmes = official_epg_sources.fetch_rtv_programmes(
                 datetime(2026, 10, 29, tzinfo=timezone.utc)
@@ -258,16 +254,43 @@ class EpgConfigTests(unittest.TestCase):
         self.assertTrue(programmes)
         self.assertEqual(
             urlopen.call_args_list[0].args[0].full_url,
-            "https://rtvonline.com/home/",
-        )
-        self.assertEqual(
-            urlopen.call_args_list[1].args[0].full_url,
-            "https://www.rtvbd.tv/live.php",
-        )
-        self.assertEqual(
-            urlopen.call_args_list[2].args[0].full_url,
             "https://www.rtvbd.tv/schedule.php",
         )
+
+    def test_rtv_daily_schedule_is_used_when_weekly_page_has_no_schedule(self):
+        homepage = '<a href="/entertainment/rtv/413846">আরটিভিতে আজ যা দেখবেন</a>'
+        article = """
+        <p>শুক্রবার, ৬ নভেম্বর ২০২৬, ২১ কার্তিক ১৪৩৩।</p>
+        <p>সকাল ৯টায় টকশো ‘আজ পত্রিকায়’।</p>
+        <p>সকাল ৯টা ৪৫ মিনিটে ‘সকালের সংবাদ’</p>
+        <p>সকাল ১০টা ১০ মিনিটে বাংলা ছায়াছবি ‘গরীবের বউ’</p>
+        <p>দুপুর ২টা ১০ মিনিটে বাংলা ছায়াছবি ‘হুমকির মুখে’</p>
+        <p>বিকেল ৫টায় শিশুতোষ অনুষ্ঠান ‘সিসিমপুর’</p>
+        <p>সন্ধ্যা ৭টায় অনুষ্ঠান ‘রাতের খবর’</p>
+        <p>রাত ৮টায় নাটক ‘প্রতিদিন’</p>
+        """
+        with patch.object(
+            official_epg_sources.urllib.request,
+            "urlopen",
+            side_effect=[
+                io.BytesIO(b"<html>No schedule</html>"),
+                io.BytesIO(homepage.encode("utf-8")),
+                io.BytesIO(article.encode("utf-8")),
+            ],
+        ) as urlopen:
+            programmes = official_epg_sources.fetch_rtv_programmes(
+                datetime(2026, 11, 6, 0, 0, tzinfo=timezone.utc)
+            )
+        self.assertEqual(
+            [call.args[0].full_url for call in urlopen.call_args_list],
+            [
+                "https://www.rtvbd.tv/schedule.php",
+                "https://rtvonline.com/home/",
+                "https://rtvonline.com/entertainment/rtv/413846",
+            ],
+        )
+        self.assertGreaterEqual(len(programmes), 4)
+        self.assertTrue(all(p["channel_id"] == "RTV.bd" for p in programmes))
 
     def test_rtv_daily_schedule_parses_current_bengali_date_and_times(self):
         homepage = """
@@ -288,6 +311,7 @@ class EpgConfigTests(unittest.TestCase):
             official_epg_sources.urllib.request,
             "urlopen",
             side_effect=[
+                io.BytesIO(b"<html>No schedule</html>"),
                 io.BytesIO(homepage.encode("utf-8")),
                 io.BytesIO(article.encode("utf-8")),
             ],
@@ -296,12 +320,12 @@ class EpgConfigTests(unittest.TestCase):
                 datetime(2026, 11, 6, 0, 0, tzinfo=timezone.utc)
             )
         self.assertEqual(
-            urlopen.call_args_list[0].args[0].full_url,
-            "https://rtvonline.com/home/",
-        )
-        self.assertEqual(
-            urlopen.call_args_list[1].args[0].full_url,
-            "https://rtvonline.com/entertainment/rtv/413846",
+            [call.args[0].full_url for call in urlopen.call_args_list],
+            [
+                "https://www.rtvbd.tv/schedule.php",
+                "https://rtvonline.com/home/",
+                "https://rtvonline.com/entertainment/rtv/413846",
+            ],
         )
         self.assertGreaterEqual(len(programmes), 4)
         self.assertTrue(all(p["channel_id"] == "RTV.bd" for p in programmes))
