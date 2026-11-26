@@ -90,3 +90,13 @@ A stream URL must not be deleted because of a single failure, an inconclusive pr
 - Logo repair must use authentic, validated local assets; never invent or substitute unrelated artwork.
 - All playlist writers must use the common serialized writer queue.
 - Regression tests must cover URL preservation, protected queues, grouping thresholds, Review recovery, three-day retirement and regional policy.
+
+### Explicit owner-directed manual curation — 2026-11-26 (additional)
+
+The owner explicitly instructed these one-time changes to the owner-curated IPTV playlist:
+- Remove RetroCrush (`RetroCrush.us`) and RACING | Hagerty (`racing.hagerty.com`) from the playlist.
+- Promote Biswa Bangla 24 (`BiswaBangla24.us@SD`) from `Review` to `Bangladesh`; correct `tvg-country` to `BD` and retain Bengali language metadata and its existing EPG/channel identity.
+- Promote Unite8 Sports 1 HD (`Unite8Sports1.in@HD`) from `Review` to `Sports`; retain its Indian country and English-language metadata.
+- Sort channel entries alphabetically (A–Z) by displayed channel name within each group after these changes. Preserve stream URLs, channel IDs, EPG IDs, logos and channel numbers for retained entries.
+
+This is a narrowly scoped owner-directed curation exception. It does not authorize automatic regrouping or removal of other existing entries.
