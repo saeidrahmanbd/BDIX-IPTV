@@ -622,6 +622,14 @@ def fetch_rtv_programmes(now=None):
     now_utc = now.astimezone(timezone.utc)
     fetch_errors = []
 
+    def describe_fetch_error(exc):
+        # urllib hides the useful DNS/TLS/connection detail in URLError.reason.
+        # Keep diagnostics bounded and never log request URLs or headers.
+        reason = getattr(exc, "reason", None)
+        detail = str(reason if reason is not None else exc).replace("\\n", " ").replace("\\r", " ")
+        detail = re.sub(r"https?://[^\\s]+", "<url-redacted>", detail)
+        return f"{type(exc).__name__}: {detail[:180]}"
+
     # The official homepage links to a dated Bengali "আরটিভিতে আজ যা দেখবেন" article.
     request = urllib.request.Request(
         RTV_SOURCE,
@@ -665,7 +673,7 @@ def fetch_rtv_programmes(now=None):
                 return daily
             fetch_errors.append("rtvonline: daily article is stale or has no explicit programme slots")
     except Exception as exc:
-        fetch_errors.append(f"rtvonline: {type(exc).__name__}")
+        fetch_errors.append(f"rtvonline: {describe_fetch_error(exc)}")
 
     # RTV also publishes a current-day English schedule on its official live page.
     # Prefer its explicitly timed entries before falling back to the older weekly grid.
@@ -685,7 +693,7 @@ def fetch_rtv_programmes(now=None):
             return live
         fetch_errors.append("rtvbd.tv/live.php: no current explicit programme slots")
     except Exception as exc:
-        fetch_errors.append(f"rtvbd.tv/live.php: {type(exc).__name__}")
+        fetch_errors.append(f"rtvbd.tv/live.php: {describe_fetch_error(exc)}")
 
     # Retain the broadcaster's public weekly page as a fallback; TLS verification
     # remains enabled. Retry one transient network failure per host before failing over.
@@ -709,7 +717,7 @@ def fetch_rtv_programmes(now=None):
                 last_error = "no valid weekly programme slots"
                 break
             except Exception as exc:
-                last_error = type(exc).__name__
+                last_error = describe_fetch_error(exc)
                 if attempt == 0:
                     sleep(1)
         fetch_errors.append(
