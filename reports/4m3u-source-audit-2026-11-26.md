@@ -77,4 +77,5 @@ Explicit default ports were canonicalized for duplicate comparison. For example,
 - The source playlist's group labels were treated as hints only; its `Bnagla` label is demonstrably misapplied.
 - Review entries in the existing playlist were not treated as rejected identities.
 - Existing primary streams were not replaced.
+- Removed one pre-existing empty Zoom `#EXTINF` record with no following stream URL; no stream URL was deleted.
 - The seven unverified alternatives and PowerTürk TV are staged only in the hidden queues; no unverified candidate was exposed in the live Xtream output.
