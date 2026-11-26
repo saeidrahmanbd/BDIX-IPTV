@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-26T06:16:58+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-26T07:30:19+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12164
-- Existing playlist records: 3321
+- Existing playlist records: 3320
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2185
+- Exact source URLs already in playlist: 2184
 - Duplicate URLs within source feed: 0
-- New eligible source records after URL/policy filtering: 149
+- New eligible source records after URL/policy filtering: 150
 - Adult channels discovered directly into Adult: 0
 - Fashion TV channels discovered directly into Fashion TV: 0
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
@@ -65,6 +65,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - **Rakuten TV Top Movies UK (1080p)** — New Channels — ES — https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8
 - **Summer of Movies** — New Channels — US — https://jmp2.uk/plu-6654adb1f99922000854388c.m3u8
 - **Sundance TV (Spain)** — New Channels — ES — https://cdn.stmify.com/zapitv/stream/SUNDANCE_TV/sundance_hd.mpd
+- **TVS Film Noir Network (720p)** — New Channels — US — https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
 - **Viasat Kino (Romania) (576i)** — New Channels — RO — http://91.235.165.117:8001/play/a055/index.m3u8
 - **Viasat Kino (Ukraine) (576p)** — New Channels — UA — http://dtv.vol.net.ua/Viasat_Kino/index.m3u8
 - **Viasat Kino (Ukraine) Romania** — New Channels — UA — https://flash1.bogulus1.cfd/tivi10/usergenrxs4f7zc.m3u8
@@ -73,7 +74,6 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
 - **ATN Music (360p)** — New Channels — BD — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 - **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
-- **BRIDGE Hits (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
 
 ## Adult channels added directly to Adult
 
@@ -114,15 +114,15 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-26T06:17:09+06:00
+- Run timestamp: 2026-11-26T07:30:29+06:00
 - Mode: international
-- New entries and discovery queues probed: 72
+- New entries and discovery queues probed: 69
 - Verified live media responses: 14
-- Verified new primary channels retained in New Channels: 7
-- Verified alternate streams retained in New Backups: 7
+- Verified new primary channels retained in New Channels: 6
+- Verified alternate streams retained in New Backups: 8
 - Inconclusive candidates retained for manual review: 3
-- Unverified backup streams moved to Review: 2
-- Definitively dead new candidates removed: 53
+- Unverified backup streams moved to Review: 0
+- Definitively dead new candidates removed: 52
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
@@ -136,7 +136,6 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Andina RTV (720p) from New Channels — HTTP 404.
 - Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
 - Removed newly discovered BRIDGE Classic (576p) from New Channels — HTTP 404.
-- Removed newly discovered BRIDGE Hits (576p) from New Channels — HTTP 404.
 - Removed newly discovered Cinevault 80s (720p) from New Channels — HTTP 404.
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
 - Retained Galaxy in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
@@ -178,21 +177,19 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Rakuten TV Top Movies UK (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Summer of Movies from New Channels — HTTP 404.
 - Removed newly discovered Sundance TV (Spain) from New Channels — HTTP 404.
-- Removed newly discovered TVS Film Noir Network from New Channels — HTTP success returned an HTML/error page, not a TV stream.
+- Removed newly discovered TVS Film Noir Network (720p) from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Kept Viasat Kino (Romania) (576i) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered Viasat Kino (Ukraine) (576p) from New Channels — HTTP 404.
 - Removed newly discovered Viasat Kino (Ukraine) Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Removed newly discovered 8XM from New Backups — HTTP 404.
-- Moved unverified alternate stream Cinema (Russia) from New Backups to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
-- Moved unverified alternate stream Dorama from New Backups to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
 
 ## Final validation
 
-- Run timestamp: 2026-11-26T06:17:09+06:00
-- Validation status: FAIL
+- Run timestamp: 2026-11-26T07:30:30+06:00
+- Validation status: PASS
 - M3U entries parsed: 3322
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
@@ -201,6 +198,3 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
-
-### Blockers
-- New Channels identity is already represented elsewhere: Rotana Cinema KSA
