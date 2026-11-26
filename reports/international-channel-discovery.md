@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-26T06:01:56+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-26T06:16:58+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
-- Source records parsed: 12149
+- Source records parsed: 12164
 - Existing playlist records: 3321
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2195
+- Exact source URLs already in playlist: 2185
 - Duplicate URLs within source feed: 0
-- New eligible source records after URL/policy filtering: 150
+- New eligible source records after URL/policy filtering: 149
 - Adult channels discovered directly into Adult: 0
 - Fashion TV channels discovered directly into Fashion TV: 0
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
@@ -99,29 +99,29 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Indian religious channel is prohibited: 1
 - TV series is not a dedicated Movie/Music channel: 24
 - ambiguous Movie/Music classification: 1
-- documentary & wildlife is outside the worldwide Movie/Music-only discovery policy: 188
-- general entertainment is not a dedicated Movie/Music channel: 68
-- kids is outside the worldwide Movie/Music-only discovery policy: 311
+- documentary & wildlife is outside the worldwide Movie/Music-only discovery policy: 189
+- general entertainment is not a dedicated Movie/Music channel: 69
+- kids is outside the worldwide Movie/Music-only discovery policy: 315
 - known Indian prohibited brand/category is prohibited: 12
-- news is outside the worldwide Movie/Music-only discovery policy: 1072
+- news is outside the worldwide Movie/Music-only discovery policy: 1082
 - non-real/test channel: 1
 - permanently banned channel: 10
 - religious is outside the worldwide Movie/Music-only discovery policy: 780
-- source category is not Movies or Music: 6591
+- source category is not Movies or Music: 6600
 - sports is outside the worldwide Movie/Music-only discovery policy: 305
 - test/VOD/non-TV name: 300
-- unsafe or tokenized URL: 140
+- unsafe or tokenized URL: 141
 
 ## Stream verification
 
-- Run timestamp: 2026-11-26T06:02:07+06:00
+- Run timestamp: 2026-11-26T06:17:09+06:00
 - Mode: international
 - New entries and discovery queues probed: 72
-- Verified live media responses: 16
+- Verified live media responses: 14
 - Verified new primary channels retained in New Channels: 7
-- Verified alternate streams retained in New Backups: 9
+- Verified alternate streams retained in New Backups: 7
 - Inconclusive candidates retained for manual review: 3
-- Unverified backup streams moved to Review: 0
+- Unverified backup streams moved to Review: 2
 - Definitively dead new candidates removed: 53
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
@@ -183,13 +183,15 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Viasat Kino (Ukraine) (576p) from New Channels — HTTP 404.
 - Removed newly discovered Viasat Kino (Ukraine) Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Removed newly discovered 8XM from New Backups — HTTP 404.
+- Moved unverified alternate stream Cinema (Russia) from New Backups to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Moved unverified alternate stream Dorama from New Backups to Review — probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Removed newly discovered Kinouzhas from New Backups — HTTP 404.
 - Removed newly discovered M1 (Ukraine) from New Backups — HTTP 404.
 - Removed newly discovered Viasat Kino Action from New Backups — HTTP 404.
 
 ## Final validation
 
-- Run timestamp: 2026-11-26T06:02:08+06:00
+- Run timestamp: 2026-11-26T06:17:09+06:00
 - Validation status: FAIL
 - M3U entries parsed: 3322
 - Malformed EXTINF/URL pairs: 0
