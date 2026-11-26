@@ -1395,71 +1395,77 @@ https://dpv6ceilvhyrw.cloudfront.net/playlist.m3u8
 http://iptv.prosto.tv:7000/ch109/video.m3u8
 #EXTINF:-1 tvg-id="XtremSports.es@SD" tvg-name="Xtrem Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xtrem-sports-1d0aff4f7e.png" tvg-chno="703" channel-id="XtremSports.es@SD" tvg-country="ES" tvg-language="spa" group-title="Sports",Xtrem Sports
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e0b81a5c-6ab5-48cd-aaa9-f82de4ab5bf9/manifest.m3u8
-#EXTINF:-1 tvg-id="NANTV.bd@SD" tvg-name="NAN TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nan-tv.png" tvg-country="BD" tvg-language="ben" group-title="New Channels" x-discovery-source-country="BD",NAN TV
+#EXTINF:-1 tvg-id="NANTV.bd@SD" tvg-name="NAN TV" tvg-logo="logos/nan-tv.png" tvg-country="BD" tvg-language="ben" group-title="New Channels" x-discovery-source-country="BD",NAN TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="AyushNextCommunicationNetwork.in@SD" tvg-name="Ayush Next Communication Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png" tvg-country="IN" tvg-language="hin" group-title="New Channels" x-discovery-source-country="IN",Ayush Next Communication Network
+#EXTINF:-1 tvg-id="AyushNextCommunicationNetwork.in@SD" tvg-name="Ayush Next Communication Network" tvg-logo="logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png" tvg-country="IN" tvg-language="hin" group-title="New Channels" x-discovery-source-country="IN",Ayush Next Communication Network
 https://d2lk5u59tns74c.cloudfront.net/out/v1/60ab07b02a2942498cdd81f045a625a1/index.m3u8
-#EXTINF:-1 tvg-id="CCV.in@SD" tvg-name="CCV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ccv.png" tvg-country="IN" tvg-language="mal" group-title="New Channels" x-discovery-source-country="IN",CCV
+#EXTINF:-1 tvg-id="CCV.in@SD" tvg-name="CCV" tvg-logo="logos/ccv.png" tvg-country="IN" tvg-language="mal" group-title="New Channels" x-discovery-source-country="IN",CCV
 https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
-#EXTINF:-1 tvg-id="Fast1.in@SD" tvg-name="Fast1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fast1.png" tvg-country="IN" tvg-language="pan" group-title="New Channels" x-discovery-source-country="IN",Fast1
+#EXTINF:-1 tvg-id="Fast1.in@SD" tvg-name="Fast1" tvg-logo="logos/fast1.png" tvg-country="IN" tvg-language="pan" group-title="New Channels" x-discovery-source-country="IN",Fast1
 https://cdn.pishow.tv/ott/live/10008/master.m3u8
-#EXTINF:-1 tvg-id="JaihindTV.in@SD" tvg-name="Jaihind TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jaihind-tv.png" tvg-country="IN" tvg-language="mal" group-title="New Channels" x-discovery-source-country="IN",Jaihind TV
+#EXTINF:-1 tvg-id="JaihindTV.in@SD" tvg-name="Jaihind TV" tvg-logo="logos/jaihind-tv.png" tvg-country="IN" tvg-language="mal" group-title="New Channels" x-discovery-source-country="IN",Jaihind TV
 https://fta.ektv.in/live/700/master.m3u8
-#EXTINF:-1 tvg-id="Kabaddi24x7.in@SD" tvg-name="Kabaddi 24x7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kabaddi-24x7.png" tvg-country="IN" tvg-language="hin" group-title="New Channels" x-discovery-source-country="IN",Kabaddi 24x7
+#EXTINF:-1 tvg-id="Kabaddi24x7.in@SD" tvg-name="Kabaddi 24x7" tvg-logo="logos/kabaddi-24x7.png" tvg-country="IN" tvg-language="hin" group-title="New Channels" x-discovery-source-country="IN",Kabaddi 24x7
 https://samitaorigin.tangotv.in/KABADDI24X7/SAMITAORIGIN/index.m3u8
-#EXTINF:-1 tvg-id="MetroTV.in@SD" tvg-name="Metro TV (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/metro-tv-india-0625d4e893.png" tvg-country="IN" tvg-language="tel" group-title="New Channels" x-discovery-source-country="IN",Metro TV (India)
+#EXTINF:-1 tvg-id="MetroTV.in@SD" tvg-name="Metro TV (India)" tvg-logo="logos/metro-tv-india-0625d4e893.png" tvg-country="IN" tvg-language="tel" group-title="New Channels" x-discovery-source-country="IN",Metro TV (India)
 https://mercury.streambridge.link:8042/telugu/metrotv/index.m3u8
-#EXTINF:-1 tvg-id="NVision.in@SD" tvg-name="N Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/n-vision-dca55fe8b5825ff1d796.png" tvg-country="IN" tvg-language="mal" group-title="New Channels" x-discovery-source-country="IN",N Vision
+#EXTINF:-1 tvg-id="NVision.in@SD" tvg-name="N Vision" tvg-logo="logos/n-vision-dca55fe8b5825ff1d796.png" tvg-country="IN" tvg-language="mal" group-title="New Channels" x-discovery-source-country="IN",N Vision
 https://ipcloud.live/nvision/nvisionhd/index.m3u8
-#EXTINF:-1 tvg-id="WayanadVision.in@SD" tvg-name="Wayanad Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wayanad-vision-e34be4ac26de16c0b4a7.png" tvg-country="IN" tvg-language="mal" group-title="New Channels" x-discovery-source-country="IN",Wayanad Vision
+#EXTINF:-1 tvg-id="WayanadVision.in@SD" tvg-name="Wayanad Vision" tvg-logo="logos/wayanad-vision-e34be4ac26de16c0b4a7.png" tvg-country="IN" tvg-language="mal" group-title="New Channels" x-discovery-source-country="IN",Wayanad Vision
 https://online.wayanadvision.in/hls/wayanadvision.m3u8
-#EXTINF:-1 tvg-id="WeatherSpy.in@SD" tvg-name="WeatherSpy (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/weatherspy-india.png" tvg-country="IN" tvg-language="hin" group-title="New Channels" x-discovery-source-country="IN",WeatherSpy (India)
+#EXTINF:-1 tvg-id="WeatherSpy.in@SD" tvg-name="WeatherSpy (India)" tvg-logo="logos/weatherspy-india.png" tvg-country="IN" tvg-language="hin" group-title="New Channels" x-discovery-source-country="IN",WeatherSpy (India)
 https://jukin-weatherspy-2-in.samsung.wurl.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="ZodiakTV.in@SD" tvg-name="Zodiak TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zodiak-tv.png" tvg-country="IN" tvg-language="ben" group-title="New Channels" x-discovery-source-country="IN",Zodiak TV
+#EXTINF:-1 tvg-id="ZodiakTV.in@SD" tvg-name="Zodiak TV" tvg-logo="logos/zodiak-tv.png" tvg-country="IN" tvg-language="ben" group-title="New Channels" x-discovery-source-country="IN",Zodiak TV
 https://ranacable.duckdns.org/ZodiakTv/index.m3u8
-#EXTINF:-1 tvg-id="CCTVKunnamkulam.in@SD" tvg-name="CCTV Kunnamkulam (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cctv-kunnamkulam-62fa6fc277ae8c5e526d.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",CCTV Kunnamkulam (720p)
+#EXTINF:-1 tvg-id="CCTVKunnamkulam.in@SD" tvg-name="CCTV Kunnamkulam (720p)" tvg-logo="logos/cctv-kunnamkulam-62fa6fc277ae8c5e526d.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",CCTV Kunnamkulam (720p)
 https://96vd9q4kyxq7-hls-live.5centscdn.com/livestream/f25aeb3e9210967d546a077de6e105e4.sdp/playlist.m3u8
-#EXTINF:-1 tvg-id="CityChannelHD.in@SD" tvg-name="City Channel HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/city-channel-ccf4f79ac480e997303f.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",City Channel HD (1080p)
+#EXTINF:-1 tvg-id="CityChannelHD.in@SD" tvg-name="City Channel HD (1080p)" tvg-logo="logos/city-channel-ccf4f79ac480e997303f.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",City Channel HD (1080p)
 https://live.skystream.in/live/citytv2924/index.m3u8
-#EXTINF:-1 tvg-id="CityVisionKannur.in@SD" tvg-name="City Vision Kannur (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/city-vision-kannur-9ecc98dce4b989c0f5ad.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",City Vision Kannur (576p)
+#EXTINF:-1 tvg-id="CityVisionKannur.in@SD" tvg-name="City Vision Kannur (576p)" tvg-logo="logos/city-vision-kannur-9ecc98dce4b989c0f5ad.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",City Vision Kannur (576p)
 https://live.skystream.in/live/citykannurcity/index.m3u8
-#EXTINF:-1 tvg-id="DrishyaTV.in@SD" tvg-name="Drishya TV (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/drishya-tv-77559c4cddec4f3b15ea.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Drishya TV (576p)
+#EXTINF:-1 tvg-id="DrishyaTV.in@SD" tvg-name="Drishya TV (576p)" tvg-logo="logos/drishya-tv-77559c4cddec4f3b15ea.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Drishya TV (576p)
 https://live.skystream.in/live/drishya5060/index.m3u8
-#EXTINF:-1 tvg-id="DrisyaTV.in@SD" tvg-name="Drisya TV (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/drisya-tv-5223fe671a054e0ca930.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Drisya TV (576p)
+#EXTINF:-1 tvg-id="DrisyaTV.in@SD" tvg-name="Drisya TV (576p)" tvg-logo="logos/drisya-tv-5223fe671a054e0ca930.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Drisya TV (576p)
 https://live.skystream.in/live/drishyakarunagapally/index.m3u8
-#EXTINF:-1 tvg-id="KasargodVision.in@SD" tvg-name="Kasargod Vision (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kasargod-vision-9087ad218648d7b61827.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Kasargod Vision (576p)
+#EXTINF:-1 tvg-id="KasargodVision.in@SD" tvg-name="Kasargod Vision (576p)" tvg-logo="logos/kasargod-vision-9087ad218648d7b61827.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Kasargod Vision (576p)
 https://live.skystream.in/live/kasaragodvsn/index.m3u8
-#EXTINF:-1 tvg-id="KCNKasargod.in@SD" tvg-name="KCN Kasargod (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kcn-kasargod-32b58ffed02e7a179d50.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",KCN Kasargod (576p)
+#EXTINF:-1 tvg-id="KCNKasargod.in@SD" tvg-name="KCN Kasargod (576p)" tvg-logo="logos/kcn-kasargod-32b58ffed02e7a179d50.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",KCN Kasargod (576p)
 https://live.skystream.in/live/kcnksrgod/index.m3u8
-#EXTINF:-1 tvg-id="KeralaTodayTV.in@SD" tvg-name="Kerala Today TV (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kerala-today-tv-ea3bd412028baff3c097.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Kerala Today TV (1080p)
+#EXTINF:-1 tvg-id="KeralaTodayTV.in@SD" tvg-name="Kerala Today TV (1080p)" tvg-logo="logos/kerala-today-tv-ea3bd412028baff3c097.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Kerala Today TV (1080p)
 https://live.skystream.in/live/krlatoday/index.m3u8
-#EXTINF:-1 tvg-id="MalappuramCableVision.in@SD" tvg-name="Malappuram Cable Vision (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/malappuram-cable-vision-bb4b6da37bd6a3ad422c.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Malappuram Cable Vision (1080p)
+#EXTINF:-1 tvg-id="MalappuramCableVision.in@SD" tvg-name="Malappuram Cable Vision (1080p)" tvg-logo="logos/malappuram-cable-vision-bb4b6da37bd6a3ad422c.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Malappuram Cable Vision (1080p)
 http://cloud.logichost.in:1935/live/mcvlive/playlist.m3u8
-#EXTINF:-1 tvg-id="NewVisionHD.in@SD" tvg-name="New Vision HD (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/new-vision-e4ea60bbeb3674e20755.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",New Vision HD (576p)
+#EXTINF:-1 tvg-id="NewVisionHD.in@SD" tvg-name="New Vision HD (576p)" tvg-logo="logos/new-vision-e4ea60bbeb3674e20755.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",New Vision HD (576p)
 https://live.skystream.in/live/newvision2924/index.m3u8
-#EXTINF:-1 tvg-id="NMMediaChannelHD.in@SD" tvg-name="NM Media Channel HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nm-media-channel-adf4a8ecc0dbe61589c3.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",NM Media Channel HD (1080p)
+#EXTINF:-1 tvg-id="NMMediaChannelHD.in@SD" tvg-name="NM Media Channel HD (1080p)" tvg-logo="logos/nm-media-channel-adf4a8ecc0dbe61589c3.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",NM Media Channel HD (1080p)
 https://live.skystream.in/live/newmedia2924/index.m3u8
-#EXTINF:-1 tvg-id="PeriyarVision.in@SD" tvg-name="Periyar Vision (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/periyar-vision-a12b57416fc2319332e8.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Periyar Vision (1080p)
+#EXTINF:-1 tvg-id="PeriyarVision.in@SD" tvg-name="Periyar Vision (1080p)" tvg-logo="logos/periyar-vision-a12b57416fc2319332e8.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Periyar Vision (1080p)
 https://stream.onecloudlive.in/periyarvision/periyarvision/index.m3u8
-#EXTINF:-1 tvg-id="SouthVision.in@SD" tvg-name="South Vision (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/south-vision-c39b6b63a7878132e257.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",South Vision (1080p)
+#EXTINF:-1 tvg-id="SouthVision.in@SD" tvg-name="South Vision (1080p)" tvg-logo="logos/south-vision-c39b6b63a7878132e257.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",South Vision (1080p)
 https://live.skystream.in/live/southvsnklm/index.m3u8
-#EXTINF:-1 tvg-id="WayanadVisionMovies.in@SD" tvg-name="Wayanad Vision Movies (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wayanad-vision-movies-e71e1066086194408e92.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Wayanad Vision Movies (720p)
+#EXTINF:-1 tvg-id="WayanadVisionMovies.in@SD" tvg-name="Wayanad Vision Movies (720p)" tvg-logo="logos/wayanad-vision-movies-e71e1066086194408e92.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Wayanad Vision Movies (720p)
 https://online.wayanadvision.in/hls/wvmovies.m3u8
-#EXTINF:-1 tvg-id="WayanadVisionPlus.in@SD" tvg-name="Wayanad Vision Plus (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wayanad-vision-plus-82bd345c3914db6ab3e2.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Wayanad Vision Plus (720p)
+#EXTINF:-1 tvg-id="WayanadVisionPlus.in@SD" tvg-name="Wayanad Vision Plus (720p)" tvg-logo="logos/wayanad-vision-plus-82bd345c3914db6ab3e2.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Wayanad Vision Plus (720p)
 https://online.wayanadvision.in/hls/streaming1.m3u8
-#EXTINF:-1 tvg-id="MalabarPlus.in@SD" tvg-name="Malabar Plus (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/malabar-plus-d6e579c29354453addc3.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Malabar Plus (720p)
+#EXTINF:-1 tvg-id="MalabarPlus.in@SD" tvg-name="Malabar Plus (720p)" tvg-logo="logos/malabar-plus-d6e579c29354453addc3.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Malabar Plus (720p)
 http://cloud.logichost.in:1935/live/mplus/index.m3u8
-#EXTINF:-1 tvg-id="Thanima.in@SD" tvg-name="Thanima (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thanima-83afbf82b637391714f3.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Thanima (1080p)
+#EXTINF:-1 tvg-id="Thanima.in@SD" tvg-name="Thanima (1080p)" tvg-logo="logos/thanima-83afbf82b637391714f3.png" tvg-country="IN" group-title="New Channels" x-discovery-source-country="IN",Thanima (1080p)
 https://live.skystream.in/live/thanimatvtvm/index.m3u8
-#EXTINF:-1 tvg-id="DurontoTV.bd@SD" tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv-2b3c7dd202.png" tvg-country="BD" tvg-language="ben" group-title="New Backups" x-discovery-source-country="BD",Duronto TV
+#EXTINF:-1 tvg-id="CCNET.in@SD" tvg-country="IN" tvg-name="CC NET (1080p)" x-discovery-source-country="IN" group-title="New Channels",CC NET (1080p)
+https://live.skystream.in/live/ccnet7082/index.m3u8
+#EXTINF:-1 tvg-id="K7KeralamChannel.in@SD" tvg-country="IN" tvg-name="K7 Keralam Channel (1080p)" x-discovery-source-country="IN" group-title="New Channels",K7 Keralam Channel (1080p)
+https://live.skystream.in/live/keralam2742/index.m3u8
+#EXTINF:-1 tvg-id="SristiTV.in@SD" tvg-country="IN" tvg-name="Sristi TV (1080p)" x-discovery-source-country="IN" group-title="New Channels",Sristi TV (1080p)
+https://stream.ottlive.co.in/sristitv/index.m3u8
+#EXTINF:-1 tvg-id="DurontoTV.bd@SD" tvg-name="Duronto TV" tvg-logo="logos/duronto-tv-2b3c7dd202.png" tvg-country="BD" tvg-language="ben" group-title="New Backups" x-discovery-source-country="BD",Duronto TV
 https://box.bbaria.net/DurontoTV/index.m3u8
-#EXTINF:-1 tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" tvg-country="IN" tvg-language="hin" group-title="New Backups" x-discovery-source-country="IN",B4U Music
+#EXTINF:-1 tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="logos/b4u-music.png" tvg-country="IN" tvg-language="hin" group-title="New Backups" x-discovery-source-country="IN",B4U Music
 https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="EpicBharat.in@Digital" tvg-name="Epic Bharat Digital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-bharat-digital-67aee5508b31a1940934.png" tvg-country="IN" tvg-language="hin" group-title="New Backups" x-discovery-source-country="IN",Epic Bharat Digital
+#EXTINF:-1 tvg-id="EpicBharat.in@Digital" tvg-name="Epic Bharat Digital" tvg-logo="logos/epic-bharat-digital-67aee5508b31a1940934.png" tvg-country="IN" tvg-language="hin" group-title="New Backups" x-discovery-source-country="IN",Epic Bharat Digital
 https://dt4psgz92awc5.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/naazara_tv/master.m3u8
-#EXTINF:-1 tvg-id="INWILD.nl@SD" tvg-name="INWILD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/inwild.png" tvg-country="IN" tvg-language="eng" group-title="New Backups" x-discovery-source-country="IN",INWILD
+#EXTINF:-1 tvg-id="INWILD.nl@SD" tvg-name="INWILD" tvg-logo="logos/inwild.png" tvg-country="IN" tvg-language="eng" group-title="New Backups" x-discovery-source-country="IN",INWILD
 https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
-#EXTINF:-1 tvg-id="MazhavilManorama.in@SD" tvg-name="Mazhavil Manorama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mazhavil-manorama.png" tvg-country="IN" tvg-language="mal" group-title="New Backups" x-discovery-source-country="IN",Mazhavil Manorama
+#EXTINF:-1 tvg-id="MazhavilManorama.in@SD" tvg-name="Mazhavil Manorama" tvg-logo="logos/mazhavil-manorama.png" tvg-country="IN" tvg-language="mal" group-title="New Backups" x-discovery-source-country="IN",Mazhavil Manorama
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/ad6c59acd03b4b5a9928e32d7fee66db/index.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" tvg-name="7S Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" channel-id="7SMusic.in@SD" tvg-country="IN" tvg-language="tam" group-title="Backup",7S Music
 https://fta.ektv.in/live/771/master.m3u8
