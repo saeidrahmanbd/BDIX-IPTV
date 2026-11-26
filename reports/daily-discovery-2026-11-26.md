@@ -197,6 +197,43 @@ No unrelated International entries were changed. The edit removed one invalid ro
 | Indian Music | 57 |
 | Indian Entertainment | 173 |
 | Pakistani | 19 |
+| Argentina | 14 |
+| Brazil | 15 |
+| Bulgaria | 21 |
+| Canada | 31 |
+| Chile | 10 |
+| China | 9 |
+| Colombia | 9 |
+| Costa Rica | 9 |
+| Czech Republic | 23 |
+| DO | 11 |
+| Estonia | 6 |
+| France | 44 |
+| Germany | 71 |
+| Greece | 8 |
+| Hungary | 15 |
+| Iran | 13 |
+| Italy | 24 |
+| Lebanon | 6 |
+| Mexico | 17 |
+| Netherlands | 17 |
+| North Macedonia | 5 |
+| Panama | 5 |
+| Paraguay | 5 |
+| Peru | 9 |
+| Poland | 25 |
+| Romania | 30 |
+| Russia | 76 |
+| Saudi Arabia | 9 |
+| Singapore | 5 |
+| Spain | 17 |
+| Sweden | 49 |
+| Turkey | 15 |
+| Ukraine | 28 |
+| United Kingdom | 20 |
+| United States | 240 |
+| Uzbekistan | 5 |
+| Vietnam | 6 |
 | International | 102 |
 | News | 12 |
 | Fashion TV | 3 |
@@ -220,7 +257,7 @@ Independent current-file checks after the targeted repair:
 - Final group order: **Review → New Channels → New Backups → Backup**
 - Adult and Fashion TV groups remain intact; no new Adult/Fashion TV additions today.
 
-Legacy out-of-scope groups remain, including Indian Entertainment, News, Documentary & Wildlife, Kids, Religious and Sports. They were preserved rather than broadly deleted or reclassified.
+No new country group was created today. The existing country-specific groups are all retained as shown above. Legacy out-of-scope groups remain, including Indian Entertainment, News, Documentary & Wildlife, Kids, Religious and Sports. They were preserved rather than broadly deleted or reclassified.
 
 ### Country-group threshold mismatch
 
