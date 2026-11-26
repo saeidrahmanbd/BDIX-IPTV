@@ -2403,6 +2403,7 @@ http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/52.m3u8
 https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 #EXTINF:-1 tvg-id="Zoom.in" tvg-name="Zoom" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" channel-id="Zoom.in" tvg-country="IN" tvg-language="hin" group-title="Backup",Zoom
 https://mumbai-edge.smartplaytv.in/Zoom/index.m3u8
+#EXTINF:-1 tvg-id="Zoom.in" tvg-name="Zoom" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" channel-id="Zoom.in" tvg-country="IN" tvg-language="hin" group-title="Backup",Zoom
 https://d2esfk1pb9cdob.cloudfront.net/chunklist_1.m3u8
 #EXTINF:-1 tvg-id="AndPictures.in@SD" tvg-name="&pictures HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pictures.png" channel-id="AndPictures.in@SD" tvg-country="IN" tvg-language="hin" group-title="Review",&pictures HD
 http://103.135.253.32:8080/PICTURE-HD/index.m3u8
