@@ -4,7 +4,7 @@
   "logo_image_files": 5278,
   "all_explicitly_referenced_logo_files": 2522,
   "runtime_referenced_logo_files": 2520,
-  "playlist_referenced_logo_files": 2486,
+  "playlist_referenced_logo_files": 2485,
   "apparently_unreferenced_by_any_text_file": 2756,
   "apparently_unreferenced_by_runtime_sources": 2758,
   "missing_explicit_logo_targets": [
@@ -11188,7 +11188,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ayush-tv.png": [
@@ -16138,7 +16137,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/metro-tv-india-0625d4e893.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -22748,7 +22746,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ayush-tv.png": [
@@ -27700,7 +27697,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/metro-tv-india-0625d4e893.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"

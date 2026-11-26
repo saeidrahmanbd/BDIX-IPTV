@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-26T08:56:51.517719+00:00",
+  "generated_at_utc": "2026-11-26T09:02:14.383443+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -7,21 +7,21 @@
     "needs_review": "Authenticity is undocumented, the source is ambiguous, or the logo is missing."
   },
   "counts_by_playlist": {
-    "IPTV-Playlist.m3u": 1150,
+    "IPTV-Playlist.m3u": 1148,
     "International-Playlist.m3u": 3318
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "acb06ac5d8bab909c925cf070e22a36ceb7c713a197b0cab80e66d961ab77139",
+    "IPTV-Playlist.m3u": "428b453dae9a661fc8f5f5838f2d093c90959f4bfea3b3cbaa157479b15128d6",
     "International-Playlist.m3u": "3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155"
   },
   "status_counts": {
-    "needs_review": 3463,
+    "needs_review": 3461,
     "generated_fallback": 2,
     "third_party_verified": 1003
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1129,
+      "needs_review": 1127,
       "generated_fallback": 2,
       "third_party_verified": 19
     },
@@ -30,7 +30,7 @@
       "third_party_verified": 984
     }
   },
-  "entry_count": 4468,
+  "entry_count": 4466,
   "entries": [
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -14920,32 +14920,6 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 2299,
-      "channel_name": "Ayush Next Communication Network",
-      "tvg_id": "AyushNextCommunicationNetwork.in@SD",
-      "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ayush-next-communication-network-f7c7f33323dd3095ae15.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "line": 2301,
-      "channel_name": "Metro TV (India)",
-      "tvg_id": "MetroTV.in@SD",
-      "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/metro-tv-india-0625d4e893.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "line": 2303,
       "channel_name": "Biswa Bangla 24",
       "tvg_id": "BiswaBangla24.us@SD",
       "channel_id": "BiswaBangla24.us@SD",
@@ -14958,7 +14932,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2305,
+      "line": 2301,
       "channel_name": "Sangeet Bangla",
       "tvg_id": "SangeetBangla.in@SD",
       "channel_id": "SangeetBangla.in@SD",
@@ -14971,7 +14945,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2307,
+      "line": 2303,
       "channel_name": "Unite8 Sports 1 HD",
       "tvg_id": "Unite8Sports1.in@HD",
       "channel_id": "Unite8Sports1.in@HD",
