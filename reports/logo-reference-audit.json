@@ -1214,6 +1214,7 @@
       "scripts/repair_playlist_logos.py"
     ],
     "logos/blob/main/countries/international/bbc-world-news-int.png": [
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/blob/main/countries/international/beinsports/old/horizontal/bein-sports-xtra-hz-int.png": [
@@ -15656,7 +15657,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/local-logo-cnn.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/lol-tv.png": [
       "scripts/migrate_external_logos_fixed.py"
@@ -17674,7 +17676,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/racing-hagerty.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17885,7 +17886,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/retrocrush.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -27210,7 +27210,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/local-logo-cnn.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/lol-tv.png": [
       "scripts/migrate_external_logos_fixed.py"
@@ -29231,7 +29232,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/racing-hagerty.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29442,7 +29442,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/retrocrush.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
