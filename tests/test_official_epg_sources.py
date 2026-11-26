@@ -11,7 +11,8 @@ from official_epg_sources import (
     RTV_LIVE_SOURCE,
     _RtvArticleLinkParser,
     _parse_rtv_daily_programmes,
-    _parse_rtv_live_programmes,\n    _parse_rtv_weekly_programmes,
+    _parse_rtv_live_programmes,
+    _parse_rtv_weekly_programmes,
 )
 
 
