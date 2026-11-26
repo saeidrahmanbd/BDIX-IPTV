@@ -93,8 +93,11 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         for channel_id, group in expected.items():
             with self.subTest(channel_id=channel_id):
                 rows = [line for line in playlist.splitlines() if line.startswith("#EXTINF:") and f'tvg-id="{channel_id}"' in line]
-                self.assertEqual(len(rows), 1)
-                self.assertIn(f'group-title="{group}"', rows[0])
+                primary = [line for line in rows if 'tvg-chno="' in line]
+                self.assertEqual(len(primary), 1)
+                self.assertIn(f'group-title="{group}"', primary[0])
+                for backup in (line for line in rows if 'tvg-chno="' not in line):
+                    self.assertIn('group-title="Backup"', backup)
         self.assertRegex(playlist, r'tvg-id="MBCBollywood.ae".*tvg-language="ara"|tvg-language="ara".*tvg-id="MBCBollywood.ae"')
         self.assertRegex(playlist, r'tvg-id="NTCTV.in@SD".*tvg-language="tam"|tvg-language="tam".*tvg-id="NTCTV.in@SD"')
 
