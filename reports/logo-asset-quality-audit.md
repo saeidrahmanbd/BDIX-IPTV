@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-26T09:02:02+00:00**
+Generated: **2026-11-26T09:36:36+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **428b453dae9a661fc8f5f5838f2d093c90959f4bfea3b3cbaa157479b15128d6**
+- IPTV-Playlist.m3u SHA-256: **3a6475bd345a8bf0c758826c0f759aad8d020660f2125fcb8262f252edaea744**
 - International-Playlist.m3u SHA-256: **3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **746**
-- Playlist references whose asset stem differs from the normalized channel name: **1502**
+- Playlist references whose asset stem differs from the normalized channel name: **1503**
 - Unreferenced image assets immediately inside logos/: **1000** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1020,9 +1020,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Epic Bhojpuri Digital | epic-bhojpuri.png | Indian Movies |
 | IPTV-Playlist.m3u | Goldmines Movies 2 | goldmines-movies.png | Indian Movies |
 | IPTV-Playlist.m3u | Indywood TV | indywood-tv.png | Indian Movies |
+| IPTV-Playlist.m3u | MBC | mbc-bollywood.png | International |
 | IPTV-Playlist.m3u | Pitaara | pitaara-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Indian Movies |
-| IPTV-Playlist.m3u | Star Movies (India) HD | star-movies-india-hd-1080p.png | Indian Movies |
+| IPTV-Playlist.m3u | Star Movies | star-movies-india-hd-1080p.png | International |
 | IPTV-Playlist.m3u | TamilVision-TV | tamilvision-tv-1080p.png | Indian Movies |
 | IPTV-Playlist.m3u | Thalaa TV | thalaa-tv.png | Indian Movies |
 | IPTV-Playlist.m3u | Thendral TV | thendral-tv-ed9b933eb5.png | Indian Movies |
@@ -1030,7 +1031,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Indian Music |
 | IPTV-Playlist.m3u | Aaryaa TV | aaryaa-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Dhool TV | dhool-tv.png | Indian Music |
-| IPTV-Playlist.m3u | Jalwa TV | jalwa-tv.png | Indian Music |
+| IPTV-Playlist.m3u | Jalwa TV | jalwa-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Kalika TV | kalika-tv.png | Indian Music |
 | IPTV-Playlist.m3u | Kappa TV | kappa-tv.png | Indian Music |
 | IPTV-Playlist.m3u | MH One Music | mh-1-music.png | Indian Music |
