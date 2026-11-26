@@ -53,6 +53,45 @@ class RtvArticleLinkParserTests(unittest.TestCase):
 
 
 
+class RtvWeeklyScheduleParsingTests(unittest.TestCase):
+    def test_official_weekday_schedule_layout_produces_dated_programmes(self):
+        html = """
+        <div>sat</div>
+        <div>05:00 PM - R-Syudio</div>
+        <div>06:04 PM - ASIA-WEEKLY</div>
+        <div>07:35 PM - Dawater Ranna SC</div>
+        <div>sun</div>
+        <div>05:00 PM - Sisimpur Season-15</div>
+        <div>06:00 PM - Proshno Korun</div>
+        <div>07:30 PM - Dawater Ranna SC</div>
+        <div>mon</div>
+        <div>05:02 PM - Sisimpur Season-15</div>
+        <div>06:05 PM - Proshno Korun</div>
+        <div>07:30 PM - R- Investigation</div>
+        <div>tue</div>
+        <div>05:30 PM - Hat Bariye Dilam</div>
+        <div>06:00 PM - CHINA HOUR SESAION-03</div>
+        <div>07:32 PM - Xpert Chefs Studio</div>
+        <div>wed</div>
+        <div>05:05 PM - Okkhorer Golpo</div>
+        <div>06:06 PM - CHINA-FOCUS</div>
+        <div>07:30 PM - Ai Raat Tomar Amar</div>
+        <div>thu</div>
+        <div>05:30 PM - Krishi O Krishti</div>
+        <div>06:00 PM - China Buletin</div>
+        <div>07:30 PM - Music Station</div>
+        <div>fri</div>
+        <div>05:30 PM - Sisimpur Season-15</div>
+        <div>06:00 PM - Proshno Korun</div>
+        <div>07:30 PM - Ai Raat Tomar Amar</div>
+        """
+        now = datetime(2026, 11, 26, 3, 0, tzinfo=timezone.utc)
+        programmes = _parse_rtv_weekly_programmes(html, now)
+        self.assertGreaterEqual(len(programmes), 10)
+        self.assertTrue(all(item["channel_id"] == "RTV.bd" for item in programmes))
+        self.assertTrue(all(item["stop_dt"] > item["start_dt"] for item in programmes))
+
+
 class RtvLiveScheduleParsingTests(unittest.TestCase):
     def test_official_live_page_parses_explicit_english_times(self):
         html = """
