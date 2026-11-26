@@ -332,3 +332,14 @@ Outstanding blockers:
 - **Overall:** **PARTIAL — do not treat today's paired discovery as fully successful until International recovery completes and validates.**
 
 This is a fresh 26 November report. No prior day's report was reused.
+
+## 8. Post-run recovery update — 26 November 2026, 09:02 BDT
+
+The initial report above was generated at 07:02 BDT and correctly recorded the International recovery as pending at that time. The queued recovery has since completed; the earlier pending status is historical, not the final result for the day.
+
+- **International discovery recovery:** [run #45731674403](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45731674403) completed successfully. The actual `discover` job passed the policy, retired-endpoint, stream-validator, five-channel-threshold and protected-group tests. Discovery, attribution, stream/logo verification, final playlist/queue validation, final discovery validation, commit and report upload all completed successfully.
+- **EPG publication:** [run #45736495710](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45736495710) completed the actual `refresh` job. Both EPG configuration/quality validation and **Regenerate, validate and publish XMLTV** succeeded; the freshness diagnostic was uploaded. The published guide and reports were refreshed in commit [0a36f1391a4bdd3f0b762ccad5fda4c94e11ebae](https://github.com/saeidrahmanbd/BDIX-IPTV/commit/0a36f1391a4bdd3f0b762ccad5fda4c94e11ebae).
+- **Watchdog:** [run #45746119968](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45746119968) completed successfully. Its log confirms the actual required production jobs for all seven managed workflows had already succeeded for the Bangladesh date, so it correctly dispatched no duplicates.
+- **Schedule delivery:** The GitHub Actions run history for 26 November contains no `event=schedule` runs in the inspected date window. The production work was completed through manual dispatch, push and workflow-completion recovery paths. GitHub's native schedule delivery remains unverified/unreliable; this addendum does not claim the cron triggers were repaired.
+
+**Final paired-discovery status for 26 November: SUCCESS.** IPTV discovery and International discovery recovery both completed their actual writer/validation steps. This does not clear the separate legacy policy, logo-provenance, EPG-coverage or playlist-audit freshness issues listed above. The original report's playlist counts and audit findings remain a snapshot from its stated earlier revisions, not a claim that they were recalculated after the recovery run.
