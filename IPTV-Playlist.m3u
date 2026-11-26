@@ -1398,14 +1398,14 @@ https://mumbai-edge.smartplaytv.in/Tennis2/index.m3u8
 https://amg01935-amg01935c1-amgplt0165.playout.now3.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="mixer.trace.sports.stars.com" tvg-name="Trace Sports Stars" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-sport.png" tvg-chno="687" channel-id="mixer.trace.sports.stars.com" tvg-country="FR" tvg-language="eng" group-title="Sports",Trace Sports Stars
 https://trace-sportstars-samsungnz.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="TurkmenistanSport.tm@SD" tvg-name="Türkmenistan Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/turkmenistan-sport-714745951c.png" tvg-chno="691" channel-id="TurkmenistanSport.tm@SD" tvg-country="TM" tvg-language="tuk" group-title="Sports",Türkmenistan Sport
-https://alpha.tv.online.tm/hls/ch004.m3u8
 #EXTINF:-1 tvg-id="custom.tvrisport" tvg-name="TVRI Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvri-sport.png" tvg-chno="692" channel-id="custom.tvrisport" tvg-country="ID" tvg-language="ind;eng" group-title="Sports",TVRI Sport
 https://ott-balancer.tvri.go.id/live/eds/SportHD/hls/SportHD.m3u8
 #EXTINF:-1 tvg-id="TVSSports.us@SD" tvg-name="TVS Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvs-sports-1a961bba94.png" tvg-chno="693" channel-id="TVSSports.us@SD" tvg-country="US" tvg-language="eng" group-title="Sports",TVS Sports
 https://rpn.bozztv.com/gusa/gusa-tvssports/index.m3u8
 #EXTINF:-1 tvg-id="custom.tycsports" tvg-name="TYC Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tyc-sports.png" tvg-chno="694" channel-id="custom.tycsports" tvg-country="AR" tvg-language="spa" group-title="Sports",TYC Sports
 https://amg26268-amg26268c14-freelivesports-emea-10267.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg26268-sportsstudio-tycsports-freelivesportsemea/playlist.m3u8
+#EXTINF:-1 tvg-id="TurkmenistanSport.tm@SD" tvg-name="Türkmenistan Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/turkmenistan-sport-714745951c.png" tvg-chno="691" channel-id="TurkmenistanSport.tm@SD" tvg-country="TM" tvg-language="tuk" group-title="Sports",Türkmenistan Sport
+https://alpha.tv.online.tm/hls/ch004.m3u8
 #EXTINF:-1 tvg-id="ufc.com" tvg-name="UFC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ufc-tv.png" tvg-chno="695" channel-id="ufc.com" tvg-country="US" tvg-language="eng" group-title="Sports",UFC
 https://linear-893.frequency.stream/dist/plex/893/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.unbeaten" tvg-name="Unbeaten" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unbeaten.png" tvg-chno="696" channel-id="custom.unbeaten" tvg-country="US" tvg-language="eng" group-title="Sports",Unbeaten
