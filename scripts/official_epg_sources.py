@@ -630,6 +630,28 @@ def fetch_rtv_programmes(now=None):
         detail = re.sub(r"https?://[^\\s]+", "<url-redacted>", detail)
         return f"{type(exc).__name__}: {detail[:180]}"
 
+    # Prefer the broadcaster's directly published weekly schedule before homepage discovery.
+    # The homepage often omits its daily article link; the separate live page has
+    # intermittently failed TLS verification. HTTPS verification remains enabled.
+    weekly_source = RTV_LEGACY_SOURCES[0]
+    weekly_request = urllib.request.Request(
+        weekly_source,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
+            "Accept": "text/html,application/xhtml+xml,*/*",
+            "Accept-Language": "en-US,en;q=0.9,bn;q=0.7",
+        },
+    )
+    try:
+        with urllib.request.urlopen(weekly_request, timeout=30) as response:
+            weekly_html = response.read().decode("utf-8", errors="replace")
+        weekly = _parse_rtv_weekly_programmes(weekly_html, now_utc)
+        if weekly:
+            return weekly
+        fetch_errors.append("rtvbd.tv/schedule.php: no valid weekday programme slots")
+    except Exception as exc:
+        fetch_errors.append(f"rtvbd.tv/schedule.php: {describe_fetch_error(exc)}")
+
     # The official homepage links to a dated Bengali "আরটিভিতে আজ যা দেখবেন" article.
     request = urllib.request.Request(
         RTV_SOURCE,
@@ -697,7 +719,7 @@ def fetch_rtv_programmes(now=None):
 
     # Retain the broadcaster's public weekly page as a fallback; TLS verification
     # remains enabled. Retry one transient network failure per host before failing over.
-    for source_url in RTV_LEGACY_SOURCES:
+    for source_url in RTV_LEGACY_SOURCES[1:]:
         host = source_url.split("/", 3)[2]
         last_error = None
         for attempt in range(2):
