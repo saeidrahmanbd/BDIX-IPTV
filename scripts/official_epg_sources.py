@@ -11,6 +11,9 @@ from zoneinfo import ZoneInfo
 HUM_TV_SOURCE = "https://hum.tv/schedule/"
 HUM_TV_CHANNEL_ID = "HumTV.pk"
 RTV_SOURCE = "https://rtvonline.com/home/"
+# The current site surfaces its dated daily schedule article on this section page;
+# retain the legacy homepage as a fallback for layout changes.
+RTV_HOME_SOURCES = ("https://rtvonline.com/index.php/bangladesh", RTV_SOURCE)
 RTV_LIVE_SOURCE = "https://www.rtvbd.tv/live.php"
 # The www host currently serves the public weekly schedule; retain the apex host as fallback.
 RTV_LEGACY_SOURCES = ("https://www.rtvbd.tv/schedule.php", "https://rtvbd.tv/schedule.php")
@@ -652,50 +655,54 @@ def fetch_rtv_programmes(now=None):
     except Exception as exc:
         fetch_errors.append(f"rtvbd.tv/schedule.php: {describe_fetch_error(exc)}")
 
-    # The official homepage links to a dated Bengali "আরটিভিতে আজ যা দেখবেন" article.
-    request = urllib.request.Request(
-        RTV_SOURCE,
-        headers={
-            "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
-            "Accept": "text/html,application/xhtml+xml,*/*",
-            "Accept-Language": "bn-BD,bn;q=0.9,en;q=0.7",
-        },
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            homepage = response.read().decode("utf-8", errors="replace")
-        link_parser = _RtvArticleLinkParser()
-        link_parser.feed(homepage)
-        link_parser.close()
-        article_urls = sorted(
-            set(link_parser.links),
-            key=lambda url: int(re.search(r"/(\d+)(?:/|$)", url).group(1))
-            if re.search(r"/(\d+)(?:/|$)", url) else 0,
-            reverse=True,
+    # The official section page currently exposes a dated Bengali daily schedule
+    # article; try it before the legacy homepage, whose layout may lag behind.
+    for homepage_url in RTV_HOME_SOURCES:
+        request = urllib.request.Request(
+            homepage_url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
+                "Accept": "text/html,application/xhtml+xml,*/*",
+                "Accept-Language": "bn-BD,bn;q=0.9,en;q=0.7",
+            },
         )
-        if not article_urls:
-            fetch_errors.append("rtvonline: no daily schedule article link on homepage")
-        else:
-            article_request = urllib.request.Request(
-                article_urls[0],
-                headers={
-                    "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
-                    "Accept": "text/html,application/xhtml+xml,*/*",
-                    "Accept-Language": "bn-BD,bn;q=0.9,en;q=0.7",
-                    "Referer": RTV_SOURCE,
-                },
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                homepage = response.read().decode("utf-8", errors="replace")
+            link_parser = _RtvArticleLinkParser()
+            link_parser.feed(homepage)
+            link_parser.close()
+            article_urls = sorted(
+                set(link_parser.links),
+                key=lambda url: int(re.search(r"/(\\d+)(?:/|$)", url).group(1))
+                if re.search(r"/(\\d+)(?:/|$)", url) else 0,
+                reverse=True,
             )
-            with urllib.request.urlopen(article_request, timeout=30) as response:
-                article_html = response.read().decode("utf-8", errors="replace")
-            parser = _RtvScheduleParser()
-            parser.feed(article_html)
-            parser.close()
-            daily = _parse_rtv_daily_programmes(parser.text(), now_utc)
-            if daily:
-                return daily
-            fetch_errors.append("rtvonline: daily article is stale or has no explicit programme slots")
-    except Exception as exc:
-        fetch_errors.append(f"rtvonline: {describe_fetch_error(exc)}")
+            if not article_urls:
+                fetch_errors.append(f"{homepage_url.split('/', 3)[2]}: no daily schedule article link")
+                continue
+
+            for article_url in article_urls[:3]:
+                article_request = urllib.request.Request(
+                    article_url,
+                    headers={
+                        "User-Agent": "Mozilla/5.0 (compatible; BDIX-IPTV-EPG/1.0; +https://github.com/saeidrahmanbd/BDIX-IPTV)",
+                        "Accept": "text/html,application/xhtml+xml,*/*",
+                        "Accept-Language": "bn-BD,bn;q=0.9,en;q=0.7",
+                        "Referer": homepage_url,
+                    },
+                )
+                with urllib.request.urlopen(article_request, timeout=30) as response:
+                    article_html = response.read().decode("utf-8", errors="replace")
+                parser = _RtvScheduleParser()
+                parser.feed(article_html)
+                parser.close()
+                daily = _parse_rtv_daily_programmes(parser.text(), now_utc)
+                if daily:
+                    return daily
+            fetch_errors.append(f"{homepage_url.split('/', 3)[2]}: linked daily schedule article is stale or has no explicit programme slots")
+        except Exception as exc:
+            fetch_errors.append(f"{homepage_url.split('/', 3)[2]}: {describe_fetch_error(exc)}")
 
     # RTV also publishes a current-day English schedule on its official live page.
     # Prefer its explicitly timed entries before falling back to the older weekly grid.
