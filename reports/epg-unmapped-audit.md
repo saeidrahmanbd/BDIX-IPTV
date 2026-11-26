@@ -1,14 +1,14 @@
 # Strict Unmapped EPG Audit
 
-Generated: **2026-11-26T02:01:09+00:00**
+Generated: **2026-11-26T08:27:25+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
 Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
 
-- Unmapped active channel identities reviewed: **1505**
+- Unmapped active channel identities reviewed: **1507**
 - Unmapped identities with exact/region-normalized schedule candidates: **0**
 - Candidate rows: **0**
-- Unmapped identities without an exact schedule-backed candidate: **1505**
+- Unmapped identities without an exact schedule-backed candidate: **1507**
 
 ## Exact candidates for manual review
 
@@ -24,6 +24,6 @@ No dependable public, current XMLTV feed for the domestic Bangladesh channel set
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **8167fe97fbf5e046ec9f27fdb6a89679c51ec7abda12ff14819dab25c02bb081**
-- International-Playlist.m3u SHA-256: **aca22e32fbe473ee8505b996463c19709bc709420f345a316c8d9e7bcd3d4c08**
+- IPTV-Playlist.m3u SHA-256: **fb2881b5951519aa648850f8de2cf82826a551cfd6bb983b4084fdb73eb639bc**
+- International-Playlist.m3u SHA-256: **3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155**
 
