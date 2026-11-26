@@ -39,18 +39,24 @@ Both rows were removed from `New Channels`. Their exact identities are now expli
 
 Disney Channel India (`DisneyChannel.in@HD`) was already present in the primary `Kids` group; no additional promotion was needed. Its separate alternate stream remains in `Backup`.
 
-### Owner-directed Indian-group origin/category corrections — 2026-11-26
 
-The four Indian groups are restricted to Indian-origin channels that match the group genre. A channel's language, audience, or programme content alone does not make a foreign-origin broadcaster Indian. Preserve Indian-origin channels when they air foreign-language or Hollywood content if they still meet the group's channel-origin and genre rule.
+### Owner clarification: Indian groups are programme-based, not origin-based — 2026-11-26
 
-Manual corrections:
-- `JalwaTV.pk@SD`: `Indian Music` -> `Pakistani` (Pakistan broadcaster; PK/Urdu identity). Its alternate stream remains in `Backup`.
-- `WayanadVisionMovies.in@SD`: `Indian Entertainment` -> `Indian Movies`.
-- `MoviesNow.in@HD` and `SonyMovies.in`: `International` -> `Indian Movies`; both are India-origin English-language movie channels.
-- `KCM.sg@India`: `Indian Entertainment` -> `International`; KC Global Media's English-language FAST service is a global operator's India-market feed, not an Indian-origin broadcaster.
-- `Nepal1.in@SD`: `Indian Entertainment` -> `Review`; current channel evidence indicates APN TV news rebroadcast rather than an entertainment service. Its alternate stream remains in `Backup`.
+The owner clarified that broadcaster headquarters, incorporation, uplink or country of origin do not determine eligibility for the four Indian groups. Classification is based on the actual channel programming and the four group definitions:
+- Indian Bangla: Bengali-language programming.
+- Indian Movies: movie programming, any language or region.
+- Indian Music: music programming, any language or region.
+- Indian Entertainment: entertainment programming, any language or region.
 
-MBC Bollywood requires owner clarification before any Pakistani-group move or rename: the current `MBCBollywood.ae` stream is the MBC Group channel targeted at MENA audiences, not a Pakistani broadcaster. Do not relabel its country as Pakistan based only on the Bollywood content.
+Do not reject a channel solely because its metadata country is PK, CA, US, AE or another country. Do not classify a channel as Indian solely because its metadata country is IN. Inspect the actual channel programming and classify by content genre. News-only channels do not qualify for these four groups.
+
+Owner-directed corrections:
+- Jalwa TV remains in Indian Music because its programming is music; its PK country and Urdu language metadata remain unchanged.
+- Wayanad Vision Movies belongs in Indian Movies.
+- Movies Now, Sony Movies, and Star Movies belong in International per the owner's explicit instruction; rename `Star Movies (India) HD` to `Star Movies`.
+- MBC Bollywood is an Arabic-language service for this playlist's classification; move it to International and rename it `MBC`. Preserve its channel ID and EPG identity.
+- KCM India remains in Indian Entertainment because its programming comprises English-language dramas, movies and factual entertainment; its non-Indian operator/origin alone is not grounds for exclusion.
+- Nepal 1 remains in Review because the identified current programming is APN TV news, not an eligible entertainment format.
 
 The main-playlist publication gate verifies that every pre-existing stream URL occurrence remains present. Routine automation may repair metadata and authentic local-logo references only. It must preserve existing row order, group assignments, channel numbers and stream URLs. It must not promote, demote, migrate, renumber, regroup or reassemble existing IPTV rows. New discoveries remain in the manual `New Channels` / `New Backups` queues for owner review.
 
