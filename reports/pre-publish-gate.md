@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-26T00:18:19+00:00**
-Source playlist SHA-256: **3eed831257f2645543d1d7b58829ecd86618988210a25acb0891f26815860bc1**
+Generated: **2026-11-26T05:34:17+00:00**
+Source playlist SHA-256: **b5c5c72d52e843f347be0249963dd6db8de62fb378921a05bc98d76444751921**
 
 Status: **PASS**
 
-- Current entries: **1371**
+- Current entries: **1429**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -21,11 +21,11 @@ Status: **PASS**
 - Primary channel-number sequence issues (non-blocking; existing row order is protected): **1**
 - Numbered review entries: **0**
 - Same-ID metadata name conflicts: **0**
-- Orphan Backup entries: **0**
+- Orphan Backup entries: **19**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **17**
-- Raw resolution/geoblock name tags: **17**
+- Entries missing tvg-language: **20**
+- Raw resolution/geoblock name tags: **20**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -55,8 +55,9 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 ## Warnings / Manual Review
 
 - pre-existing owner-curated duplicate channel numbers preserved unchanged: 426
-- entries missing tvg-language: 17
-- raw resolution/geoblock tags in channel names: 17
+- orphan Backup entries awaiting owner review: 19
+- entries missing tvg-language: 20
+- raw resolution/geoblock tags in channel names: 20
 - New queue candidates pending owner review: 1
 
 ## Review-queue logo gaps
@@ -88,6 +89,9 @@ None.
 - **Wayanad Vision Plus (720p)** — New Channels
 - **Malabar Plus (720p)** — New Channels
 - **Thanima (1080p)** — New Channels
+- **CC NET (1080p)** — New Channels
+- **K7 Keralam Channel (1080p)** — New Channels
+- **Sristi TV (1080p)** — New Channels
 
 ## Queue validation
 

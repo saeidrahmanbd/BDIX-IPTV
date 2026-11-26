@@ -1,7 +1,7 @@
 # Stream Risk Review
 
-Generated: **2026-11-26T00:19:29+00:00**
-IPTV-Playlist.m3u SHA-256: **3eed831257f2645543d1d7b58829ecd86618988210a25acb0891f26815860bc1**
+Generated: **2026-11-26T05:35:30+00:00**
+IPTV-Playlist.m3u SHA-256: **b5c5c72d52e843f347be0249963dd6db8de62fb378921a05bc98d76444751921**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
 
@@ -21,9 +21,9 @@ Generated from the current playlist and latest available stream-health report. T
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1371 |
-| Reachable | 1105 |
-| Failed this check | 266 |
+| Streams tested | 1429 |
+| Reachable | 1154 |
+| Failed this check | 275 |
 | Persistent failures (3+ consecutive) | 56 |
 
 ### Persistent failures
@@ -83,7 +83,7 @@ Generated from the current playlist and latest available stream-health report. T
 - **Zee Bangla Cinema** — Review — consecutive failed days: **12** — HTTP 404
 - **Zee Bollywood** — Review — consecutive failed days: **12** — HTTP 404
 - **Zee Cinema** — Review — consecutive failed days: **12** — HTTP 404
-- **Zee TV** — Review — consecutive failed days: **12** — HTTP 404
+- **Zee TV** — Review — consecutive failed days: **12** — 206
 
 ## /streamtest/ Endpoints
 
