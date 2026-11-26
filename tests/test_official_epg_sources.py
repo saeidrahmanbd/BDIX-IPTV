@@ -33,6 +33,16 @@ class RtvArticleLinkParserTests(unittest.TestCase):
             ["https://rtvonline.com/entertainment/rtv/403544"],
         )
 
+    def test_rtv_daily_schedule_link_without_parenthetical_date(self):
+        links = self.parse_links(
+            '<a href="/entertainment/rtv/417960">'
+            'আরটিভিতে আজ যা দেখবেন</a>'
+        )
+        self.assertEqual(
+            links,
+            ["https://rtvonline.com/entertainment/rtv/417960"],
+        )
+
     def test_rtv_daily_schedule_link_with_title_in_image_alt_text(self):
         links = self.parse_links(
             '<a href="/entertainment/rtv/403544">'
