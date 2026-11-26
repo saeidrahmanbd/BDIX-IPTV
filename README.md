@@ -428,7 +428,7 @@ The MIT License does **not** grant rights to third-party broadcaster names, chan
 
 **⭐ Find BDIX-IPTV useful? Give the project a star on GitHub!**
 
-<a href="https://github.com/saeidrahmanbd/BDIX-IPTV/stargazers"><img src="https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?label=Star%20BDIX-IPTV&style=for-the-badge&logo=github&logoColor=white&color=f5c542" alt="Star the BDIX-IPTV repository"></a>
+<a href="https://github.com/saeidrahmanbd/BDIX-IPTV/stargazers"><img src="https://img.shields.io/badge/Star-BDIX--IPTV-f5c542?style=for-the-badge&logo=github&logoColor=white" alt="Star the BDIX-IPTV repository"></a>
 
 <a href="https://github.com/saeidrahmanbd/BDIX-IPTV"><strong>github.com/saeidrahmanbd/BDIX-IPTV</strong></a>
 
