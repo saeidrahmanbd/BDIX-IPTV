@@ -2226,9 +2226,9 @@ https://hlslive.olidigital.in/suriyantv/suriyantv/index.m3u8
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/10.m3u8
 #EXTINF:-1 tvg-id="TSports.bd" tvg-name="T Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png" channel-id="TSports.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",T Sports
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/11.m3u8
-#EXTINF:-1 tvg-id="TabbarHits.in" tvg-name="Tabbar Hits" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tabbar-hits.png" channel-id="TabbarHits.in" tvg-country="IN" tvg-language="pan" group-title="Indian Music",Tabbar Hits
+#EXTINF:-1 tvg-id="TabbarHits.in" tvg-name="Tabbar Hits" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tabbar-hits.png" channel-id="TabbarHits.in" tvg-country="IN" tvg-language="pan" group-title="Backup",Tabbar Hits
 https://livingindiaottlive.akamaized.net/tabbarhits/index.m3u8
-#EXTINF:-1 tvg-id="TabbarHits.in" tvg-name="Tabbar Hits" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tabbar-hits.png" channel-id="TabbarHits.in" tvg-country="IN" tvg-language="pan" group-title="Indian Music",Tabbar Hits
+#EXTINF:-1 tvg-id="TabbarHits.in" tvg-name="Tabbar Hits" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tabbar-hits.png" channel-id="TabbarHits.in" tvg-country="IN" tvg-language="pan" group-title="Backup",Tabbar Hits
 https://server.thelegitpro.in/tabbarhits/tabbarhits/index.m3u8
 #EXTINF:-1 tvg-id="ThalaaTV.in@HD" tvg-name="Thalaa TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thalaa-tv.png" channel-id="ThalaaTV.in@HD" tvg-country="IN" tvg-language="tam" group-title="Backup",Thalaa TV
 https://streams2.sofast.tv/ptnr-khabriya/title-THALAA-TV-TAM_Khabriya/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/c9d5c8a0-8c52-47bc-954d-e64a11314de2/manifest.m3u8
