@@ -8383,5 +8383,15 @@
     "status": "third_party_verified",
     "source_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cricbuzz_Logo.png",
     "notes": "Wikimedia Commons Public domain text logo Source page: https://commons.wikimedia.org/wiki/File:Cricbuzz_Logo.png"
+  },
+  "International-Playlist.m3u|BRIDGERap.ru@SD|BRIDGE Rap (720p) [Geo-blocked]|logos/bridge-rap-720p-geo-blocked-94129cc28e94aba754b1.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://bridgemusic.ru/s/img/channels/rap-logo-dark.svg",
+    "notes": "IPTV-org exact ID: BRIDGERap.ru IPTV-org public logo dataset Source page: https://bridgemusic.ru/s/img/channels/rap-logo-dark.svg"
+  },
+  "International-Playlist.m3u|ViasatKino.ua@SD|Viasat Kino (Ukraine) (576p)|logos/viasat-kino-ukraine-24c3a8c6c2e6715e6c38.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Viasat_Kino_Logo_2025.svg",
+    "notes": "IPTV-org exact ID: ViasatKino.ua IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/2/2b/Viasat_Kino_Logo_2025.svg"
   }
 }

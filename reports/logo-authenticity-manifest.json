@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-26T11:04:43.255495+00:00",
+  "generated_at_utc": "2026-11-26T23:53:32.415421+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -7,30 +7,30 @@
     "needs_review": "Authenticity is undocumented, the source is ambiguous, or the logo is missing."
   },
   "counts_by_playlist": {
-    "IPTV-Playlist.m3u": 1143,
-    "International-Playlist.m3u": 3318
+    "IPTV-Playlist.m3u": 1183,
+    "International-Playlist.m3u": 3329
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "00129460214a9ee239552d01b1bc22ffd907140b7e55a60236d9cf77d46ba935",
-    "International-Playlist.m3u": "0f07449134d36264a75c856d7f9a04c968349687a62008481b0e025e80290d70"
+    "IPTV-Playlist.m3u": "0c3cbb23d5ece78a84a14c7d18f660c2b0b91165e526ec352732e4a3d4f68586",
+    "International-Playlist.m3u": "c9ed1731575f87d7f80c4ecc8a597b0fdebe6e237e53e85ea51756b6b5407cf0"
   },
   "status_counts": {
-    "needs_review": 3456,
+    "needs_review": 3501,
     "generated_fallback": 2,
-    "third_party_verified": 1003
+    "third_party_verified": 1009
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1122,
+      "needs_review": 1160,
       "generated_fallback": 2,
-      "third_party_verified": 19
+      "third_party_verified": 21
     },
     "International-Playlist.m3u": {
-      "needs_review": 2334,
-      "third_party_verified": 984
+      "needs_review": 2341,
+      "third_party_verified": 988
     }
   },
-  "entry_count": 4461,
+  "entry_count": 4512,
   "entries": [
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -14881,6 +14881,526 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 2292,
+      "channel_name": "Madani Channel Bangla (1080p)",
+      "tvg_id": "MadaniChannelBangla.bd@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-channel-bangla.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2294,
+      "channel_name": "News 21 Bangla TV (1080p)",
+      "tvg_id": "News21BanglaTV.bd@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-21-bangla-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2296,
+      "channel_name": "Rupashi Bangla TV (720p)",
+      "tvg_id": "RupashiBanglaTV.bd@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rupashi-bangla-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2298,
+      "channel_name": "AMN TV (576p)",
+      "tvg_id": "AMNTV.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amn-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2300,
+      "channel_name": "Cine Jomjomat (1080p)",
+      "tvg_id": "CineJomjomat.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cine-jomjomat.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2302,
+      "channel_name": "Epic TV Digital (1080p)",
+      "tvg_id": "EpicTV.in@Digital",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-tv-digital-1080p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2304,
+      "channel_name": "History TV18 HD (1080p) [Geo-blocked]",
+      "tvg_id": "HistoryTV18.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/history-tv18-hd-1080p-geo-blocked.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2306,
+      "channel_name": "Mango Mobile TV (1080p)",
+      "tvg_id": "MangoMobileTV.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mango-mobile-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2308,
+      "channel_name": "MTV (India) (396p)",
+      "tvg_id": "MTV.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv-india-hd-720p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2310,
+      "channel_name": "NDTV Good Times (1080p)",
+      "tvg_id": "NDTVGoodTimes.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ndtv-good-times.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2312,
+      "channel_name": "NM Media Channel HD (1080p)",
+      "tvg_id": "NMMediaChannelHD.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nm-media-channel-adf4a8ecc0dbe61589c3.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://play-lh.googleusercontent.com/bS6HNpsLqv-Irw64TaPYqk3o8AlMiA96GJjD8qUfIzgtoeC23CCLrGW5iReGh1jMlP7djBZhxsJ_2wFLWpHB",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: NMMediaChannelHD.in IPTV-org public logo dataset Source page: https://play-lh.googleusercontent.com/bS6HNpsLqv-Irw64TaPYqk3o8AlMiA96GJjD8qUfIzgtoeC23CCLrGW5iReGh1jMlP7djBZhxsJ_2wFLWpHB",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2314,
+      "channel_name": "Shemaroo Filmi Gaane (1080p)",
+      "tvg_id": "ShemarooFilmiGaane.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shemaroo-filmi-gaane-1080p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2316,
+      "channel_name": "Sooriyan TV (1080p)",
+      "tvg_id": "SooriyanTV.ca@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sooriyan-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2318,
+      "channel_name": "Sristi TV (1080p)",
+      "tvg_id": "SristiTV.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sristi-tv-772e078ab196764d315f.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Sristi_TV.png",
+      "reason": "IPTV-org exact ID: SristiTV.in IPTV-org public logo dataset Source page: https://jiotvimages.cdn.jio.com/dare_images/images/Sristi_TV.png",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2320,
+      "channel_name": "Travelxp HD (1080p) [Geo-blocked]",
+      "tvg_id": "Travelxp.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-hd-1080p-geo-blocked.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2322,
+      "channel_name": "Vision Beats (720p)",
+      "tvg_id": "VisionBeats.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vision-beats.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2324,
+      "channel_name": "WeatherSpy (India) (720p)",
+      "tvg_id": "WeatherSpy.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/weatherspy-india.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2326,
+      "channel_name": "Zee Cine Classic (1080p)",
+      "tvg_id": "ZeeCineClassic.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cine-classic-1080p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2328,
+      "channel_name": "Zee Comedy Nation (1080p)",
+      "tvg_id": "ZeeComedyNation.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-comedy-nation-1080p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2330,
+      "channel_name": "Zee Dil Se (1080p)",
+      "tvg_id": "ZeeDilSe.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-dil-se.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2332,
+      "channel_name": "Zee Horror Nights (1080p)",
+      "tvg_id": "ZeeHorrorNights.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-horror-nights.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2334,
+      "channel_name": "Zee South Flix (1080p)",
+      "tvg_id": "ZeeSouthFlix.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-south-flix.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2336,
+      "channel_name": "Zee Tamil HD (720p)",
+      "tvg_id": "ZeeTamil.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tamil.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2338,
+      "channel_name": "Zee Telugu HD (720p)",
+      "tvg_id": "ZeeTelugu.in@HD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-telugu-hd-720p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2340,
+      "channel_name": "Zodiak TV (1080p)",
+      "tvg_id": "ZodiakTV.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zodiak-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2342,
+      "channel_name": "ATN Bangla (720p)",
+      "tvg_id": "ATNBangla.bd@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2344,
+      "channel_name": "DBC News (480p)",
+      "tvg_id": "DBCNews.bd@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dbc-news.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2346,
+      "channel_name": "Duronto TV (720p)",
+      "tvg_id": "DurontoTV.bd@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv-2b3c7dd202.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2348,
+      "channel_name": "Ekhon TV (1080p)",
+      "tvg_id": "EkhonTV.bd@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekhon-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2350,
+      "channel_name": "Gazi TV (1080p)",
+      "tvg_id": "GaziTV.bd@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gazi-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2352,
+      "channel_name": "Maasranga TV (720p)",
+      "tvg_id": "MaasrangaTV.bd@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maasranga-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2354,
+      "channel_name": "RTV (Bangladesh) (720p)",
+      "tvg_id": "RTV.bd@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/verified-rtv-bangladesh-720p-6421f55b0f.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2356,
+      "channel_name": "9X Jhakaas (1080p)",
+      "tvg_id": "9XJhakaas.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2358,
+      "channel_name": "9X Tashan (1080p)",
+      "tvg_id": "9XTashan.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-tashan.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2360,
+      "channel_name": "B4U Bhojpuri (1080p)",
+      "tvg_id": "B4UBhojpuri.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-bhojpuri-1080p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2362,
+      "channel_name": "B4U Kadak (1080p)",
+      "tvg_id": "B4UKadak.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2364,
+      "channel_name": "B4U Movies (1080p)",
+      "tvg_id": "B4UMovies.in@India",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2366,
+      "channel_name": "DD Uttar Pradesh (720p)",
+      "tvg_id": "DDUttarPradesh.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-uttar-pradesh.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2368,
+      "channel_name": "Dhoom Music (720p)",
+      "tvg_id": "DhoomMusic.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/dhoom-music-720p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2370,
+      "channel_name": "INWILD (1080p)",
+      "tvg_id": "INWILD.nl@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/inwild.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2372,
       "channel_name": "Sangeet Bangla",
       "tvg_id": "SangeetBangla.in@SD",
       "channel_id": "SangeetBangla.in@SD",
@@ -53166,6 +53686,32 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 5897,
+      "channel_name": "M1 (Ukraine)",
+      "tvg_id": "M1.ua@SD",
+      "channel_id": "M1.ua@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/m1-ukraine-1080p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5899,
+      "channel_name": "Viasat Kino Action",
+      "tvg_id": "custom.viasat-kino-action-ua-movie",
+      "channel_id": "custom.viasat-kino-action-ua-movie",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viasat-kino-action-576p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5901,
       "channel_name": "Aurora Media Films",
       "tvg_id": "AuroraMediaFilms.gt@SD",
       "channel_id": "AuroraMediaFilms.gt@SD",
@@ -53178,7 +53724,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5899,
+      "line": 5903,
       "channel_name": "BRIDGE Dance [ ]",
       "tvg_id": "BRIDGEDance.ru@SD",
       "channel_id": "BRIDGEDance.ru@SD",
@@ -53191,7 +53737,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5901,
+      "line": 5905,
       "channel_name": "BRIDGE Jazz [ ]",
       "tvg_id": "BRIDGEJazz.ru@SD",
       "channel_id": "BRIDGEJazz.ru@SD",
@@ -53204,7 +53750,20 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5903,
+      "line": 5907,
+      "channel_name": "BRIDGE Rap (720p) [Geo-blocked]",
+      "tvg_id": "BRIDGERap.ru@SD",
+      "channel_id": "BRIDGERap.ru@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bridge-rap-720p-geo-blocked-94129cc28e94aba754b1.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://bridgemusic.ru/s/img/channels/rap-logo-dark.svg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: BRIDGERap.ru IPTV-org public logo dataset Source page: https://bridgemusic.ru/s/img/channels/rap-logo-dark.svg",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5909,
       "channel_name": "FMH Movies",
       "tvg_id": "FMHMovies.us@SD",
       "channel_id": "FMHMovies.us@SD",
@@ -53217,7 +53776,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5905,
+      "line": 5911,
       "channel_name": "Galaxy",
       "tvg_id": "Galaxy.id@SD",
       "channel_id": "Galaxy.id@SD",
@@ -53230,7 +53789,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5907,
+      "line": 5913,
       "channel_name": "Galaxy Premium",
       "tvg_id": "GalaxyPremium.id@SD",
       "channel_id": "GalaxyPremium.id@SD",
@@ -53243,7 +53802,33 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5909,
+      "line": 5915,
+      "channel_name": "Hollywood Ukraine (576p)",
+      "tvg_id": "HollywoodUkraine.ua@SD",
+      "channel_id": "HollywoodUkraine.ua@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/hollywood-ukraine-576p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5917,
+      "channel_name": "Kinosvidanie (1080p)",
+      "tvg_id": "Kinosvidanie.ru@SD",
+      "channel_id": "Kinosvidanie.ru@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kinosvidanie-576p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5919,
       "channel_name": "Komsan TV [ ]",
       "tvg_id": "KomsanTV.kh@SD",
       "channel_id": "KomsanTV.kh@SD",
@@ -53256,7 +53841,20 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5911,
+      "line": 5921,
+      "channel_name": "Prokino (360p)",
+      "tvg_id": "Prokino.ua@SD",
+      "channel_id": "Prokino.ua@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/prokino-360p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5923,
       "channel_name": "Viasat Kino (Romania)",
       "tvg_id": "ViasatKino.ro@SD",
       "channel_id": "ViasatKino.ro@SD",
@@ -53269,7 +53867,20 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5913,
+      "line": 5925,
+      "channel_name": "Viasat Kino (Ukraine) (576p)",
+      "tvg_id": "ViasatKino.ua@SD",
+      "channel_id": "ViasatKino.ua@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/viasat-kino-ukraine-24c3a8c6c2e6715e6c38.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Viasat_Kino_Logo_2025.svg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. IPTV-org exact ID: ViasatKino.ua IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/2/2b/Viasat_Kino_Logo_2025.svg",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5927,
       "channel_name": "Cinema (Russia)",
       "tvg_id": "Cinema.ru@SD",
       "channel_id": "Cinema.ru@SD",
@@ -53282,7 +53893,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5915,
+      "line": 5929,
       "channel_name": "Dom kino",
       "tvg_id": "custom.dom-kino-ru-movie",
       "channel_id": "custom.dom-kino-ru-movie",
@@ -53295,7 +53906,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5917,
+      "line": 5931,
       "channel_name": "Dorama",
       "tvg_id": "Dorama.ru@SD",
       "channel_id": "Dorama.ru@SD",
@@ -53308,7 +53919,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5919,
+      "line": 5933,
       "channel_name": "Epic Music",
       "tvg_id": "EpicMusic.in@SD",
       "channel_id": "EpicMusic.in@SD",
@@ -53321,7 +53932,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5921,
+      "line": 5935,
       "channel_name": "iFilm Persian",
       "tvg_id": "iFilmPersian.ir@SD",
       "channel_id": "iFilmPersian.ir@SD",
@@ -53334,7 +53945,46 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5923,
+      "line": 5937,
+      "channel_name": "Indiyskoye Kino",
+      "tvg_id": "IndiyskoyeKino.ru@SD",
+      "channel_id": "IndiyskoyeKino.ru@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/indiyskoye-kino-7582f40712.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://i.imgur.com/LL8GyCh.png",
+      "reason": "IPTV-org exact ID: IndiyskoyeKino.ru IPTV-org public logo dataset Source page: https://i.imgur.com/LL8GyCh.png",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5939,
+      "channel_name": "KinoHit",
+      "tvg_id": "KinoHit.ru@SD",
+      "channel_id": "KinoHit.ru@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kinohit-5a08ec1395.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://i.imgur.com/Ge8vkQM.png",
+      "reason": "IPTV-org exact ID: KinoHit.ru IPTV-org public logo dataset Source page: https://i.imgur.com/Ge8vkQM.png",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5941,
+      "channel_name": "Muzyka Pervogo",
+      "tvg_id": "MuzykaPervogo.ru@SD",
+      "channel_id": "MuzykaPervogo.ru@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/muzyka-pervogo-576p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5943,
       "channel_name": "Rotana Cinema KSA",
       "tvg_id": "RotanaCinemaKSA.sa@SD",
       "channel_id": "RotanaCinemaKSA.sa@SD",
@@ -53347,7 +53997,20 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5925,
+      "line": 5945,
+      "channel_name": "TRT Muzik",
+      "tvg_id": "TRTMuzik.tr@SD",
+      "channel_id": "TRTMuzik.tr@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trt-muzik.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 5947,
       "channel_name": "7S Music",
       "tvg_id": "7SMusic.in@SD",
       "channel_id": "7SMusic.in@SD",
@@ -53360,7 +54023,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5927,
+      "line": 5949,
       "channel_name": "8XM",
       "tvg_id": "8XM.pk@SD",
       "channel_id": "8XM.pk@SD",
@@ -53373,7 +54036,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5929,
+      "line": 5951,
       "channel_name": "9X Jalwa",
       "tvg_id": "9XJalwa.in",
       "channel_id": "9XJalwa.in",
@@ -53386,7 +54049,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5931,
+      "line": 5953,
       "channel_name": "9X Jalwa",
       "tvg_id": "9XJalwa.in",
       "channel_id": "9XJalwa.in",
@@ -53399,7 +54062,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5933,
+      "line": 5955,
       "channel_name": "9X Jhakaas",
       "tvg_id": "9XJhakaas.in@SD",
       "channel_id": "9XJhakaas.in@SD",
@@ -53412,7 +54075,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5935,
+      "line": 5957,
       "channel_name": "9X Tashan",
       "tvg_id": "9XTashan.in@SD",
       "channel_id": "9XTashan.in@SD",
@@ -53425,7 +54088,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5937,
+      "line": 5959,
       "channel_name": "9XM",
       "tvg_id": "9XM.in@SD",
       "channel_id": "9XM.in@SD",
@@ -53438,7 +54101,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5939,
+      "line": 5961,
       "channel_name": "9XM",
       "tvg_id": "9XM.in@SD",
       "channel_id": "9XM.in@SD",
@@ -53451,7 +54114,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5941,
+      "line": 5963,
       "channel_name": "Aakaash Aath",
       "tvg_id": "AakaashAath.in@SD",
       "channel_id": "AakaashAath.in@SD",
@@ -53464,7 +54127,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5943,
+      "line": 5965,
       "channel_name": "Aakaash Aath",
       "tvg_id": "AakaashAath.in@SD",
       "channel_id": "AakaashAath.in@SD",
@@ -53477,7 +54140,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5945,
+      "line": 5967,
       "channel_name": "Aakaash Aath",
       "tvg_id": "AakaashAath.in@SD",
       "channel_id": "AakaashAath.in@SD",
@@ -53490,7 +54153,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5947,
+      "line": 5969,
       "channel_name": "Action Hollywood Movies",
       "tvg_id": "plex.tv.Action.Hollywood.Movies.plex",
       "channel_id": "plex.tv.Action.Hollywood.Movies.plex",
@@ -53503,7 +54166,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5949,
+      "line": 5971,
       "channel_name": "Action Hollywood Movies",
       "tvg_id": "plex.tv.Action.Hollywood.Movies.plex",
       "channel_id": "plex.tv.Action.Hollywood.Movies.plex",
@@ -53516,7 +54179,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5951,
+      "line": 5973,
       "channel_name": "All Time Movies",
       "tvg_id": "AllTimeMovies.in@SD",
       "channel_id": "",
@@ -53529,7 +54192,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5953,
+      "line": 5975,
       "channel_name": "Amar Bangla Digital",
       "tvg_id": "AmarBanglaDigital.in",
       "channel_id": "AmarBanglaDigital.in",
@@ -53542,7 +54205,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5955,
+      "line": 5977,
       "channel_name": "AMC Thrillers",
       "tvg_id": "plex.tv.AMC.Thrillers.plex",
       "channel_id": "plex.tv.AMC.Thrillers.plex",
@@ -53555,7 +54218,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5957,
+      "line": 5979,
       "channel_name": "Amrita TV",
       "tvg_id": "AmritaTV.in@SD",
       "channel_id": "AmritaTV.in@SD",
@@ -53568,7 +54231,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5959,
+      "line": 5981,
       "channel_name": "Ananda TV",
       "tvg_id": "AnandaTV.bd",
       "channel_id": "AnandaTV.bd",
@@ -53581,7 +54244,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5961,
+      "line": 5983,
       "channel_name": "Ananda TV",
       "tvg_id": "AnandaTV.bd",
       "channel_id": "AnandaTV.bd",
@@ -53594,7 +54257,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5963,
+      "line": 5985,
       "channel_name": "Ananda TV",
       "tvg_id": "AnandaTV.bd",
       "channel_id": "AnandaTV.bd",
@@ -53607,7 +54270,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5965,
+      "line": 5987,
       "channel_name": "Ananda TV",
       "tvg_id": "AnandaTV.bd",
       "channel_id": "",
@@ -53620,7 +54283,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5967,
+      "line": 5989,
       "channel_name": "Anjan TV",
       "tvg_id": "AnjanTV.in@SD",
       "channel_id": "AnjanTV.in@SD",
@@ -53633,7 +54296,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5969,
+      "line": 5991,
       "channel_name": "ARY Qtv",
       "tvg_id": "ARYQTV.pk",
       "channel_id": "ARYQTV.pk",
@@ -53646,7 +54309,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5971,
+      "line": 5993,
       "channel_name": "Asian TV",
       "tvg_id": "AsianTV.bd",
       "channel_id": "",
@@ -53659,7 +54322,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5973,
+      "line": 5995,
       "channel_name": "Asianet Middle East",
       "tvg_id": "AsianetMiddleEast.in@SD",
       "channel_id": "AsianetMiddleEast.in@SD",
@@ -53672,7 +54335,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5975,
+      "line": 5997,
       "channel_name": "ATN Bangla",
       "tvg_id": "ATNBangla.bd",
       "channel_id": "ATNBangla.bd",
@@ -53685,7 +54348,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5977,
+      "line": 5999,
       "channel_name": "ATN Bangla",
       "tvg_id": "ATNBangla.bd",
       "channel_id": "",
@@ -53698,154 +54361,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 5979,
-      "channel_name": "ATN News",
-      "tvg_id": "ATNNews.bd",
-      "channel_id": "ATNNews.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-news-e0442addb4.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5981,
-      "channel_name": "ATN News",
-      "tvg_id": "ATNNews.bd",
-      "channel_id": "ATNNews.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-news-e0442addb4.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5983,
-      "channel_name": "ATN News",
-      "tvg_id": "ATNNews.bd",
-      "channel_id": "ATNNews.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-news-e0442addb4.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5985,
-      "channel_name": "ATN News",
-      "tvg_id": "ATNNews.bd",
-      "channel_id": "ATNNews.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-news-e0442addb4.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5987,
-      "channel_name": "B4U Kadak",
-      "tvg_id": "B4UKadak.in@SD",
-      "channel_id": "B4UKadak.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5989,
-      "channel_name": "B4U Kadak",
-      "tvg_id": "B4UKadak.in@SD",
-      "channel_id": "B4UKadak.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5991,
-      "channel_name": "B4U Movies",
-      "tvg_id": "B4UMovies.in@India",
-      "channel_id": "B4UMovies.in@India",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5993,
-      "channel_name": "B4U Movies",
-      "tvg_id": "B4UMovies.in@India",
-      "channel_id": "B4UMovies.in@India",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5995,
-      "channel_name": "B4U Music",
-      "tvg_id": "B4UMusic.in@India",
-      "channel_id": "B4UMusic.in@India",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5997,
-      "channel_name": "B4U Music",
-      "tvg_id": "B4UMusic.in@India",
-      "channel_id": "B4UMusic.in@India",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 5999,
-      "channel_name": "B4U Music",
-      "tvg_id": "B4UMusic.in@India",
-      "channel_id": "B4UMusic.in@India",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
       "line": 6001,
-      "channel_name": "Balle Balle",
-      "tvg_id": "BalleBalle.in@SD",
-      "channel_id": "BalleBalle.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png",
+      "channel_name": "ATN News",
+      "tvg_id": "ATNNews.bd",
+      "channel_id": "ATNNews.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-news-e0442addb4.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -53855,10 +54375,10 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 6003,
-      "channel_name": "Balle Balle",
-      "tvg_id": "BalleBalle.in@SD",
-      "channel_id": "BalleBalle.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png",
+      "channel_name": "ATN News",
+      "tvg_id": "ATNNews.bd",
+      "channel_id": "ATNNews.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-news-e0442addb4.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -53868,10 +54388,10 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 6005,
-      "channel_name": "Balle Balle",
-      "tvg_id": "BalleBalle.in@SD",
-      "channel_id": "BalleBalle.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png",
+      "channel_name": "ATN News",
+      "tvg_id": "ATNNews.bd",
+      "channel_id": "ATNNews.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-news-e0442addb4.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -53881,6 +54401,110 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 6007,
+      "channel_name": "ATN News",
+      "tvg_id": "ATNNews.bd",
+      "channel_id": "ATNNews.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-news-e0442addb4.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6009,
+      "channel_name": "B4U Kadak",
+      "tvg_id": "B4UKadak.in@SD",
+      "channel_id": "B4UKadak.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6011,
+      "channel_name": "B4U Kadak",
+      "tvg_id": "B4UKadak.in@SD",
+      "channel_id": "B4UKadak.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6013,
+      "channel_name": "B4U Movies",
+      "tvg_id": "B4UMovies.in@India",
+      "channel_id": "B4UMovies.in@India",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6015,
+      "channel_name": "B4U Movies",
+      "tvg_id": "B4UMovies.in@India",
+      "channel_id": "B4UMovies.in@India",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6017,
+      "channel_name": "B4U Music",
+      "tvg_id": "B4UMusic.in@India",
+      "channel_id": "B4UMusic.in@India",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6019,
+      "channel_name": "B4U Music",
+      "tvg_id": "B4UMusic.in@India",
+      "channel_id": "B4UMusic.in@India",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6021,
+      "channel_name": "B4U Music",
+      "tvg_id": "B4UMusic.in@India",
+      "channel_id": "B4UMusic.in@India",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6023,
       "channel_name": "Balle Balle",
       "tvg_id": "BalleBalle.in@SD",
       "channel_id": "BalleBalle.in@SD",
@@ -53893,7 +54517,46 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6009,
+      "line": 6025,
+      "channel_name": "Balle Balle",
+      "tvg_id": "BalleBalle.in@SD",
+      "channel_id": "BalleBalle.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6027,
+      "channel_name": "Balle Balle",
+      "tvg_id": "BalleBalle.in@SD",
+      "channel_id": "BalleBalle.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6029,
+      "channel_name": "Balle Balle",
+      "tvg_id": "BalleBalle.in@SD",
+      "channel_id": "BalleBalle.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6031,
       "channel_name": "Bangla TV",
       "tvg_id": "BanglaTV.bd",
       "channel_id": "BanglaTV.bd",
@@ -53906,7 +54569,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6011,
+      "line": 6033,
       "channel_name": "Bangla TV",
       "tvg_id": "BanglaTV.bd",
       "channel_id": "BanglaTV.bd",
@@ -53919,7 +54582,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6013,
+      "line": 6035,
       "channel_name": "Bangla TV",
       "tvg_id": "BanglaTV.bd",
       "channel_id": "",
@@ -53932,7 +54595,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6015,
+      "line": 6037,
       "channel_name": "Bangla Vision",
       "tvg_id": "BanglaVision.bd",
       "channel_id": "BanglaVision.bd",
@@ -53945,7 +54608,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6017,
+      "line": 6039,
       "channel_name": "Bangla Vision",
       "tvg_id": "BanglaVision.bd",
       "channel_id": "BanglaVision.bd",
@@ -53958,7 +54621,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6019,
+      "line": 6041,
       "channel_name": "BHI Channel",
       "tvg_id": "BHI.Channel.in",
       "channel_id": "BHI.Channel.in",
@@ -53971,7 +54634,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6021,
+      "line": 6043,
       "channel_name": "Bhojpuri Cinema",
       "tvg_id": "BhojpuriCinema.in@SD",
       "channel_id": "BhojpuriCinema.in@SD",
@@ -53984,7 +54647,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6023,
+      "line": 6045,
       "channel_name": "Bhojpuri Cinema",
       "tvg_id": "BhojpuriCinema.in@SD",
       "channel_id": "BhojpuriCinema.in@SD",
@@ -53997,7 +54660,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6025,
+      "line": 6047,
       "channel_name": "Boishakhi TV",
       "tvg_id": "BoishakhiTV.bd",
       "channel_id": "BoishakhiTV.bd",
@@ -54010,7 +54673,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6027,
+      "line": 6049,
       "channel_name": "BOISHAKHI TV",
       "tvg_id": "BOISHAKHITV.bd",
       "channel_id": "",
@@ -54023,7 +54686,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6029,
+      "line": 6051,
       "channel_name": "BRIDGE",
       "tvg_id": "BRIDGE.ru@SD",
       "channel_id": "BRIDGE.ru@SD",
@@ -54036,7 +54699,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6031,
+      "line": 6053,
       "channel_name": "BTV Chattogram",
       "tvg_id": "BTVChattogram.bd",
       "channel_id": "BTVChattogram.bd",
@@ -54049,7 +54712,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6033,
+      "line": 6055,
       "channel_name": "Channel 52",
       "tvg_id": "Channel52.bd",
       "channel_id": "Channel52.bd",
@@ -54062,7 +54725,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6035,
+      "line": 6057,
       "channel_name": "Channel I",
       "tvg_id": "ChannelI.bd",
       "channel_id": "ChannelI.bd",
@@ -54075,7 +54738,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6037,
+      "line": 6059,
       "channel_name": "Channel I",
       "tvg_id": "ChannelI.bd",
       "channel_id": "ChannelI.bd",
@@ -54088,7 +54751,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6039,
+      "line": 6061,
       "channel_name": "Channel I",
       "tvg_id": "ChannelI.bd",
       "channel_id": "ChannelI.bd",
@@ -54101,7 +54764,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6041,
+      "line": 6063,
       "channel_name": "Channel I",
       "tvg_id": "ChannelI.bd",
       "channel_id": "ChannelI.bd",
@@ -54114,7 +54777,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6043,
+      "line": 6065,
       "channel_name": "Channel I",
       "tvg_id": "ChannelI.bd",
       "channel_id": "ChannelI.bd",
@@ -54127,7 +54790,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6045,
+      "line": 6067,
       "channel_name": "Cine Sony",
       "tvg_id": "CineSony.us@SD",
       "channel_id": "CineSony.us@SD",
@@ -54140,7 +54803,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6047,
+      "line": 6069,
       "channel_name": "Cine+",
       "tvg_id": "CinePlus.ua@SD",
       "channel_id": "CinePlus.ua@SD",
@@ -54153,7 +54816,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6049,
+      "line": 6071,
       "channel_name": "Cine+ Hit",
       "tvg_id": "CinePlusHit.ua@SD",
       "channel_id": "CinePlusHit.ua@SD",
@@ -54166,7 +54829,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6051,
+      "line": 6073,
       "channel_name": "Cine+ Legend",
       "tvg_id": "CinePlusLegend.ua@SD",
       "channel_id": "CinePlusLegend.ua@SD",
@@ -54179,7 +54842,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6053,
+      "line": 6075,
       "channel_name": "Cinemax Asia",
       "tvg_id": "CinemaxAsia.sg@HD",
       "channel_id": "CinemaxAsia.sg@HD",
@@ -54192,7 +54855,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6055,
+      "line": 6077,
       "channel_name": "Cinemax Asia [ ]",
       "tvg_id": "CinemaxAsia.sg@SD",
       "channel_id": "CinemaxAsia.sg@SD",
@@ -54205,7 +54868,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6057,
+      "line": 6079,
       "channel_name": "Cinemax Latin America",
       "tvg_id": "CinemaxLatinAmerica.us@SD",
       "channel_id": "CinemaxLatinAmerica.us@SD",
@@ -54218,7 +54881,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6059,
+      "line": 6081,
       "channel_name": "Claro Cinema",
       "tvg_id": "ClaroCinema.mx@SD",
       "channel_id": "ClaroCinema.mx@SD",
@@ -54231,7 +54894,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6061,
+      "line": 6083,
       "channel_name": "Colors Bangla",
       "tvg_id": "Colors.Bangla.in",
       "channel_id": "Colors.Bangla.in",
@@ -54244,7 +54907,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6063,
+      "line": 6085,
       "channel_name": "Colors Bangla",
       "tvg_id": "Colors.Bangla.in",
       "channel_id": "Colors.Bangla.in",
@@ -54257,7 +54920,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6065,
+      "line": 6087,
       "channel_name": "Colors Bangla",
       "tvg_id": "Colors.Bangla.in",
       "channel_id": "Colors.Bangla.in",
@@ -54270,7 +54933,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6067,
+      "line": 6089,
       "channel_name": "Colors Rishtey",
       "tvg_id": "ColorsRishtey.in",
       "channel_id": "ColorsRishtey.in",
@@ -54283,7 +54946,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6069,
+      "line": 6091,
       "channel_name": "Colors Tamil",
       "tvg_id": "ColorsTamil.in@SD",
       "channel_id": "ColorsTamil.in@SD",
@@ -54296,7 +54959,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6071,
+      "line": 6093,
       "channel_name": "Corazon TV",
       "tvg_id": "CorazonTV.pa@SD",
       "channel_id": "CorazonTV.pa@SD",
@@ -54309,7 +54972,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6073,
+      "line": 6095,
       "channel_name": "Dangal 2",
       "tvg_id": "Dangal2.in@SD",
       "channel_id": "Dangal2.in@SD",
@@ -54322,7 +54985,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6075,
+      "line": 6097,
       "channel_name": "Dangal 2",
       "tvg_id": "Dangal2.in@SD",
       "channel_id": "Dangal2.in@SD",
@@ -54335,7 +54998,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6077,
+      "line": 6099,
       "channel_name": "Dangal TV",
       "tvg_id": "DangalTV.in",
       "channel_id": "",
@@ -54348,7 +55011,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6079,
+      "line": 6101,
       "channel_name": "Dangal TV",
       "tvg_id": "DangalTV.in@SD",
       "channel_id": "",
@@ -54361,7 +55024,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6081,
+      "line": 6103,
       "channel_name": "DBC News",
       "tvg_id": "DBCNews.bd",
       "channel_id": "DBCNews.bd",
@@ -54374,7 +55037,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6083,
+      "line": 6105,
       "channel_name": "DBC News",
       "tvg_id": "DBCNews.bd",
       "channel_id": "DBCNews.bd",
@@ -54387,7 +55050,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6085,
+      "line": 6107,
       "channel_name": "DBC News",
       "tvg_id": "DBCNews.bd",
       "channel_id": "DBCNews.bd",
@@ -54400,7 +55063,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6087,
+      "line": 6109,
       "channel_name": "DBC News",
       "tvg_id": "DBCNews.bd",
       "channel_id": "DBCNews.bd",
@@ -54413,7 +55076,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6089,
+      "line": 6111,
       "channel_name": "DD Arun Prabha",
       "tvg_id": "DDArunPrabha.in@SD",
       "channel_id": "DDArunPrabha.in@SD",
@@ -54426,7 +55089,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6091,
+      "line": 6113,
       "channel_name": "DD Arun Prabha",
       "tvg_id": "DDArunPrabha.in@SD",
       "channel_id": "DDArunPrabha.in@SD",
@@ -54439,7 +55102,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6093,
+      "line": 6115,
       "channel_name": "DD Bangla",
       "tvg_id": "DDBangla.in@SD",
       "channel_id": "",
@@ -54452,7 +55115,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6095,
+      "line": 6117,
       "channel_name": "DD Bangla",
       "tvg_id": "DDBangla.in@SD",
       "channel_id": "DDBangla.in@SD",
@@ -54465,7 +55128,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6097,
+      "line": 6119,
       "channel_name": "DD Bangla",
       "tvg_id": "DDBangla.in@SD",
       "channel_id": "DDBangla.in@SD",
@@ -54478,7 +55141,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6099,
+      "line": 6121,
       "channel_name": "DD Chandana",
       "tvg_id": "DDChandana.in@SD",
       "channel_id": "DDChandana.in@SD",
@@ -54491,7 +55154,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6101,
+      "line": 6123,
       "channel_name": "DD Girnar",
       "tvg_id": "DDGirnar.in@SD",
       "channel_id": "DDGirnar.in@SD",
@@ -54504,7 +55167,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6103,
+      "line": 6125,
       "channel_name": "DD Goa",
       "tvg_id": "DDGoa.in@SD",
       "channel_id": "DDGoa.in@SD",
@@ -54517,7 +55180,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6105,
+      "line": 6127,
       "channel_name": "DD Himachal Pradesh",
       "tvg_id": "DDHimachalPradesh.in@SD",
       "channel_id": "DDHimachalPradesh.in@SD",
@@ -54530,7 +55193,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6107,
+      "line": 6129,
       "channel_name": "DD Madhya Pradesh",
       "tvg_id": "DDMadhyaPradesh.in@SD",
       "channel_id": "DDMadhyaPradesh.in@SD",
@@ -54543,7 +55206,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6109,
+      "line": 6131,
       "channel_name": "DD Madhya Pradesh",
       "tvg_id": "DDMadhyaPradesh.in@SD",
       "channel_id": "DDMadhyaPradesh.in@SD",
@@ -54556,7 +55219,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6111,
+      "line": 6133,
       "channel_name": "DD Malayalam",
       "tvg_id": "DDMalayalam.in@SD",
       "channel_id": "DDMalayalam.in@SD",
@@ -54569,7 +55232,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6113,
+      "line": 6135,
       "channel_name": "DD Mizoram",
       "tvg_id": "DDMizoram.in",
       "channel_id": "DDMizoram.in",
@@ -54582,7 +55245,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6115,
+      "line": 6137,
       "channel_name": "DD National",
       "tvg_id": "DDNational.in@SD",
       "channel_id": "DDNational.in@SD",
@@ -54595,7 +55258,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6117,
+      "line": 6139,
       "channel_name": "DD National",
       "tvg_id": "DDNational.in@SD",
       "channel_id": "DDNational.in@SD",
@@ -54608,7 +55271,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6119,
+      "line": 6141,
       "channel_name": "DD Odia",
       "tvg_id": "DDOdia.in@SD",
       "channel_id": "DDOdia.in@SD",
@@ -54621,7 +55284,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6121,
+      "line": 6143,
       "channel_name": "DD Odia",
       "tvg_id": "DDOdia.in@SD",
       "channel_id": "DDOdia.in@SD",
@@ -54634,7 +55297,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6123,
+      "line": 6145,
       "channel_name": "DD Rajasthan",
       "tvg_id": "DDRajasthan.in@SD",
       "channel_id": "",
@@ -54647,7 +55310,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6125,
+      "line": 6147,
       "channel_name": "DD Sahyadri",
       "tvg_id": "DDSahyadri.in@SD",
       "channel_id": "DDSahyadri.in@SD",
@@ -54660,7 +55323,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6127,
+      "line": 6149,
       "channel_name": "DD Sports",
       "tvg_id": "DDSports.in@SD",
       "channel_id": "",
@@ -54673,7 +55336,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6129,
+      "line": 6151,
       "channel_name": "DD Tamil",
       "tvg_id": "DDTamil.in@SD",
       "channel_id": "DDTamil.in@SD",
@@ -54686,7 +55349,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6131,
+      "line": 6153,
       "channel_name": "DD Tamil",
       "tvg_id": "DDTamil.in@HD",
       "channel_id": "DDTamil.in@HD",
@@ -54699,7 +55362,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6133,
+      "line": 6155,
       "channel_name": "DD Urdu",
       "tvg_id": "DDUrdu.in@SD",
       "channel_id": "",
@@ -54712,7 +55375,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6135,
+      "line": 6157,
       "channel_name": "DD Yadagiri",
       "tvg_id": "DDYadagiri.in@SD",
       "channel_id": "",
@@ -54725,7 +55388,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6137,
+      "line": 6159,
       "channel_name": "De Pelicula Latin America",
       "tvg_id": "DePeliculaLatinAmerica.mx@SD",
       "channel_id": "DePeliculaLatinAmerica.mx@SD",
@@ -54738,7 +55401,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6139,
+      "line": 6161,
       "channel_name": "Desh TV",
       "tvg_id": "DeshTV.bd",
       "channel_id": "DeshTV.bd",
@@ -54751,7 +55414,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6141,
+      "line": 6163,
       "channel_name": "Desi Channel",
       "tvg_id": "DesiChannel.in@SD",
       "channel_id": "DesiChannel.in@SD",
@@ -54764,7 +55427,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6143,
+      "line": 6165,
       "channel_name": "Desi Channel",
       "tvg_id": "DesiChannel.in",
       "channel_id": "DesiChannel.in",
@@ -54777,7 +55440,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6145,
+      "line": 6167,
       "channel_name": "Disco Polo Music",
       "tvg_id": "DiscoPoloMusic.pl@SD",
       "channel_id": "DiscoPoloMusic.pl@SD",
@@ -54790,7 +55453,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6147,
+      "line": 6169,
       "channel_name": "Discover Pakistan",
       "tvg_id": "DiscoverPakistan.pk@SD",
       "channel_id": "DiscoverPakistan.pk@SD",
@@ -54803,7 +55466,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6149,
+      "line": 6171,
       "channel_name": "DISNEY CHANNEL [IN]",
       "tvg_id": "DisneyChannel.in@HD",
       "channel_id": "",
@@ -54816,7 +55479,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6151,
+      "line": 6173,
       "channel_name": "DM Sat",
       "tvg_id": "custom.dm-sat-rs-music",
       "channel_id": "custom.dm-sat-rs-music",
@@ -54829,7 +55492,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6153,
+      "line": 6175,
       "channel_name": "Dom kino",
       "tvg_id": "custom.dom-kino-ru-movie",
       "channel_id": "custom.dom-kino-ru-movie",
@@ -54842,7 +55505,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6155,
+      "line": 6177,
       "channel_name": "Dom kino",
       "tvg_id": "custom.dom-kino-ru-movie",
       "channel_id": "custom.dom-kino-ru-movie",
@@ -54855,7 +55518,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6157,
+      "line": 6179,
       "channel_name": "Dorama",
       "tvg_id": "Dorama.ru@SD",
       "channel_id": "Dorama.ru@SD",
@@ -54868,7 +55531,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6159,
+      "line": 6181,
       "channel_name": "Duronto TV",
       "tvg_id": "DurontoTV.bd",
       "channel_id": "DurontoTV.bd",
@@ -54881,7 +55544,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6161,
+      "line": 6183,
       "channel_name": "E24",
       "tvg_id": "E24.in",
       "channel_id": "E24.in",
@@ -54894,7 +55557,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6163,
+      "line": 6185,
       "channel_name": "E 24",
       "tvg_id": "E24.in@SD",
       "channel_id": "",
@@ -54907,7 +55570,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6165,
+      "line": 6187,
       "channel_name": "Ekattor TV",
       "tvg_id": "EkattorTV.bd",
       "channel_id": "EkattorTV.bd",
@@ -54920,7 +55583,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6167,
+      "line": 6189,
       "channel_name": "Ekhon TV",
       "tvg_id": "EkhonTV.bd",
       "channel_id": "EkhonTV.bd",
@@ -54933,7 +55596,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6169,
+      "line": 6191,
       "channel_name": "Ekhon TV",
       "tvg_id": "EkhonTV.bd",
       "channel_id": "",
@@ -54946,154 +55609,11 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6171,
-      "channel_name": "Ekushey TV",
-      "tvg_id": "EkusheyTV.bd",
-      "channel_id": "EkusheyTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 6173,
-      "channel_name": "Ekushey TV",
-      "tvg_id": "EkusheyTV.bd",
-      "channel_id": "EkusheyTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 6175,
-      "channel_name": "Ekushey TV",
-      "tvg_id": "EkusheyTV.bd",
-      "channel_id": "EkusheyTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 6177,
-      "channel_name": "Ekushey TV",
-      "tvg_id": "EkusheyTV.bd",
-      "channel_id": "EkusheyTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 6179,
-      "channel_name": "Ekushey TV",
-      "tvg_id": "EkusheyTV.bd",
-      "channel_id": "EkusheyTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 6181,
-      "channel_name": "Enter10 Bangla",
-      "tvg_id": "Enter10Bangla.in",
-      "channel_id": "Enter10Bangla.in",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 6183,
-      "channel_name": "Enter10 Bangla",
-      "tvg_id": "Enter10Bangla.in",
-      "channel_id": "Enter10Bangla.in",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 6185,
-      "channel_name": "Enter10 Bangla",
-      "tvg_id": "Enter10Bangla.in",
-      "channel_id": "Enter10Bangla.in",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 6187,
-      "channel_name": "Enter 10 Bangla",
-      "tvg_id": "Enter10Bangla.in",
-      "channel_id": "Enter10Bangla.in",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 6189,
-      "channel_name": "Enter 10 Bangla",
-      "tvg_id": "Enter10Bangla.in",
-      "channel_id": "Enter10Bangla.in",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
-      "line": 6191,
-      "channel_name": "Enter TV",
-      "tvg_id": "EnterTV.bd",
-      "channel_id": "EnterTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter-tv.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "International-Playlist.m3u",
       "line": 6193,
-      "channel_name": "Enter TV",
-      "tvg_id": "EnterTV.bd",
-      "channel_id": "EnterTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter-tv.png",
+      "channel_name": "Ekushey TV",
+      "tvg_id": "EkusheyTV.bd",
+      "channel_id": "EkusheyTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -55103,10 +55623,10 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 6195,
-      "channel_name": "Epic Bharat",
-      "tvg_id": "EpicBharat.in@SD",
-      "channel_id": "EpicBharat.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-bharat.png",
+      "channel_name": "Ekushey TV",
+      "tvg_id": "EkusheyTV.bd",
+      "channel_id": "EkusheyTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -55116,6 +55636,136 @@
     {
       "playlist": "International-Playlist.m3u",
       "line": 6197,
+      "channel_name": "Ekushey TV",
+      "tvg_id": "EkusheyTV.bd",
+      "channel_id": "EkusheyTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6199,
+      "channel_name": "Ekushey TV",
+      "tvg_id": "EkusheyTV.bd",
+      "channel_id": "EkusheyTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6201,
+      "channel_name": "Ekushey TV",
+      "tvg_id": "EkusheyTV.bd",
+      "channel_id": "EkusheyTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6203,
+      "channel_name": "Enter10 Bangla",
+      "tvg_id": "Enter10Bangla.in",
+      "channel_id": "Enter10Bangla.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6205,
+      "channel_name": "Enter10 Bangla",
+      "tvg_id": "Enter10Bangla.in",
+      "channel_id": "Enter10Bangla.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6207,
+      "channel_name": "Enter10 Bangla",
+      "tvg_id": "Enter10Bangla.in",
+      "channel_id": "Enter10Bangla.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6209,
+      "channel_name": "Enter 10 Bangla",
+      "tvg_id": "Enter10Bangla.in",
+      "channel_id": "Enter10Bangla.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6211,
+      "channel_name": "Enter 10 Bangla",
+      "tvg_id": "Enter10Bangla.in",
+      "channel_id": "Enter10Bangla.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6213,
+      "channel_name": "Enter TV",
+      "tvg_id": "EnterTV.bd",
+      "channel_id": "EnterTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6215,
+      "channel_name": "Enter TV",
+      "tvg_id": "EnterTV.bd",
+      "channel_id": "EnterTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6217,
       "channel_name": "Epic Bharat",
       "tvg_id": "EpicBharat.in@SD",
       "channel_id": "EpicBharat.in@SD",
@@ -55128,7 +55778,20 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6199,
+      "line": 6219,
+      "channel_name": "Epic Bharat",
+      "tvg_id": "EpicBharat.in@SD",
+      "channel_id": "EpicBharat.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-bharat.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "International-Playlist.m3u",
+      "line": 6221,
       "channel_name": "Epic Bhojpuri",
       "tvg_id": "EpicBhojpuri.in@SD",
       "channel_id": "EpicBhojpuri.in@SD",
@@ -55141,7 +55804,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6201,
+      "line": 6223,
       "channel_name": "Epic Bhojpuri",
       "tvg_id": "EpicBhojpuri.in@SD",
       "channel_id": "EpicBhojpuri.in@SD",
@@ -55154,7 +55817,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6203,
+      "line": 6225,
       "channel_name": "Epic Bhojpuri Digital",
       "tvg_id": "EpicBhojpuriDigital.in",
       "channel_id": "EpicBhojpuriDigital.in",
@@ -55167,7 +55830,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6205,
+      "line": 6227,
       "channel_name": "Epic Music",
       "tvg_id": "EpicMusic.in@SD",
       "channel_id": "EpicMusic.in@SD",
@@ -55180,7 +55843,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6207,
+      "line": 6229,
       "channel_name": "Epic Music",
       "tvg_id": "EpicMusic.in@SD",
       "channel_id": "EpicMusic.in@SD",
@@ -55193,7 +55856,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6209,
+      "line": 6231,
       "channel_name": "ETV Beats",
       "tvg_id": "ETVBeats.in@HD",
       "channel_id": "ETVBeats.in@HD",
@@ -55206,7 +55869,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6211,
+      "line": 6233,
       "channel_name": "ETV Cinema",
       "tvg_id": "ETVCinema.in@SD",
       "channel_id": "ETVCinema.in@SD",
@@ -55219,7 +55882,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6213,
+      "line": 6235,
       "channel_name": "ETV Music",
       "tvg_id": "ETVMusic.in",
       "channel_id": "ETVMusic.in",
@@ -55232,7 +55895,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6215,
+      "line": 6237,
       "channel_name": "Evrokino",
       "tvg_id": "Evrokino.ru@HD",
       "channel_id": "Evrokino.ru@HD",
@@ -55245,7 +55908,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6217,
+      "line": 6239,
       "channel_name": "Fakt Marathi",
       "tvg_id": "FaktMarathi.in@SD",
       "channel_id": "FaktMarathi.in@SD",
@@ -55258,7 +55921,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6219,
+      "line": 6241,
       "channel_name": "Fakt Marathi",
       "tvg_id": "FaktMarathi.in@SD",
       "channel_id": "FaktMarathi.in@SD",
@@ -55271,7 +55934,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6221,
+      "line": 6243,
       "channel_name": "FILMBOX+ Festival",
       "tvg_id": "FILMBOXPlusFestival.pl@HD",
       "channel_id": "",
@@ -55284,7 +55947,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6223,
+      "line": 6245,
       "channel_name": "G Series Drama",
       "tvg_id": "GSeriesDrama.bd",
       "channel_id": "GSeriesDrama.bd",
@@ -55297,7 +55960,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6225,
+      "line": 6247,
       "channel_name": "G TV",
       "tvg_id": "GaziTV.bd",
       "channel_id": "GaziTV.bd",
@@ -55310,7 +55973,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6227,
+      "line": 6249,
       "channel_name": "G TV",
       "tvg_id": "GaziTV.bd",
       "channel_id": "GaziTV.bd",
@@ -55323,7 +55986,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6229,
+      "line": 6251,
       "channel_name": "Global TV",
       "tvg_id": "GlobalTV.bd",
       "channel_id": "",
@@ -55336,7 +55999,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6231,
+      "line": 6253,
       "channel_name": "Global TV",
       "tvg_id": "GlobalTV.bd",
       "channel_id": "GlobalTV.bd",
@@ -55349,7 +56012,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6233,
+      "line": 6255,
       "channel_name": "Golden Premier",
       "tvg_id": "GoldenPremier.mx@SD",
       "channel_id": "GoldenPremier.mx@SD",
@@ -55362,7 +56025,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6235,
+      "line": 6257,
       "channel_name": "Golden Premier 2",
       "tvg_id": "GoldenPremier2.mx@SD",
       "channel_id": "GoldenPremier2.mx@SD",
@@ -55375,7 +56038,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6237,
+      "line": 6259,
       "channel_name": "Goldmines",
       "tvg_id": "Goldmines.in@SD",
       "channel_id": "Goldmines.in@SD",
@@ -55388,7 +56051,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6239,
+      "line": 6261,
       "channel_name": "Goldmines",
       "tvg_id": "Goldmines.in@SD",
       "channel_id": "Goldmines.in@SD",
@@ -55401,7 +56064,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6241,
+      "line": 6263,
       "channel_name": "Goldmines",
       "tvg_id": "Goldmines.in@SD",
       "channel_id": "Goldmines.in@SD",
@@ -55414,7 +56077,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6243,
+      "line": 6265,
       "channel_name": "Goldmines",
       "tvg_id": "Goldmines.in@SD",
       "channel_id": "Goldmines.in@SD",
@@ -55427,7 +56090,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6245,
+      "line": 6267,
       "channel_name": "Goldmines",
       "tvg_id": "Goldmines.in@SD",
       "channel_id": "Goldmines.in@SD",
@@ -55440,7 +56103,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6247,
+      "line": 6269,
       "channel_name": "Goldmines 2",
       "tvg_id": "Goldmines2.in@SD",
       "channel_id": "Goldmines2.in@SD",
@@ -55453,7 +56116,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6249,
+      "line": 6271,
       "channel_name": "Goldmines 2",
       "tvg_id": "Goldmines2.in@SD",
       "channel_id": "Goldmines2.in@SD",
@@ -55466,7 +56129,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6251,
+      "line": 6273,
       "channel_name": "Goldmines Action",
       "tvg_id": "GoldminesAction.in@SD",
       "channel_id": "GoldminesAction.in@SD",
@@ -55479,7 +56142,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6253,
+      "line": 6275,
       "channel_name": "Goldmines Action",
       "tvg_id": "GoldminesAction.in",
       "channel_id": "GoldminesAction.in",
@@ -55492,7 +56155,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6255,
+      "line": 6277,
       "channel_name": "Goldmines Bollywood",
       "tvg_id": "GoldminesBollywood.in@SD",
       "channel_id": "GoldminesBollywood.in@SD",
@@ -55505,7 +56168,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6257,
+      "line": 6279,
       "channel_name": "Goldmines Bollywood",
       "tvg_id": "GoldminesBollywood.in@SD",
       "channel_id": "GoldminesBollywood.in@SD",
@@ -55518,7 +56181,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6259,
+      "line": 6281,
       "channel_name": "Goldmines Bollywood",
       "tvg_id": "GoldminesBollywood.in@SD",
       "channel_id": "GoldminesBollywood.in@SD",
@@ -55531,7 +56194,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6261,
+      "line": 6283,
       "channel_name": "Goldmines Bollywood",
       "tvg_id": "GoldminesBollywood.in@SD",
       "channel_id": "GoldminesBollywood.in@SD",
@@ -55544,7 +56207,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6263,
+      "line": 6285,
       "channel_name": "Goldmines Movies",
       "tvg_id": "GoldminesMovies.in@SD",
       "channel_id": "GoldminesMovies.in@SD",
@@ -55557,7 +56220,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6265,
+      "line": 6287,
       "channel_name": "Goldmines Movies",
       "tvg_id": "GoldminesMovies.in@SD",
       "channel_id": "GoldminesMovies.in@SD",
@@ -55570,7 +56233,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6267,
+      "line": 6289,
       "channel_name": "Goldmines Movies",
       "tvg_id": "GoldminesMovies.in@SD",
       "channel_id": "GoldminesMovies.in@SD",
@@ -55583,7 +56246,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6269,
+      "line": 6291,
       "channel_name": "Goldmines Movies",
       "tvg_id": "GoldminesMovies.in@SD",
       "channel_id": "GoldminesMovies.in@SD",
@@ -55596,7 +56259,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6271,
+      "line": 6293,
       "channel_name": "Goldmines Movies",
       "tvg_id": "GoldminesMovies.in@SD",
       "channel_id": "GoldminesMovies.in@SD",
@@ -55609,7 +56272,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6273,
+      "line": 6295,
       "channel_name": "GREAT! Movies",
       "tvg_id": "GREATmovies.uk",
       "channel_id": "GREATmovies.uk",
@@ -55622,7 +56285,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6275,
+      "line": 6297,
       "channel_name": "GREAT! Romance",
       "tvg_id": "GREATromance.uk",
       "channel_id": "GREATromance.uk",
@@ -55635,7 +56298,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6277,
+      "line": 6299,
       "channel_name": "GTC Punjabi",
       "tvg_id": "GTCPunjabi.in@SD",
       "channel_id": "GTCPunjabi.in@SD",
@@ -55648,7 +56311,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6279,
+      "line": 6301,
       "channel_name": "HBO Asia SD [ ]",
       "tvg_id": "HBOAsia.sg@SD",
       "channel_id": "HBOAsia.sg@SD",
@@ -55661,7 +56324,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6281,
+      "line": 6303,
       "channel_name": "HBO Xtreme Latin America",
       "tvg_id": "HBOXtremeLatinAmerica.us@SD",
       "channel_id": "HBOXtremeLatinAmerica.us@SD",
@@ -55674,7 +56337,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6283,
+      "line": 6305,
       "channel_name": "Hum TV",
       "tvg_id": "HumTV.pk",
       "channel_id": "HumTV.pk",
@@ -55687,7 +56350,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6285,
+      "line": 6307,
       "channel_name": "Insync",
       "tvg_id": "Insync.in@SD",
       "channel_id": "Insync.in@SD",
@@ -55700,7 +56363,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6287,
+      "line": 6309,
       "channel_name": "Jago News 24",
       "tvg_id": "JagoNews24.bd",
       "channel_id": "JagoNews24.bd",
@@ -55713,7 +56376,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6289,
+      "line": 6311,
       "channel_name": "Jago News 24",
       "tvg_id": "JagoNews24.bd",
       "channel_id": "JagoNews24.bd",
@@ -55726,7 +56389,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6291,
+      "line": 6313,
       "channel_name": "Jaihind TV",
       "tvg_id": "JaihindTV.in@SD",
       "channel_id": "JaihindTV.in@SD",
@@ -55739,7 +56402,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6293,
+      "line": 6315,
       "channel_name": "Jamuna TV",
       "tvg_id": "JamunaTV.bd",
       "channel_id": "JamunaTV.bd",
@@ -55752,7 +56415,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6295,
+      "line": 6317,
       "channel_name": "Jamuna TV",
       "tvg_id": "JamunaTV.bd",
       "channel_id": "JamunaTV.bd",
@@ -55765,7 +56428,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6297,
+      "line": 6319,
       "channel_name": "Kairali TV",
       "tvg_id": "KairaliTV.in@SD",
       "channel_id": "KairaliTV.in@SD",
@@ -55778,7 +56441,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6299,
+      "line": 6321,
       "channel_name": "Kairali We",
       "tvg_id": "KairaliWe.in@SD",
       "channel_id": "KairaliWe.in@SD",
@@ -55791,7 +56454,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6301,
+      "line": 6323,
       "channel_name": "Kalaignar Murasu",
       "tvg_id": "KalaignarMurasu.in@SD",
       "channel_id": "KalaignarMurasu.in@SD",
@@ -55804,7 +56467,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6303,
+      "line": 6325,
       "channel_name": "Kappa TV",
       "tvg_id": "kappatv.in",
       "channel_id": "kappatv.in",
@@ -55817,7 +56480,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6305,
+      "line": 6327,
       "channel_name": "Kappa TV",
       "tvg_id": "KappaTV.in@SD",
       "channel_id": "",
@@ -55830,7 +56493,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6307,
+      "line": 6329,
       "channel_name": "Kerala Vision",
       "tvg_id": "KeralaVision.in@SD",
       "channel_id": "KeralaVision.in@SD",
@@ -55843,7 +56506,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6309,
+      "line": 6331,
       "channel_name": "Khushboo Bangla",
       "tvg_id": "KhushbooBangla.in@SD",
       "channel_id": "",
@@ -55856,7 +56519,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6311,
+      "line": 6333,
       "channel_name": "Khushboo Bangla",
       "tvg_id": "KhushbooBangla.in@SD",
       "channel_id": "KhushbooBangla.in@SD",
@@ -55869,7 +56532,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6313,
+      "line": 6335,
       "channel_name": "Kinopokaz",
       "tvg_id": "custom.kinopokaz-ru-movie",
       "channel_id": "custom.kinopokaz-ru-movie",
@@ -55882,7 +56545,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6315,
+      "line": 6337,
       "channel_name": "Kronehit",
       "tvg_id": "Kronehit.at",
       "channel_id": "Kronehit.at",
@@ -55895,7 +56558,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6317,
+      "line": 6339,
       "channel_name": "Maasranga TV",
       "tvg_id": "MaasrangaTV.bd",
       "channel_id": "MaasrangaTV.bd",
@@ -55908,7 +56571,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6319,
+      "line": 6341,
       "channel_name": "Maasranga TV",
       "tvg_id": "MaasrangaTV.bd",
       "channel_id": "MaasrangaTV.bd",
@@ -55921,7 +56584,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6321,
+      "line": 6343,
       "channel_name": "Maasranga TV",
       "tvg_id": "MaasrangaTV.bd",
       "channel_id": "MaasrangaTV.bd",
@@ -55934,7 +56597,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6323,
+      "line": 6345,
       "channel_name": "Maasranga TV",
       "tvg_id": "MaasrangaTV.bd",
       "channel_id": "MaasrangaTV.bd",
@@ -55947,7 +56610,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6325,
+      "line": 6347,
       "channel_name": "Maha Movie",
       "tvg_id": "MahaMovie.in@SD",
       "channel_id": "MahaMovie.in@SD",
@@ -55960,7 +56623,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6327,
+      "line": 6349,
       "channel_name": "Maha Punjabi",
       "tvg_id": "MahaPunjabi.in@SD",
       "channel_id": "MahaPunjabi.in@SD",
@@ -55973,7 +56636,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6329,
+      "line": 6351,
       "channel_name": "Mahaa Max",
       "tvg_id": "MahaaMax.in",
       "channel_id": "MahaaMax.in",
@@ -55986,7 +56649,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6331,
+      "line": 6353,
       "channel_name": "Manoranjan Movies",
       "tvg_id": "ManoranjanMovies.in@SD",
       "channel_id": "ManoranjanMovies.in@SD",
@@ -55999,7 +56662,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6333,
+      "line": 6355,
       "channel_name": "Manoranjan Movies",
       "tvg_id": "ManoranjanMovies.in@SD",
       "channel_id": "ManoranjanMovies.in@SD",
@@ -56012,7 +56675,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6335,
+      "line": 6357,
       "channel_name": "Manoranjan Movies",
       "tvg_id": "ManoranjanMovies.in@SD",
       "channel_id": "ManoranjanMovies.in@SD",
@@ -56025,7 +56688,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6337,
+      "line": 6359,
       "channel_name": "Manoranjan Prime",
       "tvg_id": "ManoranjanPrime.in@SD",
       "channel_id": "ManoranjanPrime.in@SD",
@@ -56038,7 +56701,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6339,
+      "line": 6361,
       "channel_name": "Mazhavil Manorama",
       "tvg_id": "MazhavilManorama.in@SD",
       "channel_id": "MazhavilManorama.in@SD",
@@ -56051,7 +56714,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6341,
+      "line": 6363,
       "channel_name": "Mazhavil Manorama",
       "tvg_id": "MazhavilManorama.in@SD",
       "channel_id": "MazhavilManorama.in@SD",
@@ -56064,7 +56727,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6343,
+      "line": 6365,
       "channel_name": "Mazhavil Manorama",
       "tvg_id": "MazhavilManorama.in@SD",
       "channel_id": "MazhavilManorama.in@SD",
@@ -56077,7 +56740,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6345,
+      "line": 6367,
       "channel_name": "Mazhavil Manorama",
       "tvg_id": "MazhavilManorama.in@SD",
       "channel_id": "MazhavilManorama.in@SD",
@@ -56090,7 +56753,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6347,
+      "line": 6369,
       "channel_name": "ME TV",
       "tvg_id": "METV.bd",
       "channel_id": "METV.bd",
@@ -56103,7 +56766,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6349,
+      "line": 6371,
       "channel_name": "ME TV",
       "tvg_id": "METV.bd",
       "channel_id": "METV.bd",
@@ -56116,7 +56779,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6351,
+      "line": 6373,
       "channel_name": "ME TV",
       "tvg_id": "METV.bd",
       "channel_id": "METV.bd",
@@ -56129,7 +56792,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6353,
+      "line": 6375,
       "channel_name": "Mei Ah Movie Channel",
       "tvg_id": "MeiAhMovieChannel.hk@SD",
       "channel_id": "",
@@ -56142,7 +56805,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6355,
+      "line": 6377,
       "channel_name": "Mi Musica Salsa",
       "tvg_id": "MiMusicaSalsa.us@SD",
       "channel_id": "MiMusicaSalsa.us@SD",
@@ -56155,7 +56818,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6357,
+      "line": 6379,
       "channel_name": "MK Six",
       "tvg_id": "MKSix.in",
       "channel_id": "MKSix.in",
@@ -56168,7 +56831,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6359,
+      "line": 6381,
       "channel_name": "MNX",
       "tvg_id": "MNX.in@SD",
       "channel_id": "MNX.in@SD",
@@ -56181,7 +56844,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6361,
+      "line": 6383,
       "channel_name": "Mohona TV",
       "tvg_id": "MohonaTV.bd",
       "channel_id": "MohonaTV.bd",
@@ -56194,7 +56857,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6363,
+      "line": 6385,
       "channel_name": "Movie Bangla",
       "tvg_id": "MovieBangla.bd@SD",
       "channel_id": "",
@@ -56207,7 +56870,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6365,
+      "line": 6387,
       "channel_name": "Movie Bangla",
       "tvg_id": "MovieBangla.bd",
       "channel_id": "MovieBangla.bd",
@@ -56220,7 +56883,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6367,
+      "line": 6389,
       "channel_name": "Movie Punjab",
       "tvg_id": "MoviePunjab.in@SD",
       "channel_id": "MoviePunjab.in@SD",
@@ -56233,7 +56896,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6369,
+      "line": 6391,
       "channel_name": "Movies Now",
       "tvg_id": "MoviesNow.in@HD",
       "channel_id": "MoviesNow.in@HD",
@@ -56246,7 +56909,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6371,
+      "line": 6393,
       "channel_name": "MovieSphere",
       "tvg_id": "MovieSphere.us",
       "channel_id": "MovieSphere.us",
@@ -56259,7 +56922,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6373,
+      "line": 6395,
       "channel_name": "Music India",
       "tvg_id": "MusicIndia.in@SD",
       "channel_id": "MusicIndia.in@SD",
@@ -56272,7 +56935,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6375,
+      "line": 6397,
       "channel_name": "Music India",
       "tvg_id": "MusicIndia.in@SD",
       "channel_id": "MusicIndia.in@SD",
@@ -56285,7 +56948,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6377,
+      "line": 6399,
       "channel_name": "Muzyka Pervogo",
       "tvg_id": "MuzykaPervogo.ru@SD",
       "channel_id": "MuzykaPervogo.ru@SD",
@@ -56298,7 +56961,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6379,
+      "line": 6401,
       "channel_name": "My TV",
       "tvg_id": "MyTV.bd",
       "channel_id": "MyTV.bd",
@@ -56311,7 +56974,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6381,
+      "line": 6403,
       "channel_name": "My TV",
       "tvg_id": "MyTV.bd",
       "channel_id": "MyTV.bd",
@@ -56324,7 +56987,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6383,
+      "line": 6405,
       "channel_name": "My TV",
       "tvg_id": "MyTV.bd",
       "channel_id": "MyTV.bd",
@@ -56337,7 +57000,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6385,
+      "line": 6407,
       "channel_name": "MyTime Movie Network",
       "tvg_id": "MyTimeMovieNetwork.br",
       "channel_id": "MyTimeMovieNetwork.br",
@@ -56350,7 +57013,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6387,
+      "line": 6409,
       "channel_name": "Nepal 1",
       "tvg_id": "Nepal1.in@SD",
       "channel_id": "Nepal1.in@SD",
@@ -56363,7 +57026,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6389,
+      "line": 6411,
       "channel_name": "News 24",
       "tvg_id": "News24.bd",
       "channel_id": "News24.bd",
@@ -56376,7 +57039,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6391,
+      "line": 6413,
       "channel_name": "News 24",
       "tvg_id": "News24.bd",
       "channel_id": "News24.bd",
@@ -56389,7 +57052,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6393,
+      "line": 6415,
       "channel_name": "News 24",
       "tvg_id": "News24.bd",
       "channel_id": "News24.bd",
@@ -56402,7 +57065,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6395,
+      "line": 6417,
       "channel_name": "News 24",
       "tvg_id": "News24.bd",
       "channel_id": "News24.bd",
@@ -56415,7 +57078,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6397,
+      "line": 6419,
       "channel_name": "Nexus TV",
       "tvg_id": "NexusTV.bd",
       "channel_id": "",
@@ -56428,7 +57091,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6399,
+      "line": 6421,
       "channel_name": "NH BollyFlix",
       "tvg_id": "NHBollyFlix.in",
       "channel_id": "NHBollyFlix.in",
@@ -56441,7 +57104,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6401,
+      "line": 6423,
       "channel_name": "NH BollyFlix",
       "tvg_id": "NHBollyFlix.in",
       "channel_id": "NHBollyFlix.in",
@@ -56454,7 +57117,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6403,
+      "line": 6425,
       "channel_name": "NH BollyFlix",
       "tvg_id": "NHBollyFlix.in@HD",
       "channel_id": "",
@@ -56467,7 +57130,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6405,
+      "line": 6427,
       "channel_name": "NH BollyRaga",
       "tvg_id": "NHBollyRaga.in",
       "channel_id": "NHBollyRaga.in",
@@ -56480,7 +57143,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6407,
+      "line": 6429,
       "channel_name": "NH BollyRaga",
       "tvg_id": "NHBollyRaga.in",
       "channel_id": "NHBollyRaga.in",
@@ -56493,7 +57156,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6409,
+      "line": 6431,
       "channel_name": "NOW 70s",
       "tvg_id": "NOW70s.us",
       "channel_id": "NOW70s.us",
@@ -56506,7 +57169,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6411,
+      "line": 6433,
       "channel_name": "Now 70s",
       "tvg_id": "NOW70s.us",
       "channel_id": "NOW70s.us",
@@ -56519,7 +57182,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6413,
+      "line": 6435,
       "channel_name": "Now 80s",
       "tvg_id": "NOW80s.us",
       "channel_id": "NOW80s.us",
@@ -56532,7 +57195,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6415,
+      "line": 6437,
       "channel_name": "NOW Rock",
       "tvg_id": "NOWRock.uk@SD",
       "channel_id": "NOWRock.uk@SD",
@@ -56545,7 +57208,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6417,
+      "line": 6439,
       "channel_name": "NOW Rock",
       "tvg_id": "NOWRock.uk@SD",
       "channel_id": "NOWRock.uk@SD",
@@ -56558,7 +57221,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6419,
+      "line": 6441,
       "channel_name": "NTV",
       "tvg_id": "NTV-IN",
       "channel_id": "NTV-IN",
@@ -56571,7 +57234,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6421,
+      "line": 6443,
       "channel_name": "NTV",
       "tvg_id": "NTV.bd",
       "channel_id": "NTV.bd",
@@ -56584,7 +57247,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6423,
+      "line": 6445,
       "channel_name": "NTV",
       "tvg_id": "NTV.bd",
       "channel_id": "NTV.bd",
@@ -56597,7 +57260,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6425,
+      "line": 6447,
       "channel_name": "NTV",
       "tvg_id": "NTV.bd",
       "channel_id": "NTV.bd",
@@ -56610,7 +57273,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6427,
+      "line": 6449,
       "channel_name": "NTV",
       "tvg_id": "NTV-IN",
       "channel_id": "NTV-IN",
@@ -56623,7 +57286,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6429,
+      "line": 6451,
       "channel_name": "NTV",
       "tvg_id": "NTV.bd",
       "channel_id": "NTV.bd",
@@ -56636,7 +57299,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6431,
+      "line": 6453,
       "channel_name": "NTV Europe",
       "tvg_id": "NTVEurope.bd",
       "channel_id": "NTVEurope.bd",
@@ -56649,7 +57312,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6433,
+      "line": 6455,
       "channel_name": "Oscar Movies Bhojpuri",
       "tvg_id": "custom.oscar-movies-bhojpuri-in-movie",
       "channel_id": "custom.oscar-movies-bhojpuri-in-movie",
@@ -56662,7 +57325,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6435,
+      "line": 6457,
       "channel_name": "OuterSphere",
       "tvg_id": "OuterSphere.us",
       "channel_id": "OuterSphere.us",
@@ -56675,7 +57338,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6437,
+      "line": 6459,
       "channel_name": "Pardesi TV",
       "tvg_id": "PardesiTV.ca",
       "channel_id": "PardesiTV.ca",
@@ -56688,7 +57351,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6439,
+      "line": 6461,
       "channel_name": "Pear TV",
       "tvg_id": "PearTV.in@SD",
       "channel_id": "PearTV.in@SD",
@@ -56701,7 +57364,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6441,
+      "line": 6463,
       "channel_name": "Pitaara TV",
       "tvg_id": "Pitaara.in@SD",
       "channel_id": "Pitaara.in@SD",
@@ -56714,7 +57377,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6443,
+      "line": 6465,
       "channel_name": "Pitaara TV",
       "tvg_id": "Pitaara.in@SD",
       "channel_id": "Pitaara.in@SD",
@@ -56727,7 +57390,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6445,
+      "line": 6467,
       "channel_name": "PTC Music",
       "tvg_id": "PTCMusic.in@SD",
       "channel_id": "PTCMusic.in@SD",
@@ -56740,7 +57403,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6447,
+      "line": 6469,
       "channel_name": "PTC Punjabi",
       "tvg_id": "PTCPunjabi.in@HD",
       "channel_id": "PTCPunjabi.in@HD",
@@ -56753,7 +57416,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6449,
+      "line": 6471,
       "channel_name": "PTC Punjabi",
       "tvg_id": "PTCPunjabi.in@SD",
       "channel_id": "",
@@ -56766,7 +57429,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6451,
+      "line": 6473,
       "channel_name": "Public Movies",
       "tvg_id": "PublicMovies.in@SD",
       "channel_id": "PublicMovies.in@SD",
@@ -56779,7 +57442,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6453,
+      "line": 6475,
       "channel_name": "Public Movies",
       "tvg_id": "PublicMovies.in@SD",
       "channel_id": "PublicMovies.in@SD",
@@ -56792,7 +57455,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6455,
+      "line": 6477,
       "channel_name": "Public Music",
       "tvg_id": "PublicMusic.in@SD",
       "channel_id": "PublicMusic.in@SD",
@@ -56805,7 +57468,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6457,
+      "line": 6479,
       "channel_name": "Public Music",
       "tvg_id": "PublicMusic.in@SD",
       "channel_id": "PublicMusic.in@SD",
@@ -56818,7 +57481,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6459,
+      "line": 6481,
       "channel_name": "Punjabi Hits",
       "tvg_id": "PunjabiHits.in@SD",
       "channel_id": "PunjabiHits.in@SD",
@@ -56831,7 +57494,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6461,
+      "line": 6483,
       "channel_name": "Punjabi Shorts",
       "tvg_id": "PunjabiShorts.in@SD",
       "channel_id": "PunjabiShorts.in@SD",
@@ -56844,7 +57507,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6463,
+      "line": 6485,
       "channel_name": "Qello Concerts by Stingray",
       "tvg_id": "QelloConcertsbyStingray.ca@SD",
       "channel_id": "QelloConcertsbyStingray.ca@SD",
@@ -56857,7 +57520,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6465,
+      "line": 6487,
       "channel_name": "R Plus Gold",
       "tvg_id": "RPlusGold.in@SD",
       "channel_id": "RPlusGold.in@SD",
@@ -56870,7 +57533,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6467,
+      "line": 6489,
       "channel_name": "R Plus Gold",
       "tvg_id": "RPlusGold.in@SD",
       "channel_id": "RPlusGold.in@SD",
@@ -56883,7 +57546,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6469,
+      "line": 6491,
       "channel_name": "Rajdhani TV",
       "tvg_id": "custom.rajdhani",
       "channel_id": "custom.rajdhani",
@@ -56896,7 +57559,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6471,
+      "line": 6493,
       "channel_name": "Ramdhenu",
       "tvg_id": "Ramdhenu.in@SD",
       "channel_id": "Ramdhenu.in@SD",
@@ -56909,7 +57572,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6473,
+      "line": 6495,
       "channel_name": "Rengoni",
       "tvg_id": "Rengoni.in@SD",
       "channel_id": "Rengoni.in@SD",
@@ -56922,7 +57585,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6475,
+      "line": 6497,
       "channel_name": "Rengoni",
       "tvg_id": "Rengoni.in@SD",
       "channel_id": "Rengoni.in@SD",
@@ -56935,7 +57598,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6477,
+      "line": 6499,
       "channel_name": "Retro Music TV",
       "tvg_id": "RetroMusicTV.cz",
       "channel_id": "RetroMusicTV.cz",
@@ -56948,7 +57611,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6479,
+      "line": 6501,
       "channel_name": "Retro Music TV",
       "tvg_id": "RetroMusicTV.cz",
       "channel_id": "RetroMusicTV.cz",
@@ -56961,7 +57624,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6481,
+      "line": 6503,
       "channel_name": "Rodnoe Kino",
       "tvg_id": "custom.rodnoe-kino-ru-movie",
       "channel_id": "custom.rodnoe-kino-ru-movie",
@@ -56974,7 +57637,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6483,
+      "line": 6505,
       "channel_name": "Rongeen TV",
       "tvg_id": "RongeenTV.in@SD",
       "channel_id": "RongeenTV.in@SD",
@@ -56987,7 +57650,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6485,
+      "line": 6507,
       "channel_name": "Rongeen TV",
       "tvg_id": "RongeenTV.in@SD",
       "channel_id": "RongeenTV.in@SD",
@@ -57000,7 +57663,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6487,
+      "line": 6509,
       "channel_name": "Rongeen TV",
       "tvg_id": "RongeenTV.in@SD",
       "channel_id": "RongeenTV.in@SD",
@@ -57013,7 +57676,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6489,
+      "line": 6511,
       "channel_name": "RTV",
       "tvg_id": "RTV.bd",
       "channel_id": "RTV.bd",
@@ -57026,7 +57689,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6491,
+      "line": 6513,
       "channel_name": "RTV",
       "tvg_id": "RTV.bd",
       "channel_id": "RTV.bd",
@@ -57039,7 +57702,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6493,
+      "line": 6515,
       "channel_name": "RTV",
       "tvg_id": "RTV.bd",
       "channel_id": "RTV.bd",
@@ -57052,7 +57715,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6495,
+      "line": 6517,
       "channel_name": "RTV",
       "tvg_id": "RTV.bd",
       "channel_id": "RTV.bd",
@@ -57065,7 +57728,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6497,
+      "line": 6519,
       "channel_name": "RTV",
       "tvg_id": "RTV.bd",
       "channel_id": "RTV.bd",
@@ -57078,7 +57741,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6499,
+      "line": 6521,
       "channel_name": "Rupasi Bangla",
       "tvg_id": "RupasiBangla.in@SD",
       "channel_id": "",
@@ -57091,7 +57754,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6501,
+      "line": 6523,
       "channel_name": "Ruposhi Bangla",
       "tvg_id": "RupasiBangla.in@SD",
       "channel_id": "RupasiBangla.in@SD",
@@ -57104,7 +57767,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6503,
+      "line": 6525,
       "channel_name": "Ruposhi Bangla",
       "tvg_id": "RupasiBangla.in@SD",
       "channel_id": "RupasiBangla.in@SD",
@@ -57117,7 +57780,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6505,
+      "line": 6527,
       "channel_name": "SA TV",
       "tvg_id": "SATV.bd",
       "channel_id": "SATV.bd",
@@ -57130,7 +57793,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6507,
+      "line": 6529,
       "channel_name": "SA TV",
       "tvg_id": "SATV.bd",
       "channel_id": "SATV.bd",
@@ -57143,7 +57806,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6509,
+      "line": 6531,
       "channel_name": "SA TV",
       "tvg_id": "SATV.bd",
       "channel_id": "SATV.bd",
@@ -57156,7 +57819,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6511,
+      "line": 6533,
       "channel_name": "SA TV",
       "tvg_id": "SATV.bd",
       "channel_id": "SATV.bd",
@@ -57169,7 +57832,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6513,
+      "line": 6535,
       "channel_name": "Safari TV",
       "tvg_id": "SafariTV.in@SD",
       "channel_id": "SafariTV.in@SD",
@@ -57182,7 +57845,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6515,
+      "line": 6537,
       "channel_name": "Sana Plus",
       "tvg_id": "SanaPlus.in@SD",
       "channel_id": "",
@@ -57195,7 +57858,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6517,
+      "line": 6539,
       "channel_name": "Sananda",
       "tvg_id": "SanandaTV.in",
       "channel_id": "SanandaTV.in",
@@ -57208,7 +57871,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6519,
+      "line": 6541,
       "channel_name": "Sangeet Bangla",
       "tvg_id": "SangeetBangla.in@SD",
       "channel_id": "SangeetBangla.in@SD",
@@ -57221,7 +57884,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6521,
+      "line": 6543,
       "channel_name": "Sangeet Bangla",
       "tvg_id": "SangeetBangla.in@SD",
       "channel_id": "SangeetBangla.in@SD",
@@ -57234,7 +57897,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6523,
+      "line": 6545,
       "channel_name": "Sangeet Bhojpuri",
       "tvg_id": "SangeetBhojpuri.in@SD",
       "channel_id": "SangeetBhojpuri.in@SD",
@@ -57247,7 +57910,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6525,
+      "line": 6547,
       "channel_name": "Scares by Shudder",
       "tvg_id": "ScaresbyShudder.us@SD",
       "channel_id": "ScaresbyShudder.us@SD",
@@ -57260,7 +57923,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6527,
+      "line": 6549,
       "channel_name": "Shanson TV",
       "tvg_id": "ShansonTV.ru@SD",
       "channel_id": "ShansonTV.ru@SD",
@@ -57273,7 +57936,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6529,
+      "line": 6551,
       "channel_name": "Shanson TV",
       "tvg_id": "ShansonTV.ru",
       "channel_id": "ShansonTV.ru",
@@ -57286,7 +57949,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6531,
+      "line": 6553,
       "channel_name": "Shanson TV",
       "tvg_id": "ShansonTV.ru",
       "channel_id": "ShansonTV.ru",
@@ -57299,7 +57962,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6533,
+      "line": 6555,
       "channel_name": "Shemaroo Bollywood",
       "tvg_id": "ShemarooBollywood.us",
       "channel_id": "ShemarooBollywood.us",
@@ -57312,7 +57975,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6535,
+      "line": 6557,
       "channel_name": "Shemaroo Josh",
       "tvg_id": "ShemarooJosh.in@SD",
       "channel_id": "ShemarooJosh.in@SD",
@@ -57325,7 +57988,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6537,
+      "line": 6559,
       "channel_name": "Shemaroo Josh",
       "tvg_id": "ShemarooJosh.in@SD",
       "channel_id": "ShemarooJosh.in@SD",
@@ -57338,7 +58001,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6539,
+      "line": 6561,
       "channel_name": "Shubh Cinema TV",
       "tvg_id": "ShubhCinemaTV.in",
       "channel_id": "ShubhCinemaTV.in",
@@ -57351,7 +58014,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6541,
+      "line": 6563,
       "channel_name": "Smotrim 100% Klassika",
       "tvg_id": "Smotrim100Klassika.ru@SD",
       "channel_id": "Smotrim100Klassika.ru@SD",
@@ -57364,7 +58027,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6543,
+      "line": 6565,
       "channel_name": "Somoy TV",
       "tvg_id": "SomoyNewsTV.bd",
       "channel_id": "SomoyNewsTV.bd",
@@ -57377,7 +58040,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6545,
+      "line": 6567,
       "channel_name": "Sony Max",
       "tvg_id": "SonyMax.in@SD",
       "channel_id": "SonyMax.in@SD",
@@ -57390,7 +58053,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6547,
+      "line": 6569,
       "channel_name": "Sony Max",
       "tvg_id": "SonyMax.in@SD",
       "channel_id": "SonyMax.in@SD",
@@ -57403,7 +58066,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6549,
+      "line": 6571,
       "channel_name": "Sony Max",
       "tvg_id": "SonyMax.in@SD",
       "channel_id": "SonyMax.in@SD",
@@ -57416,7 +58079,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6551,
+      "line": 6573,
       "channel_name": "Sony Wah",
       "tvg_id": "SonyWah.in@SD",
       "channel_id": "SonyWah.in@SD",
@@ -57429,7 +58092,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6553,
+      "line": 6575,
       "channel_name": "South Station",
       "tvg_id": "SouthStation.in",
       "channel_id": "SouthStation.in",
@@ -57442,7 +58105,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6555,
+      "line": 6577,
       "channel_name": "SportsGrid",
       "tvg_id": "SportsGrid.us@SD",
       "channel_id": "",
@@ -57455,7 +58118,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6557,
+      "line": 6579,
       "channel_name": "SRK",
       "tvg_id": "SRK.bd",
       "channel_id": "SRK.bd",
@@ -57468,7 +58131,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6559,
+      "line": 6581,
       "channel_name": "Star Cinema",
       "tvg_id": "StarCinema.ru@SD",
       "channel_id": "StarCinema.ru@SD",
@@ -57481,7 +58144,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6561,
+      "line": 6583,
       "channel_name": "Star Jalsha",
       "tvg_id": "StarJalsha.in@HD",
       "channel_id": "",
@@ -57494,7 +58157,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6563,
+      "line": 6585,
       "channel_name": "Star Movies Select",
       "tvg_id": "StarMoviesSelect.in@HD",
       "channel_id": "StarMoviesSelect.in@HD",
@@ -57507,7 +58170,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6565,
+      "line": 6587,
       "channel_name": "Stingray Hit List",
       "tvg_id": "StingrayHitList.ca@SD",
       "channel_id": "",
@@ -57520,7 +58183,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6567,
+      "line": 6589,
       "channel_name": "Stingray Naturescape",
       "tvg_id": "StingrayNaturescape.ca",
       "channel_id": "StingrayNaturescape.ca",
@@ -57533,7 +58196,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6569,
+      "line": 6591,
       "channel_name": "Stingray Remember the 80s",
       "tvg_id": "StingrayRememberthe80s.ca",
       "channel_id": "StingrayRememberthe80s.ca",
@@ -57546,7 +58209,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6571,
+      "line": 6593,
       "channel_name": "Studio Yuva",
       "tvg_id": "StudioYuva.in",
       "channel_id": "StudioYuva.in",
@@ -57559,7 +58222,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6573,
+      "line": 6595,
       "channel_name": "Suriyan TV",
       "tvg_id": "SuriyanTV.in@SD",
       "channel_id": "SuriyanTV.in@SD",
@@ -57572,7 +58235,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6575,
+      "line": 6597,
       "channel_name": "Telecine Action",
       "tvg_id": "TelecineAction.br@SD",
       "channel_id": "TelecineAction.br@SD",
@@ -57585,7 +58248,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6577,
+      "line": 6599,
       "channel_name": "TeleHit",
       "tvg_id": "TeleHit.mx@SD",
       "channel_id": "TeleHit.mx@SD",
@@ -57598,7 +58261,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6579,
+      "line": 6601,
       "channel_name": "Thalaa TV",
       "tvg_id": "ThalaaTV.in@HD",
       "channel_id": "ThalaaTV.in@HD",
@@ -57611,7 +58274,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6581,
+      "line": 6603,
       "channel_name": "The Movie Club",
       "tvg_id": "TheMovieClub.in@HD",
       "channel_id": "TheMovieClub.in@HD",
@@ -57624,7 +58287,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6583,
+      "line": 6605,
       "channel_name": "The Movie Club",
       "tvg_id": "TheMovieClub.in@HD",
       "channel_id": "TheMovieClub.in@HD",
@@ -57637,7 +58300,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6585,
+      "line": 6607,
       "channel_name": "Tolly TV",
       "tvg_id": "TollyTV.in@HD",
       "channel_id": "TollyTV.in@HD",
@@ -57650,7 +58313,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6587,
+      "line": 6609,
       "channel_name": "Trace Brazuca",
       "tvg_id": "TraceBrazuca.fr@HD",
       "channel_id": "TraceBrazuca.fr@HD",
@@ -57663,7 +58326,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6589,
+      "line": 6611,
       "channel_name": "Trace Urban",
       "tvg_id": "TraceUrban.fr@SD",
       "channel_id": "",
@@ -57676,7 +58339,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6591,
+      "line": 6613,
       "channel_name": "TV1000",
       "tvg_id": "TV1000.bg@SD",
       "channel_id": "TV1000.bg@SD",
@@ -57689,7 +58352,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6593,
+      "line": 6615,
       "channel_name": "U Bangla",
       "tvg_id": "UBangla.in",
       "channel_id": "UBangla.in",
@@ -57702,7 +58365,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6595,
+      "line": 6617,
       "channel_name": "Ultimate TV",
       "tvg_id": "UltimateTV.in@SD",
       "channel_id": "UltimateTV.in@SD",
@@ -57715,7 +58378,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6597,
+      "line": 6619,
       "channel_name": "UTV Palakkad",
       "tvg_id": "UTVPalakkad.in@SD",
       "channel_id": "UTVPalakkad.in@SD",
@@ -57728,7 +58391,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6599,
+      "line": 6621,
       "channel_name": "Vanitha TV",
       "tvg_id": "VanithaTV.in@SD",
       "channel_id": "VanithaTV.in@SD",
@@ -57741,7 +58404,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6601,
+      "line": 6623,
       "channel_name": "Vasanth TV",
       "tvg_id": "VasanthTV.in@SD",
       "channel_id": "VasanthTV.in@SD",
@@ -57754,7 +58417,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6603,
+      "line": 6625,
       "channel_name": "Vendhar TV",
       "tvg_id": "VendharTV.in@SD",
       "channel_id": "VendharTV.in@SD",
@@ -57767,7 +58430,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6605,
+      "line": 6627,
       "channel_name": "Vendhar TV",
       "tvg_id": "VendharTV.in@SD",
       "channel_id": "VendharTV.in@SD",
@@ -57780,7 +58443,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6607,
+      "line": 6629,
       "channel_name": "VH1",
       "tvg_id": "vh1.us",
       "channel_id": "vh1.us",
@@ -57793,7 +58456,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6609,
+      "line": 6631,
       "channel_name": "VH1",
       "tvg_id": "vh1.us",
       "channel_id": "vh1.us",
@@ -57806,7 +58469,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6611,
+      "line": 6633,
       "channel_name": "Viasat Kino Comedy",
       "tvg_id": "ViasatKinoComedy.ua@SD",
       "channel_id": "ViasatKinoComedy.ua@SD",
@@ -57819,7 +58482,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6613,
+      "line": 6635,
       "channel_name": "Viasat Kino World",
       "tvg_id": "ViasatKinoWorld.ua@SD",
       "channel_id": "ViasatKinoWorld.ua@SD",
@@ -57832,7 +58495,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6615,
+      "line": 6637,
       "channel_name": "Viasat Serial",
       "tvg_id": "ViasatSerial.ua@HD",
       "channel_id": "ViasatSerial.ua@HD",
@@ -57845,7 +58508,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6617,
+      "line": 6639,
       "channel_name": "viju TV1000 action",
       "tvg_id": "custom.viju-tv1000-action-ru-movie",
       "channel_id": "custom.viju-tv1000-action-ru-movie",
@@ -57858,7 +58521,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6619,
+      "line": 6641,
       "channel_name": "viju TV1000 action",
       "tvg_id": "custom.viju-tv1000-action-ru-movie",
       "channel_id": "custom.viju-tv1000-action-ru-movie",
@@ -57871,7 +58534,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6621,
+      "line": 6643,
       "channel_name": "viju TV1000 russkoe",
       "tvg_id": "custom.viju-tv1000-russkoe-ru-movie",
       "channel_id": "custom.viju-tv1000-russkoe-ru-movie",
@@ -57884,7 +58547,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6623,
+      "line": 6645,
       "channel_name": "XITE Hits",
       "tvg_id": "XITEHits.nl",
       "channel_id": "XITEHits.nl",
@@ -57897,7 +58560,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6625,
+      "line": 6647,
       "channel_name": "Young Hollywood",
       "tvg_id": "YoungHollywood.us",
       "channel_id": "YoungHollywood.us",
@@ -57910,7 +58573,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6627,
+      "line": 6649,
       "channel_name": "Young Hollywood",
       "tvg_id": "YoungHollywood.us",
       "channel_id": "YoungHollywood.us",
@@ -57923,7 +58586,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6629,
+      "line": 6651,
       "channel_name": "YRF Music",
       "tvg_id": "YRFMusic.in",
       "channel_id": "YRFMusic.in",
@@ -57936,7 +58599,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6631,
+      "line": 6653,
       "channel_name": "Zee Bangla",
       "tvg_id": "ZeeBangla.in@HD",
       "channel_id": "ZeeBangla.in@HD",
@@ -57949,7 +58612,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6633,
+      "line": 6655,
       "channel_name": "Zee Bangla",
       "tvg_id": "ZeeBangla.in@HD",
       "channel_id": "ZeeBangla.in@HD",
@@ -57962,7 +58625,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6635,
+      "line": 6657,
       "channel_name": "Zee Bangla",
       "tvg_id": "ZeeBangla.in@HD",
       "channel_id": "ZeeBangla.in@HD",
@@ -57975,7 +58638,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6637,
+      "line": 6659,
       "channel_name": "Zee Bangla",
       "tvg_id": "ZeeBangla.in@HD",
       "channel_id": "ZeeBangla.in@HD",
@@ -57988,7 +58651,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6639,
+      "line": 6661,
       "channel_name": "Zee Bangla",
       "tvg_id": "ZeeBangla.in@HD",
       "channel_id": "ZeeBangla.in@HD",
@@ -58001,7 +58664,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6641,
+      "line": 6663,
       "channel_name": "Zee Bangla",
       "tvg_id": "ZeeBangla.in@HD",
       "channel_id": "ZeeBangla.in@HD",
@@ -58014,7 +58677,7 @@
     },
     {
       "playlist": "International-Playlist.m3u",
-      "line": 6643,
+      "line": 6665,
       "channel_name": "Музыка 1 International",
       "tvg_id": "custom.1-international-ru-music",
       "channel_id": "custom.1-international-ru-music",
