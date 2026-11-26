@@ -1399,6 +1399,7 @@ def main():
         "- Bangladesh identities remain exact-ID/explicit-alias only. No fuzzy or cross-region mapping is applied.",
         "",
     ]
+    priority_lines += ["", "## Source Playlist Fingerprints", "", *source_fingerprints, ""]
     Path("reports/iptv-playlist-epg-priority.md").write_text("\n".join(priority_lines), encoding="utf-8")
 
 
