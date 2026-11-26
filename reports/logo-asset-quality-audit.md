@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-26T05:37:37+00:00**
+Generated: **2026-11-26T07:52:08+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **b5c5c72d52e843f347be0249963dd6db8de62fb378921a05bc98d76444751921**
+- IPTV-Playlist.m3u SHA-256: **c93d1fa4e53f07b8dd301dfa6a9bfe25072a081dd6ce0c510d8446a8e01f575e**
 - International-Playlist.m3u SHA-256: **3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **746**
-- Playlist references whose asset stem differs from the normalized channel name: **1630**
+- Playlist references whose asset stem differs from the normalized channel name: **1635**
 - Unreferenced image assets immediately inside logos/: **962** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1237,7 +1237,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | CC NET (1080p) | cc-net-500387d0e2242b651988.png | New Channels |
 | IPTV-Playlist.m3u | K7 Keralam Channel (1080p) | k7-keralam-channel-46beb3882d21a7547993.png | New Channels |
 | IPTV-Playlist.m3u | Sristi TV (1080p) | sristi-tv-772e078ab196764d315f.png | New Channels |
+| IPTV-Playlist.m3u | PowerTürk TV | powerturk-tv-1080p-7651888d90.png | New Channels |
 | IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | New Backups |
+| IPTV-Playlist.m3u | Asian TV | asian-tv.png | New Backups |
+| IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | New Backups |
+| IPTV-Playlist.m3u | Independent TV | independent-tv.png | New Backups |
+| IPTV-Playlist.m3u | Travelxp English | travel-xp.png | New Backups |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
