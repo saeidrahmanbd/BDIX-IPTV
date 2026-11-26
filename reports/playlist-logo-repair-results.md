@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-26 01:31 UTC**  
+Run time: **2026-11-26 04:26 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,8 +9,8 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1371 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| International-Playlist.m3u | 3322 | 1 | 18 | 19 | 364 | 372 | 0 | 0 | 37 |
+| IPTV-Playlist.m3u | 1376 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| International-Playlist.m3u | 3322 | 0 | 18 | 19 | 364 | 372 | 0 | 0 | 37 |
 
 ## Repair log
 
@@ -65,7 +65,6 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 5755 | Trace Gospel Nigeria and East Africa | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 5757 | Trace Gospel Southern Africa | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 5765 | Travel Channel East | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5917 | Viasat Kino (Romania) (576i) | (missing) | viasat-kino-romania-576i-96dae76d5fcac63f6132.svg | [IPTV-org exact ID: ViasatKino.ro](https://static.wikia.nocookie.net/logopedia/images/0/0f/Viasat_Kino_2025.svg/revision/latest?cb=20250506205346) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 
 ## Quality rule
 

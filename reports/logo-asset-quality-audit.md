@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-26T01:31:36+00:00**
+Generated: **2026-11-26T04:26:45+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **8167fe97fbf5e046ec9f27fdb6a89679c51ec7abda12ff14819dab25c02bb081**
+- IPTV-Playlist.m3u SHA-256: **3e0443da3de412043f92ed279547604dd1ce9b3c1a585bea40aef14cda658764**
 - International-Playlist.m3u SHA-256: **aca22e32fbe473ee8505b996463c19709bc709420f345a316c8d9e7bcd3d4c08**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **147**
 - Exact-byte duplicate asset clusters: **745**
-- Playlist references whose asset stem differs from the normalized channel name: **1601**
+- Playlist references whose asset stem differs from the normalized channel name: **1606**
 - Unreferenced image assets immediately inside logos/: **964** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1264,6 +1264,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
+| IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
 | IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
 | IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
 | IPTV-Playlist.m3u | Channel S | channel-s.png | Backup |
@@ -1272,9 +1273,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Backup |
 | IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Backup |
 | IPTV-Playlist.m3u | Deepto TV | deepto-tv.png | Backup |
+| IPTV-Playlist.m3u | Deepto TV | deepto-tv.png | Backup |
 | IPTV-Playlist.m3u | Desh TV | desh-tv.png | Backup |
 | IPTV-Playlist.m3u | Desi Channel | desi-channel.png | Backup |
 | IPTV-Playlist.m3u | Disney Channel | disney-channel-india.png | Backup |
+| IPTV-Playlist.m3u | Ekattor TV | ekattor-tv.png | Backup |
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Backup |
 | IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
@@ -1291,6 +1294,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Gangaur TV | gangaur-tv.png | Backup |
 | IPTV-Playlist.m3u | Gangaur TV | gangaur-tv.png | Backup |
 | IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
+| IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
 | IPTV-Playlist.m3u | Islam Channel Bangla | islam-channel-bangla.png | Backup |
@@ -1340,6 +1344,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
+| IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
