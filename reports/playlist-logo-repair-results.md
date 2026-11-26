@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-26 07:51 UTC**  
+Run time: **2026-11-26 07:55 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,14 +9,13 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1438 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| IPTV-Playlist.m3u | 1442 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | International-Playlist.m3u | 3318 | 0 | 18 | 19 | 364 | 372 | 0 | 0 | 37 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| IPTV-Playlist.m3u | 1460 | PowerTürk TV | (missing) | powerturk-tv-1080p-7651888d90.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | International-Playlist.m3u | 887 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1041 | Cedros TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1127 | DanceTV Algorhythm | (missing) | (none) | Official DanceTV channel artwork URL, corroborated by the broadcaster's public stream listing |  | Download/validation failed: HTTP Error 404: Not Found |

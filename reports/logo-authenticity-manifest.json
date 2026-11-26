@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-26T07:52:21.203149+00:00",
+  "generated_at_utc": "2026-11-26T07:56:42.429332+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -7,21 +7,21 @@
     "needs_review": "Authenticity is undocumented, the source is ambiguous, or the logo is missing."
   },
   "counts_by_playlist": {
-    "IPTV-Playlist.m3u": 1438,
+    "IPTV-Playlist.m3u": 1442,
     "International-Playlist.m3u": 3318
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "c93d1fa4e53f07b8dd301dfa6a9bfe25072a081dd6ce0c510d8446a8e01f575e",
+    "IPTV-Playlist.m3u": "fb2881b5951519aa648850f8de2cf82826a551cfd6bb983b4084fdb73eb639bc",
     "International-Playlist.m3u": "3615fbfe99b6cc86d5c469f9e152f1d11c60b81f76765fc7353857b2de59e155"
   },
   "status_counts": {
-    "needs_review": 3728,
+    "needs_review": 3732,
     "generated_fallback": 2,
     "third_party_verified": 1026
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1394,
+      "needs_review": 1398,
       "generated_fallback": 2,
       "third_party_verified": 42
     },
@@ -30,7 +30,7 @@
       "third_party_verified": 984
     }
   },
-  "entry_count": 4756,
+  "entry_count": 4760,
   "entries": [
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -15635,6 +15635,58 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 2408,
+      "channel_name": "9X Tashan",
+      "tvg_id": "9XTashan.in@SD",
+      "channel_id": "9XTashan.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-tashan.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2410,
+      "channel_name": "FIFA+",
+      "tvg_id": "custom.fifa",
+      "channel_id": "custom.fifa",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2412,
+      "channel_name": "T Sports",
+      "tvg_id": "TSports.bd",
+      "channel_id": "TSports.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2414,
+      "channel_name": "Goldmines Bollywood",
+      "tvg_id": "GoldminesBollywood.in@SD",
+      "channel_id": "GoldminesBollywood.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-bollywood.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2417,
       "channel_name": "&pictures HD",
       "tvg_id": "AndPictures.in@SD",
       "channel_id": "AndPictures.in@SD",
@@ -15647,7 +15699,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2410,
+      "line": 2419,
       "channel_name": "&pictures HD",
       "tvg_id": "Andpictures.in@HD",
       "channel_id": "Andpictures.in@HD",
@@ -15660,7 +15712,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2412,
+      "line": 2421,
       "channel_name": "&TV",
       "tvg_id": "AndTV.in@SD",
       "channel_id": "AndTV.in@SD",
@@ -15673,7 +15725,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2414,
+      "line": 2423,
       "channel_name": "&TV",
       "tvg_id": "AndTV.in@HD",
       "channel_id": "AndTV.in@HD",
@@ -15686,7 +15738,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2416,
+      "line": 2425,
       "channel_name": "&xplor HD",
       "tvg_id": "AndxplorHD.in@HD",
       "channel_id": "AndxplorHD.in@HD",
@@ -15699,7 +15751,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2418,
+      "line": 2427,
       "channel_name": "4ever Cinema",
       "tvg_id": "custom.4evercinema",
       "channel_id": "custom.4evercinema",
@@ -15712,7 +15764,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2420,
+      "line": 2429,
       "channel_name": "4ever Music",
       "tvg_id": "custom.4evermusic",
       "channel_id": "custom.4evermusic",
@@ -15725,7 +15777,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2422,
+      "line": 2431,
       "channel_name": "8XM",
       "tvg_id": "8XM.pk@SD",
       "channel_id": "8XM.pk@SD",
@@ -15738,7 +15790,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2424,
+      "line": 2433,
       "channel_name": "9X Jhakaas",
       "tvg_id": "9XJhakaas.in@SD",
       "channel_id": "9XJhakaas.in@SD",
@@ -15751,7 +15803,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2426,
+      "line": 2435,
       "channel_name": "9X Jhakaas",
       "tvg_id": "9XJhakaas.in@SD",
       "channel_id": "9XJhakaas.in@SD",
@@ -15764,7 +15816,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2428,
+      "line": 2437,
       "channel_name": "9X Tashan",
       "tvg_id": "9XTashan.in@SD",
       "channel_id": "9XTashan.in@SD",
@@ -15777,7 +15829,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2430,
+      "line": 2439,
       "channel_name": "9X Tashan",
       "tvg_id": "9XTashan.in@SD",
       "channel_id": "9XTashan.in@SD",
@@ -15790,7 +15842,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2432,
+      "line": 2441,
       "channel_name": "9XM",
       "tvg_id": "9XM.in@SD",
       "channel_id": "9XM.in@SD",
@@ -15803,7 +15855,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2434,
+      "line": 2443,
       "channel_name": "Aakaash Aath",
       "tvg_id": "AakaashAath.in@SD",
       "channel_id": "AakaashAath.in@SD",
@@ -15816,7 +15868,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2436,
+      "line": 2445,
       "channel_name": "All Time Movies",
       "tvg_id": "AllTimeMovies.in@SD",
       "channel_id": "AllTimeMovies.in@SD",
@@ -15829,7 +15881,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2438,
+      "line": 2447,
       "channel_name": "Amar Bangla",
       "tvg_id": "AamarBangla.in",
       "channel_id": "AamarBangla.in",
@@ -15842,7 +15894,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2440,
+      "line": 2449,
       "channel_name": "Amar Bangla",
       "tvg_id": "AamarBangla.in",
       "channel_id": "AamarBangla.in",
@@ -15855,7 +15907,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2442,
+      "line": 2451,
       "channel_name": "Amar Bangla Digital",
       "tvg_id": "AmarBanglaDigital.in",
       "channel_id": "AmarBanglaDigital.in",
@@ -15868,7 +15920,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2444,
+      "line": 2453,
       "channel_name": "AMN TV",
       "tvg_id": "AMNTV.in@SD",
       "channel_id": "AMNTV.in@SD",
@@ -15881,7 +15933,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2446,
+      "line": 2455,
       "channel_name": "Ananda TV",
       "tvg_id": "AnandaTV.bd",
       "channel_id": "AnandaTV.bd",
@@ -15894,7 +15946,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2448,
+      "line": 2457,
       "channel_name": "Animal Planet",
       "tvg_id": "AnimalPlanet.in@SD",
       "channel_id": "AnimalPlanet.in@SD",
@@ -15907,7 +15959,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2450,
+      "line": 2459,
       "channel_name": "Animax Asia India",
       "tvg_id": "AnimaxAsia.sg@India",
       "channel_id": "AnimaxAsia.sg@India",
@@ -15920,7 +15972,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2452,
+      "line": 2461,
       "channel_name": "Asian TV",
       "tvg_id": "AsianTV.bd",
       "channel_id": "AsianTV.bd",
@@ -15933,7 +15985,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2454,
+      "line": 2463,
       "channel_name": "ATN Bangla",
       "tvg_id": "ATNBangla.bd",
       "channel_id": "ATNBangla.bd",
@@ -15946,7 +15998,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2456,
+      "line": 2465,
       "channel_name": "B4U Bhojpuri",
       "tvg_id": "B4UBhojpuri.in@SD",
       "channel_id": "B4UBhojpuri.in@SD",
@@ -15959,7 +16011,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2458,
+      "line": 2467,
       "channel_name": "B4U Kadak",
       "tvg_id": "B4UKadak.in@SD",
       "channel_id": "B4UKadak.in@SD",
@@ -15972,7 +16024,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2460,
+      "line": 2469,
       "channel_name": "B4U Kadak",
       "tvg_id": "B4UKadak.in@SD",
       "channel_id": "B4UKadak.in@SD",
@@ -15985,7 +16037,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2462,
+      "line": 2471,
       "channel_name": "B4U Movies",
       "tvg_id": "B4UMovies.in@India",
       "channel_id": "B4UMovies.in@India",
@@ -15998,7 +16050,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2464,
+      "line": 2473,
       "channel_name": "B4U Movies",
       "tvg_id": "B4UMovies.in@India",
       "channel_id": "B4UMovies.in@India",
@@ -16011,7 +16063,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2466,
+      "line": 2475,
       "channel_name": "B4U Movies",
       "tvg_id": "B4UMovies.in@India",
       "channel_id": "B4UMovies.in@India",
@@ -16024,7 +16076,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2468,
+      "line": 2477,
       "channel_name": "B4U Music",
       "tvg_id": "B4UMusic.in@India",
       "channel_id": "B4UMusic.in@India",
@@ -16037,7 +16089,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2470,
+      "line": 2479,
       "channel_name": "B4U Music",
       "tvg_id": "B4UMusic.in@India",
       "channel_id": "B4UMusic.in@India",
@@ -16050,7 +16102,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2472,
+      "line": 2481,
       "channel_name": "B4U Music",
       "tvg_id": "B4UMusic.in@India",
       "channel_id": "B4UMusic.in@India",
@@ -16063,7 +16115,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2474,
+      "line": 2483,
       "channel_name": "Bangla TV",
       "tvg_id": "BanglaTV.bd",
       "channel_id": "BanglaTV.bd",
@@ -16076,7 +16128,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2476,
+      "line": 2485,
       "channel_name": "Bangla TV",
       "tvg_id": "BanglaTV.bd",
       "channel_id": "BanglaTV.bd",
@@ -16089,7 +16141,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2478,
+      "line": 2487,
       "channel_name": "Bangla TV",
       "tvg_id": "BanglaTV.bd",
       "channel_id": "BanglaTV.bd",
@@ -16102,7 +16154,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2480,
+      "line": 2489,
       "channel_name": "Bengali Beats",
       "tvg_id": "BengaliBeats.bd",
       "channel_id": "BengaliBeats.bd",
@@ -16115,7 +16167,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2482,
+      "line": 2491,
       "channel_name": "Bijoy TV",
       "tvg_id": "BijoyTV.bd",
       "channel_id": "BijoyTV.bd",
@@ -16128,7 +16180,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2484,
+      "line": 2493,
       "channel_name": "Bijoy TV",
       "tvg_id": "BijoyTV.bd",
       "channel_id": "BijoyTV.bd",
@@ -16141,7 +16193,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2486,
+      "line": 2495,
       "channel_name": "Bol Entertainment",
       "tvg_id": "BolEntertainment.pk@SD",
       "channel_id": "BolEntertainment.pk@SD",
@@ -16154,7 +16206,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2488,
+      "line": 2497,
       "channel_name": "BS Film",
       "tvg_id": "BSFilm.pk@SD",
       "channel_id": "BSFilm.pk@SD",
@@ -16167,7 +16219,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2490,
+      "line": 2499,
       "channel_name": "BTV National",
       "tvg_id": "BTVNational.bd",
       "channel_id": "BTVNational.bd",
@@ -16180,7 +16232,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2492,
+      "line": 2501,
       "channel_name": "BTV News",
       "tvg_id": "BTVNews.bd",
       "channel_id": "BTVNews.bd",
@@ -16193,7 +16245,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2494,
+      "line": 2503,
       "channel_name": "Cartoon Network HD+",
       "tvg_id": "CartoonNetworkHDPlus.in@HD",
       "channel_id": "CartoonNetworkHDPlus.in@HD",
@@ -16206,7 +16258,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2496,
+      "line": 2505,
       "channel_name": "Channel 1",
       "tvg_id": "Channel1.bd",
       "channel_id": "Channel1.bd",
@@ -16219,7 +16271,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2498,
+      "line": 2507,
       "channel_name": "Channel 1",
       "tvg_id": "Channel1.bd",
       "channel_id": "Channel1.bd",
@@ -16232,7 +16284,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2500,
+      "line": 2509,
       "channel_name": "Channel 24",
       "tvg_id": "Channel24.bd",
       "channel_id": "Channel24.bd",
@@ -16245,7 +16297,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2502,
+      "line": 2511,
       "channel_name": "Channel 24",
       "tvg_id": "Channel24.bd",
       "channel_id": "Channel24.bd",
@@ -16258,7 +16310,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2504,
+      "line": 2513,
       "channel_name": "Channel 24",
       "tvg_id": "Channel24.bd",
       "channel_id": "Channel24.bd",
@@ -16271,7 +16323,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2506,
+      "line": 2515,
       "channel_name": "Channel 24",
       "tvg_id": "Channel24.bd",
       "channel_id": "Channel24.bd",
@@ -16284,7 +16336,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2508,
+      "line": 2517,
       "channel_name": "Cine Jomjomat",
       "tvg_id": "CineJomjomat.in@SD",
       "channel_id": "CineJomjomat.in@SD",
@@ -16297,7 +16349,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2510,
+      "line": 2519,
       "channel_name": "Colors",
       "tvg_id": "Colors.in",
       "channel_id": "Colors.in",
@@ -16310,7 +16362,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2512,
+      "line": 2521,
       "channel_name": "Colors",
       "tvg_id": "Colors.in@HD",
       "channel_id": "Colors.in@HD",
@@ -16323,7 +16375,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2514,
+      "line": 2523,
       "channel_name": "Colors Bangla",
       "tvg_id": "Colors.Bangla.in",
       "channel_id": "Colors.Bangla.in",
@@ -16336,7 +16388,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2516,
+      "line": 2525,
       "channel_name": "Colors Bangla",
       "tvg_id": "ColorsBangla.in@HD",
       "channel_id": "ColorsBangla.in@HD",
@@ -16349,7 +16401,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2518,
+      "line": 2527,
       "channel_name": "Colors Bangla",
       "tvg_id": "ColorsBangla.in@HD",
       "channel_id": "ColorsBangla.in@HD",
@@ -16362,7 +16414,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2520,
+      "line": 2529,
       "channel_name": "Colors Cineplex",
       "tvg_id": "ColorsCineplex.uk",
       "channel_id": "ColorsCineplex.uk",
@@ -16375,7 +16427,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2522,
+      "line": 2531,
       "channel_name": "Dangal",
       "tvg_id": "DangalTV.in@SD",
       "channel_id": "DangalTV.in@SD",
@@ -16388,7 +16440,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2524,
+      "line": 2533,
       "channel_name": "DBC News",
       "tvg_id": "DBCNews.bd",
       "channel_id": "DBCNews.bd",
@@ -16401,7 +16453,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2526,
+      "line": 2535,
       "channel_name": "DD Bangla",
       "tvg_id": "DDBangla.in@SD",
       "channel_id": "DDBangla.in@SD",
@@ -16414,7 +16466,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2528,
+      "line": 2537,
       "channel_name": "DD Girnar",
       "tvg_id": "DDGirnar.in@SD",
       "channel_id": "DDGirnar.in@SD",
@@ -16427,7 +16479,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2530,
+      "line": 2539,
       "channel_name": "DD Goa",
       "tvg_id": "DDGoa.in@SD",
       "channel_id": "DDGoa.in@SD",
@@ -16440,7 +16492,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2532,
+      "line": 2541,
       "channel_name": "DD Himachal Pradesh",
       "tvg_id": "DDHimachalPradesh.in@SD",
       "channel_id": "DDHimachalPradesh.in@SD",
@@ -16453,7 +16505,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2534,
+      "line": 2543,
       "channel_name": "DD Malayalam",
       "tvg_id": "DDMalayalam.in@SD",
       "channel_id": "DDMalayalam.in@SD",
@@ -16466,7 +16518,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2536,
+      "line": 2545,
       "channel_name": "DD National",
       "tvg_id": "DDNational.in@SD",
       "channel_id": "DDNational.in@SD",
@@ -16479,7 +16531,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2538,
+      "line": 2547,
       "channel_name": "DD Odia",
       "tvg_id": "DDOdia.in@SD",
       "channel_id": "DDOdia.in@SD",
@@ -16492,7 +16544,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2540,
+      "line": 2549,
       "channel_name": "DD Sahyadri",
       "tvg_id": "DDSahyadri.in@SD",
       "channel_id": "DDSahyadri.in@SD",
@@ -16505,7 +16557,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2542,
+      "line": 2551,
       "channel_name": "DD Tamil",
       "tvg_id": "DDTamil.in@SD",
       "channel_id": "DDTamil.in@SD",
@@ -16518,7 +16570,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2544,
+      "line": 2553,
       "channel_name": "DD Yadagiri",
       "tvg_id": "DDYadagiri.in@SD",
       "channel_id": "DDYadagiri.in@SD",
@@ -16531,7 +16583,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2546,
+      "line": 2555,
       "channel_name": "Deepto TV",
       "tvg_id": "DeeptoTV.bd",
       "channel_id": "DeeptoTV.bd",
@@ -16544,7 +16596,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2548,
+      "line": 2557,
       "channel_name": "Deewana",
       "tvg_id": "DeewanaHD.in",
       "channel_id": "DeewanaHD.in",
@@ -16557,7 +16609,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2550,
+      "line": 2559,
       "channel_name": "Desh TV",
       "tvg_id": "DeshTV.bd",
       "channel_id": "DeshTV.bd",
@@ -16570,7 +16622,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2552,
+      "line": 2561,
       "channel_name": "Dhamaal",
       "tvg_id": "Dhamaal.in@SD",
       "channel_id": "Dhamaal.in@SD",
@@ -16583,7 +16635,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2554,
+      "line": 2563,
       "channel_name": "Discovery Channel (India)",
       "tvg_id": "DiscoveryChannel.in@HD",
       "channel_id": "DiscoveryChannel.in@HD",
@@ -16596,7 +16648,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2556,
+      "line": 2565,
       "channel_name": "Doraemon",
       "tvg_id": "Doraemon.us@SD",
       "channel_id": "Doraemon.us@SD",
@@ -16609,7 +16661,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2558,
+      "line": 2567,
       "channel_name": "Duronto TV",
       "tvg_id": "DurontoTV.bd",
       "channel_id": "DurontoTV.bd",
@@ -16622,7 +16674,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2560,
+      "line": 2569,
       "channel_name": "Duronto TV",
       "tvg_id": "DurontoTV.bd",
       "channel_id": "DurontoTV.bd",
@@ -16635,7 +16687,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2562,
+      "line": 2571,
       "channel_name": "Ekattor TV",
       "tvg_id": "EkattorTV.bd",
       "channel_id": "EkattorTV.bd",
@@ -16648,7 +16700,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2564,
+      "line": 2573,
       "channel_name": "Ekhon TV",
       "tvg_id": "EkhonTV.bd",
       "channel_id": "EkhonTV.bd",
@@ -16661,7 +16713,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2566,
+      "line": 2575,
       "channel_name": "Ekhon TV",
       "tvg_id": "EkhonTV.bd",
       "channel_id": "EkhonTV.bd",
@@ -16674,7 +16726,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2568,
+      "line": 2577,
       "channel_name": "Ekhon TV",
       "tvg_id": "EkhonTV.bd",
       "channel_id": "EkhonTV.bd",
@@ -16687,7 +16739,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2570,
+      "line": 2579,
       "channel_name": "Epic Bharat Digital",
       "tvg_id": "EpicBharat.in@Digital",
       "channel_id": "EpicBharat.in@Digital",
@@ -16700,7 +16752,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2572,
+      "line": 2581,
       "channel_name": "Epic Music",
       "tvg_id": "EpicMusic.in@SD",
       "channel_id": "EpicMusic.in@SD",
@@ -16713,7 +16765,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2574,
+      "line": 2583,
       "channel_name": "Epic TV Digital",
       "tvg_id": "EpicTV.in@Digital",
       "channel_id": "EpicTV.in@Digital",
@@ -16726,7 +16778,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2576,
+      "line": 2585,
       "channel_name": "ETV Cinema",
       "tvg_id": "ETVCinema.in",
       "channel_id": "ETVCinema.in",
@@ -16739,7 +16791,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2578,
+      "line": 2587,
       "channel_name": "ETV Plus HD",
       "tvg_id": "ETVPlus.in@HD",
       "channel_id": "ETVPlus.in@HD",
@@ -16752,7 +16804,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2580,
+      "line": 2589,
       "channel_name": "EU Music",
       "tvg_id": "custom.eumusic",
       "channel_id": "custom.eumusic",
@@ -16765,7 +16817,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2582,
+      "line": 2591,
       "channel_name": "Eurosport",
       "tvg_id": "Eurosport.fr@Asia",
       "channel_id": "Eurosport.fr@Asia",
@@ -16778,7 +16830,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2584,
+      "line": 2593,
       "channel_name": "Eurosport",
       "tvg_id": "Eurosport.in@HD",
       "channel_id": "Eurosport.in@HD",
@@ -16791,7 +16843,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2586,
+      "line": 2595,
       "channel_name": "Eurosport",
       "tvg_id": "Eurosport.in@SD",
       "channel_id": "Eurosport.in@SD",
@@ -16804,7 +16856,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2588,
+      "line": 2597,
       "channel_name": "G TV",
       "tvg_id": "GaziTV.bd",
       "channel_id": "GaziTV.bd",
@@ -16817,7 +16869,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2590,
+      "line": 2599,
       "channel_name": "G TV",
       "tvg_id": "GaziTV.bd",
       "channel_id": "GaziTV.bd",
@@ -16830,7 +16882,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2592,
+      "line": 2601,
       "channel_name": "Global TV",
       "tvg_id": "GlobalTV.bd",
       "channel_id": "GlobalTV.bd",
@@ -16843,7 +16895,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2594,
+      "line": 2603,
       "channel_name": "Global TV",
       "tvg_id": "GlobalTV.bd",
       "channel_id": "GlobalTV.bd",
@@ -16856,7 +16908,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2596,
+      "line": 2605,
       "channel_name": "Go3 Sport 1",
       "tvg_id": "custom.go3sport1",
       "channel_id": "custom.go3sport1",
@@ -16869,7 +16921,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2598,
+      "line": 2607,
       "channel_name": "Goldmines Movies",
       "tvg_id": "GoldminesMovies.in@SD",
       "channel_id": "GoldminesMovies.in@SD",
@@ -16882,7 +16934,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2600,
+      "line": 2609,
       "channel_name": "Green TV",
       "tvg_id": "GreenTV.bd@SD",
       "channel_id": "GreenTV.bd@SD",
@@ -16895,7 +16947,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2602,
+      "line": 2611,
       "channel_name": "History TV18 HD",
       "tvg_id": "HistoryTV18.in@HD",
       "channel_id": "HistoryTV18.in@HD",
@@ -16908,7 +16960,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2604,
+      "line": 2613,
       "channel_name": "Hum TV",
       "tvg_id": "HumTV.pk",
       "channel_id": "HumTV.pk",
@@ -16921,7 +16973,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2606,
+      "line": 2615,
       "channel_name": "Hum TV",
       "tvg_id": "HumTV.pk",
       "channel_id": "HumTV.pk",
@@ -16934,7 +16986,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2608,
+      "line": 2617,
       "channel_name": "Islamic TV",
       "tvg_id": "IslamicTV.bd",
       "channel_id": "IslamicTV.bd",
@@ -16947,7 +16999,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2610,
+      "line": 2619,
       "channel_name": "JA TV",
       "tvg_id": "JATV.bd",
       "channel_id": "JATV.bd",
@@ -16960,7 +17012,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2612,
+      "line": 2621,
       "channel_name": "JA TV",
       "tvg_id": "JATV.bd",
       "channel_id": "JATV.bd",
@@ -16973,7 +17025,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2614,
+      "line": 2623,
       "channel_name": "Jalsha Bangla BD",
       "tvg_id": "JalshaBanglaBD.bd",
       "channel_id": "JalshaBanglaBD.bd",
@@ -16986,7 +17038,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2616,
+      "line": 2625,
       "channel_name": "Jalsha Movies",
       "tvg_id": "Star.Jalsha.Movies.in",
       "channel_id": "Star.Jalsha.Movies.in",
@@ -16999,7 +17051,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2618,
+      "line": 2627,
       "channel_name": "Jamuna TV",
       "tvg_id": "JamunaTV.bd",
       "channel_id": "JamunaTV.bd",
@@ -17012,7 +17064,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2620,
+      "line": 2629,
       "channel_name": "Jonmobhumi TV",
       "tvg_id": "JonmobhumiTV.bd",
       "channel_id": "JonmobhumiTV.bd",
@@ -17025,7 +17077,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2622,
+      "line": 2631,
       "channel_name": "Khushboo Bangla",
       "tvg_id": "KhushbooBangla.in@SD",
       "channel_id": "KhushbooBangla.in@SD",
@@ -17038,7 +17090,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2624,
+      "line": 2633,
       "channel_name": "Maasranga TV",
       "tvg_id": "MaasrangaTV.bd",
       "channel_id": "MaasrangaTV.bd",
@@ -17051,7 +17103,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2626,
+      "line": 2635,
       "channel_name": "Maasranga TV",
       "tvg_id": "MaasrangaTV.bd",
       "channel_id": "MaasrangaTV.bd",
@@ -17064,7 +17116,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2628,
+      "line": 2637,
       "channel_name": "Madani Channel Bangla",
       "tvg_id": "MadaniChannelBangla.bd@SD",
       "channel_id": "MadaniChannelBangla.bd@SD",
@@ -17077,7 +17129,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2630,
+      "line": 2639,
       "channel_name": "Mango Mobile TV",
       "tvg_id": "MangoMobileTV.in@HD",
       "channel_id": "MangoMobileTV.in@HD",
@@ -17090,7 +17142,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2632,
+      "line": 2641,
       "channel_name": "Manoranjan Prime",
       "tvg_id": "ManoranjanPrime.in@SD",
       "channel_id": "ManoranjanPrime.in@SD",
@@ -17103,7 +17155,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2634,
+      "line": 2643,
       "channel_name": "Manoranjan TV",
       "tvg_id": "ManoranjanTV.in@SD",
       "channel_id": "ManoranjanTV.in@SD",
@@ -17116,7 +17168,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2636,
+      "line": 2645,
       "channel_name": "MBC Bollywood",
       "tvg_id": "MBCBollywood.ae",
       "channel_id": "MBCBollywood.ae",
@@ -17129,7 +17181,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2638,
+      "line": 2647,
       "channel_name": "MLB",
       "tvg_id": "MLB.us@SD",
       "channel_id": "MLB.us@SD",
@@ -17142,7 +17194,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2640,
+      "line": 2649,
       "channel_name": "MNX",
       "tvg_id": "MNX.in@SD",
       "channel_id": "MNX.in@SD",
@@ -17155,7 +17207,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2642,
+      "line": 2651,
       "channel_name": "MNX HD",
       "tvg_id": "MNX.in@HD",
       "channel_id": "MNX.in@HD",
@@ -17168,7 +17220,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2644,
+      "line": 2653,
       "channel_name": "Mohona TV",
       "tvg_id": "MohonaTV.bd",
       "channel_id": "MohonaTV.bd",
@@ -17181,7 +17233,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2646,
+      "line": 2655,
       "channel_name": "Movie Bangla",
       "tvg_id": "MovieBangla.bd",
       "channel_id": "MovieBangla.bd",
@@ -17194,7 +17246,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2648,
+      "line": 2657,
       "channel_name": "Movies Now",
       "tvg_id": "MoviesNow.in@HD",
       "channel_id": "MoviesNow.in@HD",
@@ -17207,7 +17259,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2650,
+      "line": 2659,
       "channel_name": "Movies Now",
       "tvg_id": "MoviesNow.in@HD",
       "channel_id": "MoviesNow.in@HD",
@@ -17220,7 +17272,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2652,
+      "line": 2661,
       "channel_name": "MovieSphere",
       "tvg_id": "MovieSphere.us",
       "channel_id": "MovieSphere.us",
@@ -17233,7 +17285,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2654,
+      "line": 2663,
       "channel_name": "MTV (India)",
       "tvg_id": "MTV.in@SD",
       "channel_id": "MTV.in@SD",
@@ -17246,7 +17298,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2656,
+      "line": 2665,
       "channel_name": "MTV India",
       "tvg_id": "MTV.in@SD",
       "channel_id": "MTV.in@SD",
@@ -17259,7 +17311,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2658,
+      "line": 2667,
       "channel_name": "MTV India",
       "tvg_id": "MTV.in@HD",
       "channel_id": "MTV.in@HD",
@@ -17272,7 +17324,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2660,
+      "line": 2669,
       "channel_name": "My TV",
       "tvg_id": "MyTV.bd",
       "channel_id": "MyTV.bd",
@@ -17285,7 +17337,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2662,
+      "line": 2671,
       "channel_name": "Nat Geo TV",
       "tvg_id": "NatGeoTV.us",
       "channel_id": "NatGeoTV.us",
@@ -17298,7 +17350,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2664,
+      "line": 2673,
       "channel_name": "Nat Geo TV",
       "tvg_id": "NatGeoTV.us",
       "channel_id": "NatGeoTV.us",
@@ -17311,7 +17363,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2666,
+      "line": 2675,
       "channel_name": "NDTV Good Times",
       "tvg_id": "NDTVGoodTimes.in@SD",
       "channel_id": "NDTVGoodTimes.in@SD",
@@ -17324,7 +17376,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2668,
+      "line": 2677,
       "channel_name": "Nexus TV",
       "tvg_id": "NexusTV.bd",
       "channel_id": "NexusTV.bd",
@@ -17337,7 +17389,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2670,
+      "line": 2679,
       "channel_name": "Nick Bangla",
       "tvg_id": "NickBangla.bd",
       "channel_id": "NickBangla.bd",
@@ -17350,7 +17402,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2672,
+      "line": 2681,
       "channel_name": "Nick Jr",
       "tvg_id": "NickJr.us@SD",
       "channel_id": "NickJr.us@SD",
@@ -17363,7 +17415,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2674,
+      "line": 2683,
       "channel_name": "Nick Jr. (India)",
       "tvg_id": "NickJr.in@SD",
       "channel_id": "NickJr.in@SD",
@@ -17376,7 +17428,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2676,
+      "line": 2685,
       "channel_name": "Nickelodeon",
       "tvg_id": "Nickelodeon.us@SD",
       "channel_id": "Nickelodeon.us@SD",
@@ -17389,7 +17441,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2678,
+      "line": 2687,
       "channel_name": "Nickelodeon (India)",
       "tvg_id": "Nickelodeon.in@SD",
       "channel_id": "Nickelodeon.in@SD",
@@ -17402,7 +17454,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2680,
+      "line": 2689,
       "channel_name": "Peace TV Bangla",
       "tvg_id": "PeaceTVBangla.ae@SD",
       "channel_id": "PeaceTVBangla.ae@SD",
@@ -17415,7 +17467,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2682,
+      "line": 2691,
       "channel_name": "PK Sports",
       "tvg_id": "PKSports.pk@SD",
       "channel_id": "PKSports.pk@SD",
@@ -17428,7 +17480,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2684,
+      "line": 2693,
       "channel_name": "Pogo",
       "tvg_id": "Pogo.in@SD",
       "channel_id": "Pogo.in@SD",
@@ -17441,7 +17493,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2686,
+      "line": 2695,
       "channel_name": "POP World TV",
       "tvg_id": "POPWorldTV.es",
       "channel_id": "POPWorldTV.es",
@@ -17454,7 +17506,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2688,
+      "line": 2697,
       "channel_name": "PTC Music",
       "tvg_id": "PTCMusic.in@SD",
       "channel_id": "PTCMusic.in@SD",
@@ -17467,7 +17519,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2690,
+      "line": 2699,
       "channel_name": "PTV Sports",
       "tvg_id": "PTVSports.pk",
       "channel_id": "PTVSports.pk",
@@ -17480,7 +17532,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2692,
+      "line": 2701,
       "channel_name": "Raj TV",
       "tvg_id": "RajTV.in@SD",
       "channel_id": "RajTV.in@SD",
@@ -17493,7 +17545,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2694,
+      "line": 2703,
       "channel_name": "Rajdhani TV",
       "tvg_id": "RajdhaniTV.bd",
       "channel_id": "RajdhaniTV.bd",
@@ -17506,7 +17558,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2696,
+      "line": 2705,
       "channel_name": "Rakuten TV Action Movies UK",
       "tvg_id": "RakutenTVActionMovies.es@UK",
       "channel_id": "RakutenTVActionMovies.es@UK",
@@ -17519,7 +17571,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2698,
+      "line": 2707,
       "channel_name": "Rakuten TV Comedy Movies UK",
       "tvg_id": "RakutenTVComedyMovies.es@UK",
       "channel_id": "RakutenTVComedyMovies.es@UK",
@@ -17532,7 +17584,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2700,
+      "line": 2709,
       "channel_name": "Rakuten TV Family Movies UK",
       "tvg_id": "RakutenTVFamilyMovies.es@UK",
       "channel_id": "RakutenTVFamilyMovies.es@UK",
@@ -17545,7 +17597,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2702,
+      "line": 2711,
       "channel_name": "RTV",
       "tvg_id": "RTV.bd",
       "channel_id": "RTV.bd",
@@ -17558,7 +17610,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2704,
+      "line": 2713,
       "channel_name": "RTV",
       "tvg_id": "RTV.bd",
       "channel_id": "RTV.bd",
@@ -17571,7 +17623,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2706,
+      "line": 2715,
       "channel_name": "RTV",
       "tvg_id": "RTV.bd",
       "channel_id": "RTV.bd",
@@ -17584,7 +17636,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2708,
+      "line": 2717,
       "channel_name": "Rupashi Bangla TV",
       "tvg_id": "RupashiBanglaTV.bd@SD",
       "channel_id": "RupashiBanglaTV.bd@SD",
@@ -17597,7 +17649,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2710,
+      "line": 2719,
       "channel_name": "SA TV",
       "tvg_id": "SATV.bd",
       "channel_id": "SATV.bd",
@@ -17610,7 +17662,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2712,
+      "line": 2721,
       "channel_name": "Sananda",
       "tvg_id": "SanandaTV.in",
       "channel_id": "SanandaTV.in",
@@ -17623,7 +17675,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2714,
+      "line": 2723,
       "channel_name": "Setanta Sports 1 Eurasia",
       "tvg_id": "custom.setantasports1eurasia",
       "channel_id": "custom.setantasports1eurasia",
@@ -17636,7 +17688,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2716,
+      "line": 2725,
       "channel_name": "Setanta Sports 2 Eurasia",
       "tvg_id": "SetantaSports2Eurasia.ie@SD",
       "channel_id": "SetantaSports2Eurasia.ie@SD",
@@ -17649,7 +17701,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2718,
+      "line": 2727,
       "channel_name": "Shemaroo Bollywood",
       "tvg_id": "ShemarooBollywood.us",
       "channel_id": "ShemarooBollywood.us",
@@ -17662,7 +17714,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2720,
+      "line": 2729,
       "channel_name": "Shemaroo Bollywood",
       "tvg_id": "ShemarooBollywood.us",
       "channel_id": "ShemarooBollywood.us",
@@ -17675,7 +17727,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2722,
+      "line": 2731,
       "channel_name": "Shemaroo Filmi Gaane",
       "tvg_id": "ShemarooFilmiGaane.in@HD",
       "channel_id": "ShemarooFilmiGaane.in@HD",
@@ -17688,7 +17740,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2724,
+      "line": 2733,
       "channel_name": "Somoy TV",
       "tvg_id": "SomoyNewsTV.bd",
       "channel_id": "SomoyNewsTV.bd",
@@ -17701,7 +17753,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2726,
+      "line": 2735,
       "channel_name": "Somoy TV",
       "tvg_id": "SomoyNewsTV.bd",
       "channel_id": "SomoyNewsTV.bd",
@@ -17714,7 +17766,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2728,
+      "line": 2737,
       "channel_name": "Sonic",
       "tvg_id": "Sonic.in@SD",
       "channel_id": "Sonic.in@SD",
@@ -17727,7 +17779,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2730,
+      "line": 2739,
       "channel_name": "Sony Aath",
       "tvg_id": "SonyAath.in@SD",
       "channel_id": "SonyAath.in@SD",
@@ -17740,7 +17792,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2732,
+      "line": 2741,
       "channel_name": "Sony Aath",
       "tvg_id": "SonyAath.in@SD",
       "channel_id": "SonyAath.in@SD",
@@ -17753,7 +17805,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2734,
+      "line": 2743,
       "channel_name": "Sony Aath",
       "tvg_id": "SonyAath.in@SD",
       "channel_id": "SonyAath.in@SD",
@@ -17766,7 +17818,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2736,
+      "line": 2745,
       "channel_name": "Sony Entertainment TV",
       "tvg_id": "SonyEntertainmentTelevision.in@HD",
       "channel_id": "SonyEntertainmentTelevision.in@HD",
@@ -17779,7 +17831,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2738,
+      "line": 2747,
       "channel_name": "Sony Max",
       "tvg_id": "SonyMax.in@SD",
       "channel_id": "SonyMax.in@SD",
@@ -17792,7 +17844,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2740,
+      "line": 2749,
       "channel_name": "Sony Max 2",
       "tvg_id": "SonyMax2.in@SD",
       "channel_id": "SonyMax2.in@SD",
@@ -17805,7 +17857,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2742,
+      "line": 2751,
       "channel_name": "Sony Max HD",
       "tvg_id": "SonyMax.in@HD",
       "channel_id": "SonyMax.in@HD",
@@ -17818,7 +17870,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2744,
+      "line": 2753,
       "channel_name": "Sony Pal",
       "tvg_id": "SonyPal.in@SD",
       "channel_id": "SonyPal.in@SD",
@@ -17831,7 +17883,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2746,
+      "line": 2755,
       "channel_name": "Sony Pix HD",
       "tvg_id": "SonyPix.in@HD",
       "channel_id": "SonyPix.in@HD",
@@ -17844,7 +17896,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2748,
+      "line": 2757,
       "channel_name": "Sony SAB HD",
       "tvg_id": "SonySAB.in@HD",
       "channel_id": "SonySAB.in@HD",
@@ -17857,7 +17909,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2750,
+      "line": 2759,
       "channel_name": "Sony SAB HD",
       "tvg_id": "SonySAB.in@HD",
       "channel_id": "SonySAB.in@HD",
@@ -17870,7 +17922,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2752,
+      "line": 2761,
       "channel_name": "Sony Sports Ten 1",
       "tvg_id": "SonySportsTen1.in@SD",
       "channel_id": "SonySportsTen1.in@SD",
@@ -17883,7 +17935,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2754,
+      "line": 2763,
       "channel_name": "Sony Sports Ten 1 HD",
       "tvg_id": "SonySportsTen1.in@HD",
       "channel_id": "SonySportsTen1.in@HD",
@@ -17896,7 +17948,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2756,
+      "line": 2765,
       "channel_name": "Sony Sports Ten 2 HD",
       "tvg_id": "SonySportsTen2.in@HD",
       "channel_id": "SonySportsTen2.in@HD",
@@ -17909,7 +17961,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2758,
+      "line": 2767,
       "channel_name": "Sony Sports Ten 5",
       "tvg_id": "SonySportsTen5.in@SD",
       "channel_id": "SonySportsTen5.in@SD",
@@ -17922,7 +17974,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2760,
+      "line": 2769,
       "channel_name": "Sony Yay!",
       "tvg_id": "SonyYay.in@SD",
       "channel_id": "SonyYay.in@SD",
@@ -17935,7 +17987,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2762,
+      "line": 2771,
       "channel_name": "Sooriyan TV",
       "tvg_id": "SooriyanTV.ca@SD",
       "channel_id": "SooriyanTV.ca@SD",
@@ -17948,7 +18000,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2764,
+      "line": 2773,
       "channel_name": "Spondon",
       "tvg_id": "Spondon.in@SD",
       "channel_id": "Spondon.in@SD",
@@ -17961,7 +18013,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2766,
+      "line": 2775,
       "channel_name": "Sport 2 (Ukraine)",
       "tvg_id": "custom.sport2ukraine",
       "channel_id": "custom.sport2ukraine",
@@ -17974,7 +18026,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2768,
+      "line": 2777,
       "channel_name": "Sport 4",
       "tvg_id": "custom.sport4",
       "channel_id": "custom.sport4",
@@ -17987,7 +18039,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2770,
+      "line": 2779,
       "channel_name": "Stadium",
       "tvg_id": "Stadium.us@SD",
       "channel_id": "Stadium.us@SD",
@@ -18000,7 +18052,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2772,
+      "line": 2781,
       "channel_name": "Star Bharat",
       "tvg_id": "StarBharat.in",
       "channel_id": "StarBharat.in",
@@ -18013,7 +18065,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2774,
+      "line": 2783,
       "channel_name": "Star Gold 2",
       "tvg_id": "StarGold2.in@SD",
       "channel_id": "StarGold2.in@SD",
@@ -18026,7 +18078,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2776,
+      "line": 2785,
       "channel_name": "Star Gold HD",
       "tvg_id": "StarGold.in@HD",
       "channel_id": "StarGold.in@HD",
@@ -18039,7 +18091,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2778,
+      "line": 2787,
       "channel_name": "Star Gold HD",
       "tvg_id": "StarGold.in@HD",
       "channel_id": "StarGold.in@HD",
@@ -18052,7 +18104,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2780,
+      "line": 2789,
       "channel_name": "Star Gold HD",
       "tvg_id": "StarGold.in@HD",
       "channel_id": "StarGold.in@HD",
@@ -18065,7 +18117,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2782,
+      "line": 2791,
       "channel_name": "Star Gold Romance",
       "tvg_id": "StarGoldRomance.in@SD",
       "channel_id": "StarGoldRomance.in@SD",
@@ -18078,7 +18130,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2784,
+      "line": 2793,
       "channel_name": "Star Gold Select HD",
       "tvg_id": "StarGoldSelect.in@HD",
       "channel_id": "StarGoldSelect.in@HD",
@@ -18091,7 +18143,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2786,
+      "line": 2795,
       "channel_name": "Star Gold Select HD",
       "tvg_id": "StarGoldSelect.in@HD",
       "channel_id": "StarGoldSelect.in@HD",
@@ -18104,7 +18156,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2788,
+      "line": 2797,
       "channel_name": "Star Jalsha",
       "tvg_id": "StarJalsha.in@HD",
       "channel_id": "StarJalsha.in@HD",
@@ -18117,7 +18169,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2790,
+      "line": 2799,
       "channel_name": "Star Jalsha",
       "tvg_id": "StarJalsha.in@HD",
       "channel_id": "StarJalsha.in@HD",
@@ -18130,7 +18182,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2792,
+      "line": 2801,
       "channel_name": "Star Movies (India) HD",
       "tvg_id": "StarMovies.in",
       "channel_id": "StarMovies.in",
@@ -18143,7 +18195,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2794,
+      "line": 2803,
       "channel_name": "Star Movies (India) HD",
       "tvg_id": "StarMovies.in@HD",
       "channel_id": "StarMovies.in@HD",
@@ -18156,7 +18208,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2796,
+      "line": 2805,
       "channel_name": "Star Movies Select HD",
       "tvg_id": "StarMoviesSelect.in@HD",
       "channel_id": "StarMoviesSelect.in@HD",
@@ -18169,7 +18221,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2798,
+      "line": 2807,
       "channel_name": "Star Movies Select HD",
       "tvg_id": "StarMoviesSelect.in@HD",
       "channel_id": "StarMoviesSelect.in@HD",
@@ -18182,7 +18234,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2800,
+      "line": 2809,
       "channel_name": "Star News",
       "tvg_id": "StarNews.bd",
       "channel_id": "StarNews.bd",
@@ -18195,7 +18247,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2802,
+      "line": 2811,
       "channel_name": "Star Plus",
       "tvg_id": "StarPlus.in@HD",
       "channel_id": "StarPlus.in@HD",
@@ -18208,7 +18260,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2804,
+      "line": 2813,
       "channel_name": "Star Plus",
       "tvg_id": "StarPlus.in@HD",
       "channel_id": "StarPlus.in@HD",
@@ -18221,7 +18273,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2806,
+      "line": 2815,
       "channel_name": "Star Sports 1 HD",
       "tvg_id": "StarSports1.in@HD",
       "channel_id": "StarSports1.in@HD",
@@ -18234,7 +18286,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2808,
+      "line": 2817,
       "channel_name": "Star Sports 1 Hindi",
       "tvg_id": "StarSports1Hindi.in@HD",
       "channel_id": "StarSports1Hindi.in@HD",
@@ -18247,7 +18299,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2810,
+      "line": 2819,
       "channel_name": "Star Sports 2",
       "tvg_id": "StarSports2.in@HD",
       "channel_id": "StarSports2.in@HD",
@@ -18260,7 +18312,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2812,
+      "line": 2821,
       "channel_name": "Star Sports Select 1",
       "tvg_id": "StarSportsSelect1.in@SD",
       "channel_id": "StarSportsSelect1.in@SD",
@@ -18273,7 +18325,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2814,
+      "line": 2823,
       "channel_name": "Star Sports Select 2",
       "tvg_id": "StarSportsSelect2.in@SD",
       "channel_id": "StarSportsSelect2.in@SD",
@@ -18286,7 +18338,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2816,
+      "line": 2825,
       "channel_name": "Sun Bangla",
       "tvg_id": "SunBangla.in@SD",
       "channel_id": "SunBangla.in@SD",
@@ -18299,7 +18351,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2818,
+      "line": 2827,
       "channel_name": "Sun TV",
       "tvg_id": "SunTV.in@HD",
       "channel_id": "SunTV.in@HD",
@@ -18312,7 +18364,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2820,
+      "line": 2829,
       "channel_name": "Suspilne Sport",
       "tvg_id": "custom.suspilnesport",
       "channel_id": "custom.suspilnesport",
@@ -18325,7 +18377,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2822,
+      "line": 2831,
       "channel_name": "T Sports",
       "tvg_id": "TSports.bd",
       "channel_id": "TSports.bd",
@@ -18338,7 +18390,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2824,
+      "line": 2833,
       "channel_name": "T Sports",
       "tvg_id": "TSports.bd",
       "channel_id": "TSports.bd",
@@ -18351,7 +18403,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2826,
+      "line": 2835,
       "channel_name": "Thanthi One",
       "tvg_id": "ThanthiOne.in",
       "channel_id": "ThanthiOne.in",
@@ -18364,7 +18416,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2828,
+      "line": 2837,
       "channel_name": "TLC (India) HD",
       "tvg_id": "TLC.in@HD",
       "channel_id": "TLC.in@HD",
@@ -18377,7 +18429,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2830,
+      "line": 2839,
       "channel_name": "Travelxp 4K HDR",
       "tvg_id": "Travelxp.in@4KHDR",
       "channel_id": "Travelxp.in@4KHDR",
@@ -18390,7 +18442,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2832,
+      "line": 2841,
       "channel_name": "Travelxp 4K HDR",
       "tvg_id": "Travelxp.in@HD",
       "channel_id": "Travelxp.in@HD",
@@ -18403,7 +18455,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2834,
+      "line": 2843,
       "channel_name": "Unite8 Sports 1",
       "tvg_id": "Unite8Sports1.in@SD",
       "channel_id": "Unite8Sports1.in@SD",
@@ -18416,7 +18468,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2836,
+      "line": 2845,
       "channel_name": "Unite8 Sports 1 HD",
       "tvg_id": "Unite8Sports1.in@HD",
       "channel_id": "Unite8Sports1.in@HD",
@@ -18429,7 +18481,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2838,
+      "line": 2847,
       "channel_name": "Unite8 Sports 2 HD",
       "tvg_id": "Unite8Sports2.in@HD",
       "channel_id": "Unite8Sports2.in@HD",
@@ -18442,7 +18494,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2840,
+      "line": 2849,
       "channel_name": "viju+ Sport",
       "tvg_id": "custom.vijusport",
       "channel_id": "custom.vijusport",
@@ -18455,7 +18507,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2842,
+      "line": 2851,
       "channel_name": "Zee Bangla",
       "tvg_id": "ZeeBangla.in@HD",
       "channel_id": "ZeeBangla.in@HD",
@@ -18468,7 +18520,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2844,
+      "line": 2853,
       "channel_name": "Zee Bangla",
       "tvg_id": "ZeeBangla.in@HD",
       "channel_id": "ZeeBangla.in@HD",
@@ -18481,7 +18533,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2846,
+      "line": 2855,
       "channel_name": "Zee Bangla Cinema",
       "tvg_id": "zeebanglacinema.in@sd",
       "channel_id": "zeebanglacinema.in@sd",
@@ -18494,7 +18546,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2848,
+      "line": 2857,
       "channel_name": "Zee Bangla Sonar",
       "tvg_id": "ZeeBanglaSonar.in@SD",
       "channel_id": "ZeeBanglaSonar.in@SD",
@@ -18507,7 +18559,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2850,
+      "line": 2859,
       "channel_name": "Zee Bangla Sonar",
       "tvg_id": "ZeeBanglaSonar.in@SD",
       "channel_id": "ZeeBanglaSonar.in@SD",
@@ -18520,7 +18572,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2852,
+      "line": 2861,
       "channel_name": "Zee Bollywood",
       "tvg_id": "ZeeBollywood.in@SD",
       "channel_id": "ZeeBollywood.in@SD",
@@ -18533,7 +18585,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2854,
+      "line": 2863,
       "channel_name": "Zee Cine Classic",
       "tvg_id": "ZeeCineClassic.in@SD",
       "channel_id": "ZeeCineClassic.in@SD",
@@ -18546,7 +18598,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2856,
+      "line": 2865,
       "channel_name": "Zee Cinema",
       "tvg_id": "ZeeCinema.in@HD",
       "channel_id": "ZeeCinema.in@HD",
@@ -18559,7 +18611,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2858,
+      "line": 2867,
       "channel_name": "Zee Cinema",
       "tvg_id": "ZeeCinema.in@HD",
       "channel_id": "ZeeCinema.in@HD",
@@ -18572,7 +18624,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2860,
+      "line": 2869,
       "channel_name": "Zee Classic",
       "tvg_id": "ZeeClassic.in@SD",
       "channel_id": "ZeeClassic.in@SD",
@@ -18585,7 +18637,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2862,
+      "line": 2871,
       "channel_name": "Zee Comedy Nation",
       "tvg_id": "ZeeComedyNation.in@HD",
       "channel_id": "ZeeComedyNation.in@HD",
@@ -18598,7 +18650,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2864,
+      "line": 2873,
       "channel_name": "Zee Dil Se",
       "tvg_id": "ZeeDilSe.in@HD",
       "channel_id": "ZeeDilSe.in@HD",
@@ -18611,7 +18663,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2866,
+      "line": 2875,
       "channel_name": "Zee Horror Nights",
       "tvg_id": "ZeeHorrorNights.in@HD",
       "channel_id": "ZeeHorrorNights.in@HD",
@@ -18624,7 +18676,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2868,
+      "line": 2877,
       "channel_name": "Zee Power HD",
       "tvg_id": "ZeePower.in@HD",
       "channel_id": "ZeePower.in@HD",
@@ -18637,7 +18689,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2870,
+      "line": 2879,
       "channel_name": "Zee South Flix",
       "tvg_id": "ZeeSouthFlix.in@HD",
       "channel_id": "ZeeSouthFlix.in@HD",
@@ -18650,7 +18702,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2872,
+      "line": 2881,
       "channel_name": "Zee Talkies HD",
       "tvg_id": "ZeeTalkies.in@HD",
       "channel_id": "ZeeTalkies.in@HD",
@@ -18663,7 +18715,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2874,
+      "line": 2883,
       "channel_name": "Zee Tamil",
       "tvg_id": "ZeeTamil.in@SD",
       "channel_id": "ZeeTamil.in@SD",
@@ -18676,7 +18728,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2876,
+      "line": 2885,
       "channel_name": "Zee Thirai HD",
       "tvg_id": "ZeeThirai.in@HD",
       "channel_id": "ZeeThirai.in@HD",
@@ -18689,7 +18741,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2878,
+      "line": 2887,
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
@@ -18702,7 +18754,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2880,
+      "line": 2889,
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
@@ -18715,7 +18767,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2882,
+      "line": 2891,
       "channel_name": "Zoom",
       "tvg_id": "Zoom.in",
       "channel_id": "Zoom.in",
