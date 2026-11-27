@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-26T10:38:42+00:00**
-Source playlist SHA-256: **6ed75613aa2965cc341a0d144242ed4fab07eebdd8f1175ab003c66d0f701a97**
+Generated: **2026-11-27T00:17:58+00:00**
+Source playlist SHA-256: **27dd311208b29f1f41fde3a978f942ae4148e708185c2bb63fff690b89065cbd**
 
 Status: **PASS**
 
-- Current entries: **1143**
+- Current entries: **1183**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -24,8 +24,8 @@ Status: **PASS**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **0**
-- Raw resolution/geoblock name tags: **0**
+- Entries missing tvg-language: **40**
+- Raw resolution/geoblock name tags: **40**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -33,7 +33,7 @@ Status: **PASS**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
 - Entries removed this run: **0**
-- Entries modified this run: **4**
+- Entries modified this run: **0**
 
 ## Protected-queue policy
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
@@ -54,7 +54,9 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 
 ## Warnings / Manual Review
 
-No outstanding metadata or discovery warnings.
+- entries missing tvg-language: 40
+- raw resolution/geoblock tags in channel names: 40
+- New queue candidates pending owner review: 2
 
 ## Review-queue logo gaps
 
@@ -68,11 +70,51 @@ None.
 
 ## Raw name tags
 
-None.
+- **Madani Channel Bangla (1080p)** — New Channels
+- **News 21 Bangla TV (1080p)** — New Channels
+- **Rupashi Bangla TV (720p)** — New Channels
+- **AMN TV (576p)** — New Channels
+- **Cine Jomjomat (1080p)** — New Channels
+- **Epic TV Digital (1080p)** — New Channels
+- **History TV18 HD (1080p) [Geo-blocked]** — New Channels
+- **Mango Mobile TV (1080p)** — New Channels
+- **MTV (India) (396p)** — New Channels
+- **NDTV Good Times (1080p)** — New Channels
+- **NM Media Channel HD (1080p)** — New Channels
+- **Shemaroo Filmi Gaane (1080p)** — New Channels
+- **Sooriyan TV (1080p)** — New Channels
+- **Sristi TV (1080p)** — New Channels
+- **Travelxp HD (1080p) [Geo-blocked]** — New Channels
+- **Vision Beats (720p)** — New Channels
+- **WeatherSpy (India) (720p)** — New Channels
+- **Zee Cine Classic (1080p)** — New Channels
+- **Zee Comedy Nation (1080p)** — New Channels
+- **Zee Dil Se (1080p)** — New Channels
+- **Zee Horror Nights (1080p)** — New Channels
+- **Zee South Flix (1080p)** — New Channels
+- **Zee Tamil HD (720p)** — New Channels
+- **Zee Telugu HD (720p)** — New Channels
+- **Zodiak TV (1080p)** — New Channels
+- **ATN Bangla (720p)** — New Backups
+- **DBC News (480p)** — New Backups
+- **Duronto TV (720p)** — New Backups
+- **Ekhon TV (1080p)** — New Backups
+- **Gazi TV (1080p)** — New Backups
+- **Maasranga TV (720p)** — New Backups
+- **RTV (Bangladesh) (720p)** — New Backups
+- **9X Jhakaas (1080p)** — New Backups
+- **9X Tashan (1080p)** — New Backups
+- **B4U Bhojpuri (1080p)** — New Backups
+- **B4U Kadak (1080p)** — New Backups
+- **B4U Movies (1080p)** — New Backups
+- **DD Uttar Pradesh (720p)** — New Backups
+- **Dhoom Music (720p)** — New Backups
+- **INWILD (1080p)** — New Backups
 
 ## Queue validation
 
-Queue country checks completed.
+- Sooriyan TV (1080p) country not verified as BD/IN (id carries a non-BD/IN country suffix)
+- INWILD (1080p) country not verified as BD/IN (id carries a non-BD/IN country suffix)
 
 ## Missing local logo files
 

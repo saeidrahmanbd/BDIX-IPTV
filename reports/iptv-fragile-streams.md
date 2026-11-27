@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-26T10:39:38+00:00**
-IPTV-Playlist.m3u SHA-256: **6ed75613aa2965cc341a0d144242ed4fab07eebdd8f1175ab003c66d0f701a97**
+Generated: **2026-11-27T00:18:38+00:00**
+IPTV-Playlist.m3u SHA-256: **27dd311208b29f1f41fde3a978f942ae4148e708185c2bb63fff690b89065cbd**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **286**
+- Flagged streams: **290**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -295,3 +295,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Zee Bangla | Backup | credential-bearing route pattern (values redacted) | `http://rgkkw.live:80/live/REDACTED/REDACTED/98881.ts` |
 | Zee Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8` |
 | Zee TV | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/52.m3u8` |
+| News 21 Bangla TV (1080p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.190.133.68:1935/news21live/live/playlist.m3u8` |
+| NM Media Channel HD (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newmedia2924/index.m3u8` |
+| DD Uttar Pradesh (720p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/36/master.m3u8` |
+| Dhoom Music (720p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1456/master.m3u8` |

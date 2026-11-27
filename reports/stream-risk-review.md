@@ -1,7 +1,7 @@
 # Stream Risk Review
 
-Generated: **2026-11-26T10:39:38+00:00**
-IPTV-Playlist.m3u SHA-256: **6ed75613aa2965cc341a0d144242ed4fab07eebdd8f1175ab003c66d0f701a97**
+Generated: **2026-11-27T00:18:38+00:00**
+IPTV-Playlist.m3u SHA-256: **27dd311208b29f1f41fde3a978f942ae4148e708185c2bb63fff690b89065cbd**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
 
@@ -21,14 +21,14 @@ Generated from the current playlist and latest available stream-health report. T
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1143 |
-| Reachable | 1070 |
-| Failed this check | 73 |
-| Persistent failures (3+ consecutive) | 1 |
+| Streams tested | 1183 |
+| Reachable | 1126 |
+| Failed this check | 57 |
+| Persistent failures (3+ consecutive) | 0 |
 
 ### Persistent failures
 
-- **Bol Entertainment** — Pakistani — consecutive failed days: **7** — 206
+No persistent failures recorded.
 
 ## /streamtest/ Endpoints
 

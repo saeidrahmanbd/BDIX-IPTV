@@ -1,13 +1,13 @@
 # Playlist Metadata Normalization
 
-Generated: **2026-11-26T10:39:47+00:00**
-Source playlist SHA-256: **6ed75613aa2965cc341a0d144242ed4fab07eebdd8f1175ab003c66d0f701a97**
+Generated: **2026-11-27T00:18:50+00:00**
+Source playlist SHA-256: **27dd311208b29f1f41fde3a978f942ae4148e708185c2bb63fff690b89065cbd**
 
 Read-only snapshot of the current playlist. It does not apply or imply any metadata changes.
 
-- Complete EXTINF entries: **1143**
+- Complete EXTINF entries: **1183**
 - Active primary entries: **708**
-- Backup / Review / discovery review entries: **435**
+- Backup / Review / discovery review entries: **475**
 - Active entries missing tvg-chno: **0**
 - Active entries missing tvg-country: **0**
 - Active entries missing tvg-language: **0**

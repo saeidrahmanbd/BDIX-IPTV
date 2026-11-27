@@ -202,7 +202,7 @@ https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnt
 https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="Goldmines2.in@SD" tvg-language="hin" channel-id="Goldmines2.in@SD" tvg-logo="logos/goldmines-2.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Goldmines 2",Goldmines 2
 https://fta.ektv.in/live/46/46_0.m3u8
-#EXTINF:-1 tvg-id="GoldminesAction.in@SD" channel-id="GoldminesAction.in@SD" tvg-logo="logos/goldmines-action.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Goldmines Action",Goldmines Action
+#EXTINF:-1 tvg-id="GoldminesAction.in@SD" channel-id="GoldminesAction.in@SD" tvg-logo="logos/goldmines-action.png" tvg-country="IN" tvg-language="hin" group-title="Indian Movies" tvg-name="Goldmines Action",Goldmines Action
 https://fta.ektv.in/live/584/master.m3u8
 #EXTINF:-1 tvg-id="GoldminesBollywood.in@SD" tvg-language="hin" channel-id="GoldminesBollywood.in@SD" tvg-logo="logos/goldmines-bollywood.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Goldmines Bollywood",Goldmines Bollywood
 http://163.61.226.31:9981/stream/channelid/1436412639?profile=pass
@@ -1096,7 +1096,7 @@ https://7aa9671895264ec9a384dfed1b992171.mediatailor.us-west-2.amazonaws.com/v1/
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/tf1_series_films/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="TraceBrazuca.fr@HD" tvg-language="por" tvg-logo="logos/verified-trace-brazuca-hd-9cefc38510.png" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Trace Brazuca",Trace Brazuca
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01131-tracetv-tracebrazuca-samsungbr/playlist.m3u8
-#EXTINF:-1 tvg-id="TraceUrban.fr@SD" tvg-logo="logos/trace-urban.png" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="Trace Urban",Trace Urban
+#EXTINF:-1 tvg-id="TraceUrban.fr@SD" tvg-logo="logos/trace-urban.png" tvg-country="FR" tvg-content="Music" tvg-language="eng;fra;por" group-title="France" tvg-name="Trace Urban",Trace Urban
 https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="AdriaMusicTelevision.de@SD" channel-id="AdriaMusicTelevision.de@SD" tvg-language="deu" tvg-logo="logos/adria-music-television.png" tvg-country="DE" tvg-content="Music" group-title="Germany" tvg-name="Adria Music Television",Adria Music Television
 https://adriaapp.b-cdn.net/1080p/index.m3u8
@@ -2444,7 +2444,7 @@ http://103.190.133.68:1935/news21live/live/playlist.m3u8
 https://tvsen6.aynaott.com/cdgr3tw6WoG7JyRnLbi0/index.m3u8
 #EXTINF:-1 tvg-id="SomoyNewsTV.bd" channel-id="SomoyNewsTV.bd" tvg-language="ben" tvg-logo="logos/somoy-tv.png" tvg-country="BD" group-title="News" tvg-name="Somoy TV",Somoy TV
 https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8
-#EXTINF:-1 tvg-id="CodeFashionTV.bg@SD" channel-id="CodeFashionTV.bg@SD" tvg-logo="logos/code-fashion-tv-1080p-eba84a3007.png" tvg-country="BG" group-title="Fashion TV" tvg-name="Code Fashion TV",Code Fashion TV
+#EXTINF:-1 tvg-id="CodeFashionTV.bg@SD" channel-id="CodeFashionTV.bg@SD" tvg-logo="logos/code-fashion-tv-1080p-eba84a3007.png" tvg-country="BG" tvg-language="bul" group-title="Fashion TV" tvg-name="Code Fashion TV",Code Fashion TV
 https://cdn2.invivo.bg/Codefashion_5500/index.m3u8
 #EXTINF:-1 tvg-id="FashionTV.us" channel-id="FashionTV.us" tvg-language="eng" tvg-logo="logos/fashion-tv-aa7f9461cf.png" tvg-country="US" group-title="Fashion TV" tvg-name="Fashion TV",Fashion TV
 https://ftv1.b-cdn.net/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8
