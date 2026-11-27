@@ -10768,6 +10768,7 @@
     ],
     "logos/amc-europe-romania-576i-6da084f825659b4e7d0e.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/amc-europe-romania.png": [
@@ -10918,11 +10919,13 @@
     "logos/anmol-cinema-2-4040d0d662808372795b.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/anmol-cinema-514724e20ade5c771e1e.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/antenne-kaernten-720p.png": [
@@ -11072,6 +11075,7 @@
     ],
     "logos/asianet-cinema-c13fe4ba5aedabe1fb3b.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/asianet-middle-east-576p.png": [
@@ -11520,7 +11524,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/big-magic-576p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/big-magic.png": [
       "International-Playlist.m3u",
@@ -11656,6 +11661,7 @@
     ],
     "logos/box-hits-bf5c21b865236023e430.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/box-kids-tv-0afc6e1914.png": [
@@ -12306,6 +12312,7 @@
     ],
     "logos/cinemaworld-vietnam-63a787bdacac567262e7.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cinemax-2-central-europe.png": [
@@ -12314,6 +12321,7 @@
     ],
     "logos/cinemax-2-romania-576i-5ef8d91440cf39878a8f.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cinemax-2.png": [
@@ -12326,6 +12334,7 @@
     ],
     "logos/cinemax-asia-vietnam-e38eaedcc38985634b05.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cinemax-central-europe.png": [
@@ -12338,6 +12347,7 @@
     ],
     "logos/cinemax-czech-republic-romania-576i-f4173318f8c974bc0883.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cinemax-czech-republic.png": [
@@ -12369,7 +12379,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/cinevault-80s-720p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/cinevault-westerns.png": [
       "IPTV-Playlist.m3u",
@@ -14037,6 +14048,7 @@
     ],
     "logos/film-cafe-romania-576i-1b91ed96741005136704.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/film-cafe-romania.png": [
@@ -14049,6 +14061,7 @@
     ],
     "logos/film-now-576i-72c93ef08b1bd87ee590.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/film-plus-czech-republic-823999f902.png": [
@@ -14721,6 +14734,7 @@
     ],
     "logos/hbo-2-romania-576i-ecb87ee6d51f37637612.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/hbo-2.png": [
@@ -14774,6 +14788,7 @@
     ],
     "logos/hbo-romania-576i-f7ef5b3f2cd5d724db12.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/hbo-signature-asia-hd-1080p.png": [
@@ -15111,7 +15126,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/international/amc-united-states-1080p-geo-blocked.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/arydigital.png": [
       "IPTV-Playlist.m3u",
@@ -15177,7 +15193,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/kinopremyera-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/kinosvidanie-576p.png": [
       "International-Playlist.m3u",
@@ -15196,7 +15213,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/nashe-lubimoe-kino-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/prokino-360p.png": [
       "International-Playlist.m3u",
@@ -15563,7 +15581,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kineko-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kino-1-russia-35bdd899e0.png": [
       "International-Playlist.m3u",
@@ -15591,10 +15610,12 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kinosemja-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kinoseriya-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kinoteatr-c903e540cd.png": [
       "International-Playlist.m3u",
@@ -16310,7 +16331,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mezzo-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/mezzo-live-a73f9b365c.png": [
       "International-Playlist.m3u",
@@ -16933,6 +16955,7 @@
     ],
     "logos/network-payyanur-667fe08c3f3ac0d03d4f.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/new-vision-e4ea60bbeb3674e20755.png": [
@@ -16950,7 +16973,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/newstar-ec10b457446e3fc0887d.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/nexus-tv.png": [
       "IPTV-Playlist.m3u",
@@ -17706,6 +17730,7 @@
     ],
     "logos/powran-media-720p-not-24-7-d326e8b214151a457ce1.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/pravasi-channel.png": [
@@ -18987,6 +19012,7 @@
     ],
     "logos/star-sports-khel-e28fa4091a61a030118e.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/star-sports-select-1.png": [
@@ -22481,6 +22507,7 @@
     ],
     "logos/amc-europe-romania-576i-6da084f825659b4e7d0e.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/amc-europe-romania.png": [
@@ -22631,11 +22658,13 @@
     "logos/anmol-cinema-2-4040d0d662808372795b.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/anmol-cinema-514724e20ade5c771e1e.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/antenne-kaernten-720p.png": [
@@ -22785,6 +22814,7 @@
     ],
     "logos/asianet-cinema-c13fe4ba5aedabe1fb3b.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/asianet-middle-east-576p.png": [
@@ -23233,7 +23263,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/big-magic-576p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/big-magic.png": [
       "International-Playlist.m3u",
@@ -23369,6 +23400,7 @@
     ],
     "logos/box-hits-bf5c21b865236023e430.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/box-kids-tv-0afc6e1914.png": [
@@ -24019,6 +24051,7 @@
     ],
     "logos/cinemaworld-vietnam-63a787bdacac567262e7.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cinemax-2-central-europe.png": [
@@ -24027,6 +24060,7 @@
     ],
     "logos/cinemax-2-romania-576i-5ef8d91440cf39878a8f.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cinemax-2.png": [
@@ -24039,6 +24073,7 @@
     ],
     "logos/cinemax-asia-vietnam-e38eaedcc38985634b05.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cinemax-central-europe.png": [
@@ -24051,6 +24086,7 @@
     ],
     "logos/cinemax-czech-republic-romania-576i-f4173318f8c974bc0883.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/cinemax-czech-republic.png": [
@@ -24082,7 +24118,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/cinevault-80s-720p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/cinevault-westerns.png": [
       "IPTV-Playlist.m3u",
@@ -25751,6 +25788,7 @@
     ],
     "logos/film-cafe-romania-576i-1b91ed96741005136704.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/film-cafe-romania.png": [
@@ -25763,6 +25801,7 @@
     ],
     "logos/film-now-576i-72c93ef08b1bd87ee590.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/film-plus-czech-republic-823999f902.png": [
@@ -26436,6 +26475,7 @@
     ],
     "logos/hbo-2-romania-576i-ecb87ee6d51f37637612.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/hbo-2.png": [
@@ -26489,6 +26529,7 @@
     ],
     "logos/hbo-romania-576i-f7ef5b3f2cd5d724db12.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/hbo-signature-asia-hd-1080p.png": [
@@ -26826,7 +26867,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/international/amc-united-states-1080p-geo-blocked.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/arydigital.png": [
       "IPTV-Playlist.m3u",
@@ -26892,7 +26934,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/kinopremyera-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/kinosvidanie-576p.png": [
       "International-Playlist.m3u",
@@ -26911,7 +26954,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/nashe-lubimoe-kino-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/prokino-360p.png": [
       "International-Playlist.m3u",
@@ -27278,7 +27322,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kineko-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kino-1-russia-35bdd899e0.png": [
       "International-Playlist.m3u",
@@ -27306,10 +27351,12 @@
       "reports/logo-source-registry.json"
     ],
     "logos/kinosemja-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kinoseriya-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/kinoteatr-c903e540cd.png": [
       "International-Playlist.m3u",
@@ -28025,7 +28072,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mezzo-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/mezzo-live-a73f9b365c.png": [
       "International-Playlist.m3u",
@@ -28648,6 +28696,7 @@
     ],
     "logos/network-payyanur-667fe08c3f3ac0d03d4f.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/new-vision-e4ea60bbeb3674e20755.png": [
@@ -28665,7 +28714,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/newstar-ec10b457446e3fc0887d.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/nexus-tv.png": [
       "IPTV-Playlist.m3u",
@@ -29424,6 +29474,7 @@
     ],
     "logos/powran-media-720p-not-24-7-d326e8b214151a457ce1.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/pravasi-channel.png": [
@@ -30706,6 +30757,7 @@
     ],
     "logos/star-sports-khel-e28fa4091a61a030118e.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/star-sports-select-1.png": [
