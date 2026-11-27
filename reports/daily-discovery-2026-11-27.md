@@ -1,10 +1,10 @@
 # Daily IPTV Discovery Report — 2026-11-27
 
-Generated: **2026-11-27 06:56:08 +06:00 (Asia/Dhaka)**
+Generated: **2026-11-27 06:58:49 +06:00 (Asia/Dhaka)**
 
 Repository: [saeidrahmanbd/BDIX-IPTV](https://github.com/saeidrahmanbd/BDIX-IPTV)
 
-Final playlist snapshot after targeted repair: **225a65307ba59061c77dc3fc2eb46d20c0c632d9**
+Latest pre-report-update main snapshot: **ab145b6ee230e38543a64795da6fa63dc9b4183f**
 
 **Overall status: PARTIAL.** Both discovery workflows' actual `discover` jobs completed successfully, both final discovery validations passed, and both stage commits were published. Today's scheduled events were absent; the repository watchdog recovered the discovery workflows through workflow_dispatch. The EPG recovery dispatched by the watchdog failed its configuration test. Existing playlist-policy and logo-provenance blockers remain.
 
@@ -14,7 +14,7 @@ This report was generated from the 27 November 2026 workflow runs, current stage
 
 The repository's Actions run history was independently queried for `event=schedule` over the 27 November Bangladesh-date window:
 
-- UTC window checked: **2026-11-26T18:00:00Z to 2026-11-27T00:56:08Z**
+- UTC window checked: **2026-11-26T18:00:00Z to 2026-11-27T00:58:49Z**
 - Scheduled workflow runs found: **0**
 
 The current workflow files still define these Bangladesh-local production times:
@@ -48,8 +48,12 @@ The Discovery Schedule Watchdog also has independent checkpoints at 05:15, 05:30
 | 06:50:34 | [Watchdog #45919098926](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919098926) | Success; evaluated actual required jobs |
 | 06:51:10 | [EPG refresh #45919156698](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919156698) | Failed in refresh job |
 | 06:51:14 | [Xtream health #45919162329](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919162329) | Success |
+| 06:56:11 | [Test Suite #45919649180](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919649180) | Failed: one EPG alias test |
+| 06:56:11 | [Logo localization #45919649141](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919649141) | Success; its commit restored raw logo URLs |
+| 06:57:43 | [Watchdog #45919787308](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919787308) | Guarded workflow_run recovery; dispatched EPG retry |
+| 06:58:18 | [EPG retry #45919840093](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919840093) | Failed at EPG configuration validation |
 
-The 06:50 watchdog log confirmed that the required IPTV discovery, International discovery, logo-localization, stream-health and maintenance jobs already had successful runs for Bangladesh date 2026-11-27. It did not launch duplicate discovery writers. It dispatched EPG recovery attempt 1/2 and Xtream health attempt 1/2.
+The 06:50 watchdog log confirmed that the required IPTV discovery, International discovery, logo-localization, stream-health and maintenance jobs already had successful runs for Bangladesh date 2026-11-27. It did not launch duplicate discovery writers. It dispatched EPG recovery attempt 1/2 and Xtream health attempt 1/2. After the playlist-logo workflow completed on the new main revision, the configured workflow_run trigger invoked the watchdog again at 06:57:43; it rechecked both discovery jobs, then dispatched another guarded EPG retry. That retry also failed, as detailed below.
 
 At the final audit, the latest 100 main-branch runs contained no active or queued workflow. The watchdog's EPG dispatch failed after its daily guard passed. The connected GitHub action interface did not expose a second workflow_dispatch operation, so no individual writer was launched to bypass the watchdog's retry and lock protections.
 
@@ -236,28 +240,28 @@ The workflow report's five-primary-identity threshold still exempts Bangladesh a
 
 Legacy out-of-scope groups remain in the existing International playlist: Indian Entertainment 157, News 11, Documentary & Wildlife 129, Kids 149, Religious 31 and Sports 177. They were preserved rather than broadly deleted or reclassified.
 
-## 4. Targeted IPTV playlist repair after discovery
+## 4. Targeted IPTV queue repair and logo-workflow reversion
 
-The independent current-file audit found that IPTV-Playlist.m3u still had 749 raw GitHub logo URLs and the queue groups were in the wrong order:
-
-- Before repair: Backup → New Channels → New Backups → Review
-- Required order: Review → New Channels → New Backups → Backup
-
-A targeted repair was committed:
+The independent audit initially found 749 raw GitHub logo URLs in IPTV-Playlist.m3u and the IPTV queue tail in the wrong order. A targeted commit was made:
 
 [225a65307ba59061c77dc3fc2eb46d20c0c632d9 — Use local IPTV logos and restore discovery queue order](https://github.com/saeidrahmanbd/BDIX-IPTV/commit/225a65307ba59061c77dc3fc2eb46d20c0c632d9)
 
-The commit changed **IPTV-Playlist.m3u only**:
+That commit changed IPTV-Playlist.m3u only. It converted 749 raw URLs to relative logos/ paths after verifying every referenced file in the repository tree, and reordered the final groups to Review → New Channels → New Backups → Backup. It preserved all 1,183 entries, stream URLs, identities and group assignments.
 
-- Converted 749 raw repository logo URLs to relative logos/ paths.
-- Verified all 749 referenced logo files exist in the repository tree.
-- Left zero external tvg-logo URLs and zero missing referenced logo files.
-- Reordered only the final queue groups to Review → New Channels → New Backups → Backup.
-- Preserved all 1,183 entries, stream URLs, group assignments and channel identities; no channel was added or removed by this repair.
+**The repository's own logo-localization workflow then reversed the path conversion.** The playlist push triggered [Playlist Logo Repair and Localization #45919649141](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919649141), which completed successfully and created [92b3c8960cc1d02fde9e7a9e25531da6223998f1](https://github.com/saeidrahmanbd/BDIX-IPTV/commit/92b3c8960cc1d02fde9e7a9e25531da6223998f1). That commit rewrote logo attributes in both playlists to absolute raw.githubusercontent.com URLs; its diff touched 1,183 IPTV rows and 2,907 International rows. The non-logo playlist content was protected, so the corrected queue ordering remains intact.
+
+The cause is explicit in the current repository code:
+
+- scripts/convert_referenced_logos_to_png.py says to always write the absolute raw URL.
+- scripts/validate_logo_references.py rejects relative logos/ paths.
+- scripts/repair_playlist_logos.py documents that absolute raw URLs are written and relative paths are never written.
+- Other playlist writers and publication validators also assume the raw-URL format.
+
+This is a repository-wide policy mismatch, not a one-file typo. I did not make a partial script change that would leave other writers and validators inconsistent. The strict local-only logo requirement is therefore **not satisfied in the final snapshot**, despite the temporary targeted conversion.
 
 ## 5. Final independent playlist validation
 
-Validation was rerun against the current main-branch files after the targeted repair.
+The latest localization workflow preserved the non-logo playlist content and queue ordering. Its own validator treats raw GitHub URLs under this repository as repository-local; that is not the same as the user's stricter requirement for relative local paths.
 
 | Check | IPTV-Playlist.m3u | International-Playlist.m3u |
 |---|---:|---:|
@@ -265,45 +269,61 @@ Validation was rerun against the current main-branch files after the targeted re
 | Malformed EXTINF/URL pairs | 0 | 0 |
 | Duplicate stream URLs | 0 | 0 |
 | Duplicate primary identity groups | 0 | 0 |
-| Relative logos/ references | 1,183 | 2,915 |
-| External tvg-logo references | 0 | 0 |
+| Relative logos/ references | 0 | 0 |
+| Absolute raw GitHub logo URLs | 1,183 | 2,915 |
 | Blank logo fields | 0 | 400 |
-| Referenced local logo files missing | 0 | 0 |
 | Queue order | Pass | Pass |
 
-International's 400 blank logo fields were left blank rather than filled with invented or placeholder artwork.
+The 2,915 International nonblank logo references are absolute raw GitHub URLs; 400 entries have no logo attribute. No non-repository logo host or missing repository asset was reported by the localization workflow. However, absolute raw URLs still violate the explicit local-only playlist requirement.
 
 ### Logo authenticity limitation
 
-The latest available logo provenance report was generated at 06:18:50 Bangladesh time, before the IPTV path-only repair. It recorded 0 officially verified logos, 1,003 third-party-verified assets, 2 generated fallback assets and 3,493 assets needing provenance review across the two playlists. The path-only repair did not change image bytes, but the provenance report must be regenerated against the new IPTV playlist fingerprint. Therefore, **local-path validation passed, but full broadcaster-logo authenticity is not yet certified**. The two generated fallback assets and the large needs-review inventory remain blockers.
+The logo-localization run regenerated the authenticity manifest at 06:57:15 Bangladesh time. Its 4,498 manifest entries were classified as:
 
-## 6. EPG recovery failure and remaining blockers
+| Provenance status | Count |
+|---|---:|
+| Officially verified | 0 |
+| Third-party verified | 1,003 |
+| Generated fallback | 2 |
+| Needs review | 3,493 |
 
-The 06:50:34 watchdog run found no successful required EPG job for Bangladesh date 2026-11-27 and dispatched recovery attempt **1/2**. The EPG workflow's daily_guard passed, but its actual `refresh` job failed.
+The same run's asset audit found four known placeholder files still referenced by playlists; no deletion or quarantine was performed. The manifest is newer than the older logo-provenance-review.md narrative report. The two generated fallback assets and the large needs-review inventory remain authenticity blockers. The 400 blank International logo fields were left blank rather than filled with invented artwork.
 
-Exact failing test:
+## 6. EPG recovery failure, CI failure and remaining blockers
 
-`test_epg_config.VerifiedAliasTests.test_verified_international_ids_exist_in_playlist`
+The 06:50:34 watchdog workflow_dispatch run found no successful required EPG job for Bangladesh date 2026-11-27 and dispatched recovery attempt 1/2. The EPG workflow's daily_guard passed, but its refresh job failed.
 
-The test expected **tvg-id="RakutenTVFamilyMovies.es"** in the current International playlist, but that ID was not present. XMLTV regeneration/publication therefore did not complete in this recovery run.
+The logo-localization workflow later completed on a newer main revision. Its configured workflow_run trigger started [Discovery Schedule Watchdog #45919787308](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919787308), which confirmed both discovery jobs were already successful and dispatched another guarded EPG retry: [Refresh IPTV EPG #45919840093](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919840093).
 
-The Xtream health recovery completed successfully. No active or queued writer remained at the final audit. No individual EPG writer was manually launched after the failure; the watchdog's bounded retry and shared-writer protections were not bypassed.
+Both EPG attempts failed the same test:
+
+**test_epg_config.VerifiedAliasTests.test_verified_international_ids_exist_in_playlist**
+
+The test expected tvg-id="RakutenTVFamilyMovies.es" in International-Playlist.m3u, but that ID was absent. On the second attempt, the failing step was **Validate EPG configuration and quality rules**; **Regenerate, validate and publish XMLTV** was skipped. XMLTV was not published by either attempt.
+
+The push-triggered [Test Suite #45919649180](https://github.com/saeidrahmanbd/BDIX-IPTV/actions/runs/45919649180) also failed this same alias test: **1 failed, 1,161 passed, 444 subtests passed**. This is a stale/missing verified-alias configuration blocker, not a stream-discovery failure.
+
+At the final audit, the latest 100 main-branch runs contained no active or queued workflow. No individual EPG writer was manually launched and no shared-writer or retry guard was bypassed. The initial watchdog was invoked through workflow_dispatch; the later guarded retry was initiated by the repository's configured workflow_run trigger. A further direct workflow_dispatch was not available through the connected GitHub action interface.
 
 Remaining blockers:
 
-1. GitHub recorded no schedule-triggered workflow runs for the checked Bangladesh date, despite valid cron definitions. Manual recovery completed discovery, but cron delivery remains unverified.
-2. EPG recovery attempt 1/2 failed because the verified International EPG alias references a missing playlist tvg-id.
-3. International's country-group threshold code still exempts Bangladesh and India from the five-identity minimum.
-4. IPTV's 122 broad Indian religious rejections do not distinguish Islamic from non-Islamic channels.
-5. Existing out-of-scope legacy groups remain in both playlists because broad deletion/reclassification was not authorized.
-6. Logo paths now pass local-file checks, but the latest provenance inventory still contains generated fallback and needs-review assets and must be regenerated after the IPTV change.
+1. No schedule-triggered Actions runs were recorded for the checked Bangladesh date. Watchdog/manual recovery completed both discovery stages, but cron delivery is not fixed.
+2. EPG recovery failed twice because the verified alias RakutenTVFamilyMovies.es is absent from the current International playlist; XMLTV generation/publication did not run.
+3. The full test suite has one failure caused by the same EPG alias mismatch.
+4. The logo-localization pipeline intentionally writes absolute raw GitHub URLs and its validator rejects relative logos/ paths, contrary to the user's local-only requirement.
+5. The latest logo manifest still has 2 generated fallback assets, 3,493 needs-review assets and four playlist-referenced placeholders.
+6. International's country-group threshold code still exempts Bangladesh and India from the five-identity minimum.
+7. IPTV's 122 broad Indian religious rejections do not distinguish Islamic from non-Islamic channels.
+8. Existing out-of-scope legacy groups remain in both playlists because broad deletion/reclassification was not authorized.
 
 ## 7. Final result
 
-- **IPTV discovery:** actual discover job succeeded; final validation passed; 31 primary and 21 backup candidates were staged, but no verified primary or alternative stream was retained after probing. Forty candidates remain in manual-review queues.
-- **International discovery:** actual discover job succeeded; final validation passed; 4 verified primary entries and 10 verified alternative streams were retained. Nine inconclusive primary candidates remain held. No new Adult or Fashion TV channels were found.
-- **Targeted repair:** IPTV external logo URLs were converted to verified local paths and queue order was corrected in a single-file commit.
-- **Schedule reliability:** schedule events were absent; watchdog workflow_dispatch recovery ran successfully for discovery. Cron delivery is not considered fixed.
-- **Overall:** **PARTIAL**, because the EPG recovery failed and the existing country-threshold, legacy-content and logo-authenticity blockers remain.
+- **IPTV discovery:** actual discover job succeeded; final discovery validation passed; 31 primary and 21 backup candidates were staged, but no verified primary or alternative stream was retained after probing. Forty candidates remain in manual-review queues.
+- **International discovery:** actual discover job succeeded; final discovery validation passed; 4 verified primary entries and 10 verified alternative streams were retained. Nine inconclusive primary candidates remain held. No new Adult or Fashion TV channels were found.
+- **Queue repair:** IPTV queue order was corrected and remains correct after the later logo workflow.
+- **Logo policy:** local-file paths were temporarily restored, but the repository logo workflow rewrote both playlists to absolute raw URLs. Strict local-only compliance is not passed.
+- **Schedule reliability:** schedule events were absent; watchdog workflow_dispatch recovery completed discovery, and a later guarded workflow_run retry was attempted for EPG. Cron delivery is not considered fixed.
+- **EPG/CI:** two EPG refresh attempts and the test suite failed on the same missing RakutenTVFamilyMovies.es alias; XMLTV publication remains blocked.
+- **Overall:** **PARTIAL**, because EPG recovery and the full test suite failed, and logo-authenticity/local-path, country-threshold, legacy-content and religious-category blockers remain.
 
 Stage reports and run logs are linked above. No playlist was replaced with a partial list, and no broad channel deletion or reclassification was performed.
