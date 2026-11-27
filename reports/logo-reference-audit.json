@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5283,
-  "all_explicitly_referenced_logo_files": 2540,
-  "runtime_referenced_logo_files": 2538,
-  "playlist_referenced_logo_files": 2505,
-  "apparently_unreferenced_by_any_text_file": 2743,
-  "apparently_unreferenced_by_runtime_sources": 2745,
+  "all_explicitly_referenced_logo_files": 2534,
+  "runtime_referenced_logo_files": 2532,
+  "playlist_referenced_logo_files": 2497,
+  "apparently_unreferenced_by_any_text_file": 2749,
+  "apparently_unreferenced_by_runtime_sources": 2751,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -10415,8 +10415,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/4-sides-tv-6a436fa007.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/4ever-cinema-1080p-46222eea9d.png": [
@@ -11242,7 +11240,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/b4u-bhojpuri-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/b4u-bhojpuri-plus-452c9a587ea15489f8f2.png": [
       "International-Playlist.m3u",
@@ -11653,7 +11652,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-rap-720p-geo-blocked-94129cc28e94aba754b1.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-rock-1abe531ff3.png": [
       "International-Playlist.m3u",
@@ -12910,7 +12910,6 @@
     ],
     "logos/dd-uttar-pradesh.png": [
       "IPTV-Playlist.m3u",
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/dd-uttarakhand.png": [
@@ -13599,7 +13598,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/epic-tv-digital-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/epic-tv-digital.png": [
       "International-Playlist.m3u",
@@ -15053,7 +15053,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/dhoom-music-720p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/famatv-1080p-not-24-7.png": [
       "reports/logo-source-registry.json"
@@ -15083,17 +15084,20 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/history-tv18-hd-1080p-geo-blocked.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/hollywood-ukraine-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/introuble-1080p.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/kinosvidanie-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/komsan-tv-not-24-7.png": [
       "International-Playlist.m3u",
@@ -15108,7 +15112,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/prokino-360p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/soneri-cinema-360p.png": [
       "IPTV-Playlist.m3u",
@@ -15783,7 +15788,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/m1-ukraine-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/m2-ukraine-c3501f1c1f.png": [
       "International-Playlist.m3u",
@@ -15821,7 +15827,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/madani-channel-bangla.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/madani-tv.png": [
       "IPTV-Playlist.m3u",
@@ -16341,7 +16348,6 @@
     ],
     "logos/mntv-tamil.png": [
       "IPTV-Playlist.m3u",
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mnx.png": [
@@ -16613,7 +16619,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/muzyka-pervogo-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/mwd-documentary-fbdc0a1ba5.png": [
       "International-Playlist.m3u",
@@ -16995,7 +17002,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/nm-media-channel-adf4a8ecc0dbe61589c3.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/nogoumfmtv-5286d22e76.png": [
       "International-Playlist.m3u",
@@ -17831,8 +17839,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/rakuten-tv-family-movies-166043b571489b238b1f.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/rally-tv-19891a8fa6.png": [
@@ -18299,7 +18305,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-filmi-gaane-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-filmi-gaane.png": [
       "International-Playlist.m3u",
@@ -18766,6 +18773,7 @@
     ],
     "logos/sristi-tv-772e078ab196764d315f.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/srk.png": [
@@ -19772,7 +19780,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/travelxp-hd-1080p-geo-blocked.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/travelxp.png": [
       "International-Playlist.m3u",
@@ -20277,10 +20286,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-marina-tv-1080p-6a5c00c3bc.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-mcm-pop-580p-1f74592475.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21016,19 +21021,7 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/verified-rakuten-tv-family-movies-germany-1080p-166043b571.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-rakuten-tv-family-movies-italy-1080p-166043b571.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/verified-rakuten-tv-family-movies-switzerland-720p-166043b571.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-rakuten-tv-family-movies-uk-1080p-166043b571.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21142,10 +21135,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-trek-movies-no-f0b61eeff9.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-starz-cinema-720p-edb83c94c3.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -21345,7 +21334,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/viasat-kino-action-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/viasat-kino-comedy-934854e2dd.png": [
       "International-Playlist.m3u",
@@ -21357,7 +21347,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/viasat-kino-ukraine-24c3a8c6c2e6715e6c38.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/viasat-kino-world-a9fe5a3be0.png": [
       "International-Playlist.m3u",
@@ -21484,10 +21475,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/voyo-sport-1-607370d90c.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/vtu.png": [
       "International-Playlist.m3u",
@@ -21834,7 +21821,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/zee-cine-classic-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/zee-cine-classic.png": [
       "International-Playlist.m3u",
@@ -21853,7 +21841,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/zee-comedy-nation-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/zee-comedy-nation.png": [
       "International-Playlist.m3u",
@@ -21897,7 +21886,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/zee-telugu-hd-720p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/zee-telugu.png": [
       "International-Playlist.m3u",
@@ -22041,8 +22031,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/4-sides-tv-6a436fa007.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/4ever-cinema-1080p-46222eea9d.png": [
@@ -22868,7 +22856,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/b4u-bhojpuri-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/b4u-bhojpuri-plus-452c9a587ea15489f8f2.png": [
       "International-Playlist.m3u",
@@ -23279,7 +23268,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-rap-720p-geo-blocked-94129cc28e94aba754b1.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-rock-1abe531ff3.png": [
       "International-Playlist.m3u",
@@ -24536,7 +24526,6 @@
     ],
     "logos/dd-uttar-pradesh.png": [
       "IPTV-Playlist.m3u",
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/dd-uttarakhand.png": [
@@ -25226,7 +25215,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/epic-tv-digital-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/epic-tv-digital.png": [
       "International-Playlist.m3u",
@@ -26681,7 +26671,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/dhoom-music-720p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/famatv-1080p-not-24-7.png": [
       "reports/logo-source-registry.json"
@@ -26711,17 +26702,20 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/history-tv18-hd-1080p-geo-blocked.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/hollywood-ukraine-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/introuble-1080p.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/kinosvidanie-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/komsan-tv-not-24-7.png": [
       "International-Playlist.m3u",
@@ -26736,7 +26730,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/prokino-360p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/soneri-cinema-360p.png": [
       "IPTV-Playlist.m3u",
@@ -27411,7 +27406,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/m1-ukraine-1080p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/m2-ukraine-c3501f1c1f.png": [
       "International-Playlist.m3u",
@@ -27449,7 +27445,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/madani-channel-bangla.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/madani-tv.png": [
       "IPTV-Playlist.m3u",
@@ -27969,7 +27966,6 @@
     ],
     "logos/mntv-tamil.png": [
       "IPTV-Playlist.m3u",
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/mnx.png": [
@@ -28241,7 +28237,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/muzyka-pervogo-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/mwd-documentary-fbdc0a1ba5.png": [
       "International-Playlist.m3u",
@@ -28623,7 +28620,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/nm-media-channel-adf4a8ecc0dbe61589c3.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/nogoumfmtv-5286d22e76.png": [
       "International-Playlist.m3u",
@@ -29462,8 +29460,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/rakuten-tv-family-movies-166043b571489b238b1f.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/rally-tv-19891a8fa6.png": [
@@ -29930,7 +29926,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-filmi-gaane-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/shemaroo-filmi-gaane.png": [
       "International-Playlist.m3u",
@@ -30398,6 +30395,7 @@
     ],
     "logos/sristi-tv-772e078ab196764d315f.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/srk.png": [
@@ -31405,7 +31403,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/travelxp-hd-1080p-geo-blocked.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/travelxp.png": [
       "International-Playlist.m3u",
@@ -31910,10 +31909,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-marina-tv-1080p-6a5c00c3bc.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-mcm-pop-580p-1f74592475.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -32649,19 +32644,7 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
-    "logos/verified-rakuten-tv-family-movies-germany-1080p-166043b571.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-rakuten-tv-family-movies-italy-1080p-166043b571.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/verified-rakuten-tv-family-movies-switzerland-720p-166043b571.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-rakuten-tv-family-movies-uk-1080p-166043b571.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -32775,10 +32758,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/verified-star-trek-movies-no-f0b61eeff9.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/verified-starz-cinema-720p-edb83c94c3.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -32978,7 +32957,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/viasat-kino-action-576p.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/viasat-kino-comedy-934854e2dd.png": [
       "International-Playlist.m3u",
@@ -32990,7 +32970,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/viasat-kino-ukraine-24c3a8c6c2e6715e6c38.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/viasat-kino-world-a9fe5a3be0.png": [
       "International-Playlist.m3u",
@@ -33117,10 +33098,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/voyo-sport-1-607370d90c.png": [
-      "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/vtu.png": [
       "International-Playlist.m3u",
@@ -33467,7 +33444,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/zee-cine-classic-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/zee-cine-classic.png": [
       "International-Playlist.m3u",
@@ -33486,7 +33464,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/zee-comedy-nation-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/zee-comedy-nation.png": [
       "International-Playlist.m3u",
@@ -33530,7 +33509,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/zee-telugu-hd-720p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/zee-telugu.png": [
       "International-Playlist.m3u",
@@ -36287,12 +36267,17 @@
     "logos/velvet-scary-1080p.png",
     "logos/velvet-sovetskoe-kino-1080p.png",
     "logos/venus.png",
+    "logos/verified-mcm-pop-580p-1f74592475.png",
     "logos/verified-nande-portetepe-tv-adb30ee16d.png",
     "logos/verified-rakuten-tv-comedy-movies-germany-1080p-166043b571.png",
     "logos/verified-rakuten-tv-comedy-movies-italy-1080p-166043b571.png",
     "logos/verified-rakuten-tv-comedy-movies-uk-1080p-166043b571.png",
     "logos/verified-rakuten-tv-drama-movies-germany-1080p-166043b571.png",
     "logos/verified-rakuten-tv-drama-movies-uk-1080p-166043b571.png",
+    "logos/verified-rakuten-tv-family-movies-germany-1080p-166043b571.png",
+    "logos/verified-rakuten-tv-family-movies-italy-1080p-166043b571.png",
+    "logos/verified-rakuten-tv-family-movies-uk-1080p-166043b571.png",
+    "logos/verified-starz-cinema-720p-edb83c94c3.png",
     "logos/viafree-movies-dk.png",
     "logos/viafree-movies-no.png",
     "logos/viafree-movies.png",
@@ -36308,6 +36293,7 @@
     "logos/vip-tv-720p.png",
     "logos/virgin-radio-tv.png",
     "logos/viva-latino-1080p.png",
+    "logos/voyo-sport-1-607370d90c.png",
     "logos/wifm-100-9.png",
     "logos/willow.png",
     "logos/win-tv.png",
