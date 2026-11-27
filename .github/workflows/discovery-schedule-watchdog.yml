@@ -15,6 +15,8 @@ on:
       # schedules may have been missed. Use them to wake the recovery watchdog.
       - 'reports/iptv-channel-discovery.md'
       - 'reports/international-channel-discovery.md'
+      # EPG config-test fixes can unblock the daily publication gate.
+      - 'tests/test_epg_config.py'
   # A completed production writer is a second recovery signal. The watchdog
   # rechecks all due jobs and dispatches only missing/failed work for today's
   # Bangladesh date; per-workflow guards and writer locks prevent duplicates.

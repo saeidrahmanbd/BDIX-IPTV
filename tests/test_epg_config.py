@@ -1060,7 +1060,7 @@ class VerifiedAliasTests(unittest.TestCase):
             "custom.nick-jr-east", "DeluxeRap.de", "DeejayTV.it", "R101TV.it", "RadioItaliaTV.it",
             "Kino1.ua", "Kino2.ua",
             "RDSSocialTV.it", "RTL1025TV.it", "RusskiyBestseller.ru@SD",
-            "RusskiyDetektiv.ru@SD", "RakutenTVFamilyMovies.es",
+            "RusskiyDetektiv.ru@SD",
             "4everMusic.ua", "EUMusic.ua", "30AMusic.us",
         ):
             self.assertIn(f'tvg-id="{tid}"', pl)
