@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-27T05:28:24.452891+00:00",
+  "generated_at_utc": "2026-11-27T23:53:38.825142+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -7,21 +7,21 @@
     "needs_review": "Authenticity is undocumented, the source is ambiguous, or the logo is missing."
   },
   "counts_by_playlist": {
-    "IPTV-Playlist.m3u": 1196,
+    "IPTV-Playlist.m3u": 1197,
     "International-Playlist.m3u": 3343
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "5b13ee8b1e9ac748bcf7e274638d42ee60f078298acbc6b550712521b064b71d",
+    "IPTV-Playlist.m3u": "3bf088b226f628bd6e5fdb4701fa666751912a5e1215dfb4d9d2f008fc44d7b9",
     "International-Playlist.m3u": "ac590fd34726acfe479ba48aca0ea1d4da3ca5262f97fc21a0963c54d27d8fd6"
   },
   "status_counts": {
-    "needs_review": 3528,
+    "needs_review": 3529,
     "generated_fallback": 2,
     "third_party_verified": 1009
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1167,
+      "needs_review": 1168,
       "generated_fallback": 2,
       "third_party_verified": 27
     },
@@ -30,7 +30,7 @@
       "third_party_verified": 982
     }
   },
-  "entry_count": 4539,
+  "entry_count": 4540,
   "entries": [
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -15570,6 +15570,19 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 2398,
+      "channel_name": "DD Assam (576p)",
+      "tvg_id": "DDAssam.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-assam.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2400,
       "channel_name": "Sangeet Bangla",
       "tvg_id": "SangeetBangla.in@SD",
       "channel_id": "SangeetBangla.in@SD",

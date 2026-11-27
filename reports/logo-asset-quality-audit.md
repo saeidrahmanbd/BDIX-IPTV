@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-27T05:28:13+00:00**
+Generated: **2026-11-27T23:53:26+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **5b13ee8b1e9ac748bcf7e274638d42ee60f078298acbc6b550712521b064b71d**
+- IPTV-Playlist.m3u SHA-256: **3bf088b226f628bd6e5fdb4701fa666751912a5e1215dfb4d9d2f008fc44d7b9**
 - International-Playlist.m3u SHA-256: **ac590fd34726acfe479ba48aca0ea1d4da3ca5262f97fc21a0963c54d27d8fd6**
 
 ## Summary
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **148**
 - Exact-byte duplicate asset clusters: **750**
-- Playlist references whose asset stem differs from the normalized channel name: **1558**
+- Playlist references whose asset stem differs from the normalized channel name: **1559**
 - Unreferenced image assets immediately inside logos/: **993** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1417,6 +1417,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Colors Bangla (1080p) | colors-bangla.png | New Backups |
 | IPTV-Playlist.m3u | Sony Sports Ten 2 (1080p) | sony-sports-ten-2.png | New Backups |
 | IPTV-Playlist.m3u | Zee Action (576p) | zee-action.png | New Backups |
+| IPTV-Playlist.m3u | DD Assam (576p) | dd-assam.png | New Backups |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Bangladesh |
 | International-Playlist.m3u | Asian TV | asian-tv.png | Bangladesh |
 | International-Playlist.m3u | Ayna TV | ayna-tv.png | Bangladesh |
