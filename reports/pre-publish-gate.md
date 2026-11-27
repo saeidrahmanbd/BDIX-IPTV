@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-27T00:17:58+00:00**
-Source playlist SHA-256: **27dd311208b29f1f41fde3a978f942ae4148e708185c2bb63fff690b89065cbd**
+Generated: **2026-11-27T05:25:45+00:00**
+Source playlist SHA-256: **9558746a36438c06848914c1906a5f2210f5c8e6c367af65c65a1529bbcf4c49**
 
 Status: **PASS**
 
-- Current entries: **1183**
+- Current entries: **1196**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -24,8 +24,8 @@ Status: **PASS**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **40**
-- Raw resolution/geoblock name tags: **40**
+- Entries missing tvg-language: **53**
+- Raw resolution/geoblock name tags: **52**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -54,8 +54,8 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 
 ## Warnings / Manual Review
 
-- entries missing tvg-language: 40
-- raw resolution/geoblock tags in channel names: 40
+- entries missing tvg-language: 53
+- raw resolution/geoblock tags in channel names: 52
 - New queue candidates pending owner review: 2
 
 ## Review-queue logo gaps
@@ -95,6 +95,12 @@ None.
 - **Zee Tamil HD (720p)** — New Channels
 - **Zee Telugu HD (720p)** — New Channels
 - **Zodiak TV (1080p)** — New Channels
+- **Anmol Cinema (576p)** — New Channels
+- **Anmol Cinema 2 (576p)** — New Channels
+- **Big Magic (576p)** — New Channels
+- **Network Payyanur (576p)** — New Channels
+- **NewStar (576p)** — New Channels
+- **Star Sports Khel (1080p)** — New Channels
 - **ATN Bangla (720p)** — New Backups
 - **DBC News (480p)** — New Backups
 - **Duronto TV (720p)** — New Backups
@@ -110,6 +116,12 @@ None.
 - **DD Uttar Pradesh (720p)** — New Backups
 - **Dhoom Music (720p)** — New Backups
 - **INWILD (1080p)** — New Backups
+- **Zee Bangla (1080p)** — New Backups
+- **B4U Kadak (1080p)** — New Backups
+- **B4U Movies (1080p)** — New Backups
+- **Colors Bangla (1080p)** — New Backups
+- **Sony Sports Ten 2 (1080p)** — New Backups
+- **Zee Action (576p)** — New Backups
 
 ## Queue validation
 

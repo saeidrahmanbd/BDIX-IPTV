@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-27T00:18:38+00:00**
-IPTV-Playlist.m3u SHA-256: **27dd311208b29f1f41fde3a978f942ae4148e708185c2bb63fff690b89065cbd**
+Generated: **2026-11-27T05:26:24+00:00**
+IPTV-Playlist.m3u SHA-256: **9558746a36438c06848914c1906a5f2210f5c8e6c367af65c65a1529bbcf4c49**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **290**
+- Flagged streams: **297**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -297,5 +297,12 @@ These streams are not automatically removed. URL credentials, user information a
 | Zee TV | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/52.m3u8` |
 | News 21 Bangla TV (1080p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.190.133.68:1935/news21live/live/playlist.m3u8` |
 | NM Media Channel HD (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newmedia2924/index.m3u8` |
+| Anmol Cinema (576p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/271/271_0.m3u8` |
+| Anmol Cinema 2 (576p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/257/257_0.m3u8` |
+| Big Magic (576p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/13/13_0.m3u8` |
+| Network Payyanur (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/networkpayyanur/index.m3u8` |
+| NewStar (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newsstar2924/index.m3u8` |
+| Star Sports Khel (1080p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/151/151_0.m3u8` |
 | DD Uttar Pradesh (720p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/36/master.m3u8` |
 | Dhoom Music (720p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1456/master.m3u8` |
+| Zee Action (576p) | New Backups | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/270/270_0.m3u8` |

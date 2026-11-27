@@ -1,27 +1,27 @@
 # IPTV Playlist Audit
-Generated: **2026-11-27T00:17:58.042094+00:00**
-Source playlist SHA-256: **27dd311208b29f1f41fde3a978f942ae4148e708185c2bb63fff690b89065cbd**
+Generated: **2026-11-27T05:25:44.547519+00:00**
+Source playlist SHA-256: **9558746a36438c06848914c1906a5f2210f5c8e6c367af65c65a1529bbcf4c49**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1183**
-- Unique channel IDs: **741**
+- Playlist entries: **1196**
+- Unique channel IDs: **752**
 - IDs with multiple streams: **229**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-queue same-ID name variants (review): **0**
-- Cross-queue normalized-name/different-ID groups (review): **11**
+- Cross-queue normalized-name/different-ID groups (review): **14**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **226**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1183**
+- Logo references checked: **1196**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **2**
 - Primary channel-number collisions: **0**
@@ -64,6 +64,7 @@ No same-ID label variants found across groups.
 
 - Same normalized name: Apna Punjab TV [apnapunjabtv.ca@sd] (Indian Entertainment); Apna Punjab TV [apnapunjabtv.in@sd] (Indian Entertainment)
 - Same normalized name: ATN Bangla [atnbangla.bd] (Backup); ATN Bangla [atnbangla.bd] (Bangladesh); ATN Bangla (720p) [atnbangla.bd@sd] (New Backups)
+- Same normalized name: Colors Bangla [colorsbangla.in@hd] (Indian Bangla); Colors Bangla (1080p) [colorsbangla.in@sd] (New Backups)
 - Same normalized name: DBC News [dbcnews.bd] (Backup); DBC News [dbcnews.bd] (Bangladesh); DBC News (480p) [dbcnews.bd@sd] (New Backups)
 - Same normalized name: Duronto TV [durontotv.bd] (Backup); Duronto TV [durontotv.bd] (Kids); Duronto TV (720p) [durontotv.bd@sd] (New Backups)
 - Same normalized name: Ekhon TV [ekhontv.bd] (Backup); Ekhon TV [ekhontv.bd] (Bangladesh); Ekhon TV (1080p) [ekhontv.bd@sd] (New Backups)
@@ -73,6 +74,8 @@ No same-ID label variants found across groups.
 - Same normalized name: G TV [gazitv.bd] (Backup); G TV [gazitv.bd] (Bangladesh); Gazi TV (1080p) [gazitv.bd@sd] (New Backups)
 - Same normalized name: InWild [inwild.nl] (Documentary & Wildlife); INWILD (1080p) [inwild.nl@sd] (New Backups)
 - Same normalized name: Maasranga TV [maasrangatv.bd] (Backup); Maasranga TV [maasrangatv.bd] (Bangladesh); Maasranga TV (720p) [maasrangatv.bd@sd] (New Backups)
+- Same normalized name: Zee Action [zeeaction.in] (Indian Movies); Zee Action (576p) [zeeaction.in@sd] (New Backups)
+- Same normalized name: Zee Bangla [zeebangla.in@hd] (Backup); Zee Bangla [zeebangla.in@hd] (Indian Bangla); Zee Bangla (1080p) [zeebangla.in@sd] (New Backups)
 
 ## Duplicate IDs
 
@@ -166,20 +169,22 @@ No same-ID label variants found across groups.
 ### b4ubhojpuri.in@sd (2 streams)
 - B4U Bhojpuri — Indian Movies — https://mumt05.tangotv.in/87NeALx2B4UBHOJPURI/index.m3u8
 - B4U Bhojpuri (1080p) — New Backups — https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
-### b4ukadak.in@sd (6 streams)
+### b4ukadak.in@sd (7 streams)
 - B4U Kadak — Indian Movies — https://cdn.pishow.tv/ott/live/227/master.m3u8
 - B4U Kadak — Backup — http://163.61.226.31:9981/stream/channelid/282021969?profile=pass
 - B4U Kadak — Backup — https://fta.ektv.in/live/44/44_0.m3u8
 - B4U Kadak — Backup — https://mumt06.tangotv.in/qYyB8fXVB4UKADAK/index.m3u8
 - B4U Kadak — Backup — https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8
 - B4U Kadak (1080p) — New Backups — https://amg00877-b4unew-amg00877c4-xiaomi-in-5473.playouts.now.amagi.tv/playlist.m3u8
-### b4umovies.in@india (6 streams)
+- B4U Kadak (1080p) — New Backups — https://amg01408-amg01408c6-amgplt0747.playout.now3.amagi.tv/b4ua001/playlist.m3u8
+### b4umovies.in@india (7 streams)
 - B4U Movies — Indian Movies — https://cdn.pishow.tv/ott/live/419/master.m3u8
 - B4U Movies — Backup — http://163.61.226.31:9981/stream/channelid/1547127176?profile=pass
 - B4U Movies — Backup — https://fta.ektv.in/live/43/43_0.m3u8
 - B4U Movies — Backup — https://mumt06.tangotv.in/qYyB8fXVB4UMOVIES/index.m3u8
 - B4U Movies — Backup — https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8
 - B4U Movies (1080p) — New Backups — https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8
+- B4U Movies (1080p) — New Backups — https://amg01408-amg01408c7-amgplt0747.playout.now3.amagi.tv/b4umo001/playlist.m3u8
 ### b4umusic.in@india (7 streams)
 - B4U Music — Indian Music — https://streams.tangotv.in/B4UMUSIC/ORIGIN/index.m3u8
 - B4U Music — Backup — http://103.175.73.12:8080/live/157/master.m3u8
@@ -1042,7 +1047,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1183**
+- Healthy/local references: **1196**
 - External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair

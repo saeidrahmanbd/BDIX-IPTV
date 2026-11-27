@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-27T00:18:50+00:00**
+Generated: **2026-11-27T05:26:33+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **27dd311208b29f1f41fde3a978f942ae4148e708185c2bb63fff690b89065cbd**
-- International-Playlist.m3u SHA-256: **841f85797d55550f76efe36ec201950ea40bcb60edbf02a916160ee0f37b37db**
+- IPTV-Playlist.m3u SHA-256: **9558746a36438c06848914c1906a5f2210f5c8e6c367af65c65a1529bbcf4c49**
+- International-Playlist.m3u SHA-256: **ac590fd34726acfe479ba48aca0ea1d4da3ca5262f97fc21a0963c54d27d8fd6**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 21 | 2 | 1160 |
-| International-Playlist.m3u | 0 | 982 | 0 | 2333 |
+| IPTV-Playlist.m3u | 0 | 27 | 2 | 1167 |
+| International-Playlist.m3u | 0 | 982 | 0 | 2361 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3493**
+- Logos needing attribution review: **3528**
 - Unofficial fallback logos: **2**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3493 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3528 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
@@ -108,12 +108,18 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | maasranga-tv.png | Maasranga TV (720p) | MaasrangaTV.bd@SD |
 | sony-max.png | Sony Max HD | SonyMax.in@HD |
 | sony-max.png | Sony Max | SonyMax.in@SD |
+| sony-sports-ten-2.png | Sony Sports Ten 2 HD | SonySportsTen2.in@HD |
+| sony-sports-ten-2.png | Sony Sports Ten 2 (1080p) | SonySportsTen2.in@SD |
 | sunnah-tv.png | Makkah Live | MakkahLive.sa |
 | sunnah-tv.png | Al Sunnah Al Nabawiyah | custom.alsunnahalnabawiyah |
 | vision.png | Vision (India) | Vision.in@SD |
 | vision.png | Vision 24 | vision.24.bd |
 | xite-hits-germany-1080p.png | XITE Hits | XITEHits.nl |
 | xite-hits-germany-1080p.png | XITE Hits UK | XITEHits.nl@UK |
+| zee-action.png | Zee Action | ZeeAction.in |
+| zee-action.png | Zee Action (576p) | ZeeAction.in@SD |
+| zee-bangla.png | Zee Bangla | ZeeBangla.in@HD |
+| zee-bangla.png | Zee Bangla (1080p) | ZeeBangla.in@SD |
 
 ## Review policy
 

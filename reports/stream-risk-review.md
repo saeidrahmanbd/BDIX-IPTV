@@ -1,7 +1,7 @@
 # Stream Risk Review
 
-Generated: **2026-11-27T00:18:38+00:00**
-IPTV-Playlist.m3u SHA-256: **27dd311208b29f1f41fde3a978f942ae4148e708185c2bb63fff690b89065cbd**
+Generated: **2026-11-27T05:26:24+00:00**
+IPTV-Playlist.m3u SHA-256: **9558746a36438c06848914c1906a5f2210f5c8e6c367af65c65a1529bbcf4c49**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
 
@@ -21,9 +21,9 @@ Generated from the current playlist and latest available stream-health report. T
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1183 |
-| Reachable | 1126 |
-| Failed this check | 57 |
+| Streams tested | 1196 |
+| Reachable | 1129 |
+| Failed this check | 67 |
 | Persistent failures (3+ consecutive) | 0 |
 
 ### Persistent failures
