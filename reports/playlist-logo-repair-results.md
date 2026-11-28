@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-28 07:02 UTC**  
+Run time: **2026-11-28 07:04 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,8 +9,8 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1378 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| International-Playlist.m3u | 3332 | 4 | 17 | 20 | 364 | 372 | 0 | 0 | 37 |
+| IPTV-Playlist.m3u | 1377 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| International-Playlist.m3u | 3332 | 0 | 17 | 20 | 364 | 372 | 0 | 0 | 37 |
 
 ## Repair log
 
@@ -65,10 +65,6 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 5849 | TV 21 International | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 5999 | Abdulmajeed Abdullah (1080p) | (missing) | (none) | IPTV-org exact ID: AbdulmajeedAbdullah.sa |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 5999 | Abdulmajeed Abdullah (1080p) | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 6017 | BRIDGE RNB (720p) [Geo-blocked] | (missing) | bridge-rnb-720p-geo-blocked-410ab5ee562a58b296a5.svg | [IPTV-org exact ID: BRIDGERNB.ru](https://bridgemusic.ru/s/img/channels/rnb-logo-dark.svg) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 6019 | BRIDGE Soul (720p) [Geo-blocked] | (missing) | bridge-soul-720p-geo-blocked-c10cf0f5a0d9ec8ed59f.svg | [IPTV-org exact ID: BRIDGESoul.ru](https://bridgemusic.ru/s/img/channels/soul-logo-dark.svg) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 6021 | BRIDGE Symphony (720p) [Geo-blocked] | (missing) | bridge-symphony-720p-geo-blocked-7dfe8cd859b9019ac8ed.svg | [IPTV-org exact ID: BRIDGESymphony.ru](https://bridgemusic.ru/s/img/channels/symphony-white.svg) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| International-Playlist.m3u | 6023 | BRIDGE Vostok (720p) [Geo-blocked] | (missing) | bridge-vostok-720p-geo-blocked-3303d8b63b70e3ee2f46.svg | [IPTV-org exact ID: BRIDGEVostok.ru](https://bridgemusic.ru/s/img/channels/vostok-white.svg) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 
 ## Quality rule
 

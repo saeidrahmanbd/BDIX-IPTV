@@ -11725,7 +11725,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-rnb-720p-geo-blocked-410ab5ee562a58b296a5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-rock-1abe531ff3.png": [
       "International-Playlist.m3u",
@@ -11733,13 +11734,16 @@
       "reports/logo-source-registry.json"
     ],
     "logos/bridge-soul-720p-geo-blocked-c10cf0f5a0d9ec8ed59f.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-symphony-720p-geo-blocked-7dfe8cd859b9019ac8ed.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-vostok-720p-geo-blocked-3303d8b63b70e3ee2f46.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/britbox-mysteries-21a47f13c9.png": [
       "International-Playlist.m3u",
@@ -12878,7 +12882,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/dd-bharati.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -23455,7 +23458,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-rnb-720p-geo-blocked-410ab5ee562a58b296a5.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-rock-1abe531ff3.png": [
       "International-Playlist.m3u",
@@ -23463,13 +23467,16 @@
       "reports/logo-source-registry.json"
     ],
     "logos/bridge-soul-720p-geo-blocked-c10cf0f5a0d9ec8ed59f.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-symphony-720p-geo-blocked-7dfe8cd859b9019ac8ed.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bridge-vostok-720p-geo-blocked-3303d8b63b70e3ee2f46.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/britbox-mysteries-21a47f13c9.png": [
       "International-Playlist.m3u",
@@ -24608,7 +24615,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/dd-bharati.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],

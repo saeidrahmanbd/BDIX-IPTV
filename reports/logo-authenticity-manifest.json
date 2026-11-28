@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-28T07:03:33.540126+00:00",
+  "generated_at_utc": "2026-11-28T07:05:33.086050+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -7,21 +7,21 @@
     "needs_review": "Authenticity is undocumented, the source is ambiguous, or the logo is missing."
   },
   "counts_by_playlist": {
-    "IPTV-Playlist.m3u": 1378,
+    "IPTV-Playlist.m3u": 1377,
     "International-Playlist.m3u": 3332
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "5ec976c9635f15dd87aea39be22e7de020641997fe6910aa8ec1b321e8c8289d",
+    "IPTV-Playlist.m3u": "d1505f3d76530e01b023d9cfeabc5c6fe518d803660da940927cc88fcaf39246",
     "International-Playlist.m3u": "248ff78f7e53dc302880e5cb413bfd2f727021f7d7d92a3f3c6f5222618bbe7b"
   },
   "status_counts": {
-    "needs_review": 3692,
+    "needs_review": 3691,
     "generated_fallback": 2,
     "third_party_verified": 1016
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1349,
+      "needs_review": 1348,
       "generated_fallback": 2,
       "third_party_verified": 27
     },
@@ -30,7 +30,7 @@
       "third_party_verified": 989
     }
   },
-  "entry_count": 4710,
+  "entry_count": 4709,
   "entries": [
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -17169,19 +17169,6 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 2644,
-      "channel_name": "DD Bharati",
-      "tvg_id": "DDBharati.in@SD",
-      "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bharati.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "line": 2646,
       "channel_name": "Epic TV Digital (1080p)",
       "tvg_id": "EpicTV.in@Digital",
       "channel_id": "",
@@ -17194,7 +17181,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2648,
+      "line": 2646,
       "channel_name": "History TV18 HD (1080p) [Geo-blocked]",
       "tvg_id": "HistoryTV18.in@HD",
       "channel_id": "",
@@ -17207,7 +17194,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2650,
+      "line": 2648,
       "channel_name": "Madani Channel Bangla (1080p)",
       "tvg_id": "MadaniChannelBangla.bd@SD",
       "channel_id": "",
@@ -17220,7 +17207,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2652,
+      "line": 2650,
       "channel_name": "Mango Mobile TV (1080p)",
       "tvg_id": "MangoMobileTV.in@HD",
       "channel_id": "",
@@ -17233,7 +17220,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2654,
+      "line": 2652,
       "channel_name": "MTV (India) (396p)",
       "tvg_id": "MTV.in@SD",
       "channel_id": "",
@@ -17246,7 +17233,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2656,
+      "line": 2654,
       "channel_name": "NDTV Good Times (1080p)",
       "tvg_id": "NDTVGoodTimes.in@SD",
       "channel_id": "",
@@ -17259,7 +17246,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2658,
+      "line": 2656,
       "channel_name": "Network Payyanur (576p)",
       "tvg_id": "NetworkPayyanur.in@SD",
       "channel_id": "",
@@ -17272,7 +17259,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2660,
+      "line": 2658,
       "channel_name": "News 21 Bangla TV (1080p)",
       "tvg_id": "News21BanglaTV.bd@SD",
       "channel_id": "",
@@ -17285,7 +17272,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2662,
+      "line": 2660,
       "channel_name": "NewStar (576p)",
       "tvg_id": "NewStar.in@SD",
       "channel_id": "",
@@ -17298,7 +17285,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2664,
+      "line": 2662,
       "channel_name": "NM Media Channel HD (1080p)",
       "tvg_id": "NMMediaChannelHD.in@SD",
       "channel_id": "",
@@ -17311,7 +17298,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2666,
+      "line": 2664,
       "channel_name": "Powran Media (720p) [Not 24/7]",
       "tvg_id": "PowranMedia.in@SD",
       "channel_id": "",
@@ -17324,7 +17311,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2668,
+      "line": 2666,
       "channel_name": "Rupashi Bangla TV (720p)",
       "tvg_id": "RupashiBanglaTV.bd@SD",
       "channel_id": "",
@@ -17337,7 +17324,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2670,
+      "line": 2668,
       "channel_name": "Shemaroo Filmi Gaane (1080p)",
       "tvg_id": "ShemarooFilmiGaane.in@HD",
       "channel_id": "",
@@ -17350,7 +17337,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2672,
+      "line": 2670,
       "channel_name": "Sooriyan TV (1080p)",
       "tvg_id": "SooriyanTV.ca@SD",
       "channel_id": "",
@@ -17363,7 +17350,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2674,
+      "line": 2672,
       "channel_name": "Sristi TV (1080p)",
       "tvg_id": "SristiTV.in@SD",
       "channel_id": "",
@@ -17376,7 +17363,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2676,
+      "line": 2674,
       "channel_name": "Star Sports Khel (1080p)",
       "tvg_id": "StarSportsKhel.in@SD",
       "channel_id": "",
@@ -17389,7 +17376,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2678,
+      "line": 2676,
       "channel_name": "Travelxp HD (1080p) [Geo-blocked]",
       "tvg_id": "Travelxp.in@HD",
       "channel_id": "",
@@ -17402,7 +17389,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2680,
+      "line": 2678,
       "channel_name": "Vision Beats (720p)",
       "tvg_id": "VisionBeats.in@SD",
       "channel_id": "",
@@ -17415,7 +17402,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2682,
+      "line": 2680,
       "channel_name": "WeatherSpy (India) (720p)",
       "tvg_id": "WeatherSpy.in@SD",
       "channel_id": "",
@@ -17428,7 +17415,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2684,
+      "line": 2682,
       "channel_name": "Zee Cine Classic (1080p)",
       "tvg_id": "ZeeCineClassic.in@SD",
       "channel_id": "",
@@ -17441,7 +17428,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2686,
+      "line": 2684,
       "channel_name": "Zee Comedy Nation (1080p)",
       "tvg_id": "ZeeComedyNation.in@HD",
       "channel_id": "",
@@ -17454,7 +17441,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2688,
+      "line": 2686,
       "channel_name": "Zee Dil Se (1080p)",
       "tvg_id": "ZeeDilSe.in@HD",
       "channel_id": "",
@@ -17467,7 +17454,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2690,
+      "line": 2688,
       "channel_name": "Zee Horror Nights (1080p)",
       "tvg_id": "ZeeHorrorNights.in@HD",
       "channel_id": "",
@@ -17480,7 +17467,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2692,
+      "line": 2690,
       "channel_name": "Zee South Flix (1080p)",
       "tvg_id": "ZeeSouthFlix.in@HD",
       "channel_id": "",
@@ -17493,7 +17480,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2694,
+      "line": 2692,
       "channel_name": "Zee Tamil HD (720p)",
       "tvg_id": "ZeeTamil.in@HD",
       "channel_id": "",
@@ -17506,7 +17493,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2696,
+      "line": 2694,
       "channel_name": "Zee Telugu HD (720p)",
       "tvg_id": "ZeeTelugu.in@HD",
       "channel_id": "",
@@ -17519,7 +17506,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2698,
+      "line": 2696,
       "channel_name": "Zodiak TV (1080p)",
       "tvg_id": "ZodiakTV.in@SD",
       "channel_id": "",
@@ -17532,7 +17519,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2700,
+      "line": 2698,
       "channel_name": "9X Jhakaas (1080p)",
       "tvg_id": "9XJhakaas.in@SD",
       "channel_id": "",
@@ -17545,7 +17532,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2702,
+      "line": 2700,
       "channel_name": "9X Tashan (1080p)",
       "tvg_id": "9XTashan.in@SD",
       "channel_id": "",
@@ -17558,7 +17545,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2704,
+      "line": 2702,
       "channel_name": "Ananda TV",
       "tvg_id": "AnandaTV.bd",
       "channel_id": "",
@@ -17571,7 +17558,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2706,
+      "line": 2704,
       "channel_name": "ATN Bangla (720p)",
       "tvg_id": "ATNBangla.bd@SD",
       "channel_id": "",
@@ -17584,11 +17571,24 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2708,
+      "line": 2706,
       "channel_name": "B4U Bhojpuri (1080p)",
       "tvg_id": "B4UBhojpuri.in@SD",
       "channel_id": "",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-bhojpuri-1080p.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "registry_conflict": ""
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2708,
+      "channel_name": "B4U Kadak (1080p)",
+      "tvg_id": "B4UKadak.in@SD",
+      "channel_id": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -17611,10 +17611,10 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 2712,
-      "channel_name": "B4U Kadak (1080p)",
-      "tvg_id": "B4UKadak.in@SD",
+      "channel_name": "B4U Movies (1080p)",
+      "tvg_id": "B4UMovies.in@India",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -17637,19 +17637,6 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 2716,
-      "channel_name": "B4U Movies (1080p)",
-      "tvg_id": "B4UMovies.in@India",
-      "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
-      "registry_conflict": ""
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "line": 2718,
       "channel_name": "Balle Balle",
       "tvg_id": "BalleBalle.in@SD",
       "channel_id": "",
@@ -17662,7 +17649,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2720,
+      "line": 2718,
       "channel_name": "Bangla TV",
       "tvg_id": "BanglaTV.bd",
       "channel_id": "",
@@ -17675,7 +17662,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2722,
+      "line": 2720,
       "channel_name": "Boishakhi TV",
       "tvg_id": "BoishakhiTV.bd",
       "channel_id": "",
@@ -17688,7 +17675,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2724,
+      "line": 2722,
       "channel_name": "Channel 16",
       "tvg_id": "Channel16.bd",
       "channel_id": "",
@@ -17701,7 +17688,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2726,
+      "line": 2724,
       "channel_name": "Colors Bangla (1080p)",
       "tvg_id": "ColorsBangla.in@SD",
       "channel_id": "",
@@ -17714,7 +17701,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2728,
+      "line": 2726,
       "channel_name": "DBC News (480p)",
       "tvg_id": "DBCNews.bd@SD",
       "channel_id": "",
@@ -17727,7 +17714,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2730,
+      "line": 2728,
       "channel_name": "DD Assam (576p)",
       "tvg_id": "DDAssam.in@SD",
       "channel_id": "",
@@ -17740,7 +17727,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2732,
+      "line": 2730,
       "channel_name": "DD Uttar Pradesh (720p)",
       "tvg_id": "DDUttarPradesh.in@SD",
       "channel_id": "",
@@ -17753,7 +17740,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2734,
+      "line": 2732,
       "channel_name": "Dhoom Music (720p)",
       "tvg_id": "DhoomMusic.in@SD",
       "channel_id": "",
@@ -17766,7 +17753,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2736,
+      "line": 2734,
       "channel_name": "Duronto TV (720p)",
       "tvg_id": "DurontoTV.bd@SD",
       "channel_id": "",
@@ -17779,7 +17766,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2738,
+      "line": 2736,
       "channel_name": "Ekhon TV (1080p)",
       "tvg_id": "EkhonTV.bd@SD",
       "channel_id": "",
@@ -17792,7 +17779,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2740,
+      "line": 2738,
       "channel_name": "Gazi TV (1080p)",
       "tvg_id": "GaziTV.bd@SD",
       "channel_id": "",
@@ -17805,7 +17792,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2742,
+      "line": 2740,
       "channel_name": "Global TV",
       "tvg_id": "GlobalTV.bd",
       "channel_id": "",
@@ -17818,7 +17805,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2744,
+      "line": 2742,
       "channel_name": "INWILD (1080p)",
       "tvg_id": "INWILD.nl@SD",
       "channel_id": "",
@@ -17831,7 +17818,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2746,
+      "line": 2744,
       "channel_name": "Islamic TV",
       "tvg_id": "IslamicTV.bd",
       "channel_id": "",
@@ -17844,7 +17831,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2748,
+      "line": 2746,
       "channel_name": "Love Nature",
       "tvg_id": "LoveNature.us",
       "channel_id": "",
@@ -17857,7 +17844,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2750,
+      "line": 2748,
       "channel_name": "Maasranga TV (720p)",
       "tvg_id": "MaasrangaTV.bd@SD",
       "channel_id": "",
@@ -17870,7 +17857,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2752,
+      "line": 2750,
       "channel_name": "Music Bangla",
       "tvg_id": "MusicBangla.bd@SD",
       "channel_id": "",
@@ -17883,7 +17870,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2754,
+      "line": 2752,
       "channel_name": "RTV (Bangladesh) (720p)",
       "tvg_id": "RTV.bd@SD",
       "channel_id": "",
@@ -17896,7 +17883,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2756,
+      "line": 2754,
       "channel_name": "Sony Sports Ten 2 (1080p)",
       "tvg_id": "SonySportsTen2.in@SD",
       "channel_id": "",
@@ -17909,7 +17896,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2758,
+      "line": 2756,
       "channel_name": "Zee Action (576p)",
       "tvg_id": "ZeeAction.in@SD",
       "channel_id": "",
@@ -17922,7 +17909,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2760,
+      "line": 2758,
       "channel_name": "Zee Bangla (1080p)",
       "tvg_id": "ZeeBangla.in@SD",
       "channel_id": "",
@@ -17935,7 +17922,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2762,
+      "line": 2760,
       "channel_name": "Sangeet Bangla",
       "tvg_id": "SangeetBangla.in@SD",
       "channel_id": "SangeetBangla.in@SD",
