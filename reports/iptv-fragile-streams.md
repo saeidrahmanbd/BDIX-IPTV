@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-28T00:18:22+00:00**
-IPTV-Playlist.m3u SHA-256: **bc20e905e2a4c4935f2a0ce061b61ef523f9a4a5a2e11e8e632cfc87b79fc57c**
+Generated: **2026-11-28T05:07:05+00:00**
+IPTV-Playlist.m3u SHA-256: **7208e6da492fa0feb6411ab6846fa9298ef920bd900b322487e46d53072af1b6**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
@@ -295,15 +295,15 @@ These streams are not automatically removed. URL credentials, user information a
 | Zee Bangla | Backup | credential-bearing route pattern (values redacted) | `http://rgkkw.live:80/live/REDACTED/REDACTED/98881.ts` |
 | Zee Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8` |
 | Zee TV | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/52.m3u8` |
-| News 21 Bangla TV (1080p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.190.133.68:1935/news21live/live/playlist.m3u8` |
-| NM Media Channel HD (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newmedia2924/index.m3u8` |
 | Anmol Cinema (576p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/271/271_0.m3u8` |
 | Anmol Cinema 2 (576p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/257/257_0.m3u8` |
 | Big Magic (576p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/13/13_0.m3u8` |
 | Network Payyanur (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/networkpayyanur/index.m3u8` |
+| News 21 Bangla TV (1080p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.190.133.68:1935/news21live/live/playlist.m3u8` |
 | NewStar (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newsstar2924/index.m3u8` |
+| NM Media Channel HD (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newmedia2924/index.m3u8` |
 | Star Sports Khel (1080p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/151/151_0.m3u8` |
+| DD Assam (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/672/master.m3u8` |
 | DD Uttar Pradesh (720p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/36/master.m3u8` |
 | Dhoom Music (720p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1456/master.m3u8` |
 | Zee Action (576p) | New Backups | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/270/270_0.m3u8` |
-| DD Assam (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/672/master.m3u8` |

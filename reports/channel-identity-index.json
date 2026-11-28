@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-28T00:18:22+00:00",
+  "generated": "2026-11-28T05:07:05+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -7351,6 +7351,20 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "qelloconcertsbystingray": {
+      "names": [
+        "Qello Concerts by Stingray"
+      ],
+      "ids": [
+        "qelloconcertsbystingray.ca@sd"
+      ],
+      "groups": [
+        "International"
       ],
       "streams": 1,
       "primary": 1,

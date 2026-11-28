@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-28T00:17:40+00:00**
-Source playlist SHA-256: **bc20e905e2a4c4935f2a0ce061b61ef523f9a4a5a2e11e8e632cfc87b79fc57c**
+Generated: **2026-11-28T05:06:08+00:00**
+Source playlist SHA-256: **7208e6da492fa0feb6411ab6846fa9298ef920bd900b322487e46d53072af1b6**
 
 Status: **PASS**
 
-- Current entries: **1197**
+- Current entries: **1198**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -70,20 +70,26 @@ None.
 
 ## Raw name tags
 
-- **Madani Channel Bangla (1080p)** — New Channels
-- **News 21 Bangla TV (1080p)** — New Channels
-- **Rupashi Bangla TV (720p)** — New Channels
 - **AMN TV (576p)** — New Channels
+- **Anmol Cinema (576p)** — New Channels
+- **Anmol Cinema 2 (576p)** — New Channels
+- **Big Magic (576p)** — New Channels
 - **Cine Jomjomat (1080p)** — New Channels
 - **Epic TV Digital (1080p)** — New Channels
 - **History TV18 HD (1080p) [Geo-blocked]** — New Channels
+- **Madani Channel Bangla (1080p)** — New Channels
 - **Mango Mobile TV (1080p)** — New Channels
 - **MTV (India) (396p)** — New Channels
 - **NDTV Good Times (1080p)** — New Channels
+- **Network Payyanur (576p)** — New Channels
+- **News 21 Bangla TV (1080p)** — New Channels
+- **NewStar (576p)** — New Channels
 - **NM Media Channel HD (1080p)** — New Channels
+- **Rupashi Bangla TV (720p)** — New Channels
 - **Shemaroo Filmi Gaane (1080p)** — New Channels
 - **Sooriyan TV (1080p)** — New Channels
 - **Sristi TV (1080p)** — New Channels
+- **Star Sports Khel (1080p)** — New Channels
 - **Travelxp HD (1080p) [Geo-blocked]** — New Channels
 - **Vision Beats (720p)** — New Channels
 - **WeatherSpy (India) (720p)** — New Channels
@@ -95,34 +101,28 @@ None.
 - **Zee Tamil HD (720p)** — New Channels
 - **Zee Telugu HD (720p)** — New Channels
 - **Zodiak TV (1080p)** — New Channels
-- **Anmol Cinema (576p)** — New Channels
-- **Anmol Cinema 2 (576p)** — New Channels
-- **Big Magic (576p)** — New Channels
-- **Network Payyanur (576p)** — New Channels
-- **NewStar (576p)** — New Channels
-- **Star Sports Khel (1080p)** — New Channels
+- **9X Jhakaas (1080p)** — New Backups
+- **9X Tashan (1080p)** — New Backups
 - **ATN Bangla (720p)** — New Backups
+- **B4U Bhojpuri (1080p)** — New Backups
+- **B4U Kadak (1080p)** — New Backups
+- **B4U Kadak (1080p)** — New Backups
+- **B4U Movies (1080p)** — New Backups
+- **B4U Movies (1080p)** — New Backups
+- **Colors Bangla (1080p)** — New Backups
 - **DBC News (480p)** — New Backups
+- **DD Assam (576p)** — New Backups
+- **DD Uttar Pradesh (720p)** — New Backups
+- **Dhoom Music (720p)** — New Backups
 - **Duronto TV (720p)** — New Backups
 - **Ekhon TV (1080p)** — New Backups
 - **Gazi TV (1080p)** — New Backups
+- **INWILD (1080p)** — New Backups
 - **Maasranga TV (720p)** — New Backups
 - **RTV (Bangladesh) (720p)** — New Backups
-- **9X Jhakaas (1080p)** — New Backups
-- **9X Tashan (1080p)** — New Backups
-- **B4U Bhojpuri (1080p)** — New Backups
-- **B4U Kadak (1080p)** — New Backups
-- **B4U Movies (1080p)** — New Backups
-- **DD Uttar Pradesh (720p)** — New Backups
-- **Dhoom Music (720p)** — New Backups
-- **INWILD (1080p)** — New Backups
-- **Zee Bangla (1080p)** — New Backups
-- **B4U Kadak (1080p)** — New Backups
-- **B4U Movies (1080p)** — New Backups
-- **Colors Bangla (1080p)** — New Backups
 - **Sony Sports Ten 2 (1080p)** — New Backups
 - **Zee Action (576p)** — New Backups
-- **DD Assam (576p)** — New Backups
+- **Zee Bangla (1080p)** — New Backups
 
 ## Queue validation
 
