@@ -214,6 +214,34 @@ class LogoRepairSourceTests(unittest.TestCase):
                     logo_repair.find_registered_logo("IPTV-Playlist.m3u", {}, "Raatdin Bangla")
                 )
 
+    def test_registry_lookup_returns_exact_name_match(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            logo_dir = root / "logos"
+            logo_dir.mkdir()
+            logo = logo_dir / "raatdin-bangla.png"
+            logo.write_bytes(b"verified-logo")
+            registry_path = root / "registry.json"
+            raw_url = logo_repair.raw_url(logo.name)
+            registry_path.write_text(
+                __import__("json").dumps({
+                    f"IPTV-Playlist.m3u||Raatdin Bangla|{raw_url}": {
+                        "status": "third_party_verified",
+                        "source_url": "https://raatdinbangla.com/",
+                        "notes": "Official broadcaster logo",
+                    }
+                }),
+                encoding="utf-8",
+            )
+            with patch.object(logo_repair, "LOGOS", logo_dir), \\
+                 patch.object(logo_repair, "REGISTRY_PATH", registry_path), \\
+                 patch.object(logo_repair, "is_valid_local_logo_reference", return_value=True), \\
+                 patch.object(logo_repair, "file_is_valid", return_value=True):
+                self.assertEqual(
+                    logo_repair.find_registered_logo("IPTV-Playlist.m3u", {}, "Raatdin Bangla"),
+                    "raatdin-bangla.png",
+                )
+
     def test_recovered_logo_hints_are_identity_attributed(self):
         expected = {
             "Raatdin Bangla": ("raatdinbangla.com", "raatdin-logo-transparent.png"),

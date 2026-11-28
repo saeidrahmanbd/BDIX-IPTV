@@ -822,7 +822,7 @@ def find_registered_logo(playlist_name, meta, channel):
     if not options:
         return None
     options.sort()
-    rel = urllib.parse.unquote(options[0][2][len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])
+    rel = urllib.parse.unquote(options[0][1][len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])
     return prepare_local_asset(LOGOS / rel)
 
 
