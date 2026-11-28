@@ -347,7 +347,7 @@ for i,l in enumerate(lines):
   a=attrs(l); _, display = split_extinf(l); rows.append({"i":i,"line":l,"a":a,"name":display.strip()})
 primary=[r for r in rows if r["a"].get("group-title","").strip() not in EXCLUDE]
 byname={}
-for r in primary: byname.setdefault(norm(r["a"].get("tvg-name") or r["name"]),r)
+for r in primary: byname.setdefault(norm(r["a"].get("tvg-name") or r["name"]),[]).append(r)
 stats={"numbers":0,"logos":0,"backups":0}
 for r in rows:
  a=r["a"]; g=a.get("group-title","").strip(); m,_ = split_extinf(r["line"]); display=r["name"]
@@ -372,8 +372,16 @@ for r in rows:
    lines[r["i"]]=f"{m},Colors Bangla Cinema"
    continue
   name=CASE.get(clean(a.get("tvg-name") or r["name"]),clean(a.get("tvg-name") or r["name"]))
-  cid=normalize_id(a.get("tvg-id") or a.get("channel-id") or IDS.get(name) or "custom."+norm(name))
-  m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name)
+  candidates=byname.get(norm(name),[])
+  existing_id=a.get("tvg-id") or a.get("channel-id")
+  # Only synthesize a custom identity when this normalized primary name is unique.
+  # Repeated same-name feeds are ambiguous; leave their IDs unset rather than
+  # assigning one false shared identity and creating duplicate primary IDs.
+  fallback_id=(IDS.get(name) or "custom."+norm(name)) if len(candidates)==1 else ""
+  cid=normalize_id(existing_id or fallback_id)
+  if cid:
+   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid)
+  m=set_attr(m,"tvg-name",name)
   forced_logo=FORCED_LOGOS.get(name)
   if forced_logo:
    desired=local_logo_ref(forced_logo)
@@ -382,22 +390,39 @@ for r in rows:
    desired=local_logo_ref(LOGOS[name])
    if desired: m=set_attr(m,"tvg-logo",desired); stats["logos"]+=1
  else:
-  key=norm(a.get("tvg-name") or r["name"]); pr=byname.get(key)
-  # Same-name channels in different broadcast countries are distinct identities.
-  # In particular, the US-distributed Thikana TV must not overwrite the
-  # Bangladesh Backup identity merely because their display names match.
-  if pr:
-   backup_country=(a.get("tvg-country") or id_country(a.get("tvg-id") or a.get("channel-id")) or "").upper()
-   primary_country=(pr["a"].get("tvg-country") or id_country(pr["a"].get("tvg-id") or pr["a"].get("channel-id")) or "").upper()
-   if backup_country and primary_country and backup_country != primary_country:
-    pr=None
-  if not pr and key=="jalshamovies": pr=byname.get(norm("Jalsha Movies HD"))
+  key=norm(a.get("tvg-name") or r["name"]); candidates=byname.get(key,[])
+  backup_country=(a.get("tvg-country") or id_country(a.get("tvg-id") or a.get("channel-id")) or "").upper()
+  pr=None
+  if backup_country:
+   country_matches=[candidate for candidate in candidates if (candidate["a"].get("tvg-country") or id_country(candidate["a"].get("tvg-id") or candidate["a"].get("channel-id")) or "").upper()==backup_country]
+   if len(country_matches)==1: pr=country_matches[0]
+   elif len(candidates)==1:
+    candidate_country=(candidates[0]["a"].get("tvg-country") or id_country(candidates[0]["a"].get("tvg-id") or candidates[0]["a"].get("channel-id")) or "").upper()
+    if not candidate_country: pr=candidates[0]
+  elif len(candidates)==1:
+   pr=candidates[0]
+  # If the name is ambiguous, never inherit the first matching primary row.
+  if not pr and key=="jalshamovies":
+   jalsha_candidates=byname.get(norm("Jalsha Movies HD"),[])
+   if len(jalsha_candidates)==1: pr=jalsha_candidates[0]
   name=CASE.get(clean((pr["a"].get("tvg-name") or pr["name"]) if pr else (a.get("tvg-name") or r["name"])),clean((pr["a"].get("tvg-name") or pr["name"]) if pr else (a.get("tvg-name") or r["name"])))
   if key=="natgeowild" and not pr: name="Nat Geo Wild"
   if key=="sonybbcearth" and not pr: name="Sony BBC Earth"
-  cid=normalize_id((pr["a"].get("tvg-id") if pr else None) or IDS.get(name) or a.get("tvg-id") or "custom."+norm(name))
-  m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name); display=name
-  logo=FORCED_LOGOS.get(name) or (pr["a"].get("tvg-logo") if pr else None) or LOGOS.get(r["name"]) or LOGOS.get(name)
+  existing_id=a.get("tvg-id") or a.get("channel-id")
+  if pr:
+   cid=normalize_id(pr["a"].get("tvg-id") or pr["a"].get("channel-id") or IDS.get(name) or "custom."+norm(name))
+  elif existing_id:
+   cid=normalize_id(existing_id)
+  elif not candidates:
+   cid=normalize_id(IDS.get(name) or "custom."+norm(name))
+  else:
+   # Same-name primary candidates exist but none can be identified by country.
+   cid=""
+  if cid:
+   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid)
+  m=set_attr(m,"tvg-name",name); display=name
+  logo=FORCED_LOGOS.get(name) or (pr["a"].get("tvg-logo") if pr else None)
+  if not logo and len(candidates)<=1: logo=LOGOS.get(r["name"]) or LOGOS.get(name)
   if logo:
    logo_url=local_logo_ref(logo)
    current_logo=(a.get("tvg-logo") or "").strip()
