@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5307,
-  "all_explicitly_referenced_logo_files": 2570,
-  "runtime_referenced_logo_files": 2568,
-  "playlist_referenced_logo_files": 2526,
-  "apparently_unreferenced_by_any_text_file": 2737,
-  "apparently_unreferenced_by_runtime_sources": 2739,
+  "all_explicitly_referenced_logo_files": 2571,
+  "runtime_referenced_logo_files": 2569,
+  "playlist_referenced_logo_files": 2527,
+  "apparently_unreferenced_by_any_text_file": 2736,
+  "apparently_unreferenced_by_runtime_sources": 2738,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -10412,6 +10412,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/2tv-1080p.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -13763,6 +13764,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/espn-2-latin-america-884126da40.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -13774,6 +13776,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/espn-3-latin-america-5d7066620a.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -13784,21 +13787,25 @@
       "reports/logo-source-registry.json"
     ],
     "logos/espn-4-latin-america-36fdd20088255ff1effc.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/espn-5-latin-america-9728fabc58979185abf9.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/espn-6-latin-america-d2cb135b2b4f86ef5cd3.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/espn-7-latin-america-3a4d413a781020f658a6.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -13809,6 +13816,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/espn-latin-america-colombia-e2f56d64d47335b5a64f.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -18495,6 +18503,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/setanta-sports-2-eurasia.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -18958,6 +18967,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/sportivnyy.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/sports-first-tv.png": [
       "IPTV-Playlist.m3u",
@@ -22206,6 +22218,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/2tv-1080p.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -25558,6 +25571,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/espn-2-latin-america-884126da40.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -25569,6 +25583,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/espn-3-latin-america-5d7066620a.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -25579,21 +25594,25 @@
       "reports/logo-source-registry.json"
     ],
     "logos/espn-4-latin-america-36fdd20088255ff1effc.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/espn-5-latin-america-9728fabc58979185abf9.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/espn-6-latin-america-d2cb135b2b4f86ef5cd3.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/espn-7-latin-america-3a4d413a781020f658a6.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -25604,6 +25623,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/espn-latin-america-colombia-e2f56d64d47335b5a64f.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -30294,6 +30314,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/setanta-sports-2-eurasia.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -30758,6 +30779,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/sportivnyy.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/sports-first-tv.png": [
       "IPTV-Playlist.m3u",
@@ -35824,7 +35848,6 @@
     "logos/sony-tv-hd.png",
     "logos/spacetoon-arabic-576p.png",
     "logos/spocetoon.png",
-    "logos/sportivnyy.png",
     "logos/squirrel-576p.png",
     "logos/star-action-720p.png",
     "logos/star-bangla.png",
