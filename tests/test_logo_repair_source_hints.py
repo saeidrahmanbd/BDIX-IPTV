@@ -362,5 +362,16 @@ class LogoRepairSourceTests(unittest.TestCase):
         self.assertTrue(logo_repair.file_is_valid(ROOT / "logos" / "mytime-movie-network.png"))
 
 
+    def test_peace_tv_and_floracing_use_exact_existing_local_assets(self):
+        expected = {
+            "peace tv": "peace-tv-english.png",
+            "floracing": "floracing-24-7.png",
+        }
+        for channel, asset in expected.items():
+            with self.subTest(channel=channel):
+                self.assertEqual(logo_repair.LOCAL_OVERRIDES[channel], asset)
+                self.assertTrue(logo_repair.file_is_valid(ROOT / "logos" / asset))
+
+
 if __name__ == "__main__":
     unittest.main()
