@@ -78,6 +78,44 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             finally:
                 os.chdir(old_cwd)
 
+    def test_international_review_quarantine_does_not_block_a_new_verified_primary(self):
+        import os
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = Path.cwd()
+            os.chdir(directory)
+            try:
+                playlist = Path("International-Playlist.m3u")
+                baseline = Path("before.m3u")
+                report = Path("report.md")
+                prefix = '#EXTM3U\\n#PLAYLIST-STUDIO-CATEGORIES:["Review","New Channels","New Backups","Backup"]\\n'
+                review = (
+                    '#EXTINF:-1 tvg-id="AMCEurope.uk@Romania" tvg-name="AMC Europe Romania" '
+                    'tvg-country="RO" tvg-content="Movies" group-title="Review",AMC Europe Romania\\n'
+                    'https://unverified.example/amc-europe-romania.m3u8\\n'
+                )
+                primary = (
+                    '#EXTINF:-1 tvg-id="AMCEurope.uk@Romania" tvg-name="AMC Europe Romania" '
+                    'tvg-country="RO" tvg-content="Movies" group-title="New Channels",AMC Europe Romania\\n'
+                    'https://verified.example/amc-europe-romania.m3u8\\n'
+                )
+                playlist.write_text(prefix + review + primary, encoding="utf-8")
+                baseline.write_text(prefix + review, encoding="utf-8")
+                report.write_text("# Report\\n", encoding="utf-8")
+                previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+                os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+                try:
+                    final_mode(str(playlist), str(report), str(baseline), "international")
+                finally:
+                    if previous is None:
+                        os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                    else:
+                        os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+                self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
+                self.assertNotIn("already represented elsewhere", report.read_text(encoding="utf-8"))
+            finally:
+                os.chdir(old_cwd)
+
     def test_news_filter_does_not_misclassify_ndtv_good_times(self):
         self.assertFalse(NEWS_RE.search("NDTV Good Times"))
         self.assertTrue(NEWS_RE.search("NDTV 24x7"))
