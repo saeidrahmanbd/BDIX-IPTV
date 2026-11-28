@@ -16163,7 +16163,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/match-ultra-d5f0557d59.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -18960,6 +18959,7 @@
     ],
     "logos/stadium-164c0cfda7.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/star-bharat.png": [
@@ -21656,7 +21656,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/voyo-sport-1-607370d90c.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/vtu.png": [
       "International-Playlist.m3u",
@@ -27912,7 +27913,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/match-ultra-d5f0557d59.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -30713,6 +30713,7 @@
     ],
     "logos/stadium-164c0cfda7.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/star-bharat.png": [
@@ -33410,7 +33411,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/voyo-sport-1-607370d90c.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/vtu.png": [
       "International-Playlist.m3u",
