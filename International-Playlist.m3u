@@ -4,7 +4,7 @@
 # Facebook: https://www.facebook.com/saeid.rahman.sr
 # Email: saeidrahman.mkt@gmail.com
 #=================================
-#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "Argentina", "Brazil", "Bulgaria", "Canada", "Chile", "China", "Colombia", "Costa Rica", "Czech Republic", "Dominican Republic", "Estonia", "France", "Germany", "Greece", "Hungary", "Iran", "Italy", "Lebanon", "Mexico", "Netherlands", "North Macedonia", "Panama", "Paraguay", "Peru", "Poland", "Romania", "Russia", "Saudi Arabia", "Spain", "Sweden", "Turkey", "Ukraine", "United Kingdom", "United States", "Uzbekistan", "Vietnam", "International", "News", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
+#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "Argentina", "Brazil", "Bulgaria", "Canada", "Chile", "China", "Colombia", "Costa Rica", "Czech Republic", "DO", "Estonia", "France", "Germany", "Greece", "Hungary", "Iran", "Italy", "Lebanon", "Mexico", "Netherlands", "North Macedonia", "Panama", "Paraguay", "Peru", "Poland", "Romania", "Russia", "Saudi Arabia", "Spain", "Sweden", "Turkey", "Ukraine", "United Kingdom", "United States", "Uzbekistan", "Vietnam", "International", "News", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Review", "New Channels", "New Backups", "Backup"]
 #PLAYLIST-STUDIO-NAME:"International Playlist"
 #EXTINF:-1 tvg-id="AnandaTV.bd" channel-id="AnandaTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Ananda TV",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
@@ -1014,27 +1014,27 @@ https://ocko-live.ssl.cdn.cra.cz/channels/ocko_gold/playlist.m3u8
 https://dash4.antik.sk/live/test_ocko_star/playlist.m3u8
 #EXTINF:-1 tvg-id="RetroMusicTV.cz@SD" tvg-language="ces" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/retro-music-tv.png" tvg-country="CZ" tvg-content="Music" group-title="Czech Republic" tvg-name="Retro Music TV",Retro Music TV
 https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8
-#EXTINF:-1 tvg-id="Boreal.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/boreal-cd9844f465.png" tvg-country="DO" tvg-content="Movies" group-title="Dominican Republic" tvg-name="Boreal",Boreal
+#EXTINF:-1 tvg-id="Boreal.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/boreal-cd9844f465.png" tvg-country="DO" tvg-content="Movies" group-title="DO" tvg-name="Boreal",Boreal
 https://edge.essastream.com/borealtelevision/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="FuegoTV.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fuego-tv-23f3f22378.png" tvg-country="DO" tvg-content="Music" group-title="Dominican Republic" tvg-name="Fuego TV",Fuego TV
+#EXTINF:-1 tvg-id="FuegoTV.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fuego-tv-23f3f22378.png" tvg-country="DO" tvg-content="Music" group-title="DO" tvg-name="Fuego TV",Fuego TV
 https://streamunoapp.com:3553/live/cromtvlive.m3u8
-#EXTINF:-1 tvg-id="MaimonTVCanal3.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maimon-tv-canal-3-022efdea1e.png" tvg-country="DO" tvg-content="Music" group-title="Dominican Republic" tvg-name="Maimon TV Canal 3",Maimon TV Canal 3
+#EXTINF:-1 tvg-id="MaimonTVCanal3.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maimon-tv-canal-3-022efdea1e.png" tvg-country="DO" tvg-content="Music" group-title="DO" tvg-name="Maimon TV Canal 3",Maimon TV Canal 3
 https://tele-stream.telecasa.net/live/st3/maimontv-hd/index.m3u8
-#EXTINF:-1 tvg-id="MakaoTV.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makao-tv-0781b48dfa.png" tvg-country="DO" tvg-content="Music" group-title="Dominican Republic" tvg-name="Makao TV",Makao TV
+#EXTINF:-1 tvg-id="MakaoTV.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makao-tv-0781b48dfa.png" tvg-country="DO" tvg-content="Music" group-title="DO" tvg-name="Makao TV",Makao TV
 https://live.obslivestream.com/makaomux/index.m3u8
-#EXTINF:-1 tvg-id="MegaCineTV.do@HD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mega-cine-tv-bafa760f60.png" tvg-country="DO" tvg-content="Movies" group-title="Dominican Republic" tvg-name="Mega Cine TV",Mega Cine TV
+#EXTINF:-1 tvg-id="MegaCineTV.do@HD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mega-cine-tv-bafa760f60.png" tvg-country="DO" tvg-content="Movies" group-title="DO" tvg-name="Mega Cine TV",Mega Cine TV
 https://cnn.hostlagarto.com/megacinetv/playlist.m3u8
-#EXTINF:-1 tvg-id="MontonesTV.do@HD" channel-id="MontonesTV.do@HD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/montones-tv-af126eccd7.png" tvg-country="DO" tvg-content="Music" group-title="Dominican Republic" tvg-name="Montones TV [ ]",Montones TV [ ]
+#EXTINF:-1 tvg-id="MontonesTV.do@HD" channel-id="MontonesTV.do@HD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/montones-tv-af126eccd7.png" tvg-country="DO" tvg-content="Music" group-title="DO" tvg-name="Montones TV [ ]",Montones TV [ ]
 https://183.giatvcdn.com/ssh101/ssh101/montonestv1/playlist.m3u8
-#EXTINF:-1 tvg-id="SiembraTV.do@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/siembra-tv-dominican-republic-d39394bc42.png" tvg-country="DO" tvg-content="Music" group-title="Dominican Republic" tvg-name="Siembra TV (Dominican Republic)",Siembra TV (Dominican Republic)
+#EXTINF:-1 tvg-id="SiembraTV.do@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/siembra-tv-dominican-republic-d39394bc42.png" tvg-country="DO" tvg-content="Music" group-title="DO" tvg-name="Siembra TV (Dominican Republic)",Siembra TV (Dominican Republic)
 https://streamunoapp.com:3809/live/siembratvlive.m3u8
-#EXTINF:-1 tvg-id="TarimaTV.do@HD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarima-tv-23e152e9ee.png" tvg-country="DO" tvg-content="Music" group-title="Dominican Republic" tvg-name="Tarima TV",Tarima TV
+#EXTINF:-1 tvg-id="TarimaTV.do@HD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarima-tv-23e152e9ee.png" tvg-country="DO" tvg-content="Music" group-title="DO" tvg-name="Tarima TV",Tarima TV
 http://190.122.104.210:5080/LiveApp/streams/tarima.m3u8
-#EXTINF:-1 tvg-id="TeleDominicanaTV.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tele-dominicana-tv-db3d804f55.png" tvg-country="DO" tvg-content="Music" group-title="Dominican Republic" tvg-name="Tele Dominicana TV",Tele Dominicana TV
+#EXTINF:-1 tvg-id="TeleDominicanaTV.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tele-dominicana-tv-db3d804f55.png" tvg-country="DO" tvg-content="Music" group-title="DO" tvg-name="Tele Dominicana TV",Tele Dominicana TV
 https://vdopanel.jlahozconsulting.com/p/3417/hybrid/play.m3u8
-#EXTINF:-1 tvg-id="TopicalMoonRD.do@HD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/topical-moon-rd-f4e1a4fa6f.png" tvg-country="DO" tvg-content="Music" group-title="Dominican Republic" tvg-name="Topical Moon RD",Topical Moon RD
+#EXTINF:-1 tvg-id="TopicalMoonRD.do@HD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/topical-moon-rd-f4e1a4fa6f.png" tvg-country="DO" tvg-content="Music" group-title="DO" tvg-name="Topical Moon RD",Topical Moon RD
 https://sistemastr.tropicalmoonmedia.com/live/56BE17DB16EB76C9F2DDB8346F4DFA4E/30.m3u8
-#EXTINF:-1 tvg-id="TVExitos.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-exitos-a7aac8d99c.png" tvg-country="DO" tvg-content="Music" group-title="Dominican Republic" tvg-name="TV Exitos",TV Exitos
+#EXTINF:-1 tvg-id="TVExitos.do@SD" tvg-language="spa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-exitos-a7aac8d99c.png" tvg-country="DO" tvg-content="Music" group-title="DO" tvg-name="TV Exitos",TV Exitos
 https://streaming.grupomediosdelnorte.com:19360/tvexitos/tvexitos.m3u8
 #EXTINF:-1 tvg-id="BestofDanceTV.ee@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/best-of-dance-tv-1080p.png" tvg-country="EE" tvg-content="Music" group-title="Estonia" tvg-name="Best of Dance TV",Best of Dance TV
 https://m1b2.worldcast.tv/dancetelevisionone/dancetelevisionone.m3u8
