@@ -22,6 +22,10 @@ class ActiveChannelNumberingTests(unittest.TestCase):
             'https://stream.example/new-b.m3u8\n'
             '#EXTINF:-1 tvg-id="nb" tvg-name="New Backup B" tvg-chno="702" group-title="New Backups",New Backup B\n'
             'https://stream.example/new-backup-b.m3u8\n'
+            '#EXTINF:-1 tvg-id="r" tvg-name="Review Existing" tvg-chno="703" group-title="Review",Review Existing\n'
+            'https://stream.example/review-existing.m3u8\n'
+            '#EXTINF:-1 tvg-id="rm" tvg-name="Review Missing" group-title="Review",Review Missing\n'
+            'https://stream.example/review-missing.m3u8\n'
             '#EXTINF:-1 tvg-id="m" tvg-name="Movie" group-title="Indian Movies",Movie\n'
             'https://stream.example/movie.m3u8\n'
         )
@@ -35,13 +39,19 @@ class ActiveChannelNumberingTests(unittest.TestCase):
         self.assertLess(updated.index(",Zeta"), updated.index(",Alpha"))
         self.assertLess(updated.index(",Alpha"), updated.index(",Movie"))
 
-    def test_review_and_discovery_queues_are_unnumbered_and_in_canonical_order(self):
+    def test_review_and_discovery_queues_preserve_existing_numbers_without_filling_missing_ones(self):
         updated, _ = normalize_playlist_text(self.sample)
         self.assertLess(updated.index(",Queue B"), updated.index(",New B"))
         self.assertLess(updated.index(",New B"), updated.index(",New Backup B"))
-        self.assertNotIn('tvg-chno="700"', updated)
-        self.assertNotIn('tvg-chno="701"', updated)
-        self.assertNotIn('tvg-chno="702"', updated)
+        self.assertIn('tvg-chno="700"', updated)
+        self.assertIn('tvg-chno="701"', updated)
+        self.assertIn('tvg-chno="702"', updated)
+        self.assertIn('tvg-chno="703"', updated)
+        review_missing = next(
+            line for line in updated.splitlines()
+            if line.startswith("#EXTINF:") and 'tvg-name="Review Missing"' in line
+        )
+        self.assertNotIn("tvg-chno=", review_missing)
 
     def test_stream_url_inventory_is_unchanged(self):
         updated, _ = normalize_playlist_text(self.sample)
