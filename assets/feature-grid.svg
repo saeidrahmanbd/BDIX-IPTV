@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" role="img" aria-label="BDIX-IPTV highlights: Bangla-first, organized groups, programme guide, local logos, alternate streams, transparent reports">
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <!-- Row 1 -->
+    <rect x="20" y="20" width="300" height="160" rx="18" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="20" y="20" width="300" height="12" rx="6" fill="#006a4e"/>
+    <circle cx="75" cy="105" r="34" fill="#006a4e"/>
+    <circle cx="75" cy="105" r="13" fill="#f42a41"/>
+    <text x="125" y="95" font-size="22" font-weight="700" fill="#1f2328">Bangla-first</text>
+    <text x="125" y="122" font-size="15" fill="#57606a">Bangladesh channels at the core,</text>
+    <text x="125" y="142" font-size="15" fill="#57606a">with Indian and Pakistani options</text>
+
+    <rect x="350" y="20" width="300" height="160" rx="18" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="350" y="20" width="300" height="12" rx="6" fill="#0969da"/>
+    <circle cx="405" cy="105" r="34" fill="#0969da"/>
+    <rect x="388" y="92" width="34" height="8" rx="3" fill="#fff"/>
+    <rect x="388" y="106" width="22" height="8" rx="3" fill="#fff"/>
+    <rect x="388" y="120" width="28" height="8" rx="3" fill="#fff"/>
+    <text x="455" y="95" font-size="22" font-weight="700" fill="#1f2328">Organized groups</text>
+    <text x="455" y="122" font-size="15" fill="#57606a">Country and genre folders that</text>
+    <text x="455" y="142" font-size="15" fill="#57606a">are easy to browse</text>
+
+    <rect x="680" y="20" width="300" height="160" rx="18" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="680" y="20" width="300" height="12" rx="6" fill="#2ea44f"/>
+    <circle cx="735" cy="105" r="34" fill="#2ea44f"/>
+    <text x="735" y="113" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">EPG</text>
+    <text x="785" y="95" font-size="22" font-weight="700" fill="#1f2328">Programme guide</text>
+    <text x="785" y="122" font-size="15" fill="#57606a">One shared XMLTV guide for</text>
+    <text x="785" y="142" font-size="15" fill="#57606a">both playlists, with coverage reports</text>
+
+    <!-- Row 2 -->
+    <rect x="20" y="200" width="300" height="160" rx="18" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="20" y="200" width="300" height="12" rx="6" fill="#f5c542"/>
+    <rect x="50" y="240" width="70" height="50" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+    <circle cx="85" cy="265" r="10" fill="#8957e5"/>
+    <text x="145" y="275" font-size="22" font-weight="700" fill="#1f2328">Local logos</text>
+    <text x="145" y="302" font-size="15" fill="#57606a">Repository-hosted logo assets</text>
+    <text x="145" y="322" font-size="15" fill="#57606a">where available</text>
+
+    <rect x="350" y="200" width="300" height="160" rx="18" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="350" y="200" width="300" height="12" rx="6" fill="#8957e5"/>
+    <circle cx="395" cy="265" r="18" fill="#8957e5"/>
+    <circle cx="430" cy="265" r="18" fill="#8957e5" opacity="0.55"/>
+    <text x="485" y="275" font-size="22" font-weight="700" fill="#1f2328">Alternate streams</text>
+    <text x="485" y="302" font-size="15" fill="#57606a">Backup entries kept where</text>
+    <text x="485" y="322" font-size="15" fill="#57606a">they are maintained</text>
+
+    <rect x="680" y="200" width="300" height="160" rx="18" fill="#f6f8fa" stroke="#d0d7de"/>
+    <rect x="680" y="200" width="300" height="12" rx="6" fill="#e5534b"/>
+    <rect x="712" y="238" width="36" height="46" rx="4" fill="#2ea44f"/>
+    <rect x="752" y="238" width="36" height="46" rx="4" fill="#f5c542"/>
+    <rect x="792" y="238" width="36" height="46" rx="4" fill="#e5534b"/>
+    <text x="845" y="275" font-size="22" font-weight="700" fill="#1f2328">Transparent</text>
+    <text x="845" y="302" font-size="15" fill="#57606a">Automated checks publish reports</text>
+    <text x="845" y="322" font-size="15" fill="#57606a">you can inspect yourself</text>
+  </g>
+</svg>
