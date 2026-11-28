@@ -8508,5 +8508,55 @@
     "status": "third_party_verified",
     "source_url": "https://bridgemusic.ru/s/img/channels/vostok-white.svg",
     "notes": "IPTV-org exact ID: BRIDGEVostok.ru IPTV-org public logo dataset Source page: https://bridgemusic.ru/s/img/channels/vostok-white.svg"
+  },
+  "IPTV-Playlist.m3u||KTN TV|logos/ktn-tv-811221a8174dfa2fb737.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/en/8/8e/Sindhi_TV_KTN.jpg",
+    "notes": "Exact external logo asset KTN Pakistan logo URL listed in the IPTV-org channel record for KTN.pk; original broadcaster rights remain with Kawish Television Network. Source page: https://iptv-org.github.io/channels/pk/KTN"
+  },
+  "IPTV-Playlist.m3u||Hi-Yah!|logos/hi-yah-834e24a6ea0789d57e1b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/sOYAnTB.png",
+    "notes": "IPTV-org exact unique channel name: HiYAH.us IPTV-org public logo dataset Source page: https://i.imgur.com/sOYAnTB.png"
+  },
+  "IPTV-Playlist.m3u||Fazal TV|logos/fazal-tv-3fa60cbd5c0da05753bf.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/c0fvKia.png",
+    "notes": "Exact external logo asset Exact Fazal TV artwork paired with tvg-id FazalTV.pk@SD in a published IPTV playlist; source attribution only, no separate copyright licence asserted. Source page: https://gist.github.com/ZeiTeria/68851fb02bbb95525d89ff0ff0afceae"
+  },
+  "IPTV-Playlist.m3u||DAZN 3|logos/dazn-3-f06dda72e8c387422ecb.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/2rXsq2m.png",
+    "notes": "IPTV-org exact unique channel name: DAZN3.uk IPTV-org public logo dataset Source page: https://i.imgur.com/2rXsq2m.png"
+  },
+  "IPTV-Playlist.m3u||Digi Sport 1|logos/digi-sport-1-4b6a66d11b7fa3e3cb82.png": {
+    "status": "third_party_verified",
+    "source_url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/digi-sport-1-ro.png",
+    "notes": "Curated exact channel/region asset Source repository; license must be checked at source Source page: https://github.com/tv-logo/tv-logos/blob/main/countries/romania/digi-sport-1-ro.png"
+  },
+  "IPTV-Playlist.m3u||Digi Sport 2|logos/digi-sport-2-9f639b41883e51000b5d.png": {
+    "status": "third_party_verified",
+    "source_url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/digi-sport-2-ro.png",
+    "notes": "Curated exact channel/region asset Source repository; license must be checked at source Source page: https://github.com/tv-logo/tv-logos/blob/main/countries/romania/digi-sport-2-ro.png"
+  },
+  "IPTV-Playlist.m3u||DIRECTV Sports|logos/directv-sports-9f3ec774cab60d308e91.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_DIRECTV_Sports.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "notes": "Wikimedia Commons exact-logo search CC BY-SA 3.0 Source page: https://commons.wikimedia.org/wiki/File:Logo_DIRECTV_Sports.jpg"
+  },
+  "IPTV-Playlist.m3u||Estrella TV|logos/estrella-tv-f92611fda25cc9bfdc9f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Estrella_TV_Logo_2020.png/500px-Estrella_TV_Logo_2020.png",
+    "notes": "IPTV-org exact unique channel name: EstrellaTV.us IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Estrella_TV_Logo_2020.png/500px-Estrella_TV_Logo_2020.png"
+  },
+  "IPTV-Playlist.m3u||FS1 Salzburg|logos/fs1-salzburg-3871539d89187ec95867.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/74gMaPK.png",
+    "notes": "IPTV-org exact unique channel name: FS1Salzburg.at IPTV-org public logo dataset Source page: https://i.imgur.com/74gMaPK.png"
+  },
+  "IPTV-Playlist.m3u||Sportdigital|logos/sportdigital-4cf991b8921d3fa7de6a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/NDbWxqF.png",
+    "notes": "IPTV-org exact unique channel name: SportdigitalFUSSBALL.de IPTV-org public logo dataset Source page: https://i.imgur.com/NDbWxqF.png"
   }
 }

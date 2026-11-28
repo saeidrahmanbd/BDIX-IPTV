@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T09:56:10+00:00**
+Generated: **2026-11-28T10:03:09+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **2f4785798641925c4ca332c77a07fc13a208f2c71d0bc65dfed5d1765b836a8e**
+- IPTV-Playlist.m3u SHA-256: **3852d11f916aa471d5b415bf96ebffa3d69dd6074d47513294f5d032eec725f3**
 - International-Playlist.m3u SHA-256: **248ff78f7e53dc302880e5cb413bfd2f727021f7d7d92a3f3c6f5222618bbe7b**
 
 ## Summary
@@ -15,10 +15,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
-- Raster/SVG assets with short side under 64 px: **148**
-- Exact-byte duplicate asset clusters: **750**
-- Playlist references whose asset stem differs from the normalized channel name: **1631**
-- Unreferenced image assets immediately inside logos/: **997** (not deleted; other tooling or playlists may use them)
+- Raster/SVG assets with short side under 64 px: **149**
+- Exact-byte duplicate asset clusters: **752**
+- Playlist references whose asset stem differs from the normalized channel name: **1603**
+- Unreferenced image assets immediately inside logos/: **998** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -82,6 +82,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | eurosport-4k-czechia-1a359dc9dd.png | 576×54 | yes |
 | eurosport-france.png | 512×52 | no |
 | express-entertainment.png | 304×61 | no |
+| fazal-tv-3fa60cbd5c0da05753bf.png | 132×58 | yes |
 | filmax.png | 124×45 | no |
 | filmazia.png | 128×23 | no |
 | filmuadrama-1080p.png | 512×49 | yes |
@@ -431,6 +432,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/deewana-hd-540p.png, logos/deewana-hd.png, logos/international/deewana-hd-540p.png
 - logos/detskoe-kino-ab814c82bbcd50f64200.png, logos/international/detskoe-kino-not-24-7.png
 - logos/dhe-1080p.png, logos/international/dhe-1080p.png
+- logos/digi-sport-1-4b6a66d11b7fa3e3cb82.png, logos/nvisionbd-official-digi-sport-1.png
+- logos/digi-sport-2-9f639b41883e51000b5d.png, logos/nvisionbd-official-digi-sport-2.png
 - logos/disco-mix-576p.png, logos/international/disco-mix-576i-geo-blocked.png, logos/international/disco-mix-576p.png
 - logos/disco-polo-music-2b6aaf92aa.png, logos/international/disco-polo-music.png
 - logos/discovery-channel-82927394a8.png, logos/unused/discovery-channel-82927394a8.png
@@ -1004,7 +1007,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Nexus TV | nexus-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | NRB TV | nrb-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Probashi TV | probashi-tv.png | Bangladesh |
-| IPTV-Playlist.m3u | Raatdin Bangla | 4-sides-tv-6a436fa007.png | Bangladesh |
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Shikor TV Canada | shikor-tv-canada.png | Bangladesh |
@@ -1100,7 +1102,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Green Entertainment | greenentertainment.png | Pakistani |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Jalwa TV | jalwa-tv.png | Pakistani |
-| IPTV-Playlist.m3u | KTN TV | 4-sides-tv-6a436fa007.png | Pakistani |
+| IPTV-Playlist.m3u | KTN TV | ktn-tv-811221a8174dfa2fb737.png | Pakistani |
 | IPTV-Playlist.m3u | See TV | see-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Sindh TV | sindh-tv.png | Pakistani |
 | IPTV-Playlist.m3u | Tag TV | tag-tv.png | Pakistani |
@@ -1117,7 +1119,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | FashionTV Paris L'Original | fashion-tv-aa7f9461cf.png | International |
 | IPTV-Playlist.m3u | FashionTV Secrets | fashion-tv-aa7f9461cf.png | International |
 | IPTV-Playlist.m3u | Global Fashion Channel | digital-fashion.png | International |
-| IPTV-Playlist.m3u | Hi-Yah! | 4-sides-tv-6a436fa007.png | International |
 | IPTV-Playlist.m3u | Hollywood | hollywood-hd.png | International |
 | IPTV-Playlist.m3u | MBC | mbc-bollywood.png | International |
 | IPTV-Playlist.m3u | MyTime Movie (UK) | mytime-movie.png | International |
@@ -1129,7 +1130,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Radio Norba TV | radio-norba-tv.png | International |
 | IPTV-Playlist.m3u | RDS Social TV | rds-social-tv.png | International |
 | IPTV-Playlist.m3u | Retro Music TV | retro-music-tv-1080p-610715c3c9.png | International |
-| IPTV-Playlist.m3u | Rock TV | 4-sides-tv-6a436fa007.png | International |
 | IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | International |
 | IPTV-Playlist.m3u | Stingray Today's Latin Pop | stingray-urban-beat-9bd52aa87f.png | International |
 | IPTV-Playlist.m3u | TRT Müzik | trt-muzik.png | International |
@@ -1178,8 +1178,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Religious |
 | IPTV-Playlist.m3u | Dua Channel | dua-channel.png | Religious |
 | IPTV-Playlist.m3u | Eman Channel | eman-tv-482a6c2567.png | Religious |
-| IPTV-Playlist.m3u | Fazal TV | 4-sides-tv-6a436fa007.png | Religious |
-| IPTV-Playlist.m3u | Fazal TV | 4-sides-tv-6a436fa007.png | Religious |
+| IPTV-Playlist.m3u | Fazal TV | fazal-tv-3fa60cbd5c0da05753bf.png | Religious |
+| IPTV-Playlist.m3u | Fazal TV | fazal-tv-3fa60cbd5c0da05753bf.png | Religious |
 | IPTV-Playlist.m3u | Hyder TV | hyder-tv-ab08d4568b.png | Religious |
 | IPTV-Playlist.m3u | iON TV UK | ion-tv-uk.png | Religious |
 | IPTV-Playlist.m3u | Iqraa TV | iqraa-tv.png | Religious |
@@ -1192,7 +1192,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Religious |
 | IPTV-Playlist.m3u | Peace TV English | peace-tv-english.png | Religious |
 | IPTV-Playlist.m3u | Peace TV Urdu | peace-tv-urdu.png | Religious |
-| IPTV-Playlist.m3u | Quran Radio TV SMC | 4-sides-tv-6a436fa007.png | Religious |
 | IPTV-Playlist.m3u | Quran TV | quran-tv.png | Religious |
 | IPTV-Playlist.m3u | TV One UK | tv-one-uk.png | Religious |
 | IPTV-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Religious |
@@ -1205,13 +1204,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | beIN SPORTS XTRA | bein-sports-xtra-en-espanol.png | Sports |
 | IPTV-Playlist.m3u | Channel Fight | channel-fight.png | Sports |
 | IPTV-Playlist.m3u | Claro Sports 1 | claro-sports-1f0c0ac492.png | Sports |
-| IPTV-Playlist.m3u | DAZN 3 | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | Digi Sport 1 | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | Digi Sport 2 | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | DIRECTV Sports | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | Eliminatorias CONCACAF | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | Eliminatorias CONCACAF | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | Eliminatorias CONCACAF | 4-sides-tv-6a436fa007.png | Sports |
 | IPTV-Playlist.m3u | ESPN 2 | espn-2-latin-america-884126da40.png | Sports |
 | IPTV-Playlist.m3u | ESPN 2 | espn-2-latin-america-884126da40.png | Sports |
 | IPTV-Playlist.m3u | ESPN 2 | espn-2-latin-america-884126da40.png | Sports |
@@ -1229,7 +1221,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | ESPN Premium Chile | espn.png | Sports |
 | IPTV-Playlist.m3u | ESPN Premium | espn.png | Sports |
 | IPTV-Playlist.m3u | ESPN2 | espn-2-united-states-7a4d2daafc.png | Sports |
-| IPTV-Playlist.m3u | Estrella TV | 4-sides-tv-6a436fa007.png | Sports |
+| IPTV-Playlist.m3u | Estrella TV | estrella-tv-f92611fda25cc9bfdc9f.png | Sports |
 | IPTV-Playlist.m3u | Eurosport 1 | eurosport.png | Sports |
 | IPTV-Playlist.m3u | Eurosport 1 Germany | eurosport.png | Sports |
 | IPTV-Playlist.m3u | Eurosport 1 UK | eurosport.png | Sports |
@@ -1237,13 +1229,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Eurosport 2 Spain | eurosport.png | Sports |
 | IPTV-Playlist.m3u | FIFA+ Women | fifa-plus-women-6465461e16.png | Sports |
 | IPTV-Playlist.m3u | FITE 24 | fite-24-7.png | Sports |
-| IPTV-Playlist.m3u | FS1 Salzburg | 4-sides-tv-6a436fa007.png | Sports |
 | IPTV-Playlist.m3u | Fuel TV | fuel-tv.png | Sports |
 | IPTV-Playlist.m3u | Futbol | futbol-tv-068fcbdde9.png | Sports |
 | IPTV-Playlist.m3u | Goal TV | goal-tv-237cfbed.png | Sports |
 | IPTV-Playlist.m3u | Golf Channel | golf-channel-73bed53091.png | Sports |
 | IPTV-Playlist.m3u | RACING \| Hagerty | hagerty-28b469a78a61a85fda22.png | Sports |
-| IPTV-Playlist.m3u | Harlem Globetrotters | 4-sides-tv-6a436fa007.png | Sports |
 | IPTV-Playlist.m3u | Inter TV | inter-tv-italy-014d12b302.png | Sports |
 | IPTV-Playlist.m3u | MMA TV com 格斗 | mma-tv-com-85ca206b32.png | Sports |
 | IPTV-Playlist.m3u | NBA TV | nba-tv.png | Sports |
@@ -1259,11 +1249,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Red Bull TV | red-bull-tv.png | Sports |
 | IPTV-Playlist.m3u | Red Bull TV | red-bull-tv.png | Sports |
 | IPTV-Playlist.m3u | Red Bull TV | red-bull-tv.png | Sports |
-| IPTV-Playlist.m3u | RS Sports 1 | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | RS Sports 2 | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | RS Sports 3 | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | RS Sports 4 | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | RS Sports 5 | 4-sides-tv-6a436fa007.png | Sports |
 | IPTV-Playlist.m3u | Setanta Sport Moldova | setanta-sports-1-eurasia.png | Sports |
 | IPTV-Playlist.m3u | Setanta Sport Premium UA | setanta-sports-1-eurasia.png | Sports |
 | IPTV-Playlist.m3u | Setanta Sport Qazaqstan | setanta-sports-1-eurasia.png | Sports |
@@ -1272,8 +1257,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Setanta Sports 3 | setanta-sports-1-eurasia.png | Sports |
 | IPTV-Playlist.m3u | Setanta Sports 1 | setanta-sports-1-eurasia.png | Sports |
 | IPTV-Playlist.m3u | Setanta Sports 2 | setanta-sports-2-eurasia.png | Sports |
-| IPTV-Playlist.m3u | Sky Sport LaLiga | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | Sky Sports GT | 4-sides-tv-6a436fa007.png | Sports |
 | IPTV-Playlist.m3u | SN TV | sn-tv.png | Sports |
 | IPTV-Playlist.m3u | Sony Sports Ten 3 | sony-sports-ten-3-hindi.png | Sports |
 | IPTV-Playlist.m3u | Sport 1 (Hungary) | sport1-d42479c518.png | Sports |
@@ -1282,7 +1265,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Sport1 (Czech Republic) | sport1-d42479c518.png | Sports |
 | IPTV-Playlist.m3u | Sport2 (Czech Republic) | sport2-620b031a4a.png | Sports |
 | IPTV-Playlist.m3u | Sport5 | sport5-israel.png | Sports |
-| IPTV-Playlist.m3u | Sportdigital | 4-sides-tv-6a436fa007.png | Sports |
 | IPTV-Playlist.m3u | Sports First TV | sports-first-tv.png | Sports |
 | IPTV-Playlist.m3u | Sports Fishing TV | sports-fishing-tv-50d0f501d6.png | Sports |
 | IPTV-Playlist.m3u | Tennis Channel 2 | tennis-channel-2.png | Sports |
@@ -1290,12 +1272,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | TNT Sports | tnt-sports-1.png | Sports |
 | IPTV-Playlist.m3u | TNT Sports Premium | tnt-sports-1.png | Sports |
 | IPTV-Playlist.m3u | Trace Sport Stars | trace-sport.png | Sports |
-| IPTV-Playlist.m3u | TUDN | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | TUDN | 4-sides-tv-6a436fa007.png | Sports |
-| IPTV-Playlist.m3u | TUDN MX | 4-sides-tv-6a436fa007.png | Sports |
 | IPTV-Playlist.m3u | Türkmenistan Sport | turkmenistan-sport-714745951c.png | Sports |
 | IPTV-Playlist.m3u | UFC | ufc-tv.png | Sports |
-| IPTV-Playlist.m3u | USA ACCN | 4-sides-tv-6a436fa007.png | Sports |
 | IPTV-Playlist.m3u | Vía X Sport | x-sport.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports 2 | us-willow-sports-hd.png | Sports |
 | IPTV-Playlist.m3u | Astrakhan.RU Sport | astrahan-ru-sport-8c965f341f.png | Sports |
@@ -1321,7 +1299,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
 | IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
 | IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
-| IPTV-Playlist.m3u | BEIN SPORTS 3 | 4-sides-tv-6a436fa007.png | Backup |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Backup |
@@ -1348,7 +1325,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Desi Channel | desi-channel.png | Backup |
 | IPTV-Playlist.m3u | Disney Channel | disney-channel-india.png | Backup |
 | IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Backup |
-| IPTV-Playlist.m3u | Duronto TV | 4-sides-tv-6a436fa007.png | Backup |
+| IPTV-Playlist.m3u | Duronto TV | duronto-tv-2b3c7dd202.png | Backup |
 | IPTV-Playlist.m3u | Ekattor TV | ekattor-tv.png | Backup |
 | IPTV-Playlist.m3u | Ekattor TV | ekattor-tv.png | Backup |
 | IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Backup |
@@ -1356,7 +1333,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
-| IPTV-Playlist.m3u | Ekushey TV | 4-sides-tv-6a436fa007.png | Backup |
+| IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | IPTV-Playlist.m3u | Enterr10 Bangla | enter10-bangla.png | Backup |
 | IPTV-Playlist.m3u | Enterr10 Bangla | enter10-bangla.png | Backup |
 | IPTV-Playlist.m3u | Enterr10 Bangla | enter10-bangla.png | Backup |
@@ -1441,7 +1418,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | SA TV | sa-tv.png | Backup |
 | IPTV-Playlist.m3u | Safari TV | safari-tv.png | Backup |
-| IPTV-Playlist.m3u | Sananda TV | 4-sides-tv-6a436fa007.png | Indian Bangla |
+| IPTV-Playlist.m3u | Sananda TV | sananda-tv-af0df4f34c.png | Indian Bangla |
 | IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
 | IPTV-Playlist.m3u | Shemaroo TV | shemaroo-tv.png | Backup |
 | IPTV-Playlist.m3u | Shemaroo TV | shemaroo-tv.png | Backup |
@@ -1454,8 +1431,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
 | IPTV-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
 | IPTV-Playlist.m3u | Sony Sports Ten 3 | sony-sports-ten-3-hindi.png | Backup |
-| IPTV-Playlist.m3u | Sport 1 | 4-sides-tv-6a436fa007.png | Backup |
-| IPTV-Playlist.m3u | Sport 2 | 4-sides-tv-6a436fa007.png | Backup |
 | IPTV-Playlist.m3u | Star Plus | repaired-star-plus-166000bdde.png | Backup |
 | IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Backup |
 | IPTV-Playlist.m3u | Thalaa TV | thalaa-tv.png | Backup |
