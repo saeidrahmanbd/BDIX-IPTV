@@ -1,6 +1,6 @@
 # Stream Health Report
 
-Generated: **2026-11-28T17:51:35+00:00**
+Generated: **2026-11-28T17:56:11+00:00**
 Stream URL inventory SHA-256: **41255b51e075d36b980d74ed53109f117baf7b47284eca5bf84960fa9127e2b8**
 
 Probe environment: **GitHub-hosted ubuntu-latest runner**.
@@ -9,10 +9,10 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 ## Summary
 
 - Streams tested: **1373**
-- Reachable: **1307**
-- Failed this check: **66**
+- Reachable: **1306**
+- Failed this check: **67**
 - Persistent failures (3+ consecutive): **0**
-- Intermittent failures: **66**
+- Intermittent failures: **67**
 - Primary tested: **824**
 - Backup tested: **489**
 - Review-queue entries tested: **60**
@@ -23,7 +23,7 @@ A successful HTTP response confirms endpoint reachability, not guaranteed video/
 - Only HTTP 404 and 410 count as definitive failures; all other HTTP statuses and network/authentication errors are inconclusive.
 - Streaks count consecutive Bangladesh calendar days; repeated runs on one date count once, and a missed day resets the streak.
 
-- HTTP 404/410 (definitive): **17**
+- HTTP 404/410 (definitive): **18**
 - Inconclusive HTTP/network failure: **49**
 
 ## Persistent Failures
@@ -36,6 +36,7 @@ None.
 - **9X Jalwa** — Backup — streak 0 days — HTTP 403
 - **A Sports** — Backup — streak 0 days — HTTP 403
 - **Aakaash Aath** — Backup — streak 0 days — HTTP 403
+- **Balle Balle** — Backup — streak 1 days — HTTP 404
 - **Channel 9** — Backup — streak 0 days — HTTP 404
 - **Dangal 2** — Backup — streak 0 days — HTTP 403
 - **Goldmines Bollywood** — Backup — streak 0 days — HTTP 403
@@ -44,12 +45,11 @@ None.
 - **Mahaa Max** — Backup — streak 0 days — HTTP 403
 - **Mazhavil Manorama** — Backup — streak 0 days — HTTP 403
 - **PTV Sports** — Backup — streak 0 days — HTTP 403
-- **SA TV** — Backup — streak 0 days — HTTP 500
 - **Shanson TV** — Backup — streak 0 days — HTTP 403
 - **Shubh Cinema TV** — Backup — streak 0 days — HTTP 403
 - **Star Sports 2** — Backup — streak 0 days — HTTP 403
-- **Suriyan TV** — Backup — streak 0 days — HTTP 503
-- **beIN SPORTS 3** — Backup — streak 0 days — HTTP 407
+- **beIN SPORTS 2** — Backup — streak 0 days — 200
+- **Desh TV** — Bangladesh — streak 0 days — HTTP 500
 - **Sony Aath** — Indian Bangla — streak 0 days — HTTP 404
 - **Apna Punjab TV** — Indian Entertainment — streak 0 days — HTTP 404
 - **Asianet Middle East** — Indian Entertainment — streak 0 days — HTTP 403
@@ -63,7 +63,7 @@ None.
 - **MH One Movies** — Indian Movies — streak 0 days — HTTP 403
 - **Andy Haryana** — Indian Music — streak 0 days — HTTP 403
 - **Teleritmo** — International — streak 0 days — HTTP 403
-- **Islamic TV** — Religious — streak 0 days — HTTP 500
+- **Al Sunnah Al Nabawiyah** — Religious — streak 0 days — HTTP 500
 - **AMN TV** — Review — streak 2 days — HTTP 404
 - **ATN Bangla** — Review — streak 0 days — Timeout
 - **B4U Kadak** — Review — streak 0 days — DNS
@@ -95,6 +95,7 @@ None.
 - **Zee Dil Se** — Review — streak 0 days — HTTP 403
 - **Zee Horror Nights** — Review — streak 0 days — HTTP 403
 - **Zee South Flix** — Review — streak 0 days — HTTP 403
+- **Astrakhan RU Sport** — Sports — streak 0 days — Timeout
 - **Sky Sports Cricket** — Sports — streak 0 days — 200
 - **Star Sports 2** — Sports — streak 0 days — HTTP 403
 - **Willow Sports 2** — Sports — streak 0 days — 200
