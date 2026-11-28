@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T11:24:58+00:00**
+Generated: **2026-11-28T17:15:45+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **77b11e20f1d6d12ac974d1ea5e1940787857026b38d4f3574619dbdb69eb28f3**
-- International-Playlist.m3u SHA-256: **cb76635e0c1d0939ec7b04ed9ae09d1a613db5cc208cedd46d0e02ca19e8ce9a**
+- IPTV-Playlist.m3u SHA-256: **ada41ef9376dc7a61c59480693791ba7c5de10978ebcc17912cd5bc42e1ac408**
+- International-Playlist.m3u SHA-256: **f632377091fcefe25378420b0611ffcd0b3e0c79c1a6248e6119119979942ec2**
 
 ## Summary
 
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **149**
 - Exact-byte duplicate asset clusters: **753**
-- Playlist references whose asset stem differs from the normalized channel name: **1607**
-- Unreferenced image assets immediately inside logos/: **998** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1609**
+- Unreferenced image assets immediately inside logos/: **997** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1948,7 +1948,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Folk Klub TV | folk-klub-tv-864bf9645b.png | International |
 | International-Playlist.m3u | Fusion TV | fusion-tv-cf93fce641.png | International |
 | International-Playlist.m3u | Gugak TV | gugak-tv-af1d5c7e63.png | International |
-| International-Playlist.m3u | HBO Asia SD [ ] | hbo-asia-sd.png | International |
+| International-Playlist.m3u | HBO Asia | hbo-asia-sd.png | International |
 | International-Playlist.m3u | Infinita TV | infinita-tv-1080p-0108680fa6.png | International |
 | International-Playlist.m3u | Isango TV [ ] | isango-tv-bfb00cb121a2a18769fc.png | International |
 | International-Playlist.m3u | Ishtar TV | verified-ishtar-tv-sd-1080p-e96abfb835.png | International |
@@ -2064,6 +2064,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Islamic TV | islamic-tv.png | Religious |
 | International-Playlist.m3u | Madani TV | madani-tv.png | Religious |
 | International-Playlist.m3u | Makkah TV | makkah-tv.png | Religious |
+| International-Playlist.m3u | Peace TV | peace-tv-english.png | Religious |
 | International-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Religious |
 | International-Playlist.m3u | Peace TV Urdu | peace-tv-urdu.png | Religious |
 | International-Playlist.m3u | Q TV | q-tv.png | Religious |
@@ -2088,6 +2089,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | FIFA+ Spain | fifa-plus-spain-68fe723cf8e2f7593bac.png | Sports |
 | International-Playlist.m3u | FIFA+ United States | fifa-plus-united-states-68fe723cf8e2f7593bac.png | Sports |
 | International-Playlist.m3u | Fight TV | fight-tv.png | Sports |
+| International-Playlist.m3u | FloRacing | floracing-24-7.png | Sports |
 | International-Playlist.m3u | FUEL TV | fuel-tv-4ce4ea61f5.png | Sports |
 | International-Playlist.m3u | Futbol TV | futbol-tv-068fcbdde9.png | Sports |
 | International-Playlist.m3u | Goal TV | goal-tv-237cfbed.png | Sports |

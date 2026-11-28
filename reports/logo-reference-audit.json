@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5331,
-  "all_explicitly_referenced_logo_files": 2595,
-  "runtime_referenced_logo_files": 2593,
-  "playlist_referenced_logo_files": 2550,
-  "apparently_unreferenced_by_any_text_file": 2736,
-  "apparently_unreferenced_by_runtime_sources": 2738,
+  "all_explicitly_referenced_logo_files": 2596,
+  "runtime_referenced_logo_files": 2594,
+  "playlist_referenced_logo_files": 2551,
+  "apparently_unreferenced_by_any_text_file": 2735,
+  "apparently_unreferenced_by_runtime_sources": 2737,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -14494,6 +14494,10 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/floracing-24-7.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/flowers-us.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -17683,7 +17687,9 @@
     ],
     "logos/peace-tv-english.png": [
       "IPTV-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
+      "reports/logo-source-registry.json"
     ],
     "logos/peace-tv-urdu.png": [
       "IPTV-Playlist.m3u",
@@ -26413,6 +26419,10 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/floracing-24-7.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/flowers-us.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -29603,7 +29613,9 @@
     ],
     "logos/peace-tv-english.png": [
       "IPTV-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
+      "reports/logo-source-registry.json"
     ],
     "logos/peace-tv-urdu.png": [
       "IPTV-Playlist.m3u",
@@ -34437,7 +34449,6 @@
     "logos/filamchi-bhojpuri.png",
     "logos/filmbox.png",
     "logos/flohockey-24.png",
-    "logos/floracing-24-7.png",
     "logos/fm-plus-tv-720p.png",
     "logos/france-24.png",
     "logos/gangaur.png",

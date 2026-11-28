@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-28 11:24 UTC**  
+Run time: **2026-11-28 17:15 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,7 +10,7 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1373 | 0 | 8 | 0 | 0 | 0 | 0 | 0 | 8 |
-| International-Playlist.m3u | 3332 | 0 | 12 | 14 | 364 | 372 | 0 | 0 | 26 |
+| International-Playlist.m3u | 3332 | 0 | 10 | 14 | 364 | 372 | 0 | 0 | 24 |
 
 ## Repair log
 
@@ -37,9 +37,6 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 2761 | Chikitoonz | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2997 | Al Sunnah TV | (missing) | (none) | Exact external logo asset |  | Download/validation failed: source response is not a valid supported image |
 | International-Playlist.m3u | 2997 | Al Sunnah TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 3033 | Peace TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 3185 | FloRacing | (missing) | (none) | Exact external logo asset |  | Download/validation failed: HTTP Error 403: Forbidden |
-| International-Playlist.m3u | 3185 | FloRacing | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 4335 | Bangla Jago TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 4429 | Cedros TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 4481 | Cinema | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
