@@ -80,14 +80,16 @@ class MetadataBackfillTests(unittest.TestCase):
         updated, metrics = update_playlist(playlist, self.catalogue)
         self.assertIn('tvg-name="Backup" tvg-country="IN" tvg-language="hin" group-title="Backup",Backup', updated)
         self.assertIn('tvg-name="Review" group-title="Not Playing",Review', updated)
-        self.assertIn('tvg-id="Unknown.custom" tvg-name="Unknown" tvg-country="US" tvg-language="eng" group-title="International"', updated)
+        self.assertIn('tvg-id="Unknown.custom" tvg-name="Unknown" tvg-language="und" group-title="International"', updated)
+        self.assertNotIn('tvg-country="US"', updated)
+        self.assertEqual(len(__import__("iptv_metadata_backfill").unresolved_country_entries(updated)), 1)
         self.assertEqual(
             [x for x in playlist.splitlines() if x.startswith(("http://", "https://"))],
             [x for x in updated.splitlines() if x.startswith(("http://", "https://"))],
         )
         self.assertEqual(metrics["entries_changed"], 2)
         self.assertEqual(metrics["fallback_entries"], 1)
-        self.assertEqual(metrics["country_fields_filled"], 2)
+        self.assertEqual(metrics["country_fields_filled"], 1)
         self.assertEqual(metrics["language_fields_filled"], 2)
 
 

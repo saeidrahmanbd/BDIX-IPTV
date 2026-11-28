@@ -83,17 +83,24 @@ FORCED_LANGUAGE_OVERRIDES = {
     "meialaitv.in": ("tam",),
 }
 GROUP_DEFAULTS = {
+    # Country-specific curated groups are reliable fallback evidence.
     "Bangladesh": ("BD", "ben"),
     "Indian Bangla": ("IN", "ben"),
     "Indian Movies": ("IN", "hin"),
     "Indian Music": ("IN", "hin"),
     "Indian Entertainment": ("IN", "hin"),
     "Pakistani": ("PK", "urd"),
-    "International": ("US", "eng"),
-    "Documentary & Wildlife": ("US", "eng"),
-    "Kids": ("US", "eng"),
-    "Religious": ("SA", "ara"),
-    "Sports": ("US", "eng"),
+    # Generic content groups are international/multilingual. Never invent a
+    # country or dominant language when exact catalogue evidence is absent.
+    "International": ("", "und"),
+    "Documentary & Wildlife": ("", "und"),
+    "Kids": ("", "und"),
+    "Religious": ("", "und"),
+    "Sports": ("", "und"),
+}
+COUNTRY_GROUPS = {
+    "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
+    "Indian Entertainment", "Pakistani",
 }
 QUALITY_SUFFIXES = {"SD", "HD", "FHD", "UHD", "4K"}
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
@@ -186,13 +193,33 @@ def active_gaps(text):
             if meta.get("group-title", "").strip() not in TARGET_GROUPS:
                 continue
             missing = []
-            if not meta.get("tvg-country", "").strip():
+            group_name = meta.get("group-title", "").strip()
+            if group_name in COUNTRY_GROUPS and not meta.get("tvg-country", "").strip():
                 missing.append("tvg-country")
             if not meta.get("tvg-language", "").strip():
                 missing.append("tvg-language")
             if missing:
                 name = (meta.get("tvg-name") or line.rsplit(",", 1)[-1]).strip()
                 rows.append((meta.get("group-title", ""), name, meta.get("tvg-id", ""), ", ".join(missing)))
+    return rows
+
+
+def unresolved_country_entries(text):
+    """List active/Backup rows whose country cannot be established safely."""
+    rows, current = [], None
+    for line in text.splitlines():
+        if line.startswith("#EXTINF:"):
+            current = line
+        elif current is not None and line.strip().startswith(("http://", "https://")):
+            meta = attrs(current)
+            current = None
+            group = meta.get("group-title", "").strip()
+            if group not in TARGET_GROUPS or meta.get("tvg-country", "").strip():
+                continue
+            if group in COUNTRY_GROUPS:
+                continue
+            name = (meta.get("tvg-name") or line.rsplit(",", 1)[-1]).strip()
+            rows.append((group, name, meta.get("tvg-id", "")))
     return rows
 
 
@@ -298,7 +325,8 @@ def update_playlist(text, catalogue):
     }
 
 
-def write_report(status, before_hash, after_hash, metrics, remaining, note=""):
+def write_report(status, before_hash, after_hash, metrics, remaining, unresolved_countries=None, note=""):
+    unresolved_countries = unresolved_countries or []
     lines = [
         "# IPTV Playlist Metadata Backfill", "",
         "Generated: **{}**".format(datetime.now(timezone.utc).isoformat(timespec="seconds")), "",
@@ -312,7 +340,8 @@ def write_report(status, before_hash, after_hash, metrics, remaining, note=""):
         "- tvg-language fields filled: **{}**".format(metrics.get("language_fields_filled", 0)),
         "- Category fallback entries: **{}**".format(metrics.get("fallback_entries", 0)),
         "- Language source: **iptv-org channel/feed metadata, exact-ID primary inheritance, explicit channel overrides, then undetermined**",
-        "- Active and Backup entries with remaining metadata gaps: **{}**".format(len(remaining)),
+        "- Active and Backup entries with required metadata gaps: **{}**".format(len(remaining)),
+        "- Active and Backup entries with country intentionally unresolved (no reliable source): **{}**".format(len(unresolved_countries)),
     ]
     if note:
         lines += ["", note]
@@ -324,6 +353,14 @@ def write_report(status, before_hash, after_hash, metrics, remaining, note=""):
         lines.append("| … | … | … | {} additional rows omitted |".format(len(remaining) - 250))
     if not remaining:
         lines.append("| — | — | — | none |")
+    lines += ["", "## Country left unresolved rather than guessed", "", "| Group | Channel | tvg-id |", "|---|---|---|"]
+    for group, name, tvg_id in unresolved_countries[:250]:
+        clean = lambda value: str(value).replace("|", "\\|").replace("\n", " ")
+        lines.append("| {} | {} | {} |".format(clean(group), clean(name), clean(tvg_id)))
+    if len(unresolved_countries) > 250:
+        lines.append("| … | … | {} additional rows omitted |".format(len(unresolved_countries) - 250))
+    if not unresolved_countries:
+        lines.append("| — | — | — |")
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -348,8 +385,9 @@ def main():
         PLAYLIST.write_bytes(updated.encode("utf-8"))
         after_hash = hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()
         remaining = active_gaps(updated)
-        write_report("PASS" if not remaining else "PARTIAL", before_hash, after_hash, metrics, remaining,
-                     "External catalogue unavailable; per-channel overrides and controlled primary-category defaults were used. Reason: {}".format(str(exc)[:240]))
+        unresolved_countries = unresolved_country_entries(updated)
+        write_report("PASS" if not remaining else "PARTIAL", before_hash, after_hash, metrics, remaining, unresolved_countries,
+                     "External catalogue unavailable; exact channel overrides and country-specific group defaults were used. Generic groups retain blank country when no reliable source exists. Reason: {}".format(str(exc)[:240]))
         print("Metadata backfill used per-channel overrides and controlled primary-category defaults: {}".format(exc))
         return 0
 
@@ -358,7 +396,8 @@ def main():
         PLAYLIST.write_bytes(updated.encode("utf-8"))
     after_hash = hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()
     remaining = active_gaps(updated)
-    write_report("PASS" if not remaining else "PARTIAL", before_hash, after_hash, metrics, remaining)
+    unresolved_countries = unresolved_country_entries(updated)
+    write_report("PASS" if not remaining else "PARTIAL", before_hash, after_hash, metrics, remaining, unresolved_countries)
     print("IPTV metadata backfill: matched={source_ids_matched}, active+backup entries_changed={entries_changed}, "
           "country_filled={country_fields_filled}, language_filled={language_fields_filled}, "
           "fallback_entries={fallback_entries}, gaps_remaining={gaps}".format(**metrics, gaps=len(remaining)))
