@@ -1,16 +1,18 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-28T05:07:05+00:00**
-IPTV-Playlist.m3u SHA-256: **7208e6da492fa0feb6411ab6846fa9298ef920bd900b322487e46d53072af1b6**
+Generated: **2026-11-28T10:22:33+00:00**
+IPTV-Playlist.m3u SHA-256: **1430770e8c02dd64d1d03bab2f1809e4251e771e5737759c2ec945d0525e162c**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **298**
+- Flagged streams: **319**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
+| Channel 24 | Bangladesh | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/40.m3u8` |
 | Channel Europe | Bangladesh | credential-bearing route pattern (values redacted) | `https://stream.channeleuropetvboxlondon.co.uk/live/channeleurope/chunklist_w572284654.m3u8` |
 | Deshi TV | Bangladesh | credential-bearing route pattern (values redacted) | `https://deshitv.deshitv24.net/live/myStream/playlist.m3u8` |
+| Deshi TV Bangla | Bangladesh | credential-bearing route pattern (values redacted) | `http://deshitv.deshitv24.net/live/myStream/playlist.m3u8` |
 | Independent TV | Bangladesh | credential-bearing route pattern (values redacted) | `http://premiumtvs.space/live/REDACTED/REDACTED/423.ts` |
 | TBN 24 USA | Bangladesh | credential-bearing route pattern (values redacted) | `http://cdn01.palki.tv/live/TBN24-M/index.m3u8` |
 | Colors Bangla | Indian Bangla | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/60.m3u8` |
@@ -27,7 +29,7 @@ These streams are not automatically removed. URL credentials, user information a
 | NTV Malayalam | Indian Movies | credential-bearing route pattern (values redacted) | `https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8` |
 | Raj Digital Plus | Indian Movies | credential-bearing route pattern (values redacted) | `https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8` |
 | Shemaroo Josh | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/337/master.m3u8` |
-| Sony Max HD | Indian Movies | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/50.m3u8` |
+| Sony Max | Indian Movies | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/50.m3u8` |
 | Studio One+ | Indian Movies | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/276/master.m3u8` |
 | Sun Gemini | Indian Movies | credential-bearing route pattern (values redacted) | `http://ptuf.ridsys.in/riptv/live/GEMINI_TV/index.m3u8` |
 | 7S Music | Indian Music | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1257/master.m3u8` |
@@ -63,7 +65,6 @@ These streams are not automatically removed. URL credentials, user information a
 | Jonack | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/10006/master.m3u8` |
 | K7 Keralam Channel | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/keralam2742/index.m3u8` |
 | KCN Kasargod | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/kcnksrgod/index.m3u8` |
-| Kerala Today TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/krlatoday/index.m3u8` |
 | Kerala Vision | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/243/master.m3u8` |
 | Maha Punjabi | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1521/master.m3u8` |
 | Malabar Plus | Indian Entertainment | credential-bearing route pattern (values redacted) | `http://cloud.logichost.in:1935/live/mplus/index.m3u8` |
@@ -82,14 +83,12 @@ These streams are not automatically removed. URL credentials, user information a
 | Thanima | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/thanimatvtvm/index.m3u8` |
 | The Q India | Indian Entertainment | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/25/25_0.m3u8` |
 | Vanitha TV | Indian Entertainment | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/393/master.m3u8` |
-| Vision (India) | Indian Entertainment | credential-bearing route pattern (values redacted) | `http://103.85.204.205:1935/VISIONMEDIA/live/playlist.m3u8` |
 | Zee Kannada | Indian Entertainment | sensitive query parameter (value redacted) | `https://yuppnimresmum.akamaized.net/28072023/smil:zeekannadahd.smil/playlist.m3u8?hdnts=REDACTED` |
 | DW News | International | credential-bearing route pattern (values redacted) | `https://dwamdstream102.akamaized.net/hls/live/REDACTED/REDACTED/stream02/streamPlaylist.m3u8` |
 | FashionBox | International | credential-bearing route pattern (values redacted) | `https://dash2.antik.sk/live/test_fashionbox_medium_atk/playlist.m3u8` |
 | M20 Music | International | credential-bearing route pattern (values redacted) | `https://streamcdne2-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/REDACTED/REDACTED/chunklist_b1064000.m3u8` |
 | MBC | International | credential-bearing route pattern (values redacted) | `https://shd-gcp-live.edgenextcdn.net/live/REDACTED/REDACTED/index.m3u8` |
 | Shanson TV | International | credential-bearing route pattern (values redacted) | `https://streaming.thestream.cyou/live/7009.m3u8` |
-| Star Movies | International | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/54.m3u8` |
 | Totalmusic | International | credential-bearing route pattern (values redacted) | `https://cdn.global.elektamedia.com/live/REDACTED/REDACTED/SA_LIVE_hls_enc/master.m3u8` |
 | Totalmusic Dance | International | credential-bearing route pattern (values redacted) | `https://cdn.40mediagroup.com/live/REDACTED/REDACTED/SA_LIVE_hls_enc/master.m3u8` |
 | CGTN Documentary | Documentary & Wildlife | credential-bearing route pattern (values redacted) | `https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8` |
@@ -107,28 +106,45 @@ These streams are not automatically removed. URL credentials, user information a
 | Al-Zahra TV Turkic | Religious | credential-bearing route pattern (values redacted) | `https://live.al-zahratv.com/live/playlist.m3u8` |
 | Bahrain Quran | Religious | credential-bearing route pattern (values redacted) | `https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/playlist.m3u8` |
 | Medina Live | Religious | credential-bearing route pattern (values redacted) | `https://cdn-globecast.akamaized.net/live/REDACTED/REDACTED/hls_roku/index.m3u8` |
+| Arena4 | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/arena4/index.m3u8` |
 | Bahrain Sports 1 | Sports | credential-bearing route pattern (values redacted) | `https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8` |
 | Bahrain Sports 2 | Sports | credential-bearing route pattern (values redacted) | `https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8` |
+| BEIN SPORTS 4 | Sports | credential-bearing route pattern (values redacted) | `http://foxbleu-cdn.com/live/REDACTED/REDACTED/78381.ts` |
+| BEIN SPORTS 5 | Sports | credential-bearing route pattern (values redacted) | `http://foxbleu-cdn.com/live/REDACTED/REDACTED/78382.ts` |
+| BEIN SPORTS 6 | Sports | credential-bearing route pattern (values redacted) | `http://foxbleu-cdn.com/live/REDACTED/REDACTED/78383.ts` |
 | beIN SPORTS Arabic | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/33.m3u8` |
 | Cricbuzz | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/22.m3u8` |
+| CT Sport | Sports | credential-bearing route pattern (values redacted) | `http://88.212.15.50/live/test_ctsport_25p/playlist.m3u8` |
 | Eurosport | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/16.m3u8` |
+| Eurosport 1 | Sports | credential-bearing route pattern (values redacted) | `https://n-2-1.eu.cdn-redge.media/livehls/oeu/mt/live/REDACTED/REDACTED/playlist.m3u8` |
+| Eurosport 1 Hungary | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/esp1_hun/index.m3u8` |
+| Eurosport 1 UK | Sports | credential-bearing route pattern (values redacted) | `https://n-2-1.eu.cdn-redge.media/livehls/oeu/mt/live/REDACTED/REDACTED/playlist.m3u8` |
+| Eurosport 2 | Sports | credential-bearing route pattern (values redacted) | `https://n-2-1.eu.cdn-redge.media/livehls/oeu/mt/live/REDACTED/REDACTED/playlist.m3u8` |
 | M4 Sport | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/uatlmvixrr/index.m3u8` |
 | Major League Cricket | Sports | sensitive query parameter (value redacted) | `https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=uiXES2ePt7xTpQnbJxn7Dg&e=REDACTED&scheme=https%7Cuser-agent%3DMozilla` |
 | Rally TV | Sports | credential-bearing route pattern (values redacted) | `https://rally-tv-live.akamaized.net/hls/live/REDACTED/REDACTED/master.m3u8` |
+| Real Madrid TV | Sports | credential-bearing route pattern (values redacted) | `https://rmtv.akamaized.net/hls/live/REDACTED/REDACTED/master.m3u8` |
+| Red Bull TV | Sports | credential-bearing route pattern (values redacted) | `http://rbmn-live.akamaized.net/hls/live/REDACTED/REDACTED/master_3360.m3u8` |
+| Red Bull TV | Sports | credential-bearing route pattern (values redacted) | `http://rbmn-live.akamaized.net/hls/live/REDACTED/REDACTED/master_928.m3u8` |
+| Red Bull TV | Sports | credential-bearing route pattern (values redacted) | `https://rbmn-live.akamaized.net/hls/live/REDACTED/REDACTED/master.m3u8` |
 | Sky Sports Cricket | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/25.m3u8` |
-| Sony Sports Ten 1 HD | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/12.m3u8` |
-| Sony Sports Ten 2 HD | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/13.m3u8` |
+| Sony Sports Ten 1 | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/12.m3u8` |
+| Sony Sports Ten 2 | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/13.m3u8` |
 | Sony Sports Ten 5 | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/15.m3u8` |
 | Spiler 1 | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/spiler1/index.m3u8` |
 | Spiler 2 | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/spiler2/index.m3u8` |
+| Sport (Slovakia) | Sports | credential-bearing route pattern (values redacted) | `http://88.212.15.50/live/test_rtvs_sport_hevc/playlist.m3u8` |
 | Sport 1 (Hungary) | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/sport1_hun/index.m3u8` |
 | Sport 2 (Hungary) | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/sport2_hun/index.m3u8` |
+| Sport1 (Czech Republic) | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/sport1_cz_avc_25p/playlist.m3u8` |
+| Sport2 (Czech Republic) | Sports | credential-bearing route pattern (values redacted) | `http://88.212.7.14/live/sport2_cz_avc_25p/playlist.m3u8` |
 | Sport5 | Sports | credential-bearing route pattern (values redacted) | `https://rgelive.akamaized.net/hls/live/REDACTED/REDACTED/playlist.m3u8` |
-| Star Sports 1 HD | Sports | sensitive query parameter (value redacted) | `http://103.114.11.37:8081/Star-sports-1/index.m3u8?token=REDACTED` |
+| Star Sports 1 | Sports | sensitive query parameter (value redacted) | `http://103.114.11.37:8081/Star-sports-1/index.m3u8?token=REDACTED` |
 | Star Sports 3 | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/9.m3u8` |
 | Star Sports Select 1 | Sports | sensitive query parameter (value redacted) | `http://103.114.11.37:8081/Star-select-1/index.m3u8?token=REDACTED` |
 | Star Sports Select 2 | Sports | sensitive query parameter (value redacted) | `http://103.114.11.37:8081/Star-select-2/index.m3u8?token=REDACTED` |
 | Ten Cricket | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/19.m3u8` |
+| TR Sport | Sports | credential-bearing route pattern (values redacted) | `https://livetr.teleromagna.it/mia/live/playlist.m3u8` |
 | TVRI Sport | Sports | credential-bearing route pattern (values redacted) | `https://ott-balancer.tvri.go.id/live/REDACTED/REDACTED/hls/SportHD.m3u8` |
 | Unite8 Sports 1 | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/35.m3u8` |
 | Willow Sports 2 | Sports | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/24.m3u8` |
@@ -157,11 +173,11 @@ These streams are not automatically removed. URL credentials, user information a
 | Bangla Vision | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/44.m3u8` |
 | beIN SPORTS 1 | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/30.m3u8` |
 | beIN SPORTS 2 | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/31.m3u8` |
+| BEIN SPORTS 3 | Backup | credential-bearing route pattern (values redacted) | `http://foxbleu-cdn.com/live/REDACTED/REDACTED/89342.ts` |
 | beIN SPORTS XTRA | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/34.m3u8` |
 | Bhojpuri Cinema | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/646/master.m3u8` |
 | Bhojpuri Cinema | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/bhojpuri-cinema-1/index.m3u8` |
 | Boishakhi TV | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-1/index.m3u8` |
-| Channel 24 | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/40.m3u8` |
 | Channel I | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/42.m3u8` |
 | Channel I | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/channel-i-1/index.m3u8` |
 | Channel S | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/channel-s-1/index.m3u8` |
@@ -171,6 +187,7 @@ These streams are not automatically removed. URL credentials, user information a
 | DBC News | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/41.m3u8` |
 | DBC News | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/dbc-news-1/index.m3u8` |
 | DD Arun Prabha | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/32/master.m3u8` |
+| DD Assam | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/672/master.m3u8` |
 | DD Bangla | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/37/master.m3u8` |
 | DD Bangla | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/197/master.m3u8` |
 | DD Girnar | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/368/master.m3u8` |
@@ -194,11 +211,11 @@ These streams are not automatically removed. URL credentials, user information a
 | DD Urdu | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/8/master.m3u8` |
 | DD Yadagiri | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/678/master.m3u8` |
 | Deepto TV | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/47.m3u8` |
+| Dhoom Music | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1456/master.m3u8` |
 | Disney Channel | Backup | credential-bearing route pattern (values redacted) | `http://rgkkw.live/live/REDACTED/REDACTED/19741.ts` |
 | Duronto TV | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/55.m3u8` |
 | E24 | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/159/master.m3u8` |
 | Ekattor TV | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/39.m3u8` |
-| Enter TV | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8` |
 | Enterr10 Bangla | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/61.m3u8` |
 | Enterr10 Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8` |
 | Epic Bharat | Backup | credential-bearing route pattern (values redacted) | `https://epiconvh.akamaized.net/live/nazara/master.m3u8` |
@@ -261,7 +278,6 @@ These streams are not automatically removed. URL credentials, user information a
 | Rongeen TV | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/202/master.m3u8` |
 | Rongeen TV | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/rongeen-tv-1/index.m3u8` |
 | Ruposhi Bangla | Backup | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/664/664_0.m3u8` |
-| Ruposhi Bangla | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1039/master.m3u8` |
 | SA TV | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8` |
 | SA TV | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-2/index.m3u8` |
 | Safari TV | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/410/master.m3u8` |
@@ -279,6 +295,8 @@ These streams are not automatically removed. URL credentials, user information a
 | Somoy TV | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8` |
 | Sony Aath | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/62.m3u8` |
 | Sony Sports Ten 3 | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/14.m3u8` |
+| Sport 1 | Backup | credential-bearing route pattern (values redacted) | `http://212.102.38.45/live/test_sport1_25p/playlist.m3u8` |
+| Sport 2 | Backup | credential-bearing route pattern (values redacted) | `http://212.102.38.45/live/test_sport_2/playlist.m3u8` |
 | Star Jalsha | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/58.m3u8` |
 | Star Plus | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/53.m3u8` |
 | Star Sports 2 | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/6.m3u8` |
@@ -291,19 +309,22 @@ These streams are not automatically removed. URL credentials, user information a
 | Vendhar TV | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1271/master.m3u8` |
 | Vendhar TV | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/223/master.m3u8` |
 | YRF Music | Backup | credential-bearing route pattern (values redacted) | `https://vidaa.kableone.com/hls/live/REDACTED/REDACTED/1.m3u8` |
+| Zee Action | Backup | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/270/270_0.m3u8` |
 | Zee Bangla | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/59.m3u8` |
 | Zee Bangla | Backup | credential-bearing route pattern (values redacted) | `http://rgkkw.live:80/live/REDACTED/REDACTED/98881.ts` |
 | Zee Bangla | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8` |
 | Zee TV | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/52.m3u8` |
-| Anmol Cinema (576p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/271/271_0.m3u8` |
-| Anmol Cinema 2 (576p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/257/257_0.m3u8` |
-| Big Magic (576p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/13/13_0.m3u8` |
-| Network Payyanur (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/networkpayyanur/index.m3u8` |
-| News 21 Bangla TV (1080p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.190.133.68:1935/news21live/live/playlist.m3u8` |
-| NewStar (576p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newsstar2924/index.m3u8` |
-| NM Media Channel HD (1080p) | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newmedia2924/index.m3u8` |
-| Star Sports Khel (1080p) | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/151/151_0.m3u8` |
-| DD Assam (576p) | New Backups | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/672/master.m3u8` |
-| DD Uttar Pradesh (720p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/36/master.m3u8` |
-| Dhoom Music (720p) | New Backups | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1456/master.m3u8` |
-| Zee Action (576p) | New Backups | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/270/270_0.m3u8` |
+| Anmol Cinema | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/271/271_0.m3u8` |
+| Anmol Cinema 2 | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/257/257_0.m3u8` |
+| Big Magic | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/13/13_0.m3u8` |
+| Network Payyanur | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/networkpayyanur/index.m3u8` |
+| News 21 Bangla TV | New Channels | credential-bearing route pattern (values redacted) | `http://103.190.133.68:1935/news21live/live/playlist.m3u8` |
+| NewStar | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newsstar2924/index.m3u8` |
+| NM Media Channel HD | New Channels | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/newmedia2924/index.m3u8` |
+| Star Sports Khel | New Channels | credential-bearing route pattern (values redacted) | `http://103.175.73.12:8080/live/151/151_0.m3u8` |
+| DD Uttar Pradesh | Review | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/36/master.m3u8` |
+| Enter TV | Review | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8` |
+| Kerala Today TV | Review | credential-bearing route pattern (values redacted) | `https://live.skystream.in/live/krlatoday/index.m3u8` |
+| Ruposhi Bangla | Review | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1039/master.m3u8` |
+| Star Movies | Review | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/54.m3u8` |
+| Vision (India) | Review | credential-bearing route pattern (values redacted) | `http://103.85.204.205:1935/VISIONMEDIA/live/playlist.m3u8` |

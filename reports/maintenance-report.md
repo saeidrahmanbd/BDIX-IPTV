@@ -1,22 +1,22 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-11-28 08:49 UTC**_
+_Generated: **2026-11-28 10:22 UTC**_
 
-Source playlist SHA-256: **4107c2a899815b766d255eb543c7acf9b7f538f6e1e9c3ef6070118e22361521**
+Source playlist SHA-256: **1430770e8c02dd64d1d03bab2f1809e4251e771e5737759c2ec945d0525e162c**
 
 | Item | Result |
 |---|---:|
-| Current playlist streams | **1400** |
-| Active channel identities | **711** |
-| Backup stream entries | **499** |
-| EPG IDs audited | **711** |
-| Logo exceptions | **STALE / UNKNOWN** |
-| EPG mapping | **60.3%** |
-| EPG programme coverage | **54%** |
-| Health failures | **STALE** |
-| Persistent health failures | **STALE** |
-| Audit findings (review warnings included) | **STALE / UNKNOWN** |
-| Pre-publish gate | **STALE / UNKNOWN** |
+| Current playlist streams | **1373** |
+| Active channel identities | **702** |
+| Backup stream entries | **489** |
+| EPG IDs audited | **PENDING — guide not current** |
+| Logo exceptions | **14** |
+| EPG mapping | **PENDING — guide not current** |
+| EPG programme coverage | **PENDING** |
+| Health failures | **114** |
+| Persistent health failures | **0** |
+| Audit findings (review warnings included) | **154** |
+| Pre-publish gate | **PASS** |
 
 ## Audit metric scope
 - Audit findings combine blocking defects with non-blocking review warnings, including preserved row-order/category-order and channel-number sequence observations.

@@ -1,19 +1,19 @@
 # Stream Risk Review
 
-Generated: **2026-11-28T05:07:05+00:00**
-IPTV-Playlist.m3u SHA-256: **7208e6da492fa0feb6411ab6846fa9298ef920bd900b322487e46d53072af1b6**
+Generated: **2026-11-28T10:22:33+00:00**
+IPTV-Playlist.m3u SHA-256: **1430770e8c02dd64d1d03bab2f1809e4251e771e5737759c2ec945d0525e162c**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
 
 ## Summary
 
-- /streamtest/ endpoints: **11**
+- /streamtest/ endpoints: **14**
 - Signed/token-query endpoints: **15**
 - Signed endpoints with expired embedded expiry: **0**
 - Signed endpoints expiring within 72 hours: **0**
 - Signed endpoints with no parseable expiry: **4**
-- Xtream-style credential paths (credentials redacted): **3**
-- Proxy/worker-host routes: **26** (0 primary, 26 Backup)
+- Xtream-style credential paths (credentials redacted): **7**
+- Proxy/worker-host routes: **26** (1 primary, 25 Backup)
 - /api/play/ relay routes: **0**
 - Expiry is parsed only from explicit Unix timestamps; opaque signatures remain UNKNOWN and are never guessed.
 
@@ -21,9 +21,9 @@ Generated from the current playlist and latest available stream-health report. T
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1198 |
-| Reachable | 1099 |
-| Failed this check | 99 |
+| Streams tested | 1373 |
+| Reachable | 1259 |
+| Failed this check | 114 |
 | Persistent failures (3+ consecutive) | 0 |
 
 ### Persistent failures
@@ -36,12 +36,15 @@ No persistent failures recorded.
 |---|---|---|---|
 | 8XM | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/8XM-131/playlist.m3u8 |
 | Ary Digital | Pakistani | cdn4.mjunoon.tv:8087 | /streamtest/84M/chunks.m3u8 |
+| AVT Khyber | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/AVTKhyber-114/playlist.m3u8 |
 | Bol Entertainment | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/Channel5-159-4/playlist.m3u8 |
 | Green Entertainment | Pakistani | cdn4.mjunoon.tv:8087 | /streamtest/166M/chunks.m3u8 |
 | Jalwa TV | Pakistani | cdn4.mjunoon.tv:8087 | /streamtest/135M/chunks.m3u8 |
+| KTN TV | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/KTN-149/playlist.m3u8 |
 | See TV | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/SeeTV-156/playlist.m3u8 |
 | Waseb TV | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/WASEB-130/playlist.m3u8 |
 | Paighan TV | Religious | cdn4.mjunoon.tv:8087 | /streamtest/107M/chunks.m3u8 |
+| Quran | Religious | vodzong.mjunoon.tv:8087 | /streamtest/SaudiQuran-142/playlist.m3u8 |
 | Animal Planet | Backup | vodzong.mjunoon.tv:8087 | /streamtest/Animal-Planet-158-3/playlist.m3u8 |
 | Hum TV | Backup | cdn4.mjunoon.tv:8087 | /streamtest/82M/chunks.m3u8 |
 | Jalwa TV | Backup | vodzong.mjunoon.tv:8087 | /streamtest/JalwaTV-135/live/135M/chunks.m3u8 |
@@ -65,7 +68,7 @@ Expiry is classified only when a numeric Unix timestamp is explicitly present (i
 | WOW Kidz Tamil | Kids | yuppparoriglin.akamaized.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | WOW Kidz Telugu | Kids | yuppparoriglin.akamaized.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
 | Major League Cricket | Sports | bl.rutube.ru | e | FUTURE | 2035-09-29T13:14:34+00:00 |
-| Star Sports 1 HD | Sports | 103.114.11.37:8081 | token | UNKNOWN | Not exposed |
+| Star Sports 1 | Sports | 103.114.11.37:8081 | token | UNKNOWN | Not exposed |
 | Star Sports Select 1 | Sports | 103.114.11.37:8081 | token | UNKNOWN | Not exposed |
 | Star Sports Select 2 | Sports | 103.114.11.37:8081 | token | UNKNOWN | Not exposed |
 | Studio Yuva | Backup | d2gvyg6lvauoko.cloudfront.net | hdnts | FUTURE | 2028-03-05T19:51:28+00:00 |
@@ -77,6 +80,10 @@ Credentials are intentionally redacted; only the host and safe route pattern are
 | Channel | Group | Host | Redacted path |
 |---|---|---|---|
 | Independent TV | Bangladesh | premiumtvs.space | /live/[REDACTED]/[REDACTED]/423.ts |
+| BEIN SPORTS 4 | Sports | foxbleu-cdn.com | /live/[REDACTED]/[REDACTED]/78381.ts |
+| BEIN SPORTS 5 | Sports | foxbleu-cdn.com | /live/[REDACTED]/[REDACTED]/78382.ts |
+| BEIN SPORTS 6 | Sports | foxbleu-cdn.com | /live/[REDACTED]/[REDACTED]/78383.ts |
+| BEIN SPORTS 3 | Backup | foxbleu-cdn.com | /live/[REDACTED]/[REDACTED]/89342.ts |
 | Disney Channel | Backup | rgkkw.live | /live/[REDACTED]/[REDACTED]/19741.ts |
 | Zee Bangla | Backup | rgkkw.live:80 | /live/[REDACTED]/[REDACTED]/98881.ts |
 
@@ -95,7 +102,6 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | Channel I | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Channel S | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | DBC News | Backup | iptvlive.ahmed-bd-org.workers.dev |
-| Enter TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Enterr10 Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Epic Music | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Jago News 24 | Backup | iptvlive.ahmed-bd-org.workers.dev |
@@ -112,6 +118,7 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | Sananda | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Somoy TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Zee Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
+| Enter TV | Review | iptvlive.ahmed-bd-org.workers.dev |
 
 ## Hosted /api/play/ Relay Routes
 
