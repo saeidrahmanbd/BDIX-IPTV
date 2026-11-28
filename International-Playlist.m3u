@@ -2656,7 +2656,7 @@ https://fast-channels.sinclairstoryline.com/THENEST/index.m3u8
 https://the-pet-collective-international-in.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TotalCrime.ca@CA" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/total-crime-5fb03c1af1.png" tvg-country="CA" channel-id="TotalCrime.ca@CA" group-title="Documentary & Wildlife" tvg-name="Total Crime",Total Crime
 https://aegis-cloudfront-1.tubi.video/b062c287-a170-47df-99e4-f5dcd441ee59/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.bdix.travelxp-bangla" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp-bangla-915b903e5920a0475a26.png" channel-id="custom.bdix.travelxp-bangla" group-title="Documentary & Wildlife" tvg-name="Travel XP Bangla",Travel XP Bangla
+#EXTINF:-1 tvg-id="custom.bdix.travelxp-bangla" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp-bangla-915b903e5920a0475a26.png" channel-id="custom.bdix.travelxp-bangla" group-title="Documentary & Wildlife" tvg-name="Travel XP Bangla" tvg-country="IN",Travel XP Bangla
 http://premiumtvs.space/live/YqXTywueEV/damp2purchase/20622.ts
 #EXTINF:-1 tvg-id="TrueCrime.uk" channel-id="TrueCrime.uk" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/true-crime-uk.png" tvg-country="GB" group-title="Documentary & Wildlife" tvg-name="True Crime UK",True Crime UK
 https://b6cca454.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9UcnVlQ3JpbWVVS2Zyb21DQlNSZWFsaXR5X0hMUw/playlist.m3u8?ads.wurl_channel=1151&ads.wurl_name=TrueCrimeUKfromCBSReality&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D
@@ -3042,9 +3042,9 @@ https://mumt05.tangotv.in/87NeALx2THEQ/index.m3u8
 http://m.live.net.sa:1935/live/quran/playlist.m3u8
 #EXTINF:-1 tvg-id="QuranTV.iq" channel-id="QuranTV.iq" tvg-language="ara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-country="IQ" group-title="Religious" tvg-name="Quran TV",Quran TV
 https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
-#EXTINF:-1 tvg-id="custom.saudi-quran-y9quu" channel-id="custom.saudi-quran-y9quu" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saudi-quran-168a35b98fb7c665bce6.png" group-title="Religious" tvg-name="Saudi Quran",Saudi Quran
+#EXTINF:-1 tvg-id="custom.saudi-quran-y9quu" channel-id="custom.saudi-quran-y9quu" tvg-language="ara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saudi-quran-168a35b98fb7c665bce6.png" group-title="Religious" tvg-name="Saudi Quran" tvg-country="SA",Saudi Quran
 https://cdn-globecast.akamaized.net/live/eds/saudi_quran/hls_roku/index.m3u8
-#EXTINF:-1 tvg-id="custom.sunnah-tv" channel-id="custom.sunnah-tv" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sunnah-tv.png" group-title="Religious" tvg-name="Sunnah TV",Sunnah TV
+#EXTINF:-1 tvg-id="custom.sunnah-tv" channel-id="custom.sunnah-tv" tvg-language="ara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sunnah-tv.png" group-title="Religious" tvg-name="Sunnah TV" tvg-country="SA",Sunnah TV
 http://m.live.net.sa:1935/live/sunnah/chunklist.m3u8
 #EXTINF:-1 tvg-id="TVOne.uk" channel-id="TVOne.uk" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-one-uk.png" tvg-country="GB" group-title="Religious" tvg-name="TV One UK",TV One UK
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/tvoneuksni.stream/tracks-v1a1/mono.m3u8
