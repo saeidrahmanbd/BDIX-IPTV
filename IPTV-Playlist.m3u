@@ -1232,7 +1232,7 @@ https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpubl
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/tvoneuksni.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="ZainabiaChannel.sa" tvg-name="Zainabia Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zainabia-channel.png" tvg-chno="605" channel-id="ZainabiaChannel.sa" tvg-country="SA" tvg-language="ara" group-title="Religious",Zainabia Channel
 https://zainabia.livebox.co.in/ZainabiaChannelhls/channel.m3u8
-#EXTINF:-1 tvg-name="2TV Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",2TV Sport
+#EXTINF:-1 tvg-name="2TV Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/2tv-1080p.png" group-title="Sports",2TV Sport
 https://tv.cdn.xsg.ge/gpb-2tv/index.m3u8
 #EXTINF:-1 tvg-name="A Spor" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-spor-537eb67565.png" group-title="Sports",A Spor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_480p.m3u8
@@ -1244,7 +1244,7 @@ https://raycom-accdn-firetv.amagi.tv/playlist.m3u8
 https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8
 #EXTINF:-1 tvg-name="Arena4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/arena4-8c3b9a2e04.png" tvg-country="HU" tvg-language="hun" group-title="Sports",Arena4
 http://88.212.7.14/live/arena4/index.m3u8
-#EXTINF:-1 tvg-name="Astrakhan.RU Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Astrakhan.RU Sport
+#EXTINF:-1 tvg-name="Astrakhan.RU Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/astrahan-ru-sport-8c965f341f.png" group-title="Sports",Astrakhan.RU Sport
 http://streaming.astrakhan.ru/astrakhanrusporthd/playlist.m3u8
 #EXTINF:-1 tvg-id="BahrainSports1.bh" tvg-name="Bahrain Sports 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bahrain-sports-1.png" tvg-chno="609" channel-id="BahrainSports1.bh" tvg-country="BH" tvg-language="ara" group-title="Sports",Bahrain Sports 1
 https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8
@@ -1320,37 +1320,37 @@ https://d2cozakhtdw466.cloudfront.net/out/v1/0310eeeafd9a491796b23aec39fad1c4/in
 https://dto4p9su9kcif.cloudfront.net/out/v1/45b4d7be5ac64a83bdfdca7b683b40b5/index.m3u8
 #EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png" tvg-chno="627" channel-id="ESPN.us" tvg-country="US" tvg-language="eng" group-title="Sports",ESPN
 http://181.78.197.59:8000/play/a07z/index.m3u8
-#EXTINF:-1 tvg-name="ESPN 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 2
+#EXTINF:-1 tvg-name="ESPN 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-2-latin-america-884126da40.png" group-title="Sports",ESPN 2
 http://181.205.130.194:4000/play/a07i
-#EXTINF:-1 tvg-name="ESPN 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 2
+#EXTINF:-1 tvg-name="ESPN 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-2-latin-america-884126da40.png" group-title="Sports",ESPN 2
 http://191.97.49.82:8001/play/a00m/index.m3u8
-#EXTINF:-1 tvg-name="ESPN 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 2
+#EXTINF:-1 tvg-name="ESPN 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-2-latin-america-884126da40.png" group-title="Sports",ESPN 2
 http://45.167.1.136:8000/play/a06b
-#EXTINF:-1 tvg-name="ESPN 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 3
+#EXTINF:-1 tvg-name="ESPN 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-3-latin-america-5d7066620a.png" group-title="Sports",ESPN 3
 http://45.167.1.136:8000/play/a02k
-#EXTINF:-1 tvg-name="ESPN 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 4
+#EXTINF:-1 tvg-name="ESPN 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-4-latin-america-36fdd20088255ff1effc.png" group-title="Sports",ESPN 4
 http://45.167.1.136:8000/play/a02l
-#EXTINF:-1 tvg-name="ESPN 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 4
+#EXTINF:-1 tvg-name="ESPN 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-4-latin-america-36fdd20088255ff1effc.png" group-title="Sports",ESPN 4
 http://181.78.49.113:9999/play/a07e/index.m3u8
-#EXTINF:-1 tvg-name="ESPN 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 5
+#EXTINF:-1 tvg-name="ESPN 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-5-latin-america-9728fabc58979185abf9.png" group-title="Sports",ESPN 5
 http://45.167.1.136:8000/play/a04g
-#EXTINF:-1 tvg-name="ESPN 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 5
+#EXTINF:-1 tvg-name="ESPN 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-5-latin-america-9728fabc58979185abf9.png" group-title="Sports",ESPN 5
 http://181.78.49.113:9999/play/a07f/index.m3u8
-#EXTINF:-1 tvg-name="ESPN 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 5
+#EXTINF:-1 tvg-name="ESPN 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-5-latin-america-9728fabc58979185abf9.png" group-title="Sports",ESPN 5
 http://181.205.130.194:4000/play/a0fs
-#EXTINF:-1 tvg-name="ESPN 6" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 6
+#EXTINF:-1 tvg-name="ESPN 6" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-6-latin-america-d2cb135b2b4f86ef5cd3.png" group-title="Sports",ESPN 6
 http://45.167.1.136:8000/play/a06d
-#EXTINF:-1 tvg-name="ESPN 6" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 6
+#EXTINF:-1 tvg-name="ESPN 6" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-6-latin-america-d2cb135b2b4f86ef5cd3.png" group-title="Sports",ESPN 6
 http://181.205.130.194:4000/play/a0eh
-#EXTINF:-1 tvg-name="ESPN 7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN 7
+#EXTINF:-1 tvg-name="ESPN 7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-7-latin-america-3a4d413a781020f658a6.png" group-title="Sports",ESPN 7
 http://205.235.6.29:8000/play/a0zv/index.m3u8
-#EXTINF:-1 tvg-name="ESPN Argentina" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN Argentina
+#EXTINF:-1 tvg-name="ESPN Argentina" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png" group-title="Sports",ESPN Argentina
 http://45.170.130.224:8000/play/a04l/index.m3u8
-#EXTINF:-1 tvg-name="ESPN Colombia" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN Colombia
+#EXTINF:-1 tvg-name="ESPN Colombia" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-latin-america-colombia-e2f56d64d47335b5a64f.png" group-title="Sports",ESPN Colombia
 http://181.205.130.194:4000/play/a08n
-#EXTINF:-1 tvg-name="ESPN Premium Chile" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN Premium Chile
+#EXTINF:-1 tvg-name="ESPN Premium Chile" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png" group-title="Sports",ESPN Premium Chile
 http://186.33.40.97:8789/play/22
-#EXTINF:-1 tvg-name="ESPN Premium" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",ESPN Premium
+#EXTINF:-1 tvg-name="ESPN Premium" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png" group-title="Sports",ESPN Premium
 http://181.205.130.194:4000/play/a0fk
 #EXTINF:-1 tvg-id="ESPN2.us@HD" tvg-name="ESPN2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-2-united-states-7a4d2daafc.png" tvg-chno="628" channel-id="ESPN2.us@HD" tvg-country="US" tvg-language="eng" group-title="Sports",ESPN2
 http://85.237.89.160:9590/usa-s/ESPN-2-HD/index.m3u8
@@ -1496,25 +1496,25 @@ https://video07.logicahost.com.br/rssports03/rssports03/playlist.m3u8
 https://video07.logicahost.com.br/rssports04/rssports04/playlist.m3u8
 #EXTINF:-1 tvg-name="RS Sports 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",RS Sports 5
 https://video03.logicahost.com.br/rssports5/rssports5/playlist.m3u8
-#EXTINF:-1 tvg-name="Setanta Sport Moldova" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Setanta Sport Moldova
+#EXTINF:-1 tvg-name="Setanta Sport Moldova" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/setanta-sports-1-eurasia.png" group-title="Sports",Setanta Sport Moldova
 http://rr2.vip2ip.com/~301736870633659706B394B427A6F/63395/hls/pl.m3u8
-#EXTINF:-1 tvg-name="Setanta Sport Premium UA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Setanta Sport Premium UA
+#EXTINF:-1 tvg-name="Setanta Sport Premium UA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/setanta-sports-1-eurasia.png" group-title="Sports",Setanta Sport Premium UA
 http://rr2.vip2ip.com/~301736870633659706B394B427A6F/82731/hls/pl.m3u8
-#EXTINF:-1 tvg-name="Setanta Sport Qazaqstan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Setanta Sport Qazaqstan
+#EXTINF:-1 tvg-name="Setanta Sport Qazaqstan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/setanta-sports-1-eurasia.png" group-title="Sports",Setanta Sport Qazaqstan
 http://rr2.vip2ip.com/~301736870633659706B394B427A6F/29837/hls/pl.m3u8
-#EXTINF:-1 tvg-name="Setanta Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Setanta Sports
+#EXTINF:-1 tvg-name="Setanta Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/setanta-sports-1-eurasia.png" group-title="Sports",Setanta Sports
 http://ott.watch/stream/D3FX33QMIH1/313.m3u8
-#EXTINF:-1 tvg-name="Setanta Sports 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Setanta Sports 2
+#EXTINF:-1 tvg-name="Setanta Sports 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/setanta-sports-2-eurasia.png" group-title="Sports",Setanta Sports 2
 http://ott.watch/stream/D3FX33QMIH1/235.m3u8
 #EXTINF:-1 tvg-name="Setanta Sports 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/setanta-sports-1-eurasia.png" tvg-country="GE" tvg-language="eng" group-title="Sports",Setanta Sports 3
 http://85.117.61.84/setanta3/index.m3u8
-#EXTINF:-1 tvg-name="Setanta Sports 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Setanta Sports 1
+#EXTINF:-1 tvg-name="Setanta Sports 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/setanta-sports-1-eurasia.png" group-title="Sports",Setanta Sports 1
 http://cdntv.online/low/9mlxywika2/1021.m3u8
-#EXTINF:-1 tvg-name="Setanta Sports 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Setanta Sports 2
+#EXTINF:-1 tvg-name="Setanta Sports 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/setanta-sports-2-eurasia.png" group-title="Sports",Setanta Sports 2
 http://cdntv.online/low/9mlxywika2/1022.m3u8
 #EXTINF:-1 tvg-id="custom.skyracing1" tvg-name="Sky Racing 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-racing-1.png" tvg-chno="666" channel-id="custom.skyracing1" tvg-country="AU" tvg-language="eng" group-title="Sports",Sky Racing 1
 https://636ffd31f0e12.streamlock.net/RacingStream1/RacingStream1/playlist.m3u8
-#EXTINF:-1 tvg-name="Sky Sport LaLiga" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Sky Sport LaLiga
+#EXTINF:-1 tvg-name="Sky Sport LaLiga" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-sky-sports-laliga.png" group-title="Sports",Sky Sport LaLiga
 http://179.60.224.196:8000/play/a0i7/index.m3u8
 #EXTINF:-1 tvg-id="custom.skysportscricket" tvg-name="Sky Sports Cricket" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-sports-cricket.png" tvg-chno="667" channel-id="custom.skysportscricket" tvg-country="GB" tvg-language="eng" group-title="Sports",Sky Sports Cricket
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/25.m3u8
@@ -1552,7 +1552,7 @@ http://88.212.7.14/live/sport2_cz_avc_25p/playlist.m3u8
 https://rgelive.akamaized.net/hls/live/2043095/live3/playlist.m3u8
 #EXTINF:-1 tvg-name="Sportdigital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Sportdigital
 https://jmp2.uk/stvp-ATAJ0500433A
-#EXTINF:-1 tvg-name="Sportivnyy" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Sportivnyy
+#EXTINF:-1 tvg-name="Sportivnyy" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sportivnyy.png" group-title="Sports",Sportivnyy
 https://live-3.otcnet.ru/sportivny/index.m3u8
 #EXTINF:-1 tvg-id="SportsFirstTV.us" tvg-name="Sports First TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sports-first-tv.png" tvg-chno="679" channel-id="SportsFirstTV.us" tvg-country="US" tvg-language="eng" group-title="Sports",Sports First TV
 https://d4ddgdmj1cvnm.cloudfront.net/scheduler/scheduleMaster/409.m3u8
@@ -1594,7 +1594,7 @@ https://mumbai-edge.smartplaytv.in/Tennis2/index.m3u8
 https://amg01935-amg01935c1-amgplt0165.playout.now3.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-name="TNT Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tnt-sports-1.png" group-title="Sports",TNT Sports
 http://205.235.6.29:8000/play/a0xa/index.m3u8
-#EXTINF:-1 tvg-name="TNT Sports Premium" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",TNT Sports Premium
+#EXTINF:-1 tvg-name="TNT Sports Premium" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tnt-sports-1.png" group-title="Sports",TNT Sports Premium
 http://205.235.6.29:8000/play/a104/index.m3u8
 #EXTINF:-1 tvg-name="TOP Barca" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/top-barca.png" tvg-country="ES" tvg-language="eng" group-title="Sports",TOP Barca
 https://amg17560-fcb-amg17560c1-rakuten-uk-4891.playouts.now.amagi.tv/playlist/amg17560-fcbarcelona-topbarcaenglish-rakutenuk/playlist.m3u8
@@ -2042,9 +2042,9 @@ https://ekusheyserver.com/etvlivesn.m3u8
 https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8
 #EXTINF:-1 tvg-name="Ekushey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Backup",Ekushey TV
 http://ekusheyserver.com/etvlivesn.m3u8
-#EXTINF:-1 tvg-name="Enter10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Enter10 Bangla
+#EXTINF:-1 tvg-name="Enterr10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" tvg-country="IN" tvg-language="ben" group-title="Backup",Enterr10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
-#EXTINF:-1 tvg-name="Enter10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Enter10 Bangla
+#EXTINF:-1 tvg-name="Enterr10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" tvg-country="IN" tvg-language="ben" group-title="Backup",Enterr10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8
 #EXTINF:-1 tvg-id="Enter10Bangla.in" tvg-name="Enterr10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" channel-id="Enter10Bangla.in" tvg-country="IN" tvg-language="ben" group-title="Backup",Enterr10 Bangla
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/61.m3u8
