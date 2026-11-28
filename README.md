@@ -1,215 +1,311 @@
-# BDIX-IPTV: Bangladesh IPTV M3U/M3U8 Playlists & XMLTV EPG
+ <div align="center">
 
-<div align="center">
+<img src="assets/hero.svg"
+     alt="BDIX-IPTV — Bangladesh IPTV playlists, M3U/M3U8 and XMLTV Electronic Programme Guide"
+     width="100%">
 
-<img src="assets/header.svg" alt="BDIX-IPTV: free Bangladesh IPTV M3U/M3U8 playlists and XMLTV EPG for Bangla, Indian, Pakistani and international channels" width="100%">
+# BDIX-IPTV
 
-### 📺 Free, curated IPTV playlists for Bangla TV, Indian, Pakistani and international channels
+### Bangladesh IPTV Playlists · M3U/M3U8 · XMLTV Electronic Programme Guide
 
-Get ready-to-use **M3U/M3U8 playlist URLs**, organized channel groups, local logos, alternate streams and a shared **XMLTV EPG** (TV programme guide) for compatible IPTV players.
+**Discover organized Bangladeshi, Indian, Pakistani and international television playlists with a shared XMLTV Electronic Programme Guide.**
 
-<br>
+BDIX-IPTV brings together curated M3U/M3U8 playlist collections, organized channel groups, locally maintained channel logos, alternate streams and a shared programme guide — making IPTV playlist discovery and management easier.
 
-<a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u"><img src="https://img.shields.io/badge/▶_Main_Playlist-0969da?style=for-the-badge" alt="Get the main IPTV playlist"></a>
-<a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u"><img src="https://img.shields.io/badge/▶_International_Playlist-8957e5?style=for-the-badge" alt="Get the international IPTV playlist"></a>
-<a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"><img src="https://img.shields.io/badge/🗓️_XMLTV_EPG-2ea44f?style=for-the-badge" alt="Get the XMLTV EPG"></a>
+![Public Access](https://img.shields.io/badge/Access-Public-238636?style=flat-square)
+![M3U/M3U8](https://img.shields.io/badge/Format-M3U%20%2F%20M3U8-0969DA?style=flat-square)
+![XMLTV EPG](https://img.shields.io/badge/Guide-XMLTV-8957E5?style=flat-square)
+![GitHub Actions](https://img.shields.io/badge/Maintenance-GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 
-<a href="https://saeidrahmanbd.github.io/BDIX-IPTV/">🌐 Project website</a> &nbsp;•&nbsp;
-<a href="https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html">📖 Playlist guide</a> &nbsp;•&nbsp;
-<a href="https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html">🇧🇩 বাংলা গাইড</a> &nbsp;•&nbsp;
-<a href="#faq">❓ FAQ</a>
+<a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u"><img src="https://img.shields.io/badge/▶_MAIN_IPTV_PLAYLIST-0969DA?style=for-the-badge" alt="Download Main IPTV Playlist"></a>
+<a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u"><img src="https://img.shields.io/badge/▶_INTERNATIONAL_PLAYLIST-8957E5?style=for-the-badge" alt="Download International Playlist"></a>
+<a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"><img src="https://img.shields.io/badge/🗓_XMLTV_EPG-238636?style=for-the-badge" alt="Open XMLTV EPG"></a>
 
-<br>
+[🌐 Project Website](https://saeidrahmanbd.github.io/BDIX-IPTV/) ·
+[📖 Playlist Guide](https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html) ·
+[🇧🇩 বাংলা গাইড](https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html) ·
+[❓ FAQ](#-frequently-asked-questions)
 
-<img src="https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?style=flat-square&color=f5c542" alt="GitHub stars">
-<img src="https://img.shields.io/github/last-commit/saeidrahmanbd/BDIX-IPTV/main?style=flat-square&color=0969da" alt="Last commit">
-<img src="https://img.shields.io/badge/license-MIT-yellow?style=flat-square" alt="MIT License">
-<img src="https://img.shields.io/badge/automation-GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions automation">
+![GitHub stars](https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?style=flat-square&color=f5c542)
+![Last commit](https://img.shields.io/github/last-commit/saeidrahmanbd/BDIX-IPTV/main?style=flat-square)
 
 </div>
 
 ---
 
-## 🚀 Quick Start
+## 📺 About BDIX-IPTV
 
-Three steps to start watching:
+**BDIX-IPTV** is an open-source IPTV playlist project focused on Bangladesh and South Asian television, with additional international channel selections.
 
-1. **📋 Copy a playlist URL** from [Choose a playlist](#playlists).
-2. **➕ Add it to your IPTV player** using *Add Playlist by URL* (the wording varies by app).
-3. **🗓️ Add the TV guide.** Paste the [XMLTV EPG URL](#epg) into your player's EPG settings and refresh.
+The project provides publicly accessible M3U/M3U8 playlists and a shared XMLTV Electronic Programme Guide (EPG) for compatible IPTV applications.
 
-> [!TIP]
-> New to IPTV? Follow the [step-by-step playlist guide](https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html), or read the [বাংলা IPTV গাইড](https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html) in Bangla.
+Whether you are looking for Bangladeshi television, Indian entertainment, Pakistani channels or international selections, BDIX-IPTV provides organized playlist collections designed for convenient browsing and playback in supported IPTV players.
+
+<div align="center">
+<img src="assets/iptv-project-showcase.svg"
+     alt="BDIX-IPTV project showcase featuring multi-country IPTV playlists, channel organization and XMLTV EPG"
+     width="100%">
+</div>
+
+### Why BDIX-IPTV?
+
+<div align="center">
+<img src="assets/feature-grid.svg"
+     alt="BDIX-IPTV features: Bangladesh-focused channels, organized playlists, XMLTV EPG, local logos, alternate streams and transparent reporting"
+     width="100%">
+</div>
+
+- 🇧🇩 **Bangladesh-focused:** Bangladeshi television channels are at the core of the project.
+- 🌏 **Multi-country selection:** Indian, Pakistani and eligible international television channels.
+- 🗂️ **Organized playlists:** Country-based and genre-based channel groups.
+- 🗓️ **Shared XMLTV EPG:** Programme-guide support for channels with matching schedule data.
+- 🖼️ **Local channel logos:** Repository-hosted logo assets where available.
+- 🔁 **Alternate streams:** Backup entries maintained where suitable alternatives exist.
+- ⚙️ **Automated maintenance:** GitHub Actions support discovery, validation, diagnostics and EPG updates.
+- 📊 **Transparent reporting:** Public diagnostic and maintenance reports.
+- 🆓 **Public access:** Playlist and programme-guide resources are accessible through GitHub.
+
+> **Note:** Channel availability, stream functionality and programme schedules depend on external sources. A listed channel does not guarantee uninterrupted playback or available EPG data.
 
 ---
 
-## ✨ Why BDIX-IPTV?
+## 🚀 Quick Start — Start Using BDIX-IPTV
 
-| | |
-|:---:|---|
-| 🇧🇩 | **Bangla-first.** Bangladesh channels are the focus, with Indian and Pakistani channels and eligible international selections alongside. |
-| 🗂️ | **Organized.** Channels are sorted into country and genre groups that work well in compatible players. |
-| 🗓️ | **Programme guide included.** One shared XMLTV EPG serves both playlists, with coverage reports so you can see what is mapped. |
-| 🖼️ | **Local logos.** Logo assets are hosted in the repository where available. |
-| 🔁 | **Alternate streams.** Backup entries are kept where they are maintained. |
-| 🩺 | **Transparent.** Automated checks publish reports, so you can see the evidence instead of trusting unverified claims. |
-| 🆓 | **Free and open.** The playlists and project information are publicly accessible under the MIT License. |
+Getting started requires a compatible IPTV player and a playlist URL.
 
-> [!NOTE]
-> Streams and programme schedules can change or stop without notice. A listed channel does not guarantee a working stream or EPG data. See [Reports](#reports) for the latest checks.
+<div align="center">
+<img src="assets/quickstart-flow.svg"
+     alt="Three steps to use BDIX-IPTV: copy a playlist URL, add it to an IPTV player and configure XMLTV EPG"
+     width="100%">
+</div>
+
+1. **Choose a playlist:** Select your preferred collection from [Choose Your IPTV Playlist](#-choose-your-iptv-playlist).
+2. **Add the playlist:** In your IPTV application, select *Add Playlist by URL* (wording varies by app), paste the URL and save.
+3. **Configure the TV Guide:** Add the shared XMLTV EPG URL in your player's EPG settings and refresh the guide.
+
+**Need help?** [Complete IPTV Setup Guide](https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html) · [বাংলা IPTV সেটআপ গাইড](https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html)
 
 ---
 
-## 📡 Choose a Playlist
+## 📡 Choose Your IPTV Playlist
 
-### 🟦 Main Multi-Country Playlist: `IPTV-Playlist.m3u`
+BDIX-IPTV offers two main playlist collections.
 
-Covers Bangladesh, India, Pakistan and eligible channels from other countries, grouped by country and genre. **Most users should start here.**
+### 🇧🇩 1. Main Multi-Country Playlist
+
+**IPTV-Playlist.m3u**
+
+The primary multi-country IPTV playlist, featuring organized Bangladeshi, Indian, Pakistani and eligible international television channels.
+
+**Highlights:**
+- Bangladesh television channels.
+- Indian television channels.
+- Pakistani television channels.
+- Eligible international selections.
+- Country-based and genre-based channel groups.
+- Channel metadata and logo references.
+- Alternate stream entries where maintained.
+
+**Playlist URL:**
 
 ```text
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u
 ```
 
-[📥 Download](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) · [🔍 View source](https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/IPTV-Playlist.m3u)
+<div align="center">
 
-### 🟪 International Playlist: `International-Playlist.m3u`
+[![Download Main Playlist](https://img.shields.io/badge/⬇_DOWNLOAD_MAIN_PLAYLIST-0969DA?style=for-the-badge)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)
 
-A companion collection with Bangladesh and India, plus eligible movie, music and other permitted selections from additional countries.
+</div>
+
+[View Main Playlist on GitHub](https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/IPTV-Playlist.m3u)
+
+### 🌍 2. International Playlist
+
+**International-Playlist.m3u**
+
+A companion playlist offering Bangladesh and Indian selections alongside eligible international movie, music, entertainment and other permitted channels.
+
+**Highlights:**
+- Bangladesh and Indian channels.
+- International movie channels.
+- International music channels.
+- Eligible entertainment selections.
+- Organized channel groups.
+- Channel metadata and logo references.
+- Alternate streams where maintained.
+
+**Playlist URL:**
 
 ```text
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u
 ```
 
-[📥 Download](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) · [🔍 View source](https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/International-Playlist.m3u)
+<div align="center">
 
-| If you want… | Choose |
+[![Download International Playlist](https://img.shields.io/badge/⬇_DOWNLOAD_INTERNATIONAL_PLAYLIST-8957E5?style=for-the-badge)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)
+
+</div>
+
+[View International Playlist on GitHub](https://github.com/saeidrahmanbd/BDIX-IPTV/blob/main/International-Playlist.m3u)
+
+| Your preference | Recommended playlist |
 |---|---|
-| The main organized multi-country collection | `IPTV-Playlist.m3u` |
-| The separate international companion collection | `International-Playlist.m3u` |
-| A visual setup walkthrough | [Playlist guide](https://saeidrahmanbd.github.io/BDIX-IPTV/playlists.html) |
-| Instructions in Bangla | [বাংলা IPTV গাইড](https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html) |
+| Main multi-country channel collection | `IPTV-Playlist.m3u` |
+| Separate international companion collection | `International-Playlist.m3u` |
+| Both collections | Add both playlists separately |
 
 ---
 
 ## 📱 Compatible IPTV Players
 
-The playlists use the widely supported M3U/M3U8 format and work with any IPTV application that accepts remote playlist URLs:
+BDIX-IPTV uses the widely supported M3U/M3U8 playlist format. You can use the playlists with compatible IPTV applications that support remote playlist URLs.
 
-- XCIPTV
-- TiviMate
-- OTT Navigator
-- IPTV Smarters
-- VLC media player
-- Kodi
-- Other M3U-compatible IPTV apps
+| IPTV application | Platform / official resource |
+|---|---|
+| [TiviMate](https://tivimate.com/) | Android TV |
+| [XCIPTV](https://xciptv.com/) | Android |
+| [OTT Navigator](https://faq.ott-nav.com/) | Android |
+| [IPTV Smarters](https://www.iptvsmarters.com/) | Multiple platforms |
+| [VLC Media Player](https://www.videolan.org/vlc/) | Windows, macOS, Linux, Android |
+| [Kodi](https://kodi.tv/) | Multiple platforms |
 
-> [!TIP]
-> **General setup:** open your player, choose *Add Playlist* or *Add Playlist by URL*, paste a playlist URL, then save and refresh. Menu names vary by app and device.
+**General setup:** Open your player, choose *Add Playlist* or *Add Playlist by URL*, paste a playlist URL, then save and refresh. Menu names vary by application and device.
 
-This project does not provide, endorse or require any particular third-party player.
+BDIX-IPTV is an independent project and is not affiliated with or endorsed by the third-party applications listed above.
 
 ---
 
-## 🗓️ EPG: TV Programme Guide
+## 🗓️ XMLTV EPG — Electronic Programme Guide
 
-Both playlists use the shared **XMLTV EPG**, which provides programme schedules for channels with matching IDs.
+A television playlist becomes more useful when you can see programme schedules.
+
+BDIX-IPTV provides a **shared XMLTV Electronic Programme Guide** for its main and international playlist collections. The guide contains programme information for channels with successfully matched identifiers and available schedule data.
+
+### XMLTV EPG URL
 
 ```text
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml
 ```
 
-### How to add the EPG
+<div align="center">
+[![Open XMLTV EPG](https://img.shields.io/badge/🗓_OPEN_XMLTV_PROGRAMME_GUIDE-238636?style=for-the-badge)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml)
+</div>
 
-1. Open your player's EPG or TV Guide settings.
-2. Add an external XMLTV source or EPG URL.
-3. Paste the URL above, save, and refresh the guide.
-4. If a channel has no programme data, check that its `tvg-id` matches an ID in the guide.
+### How to configure XMLTV EPG
 
-### Understanding coverage
-
-Not every channel has programme data. Coverage depends on source availability, channel-ID matching and the schedule window from programme-guide providers.
-
-- 📊 [Latest EPG coverage and mapping report](reports/epg-coverage.md)
-- 📚 [Public EPG documentation](epg/README.md)
-- 📂 [EPG source and mapping files](epg/)
-
-> [!IMPORTANT]
-> **Empty guide?** Refresh the EPG, verify the XMLTV URL, check the channel's `tvg-id`, and consult the latest coverage report.
-
----
-
-## 📊 Reports
-
-Audit and diagnostic reports are generated at different times. Each one describes the inputs and checks recorded in that report. Please check each report's timestamp.
-
-| Report | What it shows |
-|---|---|
-| [IPTV Playlist Audit](reports/iptv-playlist-audit.md) | Channel identity, metadata, duplicate and logo checks |
-| [Stream Health Report](reports/stream-health.md) | Results and limits of stream probes |
-| [EPG Coverage Report](reports/epg-coverage.md) | EPG mapping and programme coverage |
-| [Channel Discovery Report](reports/iptv-channel-discovery.md) | Discovery activity and candidate channels |
-| [Backup Independence Audit](reports/backup-independence-audit.md) | Backup stream and identity review |
-| [Stream Risk Review](reports/stream-risk-review.md) | Stream risk and review findings |
-
-> [!NOTE]
-> A report is a snapshot of its stated inputs and test environment, not a guarantee of future availability.
-
----
-
-## ⚙️ How Maintenance Works
-
-Scripts and GitHub Actions support repeatable maintenance:
+1. Open your IPTV application's settings.
+2. Find the EPG or TV Guide section.
+3. Select *Add External EPG* or *Add XMLTV Source*.
+4. Paste the XMLTV URL.
+5. Save and refresh the guide.
+6. Allow the application to synchronize programme schedules.
 
 <div align="center">
+<img src="assets/epg-timeline.svg"
+     alt="Illustrative XMLTV electronic programme guide showing television channels and programme schedules"
+     width="100%">
+</div>
 
-<img src="assets/how-it-works.svg" alt="BDIX-IPTV workflow: discovery, stream checks, playlist maintenance, EPG mapping, publication and your IPTV player" width="100%">
+### Understanding EPG coverage
 
+Not every television channel has available programme schedules. Coverage depends on reliable programme-guide sources, correct channel identification and `tvg-id` mapping, schedule availability, source accessibility and permitted redistribution.
+
+**EPG resources:**
+- [Latest EPG Coverage & Mapping Report](reports/epg-coverage.md)
+- [EPG Documentation](epg/README.md)
+- [EPG Source and Mapping Files](epg/)
+
+> **Troubleshooting:** If the guide is empty, verify the XMLTV URL, refresh the EPG and check whether the channel's `tvg-id` matches an identifier in the XMLTV file.
+
+---
+
+## 📊 Project Reports & Transparency
+
+Reliable playlist maintenance requires more than collecting stream URLs. BDIX-IPTV uses automated checks, diagnostic scripts and periodic reviews to improve channel information, playlist quality and EPG mapping.
+
+| Report | Description |
+|---|---|
+| [IPTV Playlist Audit](reports/iptv-playlist-audit.md) | Channel identity, metadata, duplicate and logo checks |
+| [Stream Health Report](reports/stream-health.md) | Stream probing results and diagnostic limitations |
+| [EPG Coverage Report](reports/epg-coverage.md) | Channel mapping and programme schedule coverage |
+| [Channel Discovery Report](reports/iptv-channel-discovery.md) | Discovery activity and candidate channel information |
+| [Backup Independence Audit](reports/backup-independence-audit.md) | Backup stream and channel identity review |
+| [Stream Risk Review](reports/stream-risk-review.md) | Stream risk assessment and review findings |
+
+**Explore project activity:** [GitHub Actions](https://github.com/saeidrahmanbd/BDIX-IPTV/actions) · [All Reports](reports/) · [Documentation](docs/README.md)
+
+> Reports represent the results and limitations of their recorded tests. Stream availability can change after a report is generated.
+
+---
+
+## ⚙️ Automated Playlist Maintenance
+
+BDIX-IPTV uses Python-based scripts and GitHub Actions to support repeatable playlist management.
+
+<div align="center">
+<img src="assets/how-it-works.svg"
+     alt="BDIX-IPTV automated maintenance workflow including channel discovery, validation, stream diagnostics, EPG mapping and publication"
+     width="100%">
 </div>
 
 | Stage | Process |
-|:---:|---|
-| 1 | **Discovery:** identify potential channels and candidate stream references for review. |
-| 2 | **Identity checks:** examine names, groups, identifiers and duplicates. |
-| 3 | **Stream diagnostics:** probe endpoints and record each outcome and its limits. |
-| 4 | **Logo maintenance:** use locally stored assets and review matches where evidence exists. |
-| 5 | **EPG mapping:** associate channel IDs with XMLTV schedules and validate the guide. |
-| 6 | **Publication:** publish changes after workflow checks and validation. |
+|---|---|
+| 1. Discovery | Identify potential television channels and candidate stream references. |
+| 2. Validation | Review channel identity, names, metadata and group assignments. |
+| 3. Stream diagnostics | Test stream endpoints and record probe results. |
+| 4. Logo maintenance | Maintain local logo assets and review channel-logo matching. |
+| 5. EPG mapping | Associate channel identifiers with available XMLTV schedules. |
+| 6. Quality checks | Validate playlist structure, metadata and generated reports. |
+| 7. Publication | Publish validated changes through automated workflows. |
 
-> [!WARNING]
-> A successful probe does not guarantee a stream will stay available everywhere. A failed probe may reflect a temporary restriction, timeout or test environment. See the [stream health report](reports/stream-health.md).
+**Project technology:** Python · GitHub Actions · M3U/M3U8 · XMLTV · Channel metadata · Automated diagnostics and reporting.
 
-**Project resources:** [GitHub Actions](https://github.com/saeidrahmanbd/BDIX-IPTV/actions) · [Contributing guide](docs/CONTRIBUTING.md) · [Security policy](docs/SECURITY.md) · [Documentation index](docs/README.md)
+**Developer resources:** [GitHub Repository](https://github.com/saeidrahmanbd/BDIX-IPTV) · [GitHub Actions](https://github.com/saeidrahmanbd/BDIX-IPTV/actions) · [Contributing Guidelines](docs/CONTRIBUTING.md) · [Security Policy](docs/SECURITY.md) · [Documentation Index](docs/README.md)
+
+> A successful stream probe does not guarantee uninterrupted playback. Temporary restrictions, timeouts, provider changes and network conditions can affect results.
 
 ---
 
-## 🖥️ Playlist Studio 5.1 for Windows
+## 🖥️ Playlist Studio 5.1 — Windows IPTV Playlist Manager
 
-**Playlist Studio** is a separate Windows application, maintained by the project owner, for managing, editing, checking and playing M3U/M3U8 playlists in one desktop workspace.
+**Playlist Studio** is a separate Windows application maintained by the project owner for editing, organizing, scanning and managing IPTV playlists.
 
 <div align="center">
 
 <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1">
-  <img src="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/Playlist-Studio-5.1.JPG" alt="Playlist Studio 5.1 Windows IPTV playlist editor, XMLTV EPG centre and stream scanner" width="85%">
+<img src="assets/Playlist-Studio-5.1.JPG"
+     alt="Playlist Studio 5.1 Windows IPTV playlist editor and XMLTV EPG management interface"
+     width="90%">
 </a>
+
+### Playlist Studio 5.1
+
+**A desktop companion for IPTV playlist and EPG management.**
 
 </div>
 
-### Highlights
+### Key features
 
-- 📝 **Editor:** organize channels, categories and metadata.
-- 🗓️ **XMLTV EPG Centre:** load guides from URLs or local XML, GZ, XZ and ZIP files; inspect coverage and Now/Next information.
-- ✏️ **EPG editing:** search and edit `tvg-id` values, preview bulk edits and keep manual corrections.
-- 🩺 **Stream scanner:** review Responsive, Dead, Unreachable, Restricted, Stale, Unavailable, Unverified and Error outcomes. Timeouts and blocked requests are not automatically labelled Dead.
-- 🎛️ **Scan controls:** pause, resume, cancel, and set limits, timeouts and retries.
-- 🔌 **Xtream Codes and Stalker/MAC:** import supported provider playlists in the background, with safer credential handling.
-- 🛡️ **Safer editing:** preserves playlist directives and unknown header keys, with backup and recovery.
+- **Playlist Editor:** Edit M3U/M3U8 playlists, channel names, categories and metadata.
+- **XMLTV EPG Centre:** Load XMLTV guides from URLs and supported local XML, GZ, XZ and ZIP files.
+- **EPG Mapping:** Search, inspect and edit channel `tvg-id` values.
+- **Stream Scanner:** Review Responsive, Dead, Unreachable, Restricted, Stale, Unavailable, Unverified and Error results.
+- **Advanced Scan Controls:** Pause, resume and cancel scans; configure timeouts, retries and limits.
+- **Xtream Codes and Stalker/MAC:** Import supported provider playlists with safer credential handling.
+- **Safer Editing:** Preserve playlist directives and unknown header keys, with backup and recovery support.
+- **Built-in Playback:** Playback using the bundled VLC engine.
 
-### Download
+### Download Playlist Studio 5.1
 
 <div align="center">
 
-<a href="https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.1/Playlist-Studio-5.1.exe"><img src="https://img.shields.io/badge/⬇_Download_Portable_EXE-0969da?style=for-the-badge" alt="Download Playlist Studio 5.1 portable executable"></a>
-<a href="https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1"><img src="https://img.shields.io/badge/Release_notes-24292f?style=for-the-badge&logo=github" alt="Playlist Studio 5.1 release notes"></a>
+[![Download Portable EXE](https://img.shields.io/badge/⬇_DOWNLOAD_PORTABLE_EXE-0969DA?style=for-the-badge)](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.1/Playlist-Studio-5.1.exe)
+
+[![Windows Build Kit](https://img.shields.io/badge/WINDOWS_BUILD_KIT-24292F?style=for-the-badge&logo=windows)](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.1/Playlist-Studio-5_1-Windows-Build-Kit-r2.zip)
+
+[![Release Notes](https://img.shields.io/badge/VIEW_RELEASE_NOTES-24292F?style=for-the-badge&logo=github)](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1)
 
 </div>
 
@@ -217,17 +313,17 @@ Scripts and GitHub Actions support repeatable maintenance:
 |---|---|
 | Operating system | Windows 10 / 11 |
 | Architecture | 64-bit (x64) |
-| Edition | Portable executable; no traditional installation |
+| Edition | Portable executable |
 | Playlist formats | M3U / M3U8 |
-| EPG formats | XMLTV from URLs and supported local files |
-| Playback | Built-in player with bundled VLC engine |
+| EPG formats | XMLTV and supported compressed files |
+| Playback engine | Bundled VLC engine |
+| Build Python | 3.13 recommended; 3.10–3.13 accepted |
 
 The release includes a Windows Build Kit. See the [build instructions](docs/PLAYLIST-STUDIO.md) and [release integrity record](docs/PLAYLIST-STUDIO-INTEGRITY.md).
 
-> [!CAUTION]
-> **Windows SmartScreen:** the executable is unsigned and Windows may show a warning. Download it only from the official release and review the release notes first.
+> **Windows SmartScreen notice:** The executable is unsigned. Windows may display a security warning. Download it only from the official GitHub release and review the release information before running it.
 
-Product repository and future releases: [Playlist Studio on GitHub](https://github.com/saeidrahmanbd/Playlist-Studio).
+More information: [Playlist Studio Repository](https://github.com/saeidrahmanbd/Playlist-Studio) · [v5.1 Release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.1)
 
 ---
 
@@ -236,101 +332,157 @@ Product repository and future releases: [Playlist Studio on GitHub](https://gith
 ## ❓ Frequently Asked Questions
 
 <details>
-<summary><strong>Is BDIX-IPTV free?</strong></summary>
+<summary><strong>1. Is BDIX-IPTV free?</strong></summary>
 
-<br>
+The playlists and project information are publicly accessible. Internet access, third-party IPTV applications and external services may have their own costs and terms.
 
-The playlists and project information are publicly accessible. Third-party players, internet access and external services may have their own costs or terms.
 </details>
 
 <details>
-<summary><strong>Does BDIX-IPTV host TV channels or video?</strong></summary>
+<summary><strong>2. What is BDIX-IPTV?</strong></summary>
 
-<br>
+BDIX-IPTV is an IPTV playlist project providing organized M3U/M3U8 playlist references and a shared XMLTV Electronic Programme Guide for Bangladeshi, Indian, Pakistani and international television selections.
 
-No. This repository provides playlist references and metadata. It does not host broadcasts, video or broadcaster infrastructure.
 </details>
 
 <details>
-<summary><strong>Why is a channel listed but not playing?</strong></summary>
+<summary><strong>3. Does BDIX-IPTV host television channels?</strong></summary>
 
-<br>
+No. The repository provides playlist references, metadata and programme-guide information. It does not host television broadcasts, video streams or broadcaster infrastructure.
 
-Stream endpoints can change, become restricted or go offline. Check the [stream health report](reports/stream-health.md) and try again later.
 </details>
 
 <details>
-<summary><strong>Why is the TV guide empty for some channels?</strong></summary>
+<summary><strong>4. Which IPTV playlist should I choose?</strong></summary>
 
-<br>
+Start with `IPTV-Playlist.m3u` for the main multi-country collection. Choose `International-Playlist.m3u` if you also want the separate international companion collection.
 
-Not every channel has a matching XMLTV programme source. Check the channel's `tvg-id`, refresh your EPG and consult the [EPG coverage report](reports/epg-coverage.md).
 </details>
 
 <details>
-<summary><strong>Can I use these in TiviMate, XCIPTV, VLC or Kodi?</strong></summary>
+<summary><strong>5. Why is a channel listed but not playing?</strong></summary>
 
-<br>
+Stream endpoints may become unavailable, restricted or temporarily unreachable. Network conditions and provider-side changes can also affect playback. Check the [Stream Health Report](reports/stream-health.md) and try again later.
 
-Yes, these apps support M3U playlists or remote playlist URLs. Setup varies by app and device.
 </details>
 
 <details>
-<summary><strong>How do I report a broken stream or wrong channel information?</strong></summary>
+<summary><strong>6. Why is the TV guide empty for some channels?</strong></summary>
 
-<br>
+Not every channel has available programme schedules. Verify the channel's `tvg-id`, refresh the EPG and consult the [EPG Coverage Report](reports/epg-coverage.md).
 
-Open a [GitHub Issue](https://github.com/saeidrahmanbd/BDIX-IPTV/issues) with the channel name, playlist name, stream URL, player or device, and a short description. Never post private provider credentials or tokens.
 </details>
 
 <details>
-<summary><strong>Can I contribute?</strong></summary>
+<summary><strong>7. Can I use BDIX-IPTV with TiviMate or XCIPTV?</strong></summary>
 
-<br>
+Yes. These applications support M3U playlists or remote playlist URLs. Configuration varies depending on the application and device.
 
-Yes. Read the [contributing guide](docs/CONTRIBUTING.md), then open an issue or discussion before proposing changes to playlist policies or maintenance.
+</details>
+
+<details>
+<summary><strong>8. How do I report a broken stream?</strong></summary>
+
+Open a [GitHub Issue](https://github.com/saeidrahmanbd/BDIX-IPTV/issues) with the channel name, playlist name, stream URL if appropriate to share, IPTV application and device, and a description of the problem. Never include private provider credentials, passwords or access tokens.
+
+</details>
+
+<details>
+<summary><strong>9. Can I contribute to BDIX-IPTV?</strong></summary>
+
+Yes. Read the [Contributing Guidelines](docs/CONTRIBUTING.md) and open an issue or discussion before proposing changes to playlist policies or maintenance.
+
+</details>
+
+<details>
+<summary><strong>10. Does BDIX-IPTV guarantee uninterrupted service?</strong></summary>
+
+No. Third-party stream endpoints and programme-guide sources can change without notice. The project provides maintenance and diagnostics but cannot guarantee continuous availability or complete EPG coverage.
+
 </details>
 
 ---
 
-## 💬 Support and Contact
+## 🤝 Contribute & Support the Project
 
-Found a broken stream, wrong channel information, a missing logo or an EPG mapping issue? Please open an issue with enough detail to reproduce it.
+Community feedback helps improve playlist organization, channel identification, metadata accuracy and programme-guide coverage.
+
+You can help by:
+
+- Reporting broken or incorrect channel entries.
+- Suggesting reliable and appropriate channel sources.
+- Identifying incorrect channel logos.
+- Reporting EPG mapping problems.
+- Improving documentation.
+- Contributing code and maintenance improvements.
 
 <div align="center">
 
-<a href="https://github.com/saeidrahmanbd/BDIX-IPTV/issues"><img src="https://img.shields.io/badge/🐞_Report_an_issue-e5534b?style=for-the-badge" alt="Report a BDIX-IPTV issue"></a>
-<a href="https://github.com/saeidrahmanbd/BDIX-IPTV/discussions"><img src="https://img.shields.io/badge/💬_Discussions-8250df?style=for-the-badge" alt="BDIX-IPTV discussions"></a>
+[![Report an Issue](https://img.shields.io/badge/🐞_REPORT_AN_ISSUE-E5534B?style=for-the-badge)](https://github.com/saeidrahmanbd/BDIX-IPTV/issues)
 
-**Maintainer: Saeid Rahman**
+[![GitHub Discussions](https://img.shields.io/badge/💬_JOIN_DISCUSSIONS-8250DF?style=for-the-badge)](https://github.com/saeidrahmanbd/BDIX-IPTV/discussions)
 
-<a href="mailto:saeidrahman.mkt@gmail.com"><img src="https://img.shields.io/badge/Email-saeidrahman.mkt@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email Saeid Rahman"></a>
-<a href="https://github.com/saeidrahmanbd"><img src="https://img.shields.io/badge/GitHub-saeidrahmanbd-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Saeid Rahman"></a>
-<a href="https://www.facebook.com/saeid.rahman.sr"><img src="https://img.shields.io/badge/Facebook-Saeid_Rahman-1877F2?style=flat-square&logo=facebook&logoColor=white" alt="Facebook Saeid Rahman"></a>
+[![Contribute](https://img.shields.io/badge/🤝_CONTRIBUTE_TO_THE_PROJECT-238636?style=for-the-badge)](docs/CONTRIBUTING.md)
 
 </div>
 
 ---
 
-## ⚖️ License and Disclaimer
+## 📬 Maintainer & Contact
+
+**Maintained by Saeid Rahman**
+
+For technical support, suggestions, collaboration and project-related enquiries:
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-saeidrahman.mkt%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:saeidrahman.mkt@gmail.com)
+
+[![GitHub](https://img.shields.io/badge/GitHub-saeidrahmanbd-181717?style=flat-square&logo=github)](https://github.com/saeidrahmanbd)
+
+[![Facebook](https://img.shields.io/badge/Facebook-Saeid_Rahman-1877F2?style=flat-square&logo=facebook)](https://www.facebook.com/saeid.rahman.sr)
+
+</div>
+
+---
+
+## ⚖️ License, Rights & Disclaimer
 
 The repository's original code and documentation are licensed under the [MIT License](LICENSE), to the extent owned by the maintainer.
 
-The MIT License does **not** grant rights to third-party broadcaster names, channel logos, trademarks, programme information, stream endpoints, artwork or other third-party materials. Those remain subject to their owners' rights and applicable terms. A logo stored here is not thereby verified as official or relicensed under MIT.
+The MIT License does not grant rights to third-party broadcaster names, television channel logos, trademarks, programme information, stream endpoints, artwork or other third-party materials. Such materials remain subject to their respective owners' rights and applicable terms.
 
-> [!IMPORTANT]
-> This project does not host television channels, broadcast signals or video. It provides references to streams and playlist information. Availability and programme data may change without notice. Users are responsible for complying with applicable laws, broadcaster rights and service terms. No uninterrupted service, specific channel availability or complete EPG coverage is guaranteed.
+The presence of a channel logo or stream reference in this repository does not establish ownership, authorization or official affiliation.
+
+### Important disclaimer
+
+- BDIX-IPTV does not host television broadcasts, video content or broadcaster infrastructure.
+- The project provides references to streams and associated playlist information.
+- Third-party streams may become unavailable, restricted or discontinued.
+- Programme schedules depend on external sources and successful channel mapping.
+- No uninterrupted playback, specific channel availability or complete EPG coverage is guaranteed.
+- Users are responsible for complying with applicable laws, copyright requirements, broadcaster rights and third-party service terms.
 
 ---
 
 <div align="center">
 
-**⭐ Find BDIX-IPTV useful? Star the project on GitHub.**
+## ⭐ Enjoying BDIX-IPTV?
 
-<a href="https://github.com/saeidrahmanbd/BDIX-IPTV/stargazers"><img src="https://img.shields.io/badge/Star-BDIX--IPTV-f5c542?style=for-the-badge&logo=github&logoColor=white" alt="Star the BDIX-IPTV repository"></a>
+If this project helps you discover and organize IPTV playlists, consider giving the repository a star.
 
-Maintained by <a href="https://github.com/saeidrahmanbd"><strong>Saeid Rahman</strong></a> · <a href="#">⬆️ Back to top</a>
+[![Star BDIX-IPTV](https://img.shields.io/badge/⭐_STAR_BDIX--IPTV-F5C542?style=for-the-badge&logo=github&logoColor=white)](https://github.com/saeidrahmanbd/BDIX-IPTV/stargazers)
+
+**Every star, suggestion and contribution helps the project grow.**
+
+[🌐 Website](https://saeidrahmanbd.github.io/BDIX-IPTV/) ·
+[📡 Main Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) ·
+[🗓️ EPG](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml)
+
+Maintained with ❤️ by [Saeid Rahman](https://github.com/saeidrahmanbd)
 
 <img src="assets/footer.svg" alt="" width="100%">
+
+[⬆ Back to Top](#bdix-iptv)
 
 </div>
