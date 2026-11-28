@@ -189,6 +189,12 @@ class LogoRepairSourceTests(unittest.TestCase):
     def test_4_sides_tv_asset_is_quarantined_as_a_misapplied_generic(self):
         self.assertIn("4-sides-tv-6a436fa007.png", logo_repair.GENERIC_ASSETS)
 
+    def test_hi_yah_uses_exact_channel_logo_from_plex_catalogue(self):
+        hint = logo_repair.EXTRA_DIRECT_HINTS["Hi-Yah!"]
+        self.assertEqual(hint["url"], "https://provider-static.plex.tv/discover/logos/f/439.png")
+        self.assertIn("hi-yah", hint["page"])
+        self.assertIn("Plex", hint["license"])
+
     def test_registry_lookup_without_channel_id_requires_exact_channel_name(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

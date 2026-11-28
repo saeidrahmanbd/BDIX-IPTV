@@ -409,6 +409,14 @@ EXTRA_DIRECT_HINTS = {
         "license": "KTN Pakistan logo URL listed in the IPTV-org channel record for KTN.pk; original broadcaster rights remain with Kawish Television Network.",
         "license_url": "",
     },
+    # Exact Hi-YAH! channel mark served in Plex's channel-logo catalogue.
+    "Hi-Yah!": {
+        "url": "https://provider-static.plex.tv/discover/logos/f/439.png",
+        "format": "PNG",
+        "page": "https://play.xumo.com/live-guide/hi-yah",
+        "license": "Exact Hi-YAH! channel logo shown by Plex's channel-logo catalogue; channel identity independently confirmed by the official Hi-YAH! site. Source attribution only, no separate copyright licence asserted.",
+        "license_url": "",
+    },
     # Exact Fazal TV logo paired with FazalTV.pk@SD in a published channel playlist.
     "Fazal TV": {
         "url": "https://i.imgur.com/c0fvKia.png",
