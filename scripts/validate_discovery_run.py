@@ -672,13 +672,16 @@ def final_mode(playlist, report, baseline, mode):
         return discovery.primary_identity(entry["attrs"], entry["name"])
 
     queue_keys = {"new channels", "new backup", "new backups"}
+    # Review is a quarantine, not a confirmed primary identity. A verified new
+    # stream may replace an unverified Review-only entry; Review must not block it.
+    non_primary_groups = {"new backup", "new backups", "review", "not playing", "test"}
     existing_channel_ids = {
         identity(e) for e in entries
-        if e["group"].casefold() != "new channels" and identity(e)
+        if e["group"].casefold() not in {"new channels", *non_primary_groups} and identity(e)
     }
     represented_for_backup = {
         identity(e) for e in entries
-        if e["group"].casefold() not in {"new backup", "new backups"} and identity(e)
+        if e["group"].casefold() not in {"new backup", "new backups", "review", "not playing", "test"} and identity(e)
     }
     new_channel_ids = [
         identity(e) for e in entries
