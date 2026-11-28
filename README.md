@@ -6,9 +6,9 @@
 
 # BDIX-IPTV
 
-### Bangladeshi IPTV Platform · Regional M3U/M3U8 Playlists · Shared XMLTV EPG
+### Bangladeshi IPTV Project · Regional M3U/M3U8 Playlists · Shared XMLTV EPG
 
-**A Bangladeshi IPTV platform — bringing Bangladeshi television together with Indian, Pakistani and international channel collections, supported by one shared XMLTV Electronic Programme Guide.**
+**A Bangladeshi IPTV playlist collection — bringing Bangladeshi television together with Indian, Pakistani and international channel collections, supported by one shared XMLTV Electronic Programme Guide.**
 
 Built around Bangladeshi television, BDIX-IPTV brings together curated M3U/M3U8 playlists, organized regional channel groups, locally maintained logos, alternate streams and a shared programme guide for compatible IPTV players.
 
