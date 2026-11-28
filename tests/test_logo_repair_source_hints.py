@@ -186,6 +186,46 @@ class LogoRepairSourceTests(unittest.TestCase):
         self.assertFalse(logo_repair.ALLOW_GENERATED_FALLBACKS)
         self.assertTrue(callable(logo_repair.make_generated_fallback))
 
+    def test_4_sides_tv_asset_is_quarantined_as_a_misapplied_generic(self):
+        self.assertIn("4-sides-tv-6a436fa007.png", logo_repair.GENERIC_ASSETS)
+
+    def test_registry_lookup_without_channel_id_requires_exact_channel_name(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            logo_dir = root / "logos"
+            logo_dir.mkdir()
+            logo = logo_dir / "4-sides-tv-6a436fa007.png"
+            logo.write_bytes(b"placeholder")
+            registry_path = root / "registry.json"
+            raw_url = logo_repair.raw_url(logo.name)
+            registry_path.write_text(
+                __import__("json").dumps({
+                    f"IPTV-Playlist.m3u||4 SiDES TV|{raw_url}": {
+                        "status": "third_party_verified",
+                        "source_url": "https://jiotvimages.cdn.jio.com/dare_images/images/4sites.png",
+                        "notes": "Exact 4 SiDES TV logo",
+                    }
+                }),
+                encoding="utf-8",
+            )
+            with patch.object(logo_repair, "REGISTRY_PATH", registry_path), \\
+                 patch.object(logo_repair, "is_valid_local_logo_reference", return_value=True):
+                self.assertIsNone(
+                    logo_repair.find_registered_logo("IPTV-Playlist.m3u", {}, "Raatdin Bangla")
+                )
+
+    def test_recovered_logo_hints_are_identity_attributed(self):
+        expected = {
+            "Raatdin Bangla": ("raatdinbangla.com", "raatdin-logo-transparent.png"),
+            "KTN TV": ("iptv-org.github.io/channels/pk/KTN", "Sindhi_TV_KTN.jpg"),
+            "Fazal TV": ("FazalTV.pk@SD", "c0fvKia.png"),
+        }
+        for channel, (source_marker, asset_marker) in expected.items():
+            with self.subTest(channel=channel):
+                hint = logo_repair.EXTRA_DIRECT_HINTS[channel]
+                self.assertIn(source_marker, hint["page"] + hint["license"])
+                self.assertIn(asset_marker, hint["url"])
+
     def test_adult_backup_channels_are_exempt_from_logo_repair(self):
         for name in ("Evil Angel", "Pink Erotic 2", "Pink Erotic 3", "Pink Erotic 5", "Pink Erotic 7", "Pink Erotic 8"):
             with self.subTest(channel=name):

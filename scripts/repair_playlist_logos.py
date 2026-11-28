@@ -78,6 +78,8 @@ GENERIC_ASSETS = {
     "placeholder-channel-1.png",
     "placeholder-channel-16.png",
     "placeholder-channel-52.png",
+    # Misapplied 4 SiDES TV mark was used as a generic placeholder across unrelated channels.
+    "4-sides-tv-6a436fa007.png",
 }
 BAD_ASSETS = {name.casefold() for name in BAD_ASSETS}
 GENERIC_ASSETS = {name.casefold() for name in GENERIC_ASSETS}
@@ -390,6 +392,30 @@ EXTRA_DIRECT_HINTS = {
         "page": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/hd/tnt-sports-1-hd-uk.png",
         "license": "Public TV logo repository; original logo rights belong to broadcaster",
         "license_url": "https://github.com/tv-logo/tv-logos",
+    },
+    # Exact Raatdin Bangla wordmark linked from the broadcaster's own website footer.
+    "Raatdin Bangla": {
+        "url": "https://raatdinbangla.com/wp-content/themes/Raatdin_Bangla_THEME_NEWS_SIZE_FINAL/assets/raatdin-logo-transparent.png",
+        "format": "PNG",
+        "page": "https://raatdinbangla.com/",
+        "license": "Exact Raatdin Bangla logo asset linked from the broadcaster's official website; source attribution only, no separate copyright licence asserted.",
+        "license_url": "",
+    },
+    # KTN Pakistan logo identified by the IPTV-org KTN.pk channel record.
+    "KTN TV": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/8/8e/Sindhi_TV_KTN.jpg",
+        "format": "JPEG",
+        "page": "https://iptv-org.github.io/channels/pk/KTN",
+        "license": "KTN Pakistan logo URL listed in the IPTV-org channel record for KTN.pk; original broadcaster rights remain with Kawish Television Network.",
+        "license_url": "",
+    },
+    # Exact Fazal TV logo paired with FazalTV.pk@SD in a published channel playlist.
+    "Fazal TV": {
+        "url": "https://i.imgur.com/c0fvKia.png",
+        "format": "PNG",
+        "page": "https://gist.github.com/ZeiTeria/68851fb02bbb95525d89ff0ff0afceae",
+        "license": "Exact Fazal TV artwork paired with tvg-id FazalTV.pk@SD in a published IPTV playlist; source attribution only, no separate copyright licence asserted.",
+        "license_url": "",
     },
     "Disney Channel Big City Greens": {
         "url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/international/disney-channel-int.png",
@@ -780,13 +806,19 @@ def find_registered_logo(playlist_name, meta, channel):
         parts = key.split("|", 3)
         if len(parts) != 4 or parts[0] != playlist_name:
             continue
-        if channel_id and parts[1].strip().casefold() != channel_id:
+        if channel_id:
+            # A matching stable channel ID is sufficient even when the display
+            # name is an alias; never use another channel's record.
+            if parts[1].strip().casefold() != channel_id:
+                continue
+        elif norm_key(parts[2]) != norm_key(channel):
+            # Without a stable ID, require an exact normalized channel name.
+            # The previous loose match selected the first unrelated registry logo.
             continue
         if not is_valid_local_logo_reference(parts[3]):
             continue
-        name_score = 0 if norm_key(parts[2]) == norm_key(channel) else 1
         fallback_score = 1 if value.get("status") == "generated_fallback" else 0
-        options.append((name_score, fallback_score, parts[3]))
+        options.append((fallback_score, parts[3]))
     if not options:
         return None
     options.sort()
