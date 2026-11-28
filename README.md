@@ -1,6 +1,6 @@
  <div align="center">
 
-<img src="assets/hero.svg"
+<img src="assets/hero.svg?v=4"
      alt="BDIX-IPTV — Bangladesh IPTV playlists, M3U/M3U8 and XMLTV Electronic Programme Guide"
      width="100%">
 
@@ -67,7 +67,7 @@ Getting started requires a compatible IPTV player and a playlist URL.
 
 <div align="center">
 
-<img src="assets/quickstart-flow.svg"
+<img src="assets/quickstart-flow.svg?v=4"
      alt="Three-step BDIX-IPTV setup: copy a playlist URL, add it to a compatible IPTV player, then load the shared XMLTV programme guide"
      width="100%">
 
