@@ -14,7 +14,7 @@ import repair_international_playlist as legacy_repair
 
 
 class InternationalDiscoveryPolicyTests(unittest.TestCase):
-    def test_existing_primary_index_counts_review_backup_and_queues_as_represented(self):
+    def test_existing_primary_index_excludes_quarantined_review_but_counts_backup_and_queues(self):
         blocks = [
             ['#EXTINF:-1 tvg-name="Star Gold" group-title="Review",Star Gold', "https://example.org/star-gold-review.m3u8"],
             ['#EXTINF:-1 tvg-name="Star Movies Select" group-title="Backup",Star Movies Select', "https://example.org/star-movies-select-backup.m3u8"],
@@ -23,11 +23,17 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             ['#EXTINF:-1 tvg-name="Ignored Test" group-title="Test",Ignored Test', "https://example.org/test.m3u8"],
         ]
         index = discovery.existing_primary_index(blocks)
-        self.assertIn(discovery.norm("Star Gold"), index)
+        self.assertNotIn(discovery.norm("Star Gold"), index)
         self.assertIn(discovery.norm("Star Movies Select"), index)
         self.assertIn(discovery.norm("New Candidate"), index)
         self.assertIn(discovery.norm("Queued Alternate"), index)
         self.assertNotIn(discovery.norm("Ignored Test"), index)
+
+    def test_safe_url_rejects_proxy_and_worker_routes(self):
+        self.assertFalse(discovery.safe_url("https://rundle.tv/proxy5.php?src=https://origin.example/live.m3u8"))
+        self.assertFalse(discovery.safe_url("https://relay.example/worker/live.m3u8"))
+        self.assertFalse(discovery.safe_url("https://example.workers.dev/live.m3u8"))
+        self.assertTrue(discovery.safe_url("https://cdn.example/live/channel.m3u8"))
 
     def test_queue_candidate_without_local_logo_is_kept_without_external_reference(self):
         name = "Unique Channel Without Local Art 2026"
