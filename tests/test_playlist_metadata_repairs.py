@@ -191,5 +191,63 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
 
 
 
+    def test_ambiguous_same_name_primary_and_backup_rows_do_not_share_a_synthetic_id(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "logos").mkdir()
+            (root / "reports").mkdir()
+            playlist = (
+                "#EXTM3U\n"
+                '#EXTINF:-1 tvg-name="ESPN 2" group-title="Sports",ESPN 2\n'
+                "https://example.test/espn-a.m3u8\n"
+                '#EXTINF:-1 tvg-name="ESPN 2" group-title="Sports",ESPN 2\n'
+                "https://example.test/espn-b.m3u8\n"
+                '#EXTINF:-1 tvg-name="ESPN 2" group-title="Backup",ESPN 2\n'
+                "https://example.test/espn-backup.m3u8\n"
+            )
+            (root / "IPTV-Playlist.m3u").write_text(playlist, encoding="utf-8")
+            env = dict(os.environ, PYTHONPATH=str(ROOT / "scripts"))
+            result = subprocess.run(
+                [sys.executable, str(ROOT / "scripts" / "normalize_metadata.py")],
+                cwd=root, env=env, capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            output = (root / "IPTV-Playlist.m3u").read_text(encoding="utf-8")
+            rows = playlist_rows(root / "IPTV-Playlist.m3u")
+        self.assertEqual(len(rows), 3)
+        self.assertTrue(all(not row["attrs"].get("tvg-id") for row in rows))
+        self.assertTrue(all(not row["attrs"].get("channel-id") for row in rows))
+        self.assertEqual(
+            [line for line in playlist.splitlines() if line.startswith("https://")],
+            [line for line in output.splitlines() if line.startswith("https://")],
+        )
+
+    def test_backup_metadata_uses_the_unique_matching_broadcast_country(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "logos").mkdir()
+            (root / "reports").mkdir()
+            playlist = (
+                "#EXTM3U\n"
+                '#EXTINF:-1 tvg-id="thikana.bd" tvg-name="Thikana TV" tvg-country="BD" group-title="Bangladesh",Thikana TV\n'
+                "https://example.test/thikana-bd.m3u8\n"
+                '#EXTINF:-1 tvg-id="thikana.us" tvg-name="Thikana TV" tvg-country="US" group-title="International",Thikana TV\n'
+                "https://example.test/thikana-us.m3u8\n"
+                '#EXTINF:-1 tvg-name="Thikana TV" tvg-country="US" group-title="Backup",Thikana TV\n'
+                "https://example.test/thikana-backup.m3u8\n"
+            )
+            (root / "IPTV-Playlist.m3u").write_text(playlist, encoding="utf-8")
+            env = dict(os.environ, PYTHONPATH=str(ROOT / "scripts"))
+            result = subprocess.run(
+                [sys.executable, str(ROOT / "scripts" / "normalize_metadata.py")],
+                cwd=root, env=env, capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            rows = playlist_rows(root / "IPTV-Playlist.m3u")
+        backup = next(row for row in rows if row["attrs"].get("group-title") == "Backup")
+        self.assertEqual(backup["attrs"].get("tvg-id"), "thikana.us")
+        self.assertEqual(backup["attrs"].get("channel-id"), "thikana.us")
+
+
 if __name__ == "__main__":
     unittest.main()

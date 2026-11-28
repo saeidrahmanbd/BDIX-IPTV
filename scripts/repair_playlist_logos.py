@@ -103,6 +103,9 @@ LOCAL_OVERRIDES = {
     "xite summer": "xite-celebrates-0178ee79a4.png",
     # Same verified MyTime Movie Network brand mark already used by its Brazil feed.
     "mytime movie network us": "mytime-movie-network.png",
+    # Exact local brand marks: Peace TV English and the FloRacing 24/7 feed.
+    "peace tv": "peace-tv-english.png",
+    "floracing": "floracing-24-7.png",
 }
 FORCED_CHANNEL_LOGOS = {
     "bollygold": "nh-bollygold-dbedeff9.png",
@@ -160,6 +163,7 @@ EXTRA_DIRECT_HINTS = {
     "Tarab": {
         "url": "https://assets.mbcmood.com/channels/1738059679TARAB_Logo.png",
         "format": "PNG",
+        "referer": "https://mbcmood.com/",
         "page": "https://github.com/iptv-org/database/issues/15624",
         "license": "Official MBC Mood CDN logo URL cited by the approved iptv-org/database Tarab channel record; source attribution only, no separate copyright licence asserted",
         "license_url": "",
@@ -174,6 +178,7 @@ EXTRA_DIRECT_HINTS = {
     "FloRacing": {
         "url": "https://a.jsrdn.com/hls/22883/floracing-247/logo_20231219_225054_24.png",
         "format": "PNG",
+        "referer": "https://www.floracing.com/",
         "page": "https://github.com/iptv-org/database/issues/27573",
         "license": "Exact FloRacing 24/7 channel logo URL listed in the approved iptv-org channel record; source attribution only, no separate copyright licence asserted",
         "license_url": "",
@@ -513,8 +518,9 @@ EXTRA_DIRECT_HINTS = {
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
     },
     "Al Sunnah TV": {
-        "url": "https://yt3.ggpht.com/ytc/AKedOLSt-wSNAQsBHe849IbPYewi8OUdQlas0z7_2sRqqg%3Ds900-c-k-c0x00ffffff-no-rj",
+        "url": "https://yt3.ggpht.com/ytc/AKedOLSt-wSNAQsBHe849IbPYewi8OUdQlas0z7_2sRqqg=s900-c-k-c0x00ffffff-no-rj",
         "format": "PNG",
+        "referer": "https://www.youtube.com/",
         "page": "https://www.youtube.com/channel/UCROKYPep-UuODNwyipe6JMw",
         "license": "Official Saudi Broadcasting Authority Al Sunnah Al Nabawiyah TV YouTube channel avatar; source attribution only, no separate copyright licence asserted.",
         "license_url": "",
@@ -840,7 +846,9 @@ def download_exact_asset(channel, candidate, canonical_name=False):
     url = candidate.get("url", "")
     if not url.startswith(("https://", "http://")):
         raise ValueError("source URL is missing or not HTTP(S)")
-    raw, mime = source.fetch_bytes(url, timeout=35, max_bytes=5_000_000)
+    raw, mime = source.fetch_bytes(
+        url, timeout=35, max_bytes=5_000_000, referer=candidate.get("referer", "")
+    )
     fmt = str(candidate.get("format") or "").upper()
     if not source.valid_image(raw, mime, fmt):
         raise ValueError("source response is not a valid supported image")

@@ -362,5 +362,40 @@ class LogoRepairSourceTests(unittest.TestCase):
         self.assertTrue(logo_repair.file_is_valid(ROOT / "logos" / "mytime-movie-network.png"))
 
 
+    def test_peace_tv_and_floracing_use_exact_existing_local_assets(self):
+        expected = {
+            "peace tv": "peace-tv-english.png",
+            "floracing": "floracing-24-7.png",
+        }
+        for channel, asset in expected.items():
+            with self.subTest(channel=channel):
+                self.assertEqual(logo_repair.LOCAL_OVERRIDES[channel], asset)
+                self.assertTrue(logo_repair.file_is_valid(ROOT / "logos" / asset))
+
+
+    def test_exact_logo_downloads_forward_source_referer_headers(self):
+        class Response:
+            headers = {"Content-Type": "image/png"}
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self, limit):
+                return b"\\x89PNG\\r\\n\\x1a\\n"
+
+        with patch.object(logo_source_catalog, "urlopen", return_value=Response()) as mocked:
+            logo_source_catalog.fetch_bytes(
+                "https://assets.mbcmood.com/channels/test.png",
+                referer="https://mbcmood.com/",
+            )
+        request = mocked.call_args.args[0]
+        self.assertEqual(request.get_header("Referer"), "https://mbcmood.com/")
+        self.assertEqual(logo_repair.EXTRA_DIRECT_HINTS["Tarab"]["referer"], "https://mbcmood.com/")
+        self.assertEqual(logo_repair.EXTRA_DIRECT_HINTS["Al Sunnah TV"]["referer"], "https://www.youtube.com/")
+
+
 if __name__ == "__main__":
     unittest.main()

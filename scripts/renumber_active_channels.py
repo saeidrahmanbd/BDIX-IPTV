@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Preserve curated IPTV row order and existing primary numbers; fill only missing values.
 
-Backup, Review, New Channels and New Backups remain unnumbered. Legacy Not Playing
+Backup, Review, New Channels and New Backups receive no new numbers; existing numbers are preserved. Legacy Not Playing
 rows are normalized to Review; stream URLs are never rewritten.
 """
 from __future__ import annotations
@@ -52,10 +52,6 @@ def set_channel_number(info: str, number: int) -> str:
     if comma >= 0:
         return info[:comma] + " " + replacement + info[comma:]
     raise ValueError(f"Cannot insert tvg-chno into malformed EXTINF: {info[:120]}")
-
-
-def remove_channel_number(info: str) -> str:
-    return re.sub(r'\s+tvg-chno="[^"]*"', "", info, count=1)
 
 
 def parse_records(text: str):
@@ -131,8 +127,7 @@ def normalize_playlist_text(text: str) -> tuple[str, int]:
         record[0] = set_channel_number(record[0], next_number)
         used_numbers.add(next_number)
         next_number += 1
-    for record in review:
-        record[0] = remove_channel_number(record[0])
+    # Queue groups receive no new numbers, but owner-assigned existing numbers are immutable.
 
     ordered = records
     if sorted(url_inventory(ordered)) != sorted(original_urls):
