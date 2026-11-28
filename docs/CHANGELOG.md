@@ -11,7 +11,7 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 - Channel identities removed: **0**
 - Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **6**
+- Logo reference changes: **435**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
@@ -22,7 +22,7 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 - Channel identities removed: **0**
 - Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **11**
+- Logo reference changes: **2**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
