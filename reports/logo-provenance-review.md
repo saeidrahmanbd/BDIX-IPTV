@@ -1,32 +1,32 @@
 # Logo Provenance Review
 
-Generated: **2026-11-27T05:26:33+00:00**
+Generated: **2026-11-28T00:18:29+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **9558746a36438c06848914c1906a5f2210f5c8e6c367af65c65a1529bbcf4c49**
-- International-Playlist.m3u SHA-256: **ac590fd34726acfe479ba48aca0ea1d4da3ca5262f97fc21a0963c54d27d8fd6**
+- IPTV-Playlist.m3u SHA-256: **bc20e905e2a4c4935f2a0ce061b61ef523f9a4a5a2e11e8e632cfc87b79fc57c**
+- International-Playlist.m3u SHA-256: **99ac5c04870550e837f821df53041f75621972fcf1c79c162b887e66d67a9dc8**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 27 | 2 | 1167 |
-| International-Playlist.m3u | 0 | 982 | 0 | 2361 |
+| IPTV-Playlist.m3u | 0 | 27 | 2 | 1168 |
+| International-Playlist.m3u | 0 | 982 | 0 | 2346 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3528**
+- Logos needing attribution review: **3514**
 - Unofficial fallback logos: **2**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3528 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3514 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|

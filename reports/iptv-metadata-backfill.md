@@ -1,11 +1,11 @@
 # IPTV Playlist Metadata Backfill
 
-Generated: **2026-11-27T05:25:18+00:00**
+Generated: **2026-11-28T00:17:20+00:00**
 
 Status: **PASS**
 Sources: https://iptv-org.github.io/api/channels.json + https://iptv-org.github.io/api/feeds.json + controlled playlist category defaults
-Before playlist SHA-256: **9558746a36438c06848914c1906a5f2210f5c8e6c367af65c65a1529bbcf4c49**
-After playlist SHA-256: **9558746a36438c06848914c1906a5f2210f5c8e6c367af65c65a1529bbcf4c49**
+Before playlist SHA-256: **bc20e905e2a4c4935f2a0ce061b61ef523f9a4a5a2e11e8e632cfc87b79fc57c**
+After playlist SHA-256: **bc20e905e2a4c4935f2a0ce061b61ef523f9a4a5a2e11e8e632cfc87b79fc57c**
 - Exact catalogue IDs matched: **501**
 - Entries updated: **0**
 - tvg-country fields filled: **0**

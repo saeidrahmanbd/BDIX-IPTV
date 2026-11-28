@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-27T05:26:24+00:00",
+  "generated": "2026-11-28T00:18:22+00:00",
   "channels": {
     "30amusic": {
       "names": [
@@ -2849,16 +2849,18 @@
     },
     "ddassam": {
       "names": [
-        "DD Assam"
+        "DD Assam",
+        "DD Assam (576p)"
       ],
       "ids": [
         "ddassam.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backups"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "ddbangla": {

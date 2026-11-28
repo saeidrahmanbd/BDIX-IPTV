@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-27T05:25:45+00:00**
-Source playlist SHA-256: **9558746a36438c06848914c1906a5f2210f5c8e6c367af65c65a1529bbcf4c49**
+Generated: **2026-11-28T00:17:40+00:00**
+Source playlist SHA-256: **bc20e905e2a4c4935f2a0ce061b61ef523f9a4a5a2e11e8e632cfc87b79fc57c**
 
 Status: **PASS**
 
-- Current entries: **1196**
+- Current entries: **1197**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed by known-bad or Indian genre policy: **0**
@@ -24,8 +24,8 @@ Status: **PASS**
 - Orphan Backup entries: **0**
 - Active rows with incomplete required metadata: **0**
 - tvg-id/channel-id inconsistencies: **0**
-- Entries missing tvg-language: **53**
-- Raw resolution/geoblock name tags: **52**
+- Entries missing tvg-language: **54**
+- Raw resolution/geoblock name tags: **53**
 - Missing logos in active groups: **0**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
@@ -54,8 +54,8 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 
 ## Warnings / Manual Review
 
-- entries missing tvg-language: 53
-- raw resolution/geoblock tags in channel names: 52
+- entries missing tvg-language: 54
+- raw resolution/geoblock tags in channel names: 53
 - New queue candidates pending owner review: 2
 
 ## Review-queue logo gaps
@@ -122,6 +122,7 @@ None.
 - **Colors Bangla (1080p)** — New Backups
 - **Sony Sports Ten 2 (1080p)** — New Backups
 - **Zee Action (576p)** — New Backups
+- **DD Assam (576p)** — New Backups
 
 ## Queue validation
 

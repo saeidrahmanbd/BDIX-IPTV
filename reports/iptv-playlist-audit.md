@@ -1,15 +1,15 @@
 # IPTV Playlist Audit
-Generated: **2026-11-27T05:25:44.547519+00:00**
-Source playlist SHA-256: **9558746a36438c06848914c1906a5f2210f5c8e6c367af65c65a1529bbcf4c49**
+Generated: **2026-11-28T00:17:40.260661+00:00**
+Source playlist SHA-256: **bc20e905e2a4c4935f2a0ce061b61ef523f9a4a5a2e11e8e632cfc87b79fc57c**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1196**
+- Playlist entries: **1197**
 - Unique channel IDs: **752**
-- IDs with multiple streams: **229**
+- IDs with multiple streams: **230**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -21,7 +21,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Logo exceptions requiring repair: **0**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
-- Logo references checked: **1196**
+- Logo references checked: **1197**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **2**
 - Primary channel-number collisions: **0**
@@ -311,6 +311,9 @@ No same-ID label variants found across groups.
 ### ddarunprabha.in@sd (2 streams)
 - DD Arun Prabha — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/308556d9fd1246adb479ef012a39bbfe/index.m3u8
 - DD Arun Prabha — Backup — https://cdn.pishow.tv/ott/live/32/master.m3u8
+### ddassam.in@sd (2 streams)
+- DD Assam — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/d380bf5c167b4319a46cdd8204bc26b2/index.m3u8
+- DD Assam (576p) — New Backups — https://fta.ektv.in/live/672/master.m3u8
 ### ddbangla.in@sd (4 streams)
 - DD Bangla — Indian Bangla — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7ff57cc9046b4c188b51a0d506f36e7f/index.m3u8
 - DD Bangla — Backup — https://cdn.pishow.tv/ott/live/37/master.m3u8
@@ -1047,7 +1050,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1196**
+- Healthy/local references: **1197**
 - External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair
