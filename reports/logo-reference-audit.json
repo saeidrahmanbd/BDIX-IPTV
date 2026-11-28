@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5302,
-  "all_explicitly_referenced_logo_files": 2552,
-  "runtime_referenced_logo_files": 2550,
-  "playlist_referenced_logo_files": 2516,
-  "apparently_unreferenced_by_any_text_file": 2750,
-  "apparently_unreferenced_by_runtime_sources": 2752,
+  "logo_image_files": 5303,
+  "all_explicitly_referenced_logo_files": 2557,
+  "runtime_referenced_logo_files": 2555,
+  "playlist_referenced_logo_files": 2514,
+  "apparently_unreferenced_by_any_text_file": 2746,
+  "apparently_unreferenced_by_runtime_sources": 2748,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -4399,7 +4399,7 @@
     "logos/zoom-israel-ed459937c9.png"
   ],
   "exact_duplicate_groups": 750,
-  "exact_duplicate_files": 1420,
+  "exact_duplicate_files": 1421,
   "exact_duplicates": [
     {
       "sha256": "00cefab928f6517f0261b462ce57173a7235e7f88cfdcdb868b2728727e2fdb9",
@@ -5306,6 +5306,7 @@
     {
       "sha256": "2d4c70546eef48721541e80824dbb22831d460d24b3311ce44eb42cdd7c378a7",
       "files": [
+        "logos/film-mania-romania-576i-2d4c70546eef48721541.png",
         "logos/film-mania.png",
         "logos/international/film-mania.png"
       ]
@@ -10438,6 +10439,7 @@
     ],
     "logos/4-sides-tv-6a436fa007.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/4ever-cinema-1080p-46222eea9d.png": [
@@ -10773,7 +10775,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/amc-europe-romania-576i-6da084f825659b4e7d0e.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -12321,7 +12322,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/cinemax-2-romania-576i-5ef8d91440cf39878a8f.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -12347,7 +12347,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/cinemax-czech-republic-romania-576i-f4173318f8c974bc0883.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -14048,7 +14047,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/film-cafe-romania-576i-1b91ed96741005136704.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -14056,12 +14054,15 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/film-mania-romania-576i-2d4c70546eef48721541.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/film-mania.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/film-now-576i-72c93ef08b1bd87ee590.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -14692,7 +14693,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/hagerty-28b469a78a61a85fda22.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/hallmark-movies-and-more-b779fed878da243d7512.png": [
       "International-Playlist.m3u",
@@ -14737,7 +14739,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/hbo-2-romania-576i-ecb87ee6d51f37637612.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -14791,7 +14792,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/hbo-romania-576i-f7ef5b3f2cd5d724db12.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -15220,9 +15220,15 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/shot-tv-576p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/international/soneri-cinema-360p.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/star-cinema.png": [
+      "International-Playlist.m3u"
     ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
@@ -15617,6 +15623,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/kinouzhas-576p.png": [
+      "International-Playlist.m3u"
     ],
     "logos/kiss-kiss-napoli-tv-2a4ba48760.png": [
       "International-Playlist.m3u",
@@ -21950,6 +21959,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/zee-cinema-apac-efd7650d72.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/zee-cinema.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -22146,6 +22158,7 @@
     ],
     "logos/4-sides-tv-6a436fa007.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/4ever-cinema-1080p-46222eea9d.png": [
@@ -22481,7 +22494,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/amc-europe-romania-576i-6da084f825659b4e7d0e.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -24029,7 +24041,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/cinemax-2-romania-576i-5ef8d91440cf39878a8f.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -24055,7 +24066,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/cinemax-czech-republic-romania-576i-f4173318f8c974bc0883.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -25757,7 +25767,6 @@
       "reports/logo-source-registry.json"
     ],
     "logos/film-cafe-romania-576i-1b91ed96741005136704.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -25765,12 +25774,15 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/film-mania-romania-576i-2d4c70546eef48721541.png": [
+      "International-Playlist.m3u",
+      "reports/logo-source-registry.json"
+    ],
     "logos/film-mania.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/film-now-576i-72c93ef08b1bd87ee590.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -26402,7 +26414,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/hagerty-28b469a78a61a85fda22.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/hallmark-movies-and-more-b779fed878da243d7512.png": [
       "International-Playlist.m3u",
@@ -26447,7 +26460,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/hbo-2-romania-576i-ecb87ee6d51f37637612.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -26501,7 +26513,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/hbo-romania-576i-f7ef5b3f2cd5d724db12.png": [
-      "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
@@ -26930,9 +26941,15 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/international/shot-tv-576p.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/international/soneri-cinema-360p.png": [
       "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
+    ],
+    "logos/international/star-cinema.png": [
+      "International-Playlist.m3u"
     ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
@@ -27327,6 +27344,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/kinouzhas-576p.png": [
+      "International-Playlist.m3u"
     ],
     "logos/kiss-kiss-napoli-tv-2a4ba48760.png": [
       "International-Playlist.m3u",
@@ -33665,6 +33685,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/zee-cinema-apac-efd7650d72.png": [
+      "International-Playlist.m3u"
+    ],
     "logos/zee-cinema.png": [
       "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
@@ -34766,7 +34789,6 @@
     "logos/international/shemaroo-filmi-gaane-1080p.png",
     "logos/international/shift-tv-1080p.png",
     "logos/international/shokiruyushchee-hd-1080p.png",
-    "logos/international/shot-tv-576p.png",
     "logos/international/sin-limites-1080p.png",
     "logos/international/sky-cinema-due.png",
     "logos/international/smithsonianchannel.png",
@@ -34834,7 +34856,6 @@
     "logos/international/spirit-tv-720p-not-24-7.png",
     "logos/international/squirrel-576p.png",
     "logos/international/star-action-720p.png",
-    "logos/international/star-cinema.png",
     "logos/international/star-gold-hd-1080p.png",
     "logos/international/star-jalsha-1080p-geo-blocked.png",
     "logos/international/star-movies-india-hd-1080p.png",
@@ -35010,7 +35031,6 @@
     "logos/kinoliving-1080p.png",
     "logos/kinopokaz.png",
     "logos/kinosat-576p.png",
-    "logos/kinouzhas-576p.png",
     "logos/kinowood-1080p.png",
     "logos/kite-victers.png",
     "logos/kolkata-tv.png",
@@ -36519,7 +36539,6 @@
     "logos/zee-biskope.png",
     "logos/zee-bollywood.png",
     "logos/zee-cafe.png",
-    "logos/zee-cinema-apac-efd7650d72.png",
     "logos/zee-cinemalu-hd.png",
     "logos/zee-marathi-hd-720p.png",
     "logos/zee-sarthak.png",

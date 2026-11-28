@@ -8483,5 +8483,10 @@
     "status": "third_party_verified",
     "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Hagerty_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "notes": "Wikimedia Commons exact-logo search CC BY-SA 3.0 Source page: https://commons.wikimedia.org/wiki/File:Hagerty_logo.svg"
+  },
+  "International-Playlist.m3u|FilmMania.hu@Romania|Film Mania Romania (576i)|logos/film-mania-romania-576i-2d4c70546eef48721541.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/crhsomk.png",
+    "notes": "IPTV-org exact ID: FilmMania.hu IPTV-org public logo dataset Source page: https://i.imgur.com/crhsomk.png"
   }
 }

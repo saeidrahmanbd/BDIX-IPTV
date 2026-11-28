@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T06:50:00+00:00**
+Generated: **2026-11-28T06:53:46+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **fad24b9e6271db36d55c2526ee3c05d153236bb83baeaa6b9345681d39149c22**
-- International-Playlist.m3u SHA-256: **f86412d209fc35ba419776530387923c015b3b1d054fceb9e621cc69975f80e2**
+- International-Playlist.m3u SHA-256: **95230905f3f222d91f49b8e36862ccb68fa73a5c9f506bf6451cc434bc55aa06**
 
 ## Summary
 
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **148**
 - Exact-byte duplicate asset clusters: **750**
-- Playlist references whose asset stem differs from the normalized channel name: **1561**
-- Unreferenced image assets immediately inside logos/: **1000** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1557**
+- Unreferenced image assets immediately inside logos/: **1005** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -478,7 +478,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/fifa-plus-french-68fe723cf8e2f7593bac.png, logos/fifa-plus-german-68fe723cf8e2f7593bac.png, logos/fifa-plus-hispanic-america-68fe723cf8e2f7593bac.png, logos/fifa-plus-italy-68fe723cf8.png, logos/fifa-plus-portuguese-68fe723cf8e2f7593bac.png, logos/fifa-plus-spain-68fe723cf8e2f7593bac.png, logos/fifa-plus-united-states-68fe723cf8e2f7593bac.png
 - logos/fightbox-45d2349fcb.png, logos/fightbox-poland-45d2349fcb018c8b4aa8.png
 - logos/film-cafe-1b91ed9674.png, logos/film-cafe-romania-576i-1b91ed96741005136704.png, logos/film-cafe-romania.png, logos/international/film-cafe-romania.png
-- logos/film-mania.png, logos/international/film-mania.png
+- logos/film-mania-romania-576i-2d4c70546eef48721541.png, logos/film-mania.png, logos/international/film-mania.png
 - logos/film-now-576i-72c93ef08b1bd87ee590.png, logos/international/film-now-hd-1080i.png, logos/international/film-now.png
 - logos/film1-action.png, logos/international/film1-action.png
 - logos/film1-drama.png, logos/international/film1-drama.png
@@ -2420,17 +2420,13 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.png | Review |
 | International-Playlist.m3u | ¡Viva Latino! | verified-viva-latino-1080p-6de6ba7d8f.png | Review |
-| International-Playlist.m3u | AMC Europe Romania | amc-europe-romania-576i-6da084f825659b4e7d0e.png | New Channels |
 | International-Playlist.m3u | BRIDGE Dance [ ] | bridge-dance-720p-geo-blocked-28be35859700d79948e2.png | New Channels |
 | International-Playlist.m3u | BRIDGE Jazz [ ] | bridge-jazz-720p-geo-blocked-87f95b66247ee3252561.png | New Channels |
 | International-Playlist.m3u | BRIDGE Rap [ ] | bridge-rap-720p-geo-blocked-94129cc28e94aba754b1.png | New Channels |
-| International-Playlist.m3u | Cinemax 2 Romania | cinemax-2-romania-576i-5ef8d91440cf39878a8f.png | New Channels |
-| International-Playlist.m3u | Cinemax (Czech Republic) Romania | cinemax-czech-republic-romania-576i-f4173318f8c974bc0883.png | New Channels |
-| International-Playlist.m3u | Film Cafe Romania | film-cafe-romania-576i-1b91ed96741005136704.png | New Channels |
-| International-Playlist.m3u | Film Now | film-now-576i-72c93ef08b1bd87ee590.png | New Channels |
-| International-Playlist.m3u | HBO 2 (Romania) | hbo-2-romania-576i-ecb87ee6d51f37637612.png | New Channels |
-| International-Playlist.m3u | HBO (Romania) | hbo-romania-576i-f7ef5b3f2cd5d724db12.png | New Channels |
+| International-Playlist.m3u | Kinouzhas (1080p) | kinouzhas-576p.png | New Channels |
+| International-Playlist.m3u | Shot TV (576p) | shot-tv-576p.png | New Channels |
 | International-Playlist.m3u | Viasat Kino (Romania) | viasat-kino-romania-576i-96dae76d5fcac63f6132.png | New Channels |
+| International-Playlist.m3u | Zee Cinema APAC (720p) | zee-cinema-apac-efd7650d72.png | New Channels |
 | International-Playlist.m3u | HBO Asia SD [ ] | hbo-asia-sd.png | New Backups |
 | International-Playlist.m3u | HBO Asia SD [ ] | hbo-asia-sd.png | New Backups |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
