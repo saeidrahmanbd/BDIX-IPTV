@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-28T10:55:10+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-28T11:00:50+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12223
 - Existing playlist records: 3328
@@ -120,7 +120,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-28T10:55:22+06:00
+- Run timestamp: 2026-11-28T11:01:03+06:00
 - Mode: international
 - New entries and discovery queues probed: 93
 - Verified live media responses: 40
@@ -195,7 +195,7 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Final validation
 
-- Run timestamp: 2026-11-28T10:55:23+06:00
+- Run timestamp: 2026-11-28T11:01:04+06:00
 - Validation status: FAIL
 - M3U entries parsed: 3328
 - Malformed EXTINF/URL pairs: 0
