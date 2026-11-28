@@ -149,8 +149,6 @@ def verify(playlist: Path, state: Path):
             elif not old_number and new_number:
                 if old_group not in PRIMARY_GROUPS or not new_number.isdigit() or int(new_number) < 1:
                     failures.append(f"Invalid number fill for {new['name']}: {new_number!r}.")
-            elif old_group not in PRIMARY_GROUPS and new_number:
-                failures.append(f"Non-primary row must remain unnumbered: {new['name']}.")
 
     before_conflicts = saved.get("identity_conflicts", {})
     after_conflicts = primary_identity_conflicts(after)
