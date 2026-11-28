@@ -925,7 +925,7 @@ https://router.xdevel.com/video0s975885-462/stream/playlist_dvr.m3u8
 https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index.m3u8
 #EXTINF:-1 tvg-id="RetroMusicTV.cz" tvg-name="Retro Music TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/retro-music-tv-1080p-610715c3c9.png" tvg-chno="459" channel-id="RetroMusicTV.cz" tvg-country="CZ" tvg-language="ces" group-title="International",Retro Music TV
 https://stream.mediawork.cz/retrotv/smil:retrotv2.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="RockTV.ro@SD" channel-id="RockTV.ro@SD" tvg-country="RO" tvg-name="Rock TV" tvg-chno="491" tvg-language="ron" group-title="International",Rock TV
+#EXTINF:-1 tvg-id="RockTV.ro@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rock-tv-romania-9784455c18.png" channel-id="RockTV.ro@SD" tvg-country="RO" tvg-name="Rock TV" tvg-chno="491" tvg-language="ron" group-title="International",Rock TV
 https://jmp2.uk/stvp-ITBC1100011RK
 #EXTINF:-1 tvg-id="ShansonTV.ru" tvg-name="Shanson TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shanson-tv-576p-3c01614e19.png" tvg-chno="460" channel-id="ShansonTV.ru" tvg-country="RU" tvg-language="rus" group-title="International",Shanson TV
 https://streaming.thestream.cyou/live/7009.m3u8
