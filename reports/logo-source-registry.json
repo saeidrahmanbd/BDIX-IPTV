@@ -8558,5 +8558,75 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/NDbWxqF.png",
     "notes": "IPTV-org exact unique channel name: SportdigitalFUSSBALL.de IPTV-org public logo dataset Source page: https://i.imgur.com/NDbWxqF.png"
+  },
+  "IPTV-Playlist.m3u||Quran Radio TV SMC|logos/quran-radio-tv-smc-5a89eb563b0115e7405d.png": {
+    "status": "third_party_verified",
+    "source_url": "https://sbauae.faulio.com/storage/mediagallery/15/8a/fullhd_ce9abfb9b99a2a7aa2a605386ac93f22e74ec48e.png",
+    "notes": "Exact external logo asset Official Sharjah Broadcasting Authority Sharjah Quran Radio channel artwork; the current playlist stream URL is the same Sharjah Quran Radio service; source attribution only. Source page: https://www.sba.net.ae/live/a1f57dbe16971827aaa5c5e4dda1ca68"
+  },
+  "IPTV-Playlist.m3u||Harlem Globetrotters|logos/harlem-globetrotters-48b9916ebc529ead57df.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Harlem_Globetrotters_Logo.png",
+    "notes": "Exact external logo asset Authentic Harlem Globetrotters International, Inc. team logo from Wikimedia Commons; source and author attribution retained. Source page: https://commons.wikimedia.org/wiki/File:Harlem_Globetrotters_Logo.png"
+  },
+  "IPTV-Playlist.m3u||TUDN|logos/tudn-ef81b44e4bdc20615179.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/TUDN_Logo.svg",
+    "notes": "Exact external logo asset Official TUDN brand mark sourced from TUDN.mx via Wikimedia Commons; PD-textlogo classification with trademark notice. Source page: https://commons.wikimedia.org/wiki/File:TUDN_Logo.svg"
+  },
+  "IPTV-Playlist.m3u||TUDN MX|logos/tudn-mx-ef81b44e4bdc20615179.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/TUDN_Logo.svg",
+    "notes": "Exact external logo asset Official TUDN brand mark sourced from TUDN.mx via Wikimedia Commons; used for the MX feed variant; PD-textlogo classification with trademark notice. Source page: https://commons.wikimedia.org/wiki/File:TUDN_Logo.svg"
+  },
+  "IPTV-Playlist.m3u||USA ACCN|logos/usa-accn-1cefabddc7941e59bee5.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/ACC_Network_ESPN_logo.svg",
+    "notes": "Exact external logo asset ACC Network logo sourced from ESPN's official ACCN asset URL via Wikimedia Commons; PD-textlogo classification with trademark notice. Source page: https://commons.wikimedia.org/wiki/File:ACC_Network_ESPN_logo.svg"
+  },
+  "International-Playlist.m3u|custom.cooking.channel|Cooking Channel|logos/cooking-channel-f2ef6f609a12512f6a8e.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Cooking_Channel.svg",
+    "notes": "Exact external logo asset Cooking Channel logo attributed to Discovery, Inc., sourced through Wikimedia Commons; PD-textlogo classification with trademark notice. Source page: https://commons.wikimedia.org/wiki/File:Cooking_Channel.svg"
+  },
+  "International-Playlist.m3u|custom.bdix.travelxp-bangla|Travel XP Bangla|logos/travel-xp-bangla-915b903e5920a0475a26.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Txphd_logo_2015.png",
+    "notes": "Exact external logo asset Travelxp logo uploaded by Travelxpindia; Creative Commons Attribution-ShareAlike 4.0 International. Source page: https://commons.wikimedia.org/wiki/File:Txphd_logo_2015.png"
+  },
+  "International-Playlist.m3u|custom.saudi-quran-y9quu|Saudi Quran|logos/saudi-quran-168a35b98fb7c665bce6.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://pbs.twimg.com/profile_images/1313539609268285442/86vzT1LT.jpg",
+    "notes": "Exact external logo asset Official Saudi Quran TV channel avatar, documented as the source of the channel logo on Wikimedia Commons; Creative Commons Attribution-ShareAlike 4.0 International. Source page: https://commons.wikimedia.org/wiki/File:قناة_القرآن_الكريم.svg"
+  },
+  "International-Playlist.m3u|CRTV.cl@SD|CRTV (Chile)|logos/crtv-chile-ad1c87ebf07836430e31.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://crtvchile.cl/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-13.49.04.jpeg",
+    "notes": "Exact external logo asset Exact CRTV Chile logo published on the broadcaster's official website under its 'Nuestro logo' section; source attribution only, no separate copyright licence asserted. Source page: https://crtvchile.cl/acerca-de/"
+  },
+  "International-Playlist.m3u|SkyCinemaAction.it@SD|Sky Cinema Action|logos/sky-cinema-action-17daeb11ff4cf427c3b6.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Sky_Cinema_Action_-_2021_logo.png",
+    "notes": "Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Action_-_2021_logo.png"
+  },
+  "International-Playlist.m3u|SkyCinemaCollection.it@SD|Sky Cinema Collection|logos/sky-cinema-collection-b67c42cd4e4576aa1883.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Sky_Cinema_Collection_-_2021_logo.png",
+    "notes": "Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Collection_-_2021_logo.png"
+  },
+  "International-Playlist.m3u|SkyCinemaFamily.it@SD|Sky Cinema Family|logos/sky-cinema-family-a006755ca12f9d74017d.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Sky_Cinema_Family_-_2021_logo.png",
+    "notes": "Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Family_-_2021_logo.png"
+  },
+  "International-Playlist.m3u|SkyCinemaSuspense.it@SD|Sky Cinema Suspense|logos/sky-cinema-suspense-1d99507854d3cfdf0583.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Sky_Cinema_Suspense_-_Logo_2021.png",
+    "notes": "Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Suspense_-_Logo_2021.png"
+  },
+  "International-Playlist.m3u|SkyCinemaUno.it@SD|Sky Cinema Uno|logos/sky-cinema-uno-36672bcce8b918d42136.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Sky_Cinema_Uno_-_Logo_2020.svg",
+    "notes": "Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Uno_-_Logo_2020.svg"
   }
 }

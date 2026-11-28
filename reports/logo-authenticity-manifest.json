@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-28T10:58:58.288628+00:00",
+  "generated_at_utc": "2026-11-28T11:00:37.327355+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,23 +11,23 @@
     "International-Playlist.m3u": 3332
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "1430770e8c02dd64d1d03bab2f1809e4251e771e5737759c2ec945d0525e162c",
-    "International-Playlist.m3u": "248ff78f7e53dc302880e5cb413bfd2f727021f7d7d92a3f3c6f5222618bbe7b"
+    "IPTV-Playlist.m3u": "77b11e20f1d6d12ac974d1ea5e1940787857026b38d4f3574619dbdb69eb28f3",
+    "International-Playlist.m3u": "cb76635e0c1d0939ec7b04ed9ae09d1a613db5cc208cedd46d0e02ca19e8ce9a"
   },
   "status_counts": {
-    "needs_review": 3684,
+    "needs_review": 3668,
     "generated_fallback": 2,
-    "third_party_verified": 1019
+    "third_party_verified": 1035
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1341,
+      "needs_review": 1335,
       "generated_fallback": 2,
-      "third_party_verified": 30
+      "third_party_verified": 36
     },
     "International-Playlist.m3u": {
-      "needs_review": 2343,
-      "third_party_verified": 989
+      "needs_review": 2333,
+      "third_party_verified": 999
     }
   },
   "entry_count": 4705,
@@ -7942,11 +7942,11 @@
       "channel_name": "Quran Radio TV SMC",
       "tvg_id": "",
       "channel_id": "",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-radio-tv-smc-5a89eb563b0115e7405d.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://sbauae.faulio.com/storage/mediagallery/15/8a/fullhd_ce9abfb9b99a2a7aa2a605386ac93f22e74ec48e.png",
+      "reason": "Exact external logo asset Official Sharjah Broadcasting Authority Sharjah Quran Radio channel artwork; the current playlist stream URL is the same Sharjah Quran Radio service; source attribution only. Source page: https://www.sba.net.ae/live/a1f57dbe16971827aaa5c5e4dda1ca68",
       "registry_conflict": ""
     },
     {
@@ -9086,11 +9086,11 @@
       "channel_name": "Harlem Globetrotters",
       "tvg_id": "",
       "channel_id": "",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/harlem-globetrotters-48b9916ebc529ead57df.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Harlem_Globetrotters_Logo.png",
+      "reason": "Exact external logo asset Authentic Harlem Globetrotters International, Inc. team logo from Wikimedia Commons; source and author attribution retained. Source page: https://commons.wikimedia.org/wiki/File:Harlem_Globetrotters_Logo.png",
       "registry_conflict": ""
     },
     {
@@ -10347,11 +10347,11 @@
       "channel_name": "TUDN",
       "tvg_id": "",
       "channel_id": "",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tudn-ef81b44e4bdc20615179.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/TUDN_Logo.svg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset Official TUDN brand mark sourced from TUDN.mx via Wikimedia Commons; PD-textlogo classification with trademark notice. Source page: https://commons.wikimedia.org/wiki/File:TUDN_Logo.svg",
       "registry_conflict": ""
     },
     {
@@ -10360,11 +10360,11 @@
       "channel_name": "TUDN",
       "tvg_id": "",
       "channel_id": "",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tudn-ef81b44e4bdc20615179.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/TUDN_Logo.svg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset Official TUDN brand mark sourced from TUDN.mx via Wikimedia Commons; PD-textlogo classification with trademark notice. Source page: https://commons.wikimedia.org/wiki/File:TUDN_Logo.svg",
       "registry_conflict": ""
     },
     {
@@ -10373,11 +10373,11 @@
       "channel_name": "TUDN MX",
       "tvg_id": "",
       "channel_id": "",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tudn-mx-ef81b44e4bdc20615179.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/TUDN_Logo.svg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset Official TUDN brand mark sourced from TUDN.mx via Wikimedia Commons; used for the MX feed variant; PD-textlogo classification with trademark notice. Source page: https://commons.wikimedia.org/wiki/File:TUDN_Logo.svg",
       "registry_conflict": ""
     },
     {
@@ -10529,11 +10529,11 @@
       "channel_name": "USA ACCN",
       "tvg_id": "",
       "channel_id": "",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/usa-accn-1cefabddc7941e59bee5.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/ACC_Network_ESPN_logo.svg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset ACC Network logo sourced from ESPN's official ACCN asset URL via Wikimedia Commons; PD-textlogo classification with trademark notice. Source page: https://commons.wikimedia.org/wiki/File:ACC_Network_ESPN_logo.svg",
       "registry_conflict": ""
     },
     {
@@ -31212,7 +31212,7 @@
       "channel_name": "MyTime Movie Network (US)",
       "tvg_id": "MyTimeMovieNetwork.us@SD",
       "channel_id": "MyTimeMovieNetwork.us@SD",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
@@ -33968,11 +33968,11 @@
       "channel_name": "Cooking Channel",
       "tvg_id": "custom.cooking.channel",
       "channel_id": "custom.cooking.channel",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cooking-channel-f2ef6f609a12512f6a8e.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Cooking_Channel.svg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset Cooking Channel logo attributed to Discovery, Inc., sourced through Wikimedia Commons; PD-textlogo classification with trademark notice. Source page: https://commons.wikimedia.org/wiki/File:Cooking_Channel.svg",
       "registry_conflict": ""
     },
     {
@@ -35112,11 +35112,11 @@
       "channel_name": "Travel XP Bangla",
       "tvg_id": "custom.bdix.travelxp-bangla",
       "channel_id": "",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp-bangla-915b903e5920a0475a26.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Txphd_logo_2015.png",
+      "reason": "Exact external logo asset Travelxp logo uploaded by Travelxpindia; Creative Commons Attribution-ShareAlike 4.0 International. Source page: https://commons.wikimedia.org/wiki/File:Txphd_logo_2015.png",
       "registry_conflict": ""
     },
     {
@@ -37621,11 +37621,11 @@
       "channel_name": "Saudi Quran",
       "tvg_id": "custom.saudi-quran-y9quu",
       "channel_id": "custom.saudi-quran-y9quu",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saudi-quran-168a35b98fb7c665bce6.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://pbs.twimg.com/profile_images/1313539609268285442/86vzT1LT.jpg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset Official Saudi Quran TV channel avatar, documented as the source of the channel logo on Wikimedia Commons; Creative Commons Attribution-ShareAlike 4.0 International. Source page: https://commons.wikimedia.org/wiki/File:قناة_القرآن_الكريم.svg",
       "registry_conflict": ""
     },
     {
@@ -38115,11 +38115,11 @@
       "channel_name": "CRTV (Chile)",
       "tvg_id": "CRTV.cl@SD",
       "channel_id": "",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/crtv-chile-ad1c87ebf07836430e31.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://crtvchile.cl/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-13.49.04.jpeg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset Exact CRTV Chile logo published on the broadcaster's official website under its 'Nuestro logo' section; source attribution only, no separate copyright licence asserted. Source page: https://crtvchile.cl/acerca-de/",
       "registry_conflict": ""
     },
     {
@@ -47293,11 +47293,11 @@
       "channel_name": "Cooking Channel",
       "tvg_id": "custom.cooking.channel",
       "channel_id": "custom.cooking.channel",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cooking-channel-f2ef6f609a12512f6a8e.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Cooking_Channel.svg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset Cooking Channel logo attributed to Discovery, Inc., sourced through Wikimedia Commons; PD-textlogo classification with trademark notice. Source page: https://commons.wikimedia.org/wiki/File:Cooking_Channel.svg",
       "registry_conflict": ""
     },
     {
@@ -54183,11 +54183,11 @@
       "channel_name": "Sky Cinema Action",
       "tvg_id": "SkyCinemaAction.it@SD",
       "channel_id": "SkyCinemaAction.it@SD",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-cinema-action-17daeb11ff4cf427c3b6.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Sky_Cinema_Action_-_2021_logo.png",
+      "reason": "Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Action_-_2021_logo.png",
       "registry_conflict": ""
     },
     {
@@ -54196,11 +54196,11 @@
       "channel_name": "Sky Cinema Collection",
       "tvg_id": "SkyCinemaCollection.it@SD",
       "channel_id": "SkyCinemaCollection.it@SD",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-cinema-collection-b67c42cd4e4576aa1883.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Sky_Cinema_Collection_-_2021_logo.png",
+      "reason": "Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Collection_-_2021_logo.png",
       "registry_conflict": ""
     },
     {
@@ -54222,11 +54222,11 @@
       "channel_name": "Sky Cinema Family",
       "tvg_id": "SkyCinemaFamily.it@SD",
       "channel_id": "SkyCinemaFamily.it@SD",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-cinema-family-a006755ca12f9d74017d.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Sky_Cinema_Family_-_2021_logo.png",
+      "reason": "Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Family_-_2021_logo.png",
       "registry_conflict": ""
     },
     {
@@ -54235,11 +54235,11 @@
       "channel_name": "Sky Cinema Suspense",
       "tvg_id": "SkyCinemaSuspense.it@SD",
       "channel_id": "SkyCinemaSuspense.it@SD",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-cinema-suspense-1d99507854d3cfdf0583.png",
+      "status": "third_party_verified",
+      "registry_match": "exact-key",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Sky_Cinema_Suspense_-_Logo_2021.png",
+      "reason": "Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Suspense_-_Logo_2021.png",
       "registry_conflict": ""
     },
     {
@@ -54248,11 +54248,11 @@
       "channel_name": "Sky Cinema Uno",
       "tvg_id": "SkyCinemaUno.it@SD",
       "channel_id": "SkyCinemaUno.it@SD",
-      "logo": "",
-      "status": "needs_review",
-      "registry_match": "none",
-      "source_url": "",
-      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof.",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-cinema-uno-36672bcce8b918d42136.png",
+      "status": "third_party_verified",
+      "registry_match": "same-asset-stem-format-conversion",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Sky_Cinema_Uno_-_Logo_2020.svg",
+      "reason": "Verified source attribution retained for the same local asset stem after file-format conversion. Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Uno_-_Logo_2020.svg",
       "registry_conflict": ""
     },
     {

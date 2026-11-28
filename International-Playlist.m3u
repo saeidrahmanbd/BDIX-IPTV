@@ -2056,7 +2056,7 @@ https://jmp2.uk/plu-66a01dcb8561260008b0a41d.m3u8
 http://23.237.104.106:8080/USA_MTV_LIVE/index.m3u8
 #EXTINF:-1 tvg-id="MyCinema.us" channel-id="MyCinema.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/my-cinema.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="My Cinema",My Cinema
 https://mytime-tcl.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="MyTimeMovieNetwork.us@SD" channel-id="MyTimeMovieNetwork.us@SD" tvg-language="eng" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="MyTime Movie Network (US)",MyTime Movie Network (US)
+#EXTINF:-1 tvg-id="MyTimeMovieNetwork.us@SD" channel-id="MyTimeMovieNetwork.us@SD" tvg-language="eng" tvg-country="US" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network.png" group-title="United States" tvg-name="MyTime Movie Network (US)",MyTime Movie Network (US)
 https://mytime-tcl.amagi.tv/1080p-en-cc/index.m3u8
 #EXTINF:-1 tvg-id="NOST.us@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nost-5d9e212ea1.png" tvg-country="US" tvg-content="Movies" group-title="United States" tvg-name="NOST",NOST
 https://a-cdn.klowdtv.com/live2/nost_720p/playlist.m3u8
@@ -2480,7 +2480,7 @@ https://7d8dc76d676946ec8d372d4ed7b22333.mediatailor.us-west-2.amazonaws.com/v1/
 https://v2.tustreaming.cl/clicktv/playlist.m3u8
 #EXTINF:-1 tvg-id="CNAOriginals.sg@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cna-originals-3a3fdcc32c.png" tvg-country="SG" group-title="Documentary & Wildlife" tvg-name="CNA Originals",CNA Originals
 https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.cooking.channel" tvg-language="eng" channel-id="custom.cooking.channel" tvg-country="US" group-title="Documentary & Wildlife" tvg-name="Cooking Channel",Cooking Channel
+#EXTINF:-1 tvg-id="custom.cooking.channel" tvg-language="eng" channel-id="custom.cooking.channel" tvg-country="US" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cooking-channel-f2ef6f609a12512f6a8e.png" group-title="Documentary & Wildlife" tvg-name="Cooking Channel",Cooking Channel
 http://23.237.104.106:8080/USA_COOKING/index.m3u8
 #EXTINF:-1 tvg-id="CourtTV.us@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/court-tv-f02bea9403.png" tvg-country="US" group-title="Documentary & Wildlife" tvg-name="Court TV",Court TV
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-courttv-tablo/playlist.m3u8
@@ -2656,7 +2656,7 @@ https://fast-channels.sinclairstoryline.com/THENEST/index.m3u8
 https://the-pet-collective-international-in.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TotalCrime.ca@CA" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/total-crime-5fb03c1af1.png" tvg-country="CA" group-title="Documentary & Wildlife" tvg-name="Total Crime",Total Crime
 https://aegis-cloudfront-1.tubi.video/b062c287-a170-47df-99e4-f5dcd441ee59/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.bdix.travelxp-bangla" tvg-language="und" group-title="Documentary & Wildlife" tvg-name="Travel XP Bangla",Travel XP Bangla
+#EXTINF:-1 tvg-id="custom.bdix.travelxp-bangla" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp-bangla-915b903e5920a0475a26.png" group-title="Documentary & Wildlife" tvg-name="Travel XP Bangla",Travel XP Bangla
 http://premiumtvs.space/live/YqXTywueEV/damp2purchase/20622.ts
 #EXTINF:-1 tvg-id="TrueCrime.uk" channel-id="TrueCrime.uk" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/true-crime-uk.png" tvg-country="GB" group-title="Documentary & Wildlife" tvg-name="True Crime UK",True Crime UK
 https://b6cca454.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9UcnVlQ3JpbWVVS2Zyb21DQlNSZWFsaXR5X0hMUw/playlist.m3u8?ads.wurl_channel=1151&ads.wurl_name=TrueCrimeUKfromCBSReality&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D
@@ -3042,7 +3042,7 @@ https://mumt05.tangotv.in/87NeALx2THEQ/index.m3u8
 http://m.live.net.sa:1935/live/quran/playlist.m3u8
 #EXTINF:-1 tvg-id="QuranTV.iq" channel-id="QuranTV.iq" tvg-language="ara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-country="IQ" group-title="Religious" tvg-name="Quran TV",Quran TV
 https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
-#EXTINF:-1 tvg-id="custom.saudi-quran-y9quu" channel-id="custom.saudi-quran-y9quu" tvg-language="und" group-title="Religious" tvg-name="Saudi Quran",Saudi Quran
+#EXTINF:-1 tvg-id="custom.saudi-quran-y9quu" channel-id="custom.saudi-quran-y9quu" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saudi-quran-168a35b98fb7c665bce6.png" group-title="Religious" tvg-name="Saudi Quran",Saudi Quran
 https://cdn-globecast.akamaized.net/live/eds/saudi_quran/hls_roku/index.m3u8
 #EXTINF:-1 tvg-id="custom.sunnah-tv" channel-id="custom.sunnah-tv" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sunnah-tv.png" group-title="Religious" tvg-name="Sunnah TV",Sunnah TV
 http://m.live.net.sa:1935/live/sunnah/chunklist.m3u8
@@ -3118,7 +3118,7 @@ https://d15wqvt0xm15k4.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d2
 http://168.196.127.137:6001/play/a08r/index.m3u8
 #EXTINF:-1 tvg-id="CricketGold.au@SD" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cricket-gold.png" tvg-country="AU" group-title="Sports" tvg-name="Cricket Gold",Cricket Gold
 https://streams2.sofast.tv/ptnr-yupptv/title-cricketgold/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b2048bb8-1686-4432-aa50-647245383e0c/manifest.m3u8
-#EXTINF:-1 tvg-id="CRTV.cl@SD" tvg-language="und" tvg-country="CL" group-title="Sports" tvg-name="CRTV (Chile)",CRTV (Chile)
+#EXTINF:-1 tvg-id="CRTV.cl@SD" tvg-language="und" tvg-country="CL" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/crtv-chile-ad1c87ebf07836430e31.png" group-title="Sports" tvg-name="CRTV (Chile)",CRTV (Chile)
 https://stmv2.voxtvhd.com.br/crtvchile/crtvchile/playlist.m3u8
 #EXTINF:-1 tvg-id="CTSport.cz@SD" tvg-language="ces" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ct-sport-15eee9292c.png" tvg-country="CZ" group-title="Sports" tvg-name="CT Sport",CT Sport
 http://88.212.15.50/live/test_ctsport_25p/playlist.m3u8
@@ -4530,7 +4530,7 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125806.ts
 https://fast-channels.sinclairstoryline.com/COMET/index.m3u8
 #EXTINF:-1 tvg-id="CommunityTV.us@SD" channel-id="CommunityTV.us@SD" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/community-tv.png" tvg-country="US" group-title="Review" tvg-name="Community TV",Community TV
 https://cdn.streamcast.xyz/ctvusa/index.fmp4.m3u8
-#EXTINF:-1 tvg-id="custom.cooking.channel" tvg-language="eng" channel-id="custom.cooking.channel" tvg-country="US" group-title="Review" tvg-name="Cooking Channel",Cooking Channel
+#EXTINF:-1 tvg-id="custom.cooking.channel" tvg-language="eng" channel-id="custom.cooking.channel" tvg-country="US" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cooking-channel-f2ef6f609a12512f6a8e.png" group-title="Review" tvg-name="Cooking Channel",Cooking Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9229.ts
 #EXTINF:-1 tvg-id="CorazonTV.pa@SD" channel-id="CorazonTV.pa@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/corazon-tv.png" tvg-country="PA" group-title="Review" tvg-name="Corazon TV",Corazon TV
 http://181.79.86.130:8000/play/a05d/index.m3u8
@@ -5590,17 +5590,17 @@ https://d2g1vdc6ozl2o8.cloudfront.net/out/v1/0a0dc7d7911b4fddbb4dfc963fdd4b9e/in
 https://mumt03.tangotv.in/Dsly5z3HSIRIKANNADA/index.m3u8
 #EXTINF:-1 tvg-id="SiriKannadaAllTime.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/siri-kannada-all-time.png" tvg-country="IN" group-title="Review" tvg-name="Siri Kannada All Time",Siri Kannada All Time
 https://mumt07.tangotv.in/zHjX9OFlSIRIKANNADAALLTIME/index.m3u8
-#EXTINF:-1 tvg-id="SkyCinemaAction.it@SD" channel-id="SkyCinemaAction.it@SD" tvg-country="IT" tvg-content="Movies" group-title="Review" tvg-name="Sky Cinema Action",Sky Cinema Action
+#EXTINF:-1 tvg-id="SkyCinemaAction.it@SD" channel-id="SkyCinemaAction.it@SD" tvg-country="IT" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-cinema-action-17daeb11ff4cf427c3b6.png" group-title="Review" tvg-name="Sky Cinema Action",Sky Cinema Action
 http://109.169.87.42:8080/stream/26/index.m3u8
-#EXTINF:-1 tvg-id="SkyCinemaCollection.it@SD" channel-id="SkyCinemaCollection.it@SD" tvg-country="IT" tvg-content="Movies" group-title="Review" tvg-name="Sky Cinema Collection",Sky Cinema Collection
+#EXTINF:-1 tvg-id="SkyCinemaCollection.it@SD" channel-id="SkyCinemaCollection.it@SD" tvg-country="IT" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-cinema-collection-b67c42cd4e4576aa1883.png" group-title="Review" tvg-name="Sky Cinema Collection",Sky Cinema Collection
 http://109.169.87.42:8080/stream/18/index.m3u8
 #EXTINF:-1 tvg-id="SkyCinemaDue.it@SD" channel-id="SkyCinemaDue.it@SD" tvg-language="ita" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/verified-sky-cinema-due-47e86345bf.png" tvg-country="IT" tvg-content="Movies" group-title="Review" tvg-name="Sky Cinema Due",Sky Cinema Due
 http://109.169.87.42:8080/stream/10/index.m3u8
-#EXTINF:-1 tvg-id="SkyCinemaFamily.it@SD" channel-id="SkyCinemaFamily.it@SD" tvg-country="IT" tvg-content="Movies" group-title="Review" tvg-name="Sky Cinema Family",Sky Cinema Family
+#EXTINF:-1 tvg-id="SkyCinemaFamily.it@SD" channel-id="SkyCinemaFamily.it@SD" tvg-country="IT" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-cinema-family-a006755ca12f9d74017d.png" group-title="Review" tvg-name="Sky Cinema Family",Sky Cinema Family
 http://109.169.87.42:8080/stream/22/index.m3u8
-#EXTINF:-1 tvg-id="SkyCinemaSuspense.it@SD" channel-id="SkyCinemaSuspense.it@SD" tvg-country="IT" tvg-content="Movies" group-title="Review" tvg-name="Sky Cinema Suspense",Sky Cinema Suspense
+#EXTINF:-1 tvg-id="SkyCinemaSuspense.it@SD" channel-id="SkyCinemaSuspense.it@SD" tvg-country="IT" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-cinema-suspense-1d99507854d3cfdf0583.png" group-title="Review" tvg-name="Sky Cinema Suspense",Sky Cinema Suspense
 http://109.169.87.42:8080/stream/30/index.m3u8
-#EXTINF:-1 tvg-id="SkyCinemaUno.it@SD" channel-id="SkyCinemaUno.it@SD" tvg-country="IT" tvg-content="Movies" group-title="Review" tvg-name="Sky Cinema Uno",Sky Cinema Uno
+#EXTINF:-1 tvg-id="SkyCinemaUno.it@SD" channel-id="SkyCinemaUno.it@SD" tvg-country="IT" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-cinema-uno-36672bcce8b918d42136.png" group-title="Review" tvg-name="Sky Cinema Uno",Sky Cinema Uno
 http://109.169.87.42:8080/stream/2/index.m3u8
 #EXTINF:-1 tvg-id="smithsonianchannel.us" channel-id="smithsonianchannel.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/smithsonian-channel-e41164cabff3cd779219.png" tvg-country="US" group-title="Review" tvg-name="Smithsonian Channel",Smithsonian Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/31150.ts

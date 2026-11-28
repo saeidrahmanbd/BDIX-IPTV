@@ -1,23 +1,23 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T10:58:05+00:00**
+Generated: **2026-11-28T11:00:26+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **1430770e8c02dd64d1d03bab2f1809e4251e771e5737759c2ec945d0525e162c**
-- International-Playlist.m3u SHA-256: **248ff78f7e53dc302880e5cb413bfd2f727021f7d7d92a3f3c6f5222618bbe7b**
+- IPTV-Playlist.m3u SHA-256: **77b11e20f1d6d12ac974d1ea5e1940787857026b38d4f3574619dbdb69eb28f3**
+- International-Playlist.m3u SHA-256: **cb76635e0c1d0939ec7b04ed9ae09d1a613db5cc208cedd46d0e02ca19e8ce9a**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **2**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **149**
-- Exact-byte duplicate asset clusters: **752**
-- Playlist references whose asset stem differs from the normalized channel name: **1603**
+- Exact-byte duplicate asset clusters: **753**
+- Playlist references whose asset stem differs from the normalized channel name: **1607**
 - Unreferenced image assets immediately inside logos/: **998** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -25,7 +25,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| crtv-chile-ad1c87ebf07836430e31.png | PNG | PNG | 1024×1024 | 487×487 | downscaled, re-encoded/compressed |
+| harlem-globetrotters-48b9916ebc529ead57df.png | PNG | PNG | 1950×900 | 1024×473 | downscaled |
 
 ## Remaining extension mismatches
 
@@ -940,6 +941,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/tcm-latin-america-chile-f645084339.png, logos/tcm-latin-america-south-f645084339e78dc16106.png
 - logos/trace-urban-africa-franco-c4541d5301.png, logos/trace-urban-caribbean-and-indian-ocean-c4541d5301e3929d60cd.png, logos/trace-urban-southern-africa-c4541d5301e3929d60cd.png
 - logos/travel-xp-english-b3aa521bb125b0495ef7.png, logos/travelxp-4k-hdr-2160p-geo-blocked-b3aa521bb125b0495ef7.png
+- logos/tudn-ef81b44e4bdc20615179.png, logos/tudn-mx-ef81b44e4bdc20615179.png
 - logos/tv.png, logos/unused/tv-1080p-0e5df2c3c4.png
 - logos/tvcarib-cinema-00d1d6c83c.png, logos/tvcarib-kids-and-teens-00d1d6c83c7c23772c92.png
 - logos/ua-music.png, logos/unused/ua-music-1080p-5ea4b8d888.png
@@ -1192,6 +1194,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Religious |
 | IPTV-Playlist.m3u | Peace TV English | peace-tv-english.png | Religious |
 | IPTV-Playlist.m3u | Peace TV Urdu | peace-tv-urdu.png | Religious |
+| IPTV-Playlist.m3u | Quran Radio TV SMC | quran-radio-tv-smc-5a89eb563b0115e7405d.png | Religious |
 | IPTV-Playlist.m3u | Quran TV | quran-tv.png | Religious |
 | IPTV-Playlist.m3u | TV One UK | tv-one-uk.png | Religious |
 | IPTV-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Religious |
@@ -1899,6 +1902,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | MTV Biggest Pop CA | verified-mtv-biggest-pop-ca-1080p-61995cdf8b.png | United States |
 | International-Playlist.m3u | MTV Biggest Pop LatAm | verified-mtv-biggest-pop-latam-1080p-61995cdf8b.png | United States |
 | International-Playlist.m3u | MTV Classic BR | verified-mtv-classic-br-720p-a32712dea1.png | United States |
+| International-Playlist.m3u | MyTime Movie Network (US) | mytime-movie-network.png | United States |
 | International-Playlist.m3u | Pluto TV Bang Bang | verified-pluto-tv-bang-bang-d0368b0d51.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Classicos | verified-pluto-tv-cine-classicos-5cdf7516c8.png | United States |
 | International-Playlist.m3u | Pluto TV Cine Comedia (United States) BR | verified-pluto-tv-cine-comedia-united-states-br-43f75938d8.png | United States |
@@ -1989,6 +1993,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | 4K Travel | 4k-travel.png | Documentary & Wildlife |
 | International-Playlist.m3u | American Heroes Channel | american-heroes-channel-3bf071dd67f685548795.png | Documentary & Wildlife |
 | International-Playlist.m3u | CCTV-Weapon & Technology | cctv-weapon-and-technology-6f9b3509e8.png | Documentary & Wildlife |
+| International-Playlist.m3u | Cooking Channel | cooking-channel-f2ef6f609a12512f6a8e.png | Documentary & Wildlife |
 | International-Playlist.m3u | Court TV | court-tv-f02bea9403.png | Documentary & Wildlife |
 | International-Playlist.m3u | Crime & Justice | crime-and-justice.png | Documentary & Wildlife |
 | International-Playlist.m3u | Crime Scene TV | crime-scene-tv.png | Documentary & Wildlife |
@@ -2172,6 +2177,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | CND Film Middle School Channel | cnd-film-middle-school-channel.png | Review |
 | International-Playlist.m3u | Colimdo TV | colimdo-tv-e106271533.png | Review |
 | International-Playlist.m3u | Community TV | community-tv.png | Review |
+| International-Playlist.m3u | Cooking Channel | cooking-channel-f2ef6f609a12512f6a8e.png | Review |
 | International-Playlist.m3u | Corazon TV | corazon-tv.png | Review |
 | International-Playlist.m3u | Cosmos Tv | cosmos-tv-7521381461.png | Review |
 | International-Playlist.m3u | CTB Perth Movies Channel | ctb-perth-movies-channel-720p.png | Review |

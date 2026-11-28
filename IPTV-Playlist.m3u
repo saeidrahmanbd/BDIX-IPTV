@@ -1222,7 +1222,7 @@ https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8
 https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8
 #EXTINF:-1 tvg-name="Quran" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" group-title="Religious",Quran
 https://vodzong.mjunoon.tv:8087/streamtest/SaudiQuran-142/playlist.m3u8
-#EXTINF:-1 tvg-name="Quran Radio TV SMC" group-title="Religious",Quran Radio TV SMC
+#EXTINF:-1 tvg-name="Quran Radio TV SMC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-radio-tv-smc-5a89eb563b0115e7405d.png" group-title="Religious",Quran Radio TV SMC
 https://live.kwikmotion.com/smcquranlive/quranradiolive/playlist.m3u8
 #EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-chno="603" channel-id="QuranTV.iq" tvg-country="IQ" tvg-language="ara" group-title="Religious",Quran TV
 https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
@@ -1398,7 +1398,7 @@ https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8
 http://45.167.1.136:8000/play/a05s
 #EXTINF:-1 tvg-id="racing.hagerty.com" tvg-name="RACING | Hagerty" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hagerty-28b469a78a61a85fda22.png" tvg-country="US" tvg-language="eng" group-title="Sports",Hagerty
 https://dqw6u0upa8l21.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-0etl87ne2tj77/Hagerty.m3u8
-#EXTINF:-1 tvg-name="Harlem Globetrotters" group-title="Sports",Harlem Globetrotters
+#EXTINF:-1 tvg-name="Harlem Globetrotters" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/harlem-globetrotters-48b9916ebc529ead57df.png" group-title="Sports",Harlem Globetrotters
 https://32d0f0785a2a46d28117199f63ad73ea.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/SportsTribal-eu_TheHarlemGlobeTrotters/playlist.m3u8
 #EXTINF:-1 tvg-name="Horse & Country" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/horse-country.png" group-title="Sports",Horse & Country
 https://hncfree-sportstribal.amagi.tv/hls/amagi_hls_data_sportstri-hncfree-sportstribal/CDN/playlist.m3u8
@@ -1592,11 +1592,11 @@ https://livetr.teleromagna.it/mia/live/playlist.m3u8
 https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="mixer.trace.sports.stars.com" tvg-name="Trace Sport Stars" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-sport.png" tvg-chno="696" channel-id="mixer.trace.sports.stars.com" tvg-country="FR" tvg-language="eng" group-title="Sports",Trace Sport Stars
 https://trace-sportstars-samsungnz.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-name="TUDN" group-title="Sports",TUDN
+#EXTINF:-1 tvg-name="TUDN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tudn-ef81b44e4bdc20615179.png" group-title="Sports",TUDN
 http://45.171.64.30:2000/play/a08j/index.m3u8
-#EXTINF:-1 tvg-name="TUDN" group-title="Sports",TUDN
+#EXTINF:-1 tvg-name="TUDN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tudn-ef81b44e4bdc20615179.png" group-title="Sports",TUDN
 http://177.10.184.60:8002/play/a013/index.m3u8
-#EXTINF:-1 tvg-name="TUDN MX" group-title="Sports",TUDN MX
+#EXTINF:-1 tvg-name="TUDN MX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tudn-mx-ef81b44e4bdc20615179.png" group-title="Sports",TUDN MX
 https://linear-357.frequency.stream/dist/vizio/357/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-name="Turkmenistan Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/turkmenistan-sport-714745951c.png" group-title="Sports",Turkmenistan Sport
 http://217.174.225.146/legacyhls/ch004_720/index.m3u8
@@ -1620,7 +1620,7 @@ https://linear-893.frequency.stream/dist/plex/893/hls/master/playlist.m3u8
 https://d1t5afz6qed3xk.cloudfront.net/Unbeaten.m3u8
 #EXTINF:-1 tvg-id="Unite8Sports1.in@HD" tvg-name="Unite8 Sports 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unite8-sports-1-c39b236b6693e186f49c.png" tvg-chno="703" channel-id="Unite8Sports1.in@HD" tvg-country="IN" tvg-language="eng" group-title="Sports" x-discovery-source-country="IN",Unite8 Sports 1
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/35.m3u8
-#EXTINF:-1 tvg-name="USA ACCN" group-title="Sports",USA ACCN
+#EXTINF:-1 tvg-name="USA ACCN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/usa-accn-1cefabddc7941e59bee5.png" group-title="Sports",USA ACCN
 http://23.237.104.106:8080/USA_ACCN/index.m3u8
 #EXTINF:-1 tvg-name="Vía X Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/x-sport.png" group-title="Sports",Vía X Sport
 http://38.226.49.253:8000/play/a042/index.m3u8
