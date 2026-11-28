@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T06:53:46+00:00**
+Generated: **2026-11-28T07:03:16+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **fad24b9e6271db36d55c2526ee3c05d153236bb83baeaa6b9345681d39149c22**
-- International-Playlist.m3u SHA-256: **95230905f3f222d91f49b8e36862ccb68fa73a5c9f506bf6451cc434bc55aa06**
+- IPTV-Playlist.m3u SHA-256: **5ec976c9635f15dd87aea39be22e7de020641997fe6910aa8ec1b321e8c8289d**
+- International-Playlist.m3u SHA-256: **248ff78f7e53dc302880e5cb413bfd2f727021f7d7d92a3f3c6f5222618bbe7b**
 
 ## Summary
 
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **148**
 - Exact-byte duplicate asset clusters: **750**
-- Playlist references whose asset stem differs from the normalized channel name: **1557**
+- Playlist references whose asset stem differs from the normalized channel name: **1563**
 - Unreferenced image assets immediately inside logos/: **1005** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1402,12 +1402,16 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Zodiak TV (1080p) | zodiak-tv.png | New Channels |
 | IPTV-Playlist.m3u | 9X Jhakaas (1080p) | 9x-jhakaas.png | New Backups |
 | IPTV-Playlist.m3u | 9X Tashan (1080p) | 9x-tashan.png | New Backups |
+| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | New Backups |
 | IPTV-Playlist.m3u | ATN Bangla (720p) | atn-bangla.png | New Backups |
 | IPTV-Playlist.m3u | B4U Bhojpuri (1080p) | b4u-bhojpuri-1080p.png | New Backups |
 | IPTV-Playlist.m3u | B4U Kadak (1080p) | b4u-kadak.png | New Backups |
 | IPTV-Playlist.m3u | B4U Kadak (1080p) | b4u-kadak.png | New Backups |
 | IPTV-Playlist.m3u | B4U Movies (1080p) | b4u-movies.png | New Backups |
 | IPTV-Playlist.m3u | B4U Movies (1080p) | b4u-movies.png | New Backups |
+| IPTV-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | New Backups |
+| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | New Backups |
+| IPTV-Playlist.m3u | Channel 16 | channel-16.png | New Backups |
 | IPTV-Playlist.m3u | Colors Bangla (1080p) | colors-bangla.png | New Backups |
 | IPTV-Playlist.m3u | DBC News (480p) | dbc-news.png | New Backups |
 | IPTV-Playlist.m3u | DD Assam (576p) | dd-assam.png | New Backups |
@@ -1416,7 +1420,9 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Duronto TV (720p) | duronto-tv-2b3c7dd202.png | New Backups |
 | IPTV-Playlist.m3u | Ekhon TV (1080p) | ekhon-tv.png | New Backups |
 | IPTV-Playlist.m3u | Gazi TV (1080p) | gazi-tv.png | New Backups |
+| IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | New Backups |
 | IPTV-Playlist.m3u | INWILD (1080p) | inwild.png | New Backups |
+| IPTV-Playlist.m3u | Islamic TV | islamic-tv.png | New Backups |
 | IPTV-Playlist.m3u | Maasranga TV (720p) | maasranga-tv.png | New Backups |
 | IPTV-Playlist.m3u | RTV (Bangladesh) (720p) | verified-rtv-bangladesh-720p-6421f55b0f.png | New Backups |
 | IPTV-Playlist.m3u | Sony Sports Ten 2 (1080p) | sony-sports-ten-2.png | New Backups |

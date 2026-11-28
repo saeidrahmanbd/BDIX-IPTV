@@ -8488,5 +8488,25 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/crhsomk.png",
     "notes": "IPTV-org exact ID: FilmMania.hu IPTV-org public logo dataset Source page: https://i.imgur.com/crhsomk.png"
+  },
+  "International-Playlist.m3u|BRIDGERNB.ru@SD|BRIDGE RNB (720p) [Geo-blocked]|logos/bridge-rnb-720p-geo-blocked-410ab5ee562a58b296a5.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://bridgemusic.ru/s/img/channels/rnb-logo-dark.svg",
+    "notes": "IPTV-org exact ID: BRIDGERNB.ru IPTV-org public logo dataset Source page: https://bridgemusic.ru/s/img/channels/rnb-logo-dark.svg"
+  },
+  "International-Playlist.m3u|BRIDGESoul.ru@SD|BRIDGE Soul (720p) [Geo-blocked]|logos/bridge-soul-720p-geo-blocked-c10cf0f5a0d9ec8ed59f.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://bridgemusic.ru/s/img/channels/soul-logo-dark.svg",
+    "notes": "IPTV-org exact ID: BRIDGESoul.ru IPTV-org public logo dataset Source page: https://bridgemusic.ru/s/img/channels/soul-logo-dark.svg"
+  },
+  "International-Playlist.m3u|BRIDGESymphony.ru@SD|BRIDGE Symphony (720p) [Geo-blocked]|logos/bridge-symphony-720p-geo-blocked-7dfe8cd859b9019ac8ed.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://bridgemusic.ru/s/img/channels/symphony-white.svg",
+    "notes": "IPTV-org exact ID: BRIDGESymphony.ru IPTV-org public logo dataset Source page: https://bridgemusic.ru/s/img/channels/symphony-white.svg"
+  },
+  "International-Playlist.m3u|BRIDGEVostok.ru@SD|BRIDGE Vostok (720p) [Geo-blocked]|logos/bridge-vostok-720p-geo-blocked-3303d8b63b70e3ee2f46.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://bridgemusic.ru/s/img/channels/vostok-white.svg",
+    "notes": "IPTV-org exact ID: BRIDGEVostok.ru IPTV-org public logo dataset Source page: https://bridgemusic.ru/s/img/channels/vostok-white.svg"
   }
 }
