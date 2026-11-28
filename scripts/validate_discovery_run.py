@@ -508,7 +508,7 @@ def final_mode(playlist, report, baseline, mode):
                 promoted += 1
         if promoted:
             lines = stable_group_order(lines)
-            p.write_text("\\n".join(lines).rstrip() + "\\n", encoding="utf-8")
+            p.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
             text = p.read_text(encoding="utf-8-sig")
             lines, entries, malformed = parse_playlist(text)
             append_section(report, "Primary promotion", f"- Orphan New Backups promoted to New Channels: {promoted} (no primary identity existed in an active group).")
