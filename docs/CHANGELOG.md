@@ -5,62 +5,66 @@
 Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-11-27 — `IPTV-Playlist.m3u`
+### 2026-11-28 — `IPTV-Playlist.m3u`
 
-- New channel identities: **44**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **53 / 0**
+- New channel identities: **131**
+- Channel identities removed: **5**
+- Stream URLs added / removed: **188 / 5**
 - Backup URL updates: **0**
 - Logo reference changes: **434**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Madani Channel Bangla (1080p)
-- News 21 Bangla TV (1080p)
-- Rupashi Bangla TV (720p)
-- AMN TV (576p)
-- Cine Jomjomat (1080p)
-- Epic TV Digital (1080p)
-- History TV18 HD (1080p) [Geo-blocked]
-- Mango Mobile TV (1080p)
-- MTV (India) (396p)
+- Deshi TV Bangla
+- Raatdin Bangla
+- AVT Khyber
+- KTN TV
+- Cine Canal
+- Hi-Yah!
+- Kronehit
+- Qello Concerts by Stingray
+- Rock TV
+- Vevo Retro
+
+Removed channel identities (up to 10):
 - NDTV Good Times (1080p)
+- Sristi TV (1080p)
+- Travelxp HD (1080p) [Geo-blocked]
+- WeatherSpy (India) (720p)
+- Zodiak TV (1080p)
 
 <!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-11-27 — `International-Playlist.m3u`
+### 2026-11-28 — `International-Playlist.m3u`
 
-- New channel identities: **19**
-- Channel identities removed: **11**
-- Stream URLs added / removed: **39 / 14**
+- New channel identities: **7**
+- Channel identities removed: **15**
+- Stream URLs added / removed: **10 / 21**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
-- Replaced channel identities: **1**
+- Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Anmol Cinema
-- Anmol Cinema 2
-- Asianet Cinema
-- Box Hits
-- BRIDGE Rap [ ]
-- CinemaWorld Vietnam
-- Cinemax 2 Romania
-- Cinemax (Czech Republic) Romania
-- Cinemax Asia Vietnam
-- Cinevault 80s [ ]
+- Abdulmajeed Abdullah (1080p)
+- BRIDGE RNB (720p) [Geo-blocked]
+- BRIDGE Soul (720p) [Geo-blocked]
+- BRIDGE Symphony (720p) [Geo-blocked]
+- BRIDGE Vostok (720p) [Geo-blocked]
+- Film Mania Romania (576i)
+- Shot TV (576p)
 
 Removed channel identities (up to 10):
-- 4 SiDES TV
-- Abdulmajeed Abdullah
-- DD Uttar Pradesh
-- MCM Pop
-- MNTV (Tamil)
-- Rakuten TV Family Movies
-- Rakuten TV Family Movies Germany
-- Rakuten TV Family Movies Italy
-- Rakuten TV Family Movies UK
-- Starz Cinema
+- AXS
+- beIN SPORTS
+- BRIDGE Hits
+- Islam TV
+- MTV
+- NFL Network
+- TNT Sports 1
+- Willow Sports
+- Zee Telugu
+- Cinemax 2 Romania
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
