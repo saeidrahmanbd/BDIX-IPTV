@@ -1296,9 +1296,9 @@ http://23.237.104.106:8080/DAZN_3/index.m3u8
 https://aegis-cloudfront-1.tubi.video/bfad29e2-5bee-44f3-8256-127324e8b106/playlist.m3u8
 #EXTINF:-1 tvg-id="DDSports.in@SD" tvg-name="DD Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" tvg-chno="621" channel-id="DDSports.in@SD" tvg-country="IN" tvg-language="hin" group-title="Sports",DD Sports
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8
-#EXTINF:-1 tvg-name="Digi Sport 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Digi Sport 1
+#EXTINF:-1 tvg-name="Digi Sport 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-digi-sport-1.png" group-title="Sports",Digi Sport 1
 http://91.201.172.14:35005/
-#EXTINF:-1 tvg-name="Digi Sport 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",Digi Sport 2
+#EXTINF:-1 tvg-name="Digi Sport 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-digi-sport-2.png" group-title="Sports",Digi Sport 2
 http://91.201.172.14:35006/
 #EXTINF:-1 tvg-name="DIRECTV Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Sports",DIRECTV Sports
 http://181.224.255.210:8001/play/a0s8/index.m3u8
@@ -1824,7 +1824,7 @@ http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/30.m3u8
 https://amg01334-beinsportsllc-beinxtraesp-localnow-aekzc.amagi.tv/playlistR1080p.m3u8
 #EXTINF:-1 tvg-id="custom.beinsports2" tvg-name="beIN SPORTS 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-2.png" channel-id="custom.beinsports2" tvg-country="QA" tvg-language="ara" group-title="Backup",beIN SPORTS 2
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/31.m3u8
-#EXTINF:-1 tvg-name="BEIN SPORTS 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Backup",BEIN SPORTS 3
+#EXTINF:-1 tvg-name="BEIN SPORTS 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-3.png" group-title="Backup",BEIN SPORTS 3
 http://foxbleu-cdn.com/live/e8:aa:cb:c4:bf:92/aMzpeeG/89342.ts
 #EXTINF:-1 tvg-id="beINSPORTSXTRA.us" tvg-name="beIN SPORTS XTRA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-xtra.png" channel-id="beINSPORTSXTRA.us" tvg-country="US" tvg-language="eng" group-title="Backup",beIN SPORTS XTRA
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/34.m3u8
@@ -2020,7 +2020,7 @@ https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxI
 http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/19741.ts
 #EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv-2b3c7dd202.png" channel-id="DurontoTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Duronto TV
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/55.m3u8
-#EXTINF:-1 tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Backup",Duronto TV
+#EXTINF:-1 tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv.png" group-title="Backup",Duronto TV
 https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
 #EXTINF:-1 tvg-id="E24.in" tvg-name="E24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/e24.png" channel-id="E24.in" tvg-country="IN" tvg-language="hin" group-title="Backup",E24
 https://fta.ektv.in/live/159/master.m3u8
@@ -2040,7 +2040,7 @@ http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92
 https://ekusheyserver.com/etvlivesn.m3u8
 #EXTINF:-1 tvg-id="EkusheyTV.bd" tvg-name="Ekushey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png" channel-id="EkusheyTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ekushey TV
 https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8
-#EXTINF:-1 tvg-name="Ekushey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" group-title="Backup",Ekushey TV
+#EXTINF:-1 tvg-name="Ekushey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv.png" group-title="Backup",Ekushey TV
 http://ekusheyserver.com/etvlivesn.m3u8
 #EXTINF:-1 tvg-name="Enterr10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" tvg-country="IN" tvg-language="ben" group-title="Backup",Enterr10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
@@ -2486,7 +2486,7 @@ https://galaxyott.live/hls/sanaplus.m3u8
 http://115.187.41.216:8080/hls/sanandatv/index.m3u8
 #EXTINF:-1 tvg-id="SanandaTV.in" tvg-name="Sananda" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sananda-64faf3c524.png" channel-id="SanandaTV.in" tvg-country="IN" tvg-language="ben" group-title="Backup",Sananda
 https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8
-#EXTINF:-1 tvg-name="Sananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Sananda TV
+#EXTINF:-1 tvg-name="Sananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sananda-tv.png" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Sananda TV
 https://live-stream.utkalbongo.com/utkalbongo/stream9/hls/sanandanewslive.m3u8
 #EXTINF:-1 tvg-id="SangeetBangla.in@SD" tvg-name="Sangeet Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png" channel-id="SangeetBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Backup",Sangeet Bangla
 http://103.175.73.12:8080/live/379/379_0.m3u8
