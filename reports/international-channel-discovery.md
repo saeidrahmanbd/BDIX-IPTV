@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-28T11:00:50+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-28T11:07:46+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12223
 - Existing playlist records: 3328
@@ -120,14 +120,14 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-28T11:01:03+06:00
+- Run timestamp: 2026-11-28T11:08:00+06:00
 - Mode: international
 - New entries and discovery queues probed: 93
-- Verified live media responses: 40
+- Verified live media responses: 39
 - Verified new primary channels retained in New Channels: 17
-- Verified alternate streams retained in New Backups: 23
+- Verified alternate streams retained in New Backups: 22
 - Inconclusive candidates retained for manual review: 7
-- Unverified backup streams moved to Review: 0
+- Unverified backup streams moved to Review: 1
 - Definitively dead new candidates removed: 46
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
@@ -191,11 +191,12 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Viasat Kino (Ukraine) Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Kept Zee Cinema APAC (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered 8XM from New Backups — HTTP 404.
+- Moved unverified alternate stream HBO Asia SD [ ] from New Backups to Review — probe was inconclusive (response did not clearly identify a live media stream).
 - Kept Indiyskoye Kino in New Backups without tvg-logo — no authentic local repository asset was available.
 
 ## Final validation
 
-- Run timestamp: 2026-11-28T11:01:04+06:00
+- Run timestamp: 2026-11-28T11:08:01+06:00
 - Validation status: FAIL
 - M3U entries parsed: 3328
 - Malformed EXTINF/URL pairs: 0
