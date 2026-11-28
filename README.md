@@ -6,9 +6,9 @@
 
 # BDIX-IPTV
 
-### Bangladesh's IPTV Playlist Platform · M3U/M3U8 · Shared XMLTV EPG
+### Bangladeshi IPTV Platform · Regional M3U/M3U8 Playlists · Shared XMLTV EPG
 
-**A Bangladesh-first IPTV playlist platform — bringing Bangladeshi television together with Indian, Pakistani and international channel collections, supported by one shared XMLTV Electronic Programme Guide.**
+**A Bangladeshi IPTV IPTV playlist platform — bringing Bangladeshi television together with Indian, Pakistani and international channel collections, supported by one shared XMLTV Electronic Programme Guide.**
 
 Built around Bangladeshi television, BDIX-IPTV brings together curated M3U/M3U8 playlists, organized regional channel groups, locally maintained logos, alternate streams and a shared programme guide for compatible IPTV players.
 
@@ -35,7 +35,7 @@ Built around Bangladeshi television, BDIX-IPTV brings together curated M3U/M3U8 
 
 ## 📺 About BDIX-IPTV
 
-**BDIX-IPTV is a Bangladesh-first IPTV playlist platform.** It puts Bangladeshi television at the centre, with additional Indian, Pakistani and international channel collections for viewers who want a broader selection.
+**BDIX-IPTV is a Bangladeshi IPTV IPTV playlist platform.** It puts Bangladeshi television at the centre, with additional Indian, Pakistani and international channel collections for viewers who want a broader selection.
 
 The project provides publicly accessible M3U/M3U8 playlists and a shared XMLTV Electronic Programme Guide (EPG) for compatible IPTV applications.
 
@@ -50,12 +50,12 @@ Whether you are looking for Bangladeshi television first or want to explore Indi
 <div align="center">
 
 <img src="assets/feature-grid.svg"
-     alt="Why BDIX-IPTV: Bangladesh-first channels, organized playlists, shared XMLTV programme guide, local logos, alternate streams and transparent automated maintenance"
+     alt="Why BDIX-IPTV: Bangladeshi IPTV channels, organized playlists, shared XMLTV programme guide, local logos, alternate streams and transparent automated maintenance"
      width="100%">
 
 </div>
 
-Bangladesh is the heart of BDIX-IPTV. Regional and international collections complement the Bangladeshi channel selection, while one shared XMLTV guide helps supported IPTV players display available programme schedules.
+Bangladeshi channels are a key part of the project, alongside Indian, Pakistani and international selections. One shared XMLTV guide helps compatible IPTV players display available programme schedules.
 
 > **Note:** Channel availability, stream functionality and programme schedules depend on external sources. A listed channel does not guarantee uninterrupted playback or available EPG data.
 
@@ -91,14 +91,17 @@ BDIX-IPTV offers two main playlist collections.
 
 The primary multi-country IPTV playlist, featuring organized Bangladeshi, Indian, Pakistani and eligible international television channels.
 
-**Highlights:**
-- Bangladesh television channels.
-- Indian television channels.
-- Pakistani television channels.
-- Eligible international selections.
-- Country-based and genre-based channel groups.
-- Channel metadata and logo references.
-- Alternate stream entries where maintained.
+**Playlist overview:**
+
+| Area | What's included |
+|---|---|
+| Bangladesh | Bangladeshi television channels. |
+| India | Indian television channels. |
+| Pakistan | Pakistani television channels. |
+| International | Eligible international selections. |
+| Organization | Country-based and genre-based channel groups. |
+| Channel information | Channel metadata and logo references. |
+| Alternate streams | Backup stream entries where maintained. |
 
 **Playlist URL:**
 
@@ -120,14 +123,17 @@ https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u
 
 A companion playlist offering Bangladesh and Indian selections alongside eligible international movie, music, entertainment and other permitted channels.
 
-**Highlights:**
-- Bangladesh and Indian channels.
-- International movie channels.
-- International music channels.
-- Eligible entertainment selections.
-- Organized channel groups.
-- Channel metadata and logo references.
-- Alternate streams where maintained.
+**Playlist overview:**
+
+| Area | What's included |
+|---|---|
+| Bangladesh & India | Bangladeshi and Indian channel selections. |
+| International movies | Eligible international movie channels. |
+| International music | Eligible international music channels. |
+| Entertainment | Other eligible entertainment selections. |
+| Organization | Organized channel groups. |
+| Channel information | Channel metadata and logo references. |
+| Alternate streams | Backup stream entries where maintained. |
 
 **Playlist URL:**
 
@@ -285,14 +291,16 @@ BDIX-IPTV uses Python-based scripts and GitHub Actions to support repeatable pla
 
 ### Key features
 
-- **Playlist Editor:** Edit M3U/M3U8 playlists, channel names, categories and metadata.
-- **XMLTV EPG Centre:** Load XMLTV guides from URLs and supported local XML, GZ, XZ and ZIP files.
-- **EPG Mapping:** Search, inspect and edit channel `tvg-id` values.
-- **Stream Scanner:** Review Responsive, Dead, Unreachable, Restricted, Stale, Unavailable, Unverified and Error results.
-- **Advanced Scan Controls:** Pause, resume and cancel scans; configure timeouts, retries and limits.
-- **Xtream Codes and Stalker/MAC:** Import supported provider playlists with safer credential handling.
-- **Safer Editing:** Preserve playlist directives and unknown header keys, with backup and recovery support.
-- **Built-in Playback:** Playback using the bundled VLC engine.
+| Feature | Description |
+|---|---|
+| Playlist Editor | Edit M3U/M3U8 playlists, channel names, categories and metadata. |
+| XMLTV EPG Centre | Load XMLTV guides from URLs and supported local XML, GZ, XZ and ZIP files. |
+| EPG Mapping | Search, inspect and edit channel `tvg-id` values. |
+| Stream Scanner | Review Responsive, Dead, Unreachable, Restricted, Stale, Unavailable, Unverified and Error results. |
+| Advanced Scan Controls | Pause, resume and cancel scans; configure timeouts, retries and limits. |
+| Xtream Codes and Stalker/MAC | Import supported provider playlists with safer credential handling. |
+| Safer Editing | Preserve playlist directives and unknown header keys, with backup and recovery support. |
+| Built-in Playback | Playback using the bundled VLC engine. |
 
 ### Download Playlist Studio 5.1
 
@@ -449,12 +457,14 @@ The presence of a channel logo or stream reference in this repository does not e
 
 ### Important disclaimer
 
-- BDIX-IPTV does not host television broadcasts, video content or broadcaster infrastructure.
-- The project provides references to streams and associated playlist information.
-- Third-party streams may become unavailable, restricted or discontinued.
-- Programme schedules depend on external sources and successful channel mapping.
-- No uninterrupted playback, specific channel availability or complete EPG coverage is guaranteed.
-- Users are responsible for complying with applicable laws, copyright requirements, broadcaster rights and third-party service terms.
+| Important point | Explanation |
+|---|---|
+| Hosting | BDIX-IPTV does not host television broadcasts, video content or broadcaster infrastructure. |
+| Playlist references | The project provides references to streams and associated playlist information. |
+| Third-party availability | Streams may become unavailable, restricted or discontinued. |
+| Programme schedules | EPG data depends on external sources and successful channel mapping. |
+| Service limitations | Uninterrupted playback, specific channel availability and complete EPG coverage are not guaranteed. |
+| User responsibility | Users must comply with applicable laws, copyright requirements, broadcaster rights and third-party service terms. |
 
 ---
 
