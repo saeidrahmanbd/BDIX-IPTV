@@ -27,8 +27,7 @@ BDIX-IPTV brings together curated M3U/M3U8 playlist collections, organized chann
 [🇧🇩 বাংলা গাইড](https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html) ·
 [❓ FAQ](#-frequently-asked-questions)
 
-![GitHub stars](https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?style=flat-square&color=f5c542)
-![Last commit](https://img.shields.io/github/last-commit/saeidrahmanbd/BDIX-IPTV/main?style=flat-square)
+[![GitHub stars](https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?style=for-the-badge&logo=github&color=f5c542)](https://github.com/saeidrahmanbd/BDIX-IPTV/stargazers) [![Last commit](https://img.shields.io/github/last-commit/saeidrahmanbd/BDIX-IPTV/main?style=for-the-badge)](https://github.com/saeidrahmanbd/BDIX-IPTV/commits/main)
 
 </div>
 
@@ -48,23 +47,15 @@ Whether you are looking for Bangladeshi television, Indian entertainment, Pakist
      width="100%">
 </div>
 
-### Why BDIX-IPTV?
-
 <div align="center">
+
 <img src="assets/feature-grid.svg"
-     alt="BDIX-IPTV features: Bangladesh-focused channels, organized playlists, XMLTV EPG, local logos, alternate streams and transparent reporting"
+     alt="Why BDIX-IPTV: Bangladesh-first channels, organized playlists, shared XMLTV programme guide, local logos, alternate streams and transparent automated maintenance"
      width="100%">
+
 </div>
 
-- 🇧🇩 **Bangladesh-focused:** Bangladeshi television channels are at the core of the project.
-- 🌏 **Multi-country selection:** Indian, Pakistani and eligible international television channels.
-- 🗂️ **Organized playlists:** Country-based and genre-based channel groups.
-- 🗓️ **Shared XMLTV EPG:** Programme-guide support for channels with matching schedule data.
-- 🖼️ **Local channel logos:** Repository-hosted logo assets where available.
-- 🔁 **Alternate streams:** Backup entries maintained where suitable alternatives exist.
-- ⚙️ **Automated maintenance:** GitHub Actions support discovery, validation, diagnostics and EPG updates.
-- 📊 **Transparent reporting:** Public diagnostic and maintenance reports.
-- 🆓 **Public access:** Playlist and programme-guide resources are accessible through GitHub.
+BDIX-IPTV combines South Asian channel discovery with organized playlist groups, a shared programme guide and transparent repository maintenance.
 
 > **Note:** Channel availability, stream functionality and programme schedules depend on external sources. A listed channel does not guarantee uninterrupted playback or available EPG data.
 
@@ -75,9 +66,11 @@ Whether you are looking for Bangladeshi television, Indian entertainment, Pakist
 Getting started requires a compatible IPTV player and a playlist URL.
 
 <div align="center">
+
 <img src="assets/quickstart-flow.svg"
-     alt="Three steps to use BDIX-IPTV: copy a playlist URL, add it to an IPTV player and configure XMLTV EPG"
+     alt="Three-step BDIX-IPTV setup: copy a playlist URL, add it to a compatible IPTV player, then load the shared XMLTV programme guide"
      width="100%">
+
 </div>
 
 1. **Choose a playlist:** Select your preferred collection from [Choose Your IPTV Playlist](#-choose-your-iptv-playlist).
@@ -190,7 +183,9 @@ https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml
 ```
 
 <div align="center">
-[![Open XMLTV EPG](https://img.shields.io/badge/🗓_OPEN_XMLTV_PROGRAMME_GUIDE-238636?style=for-the-badge)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml)
+
+<a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"><img src="https://img.shields.io/badge/OPEN_XMLTV_PROGRAMME_GUIDE-238636?style=for-the-badge&logo=calendar&logoColor=white" alt="Open XMLTV Programme Guide"></a>
+
 </div>
 
 ### How to configure XMLTV EPG
@@ -203,9 +198,11 @@ https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml
 6. Allow the application to synchronize programme schedules.
 
 <div align="center">
+
 <img src="assets/epg-timeline.svg"
-     alt="Illustrative XMLTV electronic programme guide showing television channels and programme schedules"
+     alt="Illustrative XMLTV TV guide with channel rows, programme schedule blocks and a Now marker; programme names are examples"
      width="100%">
+
 </div>
 
 ### Understanding EPG coverage
@@ -405,24 +402,19 @@ No. Third-party stream endpoints and programme-guide sources can change without 
 
 ## 🤝 Contribute & Support the Project
 
-Community feedback helps improve playlist organization, channel identification, metadata accuracy and programme-guide coverage.
+Community feedback helps improve channel identification, playlist organization, metadata accuracy and XMLTV EPG coverage. Choose the most useful way to help:
 
-You can help by:
-
-- Reporting broken or incorrect channel entries.
-- Suggesting reliable and appropriate channel sources.
-- Identifying incorrect channel logos.
-- Reporting EPG mapping problems.
-- Improving documentation.
-- Contributing code and maintenance improvements.
+| Contribution | What you can do |
+|---|---|
+| 🐞 **Report a problem** | [Open a GitHub Issue](https://github.com/saeidrahmanbd/BDIX-IPTV/issues) for broken streams, incorrect metadata or EPG mapping. |
+| 💬 **Discuss an idea** | [Join GitHub Discussions](https://github.com/saeidrahmanbd/BDIX-IPTV/discussions) to share suggestions and ask project questions. |
+| 🤝 **Contribute improvements** | Read the [Contributing Guidelines](docs/CONTRIBUTING.md) before submitting code, documentation or playlist changes. |
 
 <div align="center">
 
-[![Report an Issue](https://img.shields.io/badge/🐞_REPORT_AN_ISSUE-E5534B?style=for-the-badge)](https://github.com/saeidrahmanbd/BDIX-IPTV/issues)
-
-[![GitHub Discussions](https://img.shields.io/badge/💬_JOIN_DISCUSSIONS-8250DF?style=for-the-badge)](https://github.com/saeidrahmanbd/BDIX-IPTV/discussions)
-
-[![Contribute](https://img.shields.io/badge/🤝_CONTRIBUTE_TO_THE_PROJECT-238636?style=for-the-badge)](docs/CONTRIBUTING.md)
+<a href="https://github.com/saeidrahmanbd/BDIX-IPTV/issues"><img src="https://img.shields.io/badge/REPORT_AN_ISSUE-E5534B?style=for-the-badge&logo=github" alt="Report an issue"></a>
+<a href="https://github.com/saeidrahmanbd/BDIX-IPTV/discussions"><img src="https://img.shields.io/badge/JOIN_DISCUSSIONS-8250DF?style=for-the-badge&logo=github" alt="Join discussions"></a>
+<a href="docs/CONTRIBUTING.md"><img src="https://img.shields.io/badge/CONTRIBUTE-238636?style=for-the-badge&logo=git" alt="Contribute to the project"></a>
 
 </div>
 
@@ -430,17 +422,18 @@ You can help by:
 
 ## 📬 Maintainer & Contact
 
-**Maintained by Saeid Rahman**
-
-For technical support, suggestions, collaboration and project-related enquiries:
-
 <div align="center">
 
-[![Email](https://img.shields.io/badge/Email-saeidrahman.mkt%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:saeidrahman.mkt@gmail.com)
+**Saeid Rahman**  
+_Project Maintainer_
 
-[![GitHub](https://img.shields.io/badge/GitHub-saeidrahmanbd-181717?style=flat-square&logo=github)](https://github.com/saeidrahmanbd)
+For technical support, project suggestions, collaboration and documentation enquiries:
 
-[![Facebook](https://img.shields.io/badge/Facebook-Saeid_Rahman-1877F2?style=flat-square&logo=facebook)](https://www.facebook.com/saeid.rahman.sr)
+[![Email](https://img.shields.io/badge/EMAIL-saeidrahman.mkt%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:saeidrahman.mkt@gmail.com)
+
+[![GitHub](https://img.shields.io/badge/GITHUB-saeidrahmanbd-181717?style=for-the-badge&logo=github)](https://github.com/saeidrahmanbd)
+
+[![Facebook](https://img.shields.io/badge/FACEBOOK-Saeid_Rahman-1877F2?style=for-the-badge&logo=facebook)](https://www.facebook.com/saeid.rahman.sr)
 
 </div>
 
