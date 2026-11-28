@@ -221,12 +221,25 @@ def discovery_eligibility(a,name,allow_legacy_group=False):
  if code=='IN': return ('Indian Movies' if genre=='Movies' else 'Indian Music'),None,code
  return ('International Movies' if genre=='Movies' else 'International Music'),None,code
 def safe_url(url):
+ """Reject credential-bearing streams and proxy/worker relay endpoints."""
  try:
   p=urllib.parse.urlsplit(url)
   if p.scheme not in {"http","https"} or not p.hostname or p.username or p.password or p.fragment:return False
-  if any(x in p.hostname.casefold() for x in ("workers.dev","pages.dev","corsproxy","streamproxy","localhost")):return False
+  host=p.hostname.casefold()
+  if any(x in host for x in ("workers.dev","pages.dev","corsproxy","streamproxy","localhost")):
+   return False
+  if re.search(r"(?:^|[.-])(?:proxy|proxy\d*|worker|workers)(?:[.-]|$)",host):
+   return False
+  if re.search(r"(?:^|/)(?:proxy\d*(?:\.[a-z0-9]+)?|stream[-_]?proxy|cors[-_]?proxy|worker(?:s)?)(?:/|$)",p.path.casefold()):
+   return False
+  query=urllib.parse.parse_qsl(p.query,keep_blank_values=True)
   bad={"token","auth","authorization","password","passwd","pwd","username","signature","sig","expires","jwt","session","ticket"}
-  return not any(k.casefold() in bad or "token" in k.casefold() for k,_ in urllib.parse.parse_qsl(p.query,keep_blank_values=True))
+  if any(k.casefold() in bad or "token" in k.casefold() for k,_ in query):
+   return False
+  # A nested remote URL in a relay parameter is a proxy route, not a direct stream.
+  if any(k.casefold() in {"src","source","url","target","dest","destination"} and re.match(r"https?://",v.strip(),re.I) for k,v in query):
+   return False
+  return True
  except ValueError:return False
 def slug(value):
  x=unicodedata.normalize("NFKD",value).encode("ascii","ignore").decode().casefold(); x=re.sub(r"[^a-z0-9]+","-",x).strip("-")[:80]; return x or "channel-"+hashlib.sha256(value.encode()).hexdigest()[:10]
@@ -404,13 +417,15 @@ def existing_international_target(a,name,country_groups):
   return None,reason or "entry is not confidently classifiable under country policy",genre
  return primary_target(base,code,country_groups),None,genre
 def existing_primary_index(blocks):
- """Index every represented channel identity, including Review and Backup rows.
+ """Index established identities and discovery queues, but not quarantined Review rows.
 
- Discovery queues are also represented identities: a second stream for a queued
- primary belongs in New Backups rather than creating a duplicate New Channels row.
+ Review is a quarantine for unverified streams, not evidence that a working primary
+ exists. A separately discovered candidate may therefore enter New Channels; once
+ an identity is represented by a real primary or a discovery queue, alternatives
+ belong in New Backups.
  """
  existing_primary=defaultdict(list)
- excluded={"not playing","test"}
+ excluded={"not playing","test","review"}
  for block in blocks:
   a=attrs(block[0]); name=name_of(block); key=norm(name)
   group=(a.get("group-title") or "").strip().casefold()
