@@ -88,20 +88,20 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 playlist = Path("International-Playlist.m3u")
                 baseline = Path("before.m3u")
                 report = Path("report.md")
-                prefix = '#EXTM3U\\n#PLAYLIST-STUDIO-CATEGORIES:["Review","New Channels","New Backups","Backup"]\\n'
+                prefix = '#EXTM3U\n#PLAYLIST-STUDIO-CATEGORIES:["Review","New Channels","New Backups","Backup"]\n'
                 review = (
                     '#EXTINF:-1 tvg-id="AMCEurope.uk@Romania" tvg-name="AMC Europe Romania" '
-                    'tvg-country="RO" tvg-content="Movies" group-title="Review",AMC Europe Romania\\n'
-                    'https://unverified.example/amc-europe-romania.m3u8\\n'
+                    'tvg-country="RO" tvg-content="Movies" group-title="Review",AMC Europe Romania\n'
+                    'https://unverified.example/amc-europe-romania.m3u8\n'
                 )
                 primary = (
                     '#EXTINF:-1 tvg-id="AMCEurope.uk@Romania" tvg-name="AMC Europe Romania" '
-                    'tvg-country="RO" tvg-content="Movies" group-title="New Channels",AMC Europe Romania\\n'
-                    'https://verified.example/amc-europe-romania.m3u8\\n'
+                    'tvg-country="RO" tvg-content="Movies" group-title="New Channels",AMC Europe Romania\n'
+                    'https://verified.example/amc-europe-romania.m3u8\n'
                 )
                 playlist.write_text(prefix + review + primary, encoding="utf-8")
                 baseline.write_text(prefix + review, encoding="utf-8")
-                report.write_text("# Report\\n", encoding="utf-8")
+                report.write_text("# Report\n", encoding="utf-8")
                 previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
                 os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
                 try:
@@ -753,7 +753,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
 
 
-    def test_final_validation_accepts_new_backup_for_channel_in_review(self):
+    def test_final_validation_rejects_new_backup_when_only_review_identity_exists(self):
         import json
         import os
         import tempfile
@@ -786,7 +786,8 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                     os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
                 else:
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
-            self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
+            self.assertIn("- Validation status: FAIL", report.read_text(encoding="utf-8"))
+            self.assertIn("New Backups row has no already-represented channel identity: Star Gold", report.read_text(encoding="utf-8"))
 
     def test_final_validation_rejects_new_backup_without_existing_channel(self):
         import json
