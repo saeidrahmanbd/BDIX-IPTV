@@ -197,13 +197,13 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
             (root / "logos").mkdir()
             (root / "reports").mkdir()
             playlist = (
-                "#EXTM3U\\n"
-                '#EXTINF:-1 tvg-name="ESPN 2" group-title="Sports",ESPN 2\\n'
-                "https://example.test/espn-a.m3u8\\n"
-                '#EXTINF:-1 tvg-name="ESPN 2" group-title="Sports",ESPN 2\\n'
-                "https://example.test/espn-b.m3u8\\n"
-                '#EXTINF:-1 tvg-name="ESPN 2" group-title="Backup",ESPN 2\\n'
-                "https://example.test/espn-backup.m3u8\\n"
+                "#EXTM3U\n"
+                '#EXTINF:-1 tvg-name="ESPN 2" group-title="Sports",ESPN 2\n'
+                "https://example.test/espn-a.m3u8\n"
+                '#EXTINF:-1 tvg-name="ESPN 2" group-title="Sports",ESPN 2\n'
+                "https://example.test/espn-b.m3u8\n"
+                '#EXTINF:-1 tvg-name="ESPN 2" group-title="Backup",ESPN 2\n'
+                "https://example.test/espn-backup.m3u8\n"
             )
             (root / "IPTV-Playlist.m3u").write_text(playlist, encoding="utf-8")
             env = dict(os.environ, PYTHONPATH=str(ROOT / "scripts"))
@@ -228,13 +228,13 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
             (root / "logos").mkdir()
             (root / "reports").mkdir()
             playlist = (
-                "#EXTM3U\\n"
-                '#EXTINF:-1 tvg-id="thikana.bd" tvg-name="Thikana TV" tvg-country="BD" group-title="Bangladesh",Thikana TV\\n'
-                "https://example.test/thikana-bd.m3u8\\n"
-                '#EXTINF:-1 tvg-id="thikana.us" tvg-name="Thikana TV" tvg-country="US" group-title="International",Thikana TV\\n'
-                "https://example.test/thikana-us.m3u8\\n"
-                '#EXTINF:-1 tvg-name="Thikana TV" tvg-country="US" group-title="Backup",Thikana TV\\n'
-                "https://example.test/thikana-backup.m3u8\\n"
+                "#EXTM3U\n"
+                '#EXTINF:-1 tvg-id="thikana.bd" tvg-name="Thikana TV" tvg-country="BD" group-title="Bangladesh",Thikana TV\n'
+                "https://example.test/thikana-bd.m3u8\n"
+                '#EXTINF:-1 tvg-id="thikana.us" tvg-name="Thikana TV" tvg-country="US" group-title="International",Thikana TV\n'
+                "https://example.test/thikana-us.m3u8\n"
+                '#EXTINF:-1 tvg-name="Thikana TV" tvg-country="US" group-title="Backup",Thikana TV\n'
+                "https://example.test/thikana-backup.m3u8\n"
             )
             (root / "IPTV-Playlist.m3u").write_text(playlist, encoding="utf-8")
             env = dict(os.environ, PYTHONPATH=str(ROOT / "scripts"))
