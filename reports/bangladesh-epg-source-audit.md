@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-27T08:40:23+00:00**
+Generated: **2026-11-28T01:09:12+00:00**
 
-- Active Bangladesh playlist identities: **83**
+- Active Bangladesh playlist identities: **81**
 - Identities with a retained source mapping: **6**
 - Identities with usable current/future schedules: **5**
-- Identities without a source mapping: **77**
+- Identities without a source mapping: **75**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 Scope note: the Bangladesh denominator includes active rows whose group-title is Bangladesh OR whose tvg-id has a .bd country suffix, even when that row is currently placed in another group. The Bangladesh row in reports/epg-coverage.md is grouped strictly by group-title, so its denominator can differ; the two figures measure different scopes.
@@ -24,7 +24,7 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | RTV official daily schedule (Bangladesh) | 0 | 0 | 0 | Could not obtain a current official RTV schedule over verified HTTPS (rtvbd.tv/schedule.php: URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1011 |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 51 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 42 | - |
 | FAILED | M3U4U XMLTV (private Actions secret) | 0 | 0 | 0 | details suppressed for private source |
 
 ## Unmapped Bangladesh identities
@@ -36,7 +36,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | ATN Bangla | ATNBangla.bd | NO_GUIDE_HIT |
 | ATN News | ATNNews.bd | NO_GUIDE_HIT |
 | ATV USA | ATVUSA.us@SD | NO_GUIDE_HIT |
-| Ayna TV | custom.bdix.ayna-tv | NO_GUIDE_HIT |
 | Bangla TV | BanglaTV.bd | NO_GUIDE_HIT |
 | Bangla Vision | BanglaVision.bd | NO_GUIDE_HIT |
 | Banglar Kontho 24 | BanglarKontho24.bd@SD | NO_GUIDE_HIT |
@@ -88,7 +87,6 @@ Scope note: the Bangladesh denominator includes active rows whose group-title is
 | Music Bangla | MusicBangla.bd@SD | NO_GUIDE_HIT |
 | My TV | MyTV.bd | NO_GUIDE_HIT |
 | Nagorik TV | NagorikTV.bd | NO_GUIDE_HIT |
-| NAN TV | NANTV.bd@SD | NO_GUIDE_HIT |
 | News 24 | News24.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd@SD | NO_GUIDE_HIT |

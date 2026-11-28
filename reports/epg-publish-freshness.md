@@ -1,13 +1,13 @@
 # EPG Publish Freshness Check
 
-Checked: **2026-11-27T08:40:23+00:00**
+Checked: **2026-11-28T01:09:13+00:00**
 Guide path: epg/epg.xml
 
-- Valid titled programmes: **93240**
-- Programmes in current window: **92750 (99.5%)**
-- Channel IDs with programmes in current window: **823**
-- Programmes airing at check time: **807** across **807** channel IDs
-- Window: **2026-11-27T02:40:23+00:00** to **2026-12-04T08:40:23+00:00**
+- Valid titled programmes: **85427**
+- Programmes in current window: **85259 (99.8%)**
+- Channel IDs with programmes in current window: **815**
+- Programmes airing at check time: **771** across **771** channel IDs
+- Window: **2026-11-27T19:09:13+00:00** to **2026-12-05T01:09:13+00:00**
 - Invalid programme intervals: **0**
 - Missing programme titles: **0**
 
