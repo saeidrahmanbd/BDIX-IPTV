@@ -1,48 +1,6 @@
 {
-  "generated": "2026-11-28T11:14:01+00:00",
+  "generated": "2026-11-28T17:18:22+00:00",
   "channels": {
-    "019de785-396a-7e3b-ae50-1d20c8ce2323": {
-      "names": [
-        "Independent TV"
-      ],
-      "ids": [
-        "019de785-396a-7e3b-ae50-1d20c8ce2323"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
-    },
-    "019de785-3993-7ccc-8bc0-184c2c761c69": {
-      "names": [
-        "Thikana TV"
-      ],
-      "ids": [
-        "019de785-3993-7ccc-8bc0-184c2c761c69"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
-    },
-    "019de785-3a55-70ed-9fa1-e0459e2294dc": {
-      "names": [
-        "Goldmines"
-      ],
-      "ids": [
-        "019de785-3a55-70ed-9fa1-e0459e2294dc"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
-    },
     "019de785-3a5f-738e-b2e2-f6110c5e8c09": {
       "names": [
         "Dangal"
@@ -220,6 +178,20 @@
       "primary": 1,
       "backup": 0
     },
+    "accdigitalnetwork": {
+      "names": [
+        "ACC Digital Network"
+      ],
+      "ids": [
+        "accdigitalnetwork.us@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "adntvplus": {
       "names": [
         "ADN TV+"
@@ -270,11 +242,12 @@
         "afrobeats.us"
       ],
       "groups": [
+        "Backup",
         "International"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "alankartv": {
       "names": [
@@ -564,6 +537,20 @@
       "primary": 2,
       "backup": 0
     },
+    "arena4": {
+      "names": [
+        "Arena4"
+      ],
+      "ids": [
+        "arena4.hu@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "ary.digital": {
       "names": [
         "Ary Digital"
@@ -637,6 +624,20 @@
       "primary": 1,
       "backup": 1
     },
+    "aspor": {
+      "names": [
+        "A Spor"
+      ],
+      "ids": [
+        "aspor.tr@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "asports": {
       "names": [
         "A Sports"
@@ -648,9 +649,9 @@
         "Backup",
         "Sports"
       ],
-      "streams": 3,
+      "streams": 5,
       "primary": 1,
-      "backup": 2
+      "backup": 4
     },
     "atnbangla": {
       "names": [
@@ -1848,6 +1849,20 @@
       "primary": 1,
       "backup": 0
     },
+    "ctsport": {
+      "names": [
+        "CT Sport"
+      ],
+      "ids": [
+        "ctsport.cz@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.24hourfreemovies": {
       "names": [
         "24 Hour Free Movies"
@@ -1857,6 +1872,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.2tvsport": {
+      "names": [
+        "2TV Sport"
+      ],
+      "ids": [
+        "custom.2tvsport"
+      ],
+      "groups": [
+        "Sports"
       ],
       "streams": 1,
       "primary": 1,
@@ -1899,6 +1928,34 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.aryqtv": {
+      "names": [
+        "ARY Q TV"
+      ],
+      "ids": [
+        "custom.aryqtv"
+      ],
+      "groups": [
+        "Religious"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.avtkhyber": {
+      "names": [
+        "AVT Khyber"
+      ],
+      "ids": [
+        "custom.avtkhyber"
+      ],
+      "groups": [
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -1985,6 +2042,35 @@
         "custom.beinsports3"
       ],
       "groups": [
+        "Backup",
+        "Sports"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
+    },
+    "custom.beinsports4": {
+      "names": [
+        "BEIN SPORTS 4"
+      ],
+      "ids": [
+        "custom.beinsports4"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.beinsports5": {
+      "names": [
+        "BEIN SPORTS 5"
+      ],
+      "ids": [
+        "custom.beinsports5"
+      ],
+      "groups": [
         "Sports"
       ],
       "streams": 1,
@@ -2019,6 +2105,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.cinecanal": {
+      "names": [
+        "Cine Canal"
+      ],
+      "ids": [
+        "custom.cinecanal"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.cinemaxmoremax": {
       "names": [
         "Cinemax MoreMax"
@@ -2042,6 +2142,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.clarosports1": {
+      "names": [
+        "Claro Sports 1"
+      ],
+      "ids": [
+        "custom.clarosports1"
+      ],
+      "groups": [
+        "Sports"
       ],
       "streams": 1,
       "primary": 1,
@@ -2089,6 +2203,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.dazn3": {
+      "names": [
+        "DAZN 3"
+      ],
+      "ids": [
+        "custom.dazn3"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.deadlywomen": {
       "names": [
         "Deadly Women"
@@ -2098,6 +2226,62 @@
       ],
       "groups": [
         "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.deshitvbangla": {
+      "names": [
+        "Deshi TV Bangla"
+      ],
+      "ids": [
+        "custom.deshitvbangla"
+      ],
+      "groups": [
+        "Bangladesh"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.digisport1": {
+      "names": [
+        "Digi Sport 1"
+      ],
+      "ids": [
+        "custom.digisport1"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.digisport2": {
+      "names": [
+        "Digi Sport 2"
+      ],
+      "ids": [
+        "custom.digisport2"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.directvsports": {
+      "names": [
+        "DIRECTV Sports"
+      ],
+      "ids": [
+        "custom.directvsports"
+      ],
+      "groups": [
+        "Sports"
       ],
       "streams": 1,
       "primary": 1,
@@ -2131,6 +2315,174 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.espn3": {
+      "names": [
+        "ESPN 3"
+      ],
+      "ids": [
+        "custom.espn3"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.espn7": {
+      "names": [
+        "ESPN 7"
+      ],
+      "ids": [
+        "custom.espn7"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.espnargentina": {
+      "names": [
+        "ESPN Argentina"
+      ],
+      "ids": [
+        "custom.espnargentina"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.espncolombia": {
+      "names": [
+        "ESPN Colombia"
+      ],
+      "ids": [
+        "custom.espncolombia"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.espnpremium": {
+      "names": [
+        "ESPN Premium"
+      ],
+      "ids": [
+        "custom.espnpremium"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.espnpremiumchile": {
+      "names": [
+        "ESPN Premium Chile"
+      ],
+      "ids": [
+        "custom.espnpremiumchile"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.estrellatv": {
+      "names": [
+        "Estrella TV"
+      ],
+      "ids": [
+        "custom.estrellatv"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.eurosport1": {
+      "names": [
+        "Eurosport 1"
+      ],
+      "ids": [
+        "custom.eurosport1"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.eurosport1germany": {
+      "names": [
+        "Eurosport 1 Germany"
+      ],
+      "ids": [
+        "custom.eurosport1germany"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.eurosport1uk": {
+      "names": [
+        "Eurosport 1 UK"
+      ],
+      "ids": [
+        "custom.eurosport1uk"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.eurosport2": {
+      "names": [
+        "Eurosport 2"
+      ],
+      "ids": [
+        "custom.eurosport2"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.eurosport2spain": {
+      "names": [
+        "Eurosport 2 Spain"
+      ],
+      "ids": [
+        "custom.eurosport2spain"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.fifa": {
       "names": [
         "FIFA+"
@@ -2154,6 +2506,21 @@
         "custom.fightnetwork"
       ],
       "groups": [
+        "Backup",
+        "Sports"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
+    },
+    "custom.fs1salzburg": {
+      "names": [
+        "FS1 Salzburg"
+      ],
+      "ids": [
+        "custom.fs1salzburg"
+      ],
+      "groups": [
         "Sports"
       ],
       "streams": 1,
@@ -2166,6 +2533,21 @@
       ],
       "ids": [
         "custom.fueltv"
+      ],
+      "groups": [
+        "Backup",
+        "Sports"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
+    },
+    "custom.harlemglobetrotters": {
+      "names": [
+        "Harlem Globetrotters"
+      ],
+      "ids": [
+        "custom.harlemglobetrotters"
       ],
       "groups": [
         "Sports"
@@ -2216,6 +2598,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.hiyah": {
+      "names": [
+        "Hi-Yah!"
+      ],
+      "ids": [
+        "custom.hiyah"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.hollywoodhd": {
       "names": [
         "Hollywood"
@@ -2244,6 +2640,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.horseandcountry": {
+      "names": [
+        "Horse & Country"
+      ],
+      "ids": [
+        "custom.horseandcountry"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.islamchannelbangla": {
       "names": [
         "Islam Channel Bangla"
@@ -2259,6 +2669,20 @@
       "primary": 1,
       "backup": 1
     },
+    "custom.kronehit": {
+      "names": [
+        "Kronehit"
+      ],
+      "ids": [
+        "custom.kronehit"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.kronehittv": {
       "names": [
         "Kronehit TV"
@@ -2268,6 +2692,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.ktntv": {
+      "names": [
+        "KTN TV"
+      ],
+      "ids": [
+        "custom.ktntv"
+      ],
+      "groups": [
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -2427,12 +2865,152 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.quran": {
+      "names": [
+        "Quran"
+      ],
+      "ids": [
+        "custom.quran"
+      ],
+      "groups": [
+        "Religious"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.quranradiotvsmc": {
+      "names": [
+        "Quran Radio TV SMC"
+      ],
+      "ids": [
+        "custom.quranradiotvsmc"
+      ],
+      "groups": [
+        "Religious"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.rallytv": {
       "names": [
         "Rally TV"
       ],
       "ids": [
         "custom.rallytv"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.realmadridtv": {
+      "names": [
+        "Real Madrid TV"
+      ],
+      "ids": [
+        "custom.realmadridtv"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.sananda-tv": {
+      "names": [
+        "Sananda TV"
+      ],
+      "ids": [
+        "custom.sananda-tv"
+      ],
+      "groups": [
+        "Indian Bangla"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.setantasportmoldova": {
+      "names": [
+        "Setanta Sport Moldova"
+      ],
+      "ids": [
+        "custom.setantasportmoldova"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.setantasportpremiumua": {
+      "names": [
+        "Setanta Sport Premium UA"
+      ],
+      "ids": [
+        "custom.setantasportpremiumua"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.setantasportqazaqstan": {
+      "names": [
+        "Setanta Sport Qazaqstan"
+      ],
+      "ids": [
+        "custom.setantasportqazaqstan"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.setantasports": {
+      "names": [
+        "Setanta Sports"
+      ],
+      "ids": [
+        "custom.setantasports"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.setantasports1": {
+      "names": [
+        "Setanta Sports 1"
+      ],
+      "ids": [
+        "custom.setantasports1"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.setantasports3": {
+      "names": [
+        "Setanta Sports 3"
+      ],
+      "ids": [
+        "custom.setantasports3"
       ],
       "groups": [
         "Sports"
@@ -2483,12 +3061,40 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.skysportlaliga": {
+      "names": [
+        "Sky Sport LaLiga"
+      ],
+      "ids": [
+        "custom.skysportlaliga"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.skysportscricket": {
       "names": [
         "Sky Sports Cricket"
       ],
       "ids": [
         "custom.skysportscricket"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.skysportsgt": {
+      "names": [
+        "Sky Sports GT"
+      ],
+      "ids": [
+        "custom.skysportsgt"
       ],
       "groups": [
         "Sports"
@@ -2581,6 +3187,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.sportdigital": {
+      "names": [
+        "Sportdigital"
+      ],
+      "ids": [
+        "custom.sportdigital"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.sportsgrid": {
       "names": [
         "Sports Grid"
@@ -2595,6 +3215,34 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "custom.sporttv": {
+      "names": [
+        "Sport TV"
+      ],
+      "ids": [
+        "custom.sporttv"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.sun-bangla-k1d4w": {
+      "names": [
+        "Sun Bangla"
+      ],
+      "ids": [
+        "custom.sun-bangla-k1d4w"
+      ],
+      "groups": [
+        "Indian Bangla"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "custom.swervecombat": {
       "names": [
@@ -2638,6 +3286,48 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.tntsports": {
+      "names": [
+        "TNT Sports"
+      ],
+      "ids": [
+        "custom.tntsports"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.tntsportspremium": {
+      "names": [
+        "TNT Sports Premium"
+      ],
+      "ids": [
+        "custom.tntsportspremium"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.topbarca": {
+      "names": [
+        "TOP Barca"
+      ],
+      "ids": [
+        "custom.topbarca"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.totalmusicdance": {
       "names": [
         "Totalmusic Dance"
@@ -2661,6 +3351,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.tudnmx": {
+      "names": [
+        "TUDN MX"
+      ],
+      "ids": [
+        "custom.tudnmx"
+      ],
+      "groups": [
+        "Sports"
       ],
       "streams": 1,
       "primary": 1,
@@ -2708,12 +3412,54 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.usaaccn": {
+      "names": [
+        "USA ACCN"
+      ],
+      "ids": [
+        "custom.usaaccn"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.v2beat": {
       "names": [
         "V2 Beat"
       ],
       "ids": [
         "custom.v2beat"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.vaxsport": {
+      "names": [
+        "Vía X Sport"
+      ],
+      "ids": [
+        "custom.vaxsport"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.vevoretro": {
+      "names": [
+        "Vevo Retro"
+      ],
+      "ids": [
+        "custom.vevoretro"
       ],
       "groups": [
         "International"
@@ -2745,6 +3491,20 @@
       ],
       "groups": [
         "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.xite90sthrowback": {
+      "names": [
+        "XITE 90s Throwback"
+      ],
+      "ids": [
+        "custom.xite90sthrowback"
+      ],
+      "groups": [
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -3234,9 +3994,9 @@
         "Backup",
         "Sports"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
-      "backup": 5
+      "backup": 6
     },
     "ddtamil": {
       "names": [
@@ -3628,9 +4388,9 @@
         "Kids",
         "Review"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 2,
-      "backup": 1
+      "backup": 2
     },
     "dwnews": {
       "names": [
@@ -3746,9 +4506,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
-      "backup": 4
+      "backup": 5
     },
     "elevensports1": {
       "names": [
@@ -3831,9 +4591,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 5,
+      "streams": 7,
       "primary": 1,
-      "backup": 4
+      "backup": 6
     },
     "entertv": {
       "names": [
@@ -3964,9 +4724,9 @@
         "Backup",
         "Sports"
       ],
-      "streams": 3,
+      "streams": 10,
       "primary": 1,
-      "backup": 2
+      "backup": 9
     },
     "espn2": {
       "names": [
@@ -3974,6 +4734,34 @@
       ],
       "ids": [
         "espn2.us@hd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "espn8theocho": {
+      "names": [
+        "ESPN8: The Ocho"
+      ],
+      "ids": [
+        "espn8theocho.us@espn8theochohd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "espnu": {
+      "names": [
+        "ESPNU"
+      ],
+      "ids": [
+        "espnu.us@hd"
       ],
       "groups": [
         "Sports"
@@ -4105,6 +4893,20 @@
       ],
       "ids": [
         "eurosport.in@hd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "eurosport1": {
+      "names": [
+        "Eurosport 1 Hungary"
+      ],
+      "ids": [
+        "eurosport1.fr@hungary"
       ],
       "groups": [
         "Sports"
@@ -4482,9 +5284,9 @@
         "Backup",
         "Indian Movies"
       ],
-      "streams": 4,
+      "streams": 6,
       "primary": 1,
-      "backup": 3
+      "backup": 5
     },
     "goldmines.movies.2": {
       "names": [
@@ -4559,6 +5361,20 @@
       "streams": 4,
       "primary": 1,
       "backup": 3
+    },
+    "golfchannel": {
+      "names": [
+        "Golf Channel"
+      ],
+      "ids": [
+        "golfchannel.cz@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "grandcinema": {
       "names": [
@@ -4814,11 +5630,12 @@
         "independenttv.bd"
       ],
       "groups": [
+        "Backup",
         "Bangladesh"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "indiatalkies": {
       "names": [
@@ -4890,6 +5707,20 @@
       "streams": 3,
       "primary": 1,
       "backup": 2
+    },
+    "intertv": {
+      "names": [
+        "Inter TV"
+      ],
+      "ids": [
+        "intertv.it@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "intravel": {
       "names": [
@@ -5133,11 +5964,12 @@
         "joomusic.pk"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "jtvbangla": {
       "names": [
@@ -5510,9 +6342,9 @@
         "Bangladesh",
         "Review"
       ],
-      "streams": 6,
+      "streams": 8,
       "primary": 2,
-      "backup": 4
+      "backup": 6
     },
     "madanichannelbangla": {
       "names": [
@@ -5815,6 +6647,20 @@
       "primary": 1,
       "backup": 0
     },
+    "matchultra": {
+      "names": [
+        "Match! Ultra"
+      ],
+      "ids": [
+        "matchultra.ru@4k"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "matribhumitv": {
       "names": [
         "Matribhumi TV"
@@ -6063,6 +6909,20 @@
       "primary": 1,
       "backup": 0
     },
+    "motorvision": {
+      "names": [
+        "Motorvision"
+      ],
+      "ids": [
+        "motorvision.de@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "moviebangla": {
       "names": [
         "Movie Bangla"
@@ -6259,11 +7119,12 @@
         "mytimemovienetwork.uk@sd"
       ],
       "groups": [
+        "Backup",
         "International"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 2,
-      "backup": 0
+      "backup": 1
     },
     "mytimemovienetworkeast": {
       "names": [
@@ -6649,9 +7510,9 @@
         "Bangladesh",
         "Indian Movies"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 2,
-      "backup": 3
+      "backup": 4
     },
     "ntveurope": {
       "names": [
@@ -6796,6 +7657,20 @@
       "primary": 1,
       "backup": 0
     },
+    "pac12insider": {
+      "names": [
+        "Pac-12 Insider"
+      ],
+      "ids": [
+        "pac12insider.us@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "paighantv": {
       "names": [
         "Paighan TV"
@@ -6878,9 +7753,9 @@
         "Backup",
         "Religious"
       ],
-      "streams": 2,
+      "streams": 4,
       "primary": 1,
-      "backup": 1
+      "backup": 3
     },
     "peacetvenglish": {
       "names": [
@@ -6890,11 +7765,12 @@
         "peacetvenglish.ae"
       ],
       "groups": [
+        "Backup",
         "Religious"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "peacetvurdu": {
       "names": [
@@ -7019,11 +7895,12 @@
         "plex.tv.action.hollywood.movies.plex"
       ],
       "groups": [
+        "Backup",
         "International"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "plex.tv.amc.thrillers.plex": {
       "names": [
@@ -7161,11 +8038,12 @@
         "probashitv.bd"
       ],
       "groups": [
+        "Backup",
         "Bangladesh"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "ptcchakde": {
       "names": [
@@ -7238,9 +8116,9 @@
         "Backup",
         "Sports"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "publicmovies": {
       "names": [
@@ -7417,6 +8295,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "racerinternational": {
+      "names": [
+        "RACER International"
+      ],
+      "ids": [
+        "racerinternational.pl@fast"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "racing.hagerty.com": {
       "names": [
@@ -7599,7 +8491,22 @@
         "rdssocialtv.it"
       ],
       "groups": [
+        "Backup",
         "International"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
+    },
+    "realitateasportiva": {
+      "names": [
+        "Realitatea Sportiva"
+      ],
+      "ids": [
+        "realitateasportiva.ro@sd"
+      ],
+      "groups": [
+        "Sports"
       ],
       "streams": 1,
       "primary": 1,
@@ -7642,11 +8549,12 @@
         "retromusictv.cz"
       ],
       "groups": [
+        "Backup",
         "International"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "robotwarsbymech": {
       "names": [
@@ -7701,9 +8609,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
-      "backup": 5
+      "backup": 6
     },
     "rplusgold": {
       "names": [
@@ -8434,6 +9342,34 @@
       "primary": 1,
       "backup": 1
     },
+    "sport": {
+      "names": [
+        "Sport (Slovakia)"
+      ],
+      "ids": [
+        "sport.sk@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sportivnyy": {
+      "names": [
+        "Sportivnyy"
+      ],
+      "ids": [
+        "sportivnyy.ru@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "sportsfirsttv": {
       "names": [
         "Sports First TV"
@@ -8488,9 +9424,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "starmaa": {
       "names": [
@@ -8602,9 +9538,9 @@
         "Backup",
         "Sports"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "starsports2telugu": {
       "names": [
@@ -9313,9 +10249,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "timetelevision": {
       "names": [
@@ -9438,11 +10374,12 @@
         "traceurban.fr@hd"
       ],
       "groups": [
+        "Backup",
         "International"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "travel": {
       "names": [
@@ -9467,6 +10404,20 @@
       ],
       "groups": [
         "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "trsport": {
+      "names": [
+        "TR Sport"
+      ],
+      "ids": [
+        "trsport.it@sd"
+      ],
+      "groups": [
+        "Sports"
       ],
       "streams": 1,
       "primary": 1,
@@ -9511,9 +10462,9 @@
         "Backup",
         "Sports"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "tunes6": {
       "names": [
@@ -9572,12 +10523,40 @@
       "primary": 1,
       "backup": 0
     },
+    "tvrsport": {
+      "names": [
+        "TVR Sport"
+      ],
+      "ids": [
+        "tvrsport.ro@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "tvssports": {
       "names": [
         "TVS Sports"
       ],
       "ids": [
         "tvssports.us@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "tycsportsusa": {
+      "names": [
+        "TyC Sports USA"
+      ],
+      "ids": [
+        "tycsportsusa.ar@sd"
       ],
       "groups": [
         "Sports"
@@ -10218,8 +11197,7 @@
         "Zee Action"
       ],
       "ids": [
-        "zeeaction.in",
-        "zeeaction.in@sd"
+        "zeeaction.in"
       ],
       "groups": [
         "Backup",

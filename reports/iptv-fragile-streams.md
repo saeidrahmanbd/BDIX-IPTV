@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-28T11:14:01+00:00**
-IPTV-Playlist.m3u SHA-256: **77b11e20f1d6d12ac974d1ea5e1940787857026b38d4f3574619dbdb69eb28f3**
+Generated: **2026-11-28T17:18:22+00:00**
+IPTV-Playlist.m3u SHA-256: **83aaad779aa5e264863fe62a7f14406ee21c34e2c8dc7b46bccf60f8918b563b**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
@@ -173,7 +173,7 @@ These streams are not automatically removed. URL credentials, user information a
 | Bangla Vision | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/44.m3u8` |
 | beIN SPORTS 1 | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/30.m3u8` |
 | beIN SPORTS 2 | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/31.m3u8` |
-| BEIN SPORTS 3 | Backup | credential-bearing route pattern (values redacted) | `http://foxbleu-cdn.com/live/REDACTED/REDACTED/89342.ts` |
+| beIN SPORTS 3 | Backup | credential-bearing route pattern (values redacted) | `http://foxbleu-cdn.com/live/REDACTED/REDACTED/89342.ts` |
 | beIN SPORTS XTRA | Backup | credential-bearing route pattern (values redacted) | `http://live.ftpbdlive.com:8080/live/REDACTED/REDACTED/34.m3u8` |
 | Bhojpuri Cinema | Backup | credential-bearing route pattern (values redacted) | `https://fta.ektv.in/live/646/master.m3u8` |
 | Bhojpuri Cinema | Backup | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/bhojpuri-cinema-1/index.m3u8` |

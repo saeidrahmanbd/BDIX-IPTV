@@ -1,7 +1,7 @@
 # Stream Risk Review
 
-Generated: **2026-11-28T11:14:01+00:00**
-IPTV-Playlist.m3u SHA-256: **77b11e20f1d6d12ac974d1ea5e1940787857026b38d4f3574619dbdb69eb28f3**
+Generated: **2026-11-28T17:18:22+00:00**
+IPTV-Playlist.m3u SHA-256: **83aaad779aa5e264863fe62a7f14406ee21c34e2c8dc7b46bccf60f8918b563b**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
 
@@ -22,8 +22,8 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1373 |
-| Reachable | 1297 |
-| Failed this check | 76 |
+| Reachable | 1308 |
+| Failed this check | 65 |
 | Persistent failures (3+ consecutive) | 0 |
 
 ### Persistent failures
@@ -83,7 +83,7 @@ Credentials are intentionally redacted; only the host and safe route pattern are
 | BEIN SPORTS 4 | Sports | foxbleu-cdn.com | /live/[REDACTED]/[REDACTED]/78381.ts |
 | BEIN SPORTS 5 | Sports | foxbleu-cdn.com | /live/[REDACTED]/[REDACTED]/78382.ts |
 | BEIN SPORTS 6 | Sports | foxbleu-cdn.com | /live/[REDACTED]/[REDACTED]/78383.ts |
-| BEIN SPORTS 3 | Backup | foxbleu-cdn.com | /live/[REDACTED]/[REDACTED]/89342.ts |
+| beIN SPORTS 3 | Backup | foxbleu-cdn.com | /live/[REDACTED]/[REDACTED]/89342.ts |
 | Disney Channel | Backup | rgkkw.live | /live/[REDACTED]/[REDACTED]/19741.ts |
 | Zee Bangla | Backup | rgkkw.live:80 | /live/[REDACTED]/[REDACTED]/98881.ts |
 

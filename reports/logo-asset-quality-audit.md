@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T17:15:45+00:00**
+Generated: **2026-11-28T17:17:37+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **ada41ef9376dc7a61c59480693791ba7c5de10978ebcc17912cd5bc42e1ac408**
-- International-Playlist.m3u SHA-256: **f632377091fcefe25378420b0611ffcd0b3e0c79c1a6248e6119119979942ec2**
+- IPTV-Playlist.m3u SHA-256: **83aaad779aa5e264863fe62a7f14406ee21c34e2c8dc7b46bccf60f8918b563b**
+- International-Playlist.m3u SHA-256: **3f5544e59667a5d364259a8597706c9c58b7a4c1712ed1a990487f259da730b0**
 
 ## Summary
 
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **149**
 - Exact-byte duplicate asset clusters: **753**
-- Playlist references whose asset stem differs from the normalized channel name: **1609**
+- Playlist references whose asset stem differs from the normalized channel name: **1610**
 - Unreferenced image assets immediately inside logos/: **997** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1199,7 +1199,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Religious |
 | IPTV-Playlist.m3u | 2TV Sport | 2tv-1080p.png | Sports |
 | IPTV-Playlist.m3u | ACI Sport TV | aci-sport-tv.png | Sports |
-| IPTV-Playlist.m3u | Astrakhan.RU Sport | astrahan-ru-sport-8c965f341f.png | Sports |
+| IPTV-Playlist.m3u | Astrakhan RU Sport | astrahan-ru-sport-8c965f341f.png | Sports |
 | IPTV-Playlist.m3u | BEIN SPORTS 4 | bein-sports-4-int.png | Sports |
 | IPTV-Playlist.m3u | BEIN SPORTS 5 | bein-sports-5-int.png | Sports |
 | IPTV-Playlist.m3u | beIN SPORTS Arabic | bein-sports.png | Sports |
@@ -1278,7 +1278,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | UFC | ufc-tv.png | Sports |
 | IPTV-Playlist.m3u | Vía X Sport | x-sport.png | Sports |
 | IPTV-Playlist.m3u | Willow Sports 2 | us-willow-sports-hd.png | Sports |
-| IPTV-Playlist.m3u | Astrakhan.RU Sport | astrahan-ru-sport-8c965f341f.png | Sports |
+| IPTV-Playlist.m3u | Astrakhan RU Sport | astrahan-ru-sport-8c965f341f.png | Sports |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
@@ -1374,12 +1374,13 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Backup |
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Backup |
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Backup |
-| IPTV-Playlist.m3u | Matribhumi TV | matribhumi-tv-2bb36a4f0f.png | Backup |
+| IPTV-Playlist.m3u | Matribhumi TV | matri-bhumi-tv.png | Backup |
 | IPTV-Playlist.m3u | ME TV | me-tv.png | Backup |
 | IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Backup |
 | IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Backup |
 | IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
 | IPTV-Playlist.m3u | My TV | my-tv.png | Backup |
+| IPTV-Playlist.m3u | MyTime Movie Network (Brazil) | mytime-movie-network.png | Backup |
 | IPTV-Playlist.m3u | Nagorik TV | nagorik-tv-90b5d16aaf.png | Backup |
 | IPTV-Playlist.m3u | Nagorik TV | nagorik-tv-90b5d16aaf.png | Backup |
 | IPTV-Playlist.m3u | NRB TV | nrb-tv.png | Backup |
@@ -1408,7 +1409,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Quran TV | quran-tv.png | Backup |
 | IPTV-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Backup |
 | IPTV-Playlist.m3u | RDS Social TV | rds-social-tv.png | Backup |
-| IPTV-Playlist.m3u | Retro Music TV | retro-music-tv.png | Backup |
+| IPTV-Playlist.m3u | Retro Music TV | retro-music-tv-1080p-610715c3c9.png | Backup |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
 | IPTV-Playlist.m3u | Rongeen TV | rongeen-tv.png | Backup |
