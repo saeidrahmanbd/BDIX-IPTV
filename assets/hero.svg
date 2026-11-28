@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="BDIX-IPTV: Bangladesh IPTV M3U8 playlists and XMLTV EPG">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.6" stop-color="#0b2540"/>
+      <stop offset="1" stop-color="#1b1f3b"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0969da"/>
+      <stop offset="1" stop-color="#8957e5"/>
+    </linearGradient>
+    <radialGradient id="glowG" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2ea44f" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2ea44f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f42a41" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#f42a41" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="220" fill="url(#glowG)"/>
+  <circle cx="160" cy="380" r="200" fill="url(#glowR)"/>
+
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <!-- Title block -->
+    <rect x="70" y="92" width="110" height="6" rx="3" fill="#f5c542"/>
+    <text x="70" y="200" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-1">BDIX-IPTV</text>
+    <text x="72" y="248" font-size="28" font-weight="600" fill="#c9d1d9">Bangladesh IPTV playlists &amp; XMLTV EPG</text>
+    <text x="72" y="286" font-size="20" fill="#8b949e">Bangla TV · Indian · Pakistani · International</text>
+
+    <!-- Pills -->
+    <rect x="72" y="314" width="150" height="40" rx="20" fill="#0969da"/>
+    <text x="147" y="340" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">M3U / M3U8</text>
+    <rect x="236" y="314" width="120" height="40" rx="20" fill="#2ea44f"/>
+    <text x="296" y="340" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">XMLTV EPG</text>
+    <rect x="370" y="314" width="150" height="40" rx="20" fill="#8957e5"/>
+    <text x="445" y="340" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Free &amp; open</text>
+  </g>
+
+  <!-- TV -->
+  <g>
+    <rect x="740" y="60" width="390" height="255" rx="22" fill="#21262d"/>
+    <rect x="757" y="77" width="356" height="221" rx="12" fill="url(#screen)"/>
+    <!-- Channel tiles -->
+    <rect x="775" y="95" width="100" height="62" rx="8" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="886" y="95" width="100" height="62" rx="8" fill="#ffffff" fill-opacity="0.12"/>
+    <rect x="997" y="95" width="100" height="62" rx="8" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="775" y="168" width="100" height="62" rx="8" fill="#ffffff" fill-opacity="0.12"/>
+    <rect x="886" y="168" width="100" height="62" rx="8" fill="#ffffff" fill-opacity="0.22"/>
+    <rect x="997" y="168" width="100" height="62" rx="8" fill="#ffffff" fill-opacity="0.12"/>
+    <!-- Play button -->
+    <circle cx="935" cy="200" r="0" fill="#ffffff"/>
+    <!-- Live badge -->
+    <rect x="775" y="246" width="68" height="22" rx="11" fill="#f42a41"/>
+    <circle cx="790" cy="257" r="5" fill="#ffffff"/>
+    <text x="802" y="262" font-size="13" font-weight="800" fill="#ffffff">LIVE</text>
+    <!-- Stand -->
+    <rect x="900" y="315" width="60" height="18" rx="4" fill="#21262d"/>
+    <rect x="860" y="331" width="140" height="10" rx="5" fill="#21262d"/>
+  </g>
+</svg>
