@@ -432,6 +432,77 @@ EXTRA_DIRECT_HINTS = {
         "license": "Public TV logo repository; original logo rights belong to broadcaster",
         "license_url": "https://github.com/tv-logo/tv-logos",
     },
+    # Official Sky Italia channel marks, sourced from Wikimedia Commons.
+    "Sky Cinema Action": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Sky_Cinema_Action_-_2021_logo.png",
+        "format": "PNG",
+        "page": "https://commons.wikimedia.org/wiki/File:Sky_Cinema_Action_-_2021_logo.png",
+        "license": "Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky.",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
+    "Sky Cinema Collection": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Sky_Cinema_Collection_-_2021_logo.png",
+        "format": "PNG",
+        "page": "https://commons.wikimedia.org/wiki/File:Sky_Cinema_Collection_-_2021_logo.png",
+        "license": "Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky.",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
+    "Sky Cinema Family": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Sky_Cinema_Family_-_2021_logo.png",
+        "format": "PNG",
+        "page": "https://commons.wikimedia.org/wiki/File:Sky_Cinema_Family_-_2021_logo.png",
+        "license": "Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky.",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
+    "Sky Cinema Suspense": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Sky_Cinema_Suspense_-_Logo_2021.png",
+        "format": "PNG",
+        "page": "https://commons.wikimedia.org/wiki/File:Sky_Cinema_Suspense_-_Logo_2021.png",
+        "license": "Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky.",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
+    "Sky Cinema Uno": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Sky_Cinema_Uno_-_Logo_2020.svg",
+        "format": "SVG",
+        "page": "https://commons.wikimedia.org/wiki/File:Sky_Cinema_Uno_-_Logo_2020.svg",
+        "license": "Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky.",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
+    "TUDN": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/TUDN_Logo.svg",
+        "format": "SVG",
+        "page": "https://commons.wikimedia.org/wiki/File:TUDN_Logo.svg",
+        "license": "Official TUDN brand mark sourced from TUDN.mx via Wikimedia Commons; PD-textlogo classification with trademark notice.",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
+    "TUDN MX": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/TUDN_Logo.svg",
+        "format": "SVG",
+        "page": "https://commons.wikimedia.org/wiki/File:TUDN_Logo.svg",
+        "license": "Official TUDN brand mark sourced from TUDN.mx via Wikimedia Commons; used for the MX feed variant; PD-textlogo classification with trademark notice.",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
+    "USA ACCN": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/ACC_Network_ESPN_logo.svg",
+        "format": "SVG",
+        "page": "https://commons.wikimedia.org/wiki/File:ACC_Network_ESPN_logo.svg",
+        "license": "ACC Network logo sourced from ESPN's official ACCN asset URL via Wikimedia Commons; PD-textlogo classification with trademark notice.",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
+    "Harlem Globetrotters": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Harlem_Globetrotters_Logo.png",
+        "format": "PNG",
+        "page": "https://commons.wikimedia.org/wiki/File:Harlem_Globetrotters_Logo.png",
+        "license": "Authentic Harlem Globetrotters International, Inc. team logo from Wikimedia Commons; source and author attribution retained.",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
+    "Cooking Channel": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Cooking_Channel.svg",
+        "format": "SVG",
+        "page": "https://commons.wikimedia.org/wiki/File:Cooking_Channel.svg",
+        "license": "Cooking Channel logo attributed to Discovery, Inc., sourced through Wikimedia Commons; PD-textlogo classification with trademark notice.",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
 }
 
 IMAGE_EXTS = {".svg", ".png", ".jpg", ".jpeg", ".webp", ".avif"}

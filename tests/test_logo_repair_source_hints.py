@@ -318,5 +318,26 @@ class LogoRepairSourceTests(unittest.TestCase):
         self.assertEqual([key for key, _ in keys], ["tvg-id", "tvg-name", "tvg-logo", "group-title"])
 
 
+    def test_official_sky_tudn_accn_cooking_and_globetrotters_logos_are_identity_matched(self):
+        expected = {
+            "Sky Cinema Action": "Sky_Cinema_Action_-_2021_logo.png",
+            "Sky Cinema Collection": "Sky_Cinema_Collection_-_2021_logo.png",
+            "Sky Cinema Family": "Sky_Cinema_Family_-_2021_logo.png",
+            "Sky Cinema Suspense": "Sky_Cinema_Suspense_-_Logo_2021.png",
+            "Sky Cinema Uno": "Sky_Cinema_Uno_-_Logo_2020.svg",
+            "TUDN": "TUDN_Logo.svg",
+            "TUDN MX": "TUDN_Logo.svg",
+            "USA ACCN": "ACC_Network_ESPN_logo.svg",
+            "Harlem Globetrotters": "Harlem_Globetrotters_Logo.png",
+            "Cooking Channel": "Cooking_Channel.svg",
+        }
+        for channel, asset in expected.items():
+            with self.subTest(channel=channel):
+                hint = logo_repair.EXTRA_DIRECT_HINTS[channel]
+                self.assertIn(asset, hint["url"])
+                self.assertIn("commons.wikimedia.org/wiki/File:", hint["page"])
+                self.assertTrue(hint["license"])
+
+
 if __name__ == "__main__":
     unittest.main()
