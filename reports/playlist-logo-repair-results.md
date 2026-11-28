@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-28 10:02 UTC**  
+Run time: **2026-11-28 10:04 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,7 +9,7 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1379 | 15 | 20 | 0 | 0 | 0 | 0 | 0 | 20 |
+| IPTV-Playlist.m3u | 1379 | 0 | 20 | 0 | 0 | 0 | 0 | 0 | 20 |
 | International-Playlist.m3u | 3332 | 0 | 17 | 20 | 364 | 372 | 0 | 0 | 37 |
 
 ## Repair log
@@ -18,21 +18,11 @@ Historical mapping index: loaded 336 historical name mappings
 |---|---:|---|---|---|---|---|---|
 | IPTV-Playlist.m3u | 123 | Raatdin Bangla | (missing) | (none) | Exact external logo asset |  | Download/validation failed: <urlopen error [Errno -2] Name or service not known> |
 | IPTV-Playlist.m3u | 123 | Raatdin Bangla | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 807 | KTN TV | (missing) | ktn-tv-811221a8174dfa2fb737.jpg | [Exact external logo asset](https://iptv-org.github.io/channels/pk/KTN) | KTN Pakistan logo URL listed in the IPTV-org channel record for KTN.pk; original broadcaster rights remain with Kawish Television Network. | replaced |
-| IPTV-Playlist.m3u | 879 | Hi-Yah! | (missing) | hi-yah-834e24a6ea0789d57e1b.png | [IPTV-org exact unique channel name: HiYAH.us](https://i.imgur.com/sOYAnTB.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 | IPTV-Playlist.m3u | 931 | Rock TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1193 | Fazal TV | (missing) | fazal-tv-3fa60cbd5c0da05753bf.png | [Exact external logo asset](https://gist.github.com/ZeiTeria/68851fb02bbb95525d89ff0ff0afceae) | Exact Fazal TV artwork paired with tvg-id FazalTV.pk@SD in a published IPTV playlist; source attribution only, no separate copyright licence asserted. | replaced |
-| IPTV-Playlist.m3u | 1195 | Fazal TV | (missing) | fazal-tv-3fa60cbd5c0da05753bf.png | Reused repaired exact-name logo |  | replaced |
 | IPTV-Playlist.m3u | 1227 | Quran Radio TV SMC | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1293 | DAZN 3 | (missing) | dazn-3-f06dda72e8c387422ecb.png | [IPTV-org exact unique channel name: DAZN3.uk](https://i.imgur.com/2rXsq2m.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| IPTV-Playlist.m3u | 1299 | Digi Sport 1 | (missing) | digi-sport-1-4b6a66d11b7fa3e3cb82.png | [Curated exact channel/region asset](https://github.com/tv-logo/tv-logos/blob/main/countries/romania/digi-sport-1-ro.png) | Source repository; license must be checked at source | replaced |
-| IPTV-Playlist.m3u | 1301 | Digi Sport 2 | (missing) | digi-sport-2-9f639b41883e51000b5d.png | [Curated exact channel/region asset](https://github.com/tv-logo/tv-logos/blob/main/countries/romania/digi-sport-2-ro.png) | Source repository; license must be checked at source | replaced |
-| IPTV-Playlist.m3u | 1303 | DIRECTV Sports | (missing) | directv-sports-9f3ec774cab60d308e91.jpg | [Wikimedia Commons exact-logo search](https://commons.wikimedia.org/wiki/File:Logo_DIRECTV_Sports.jpg) | CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0 | replaced |
 | IPTV-Playlist.m3u | 1315 | Eliminatorias CONCACAF | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1317 | Eliminatorias CONCACAF | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1319 | Eliminatorias CONCACAF | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1361 | Estrella TV | (missing) | estrella-tv-f92611fda25cc9bfdc9f.png | [IPTV-org exact unique channel name: EstrellaTV.us](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Estrella_TV_Logo_2020.png/500px-Estrella_TV_Logo_2020.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
-| IPTV-Playlist.m3u | 1391 | FS1 Salzburg | (missing) | fs1-salzburg-3871539d89187ec95867.png | [IPTV-org exact unique channel name: FS1Salzburg.at](https://i.imgur.com/74gMaPK.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 | IPTV-Playlist.m3u | 1403 | Harlem Globetrotters | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1489 | RS Sports 1 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1491 | RS Sports 2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
@@ -41,15 +31,10 @@ Historical mapping index: loaded 336 historical name mappings
 | IPTV-Playlist.m3u | 1497 | RS Sports 5 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1517 | Sky Sport LaLiga | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1521 | Sky Sports GT | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1553 | Sportdigital | (missing) | sportdigital-4cf991b8921d3fa7de6a.png | [IPTV-org exact unique channel name: SportdigitalFUSSBALL.de](https://i.imgur.com/NDbWxqF.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 | IPTV-Playlist.m3u | 1607 | TUDN | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1609 | TUDN | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1611 | TUDN MX | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1635 | USA ACCN | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| IPTV-Playlist.m3u | 1827 | BEIN SPORTS 3 | (missing) | bein-sports-3-517e8a74a2.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 2023 | Duronto TV | (missing) | duronto-tv-2b3c7dd202.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 2043 | Ekushey TV | (missing) | ekushey-tv-d9479035b4.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 2489 | Sananda TV | (missing) | sananda-tv-af0df4f34c.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | IPTV-Playlist.m3u | 2547 | Sport 1 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 2549 | Sport 2 | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 809 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
