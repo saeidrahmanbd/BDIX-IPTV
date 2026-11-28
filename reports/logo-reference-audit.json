@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5307,
-  "all_explicitly_referenced_logo_files": 2571,
-  "runtime_referenced_logo_files": 2569,
+  "all_explicitly_referenced_logo_files": 2570,
+  "runtime_referenced_logo_files": 2568,
   "playlist_referenced_logo_files": 2526,
-  "apparently_unreferenced_by_any_text_file": 2736,
-  "apparently_unreferenced_by_runtime_sources": 2738,
+  "apparently_unreferenced_by_any_text_file": 2737,
+  "apparently_unreferenced_by_runtime_sources": 2739,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -10594,9 +10594,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/accdn.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/aci-sport-tv-1cac42a81a.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -11482,13 +11479,16 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-4-int.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-5-int.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-6.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-xtra-en-espanol.png": [
       "IPTV-Playlist.m3u",
@@ -15011,7 +15011,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/horse-country.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/horse-tv-97d2ca3236.png": [
       "International-Playlist.m3u",
@@ -15288,7 +15289,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/vevo-retro-rock-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
@@ -16573,7 +16575,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/motorvision-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/motu-patlu.png": [
       "International-Playlist.m3u",
@@ -18087,7 +18090,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/real-madrid-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/real-wild.png": [
       "IPTV-Playlist.m3u",
@@ -18100,7 +18104,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/realitatea-sportiva.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/red-bull-tv-au-4ec4c704c2.png": [
       "International-Playlist.m3u",
@@ -19765,7 +19770,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tnt-sports-1.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tochka-rf-4548ea0843cc344460cf.png": [
       "International-Playlist.m3u",
@@ -19855,7 +19861,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tr-sport.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/trace-africa-1080p-a177d91a65.png": [
       "International-Playlist.m3u",
@@ -22381,9 +22388,6 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
-    "logos/accdn.png": [
-      "reports/logo-authenticity-manifest.json"
-    ],
     "logos/aci-sport-tv-1cac42a81a.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -23269,13 +23273,16 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-4-int.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-5-int.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-6.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/bein-sports-xtra-en-espanol.png": [
       "IPTV-Playlist.m3u",
@@ -26800,7 +26807,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/horse-country.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/horse-tv-97d2ca3236.png": [
       "International-Playlist.m3u",
@@ -27077,7 +27085,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/vevo-retro-rock-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/into-crime-c391ebb086.png": [
       "International-Playlist.m3u",
@@ -28362,7 +28371,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/motorvision-1080p.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/motu-patlu.png": [
       "International-Playlist.m3u",
@@ -29879,7 +29889,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/real-madrid-tv.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/real-wild.png": [
       "IPTV-Playlist.m3u",
@@ -29892,7 +29903,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/realitatea-sportiva.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/red-bull-tv-au-4ec4c704c2.png": [
       "International-Playlist.m3u",
@@ -31559,7 +31571,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tnt-sports-1.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tochka-rf-4548ea0843cc344460cf.png": [
       "International-Playlist.m3u",
@@ -31649,7 +31662,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tr-sport.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/trace-africa-1080p-a177d91a65.png": [
       "International-Playlist.m3u",
@@ -33970,6 +33984,7 @@
     "logos/abp-ananda.png",
     "logos/abp-news.png",
     "logos/absinthe-tv.png",
+    "logos/accdn.png",
     "logos/accu-weather.png",
     "logos/accuweather.png",
     "logos/adithya-tv.png",

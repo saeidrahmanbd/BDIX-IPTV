@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-28 09:47 UTC**  
+Run time: **2026-11-28 09:48 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,76 +9,13 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1379 | 63 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| IPTV-Playlist.m3u | 1379 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | International-Playlist.m3u | 3332 | 0 | 17 | 20 | 364 | 372 | 0 | 0 | 37 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| IPTV-Playlist.m3u | 123 | Raatdin Bangla | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 807 | KTN TV | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 835 | Cine Canal | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 879 | Hi-Yah! | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 931 | Rock TV | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1193 | Fazal TV | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1195 | Fazal TV | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1227 | Quran Radio TV SMC | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1235 | 2TV Sport | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1247 | Astrakhan.RU Sport | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1293 | DAZN 3 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1299 | Digi Sport 1 | nvisionbd-digi-sport-1.png | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1301 | Digi Sport 2 | nvisionbd-digi-sport-2.png | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1303 | DIRECTV Sports | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1315 | Eliminatorias CONCACAF | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1317 | Eliminatorias CONCACAF | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1319 | Eliminatorias CONCACAF | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1323 | ESPN 2 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1325 | ESPN 2 | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1327 | ESPN 2 | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1329 | ESPN 3 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1331 | ESPN 4 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1333 | ESPN 4 | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1335 | ESPN 5 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1337 | ESPN 5 | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1339 | ESPN 5 | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1341 | ESPN 6 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1343 | ESPN 6 | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1345 | ESPN 7 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1347 | ESPN Argentina | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1349 | ESPN Colombia | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1351 | ESPN Premium Chile | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1353 | ESPN Premium | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1361 | Estrella TV | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1391 | FS1 Salzburg | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1403 | Harlem Globetrotters | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1489 | RS Sports 1 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1491 | RS Sports 2 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1493 | RS Sports 3 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1495 | RS Sports 4 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1497 | RS Sports 5 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1499 | Setanta Sport Moldova | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1501 | Setanta Sport Premium UA | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1503 | Setanta Sport Qazaqstan | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1505 | Setanta Sports | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1507 | Setanta Sports 2 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1511 | Setanta Sports 1 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1513 | Setanta Sports 2 | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1517 | Sky Sport LaLiga | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1521 | Sky Sports GT | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1553 | Sportdigital | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1555 | Sportivnyy | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1597 | TNT Sports Premium | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1607 | TUDN | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1609 | TUDN | (missing) | 4-sides-tv-6a436fa007.png | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1611 | TUDN MX | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1635 | USA ACCN | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1827 | BEIN SPORTS 3 | bein-sports-3.png | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 2023 | Duronto TV | duronto-tv.png | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 2043 | Ekushey TV | ekushey-tv.png | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 2489 | Sananda TV | sananda-tv.png | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 2547 | Sport 1 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 2549 | Sport 2 | (missing) | 4-sides-tv-6a436fa007.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | International-Playlist.m3u | 809 | cine.box | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1041 | DanceTV Algorhythm | (missing) | (none) | Official DanceTV channel artwork URL, corroborated by the broadcaster's public stream listing |  | Download/validation failed: HTTP Error 404: Not Found |
 | International-Playlist.m3u | 1041 | DanceTV Algorhythm | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
