@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-28T09:31:34+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-28T09:33:54+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12223
 - Existing playlist records: 3328
@@ -120,15 +120,15 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-28T09:31:47+06:00
+- Run timestamp: 2026-11-28T09:34:07+06:00
 - Mode: international
 - New entries and discovery queues probed: 93
-- Verified live media responses: 41
-- Verified new primary channels retained in New Channels: 18
+- Verified live media responses: 40
+- Verified new primary channels retained in New Channels: 17
 - Verified alternate streams retained in New Backups: 23
-- Inconclusive candidates retained for manual review: 6
+- Inconclusive candidates retained for manual review: 8
 - Unverified backup streams moved to Review: 0
-- Definitively dead new candidates removed: 46
+- Definitively dead new candidates removed: 45
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
@@ -140,7 +140,8 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Kept Abdulmajeed Abdullah (1080p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered AMC Latin America (1080p) from New Channels — HTTP 404.
 - Removed newly discovered Andina RTV (720p) from New Channels — HTTP 404.
-- Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
+- Retained ATN Music (360p) in New Channels for manual review — stream probe was inconclusive (HTTP 500; access/availability could not be confirmed).
+- Retained Box Hits in New Channels for manual review — stream probe was inconclusive (response did not clearly identify a live media stream).
 - Removed newly discovered BRIDGE Classic (576p) from New Channels — HTTP 404.
 - Retained BRIDGE Dance [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Retained BRIDGE Jazz [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
@@ -194,9 +195,9 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Final validation
 
-- Run timestamp: 2026-11-28T09:31:47+06:00
+- Run timestamp: 2026-11-28T09:34:08+06:00
 - Validation status: FAIL
-- M3U entries parsed: 3328
+- M3U entries parsed: 3329
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
