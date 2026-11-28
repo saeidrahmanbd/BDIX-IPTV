@@ -208,8 +208,7 @@ class LogoRepairSourceTests(unittest.TestCase):
                 }),
                 encoding="utf-8",
             )
-            with patch.object(logo_repair, "REGISTRY_PATH", registry_path), \\
-                 patch.object(logo_repair, "is_valid_local_logo_reference", return_value=True):
+            with patch.object(logo_repair, "REGISTRY_PATH", registry_path), patch.object(logo_repair, "is_valid_local_logo_reference", return_value=True):
                 self.assertIsNone(
                     logo_repair.find_registered_logo("IPTV-Playlist.m3u", {}, "Raatdin Bangla")
                 )
@@ -233,10 +232,7 @@ class LogoRepairSourceTests(unittest.TestCase):
                 }),
                 encoding="utf-8",
             )
-            with patch.object(logo_repair, "LOGOS", logo_dir), \\
-                 patch.object(logo_repair, "REGISTRY_PATH", registry_path), \\
-                 patch.object(logo_repair, "is_valid_local_logo_reference", return_value=True), \\
-                 patch.object(logo_repair, "file_is_valid", return_value=True):
+            with patch.object(logo_repair, "LOGOS", logo_dir), patch.object(logo_repair, "REGISTRY_PATH", registry_path), patch.object(logo_repair, "is_valid_local_logo_reference", return_value=True), patch.object(logo_repair, "file_is_valid", return_value=True):
                 self.assertEqual(
                     logo_repair.find_registered_logo("IPTV-Playlist.m3u", {}, "Raatdin Bangla"),
                     "raatdin-bangla.png",
