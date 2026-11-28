@@ -103,6 +103,9 @@ LOCAL_OVERRIDES = {
     "xite summer": "xite-celebrates-0178ee79a4.png",
     # Same verified MyTime Movie Network brand mark already used by its Brazil feed.
     "mytime movie network us": "mytime-movie-network.png",
+    # Exact local brand marks: Peace TV English and the FloRacing 24/7 feed.
+    "peace tv": "peace-tv-english.png",
+    "floracing": "floracing-24-7.png",
 }
 FORCED_CHANNEL_LOGOS = {
     "bollygold": "nh-bollygold-dbedeff9.png",
