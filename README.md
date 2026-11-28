@@ -27,7 +27,9 @@ Built around Bangladeshi television, BDIX-IPTV brings together curated M3U/M3U8 
 [🇧🇩 বাংলা গাইড](https://saeidrahmanbd.github.io/BDIX-IPTV/bangla-iptv.html) ·
 [❓ FAQ](#-frequently-asked-questions)
 
-[![GitHub stars](https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?style=for-the-badge&logo=github&color=f5c542)](https://github.com/saeidrahmanbd/BDIX-IPTV/stargazers) [![Last commit](https://img.shields.io/github/last-commit/saeidrahmanbd/BDIX-IPTV/main?style=for-the-badge)](https://github.com/saeidrahmanbd/BDIX-IPTV/commits/main)
+<p><a href="https://github.com/saeidrahmanbd/BDIX-IPTV/stargazers"><img src="https://img.shields.io/github/stars/saeidrahmanbd/BDIX-IPTV?style=for-the-badge&label=GitHub%20Stars&logo=github&color=F5C542" alt="GitHub Stars"></a></p>
+
+<p><a href="https://github.com/saeidrahmanbd/BDIX-IPTV/commits/main"><img src="https://img.shields.io/github/last-commit/saeidrahmanbd/BDIX-IPTV/main?style=flat-square" alt="Last commit"></a></p>
 
 </div>
 
