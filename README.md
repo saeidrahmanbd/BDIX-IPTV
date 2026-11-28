@@ -6,11 +6,11 @@
 
 # BDIX-IPTV
 
-### Bangladesh IPTV Playlists · M3U/M3U8 · XMLTV Electronic Programme Guide
+### Bangladesh's IPTV Playlist Platform · M3U/M3U8 · Shared XMLTV EPG
 
-**Discover organized Bangladeshi, Indian, Pakistani and international television playlists with a shared XMLTV Electronic Programme Guide.**
+**A Bangladesh-first IPTV playlist platform — bringing Bangladeshi television together with Indian, Pakistani and international channel collections, supported by one shared XMLTV Electronic Programme Guide.**
 
-BDIX-IPTV brings together curated M3U/M3U8 playlist collections, organized channel groups, locally maintained channel logos, alternate streams and a shared programme guide — making IPTV playlist discovery and management easier.
+Built around Bangladeshi television, BDIX-IPTV brings together curated M3U/M3U8 playlists, organized regional channel groups, locally maintained logos, alternate streams and a shared programme guide for compatible IPTV players.
 
 ![Public Access](https://img.shields.io/badge/Access-Public-238636?style=flat-square)
 ![M3U/M3U8](https://img.shields.io/badge/Format-M3U%20%2F%20M3U8-0969DA?style=flat-square)
@@ -35,11 +35,11 @@ BDIX-IPTV brings together curated M3U/M3U8 playlist collections, organized chann
 
 ## 📺 About BDIX-IPTV
 
-**BDIX-IPTV** is an open-source IPTV playlist project focused on Bangladesh and South Asian television, with additional international channel selections.
+**BDIX-IPTV is a Bangladesh-first IPTV playlist platform.** It puts Bangladeshi television at the centre, with additional Indian, Pakistani and international channel collections for viewers who want a broader selection.
 
 The project provides publicly accessible M3U/M3U8 playlists and a shared XMLTV Electronic Programme Guide (EPG) for compatible IPTV applications.
 
-Whether you are looking for Bangladeshi television, Indian entertainment, Pakistani channels or international selections, BDIX-IPTV provides organized playlist collections designed for convenient browsing and playback in supported IPTV players.
+Whether you are looking for Bangladeshi television first or want to explore Indian, Pakistani and international selections, BDIX-IPTV provides organized playlist collections and a shared XMLTV EPG for compatible IPTV players.
 
 <div align="center">
 <img src="assets/iptv-project-showcase.svg"
@@ -55,7 +55,7 @@ Whether you are looking for Bangladeshi television, Indian entertainment, Pakist
 
 </div>
 
-BDIX-IPTV combines South Asian channel discovery with organized playlist groups, a shared programme guide and transparent repository maintenance.
+Bangladesh is the heart of BDIX-IPTV. Regional and international collections complement the Bangladeshi channel selection, while one shared XMLTV guide helps supported IPTV players display available programme schedules.
 
 > **Note:** Channel availability, stream functionality and programme schedules depend on external sources. A listed channel does not guarantee uninterrupted playback or available EPG data.
 
