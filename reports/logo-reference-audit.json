@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5307,
-  "all_explicitly_referenced_logo_files": 2561,
-  "runtime_referenced_logo_files": 2559,
-  "playlist_referenced_logo_files": 2518,
-  "apparently_unreferenced_by_any_text_file": 2746,
-  "apparently_unreferenced_by_runtime_sources": 2748,
+  "all_explicitly_referenced_logo_files": 2562,
+  "runtime_referenced_logo_files": 2560,
+  "playlist_referenced_logo_files": 2520,
+  "apparently_unreferenced_by_any_text_file": 2745,
+  "apparently_unreferenced_by_runtime_sources": 2747,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -10636,6 +10636,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ado-tv-0c333878cc.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -11855,14 +11856,17 @@
       "reports/logo-source-registry.json"
     ],
     "logos/canal-plus-sport-2-sk-430a3721ba.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/canal-plus-sport-3-sk-0f6ba1bda5.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/canal-plus-sport-4-sk-e97029935f.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -11883,6 +11887,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/canal-plus-sport-sk-0d5ef8dd23.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -14330,6 +14335,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/flohockey-431fbc623f.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -15755,6 +15761,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/l1-max-180694d6c9.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -16156,6 +16163,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/match-ultra-d5f0557d59.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17770,6 +17778,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/prima-sport-czechia-dbfebefa13.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -17920,6 +17929,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/racer-select-0e9de459cf.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -18949,6 +18959,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/stadium-164c0cfda7.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/star-bharat.png": [
@@ -21644,6 +21655,9 @@
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
+    "logos/voyo-sport-1-607370d90c.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/vtu.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
@@ -22369,6 +22383,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/ado-tv-0c333878cc.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -23588,14 +23603,17 @@
       "reports/logo-source-registry.json"
     ],
     "logos/canal-plus-sport-2-sk-430a3721ba.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/canal-plus-sport-3-sk-0f6ba1bda5.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/canal-plus-sport-4-sk-e97029935f.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -23616,6 +23634,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/canal-plus-sport-sk-0d5ef8dd23.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26064,6 +26083,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/flohockey-431fbc623f.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -27490,6 +27510,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/l1-max-180694d6c9.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -27891,6 +27912,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/match-ultra-d5f0557d59.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29508,6 +29530,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/prima-sport-czechia-dbfebefa13.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -29658,6 +29681,7 @@
       "reports/logo-source-registry.json"
     ],
     "logos/racer-select-0e9de459cf.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
@@ -30688,6 +30712,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/stadium-164c0cfda7.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/star-bharat.png": [
@@ -33383,6 +33408,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
+    ],
+    "logos/voyo-sport-1-607370d90c.png": [
+      "IPTV-Playlist.m3u"
     ],
     "logos/vtu.png": [
       "International-Playlist.m3u",
@@ -36565,7 +36593,6 @@
     "logos/vip-tv-720p.png",
     "logos/virgin-radio-tv.png",
     "logos/viva-latino-1080p.png",
-    "logos/voyo-sport-1-607370d90c.png",
     "logos/wifm-100-9.png",
     "logos/willow-sports.png",
     "logos/willow.png",

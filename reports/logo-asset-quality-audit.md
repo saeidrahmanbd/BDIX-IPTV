@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T07:05:15+00:00**
+Generated: **2026-11-28T07:28:35+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **d1505f3d76530e01b023d9cfeabc5c6fe518d803660da940927cc88fcaf39246**
+- IPTV-Playlist.m3u SHA-256: **9cd6825a05c0f1168f05f88c8566ad2eb719e793f6cf8a08b97541a377cbf8c8**
 - International-Playlist.m3u SHA-256: **248ff78f7e53dc302880e5cb413bfd2f727021f7d7d92a3f3c6f5222618bbe7b**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **148**
 - Exact-byte duplicate asset clusters: **750**
-- Playlist references whose asset stem differs from the normalized channel name: **1563**
-- Unreferenced image assets immediately inside logos/: **1005** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1575**
+- Unreferenced image assets immediately inside logos/: **1003** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1189,8 +1189,14 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | TV One UK | tv-one-uk.png | Religious |
 | IPTV-Playlist.m3u | Zainabia Channel | zainabia-channel.png | Religious |
 | IPTV-Playlist.m3u | ACI Sport TV | aci-sport-tv.png | Sports |
+| IPTV-Playlist.m3u | ADO TV | ado-tv-0c333878cc.png | Sports |
 | IPTV-Playlist.m3u | beIN SPORTS Arabic | bein-sports.png | Sports |
+| IPTV-Playlist.m3u | Canal+ Sport 2 SK | canal-plus-sport-2-sk-430a3721ba.png | Sports |
+| IPTV-Playlist.m3u | Canal+ Sport 3 SK | canal-plus-sport-3-sk-0f6ba1bda5.png | Sports |
+| IPTV-Playlist.m3u | Canal+ Sport 4 SK | canal-plus-sport-4-sk-e97029935f.png | Sports |
+| IPTV-Playlist.m3u | Canal+ Sport SK | canal-plus-sport-sk-0d5ef8dd23.png | Sports |
 | IPTV-Playlist.m3u | Channel Fight | channel-fight.png | Sports |
+| IPTV-Playlist.m3u | DSports 2 | 4-sides-tv-6a436fa007.png | Sports |
 | IPTV-Playlist.m3u | ESPN2 | espn-2-united-states-7a4d2daafc.png | Sports |
 | IPTV-Playlist.m3u | FIFA+ Women | fifa-plus-women-6465461e16.png | Sports |
 | IPTV-Playlist.m3u | FITE 24 | fite-24-7.png | Sports |
@@ -1198,15 +1204,21 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Futbol | futbol-tv-068fcbdde9.png | Sports |
 | IPTV-Playlist.m3u | Goal TV | goal-tv-237cfbed.png | Sports |
 | IPTV-Playlist.m3u | RACING \| Hagerty | hagerty-28b469a78a61a85fda22.png | Sports |
+| IPTV-Playlist.m3u | Match! Premier | match-ultra-d5f0557d59.png | Sports |
 | IPTV-Playlist.m3u | MMA TV com 格斗 | mma-tv-com-85ca206b32.png | Sports |
 | IPTV-Playlist.m3u | NBA TV | nba-tv.png | Sports |
 | IPTV-Playlist.m3u | Oman Sports TV | oman-sports-tv.png | Sports |
 | IPTV-Playlist.m3u | Pickleball Now | pickleball-now-720p-geo-blocked-0b59f9270029b91e10eb.png | Sports |
+| IPTV-Playlist.m3u | Prima Sport 1 | prima-sport-czechia-dbfebefa13.png | Sports |
+| IPTV-Playlist.m3u | Prima Sport 2 | prima-sport-czechia-dbfebefa13.png | Sports |
+| IPTV-Playlist.m3u | Prima Sport 3 | prima-sport-czechia-dbfebefa13.png | Sports |
+| IPTV-Playlist.m3u | Prima Sport 4 | prima-sport-czechia-dbfebefa13.png | Sports |
 | IPTV-Playlist.m3u | Rally TV | rally-tv.png | Sports |
 | IPTV-Playlist.m3u | SN TV | sn-tv.png | Sports |
 | IPTV-Playlist.m3u | Sony Sports Ten 3 | sony-sports-ten-3-hindi.png | Sports |
 | IPTV-Playlist.m3u | Sport 1 (Hungary) | sport1-d42479c518.png | Sports |
 | IPTV-Playlist.m3u | Sport 2 (Hungary) | sport2-620b031a4a.png | Sports |
+| IPTV-Playlist.m3u | Sport Extra | 4-sides-tv-6a436fa007.png | Sports |
 | IPTV-Playlist.m3u | Sport5 | sport5-israel.png | Sports |
 | IPTV-Playlist.m3u | Sports First TV | sports-first-tv.png | Sports |
 | IPTV-Playlist.m3u | Sports Fishing TV | sports-fishing-tv-50d0f501d6.png | Sports |
