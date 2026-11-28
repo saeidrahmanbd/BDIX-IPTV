@@ -11,6 +11,17 @@ concurrency:
   queue: max
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/epg-refresh.yml
+      - IPTV-Playlist.m3u
+      - International-Playlist.m3u
+      - reports/epg-channel-mapping.csv
+      - scripts/*epg*.py
+      - scripts/official_epg_sources.py
+      - scripts/generate_dashboard.py
+      - tests/test_*epg*.py
   schedule:
     - cron: '7 0 * * *' # 06:07 Asia/Dhaka, after the daily playlist writers
   workflow_dispatch:
@@ -44,7 +55,7 @@ jobs:
     needs: daily_guard
     # The scheduled run follows the daily discovery job; manual dispatch is
     # available for an owner-requested immediate refresh.
-    if: ${{ needs.daily_guard.outputs.should_run == 'true' }}
+    if: ${{ always() && (github.event_name == 'push' || needs.daily_guard.outputs.should_run == 'true') }}
     concurrency:
       group: iptv-playlist-main-writer-v5
       queue: max

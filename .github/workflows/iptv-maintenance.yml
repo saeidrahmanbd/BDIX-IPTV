@@ -10,10 +10,14 @@ on:
     branches: [main]
     paths:
       - .github/workflows/iptv-maintenance.yml
+      - IPTV-Playlist.m3u
+      - International-Playlist.m3u
       - scripts/maintenance_helpers.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/normalize_metadata.py
+      - scripts/renumber_active_channels.py
+      - tests/test_cross_playlist_metadata_backfill.py
       - scripts/reconcile_backup_metadata_exact_id.py
       - scripts/permanent_removals.py
       - scripts/country_verification.py
@@ -48,6 +52,7 @@ on:
       - tests/test_pre_publish_gate_logo_paths.py
       - tests/test_maintenance_report_order.py
       - tests/test_metadata_backfill.py
+      - tests/test_cross_playlist_metadata_backfill.py
       - tests/test_logo_authenticity_manifest.py
       - tests/test_logo_asset_naming.py
       - tests/test_logo_provenance_review.py
@@ -92,7 +97,7 @@ jobs:
         run: python scripts/discovery_schedule_guard.py guard iptv-maintenance.yml
   maintain:
     needs: daily_guard
-    if: ${{ needs.daily_guard.outputs.should_run == 'true' && !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG'))) }}
+    if: ${{ ((github.event_name == 'push' && github.actor != 'github-actions[bot]') || needs.daily_guard.outputs.should_run == 'true') && !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG'))) }}
     # Shared main-branch writer queue. Set on the writing job, not the workflow,
     # so runs whose jobs are skipped do not occupy the queue.
     concurrency:
@@ -152,6 +157,7 @@ jobs:
             scripts/repair_international_playlist.py \
             scripts/validate_international_playlist.py \
             scripts/normalize_metadata.py \
+            scripts/renumber_active_channels.py \
             scripts/migrate_external_logos_fixed.py \
             scripts/repair_logo_asset_technical_quality.py \
             scripts/backfill_cross_playlist_metadata.py \
@@ -171,6 +177,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
+          python -m unittest discover -s tests -p 'test_cross_playlist_metadata_backfill.py'
           python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
           python -m unittest discover -s tests -p 'test_logo_asset_naming.py'
           python -m unittest discover -s tests -p 'test_logo_provenance_review.py'
@@ -211,6 +218,8 @@ jobs:
           # ------------------------------------------------------------------
           run_mutations() {
             python scripts/normalize_metadata.py
+            # Fill only missing active numbers; preserve existing values and row order.
+            python scripts/renumber_active_channels.py IPTV-Playlist.m3u
             if grep -Eiq 'group-title="New"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
             python scripts/country_verification.py validate IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py invalidate-bad-logos

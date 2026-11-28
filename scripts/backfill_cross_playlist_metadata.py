@@ -27,6 +27,21 @@ ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 COUNTRY_RE = re.compile(r"^[A-Z]{2}$")
 LANGUAGE_LIST_RE = re.compile(r"^[a-z]{3}(?:;[a-z]{3})*$")
 REVIEW_GROUPS = {"backup", "adult", "review", "new channels", "new backups", "not playing", "not playing...", "not playing…", "not playing... (review)"}
+# Dedicated country groups are reliable country evidence; generic genre groups are not.
+COUNTRY_GROUP_CODES = {
+    "bangladesh": "BD", "indian bangla": "IN", "indian movies": "IN",
+    "indian music": "IN", "indian entertainment": "IN", "pakistani": "PK",
+    "argentina": "AR", "brazil": "BR", "bulgaria": "BG", "canada": "CA",
+    "chile": "CL", "china": "CN", "colombia": "CO", "costa rica": "CR",
+    "czech republic": "CZ", "do": "DO", "dominican republic": "DO",
+    "estonia": "EE", "france": "FR", "germany": "DE", "greece": "GR",
+    "hungary": "HU", "iran": "IR", "italy": "IT", "lebanon": "LB",
+    "mexico": "MX", "netherlands": "NL", "north macedonia": "MK",
+    "panama": "PA", "paraguay": "PY", "peru": "PE", "poland": "PL",
+    "romania": "RO", "russia": "RU", "saudi arabia": "SA", "spain": "ES",
+    "sweden": "SE", "turkey": "TR", "ukraine": "UA", "united kingdom": "GB",
+    "united states": "US", "uzbekistan": "UZ", "vietnam": "VN",
+}
 
 
 def attrs(line):
@@ -211,6 +226,8 @@ def backfill_text(text, by_id, by_name):
         "country_fields_filled": 0,
         "language_fields_filled": 0,
         "language_fields_marked_undetermined": 0,
+        "channel_id_fields_filled": 0,
+        "country_fields_filled_from_group": 0,
         "ambiguous_or_unknown": 0,
     }
     current_index = None
@@ -255,9 +272,16 @@ def backfill_text(text, by_id, by_name):
             country = country or valid_country(name_source.get("country", ""))
             language = language or valid_languages(name_source.get("language", ""))
 
+        # Dedicated country groups are explicit curated country evidence.
+        group_country = COUNTRY_GROUP_CODES.get(group, "")
+        if not country:
+            country = group_country
+
         additions = []
         if not meta.get("tvg-country", "").strip() and country:
             additions.append(("tvg-country", country))
+            if group_country and country == group_country:
+                counts["country_fields_filled_from_group"] += 1
         if not meta.get("tvg-language", "").strip():
             if language:
                 additions.append(("tvg-language", language))
@@ -265,6 +289,11 @@ def backfill_text(text, by_id, by_name):
                 # ISO 639-2 "und" means undetermined. Never guess a broadcast language.
                 additions.append(("tvg-language", "und"))
                 counts["language_fields_marked_undetermined"] += 1
+        # A blank channel-id can safely inherit the exact existing tvg-id.
+        if not meta.get("channel-id", "").strip() and meta.get("tvg-id", "").strip():
+            additions.append(("channel-id", meta["tvg-id"].strip()))
+            counts["channel_id_fields_filled"] += 1
+
         if not additions:
             if not meta.get("tvg-country", "").strip() or not meta.get("tvg-language", "").strip():
                 counts["ambiguous_or_unknown"] += 1
@@ -358,10 +387,10 @@ def main():
         "## Source playlist fingerprints", "",
         *[f"- {path.name} SHA-256: **{summary[path.name]['sha256']}**" for path in PLAYLISTS],
         "",
-        "Only missing tvg-country and tvg-language values were filled. Sources: exact playlist tvg-id/channel-id, unique exact channel names, and iptv-org channel/feed metadata. Unresolved broadcast languages are marked und (ISO 639-2 undetermined), never guessed. iptv-org catalogue status: {}.".format(external_status),
-        "The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, stream URLs, or Backup/Review/Adult/Not Playing entries.", "",
+        "Only missing country/language fields and blank channel-id fields were filled. Country may also come from dedicated country-group labels; generic genre groups are never used as country evidence. Sources: exact playlist tvg-id/channel-id, unique exact channel names, and iptv-org channel/feed metadata. Unresolved broadcast languages are marked und (ISO 639-2 undetermined), never guessed. iptv-org catalogue status: {}.".format(external_status),
+        "The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, stream URLs, or Backup/Review/Adult/Not Playing entries. Existing channel-id values are preserved.", "",
         "## Playlist results", "",
-        "| Playlist | Entries changed | Country fields filled | Language fields filled | Language marked undetermined | Active entries still missing either field | Stream URL inventory | SHA-256 |",
+        "| Playlist | Entries changed | Country fields filled | Language fields filled | Channel IDs filled | Country-group fills | Language marked undetermined | Active entries still missing either field | Stream URL inventory | SHA-256 |",
         "|---|---:|---:|---:|---:|---:|---|---|",
     ]
     for path in PLAYLISTS:
@@ -369,13 +398,14 @@ def main():
         inv = inventory_hash[path.name]
         lines.append(
             f"| {path.name} | {item.get('entries_changed', 0)} | {item.get('country_fields_filled', 0)} | "
-            f"{item.get('language_fields_filled', 0)} | {item.get('language_fields_marked_undetermined', 0)} | "
+            f"{item.get('language_fields_filled', 0)} | {item.get('channel_id_fields_filled', 0)} | "
+            f"{item.get('country_fields_filled_from_group', 0)} | {item.get('language_fields_marked_undetermined', 0)} | "
             f"{item.get('entries_missing_country_or_language_after', 0)} | unchanged ({inv[:12]}...) | {item['sha256']} |"
         )
     lines += [
         "", "## Policy", "",
         "- Channel numbers and group placement are playlist-specific and are intentionally not synchronized.",
-        "- Country/language values are not inferred from group names alone.",
+        "- Country is inferred only from dedicated country groups; generic genre groups are never treated as country evidence.",
         "- Complete metadata does not guarantee EPG schedule coverage.", "",
     ]
     REPORT.parent.mkdir(parents=True, exist_ok=True)
