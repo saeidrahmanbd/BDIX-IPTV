@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5307,
-  "all_explicitly_referenced_logo_files": 2563,
-  "runtime_referenced_logo_files": 2561,
+  "all_explicitly_referenced_logo_files": 2562,
+  "runtime_referenced_logo_files": 2560,
   "playlist_referenced_logo_files": 2519,
-  "apparently_unreferenced_by_any_text_file": 2744,
-  "apparently_unreferenced_by_runtime_sources": 2746,
+  "apparently_unreferenced_by_any_text_file": 2745,
+  "apparently_unreferenced_by_runtime_sources": 2747,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -18962,7 +18962,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/stadium-164c0cfda7.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/star-bharat.png": [
@@ -19771,7 +19770,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/top-barca.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/topestrada-tv-bae545df77.png": [
       "International-Playlist.m3u",
@@ -21662,9 +21662,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/voyo-sport-1-607370d90c.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/vtu.png": [
       "International-Playlist.m3u",
@@ -30723,7 +30720,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/stadium-164c0cfda7.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/star-bharat.png": [
@@ -31533,7 +31529,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/top-barca.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/topestrada-tv-bae545df77.png": [
       "International-Playlist.m3u",
@@ -33424,9 +33421,6 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
-    ],
-    "logos/voyo-sport-1-607370d90c.png": [
-      "reports/logo-authenticity-manifest.json"
     ],
     "logos/vtu.png": [
       "International-Playlist.m3u",
@@ -36608,6 +36602,7 @@
     "logos/vip-tv-720p.png",
     "logos/virgin-radio-tv.png",
     "logos/viva-latino-1080p.png",
+    "logos/voyo-sport-1-607370d90c.png",
     "logos/wifm-100-9.png",
     "logos/willow-sports.png",
     "logos/willow.png",
