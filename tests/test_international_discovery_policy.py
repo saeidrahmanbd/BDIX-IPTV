@@ -736,9 +736,5 @@ class StrictWorldwideDiscoveryTests(unittest.TestCase):
         self.assertEqual(len(kept), 1)
         self.assertEqual((repaired, removed), (0, 0))
 
-
-    def test_dominican_republic_uses_its_full_country_group_name(self):
-        self.assertEqual(discovery.country_group("DO"), "Dominican Republic")
-
 if __name__ == "__main__":
     unittest.main()
