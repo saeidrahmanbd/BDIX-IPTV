@@ -1,8 +1,8 @@
 # Update Report
 
-_Last generated: **2026-11-28 10:58 UTC**_
+_Last generated: **2026-11-28 11:14 UTC**_
 
-Source playlist SHA-256: **1430770e8c02dd64d1d03bab2f1809e4251e771e5737759c2ec945d0525e162c**
+Source playlist SHA-256: **77b11e20f1d6d12ac974d1ea5e1940787857026b38d4f3574619dbdb69eb28f3**
 
 | Metric | Current |
 |---|---:|
@@ -12,16 +12,16 @@ Source playlist SHA-256: **1430770e8c02dd64d1d03bab2f1809e4251e771e5737759c2ec94
 | Bangladesh | **67** |
 | India | **320** |
 | Backup Stream Entries | **489** |
-| IPTV Local Logos | **99.0%** |
-| IPTV EPG Programme Coverage | **54%** |
-| IPTV EPG Mapping | **60.5%** |
+| IPTV Local Logos | **99.4%** |
+| IPTV EPG Programme Coverage | **PENDING** |
+| IPTV EPG Mapping | **PENDING** |
 | Stream Health Tested | **1373** |
-| Stream Health Failures | **68** |
+| Stream Health Failures | **76** |
 | Persistent Failures | **0** |
 | Near-Duplicate URL Families | **3** |
-| Audit findings (review warnings included) | **154** |
+| Audit findings (review warnings included) | **148** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-11-28T10:58:07+00:00** |
+| Pre-Publish Gate Generated | **2026-11-28T11:13:15+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
@@ -32,7 +32,7 @@ Source playlist SHA-256: **1430770e8c02dd64d1d03bab2f1809e4251e771e5737759c2ec94
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **125**
-- Logo exceptions: **14**
+- Logo exceptions: **8**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **3**
 - Alphabetical ordering issues: **12**
@@ -52,24 +52,24 @@ Source playlist SHA-256: **1430770e8c02dd64d1d03bab2f1809e4251e771e5737759c2ec94
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
 ## EPG
-- EPG IDs audited: **702**
-- Mapped: **425 (60.5%)**
-- Current/future programme coverage: **379/702 (54.0%)**
-- No mapping: **277**
-- EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against both current playlist inventories)**
+- EPG IDs audited: **PENDING — guide not current**
+- Mapped: **PENDING — no current validated guide**
+- Current/future programme coverage: **PENDING — no current validated guide**
+- No mapping: **PENDING — guide not current**
+- EPG metric scope: **IPTV-Playlist.m3u published-guide row (awaiting a valid, fresh published guide)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
 
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-28T10:58:06.302183+00:00** | **CURRENT** |
-| EPG coverage / two-playlist inventory | **2026-11-28T10:57:01+00:00** | **CURRENT** |
-| Stream health | **2026-11-28T10:58:49+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-11-28T10:58:07+00:00** | **CURRENT** |
+| Playlist audit | **2026-11-28T11:13:14.671498+00:00** | **CURRENT** |
+| EPG coverage / two-playlist inventory | **2026-11-28T10:57:01+00:00** | **PENDING — guide missing or freshness not PASS** |
+| Stream health | **2026-11-28T11:14:01+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-28T11:13:15+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Recent records displayed: **30** (latest 30 entries; the stored history is retained separately)
 - Latest entries change: **1373 → 1373**
-- Latest health failures: **69 → 68**
+- Latest health failures: **68 → 76**
 
 Historical records are retained in reports/maintenance-history.json.

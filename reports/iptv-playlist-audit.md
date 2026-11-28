@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-28T10:58:06.302183+00:00**
-Source playlist SHA-256: **1430770e8c02dd64d1d03bab2f1809e4251e771e5737759c2ec945d0525e162c**
+Generated: **2026-11-28T11:13:14.671498+00:00**
+Source playlist SHA-256: **77b11e20f1d6d12ac974d1ea5e1940787857026b38d4f3574619dbdb69eb28f3**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -18,7 +18,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **3**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **14**
+- Logo exceptions requiring repair: **8**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
 - Logo references checked: **1373**
@@ -1095,7 +1095,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1359**
+- Healthy/local references: **1365**
 - External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair
@@ -1103,17 +1103,11 @@ None.
 Active playlist entries with missing or invalid logo references. These rows are listed for diagnosis; the audit never invents or substitutes artwork.
 
 - **Rock TV** [] — International — missing — (missing logo reference)
-- **Quran Radio TV SMC** [] — Religious — missing — (missing logo reference)
 - **Eliminatorias CONCACAF** [] — Sports — missing — (missing logo reference)
 - **Eliminatorias CONCACAF** [] — Sports — missing — (missing logo reference)
 - **Eliminatorias CONCACAF** [] — Sports — missing — (missing logo reference)
-- **Harlem Globetrotters** [] — Sports — missing — (missing logo reference)
 - **Sky Sport LaLiga** [] — Sports — missing — (missing logo reference)
 - **Sky Sports GT** [] — Sports — missing — (missing logo reference)
-- **TUDN** [] — Sports — missing — (missing logo reference)
-- **TUDN** [] — Sports — missing — (missing logo reference)
-- **TUDN MX** [] — Sports — missing — (missing logo reference)
-- **USA ACCN** [] — Sports — missing — (missing logo reference)
 - **Sport 1** [] — Backup — missing — (missing logo reference)
 - **Sport 2** [] — Backup — missing — (missing logo reference)
 
@@ -1122,7 +1116,7 @@ Active playlist entries with missing or invalid logo references. These rows are 
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 None.
-- missing: **14**
+- missing: **8**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
