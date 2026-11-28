@@ -1325,9 +1325,9 @@ http://191.97.49.82:8001/play/a00m/index.m3u8
 http://45.167.1.136:8000/play/a06b
 #EXTINF:-1 tvg-id="custom.espn3" tvg-name="ESPN 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-3-latin-america-5d7066620a.png" tvg-chno="742" channel-id="custom.espn3" tvg-language="und" group-title="Sports",ESPN 3
 http://45.167.1.136:8000/play/a02k
-#EXTINF:-1 tvg-id="ESPN4.br@SD" channel-id="ESPN4.br@SD" tvg-country="BR" tvg-name="ESPN 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-4-latin-america-36fdd20088255ff1effc.png" tvg-chno="743" tvg-language="por" group-title="Sports",ESPN 4
+#EXTINF:-1 tvg-name="ESPN 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-4-latin-america-36fdd20088255ff1effc.png" tvg-chno="743" tvg-language="und" group-title="Sports",ESPN 4
 http://45.167.1.136:8000/play/a02l
-#EXTINF:-1 tvg-id="ESPN4.br@SD" channel-id="ESPN4.br@SD" tvg-country="BR" tvg-name="ESPN 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-4-latin-america-36fdd20088255ff1effc.png" tvg-chno="744" tvg-language="por" group-title="Sports",ESPN 4
+#EXTINF:-1 tvg-name="ESPN 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-4-latin-america-36fdd20088255ff1effc.png" tvg-chno="744" tvg-language="und" group-title="Sports",ESPN 4
 http://181.78.49.113:9999/play/a07e/index.m3u8
 #EXTINF:-1 tvg-name="ESPN 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn-5-latin-america-9728fabc58979185abf9.png" tvg-chno="745" tvg-language="und" group-title="Sports",ESPN 5
 http://45.167.1.136:8000/play/a04g
