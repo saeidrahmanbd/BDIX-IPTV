@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-28T10:14:03+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-28T10:44:08+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12223
 - Existing playlist records: 3328
@@ -120,14 +120,14 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-28T10:14:16+06:00
+- Run timestamp: 2026-11-28T10:44:20+06:00
 - Mode: international
 - New entries and discovery queues probed: 93
-- Verified live media responses: 39
-- Verified new primary channels retained in New Channels: 17
-- Verified alternate streams retained in New Backups: 22
-- Inconclusive candidates retained for manual review: 7
-- Unverified backup streams moved to Review: 1
+- Verified live media responses: 41
+- Verified new primary channels retained in New Channels: 18
+- Verified alternate streams retained in New Backups: 23
+- Inconclusive candidates retained for manual review: 6
+- Unverified backup streams moved to Review: 0
 - Definitively dead new candidates removed: 46
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
@@ -145,7 +145,6 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Retained BRIDGE Dance [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Retained BRIDGE Jazz [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Retained BRIDGE Rap [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
-- Retained CinemaWorld Vietnam in New Channels for manual review — stream probe was inconclusive (response did not clearly identify a live media stream).
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
 - Kept Film Mania Romania (576i) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Retained Hollywood Ukraine in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
@@ -191,12 +190,11 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered Viasat Kino (Ukraine) Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Kept Zee Cinema APAC (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered 8XM from New Backups — HTTP 404.
-- Moved unverified alternate stream HBO Asia SD [ ] from New Backups to Review — probe was inconclusive (response did not clearly identify a live media stream).
 - Kept Indiyskoye Kino in New Backups without tvg-logo — no authentic local repository asset was available.
 
 ## Final validation
 
-- Run timestamp: 2026-11-28T10:14:16+06:00
+- Run timestamp: 2026-11-28T10:44:20+06:00
 - Validation status: FAIL
 - M3U entries parsed: 3328
 - Malformed EXTINF/URL pairs: 0
