@@ -203,6 +203,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           echo 'Owner-curated IPTV mode: no automatic queue promotion, structural migration or renumbering.'
+          echo 'Existing channel numbers are immutable; only blank primary numbers may be filled in existing row order.'
           # ------------------------------------------------------------------
           # Ordering contract (enforced by tests/test_maintenance_report_order.py)
           #   1. snapshots           (once per attempt)
