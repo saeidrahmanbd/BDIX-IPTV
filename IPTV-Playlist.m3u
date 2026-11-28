@@ -1247,21 +1247,21 @@ http://streaming.astrakhan.ru/astrakhanrusporthd/playlist.m3u8
 https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8
 #EXTINF:-1 tvg-id="BahrainSports2.bh@SD" tvg-name="Bahrain Sports 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bahrain-sports-2.png" tvg-chno="610" channel-id="BahrainSports2.bh@SD" tvg-country="BH" tvg-language="eng" group-title="Sports",Bahrain Sports 2
 https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports.png" tvg-chno="721" tvg-language="und" group-title="Sports",beIN SPORTS
+#EXTINF:-1 tvg-name="beIN SPORTS" tvg-country="QA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports.png" tvg-chno="721" tvg-language="ara" group-title="Sports",beIN SPORTS
 https://amg01334-beinsportsllc-beinxtraesp-localnow-aekzc.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-name="beIN SPORTS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports.png" tvg-chno="722" tvg-language="und" group-title="Sports",beIN SPORTS
+#EXTINF:-1 tvg-name="beIN SPORTS" tvg-country="QA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports.png" tvg-chno="722" tvg-language="ara" group-title="Sports",beIN SPORTS
 http://ua.online24.pm/play/1101/350B326FB34F4B8/video.m3u8
 #EXTINF:-1 tvg-id="custom.beinsports1" tvg-name="beIN SPORTS 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-1.png" tvg-chno="611" channel-id="custom.beinsports1" tvg-country="QA" tvg-language="ara" group-title="Sports",beIN SPORTS 1
 http://27.124.71.27/beIN_Sports_1/index.m3u8
-#EXTINF:-1 tvg-id="custom.beinsports1" channel-id="custom.beinsports1" tvg-name="beIN SPORTS 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-1.png" tvg-chno="723" tvg-language="und" group-title="Sports",beIN SPORTS 1
+#EXTINF:-1 tvg-id="custom.beinsports1" channel-id="custom.beinsports1" tvg-name="beIN SPORTS 1" tvg-country="QA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-1.png" tvg-chno="723" tvg-language="ara" group-title="Sports",beIN SPORTS 1
 http://s.only4.tv/5588/index.m3u8
 #EXTINF:-1 tvg-id="custom.beinsports2" tvg-name="beIN SPORTS 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-2.png" tvg-chno="612" channel-id="custom.beinsports2" tvg-country="QA" tvg-language="ara" group-title="Sports",beIN SPORTS 2
 http://27.124.71.27/beIN_Sports_2/index.m3u8
 #EXTINF:-1 tvg-id="custom.beinsports3" tvg-name="beIN SPORTS 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-3-517e8a74a2.png" tvg-chno="613" channel-id="custom.beinsports3" tvg-country="QA" tvg-language="ara" group-title="Sports",beIN SPORTS 3
 http://27.124.71.27/beIN_Sports_3/index.m3u8
-#EXTINF:-1 tvg-id="custom.beinsports4" tvg-name="BEIN SPORTS 4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-4-int.png" tvg-chno="724" channel-id="custom.beinsports4" tvg-language="und" group-title="Sports",BEIN SPORTS 4
+#EXTINF:-1 tvg-id="custom.beinsports4" tvg-name="BEIN SPORTS 4" tvg-country="QA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-4-int.png" tvg-chno="724" channel-id="custom.beinsports4" tvg-language="ara" group-title="Sports",BEIN SPORTS 4
 http://foxbleu-cdn.com/live/e8:aa:cb:c4:bf:92/aMzpeeG/78381.ts
-#EXTINF:-1 tvg-id="custom.beinsports5" tvg-name="BEIN SPORTS 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-5-int.png" tvg-chno="725" channel-id="custom.beinsports5" tvg-language="und" group-title="Sports",BEIN SPORTS 5
+#EXTINF:-1 tvg-id="custom.beinsports5" tvg-name="BEIN SPORTS 5" tvg-country="QA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-5-int.png" tvg-chno="725" channel-id="custom.beinsports5" tvg-language="ara" group-title="Sports",BEIN SPORTS 5
 http://foxbleu-cdn.com/live/e8:aa:cb:c4:bf:92/aMzpeeG/78382.ts
 #EXTINF:-1 tvg-id="beINSports6.qa" channel-id="beINSports6.qa" tvg-name="beIN SPORTS 6" tvg-country="QA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-6.png" tvg-chno="726" tvg-language="ara" group-title="Sports",beIN SPORTS 6
 http://s.only4.tv/5593/index.m3u8
@@ -1275,7 +1275,7 @@ https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
 https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8
 #EXTINF:-1 tvg-id="beINSPORTSXTRA.us" channel-id="beINSPORTSXTRA.us" tvg-name="beIN SPORTS XTRA" tvg-country="US" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-xtra.png" tvg-chno="728" tvg-language="eng" group-title="Sports",beIN SPORTS XTRA
 https://bein-esp-xumo.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.beinsports2" channel-id="custom.beinsports2" tvg-name="beIN SPORTS 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-2.png" tvg-chno="729" tvg-language="und" group-title="Sports",beIN SPORTS 2
+#EXTINF:-1 tvg-id="custom.beinsports2" channel-id="custom.beinsports2" tvg-name="beIN SPORTS 2" tvg-country="QA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-2.png" tvg-chno="729" tvg-language="ara" group-title="Sports",beIN SPORTS 2
 http://190.83.9.222:8000/play/ca129
 #EXTINF:-1 tvg-id="channel.fight.com" tvg-name="Channel Fight" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-fight.png" tvg-chno="617" channel-id="channel.fight.com" tvg-country="US" tvg-language="eng" group-title="Sports",Channel Fight
 https://d15wqvt0xm15k4.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/ChannelFight-Nuestra/266.m3u8
