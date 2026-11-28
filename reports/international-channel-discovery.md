@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-28T12:51:07+06:00 (Asia/Dhaka)
+- Last scan: 2026-11-28T12:54:37+06:00 (Asia/Dhaka)
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12223
 - Existing playlist records: 3328
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2174
+- Exact source URLs already in playlist: 2181
 - Duplicate URLs within source feed: 0
-- New eligible source records after URL/policy filtering: 150
+- New eligible source records after URL/policy filtering: 143
 - Adult channels discovered directly into Adult: 0
 - Fashion TV channels discovered directly into Fashion TV: 0
 - Country threshold: 5 unique primary identities for every country except Bangladesh and India, including Pakistan.
@@ -18,18 +18,16 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Only discovery queues are filtered. Eligible orphan Backup rows with no matching primary identity are migrated into their primary group before the five-channel threshold is evaluated; valid alternate streams remain in Backup.
 - The workflow probes newly discovered and queued stream URLs; inconclusive candidates remain in review queues for manual checking, and only definitively dead streams are removed.
 - New Channels staged for manual review: 50
-- New Backups staged for manual review: 3
+- New Backups staged for manual review: 1
 - Category migrations: 0
-- Existing discovery-queue entries removed: 7
+- Existing discovery-queue entries removed: 0
 
 ## New primary channels
 
 - **AMC Latin America (1080p)** — New Channels — US — http://15.204.246.24:8080/AMCHD/index.m3u8
 - **Film & Arts (1080p)** — New Channels — AR — http://15.204.246.24:8080/FilmArtsHD/index.m3u8
-- **Film Mania Romania (576i)** — New Channels — HU — https://dokagents.site/live/filmmania/mono.m3u8
 - **HomePlus** — New Channels — IR — https://homeplushls.wns.live/hls/stream.m3u8
 - **ICC plus (1080p)** — New Channels — US — https://icchls.wns.live/hls/stream.m3u8
-- **Kinouzhas (1080p)** — New Channels — RU — http://s7.merlive.am/Kinoujas/index.m3u8
 - **More TV Sci-fi** — New Channels — DE — https://jmp2.uk/plu-645e00d5d3fdde000829463a.m3u8
 - **Mosfilm Gold Collection (576p)** — New Channels — RU — http://31.222.235.15/mosfilm/index.m3u8
 - **Patriot (720p)** — New Channels — RU — https://stream.smotrim.ru/hls2/static/playlist_4.m3u8
@@ -63,17 +61,19 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - **Rakuten TV Top Movies Finland (1080p)** — New Channels — ES — https://1d1b0d4cb6ae4c31985d13221795695b.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6057/master.m3u8
 - **Rakuten TV Top Movies Germany (1080p)** — New Channels — ES — https://cbb622b29f5d43b598991f3fa19de291.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5985/master.m3u8
 - **Rakuten TV Top Movies Italy (1080p)** — New Channels — ES — https://d4a4999341764c67a67e9ec9eb3790ab.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5984/master.m3u8
-- **Shot TV (576p)** — New Channels — RU — http://s7.merlive.am/SHOTTV/index.m3u8
 - **Summer of Movies** — New Channels — US — https://jmp2.uk/plu-6654adb1f99922000854388c.m3u8
 - **TVS Film Noir Network (720p)** — New Channels — US — https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
 - **Viasat Kino (Ukraine) Romania** — New Channels — UA — https://flash1.bogulus1.cfd/tivi10/usergenrxs4f7zc.m3u8
-- **Zee Cinema APAC (720p)** — New Channels — IN — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8
 - **4 Fun TV** — New Channels — PL — https://stream.4fun.tv:8888/sd/4fun_sd_high.m3u8
 - **7 RadioVisione (720p)** — New Channels — IT — https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8
-- **Abdulmajeed Abdullah (1080p)** — New Channels — SA — https://d2hng5r56zpsbw.cloudfront.net/out/v1/9c4c990f44bb4767bb46271f326dd574/index.m3u8
 - **Andina RTV (720p)** — New Channels — PE — https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
 - **ATN Music (360p)** — New Channels — BD — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 - **BRIDGE Classic (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
+- **BRIDGE Hits (576p)** — New Channels — RU — http://5.188.159.128:8070/Bridge_TV_Hits/index.m3u8
+- **BRIDGE RNB (720p) [Geo-blocked]** — New Channels — RU — https://bridgemedia-hls.cdnvideo.ru/hls/live/6affedb990affe00013a80b2/720p.m3u8
+- **BRIDGE Soul (720p) [Geo-blocked]** — New Channels — RU — https://bridgemedia-hls.cdnvideo.ru/hls/live/6affed7590affe00013a80b0/720p.m3u8
+- **BRIDGE Symphony (720p) [Geo-blocked]** — New Channels — RU — https://bridgemedia-hls.cdnvideo.ru/hls/live/6aff0d2a81d78600017e02c2/720p.m3u8
+- **BRIDGE Vostok (720p) [Geo-blocked]** — New Channels — RU — https://bridgemedia-hls.cdnvideo.ru/hls/live/6aff1b6881d78600017e02c5/720p.m3u8
 
 ## Adult channels added directly to Adult
 
@@ -83,8 +83,6 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Backup alternates
 
-- **Indiyskoye Kino** — RU — https://stream8.cinerama.uz/1060/tracks-v1a1/mono.m3u8
-- **Star Cinema** — RU — http://s7.merlive.am/starsinema/index.m3u8
 - **8XM** — PK — https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
 
 ## Country Migrations
@@ -92,13 +90,6 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Existing discovery-queue entries removed
 
-- **AMC Europe Romania** — `New Channels` — unsafe or tokenized URL
-- **Cinemax 2 Romania** — `New Channels` — unsafe or tokenized URL
-- **Cinemax (Czech Republic) Romania** — `New Channels` — unsafe or tokenized URL
-- **Film Cafe Romania** — `New Channels` — unsafe or tokenized URL
-- **Film Now** — `New Channels` — unsafe or tokenized URL
-- **HBO 2 (Romania)** — `New Channels` — unsafe or tokenized URL
-- **HBO (Romania)** — `New Channels` — unsafe or tokenized URL
 
 ## Rejections
 
@@ -120,19 +111,19 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 
 ## Stream verification
 
-- Run timestamp: 2026-11-28T12:51:20+06:00
+- Run timestamp: 2026-11-28T12:54:51+06:00
 - Mode: international
-- New entries and discovery queues probed: 93
-- Verified live media responses: 41
-- Verified new primary channels retained in New Channels: 18
-- Verified alternate streams retained in New Backups: 23
-- Inconclusive candidates retained for manual review: 6
+- New entries and discovery queues probed: 98
+- Verified live media responses: 40
+- Verified new primary channels retained in New Channels: 25
+- Verified alternate streams retained in New Backups: 15
+- Inconclusive candidates retained for manual review: 11
 - Unverified backup streams moved to Review: 0
-- Definitively dead new candidates removed: 46
+- Definitively dead new candidates removed: 47
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
-- Candidates retained without authentic local logos (no placeholder used): 4
+- Candidates retained without authentic local logos (no placeholder used): 5
 
 ### Stream probe details
 - Removed newly discovered 4 Fun TV from New Channels — HTTP 404.
@@ -143,10 +134,19 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered ATN Music (360p) from New Channels — HTTP 404.
 - Removed newly discovered BRIDGE Classic (576p) from New Channels — HTTP 404.
 - Retained BRIDGE Dance [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Removed newly discovered BRIDGE Hits (576p) from New Channels — HTTP 404.
 - Retained BRIDGE Jazz [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
 - Retained BRIDGE Rap [ ] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Retained BRIDGE RNB (720p) [Geo-blocked] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Kept BRIDGE RNB (720p) [Geo-blocked] in New Channels without tvg-logo — no authentic local repository asset was available.
+- Retained BRIDGE Soul (720p) [Geo-blocked] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Kept BRIDGE Soul (720p) [Geo-blocked] in New Channels without tvg-logo — no authentic local repository asset was available.
+- Retained BRIDGE Symphony (720p) [Geo-blocked] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Kept BRIDGE Symphony (720p) [Geo-blocked] in New Channels without tvg-logo — no authentic local repository asset was available.
+- Retained BRIDGE Vostok (720p) [Geo-blocked] in New Channels for manual review — stream probe was inconclusive (HTTP 403; access/availability could not be confirmed).
+- Kept BRIDGE Vostok (720p) [Geo-blocked] in New Channels without tvg-logo — no authentic local repository asset was available.
+- Retained CinemaWorld Vietnam in New Channels for manual review — stream probe was inconclusive (response did not clearly identify a live media stream).
 - Removed newly discovered Film & Arts (1080p) from New Channels — HTTP 404.
-- Kept Film Mania Romania (576i) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Retained Hollywood Ukraine in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Removed newly discovered HomePlus from New Channels — HTTP 404.
 - Removed newly discovered ICC plus (1080p) from New Channels — HTTP 404.
@@ -188,27 +188,17 @@ Eligible Movies/Music primary discoveries are staged in New Channels; new Adult 
 - Removed newly discovered TVS Film Noir Network (720p) from New Channels — HTTP success returned an HTML/error page, not a TV stream.
 - Retained Viasat Kino (Ukraine) in New Channels for manual review — stream probe was inconclusive (connection could not be confirmed: URLError).
 - Removed newly discovered Viasat Kino (Ukraine) Romania from New Channels — HTTP success returned an HTML/error page, not a TV stream.
-- Kept Zee Cinema APAC (720p) in New Channels without tvg-logo — no authentic local repository asset was available.
 - Removed newly discovered 8XM from New Backups — HTTP 404.
-- Kept Indiyskoye Kino in New Backups without tvg-logo — no authentic local repository asset was available.
-- Promoted orphan A1 from New Backups to New Channels — no primary identity existed in an active group.
-- Promoted orphan Cinema (Russia) from New Backups to New Channels — no primary identity existed in an active group.
-- Promoted orphan Kineko from New Backups to New Channels — no primary identity existed in an active group.
-- Promoted orphan KinoHit from New Backups to New Channels — no primary identity existed in an active group.
-- Promoted orphan Kinosemja from New Backups to New Channels — no primary identity existed in an active group.
-- Promoted orphan Mezzo from New Backups to New Channels — no primary identity existed in an active group.
-- Promoted orphan Muzyka Pervogo from New Backups to New Channels — no primary identity existed in an active group.
-- Promoted orphan Rotana Cinema KSA from New Backups to New Channels — no primary identity existed in an active group.
 
 ## Final validation
 
-- Run timestamp: 2026-11-28T12:51:21+06:00
+- Run timestamp: 2026-11-28T12:54:52+06:00
 - Validation status: PASS
-- M3U entries parsed: 3328
+- M3U entries parsed: 3332
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - Review/New Channels/New Backups/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 4
+- Discovery entries missing a logo (left blank rather than using a placeholder): 5
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
