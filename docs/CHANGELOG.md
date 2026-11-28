@@ -8,52 +8,23 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 ### 2026-11-28 — `IPTV-Playlist.m3u`
 
 - New channel identities: **0**
-- Channel identities removed: **6**
-- Stream URLs added / removed: **0 / 6**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **15**
+- Logo reference changes: **6**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Removed channel identities (up to 10):
-- Raatdin Bangla
-- RS Sports 1
-- RS Sports 2
-- RS Sports 3
-- RS Sports 4
-- RS Sports 5
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-28 — `International-Playlist.m3u`
 
-- New channel identities: **7**
-- Channel identities removed: **15**
-- Stream URLs added / removed: **10 / 21**
+- New channel identities: **0**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **0 / 0**
 - Backup URL updates: **0**
-- Logo reference changes: **0**
+- Logo reference changes: **11**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
-
-Added channel identities (up to 10):
-- Abdulmajeed Abdullah (1080p)
-- BRIDGE RNB (720p) [Geo-blocked]
-- BRIDGE Soul (720p) [Geo-blocked]
-- BRIDGE Symphony (720p) [Geo-blocked]
-- BRIDGE Vostok (720p) [Geo-blocked]
-- Film Mania Romania (576i)
-- Shot TV (576p)
-
-Removed channel identities (up to 10):
-- AXS
-- beIN SPORTS
-- BRIDGE Hits
-- Islam TV
-- MTV
-- NFL Network
-- TNT Sports 1
-- Willow Sports
-- Zee Telugu
-- Cinemax 2 Romania
 
 ## [5.1] — Playlist Studio (2026-11-11)
 
