@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T09:54:19+00:00**
+Generated: **2026-11-28T09:56:10+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **1446ef9fd9ae319d6ab0dcaf9968f3c5e40c2f1e9d40bed04533ed7ddd9b3046**
+- IPTV-Playlist.m3u SHA-256: **2f4785798641925c4ca332c77a07fc13a208f2c71d0bc65dfed5d1765b836a8e**
 - International-Playlist.m3u SHA-256: **248ff78f7e53dc302880e5cb413bfd2f727021f7d7d92a3f3c6f5222618bbe7b**
 
 ## Summary
@@ -1108,7 +1108,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | AMC Thrillers | amc-triller.png | International |
 | IPTV-Playlist.m3u | BBC World | bbc-world-news.png | International |
 | IPTV-Playlist.m3u | Blues TV | blues-tv.png | International |
-| IPTV-Playlist.m3u | Cine Canal | 4-sides-tv-6a436fa007.png | International |
+| IPTV-Playlist.m3u | Cine Canal | cinecanal-1080p.png | International |
 | IPTV-Playlist.m3u | CMC TV | cmc-tv.png | International |
 | IPTV-Playlist.m3u | Cowboy Movie Channel | cowboy-movie-channel.png | International |
 | IPTV-Playlist.m3u | Dance TV | dance-tv.png | International |

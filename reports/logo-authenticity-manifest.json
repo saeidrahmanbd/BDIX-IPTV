@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-28T09:54:37.276320+00:00",
+  "generated_at_utc": "2026-11-28T09:56:23.674265+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,7 +11,7 @@
     "International-Playlist.m3u": 3332
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "1446ef9fd9ae319d6ab0dcaf9968f3c5e40c2f1e9d40bed04533ed7ddd9b3046",
+    "IPTV-Playlist.m3u": "2f4785798641925c4ca332c77a07fc13a208f2c71d0bc65dfed5d1765b836a8e",
     "International-Playlist.m3u": "248ff78f7e53dc302880e5cb413bfd2f727021f7d7d92a3f3c6f5222618bbe7b"
   },
   "status_counts": {
@@ -5407,7 +5407,7 @@
       "channel_name": "Cine Canal",
       "tvg_id": "",
       "channel_id": "",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinecanal-1080p.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
