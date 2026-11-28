@@ -368,8 +368,19 @@ def probe_mode(playlist, report, baseline, mode):
         status, reason = results[e["start"]]
         counts[f"stream status: {status}"] += 1
         if status == "dead":
-            # A definitive dead/invalid response is the discovery-time stream
-            # failure that removes a newly sourced candidate.
+            # Protected International queues are archival safety nets. A dead
+            # probe is recorded, but never silently deletes a Backup/Review row.
+            # Quarantine it in Review so the owner can inspect or explicitly retire it.
+            if mode == "international" and e["group"].casefold() in {"backup", "backups", "review", "not playing"}:
+                current = update_lines.get(e["start"], e["extinf"])
+                current = discovery.set_attr(current, "group-title", "Review")
+                current = discovery.set_attr(current, "x-discovery-hold-reason", "definitively-dead-protected-stream")
+                update_lines[e["start"]] = current
+                counts["protected dead streams retained in Review"] += 1
+                details.append(f"- Retained protected {e['group']} stream {e['name']} in Review — probe reported {reason}; no automatic deletion.")
+                continue
+            # A definitive dead/invalid response removes only an unprotected
+            # newly sourced discovery candidate.
             remove_starts.add(e["start"])
             details.append(f"- Removed newly discovered {e['name']} from {e['group']} — {reason}.")
             counts["definitively dead new candidates removed"] += 1
@@ -473,6 +484,34 @@ def final_mode(playlist, report, baseline, mode):
     before = bp.read_text(encoding="utf-8-sig")
     lines, entries, malformed = parse_playlist(text)
     _, before_entries, before_malformed = parse_playlist(before)
+
+    if mode == "international":
+        # New Backups is reserved for alternate URLs of an already represented
+        # channel. If a candidate has no primary identity in any active group,
+        # it is itself the only available primary and must be staged in New Channels.
+        represented = {
+            discovery.primary_identity(entry["attrs"], entry["name"])
+            for entry in entries
+            if entry["group"].casefold() not in {"new channels", "new backup", "new backups", "review", "not playing", "test"}
+        }
+        promoted = 0
+        for entry in entries:
+            if entry["group"].casefold() not in {"new backup", "new backups"}:
+                continue
+            key = discovery.primary_identity(entry["attrs"], entry["name"])
+            if key and key not in represented:
+                updated = discovery.set_attr(entry["extinf"], "group-title", "New Channels")
+                lines[entry["start"]] = updated
+                entry["extinf"] = updated
+                entry["group"] = "New Channels"
+                represented.add(key)
+                promoted += 1
+        if promoted:
+            lines = stable_group_order(lines)
+            p.write_text("\\n".join(lines).rstrip() + "\\n", encoding="utf-8")
+            text = p.read_text(encoding="utf-8-sig")
+            lines, entries, malformed = parse_playlist(text)
+            append_section(report, "Primary promotion", f"- Orphan New Backups promoted to New Channels: {promoted} (no primary identity existed in an active group).")
 
     if mode == "iptv":
         # Compare only this run's additions against the exact pre-run snapshot.
