@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-28T05:27:11+06:00** (Asia/Dhaka)
+Generated: **2026-11-28T10:43:31+06:00** (Asia/Dhaka)
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **Discovery scope: Bangladesh and India source feeds. Feed context sets content-policy scope; country metadata is retained as supplied and is not a discovery gate.**
@@ -14,8 +14,8 @@ Generated: **2026-11-28T05:27:11+06:00** (Asia/Dhaka)
 - Country-group threshold: **5** legitimate primary identities
 - Only discovery queue rows were purged, reclassified or logo-normalized; unrelated primary playlist entries were preserved.
 - New channels: **6**
-- New backups: **6**
-- Rejected/held candidates: **882**
+- New backups: **5**
+- Rejected/held candidates: **884**
 - Country metadata, channel IDs, language and logos are advisory at this stage; retain uncertain values for owner review and repair later.
 
 ## Rejection reasons
@@ -24,17 +24,17 @@ Generated: **2026-11-28T05:27:11+06:00** (Asia/Dhaka)
 - Indian education channel is prohibited: 7
 - Indian kids channel is prohibited: 15
 - Indian knowledge channel is prohibited: 2
-- Indian news channel is prohibited: 307
-- Indian religious channel is prohibited: 123
+- Indian news channel is prohibited: 308
+- Indian religious channel is prohibited: 124
 - channel country CA is outside Bangladesh/India: 1
 - channel country NL is outside Bangladesh/India: 2
 - channel country PK is outside Bangladesh/India: 1
 - duplicate channel identity already staged in a discovery queue: 1
-- duplicate stream URL: 337
+- duplicate stream URL: 338
 - known Indian prohibited MH One Prime channel is prohibited: 1
 - known Indian prohibited brand/category is prohibited: 12
 - permanently banned channel: 32
-- proxy/worker host: 3
+- proxy/worker host: 2
 - tokenized URL: 10
 - unsupported stream path: 19
 
@@ -51,7 +51,6 @@ Generated: **2026-11-28T05:27:11+06:00** (Asia/Dhaka)
 
 - Boishakhi TV (source feed: Bangladesh) — https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
 - T Sports (1080p) (source feed: Bangladesh) — https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
-- DD Assam (576p) (source feed: India) — https://fta.ektv.in/live/672/master.m3u8
 - DD Manipur (576p) (source feed: India) — https://fta.ektv.in/live/671/master.m3u8
 - DD Nagaland (576p) (source feed: India) — https://fta.ektv.in/live/670/master.m3u8
 - DD Tripura (576p) (source feed: India) — https://fta.ektv.in/live/661/master.m3u8
@@ -60,10 +59,10 @@ Generated: **2026-11-28T05:27:11+06:00** (Asia/Dhaka)
 
 ## Stream verification
 
-- Run timestamp: 2026-11-28T05:27:12+06:00
+- Run timestamp: 2026-11-28T10:43:32+06:00
 - Mode: iptv
-- New entries and discovery queues probed: 12
-- Verified live media responses: 1
+- New entries and discovery queues probed: 11
+- Verified live media responses: 0
 - Verified new primary channels retained in New Channels: 0
 - Verified alternate streams retained in New Backups: 0
 - Inconclusive candidates retained for manual review: 0
@@ -71,7 +70,7 @@ Generated: **2026-11-28T05:27:11+06:00** (Asia/Dhaka)
 - Definitively dead new candidates removed: 11
 - Duplicate newly discovered stream entries removed: 0
 - Country-group rows consolidated after stream probing: 0
-- Logo references localized to authentic repository assets: 1
+- Logo references localized to authentic repository assets: 0
 - Candidates retained without authentic local logos (no placeholder used): 0
 
 ### Stream probe details
@@ -89,9 +88,9 @@ Generated: **2026-11-28T05:27:11+06:00** (Asia/Dhaka)
 
 ## Final validation
 
-- Run timestamp: 2026-11-28T05:27:12+06:00
+- Run timestamp: 2026-11-28T10:43:32+06:00
 - Validation status: PASS
-- New manual-review candidates retained: 1
+- New manual-review candidates retained: 0
 - New malformed EXTINF/URL pairs: 0
 - New duplicate stream URL occurrences: 0
 - New candidates missing an authentic local logo: 0 (warning only)
