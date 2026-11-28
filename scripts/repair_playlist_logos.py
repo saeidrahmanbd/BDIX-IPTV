@@ -101,6 +101,8 @@ LOCAL_OVERRIDES = {
     "vevo 90s 00s": "vevo-90s-00s.png",
     # The stream is the XITE Celebrates feed; this is its existing local artwork.
     "xite summer": "xite-celebrates-0178ee79a4.png",
+    # Same verified MyTime Movie Network brand mark already used by its Brazil feed.
+    "mytime movie network us": "mytime-movie-network.png",
 }
 FORCED_CHANNEL_LOGOS = {
     "bollygold": "nh-bollygold-dbedeff9.png",
@@ -502,6 +504,41 @@ EXTRA_DIRECT_HINTS = {
         "page": "https://commons.wikimedia.org/wiki/File:Cooking_Channel.svg",
         "license": "Cooking Channel logo attributed to Discovery, Inc., sourced through Wikimedia Commons; PD-textlogo classification with trademark notice.",
         "license_url": "https://commons.wikimedia.org/wiki/Template:PD-textlogo",
+    },
+    "Travel XP Bangla": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Txphd_logo_2015.png",
+        "format": "PNG",
+        "page": "https://commons.wikimedia.org/wiki/File:Txphd_logo_2015.png",
+        "license": "Travelxp logo uploaded by Travelxpindia; Creative Commons Attribution-ShareAlike 4.0 International.",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    },
+    "Al Sunnah TV": {
+        "url": "https://aloula.faulio.com/storage/mediagallery/33/92/fullhd_879e557011826f507a045b4e0b4c3b57ba93edae.png",
+        "format": "PNG",
+        "page": "https://publiciptv.com/channels/alsunnahalnabawiyahtvsa",
+        "license": "Exact Al Sunnah Al Nabawiyah TV logo paired with the same live.net.sa stream URL in a public channel listing; broadcaster-hosted asset URL, source attribution only.",
+        "license_url": "",
+    },
+    "Saudi Quran": {
+        "url": "https://pbs.twimg.com/profile_images/1313539609268285442/86vzT1LT.jpg",
+        "format": "JPEG",
+        "page": "https://commons.wikimedia.org/wiki/File:قناة_القرآن_الكريم.svg",
+        "license": "Official Saudi Quran TV channel avatar, documented as the source of the channel logo on Wikimedia Commons; Creative Commons Attribution-ShareAlike 4.0 International.",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    },
+    "CRTV (Chile)": {
+        "url": "https://crtvchile.cl/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-06-at-13.49.04.jpeg",
+        "format": "JPEG",
+        "page": "https://crtvchile.cl/acerca-de/",
+        "license": "Exact CRTV Chile logo published on the broadcaster's official website under its 'Nuestro logo' section; source attribution only, no separate copyright licence asserted.",
+        "license_url": "",
+    },
+    "Quran Radio TV SMC": {
+        "url": "https://i.imgur.com/MxZlOvc.png",
+        "format": "PNG",
+        "page": "https://github.com/myfriendqaz/LiveTVCollector/blob/main/LiveTV/Arabic/LiveTV.m3u",
+        "license": "Exact Sharjah Radio Quran logo paired with the identical live.kwikmotion.com/smcquranlive/quranradiolive/playlist.m3u8 stream URL in a published channel playlist; source attribution only, no separate copyright licence asserted.",
+        "license_url": "",
     },
 }
 

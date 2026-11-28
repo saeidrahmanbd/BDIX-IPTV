@@ -339,5 +339,28 @@ class LogoRepairSourceTests(unittest.TestCase):
                 self.assertTrue(hint["license"])
 
 
+    def test_verified_international_and_religious_logo_sources_are_exact(self):
+        expected = {
+            "Travel XP Bangla": "Txphd_logo_2015.png",
+            "Al Sunnah TV": "fullhd_879e557011826f507a045b4e0b4c3b57ba93edae.png",
+            "Saudi Quran": "86vzT1LT.jpg",
+            "CRTV (Chile)": "WhatsApp-Image-2026-06-06-at-13.49.04.jpeg",
+            "Quran Radio TV SMC": "MxZlOvc.png",
+        }
+        for channel, asset in expected.items():
+            with self.subTest(channel=channel):
+                hint = logo_repair.EXTRA_DIRECT_HINTS[channel]
+                self.assertIn(asset, hint["url"])
+                self.assertTrue(hint["page"])
+                self.assertTrue(hint["license"])
+
+    def test_mytime_us_variant_reuses_the_same_verified_local_brand_logo(self):
+        self.assertEqual(
+            logo_repair.LOCAL_OVERRIDES["mytime movie network us"],
+            "mytime-movie-network.png",
+        )
+        self.assertTrue(logo_repair.file_is_valid(ROOT / "logos" / "mytime-movie-network.png"))
+
+
 if __name__ == "__main__":
     unittest.main()
