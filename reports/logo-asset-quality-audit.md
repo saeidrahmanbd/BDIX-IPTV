@@ -1,13 +1,13 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T17:20:43+00:00**
+Generated: **2026-11-28T17:35:25+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **16cb5b67823f8123c5f4cc73282155033d5a732945a92639deeb86e26fe6bd23**
-- International-Playlist.m3u SHA-256: **3f5544e59667a5d364259a8597706c9c58b7a4c1712ed1a990487f259da730b0**
+- IPTV-Playlist.m3u SHA-256: **767c14fb0a47a838292be2c608ab99c901d129249fdacef417b8840033b3fcf8**
+- International-Playlist.m3u SHA-256: **9733b1940dfab714e8f54460b870ffa7b37748ece1c9526ac8f90f9a734ca299**
 
 ## Summary
 
@@ -17,7 +17,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **149**
 - Exact-byte duplicate asset clusters: **753**
-- Playlist references whose asset stem differs from the normalized channel name: **1610**
+- Playlist references whose asset stem differs from the normalized channel name: **1611**
 - Unreferenced image assets immediately inside logos/: **997** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
@@ -1131,6 +1131,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Radio Norba TV | radio-norba-tv.png | International |
 | IPTV-Playlist.m3u | RDS Social TV | rds-social-tv.png | International |
 | IPTV-Playlist.m3u | Retro Music TV | retro-music-tv-1080p-610715c3c9.png | International |
+| IPTV-Playlist.m3u | Rock TV | rock-tv-romania-9784455c18.png | International |
 | IPTV-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | International |
 | IPTV-Playlist.m3u | Stingray Today's Latin Pop | stingray-urban-beat-9bd52aa87f.png | International |
 | IPTV-Playlist.m3u | TRT Müzik | trt-muzik.png | International |

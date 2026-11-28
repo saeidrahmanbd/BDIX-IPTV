@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-11-28 17:20 UTC**  
+Run time: **2026-11-28 17:34 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,14 +9,13 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Active missing after | Review missing after | Adult missing metadata (untouched) | Adult entries skipped (all) | Generated fallbacks | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1373 | 0 | 8 | 0 | 0 | 0 | 0 | 0 | 8 |
+| IPTV-Playlist.m3u | 1373 | 0 | 7 | 0 | 0 | 0 | 0 | 0 | 7 |
 | International-Playlist.m3u | 3332 | 0 | 10 | 14 | 364 | 372 | 0 | 0 | 24 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| IPTV-Playlist.m3u | 928 | Rock TV | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1312 | Eliminatorias CONCACAF | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1314 | Eliminatorias CONCACAF | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | IPTV-Playlist.m3u | 1316 | Eliminatorias CONCACAF | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
