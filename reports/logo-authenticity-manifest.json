@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-28T17:35:43.504656+00:00",
+  "generated_at_utc": "2026-11-28T17:40:49.614065+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,7 +11,7 @@
     "International-Playlist.m3u": 3332
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "767c14fb0a47a838292be2c608ab99c901d129249fdacef417b8840033b3fcf8",
+    "IPTV-Playlist.m3u": "25206445454790f8cf1e4f60acef3d030b563cba93de4c0d68c3603eee1a077c",
     "International-Playlist.m3u": "9733b1940dfab714e8f54460b870ffa7b37748ece1c9526ac8f90f9a734ca299"
   },
   "status_counts": {
@@ -8213,8 +8213,8 @@
       "playlist": "IPTV-Playlist.m3u",
       "line": 1266,
       "channel_name": "beIN SPORTS 6",
-      "tvg_id": "",
-      "channel_id": "",
+      "tvg_id": "beINSports6.qa",
+      "channel_id": "beINSports6.qa",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-6.png",
       "status": "needs_review",
       "registry_match": "none",
@@ -8226,8 +8226,8 @@
       "playlist": "IPTV-Playlist.m3u",
       "line": 1268,
       "channel_name": "BEIN SPORTS 6",
-      "tvg_id": "",
-      "channel_id": "",
+      "tvg_id": "beINSports6.qa",
+      "channel_id": "beINSports6.qa",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-6.png",
       "status": "needs_review",
       "registry_match": "none",
@@ -8278,8 +8278,8 @@
       "playlist": "IPTV-Playlist.m3u",
       "line": 1276,
       "channel_name": "beIN SPORTS XTRA",
-      "tvg_id": "",
-      "channel_id": "",
+      "tvg_id": "beINSPORTSXTRA.us",
+      "channel_id": "beINSPORTSXTRA.us",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-xtra.png",
       "status": "needs_review",
       "registry_match": "none",

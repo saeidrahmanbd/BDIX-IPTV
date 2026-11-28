@@ -1,9 +1,9 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-28T17:17:39+00:00**
-Source playlist SHA-256: **83aaad779aa5e264863fe62a7f14406ee21c34e2c8dc7b46bccf60f8918b563b**
+Generated: **2026-11-28T17:40:01+00:00**
+Source playlist SHA-256: **25206445454790f8cf1e4f60acef3d030b563cba93de4c0d68c3603eee1a077c**
 
-Status: **PASS**
+Status: **BLOCK**
 
 - Current entries: **1373**
 - Duplicate stream URLs: **0**
@@ -20,20 +20,20 @@ Status: **PASS**
 - Primary entries missing channel numbers: **0**
 - Primary channel-number sequence issues (non-blocking; existing row order is protected): **45**
 - Numbered review entries: **9**
-- Same-ID metadata name conflicts: **0**
+- Same-ID metadata name conflicts: **2**
 - Orphan Backup entries: **7**
-- Active rows with incomplete required metadata: **106**
+- Active rows with incomplete required metadata: **66**
 - tvg-id/channel-id inconsistencies: **0**
 - Entries missing tvg-language: **2**
 - Raw resolution/geoblock name tags: **1**
-- Missing logos in active groups: **8**
+- Missing logos in active groups: **7**
 - Missing logos deferred in review groups (Review/New Channels/New Backups): **0**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
 - Entries added this run: **0**
 - Entries removed this run: **0**
-- Entries modified this run: **5**
+- Entries modified this run: **0**
 
 ## Protected-queue policy
 New Channels and New Backups are discovery queues. Backup and Review remain protected, and Review entries are retained for future rechecks. No automatic migration, promotion, regrouping or renumbering of existing rows is authorized; existing row order, group assignments, channel numbers and stream URLs are protected. Review, New Channels and New Backups are excluded from Xtream.
@@ -42,7 +42,7 @@ New Channels and New Backups are discovery queues. Backup and Review remain prot
 Existing playlist row order is preserved; numbering sequence discrepancies are reported for review and do not trigger automatic reordering. Issues found: **45**.
 
 ## Blocking Reasons
-No hard safety blockers detected.
+- duplicate primary identities: 8
 
 ## Channel-number collision review
 
@@ -55,11 +55,12 @@ No permanently banned channel IDs/names or MH One Prime legacy entries remain in
 ## Warnings / Manual Review
 
 - orphan Backup entries awaiting owner review: 7
-- active entries with incomplete identity/country/logo metadata: 106
+- active entries with incomplete identity/country/logo metadata: 66
 - entries missing tvg-language: 2
 - Backup/Review/discovery entries still numbered: 9
+- same-ID metadata name conflicts: 2
 - raw resolution/geoblock tags in channel names: 1
-- missing logos: 8
+- missing logos: 7
 
 ## Review-queue logo gaps
 
@@ -69,7 +70,8 @@ None.
 
 ## Metadata conflicts
 
-None.
+- **espn2.us@hd** — ESPN 2 [Sports]; ESPN 2 [Sports]; ESPN 2 [Sports]; ESPN2 [Sports]
+- **turkmenistansport.tm@sd** — Turkmenistan Sport [Sports]; Turkmenistan Sport [Sports]; Türkmenistan Sport [Sports]; Türkmenistan Sport [Backup]
 
 ## Raw name tags
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-28T17:18:22+00:00",
+  "generated": "2026-11-28T17:40:42+00:00",
   "channels": {
     "019de785-3a5f-738e-b2e2-f6110c5e8c09": {
       "names": [
@@ -1020,6 +1020,21 @@
       "primary": 1,
       "backup": 0
     },
+    "beinsports6": {
+      "names": [
+        "BEIN SPORTS 6",
+        "beIN SPORTS 6"
+      ],
+      "ids": [
+        "beinsports6.qa"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 2,
+      "primary": 2,
+      "backup": 0
+    },
     "beinsportsxtra": {
       "names": [
         "beIN SPORTS XTRA"
@@ -1031,8 +1046,8 @@
         "Backup",
         "Sports"
       ],
-      "streams": 6,
-      "primary": 1,
+      "streams": 7,
+      "primary": 2,
       "backup": 5
     },
     "bhi.channel": {
@@ -2015,8 +2030,8 @@
         "Backup",
         "Sports"
       ],
-      "streams": 2,
-      "primary": 1,
+      "streams": 3,
+      "primary": 2,
       "backup": 1
     },
     "custom.beinsports2": {
@@ -2030,8 +2045,8 @@
         "Backup",
         "Sports"
       ],
-      "streams": 2,
-      "primary": 1,
+      "streams": 3,
+      "primary": 2,
       "backup": 1
     },
     "custom.beinsports3": {
@@ -4730,6 +4745,7 @@
     },
     "espn2": {
       "names": [
+        "ESPN 2",
         "ESPN2"
       ],
       "ids": [
@@ -4738,8 +4754,8 @@
       "groups": [
         "Sports"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 4,
+      "primary": 4,
       "backup": 0
     },
     "espn8theocho": {
@@ -8570,6 +8586,20 @@
       "primary": 1,
       "backup": 0
     },
+    "rocktv": {
+      "names": [
+        "Rock TV"
+      ],
+      "ids": [
+        "rocktv.ro@sd"
+      ],
+      "groups": [
+        "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "rojamovies": {
       "names": [
         "Roja Movies"
@@ -9348,6 +9378,34 @@
       ],
       "ids": [
         "sport.sk@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sport1": {
+      "names": [
+        "Sport1 (Czech Republic)"
+      ],
+      "ids": [
+        "sport1.cz@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sport2": {
+      "names": [
+        "Sport2 (Czech Republic)"
+      ],
+      "ids": [
+        "sport2.cz@sd"
       ],
       "groups": [
         "Sports"
@@ -10482,6 +10540,7 @@
     },
     "turkmenistansport": {
       "names": [
+        "Turkmenistan Sport",
         "Türkmenistan Sport"
       ],
       "ids": [
@@ -10491,8 +10550,8 @@
         "Backup",
         "Sports"
       ],
-      "streams": 2,
-      "primary": 1,
+      "streams": 4,
+      "primary": 3,
       "backup": 1
     },
     "tvcaribkidsteens": {
@@ -10977,6 +11036,20 @@
       "primary": 1,
       "backup": 0
     },
+    "winsports": {
+      "names": [
+        "Win Sports"
+      ],
+      "ids": [
+        "winsports.co@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 4,
+      "primary": 4,
+      "backup": 0
+    },
     "witnesstojustice": {
       "names": [
         "Witness to Justice"
@@ -11017,6 +11090,20 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "worldoffreesports": {
+      "names": [
+        "World of Freesports"
+      ],
+      "ids": [
+        "worldoffreesports.de@sd"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "worldwartv": {

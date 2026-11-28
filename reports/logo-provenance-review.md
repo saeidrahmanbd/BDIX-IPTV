@@ -1,14 +1,14 @@
 # Logo Provenance Review
 
-Generated: **2026-11-28T17:18:31+00:00**
+Generated: **2026-11-28T17:40:49+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **83aaad779aa5e264863fe62a7f14406ee21c34e2c8dc7b46bccf60f8918b563b**
-- International-Playlist.m3u SHA-256: **3f5544e59667a5d364259a8597706c9c58b7a4c1712ed1a990487f259da730b0**
+- IPTV-Playlist.m3u SHA-256: **25206445454790f8cf1e4f60acef3d030b563cba93de4c0d68c3603eee1a077c**
+- International-Playlist.m3u SHA-256: **9733b1940dfab714e8f54460b870ffa7b37748ece1c9526ac8f90f9a734ca299**
 
 ## Provenance status by playlist
 
@@ -132,6 +132,10 @@ The same local file is referenced by more than one playlist tvg-id below. Review
 | sony-max.png | Sony Max | SonyMax.in@SD |
 | sony-sports-ten-2.png | Sony Sports Ten 2 | SonySportsTen2.in@HD |
 | sony-sports-ten-2.png | Sony Sports Ten 2 | SonySportsTen2.in@SD |
+| sport1-d42479c518.png | Sport1 (Czech Republic) | Sport1.cz@SD |
+| sport1-d42479c518.png | Sport 1 (Hungary) | custom.sport1hungary |
+| sport2-620b031a4a.png | Sport2 (Czech Republic) | Sport2.cz@SD |
+| sport2-620b031a4a.png | Sport 2 (Hungary) | custom.sport2hungary |
 | sunnah-tv.png | Makkah Live | MakkahLive.sa |
 | sunnah-tv.png | Al Sunnah Al Nabawiyah | custom.alsunnahalnabawiyah |
 | tnt-sports-1.png | TNT Sports | custom.tntsports |

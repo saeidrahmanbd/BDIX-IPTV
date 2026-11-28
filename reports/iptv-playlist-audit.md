@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
-Generated: **2026-11-28T17:17:38.624966+00:00**
-Source playlist SHA-256: **83aaad779aa5e264863fe62a7f14406ee21c34e2c8dc7b46bccf60f8918b563b**
+Generated: **2026-11-28T17:40:00.902102+00:00**
+Source playlist SHA-256: **25206445454790f8cf1e4f60acef3d030b563cba93de4c0d68c3603eee1a077c**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
@@ -8,26 +8,26 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 ## Summary
 
 - Playlist entries: **1373**
-- Unique channel IDs: **820**
-- IDs with multiple streams: **249**
+- Unique channel IDs: **826**
+- IDs with multiple streams: **253**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **0**
-- Same-name / different-ID collisions: **4**
-- Cross-queue same-ID name variants (review): **0**
+- Metadata conflicts: **2**
+- Same-name / different-ID collisions: **3**
+- Cross-queue same-ID name variants (review): **1**
 - Cross-queue normalized-name/different-ID groups (review): **17**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **242**
+- IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **8**
+- Logo exceptions requiring repair: **7**
 - Missing logos in review queues (review only): **0**
 - External logo references (review only): **0**
 - Logo references checked: **1373**
-- Duplicate primary identities: **0**
-- Potential near-duplicate primary name groups (review only): **5**
+- Duplicate primary identities: **8**
+- Potential near-duplicate primary name groups (review only): **7**
 - Primary channel-number collisions: **0**
 - Primary channel-number sequence issues (review only): **45**
 - Primary entries missing channel numbers: **0**
-- Primary entries missing tvg-country: **91**
+- Primary entries missing tvg-country: **37**
 - Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **3**
@@ -42,14 +42,14 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 ## Primary Metadata Completeness
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
-- Active primary entries missing tvg-country: **91**
+- Active primary entries missing tvg-country: **37**
 - Active primary entries missing tvg-language: **0**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
-| International | 6 | 0 |
-| Religious | 5 | 0 |
-| Sports | 80 | 0 |
+| International | 3 | 0 |
+| Religious | 2 | 0 |
+| Sports | 32 | 0 |
 
 ## Review Queue Country Verification
 
@@ -63,7 +63,7 @@ New Channels/New Backups contain only entries verified as BD/IN.
 
 These diagnostics include canonical and review groups. Name/ID differences can be legitimate; this section does not merge identities, remove entries, or print stream URLs.
 
-No same-ID label variants found across groups.
+- Same ID turkmenistansport.tm@sd: Turkmenistan Sport [Sports]; Türkmenistan Sport [Backup]; Türkmenistan Sport [Sports]
 
 - Same normalized name: Apna Punjab TV [apnapunjabtv.ca@sd] (Indian Entertainment); Apna Punjab TV [apnapunjabtv.in@sd] (Indian Entertainment)
 - Same normalized name: ATN Bangla [atnbangla.bd] (Backup); ATN Bangla [atnbangla.bd] (Bangladesh); ATN Bangla [atnbangla.bd@sd] (Review)
@@ -226,8 +226,12 @@ No same-ID label variants found across groups.
 - Bangla Vision — Backup — https://iptvlive.ahmed-bd-org.workers.dev/banglavision-1/index.m3u8
 - Bangla Vision — Backup — https://tvsen5.aynaott.com/tgUzpPc9r6xw/index.m3u8
 - Bangla Vision — Backup — http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/44.m3u8
-### beinsportsxtra.us (6 streams)
+### beinsports6.qa (2 streams)
+- beIN SPORTS 6 — Sports — http://s.only4.tv/5593/index.m3u8
+- BEIN SPORTS 6 — Sports — http://foxbleu-cdn.com/live/[REDACTED]/[REDACTED]/78383.ts
+### beinsportsxtra.us (7 streams)
 - beIN SPORTS XTRA — Sports — https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
+- beIN SPORTS XTRA — Sports — https://bein-esp-xumo.amagi.tv/playlist.m3u8
 - beIN SPORTS XTRA — Backup — http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/34.m3u8
 - beIN SPORTS XTRA — Backup — https://bein-beinxtrasports-firetv.amagi.tv/playlist.m3u8
 - beIN SPORTS XTRA — Backup — https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
@@ -292,11 +296,13 @@ No same-ID label variants found across groups.
 ### custom.azantv (2 streams)
 - Azan TV — Religious — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/azantv.stream/tracks-v1a1/mono.m3u8
 - Azan TV — Backup — https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8
-### custom.beinsports1 (2 streams)
+### custom.beinsports1 (3 streams)
 - beIN SPORTS 1 — Sports — http://27.124.71.27/beIN_Sports_1/index.m3u8
+- beIN SPORTS 1 — Sports — http://s.only4.tv/5588/index.m3u8
 - beIN SPORTS 1 — Backup — http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/30.m3u8
-### custom.beinsports2 (2 streams)
+### custom.beinsports2 (3 streams)
 - beIN SPORTS 2 — Sports — http://27.124.71.27/beIN_Sports_2/index.m3u8
+- beIN SPORTS 2 — Sports — http://190.83.9.222:8000/play/ca129
 - beIN SPORTS 2 — Backup — http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/31.m3u8
 ### custom.beinsports3 (2 streams)
 - beIN SPORTS 3 — Sports — http://27.124.71.27/beIN_Sports_3/index.m3u8
@@ -513,6 +519,11 @@ No same-ID label variants found across groups.
 - ESPN — Backup — https://s2.bufaloweb.com/bufalo8/index.m3u8
 - ESPN — Backup — http://205.235.6.29:8000/play/a0zf/index.m3u8
 - ESPN — Backup — http://181.205.130.194:4000/play/a07j
+### espn2.us@hd (4 streams)
+- ESPN 2 — Sports — http://181.205.130.194:4000/play/a07i
+- ESPN 2 — Sports — http://191.97.49.82:8001/play/a00m/index.m3u8
+- ESPN 2 — Sports — http://45.167.1.136:8000/play/a06b
+- ESPN2 — Sports — http://85.237.89.160:9590/usa-s/ESPN-2-HD/index.m3u8
 ### etvbeats.in@hd (2 streams)
 - ETV Beats — Indian Music — https://jmp2.uk/stvp-IN4900002RV
 - ETV Beats — Backup — https://cc-szivnms4rlah6.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-szivnms4rlah6/WWBI/Amagi/ETV_Music_IN/playlist.m3u8
@@ -1032,7 +1043,9 @@ No same-ID label variants found across groups.
 - T Sports — Backup — http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/10.m3u8
 - T Sports — Backup — http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/11.m3u8
 - T Sports — Backup — http://27.124.71.27/T-Sports/index.m3u8
-### turkmenistansport.tm@sd (2 streams)
+### turkmenistansport.tm@sd (4 streams)
+- Turkmenistan Sport — Sports — http://217.174.225.146/legacyhls/ch004_720/index.m3u8
+- Turkmenistan Sport — Sports — https://alpha.tv.online.tm/legacyhls/ch004_720/index.m3u8
 - Türkmenistan Sport — Sports — https://alpha.tv.online.tm/hls/ch004.m3u8
 - Türkmenistan Sport — Backup — http://217.174.225.146/hls/ch004_720/index.m3u8
 ### ultimatetv.in@sd (2 streams)
@@ -1055,6 +1068,14 @@ No same-ID label variants found across groups.
 - Vendhar TV — Backup — https://cdn.pishow.tv/ott/live/1271/master.m3u8
 - Vendhar TV — Backup — https://fta.ektv.in/live/223/master.m3u8
 - Vendhar TV — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/VendharTV.m3u8
+### winsports.co@sd (4 streams)
+- Win Sports — Sports — http://181.78.71.71:18000/play/a03p/index.m3u8
+- Win Sports — Sports — http://181.78.211.244:8005/play/a0am/index.m3u8
+- Win Sports — Sports — http://181.78.8.199:8000/play/a0cc/index.m3u8
+- Win Sports — Sports — http://138.121.15.230:9002/WIN-SPORT/index.m3u8
+### worldoffreesports.de@sd (2 streams)
+- World of Freesports — Sports — https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-mainstreammediafreesportsintl-rakuten/CDN/master.m3u8
+- World of Freesports — Sports — https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/playlist.m3u8
 ### yrfmusic.in (3 streams)
 - YRF Music — Indian Music — https://amg01412-xiaomiasia-yrfmusic-xiaomi-1rmk2.amagi.tv/playlist/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
 - YRF Music — Backup — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
@@ -1082,7 +1103,14 @@ No same-ID label variants found across groups.
 
 ## Duplicate Primary Identities
 
-None.
+- **beinsports6.qa** — beIN SPORTS 6 [Sports] — http://s.only4.tv/5593/index.m3u8; BEIN SPORTS 6 [Sports] — http://foxbleu-cdn.com/live/[REDACTED]/[REDACTED]/78383.ts
+- **beinsportsxtra.us** — beIN SPORTS XTRA [Sports] — https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8; beIN SPORTS XTRA [Sports] — https://bein-esp-xumo.amagi.tv/playlist.m3u8
+- **custom.beinsports1** — beIN SPORTS 1 [Sports] — http://27.124.71.27/beIN_Sports_1/index.m3u8; beIN SPORTS 1 [Sports] — http://s.only4.tv/5588/index.m3u8
+- **custom.beinsports2** — beIN SPORTS 2 [Sports] — http://27.124.71.27/beIN_Sports_2/index.m3u8; beIN SPORTS 2 [Sports] — http://190.83.9.222:8000/play/ca129
+- **espn2.us@hd** — ESPN 2 [Sports] — http://181.205.130.194:4000/play/a07i; ESPN 2 [Sports] — http://191.97.49.82:8001/play/a00m/index.m3u8; ESPN 2 [Sports] — http://45.167.1.136:8000/play/a06b; ESPN2 [Sports] — http://85.237.89.160:9590/usa-s/ESPN-2-HD/index.m3u8
+- **turkmenistansport.tm@sd** — Turkmenistan Sport [Sports] — http://217.174.225.146/legacyhls/ch004_720/index.m3u8; Turkmenistan Sport [Sports] — https://alpha.tv.online.tm/legacyhls/ch004_720/index.m3u8; Türkmenistan Sport [Sports] — https://alpha.tv.online.tm/hls/ch004.m3u8
+- **winsports.co@sd** — Win Sports [Sports] — http://181.78.71.71:18000/play/a03p/index.m3u8; Win Sports [Sports] — http://181.78.211.244:8005/play/a0am/index.m3u8; Win Sports [Sports] — http://181.78.8.199:8000/play/a0cc/index.m3u8; Win Sports [Sports] — http://138.121.15.230:9002/WIN-SPORT/index.m3u8
+- **worldoffreesports.de@sd** — World of Freesports [Sports] — https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-mainstreammediafreesportsintl-rakuten/CDN/master.m3u8; World of Freesports [Sports] — https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/playlist.m3u8
 
 ## Potential Near-Duplicate Primary Names (Review Only)
 
@@ -1091,6 +1119,8 @@ None.
 - Quran [custom.quran] (Religious); Quran TV [qurantv.iq] (Religious)
 - Sananda [sanandatv.in] (Indian Bangla); Sananda TV [custom.sananda-tv] (Indian Bangla)
 - Sport (Slovakia) [sport.sk@sd] (Sports); Sport TV [custom.sporttv] (Sports)
+- Sport 1 (Hungary) [custom.sport1hungary] (Sports); Sport1 (Czech Republic) [sport1.cz@sd] (Sports)
+- Sport 2 (Hungary) [custom.sport2hungary] (Sports); Sport2 (Czech Republic) [sport2.cz@sd] (Sports)
 
 These are review suggestions only. The audit does not merge identities, change channel order, or remove streams.
 
@@ -1209,14 +1239,13 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1365**
+- Healthy/local references: **1366**
 - External references (review only): **0**
 
 ## Logo Exceptions Requiring Repair
 
 Active playlist entries with missing or invalid logo references. These rows are listed for diagnosis; the audit never invents or substitutes artwork.
 
-- **Rock TV** [] — International — missing — (missing logo reference)
 - **Eliminatorias CONCACAF** [] — Sports — missing — (missing logo reference)
 - **Eliminatorias CONCACAF** [] — Sports — missing — (missing logo reference)
 - **Eliminatorias CONCACAF** [] — Sports — missing — (missing logo reference)
@@ -1230,7 +1259,7 @@ Active playlist entries with missing or invalid logo references. These rows are 
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 None.
-- missing: **8**
+- missing: **7**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
