@@ -281,6 +281,7 @@
     "logos/eurosport-india-993030c6b6.png",
     "logos/external.png",
     "logos/extrema-kids-tv-0108df4648.png",
+    "logos/f/439.png",
     "logos/fake.png",
     "logos/famatv-9f148af63b.jpg",
     "logos/famatv-9f148af63b823030a3ad.jpg",
@@ -1745,6 +1746,10 @@
     ],
     "logos/extrema-kids-tv-0108df4648.png": [
       "reports/logo-source-registry.json"
+    ],
+    "logos/f/439.png": [
+      "scripts/repair_playlist_logos.py",
+      "tests/test_logo_repair_source_hints.py"
     ],
     "logos/fake.png": [
       "tests/test_validate_logo_references.py"
@@ -3878,6 +3883,7 @@
     "logos/euro-girls-on-girls-5a8b8f4718.png",
     "logos/eurosport-india-993030c6b6.png",
     "logos/extrema-kids-tv-0108df4648.png",
+    "logos/f/439.png",
     "logos/famatv-9f148af63b.jpg",
     "logos/famatv-9f148af63b823030a3ad.jpg",
     "logos/family-strokes-cdaf97ec86.png",
