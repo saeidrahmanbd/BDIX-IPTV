@@ -8628,5 +8628,15 @@
     "status": "third_party_verified",
     "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Sky_Cinema_Uno_-_Logo_2020.svg",
     "notes": "Exact external logo asset Sky Italia / Sky Group channel logo; Wikimedia Commons PD-textlogo classification. Source attribution retained; trademark rights remain with Sky. Source page: https://commons.wikimedia.org/wiki/File:Sky_Cinema_Uno_-_Logo_2020.svg"
+  },
+  "International-Playlist.m3u|custom.peace-tv-tw8cm|Peace TV|logos/peace-tv-english.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.peacetv.tv/en/",
+    "notes": "Exact English-language Peace TV brand mark from an existing repository-local asset; the logo artwork matches the broadcaster's official Peace TV identity and the playlist entry is tagged English. Source page: https://www.peacetv.tv/en/"
+  },
+  "International-Playlist.m3u|FloRacing.us@HD|FloRacing|logos/floracing-24-7.png": {
+    "status": "third_party_verified",
+    "source_url": "https://github.com/iptv-org/database/issues/27573",
+    "notes": "Exact FloRacing 24/7 wordmark from an existing repository-local asset; the approved iptv-org channel record identifies the FloRacing.us@HD feed and lists the broadcaster's official logo URL. Official channel page: https://www.floracing.com/live/27148-floracing-24-7"
   }
 }
