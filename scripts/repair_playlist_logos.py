@@ -513,10 +513,10 @@ EXTRA_DIRECT_HINTS = {
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
     },
     "Al Sunnah TV": {
-        "url": "https://aloula.faulio.com/storage/mediagallery/33/92/fullhd_879e557011826f507a045b4e0b4c3b57ba93edae.png",
+        "url": "https://yt3.ggpht.com/ytc/AKedOLSt-wSNAQsBHe849IbPYewi8OUdQlas0z7_2sRqqg%3Ds900-c-k-c0x00ffffff-no-rj",
         "format": "PNG",
-        "page": "https://publiciptv.com/channels/alsunnahalnabawiyahtvsa",
-        "license": "Exact Al Sunnah Al Nabawiyah TV logo paired with the same live.net.sa stream URL in a public channel listing; broadcaster-hosted asset URL, source attribution only.",
+        "page": "https://www.youtube.com/channel/UCROKYPep-UuODNwyipe6JMw",
+        "license": "Official Saudi Broadcasting Authority Al Sunnah Al Nabawiyah TV YouTube channel avatar; source attribution only, no separate copyright licence asserted.",
         "license_url": "",
     },
     "Saudi Quran": {
@@ -534,10 +534,10 @@ EXTRA_DIRECT_HINTS = {
         "license_url": "",
     },
     "Quran Radio TV SMC": {
-        "url": "https://i.imgur.com/MxZlOvc.png",
+        "url": "https://sbauae.faulio.com/storage/mediagallery/15/8a/fullhd_ce9abfb9b99a2a7aa2a605386ac93f22e74ec48e.png",
         "format": "PNG",
-        "page": "https://github.com/myfriendqaz/LiveTVCollector/blob/main/LiveTV/Arabic/LiveTV.m3u",
-        "license": "Exact Sharjah Radio Quran logo paired with the identical live.kwikmotion.com/smcquranlive/quranradiolive/playlist.m3u8 stream URL in a published channel playlist; source attribution only, no separate copyright licence asserted.",
+        "page": "https://www.sba.net.ae/live/a1f57dbe16971827aaa5c5e4dda1ca68",
+        "license": "Official Sharjah Broadcasting Authority Sharjah Quran Radio channel artwork; the current playlist stream URL is the same Sharjah Quran Radio service; source attribution only.",
         "license_url": "",
     },
 }

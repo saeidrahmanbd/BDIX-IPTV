@@ -342,10 +342,10 @@ class LogoRepairSourceTests(unittest.TestCase):
     def test_verified_international_and_religious_logo_sources_are_exact(self):
         expected = {
             "Travel XP Bangla": "Txphd_logo_2015.png",
-            "Al Sunnah TV": "fullhd_879e557011826f507a045b4e0b4c3b57ba93edae.png",
+            "Al Sunnah TV": "AKedOLSt-wSNAQsBHe849IbPYewi8OUdQlas0z7_2sRqqg",
             "Saudi Quran": "86vzT1LT.jpg",
             "CRTV (Chile)": "WhatsApp-Image-2026-06-06-at-13.49.04.jpeg",
-            "Quran Radio TV SMC": "MxZlOvc.png",
+            "Quran Radio TV SMC": "fullhd_ce9abfb9b99a2a7aa2a605386ac93f22e74ec48e.png",
         }
         for channel, asset in expected.items():
             with self.subTest(channel=channel):
