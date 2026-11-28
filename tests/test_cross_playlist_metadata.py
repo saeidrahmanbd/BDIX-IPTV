@@ -31,8 +31,11 @@ class CrossPlaylistMetadataTests(unittest.TestCase):
         updated, counts = backfill_text(text, {
             "BBCNews.uk": {"country": "US", "language": "hin"}
         }, {})
-        self.assertEqual(updated, text)
-        self.assertEqual(counts["entries_changed"], 0)
+        self.assertIn('tvg-country="GB"', updated)
+        self.assertIn('tvg-language="eng"', updated)
+        self.assertIn('channel-id="BBCNews.uk"', updated)
+        self.assertEqual(counts["entries_changed"], 1)
+        self.assertEqual(counts["channel_id_fields_filled"], 1)
 
     def test_backup_entries_are_untouched(self):
         text = (

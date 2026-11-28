@@ -43,7 +43,10 @@ class EPGRefreshNeededTests(unittest.TestCase):
     def test_epg_workflow_runs_once_daily_after_discovery_or_manual_dispatch(self):
         workflow = (Path(__file__).resolve().parents[1] / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertNotIn("workflow_run:", workflow)
-        self.assertNotIn("push:", workflow)
+        self.assertIn("push:", workflow)
+        self.assertIn("- IPTV-Playlist.m3u", workflow)
+        self.assertIn("- International-Playlist.m3u", workflow)
+        self.assertIn("github.event_name == 'push'", workflow)
         self.assertIn("cron: '7 0 * * *'", workflow)
         self.assertIn("workflow_dispatch:", workflow)
         self.assertIn("--max-age-hours 8", workflow)

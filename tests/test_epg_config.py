@@ -913,7 +913,10 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("cron: '7 0 * * *'", workflow)
         self.assertIn("workflow_dispatch:", workflow)
         self.assertNotIn("workflow_run:", workflow)
-        self.assertNotIn("push:", workflow)
+        self.assertIn("push:", workflow)
+        self.assertIn("- IPTV-Playlist.m3u", workflow)
+        self.assertIn("- reports/epg-channel-mapping.csv", workflow)
+        self.assertIn("github.event_name == 'push'", workflow)
         self.assertIn("# 06:07 Asia/Dhaka", workflow)
         self.assertIn("epg_refresh_needed.py --max-age-hours 8", workflow)
 

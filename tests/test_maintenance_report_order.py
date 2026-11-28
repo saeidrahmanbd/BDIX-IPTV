@@ -20,7 +20,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         for name in (
             "test_stream_url_identity.py", "test_main_playlist_protection.py", "test_report_freshness.py",
             "test_maintenance_extinf_canonicalization.py", "test_pre_publish_gate_logo_paths.py",
-            "test_maintenance_report_order.py", "test_metadata_backfill.py", "test_logo_authenticity_manifest.py",
+            "test_maintenance_report_order.py", "test_metadata_backfill.py", "test_cross_playlist_metadata_backfill.py", "test_logo_authenticity_manifest.py",
             "test_logo_asset_naming.py", "test_logo_provenance_review.py",
             "test_logo_repair_source_hints.py", "test_iptv_fragile_streams.py",
             "test_language_policy.py", "test_country_verification.py",
@@ -161,9 +161,9 @@ class MaintenanceReportOrderTests(unittest.TestCase):
             "owner-requested-iptv-migration.json",
             "probe_owner_requested_main_queues.py",
             "migrate_owner_requested_main_queues.py",
-            "renumber_active_channels.py",
         ):
             self.assertNotIn(retired, workflow)
+        self.assertIn("python scripts/renumber_active_channels.py IPTV-Playlist.m3u", mutations)
         self.assertIn("python scripts/repair_logo_asset_technical_quality.py --fix", mutations)
         self.assertIn("python scripts/maintenance_helpers.py canonicalize-extinf", mutations)
         policy = (ROOT / "docs" / "PLAYLIST-AUTOMATION-POLICY.md").read_text(encoding="utf-8")

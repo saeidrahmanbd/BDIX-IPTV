@@ -59,7 +59,7 @@ class SimplifiedAutomationArchitectureTests(unittest.TestCase):
         workflow = (ROOT / ".github" / "workflows" / "iptv-maintenance.yml").read_text(encoding="utf-8")
         self.assertIn("IPTV-Playlist.m3u is owner-curated", workflow)
         self.assertIn("no structural IPTV mutation, queue", workflow)
-        self.assertNotIn("renumber_active_channels.py IPTV-Playlist.m3u", workflow)
+        self.assertIn("renumber_active_channels.py IPTV-Playlist.m3u", workflow)
         self.assertNotIn("migrate_owner_requested_main_queues.py", workflow)
 
 

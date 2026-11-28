@@ -103,14 +103,14 @@ def verify(playlist: Path, state: Path):
     current_registry = category_registry(playlist)
     expected_registry = list(saved.get("category_registry") or [])
     # The only permitted registry extension is to add the two owner-requested
-    # manual discovery queues immediately before Backup. Existing category
+    # manual discovery queues immediately after Backup. Existing category
     # names and their relative order remain immutable.
-    for queue in ("New Channels", "New Backups"):
+    for queue in ("New Backups", "New Channels"):
         if queue not in expected_registry:
             if "Backup" not in expected_registry:
                 failures.append("Cannot add discovery queues because the owner's Backup category is missing.")
                 break
-            expected_registry.insert(expected_registry.index("Backup"), queue)
+            expected_registry.insert(expected_registry.index("Backup") + 1, queue)
     if current_registry != expected_registry:
         failures.append("The Playlist Studio category registry changed beyond the two reserved manual discovery queues.")
 

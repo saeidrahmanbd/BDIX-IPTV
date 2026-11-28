@@ -233,7 +233,8 @@ jobs:
             # describe the final playlist bytes. This changes attribute order only.
             python scripts/maintenance_helpers.py canonicalize-extinf
             # Report-coupled tools run last; no structural IPTV mutation, queue
-            # promotion, category reassembly or renumbering is permitted.
+            # promotion or regrouping is permitted. Existing channel numbers stay fixed;
+            # only blank primary numbers are filled in existing row order.
             python scripts/iptv_metadata_backfill.py
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix --max-dimension 1024 --max-bytes 153600
