@@ -16,7 +16,7 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "New Channels", "New Backups", "Backup", "Review",
+    "Backup", "New Channels", "New Backups", "Review",
 ]
 CATEGORY_RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
 REVIEW_GROUPS = {"Backup", "Review", "Not Playing", "New Channels", "New Backups"}
@@ -86,8 +86,8 @@ def normalize_playlist_text(text: str) -> tuple[str, int]:
     had_final_newline = text.endswith(("\n", "\r"))
     normalized = text.replace("\r\n", "\n").replace("\r", "\n")
     preamble, records = parse_records(normalized)
-    # Keep Playlist Studio's category registry aligned with the canonical
-    # UI order. This does not authorize moving any playlist record.
+    # Keep Playlist Studio's category registry aligned with the owner's current
+    # category order. This does not authorize moving any playlist record.
     registry_prefix = "#PLAYLIST-STUDIO-CATEGORIES:"
     registry_positions = [i for i, line in enumerate(preamble) if line.startswith(registry_prefix)]
     if len(registry_positions) > 1:

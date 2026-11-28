@@ -12,7 +12,7 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "New Channels", "New Backups", "Backup", "Review",
+    "Backup", "New Channels", "New Backups", "Review",
 ]
 PRIMARY_GROUPS = set(CATEGORY_ORDER[:11])
 DISCOVERY_GROUPS = {"New Channels", "New Backups"}
@@ -144,8 +144,13 @@ def verify(playlist: Path, state: Path):
                 failures.append(f"Unapproved existing group change for {new['name']}: {old_group} -> {new_group}.")
             old_number = str(old.get("number", "")).strip()
             new_number = str(new.get("number", "")).strip()
-            if old_number != new_number:
+            if old_number and old_number != new_number:
                 failures.append(f"Existing channel number changed for {new['name']}.")
+            elif not old_number and new_number:
+                if old_group not in PRIMARY_GROUPS or not new_number.isdigit() or int(new_number) < 1:
+                    failures.append(f"Invalid number fill for {new['name']}: {new_number!r}.")
+            elif old_group not in PRIMARY_GROUPS and new_number:
+                failures.append(f"Non-primary row must remain unnumbered: {new['name']}.")
 
     before_conflicts = saved.get("identity_conflicts", {})
     after_conflicts = primary_identity_conflicts(after)
@@ -169,7 +174,7 @@ def verify(playlist: Path, state: Path):
         raise SystemExit(f"IPTV owner-protection gate failed with {len(failures)} issue(s).")
     print(
         f"IPTV owner-protection passed: {len(before)} existing URL occurrences, row order, "
-        "group assignments and channel numbers preserved; no new identity conflicts."
+        "group assignments and existing channel numbers preserved; missing primary numbers may be filled; no new identity conflicts."
     )
 
 

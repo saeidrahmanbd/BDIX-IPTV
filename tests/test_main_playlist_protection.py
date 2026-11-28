@@ -172,10 +172,12 @@ class MainPlaylistProtectionTests(unittest.TestCase):
 
 
 
-    def test_missing_primary_number_fill_requires_owner_authorization(self):
-        self.assert_guard_blocks(
-            [("Bangladesh", "Missing number", "https://missing", "", "missing.bd")],
-            [("Bangladesh", "Missing number", "https://missing", "1", "missing.bd")],
+    def test_missing_primary_number_can_be_filled_without_changing_existing_numbers(self):
+        self.run_guard(
+            [("Bangladesh", "Missing number", "https://missing", "", "missing.bd"),
+             ("Bangladesh", "Already numbered", "https://numbered", "17", "numbered.bd")],
+            [("Bangladesh", "Missing number", "https://missing", "1", "missing.bd"),
+             ("Bangladesh", "Already numbered", "https://numbered", "17", "numbered.bd")],
         )
 
 
