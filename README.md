@@ -165,7 +165,7 @@ BDIX-IPTV uses the widely supported M3U/M3U8 playlist format. You can use the pl
 | IPTV application | Platform / official resource |
 |---|---|
 | [TiviMate](https://tivimate.com/) | Android TV |
-| [XCIPTV](https://xciptv.com/) | Android |
+| XCIPTV | Android (check the app publisher before installing) |
 | [OTT Navigator](https://faq.ott-nav.com/) | Android |
 | [IPTV Smarters](https://www.iptvsmarters.com/) | Multiple platforms |
 | [VLC Media Player](https://www.videolan.org/vlc/) | Windows, macOS, Linux, Android |
