@@ -447,6 +447,29 @@ def probe_mode(playlist, report, baseline, mode):
             1 for e in probe_targets
             if e["start"] in verified_starts and e["group"].casefold() == "fashion tv"
         )
+    if mode == "international":
+        # Before the pre-publish validator runs, promote a verified orphan
+        # alternate to New Channels when no primary identity exists elsewhere.
+        # Further streams for that identity remain valid New Backups.
+        represented = {
+            discovery.primary_identity(e["attrs"], e["name"])
+            for e in entries
+            if e["group"].casefold() not in {"new channels", "new backup", "new backups", "review", "not playing", "test"}
+        }
+        for e in entries:
+            if e["group"].casefold() not in {"new backup", "new backups"} or e["start"] in remove_starts:
+                continue
+            current = update_lines.get(e["start"], e["extinf"])
+            current_group = attrs(current).get("group-title", "").strip().casefold()
+            if current_group != e["group"].casefold():
+                continue
+            key = discovery.primary_identity(e["attrs"], e["name"])
+            if key and key not in represented:
+                update_lines[e["start"]] = discovery.set_attr(current, "group-title", "New Channels")
+                represented.add(key)
+                counts["orphan backup streams promoted to New Channels"] += 1
+                details.append(f"- Promoted orphan {e['name']} from New Backups to New Channels — no primary identity existed in an active group.")
+
     remove_indices = set()
     by_start = {e["start"]: e for e in entries}
     for start in remove_starts:
