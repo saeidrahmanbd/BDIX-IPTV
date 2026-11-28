@@ -7,32 +7,21 @@ Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-28 — `IPTV-Playlist.m3u`
 
-- New channel identities: **131**
-- Channel identities removed: **5**
-- Stream URLs added / removed: **188 / 5**
+- New channel identities: **0**
+- Channel identities removed: **6**
+- Stream URLs added / removed: **0 / 6**
 - Backup URL updates: **0**
-- Logo reference changes: **434**
+- Logo reference changes: **15**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Added channel identities (up to 10):
-- Deshi TV Bangla
-- Raatdin Bangla
-- AVT Khyber
-- KTN TV
-- Cine Canal
-- Hi-Yah!
-- Kronehit
-- Qello Concerts by Stingray
-- Rock TV
-- Vevo Retro
-
 Removed channel identities (up to 10):
-- NDTV Good Times (1080p)
-- Sristi TV (1080p)
-- Travelxp HD (1080p) [Geo-blocked]
-- WeatherSpy (India) (720p)
-- Zodiak TV (1080p)
+- Raatdin Bangla
+- RS Sports 1
+- RS Sports 2
+- RS Sports 3
+- RS Sports 4
+- RS Sports 5
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-28 — `International-Playlist.m3u`
