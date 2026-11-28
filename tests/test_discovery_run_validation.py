@@ -592,14 +592,18 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 "#EXTM3U\n"
                 '#PLAYLIST-STUDIO-CATEGORIES:["International","Review","New Channels","New Backups","Backup"]\n'
             )
+            primary = (
+                '#EXTINF:-1 tvg-id="WorldMusic.us" tvg-name="World Music" tvg-country="US" tvg-content="Music" group-title="International",World Music\n'
+                'https://example.org/world-music-primary.m3u8\n'
+            )
             rows = (
                 '#EXTINF:-1 tvg-id="WorldMovie.us" tvg-name="World Movie" tvg-country="US" tvg-content="Movies" tvg-logo="logos/world-movie.svg" group-title="New Channels",World Movie\n'
                 'https://example.org/world-movie.m3u8\n'
                 '#EXTINF:-1 tvg-id="WorldMusic.us" tvg-name="World Music" tvg-country="US" tvg-content="Music" tvg-logo="logos/world-music.svg" group-title="New Backups",World Music\n'
                 'https://example.org/world-music.m3u8\n'
             )
-            playlist.write_text(prefix + rows, encoding="utf-8")
-            baseline.write_text(prefix, encoding="utf-8")
+            playlist.write_text(prefix + primary + rows, encoding="utf-8")
+            baseline.write_text(prefix + primary, encoding="utf-8")
             report.write_text("# Report\n", encoding="utf-8")
             with patch.object(validation, "probe_url", side_effect=[
                 ("verified", "Media bytes received"),
@@ -753,7 +757,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
 
 
-    def test_final_validation_rejects_new_backup_when_only_review_identity_exists(self):
+    def test_final_validation_promotes_orphan_backup_when_only_review_identity_exists(self):
         import json
         import os
         import tempfile
@@ -786,10 +790,13 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                     os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
                 else:
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
-            self.assertIn("- Validation status: FAIL", report.read_text(encoding="utf-8"))
-            self.assertIn("New Backups row has no already-represented channel identity: Star Gold", report.read_text(encoding="utf-8"))
+            final_report = report.read_text(encoding="utf-8")
+            self.assertIn("- Validation status: PASS", final_report)
+            self.assertIn("Orphan New Backups promoted to New Channels: 1", final_report)
+            self.assertIn('group-title="New Channels"', playlist.read_text(encoding="utf-8"))
+            self.assertNotIn('group-title="New Backups"', playlist.read_text(encoding="utf-8"))
 
-    def test_final_validation_rejects_new_backup_without_existing_channel(self):
+    def test_final_validation_promotes_new_backup_without_existing_channel(self):
         import json
         import os
         import tempfile
@@ -819,8 +826,10 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 else:
                     os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
             final_report = report.read_text(encoding="utf-8")
-            self.assertIn("- Validation status: FAIL", final_report)
-            self.assertIn("New Backups row has no already-represented channel identity: Star Gold", final_report)
+            self.assertIn("- Validation status: PASS", final_report)
+            self.assertIn("Orphan New Backups promoted to New Channels: 1", final_report)
+            self.assertIn('group-title="New Channels"', playlist.read_text(encoding="utf-8"))
+            self.assertNotIn('group-title="New Backups"', playlist.read_text(encoding="utf-8"))
 
     def test_final_validation_rejects_new_candidates_promoted_out_of_queues(self):
         import json
