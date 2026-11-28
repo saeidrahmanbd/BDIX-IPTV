@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T11:00:26+00:00**
+Generated: **2026-11-28T11:02:16+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -11,7 +11,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 ## Summary
 
-- Safe repairs applied this run: **2**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **0**
 - Raster assets still oversized (max side > 1024px): **0**
 - Raster assets over 153600 bytes: **2**
@@ -25,8 +25,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| crtv-chile-ad1c87ebf07836430e31.png | PNG | PNG | 1024×1024 | 487×487 | downscaled, re-encoded/compressed |
-| harlem-globetrotters-48b9916ebc529ead57df.png | PNG | PNG | 1950×900 | 1024×473 | downscaled |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 

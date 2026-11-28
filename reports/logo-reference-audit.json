@@ -12837,7 +12837,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/cooking-channel-f2ef6f609a12512f6a8e.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/corazon-tv.png": [
       "International-Playlist.m3u",
@@ -12878,7 +12879,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/crtv-chile-ad1c87ebf07836430e31.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/crtv-sports-and-entertainment-395b13f9b2.png": [
       "International-Playlist.m3u",
@@ -14922,6 +14924,7 @@
     ],
     "logos/harlem-globetrotters-48b9916ebc529ead57df.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/harmony-gospel-music-tv-d6f16022d1.png": [
@@ -18074,6 +18077,7 @@
     ],
     "logos/quran-radio-tv-smc-5a89eb563b0115e7405d.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/quran-tv.png": [
@@ -18631,7 +18635,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/saudi-quran-168a35b98fb7c665bce6.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/scorch-tv-5b001ff8c4.png": [
       "International-Playlist.m3u",
@@ -18771,22 +18776,27 @@
     ],
     "logos/sky-cinema-action-17daeb11ff4cf427c3b6.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/sky-cinema-collection-b67c42cd4e4576aa1883.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/sky-cinema-family-a006755ca12f9d74017d.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/sky-cinema-suspense-1d99507854d3cfdf0583.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/sky-cinema-uno-36672bcce8b918d42136.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/sky-folk-tv-93e92c79b3.png": [
       "International-Playlist.m3u",
@@ -20190,6 +20200,7 @@
     ],
     "logos/travel-xp-bangla-915b903e5920a0475a26.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/travel-xp-english-b3aa521bb125b0495ef7.png": [
@@ -20256,10 +20267,12 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tudn-ef81b44e4bdc20615179.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tudn-mx-ef81b44e4bdc20615179.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tunes-6-86e66d6033.png": [
       "IPTV-Playlist.m3u",
@@ -20534,7 +20547,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/usa-accn-1cefabddc7941e59bee5.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/utv-palakkad.png": [
       "IPTV-Playlist.m3u",
@@ -24741,7 +24755,8 @@
       "reports/logo-source-registry.json"
     ],
     "logos/cooking-channel-f2ef6f609a12512f6a8e.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/corazon-tv.png": [
       "International-Playlist.m3u",
@@ -24782,7 +24797,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/crtv-chile-ad1c87ebf07836430e31.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/crtv-sports-and-entertainment-395b13f9b2.png": [
       "International-Playlist.m3u",
@@ -26828,6 +26844,7 @@
     ],
     "logos/harlem-globetrotters-48b9916ebc529ead57df.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/harmony-gospel-music-tv-d6f16022d1.png": [
@@ -29983,6 +30000,7 @@
     ],
     "logos/quran-radio-tv-smc-5a89eb563b0115e7405d.png": [
       "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/quran-tv.png": [
@@ -30540,7 +30558,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/saudi-quran-168a35b98fb7c665bce6.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/scorch-tv-5b001ff8c4.png": [
       "International-Playlist.m3u",
@@ -30681,22 +30700,27 @@
     ],
     "logos/sky-cinema-action-17daeb11ff4cf427c3b6.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/sky-cinema-collection-b67c42cd4e4576aa1883.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/sky-cinema-family-a006755ca12f9d74017d.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/sky-cinema-suspense-1d99507854d3cfdf0583.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/sky-cinema-uno-36672bcce8b918d42136.png": [
-      "International-Playlist.m3u"
+      "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/sky-folk-tv-93e92c79b3.png": [
       "International-Playlist.m3u",
@@ -32101,6 +32125,7 @@
     ],
     "logos/travel-xp-bangla-915b903e5920a0475a26.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/travel-xp-english-b3aa521bb125b0495ef7.png": [
@@ -32167,10 +32192,12 @@
       "reports/logo-source-registry.json"
     ],
     "logos/tudn-ef81b44e4bdc20615179.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tudn-mx-ef81b44e4bdc20615179.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/tunes-6-86e66d6033.png": [
       "IPTV-Playlist.m3u",
@@ -32445,7 +32472,8 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/usa-accn-1cefabddc7941e59bee5.png": [
-      "IPTV-Playlist.m3u"
+      "IPTV-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json"
     ],
     "logos/utv-palakkad.png": [
       "IPTV-Playlist.m3u",
