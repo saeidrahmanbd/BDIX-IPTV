@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T05:09:04+00:00**
+Generated: **2026-11-28T06:50:00+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **7208e6da492fa0feb6411ab6846fa9298ef920bd900b322487e46d53072af1b6**
+- IPTV-Playlist.m3u SHA-256: **fad24b9e6271db36d55c2526ee3c05d153236bb83baeaa6b9345681d39149c22**
 - International-Playlist.m3u SHA-256: **f86412d209fc35ba419776530387923c015b3b1d054fceb9e621cc69975f80e2**
 
 ## Summary
@@ -17,8 +17,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - Raster assets over 153600 bytes: **2**
 - Raster/SVG assets with short side under 64 px: **148**
 - Exact-byte duplicate asset clusters: **750**
-- Playlist references whose asset stem differs from the normalized channel name: **1557**
-- Unreferenced image assets immediately inside logos/: **1001** (not deleted; other tooling or playlists may use them)
+- Playlist references whose asset stem differs from the normalized channel name: **1561**
+- Unreferenced image assets immediately inside logos/: **1000** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **0**
 
 ## Safe repairs applied
@@ -1197,6 +1197,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Fuel TV | fuel-tv.png | Sports |
 | IPTV-Playlist.m3u | Futbol | futbol-tv-068fcbdde9.png | Sports |
 | IPTV-Playlist.m3u | Goal TV | goal-tv-237cfbed.png | Sports |
+| IPTV-Playlist.m3u | RACING \| Hagerty | hagerty-28b469a78a61a85fda22.png | Sports |
 | IPTV-Playlist.m3u | MMA TV com 格斗 | mma-tv-com-85ca206b32.png | Sports |
 | IPTV-Playlist.m3u | NBA TV | nba-tv.png | Sports |
 | IPTV-Playlist.m3u | Oman Sports TV | oman-sports-tv.png | Sports |
@@ -1279,9 +1280,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Gangaur TV | gangaur-tv.png | Backup |
 | IPTV-Playlist.m3u | Gangaur TV | gangaur-tv.png | Backup |
 | IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
+| IPTV-Playlist.m3u | Goldmines | 4-sides-tv-6a436fa007.png | Backup |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
+| IPTV-Playlist.m3u | Independent TV | independent-tv.png | Backup |
 | IPTV-Playlist.m3u | Islam Channel Bangla | islam-channel-bangla.png | Backup |
 | IPTV-Playlist.m3u | Jalwa TV | jalwa-tv.png | Backup |
 | IPTV-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
@@ -1298,6 +1301,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Backup |
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Backup |
 | IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Backup |
+| IPTV-Playlist.m3u | Matribhumi TV | matribhumi-tv-2bb36a4f0f.png | Backup |
 | IPTV-Playlist.m3u | ME TV | me-tv.png | Backup |
 | IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Backup |
 | IPTV-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Backup |

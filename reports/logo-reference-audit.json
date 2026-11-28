@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
-  "logo_image_files": 5301,
-  "all_explicitly_referenced_logo_files": 2551,
-  "runtime_referenced_logo_files": 2549,
-  "playlist_referenced_logo_files": 2514,
+  "logo_image_files": 5302,
+  "all_explicitly_referenced_logo_files": 2552,
+  "runtime_referenced_logo_files": 2550,
+  "playlist_referenced_logo_files": 2516,
   "apparently_unreferenced_by_any_text_file": 2750,
   "apparently_unreferenced_by_runtime_sources": 2752,
   "missing_explicit_logo_targets": [
@@ -418,6 +418,7 @@
     "logos/groovy-tv-2433364447.png",
     "logos/gtc-punjabi-uk-10d69bf6c069ef1a79c2.jpg",
     "logos/gtc-punjabi-us-10d69bf6c069ef1a79c2.jpg",
+    "logos/hagerty-28b469a78a61a85fda22.svg",
     "logos/hallmark-movies-and-more-b779fed878.png",
     "logos/hallmark-mystery-bdb1e4a1f0.svg",
     "logos/hallmark-mystery-bdb1e4a1f085435fb2f4.svg",
@@ -2145,6 +2146,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/gtc-punjabi-us-10d69bf6c069ef1a79c2.jpg": [
+      "reports/logo-source-registry.json"
+    ],
+    "logos/hagerty-28b469a78a61a85fda22.svg": [
       "reports/logo-source-registry.json"
     ],
     "logos/hallmark-movies-and-more-b779fed878.png": [
@@ -3957,6 +3961,7 @@
     "logos/groovy-tv-2433364447.png",
     "logos/gtc-punjabi-uk-10d69bf6c069ef1a79c2.jpg",
     "logos/gtc-punjabi-us-10d69bf6c069ef1a79c2.jpg",
+    "logos/hagerty-28b469a78a61a85fda22.svg",
     "logos/hallmark-movies-and-more-b779fed878.png",
     "logos/hallmark-mystery-bdb1e4a1f0.svg",
     "logos/hallmark-mystery-bdb1e4a1f085435fb2f4.svg",
@@ -10432,6 +10437,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/4-sides-tv-6a436fa007.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/4ever-cinema-1080p-46222eea9d.png": [
@@ -14685,6 +14691,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/hagerty-28b469a78a61a85fda22.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/hallmark-movies-and-more-b779fed878da243d7512.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -16119,6 +16128,7 @@
       "scripts/migrate_external_logos_fixed.py"
     ],
     "logos/matribhumi-tv-2bb36a4f0f.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -22135,6 +22145,7 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/4-sides-tv-6a436fa007.png": [
+      "IPTV-Playlist.m3u",
       "reports/logo-source-registry.json"
     ],
     "logos/4ever-cinema-1080p-46222eea9d.png": [
@@ -26390,6 +26401,9 @@
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
+    "logos/hagerty-28b469a78a61a85fda22.png": [
+      "IPTV-Playlist.m3u"
+    ],
     "logos/hallmark-movies-and-more-b779fed878da243d7512.png": [
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json",
@@ -27824,6 +27838,7 @@
       "scripts/migrate_external_logos_fixed.py"
     ],
     "logos/matribhumi-tv-2bb36a4f0f.png": [
+      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],

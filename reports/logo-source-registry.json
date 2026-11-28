@@ -8478,5 +8478,10 @@
     "status": "third_party_verified",
     "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HBO_logo.svg/960px-HBO_logo.svg.png",
     "notes": "IPTV-org exact ID: HBO.ro IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HBO_logo.svg/960px-HBO_logo.svg.png"
+  },
+  "IPTV-Playlist.m3u|racing.hagerty.com|Hagerty|logos/hagerty-28b469a78a61a85fda22.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Hagerty_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "notes": "Wikimedia Commons exact-logo search CC BY-SA 3.0 Source page: https://commons.wikimedia.org/wiki/File:Hagerty_logo.svg"
   }
 }

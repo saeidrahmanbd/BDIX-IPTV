@@ -1,6 +1,6 @@
 # Logo Format Conversion
 
-Generated: **2026-11-27T05:02:57.303999+00:00**
+Generated: **2026-11-28T06:49:31.206496+00:00**
 
 - Playlists checked: **IPTV-Playlist.m3u, International-Playlist.m3u**
 - Unique non-PNG assets converted: **1**
@@ -16,4 +16,4 @@ Every supported image asset under logos/ was converted to a validated PNG. Activ
 
 ## Source formats
 
-- WEBP: **1**
+- SVG: **1**
