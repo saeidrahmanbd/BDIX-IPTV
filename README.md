@@ -1,7 +1,7 @@
  <div align="center">
 
-<img src="assets/hero.svg?v=4"
-     alt="BDIX-IPTV — Bangladesh IPTV playlists, M3U/M3U8 and XMLTV Electronic Programme Guide"
+<img src="assets/hero.svg?v=5"
+     alt="BDIX-IPTV — Bangladeshi television playlists for Bangladesh, India, Pakistan and international channels with shared XMLTV EPG"
      width="100%">
 
 # BDIX-IPTV
