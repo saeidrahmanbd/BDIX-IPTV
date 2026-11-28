@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-28T03:32:56+00:00**
+Generated: **2026-11-28T04:11:44+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **7b347b6244e114b1332322a056ebbe48d9b24b25f072c23ad8f4df7325766a4f**
+- IPTV-Playlist.m3u SHA-256: **7208e6da492fa0feb6411ab6846fa9298ef920bd900b322487e46d53072af1b6**
 - International-Playlist.m3u SHA-256: **f86412d209fc35ba419776530387923c015b3b1d054fceb9e621cc69975f80e2**
 
 ## Summary
@@ -972,10 +972,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Biswa Bangla 24 | biswabangla-24-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 1 | channel-1.png | Bangladesh |
-| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 16 | channel-16.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel 52 | channel-52.png | Bangladesh |
+| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel Europe | channel-europe-c8db0338dc.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Bangladesh |
 | IPTV-Playlist.m3u | Channel S | channel-s.png | Bangladesh |
@@ -1236,12 +1236,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
 | IPTV-Playlist.m3u | Bangla Vision | banglavision.png | Backup |
 | IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
-| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
-| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
-| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
 | IPTV-Playlist.m3u | Channel 24 | channel-24.png | Backup |
 | IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
 | IPTV-Playlist.m3u | Channel 52 | channel-52.png | Backup |
+| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
+| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
+| IPTV-Playlist.m3u | Channel 9 | channel-9.png | Backup |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
 | IPTV-Playlist.m3u | Channel I | channel-i.png | Backup |
@@ -1365,20 +1365,26 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
-| IPTV-Playlist.m3u | Madani Channel Bangla (1080p) | madani-channel-bangla.png | New Channels |
-| IPTV-Playlist.m3u | News 21 Bangla TV (1080p) | news-21-bangla-tv.png | New Channels |
-| IPTV-Playlist.m3u | Rupashi Bangla TV (720p) | rupashi-bangla-tv.png | New Channels |
 | IPTV-Playlist.m3u | AMN TV (576p) | amn-tv.png | New Channels |
+| IPTV-Playlist.m3u | Anmol Cinema (576p) | anmol-cinema-514724e20ade5c771e1e.png | New Channels |
+| IPTV-Playlist.m3u | Anmol Cinema 2 (576p) | anmol-cinema-2-4040d0d662808372795b.png | New Channels |
+| IPTV-Playlist.m3u | Big Magic (576p) | big-magic-576p.png | New Channels |
 | IPTV-Playlist.m3u | Cine Jomjomat (1080p) | cine-jomjomat.png | New Channels |
 | IPTV-Playlist.m3u | Epic TV Digital (1080p) | epic-tv-digital-1080p.png | New Channels |
 | IPTV-Playlist.m3u | History TV18 HD (1080p) [Geo-blocked] | history-tv18-hd-1080p-geo-blocked.png | New Channels |
+| IPTV-Playlist.m3u | Madani Channel Bangla (1080p) | madani-channel-bangla.png | New Channels |
 | IPTV-Playlist.m3u | Mango Mobile TV (1080p) | mango-mobile-tv.png | New Channels |
 | IPTV-Playlist.m3u | MTV (India) (396p) | mtv-india-hd-720p.png | New Channels |
 | IPTV-Playlist.m3u | NDTV Good Times (1080p) | ndtv-good-times.png | New Channels |
+| IPTV-Playlist.m3u | Network Payyanur (576p) | network-payyanur-667fe08c3f3ac0d03d4f.png | New Channels |
+| IPTV-Playlist.m3u | News 21 Bangla TV (1080p) | news-21-bangla-tv.png | New Channels |
+| IPTV-Playlist.m3u | NewStar (576p) | newstar-ec10b457446e3fc0887d.png | New Channels |
 | IPTV-Playlist.m3u | NM Media Channel HD (1080p) | nm-media-channel-adf4a8ecc0dbe61589c3.png | New Channels |
+| IPTV-Playlist.m3u | Rupashi Bangla TV (720p) | rupashi-bangla-tv.png | New Channels |
 | IPTV-Playlist.m3u | Shemaroo Filmi Gaane (1080p) | shemaroo-filmi-gaane-1080p.png | New Channels |
 | IPTV-Playlist.m3u | Sooriyan TV (1080p) | sooriyan-tv.png | New Channels |
 | IPTV-Playlist.m3u | Sristi TV (1080p) | sristi-tv-772e078ab196764d315f.png | New Channels |
+| IPTV-Playlist.m3u | Star Sports Khel (1080p) | star-sports-khel-e28fa4091a61a030118e.png | New Channels |
 | IPTV-Playlist.m3u | Travelxp HD (1080p) [Geo-blocked] | travelxp-hd-1080p-geo-blocked.png | New Channels |
 | IPTV-Playlist.m3u | Vision Beats (720p) | vision-beats.png | New Channels |
 | IPTV-Playlist.m3u | WeatherSpy (India) (720p) | weatherspy-india.png | New Channels |
@@ -1390,34 +1396,28 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Zee Tamil HD (720p) | zee-tamil.png | New Channels |
 | IPTV-Playlist.m3u | Zee Telugu HD (720p) | zee-telugu-hd-720p.png | New Channels |
 | IPTV-Playlist.m3u | Zodiak TV (1080p) | zodiak-tv.png | New Channels |
-| IPTV-Playlist.m3u | Anmol Cinema (576p) | anmol-cinema-514724e20ade5c771e1e.png | New Channels |
-| IPTV-Playlist.m3u | Anmol Cinema 2 (576p) | anmol-cinema-2-4040d0d662808372795b.png | New Channels |
-| IPTV-Playlist.m3u | Big Magic (576p) | big-magic-576p.png | New Channels |
-| IPTV-Playlist.m3u | Network Payyanur (576p) | network-payyanur-667fe08c3f3ac0d03d4f.png | New Channels |
-| IPTV-Playlist.m3u | NewStar (576p) | newstar-ec10b457446e3fc0887d.png | New Channels |
-| IPTV-Playlist.m3u | Star Sports Khel (1080p) | star-sports-khel-e28fa4091a61a030118e.png | New Channels |
+| IPTV-Playlist.m3u | 9X Jhakaas (1080p) | 9x-jhakaas.png | New Backups |
+| IPTV-Playlist.m3u | 9X Tashan (1080p) | 9x-tashan.png | New Backups |
 | IPTV-Playlist.m3u | ATN Bangla (720p) | atn-bangla.png | New Backups |
+| IPTV-Playlist.m3u | B4U Bhojpuri (1080p) | b4u-bhojpuri-1080p.png | New Backups |
+| IPTV-Playlist.m3u | B4U Kadak (1080p) | b4u-kadak.png | New Backups |
+| IPTV-Playlist.m3u | B4U Kadak (1080p) | b4u-kadak.png | New Backups |
+| IPTV-Playlist.m3u | B4U Movies (1080p) | b4u-movies.png | New Backups |
+| IPTV-Playlist.m3u | B4U Movies (1080p) | b4u-movies.png | New Backups |
+| IPTV-Playlist.m3u | Colors Bangla (1080p) | colors-bangla.png | New Backups |
 | IPTV-Playlist.m3u | DBC News (480p) | dbc-news.png | New Backups |
+| IPTV-Playlist.m3u | DD Assam (576p) | dd-assam.png | New Backups |
+| IPTV-Playlist.m3u | DD Uttar Pradesh (720p) | dd-uttar-pradesh.png | New Backups |
+| IPTV-Playlist.m3u | Dhoom Music (720p) | dhoom-music-720p.png | New Backups |
 | IPTV-Playlist.m3u | Duronto TV (720p) | duronto-tv-2b3c7dd202.png | New Backups |
 | IPTV-Playlist.m3u | Ekhon TV (1080p) | ekhon-tv.png | New Backups |
 | IPTV-Playlist.m3u | Gazi TV (1080p) | gazi-tv.png | New Backups |
+| IPTV-Playlist.m3u | INWILD (1080p) | inwild.png | New Backups |
 | IPTV-Playlist.m3u | Maasranga TV (720p) | maasranga-tv.png | New Backups |
 | IPTV-Playlist.m3u | RTV (Bangladesh) (720p) | verified-rtv-bangladesh-720p-6421f55b0f.png | New Backups |
-| IPTV-Playlist.m3u | 9X Jhakaas (1080p) | 9x-jhakaas.png | New Backups |
-| IPTV-Playlist.m3u | 9X Tashan (1080p) | 9x-tashan.png | New Backups |
-| IPTV-Playlist.m3u | B4U Bhojpuri (1080p) | b4u-bhojpuri-1080p.png | New Backups |
-| IPTV-Playlist.m3u | B4U Kadak (1080p) | b4u-kadak.png | New Backups |
-| IPTV-Playlist.m3u | B4U Movies (1080p) | b4u-movies.png | New Backups |
-| IPTV-Playlist.m3u | DD Uttar Pradesh (720p) | dd-uttar-pradesh.png | New Backups |
-| IPTV-Playlist.m3u | Dhoom Music (720p) | dhoom-music-720p.png | New Backups |
-| IPTV-Playlist.m3u | INWILD (1080p) | inwild.png | New Backups |
-| IPTV-Playlist.m3u | Zee Bangla (1080p) | zee-bangla.png | New Backups |
-| IPTV-Playlist.m3u | B4U Kadak (1080p) | b4u-kadak.png | New Backups |
-| IPTV-Playlist.m3u | B4U Movies (1080p) | b4u-movies.png | New Backups |
-| IPTV-Playlist.m3u | Colors Bangla (1080p) | colors-bangla.png | New Backups |
 | IPTV-Playlist.m3u | Sony Sports Ten 2 (1080p) | sony-sports-ten-2.png | New Backups |
 | IPTV-Playlist.m3u | Zee Action (576p) | zee-action.png | New Backups |
-| IPTV-Playlist.m3u | DD Assam (576p) | dd-assam.png | New Backups |
+| IPTV-Playlist.m3u | Zee Bangla (1080p) | zee-bangla.png | New Backups |
 | International-Playlist.m3u | Ananda TV | ananda-tv.png | Bangladesh |
 | International-Playlist.m3u | Asian TV | asian-tv.png | Bangladesh |
 | International-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Bangladesh |
