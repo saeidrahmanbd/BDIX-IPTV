@@ -733,8 +733,11 @@ def raw_logo_url(filename):
     return RAW_BASE + filename
 
 
-def fetch_bytes(url, timeout=30, max_bytes=5_000_000):
-    request = Request(url, headers={"User-Agent": UA})
+def fetch_bytes(url, timeout=30, max_bytes=5_000_000, referer=""):
+    headers = {"User-Agent": UA}
+    if referer:
+        headers["Referer"] = referer
+    request = Request(url, headers=headers)
     last_error = None
     for attempt in range(3):
         try:
