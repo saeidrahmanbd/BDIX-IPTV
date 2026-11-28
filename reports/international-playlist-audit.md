@@ -1,16 +1,16 @@
 # International Playlist Organization Audit
 
-- Entries before: 3343
-- Entries after: 3343
-- Channel names normalized: 17
+- Entries before: 3328
+- Entries after: 3328
+- Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
 - Additional same-channel streams moved to Backup: 0
-- Original Backup/Backups and protected queue rows examined: 1157
-- Matching alternate streams retained in Backup: 292
-- True orphan Backup rows evaluated: 22
-- Eligible orphan Backup rows promoted to primary: 21
+- Original Backup/Backups and protected queue rows examined: 1168
+- Matching alternate streams retained in Backup: 286
+- True orphan Backup rows evaluated: 19
+- Eligible orphan Backup rows promoted to primary: 18
 - Clearly identified Adult orphans restored to Adult: 0
 - Ineligible/unclassified orphan Backup rows retained: 1
 - Genre groups (News, Sports, Kids, Religious, Documentary & Wildlife, Fashion TV and Adult) take precedence over country groups for every country; country groups contain only eligible non-genre Movies/Music/region-specific channels.
@@ -30,10 +30,10 @@
 
 ## Category counts
 
-- Bangladesh: 46
+- Bangladesh: 44
 - Indian Bangla: 31
 - Indian Movies: 67
-- Indian Music: 56
+- Indian Music: 53
 - Indian Entertainment: 159
 - Pakistani: 17
 - Argentina: 11
@@ -43,7 +43,7 @@
 - Chile: 10
 - China: 7
 - Colombia: 9
-- Costa Rica: 9
+- Costa Rica: 8
 - Czech Republic: 23
 - DO: 11
 - Estonia: 6
@@ -54,33 +54,33 @@
 - Iran: 13
 - Italy: 22
 - Lebanon: 6
-- Mexico: 15
+- Mexico: 14
 - Netherlands: 13
 - North Macedonia: 5
 - Panama: 5
 - Paraguay: 5
-- Peru: 8
+- Peru: 7
 - Poland: 21
 - Romania: 29
-- Russia: 58
+- Russia: 51
 - Saudi Arabia: 9
 - Spain: 14
 - Sweden: 49
-- Turkey: 14
+- Turkey: 13
 - Ukraine: 12
 - United Kingdom: 17
-- United States: 152
+- United States: 150
 - Uzbekistan: 5
 - Vietnam: 6
-- International: 98
+- International: 94
 - News: 11
 - Fashion TV: 5
-- Documentary & Wildlife: 130
-- Kids: 150
+- Documentary & Wildlife: 129
+- Kids: 148
 - Religious: 31
-- Sports: 179
+- Sports: 176
 - Adult: 366
-- Review: 910
-- New Channels: 27
+- Review: 930
+- New Channels: 26
 - New Backups: 21
-- Backup: 293
+- Backup: 287
