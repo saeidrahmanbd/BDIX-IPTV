@@ -2,11 +2,11 @@
   "schema_version": 3,
   "scan_scope": "all explicit text references, separately classified runtime inputs and playlist references, plus exact byte-identical image hashes; dynamic references may be missed",
   "logo_image_files": 5331,
-  "all_explicitly_referenced_logo_files": 2596,
-  "runtime_referenced_logo_files": 2594,
-  "playlist_referenced_logo_files": 2551,
-  "apparently_unreferenced_by_any_text_file": 2735,
-  "apparently_unreferenced_by_runtime_sources": 2737,
+  "all_explicitly_referenced_logo_files": 2595,
+  "runtime_referenced_logo_files": 2593,
+  "playlist_referenced_logo_files": 2550,
+  "apparently_unreferenced_by_any_text_file": 2736,
+  "apparently_unreferenced_by_runtime_sources": 2738,
   "missing_explicit_logo_targets": [
     "logos/../../outside.png",
     "logos/../elsewhere/inside-repo.png",
@@ -1250,11 +1250,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/blob/main/countries/romania/digi-sport-1-ro.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/blob/main/countries/romania/digi-sport-2-ro.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/blob/main/countries/turkey/powerturk-tr.png": [
@@ -2510,11 +2508,9 @@
       "reports/logo-source-registry.json"
     ],
     "logos/main/countries/romania/digi-sport-1-ro.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/main/countries/romania/digi-sport-2-ro.png": [
-      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/main/countries/turkey/powerturk-tr.png": [
@@ -14496,6 +14492,7 @@
     ],
     "logos/floracing-24-7.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/flowers-us.png": [
@@ -15362,10 +15359,6 @@
     ],
     "logos/international/cuckold.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/international/dhoom-music-720p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/famatv-1080p-not-24-7.png": [
@@ -16364,7 +16357,6 @@
       "scripts/migrate_external_logos_fixed.py"
     ],
     "logos/matribhumi-tv-2bb36a4f0f.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -18340,7 +18332,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/retro-music-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -26421,6 +26412,7 @@
     ],
     "logos/floracing-24-7.png": [
       "International-Playlist.m3u",
+      "reports/logo-authenticity-manifest.json",
       "reports/logo-source-registry.json"
     ],
     "logos/flowers-us.png": [
@@ -27288,10 +27280,6 @@
     ],
     "logos/international/cuckold.png": [
       "International-Playlist.m3u",
-      "reports/logo-authenticity-manifest.json"
-    ],
-    "logos/international/dhoom-music-720p.png": [
-      "IPTV-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/international/famatv-1080p-not-24-7.png": [
@@ -28290,7 +28278,6 @@
       "scripts/migrate_external_logos_fixed.py"
     ],
     "logos/matribhumi-tv-2bb36a4f0f.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -30269,7 +30256,6 @@
       "reports/logo-authenticity-manifest.json"
     ],
     "logos/retro-music-tv.png": [
-      "IPTV-Playlist.m3u",
       "International-Playlist.m3u",
       "reports/logo-authenticity-manifest.json"
     ],
@@ -34796,6 +34782,7 @@
     "logos/international/detvora-1080p.png",
     "logos/international/dhamaal-576p-geo-blocked.png",
     "logos/international/dhe-1080p.png",
+    "logos/international/dhoom-music-720p.png",
     "logos/international/disco-mix-576i-geo-blocked.png",
     "logos/international/disco-mix-576p.png",
     "logos/international/disco-polo-music.png",
